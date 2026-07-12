@@ -399,7 +399,7 @@ $currentUser = getCurrentUser();
         <div class="container">
             <nav class="header-nav">
                 <a class="header-brand" href="/">
-                    <div class="header-brand-icon">H</div>
+                    <img src="/assets/images/6791421e-7ca7-40bd-83d3-06a479bf7f36.png" alt="Logo" class="header-brand-icon" style="background: none; box-shadow: none; padding: 0;">
                     <span class="header-brand-text">Hesten's Learning</span>
                 </a>
                 
