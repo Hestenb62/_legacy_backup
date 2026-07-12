@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>QUnit Tests for Hesten's Learning</title>
+  <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.20.0.css">
+</head>
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture">
+    <!-- The body of index-test.html will be injected here -->
+  </div>
+
+  <script src="https://code.jquery.com/qunit/qunit-2.20.0.js"></script>
+
+  <!-- Injected scripts from index-test.html -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // --- Tailwind Configuration with Dynamic CSS Variables ---
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["var(--site-font-family, 'Inter')", "sans-serif"],
+            dyslexic: ['"Open Dyslexic"', 'sans-serif'],
+            mono: ['"Roboto Mono"', 'monospace'],
+            serif: ['"Merriweather"', 'serif'],
+          },
+          colors: {
+            'primary': 'var(--color-primary, #7C3AED)',
+            'secondary': 'var(--color-secondary, #9333EA)',
+            'accent': 'var(--color-accent, #DDA0DD)',
+            'base-bg': 'var(--color-base-bg, #FAF5FF)',
+            'content-bg': 'var(--color-content-bg, #FFFFFF)',
+            'text-default': 'var(--color-text-default, #1E1B4B)',
+            'text-secondary': 'var(--color-text-secondary, #6B7280)',
+            'hero-bg-from': 'var(--color-hero-bg-from, #5B21B6)',
+            'hero-bg-to': 'var(--color-hero-bg-to, #7C3AED)',
+            'header-bg': 'var(--color-header-bg, #FFFFFF)',
+            'footer-bg': 'var(--color-footer-bg, #1E1B4B)',
+            'link-color': 'var(--color-link, #7C3AED)',
+            'card-bg': 'var(--color-card-bg, #FFFFFF)',
+            'dark-gray': 'var(--color-dark)',
+            'light-gray': 'var(--color-light)',
+          },
+          borderRadius: {
+            "base-rounded": "var(--border-radius-base, 0.75rem)",
+            "lg-rounded": "var(--border-radius-lg, 1.5rem)",
+          },
+          boxShadow: {
+            'card-hover': '0 10px 30px rgba(124, 58, 237, 0.25)',
+          },
+        },
+      },
+    };
+
+    // --- Global Accessibility/Theme State Management ---
+    const defaultSettings = {
+      theme: 'light',
+      fontSize: 1.0,
+      lineHeight: 1.6,
+      fontFamily: 'Inter',
+      reducedMotion: window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+      letterSpacing: 0,
+      wordSpacing: 0,
+      highlightLinks: false,
+      readableWidth: false,
+      greyscale: false,
+      readingLine: false,
+    };
+    const STORAGE_KEY = 'hl_accessibility_settings_v3';
+
+    function loadSettings() {
+      try {
+        const stored = localStorage.getItem(STORAGE_KEY);
+        const loadedSettings = stored ? { ...defaultSettings, ...JSON.parse(stored) } : defaultSettings;
+        if (loadedSettings.dyslexiaFont !== undefined) {
+          loadedSettings.fontFamily = loadedSettings.dyslexiaFont ? 'Open Dyslexic' : 'Inter';
+          delete loadedSettings.dyslexiaFont;
+        }
+        return loadedSettings;
+      } catch (e) {
+        console.error("Error loading settings from localStorage:", e);
+        return defaultSettings;
+      }
+    }
+
+    function saveSettings(settings) {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(settings));
+        applySettings(settings);
+        currentSettings = settings;
+        updateThemeButtonUI(settings.theme);
+      } catch (e) {
+        console.error("Error saving settings to localStorage:", e);
+      }
+    }
+
+    function applyHeadSettings(settings) {
+      const docEl = document.documentElement;
+      docEl.style.setProperty('--site-font-size', `${settings.fontSize}rem`);
+      docEl.style.setProperty('--site-line-height', settings.lineHeight);
+      docEl.style.setProperty('--site-letter-spacing', `${settings.letterSpacing}px`);
+      docEl.style.setProperty('--site-word-spacing', `${settings.wordSpacing}px`);
+      let fontName = settings.fontFamily || 'Inter';
+      if (fontName.includes(' ') || fontName === 'Open Dyslexic') {
+        fontName = `"${fontName}"`;
+      }
+      docEl.style.setProperty('--site-font-family', fontName);
+    }
+
+    function updateFontButtonUI(selectedFont) {
+      const fontSelectors = document.querySelectorAll('.font-selector');
+      fontSelectors.forEach(btn => {
+        const selectedFontName = (selectedFont || 'Inter').replace(/"/g, '');
+        const btnFontName = btn.dataset.font.replace(/"/g, '');
+        if (btnFontName === selectedFontName) {
+          btn.classList.add('bg-primary', 'text-white', 'border-primary');
+          btn.classList.remove('bg-white', 'text-gray-800', 'dark:bg-gray-700', 'dark:text-white', 'hover:bg-gray-100', 'dark:hover:bg-gray-600', 'border-gray-300');
+        } else {
+          btn.classList.remove('bg-primary', 'text-white', 'border-primary');
+          btn.classList.add('bg-content-bg', 'text-text-default', 'border-gray-300', 'dark:border-gray-600', 'hover:bg-gray-100', 'dark:hover:bg-gray-700');
+        }
+      });
+    }
+
+    function updateThemeButtonUI(selectedTheme) {
+      const themeSelectors = document.querySelectorAll('.theme-selector');
+      themeSelectors.forEach(btn => {
+        if (btn.dataset.theme === selectedTheme) {
+          btn.classList.add('bg-primary', 'text-white', 'border-primary');
+          btn.classList.remove('bg-content-bg', 'text-text-default', 'border-gray-300', 'dark:border-gray-600');
+        } else {
+          btn.classList.remove('bg-primary', 'text-white', 'border-primary');
+          btn.classList.add('bg-content-bg', 'text-text-default', 'border-gray-300', 'dark:border-gray-600');
+        }
+      });
+    }
+
+    function applyBodySettings(settings) {
+      const body = document.body;
+      if (!body) return;
+      body.classList.remove('light', 'dark', 'high-contrast');
+      body.classList.add(settings.theme);
+      body.classList.toggle('reduced-motion', settings.reducedMotion);
+      body.classList.toggle('highlight-links', settings.highlightLinks);
+      body.classList.toggle('readable-width', settings.readableWidth);
+      body.classList.toggle('greyscale-mode', settings.greyscale);
+      body.classList.toggle('reading-line-focus', settings.readingLine);
+      updateFontButtonUI(settings.fontFamily);
+    }
+
+    function applySettings(settings) {
+      applyHeadSettings(settings);
+      applyBodySettings(settings);
+      const readingLineElement = document.getElementById('reading-line');
+      if (readingLineElement) {
+        if (settings.readingLine) {
+          readingLineElement.classList.remove('hidden');
+          setupReadingLineEvents();
+        } else {
+          readingLineElement.classList.add('hidden');
+          removeReadingLineEvents();
+        }
+      }
+    }
+
+    let currentSettings = loadSettings();
+    applyHeadSettings(currentSettings);
+  </script>
+  
+  <script>
+    // This is a simplified version of the second script for testing purposes.
+    // In a real test setup, you'd mock or control this more carefully.
+    document.addEventListener('DOMContentLoaded', () => {
+        (function () {
+            // We need to manually call this for the test environment
+            // as the body is now inside #qunit-fixture
+            const fixtureBody = document.querySelector('#qunit-fixture');
+            
+            // Temporarily make the fixture the body for applyBodySettings
+            const originalBody = document.body;
+            Object.defineProperty(document, 'body', {
+                value: fixtureBody,
+                writable: true
+            });
+
+            applyBodySettings(currentSettings);
+            updateFontButtonUI(currentSettings.fontFamily);
+            updateThemeButtonUI(currentSettings.theme);
+
+            const readingLineElement = document.getElementById('reading-line');
+            if (readingLineElement) {
+                if (currentSettings.readingLine) {
+                readingLineElement.classList.remove('hidden');
+                setupReadingLineEvents();
+                } else {
+                readingLineElement.classList.add('hidden');
+                removeReadingLineEvents();
+                }
+            }
+            
+            // Restore original body
+            Object.defineProperty(document, 'body', {
+                value: originalBody,
+                writable: true
+            });
+
+        })();
+    });
+  </script>
+
+  <script>
+    // The third script from the body of index-test.html
+    // This will be executed after the DOM is ready and tests are set up.
+  </script>
+
+  <script>
+  QUnit.module('Accessibility Settings', function(hooks) {
+    hooks.beforeEach(function() {
+      // Reset localStorage before each test
+      localStorage.clear();
+      // Set default settings
+      currentSettings = loadSettings();
+      applySettings(currentSettings);
+      
+      const fixture = document.getElementById('qunit-fixture');
+      fixture.innerHTML = `
+        <div id="a11y-settings-panel">
+            <button id="theme-light" data-theme="light" class="theme-selector"></button>
+            <button id="theme-dark" data-theme="dark" class="theme-selector"></button>
+            <button id="theme-contrast" data-theme="high-contrast" class="theme-selector"></button>
+            <div id="font-selection-buttons">
+                <button data-font="Inter" class="font-selector"></button>
+                <button data-font="Open Dyslexic" class="font-selector"></button>
+            </div>
+            <input type="range" id="font-size-slider" min="0.8" max="1.6" step="0.1" value="1.0">
+            <input type="checkbox" id="toggle-reduced-motion">
+            <input type="checkbox" id="toggle-greyscale">
+            <button id="reset-a11y-settings"></button>
+        </div>
+        <body class="antialiased font-sans"></body>
+      `;
+    });
+
+    QUnit.test('loadSettings should return default settings when localStorage is empty', function(assert) {
+      const settings = loadSettings();
+      assert.deepEqual(settings, defaultSettings, 'Returns default settings');
+    });
+
+    QUnit.test('saveSettings and loadSettings should save and retrieve settings from localStorage', function(assert) {
+      const newSettings = { ...defaultSettings, theme: 'dark', fontSize: 1.2 };
+      saveSettings(newSettings);
+      const loaded = loadSettings();
+      assert.deepEqual(loaded, newSettings, 'Saved settings are loaded correctly');
+    });
+
+    QUnit.test('applySettings should apply theme class to body', function(assert) {
+      const settings = { ...defaultSettings, theme: 'dark' };
+      applySettings(settings);
+      assert.ok(document.body.classList.contains('dark'), 'Body has "dark" class');
+    });
+
+    QUnit.test('Changing theme via button click should update settings', function(assert) {
+        const darkThemeButton = document.getElementById('theme-dark');
+        
+        // Mocking the event listener logic from the original file
+        darkThemeButton.addEventListener('click', (e) => {
+            const newTheme = e.currentTarget.dataset.theme;
+            saveSettings({
+            ...currentSettings,
+            theme: newTheme
+            });
+        });
+
+        darkThemeButton.click();
+        
+        assert.equal(currentSettings.theme, 'dark', 'currentSettings theme is updated to dark');
+        const fromStorage = JSON.parse(localStorage.getItem(STORAGE_KEY));
+        assert.equal(fromStorage.theme, 'dark', 'Theme in localStorage is updated to dark');
+    });
+
+    QUnit.test('Reset button should restore default settings', function(assert) {
+        // Change a setting first
+        saveSettings({ ...currentSettings, theme: 'high-contrast' });
+        
+        const resetButton = document.getElementById('reset-a11y-settings');
+        
+        // Mocking the reset logic
+        resetButton.addEventListener('click', () => {
+            localStorage.removeItem(STORAGE_KEY);
+            currentSettings = defaultSettings;
+            saveSettings({ ...defaultSettings });
+        });
+
+        resetButton.click();
+
+        assert.deepEqual(currentSettings, defaultSettings, 'Settings are reset to defaults');
+        assert.equal(localStorage.getItem(STORAGE_KEY), JSON.stringify(defaultSettings), 'localStorage is updated with default settings');
+    });
+  });
+  </script>
+
+</body>
+</html>

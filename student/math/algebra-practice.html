@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algebra Practice - Hesten's Learning</title>
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <!-- Google Fonts (Inter will be set by Tailwind config, Roboto is a fallback or for specific elements if needed) -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/assets/images/6791421e-7ca7-40bd-83d3-06a479bf7f36.png" onerror="this.onerror=null; this.src='https://placehold.co/32x32/cccccc/ffffff?text=Fav';" />
+    <!--Track-->
+    <script src="/assets/js/site_wide_track.js"></script>
+<link rel="stylesheet" href="/assets/css/styles.css">
+    <script src="/assets/js/tailwind-config.js"></script>
+</head>
+
+<body class="bg-light text-dark font-sans">
+    <!-- Navigation bar -->
+    <header class="glass-header sticky top-0 z-40 transition-colors duration-300 print:hidden shadow-sm">
+        <div class="container mx-auto px-4 py-3">
+            <nav class="flex items-center justify-between flex-wrap">
+                <a class="flex items-center flex-shrink-0 text-primary mr-8 group" href="/">
+                    <div class="h-10 w-10 mr-3 bg-gradient-to-br from-primary to-secondary text-white rounded-xl flex items-center justify-center font-bold text-xl shadow-lg group-hover:rotate-12 transition-transform">
+                        H</div>
+                    <span class="font-bold text-xl tracking-tight text-text-default">Hesten's Learning</span>
+                </a>
+                <div class="block lg:hidden">
+                    <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-text-default border-gray-400 hover:text-primary transition-colors"><i class="fas fa-bars"></i></button>
+                </div>
+                <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden transition-all duration-300 gap-6" id="nav-content">
+                    <div class="text-sm lg:flex-grow flex flex-col lg:flex-row gap-2 lg:gap-8 mt-4 lg:mt-0 font-medium">
+                        <a href="/" class="nav-link-animated block lg:inline-block text-text-default hover:text-primary transition-colors"><i class="fas fa-home mr-1"></i> Home</a>
+                        <a href="/learning.php" class="nav-link-animated block lg:inline-block text-text-default hover:text-primary transition-colors"><i class="fas fa-book mr-1"></i> Learning</a>
+                        <a href="/assessment" class="nav-link-animated block lg:inline-block text-text-default hover:text-primary transition-colors"><i class="fas fa-tasks mr-1"></i> Assessment</a>
+                        <a href="/library" class="nav-link-animated block lg:inline-block text-text-default hover:text-primary transition-colors"><i class="fas fa-book-open mr-1"></i> Library</a>
+                    </div>
+                    <div class="relative mt-4 lg:mt-0">
+                        <form action="/search.php" method="GET" class="flex items-center group">
+                            <input type="text" name="q" placeholder="Search..." class="bg-base-bg text-text-default rounded-full py-2 pl-10 pr-4 focus:ring-2 focus:ring-primary w-full lg:w-48 border border-gray-200 dark:border-gray-700" />
+                            <i class="fas fa-search absolute left-3 text-gray-400 group-hover:text-primary"></i>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container mx-auto px-4 py-8">
+        <h1 class="text-center text-4xl font-bold text-primary mb-4">Algebra Practice</h1>
+        <p class="text-center text-lg text-grayish mb-8">Sharpen your algebra skills with practice problems across various topics. Generate new problems on demand!</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Basic Algebra -->
+            <div class="col-span-1">
+                <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col h-full">
+                    <h5 class="text-xl font-semibold text-primary mb-3"><i class="fas fa-superscript mr-2"></i>Basic Algebra</h5>
+                    <p class="text-grayish mb-4">Practice fundamental algebraic concepts including variables, expressions, and simple equations.</p>
+                    <div id="basic-algebra-problem" class="bg-light p-4 rounded-md mb-4 text-dark">
+                        <!-- Problem will be loaded here -->
+                        Loading problem...
+                    </div>
+                    <button class="px-4 py-2 bg-primary text-white rounded-md font-semibold hover:opacity-90 text-center mt-auto" onclick="generateProblem('basic-algebra')">Generate New Problem</button>
+                </div>
+            </div>
+
+            <!-- Linear Equations -->
+            <div class="col-span-1">
+                <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col h-full">
+                    <h5 class="text-xl font-semibold text-primary mb-3"><i class="fas fa-chart-line mr-2"></i>Linear Equations</h5>
+                    <p class="text-grayish mb-4">Solve linear equations with one or more variables, including graphing and word problems.</p>
+                    <div id="linear-equations-problem" class="bg-light p-4 rounded-md mb-4 text-dark">
+                        <!-- Problem will be loaded here -->
+                        Loading problem...
+                    </div>
+                    <button class="px-4 py-2 bg-primary text-white rounded-md font-semibold hover:opacity-90 text-center mt-auto" onclick="generateProblem('linear-equations')">Generate New Problem</button>
+                </div>
+            </div>
+
+            <!-- Quadratic Equations -->
+            <div class="col-span-1">
+                <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col h-full">
+                    <h5 class="text-xl font-semibold text-primary mb-3"><i class="fas fa-square-root-alt mr-2"></i>Quadratic Equations</h5>
+                    <p class="text-grayish mb-4">Practice solving quadratic equations using factoring, the quadratic formula, and completing the square.</p>
+                    <div id="quadratic-equations-problem" class="bg-light p-4 rounded-md mb-4 text-dark">
+                        <!-- Problem will be loaded here -->
+                        Loading problem...
+                    </div>
+                    <button class="px-4 py-2 bg-primary text-white rounded-md font-semibold hover:opacity-90 text-center mt-auto" onclick="generateProblem('quadratic-equations')">Generate New Problem</button>
+                </div>
+            </div>
+
+            <!-- Systems of Equations -->
+            <div class="col-span-1">
+                <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col h-full">
+                    <h5 class="text-xl font-semibold text-primary mb-3"><i class="fas fa-bezier-curve mr-2"></i>Systems of Equations</h5>
+                    <p class="text-grayish mb-4">Solve systems of linear and non-linear equations using substitution, elimination, and graphing.</p>
+                    <div id="systems-of-equations-problem" class="bg-light p-4 rounded-md mb-4 text-dark">
+                        <!-- Problem will be loaded here -->
+                        Loading problem...
+                    </div>
+                    <button class="px-4 py-2 bg-primary text-white rounded-md font-semibold hover:opacity-90 text-center mt-auto" onclick="generateProblem('systems-of-equations')">Generate New Problem</button>
+                </div>
+            </div>
+
+            <!-- Inequalities -->
+            <div class="col-span-1">
+                <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col h-full">
+                    <h5 class="text-xl font-semibold text-primary mb-3"><i class="fas fa-not-equal mr-2"></i>Inequalities</h5>
+                    <p class="text-grayish mb-4">Practice solving and graphing linear and quadratic inequalities.</p>
+                    <div id="inequalities-problem" class="bg-light p-4 rounded-md mb-4 text-dark">
+                        <!-- Problem will be loaded here -->
+                        Loading problem...
+                    </div>
+                    <button class="px-4 py-2 bg-primary text-white rounded-md font-semibold hover:opacity-90 text-center mt-auto" onclick="generateProblem('inequalities')">Generate New Problem</button>
+                </div>
+            </div>
+
+            <!-- Functions -->
+            <div class="col-span-1">
+                <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col h-full">
+                    <h5 class="text-xl font-semibold text-primary mb-3"><i class="fas fa-chart-area mr-2"></i>Functions</h5>
+                    <p class="text-grayish mb-4">Understand function notation, domain, range, and various types of functions.</p>
+                    <div id="functions-problem" class="bg-light p-4 rounded-md mb-4 text-dark">
+                        <!-- Problem will be loaded here -->
+                        Loading problem...
+                    </div>
+                    <button class="px-4 py-2 bg-primary text-white rounded-md font-semibold hover:opacity-90 text-center mt-auto" onclick="generateProblem('functions')">Generate New Problem</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-modern relative pt-16 pb-8 font-sans transition-colors duration-300 print:hidden text-text-default">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+            <!-- Brand Column -->
+            <div class="space-y-4">
+                <a href="/" class="flex items-center gap-2 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white font-bold text-xl shadow-md group-hover:rotate-6 transition-transform">H</div>
+                    <span class="text-xl font-bold tracking-tight">Hesten's Learning</span>
+                </a>
+                <p class="text-sm text-text-secondary leading-relaxed">
+                    Personalized, accessible, and engaging educational experiences. Designed for diverse learners.
+                </p>
+                <!-- Socials -->
+                <div class="flex items-center gap-3 pt-2">
+                    <a href="#" class="w-8 h-8 rounded-full bg-content-bg border flex items-center justify-center text-text-secondary hover:bg-primary hover:text-white hover:border-primary transition-all shadow-sm" aria-label="Twitter">
+                        <i class="fab fa-twitter text-sm"></i>
+                    </a>
+                    <a href="#" class="w-8 h-8 rounded-full bg-content-bg border flex items-center justify-center text-text-secondary hover:bg-gray-800 hover:text-white hover:border-gray-800 transition-all shadow-sm" aria-label="GitHub">
+                        <i class="fab fa-github text-sm"></i>
+                    </a>
+                    <a href="#" class="w-8 h-8 rounded-full bg-content-bg border flex items-center justify-center text-text-secondary hover:bg-[#5865F2] hover:text-white hover:border-[#5865F2] transition-all shadow-sm" aria-label="Discord">
+                        <i class="fab fa-discord text-sm"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Discover -->
+            <div>
+                <h4 class="font-bold text-sm uppercase tracking-wider text-primary mb-4">Discover</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="/learning.php" class="text-text-secondary hover:text-primary transition-colors">Learning Path</a></li>
+                    <li><a href="/assessment" class="text-text-secondary hover:text-primary transition-colors">Assessments</a></li>
+                    <li><a href="/games.php" class="text-text-secondary hover:text-primary transition-colors">Educational Games</a></li>
+                    <li><a href="/library" class="text-text-secondary hover:text-primary transition-colors">Digital Library</a></li>
+                </ul>
+            </div>
+
+            <!-- Support -->
+            <div>
+                <h4 class="font-bold text-sm uppercase tracking-wider text-primary mb-4">Support</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="/help-center.php" class="text-text-secondary hover:text-primary transition-colors">Help Center</a></li>
+                    <li><a href="/contact.php" class="text-text-secondary hover:text-primary transition-colors">Contact Us</a></li>
+                    <li><a href="/parents.php" class="text-text-secondary hover:text-primary transition-colors">For Parents</a></li>
+                    <li><a href="/teachers.php" class="text-text-secondary hover:text-primary transition-colors">For Teachers</a></li>
+                </ul>
+            </div>
+
+            <!-- Legal & Settings -->
+            <div>
+                <h4 class="font-bold text-sm uppercase tracking-wider text-primary mb-4">Legal & Settings</h4>
+                <ul class="space-y-2 text-sm mb-6">
+                    <li><a href="/privacy-policy.php" class="text-text-secondary hover:text-primary transition-colors">Privacy Policy</a></li>
+                    <li><a href="/terms-of-use.php" class="text-text-secondary hover:text-primary transition-colors">Terms of Use</a></li>
+                    <li><a href="/settings.php" class="text-text-secondary hover:text-primary transition-colors">Accessibility</a></li>
+                </ul>
+                <div class="inline-block relative">
+                    <div class="gtranslate_wrapper"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="pt-8 border-t flex flex-col md:flex-row items-center justify-between gap-4">
+            <p class="text-xs text-text-secondary text-center md:text-left">
+                &copy; <span class="copyright-year">2026</span> Hesten's Learning. All rights reserved.
+            </p>
+            <p class="text-xs text-text-secondary flex items-center gap-1">
+                Made with <i class="fas fa-heart text-red-400"></i> for inclusive education.
+            </p>
+        </div>
+    </div>
+</footer>
+<!-- GTranslate & Scripts -->
+<script>
+    window.gtranslateSettings = { default_language: "en", native_language_names: true, wrapper_selector: ".gtranslate_wrapper", flag_style: "3d", alt_flags: { en: "usa" } };
+</script>
+<script src="https://cdn.gtranslate.net/widgets/latest/popup.js" defer></script>
+<!-- Scripts -->
+<script src="/assets/js/standard.js"></script>
+
+
+    <!-- Script to dynamically set the current year -->
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const backToTopButton = document.getElementById("back-to-top");
+
+            backToTopButton.addEventListener("click", function (event) {
+                event.preventDefault();
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+            // Initial problem generation for all sections
+            generateProblem('basic-algebra');
+            generateProblem('linear-equations');
+            generateProblem('quadratic-equations');
+            generateProblem('systems-of-equations');
+            generateProblem('inequalities');
+            generateProblem('functions');
+        });
+
+        async function generateProblem(topic) {
+            const problemElement = document.getElementById(`${topic}-problem`);
+            problemElement.innerHTML = 'Generating problem... <i class="fas fa-spinner fa-spin"></i>';
+
+            let prompt = "";
+            switch (topic) {
+                case 'basic-algebra':
+                    prompt = "Generate a basic algebra practice problem. Provide only the problem, no solution or explanation. Example: 'Solve for x: 3x + 5 = 14'";
+                    break;
+                case 'linear-equations':
+                    prompt = "Generate a linear equation practice problem. Provide only the problem, no solution or explanation. Example: 'Solve for y: 2(y - 3) = 10'";
+                    break;
+                case 'quadratic-equations':
+                    prompt = "Generate a quadratic equation practice problem. Provide only the problem, no solution or explanation. Example: 'Solve for x: x^2 - 5x + 6 = 0'";
+                    break;
+                case 'systems-of-equations':
+                    prompt = "Generate a system of two linear equations with two variables. Provide only the problems, no solution or explanation. Example: 'Solve the system of equations: x + y = 7, 2x - y = 2'";
+                    break;
+                case 'inequalities':
+                    prompt = "Generate a linear inequality practice problem. Provide only the problem, no solution or explanation. Example: 'Solve for z: 4z - 7 < 9'";
+                    break;
+                case 'functions':
+                    prompt = "Generate a problem related to functions (e.g., evaluating a function, finding domain/range). Provide only the problem, no solution or explanation. Example: 'Given f(x) = 2x + 1, find f(3).'";
+                    break;
+                default:
+                    problemElement.innerHTML = "Error: Unknown topic.";
+                    return;
+            }
+
+            try {
+                const apiKey = ""; // Leave as-is for Canvas to inject
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+                const payload = {
+                    contents: [{ role: "user", parts: [{ text: prompt }] }],
+                    generationConfig: {
+                        responseMimeType: "text/plain" // Request plain text response
+                    }
+                };
+
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const result = await response.json();
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    const problemText = result.candidates[0].content.parts[0].text;
+                    problemElement.innerHTML = problemText;
+                } else {
+                    problemElement.innerHTML = "Failed to generate problem. Please try again.";
+                    console.error("Gemini API response structure unexpected:", result);
+                }
+            } catch (error) {
+                problemElement.innerHTML = "Error generating problem. Please check your network connection.";
+                console.error("Error calling Gemini API:", error);
+            }
+        }
+    </script>
+</body>
+
+</html>
+

@@ -1,0 +1,366 @@
+{
+    "title": "Algebra 1 Test",
+    "description": "Practice Test",
+    "keywords": "algebra, test",
+    "author": "Hesten",
+    "shuffleQuestions": false,
+    "shuffleOptions": false,
+    "timeLimitMinutes": 0,
+    "practiceMode": true,
+    "questions": {
+        "1": {
+            "type": "mc",
+            "text": "Which expression is equivalent to <code>100x<sup>2<\/sup> - 16<\/code>?",
+            "points": 1,
+            "options": {
+                "1": "<code>(50x - 8)(50x + 8)<\/code>",
+                "2": "<code>(50x - 8)(50x - 8)<\/code>",
+                "3": "<code>(10x - 4)(10x + 4)<\/code>",
+                "4": "<code>(10x - 4)(10x - 4)<\/code>"
+            },
+            "correctAnswer": 1
+        },
+        "2": {
+            "type": "mc",
+            "text": "Josie has $2.30 in dimes and quarters. She has two more dimes than quarters. Which equation can be used to determine <code>x<\/code>, the number of quarters she has?",
+            "points": 1,
+            "options": {
+                "1": "<code>0.35(2x + 2) = 2.30<\/code>",
+                "2": "<code>0.25(x + 2) + 0.10x = 2.30<\/code>",
+                "3": "<code>0.25x + 0.10(x + 2) = 2.30<\/code>",
+                "4": "<code>0.25x + 0.10(x - 2) = 2.30<\/code>"
+            },
+            "correctAnswer": 1
+        },
+        "3": {
+            "type": "mc",
+            "text": "If <code>g(x) = -2x<sup>2<\/sup> + 16<\/code>, then <code>g(-3)<\/code> equals:",
+            "points": 1,
+            "options": {
+                "1": "<code>-20<\/code>",
+                "2": "<code>-2<\/code>",
+                "3": "<code>34<\/code>",
+                "4": "<code>52<\/code>"
+            },
+            "correctAnswer": 1
+        },
+        "4": {
+            "type": "mc",
+            "text": "What are the zeros of <code>f(x) = x<sup>2<\/sup> - 8x - 20<\/code>?",
+            "points": 1,
+            "options": {
+                "1": "<code>10 and 2<\/code>",
+                "2": "<code>10 and -2<\/code>",
+                "3": "<code>-10 and 2<\/code>",
+                "4": "<code>-10 and -2<\/code>"
+            },
+            "correctAnswer": 1
+        },
+        "5": {
+            "type": "mc",
+            "text": "Which point lies on the graph of <code>y = 3x<sup>2<\/sup> - (1\/4)x + 3<\/code>?",
+            "points": 1,
+            "options": {
+                "1": "<code>(-2, 15.5)<\/code>",
+                "2": "<code>(-1, 5.75)<\/code>",
+                "3": "<code>(1, 6.25)<\/code>",
+                "4": "<code>(2, 15.5)<\/code>"
+            },
+            "correctAnswer": 1
+        },
+        "6": {
+            "type": "mc",
+            "text": "Given <code>f(x) = x<sup>2<\/sup><\/code> and <code>g(x) = 8x - 15<\/code> graphed on the same set of axes, which value(s) of x will make <code>f(x) = g(x)<\/code>?",
+            "points": 1,
+            "options": {
+                "1": "<code>3, only<\/code>",
+                "2": "<code>9, only<\/code>",
+                "3": "<code>3 and 5<\/code>",
+                "4": "<code>9 and 25<\/code>"
+            },
+            "correctAnswer": 1
+        },
+        "7": {
+            "type": "mc",
+            "text": "Which trinomial is written in standard form and has a constant term of five?",
+            "points": 1,
+            "options": {
+                "1": "<code>x<sup>5<\/sup> - 4x<sup>2<\/sup> + 10<\/code>",
+                "2": "<code>2x<sup>2<\/sup> + 6x<sup>4<\/sup> + 5<\/code>",
+                "3": "<code>5x<sup>4<\/sup> - 3x<sup>2<\/sup> + 1<\/code>",
+                "4": "<code>4x<sup>5<\/sup> - 8x<sup>2<\/sup> + 5<\/code>"
+            },
+            "correctAnswer": 1
+        },
+        "8": {
+            "type": "mc",
+            "text": "When solving <code>x<sup>2<\/sup> + 6x = -8<\/code> for x, a student wrote <code>x<sup>2<\/sup> + 6x + 8 = 0<\/code> as their first step. Which property justifies this step?",
+            "points": 1,
+            "options": {
+                "1": "<code>associative property<\/code>",
+                "2": "<code>commutative property<\/code>",
+                "3": "<code>zero property of addition<\/code>",
+                "4": "<code>addition property of equality<\/code>"
+            },
+            "correctAnswer": 1
+        },
+        "9": {
+            "type": "mc",
+            "text": "(From Q9) Which table (f(x), g(x), h(x), j(x)) represents a linear function? (See PDF for tables)",
+            "points": 1,
+            "options": {
+                "1": "<code>f(x)<\/code>",
+                "2": "<code>g(x)<\/code>",
+                "3": "<code>h(x)<\/code>",
+                "4": "<code>j(x)<\/code>"
+            },
+            "correctAnswer": 1
+        },
+        "10": {
+            "type": "mc",
+            "text": "What is the solution set to the equation <code>3x<sup>2<\/sup> = 24x<\/code>?",
+            "points": 1,
+            "options": {
+                "1": "<code>{8}<\/code>",
+                "2": "<code>{0, 8}<\/code>",
+                "3": "<code>{0, -8}<\/code>",
+                "4": "<code>{0, 8, -8}<\/code>"
+            },
+            "correctAnswer": 1
+        },
+        "11": {
+            "type": "mc",
+            "text": "What is the average rate of change in radioactivity level (see PDF table) over the interval <code>1 ≤ t ≤ 3<\/code>?",
+            "points": 1,
+            "options": {
+                "1": "<code>3.75<\/code>",
+                "2": "<code>-3.75<\/code>",
+                "3": "<code>4.6875<\/code>",
+                "4": "<code>-4.6875<\/code>"
+            },
+            "correctAnswer": 1
+        },
+        "12": {
+            "type": "mc",
+            "text": "Fred recorded the number of minutes he read (see PDF table). What is the correlation coefficient, to the nearest thousandth, and strength of the linear model?",
+            "points": 1,
+            "options": {
+                "1": "<code>0.984 and strong<\/code>",
+                "2": "<code>0.968 and strong<\/code>",
+                "3": "<code>0.984 and weak<\/code>",
+                "4": "<code>0.968 and weak<\/code>"
+            },
+            "correctAnswer": 1
+        },
+        "13": {
+            "type": "mc",
+            "text": "Given <code>f(x) = x<sup>2<\/sup><\/code>, which function will shift <code>f(x)<\/code> to the left 3 units?",
+            "points": 1,
+            "options": {
+                "1": "<code>g(x) = x<sup>2<\/sup> + 3<\/code>",
+                "2": "<code>h(x) = x<sup>2<\/sup> - 3<\/code>",
+                "3": "<code>j(x) = (x - 3)<sup>2<\/sup><\/code>",
+                "4": "<code>k(x) = (x + 3)<sup>2<\/sup><\/code>"
+            },
+            "correctAnswer": 1
+        },
+        "14": {
+            "type": "mc",
+            "text": "A class of 20 students was surveyed (see PDF dot plot). Which statement about the data is correct?",
+            "points": 1,
+            "options": {
+                "1": "<code>The mean and the median are the same.<\/code>",
+                "2": "<code>The median and the mode are the same.<\/code>",
+                "3": "<code>The mean and the mode are the same.<\/code>",
+                "4": "<code>The mean, median, and mode are all the same.<\/code>"
+            },
+            "correctAnswer": 1
+        },
+        "15": {
+            "type": "mc",
+            "text": "The range of <code>f(x) = |x + 2| - 5<\/code> is:",
+            "points": 1,
+            "options": {
+                "1": "<code>y ≥ -5<\/code>",
+                "2": "<code>y ≥ 2<\/code>",
+                "3": "<code>x ≥ -5<\/code>",
+                "4": "<code>x ≥ 2<\/code>"
+            },
+            "correctAnswer": 1
+        },
+        "16": {
+            "type": "mc",
+            "text": "Which equation is always correct?",
+            "points": 1,
+            "options": {
+                "1": "<code>a<sup>3<\/sup> • a<sup>x<\/sup> = a<sup>3x<\/sup><\/code>",
+                "2": "<code>(a<sup>4<\/sup>)<sup>x<\/sup> = a<sup>4+x<\/sup><\/code>",
+                "3": "<code>(ab)<sup>x<\/sup> = a<sup>x<\/sup>b<sup>x<\/sup><\/code>",
+                "4": "<code>a<sup>x<\/sup> • b<sup>y<\/sup> = ab<sup>x+y<\/sup><\/code>"
+            },
+            "correctAnswer": 1
+        },
+        "17": {
+            "type": "mc",
+            "text": "The formula for the area of a trapezoid is <code>A = (1\/2)h(b<sub>1<\/sub> + b<sub>2<\/sub>)<\/code>. The height, <code>h<\/code>, may be expressed as:",
+            "points": 1,
+            "options": {
+                "1": "<code>2A \/ (b<sub>1<\/sub> + b<sub>2<\/sub>)<\/code>",
+                "2": "<code>(1\/2)A(b<sub>1<\/sub> + b<sub>2<\/sub>)<\/code>",
+                "3": "<code>(b<sub>1<\/sub> + b<sub>2<\/sub>) \/ 2A<\/code>",
+                "4": "<code>(1\/2)A - (b<sub>1<\/sub> + b<sub>2<\/sub>)<\/code>"
+            },
+            "correctAnswer": 1
+        },
+        "18": {
+            "type": "mc",
+            "text": "Three functions are given (see PDF for h(x) table). <code>f(x) = -|x+2|+7<\/code>, <code>g(x) = (x-3)<sup>2<\/sup>-4<\/code>. Which functions have the same y-intercept?",
+            "points": 1,
+            "options": {
+                "1": "<code>f(x) and g(x)<\/code>",
+                "2": "<code>g(x) and h(x)<\/code>",
+                "3": "<code>f(x) and h(x)<\/code>",
+                "4": "<code>The functions all have different y-intercepts.<\/code>"
+            },
+            "correctAnswer": 1
+        },
+        "19": {
+            "type": "mc",
+            "text": "The sum of <code>(x + 7)<sup>2<\/sup><\/code> and <code>(x - 3)<sup>2<\/sup><\/code> is:",
+            "points": 1,
+            "options": {
+                "1": "<code>2x<sup>2<\/sup> + 58<\/code>",
+                "2": "<code>2x<sup>4<\/sup> + 58<\/code>",
+                "3": "<code>2x<sup>2<\/sup> + 8x + 58<\/code>",
+                "4": "<code>2x<sup>4<\/sup> + 8x<sup>2<\/sup> + 58<\/code>"
+            },
+            "correctAnswer": 1
+        },
+        "20": {
+            "type": "mc",
+            "text": "The product of <code>2√10<\/code> and <code>3√2<\/code> is:",
+            "points": 1,
+            "options": {
+                "1": "<code>12√5<\/code>",
+                "2": "<code>5√20<\/code>",
+                "3": "<code>24√5<\/code>",
+                "4": "<code>5√12<\/code>"
+            },
+            "correctAnswer": 1
+        },
+        "21": {
+            "type": "mc",
+            "text": "When <code>6x<sup>3<\/sup> - 2x + 8<\/code> is subtracted from <code>5x<sup>3<\/sup> + 3x - 4<\/code>, the result is:",
+            "points": 1,
+            "options": {
+                "1": "<code>x<sup>3<\/sup> - 5x + 12<\/code>",
+                "2": "<code>x<sup>3<\/sup> + x + 4<\/code>",
+                "3": "<code>-x<sup>3<\/sup> + 5x - 12<\/code>",
+                "4": "<code>-x<sup>3<\/sup> + x + 4<\/code>"
+            },
+            "correctAnswer": 1
+        },
+        "22": {
+            "type": "mc",
+            "text": "Three relations are shown (see PDF). Which relations represent a function?",
+            "points": 1,
+            "options": {
+                "1": "<code>I and II, only<\/code>",
+                "2": "<code>I and III, only<\/code>",
+                "3": "<code>II and III, only<\/code>",
+                "4": "<code>I, II, and III<\/code>"
+            },
+            "correctAnswer": 1
+        },
+        "23": {
+            "type": "mc",
+            "text": "The method of substitution was used to solve: <code>4x-7y=7<\/code> and <code>x-y=-1<\/code>. Which equation is a correct first step?",
+            "points": 1,
+            "options": {
+                "1": "<code>x = y - 1<\/code>",
+                "2": "<code>y = x - 1<\/code>",
+                "3": "<code>3x - 6y = 8<\/code>",
+                "4": "<code>5x - 8y = 6<\/code>"
+            },
+            "correctAnswer": 1
+        },
+        "24": {
+            "type": "mc",
+            "text": "In 2009, Usain Bolt ran 100-meters in 9.58 seconds. Which conversion finds his speed in km\/hr?",
+            "points": 1,
+            "options": {
+                "1": "<code>(9.58s\/100m) * ...<\/code>",
+                "2": "<code>(100m\/9.58s) * ...<\/code>",
+                "3": "<code>(100m\/9.58s) * ...<\/code>",
+                "4": "<code>(100m\/9.58s) * (60s\/1min) * (1km\/1000m) * (60min\/1hr)<\/code>"
+            },
+            "correctAnswer": 1
+        },
+        "25": {
+            "type": "fb",
+            "text": "Solve the equation <code>(1\/6)(4x + 12) = 9<\/code> algebraically for x.",
+            "points": 1,
+            "correctAnswer": ""
+        },
+        "26": {
+            "type": "cr",
+            "text": "Is the sum of <code>3√2<\/code> and <code>5<\/code> rational or irrational? Explain your answer.",
+            "points": 1,
+            "rubric": "Review answer key for details."
+        },
+        "27": {
+            "type": "cr",
+            "text": "(For Review) Graph <code>h(x) = |x - 2|<\/code> over the domain <code>-4 ≤ x ≤ 4<\/code>.",
+            "points": 1,
+            "rubric": "Review answer key for details."
+        },
+        "28": {
+            "type": "cr",
+            "text": "(For Review) A survey was given to 180 cell phone owners... (see PDF). Complete the two-way frequency table.",
+            "points": 1,
+            "rubric": "Review answer key for details."
+        },
+        "29": {
+            "type": "fb",
+            "text": "Determine the 8th term of a geometric sequence whose first term is 5 and whose common ratio is 3.",
+            "points": 1,
+            "correctAnswer": ""
+        },
+        "30": {
+            "type": "fb",
+            "text": "Using the method of completing the square, express <code>x<sup>2<\/sup> + 14x - 28 = 0<\/code> in the form <code>(x - p)<sup>2<\/sup> = q<\/code>.",
+            "points": 1,
+            "correctAnswer": ""
+        },
+        "31": {
+            "type": "fb",
+            "text": "Graph <code>f(x) = -(1\/3)x<sup>2<\/sup> + 4<\/code> on the set of axes.",
+            "points": 1,
+            "correctAnswer": ""
+        },
+        "32": {
+            "type": "fb",
+            "text": "A canoe rental charges $18 for the first hour and $7.50 for each additional hour, <code>x<\/code>. Vince has $78 to spend. Write an inequality in terms of <code>x<\/code>...",
+            "points": 1,
+            "correctAnswer": ""
+        },
+        "33": {
+            "type": "cr",
+            "text": "(For Review) Graph the system of inequalities...",
+            "points": 1,
+            "rubric": "Review answer key for details."
+        },
+        "34": {
+            "type": "fb",
+            "text": "Using the quadratic formula, solve <code>x<sup>2<\/sup> - 6x + 3 = 0<\/code>. Express the answer in simplest radical form.",
+            "points": 1,
+            "correctAnswer": ""
+        },
+        "35": {
+            "type": "fb",
+            "text": "Cameron sold 25 items (hot dogs <code>x<\/code>, sodas <code>y<\/code>) for $45.00...",
+            "points": 1,
+            "correctAnswer": ""
+        }
+    }
+}
