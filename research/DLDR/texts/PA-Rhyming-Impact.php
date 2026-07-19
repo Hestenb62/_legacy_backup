@@ -16,11 +16,8 @@ $welcomeParagraph = "You are viewing 'Phonological Awareness: Rhyming & Impact o
 include '../../src/header.php';
 ?>
 
-<!-- 
-  Page-Specific <head> Content 
-  These are assets and styles from the original PA-Rhyming-Impact.html file.
-  We include them here, after header.php, so they are inside the <head>.
--->
+<!-- Link Dedicated Research Vanilla CSS -->
+<link rel="stylesheet" href="/assets/css/research.css">
 
 <!-- Google Font for Fira Code (Inter is already in header.php) -->
 <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
@@ -28,17 +25,8 @@ include '../../src/header.php';
 <!-- html2pdf.js for PDF Download Functionality -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
-<!-- Page-Specific Styles (Updated to use theme variables) -->
+<!-- Page-Specific Styles -->
 <style>
-  /*
-    Styles from PA-Rhyming-Impact.html, updated to use CSS variables
-    from header.php for theme compatibility.
-  */
-  body {
-    /* The main font, bg-color, and text-color are now controlled by header.php */
-    /* We just add the specific styles for this page */
-  }
-
   /* Custom scrollbar for the TOC */
   .toc-container::-webkit-scrollbar {
     width: 8px;
@@ -46,384 +34,63 @@ include '../../src/header.php';
 
   .toc-container::-webkit-scrollbar-track {
     background: var(--color-base-bg, #f1f5f9);
-    /* Slate 100 */
     border-radius: 10px;
   }
 
   .toc-container::-webkit-scrollbar-thumb {
     background: var(--color-accent, #cbd5e1);
-    /* Slate 300 */
     border-radius: 10px;
   }
 
-  .toc-container::-webkit-scrollbar-thumb:hover {
-    background: var(--color-secondary, #94a3b8);
-    /* Slate 400 */
-  }
-
-  /* Style for active TOC link */
-  .toc-active {
-    font-weight: 600;
-    color: var(--color-primary, #1e40af);
-    /* Blue 700 */
-    background-color: var(--color-accent, #E0F2FE);
-    /* Light blue */
-    border-left: 4px solid var(--color-primary, #3b82f6);
-    /* Blue 500 */
-    padding-left: 1rem;
-  }
-
-  /* Code block styles (theme-aware) */
+  /* Code block styles */
   pre {
     background-color: #1e293b;
-    /* Slate 800 (kept dark for code) */
     color: #e2e8f0;
-    /* Slate 200 */
     padding: 1.5rem;
     border-radius: 0.75rem;
     overflow-x: auto;
     font-family: "Fira Code", "Monaco", "Consolas", monospace;
   }
 
-  /* Inline code styles (theme-aware) */
   code {
     font-family: "Fira Code", "Monaco", "Consolas", monospace;
     background-color: var(--color-base-bg, #e2e8f0);
-    /* Slate 200 */
-    color: var(--color-text-default, #1e293b);
-    /* Slate 800 */
+    color: var(--color-text-main, #1e293b);
     padding: 0.2em 0.4em;
     border-radius: 0.25rem;
   }
 
-  /* Dark mode adjustments for code */
-  .dark pre {
-    background-color: #0f172a;
-    /* Slate 900 */
-    color: #e2e8f0;
-  }
-
-  .dark code {
-    background-color: #334155;
-    /* Slate 700 */
-    color: #f1f5f9;
-    /* Slate 100 */
-  }
-
-  /* Smooth scroll behavior */
   html {
     scroll-behavior: smooth;
   }
-
-  /* Professional button styling (now uses theme variables) */
-  .professional-button {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.75rem 1rem;
-    border-radius: var(--border-radius-base, 0.5rem);
-    font-weight: 600;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
-      0 1px 2px 0 rgba(0, 0, 0, 0.06);
-    transition: background-color 0.2s, box-shadow 0.2s, color 0.2s;
-    background-color: var(--color-primary, #1d4ed8);
-    color: #fff;
-    border: 1px solid transparent;
-    font-size: 1.125rem;
-    /* text-lg */
-  }
-
-  .professional-button:hover {
-    background-color: var(--color-secondary, #1e40af);
-  }
-
-  .professional-button:focus {
-    outline: none;
-    box-shadow: 0 0 0 2px var(--color-accent, #3b82f6), 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-  }
-
-  /* Secondary button (like 'Back' button) */
-  .professional-button.secondary {
-    background-color: var(--color-base-bg, #e5e7eb);
-    color: var(--color-text-default, #1f2937);
-  }
-
-  .professional-button.secondary:hover {
-    background-color: var(--color-content-bg, #d1d5db);
-  }
-
-  /* Green button (like 'Download') */
-  .professional-button.green {
-    background-color: #16a34a;
-    /* bg-green-600 */
-  }
-
-  .professional-button.green:hover {
-    background-color: #15803d;
-    /* hover:bg-green-700 */
-  }
-
-  .professional-button svg {
-    width: 1.75rem;
-    /* w-7 */
-    height: 1.75rem;
-    /* h-7 */
-    margin-right: 0.75rem;
-    /* mr-3 */
-  }
-
-  /* Loading Spinner Styles (no changes needed) */
-  .spinner {
-    border: 4px solid rgba(255, 255, 255, 0.3);
-    border-top: 4px solid #ffffff;
-    border-radius: 50%;
-    width: 24px;
-    height: 24px;
-    animation: spin 1s linear infinite;
-    margin-right: 0.75rem;
-  }
-
-  @keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-
-  /* Toast Notification Styles (theme-aware) */
-  #toast-notification {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--color-text-default, #334155);
-    /* Slate 700 */
-    color: var(--color-content-bg, #ffffff);
-    padding: 12px 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    z-index: 1000;
-    font-size: 0.9rem;
-  }
-
-  #toast-notification.show {
-    opacity: 1;
-  }
-
-  /* Scroll to Top Button (theme-aware) */
-  #scrollToTopBtn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: var(--color-primary, #3b82f6);
-    /* Blue 500 */
-    color: white;
-    border-radius: 9999px;
-    /* Full rounded */
-    padding: 0.75rem;
-    /* p-3 */
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-      0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-    opacity: 0;
-    transform: translateY(20px);
-    z-index: 900;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  #scrollToTopBtn.show {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  #scrollToTopBtn:hover {
-    background-color: var(--color-secondary, #2563eb);
-    /* Blue 600 */
-  }
-  
-  /* Page-specific header, main content, and TOC styles (theme-aware) */
-  .page-specific-header,
-  .toc-container,
-  #paperContent {
-    /* Backgrounds handled by Tailwind glassmorphism classes */
-    color: var(--color-text-default, #334155);
-  }
-  
-  .page-specific-header h1,
-  #paperContent h2,
-  #paperContent h3,
-  #paperContent h4 {
-    color: var(--color-text-default, #1F2937);
-  }
-  
-  #paperContent p,
-  #paperContent li,
-  #paperContent ol {
-     color: var(--color-text-default, #334155);
-  }
-
-  .toc-container h2,
-  .toc-container a {
-    color: var(--color-text-default, #334155);
-  }
-  
-  .toc-container a:hover {
-    background-color: var(--color-base-bg, #e0f2fe);
-    color: var(--color-primary, #1e40af);
-  }
-
-  #paperContent a {
-    color: var(--color-link, #2563eb);
-  }
-  
-  #paperContent a:hover {
-    text-decoration: underline;
-  }
-  
-  #references a {
-    word-break: break-all;
-  }
-  
-  /* Search input */
-  #searchInput {
-    background-color: var(--color-base-bg, #FFFFFF);
-    color: var(--color-text-default, #1F2937);
-    border-color: var(--color-accent, #D1D5DB);
-  }
-  
-  #searchInput:focus {
-    border-color: var(--color-primary, #3B82F6);
-    box-shadow: 0 0 0 2px var(--color-accent, #BFDBFE);
-  }
-
-
-  /* Consolidated Mobile Styles (no changes needed) */
-  @media (max-width: 1023px) {
-    .flex-grow.flex {
-      flex-direction: column;
-      /* Stack columns vertically */
-      gap: 1.5rem;
-      /* Add space between stacked sections */
-    }
-
-    .w-full.lg\:w-1\/4,
-    .w-full.lg\:w-3\/4 {
-      width: 100%;
-      /* Full width for all sections */
-      position: static;
-      /* Remove sticky positioning */
-      height: auto;
-      /* Auto height for content */
-      overflow-y: visible;
-      /* Allow content to expand */
-    }
-
-    .toc-container {
-      margin-top: 0;
-      /* Remove top margin when stacked */
-    }
-
-    /* Use .page-specific-header to target the correct header */
-    .page-specific-header .max-w-7xl {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    .page-specific-header h1 {
-      margin-bottom: 1rem;
-    }
-
-    .page-specific-header .flex-wrap {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    .page-specific-header .flex-wrap>* {
-      width: 100%;
-    }
-
-    .page-specific-header input[type="text"] {
-      margin-top: 1rem;
-      width: 100%; /* Make search full-width on mobile */
-    }
-
-    .toc-actions {
-      flex-direction: row;
-      justify-content: center;
-      gap: 1rem;
-      margin-bottom: 1rem;
-    }
-
-    .toc-actions button {
-      width: auto;
-      /* Allow buttons to size content */
-      padding: 0.75rem 1rem;
-      /* Smaller padding for mobile */
-      font-size: 0.9rem;
-    }
-
-    .toc-actions button svg {
-      width: 1.25rem;
-      height: 1.25rem;
-      margin-right: 0.5rem;
-    }
-
-    .professional-button {
-      width: auto;
-      /* Allow buttons to size to content on mobile */
-    }
-  }
 </style>
 
-<!-- 
-  START of page-specific content from PA-Rhyming-Impact.html
-  This content is placed *after* header.php
--->
-
 <!-- Page-Specific Header -->
-<header class="page-specific-header shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.2)] bg-white/50 dark:bg-gray-800/50 backdrop-blur-xl border-b border-white/20 dark:border-white/10 py-4 px-6 sticky top-0 z-40 rounded-b-[2rem] w-full">
-  <div class="max-w-7xl mx-auto flex justify-between items-center flex-wrap">
+<header class="paper-sticky-header">
+  <div class="paper-header-inner">
     <div>
-      <h1 class="text-3xl font-bold">
+      <h1 class="paper-header-title">
         Phonological Awareness
       </h1>
-      <p class="text-base text-gray-500 mt-1">
+      <p class="paper-header-subtitle">
         Rhyming & Impact on Students with Dyslexia
       </p>
     </div>
-    <div class="flex items-center space-x-4 mt-2 md:mt-0">
-      <div class="relative flex items-center">
+    <div class="paper-header-actions">
+      <div class="research-search-wrap">
+        <i class="fas fa-search research-search-icon"></i>
         <input type="text" id="searchInput" placeholder="Search paper..."
-          class="pl-4 pr-10 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:border-transparent transition duration-200 ease-in-out w-64"
+          class="research-search-input"
           aria-label="Search paper content" />
         <button id="clearSearchBtn"
-          class="absolute right-3 text-gray-500 hover:text-gray-700 focus:outline-none hidden"
+          class="clear-filter-btn hidden"
           aria-label="Clear search">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-          </svg>
+          <i class="fas fa-times"></i>
         </button>
       </div>
       <span id="searchResultsCount" class="text-gray-600 text-sm hidden" aria-live="polite"></span>
-      <!-- 
-        Note: The 'Back' button now links to the new index.php (journal list) 
-        instead of using history.back()
-      -->
-      <a href="index.php" class="professional-button secondary py-2 px-4" aria-label="Go back to journals list">
-        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18">
-          </path>
-        </svg>
+      <a href="index.php" class="btn-research btn-research-secondary" aria-label="Go back to journals list">
+        <i class="fas fa-arrow-left"></i>
         Back
       </a>
     </div>
@@ -431,29 +98,29 @@ include '../../src/header.php';
 </header>
 
 <!-- Main Content Wrapper (TOC + Paper) -->
-<div class="flex-grow max-w-7xl mx-auto p-6 flex space-x-6 lg:flex-row flex-col">
+<div class="paper-layout">
   <!-- Table of Contents Sidebar -->
-  <aside
-    class="w-full lg:w-1/4 p-6 rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.2)] border border-white/20 dark:border-white/10 bg-white/50 dark:bg-gray-800/50 backdrop-blur-xl lg:sticky lg:top-24 lg:h-[calc(100vh-120px)] overflow-y-auto toc-container">
-    <h2 class="text-xl font-semibold mb-4">
+  <aside class="paper-toc-sidebar toc-container">
+    <h2 class="paper-toc-title">
       Table of Contents
     </h2>
     <nav id="toc" class="space-y-2" aria-label="Table of Contents"></nav>
     <div class="toc-actions mt-4 flex flex-col space-y-3">
-      <button id="citationBtn" class="professional-button" aria-label="Copy citation for this paper">
+      <button id="citationBtn" class="btn-research" aria-label="Copy citation for this paper">
         <span id="citationButtonText"> Copy Citation </span>
       </button>
-      <button id="downloadPdfBtn" class="professional-button green" aria-label="Download paper as PDF">
+      <button id="downloadPdfBtn" class="btn-research btn-research-success" aria-label="Download paper as PDF">
         <span id="downloadButtonText"> Download PDF </span>
       </button>
     </div>
   </aside>
 
   <!-- Main Paper Content -->
-  <main id="paperContent" class="w-full lg:w-3/4 p-10 rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.2)] border border-white/20 dark:border-white/10 bg-white/50 dark:bg-gray-800/50 backdrop-blur-xl prose prose-blue dark:prose-invert max-w-none">
-    <h2 class="text-2xl font-bold mb-4" id="abstract">
+  <main id="paperContent" class="paper-content-area">
+    <h2 id="abstract">
       Abstract
     </h2>
+
     <p class="mb-6">
       This paper provides a comprehensive review of phonological awareness, with a specific focus
       on rhyming ability, and its critical relationship to developmental dyslexia. Phonological awareness, the
@@ -1250,12 +917,8 @@ include '../../src/header.php';
         const link = document.createElement("a");
         link.href = `#${heading.id}`;
         link.textContent = heading.textContent;
-        link.classList.add(
-          "block", "py-2", "px-3", "rounded-md", "hover:bg-blue-50", "hover:text-blue-700",
-          "transition", "duration-150", "ease-in-out"
-          // Note: text color is inherited from theme-aware styles
-        );
-        if (level === 1) link.classList.add("ml-4"); // Indent H3 links
+        link.classList.add("toc-link");
+        if (level === 1) link.style.paddingLeft = "1.5rem"; // Indent H3 links
         tocNav.appendChild(link);
       });
     };

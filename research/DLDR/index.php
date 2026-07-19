@@ -9,193 +9,106 @@ $pageAuthor = 'Research Team';
 include '../../src/header.php';
 ?>
 
+<!-- Link Dedicated Research Vanilla CSS -->
+<link rel="stylesheet" href="/assets/css/research.css">
+
 <!-- Hero Section -->
-<div class="relative bg-gradient-to-br from-violet-600 via-purple-700 to-indigo-800 dark:from-violet-900 dark:via-purple-900 dark:to-teal-900 text-white pt-24 pb-24 px-4 rounded-b-[3rem] shadow-2xl overflow-hidden mb-12 border-b border-white/20">
-    <!-- Animated Background -->
-    <div class="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
-        <i class="fas fa-brain absolute top-20 left-10 text-[10rem] animate-pulse text-violet-300 opacity-50 drop-shadow-[0_0_30px_rgba(139,92,246,0.8)]"></i>
-        <i class="fas fa-puzzle-piece absolute bottom-10 right-20 text-[14rem] animate-pulse text-indigo-300 opacity-50 drop-shadow-[0_0_30px_rgba(99,102,241,0.8)]"></i>
-        <i class="fas fa-book-open absolute top-1/3 right-1/4 text-8xl -rotate-12 text-purple-300 opacity-60"></i>
+<div class="research-hero">
+    <!-- Background Animated Orbs & Icons -->
+    <div class="research-hero-bg">
+        <i class="fas fa-brain research-hero-icon brain"></i>
+        <i class="fas fa-puzzle-piece research-hero-icon microscope"></i>
+        <i class="fas fa-book-open research-hero-icon dna"></i>
         
-        <!-- Glowing Orbs -->
-        <div class="absolute top-0 left-1/4 w-96 h-96 bg-purple-400 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob"></div>
-        <div class="absolute top-0 right-1/4 w-96 h-96 bg-indigo-400 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob animation-delay-2000"></div>
-        <div class="absolute -bottom-32 left-1/2 w-96 h-96 bg-teal-400 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob animation-delay-4000"></div>
+        <div class="research-orb research-orb-1"></div>
+        <div class="research-orb research-orb-2"></div>
+        <div class="research-orb research-orb-3"></div>
     </div>
 
-    <div class="relative z-10 max-w-4xl mx-auto text-center">
-        <span class="inline-block py-2 px-6 rounded-full bg-white/10 border border-white/20 text-sm font-bold mb-6 uppercase tracking-wider backdrop-blur-md shadow-lg">
-            Research Journal
+    <div class="research-hero-content">
+        <span class="research-hero-badge">
+            <i class="fas fa-flask"></i> Research Journal
         </span>
-        <h1 class="text-4xl md:text-6xl font-extrabold mb-8 tracking-tight mt-4 text-white">
-            <span class="drop-shadow-[0_5px_5px_rgba(0,0,0,0.5)]">Dyslexia &</span> <span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-200 to-teal-200">Learning Disabilities</span>
+        <h1 class="research-hero-title">
+            <span class="hero-title-shadow">Dyslexia &</span> <span class="hero-title-gradient">Learning Disabilities</span>
         </h1>
-        <p class="text-xl md:text-2xl text-blue-50 mb-10 font-light max-w-2xl mx-auto leading-relaxed drop-shadow-md">
+        <p class="research-hero-desc">
             Ongoing research exploring the educational journey of students with dyslexia.
         </p>
     </div>
 </div>
 
-<!-- 
-  --- Page-Specific Styles ---
-  Custom scrollbars and animation classes
--->
-<style>
-  /* Custom animations for the hero background orbs */
-  @keyframes blob {
-    0% { transform: translate(0px, 0px) scale(1); }
-    33% { transform: translate(30px, -50px) scale(1.1); }
-    66% { transform: translate(-20px, 20px) scale(0.9); }
-    100% { transform: translate(0px, 0px) scale(1); }
-  }
-  .animate-blob {
-    animation: blob 7s infinite;
-  }
-  .animation-delay-2000 {
-    animation-delay: 2s;
-  }
-  .animation-delay-4000 {
-    animation-delay: 4s;
-  }
-  /* Custom scrollbar for content area */
-  .content-scrollbar::-webkit-scrollbar {
-    width: 8px;
-  }
-
-  .content-scrollbar::-webkit-scrollbar-track {
-    background: var(--color-base-bg);
-  }
-
-  .content-scrollbar::-webkit-scrollbar-thumb {
-    background: var(--color-text-secondary);
-    border-radius: 4px;
-    opacity: 0.5;
-  }
-
-  .content-scrollbar::-webkit-scrollbar-thumb:hover {
-    background: var(--color-primary);
-  }
-
-  /* Hide scrollbar for modal but allow scroll */
-  .modal-scrollbar-hidden {
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
-  .modal-scrollbar-hidden::-webkit-scrollbar {
-    display: none;
-  }
-
-  /* Tag Styles */
-  .journal-tag {
-    transition: all 0.2s ease;
-  }
-
-  .journal-tag:hover {
-    transform: translateY(-1px);
-  }
-
-  /* Fade animation for list updates */
-  .fade-in {
-    animation: fadeIn 0.3s ease-in-out;
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(5px);
-    }
-
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-</style>
-
-<!-- 
-  --- Main Page Content ---
--->
 <main class="container mx-auto px-4 mb-24" id="main-content">
   <div class="max-w-7xl mx-auto">
 
-    <!-- Header Section (Removed, replaced by Hero) -->
-    <div class="mb-8 hidden"></div>
-
     <!-- Controls Bar: Search & Sort -->
-    <div class="bg-white/50 dark:bg-gray-800/50 backdrop-blur-xl rounded-[2rem] border border-white/20 dark:border-white/10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.2)] p-4 mb-8 flex flex-col md:flex-row gap-4 justify-between items-center sticky top-20 z-30">
+    <div class="research-controls-bar">
       <!-- Search -->
-      <div class="relative w-full md:w-96 group">
-        <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 group-focus-within:text-primary transition-colors"></i>
+      <div class="research-search-wrap">
+        <i class="fas fa-search research-search-icon"></i>
         <input type="text" id="searchInput" placeholder="Search title, content, or tags..."
-          class="w-full pl-12 pr-6 py-3 bg-white dark:bg-gray-800 border-2 border-gray-100 dark:border-gray-700 rounded-full focus:outline-none focus:ring-4 focus:ring-primary/20 focus:border-primary text-gray-800 dark:text-gray-200 placeholder-gray-400 transition-all shadow-sm">
+          class="research-search-input">
       </div>
 
-      <!-- Sort & Filter Actions -->
-      <div class="flex items-center gap-3 w-full md:w-auto">
-        <div class="relative w-full md:w-48">
-          <select id="sortSelect" class="w-full appearance-none pl-6 pr-10 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-full focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary text-gray-800 dark:text-gray-200 cursor-pointer shadow-sm transition-all">
-            <option value="newest">Newest First</option>
-            <option value="oldest">Oldest First</option>
-            <option value="az">Title (A-Z)</option>
-          </select>
-          <i class="fas fa-chevron-down absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none"></i>
-        </div>
-      </div>
-    </button>
+      <!-- Sort Actions -->
+      <div class="research-select-wrap">
+        <select id="sortSelect" class="research-sort-select">
+          <option value="newest">Newest First</option>
+          <option value="oldest">Oldest First</option>
+          <option value="az">Title (A-Z)</option>
+        </select>
+        <i class="fas fa-chevron-down research-select-arrow"></i>
       </div>
     </div>
 
     <!-- Active Filters (Hidden by default) -->
-    <div id="activeFilters" class="hidden mb-6 flex-wrap gap-2 items-center">
+    <div id="activeFilters" class="active-filter-badge-wrap hidden">
       <span class="text-sm text-text-secondary">Filtered by:</span>
-      <span id="filterTagBadge" class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">
+      <span id="filterTagBadge" class="active-filter-badge">
         <span id="filterTagText">Tag Name</span>
-        <button id="clearFilterBtn" class="hover:text-red-500 ml-1"><i class="fas fa-times"></i></button>
+        <button id="clearFilterBtn" class="clear-filter-btn" aria-label="Clear Filter"><i class="fas fa-times"></i></button>
       </span>
     </div>
 
     <!-- Journal Entries Grid -->
-    <div id="journalEntriesContainer" class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+    <div id="journalEntriesContainer" class="research-grid two-cols">
       <!-- Content injected by JS -->
     </div>
 
     <!-- Pagination Controls -->
-    <div id="paginationControls" class="mt-10 flex justify-center items-center gap-2 hidden">
+    <div id="paginationControls" class="pagination-wrap hidden">
       <!-- Injected by JS -->
     </div>
   </div>
 </main>
 
-<!-- 
-  --- Modal for Full Entry ---
--->
-<div id="entryModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 hidden transition-opacity duration-300 opacity-0" role="dialog" aria-modal="true">
-  <div class="bg-white/90 dark:bg-gray-900/90 backdrop-blur-2xl rounded-[2.5rem] shadow-2xl w-full max-w-4xl transform transition-all duration-300 scale-95 opacity-0 flex flex-col max-h-[90vh] relative border border-white/20 dark:border-white/10" id="modalPanel">
+<!-- Modal for Full Entry -->
+<div id="entryModal" class="research-modal hidden" role="dialog" aria-modal="true">
+  <div class="modal-panel" id="modalPanel">
 
     <!-- Modal Header -->
-    <div class="flex justify-between items-start px-8 py-6 border-b border-gray-200 dark:border-gray-800 bg-white/50 dark:bg-gray-800/50 rounded-t-[2.5rem]">
-      <div class="pr-8">
-        <h3 class="text-2xl sm:text-3xl font-black text-gray-900 dark:text-white leading-tight" id="modalTitle"></h3>
+    <div class="modal-header">
+      <div>
+        <h3 class="modal-header-title" id="modalTitle"></h3>
         <div class="flex flex-wrap items-center gap-4 mt-3 text-sm text-gray-500 dark:text-gray-400 font-medium">
           <span class="flex items-center gap-1.5"><i class="fas fa-user-circle"></i> <span id="modalAuthor"></span></span>
           <span class="flex items-center gap-1.5"><i class="far fa-calendar-alt"></i> <span id="modalDate"></span></span>
         </div>
       </div>
-      <button id="closeModalBtn" class="text-gray-400 hover:text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 transition-all p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-primary">
+      <button id="closeModalBtn" class="close-modal-btn" aria-label="Close Modal">
         <i class="fas fa-times text-xl"></i>
       </button>
     </div>
 
     <!-- Modal Body -->
-    <div id="modalContentArea" class="p-8 space-y-8 overflow-y-auto modal-scrollbar-hidden flex-1">
+    <div id="modalContentArea" class="modal-body">
       <!-- Tags in Modal -->
       <div id="modalTags" class="flex flex-wrap gap-2"></div>
 
       <!-- Summary Box -->
-      <div class="bg-primary/5 dark:bg-primary/10 border-l-4 border-primary p-6 rounded-r-2xl">
-        <h4 class="text-sm font-bold text-primary uppercase tracking-widest mb-2"><i class="fas fa-info-circle mr-1"></i> Abstract</h4>
-        <p id="modalSummary" class="text-gray-700 dark:text-gray-300 italic leading-relaxed text-lg"></p>
+      <div class="abstract-callout-box">
+        <h4 class="abstract-callout-title"><i class="fas fa-info-circle mr-1"></i> Abstract</h4>
+        <p id="modalSummary" class="abstract-callout-text"></p>
       </div>
 
       <!-- Full Content -->
@@ -205,38 +118,39 @@ include '../../src/header.php';
     </div>
 
     <!-- Modal Footer (Actions) -->
-    <div class="px-8 py-5 bg-white/50 dark:bg-gray-800/50 border-t border-gray-200 dark:border-gray-800 rounded-b-[2.5rem] flex flex-col sm:flex-row justify-between items-center gap-4">
+    <div class="modal-footer">
 
       <!-- Navigation within Modal -->
-      <div class="flex items-center gap-2 order-2 sm:order-1 w-full sm:w-auto justify-between sm:justify-start">
-        <button id="prevEntryBtn" class="flex items-center gap-2 px-4 py-2 text-sm font-medium text-text-secondary hover:text-primary hover:bg-content-bg rounded-lg border border-transparent hover:border-slate-200 dark:hover:border-slate-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed">
+      <div class="flex items-center gap-2">
+        <button id="prevEntryBtn" class="btn-research btn-research-secondary">
           <i class="fas fa-arrow-left"></i> Previous
         </button>
-        <button id="nextEntryBtn" class="flex items-center gap-2 px-4 py-2 text-sm font-medium text-text-secondary hover:text-primary hover:bg-content-bg rounded-lg border border-transparent hover:border-slate-200 dark:hover:border-slate-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed">
+        <button id="nextEntryBtn" class="btn-research btn-research-secondary">
           Next <i class="fas fa-arrow-right"></i>
         </button>
       </div>
 
       <!-- Export & TTS Tools -->
-      <div class="flex flex-wrap items-center gap-2 order-1 sm:order-2">
-        <button id="ttsBtn" class="flex items-center gap-2 px-3 py-2 text-sm font-bold text-primary bg-primary/10 hover:bg-primary/20 rounded-lg transition-colors border border-transparent">
+      <div class="flex flex-wrap items-center gap-2">
+        <button id="ttsBtn" class="btn-research">
              <i class="fas fa-volume-up"></i> <span id="ttsBtnText">Listen</span>
         </button>
         
         <div class="h-6 w-px bg-gray-300 dark:bg-gray-600 mx-2"></div>
         
-        <button id="shareBtn" class="p-2 text-text-secondary hover:text-primary transition-colors" title="Copy Link">
-          <i class="fas fa-link"></i>
+        <button id="shareBtn" class="btn-research btn-research-secondary" title="Copy Link">
+          <i class="fas fa-link"></i> <span>Copy</span>
         </button>
         
-        <button id="pdfBtn" class="px-3 py-1.5 text-xs font-bold bg-content-bg border border-slate-300 dark:border-slate-600 text-text-default rounded hover:bg-primary hover:text-white hover:border-primary transition-all" title="Export as PDF">PDF</button>
-        <button id="htmlBtn" class="px-3 py-1.5 text-xs font-bold bg-content-bg border border-slate-300 dark:border-slate-600 text-text-default rounded hover:bg-primary hover:text-white hover:border-primary transition-all" title="Export as HTML">HTML</button>
-        <button id="txtBtn" class="px-3 py-1.5 text-xs font-bold bg-content-bg border border-slate-300 dark:border-slate-600 text-text-default rounded hover:bg-primary hover:text-white hover:border-primary transition-all" title="Export as Text">TXT</button>
+        <button id="pdfBtn" class="btn-research btn-research-secondary" title="Export as PDF">PDF</button>
+        <button id="htmlBtn" class="btn-research btn-research-secondary" title="Export as HTML">HTML</button>
+        <button id="txtBtn" class="btn-research btn-research-secondary" title="Export as Text">TXT</button>
       </div>
 
     </div>
   </div>
 </div>
+
 
 <!-- Libraries -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
@@ -1162,40 +1076,42 @@ include '../../src/header.php';
     // Render Cards
     pageItems.forEach(entry => {
       const card = document.createElement('article');
-      card.className = 'group bg-white/50 dark:bg-gray-800/50 backdrop-blur-xl rounded-[2rem] border border-white/20 dark:border-white/10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.2)] overflow-hidden hover:shadow-[0_20px_40px_rgb(0,0,0,0.1)] hover:-translate-y-2 transition-all duration-500 flex flex-col h-full fade-in';
+      card.className = 'research-card read-trigger';
+      card.dataset.id = entry.id;
+      card.style.cursor = 'pointer';
 
       // Generate Tag HTML
       const tagHtml = entry.tags.map(tag =>
-        `<span class="journal-tag inline-block px-3 py-1 text-xs font-bold border border-primary/20 bg-primary/10 text-primary rounded-md cursor-pointer hover:bg-primary hover:text-white transition-colors backdrop-blur-sm" data-tag="${tag}">${tag}</span>`
+        `<span class="tag-chip interactive journal-tag" data-tag="${tag}">${tag}</span>`
       ).join('');
 
       card.innerHTML = `
-         <div class="p-8 flex-1 flex flex-col relative bg-gradient-to-br from-white/60 to-white/30 dark:from-gray-800/60 dark:to-gray-900/40">
+         <div class="card-body">
              <div class="flex justify-between items-center mb-6">
                   <div class="flex flex-wrap gap-2">${tagHtml}</div>
                   <span class="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-widest">${entry.date}</span>
              </div>
 
-             <h3 class="text-2xl font-black text-gray-900 dark:text-white mb-4 group-hover:text-primary transition-colors cursor-pointer read-trigger leading-tight" data-id="${entry.id}">
+             <h3 class="card-title read-trigger" data-id="${entry.id}">
                  ${entry.title}
              </h3>
 
-             <div class="flex items-center gap-2 mb-6 text-sm text-gray-500 dark:text-gray-400 font-medium">
-                  <span class="flex items-center gap-1.5"><i class="fas fa-user-circle text-gray-400"></i> ${entry.author}</span>
+             <div class="card-meta">
+                  <span class="card-meta-item"><i class="fas fa-user-circle"></i> ${entry.author}</span>
              </div>
 
-             <p class="text-gray-600 dark:text-gray-300 leading-relaxed line-clamp-3 mb-8 flex-1">
+             <p class="card-desc clamp-3">
                  ${entry.summary}
              </p>
 
-             <button class="read-more-btn mt-auto flex items-center justify-between group/btn w-full bg-transparent hover:bg-transparent" data-id="${entry.id}">
-                  <span class="text-primary font-bold tracking-wide uppercase text-sm group-hover/btn:text-indigo-600 dark:group-hover/btn:text-indigo-400 transition-colors">
+             <div class="read-more-btn card-cta-wrap bg-transparent border-0 cursor-pointer p-0" data-id="${entry.id}">
+                  <span class="card-cta-text">
                       Read Article
                   </span>
-                  <div class="w-10 h-10 rounded-full bg-primary/10 dark:bg-primary/20 flex items-center justify-center text-primary group-hover/btn:bg-primary group-hover/btn:text-white transition-all duration-300">
-                      <i class="fas fa-arrow-right group-hover/btn:translate-x-1 transition-transform"></i>
+                  <div class="card-cta-icon">
+                      <i class="fas fa-arrow-right"></i>
                   </div>
-             </button>
+             </div>
          </div>
       `;
       container.appendChild(card);
@@ -1219,7 +1135,7 @@ include '../../src/header.php';
     const prevBtn = document.createElement('button');
     prevBtn.innerHTML = '<i class="fas fa-chevron-left"></i>';
     prevBtn.disabled = state.currentPage === 1;
-    prevBtn.className = `p-2 rounded-lg ${state.currentPage === 1 ? 'text-gray-300 cursor-not-allowed' : 'text-primary hover:bg-base-bg'}`;
+    prevBtn.className = 'page-btn';
     prevBtn.onclick = () => changePage(state.currentPage - 1);
     paginationEl.appendChild(prevBtn);
 
@@ -1227,11 +1143,7 @@ include '../../src/header.php';
     for (let i = 1; i <= totalPages; i++) {
       const pageBtn = document.createElement('button');
       pageBtn.textContent = i;
-      if (i === state.currentPage) {
-        pageBtn.className = 'w-8 h-8 rounded-lg bg-primary text-white font-bold shadow-md';
-      } else {
-        pageBtn.className = 'w-8 h-8 rounded-lg text-text-secondary hover:bg-base-bg hover:text-primary transition-colors';
-      }
+      pageBtn.className = i === state.currentPage ? 'page-btn active' : 'page-btn';
       pageBtn.onclick = () => changePage(i);
       paginationEl.appendChild(pageBtn);
     }
@@ -1240,7 +1152,7 @@ include '../../src/header.php';
     const nextBtn = document.createElement('button');
     nextBtn.innerHTML = '<i class="fas fa-chevron-right"></i>';
     nextBtn.disabled = state.currentPage === totalPages;
-    nextBtn.className = `p-2 rounded-lg ${state.currentPage === totalPages ? 'text-gray-300 cursor-not-allowed' : 'text-primary hover:bg-base-bg'}`;
+    nextBtn.className = 'page-btn';
     nextBtn.onclick = () => changePage(state.currentPage + 1);
     paginationEl.appendChild(nextBtn);
   }
@@ -1301,9 +1213,12 @@ include '../../src/header.php';
       }
 
       // Click Open Modal
-      const btn = e.target.closest('.read-more-btn') || e.target.closest('.read-trigger');
-      if (btn) {
-        openEntryModal(btn.dataset.id);
+      const targetEl = e.target.closest('[data-id]') || e.target.closest('.research-card');
+      if (targetEl) {
+        const id = targetEl.dataset.id || targetEl.getAttribute('data-id');
+        if (id) {
+          openEntryModal(id);
+        }
       }
     });
 
@@ -1325,26 +1240,16 @@ include '../../src/header.php';
 
   function showModal(show = true) {
     const modal = document.getElementById('entryModal');
-    const panel = document.getElementById('modalPanel');
 
     if (show) {
       document.body.style.overflow = 'hidden';
       modal.classList.remove('hidden');
-      // Small delay for animation
-      requestAnimationFrame(() => {
-        modal.classList.remove('opacity-0');
-        panel.classList.remove('opacity-0', 'scale-95');
-        panel.classList.add('scale-100');
-      });
+      modal.classList.add('active');
     } else {
       document.body.style.overflow = '';
-      modal.classList.add('opacity-0');
-      panel.classList.add('opacity-0', 'scale-95');
-      panel.classList.remove('scale-100');
-      setTimeout(() => {
-        modal.classList.add('hidden');
-        state.currentEntryId = null;
-      }, 300);
+      modal.classList.remove('active');
+      modal.classList.add('hidden');
+      state.currentEntryId = null;
     }
   }
 
@@ -1364,7 +1269,7 @@ include '../../src/header.php';
     // Tags
     const tagsContainer = document.getElementById('modalTags');
     tagsContainer.innerHTML = entry.tags.map(t =>
-      `<span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded font-bold uppercase tracking-wider">${t}</span>`
+      `<span class="tag-chip interactive">${t}</span>`
     ).join('');
 
     // Navigation Button State

@@ -38,7 +38,7 @@
             <div class="doc-modal-footer">
                 <p class="doc-modal-copyright">Hesten's Learning &copy; 2026</p>
                 <div class="doc-modal-actions">
-                    <button onclick="window.print()" class="doc-modal-print-btn">
+                    <button onclick="printCurriculum()" class="doc-modal-print-btn">
                         <i class="fas fa-print"></i> 
                         <span class="print-text-full">Print Path</span>
                         <span class="print-text-short">Print</span>

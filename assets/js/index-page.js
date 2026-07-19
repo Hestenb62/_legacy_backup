@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     loadState();
     if (typeof learningLevels !== 'undefined') {
         renderLevels(learningLevels); // Render grid from JS data
+        applyFilters(); // Apply category filters immediately on load
     }
     checkStreak();
     updateHeroGreeting();
@@ -119,6 +120,9 @@ function renderLevels(data) {
     document.querySelectorAll('.level-card').forEach(el => {
         revealObserver.observe(el);
     });
+
+    // Ensure filtering logic hides new extra tiles on initial render
+    applyFilters();
 }
 
 function loadState() {
@@ -248,6 +252,26 @@ function openDocModal(btn) {
         docsContainer.innerHTML = '<div class="doc-modal-empty-box"><i class="fas fa-sparkles doc-modal-empty-icon"></i><p class="doc-modal-empty-text">Detailed curriculum is being prepared for this journey.</p></div>';
     }
 
+    // Position modal container centered horizontally, aligned vertically with tile height
+    if (card) {
+        const rect = card.getBoundingClientRect();
+        const viewportHeight = window.innerHeight;
+        const modalHeight = Math.min(viewportHeight * 0.85, 750);
+        
+        let targetTop = rect.top;
+        if (targetTop + modalHeight > viewportHeight - 20) {
+            targetTop = Math.max(20, viewportHeight - modalHeight - 20);
+        } else {
+            targetTop = Math.max(20, targetTop);
+        }
+
+        modalContainer.style.position = 'fixed';
+        modalContainer.style.top = `${targetTop}px`;
+        modalContainer.style.left = '50%';
+        modalContainer.style.transform = 'translateX(-50%)';
+        modalContainer.style.margin = '0';
+    }
+
     // Show modal
     modal.classList.remove('hidden');
     void modal.offsetWidth;
@@ -272,9 +296,154 @@ function closeDocModal() {
     // Wait for transition before hiding
     setTimeout(() => {
         modal.classList.add('hidden', 'pointer-events-none');
+        modalContent.style.position = '';
+        modalContent.style.top = '';
+        modalContent.style.left = '';
+        modalContent.style.transform = '';
+        modalContent.style.margin = '';
         // Re-enable body scrolling
         document.body.style.overflow = '';
     }, 300);
+}
+
+function printCurriculum() {
+    const modalTitle = document.getElementById('modal-title')?.textContent || 'Curriculum';
+    const modalSubtitle = document.getElementById('modal-subtitle')?.textContent || '';
+    const modalDesc = document.getElementById('modal-desc')?.textContent || '';
+    const docsContainer = document.getElementById('modal-docs');
+
+    if (!docsContainer) {
+        window.print();
+        return;
+    }
+
+    let curriculumSectionsHtml = '';
+    const pills = Array.from(docsContainer.querySelectorAll('.modal-tab-pill'));
+    const panes = Array.from(docsContainer.querySelectorAll('.doc-modal-pane, .modal-tab-pane'));
+
+    if (panes.length > 0) {
+        panes.forEach((pane, idx) => {
+            const subjectName = pills[idx] ? pills[idx].textContent.trim() : `Module ${idx + 1}`;
+            const content = pane.querySelector('.doc-modal-pane-content, .prose-content') || pane;
+            curriculumSectionsHtml += `
+                <div style="margin-bottom: 2rem; page-break-inside: avoid;">
+                    <h2 style="font-size: 1.2rem; font-weight: 700; color: #1e40af; border-bottom: 2px solid #3b82f6; padding-bottom: 0.35rem; margin-bottom: 0.75rem;">
+                        ${subjectName}
+                    </h2>
+                    <div class="prose-content" style="font-size: 0.95rem; color: #1f2937; line-height: 1.6;">
+                        ${content.innerHTML}
+                    </div>
+                </div>
+            `;
+        });
+    } else {
+        curriculumSectionsHtml = docsContainer.innerHTML;
+    }
+
+    const printWin = window.open('', '_blank', 'width=900,height=750');
+    if (!printWin) {
+        window.print();
+        return;
+    }
+
+    const printDoc = `
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>${modalTitle} - Printed Curriculum</title>
+            <style>
+                body {
+                    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+                    margin: 0;
+                    padding: 2.5rem;
+                    color: #111827;
+                    background: #fff;
+                }
+                .header {
+                    margin-bottom: 2rem;
+                    padding-bottom: 1rem;
+                    border-bottom: 2px solid #e5e7eb;
+                }
+                .title {
+                    font-size: 2rem;
+                    font-weight: 800;
+                    margin: 0 0 0.35rem 0;
+                    color: #0f172a;
+                }
+                .subtitle {
+                    font-size: 1.05rem;
+                    font-weight: 600;
+                    color: #64748b;
+                    margin: 0;
+                }
+                .desc-box {
+                    background: #f8fafc;
+                    border-left: 4px solid #3b82f6;
+                    padding: 1rem;
+                    margin-bottom: 2rem;
+                    border-radius: 0 0.5rem 0.5rem 0;
+                    font-size: 0.95rem;
+                    color: #334155;
+                }
+                .prose-content h5 {
+                    font-size: 1.1rem;
+                    font-weight: 700;
+                    color: #1d4ed8;
+                    margin: 1.25rem 0 0.35rem 0;
+                }
+                .prose-content p {
+                    margin: 0 0 0.5rem 0;
+                    line-height: 1.6;
+                }
+                .prose-content span {
+                    display: inline-block;
+                    font-size: 0.75rem;
+                    font-weight: 700;
+                    background: #f1f5f9;
+                    color: #475569;
+                    border: 1px solid #cbd5e1;
+                    padding: 0.2rem 0.5rem;
+                    border-radius: 0.25rem;
+                    margin-top: 0.35rem;
+                }
+                .footer {
+                    margin-top: 3rem;
+                    padding-top: 1rem;
+                    border-top: 1px solid #e2e8f0;
+                    font-size: 0.85rem;
+                    color: #94a3b8;
+                    text-align: center;
+                }
+                @media print {
+                    body { padding: 1.5rem; }
+                }
+            </style>
+        </head>
+        <body>
+            <div class="header">
+                <h1 class="title">${modalTitle}</h1>
+                <p class="subtitle">${modalSubtitle} • Hesten's Learning</p>
+            </div>
+            ${modalDesc ? `<div class="desc-box">${modalDesc}</div>` : ''}
+            <div>
+                ${curriculumSectionsHtml}
+            </div>
+            <div class="footer">
+                <p>Hesten's Learning &copy; ${new Date().getFullYear()} • Printed Curriculum</p>
+            </div>
+            <script>
+                window.onload = function() {
+                    window.print();
+                    setTimeout(function() { window.close(); }, 500);
+                };
+            </script>
+        </body>
+        </html>
+    `;
+
+    printWin.document.write(printDoc);
+    printWin.document.close();
 }
 
 function switchModalTab(btn, index) {
@@ -393,6 +562,17 @@ function updateStats() {
 function setCategory(btn, cat, scrollToGrid = false) {
     currentCategory = cat;
 
+    // Update Tab active states
+    document.querySelectorAll('.path-tab').forEach(t => {
+        t.classList.remove('active');
+        t.setAttribute('aria-selected', 'false');
+    });
+
+    if (btn && btn.classList.contains('path-tab')) {
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
+    }
+
     // Update Path Cards
     document.querySelectorAll('.path-card').forEach(b => {
         b.classList.remove('journey-path-active', 'ring-4', 'ring-primary/20');
@@ -421,7 +601,18 @@ function applyFilters() {
 
     cards.forEach(card => {
         const cat = card.dataset.category;
-        const matchesCat = currentCategory === 'all' || cat === currentCategory;
+        const cardId = card.dataset.id;
+        
+        // 'all' shows main academic paths + Test/Extra tile after Grade 12
+        // 'extra' tab shows ONLY the 3 new tiles: AP US History, American Yawp, and Practice GED
+        let matchesCat = false;
+        if (currentCategory === 'all') {
+            matchesCat = cat !== 'extra' || cardId === 'test-section';
+        } else if (currentCategory === 'extra') {
+            matchesCat = cat === 'extra' && cardId !== 'test-section';
+        } else {
+            matchesCat = cat === currentCategory;
+        }
         const matchesSearch = !term ||
             card.dataset.title.includes(term) ||
             card.dataset.desc.includes(term) ||

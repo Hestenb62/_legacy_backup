@@ -1100,21 +1100,29 @@ h3,
 
 /* --- PRINT STYLES: Curriculum Portal --- */
 @media print {
-    body * {
-        visibility: hidden;
+    body > *:not(#doc-modal) {
+        display: none !important;
     }
 
-    #doc-modal,
+    #doc-modal {
+        position: static !important;
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        background: transparent !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
     #doc-modal * {
         visibility: visible;
     }
 
-    #doc-modal {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        border: none;
+    .doc-modal-backdrop,
+    .doc-modal-close,
+    .doc-modal-actions,
+    .doc-modal-close-btn {
+        display: none !important;
     }
 
     #modal-container {
