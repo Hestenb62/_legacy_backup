@@ -33,7 +33,7 @@
                     </h4>
                     <ul class="footer-links">
                         <li class="footer-link-item"><a href="/curriculum.php"><i class="fas fa-book footer-link-icon"></i> Curriculum</a></li>
-                        <li class="footer-link-item"><a href="/research/"><i class="fas fa-flask footer-link-icon"></i> Research</a></li>
+                        <li class="footer-link-item"><a href="https://research.hestena62.com" target="_blank" rel="noopener noreferrer" id="footer-research-link" onclick="return showA11yWarningModal(event, this);"><i class="fas fa-flask footer-link-icon"></i> Research</a></li>
                         <li class="footer-link-item"><a href="/library/"><i class="fas fa-book-open footer-link-icon"></i> Library</a></li>
                         <li class="footer-link-item"><a href="/help-center.php"><i class="fas fa-question-circle footer-link-icon"></i> Help Center</a></li>
                     </ul>
@@ -96,6 +96,27 @@
             </div>
         </div>
     </footer>
+
+<!-- Accessibility Warning Modal for External Research Link -->
+<div id="a11y-warning-modal" class="a11y-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="a11y-modal-title" aria-describedby="a11y-modal-desc" style="display: none;">
+    <div class="a11y-modal-backdrop" onclick="closeA11yWarningModal()"></div>
+    <div class="a11y-modal-content">
+        <button class="a11y-modal-close" onclick="closeA11yWarningModal()" aria-label="Close warning">&times;</button>
+        <div class="a11y-modal-icon-container">
+            <i class="fas fa-exclamation-triangle"></i>
+        </div>
+        <h3 id="a11y-modal-title" class="a11y-modal-header">External Site Warning</h3>
+        <p id="a11y-modal-desc" class="a11y-modal-text">
+            You are leaving Hesten's Learning to visit <strong>research.hestena62.com</strong>.
+            <br><br>
+            Please note that this external site is powered by htmly and we do not have control over its accessibility features. Settings overlays (such as text size, dyslexia font, and contrast modes) will not apply there.
+        </p>
+        <div class="a11y-modal-buttons">
+            <button id="a11y-modal-cancel" class="a11y-btn-secondary" onclick="closeA11yWarningModal()">Cancel</button>
+            <a id="a11y-modal-proceed" class="a11y-btn-primary" href="https://research.hestena62.com" target="_blank" rel="noopener noreferrer" onclick="closeA11yWarningModal()">Proceed</a>
+        </div>
+    </div>
+</div>
 
 
 <!-- GTranslate Settings -->
@@ -250,5 +271,63 @@
             window.syncPanelInputs(s);
         }
     }); // End DOMContentLoaded
+
+    // Accessibility Warning Modal for External Research Link
+    let lastActiveElement = null;
+
+    window.showA11yWarningModal = function(event, linkEl) {
+        event.preventDefault();
+        lastActiveElement = document.activeElement;
+
+        const modal = document.getElementById("a11y-warning-modal");
+        if (modal) {
+            modal.style.display = "flex";
+            modal.removeAttribute("aria-hidden");
+            
+            const cancelBtn = document.getElementById("a11y-modal-cancel");
+            if (cancelBtn) cancelBtn.focus();
+            
+            document.addEventListener("keydown", handleA11yModalKeydown);
+        }
+        return false;
+    };
+
+    window.closeA11yWarningModal = function() {
+        const modal = document.getElementById("a11y-warning-modal");
+        if (modal) {
+            modal.style.display = "none";
+            modal.setAttribute("aria-hidden", "true");
+            
+            document.removeEventListener("keydown", handleA11yModalKeydown);
+            
+            if (lastActiveElement) lastActiveElement.focus();
+        }
+    };
+
+    function handleA11yModalKeydown(e) {
+        if (e.key === "Escape") {
+            closeA11yWarningModal();
+            return;
+        }
+
+        if (e.key === "Tab") {
+            const modal = document.getElementById("a11y-warning-modal");
+            const focusables = modal.querySelectorAll('button, a');
+            const first = focusables[0];
+            const last = focusables[focusables.length - 1];
+
+            if (e.shiftKey) {
+                if (document.activeElement === first) {
+                    last.focus();
+                    e.preventDefault();
+                }
+            } else {
+                if (document.activeElement === last) {
+                    first.focus();
+                    e.preventDefault();
+                }
+            }
+        }
+    }
 </script>
 <script src="/assets/js/standard.js"></script>

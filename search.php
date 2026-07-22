@@ -146,6 +146,10 @@ include 'src/header.php';
         border-color: var(--color-primary) !important;
         box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2) !important;
     }
+    .search-input:focus-visible {
+        outline: 3px solid var(--color-accent, #06b6d4) !important;
+        outline-offset: 2px !important;
+    }
     .search-result-card:hover {
         box-shadow: var(--shadow-2xl) !important;
         transform: translateY(-0.25rem);

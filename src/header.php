@@ -206,6 +206,11 @@ $currentUser = getCurrentUser();
             box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
         }
         
+        .search-input:focus-visible {
+            outline: 3px solid var(--color-accent, #06b6d4) !important;
+            outline-offset: 2px !important;
+        }
+        
         .search-icon {
             position: absolute;
             left: 0.75rem;
@@ -377,6 +382,8 @@ $currentUser = getCurrentUser();
 </head>
 
 <body>
+    <!-- Skip Navigation Link (WCAG 2.4.1) -->
+    <a href="#main-content" class="skip-link sr-only sr-only-focusable">Skip to main content</a>
 
     <!-- Fixed Tools & Overlays -->
     <?php include __DIR__ . '/partials/fixed-tools.php'; ?>
@@ -403,7 +410,7 @@ $currentUser = getCurrentUser();
                     <span class="header-brand-text">Hesten's Learning</span>
                 </a>
                 
-                <button id="nav-toggle" class="mobile-menu-btn">
+                <button id="nav-toggle" class="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-content">
                     <i class="fas fa-bars"></i>
                 </button>
                 
@@ -415,12 +422,13 @@ $currentUser = getCurrentUser();
                     
                     <div class="header-actions">
                         <form action="/search.php" method="GET" class="search-form">
-                            <input type="text" name="q" placeholder="Search..." class="search-input" />
+                            <label for="header-search" class="sr-only">Search the site</label>
+                            <input type="text" id="header-search" name="q" placeholder="Search..." class="search-input" />
                             <i class="fas fa-search search-icon"></i>
                         </form>
                         
                         <div class="user-dropdown-container">
-                            <button class="user-pill" id="user-pill-btn">
+                            <button class="user-pill" id="user-pill-btn" aria-expanded="false" aria-haspopup="true" aria-controls="user-dropdown-menu">
                                 <img src="<?php echo htmlspecialchars($currentUser['avatar']); ?>" alt="User" class="user-avatar" onerror="this.src='https://ui-avatars.com/api/?name=User&background=random'">
                                 <div class="user-info">
                                     <span class="user-name"><?php echo htmlspecialchars($currentUser['name']); ?></span>
@@ -475,23 +483,31 @@ $currentUser = getCurrentUser();
     <script src="/assets/js/a11y.js"></script>
     <script src="/assets/js/core-ui.js"></script>
     <script>
-        document.getElementById('nav-toggle').addEventListener('click', function() {
-            var nav = document.getElementById('nav-content');
-            if (nav.style.display === 'none' || nav.style.display === '') {
-                nav.style.display = 'flex';
-            } else {
-                if (window.innerWidth < 1024) {
-                    nav.style.display = 'none';
+        const navToggle = document.getElementById('nav-toggle');
+        if (navToggle) {
+            navToggle.addEventListener('click', function() {
+                var nav = document.getElementById('nav-content');
+                if (nav.style.display === 'none' || nav.style.display === '') {
+                    nav.style.display = 'flex';
+                    this.setAttribute('aria-expanded', 'true');
+                } else {
+                    if (window.innerWidth < 1024) {
+                        nav.style.display = 'none';
+                    }
+                    this.setAttribute('aria-expanded', 'false');
                 }
-            }
-        });
+            });
+        }
         
         window.addEventListener('resize', function() {
             var nav = document.getElementById('nav-content');
+            const navToggle = document.getElementById('nav-toggle');
             if (window.innerWidth >= 1024) {
                 nav.style.display = 'flex';
+                if (navToggle) navToggle.setAttribute('aria-expanded', 'true');
             } else {
                 nav.style.display = 'none';
+                if (navToggle) navToggle.setAttribute('aria-expanded', 'false');
             }
         });
         
@@ -501,11 +517,13 @@ $currentUser = getCurrentUser();
         if (userBtn && userMenu) {
             userBtn.addEventListener('click', function(e) {
                 e.stopPropagation();
-                userMenu.classList.toggle('active');
+                const active = userMenu.classList.toggle('active');
+                userBtn.setAttribute('aria-expanded', active ? 'true' : 'false');
             });
             document.addEventListener('click', function(e) {
                 if (!userBtn.contains(e.target) && !userMenu.contains(e.target)) {
                     userMenu.classList.remove('active');
+                    userBtn.setAttribute('aria-expanded', 'false');
                 }
             });
         }

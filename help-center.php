@@ -32,11 +32,10 @@ include 'src/header.php';
             <div style="position: absolute; top: 0; bottom: 0; left: 0; padding-left: 1.25rem; display: flex; align-items: center; pointer-events: none;">
                 <i class="fas fa-search" style="color: rgba(156, 163, 175, 1); transition: color 0.3s;" id="search-icon"></i>
             </div>
+            <label for="help-search" class="sr-only">Search for help answers</label>
             <input type="text" id="help-search" onkeyup="filterFAQ()"
-                style="width: 100%; padding: 1rem 1rem 1rem 3rem; border-radius: 9999px; color: rgba(17, 24, 39, 1); background-color: white; border: none; outline: none; box-shadow: var(--shadow-2xl); transition: all 0.3s;"
-                placeholder="Search for answers (e.g., 'progress', 'dyslexia font')..."
-                onfocus="document.getElementById('search-icon').style.color='var(--color-primary)'; this.style.boxShadow='0 0 0 4px rgba(255, 255, 255, 0.3)';"
-                onblur="document.getElementById('search-icon').style.color='rgba(156, 163, 175, 1)'; this.style.boxShadow='var(--shadow-2xl)';">
+                style="width: 100%; padding: 1rem 1rem 1rem 3rem; border-radius: 9999px; color: rgba(17, 24, 39, 1); background-color: white; border: none; box-shadow: var(--shadow-2xl); transition: all 0.3s;"
+                placeholder="Search for answers (e.g., 'progress', 'dyslexia font')...">
         </div>
     </div>
 </div>
