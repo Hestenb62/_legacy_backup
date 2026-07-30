@@ -55,9 +55,8 @@
                 <span class="curr-select-label">Curriculum:</span>
                 <select id="curriculum-select" onchange="updateGlobalSetting('curriculum', this.value)" 
                     class="curr-select">
-                    <option value="engageny">EngageNY / Common Core</option>
-                    <option value="teks">Texas TEKS</option>
-                    <option value="custom">Hesten's Custom Path</option>
+                    <option value="engageny">EngageNY/Common Core</option>
+                  <!--   <option value="teks">Texas TEKS</option> -->
                 </select>
             </div>
         </div>
