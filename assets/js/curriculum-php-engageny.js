@@ -1,4 +1,18 @@
-const curriculumData = {
+(function() {
+    window.curriculumData = window.curriculumData || {};
+    
+    function mergeCurriculumData(target, source) {
+        for (const key in source) {
+            if (source[key] && typeof source[key] === 'object' && !Array.isArray(source[key])) {
+                if (!target[key]) target[key] = {};
+                mergeCurriculumData(target[key], source[key]);
+            } else {
+                target[key] = source[key];
+            }
+        }
+    }
+    
+    const localData = {
     'math': {
         'desc': 'Detailed learning paths, state standards alignment, and core competencies for Mathematics.',
         'color': 'indigo',
@@ -580,6 +594,10 @@ const curriculumData = {
         }
     }
 };
+    
+    mergeCurriculumData(window.curriculumData, localData);
+})();
+var curriculumData = window.curriculumData;
 
 /* 
  * Usage example for your frontend code:

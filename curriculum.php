@@ -56,7 +56,7 @@
                 <select id="curriculum-select" onchange="updateGlobalSetting('curriculum', this.value)" 
                     class="curr-select">
                     <option value="engageny">EngageNY/Common Core</option>
-                  <!--   <option value="teks">Texas TEKS</option> -->
+                    <option value="teks">Texas TEKS</option>
                 </select>
             </div>
         </div>
@@ -167,6 +167,7 @@
 </main>
 
 <script src="assets/js/curriculum-php-engageny.js"></script>
+<script src="assets/js/curriculum-php-teks.js"></script>
 <script>
     let currentSubject = 'math';
     let currentGrade = 'Kindergarten';
@@ -227,14 +228,22 @@
             const activeCurr = (window.currentSettings && window.currentSettings.curriculum) || 'engageny';
             
             // Resolve curriculum-specific structure if available
-            if (gradeData && (gradeData.engageny || gradeData.teks || gradeData.custom)) {
-                gradeData = gradeData[activeCurr] || gradeData.engageny;
+            const resolvedCurr = (activeCurr === 'engageny') ? 'ccss' : activeCurr;
+            if (gradeData && (gradeData.ccss || gradeData.teks || gradeData.custom)) {
+                gradeData = gradeData[resolvedCurr];
             }
 
             if (!gradeData) {
+                const currNames = {
+                    'ccss': 'Common Core / EngageNY',
+                    'teks': 'Texas TEKS',
+                    'custom': "Hesten's Custom"
+                };
+                const activeCurrName = currNames[resolvedCurr] || activeCurr;
+                
                 gradeData = {
-                    title: `${currentGrade} ${currentSubject.toUpperCase()} Outline`,
-                    overview: `<p>Outline and detailed curriculum for ${currentGrade} ${currentSubject} is being updated. Please check back soon or visit the specific level page.</p>`,
+                    title: `${currentGrade} ${currentSubject.toUpperCase()} Outline (${activeCurrName})`,
+                    overview: `<p>Outline and detailed curriculum for ${currentGrade} ${currentSubject} (${activeCurrName}) is being updated. Please check back soon or visit the specific level page.</p>`,
                     standards: '<p>Standards data coming soon.</p>',
                     competencies: ['Information Pending'],
                     level: 'A' // Default fallback

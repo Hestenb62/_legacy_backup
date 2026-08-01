@@ -1,4 +1,18 @@
-const curriculumData = {
+(function() {
+    window.curriculumData = window.curriculumData || {};
+    
+    function mergeCurriculumData(target, source) {
+        for (const key in source) {
+            if (source[key] && typeof source[key] === 'object' && !Array.isArray(source[key])) {
+                if (!target[key]) target[key] = {};
+                mergeCurriculumData(target[key], source[key]);
+            } else {
+                target[key] = source[key];
+            }
+        }
+    }
+    
+    const localData = {
     'math': {
         'desc': 'Detailed learning paths, state standards alignment, and core competencies for Mathematics.',
         'color': 'indigo',
@@ -35,9 +49,12 @@ const curriculumData = {
                     'overview': '<p>Phonological awareness and alphabet recognition matching Texas pre-elementary standards.</p>',
                     'standards': '<div class="curr-standard-item"><h4 class="curr-standard-title">TEKS PK.III.A</h4><p class="curr-standard-desc">Child demonstrates phonological awareness skills.</p></div>',
                     'competencies': ['Name letters of alphabet', 'Produce rhyming words', 'Identify initial sounds'],
-                    'level': 'A'
                 }
             }
         }
     }
 };
+    
+    mergeCurriculumData(window.curriculumData, localData);
+})();
+var curriculumData = window.curriculumData;
