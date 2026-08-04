@@ -10,7 +10,7 @@ $welcomeParagraph = "Welcome to the resource wiki! All your subjects are listed 
 
 // Include the header file, which contains the <html>, <head>, and opening <body> tags,
 // as well as the navigation bar, accessibility panel, and welcome popup.
-include 'src/header.php';
+include '..//src/header.php';
 ?>
 
     <!-- Hero Section -->
@@ -385,5 +385,5 @@ include 'src/header.php';
 
 <?php
 // Include the footer file, which contains the <footer>, modals, and closing </body> and </html> tags.
-include 'src/footer.php';
+include '..//src/footer.php';
 ?>
