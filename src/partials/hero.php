@@ -52,11 +52,11 @@
                 </div>
                 <span class="stat-label">Active Streak</span>
             </div>
-            <div class="stats-card glass-panel hidden md-flex">
-                <i class="fas fa-shield-check stat-icon" style="color: var(--color-success);"></i>
+            <div class="stats-card glass-panel hidden md:flex">
+                <i class="fas fa-user-shield stat-icon" style="color: var(--color-success);"></i>
                 <span class="stat-label">Safe Space</span>
             </div>
-            <div class="stats-card glass-panel hidden md-flex">
+            <div class="stats-card glass-panel hidden md:flex">
                 <i class="fas fa-universal-access stat-icon" style="color: #a855f7;"></i>
                 <span class="stat-label">Accessible</span>
             </div>

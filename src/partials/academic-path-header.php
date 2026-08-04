@@ -9,7 +9,7 @@
         </div>
 
         <!-- Segmented Control -->
-        <div class="path-tabs hidden md-flex" role="tablist" aria-label="Filter learning paths">
+        <div class="path-tabs hidden md:flex" role="tablist" aria-label="Filter learning paths">
             <button type="button" role="tab" aria-selected="true"
                 class="path-tab active"
                 onclick="setCategory(this, 'all', true)">

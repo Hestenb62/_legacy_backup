@@ -31,7 +31,7 @@ $currentUser = getCurrentUser();
     <meta name="apple-mobile-web-app-title" content="Hesten's">
     
     <link rel="manifest" href="/manifest.json">
-    <link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
+    <link rel="apple-touch-icon" href="/assets/images/6791421e-7ca7-40bd-83d3-06a479bf7f36.png">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -54,8 +54,9 @@ $currentUser = getCurrentUser();
 
 
     <!-- Custom Modern Styles (Vanilla CSS Architecture) -->
-    <link rel="stylesheet" href="/assets/css/global.css">
     <link rel="stylesheet" href="/assets/css/components.css">
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/research.css">
     <link rel="stylesheet" href="/assets/css/styles.css">
     
     <style>
