@@ -330,6 +330,112 @@ include '../src/header.php';
 .subject-card.ela-card .external-links-list a { color: #059669; }
 .subject-card.science-card .external-links-list a { color: #dc2626; }
 .subject-card.social-card .external-links-list a { color: #d97706; }
+
+/* Admin Notice Banner */
+.admin-notice-banner {
+    position: fixed;
+    bottom: var(--spacing-6);
+    right: var(--spacing-6);
+    z-index: 1000;
+    max-width: 400px;
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border);
+    border-left: 5px solid var(--color-warning, #f59e0b);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+    padding: var(--spacing-4);
+    display: flex;
+    gap: var(--spacing-4);
+    align-items: flex-start;
+    animation: banner-slide-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    transition: all 0.3s ease;
+}
+
+.admin-notice-banner.hiding {
+    animation: banner-slide-out 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes banner-slide-in {
+    from {
+        transform: translateY(100px) scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes banner-slide-out {
+    from {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(100px) scale(0.9);
+        opacity: 0;
+    }
+}
+
+.banner-icon-container {
+    background-color: rgba(245, 158, 11, 0.1);
+    color: var(--color-warning, #f59e0b);
+    padding: var(--spacing-2);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+
+.banner-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-1);
+}
+
+.banner-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--color-text-main);
+}
+
+.banner-text {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    line-height: 1.4;
+    margin: 0;
+}
+
+.banner-close-btn {
+    color: var(--color-text-muted);
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: color 0.2s ease;
+    padding: 0.25rem;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-close-btn:hover {
+    color: var(--color-text-main);
+    background-color: var(--color-border);
+}
+
+/* Adjust layout on small screens */
+@media (max-width: 640px) {
+    .admin-notice-banner {
+        left: var(--spacing-4);
+        right: var(--spacing-4);
+        bottom: var(--spacing-4);
+        max-width: none;
+    }
+}
 </style>
 
 <div class="wiki-container">
@@ -573,6 +679,20 @@ include '../src/header.php';
     </main>
 </div>
 
+<!-- Admin Notice Popup Banner -->
+<div id="admin-notice-banner" class="admin-notice-banner" style="display: none;" role="alert">
+    <div class="banner-icon-container">
+        <i class="fas fa-tools"></i>
+    </div>
+    <div class="banner-body">
+        <h4 class="banner-title">Under Construction</h4>
+        <p class="banner-text">The site admin is working on expanding the page; there will be errors and more resources will be added.</p>
+    </div>
+    <button class="banner-close-btn" onclick="dismissAdminNotice()" aria-label="Close announcement">
+        <i class="fas fa-times"></i>
+    </button>
+</div>
+
 <script>
 function toggleDrawer(drawerId, btn) {
     const drawer = document.getElementById(drawerId);
@@ -596,6 +716,26 @@ function toggleDrawer(drawerId, btn) {
         }, 150);
     }
 }
+
+function dismissAdminNotice() {
+    const banner = document.getElementById('admin-notice-banner');
+    if (banner) {
+        banner.classList.add('hiding');
+        setTimeout(() => {
+            banner.style.display = 'none';
+            localStorage.setItem('admin_notice_dismissed', 'true');
+        }, 300);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('admin_notice_dismissed') !== 'true') {
+        const banner = document.getElementById('admin-notice-banner');
+        if (banner) {
+            banner.style.display = 'flex';
+        }
+    }
+});
 </script>
 
 <?php
