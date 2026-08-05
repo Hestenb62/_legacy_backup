@@ -366,116 +366,143 @@
 const grammarLessons = {
     "Nouns & Pronouns": {
         category: "Parts of Speech",
-        definition: "Nouns are words that name people, places, things, or ideas (like 'school', 'Hesten', 'book'). Pronouns are short words (like 'he', 'she', 'it', 'they') that stand in place of nouns to stop sentences from sounding repetitive.",
-        example: "Instead of saying 'Hesten read Hesten's book because Hesten liked it,' we say: 'Hesten read his book because he liked it.' ('his' and 'he' are pronouns).",
-        question: "Which word is a pronoun in this sentence: 'They went to the park.'?",
-        choices: ["They", "went", "park"],
-        correctIndex: 0,
-        explanation: "'They' is a pronoun that replaces the names of the people who went to the park."
+        definition: "Nouns are words that name people, places, things, or ideas. They are classified into Common (general, e.g., 'country'), Proper (specific, capitalized, e.g., 'Canada'), Concrete (perceived by senses, e.g., 'table'), and Abstract (ideas or feelings, e.g., 'freedom'). Pronouns replace nouns to avoid repetition. Personal pronouns (I, they) refer to specific people/things, possessive pronouns (mine, ours) show ownership, and reflexive pronouns (myself, themselves) refer back to the subject.",
+        example: "Noun: The brave astronaut (concrete) showed great courage (abstract) when flying to the Moon (proper).\nPronoun: Instead of saying, 'When Sarah got home, Sarah fed Sarah's cat,' we write: 'When she got home, she fed her cat.' ('she' and 'her' are personal/possessive pronouns).",
+        question: "Which word is a personal pronoun in the sentence: 'After they finished the assignment, Liam congratulated them.'?",
+        choices: ["Liam", "they", "finished"],
+        correctIndex: 1,
+        explanation: "'they' is a personal pronoun replacing the group of students. 'Liam' is a proper noun, and 'finished' is a verb."
     },
     "Verbs & Tenses": {
         category: "Parts of Speech",
-        definition: "Verbs are action words (like 'run', 'read', 'think') or state-of-being words (like 'is', 'seem'). Verb tenses tell us when the action happened: Past (happened before), Present (happens now), or Future (will happen later).",
-        example: "Present: 'I code today.' | Past: 'I coded yesterday.' | Future: 'I will code tomorrow.'",
-        question: "Identify the past tense verb in this sentence: 'Sarah quickly ate her lunch.'",
-        choices: ["quickly", "ate", "lunch"],
+        definition: "Verbs express actions (run, speak), occurrences (happen, become), or states of being (is, seem). Tenses indicate when an action happens: Past (occurred before now), Present (occurring now or habitually), and Future (will occur later). Aspects clarify completion or duration: Simple (completed fact), Progressive/Continuous (ongoing action, e.g., 'was walking'), and Perfect (action completed prior to another point, e.g., 'has eaten').",
+        example: "Present Progressive: 'I am studying for my grammar exam right now.'\nPast Perfect: 'He had finished writing his paper before the class started.'\nFuture: 'She will submit her portfolio tomorrow morning.'",
+        question: "What is the tense and aspect of the verb in: 'By next June, we will have graduated from middle school.'?",
+        choices: ["Future Simple", "Future Perfect", "Present Perfect"],
         correctIndex: 1,
-        explanation: "'Ate' is the past tense of the action verb 'eat'."
+        explanation: "'will have graduated' represents the Future Perfect tense, denoting an action that will be completed prior to a specific time in the future."
     },
     "Adjectives & Adverbs": {
         category: "Parts of Speech",
-        definition: "Adjectives describe or give details about nouns (like 'quiet boy', 'blue sky'). Adverbs describe verbs, adjectives, or other adverbs, and they often answer 'how', 'when', or 'where' (like 'walked slowly', 'very bright').",
-        example: "Sentence: 'The energetic student completed the test very quickly.' ('energetic' is an adjective describing the student; 'very' and 'quickly' are adverbs describing how they completed the test).",
-        question: "Which word is an adverb in this sentence: 'The alarm rang loudly.'?",
-        choices: ["alarm", "rang", "loudly"],
-        correctIndex: 2,
-        explanation: "'Loudly' describes how the alarm rang, making it an adverb."
+        definition: "Adjectives modify nouns or pronouns by specifying 'which one' (this, that), 'what kind' (blue, friendly), or 'how many' (several, three). Adverbs modify verbs, adjectives, or other adverbs. They explain 'how' (slowly), 'when' (yesterday), 'where' (here), or 'to what extent/degree' (extremely, very). Many adverbs end in '-ly', but not all (e.g., 'fast', 'never', 'very').",
+        example: "Adjective: 'The diligent student read several articles.' ('diligent' describes the student's trait; 'several' specifies quantity).\nAdverb: 'She completed the extremely difficult assignment remarkably quickly.' ('extremely' modifies the adjective 'difficult'; 'remarkably' modifies the adverb 'quickly'; 'quickly' describes how she completed the verb 'completed').",
+        question: "Identify the adverb that modifies another adverb in: 'The train traveled quite slowly through the mountain pass.'",
+        choices: ["quite", "slowly", "through"],
+        correctIndex: 0,
+        explanation: "'slowly' is an adverb modifying the verb 'traveled'. 'quite' is an adverb modifying the adverb 'slowly' by expressing the degree of slowness."
     },
     "Prepositions & Conjunctions": {
         category: "Parts of Speech",
-        definition: "Prepositions are helper words that show location, direction, or time relationships (like 'under the desk', 'after class'). Conjunctions are connector words (like 'and', 'but', 'because') that link words, phrases, or thoughts together.",
-        example: "Sentence: 'The paper is on the desk, but the pencil fell under it.' ('on' and 'under' are prepositions; 'but' is a conjunction connecting two sentences).",
-        question: "What is the conjunction in: 'We stayed inside because it was raining.'?",
-        choices: ["inside", "because", "raining"],
+        definition: "Prepositions show spatial, temporal, or logical relationships between a noun/pronoun and other words in a sentence (e.g., 'under', 'during', 'despite'). Conjunctions join words, phrases, or clauses. Coordinating conjunctions (FANBOYS: for, and, nor, but, or, yet, so) link equal elements. Subordinating conjunctions (although, because, while) connect a dependent clause to an independent clause.",
+        example: "Preposition: 'The cat jumped onto the counter during the storm.'\nCoordinating Conjunction: 'I wanted to go for a run, but it began to rain.'\nSubordinating Conjunction: 'Although she was tired, she studied until she understood the topic.'",
+        question: "In the sentence: 'We cancelled the picnic because it was storming, but we still played board games indoors,' what types of conjunctions are used?",
+        choices: ["'because' is subordinating; 'but' is coordinating", "'because' is coordinating; 'but' is subordinating", "Both are coordinating conjunctions"],
+        correctIndex: 0,
+        explanation: "'because' introduces a dependent clause explaining a cause (subordinating), while 'but' connects two independent clauses of equal grammatical rank (coordinating)."
+    },
+    "Interjections & Articles": {
+        category: "Parts of Speech",
+        definition: "Interjections are words or short phrases that express sudden, strong emotion or reaction (e.g., 'Wow!', 'Alas!', 'Ouch!'). They are grammatically independent and often followed by exclamation points. Articles are a subclass of determiners used to clarify whether a noun is specific (Definite Article: 'the') or general/unspecific (Indefinite Articles: 'a' before consonants, 'an' before vowels).",
+        example: "Interjection: 'Ouch! That cactus is sharp.'\nArticles: 'A dog barked at the letter carrier.' ('A' is indefinite, referring to any general dog; 'the' is definite, pointing to a specific, known letter carrier).",
+        question: "Choose the sentence that uses articles correctly.",
+        choices: ["He wants to buy an unique historic book.", "He wants to buy a unique historic book.", "He wants to buy a unique an historic book."],
         correctIndex: 1,
-        explanation: "'Because' is the conjunction connecting the action 'stayed inside' with its reason."
+        explanation: "Although 'unique' starts with a vowel letter, it sounds like it starts with a consonant sound ('yoo-neek'). Thus, it takes the indefinite article 'a' instead of 'an'."
     },
     "Comma Usage": {
         category: "Punctuation Rules",
-        definition: "Commas are used to indicate a brief pause in a sentence, separate items in a list, link clauses, or set off introductory words.",
-        example: "List: 'I bought apples, bananas, and milk.' | Intro: 'Suddenly, the lights flickered.'",
-        question: "Which sentence uses commas correctly?",
-        choices: ["Yes, I would love to read that book.", "Yes I would, love to read that book.", "Yes I would love, to read that book."],
-        correctIndex: 0,
-        explanation: "A comma is used after the introductory word 'Yes' to separate it from the main clause."
+        definition: "Commas indicate brief pauses to clarify meaning. Key rules include separating three or more items in a list (using the serial/Oxford comma, e.g., 'apples, pears, and grapes'), separating two independent clauses joined by a coordinating conjunction (e.g., 'I ran, but I fell'), setting off introductory phrases (e.g., 'In the morning, we left'), and isolating non-essential descriptive clauses.",
+        example: "Introductory: 'Quietly, the thief slipped through the window.'\nCompound sentence: 'The alarm rang twice, but nobody woke up.'\nList: 'She packed a notebook, two pencils, and an eraser.'",
+        question: "Which sentence is punctuated correctly?",
+        choices: ["Although he was tired Liam finished his chore.", "Although he was tired, Liam finished his chore.", "Although, he was tired Liam finished his chore."],
+        correctIndex: 1,
+        explanation: "'Although he was tired' is an introductory dependent clause. A comma must be placed after it to separate it from the main clause ('Liam finished his chore')."
     },
     "Semicolons & Colons": {
         category: "Punctuation Rules",
-        definition: "Semicolons (;) link two closely related independent clauses together without using a conjunction. Colons (:) are used to introduce lists, quotes, or explanations.",
-        example: "Semicolon: 'My dog barks at the mailman; my cat just sleeps.' | Colon: 'You will need three items: a pencil, paper, and a calculator.'",
-        question: "Identify the sentence that uses a semicolon correctly.",
-        choices: ["I love learning; it opens new doors.", "I love; learning it opens new doors.", "I love learning it opens; new doors."],
-        correctIndex: 0,
-        explanation: "'I love learning' and 'it opens new doors' are both complete sentences that are closely related, so a semicolon fits perfectly between them."
+        definition: "Semicolons (;) connect two independent clauses that are closely related in thought, replacing a period or a coordinating conjunction. They are also used to separate items in a list that already contain commas. Colons (:) introduce lists, summaries, quotes, or explanations. A colon must be preceded by a complete, independent clause.",
+        example: "Semicolon: 'My brother loves comedy; I prefer science fiction.'\nList with commas: 'We visited Paris, France; Rome, Italy; and Berlin, Germany.'\nColon: 'She has only one goal: to win the state championship.' (Note that 'She has only one goal' is a complete sentence).",
+        question: "Which sentence uses a colon correctly?",
+        choices: ["The ingredients are: flour, sugar, and butter.", "You need three main ingredients: flour, sugar, and butter.", "You need: flour, sugar, and butter."],
+        correctIndex: 1,
+        explanation: "A colon must follow a complete sentence. 'You need three main ingredients' is an independent clause. The other options place the colon directly after verbs or prepositions, which is incorrect."
     },
     "Apostrophes & Quotation Marks": {
         category: "Punctuation Rules",
-        definition: "Apostrophes (') are used to show ownership (like 'Emily's cat') or to make contractions where letters are missing (like 'don't' for 'do not'). Quotation marks (\" \") enclose direct speech or dialogue.",
-        example: "Possession: 'That is the student's backpack.' | Dialogue: 'He yelled, \"Look out below!\"'",
-        question: "Select the sentence with correct apostrophe usage for plural ownership.",
-        choices: ["The boys' locker room was clean.", "The boy's locker room was clean.", "The boys locker room' was clean."],
+        definition: "Apostrophes (') show ownership/possession or form contractions by replacing missing letters (e.g., 'don't' = 'do not'). For singular nouns, add 's (e.g., 'dog's bone'). For plural nouns ending in -s, add just an apostrophe (e.g., 'dogs' bones'). Quotation marks (\" \") enclose direct speech, dialogue, or short titles (like articles or poems). Punctuation like periods and commas generally go inside the quotation marks.",
+        example: "Possession: 'The class listened to the teacher's instructions' (one teacher) vs. 'The class listened to the teachers' panel' (multiple teachers).\nQuotation: 'The professor asked, \"Has everyone read the syllabus?\"'",
+        question: "Choose the sentence that correctly punctuates a quote and contraction.",
+        choices: ["\"You shouldn't go out there,\" warned the guide.", "\"You should'nt go out there\", warned the guide.", "\"You shouldn't go out there\", warned the guide."],
         correctIndex: 0,
-        explanation: "To show possession for a plural noun ending in -s (boys), place the apostrophe after the 's' -> boys'."
+        explanation: "'shouldn't' is the correct contraction for 'should not' (apostrophe replacing 'o'). The comma must be placed inside the closing quotation mark."
     },
     "Hyphens & Dashes": {
         category: "Punctuation Rules",
-        definition: "Hyphens (-) join two or more words together into a single combined word (like 'left-handed' or 'ice-cream'). Dashes (—) indicate an abrupt break or parenthesis-like pause inside a sentence.",
-        example: "Hyphen: 'He is a well-known actor.' | Dash: 'She had one goal—to win the championship.'",
-        question: "Which sentence uses a hyphen correctly?",
-        choices: ["My mother-in-law visited us today.", "My mother in-law visited us today.", "My mother-in law visited us today."],
-        correctIndex: 0,
-        explanation: "'Mother-in-law' is a compound noun that requires hyphens between all three words."
+        definition: "Hyphens (-) join multiple words into a single compound unit, especially compound adjectives preceding a noun (e.g., 'first-class ticket'). Em dashes (—) indicate an abrupt change in thought, add emphasis, or set off parenthetical details. En dashes (–) denote a range of values, such as numbers or dates (e.g., 'pages 12–25').",
+        example: "Hyphen: 'He works as a full-time developer.' (But: 'He works full time' - no hyphen because it is after the noun).\nEm Dash: 'The solution to our problem—if you can call it that—was to start over completely.'",
+        question: "Select the sentence that uses a hyphen correctly.",
+        choices: ["She is a well known actress in the city.", "She is a well-known actress in the city.", "She is well-known as an actress in the city."],
+        correctIndex: 1,
+        explanation: "When a compound adjective like 'well-known' precedes the noun it describes ('actress'), it must be hyphenated. If it follows the noun (as in choice 3), it does not need a hyphen."
+    },
+    "Parentheses & Ellipses": {
+        category: "Punctuation Rules",
+        definition: "Parentheses ( ) enclose non-essential, explanatory, or digressive information that could be removed without changing the sentence's grammatical structure. Ellipses (...) consist of three spaced periods. They indicate the omission of words from a quote, or represent a dramatic pause, hesitation, or thought trailing off in dialogue.",
+        example: "Parentheses: 'The final exam (which is worth 30% of your grade) takes place next Tuesday.'\nEllipses: 'Thomas Jefferson wrote that \"all men are created equal... with certain unalienable Rights.\"' (omitted words) or 'I don't know... it seems highly risky.'",
+        question: "Which sentence uses an ellipsis to show a trailing, hesitant thought?",
+        choices: ["The package arrived (yesterday) at noon.", "If we try our best... we might just win.", "I don't know... it seems highly risky."],
+        correctIndex: 2,
+        explanation: "The ellipsis in 'I don't know... it seems highly risky' represents hesitation or a pause in thought. The second option uses it as a simple clause transition, and the first uses parentheses."
     },
     "Academic Word List": {
         category: "Vocabulary Building",
-        definition: "The Academic Word List contains terms frequently found in textbooks, articles, and assessments across all subjects. Understanding these words helps you follow complex instructions and prompts.",
-        example: "Key terms: 'Analyze' (break down), 'Establish' (start/set up), 'Evaluate' (judge value), 'Signify' (be a sign of).",
-        question: "What does the academic word 'evaluate' mean?",
-        choices: ["To examine and judge the quality or value", "To copy word-for-word", "To speed up a process"],
+        definition: "The Academic Word List (AWL) is a collection of 570 word families frequently encountered in academic and professional texts across various fields. Mastering these words enables you to comprehend complex prompts, analyze data, and express ideas precisely. Examples include words like 'concept', 'significant', 'hypothesis', 'derive', and 'interpret'.",
+        example: "Prompt: 'Analyze how the author establishes the primary theme and evaluate the validity of their argument.' ('Analyze' means deconstruct, 'establishes' means creates, 'evaluate' means judge, and 'validity' means logical correctness).",
+        question: "Which academic word means 'to form a theory or conjecture about a subject without firm evidence'?",
+        choices: ["Speculate", "Incorporate", "Establish"],
         correctIndex: 0,
-        explanation: "To evaluate means to carefully examine and judge the worth or quality of something."
+        explanation: "'Speculate' means to form a theory or guess about something without complete proof. 'Establish' means to set up or prove, and 'incorporate' means to combine or include."
     },
     "Prefixes & Suffixes": {
         category: "Vocabulary Building",
-        definition: "Prefixes are small word parts added to the beginning of a root word to change its meaning (like un- in 'unhappy'). Suffixes are added to the end of a word to alter its tense or function (like -ful in 'helpful').",
-        example: "Root word: 'respect'. Prefix: 'disrespect' (not respect). Suffix: 'respectful' (full of respect).",
-        question: "What is the suffix in the word 'careless'?",
-        choices: ["care", "less", "car"],
-        correctIndex: 1,
-        explanation: "'-less' is the suffix added to the end of the root word 'care', meaning 'without care'."
+        definition: "Affixes are word elements added to a root word. Prefixes attach to the beginning to modify the word's meaning (e.g., 'un-' means not, 're-' means again, 'mis-' means wrong). Suffixes attach to the end and often change the word's part of speech or tense (e.g., '-ment' turns a verb into a noun, '-less' means without, '-ful' means full of).",
+        example: "Root word: adjust (verb).\nAdd prefix: readjust (verb, to adjust again).\nAdd suffix: adjustment (noun, the act of adjusting).\nAdd both: readjustment (noun, the act of adjusting again).",
+        question: "If the root 'bene' means 'good' and the suffix '-factor' means 'one who does', what does 'benefactor' mean?",
+        choices: ["Someone who does good deeds or provides help", "Someone who creates maps", "Someone who works in a factory"],
+        correctIndex: 0,
+        explanation: "A benefactor is a person who does good, specifically by giving financial or other aid to a cause or individual."
     },
     "Context Clues": {
         category: "Vocabulary Building",
-        definition: "Context clues are hints found in the sentences surrounding an unfamiliar word that help you deduce its meaning without looking it up in a dictionary.",
-        example: "Sentence: 'The storm was so colossal that it flooded the entire city and knocked down tall trees.' (Here, 'flooded the entire city' and 'knocked down tall trees' tell us 'colossal' means extremely huge).",
-        question: "What does 'hazardous' mean in: 'Wear gloves, because that chemical is hazardous to touch.'?",
-        choices: ["Safe", "Beautiful", "Dangerous"],
+        definition: "Context clues are information sources (words, phrases, or sentences) surrounding an unfamiliar word that help you deduce its meaning. Types of clues include Definition/Synonym (direct restatement), Antonym/Contrast (opposite meaning introduced), Example (listing illustrations), and Cause/Effect (showing outcomes).",
+        example: "Synonym Clue: 'The lawyer's argument was laconic; it was brief and to the point.'\nAntonym Clue: 'Unlike her garrulous sister who talked constantly, Maria was reserved.' ('garrulous' must mean talkative).\nExample Clue: 'He is quite adept at sports, excelling in soccer, tennis, and basketball.' ('adept' must mean highly skilled).",
+        question: "What does 'precarious' mean in this sentence: 'Standing on the precarious ledge, she felt the loose rocks crumble under her feet and struggled to keep her balance.'?",
+        choices: ["Safe and secure", "Extremely high", "Unstable and dangerous"],
         correctIndex: 2,
-        explanation: "The warning to 'wear gloves' because of a chemical suggests 'hazardous' means dangerous."
+        explanation: "Clues like 'loose rocks crumble' and 'struggled to keep her balance' indicate that the ledge was unstable and dangerous (precarious)."
     },
     "Synonym & Antonym Games": {
         category: "Vocabulary Building",
-        definition: "Synonyms are different words that have the same or very similar meanings (like 'huge' and 'gigantic'). Antonyms are words that have opposite meanings (like 'huge' and 'tiny').",
-        example: "Synonyms: 'smart' and 'intelligent'. Antonyms: 'smart' and 'foolish'.",
-        question: "Find the antonym of 'fragile' (delicate).",
-        choices: ["Weak", "Strong", "Broken"],
+        definition: "Synonyms are words with identical or highly similar meanings in a specific context (e.g., 'assist' and 'help'). Antonyms are words with opposite meanings (e.g., 'arrive' and 'depart'). Developing a strong grasp of synonyms and antonyms helps avoid repetitive writing and allows you to choose words with the exact connotation desired.",
+        example: "Connotation match: While 'stubborn' and 'resolute' are synonyms, 'stubborn' has a negative connotation (refusing to change out of obstinacy), whereas 'resolute' has a positive connotation (admirable determination).",
+        question: "Which pair represents antonyms?",
+        choices: ["magnanimous / generous", "transient / permanent", "corroborate / support"],
         correctIndex: 1,
-        explanation: "The opposite of fragile (delicate/easily broken) is strong."
+        explanation: "'Transient' means lasting only a short time, which is the direct opposite of 'permanent' (lasting forever). The other pairs are synonyms."
+    },
+    "Roots & Etymology": {
+        category: "Vocabulary Building",
+        definition: "A root word is the base element of a word that contains its primary meaning. Many English roots are derived from Greek or Latin. Etymology is the study of the history of words, tracing their origin, evolution, and transmission across languages.",
+        example: "Latin Root: scrib / script (to write) forms scribe, describe, manuscript, and prescription.\nGreek Root: bio (life) + graph (write) forms biography (the written story of a life).",
+        question: "Given that the Greek root 'chron' means 'time' and 'meter' means 'measure', what is a 'chronometer'?",
+        choices: ["An instrument for measuring time very precisely", "A device that records sound waves", "A tool for measuring distance"],
+        correctIndex: 0,
+        explanation: "Combining 'chron' (time) and 'meter' (measure) gives 'chronometer', an instrument for measuring time, particularly at sea."
     },
     "Homophones (e.g., their/there/they're)": {
         category: "Common Errors Guide",
-        definition: "Homophones are words that sound identical when spoken but have different spellings and meanings. Mixing these up is one of the most common writing mistakes.",
-        example: "Their (belongs to them): 'their dog'. | There (a place): 'sit over there'. | They're (they are): 'they're ready'.",
+        definition: "Homophones are words that sound exactly the same when pronounced but have different spellings and meanings. Confusing homophones is one of the most frequent mechanical errors in writing. Key sets include: their/there/they're, its/it's, your/you're, accept/except, and affect/effect.",
+        example: "Their (possessive): 'It is their house.'\nThere (place/existence): 'Look over there' or 'There is a chance of rain.'\nThey're (contraction of they are): 'They're going to win.'\nIts (possessive): 'The dog chased its tail.'\nIt's (contraction of it is): 'It's a beautiful day.'",
         question: "Choose the correct homophone: '___ going to play games after dinner.'",
         choices: ["Their", "There", "They're"],
         correctIndex: 2,
@@ -483,17 +510,17 @@ const grammarLessons = {
     },
     "Run-on Sentences & Fragments": {
         category: "Common Errors Guide",
-        definition: "A run-on sentence squishes multiple complete thoughts together without proper punctuation. A fragment is an incomplete sentence that is missing a subject, a verb, or a complete thought.",
-        example: "Run-on: 'I love reading books I read every night.' (Fix: add a period). | Fragment: 'While walking to school.' (Fix: add a main clause).",
-        question: "Identify the complete, correct sentence.",
-        choices: ["He enjoys code, he built an app.", "He enjoys coding because it is creative.", "Enjoying coding very much."],
+        definition: "A sentence fragment is an incomplete sentence because it lacks a subject, a verb, or a complete thought (e.g., 'Because he was late'). A run-on sentence joins two or more independent clauses together without proper punctuation or conjunctions. A common run-on is the 'comma splice', which joins two complete thoughts with only a comma.",
+        example: "Fragment: 'Running down the street.' (Lacks a subject doing the action). Fix: 'I was running down the street.'\nComma Splice: 'I love writing, I code every day.' Fix: 'I love writing; I code every day.' or 'I love writing, and I code every day.'",
+        question: "Identify the error in this sentence: 'Although she practiced every afternoon for the recital.'?",
+        choices: ["Run-on sentence", "Sentence fragment", "Comma splice"],
         correctIndex: 1,
-        explanation: "'He enjoys coding because it is creative' has a subject, verb, and complete thought. The first option is a comma splice, and the third is a fragment."
+        explanation: "This is a sentence fragment. 'Although she practiced every afternoon for the recital' is a dependent clause that starts with a subordinating conjunction, leaving the thought incomplete."
     },
     "Subject-Verb Agreement Issues": {
         category: "Common Errors Guide",
-        definition: "Subject-verb agreement means that a singular subject must match a singular verb form, and a plural subject must match a plural verb form.",
-        example: "Singular: 'The student studies.' (student = 1, studies = singular verb). | Plural: 'The students study.' (students = multiple, study = plural verb).",
+        definition: "Subject-verb agreement requires that a singular subject must take a singular verb form, and a plural subject must take a plural verb form. Complexities arise with collective nouns (e.g., 'team', 'family' - usually singular), compound subjects joined by 'or/nor' (verb matches the closest subject), and intervening phrases (e.g., 'along with', 'as well as' - do not alter the subject's number).",
+        example: "Intervening Phrase: 'The captain, along with his crew members, is (not are) arriving today.' (The subject is singular 'captain').\nOr/Nor rule: 'Neither the teacher nor the students have (matches plural students) the keys' vs. 'Neither the students nor the teacher has (matches singular teacher) the keys.'",
         question: "Which sentence has correct subject-verb agreement?",
         choices: ["The cats drinks milk.", "The cat drink milk.", "The cats drink milk."],
         correctIndex: 2,
@@ -501,17 +528,26 @@ const grammarLessons = {
     },
     "Dangling Modifiers": {
         category: "Common Errors Guide",
-        definition: "A dangling modifier is a descriptive phrase at the start of a sentence that accidentally describes the wrong noun because of bad word order.",
-        example: "Incorrect: 'Hungry, the pizza was eaten by Mark.' (This sounds like the pizza was hungry!). | Correct: 'Hungry, Mark ate the pizza.'",
+        definition: "A modifier is a word or phrase that describes something in a sentence. A dangling modifier occurs when the word or phrase being described is missing from the sentence. A misplaced modifier is separated from the word it describes, making the sentence confusing or unintentionally funny.",
+        example: "Dangling: 'Walking to class, a squirrel ran up a tree.' (This sounds like the squirrel was walking to class!). Fix: 'While I was walking to class, a squirrel ran up a tree.'\nMisplaced: 'He sold the bicycle to a boy with a flat tire.' (Did the boy have a flat tire?). Fix: 'He sold the bicycle with a flat tire to a boy.'",
         question: "Choose the correct sentence.",
         choices: ["Walking to the store, my umbrella blew away.", "Walking to the store, I lost my umbrella.", "Both are correct."],
         correctIndex: 1,
         explanation: "The person walking is 'I', not 'my umbrella', so 'I' must follow the introductory phrase."
     },
+    "Pronoun-Antecedent Agreement": {
+        category: "Common Errors Guide",
+        definition: "A pronoun must agree in number (singular or plural) and gender with its antecedent (the noun it replaces). Singular antecedents require singular pronouns, and plural antecedents require plural pronouns. Indefinite pronouns like 'each', 'someone', 'everyone', and 'nobody' are grammatically singular and require singular pronouns (like 'his', 'her', 'its').",
+        example: "Plural: 'The members of the committee submitted their votes.'\nSingular Indefinite: 'Everyone must bring his or her notebook.'\nCollective Noun: 'The committee reached its decision.' ('committee' acts as a single group, so it takes 'its', not 'their').",
+        question: "Choose the sentence with correct pronoun-antecedent agreement.",
+        choices: ["Neither of the boys brought their homework.", "Neither of the boys brought his homework.", "Neither of the boys brought they're homework."],
+        correctIndex: 1,
+        explanation: "'Neither' is a singular indefinite pronoun. Therefore, it requires the singular possessive pronoun 'his' to maintain proper grammatical agreement."
+    },
     "Simple, Compound, Complex": {
         category: "Sentence Structure",
-        definition: "Simple sentences have one independent clause (subject + verb). Compound sentences join two complete sentences with a coordinating conjunction (FANBOYS: for, and, nor, but, or, yet, so). Complex sentences join a complete sentence with a dependent clause using a subordinator (like 'because', 'although', 'since').",
-        example: "Simple: 'I like dogs.' | Compound: 'I like dogs, but he likes cats.' | Complex: 'Although I like dogs, he prefers cats.'",
+        definition: "Sentences are classified by their clause structure. A simple sentence has one independent clause (subject + verb + complete thought). A compound sentence joins two or more independent clauses using a comma and a coordinating conjunction (FANBOYS) or a semicolon. A complex sentence joins one independent clause with at least one dependent clause (introduced by a subordinating conjunction or relative pronoun).",
+        example: "Simple: 'The train arrived on time.'\nCompound: 'The train arrived on time, and the passengers boarded quickly.'\nComplex: 'Because the train arrived on time, the passengers boarded quickly.'",
         question: "What type of sentence is: 'We went to the beach, and we built sandcastles.'?",
         choices: ["Simple", "Compound", "Complex"],
         correctIndex: 1,
@@ -519,8 +555,8 @@ const grammarLessons = {
     },
     "Active vs. Passive Voice": {
         category: "Sentence Structure",
-        definition: "Active voice means the subject of the sentence is doing the action (clear and strong). Passive voice means the action is being done to the subject (often sounds wordy or indirect).",
-        example: "Active: 'The child threw the ball.' | Passive: 'The ball was thrown by the child.'",
+        definition: "Active voice occurs when the subject of the sentence performs the action (e.g., 'The chef cooked the meal'). It is concise, direct, and engaging. Passive voice occurs when the subject receives the action (e.g., 'The meal was cooked by the chef'). Passive voice is constructed using a form of the verb 'to be' + a past participle (is/was/been + verb-ed). It is useful when the actor is unknown or unimportant.",
+        example: "Active: 'The storm damaged the roof.' (Clear, action-oriented).\nPassive: 'The roof was damaged by the storm.' (Focuses on the roof rather than the storm).\nPassive (Actor Unknown): 'The bank was robbed last night.'",
         question: "Identify the sentence written in active voice.",
         choices: ["The project was completed on time.", "The students completed the project on time.", "The project was completed by the students."],
         correctIndex: 1,
@@ -528,8 +564,8 @@ const grammarLessons = {
     },
     "Parallelism": {
         category: "Sentence Structure",
-        definition: "Parallelism means using the same grammatical pattern for items in a list or comparison. It makes sentences flow smoothly and sound balanced.",
-        example: "Incorrect: 'I like swimming, reading, and to hike.' | Correct: 'I like swimming, reading, and hiking.'",
+        definition: "Parallelism (parallel structure) is the repetition of a chosen grammatical form within a sentence to join words, phrases, or clauses. Using parallel structure makes writing balanced, coherent, and pleasing to read. When listing actions or items, all items in the list should share the same grammatical form (e.g., all nouns, all gerunds ending in -ing, or all infinitive phrases).",
+        example: "Non-Parallel: 'She enjoys swimming, hiking, and to ride horses.' (swimming and hiking are gerunds, but 'to ride' is an infinitive).\nParallel: 'She enjoys swimming, hiking, and riding horses.' (all are gerund phrases).\nParallel Infinitive: 'She loves to swim, to hike, and to ride horses.'",
         question: "Identify the sentence that uses parallel structure.",
         choices: ["She wants to become a doctor, a writer, or teach.", "She wants to become a doctor, write books, or teach.", "She wants to become a doctor, a writer, or a teacher."],
         correctIndex: 2,
@@ -537,17 +573,26 @@ const grammarLessons = {
     },
     "Sentence Combining": {
         category: "Sentence Structure",
-        definition: "Sentence combining is the skill of joining short, choppy sentences together using conjunctions, clauses, or prepositions to make writing flow more naturally.",
-        example: "Choppy: 'The sun was hot. We went inside.' | Combined: 'Because the sun was hot, we went inside.'",
+        definition: "Sentence combining is the process of joining short, choppy sentences into longer, smoother sentences with clearer relationships. You can combine sentences by using coordinating conjunctions (to show addition/contrast), subordinating conjunctions (to show cause/time), relative pronouns (to embed detail), or appositive phrases (to rename nouns).",
+        example: "Choppy: 'The dog barked. It was a terrier. It saw a mailman.'\nCombined (using relative clause & subordinating conjunction): 'The dog, which was a terrier, barked because it saw a mailman.'\nCombined (using appositive): 'The terrier, a small energetic dog, barked at the mailman.'",
         question: "What is the best way to combine: 'I was tired.' and 'I kept working.'?",
         choices: ["I was tired, so I kept working.", "Although I was tired, I kept working.", "I was tired because I kept working."],
         correctIndex: 1,
         explanation: "'Although' shows contrast, connecting the feeling of tiredness with the action of continuing to work."
     },
+    "Compound-Complex Sentences": {
+        category: "Sentence Structure",
+        definition: "A compound-complex sentence represents the highest level of sentence structure complexity. It contains two or more independent clauses (joined by coordinating conjunctions or semicolons) and at least one dependent clause (introduced by subordinating conjunctions or relative pronouns).",
+        example: "Although I love coding (dependent clause), I also like painting (independent clause 1), and I enjoy reading books (independent clause 2).",
+        question: "Identify the dependent clause in: 'Because the weather was beautiful, we walked to the park, but we decided to return early.'",
+        choices: ["we walked to the park", "but we decided to return early", "Because the weather was beautiful"],
+        correctIndex: 2,
+        explanation: "'Because the weather was beautiful' starts with the subordinating conjunction 'Because' and cannot stand alone as a complete sentence, making it the dependent clause."
+    },
     "Metaphors & Similes": {
         category: "Figurative Language",
-        definition: "Similes compare two different things using the words 'like' or 'as'. Metaphors compare two things by directly stating that one thing IS another (no 'like' or 'as').",
-        example: "Simile: 'He is as brave as a lion.' | Metaphor: 'He is a lion in battle.'",
+        definition: "Both metaphors and similes compare two unlike things to create vivid imagery. A simile makes the comparison explicit using connecting words such as 'like' or 'as' (e.g., 'She is as brave as a lion'). A metaphor states the comparison directly by asserting that one thing IS another (e.g., 'He is a lion in battle'), transferring qualities directly without connecting words.",
+        example: "Simile: 'The lake was like a smooth sheet of glass.'\nMetaphor: 'The classroom was a zoo during recess.' (The classroom isn't literally a zoo, but it shares the qualities of noise and wild activity).",
         question: "Which of the following is a metaphor?",
         choices: ["Her eyes were shining like stars.", "Her eyes were shining stars.", "She sings as beautifully as a star."],
         correctIndex: 1,
@@ -555,8 +600,8 @@ const grammarLessons = {
     },
     "Personification & Hyperbole": {
         category: "Figurative Language",
-        definition: "Personification gives human emotions, actions, or characteristics to non-human things (like animals or objects). Hyperbole is an extreme exaggeration used for emphasis or humor.",
-        example: "Personification: 'The old floorboards groaned under our weight.' | Hyperbole: 'I have a million things to do today.'",
+        definition: "Personification is a literary device that attributes human feelings, characteristics, or actions to non-human things, such as objects, ideas, or animals (e.g., 'The wind sang'). Hyperbole is an intentional, extreme exaggeration used to add emphasis, evoke strong feelings, or create a humorous effect (e.g., 'I've told you a thousand times').",
+        example: "Personification: 'The old floorboards groaned under our footsteps.' (Floorboards cannot feel pain or groan).\nHyperbole: 'I have a million things to do today.' (You have a lot of chores, not literally one million).",
         question: "What device is used here: 'The wind whispered through the dark trees.'?",
         choices: ["Personification", "Hyperbole", "Simile"],
         correctIndex: 0,
@@ -564,8 +609,8 @@ const grammarLessons = {
     },
     "Idioms & Allusions": {
         category: "Figurative Language",
-        definition: "Idioms are common expressions whose figurative meaning is completely different from their literal words (like 'break a leg'). Allusions are brief, indirect references to a famous person, place, book, or historical event.",
-        example: "Idiom: 'It is raining cats and dogs.' | Allusion: 'He was a real Einstein on the test.'",
+        definition: "An idiom is a culturally specific phrase or expression whose figurative meaning cannot be understood from the literal definition of its words (e.g., 'bite the bullet'). An allusion is an indirect, brief reference to a famous person, historical event, place, or literary work (often the Bible, mythology, or Shakespeare) that the reader is expected to recognize.",
+        example: "Idiom: 'Let's call it a day.' (means stop working for the day).\nAllusion: 'He was a real Romeo when trying to impress her.' (alludes to Romeo from Shakespeare's 'Romeo and Juliet' to suggest he was acting like a passionate lover).",
         question: "What does the idiom 'cost an arm and a leg' mean?",
         choices: ["To be extremely expensive", "To get hurt in a game", "To require physical labor"],
         correctIndex: 0,
@@ -573,12 +618,21 @@ const grammarLessons = {
     },
     "Symbolism & Imagery": {
         category: "Figurative Language",
-        definition: "Symbolism is using an object or color to represent a deeper abstract idea (like a red rose representing love). Imagery is descriptive, sensory writing that creates a vivid mental picture using sight, sound, smell, taste, or touch.",
-        example: "Symbolism: 'A black cat crossed her path.' (symbolizing bad luck). | Imagery: 'The warm aroma of sweet, spiced apples floated from the baking pie.' (sensory details of smell and taste).",
+        definition: "Symbolism is the practice of using a concrete object, character, or color to represent a deeper abstract idea (e.g., a white dove representing peace). Imagery is descriptive writing that uses rich sensory details to appeal to the five senses (sight, sound, smell, taste, touch), creating a vivid mental picture for the reader.",
+        example: "Symbolism: 'The path ahead was covered in dark, thorny bushes.' (thorny path symbolizes difficulty or danger in life).\nImagery: 'The sweet, warm aroma of cinnamon and baked apples drifted from the oven, filling the room.' (appeals to smell and taste).",
         question: "Which sensory detail is highlighted: 'The icy water numbed her fingertips.'?",
         choices: ["Sight", "Sound", "Touch"],
         correctIndex: 2,
         explanation: "'Icy water' and 'numbed fingertips' are sensations felt by touch."
+    },
+    "Alliteration & Onomatopoeia": {
+        category: "Figurative Language",
+        definition: "Alliteration is the repetition of the same initial consonant sound in a sequence of neighboring words (e.g., 'slippery slithering snake'). It creates rhythm and mood. Onomatopoeia is the use of words that imitate the natural sound associated with the action or object they describe (e.g., 'hiss', 'clack', 'drip').",
+        example: "Alliteration: 'Peter posted pictures of the party.'\nOnomatopoeia: 'The thunder boomed and the rain went splat on the pavement.'",
+        question: "Identify the figure of speech: 'The busy buzzing bees hovered over the flowers.'",
+        choices: ["Only Alliteration", "Only Onomatopoeia", "Both Alliteration and Onomatopoeia"],
+        correctIndex: 2,
+        explanation: "The phrase displays both alliteration (repetition of the 'b' sound in 'busy buzzing bees') and onomatopoeia ('buzzing' mimics the sound bees make)."
     },
     // --- ELA LITERATURE LESSONS ---
     "Metaphor & Simile": {

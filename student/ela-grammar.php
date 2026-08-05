@@ -5,7 +5,7 @@ $pageDescription = "Master the building blocks of language with our comprehensiv
 $pageAuthor = "Hesten's Learning Team";
 
 // Include the header file
-include '..\src\header.php';
+include '../src/header.php';
 ?>
 
 <style>
@@ -363,6 +363,7 @@ include '..\src\header.php';
                     <button onclick="openDynamicModal('Verbs & Tenses'); return false;" class="topic-pill" data-search-terms="verbs tenses actions time past present future">Verbs & Tenses</button>
                     <button onclick="openDynamicModal('Adjectives & Adverbs'); return false;" class="topic-pill" data-search-terms="adjectives adverbs describing quickly very slow green">Adjectives & Adverbs</button>
                     <button onclick="openDynamicModal('Prepositions & Conjunctions'); return false;" class="topic-pill" data-search-terms="prepositions conjunctions location time and but under linking">Prepositions & Conjunctions</button>
+                    <button onclick="openDynamicModal('Interjections & Articles'); return false;" class="topic-pill" data-search-terms="interjections articles parts of speech wow ouch a an the determiners emotional exclamation">Interjections & Articles</button>
                 </div>
             </div>
 
@@ -378,6 +379,7 @@ include '..\src\header.php';
                     <button onclick="openDynamicModal('Semicolons & Colons'); return false;" class="topic-pill" data-search-terms="semicolons colons linking lists quotes explanations">Semicolons & Colons</button>
                     <button onclick="openDynamicModal('Apostrophes & Quotation Marks'); return false;" class="topic-pill" data-search-terms="apostrophes quotation marks possession contractions speech quotes">Apostrophes & Quotation Marks</button>
                     <button onclick="openDynamicModal('Hyphens & Dashes'); return false;" class="topic-pill" data-search-terms="hyphens dashes compound words pausing emphasis">Hyphens & Dashes</button>
+                    <button onclick="openDynamicModal('Parentheses & Ellipses'); return false;" class="topic-pill" data-search-terms="parentheses ellipses brackets punctuation pauses omissions extra information quotes">Parentheses & Ellipses</button>
                 </div>
             </div>
 
@@ -393,6 +395,7 @@ include '..\src\header.php';
                     <button onclick="openDynamicModal('Prefixes & Suffixes'); return false;" class="topic-pill" data-search-terms="prefixes suffixes roots unhappy helpful meanings">Prefixes & Suffixes</button>
                     <button onclick="openDynamicModal('Context Clues'); return false;" class="topic-pill" data-search-terms="context clues hint surrounding text meanings find">Context Clues</button>
                     <button onclick="openDynamicModal('Synonym & Antonym Games'); return false;" class="topic-pill" data-search-terms="synonym antonym opposite same similar words">Synonym & Antonym Games</button>
+                    <button onclick="openDynamicModal('Roots & Etymology'); return false;" class="topic-pill" data-search-terms="roots etymology greek latin word origins history prefix suffix meanings base">Roots & Etymology</button>
                 </div>
             </div>
 
@@ -408,6 +411,7 @@ include '..\src\header.php';
                     <button onclick="openDynamicModal('Run-on Sentences & Fragments'); return false;" class="topic-pill" data-search-terms="run-on sentences fragments incomplete clauses complete thoughts">Run-on Sentences & Fragments</button>
                     <button onclick="openDynamicModal('Subject-Verb Agreement Issues'); return false;" class="topic-pill" data-search-terms="subject verb agreement singular plural studies study bark barks">Subject-Verb Agreement</button>
                     <button onclick="openDynamicModal('Dangling Modifiers'); return false;" class="topic-pill" data-search-terms="dangling modifiers descriptive hungry boys pizza correct sentences">Dangling Modifiers</button>
+                    <button onclick="openDynamicModal('Pronoun-Antecedent Agreement'); return false;" class="topic-pill" data-search-terms="pronoun antecedent agreement singular plural company its gender match reference grammar errors">Pronoun-Antecedent Agreement</button>
                 </div>
             </div>
 
@@ -423,6 +427,7 @@ include '..\src\header.php';
                     <button onclick="openDynamicModal('Active vs. Passive Voice'); return false;" class="topic-pill" data-search-terms="active passive voice chef cooked meal chased subject receiver">Active vs. Passive Voice</button>
                     <button onclick="openDynamicModal('Parallelism'); return false;" class="topic-pill" data-search-terms="parallelism matching grammatical structure running biking writing">Parallelism</button>
                     <button onclick="openDynamicModal('Sentence Combining'); return false;" class="topic-pill" data-search-terms="sentence combining joining clauses short choppy smooth">Sentence Combining</button>
+                    <button onclick="openDynamicModal('Compound-Complex Sentences'); return false;" class="topic-pill" data-search-terms="compound complex sentences clauses dependent independent joining coordinating subordinating">Compound-Complex Sentences</button>
                 </div>
             </div>
 
@@ -438,6 +443,7 @@ include '..\src\header.php';
                     <button onclick="openDynamicModal('Personification & Hyperbole'); return false;" class="topic-pill" data-search-terms="personification hyperbole human traits wind whispered extreme exaggeration horse eat">Personification & Hyperbole</button>
                     <button onclick="openDynamicModal('Idioms & Allusions'); return false;" class="topic-pill" data-search-terms="idioms allusions common phrases break a leg romeo reference famous">Idioms & Allusions</button>
                     <button onclick="openDynamicModal('Symbolism & Imagery'); return false;" class="topic-pill" data-search-terms="symbolism imagery dove representing peace sensory detail sound sight smell taste touch crisp bang">Symbolism & Imagery</button>
+                    <button onclick="openDynamicModal('Alliteration & Onomatopoeia'); return false;" class="topic-pill" data-search-terms="alliteration onomatopoeia sounds words repeating pop buzzing crackle sound effects figures of speech">Alliteration & Onomatopoeia</button>
                 </div>
             </div>
         </div>
@@ -569,7 +575,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 <?php
 // Include the modal file
-include '..\src\resource-modal.php';
+include '../src/resource-modal.php';
 // Include the footer file
-include '..\src\footer.php';
+include '../src/footer.php';
 ?>
