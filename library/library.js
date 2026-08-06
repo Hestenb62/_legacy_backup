@@ -107,7 +107,10 @@ const modalSingleActions = document.getElementById('modal-single-actions');
 const modalCollectionActions = document.getElementById('modal-collection-actions');
 
 window.openModal = function (element) {
+    console.log("openModal called with element:", element);
     const data = element.dataset;
+    console.log("element dataset:", data);
+    console.log("modal elements:", { modalTitle, modalAuthor, modalDescription, modalIsbn, modalDate, modalImg });
 
     modalTitle.textContent = data.title;
     modalAuthor.textContent = data.author;
@@ -127,20 +130,20 @@ window.openModal = function (element) {
         
         books.forEach(book => {
             const item = document.createElement('div');
-            item.className = "flex flex-col sm:flex-row items-center justify-between gap-4 p-4 rounded-xl border border-gray-200 dark:border-white/10 bg-white dark:bg-black/20 hover:bg-gray-50 dark:hover:bg-white/5 transition-colors";
+            item.className = "collection-item";
             
             const titleSpan = document.createElement('span');
-            titleSpan.className = "font-bold text-gray-900 dark:text-white flex-1 text-center sm:text-left leading-tight";
+            titleSpan.className = "collection-item-title";
             titleSpan.textContent = book.title;
 
             const linkContainer = document.createElement('div');
-            linkContainer.className = "flex gap-2 flex-wrap justify-center shrink-0";
+            linkContainer.className = "collection-link-container";
             
             if (book['read-online-link'] && book['read-online-link'] !== '#') {
                 const inlineLink = document.createElement('a');
                 inlineLink.href = book['read-online-link'];
                 inlineLink.target = "_blank";
-                inlineLink.className = "text-xs font-bold bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 hover:bg-indigo-500 hover:text-white transition-colors px-3 py-1.5 rounded-lg";
+                inlineLink.className = "collection-btn read";
                 inlineLink.textContent = "Read Online";
                 linkContainer.appendChild(inlineLink);
             }
@@ -149,7 +152,7 @@ window.openModal = function (element) {
                 const pdfLink = document.createElement('a');
                 pdfLink.href = book['pdf-link'];
                 pdfLink.target = "_blank";
-                pdfLink.className = "text-xs font-bold bg-rose-500/10 text-rose-600 dark:text-rose-400 hover:bg-rose-500 hover:text-white transition-colors px-3 py-1.5 rounded-lg flex items-center gap-1.5";
+                pdfLink.className = "collection-btn pdf";
                 pdfLink.innerHTML = "<i class='fas fa-file-pdf'></i> PDF";
                 linkContainer.appendChild(pdfLink);
             }
@@ -158,7 +161,7 @@ window.openModal = function (element) {
                 const epubLink = document.createElement('a');
                 epubLink.href = book['epub-link'];
                 epubLink.target = "_blank";
-                epubLink.className = "text-xs font-bold bg-blue-500/10 text-blue-600 dark:text-blue-400 hover:bg-blue-500 hover:text-white transition-colors px-3 py-1.5 rounded-lg flex items-center gap-1.5";
+                epubLink.className = "collection-btn epub";
                 epubLink.innerHTML = "<i class='fas fa-book'></i> ePUB";
                 linkContainer.appendChild(epubLink);
             }
@@ -167,7 +170,7 @@ window.openModal = function (element) {
                 const mobiLink = document.createElement('a');
                 mobiLink.href = book['mobi-link'];
                 mobiLink.target = "_blank";
-                mobiLink.className = "text-xs font-bold bg-amber-500/10 text-amber-600 dark:text-amber-400 hover:bg-amber-500 hover:text-white transition-colors px-3 py-1.5 rounded-lg flex items-center gap-1.5";
+                mobiLink.className = "collection-btn mobi";
                 mobiLink.innerHTML = "<i class='fas fa-tablet-alt'></i> MOBI";
                 linkContainer.appendChild(mobiLink);
             }
@@ -190,19 +193,20 @@ window.openModal = function (element) {
     }
 
     // Lexile
+    // Lexile
     if (data.lexile) {
         modalLexile.textContent = data.lexile;
-        modalLexileContainer.style.display = 'block';
+        modalLexileContainer.classList.remove('hidden');
     } else {
-        modalLexileContainer.style.display = 'none';
+        modalLexileContainer.classList.add('hidden');
     }
 
     // Dewey
     if (data.dewey) {
         modalDewey.textContent = data.dewey;
-        modalDeweyContainer.style.display = 'block';
+        modalDeweyContainer.classList.remove('hidden');
     } else {
-        modalDeweyContainer.style.display = 'none';
+        modalDeweyContainer.classList.add('hidden');
     }
 
     // Open animation
