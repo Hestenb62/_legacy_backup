@@ -1426,4 +1426,78 @@
     filter: brightness(1.08);
 }
 
+/* Hide Gutenberg original boilerplate headers and footers from reading view */
+.cdn-book-reader-content #pg-header,
+.cdn-book-reader-content #pg-footer,
+.cdn-book-reader-content footer {
+    display: none !important;
+}
+
+/* Reader Footer Actions (Bottom Buttons) */
+.reader-footer-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 3.5rem;
+    padding-top: 2rem;
+    border-top: 1px dashed var(--color-border);
+}
+
+.reader-disclaimer-btn {
+    background-color: var(--color-base-bg);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-secondary);
+    padding: 0.8rem 1.6rem;
+    border-radius: 0.85rem;
+    font-weight: 700;
+    font-size: 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: var(--shadow-sm);
+}
+
+.reader-disclaimer-btn:hover {
+    background-color: var(--color-border);
+    color: var(--color-text-default);
+    transform: translateY(-1.5px);
+}
+
+.reader-disclaimer-btn:active {
+    transform: translateY(0);
+}
+
+/* Disclaimer Dialog Inner Styles */
+.book-disclaimer-modal-body {
+    max-height: 50vh;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+    text-align: left;
+}
+
+.modal-disclaimer-section h3 {
+    font-family: var(--site-font-family, 'Outfit', sans-serif);
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 0.5rem;
+}
+
+.modal-disclaimer-section p,
+.modal-disclaimer-section div {
+    margin-bottom: 1rem;
+    font-size: 0.85rem !important;
+    line-height: 1.6 !important;
+    color: var(--color-text-secondary) !important;
+}
+
+.modal-disclaimer-section a {
+    color: var(--color-primary) !important;
+    text-decoration: underline !important;
+}
+
 

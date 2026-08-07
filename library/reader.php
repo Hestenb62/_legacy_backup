@@ -117,18 +117,6 @@ include '../src/header.php';
             <i class="fas fa-exclamation-triangle reader-error-icon"></i>
             <h2>Unable to load book</h2>
             <p><?php echo htmlspecialchars($error); ?></p>
-            <div style="font-family: monospace; font-size: 0.85rem; margin: 1.5rem auto; color: var(--color-text-secondary); text-align: left; background: var(--color-base-bg); padding: 1.25rem; border-radius: 12px; border: 1px dashed var(--color-border); max-width: 500px; line-height: 1.5; box-sizing: border-box; overflow-x: auto;">
-                <strong style="color: var(--color-text-default); display: block; margin-bottom: 0.5rem;">Diagnostic Debug Info:</strong>
-                Book ID parsed: <span style="color: var(--color-secondary);">'<?php echo htmlspecialchars($bookId); ?>'</span><br><br>
-                <strong>Available SERVER Keys:</strong><br>
-                <?php
-                foreach ($_SERVER as $k => $v) {
-                    if (is_string($v) && strlen($v) < 150) {
-                        echo htmlspecialchars($k) . ": <span style='color: var(--color-primary);'>" . htmlspecialchars($v) . "</span><br>";
-                    }
-                }
-                ?>
-            </div>
             <a href="index.php" class="reader-error-btn">Return to Catalog</a>
         </div>
     <?php else: ?>
@@ -155,7 +143,81 @@ include '../src/header.php';
             <div id="book-content" class="cdn-book-reader-content">
                 <?php echo $contentHtml; ?>
             </div>
+
+            <!-- Reader Footer Actions (Disclaimer & License Trigger) -->
+            <div class="reader-footer-actions">
+                <button onclick="openBookDisclaimer()" class="reader-disclaimer-btn">
+                    <i class="fas fa-balance-scale"></i> Show Book Disclaimer & License
+                </button>
+            </div>
         </article>
+
+        <!-- Book Disclaimer & License Modal -->
+        <div id="bookDisclaimerModal" class="library-modal hidden" role="dialog" aria-modal="true">
+            <div class="library-modal-backdrop" onclick="closeBookDisclaimer()"></div>
+            <div class="library-modal-content" style="max-width: 48rem; padding: 2.5rem; max-height: 80vh; overflow-y: auto;" onclick="event.stopPropagation()">
+                <button onclick="closeBookDisclaimer()" class="library-modal-close-btn" aria-label="Close disclaimer">
+                    <i class="fas fa-times"></i>
+                </button>
+                <h2 style="font-family: var(--site-font-family, 'Outfit', sans-serif); font-size: 1.75rem; margin-bottom: 1.5rem; color: var(--color-primary); display: flex; align-items: center; gap: 0.5rem;">
+                    <i class="fas fa-info-circle"></i> Disclaimer & License
+                </h2>
+                <div id="book-disclaimer-modal-body" class="book-disclaimer-modal-body">
+                    <!-- Dynamic Content populated via JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Extract the Project Gutenberg header and footer content dynamically
+            const header = document.querySelector('#book-content #pg-header');
+            const footer = document.querySelector('#book-content footer, #book-content #pg-footer');
+            
+            const modalBody = document.getElementById('book-disclaimer-modal-body');
+            if (modalBody) {
+                let content = '';
+                if (header) {
+                    content += '<div class="modal-disclaimer-section"><h3>Book Header & Disclaimer</h3>' + header.innerHTML + '</div>';
+                }
+                if (header && footer) {
+                    content += '<hr style="margin: 2rem 0; border: none; border-top: 1px solid var(--color-border);">';
+                }
+                if (footer) {
+                    content += '<div class="modal-disclaimer-section"><h3>License & Distribution Terms</h3>' + footer.innerHTML + '</div>';
+                }
+                modalBody.innerHTML = content || '<p style="font-style: italic; color: var(--color-text-secondary);">No Gutenberg headers or license information found in this book.</p>';
+            }
+        });
+
+        function openBookDisclaimer() {
+            const modal = document.getElementById('bookDisclaimerModal');
+            if (modal) {
+                modal.classList.remove('hidden');
+                modal.offsetHeight;
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeBookDisclaimer() {
+            const modal = document.getElementById('bookDisclaimerModal');
+            if (modal) {
+                modal.classList.remove('active');
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }, 400);
+            }
+        }
+
+        // Close on ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeBookDisclaimer();
+            }
+        });
+        </script>
     <?php endif; ?>
 </main>
 
