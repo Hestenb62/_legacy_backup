@@ -14,7 +14,6 @@ include '../../src/header.php';
   /* Clean Reader Layout */
   #reader-container {
     max-width: 800px;
-    /* Optimal line length for reading */
     margin: 0 auto;
     padding: 2rem;
   }
@@ -26,7 +25,6 @@ include '../../src/header.php';
     left: 0;
     width: 100%;
     height: 4px;
-    /* Thinner for modern look */
     background-color: var(--color-base-bg, #eee);
     z-index: 1001;
   }
@@ -42,12 +40,9 @@ include '../../src/header.php';
   #reader-controls {
     position: sticky;
     top: 0;
-    /* Keep it visible */
     z-index: 50;
     background-color: var(--color-base-bg);
-    /* Match theme */
     border-bottom: 1px solid var(--color-text-secondary);
-    /* Subtle divider */
     padding: 1rem 0;
     margin-bottom: 2rem;
     transition: background-color 0.3s;
@@ -64,23 +59,20 @@ include '../../src/header.php';
   /* Typography Enhancements */
   #book-content p {
     margin-bottom: 1.5em;
-    /* Breathing room */
     text-align: justify;
-    /* Classic book feel */
   }
 
-  /* Disable justify for Dyslexic font (handled by JS logic ideally, but generic CSS here) */
+  /* Disable justify for Dyslexic font */
   body.font-dyslexic #book-content p {
     text-align: left;
   }
 
-  /* Tooltip Styling (Preserved) */
+  /* Tooltip Styling */
   .tooltip {
     position: relative;
     display: inline-block;
     cursor: help;
     border-bottom: 2px dotted var(--color-accent);
-    /* More visible */
     color: var(--color-primary);
     font-weight: 600;
   }
@@ -99,7 +91,6 @@ include '../../src/header.php';
     bottom: 140%;
     left: 50%;
     transform: translateX(-50%);
-    /* Better centering and animation */
     opacity: 0;
     transition: opacity 0.3s, transform 0.3s, bottom 0.3s;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
@@ -107,13 +98,12 @@ include '../../src/header.php';
     font-size: 0.95em;
     line-height: 1.4;
     pointer-events: auto;
-    /* Enable interaction */
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
 
-  /* Transparent bridge to maintain hover state while moving mouse to tooltip */
+  /* Transparent bridge to maintain hover state */
   .tooltip .tooltiptext::after {
     content: "";
     position: absolute;
@@ -174,7 +164,6 @@ include '../../src/header.php';
     animation: fadeIn 0.5s ease-in-out;
   }
 
-  /* Ensure cards look good in both modes and aren't affected by global teacher-only styles */
   .teacher-only.chapter-section {
     border: none !important;
     padding: 0 !important;
@@ -186,7 +175,6 @@ include '../../src/header.php';
       opacity: 0;
       transform: translateY(10px);
     }
-
     to {
       opacity: 1;
       transform: translateY(0);
@@ -198,7 +186,6 @@ include '../../src/header.php';
     display: none;
     position: fixed;
     bottom: 90px;
-    /* Above A11y toggle */
     right: 24px;
     z-index: 99;
     padding: 12px;
@@ -207,6 +194,8 @@ include '../../src/header.php';
     color: white;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.2s, opacity 0.2s;
+    border: none;
+    cursor: pointer;
   }
 
   #go-to-top-btn:hover {
@@ -236,7 +225,6 @@ include '../../src/header.php';
       opacity: 0;
       transform: scale(0.95);
     }
-
     to {
       opacity: 1;
       transform: scale(1);
@@ -311,13 +299,663 @@ include '../../src/header.php';
     color: white;
     border-color: var(--color-secondary);
   }
+
+  .toc-teacher-btn {
+    grid-column: span 2;
+    background-color: var(--color-accent);
+    color: white !important;
+    border-color: var(--color-accent) !important;
+  }
+
+  .toc-teacher-btn:hover {
+    background-color: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
+  }
+
+  .toc-locked-item {
+    padding: 1rem;
+    text-align: center;
+    border-radius: 12px;
+    border: 1px dashed var(--color-border);
+    opacity: 0.5;
+    background-color: var(--color-base-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+  }
+
+  .toc-locked-item span {
+    font-weight: bold;
+    font-size: 0.85rem;
+  }
+
+  /* Aurora Background */
+  .reader-bg-wrapper {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: -10;
+    background-color: var(--color-base-bg);
+    transition: background-color 0.5s ease;
+  }
+
+  .reader-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.15;
+    will-change: transform;
+  }
+
+  .blob-1 {
+    top: -20%;
+    left: -10%;
+    width: 70vw;
+    height: 70vw;
+    background-color: var(--color-primary);
+  }
+
+  .blob-2 {
+    top: 20%;
+    right: -10%;
+    width: 60vw;
+    height: 60vw;
+    background-color: var(--color-secondary);
+  }
+
+  .blob-3 {
+    bottom: -20%;
+    left: 20%;
+    width: 50vw;
+    height: 50vw;
+    background-color: var(--color-accent);
+  }
+
+  /* Layout Shell */
+  .reader-main-content {
+    min-height: 100vh;
+    position: relative;
+    z-index: 10;
+    padding-bottom: 5rem;
+  }
+
+  .reader-page-header {
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .reader-mode-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    border-radius: 9999px;
+    background-color: var(--color-content-bg);
+    border: 1px solid var(--color-border);
+    padding: 0.5rem 1.25rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .pulse-indicator {
+    position: relative;
+    display: flex;
+    height: 0.5rem;
+    width: 0.5rem;
+  }
+
+  .pulse-ring {
+    position: absolute;
+    display: inline-flex;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    opacity: 0.75;
+    animation: ping 1.2s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  .pulse-dot {
+    position: relative;
+    display: inline-flex;
+    border-radius: 50%;
+    height: 0.5rem;
+    width: 0.5rem;
+    background-color: var(--color-primary);
+  }
+
+  .badge-text {
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-text-secondary);
+  }
+
+  .reader-page-title {
+    font-family: var(--site-font-family, 'Outfit', sans-serif);
+    font-size: clamp(3rem, 8vw, 4.5rem);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    margin-bottom: 1rem;
+    line-height: 0.95;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary), var(--color-accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .reader-page-author {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-text-secondary);
+    margin: 0;
+  }
+
+  /* Control Navigation Bar */
+  #reader-controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 1.5rem;
+    background-color: var(--color-content-bg);
+    box-shadow: var(--shadow-lg);
+    padding: 1rem 1.5rem;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: 640px) {
+    #reader-controls {
+      flex-direction: row;
+      border-radius: 9999px;
+    }
+  }
+
+  .controls-nav-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--color-base-bg);
+    padding: 0.35rem;
+    border-radius: 1rem;
+    border: 1px solid var(--color-border);
+  }
+
+  @media (min-width: 640px) {
+    .controls-nav-group {
+      border-radius: 9999px;
+    }
+  }
+
+  .controls-nav-btn {
+    background-color: var(--color-content-bg);
+    color: var(--color-text-default);
+    border: 1px solid var(--color-border);
+    padding: 0.5rem 1rem;
+    border-radius: 0.75rem;
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  @media (min-width: 640px) {
+    .controls-nav-btn {
+      border-radius: 9999px;
+    }
+  }
+
+  .controls-nav-btn:hover:not(:disabled) {
+    background-color: var(--color-border);
+  }
+
+  .controls-nav-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  /* TTS Speaking controls */
+  .controls-speech-group {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .speech-btn {
+    background-color: var(--color-text-default);
+    color: var(--color-base-bg);
+    border: none;
+    padding: 0.65rem 1.25rem;
+    border-radius: 0.75rem;
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.2s ease;
+  }
+
+  @media (min-width: 640px) {
+    .speech-btn {
+      border-radius: 9999px;
+    }
+  }
+
+  .speech-btn:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.1);
+  }
+
+  .speech-btn-stop {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.2);
+  }
+
+  .speech-btn-stop:hover {
+    background-color: rgba(239, 68, 68, 0.2);
+  }
+
+  /* Right-side tools panel */
+  .controls-tools-group {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    position: relative;
+  }
+
+  .tool-btn {
+    background-color: var(--color-base-bg);
+    border: 1px solid var(--color-border);
+    padding: 0.65rem 1rem;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.95rem;
+  }
+
+  @media (min-width: 640px) {
+    .tool-btn {
+      border-radius: 9999px;
+    }
+  }
+
+  .tool-btn-vocab {
+    color: var(--color-accent);
+  }
+
+  .tool-btn-settings {
+    color: var(--color-secondary);
+  }
+
+  .tool-btn-toc {
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.65rem 1.25rem;
+  }
+
+  .tool-btn:hover {
+    background-color: var(--color-border);
+    transform: translateY(-1px);
+  }
+
+  /* Settings Dropdown Panel styling */
+  #settings-panel {
+    position: absolute;
+    top: 130%;
+    right: 0;
+    width: 18rem;
+    background-color: var(--color-content-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 1.25rem;
+    box-shadow: var(--shadow-xl);
+    padding: 1.5rem;
+    z-index: 100;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    text-align: left;
+  }
+
+  #settings-panel.hidden {
+    display: none !important;
+  }
+
+  .settings-section-title {
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.75rem;
+    margin-top: 0;
+  }
+
+  .settings-btn-row {
+    display: flex;
+    gap: 0.5rem;
+    background-color: var(--color-base-bg);
+    padding: 0.25rem;
+    border-radius: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .settings-row-btn {
+    flex: 1;
+    background: transparent;
+    border: none;
+    padding: 0.4rem 0;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--color-text-secondary);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .settings-row-btn.active {
+    background-color: var(--color-content-bg);
+    color: var(--color-text-default);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .theme-dots-row {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .theme-dot-btn {
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .theme-dot-btn:hover {
+    transform: scale(1.08);
+  }
+
+  .theme-dot-btn.active {
+    border-color: var(--color-primary);
+  }
+
+  .dot-default {
+    background-color: #ffffff;
+  }
+
+  .dot-sepia {
+    background-color: #f4ecd8;
+  }
+
+  .dot-oled {
+    background-color: #000000;
+  }
+
+  /* Modals general overlay styling */
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    background-color: rgba(15, 23, 42, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    transition: opacity 0.3s ease;
+  }
+
+  .modal-overlay.hidden {
+    display: none !important;
+  }
+
+  .modal-card {
+    background-color: var(--color-content-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 1.5rem;
+    width: 100%;
+    box-shadow: var(--shadow-xl);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .modal-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .modal-card-title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .modal-icon-circle {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .circle-vocab {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: #10b981;
+  }
+
+  .circle-lock {
+    background-color: rgba(99, 102, 241, 0.1);
+    color: #6366f1;
+  }
+
+  .modal-card-close-btn {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: var(--color-base-bg);
+    color: var(--color-text-secondary);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .modal-card-close-btn:hover {
+    background-color: var(--color-border);
+    color: var(--color-text-default);
+  }
+
+  /* Vocab Modal Card list style */
+  .vocab-list {
+    padding: 1.5rem;
+    overflow-y: auto;
+    max-height: 55vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .vocab-card {
+    background-color: var(--color-base-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+    padding: 1.25rem;
+    box-shadow: var(--shadow-sm);
+    text-align: left;
+  }
+
+  .vocab-term {
+    font-family: var(--site-font-family, 'Outfit', sans-serif);
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+  }
+
+  .vocab-definition {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+    margin: 0;
+  }
+
+  /* Highlight selection toolbar */
+  #highlight-toolbar {
+    position: fixed;
+    z-index: 200;
+    background-color: #1e293b;
+    color: #ffffff;
+    padding: 0.25rem;
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow-xl);
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    transform: translate(-50%, -100%);
+    transition: opacity 0.2s ease;
+  }
+
+  #highlight-toolbar.hidden {
+    display: none !important;
+  }
+
+  .hl-btn {
+    background: transparent;
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: background-color 0.2s ease;
+  }
+
+  .hl-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .hl-divider {
+    width: 1px;
+    height: 1.25rem;
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+
+  /* Teacher Authentication Access Modal styling */
+  .auth-body {
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .auth-input {
+    width: 100%;
+    border-radius: 0.75rem;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-base-bg);
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+    letter-spacing: 0.2em;
+    font-family: monospace;
+    outline: none;
+    box-shadow: inset var(--shadow-sm);
+    color: var(--color-text-default);
+  }
+
+  .auth-input:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+  }
+
+  .auth-error {
+    color: #ef4444;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-top: 0.75rem;
+    display: block;
+  }
+
+  .auth-error.hidden {
+    display: none !important;
+  }
+
+  .auth-actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 2rem;
+  }
+
+  .auth-btn {
+    flex: 1;
+    padding: 0.75rem 0;
+    font-weight: 700;
+    font-size: 0.85rem;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+  }
+
+  .auth-btn-cancel {
+    background-color: var(--color-base-bg);
+    color: var(--color-text-secondary);
+    border: 1px solid var(--color-border);
+  }
+
+  .auth-btn-cancel:hover {
+    background-color: var(--color-border);
+  }
+
+  .auth-btn-submit {
+    background-color: var(--color-primary);
+    color: #ffffff;
+  }
+
+  .auth-btn-submit:hover {
+    filter: brightness(1.08);
+  }
 </style>
 
 <!-- AURORA MESH BACKGROUND -->
-<div class="fixed inset-0 overflow-hidden pointer-events-none noise-grain -z-10 bg-white dark:bg-gray-950 transition-colors duration-500">
-    <div class="absolute -top-[20%] -left-[10%] w-[70vw] h-[70vw] rounded-full mix-blend-multiply dark:mix-blend-overlay filter blur-[80px] opacity-40 will-change-transform bg-indigo-200 dark:bg-indigo-900/40"></div>
-    <div class="absolute top-[20%] -right-[10%] w-[60vw] h-[60vw] rounded-full mix-blend-multiply dark:mix-blend-overlay filter blur-[80px] opacity-40 style='animation-delay: -2s;' will-change-transform bg-purple-200 dark:bg-purple-900/40"></div>
-    <div class="absolute -bottom-[20%] left-[20%] w-[50vw] h-[50vw] rounded-full mix-blend-multiply dark:mix-blend-overlay filter blur-[80px] opacity-40 style='animation-delay: -4s;' will-change-transform bg-emerald-200 dark:bg-teal-900/40"></div>
+<div class="reader-bg-wrapper">
+    <div class="reader-blob blob-1"></div>
+    <div class="reader-blob blob-2"></div>
+    <div class="reader-blob blob-3"></div>
 </div>
 
 <!-- Progress Bar -->
@@ -325,94 +963,82 @@ include '../../src/header.php';
   <div id="progress-bar"></div>
 </div>
 
-<main id="main-content" class="min-h-screen relative z-10 font-sans pb-20">
+<main id="main-content" class="reader-main-content">
 
   <!-- Reader Container -->
   <div id="reader-container">
 
     <!-- Title / Header -->
-    <header class="text-center mb-12 animate-reveal mt-12 flex flex-col items-center">
-            <!-- Pill Badge -->
-            <div class="inline-flex items-center gap-3 rounded-full bg-white/60 dark:bg-black/20 backdrop-blur-xl px-5 py-2 text-xs font-bold text-gray-800 dark:text-gray-200 mb-8 border border-black/5 dark:border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.04)] justify-center max-w-fit mx-auto">
-                <span class="relative flex h-2 w-2">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-500 opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
-                </span>
-                <span class="tracking-[0.2em] uppercase"><i class="fas fa-book-open mr-2"></i> READER MODE</span>
-            </div>
-      <h1 class="text-5xl md:text-7xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-indigo-500 via-purple-500 to-emerald-400 mb-4 font-outfit leading-[0.95]">
-        1984
-      </h1>
-      <p class="text-xl font-bold text-gray-500 dark:text-gray-400">by George Orwell</p>
+    <header class="reader-page-header animate-reveal">
+      <!-- Pill Badge -->
+      <div class="reader-mode-badge">
+        <span class="pulse-indicator">
+          <span class="pulse-ring"></span>
+          <span class="pulse-dot"></span>
+        </span>
+        <span class="badge-text"><i class="fas fa-book-open"></i> Reader Mode</span>
+      </div>
+      <h1 class="reader-page-title">1984</h1>
+      <p class="reader-page-author">by George Orwell</p>
     </header>
 
     <!-- Fixed Controls Bar -->
-    <nav id="reader-controls"
-      class="flex flex-col sm:flex-row justify-between items-center gap-4 border border-gray-200 dark:border-white/10 sticky top-0 z-50 py-4 mb-12 bg-white/80 dark:bg-[#0a0a0a]/80 backdrop-blur-xl shadow-lg rounded-3xl px-6 mx-auto">
+    <nav id="reader-controls">
 
       <!-- Left: Prev/Next -->
-      <div class="flex items-center gap-2 w-full sm:w-auto justify-center bg-gray-100 dark:bg-white/5 p-1.5 rounded-2xl border border-gray-200 dark:border-white/10 shadow-inner">
-        <button id="prev-chapter"
-          class="bg-white dark:bg-gray-800 text-gray-900 dark:text-white px-4 py-2 rounded-xl transition-all shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 disabled:opacity-50 hover:bg-gray-50 dark:hover:bg-gray-700 font-bold"
-          aria-label="Previous Chapter">
-          <i class="fas fa-chevron-left text-sm"></i> Pre
+      <div class="controls-nav-group">
+        <button id="prev-chapter" class="controls-nav-btn" aria-label="Previous Chapter">
+          <i class="fas fa-chevron-left"></i> Pre
         </button>
-        <span id="current-chapter" class="font-bold text-sm text-gray-700 dark:text-gray-300 px-4 min-w-[100px] text-center uppercase tracking-widest leading-none">Ch 1</span>
-        <button id="next-chapter"
-          class="bg-white dark:bg-gray-800 text-gray-900 dark:text-white px-4 py-2 rounded-xl transition-all shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 hover:bg-gray-50 dark:hover:bg-gray-700 font-bold"
-          aria-label="Next Chapter">
-          Nxt <i class="fas fa-chevron-right text-sm"></i>
+        <span id="current-chapter">Ch 1</span>
+        <button id="next-chapter" class="controls-nav-btn" aria-label="Next Chapter">
+          Nxt <i class="fas fa-chevron-right"></i>
         </button>
       </div>
 
       <!-- Center: TTS -->
-      <div class="flex items-center gap-3">
-        <button id="tts-speak-btn"
-          class="bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-6 py-2.5 rounded-xl font-bold shadow-lg hover:-translate-y-0.5 active:scale-95 transition-all flex items-center justify-center gap-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 border border-transparent flex-1 sm:flex-none">
+      <div class="controls-speech-group">
+        <button id="tts-speak-btn" class="speech-btn">
           <i class="fas fa-play"></i> Listen Voice
         </button>
-        <button id="tts-stop-btn"
-          class="hidden bg-rose-50 dark:bg-rose-500/10 text-rose-600 dark:text-rose-400 px-6 py-2.5 rounded-xl font-bold shadow-sm hover:bg-rose-100 dark:hover:bg-rose-500/20 transition-all items-center justify-center gap-2 text-sm border border-rose-200 dark:border-rose-500/30 flex-1 sm:flex-none">
+        <button id="tts-stop-btn" class="speech-btn speech-btn-stop hidden">
           <i class="fas fa-stop"></i> Stop Voice
         </button>
       </div>
 
       <!-- Right: Tools & TOC -->
-      <div class="flex items-center gap-3 w-full sm:w-auto mt-2 sm:mt-0 relative">
-        <button id="open-vocab-btn"
-          class="text-emerald-600 dark:text-emerald-400 hover:text-emerald-800 dark:hover:text-emerald-300 transition-colors text-sm font-bold uppercase tracking-widest flex items-center justify-center gap-2 bg-emerald-50 dark:bg-emerald-500/10 py-2.5 px-4 rounded-xl border border-emerald-100 dark:border-emerald-500/20 shadow-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 flex-1 sm:flex-none" title="Study Guide">
+      <div class="controls-tools-group">
+        <button id="open-vocab-btn" class="tool-btn tool-btn-vocab" title="Study Guide">
           <i class="fas fa-book-reader"></i>
         </button>
-        <button id="open-settings-btn"
-          class="text-purple-600 dark:text-purple-400 hover:text-purple-800 dark:hover:text-purple-300 transition-colors text-sm font-bold uppercase tracking-widest flex items-center justify-center gap-2 bg-purple-50 dark:bg-purple-500/10 py-2.5 px-4 rounded-xl border border-purple-100 dark:border-purple-500/20 shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500 flex-1 sm:flex-none" title="Reader Settings">
+        <button id="open-settings-btn" class="tool-btn tool-btn-settings" title="Reader Settings">
           <i class="fas fa-font"></i>
         </button>
-        <button id="open-toc-modal"
-          class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors text-sm font-bold uppercase tracking-widest flex items-center justify-center gap-2 bg-indigo-50 dark:bg-indigo-500/10 py-2.5 px-6 rounded-xl border border-indigo-100 dark:border-indigo-500/20 shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 flex-1 sm:flex-none">
+        <button id="open-toc-modal" class="tool-btn tool-btn-toc">
           <i class="fas fa-list-ol"></i> Chapters
         </button>
 
         <!-- Settings Dropdown Panel -->
-        <div id="settings-panel" class="absolute top-[120%] right-0 w-72 bg-white/95 dark:bg-gray-900/95 backdrop-blur-2xl rounded-3xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.3)] border border-gray-200 dark:border-white/10 p-6 hidden opacity-0 transition-all duration-300 transform scale-95 z-[100] text-left">
-            <h4 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">Typography</h4>
-            <div class="flex gap-1.5 p-1 bg-gray-100 dark:bg-gray-800 rounded-xl mb-5">
-                <button class="flex-1 py-1.5 rounded-lg text-sm font-bold font-sans text-gray-900 dark:text-white bg-white dark:bg-gray-700 shadow-sm settings-font group" data-font="font-sans">Sans</button>
-                <button class="flex-1 py-1.5 rounded-lg text-sm font-bold text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors settings-font font-serif group" data-font="font-serif">Serif</button>
-                <button class="flex-1 py-1.5 rounded-lg text-sm font-bold text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors settings-font group" data-font="font-dyslexic" style="font-family: 'OpenDyslexic', sans-serif;">Dyslexic</button>
+        <div id="settings-panel" class="hidden">
+            <h4 class="settings-section-title">Typography</h4>
+            <div class="settings-btn-row">
+                <button class="settings-row-btn active settings-font" data-font="font-sans">Sans</button>
+                <button class="settings-row-btn settings-font font-serif" data-font="font-serif">Serif</button>
+                <button class="settings-row-btn settings-font" data-font="font-dyslexic" style="font-family: 'OpenDyslexic', sans-serif;">Dyslexic</button>
             </div>
             
-            <h4 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">Text Size</h4>
-            <div class="flex gap-2 mb-5">
-                <button class="flex-1 py-2 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-white/10 rounded-xl text-gray-700 dark:text-gray-300 font-bold hover:bg-gray-100 dark:hover:bg-gray-700 font-serif text-sm transition-colors settings-size" data-size="prose-base">A-</button>
-                <button class="flex-1 py-2 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-white/10 rounded-xl text-gray-900 dark:text-white font-bold bg-white dark:bg-gray-700 shadow-sm font-serif text-lg transition-colors border-indigo-500/50 settings-size" data-size="prose-lg">Aa</button>
-                <button class="flex-1 py-2 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-white/10 rounded-xl text-gray-700 dark:text-gray-300 font-bold hover:bg-gray-100 dark:hover:bg-gray-700 font-serif text-xl transition-colors settings-size" data-size="prose-2xl">A+</button>
+            <h4 class="settings-section-title">Text Size</h4>
+            <div class="settings-btn-row">
+                <button class="settings-row-btn settings-size" data-size="prose-base">A-</button>
+                <button class="settings-row-btn active settings-size" data-size="prose-lg">Aa</button>
+                <button class="settings-row-btn settings-size" data-size="prose-2xl">A+</button>
             </div>
 
-            <h4 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">Theme</h4>
-            <div class="flex gap-3 justify-between px-2">
-                <button class="w-10 h-10 rounded-full bg-white border-2 border-indigo-500 shadow-sm flex items-center justify-center focus:outline-none settings-theme" data-theme="default" title="Default"><i class="fas fa-sun text-yellow-500 text-xs hidden"></i></button>
-                <button class="w-10 h-10 rounded-full bg-[#f4ecd8] border-2 border-transparent hover:border-gray-300 shadow-sm flex items-center justify-center focus:outline-none settings-theme" data-theme="theme-sepia" title="Sepia"></button>
-                <button class="w-10 h-10 rounded-full bg-black border-2 border-transparent hover:border-gray-600 shadow-sm flex items-center justify-center focus:outline-none settings-theme" data-theme="theme-oled" title="OLED Dark"></button>
+            <h4 class="settings-section-title">Theme</h4>
+            <div class="theme-dots-row">
+                <button class="theme-dot-btn active dot-default settings-theme" data-theme="default" title="Default"></button>
+                <button class="theme-dot-btn dot-sepia settings-theme" data-theme="theme-sepia" title="Sepia"></button>
+                <button class="theme-dot-btn dot-oled settings-theme" data-theme="theme-oled" title="OLED Dark"></button>
             </div>
         </div>
       </div>
@@ -420,8 +1046,7 @@ include '../../src/header.php';
 
     <!-- Book Content Area -->
     <article id="book-content" class="prose prose-lg dark:prose-invert max-w-none text-text-default">
-
-      <!-- Chapter 1 -->
+<!-- Chapter 1 -->
       <div id="chapter-1" class="chapter-section active">
         <div class="chapter-title text-3xl font-bold text-center mb-8 text-primary">Chapter 1</div>
 
@@ -10927,86 +11552,87 @@ include '../../src/header.php';
 
   </div>
   </article>
+  
+    </article>
   </div>
-
 </main>
+
+<!-- Chapters Table of Contents Modal -->
 <div id="toc-modal" role="dialog" aria-labelledby="toc-title">
   <div class="toc-content">
     <div class="toc-header">
-      <h2 id="toc-title" class="text-2xl font-bold text-primary">Table of Contents</h2>
+      <h2 id="toc-title">Table of Contents</h2>
       <button class="toc-close" id="close-toc-modal" aria-label="Close menu">&times;</button>
     </div>
     <div class="toc-grid">
       <?php for ($i = 1; $i <= 25; $i++): ?>
         <?php if ($i >= 9 && $i <= 25): ?>
-            <div class="p-3 text-center rounded border border-gray-200 dark:border-white/5 opacity-40 cursor-not-allowed bg-gray-50 dark:bg-gray-800 shadow-inner flex flex-col items-center justify-center gap-1" title="Chapter currently locked/missing">
-                <span class="font-bold text-sm">CH <?php echo $i; ?></span>
-                <i class="fas fa-lock text-xs text-gray-400"></i>
+            <div class="toc-locked-item" title="Chapter currently locked/missing">
+                <span>CH <?php echo $i; ?></span>
+                <i class="fas fa-lock text-gray-400"></i>
             </div>
         <?php else: ?>
             <a href="#" class="toc-link" data-chapter="<?php echo $i; ?>">CH <?php echo $i; ?></a>
         <?php endif; ?>
       <?php endfor; ?>
-      <a href="#"
-        class="toc-link bg-accent text-white font-bold rounded-xl p-4 flex items-center justify-center hover:scale-105 transition-all shadow-lg"
-        data-chapter="26" style="grid-column: span 2;">
+      <a href="#" class="toc-link toc-teacher-btn" data-chapter="26">
         <i class="fas fa-chalkboard-teacher mr-2"></i> TEACHER RESOURCES
       </a>
     </div>
   </div>
 </div>
 
-<!-- To Top Button -->
+<!-- Go To Top Button -->
 <button id="go-to-top-btn" aria-label="Go to top">
   <i class="fas fa-arrow-up"></i>
 </button>
 
 <!-- Teacher Auth Modal -->
-<div id="teacher-auth-modal" class="fixed inset-0 z-[3000] flex items-center justify-center p-4 bg-black/60 backdrop-blur-md hidden transition-opacity duration-300 opacity-0">
-  <div class="bg-white dark:bg-gray-900 rounded-3xl p-8 max-w-md w-full shadow-2xl transform scale-95 transition-all duration-300 border border-gray-200 dark:border-white/10">
-    <div class="text-center mb-6">
-      <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-indigo-100 dark:bg-indigo-900/30 mb-4 shadow-inner">
-        <i class="fas fa-lock text-3xl text-indigo-600 dark:text-indigo-400"></i>
+<div id="teacher-auth-modal" class="modal-overlay hidden">
+  <div class="modal-card" style="max-width: 400px; padding: 2rem;">
+    <div class="auth-body">
+      <div class="modal-icon-circle circle-lock" style="margin: 0 auto 1.5rem auto;">
+        <i class="fas fa-lock" style="font-size: 1.5rem;"></i>
       </div>
-      <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Authorised Access Only</h3>
-      <p class="text-sm font-medium text-gray-500 dark:text-gray-400 mt-2">What is Jenny's number?</p>
-    </div>
-    <div class="mt-4">
-      <input type="password" id="teacher-password-input" class="block w-full rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 p-4 text-gray-900 dark:text-white focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500 text-center text-xl tracking-[0.2em] font-mono shadow-inner transition-colors outline-none" placeholder="•••••••">
-      <p id="teacher-error-msg" class="text-rose-500 text-sm mt-3 text-center hidden font-bold animate-pulse">Incorrect answer. Access Denied.</p>
-    </div>
-    <div class="mt-8 flex gap-3">
-      <button id="teacher-cancel-btn" class="flex-1 rounded-xl bg-gray-100 dark:bg-gray-800 px-4 py-3 text-sm font-bold text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">Cancel</button>
-      <button id="teacher-submit-btn" class="flex-1 rounded-xl bg-indigo-600 px-4 py-3 text-sm font-bold text-white hover:bg-indigo-700 shadow-md hover:-translate-y-0.5 active:scale-95 transition-all">Unlock</button>
+      <h3 style="font-family: var(--site-font-family, 'Outfit', sans-serif); font-size: 1.5rem; font-weight: 800; margin: 0 0 0.5rem 0; color: var(--color-text-default);">Authorised Access Only</h3>
+      <p style="color: var(--color-text-secondary); font-size: 0.9rem; margin-top: 0.5rem;">What is Jenny's number?</p>
+      <div style="margin-top: 1.5rem;">
+        <input type="password" id="teacher-password-input" class="auth-input" placeholder="•••••••">
+        <p id="teacher-error-msg" class="auth-error hidden">Incorrect answer. Access Denied.</p>
+      </div>
+      <div class="auth-actions">
+        <button id="teacher-cancel-btn" class="auth-btn auth-btn-cancel">Cancel</button>
+        <button id="teacher-submit-btn" class="auth-btn auth-btn-submit">Unlock</button>
+      </div>
     </div>
   </div>
 </div>
 
 <!-- Floating Highlight Toolbar -->
-<div id="highlight-toolbar" class="fixed z-[200] hidden bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-1 py-1 rounded-xl shadow-2xl items-center gap-1 font-bold text-sm transform -translate-x-1/2 -translate-y-full transition-opacity duration-200 opacity-0 pointer-events-none">
-    <button id="hl-btn-mark" class="px-3 py-2 rounded-lg hover:bg-white/20 dark:hover:bg-black/10 transition-colors flex items-center gap-2 pointer-events-auto"><i class="fas fa-highlighter text-yellow-400"></i> Mark</button>
-    <div class="w-px h-5 bg-white/20 dark:bg-black/10"></div>
-    <button id="hl-btn-copy" class="px-3 py-2 rounded-lg hover:bg-white/20 dark:hover:bg-black/10 transition-colors flex items-center gap-2 pointer-events-auto"><i class="fas fa-copy text-blue-400"></i> Copy</button>
+<div id="highlight-toolbar" class="hidden">
+    <button id="hl-btn-mark" class="hl-btn"><i class="fas fa-highlighter text-yellow-400"></i> Mark</button>
+    <div class="hl-divider"></div>
+    <button id="hl-btn-copy" class="hl-btn"><i class="fas fa-copy text-blue-400"></i> Copy</button>
 </div>
 
 <!-- Vocab Modal -->
-<div id="vocab-modal" class="fixed inset-0 z-[2000] flex items-center justify-center p-4 bg-black/60 backdrop-blur-md hidden transition-opacity duration-300 opacity-0">
-  <div class="bg-white dark:bg-gray-900 rounded-3xl w-full max-w-2xl max-h-[80vh] flex flex-col shadow-2xl transform scale-95 transition-all duration-300 border border-gray-200 dark:border-white/10">
-    <div class="flex items-center justify-between p-6 border-b border-gray-100 dark:border-gray-800">
-      <div class="flex items-center gap-3">
-        <div class="h-10 w-10 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center text-emerald-600 dark:text-emerald-400">
+<div id="vocab-modal" class="modal-overlay hidden">
+  <div class="modal-card" style="max-width: 600px;">
+    <div class="modal-card-header">
+      <div class="modal-card-title">
+        <div class="modal-icon-circle circle-vocab">
           <i class="fas fa-book-reader"></i>
         </div>
-        <div>
-          <h3 class="text-xl font-bold text-gray-900 dark:text-white leading-none">Study Guide</h3>
-          <p class="text-xs text-gray-500 font-bold uppercase tracking-widest mt-1">Current Chapter Vocabulary</p>
+        <div style="text-align: left;">
+          <h3 style="font-family: var(--site-font-family, 'Outfit', sans-serif); font-size: 1.25rem; font-weight: 800; margin: 0; color: var(--color-text-default);">Study Guide</h3>
+          <p style="color: var(--color-text-secondary); font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; margin: 0.25rem 0 0 0;">Current Chapter Vocabulary</p>
         </div>
       </div>
-      <button id="close-vocab-modal" class="text-gray-400 hover:text-gray-600 dark:hover:text-white bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 w-8 h-8 rounded-full flex items-center justify-center transition-colors">
+      <button id="close-vocab-modal" class="modal-card-close-btn">
         <i class="fas fa-times"></i>
       </button>
     </div>
-    <div id="vocab-list-container" class="flex-1 overflow-y-auto p-6 flex flex-col gap-4">
+    <div id="vocab-list-container" class="vocab-list">
       <!-- Injected Vocab Cards -->
     </div>
   </div>
@@ -11023,7 +11649,7 @@ include '../../src/header.php';
     const actualChapters = Array.from(chapters).map(c => parseInt(c.id.replace('chapter-',''), 10)).sort((a,b)=>a-b);
     const totalChapters = chapters.length;
 
-    // --- TTS Ssetup ---
+    // --- TTS Setup ---
     let utterance = new SpeechSynthesisUtterance();
     const speakBtn = document.getElementById('tts-speak-btn');
     const stopBtn = document.getElementById('tts-stop-btn');
@@ -11050,18 +11676,15 @@ include '../../src/header.php';
     function showAuthModal(num) {
         pendingChapter = num;
         authModal.classList.remove('hidden');
-        // trigger reflow
         void authModal.offsetWidth;
-        authModal.classList.remove('opacity-0');
-        authModal.firstElementChild.classList.remove('scale-95');
+        authModal.classList.add('active');
         authInput.value = '';
         authError.classList.add('hidden');
         authInput.focus();
     }
 
     function hideAuthModal() {
-        authModal.classList.add('opacity-0');
-        authModal.firstElementChild.classList.add('scale-95');
+        authModal.classList.remove('active');
         setTimeout(() => {
             authModal.classList.add('hidden');
         }, 300);
@@ -11089,7 +11712,7 @@ include '../../src/header.php';
     };
 
     function showChapter(num) {
-      let maxVal = 26; // Hardcode max to 26 now that we bumped it
+      let maxVal = 26;
 
       if (num < 1) num = 1;
       if (num > maxVal) num = maxVal;
@@ -11150,7 +11773,6 @@ include '../../src/header.php';
       tocModal.classList.remove('active');
     };
 
-    // Close on background click
     window.onclick = (event) => {
       if (event.target == tocModal) {
         tocModal.classList.remove('active');
@@ -11200,18 +11822,15 @@ include '../../src/header.php';
         const active = document.querySelector('.chapter-section.active');
         if (!active) return;
         
-        // Custom Read Along logic
-        // Get all paragraphs in the active chapter to highlight sequentially
         const paras = Array.from(active.querySelectorAll('p, h1, h2, h3'));
         activeTextNodes = paras;
         currentParaIndex = 0;
 
         const fullText = paras.map(p => {
-             // clean tooltips from the text clone
              const clone = p.cloneNode(true);
              clone.querySelectorAll('.tooltiptext').forEach(t => t.remove());
              return clone.textContent.trim();
-        }).join(" ... "); // Give the engine a pause between paras
+        }).join(" ... ");
 
         utterance.text = fullText;
         window.speechSynthesis.speak(utterance);
@@ -11221,7 +11840,6 @@ include '../../src/header.php';
       };
 
       utterance.onboundary = (e) => {
-         // Advanced sync: approximate the paragraph based on char index
          let accumulated = 0;
          for(let i=0; i<activeTextNodes.length; i++) {
              const clone = activeTextNodes[i].cloneNode(true);
@@ -11230,13 +11848,9 @@ include '../../src/header.php';
              
              if (e.charIndex >= accumulated && e.charIndex <= accumulated + len + 5) {
                  if(currentParaIndex !== i) {
-                     // remove old highlight
                      if(activeTextNodes[currentParaIndex]) activeTextNodes[currentParaIndex].classList.remove('bg-indigo-100', 'dark:bg-indigo-900/40', 'rounded-xl', 'px-2', 'py-1', 'transition-colors', 'duration-500');
                      currentParaIndex = i;
-                     // add new highlight
                      activeTextNodes[currentParaIndex].classList.add('bg-indigo-100', 'dark:bg-indigo-900/40', 'rounded-xl', 'px-2', 'py-1', 'transition-colors', 'duration-500');
-                     
-                     // smooth scroll to match engine
                      activeTextNodes[currentParaIndex].scrollIntoView({behavior: 'smooth', block: 'center'});
                  }
                  break;
@@ -11269,7 +11883,6 @@ include '../../src/header.php';
       const pct = (scrollTop / docHeight) * 100;
       document.getElementById('progress-bar').style.width = pct + '%';
 
-      // Go to top
       const btn = document.getElementById('go-to-top-btn');
       if (scrollTop > 300) btn.style.display = 'block';
       else btn.style.display = 'none';
@@ -11281,13 +11894,9 @@ include '../../src/header.php';
     function initTooltipButtons() {
       const tooltips = document.querySelectorAll('.tooltiptext');
       tooltips.forEach(tt => {
-        // Use textContent because innerText is often empty for hidden elements
-        // Also collapse multiple spaces/newlines from the HTML source
         const originalText = tt.textContent.replace(/\s+/g, ' ').trim();
+        if (!originalText) return;
 
-        if (!originalText) return; // Skip if empty
-
-        // Build the interactive UI
         tt.innerHTML = `
           <div class="tooltip-def-text" style="margin-bottom: 8px;">${originalText}</div>
           <div class="tooltip-actions" onclick="event.stopPropagation()">
@@ -11300,7 +11909,6 @@ include '../../src/header.php';
           </div>
         `;
 
-        // Handle Copy
         const copyBtn = tt.querySelector('.copy-btn');
         copyBtn.onclick = (e) => {
           e.preventDefault();
@@ -11312,7 +11920,6 @@ include '../../src/header.php';
           });
         };
 
-        // Handle TTS for definition
         const speakBtn = tt.querySelector('.speak-btn');
         speakBtn.onclick = (e) => {
           e.preventDefault();
@@ -11341,39 +11948,39 @@ include '../../src/header.php';
     document.addEventListener('selectionchange', () => {
       const selection = window.getSelection();
       if (!selection.rangeCount || selection.isCollapsed) {
-        hlToolbar.classList.add('opacity-0', 'pointer-events-none');
+        hlToolbar.classList.add('hidden');
         return;
       }
       
       const range = selection.getRangeAt(0);
       if (!bookContent.contains(range.commonAncestorContainer)) {
-        hlToolbar.classList.add('opacity-0', 'pointer-events-none');
+        hlToolbar.classList.add('hidden');
         return;
       }
 
       currentSelectionRange = range;
       const rect = range.getBoundingClientRect();
       
-      // Position toolbar slightly above selection
-      hlToolbar.style.left = `${rect.left + rect.width / 2}px`;
-      hlToolbar.style.top = `${rect.top - 10}px`;
+      hlToolbar.style.left = `${rect.left + rect.width / 2 + window.scrollX}px`;
+      hlToolbar.style.top = `${rect.top + window.scrollY - 10}px`;
       
       hlToolbar.classList.remove('hidden');
-      void hlToolbar.offsetWidth;
-      hlToolbar.classList.remove('opacity-0', 'pointer-events-none');
     });
 
     hlMarkBtn.onclick = () => {
       if (!currentSelectionRange) return;
       try {
         const mark = document.createElement('mark');
-        mark.className = 'bg-yellow-200/60 dark:bg-yellow-500/40 rounded px-1 transition-colors cursor-pointer hover:bg-yellow-300/60 dark:hover:bg-yellow-400/50 mix-blend-multiply dark:mix-blend-overlay';
+        mark.style.backgroundColor = 'rgba(253, 224, 71, 0.6)';
+        mark.style.borderRadius = '0.25rem';
+        mark.style.padding = '0 0.25rem';
+        mark.style.cursor = 'pointer';
         currentSelectionRange.surroundContents(mark);
         window.getSelection().removeAllRanges();
       } catch (e) {
         console.log("Highlighting crossed boundaries", e);
       }
-      hlToolbar.classList.add('opacity-0', 'pointer-events-none');
+      hlToolbar.classList.add('hidden');
     };
 
     hlCopyBtn.onclick = () => {
@@ -11395,8 +12002,6 @@ include '../../src/header.php';
         settingsOpen = !settingsOpen;
         if(settingsOpen) {
             settingsPanel.classList.remove('hidden');
-            void settingsPanel.offsetWidth;
-            settingsPanel.classList.remove('opacity-0', 'scale-95');
         } else {
             closeSettings();
         }
@@ -11404,8 +12009,7 @@ include '../../src/header.php';
 
     function closeSettings() {
         settingsOpen = false;
-        settingsPanel.classList.add('opacity-0', 'scale-95');
-        setTimeout(() => settingsPanel.classList.add('hidden'), 300);
+        settingsPanel.classList.add('hidden');
     }
     document.addEventListener('click', (e) => {
         if(settingsOpen && !settingsPanel.contains(e.target) && e.target !== settingsBtn) closeSettings();
@@ -11424,10 +12028,9 @@ include '../../src/header.php';
         if(prefs.theme !== 'default') document.body.classList.add(prefs.theme);
 
         document.querySelectorAll('.settings-font, .settings-size, .settings-theme').forEach(el => {
-            el.classList.remove('ring-2', 'ring-indigo-500', 'bg-white', 'dark:bg-gray-700', 'shadow-sm');
+            el.classList.remove('active');
             if(el.dataset.font === prefs.font || el.dataset.size === prefs.size || el.dataset.theme === prefs.theme) {
-                if(el.classList.contains('settings-theme')) el.classList.add('ring-2', 'ring-offset-2', 'ring-indigo-500');
-                else el.classList.add('bg-white', 'dark:bg-gray-700', 'shadow-sm');
+                el.classList.add('active');
             }
         });
         localStorage.setItem(PREFS_KEY, JSON.stringify(prefs));
@@ -11463,30 +12066,25 @@ include '../../src/header.php';
         const vocabArray = Object.values(vocabMap).sort((a,b) => a.term.localeCompare(b.term));
 
         if(vocabArray.length === 0) {
-            vocabList.innerHTML = '<div class="text-center p-8 text-gray-500"><i class="fas fa-ghost text-4xl mb-4 opacity-50"></i><p>No specialized vocabulary found in this chapter.</p></div>';
+            vocabList.innerHTML = '<div style="text-align: center; padding: 2rem; color: var(--color-text-secondary);"><i class="fas fa-ghost" style="font-size: 2.5rem; margin-bottom: 1rem; opacity: 0.5;"></i><p>No specialized vocabulary found in this chapter.</p></div>';
         } else {
             vocabArray.forEach(v => {
                 vocabList.innerHTML += `
-                    <div class="bg-gray-50 dark:bg-gray-800 p-5 rounded-2xl border border-gray-200 dark:border-white/5 shadow-sm">
-                        <h4 class="text-lg font-bold text-indigo-600 dark:text-indigo-400 mb-2 capitalize font-serif">${v.term}</h4>
-                        <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">${v.defText}</p>
+                    <div class="vocab-card">
+                        <h4 class="vocab-term">${v.term}</h4>
+                        <p class="vocab-definition">${v.defText}</p>
                     </div>
                 `;
             });
         }
 
         vocabModal.classList.remove('hidden');
-        void vocabModal.offsetWidth;
-        vocabModal.classList.remove('opacity-0');
-        vocabModal.firstElementChild.classList.remove('scale-95');
     };
 
     closeVocabBtn.onclick = () => {
-        vocabModal.classList.add('opacity-0');
-        vocabModal.firstElementChild.classList.add('scale-95');
-        setTimeout(() => vocabModal.classList.add('hidden'), 300);
+        vocabModal.classList.add('hidden');
     };
-9
+
     // Init
     initTooltipButtons();
     showChapter(currentChapter);
