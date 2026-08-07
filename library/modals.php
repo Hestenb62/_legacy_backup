@@ -51,6 +51,10 @@
                         <span class="spec-label">Dewey Decimal</span>
                         <span id="modal-dewey" class="spec-value spec-val-highlight-purple"></span>
                     </div>
+                    <div id="modal-grade-container" class="library-modal-spec-half hidden">
+                        <span class="spec-label">Grade Level</span>
+                        <span id="modal-grade" class="spec-value spec-val-highlight-pink"></span>
+                    </div>
                 </div>
 
                 <!-- Description -->

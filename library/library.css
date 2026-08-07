@@ -1,1540 +1,1429 @@
-/* library/library.css - Digital Library Hub Stylesheet */
+/* library/library.css - Digital Library Hub Stylesheet (Minimal Rebuild Mode) */
 
-/* --- Aurora Mesh Background --- */
-.library-aurora-bg {
-  position: fixed;
-  inset: 0;
-  overflow: hidden;
-  pointer-events: none;
-  z-index: -10;
-  background-color: var(--color-bg-base);
-  transition: background-color 0.5s ease;
+/* ==========================================================================
+   Step 1: Base Page Layout & Aurora Mesh Background (Site-Unified)
+   ========================================================================== */
+
+/* Main Page Container */
+.library-main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 6rem 1.5rem;
+    font-family: var(--site-font-family, 'Outfit', sans-serif);
+    color: var(--color-text-default);
+    position: relative;
+    z-index: 1;
 }
 
-/* Base floating animation for backgrounds */
-@keyframes float-blob {
-  0%, 100% {
-    transform: translate(0, 0) scale(1);
-  }
-  33% {
-    transform: translate(4vw, -6vh) scale(1.1);
-  }
-  66% {
-    transform: translate(-3vw, 4vh) scale(0.9);
-  }
+/* Hide elements utility */
+.hidden {
+    display: none !important;
+}
+
+/* Aurora Mesh Background - Adapted to use site's colors and theme */
+.library-aurora-bg {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: -10;
+    transition: background-color 0.5s ease;
 }
 
 .library-aurora-blob {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.35;
-  will-change: transform;
-  mix-blend-mode: multiply;
-  animation: float-blob 22s infinite ease-in-out;
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.15;
+    will-change: transform;
+    mix-blend-mode: multiply;
+    animation: float-blob 22s infinite ease-in-out;
 }
 
-.dark .library-aurora-blob {
-  mix-blend-mode: overlay;
-  opacity: 0.25;
+/* For dark themes */
+.dark .library-aurora-blob,
+.midnight .library-aurora-blob {
+    mix-blend-mode: screen;
+    opacity: 0.08;
 }
 
 .blob-1 {
-  top: -10%;
-  left: -5%;
-  width: 70vw;
-  height: 70vw;
-  background-color: #c7d2fe; /* indigo-200 */
-}
-.dark .blob-1 {
-  background-color: rgba(49, 46, 129, 0.4); /* indigo-900/40 */
+    top: -10%;
+    left: -5%;
+    width: 60vw;
+    height: 60vw;
+    background-color: var(--color-primary);
 }
 
 .blob-2 {
-  top: 20%;
-  right: -5%;
-  width: 60vw;
-  height: 60vw;
-  background-color: #f3e8ff; /* purple-200 */
-  animation-delay: -4s;
-  animation-duration: 26s;
-}
-.dark .blob-2 {
-  background-color: rgba(88, 28, 135, 0.4); /* purple-900/40 */
+    top: 20%;
+    right: -5%;
+    width: 50vw;
+    height: 50vw;
+    background-color: var(--color-secondary);
+    animation-delay: -4s;
+    animation-duration: 26s;
 }
 
 .blob-3 {
-  bottom: -10%;
-  left: 20%;
-  width: 50vw;
-  height: 50vw;
-  background-color: #d1fae5; /* emerald-200 */
-  animation-delay: -8s;
-  animation-duration: 18s;
-}
-.dark .blob-3 {
-  background-color: rgba(19, 78, 74, 0.4); /* teal-900/40 */
+    bottom: -10%;
+    left: 20%;
+    width: 40vw;
+    height: 40vw;
+    background-color: var(--color-accent, #06b6d4);
+    animation-delay: -8s;
+    animation-duration: 18s;
 }
 
-/* Noise texture grain overlay (using standard CSS or matching local style) */
-.noise-grain {
-  position: relative;
+@keyframes float-blob {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+    }
+    33% {
+        transform: translate(4vw, -6vh) scale(1.08);
+    }
+    66% {
+        transform: translate(-3vw, 4vh) scale(0.92);
+    }
 }
 
-/* --- Main Layout --- */
-.library-main {
-  min-height: 100vh;
-  position: relative;
-  z-index: 10;
-  padding-bottom: 5rem;
-}
+/* ==========================================================================
+   Step 2: Hero Section & Page Title Styling
+   ========================================================================== */
 
-/* --- Hero Section --- */
 .library-hero {
-  position: relative;
-  padding: 8rem 1rem 3rem 1rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    position: relative;
+    padding: 4rem 1rem 2rem 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+/* Animations */
 .library-animate-reveal {
-  animation: revealUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  opacity: 0;
-  transform: translateY(20px);
+    animation: revealUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0;
+    transform: translateY(25px);
 }
 
 @keyframes revealUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Badge Pill */
 .library-hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  border-radius: 9999px;
-  background-color: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  padding: 0.5rem 1.25rem;
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: #1f2937;
-  margin-bottom: 2.5rem;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
-}
-
-.dark .library-hero-badge {
-  background-color: rgba(0, 0, 0, 0.2);
-  color: #e5e7eb;
-  border-color: rgba(255, 255, 255, 0.1);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    border-radius: 9999px;
+    background-color: var(--color-content-bg);
+    border: 1px solid var(--color-border, rgba(0, 0, 0, 0.08));
+    padding: 0.5rem 1.25rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--color-text-default);
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-soft);
 }
 
 .library-badge-dot {
-  position: relative;
-  display: flex;
-  height: 0.5rem;
-  width: 0.5rem;
+    position: relative;
+    display: flex;
+    height: 0.5rem;
+    width: 0.5rem;
 }
 
 .library-badge-dot::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  background-color: #6366f1; /* indigo-500 */
-  animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
-  opacity: 0.75;
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    animation: badge-ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+    opacity: 0.75;
 }
 
 .library-badge-dot::after {
-  content: '';
-  position: relative;
-  display: inline-flex;
-  border-radius: 50%;
-  height: 0.5rem;
-  width: 0.5rem;
-  background-color: #6366f1;
+    content: '';
+    position: relative;
+    display: inline-flex;
+    border-radius: 50%;
+    height: 0.5rem;
+    width: 0.5rem;
+    background-color: var(--color-primary);
 }
 
-@keyframes ping {
-  75%, 100% {
-    transform: scale(2.5);
-    opacity: 0;
-  }
+@keyframes badge-ping {
+    75%, 100% {
+        transform: scale(2.5);
+        opacity: 0;
+    }
 }
 
 .library-badge-text {
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  display: flex;
-  align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    display: flex;
+    align-items: center;
 }
 
 .library-badge-text i {
-  margin-right: 0.5rem;
+    margin-right: 0.5rem;
+    color: var(--color-primary);
 }
 
-/* Giant Hero Title */
+/* Hero title style */
 .library-hero-title {
-  font-family: 'Outfit', sans-serif;
-  font-size: clamp(3rem, 10vw, 7.5rem);
-  font-weight: 900;
-  letter-spacing: -0.04em;
-  color: var(--color-text-main);
-  margin-bottom: 2rem;
-  line-height: 0.95;
+    font-family: var(--site-font-family, 'Outfit', sans-serif);
+    font-size: clamp(3rem, 8vw, 6.5rem);
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    color: var(--color-text-default);
+    margin-bottom: 1.5rem;
+    line-height: 0.95;
 }
 
+/* Gradient text using site's primary, secondary, and accent colors */
 .library-hero-title-gradient {
-  background: linear-gradient(135deg, #6366f1, #a855f7, #34d399);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary), var(--color-accent, #06b6d4));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
 }
 
-/* --- Search & Filters Row --- */
+
+/* ==========================================================================
+   Step 3: Search Bar & Filters Styling
+   ========================================================================== */
+
 .library-search-wrapper {
-  margin-top: 2rem;
-  max-width: 56rem; /* max-w-4xl */
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  position: relative;
+    margin-top: 2.5rem;
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @media (min-width: 768px) {
-  .library-search-wrapper {
-    flex-direction: row;
-  }
+    .library-search-wrapper {
+        flex-direction: row;
+    }
 }
 
-/* Glassmorphic elements */
-.glass-shine {
-  position: relative;
-  overflow: hidden;
-}
-.glass-shine::after {
-  content: '';
-  position: absolute;
-  top: 0; left: -50%; width: 200%; height: 100%;
-  background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.03) 50%, rgba(255,255,255,0) 100%);
-  transform: skewX(-25deg);
-  transition: 0.75s;
-  pointer-events: none;
-}
-.glass-shine:hover::after {
-  left: 125%;
+/* Glass shine hover effect */
+.library-glass-shine {
+    position: relative;
+    overflow: hidden;
 }
 
+.library-glass-shine::after {
+    content: '';
+    position: absolute;
+    top: 0; 
+    left: -50%; 
+    width: 200%; 
+    height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.05) 50%, rgba(255,255,255,0) 100%);
+    transform: skewX(-25deg);
+    transition: 0.75s;
+    pointer-events: none;
+}
+
+.library-glass-shine:hover::after {
+    left: 125%;
+}
+
+/* Search bar wrapper */
 .library-search-input-container {
-  position: relative;
-  width: 100%;
+    position: relative;
+    width: 100%;
 }
 
 @media (min-width: 768px) {
-  .library-search-input-container {
-    width: 66.6666%;
-  }
+    .library-search-input-container {
+        width: 66.66%;
+    }
 }
 
 .library-search-input {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 1rem 1rem 1rem 3rem;
-  border-radius: 1rem;
-  border: 1px solid var(--color-border);
-  background-color: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  color: var(--color-text-main);
-  font-size: 1.125rem;
-  font-weight: 600;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
-  transition: all 0.3s ease;
-}
-
-.dark .library-search-input {
-  background-color: rgba(0, 0, 0, 0.4);
-  border-color: rgba(255, 255, 255, 0.1);
-}
-
-.library-search-input:hover {
-  background-color: rgba(255, 255, 255, 0.8);
-}
-.dark .library-search-input:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1.125rem 1.25rem 1.125rem 3.25rem;
+    border-radius: 1.25rem;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-content-bg);
+    color: var(--color-text-default);
+    font-size: 1.1rem;
+    font-weight: 600;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .library-search-input:focus {
-  outline: none;
-  border-color: #6366f1;
-  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
-  background-color: var(--color-bg-surface);
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.15);
 }
 
 .library-search-icon {
-  position: absolute;
-  left: 1.25rem;
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--color-text-muted);
-  font-size: 1.125rem;
-  transition: color 0.3s ease;
-  pointer-events: none;
+    position: absolute;
+    left: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-text-secondary);
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+    pointer-events: none;
 }
 
 .library-search-input-container:focus-within .library-search-icon {
-  color: #6366f1;
+    color: var(--color-primary);
 }
 
 /* Category Filter Dropdown */
 .library-filter-select-container {
-  position: relative;
-  width: 100%;
+    position: relative;
+    width: 100%;
 }
 
 @media (min-width: 768px) {
-  .library-filter-select-container {
-    width: 33.3333%;
-  }
+    .library-filter-select-container {
+        width: 33.33%;
+    }
 }
 
 .library-category-select {
-  width: 100%;
-  box-sizing: border-box;
-  min-height: 56px;
-  background-color: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border: 1px solid var(--color-border);
-  border-radius: 1rem;
-  padding: 0.75rem 2.5rem 0.75rem 1rem;
-  color: var(--color-text-main);
-  font-weight: 700;
-  font-size: 0.95rem;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  appearance: none;
-  -webkit-appearance: none;
-}
-
-.dark .library-category-select {
-  background-color: rgba(0, 0, 0, 0.4);
-  border-color: rgba(255, 255, 255, 0.1);
-}
-
-.library-category-select:hover {
-  background-color: rgba(255, 255, 255, 0.8);
-}
-.dark .library-category-select:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 58px;
+    background-color: var(--color-content-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 1.25rem;
+    padding: 0.75rem 2.75rem 0.75rem 1.25rem;
+    color: var(--color-text-default);
+    font-weight: 700;
+    font-size: 0.95rem;
+    box-shadow: var(--shadow-soft);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    appearance: none;
+    -webkit-appearance: none;
 }
 
 .library-category-select:focus {
-  outline: none;
-  border-color: #6366f1;
-  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.15);
 }
 
 .library-filter-icon {
-  position: absolute;
-  right: 1.25rem;
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--color-text-muted);
-  pointer-events: none;
+    position: absolute;
+    right: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-text-secondary);
+    pointer-events: none;
+    transition: color 0.3s ease;
+}
+
+.library-filter-select-container:focus-within .library-filter-icon {
+    color: var(--color-primary);
 }
 
 /* Option Styles inside Select */
 .library-category-select option {
-  background-color: var(--color-bg-surface);
-  color: var(--color-text-main);
+    background-color: var(--color-content-bg);
+    color: var(--color-text-default);
 }
 
-/* --- Content Shelves Container --- */
+/* ==========================================================================
+   Step 4: Category Section Header & Scrollable Books Row Styling
+   ========================================================================== */
+
 .library-content-container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 1rem;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  gap: 5rem;
+    max-width: 1400px;
+    margin: 4rem auto 0 auto;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 4.5rem;
 }
 
 @media (min-width: 768px) {
-  .library-content-container {
-    padding: 0 2rem;
-  }
+    .library-content-container {
+        padding: 0 2rem;
+    }
 }
 
 .library-row-section {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Shelf Header */
+/* Category header row */
 .library-row-header {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
 }
 
 .library-row-title {
-  font-family: 'Outfit', sans-serif;
-  font-size: 1.875rem; /* text-3xl */
-  font-weight: 900;
-  color: var(--color-text-main);
-  letter-spacing: -0.02em;
-  margin: 0;
-  flex-shrink: 0;
+    font-family: var(--site-font-family, 'Outfit', sans-serif);
+    font-size: 1.875rem; /* text-3xl */
+    font-weight: 850;
+    color: var(--color-text-default);
+    letter-spacing: -0.02em;
+    margin: 0;
+    flex-shrink: 0;
 }
 
 .library-row-divider {
-  height: 1px;
-  background-color: var(--color-border);
-  flex-grow: 1;
-  border-radius: 9999px;
+    height: 1px;
+    background-color: var(--color-border);
+    flex-grow: 1;
+    border-radius: 9999px;
 }
 
 .library-scroll-buttons {
-  display: flex;
-  gap: 0.5rem;
-  flex-shrink: 0;
+    display: flex;
+    gap: 0.5rem;
+    flex-shrink: 0;
 }
 
 .library-scroll-btn {
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 0.75rem;
-  background-color: var(--color-bg-surface);
-  color: var(--color-text-muted);
-  border: 1px solid var(--color-border);
-  box-shadow: var(--shadow-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  outline: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.75rem;
+    background-color: var(--color-content-bg);
+    color: var(--color-text-secondary);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
 }
 
 .library-scroll-btn:hover {
-  color: var(--color-text-main);
-  background-color: var(--color-border);
-  transform: translateY(-1px);
+    color: var(--color-text-default);
+    background-color: var(--color-border);
+    transform: translateY(-1px);
 }
 
 .library-scroll-btn:active {
-  transform: translateY(0);
+    transform: translateY(0);
 }
 
 .library-scroll-btn:focus-visible {
-  box-shadow: 0 0 0 2px #6366f1;
+    box-shadow: 0 0 0 2px var(--color-primary);
 }
 
-/* Horizontal Books Container */
+/* Horizontal scroll row of books */
 .library-books-row {
-  display: flex;
-  overflow-x: auto;
-  gap: 2rem;
-  padding: 0.5rem 0.5rem 2rem 0.5rem;
-  scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: none; /* Hide default firefox scrollbar */
-  -webkit-overflow-scrolling: touch;
+    display: flex;
+    overflow-x: auto;
+    gap: 2rem;
+    padding: 0.5rem 0.5rem 2rem 0.5rem;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none; /* Hide default Firefox scrollbar */
+    -webkit-overflow-scrolling: touch;
 }
 
 /* Hide Webkit Scrollbar */
 .library-books-row::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
-/* --- Book Card Component --- */
+/* ==========================================================================
+   Step 5: Book Cards & Badges Styling
+   ========================================================================== */
+
 .library-book-card {
-  flex-shrink: 0;
-  width: 12rem; /* w-48 */
-  scroll-snap-align: start;
-  cursor: pointer;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
+    flex-shrink: 0;
+    width: 11rem; /* width of card */
+    scroll-snap-align: start;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
 }
 
 @media (min-width: 768px) {
-  .library-book-card {
-    width: 14rem; /* w-56 */
-  }
+    .library-book-card {
+        width: 13.5rem;
+    }
 }
 
+/* Card Cover Container with hover lifting */
 .library-book-cover-wrap {
-  position: relative;
-  aspect-ratio: 2/3;
-  border-radius: 1rem;
-  overflow: hidden;
-  box-shadow: var(--shadow-md);
-  border: 1px solid var(--color-border);
-  background-color: var(--color-bg-base);
-  transition: all 0.3s ease;
+    position: relative;
+    aspect-ratio: 2 / 3;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--color-border);
+    background-color: var(--color-content-bg);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .library-book-card:hover .library-book-cover-wrap {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 30px rgba(99, 102, 241, 0.15);
-  border-color: rgba(99, 102, 241, 0.3);
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--color-primary);
 }
 
-/* Collection Ribbon */
-.library-book-badge-collection {
-  position: absolute;
-  top: 0.75rem;
-  left: 0.75rem;
-  z-index: 30;
-  background-color: rgba(79, 70, 229, 0.9);
-  color: #ffffff;
-  font-size: 0.625rem; /* 10px */
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  padding: 0.25rem 0.625rem;
-  border-radius: 0.375rem;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  box-shadow: var(--shadow-sm);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  display: flex;
-  align-items: center;
-  gap: 0.375rem;
-}
-
+/* Cover Image Zoom */
 .library-book-cover-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: relative;
-  z-index: 10;
-  transition: transform 0.5s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 10;
+    transition: transform 0.5s ease;
 }
 
 .library-book-card:hover .library-book-cover-img {
-  transform: scale(1.04);
+    transform: scale(1.05);
+}
+
+/* Collection Badge (Upper Left) */
+.library-book-badge-collection {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    z-index: 25;
+    background-color: var(--color-primary);
+    color: #ffffff;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    padding: 0.3rem 0.65rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+/* Grade Level Badge (Upper Right) */
+.library-book-badge-grade {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    z-index: 25;
+    background-color: var(--color-secondary);
+    color: #ffffff;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    padding: 0.3rem 0.65rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    backdrop-filter: blur(4px);
 }
 
 /* Cover hover overlay details */
 .library-book-cover-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.3) 60%, transparent 100%);
-  opacity: 0;
-  z-index: 20;
-  transition: opacity 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 1.25rem;
-  box-sizing: border-box;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.3) 60%, transparent 100%);
+    opacity: 0;
+    z-index: 20;
+    transition: opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.25rem;
+    box-sizing: border-box;
 }
 
 .library-book-card:hover .library-book-cover-overlay {
-  opacity: 1;
+    opacity: 1;
 }
 
 .library-book-overlay-text {
-  color: #ffffff;
-  font-size: 0.625rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  display: flex;
-  align-items: center;
-  gap: 0.375rem;
-  margin-bottom: 0.25rem;
+    color: #ffffff;
+    font-size: 0.65rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
 }
 
 .library-book-overlay-text i {
-  color: #818cf8; /* indigo-400 */
+    color: var(--color-accent, #06b6d4);
 }
 
-/* Card details bottom */
+/* Book Details text below cover */
 .library-book-info {
-  margin-top: 1.25rem;
-  text-align: center;
-  padding: 0 0.25rem;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
+    padding: 0.75rem 0.25rem 0.25rem 0.25rem;
+    text-align: left;
 }
 
 .library-book-title {
-  font-family: 'Outfit', sans-serif;
-  color: var(--color-text-main);
-  font-weight: 900;
-  font-size: 1.125rem; /* text-lg */
-  line-height: 1.25;
-  margin: 0 0 0.375rem 0;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  transition: color 0.2s ease;
-  min-height: 2.5rem; /* align title fields roughly */
+    font-family: var(--site-font-family, 'Outfit', sans-serif);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-text-default);
+    margin: 0 0 0.25rem 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: color 0.2s ease;
 }
 
 .library-book-card:hover .library-book-title {
-  color: #6366f1;
-}
-.dark .library-book-card:hover .library-book-title {
-  color: #818cf8;
+    color: var(--color-primary);
 }
 
 .library-book-author {
-  font-size: 0.875rem; /* text-sm */
-  color: var(--color-text-muted);
-  font-weight: 500;
-  margin: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 100%;
+    font-size: 0.8rem;
+    color: var(--color-text-secondary);
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-/* --- No Results Placeholder --- */
-.library-no-results {
-  display: none; /* Controlled by JS */
-  text-align: center;
-  padding: 6rem 1rem;
-  background-color: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-radius: 1.5rem;
-  border: 1.5px dashed var(--color-border);
-  max-width: 56rem;
-  margin: 0 auto;
-  box-sizing: border-box;
-  animation: revealUp 0.5s ease forwards;
-}
+/* ==========================================================================
+   Step 6: Detail Modals & Portals Styling
+   ========================================================================== */
 
-.dark .library-no-results {
-  background-color: rgba(15, 23, 42, 0.2);
-}
-
-.library-no-results-icon-wrap {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 6rem;
-  height: 6rem;
-  border-radius: 50%;
-  background-color: var(--color-bg-base);
-  color: rgba(99, 102, 241, 0.4);
-  margin-bottom: 2rem;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
-  position: relative;
-}
-
-.library-no-results-icon-wrap i {
-  font-size: 3rem;
-}
-
-.library-ping-overlay {
-  position: absolute;
-  inset: 0;
-  background-color: rgba(99, 102, 241, 0.1);
-  border-radius: 50%;
-  animation: ping 3s infinite;
-  opacity: 0.2;
-}
-
-.library-no-results-title {
-  font-family: 'Outfit', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 900;
-  color: var(--color-text-main);
-  margin: 0 0 0.5rem 0;
-  letter-spacing: -0.01em;
-}
-
-.library-no-results-desc {
-  font-size: 0.95rem;
-  color: var(--color-text-muted);
-  max-width: 24rem;
-  margin: 0 auto 2rem auto;
-  line-height: 1.5;
-}
-
-/* --- Knowledge Portal details Modal --- */
+/* Main modal container wrapper */
 .library-modal {
-  position: fixed;
-  inset: 0;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  box-sizing: border-box;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.4s ease;
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
 }
 
 .library-modal.active {
-  pointer-events: auto;
-  opacity: 1;
+    pointer-events: auto;
+    opacity: 1;
 }
 
+/* Modal backdrop blur overlay */
 .library-modal-backdrop {
-  position: absolute;
-  inset: 0;
-  background-color: rgba(15, 23, 42, 0.4);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  cursor: pointer;
-  pointer-events: auto;
-  transition: opacity 0.3s ease;
+    position: absolute;
+    inset: 0;
+    background-color: rgba(15, 23, 42, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    cursor: pointer;
+    pointer-events: auto;
+    transition: opacity 0.3s ease;
 }
 
-.dark .library-modal-backdrop {
-  background-color: rgba(0, 0, 0, 0.6);
+.dark .library-modal-backdrop,
+.midnight .library-modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.65);
 }
 
+/* Modal panel box */
 .library-modal-content {
-  background-color: var(--color-bg-surface);
-  border-radius: 1.5rem;
-  position: relative;
-  width: 100%;
-  max-width: 56rem; /* max-w-4xl */
-  max-height: 85vh;
-  overflow-y: auto;
-  box-shadow: var(--shadow-xl);
-  border: 1px solid var(--color-border);
-  transform: scale(0.95);
-  opacity: 0;
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
-  display: flex;
-  flex-direction: column;
-  z-index: 10;
-  pointer-events: auto;
-  scrollbar-width: thin;
+    background-color: var(--color-content-bg);
+    border-radius: 1.5rem;
+    position: relative;
+    width: 100%;
+    max-width: 68rem; /* Increased from 56rem to fit all details side-by-side */
+    max-height: 92vh; /* Increased from 85vh to fit all content vertically */
+    overflow-y: auto;
+    box-shadow: var(--shadow-xl);
+    border: 1px solid var(--color-border);
+    transform: scale(0.95);
+    opacity: 0;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    pointer-events: auto;
+    scrollbar-width: thin;
 }
 
 .library-modal.active .library-modal-content {
-  transform: scale(1);
-  opacity: 1;
+    transform: scale(1);
+    opacity: 1;
 }
 
-/* Close Button styling */
+/* Close button in upper right corner of modal content */
 .library-modal-close-btn {
-  position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
-  z-index: 50;
-  width: 2.75rem;
-  height: 2.75rem;
-  border-radius: 0.75rem;
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid var(--color-border);
-  color: var(--color-text-muted);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: var(--shadow-sm);
-  transition: all 0.2s ease;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  outline: none;
-}
-
-.dark .library-modal-close-btn {
-  background-color: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.05);
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    z-index: 50;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.75rem;
+    background-color: var(--color-content-bg);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.2s ease;
+    outline: none;
 }
 
 .library-modal-close-btn:hover {
-  color: var(--color-text-main);
-  background-color: var(--color-border);
-  transform: scale(1.05);
+    color: var(--color-text-default);
+    background-color: var(--color-border);
+    transform: scale(1.05);
 }
 
 .library-modal-close-btn:active {
-  transform: scale(0.95);
+    transform: scale(0.95);
 }
 
 .library-modal-close-btn:focus-visible {
-  box-shadow: 0 0 0 2px #6366f1;
+    box-shadow: 0 0 0 2px var(--color-primary);
 }
 
-/* Split Pane Body */
+/* Split content wrap */
 .library-modal-body-wrapper {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 @media (min-width: 768px) {
-  .library-modal-body-wrapper {
-    flex-direction: row;
-  }
+    .library-modal-body-wrapper {
+        flex-direction: row;
+    }
 }
 
-/* Left Cover Pane */
+/* Cover Image Panel (Left) */
 .library-modal-cover-pane {
-  width: 100%;
-  box-sizing: border-box;
-  position: relative;
-  height: 18rem; /* h-72 */
-  flex-shrink: 0;
-  background-color: var(--color-bg-base);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  border-bottom: 1px solid var(--color-border);
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    height: 20rem;
+    flex-shrink: 0;
+    background-color: var(--color-base-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem;
+    border-bottom: 1px solid var(--color-border);
 }
 
 @media (min-width: 768px) {
-  .library-modal-cover-pane {
-    width: 41.6666%; /* 5/12 */
-    height: auto;
-    border-bottom: none;
-    border-right: 1px solid var(--color-border);
-    padding: 3rem;
-  }
+    .library-modal-cover-pane {
+        width: 46.66%; /* Increased from 41.66% to let image grow */
+        height: auto;
+        border-bottom: none;
+        border-right: 1px solid var(--color-border);
+        padding: 2rem; /* Reduced padding from 3.5rem to give image more room */
+    }
 }
 
 .library-modal-cover-glow {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom right, rgba(99, 102, 241, 0.05) 0%, transparent 60%);
-  pointer-events: none;
-  filter: blur(24px);
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom right, var(--color-primary), transparent 60%);
+    pointer-events: none;
+    opacity: 0.05;
+    filter: blur(24px);
 }
 
 .library-modal-cover-img {
-  width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  border-radius: 0.75rem;
-  box-shadow: var(--shadow-lg);
-  position: relative;
-  z-index: 10;
-  transition: transform 0.5s ease;
-}
-
-.library-modal-cover-img:hover {
-  transform: scale(1.03);
-}
-
-/* Right Info Pane */
-.library-modal-info-pane {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  background-color: rgba(248, 250, 252, 0.5); /* gray-50/50 */
-}
-
-.dark .library-modal-info-pane {
-  background-color: transparent;
+    width: auto;
+    height: 100%;
+    max-height: 18rem;
+    object-fit: contain;
+    border-radius: 1.5rem; /* Increased border-radius from 1rem to match content panel rounding */
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    z-index: 10;
+    transition: transform 0.5s ease;
 }
 
 @media (min-width: 768px) {
-  .library-modal-info-pane {
-    width: 58.3333%; /* 7/12 */
-    padding: 2.5rem;
-  }
+    .library-modal-cover-img {
+        width: 100%;
+        max-height: 100%;
+    }
 }
 
-/* Titles */
+.library-modal-cover-img:hover {
+    transform: scale(1.03);
+}
+
+/* Information Pane (Right) */
+.library-modal-info-pane {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .library-modal-info-pane {
+        width: 53.33%; /* Trimmed by 5% from 58.33% */
+        padding: 2.5rem;
+    }
+}
+
+/* Title Header Area */
 .library-modal-title-section {
-  margin-bottom: 2rem;
+    margin-bottom: 1.75rem;
 }
 
 .library-modal-badge-row {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
 }
 
 .library-modal-badge-line {
-  width: 2rem;
-  height: 4px;
-  background-color: #6366f1;
-  border-radius: 9999px;
-  opacity: 0.7;
+    width: 1.5rem;
+    height: 3px;
+    background-color: var(--color-primary);
+    border-radius: 9999px;
+    opacity: 0.8;
 }
 
 .library-modal-badge-text {
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: var(--color-text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
 }
 
 .library-modal-title {
-  font-family: 'Outfit', sans-serif;
-  font-size: clamp(1.75rem, 4vw, 2.25rem); /* text-3xl md:text-4xl */
-  font-weight: 900;
-  color: var(--color-text-main);
-  margin: 0 0 0.5rem 0;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
+    font-family: var(--site-font-family, 'Outfit', sans-serif);
+    font-size: clamp(1.6rem, 4vw, 2.1rem);
+    font-weight: 900;
+    color: var(--color-text-default);
+    margin: 0 0 0.5rem 0;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
 }
 
 .library-modal-author {
-  font-size: 1.25rem; /* text-xl */
-  color: #4f46e5; /* indigo-600 */
-  font-weight: 700;
-  margin: 0;
-}
-.dark .library-modal-author {
-  color: #818cf8; /* indigo-400 */
+    font-size: 1.15rem;
+    color: var(--color-primary);
+    font-weight: 700;
+    margin: 0;
 }
 
-/* Specs Details Grid Box */
+/* Metadata Grid styling */
 .library-modal-specs-grid {
-  display: grid;
-  grid-template-cols: repeat(2, 1fr);
-  gap: 1rem;
-  margin-bottom: 2rem;
-  padding: 1.5rem;
-  background-color: var(--color-bg-surface);
-  border-radius: 1.25rem;
-  border: 1px solid var(--color-border);
-  box-shadow: var(--shadow-sm);
-  position: relative;
-  overflow: hidden;
-  box-sizing: border-box;
-}
-
-.dark .library-modal-specs-grid {
-  background-color: rgba(255, 255, 255, 0.03);
-  box-shadow: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 1.25rem 1.5rem;
+    background-color: var(--color-base-bg);
+    border-radius: 1.25rem;
+    border: 1px solid var(--color-border);
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
 .library-modal-specs-decor {
-  position: absolute;
-  right: -1.5rem;
-  top: -1.5rem;
-  width: 6rem;
-  height: 6rem;
-  border-radius: 50%;
-  background-color: rgba(99, 102, 241, 0.05);
-  filter: blur(16px);
-  pointer-events: none;
+    position: absolute;
+    right: -1.5rem;
+    top: -1.5rem;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    opacity: 0.05;
+    filter: blur(16px);
+    pointer-events: none;
 }
 
 .spec-label {
-  display: block;
-  font-size: 0.625rem; /* 10px */
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  font-weight: 800;
-  color: var(--color-text-muted);
-  margin-bottom: 0.25rem;
-  opacity: 0.7;
+    display: block;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: 850;
+    color: var(--color-text-secondary);
+    margin-bottom: 0.25rem;
 }
 
 .spec-value {
-  color: var(--color-text-main);
-  font-weight: 600;
-  font-size: 0.875rem; /* text-sm */
-  word-break: break-all;
+    color: var(--color-text-default);
+    font-weight: 700;
+    font-size: 0.9rem;
+    word-break: break-all;
 }
 
 .spec-val-mono {
-  font-family: monospace;
+    font-family: monospace;
 }
 
 .spec-val-highlight-emerald {
-  color: #059669; /* emerald-600 */
-  font-weight: 900;
-  font-size: 1.125rem;
-}
-.dark .spec-val-highlight-emerald {
-  color: #34d399; /* emerald-400 */
+    color: var(--color-success, #10b981);
+    font-weight: 800;
 }
 
 .spec-val-highlight-purple {
-  color: #7c3aed; /* purple-600 */
-  font-weight: 900;
-  font-size: 1.125rem;
+    color: var(--color-primary);
+    font-weight: 800;
 }
-.dark .spec-val-highlight-purple {
-  color: #c084fc; /* purple-400 */
+
+.spec-val-highlight-pink {
+    color: var(--color-secondary);
+    font-weight: 800;
 }
 
 .library-modal-spec-half {
-  grid-column: span 1;
-  padding-top: 1rem;
-  margin-top: 0.5rem;
-  border-top: 1px solid var(--color-border);
+    grid-column: span 1;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--color-border);
 }
 
-/* Description Section */
+/* Description styling */
 .library-modal-desc-section {
-  margin-bottom: 2rem;
+    margin-bottom: 2.25rem;
 }
 
 .library-modal-description {
-  font-size: 1rem;
-  color: var(--color-text-main);
-  opacity: 0.85;
-  line-height: 1.6;
-  font-weight: 500;
-  margin: 0;
+    font-size: 0.95rem;
+    color: var(--color-text-default);
+    opacity: 0.85;
+    line-height: 1.6;
+    font-weight: 500;
+    margin: 0;
 }
 
-/* Action Buttons Area */
+/* Modal Actions Area */
 .library-modal-footer-section {
-  margin-top: auto;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--color-border);
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
+    margin-top: auto;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
 }
 
 .library-modal-actions-row {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
 }
 
 @media (min-width: 640px) {
-  .library-modal-actions-row {
-    flex-direction: row;
-  }
+    .library-modal-actions-row {
+        flex-direction: row;
+    }
 }
 
-/* Read Online Button */
+/* Primary Read Online Button */
 .library-modal-read-btn {
-  flex-grow: 1;
-  background: linear-gradient(to right, #6366f1, #a855f7);
-  color: #ffffff;
-  padding: 0.875rem 1.5rem;
-  border-radius: 0.75rem;
-  font-weight: 700;
-  font-size: 0.875rem; /* text-sm */
-  text-decoration: none;
-  text-align: center;
-  box-shadow: 0 10px 20px rgba(99, 102, 241, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-  transition: all 0.2s ease;
-  border: none;
-  cursor: pointer;
-  box-sizing: border-box;
+    flex-grow: 1;
+    background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+    color: #ffffff;
+    padding: 0.9rem 1.5rem;
+    border-radius: 0.85rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
+    cursor: pointer;
+    box-sizing: border-box;
 }
 
 .library-modal-read-btn:hover {
-  background: linear-gradient(to right, #4f46e5, #9333ea);
-  transform: translateY(-1px);
-  box-shadow: 0 12px 24px rgba(99, 102, 241, 0.25);
+    transform: translateY(-1.5px);
+    filter: brightness(1.08);
+    box-shadow: var(--shadow-md);
 }
 
 .library-modal-read-btn:active {
-  transform: translateY(0);
-  transform: scale(0.98);
+    transform: translateY(0);
+    transform: scale(0.98);
 }
 
 .library-modal-read-btn:focus-visible {
-  outline: 3px solid rgba(99, 102, 241, 0.35);
+    outline: 3px solid var(--color-primary);
 }
 
-/* Downloads Icon Row */
+/* Secondary Download Buttons */
 .library-modal-downloads-row {
-  display: flex;
-  gap: 0.5rem;
-  justify-content: center;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
 }
 
 @media (min-width: 640px) {
-  .library-modal-downloads-row {
-    justify-content: flex-start;
-  }
+    .library-modal-downloads-row {
+        justify-content: flex-start;
+    }
 }
 
 .library-download-icon-btn {
-  background-color: var(--color-bg-base);
-  border: 1px solid var(--color-border);
-  color: var(--color-text-muted);
-  width: 3rem;
-  height: 3rem;
-  border-radius: 0.75rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.2s ease;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 1.125rem;
-  box-sizing: border-box;
+    background-color: var(--color-base-bg);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-secondary);
+    width: 3.1rem;
+    height: 3.1rem;
+    border-radius: 0.85rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s ease;
+    text-decoration: none;
+    box-sizing: border-box;
 }
 
 .library-download-icon-btn:hover {
-  transform: translateY(-1px);
+    background-color: var(--color-border);
+    color: var(--color-text-default);
+    transform: translateY(-1px);
 }
 
-.library-download-icon-btn.pdf-btn:hover {
-  background-color: #fef2f2;
-  color: #dc2626;
-  border-color: #fca5a5;
-}
-.dark .library-download-icon-btn.pdf-btn:hover {
-  background-color: rgba(220, 38, 38, 0.1);
-  color: #f87171;
-  border-color: rgba(220, 38, 38, 0.2);
+.library-download-icon-btn:active {
+    transform: translateY(0);
 }
 
-.library-download-icon-btn.epub-btn:hover {
-  background-color: #eff6ff;
-  color: #2563eb;
-  border-color: #93c5fd;
-}
-.dark .library-download-icon-btn.epub-btn:hover {
-  background-color: rgba(37, 99, 235, 0.1);
-  color: #60a5fa;
-  border-color: rgba(37, 99, 235, 0.2);
-}
-
-.library-download-icon-btn.mobi-btn:hover {
-  background-color: #fffbeb;
-  color: #d97706;
-  border-color: #fcd34d;
-}
-.dark .library-download-icon-btn.mobi-btn:hover {
-  background-color: rgba(217, 119, 6, 0.1);
-  color: #fbbf24;
-  border-color: rgba(217, 119, 6, 0.2);
-}
-
-/* Collections lists styling */
+/* Collections lists styling inside modals */
 .library-modal-collection-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  max-height: 250px;
-  overflow-y: auto;
-  padding-right: 0.5rem;
-  box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-height: 250px;
+    overflow-y: auto;
+    padding-right: 0.25rem;
 }
 
-/* Custom internal scrollbar inside modal collection */
-.library-modal-collection-list::-webkit-scrollbar {
-  width: 4px;
-}
-.library-modal-collection-list::-webkit-scrollbar-thumb {
-  background-color: var(--color-border);
-  border-radius: 4px;
-}
-
-/* Collection book rows */
 .collection-book-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.75rem 1rem;
-  background-color: var(--color-bg-surface);
-  border: 1px solid var(--color-border);
-  border-radius: 0.75rem;
-  transition: border-color 0.2s ease;
-  box-sizing: border-box;
-}
-
-.collection-book-row:hover {
-  border-color: #6366f1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.85rem 1rem;
+    background-color: var(--color-base-bg);
+    border-radius: 0.85rem;
+    border: 1px solid var(--color-border);
 }
 
 .col-book-info {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
+    text-align: left;
 }
 
 .col-book-title {
-  font-size: 0.875rem;
-  font-weight: 700;
-  color: var(--color-text-main);
-  margin: 0;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--color-text-default);
 }
 
 .col-book-author {
-  font-size: 0.75rem;
-  color: var(--color-text-muted);
-  margin: 0;
+    font-size: 0.75rem;
+    color: var(--color-text-secondary);
+    margin: 0;
 }
 
 .col-book-actions {
-  display: flex;
-  gap: 0.375rem;
+    display: flex;
+    gap: 0.4rem;
 }
 
 .col-book-btn {
-  background-color: var(--color-bg-base);
-  border: 1px solid var(--color-border);
-  color: var(--color-text-muted);
-  width: 2.25rem;
-  height: 2.25rem;
-  border-radius: 0.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.875rem;
-  cursor: pointer;
-  text-decoration: none;
-  transition: all 0.2s;
-  box-sizing: border-box;
+    width: 2.25rem;
+    height: 2.25rem;
+    background-color: var(--color-content-bg);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-secondary);
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.2s ease;
 }
 
 .col-book-btn:hover {
-  background-color: #6366f1;
-  color: #ffffff;
-  border-color: #6366f1;
+    background-color: var(--color-border);
+    color: var(--color-text-default);
 }
 
-/* Disclaimer row */
+/* Disclaimer links & button */
 .library-modal-disclaimer-row {
-  display: flex;
+    text-align: center;
+    margin-top: 0.5rem;
 }
 
 .library-disclaimer-trigger-btn {
-  font-size: 0.6875rem; /* 11px */
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--color-text-muted);
-  background: transparent;
-  border: none;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  cursor: pointer;
-  padding: 0.25rem;
-  transition: color 0.2s;
-  outline: none;
+    font-size: 0.75rem;
+    color: var(--color-text-secondary);
+    text-decoration: underline;
+    cursor: pointer;
+    background: transparent;
+    border: none;
 }
 
 .library-disclaimer-trigger-btn:hover {
-  color: #d97706; /* amber-600 */
+    color: var(--color-text-default);
 }
 
-.library-disclaimer-trigger-btn i {
-  color: rgba(217, 119, 6, 0.8);
-}
-
-/* --- Disclaimer Alert dialog --- */
+/* Disclaimer dialog box styling */
 .library-disclaimer-modal {
-  position: fixed;
-  inset: 0;
-  z-index: 110;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  box-sizing: border-box;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+    position: fixed;
+    inset: 0;
+    z-index: 110;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .library-disclaimer-modal.active {
-  pointer-events: auto;
-  opacity: 1;
+    pointer-events: auto;
+    opacity: 1;
 }
 
 .library-disclaimer-modal-backdrop {
-  position: absolute;
-  inset: 0;
-  background-color: rgba(15, 23, 42, 0.6);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  pointer-events: auto;
-}
-
-.dark .library-disclaimer-modal-backdrop {
-  background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    inset: 0;
+    background-color: rgba(15, 23, 42, 0.5);
+    backdrop-filter: blur(4px);
+    cursor: pointer;
 }
 
 .library-disclaimer-content {
-  background-color: var(--color-bg-surface);
-  border: 1px solid var(--color-border);
-  border-radius: 1.5rem;
-  box-shadow: var(--shadow-xl);
-  width: 100%;
-  max-width: 28rem; /* max-w-md */
-  padding: 2rem;
-  margin: 1rem;
-  position: relative;
-  pointer-events: auto;
-  z-index: 10;
-  transform: scale(0.95);
-  transition: transform 0.3s ease;
-  box-sizing: border-box;
+    background-color: var(--color-content-bg);
+    border-radius: 1.25rem;
+    position: relative;
+    width: 100%;
+    max-width: 32rem; /* max-w-lg */
+    box-shadow: var(--shadow-xl);
+    border: 1px solid var(--color-border);
+    padding: 2rem;
+    box-sizing: border-box;
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+    z-index: 10;
 }
 
 .library-disclaimer-modal.active .library-disclaimer-content {
-  transform: scale(1);
+    transform: scale(1);
 }
 
 .library-disclaimer-close-btn {
-  position: absolute;
-  top: 1.25rem;
-  right: 1.25rem;
-  z-index: 10;
-  width: 2.25rem;
-  height: 2.25rem;
-  border-radius: 0.5rem;
-  background-color: var(--color-bg-base);
-  border: none;
-  color: var(--color-text-muted);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: color 0.2s, background-color 0.2s;
-  box-sizing: border-box;
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    background: transparent;
+    color: var(--color-text-secondary);
+    cursor: pointer;
 }
 
 .library-disclaimer-close-btn:hover {
-  background-color: var(--color-border);
-  color: var(--color-text-main);
+    color: var(--color-text-default);
 }
 
 .library-disclaimer-header {
-  text-align: center;
-  margin-bottom: 1.5rem;
-  margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
 }
 
 .library-disclaimer-icon-box {
-  width: 5rem;
-  height: 5rem;
-  border-radius: 50%;
-  background-color: #fffbeb;
-  border: 1px solid #fde68a;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 1rem auto;
-  box-sizing: border-box;
-}
-
-.dark .library-disclaimer-icon-box {
-  background-color: rgba(245, 158, 11, 0.1);
-  border-color: rgba(245, 158, 11, 0.2);
-}
-
-.library-disclaimer-icon-box i {
-  font-size: 2rem;
-  color: #f59e0b; /* amber-500 */
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 0.5rem;
+    background-color: rgba(245, 158, 11, 0.1);
+    color: var(--color-warning, #f59e0b);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
 }
 
 .library-disclaimer-title {
-  font-family: 'Outfit', sans-serif;
-  font-size: 1.875rem; /* text-3xl */
-  font-weight: 900;
-  color: var(--color-text-main);
-  margin: 0;
-  letter-spacing: -0.02em;
+    font-family: var(--site-font-family, 'Outfit', sans-serif);
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin: 0;
+    color: var(--color-text-default);
 }
 
 .library-disclaimer-body-box {
-  background-color: var(--color-bg-base);
-  padding: 1.5rem;
-  border-radius: 1rem;
-  border: 1px solid var(--color-border);
-  margin-bottom: 2rem;
-  box-sizing: border-box;
+    margin-bottom: 1.75rem;
 }
 
 .library-disclaimer-text {
-  font-size: 0.875rem; /* text-sm */
-  color: var(--color-text-muted);
-  line-height: 1.6;
-  font-weight: 500;
-  margin: 0;
+    font-size: 0.9rem;
+    color: var(--color-text-default);
+    opacity: 0.8;
+    line-height: 1.6;
+    margin: 0;
 }
 
 .library-disclaimer-footer {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .library-disclaimer-action-btn {
-  background-color: #111827; /* gray-900 */
-  color: #ffffff;
-  border: none;
-  padding: 0.875rem 2rem;
-  border-radius: 0.75rem;
-  font-weight: 700;
-  font-size: 0.95rem;
-  box-shadow: var(--shadow-md);
-  cursor: pointer;
-  transition: all 0.2s ease;
-  box-sizing: border-box;
-}
-
-.dark .library-disclaimer-action-btn {
-  background-color: #ffffff;
-  color: #111827;
+    background-color: var(--color-primary);
+    color: #ffffff;
+    padding: 0.65rem 1.25rem;
+    border-radius: 0.65rem;
+    font-weight: 700;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+    cursor: pointer;
 }
 
 .library-disclaimer-action-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
+    filter: brightness(1.08);
 }
 
-.library-disclaimer-action-btn:active {
-  transform: translateY(0);
-  transform: scale(0.98);
+
+/* ==========================================================================
+   Step 7: General E-Book Reader Styling
+   ========================================================================== */
+
+/* Main Reader Page layout overrides */
+.reader-main-layout {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 6rem 1.5rem;
 }
 
-/* --- Theme overrides for Accessibility modes --- */
-
-/* Sepia Mode */
-.sepia .library-search-input {
-  background-color: #fcf9f5;
-  border-color: #dfd4c4;
-}
-.sepia .library-category-select {
-  background-color: #fcf9f5;
-  border-color: #dfd4c4;
-}
-.sepia .library-scroll-btn {
-  background-color: #fdfbf9;
-  border-color: #dfd4c4;
-}
-.sepia .library-book-cover-wrap {
-  border-color: #dfd4c4;
-}
-.sepia .library-no-results {
-  border-color: #dfd4c4;
-}
-.sepia .library-modal-content {
-  border-color: #dfd4c4;
-}
-.sepia .library-modal-close-btn {
-  background-color: #fdfbf9;
-  border-color: #dfd4c4;
-}
-.sepia .library-modal-specs-grid {
-  background-color: #fdfbf9;
-  border-color: #dfd4c4;
-}
-.sepia .library-download-icon-btn {
-  background-color: #fdfbf9;
-  border-color: #dfd4c4;
-}
-.sepia .collection-book-row {
-  border-color: #dfd4c4;
-  background-color: #fdfbf9;
-}
-.sepia .library-disclaimer-content {
-  border-color: #dfd4c4;
+/* Back Button Navigation */
+.reader-back-nav {
+    margin-bottom: 2rem;
+    align-self: flex-start;
 }
 
-/* High Contrast Mode */
-.high-contrast .library-hero-title-gradient {
-  background: none;
-  -webkit-text-fill-color: initial;
-  color: #ffff00;
+.reader-back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--site-font-family, 'Outfit', sans-serif);
+    font-weight: 700;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+    font-size: 0.95rem;
 }
-.high-contrast .library-search-input {
-  border: 2px solid #ffffff;
-  background-color: #000000;
+
+.reader-back-btn:hover {
+    color: var(--color-primary);
+    transform: translateX(-4px);
 }
-.high-contrast .library-category-select {
-  border: 2px solid #ffffff;
-  background-color: #000000;
+
+/* Book Content Container Wrapper */
+.cdn-book-reader-container {
+    background-color: var(--color-content-bg);
+    border-radius: 1.5rem;
+    padding: 2.5rem 2rem;
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-soft);
 }
-.high-contrast .library-scroll-btn {
-  border: 2px solid #ffffff;
-  background-color: #000000;
+
+@media (min-width: 768px) {
+    .cdn-book-reader-container {
+        padding: 4rem 3.5rem;
+    }
 }
-.high-contrast .library-book-card {
-  border: 1px dashed #ffffff;
+
+/* Book Header styling */
+.reader-header {
+    text-align: center;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 2rem;
+    margin-bottom: 3rem;
 }
-.high-contrast .library-book-cover-wrap {
-  border: 2px solid #ffffff;
-  background-color: #000000;
+
+.reader-meta-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
 }
-.high-contrast .library-book-cover-overlay {
-  background: rgba(0, 0, 0, 0.9);
+
+.reader-title {
+    font-family: var(--site-font-family, 'Outfit', sans-serif);
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    font-weight: 900;
+    color: var(--color-text-default);
+    margin: 0 0 0.5rem 0;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
 }
-.high-contrast .library-book-card:hover .library-book-title {
-  color: #ffff00;
+
+.reader-author {
+    font-size: 1.25rem;
+    color: var(--color-text-secondary);
+    font-weight: 600;
+    margin: 0 0 1.25rem 0;
 }
-.high-contrast .library-modal-content {
-  border: 3px solid #ffffff;
+
+.reader-specs-bar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--color-text-secondary);
 }
-.high-contrast .library-modal-specs-grid {
-  background-color: #000000;
-  border: 2px solid #ffffff;
+
+.reader-specs-bar span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
 }
-.high-contrast .library-modal-specs-grid span {
-  color: #ffffff;
+
+.reader-specs-bar i {
+    color: var(--color-primary);
 }
-.high-contrast .spec-val-highlight-emerald,
-.high-contrast .spec-val-highlight-purple {
-  color: #ffff00;
+
+/* Book Text content styling */
+.cdn-book-reader-content {
+    font-size: 1.125rem; /* text-lg / optimal size */
+    line-height: 1.85; /* readable spacing */
+    color: var(--color-text-default);
+    font-weight: 450;
 }
-.high-contrast .library-modal-read-btn {
-  background: #ffff00;
-  color: #000000;
-  border: 2px solid #ffff00;
+
+.cdn-book-reader-content p {
+    margin-bottom: 1.6em;
+    text-align: justify;
 }
-.high-contrast .library-modal-read-btn:hover {
-  background: #000000;
-  color: #ffff00;
+
+/* Fallback left-align on mobile or reader preference */
+@media (max-width: 640px) {
+    .cdn-book-reader-content p {
+        text-align: left;
+    }
 }
-.high-contrast .library-download-icon-btn {
-  border: 2px solid #ffffff;
-  background-color: #000000;
-  color: #ffffff;
+
+.cdn-book-reader-content h1,
+.cdn-book-reader-content h2,
+.cdn-book-reader-content h3,
+.cdn-book-reader-content h4 {
+    font-family: var(--site-font-family, 'Outfit', sans-serif);
+    color: var(--color-text-default);
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    line-height: 1.3;
 }
-.high-contrast .library-download-icon-btn:hover {
-  background-color: #ffff00;
-  color: #000000;
-  border-color: #ffff00;
+
+.cdn-book-reader-content h2 {
+    font-size: 1.75rem;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 0.5rem;
+    color: var(--color-primary);
 }
-.high-contrast .collection-book-row {
-  border: 2px solid #ffffff;
-  background-color: #000000;
+
+.cdn-book-reader-content h3 {
+    font-size: 1.4rem;
 }
-.high-contrast .collection-book-row:hover {
-  border-color: #ffff00;
+
+/* Embedded illustrations styling overrides */
+.cdn-book-reader-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1.25rem;
+    display: block;
+    margin: 3rem auto;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--color-border);
 }
-.high-contrast .library-disclaimer-content {
-  border: 3px solid #ffffff;
+
+/* Loading error UI container */
+.reader-error-container {
+    text-align: center;
+    padding: 5rem 2rem;
+    background-color: var(--color-content-bg);
+    border-radius: 1.5rem;
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-soft);
 }
-.high-contrast .library-disclaimer-icon-box {
-  background-color: #000000;
-  border: 2px solid #ffffff;
+
+.reader-error-icon {
+    font-size: 3rem;
+    color: var(--color-error, #ef4444);
+    margin-bottom: 1.5rem;
 }
-.high-contrast .library-disclaimer-icon-box i {
-  color: #ffffff;
+
+.reader-error-container h2 {
+    font-family: var(--site-font-family, 'Outfit', sans-serif);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
 }
-.high-contrast .library-disclaimer-action-btn {
-  background-color: #ffff00;
-  color: #000000;
+
+.reader-error-container p {
+    color: var(--color-text-secondary);
+    margin-bottom: 2rem;
 }
+
+.reader-error-btn {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: filter 0.2s ease;
+}
+
+.reader-error-btn:hover {
+    filter: brightness(1.08);
+}
+
+

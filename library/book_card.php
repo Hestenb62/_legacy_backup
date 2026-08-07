@@ -15,11 +15,18 @@
      data-word-link="<?php echo htmlspecialchars($book['word-link'] ?? '#'); ?>"
      data-lexile="<?php echo htmlspecialchars($book['lexile'] ?? ''); ?>"
      data-dewey="<?php echo htmlspecialchars($book['dewey'] ?? ''); ?>"
+     data-grade="<?php echo htmlspecialchars($book['grade'] ?? ''); ?>"
      data-is-collection="<?php echo isset($book['isCollection']) && $book['isCollection'] ? 'true' : 'false'; ?>"
      data-books="<?php echo isset($book['books']) ? htmlspecialchars(json_encode($book['books']), ENT_QUOTES, 'UTF-8') : ''; ?>">
 
     <!-- Cover Image Wrapper with hover lifting action -->
     <div class="library-book-cover-wrap">
+        <?php if(isset($book['grade']) && $book['grade'] !== ''): ?>
+            <div class="library-book-badge-grade">
+                <i class="fas fa-graduation-cap"></i> <?php echo htmlspecialchars($book['grade']); ?>
+            </div>
+        <?php endif; ?>
+
         <?php if(isset($book['isCollection']) && $book['isCollection']): ?>
             <div class="library-book-badge-collection">
                 <i class="fas fa-layer-group"></i> Collection

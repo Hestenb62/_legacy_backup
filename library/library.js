@@ -116,6 +116,7 @@ window.openModal = function(card) {
     
     const lexile = card.dataset.lexile;
     const dewey = card.dataset.dewey;
+    const grade = card.dataset.grade;
     const isCollection = card.dataset.isCollection === 'true';
 
     // Populate standard properties
@@ -145,6 +146,16 @@ window.openModal = function(card) {
         deweyContainer.classList.remove('hidden');
     } else {
         deweyContainer.classList.add('hidden');
+    }
+
+    // Grade Level
+    const gradeContainer = document.getElementById('modal-grade-container');
+    const gradeEl = document.getElementById('modal-grade');
+    if (grade && grade !== '') {
+        gradeEl.textContent = grade;
+        gradeContainer.classList.remove('hidden');
+    } else {
+        gradeContainer.classList.add('hidden');
     }
 
     // Action button elements

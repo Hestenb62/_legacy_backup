@@ -55,12 +55,12 @@ include '../src/header.php';
         <div class="library-search-wrapper library-animate-reveal" style="animation-delay: 0.1s;">
             <!-- Redesigned Search bar -->
             <div class="library-search-input-container">
-                <input type="text" id="library-search" aria-label="Search Library" placeholder="Search title, author, or ISBN..." class="library-search-input">
+                <input type="text" id="library-search" aria-label="Search Library" placeholder="Search title, author, or ISBN..." class="library-search-input library-glass-shine">
                 <i class="fas fa-search library-search-icon"></i>
             </div>
 
             <div class="library-filter-select-container">
-                <select id="category-filter" aria-label="Select Category" class="library-category-select">
+                <select id="category-filter" aria-label="Select Category" class="library-category-select library-glass-shine">
                     <option value="all">All Categories</option>
                     <?php foreach (array_keys($categories) as $cat): ?>
                         <option value="<?php echo htmlspecialchars($cat); ?>"><?php echo htmlspecialchars($cat); ?></option>
