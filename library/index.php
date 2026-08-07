@@ -1,4 +1,14 @@
 <?php
+// --- Redirect to trailing slash URL to resolve relative asset paths in dev servers ---
+$requestUri = $_SERVER['REQUEST_URI'] ?? '';
+$requestPath = explode('?', $requestUri)[0];
+if (basename($requestPath) === 'library' && substr($requestPath, -1) !== '/') {
+    $queryString = $_SERVER['QUERY_STRING'] ?? '';
+    $redirectUrl = $requestPath . '/' . ($queryString ? '?' . $queryString : '');
+    header('Location: ' . $redirectUrl, true, 301);
+    exit;
+}
+
 // --- Page-Specific Variables ---
 $pageTitle = 'Hesten\'s Learning Library';
 $pageDescription = 'Browse your personal collection of digital books in a Netflix-style interface.';
@@ -19,47 +29,42 @@ include '../src/header.php';
 ?>
 
 <!-- AURORA MESH BACKGROUND -->
-<div class="aurora-bg noise-grain">
-    <div class="aurora-circle aurora-circle-1"></div>
-    <div class="aurora-circle aurora-circle-2"></div>
-    <div class="aurora-circle aurora-circle-3"></div>
+<div class="library-aurora-bg">
+    <div class="library-aurora-blob blob-1"></div>
+    <div class="library-aurora-blob blob-2"></div>
+    <div class="library-aurora-blob blob-3"></div>
 </div>
 
 <main id="main-content" class="library-main">
 
     <!-- Hero Section -->
     <section class="library-hero">
-        <div class="animate-reveal">
+        <div class="library-animate-reveal">
             <!-- Pill Badge -->
-            <div class="pill-badge">
-                <span class="pulse-dot">
-                    <span class="pulse-dot-ring"></span>
-                    <span class="pulse-dot-core"></span>
-                </span>
-                <span class="pill-badge-text"><i class="fas fa-book-reader mr-2"></i> DIGITAL ARCHIVE</span>
+            <div class="library-hero-badge">
+                <span class="library-badge-dot"></span>
+                <span class="library-badge-text"><i class="fas fa-book-reader"></i> DIGITAL ARCHIVE</span>
             </div>
 
-            <h1 class="library-title">
-                The <span class="gradient-text">Library</span>
+            <h1 class="library-hero-title">
+                The <span class="library-hero-title-gradient">Library</span>
             </h1>
         </div>
 
         <!-- Real-time Search and Filters -->
-        <div class="search-filter-wrapper animate-reveal" style="animation-delay: 0.1s;">
+        <div class="library-search-wrapper library-animate-reveal" style="animation-delay: 0.1s;">
             <!-- Redesigned Search bar -->
-            <div class="search-input-group">
-                <input type="text" id="library-search" aria-label="Search Library"
-                    placeholder="Search title, author, or ISBN..."
-                    class="library-search-input">
+            <div class="library-search-input-container">
+                <input type="text" id="library-search" aria-label="Search Library" placeholder="Search title, author, or ISBN..." class="library-search-input">
                 <i class="fas fa-search library-search-icon"></i>
             </div>
 
-            <div class="filter-select-group">
-                <select id="category-filter" aria-label="Select Category"
-                    class="library-filter-select">
+            <div class="library-filter-select-container">
+                <select id="category-filter" aria-label="Select Category" class="library-category-select">
                     <option value="all">All Categories</option>
-                    <?php foreach (array_keys($categories) as $cat)
-                        echo '<option value="' . htmlspecialchars($cat) . '">' . htmlspecialchars($cat) . '</option>'; ?>
+                    <?php foreach (array_keys($categories) as $cat): ?>
+                        <option value="<?php echo htmlspecialchars($cat); ?>"><?php echo htmlspecialchars($cat); ?></option>
+                    <?php endforeach; ?>
                 </select>
                 <i class="fas fa-filter library-filter-icon"></i>
             </div>
@@ -70,25 +75,25 @@ include '../src/header.php';
     <div class="library-content-container">
 
         <?php foreach ($categories as $categoryName => $books): ?>
-            <section class="library-category animate-reveal">
+            <section class="library-row-section library-animate-reveal" data-category="<?php echo htmlspecialchars($categoryName); ?>">
                 <!-- Category Header -->
-                <div class="category-header">
-                    <h2 class="category-title">
+                <div class="library-row-header">
+                    <h2 class="library-row-title">
                         <?php echo htmlspecialchars($categoryName); ?>
                     </h2>
-                    <div class="category-divider"></div>
-                    <div class="scroll-buttons">
-                        <button class="scroll-btn left" aria-label="Scroll left">
+                    <div class="library-row-divider"></div>
+                    <div class="library-scroll-buttons">
+                        <button class="library-scroll-btn scroll-left" aria-label="Scroll left">
                             <i class="fas fa-chevron-left"></i>
                         </button>
-                        <button class="scroll-btn right" aria-label="Scroll right">
+                        <button class="library-scroll-btn scroll-right" aria-label="Scroll right">
                             <i class="fas fa-chevron-right"></i>
                         </button>
                     </div>
                 </div>
 
                 <!-- Horizontal Scroll Container -->
-                <div class="book-scroll-container scrollbar-none book-container">
+                <div class="library-books-row">
                     <?php foreach ($books as $book): ?>
                         <?php include 'book_card.php'; ?>
                     <?php endforeach; ?>
@@ -97,13 +102,13 @@ include '../src/header.php';
         <?php endforeach; ?>
 
         <!-- No Results Message -->
-        <div id="no-results" class="no-results-container">
-            <div class="no-results-icon-wrapper">
+        <div id="no-results" class="library-no-results">
+            <div class="library-no-results-icon-wrap">
                 <i class="fas fa-search"></i>
-                <div class="no-results-ping"></div>
+                <div class="library-ping-overlay"></div>
             </div>
-            <h3 class="no-results-title">No books found</h3>
-            <p class="no-results-text">We couldn't find anything matching your search criteria.</p>
+            <h3 class="library-no-results-title">No books found</h3>
+            <p class="library-no-results-desc">We couldn't find anything matching your search criteria.</p>
         </div>
 
     </div>
@@ -111,7 +116,7 @@ include '../src/header.php';
 </main>
 
 <link rel="stylesheet" href="library.css">
-<?php include 'modals.php'; ?>
+<?php include __DIR__ . '/modals.php'; ?>
 <script src="library.js" defer></script>
 
 <?php include '../src/footer.php'; ?>
