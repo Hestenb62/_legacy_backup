@@ -483,4 +483,40 @@
   .bg-rose-600 { background-color: #e11d48; }
   .bg-slate-700 { background-color: #334155; }
   .bg-indigo-900 { background-color: #1e1b4b; }
+
+  /* Darker typography overrides for assessment content readability */
+  .assessment-container, .assessment-select-section {
+    --color-text-main: #0f172a; 
+    --color-text-muted: #334155;
+  }
+
+  .assessment-container h2, 
+  .assessment-container h3, 
+  .assessment-select-title {
+    font-weight: 800 !important;
+    color: var(--color-text-main) !important;
+  }
+
+  .options-grid button {
+    color: var(--color-text-main) !important;
+    font-weight: 700 !important;
+  }
+
+  /* Answer Highlight Overrides */
+  .bg-green-100 {
+    background-color: color-mix(in srgb, var(--color-success) 15%, var(--color-bg-base)) !important;
+    border-color: var(--color-success) !important;
+    color: var(--color-success) !important;
+  }
+
+  .bg-red-100 {
+    background-color: color-mix(in srgb, var(--color-error) 15%, var(--color-bg-base)) !important;
+    border-color: var(--color-error) !important;
+    color: var(--color-error) !important;
+  }
+
+  /* Hidden display rule fallback */
+  .hidden {
+    display: none !important;
+  }
 }

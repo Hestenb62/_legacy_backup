@@ -4,7 +4,7 @@ include '../src/header.php';
 ?>
 
 <!-- Link Assessment Page Specific Stylesheet -->
-<link rel="stylesheet" href="/assets/css/pages/assessment.css?v=1.1">
+<link rel="stylesheet" href="/assets/css/pages/assessment.css?v=1.2">
 
 <!-- Assessment Selection View (Hidden by default, shown if no grade selected) -->
 <div id="assessment-selection" class="assessment-select-section hidden">
@@ -196,7 +196,7 @@ include '../src/header.php';
                         </button>
                     </div>
 
-                    <button id="next-btn" onclick="nextQuestionAdapter()" class="hero-nav-btn-primary" style="border: none; padding: 0.75rem 2rem; border-radius: var(--radius-lg); font-weight: 700; font-size: 1rem; cursor: pointer; display: none;">
+                    <button id="next-btn" onclick="nextQuestionAdapter()" class="hero-nav-btn-primary hidden" style="border: none; padding: 0.75rem 2rem; border-radius: var(--radius-lg); font-weight: 700; font-size: 1rem; cursor: pointer;">
                         Next Question <i class="fas fa-arrow-right" style="margin-left: 0.5rem;"></i>
                     </button>
                 </div>
