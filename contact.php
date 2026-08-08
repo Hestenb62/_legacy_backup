@@ -39,6 +39,7 @@ if (isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
 
 include 'src/header.php';
 ?>
+<link rel="stylesheet" href="/assets/css/pages/contact.css">
 
 <!-- Hero Section -->
 <div class="page-hero">
