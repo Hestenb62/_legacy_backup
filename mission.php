@@ -7,6 +7,7 @@ $pageAuthor      = "Hesten's Learning";
 
 include 'src/header.php';
 ?>
+<link rel="stylesheet" href="/assets/css/pages/mission.css">
 
 <!-- Hero Section -->
 <div class="page-hero">

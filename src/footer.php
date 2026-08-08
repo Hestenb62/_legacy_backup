@@ -1,5 +1,4 @@
  <!-- FULL FOOTER -->
-    <link rel="stylesheet" href="/src/footer_style.css">
     <footer class="footer-main noise-filter">
         <!-- Decoration -->
         <div class="footer-decor-top"></div>
@@ -223,14 +222,104 @@
             tr.onclick = () => { clearInterval(iv); iv = null; time = 1500; up(); ts.innerText = 'Start'; };
         }
 
-        // Notes
+        // Notes (Scratchpad with Templates)
         const n = document.getElementById('quick-notes-area');
+        const scratchpadStatus = document.getElementById('scratchpad-status');
+        const clearNotesBtn = document.getElementById('clear-notes-btn');
+        const scratchpadBackdrop = document.getElementById('scratchpad-backdrop-close');
+        
+        // Define templates
+        const templates = {
+            blank: "",
+            cornell: `Date: ${new Date().toLocaleDateString()}\n\n============================================================\n1. QUESTIONS & KEYWORDS (Left column keywords)\n------------------------------------------------------------\n- \n- \n\n============================================================\n2. NOTES & DETAILED IDEAS (Main column notes)\n------------------------------------------------------------\n- \n- \n\n============================================================\n3. SUMMARY (A brief 3-4 sentence wrap-up)\n------------------------------------------------------------\n- `,
+            kwl: `Topic: \n\n============================================================\n[K] WHAT I KNOW\n------------------------------------------------------------\n- \n\n============================================================\n[W] WHAT I WANT TO KNOW\n------------------------------------------------------------\n- \n\n============================================================\n[L] WHAT I LEARNED (Fill this out after studying)\n------------------------------------------------------------\n- `,
+            "study-guide": `Subject: \nExam Date: \n\n============================================================\n1. CORE CONCEPTS TO MASTER\n------------------------------------------------------------\n[ ] \n[ ] \n\n============================================================\n2. KEY DEFINITIONS & FORMULAS\n------------------------------------------------------------\n* \n* \n\n============================================================\n3. PRACTICE QUESTIONS\n------------------------------------------------------------\nQ1. \nA1. `,
+            lecture: `Course: \nLecture Title: \nDate: ${new Date().toLocaleDateString()}\n\n============================================================\n1. LECTURE TOPICS & DISCUSSION POINTS\n------------------------------------------------------------\n* \n* \n\n============================================================\n2. IMPORTANT TAKEAWAYS & FORMULAS\n------------------------------------------------------------\n* \n\n============================================================\n3. ACTION ITEMS & ASSIGNED READING\n------------------------------------------------------------\n[ ] `,
+            mla: `[Your Name]\n[Instructor's Name]\n[Course Title]\n[Date: ${new Date().toLocaleDateString()}]\n\n                      [Title of the Essay]\n\n    [Start typing your MLA formatted essay here. Use 1-inch margins and double-spacing. The first line of each paragraph should be indented 0.5 inches.]\n\n\n                          Works Cited\n\n[Author Last Name, First Name. "Title of Source." Title of Container, Other contributors, Version, Number, Publisher, Publication date, Location.]`,
+            apa: `                               Running Head: [SHORT TITLE IN CAPS]\n\n[Title of the Essay]\n[Your Name]\n[Institutional Affiliation]\n\n\n                             Abstract\n[Write a brief summary of your essay here, typically between 150 and 250 words. Do not indent the first line of the abstract paragraph.]\n\n\n                       [Title of the Essay]\n    [Start typing your APA formatted essay here. The first line of each paragraph should be indented 0.5 inches.]\n\n\n                            References\n\n[Author, A. A., & Author, B. B. (Year). Title of the work. Publisher. DOI or URL]`,
+            chicago: `                      [Title of the Essay]\n\n                            [Your Name]\n                           [Course Title]\n                         [Instructor Name]\n                      [Date: ${new Date().toLocaleDateString()}]\n\n\n    [Start typing your Chicago style essay here. Double space the main text. Footnotes should be single-spaced with a blank line between notes.]\n\n\n                          Bibliography\n\n[Author Last Name, First Name. Title of Book. Place of publication: Publisher, Year of publication.]`,
+            harvard: `Title: [Title of the Essay]\nAuthor: [Your Name]\nCourse: [Course Title]\nDate: ${new Date().toLocaleDateString()}\n\n    [Start typing your essay here. Paragraphs should be double-spaced with standard indentations.]\n\n\n                           Reference List\n\n[Author Last Name, Initials. (Year of publication) Title of book. Place of publication: Publisher.]`
+        };
+
         if (n) {
+            // Load saved content
             try { n.value = localStorage.getItem('hl_scratchpad') || ''; } catch(e){}
-            n.addEventListener('input', () => { try { localStorage.setItem('hl_scratchpad', n.value); } catch(e){} });
-            document.getElementById('download-notes').onclick = () => {
-                const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([n.value], {type:'text/plain'})); a.download = 'notes.txt'; a.click();
-            };
+
+            // Autosave with status indicator
+            let saveTimeout;
+            n.addEventListener('input', () => {
+                if (scratchpadStatus) {
+                    scratchpadStatus.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Saving...';
+                    scratchpadStatus.style.color = 'var(--color-primary)';
+                }
+                clearTimeout(saveTimeout);
+                saveTimeout = setTimeout(() => {
+                    try {
+                        localStorage.setItem('hl_scratchpad', n.value);
+                        if (scratchpadStatus) {
+                            scratchpadStatus.innerHTML = '<i class="fas fa-check-circle"></i> Saved locally';
+                            scratchpadStatus.style.color = 'var(--color-success)';
+                        }
+                    } catch(e){}
+                }, 500);
+            });
+
+            // Download Notes
+            const dlBtn = document.getElementById('download-notes');
+            if (dlBtn) {
+                dlBtn.onclick = () => {
+                    const a = document.createElement('a'); 
+                    a.href = URL.createObjectURL(new Blob([n.value], {type:'text/plain'})); 
+                    a.download = 'study_notes.txt'; 
+                    a.click();
+                };
+            }
+
+            // Clear Notes
+            if (clearNotesBtn) {
+                clearNotesBtn.onclick = () => {
+                    if (n.value.trim() === "" || confirm("Are you sure you want to clear all your notes? This cannot be undone.")) {
+                        n.value = "";
+                        try { localStorage.setItem('hl_scratchpad', ''); } catch(e){}
+                        if (scratchpadStatus) {
+                            scratchpadStatus.innerHTML = '<i class="fas fa-trash-alt"></i> Notes cleared';
+                            scratchpadStatus.style.color = 'var(--color-text-muted)';
+                        }
+                    }
+                };
+            }
+
+            // Backdrop Close
+            if (scratchpadBackdrop) {
+                scratchpadBackdrop.onclick = () => {
+                    const panel = document.getElementById('scratchpad-panel');
+                    if (panel) panel.classList.remove('active');
+                };
+            }
+
+            // Templates Selector Action
+            document.querySelectorAll('.scratchpad-templates-list .template-btn').forEach(btn => {
+                btn.onclick = () => {
+                    const templateKey = btn.getAttribute('data-template');
+                    if (templates[templateKey] !== undefined) {
+                        const confirmLoad = n.value.trim() === "" || 
+                                           confirm("Loading a template will replace your current notes. Do you want to proceed?");
+                        if (confirmLoad) {
+                            // Update active class
+                            document.querySelectorAll('.scratchpad-templates-list .template-btn').forEach(b => b.classList.remove('active'));
+                            btn.classList.add('active');
+
+                            // Load template content
+                            n.value = templates[templateKey];
+                            try { localStorage.setItem('hl_scratchpad', n.value); } catch(e){}
+                            if (scratchpadStatus) {
+                                scratchpadStatus.innerHTML = '<i class="fas fa-check-circle"></i> Saved locally';
+                                scratchpadStatus.style.color = 'var(--color-success)';
+                            }
+                        }
+                    }
+                };
+            });
         }
 
         // Citation

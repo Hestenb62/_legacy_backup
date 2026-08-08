@@ -3,6 +3,7 @@ $pageTitle       = "Accessibility Settings - Hesten's Learning";
 $pageDescription = "Customize your learning experience with advanced accessibility tools, fonts, and themes.";
 include 'src/header.php';
 ?>
+<link rel="stylesheet" href="/assets/css/pages/settings.css">
 
 <main id="main-content" class="page-content-wrapper" style="padding-top: 3rem; padding-bottom: 3rem;">
 

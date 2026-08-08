@@ -3,8 +3,10 @@
   $pageTitle = 'Curriculum Standards & Outlines | Hesten\'s Learning';
   $pageDescription = 'In-depth curriculum outlines and standards alignment for Math, ELA, Science, and Social Studies across all grade levels.';
   
-  // Include the header
   include 'src/header.php';
+  ?>
+  <link rel="stylesheet" href="/assets/css/pages/curriculum.css">
+  <?php
   // include 'assets/js/curriculum-php-engageny.js';
   // include 'assets/js/curriculum-php-teks.js';
 

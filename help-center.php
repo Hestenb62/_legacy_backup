@@ -7,6 +7,7 @@ $pageAuthor      = "Hesten's Learning";
 
 include 'src/header.php';
 ?>
+<link rel="stylesheet" href="/assets/css/pages/help-center.css">
 
 <!-- Hero Section with Search -->
 <div class="page-hero">

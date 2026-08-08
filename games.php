@@ -2,6 +2,7 @@
 $pageTitle = "Hesten's Learning - Games Hub";
 include 'src/header.php';
 ?>
+<link rel="stylesheet" href="/assets/css/pages/games.css">
 
 <main id="main-content" class="games-main">
 

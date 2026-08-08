@@ -8,17 +8,24 @@ $pageDescription = "Search results for learning materials.";
 $results = [];
 if ($query !== '') {
     $searchDir = __DIR__; // Root directory
-    $ignoreDirs = ['assets', 'src', 'logs', 'tmp', 'vendor', 'test', 'data'];
+    
+    // Expanded list of ignored directories to optimize search and avoid crash/timeout
+    $ignoreDirs = [
+        'assets', 'src', 'logs', 'tmp', 'vendor', 'test', 'data',
+        '.git', '.agents', '.vscode', '.github', 'node_modules'
+    ];
+    
     $queryLower = strtolower($query);
 
     $iterator = new RecursiveIteratorIterator(
         new RecursiveCallbackFilterIterator(
             new RecursiveDirectoryIterator($searchDir, RecursiveDirectoryIterator::SKIP_DOTS),
             function ($current, $key, $iterator) use ($ignoreDirs, $searchDir) {
-                if ($iterator->hasChildren()) {
-                    $relativePath = str_replace($searchDir . DIRECTORY_SEPARATOR, '', $current->getPathname());
-                    $parts = explode(DIRECTORY_SEPARATOR, $relativePath);
-                    return !in_array($parts[0], $ignoreDirs);
+                // Ignore matching directories
+                $relativePath = str_replace($searchDir . DIRECTORY_SEPARATOR, '', $current->getPathname());
+                $parts = explode(DIRECTORY_SEPARATOR, $relativePath);
+                if (in_array($parts[0], $ignoreDirs)) {
+                    return false;
                 }
                 return true;
             }
@@ -37,8 +44,12 @@ if ($query !== '') {
                 $title = $matches[1];
             }
 
+            // Remove script and style tags WITH their contents to avoid matching raw code
+            $cleanedContent = preg_replace('/<script\b[^>]*>(.*?)<\/script>/is', '', $content);
+            $cleanedContent = preg_replace('/<style\b[^>]*>(.*?)<\/style>/is', '', $cleanedContent);
+
             // Strip PHP and HTML to get clean text
-            $cleanText = strip_tags(preg_replace('/<\?php.*?\?>/ms', '', $content));
+            $cleanText = strip_tags(preg_replace('/<\?php.*?\?>/ms', '', $cleanedContent));
             
             // Search match
             if (stripos($cleanText, $query) !== false || stripos($title, $query) !== false) {
@@ -54,7 +65,11 @@ if ($query !== '') {
                     if ($start + $length < strlen($cleanText)) $snippet = rtrim($snippet) . '...';
                     
                     // Highlight the query in the snippet (case-insensitive)
-                    $snippet = preg_replace('/(' . preg_quote($query, '/') . ')/i', '<strong style="color: var(--color-primary); background-color: rgba(79, 70, 229, 0.1); padding: 0 0.25rem; border-radius: 0.25rem;">$1</strong>', htmlspecialchars($snippet));
+                    $snippet = preg_replace(
+                        '/(' . preg_quote($query, '/') . ')/i', 
+                        '<strong style="color: var(--color-primary); background-color: color-mix(in srgb, var(--color-primary) 10%, transparent); padding: 0 0.25rem; border-radius: 0.25rem;">$1</strong>', 
+                        htmlspecialchars($snippet)
+                    );
                 } else {
                     $snippet = 'Match found in title or metadata.';
                 }
@@ -75,89 +90,65 @@ if ($query !== '') {
 
 include 'src/header.php';
 ?>
+<link rel="stylesheet" href="/assets/css/pages/search.css">
 
-<main id="main-content" class="page-content-wrapper" style="min-height: 60vh;">
-    <div style="max-width: 56rem; margin: 0 auto;">
-        <h1 class="search-title" style="font-size: 2.25rem; font-weight: 900; background: linear-gradient(to right, var(--color-primary), var(--color-accent)); -webkit-background-clip: text; color: transparent; margin-bottom: 1.5rem; animation: fade-in-up 0.5s ease-out forwards;">
-            Search Results
-        </h1>
+<main id="main-content" class="search-container" style="min-height: 60vh;">
+    <h1 class="search-title-gradient">
+        Search Results
+    </h1>
 
-        <!-- Search Input Repetition -->
-        <form action="/search.php" method="GET" style="margin-bottom: 2.5rem; animation: fade-in-up 0.5s ease-out forwards; animation-delay: 0.1s;">
-            <div style="position: relative;" class="search-input-group">
-                <input type="text" name="q" value="<?php echo htmlspecialchars($query); ?>"
-                    placeholder="Search again..."
-                    class="search-input"
-                    style="width: 100%; background-color: var(--color-bg-surface); border: 2px solid var(--color-border); border-radius: 9999px; padding: 1rem 1rem 1rem 3rem; font-size: 1.125rem; color: var(--color-text-main); transition: all 0.2s; box-shadow: var(--shadow-md);">
-                <i class="fas fa-search" style="position: absolute; left: 1.25rem; top: 50%; transform: translateY(-50%); color: rgba(156, 163, 175, 1); font-size: 1.25rem;"></i>
-                <button type="submit"
-                    style="position: absolute; right: 0.75rem; top: 50%; transform: translateY(-50%); background-color: var(--color-primary); color: white; padding: 0.5rem 1.5rem; border-radius: 9999px; font-weight: 700; border: none; cursor: pointer; transition: background-color 0.2s;">Search</button>
-            </div>
-        </form>
+    <!-- Search Input Form -->
+    <form action="/search.php" method="GET" class="search-form-card">
+        <div class="search-input-group">
+            <i class="fas fa-search search-input-icon"></i>
+            <input type="text" name="q" value="<?php echo htmlspecialchars($query); ?>"
+                placeholder="Search again..."
+                class="search-page-input">
+            <button type="submit" class="search-page-btn">Search</button>
+        </div>
+    </form>
 
-        <p style="color: var(--color-text-muted); margin-bottom: 2rem; font-size: 1.125rem; animation: fade-in-up 0.5s ease-out forwards; animation-delay: 0.2s;">
-            <?php
-            if ($query === '')
-                echo "Please enter a search term above.";
-            else
-                echo count($results) . " result(s) found for \"<strong style='color: var(--color-primary);'>" . htmlspecialchars($query) . "</strong>\"";
-            ?>
-        </p>
+    <p class="search-meta-text">
+        <?php
+        if ($query === '')
+            echo "Please enter a search term above.";
+        else
+            echo count($results) . " result(s) found for \"<strong style='color: var(--color-primary);'>" . htmlspecialchars($query) . "</strong>\"";
+        ?>
+    </p>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6" style="animation: fade-in-up 0.5s ease-out forwards; animation-delay: 0.3s;">
-            <?php foreach ($results as $res) : ?>
-                <article class="search-result-card" style="background-color: var(--color-bg-base); border-radius: 1rem; box-shadow: var(--shadow-lg); border: 1px solid var(--color-border); padding: 1.5rem; transition: all 0.3s;">
-                    <h2 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">
-                        <a href="<?php echo $res['link']; ?>" style="color: var(--color-text-main); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--color-primary)'; this.style.textDecoration='underline';" onmouseout="this.style.color='var(--color-text-main)'; this.style.textDecoration='none';">
+    <div class="search-grid">
+        <?php foreach ($results as $res) : ?>
+            <article class="search-result-card">
+                <div>
+                    <h2 class="search-result-title">
+                        <a href="<?php echo htmlspecialchars($res['link']); ?>" class="search-result-title-link">
                             <?php echo htmlspecialchars($res['title']); ?>
                         </a>
                     </h2>
-                    <p style="color: var(--color-text-muted); margin-bottom: 1.5rem; font-size: 0.875rem; line-height: 1.625;">
+                    <p class="search-result-desc">
                         <?php echo $res['desc']; ?>
                     </p>
-                    <a href="<?php echo $res['link']; ?>"
-                        class="search-visit-link" style="display: inline-flex; items-align: center; gap: 0.5rem; color: var(--color-primary); font-weight: 700; background-color: rgba(37, 99, 235, 0.1); padding: 0.5rem 1rem; border-radius: 0.5rem; text-decoration: none; transition: all 0.2s;">
-                        Visit Page <i class="fas fa-arrow-right" style="margin-top: 0.25rem;"></i>
-                    </a>
-                </article>
-            <?php endforeach; ?>
-
-            <?php if (count($results) === 0 && $query !== '') : ?>
-                <div style="grid-column: 1 / -1; text-align: center; padding: 4rem 1rem; background-color: rgba(255, 255, 255, 0.5); border-radius: 1.5rem; border: 2px dashed var(--color-border);">
-                    <div style="width: 5rem; height: 5rem; background-color: var(--color-bg-surface); border-radius: 9999px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem auto; font-size: 2.25rem; color: rgba(156, 163, 175, 1);">
-                        <i class="fas fa-search"></i>
-                    </div>
-                    <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--color-text-main); margin-bottom: 0.5rem;">No matches found</h3>
-                    <p style="color: var(--color-text-muted);">We looked everywhere, but couldn't find what you were looking for.</p>
-                    <div style="margin-top: 2rem; display: flex; justify-content: center; gap: 1rem;">
-                        <a href="/"
-                            style="background-color: var(--color-primary); color: white; padding: 0.75rem 1.5rem; border-radius: 0.75rem; font-weight: 700; text-decoration: none; box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3); transition: background-color 0.2s;">Go
-                            Home</a>
-                    </div>
                 </div>
-            <?php endif; ?>
-        </div>
+                <a href="<?php echo htmlspecialchars($res['link']); ?>" class="search-visit-link">
+                    Visit Page <i class="fas fa-arrow-right"></i>
+                </a>
+            </article>
+        <?php endforeach; ?>
+
+        <?php if (count($results) === 0 && $query !== '') : ?>
+            <div class="search-no-results">
+                <div class="search-no-results-icon-box">
+                    <i class="fas fa-search"></i>
+                </div>
+                <h3 class="search-no-results-title">No matches found</h3>
+                <p class="search-no-results-desc">We looked everywhere, but couldn't find what you were looking for.</p>
+                <div>
+                    <a href="/" class="search-home-btn">Go Home</a>
+                </div>
+            </div>
+        <?php endif; ?>
     </div>
 </main>
-
-<style>
-    .search-input:focus {
-        outline: none;
-        border-color: var(--color-primary) !important;
-        box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2) !important;
-    }
-    .search-input:focus-visible {
-        outline: 3px solid var(--color-accent, #06b6d4) !important;
-        outline-offset: 2px !important;
-    }
-    .search-result-card:hover {
-        box-shadow: var(--shadow-2xl) !important;
-        transform: translateY(-0.25rem);
-    }
-    .search-visit-link:hover {
-        gap: 1rem !important;
-        background-color: rgba(37, 99, 235, 0.2) !important;
-    }
-</style>
 
 <?php include 'src/footer.php'; ?>
