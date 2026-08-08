@@ -13,7 +13,7 @@ Welcome to the **Hesten's Learning** repository! This is an adaptive, accessible
 
 ## 🚀 Tech Stack
 
-- **Frontend:** HTML5, Tailwind CSS, Vanilla JavaScript
+- **Frontend:** HTML5, Vanilla CSS, Vanilla JavaScript
 - **Backend/Templating:** PHP
 - **Icons:** FontAwesome
 
