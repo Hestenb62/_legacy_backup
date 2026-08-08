@@ -133,18 +133,14 @@
     position: fixed;
     inset: 0;
     z-index: 100;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     padding: 1rem;
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.4s ease;
   }
 
   .timer-panel-overlay.active {
-    opacity: 1;
-    pointer-events: auto;
+    display: flex;
   }
 
   .timer-backdrop {
@@ -166,9 +162,6 @@
     width: 100%;
     max-width: 56rem;
     height: 85vh;
-    transform: scale(0.95);
-    opacity: 0;
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -179,8 +172,18 @@
   }
 
   .timer-panel-overlay.active .timer-content {
-    transform: scale(1);
-    opacity: 1;
+    animation: scale-up 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  @keyframes scale-up {
+    from {
+      transform: scale(0.95);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
   }
 
   /* Scratchpad Panel Overlay */
@@ -188,18 +191,14 @@
     position: fixed;
     inset: 0;
     z-index: 100;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     padding: 1rem;
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.4s ease;
   }
 
   .scratchpad-panel-overlay.active {
-    opacity: 1;
-    pointer-events: auto;
+    display: flex;
   }
 
   .scratchpad-backdrop {
@@ -221,9 +220,6 @@
     width: 100%;
     max-width: 64rem;
     height: 85vh;
-    transform: scale(0.95);
-    opacity: 0;
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -234,8 +230,7 @@
   }
 
   .scratchpad-panel-overlay.active .scratchpad-content {
-    transform: scale(1);
-    opacity: 1;
+    animation: scale-up 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   }
 
   /* Header */
@@ -475,18 +470,14 @@
     position: fixed;
     inset: 0;
     z-index: 100;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     padding: 1rem;
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.4s ease;
   }
 
   .citation-panel-overlay.active {
-    opacity: 1;
-    pointer-events: auto;
+    display: flex;
   }
 
   .citation-backdrop {
@@ -508,9 +499,6 @@
     width: 100%;
     max-width: 56rem;
     height: 85vh;
-    transform: scale(0.95);
-    opacity: 0;
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -521,8 +509,7 @@
   }
 
   .citation-panel-overlay.active .citation-content {
-    transform: scale(1);
-    opacity: 1;
+    animation: scale-up 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   }
 
   /* Form Fields */
