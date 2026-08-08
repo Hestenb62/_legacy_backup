@@ -252,24 +252,22 @@ function openDocModal(btn) {
         docsContainer.innerHTML = '<div class="doc-modal-empty-box"><i class="fas fa-sparkles doc-modal-empty-icon"></i><p class="doc-modal-empty-text">Detailed curriculum is being prepared for this journey.</p></div>';
     }
 
-    // Position modal container centered horizontally, aligned vertically with tile height
+    // Let CSS Flexbox handle centering. Calculate dynamic transform-origin relative to the clicked grade tile
     if (card) {
         const rect = card.getBoundingClientRect();
         const viewportHeight = window.innerHeight;
         const modalHeight = Math.min(viewportHeight * 0.85, 750);
-        
-        let targetTop = rect.top;
-        if (targetTop + modalHeight > viewportHeight - 20) {
-            targetTop = Math.max(20, viewportHeight - modalHeight - 20);
-        } else {
-            targetTop = Math.max(20, targetTop);
-        }
+        const modalWidth = Math.min(window.innerWidth * 0.9, 896); // max-width is 56rem (896px)
 
-        modalContainer.style.position = 'fixed';
-        modalContainer.style.top = `${targetTop}px`;
-        modalContainer.style.left = '50%';
-        modalContainer.style.transform = 'translateX(-50%)';
-        modalContainer.style.margin = '0';
+        const tileCenterX = rect.left + rect.width / 2;
+        const tileCenterY = rect.top + rect.height / 2;
+        
+        const modalLeft = window.innerWidth / 2 - modalWidth / 2;
+        const modalTop = window.innerHeight / 2 - modalHeight / 2;
+        
+        const relX = tileCenterX - modalLeft;
+        const relY = tileCenterY - modalTop;
+        modalContainer.style.transformOrigin = `${relX}px ${relY}px`;
     }
 
     // Show modal
@@ -449,7 +447,7 @@ function printCurriculum() {
 function switchModalTab(btn, index) {
     const container = btn.closest('#modal-docs');
     const btns = container.querySelectorAll('.modal-tab-pill');
-    const panes = container.querySelectorAll('.modal-tab-pane');
+    const panes = container.querySelectorAll('.doc-modal-pane');
 
     btns.forEach(b => {
         b.classList.remove('active');

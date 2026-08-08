@@ -60,14 +60,14 @@ $currentUser = getCurrentUser();
     </style>
 
     <!-- Custom Modern Styles (Vanilla CSS Architecture) -->
-    <link rel="stylesheet" href="/assets/css/tokens.css?v=1.1">
-    <link rel="stylesheet" href="/assets/css/reset.css?v=1.1">
-    <link rel="stylesheet" href="/assets/css/primitives.css?v=1.1">
-    <link rel="stylesheet" href="/assets/css/utilities.css?v=1.1">
-    <link rel="stylesheet" href="/assets/css/components.css?v=1.1">
-    <link rel="stylesheet" href="/assets/css/components/fixed-tools.css?v=1.1">
-    <link rel="stylesheet" href="/assets/css/layouts/header.css?v=1.1">
-    <link rel="stylesheet" href="/assets/css/layouts/footer.css?v=1.1">
+    <link rel="stylesheet" href="/assets/css/tokens.css?v=1.2">
+    <link rel="stylesheet" href="/assets/css/reset.css?v=1.2">
+    <link rel="stylesheet" href="/assets/css/primitives.css?v=1.2">
+    <link rel="stylesheet" href="/assets/css/utilities.css?v=1.2">
+    <link rel="stylesheet" href="/assets/css/components.css?v=1.2">
+    <link rel="stylesheet" href="/assets/css/components/fixed-tools.css?v=1.2">
+    <link rel="stylesheet" href="/assets/css/layouts/header.css?v=1.2">
+    <link rel="stylesheet" href="/assets/css/layouts/footer.css?v=1.2">
 </head>
 
 <body>

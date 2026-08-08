@@ -27,7 +27,7 @@ include 'src/header.php';
 </main>
 
 <!-- PAGE SCRIPT -->
-<script src="assets/js/index-page.js"></script>
+<script src="assets/js/index-page.js?v=1.2"></script>
 
 <?php include __DIR__ . '/src/partials/migration-popup.php'; ?>
 
