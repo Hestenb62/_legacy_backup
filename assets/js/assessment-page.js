@@ -38,20 +38,19 @@ document.addEventListener("DOMContentLoaded", () => {
                 grid.innerHTML = ""; // Clear existing
                 Object.entries(gradeConfig).forEach(([key, info]) => {
                     const card = document.createElement("a");
-                    // Assuming 'info.color' might be used for styling, but for now using a standard aesthetic
                     card.href = `?grade=${key}`;
-                    card.className = "group block bg-content-bg rounded-3xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 overflow-hidden border border-white/20 ring-1 ring-black/5 relative z-10";
+                    card.className = "assessment-grade-card group";
 
-                    const iconColor = info.color || "bg-blue-600";
+                    const iconColor = info.color || "bg-blue-500";
 
                     card.innerHTML = `
-                        <div class="${iconColor} h-32 flex items-center justify-center p-4 relative overflow-hidden">
-                            <i class="fas ${info.icon || 'fa-star'} text-6xl text-white/30 absolute -bottom-4 -right-4 transform rotate-12 group-hover:scale-110 transition-transform"></i>
-                             <i class="fas ${info.icon || 'fa-star'} text-4xl text-white relative z-10 drop-shadow-md"></i>
+                        <div class="assessment-grade-card-icon-wrapper ${iconColor}">
+                            <i class="fas ${info.icon || 'fa-star'} text-white/30"></i>
+                            <i class="fas ${info.icon || 'fa-star'} text-white"></i>
                         </div>
-                        <div class="p-6 text-center">
-                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-primary transition-colors">${info.label}</h3>
-                            <span class="text-sm font-medium text-blue-600 dark:text-blue-400 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all">Start Assessment <i class="fas fa-arrow-right ml-1"></i></span>
+                        <div class="assessment-grade-card-info">
+                            <h3 class="assessment-grade-card-title">${info.label}</h3>
+                            <span class="assessment-grade-card-action-text">Start Assessment <i class="fas fa-arrow-right" style="margin-left: 0.25rem;"></i></span>
                         </div>
                     `;
                     grid.appendChild(card);

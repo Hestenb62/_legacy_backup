@@ -1,0 +1,486 @@
+/* assets/css/pages/assessment.css */
+
+@layer components {
+  /* Select Level Section */
+  .assessment-select-section {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+  }
+
+  .assessment-select-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .assessment-select-title {
+    font-size: 2.5rem;
+    font-weight: 850;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+  }
+
+  @media (min-width: 768px) {
+    .assessment-select-title {
+      font-size: 3.5rem;
+    }
+  }
+
+  .assessment-select-subtitle {
+    font-size: 1.125rem;
+    color: var(--color-text-muted);
+    max-width: 48rem;
+    margin: 0 auto;
+    line-height: 1.75;
+  }
+
+  /* Selection Grid */
+  .grade-selection-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  @media (min-width: 640px) {
+    .grade-selection-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .grade-selection-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .grade-selection-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+
+  /* Assessment Hero Header */
+  .assessment-hero-header {
+    position: relative;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    color: white;
+    padding: 6rem 1.5rem 6rem 1.5rem;
+    border-radius: 0 0 3rem 3rem;
+    overflow: hidden;
+    margin-bottom: 4rem;
+    text-align: center;
+    box-shadow: var(--shadow-2xl);
+  }
+
+  .assessment-hero-decorations {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .assessment-hero-decorations i {
+    position: absolute;
+    opacity: 0.1;
+  }
+
+  .assessment-badge-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-full);
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    backdrop-filter: blur(8px);
+    margin-bottom: 1.5rem;
+  }
+
+  .assessment-hero-title {
+    font-size: 2.5rem;
+    font-weight: 850;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  @media (min-width: 768px) {
+    .assessment-hero-title {
+      font-size: 3.5rem;
+    }
+  }
+
+  .assessment-hero-desc {
+    font-size: 1.125rem;
+    max-width: 42rem;
+    margin: 0 auto 2.5rem auto;
+    opacity: 0.9;
+    font-weight: 300;
+  }
+
+  .assessment-hero-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .hero-nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-full);
+    font-weight: 700;
+    transition: all 0.2s;
+    text-decoration: none;
+  }
+
+  .hero-nav-btn-outline {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(4px);
+  }
+
+  .hero-nav-btn-outline:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .hero-nav-btn-primary {
+    background-color: white;
+    color: var(--color-primary);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .hero-nav-btn-primary:hover {
+    background-color: var(--color-bg-base);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-xl);
+  }
+
+  /* Layout Container */
+  .assessment-container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1.5rem 3rem 1.5rem;
+  }
+
+  .assessment-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  @media (min-width: 1024px) {
+    .assessment-grid {
+      grid-template-columns: 1fr 2fr;
+    }
+  }
+
+  .assessment-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  /* Assessment Card */
+  .assessment-card {
+    background-color: var(--color-bg-surface);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-2xl);
+    padding: 2rem;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .assessment-card-accent-top::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background-color: var(--color-primary);
+  }
+
+  .assessment-card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  /* Progress Bar */
+  .assessment-progress-wrapper {
+    background-color: var(--color-bg-base);
+    border-radius: var(--radius-full);
+    height: 1rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    border: 1px solid var(--color-border);
+  }
+
+  .assessment-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+    border-radius: var(--radius-full);
+    transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Focus Filters Buttons */
+  .focus-filter-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .focus-filter-btn {
+    width: 100%;
+    text-align: left;
+    padding: 0.875rem 1.25rem;
+    border-radius: var(--radius-xl);
+    background-color: var(--color-bg-base);
+    color: var(--color-text-muted);
+    font-weight: 700;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+  }
+
+  .focus-filter-btn:hover, .focus-filter-btn:focus {
+    background-color: color-mix(in srgb, var(--color-primary) 5%, transparent);
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+
+  .focus-filter-btn i {
+    width: 1.5rem;
+    text-align: center;
+    margin-right: 0.75rem;
+    transition: transform 0.2s;
+  }
+
+  .focus-filter-btn:hover i {
+    transform: scale(1.15);
+  }
+
+  /* Quiz Core Card */
+  .assessment-quiz-card {
+    background-color: var(--color-bg-surface);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-3xl);
+    padding: 2rem;
+    box-shadow: var(--shadow-xl);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 25rem;
+  }
+
+  @media (min-width: 768px) {
+    .assessment-quiz-card {
+      padding: 2.5rem;
+    }
+  }
+
+  .assessment-quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .question-counter-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+  }
+
+  .question-counter-big {
+    font-size: 2.25rem;
+    font-weight: 900;
+    color: var(--color-text-main);
+  }
+
+  .question-counter-total {
+    font-size: 1.125rem;
+    color: var(--color-text-muted);
+    font-weight: 500;
+  }
+
+  /* Options Grid */
+  .options-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .options-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  /* Feedback box */
+  .feedback-box {
+    padding: 1.25rem;
+    border-radius: var(--radius-lg);
+    margin-bottom: 1.5rem;
+    display: none;
+  }
+
+  .feedback-box.correct {
+    background-color: color-mix(in srgb, var(--color-success) 10%, var(--color-bg-base));
+    border-left: 4px solid var(--color-success);
+    color: var(--color-success);
+  }
+
+  .feedback-box.incorrect {
+    background-color: color-mix(in srgb, var(--color-error) 10%, var(--color-bg-base));
+    border-left: 4px solid var(--color-error);
+    color: var(--color-error);
+  }
+
+  /* Action buttons footer */
+  .assessment-card-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--color-border);
+    padding-top: 1.5rem;
+    margin-top: auto;
+  }
+
+  /* Hint box */
+  .hint-box {
+    background-color: color-mix(in srgb, var(--color-warning) 10%, var(--color-bg-base));
+    padding: 1.25rem;
+    border-radius: var(--radius-lg);
+    border-left: 4px solid var(--color-warning);
+    color: var(--color-text-main);
+    font-size: 0.875rem;
+    margin-top: 1.5rem;
+  }
+
+  /* Grade Card Selection Styling */
+  .assessment-grade-card {
+    display: block;
+    background-color: var(--color-bg-surface);
+    border-radius: var(--radius-2xl);
+    border: 1px solid var(--color-border);
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+    box-shadow: var(--shadow-md);
+    position: relative;
+    z-index: 1;
+  }
+
+  .assessment-grade-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--color-primary);
+  }
+
+  .assessment-grade-card-icon-wrapper {
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding: 1rem;
+  }
+
+  .assessment-grade-card-icon-wrapper i.text-white\/30 {
+    position: absolute;
+    bottom: -1rem;
+    right: -1rem;
+    font-size: 6.5rem;
+    color: rgba(255, 255, 255, 0.2);
+    transform: rotate(12deg);
+    transition: transform 0.4s ease;
+  }
+
+  .assessment-grade-card:hover .assessment-grade-card-icon-wrapper i.text-white\/30 {
+    transform: scale(1.15) rotate(18deg);
+  }
+
+  .assessment-grade-card-icon-wrapper i.text-white {
+    font-size: 2.75rem;
+    color: white;
+    position: relative;
+    z-index: 2;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+  }
+
+  .assessment-grade-card-info {
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .assessment-grade-card-title {
+    font-size: 1.25rem;
+    font-weight: 750;
+    color: var(--color-text-main);
+    margin: 0 0 0.5rem 0;
+    transition: color 0.2s;
+  }
+
+  .assessment-grade-card:hover .assessment-grade-card-title {
+    color: var(--color-primary);
+  }
+
+  .assessment-grade-card-action-text {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+    opacity: 0;
+    transform: translateY(8px);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-block;
+  }
+
+  .assessment-grade-card:hover .assessment-grade-card-action-text {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Grade Card Color Maps */
+  .bg-pink-500 { background-color: #ec4899; }
+  .bg-purple-500 { background-color: #a855f7; }
+  .bg-indigo-500 { background-color: #6366f1; }
+  .bg-blue-500 { background-color: #3b82f6; }
+  .bg-sky-500 { background-color: #0ea5e9; }
+  .bg-teal-500 { background-color: #14b8a6; }
+  .bg-emerald-500 { background-color: #10b981; }
+  .bg-green-500 { background-color: #22c55e; }
+  .bg-lime-600 { background-color: #65a30d; }
+  .bg-yellow-600 { background-color: #ca8a04; }
+  .bg-orange-600 { background-color: #ea580c; }
+  .bg-red-600 { background-color: #dc2626; }
+  .bg-rose-600 { background-color: #e11d48; }
+  .bg-slate-700 { background-color: #334155; }
+  .bg-indigo-900 { background-color: #1e1b4b; }
+}
