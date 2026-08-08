@@ -1,0 +1,210 @@
+/* assets/css/pages/search.css */
+
+@layer components {
+  .search-container {
+    max-width: 56rem;
+    margin: 0 auto;
+    padding: 2rem 1rem 6rem 1rem;
+  }
+
+  .search-title-gradient {
+    font-size: 2.25rem;
+    font-weight: 900;
+    background: linear-gradient(to right, var(--color-primary), var(--color-accent));
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 1.5rem;
+    animation: rise-in 0.5s ease-out forwards;
+  }
+
+  .search-form-card {
+    margin-bottom: 2.5rem;
+    animation: rise-in 0.5s ease-out forwards;
+    animation-delay: 0.1s;
+  }
+
+  .search-input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .search-input-icon {
+    position: absolute;
+    left: 1.25rem;
+    color: var(--color-text-muted);
+    font-size: 1.25rem;
+    pointer-events: none;
+  }
+
+  .search-page-input {
+    width: 100%;
+    background-color: var(--color-bg-surface);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-full);
+    padding: 1rem 1rem 1rem 3.25rem;
+    font-size: 1.125rem;
+    color: var(--color-text-main);
+    transition: all 0.2s;
+    box-shadow: var(--shadow-md);
+  }
+
+  .search-page-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-primary) 20%, transparent);
+  }
+
+  .search-page-btn {
+    position: absolute;
+    right: 0.75rem;
+    background-color: var(--color-primary);
+    color: var(--color-text-inverse);
+    padding: 0.5rem 1.5rem;
+    border-radius: var(--radius-full);
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+
+  .search-page-btn:hover {
+    background-color: var(--color-primary-hover);
+  }
+
+  .search-meta-text {
+    color: var(--color-text-muted);
+    margin-bottom: 2rem;
+    font-size: 1.125rem;
+    animation: rise-in 0.5s ease-out forwards;
+    animation-delay: 0.2s;
+  }
+
+  .search-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    animation: rise-in 0.5s ease-out forwards;
+    animation-delay: 0.3s;
+  }
+
+  @media (min-width: 768px) {
+    .search-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  .search-result-card {
+    background-color: var(--color-bg-surface);
+    border-radius: var(--radius-2xl);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--color-border);
+    padding: 1.75rem;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 12rem;
+  }
+
+  .search-result-card:hover {
+    box-shadow: var(--shadow-xl);
+    transform: translateY(-0.25rem);
+  }
+
+  .search-result-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+  }
+
+  .search-result-title-link {
+    color: var(--color-text-main);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .search-result-title-link:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+  }
+
+  .search-result-desc {
+    color: var(--color-text-muted);
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+    line-height: 1.625;
+    flex-grow: 1;
+  }
+
+  .search-visit-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-primary);
+    font-weight: 700;
+    background-color: color-mix(in srgb, var(--color-primary) 10%, transparent);
+    padding: 0.5rem 1.25rem;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    transition: all 0.2s;
+    width: fit-content;
+    font-size: 0.875rem;
+  }
+
+  .search-visit-link:hover {
+    gap: 0.75rem;
+    background-color: color-mix(in srgb, var(--color-primary) 20%, transparent);
+  }
+
+  .search-no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 4rem 1.5rem;
+    background-color: var(--color-bg-surface);
+    border-radius: var(--radius-3xl);
+    border: 2px dashed var(--color-border);
+  }
+
+  .search-no-results-icon-box {
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--color-bg-base);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem auto;
+    font-size: 2.25rem;
+    color: var(--color-text-muted);
+  }
+
+  .search-no-results-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+    margin-bottom: 0.5rem;
+  }
+
+  .search-no-results-desc {
+    color: var(--color-text-muted);
+    margin-bottom: 2rem;
+  }
+
+  .search-home-btn {
+    background-color: var(--color-primary);
+    color: var(--color-text-inverse);
+    padding: 0.75rem 2rem;
+    border-radius: var(--radius-full);
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: var(--shadow-md);
+    transition: background-color 0.2s;
+    display: inline-block;
+  }
+
+  .search-home-btn:hover {
+    background-color: var(--color-primary-hover);
+  }
+}

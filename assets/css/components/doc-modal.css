@@ -1,0 +1,477 @@
+/* assets/css/components/doc-modal.css */
+
+@layer components {
+  /* Doc Modal Layout and Overlay */
+  .doc-modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 1rem;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+
+  @media (min-width: 640px) {
+    .doc-modal-overlay {
+      padding: 1.5rem 1.5rem 3rem 1.5rem;
+    }
+  }
+
+  .doc-modal-overlay:not(.hidden) {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .doc-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(17, 24, 39, 0.4);
+    backdrop-filter: blur(4px);
+    cursor: pointer;
+  }
+
+  .dark .doc-modal-backdrop, .midnight .doc-modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .doc-modal-content {
+    background-color: var(--color-bg-base);
+    border-radius: var(--radius-2xl);
+    position: relative;
+    width: 100%;
+    max-width: 56rem;
+    transform: scale(0.95);
+    opacity: 0;
+    transition: all 0.5s;
+    display: flex;
+    flex-direction: column;
+    max-height: 85vh;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-xl);
+    pointer-events: auto;
+  }
+
+  .doc-modal-overlay:not(.hidden) .doc-modal-content {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  /* Doc Modal Header Styling */
+  .doc-modal-header {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 20;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  @media (min-width: 768px) {
+    .doc-modal-header {
+      padding: 2rem;
+    }
+  }
+
+  .doc-modal-title-group {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  .doc-modal-icon-box {
+    width: 4rem;
+    height: 4rem;
+    border-radius: var(--radius-xl);
+    background-color: color-mix(in srgb, var(--color-primary) 10%, transparent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.875rem;
+    transition: background-color 0.7s;
+  }
+
+  @media (min-width: 768px) {
+    .doc-modal-icon-box {
+      width: 5rem;
+      height: 5rem;
+      font-size: 2.25rem;
+    }
+  }
+
+  .doc-modal-title {
+    font-size: 1.5rem;
+    font-weight: 900;
+    font-family: var(--font-display);
+    color: var(--color-text-main);
+    letter-spacing: -0.025em;
+    margin-bottom: 0.25rem;
+    line-height: 1;
+  }
+
+  @media (min-width: 768px) {
+    .doc-modal-title {
+      font-size: 2.25rem;
+    }
+  }
+
+  .doc-modal-subtitle-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .doc-modal-subtitle-line {
+    width: 2rem;
+    height: 0.25rem;
+    background-color: var(--color-primary);
+    border-radius: var(--radius-full);
+    opacity: 0.5;
+  }
+
+  .doc-modal-subtitle {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .doc-modal-close {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: var(--radius-sm);
+    background-color: var(--color-bg-base);
+    color: var(--color-text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+  }
+
+  .dark .doc-modal-close, .midnight .doc-modal-close {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
+  .doc-modal-close:hover {
+    color: var(--color-text-main);
+    background-color: var(--color-border);
+  }
+
+  @media (min-width: 768px) {
+    .doc-modal-close {
+      width: 3rem;
+      height: 3rem;
+      font-size: 1.25rem;
+    }
+  }
+
+  /* Doc Modal Body Styling */
+  .doc-modal-body {
+    padding: 1.5rem;
+    overflow-y: auto;
+    flex-grow: 1;
+    position: relative;
+    z-index: 10;
+    background-color: var(--color-bg-surface);
+  }
+
+  .dark .doc-modal-body, .midnight .doc-modal-body {
+    background-color: transparent;
+  }
+
+  @media (min-width: 768px) {
+    .doc-modal-body {
+      padding: 2rem;
+    }
+  }
+
+  .doc-modal-desc-box {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-radius: var(--radius-lg);
+    background-color: var(--color-bg-base);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .dark .doc-modal-desc-box, .midnight .doc-modal-desc-box {
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: none;
+  }
+
+  .doc-modal-desc {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    line-height: 1.625;
+    font-weight: 500;
+  }
+
+  @media (min-width: 768px) {
+    .doc-modal-desc {
+      font-size: 1.125rem;
+    }
+  }
+
+  .doc-modal-docs-container {
+    color: var(--color-text-main);
+  }
+
+  /* Doc Modal Footer Styling */
+  .doc-modal-footer {
+    padding: 1.25rem 1.5rem;
+    background-color: var(--color-bg-base);
+    border-top: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 20;
+  }
+
+  @media (min-width: 640px) {
+    .doc-modal-footer {
+      flex-direction: row;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .doc-modal-footer {
+      padding: 1.5rem 2rem;
+    }
+  }
+
+  .doc-modal-copyright {
+    display: none;
+    font-size: 0.625rem;
+    font-weight: 700;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  @media (min-width: 640px) {
+    .doc-modal-copyright {
+      display: block;
+    }
+  }
+
+  .doc-modal-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  @media (min-width: 640px) {
+    .doc-modal-actions {
+      width: auto;
+    }
+  }
+
+  .doc-modal-print-btn {
+    flex: 1;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-sm);
+    background-color: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-main);
+    font-weight: 700;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  @media (min-width: 640px) {
+    .doc-modal-print-btn {
+      flex: none;
+    }
+  }
+
+  .doc-modal-print-btn:hover {
+    background-color: var(--color-border);
+  }
+
+  .print-text-full { display: none; }
+  .print-text-short { display: inline; }
+
+  @media (min-width: 640px) {
+    .print-text-full { display: inline; }
+    .print-text-short { display: none; }
+  }
+
+  .doc-modal-close-btn {
+    flex: 1;
+    padding: 0.75rem 2rem;
+    border-radius: var(--radius-sm);
+    background-color: var(--color-text-main);
+    color: var(--color-bg-base);
+    font-weight: 700;
+    transition: all 0.2s;
+    font-size: 0.875rem;
+    box-shadow: var(--shadow-md);
+  }
+
+  @media (min-width: 640px) {
+    .doc-modal-close-btn {
+      flex: none;
+    }
+  }
+
+  .doc-modal-close-btn:hover {
+    transform: translateY(-0.125rem);
+  }
+
+  .doc-modal-close-btn:active {
+    transform: scale(0.95);
+  }
+
+  /* Doc Modal Curriculum Tab Styles */
+  .doc-modal-curriculum-title {
+    font-size: 1.25rem;
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-display);
+    color: var(--color-text-main);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .doc-modal-curriculum-dot {
+    width: 0.5rem;
+    height: 2rem;
+    background-color: var(--color-primary);
+    border-radius: var(--radius-full);
+  }
+
+  .doc-modal-tab-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    padding: 0.375rem;
+    background-color: var(--color-bg-surface);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    width: fit-content;
+    position: relative;
+  }
+
+  .doc-modal-tab-slider {
+    position: absolute;
+    top: 0.375rem;
+    bottom: 0.375rem;
+    left: 0.375rem;
+    background-color: var(--color-bg-base);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 0;
+  }
+
+  .modal-tab-pill {
+    position: relative;
+    padding: 0.625rem 1.5rem;
+    border-radius: var(--radius-md);
+    transition: all 0.2s;
+    font-size: 0.875rem;
+    font-weight: 900;
+    letter-spacing: -0.025em;
+    z-index: 10;
+    color: var(--color-text-muted);
+  }
+
+  .modal-tab-pill:hover {
+    color: var(--color-text-main);
+  }
+
+  .modal-tab-pill.active {
+    color: var(--color-text-main);
+  }
+
+  .doc-modal-pane-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .doc-modal-pane {
+    display: none;
+  }
+
+  .doc-modal-pane.active {
+    display: block;
+    animation: rise-in 0.5s ease-out forwards;
+  }
+
+  .doc-modal-pane-inner {
+    background-color: var(--color-bg-base);
+    padding: 1.5rem;
+    border-radius: var(--radius-2xl);
+    border: 1px solid var(--color-border);
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+  }
+
+  @media (min-width: 768px) {
+    .doc-modal-pane-inner {
+      padding: 2rem;
+    }
+  }
+
+  .doc-modal-pane-glow {
+    display: none;
+  }
+
+  .doc-modal-pane-content {
+    position: relative;
+    z-index: 10;
+    color: var(--color-text-main);
+  }
+
+  .doc-modal-fallback-box {
+    background-color: var(--color-bg-base);
+    padding: 2rem;
+    border-radius: var(--radius-2xl);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-sm);
+    animation: rise-in 0.5s ease-out forwards;
+  }
+
+  .doc-modal-empty-box {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: var(--color-bg-base);
+    border-radius: var(--radius-2xl);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .doc-modal-empty-icon {
+    font-size: 3rem;
+    color: color-mix(in srgb, var(--color-primary) 20%, transparent);
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .doc-modal-empty-text {
+    color: var(--color-text-muted);
+    font-weight: 700;
+    font-size: 1.125rem;
+  }
+}

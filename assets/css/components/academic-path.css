@@ -1,0 +1,211 @@
+/* assets/css/components/academic-path.css */
+
+@layer components {
+  .path-header-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+    padding: 0 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .path-header-wrapper {
+      flex-direction: row;
+    }
+  }
+
+  .path-title {
+    font-size: 3rem;
+    font-weight: 900;
+    font-family: var(--font-display);
+    color: var(--color-text-main);
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.025em;
+  }
+
+  .path-counter-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .path-counter-line {
+    width: 3rem;
+    height: 0.375rem;
+    background-color: var(--color-primary);
+    border-radius: var(--radius-full);
+    opacity: 0.8;
+  }
+
+  .path-counter-text {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .path-tabs {
+    display: none;
+    background-color: rgba(226, 232, 240, 0.5);
+    padding: 0.375rem;
+    border-radius: var(--radius-2xl);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+    width: 100%;
+  }
+
+  .dark .path-tabs, .midnight .path-tabs {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  @media (min-width: 768px) {
+    .path-tabs {
+      display: inline-flex;
+      width: auto;
+    }
+  }
+
+  .path-tab {
+    position: relative;
+    padding: 0.625rem 1.25rem;
+    border-radius: var(--radius-xl);
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--color-text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    flex: 1;
+    transition: all 0.2s;
+  }
+
+  @media (min-width: 1024px) {
+    .path-tab {
+      flex: none;
+    }
+  }
+
+  .path-tab:hover {
+    color: var(--color-text-main);
+  }
+
+  .path-tab.active {
+    color: var(--color-text-main);
+    background-color: var(--color-bg-elevated);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .tab-icon-indigo { color: var(--color-primary); }
+  .tab-icon-teal { color: var(--color-accent); }
+  .tab-icon-amber { color: var(--color-warning); }
+  .tab-icon-rose { color: var(--color-error); }
+  .tab-icon-purple { color: var(--color-secondary); }
+
+  .path-mobile-select-wrapper {
+    width: 100%;
+    position: relative;
+  }
+
+  @media (min-width: 768px) {
+    .path-mobile-select-wrapper {
+      display: none;
+    }
+  }
+
+  .path-mobile-select {
+    appearance: none;
+    width: 100%;
+    background-color: var(--color-bg-elevated);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: 0.875rem 1rem;
+    padding-right: 2.5rem;
+    color: var(--color-text-main);
+    font-weight: 700;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .path-mobile-select:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--color-primary) 30%, transparent);
+  }
+
+  .select-chevron {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-text-muted);
+    pointer-events: none;
+    font-size: 0.875rem;
+  }
+
+  .path-search-group {
+    position: relative;
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    .path-search-group {
+      width: 20rem;
+    }
+  }
+
+  .path-search-input {
+    width: 100%;
+    padding: 1rem 3rem 1rem 3rem;
+    border-radius: var(--radius-2xl);
+    border: 1px solid var(--color-border);
+    background-color: var(--color-bg-elevated);
+    color: var(--color-text-main);
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.2s;
+  }
+
+  .path-search-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--color-primary) 25%, transparent);
+  }
+
+  .path-search-group .search-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-text-muted);
+    transition: color 0.2s;
+    pointer-events: none;
+  }
+
+  .path-search-input:focus ~ .search-icon {
+    color: var(--color-primary);
+  }
+
+  .path-search-clear {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-text-muted);
+    padding: 0.25rem;
+    border-radius: var(--radius-full);
+  }
+
+  .path-search-clear:hover {
+    color: var(--color-error);
+  }
+
+  .path-search-clear.hidden {
+    display: none;
+  }
+}

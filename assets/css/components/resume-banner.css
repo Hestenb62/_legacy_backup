@@ -1,0 +1,133 @@
+/* assets/css/components/resume-banner.css */
+
+@layer components {
+  .resume-banner-wrapper {
+    margin-bottom: 5rem;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .resume-banner-wrapper:hover .resume-banner-glow {
+    opacity: 1;
+    transition-duration: 0.2s;
+  }
+
+  .resume-banner-glow {
+    display: none;
+  }
+
+  .resume-banner-card {
+    position: relative;
+    background-color: var(--color-bg-elevated);
+    border-radius: 3rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-xl);
+    overflow: hidden;
+  }
+
+  @media (min-width: 768px) {
+    .resume-banner-card {
+      flex-direction: row;
+    }
+  }
+
+  .resume-wave-bg {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    opacity: 0.05;
+    pointer-events: none;
+    color: var(--color-text-main);
+  }
+
+  .resume-content-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    .resume-content-left {
+      flex-direction: row;
+      text-align: left;
+    }
+  }
+
+  .resume-icon-box {
+    width: 5rem;
+    height: 5rem;
+    background-color: color-mix(in srgb, var(--color-primary) 10%, transparent);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+    font-size: 1.875rem;
+    flex-shrink: 0;
+    transition: transform 0.3s;
+  }
+
+  .resume-banner-wrapper:hover .resume-icon-box {
+    transform: scale(1.1);
+  }
+
+  .resume-text-box {
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    .resume-text-box {
+      text-align: left;
+    }
+  }
+
+  .resume-title {
+    font-size: 1.875rem;
+    font-weight: 900;
+    margin-bottom: 0.25rem;
+  }
+
+  .resume-subtitle {
+    font-size: 1.125rem;
+    color: var(--color-text-muted);
+    font-weight: 500;
+  }
+
+  .resume-level-name {
+    color: var(--color-primary);
+    font-weight: 700;
+  }
+
+  .resume-btn {
+    background-color: var(--color-text-main);
+    color: var(--color-bg-base);
+    padding: 1rem 2.5rem;
+    border-radius: var(--radius-md);
+    font-weight: 900;
+    font-size: 1.125rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: transform 0.2s;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .resume-btn:hover {
+    transform: translateY(-0.25rem);
+  }
+
+  .resume-btn:active {
+    transform: scale(0.95);
+  }
+
+  .resume-btn-icon {
+    opacity: 0.7;
+  }
+}
