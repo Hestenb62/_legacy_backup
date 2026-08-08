@@ -210,17 +210,308 @@
         // Feature Inits
 
 
-        // Timer
-        let iv, time = 1500;
-        const d = document.getElementById('timer-display'), ts = document.getElementById('timer-start'), tr = document.getElementById('timer-reset');
-        if (d && ts) {
-            const up = () => d.textContent = `${Math.floor(time/60)}:${(time%60).toString().padStart(2,'0')}`;
-            ts.onclick = () => {
-                if (iv) { clearInterval(iv); iv = null; ts.innerText = 'Start'; }
-                else { ts.innerText = 'Pause'; iv = setInterval(() => { time--; up(); if(time<=0){ clearInterval(iv); window.showMessageBox('Time up!'); ts.innerText = 'Start'; } }, 1000); }
-            };
-            tr.onclick = () => { clearInterval(iv); iv = null; time = 1500; up(); ts.innerText = 'Start'; };
+        // --- Study Companion (Timer, Stopwatch, Alarms) ---
+        const timerBackdrop = document.getElementById('timer-backdrop-close');
+        const timerCloseFooter = document.getElementById('timer-close-footer');
+
+        // Tab Switching
+        const tabSlider = document.getElementById('timer-tab-slider');
+        const tabPomodoro = document.getElementById('tab-btn-pomodoro');
+        const tabStopwatch = document.getElementById('tab-btn-stopwatch');
+        const tabReminders = document.getElementById('tab-btn-reminders');
+        const panePomodoro = document.getElementById('pane-pomodoro');
+        const paneStopwatch = document.getElementById('pane-stopwatch');
+        const paneReminders = document.getElementById('pane-reminders');
+
+        const switchTab = (tabName, index) => {
+            if (tabSlider) {
+                tabSlider.style.transform = `translateX(${index * 8}rem)`;
+            }
+            [tabPomodoro, tabStopwatch, tabReminders].forEach((btn, idx) => {
+                if (btn) btn.classList.toggle('active', idx === index);
+            });
+            if (panePomodoro) panePomodoro.style.display = tabName === 'pomodoro' ? 'block' : 'none';
+            if (paneStopwatch) paneStopwatch.style.display = tabName === 'stopwatch' ? 'block' : 'none';
+            if (paneReminders) paneReminders.style.display = tabName === 'reminders' ? 'block' : 'none';
+        };
+
+        if (tabPomodoro) tabPomodoro.onclick = () => switchTab('pomodoro', 0);
+        if (tabStopwatch) tabStopwatch.onclick = () => switchTab('stopwatch', 1);
+        if (tabReminders) tabReminders.onclick = () => switchTab('reminders', 2);
+
+        // Sound player
+        function playChime() {
+            try {
+                const ctx = new (window.AudioContext || window.webkitAudioContext)();
+                const osc = ctx.createOscillator();
+                const gain = ctx.createGain();
+                osc.connect(gain);
+                gain.connect(ctx.destination);
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(587.33, ctx.currentTime);
+                osc.frequency.setValueAtTime(880, ctx.currentTime + 0.15);
+                gain.gain.setValueAtTime(0.5, ctx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.6);
+                osc.start();
+                osc.stop(ctx.currentTime + 0.6);
+            } catch(e){}
         }
+
+        // 1. Pomodoro Study Timer Logic
+        let pomodoroInterval;
+        let studyTimeTotal = 1500; 
+        let breakTimeTotal = 300;
+        let pomodoroTimeLeft = studyTimeTotal;
+        let isPomodoroRunning = false;
+        let pomodoroCurrentMode = 'study'; 
+
+        const pomodoroDisplay = document.getElementById('pomodoro-display');
+        const pomodoroState = document.getElementById('pomodoro-state');
+        const pomodoroStartBtn = document.getElementById('pomodoro-start');
+        const pomodoroResetBtn = document.getElementById('pomodoro-reset');
+        const assessmentCheckbox = document.getElementById('timer-assessment-mode');
+
+        if (assessmentCheckbox) {
+            if (window.location.pathname.includes('/assessment/') || document.getElementById('quiz-container')) {
+                assessmentCheckbox.checked = true;
+            }
+        }
+
+        const updatePomodoroDisplay = () => {
+            if (pomodoroDisplay) {
+                const m = Math.floor(pomodoroTimeLeft / 60);
+                const s = pomodoroTimeLeft % 60;
+                pomodoroDisplay.textContent = `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+            }
+        };
+
+        const togglePomodoro = () => {
+            if (isPomodoroRunning) {
+                clearInterval(pomodoroInterval);
+                isPomodoroRunning = false;
+                if (pomodoroStartBtn) pomodoroStartBtn.textContent = 'Start';
+            } else {
+                isPomodoroRunning = true;
+                if (pomodoroStartBtn) pomodoroStartBtn.textContent = 'Pause';
+                pomodoroInterval = setInterval(() => {
+                    pomodoroTimeLeft--;
+                    updatePomodoroDisplay();
+
+                    if (pomodoroTimeLeft <= 0) {
+                        clearInterval(pomodoroInterval);
+                        isPomodoroRunning = false;
+                        if (pomodoroStartBtn) pomodoroStartBtn.textContent = 'Start';
+                        playChime();
+
+                        if (pomodoroCurrentMode === 'study') {
+                            const isTest = assessmentCheckbox && assessmentCheckbox.checked;
+                            if (isTest) {
+                                window.showMessageBox("Study session completed! Great job focusing during your assessment.");
+                                resetPomodoro();
+                            } else {
+                                window.showMessageBox("Time for a break! Take a few minutes to stretch.");
+                                pomodoroCurrentMode = 'break';
+                                pomodoroTimeLeft = breakTimeTotal;
+                                if (pomodoroState) pomodoroState.textContent = 'Break Session';
+                                if (pomodoroState) pomodoroState.style.color = 'var(--color-success)';
+                                togglePomodoro(); 
+                            }
+                        } else {
+                            window.showMessageBox("Break ended! Ready to start studying again?");
+                            pomodoroCurrentMode = 'study';
+                            pomodoroTimeLeft = studyTimeTotal;
+                            if (pomodoroState) pomodoroState.textContent = 'Study Session';
+                            if (pomodoroState) pomodoroState.style.color = 'var(--color-primary)';
+                            updatePomodoroDisplay();
+                        }
+                    }
+                }, 1000);
+            }
+        };
+
+        const resetPomodoro = () => {
+            clearInterval(pomodoroInterval);
+            isPomodoroRunning = false;
+            pomodoroCurrentMode = 'study';
+            pomodoroTimeLeft = studyTimeTotal;
+            if (pomodoroStartBtn) pomodoroStartBtn.textContent = 'Start';
+            if (pomodoroState) pomodoroState.textContent = 'Study Session';
+            if (pomodoroState) pomodoroState.style.color = 'var(--color-primary)';
+            updatePomodoroDisplay();
+        };
+
+        if (pomodoroStartBtn) pomodoroStartBtn.onclick = togglePomodoro;
+        if (pomodoroResetBtn) pomodoroResetBtn.onclick = resetPomodoro;
+
+        document.querySelectorAll('.timer-preset-btn').forEach(btn => {
+            btn.onclick = () => {
+                document.querySelectorAll('.timer-preset-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                studyTimeTotal = parseInt(btn.getAttribute('data-time'));
+                breakTimeTotal = parseInt(btn.getAttribute('data-break'));
+                resetPomodoro();
+            };
+        });
+
+        // 2. Stopwatch Logic
+        let stopwatchInterval;
+        let stopwatchTime = 0; 
+        let isStopwatchRunning = false;
+        let lapCount = 0;
+
+        const stopwatchDisplay = document.getElementById('stopwatch-display');
+        const stopwatchStartBtn = document.getElementById('stopwatch-start');
+        const stopwatchLapBtn = document.getElementById('stopwatch-lap');
+        const stopwatchResetBtn = document.getElementById('stopwatch-reset');
+        const lapsList = document.getElementById('stopwatch-laps');
+
+        const updateStopwatchDisplay = () => {
+            if (stopwatchDisplay) {
+                const totalSec = Math.floor(stopwatchTime / 100);
+                const ms = stopwatchTime % 100;
+                const m = Math.floor(totalSec / 60);
+                const s = totalSec % 60;
+                stopwatchDisplay.textContent = `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}.${ms.toString().padStart(2, '0')}`;
+            }
+        };
+
+        const toggleStopwatch = () => {
+            if (isStopwatchRunning) {
+                clearInterval(stopwatchInterval);
+                isStopwatchRunning = false;
+                if (stopwatchStartBtn) stopwatchStartBtn.textContent = 'Start';
+            } else {
+                isStopwatchRunning = true;
+                if (stopwatchStartBtn) stopwatchStartBtn.textContent = 'Pause';
+                stopwatchInterval = setInterval(() => {
+                    stopwatchTime++;
+                    updateStopwatchDisplay();
+                }, 10);
+            }
+        };
+
+        const resetStopwatch = () => {
+            clearInterval(stopwatchInterval);
+            isStopwatchRunning = false;
+            stopwatchTime = 0;
+            lapCount = 0;
+            if (stopwatchStartBtn) stopwatchStartBtn.textContent = 'Start';
+            if (lapsList) lapsList.innerHTML = '<div style="color: var(--color-text-muted); text-align: center; padding: 0.5rem 0;">No laps recorded</div>';
+            updateStopwatchDisplay();
+        };
+
+        const recordLap = () => {
+            if (!isStopwatchRunning) return;
+            lapCount++;
+            if (lapsList) {
+                if (lapCount === 1) lapsList.innerHTML = ''; 
+                const lapEl = document.createElement('div');
+                lapEl.style.display = 'flex';
+                lapEl.style.justifyContent = 'space-between';
+                lapEl.style.padding = '0.35rem 0';
+                lapEl.style.borderBottom = '1px solid var(--color-border)';
+                
+                const totalSec = Math.floor(stopwatchTime / 100);
+                const ms = stopwatchTime % 100;
+                const m = Math.floor(totalSec / 60);
+                const s = totalSec % 60;
+                const timeStr = `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}.${ms.toString().padStart(2, '0')}`;
+
+                lapEl.innerHTML = `<strong>Lap ${lapCount}</strong> <span>${timeStr}</span>`;
+                lapsList.insertBefore(lapEl, lapsList.firstChild);
+            }
+        };
+
+        if (stopwatchStartBtn) stopwatchStartBtn.onclick = toggleStopwatch;
+        if (stopwatchResetBtn) stopwatchResetBtn.onclick = resetStopwatch;
+        if (stopwatchLapBtn) stopwatchLapBtn.onclick = recordLap;
+
+        // 3. Quick Alarms Logic
+        let activeAlarms = [];
+        let alarmsInterval;
+        const alarmMinsInput = document.getElementById('alarm-custom-mins');
+        const alarmCustomSetBtn = document.getElementById('alarm-custom-set');
+        const activeAlarmsList = document.getElementById('active-alarms-list');
+
+        const updateAlarmsList = () => {
+            if (!activeAlarmsList) return;
+            if (activeAlarms.length === 0) {
+                activeAlarmsList.innerHTML = '<div style="color: var(--color-text-muted); text-align: center;">No active alarms set</div>';
+                clearInterval(alarmsInterval);
+                alarmsInterval = null;
+                return;
+            }
+
+            activeAlarmsList.innerHTML = '';
+            activeAlarms.forEach((alarm, index) => {
+                const item = document.createElement('div');
+                item.style.display = 'flex';
+                item.style.justifyContent = 'space-between';
+                item.style.alignItems = 'center';
+                item.style.padding = '0.5rem 0';
+                item.style.borderBottom = '1px solid var(--color-border)';
+
+                const m = Math.floor(alarm.timeLeft / 60);
+                const s = alarm.timeLeft % 60;
+                const remStr = `${m}m ${s.toString().padStart(2, '0')}s left`;
+
+                item.innerHTML = `<div><strong>Alarm (${Math.round(alarm.duration/60)}m)</strong> - <span style="color: var(--color-secondary); font-weight: 700;">${remStr}</span></div>
+                                  <button class="scratchpad-clear-btn" style="color: var(--color-error); padding: 0.25rem 0.5rem;" onclick="removeAlarm(${index})"><i class="fas fa-trash-alt"></i></button>`;
+                activeAlarmsList.appendChild(item);
+            });
+        };
+
+        window.removeAlarm = (index) => {
+            activeAlarms.splice(index, 1);
+            updateAlarmsList();
+        };
+
+        const addAlarm = (seconds) => {
+            activeAlarms.push({
+                duration: seconds,
+                timeLeft: seconds
+            });
+            updateAlarmsList();
+
+            if (!alarmsInterval) {
+                alarmsInterval = setInterval(() => {
+                    activeAlarms.forEach((alarm, index) => {
+                        alarm.timeLeft--;
+                        if (alarm.timeLeft <= 0) {
+                            playChime();
+                            window.showMessageBox(`Reminder! Your ${Math.round(alarm.duration/60)} minute timer has finished.`);
+                            activeAlarms.splice(index, 1);
+                        }
+                    });
+                    updateAlarmsList();
+                }, 1000);
+            }
+        };
+
+        document.querySelectorAll('.alarm-preset-btn').forEach(btn => {
+            btn.onclick = () => {
+                const sec = parseInt(btn.getAttribute('data-alarm'));
+                addAlarm(sec);
+            };
+        });
+
+        if (alarmCustomSetBtn) {
+            alarmCustomSetBtn.onclick = () => {
+                const mins = parseInt(alarmMinsInput.value);
+                if (mins > 0) {
+                    addAlarm(mins * 60);
+                    alarmMinsInput.value = '';
+                }
+            };
+        }
+
+        // Close Panel Actions
+        const closeTimerPanel = () => {
+            const panel = document.getElementById('timer-panel');
+            if (panel) panel.classList.remove('active');
+        };
+        if (timerBackdrop) timerBackdrop.onclick = closeTimerPanel;
+        if (timerCloseFooter) timerCloseFooter.onclick = closeTimerPanel;
 
         // Notes (Scratchpad with Templates)
         const n = document.getElementById('quick-notes-area');
@@ -322,17 +613,69 @@
             });
         }
 
-        // Citation
+        // Citation Generator
         const cb = document.getElementById('cite-gen');
-        if (cb) cb.onclick = () => {
-             const title = document.getElementById('cite-title').value || document.title || 'Untitled Page';
-             const url = window.location.href;
-             const date = new Date();
-             const dateString = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-             const apa = `Hesten's Learning. (${date.getFullYear()}). ${title}. Retrieved ${dateString}, from ${url}`;
-             const mla = `"${title}." Hesten's Learning. ${date.getFullYear()}, ${url}. Accessed ${dateString}.`;
-             document.getElementById('cite-result').value = `APA:\n${apa}\n\nMLA:\n${mla}`;
-        };
+        const citationBackdrop = document.getElementById('citation-backdrop-close');
+        const citationCloseFooter = document.getElementById('citation-close-footer');
+
+        if (cb) {
+            // Auto fill current page title on load
+            const titleInput = document.getElementById('cite-title');
+            if (titleInput && !titleInput.value) {
+                titleInput.value = document.title.replace(" - Hesten's Learning", "");
+            }
+
+            cb.onclick = () => {
+                const title = document.getElementById('cite-title').value || document.title || 'Untitled Page';
+                const author = document.getElementById('cite-author').value || "Hesten's Learning";
+                const publisher = document.getElementById('cite-publisher').value || "Hesten's Learning";
+                const year = document.getElementById('cite-year').value || new Date().getFullYear();
+                const url = window.location.href;
+                const date = new Date();
+                const dateString = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+                
+                // 1. APA Style
+                const apa = `${author}. (${year}). *${title}*. ${publisher}. Retrieved ${dateString}, from ${url}`;
+                // 2. MLA Style
+                const mla = `"${title}." *${publisher}*, ${author}, ${year}, ${url}. Accessed ${dateString}.`;
+                // 3. Chicago Style
+                const chicago = `"${title}." ${publisher}. ${year}. Accessed ${dateString}. ${url}.`;
+                // 4. Harvard Style
+                const harvard = `${author}, ${year}. *${title}*. Available at: &lt;${url}&gt; [Accessed ${dateString}].`;
+
+                document.getElementById('cite-apa-text').innerHTML = apa;
+                document.getElementById('cite-mla-text').innerHTML = mla;
+                document.getElementById('cite-chicago-text').innerHTML = chicago;
+                document.getElementById('cite-harvard-text').innerHTML = harvard;
+            };
+
+            // Copy Action
+            document.querySelectorAll('.copy-cite-btn').forEach(btn => {
+                btn.onclick = () => {
+                    const targetId = btn.getAttribute('data-target');
+                    const textBox = document.getElementById(targetId);
+                    if (textBox) {
+                        navigator.clipboard.writeText(textBox.textContent).then(() => {
+                            const origText = btn.innerHTML;
+                            btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                            btn.style.color = 'var(--color-success)';
+                            setTimeout(() => {
+                                btn.innerHTML = origText;
+                                btn.style.color = '';
+                            }, 1500);
+                        });
+                    }
+                };
+            });
+
+            // Backdrop and Footer Close
+            const closePanel = () => {
+                const panel = document.getElementById('citation-panel');
+                if (panel) panel.classList.remove('active');
+            };
+            if (citationBackdrop) citationBackdrop.onclick = closePanel;
+            if (citationCloseFooter) citationCloseFooter.onclick = closePanel;
+        }
 
         // Scroll Top
         const sb = document.getElementById('scroll-to-top');
