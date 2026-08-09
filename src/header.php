@@ -54,9 +54,8 @@ $currentUser = getCurrentUser();
 
 
     <style>
-        /* CSS Cascade Layers Definition */
-        @layer legacy, reset, tokens, base, primitives, components, utilities, overrides;
-        @import url("/assets/css/styles.css") layer(legacy);
+        /* CSS Cascade Layers Definition (Vanilla CSS Architecture) */
+        @layer reset, tokens, base, primitives, components, utilities, overrides;
     </style>
 
     <!-- Custom Modern Styles (Vanilla CSS Architecture) -->

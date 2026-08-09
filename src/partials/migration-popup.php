@@ -1,5 +1,5 @@
 <?php
-// TailwindCSS to VanillaCSS Migration Notification Popup
+// Migration notification popup (kept for backward-compat; auto-shows only on older sessions)
 ?>
 
 <div id="migration-modal" class="migration-overlay hidden" aria-modal="true" role="dialog" aria-labelledby="migration-title">
@@ -30,7 +30,7 @@
 
             <!-- Title -->
             <h3 class="migration-title" id="migration-title">
-                Style Migration in Progress
+                Style Migration Complete
             </h3>
 
             <!-- Subtitle/Badges -->
@@ -48,19 +48,14 @@
 
             <!-- Description -->
             <div class="migration-desc">
-                <p>We are currently migrating our user interface styling from <strong>TailwindCSS</strong> to a high-performance <strong>Vanilla CSS</strong> architecture to improve page speeds and codebase maintainability.</p>
-                
-                <p class="migration-alert-box">
-                    <i class="fas fa-exclamation-triangle alert-icon"></i>
-                    <span><strong>Note:</strong> Some layout or style inconsistencies may occur during this process. The site administrator is actively working to resolve these errors. Thank you for your patience!</span>
-                </p>
+                <p>This site is now running on a fully <strong>Vanilla CSS</strong> architecture. The Tailwind dependency has been removed in favor of a hand-authored, cascade-layered stylesheet system for better performance and maintainability.</p>
             </div>
         </div>
 
         <!-- Footer / Actions -->
         <div class="migration-footer">
             <button onclick="dismissMigrationModal()" class="migration-confirm-btn" id="migration-confirm-btn">
-                Got it, thanks!
+                Awesome!
             </button>
         </div>
     </div>
