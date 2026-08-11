@@ -13,4 +13,4 @@ if ($chapterFile !== '') {
     return;
 }
 
-include __DIR__ . '/../pg84-images.html';
+include __DIR__ . '/chapter-1.php';
