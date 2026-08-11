@@ -43,7 +43,7 @@
             "description": "A dystopian social science fiction novel and cautionary tale. The story follows the life of Winston Smith, a low-ranking member of 'the Party'.",
             "pdf-link": "https://cdn.hestena62.com/library/Nineteen%20eighty-four%20-%20Goerge%20Orwell.pdf",
             "epub-link": "https://cdn.hestena62.com/library/Nineteen%20eighty-four%20-%20George%20Orwell.epub",
-            "read-online-link": "/library/read/1984.php",
+            "read-online-link": "/library/read/reader.php?book=1984",
             "txt-link": "https://cdn.hestena62.com/library/Nineteen%20eighty-four%20-%20George%20Orwell.txt",
             "mobi-link": "https://cdn.hestena62.com/library/Nineteen%20eighty-four%20-%20George%20Orwell.mobi",
             "word-link": "https://cdn.hestena62.com/library/Nineteen%20eighty-four%20-%20George%20Orwell.docx",
@@ -74,7 +74,7 @@
             "description": "The story of Victor Frankenstein, a young scientist who creates a sapient creature in an unorthodox scientific experiment.",
             "pdf-link": "https://www.gutenberg.org/ebooks/84",
             "epub-link": "https://www.gutenberg.org/ebooks/84",
-            "read-online-link": "/library/reader.php?=frankenstein",
+            "read-online-link": "/library/read/reader.php?book=frankenstein",
             "lexile": "1170L",
             "grade": "Grades 9-12",
             "local-file": "pg84-images.html"
