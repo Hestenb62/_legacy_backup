@@ -13,4 +13,4 @@ if ($chapterFile !== '') {
     return;
 }
 
-include __DIR__ . '/chapter-1.php';
+include __DIR__ . '/chapter-1.php'; 
