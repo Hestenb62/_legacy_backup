@@ -1195,9 +1195,14 @@ include __DIR__ . '/../../../src/header.php';
           <p style="color: var(--color-text-secondary); font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; margin: 0.25rem 0 0 0;">Current Chapter Vocabulary</p>
         </div>
       </div>
-      <button id="close-vocab-modal" class="modal-card-close-btn">
-        <i class="fas fa-times"></i>
-      </button>
+      <div style="display: flex; align-items: center; gap: 0.75rem;">
+        <button id="download-vocab-btn" class="tooltip-btn" style="background: var(--color-secondary); padding: 0.5rem 1rem; border-radius: 9999px; font-size: 0.8rem; font-weight: 700; border: none; cursor: pointer; display: inline-flex; align-items: center; gap: 0.4rem;" title="Download word list as TXT">
+          <i class="fas fa-download"></i> Download TXT
+        </button>
+        <button id="close-vocab-modal" class="modal-card-close-btn">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
     </div>
     <div id="vocab-list-container" class="vocab-list">
       <!-- Injected Vocab Cards -->
@@ -1477,6 +1482,8 @@ include __DIR__ . '/../../../src/header.php';
     const vocabBtn = document.getElementById('open-vocab-btn');
     const closeVocabBtn = document.getElementById('close-vocab-modal');
     const vocabList = document.getElementById('vocab-list-container');
+    const downloadVocabBtn = document.getElementById('download-vocab-btn');
+    let activeVocabList = [];
 
     if (vocabModal && vocabBtn && closeVocabBtn && vocabList) {
       vocabBtn.onclick = () => {
@@ -1500,6 +1507,11 @@ include __DIR__ . '/../../../src/header.php';
           });
 
           const vocabArray = Object.values(vocabMap).sort((a,b) => a.term.localeCompare(b.term));
+          activeVocabList = vocabArray;
+
+          if (downloadVocabBtn) {
+              downloadVocabBtn.style.display = vocabArray.length === 0 ? 'none' : 'inline-flex';
+          }
 
           if(vocabArray.length === 0) {
               vocabList.innerHTML = '<div style="text-align: center; padding: 2rem; color: var(--color-text-secondary);"><i class="fas fa-ghost" style="font-size: 2.5rem; margin-bottom: 1rem; opacity: 0.5;"></i><p>No specialized vocabulary found in this chapter.</p></div>';
@@ -1520,6 +1532,27 @@ include __DIR__ . '/../../../src/header.php';
       closeVocabBtn.onclick = () => {
           vocabModal.classList.add('hidden');
       };
+
+      if (downloadVocabBtn) {
+          downloadVocabBtn.onclick = () => {
+              if (activeVocabList.length === 0) return;
+              let txtContent = `1984 - Chapter ${currentChapter} Vocabulary List\n`;
+              txtContent += `==================================================\n\n`;
+              activeVocabList.forEach((v, idx) => {
+                  txtContent += `${idx + 1}. ${v.term.toUpperCase()}\n`;
+                  txtContent += `   Definition: ${v.defText}\n\n`;
+              });
+              
+              const blob = new Blob([txtContent], { type: 'text/plain;charset=utf-8;' });
+              const link = document.createElement('a');
+              link.href = URL.createObjectURL(blob);
+              link.download = `1984_Chapter_${currentChapter}_Vocabulary.txt`;
+              link.style.display = 'none';
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+          };
+      }
     }
 
     // Init
