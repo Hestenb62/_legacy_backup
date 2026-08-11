@@ -1,4 +1,12 @@
 <?php
+$verifyFile = __DIR__ . '/assets/verify.php';
+$expectedHash = '258bca037e128c7e5e20159d9821df36e68e42cddd91127251214f26a80da6c5';
+
+if (!file_exists($verifyFile) || strtolower(hash_file('sha256', $verifyFile)) !== $expectedHash) {
+    http_response_code(403);
+    die("Error: Integrity check failed. The verification file is missing or has been modified.");
+}
+
 $pageTitle = "Hesten's Learning"; // SEO Title
 include 'src/header.php';
 

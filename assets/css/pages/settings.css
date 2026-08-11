@@ -1,43 +1,43 @@
 /* assets/css/pages/settings.css */
 
 @layer components {
-  .settings-header {
+  .settings-page .settings-header {
     text-align: center;
     margin-bottom: 2.5rem;
     animation: rise-in 0.5s ease-out forwards;
   }
 
   @media(min-width: 768px) {
-    .settings-header {
+    .settings-page .settings-header {
       text-align: left;
     }
   }
 
-  .settings-layout {
+  .settings-page .settings-layout {
     display: flex;
     flex-direction: column;
     gap: 2rem;
   }
 
   @media(min-width: 1024px) {
-    .settings-layout {
+    .settings-page .settings-layout {
       flex-direction: row;
     }
   }
 
-  .settings-sidebar {
+  .settings-page .settings-sidebar {
     width: 100%;
     animation: rise-in 0.5s ease-out forwards;
     animation-delay: 0.1s;
   }
 
   @media(min-width: 1024px) {
-    .settings-sidebar {
+    .settings-page .settings-sidebar {
       width: 25%;
     }
   }
 
-  .settings-nav-panel {
+  .settings-page .settings-nav-panel {
     position: sticky;
     top: 6rem;
     background-color: var(--color-bg-surface);
@@ -47,7 +47,98 @@
     border: 1px solid var(--color-border);
   }
 
-  .settings-main-area {
+  .settings-page .settings-nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .settings-page .settings-nav-link {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem;
+    border-radius: var(--radius-xl);
+    color: var(--color-text-main);
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .settings-page .settings-nav-link:hover {
+    background-color: color-mix(in srgb, var(--color-primary) 10%, transparent);
+    transform: translateX(4px);
+  }
+
+  .settings-page .settings-nav-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.75rem;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .settings-page .settings-nav-link:hover .settings-nav-icon {
+    transform: scale(1.1);
+  }
+
+  /* Navigation theme-specific icons */
+  .settings-page .settings-nav-icon-blue {
+    background-color: #dbeafe;
+    color: #2563eb;
+  }
+  [data-theme="dark"] .settings-page .settings-nav-icon-blue,
+  [data-theme="midnight"] .settings-page .settings-nav-icon-blue {
+    background-color: rgba(37, 99, 235, 0.2);
+    color: #93c5fd;
+  }
+
+  .settings-page .settings-nav-icon-emerald {
+    background-color: #d1fae5;
+    color: #059669;
+  }
+  [data-theme="dark"] .settings-page .settings-nav-icon-emerald,
+  [data-theme="midnight"] .settings-page .settings-nav-icon-emerald {
+    background-color: rgba(5, 150, 105, 0.2);
+    color: #6ee7b7;
+  }
+
+  .settings-page .settings-nav-icon-purple {
+    background-color: #f3e8ff;
+    color: #7c3aed;
+  }
+  [data-theme="dark"] .settings-page .settings-nav-icon-purple,
+  [data-theme="midnight"] .settings-page .settings-nav-icon-purple {
+    background-color: rgba(124, 58, 237, 0.2);
+    color: #c084fc;
+  }
+
+  .settings-page .settings-nav-icon-teal {
+    background-color: #ccfbf1;
+    color: #0d9488;
+  }
+  [data-theme="dark"] .settings-page .settings-nav-icon-teal,
+  [data-theme="midnight"] .settings-page .settings-nav-icon-teal {
+    background-color: rgba(13, 148, 136, 0.2);
+    color: #5eead4;
+  }
+
+  .settings-page .settings-nav-icon-rose {
+    background-color: #ffe4e6;
+    color: #e11d48;
+  }
+  [data-theme="dark"] .settings-page .settings-nav-icon-rose,
+  [data-theme="midnight"] .settings-page .settings-nav-icon-rose {
+    background-color: rgba(225, 29, 72, 0.2);
+    color: #fda4af;
+  }
+
+  .settings-page .settings-main-area {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -55,12 +146,12 @@
   }
 
   @media(min-width: 1024px) {
-    .settings-main-area {
+    .settings-page .settings-main-area {
       width: 50%;
     }
   }
 
-  .settings-section {
+  .settings-page .settings-section {
     background-color: var(--color-bg-surface);
     border-radius: var(--radius-2xl);
     box-shadow: var(--shadow-xl);
@@ -70,7 +161,7 @@
     animation: rise-in 0.5s ease-out forwards;
   }
 
-  .settings-section-title {
+  .settings-page .settings-section-title {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--color-text-main);
@@ -81,7 +172,11 @@
     padding-bottom: 0.75rem;
   }
 
-  .settings-label {
+  .settings-page .settings-section-title i {
+    margin-right: 0.75rem;
+  }
+
+  .settings-page .settings-label {
     display: block;
     font-size: 0.875rem;
     font-weight: 700;
@@ -91,49 +186,333 @@
     letter-spacing: 0.05em;
   }
 
-  .settings-grid-3 {
+  /* Grid Layouts */
+  .settings-page .settings-grid-3 {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
   }
 
   @media(min-width: 640px) {
-    .settings-grid-3 {
+    .settings-page .settings-grid-3 {
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
 
-  .settings-grid-2 {
+  .settings-page .settings-grid-2 {
     display: grid;
     grid-template-columns: 1fr;
     gap: 0.75rem;
   }
 
   @media(min-width: 640px) {
-    .settings-grid-2 {
+    .settings-page .settings-grid-2 {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
 
-  .settings-grid-2-gap {
+  .settings-page .settings-grid-2-gap {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
   }
 
   @media(min-width: 768px) {
-    .settings-grid-2-gap {
+    .settings-page .settings-grid-2-gap {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
 
-  .settings-slider-panel {
+  /* Card Buttons (Themes, Fonts, Curriculum) */
+  .settings-page .settings-card-btn {
+    position: relative;
+    padding: 1rem;
+    border-radius: var(--radius-2xl);
+    border: 2px solid var(--color-border);
+    background-color: var(--color-bg-base);
+    color: var(--color-text-main);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .settings-page .settings-card-btn:hover,
+  .settings-page .settings-card-btn[aria-selected="true"] {
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-md);
+  }
+
+  .settings-page .settings-card-btn i {
+    font-size: 1.875rem;
+    margin-bottom: 0.75rem;
+    display: block;
+  }
+
+  .settings-page .settings-card-btn::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 4px;
+    background-color: var(--color-primary);
+    transform: scaleX(0);
+    transition: transform 0.2s ease-in-out;
+    border-radius: 0 0 var(--radius-2xl) var(--radius-2xl);
+  }
+
+  .settings-page .settings-card-btn:hover::after,
+  .settings-page .settings-card-btn[aria-selected="true"]::after {
+    transform: scaleX(1);
+  }
+
+  /* Specific Theme Buttons */
+  .settings-page .theme-light-btn {
+    border-color: #cbd5e1;
+    background-color: #f8fafc;
+    color: #0f172a;
+  }
+  .settings-page .theme-light-btn i { color: #eab308; }
+
+  .settings-page .theme-dark-btn {
+    border-color: #334155;
+    background-color: #0f172a;
+    color: #ffffff;
+  }
+  .settings-page .theme-dark-btn i { color: #818cf8; }
+
+  .settings-page .theme-midnight-btn {
+    border-color: #1e3b8b;
+    background-color: #011627;
+    color: #d6deeb;
+  }
+  .settings-page .theme-midnight-btn i { color: #93c5fd; }
+  .settings-page .theme-midnight-btn::after {
+    background-color: #3b82f6;
+  }
+
+  .settings-page .theme-sepia-btn {
+    border-color: #fef3c7;
+    background-color: #f4ecd8;
+    color: #433422;
+  }
+  .settings-page .theme-sepia-btn i { color: #b45309; }
+  .settings-page .theme-sepia-btn::after {
+    background-color: #b45309;
+  }
+
+  .settings-page .theme-contrast-btn {
+    border-color: #000000;
+    background-color: #000000;
+    color: #eab308;
+  }
+  .settings-page .theme-contrast-btn i { color: #eab308; }
+  .settings-page .theme-contrast-btn::after {
+    background-color: #eab308;
+  }
+
+  /* Curriculum Cards */
+  .settings-page .settings-curriculum-btn {
+    position: relative;
+    padding: 1.25rem;
+    border-radius: var(--radius-2xl);
+    border: 2px solid var(--color-border);
+    background-color: var(--color-bg-surface);
+    color: var(--color-text-main);
+    text-align: left;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
+
+  .settings-page .settings-curriculum-btn:hover,
+  .settings-page .settings-curriculum-btn[aria-selected="true"] {
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-md);
+  }
+
+  .settings-page .settings-curriculum-btn[aria-selected="true"] {
+    background-color: var(--color-bg-base);
+  }
+
+  .settings-page .settings-curriculum-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .settings-page .settings-curriculum-icon {
+    width: 2rem;
+    height: 2rem;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .settings-page .curr-icon-indigo {
+    background-color: #e0e7ff;
+    color: #4f46e5;
+  }
+  [data-theme="dark"] .settings-page .curr-icon-indigo,
+  [data-theme="midnight"] .settings-page .curr-icon-indigo {
+    background-color: #1e1b4b;
+    color: #818cf8;
+  }
+
+  .settings-page .curr-icon-rose {
+    background-color: #ffe4e6;
+    color: #e11d48;
+  }
+  [data-theme="dark"] .settings-page .curr-icon-rose,
+  [data-theme="midnight"] .settings-page .curr-icon-rose {
+    background-color: #881337;
+    color: #fda4af;
+  }
+
+  .settings-page .curr-icon-emerald {
+    background-color: #d1fae5;
+    color: #059669;
+  }
+  [data-theme="dark"] .settings-page .curr-icon-emerald,
+  [data-theme="midnight"] .settings-page .curr-icon-emerald {
+    background-color: #064e3b;
+    color: #6ee7b7;
+  }
+
+  .settings-page .settings-curriculum-title {
+    font-weight: 800;
+    font-size: 0.875rem;
+  }
+
+  .settings-page .settings-curriculum-desc {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  .settings-page .settings-curriculum-btn::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 4px;
+    background-color: var(--color-primary);
+    transform: scaleX(0);
+    transition: transform 0.2s ease-in-out;
+    border-radius: 0 0 var(--radius-2xl) var(--radius-2xl);
+  }
+
+  .settings-page .settings-curriculum-btn:hover::after,
+  .settings-page .settings-curriculum-btn[aria-selected="true"]::after {
+    transform: scaleX(1);
+  }
+
+  /* Font buttons */
+  .settings-page .settings-font-btn {
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    text-align: left;
+    background-color: var(--color-bg-surface);
+    color: var(--color-text-main);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
+
+  .settings-page .settings-font-btn:hover,
+  .settings-page .settings-font-btn[aria-selected="true"] {
+    background-color: var(--color-bg-base);
+    border-color: var(--color-primary);
+  }
+
+  .settings-page .settings-font-btn[aria-selected="true"] .settings-font-name {
+    color: var(--color-primary);
+  }
+
+  .settings-page .settings-font-name {
+    font-weight: 700;
+    font-size: 1.125rem;
+    margin-bottom: 0.25rem;
+    display: block;
+    transition: color 0.2s;
+  }
+
+  .settings-page .settings-font-btn:hover .settings-font-name {
+    color: var(--color-primary);
+  }
+
+  .settings-page .settings-font-desc {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    display: block;
+  }
+
+  /* Sliders & Panels */
+  .settings-page .settings-slider-panel {
     background-color: var(--color-bg-base);
     padding: 1.25rem;
     border-radius: var(--radius-lg);
   }
 
-  .settings-toggle-card {
+  .settings-page .settings-slider-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+    margin-bottom: 1rem;
+  }
+
+  .settings-page .settings-slider-badge {
+    background-color: var(--color-primary);
+    color: #ffffff;
+    padding: 0.125rem 0.5rem;
+    border-radius: var(--radius-md);
+    font-size: 0.75rem;
+  }
+
+  .settings-page .settings-slider-input {
+    width: 100%;
+    height: 0.75rem;
+    background-color: #cbd5e1;
+    border-radius: var(--radius-lg);
+    appearance: none;
+    cursor: pointer;
+    accent-color: var(--color-primary);
+    transition: accent-color 0.2s;
+  }
+
+  [data-theme="dark"] .settings-page .settings-slider-input,
+  [data-theme="midnight"] .settings-page .settings-slider-input {
+    background-color: #334155;
+  }
+
+  .settings-page .settings-slider-input:hover {
+    accent-color: var(--color-secondary);
+  }
+
+  .settings-page .settings-slider-ticks {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    margin-top: 0.5rem;
+    font-weight: 500;
+  }
+
+  /* Toggles & Cards */
+  .settings-page .settings-toggle-card {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -143,20 +522,325 @@
     transition: background-color 0.2s;
   }
 
-  .settings-toggle-card:hover {
+  .settings-page .settings-toggle-card:hover {
     background-color: var(--color-bg-surface);
   }
 
-  .settings-preview-sidebar {
+  .settings-page .settings-toggle-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .settings-page .settings-toggle-icon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+  }
+
+  .settings-page .icon-blue { background-color: #dbeafe; color: #2563eb; }
+  [data-theme="dark"] .settings-page .icon-blue, [data-theme="midnight"] .settings-page .icon-blue { background-color: rgba(37, 99, 235, 0.2); color: #60a5fa; }
+
+  .settings-page .icon-purple { background-color: #f3e8ff; color: #7c3aed; }
+  [data-theme="dark"] .settings-page .icon-purple, [data-theme="midnight"] .settings-page .icon-purple { background-color: rgba(124, 58, 237, 0.2); color: #c084fc; }
+
+  .settings-page .icon-rose { background-color: #ffe4e6; color: #e11d48; }
+  [data-theme="dark"] .settings-page .icon-rose, [data-theme="midnight"] .settings-page .icon-rose { background-color: rgba(225, 29, 72, 0.2); color: #fda4af; }
+
+  .settings-page .icon-yellow { background-color: #fef9c3; color: #ca8a04; }
+  [data-theme="dark"] .settings-page .icon-yellow, [data-theme="midnight"] .settings-page .icon-yellow { background-color: rgba(202, 138, 4, 0.2); color: #fde047; }
+
+  .settings-page .icon-orange { background-color: #ffedd5; color: #ea580c; }
+  [data-theme="dark"] .settings-page .icon-orange, [data-theme="midnight"] .settings-page .icon-orange { background-color: rgba(234, 88, 12, 0.2); color: #fdba74; }
+
+  .settings-page .icon-green { background-color: #d1fae5; color: #059669; }
+  [data-theme="dark"] .settings-page .icon-green, [data-theme="midnight"] .settings-page .icon-green { background-color: rgba(5, 150, 105, 0.2); color: #6ee7b7; }
+
+  .settings-page .icon-indigo { background-color: #e0e7ff; color: #4f46e5; }
+  [data-theme="dark"] .settings-page .icon-indigo, [data-theme="midnight"] .settings-page .icon-indigo { background-color: rgba(79, 70, 229, 0.2); color: #818cf8; }
+
+  .settings-page .settings-toggle-title {
+    font-weight: 700;
+    color: var(--color-text-main);
+    display: block;
+    font-size: 1.125rem;
+  }
+
+  .settings-page .settings-toggle-desc {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+  }
+
+  /* Custom Switch Toggle */
+  .settings-page .settings-switch {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .settings-page .settings-switch-input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .settings-page .settings-switch-slider {
+    width: 3.5rem;
+    height: 2rem;
+    background-color: #cbd5e1;
+    border-radius: var(--radius-full);
+    position: relative;
+    transition: background-color 0.2s;
+  }
+
+  [data-theme="dark"] .settings-page .settings-switch-slider,
+  [data-theme="midnight"] .settings-page .settings-switch-slider {
+    background-color: #334155;
+  }
+
+  .settings-page .settings-switch-slider::after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #ffffff;
+    border-radius: var(--radius-full);
+    transition: transform 0.2s;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .settings-page .settings-switch-input:checked + .settings-page .settings-switch-slider {
+    background-color: var(--color-primary);
+  }
+
+  .settings-page .settings-switch-input:checked + .settings-page .settings-switch-slider::after {
+    transform: translateX(1.5rem);
+  }
+
+  .settings-page .settings-switch-input:focus-visible + .settings-page .settings-switch-slider {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+
+  /* Action Buttons & Reset */
+  .settings-page .settings-actions-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  @media (min-width: 640px) {
+    .settings-page .settings-actions-group {
+      flex-direction: row;
+    }
+  }
+
+  .settings-page .settings-btn {
+    flex: 1;
+    font-weight: 700;
+    padding: 1rem 1.5rem;
+    border-radius: var(--radius-2xl);
+    border: 1px solid transparent;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .settings-page .settings-btn:hover {
+    box-shadow: var(--shadow-md);
+  }
+
+  .settings-page .settings-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .settings-page .settings-btn-reset {
+    background-color: #fee2e2;
+    color: #b91c1c;
+    border-color: #fecaca;
+  }
+  .settings-page .settings-btn-reset:hover:not(:disabled) {
+    background-color: #fca5a5;
+  }
+
+  .settings-page .settings-btn-export {
+    background-color: var(--color-bg-base);
+    color: var(--color-text-main);
+    border-color: var(--color-border);
+  }
+  .settings-page .settings-btn-export:hover:not(:disabled) {
+    background-color: var(--color-border);
+  }
+
+  .settings-page .settings-btn-backup {
+    background-color: #f0fdf4;
+    color: #15803d;
+    border-color: #bbf7d0;
+  }
+  .settings-page .settings-btn-backup:hover:not(:disabled) {
+    background-color: #dcfce7;
+  }
+  [data-theme="dark"] .settings-page .settings-btn-backup,
+  [data-theme="midnight"] .settings-page .settings-btn-backup {
+    background-color: rgba(21, 128, 61, 0.15);
+    color: #4ade80;
+    border-color: #166534;
+  }
+
+  .settings-page .settings-btn-restore {
+    background-color: #eff6ff;
+    color: #1d4ed8;
+    border-color: #bfdbfe;
+  }
+  .settings-page .settings-btn-restore:hover:not(:disabled) {
+    background-color: #dbeafe;
+  }
+  [data-theme="dark"] .settings-page .settings-btn-restore,
+  [data-theme="midnight"] .settings-page .settings-btn-restore {
+    background-color: rgba(29, 78, 216, 0.15);
+    color: #60a5fa;
+    border-color: #1e40af;
+  }
+
+  /* Cloud Sync Box */
+  .settings-page .settings-sync-container {
+    border-top: 1px solid var(--color-border);
+    padding-top: 1.5rem;
+  }
+
+  .settings-page .settings-sync-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .settings-page .settings-sync-desc {
+    color: var(--color-text-muted);
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  /* Live Preview Sidebar */
+  .settings-page .settings-preview-sidebar {
     display: none;
-    width: 25%;
+    width: 100%;
     animation: rise-in 0.5s ease-out forwards;
     animation-delay: 0.6s;
   }
 
   @media(min-width: 1024px) {
-    .settings-preview-sidebar {
+    .settings-page .settings-preview-sidebar {
       display: block;
+      width: 25%;
     }
+  }
+
+  .settings-page .settings-sticky-wrapper {
+    position: sticky;
+    top: 6rem;
+  }
+
+  .settings-page .settings-preview-card {
+    background-color: var(--color-bg-surface);
+    padding: 2rem;
+    border-radius: var(--radius-3xl);
+    box-shadow: var(--shadow-xl);
+    border: 1px solid color-mix(in srgb, var(--color-primary) 20%, transparent);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .settings-page .settings-preview-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  }
+
+  .settings-page .settings-preview-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 0.5rem;
+  }
+
+  .settings-page .settings-preview-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .settings-page .settings-preview-heading {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+    line-height: 1.25;
+  }
+
+  .settings-page .settings-preview-body {
+    color: var(--color-text-muted);
+    line-height: 1.6;
+  }
+
+  .settings-page .settings-preview-link-box {
+    padding: 1rem;
+    background-color: color-mix(in srgb, var(--color-primary) 5%, transparent);
+    border-radius: var(--radius-xl);
+    border: 1px solid color-mix(in srgb, var(--color-primary) 10%, transparent);
+  }
+
+  .settings-page .settings-preview-link {
+    color: var(--color-primary);
+    font-weight: 700;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .settings-page .settings-preview-link:hover {
+    text-decoration: underline;
+  }
+
+  .settings-page .settings-preview-status {
+    margin-top: 1.5rem;
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+  }
+
+  .settings-page .settings-preview-status i {
+    color: var(--color-success);
+    margin-right: 0.25rem;
   }
 }
