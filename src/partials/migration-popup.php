@@ -30,14 +30,14 @@
 
             <!-- Title -->
             <h3 class="migration-title" id="migration-title">
-                Style Migration Complete
+                Style Migration in progress
             </h3>
 
             <!-- Subtitle/Badges -->
             <div class="migration-badges">
                 <span class="migration-badge badge-tailwind">
                     <i class="fab fa-css3-alt"></i> TailwindCSS
-                </span>
+                </span> 
                 <span class="migration-arrow-icon">
                     <i class="fas fa-long-arrow-alt-right"></i>
                 </span>
@@ -48,14 +48,15 @@
 
             <!-- Description -->
             <div class="migration-desc">
-                <p>This site is now running on a fully <strong>Vanilla CSS</strong> architecture. The Tailwind dependency has been removed in favor of a hand-authored, cascade-layered stylesheet system for better performance and maintainability.</p>
+                <p>This site will soon be running on a fully <strong>Vanilla CSS</strong> architecture. The Tailwind dependency will be removed in favor of a hand-authored, cascade-layered stylesheet system for better performance and maintainability.</p>
+                <p>During the migration there will be errors with the A11y settings and other site settings. These will be fixed in time. The last day of the migration is <strong>10.09.2026</strong></p>
             </div>
         </div>
 
         <!-- Footer / Actions -->
         <div class="migration-footer">
             <button onclick="dismissMigrationModal()" class="migration-confirm-btn" id="migration-confirm-btn">
-                Awesome!
+                I'm exited for this to happen
             </button>
         </div>
     </div>
