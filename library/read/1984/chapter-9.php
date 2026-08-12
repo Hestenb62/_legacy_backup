@@ -103,8 +103,8 @@ include '../../../src/header.php';
         </header>
 
         <div class="cdn-book-reader-content">
-<p class="italic text-text-secondary text-center py-8">Chapter 9 is coming soon.</p>
-        </div>
+          <p>Chapter 9 content...</p>
+</div>
 
         <nav class="reader-chapter-nav" aria-label="Chapter navigation">
         <a href="/library/read/reader.php?book=1984&chapter=chapter-8" class="reader-chapter-nav-btn reader-chapter-nav-prev">

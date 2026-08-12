@@ -103,17 +103,82 @@ include '../../../src/header.php';
         </header>
 
         <div class="cdn-book-reader-content">
-<div class="max-w-4xl mx-auto pb-12">
-          <p class="text-text-secondary text-center mb-10 text-lg">I am only testing this section out with this book. If
-            you like the resources here, please let me know and I will add more to the other books.</p>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Lesson Plans -->
-            <div
-              class="bg-content-bg p-8 rounded-[2rem] border border-accent/20 shadow-2xl transition-all group hover:border-accent">
-              <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-6">
-                <i class="fas fa-file-invoice-dollar text-accent text-xl"></i>
-              </div>
+          <div class="max-w-4xl mx-auto pb-12">
+                    <p class="text-text-secondary text-center mb-10 text-lg">I am only testing this section out with this book. If
+                      you like the resources here, please let me know and I will add more to the other books.</p>
+          
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                      <!-- Lesson Plans -->
+                      <div
+                        class="bg-content-bg p-8 rounded-[2rem] border border-accent/20 shadow-2xl transition-all group hover:border-accent">
+                        <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-6">
+                          <i class="fas fa-file-invoice-dollar text-accent text-xl"></i>
+                        </div>
+                        <h3 class="settings-section-title">Lesson Plans</h3>
+                        <ul class="space-y-4">
+                          <li
+                            class="flex items-center gap-3 text-text-secondary hover:text-primary transition-colors cursor-pointer">
+                            <i class="fas fa-file-pdf text-red-500"></i>
+                            <span class="font-medium text-sm">Unit Overview: The Architecture of Control</span>
+                          </li>
+                          <li
+                            class="flex items-center gap-3 text-text-secondary hover:text-primary transition-colors cursor-pointer">
+                            <i class="fas fa-file-word text-blue-500"></i>
+                            <span class="font-medium text-sm">Daily Plan: Psychological Manipulation</span>
+                          </li>
+                        </ul>
+                      </div>
+          
+                      <!-- Discussion Prompts -->
+                      <div
+                        class="bg-content-bg p-8 rounded-[2rem] border border-primary/20 shadow-2xl transition-all group hover:border-primary">
+                        <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+                          <i class="fas fa-comments text-primary text-xl"></i>
+                        </div>
+                        <h3 class="settings-section-title">Socratic Discussion</h3>
+                        <p class="text-text-secondary text-sm mb-6 italic leading-relaxed">"Can a person truly 'think' or 'rebel'
+                          if the language for such concepts has been erased?"</p>
+                        <div class="flex flex-wrap gap-2">
+                          <span
+                            class="px-3 py-1 bg-primary/10 text-primary text-xs font-bold rounded-lg uppercase tracking-wider">Critical
+                            Thinking</span>
+                        </div>
+                      </div>
+          
+                      <!-- Activities -->
+                      <div
+                        class="bg-content-bg p-8 rounded-[2rem] border border-secondary/20 shadow-2xl transition-all group hover:border-secondary">
+                        <div class="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center mb-6">
+                          <i class="fas fa-gamepad text-secondary text-xl"></i>
+                        </div>
+                        <h3 class="settings-section-title">Classroom Activities</h3>
+                        <p class="text-text-secondary text-sm leading-relaxed mb-4">Interactive exercises including "The Two
+                          Minute Hate" roleplay workshops.</p>
+                      </div>
+          
+                      <!-- Assessments -->
+                      <div
+                        class="bg-content-bg p-8 rounded-[2rem] border border-emerald-500/20 shadow-2xl transition-all group hover:border-emerald-500">
+                        <div class="w-12 h-12 bg-emerald-500/10 rounded-xl flex items-center justify-center mb-6">
+                          <i class="fas fa-spell-check text-emerald-500 text-xl"></i>
+                        </div>
+                        <h3 class="settings-section-title">Assessments</h3>
+                        <div class="space-y-3">
+                          <div
+                            class="flex justify-between items-center p-3 bg-emerald-500/5 rounded-xl border border-emerald-500/10">
+                            <span class="text-sm font-semibold text-text-default">Vocabulary Quiz</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          
+            </div>
+            </article>
+            
+              </article>
+</div>
               <h3 class="settings-section-title">Lesson Plans</h3>
               <ul class="space-y-4">
                 <li
