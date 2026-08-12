@@ -44,12 +44,16 @@
                         <span id="modal-isbn" class="spec-value spec-val-mono spec-val-break"></span>
                     </div>
                     <div id="modal-lexile-container" class="library-modal-spec-half hidden">
-                        <span class="spec-label">Lexile / Reading Level</span>
+                        <span class="spec-label">Lexile / Reading Level <i class="fas fa-info-circle" style="cursor: pointer; opacity: 0.7;" onclick="openLexileInfoModal()"></i></span>
                         <span id="modal-lexile" class="spec-value spec-val-highlight-emerald"></span>
                     </div>
                     <div id="modal-dewey-container" class="library-modal-spec-half hidden">
-                        <span class="spec-label">Dewey Decimal</span>
+                        <span class="spec-label">Dewey Decimal <i class="fas fa-info-circle" style="cursor: pointer; opacity: 0.7;" onclick="openDdcInfoModal()"></i></span>
                         <span id="modal-dewey" class="spec-value spec-val-highlight-purple"></span>
+                    </div>
+                    <div id="modal-lc-container" class="library-modal-spec-half hidden">
+                        <span class="spec-label">LC Class</span>
+                        <span id="modal-lc" class="spec-value spec-val-highlight-blue" style="background-color: rgba(59, 130, 246, 0.1); color: #3b82f6; border: 1px solid rgba(59, 130, 246, 0.2); padding: 0.25rem 0.75rem; border-radius: 9999px; font-weight: 700; font-size: 0.85rem; display: inline-block;"></span>
                     </div>
                     <div id="modal-grade-container" class="library-modal-spec-half hidden">
                         <span class="spec-label">Grade Level</span>
@@ -129,6 +133,56 @@
             <button onclick="closeDisclaimerModal()" class="library-disclaimer-action-btn">
                 I Understand
             </button>
+        </div>
+    </div>
+</div>
+
+<!-- Lexile Info Modal -->
+<div id="lexileInfoModal" class="library-modal hidden" role="dialog" aria-modal="true" style="z-index: 3000;">
+    <div class="library-modal-backdrop" onclick="closeLexileInfoModal()"></div>
+    <div class="library-modal-content" style="max-width: 32rem; padding: 2rem;" onclick="event.stopPropagation()">
+        <button onclick="closeLexileInfoModal()" class="library-modal-close-btn" aria-label="Close">
+            <i class="fas fa-times"></i>
+        </button>
+        <h3 style="font-family: var(--site-font-family, 'Outfit', sans-serif); font-size: 1.5rem; font-weight: 800; color: var(--color-primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;"><i class="fas fa-info-circle"></i> Lexile Measure</h3>
+        <p style="font-size: 0.9rem; line-height: 1.6; color: var(--color-text-secondary); margin-bottom: 1.5rem; text-align: left;">
+            A Lexile measure represents a text's difficulty. It helps readers find books at an appropriate reading level. Scores range from 200L (beginning) to 1600L+ (advanced).
+        </p>
+        <h4 style="font-size: 1rem; font-weight: 700; margin-bottom: 0.75rem; text-align: left;">Catalog Comparison:</h4>
+        <div style="max-height: 200px; overflow-y: auto; border: 1px solid var(--color-border); border-radius: 0.75rem; padding: 0.5rem 1rem; background: var(--color-base-bg);">
+            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-border); font-size: 0.85rem;"><span>The Midnight Library</span><strong>850L</strong></div>
+            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-border); font-size: 0.85rem;"><span>The Fellowship of the Ring</span><strong>920L</strong></div>
+            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-border); font-size: 0.85rem;"><span>The Two Towers</span><strong>940L</strong></div>
+            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-border); font-size: 0.85rem;"><span>The Return of the King</span><strong>960L</strong></div>
+            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-border); font-size: 0.85rem;"><span>The Hobbit / LOTR Collection</span><strong>1000L</strong></div>
+            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-border); font-size: 0.85rem;"><span>Pride and Prejudice</span><strong>1070L</strong></div>
+            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-border); font-size: 0.85rem;"><span>Dune</span><strong>1080L</strong></div>
+            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-border); font-size: 0.85rem;"><span>1984</span><strong>1090L</strong></div>
+            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-border); font-size: 0.85rem;"><span>The Art of War</span><strong>1140L</strong></div>
+            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-border); font-size: 0.85rem;"><span>Frankenstein</span><strong>1170L</strong></div>
+            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-border); font-size: 0.85rem;"><span>Meditations</span><strong>1200L</strong></div>
+            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; font-size: 0.85rem;"><span>Euclid's Elements / Relativity</span><strong>1300L</strong></div>
+        </div>
+    </div>
+</div>
+
+<!-- DDC Info Modal -->
+<div id="ddcInfoModal" class="library-modal hidden" role="dialog" aria-modal="true" style="z-index: 3000;">
+    <div class="library-modal-backdrop" onclick="closeDdcInfoModal()"></div>
+    <div class="library-modal-content" style="max-width: 32rem; padding: 2rem;" onclick="event.stopPropagation()">
+        <button onclick="closeDdcInfoModal()" class="library-modal-close-btn" aria-label="Close">
+            <i class="fas fa-times"></i>
+        </button>
+        <h3 style="font-family: var(--site-font-family, 'Outfit', sans-serif); font-size: 1.5rem; font-weight: 800; color: var(--color-primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;"><i class="fas fa-info-circle"></i> Dewey Decimal System</h3>
+        <p style="font-size: 0.9rem; line-height: 1.6; color: var(--color-text-secondary); margin-bottom: 1.5rem; text-align: left;">
+            The Dewey Decimal Classification (DDC) organizes library materials by subject discipline into ten main categories. It makes finding specific subjects easy.
+        </p>
+        <h4 style="font-size: 1rem; font-weight: 700; margin-bottom: 0.75rem; text-align: left;">Catalog Comparison:</h4>
+        <div style="max-height: 200px; overflow-y: auto; border: 1px solid var(--color-border); border-radius: 0.75rem; padding: 0.5rem 1rem; background: var(--color-base-bg);">
+            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-border); font-size: 0.85rem;"><span>100s Philosophy & Psychology (Meditations)</span><strong>180</strong></div>
+            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-border); font-size: 0.85rem;"><span>300s Social Sciences (The Art of War)</span><strong>355.02</strong></div>
+            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-border); font-size: 0.85rem;"><span>800s Literature (The Midnight Library)</span><strong>823.92</strong></div>
+            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; font-size: 0.85rem;"><span>800s Literature (Dune)</span><strong>813.54</strong></div>
         </div>
     </div>
 </div>

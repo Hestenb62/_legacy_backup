@@ -116,6 +116,7 @@ window.openModal = function(card) {
     
     const lexile = card.dataset.lexile;
     const dewey = card.dataset.dewey;
+    const lc = card.dataset.lc;
     const grade = card.dataset.grade;
     const isCollection = card.dataset.isCollection === 'true';
 
@@ -146,6 +147,16 @@ window.openModal = function(card) {
         deweyContainer.classList.remove('hidden');
     } else {
         deweyContainer.classList.add('hidden');
+    }
+
+    // LC Class
+    const lcContainer = document.getElementById('modal-lc-container');
+    const lcEl = document.getElementById('modal-lc');
+    if (lc && lc !== 'N/A' && lc !== '') {
+        lcEl.textContent = lc;
+        lcContainer.classList.remove('hidden');
+    } else {
+        lcContainer.classList.add('hidden');
     }
 
     // Grade Level
@@ -298,8 +309,14 @@ function setupA11y() {
             // Close modals on ESC
             const bookModal = document.getElementById('bookModal');
             const discModal = document.getElementById('disclaimerModal');
+            const lexModal = document.getElementById('lexileInfoModal');
+            const ddcModal = document.getElementById('ddcInfoModal');
             
-            if (discModal && discModal.classList.contains('active')) {
+            if (lexModal && lexModal.classList.contains('active')) {
+                closeLexileInfoModal();
+            } else if (ddcModal && ddcModal.classList.contains('active')) {
+                closeDdcInfoModal();
+            } else if (discModal && discModal.classList.contains('active')) {
                 closeDisclaimerModal();
             } else if (bookModal && bookModal.classList.contains('active')) {
                 closeModal();
@@ -307,3 +324,33 @@ function setupA11y() {
         }
     });
 }
+
+/* --- Lexile Info Modal Operations --- */
+window.openLexileInfoModal = function() {
+    const modal = document.getElementById('lexileInfoModal');
+    if (!modal) return;
+    modal.classList.remove('hidden');
+    modal.offsetHeight;
+    modal.classList.add('active');
+};
+window.closeLexileInfoModal = function() {
+    const modal = document.getElementById('lexileInfoModal');
+    if (!modal) return;
+    modal.classList.remove('active');
+    setTimeout(() => { modal.classList.add('hidden'); }, 300);
+};
+
+/* --- DDC Info Modal Operations --- */
+window.openDdcInfoModal = function() {
+    const modal = document.getElementById('ddcInfoModal');
+    if (!modal) return;
+    modal.classList.remove('hidden');
+    modal.offsetHeight;
+    modal.classList.add('active');
+};
+window.closeDdcInfoModal = function() {
+    const modal = document.getElementById('ddcInfoModal');
+    if (!modal) return;
+    modal.classList.remove('active');
+    setTimeout(() => { modal.classList.add('hidden'); }, 300);
+};

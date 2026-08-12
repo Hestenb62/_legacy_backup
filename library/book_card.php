@@ -15,6 +15,7 @@
      data-word-link="<?php echo htmlspecialchars($book['word-link'] ?? '#'); ?>"
      data-lexile="<?php echo htmlspecialchars($book['lexile'] ?? ''); ?>"
      data-dewey="<?php echo htmlspecialchars($book['dewey'] ?? ''); ?>"
+     data-lc="<?php echo htmlspecialchars($book['lc'] ?? ''); ?>"
      data-grade="<?php echo htmlspecialchars($book['grade'] ?? ''); ?>"
      data-is-collection="<?php echo isset($book['isCollection']) && $book['isCollection'] ? 'true' : 'false'; ?>"
      data-books="<?php echo isset($book['books']) ? htmlspecialchars(json_encode($book['books']), ENT_QUOTES, 'UTF-8') : ''; ?>">

@@ -175,13 +175,15 @@
             "title": "The Art of War",
             "author": "Sun Tzu",
             "isbn": "978-1590302255",
-            "date": "-500",
+            "date": "5th century BC",
             "img": "https://covers.openlibrary.org/b/isbn/9781590302255-L.jpg",
             "description": "An ancient Chinese military treatise dating from the Late Spring and Autumn Period. The work, which is attributed to the ancient Chinese military strategist Sun Tzu, is composed of 13 chapters.",
             "pdf-link": "https://www.gutenberg.org/ebooks/132",
             "epub-link": "https://www.gutenberg.org/ebooks/132",
             "read-online-link": "#",
             "lexile": "1140L",
+            "dewey": "355.02",
+            "lc": "U101 .S95",
             "grade": "Grades 9-12"
         }
     ]
