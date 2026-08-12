@@ -3,6 +3,11 @@ $requestUri = $_SERVER['REQUEST_URI'] ?? '';
 $requestPath = explode('?', $requestUri)[0];
 $queryString = $_SERVER['QUERY_STRING'] ?? '';
 
+// Populate $_GET manually if empty (e.g. running under Five Server with CLI php binary)
+if (empty($_GET) && !empty($queryString)) {
+    parse_str($queryString, $_GET);
+}
+
 // Preserve the old /library/reader.php URL as a redirect into the new reader folder.
 if (basename($requestPath) === 'reader.php' && dirname($requestPath) !== '/library/read') {
     $redirectUrl = '/library/read/reader.php' . ($queryString ? '?' . $queryString : '');
@@ -107,6 +112,15 @@ include '../../src/header.php';
     </div>
 
     <?php if (!empty($error)): ?>
+        <script>
+            // Client-side fallback for static/CLI servers like Five Server that don't pass query parameters to PHP
+            const params = new URLSearchParams(window.location.search);
+            const book = params.get('book');
+            const chapter = params.get('chapter') || 'chapter-1';
+            if (book) {
+                window.location.replace('/library/read/' + encodeURIComponent(book) + '/index.php?chapter=' + encodeURIComponent(chapter));
+            }
+        </script>
         <div class="reader-error-container">
             <i class="fas fa-exclamation-triangle reader-error-icon"></i>
             <h2>Unable to load book</h2>
