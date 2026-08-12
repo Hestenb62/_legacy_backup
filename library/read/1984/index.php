@@ -122,11 +122,139 @@ include __DIR__ . '/../../../src/header.php';
   #book-content p {
     margin-bottom: 1.5em;
     text-align: justify;
+    line-height: 1.6em; /* Default line height */
+    transition: line-height 0.2s ease, letter-spacing 0.2s ease;
   }
 
   /* Disable justify for Dyslexic font */
   body.font-dyslexic #book-content p {
     text-align: left;
+  }
+
+  /* Spacing Accessibility Styles */
+  #book-content.lh-normal p {
+    line-height: 1.6em;
+  }
+  #book-content.lh-wide p {
+    line-height: 1.9em;
+  }
+  #book-content.lh-extra p {
+    line-height: 2.2em;
+  }
+
+  #book-content.ls-normal p {
+    letter-spacing: normal;
+  }
+  #book-content.ls-wide p {
+    letter-spacing: 0.08em;
+  }
+  #book-content.ls-extra p {
+    letter-spacing: 0.15em;
+  }
+
+  /* Theme smooth transitions */
+  body {
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+  #reader-controls {
+    transition: background-color 0.4s ease, border-color 0.4s ease;
+  }
+
+  /* Flashcard CSS */
+  .vocab-tabs-row {
+    display: flex;
+    background-color: var(--color-base-bg);
+    padding: 0.25rem;
+    border-radius: 0.75rem;
+    margin: 1rem 1.5rem;
+  }
+  .vocab-tab-btn {
+    flex: 1;
+    background: transparent;
+    border: none;
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--color-text-secondary);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .vocab-tab-btn.active {
+    background-color: var(--color-content-bg);
+    color: var(--color-text-default);
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .flashcard-wrap {
+    perspective: 1000px;
+    width: 100%;
+    max-width: 440px;
+    height: 260px;
+    margin: 1.5rem auto;
+    cursor: pointer;
+  }
+  .flashcard {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 1.5rem;
+  }
+  .flashcard.flipped {
+    transform: rotateY(180deg);
+  }
+  .flashcard-face {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    border-radius: 1.5rem;
+    border: 1px solid var(--color-border);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: var(--shadow-md);
+  }
+  .flashcard-front {
+    background-color: var(--color-content-bg);
+    color: var(--color-primary);
+  }
+  .flashcard-front h3 {
+    font-family: var(--site-font-family, 'Outfit', sans-serif);
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin: 0;
+    text-transform: capitalize;
+  }
+  .flashcard-front p {
+    font-size: 0.85rem;
+    opacity: 0.6;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .flashcard-back {
+    background-color: var(--color-base-bg);
+    color: var(--color-text-default);
+    transform: rotateY(180deg);
+  }
+  .flashcard-back p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+  .flashcard-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
   }
 
   /* Tooltip Styling */
@@ -1106,6 +1234,20 @@ include __DIR__ . '/../../../src/header.php';
                 <button class="settings-row-btn settings-size" data-size="prose-2xl">A+</button>
             </div>
 
+            <h4 class="settings-section-title">Line Spacing</h4>
+            <div class="settings-btn-row">
+                <button class="settings-row-btn active settings-lineheight" data-lineheight="lh-normal">1.5x</button>
+                <button class="settings-row-btn settings-lineheight" data-lineheight="lh-wide">1.8x</button>
+                <button class="settings-row-btn settings-lineheight" data-lineheight="lh-extra">2.2x</button>
+            </div>
+
+            <h4 class="settings-section-title">Letter Spacing</h4>
+            <div class="settings-btn-row">
+                <button class="settings-row-btn active settings-letterspacing" data-letterspacing="ls-normal">Normal</button>
+                <button class="settings-row-btn settings-letterspacing" data-letterspacing="ls-wide">Wide</button>
+                <button class="settings-row-btn settings-letterspacing" data-letterspacing="ls-extra">Extra</button>
+            </div>
+
             <h4 class="settings-section-title">Theme</h4>
             <div class="theme-dots-row">
                 <button class="theme-dot-btn active dot-default settings-theme" data-theme="default" title="Default"></button>
@@ -1204,8 +1346,35 @@ include __DIR__ . '/../../../src/header.php';
         </button>
       </div>
     </div>
+    <!-- Tab Controls Row -->
+    <div class="vocab-tabs-row">
+      <button class="vocab-tab-btn active" id="tab-vocab-list">Word List</button>
+      <button class="vocab-tab-btn" id="tab-vocab-flash">Flashcards</button>
+    </div>
+
+    <!-- Word List view -->
     <div id="vocab-list-container" class="vocab-list">
       <!-- Injected Vocab Cards -->
+    </div>
+
+    <!-- Flashcards view -->
+    <div id="vocab-flash-container" class="vocab-list hidden" style="text-align: center; display: none; flex-direction: column;">
+      <div class="flashcard-wrap">
+        <div class="flashcard" id="vocab-flashcard">
+          <div class="flashcard-face flashcard-front">
+            <h3 id="flashcard-front-word">Word</h3>
+            <p><i class="fas fa-sync-alt"></i> Click to flip</p>
+          </div>
+          <div class="flashcard-face flashcard-back">
+            <p id="flashcard-back-definition">Definition goes here...</p>
+          </div>
+        </div>
+      </div>
+      <div class="flashcard-nav">
+        <button id="flashcard-prev-btn" class="tooltip-btn" style="padding: 0.5rem 1rem;"><i class="fas fa-chevron-left"></i> Prev</button>
+        <span id="flashcard-counter" style="font-weight: 700; color: var(--color-text-secondary);">1 of 5</span>
+        <button id="flashcard-next-btn" class="tooltip-btn" style="padding: 0.5rem 1rem;">Next <i class="fas fa-chevron-right"></i></button>
+      </div>
     </div>
   </div>
 </div>
@@ -1302,7 +1471,7 @@ include __DIR__ . '/../../../src/header.php';
       speakBtn.disabled = true;
     }
 
-    // --- Progress Bar & Go To Top ---
+    // --- Progress Bar & Go To Top & Bookmark Scroll ---
     window.addEventListener('scroll', () => {
       const scrollTop = window.scrollY;
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -1315,12 +1484,42 @@ include __DIR__ . '/../../../src/header.php';
         if (scrollTop > 300) btn.style.display = 'block';
         else btn.style.display = 'none';
       }
+
+      // Save scroll bookmark
+      const bookmarkKey = `1984_bookmark_chapter_${currentChapter}`;
+      try {
+          if (docHeight > 0) {
+              const scrollPercent = scrollTop / docHeight;
+              localStorage.setItem(bookmarkKey, scrollPercent);
+          }
+      } catch (e) {}
     });
 
     const topBtn = document.getElementById('go-to-top-btn');
     if (topBtn) {
       topBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
     }
+
+    function restoreBookmark() {
+        const bookmarkKey = `1984_bookmark_chapter_${currentChapter}`;
+        try {
+            const savedPct = localStorage.getItem(bookmarkKey);
+            if (savedPct) {
+                const pct = parseFloat(savedPct);
+                setTimeout(() => {
+                    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                    if (docHeight > 0) {
+                        window.scrollTo({
+                            top: docHeight * pct,
+                            behavior: 'smooth'
+                        });
+                    }
+                }, 500);
+            }
+        } catch (e) {}
+    }
+
+
 
     // --- Tooltip Enhancement ---
     function initTooltipButtons() {
@@ -1450,21 +1649,23 @@ include __DIR__ . '/../../../src/header.php';
           if(settingsOpen && !settingsPanel.contains(e.target) && e.target !== settingsBtn) closeSettings();
       });
 
-      // Typography Preferences
+      // Typography & Spacing Preferences
       const PREFS_KEY = '1984_prefs';
-      let prefs = JSON.parse(localStorage.getItem(PREFS_KEY) || '{"font":"font-sans", "size":"prose-lg", "theme":"default"}');
+      let prefs = JSON.parse(localStorage.getItem(PREFS_KEY) || '{"font":"font-sans", "size":"prose-lg", "theme":"default", "lineheight":"lh-normal", "letterspacing":"ls-normal"}');
 
       function applyPrefs() {
-          bookContent.classList.remove('font-sans', 'font-serif', 'font-dyslexic', 'prose-base', 'prose-lg', 'prose-2xl');
+          bookContent.classList.remove('font-sans', 'font-serif', 'font-dyslexic', 'prose-base', 'prose-lg', 'prose-2xl', 'lh-normal', 'lh-wide', 'lh-extra', 'ls-normal', 'ls-wide', 'ls-extra');
           document.body.classList.remove('theme-sepia', 'theme-oled');
           
           bookContent.classList.add(prefs.font);
           bookContent.classList.add(prefs.size);
+          bookContent.classList.add(prefs.lineheight || 'lh-normal');
+          bookContent.classList.add(prefs.letterspacing || 'ls-normal');
           if(prefs.theme !== 'default') document.body.classList.add(prefs.theme);
 
-          document.querySelectorAll('.settings-font, .settings-size, .settings-theme').forEach(el => {
+          document.querySelectorAll('.settings-font, .settings-size, .settings-theme, .settings-lineheight, .settings-letterspacing').forEach(el => {
               el.classList.remove('active');
-              if(el.dataset.font === prefs.font || el.dataset.size === prefs.size || el.dataset.theme === prefs.theme) {
+              if(el.dataset.font === prefs.font || el.dataset.size === prefs.size || el.dataset.theme === prefs.theme || el.dataset.lineheight === prefs.lineheight || el.dataset.letterspacing === prefs.letterspacing) {
                   el.classList.add('active');
               }
           });
@@ -1473,30 +1674,61 @@ include __DIR__ . '/../../../src/header.php';
 
       document.querySelectorAll('.settings-font').forEach(btn => btn.onclick = () => { prefs.font = btn.dataset.font; applyPrefs(); });
       document.querySelectorAll('.settings-size').forEach(btn => btn.onclick = () => { prefs.size = btn.dataset.size; applyPrefs(); });
+      document.querySelectorAll('.settings-lineheight').forEach(btn => btn.onclick = () => { prefs.lineheight = btn.dataset.lineheight; applyPrefs(); });
+      document.querySelectorAll('.settings-letterspacing').forEach(btn => btn.onclick = () => { prefs.letterspacing = btn.dataset.letterspacing; applyPrefs(); });
       document.querySelectorAll('.settings-theme').forEach(btn => btn.onclick = () => { prefs.theme = btn.dataset.theme; applyPrefs(); });
       applyPrefs(); 
     }
 
-    // --- Vocab Modal Logic ---
+    // --- Vocab Modal & Flashcards Logic ---
     const vocabModal = document.getElementById('vocab-modal');
     const vocabBtn = document.getElementById('open-vocab-btn');
     const closeVocabBtn = document.getElementById('close-vocab-modal');
     const vocabList = document.getElementById('vocab-list-container');
+    const vocabFlashContainer = document.getElementById('vocab-flash-container');
+    
+    const tabList = document.getElementById('tab-vocab-list');
+    const tabFlash = document.getElementById('tab-vocab-flash');
+    const flashcard = document.getElementById('vocab-flashcard');
+    const flashPrev = document.getElementById('flashcard-prev-btn');
+    const flashNext = document.getElementById('flashcard-next-btn');
+    
     const downloadVocabBtn = document.getElementById('download-vocab-btn');
     let activeVocabList = [];
+    let currentFlashIndex = 0;
+
+    function updateFlashcard() {
+        if (!activeVocabList || activeVocabList.length === 0) {
+            flashcard.style.display = 'none';
+            document.querySelector('.flashcard-nav').style.display = 'none';
+            vocabFlashContainer.innerHTML = '<div style="text-align: center; padding: 2rem; color: var(--color-text-secondary);"><i class="fas fa-ghost" style="font-size: 2.5rem; margin-bottom: 1rem; opacity: 0.5;"></i><p>No specialized vocabulary found in this chapter.</p></div>';
+            return;
+        }
+        
+        flashcard.style.display = 'block';
+        document.querySelector('.flashcard-nav').style.display = 'flex';
+        vocabFlashContainer.querySelector('.flashcard-wrap').style.display = 'block';
+        
+        flashcard.classList.remove('flipped');
+        
+        const currentItem = activeVocabList[currentFlashIndex];
+        document.getElementById('flashcard-front-word').textContent = currentItem.term;
+        document.getElementById('flashcard-back-definition').textContent = currentItem.defText;
+        document.getElementById('flashcard-counter').textContent = `${currentFlashIndex + 1} of ${activeVocabList.length}`;
+    }
 
     if (vocabModal && vocabBtn && closeVocabBtn && vocabList) {
       vocabBtn.onclick = () => {
           vocabList.innerHTML = '';
           const tooltips = bookContent.querySelectorAll('.tooltip');
           const vocabMap = {};
+          currentFlashIndex = 0;
 
           tooltips.forEach(tt => {
               const termNode = Array.from(tt.childNodes).find(n => n.nodeType === 3 || (n.nodeType === 1 && !n.classList.contains('tooltiptext')));
               const term = termNode ? termNode.textContent.trim() : '';
               const defNode = tt.querySelector('.tooltiptext');
               
-              // Extract definition text, stripping any added tooltips buttons
               let defText = '';
               if (defNode) {
                 const defTextEl = defNode.querySelector('.tooltip-def-text');
@@ -1526,12 +1758,55 @@ include __DIR__ . '/../../../src/header.php';
               });
           }
 
+          // Reset tab state on open
+          if (tabList) tabList.click();
+
           vocabModal.classList.remove('hidden');
       };
 
       closeVocabBtn.onclick = () => {
           vocabModal.classList.add('hidden');
       };
+
+      if (tabList && tabFlash && vocabList && vocabFlashContainer) {
+          tabList.onclick = () => {
+              tabList.classList.add('active');
+              tabFlash.classList.remove('active');
+              vocabList.style.display = 'block';
+              vocabFlashContainer.style.display = 'none';
+          };
+          
+          tabFlash.onclick = () => {
+              tabFlash.classList.add('active');
+              tabList.classList.remove('active');
+              vocabList.style.display = 'none';
+              vocabFlashContainer.style.display = 'flex';
+              updateFlashcard();
+          };
+      }
+
+      if (flashcard) {
+          flashcard.onclick = () => {
+              flashcard.classList.toggle('flipped');
+          };
+      }
+      
+      if (flashPrev) {
+          flashPrev.onclick = () => {
+              if (currentFlashIndex > 0) {
+                  currentFlashIndex--;
+                  updateFlashcard();
+              }
+          };
+      }
+      if (flashNext) {
+          flashNext.onclick = () => {
+              if (currentFlashIndex < activeVocabList.length - 1) {
+                  currentFlashIndex++;
+                  updateFlashcard();
+              }
+          };
+      }
 
       if (downloadVocabBtn) {
           downloadVocabBtn.onclick = () => {
@@ -1557,6 +1832,78 @@ include __DIR__ . '/../../../src/header.php';
 
     // Init
     initTooltipButtons();
+    restoreBookmark();
+
+    // --- Five Server Client-side Routing Fallback ---
+    const params = new URLSearchParams(window.location.search);
+    const urlChapter = params.get('chapter');
+    if (urlChapter && urlChapter !== 'chapter-' + currentChapter) {
+        const match = urlChapter.match(/^chapter-(\d+)$/);
+        if (match) {
+            const targetChapterNum = parseInt(match[1], 10);
+            fetch('/library/read/1984/' + urlChapter + '.php')
+              .then(res => res.text())
+              .then(html => {
+                  const parser = new DOMParser();
+                  const doc = parser.parseFromString(html, 'text/html');
+                  const newContent = doc.querySelector('.cdn-book-reader-content');
+                  if (newContent) {
+                      // Update active chapter text
+                      document.getElementById('book-content').innerHTML = newContent.innerHTML;
+                      
+                      // Update chapter title in page
+                      const chapterTitleEl = document.querySelector('.chapter-title');
+                      if (chapterTitleEl) {
+                          chapterTitleEl.textContent = targetChapterNum === 26 ? 'Teacher Resources' : 'Chapter ' + targetChapterNum;
+                      }
+                      
+                      // Update active chapter label in navigation controls
+                      const currentChapterEl = document.getElementById('current-chapter');
+                      if (currentChapterEl) {
+                          currentChapterEl.textContent = targetChapterNum === 26 ? 'Teacher' : 'Ch ' + targetChapterNum;
+                      }
+
+                      // Update Prev/Next buttons hrefs
+                      const prevBtn = document.getElementById('prev-chapter');
+                      const nextBtn = document.getElementById('next-chapter');
+                      
+                      if (prevBtn) {
+                          const prevNum = targetChapterNum - 1;
+                          if (prevNum >= 1) {
+                              prevBtn.href = '/library/read/reader.php?book=1984&chapter=chapter-' + prevNum;
+                              prevBtn.classList.remove('disabled');
+                          } else {
+                              prevBtn.href = '#';
+                              prevBtn.classList.add('disabled');
+                          }
+                      }
+                      
+                      if (nextBtn) {
+                          const nextNum = targetChapterNum + 1;
+                          if (nextNum <= 26) {
+                              nextBtn.href = '/library/read/reader.php?book=1984&chapter=chapter-' + nextNum;
+                              nextBtn.classList.remove('disabled');
+                          } else {
+                              nextBtn.href = '#';
+                              nextBtn.classList.add('disabled');
+                          }
+                      }
+
+                      // Update browser document title
+                      document.title = "1984 - " + (targetChapterNum === 26 ? "Teacher Resources" : "Chapter " + targetChapterNum) + " | Hesten's Learning";
+
+                      // Update TOC active link
+                      document.querySelectorAll('.toc-link').forEach(link => {
+                          link.classList.toggle('active', parseInt(link.dataset.chapter) === targetChapterNum);
+                      });
+
+                      // Re-initialize tooltips and bookmark
+                      initTooltipButtons();
+                      restoreBookmark();
+                  }
+              });
+        }
+    }
   });
 </script>
 
