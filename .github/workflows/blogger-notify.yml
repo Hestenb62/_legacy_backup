@@ -1,0 +1,56 @@
+name: Send Commit to Blogger
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  notify-blogger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code with full history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Generate Commit Diff and HTML Body
+        id: prepare-body
+        run: |
+          # Check if there is a previous commit to diff against
+          if git rev-parse HEAD~1 >/dev/null 2>&1; then
+            DIFF_OUTPUT=$(git diff HEAD~1 HEAD)
+          else
+            # If it's the very first commit in the repository
+            DIFF_OUTPUT=$(git show --stat -p HEAD)
+          fi
+
+          # Limit diff output to prevent massive emails from breaking
+          DIFF_TRUNCATED=$(echo "$DIFF_OUTPUT" | head -n 300)
+
+          # Escape HTML characters so code renders cleanly on Blogger
+          ESCAPED_DIFF=$(echo "$DIFF_TRUNCATED" | sed 's/&/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g;')
+
+          # Create HTML email content
+          cat <<EOF > email_body.html
+          <p><strong>Repository:</strong> ${{ github.repository }}</p>
+          <p><strong>Author:</strong> ${{ github.event.head_commit.author.name }}</p>
+          <p><strong>Commit Message:</strong> ${{ github.event.head_commit.message }}</p>
+          <p><strong>URL:</strong> <a href="${{ github.event.head_commit.url }}">${{ github.event.head_commit.url }}</a></p>
+          
+          <h3>Code Changes:</h3>
+          <pre style="background-color: #f4f4f4; padding: 10px; border-radius: 5px; overflow-x: auto; font-family: monospace;"><code>$ESCAPED_DIFF</code></pre>
+          EOF
+
+      - name: Send email to Blogger
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject: "New Commit: ${{ github.event.head_commit.message }}"
+          to: ${{ secrets.BLOGGER_EMAIL }}
+          from: GitHub Actions
+          html_body: file://email_body.html
