@@ -154,6 +154,53 @@
     text-decoration-color: var(--color-blue);
   }
 
+  .footer-social-icons {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+  }
+
+  .social-icon-btn {
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: var(--radius-md);
+    background-color: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .social-icon-btn:hover {
+    color: var(--color-text-inverse) !important;
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .social-icon-btn.github:hover {
+    background-color: #24292e;
+    border-color: #24292e;
+  }
+
+  .social-icon-btn.blog:hover {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+
+  .social-icon-btn.orcid:hover {
+    background-color: #A6CE39;
+    border-color: #A6CE39;
+  }
+
+  .social-icon-btn.youtube:hover {
+    background-color: #FF0000;
+    border-color: #FF0000;
+  }
+
   .footer-links {
     list-style: none;
     padding: 0;

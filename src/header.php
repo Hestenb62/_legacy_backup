@@ -31,6 +31,8 @@ $currentUser = getCurrentUser();
     <meta name="apple-mobile-web-app-title" content="Hesten's">
     
     <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/png" href="/assets/images/6791421e-7ca7-40bd-83d3-06a479bf7f36.png">
+    <link rel="shortcut icon" href="/assets/images/6791421e-7ca7-40bd-83d3-06a479bf7f36.png" type="image/x-icon">
     <link rel="apple-touch-icon" href="/assets/images/6791421e-7ca7-40bd-83d3-06a479bf7f36.png">
 
     <!-- Fonts -->
@@ -50,7 +52,7 @@ $currentUser = getCurrentUser();
             }
         };
     </script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script id="MathJax-script" async src="/assets/js/mathjax-4.1.3/tex-svg.js"></script>
 
 
     <style>
@@ -59,14 +61,14 @@ $currentUser = getCurrentUser();
     </style>
 
     <!-- Custom Modern Styles (Vanilla CSS Architecture) -->
-    <link rel="stylesheet" href="/assets/css/tokens.css?v=1.2">
-    <link rel="stylesheet" href="/assets/css/reset.css?v=1.2">
-    <link rel="stylesheet" href="/assets/css/primitives.css?v=1.2">
-    <link rel="stylesheet" href="/assets/css/utilities.css?v=1.2">
-    <link rel="stylesheet" href="/assets/css/components.css?v=1.2">
-    <link rel="stylesheet" href="/assets/css/components/fixed-tools.css?v=1.2">
-    <link rel="stylesheet" href="/assets/css/layouts/header.css?v=1.2">
-    <link rel="stylesheet" href="/assets/css/layouts/footer.css?v=1.2">
+    <link rel="stylesheet" href="/assets/css/tokens.css?v=1.3">
+    <link rel="stylesheet" href="/assets/css/reset.css?v=1.3">
+    <link rel="stylesheet" href="/assets/css/primitives.css?v=1.3">
+    <link rel="stylesheet" href="/assets/css/utilities.css?v=1.3">
+    <link rel="stylesheet" href="/assets/css/components.css?v=1.3">
+    <link rel="stylesheet" href="/assets/css/components/fixed-tools.css?v=1.3">
+    <link rel="stylesheet" href="/assets/css/layouts/header.css?v=1.3">
+    <link rel="stylesheet" href="/assets/css/layouts/footer.css?v=1.3">
 </head>
 
 <body>

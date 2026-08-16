@@ -23,6 +23,13 @@
                     <p class="footer-about-desc">
                         Empowering students with learning disabilities through personalized learning experiences. <a href="/about.php">Learn more</a>
                     </p>
+                    
+                    <div class="footer-social-icons">
+                        <a href="https://github.com/Hestenb62/_legacy_backup" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-icon-btn github"><i class="fab fa-github"></i></a>
+                        <a href="https://blog.hestena62.com" target="_blank" rel="noopener noreferrer" aria-label="Blog" class="social-icon-btn blog"><i class="fas fa-blog"></i></a>
+                        <a href="https://orcid.org/0009-0004-7981-9568" target="_blank" rel="noopener noreferrer" aria-label="ORCID" class="social-icon-btn orcid"><i class="fab fa-orcid"></i></a>
+                        <a href="https://youtube.com/@hestena62" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="social-icon-btn youtube"><i class="fab fa-youtube"></i></a>
+                    </div>
                 </div>
 
                 <!-- Column 2: Quick Links -->
