@@ -453,6 +453,21 @@ include '../src/header.php';
 
     <!-- Main Content Area -->
     <main>
+        <!-- Documents Hub Promotion Banner -->
+        <div class="glass-panel" style="margin-bottom: var(--spacing-8); padding: var(--spacing-6); border-radius: var(--radius-2xl); display: flex; flex-direction: column; sm:flex-row; justify-content: space-between; align-items: center; gap: var(--spacing-4); background: linear-gradient(135deg, rgba(79, 70, 229, 0.05), rgba(236, 72, 153, 0.05)); border: 1px solid var(--color-border);">
+            <div style="display: flex; align-items: center; gap: var(--spacing-4);">
+                <div style="font-size: 2rem; color: var(--color-primary);"><i class="fas fa-folder-open"></i></div>
+                <div>
+                    <h3 style="margin: 0; font-size: 1.15rem; font-weight: 800; color: var(--color-text-main);">Looking for Reading Materials?</h3>
+                    <p style="margin: 0; font-size: 0.9rem; color: var(--color-text-muted);">Access the central Documents Hub to search, filter, and read all student documents, PDFs, and guides in one place.</p>
+                </div>
+            </div>
+            <a href="/documents.php" class="subpage-link-btn" style="flex-shrink: 0; padding: 0.75rem 1.5rem; border-radius: var(--radius-full); background: var(--color-primary); color: white; border: none; font-weight: 800; font-size: 0.9rem; display: inline-flex; flex-direction: row; align-items: center; justify-content: center; gap: 0.5rem; text-decoration: none;">
+                <span>Go to Documents Hub</span>
+                <i class="fas fa-arrow-right" style="color: white; font-size: 0.85rem;"></i>
+            </a>
+        </div>
+
         <div class="subject-gateway-grid">
             
             <!-- 1. Math Section -->
