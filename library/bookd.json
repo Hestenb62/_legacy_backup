@@ -186,5 +186,25 @@
             "lc": "U101 .S95",
             "grade": "Grades 9-12"
         }
+    ],
+    "Primary Documents": [
+        {
+            "id": "usa-constitution",
+            "title": "United States Constitution",
+            "author": "13 Signers",
+            "isbn": "#",
+            "date": "July 2nd, 1776",
+            "img": "https://www.gutenberg.org/cache/epub/5/pg5.cover.medium.jpg",
+            "fallback-img": "https://placehold.co/300x450/c0392b/white?text=United States Constitution",
+            "description": "'The United States Constitution' by United States is a foundational document drafted in 1787 and operational since 1789. Born from the failures of the Articles of Confederation, it establishes the supreme law of America through seven original articles defining federal government structure. Influenced by Enlightenment philosophy and English common law, it separates power among legislative, executive, and judicial branches. Twenty-seven amendments have since expanded individual rights and modified governmental processes, making it the world's oldest written national constitution still in force.",
+            "pdf-link": "",
+            "epub-link": "https://www.gutenberg.org/ebooks/5.epub.images",
+             "read-online-link": "/library/read/reader.php?book=usa-constitution",
+            "txt-link": "https://www.gutenberg.org/ebooks/5.txt.utf-8",
+            "mobi-link": "",
+            "word-link": "",
+            "lexile": "#",
+            "grade": "All"
+        }
     ]
 }
