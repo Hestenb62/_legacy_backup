@@ -11,7 +11,7 @@ include '../../../src/header.php';
 
 <main id="main-content" class="library-main reader-main-layout">
     <div class="reader-back-nav">
-        <a href="/library/read/reader.php?book=frankenstein" class="reader-back-btn">
+        <a href="/library/read/index.php?book=frankenstein" class="reader-back-btn">
             <i class="fas fa-arrow-left"></i> Back to Book
         </a>
     </div>

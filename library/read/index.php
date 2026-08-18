@@ -8,9 +8,9 @@ if (empty($_GET) && !empty($queryString)) {
     parse_str($queryString, $_GET);
 }
 
-// Preserve the old /library/reader.php URL as a redirect into the new reader folder.
-if (basename($requestPath) === 'reader.php' && dirname($requestPath) !== '/library/read') {
-    $redirectUrl = '/library/read/reader.php' . ($queryString ? '?' . $queryString : '');
+// Preserve the old reader.php URL as a redirect into the new index.php.
+if (basename($requestPath) === 'reader.php') {
+    $redirectUrl = '/library/read/index.php' . ($queryString ? '?' . $queryString : '');
     header('Location: ' . $redirectUrl, true, 301);
     exit;
 }

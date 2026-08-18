@@ -29,7 +29,7 @@ if (isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] === 'POST' &
     if (trim($_POST['teacher_password']) === '8675309') {
         $_SESSION['teacher_unlocked'] = true;
         $teacherUnlocked = true;
-        header('Location: /library/read/reader.php?book=1984&chapter=chapter-26');
+        header('Location: /library/read/index.php?book=1984&chapter=chapter-26');
         exit;
     } else {
         $authError = 'Incorrect answer. Access Denied.';
@@ -1181,14 +1181,14 @@ include __DIR__ . '/../../../src/header.php';
       ?>
       <!-- Left: Prev/Next -->
       <div class="controls-nav-group">
-        <a href="<?php echo $hasPrev ? "/library/read/reader.php?book=1984&chapter=chapter-$prevChapterNum" : '#'; ?>" 
+        <a href="<?php echo $hasPrev ? "/library/read/index.php?book=1984&chapter=chapter-$prevChapterNum" : '#'; ?>" 
            id="prev-chapter" 
            class="controls-nav-btn <?php echo !$hasPrev ? 'disabled' : ''; ?>" 
            aria-label="Previous Chapter">
           <i class="fas fa-chevron-left"></i> Pre
         </a>
         <span id="current-chapter"><?php echo $chapterNum === 26 ? 'Teacher' : 'Ch ' . $chapterNum; ?></span>
-        <a href="<?php echo $hasNext ? "/library/read/reader.php?book=1984&chapter=chapter-$nextChapterNum" : '#'; ?>" 
+        <a href="<?php echo $hasNext ? "/library/read/index.php?book=1984&chapter=chapter-$nextChapterNum" : '#'; ?>" 
            id="next-chapter" 
            class="controls-nav-btn <?php echo !$hasNext ? 'disabled' : ''; ?>" 
            aria-label="Next Chapter">
@@ -1268,13 +1268,13 @@ include __DIR__ . '/../../../src/header.php';
           </div>
           <h3 style="font-family: var(--site-font-family, 'Outfit', sans-serif); font-size: 1.5rem; font-weight: 800; margin: 0 0 0.5rem 0; color: var(--color-text-default);">Authorized Access Only</h3>
           <p style="color: var(--color-text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem;">What is Jenny's number?</p>
-          <form method="POST" action="/library/read/reader.php?book=1984&chapter=chapter-26">
+          <form method="POST" action="/library/read/index.php?book=1984&chapter=chapter-26">
             <input type="password" name="teacher_password" class="auth-input mb-4" placeholder="•••••••" required autofocus autocomplete="off">
             <?php if (!empty($authError)): ?>
               <p class="auth-error mb-4"><?php echo htmlspecialchars($authError); ?></p>
             <?php endif; ?>
             <div class="auth-actions">
-              <a href="/library/read/reader.php?book=1984&chapter=chapter-1" class="auth-btn auth-btn-cancel text-center" style="display:block; line-height:2.2rem; text-decoration:none;">Cancel</a>
+              <a href="/library/read/index.php?book=1984&chapter=chapter-1" class="auth-btn auth-btn-cancel text-center" style="display:block; line-height:2.2rem; text-decoration:none;">Cancel</a>
               <button type="submit" class="auth-btn auth-btn-submit">Unlock</button>
             </div>
           </form>
@@ -1299,11 +1299,11 @@ include __DIR__ . '/../../../src/header.php';
     </div>
     <div class="toc-grid">
       <?php for ($i = 1; $i <= 25; $i++): ?>
-        <a href="/library/read/reader.php?book=1984&chapter=chapter-<?php echo $i; ?>" 
+        <a href="/library/read/index.php?book=1984&chapter=chapter-<?php echo $i; ?>" 
            class="toc-link <?php echo ($i === $chapterNum) ? 'active' : ''; ?>" 
            data-chapter="<?php echo $i; ?>">CH <?php echo $i; ?></a>
       <?php endfor; ?>
-      <a href="/library/read/reader.php?book=1984&chapter=chapter-26" 
+      <a href="/library/read/index.php?book=1984&chapter=chapter-26" 
          class="toc-link toc-teacher-btn <?php echo ($chapterNum === 26) ? 'active' : ''; ?>" 
          data-chapter="26">
         <i class="fas fa-chalkboard-teacher mr-2"></i> TEACHER RESOURCES
@@ -1870,7 +1870,7 @@ include __DIR__ . '/../../../src/header.php';
                       if (prevBtn) {
                           const prevNum = targetChapterNum - 1;
                           if (prevNum >= 1) {
-                              prevBtn.href = '/library/read/reader.php?book=1984&chapter=chapter-' + prevNum;
+                              prevBtn.href = '/library/read/index.php?book=1984&chapter=chapter-' + prevNum;
                               prevBtn.classList.remove('disabled');
                           } else {
                               prevBtn.href = '#';
@@ -1881,7 +1881,7 @@ include __DIR__ . '/../../../src/header.php';
                       if (nextBtn) {
                           const nextNum = targetChapterNum + 1;
                           if (nextNum <= 26) {
-                              nextBtn.href = '/library/read/reader.php?book=1984&chapter=chapter-' + nextNum;
+                              nextBtn.href = '/library/read/index.php?book=1984&chapter=chapter-' + nextNum;
                               nextBtn.classList.remove('disabled');
                           } else {
                               nextBtn.href = '#';
