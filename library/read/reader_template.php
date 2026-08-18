@@ -37,7 +37,8 @@ $pageAuthor = $bookAuthor;
 include ABSPATH . 'src/header.php';
 ?>
 
-<!-- Include Reader Stylesheet -->
+<!-- Include Core Library and Reader Stylesheets -->
+<link rel="stylesheet" href="/library/library.css">
 <link rel="stylesheet" href="/library/read/reader.css">
 
 <!-- Background Aurora Mesh -->
@@ -98,16 +99,11 @@ include ABSPATH . 'src/header.php';
       <!-- Center: Text to Speech (TTS) Controls -->
       <div class="controls-speech-group">
         <button id="tts-speak-btn" class="speech-btn">
-          <i class="fas fa-play"></i> Listen
+          <i class="fas fa-volume-up"></i> Listen
         </button>
         <button id="tts-stop-btn" class="speech-btn speech-btn-stop hidden">
           <i class="fas fa-stop"></i> Stop
         </button>
-        <div class="speech-speed-container">
-          <label for="tts-speed-slider">Speed:</label>
-          <input type="range" id="tts-speed-slider" class="speech-speed-slider" min="0.5" max="2.0" step="0.1" value="1.0">
-          <span id="tts-speed-val">1.0x</span>
-        </div>
       </div>
 
       <!-- Right: Settings and Study Guides -->
@@ -160,6 +156,12 @@ include ABSPATH . 'src/header.php';
                 <button class="theme-dot-btn active dot-default settings-theme" data-theme="default" title="Light Theme"></button>
                 <button class="theme-dot-btn dot-sepia settings-theme" data-theme="theme-sepia" title="Sepia Theme"></button>
                 <button class="theme-dot-btn dot-oled settings-theme" data-theme="theme-oled" title="OLED Dark Theme"></button>
+            </div>
+
+            <h4 class="settings-section-title" style="margin-top: 1rem;">Speech Speed</h4>
+            <div class="speech-speed-container" style="display: flex; align-items: center; justify-content: space-between; background-color: var(--color-base-bg); padding: 0.5rem 0.75rem; border-radius: 0.75rem; margin-top: 0.5rem;">
+                <input type="range" id="tts-speed-slider" class="speech-speed-slider" min="0.5" max="2.0" step="0.1" value="1.0" style="flex: 1; margin-right: 0.75rem; height: 4px; accent-color: var(--color-primary); cursor: pointer;">
+                <span id="tts-speed-val" style="font-size: 0.8rem; font-weight: 700; color: var(--color-text-default); min-width: 2.20rem; text-align: right;">1.0x</span>
             </div>
         </div>
       </div>
