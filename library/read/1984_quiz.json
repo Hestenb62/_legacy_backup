@@ -1,0 +1,98 @@
+{
+  "chapter-1": [
+    {
+      "question": "What is the primary function of the telescreen in Oceania?",
+      "options": [
+        "It broadcasts entertainment and news programs only.",
+        "It allows citizens to communicate with each other.",
+        "It both transmits and receives signals to monitor citizens' behaviors.",
+        "It is used by citizens to view history records."
+      ],
+      "correctIndex": 2,
+      "explanation": "The telescreen is a two-way device used by the Thought Police to monitor citizens of Oceania in their homes and public spaces."
+    },
+    {
+      "question": "What is the prominent slogan printed on the posters of Big Brother?",
+      "options": [
+        "Knowledge is power",
+        "Big Brother is watching you",
+        "Strength through discipline",
+        "Freedom is obedience"
+      ],
+      "correctIndex": 1,
+      "explanation": "The caption beneath the face of Big Brother reads: 'BIG BROTHER IS WATCHING YOU'."
+    },
+    {
+      "question": "Where does Winston Smith live?",
+      "options": [
+        "Victory Mansions",
+        "Oceania Towers",
+        "Astarte Apartments",
+        "London Flats"
+      ],
+      "correctIndex": 0,
+      "explanation": "Winston Smith slips through the glass doors of Victory Mansions, though not quickly enough to prevent gritty dust from entering with him."
+    }
+  ],
+  "chapter-2": [
+    {
+      "question": "Who knocks on Winston's door in the beginning of Chapter 2?",
+      "options": [
+        "The Thought Police",
+        "O'Brien",
+        "Mrs. Parsons, his neighbor",
+        "Syme"
+      ],
+      "correctIndex": 2,
+      "explanation": "Mrs. Parsons, a neighbor in Victory Mansions, knocks on Winston's door requesting help with her sink."
+    },
+    {
+      "question": "What are the Parsons children playing?",
+      "options": [
+        "Hide and seek",
+        "Spies, pretending Winston is a thought criminal",
+        "Chess and logic games",
+        "Toy soldiers in a pretend war"
+      ],
+      "correctIndex": 1,
+      "explanation": "The children are dressed as Spies, pointing toy pistols and accusing Winston of committing thoughtcrime."
+    }
+  ],
+  "chapter-3": [
+    {
+      "question": "What does Winston dream about in Chapter 3?",
+      "options": [
+        "His mother and sister sinking into deep water",
+        "Defeating Big Brother in a revolution",
+        "Escaping to the countryside with O'Brien",
+        "Being captured by the Thought Police"
+      ],
+      "correctIndex": 0,
+      "explanation": "Winston dreams of his mother and sister sacrificed in a sinking ship while he remains alive."
+    }
+  ],
+  "default": [
+    {
+      "question": "What is doublethink?",
+      "options": [
+        "Thinking about two things at once.",
+        "The power of holding two contradictory beliefs in one's mind simultaneously, and accepting both of them.",
+        "A mental exercise designed to increase brain capacity.",
+        "Believing everything you are told by others."
+      ],
+      "correctIndex": 1,
+      "explanation": "Doublethink is the core philosophical concept of the Party, allowing them to control logic and truth by holding contradictory beliefs."
+    },
+    {
+      "question": "Which Ministry is responsible for torture and law enforcement?",
+      "options": [
+        "Ministry of Truth",
+        "Ministry of Peace",
+        "Ministry of Love",
+        "Ministry of Plenty"
+      ],
+      "correctIndex": 2,
+      "explanation": "The Ministry of Love (Miniluv) maintains law and order through intense surveillance and torture."
+    }
+  ]
+}

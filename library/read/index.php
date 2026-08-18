@@ -1,4 +1,9 @@
 <?php
+// Secure session start for teacher authentication
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
 $requestUri = $_SERVER['REQUEST_URI'] ?? '';
 $requestPath = explode('?', $requestUri)[0];
 $queryString = $_SERVER['QUERY_STRING'] ?? '';
@@ -15,23 +20,36 @@ if (basename($requestPath) === 'reader.php') {
     exit;
 }
 
-$bookId = '';
+if (!isset($bookId) || $bookId === '') {
+    $bookId = '';
+    
+    if (isset($_GET['book']) && $_GET['book'] !== '') {
+        $bookId = $_GET['book'];
+    } else {
+        $decodedQuery = urldecode($queryString);
+        $firstParam = explode('&', $decodedQuery)[0];
 
-if (isset($_GET['book']) && $_GET['book'] !== '') {
-    $bookId = $_GET['book'];
-} else {
-    $decodedQuery = urldecode($queryString);
-    $firstParam = explode('&', $decodedQuery)[0];
+        if (strpos($firstParam, '=') === 0) {
+            $bookId = substr($firstParam, 1);
+        } elseif ($firstParam !== '' && strpos($firstParam, '=') === false) {
+            $bookId = $firstParam;
+        }
+    }
+}
 
-    if (strpos($firstParam, '=') === 0) {
-        $bookId = substr($firstParam, 1);
-    } elseif ($firstParam !== '' && strpos($firstParam, '=') === false) {
-        $bookId = $firstParam;
+// Fallback: extract book ID from URL folder segment if accessing folder indices directly
+if ($bookId === '') {
+    $scriptName = $_SERVER['SCRIPT_NAME'] ?? '';
+    if (preg_match('/\/library\/read\/([a-zA-Z0-9\-]+)\//', $requestPath, $matches)) {
+        $bookId = $matches[1];
+    } elseif (preg_match('/\/library\/read\/([a-zA-Z0-9\-]+)\//', $scriptName, $matches)) {
+        $bookId = $matches[1];
     }
 }
 
 $bookId = preg_replace('/[^a-zA-Z0-9\-]/', '', $bookId);
 
+// Load book data
 $jsonString = file_get_contents(__DIR__ . '/../bookd.json');
 $categories = json_decode($jsonString, true);
 $book = null;
@@ -47,46 +65,125 @@ if (is_array($categories)) {
     }
 }
 
-$bookFolderIndex = $bookId !== '' ? __DIR__ . '/' . $bookId . '/index.php' : '';
-if ($bookFolderIndex !== '' && is_file($bookFolderIndex)) {
-    $bookFolder = dirname($bookFolderIndex);
-    $chapter = '';
-
-    if (isset($_GET['chapter']) && $_GET['chapter'] !== '') {
-        $chapter = preg_replace('/[^a-zA-Z0-9\-]/', '', $_GET['chapter']);
-    }
-
-    require $bookFolderIndex;
-    exit;
-}
-
 $error = '';
 $contentHtml = '';
+$bookTitle = '';
+$bookAuthor = '';
+$chapterNum = 1;
+$totalChapters = 0;
+$isTeacherUnlocked = isset($_SESSION['teacher_unlocked']) && $_SESSION['teacher_unlocked'] === true;
+$authError = '';
+$quizQuestions = [];
 
 if ($bookId === '') {
     $error = 'No book specified.';
 } elseif (!$book) {
     $error = 'Book not found in library catalog.';
 } else {
-    $localFile = $book['local-file'] ?? '';
-    if ($localFile === '') {
-        $error = 'This book does not support online reading.';
-    } else {
-        $localPath = __DIR__ . '/../' . $localFile;
-        $rawHtml = false;
+    $bookTitle = $book['title'] ?? 'Untitled';
+    $bookAuthor = $book['author'] ?? 'Unknown Author';
 
-        if (is_file($localPath)) {
-            $rawHtml = file_get_contents($localPath);
+    // Scan for chapters in book folder
+    $bookFolder = __DIR__ . '/' . $bookId;
+    $chapterFiles = glob($bookFolder . '/chapter-*.php');
+    
+    // Sort chapters numerically to get correct count
+    natsort($chapterFiles);
+    $totalChapters = count($chapterFiles);
+
+    if ($totalChapters > 0) {
+        // Resolve active chapter
+        $chapter = 'chapter-1';
+        if (isset($_GET['chapter']) && $_GET['chapter'] !== '') {
+            $chapter = preg_replace('/[^a-zA-Z0-9\-]/', '', $_GET['chapter']);
+        }
+        
+        if (preg_match('/^chapter-(\d+)$/', $chapter, $matches)) {
+            $chapterNum = intval($matches[1]);
+        } else {
+            $chapter = 'chapter-1';
+            $chapterNum = 1;
         }
 
-        if ($rawHtml === false) {
+        // Validate chapter file
+        $chapterFile = $bookFolder . '/' . $chapter . '.php';
+        if (!is_file($chapterFile)) {
+            $chapter = 'chapter-1';
+            $chapterNum = 1;
+            $chapterFile = $bookFolder . '/chapter-1.php';
+        }
+
+        // Handle teacher resources password authorization
+        if ($chapterNum === $totalChapters) {
+            if (isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['teacher_password'])) {
+                if (trim($_POST['teacher_password']) === '8675309') {
+                    $_SESSION['teacher_unlocked'] = true;
+                    $isTeacherUnlocked = true;
+                    header('Location: /library/read/index.php?book=' . urlencode($bookId) . '&chapter=chapter-' . $totalChapters);
+                    exit;
+                } else {
+                    $authError = 'Incorrect answer. Access Denied.';
+                }
+            }
+        }
+
+        // Load content from chapter file
+        $chapterHtml = file_get_contents($chapterFile);
+        if ($chapterHtml === false) {
+            $error = 'Failed to load chapter content.';
+        } else {
+            // Extract the core reader content inside class "cdn-book-reader-content"
+            if (preg_match('/<div class="cdn-book-reader-content">(.*?)<\/div>\s*<nav class="reader-chapter-nav"/is', $chapterHtml, $matches)) {
+                $contentHtml = $matches[1];
+            } elseif (preg_match('/<div class="cdn-book-reader-content">(.*?)<\/div>/is', $chapterHtml, $matches)) {
+                $contentHtml = $matches[1];
+            } else {
+                // Strip tags if structure unrecognized
+                $contentHtml = $chapterHtml;
+            }
+        }
+
+        // Load Quiz questions from quiz database
+        $quizJsonPath = __DIR__ . '/1984_quiz.json';
+        if (is_file($quizJsonPath)) {
+            $quizData = json_decode(file_get_contents($quizJsonPath), true);
+            if (is_array($quizData)) {
+                $quizQuestions = $quizData['chapter-' . $chapterNum] ?? $quizData['default'] ?? [];
+            }
+        }
+
+    } else {
+        // Single file book
+        $localFile = $book['local-file'] ?? '';
+        $localPath1 = __DIR__ . '/../' . $localFile;
+        $localPath2 = __DIR__ . '/../../' . $localFile;
+        $rawHtml = false;
+
+        if ($localFile !== '') {
+            if (is_file($localPath1)) {
+                $rawHtml = file_get_contents($localPath1);
+            } elseif (is_file($localPath2)) {
+                $rawHtml = file_get_contents($localPath2);
+            }
+        }
+
+        if ($rawHtml === false && $localFile !== '') {
             $cdnUrl = 'https://cdn.hestena62.com/library/' . urlencode($localFile);
             $rawHtml = @file_get_contents($cdnUrl);
         }
 
+        // Check if there is an index.php directly in the book subfolder (e.g., usa-constitution/index.php)
         if ($rawHtml === false) {
-            $error = 'Failed to load book text from storage.';
+            $folderIndex = $bookFolder . '/index.php';
+            if (is_file($folderIndex)) {
+                $rawHtml = file_get_contents($folderIndex);
+            }
+        }
+
+        if ($rawHtml === false) {
+            $error = 'This book does not support online reading, or content could not be retrieved.';
         } else {
+            // Clean styles and base HTML structures to prevent layout breakage in the reader template
             $cleanedHtml = preg_replace('/<style\b[^>]*>(.*?)<\/style>/is', '', $rawHtml);
             $cleanedHtml = preg_replace('/<\/?(!DOCTYPE|html|head|body|meta)[^>]*>/i', '', $cleanedHtml);
             $contentHtml = $cleanedHtml;
@@ -94,135 +191,26 @@ if ($bookId === '') {
     }
 }
 
-$pageTitle = $book ? htmlspecialchars($book['title']) . " | Hesten's Learning Library" : "Book Reader | Hesten's Learning";
-$pageDescription = $book ? htmlspecialchars($book['description']) : 'Read digital classics online with our accessible reader.';
-$pageKeywords = 'ebook, online reader, accessible learning, reading classics';
-$pageAuthor = 'Hesten Allison';
-
-include '../../src/header.php';
-?>
-
-<link rel="stylesheet" href="/library/library.css">
-
-<main id="main-content" class="library-main reader-main-layout">
-    <div class="reader-back-nav">
-        <a href="/library/" class="reader-back-btn">
-            <i class="fas fa-arrow-left"></i> Back to Library
-        </a>
-    </div>
-
-    <?php if (!empty($error)): ?>
-        <script>
-            // Client-side fallback for static/CLI servers like Five Server that don't pass query parameters to PHP
-            const params = new URLSearchParams(window.location.search);
-            const book = params.get('book');
-            const chapter = params.get('chapter') || 'chapter-1';
-            if (book) {
-                window.location.replace('/library/read/' + encodeURIComponent(book) + '/index.php?chapter=' + encodeURIComponent(chapter));
-            }
-        </script>
-        <div class="reader-error-container">
-            <i class="fas fa-exclamation-triangle reader-error-icon"></i>
-            <h2>Unable to load book</h2>
-            <p><?php echo htmlspecialchars($error); ?></p>
-            <a href="/library/" class="reader-error-btn">Return to Catalog</a>
+if ($error !== '') {
+    $pageTitle = "Error | Hesten's Learning Library";
+    include '../../src/header.php';
+    ?>
+    <main id="main-content" class="library-main reader-main-layout">
+        <div class="reader-back-nav">
+            <a href="/library/" class="reader-back-btn" style="text-decoration: none; padding: 0.75rem 1.5rem; background: var(--color-content-bg); border-radius: 9999px; border: 1px solid var(--color-border); font-weight: 700; color: var(--color-text-default); display: inline-flex; align-items: center; gap: 0.5rem;">
+                <i class="fas fa-arrow-left"></i> Return to Catalog
+            </a>
         </div>
-    <?php else: ?>
-        <article class="cdn-book-reader-container animate-reveal">
-            <header class="reader-header">
-                <span class="reader-meta-badge"><i class="fas fa-book-open"></i> ONLINE PORTAL</span>
-                <h1 class="reader-title"><?php echo htmlspecialchars($book['title']); ?></h1>
-                <p class="reader-author">by <?php echo htmlspecialchars($book['author']); ?></p>
-                <div class="reader-specs-bar">
-                    <?php if (!empty($book['grade'])): ?>
-                        <span><i class="fas fa-graduation-cap"></i> <?php echo htmlspecialchars($book['grade']); ?></span>
-                    <?php endif; ?>
-                    <?php if (!empty($book['lexile'])): ?>
-                        <span><i class="fas fa-brain"></i> Lexile <?php echo htmlspecialchars($book['lexile']); ?></span>
-                    <?php endif; ?>
-                    <?php if (!empty($book['isbn'])): ?>
-                        <span><i class="fas fa-barcode"></i> ISBN <?php echo htmlspecialchars($book['isbn']); ?></span>
-                    <?php endif; ?>
-                </div>
-            </header>
-
-            <div id="book-content" class="cdn-book-reader-content">
-                <?php echo $contentHtml; ?>
-            </div>
-
-            <div class="reader-footer-actions">
-                <button onclick="openBookDisclaimer()" class="reader-disclaimer-btn">
-                    <i class="fas fa-balance-scale"></i> Show Book Disclaimer & License
-                </button>
-            </div>
-        </article>
-
-        <div id="bookDisclaimerModal" class="library-modal hidden" role="dialog" aria-modal="true">
-            <div class="library-modal-backdrop" onclick="closeBookDisclaimer()"></div>
-            <div class="library-modal-content" style="max-width: 48rem; padding: 2.5rem; max-height: 80vh; overflow-y: auto;" onclick="event.stopPropagation()">
-                <button onclick="closeBookDisclaimer()" class="library-modal-close-btn" aria-label="Close disclaimer">
-                    <i class="fas fa-times"></i>
-                </button>
-                <h2 style="font-family: var(--site-font-family, 'Outfit', sans-serif); font-size: 1.75rem; margin-bottom: 1.5rem; color: var(--color-primary); display: flex; align-items: center; gap: 0.5rem;">
-                    <i class="fas fa-info-circle"></i> Disclaimer & License
-                </h2>
-                <div id="book-disclaimer-modal-body" class="book-disclaimer-modal-body"></div>
-            </div>
+        <div style="max-width: 500px; margin: 5rem auto; text-align: center; padding: 2rem; background: var(--color-content-bg); border-radius: 1.5rem; border: 1px solid var(--color-border); box-shadow: var(--shadow-lg);">
+            <i class="fas fa-exclamation-triangle" style="font-size: 3rem; color: #ef4444; margin-bottom: 1.5rem;"></i>
+            <h2 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 1rem;">Unable to load book</h2>
+            <p style="color: var(--color-text-secondary); margin-bottom: 1.5rem;"><?php echo htmlspecialchars($error); ?></p>
+            <a href="/library/" class="controls-nav-btn" style="text-decoration: none; display: inline-block;">Browse Catalog</a>
         </div>
-
-        <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const header = document.querySelector('#book-content #pg-header');
-            const footer = document.querySelector('#book-content footer, #book-content #pg-footer');
-            const modalBody = document.getElementById('book-disclaimer-modal-body');
-
-            if (modalBody) {
-                let content = '';
-
-                if (header) {
-                    content += '<div class="modal-disclaimer-section"><h3>Book Header & Disclaimer</h3>' + header.innerHTML + '</div>';
-                }
-
-                if (header && footer) {
-                    content += '<hr style="margin: 2rem 0; border: none; border-top: 1px solid var(--color-border);">';
-                }
-
-                if (footer) {
-                    content += '<div class="modal-disclaimer-section"><h3>License & Distribution Terms</h3>' + footer.innerHTML + '</div>';
-                }
-
-                modalBody.innerHTML = content || '<p style="font-style: italic; color: var(--color-text-secondary);">No Gutenberg headers or license information found in this book.</p>';
-            }
-        });
-
-        function openBookDisclaimer() {
-            const modal = document.getElementById('bookDisclaimerModal');
-            if (modal) {
-                modal.classList.remove('hidden');
-                modal.offsetHeight;
-                modal.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            }
-        }
-
-        function closeBookDisclaimer() {
-            const modal = document.getElementById('bookDisclaimerModal');
-            if (modal) {
-                modal.classList.remove('active');
-                setTimeout(() => {
-                    modal.classList.add('hidden');
-                    document.body.style.overflow = '';
-                }, 400);
-            }
-        }
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                closeBookDisclaimer();
-            }
-        });
-        </script>
-    <?php endif; ?>
-</main>
-
-<?php include '../../src/footer.php'; ?>
+    </main>
+    <?php
+    include '../../src/footer.php';
+} else {
+    // Render unified template
+    require __DIR__ . '/reader_template.php';
+}
