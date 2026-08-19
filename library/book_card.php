@@ -17,6 +17,8 @@
      data-dewey="<?php echo htmlspecialchars($book['dewey'] ?? ''); ?>"
      data-lc="<?php echo htmlspecialchars($book['lc'] ?? ''); ?>"
      data-grade="<?php echo htmlspecialchars($book['grade'] ?? ''); ?>"
+     data-disclaimer-key="<?php echo htmlspecialchars($book['disclaimer-key'] ?? ''); ?>"
+     data-disclaimer-text="<?php echo htmlspecialchars($book['disclaimer-text'] ?? ''); ?>"
      data-is-collection="<?php echo isset($book['isCollection']) && $book['isCollection'] ? 'true' : 'false'; ?>"
      data-books="<?php echo isset($book['books']) ? htmlspecialchars(json_encode($book['books']), ENT_QUOTES, 'UTF-8') : ''; ?>">
 

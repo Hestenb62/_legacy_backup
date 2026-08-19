@@ -1,10 +1,22 @@
 /* library/library.js - Digital Library Hub Interactive Scripts */
 
+let disclaimersData = {};
+
 document.addEventListener("DOMContentLoaded", () => {
     setupScrollButtons();
     setupFilters();
     setupA11y();
+    loadDisclaimers();
 });
+
+function loadDisclaimers() {
+    fetch('disclaimers.json')
+        .then(res => res.json())
+        .then(data => {
+            disclaimersData = data;
+        })
+        .catch(err => console.error("Error loading disclaimers:", err));
+}
 
 /* --- Horizontal Scroll Shelves --- */
 function setupScrollButtons() {
@@ -49,7 +61,14 @@ function setupFilters() {
             const books = section.querySelectorAll('.library-book-card');
             let visibleInRow = 0;
 
-            const categoryMatch = (selectedCat === 'all' || sectionCategory === selectedCat);
+            let categoryMatch = false;
+            if (selectedCat === 'all') {
+                categoryMatch = true;
+            } else if (selectedCat === 'other') {
+                categoryMatch = (sectionCategory !== 'Primary Documents');
+            } else {
+                categoryMatch = (sectionCategory === selectedCat);
+            }
 
             books.forEach(book => {
                 const title = book.dataset.title.toLowerCase();
@@ -92,7 +111,27 @@ function setupFilters() {
     }
 
     if (categoryFilter) {
-        categoryFilter.addEventListener('change', filterLibrary);
+        categoryFilter.addEventListener('change', () => {
+            filterLibrary();
+            const selectedVal = categoryFilter.value;
+            const tabs = document.querySelectorAll('.library-tab-btn');
+            tabs.forEach(tab => {
+                const tabId = tab.getAttribute('data-tab-id');
+                let isActive = false;
+                if (selectedVal === 'all' && tabId === 'all') {
+                    isActive = true;
+                } else if (selectedVal === 'Primary Documents' && tabId === 'Primary Documents') {
+                    isActive = true;
+                } else if (selectedVal !== 'all' && selectedVal !== 'Primary Documents' && tabId === 'other') {
+                    isActive = true;
+                }
+                if (isActive) {
+                    tab.classList.add('active-tab');
+                } else {
+                    tab.classList.remove('active-tab');
+                }
+            });
+        });
     }
 }
 
@@ -119,6 +158,18 @@ window.openModal = function(card) {
     const lc = card.dataset.lc;
     const grade = card.dataset.grade;
     const isCollection = card.dataset.isCollection === 'true';
+    const disclaimerKey = card.dataset.disclaimerKey;
+    const disclaimerText = card.dataset.disclaimerText;
+
+    // Resolve disclaimer to show
+    window.currentBookDisclaimer = '';
+    if (disclaimerText && disclaimerText.trim() !== '') {
+        window.currentBookDisclaimer = disclaimerText;
+    } else if (disclaimerKey && disclaimersData[disclaimerKey]) {
+        window.currentBookDisclaimer = disclaimersData[disclaimerKey];
+    } else {
+        window.currentBookDisclaimer = disclaimersData['default'] || '';
+    }
 
     // Populate standard properties
     document.getElementById('modal-title').textContent = title || 'Untitled';
@@ -284,6 +335,11 @@ window.openDisclaimerModal = function() {
     const discModal = document.getElementById('disclaimerModal');
     if (!discModal) return;
     
+    const discTextEl = discModal.querySelector('.library-disclaimer-text');
+    if (discTextEl) {
+        discTextEl.textContent = window.currentBookDisclaimer || disclaimersData['default'] || '';
+    }
+    
     discModal.classList.remove('hidden');
     discModal.offsetHeight;
     discModal.classList.add('active');
@@ -353,4 +409,13 @@ window.closeDdcInfoModal = function() {
     if (!modal) return;
     modal.classList.remove('active');
     setTimeout(() => { modal.classList.add('hidden'); }, 300);
+};
+
+/* --- Netflix-style Tab Swapper --- */
+window.switchLibraryTab = function(tabName) {
+    const selectFilter = document.getElementById('category-filter');
+    if (selectFilter) {
+        selectFilter.value = tabName;
+        selectFilter.dispatchEvent(new Event('change'));
+    }
 };

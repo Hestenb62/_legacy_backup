@@ -140,28 +140,73 @@
 <!-- Lexile Info Modal -->
 <div id="lexileInfoModal" class="library-modal hidden" role="dialog" aria-modal="true" style="z-index: 3000;">
     <div class="library-modal-backdrop" onclick="closeLexileInfoModal()"></div>
-    <div class="library-modal-content" style="max-width: 32rem; padding: 2rem;" onclick="event.stopPropagation()">
+    <div class="library-modal-content" style="max-width: 38rem; padding: 2rem; max-height: 85vh; overflow-y: auto;" onclick="event.stopPropagation()">
         <button onclick="closeLexileInfoModal()" class="library-modal-close-btn" aria-label="Close">
             <i class="fas fa-times"></i>
         </button>
-        <h3 style="font-family: var(--site-font-family, 'Outfit', sans-serif); font-size: 1.5rem; font-weight: 800; color: var(--color-primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;"><i class="fas fa-info-circle"></i> Lexile Measure</h3>
-        <p style="font-size: 0.9rem; line-height: 1.6; color: var(--color-text-secondary); margin-bottom: 1.5rem; text-align: left;">
-            A Lexile measure represents a text's difficulty. It helps readers find books at an appropriate reading level. Scores range from 200L (beginning) to 1600L+ (advanced).
-        </p>
-        <h4 style="font-size: 1rem; font-weight: 700; margin-bottom: 0.75rem; text-align: left;">Catalog Comparison:</h4>
-        <div style="max-height: 200px; overflow-y: auto; border: 1px solid var(--color-border); border-radius: 0.75rem; padding: 0.5rem 1rem; background: var(--color-base-bg);">
-            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-border); font-size: 0.85rem;"><span>The Midnight Library</span><strong>850L</strong></div>
-            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-border); font-size: 0.85rem;"><span>The Fellowship of the Ring</span><strong>920L</strong></div>
-            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-border); font-size: 0.85rem;"><span>The Two Towers</span><strong>940L</strong></div>
-            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-border); font-size: 0.85rem;"><span>The Return of the King</span><strong>960L</strong></div>
-            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-border); font-size: 0.85rem;"><span>The Hobbit / LOTR Collection</span><strong>1000L</strong></div>
-            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-border); font-size: 0.85rem;"><span>Pride and Prejudice</span><strong>1070L</strong></div>
-            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-border); font-size: 0.85rem;"><span>Dune</span><strong>1080L</strong></div>
-            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-border); font-size: 0.85rem;"><span>1984</span><strong>1090L</strong></div>
-            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-border); font-size: 0.85rem;"><span>The Art of War</span><strong>1140L</strong></div>
-            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-border); font-size: 0.85rem;"><span>Frankenstein</span><strong>1170L</strong></div>
-            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-border); font-size: 0.85rem;"><span>Meditations</span><strong>1200L</strong></div>
-            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; font-size: 0.85rem;"><span>Euclid's Elements / Relativity</span><strong>1300L</strong></div>
+        <h3 style="font-family: var(--site-font-family, 'Outfit', sans-serif); font-size: 1.5rem; font-weight: 800; color: #10b981; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+            <i class="fas fa-chart-line"></i> The Lexile® Framework
+        </h3>
+        
+        <div style="font-size: 0.9rem; line-height: 1.6; color: var(--color-text-secondary); text-align: left;">
+            <p style="margin-bottom: 1rem;">
+                <strong>What is a Lexile Measure?</strong><br>
+                A Lexile reader measure represents a student's reading ability, while a Lexile text measure represents the difficulty of a text (such as a book or article). Both are placed on a single scale developed by <em>MetaMetrics®</em>, allowing readers to easily find books that match their current reading level.
+            </p>
+            <p style="margin-bottom: 1.5rem;">
+                <strong>How it Works:</strong><br>
+                Lexile measures range from <strong>200L</strong> for beginning readers to <strong>1600L+</strong> for advanced texts. When a reader's score matches a book's measure (for example, a 600L reader reading a 600L book), they are in their "sweet spot" (75% comprehension range)—challenging enough to grow their vocabulary without causing frustration.
+            </p>
+        </div>
+
+        <h4 style="font-size: 1rem; font-weight: 700; margin-bottom: 0.75rem; text-align: left; border-bottom: 1px solid var(--color-border); padding-bottom: 0.5rem;">Typical Lexile Grade Bands:</h4>
+        <div style="max-height: 250px; overflow-y: auto; border: 1px solid var(--color-border); border-radius: 0.75rem; background: var(--color-base-bg);">
+            <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem; text-align: left;">
+                <thead>
+                    <tr style="border-bottom: 1px solid var(--color-border); background-color: rgba(0,0,0,0.02); font-weight: 700;">
+                        <th style="padding: 0.75rem 1rem;">Grade Level</th>
+                        <th style="padding: 0.75rem 1rem;">Lexile Range</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="border-bottom: 1px solid var(--color-border);">
+                        <td style="padding: 0.5rem 1rem;">Kindergarten</td>
+                        <td style="padding: 0.5rem 1rem;">BR (Beginning Reader) - 275L</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--color-border);">
+                        <td style="padding: 0.5rem 1rem;">Grade 1</td>
+                        <td style="padding: 0.5rem 1rem;">190L to 530L</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--color-border);">
+                        <td style="padding: 0.5rem 1rem;">Grade 2</td>
+                        <td style="padding: 0.5rem 1rem;">420L to 650L</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--color-border);">
+                        <td style="padding: 0.5rem 1rem;">Grade 3</td>
+                        <td style="padding: 0.5rem 1rem;">520L to 820L</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--color-border);">
+                        <td style="padding: 0.5rem 1rem;">Grade 4</td>
+                        <td style="padding: 0.5rem 1rem;">740L to 940L</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--color-border);">
+                        <td style="padding: 0.5rem 1rem;">Grade 5</td>
+                        <td style="padding: 0.5rem 1rem;">830L to 1010L</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--color-border);">
+                        <td style="padding: 0.5rem 1rem;">Grades 6 - 8</td>
+                        <td style="padding: 0.5rem 1rem;">925L to 1185L</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--color-border);">
+                        <td style="padding: 0.5rem 1rem;">Grades 9 - 10</td>
+                        <td style="padding: 0.5rem 1rem;">1050L to 1335L</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.5rem 1rem;">Grades 11 - 12</td>
+                        <td style="padding: 0.5rem 1rem;">1185L to 1385L+</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>
@@ -169,20 +214,67 @@
 <!-- DDC Info Modal -->
 <div id="ddcInfoModal" class="library-modal hidden" role="dialog" aria-modal="true" style="z-index: 3000;">
     <div class="library-modal-backdrop" onclick="closeDdcInfoModal()"></div>
-    <div class="library-modal-content" style="max-width: 32rem; padding: 2rem;" onclick="event.stopPropagation()">
+    <div class="library-modal-content" style="max-width: 38rem; padding: 2rem; max-height: 85vh; overflow-y: auto;" onclick="event.stopPropagation()">
         <button onclick="closeDdcInfoModal()" class="library-modal-close-btn" aria-label="Close">
             <i class="fas fa-times"></i>
         </button>
-        <h3 style="font-family: var(--site-font-family, 'Outfit', sans-serif); font-size: 1.5rem; font-weight: 800; color: var(--color-primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;"><i class="fas fa-info-circle"></i> Dewey Decimal System</h3>
-        <p style="font-size: 0.9rem; line-height: 1.6; color: var(--color-text-secondary); margin-bottom: 1.5rem; text-align: left;">
-            The Dewey Decimal Classification (DDC) organizes library materials by subject discipline into ten main categories. It makes finding specific subjects easy.
-        </p>
-        <h4 style="font-size: 1rem; font-weight: 700; margin-bottom: 0.75rem; text-align: left;">Catalog Comparison:</h4>
-        <div style="max-height: 200px; overflow-y: auto; border: 1px solid var(--color-border); border-radius: 0.75rem; padding: 0.5rem 1rem; background: var(--color-base-bg);">
-            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-border); font-size: 0.85rem;"><span>100s Philosophy & Psychology (Meditations)</span><strong>180</strong></div>
-            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-border); font-size: 0.85rem;"><span>300s Social Sciences (The Art of War)</span><strong>355.02</strong></div>
-            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-border); font-size: 0.85rem;"><span>800s Literature (The Midnight Library)</span><strong>823.92</strong></div>
-            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; font-size: 0.85rem;"><span>800s Literature (Dune)</span><strong>813.54</strong></div>
+        <h3 style="font-family: var(--site-font-family, 'Outfit', sans-serif); font-size: 1.5rem; font-weight: 800; color: #a25afd; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+            <i class="fas fa-sitemap"></i> The Dewey Decimal Classification
+        </h3>
+        
+        <div style="font-size: 0.9rem; line-height: 1.6; color: var(--color-text-secondary); text-align: left;">
+            <p style="margin-bottom: 1rem;">
+                <strong>What is the Dewey Decimal System?</strong><br>
+                The Dewey Decimal Classification (DDC) is a proprietary library classification system first published in the United States by Melvil Dewey in 1876. It organizes a library's books onto shelves in a structured, logical order based on subject matter.
+            </p>
+            <p style="margin-bottom: 1.5rem;">
+                <strong>How it Works:</strong><br>
+                The DDC divides all human knowledge into <strong>10 Main Classes</strong>, each represented by a three-digit number. These classes are subdivided into divisions, sections, and further decimal divisions (e.g., <code>500</code> for Science, <code>510</code> for Mathematics, <code>516</code> for Geometry) to keep related topics grouped together.
+            </p>
+        </div>
+
+        <h4 style="font-size: 1rem; font-weight: 700; margin-bottom: 0.75rem; text-align: left; border-bottom: 1px solid var(--color-border); padding-bottom: 0.5rem;">The 10 Core DDC Classes:</h4>
+        <div style="max-height: 250px; overflow-y: auto; border: 1px solid var(--color-border); border-radius: 0.75rem; background: var(--color-base-bg); font-size: 0.85rem; text-align: left; padding: 0.5rem 1rem;">
+            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-border);">
+                <strong>000 - 099</strong>
+                <span style="flex-grow: 1; margin-left: 1.5rem;">Computer Science, Information & General Works</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-border);">
+                <strong>100 - 199</strong>
+                <span style="flex-grow: 1; margin-left: 1.5rem;">Philosophy & Psychology</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-border);">
+                <strong>200 - 299</strong>
+                <span style="flex-grow: 1; margin-left: 1.5rem;">Religion</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-border);">
+                <strong>300 - 399</strong>
+                <span style="flex-grow: 1; margin-left: 1.5rem;">Social Sciences</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-border);">
+                <strong>400 - 499</strong>
+                <span style="flex-grow: 1; margin-left: 1.5rem;">Language</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-border);">
+                <strong>500 - 599</strong>
+                <span style="flex-grow: 1; margin-left: 1.5rem;">Science</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-border);">
+                <strong>600 - 699</strong>
+                <span style="flex-grow: 1; margin-left: 1.5rem;">Technology & Applied Science</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-border);">
+                <strong>700 - 799</strong>
+                <span style="flex-grow: 1; margin-left: 1.5rem;">Arts & Recreation</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-border);">
+                <strong>800 - 899</strong>
+                <span style="flex-grow: 1; margin-left: 1.5rem;">Literature & Rhetoric</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0;">
+                <strong>900 - 999</strong>
+                <span style="flex-grow: 1; margin-left: 1.5rem;">History & Geography</span>
+            </div>
         </div>
     </div>
 </div>

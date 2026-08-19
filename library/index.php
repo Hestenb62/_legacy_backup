@@ -37,6 +37,19 @@ include '../src/header.php';
 
 <main id="main-content" class="library-main">
 
+    <!-- Top Sub-Navigation Tabs (Below Main Nav Bar) -->
+    <div class="library-tabs-row library-animate-reveal" style="animation-delay: 0.05s; display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--color-border); width: 100%;">
+        <button onclick="switchLibraryTab('all')" class="library-tab-btn active-tab" data-tab-id="all">
+            All Items
+        </button>
+        <button onclick="switchLibraryTab('Primary Documents')" class="library-tab-btn" data-tab-id="Primary Documents">
+            🏛️ US Primary Docs
+        </button>
+        <button onclick="switchLibraryTab('other')" class="library-tab-btn" data-tab-id="other">
+            📚 Other Docs
+        </button>
+    </div>
+
     <!-- Hero Section -->
     <section class="library-hero">
         <div class="library-animate-reveal">
@@ -62,8 +75,12 @@ include '../src/header.php';
             <div class="library-filter-select-container">
                 <select id="category-filter" aria-label="Select Category" class="library-category-select library-glass-shine">
                     <option value="all">All Categories</option>
+                    <option value="Primary Documents">US Primary Docs</option>
+                    <option value="other">Other Docs</option>
                     <?php foreach (array_keys($categories) as $cat): ?>
-                        <option value="<?php echo htmlspecialchars($cat); ?>"><?php echo htmlspecialchars($cat); ?></option>
+                        <?php if ($cat !== 'Primary Documents'): ?>
+                            <option value="<?php echo htmlspecialchars($cat); ?>"><?php echo htmlspecialchars($cat); ?></option>
+                        <?php endif; ?>
                     <?php endforeach; ?>
                 </select>
                 <i class="fas fa-filter library-filter-icon"></i>
