@@ -20,7 +20,8 @@
      data-disclaimer-key="<?php echo htmlspecialchars($book['disclaimer-key'] ?? ''); ?>"
      data-disclaimer-text="<?php echo htmlspecialchars($book['disclaimer-text'] ?? ''); ?>"
      data-is-collection="<?php echo isset($book['isCollection']) && $book['isCollection'] ? 'true' : 'false'; ?>"
-     data-books="<?php echo isset($book['books']) ? htmlspecialchars(json_encode($book['books']), ENT_QUOTES, 'UTF-8') : ''; ?>">
+     data-books="<?php echo isset($book['books']) ? htmlspecialchars(json_encode($book['books']), ENT_QUOTES, 'UTF-8') : ''; ?>"
+     data-category="<?php echo htmlspecialchars($book['category'] ?? ''); ?>">
 
     <!-- Cover Image Wrapper with hover lifting action -->
     <div class="library-book-cover-wrap">

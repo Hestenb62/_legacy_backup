@@ -159,9 +159,10 @@ include '../src/header.php';
 
                 <!-- Horizontal Scroll Container -->
                 <div class="library-books-row">
-                    <?php foreach ($books as $book): ?>
-                        <?php include 'book_card.php'; ?>
-                    <?php endforeach; ?>
+                    <?php foreach ($books as $book): 
+                        $book['category'] = $categoryName;
+                        include 'book_card.php';
+                    endforeach; ?>
                 </div>
             </section>
         <?php endforeach; ?>
