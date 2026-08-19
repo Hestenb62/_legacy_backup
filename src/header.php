@@ -109,19 +109,20 @@ $currentUser = getCurrentUser();
                         <a href="/" class="nav-link"><i class="fas fa-home" style="margin-right: 0.25rem; opacity: 0.7;"></i> Home</a>
                         <a href="/assessment" class="nav-link"><i class="fas fa-tasks" style="margin-right: 0.25rem; opacity: 0.7;"></i> Assessment</a>
                         <a href="/library/" class="nav-link"><i class="fas fa-book" style="margin-right: 0.25rem; opacity: 0.7;"></i> Library</a>
-                        <a href="/documents.php" class="nav-link"><i class="fas fa-file-alt" style="margin-right: 0.25rem; opacity: 0.7;"></i> Documents</a>
                     </div>
                     
                     <div class="header-actions">
+                    <!-- Search Bar - NOT WORKING
                         <form action="/search.php" method="GET" class="search-form">
                             <label for="header-search" class="sr-only">Search the site</label>
                             <input type="text" id="header-search" name="q" placeholder="Search..." class="search-input" />
                             <i class="fas fa-search search-icon"></i>
                         </form>
+                        NEEDS WORK -->
                         
                         <div class="user-dropdown-container">
                             <button class="user-pill" id="user-pill-btn" aria-expanded="false" aria-haspopup="true" aria-controls="user-dropdown-menu">
-                                <img src="<?php echo htmlspecialchars($currentUser['avatar']); ?>" alt="User" class="user-avatar" onerror="this.src='https://ui-avatars.com/api/?name=User&background=random'">
+                                <img src="<?php echo htmlspecialchars($currentUser['avatar']); ?>" alt="User" class="user-avatar" onerror="this.src="https://ui-avatars.com/api/?name=User&background=random">
                                 <div class="user-info">
                                     <span class="user-name"><?php echo htmlspecialchars($currentUser['name']); ?></span>
                                     <span class="user-role"><?php echo htmlspecialchars($currentUser['role']); ?></span>

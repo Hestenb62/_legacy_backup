@@ -11,80 +11,129 @@ if ($query !== '') {
     
     // Expanded list of ignored directories to optimize search and avoid crash/timeout
     $ignoreDirs = [
-        'assets', 'src', 'logs', 'tmp', 'vendor', 'test', 'data',
-        '.git', '.agents', '.vscode', '.github', 'node_modules'
+        'assets', 'src', 'logs', 'tmp', 'vendor', 'data',
+        '.git', '.agents', '.vscode', '.github', 'node_modules', 'test'
     ];
     
     $queryLower = strtolower($query);
 
-    $iterator = new RecursiveIteratorIterator(
-        new RecursiveCallbackFilterIterator(
-            new RecursiveDirectoryIterator($searchDir, RecursiveDirectoryIterator::SKIP_DOTS),
+    try {
+        $dirIterator = new RecursiveDirectoryIterator($searchDir, RecursiveDirectoryIterator::SKIP_DOTS);
+        $filterIterator = new RecursiveCallbackFilterIterator(
+            $dirIterator,
             function ($current, $key, $iterator) use ($ignoreDirs, $searchDir) {
-                // Ignore matching directories
-                $relativePath = str_replace($searchDir . DIRECTORY_SEPARATOR, '', $current->getPathname());
-                $parts = explode(DIRECTORY_SEPARATOR, $relativePath);
+                // Normalize paths to forward slashes
+                $pathname = str_replace('\\', '/', $current->getPathname());
+                $searchDirNorm = str_replace('\\', '/', $searchDir);
+                
+                // Case-insensitive prefix replacement to handle Windows drive casing anomalies
+                $prefix = $searchDirNorm . '/';
+                if (stripos($pathname, $prefix) === 0) {
+                    $relativePath = substr($pathname, strlen($prefix));
+                } else {
+                    $relativePath = $pathname;
+                }
+                
+                $parts = explode('/', $relativePath);
                 if (in_array($parts[0], $ignoreDirs)) {
                     return false;
                 }
                 return true;
             }
-        )
-    );
+        );
 
-    foreach ($iterator as $file) {
-        if ($file->isFile() && $file->getExtension() === 'php' && $file->getFilename() !== 'search.php') {
-            $content = file_get_contents($file->getPathname());
-            
-            // Extract title
-            $title = 'Untitled Page';
-            if (preg_match('/\$pageTitle\s*=\s*["\']([^"\']+)["\'];/i', $content, $matches)) {
-                $title = $matches[1];
-            } elseif (preg_match('/<title>(.*?)<\/title>/i', $content, $matches)) {
-                $title = $matches[1];
-            }
-
-            // Remove script and style tags WITH their contents to avoid matching raw code
-            $cleanedContent = preg_replace('/<script\b[^>]*>(.*?)<\/script>/is', '', $content);
-            $cleanedContent = preg_replace('/<style\b[^>]*>(.*?)<\/style>/is', '', $cleanedContent);
-
-            // Strip PHP and HTML to get clean text
-            $cleanText = strip_tags(preg_replace('/<\?php.*?\?>/ms', '', $cleanedContent));
-            
-            // Search match
-            if (stripos($cleanText, $query) !== false || stripos($title, $query) !== false) {
-                // Generate a snippet
-                $pos = stripos($cleanText, $query);
-                $snippet = '';
-                if ($pos !== false) {
-                    $start = max(0, $pos - 40);
-                    $length = min(strlen($cleanText) - $start, 120);
-                    $snippet = substr($cleanText, $start, $length);
-                    // Add ellipses
-                    if ($start > 0) $snippet = '...' . ltrim($snippet);
-                    if ($start + $length < strlen($cleanText)) $snippet = rtrim($snippet) . '...';
+        $iterator = new RecursiveIteratorIterator($filterIterator);
+        
+        $iterator->rewind();
+        while ($iterator->valid()) {
+            try {
+                $file = $iterator->current();
+                
+                if ($file && $file->isFile() && $file->getExtension() === 'php' && $file->getFilename() !== 'search.php') {
+                    $content = @file_get_contents($file->getPathname());
+                    if ($content === false) {
+                        $iterator->next();
+                        continue;
+                    }
                     
-                    // Highlight the query in the snippet (case-insensitive)
-                    $snippet = preg_replace(
-                        '/(' . preg_quote($query, '/') . ')/i', 
-                        '<strong style="color: var(--color-primary); background-color: color-mix(in srgb, var(--color-primary) 10%, transparent); padding: 0 0.25rem; border-radius: 0.25rem;">$1</strong>', 
-                        htmlspecialchars($snippet)
-                    );
-                } else {
-                    $snippet = 'Match found in title or metadata.';
+                    // Extract title
+                    $title = 'Untitled Page';
+                    if (preg_match('/\$pageTitle\s*=\s*["\']([^"\']+)["\'];/i', $content, $matches)) {
+                        $title = $matches[1];
+                    } elseif (preg_match('/<title>(.*?)<\/title>/i', $content, $matches)) {
+                        $title = $matches[1];
+                    }
+
+                    // Remove script and style tags WITH their contents to avoid matching raw code
+                    $cleanedContent = preg_replace('/<script\b[^>]*>(.*?)<\/script>/is', '', $content);
+                    $cleanedContent = preg_replace('/<style\b[^>]*>(.*?)<\/style>/is', '', $cleanedContent);
+
+                    // Strip all PHP tags (including short open tags <?= and <? ) and strip HTML tags
+                    $cleanedContent = preg_replace('/<\?(php|=)?.*?(\?>|$)/is', '', $cleanedContent);
+                    $cleanText = strip_tags($cleanedContent);
+                    
+                    // Decode HTML entities for accurate matching (e.g. &nbsp; or &amp;)
+                    $cleanText = html_entity_decode($cleanText, ENT_QUOTES | ENT_HTML5, 'UTF-8');
+                    // Collapse multiple spaces to single spaces for cleaner snippets
+                    $cleanText = preg_replace('/\s+/', ' ', $cleanText);
+                    
+                    // Search match
+                    if (stripos($cleanText, $query) !== false || stripos($title, $query) !== false) {
+                        // Generate a snippet
+                        $pos = stripos($cleanText, $query);
+                        $snippet = '';
+                        if ($pos !== false) {
+                            $start = max(0, $pos - 40);
+                            $length = min(strlen($cleanText) - $start, 120);
+                            $snippet = substr($cleanText, $start, $length);
+                            // Add ellipses
+                            if ($start > 0) $snippet = '...' . ltrim($snippet);
+                            if ($start + $length < strlen($cleanText)) $snippet = rtrim($snippet) . '...';
+                        } else {
+                            // Fallback to start of page text if match is in title
+                            $snippet = substr($cleanText, 0, 120);
+                            if (strlen($cleanText) > 120) $snippet .= '...';
+                        }
+
+                        // Highlight the query in the snippet (case-insensitive)
+                        $snippet = preg_replace(
+                            '/(' . preg_quote($query, '/') . ')/i', 
+                            '<strong style="color: var(--color-primary); background-color: color-mix(in srgb, var(--color-primary) 10%, transparent); padding: 0 0.25rem; border-radius: 0.25rem;">$1</strong>', 
+                            htmlspecialchars($snippet)
+                        );
+
+                        // Get relative link case-insensitively
+                        $filePathNorm = str_replace('\\', '/', $file->getPathname());
+                        $searchDirNorm = str_replace('\\', '/', $searchDir);
+                        $prefix = $searchDirNorm . '/';
+                        if (stripos($filePathNorm, $prefix) === 0) {
+                            $link = '/' . substr($filePathNorm, strlen($prefix));
+                        } else {
+                            $link = str_replace('\\', '/', str_replace($searchDir, '', $file->getPathname()));
+                        }
+
+                        $results[] = [
+                            'title' => $title,
+                            'desc'  => $snippet,
+                            'link'  => $link
+                        ];
+                    }
                 }
-
-                // Get relative link
-                $link = str_replace($searchDir, '', $file->getPathname());
-                $link = str_replace('\\', '/', $link);
-
-                $results[] = [
-                    'title' => $title,
-                    'desc'  => $snippet,
-                    'link'  => $link
-                ];
+            } catch (UnexpectedValueException $e) {
+                // Safely skip locked files/folders (e.g. OneDrive files not downloaded locally)
+            } catch (Exception $e) {
+                // Safely skip other standard file read exceptions
+            }
+            
+            // Advance iterator
+            try {
+                $iterator->next();
+            } catch (UnexpectedValueException $e) {
+                // If advancing throws due to an inaccessible adjacent directory, skip it
             }
         }
+    } catch (Exception $e) {
+        // Fallback catch if core DirectoryIterator setup fails
     }
 }
 

@@ -69,6 +69,68 @@ include '../src/header.php';
     </div>
 </header>
 
+<!-- START MENU (Shown after selecting a grade, before starting the quiz) -->
+<div id="assessment-start-menu" class="assessment-container hidden" style="margin-top: 2rem; margin-bottom: 4rem;">
+    <div class="assessment-quiz-card" style="max-width: 800px; margin: 0 auto; padding: 2.5rem; position: relative;">
+        <!-- Background Decoration -->
+        <div style="position: absolute; top: 0; right: 0; padding: 1rem; opacity: 0.05; pointer-events: none;">
+            <i class="fas fa-clipboard-list" style="font-size: 8rem; color: var(--color-text-main);"></i>
+        </div>
+        
+        <h2 class="assessment-hero-title" style="font-size: 2.25rem; text-align: center; margin-bottom: 1rem; background: linear-gradient(135deg, var(--color-primary), var(--color-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-family: 'Outfit', sans-serif; font-weight: 800;">
+            Ready to Begin?
+        </h2>
+        <p style="text-align: center; margin-bottom: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto; color: var(--color-text-muted); line-height: 1.6;">
+            Select how you would like to test your skills today. You can take a mixed Entrance Exam to evaluate your grade-level placement, or focus on a single subject.
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6" style="margin-top: 1rem;">
+            <!-- Card 1: Entrance Exam -->
+            <div class="assessment-card assessment-card-accent-top" style="display: flex; flex-direction: column; justify-content: space-between; border-color: var(--color-primary); padding: 2rem; height: 100%;">
+                <div>
+                    <div style="width: 3.5rem; height: 3.5rem; border-radius: var(--radius-xl); background-color: color-mix(in srgb, var(--color-primary) 10%, transparent); color: var(--color-primary); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.5rem;">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="assessment-card-title" style="font-size: 1.25rem; font-weight: 800; margin-bottom: 0.75rem;">Entrance Exam</h3>
+                    <p style="font-size: 0.875rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.5rem;">
+                        A comprehensive diagnostic test that mixes all core subjects. Upon completion, you will receive customized lesson recommendations based on your performance.
+                    </p>
+                </div>
+                <button onclick="startAssessmentMode('All')" class="hero-nav-btn hero-nav-btn-primary" style="width: 100%; border: none; text-align: center; justify-content: center; padding: 0.75rem 1.5rem; border-radius: var(--radius-lg); font-weight: 700;">
+                    Start Entrance Exam
+                </button>
+            </div>
+
+            <!-- Card 2: Subject Tests -->
+            <div class="assessment-card assessment-card-accent-top" style="display: flex; flex-direction: column; justify-content: space-between; border-color: var(--color-secondary); padding: 2rem; height: 100%;">
+                <div>
+                    <div style="width: 3.5rem; height: 3.5rem; border-radius: var(--radius-xl); background-color: color-mix(in srgb, var(--color-secondary) 10%, transparent); color: var(--color-secondary); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.5rem;">
+                        <i class="fas fa-filter"></i>
+                    </div>
+                    <h3 class="assessment-card-title" style="font-size: 1.25rem; font-weight: 800; margin-bottom: 0.75rem;">Subject Checks</h3>
+                    <p style="font-size: 0.875rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.5rem;">
+                        Select a single subject to focus on. Perfect for targeting a specific standard or checking your growth in one area.
+                    </p>
+                </div>
+                <div class="focus-filter-list" style="gap: 0.5rem; margin: 0; display: flex; flex-direction: column;">
+                    <button onclick="startAssessmentMode('Math')" class="focus-filter-btn" style="text-align: left; padding: 0.6rem 1rem; font-size: 0.875rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); display: flex; align-items: center; width: 100%;">
+                        <i class="fas fa-calculator" style="color: var(--color-primary); width: 1.5rem; margin-right: 0.5rem;"></i> Math Test
+                    </button>
+                    <button onclick="startAssessmentMode('Language Arts')" class="focus-filter-btn" style="text-align: left; padding: 0.6rem 1rem; font-size: 0.875rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); display: flex; align-items: center; width: 100%;">
+                        <i class="fas fa-book-reader" style="color: #ec4899; width: 1.5rem; margin-right: 0.5rem;"></i> Language Arts Test
+                    </button>
+                    <button onclick="startAssessmentMode('Science')" class="focus-filter-btn" style="text-align: left; padding: 0.6rem 1rem; font-size: 0.875rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); display: flex; align-items: center; width: 100%;">
+                        <i class="fas fa-flask" style="color: #10b981; width: 1.5rem; margin-right: 0.5rem;"></i> Science Test
+                    </button>
+                    <button onclick="startAssessmentMode('Social Studies')" class="focus-filter-btn" style="text-align: left; padding: 0.6rem 1rem; font-size: 0.875rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); display: flex; align-items: center; width: 100%;">
+                        <i class="fas fa-globe-americas" style="color: #f59e0b; width: 1.5rem; margin-right: 0.5rem;"></i> Social Studies Test
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div id="quiz-container" class="assessment-container">
     <!-- Hidden inputs for JavaScript -->
     <input type="hidden" id="force-grade" value="" />
@@ -204,6 +266,19 @@ include '../src/header.php';
                 <!-- Hint Modal (Inline) -->
                 <div id="hintText" class="hint-box" style="display: none;">
                     <strong>Hint:</strong> <span id="hint-content"></span>
+                </div>
+            </div>
+            
+            <!-- Diagnostic Recommendations Card (Hidden initially) -->
+            <div id="diagnostic-container" class="assessment-card assessment-card-accent-top" style="display: none; margin-top: 2rem; border-color: var(--color-success);">
+                <h3 class="assessment-card-title" style="margin-bottom: 0.5rem;">
+                    <i class="fas fa-lightbulb" style="color: var(--color-success);"></i> Diagnostic Recommendations
+                </h3>
+                <p style="font-size: 0.875rem; color: var(--color-text-muted); margin-bottom: 1.5rem; line-height: 1.6;">
+                    Based on your Entrance Exam performance, we suggest focusing on the following curriculum levels to strengthen your skills:
+                </p>
+                <div id="diagnostic-list" style="display: flex; flex-direction: column; gap: 1rem;">
+                    <!-- Suggested lessons injected by JS -->
                 </div>
             </div>
             

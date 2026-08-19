@@ -285,11 +285,40 @@ document.addEventListener("DOMContentLoaded", () => {
     if (nextSpacer) nextSpacer.classList.remove("hidden");
   }
 
-  // === TRIGGER EXISTING LOGIC ===
-  console.log("Initializing with grade:", gradeName);
-  if (typeof loadQuestions === "function") {
-    loadQuestions(gradeName);
+  // === TRIGGER START MENU OR LANDING MODE ===
+  console.log("Loading start menu for grade:", gradeName);
+  
+  // Hide quiz container/header initially
+  if (quizHeader) quizHeader.classList.add("hidden");
+  if (quizContainer) quizContainer.classList.add("hidden");
+  
+  const startMenu = document.getElementById("assessment-start-menu");
+  if (startMenu) {
+      startMenu.classList.remove("hidden");
   }
+  
+  // Expose global function to start assessment from Start Menu
+  window.startAssessmentMode = function(subjectFilter) {
+      if (startMenu) startMenu.classList.add("hidden");
+      if (quizHeader) quizHeader.classList.remove("hidden");
+      if (quizContainer) quizContainer.classList.remove("hidden");
+      
+      // Reset diagnostic recommendation container
+      const diagContainer = document.getElementById("diagnostic-container");
+      if (diagContainer) diagContainer.style.display = "none";
+      
+      // Save current assessment type (mixed Entrance Exam vs subject specific)
+      window.currentAssessmentType = subjectFilter === 'All' ? 'Entrance Exam' : 'Subject Assessment';
+      window.currentAssessmentSubject = subjectFilter;
+      
+      // Set the sidebar filter highlight to active for the selected subject
+      updateSidebarFilterUI(subjectFilter);
+      
+      // Load questions via core callback
+      if (typeof loadQuestions === "function") {
+          loadQuestions(gradeName, subjectFilter);
+      }
+  };
 });
 
 // ==========================================
@@ -419,6 +448,7 @@ window.skipQuestion = function () {
         isCorrect: false,
         timestamp: new Date().toLocaleTimeString(),
         hint: q.hint || "No hint available.",
+        subject: q.subject || "General",
       });
       playIncorrectSound(); // Optional feedback for skip
     }
@@ -446,6 +476,7 @@ if (typeof checkAnswer === "function") {
             isCorrect: isCorrect,
             timestamp: new Date().toLocaleTimeString(),
             hint: q.hint || "No explanation available.",
+            subject: q.subject || "General",
           });
 
           // Track learning focus recommendations if incorrect
@@ -573,6 +604,98 @@ if (typeof finishQuiz === "function") {
         resultDiv.appendChild(downloadBtn);
       }
 
+      // Only show diagnostics if Entrance Exam was taken
+      if (window.currentAssessmentType === 'Entrance Exam') {
+          const subjectStats = {};
+          
+          // Count total and correct per subject
+          window.quizResultsData.forEach((item) => {
+              const subj = item.subject || 'General';
+              if (!subjectStats[subj]) {
+                  subjectStats[subj] = { total: 0, correct: 0 };
+              }
+              subjectStats[subj].total++;
+              if (item.isCorrect) {
+                  subjectStats[subj].correct++;
+              }
+          });
+          
+          // Generate recommendations
+          const recommendations = [];
+          const currentKey = document.getElementById("grade-key")?.value || "3";
+          
+          // Level links based on gradeConfig
+          const levelLink = gradeConfig[currentKey]?.link || "/";
+          const gradeLabel = gradeConfig[currentKey]?.label || "this Grade";
+
+          Object.entries(subjectStats).forEach(([subj, stats]) => {
+              const pct = (stats.correct / stats.total) * 100;
+              if (pct < 80) {
+                  recommendations.push({
+                      subject: subj,
+                      score: Math.round(pct),
+                      total: stats.total,
+                      correct: stats.correct,
+                      link: levelLink,
+                      message: `Scored ${Math.round(pct)}% in ${subj}. We suggest reviewing ${gradeLabel} ${subj} curriculum lessons.`
+                  });
+              }
+          });
+          
+          // Display recommendations
+          const diagContainer = document.getElementById("diagnostic-container");
+          const diagList = document.getElementById("diagnostic-list");
+          if (diagContainer && diagList) {
+              diagList.innerHTML = "";
+              if (recommendations.length > 0) {
+                  recommendations.forEach(rec => {
+                      const item = document.createElement("div");
+                      item.className = "assessment-card";
+                      item.style.margin = "0";
+                      item.style.padding = "1rem";
+                      item.style.borderLeft = "4px solid var(--color-warning)";
+                      item.style.display = "flex";
+                      item.style.justifyContent = "space-between";
+                      item.style.alignItems = "center";
+                      item.style.backgroundColor = "var(--color-bg-base)";
+                      
+                      let subjectIcon = "fa-book";
+                      if (rec.subject === 'Math') subjectIcon = "fa-calculator";
+                      else if (rec.subject === 'Language Arts') subjectIcon = "fa-book-reader";
+                      else if (rec.subject === 'Science') subjectIcon = "fa-flask";
+                      else if (rec.subject === 'Social Studies') subjectIcon = "fa-globe-americas";
+
+                      item.innerHTML = `
+                          <div style="display: flex; align-items: center; gap: 0.75rem;">
+                              <i class="fas ${subjectIcon}" style="color: var(--color-warning); font-size: 1.25rem;"></i>
+                              <div>
+                                  <p style="font-weight: 700; font-size: 0.95rem; margin: 0;">Focus Area: ${rec.subject}</p>
+                                  <p style="font-size: 0.8rem; color: var(--color-text-muted); margin: 0.25rem 0 0 0;">${rec.message}</p>
+                              </div>
+                          </div>
+                          <a href="${rec.link}" class="hero-nav-btn hero-nav-btn-outline" style="padding: 0.4rem 1rem; font-size: 0.75rem; border-radius: var(--radius-md); font-weight: 700; white-space: nowrap;">
+                              Study ${rec.subject}
+                          </a>
+                      `;
+                      diagList.appendChild(item);
+                  });
+                  diagContainer.style.display = "block";
+              } else {
+                  // Perfect score suggestion
+                  diagList.innerHTML = `
+                      <div class="assessment-card" style="margin: 0; padding: 1.5rem; border-left: 4px solid var(--color-success); background-color: var(--color-bg-base); display: flex; align-items: center; gap: 0.75rem;">
+                          <i class="fas fa-check-double" style="color: var(--color-success); font-size: 1.5rem;"></i>
+                          <div>
+                              <p style="font-weight: 700; font-size: 0.95rem; margin: 0;">Excellent Placement!</p>
+                              <p style="font-size: 0.8rem; color: var(--color-text-muted); margin: 0.25rem 0 0 0;">You've demonstrated solid mastery (&gt;80%) in all core subjects for ${gradeLabel}! You are ready to move on to the next grade level curriculum.</p>
+                          </div>
+                      </div>
+                  `;
+                  diagContainer.style.display = "block";
+              }
+          }
+      }
+
       // Build Review Mode Screen
       buildReviewMode();
     }, 100);
@@ -683,11 +806,34 @@ function generateAndDownloadText() {
 
 let currentSubjectFilter = "All";
 
+function updateSidebarFilterUI(subject) {
+  const filterList = document.querySelector(".focus-filter-list");
+  if (!filterList) return;
+  const buttons = filterList.querySelectorAll("button");
+  buttons.forEach(btn => {
+    // Find matching subject
+    const onClickAttr = btn.getAttribute("onclick") || "";
+    if (onClickAttr.includes(`'${subject}'`)) {
+      btn.style.backgroundColor = "color-mix(in srgb, var(--color-primary) 15%, transparent)";
+      btn.style.color = "var(--color-primary)";
+      btn.style.fontWeight = "700";
+      btn.style.borderColor = "var(--color-primary)";
+    } else {
+      btn.style.backgroundColor = "";
+      btn.style.color = "";
+      btn.style.fontWeight = "";
+      btn.style.borderColor = "";
+    }
+  });
+}
+
 function filterQuestions(subject) {
   currentSubjectFilter = subject;
   const gradeName = document.getElementById("force-grade").value;
 
   console.log("Filtering questions for:", gradeName, "Subject:", subject);
+
+  updateSidebarFilterUI(subject);
 
   if (typeof loadQuestions === "function") {
     loadQuestions(gradeName, subject);
