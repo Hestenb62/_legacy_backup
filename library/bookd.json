@@ -15,22 +15,6 @@
             "dewey": "823.92",
             "grade": "Grades 10-12",
             "disclaimer-key": "openlibrary"
-        },
-        {
-            "id": "dune",
-            "title": "Dune",
-            "author": "Frank Herbert",
-            "isbn": "978-0441172719",
-            "date": "1965-08-01",
-            "img": "https://covers.openlibrary.org/b/isbn/9780441172719-L.jpg",
-            "description": "Set on the desert planet Arrakis, Dune is the story of the boy Paul Atreides, heir to a noble family tasked with ruling an inhospitable world.",
-            "pdf-link": "#",
-            "epub-link": "#",
-            "read-online-link": "#",
-            "lexile": "1080L",
-            "dewey": "813.54",
-            "grade": "Grades 9-12",
-            "disclaimer-text": "This copy of Dune is shared for limited educational critique and literary review under fair use guidelines. All rights reserved by the author's estate."
         }
     ],
     "Classic Fiction": [
@@ -84,6 +68,22 @@
     ],
     "Fantasy & Sci-Fi": [
         {
+            "id": "dune",
+            "title": "Dune",
+            "author": "Frank Herbert",
+            "isbn": "978-0441172719",
+            "date": "1965-08-01",
+            "img": "https://covers.openlibrary.org/b/isbn/9780441172719-L.jpg",
+            "description": "Set on the desert planet Arrakis, Dune is the story of the boy Paul Atreides, heir to a noble family tasked with ruling an inhospitable world.",
+            "pdf-link": "#",
+            "epub-link": "#",
+            "read-online-link": "#",
+            "lexile": "1080L",
+            "dewey": "813.54",
+            "grade": "Grades 9-12",
+            "disclaimer-text": "This copy of Dune is shared for limited educational critique and literary review under fair use guidelines. All rights reserved by the author's estate."
+        },
+        {
             "id": "lotr-collection",
             "title": "The Lord of the Rings Collection",
             "author": "J.R.R. Tolkien",
@@ -129,132 +129,6 @@
             "read-online-link": "#",
             "lexile": "1000L",
             "grade": "Grades 6-8"
-        }
-    ],
-    "Educational & Philosophy": [
-        {
-            "id": "euclids-elements",
-            "title": "Euclid's Elements",
-            "author": "Euclid",
-            "isbn": "978-1888009194",
-            "date": "-300",
-            "img": "https://covers.openlibrary.org/b/isbn/9781888009194-L.jpg",
-            "description": "The classic treatise on geometry. For over two millennia, this was the primary textbook for teaching mathematics.",
-            "pdf-link": "https://www.gutenberg.org/ebooks/21076",
-            "epub-link": "https://www.gutenberg.org/ebooks/21076",
-            "lexile": "1300L",
-            "grade": "Grades 9-12"
-        },
-        {
-            "id": "relativity",
-            "title": "Relativity: The Special and General Theory",
-            "author": "Albert Einstein",
-            "isbn": "978-0486417141",
-            "date": "1916-01-01",
-            "img": "https://covers.openlibrary.org/b/isbn/9780486417141-L.jpg",
-            "description": "Einstein's own explanation of his famous theory, written for the general public.",
-            "pdf-link": "https://www.gutenberg.org/ebooks/5001",
-            "epub-link": "https://www.gutenberg.org/ebooks/5001",
-            "lexile": "1300L",
-            "grade": "Grades 11-12"
-        },
-        {
-            "id": "meditations",
-            "title": "Meditations",
-            "author": "Marcus Aurelius",
-            "isbn": "978-0812968255",
-            "date": "180",
-            "img": "https://covers.openlibrary.org/b/isbn/9780812968255-L.jpg",
-            "description": "A series of personal writings by Marcus Aurelius, Roman Emperor from 161 to 180 AD, recording his private notes to himself and ideas on Stoic philosophy.",
-            "pdf-link": "https://www.gutenberg.org/ebooks/2680",
-            "epub-link": "https://www.gutenberg.org/ebooks/2680",
-            "read-online-link": "#",
-            "lexile": "1200L",
-            "grade": "Grades 10-12"
-        },
-        {
-            "id": "art-of-war",
-            "title": "The Art of War",
-            "author": "Sun Tzu",
-            "isbn": "978-1590302255",
-            "date": "5th century BC",
-            "img": "https://covers.openlibrary.org/b/isbn/9781590302255-L.jpg",
-            "description": "An ancient Chinese military treatise dating from the Late Spring and Autumn Period. The work, which is attributed to the ancient Chinese military strategist Sun Tzu, is composed of 13 chapters.",
-            "pdf-link": "https://www.gutenberg.org/ebooks/132",
-            "epub-link": "https://www.gutenberg.org/ebooks/132",
-            "read-online-link": "#",
-            "lexile": "1140L",
-            "dewey": "355.02",
-            "lc": "U101 .S95",
-            "grade": "Grades 9-12"
-        }
-    ],
-    "Primary Documents": [
-        {
-            "id": "usa-constitution",
-            "title": "United States Constitution",
-            "author": "13 Signers",
-            "isbn": "#",
-            "date": "July 2nd, 1776",
-            "img": "https://www.gutenberg.org/cache/epub/5/pg5.cover.medium.jpg",
-            "fallback-img": "https://placehold.co/300x450/c0392b/white?text=United States Constitution",
-            "description": "'The United States Constitution' by United States is a foundational document drafted in 1787 and operational since 1789. Born from the failures of the Articles of Confederation, it establishes the supreme law of America through seven original articles defining federal government structure. Influenced by Enlightenment philosophy and English common law, it separates power among legislative, executive, and judicial branches. Twenty-seven amendments have since expanded individual rights and modified governmental processes, making it the world's oldest written national constitution still in force.",
-            "pdf-link": "",
-            "epub-link": "https://www.gutenberg.org/ebooks/5.epub.images",
-             "read-online-link": "/library/read/index.php?book=usa-constitution",
-            "txt-link": "https://www.gutenberg.org/ebooks/5.txt.utf-8",
-            "mobi-link": "",
-            "word-link": "",
-            "lexile": "#",
-            "grade": "All"
-        },
-        {
-            "id": "declaration-of-independence",
-            "title": "The Declaration of Independence",
-            "author": "Thomas Jefferson",
-            "isbn": "#",
-            "date": "July 4, 1776",
-            "img": "https://www.gutenberg.org/cache/epub/1/pg1.cover.medium.jpg",
-            "fallback-img": "https://placehold.co/300x450/34495e/white?text=Declaration+of+Independence",
-            "description": "The historic document adopted by the Second Continental Congress meeting at the Pennsylvania State House in Philadelphia, Pennsylvania, on July 4, 1776. It announced that the thirteen American colonies, then at war with Great Britain, regarded themselves as thirteen newly independent sovereign states, and no longer under British rule.",
-            "pdf-link": "#",
-            "epub-link": "https://www.gutenberg.org/ebooks/1.epub.images",
-            "read-online-link": "#",
-            "lexile": "1400L",
-            "grade": "Grades 8-12",
-            "disclaimer-key": "gutenberg"
-        },
-        {
-            "id": "bill-of-rights",
-            "title": "The Bill of Rights",
-            "author": "James Madison",
-            "isbn": "#",
-            "date": "December 15, 1791",
-            "img": "https://www.gutenberg.org/cache/epub/2/pg2.cover.medium.jpg",
-            "fallback-img": "https://placehold.co/300x450/2c3e50/white?text=Bill+of+Rights",
-            "description": "The first ten amendments to the United States Constitution. Proposed following the often bitter 1787–88 debate over ratification of the Constitution, and written to address the objections raised by Anti-Federalists, these amendments guarantee essential rights and civil liberties.",
-            "pdf-link": "#",
-            "epub-link": "https://www.gutenberg.org/ebooks/2.epub.images",
-            "read-online-link": "#",
-            "lexile": "1350L",
-            "grade": "Grades 8-12",
-            "disclaimer-key": "gutenberg"
-        },
-        {
-            "id": "federalist-papers",
-            "title": "The Federalist Papers",
-            "author": "Hamilton, Madison, & Jay",
-            "isbn": "#",
-            "date": "1788",
-            "img": "https://www.gutenberg.org/cache/epub/18/pg18.cover.medium.jpg",
-            "fallback-img": "https://placehold.co/300x450/16a085/white?text=Federalist+Papers",
-            "description": "A collection of 85 articles and essays written by Alexander Hamilton, James Madison, and John Jay under the collective pseudonym 'Publius' to promote the ratification of the United States Constitution.",
-            "pdf-link": "#",
-            "epub-link": "https://www.gutenberg.org/ebooks/18.epub.images",
-            "read-online-link": "#",
-            "lexile": "1450L",
-            "grade": "Grades 10-12",
-            "disclaimer-key": "gutenberg"
         }
     ]
 }

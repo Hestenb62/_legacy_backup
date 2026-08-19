@@ -7,7 +7,81 @@ document.addEventListener("DOMContentLoaded", () => {
     setupFilters();
     setupA11y();
     loadDisclaimers();
+    setupSidebarToggle();
 });
+
+function setupSidebarToggle() {
+    const sidebar = document.getElementById('library-sidebar');
+    const toggleBtn = document.getElementById('sidebar-toggle');
+    if (sidebar && toggleBtn) {
+        toggleBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('collapsed');
+            const icon = toggleBtn.querySelector('i');
+            if (icon) {
+                if (sidebar.classList.contains('collapsed')) {
+                    icon.className = 'fas fa-chevron-right';
+                } else {
+                    icon.className = 'fas fa-chevron-left';
+                }
+            }
+        });
+    }
+}
+
+window.openResourcePortal = function(categoryName) {
+    const drawer = document.getElementById('resource-portal-drawer');
+    if (!drawer) return;
+
+    activeCategoryName = categoryName;
+
+    // Highlight active sidebar buttons
+    document.querySelectorAll('.sidebar-item-btn').forEach(btn => {
+        const btnText = btn.textContent.trim();
+        if (btnText.includes(categoryName)) {
+            btn.style.backgroundColor = "color-mix(in srgb, var(--color-primary) 12%, transparent)";
+            btn.style.color = "var(--color-primary)";
+            btn.style.borderColor = "color-mix(in srgb, var(--color-primary) 20%, transparent)";
+        } else {
+            btn.style.backgroundColor = "";
+            btn.style.color = "";
+            btn.style.borderColor = "";
+        }
+    });
+
+    // Populate drawer header details
+    const drawerTitle = document.getElementById('drawer-title');
+    const drawerSubtitle = document.getElementById('drawer-subtitle');
+
+    if (drawerTitle) drawerTitle.textContent = categoryName;
+    if (drawerSubtitle) {
+        let desc = "Browse resources, references, and study items.";
+        if (categoryName === "US History") desc = "Primary founding documents, constitutional laws, and historical papers.";
+        else if (categoryName === "World History") desc = "Ancient military strategies, strategic treatises, and philosophical meditations.";
+        else if (categoryName === "WW1") desc = "Diplomatic records, economic treatises, and historical memoirs of the First World War.";
+        else if (categoryName === "WW2") desc = "Allied strategy reports, command decisions, and archival wartime documents.";
+        else if (categoryName === "Math") desc = "Classic geometry elements, theories of relativity, and mathematical proofs.";
+        else if (categoryName === "ELA") desc = "English grammar stylebooks, reference dictionaries, and vocabulary resources.";
+        drawerSubtitle.textContent = desc;
+    }
+
+    // Reset Search in drawer
+    const searchInput = document.getElementById('drawer-search');
+    if (searchInput) searchInput.value = "";
+
+    // Open Drawer Animations
+    drawer.classList.remove('hidden');
+    drawer.offsetHeight; // force reflow
+    drawer.classList.add('active');
+    drawer.style.opacity = "1";
+    drawer.style.pointerEvents = "auto";
+    drawer.style.transform = "translateX(0)";
+
+    document.body.style.overflow = 'hidden'; // Freeze background scroll
+
+    // Apply filter and sort
+    sortDrawerBooks();
+    filterDrawerBooks();
+};
 
 function loadDisclaimers() {
     fetch('disclaimers.json')
@@ -367,6 +441,7 @@ function setupA11y() {
             const discModal = document.getElementById('disclaimerModal');
             const lexModal = document.getElementById('lexileInfoModal');
             const ddcModal = document.getElementById('ddcInfoModal');
+            const drawer = document.getElementById('resource-portal-drawer');
             
             if (lexModal && lexModal.classList.contains('active')) {
                 closeLexileInfoModal();
@@ -376,6 +451,8 @@ function setupA11y() {
                 closeDisclaimerModal();
             } else if (bookModal && bookModal.classList.contains('active')) {
                 closeModal();
+            } else if (drawer && drawer.classList.contains('active')) {
+                closeResourcePortal();
             }
         }
     });
@@ -418,4 +495,104 @@ window.switchLibraryTab = function(tabName) {
         selectFilter.value = tabName;
         selectFilter.dispatchEvent(new Event('change'));
     }
+};
+
+/* --- Drawer Close, Filter, and Sort Hold --- */
+window.closeResourcePortal = function() {
+    const drawer = document.getElementById('resource-portal-drawer');
+    if (!drawer) return;
+
+    drawer.classList.remove('active');
+    drawer.style.opacity = "0";
+    drawer.style.pointerEvents = "none";
+    drawer.style.transform = "translateX(100%)";
+
+    // Unhighlight sidebar buttons
+    document.querySelectorAll('.sidebar-item-btn').forEach(btn => {
+        btn.style.backgroundColor = "";
+        btn.style.color = "";
+        btn.style.borderColor = "";
+    });
+
+    setTimeout(() => {
+        drawer.classList.add('hidden');
+        document.body.style.overflow = ''; // Restore scroll
+    }, 400);
+};
+
+window.filterDrawerBooks = function() {
+    const searchInput = document.getElementById('drawer-search');
+    const query = searchInput ? searchInput.value.toLowerCase().trim() : "";
+    const grid = document.getElementById('drawer-grid');
+    const emptyState = document.getElementById('drawer-empty');
+    if (!grid) return;
+
+    const cards = grid.querySelectorAll('.library-book-card');
+    let visibleCount = 0;
+
+    cards.forEach(card => {
+        const category = card.dataset.category || "";
+        const title = (card.dataset.title || "").toLowerCase();
+        const author = (card.dataset.author || "").toLowerCase();
+        const isbn = (card.dataset.isbn || "").toLowerCase();
+
+        let matchesCategory = (category === activeCategoryName);
+
+        const matchesSearch = !query || 
+            title.includes(query) || 
+            author.includes(query) || 
+            isbn.includes(query);
+
+        if (matchesCategory && matchesSearch) {
+            card.style.display = 'block';
+            visibleCount++;
+        } else {
+            card.style.display = 'none';
+        }
+    });
+
+    // Update count labels
+    const countLabel = document.getElementById('drawer-count');
+    if (countLabel) countLabel.textContent = visibleCount;
+
+    if (emptyState) {
+        emptyState.style.display = visibleCount === 0 ? 'block' : 'none';
+    }
+};
+
+window.sortDrawerBooks = function() {
+    const grid = document.getElementById('drawer-grid');
+    if (!grid) return;
+    const cards = Array.from(grid.querySelectorAll('.library-book-card'));
+    const sortVal = document.getElementById('drawer-sort')?.value || 'title';
+
+    cards.sort((a, b) => {
+        if (sortVal === 'title') {
+            const titleA = (a.dataset.title || '').toLowerCase();
+            const titleB = (b.dataset.title || '').toLowerCase();
+            return titleA.localeCompare(titleB);
+        } else if (sortVal === 'ddc') {
+            let valA = a.dataset.dewey || a.dataset.lc || '999';
+            let valB = b.dataset.dewey || b.dataset.lc || '999';
+            if (valA === '' || valA === '#') valA = '999';
+            if (valB === '' || valB === '#') valB = '999';
+            const numA = parseFloat(valA);
+            const numB = parseFloat(valB);
+            if (!isNaN(numA) && !isNaN(numB)) {
+                return numA - numB;
+            }
+            return valA.localeCompare(valB);
+        } else if (sortVal === 'lexile') {
+            let lexA = parseInt((a.dataset.lexile || '0').replace(/\D/g, '')) || 0;
+            let lexB = parseInt((b.dataset.lexile || '0').replace(/\D/g, '')) || 0;
+            return lexA - lexB;
+        } else if (sortVal === 'date') {
+            const dateA = new Date(a.dataset.date || '1970-01-01');
+            const dateB = new Date(b.dataset.date || '1970-01-01');
+            return dateB - dateA;
+        }
+        return 0;
+    });
+
+    cards.forEach(card => grid.appendChild(card));
 };
