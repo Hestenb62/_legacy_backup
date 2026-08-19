@@ -10,12 +10,10 @@ if (basename($requestPath) === 'library' && substr($requestPath, -1) !== '/') {
 }
 
 // --- Page-Specific Variables ---
-$pageTitle = 'Hesten\'s Learning Library';
+$pageTitle = 'Library - Hesten\'s Learning';
 $pageDescription = 'Browse your personal collection of digital books in a Netflix-style interface.';
 $pageKeywords = 'library, books, epub, pdf, digital library, collection, education, textbooks';
 $pageAuthor = 'Hesten\'s Learning';
-$welcomeMessage = "Welcome to Hesten's Learning Library";
-$welcomeParagraph = "Explore our vast collection of fiction classics and comprehensive educational resources for all grade levels.";
 
 // --- General Book Data Array ---
 $jsonString = file_get_contents(__DIR__ . '/bookd.json');
@@ -87,18 +85,6 @@ include '../src/header.php';
 
         <!-- Panel 1: General Library Landing Page -->
         <div id="main-desk-landing" class="workspace-panel">
-            <!-- Top Sub-Navigation Tabs (Below Main Nav Bar) -->
-            <div class="library-tabs-row library-animate-reveal" style="animation-delay: 0.05s; display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--color-border); width: 100%;">
-                <button onclick="switchLibraryTab('all')" class="library-tab-btn active-tab" data-tab-id="all">
-                    All Items
-                </button>
-                <button onclick="switchLibraryTab('Classic Fiction')" class="library-tab-btn" data-tab-id="Classic Fiction">
-                    📚 Classic Fiction
-                </button>
-                <button onclick="switchLibraryTab('Fantasy & Sci-Fi')" class="library-tab-btn" data-tab-id="Fantasy & Sci-Fi">
-                    🌌 Fantasy & Sci-Fi
-                </button>
-            </div>
 
             <!-- Hero Section -->
             <section class="library-hero">
@@ -225,13 +211,34 @@ include '../src/header.php';
                     </h3>
                 </div>
 
-                <div id="drawer-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; margin: 0 auto;">
+                <div id="drawer-grid" style="width: 100%; margin: 0 auto;">
                     <?php 
-                    // Render all books in a single catalog grid inside the drawer wrapper
+                    // Render all books grouped by category and section inside the drawer wrapper
                     foreach ($drawerCategories as $categoryName => $books) {
+                        $grouped = [];
                         foreach ($books as $book) {
-                            $book['category'] = $categoryName;
-                            include 'book_card.php';
+                            $sect = $book['section'] ?? '';
+                            $grouped[$sect][] = $book;
+                        }
+                        
+                        foreach ($grouped as $sectionName => $sectionBooks) {
+                            ?>
+                            <div class="drawer-section" data-category="<?php echo htmlspecialchars($categoryName); ?>" style="margin-bottom: 2.5rem; width: 100%;">
+                                <?php if ($sectionName !== ''): ?>
+                                    <div class="drawer-section-header" style="font-family: var(--site-font-family, 'Outfit', sans-serif); font-size: 1.3rem; font-weight: 900; color: var(--color-text-secondary); margin-top: 1.5rem; margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-border); text-align: left;">
+                                        <?php echo htmlspecialchars($sectionName); ?>
+                                    </div>
+                                <?php endif; ?>
+                                <div class="drawer-section-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; width: 100%;">
+                                    <?php 
+                                    foreach ($sectionBooks as $book) {
+                                        $book['category'] = $categoryName;
+                                        include 'book_card.php';
+                                    }
+                                    ?>
+                                </div>
+                            </div>
+                            <?php
                         }
                     }
                     ?>

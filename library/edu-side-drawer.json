@@ -2,6 +2,7 @@
     "US History": [
         {
             "id": "usa-constitution",
+            "section": "Primary Documents",
             "title": "United States Constitution",
             "author": "13 Signers",
             "isbn": "#",
@@ -20,6 +21,7 @@
         },
         {
             "id": "declaration-of-independence",
+            "section": "Primary Documents",
             "title": "The Declaration of Independence",
             "author": "Thomas Jefferson",
             "isbn": "#",
@@ -36,6 +38,7 @@
         },
         {
             "id": "bill-of-rights",
+            "section": "Primary Documents",
             "title": "The Bill of Rights",
             "author": "James Madison",
             "isbn": "#",
@@ -52,6 +55,7 @@
         },
         {
             "id": "federalist-papers",
+            "section": "Primary Documents",
             "title": "The Federalist Papers",
             "author": "Hamilton, Madison, & Jay",
             "isbn": "#",
@@ -65,6 +69,45 @@
             "lexile": "1450L",
             "grade": "Grades 10-12",
             "disclaimer-key": "gutenberg"
+        },
+        {
+            "id": "who-built-america",
+            "section": "Text Books",
+            "title": "Who Built America? Working People and the Nation's History",
+            "author": "American Social History Project",
+            "isbn": "978-0393930320",
+            "date": "2007-10-31",
+            "img": "https://covers.openlibrary.org/b/isbn/9780393930320-L.jpg",
+            "fallback-img": "https://placehold.co/300x450/2980b9/white?text=Who+Built+America",
+            "description": "A comprehensive textbook exploring the history of the United States through the lives, struggles, and contributions of working people.",
+            "pdf-link": "https://cdn.hestena62.com/library/Who%20Built%20America%20-%20American%20Social%20History%20Project.pdf",
+            "epub-link": "https://cdn.hestena62.com/library/Who%20Built%20America%20-%20American%20Social%20History%20Project.epub",
+            "read-online-link": "/library/read/index.php?book=who-built-america",
+            "txt-link": "https://cdn.hestena62.com/library/Who%20Built%20America%20-%20American%20Social%20History%20Project.txt",
+            "mobi-link": "https://cdn.hestena62.com/library/Who%20Built%20America%20-%20American%20Social%20History%20Project.mobi",
+            "word-link": "https://cdn.hestena62.com/library/Who%20Built%20America%20-%20American%20Social%20History%20Project.docx",
+            "lexile": "1200L",
+            "grade": "Grades 10-12"
+        },
+        {
+            "id": "american-yawp",
+            "section": "Text Books",
+            "title": "The American Yawp",
+            "author": "Joseph L. Locke & Ben Wright",
+            "isbn": "978-1503606715",
+            "date": "2019-01-22",
+            "img": "https://covers.openlibrary.org/b/isbn/9781503606715-L.jpg",
+            "fallback-img": "https://placehold.co/300x450/8e44ad/white?text=The+American+Yawp",
+            "description": "A free, collaboratively built, open-source U.S. history textbook presenting a diverse and integrated narrative of the American past.",
+            "pdf-link": "https://cdn.hestena62.com/library/The%20American%20Yawp.pdf",
+            "epub-link": "https://cdn.hestena62.com/library/The%20American%20Yawp.epub",
+            "read-online-link": "/library/read/index.php?book=american-yawp",
+            "txt-link": "https://cdn.hestena62.com/library/The%20American%20Yawp.txt",
+            "mobi-link": "https://cdn.hestena62.com/library/The%20American%20Yawp.mobi",
+            "word-link": "https://cdn.hestena62.com/library/The%20American%20Yawp.docx",
+            "lexile": "1150L",
+            "grade": "Grades 11-12",
+            "disclaimer-key": "american-yawp"
         }
     ],
     "World History": [

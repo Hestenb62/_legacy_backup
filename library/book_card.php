@@ -19,9 +19,10 @@
      data-grade="<?php echo htmlspecialchars($book['grade'] ?? ''); ?>"
      data-disclaimer-key="<?php echo htmlspecialchars($book['disclaimer-key'] ?? ''); ?>"
      data-disclaimer-text="<?php echo htmlspecialchars($book['disclaimer-text'] ?? ''); ?>"
+     data-category="<?php echo htmlspecialchars($book['category'] ?? ''); ?>"
+     data-section="<?php echo htmlspecialchars($book['section'] ?? ''); ?>"
      data-is-collection="<?php echo isset($book['isCollection']) && $book['isCollection'] ? 'true' : 'false'; ?>"
-     data-books="<?php echo isset($book['books']) ? htmlspecialchars(json_encode($book['books']), ENT_QUOTES, 'UTF-8') : ''; ?>"
-     data-category="<?php echo htmlspecialchars($book['category'] ?? ''); ?>">
+     data-books="<?php echo isset($book['books']) ? htmlspecialchars(json_encode($book['books']), ENT_QUOTES, 'UTF-8') : ''; ?>">
 
     <!-- Cover Image Wrapper with hover lifting action -->
     <div class="library-book-cover-wrap">
@@ -37,8 +38,8 @@
             </div>
         <?php endif; ?>
         
-        <img src="<?php echo htmlspecialchars($book['img']); ?>"
-             alt="<?php echo htmlspecialchars($book['title']); ?>" 
+        <img src="<?php echo htmlspecialchars($book['img'] ?? ''); ?>"
+             alt="<?php echo htmlspecialchars($book['title'] ?? ''); ?>" 
              class="library-book-cover-img"
              loading="lazy"
              onerror="this.onerror=null; this.src='<?php echo isset($book['fallback-img']) ? htmlspecialchars($book['fallback-img']) : 'https://placehold.co/300x450/6b7280/white?text=Image+Not+Found'; ?>';">
@@ -54,10 +55,10 @@
     <!-- Info (Below Card) -->
     <div class="library-book-info">
         <h3 class="library-book-title">
-            <?php echo htmlspecialchars($book['title']); ?>
+            <?php echo htmlspecialchars($book['title'] ?? ''); ?>
         </h3>
         <p class="library-book-author">
-            <?php echo htmlspecialchars($book['author']); ?>
+            <?php echo htmlspecialchars($book['author'] ?? ''); ?>
         </p>
     </div>
 </div>

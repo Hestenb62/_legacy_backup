@@ -534,27 +534,46 @@ window.filterDrawerBooks = function() {
     const emptyState = document.getElementById('drawer-empty');
     if (!grid) return;
 
-    const cards = grid.querySelectorAll('.library-book-card');
     let visibleCount = 0;
+    const sections = grid.querySelectorAll('.drawer-section');
 
-    cards.forEach(card => {
-        const category = card.dataset.category || "";
-        const title = (card.dataset.title || "").toLowerCase();
-        const author = (card.dataset.author || "").toLowerCase();
-        const isbn = (card.dataset.isbn || "").toLowerCase();
+    sections.forEach(section => {
+        const category = section.dataset.category || "";
+        const matchesCategory = (category === activeCategoryName);
 
-        let matchesCategory = (category === activeCategoryName);
+        if (!matchesCategory) {
+            section.style.display = 'none';
+            return;
+        }
 
-        const matchesSearch = !query || 
-            title.includes(query) || 
-            author.includes(query) || 
-            isbn.includes(query);
+        // Filter cards locally inside this section
+        const cards = section.querySelectorAll('.library-book-card');
+        let sectionVisibleBooks = 0;
 
-        if (matchesCategory && matchesSearch) {
-            card.style.display = 'block';
-            visibleCount++;
+        cards.forEach(card => {
+            const title = (card.dataset.title || "").toLowerCase();
+            const author = (card.dataset.author || "").toLowerCase();
+            const isbn = (card.dataset.isbn || "").toLowerCase();
+
+            const matchesSearch = !query || 
+                title.includes(query) || 
+                author.includes(query) || 
+                isbn.includes(query);
+
+            if (matchesSearch) {
+                card.style.display = 'block';
+                sectionVisibleBooks++;
+                visibleCount++;
+            } else {
+                card.style.display = 'none';
+            }
+        });
+
+        // Hide section container if empty during searches
+        if (sectionVisibleBooks > 0 || !query) {
+            section.style.display = 'block';
         } else {
-            card.style.display = 'none';
+            section.style.display = 'none';
         }
     });
 
@@ -568,38 +587,40 @@ window.filterDrawerBooks = function() {
 };
 
 window.sortDrawerBooks = function() {
-    const grid = document.getElementById('drawer-grid');
-    if (!grid) return;
-    const cards = Array.from(grid.querySelectorAll('.library-book-card'));
+    const grids = document.querySelectorAll('.drawer-section-grid');
+    if (grids.length === 0) return;
     const sortVal = document.getElementById('drawer-sort')?.value || 'title';
 
-    cards.sort((a, b) => {
-        if (sortVal === 'title') {
-            const titleA = (a.dataset.title || '').toLowerCase();
-            const titleB = (b.dataset.title || '').toLowerCase();
-            return titleA.localeCompare(titleB);
-        } else if (sortVal === 'ddc') {
-            let valA = a.dataset.dewey || a.dataset.lc || '999';
-            let valB = b.dataset.dewey || b.dataset.lc || '999';
-            if (valA === '' || valA === '#') valA = '999';
-            if (valB === '' || valB === '#') valB = '999';
-            const numA = parseFloat(valA);
-            const numB = parseFloat(valB);
-            if (!isNaN(numA) && !isNaN(numB)) {
-                return numA - numB;
+    grids.forEach(grid => {
+        const cards = Array.from(grid.querySelectorAll('.library-book-card'));
+        cards.sort((a, b) => {
+            if (sortVal === 'title') {
+                const titleA = (a.dataset.title || '').toLowerCase();
+                const titleB = (b.dataset.title || '').toLowerCase();
+                return titleA.localeCompare(titleB);
+            } else if (sortVal === 'ddc') {
+                let valA = a.dataset.dewey || a.dataset.lc || '999';
+                let valB = b.dataset.dewey || b.dataset.lc || '999';
+                if (valA === '' || valA === '#') valA = '999';
+                if (valB === '' || valB === '#') valB = '999';
+                const numA = parseFloat(valA);
+                const numB = parseFloat(valB);
+                if (!isNaN(numA) && !isNaN(numB)) {
+                    return numA - numB;
+                }
+                return valA.localeCompare(valB);
+            } else if (sortVal === 'lexile') {
+                let lexA = parseInt((a.dataset.lexile || '0').replace(/\D/g, '')) || 0;
+                let lexB = parseInt((b.dataset.lexile || '0').replace(/\D/g, '')) || 0;
+                return lexA - lexB;
+            } else if (sortVal === 'date') {
+                const dateA = new Date(a.dataset.date || '1970-01-01');
+                const dateB = new Date(b.dataset.date || '1970-01-01');
+                return dateB - dateA;
             }
-            return valA.localeCompare(valB);
-        } else if (sortVal === 'lexile') {
-            let lexA = parseInt((a.dataset.lexile || '0').replace(/\D/g, '')) || 0;
-            let lexB = parseInt((b.dataset.lexile || '0').replace(/\D/g, '')) || 0;
-            return lexA - lexB;
-        } else if (sortVal === 'date') {
-            const dateA = new Date(a.dataset.date || '1970-01-01');
-            const dateB = new Date(b.dataset.date || '1970-01-01');
-            return dateB - dateA;
-        }
-        return 0;
-    });
+            return 0;
+        });
 
-    cards.forEach(card => grid.appendChild(card));
+        cards.forEach(card => grid.appendChild(card));
+    });
 };
