@@ -29,8 +29,9 @@ function setupSidebarToggle() {
 }
 
 window.openResourcePortal = function(categoryName) {
-    const drawer = document.getElementById('resource-portal-drawer');
-    if (!drawer) return;
+    const landing = document.getElementById('main-desk-landing');
+    const workspace = document.getElementById('subject-desk-workspace');
+    if (!landing || !workspace) return;
 
     activeCategoryName = categoryName;
 
@@ -68,15 +69,17 @@ window.openResourcePortal = function(categoryName) {
     const searchInput = document.getElementById('drawer-search');
     if (searchInput) searchInput.value = "";
 
-    // Open Drawer Animations
-    drawer.classList.remove('hidden');
-    drawer.offsetHeight; // force reflow
-    drawer.classList.add('active');
-    drawer.style.opacity = "1";
-    drawer.style.pointerEvents = "auto";
-    drawer.style.transform = "translateX(0)";
+    // Toggle panels inline (no full screen fixed overlays)
+    landing.style.display = 'none';
+    landing.classList.add('hidden');
+    
+    workspace.classList.remove('hidden');
+    workspace.style.display = 'flex';
+    workspace.offsetHeight; // force reflow
+    workspace.style.opacity = "1";
 
-    document.body.style.overflow = 'hidden'; // Freeze background scroll
+    // Scroll to top of workspace smoothly
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 
     // Apply filter and sort
     sortDrawerBooks();
@@ -499,14 +502,12 @@ window.switchLibraryTab = function(tabName) {
 
 /* --- Drawer Close, Filter, and Sort Hold --- */
 window.closeResourcePortal = function() {
-    const drawer = document.getElementById('resource-portal-drawer');
-    if (!drawer) return;
+    const landing = document.getElementById('main-desk-landing');
+    const workspace = document.getElementById('subject-desk-workspace');
+    if (!landing || !workspace) return;
 
-    drawer.classList.remove('active');
-    drawer.style.opacity = "0";
-    drawer.style.pointerEvents = "none";
-    drawer.style.transform = "translateX(100%)";
-
+    workspace.style.opacity = "0";
+    
     // Unhighlight sidebar buttons
     document.querySelectorAll('.sidebar-item-btn').forEach(btn => {
         btn.style.backgroundColor = "";
@@ -515,9 +516,15 @@ window.closeResourcePortal = function() {
     });
 
     setTimeout(() => {
-        drawer.classList.add('hidden');
-        document.body.style.overflow = ''; // Restore scroll
-    }, 400);
+        workspace.classList.add('hidden');
+        workspace.style.display = 'none';
+        
+        landing.classList.remove('hidden');
+        landing.style.display = 'block';
+        
+        // Scroll to top of main catalog smoothly
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 300);
 };
 
 window.filterDrawerBooks = function() {
