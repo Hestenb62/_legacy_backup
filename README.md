@@ -1,30 +1,89 @@
 # Hesten's Learning Platform
 
-Welcome to the **Hesten's Learning** repository! This is an adaptive, accessible, and gamified educational platform designed with neurodiversity in mind. It provides a personalized learning experience featuring focus tools, reading aids, and trackable progress for students from Pre-K through Grade 12.
+Welcome to **Hesten's Learning**, an adaptive, accessibility-first, and gamified educational platform built with neurodiversity at its core.
 
-## 🌟 Key Features
+---
 
-- **Adaptive Learning Paths:** Curriculum tailored for Elementary, Middle, and High School levels.
-- **Accessibility First:** Built-in tools for neurodivergent learners, including reading aids and focus modes.
-- **Gamified Experience:** Track completion rates, daily streaks, bookmarks, and celebrate progress!
-- **Modern UI:** Responsive design featuring glassmorphism, vibrant gradients, and smooth CSS animations.
-- **Performance Optimized:** Server-side templating with PHP for fast load times and better SEO.
-- **Progressive Web App (PWA):** Includes a service worker and manifest for offline capabilities and installation.
+## 🎯 Our Mission & Purpose
 
-## 🚀 Tech Stack
+Hesten's Learning aims to **revolutionize how online learning platforms are designed, used, and implemented**. 
 
-- **Frontend:** HTML5, Vanilla CSS, Vanilla JavaScript
-- **Backend/Templating:** PHP
-- **Icons:** FontAwesome
+While mainstream platforms (such as Khan Academy or IXL) offer excellent educational content, they frequently lack the critical tools and adaptive layouts needed for students with learning disabilities, ADHD, dyslexia, or visual sensitivities. 
 
-## 📁 Project Structure
+This platform bridges that gap by providing a fully customizable environment that conforms to the student's sensory and cognitive needs, enabling every learner to progress at their own pace without friction.
 
-- `/src/` - Contains reusable PHP components (Header, Footer).
-- `/Level/` - Educational content and course modules for different grade levels.
-- `/assets/` - Static assets including `/js/`, `/css/`, `/images/`, and `/fonts/`.
-- `index.php` - The main dashboard and entry point.
-- `parents.php`, `teachers.php`, `students.php` - Portals for different user types.
+---
 
-## 👨‍💻 Development
+## 📁 File Structure & Layout
 
-Feel free to explore the codebase. The `index.php` file acts as the primary adaptive dashboard, while state management (like streaks and bookmarks) is currently handled via local storage in JavaScript to maintain a lightweight footprint.
+The project is structured logically around server-side templating (PHP) and clean separation of concerns in Vanilla CSS and JavaScript:
+
+```text
+├── assets/                  # Static resources
+│   ├── css/                 # Cascading style layers
+│   │   ├── tokens.css       # Core theme variables & design tokens
+│   │   ├── reset.css        # Zero-specificity base resets and font overrides
+│   │   ├── primitives.css   # Accessibility tools, spotlight, & overlays
+│   │   ├── utilities.css    # General utility helper classes
+│   │   ├── components.css   # Main layout and widget design systems
+│   │   └── components/      # Specific component styles (fixed-tools.css, etc.)
+│   ├── fonts/               # Local web fonts (including OpenDyslexic)
+│   ├── images/              # Assets, avatars, and media
+│   └── js/                  # Browser scripts (a11y.js state controller)
+│
+├── src/                     # Core layout modules & reusable code
+│   ├── partials/            # HTML/PHP modules
+│   │   ├── a11y-settings.php # Accessibility sliding panel interface
+│   │   ├── reading-mask.php # Overlay guide container for line-focusing
+│   │   ├── fixed-tools.php  # floating action buttons
+│   │   └── timer.php        # Widget timer panel
+│   ├── header.php           # App shell header (loads stylesheets and scripts)
+│   ├── footer.php           # App shell footer and dictionary modals
+│   └── level_template.php   # Page template for lessons
+│
+├── lessons/                 # Curriculum activities (Kindergarten - Grade 12)
+├── levels/                  # Grade dashboard indexes
+├── assessment/              # Grade-level tests & grading dashboards
+├── library/                 # Reader module and text resources
+├── research/                # Documentation & papers on learning design
+├── student/                 # Student profiles and custom math practice
+├── test/                    # QUnit automated test suite
+├── index.php                # Welcome portal and entry point
+└── settings.php             # Full accessibility preferences dashboard
+```
+
+---
+
+## 🏛️ Sections & Their Roles
+
+* **Accessibility Settings (`/assets/js/a11y.js`, `/settings.php`, `/src/partials/a11y-settings.php`)**  
+  Consolidates reading masks, text magnification, line-height/word spacing modifiers, color tints (for Irlen syndrome), large cursors, dyslexic-friendly fonts, and a custom spotlight mode.
+* **Curriculum Lessons (`/lessons/` & `/levels/`)**  
+  Houses grade-specific paths (Kindergarten through Grade 12) featuring curriculum tracks built on standards like EngageNY.
+* **Assessments (`/assessment/`)**  
+  Evaluation tools built for students to demonstrate learning progress. Includes grading panels visible to teachers.
+* **Focus Tools (`/src/partials/timer.php`, `/src/partials/scratchpad.php`)**  
+  Widgets such as interactive notes and timers designed to keep students focused.
+* **Reader Library (`/library/`)**  
+  An immersive reader space optimized for reading long-form text (e.g., standard literature) with inline definitions and text-to-speech (TTS) engines.
+* **Client-Side Testing Suite (`/test/`)**  
+  Ensures code quality and state saving mechanisms work correctly via QUnit assertions.
+
+---
+
+## 👥 How to Use & Collaborate (Community-Driven Product)
+
+This platform is for everyone to use, adjust, and shape. It is **not** a locked "get what you get" tool. We want this to be a collaborative community product.
+
+### For Students, Parents, and Teachers:
+1. **Navigate**: Select the correct learning path (Elementary, Middle, or High School).
+2. **Personalize**: Click the Accessibility floating action button on any page to immediately toggle features like the Reading Mask, Dyslexia Font, high-contrast themes, or audio ticks.
+3. **Save**: Settings are remembered automatically on your device so the platform adjusts to your workflow.
+
+### For Contributors & Collaborators:
+The best way to learn is by working together! We encourage developers, educators, designers, and students to help us expand the platform:
+- **Build New Lessons**: Introduce interactive ELA, Science, or Math practice files into the `/lessons/` directory.
+- **Improve Features**: Optimize cognitive tools or enhance keyboard navigation.
+- **Get in Touch & Collaborate**: If you want to contribute code, propose a design, share feedback, or request features, write to us! Let's collaborate to build the ultimate accessible classroom.
+
+*Remember: The more we work, the more we learn!*
