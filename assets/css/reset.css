@@ -23,11 +23,17 @@
     display: flex;
     flex-direction: column;
     transition: background-color 0.3s, color 0.3s;
+    font-family: var(--site-font-family, var(--font-body));
+    font-size: var(--site-font-size, 1rem);
+    line-height: var(--site-line-height, 1.5);
+    letter-spacing: var(--site-letter-spacing, normal);
+    word-spacing: var(--site-word-spacing, normal);
+    text-align: var(--site-text-align, left);
   }
 
   /* Zero-specificity heading resets using :where() */
   :where(h1, h2, h3, h4, h5, h6) {
-    font-family: var(--font-display);
+    font-family: var(--site-font-family, var(--font-display));
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: var(--space-4);
