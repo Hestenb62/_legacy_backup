@@ -56,67 +56,48 @@
   letter-spacing: 0.15em !important;
 }
 
-/* Theme styles */
-body.theme-sepia {
-  background-color: #f4ecd8 !important;
-  color: #5b4636 !important;
+/* Theme styles mapped to global tokens.css variables */
+body.sepia,
+body.dark {
+  background-color: var(--color-bg-base) !important;
+  color: var(--color-text-main) !important;
 }
 
-body.theme-sepia .reader-main-content,
-body.theme-sepia #reader-controls,
-body.theme-sepia .toc-content,
-body.theme-sepia .modal-card {
-  background-color: #fcf8ed !important;
-  color: #5b4636 !important;
-  border-color: #e4d7ba !important;
+body.sepia .reader-main-content,
+body.sepia #reader-controls,
+body.sepia .toc-content,
+body.sepia .modal-card,
+body.dark .reader-main-content,
+body.dark #reader-controls,
+body.dark .toc-content,
+body.dark .modal-card {
+  background-color: var(--color-bg-surface) !important;
+  color: var(--color-text-main) !important;
+  border-color: var(--color-border) !important;
 }
 
-body.theme-sepia .controls-nav-group,
-body.theme-sepia .vocab-tabs-row,
-body.theme-sepia .vocab-card,
-body.theme-sepia .flashcard-back {
-  background-color: #f4ecd8 !important;
-  color: #5b4636 !important;
-  border-color: #e4d7ba !important;
+body.sepia .controls-nav-group,
+body.sepia .vocab-tabs-row,
+body.sepia .vocab-card,
+body.sepia .flashcard-back,
+body.dark .controls-nav-group,
+body.dark .vocab-tabs-row,
+body.dark .vocab-card,
+body.dark .flashcard-back {
+  background-color: var(--color-bg-base) !important;
+  color: var(--color-text-main) !important;
+  border-color: var(--color-border) !important;
 }
 
-body.theme-sepia .controls-nav-btn,
-body.theme-sepia .vocab-tab-btn.active,
-body.theme-sepia .flashcard-front {
-  background-color: #fcf8ed !important;
-  color: #8c6239 !important;
-  border-color: #e4d7ba !important;
-}
-
-body.theme-oled {
-  background-color: #000000 !important;
-  color: #e2e8f0 !important;
-}
-
-body.theme-oled .reader-main-content,
-body.theme-oled #reader-controls,
-body.theme-oled .toc-content,
-body.theme-oled .modal-card {
-  background-color: #121212 !important;
-  color: #e2e8f0 !important;
-  border-color: #2a2a2a !important;
-}
-
-body.theme-oled .controls-nav-group,
-body.theme-oled .vocab-tabs-row,
-body.theme-oled .vocab-card,
-body.theme-oled .flashcard-back {
-  background-color: #000000 !important;
-  color: #e2e8f0 !important;
-  border-color: #2a2a2a !important;
-}
-
-body.theme-oled .controls-nav-btn,
-body.theme-oled .vocab-tab-btn.active,
-body.theme-oled .flashcard-front {
-  background-color: #121212 !important;
-  color: #818cf8 !important;
-  border-color: #2a2a2a !important;
+body.sepia .controls-nav-btn,
+body.sepia .vocab-tab-btn.active,
+body.sepia .flashcard-front,
+body.dark .controls-nav-btn,
+body.dark .vocab-tab-btn.active,
+body.dark .flashcard-front {
+  background-color: var(--color-bg-surface) !important;
+  color: var(--color-primary) !important;
+  border-color: var(--color-border) !important;
 }
 
 /* Scroll progress bar styling */

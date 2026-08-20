@@ -25,8 +25,8 @@ $nextChapterNum = $chapterNum + 1;
 $hasPrev = $prevChapterNum >= 1;
 $hasNext = $nextChapterNum <= $totalChapters;
 
-$prevUrl = $hasPrev ? "index.php?book=$bookId&chapter=chapter-$prevChapterNum" : "#";
-$nextUrl = $hasNext ? "index.php?book=$bookId&chapter=chapter-$nextChapterNum" : "#";
+$prevUrl = $hasPrev ? "/library/read/index.php?book=$bookId&chapter=chapter-$prevChapterNum" : "#";
+$nextUrl = $hasNext ? "/library/read/index.php?book=$bookId&chapter=chapter-$nextChapterNum" : "#";
 
 // Page Metadata for Header
 $pageTitle = "$bookTitle - " . ($chapterNum === $totalChapters && $totalChapters > 1 && $isTeacherUnlocked ? "Teacher Resources" : "Chapter $chapterNum") . " | Hesten's Learning";
@@ -58,7 +58,7 @@ include ABSPATH . 'src/header.php';
 
     <!-- Back Navigation -->
     <div class="reader-back-nav" style="margin-bottom: 2rem;">
-        <a href="../" class="controls-nav-btn" style="display: inline-flex; align-items: center; gap: 0.5rem;">
+        <a href="/library/" class="controls-nav-btn" style="display: inline-flex; align-items: center; gap: 0.5rem;">
             <i class="fas fa-arrow-left"></i> Back to Library
         </a>
     </div>
@@ -154,8 +154,8 @@ include ABSPATH . 'src/header.php';
             <h4 class="settings-section-title">Theme</h4>
             <div class="theme-dots-row">
                 <button class="theme-dot-btn active dot-default settings-theme" data-theme="default" title="Light Theme"></button>
-                <button class="theme-dot-btn dot-sepia settings-theme" data-theme="theme-sepia" title="Sepia Theme"></button>
-                <button class="theme-dot-btn dot-oled settings-theme" data-theme="theme-oled" title="OLED Dark Theme"></button>
+                <button class="theme-dot-btn dot-sepia settings-theme" data-theme="sepia" title="Sepia Theme"></button>
+                <button class="theme-dot-btn dot-oled settings-theme" data-theme="dark" title="OLED Dark Theme"></button>
             </div>
 
             <h4 class="settings-section-title" style="margin-top: 1rem;">Speech Speed</h4>
@@ -177,13 +177,13 @@ include ABSPATH . 'src/header.php';
           </div>
           <h3 style="font-family: var(--site-font-family, 'Outfit', sans-serif); font-size: 1.5rem; font-weight: 800; margin: 0 0 0.5rem 0; color: var(--color-text-default);">Authorized Access Only</h3>
           <p style="color: var(--color-text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem;">What is Jenny's number?</p>
-          <form method="POST" action="index.php?book=<?php echo urlencode($bookId); ?>&chapter=chapter-<?php echo $chapterNum; ?>">
+          <form method="POST" action="/library/read/index.php?book=<?php echo urlencode($bookId); ?>&chapter=chapter-<?php echo $chapterNum; ?>">
             <input type="password" name="teacher_password" class="auth-input mb-4" placeholder="•••••••" required autofocus autocomplete="off">
             <?php if (!empty($authError)): ?>
               <p class="auth-error mb-4"><?php echo htmlspecialchars($authError); ?></p>
             <?php endif; ?>
             <div class="auth-actions">
-              <a href="index.php?book=<?php echo urlencode($bookId); ?>&chapter=chapter-1" class="auth-btn auth-btn-cancel text-center" style="display:block; line-height:2.2rem; text-decoration:none;">Cancel</a>
+              <a href="/library/read/index.php?book=<?php echo urlencode($bookId); ?>&chapter=chapter-1" class="auth-btn auth-btn-cancel text-center" style="display:block; line-height:2.2rem; text-decoration:none;">Cancel</a>
               <button type="submit" class="auth-btn auth-btn-submit">Unlock</button>
             </div>
           </form>
@@ -282,11 +282,11 @@ include ABSPATH . 'src/header.php';
     </div>
     <div class="toc-grid">
       <?php for ($i = 1; $i < $totalChapters; $i++): ?>
-        <a href="index.php?book=<?php echo urlencode($bookId); ?>&chapter=chapter-<?php echo $i; ?>" 
+        <a href="/library/read/index.php?book=<?php echo urlencode($bookId); ?>&chapter=chapter-<?php echo $i; ?>" 
            class="toc-link <?php echo ($i === $chapterNum) ? 'active' : ''; ?>" 
            data-chapter="<?php echo $i; ?>">CH <?php echo $i; ?></a>
       <?php endfor; ?>
-      <a href="index.php?book=<?php echo urlencode($bookId); ?>&chapter=chapter-<?php echo $totalChapters; ?>" 
+      <a href="/library/read/index.php?book=<?php echo urlencode($bookId); ?>&chapter=chapter-<?php echo $totalChapters; ?>" 
          class="toc-link toc-teacher-btn <?php echo ($chapterNum === $totalChapters) ? 'active' : ''; ?>" 
          data-chapter="<?php echo $totalChapters; ?>">
         <i class="fas fa-chalkboard-teacher mr-2"></i> TEACHER RESOURCES

@@ -96,23 +96,32 @@ document.addEventListener("DOMContentLoaded", () => {
             'lh-normal', 'lh-wide', 'lh-extra',
             'ls-normal', 'ls-wide', 'ls-extra'
         );
-        document.body.classList.remove('theme-sepia', 'theme-oled');
+        document.body.classList.remove('sepia', 'dark');
 
         // Apply new classes
         bookContent.classList.add(prefs.font);
         bookContent.classList.add(prefs.size);
         bookContent.classList.add(prefs.lineheight);
         bookContent.classList.add(prefs.letterspacing);
-        if (prefs.theme !== 'default') {
-            document.body.classList.add(prefs.theme);
+        
+        let activeTheme = prefs.theme;
+        if (activeTheme === 'theme-sepia') activeTheme = 'sepia';
+        if (activeTheme === 'theme-oled') activeTheme = 'dark';
+        
+        if (activeTheme !== 'default') {
+            document.body.classList.add(activeTheme);
         }
 
         // Sync active states on buttons
         document.querySelectorAll('.settings-font, .settings-size, .settings-theme, .settings-lineheight, .settings-letterspacing').forEach(el => {
             el.classList.remove('active');
+            let elTheme = el.dataset.theme;
+            if (elTheme === 'theme-sepia') elTheme = 'sepia';
+            if (elTheme === 'theme-oled') elTheme = 'dark';
+            
             if (el.dataset.font === prefs.font || 
                 el.dataset.size === prefs.size || 
-                el.dataset.theme === prefs.theme || 
+                (el.dataset.theme && elTheme === activeTheme) || 
                 el.dataset.lineheight === prefs.lineheight || 
                 el.dataset.letterspacing === prefs.letterspacing) {
                 el.classList.add('active');
@@ -656,7 +665,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const match = urlChapter.match(/^chapter-(\d+)$/);
         if (match) {
             const targetChapterNum = parseInt(match[1], 10);
-            const fetchPath = `${urlBook}/${urlChapter}.php`;
+            const fetchPath = `/library/read/${urlBook}/${urlChapter}.php`;
             
             fetch(fetchPath)
                 .then(res => {

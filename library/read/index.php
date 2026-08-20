@@ -148,8 +148,8 @@ if ($bookId === '') {
             }
         }
 
-        // Load Quiz questions from quiz database
-        $quizJsonPath = __DIR__ . '/1984_quiz.json';
+        // Load Quiz questions from quiz database dynamically based on bookId
+        $quizJsonPath = __DIR__ . '/quizzes/' . $bookId . '.json';
         if (is_file($quizJsonPath)) {
             $quizData = json_decode(file_get_contents($quizJsonPath), true);
             if (is_array($quizData)) {

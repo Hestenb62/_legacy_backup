@@ -24,10 +24,6 @@
             <div class="library-modal-info-pane">
                 <!-- Titles -->
                 <div class="library-modal-title-section">
-                    <div class="library-modal-badge-row">
-                         <span class="library-modal-badge-line"></span>
-                         <span class="library-modal-badge-text">Library Access</span>
-                    </div>
                     <h2 id="modal-title" class="library-modal-title"></h2>
                     <p id="modal-author" class="library-modal-author"></p>
                 </div>
@@ -44,7 +40,7 @@
                         <span id="modal-isbn" class="spec-value spec-val-mono spec-val-break"></span>
                     </div>
                     <div id="modal-lexile-container" class="library-modal-spec-half hidden">
-                        <span class="spec-label">Lexile / Reading Level <i class="fas fa-info-circle" style="cursor: pointer; opacity: 0.7;" onclick="openLexileInfoModal()"></i></span>
+                        <span class="spec-label">Lexile/Reading Level <i class="fas fa-info-circle" style="cursor: pointer; opacity: 0.7;" onclick="openLexileInfoModal()"></i></span>
                         <span id="modal-lexile" class="spec-value spec-val-highlight-emerald"></span>
                     </div>
                     <div id="modal-dewey-container" class="library-modal-spec-half hidden">
