@@ -427,6 +427,7 @@ window.BOOK_METADATA = {
     chapterNum: <?php echo json_encode($chapterNum); ?>
 };
 window.BOOK_QUIZ_QUESTIONS = <?php echo json_encode($quizQuestions); ?>;
+window.BOOK_JSON_VOCAB = <?php echo json_encode($vocabList); ?>;
 </script>
 
 <script src="/library/read/reader.js" defer></script>

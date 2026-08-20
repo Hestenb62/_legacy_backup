@@ -1,4 +1,18 @@
 {
+  "vocab-chapter-1": [
+    {
+      "word": "Telescreen",
+      "definition": "A two-way television screen used by the Thought Police to monitor citizens."
+    },
+    {
+      "word": "Doublethink",
+      "definition": "The power of holding two contradictory beliefs in one's mind simultaneously, and accepting both of them."
+    },
+    {
+      "word": "Thoughtcrime",
+      "definition": "Thinking any thought that goes against the Party or its principles."
+    }
+  ],
   "chapter-1": [
     {
       "question": "What is the primary function of the telescreen in Oceania?",

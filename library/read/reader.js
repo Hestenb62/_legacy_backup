@@ -455,6 +455,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
         activeVocabList = Object.values(vocabMap).sort((a, b) => a.term.localeCompare(b.term));
         
+        // Option 2 Fallback: If no inline tooltips exist, check window.BOOK_JSON_VOCAB
+        if (activeVocabList.length === 0 && window.BOOK_JSON_VOCAB && window.BOOK_JSON_VOCAB.length > 0) {
+            activeVocabList = window.BOOK_JSON_VOCAB.map(v => ({
+                term: v.word,
+                defText: v.definition
+            })).sort((a, b) => a.term.localeCompare(b.term));
+        }
+        
         // Show/hide download button
         if (downloadVocabBtn) {
             downloadVocabBtn.style.display = activeVocabList.length === 0 ? "none" : "inline-flex";
@@ -536,7 +544,10 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // --- Quiz Building & Rendering ---
+    // --- Quiz Building & Rendering (Wizard Mode) ---
+    let currentQuestionIndex = 0;
+    let quizAnswersState = [];
+
     function buildQuiz() {
         const questions = window.BOOK_QUIZ_QUESTIONS;
         if (!quizContainer) return;
@@ -546,56 +557,155 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        quizContainer.innerHTML = questions.map((q, qIdx) => `
-            <div class="quiz-question-card" data-qidx="${qIdx}">
-                <p class="quiz-question-text">${qIdx + 1}. ${q.question}</p>
-                <div class="quiz-options-list">
-                    ${q.options.map((opt, oIdx) => `
-                        <button class="quiz-option-btn" data-oidx="${oIdx}">
-                            <i class="far fa-circle"></i> ${opt}
-                        </button>
-                    `).join("")}
+        // If quiz is finished, show result screen
+        if (currentQuestionIndex >= questions.length) {
+            showQuizResults(questions);
+            return;
+        }
+
+        const q = questions[currentQuestionIndex];
+        const progressPct = (currentQuestionIndex / questions.length) * 100;
+
+        quizContainer.innerHTML = `
+            <div class="quiz-wizard" style="display: flex; flex-direction: column; gap: 1rem; text-align: left;">
+                <!-- Progress Header -->
+                <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; font-weight: 700; color: var(--color-text-secondary);">
+                    <span>Question ${currentQuestionIndex + 1} of ${questions.length}</span>
+                    <span>${Math.round(progressPct)}% Complete</span>
                 </div>
-                <div class="quiz-explanation hidden" id="explain-${qIdx}">${q.explanation}</div>
+                <!-- Progress Bar -->
+                <div style="width: 100%; height: 6px; background-color: var(--color-border); border-radius: 9999px; overflow: hidden; margin-bottom: 0.5rem;">
+                    <div style="width: ${progressPct}%; height: 100%; background: var(--color-primary); transition: width 0.3s ease;"></div>
+                </div>
+
+                <!-- Question Card -->
+                <div class="quiz-question-card" style="margin: 0; padding: 1.5rem; background-color: var(--color-base-bg); border: 1px solid var(--color-border); border-radius: 1.25rem;">
+                    <p class="quiz-question-text" style="font-size: 1.05rem; font-weight: 800; margin: 0 0 1.25rem 0; line-height: 1.4; color: var(--color-text-default);">${q.question}</p>
+                    <div class="quiz-options-list" style="display: flex; flex-direction: column; gap: 0.75rem;">
+                        ${q.options.map((opt, oIdx) => `
+                            <button class="quiz-option-btn" data-oidx="${oIdx}" style="text-align: left; padding: 0.85rem 1.25rem; border-radius: 0.75rem; font-weight: 600; display: flex; align-items: center; gap: 0.75rem; transition: all 0.2s ease;">
+                                <i class="far fa-circle"></i> <span>${opt}</span>
+                            </button>
+                        `).join("")}
+                    </div>
+                    <div class="quiz-explanation hidden" style="margin-top: 1.25rem; padding: 1rem; background-color: rgba(99, 102, 241, 0.08); border-left: 4px solid var(--color-primary); border-radius: 0 0.75rem 0.75rem 0; font-size: 0.9rem; line-height: 1.5; color: var(--color-text-default);">${q.explanation}</div>
+                </div>
+
+                <!-- Navigation Controls -->
+                <div style="display: flex; justify-content: flex-end; margin-top: 0.5rem;">
+                    <button id="quiz-next-btn" class="tooltip-btn" style="padding: 0.65rem 1.5rem; border-radius: 9999px; display: none; align-items: center; gap: 0.5rem; font-weight: 700;">
+                        ${currentQuestionIndex === questions.length - 1 ? 'Finish Quiz' : 'Next Question'} <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
             </div>
-        `).join("");
+        `;
 
-        // Bind Quiz Option clicks
-        quizContainer.querySelectorAll(".quiz-question-card").forEach(card => {
-            const qIdx = parseInt(card.dataset.qidx);
-            const questionData = questions[qIdx];
-            const optionBtns = card.querySelectorAll(".quiz-option-btn");
-            const explanationEl = card.querySelector(".quiz-explanation");
+        // Bind Option clicks
+        const optionBtns = quizContainer.querySelectorAll(".quiz-option-btn");
+        const explanationEl = quizContainer.querySelector(".quiz-explanation");
+        const nextBtn = document.getElementById("quiz-next-btn");
 
-            optionBtns.forEach(btn => {
-                btn.addEventListener("click", () => {
-                    const selectedOIdx = parseInt(btn.dataset.oidx);
-                    const isCorrect = selectedOIdx === questionData.correctIndex;
+        optionBtns.forEach(btn => {
+            btn.addEventListener("click", () => {
+                const selectedOIdx = parseInt(btn.dataset.oidx);
+                const isCorrect = selectedOIdx === q.correctIndex;
 
-                    // Disable all buttons in this question
-                    optionBtns.forEach(b => {
-                        b.classList.add("disabled");
-                        b.disabled = true;
-                    });
+                // Save result to answers state
+                quizAnswersState[currentQuestionIndex] = {
+                    question: q.question,
+                    isCorrect: isCorrect,
+                    selectedOption: q.options[selectedOIdx],
+                    correctOption: q.options[q.correctIndex]
+                };
 
-                    // Highlight answer
-                    if (isCorrect) {
-                        btn.classList.add("correct");
-                        btn.querySelector("i").className = "fas fa-check-circle";
-                    } else {
-                        btn.classList.add("incorrect");
-                        btn.querySelector("i").className = "fas fa-times-circle";
-                        // Highlight the correct option
-                        optionBtns[questionData.correctIndex].classList.add("correct");
-                        optionBtns[questionData.correctIndex].querySelector("i").className = "fas fa-check-circle";
-                    }
-
-                    // Reveal explanation
-                    if (explanationEl) {
-                        explanationEl.classList.remove("hidden");
-                    }
+                // Disable all buttons in this question
+                optionBtns.forEach(b => {
+                    b.classList.add("disabled");
+                    b.disabled = true;
                 });
+
+                // Highlight answer
+                if (isCorrect) {
+                    btn.classList.add("correct");
+                    btn.querySelector("i").className = "fas fa-check-circle";
+                } else {
+                    btn.classList.add("incorrect");
+                    btn.querySelector("i").className = "fas fa-times-circle";
+                    // Highlight the correct option
+                    optionBtns[q.correctIndex].classList.add("correct");
+                    optionBtns[q.correctIndex].querySelector("i").className = "fas fa-check-circle";
+                }
+
+                // Reveal explanation and Next button
+                if (explanationEl) explanationEl.classList.remove("hidden");
+                if (nextBtn) nextBtn.style.display = "inline-flex";
             });
+        });
+
+        if (nextBtn) {
+            nextBtn.addEventListener("click", () => {
+                currentQuestionIndex++;
+                buildQuiz();
+            });
+        }
+    }
+
+    function showQuizResults(questions) {
+        const correctCount = quizAnswersState.filter(a => a.isCorrect).length;
+        const totalCount = questions.length;
+        const scorePct = Math.round((correctCount / totalCount) * 100);
+
+        let ratingMessage = "Keep practicing! Re-read the chapter to strengthen your understanding.";
+        let ratingIcon = "fa-redo";
+        let ratingColor = "#ef4444";
+
+        if (scorePct === 100) {
+            ratingMessage = "Perfect score! Outstanding mastery of the material.";
+            ratingIcon = "fa-trophy";
+            ratingColor = "#eab308";
+        } else if (scorePct >= 70) {
+            ratingMessage = "Great job! You have a solid grasp on this chapter.";
+            ratingIcon = "fa-thumbs-up";
+            ratingColor = "#10b981";
+        }
+
+        quizContainer.innerHTML = `
+            <div class="quiz-results" style="display: flex; flex-direction: column; gap: 1.5rem; text-align: center; padding: 1rem 0;">
+                <!-- Icon & Score -->
+                <div>
+                    <div style="width: 4rem; height: 4rem; border-radius: 50%; background-color: rgba(99, 102, 241, 0.1); color: ${ratingColor}; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem auto; font-size: 1.75rem;">
+                        <i class="fas ${ratingIcon}"></i>
+                    </div>
+                    <h3 style="font-family: var(--site-font-family, 'Outfit', sans-serif); font-size: 1.5rem; font-weight: 900; margin: 0 0 0.25rem 0; color: var(--color-text-default);">Quiz Completed!</h3>
+                    <p style="color: var(--color-text-secondary); font-size: 0.9rem; max-width: 320px; margin: 0 auto 1.5rem auto; line-height: 1.4;">${ratingMessage}</p>
+                </div>
+
+                <!-- Large Score Card -->
+                <div style="background-color: var(--color-base-bg); border: 1px solid var(--color-border); border-radius: 1.5rem; padding: 1.5rem; display: flex; justify-content: space-around; align-items: center; max-width: 400px; margin: 0 auto; width: 100%;">
+                    <div style="text-align: left;">
+                        <span style="font-size: 0.8rem; font-weight: 800; color: var(--color-text-secondary); text-transform: uppercase;">Score</span>
+                        <h2 style="margin: 0; font-size: 2.25rem; font-weight: 900; color: ${ratingColor}; line-height: 1;">${scorePct}%</h2>
+                    </div>
+                    <div style="width: 1px; height: 2.5rem; background-color: var(--color-border);"></div>
+                    <div style="text-align: left;">
+                        <span style="font-size: 0.8rem; font-weight: 800; color: var(--color-text-secondary); text-transform: uppercase;">Correct</span>
+                        <h2 style="margin: 0; font-size: 2.25rem; font-weight: 900; color: var(--color-text-default); line-height: 1;">${correctCount} / ${totalCount}</h2>
+                    </div>
+                </div>
+
+                <!-- Actions -->
+                <div style="margin-top: 1rem;">
+                    <button id="quiz-retry-btn" class="tooltip-btn" style="padding: 0.75rem 2rem; border-radius: 9999px; display: inline-flex; align-items: center; gap: 0.5rem; font-weight: 700; background-color: var(--color-primary); color: white; border: none; cursor: pointer; margin: 0 auto;">
+                        <i class="fas fa-undo"></i> Retry Quiz
+                    </button>
+                </div>
+            </div>
+        `;
+
+        document.getElementById("quiz-retry-btn").addEventListener("click", () => {
+            currentQuestionIndex = 0;
+            quizAnswersState = [];
+            buildQuiz();
         });
     }
 

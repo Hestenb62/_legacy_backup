@@ -79,6 +79,7 @@ $totalChapters = 0;
 $isTeacherUnlocked = isset($_SESSION['teacher_unlocked']) && $_SESSION['teacher_unlocked'] === true;
 $authError = '';
 $quizQuestions = [];
+$vocabList = [];
 
 if ($bookId === '') {
     $error = 'No book specified.';
@@ -148,12 +149,13 @@ if ($bookId === '') {
             }
         }
 
-        // Load Quiz questions from quiz database dynamically based on bookId
+        // Load Quiz questions and vocab list from database dynamically based on bookId
         $quizJsonPath = __DIR__ . '/quizzes/' . $bookId . '.json';
         if (is_file($quizJsonPath)) {
             $quizData = json_decode(file_get_contents($quizJsonPath), true);
             if (is_array($quizData)) {
                 $quizQuestions = $quizData['chapter-' . $chapterNum] ?? $quizData['default'] ?? [];
+                $vocabList = $quizData['vocab-chapter-' . $chapterNum] ?? $quizData['vocab-default'] ?? [];
             }
         }
 
