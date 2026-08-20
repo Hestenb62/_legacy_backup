@@ -69,7 +69,7 @@ include ABSPATH . 'src/header.php';
         <span class="library-badge-dot"></span>
         <span class="library-badge-text"><i class="fas fa-book-open"></i> Reader Mode</span>
       </div>
-      <h1 class="library-hero-title" style="font-size: clamp(2.5rem, 6vw, 4rem); line-height: 1.1; margin-bottom: 0.5rem; background: linear-gradient(135deg, var(--color-primary), var(--color-secondary), var(--color-accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+      <h1 class="library-hero-title" style="font-size: clamp(2.5rem, 6vw, 4rem); line-height: 1.1; margin-bottom: 0.5rem; background: linear-gradient(135deg, var(--color-primary), var(--color-secondary), var(--color-accent)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">
         <?php echo htmlspecialchars($bookTitle); ?>
       </h1>
       <p style="font-size: 1.25rem; font-weight: 700; color: var(--color-text-secondary); margin: 0;">by <?php echo htmlspecialchars($bookAuthor); ?></p>
