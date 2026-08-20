@@ -325,6 +325,10 @@ body.theme-oled .flashcard-front {
   color: var(--color-primary);
 }
 
+.tool-btn-license {
+  color: var(--color-secondary);
+}
+
 .tool-btn-toc {
   font-weight: 700;
   font-size: 0.85rem;

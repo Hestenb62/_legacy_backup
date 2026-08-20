@@ -155,6 +155,46 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    // --- License Modal ---
+    const openLicenseBtn = document.getElementById("open-license-btn");
+    const licenseModal = document.getElementById("license-modal");
+    const closeLicenseBtn = document.getElementById("close-license-modal");
+
+    if (openLicenseBtn && licenseModal) {
+        openLicenseBtn.addEventListener("click", () => {
+            licenseModal.classList.remove("hidden");
+            licenseModal.offsetHeight; // force reflow
+            licenseModal.classList.add("active");
+        });
+        if (closeLicenseBtn) {
+            closeLicenseBtn.addEventListener("click", () => {
+                licenseModal.classList.remove("active");
+                setTimeout(() => licenseModal.classList.add("hidden"), 300);
+            });
+        }
+        licenseModal.addEventListener("click", (e) => {
+            if (e.target === licenseModal) {
+                licenseModal.classList.remove("active");
+                setTimeout(() => licenseModal.classList.add("hidden"), 300);
+            }
+        });
+    }
+
+    // --- Global Keyboard Accessibility ---
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+            if (licenseModal && licenseModal.classList.contains("active")) {
+                closeLicenseBtn.click();
+            }
+            if (tocModal && tocModal.classList.contains("active")) {
+                tocModal.classList.remove("active");
+            }
+            if (vocabModal && !vocabModal.classList.contains("hidden")) {
+                vocabModal.classList.add("hidden");
+            }
+        }
+    });
+
     // --- Progress Tracking & Go To Top & Bookmark Restore ---
     window.addEventListener("scroll", () => {
         const scrollTop = window.scrollY;
@@ -616,7 +656,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const match = urlChapter.match(/^chapter-(\d+)$/);
         if (match) {
             const targetChapterNum = parseInt(match[1], 10);
-            const fetchPath = `/library/read/${urlBook}/${urlChapter}.php`;
+            const fetchPath = `${urlBook}/${urlChapter}.php`;
             
             fetch(fetchPath)
                 .then(res => {

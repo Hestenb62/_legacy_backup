@@ -25,8 +25,8 @@ $nextChapterNum = $chapterNum + 1;
 $hasPrev = $prevChapterNum >= 1;
 $hasNext = $nextChapterNum <= $totalChapters;
 
-$prevUrl = $hasPrev ? "/library/read/index.php?book=$bookId&chapter=chapter-$prevChapterNum" : "#";
-$nextUrl = $hasNext ? "/library/read/index.php?book=$bookId&chapter=chapter-$nextChapterNum" : "#";
+$prevUrl = $hasPrev ? "index.php?book=$bookId&chapter=chapter-$prevChapterNum" : "#";
+$nextUrl = $hasNext ? "index.php?book=$bookId&chapter=chapter-$nextChapterNum" : "#";
 
 // Page Metadata for Header
 $pageTitle = "$bookTitle - " . ($chapterNum === $totalChapters && $totalChapters > 1 && $isTeacherUnlocked ? "Teacher Resources" : "Chapter $chapterNum") . " | Hesten's Learning";
@@ -58,7 +58,7 @@ include ABSPATH . 'src/header.php';
 
     <!-- Back Navigation -->
     <div class="reader-back-nav" style="margin-bottom: 2rem;">
-        <a href="/library/" class="controls-nav-btn" style="display: inline-flex; align-items: center; gap: 0.5rem;">
+        <a href="../" class="controls-nav-btn" style="display: inline-flex; align-items: center; gap: 0.5rem;">
             <i class="fas fa-arrow-left"></i> Back to Library
         </a>
     </div>
@@ -177,13 +177,13 @@ include ABSPATH . 'src/header.php';
           </div>
           <h3 style="font-family: var(--site-font-family, 'Outfit', sans-serif); font-size: 1.5rem; font-weight: 800; margin: 0 0 0.5rem 0; color: var(--color-text-default);">Authorized Access Only</h3>
           <p style="color: var(--color-text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem;">What is Jenny's number?</p>
-          <form method="POST" action="/library/read/index.php?book=<?php echo urlencode($bookId); ?>&chapter=chapter-<?php echo $chapterNum; ?>">
+          <form method="POST" action="index.php?book=<?php echo urlencode($bookId); ?>&chapter=chapter-<?php echo $chapterNum; ?>">
             <input type="password" name="teacher_password" class="auth-input mb-4" placeholder="•••••••" required autofocus autocomplete="off">
             <?php if (!empty($authError)): ?>
               <p class="auth-error mb-4"><?php echo htmlspecialchars($authError); ?></p>
             <?php endif; ?>
             <div class="auth-actions">
-              <a href="/library/read/index.php?book=<?php echo urlencode($bookId); ?>&chapter=chapter-1" class="auth-btn auth-btn-cancel text-center" style="display:block; line-height:2.2rem; text-decoration:none;">Cancel</a>
+              <a href="index.php?book=<?php echo urlencode($bookId); ?>&chapter=chapter-1" class="auth-btn auth-btn-cancel text-center" style="display:block; line-height:2.2rem; text-decoration:none;">Cancel</a>
               <button type="submit" class="auth-btn auth-btn-submit">Unlock</button>
             </div>
           </form>
@@ -193,6 +193,66 @@ include ABSPATH . 'src/header.php';
         <div class="chapter-title text-3xl font-bold text-center mb-8 text-primary" style="font-size: 2rem; font-weight: 800; color: var(--color-primary); text-align: center; margin-bottom: 2rem;">
           <?php echo ($totalChapters > 1 && $chapterNum === $totalChapters) ? "Teacher Resources" : "Chapter " . $chapterNum; ?>
         </div>
+
+        <?php if ($chapterNum === 1): ?>
+          <!-- Book Metadata Info Card at the beginning of the book -->
+          <div class="book-intro-card" style="display: flex; gap: 2rem; background: var(--color-content-bg); border: 1px solid var(--color-border); padding: 2rem; border-radius: 1.5rem; margin-bottom: 2.5rem; flex-wrap: wrap; box-shadow: var(--shadow-sm);">
+            <div style="flex-shrink: 0; margin: 0 auto;">
+              <img src="<?php echo htmlspecialchars($book['img'] ?? ''); ?>" alt="<?php echo htmlspecialchars($bookTitle); ?>" style="width: 130px; height: auto; border-radius: 0.75rem; box-shadow: var(--shadow-md);">
+            </div>
+            <div style="flex: 1; min-width: 250px; display: flex; flex-direction: column; justify-content: center; text-align: left;">
+              <h2 style="font-family: var(--site-font-family, 'Outfit', sans-serif); font-size: 1.6rem; font-weight: 900; margin: 0 0 0.25rem 0; color: var(--color-text-default); line-height: 1.2;">
+                <?php echo htmlspecialchars($bookTitle); ?>
+              </h2>
+              <p style="font-size: 1.05rem; color: var(--color-text-secondary); margin: 0 0 1.25rem 0; font-weight: 600;">
+                by <?php echo htmlspecialchars($bookAuthor); ?>
+              </p>
+              
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; font-size: 0.85rem; line-height: 1.4;">
+                <div>
+                  <strong style="color: var(--color-text-secondary); text-transform: uppercase; font-size: 0.7rem; display: block; margin-bottom: 0.15rem;">Sourced From</strong>
+                  <span>
+                    <?php 
+                      $discKey = $book['disclaimer-key'] ?? 'default';
+                      if ($discKey === 'gutenberg') {
+                          echo 'Project Gutenberg';
+                      } elseif ($discKey === 'openlibrary') {
+                          echo 'Open Library';
+                      } elseif ($discKey === 'american-yawp') {
+                          echo 'The American Yawp';
+                      } else {
+                          echo 'Educational Archives';
+                      }
+                    ?>
+                  </span>
+                </div>
+                <div>
+                  <strong style="color: var(--color-text-secondary); text-transform: uppercase; font-size: 0.7rem; display: block; margin-bottom: 0.15rem;">Author</strong>
+                  <span><?php echo htmlspecialchars($bookAuthor); ?></span>
+                </div>
+                <div>
+                  <strong style="color: var(--color-text-secondary); text-transform: uppercase; font-size: 0.7rem; display: block; margin-bottom: 0.15rem;">Publication Date</strong>
+                  <span><?php echo htmlspecialchars($book['date'] ?? 'N/A'); ?></span>
+                </div>
+                <div>
+                  <strong style="color: var(--color-text-secondary); text-transform: uppercase; font-size: 0.7rem; display: block; margin-bottom: 0.15rem;">License</strong>
+                  <span>
+                    <?php 
+                      if ($discKey === 'gutenberg') {
+                          echo 'Public Domain';
+                      } elseif ($discKey === 'american-yawp') {
+                          echo 'Creative Commons BY-SA';
+                      } else {
+                          echo 'Educational Fair Use';
+                      }
+                    ?>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        <?php endif; ?>
+
         <?php echo $contentHtml; ?>
       <?php endif; ?>
     </article>
@@ -222,11 +282,11 @@ include ABSPATH . 'src/header.php';
     </div>
     <div class="toc-grid">
       <?php for ($i = 1; $i < $totalChapters; $i++): ?>
-        <a href="/library/read/index.php?book=<?php echo urlencode($bookId); ?>&chapter=chapter-<?php echo $i; ?>" 
+        <a href="index.php?book=<?php echo urlencode($bookId); ?>&chapter=chapter-<?php echo $i; ?>" 
            class="toc-link <?php echo ($i === $chapterNum) ? 'active' : ''; ?>" 
            data-chapter="<?php echo $i; ?>">CH <?php echo $i; ?></a>
       <?php endfor; ?>
-      <a href="/library/read/index.php?book=<?php echo urlencode($bookId); ?>&chapter=chapter-<?php echo $totalChapters; ?>" 
+      <a href="index.php?book=<?php echo urlencode($bookId); ?>&chapter=chapter-<?php echo $totalChapters; ?>" 
          class="toc-link toc-teacher-btn <?php echo ($chapterNum === $totalChapters) ? 'active' : ''; ?>" 
          data-chapter="<?php echo $totalChapters; ?>">
         <i class="fas fa-chalkboard-teacher mr-2"></i> TEACHER RESOURCES
@@ -235,6 +295,68 @@ include ABSPATH . 'src/header.php';
   </div>
 </div>
 <?php endif; ?>
+
+<!-- License & Sourcing Info Modal -->
+<div id="license-modal" class="modal-overlay hidden" role="dialog" aria-labelledby="license-title">
+  <div class="modal-card" style="max-width: 500px;">
+    <div class="modal-card-header">
+      <div class="modal-card-title">
+        <div class="modal-icon-circle" style="background: var(--color-primary); color: white; display: flex; align-items: center; justify-content: center; width: 2rem; height: 2rem; border-radius: 50%;">
+          <i class="fas fa-info-circle"></i>
+        </div>
+        <div style="text-align: left;">
+          <h3 id="license-title" style="font-family: var(--site-font-family, 'Outfit', sans-serif); font-size: 1.25rem; font-weight: 800; margin: 0; color: var(--color-text-default);">Book License & Info</h3>
+          <p style="color: var(--color-text-secondary); font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; margin: 0.25rem 0 0 0;">Metadata & Sourcing</p>
+        </div>
+      </div>
+      <button id="close-license-modal" class="modal-card-close-btn" aria-label="Close licensing info">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <div class="modal-body" style="padding: 1.5rem; text-align: left; color: var(--color-text-default); max-height: 70vh; overflow-y: auto;">
+      <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem; align-items: center;">
+        <img src="<?php echo htmlspecialchars($book['img'] ?? ''); ?>" alt="<?php echo htmlspecialchars($bookTitle); ?>" style="width: 80px; height: auto; border-radius: 0.5rem; box-shadow: var(--shadow-md);">
+        <div>
+          <h4 style="margin: 0; font-size: 1.1rem; font-weight: 800;"><?php echo htmlspecialchars($bookTitle); ?></h4>
+          <p style="margin: 0.25rem 0 0 0; color: var(--color-text-secondary); font-size: 0.9rem;">by <?php echo htmlspecialchars($bookAuthor); ?></p>
+        </div>
+      </div>
+      
+      <div style="margin-bottom: 1.25rem;">
+        <strong style="display: block; font-size: 0.8rem; color: var(--color-text-secondary); text-transform: uppercase; margin-bottom: 0.25rem; font-weight: 800;">Source & License</strong>
+        <p style="margin: 0; font-size: 0.95rem; line-height: 1.5; color: var(--color-text-default);">
+          <?php 
+            $discKey = $book['disclaimer-key'] ?? 'default';
+            $discText = $book['disclaimer-text'] ?? '';
+            
+            $disclaimers = json_decode(file_get_contents(ABSPATH . 'library/disclaimers.json'), true) ?: [];
+            if (!empty($discText)) {
+                echo htmlspecialchars($discText);
+            } elseif (isset($disclaimers[$discKey])) {
+                echo htmlspecialchars($disclaimers[$discKey]);
+            } else {
+                echo htmlspecialchars($disclaimers['default'] ?? 'No license information is available for this book.');
+            }
+          ?>
+        </p>
+      </div>
+
+      <?php if (!empty($book['isbn']) && $book['isbn'] !== '#'): ?>
+      <div style="margin-bottom: 1.25rem;">
+        <strong style="display: block; font-size: 0.8rem; color: var(--color-text-secondary); text-transform: uppercase; margin-bottom: 0.25rem; font-weight: 800;">ISBN</strong>
+        <p style="margin: 0; font-size: 0.95rem; color: var(--color-text-default);"><?php echo htmlspecialchars($book['isbn']); ?></p>
+      </div>
+      <?php endif; ?>
+
+      <?php if (!empty($book['date'])): ?>
+      <div style="margin-bottom: 1.25rem;">
+        <strong style="display: block; font-size: 0.8rem; color: var(--color-text-secondary); text-transform: uppercase; margin-bottom: 0.25rem; font-weight: 800;">Original Release / Publication Date</strong>
+        <p style="margin: 0; font-size: 0.95rem; color: var(--color-text-default);"><?php echo htmlspecialchars($book['date']); ?></p>
+      </div>
+      <?php endif; ?>
+    </div>
+  </div>
+</div>
 
 <!-- Study Guide (Vocab, Flashcards, Quiz) Modal -->
 <div id="vocab-modal" class="modal-overlay hidden">
