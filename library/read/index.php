@@ -49,13 +49,18 @@ if ($bookId === '') {
 
 $bookId = preg_replace('/[^a-zA-Z0-9\-]/', '', $bookId);
 
-// Load book data
+// Load book data from both main catalog and educational drawer resources
 $jsonString = file_get_contents(__DIR__ . '/../bookd.json');
-$categories = json_decode($jsonString, true);
+$categories = json_decode($jsonString, true) ?: [];
+
+$drawerJsonString = file_get_contents(__DIR__ . '/../edu-side-drawer.json');
+$drawerCategories = json_decode($drawerJsonString, true) ?: [];
+
+$allCategories = array_merge($categories, $drawerCategories);
 $book = null;
 
-if (is_array($categories)) {
-    foreach ($categories as $books) {
+if (is_array($allCategories)) {
+    foreach ($allCategories as $books) {
         foreach ($books as $candidate) {
             if (($candidate['id'] ?? '') === $bookId) {
                 $book = $candidate;
