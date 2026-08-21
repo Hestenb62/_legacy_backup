@@ -117,11 +117,23 @@
             <h3 class="library-disclaimer-title">Disclaimer</h3>
         </div>
         
-        <div class="library-disclaimer-body-box">
+        <!-- Tabs Row -->
+        <div class="disclaimer-tabs-row hidden" id="disclaimer-tabs">
+            <button class="disclaimer-tab-btn active" id="tab-disc-standard" onclick="switchDisclaimerTab('standard')">Disclaimer</button>
+            <button class="disclaimer-tab-btn" id="tab-disc-license" onclick="switchDisclaimerTab('license')">License</button>
+        </div>
+        
+        <div class="library-disclaimer-body-box" id="disclaimer-standard-view">
             <p class="library-disclaimer-text">
                  The books and materials in this digital library are provided for educational and informational purposes
                  only. Hesten's Learning makes no claims of ownership over third-party content. Please ensure your use of
                  these materials complies with applicable copyright laws before downloading.
+            </p>
+        </div>
+
+        <div class="library-disclaimer-body-box hidden" id="disclaimer-license-view" style="display: none;">
+            <p class="library-disclaimer-license-text">
+                 <!-- Populated dynamically by library.js -->
             </p>
         </div>
         

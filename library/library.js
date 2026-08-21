@@ -458,10 +458,30 @@ window.openDisclaimerModal = function() {
     const discModal = document.getElementById('disclaimerModal');
     if (!discModal) return;
     
-    const discTextEl = discModal.querySelector('.library-disclaimer-text');
-    if (discTextEl) {
-        discTextEl.textContent = window.currentBookDisclaimer || disclaimersData['default'] || '';
+    const defaultDisclaimer = disclaimersData['default'] || '';
+    const bookDisclaimer = window.currentBookDisclaimer || '';
+    
+    const hasCustomLicense = (bookDisclaimer && bookDisclaimer.trim() !== '' && bookDisclaimer !== defaultDisclaimer);
+    
+    const tabsContainer = document.getElementById('disclaimer-tabs');
+    const licenseTextEl = discModal.querySelector('.library-disclaimer-license-text');
+    
+    if (hasCustomLicense) {
+        if (tabsContainer) {
+            tabsContainer.classList.remove('hidden');
+            tabsContainer.style.display = 'flex';
+        }
+        if (licenseTextEl) {
+            licenseTextEl.textContent = bookDisclaimer;
+        }
+    } else {
+        if (tabsContainer) {
+            tabsContainer.classList.add('hidden');
+            tabsContainer.style.display = 'none';
+        }
     }
+    
+    window.switchDisclaimerTab('standard');
     
     discModal.classList.remove('hidden');
     discModal.offsetHeight;
@@ -469,6 +489,39 @@ window.openDisclaimerModal = function() {
     
     const closeBtn = document.getElementById('disclaimer-modal-close');
     if (closeBtn) closeBtn.focus();
+};
+
+window.switchDisclaimerTab = function(tabName) {
+    const tabStandard = document.getElementById('tab-disc-standard');
+    const tabLicense = document.getElementById('tab-disc-license');
+    const viewStandard = document.getElementById('disclaimer-standard-view');
+    const viewLicense = document.getElementById('disclaimer-license-view');
+    
+    if (tabName === 'standard') {
+        if (tabStandard) tabStandard.classList.add('active');
+        if (tabLicense) tabLicense.classList.remove('active');
+        
+        if (viewStandard) {
+            viewStandard.classList.remove('hidden');
+            viewStandard.style.display = 'block';
+        }
+        if (viewLicense) {
+            viewLicense.classList.add('hidden');
+            viewLicense.style.display = 'none';
+        }
+    } else if (tabName === 'license') {
+        if (tabStandard) tabStandard.classList.remove('active');
+        if (tabLicense) tabLicense.classList.add('active');
+        
+        if (viewStandard) {
+            viewStandard.classList.add('hidden');
+            viewStandard.style.display = 'none';
+        }
+        if (viewLicense) {
+            viewLicense.classList.remove('hidden');
+            viewLicense.style.display = 'block';
+        }
+    }
 };
 
 window.closeDisclaimerModal = function() {

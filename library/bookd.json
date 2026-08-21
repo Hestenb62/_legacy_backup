@@ -34,7 +34,8 @@
             "mobi-link": "https://cdn.hestena62.com/library/Nineteen%20eighty-four%20-%20George%20Orwell.mobi",
             "word-link": "https://cdn.hestena62.com/library/Nineteen%20eighty-four%20-%20George%20Orwell.docx",
             "lexile": "1090L",
-            "grade": "Grades 9-12"
+            "grade": "Grades 9-12",
+            "disclaimer-key": "gutenburg"
         },
         {
             "id": "pride-and-prejudice",
