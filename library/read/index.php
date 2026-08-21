@@ -147,6 +147,17 @@ if ($bookId === '') {
                 // Strip tags if structure unrecognized
                 $contentHtml = $chapterHtml;
             }
+
+            // Auto-inject book credits from credits.json if defined
+            $creditsJsonPath = __DIR__ . '/../assets/credits.json';
+            if (is_file($creditsJsonPath)) {
+                $creditsData = json_decode(file_get_contents($creditsJsonPath), true);
+                if (is_array($creditsData) && isset($creditsData[$bookId]) && trim($creditsData[$bookId]) !== '') {
+                    $contentHtml .= '<div class="book-credits-container" style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px dashed var(--color-border); font-size: 0.85rem; color: var(--color-text-secondary); line-height: 1.5;">' . 
+                                    '<strong>Credits & Sources:</strong> <span class="book-credits-text">' . htmlspecialchars($creditsData[$bookId]) . '</span>' .
+                                    '</div>';
+                }
+            }
         }
 
         // Load Quiz questions and vocab list from assets directory dynamically based on bookId
