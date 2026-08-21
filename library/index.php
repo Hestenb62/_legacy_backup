@@ -23,6 +23,10 @@ $categories = json_decode($jsonString, true) ?: [];
 $drawerJsonString = file_get_contents(__DIR__ . '/assets/edu-side-drawer.json');
 $drawerCategories = json_decode($drawerJsonString, true) ?: [];
 
+// --- Desk External Links Array ---
+$linksJsonPath = __DIR__ . '/assets/desk_links.json';
+$deskLinks = is_file($linksJsonPath) ? json_decode(file_get_contents($linksJsonPath), true) : [];
+
 // Include Global Header (Root)
 include '../src/header.php';
 ?>
@@ -260,6 +264,14 @@ include '../src/header.php';
                     <h3 style="font-size: 1.25rem; font-weight: 800; margin: 0 0 0.5rem 0; color: var(--color-text-default);">No items found</h3>
                     <p style="font-size: 0.9rem; color: var(--color-text-muted); margin: 0;">We couldn't find any resources in this subject.</p>
                 </div>
+
+                <!-- External Links Section -->
+                <div id="drawer-external-links-container" class="hidden" style="margin-top: 3rem; border-top: 1px solid var(--color-border); padding-top: 2rem; width: 100%; display: none;">
+                    <h3 style="font-family: var(--site-font-family, 'Outfit', sans-serif); font-size: 1.35rem; font-weight: 800; color: var(--color-text-default); margin: 0 0 1rem 0; display: flex; align-items: center; gap: 0.5rem;"><i class="fas fa-external-link-alt" style="color: var(--color-secondary);"></i> Additional Online Resources</h3>
+                    <div id="drawer-external-links-list" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.25rem; width: 100%;">
+                        <!-- Populated dynamically by library.js -->
+                    </div>
+                </div>
             </div>
         </div> <!-- Close Panel 2 subject-desk-workspace -->
 
@@ -269,6 +281,9 @@ include '../src/header.php';
 
 <link rel="stylesheet" href="library.css">
 <?php include __DIR__ . '/modals.php'; ?>
+<script>
+  window.DESK_EXTERNAL_LINKS = <?php echo json_encode($deskLinks); ?>;
+</script>
 <script src="assets/library.js" defer></script>
 
 <?php include '../src/footer.php'; ?>

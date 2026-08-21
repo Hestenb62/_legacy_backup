@@ -59,24 +59,81 @@ include ABSPATH . 'src/header.php';
   <div class="container" style="max-width: 800px; margin: 0 auto; padding: 2rem 1rem;">
 
     <!-- Back Navigation -->
+    <?php if ($chapterNum <= 1): ?>
     <div class="reader-back-nav" style="margin-bottom: 2rem;">
       <a href="/library/" class="controls-nav-btn" style="display: inline-flex; align-items: center; gap: 0.5rem;">
         <i class="fas fa-arrow-left"></i> Back to Library
       </a>
     </div>
+    <?php endif; ?>
 
     <!-- Title Header -->
+    <?php if ($chapterNum <= 1): ?>
     <header class="reader-page-header animate-reveal" style="text-align: center; margin-bottom: 3rem;">
       <div class="library-hero-badge">
         <span class="library-badge-dot"></span>
         <span class="library-badge-text"><i class="fas fa-book-open"></i> Reader Mode</span>
       </div>
-      <h1 class="library-hero-title" style="font-size: clamp(2.5rem, 6vw, 4rem); line-height: 1.1; margin-bottom: 0.5rem; background: linear-gradient(135deg, var(--color-primary), var(--color-secondary), var(--color-accent)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">
+      <h1 class="library-hero-title" style="font-size: clamp(2rem, 5vw, 3rem); line-height: 1.1; margin-bottom: 0.5rem; background: linear-gradient(135deg, var(--color-primary), var(--color-secondary), var(--color-accent)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">
         <?php echo htmlspecialchars($bookTitle); ?>
       </h1>
       <p style="font-size: 1.25rem; font-weight: 700; color: var(--color-text-secondary); margin: 0;">by <?php echo htmlspecialchars($bookAuthor); ?></p>
     </header>
+    <?php endif; ?>
 
+    <!-- Author Pre-Read Introduction Chapter -->
+    <?php if ($chapter === 'intro'): ?>
+      <div class="author-intro-card animate-reveal" style="background: var(--color-content-bg); border: 1px solid var(--color-border); border-radius: 1.5rem; padding: 2.5rem; box-shadow: var(--shadow-xl); text-align: left; margin-bottom: 3rem; margin-top: 1rem;">
+        <div style="display: flex; align-items: center; gap: 1.25rem; margin-bottom: 2rem; border-bottom: 1px solid var(--color-border); padding-bottom: 1.25rem;">
+          <div style="background: var(--color-primary-light, rgba(79, 70, 229, 0.1)); color: var(--color-primary); width: 3.5rem; height: 3.5rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
+            <i class="fas fa-user-feather"></i>
+          </div>
+          <div>
+            <h2 style="font-family: var(--site-font-family, 'Outfit', sans-serif); font-size: 1.6rem; font-weight: 800; margin: 0; color: var(--color-text-default);">About the Author</h2>
+            <p style="margin: 0; font-size: 0.95rem; font-weight: 700; color: var(--color-text-secondary);"><?php echo htmlspecialchars($bookAuthor); ?></p>
+          </div>
+        </div>
+        
+        <?php if (!empty($book['authorBio'])): ?>
+          <div style="margin-bottom: 2rem; background: var(--color-base-bg); padding: 1.25rem 1.5rem; border-radius: 1rem; border-left: 4px solid var(--color-primary);">
+            <p style="font-size: 1rem; line-height: 1.6; color: var(--color-text-default); margin: 0; font-style: italic;">
+              <?php echo htmlspecialchars($book['authorBio']); ?>
+            </p>
+          </div>
+        <?php endif; ?>
+
+        <div style="display: flex; flex-direction: column; gap: 1.75rem;">
+          <?php if (!empty($book['introWhy'])): ?>
+            <div>
+              <h3 style="font-family: var(--site-font-family, 'Outfit', sans-serif); font-size: 1.15rem; font-weight: 800; color: var(--color-text-default); margin: 0 0 0.5rem 0; display: flex; align-items: center; gap: 0.5rem;"><i class="fas fa-question-circle" style="color: var(--color-secondary);"></i> Why the Author wrote this book:</h3>
+              <p style="font-size: 0.95rem; line-height: 1.6; color: var(--color-text-secondary); margin: 0;"><?php echo htmlspecialchars($book['introWhy']); ?></p>
+            </div>
+          <?php endif; ?>
+          
+          <?php if (!empty($book['introHow'])): ?>
+            <div>
+              <h3 style="font-family: var(--site-font-family, 'Outfit', sans-serif); font-size: 1.15rem; font-weight: 800; color: var(--color-text-default); margin: 0 0 0.5rem 0; display: flex; align-items: center; gap: 0.5rem;"><i class="fas fa-hammer" style="color: var(--color-primary);"></i> How it was written:</h3>
+              <p style="font-size: 0.95rem; line-height: 1.6; color: var(--color-text-secondary); margin: 0;"><?php echo htmlspecialchars($book['introHow']); ?></p>
+            </div>
+          <?php endif; ?>
+          
+          <?php if (!empty($book['introWhat'])): ?>
+            <div>
+              <h3 style="font-family: var(--site-font-family, 'Outfit', sans-serif); font-size: 1.15rem; font-weight: 800; color: var(--color-text-default); margin: 0 0 0.5rem 0; display: flex; align-items: center; gap: 0.5rem;"><i class="fas fa-compass" style="color: var(--color-accent);"></i> What it explores:</h3>
+              <p style="font-size: 0.95rem; line-height: 1.6; color: var(--color-text-secondary); margin: 0;"><?php echo htmlspecialchars($book['introWhat']); ?></p>
+            </div>
+          <?php endif; ?>
+        </div>
+
+        <div style="text-align: center; margin-top: 3.5rem; border-top: 1px solid var(--color-border); padding-top: 2rem;">
+          <a href="/library/read/index.php?book=<?php echo urlencode($bookId); ?>&chapter=chapter-1" class="controls-nav-btn" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 2rem; border-radius: 9999px; background-color: var(--color-primary); color: white; border: none; font-size: 1rem; font-weight: 800; cursor: pointer; box-shadow: var(--shadow-lg);">
+            Start Reading (Chapter 1) <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    <?php endif; ?>
+
+    <?php if ($chapter !== 'intro'): ?>
     <!-- Controls Bar -->
     <nav id="reader-controls">
       <!-- Left: Navigation (Prev / Chapter Label / Next) -->
@@ -176,6 +233,7 @@ include ABSPATH . 'src/header.php';
       </div>
     </nav>
 
+    <?php if ($chapter !== 'intro'): ?>
     <!-- Reading Content Container -->
     <article id="book-content" class="prose prose-lg dark:prose-invert max-w-none text-text-default">
       <?php if ($totalChapters > 1 && $chapterNum === $totalChapters && !$isTeacherUnlocked): ?>
@@ -222,6 +280,7 @@ include ABSPATH . 'src/header.php';
           Next Chapter <i class="fas fa-chevron-right"></i>
         </a>
       </div>
+    <?php endif; ?>
     <?php endif; ?>
 
   </div>

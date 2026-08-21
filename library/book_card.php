@@ -20,6 +20,8 @@
      data-grade="<?php echo htmlspecialchars($book['grade'] ?? ''); ?>"
      data-disclaimer-key="<?php echo htmlspecialchars($book['disclaimer-key'] ?? ''); ?>"
      data-disclaimer-text="<?php echo htmlspecialchars($book['disclaimer-text'] ?? ''); ?>"
+     data-file-source="<?php echo htmlspecialchars($book['file-source'] ?? ''); ?>"
+     data-info-source="<?php echo htmlspecialchars($book['info-source'] ?? ''); ?>"
      data-category="<?php echo htmlspecialchars($book['category'] ?? ''); ?>"
      data-section="<?php echo htmlspecialchars($book['section'] ?? ''); ?>"
      data-is-collection="<?php echo isset($book['isCollection']) && $book['isCollection'] ? 'true' : 'false'; ?>"

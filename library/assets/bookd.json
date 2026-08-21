@@ -17,7 +17,13 @@
             "word-link": "https://cdn.hestena62.com/library/Nineteen%20eighty-four%20-%20George%20Orwell.docx",
             "lexile": "1090L",
             "grade": "Grades 9-12",
-            "disclaimer-key": "gutenburg"
+            "disclaimer-key": "gutenberg",
+            "file-source": "Project Gutenberg",
+            "info-source": "Open Library",
+            "authorBio": "George Orwell (Eric Arthur Blair) was an English novelist and critic known for his opposition to totalitarianism.",
+            "introWhy": "Orwell wrote the book to warn Western nations of the dangers of totalitarian regimes and expansionist surveillance states.",
+            "introHow": "He composed the manuscript on the isolated Scottish island of Jura while battling severe tuberculosis and physically writing long hours.",
+            "introWhat": "A chilling dystopian projection of a world ruled by constant surveillance, cognitive doublethink, and total party control."
         },
         {
             "id": "pride-and-prejudice",

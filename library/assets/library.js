@@ -171,6 +171,33 @@ window.openResourcePortal = function(categoryName) {
     // Scroll to top of workspace smoothly
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
+    // Populate external links
+    const linksContainer = document.getElementById('drawer-external-links-container');
+    const linksList = document.getElementById('drawer-external-links-list');
+    
+    if (linksContainer && linksList) {
+        const categoryLinks = window.DESK_EXTERNAL_LINKS ? window.DESK_EXTERNAL_LINKS[categoryName] : null;
+        if (categoryLinks && categoryLinks.length > 0) {
+            linksList.innerHTML = categoryLinks.map(link => `
+                <div style="background: var(--color-content-bg); border: 1px solid var(--color-border); padding: 1.25rem; border-radius: 1rem; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <h4 style="font-family: var(--site-font-family, 'Outfit', sans-serif); font-size: 1.05rem; font-weight: 800; margin: 0 0 0.5rem 0; color: var(--color-text-default);">${link.title}</h4>
+                        <p style="font-size: 0.85rem; color: var(--color-text-secondary); margin: 0 0 1rem 0; line-height: 1.5;">${link.description}</p>
+                    </div>
+                    <a href="${link.url}" target="_blank" rel="noopener noreferrer" class="library-drawer-close-btn" style="text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; width: fit-content; padding: 0.4rem 0.8rem; border-radius: 0.5rem; font-size: 0.8rem; font-weight: 700; background: var(--color-base-bg); color: var(--color-text-default);">
+                        Visit Resource <i class="fas fa-external-link-alt" style="font-size: 0.75rem;"></i>
+                    </a>
+                </div>
+            `).join('');
+            linksContainer.style.display = 'block';
+            linksContainer.classList.remove('hidden');
+        } else {
+            linksList.innerHTML = '';
+            linksContainer.style.display = 'none';
+            linksContainer.classList.add('hidden');
+        }
+    }
+
     // Apply filter and sort
     sortDrawerBooks();
     filterDrawerBooks();
@@ -361,6 +388,9 @@ window.openModal = function(card) {
     const disclaimerKey = card.dataset.disclaimerKey;
     const disclaimerText = card.dataset.disclaimerText;
 
+    window.currentBookFileSource = card.dataset.fileSource || '';
+    window.currentBookInfoSource = card.dataset.infoSource || '';
+
     // Resolve disclaimer to show
     window.currentBookDisclaimer = '';
     if (disclaimerText && disclaimerText.trim() !== '') {
@@ -378,7 +408,7 @@ window.openModal = function(card) {
     document.getElementById('modal-img').alt = title || 'Book Cover';
     document.getElementById('modal-description').textContent = description || 'No summary available.';
     document.getElementById('modal-date').textContent = date || 'N/A';
-    document.getElementById('modal-isbn').textContent = isbn || 'N/A';
+    document.getElementById('modal-isbn').textContent = isbn ? formatISBN(isbn) : 'N/A';
 
     // Lexile Level
     const lexContainer = document.getElementById('modal-lexile-container');
@@ -538,6 +568,26 @@ window.openDisclaimerModal = function() {
     const defaultDisclaimer = disclaimersData['default'] || '';
     const bookDisclaimer = window.currentBookDisclaimer || '';
     
+    const fileSrc = window.currentBookFileSource || 'N/A';
+    const infoSrc = window.currentBookInfoSource || 'N/A';
+
+    const defaultText = `
+        <div style="margin-bottom: 0.75rem; font-size: 0.95rem;">
+            <strong style="color: var(--color-text-secondary);">Book File Source:</strong> <span style="color: var(--color-text-default); font-weight: 500;">${fileSrc}</span>
+        </div>
+        <div style="margin-bottom: 1.25rem; font-size: 0.95rem;">
+            <strong style="color: var(--color-text-secondary);">Metadata Sourced From:</strong> <span style="color: var(--color-text-default); font-weight: 500;">${infoSrc}</span>
+        </div>
+        <p style="margin: 0; font-size: 0.85rem; color: var(--color-text-secondary); line-height: 1.6; border-top: 1px dashed var(--color-border); padding-top: 1rem;">
+            The books and materials in this digital library are provided for educational and informational purposes only. Hesten's Learning makes no claims of ownership over third-party content. Please ensure your use of these materials complies with applicable copyright laws before downloading.
+        </p>
+    `;
+
+    const discTextEl = discModal.querySelector('.library-disclaimer-text');
+    if (discTextEl) {
+        discTextEl.innerHTML = defaultText;
+    }
+
     const hasCustomLicense = (bookDisclaimer && bookDisclaimer.trim() !== '' && bookDisclaimer !== defaultDisclaimer);
     
     const tabsContainer = document.getElementById('disclaimer-tabs');
@@ -800,3 +850,13 @@ window.sortDrawerBooks = function() {
         cards.forEach(card => grid.appendChild(card));
     });
 };
+
+function formatISBN(isbn) {
+    const clean = isbn.replace(/[^0-9X]/gi, '');
+    if (clean.length === 13) {
+        return `${clean.slice(0, 3)}-${clean.slice(3, 4)}-${clean.slice(4, 8)}-${clean.slice(8, 12)}-${clean.slice(12)}`;
+    } else if (clean.length === 10) {
+        return `${clean.slice(0, 1)}-${clean.slice(1, 5)}-${clean.slice(5, 9)}-${clean.slice(9)}`;
+    }
+    return isbn;
+}

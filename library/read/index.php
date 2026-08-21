@@ -99,24 +99,33 @@ if ($bookId === '') {
 
     if ($totalChapters > 0) {
         // Resolve active chapter
-        $chapter = 'chapter-1';
+        $hasIntro = (!empty($book['authorBio']) || !empty($book['introWhy']) || !empty($book['introHow']) || !empty($book['introWhat']));
+        
+        $chapter = '';
         if (isset($_GET['chapter']) && $_GET['chapter'] !== '') {
             $chapter = preg_replace('/[^a-zA-Z0-9\-]/', '', $_GET['chapter']);
-        }
-        
-        if (preg_match('/^chapter-(\d+)$/', $chapter, $matches)) {
-            $chapterNum = intval($matches[1]);
         } else {
-            $chapter = 'chapter-1';
-            $chapterNum = 1;
+            $chapter = $hasIntro ? 'intro' : 'chapter-1';
         }
 
-        // Validate chapter file
-        $chapterFile = $bookFolder . '/' . $chapter . '.php';
-        if (!is_file($chapterFile)) {
-            $chapter = 'chapter-1';
-            $chapterNum = 1;
-            $chapterFile = $bookFolder . '/chapter-1.php';
+        if ($chapter === 'intro') {
+            $chapterNum = 0;
+            $chapterFile = '';
+        } else {
+            if (preg_match('/^chapter-(\d+)$/', $chapter, $matches)) {
+                $chapterNum = intval($matches[1]);
+            } else {
+                $chapter = 'chapter-1';
+                $chapterNum = 1;
+            }
+
+            // Validate chapter file
+            $chapterFile = $bookFolder . '/' . $chapter . '.php';
+            if (!is_file($chapterFile)) {
+                $chapter = 'chapter-1';
+                $chapterNum = 1;
+                $chapterFile = $bookFolder . '/chapter-1.php';
+            }
         }
 
         // Handle teacher resources password authorization
@@ -133,29 +142,33 @@ if ($bookId === '') {
             }
         }
 
-        // Load content from chapter file
-        $chapterHtml = file_get_contents($chapterFile);
-        if ($chapterHtml === false) {
-            $error = 'Failed to load chapter content.';
+        if ($chapter === 'intro') {
+            $contentHtml = '';
         } else {
-            // Extract the core reader content inside class "cdn-book-reader-content"
-            if (preg_match('/<div class="cdn-book-reader-content">(.*?)<\/div>\s*<nav class="reader-chapter-nav"/is', $chapterHtml, $matches)) {
-                $contentHtml = $matches[1];
-            } elseif (preg_match('/<div class="cdn-book-reader-content">(.*?)<\/div>/is', $chapterHtml, $matches)) {
-                $contentHtml = $matches[1];
+            // Load content from chapter file
+            $chapterHtml = file_get_contents($chapterFile);
+            if ($chapterHtml === false) {
+                $error = 'Failed to load chapter content.';
             } else {
-                // Strip tags if structure unrecognized
-                $contentHtml = $chapterHtml;
-            }
+                // Extract the core reader content inside class "cdn-book-reader-content"
+                if (preg_match('/<div class="cdn-book-reader-content">(.*?)<\/div>\s*<nav class="reader-chapter-nav"/is', $chapterHtml, $matches)) {
+                    $contentHtml = $matches[1];
+                } elseif (preg_match('/<div class="cdn-book-reader-content">(.*?)<\/div>/is', $chapterHtml, $matches)) {
+                    $contentHtml = $matches[1];
+                } else {
+                    // Strip tags if structure unrecognized
+                    $contentHtml = $chapterHtml;
+                }
 
-            // Auto-inject book credits from credits.json if defined
-            $creditsJsonPath = __DIR__ . '/../assets/credits.json';
-            if (is_file($creditsJsonPath)) {
-                $creditsData = json_decode(file_get_contents($creditsJsonPath), true);
-                if (is_array($creditsData) && isset($creditsData[$bookId]) && trim($creditsData[$bookId]) !== '') {
-                    $contentHtml .= '<div class="book-credits-container" style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px dashed var(--color-border); font-size: 0.85rem; color: var(--color-text-secondary); line-height: 1.5;">' . 
-                                    '<strong>Credits & Sources:</strong> <span class="book-credits-text">' . htmlspecialchars($creditsData[$bookId]) . '</span>' .
-                                    '</div>';
+                // Auto-inject book credits from credits.json if defined
+                $creditsJsonPath = __DIR__ . '/../assets/credits.json';
+                if (is_file($creditsJsonPath)) {
+                    $creditsData = json_decode(file_get_contents($creditsJsonPath), true);
+                    if (is_array($creditsData) && isset($creditsData[$bookId]) && trim($creditsData[$bookId]) !== '') {
+                        $contentHtml .= '<div class="book-credits-container" style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px dashed var(--color-border); font-size: 0.85rem; color: var(--color-text-secondary); line-height: 1.5;">' . 
+                                        '<strong>Credits & Sources:</strong> <span class="book-credits-text">' . htmlspecialchars($creditsData[$bookId]) . '</span>' .
+                                        '</div>';
+                    }
                 }
             }
         }

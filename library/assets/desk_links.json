@@ -1,0 +1,14 @@
+{
+  "US History": [
+    {
+      "title": "National Archives DocsTeach",
+      "url": "https://www.docsteach.org/",
+      "description": "Access primary sources and interactive learning activities from the National Archives."
+    },
+    {
+      "title": "Library of Congress Digital Collections",
+      "url": "https://www.loc.gov/collections/",
+      "description": "Explore millions of digitised books, recordings, photographs, and historical maps."
+    }
+  ]
+}
