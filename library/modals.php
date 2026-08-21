@@ -41,7 +41,17 @@
                     </div>
                     <div id="modal-lexile-container" class="library-modal-spec-half hidden">
                         <span class="spec-label">Lexile/Reading Level <i class="fas fa-info-circle" style="cursor: pointer; opacity: 0.7;" onclick="openLexileInfoModal()"></i></span>
-                        <span id="modal-lexile" class="spec-value spec-val-highlight-emerald"></span>
+                        <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                            <span id="modal-lexile" class="spec-value spec-val-highlight-emerald"></span>
+                            
+                            <div id="modal-lexile-edit-container" class="hidden" style="display: none; align-items: center; gap: 0.25rem;">
+                                <input type="text" id="modal-lexile-input" style="width: 75px; padding: 0.15rem 0.35rem; border-radius: 0.35rem; border: 1px solid var(--color-border); font-size: 0.85rem; font-weight: 700; color: var(--color-text-default); background: var(--color-content-bg);">
+                                <button id="save-lexile-btn" class="library-drawer-close-btn" style="width: 1.75rem; height: 1.75rem; border-radius: 0.25rem; padding: 0;" title="Save"><i class="fas fa-check"></i></button>
+                                <button id="cancel-lexile-btn" class="library-drawer-close-btn" style="width: 1.75rem; height: 1.75rem; border-radius: 0.25rem; padding: 0;" title="Cancel"><i class="fas fa-times"></i></button>
+                            </div>
+                            
+                            <button id="edit-lexile-btn" class="library-drawer-close-btn" style="width: 1.75rem; height: 1.75rem; border-radius: 0.25rem; padding: 0;" title="Edit Lexile Level"><i class="fas fa-edit"></i></button>
+                        </div>
                     </div>
                     <div id="modal-dewey-container" class="library-modal-spec-half hidden">
                         <span class="spec-label">Dewey Decimal <i class="fas fa-info-circle" style="cursor: pointer; opacity: 0.7;" onclick="openDdcInfoModal()"></i></span>

@@ -1,6 +1,7 @@
 <!-- Book Card based on new design specs -->
 <div class="library-book-card"
      onclick="openModal(this)" 
+     data-id="<?php echo htmlspecialchars($book['id'] ?? ''); ?>"
      data-title="<?php echo htmlspecialchars($book['title'] ?? ''); ?>"
      data-author="<?php echo htmlspecialchars($book['author'] ?? ''); ?>"
      data-isbn="<?php echo htmlspecialchars($book['isbn'] ?? ''); ?>"

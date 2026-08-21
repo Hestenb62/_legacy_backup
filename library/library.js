@@ -3,13 +3,80 @@
 let disclaimersData = {};
 
 document.addEventListener("DOMContentLoaded", () => {
+    applyStoredLexileOverrides();
     setupScrollButtons();
     setupFilters();
     setupA11y();
     loadDisclaimers();
     setupSidebarToggle();
     setupProgressBars();
+    setupLexileEditing();
 });
+
+function applyStoredLexileOverrides() {
+    const cards = document.querySelectorAll('.library-book-card');
+    cards.forEach(card => {
+        const id = card.dataset.id;
+        if (!id) return;
+        
+        const overrideLex = localStorage.getItem(`hesten_lexile_override_${id}`);
+        if (overrideLex) {
+            card.dataset.lexile = overrideLex;
+        }
+    });
+}
+
+function setupLexileEditing() {
+    const editBtn = document.getElementById('edit-lexile-btn');
+    const saveBtn = document.getElementById('save-lexile-btn');
+    const cancelBtn = document.getElementById('cancel-lexile-btn');
+    const lexDisplay = document.getElementById('modal-lexile');
+    const editContainer = document.getElementById('modal-lexile-edit-container');
+    const lexInput = document.getElementById('modal-lexile-input');
+
+    if (!editBtn || !saveBtn || !cancelBtn || !lexDisplay || !editContainer || !lexInput) return;
+
+    editBtn.addEventListener('click', () => {
+        lexDisplay.style.display = 'none';
+        editBtn.style.display = 'none';
+        editContainer.classList.remove('hidden');
+        editContainer.style.display = 'flex';
+        
+        lexInput.value = lexDisplay.textContent.trim();
+        lexInput.focus();
+    });
+
+    const resetView = () => {
+        lexDisplay.style.display = '';
+        editBtn.style.display = '';
+        editContainer.classList.add('hidden');
+        editContainer.style.display = 'none';
+    };
+
+    cancelBtn.addEventListener('click', resetView);
+
+    saveBtn.addEventListener('click', () => {
+        const newVal = lexInput.value.trim();
+        const bookId = window.currentBookId;
+        if (!bookId) return;
+
+        if (newVal) {
+            localStorage.setItem(`hesten_lexile_override_${bookId}`, newVal);
+            lexDisplay.textContent = newVal;
+
+            const card = document.querySelector(`.library-book-card[data-id="${bookId}"]`);
+            if (card) {
+                card.dataset.lexile = newVal;
+            }
+
+            const filterInput = document.getElementById('library-search');
+            if (filterInput) {
+                filterInput.dispatchEvent(new Event('input'));
+            }
+        }
+        resetView();
+    });
+}
 
 function setupProgressBars() {
     const tracks = document.querySelectorAll('.book-progress-track');
@@ -264,6 +331,9 @@ window.openModal = function(card) {
     if (!modal) return;
 
     // Retrieve datasets
+    const id = card.dataset.id;
+    window.currentBookId = id;
+
     const title = card.dataset.title;
     const author = card.dataset.author;
     const isbn = card.dataset.isbn;
@@ -276,7 +346,14 @@ window.openModal = function(card) {
     const mobiLink = card.dataset.mobiLink;
     const readOnlineLink = card.dataset.readOnlineLink;
     
-    const lexile = card.dataset.lexile;
+    let lexile = card.dataset.lexile;
+    if (id) {
+        const overrideLex = localStorage.getItem(`hesten_lexile_override_${id}`);
+        if (overrideLex) {
+            lexile = overrideLex;
+        }
+    }
+
     const dewey = card.dataset.dewey;
     const lc = card.dataset.lc;
     const grade = card.dataset.grade;

@@ -24,6 +24,16 @@ $currentUser = getCurrentUser();
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Hesten's Learning</title>
 
+    <!-- OpenGraph & Social Sharing Meta Tags -->
+    <meta property="og:title" content="Hesten's Learning">
+    <meta property="og:description" content="Empowering students through accessible, custom educational levels and tools.">
+    <meta property="og:image" content="/assets/images/6791421e-7ca7-40bd-83d3-06a479bf7f36.png">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Hesten's Learning">
+    <meta name="twitter:description" content="Empowering students through accessible, custom educational levels and tools.">
+    <meta name="twitter:image" content="/assets/images/6791421e-7ca7-40bd-83d3-06a479bf7f36.png">
+
     <!-- PWA Meta Tags -->
     <meta name="theme-color" content="#ffffff">
     <meta name="apple-mobile-web-app-capable" content="yes">
