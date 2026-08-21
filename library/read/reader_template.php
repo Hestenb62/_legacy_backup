@@ -18,6 +18,7 @@ if (!isset($contentHtml)) $contentHtml = '<p>No content available.</p>';
 if (!isset($isTeacherUnlocked)) $isTeacherUnlocked = false;
 if (!isset($authError)) $authError = '';
 if (!isset($quizQuestions)) $quizQuestions = [];
+if (!isset($vocabList)) $vocabList = [];
 
 // Determine next/prev links
 $prevChapterNum = $chapterNum - 1;
