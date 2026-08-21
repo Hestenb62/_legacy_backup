@@ -149,8 +149,8 @@ if ($bookId === '') {
             }
         }
 
-        // Load Quiz questions and vocab list from database dynamically based on bookId
-        $quizJsonPath = __DIR__ . '/quizzes/' . $bookId . '.json';
+        // Load Quiz questions and vocab list from assets directory dynamically based on bookId
+        $quizJsonPath = __DIR__ . '/../assets/' . $bookId . '.json';
         if (is_file($quizJsonPath)) {
             $quizData = json_decode(file_get_contents($quizJsonPath), true);
             if (is_array($quizData)) {

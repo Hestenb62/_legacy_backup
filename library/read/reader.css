@@ -1185,3 +1185,110 @@ body.dark .flashcard-front {
   cursor: not-allowed;
   opacity: 0.8;
 }
+
+/* Resume Toast Alert styles */
+.resume-toast {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 250;
+  max-width: 320px;
+  width: calc(100vw - 4rem);
+  background-color: var(--color-content-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 1.25rem;
+  box-shadow: var(--shadow-xl);
+  padding: 1.25rem;
+  box-sizing: border-box;
+  animation: slideInUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.resume-toast-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.resume-toast-icon {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+}
+
+.resume-toast-text {
+  text-align: left;
+}
+
+.resume-toast-title {
+  display: block;
+  font-family: var(--site-font-family, 'Outfit', sans-serif);
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--color-text-default);
+  margin-bottom: 0.15rem;
+}
+
+.resume-toast-desc {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+}
+
+.resume-toast-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.resume-toast-btn {
+  padding: 0.45rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+}
+
+.resume-toast-btn.btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.resume-toast-btn.btn-secondary {
+  background-color: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+}
+
+.resume-toast-btn:hover {
+  transform: translateY(-1px);
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Word-by-word TTS styles */
+.tts-word {
+  position: relative;
+  transition: background-color 0.15s ease;
+  border-radius: 0.25rem;
+}
+
+.tts-word-active {
+  background-color: rgba(234, 179, 8, 0.4) !important; /* Glowing amber highlight */
+  box-shadow: 0 0 8px rgba(234, 179, 8, 0.2);
+}
+
+/* Theme Smooth Transitions */
+body, main, article, p, h1, h2, h3, a, button, select, div {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}

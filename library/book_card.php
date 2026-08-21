@@ -44,6 +44,11 @@
              loading="lazy"
              onerror="this.onerror=null; this.src='<?php echo isset($book['fallback-img']) ? htmlspecialchars($book['fallback-img']) : 'https://placehold.co/300x450/6b7280/white?text=Image+Not+Found'; ?>';">
 
+        <!-- Reading Progress Overlay Bar -->
+        <div class="book-progress-track hidden" data-progress-id="<?php echo htmlspecialchars($book['id'] ?? ''); ?>">
+            <div class="book-progress-fill"></div>
+        </div>
+
         <!-- Hover Overlay Info -->
         <div class="library-book-cover-overlay">
             <span class="library-book-overlay-text">

@@ -1760,4 +1760,25 @@
     transform: scale(0.95);
 }
 
+/* Reading Progress Bar Overlay styling */
+.book-progress-track {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background-color: rgba(255, 255, 255, 0.25);
+  z-index: 10;
+  overflow: hidden;
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+}
+
+.book-progress-fill {
+  height: 100%;
+  width: 0%;
+  background-color: var(--color-success, #10b981);
+  transition: width 0.3s ease;
+}
+
 

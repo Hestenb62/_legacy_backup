@@ -165,6 +165,13 @@ include ABSPATH . 'src/header.php';
             <input type="range" id="tts-speed-slider" class="speech-speed-slider" min="0.5" max="2.0" step="0.1" value="1.0" style="flex: 1; margin-right: 0.75rem; height: 4px; accent-color: var(--color-primary); cursor: pointer;">
             <span id="tts-speed-val" style="font-size: 0.8rem; font-weight: 700; color: var(--color-text-default); min-width: 2.20rem; text-align: right;">1.0x</span>
           </div>
+
+          <h4 class="settings-section-title" style="margin-top: 1rem;">TTS Voice</h4>
+          <div class="speech-voice-container" style="background-color: var(--color-base-bg); padding: 0.5rem 0.75rem; border-radius: 0.75rem; margin-top: 0.5rem;">
+            <select id="tts-voice-select" style="width: 100%; font-size: 0.85rem; font-weight: 700; border: 1px solid var(--color-border); background-color: var(--color-content-bg); color: var(--color-text-default); outline: none; border-radius: 0.5rem; padding: 0.4rem; cursor: pointer; height: 2.25rem;">
+              <option value="default">Default System Voice</option>
+            </select>
+          </div>
         </div>
       </div>
     </nav>
@@ -381,12 +388,28 @@ include ABSPATH . 'src/header.php';
   </div>
 </div>
 
+<!-- Floating Session Resume Alert Banner -->
+<div id="resume-toast" class="resume-toast hidden" role="alert">
+  <div class="resume-toast-content">
+    <i class="fas fa-bookmark resume-toast-icon"></i>
+    <div class="resume-toast-text">
+      <span class="resume-toast-title">Resume Reading?</span>
+      <span class="resume-toast-desc">Pick up from where you left off.</span>
+    </div>
+    <div class="resume-toast-actions">
+      <button id="resume-toast-dismiss" class="resume-toast-btn btn-secondary">Dismiss</button>
+      <button id="resume-toast-confirm" class="resume-toast-btn btn-primary">Resume</button>
+    </div>
+  </div>
+</div>
+
 <!-- Send metadata to window context -->
 <script>
   window.BOOK_METADATA = {
     id: <?php echo json_encode($bookId); ?>,
     title: <?php echo json_encode($bookTitle); ?>,
-    chapterNum: <?php echo json_encode($chapterNum); ?>
+    chapterNum: <?php echo json_encode($chapterNum); ?>,
+    totalChapters: <?php echo json_encode($totalChapters); ?>
   };
   window.BOOK_QUIZ_QUESTIONS = <?php echo json_encode($quizQuestions); ?>;
   window.BOOK_JSON_VOCAB = <?php echo json_encode($vocabList); ?>;

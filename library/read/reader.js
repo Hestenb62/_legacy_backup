@@ -17,6 +17,56 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem(PROGRESS_KEY, currentChapter);
     } catch (e) {}
 
+    // --- Scroll progress & Session Resume Bookmarking ---
+    const SCROLL_POS_KEY = `hesten_scroll_pos_${bookId}_chapter_${currentChapter}`;
+    const COMPLETION_KEY = `hesten_completion_pct_${bookId}`;
+
+    const saveScrollProgress = debounce(() => {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        if (docHeight <= 0) return;
+
+        const scrollPct = Math.min(100, Math.max(0, (scrollTop / docHeight) * 100));
+
+        try {
+            localStorage.setItem(SCROLL_POS_KEY, scrollTop);
+
+            const totalCh = window.BOOK_METADATA ? (window.BOOK_METADATA.totalChapters || 1) : 1;
+            const overallPct = Math.round(((currentChapter - 1) / totalCh) * 100 + (scrollPct / totalCh));
+            localStorage.setItem(COMPLETION_KEY, overallPct);
+        } catch (e) {}
+    }, 150);
+
+    window.addEventListener("scroll", saveScrollProgress);
+
+    // Prompt to resume reading if scrolled past 150px previously
+    setTimeout(() => {
+        try {
+            const savedPos = parseFloat(localStorage.getItem(SCROLL_POS_KEY));
+            if (savedPos > 150) {
+                const toast = document.getElementById("resume-toast");
+                const confirmBtn = document.getElementById("resume-toast-confirm");
+                const dismissBtn = document.getElementById("resume-toast-dismiss");
+                
+                if (toast && confirmBtn && dismissBtn) {
+                    toast.classList.remove("hidden");
+                    toast.style.display = "block";
+                    
+                    confirmBtn.onclick = () => {
+                        window.scrollTo({ top: savedPos, behavior: "smooth" });
+                        toast.classList.add("hidden");
+                        toast.style.display = "none";
+                    };
+                    
+                    dismissBtn.onclick = () => {
+                        toast.classList.add("hidden");
+                        toast.style.display = "none";
+                    };
+                }
+            }
+        } catch (e) {}
+    }, 600);
+
     // --- Init Elements ---
     const progressFill = document.getElementById("progress-bar");
     const goToTopBtn = document.getElementById("go-to-top-btn");
@@ -254,6 +304,53 @@ document.addEventListener("DOMContentLoaded", () => {
         let activeTextNodes = [];
         let currentParaIndex = -1;
 
+        const voiceSelect = document.getElementById("tts-voice-select");
+        let voices = [];
+
+        function loadVoices() {
+            voices = window.speechSynthesis.getVoices();
+            if (voiceSelect) {
+                const currentVal = voiceSelect.value;
+                voiceSelect.innerHTML = '<option value="default">Default System Voice</option>';
+                voices.forEach((v, idx) => {
+                    const option = document.createElement("option");
+                    option.value = idx;
+                    option.textContent = `${v.name} (${v.lang})`;
+                    voiceSelect.appendChild(option);
+                });
+                
+                try {
+                    const savedVoiceIdx = localStorage.getItem("hl_tts_voice_idx");
+                    if (savedVoiceIdx !== null && voiceSelect.options[parseInt(savedVoiceIdx) + 1]) {
+                        voiceSelect.value = savedVoiceIdx;
+                        utterance.voice = voices[parseInt(savedVoiceIdx)];
+                    }
+                } catch (e) {}
+            }
+        }
+
+        if (window.speechSynthesis.onvoiceschanged !== undefined) {
+            window.speechSynthesis.onvoiceschanged = loadVoices;
+        }
+        loadVoices();
+
+        if (voiceSelect) {
+            voiceSelect.addEventListener("change", () => {
+                const idx = voiceSelect.value;
+                if (idx === "default") {
+                    utterance.voice = null;
+                    localStorage.removeItem("hl_tts_voice_idx");
+                } else {
+                    utterance.voice = voices[parseInt(idx)];
+                    localStorage.setItem("hl_tts_voice_idx", idx);
+                }
+                
+                if (window.speechSynthesis.speaking) {
+                    window.speechSynthesis.cancel();
+                }
+            });
+        }
+
         if (ttsSpeedSlider) {
             ttsSpeedSlider.addEventListener("input", () => {
                 if (ttsSpeedVal) ttsSpeedVal.textContent = ttsSpeedSlider.value + 'x';
@@ -264,13 +361,48 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }
 
+        function wrapParagraphWords(element) {
+            if (!element.dataset.originalHtml) {
+                element.dataset.originalHtml = element.innerHTML;
+            }
+            let wordIndex = 0;
+            function recurse(node) {
+                if (node.nodeType === 3) {
+                    const text = node.textContent;
+                    const words = text.split(/(\s+)/);
+                    const fragment = document.createDocumentFragment();
+                    words.forEach(w => {
+                        if (w.trim() === "") {
+                            fragment.appendChild(document.createTextNode(w));
+                        } else {
+                            const span = document.createElement("span");
+                            span.className = "tts-word";
+                            span.dataset.wordIndex = wordIndex++;
+                            span.textContent = w;
+                            fragment.appendChild(span);
+                        }
+                    });
+                    node.replaceWith(fragment);
+                } else if (node.nodeType === 1 && !node.classList.contains("tooltiptext")) {
+                    Array.from(node.childNodes).forEach(recurse);
+                }
+            }
+            recurse(element);
+        }
+
+        function restoreParagraphWords(element) {
+            if (element && element.dataset.originalHtml) {
+                element.innerHTML = element.dataset.originalHtml;
+                delete element.dataset.originalHtml;
+            }
+        }
+
         ttsSpeakBtn.addEventListener("click", () => {
-            // Cancel any running speech
             window.speechSynthesis.cancel();
 
             const paras = Array.from(bookContent.querySelectorAll('p, h1, h2, h3, li'));
             activeTextNodes = paras;
-            currentParaIndex = 0;
+            currentParaIndex = -1; // Start at -1 to force wrapping on the first paragraph
 
             const fullText = paras.map(p => {
                 const clone = p.cloneNode(true);
@@ -287,6 +419,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         utterance.onboundary = (e) => {
+            if (e.name !== 'word') return;
             let accumulated = 0;
             for (let i = 0; i < activeTextNodes.length; i++) {
                 const clone = activeTextNodes[i].cloneNode(true);
@@ -297,10 +430,23 @@ document.addEventListener("DOMContentLoaded", () => {
                     if (currentParaIndex !== i) {
                         if (activeTextNodes[currentParaIndex]) {
                             activeTextNodes[currentParaIndex].classList.remove('bg-indigo-100', 'dark:bg-indigo-900/40', 'rounded-xl', 'px-2', 'py-1', 'transition-colors', 'duration-500');
+                            restoreParagraphWords(activeTextNodes[currentParaIndex]);
                         }
                         currentParaIndex = i;
+                        wrapParagraphWords(activeTextNodes[currentParaIndex]);
                         activeTextNodes[currentParaIndex].classList.add('bg-indigo-100', 'dark:bg-indigo-900/40', 'rounded-xl', 'px-2', 'py-1', 'transition-colors', 'duration-500');
                         activeTextNodes[currentParaIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+
+                    const relativeCharIndex = e.charIndex - accumulated;
+                    const pText = clone.textContent.trim();
+                    const wordsBefore = pText.substring(0, relativeCharIndex).trim().split(/\s+/).filter(Boolean);
+                    const wordIdx = wordsBefore.length;
+
+                    activeTextNodes[currentParaIndex].querySelectorAll('.tts-word-active').forEach(w => w.classList.remove('tts-word-active'));
+                    const wordSpan = activeTextNodes[currentParaIndex].querySelector(`.tts-word[data-word-index="${wordIdx}"]`);
+                    if (wordSpan) {
+                        wordSpan.classList.add('tts-word-active');
                     }
                     break;
                 }
@@ -312,6 +458,7 @@ document.addEventListener("DOMContentLoaded", () => {
             window.speechSynthesis.cancel();
             if (activeTextNodes[currentParaIndex]) {
                 activeTextNodes[currentParaIndex].classList.remove('bg-indigo-100', 'dark:bg-indigo-900/40', 'rounded-xl', 'px-2', 'py-1', 'transition-colors', 'duration-500');
+                restoreParagraphWords(activeTextNodes[currentParaIndex]);
             }
             ttsSpeakBtn.classList.remove("hidden");
             ttsStopBtn.classList.add("hidden");
@@ -331,7 +478,59 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // --- Interactive Tooltips Dictionary ---
+    function escapeRegExp(string) {
+        return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
+
+    function highlightTextVocabulary() {
+        if (!window.BOOK_JSON_VOCAB || window.BOOK_JSON_VOCAB.length === 0) return;
+        const vocab = window.BOOK_JSON_VOCAB;
+
+        const textNodes = [];
+        function findTextNodes(node) {
+            if (node.nodeType === 3) {
+                if (node.textContent.trim().length > 3) {
+                    textNodes.push(node);
+                }
+            } else if (node.nodeType === 1) {
+                const tagName = node.tagName.toLowerCase();
+                if (tagName !== 'script' && tagName !== 'style' && tagName !== 'a' && 
+                    !node.classList.contains('tooltip') && !node.classList.contains('tooltiptext') &&
+                    !node.classList.contains('chapter-title') && tagName !== 'h1' && tagName !== 'h2' && tagName !== 'h3') {
+                    Array.from(node.childNodes).forEach(findTextNodes);
+                }
+            }
+        }
+        findTextNodes(bookContent);
+
+        textNodes.forEach(node => {
+            let text = node.textContent;
+            const sortedVocab = [...vocab].sort((a, b) => b.word.length - a.word.length);
+
+            for (const v of sortedVocab) {
+                const word = v.word;
+                const def = v.definition;
+                const regex = new RegExp(`\\b(${escapeRegExp(word)})\\b`, 'i');
+                const match = text.match(regex);
+                if (match) {
+                    const matchIndex = match.index;
+                    const matchedWord = match[1];
+                    
+                    const beforeText = text.substring(0, matchIndex);
+                    const afterText = text.substring(matchIndex + matchedWord.length);
+
+                    const container = document.createElement('span');
+                    container.innerHTML = `${beforeText}<span class="tooltip">${matchedWord}<span class="tooltiptext">${def}</span></span>${afterText}`;
+                    
+                    node.replaceWith(...container.childNodes);
+                    break;
+                }
+            }
+        });
+    }
+
     function initTooltips() {
+        highlightTextVocabulary();
         const tooltips = document.querySelectorAll(".tooltiptext");
         tooltips.forEach(tt => {
             const definition = tt.textContent.replace(/\s+/g, ' ').trim();

@@ -8,7 +8,30 @@ document.addEventListener("DOMContentLoaded", () => {
     setupA11y();
     loadDisclaimers();
     setupSidebarToggle();
+    setupProgressBars();
 });
+
+function setupProgressBars() {
+    const tracks = document.querySelectorAll('.book-progress-track');
+    tracks.forEach(track => {
+        const bookId = track.dataset.progressId;
+        if (!bookId) return;
+
+        try {
+            const pct = localStorage.getItem(`hesten_completion_pct_${bookId}`);
+            if (pct !== null) {
+                const fill = track.querySelector('.book-progress-fill');
+                if (fill) {
+                    const progressNum = parseInt(pct, 10);
+                    if (progressNum > 0) {
+                        fill.style.width = `${progressNum}%`;
+                        track.classList.remove('hidden');
+                    }
+                }
+            }
+        } catch (e) {}
+    });
+}
 
 function setupSidebarToggle() {
     const sidebar = document.getElementById('library-sidebar');
@@ -125,12 +148,14 @@ let searchTimeout;
 function setupFilters() {
     const searchInput = document.getElementById('library-search');
     const categoryFilter = document.getElementById('category-filter');
+    const lexileFilter = document.getElementById('lexile-filter');
     const sections = document.querySelectorAll('.library-row-section');
     const noResults = document.getElementById('no-results');
 
     function filterLibrary() {
         const query = searchInput.value.toLowerCase().trim();
         const selectedCat = categoryFilter.value;
+        const selectedLexile = lexileFilter ? lexileFilter.value : 'all';
         let totalVisible = 0;
 
         sections.forEach(section => {
@@ -157,7 +182,24 @@ function setupFilters() {
                     author.includes(query) || 
                     isbn.includes(query);
 
-                if (categoryMatch && matchesSearch) {
+                let lexileMatch = true;
+                if (selectedLexile !== 'all') {
+                    const lexValAttr = book.dataset.lexile || '';
+                    const numMatch = lexValAttr.match(/(\d+)/);
+                    const lexNum = numMatch ? parseInt(numMatch[1], 10) : null;
+                    
+                    if (lexNum === null) {
+                        lexileMatch = false;
+                    } else if (selectedLexile === 'easy') {
+                        lexileMatch = lexNum < 500;
+                    } else if (selectedLexile === 'medium') {
+                        lexileMatch = lexNum >= 500 && lexNum <= 900;
+                    } else if (selectedLexile === 'hard') {
+                        lexileMatch = lexNum > 900;
+                    }
+                }
+
+                if (categoryMatch && matchesSearch && lexileMatch) {
                     book.style.display = '';
                     visibleInRow++;
                     totalVisible++;
@@ -185,6 +227,10 @@ function setupFilters() {
             clearTimeout(searchTimeout);
             searchTimeout = setTimeout(filterLibrary, 100);
         });
+    }
+
+    if (lexileFilter) {
+        lexileFilter.addEventListener('change', filterLibrary);
     }
 
     if (categoryFilter) {

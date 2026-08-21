@@ -117,6 +117,16 @@ include '../src/header.php';
                         </select>
                         <i class="fas fa-filter library-filter-icon"></i>
                     </div>
+
+                    <div class="library-filter-select-container">
+                        <select id="lexile-filter" aria-label="Select Lexile Level" class="library-category-select library-glass-shine">
+                            <option value="all">All Lexile Levels</option>
+                            <option value="easy">Easy (Under 500L)</option>
+                            <option value="medium">Medium (500L - 900L)</option>
+                            <option value="hard">Hard (Above 900L)</option>
+                        </select>
+                        <i class="fas fa-graduation-cap library-filter-icon"></i>
+                    </div>
                 </div>
             </section>
 
