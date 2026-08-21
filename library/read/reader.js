@@ -55,6 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Highlight Toolbar Elements
     const hlToolbar = document.getElementById("highlight-toolbar");
     const hlMarkBtn = document.getElementById("hl-btn-mark");
+    const hlNoteBtn = document.getElementById("hl-btn-note");
     const hlCopyBtn = document.getElementById("hl-btn-copy");
 
     // --- Settings Panel Toggle ---
@@ -427,6 +428,59 @@ document.addEventListener("DOMContentLoaded", () => {
                 setTimeout(() => hlCopyBtn.innerHTML = originalHTML, 1500);
             });
         });
+
+        if (hlNoteBtn) {
+            hlNoteBtn.addEventListener("click", () => {
+                if (!currentRange) return;
+                const selectedText = currentRange.toString().trim();
+                if (!selectedText) return;
+
+                const noteText = prompt(`Add a study note for: "${selectedText.substring(0, 30)}${selectedText.length > 30 ? '...' : ''}"`);
+                if (noteText === null) return; // user cancelled
+
+                const bookTitle = window.BOOK_METADATA ? window.BOOK_METADATA.title : 'Book';
+                const chapterNum = window.BOOK_METADATA ? window.BOOK_METADATA.chapterNum : 1;
+
+                // Format note entry to append
+                const timeStr = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+                const noteEntry = `\n\n[Note - ${bookTitle}, Ch ${chapterNum} @ ${timeStr}]\n"${selectedText}"\nNote: ${noteText}\n`;
+
+                const notesArea = document.getElementById("quick-notes-area");
+                if (notesArea) {
+                    notesArea.value = (notesArea.value + noteEntry).trim();
+                    // Dispatch input event to trigger the existing debounce auto-save
+                    notesArea.dispatchEvent(new Event('input'));
+                } else {
+                    // Fallback to direct local storage save if not loaded
+                    try {
+                        const existing = localStorage.getItem("hl_scratchpad") || "";
+                        localStorage.setItem("hl_scratchpad", (existing + noteEntry).trim());
+                    } catch (e) {}
+                }
+
+                // Surround contents with a soft green highlight representing the note
+                try {
+                    const mark = document.createElement("mark");
+                    mark.style.backgroundColor = "rgba(74, 222, 128, 0.4)"; // Soft green
+                    mark.style.borderRadius = "0.25rem";
+                    mark.style.padding = "0 0.25rem";
+                    mark.style.cursor = "pointer";
+                    mark.title = `Note: ${noteText}`;
+
+                    // Show note on click
+                    mark.addEventListener("click", () => {
+                        alert(`Study Note:\n"${selectedText}"\n\nNote Details:\n${noteText}`);
+                    });
+
+                    currentRange.surroundContents(mark);
+                    window.getSelection().removeAllRanges();
+                } catch (e) {
+                    console.log("Boundary crossed highlighting for note", e);
+                }
+
+                hlToolbar.classList.add("hidden");
+            });
+        }
     }
 
     // --- Vocabulary Study Guide Modal & Flashcards & Quiz Router ---

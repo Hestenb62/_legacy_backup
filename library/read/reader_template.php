@@ -222,6 +222,8 @@ include ABSPATH . 'src/header.php';
 <div id="highlight-toolbar" class="hidden">
     <button id="hl-btn-mark" class="hl-btn"><i class="fas fa-highlighter text-yellow-400"></i> Mark</button>
     <div class="hl-divider"></div>
+    <button id="hl-btn-note" class="hl-btn"><i class="fas fa-sticky-note text-green-400"></i> Add Note</button>
+    <div class="hl-divider"></div>
     <button id="hl-btn-copy" class="hl-btn"><i class="fas fa-copy text-blue-400"></i> Copy</button>
 </div>
 
