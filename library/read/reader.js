@@ -21,23 +21,33 @@ document.addEventListener("DOMContentLoaded", () => {
     const SCROLL_POS_KEY = `hesten_scroll_pos_${bookId}_chapter_${currentChapter}`;
     const COMPLETION_KEY = `hesten_completion_pct_${bookId}`;
 
-    const saveScrollProgress = debounce(() => {
-        const scrollTop = window.scrollY || document.documentElement.scrollTop;
-        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-        if (docHeight <= 0) return;
+    function debounce(func, wait) {
+        let timeout;
+        return (...args) => {
+            clearTimeout(timeout);
+            timeout = setTimeout(() => func.apply(this, args), wait);
+        };
+    }
 
-        const scrollPct = Math.min(100, Math.max(0, (scrollTop / docHeight) * 100));
-
+    const saveScrollPosition = debounce((scrollTop, scrollPct) => {
         try {
             localStorage.setItem(SCROLL_POS_KEY, scrollTop);
-
             const totalCh = window.BOOK_METADATA ? (window.BOOK_METADATA.totalChapters || 1) : 1;
             const overallPct = Math.round(((currentChapter - 1) / totalCh) * 100 + (scrollPct / totalCh));
             localStorage.setItem(COMPLETION_KEY, overallPct);
         } catch (e) {}
     }, 150);
 
-    window.addEventListener("scroll", saveScrollProgress);
+    window.addEventListener("scroll", () => {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollPct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        
+        if (progressFill) progressFill.style.width = scrollPct + '%';
+        if (goToTopBtn) goToTopBtn.style.display = scrollTop > 300 ? "block" : "none";
+
+        saveScrollPosition(scrollTop, scrollPct);
+    });
 
     // Prompt to resume reading if scrolled past 150px previously
     setTimeout(() => {
@@ -255,48 +265,12 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // --- Progress Tracking & Go To Top & Bookmark Restore ---
-    window.addEventListener("scroll", () => {
-        const scrollTop = window.scrollY;
-        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-        const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-        
-        if (progressFill) progressFill.style.width = pct + '%';
-        if (goToTopBtn) goToTopBtn.style.display = scrollTop > 300 ? "block" : "none";
-
-        // Auto bookmark scroll percentage
-        try {
-            if (docHeight > 0) {
-                localStorage.setItem(BOOKMARK_KEY, scrollTop / docHeight);
-            }
-        } catch (e) {}
-    });
-
+    // --- Progress Tracking & Go To Top ---
     if (goToTopBtn) {
         goToTopBtn.addEventListener("click", () => {
             window.scrollTo({ top: 0, behavior: "smooth" });
         });
     }
-
-    function restoreBookmark() {
-        try {
-            const savedPct = localStorage.getItem(BOOKMARK_KEY);
-            if (savedPct) {
-                const pct = parseFloat(savedPct);
-                setTimeout(() => {
-                    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-                    if (docHeight > 0) {
-                        window.scrollTo({
-                            top: docHeight * pct,
-                            behavior: "smooth"
-                        });
-                    }
-                }, 400);
-            }
-        } catch (e) {}
-    }
-
-    restoreBookmark();
 
     // --- Text to Speech (TTS) ---
     if ('speechSynthesis' in window && ttsSpeakBtn && ttsStopBtn) {
