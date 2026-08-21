@@ -8,7 +8,7 @@ $welcomeMessage = "Welcome to Hesten's Learning Library";
 $welcomeParagraph = "Explore our vast collection of fiction classics and comprehensive educational resources for all grade levels.";
 
 // --- Book Data Array ---
-$jsonString = file_get_contents(__DIR__ . '/bookd.json');
+$jsonString = file_get_contents(__DIR__ . '/assets/bookd.json');
 $categories = json_decode($jsonString, true);
 if (!$categories) {
     $categories = []; // Fallback in case of JSON error
@@ -112,6 +112,6 @@ include '../src/header.php';
 
 <link rel="stylesheet" href="library.css">
 <?php include 'modals.php'; ?>
-<script src="library.js" defer></script>
+<script src="assets/library.js" defer></script>
 
 <?php include '../src/footer.php'; ?>

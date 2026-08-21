@@ -177,7 +177,7 @@ window.openResourcePortal = function(categoryName) {
 };
 
 function loadDisclaimers() {
-    fetch('disclaimers.json')
+    fetch('assets/disclaimers.json')
         .then(res => res.json())
         .then(data => {
             disclaimersData = data;

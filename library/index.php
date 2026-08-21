@@ -16,11 +16,11 @@ $pageKeywords = 'library, books, epub, pdf, digital library, collection, educati
 $pageAuthor = 'Hesten\'s Learning';
 
 // --- General Book Data Array ---
-$jsonString = file_get_contents(__DIR__ . '/bookd.json');
+$jsonString = file_get_contents(__DIR__ . '/assets/bookd.json');
 $categories = json_decode($jsonString, true) ?: [];
 
 // --- Drawer Academic Data Array ---
-$drawerJsonString = file_get_contents(__DIR__ . '/edu-side-drawer.json');
+$drawerJsonString = file_get_contents(__DIR__ . '/assets/edu-side-drawer.json');
 $drawerCategories = json_decode($drawerJsonString, true) ?: [];
 
 // Include Global Header (Root)
@@ -269,6 +269,6 @@ include '../src/header.php';
 
 <link rel="stylesheet" href="library.css">
 <?php include __DIR__ . '/modals.php'; ?>
-<script src="library.js" defer></script>
+<script src="assets/library.js" defer></script>
 
 <?php include '../src/footer.php'; ?>

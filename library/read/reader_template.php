@@ -298,7 +298,7 @@ include ABSPATH . 'src/header.php';
           $discKey = $book['disclaimer-key'] ?? 'default';
           $discText = $book['disclaimer-text'] ?? '';
 
-          $disclaimers = json_decode(file_get_contents(ABSPATH . 'library/disclaimers.json'), true) ?: [];
+          $disclaimers = json_decode(file_get_contents(ABSPATH . 'library/assets/disclaimers.json'), true) ?: [];
           if (!empty($discText)) {
             echo htmlspecialchars($discText);
           } elseif (isset($disclaimers[$discKey])) {
