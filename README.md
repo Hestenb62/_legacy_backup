@@ -65,7 +65,13 @@ The project is structured logically around server-side templating (PHP) and clea
 * **Focus Tools (`/src/partials/timer.php`, `/src/partials/scratchpad.php`)**  
   Widgets such as interactive notes and timers designed to keep students focused.
 * **Reader Library (`/library/`)**  
-  An immersive reader space optimized for reading long-form text (e.g., standard literature) with inline definitions and text-to-speech (TTS) engines.
+  An immersive reader space optimized for reading long-form text (e.g., standard literature) featuring:
+  - **Dynamic In-text Vocabulary**: Scans body text for defined vocab terms, injecting tooltips with audio pronunciations and copying options.
+  - **Scroll Resume Bookmarking**: Tracks scroll positions and prompts users with a floating panel to resume reading upon return.
+  - **Active TTS Word Highlighting**: Highlights individual words in real-time as they are read aloud by a custom voice engine (with support for speech voice selection).
+  - **Custom Lexile Adjustments & Filters**: Filters books by reading difficulty bands (Easy, Medium, Hard), allowing users to override and edit book Lexile levels client-side via `localStorage`.
+  - **Auto-injected Chapter Credits**: Automatically pulls and appends source attributions to the bottom of book chapters from a centralized credits registry.
+  - **Study Notes Integration**: Allows students to select/highlight text inside books and log notes directly to their saved scratchpad.
 * **Client-Side Testing Suite (`/test/`)**  
   Ensures code quality and state saving mechanisms work correctly via QUnit assertions.
 
