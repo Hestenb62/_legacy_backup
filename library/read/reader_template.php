@@ -233,7 +233,6 @@ include ABSPATH . 'src/header.php';
       </div>
     </nav>
 
-    <?php if ($chapter !== 'intro'): ?>
     <!-- Reading Content Container -->
     <article id="book-content" class="prose prose-lg dark:prose-invert max-w-none text-text-default">
       <?php if ($totalChapters > 1 && $chapterNum === $totalChapters && !$isTeacherUnlocked): ?>
