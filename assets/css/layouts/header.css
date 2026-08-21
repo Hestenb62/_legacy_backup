@@ -316,4 +316,8 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
+
+  .focus-mode .library-breadcrumb {
+    display: none !important;
+  }
 }

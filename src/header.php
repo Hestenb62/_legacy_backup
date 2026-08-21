@@ -147,7 +147,9 @@ $currentUser = getCurrentUser();
             $parts = array_filter(explode('/', $parts));
             
             if (!empty($parts) && basename($uri) !== 'index.php' && $uri !== '/' && $uri !== '') {
-                echo '<nav class="breadcrumb-nav" aria-label="Breadcrumb">';
+                $isLibrary = (strpos($uri, '/library') !== false);
+                $navClass = $isLibrary ? 'breadcrumb-nav library-breadcrumb' : 'breadcrumb-nav';
+                echo '<nav class="' . $navClass . '" aria-label="Breadcrumb">';
                 echo '<a href="/" class="breadcrumb-link"><i class="fas fa-home"></i></a>';
                 
                 $path = '';
