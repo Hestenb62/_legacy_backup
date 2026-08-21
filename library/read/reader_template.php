@@ -194,68 +194,26 @@ include ABSPATH . 'src/header.php';
           <?php echo ($totalChapters > 1 && $chapterNum === $totalChapters) ? "Teacher Resources" : "Chapter " . $chapterNum; ?>
         </div>
 
-        <?php if ($chapterNum === 1): ?>
-          <!-- Book Metadata Info Card at the beginning of the book -->
-          <div class="book-intro-card" style="display: flex; gap: 2rem; background: var(--color-content-bg); border: 1px solid var(--color-border); padding: 2rem; border-radius: 1.5rem; margin-bottom: 2.5rem; flex-wrap: wrap; box-shadow: var(--shadow-sm);">
-            <div style="flex-shrink: 0; margin: 0 auto;">
-              <img src="<?php echo htmlspecialchars($book['img'] ?? ''); ?>" alt="<?php echo htmlspecialchars($bookTitle); ?>" style="width: 130px; height: auto; border-radius: 0.75rem; box-shadow: var(--shadow-md);">
-            </div>
-            <div style="flex: 1; min-width: 250px; display: flex; flex-direction: column; justify-content: center; text-align: left;">
-              <h2 style="font-family: var(--site-font-family, 'Outfit', sans-serif); font-size: 1.6rem; font-weight: 900; margin: 0 0 0.25rem 0; color: var(--color-text-default); line-height: 1.2;">
-                <?php echo htmlspecialchars($bookTitle); ?>
-              </h2>
-              <p style="font-size: 1.05rem; color: var(--color-text-secondary); margin: 0 0 1.25rem 0; font-weight: 600;">
-                by <?php echo htmlspecialchars($bookAuthor); ?>
-              </p>
-              
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; font-size: 0.85rem; line-height: 1.4;">
-                <div>
-                  <strong style="color: var(--color-text-secondary); text-transform: uppercase; font-size: 0.7rem; display: block; margin-bottom: 0.15rem;">Sourced From</strong>
-                  <span>
-                    <?php 
-                      $discKey = $book['disclaimer-key'] ?? 'default';
-                      if ($discKey === 'gutenberg') {
-                          echo 'Project Gutenberg';
-                      } elseif ($discKey === 'openlibrary') {
-                          echo 'Open Library';
-                      } elseif ($discKey === 'american-yawp') {
-                          echo 'The American Yawp';
-                      } else {
-                          echo 'Educational Archives';
-                      }
-                    ?>
-                  </span>
-                </div>
-                <div>
-                  <strong style="color: var(--color-text-secondary); text-transform: uppercase; font-size: 0.7rem; display: block; margin-bottom: 0.15rem;">Author</strong>
-                  <span><?php echo htmlspecialchars($bookAuthor); ?></span>
-                </div>
-                <div>
-                  <strong style="color: var(--color-text-secondary); text-transform: uppercase; font-size: 0.7rem; display: block; margin-bottom: 0.15rem;">Publication Date</strong>
-                  <span><?php echo htmlspecialchars($book['date'] ?? 'N/A'); ?></span>
-                </div>
-                <div>
-                  <strong style="color: var(--color-text-secondary); text-transform: uppercase; font-size: 0.7rem; display: block; margin-bottom: 0.15rem;">License</strong>
-                  <span>
-                    <?php 
-                      if ($discKey === 'gutenberg') {
-                          echo 'Public Domain';
-                      } elseif ($discKey === 'american-yawp') {
-                          echo 'Creative Commons BY-SA';
-                      } else {
-                          echo 'Educational Fair Use';
-                      }
-                    ?>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        <?php endif; ?>
+
 
         <?php echo $contentHtml; ?>
       <?php endif; ?>
     </article>
+
+    <!-- Bottom Chapter Navigation -->
+    <?php if ($totalChapters > 1): ?>
+    <div class="reader-bottom-nav" style="margin-top: 3rem; display: flex; justify-content: space-between; align-items: center; padding-top: 1.5rem; border-top: 1px solid var(--color-border);">
+        <a href="<?php echo $prevUrl; ?>" class="controls-nav-btn <?php echo !$hasPrev ? 'disabled' : ''; ?>" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none;">
+            <i class="fas fa-chevron-left"></i> Previous Chapter
+        </a>
+        <span style="font-weight: 700; color: var(--color-text-secondary); font-size: 0.95rem;">
+            <?php echo $chapterNum === $totalChapters ? 'Teacher Resources' : 'Chapter ' . $chapterNum . ' of ' . $totalChapters; ?>
+        </span>
+        <a href="<?php echo $nextUrl; ?>" class="controls-nav-btn <?php echo !$hasNext ? 'disabled' : ''; ?>" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none;">
+            Next Chapter <i class="fas fa-chevron-right"></i>
+        </a>
+    </div>
+    <?php endif; ?>
 
   </div>
 </main>
@@ -393,7 +351,7 @@ include ABSPATH . 'src/header.php';
     </div>
 
     <!-- Flashcards View -->
-    <div id="vocab-flash-container" class="vocab-list hidden" style="text-align: center; display: none; flex-direction: column;">
+    <div id="vocab-flash-container" class="vocab-list" style="text-align: center; display: none; flex-direction: column;">
       <div class="flashcard-wrap">
         <div class="flashcard" id="vocab-flashcard">
           <div class="flashcard-face flashcard-front">
@@ -411,9 +369,9 @@ include ABSPATH . 'src/header.php';
         <button id="flashcard-next-btn" class="tooltip-btn" style="padding: 0.5rem 1rem;">Next <i class="fas fa-chevron-right"></i></button>
       </div>
     </div>
-
+ 
     <!-- Quiz View -->
-    <div id="quiz-container" class="quiz-container hidden" style="display: none; flex-direction: column;">
+    <div id="quiz-container" class="quiz-container" style="display: none; flex-direction: column;">
       <!-- Injected by reader.js -->
     </div>
   </div>

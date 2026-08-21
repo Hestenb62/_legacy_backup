@@ -737,6 +737,10 @@ document.addEventListener("DOMContentLoaded", () => {
             tabVocabFlash.classList.remove("active");
             if (tabQuiz) tabQuiz.classList.remove("active");
 
+            vocabListContainer.classList.remove("hidden");
+            vocabFlashContainer.classList.add("hidden");
+            if (quizContainer) quizContainer.classList.add("hidden");
+
             vocabListContainer.style.display = "flex";
             vocabFlashContainer.style.display = "none";
             if (quizContainer) quizContainer.style.display = "none";
@@ -746,6 +750,10 @@ document.addEventListener("DOMContentLoaded", () => {
             tabVocabFlash.classList.add("active");
             tabVocabList.classList.remove("active");
             if (tabQuiz) tabQuiz.classList.remove("active");
+
+            vocabListContainer.classList.add("hidden");
+            vocabFlashContainer.classList.remove("hidden");
+            if (quizContainer) quizContainer.classList.add("hidden");
 
             vocabListContainer.style.display = "none";
             vocabFlashContainer.style.display = "flex";
@@ -759,6 +767,10 @@ document.addEventListener("DOMContentLoaded", () => {
             tabQuiz.classList.add("active");
             tabVocabList.classList.remove("active");
             tabVocabFlash.classList.remove("active");
+
+            vocabListContainer.classList.add("hidden");
+            vocabFlashContainer.classList.add("hidden");
+            if (quizContainer) quizContainer.classList.remove("hidden");
 
             vocabListContainer.style.display = "none";
             vocabFlashContainer.style.display = "none";

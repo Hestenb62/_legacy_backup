@@ -1075,3 +1075,113 @@ body.dark .flashcard-front {
 .auth-btn-submit:hover {
   filter: brightness(1.08);
 }
+
+/* Flashcard 3D Flip styling */
+.flashcard-wrap {
+  perspective: 1000px;
+  width: 100%;
+  max-width: 400px;
+  height: 250px;
+  margin: 2rem auto;
+}
+
+.flashcard {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.flashcard.flipped {
+  transform: rotateY(180deg);
+}
+
+.flashcard-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  border: 1px solid var(--color-border);
+  background: var(--color-content-bg);
+  color: var(--color-text-default);
+}
+
+.flashcard-front {
+  background: linear-gradient(135deg, var(--color-content-bg), var(--color-base-bg));
+}
+
+.flashcard-front h3 {
+  font-family: var(--site-font-family, 'Outfit', sans-serif);
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0 0 1rem 0;
+  color: var(--color-primary);
+}
+
+.flashcard-front p {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.flashcard-back {
+  background: linear-gradient(135deg, var(--color-base-bg), var(--color-content-bg));
+  transform: rotateY(180deg);
+  overflow-y: auto;
+}
+
+.flashcard-back p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0;
+  text-align: center;
+}
+
+.flashcard-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* Quiz Option and Card styling */
+.quiz-option-btn {
+  background-color: var(--color-content-bg);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-default);
+  cursor: pointer;
+  width: 100%;
+}
+
+.quiz-option-btn:hover:not(.disabled) {
+  background-color: color-mix(in srgb, var(--color-primary) 5%, var(--color-content-bg));
+  border-color: var(--color-primary);
+}
+
+.quiz-option-btn.correct {
+  background-color: rgba(16, 185, 129, 0.15) !important;
+  border-color: #10b981 !important;
+  color: #10b981 !important;
+}
+
+.quiz-option-btn.incorrect {
+  background-color: rgba(239, 68, 68, 0.15) !important;
+  border-color: #ef4444 !important;
+  color: #ef4444 !important;
+}
+
+.quiz-option-btn.disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
