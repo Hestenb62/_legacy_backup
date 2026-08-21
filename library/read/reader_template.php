@@ -1,11 +1,12 @@
 <?php
+
 /**
  * reader_template.php - Modular Digital Reader Layout
  * Renders the reading layout with custom controls, themes, progress bar, TTS, and study guides.
  */
 
 if (!defined('ABSPATH')) {
-    define('ABSPATH', dirname(dirname(__DIR__)) . '/');
+  define('ABSPATH', dirname(dirname(__DIR__)) . '/');
 }
 
 // Default fallbacks
@@ -44,9 +45,9 @@ include ABSPATH . 'src/header.php';
 
 <!-- Background Aurora Mesh -->
 <div class="library-aurora-bg">
-    <div class="library-aurora-blob blob-1"></div>
-    <div class="library-aurora-blob blob-2"></div>
-    <div class="library-aurora-blob blob-3"></div>
+  <div class="library-aurora-blob blob-1"></div>
+  <div class="library-aurora-blob blob-2"></div>
+  <div class="library-aurora-blob blob-3"></div>
 </div>
 
 <!-- Scroll Progress Bar -->
@@ -59,9 +60,9 @@ include ABSPATH . 'src/header.php';
 
     <!-- Back Navigation -->
     <div class="reader-back-nav" style="margin-bottom: 2rem;">
-        <a href="/library/" class="controls-nav-btn" style="display: inline-flex; align-items: center; gap: 0.5rem;">
-            <i class="fas fa-arrow-left"></i> Back to Library
-        </a>
+      <a href="/library/" class="controls-nav-btn" style="display: inline-flex; align-items: center; gap: 0.5rem;">
+        <i class="fas fa-arrow-left"></i> Back to Library
+      </a>
     </div>
 
     <!-- Title Header -->
@@ -80,19 +81,19 @@ include ABSPATH . 'src/header.php';
     <nav id="reader-controls">
       <!-- Left: Navigation (Prev / Chapter Label / Next) -->
       <div class="controls-nav-group">
-        <a href="<?php echo $prevUrl; ?>" 
-           id="prev-chapter" 
-           class="controls-nav-btn <?php echo !$hasPrev ? 'disabled' : ''; ?>" 
-           aria-label="Previous Chapter">
+        <a href="<?php echo $prevUrl; ?>"
+          id="prev-chapter"
+          class="controls-nav-btn <?php echo !$hasPrev ? 'disabled' : ''; ?>"
+          aria-label="Previous Chapter">
           <i class="fas fa-chevron-left"></i> Prev
         </a>
         <span id="current-chapter" style="font-weight: 700; font-size: 0.9rem; padding: 0 0.5rem;">
           <?php echo ($totalChapters > 1 && $chapterNum === $totalChapters) ? 'Teacher' : 'Ch ' . $chapterNum; ?>
         </span>
-        <a href="<?php echo $nextUrl; ?>" 
-           id="next-chapter" 
-           class="controls-nav-btn <?php echo !$hasNext ? 'disabled' : ''; ?>" 
-           aria-label="Next Chapter">
+        <a href="<?php echo $nextUrl; ?>"
+          id="next-chapter"
+          class="controls-nav-btn <?php echo !$hasNext ? 'disabled' : ''; ?>"
+          aria-label="Next Chapter">
           Next <i class="fas fa-chevron-right"></i>
         </a>
       </div>
@@ -115,7 +116,7 @@ include ABSPATH . 'src/header.php';
         <button id="open-settings-btn" class="tool-btn tool-btn-settings" title="Typography Settings">
           <i class="fas fa-font"></i>
         </button>
-        
+
         <?php if ($totalChapters > 1): ?>
           <button id="open-toc-modal" class="tool-btn tool-btn-toc" title="Table of Chapters">
             <i class="fas fa-list-ol"></i> Chapters
@@ -124,46 +125,46 @@ include ABSPATH . 'src/header.php';
 
         <!-- Typography Settings Panel Dropdown -->
         <div id="settings-panel" class="hidden">
-            <h4 class="settings-section-title">Font Family</h4>
-            <div class="settings-btn-row">
-                <button class="settings-row-btn active settings-font" data-font="font-sans">Sans</button>
-                <button class="settings-row-btn settings-font font-serif" data-font="font-serif">Serif</button>
-                <button class="settings-row-btn settings-font" data-font="font-dyslexic" style="font-family: 'OpenDyslexic', sans-serif;">Dyslexic</button>
-            </div>
-            
-            <h4 class="settings-section-title">Text Size</h4>
-            <div class="settings-btn-row">
-                <button class="settings-row-btn settings-size" data-size="prose-base">A-</button>
-                <button class="settings-row-btn active settings-size" data-size="prose-lg">Aa</button>
-                <button class="settings-row-btn settings-size" data-size="prose-2xl">A+</button>
-            </div>
+          <h4 class="settings-section-title">Font Family</h4>
+          <div class="settings-btn-row">
+            <button class="settings-row-btn active settings-font" data-font="font-sans">Sans</button>
+            <button class="settings-row-btn settings-font font-serif" data-font="font-serif">Serif</button>
+            <button class="settings-row-btn settings-font" data-font="font-dyslexic" style="font-family: 'OpenDyslexic', sans-serif;">Dyslexic</button>
+          </div>
 
-            <h4 class="settings-section-title">Line Spacing</h4>
-            <div class="settings-btn-row">
-                <button class="settings-row-btn active settings-lineheight" data-lineheight="lh-normal">1.5x</button>
-                <button class="settings-row-btn settings-lineheight" data-lineheight="lh-wide">1.8x</button>
-                <button class="settings-row-btn settings-lineheight" data-lineheight="lh-extra">2.2x</button>
-            </div>
+          <h4 class="settings-section-title">Text Size</h4>
+          <div class="settings-btn-row">
+            <button class="settings-row-btn settings-size" data-size="prose-base">A-</button>
+            <button class="settings-row-btn active settings-size" data-size="prose-lg">Aa</button>
+            <button class="settings-row-btn settings-size" data-size="prose-2xl">A+</button>
+          </div>
 
-            <h4 class="settings-section-title">Letter Spacing</h4>
-            <div class="settings-btn-row">
-                <button class="settings-row-btn active settings-letterspacing" data-letterspacing="ls-normal">Normal</button>
-                <button class="settings-row-btn settings-letterspacing" data-letterspacing="ls-wide">Wide</button>
-                <button class="settings-row-btn settings-letterspacing" data-letterspacing="ls-extra">Extra</button>
-            </div>
+          <h4 class="settings-section-title">Line Spacing</h4>
+          <div class="settings-btn-row">
+            <button class="settings-row-btn active settings-lineheight" data-lineheight="lh-normal">1.5x</button>
+            <button class="settings-row-btn settings-lineheight" data-lineheight="lh-wide">1.8x</button>
+            <button class="settings-row-btn settings-lineheight" data-lineheight="lh-extra">2.2x</button>
+          </div>
 
-            <h4 class="settings-section-title">Theme</h4>
-            <div class="theme-dots-row">
-                <button class="theme-dot-btn active dot-default settings-theme" data-theme="default" title="Light Theme"></button>
-                <button class="theme-dot-btn dot-sepia settings-theme" data-theme="sepia" title="Sepia Theme"></button>
-                <button class="theme-dot-btn dot-oled settings-theme" data-theme="dark" title="OLED Dark Theme"></button>
-            </div>
+          <h4 class="settings-section-title">Letter Spacing</h4>
+          <div class="settings-btn-row">
+            <button class="settings-row-btn active settings-letterspacing" data-letterspacing="ls-normal">Normal</button>
+            <button class="settings-row-btn settings-letterspacing" data-letterspacing="ls-wide">Wide</button>
+            <button class="settings-row-btn settings-letterspacing" data-letterspacing="ls-extra">Extra</button>
+          </div>
 
-            <h4 class="settings-section-title" style="margin-top: 1rem;">Speech Speed</h4>
-            <div class="speech-speed-container" style="display: flex; align-items: center; justify-content: space-between; background-color: var(--color-base-bg); padding: 0.5rem 0.75rem; border-radius: 0.75rem; margin-top: 0.5rem;">
-                <input type="range" id="tts-speed-slider" class="speech-speed-slider" min="0.5" max="2.0" step="0.1" value="1.0" style="flex: 1; margin-right: 0.75rem; height: 4px; accent-color: var(--color-primary); cursor: pointer;">
-                <span id="tts-speed-val" style="font-size: 0.8rem; font-weight: 700; color: var(--color-text-default); min-width: 2.20rem; text-align: right;">1.0x</span>
-            </div>
+          <h4 class="settings-section-title">Theme</h4>
+          <div class="theme-dots-row">
+            <button class="theme-dot-btn active dot-default settings-theme" data-theme="default" title="Light Theme"></button>
+            <button class="theme-dot-btn dot-sepia settings-theme" data-theme="sepia" title="Sepia Theme"></button>
+            <button class="theme-dot-btn dot-oled settings-theme" data-theme="dark" title="OLED Dark Theme"></button>
+          </div>
+
+          <h4 class="settings-section-title" style="margin-top: 1rem;">Speech Speed</h4>
+          <div class="speech-speed-container" style="display: flex; align-items: center; justify-content: space-between; background-color: var(--color-base-bg); padding: 0.5rem 0.75rem; border-radius: 0.75rem; margin-top: 0.5rem;">
+            <input type="range" id="tts-speed-slider" class="speech-speed-slider" min="0.5" max="2.0" step="0.1" value="1.0" style="flex: 1; margin-right: 0.75rem; height: 4px; accent-color: var(--color-primary); cursor: pointer;">
+            <span id="tts-speed-val" style="font-size: 0.8rem; font-weight: 700; color: var(--color-text-default); min-width: 2.20rem; text-align: right;">1.0x</span>
+          </div>
         </div>
       </div>
     </nav>
@@ -203,17 +204,17 @@ include ABSPATH . 'src/header.php';
 
     <!-- Bottom Chapter Navigation -->
     <?php if ($totalChapters > 1): ?>
-    <div class="reader-bottom-nav" style="margin-top: 3rem; display: flex; justify-content: space-between; align-items: center; padding-top: 1.5rem; border-top: 1px solid var(--color-border);">
+      <div class="reader-bottom-nav" style="margin-top: 3rem; display: flex; justify-content: space-between; align-items: center; padding-top: 1.5rem; border-top: 1px solid var(--color-border);">
         <a href="<?php echo $prevUrl; ?>" class="controls-nav-btn <?php echo !$hasPrev ? 'disabled' : ''; ?>" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none;">
-            <i class="fas fa-chevron-left"></i> Previous Chapter
+          <i class="fas fa-chevron-left"></i> Previous Chapter
         </a>
         <span style="font-weight: 700; color: var(--color-text-secondary); font-size: 0.95rem;">
-            <?php echo $chapterNum === $totalChapters ? 'Teacher Resources' : 'Chapter ' . $chapterNum . ' of ' . $totalChapters; ?>
+          <?php echo $chapterNum === $totalChapters ? 'Teacher Resources' : 'Chapter ' . $chapterNum . ' of ' . $totalChapters; ?>
         </span>
         <a href="<?php echo $nextUrl; ?>" class="controls-nav-btn <?php echo !$hasNext ? 'disabled' : ''; ?>" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none;">
-            Next Chapter <i class="fas fa-chevron-right"></i>
+          Next Chapter <i class="fas fa-chevron-right"></i>
         </a>
-    </div>
+      </div>
     <?php endif; ?>
 
   </div>
@@ -221,11 +222,11 @@ include ABSPATH . 'src/header.php';
 
 <!-- Floating Highlight Actions Toolbar -->
 <div id="highlight-toolbar" class="hidden">
-    <button id="hl-btn-mark" class="hl-btn"><i class="fas fa-highlighter text-yellow-400"></i> Mark</button>
-    <div class="hl-divider"></div>
-    <button id="hl-btn-note" class="hl-btn"><i class="fas fa-sticky-note text-green-400"></i> Add Note</button>
-    <div class="hl-divider"></div>
-    <button id="hl-btn-copy" class="hl-btn"><i class="fas fa-copy text-blue-400"></i> Copy</button>
+  <button id="hl-btn-mark" class="hl-btn"><i class="fas fa-highlighter text-yellow-400"></i> Mark</button>
+  <div class="hl-divider"></div>
+  <button id="hl-btn-note" class="hl-btn"><i class="fas fa-sticky-note text-green-400"></i> Add Note</button>
+  <div class="hl-divider"></div>
+  <button id="hl-btn-copy" class="hl-btn"><i class="fas fa-copy text-blue-400"></i> Copy</button>
 </div>
 
 <!-- Back to Top Button -->
@@ -235,26 +236,26 @@ include ABSPATH . 'src/header.php';
 
 <!-- Table of Contents Modal Drawer -->
 <?php if ($totalChapters > 1): ?>
-<div id="toc-modal" role="dialog" aria-labelledby="toc-title">
-  <div class="toc-content">
-    <div class="toc-header">
-      <h2 id="toc-title" style="font-family: var(--site-font-family, 'Outfit', sans-serif); font-weight: 800; font-size: 1.5rem;">Table of Contents</h2>
-      <button class="toc-close" id="close-toc-modal" aria-label="Close menu">&times;</button>
-    </div>
-    <div class="toc-grid">
-      <?php for ($i = 1; $i < $totalChapters; $i++): ?>
-        <a href="/library/read/index.php?book=<?php echo urlencode($bookId); ?>&chapter=chapter-<?php echo $i; ?>" 
-           class="toc-link <?php echo ($i === $chapterNum) ? 'active' : ''; ?>" 
-           data-chapter="<?php echo $i; ?>">CH <?php echo $i; ?></a>
-      <?php endfor; ?>
-      <a href="/library/read/index.php?book=<?php echo urlencode($bookId); ?>&chapter=chapter-<?php echo $totalChapters; ?>" 
-         class="toc-link toc-teacher-btn <?php echo ($chapterNum === $totalChapters) ? 'active' : ''; ?>" 
-         data-chapter="<?php echo $totalChapters; ?>">
-        <i class="fas fa-chalkboard-teacher mr-2"></i> TEACHER RESOURCES
-      </a>
+  <div id="toc-modal" role="dialog" aria-labelledby="toc-title">
+    <div class="toc-content">
+      <div class="toc-header">
+        <h2 id="toc-title" style="font-family: var(--site-font-family, 'Outfit', sans-serif); font-weight: 800; font-size: 1.5rem;">Table of Contents</h2>
+        <button class="toc-close" id="close-toc-modal" aria-label="Close menu">&times;</button>
+      </div>
+      <div class="toc-grid">
+        <?php for ($i = 1; $i < $totalChapters; $i++): ?>
+          <a href="/library/read/index.php?book=<?php echo urlencode($bookId); ?>&chapter=chapter-<?php echo $i; ?>"
+            class="toc-link <?php echo ($i === $chapterNum) ? 'active' : ''; ?>"
+            data-chapter="<?php echo $i; ?>">CH <?php echo $i; ?></a>
+        <?php endfor; ?>
+        <a href="/library/read/index.php?book=<?php echo urlencode($bookId); ?>&chapter=chapter-<?php echo $totalChapters; ?>"
+          class="toc-link toc-teacher-btn <?php echo ($chapterNum === $totalChapters) ? 'active' : ''; ?>"
+          data-chapter="<?php echo $totalChapters; ?>">
+          <i class="fas fa-chalkboard-teacher mr-2"></i> TEACHER RESOURCES
+        </a>
+      </div>
     </div>
   </div>
-</div>
 <?php endif; ?>
 
 <!-- License & Sourcing Info Modal -->
@@ -282,38 +283,38 @@ include ABSPATH . 'src/header.php';
           <p style="margin: 0.25rem 0 0 0; color: var(--color-text-secondary); font-size: 0.9rem;">by <?php echo htmlspecialchars($bookAuthor); ?></p>
         </div>
       </div>
-      
+
       <div style="margin-bottom: 1.25rem;">
         <strong style="display: block; font-size: 0.8rem; color: var(--color-text-secondary); text-transform: uppercase; margin-bottom: 0.25rem; font-weight: 800;">Source & License</strong>
         <p style="margin: 0; font-size: 0.95rem; line-height: 1.5; color: var(--color-text-default);">
-          <?php 
-            $discKey = $book['disclaimer-key'] ?? 'default';
-            $discText = $book['disclaimer-text'] ?? '';
-            
-            $disclaimers = json_decode(file_get_contents(ABSPATH . 'library/disclaimers.json'), true) ?: [];
-            if (!empty($discText)) {
-                echo htmlspecialchars($discText);
-            } elseif (isset($disclaimers[$discKey])) {
-                echo htmlspecialchars($disclaimers[$discKey]);
-            } else {
-                echo htmlspecialchars($disclaimers['default'] ?? 'No license information is available for this book.');
-            }
+          <?php
+          $discKey = $book['disclaimer-key'] ?? 'default';
+          $discText = $book['disclaimer-text'] ?? '';
+
+          $disclaimers = json_decode(file_get_contents(ABSPATH . 'library/disclaimers.json'), true) ?: [];
+          if (!empty($discText)) {
+            echo htmlspecialchars($discText);
+          } elseif (isset($disclaimers[$discKey])) {
+            echo htmlspecialchars($disclaimers[$discKey]);
+          } else {
+            echo htmlspecialchars($disclaimers['default'] ?? 'No license information is available for this book.');
+          }
           ?>
         </p>
       </div>
 
       <?php if (!empty($book['isbn']) && $book['isbn'] !== '#'): ?>
-      <div style="margin-bottom: 1.25rem;">
-        <strong style="display: block; font-size: 0.8rem; color: var(--color-text-secondary); text-transform: uppercase; margin-bottom: 0.25rem; font-weight: 800;">ISBN</strong>
-        <p style="margin: 0; font-size: 0.95rem; color: var(--color-text-default);"><?php echo htmlspecialchars($book['isbn']); ?></p>
-      </div>
+        <div style="margin-bottom: 1.25rem;">
+          <strong style="display: block; font-size: 0.8rem; color: var(--color-text-secondary); text-transform: uppercase; margin-bottom: 0.25rem; font-weight: 800;">ISBN</strong>
+          <p style="margin: 0; font-size: 0.95rem; color: var(--color-text-default);"><?php echo htmlspecialchars($book['isbn']); ?></p>
+        </div>
       <?php endif; ?>
 
       <?php if (!empty($book['date'])): ?>
-      <div style="margin-bottom: 1.25rem;">
-        <strong style="display: block; font-size: 0.8rem; color: var(--color-text-secondary); text-transform: uppercase; margin-bottom: 0.25rem; font-weight: 800;">Original Release / Publication Date</strong>
-        <p style="margin: 0; font-size: 0.95rem; color: var(--color-text-default);"><?php echo htmlspecialchars($book['date']); ?></p>
-      </div>
+        <div style="margin-bottom: 1.25rem;">
+          <strong style="display: block; font-size: 0.8rem; color: var(--color-text-secondary); text-transform: uppercase; margin-bottom: 0.25rem; font-weight: 800;">Original Release / Publication Date</strong>
+          <p style="margin: 0; font-size: 0.95rem; color: var(--color-text-default);"><?php echo htmlspecialchars($book['date']); ?></p>
+        </div>
       <?php endif; ?>
     </div>
   </div>
@@ -372,7 +373,7 @@ include ABSPATH . 'src/header.php';
         <button id="flashcard-next-btn" class="tooltip-btn" style="padding: 0.5rem 1rem;">Next <i class="fas fa-chevron-right"></i></button>
       </div>
     </div>
- 
+
     <!-- Quiz View -->
     <div id="quiz-container" class="quiz-container" style="display: none; flex-direction: column;">
       <!-- Injected by reader.js -->
@@ -382,13 +383,13 @@ include ABSPATH . 'src/header.php';
 
 <!-- Send metadata to window context -->
 <script>
-window.BOOK_METADATA = {
+  window.BOOK_METADATA = {
     id: <?php echo json_encode($bookId); ?>,
     title: <?php echo json_encode($bookTitle); ?>,
     chapterNum: <?php echo json_encode($chapterNum); ?>
-};
-window.BOOK_QUIZ_QUESTIONS = <?php echo json_encode($quizQuestions); ?>;
-window.BOOK_JSON_VOCAB = <?php echo json_encode($vocabList); ?>;
+  };
+  window.BOOK_QUIZ_QUESTIONS = <?php echo json_encode($quizQuestions); ?>;
+  window.BOOK_JSON_VOCAB = <?php echo json_encode($vocabList); ?>;
 </script>
 
 <script src="/library/read/reader.js" defer></script>
