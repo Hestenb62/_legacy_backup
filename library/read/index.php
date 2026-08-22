@@ -34,12 +34,14 @@ if (!isset($bookId) || $bookId === '') {
     $bookId = '';
     
     if (isset($_GET['book']) && $_GET['book'] !== '') {
-        $bookId = $_GET['book'];
+        $bookId = trim($_GET['book']);
     } else {
         $decodedQuery = urldecode($queryString);
         $firstParam = explode('&', $decodedQuery)[0];
 
-        if (strpos($firstParam, '=') === 0) {
+        if (strpos($firstParam, 'book=') === 0) {
+            $bookId = substr($firstParam, 5);
+        } elseif (strpos($firstParam, '=') === 0) {
             $bookId = substr($firstParam, 1);
         } elseif ($firstParam !== '' && strpos($firstParam, '=') === false) {
             $bookId = $firstParam;
@@ -50,34 +52,111 @@ if (!isset($bookId) || $bookId === '') {
 // Fallback: extract book ID from URL folder segment if accessing folder indices directly
 if ($bookId === '') {
     $scriptName = $_SERVER['SCRIPT_NAME'] ?? '';
-    if (preg_match('/\/library\/read\/([a-zA-Z0-9\-]+)\//', $requestPath, $matches)) {
-        $bookId = $matches[1];
-    } elseif (preg_match('/\/library\/read\/([a-zA-Z0-9\-]+)\//', $scriptName, $matches)) {
-        $bookId = $matches[1];
+    $phpSelf = $_SERVER['PHP_SELF'] ?? '';
+    if (preg_match('/\/library\/read\/([a-zA-Z0-9\-_]+)(\/|$)/i', $requestPath, $matches)) {
+        if ($matches[1] !== 'index.php' && $matches[1] !== 'reader.php') {
+            $bookId = $matches[1];
+        }
+    } elseif (preg_match('/\/library\/read\/([a-zA-Z0-9\-_]+)(\/|$)/i', $scriptName, $matches)) {
+        if ($matches[1] !== 'index.php' && $matches[1] !== 'reader.php') {
+            $bookId = $matches[1];
+        }
+    } elseif (preg_match('/\/library\/read\/([a-zA-Z0-9\-_]+)(\/|$)/i', $phpSelf, $matches)) {
+        if ($matches[1] !== 'index.php' && $matches[1] !== 'reader.php') {
+            $bookId = $matches[1];
+        }
     }
 }
 
-$bookId = preg_replace('/[^a-zA-Z0-9\-]/', '', $bookId);
+$rawBookParam = trim($bookId);
+// Normalize slug: lowercase and replace non-alphanumerics with single dash
+$normalizedSlug = strtolower(trim(preg_replace('/[^a-zA-Z0-9]+/', '-', $rawBookParam), '-'));
+$bookId = $normalizedSlug;
 
 // Load book data from both main catalog and educational drawer resources
-$jsonString = file_get_contents(__DIR__ . '/../assets/bookd.json');
-$categories = json_decode($jsonString, true) ?: [];
+$allBooksList = [];
 
-$drawerJsonString = file_get_contents(__DIR__ . '/../assets/edu-side-drawer.json');
-$drawerCategories = json_decode($drawerJsonString, true) ?: [];
-
-$allCategories = array_merge($categories, $drawerCategories);
-$book = null;
-
-if (is_array($allCategories)) {
-    foreach ($allCategories as $books) {
-        foreach ($books as $candidate) {
-            if (($candidate['id'] ?? '') === $bookId) {
-                $book = $candidate;
-                break 2;
+$bookdJsonPath = __DIR__ . '/../assets/bookd.json';
+if (is_file($bookdJsonPath)) {
+    $categories = json_decode(file_get_contents($bookdJsonPath), true) ?: [];
+    foreach ($categories as $catName => $books) {
+        if (is_array($books)) {
+            foreach ($books as $b) {
+                if (is_array($b)) {
+                    $b['category'] = $catName;
+                    $allBooksList[] = $b;
+                }
             }
         }
     }
+}
+
+$drawerJsonPath = __DIR__ . '/../assets/edu-side-drawer.json';
+if (is_file($drawerJsonPath)) {
+    $drawerCategories = json_decode(file_get_contents($drawerJsonPath), true) ?: [];
+    foreach ($drawerCategories as $catName => $books) {
+        if (is_array($books)) {
+            foreach ($books as $b) {
+                if (is_array($b)) {
+                    $b['category'] = $catName;
+                    $allBooksList[] = $b;
+                }
+            }
+        }
+    }
+}
+
+$book = null;
+
+// 1. Exact ID match
+foreach ($allBooksList as $candidate) {
+    if (($candidate['id'] ?? '') === $rawBookParam || ($candidate['id'] ?? '') === $normalizedSlug) {
+        $book = $candidate;
+        $bookId = $candidate['id'];
+        break;
+    }
+}
+
+// 2. Normalized slug match
+if (!$book) {
+    foreach ($allBooksList as $candidate) {
+        $cSlug = strtolower(trim(preg_replace('/[^a-zA-Z0-9]+/', '-', $candidate['id'] ?? ''), '-'));
+        if ($cSlug === $normalizedSlug) {
+            $book = $candidate;
+            $bookId = $candidate['id'];
+            break;
+        }
+    }
+}
+
+// 3. Title / Fuzzy match
+if (!$book && $rawBookParam !== '') {
+    $cleanRaw = strtolower($rawBookParam);
+    foreach ($allBooksList as $candidate) {
+        $cTitle = strtolower(trim($candidate['title'] ?? ''));
+        if ($cTitle === $cleanRaw || stripos($cTitle, $cleanRaw) !== false || stripos($cleanRaw, strtolower($candidate['id'] ?? '')) !== false) {
+            $book = $candidate;
+            $bookId = $candidate['id'];
+            break;
+        }
+    }
+}
+
+// 4. On-disk directory fallback
+if (!$book && is_dir(__DIR__ . '/' . $normalizedSlug)) {
+    $folderName = $normalizedSlug;
+    $prettyTitle = ucwords(str_replace(['-', '_'], ' ', $folderName));
+    if ($folderName === 'who-built-america') {
+        $prettyTitle = "Who Built America? Working People and the Nation's History";
+    }
+    $book = [
+        'id' => $folderName,
+        'title' => $prettyTitle,
+        'author' => ($folderName === 'who-built-america' ? 'American Social History Project' : 'Author Unknown'),
+        'description' => 'Digital reading collection',
+        'hasTeacherResources' => false
+    ];
+    $bookId = $folderName;
 }
 
 $error = '';

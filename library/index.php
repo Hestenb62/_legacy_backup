@@ -27,8 +27,12 @@ $drawerCategories = json_decode($drawerJsonString, true) ?: [];
 $linksJsonPath = __DIR__ . '/assets/desk_links.json';
 $deskLinks = is_file($linksJsonPath) ? json_decode(file_get_contents($linksJsonPath), true) : [];
 
+if (!defined('ABSPATH')) {
+    define('ABSPATH', dirname(__DIR__) . '/');
+}
+
 // Include Global Header (Root)
-include '../src/header.php';
+include ABSPATH . 'src/header.php';
 ?>
 
 <!-- AURORA MESH BACKGROUND -->
@@ -318,4 +322,4 @@ include '../src/header.php';
 </script>
 <script src="assets/library.js" defer></script>
 
-<?php include '../src/footer.php'; ?>
+<?php include ABSPATH . 'src/footer.php'; ?>

@@ -1,3 +1,3 @@
 <?php
-$bookId = 'usa-constitution';
+$bookId = 'american-yawp';
 require_once __DIR__ . '/../index.php';
