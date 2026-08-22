@@ -541,38 +541,70 @@
 
         if (!toolbar) return;
 
-        let selectedRange = null;
+        // Prevent clicking inside toolbar from losing DOM text selection
+        toolbar.addEventListener("mousedown", (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+        });
+        toolbar.addEventListener("touchstart", (e) => {
+            e.stopPropagation();
+        });
 
-        document.addEventListener("selectionchange", () => {
+        let currentSelectedRange = null;
+
+        function checkSelection() {
             const sel = window.getSelection();
-            if (sel && sel.toString().trim().length > 0 && bookContent.contains(sel.anchorNode)) {
-                try {
-                    selectedRange = sel.getRangeAt(0);
-                    const rect = selectedRange.getBoundingClientRect();
-                    toolbar.style.position = "fixed";
-                    toolbar.style.top = `${Math.max(rect.top - 48, 10)}px`;
-                    toolbar.style.left = `${rect.left + (rect.width / 2) - 80}px`;
+            if (sel && sel.rangeCount > 0 && !sel.isCollapsed) {
+                const text = sel.toString().trim();
+                const range = sel.getRangeAt(0);
+
+                if (text.length > 0 && (bookContent.contains(range.commonAncestorContainer) || bookContent.contains(sel.anchorNode))) {
+                    currentSelectedRange = range.cloneRange();
+                    const rect = range.getBoundingClientRect();
+
+                    const top = Math.max(rect.top - 52, 12);
+                    const left = Math.max(rect.left + (rect.width / 2) - 110, 16);
+
+                    toolbar.style.top = `${top}px`;
+                    toolbar.style.left = `${left}px`;
                     toolbar.style.display = "flex";
                     toolbar.classList.remove("hidden");
-                } catch (e) {}
-            } else {
-                if (toolbar) toolbar.classList.add("hidden");
+                    return;
+                }
             }
+
+            toolbar.classList.add("hidden");
+            toolbar.style.display = "none";
+            currentSelectedRange = null;
+        }
+
+        document.addEventListener("mouseup", (e) => {
+            if (toolbar.contains(e.target)) return;
+            setTimeout(checkSelection, 30);
+        });
+
+        document.addEventListener("keyup", (e) => {
+            if (toolbar.contains(e.target)) return;
+            setTimeout(checkSelection, 30);
         });
 
         function applyHighlight(colorClass) {
-            if (!selectedRange) return;
-            const text = selectedRange.toString();
+            if (!currentSelectedRange) return;
+            const text = currentSelectedRange.toString();
             if (!text) return;
 
             const span = document.createElement("mark");
             span.className = colorClass;
             span.textContent = text;
 
-            selectedRange.deleteContents();
-            selectedRange.insertNode(span);
+            try {
+                currentSelectedRange.deleteContents();
+                currentSelectedRange.insertNode(span);
+            } catch (e) {}
+
             window.getSelection().removeAllRanges();
             toolbar.classList.add("hidden");
+            toolbar.style.display = "none";
 
             saveHighlight(text, colorClass, highlightsKey);
         }
@@ -583,20 +615,22 @@
 
         if (hlCopy) {
             hlCopy.addEventListener("click", () => {
-                if (selectedRange) {
-                    navigator.clipboard.writeText(selectedRange.toString());
+                if (currentSelectedRange) {
+                    navigator.clipboard.writeText(currentSelectedRange.toString());
                     toolbar.classList.add("hidden");
+                    toolbar.style.display = "none";
+                    window.getSelection().removeAllRanges();
                 }
             });
         }
 
         if (hlNote) {
             hlNote.addEventListener("click", () => {
-                if (selectedRange) {
+                if (currentSelectedRange) {
                     const note = prompt("Add a study note for this selection:");
                     if (note) {
                         applyHighlight("hl-yellow");
-                        saveHighlight(selectedRange.toString(), "hl-yellow", highlightsKey, note);
+                        saveHighlight(currentSelectedRange.toString(), "hl-yellow", highlightsKey, note);
                     }
                 }
             });

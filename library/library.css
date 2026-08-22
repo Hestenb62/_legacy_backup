@@ -1447,9 +1447,12 @@ body.dark .continue-card-bar-wrap {
     background-color: var(--lib-bg-base);
     padding: 2.5rem 2rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    gap: 1.25rem;
     position: relative;
+    border-right: 1px solid var(--lib-border);
 }
 
 .library-modal-cover-glow {
@@ -1468,6 +1471,54 @@ body.dark .continue-card-bar-wrap {
     box-shadow: var(--lib-shadow-lg);
     position: relative;
     z-index: 2;
+}
+
+/* Star / Cite Actions Under Cover Image */
+.library-modal-cover-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    width: 100%;
+    max-width: 200px;
+    position: relative;
+    z-index: 5;
+    margin-top: 0.25rem;
+}
+
+.modal-cover-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.65rem 1rem;
+    border-radius: var(--lib-radius-md);
+    border: 1px solid var(--lib-border);
+    background-color: var(--lib-bg-surface);
+    color: var(--lib-text-main);
+    font-weight: 700;
+    font-size: 0.88rem;
+    cursor: pointer;
+    box-shadow: var(--lib-shadow-sm);
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-cover-btn:hover {
+    border-color: var(--lib-primary);
+    color: var(--lib-primary);
+    transform: translateY(-2px);
+    box-shadow: var(--lib-shadow-md);
+}
+
+.modal-cover-btn.bookmark-btn.active {
+    background-color: #f59e0b;
+    color: #ffffff;
+    border-color: #f59e0b;
+}
+
+.modal-cover-btn.cite-btn:hover {
+    border-color: var(--lib-primary);
+    color: var(--lib-primary);
 }
 
 /* Modal Info Pane */
@@ -1687,23 +1738,34 @@ body.dark .continue-card-bar-wrap {
 
 .library-modal-downloads-row {
     display: flex;
-    gap: 0.4rem;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
     margin-left: auto;
 }
 
+.downloads-label {
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--lib-text-muted);
+    margin-right: 0.2rem;
+}
+
 .library-download-icon-btn {
-    width: 2.65rem;
-    height: 2.65rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.5rem 0.85rem;
     border-radius: var(--lib-radius-md);
     border: 1px solid var(--lib-border);
     background-color: var(--lib-bg-base);
     color: var(--lib-text-muted);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1rem;
+    font-size: 0.82rem;
+    font-weight: 700;
     text-decoration: none;
-    transition: all 0.2s ease;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .library-download-icon-btn:hover {
@@ -1711,6 +1773,7 @@ body.dark .continue-card-bar-wrap {
     border-color: var(--lib-primary);
     color: var(--lib-primary);
     background-color: var(--lib-bg-surface);
+    box-shadow: var(--lib-shadow-sm);
 }
 
 .library-modal-disclaimer-row {

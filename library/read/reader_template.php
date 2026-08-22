@@ -279,12 +279,18 @@ include ABSPATH . 'src/header.php';
 
 <!-- Inline Highlighting & Annotation Floating Toolbar -->
 <div id="highlight-toolbar" class="highlight-toolbar hidden" role="toolbar" aria-label="Text Highlight Tools">
-    <button type="button" id="hl-color-yellow" class="hl-color-btn hl-yellow" title="Highlight Yellow"></button>
-    <button type="button" id="hl-color-pink" class="hl-color-btn hl-pink" title="Highlight Pink"></button>
-    <button type="button" id="hl-color-green" class="hl-color-btn hl-green" title="Highlight Green"></button>
+    <div class="hl-colors-group">
+        <button type="button" id="hl-color-yellow" class="hl-color-btn hl-yellow" title="Highlight Yellow" aria-label="Highlight Yellow"></button>
+        <button type="button" id="hl-color-pink" class="hl-color-btn hl-pink" title="Highlight Pink" aria-label="Highlight Pink"></button>
+        <button type="button" id="hl-color-green" class="hl-color-btn hl-green" title="Highlight Green" aria-label="Highlight Green"></button>
+    </div>
     <div class="hl-sep"></div>
-    <button type="button" id="hl-btn-note" class="hl-action-btn" title="Add Note"><i class="fas fa-sticky-note"></i></button>
-    <button type="button" id="hl-btn-copy" class="hl-action-btn" title="Copy Quote"><i class="fas fa-copy"></i></button>
+    <button type="button" id="hl-btn-note" class="hl-action-btn" title="Add Study Note" aria-label="Add Study Note">
+        <i class="fas fa-sticky-note"></i> <span>Note</span>
+    </button>
+    <button type="button" id="hl-btn-copy" class="hl-action-btn" title="Copy Quote" aria-label="Copy Quote">
+        <i class="fas fa-copy"></i> <span>Copy</span>
+    </button>
 </div>
 
 <!-- Study Guide, Flashcards & Quiz Modal Drawer -->

@@ -78,7 +78,7 @@
         const modalBtn = document.getElementById('modal-bookmark-btn');
         if (modalBtn && window.currentBookId === bookId) {
             const isSaved = bookmarkList.includes(bookId);
-            modalBtn.innerHTML = isSaved ? '<i class="fas fa-star"></i> <span>Saved</span>' : '<i class="far fa-star"></i> <span>Save</span>';
+            modalBtn.innerHTML = isSaved ? '<i class="fas fa-star"></i> <span>Saved to List</span>' : '<i class="far fa-star"></i> <span>Save to List</span>';
             modalBtn.classList.toggle('active', isSaved);
         }
 
@@ -582,7 +582,7 @@
         const modalBmkBtn = document.getElementById('modal-bookmark-btn');
         if (modalBmkBtn) {
             const isSaved = bookmarkList.includes(d.id);
-            modalBmkBtn.innerHTML = isSaved ? '<i class="fas fa-star"></i> <span>Saved</span>' : '<i class="far fa-star"></i> <span>Save</span>';
+            modalBmkBtn.innerHTML = isSaved ? '<i class="fas fa-star"></i> <span>Saved to List</span>' : '<i class="far fa-star"></i> <span>Save to List</span>';
             modalBmkBtn.classList.toggle('active', isSaved);
         }
 

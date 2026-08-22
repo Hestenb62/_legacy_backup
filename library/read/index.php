@@ -254,14 +254,31 @@ if ($bookId === '') {
             if ($chapterHtml === false) {
                 $error = 'Failed to load chapter content.';
             } else {
-                // Extract core reader content inside class "cdn-book-reader-content"
-                if (preg_match('/<div class="cdn-book-reader-content">(.*?)<\/div>\s*<nav class="reader-chapter-nav"/is', $chapterHtml, $matches)) {
-                    $contentHtml = $matches[1];
-                } elseif (preg_match('/<div class="cdn-book-reader-content">(.*?)<\/div>/is', $chapterHtml, $matches)) {
-                    $contentHtml = $matches[1];
-                } else {
-                    $contentHtml = $chapterHtml;
+                // Extract core reader content cleanly without truncation
+                $cleaned = preg_replace('/<\?php.*?\?>/is', '', $chapterHtml);
+                $cleaned = preg_replace('/<style\b[^>]*>(.*?)<\/style>/is', '', $cleaned);
+                $cleaned = preg_replace('/<script\b[^>]*>(.*?)<\/script>/is', '', $cleaned);
+                $cleaned = preg_replace('/<nav\b[^>]*class="[^"]*reader-chapter-nav[^"]*"[^>]*>(.*?)<\/nav>/is', '', $cleaned);
+                $cleaned = preg_replace('/<nav\b[^>]*id="reader-controls"[^>]*>(.*?)<\/nav>/is', '', $cleaned);
+
+                if (preg_match('/<main\b[^>]*>(.*?)<\/main>/is', $cleaned, $mainMatch)) {
+                    $cleaned = $mainMatch[1];
                 }
+
+                if (preg_match('/<div\b[^>]*class="[^"]*cdn-book-reader-content[^"]*"[^>]*>(.*)/is', $cleaned, $cdnMatch)) {
+                    $inner = $cdnMatch[1];
+                    $lastDivPos = strrpos($inner, '</div>');
+                    if ($lastDivPos !== false) {
+                        $inner = substr($inner, 0, $lastDivPos);
+                    }
+                    $cleaned = $inner;
+                }
+
+                // Clean empty heading tags and empty anchors
+                $cleaned = preg_replace('/<a\b[^>]*>\s*<h[1-6]\b[^>]*>\s*<\/h[1-6]>\s*<\/a>/is', '', $cleaned);
+                $cleaned = preg_replace('/<h[1-6]\b[^>]*>\s*<\/h[1-6]>/is', '', $cleaned);
+
+                $contentHtml = trim($cleaned);
 
                 // Auto-inject book credits from credits.json if defined
                 $creditsJsonPath = __DIR__ . '/../assets/credits.json';

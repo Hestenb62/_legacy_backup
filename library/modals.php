@@ -16,6 +16,16 @@
             <div class="library-modal-cover-pane">
                 <div class="library-modal-cover-glow"></div>
                 <img id="modal-img" src="" alt="Book Cover" class="library-modal-cover-img" onerror="this.onerror=null; this.src='https://placehold.co/300x450/1e293b/ffffff?text=No+Cover';">
+                
+                <!-- Star (Bookmark) and Cite Buttons Under Cover Image -->
+                <div class="library-modal-cover-actions">
+                    <button id="modal-bookmark-btn" onclick="toggleModalBookmark()" class="modal-cover-btn bookmark-btn" title="Save to My Reading List" aria-label="Save to My Reading List">
+                        <i class="far fa-star"></i> <span>Save to List</span>
+                    </button>
+                    <button type="button" id="modal-citation-btn" onclick="openBookCitationModal()" class="modal-cover-btn cite-btn" title="Generate Citations" aria-label="Generate Citation">
+                        <i class="fas fa-quote-right"></i> <span>Cite Book</span>
+                    </button>
+                </div>
             </div>
 
             <!-- Details Pane -->
@@ -82,26 +92,19 @@
                             <i class="fas fa-book-open"></i> <span>Read Online</span>
                         </a>
 
-                        <button id="modal-bookmark-btn" onclick="toggleModalBookmark()" class="library-modal-bookmark-btn" title="Save to My Reading List" aria-label="Save to My Reading List">
-                            <i class="far fa-star"></i> <span>Save</span>
-                        </button>
-
-                        <button type="button" id="modal-citation-btn" onclick="openBookCitationModal()" class="library-modal-cite-btn" title="Generate Citations" aria-label="Generate Citation">
-                            <i class="fas fa-quote-right"></i> <span>Cite</span>
-                        </button>
-
                         <div class="library-modal-downloads-row">
+                            <span class="downloads-label">Formats:</span>
                             <a id="modal-pdf-link" href="#" target="_blank" rel="noopener noreferrer" class="library-download-icon-btn pdf-btn" title="Download PDF" aria-label="Download PDF">
-                                <i class="fas fa-file-pdf"></i>
+                                <i class="fas fa-file-pdf"></i> <span>PDF</span>
                             </a>
                             <a id="modal-epub-link" href="#" target="_blank" rel="noopener noreferrer" class="library-download-icon-btn epub-btn" title="Download ePUB" aria-label="Download ePUB">
-                                <i class="fas fa-book"></i>
+                                <i class="fas fa-book"></i> <span>ePUB</span>
                             </a>
                             <a id="modal-mobi-link" href="#" target="_blank" rel="noopener noreferrer" class="library-download-icon-btn mobi-btn" title="Download MOBI" aria-label="Download MOBI">
-                                <i class="fas fa-tablet-alt"></i>
+                                <i class="fas fa-tablet-alt"></i> <span>MOBI</span>
                             </a>
                             <a id="modal-txt-link" href="#" target="_blank" rel="noopener noreferrer" class="library-download-icon-btn txt-btn" title="Download Plain Text" aria-label="Download Plain Text">
-                                <i class="fas fa-file-alt"></i>
+                                <i class="fas fa-file-alt"></i> <span>TXT</span>
                             </a>
                         </div>
                     </div>
