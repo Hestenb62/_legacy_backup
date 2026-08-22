@@ -222,13 +222,6 @@ include ABSPATH . 'src/header.php';
             <button class="theme-dot-btn dot-oled settings-theme" data-theme="dark" title="OLED Dark Theme"></button>
           </div>
 
-          <h4 class="settings-section-title" style="margin-top: 1rem;">Reading Mode</h4>
-          <div class="settings-btn-row">
-            <button id="toggle-bionic-btn" class="settings-row-btn speech-btn-bionic" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.5rem 0.75rem;" title="Toggle Bionic / Fixation Reading Mode">
-              <i class="fas fa-bolt"></i> <span>Bionic Fixation Reading</span>
-            </button>
-          </div>
-
           <h4 class="settings-section-title" style="margin-top: 1rem;">Speech Speed</h4>
           <div class="speech-speed-container" style="display: flex; align-items: center; justify-content: space-between; background-color: var(--color-base-bg); padding: 0.5rem 0.75rem; border-radius: 0.75rem; margin-top: 0.5rem;">
             <input type="range" id="tts-speed-slider" class="speech-speed-slider" min="0.5" max="2.0" step="0.1" value="1.0" style="flex: 1; margin-right: 0.75rem; height: 4px; accent-color: var(--color-primary); cursor: pointer;">

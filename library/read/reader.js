@@ -86,13 +86,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const tocModal = document.getElementById("toc-modal");
     const closeTocBtn = document.getElementById("close-toc-modal");
 
-    // Vocab & Quiz Elements
+    // Vocab & Study Guide Elements
     const openVocabBtn = document.getElementById("open-vocab-btn");
     const vocabModal = document.getElementById("vocab-modal");
     const closeVocabBtn = document.getElementById("close-vocab-modal");
     const vocabListContainer = document.getElementById("vocab-list-container");
     const vocabFlashContainer = document.getElementById("vocab-flash-container");
+    const vocabHighlightsContainer = document.getElementById("vocab-highlights-container");
     const tabVocabList = document.getElementById("tab-vocab-list");
+    const tabHighlights = document.getElementById("tab-highlights");
     const tabVocabFlash = document.getElementById("tab-vocab-flash");
     const tabQuiz = document.getElementById("tab-quiz");
     const quizContainer = document.getElementById("quiz-container");
@@ -122,7 +124,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Initialize Assistant Engines
     calculateReadingTime();
-    initBionicReading();
     initDoubleclickDictionary();
     initPersistentHighlights();
 
@@ -574,76 +575,6 @@ document.addEventListener("DOMContentLoaded", () => {
         badgeText.textContent = `${minutes} min (${wordCount.toLocaleString()} words)`;
     }
 
-    // --- Assistant Engine: Bionic Fixation Reading Mode ---
-    let isBionicActive = false;
-    let rawOriginalHtml = '';
-
-    function initBionicReading() {
-        const bionicBtn = document.getElementById("toggle-bionic-btn");
-        if (!bionicBtn) return;
-
-        const savedBionic = localStorage.getItem("hesten_reader_bionic") === "true";
-        if (savedBionic) {
-            toggleBionic(true);
-        }
-
-        bionicBtn.addEventListener("click", () => {
-            toggleBionic(!isBionicActive);
-        });
-    }
-
-    function toggleBionic(enable) {
-        const bionicBtn = document.getElementById("toggle-bionic-btn");
-        const contentEl = document.getElementById("book-content");
-        if (!contentEl) return;
-
-        if (enable && !isBionicActive) {
-            rawOriginalHtml = contentEl.innerHTML;
-            applyBionicFixation(contentEl);
-            isBionicActive = true;
-            if (bionicBtn) bionicBtn.classList.add("active");
-            try { localStorage.setItem("hesten_reader_bionic", "true"); } catch(e) {}
-        } else if (!enable && isBionicActive) {
-            if (rawOriginalHtml) {
-                contentEl.innerHTML = rawOriginalHtml;
-                initTooltips();
-                restoreHighlights();
-            }
-            isBionicActive = false;
-            if (bionicBtn) bionicBtn.classList.remove("active");
-            try { localStorage.setItem("hesten_reader_bionic", "false"); } catch(e) {}
-        }
-    }
-
-    function applyBionicFixation(root) {
-        const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
-            acceptNode: (node) => {
-                if (node.parentElement.closest('.tooltiptext, script, style, mark, button, code')) {
-                    return NodeFilter.FILTER_REJECT;
-                }
-                return node.nodeValue.trim().length > 0 ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
-            }
-        });
-
-        const textNodes = [];
-        while (walker.nextNode()) {
-            textNodes.push(walker.currentNode);
-        }
-
-        textNodes.forEach(node => {
-            const span = document.createElement('span');
-            const words = node.nodeValue.split(/(\s+)/);
-            span.innerHTML = words.map(chunk => {
-                if (/^\s+$/.test(chunk) || chunk.length === 0) return chunk;
-                const mid = Math.ceil(chunk.length / 2);
-                const boldPart = chunk.slice(0, mid);
-                const restPart = chunk.slice(mid);
-                return `<strong class="bionic-fixation" style="font-weight: 800;">${boldPart}</strong>${restPart}`;
-            }).join('');
-            node.parentNode.replaceChild(span, node);
-        });
-    }
-
     // --- Assistant Engine: Double-Click / Tap Dictionary Lookup ---
     let currentAudioUrl = null;
 
@@ -656,7 +587,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         contentEl.addEventListener("dblclick", (e) => {
             const selection = window.getSelection();
-            const selectedWord = selection.toString().trim().replace(/[^a-zA-Z]/g, '');
+            const selectedWord = selection ? selection.toString().trim().replace(/[^a-zA-Z]/g, '') : '';
             if (!selectedWord || selectedWord.length < 2) return;
 
             lookupWord(selectedWord, e.clientX, e.clientY);
@@ -764,7 +695,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         document.addEventListener("selectionchange", () => {
             const selection = window.getSelection();
-            if (!selection.rangeCount || selection.isCollapsed) {
+            if (!selection || !selection.rangeCount || selection.isCollapsed) {
                 hlToolbar.classList.add("hidden");
                 return;
             }
@@ -775,17 +706,23 @@ document.addEventListener("DOMContentLoaded", () => {
                 return;
             }
 
-            currentRange = range;
+            const textStr = selection.toString().trim();
+            if (!textStr || textStr.length < 1) {
+                hlToolbar.classList.add("hidden");
+                return;
+            }
+
+            currentRange = range.cloneRange();
             const rect = range.getBoundingClientRect();
 
             hlToolbar.style.left = `${rect.left + rect.width / 2 + window.scrollX}px`;
-            hlToolbar.style.top = `${rect.top + window.scrollY - 45}px`;
+            hlToolbar.style.top = `${Math.max(10, rect.top + window.scrollY - 45)}px`;
             hlToolbar.classList.remove("hidden");
         });
 
         function applyHighlight(colorName, customNote = '') {
-            if (!currentRange) return;
-            const selectedText = currentRange.toString().trim();
+            const selection = window.getSelection();
+            const selectedText = selection ? selection.toString().trim() : (currentRange ? currentRange.toString().trim() : '');
             if (!selectedText) return;
 
             const hlId = 'hl_' + Date.now();
@@ -797,21 +734,34 @@ document.addEventListener("DOMContentLoaded", () => {
                 time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
             };
 
-            try {
-                const mark = document.createElement("mark");
-                mark.className = `reader-highlight hl-${colorName}`;
-                mark.dataset.hlId = hlId;
-                if (customNote) mark.title = `Note: ${customNote}`;
+            if (currentRange) {
+                try {
+                    const mark = document.createElement("mark");
+                    mark.className = `reader-highlight hl-${colorName}`;
+                    mark.dataset.hlId = hlId;
+                    if (customNote) mark.title = `Note: ${customNote}`;
 
-                currentRange.surroundContents(mark);
-                window.getSelection().removeAllRanges();
+                    mark.appendChild(currentRange.extractContents());
+                    currentRange.insertNode(mark);
 
-                chapterHighlights.push(hlObj);
-                localStorage.setItem(HL_STORAGE_KEY, JSON.stringify(chapterHighlights));
-            } catch(e) {
-                console.log("Boundary crossed highlighting error", e);
+                    mark.addEventListener("click", (e) => {
+                        e.stopPropagation();
+                        window.openHighlightsModal();
+                    });
+                } catch (err) {
+                    console.log("Extraction highlight applied", err);
+                }
             }
+
+            if (selection) selection.removeAllRanges();
+
+            chapterHighlights.push(hlObj);
+            try {
+                localStorage.setItem(HL_STORAGE_KEY, JSON.stringify(chapterHighlights));
+            } catch(e) {}
+
             hlToolbar.classList.add("hidden");
+            renderHighlightsList();
         }
 
         if (hlColorYellow) hlColorYellow.addEventListener("click", () => applyHighlight('yellow'));
@@ -820,8 +770,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (hlCopyBtn) {
             hlCopyBtn.addEventListener("click", () => {
-                if (!currentRange) return;
-                navigator.clipboard.writeText(currentRange.toString()).then(() => {
+                const text = currentRange ? currentRange.toString() : '';
+                if (!text) return;
+                navigator.clipboard.writeText(text).then(() => {
                     const originalHTML = hlCopyBtn.innerHTML;
                     hlCopyBtn.innerHTML = '<i class="fas fa-check text-green-400"></i> Copied';
                     setTimeout(() => hlCopyBtn.innerHTML = originalHTML, 1500);
@@ -831,11 +782,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (hlNoteBtn) {
             hlNoteBtn.addEventListener("click", () => {
-                if (!currentRange) return;
-                const selectedText = currentRange.toString().trim();
-                if (!selectedText) return;
+                const text = currentRange ? currentRange.toString().trim() : '';
+                if (!text) return;
 
-                const noteText = prompt(`Add a study note for: "${selectedText.substring(0, 30)}${selectedText.length > 30 ? '...' : ''}"`);
+                const noteText = prompt(`Add a study note for: "${text.substring(0, 30)}${text.length > 30 ? '...' : ''}"`);
                 if (noteText === null) return;
 
                 applyHighlight('green', noteText);
@@ -846,33 +796,107 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function restoreHighlights() {
-        // Highlight restores or study list
+        if (!bookContent || chapterHighlights.length === 0) return;
+
+        chapterHighlights.forEach(hl => {
+            if (!hl.text) return;
+            highlightTextInElement(bookContent, hl);
+        });
+    }
+
+    function highlightTextInElement(container, hl) {
+        const walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT, {
+            acceptNode: (node) => {
+                if (node.parentElement.closest('mark, script, style, .tooltiptext')) {
+                    return NodeFilter.FILTER_REJECT;
+                }
+                return node.nodeValue.includes(hl.text) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
+            }
+        });
+
+        if (walker.nextNode()) {
+            const textNode = walker.currentNode;
+            const idx = textNode.nodeValue.indexOf(hl.text);
+            if (idx >= 0) {
+                const range = document.createRange();
+                range.setStart(textNode, idx);
+                range.setEnd(textNode, idx + hl.text.length);
+
+                try {
+                    const mark = document.createElement("mark");
+                    mark.className = `reader-highlight hl-${hl.color}`;
+                    mark.dataset.hlId = hl.id;
+                    if (hl.note) mark.title = `Note: ${hl.note}`;
+
+                    mark.appendChild(range.extractContents());
+                    range.insertNode(mark);
+
+                    mark.addEventListener("click", (e) => {
+                        e.stopPropagation();
+                        window.openHighlightsModal();
+                    });
+                } catch(e) {}
+            }
+        }
     }
 
     function renderHighlightsList() {
         const listContainer = document.getElementById("highlights-list-container");
         if (!listContainer) return;
 
+        try {
+            chapterHighlights = JSON.parse(localStorage.getItem(HL_STORAGE_KEY) || '[]');
+        } catch(e) {}
+
         if (chapterHighlights.length === 0) {
             listContainer.innerHTML = `
-                <div style="text-align: center; padding: 2rem; color: var(--color-text-secondary);">
-                    <i class="fas fa-highlighter" style="font-size: 2rem; opacity: 0.3; margin-bottom: 1rem; display: block;"></i>
-                    <p style="margin: 0; font-weight: 700;">No highlights or study notes saved yet in this chapter.</p>
-                    <p style="margin: 0.5rem 0 0 0; font-size: 0.85rem;">Select any sentence or paragraph in the text to highlight in yellow, pink, or green.</p>
+                <div style="text-align: center; padding: 2.5rem 1rem; color: var(--color-text-secondary);">
+                    <div style="width: 3.5rem; height: 3.5rem; border-radius: 50%; background: rgba(245, 158, 11, 0.1); color: #f59e0b; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem auto; font-size: 1.5rem;">
+                        <i class="fas fa-highlighter"></i>
+                    </div>
+                    <h4 style="font-size: 1.1rem; font-weight: 800; margin: 0 0 0.5rem 0; color: var(--color-text-default);">No Highlights or Notes Yet</h4>
+                    <p style="margin: 0; font-size: 0.85rem; max-width: 360px; margin: 0 auto; line-height: 1.5;">Select any text or quote in this chapter using your mouse or finger, then tap a highlight color (Yellow, Pink, or Green) to save it here.</p>
                 </div>
             `;
         } else {
             listContainer.innerHTML = chapterHighlights.map((hl, idx) => `
-                <div class="highlight-item-card hl-card-${hl.color}" style="background: var(--color-base-bg); border: 1px solid var(--color-border); border-left: 4px solid ${hl.color === 'yellow' ? '#facc15' : (hl.color === 'pink' ? '#f472b6' : '#4ade80')}; border-radius: 0.75rem; padding: 1rem; margin-bottom: 0.85rem;">
+                <div class="highlight-item-card hl-card-${hl.color}" style="background: var(--color-base-bg); border: 1px solid var(--color-border); border-left: 5px solid ${hl.color === 'yellow' ? '#facc15' : (hl.color === 'pink' ? '#f472b6' : '#4ade80')}; border-radius: 0.85rem; padding: 1.1rem; margin-bottom: 0.85rem; box-shadow: var(--shadow-sm); text-align: left;">
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-                        <span style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; color: var(--color-text-secondary);"><i class="fas fa-bookmark"></i> Passage #${idx + 1} (${hl.time})</span>
+                        <span style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; color: var(--color-text-secondary); display: flex; align-items: center; gap: 0.35rem;">
+                            <i class="fas fa-bookmark" style="color: ${hl.color === 'yellow' ? '#eab308' : (hl.color === 'pink' ? '#ec4899' : '#10b981')};"></i> Passage #${idx + 1}
+                        </span>
+                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                            <span style="font-size: 0.75rem; color: var(--color-text-secondary);">${hl.time}</span>
+                            <button onclick="deleteSingleHighlight('${hl.id}')" style="background: transparent; border: none; color: var(--color-danger, #ef4444); cursor: pointer; font-size: 0.85rem; padding: 0.2rem;" title="Delete highlight">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                        </div>
                     </div>
-                    <blockquote style="margin: 0 0 0.5rem 0; font-size: 0.95rem; font-style: italic; color: var(--color-text-default); line-height: 1.5;">"${hl.text}"</blockquote>
-                    ${hl.note ? `<div style="font-size: 0.85rem; background: var(--color-content-bg); padding: 0.5rem 0.75rem; border-radius: 0.5rem; color: var(--color-text-default); border: 1px dashed var(--color-border);"><strong style="color: var(--color-primary);"><i class="fas fa-sticky-note"></i> Note:</strong> ${hl.note}</div>` : ''}
+                    <blockquote style="margin: 0 0 0.6rem 0; font-size: 0.95rem; font-style: italic; color: var(--color-text-default); line-height: 1.6; border-left: 2px solid var(--color-border); padding-left: 0.75rem;">"${hl.text}"</blockquote>
+                    ${hl.note ? `<div style="font-size: 0.85rem; background: var(--color-content-bg); padding: 0.5rem 0.75rem; border-radius: 0.5rem; color: var(--color-text-default); border: 1px dashed var(--color-border); margin-top: 0.5rem;"><strong style="color: var(--color-primary);"><i class="fas fa-sticky-note"></i> Note:</strong> ${hl.note}</div>` : ''}
                 </div>
             `).join('');
         }
     }
+
+    window.deleteSingleHighlight = function(id) {
+        chapterHighlights = chapterHighlights.filter(h => h.id !== id);
+        try {
+            localStorage.setItem(HL_STORAGE_KEY, JSON.stringify(chapterHighlights));
+        } catch(e) {}
+        
+        // Remove mark element in DOM
+        const mark = document.querySelector(`mark[data-hl-id="${id}"]`);
+        if (mark) {
+            const parent = mark.parentNode;
+            while (mark.firstChild) {
+                parent.insertBefore(mark.firstChild, mark);
+            }
+            parent.removeChild(mark);
+        }
+
+        renderHighlightsList();
+    };
 
     window.openHighlightsModal = function() {
         const vocabModal = document.getElementById("vocab-modal");
@@ -880,8 +904,8 @@ document.addEventListener("DOMContentLoaded", () => {
         if (vocabModal && tabHighlights) {
             buildVocabList();
             buildQuiz();
-            tabHighlights.click();
             vocabModal.classList.remove("hidden");
+            tabHighlights.click();
         }
     };
 
@@ -894,6 +918,15 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!confirm("Are you sure you want to clear all highlights for this chapter?")) return;
         chapterHighlights = [];
         try { localStorage.removeItem(HL_STORAGE_KEY); } catch(e) {}
+        
+        document.querySelectorAll('mark.reader-highlight').forEach(mark => {
+            const parent = mark.parentNode;
+            while (mark.firstChild) {
+                parent.insertBefore(mark.firstChild, mark);
+            }
+            parent.removeChild(mark);
+        });
+
         renderHighlightsList();
     };
 
@@ -1260,9 +1293,12 @@ document.addEventListener("DOMContentLoaded", () => {
         openVocabBtn.addEventListener("click", () => {
             buildVocabList();
             buildQuiz();
+            renderHighlightsList();
             
-            // Default to Vocab List Tab
-            if (tabVocabList) tabVocabList.click();
+            // Default to Vocab List Tab if nothing active
+            if (tabVocabList && (!tabHighlights || !tabHighlights.classList.contains("active"))) {
+                tabVocabList.click();
+            }
 
             vocabModal.classList.remove("hidden");
         });
@@ -1276,84 +1312,63 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Tab bindings
-    const tabHighlights = document.getElementById("tab-highlights");
-    const vocabHighlightsContainer = document.getElementById("vocab-highlights-container");
-
-    if (tabVocabList && tabVocabFlash && tabQuiz) {
-        tabVocabList.addEventListener("click", () => {
-            tabVocabList.classList.add("active");
-            if (tabHighlights) tabHighlights.classList.remove("active");
-            tabVocabFlash.classList.remove("active");
-            if (tabQuiz) tabQuiz.classList.remove("active");
-
-            vocabListContainer.classList.remove("hidden");
-            vocabFlashContainer.classList.add("hidden");
-            if (quizContainer) quizContainer.classList.add("hidden");
-            if (vocabHighlightsContainer) vocabHighlightsContainer.classList.add("hidden");
-
-            vocabListContainer.style.display = "flex";
-            vocabFlashContainer.style.display = "none";
-            if (quizContainer) quizContainer.style.display = "none";
-            if (vocabHighlightsContainer) vocabHighlightsContainer.style.display = "none";
+    // Tab bindings inside Study Guide Modal
+    function hideAllVocabTabs() {
+        [tabVocabList, tabHighlights, tabVocabFlash, tabQuiz].forEach(tab => {
+            if (tab) tab.classList.remove("active");
         });
+        [vocabListContainer, vocabHighlightsContainer, vocabFlashContainer, quizContainer].forEach(container => {
+            if (container) {
+                container.classList.add("hidden");
+                container.style.display = "none";
+            }
+        });
+    }
 
-        if (tabHighlights && vocabHighlightsContainer) {
-            tabHighlights.addEventListener("click", () => {
-                tabHighlights.classList.add("active");
-                tabVocabList.classList.remove("active");
-                tabVocabFlash.classList.remove("active");
-                if (tabQuiz) tabQuiz.classList.remove("active");
+    if (tabVocabList) {
+        tabVocabList.addEventListener("click", () => {
+            hideAllVocabTabs();
+            tabVocabList.classList.add("active");
+            if (vocabListContainer) {
+                vocabListContainer.classList.remove("hidden");
+                vocabListContainer.style.display = "flex";
+            }
+        });
+    }
 
-                renderHighlightsList();
-
-                vocabListContainer.classList.add("hidden");
-                vocabFlashContainer.classList.add("hidden");
-                if (quizContainer) quizContainer.classList.add("hidden");
+    if (tabHighlights) {
+        tabHighlights.addEventListener("click", () => {
+            hideAllVocabTabs();
+            tabHighlights.classList.add("active");
+            renderHighlightsList();
+            if (vocabHighlightsContainer) {
                 vocabHighlightsContainer.classList.remove("hidden");
-
-                vocabListContainer.style.display = "none";
-                vocabFlashContainer.style.display = "none";
-                if (quizContainer) quizContainer.style.display = "none";
                 vocabHighlightsContainer.style.display = "flex";
-            });
-        }
+            }
+        });
+    }
 
+    if (tabVocabFlash) {
         tabVocabFlash.addEventListener("click", () => {
+            hideAllVocabTabs();
             tabVocabFlash.classList.add("active");
-            tabVocabList.classList.remove("active");
-            if (tabHighlights) tabHighlights.classList.remove("active");
-            if (tabQuiz) tabQuiz.classList.remove("active");
-
-            vocabListContainer.classList.add("hidden");
-            vocabFlashContainer.classList.remove("hidden");
-            if (quizContainer) quizContainer.classList.add("hidden");
-            if (vocabHighlightsContainer) vocabHighlightsContainer.classList.add("hidden");
-
-            vocabListContainer.style.display = "none";
-            vocabFlashContainer.style.display = "flex";
-            if (quizContainer) quizContainer.style.display = "none";
-            if (vocabHighlightsContainer) vocabHighlightsContainer.style.display = "none";
-            
+            if (vocabFlashContainer) {
+                vocabFlashContainer.classList.remove("hidden");
+                vocabFlashContainer.style.display = "flex";
+            }
             currentFlashIndex = 0;
             updateFlashcard();
         });
+    }
 
+    if (tabQuiz) {
         tabQuiz.addEventListener("click", () => {
+            hideAllVocabTabs();
             tabQuiz.classList.add("active");
-            tabVocabList.classList.remove("active");
-            if (tabHighlights) tabHighlights.classList.remove("active");
-            tabVocabFlash.classList.remove("active");
-
-            vocabListContainer.classList.add("hidden");
-            vocabFlashContainer.classList.add("hidden");
-            if (quizContainer) quizContainer.classList.remove("hidden");
-            if (vocabHighlightsContainer) vocabHighlightsContainer.classList.add("hidden");
-
-            vocabListContainer.style.display = "none";
-            vocabFlashContainer.style.display = "none";
-            if (quizContainer) quizContainer.style.display = "flex";
-            if (vocabHighlightsContainer) vocabHighlightsContainer.style.display = "none";
+            if (quizContainer) {
+                quizContainer.classList.remove("hidden");
+                quizContainer.style.display = "flex";
+            }
         });
     }
 
