@@ -263,8 +263,15 @@ if ($bookId === '') {
                 if (is_file($creditsJsonPath)) {
                     $creditsData = json_decode(file_get_contents($creditsJsonPath), true);
                     if (is_array($creditsData) && isset($creditsData[$bookId]) && trim($creditsData[$bookId]) !== '') {
+                        $rawCredits = $creditsData[$bookId];
+                        $escapedCredits = htmlspecialchars($rawCredits, ENT_QUOTES, 'UTF-8');
+                        $clickableCredits = preg_replace(
+                            '/(https?:\/\/[^\s\)\<\>]+)/i',
+                            '<a href="$1" target="_blank" rel="noopener noreferrer" style="color: var(--color-primary); text-decoration: underline;">$1</a>',
+                            $escapedCredits
+                        );
                         $contentHtml .= '<div class="book-credits-container" style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px dashed var(--color-border); font-size: 0.85rem; color: var(--color-text-secondary); line-height: 1.5;">' . 
-                                        '<strong>Credits & Sources:</strong> <span class="book-credits-text">' . htmlspecialchars($creditsData[$bookId]) . '</span>' .
+                                        '<strong>Credits & Sources:</strong> <span class="book-credits-text">' . $clickableCredits . '</span>' .
                                         '</div>';
                     }
                 }
