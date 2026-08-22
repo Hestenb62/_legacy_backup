@@ -4,9 +4,19 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-$requestUri = $_SERVER['REQUEST_URI'] ?? '';
+$requestUri = $_SERVER['REQUEST_URI'] ?? (getenv('REQUEST_URI') ?: '');
 $requestPath = explode('?', $requestUri)[0];
-$queryString = $_SERVER['QUERY_STRING'] ?? '';
+$queryString = $_SERVER['QUERY_STRING'] ?? (getenv('QUERY_STRING') ?: '');
+
+// If QUERY_STRING is empty but REQUEST_URI contains a query, extract it
+if (empty($queryString) && strpos($requestUri, '?') !== false) {
+    $queryString = substr($requestUri, strpos($requestUri, '?') + 1);
+}
+
+// Fallback to CLI arguments if executed in CLI mode without QUERY_STRING
+if (empty($queryString) && !empty($_SERVER['argv'][1])) {
+    $queryString = $_SERVER['argv'][1];
+}
 
 // Populate $_GET manually if empty (e.g. running under Five Server with CLI php binary)
 if (empty($_GET) && !empty($queryString)) {
@@ -74,12 +84,14 @@ $error = '';
 $contentHtml = '';
 $bookTitle = '';
 $bookAuthor = '';
+$chapter = 'chapter-1';
 $chapterNum = 1;
 $totalChapters = 0;
 $isTeacherUnlocked = isset($_SESSION['teacher_unlocked']) && $_SESSION['teacher_unlocked'] === true;
 $authError = '';
 $quizQuestions = [];
 $vocabList = [];
+$bookToc = [];
 
 if ($bookId === '') {
     $error = 'No book specified.';
@@ -88,6 +100,13 @@ if ($bookId === '') {
 } else {
     $bookTitle = $book['title'] ?? 'Untitled';
     $bookAuthor = $book['author'] ?? 'Unknown Author';
+    $hasTeacherResources = !empty($book['hasTeacherResources']);
+
+    // Load Table of Contents metadata if present
+    $tocJsonPath = __DIR__ . '/../assets/' . $bookId . '-toc.json';
+    if (is_file($tocJsonPath)) {
+        $bookToc = json_decode(file_get_contents($tocJsonPath), true) ?: [];
+    }
 
     // Scan for chapters in book folder
     $bookFolder = __DIR__ . '/' . $bookId;
@@ -128,8 +147,8 @@ if ($bookId === '') {
             }
         }
 
-        // Handle teacher resources password authorization
-        if ($chapterNum === $totalChapters) {
+        // Handle teacher resources password authorization only if book has teacher resources enabled
+        if ($hasTeacherResources && $chapterNum === $totalChapters) {
             if (isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['teacher_password'])) {
                 if (trim($_POST['teacher_password']) === '8675309') {
                     $_SESSION['teacher_unlocked'] = true;
@@ -224,7 +243,7 @@ if ($bookId === '') {
 
 if ($error !== '') {
     $pageTitle = "Error | Hesten's Learning Library";
-    include '../../src/header.php';
+    include __DIR__ . '/../../src/header.php';
     ?>
     <main id="main-content" class="library-main reader-main-layout">
         <div class="reader-back-nav">
@@ -240,7 +259,7 @@ if ($error !== '') {
         </div>
     </main>
     <?php
-    include '../../src/footer.php';
+    include __DIR__ . '/../../src/footer.php';
 } else {
     // Render unified template
     require __DIR__ . '/reader_template.php';

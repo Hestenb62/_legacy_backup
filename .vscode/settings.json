@@ -1,5 +1,8 @@
 {
   "[php]": {
     "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
-  }
+  },
+  "fiveserver.php": "C:\\xampp\\php\\php.exe",
+  "php.validate.executablePath": "C:\\xampp\\php\\php.exe"
 }
+

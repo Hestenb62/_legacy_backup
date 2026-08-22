@@ -13,6 +13,7 @@ if (!defined('ABSPATH')) {
 if (!isset($bookId)) $bookId = 'default';
 if (!isset($bookTitle)) $bookTitle = 'Untitled Book';
 if (!isset($bookAuthor)) $bookAuthor = 'Unknown Author';
+if (!isset($chapter)) $chapter = 'chapter-1';
 if (!isset($chapterNum)) $chapterNum = 1;
 if (!isset($totalChapters)) $totalChapters = 1;
 if (!isset($contentHtml)) $contentHtml = '<p>No content available.</p>';
@@ -20,6 +21,13 @@ if (!isset($isTeacherUnlocked)) $isTeacherUnlocked = false;
 if (!isset($authError)) $authError = '';
 if (!isset($quizQuestions)) $quizQuestions = [];
 if (!isset($vocabList)) $vocabList = [];
+if (!isset($book) || !is_array($book)) $book = [];
+if (!isset($bookToc) || !is_array($bookToc)) $bookToc = [];
+
+$hasTeacherResources = !empty($book['hasTeacherResources']);
+$isTeacherChapter = ($hasTeacherResources && $totalChapters > 1 && $chapterNum === $totalChapters);
+
+$currentChapterTitle = $bookToc[$chapterNum]['title'] ?? ($isTeacherChapter ? "Teacher Resources" : ($totalChapters > 1 ? "Chapter $chapterNum" : $bookTitle));
 
 // Determine next/prev links
 $prevChapterNum = $chapterNum - 1;
@@ -31,7 +39,7 @@ $prevUrl = $hasPrev ? "/library/read/index.php?book=$bookId&chapter=chapter-$pre
 $nextUrl = $hasNext ? "/library/read/index.php?book=$bookId&chapter=chapter-$nextChapterNum" : "#";
 
 // Page Metadata for Header
-$pageTitle = "$bookTitle - " . ($chapterNum === $totalChapters && $totalChapters > 1 && $isTeacherUnlocked ? "Teacher Resources" : "Chapter $chapterNum") . " | Hesten's Learning";
+$pageTitle = "$bookTitle - $currentChapterTitle | Hesten's Learning";
 $pageDescription = "Read $bookTitle by $bookAuthor online at Hesten's Learning Library.";
 $pageKeywords = "reading, ebook, online reader, accessible learning, education";
 $pageAuthor = $bookAuthor;
@@ -144,8 +152,21 @@ include ABSPATH . 'src/header.php';
           aria-label="Previous Chapter">
           <i class="fas fa-chevron-left"></i> Prev
         </a>
-        <span id="current-chapter" style="font-weight: 700; font-size: 0.9rem; padding: 0 0.5rem;">
-          <?php echo ($totalChapters > 1 && $chapterNum === $totalChapters) ? 'Teacher' : 'Ch ' . $chapterNum; ?>
+        <span id="current-chapter" style="font-weight: 700; font-size: 0.9rem; padding: 0 0.5rem; max-width: 140px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block; vertical-align: middle;" title="<?php echo htmlspecialchars($currentChapterTitle); ?>">
+          <?php 
+            if ($isTeacherChapter) {
+                echo 'Teacher';
+            } elseif (!empty($bookToc[$chapterNum]['title'])) {
+                $t = $bookToc[$chapterNum]['title'];
+                if (preg_match('/^(Chapter \d+|Part [IVXLCDM]+|Preface)/i', $t, $m)) {
+                    echo htmlspecialchars($m[1]);
+                } else {
+                    echo 'Ch ' . $chapterNum;
+                }
+            } else {
+                echo ($totalChapters > 1) ? 'Ch ' . $chapterNum : 'Read';
+            }
+          ?>
         </span>
         <a href="<?php echo $nextUrl; ?>"
           id="next-chapter"
@@ -240,7 +261,7 @@ include ABSPATH . 'src/header.php';
 
     <!-- Reading Content Container -->
     <article id="book-content" class="prose prose-lg dark:prose-invert max-w-none text-text-default">
-      <?php if ($totalChapters > 1 && $chapterNum === $totalChapters && !$isTeacherUnlocked): ?>
+      <?php if ($isTeacherChapter && !$isTeacherUnlocked): ?>
         <!-- Teacher Resources Password Form -->
         <div class="bg-content-bg p-8 rounded-[2rem] border border-accent/20 shadow-2xl max-w-md mx-auto text-center" style="background: var(--color-content-bg); border: 1px solid var(--color-border); box-shadow: var(--shadow-xl);">
           <div class="modal-icon-circle circle-lock mx-auto mb-6" style="margin: 0 auto 1.5rem auto;">
@@ -262,7 +283,7 @@ include ABSPATH . 'src/header.php';
       <?php else: ?>
         <!-- Output Chapter Header and Reading Time Badge -->
         <div class="chapter-title text-3xl font-bold text-center text-primary" style="font-size: 2rem; font-weight: 800; color: var(--color-primary); text-align: center; margin-bottom: 0.5rem;">
-          <?php echo ($totalChapters > 1 && $chapterNum === $totalChapters) ? "Teacher Resources" : "Chapter " . $chapterNum; ?>
+          <?php echo htmlspecialchars($currentChapterTitle); ?>
         </div>
 
         <div class="chapter-meta-row" style="text-align: center; margin-bottom: 2rem;">
@@ -277,15 +298,23 @@ include ABSPATH . 'src/header.php';
 
     <!-- Bottom Chapter Navigation -->
     <?php if ($totalChapters > 1): ?>
-      <div class="reader-bottom-nav" style="margin-top: 3rem; display: flex; justify-content: space-between; align-items: center; padding-top: 1.5rem; border-top: 1px solid var(--color-border);">
+      <div class="reader-bottom-nav" style="margin-top: 3rem; display: flex; justify-content: space-between; align-items: center; padding-top: 1.5rem; border-top: 1px solid var(--color-border); flex-wrap: wrap; gap: 1rem;">
         <a href="<?php echo $prevUrl; ?>" class="controls-nav-btn <?php echo !$hasPrev ? 'disabled' : ''; ?>" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none;">
-          <i class="fas fa-chevron-left"></i> Previous Chapter
+          <i class="fas fa-chevron-left"></i> Previous
         </a>
-        <span style="font-weight: 700; color: var(--color-text-secondary); font-size: 0.95rem;">
-          <?php echo $chapterNum === $totalChapters ? 'Teacher Resources' : 'Chapter ' . $chapterNum . ' of ' . $totalChapters; ?>
+        <span style="font-weight: 700; color: var(--color-text-secondary); font-size: 0.95rem; text-align: center;">
+          <?php 
+            if (!empty($bookToc[$chapterNum]['title'])) {
+                echo htmlspecialchars($bookToc[$chapterNum]['title']);
+            } elseif ($isTeacherChapter) {
+                echo 'Teacher Resources';
+            } else {
+                echo 'Chapter ' . $chapterNum . ' of ' . $totalChapters;
+            }
+          ?>
         </span>
         <a href="<?php echo $nextUrl; ?>" class="controls-nav-btn <?php echo !$hasNext ? 'disabled' : ''; ?>" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none;">
-          Next Chapter <i class="fas fa-chevron-right"></i>
+          Next <i class="fas fa-chevron-right"></i>
         </a>
       </div>
     <?php endif; ?>
@@ -375,18 +404,79 @@ include ABSPATH . 'src/header.php';
         <h2 id="toc-title" style="font-family: var(--site-font-family, 'Outfit', sans-serif); font-weight: 800; font-size: 1.5rem;">Table of Contents</h2>
         <button class="toc-close" id="close-toc-modal" aria-label="Close menu">&times;</button>
       </div>
-      <div class="toc-grid">
-        <?php for ($i = 1; $i < $totalChapters; $i++): ?>
-          <a href="/library/read/index.php?book=<?php echo urlencode($bookId); ?>&chapter=chapter-<?php echo $i; ?>"
-            class="toc-link <?php echo ($i === $chapterNum) ? 'active' : ''; ?>"
-            data-chapter="<?php echo $i; ?>">CH <?php echo $i; ?></a>
-        <?php endfor; ?>
-        <a href="/library/read/index.php?book=<?php echo urlencode($bookId); ?>&chapter=chapter-<?php echo $totalChapters; ?>"
-          class="toc-link toc-teacher-btn <?php echo ($chapterNum === $totalChapters) ? 'active' : ''; ?>"
-          data-chapter="<?php echo $totalChapters; ?>">
-          <i class="fas fa-chalkboard-teacher mr-2"></i> TEACHER RESOURCES
-        </a>
-      </div>
+
+      <?php if (!empty($bookToc)): ?>
+        <!-- Hierarchical / Detailed TOC -->
+        <div class="toc-list-structured" style="overflow-y: auto; max-height: calc(100vh - 120px); padding-right: 0.5rem; text-align: left;">
+          <?php
+          $currentVolume = null;
+          $currentPart = null;
+          foreach ($bookToc as $itemNum => $item):
+              $itemVol = $item['volume'] ?? '';
+              $itemPart = $item['part'] ?? '';
+              $itemTitle = $item['title'] ?? "Chapter $itemNum";
+              $isActive = ($itemNum === $chapterNum);
+
+              if ($itemVol !== '' && $itemVol !== $currentVolume):
+                  $currentVolume = $itemVol;
+                  $currentPart = null;
+          ?>
+                  <div class="toc-volume-header" style="font-weight: 900; font-size: 1.1rem; color: var(--color-primary); margin: 1.5rem 0 0.5rem 0; padding-bottom: 0.25rem; border-bottom: 2px solid var(--color-primary); display: flex; align-items: center; gap: 0.5rem;">
+                    <i class="fas fa-layer-group"></i> <?php echo htmlspecialchars($itemVol); ?>
+                  </div>
+          <?php 
+              endif;
+
+              if ($itemPart !== '' && $itemPart !== $currentPart && $itemPart !== $itemTitle):
+                  $currentPart = $itemPart;
+          ?>
+                  <div class="toc-part-header" style="font-weight: 800; font-size: 0.9rem; color: var(--color-secondary); margin: 0.85rem 0 0.25rem 0.25rem; display: flex; align-items: center; gap: 0.4rem;">
+                    <i class="fas fa-bookmark"></i> <?php echo htmlspecialchars($itemPart); ?>
+                  </div>
+          <?php 
+              endif;
+          ?>
+              <a href="/library/read/index.php?book=<?php echo urlencode($bookId); ?>&chapter=chapter-<?php echo $itemNum; ?>"
+                 class="toc-item-row <?php echo $isActive ? 'active' : ''; ?>"
+                 style="display: flex; align-items: center; gap: 0.75rem; padding: 0.65rem 0.85rem; border-radius: 0.5rem; margin-bottom: 0.35rem; text-decoration: none; color: var(--color-text-default); background: <?php echo $isActive ? 'var(--color-primary-light, rgba(79, 70, 229, 0.15))' : 'transparent'; ?>; border: 1px solid <?php echo $isActive ? 'var(--color-primary)' : 'var(--color-border, #e5e7eb)'; ?>; font-weight: <?php echo $isActive ? '800' : '500'; ?>; transition: all 0.15s ease;">
+                <span style="font-size: 0.8rem; font-weight: 800; color: var(--color-primary); min-width: 1.75rem;">#<?php echo $itemNum; ?></span>
+                <span style="flex: 1; font-size: 0.88rem; line-height: 1.35;"><?php echo htmlspecialchars($itemTitle); ?></span>
+                <?php if ($isActive): ?>
+                  <i class="fas fa-check" style="color: var(--color-primary); font-size: 0.85rem;"></i>
+                <?php endif; ?>
+              </a>
+          <?php endforeach; ?>
+
+          <?php if ($hasTeacherResources): ?>
+            <a href="/library/read/index.php?book=<?php echo urlencode($bookId); ?>&chapter=chapter-<?php echo $totalChapters; ?>"
+               class="toc-item-row toc-teacher-btn <?php echo ($chapterNum === $totalChapters) ? 'active' : ''; ?>"
+               style="display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem; border-radius: 0.5rem; margin-top: 1rem; text-decoration: none; color: #d97706; background: rgba(217, 119, 6, 0.1); border: 1px solid #d97706; font-weight: 800;">
+              <i class="fas fa-chalkboard-teacher"></i> <span>TEACHER RESOURCES</span>
+            </a>
+          <?php endif; ?>
+        </div>
+      <?php else: ?>
+        <!-- Standard Grid TOC -->
+        <div class="toc-grid">
+          <?php 
+            $endLimit = $hasTeacherResources ? ($totalChapters - 1) : $totalChapters;
+            for ($i = 1; $i <= $endLimit; $i++): 
+          ?>
+            <a href="/library/read/index.php?book=<?php echo urlencode($bookId); ?>&chapter=chapter-<?php echo $i; ?>"
+              class="toc-link <?php echo ($i === $chapterNum) ? 'active' : ''; ?>"
+              data-chapter="<?php echo $i; ?>">CH <?php echo $i; ?></a>
+          <?php endfor; ?>
+
+          <?php if ($hasTeacherResources): ?>
+            <a href="/library/read/index.php?book=<?php echo urlencode($bookId); ?>&chapter=chapter-<?php echo $totalChapters; ?>"
+              class="toc-link toc-teacher-btn <?php echo ($chapterNum === $totalChapters) ? 'active' : ''; ?>"
+              data-chapter="<?php echo $totalChapters; ?>">
+              <i class="fas fa-chalkboard-teacher mr-2"></i> TEACHER RESOURCES
+            </a>
+          <?php endif; ?>
+        </div>
+      <?php endif; ?>
+
     </div>
   </div>
 <?php endif; ?>

@@ -23,7 +23,8 @@
             "authorBio": "George Orwell (Eric Arthur Blair) was an English novelist and critic known for his opposition to totalitarianism.",
             "introWhy": "Orwell wrote the book to warn Western nations of the dangers of totalitarian regimes and expansionist surveillance states.",
             "introHow": "He composed the manuscript on the isolated Scottish island of Jura while battling severe tuberculosis and physically writing long hours.",
-            "introWhat": "A chilling dystopian projection of a world ruled by constant surveillance, cognitive doublethink, and total party control."
+            "introWhat": "A chilling dystopian projection of a world ruled by constant surveillance, cognitive doublethink, and total party control.",
+            "hasTeacherResources": true
         },
         {
             "id": "pride-and-prejudice",
