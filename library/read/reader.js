@@ -849,10 +849,9 @@ document.addEventListener("DOMContentLoaded", () => {
         // Highlight restores or study list
     }
 
-    window.openHighlightsModal = function() {
-        const modal = document.getElementById("highlights-modal");
+    function renderHighlightsList() {
         const listContainer = document.getElementById("highlights-list-container");
-        if (!modal || !listContainer) return;
+        if (!listContainer) return;
 
         if (chapterHighlights.length === 0) {
             listContainer.innerHTML = `
@@ -873,20 +872,29 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
             `).join('');
         }
+    }
 
-        modal.classList.remove("hidden");
+    window.openHighlightsModal = function() {
+        const vocabModal = document.getElementById("vocab-modal");
+        const tabHighlights = document.getElementById("tab-highlights");
+        if (vocabModal && tabHighlights) {
+            buildVocabList();
+            buildQuiz();
+            tabHighlights.click();
+            vocabModal.classList.remove("hidden");
+        }
     };
 
     window.closeHighlightsModal = function() {
-        const modal = document.getElementById("highlights-modal");
-        if (modal) modal.classList.add("hidden");
+        const vocabModal = document.getElementById("vocab-modal");
+        if (vocabModal) vocabModal.classList.add("hidden");
     };
 
     window.clearChapterHighlights = function() {
         if (!confirm("Are you sure you want to clear all highlights for this chapter?")) return;
         chapterHighlights = [];
         try { localStorage.removeItem(HL_STORAGE_KEY); } catch(e) {}
-        window.openHighlightsModal();
+        renderHighlightsList();
     };
 
     window.exportHighlightsMarkdown = function() {
@@ -1269,33 +1277,63 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Tab bindings
+    const tabHighlights = document.getElementById("tab-highlights");
+    const vocabHighlightsContainer = document.getElementById("vocab-highlights-container");
+
     if (tabVocabList && tabVocabFlash && tabQuiz) {
         tabVocabList.addEventListener("click", () => {
             tabVocabList.classList.add("active");
+            if (tabHighlights) tabHighlights.classList.remove("active");
             tabVocabFlash.classList.remove("active");
             if (tabQuiz) tabQuiz.classList.remove("active");
 
             vocabListContainer.classList.remove("hidden");
             vocabFlashContainer.classList.add("hidden");
             if (quizContainer) quizContainer.classList.add("hidden");
+            if (vocabHighlightsContainer) vocabHighlightsContainer.classList.add("hidden");
 
             vocabListContainer.style.display = "flex";
             vocabFlashContainer.style.display = "none";
             if (quizContainer) quizContainer.style.display = "none";
+            if (vocabHighlightsContainer) vocabHighlightsContainer.style.display = "none";
         });
+
+        if (tabHighlights && vocabHighlightsContainer) {
+            tabHighlights.addEventListener("click", () => {
+                tabHighlights.classList.add("active");
+                tabVocabList.classList.remove("active");
+                tabVocabFlash.classList.remove("active");
+                if (tabQuiz) tabQuiz.classList.remove("active");
+
+                renderHighlightsList();
+
+                vocabListContainer.classList.add("hidden");
+                vocabFlashContainer.classList.add("hidden");
+                if (quizContainer) quizContainer.classList.add("hidden");
+                vocabHighlightsContainer.classList.remove("hidden");
+
+                vocabListContainer.style.display = "none";
+                vocabFlashContainer.style.display = "none";
+                if (quizContainer) quizContainer.style.display = "none";
+                vocabHighlightsContainer.style.display = "flex";
+            });
+        }
 
         tabVocabFlash.addEventListener("click", () => {
             tabVocabFlash.classList.add("active");
             tabVocabList.classList.remove("active");
+            if (tabHighlights) tabHighlights.classList.remove("active");
             if (tabQuiz) tabQuiz.classList.remove("active");
 
             vocabListContainer.classList.add("hidden");
             vocabFlashContainer.classList.remove("hidden");
             if (quizContainer) quizContainer.classList.add("hidden");
+            if (vocabHighlightsContainer) vocabHighlightsContainer.classList.add("hidden");
 
             vocabListContainer.style.display = "none";
             vocabFlashContainer.style.display = "flex";
             if (quizContainer) quizContainer.style.display = "none";
+            if (vocabHighlightsContainer) vocabHighlightsContainer.style.display = "none";
             
             currentFlashIndex = 0;
             updateFlashcard();
@@ -1304,15 +1342,18 @@ document.addEventListener("DOMContentLoaded", () => {
         tabQuiz.addEventListener("click", () => {
             tabQuiz.classList.add("active");
             tabVocabList.classList.remove("active");
+            if (tabHighlights) tabHighlights.classList.remove("active");
             tabVocabFlash.classList.remove("active");
 
             vocabListContainer.classList.add("hidden");
             vocabFlashContainer.classList.add("hidden");
             if (quizContainer) quizContainer.classList.remove("hidden");
+            if (vocabHighlightsContainer) vocabHighlightsContainer.classList.add("hidden");
 
             vocabListContainer.style.display = "none";
             vocabFlashContainer.style.display = "none";
             if (quizContainer) quizContainer.style.display = "flex";
+            if (vocabHighlightsContainer) vocabHighlightsContainer.style.display = "none";
         });
     }
 

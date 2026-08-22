@@ -155,7 +155,7 @@ include ABSPATH . 'src/header.php';
         </a>
       </div>
 
-      <!-- Center: Text to Speech (TTS) & Reading Mode Controls -->
+      <!-- Center: Text to Speech (TTS) Controls -->
       <div class="controls-speech-group">
         <button id="tts-speak-btn" class="speech-btn" title="Listen to Chapter Aloud">
           <i class="fas fa-volume-up"></i> Listen
@@ -163,31 +163,16 @@ include ABSPATH . 'src/header.php';
         <button id="tts-stop-btn" class="speech-btn speech-btn-stop hidden" title="Stop Reading">
           <i class="fas fa-stop"></i> Stop
         </button>
-
-        <!-- Bionic Reading Mode Toggle -->
-        <button id="toggle-bionic-btn" class="speech-btn speech-btn-bionic" title="Toggle Bionic / Fixation Reading Mode">
-          <i class="fas fa-bolt"></i> <span>Bionic</span>
-        </button>
       </div>
 
       <!-- Right: Settings and Study Guides -->
       <div class="controls-tools-group">
-        <!-- Reading Time Indicator -->
-        <span id="reading-time-badge" class="reader-time-badge" title="Estimated Reading Time">
-          <i class="far fa-clock"></i> <span id="reading-time-text">-- min</span>
-        </span>
-
         <!-- Citation Generator -->
         <button id="open-citation-btn" class="tool-btn" title="Cite This Chapter" onclick="openChapterCitationModal()">
           <i class="fas fa-quote-right"></i>
         </button>
 
-        <!-- Highlight & Notes Export -->
-        <button id="open-highlights-btn" class="tool-btn" title="My Highlights & Notes" onclick="openHighlightsModal()">
-          <i class="fas fa-highlighter"></i>
-        </button>
-
-        <button id="open-vocab-btn" class="tool-btn tool-btn-vocab" title="Study Guide & Quizzes">
+        <button id="open-vocab-btn" class="tool-btn tool-btn-vocab" title="Study Guide, Notes & Quizzes">
           <i class="fas fa-graduation-cap"></i>
         </button>
         <button id="open-settings-btn" class="tool-btn tool-btn-settings" title="Typography & Audio Settings">
@@ -200,7 +185,7 @@ include ABSPATH . 'src/header.php';
           </button>
         <?php endif; ?>
 
-        <!-- Typography Settings Panel Dropdown -->
+        <!-- Typography & Text Customization Panel Dropdown -->
         <div id="settings-panel" class="hidden">
           <h4 class="settings-section-title">Font Family</h4>
           <div class="settings-btn-row">
@@ -235,6 +220,13 @@ include ABSPATH . 'src/header.php';
             <button class="theme-dot-btn active dot-default settings-theme" data-theme="default" title="Light Theme"></button>
             <button class="theme-dot-btn dot-sepia settings-theme" data-theme="sepia" title="Sepia Theme"></button>
             <button class="theme-dot-btn dot-oled settings-theme" data-theme="dark" title="OLED Dark Theme"></button>
+          </div>
+
+          <h4 class="settings-section-title" style="margin-top: 1rem;">Reading Mode</h4>
+          <div class="settings-btn-row">
+            <button id="toggle-bionic-btn" class="settings-row-btn speech-btn-bionic" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.5rem 0.75rem;" title="Toggle Bionic / Fixation Reading Mode">
+              <i class="fas fa-bolt"></i> <span>Bionic Fixation Reading</span>
+            </button>
           </div>
 
           <h4 class="settings-section-title" style="margin-top: 1rem;">Speech Speed</h4>
@@ -275,12 +267,16 @@ include ABSPATH . 'src/header.php';
           </form>
         </div>
       <?php else: ?>
-        <!-- Output Chapter Header and HTML content -->
-        <div class="chapter-title text-3xl font-bold text-center mb-8 text-primary" style="font-size: 2rem; font-weight: 800; color: var(--color-primary); text-align: center; margin-bottom: 2rem;">
+        <!-- Output Chapter Header and Reading Time Badge -->
+        <div class="chapter-title text-3xl font-bold text-center text-primary" style="font-size: 2rem; font-weight: 800; color: var(--color-primary); text-align: center; margin-bottom: 0.5rem;">
           <?php echo ($totalChapters > 1 && $chapterNum === $totalChapters) ? "Teacher Resources" : "Chapter " . $chapterNum; ?>
         </div>
 
-
+        <div class="chapter-meta-row" style="text-align: center; margin-bottom: 2rem;">
+          <span id="reading-time-badge" class="reader-time-badge" title="Estimated Reading Time">
+            <i class="far fa-clock"></i> <span id="reading-time-text">Calculating reading time...</span>
+          </span>
+        </div>
 
         <?php echo $contentHtml; ?>
       <?php endif; ?>
@@ -369,39 +365,6 @@ include ABSPATH . 'src/header.php';
           <i class="fas fa-copy"></i> <span id="copy-citation-label">Copy Citation</span>
         </button>
       </div>
-    </div>
-  </div>
-</div>
-
-<!-- Highlights & Notes Export Modal -->
-<div id="highlights-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="highlights-modal-title">
-  <div class="modal-card" style="max-width: 600px;">
-    <div class="modal-card-header">
-      <div class="modal-card-title">
-        <div class="modal-icon-circle" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b;">
-          <i class="fas fa-highlighter"></i>
-        </div>
-        <div style="text-align: left;">
-          <h3 id="highlights-modal-title" style="font-family: var(--site-font-family, 'Outfit', sans-serif); font-size: 1.25rem; font-weight: 800; margin: 0; color: var(--color-text-default);">Chapter Highlights</h3>
-          <p style="color: var(--color-text-secondary); font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; margin: 0.25rem 0 0 0;">Saved Passages & Study Notes</p>
-        </div>
-      </div>
-      <button onclick="closeHighlightsModal()" class="modal-card-close-btn" aria-label="Close highlights modal">
-        <i class="fas fa-times"></i>
-      </button>
-    </div>
-    <div class="modal-body" style="padding: 1.5rem; text-align: left; max-height: 60vh; overflow-y: auto;">
-      <div id="highlights-list-container">
-        <!-- Injected by reader.js -->
-      </div>
-    </div>
-    <div style="padding: 1rem 1.5rem; border-top: 1px solid var(--color-border); display: flex; justify-content: space-between; align-items: center;">
-      <button onclick="clearChapterHighlights()" class="tooltip-btn" style="padding: 0.4rem 0.8rem; font-size: 0.8rem; background: transparent; border: 1px solid var(--color-border); color: var(--color-danger, #ef4444); border-radius: 0.5rem; cursor: pointer;">
-        <i class="fas fa-trash-alt"></i> Clear Highlights
-      </button>
-      <button onclick="exportHighlightsMarkdown()" class="tooltip-btn" style="padding: 0.5rem 1rem; border-radius: 0.5rem; background: var(--color-primary); color: white; border: none; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 0.4rem;">
-        <i class="fas fa-file-export"></i> Export Markdown
-      </button>
     </div>
   </div>
 </div>
@@ -497,16 +460,16 @@ include ABSPATH . 'src/header.php';
   </div>
 </div>
 
-<!-- Study Guide (Vocab, Flashcards, Quiz) Modal -->
-<div id="vocab-modal" class="modal-overlay hidden">
-  <div class="modal-card" style="max-width: 600px;">
+<!-- Study Guide (Vocab, Highlights & Notes, Flashcards, Quiz) Modal -->
+<div id="vocab-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="study-guide-title">
+  <div class="modal-card" style="max-width: 650px;">
     <div class="modal-card-header">
       <div class="modal-card-title">
         <div class="modal-icon-circle circle-vocab">
           <i class="fas fa-graduation-cap"></i>
         </div>
         <div style="text-align: left;">
-          <h3 style="font-family: var(--site-font-family, 'Outfit', sans-serif); font-size: 1.25rem; font-weight: 800; margin: 0; color: var(--color-text-default);">Study Guide</h3>
+          <h3 id="study-guide-title" style="font-family: var(--site-font-family, 'Outfit', sans-serif); font-size: 1.25rem; font-weight: 800; margin: 0; color: var(--color-text-default);">Study Guide & Notes</h3>
           <p style="color: var(--color-text-secondary); font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; margin: 0.25rem 0 0 0;">Chapter Interactive tools</p>
         </div>
       </div>
@@ -514,7 +477,7 @@ include ABSPATH . 'src/header.php';
         <button id="download-vocab-btn" class="tooltip-btn" style="background: var(--color-secondary); padding: 0.5rem 1rem; border-radius: 9999px; font-size: 0.8rem; font-weight: 700; border: none; cursor: pointer; display: inline-flex; align-items: center; gap: 0.4rem;" title="Download word list as TXT">
           <i class="fas fa-download"></i> Download TXT
         </button>
-        <button id="close-vocab-modal" class="modal-card-close-btn">
+        <button id="close-vocab-modal" class="modal-card-close-btn" aria-label="Close study guide">
           <i class="fas fa-times"></i>
         </button>
       </div>
@@ -522,6 +485,7 @@ include ABSPATH . 'src/header.php';
     <!-- Tabs Row -->
     <div class="vocab-tabs-row">
       <button class="vocab-tab-btn active" id="tab-vocab-list">Word List</button>
+      <button class="vocab-tab-btn" id="tab-highlights">Highlights & Notes</button>
       <button class="vocab-tab-btn" id="tab-vocab-flash">Flashcards</button>
       <button class="vocab-tab-btn" id="tab-quiz">Quiz</button>
     </div>
@@ -529,6 +493,21 @@ include ABSPATH . 'src/header.php';
     <!-- Word List View -->
     <div id="vocab-list-container" class="vocab-list">
       <!-- Injected by reader.js -->
+    </div>
+
+    <!-- Highlights & Notes Tab View -->
+    <div id="vocab-highlights-container" class="vocab-list" style="display: none; flex-direction: column; max-height: 55vh; overflow-y: auto;">
+      <div id="highlights-list-container">
+        <!-- Injected by reader.js -->
+      </div>
+      <div style="padding: 1rem 0 0 0; border-top: 1px solid var(--color-border); display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+        <button onclick="clearChapterHighlights()" class="tooltip-btn" style="padding: 0.4rem 0.8rem; font-size: 0.8rem; background: transparent; border: 1px solid var(--color-border); color: var(--color-danger, #ef4444); border-radius: 0.5rem; cursor: pointer;">
+          <i class="fas fa-trash-alt"></i> Clear Highlights
+        </button>
+        <button onclick="exportHighlightsMarkdown()" class="tooltip-btn" style="padding: 0.5rem 1rem; border-radius: 0.5rem; background: var(--color-primary); color: white; border: none; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 0.4rem;">
+          <i class="fas fa-file-export"></i> Export Markdown
+        </button>
+      </div>
     </div>
 
     <!-- Flashcards View -->
