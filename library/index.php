@@ -106,15 +106,16 @@ include '../src/header.php';
 
                 <!-- Real-time Search and Filters -->
                 <div class="library-search-wrapper library-animate-reveal" style="animation-delay: 0.1s;">
-                    <!-- Redesigned Search bar -->
+                    <!-- Search bar -->
                     <div class="library-search-input-container">
-                        <input type="text" id="library-search" aria-label="Search Library" placeholder="Search title, author, or ISBN..." class="library-search-input library-glass-shine">
+                        <input type="text" id="library-search" aria-label="Search Library" placeholder="Search title, author, grade, or curriculum..." class="library-search-input library-glass-shine">
                         <i class="fas fa-search library-search-icon"></i>
                     </div>
 
                     <div class="library-filter-select-container">
                         <select id="category-filter" aria-label="Select Category" class="library-category-select library-glass-shine">
                             <option value="all">All Categories</option>
+                            <option value="saved">⭐ My Reading List</option>
                             <?php foreach (array_keys($categories) as $cat): ?>
                                 <option value="<?php echo htmlspecialchars($cat); ?>"><?php echo htmlspecialchars($cat); ?></option>
                             <?php endforeach; ?>
@@ -124,18 +125,49 @@ include '../src/header.php';
 
                     <div class="library-filter-select-container">
                         <select id="lexile-filter" aria-label="Select Lexile Level" class="library-category-select library-glass-shine">
-                            <option value="all">All Lexile Levels</option>
-                            <option value="easy">Easy (Under 500L)</option>
-                            <option value="medium">Medium (500L - 900L)</option>
-                            <option value="hard">Hard (Above 900L)</option>
+                            <option value="all">All Reading Levels</option>
+                            <option value="easy">Elementary (Under 500L)</option>
+                            <option value="medium">Middle School (500L - 900L)</option>
+                            <option value="hard">High School (Above 900L)</option>
                         </select>
                         <i class="fas fa-graduation-cap library-filter-icon"></i>
+                    </div>
+
+                    <!-- Catalog View Switcher -->
+                    <div class="library-view-switcher" role="group" aria-label="View Mode">
+                        <button id="view-mode-carousel" class="view-switch-btn active" onclick="switchLibraryView('carousel')" title="Carousel Rows View" aria-label="Carousel Rows View">
+                            <i class="fas fa-layer-group"></i>
+                        </button>
+                        <button id="view-mode-grid" class="view-switch-btn" onclick="switchLibraryView('grid')" title="Multi-Column Grid View" aria-label="Multi-Column Grid View">
+                            <i class="fas fa-th-large"></i>
+                        </button>
+                        <button id="view-mode-list" class="view-switch-btn" onclick="switchLibraryView('list')" title="Academic List / Table View" aria-label="Academic List / Table View">
+                            <i class="fas fa-list"></i>
+                        </button>
                     </div>
                 </div>
             </section>
 
+            <!-- Continue Reading Shelf (Populated dynamically from localStorage) -->
+            <section id="continue-reading-shelf" class="continue-reading-section hidden library-animate-reveal">
+                <div class="continue-reading-header">
+                    <div class="continue-reading-title-wrap">
+                        <div class="continue-reading-icon-pulse">
+                            <i class="fas fa-bookmark"></i>
+                        </div>
+                        <div>
+                            <h2 class="continue-reading-title">Jump Back In</h2>
+                            <p class="continue-reading-subtitle">Pick up right where you left off</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="continue-reading-cards" class="continue-reading-grid">
+                    <!-- Injected by library.js -->
+                </div>
+            </section>
+
             <!-- Library Content -->
-            <div class="library-content-container">
+            <div id="library-catalog-container" class="library-content-container view-carousel">
                 <?php foreach ($categories as $categoryName => $books): ?>
                     <section class="library-row-section library-animate-reveal" data-category="<?php echo htmlspecialchars($categoryName); ?>">
                         <!-- Category Header -->

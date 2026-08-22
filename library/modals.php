@@ -65,6 +65,10 @@
                         <span class="spec-label">Grade Level</span>
                         <span id="modal-grade" class="spec-value spec-val-highlight-pink"></span>
                     </div>
+                    <div id="modal-curriculum-container" class="library-modal-spec-full hidden">
+                        <span class="spec-label"><i class="fas fa-graduation-cap text-primary"></i> Aligned Curriculum & Grade Tracks</span>
+                        <div id="modal-curriculum-content" class="spec-val-curriculum-links"></div>
+                    </div>
                 </div>
 
                 <!-- Description -->
@@ -80,6 +84,10 @@
                         <a id="modal-read-online-link" href="#" target="_blank" rel="noopener noreferrer" class="library-modal-read-btn">
                             <i class="fas fa-book-open"></i> <span>Read Online</span>
                         </a>
+
+                        <button id="modal-bookmark-btn" onclick="toggleModalBookmark()" class="library-modal-bookmark-btn" title="Save to My Reading List" aria-label="Save to My Reading List">
+                            <i class="far fa-star"></i> <span>Save</span>
+                        </button>
 
                         <div class="library-modal-downloads-row">
                              <a id="modal-pdf-link" href="#" target="_blank" rel="noopener noreferrer" class="library-download-icon-btn pdf-btn" title="Download PDF" aria-label="Download PDF">

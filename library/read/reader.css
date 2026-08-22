@@ -1292,3 +1292,257 @@ body.dark .flashcard-front {
 body, main, article, p, h1, h2, h3, a, button, select, div {
   transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
+
+/* ==========================================================================
+   Assistive Innovations & Reader Tools
+   ========================================================================== */
+
+/* Reading Time Indicator Badge */
+.reader-time-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  background: var(--color-base-bg);
+  border: 1px solid var(--color-border);
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+/* Bionic Reading Fixation */
+.speech-btn-bionic {
+  background-color: var(--color-base-bg);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+}
+
+.speech-btn-bionic.active {
+  background-color: var(--color-primary-light, rgba(79, 70, 229, 0.12));
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.bionic-fixation {
+  font-weight: 850 !important;
+  color: var(--color-text-default);
+}
+
+/* Floating Multi-Color Highlight Toolbar */
+.highlight-toolbar-dock {
+  position: absolute;
+  transform: translate(-50%, -100%);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--color-content-bg);
+  border: 1px solid var(--color-border);
+  padding: 0.4rem 0.6rem;
+  border-radius: 999px;
+  box-shadow: var(--shadow-xl);
+  z-index: 1000;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  animation: popIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.highlight-toolbar-dock.hidden {
+  display: none !important;
+}
+
+.hl-colors-row {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.hl-color-btn {
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 0 2px rgba(0,0,0,0.3);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.hl-color-btn:hover {
+  transform: scale(1.2);
+}
+
+.dot-yellow { background-color: #facc15; }
+.dot-pink { background-color: #f472b6; }
+.dot-green { background-color: #4ade80; }
+
+.hl-divider {
+  width: 1px;
+  height: 1.2rem;
+  background-color: var(--color-border);
+  margin: 0 0.2rem;
+}
+
+.hl-btn {
+  background: transparent;
+  border: none;
+  color: var(--color-text-secondary);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.35rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: all 0.15s ease;
+}
+
+.hl-btn:hover {
+  background: var(--color-base-bg);
+  color: var(--color-text-default);
+}
+
+/* In-text Mark Highlights */
+.reader-highlight {
+  border-radius: 0.25rem;
+  padding: 0.1rem 0.2rem;
+  cursor: pointer;
+  transition: filter 0.2s;
+}
+
+.reader-highlight.hl-yellow { background-color: rgba(250, 204, 21, 0.4); }
+.reader-highlight.hl-pink { background-color: rgba(244, 114, 182, 0.4); }
+.reader-highlight.hl-green { background-color: rgba(74, 222, 128, 0.4); }
+
+.reader-highlight:hover {
+  filter: brightness(1.15);
+}
+
+/* Instant Double-Click Dictionary Popover */
+.reader-dict-popover {
+  position: absolute;
+  width: 300px;
+  background: var(--color-content-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg, 1rem);
+  box-shadow: var(--shadow-2xl, 0 20px 25px -5px rgba(0, 0, 0, 0.2));
+  padding: 1.25rem;
+  z-index: 1100;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  animation: popIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+}
+
+.reader-dict-popover.hidden {
+  display: none !important;
+}
+
+.dict-popover-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.dict-popover-title-wrap {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.dict-pop-word {
+  font-family: var(--site-font-family, 'Outfit', sans-serif);
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: var(--color-primary);
+  text-transform: capitalize;
+}
+
+.dict-pop-phonetic {
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  font-style: italic;
+}
+
+.dict-popover-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.dict-pop-audio-btn {
+  background: var(--color-primary-light, rgba(79, 70, 229, 0.1));
+  border: none;
+  color: var(--color-primary);
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+}
+
+.dict-pop-close-btn {
+  background: transparent;
+  border: none;
+  color: var(--color-text-secondary);
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.dict-pop-part {
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  margin-bottom: 0.35rem;
+}
+
+.dict-pop-meaning {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--color-text-default);
+  margin: 0 0 0.85rem 0;
+}
+
+.dict-popover-footer {
+  border-top: 1px solid var(--color-border);
+  padding-top: 0.5rem;
+  text-align: right;
+}
+
+.dict-pop-full-link {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+/* Citation text box */
+.citation-text-box {
+  background: var(--color-base-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+

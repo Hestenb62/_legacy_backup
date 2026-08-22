@@ -122,17 +122,17 @@ $currentUser = getCurrentUser();
                     </div>
                     
                     <div class="header-actions">
-                    <!-- Search Bar - NOT WORKING
-                        <form action="/search.php" method="GET" class="search-form">
+                        <form action="/search.php" method="GET" class="search-form" role="search">
                             <label for="header-search" class="sr-only">Search the site</label>
                             <input type="text" id="header-search" name="q" placeholder="Search..." class="search-input" />
-                            <i class="fas fa-search search-icon"></i>
+                            <button type="submit" aria-label="Search" style="background: none; border: none; padding: 0; cursor: pointer; color: inherit;">
+                                <i class="fas fa-search search-icon"></i>
+                            </button>
                         </form>
-                        NEEDS WORK -->
                         
                         <div class="user-dropdown-container">
                             <button class="user-pill" id="user-pill-btn" aria-expanded="false" aria-haspopup="true" aria-controls="user-dropdown-menu">
-                                <img src="<?php echo htmlspecialchars($currentUser['avatar']); ?>" alt="User" class="user-avatar" onerror="this.src="https://ui-avatars.com/api/?name=User&background=random">
+                                <img src="<?php echo htmlspecialchars($currentUser['avatar']); ?>" alt="User" class="user-avatar" onerror="this.src='https://ui-avatars.com/api/?name=User&background=random'">
                                 <div class="user-info">
                                     <span class="user-name"><?php echo htmlspecialchars($currentUser['name']); ?></span>
                                     <span class="user-role"><?php echo htmlspecialchars($currentUser['role']); ?></span>

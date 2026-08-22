@@ -241,6 +241,42 @@ function renderSubjectModules($modulesList, $subjectId, $subjectIcon, $themeColo
             </div>
         </div>
 
+        <!-- Aligned Library Books & Literature -->
+        <div id="side-aligned-library" class="sidebar-card library-aligned-card" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 1.25rem; padding: 1.25rem; box-shadow: var(--shadow-sm); text-align: left;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
+                <h4 style="font-family: var(--site-font-family, 'Outfit', sans-serif); font-size: 0.95rem; font-weight: 800; margin: 0; color: var(--color-text-default); display: flex; align-items: center; gap: 0.5rem;">
+                    <i class="fas fa-book-reader" style="color: var(--color-primary);"></i> Curriculum Literature
+                </h4>
+                <a href="/library/" style="font-size: 0.75rem; font-weight: 700; color: var(--color-primary); text-decoration: none;">Browse Hub &rarr;</a>
+            </div>
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0 0 0.85rem 0; line-height: 1.4;">
+                Primary documents & classic texts aligned to <?php echo htmlspecialchars($levelTitle); ?>:
+            </p>
+            <div class="aligned-books-list" style="display: flex; flex-direction: column; gap: 0.5rem;">
+                <a href="/library/read/index.php?book=1984&chapter=chapter-1" style="display: flex; align-items: center; gap: 0.6rem; padding: 0.5rem 0.75rem; background: var(--color-base-bg); border: 1px solid var(--color-border); border-radius: 0.6rem; text-decoration: none; color: var(--color-text-default); font-size: 0.82rem; font-weight: 700; transition: all 0.2s;">
+                    <i class="fas fa-book-open" style="color: var(--color-primary); font-size: 0.85rem;"></i>
+                    <div style="flex-grow: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                        <span>1984</span>
+                        <span style="font-size: 0.7rem; font-weight: 500; color: var(--text-muted); display: block;">George Orwell • ELA</span>
+                    </div>
+                </a>
+                <a href="/library/read/index.php?book=frankenstein&chapter=chapter-1" style="display: flex; align-items: center; gap: 0.6rem; padding: 0.5rem 0.75rem; background: var(--color-base-bg); border: 1px solid var(--color-border); border-radius: 0.6rem; text-decoration: none; color: var(--color-text-default); font-size: 0.82rem; font-weight: 700; transition: all 0.2s;">
+                    <i class="fas fa-book-open" style="color: var(--color-secondary); font-size: 0.85rem;"></i>
+                    <div style="flex-grow: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                        <span>Frankenstein</span>
+                        <span style="font-size: 0.7rem; font-weight: 500; color: var(--text-muted); display: block;">Mary Shelley • Literature</span>
+                    </div>
+                </a>
+                <a href="/library/read/index.php?book=federalist-papers&chapter=chapter-1" style="display: flex; align-items: center; gap: 0.6rem; padding: 0.5rem 0.75rem; background: var(--color-base-bg); border: 1px solid var(--color-border); border-radius: 0.6rem; text-decoration: none; color: var(--color-text-default); font-size: 0.82rem; font-weight: 700; transition: all 0.2s;">
+                    <i class="fas fa-landmark" style="color: #f59e0b; font-size: 0.85rem;"></i>
+                    <div style="flex-grow: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                        <span>The Federalist Papers</span>
+                        <span style="font-size: 0.7rem; font-weight: 500; color: var(--text-muted); display: block;">Hamilton & Madison • Civics</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
         <!-- Study Tip -->
         <div class="sidebar-card study-tip">
             <i class="fas fa-lightbulb study-tip-bg-icon"></i>

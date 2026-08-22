@@ -155,22 +155,42 @@ include ABSPATH . 'src/header.php';
         </a>
       </div>
 
-      <!-- Center: Text to Speech (TTS) Controls -->
+      <!-- Center: Text to Speech (TTS) & Reading Mode Controls -->
       <div class="controls-speech-group">
-        <button id="tts-speak-btn" class="speech-btn">
+        <button id="tts-speak-btn" class="speech-btn" title="Listen to Chapter Aloud">
           <i class="fas fa-volume-up"></i> Listen
         </button>
-        <button id="tts-stop-btn" class="speech-btn speech-btn-stop hidden">
+        <button id="tts-stop-btn" class="speech-btn speech-btn-stop hidden" title="Stop Reading">
           <i class="fas fa-stop"></i> Stop
+        </button>
+
+        <!-- Bionic Reading Mode Toggle -->
+        <button id="toggle-bionic-btn" class="speech-btn speech-btn-bionic" title="Toggle Bionic / Fixation Reading Mode">
+          <i class="fas fa-bolt"></i> <span>Bionic</span>
         </button>
       </div>
 
       <!-- Right: Settings and Study Guides -->
       <div class="controls-tools-group">
-        <button id="open-vocab-btn" class="tool-btn tool-btn-vocab" title="Study Guide">
+        <!-- Reading Time Indicator -->
+        <span id="reading-time-badge" class="reader-time-badge" title="Estimated Reading Time">
+          <i class="far fa-clock"></i> <span id="reading-time-text">-- min</span>
+        </span>
+
+        <!-- Citation Generator -->
+        <button id="open-citation-btn" class="tool-btn" title="Cite This Chapter" onclick="openChapterCitationModal()">
+          <i class="fas fa-quote-right"></i>
+        </button>
+
+        <!-- Highlight & Notes Export -->
+        <button id="open-highlights-btn" class="tool-btn" title="My Highlights & Notes" onclick="openHighlightsModal()">
+          <i class="fas fa-highlighter"></i>
+        </button>
+
+        <button id="open-vocab-btn" class="tool-btn tool-btn-vocab" title="Study Guide & Quizzes">
           <i class="fas fa-graduation-cap"></i>
         </button>
-        <button id="open-settings-btn" class="tool-btn tool-btn-settings" title="Typography Settings">
+        <button id="open-settings-btn" class="tool-btn tool-btn-settings" title="Typography & Audio Settings">
           <i class="fas fa-font"></i>
         </button>
 
@@ -285,13 +305,105 @@ include ABSPATH . 'src/header.php';
   </div>
 </main>
 
-<!-- Floating Highlight Actions Toolbar -->
-<div id="highlight-toolbar" class="hidden">
-  <button id="hl-btn-mark" class="hl-btn"><i class="fas fa-highlighter text-yellow-400"></i> Mark</button>
+<!-- Floating Multi-Color Highlight Actions Toolbar -->
+<div id="highlight-toolbar" class="highlight-toolbar-dock hidden" role="toolbar" aria-label="Highlight text">
+  <div class="hl-colors-row">
+    <button id="hl-color-yellow" class="hl-color-btn dot-yellow" title="Highlight Yellow (Key Idea)" data-color="yellow"></button>
+    <button id="hl-color-pink" class="hl-color-btn dot-pink" title="Highlight Pink (Important/Question)" data-color="pink"></button>
+    <button id="hl-color-green" class="hl-color-btn dot-green" title="Highlight Green (Vocabulary/Example)" data-color="green"></button>
+  </div>
   <div class="hl-divider"></div>
-  <button id="hl-btn-note" class="hl-btn"><i class="fas fa-sticky-note text-green-400"></i> Add Note</button>
-  <div class="hl-divider"></div>
-  <button id="hl-btn-copy" class="hl-btn"><i class="fas fa-copy text-blue-400"></i> Copy</button>
+  <button id="hl-btn-note" class="hl-btn" title="Add Note to Scratchpad"><i class="fas fa-sticky-note"></i> Note</button>
+  <button id="hl-btn-copy" class="hl-btn" title="Copy Selected Text"><i class="fas fa-copy"></i> Copy</button>
+</div>
+
+<!-- Instant Double-Click Dictionary Popover -->
+<div id="reader-dict-popover" class="reader-dict-popover hidden" role="tooltip" aria-live="polite">
+  <div class="dict-popover-header">
+    <div class="dict-popover-title-wrap">
+      <span id="dict-pop-word" class="dict-pop-word">Word</span>
+      <span id="dict-pop-phonetic" class="dict-pop-phonetic">/phonetic/</span>
+    </div>
+    <div class="dict-popover-actions">
+      <button id="dict-pop-audio-btn" class="dict-pop-audio-btn hidden" title="Listen to pronunciation"><i class="fas fa-volume-up"></i></button>
+      <button id="dict-pop-close-btn" class="dict-pop-close-btn" title="Close" onclick="closeDictPopover()">&times;</button>
+    </div>
+  </div>
+  <div class="dict-popover-body">
+    <div id="dict-pop-part" class="dict-pop-part">part of speech</div>
+    <p id="dict-pop-meaning" class="dict-pop-meaning">Definition loading...</p>
+  </div>
+  <div class="dict-popover-footer">
+    <a id="dict-pop-full-link" href="#" target="_blank" class="dict-pop-full-link"><i class="fas fa-external-link-alt"></i> Open in Lexicon</a>
+  </div>
+</div>
+
+<!-- Citation Generator Modal -->
+<div id="citation-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="citation-modal-title">
+  <div class="modal-card" style="max-width: 550px;">
+    <div class="modal-card-header">
+      <div class="modal-card-title">
+        <div class="modal-icon-circle circle-vocab">
+          <i class="fas fa-quote-right"></i>
+        </div>
+        <div style="text-align: left;">
+          <h3 id="citation-modal-title" style="font-family: var(--site-font-family, 'Outfit', sans-serif); font-size: 1.25rem; font-weight: 800; margin: 0; color: var(--color-text-default);">Cite This Chapter</h3>
+          <p style="color: var(--color-text-secondary); font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; margin: 0.25rem 0 0 0;">Academic Citation Generator</p>
+        </div>
+      </div>
+      <button onclick="closeChapterCitationModal()" class="modal-card-close-btn" aria-label="Close citation modal">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <div class="vocab-tabs-row">
+      <button class="vocab-tab-btn active" id="tab-cite-mla" onclick="switchCitationStyle('mla')">MLA 9</button>
+      <button class="vocab-tab-btn" id="tab-cite-apa" onclick="switchCitationStyle('apa')">APA 7</button>
+      <button class="vocab-tab-btn" id="tab-cite-chicago" onclick="switchCitationStyle('chicago')">Chicago</button>
+    </div>
+    <div class="modal-body" style="padding: 1.5rem; text-align: left;">
+      <div id="citation-text-box" class="citation-text-box">
+        <!-- Injected by reader.js -->
+      </div>
+      <div style="display: flex; justify-content: flex-end; margin-top: 1.25rem;">
+        <button id="copy-citation-btn" class="tooltip-btn" onclick="copyCitationToClipboard()" style="padding: 0.6rem 1.25rem; border-radius: 0.5rem; background: var(--color-primary); color: white; border: none; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem;">
+          <i class="fas fa-copy"></i> <span id="copy-citation-label">Copy Citation</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Highlights & Notes Export Modal -->
+<div id="highlights-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="highlights-modal-title">
+  <div class="modal-card" style="max-width: 600px;">
+    <div class="modal-card-header">
+      <div class="modal-card-title">
+        <div class="modal-icon-circle" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b;">
+          <i class="fas fa-highlighter"></i>
+        </div>
+        <div style="text-align: left;">
+          <h3 id="highlights-modal-title" style="font-family: var(--site-font-family, 'Outfit', sans-serif); font-size: 1.25rem; font-weight: 800; margin: 0; color: var(--color-text-default);">Chapter Highlights</h3>
+          <p style="color: var(--color-text-secondary); font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; margin: 0.25rem 0 0 0;">Saved Passages & Study Notes</p>
+        </div>
+      </div>
+      <button onclick="closeHighlightsModal()" class="modal-card-close-btn" aria-label="Close highlights modal">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <div class="modal-body" style="padding: 1.5rem; text-align: left; max-height: 60vh; overflow-y: auto;">
+      <div id="highlights-list-container">
+        <!-- Injected by reader.js -->
+      </div>
+    </div>
+    <div style="padding: 1rem 1.5rem; border-top: 1px solid var(--color-border); display: flex; justify-content: space-between; align-items: center;">
+      <button onclick="clearChapterHighlights()" class="tooltip-btn" style="padding: 0.4rem 0.8rem; font-size: 0.8rem; background: transparent; border: 1px solid var(--color-border); color: var(--color-danger, #ef4444); border-radius: 0.5rem; cursor: pointer;">
+        <i class="fas fa-trash-alt"></i> Clear Highlights
+      </button>
+      <button onclick="exportHighlightsMarkdown()" class="tooltip-btn" style="padding: 0.5rem 1rem; border-radius: 0.5rem; background: var(--color-primary); color: white; border: none; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 0.4rem;">
+        <i class="fas fa-file-export"></i> Export Markdown
+      </button>
+    </div>
+  </div>
 </div>
 
 <!-- Back to Top Button -->

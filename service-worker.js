@@ -1,4 +1,4 @@
-const CACHE_NAME = 'hestens-learning-v2';
+const CACHE_NAME = 'hestens-learning-v3';
 const ASSETS_TO_CACHE = [
 
   // Main Directory Files A-Z
@@ -16,16 +16,23 @@ const ASSETS_TO_CACHE = [
   '/service-worker.js',
   '/settings.php',
   '/standard.php',
-  '/students.php',
+  '/student/index.php',
   '/teachers.php',
   '/terms-of-use.php',
+  '/library/index.php',
 
   // Images
   '/assets/images/6791421e-7ca7-40bd-83d3-06a479bf7f36.png',
 
-  // CSS
-  '/assets/css/styles.css',
-  '/assets/css/w3.css',
+  // CSS Layers
+  '/assets/css/tokens.css',
+  '/assets/css/reset.css',
+  '/assets/css/primitives.css',
+  '/assets/css/utilities.css',
+  '/assets/css/components.css',
+  '/assets/css/components/fixed-tools.css',
+  '/assets/css/layouts/header.css',
+  '/assets/css/layouts/footer.css',
 
   // JavaScript
   '/assets/js/assessment-core.js',
@@ -34,12 +41,7 @@ const ASSETS_TO_CACHE = [
   '/assets/js/standard.js',
   '/assets/js/index-page.js',
   '/assets/js/announcements.js',
-  '/assets/js/core-ui.js',
-
-  // SRC Files (These are PHP partials, usually not cached directly by URL if used via include, but keeping them for consistency)
-  '/src/footer.php',
-  '/src/header.php',
-
+  '/assets/js/core-ui.js'
 ];
 
 // Install Event: Caches critical assets immediately

@@ -1,6 +1,14 @@
 /* library/library.js - Digital Library Hub Interactive Scripts */
 
 let disclaimersData = {};
+let activeCategoryName = '';
+let bookmarkList = [];
+
+try {
+    bookmarkList = JSON.parse(localStorage.getItem('hesten_library_bookmarks') || '[]');
+} catch(e) {
+    bookmarkList = [];
+}
 
 document.addEventListener("DOMContentLoaded", () => {
     applyStoredLexileOverrides();
@@ -11,7 +19,155 @@ document.addEventListener("DOMContentLoaded", () => {
     setupSidebarToggle();
     setupProgressBars();
     setupLexileEditing();
+    initBookmarks();
+    initContinueReadingShelf();
+    initViewSwitcher();
 });
+
+function initBookmarks() {
+    syncBookmarkIcons();
+}
+
+function syncBookmarkIcons() {
+    document.querySelectorAll('.library-book-card').forEach(card => {
+        const id = card.dataset.id;
+        const btn = card.querySelector('.library-book-bookmark-btn i');
+        if (id && btn) {
+            if (bookmarkList.includes(id)) {
+                btn.className = 'fas fa-star';
+                btn.parentElement.classList.add('bookmarked');
+            } else {
+                btn.className = 'far fa-star';
+                btn.parentElement.classList.remove('bookmarked');
+            }
+        }
+    });
+}
+
+window.toggleBookmark = function(e, bookId) {
+    if (e) {
+        e.stopPropagation();
+    }
+    if (!bookId) return;
+
+    const idx = bookmarkList.indexOf(bookId);
+    if (idx > -1) {
+        bookmarkList.splice(idx, 1);
+    } else {
+        bookmarkList.push(bookId);
+    }
+    try {
+        localStorage.setItem('hesten_library_bookmarks', JSON.stringify(bookmarkList));
+    } catch(e) {}
+
+    syncBookmarkIcons();
+
+    // Update modal button if currently open
+    const modalBtn = document.getElementById('modal-bookmark-btn');
+    if (modalBtn && window.currentBookId === bookId) {
+        const isSaved = bookmarkList.includes(bookId);
+        modalBtn.innerHTML = isSaved ? '<i class="fas fa-star"></i> <span>Saved</span>' : '<i class="far fa-star"></i> <span>Save</span>';
+        modalBtn.classList.toggle('active', isSaved);
+    }
+
+    // Refresh filter if looking at saved view
+    const catFilter = document.getElementById('category-filter');
+    if (catFilter && catFilter.value === 'saved') {
+        catFilter.dispatchEvent(new Event('change'));
+    }
+};
+
+window.toggleModalBookmark = function() {
+    if (window.currentBookId) {
+        toggleBookmark(null, window.currentBookId);
+    }
+};
+
+/* --- View Mode Switcher --- */
+function initViewSwitcher() {
+    const savedMode = localStorage.getItem('hesten_library_view_mode') || 'carousel';
+    switchLibraryView(savedMode, false);
+}
+
+window.switchLibraryView = function(mode, save = true) {
+    const container = document.getElementById('library-catalog-container');
+    if (!container) return;
+
+    container.classList.remove('view-carousel', 'view-grid', 'view-list');
+    container.classList.add(`view-${mode}`);
+
+    document.querySelectorAll('.view-switch-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.id === `view-mode-${mode}`);
+    });
+
+    if (save) {
+        try {
+            localStorage.setItem('hesten_library_view_mode', mode);
+        } catch(e) {}
+    }
+};
+
+/* --- Continue Reading Shelf --- */
+function initContinueReadingShelf() {
+    const shelf = document.getElementById('continue-reading-shelf');
+    const container = document.getElementById('continue-reading-cards');
+    if (!shelf || !container) return;
+
+    const cards = Array.from(document.querySelectorAll('.library-book-card'));
+    const inProgress = [];
+
+    cards.forEach(card => {
+        const id = card.dataset.id;
+        if (!id) return;
+
+        const pct = parseInt(localStorage.getItem(`hesten_completion_pct_${id}`) || '0', 10);
+        const lastCh = localStorage.getItem(`hesten_progress_${id}_lastChapter`) || '1';
+        
+        if (pct > 0) {
+            inProgress.push({
+                id: id,
+                title: card.dataset.title || 'Untitled',
+                author: card.dataset.author || '',
+                img: card.dataset.img || '',
+                pct: Math.min(100, pct),
+                lastChapter: lastCh,
+                readOnlineLink: card.dataset.readOnlineLink || '#'
+            });
+        }
+    });
+
+    if (inProgress.length === 0) {
+        shelf.classList.add('hidden');
+        shelf.style.display = 'none';
+        return;
+    }
+
+    // Sort descending by highest percentage / active reading
+    inProgress.sort((a, b) => b.pct - a.pct);
+
+    container.innerHTML = inProgress.slice(0, 4).map(book => `
+        <div class="continue-reading-card" onclick="location.href='${book.readOnlineLink}'">
+            <div class="cr-cover-wrap">
+                <img src="${book.img}" alt="${book.title}" class="cr-cover-img" onerror="this.src='https://placehold.co/100x150/6366f1/white?text=Book'">
+                <div class="cr-pct-badge">${book.pct}%</div>
+            </div>
+            <div class="cr-info">
+                <span class="cr-chapter-tag"><i class="fas fa-bookmark"></i> Chapter ${book.lastChapter}</span>
+                <h4 class="cr-title">${book.title}</h4>
+                <p class="cr-author">${book.author}</p>
+                <div class="cr-progress-bar">
+                    <div class="cr-progress-fill" style="width: ${book.pct}%;"></div>
+                </div>
+                <a href="${book.readOnlineLink}" class="cr-resume-btn">
+                    <i class="fas fa-play"></i> Resume Reading
+                </a>
+            </div>
+        </div>
+    `).join('');
+
+    shelf.classList.remove('hidden');
+    shelf.style.display = 'block';
+}
 
 function applyStoredLexileOverrides() {
     const cards = document.querySelectorAll('.library-book-card');
@@ -227,7 +383,16 @@ function setupScrollButtons() {
                 row.scrollBy({ left: row.clientWidth * 0.75, behavior: 'smooth' });
             });
             
-            // Toggle button visibility based on scroll position (optional refinement)
+            // Keyboard navigation when row or cards inside row have focus
+            row.setAttribute('tabindex', '0');
+            row.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') {
+                    row.scrollBy({ left: -220, behavior: 'smooth' });
+                } else if (e.key === 'ArrowRight') {
+                    row.scrollBy({ left: 220, behavior: 'smooth' });
+                }
+            });
+
             row.addEventListener('scroll', () => {
                 const maxScrollLeft = row.scrollWidth - row.clientWidth;
                 btnLeft.style.opacity = row.scrollLeft <= 5 ? "0.5" : "1";
@@ -247,8 +412,8 @@ function setupFilters() {
     const noResults = document.getElementById('no-results');
 
     function filterLibrary() {
-        const query = searchInput.value.toLowerCase().trim();
-        const selectedCat = categoryFilter.value;
+        const query = searchInput ? searchInput.value.toLowerCase().trim() : '';
+        const selectedCat = categoryFilter ? categoryFilter.value : 'all';
         const selectedLexile = lexileFilter ? lexileFilter.value : 'all';
         let totalVisible = 0;
 
@@ -260,6 +425,8 @@ function setupFilters() {
             let categoryMatch = false;
             if (selectedCat === 'all') {
                 categoryMatch = true;
+            } else if (selectedCat === 'saved') {
+                categoryMatch = true; // Evaluated per card below
             } else if (selectedCat === 'other') {
                 categoryMatch = (sectionCategory !== 'Primary Documents');
             } else {
@@ -267,14 +434,24 @@ function setupFilters() {
             }
 
             books.forEach(book => {
-                const title = book.dataset.title.toLowerCase();
-                const author = book.dataset.author.toLowerCase();
-                const isbn = book.dataset.isbn.toLowerCase();
+                const title = (book.dataset.title || '').toLowerCase();
+                const author = (book.dataset.author || '').toLowerCase();
+                const isbn = (book.dataset.isbn || '').toLowerCase();
+                const grade = (book.dataset.grade || '').toLowerCase();
+                const curriculum = (book.dataset.curriculum || '').toLowerCase();
+                const bookId = book.dataset.id || '';
+
+                let cardCatMatch = categoryMatch;
+                if (selectedCat === 'saved') {
+                    cardCatMatch = bookmarkList.includes(bookId);
+                }
 
                 const matchesSearch = !query || 
                     title.includes(query) || 
                     author.includes(query) || 
-                    isbn.includes(query);
+                    isbn.includes(query) ||
+                    grade.includes(query) ||
+                    curriculum.includes(query);
 
                 let lexileMatch = true;
                 if (selectedLexile !== 'all') {
@@ -293,7 +470,7 @@ function setupFilters() {
                     }
                 }
 
-                if (categoryMatch && matchesSearch && lexileMatch) {
+                if (cardCatMatch && matchesSearch && lexileMatch) {
                     book.style.display = '';
                     visibleInRow++;
                     totalVisible++;
@@ -310,9 +487,9 @@ function setupFilters() {
         });
 
         if (totalVisible === 0) {
-            noResults.style.display = 'block';
+            if (noResults) noResults.style.display = 'block';
         } else {
-            noResults.style.display = 'none';
+            if (noResults) noResults.style.display = 'none';
         }
     }
 
@@ -330,26 +507,32 @@ function setupFilters() {
     if (categoryFilter) {
         categoryFilter.addEventListener('change', () => {
             filterLibrary();
-            const selectedVal = categoryFilter.value;
-            const tabs = document.querySelectorAll('.library-tab-btn');
-            tabs.forEach(tab => {
-                const tabId = tab.getAttribute('data-tab-id');
-                let isActive = false;
-                if (selectedVal === 'all' && tabId === 'all') {
-                    isActive = true;
-                } else if (selectedVal === 'Primary Documents' && tabId === 'Primary Documents') {
-                    isActive = true;
-                } else if (selectedVal !== 'all' && selectedVal !== 'Primary Documents' && tabId === 'other') {
-                    isActive = true;
-                }
-                if (isActive) {
-                    tab.classList.add('active-tab');
-                } else {
-                    tab.classList.remove('active-tab');
-                }
-            });
         });
     }
+}
+
+function getCurriculumLinksForBook(id, title, category) {
+    const titleLower = (title || '').toLowerCase();
+    const idLower = (id || '').toLowerCase();
+    const links = [];
+
+    if (idLower.includes('federalist') || titleLower.includes('federalist') || titleLower.includes('constitution') || idLower.includes('constitution') || titleLower.includes('common sense') || titleLower.includes('declaration')) {
+        links.push({ name: 'Grade 9 Civics (Level K)', url: '/levels/k.php?subject=social', icon: 'fa-landmark' });
+        links.push({ name: 'AP US History Curriculum Track', url: '/levels/ap-us-history.php', icon: 'fa-university' });
+    }
+    if (idLower.includes('frankenstein') || titleLower.includes('frankenstein') || idLower.includes('1984') || titleLower.includes('1984') || idLower.includes('gatsby') || titleLower.includes('gatsby') || idLower.includes('mockingbird') || titleLower.includes('mockingbird')) {
+        links.push({ name: 'High School Literature (Level K)', url: '/levels/k.php?subject=ela', icon: 'fa-book-open' });
+        links.push({ name: 'ELA Reading & Analysis Hub', url: '/student/ela-reading.php', icon: 'fa-glasses' });
+    }
+    if (idLower.includes('euclid') || titleLower.includes('geometry') || idLower.includes('relativity') || titleLower.includes('math') || titleLower.includes('physics')) {
+        links.push({ name: 'High School Mathematics (Level K)', url: '/levels/k.php?subject=math', icon: 'fa-calculator' });
+        links.push({ name: 'Science Research & Articles', url: '/student/science-articles.php', icon: 'fa-flask' });
+    }
+
+    if (links.length === 0) {
+        links.push({ name: 'Standard Grade 9 Curriculum (Level K)', url: '/levels/k.php', icon: 'fa-graduation-cap' });
+    }
+    return links;
 }
 
 /* --- Details Modal Operations --- */
@@ -367,6 +550,7 @@ window.openModal = function(card) {
     const date = card.dataset.date;
     const img = card.dataset.img;
     const description = card.dataset.description;
+    const category = card.dataset.category;
     
     const pdfLink = card.dataset.pdfLink;
     const epubLink = card.dataset.epubLink;
@@ -409,6 +593,27 @@ window.openModal = function(card) {
     document.getElementById('modal-description').textContent = description || 'No summary available.';
     document.getElementById('modal-date').textContent = date || 'N/A';
     document.getElementById('modal-isbn').textContent = isbn ? formatISBN(isbn) : 'N/A';
+
+    // Aligned Curriculum Links
+    const curriculumContainer = document.getElementById('modal-curriculum-container');
+    const curriculumContent = document.getElementById('modal-curriculum-content');
+    if (curriculumContainer && curriculumContent) {
+        const alignedLinks = getCurriculumLinksForBook(id, title, category);
+        curriculumContent.innerHTML = alignedLinks.map(l => `
+            <a href="${l.url}" class="curriculum-aligned-chip" target="_blank">
+                <i class="fas ${l.icon}"></i> <span>${l.name}</span> <i class="fas fa-arrow-right chip-arrow"></i>
+            </a>
+        `).join('');
+        curriculumContainer.classList.remove('hidden');
+    }
+
+    // Bookmark button state
+    const modalBookmarkBtn = document.getElementById('modal-bookmark-btn');
+    if (modalBookmarkBtn) {
+        const isSaved = bookmarkList.includes(id);
+        modalBookmarkBtn.innerHTML = isSaved ? '<i class="fas fa-star"></i> <span>Saved</span>' : '<i class="far fa-star"></i> <span>Save</span>';
+        modalBookmarkBtn.classList.toggle('active', isSaved);
+    }
 
     // Lexile Level
     const lexContainer = document.getElementById('modal-lexile-container');

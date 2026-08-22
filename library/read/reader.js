@@ -114,9 +114,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Highlight Toolbar Elements
     const hlToolbar = document.getElementById("highlight-toolbar");
-    const hlMarkBtn = document.getElementById("hl-btn-mark");
+    const hlColorYellow = document.getElementById("hl-color-yellow");
+    const hlColorPink = document.getElementById("hl-color-pink");
+    const hlColorGreen = document.getElementById("hl-color-green");
     const hlNoteBtn = document.getElementById("hl-btn-note");
     const hlCopyBtn = document.getElementById("hl-btn-copy");
+
+    // Initialize Assistant Engines
+    calculateReadingTime();
+    initBionicReading();
+    initDoubleclickDictionary();
+    initPersistentHighlights();
 
     // --- Settings Panel Toggle ---
     if (openSettingsBtn && settingsPanel) {
@@ -552,8 +560,206 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     initTooltips();
 
-    // --- Highlight Selection Toolbar ---
-    if (hlToolbar && hlMarkBtn && hlCopyBtn) {
+    // --- Assistant Engine: Estimated Reading Time & Word Count ---
+    function calculateReadingTime() {
+        const contentEl = document.getElementById("book-content");
+        const badgeText = document.getElementById("reading-time-text");
+        if (!contentEl || !badgeText) return;
+
+        const text = contentEl.innerText || contentEl.textContent || '';
+        const words = text.trim().split(/\s+/).filter(w => w.length > 0);
+        const wordCount = words.length;
+        const minutes = Math.max(1, Math.ceil(wordCount / 200));
+
+        badgeText.textContent = `${minutes} min (${wordCount.toLocaleString()} words)`;
+    }
+
+    // --- Assistant Engine: Bionic Fixation Reading Mode ---
+    let isBionicActive = false;
+    let rawOriginalHtml = '';
+
+    function initBionicReading() {
+        const bionicBtn = document.getElementById("toggle-bionic-btn");
+        if (!bionicBtn) return;
+
+        const savedBionic = localStorage.getItem("hesten_reader_bionic") === "true";
+        if (savedBionic) {
+            toggleBionic(true);
+        }
+
+        bionicBtn.addEventListener("click", () => {
+            toggleBionic(!isBionicActive);
+        });
+    }
+
+    function toggleBionic(enable) {
+        const bionicBtn = document.getElementById("toggle-bionic-btn");
+        const contentEl = document.getElementById("book-content");
+        if (!contentEl) return;
+
+        if (enable && !isBionicActive) {
+            rawOriginalHtml = contentEl.innerHTML;
+            applyBionicFixation(contentEl);
+            isBionicActive = true;
+            if (bionicBtn) bionicBtn.classList.add("active");
+            try { localStorage.setItem("hesten_reader_bionic", "true"); } catch(e) {}
+        } else if (!enable && isBionicActive) {
+            if (rawOriginalHtml) {
+                contentEl.innerHTML = rawOriginalHtml;
+                initTooltips();
+                restoreHighlights();
+            }
+            isBionicActive = false;
+            if (bionicBtn) bionicBtn.classList.remove("active");
+            try { localStorage.setItem("hesten_reader_bionic", "false"); } catch(e) {}
+        }
+    }
+
+    function applyBionicFixation(root) {
+        const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+            acceptNode: (node) => {
+                if (node.parentElement.closest('.tooltiptext, script, style, mark, button, code')) {
+                    return NodeFilter.FILTER_REJECT;
+                }
+                return node.nodeValue.trim().length > 0 ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+            }
+        });
+
+        const textNodes = [];
+        while (walker.nextNode()) {
+            textNodes.push(walker.currentNode);
+        }
+
+        textNodes.forEach(node => {
+            const span = document.createElement('span');
+            const words = node.nodeValue.split(/(\s+)/);
+            span.innerHTML = words.map(chunk => {
+                if (/^\s+$/.test(chunk) || chunk.length === 0) return chunk;
+                const mid = Math.ceil(chunk.length / 2);
+                const boldPart = chunk.slice(0, mid);
+                const restPart = chunk.slice(mid);
+                return `<strong class="bionic-fixation" style="font-weight: 800;">${boldPart}</strong>${restPart}`;
+            }).join('');
+            node.parentNode.replaceChild(span, node);
+        });
+    }
+
+    // --- Assistant Engine: Double-Click / Tap Dictionary Lookup ---
+    let currentAudioUrl = null;
+
+    function initDoubleclickDictionary() {
+        const contentEl = document.getElementById("book-content");
+        const popover = document.getElementById("reader-dict-popover");
+        const audioBtn = document.getElementById("dict-pop-audio-btn");
+
+        if (!contentEl || !popover) return;
+
+        contentEl.addEventListener("dblclick", (e) => {
+            const selection = window.getSelection();
+            const selectedWord = selection.toString().trim().replace(/[^a-zA-Z]/g, '');
+            if (!selectedWord || selectedWord.length < 2) return;
+
+            lookupWord(selectedWord, e.clientX, e.clientY);
+        });
+
+        if (audioBtn) {
+            audioBtn.addEventListener("click", () => {
+                if (currentAudioUrl) {
+                    const sound = new Audio(currentAudioUrl);
+                    sound.play().catch(e => console.log("Audio play error", e));
+                }
+            });
+        }
+
+        document.addEventListener("click", (e) => {
+            if (popover && !popover.classList.contains("hidden") && !popover.contains(e.target)) {
+                window.closeDictPopover();
+            }
+        });
+    }
+
+    function lookupWord(word, clientX, clientY) {
+        const popover = document.getElementById("reader-dict-popover");
+        const wordEl = document.getElementById("dict-pop-word");
+        const phoneticEl = document.getElementById("dict-pop-phonetic");
+        const partEl = document.getElementById("dict-pop-part");
+        const meaningEl = document.getElementById("dict-pop-meaning");
+        const audioBtn = document.getElementById("dict-pop-audio-btn");
+        const fullLink = document.getElementById("dict-pop-full-link");
+        if (!popover) return;
+
+        wordEl.textContent = word;
+        phoneticEl.textContent = "...";
+        partEl.textContent = "lookup";
+        meaningEl.textContent = "Fetching definition from dictionary database...";
+        if (audioBtn) audioBtn.classList.add("hidden");
+        currentAudioUrl = null;
+
+        if (fullLink) {
+            fullLink.href = `https://www.merriam-webster.com/dictionary/${encodeURIComponent(word)}`;
+        }
+
+        // Position popover
+        const popWidth = 300;
+        let left = clientX + window.scrollX - 50;
+        let top = clientY + window.scrollY + 20;
+
+        if (left + popWidth > window.innerWidth - 20) {
+            left = window.innerWidth - popWidth - 20;
+        }
+        if (left < 10) left = 10;
+
+        popover.style.left = `${left}px`;
+        popover.style.top = `${top}px`;
+        popover.classList.remove("hidden");
+
+        fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(word.toLowerCase())}`)
+            .then(res => {
+                if (!res.ok) throw new Error("Not found");
+                return res.json();
+            })
+            .then(data => {
+                if (Array.isArray(data) && data.length > 0) {
+                    const entry = data[0];
+                    phoneticEl.textContent = entry.phonetic || (entry.phonetics && entry.phonetics[0] ? entry.phonetics[0].text : '');
+                    
+                    const audioItem = entry.phonetics ? entry.phonetics.find(p => p.audio && p.audio.length > 0) : null;
+                    if (audioItem && audioItem.audio) {
+                        currentAudioUrl = audioItem.audio;
+                        if (audioBtn) audioBtn.classList.remove("hidden");
+                    }
+
+                    if (entry.meanings && entry.meanings.length > 0) {
+                        const m = entry.meanings[0];
+                        partEl.textContent = m.partOfSpeech || 'definition';
+                        meaningEl.textContent = m.definitions && m.definitions[0] ? m.definitions[0].definition : 'No definition found.';
+                    }
+                }
+            })
+            .catch(() => {
+                meaningEl.textContent = "No standard quick definition found. Click 'Open in Lexicon' for full dictionary entry.";
+                phoneticEl.textContent = "";
+                partEl.textContent = "term";
+            });
+    }
+
+    window.closeDictPopover = function() {
+        const popover = document.getElementById("reader-dict-popover");
+        if (popover) popover.classList.add("hidden");
+    };
+
+    // --- Assistant Engine: Persistent In-Text Highlighting & Study Notes ---
+    const HL_STORAGE_KEY = `hesten_highlights_${bookId}_chapter_${currentChapter}`;
+    let chapterHighlights = [];
+
+    try {
+        chapterHighlights = JSON.parse(localStorage.getItem(HL_STORAGE_KEY) || '[]');
+    } catch(e) {
+        chapterHighlights = [];
+    }
+
+    function initPersistentHighlights() {
+        if (!hlToolbar) return;
         let currentRange = null;
 
         document.addEventListener("selectionchange", () => {
@@ -573,34 +779,55 @@ document.addEventListener("DOMContentLoaded", () => {
             const rect = range.getBoundingClientRect();
 
             hlToolbar.style.left = `${rect.left + rect.width / 2 + window.scrollX}px`;
-            hlToolbar.style.top = `${rect.top + window.scrollY - 10}px`;
+            hlToolbar.style.top = `${rect.top + window.scrollY - 45}px`;
             hlToolbar.classList.remove("hidden");
         });
 
-        hlMarkBtn.addEventListener("click", () => {
+        function applyHighlight(colorName, customNote = '') {
             if (!currentRange) return;
+            const selectedText = currentRange.toString().trim();
+            if (!selectedText) return;
+
+            const hlId = 'hl_' + Date.now();
+            const hlObj = {
+                id: hlId,
+                text: selectedText,
+                color: colorName,
+                note: customNote,
+                time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+            };
+
             try {
                 const mark = document.createElement("mark");
-                mark.style.backgroundColor = "rgba(253, 224, 71, 0.6)";
-                mark.style.borderRadius = "0.25rem";
-                mark.style.padding = "0 0.25rem";
-                mark.style.cursor = "pointer";
+                mark.className = `reader-highlight hl-${colorName}`;
+                mark.dataset.hlId = hlId;
+                if (customNote) mark.title = `Note: ${customNote}`;
+
                 currentRange.surroundContents(mark);
                 window.getSelection().removeAllRanges();
-            } catch (e) {
-                console.log("Boundary crossed highlighting", e);
+
+                chapterHighlights.push(hlObj);
+                localStorage.setItem(HL_STORAGE_KEY, JSON.stringify(chapterHighlights));
+            } catch(e) {
+                console.log("Boundary crossed highlighting error", e);
             }
             hlToolbar.classList.add("hidden");
-        });
+        }
 
-        hlCopyBtn.addEventListener("click", () => {
-            if (!currentRange) return;
-            navigator.clipboard.writeText(currentRange.toString()).then(() => {
-                const originalHTML = hlCopyBtn.innerHTML;
-                hlCopyBtn.innerHTML = '<i class="fas fa-check text-green-400"></i> Copied';
-                setTimeout(() => hlCopyBtn.innerHTML = originalHTML, 1500);
+        if (hlColorYellow) hlColorYellow.addEventListener("click", () => applyHighlight('yellow'));
+        if (hlColorPink) hlColorPink.addEventListener("click", () => applyHighlight('pink'));
+        if (hlColorGreen) hlColorGreen.addEventListener("click", () => applyHighlight('green'));
+
+        if (hlCopyBtn) {
+            hlCopyBtn.addEventListener("click", () => {
+                if (!currentRange) return;
+                navigator.clipboard.writeText(currentRange.toString()).then(() => {
+                    const originalHTML = hlCopyBtn.innerHTML;
+                    hlCopyBtn.innerHTML = '<i class="fas fa-check text-green-400"></i> Copied';
+                    setTimeout(() => hlCopyBtn.innerHTML = originalHTML, 1500);
+                });
             });
-        });
+        }
 
         if (hlNoteBtn) {
             hlNoteBtn.addEventListener("click", () => {
@@ -609,52 +836,136 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (!selectedText) return;
 
                 const noteText = prompt(`Add a study note for: "${selectedText.substring(0, 30)}${selectedText.length > 30 ? '...' : ''}"`);
-                if (noteText === null) return; // user cancelled
+                if (noteText === null) return;
 
-                const bookTitle = window.BOOK_METADATA ? window.BOOK_METADATA.title : 'Book';
-                const chapterNum = window.BOOK_METADATA ? window.BOOK_METADATA.chapterNum : 1;
-
-                // Format note entry to append
-                const timeStr = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-                const noteEntry = `\n\n[Note - ${bookTitle}, Ch ${chapterNum} @ ${timeStr}]\n"${selectedText}"\nNote: ${noteText}\n`;
-
-                const notesArea = document.getElementById("quick-notes-area");
-                if (notesArea) {
-                    notesArea.value = (notesArea.value + noteEntry).trim();
-                    // Dispatch input event to trigger the existing debounce auto-save
-                    notesArea.dispatchEvent(new Event('input'));
-                } else {
-                    // Fallback to direct local storage save if not loaded
-                    try {
-                        const existing = localStorage.getItem("hl_scratchpad") || "";
-                        localStorage.setItem("hl_scratchpad", (existing + noteEntry).trim());
-                    } catch (e) {}
-                }
-
-                // Surround contents with a soft green highlight representing the note
-                try {
-                    const mark = document.createElement("mark");
-                    mark.style.backgroundColor = "rgba(74, 222, 128, 0.4)"; // Soft green
-                    mark.style.borderRadius = "0.25rem";
-                    mark.style.padding = "0 0.25rem";
-                    mark.style.cursor = "pointer";
-                    mark.title = `Note: ${noteText}`;
-
-                    // Show note on click
-                    mark.addEventListener("click", () => {
-                        alert(`Study Note:\n"${selectedText}"\n\nNote Details:\n${noteText}`);
-                    });
-
-                    currentRange.surroundContents(mark);
-                    window.getSelection().removeAllRanges();
-                } catch (e) {
-                    console.log("Boundary crossed highlighting for note", e);
-                }
-
-                hlToolbar.classList.add("hidden");
+                applyHighlight('green', noteText);
             });
         }
+
+        restoreHighlights();
     }
+
+    function restoreHighlights() {
+        // Highlight restores or study list
+    }
+
+    window.openHighlightsModal = function() {
+        const modal = document.getElementById("highlights-modal");
+        const listContainer = document.getElementById("highlights-list-container");
+        if (!modal || !listContainer) return;
+
+        if (chapterHighlights.length === 0) {
+            listContainer.innerHTML = `
+                <div style="text-align: center; padding: 2rem; color: var(--color-text-secondary);">
+                    <i class="fas fa-highlighter" style="font-size: 2rem; opacity: 0.3; margin-bottom: 1rem; display: block;"></i>
+                    <p style="margin: 0; font-weight: 700;">No highlights or study notes saved yet in this chapter.</p>
+                    <p style="margin: 0.5rem 0 0 0; font-size: 0.85rem;">Select any sentence or paragraph in the text to highlight in yellow, pink, or green.</p>
+                </div>
+            `;
+        } else {
+            listContainer.innerHTML = chapterHighlights.map((hl, idx) => `
+                <div class="highlight-item-card hl-card-${hl.color}" style="background: var(--color-base-bg); border: 1px solid var(--color-border); border-left: 4px solid ${hl.color === 'yellow' ? '#facc15' : (hl.color === 'pink' ? '#f472b6' : '#4ade80')}; border-radius: 0.75rem; padding: 1rem; margin-bottom: 0.85rem;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                        <span style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; color: var(--color-text-secondary);"><i class="fas fa-bookmark"></i> Passage #${idx + 1} (${hl.time})</span>
+                    </div>
+                    <blockquote style="margin: 0 0 0.5rem 0; font-size: 0.95rem; font-style: italic; color: var(--color-text-default); line-height: 1.5;">"${hl.text}"</blockquote>
+                    ${hl.note ? `<div style="font-size: 0.85rem; background: var(--color-content-bg); padding: 0.5rem 0.75rem; border-radius: 0.5rem; color: var(--color-text-default); border: 1px dashed var(--color-border);"><strong style="color: var(--color-primary);"><i class="fas fa-sticky-note"></i> Note:</strong> ${hl.note}</div>` : ''}
+                </div>
+            `).join('');
+        }
+
+        modal.classList.remove("hidden");
+    };
+
+    window.closeHighlightsModal = function() {
+        const modal = document.getElementById("highlights-modal");
+        if (modal) modal.classList.add("hidden");
+    };
+
+    window.clearChapterHighlights = function() {
+        if (!confirm("Are you sure you want to clear all highlights for this chapter?")) return;
+        chapterHighlights = [];
+        try { localStorage.removeItem(HL_STORAGE_KEY); } catch(e) {}
+        window.openHighlightsModal();
+    };
+
+    window.exportHighlightsMarkdown = function() {
+        if (chapterHighlights.length === 0) {
+            alert("No highlights to export.");
+            return;
+        }
+
+        const title = window.BOOK_METADATA ? window.BOOK_METADATA.title : 'Book';
+        const ch = window.BOOK_METADATA ? window.BOOK_METADATA.chapterNum : 1;
+
+        let md = `# Study Notes: ${title} (Chapter ${ch})\n\n`;
+        chapterHighlights.forEach((hl, i) => {
+            md += `### Highlight ${i + 1} (${hl.color.toUpperCase()})\n> ${hl.text}\n\n`;
+            if (hl.note) {
+                md += `**Note:** ${hl.note}\n\n`;
+            }
+        });
+
+        navigator.clipboard.writeText(md).then(() => {
+            alert("Highlights exported as Markdown to your clipboard!");
+        });
+    };
+
+    // --- Assistant Engine: Academic Citation Generator ---
+    let currentCitationStyle = 'mla';
+
+    window.openChapterCitationModal = function() {
+        const modal = document.getElementById("citation-modal");
+        if (!modal) return;
+        switchCitationStyle(currentCitationStyle);
+        modal.classList.remove("hidden");
+    };
+
+    window.closeChapterCitationModal = function() {
+        const modal = document.getElementById("citation-modal");
+        if (modal) modal.classList.add("hidden");
+    };
+
+    window.switchCitationStyle = function(style) {
+        currentCitationStyle = style;
+        document.querySelectorAll("#citation-modal .vocab-tab-btn").forEach(btn => {
+            btn.classList.toggle("active", btn.id === `tab-cite-${style}`);
+        });
+
+        const box = document.getElementById("citation-text-box");
+        if (!box) return;
+
+        const title = window.BOOK_METADATA ? window.BOOK_METADATA.title : 'Book Title';
+        const ch = window.BOOK_METADATA ? window.BOOK_METADATA.chapterNum : 1;
+        const author = "Author";
+        const url = window.location.href;
+        const today = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+        const year = new Date().getFullYear();
+
+        let citation = '';
+        if (style === 'mla') {
+            citation = `${author}. *${title}*. Chapter ${ch}, Hesten's Learning Library Digital Edition, ${year}, <${url}>. Accessed ${today}.`;
+        } else if (style === 'apa') {
+            citation = `${author}. (${year}). *${title}* (Chapter ${ch}). Hesten's Learning Library. ${url}`;
+        } else if (style === 'chicago') {
+            citation = `${author}. *${title}*. Chapter ${ch}. Hesten's Learning Library Digital Archive, ${year}. ${url}.`;
+        }
+
+        box.innerHTML = `<p style="margin: 0; font-family: monospace; font-size: 0.95rem; line-height: 1.6; color: var(--color-text-default);">${citation}</p>`;
+    };
+
+    window.copyCitationToClipboard = function() {
+        const box = document.getElementById("citation-text-box");
+        const btnLabel = document.getElementById("copy-citation-label");
+        if (!box) return;
+
+        navigator.clipboard.writeText(box.textContent.trim()).then(() => {
+            if (btnLabel) {
+                btnLabel.textContent = "Copied!";
+                setTimeout(() => btnLabel.textContent = "Copy Citation", 2000);
+            }
+        });
+    };
 
     // --- Vocabulary Study Guide Modal & Flashcards & Quiz Router ---
     let activeVocabList = [];

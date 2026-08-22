@@ -53,8 +53,8 @@
                     <ul class="footer-links">
                         <li class="footer-link-item"><a href="/contact.php"><i class="fas fa-envelope footer-link-icon"></i> Contact Us</a></li>
                         <li class="footer-link-item"><a href="/student/index.php"><i class="fas fa-home footer-link-icon"></i> For Students</a></li>
-                        <li class="footer-link-item"><a href="#"><i class="fas fa-users footer-link-icon"></i> For Parents</a></li>
-                        <li class="footer-link-item"><a href="#"><i class="fas fa-chalkboard-teacher footer-link-icon"></i> For Teachers</a></li>
+                        <li class="footer-link-item"><a href="/parents.php"><i class="fas fa-users footer-link-icon"></i> For Parents</a></li>
+                        <li class="footer-link-item"><a href="/teachers.php"><i class="fas fa-chalkboard-teacher footer-link-icon"></i> For Teachers</a></li>
                     </ul>
                 </div>
 

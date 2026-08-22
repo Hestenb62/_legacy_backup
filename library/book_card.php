@@ -18,6 +18,7 @@
      data-dewey="<?php echo htmlspecialchars($book['dewey'] ?? ''); ?>"
      data-lc="<?php echo htmlspecialchars($book['lc'] ?? ''); ?>"
      data-grade="<?php echo htmlspecialchars($book['grade'] ?? ''); ?>"
+     data-curriculum="<?php echo htmlspecialchars($book['curriculum'] ?? ($book['grade'] ?? '')); ?>"
      data-disclaimer-key="<?php echo htmlspecialchars($book['disclaimer-key'] ?? ''); ?>"
      data-disclaimer-text="<?php echo htmlspecialchars($book['disclaimer-text'] ?? ''); ?>"
      data-file-source="<?php echo htmlspecialchars($book['file-source'] ?? ''); ?>"
@@ -40,6 +41,14 @@
                 <i class="fas fa-layer-group"></i> Collection
             </div>
         <?php endif; ?>
+
+        <!-- Bookmark / Favorite Quick Button -->
+        <button class="library-book-bookmark-btn" 
+                onclick="toggleBookmark(event, '<?php echo htmlspecialchars($book['id'] ?? ''); ?>')" 
+                title="Save to My Reading List" 
+                aria-label="Save to My Reading List">
+            <i class="far fa-star"></i>
+        </button>
         
         <img src="<?php echo htmlspecialchars($book['img'] ?? ''); ?>"
              alt="<?php echo htmlspecialchars($book['title'] ?? ''); ?>" 
@@ -60,7 +69,7 @@
         </div>
     </div>
 
-    <!-- Info (Below Card) -->
+    <!-- Info (Below Card / In List View) -->
     <div class="library-book-info">
         <h3 class="library-book-title">
             <?php echo htmlspecialchars($book['title'] ?? ''); ?>
@@ -68,5 +77,18 @@
         <p class="library-book-author">
             <?php echo htmlspecialchars($book['author'] ?? ''); ?>
         </p>
+
+        <!-- List View Extended Metadata (Hidden in carousel, visible in List/Table View) -->
+        <div class="library-book-list-meta">
+            <?php if (!empty($book['lexile'])): ?>
+                <span class="meta-tag lexile-tag"><i class="fas fa-brain"></i> <?php echo htmlspecialchars($book['lexile']); ?></span>
+            <?php endif; ?>
+            <?php if (!empty($book['date'])): ?>
+                <span class="meta-tag date-tag"><i class="far fa-calendar-alt"></i> <?php echo htmlspecialchars($book['date']); ?></span>
+            <?php endif; ?>
+            <?php if (!empty($book['grade'])): ?>
+                <span class="meta-tag grade-tag"><i class="fas fa-graduation-cap"></i> <?php echo htmlspecialchars($book['grade']); ?></span>
+            <?php endif; ?>
+        </div>
     </div>
 </div>
