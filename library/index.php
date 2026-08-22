@@ -1,4 +1,10 @@
 <?php
+/**
+ * library/index.php - Main Digital Library Portal
+ * High-performance, accessible digital book catalog with subject research desks,
+ * multi-facet filters, and interactive view switchers.
+ */
+
 // --- Redirect to trailing slash URL to resolve relative asset paths in dev servers ---
 $requestUri = $_SERVER['REQUEST_URI'] ?? '';
 $requestPath = explode('?', $requestUri)[0];
@@ -9,90 +15,101 @@ if (basename($requestPath) === 'library' && substr($requestPath, -1) !== '/') {
     exit;
 }
 
-// --- Page-Specific Variables ---
-$pageTitle = 'Library - Hesten\'s Learning';
-$pageDescription = 'Browse your personal collection of digital books in a Netflix-style interface.';
-$pageKeywords = 'library, books, epub, pdf, digital library, collection, education, textbooks';
+// --- Page-Specific SEO & Meta Variables ---
+$pageTitle = 'Digital Library & Research Desks - Hesten\'s Learning';
+$pageDescription = 'Browse your digital collection of classic literature, historical primary sources, and comprehensive academic textbooks.';
+$pageKeywords = 'library, books, reading, digital archive, primary sources, textbooks, history, literature, study guides';
 $pageAuthor = 'Hesten\'s Learning';
 
-// --- General Book Data Array ---
-$jsonString = file_get_contents(__DIR__ . '/assets/bookd.json');
-$categories = json_decode($jsonString, true) ?: [];
+// --- Load Book Data ---
+$bookdJsonPath = __DIR__ . '/assets/bookd.json';
+$categories = is_file($bookdJsonPath) ? (json_decode(file_get_contents($bookdJsonPath), true) ?: []) : [];
 
-// --- Drawer Academic Data Array ---
-$drawerJsonString = file_get_contents(__DIR__ . '/assets/edu-side-drawer.json');
-$drawerCategories = json_decode($drawerJsonString, true) ?: [];
+// --- Load Drawer Academic Data ---
+$drawerJsonPath = __DIR__ . '/assets/edu-side-drawer.json';
+$drawerCategories = is_file($drawerJsonPath) ? (json_decode(file_get_contents($drawerJsonPath), true) ?: []) : [];
 
-// --- Desk External Links Array ---
+// --- Load Desk External Links ---
 $linksJsonPath = __DIR__ . '/assets/desk_links.json';
-$deskLinks = is_file($linksJsonPath) ? json_decode(file_get_contents($linksJsonPath), true) : [];
+$deskLinks = is_file($linksJsonPath) ? (json_decode(file_get_contents($linksJsonPath), true) ?: []) : [];
+
+// Total books count calculation
+$totalCatalogBooks = 0;
+foreach ($categories as $catBooks) {
+    if (is_array($catBooks)) {
+        $totalCatalogBooks += count($catBooks);
+    }
+}
 
 if (!defined('ABSPATH')) {
     define('ABSPATH', dirname(__DIR__) . '/');
 }
 
-// Include Global Header (Root)
+// Include Global Site Header
 include ABSPATH . 'src/header.php';
 ?>
 
 <!-- AURORA MESH BACKGROUND -->
-<div class="library-aurora-bg">
+<div class="library-aurora-bg" aria-hidden="true">
     <div class="library-aurora-blob blob-1"></div>
     <div class="library-aurora-blob blob-2"></div>
     <div class="library-aurora-blob blob-3"></div>
 </div>
 
-<main id="main-content" class="library-main" style="display: flex; gap: 2rem; position: relative;">
+<main id="main-content" class="library-main">
 
-    <!-- Collapsible left sidebar for resource desks -->
-    <aside id="library-sidebar" class="library-sidebar collapsed">
+    <!-- Collapsible left sidebar for Subject Desks -->
+    <aside id="library-sidebar" class="library-sidebar collapsed" aria-label="Subject Research Desks">
+        <div class="sidebar-header">
+            <span class="sidebar-header-title">Research Desks</span>
+        </div>
         <ul class="sidebar-menu">
             <li class="sidebar-item" title="US History">
-                <button onclick="openResourcePortal('US History')" class="sidebar-item-btn">
+                <button type="button" onclick="openResourcePortal('US History')" class="sidebar-item-btn" aria-label="Open US History Desk">
                     <i class="fas fa-university"></i>
                     <span class="sidebar-label">US History</span>
                 </button>
             </li>
             <li class="sidebar-item" title="World History">
-                <button onclick="openResourcePortal('World History')" class="sidebar-item-btn">
+                <button type="button" onclick="openResourcePortal('World History')" class="sidebar-item-btn" aria-label="Open World History Desk">
                     <i class="fas fa-globe-americas"></i>
                     <span class="sidebar-label">World History</span>
                 </button>
             </li>
             <li class="sidebar-item" title="WW1">
-                <button onclick="openResourcePortal('WW1')" class="sidebar-item-btn">
+                <button type="button" onclick="openResourcePortal('WW1')" class="sidebar-item-btn" aria-label="Open World War 1 Desk">
                     <i class="fas fa-shield-halved"></i>
                     <span class="sidebar-label">WW1</span>
                 </button>
             </li>
             <li class="sidebar-item" title="WW2">
-                <button onclick="openResourcePortal('WW2')" class="sidebar-item-btn">
+                <button type="button" onclick="openResourcePortal('WW2')" class="sidebar-item-btn" aria-label="Open World War 2 Desk">
                     <i class="fas fa-award"></i>
                     <span class="sidebar-label">WW2</span>
                 </button>
             </li>
             <li class="sidebar-item" title="Math">
-                <button onclick="openResourcePortal('Math')" class="sidebar-item-btn">
+                <button type="button" onclick="openResourcePortal('Math')" class="sidebar-item-btn" aria-label="Open Mathematics Desk">
                     <i class="fas fa-calculator"></i>
                     <span class="sidebar-label">Math</span>
                 </button>
             </li>
             <li class="sidebar-item" title="ELA">
-                <button onclick="openResourcePortal('ELA')" class="sidebar-item-btn">
+                <button type="button" onclick="openResourcePortal('ELA')" class="sidebar-item-btn" aria-label="Open English Language Arts Desk">
                     <i class="fas fa-spell-check"></i>
                     <span class="sidebar-label">ELA</span>
                 </button>
             </li>
         </ul>
-        <button id="sidebar-toggle" class="sidebar-toggle-btn" aria-label="Toggle Sidebar">
+        <button id="sidebar-toggle" class="sidebar-toggle-btn" aria-label="Toggle Subject Desks Sidebar" title="Toggle Sidebar">
             <i class="fas fa-chevron-right"></i>
         </button>
     </aside>
 
-    <div class="library-workspace" style="flex-grow: 1; min-width: 0; position: relative;">
+    <div class="library-workspace">
 
         <!-- Panel 1: General Library Landing Page -->
-        <div id="main-desk-landing" class="workspace-panel">
+        <div id="main-desk-landing" class="workspace-panel active">
 
             <!-- Hero Section -->
             <section class="library-hero">
@@ -100,22 +117,34 @@ include ABSPATH . 'src/header.php';
                     <!-- Pill Badge -->
                     <div class="library-hero-badge">
                         <span class="library-badge-dot"></span>
-                        <span class="library-badge-text"><i class="fas fa-book-reader"></i> DIGITAL ARCHIVE</span>
+                        <span class="library-badge-text"><i class="fas fa-book-reader mr-1"></i> DIGITAL ARCHIVE &bull; <?php echo $totalCatalogBooks; ?> VOLUMES</span>
                     </div>
 
                     <h1 class="library-hero-title">
                         The <span class="library-hero-title-gradient">Library</span>
                     </h1>
+                    <p class="library-hero-subtitle">
+                        Immerse yourself in classic literature, primary documents, and interactive study suites.
+                    </p>
                 </div>
 
-                <!-- Real-time Search and Filters -->
+                <!-- Real-time Search and Multi-Facet Filters -->
                 <div class="library-search-wrapper library-animate-reveal" style="animation-delay: 0.1s;">
                     <!-- Search bar -->
                     <div class="library-search-input-container">
-                        <input type="text" id="library-search" aria-label="Search Library" placeholder="Search title, author, grade, or curriculum..." class="library-search-input library-glass-shine">
+                        <input type="text" 
+                               id="library-search" 
+                               aria-label="Search Library Catalog" 
+                               placeholder="Search title, author, grade, or curriculum..." 
+                               class="library-search-input library-glass-shine"
+                               autocomplete="off">
                         <i class="fas fa-search library-search-icon"></i>
+                        <button type="button" id="library-search-clear" class="library-search-clear-btn hidden" aria-label="Clear search input">
+                            <i class="fas fa-times"></i>
+                        </button>
                     </div>
 
+                    <!-- Category Filter -->
                     <div class="library-filter-select-container">
                         <select id="category-filter" aria-label="Select Category" class="library-category-select library-glass-shine">
                             <option value="all">All Categories</option>
@@ -127,8 +156,9 @@ include ABSPATH . 'src/header.php';
                         <i class="fas fa-filter library-filter-icon"></i>
                     </div>
 
+                    <!-- Lexile Reading Level Filter -->
                     <div class="library-filter-select-container">
-                        <select id="lexile-filter" aria-label="Select Lexile Level" class="library-category-select library-glass-shine">
+                        <select id="lexile-filter" aria-label="Select Reading Level" class="library-category-select library-glass-shine">
                             <option value="all">All Reading Levels</option>
                             <option value="easy">Elementary (Under 500L)</option>
                             <option value="medium">Middle School (500L - 900L)</option>
@@ -138,7 +168,7 @@ include ABSPATH . 'src/header.php';
                     </div>
 
                     <!-- Catalog View Switcher -->
-                    <div class="library-view-switcher" role="group" aria-label="View Mode">
+                    <div class="library-view-switcher" role="group" aria-label="Catalog View Mode">
                         <button id="view-mode-carousel" class="view-switch-btn active" onclick="switchLibraryView('carousel')" title="Carousel Rows View" aria-label="Carousel Rows View">
                             <i class="fas fa-layer-group"></i>
                         </button>
@@ -170,7 +200,7 @@ include ABSPATH . 'src/header.php';
                 </div>
             </section>
 
-            <!-- Library Content -->
+            <!-- Library Content Container -->
             <div id="library-catalog-container" class="library-content-container view-carousel">
                 <?php foreach ($categories as $categoryName => $books): ?>
                     <section class="library-row-section library-animate-reveal" data-category="<?php echo htmlspecialchars($categoryName); ?>">
@@ -181,62 +211,70 @@ include ABSPATH . 'src/header.php';
                             </h2>
                             <div class="library-row-divider"></div>
                             <div class="library-scroll-buttons">
-                                <button class="library-scroll-btn scroll-left" aria-label="Scroll left">
+                                <button class="library-scroll-btn scroll-left" aria-label="Scroll left in <?php echo htmlspecialchars($categoryName); ?>">
                                     <i class="fas fa-chevron-left"></i>
                                 </button>
-                                <button class="library-scroll-btn scroll-right" aria-label="Scroll right">
+                                <button class="library-scroll-btn scroll-right" aria-label="Scroll right in <?php echo htmlspecialchars($categoryName); ?>">
                                     <i class="fas fa-chevron-right"></i>
                                 </button>
                             </div>
                         </div>
 
-                        <!-- Horizontal Scroll Container -->
+                        <!-- Horizontal Scroll / Grid / List Container -->
                         <div class="library-books-row">
                             <?php foreach ($books as $book): 
                                 $book['category'] = $categoryName;
-                                include 'book_card.php';
+                                include __DIR__ . '/book_card.php';
                             endforeach; ?>
                         </div>
                     </section>
                 <?php endforeach; ?>
 
                 <!-- No Results Message -->
-                <div id="no-results" class="library-no-results">
+                <div id="no-results" class="library-no-results hidden">
                     <div class="library-no-results-icon-wrap">
                         <i class="fas fa-search"></i>
                         <div class="library-ping-overlay"></div>
                     </div>
                     <h3 class="library-no-results-title">No books found</h3>
-                    <p class="library-no-results-desc">We couldn't find anything matching your search criteria.</p>
+                    <p class="library-no-results-desc">We couldn't find anything matching your search criteria. Try clearing some filters or searching for something else.</p>
+                    <button type="button" onclick="resetLibraryFilters()" class="library-reset-filters-btn">
+                        <i class="fas fa-undo"></i> Reset Filters
+                    </button>
                 </div>
             </div> <!-- Close library-content-container -->
         </div> <!-- Close Panel 1 main-desk-landing -->
 
-        <!-- Panel 2: Dedicated Subject Research Workspace (Covering catalog when active) -->
-        <div id="subject-desk-workspace" class="workspace-panel hidden" style="display: flex; flex-direction: column; width: 100%; opacity: 0; transition: opacity 0.3s ease;">
+        <!-- Panel 2: Dedicated Subject Research Workspace -->
+        <div id="subject-desk-workspace" class="workspace-panel hidden">
             <!-- Workspace Header Bar -->
-            <header class="library-drawer-header" style="padding: 1.5rem 0.5rem; border-bottom: 1px solid var(--color-border); display: flex; justify-content: space-between; align-items: center; background-color: transparent; gap: 1rem; flex-wrap: wrap;">
-                <div style="display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;">
-                    <button onclick="closeResourcePortal()" class="library-disclaimer-action-btn" style="background-color: transparent; border: 1px solid var(--color-border); color: var(--color-text-default); padding: 0.5rem 1.25rem; border-radius: var(--radius-md); font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 0.5rem;">
-                        <i class="fas fa-arrow-left"></i> Back to Desk
+            <header class="library-drawer-header">
+                <div class="drawer-header-left">
+                    <button onclick="closeResourcePortal()" class="library-desk-back-btn" aria-label="Back to main catalog">
+                        <i class="fas fa-arrow-left"></i> <span>Back to Catalog</span>
                     </button>
                     <div>
-                        <h2 id="drawer-title" style="margin: 0; font-family: var(--site-font-family, 'Outfit', sans-serif); font-size: 1.6rem; font-weight: 900; color: var(--color-text-default);">Subject Guide</h2>
-                        <p id="drawer-subtitle" style="margin: 0.25rem 0 0 0; font-size: 0.85rem; color: var(--color-text-muted);"></p>
+                        <h2 id="drawer-title" class="drawer-header-title">Subject Guide</h2>
+                        <p id="drawer-subtitle" class="drawer-header-subtitle"></p>
                     </div>
                 </div>
                 
                 <!-- Controls row (Search & Sort inside drawer) -->
-                <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+                <div class="drawer-header-right">
                     <!-- Drawer Search -->
-                    <div class="library-search-input-container" style="margin: 0; width: 280px; height: 2.25rem; position: relative;">
-                        <input type="text" id="drawer-search" oninput="filterDrawerBooks()" placeholder="Search in this desk..." class="library-search-input" style="height: 100%; font-size: 0.85rem; padding-left: 2.5rem; width: 100%; border-radius: var(--radius-md); border: 1px solid var(--color-border); background-color: var(--color-base-bg); color: var(--color-text-default); outline: none;">
-                        <i class="fas fa-search library-search-icon" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); font-size: 0.85rem; color: var(--color-text-muted);"></i>
+                    <div class="drawer-search-container">
+                        <input type="text" 
+                               id="drawer-search" 
+                               oninput="filterDrawerBooks()" 
+                               placeholder="Search in this desk..." 
+                               class="drawer-search-input"
+                               autocomplete="off">
+                        <i class="fas fa-search drawer-search-icon"></i>
                     </div>
                     
                     <!-- Drawer Sort -->
-                    <div style="display: flex; align-items: center; gap: 0.5rem;">
-                        <select id="drawer-sort" onchange="sortDrawerBooks()" class="library-sort-select library-glass-shine" style="padding: 0.4rem 1.5rem 0.4rem 0.75rem; font-size: 0.85rem; font-weight: 700; border-radius: var(--radius-md); background-color: var(--color-content-bg); border: 1px solid var(--color-border); color: var(--color-text-default); cursor: pointer; outline: none; height: 2.25rem;">
+                    <div class="drawer-sort-container">
+                        <select id="drawer-sort" onchange="sortDrawerBooks()" class="drawer-sort-select library-glass-shine" aria-label="Sort books">
                             <option value="title">Title (A-Z)</option>
                             <option value="ddc">Call Number (DDC)</option>
                             <option value="lexile">Reading Level (Lexile)</option>
@@ -245,23 +283,23 @@ include ABSPATH . 'src/header.php';
                     </div>
 
                     <!-- Dedicated Close Button -->
-                    <button onclick="closeResourcePortal()" class="library-drawer-close-btn" aria-label="Close Subject Portal">
+                    <button onclick="closeResourcePortal()" class="library-drawer-close-btn" aria-label="Close Subject Portal" title="Close Subject Portal">
                         <i class="fas fa-times"></i>
                     </button>
                 </div>
             </header>
 
             <!-- Workspace Content Area -->
-            <div class="library-drawer-content" style="flex-grow: 1; padding: 2rem 0.5rem; box-sizing: border-box;">
+            <div class="library-drawer-content">
                 
-                <div style="margin-bottom: 2rem; border-bottom: 1px solid var(--color-border); padding-bottom: 1rem; text-align: left;">
-                    <span style="font-size: 0.85rem; font-weight: 700; color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: 0.1em;">Subject Holdings</span>
-                    <h3 style="font-size: 1.1rem; font-weight: 800; color: var(--color-text-secondary); margin: 0.25rem 0 0 0;">
-                        Showing <span id="drawer-count" style="color: var(--color-primary);">0</span> references
+                <div class="drawer-holdings-bar">
+                    <span class="drawer-holdings-label">Subject Holdings</span>
+                    <h3 class="drawer-holdings-count">
+                        Showing <span id="drawer-count">0</span> references
                     </h3>
                 </div>
 
-                <div id="drawer-grid" style="width: 100%; margin: 0 auto;">
+                <div id="drawer-grid" class="drawer-grid-container">
                     <?php 
                     // Render all books grouped by category and section inside the drawer wrapper
                     foreach ($drawerCategories as $categoryName => $books) {
@@ -273,17 +311,17 @@ include ABSPATH . 'src/header.php';
                         
                         foreach ($grouped as $sectionName => $sectionBooks) {
                             ?>
-                            <div class="drawer-section" data-category="<?php echo htmlspecialchars($categoryName); ?>" style="margin-bottom: 2.5rem; width: 100%;">
+                            <div class="drawer-section" data-category="<?php echo htmlspecialchars($categoryName); ?>">
                                 <?php if ($sectionName !== ''): ?>
-                                    <div class="drawer-section-header" style="font-family: var(--site-font-family, 'Outfit', sans-serif); font-size: 1.3rem; font-weight: 900; color: var(--color-text-secondary); margin-top: 1.5rem; margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-border); text-align: left;">
+                                    <div class="drawer-section-header">
                                         <?php echo htmlspecialchars($sectionName); ?>
                                     </div>
                                 <?php endif; ?>
-                                <div class="drawer-section-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; width: 100%;">
+                                <div class="drawer-section-grid">
                                     <?php 
                                     foreach ($sectionBooks as $book) {
                                         $book['category'] = $categoryName;
-                                        include 'book_card.php';
+                                        include __DIR__ . '/book_card.php';
                                     }
                                     ?>
                                 </div>
@@ -295,16 +333,18 @@ include ABSPATH . 'src/header.php';
                 </div>
                 
                 <!-- Local Drawer Empty State -->
-                <div id="drawer-empty" style="display: none; text-align: center; padding: 4rem 2rem;">
-                    <i class="fas fa-search" style="font-size: 3rem; color: var(--color-text-muted); opacity: 0.3; margin-bottom: 1rem;"></i>
-                    <h3 style="font-size: 1.25rem; font-weight: 800; margin: 0 0 0.5rem 0; color: var(--color-text-default);">No items found</h3>
-                    <p style="font-size: 0.9rem; color: var(--color-text-muted); margin: 0;">We couldn't find any resources in this subject.</p>
+                <div id="drawer-empty" class="drawer-empty-state hidden">
+                    <i class="fas fa-search drawer-empty-icon"></i>
+                    <h3 class="drawer-empty-title">No items found</h3>
+                    <p class="drawer-empty-desc">We couldn't find any resources matching your search in this subject desk.</p>
                 </div>
 
                 <!-- External Links Section -->
-                <div id="drawer-external-links-container" class="hidden" style="margin-top: 3rem; border-top: 1px solid var(--color-border); padding-top: 2rem; width: 100%; display: none;">
-                    <h3 style="font-family: var(--site-font-family, 'Outfit', sans-serif); font-size: 1.35rem; font-weight: 800; color: var(--color-text-default); margin: 0 0 1rem 0; display: flex; align-items: center; gap: 0.5rem;"><i class="fas fa-external-link-alt" style="color: var(--color-secondary);"></i> Additional Online Resources</h3>
-                    <div id="drawer-external-links-list" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.25rem; width: 100%;">
+                <div id="drawer-external-links-container" class="drawer-external-links-container hidden">
+                    <h3 class="drawer-external-links-title">
+                        <i class="fas fa-external-link-alt"></i> Additional Online Resources
+                    </h3>
+                    <div id="drawer-external-links-list" class="drawer-external-links-grid">
                         <!-- Populated dynamically by library.js -->
                     </div>
                 </div>
@@ -315,11 +355,12 @@ include ABSPATH . 'src/header.php';
 
 </main>
 
-<link rel="stylesheet" href="library.css">
+<link rel="stylesheet" href="/library/library.css">
 <?php include __DIR__ . '/modals.php'; ?>
+
 <script>
-  window.DESK_EXTERNAL_LINKS = <?php echo json_encode($deskLinks); ?>;
+  window.DESK_EXTERNAL_LINKS = <?php echo json_encode($deskLinks, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT); ?>;
 </script>
-<script src="assets/library.js" defer></script>
+<script src="/library/assets/library.js" defer></script>
 
 <?php include ABSPATH . 'src/footer.php'; ?>

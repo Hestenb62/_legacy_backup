@@ -1,4 +1,10 @@
 <?php
+/**
+ * library/read/index.php - Unified Digital Reader Controller
+ * Resolves book routing, multi-chapter pagination, TOC metadata, single-file documents,
+ * study quizzes, and teacher authorization.
+ */
+
 // Secure session start for teacher authentication
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
@@ -18,12 +24,12 @@ if (empty($queryString) && !empty($_SERVER['argv'][1])) {
     $queryString = $_SERVER['argv'][1];
 }
 
-// Populate $_GET manually if empty (e.g. running under Five Server with CLI php binary)
+// Populate $_GET manually if empty
 if (empty($_GET) && !empty($queryString)) {
     parse_str($queryString, $_GET);
 }
 
-// Preserve the old reader.php URL as a redirect into the new index.php.
+// Preserve old reader.php URL as a redirect into index.php
 if (basename($requestPath) === 'reader.php') {
     $redirectUrl = '/library/read/index.php' . ($queryString ? '?' . $queryString : '');
     header('Location: ' . $redirectUrl, true, 301);
@@ -173,11 +179,11 @@ $vocabList = [];
 $bookToc = [];
 
 if ($bookId === '') {
-    $error = 'No book specified.';
+    $error = 'No book specified. Please select a book from the library catalog.';
 } elseif (!$book) {
     $error = 'Book not found in library catalog.';
 } else {
-    $bookTitle = $book['title'] ?? 'Untitled';
+    $bookTitle = $book['title'] ?? 'Untitled Book';
     $bookAuthor = $book['author'] ?? 'Unknown Author';
     $hasTeacherResources = !empty($book['hasTeacherResources']);
 
@@ -189,7 +195,7 @@ if ($bookId === '') {
 
     // Scan for chapters in book folder
     $bookFolder = __DIR__ . '/' . $bookId;
-    $chapterFiles = glob($bookFolder . '/chapter-*.php');
+    $chapterFiles = is_dir($bookFolder) ? glob($bookFolder . '/chapter-*.php') : [];
     
     // Sort chapters numerically to get correct count
     natsort($chapterFiles);
@@ -226,7 +232,7 @@ if ($bookId === '') {
             }
         }
 
-        // Handle teacher resources password authorization only if book has teacher resources enabled
+        // Handle teacher resources password authorization
         if ($hasTeacherResources && $chapterNum === $totalChapters) {
             if (isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['teacher_password'])) {
                 if (trim($_POST['teacher_password']) === '8675309') {
@@ -235,7 +241,7 @@ if ($bookId === '') {
                     header('Location: /library/read/index.php?book=' . urlencode($bookId) . '&chapter=chapter-' . $totalChapters);
                     exit;
                 } else {
-                    $authError = 'Incorrect answer. Access Denied.';
+                    $authError = 'Incorrect password. Access Denied.';
                 }
             }
         }
@@ -248,13 +254,12 @@ if ($bookId === '') {
             if ($chapterHtml === false) {
                 $error = 'Failed to load chapter content.';
             } else {
-                // Extract the core reader content inside class "cdn-book-reader-content"
+                // Extract core reader content inside class "cdn-book-reader-content"
                 if (preg_match('/<div class="cdn-book-reader-content">(.*?)<\/div>\s*<nav class="reader-chapter-nav"/is', $chapterHtml, $matches)) {
                     $contentHtml = $matches[1];
                 } elseif (preg_match('/<div class="cdn-book-reader-content">(.*?)<\/div>/is', $chapterHtml, $matches)) {
                     $contentHtml = $matches[1];
                 } else {
-                    // Strip tags if structure unrecognized
                     $contentHtml = $chapterHtml;
                 }
 
@@ -270,15 +275,15 @@ if ($bookId === '') {
                             '<a href="$1" target="_blank" rel="noopener noreferrer" style="color: var(--color-primary); text-decoration: underline;">$1</a>',
                             $escapedCredits
                         );
-                        $contentHtml .= '<div class="book-credits-container" style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px dashed var(--color-border); font-size: 0.85rem; color: var(--color-text-secondary); line-height: 1.5;">' . 
-                                        '<strong>Credits & Sources:</strong> <span class="book-credits-text">' . $clickableCredits . '</span>' .
+                        $contentHtml .= '<div class="book-credits-container" style="margin-top: 3.5rem; padding-top: 1.5rem; border-top: 1px dashed var(--color-border); font-size: 0.85rem; color: var(--color-text-secondary); line-height: 1.6;">' . 
+                                        '<strong>Credits & Primary Sources:</strong> <span class="book-credits-text">' . $clickableCredits . '</span>' .
                                         '</div>';
                     }
                 }
             }
         }
 
-        // Load Quiz questions and vocab list from assets directory dynamically based on bookId
+        // Load Quiz questions and vocab list from assets directory
         $quizJsonPath = __DIR__ . '/../assets/' . $bookId . '.json';
         if (is_file($quizJsonPath)) {
             $quizData = json_decode(file_get_contents($quizJsonPath), true);
@@ -289,7 +294,7 @@ if ($bookId === '') {
         }
 
     } else {
-        // Single file book
+        // Single file document or external HTML
         $localFile = $book['local-file'] ?? '';
         $localPath1 = __DIR__ . '/../' . $localFile;
         $localPath2 = __DIR__ . '/../../' . $localFile;
@@ -308,8 +313,8 @@ if ($bookId === '') {
             $rawHtml = @file_get_contents($cdnUrl);
         }
 
-        // Check if there is an index.php directly in the book subfolder (e.g., usa-constitution/index.php)
-        if ($rawHtml === false) {
+        // Check if there is an index.php directly in book subfolder
+        if ($rawHtml === false && is_dir($bookFolder)) {
             $folderIndex = $bookFolder . '/index.php';
             if (is_file($folderIndex)) {
                 $rawHtml = file_get_contents($folderIndex);
@@ -317,7 +322,7 @@ if ($bookId === '') {
         }
 
         if ($rawHtml === false) {
-            $error = 'This book does not support online reading, or content could not be retrieved.';
+            $error = 'This book does not support inline browser reading, or content is unavailable.';
         } else {
             // Clean styles and base HTML structures to prevent layout breakage in the reader template
             $cleanedHtml = preg_replace('/<style\b[^>]*>(.*?)<\/style>/is', '', $rawHtml);
@@ -328,25 +333,29 @@ if ($bookId === '') {
 }
 
 if ($error !== '') {
-    $pageTitle = "Error | Hesten's Learning Library";
+    $pageTitle = "Error | Hesten's Learning Digital Reader";
     include __DIR__ . '/../../src/header.php';
     ?>
     <main id="main-content" class="library-main reader-main-layout">
-        <div class="reader-back-nav">
-            <a href="/library/" class="reader-back-btn" style="text-decoration: none; padding: 0.75rem 1.5rem; background: var(--color-content-bg); border-radius: 9999px; border: 1px solid var(--color-border); font-weight: 700; color: var(--color-text-default); display: inline-flex; align-items: center; gap: 0.5rem;">
+        <div class="reader-back-nav" style="margin-bottom: 2rem;">
+            <a href="/library/" class="reader-back-btn" style="text-decoration: none; padding: 0.65rem 1.5rem; background: var(--color-content-bg); border-radius: 9999px; border: 1px solid var(--color-border); font-weight: 700; color: var(--color-text-default); display: inline-flex; align-items: center; gap: 0.5rem;">
                 <i class="fas fa-arrow-left"></i> Return to Catalog
             </a>
         </div>
-        <div style="max-width: 500px; margin: 5rem auto; text-align: center; padding: 2rem; background: var(--color-content-bg); border-radius: 1.5rem; border: 1px solid var(--color-border); box-shadow: var(--shadow-lg);">
-            <i class="fas fa-exclamation-triangle" style="font-size: 3rem; color: #ef4444; margin-bottom: 1.5rem;"></i>
-            <h2 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 1rem;">Unable to load book</h2>
-            <p style="color: var(--color-text-secondary); margin-bottom: 1.5rem;"><?php echo htmlspecialchars($error); ?></p>
-            <a href="/library/" class="controls-nav-btn" style="text-decoration: none; display: inline-block;">Browse Catalog</a>
+        <div style="max-width: 520px; margin: 4rem auto; text-align: center; padding: 2.5rem; background: var(--color-content-bg); border-radius: 1.5rem; border: 1px solid var(--color-border); box-shadow: var(--shadow-xl);">
+            <div style="width: 4rem; height: 4rem; border-radius: 50%; background: rgba(239, 68, 68, 0.1); color: #ef4444; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem auto; font-size: 1.75rem;">
+                <i class="fas fa-book-dead"></i>
+            </div>
+            <h2 style="font-size: 1.6rem; font-weight: 900; margin-bottom: 0.75rem; color: var(--color-text-default);">Unable to Load Book</h2>
+            <p style="color: var(--color-text-secondary); margin-bottom: 2rem; line-height: 1.6; font-size: 0.95rem;"><?php echo htmlspecialchars($error); ?></p>
+            <a href="/library/" class="controls-nav-btn" style="text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 2rem; border-radius: 9999px; background: var(--color-primary); color: white; font-weight: 800;">
+                <i class="fas fa-search"></i> Browse Library Catalog
+            </a>
         </div>
     </main>
     <?php
     include __DIR__ . '/../../src/footer.php';
 } else {
-    // Render unified template
+    // Render unified reader template
     require __DIR__ . '/reader_template.php';
 }

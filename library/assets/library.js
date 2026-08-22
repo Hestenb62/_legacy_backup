@@ -1,1067 +1,848 @@
-/* library/library.js - Digital Library Hub Interactive Scripts */
+/**
+ * library/assets/library.js - Digital Library Hub & Research Desks Controller
+ * Pure Vanilla ES6+: Fast Fuzzy Search, Multi-Facet Filters, Responsive View Modes,
+ * Subject Workspace Portals, Continue Reading Shelf, and Knowledge Modals.
+ */
 
-let disclaimersData = {};
-let activeCategoryName = '';
-let bookmarkList = [];
+(function () {
+    'use strict';
 
-try {
-    bookmarkList = JSON.parse(localStorage.getItem('hesten_library_bookmarks') || '[]');
-} catch(e) {
-    bookmarkList = [];
-}
+    let disclaimersData = {};
+    let activeDeskName = '';
+    let bookmarkList = [];
+    let currentBookData = null;
+    let currentCitationStyle = 'mla';
 
-document.addEventListener("DOMContentLoaded", () => {
-    applyStoredLexileOverrides();
-    setupScrollButtons();
-    setupFilters();
-    setupA11y();
-    loadDisclaimers();
-    setupSidebarToggle();
-    setupProgressBars();
-    setupLexileEditing();
-    initBookmarks();
-    initContinueReadingShelf();
-    initViewSwitcher();
-});
-
-function initBookmarks() {
-    syncBookmarkIcons();
-}
-
-function syncBookmarkIcons() {
-    document.querySelectorAll('.library-book-card').forEach(card => {
-        const id = card.dataset.id;
-        const btn = card.querySelector('.library-book-bookmark-btn i');
-        if (id && btn) {
-            if (bookmarkList.includes(id)) {
-                btn.className = 'fas fa-star';
-                btn.parentElement.classList.add('bookmarked');
-            } else {
-                btn.className = 'far fa-star';
-                btn.parentElement.classList.remove('bookmarked');
-            }
-        }
-    });
-}
-
-window.toggleBookmark = function(e, bookId) {
-    if (e) {
-        e.stopPropagation();
-    }
-    if (!bookId) return;
-
-    const idx = bookmarkList.indexOf(bookId);
-    if (idx > -1) {
-        bookmarkList.splice(idx, 1);
-    } else {
-        bookmarkList.push(bookId);
-    }
+    // Safe localStorage accessor
     try {
-        localStorage.setItem('hesten_library_bookmarks', JSON.stringify(bookmarkList));
-    } catch(e) {}
-
-    syncBookmarkIcons();
-
-    // Update modal button if currently open
-    const modalBtn = document.getElementById('modal-bookmark-btn');
-    if (modalBtn && window.currentBookId === bookId) {
-        const isSaved = bookmarkList.includes(bookId);
-        modalBtn.innerHTML = isSaved ? '<i class="fas fa-star"></i> <span>Saved</span>' : '<i class="far fa-star"></i> <span>Save</span>';
-        modalBtn.classList.toggle('active', isSaved);
+        bookmarkList = JSON.parse(localStorage.getItem('hesten_library_bookmarks') || '[]');
+    } catch (e) {
+        bookmarkList = [];
     }
 
-    // Refresh filter if looking at saved view
-    const catFilter = document.getElementById('category-filter');
-    if (catFilter && catFilter.value === 'saved') {
-        catFilter.dispatchEvent(new Event('change'));
-    }
-};
-
-window.toggleModalBookmark = function() {
-    if (window.currentBookId) {
-        toggleBookmark(null, window.currentBookId);
-    }
-};
-
-/* --- View Mode Switcher --- */
-function initViewSwitcher() {
-    const savedMode = localStorage.getItem('hesten_library_view_mode') || 'carousel';
-    switchLibraryView(savedMode, false);
-}
-
-window.switchLibraryView = function(mode, save = true) {
-    const container = document.getElementById('library-catalog-container');
-    if (!container) return;
-
-    container.classList.remove('view-carousel', 'view-grid', 'view-list');
-    container.classList.add(`view-${mode}`);
-
-    document.querySelectorAll('.view-switch-btn').forEach(btn => {
-        btn.classList.toggle('active', btn.id === `view-mode-${mode}`);
+    document.addEventListener("DOMContentLoaded", () => {
+        applyStoredLexileOverrides();
+        setupScrollButtons();
+        setupFilters();
+        loadDisclaimers();
+        setupSidebarToggle();
+        setupProgressBars();
+        setupLexileEditing();
+        initBookmarks();
+        initContinueReadingShelf();
+        initViewSwitcher();
+        setupKeyboardShortcuts();
     });
 
-    if (save) {
+    /* ==========================================================================
+       1. Bookmarks & Favorites
+       ========================================================================== */
+    function initBookmarks() {
+        syncBookmarkIcons();
+    }
+
+    function syncBookmarkIcons() {
+        document.querySelectorAll('.library-book-card').forEach(card => {
+            const id = card.dataset.id;
+            const btn = card.querySelector('.library-book-bookmark-btn i');
+            if (id && btn) {
+                if (bookmarkList.includes(id)) {
+                    btn.className = 'fas fa-star';
+                    btn.parentElement.classList.add('bookmarked');
+                } else {
+                    btn.className = 'far fa-star';
+                    btn.parentElement.classList.remove('bookmarked');
+                }
+            }
+        });
+    }
+
+    window.toggleBookmark = function (e, bookId) {
+        if (e) e.stopPropagation();
+        if (!bookId) return;
+
+        const idx = bookmarkList.indexOf(bookId);
+        if (idx > -1) {
+            bookmarkList.splice(idx, 1);
+        } else {
+            bookmarkList.push(bookId);
+        }
+
         try {
-            localStorage.setItem('hesten_library_view_mode', mode);
-        } catch(e) {}
-    }
-};
+            localStorage.setItem('hesten_library_bookmarks', JSON.stringify(bookmarkList));
+        } catch (err) {}
 
-/* --- Continue Reading Shelf --- */
-function initContinueReadingShelf() {
-    const shelf = document.getElementById('continue-reading-shelf');
-    const container = document.getElementById('continue-reading-cards');
-    if (!shelf || !container) return;
+        syncBookmarkIcons();
 
-    const cards = Array.from(document.querySelectorAll('.library-book-card'));
-    const inProgress = [];
-
-    cards.forEach(card => {
-        const id = card.dataset.id;
-        if (!id) return;
-
-        const pct = parseInt(localStorage.getItem(`hesten_completion_pct_${id}`) || '0', 10);
-        const lastCh = localStorage.getItem(`hesten_progress_${id}_lastChapter`) || '1';
-        
-        if (pct > 0) {
-            inProgress.push({
-                id: id,
-                title: card.dataset.title || 'Untitled',
-                author: card.dataset.author || '',
-                img: card.dataset.img || '',
-                pct: Math.min(100, pct),
-                lastChapter: lastCh,
-                readOnlineLink: card.dataset.readOnlineLink || '#'
-            });
+        // Update modal bookmark button if open
+        const modalBtn = document.getElementById('modal-bookmark-btn');
+        if (modalBtn && window.currentBookId === bookId) {
+            const isSaved = bookmarkList.includes(bookId);
+            modalBtn.innerHTML = isSaved ? '<i class="fas fa-star"></i> <span>Saved</span>' : '<i class="far fa-star"></i> <span>Save</span>';
+            modalBtn.classList.toggle('active', isSaved);
         }
-    });
 
-    if (inProgress.length === 0) {
-        shelf.classList.add('hidden');
-        shelf.style.display = 'none';
-        return;
-    }
-
-    // Sort descending by highest percentage / active reading
-    inProgress.sort((a, b) => b.pct - a.pct);
-
-    container.innerHTML = inProgress.slice(0, 4).map(book => `
-        <div class="continue-reading-card" onclick="location.href='${book.readOnlineLink}'">
-            <div class="cr-cover-wrap">
-                <img src="${book.img}" alt="${book.title}" class="cr-cover-img" onerror="this.src='https://placehold.co/100x150/6366f1/white?text=Book'">
-                <div class="cr-pct-badge">${book.pct}%</div>
-            </div>
-            <div class="cr-info">
-                <span class="cr-chapter-tag"><i class="fas fa-bookmark"></i> Chapter ${book.lastChapter}</span>
-                <h4 class="cr-title">${book.title}</h4>
-                <p class="cr-author">${book.author}</p>
-                <div class="cr-progress-bar">
-                    <div class="cr-progress-fill" style="width: ${book.pct}%;"></div>
-                </div>
-                <a href="${book.readOnlineLink}" class="cr-resume-btn">
-                    <i class="fas fa-play"></i> Resume Reading
-                </a>
-            </div>
-        </div>
-    `).join('');
-
-    shelf.classList.remove('hidden');
-    shelf.style.display = 'block';
-}
-
-function applyStoredLexileOverrides() {
-    const cards = document.querySelectorAll('.library-book-card');
-    cards.forEach(card => {
-        const id = card.dataset.id;
-        if (!id) return;
-        
-        const overrideLex = localStorage.getItem(`hesten_lexile_override_${id}`);
-        if (overrideLex) {
-            card.dataset.lexile = overrideLex;
+        // Re-filter if on "My Reading List"
+        const catFilter = document.getElementById('category-filter');
+        if (catFilter && catFilter.value === 'saved') {
+            applyCatalogFilters();
         }
-    });
-}
-
-function setupLexileEditing() {
-    const editBtn = document.getElementById('edit-lexile-btn');
-    const saveBtn = document.getElementById('save-lexile-btn');
-    const cancelBtn = document.getElementById('cancel-lexile-btn');
-    const lexDisplay = document.getElementById('modal-lexile');
-    const editContainer = document.getElementById('modal-lexile-edit-container');
-    const lexInput = document.getElementById('modal-lexile-input');
-
-    if (!editBtn || !saveBtn || !cancelBtn || !lexDisplay || !editContainer || !lexInput) return;
-
-    editBtn.addEventListener('click', () => {
-        lexDisplay.style.display = 'none';
-        editBtn.style.display = 'none';
-        editContainer.classList.remove('hidden');
-        editContainer.style.display = 'flex';
-        
-        lexInput.value = lexDisplay.textContent.trim();
-        lexInput.focus();
-    });
-
-    const resetView = () => {
-        lexDisplay.style.display = '';
-        editBtn.style.display = '';
-        editContainer.classList.add('hidden');
-        editContainer.style.display = 'none';
     };
 
-    cancelBtn.addEventListener('click', resetView);
-
-    saveBtn.addEventListener('click', () => {
-        const newVal = lexInput.value.trim();
-        const bookId = window.currentBookId;
-        if (!bookId) return;
-
-        if (newVal) {
-            localStorage.setItem(`hesten_lexile_override_${bookId}`, newVal);
-            lexDisplay.textContent = newVal;
-
-            const card = document.querySelector(`.library-book-card[data-id="${bookId}"]`);
-            if (card) {
-                card.dataset.lexile = newVal;
-            }
-
-            const filterInput = document.getElementById('library-search');
-            if (filterInput) {
-                filterInput.dispatchEvent(new Event('input'));
-            }
+    window.toggleModalBookmark = function () {
+        if (window.currentBookId) {
+            window.toggleBookmark(null, window.currentBookId);
         }
-        resetView();
-    });
-}
+    };
 
-function setupProgressBars() {
-    const tracks = document.querySelectorAll('.book-progress-track');
-    tracks.forEach(track => {
-        const bookId = track.dataset.progressId;
-        if (!bookId) return;
+    /* ==========================================================================
+       2. View Mode Switcher (Carousel, Grid, List)
+       ========================================================================== */
+    function initViewSwitcher() {
+        const savedMode = localStorage.getItem('hesten_library_view_mode') || 'carousel';
+        window.switchLibraryView(savedMode, false);
+    }
 
+    window.switchLibraryView = function (mode, save = true) {
+        const container = document.getElementById('library-catalog-container');
+        if (!container) return;
+
+        container.classList.remove('view-carousel', 'view-grid', 'view-list');
+        container.classList.add(`view-${mode}`);
+
+        document.querySelectorAll('.view-switch-btn').forEach(btn => {
+            btn.classList.toggle('active', btn.id === `view-mode-${mode}`);
+        });
+
+        if (save) {
+            try {
+                localStorage.setItem('hesten_library_view_mode', mode);
+            } catch (err) {}
+        }
+    };
+
+    /* ==========================================================================
+       3. Real-Time Search & Multi-Facet Filtering
+       ========================================================================== */
+    function setupFilters() {
+        const searchInput = document.getElementById('library-search');
+        const clearBtn = document.getElementById('library-search-clear');
+        const catFilter = document.getElementById('category-filter');
+        const lexileFilter = document.getElementById('lexile-filter');
+
+        if (searchInput) {
+            searchInput.addEventListener('input', () => {
+                if (clearBtn) {
+                    clearBtn.classList.toggle('hidden', searchInput.value.trim() === '');
+                }
+                applyCatalogFilters();
+            });
+        }
+
+        if (clearBtn) {
+            clearBtn.addEventListener('click', () => {
+                if (searchInput) {
+                    searchInput.value = '';
+                    clearBtn.classList.add('hidden');
+                    searchInput.focus();
+                    applyCatalogFilters();
+                }
+            });
+        }
+
+        if (catFilter) {
+            catFilter.addEventListener('change', applyCatalogFilters);
+        }
+
+        if (lexileFilter) {
+            lexileFilter.addEventListener('change', applyCatalogFilters);
+        }
+    }
+
+    function applyCatalogFilters() {
+        const searchInput = document.getElementById('library-search');
+        const catFilter = document.getElementById('category-filter');
+        const lexileFilter = document.getElementById('lexile-filter');
+        const noResults = document.getElementById('no-results');
+
+        const query = searchInput ? searchInput.value.trim().toLowerCase() : '';
+        const selectedCat = catFilter ? catFilter.value : 'all';
+        const selectedLexile = lexileFilter ? lexileFilter.value : 'all';
+
+        let totalVisibleBooks = 0;
+        const rowSections = document.querySelectorAll('#library-catalog-container .library-row-section');
+
+        rowSections.forEach(section => {
+            const sectionCat = section.dataset.category || '';
+            const cards = section.querySelectorAll('.library-book-card');
+            let sectionVisibleCount = 0;
+
+            // Check if section matches category filter
+            let catMatches = false;
+            if (selectedCat === 'all' || selectedCat === sectionCat) {
+                catMatches = true;
+            } else if (selectedCat === 'saved') {
+                catMatches = true; // individual cards will be filtered
+            }
+
+            cards.forEach(card => {
+                const id = card.dataset.id || '';
+                const title = (card.dataset.title || '').toLowerCase();
+                const author = (card.dataset.author || '').toLowerCase();
+                const isbn = (card.dataset.isbn || '').toLowerCase();
+                const grade = (card.dataset.grade || '').toLowerCase();
+                const curriculum = (card.dataset.curriculum || '').toLowerCase();
+                const lexileStr = (card.dataset.lexile || '').replace(/[^0-9]/g, '');
+                const lexileNum = parseInt(lexileStr, 10);
+
+                // 1. Category / Saved filter
+                if (!catMatches) {
+                    card.style.display = 'none';
+                    return;
+                }
+                if (selectedCat === 'saved' && !bookmarkList.includes(id)) {
+                    card.style.display = 'none';
+                    return;
+                }
+
+                // 2. Query search
+                let queryMatches = true;
+                if (query !== '') {
+                    queryMatches = title.includes(query) ||
+                                   author.includes(query) ||
+                                   isbn.includes(query) ||
+                                   grade.includes(query) ||
+                                   curriculum.includes(query);
+                }
+
+                // 3. Lexile level filter
+                let lexileMatches = true;
+                if (selectedLexile === 'easy') {
+                    lexileMatches = !isNaN(lexileNum) && lexileNum < 500;
+                } else if (selectedLexile === 'medium') {
+                    lexileMatches = !isNaN(lexileNum) && lexileNum >= 500 && lexileNum <= 900;
+                } else if (selectedLexile === 'hard') {
+                    lexileMatches = !isNaN(lexileNum) && lexileNum > 900;
+                }
+
+                if (queryMatches && lexileMatches) {
+                    card.style.display = '';
+                    sectionVisibleCount++;
+                    totalVisibleBooks++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            section.style.display = sectionVisibleCount > 0 ? '' : 'none';
+        });
+
+        if (noResults) {
+            noResults.classList.toggle('hidden', totalVisibleBooks > 0);
+        }
+    }
+
+    window.resetLibraryFilters = function () {
+        const searchInput = document.getElementById('library-search');
+        const clearBtn = document.getElementById('library-search-clear');
+        const catFilter = document.getElementById('category-filter');
+        const lexileFilter = document.getElementById('lexile-filter');
+
+        if (searchInput) searchInput.value = '';
+        if (clearBtn) clearBtn.classList.add('hidden');
+        if (catFilter) catFilter.value = 'all';
+        if (lexileFilter) lexileFilter.value = 'all';
+
+        applyCatalogFilters();
+    };
+
+    /* ==========================================================================
+       4. Horizontal Carousel Scroll Buttons
+       ========================================================================== */
+    function setupScrollButtons() {
+        document.querySelectorAll('.library-row-section').forEach(section => {
+            const row = section.querySelector('.library-books-row');
+            const leftBtn = section.querySelector('.scroll-left');
+            const rightBtn = section.querySelector('.scroll-right');
+
+            if (row && leftBtn && rightBtn) {
+                leftBtn.addEventListener('click', () => {
+                    row.scrollBy({ left: -400, behavior: 'smooth' });
+                });
+                rightBtn.addEventListener('click', () => {
+                    row.scrollBy({ left: 400, behavior: 'smooth' });
+                });
+            }
+        });
+    }
+
+    /* ==========================================================================
+       5. Continue Reading Shelf ("Jump Back In")
+       ========================================================================== */
+    function initContinueReadingShelf() {
+        const shelf = document.getElementById('continue-reading-shelf');
+        const cardsContainer = document.getElementById('continue-reading-cards');
+        if (!shelf || !cardsContainer) return;
+
+        const progressItems = [];
+
+        // Scan localStorage for books in progress
         try {
-            const pct = localStorage.getItem(`hesten_completion_pct_${bookId}`);
-            if (pct !== null) {
-                const fill = track.querySelector('.book-progress-fill');
-                if (fill) {
-                    const progressNum = parseInt(pct, 10);
-                    if (progressNum > 0) {
-                        fill.style.width = `${progressNum}%`;
-                        track.classList.remove('hidden');
+            for (let i = 0; i < localStorage.length; i++) {
+                const key = localStorage.key(i);
+                if (key && key.startsWith('hesten_progress_') && key.endsWith('_lastChapter')) {
+                    const bookId = key.replace('hesten_progress_', '').replace('_lastChapter', '');
+                    const chapterNum = parseInt(localStorage.getItem(key) || '1', 10);
+                    const pctKey = `hesten_completion_pct_${bookId}`;
+                    const pct = parseInt(localStorage.getItem(pctKey) || '10', 10);
+
+                    // Locate card in DOM for metadata
+                    const card = document.querySelector(`.library-book-card[data-id="${bookId}"]`);
+                    if (card) {
+                        progressItems.push({
+                            id: bookId,
+                            title: card.dataset.title || bookId,
+                            img: card.dataset.img || card.dataset.fallbackImg,
+                            chapterNum: chapterNum,
+                            pct: Math.min(Math.max(pct, 5), 100),
+                            readLink: card.dataset.readOnlineLink || `/library/read/index.php?book=${bookId}&chapter=chapter-${chapterNum}`
+                        });
                     }
                 }
             }
         } catch (e) {}
-    });
-}
 
-function setupSidebarToggle() {
-    const sidebar = document.getElementById('library-sidebar');
-    const toggleBtn = document.getElementById('sidebar-toggle');
-    if (sidebar && toggleBtn) {
-        toggleBtn.addEventListener('click', () => {
-            sidebar.classList.toggle('collapsed');
-            const icon = toggleBtn.querySelector('i');
-            if (icon) {
-                if (sidebar.classList.contains('collapsed')) {
-                    icon.className = 'fas fa-chevron-right';
-                } else {
-                    icon.className = 'fas fa-chevron-left';
-                }
-            }
-        });
-    }
-}
-
-window.openResourcePortal = function(categoryName) {
-    const landing = document.getElementById('main-desk-landing');
-    const workspace = document.getElementById('subject-desk-workspace');
-    if (!landing || !workspace) return;
-
-    activeCategoryName = categoryName;
-
-    // Highlight active sidebar buttons
-    document.querySelectorAll('.sidebar-item-btn').forEach(btn => {
-        const btnText = btn.textContent.trim();
-        if (btnText.includes(categoryName)) {
-            btn.style.backgroundColor = "color-mix(in srgb, var(--color-primary) 12%, transparent)";
-            btn.style.color = "var(--color-primary)";
-            btn.style.borderColor = "color-mix(in srgb, var(--color-primary) 20%, transparent)";
-        } else {
-            btn.style.backgroundColor = "";
-            btn.style.color = "";
-            btn.style.borderColor = "";
-        }
-    });
-
-    // Populate drawer header details
-    const drawerTitle = document.getElementById('drawer-title');
-    const drawerSubtitle = document.getElementById('drawer-subtitle');
-
-    if (drawerTitle) drawerTitle.textContent = categoryName;
-    if (drawerSubtitle) {
-        let desc = "Browse resources, references, and study items.";
-        if (categoryName === "US History") desc = "Primary founding documents, constitutional laws, and historical papers.";
-        else if (categoryName === "World History") desc = "Ancient military strategies, strategic treatises, and philosophical meditations.";
-        else if (categoryName === "WW1") desc = "Diplomatic records, economic treatises, and historical memoirs of the First World War.";
-        else if (categoryName === "WW2") desc = "Allied strategy reports, command decisions, and archival wartime documents.";
-        else if (categoryName === "Math") desc = "Classic geometry elements, theories of relativity, and mathematical proofs.";
-        else if (categoryName === "ELA") desc = "English grammar stylebooks, reference dictionaries, and vocabulary resources.";
-        drawerSubtitle.textContent = desc;
-    }
-
-    // Reset Search in drawer
-    const searchInput = document.getElementById('drawer-search');
-    if (searchInput) searchInput.value = "";
-
-    // Toggle panels inline (no full screen fixed overlays)
-    landing.style.display = 'none';
-    landing.classList.add('hidden');
-    
-    workspace.classList.remove('hidden');
-    workspace.style.display = 'flex';
-    workspace.offsetHeight; // force reflow
-    workspace.style.opacity = "1";
-
-    // Scroll to top of workspace smoothly
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-
-    // Populate external links
-    const linksContainer = document.getElementById('drawer-external-links-container');
-    const linksList = document.getElementById('drawer-external-links-list');
-    
-    if (linksContainer && linksList) {
-        const categoryLinks = window.DESK_EXTERNAL_LINKS ? window.DESK_EXTERNAL_LINKS[categoryName] : null;
-        if (categoryLinks && categoryLinks.length > 0) {
-            linksList.innerHTML = categoryLinks.map(link => `
-                <div style="background: var(--color-content-bg); border: 1px solid var(--color-border); padding: 1.25rem; border-radius: 1rem; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <h4 style="font-family: var(--site-font-family, 'Outfit', sans-serif); font-size: 1.05rem; font-weight: 800; margin: 0 0 0.5rem 0; color: var(--color-text-default);">${link.title}</h4>
-                        <p style="font-size: 0.85rem; color: var(--color-text-secondary); margin: 0 0 1rem 0; line-height: 1.5;">${link.description}</p>
-                    </div>
-                    <a href="${link.url}" target="_blank" rel="noopener noreferrer" class="library-drawer-close-btn" style="text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; width: fit-content; padding: 0.4rem 0.8rem; border-radius: 0.5rem; font-size: 0.8rem; font-weight: 700; background: var(--color-base-bg); color: var(--color-text-default);">
-                        Visit Resource <i class="fas fa-external-link-alt" style="font-size: 0.75rem;"></i>
-                    </a>
-                </div>
-            `).join('');
-            linksContainer.style.display = 'block';
-            linksContainer.classList.remove('hidden');
-        } else {
-            linksList.innerHTML = '';
-            linksContainer.style.display = 'none';
-            linksContainer.classList.add('hidden');
-        }
-    }
-
-    // Apply filter and sort
-    sortDrawerBooks();
-    filterDrawerBooks();
-};
-
-function loadDisclaimers() {
-    fetch('assets/disclaimers.json')
-        .then(res => res.json())
-        .then(data => {
-            disclaimersData = data;
-        })
-        .catch(err => console.error("Error loading disclaimers:", err));
-}
-
-/* --- Horizontal Scroll Shelves --- */
-function setupScrollButtons() {
-    document.querySelectorAll('.library-row-section').forEach(section => {
-        const row = section.querySelector('.library-books-row');
-        const btnLeft = section.querySelector('.scroll-left');
-        const btnRight = section.querySelector('.scroll-right');
-        
-        if (row && btnLeft && btnRight) {
-            btnLeft.addEventListener('click', () => {
-                row.scrollBy({ left: -row.clientWidth * 0.75, behavior: 'smooth' });
-            });
-            btnRight.addEventListener('click', () => {
-                row.scrollBy({ left: row.clientWidth * 0.75, behavior: 'smooth' });
-            });
-            
-            // Keyboard navigation when row or cards inside row have focus
-            row.setAttribute('tabindex', '0');
-            row.addEventListener('keydown', (e) => {
-                if (e.key === 'ArrowLeft') {
-                    row.scrollBy({ left: -220, behavior: 'smooth' });
-                } else if (e.key === 'ArrowRight') {
-                    row.scrollBy({ left: 220, behavior: 'smooth' });
-                }
-            });
-
-            row.addEventListener('scroll', () => {
-                const maxScrollLeft = row.scrollWidth - row.clientWidth;
-                btnLeft.style.opacity = row.scrollLeft <= 5 ? "0.5" : "1";
-                btnRight.style.opacity = row.scrollLeft >= maxScrollLeft - 5 ? "0.5" : "1";
-            });
-        }
-    });
-}
-
-/* --- Search & Category Filtering --- */
-let searchTimeout;
-function setupFilters() {
-    const searchInput = document.getElementById('library-search');
-    const categoryFilter = document.getElementById('category-filter');
-    const lexileFilter = document.getElementById('lexile-filter');
-    const sections = document.querySelectorAll('.library-row-section');
-    const noResults = document.getElementById('no-results');
-
-    function filterLibrary() {
-        const query = searchInput ? searchInput.value.toLowerCase().trim() : '';
-        const selectedCat = categoryFilter ? categoryFilter.value : 'all';
-        const selectedLexile = lexileFilter ? lexileFilter.value : 'all';
-        let totalVisible = 0;
-
-        sections.forEach(section => {
-            const sectionCategory = section.dataset.category;
-            const books = section.querySelectorAll('.library-book-card');
-            let visibleInRow = 0;
-
-            let categoryMatch = false;
-            if (selectedCat === 'all') {
-                categoryMatch = true;
-            } else if (selectedCat === 'saved') {
-                categoryMatch = true; // Evaluated per card below
-            } else if (selectedCat === 'other') {
-                categoryMatch = (sectionCategory !== 'Primary Documents');
-            } else {
-                categoryMatch = (sectionCategory === selectedCat);
-            }
-
-            books.forEach(book => {
-                const title = (book.dataset.title || '').toLowerCase();
-                const author = (book.dataset.author || '').toLowerCase();
-                const isbn = (book.dataset.isbn || '').toLowerCase();
-                const grade = (book.dataset.grade || '').toLowerCase();
-                const curriculum = (book.dataset.curriculum || '').toLowerCase();
-                const bookId = book.dataset.id || '';
-
-                let cardCatMatch = categoryMatch;
-                if (selectedCat === 'saved') {
-                    cardCatMatch = bookmarkList.includes(bookId);
-                }
-
-                const matchesSearch = !query || 
-                    title.includes(query) || 
-                    author.includes(query) || 
-                    isbn.includes(query) ||
-                    grade.includes(query) ||
-                    curriculum.includes(query);
-
-                let lexileMatch = true;
-                if (selectedLexile !== 'all') {
-                    const lexValAttr = book.dataset.lexile || '';
-                    const numMatch = lexValAttr.match(/(\d+)/);
-                    const lexNum = numMatch ? parseInt(numMatch[1], 10) : null;
-                    
-                    if (lexNum === null) {
-                        lexileMatch = false;
-                    } else if (selectedLexile === 'easy') {
-                        lexileMatch = lexNum < 500;
-                    } else if (selectedLexile === 'medium') {
-                        lexileMatch = lexNum >= 500 && lexNum <= 900;
-                    } else if (selectedLexile === 'hard') {
-                        lexileMatch = lexNum > 900;
-                    }
-                }
-
-                if (cardCatMatch && matchesSearch && lexileMatch) {
-                    book.style.display = '';
-                    visibleInRow++;
-                    totalVisible++;
-                } else {
-                    book.style.display = 'none';
-                }
-            });
-
-            if (visibleInRow > 0) {
-                section.style.display = '';
-            } else {
-                section.style.display = 'none';
-            }
-        });
-
-        if (totalVisible === 0) {
-            if (noResults) noResults.style.display = 'block';
-        } else {
-            if (noResults) noResults.style.display = 'none';
-        }
-    }
-
-    if (searchInput) {
-        searchInput.addEventListener('input', () => {
-            clearTimeout(searchTimeout);
-            searchTimeout = setTimeout(filterLibrary, 100);
-        });
-    }
-
-    if (lexileFilter) {
-        lexileFilter.addEventListener('change', filterLibrary);
-    }
-
-    if (categoryFilter) {
-        categoryFilter.addEventListener('change', () => {
-            filterLibrary();
-        });
-    }
-}
-
-function getCurriculumLinksForBook(id, title, category) {
-    const titleLower = (title || '').toLowerCase();
-    const idLower = (id || '').toLowerCase();
-    const links = [];
-
-    if (idLower.includes('federalist') || titleLower.includes('federalist') || titleLower.includes('constitution') || idLower.includes('constitution') || titleLower.includes('common sense') || titleLower.includes('declaration')) {
-        links.push({ name: 'Grade 9 Civics (Level K)', url: '/levels/k.php?subject=social', icon: 'fa-landmark' });
-        links.push({ name: 'AP US History Curriculum Track', url: '/levels/ap-us-history.php', icon: 'fa-university' });
-    }
-    if (idLower.includes('frankenstein') || titleLower.includes('frankenstein') || idLower.includes('1984') || titleLower.includes('1984') || idLower.includes('gatsby') || titleLower.includes('gatsby') || idLower.includes('mockingbird') || titleLower.includes('mockingbird')) {
-        links.push({ name: 'High School Literature (Level K)', url: '/levels/k.php?subject=ela', icon: 'fa-book-open' });
-        links.push({ name: 'ELA Reading & Analysis Hub', url: '/student/ela-reading.php', icon: 'fa-glasses' });
-    }
-    if (idLower.includes('euclid') || titleLower.includes('geometry') || idLower.includes('relativity') || titleLower.includes('math') || titleLower.includes('physics')) {
-        links.push({ name: 'High School Mathematics (Level K)', url: '/levels/k.php?subject=math', icon: 'fa-calculator' });
-        links.push({ name: 'Science Research & Articles', url: '/student/science-articles.php', icon: 'fa-flask' });
-    }
-
-    if (links.length === 0) {
-        links.push({ name: 'Standard Grade 9 Curriculum (Level K)', url: '/levels/k.php', icon: 'fa-graduation-cap' });
-    }
-    return links;
-}
-
-/* --- Details Modal Operations --- */
-window.openModal = function(card) {
-    const modal = document.getElementById('bookModal');
-    if (!modal) return;
-
-    // Retrieve datasets
-    const id = card.dataset.id;
-    window.currentBookId = id;
-
-    const title = card.dataset.title;
-    const author = card.dataset.author;
-    const isbn = card.dataset.isbn;
-    const date = card.dataset.date;
-    const img = card.dataset.img;
-    const description = card.dataset.description;
-    const category = card.dataset.category;
-    
-    const pdfLink = card.dataset.pdfLink;
-    const epubLink = card.dataset.epubLink;
-    const mobiLink = card.dataset.mobiLink;
-    const readOnlineLink = card.dataset.readOnlineLink;
-    
-    let lexile = card.dataset.lexile;
-    if (id) {
-        const overrideLex = localStorage.getItem(`hesten_lexile_override_${id}`);
-        if (overrideLex) {
-            lexile = overrideLex;
-        }
-    }
-
-    const dewey = card.dataset.dewey;
-    const lc = card.dataset.lc;
-    const grade = card.dataset.grade;
-    const isCollection = card.dataset.isCollection === 'true';
-    const disclaimerKey = card.dataset.disclaimerKey;
-    const disclaimerText = card.dataset.disclaimerText;
-
-    window.currentBookFileSource = card.dataset.fileSource || '';
-    window.currentBookInfoSource = card.dataset.infoSource || '';
-
-    // Resolve disclaimer to show
-    window.currentBookDisclaimer = '';
-    if (disclaimerText && disclaimerText.trim() !== '') {
-        window.currentBookDisclaimer = disclaimerText;
-    } else if (disclaimerKey && disclaimersData[disclaimerKey]) {
-        window.currentBookDisclaimer = disclaimersData[disclaimerKey];
-    } else {
-        window.currentBookDisclaimer = disclaimersData['default'] || '';
-    }
-
-    // Populate standard properties
-    document.getElementById('modal-title').textContent = title || 'Untitled';
-    document.getElementById('modal-author').textContent = author ? `by ${author}` : '';
-    document.getElementById('modal-img').src = img || '';
-    document.getElementById('modal-img').alt = title || 'Book Cover';
-    document.getElementById('modal-description').textContent = description || 'No summary available.';
-    document.getElementById('modal-date').textContent = date || 'N/A';
-    document.getElementById('modal-isbn').textContent = isbn ? formatISBN(isbn) : 'N/A';
-
-    // Aligned Curriculum Links
-    const curriculumContainer = document.getElementById('modal-curriculum-container');
-    const curriculumContent = document.getElementById('modal-curriculum-content');
-    if (curriculumContainer && curriculumContent) {
-        const alignedLinks = getCurriculumLinksForBook(id, title, category);
-        curriculumContent.innerHTML = alignedLinks.map(l => `
-            <a href="${l.url}" class="curriculum-aligned-chip" target="_blank">
-                <i class="fas ${l.icon}"></i> <span>${l.name}</span> <i class="fas fa-arrow-right chip-arrow"></i>
-            </a>
-        `).join('');
-        curriculumContainer.classList.remove('hidden');
-    }
-
-    // Bookmark button state
-    const modalBookmarkBtn = document.getElementById('modal-bookmark-btn');
-    if (modalBookmarkBtn) {
-        const isSaved = bookmarkList.includes(id);
-        modalBookmarkBtn.innerHTML = isSaved ? '<i class="fas fa-star"></i> <span>Saved</span>' : '<i class="far fa-star"></i> <span>Save</span>';
-        modalBookmarkBtn.classList.toggle('active', isSaved);
-    }
-
-    // Lexile Level
-    const lexContainer = document.getElementById('modal-lexile-container');
-    const lexEl = document.getElementById('modal-lexile');
-    if (lexile && lexile !== 'N/A' && lexile !== '') {
-        lexEl.textContent = lexile;
-        lexContainer.classList.remove('hidden');
-    } else {
-        lexContainer.classList.add('hidden');
-    }
-
-    // Dewey Decimal
-    const deweyContainer = document.getElementById('modal-dewey-container');
-    const deweyEl = document.getElementById('modal-dewey');
-    if (dewey && dewey !== 'N/A' && dewey !== '') {
-        deweyEl.textContent = dewey;
-        deweyContainer.classList.remove('hidden');
-    } else {
-        deweyContainer.classList.add('hidden');
-    }
-
-    // LC Class
-    const lcContainer = document.getElementById('modal-lc-container');
-    const lcEl = document.getElementById('modal-lc');
-    if (lc && lc !== 'N/A' && lc !== '') {
-        lcEl.textContent = lc;
-        lcContainer.classList.remove('hidden');
-    } else {
-        lcContainer.classList.add('hidden');
-    }
-
-    // Grade Level
-    const gradeContainer = document.getElementById('modal-grade-container');
-    const gradeEl = document.getElementById('modal-grade');
-    if (grade && grade !== '') {
-        gradeEl.textContent = grade;
-        gradeContainer.classList.remove('hidden');
-    } else {
-        gradeContainer.classList.add('hidden');
-    }
-
-    // Action button elements
-    const singleActions = document.getElementById('modal-single-actions');
-    const collectionList = document.getElementById('modal-collection-actions');
-    
-    const readBtn = document.getElementById('modal-read-online-link');
-    const pdfBtn = document.getElementById('modal-pdf-link');
-    const epubBtn = document.getElementById('modal-epub-link');
-    const mobiBtn = document.getElementById('modal-mobi-link');
-
-    if (isCollection) {
-        // Toggle view
-        singleActions.classList.add('hidden');
-        collectionList.classList.remove('hidden');
-        collectionList.style.display = 'flex';
-
-        // Populate collection list
-        const booksJson = card.dataset.books;
-        if (booksJson) {
-            try {
-                const subBooks = JSON.parse(booksJson);
-                collectionList.innerHTML = subBooks.map(b => {
-                    let actions = '';
-                    if (b['read-online-link'] && b['read-online-link'] !== '#') {
-                        actions += `<a href="${b['read-online-link']}" target="_blank" rel="noopener noreferrer" class="col-book-btn" title="Read Online"><i class="fas fa-book-open"></i></a>`;
-                    }
-                    if (b['pdf-link'] && b['pdf-link'] !== '#') {
-                        actions += `<a href="${b['pdf-link']}" target="_blank" rel="noopener noreferrer" class="col-book-btn" title="Download PDF"><i class="fas fa-file-pdf"></i></a>`;
-                    }
-                    if (b['epub-link'] && b['epub-link'] !== '#') {
-                        actions += `<a href="${b['epub-link']}" target="_blank" rel="noopener noreferrer" class="col-book-btn" title="Download EPUB"><i class="fas fa-book"></i></a>`;
-                    }
-                    return `
-                        <div class="collection-book-row">
-                            <div class="col-book-info">
-                                <h4 class="col-book-title">${b.title}</h4>
-                                <p class="col-book-author">${b.author || ''}</p>
-                            </div>
-                            <div class="col-book-actions">
-                                ${actions}
-                            </div>
+        if (progressItems.length > 0) {
+            cardsContainer.innerHTML = '';
+            progressItems.slice(0, 4).forEach(item => {
+                const cardEl = document.createElement('a');
+                cardEl.className = 'continue-reading-card';
+                cardEl.href = item.readLink;
+                cardEl.innerHTML = `
+                    <img src="${item.img}" alt="${item.title}" class="continue-card-cover" onerror="this.onerror=null; this.src='https://placehold.co/100x150/1e293b/ffffff?text=Book';">
+                    <div class="continue-card-details">
+                        <h4 class="continue-card-title">${item.title}</h4>
+                        <p class="continue-card-chapter"><i class="fas fa-bookmark mr-1"></i> Chapter ${item.chapterNum} &bull; ${item.pct}%</p>
+                        <div class="continue-card-bar-wrap">
+                            <div class="continue-card-bar-fill" style="width: ${item.pct}%;"></div>
                         </div>
-                    `;
-                }).join('');
-            } catch (err) {
-                console.error("Error parsing collection books data", err);
-                collectionList.innerHTML = `<p style="color: var(--color-text-muted); font-style: italic;">Failed to load items.</p>`;
+                    </div>
+                `;
+                cardsContainer.appendChild(cardEl);
+            });
+            shelf.classList.remove('hidden');
+        } else {
+            shelf.classList.add('hidden');
+        }
+    }
+
+    function setupProgressBars() {
+        document.querySelectorAll('.book-progress-track').forEach(track => {
+            const id = track.dataset.progressId;
+            if (id) {
+                try {
+                    const pct = localStorage.getItem(`hesten_completion_pct_${id}`);
+                    if (pct && parseInt(pct, 10) > 0) {
+                        const fill = track.querySelector('.book-progress-fill');
+                        if (fill) fill.style.width = `${Math.min(parseInt(pct, 10), 100)}%`;
+                        track.classList.remove('hidden');
+                    }
+                } catch (e) {}
             }
-        } else {
-            collectionList.innerHTML = `<p style="color: var(--color-text-muted); font-style: italic;">No items in this collection.</p>`;
-        }
-    } else {
-        // Show single book actions
-        singleActions.classList.remove('hidden');
-        collectionList.classList.add('hidden');
-        collectionList.style.display = 'none';
+        });
+    }
 
-        // Set action links
-        if (readOnlineLink && readOnlineLink !== '#') {
-            readBtn.style.display = '';
-            readBtn.href = readOnlineLink;
-        } else {
-            readBtn.style.display = 'none';
-        }
-
-        if (pdfLink && pdfLink !== '#') {
-            pdfBtn.style.display = '';
-            pdfBtn.href = pdfLink;
-        } else {
-            pdfBtn.style.display = 'none';
-        }
-
-        if (epubLink && epubLink !== '#') {
-            epubBtn.style.display = '';
-            epubBtn.href = epubLink;
-        } else {
-            epubBtn.style.display = 'none';
-        }
-
-        if (mobiLink && mobiLink !== '#') {
-            mobiBtn.style.display = '';
-            mobiBtn.href = mobiLink;
-        } else {
-            mobiBtn.style.display = 'none';
+    /* ==========================================================================
+       6. Subject Research Desks Navigation & Workspace Panel
+       ========================================================================== */
+    function setupSidebarToggle() {
+        const sidebar = document.getElementById('library-sidebar');
+        const toggleBtn = document.getElementById('sidebar-toggle');
+        if (sidebar && toggleBtn) {
+            toggleBtn.addEventListener('click', () => {
+                sidebar.classList.toggle('expanded');
+                sidebar.classList.toggle('collapsed');
+            });
         }
     }
 
-    // Activate modal overlay
-    modal.classList.remove('hidden');
-    // Force reflow
-    modal.offsetHeight;
-    modal.classList.add('active');
-    
-    document.body.style.overflow = 'hidden'; // freeze viewport scroll
-    
-    // Focus close button for WCAG accessibility
-    const closeBtn = document.getElementById('book-modal-close');
-    if (closeBtn) closeBtn.focus();
-};
+    window.openResourcePortal = function (deskName) {
+        activeDeskName = deskName;
+        const mainLanding = document.getElementById('main-desk-landing');
+        const deskWorkspace = document.getElementById('subject-desk-workspace');
+        const drawerTitle = document.getElementById('drawer-title');
+        const drawerSubtitle = document.getElementById('drawer-subtitle');
 
-window.closeModal = function() {
-    const modal = document.getElementById('bookModal');
-    if (!modal) return;
-    
-    modal.classList.remove('active');
-    setTimeout(() => {
-        modal.classList.add('hidden');
-        document.body.style.overflow = ''; // restore scroll
-    }, 400);
-};
+        if (!mainLanding || !deskWorkspace) return;
 
-/* --- Disclaimer Dialog Modal --- */
-window.openDisclaimerModal = function() {
-    const discModal = document.getElementById('disclaimerModal');
-    if (!discModal) return;
-    
-    const defaultDisclaimer = disclaimersData['default'] || '';
-    const bookDisclaimer = window.currentBookDisclaimer || '';
-    
-    const fileSrc = window.currentBookFileSource || 'N/A';
-    const infoSrc = window.currentBookInfoSource || 'N/A';
+        mainLanding.classList.add('hidden');
+        mainLanding.classList.remove('active');
+        deskWorkspace.classList.remove('hidden');
+        deskWorkspace.classList.add('active');
 
-    const defaultText = `
-        <div style="margin-bottom: 0.75rem; font-size: 0.95rem;">
-            <strong style="color: var(--color-text-secondary);">Book File Source:</strong> <span style="color: var(--color-text-default); font-weight: 500;">${fileSrc}</span>
-        </div>
-        <div style="margin-bottom: 1.25rem; font-size: 0.95rem;">
-            <strong style="color: var(--color-text-secondary);">Metadata Sourced From:</strong> <span style="color: var(--color-text-default); font-weight: 500;">${infoSrc}</span>
-        </div>
-        <p style="margin: 0; font-size: 0.85rem; color: var(--color-text-secondary); line-height: 1.6; border-top: 1px dashed var(--color-border); padding-top: 1rem;">
-            The books and materials in this digital library are provided for educational and informational purposes only. Hesten's Learning makes no claims of ownership over third-party content. Please ensure your use of these materials complies with applicable copyright laws before downloading.
-        </p>
-    `;
+        if (drawerTitle) drawerTitle.textContent = `${deskName} Research Desk`;
+        if (drawerSubtitle) drawerSubtitle.textContent = `Curated primary sources, critical readings, and academic references.`;
 
-    const discTextEl = discModal.querySelector('.library-disclaimer-text');
-    if (discTextEl) {
-        discTextEl.innerHTML = defaultText;
-    }
-
-    const hasCustomLicense = (bookDisclaimer && bookDisclaimer.trim() !== '' && bookDisclaimer !== defaultDisclaimer);
-    
-    const tabsContainer = document.getElementById('disclaimer-tabs');
-    const licenseTextEl = discModal.querySelector('.library-disclaimer-license-text');
-    
-    if (hasCustomLicense) {
-        if (tabsContainer) {
-            tabsContainer.classList.remove('hidden');
-            tabsContainer.style.display = 'flex';
-        }
-        if (licenseTextEl) {
-            licenseTextEl.textContent = bookDisclaimer;
-        }
-    } else {
-        if (tabsContainer) {
-            tabsContainer.classList.add('hidden');
-            tabsContainer.style.display = 'none';
-        }
-    }
-    
-    window.switchDisclaimerTab('standard');
-    
-    discModal.classList.remove('hidden');
-    discModal.offsetHeight;
-    discModal.classList.add('active');
-    
-    const closeBtn = document.getElementById('disclaimer-modal-close');
-    if (closeBtn) closeBtn.focus();
-};
-
-window.switchDisclaimerTab = function(tabName) {
-    const tabStandard = document.getElementById('tab-disc-standard');
-    const tabLicense = document.getElementById('tab-disc-license');
-    const viewStandard = document.getElementById('disclaimer-standard-view');
-    const viewLicense = document.getElementById('disclaimer-license-view');
-    
-    if (tabName === 'standard') {
-        if (tabStandard) tabStandard.classList.add('active');
-        if (tabLicense) tabLicense.classList.remove('active');
-        
-        if (viewStandard) {
-            viewStandard.classList.remove('hidden');
-            viewStandard.style.display = 'block';
-        }
-        if (viewLicense) {
-            viewLicense.classList.add('hidden');
-            viewLicense.style.display = 'none';
-        }
-    } else if (tabName === 'license') {
-        if (tabStandard) tabStandard.classList.remove('active');
-        if (tabLicense) tabLicense.classList.add('active');
-        
-        if (viewStandard) {
-            viewStandard.classList.add('hidden');
-            viewStandard.style.display = 'none';
-        }
-        if (viewLicense) {
-            viewLicense.classList.remove('hidden');
-            viewLicense.style.display = 'block';
-        }
-    }
-};
-
-window.closeDisclaimerModal = function() {
-    const discModal = document.getElementById('disclaimerModal');
-    if (!discModal) return;
-    
-    discModal.classList.remove('active');
-    setTimeout(() => {
-        discModal.classList.add('hidden');
-    }, 300);
-};
-
-/* --- Keyboard Accessibility Close --- */
-function setupA11y() {
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-            // Close modals on ESC
-            const bookModal = document.getElementById('bookModal');
-            const discModal = document.getElementById('disclaimerModal');
-            const lexModal = document.getElementById('lexileInfoModal');
-            const ddcModal = document.getElementById('ddcInfoModal');
-            const drawer = document.getElementById('resource-portal-drawer');
-            
-            if (lexModal && lexModal.classList.contains('active')) {
-                closeLexileInfoModal();
-            } else if (ddcModal && ddcModal.classList.contains('active')) {
-                closeDdcInfoModal();
-            } else if (discModal && discModal.classList.contains('active')) {
-                closeDisclaimerModal();
-            } else if (bookModal && bookModal.classList.contains('active')) {
-                closeModal();
-            } else if (drawer && drawer.classList.contains('active')) {
-                closeResourcePortal();
+        // Filter sections by deskName
+        let visibleCount = 0;
+        document.querySelectorAll('#drawer-grid .drawer-section').forEach(sec => {
+            const cat = sec.dataset.category || '';
+            const match = cat.toLowerCase() === deskName.toLowerCase();
+            sec.style.display = match ? '' : 'none';
+            if (match) {
+                visibleCount += sec.querySelectorAll('.library-book-card').length;
             }
-        }
-    });
-}
+        });
 
-/* --- Lexile Info Modal Operations --- */
-window.openLexileInfoModal = function() {
-    const modal = document.getElementById('lexileInfoModal');
-    if (!modal) return;
-    modal.classList.remove('hidden');
-    modal.offsetHeight;
-    modal.classList.add('active');
-};
-window.closeLexileInfoModal = function() {
-    const modal = document.getElementById('lexileInfoModal');
-    if (!modal) return;
-    modal.classList.remove('active');
-    setTimeout(() => { modal.classList.add('hidden'); }, 300);
-};
+        const countEl = document.getElementById('drawer-count');
+        if (countEl) countEl.textContent = visibleCount;
 
-/* --- DDC Info Modal Operations --- */
-window.openDdcInfoModal = function() {
-    const modal = document.getElementById('ddcInfoModal');
-    if (!modal) return;
-    modal.classList.remove('hidden');
-    modal.offsetHeight;
-    modal.classList.add('active');
-};
-window.closeDdcInfoModal = function() {
-    const modal = document.getElementById('ddcInfoModal');
-    if (!modal) return;
-    modal.classList.remove('active');
-    setTimeout(() => { modal.classList.add('hidden'); }, 300);
-};
+        // Render External Links
+        renderDeskExternalLinks(deskName);
 
-/* --- Netflix-style Tab Swapper --- */
-window.switchLibraryTab = function(tabName) {
-    const selectFilter = document.getElementById('category-filter');
-    if (selectFilter) {
-        selectFilter.value = tabName;
-        selectFilter.dispatchEvent(new Event('change'));
-    }
-};
+        // Reset drawer search
+        const drawerSearch = document.getElementById('drawer-search');
+        if (drawerSearch) drawerSearch.value = '';
 
-/* --- Drawer Close, Filter, and Sort Hold --- */
-window.closeResourcePortal = function() {
-    const landing = document.getElementById('main-desk-landing');
-    const workspace = document.getElementById('subject-desk-workspace');
-    if (!landing || !workspace) return;
-
-    workspace.style.opacity = "0";
-    
-    // Unhighlight sidebar buttons
-    document.querySelectorAll('.sidebar-item-btn').forEach(btn => {
-        btn.style.backgroundColor = "";
-        btn.style.color = "";
-        btn.style.borderColor = "";
-    });
-
-    setTimeout(() => {
-        workspace.classList.add('hidden');
-        workspace.style.display = 'none';
-        
-        landing.classList.remove('hidden');
-        landing.style.display = 'block';
-        
-        // Scroll to top of main catalog smoothly
         window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, 300);
-};
+    };
 
-window.filterDrawerBooks = function() {
-    const searchInput = document.getElementById('drawer-search');
-    const query = searchInput ? searchInput.value.toLowerCase().trim() : "";
-    const grid = document.getElementById('drawer-grid');
-    const emptyState = document.getElementById('drawer-empty');
-    if (!grid) return;
-
-    let visibleCount = 0;
-    const sections = grid.querySelectorAll('.drawer-section');
-
-    sections.forEach(section => {
-        const category = section.dataset.category || "";
-        const matchesCategory = (category === activeCategoryName);
-
-        if (!matchesCategory) {
-            section.style.display = 'none';
-            return;
+    window.closeResourcePortal = function () {
+        const mainLanding = document.getElementById('main-desk-landing');
+        const deskWorkspace = document.getElementById('subject-desk-workspace');
+        if (mainLanding && deskWorkspace) {
+            deskWorkspace.classList.add('hidden');
+            deskWorkspace.classList.remove('active');
+            mainLanding.classList.remove('hidden');
+            mainLanding.classList.add('active');
         }
+    };
 
-        // Filter cards locally inside this section
-        const cards = section.querySelectorAll('.library-book-card');
-        let sectionVisibleBooks = 0;
+    window.filterDrawerBooks = function () {
+        const searchInput = document.getElementById('drawer-search');
+        const query = searchInput ? searchInput.value.trim().toLowerCase() : '';
+        let total = 0;
 
-        cards.forEach(card => {
-            const title = (card.dataset.title || "").toLowerCase();
-            const author = (card.dataset.author || "").toLowerCase();
-            const isbn = (card.dataset.isbn || "").toLowerCase();
+        document.querySelectorAll('#drawer-grid .drawer-section').forEach(sec => {
+            if (sec.dataset.category?.toLowerCase() !== activeDeskName.toLowerCase()) return;
 
-            const matchesSearch = !query || 
-                title.includes(query) || 
-                author.includes(query) || 
-                isbn.includes(query);
+            let sectionCount = 0;
+            sec.querySelectorAll('.library-book-card').forEach(card => {
+                const title = (card.dataset.title || '').toLowerCase();
+                const author = (card.dataset.author || '').toLowerCase();
+                const matches = query === '' || title.includes(query) || author.includes(query);
 
-            if (matchesSearch) {
-                card.style.display = 'block';
-                sectionVisibleBooks++;
-                visibleCount++;
-            } else {
-                card.style.display = 'none';
-            }
-        });
-
-        // Hide section container if empty during searches
-        if (sectionVisibleBooks > 0 || !query) {
-            section.style.display = 'block';
-        } else {
-            section.style.display = 'none';
-        }
-    });
-
-    // Update count labels
-    const countLabel = document.getElementById('drawer-count');
-    if (countLabel) countLabel.textContent = visibleCount;
-
-    if (emptyState) {
-        emptyState.style.display = visibleCount === 0 ? 'block' : 'none';
-    }
-};
-
-window.sortDrawerBooks = function() {
-    const grids = document.querySelectorAll('.drawer-section-grid');
-    if (grids.length === 0) return;
-    const sortVal = document.getElementById('drawer-sort')?.value || 'title';
-
-    grids.forEach(grid => {
-        const cards = Array.from(grid.querySelectorAll('.library-book-card'));
-        cards.sort((a, b) => {
-            if (sortVal === 'title') {
-                const titleA = (a.dataset.title || '').toLowerCase();
-                const titleB = (b.dataset.title || '').toLowerCase();
-                return titleA.localeCompare(titleB);
-            } else if (sortVal === 'ddc') {
-                let valA = a.dataset.dewey || a.dataset.lc || '999';
-                let valB = b.dataset.dewey || b.dataset.lc || '999';
-                if (valA === '' || valA === '#') valA = '999';
-                if (valB === '' || valB === '#') valB = '999';
-                const numA = parseFloat(valA);
-                const numB = parseFloat(valB);
-                if (!isNaN(numA) && !isNaN(numB)) {
-                    return numA - numB;
+                card.style.display = matches ? '' : 'none';
+                if (matches) {
+                    sectionCount++;
+                    total++;
                 }
-                return valA.localeCompare(valB);
-            } else if (sortVal === 'lexile') {
-                let lexA = parseInt((a.dataset.lexile || '0').replace(/\D/g, '')) || 0;
-                let lexB = parseInt((b.dataset.lexile || '0').replace(/\D/g, '')) || 0;
-                return lexA - lexB;
-            } else if (sortVal === 'date') {
-                const dateA = new Date(a.dataset.date || '1970-01-01');
-                const dateB = new Date(b.dataset.date || '1970-01-01');
-                return dateB - dateA;
-            }
-            return 0;
+            });
+            sec.style.display = sectionCount > 0 ? '' : 'none';
         });
 
-        cards.forEach(card => grid.appendChild(card));
-    });
-};
+        const countEl = document.getElementById('drawer-count');
+        if (countEl) countEl.textContent = total;
 
-function formatISBN(isbn) {
-    const clean = isbn.replace(/[^0-9X]/gi, '');
-    if (clean.length === 13) {
-        return `${clean.slice(0, 3)}-${clean.slice(3, 4)}-${clean.slice(4, 8)}-${clean.slice(8, 12)}-${clean.slice(12)}`;
-    } else if (clean.length === 10) {
-        return `${clean.slice(0, 1)}-${clean.slice(1, 5)}-${clean.slice(5, 9)}-${clean.slice(9)}`;
+        const emptyState = document.getElementById('drawer-empty');
+        if (emptyState) emptyState.style.display = total === 0 ? 'block' : 'none';
+    };
+
+    window.sortDrawerBooks = function () {
+        const sortSelect = document.getElementById('drawer-sort');
+        const sortBy = sortSelect ? sortSelect.value : 'title';
+
+        document.querySelectorAll('#drawer-grid .drawer-section-grid').forEach(grid => {
+            const cards = Array.from(grid.querySelectorAll('.library-book-card'));
+            cards.sort((a, b) => {
+                if (sortBy === 'title') {
+                    return (a.dataset.title || '').localeCompare(b.dataset.title || '');
+                } else if (sortBy === 'date') {
+                    return (b.dataset.date || '').localeCompare(a.dataset.date || '');
+                } else if (sortBy === 'lexile') {
+                    const lA = parseInt((a.dataset.lexile || '').replace(/\D/g, ''), 10) || 0;
+                    const lB = parseInt((b.dataset.lexile || '').replace(/\D/g, ''), 10) || 0;
+                    return lA - lB;
+                } else if (sortBy === 'ddc') {
+                    return (a.dataset.dewey || '').localeCompare(b.dataset.dewey || '');
+                }
+                return 0;
+            });
+            cards.forEach(card => grid.appendChild(card));
+        });
+    };
+
+    function renderDeskExternalLinks(deskName) {
+        const container = document.getElementById('drawer-external-links-container');
+        const list = document.getElementById('drawer-external-links-list');
+        if (!container || !list) return;
+
+        const links = window.DESK_EXTERNAL_LINKS && window.DESK_EXTERNAL_LINKS[deskName] ? window.DESK_EXTERNAL_LINKS[deskName] : [];
+
+        if (links.length > 0) {
+            list.innerHTML = '';
+            links.forEach(item => {
+                const card = document.createElement('a');
+                card.className = 'external-resource-card';
+                card.href = item.url;
+                card.target = '_blank';
+                card.rel = 'noopener noreferrer';
+                card.innerHTML = `
+                    <div class="ext-card-header">
+                        <h4 class="ext-card-title">${item.title}</h4>
+                        <i class="fas fa-external-link-alt text-muted"></i>
+                    </div>
+                    <p class="ext-card-desc">${item.desc || 'Explore external educational and research portal.'}</p>
+                    <div class="ext-card-footer">
+                        <span>Access Resource</span> <i class="fas fa-arrow-right"></i>
+                    </div>
+                `;
+                list.appendChild(card);
+            });
+            container.classList.remove('hidden');
+            container.style.display = 'block';
+        } else {
+            container.classList.add('hidden');
+            container.style.display = 'none';
+        }
     }
-    return isbn;
-}
+
+    /* ==========================================================================
+       7. Book Overview Modal (Knowledge Portal)
+       ========================================================================== */
+    window.openModal = function (card) {
+        if (!card) return;
+        const d = card.dataset;
+        window.currentBookId = d.id;
+        currentBookData = d;
+
+        const modal = document.getElementById('bookModal');
+        if (!modal) return;
+
+        // Cover & Title
+        const imgEl = document.getElementById('modal-img');
+        if (imgEl) {
+            imgEl.src = d.img || d.fallbackImg || 'https://placehold.co/300x450/1e293b/ffffff?text=Book';
+            imgEl.alt = d.title || 'Book Cover';
+        }
+
+        const titleEl = document.getElementById('modal-title');
+        if (titleEl) titleEl.textContent = d.title || 'Untitled Book';
+
+        const authorEl = document.getElementById('modal-author');
+        if (authorEl) authorEl.textContent = d.author ? `by ${d.author}` : '';
+
+        // Published & ISBN
+        const dateEl = document.getElementById('modal-date');
+        const dateCont = document.getElementById('modal-date-container');
+        if (dateEl) dateEl.textContent = d.date || 'Unknown';
+        if (dateCont) dateCont.classList.toggle('hidden', !d.date || d.date === '#');
+
+        const isbnEl = document.getElementById('modal-isbn');
+        const isbnCont = document.getElementById('modal-isbn-container');
+        if (isbnEl) isbnEl.textContent = d.isbn || 'N/A';
+        if (isbnCont) isbnCont.classList.toggle('hidden', !d.isbn || d.isbn === '#');
+
+        // Lexile
+        const lexileEl = document.getElementById('modal-lexile');
+        const lexileCont = document.getElementById('modal-lexile-container');
+        if (lexileEl) lexileEl.textContent = d.lexile || 'Unrated';
+        if (lexileCont) lexileCont.classList.toggle('hidden', !d.lexile || d.lexile === '#');
+
+        // Dewey Decimal
+        const deweyEl = document.getElementById('modal-dewey');
+        const deweyCont = document.getElementById('modal-dewey-container');
+        if (deweyEl) deweyEl.textContent = d.dewey || '';
+        if (deweyCont) deweyCont.classList.toggle('hidden', !d.dewey);
+
+        // LC Class
+        const lcEl = document.getElementById('modal-lc');
+        const lcCont = document.getElementById('modal-lc-container');
+        if (lcEl) lcEl.textContent = d.lc || '';
+        if (lcCont) lcCont.classList.toggle('hidden', !d.lc);
+
+        // Grade Band
+        const gradeEl = document.getElementById('modal-grade');
+        const gradeCont = document.getElementById('modal-grade-container');
+        if (gradeEl) gradeEl.textContent = d.grade || '';
+        if (gradeCont) gradeCont.classList.toggle('hidden', !d.grade || d.grade === '#');
+
+        // Description
+        const descEl = document.getElementById('modal-description');
+        if (descEl) descEl.textContent = d.description || 'No description available.';
+
+        // Read Online Button
+        const readBtn = document.getElementById('modal-read-online-link');
+        if (readBtn) {
+            const hasReadLink = d.readOnlineLink && d.readOnlineLink !== '#' && d.readOnlineLink !== '';
+            readBtn.href = hasReadLink ? d.readOnlineLink : `/library/read/index.php?book=${d.id}`;
+        }
+
+        // Bookmark button state
+        const modalBmkBtn = document.getElementById('modal-bookmark-btn');
+        if (modalBmkBtn) {
+            const isSaved = bookmarkList.includes(d.id);
+            modalBmkBtn.innerHTML = isSaved ? '<i class="fas fa-star"></i> <span>Saved</span>' : '<i class="far fa-star"></i> <span>Save</span>';
+            modalBmkBtn.classList.toggle('active', isSaved);
+        }
+
+        // Download Links
+        const pdfLink = document.getElementById('modal-pdf-link');
+        if (pdfLink) {
+            pdfLink.href = d.pdfLink || '#';
+            pdfLink.style.display = (d.pdfLink && d.pdfLink !== '#') ? 'inline-flex' : 'none';
+        }
+        const epubLink = document.getElementById('modal-epub-link');
+        if (epubLink) {
+            epubLink.href = d.epubLink || '#';
+            epubLink.style.display = (d.epubLink && d.epubLink !== '#') ? 'inline-flex' : 'none';
+        }
+        const mobiLink = document.getElementById('modal-mobi-link');
+        if (mobiLink) {
+            mobiLink.href = d.mobiLink || '#';
+            mobiLink.style.display = (d.mobiLink && d.mobiLink !== '#') ? 'inline-flex' : 'none';
+        }
+        const txtLink = document.getElementById('modal-txt-link');
+        if (txtLink) {
+            txtLink.href = d.txtLink || '#';
+            txtLink.style.display = (d.txtLink && d.txtLink !== '#') ? 'inline-flex' : 'none';
+        }
+
+        // Sourcing text
+        window.currentDisclaimerKey = d.disclaimerKey || '';
+        window.currentDisclaimerText = d.disclaimerText || '';
+
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    };
+
+    window.closeModal = function () {
+        const modal = document.getElementById('bookModal');
+        if (modal) {
+            modal.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+    };
+
+    /* ==========================================================================
+       8. Explainer & Disclaimer Modals
+       ========================================================================== */
+    function loadDisclaimers() {
+        fetch('/library/assets/disclaimers.json')
+            .then(res => res.json())
+            .then(data => { disclaimersData = data; })
+            .catch(() => {});
+    }
+
+    window.openDisclaimerModal = function () {
+        const modal = document.getElementById('disclaimerModal');
+        const licenseText = document.getElementById('modal-license-text');
+        if (!modal) return;
+
+        if (licenseText) {
+            const key = window.currentDisclaimerKey;
+            const customText = window.currentDisclaimerText;
+            if (customText) {
+                licenseText.textContent = customText;
+            } else if (key && disclaimersData[key]) {
+                licenseText.textContent = disclaimersData[key];
+            } else {
+                licenseText.textContent = "Provided under open educational fair use for study and teaching purposes.";
+            }
+        }
+
+        window.switchDisclaimerTab('standard');
+        modal.classList.remove('hidden');
+    };
+
+    window.closeDisclaimerModal = function () {
+        const modal = document.getElementById('disclaimerModal');
+        if (modal) modal.classList.add('hidden');
+    };
+
+    window.switchDisclaimerTab = function (tab) {
+        const stdView = document.getElementById('disclaimer-standard-view');
+        const licView = document.getElementById('disclaimer-license-view');
+        const tabStd = document.getElementById('tab-disc-standard');
+        const tabLic = document.getElementById('tab-disc-license');
+
+        if (tab === 'standard') {
+            if (stdView) stdView.style.display = 'block';
+            if (licView) licView.style.display = 'none';
+            if (tabStd) tabStd.classList.add('active');
+            if (tabLic) tabLic.classList.remove('active');
+        } else {
+            if (stdView) stdView.style.display = 'none';
+            if (licView) licView.style.display = 'block';
+            if (tabStd) tabStd.classList.remove('active');
+            if (tabLic) tabLic.classList.add('active');
+        }
+    };
+
+    window.openLexileInfoModal = function () {
+        const m = document.getElementById('lexileInfoModal');
+        if (m) m.classList.remove('hidden');
+    };
+
+    window.closeLexileInfoModal = function () {
+        const m = document.getElementById('lexileInfoModal');
+        if (m) m.classList.add('hidden');
+    };
+
+    window.openDdcInfoModal = function () {
+        const m = document.getElementById('ddcInfoModal');
+        if (m) m.classList.remove('hidden');
+    };
+
+    window.closeDdcInfoModal = function () {
+        const m = document.getElementById('ddcInfoModal');
+        if (m) m.classList.add('hidden');
+    };
+
+    /* ==========================================================================
+       9. Academic Citation Generator
+       ========================================================================== */
+    window.openBookCitationModal = function () {
+        const modal = document.getElementById('bookCitationModal');
+        if (!modal || !currentBookData) return;
+
+        renderCitation();
+        modal.classList.remove('hidden');
+    };
+
+    window.closeBookCitationModal = function () {
+        const modal = document.getElementById('bookCitationModal');
+        if (modal) modal.classList.add('hidden');
+    };
+
+    window.switchCitationStyle = function (style) {
+        currentCitationStyle = style;
+        document.querySelectorAll('.citation-tab-btn').forEach(btn => {
+            btn.classList.toggle('active', btn.textContent.toLowerCase().includes(style));
+        });
+        renderCitation();
+    };
+
+    function renderCitation() {
+        const renderBox = document.getElementById('citation-text');
+        if (!renderBox || !currentBookData) return;
+
+        const author = currentBookData.author || 'Author Unknown';
+        const title = currentBookData.title || 'Untitled';
+        const date = currentBookData.date || 'n.d.';
+        const year = date.match(/\d{4}/) ? date.match(/\d{4}/)[0] : 'n.d.';
+        const url = window.location.origin + (currentBookData.readOnlineLink || `/library/read/index.php?book=${currentBookData.id}`);
+
+        let citation = '';
+        if (currentCitationStyle === 'mla') {
+            citation = `${author}. <em>${title}</em>. Hesten's Learning Digital Library, ${year}, <a href="${url}" target="_blank">${url}</a>.`;
+        } else if (currentCitationStyle === 'apa') {
+            citation = `${author} (${year}). <em>${title}</em>. Hesten's Learning. ${url}`;
+        } else if (currentCitationStyle === 'chicago') {
+            citation = `${author}. <em>${title}</em>. Hesten's Learning Digital Library, ${year}. ${url}.`;
+        } else if (currentCitationStyle === 'harvard') {
+            citation = `${author}, ${year}. <em>${title}</em>, Hesten's Learning Digital Library, available at: &lt;${url}&gt;.`;
+        }
+
+        renderBox.innerHTML = citation;
+    }
+
+    window.copyCitationText = function () {
+        const renderBox = document.getElementById('citation-text');
+        const copyBtn = document.getElementById('citation-copy-btn');
+        if (!renderBox) return;
+
+        const text = renderBox.textContent || renderBox.innerText;
+        navigator.clipboard.writeText(text).then(() => {
+            if (copyBtn) {
+                copyBtn.innerHTML = '<i class="fas fa-check"></i> <span>Copied!</span>';
+                setTimeout(() => {
+                    copyBtn.innerHTML = '<i class="fas fa-copy"></i> <span>Copy Citation</span>';
+                }, 2000);
+            }
+        });
+    };
+
+    /* ==========================================================================
+       10. Inline Lexile Customization
+       ========================================================================== */
+    function setupLexileEditing() {
+        const editBtn = document.getElementById('edit-lexile-btn');
+        const saveBtn = document.getElementById('save-lexile-btn');
+        const cancelBtn = document.getElementById('cancel-lexile-btn');
+        const editCont = document.getElementById('modal-lexile-edit-container');
+        const input = document.getElementById('modal-lexile-input');
+        const lexileVal = document.getElementById('modal-lexile');
+
+        if (!editBtn || !saveBtn || !cancelBtn || !editCont || !input || !lexileVal) return;
+
+        editBtn.addEventListener('click', () => {
+            input.value = lexileVal.textContent.trim();
+            editCont.style.display = 'flex';
+            editBtn.style.display = 'none';
+            input.focus();
+        });
+
+        saveBtn.addEventListener('click', () => {
+            const newVal = input.value.trim();
+            if (newVal && window.currentBookId) {
+                lexileVal.textContent = newVal;
+                saveLexileOverride(window.currentBookId, newVal);
+            }
+            editCont.style.display = 'none';
+            editBtn.style.display = 'inline-flex';
+        });
+
+        cancelBtn.addEventListener('click', () => {
+            editCont.style.display = 'none';
+            editBtn.style.display = 'inline-flex';
+        });
+    }
+
+    function saveLexileOverride(bookId, val) {
+        try {
+            const overrides = JSON.parse(localStorage.getItem('hesten_lexile_overrides') || '{}');
+            overrides[bookId] = val;
+            localStorage.setItem('hesten_lexile_overrides', JSON.stringify(overrides));
+            applyStoredLexileOverrides();
+        } catch (e) {}
+    }
+
+    function applyStoredLexileOverrides() {
+        try {
+            const overrides = JSON.parse(localStorage.getItem('hesten_lexile_overrides') || '{}');
+            Object.keys(overrides).forEach(id => {
+                const cards = document.querySelectorAll(`.library-book-card[data-id="${id}"]`);
+                cards.forEach(c => {
+                    c.dataset.lexile = overrides[id];
+                    const tag = c.querySelector('.lexile-tag');
+                    if (tag) tag.innerHTML = `<i class="fas fa-brain"></i> ${overrides[id]}`;
+                });
+            });
+        } catch (e) {}
+    }
+
+    /* ==========================================================================
+       11. Keyboard Shortcuts & Global Handlers
+       ========================================================================== */
+    function setupKeyboardShortcuts() {
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                window.closeModal();
+                window.closeDisclaimerModal();
+                window.closeLexileInfoModal();
+                window.closeDdcInfoModal();
+                window.closeBookCitationModal();
+            }
+            // Press '/' to search catalog
+            if (e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+                const search = document.getElementById('library-search');
+                if (search) {
+                    e.preventDefault();
+                    search.focus();
+                }
+            }
+        });
+    }
+
+})();

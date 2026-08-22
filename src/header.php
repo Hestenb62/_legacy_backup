@@ -5,13 +5,15 @@ if (!defined('ABSPATH')) {
 }
 
 // Function to fetch the current user dynamically
-function getCurrentUser() {
-    return [
-        'name' => 'User',
-        'email' => 'user@example.com',
-        'role' => 'student',
-        'avatar' => '/assets/images/6791421e-7ca7-40bd-83d3-06a479bf7f36.png'
-    ];
+if (!function_exists('getCurrentUser')) {
+    function getCurrentUser() {
+        return [
+            'name' => 'User',
+            'email' => 'user@example.com',
+            'role' => 'student',
+            'avatar' => '/assets/images/6791421e-7ca7-40bd-83d3-06a479bf7f36.png'
+        ];
+    }
 }
 
 $currentUser = getCurrentUser();

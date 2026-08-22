@@ -1,26 +1,24 @@
-<!-- Book Modal (Refined as Knowledge Portal) -->
+<!-- Book Knowledge Modal -->
 <div id="bookModal" class="library-modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-    
     <!-- Backdrop -->
     <div class="library-modal-backdrop" onclick="closeModal()"></div>
 
-    <!-- Modal Content -->
+    <!-- Modal Content Window -->
     <div class="library-modal-content" onclick="event.stopPropagation()">
 
-        <!-- Close Button Top -->
-        <button onclick="closeModal()" id="book-modal-close" class="library-modal-close-btn" aria-label="Close overview">
+        <!-- Close Button -->
+        <button onclick="closeModal()" id="book-modal-close" class="library-modal-close-btn" aria-label="Close overview modal">
             <i class="fas fa-times"></i>
         </button>
 
         <div class="library-modal-body-wrapper">
-            <!-- Book Cover Side -->
+            <!-- Book Cover Pane -->
             <div class="library-modal-cover-pane">
-                <!-- Subtle background glow -->
                 <div class="library-modal-cover-glow"></div>
-                <img id="modal-img" src="" alt="Book Cover" class="library-modal-cover-img">
+                <img id="modal-img" src="" alt="Book Cover" class="library-modal-cover-img" onerror="this.onerror=null; this.src='https://placehold.co/300x450/1e293b/ffffff?text=No+Cover';">
             </div>
 
-            <!-- Details Side -->
+            <!-- Details Pane -->
             <div class="library-modal-info-pane">
                 <!-- Titles -->
                 <div class="library-modal-title-section">
@@ -31,42 +29,42 @@
                 <!-- Specs Grid -->
                 <div class="library-modal-specs-grid">
                     <div class="library-modal-specs-decor"></div>
-                    <div>
+                    <div id="modal-date-container">
                         <span class="spec-label">Published</span>
                         <span id="modal-date" class="spec-value spec-val-mono"></span>
                     </div>
-                    <div>
+                    <div id="modal-isbn-container">
                         <span class="spec-label">ISBN</span>
                         <span id="modal-isbn" class="spec-value spec-val-mono spec-val-break"></span>
                     </div>
                     <div id="modal-lexile-container" class="library-modal-spec-half hidden">
-                        <span class="spec-label">Lexile/Reading Level <i class="fas fa-info-circle" style="cursor: pointer; opacity: 0.7;" onclick="openLexileInfoModal()"></i></span>
-                        <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                        <span class="spec-label">Lexile Measure <button type="button" class="spec-info-btn" onclick="openLexileInfoModal()" title="What is Lexile?"><i class="fas fa-info-circle"></i></button></span>
+                        <div class="spec-value-flex">
                             <span id="modal-lexile" class="spec-value spec-val-highlight-emerald"></span>
                             
-                            <div id="modal-lexile-edit-container" class="hidden" style="display: none; align-items: center; gap: 0.25rem;">
-                                <input type="text" id="modal-lexile-input" style="width: 75px; padding: 0.15rem 0.35rem; border-radius: 0.35rem; border: 1px solid var(--color-border); font-size: 0.85rem; font-weight: 700; color: var(--color-text-default); background: var(--color-content-bg);">
-                                <button id="save-lexile-btn" class="library-drawer-close-btn" style="width: 1.75rem; height: 1.75rem; border-radius: 0.25rem; padding: 0;" title="Save"><i class="fas fa-check"></i></button>
-                                <button id="cancel-lexile-btn" class="library-drawer-close-btn" style="width: 1.75rem; height: 1.75rem; border-radius: 0.25rem; padding: 0;" title="Cancel"><i class="fas fa-times"></i></button>
+                            <div id="modal-lexile-edit-container" class="hidden" style="display: none;">
+                                <input type="text" id="modal-lexile-input" class="spec-edit-input" placeholder="e.g. 1050L" aria-label="Edit Lexile">
+                                <button type="button" id="save-lexile-btn" class="spec-action-icon-btn save-btn" title="Save Lexile"><i class="fas fa-check"></i></button>
+                                <button type="button" id="cancel-lexile-btn" class="spec-action-icon-btn cancel-btn" title="Cancel"><i class="fas fa-times"></i></button>
                             </div>
                             
-                            <button id="edit-lexile-btn" class="library-drawer-close-btn" style="width: 1.75rem; height: 1.75rem; border-radius: 0.25rem; padding: 0;" title="Edit Lexile Level"><i class="fas fa-edit"></i></button>
+                            <button type="button" id="edit-lexile-btn" class="spec-action-icon-btn edit-btn" title="Edit Reading Level"><i class="fas fa-edit"></i></button>
                         </div>
                     </div>
                     <div id="modal-dewey-container" class="library-modal-spec-half hidden">
-                        <span class="spec-label">Dewey Decimal <i class="fas fa-info-circle" style="cursor: pointer; opacity: 0.7;" onclick="openDdcInfoModal()"></i></span>
+                        <span class="spec-label">Dewey Decimal <button type="button" class="spec-info-btn" onclick="openDdcInfoModal()" title="What is DDC?"><i class="fas fa-info-circle"></i></button></span>
                         <span id="modal-dewey" class="spec-value spec-val-highlight-purple"></span>
                     </div>
                     <div id="modal-lc-container" class="library-modal-spec-half hidden">
-                        <span class="spec-label">LC Class</span>
-                        <span id="modal-lc" class="spec-value spec-val-highlight-blue" style="background-color: rgba(59, 130, 246, 0.1); color: #3b82f6; border: 1px solid rgba(59, 130, 246, 0.2); padding: 0.25rem 0.75rem; border-radius: 9999px; font-weight: 700; font-size: 0.85rem; display: inline-block;"></span>
+                        <span class="spec-label">Library of Congress</span>
+                        <span id="modal-lc" class="spec-value spec-val-highlight-blue"></span>
                     </div>
                     <div id="modal-grade-container" class="library-modal-spec-half hidden">
-                        <span class="spec-label">Grade Level</span>
+                        <span class="spec-label">Grade Band</span>
                         <span id="modal-grade" class="spec-value spec-val-highlight-pink"></span>
                     </div>
                     <div id="modal-curriculum-container" class="library-modal-spec-full hidden">
-                        <span class="spec-label"><i class="fas fa-graduation-cap text-primary"></i> Aligned Curriculum & Grade Tracks</span>
+                        <span class="spec-label"><i class="fas fa-graduation-cap text-primary"></i> Aligned Curriculum Tracks</span>
                         <div id="modal-curriculum-content" class="spec-val-curriculum-links"></div>
                     </div>
                 </div>
@@ -78,10 +76,9 @@
 
                 <!-- Action Buttons Area -->
                 <div class="library-modal-footer-section">
-                    
                     <!-- Single Book Actions -->
                     <div id="modal-single-actions" class="library-modal-actions-row">
-                        <a id="modal-read-online-link" href="#" target="_blank" rel="noopener noreferrer" class="library-modal-read-btn">
+                        <a id="modal-read-online-link" href="#" class="library-modal-read-btn">
                             <i class="fas fa-book-open"></i> <span>Read Online</span>
                         </a>
 
@@ -89,8 +86,12 @@
                             <i class="far fa-star"></i> <span>Save</span>
                         </button>
 
+                        <button type="button" id="modal-citation-btn" onclick="openBookCitationModal()" class="library-modal-cite-btn" title="Generate Citations" aria-label="Generate Citation">
+                            <i class="fas fa-quote-right"></i> <span>Cite</span>
+                        </button>
+
                         <div class="library-modal-downloads-row">
-                             <a id="modal-pdf-link" href="#" target="_blank" rel="noopener noreferrer" class="library-download-icon-btn pdf-btn" title="Download PDF" aria-label="Download PDF">
+                            <a id="modal-pdf-link" href="#" target="_blank" rel="noopener noreferrer" class="library-download-icon-btn pdf-btn" title="Download PDF" aria-label="Download PDF">
                                 <i class="fas fa-file-pdf"></i>
                             </a>
                             <a id="modal-epub-link" href="#" target="_blank" rel="noopener noreferrer" class="library-download-icon-btn epub-btn" title="Download ePUB" aria-label="Download ePUB">
@@ -99,18 +100,21 @@
                             <a id="modal-mobi-link" href="#" target="_blank" rel="noopener noreferrer" class="library-download-icon-btn mobi-btn" title="Download MOBI" aria-label="Download MOBI">
                                 <i class="fas fa-tablet-alt"></i>
                             </a>
+                            <a id="modal-txt-link" href="#" target="_blank" rel="noopener noreferrer" class="library-download-icon-btn txt-btn" title="Download Plain Text" aria-label="Download Plain Text">
+                                <i class="fas fa-file-alt"></i>
+                            </a>
                         </div>
                     </div>
 
                     <!-- Collection List Container -->
                     <div id="modal-collection-actions" class="library-modal-collection-list hidden">
-                        <!-- Dynamically populated in JS -->
+                        <!-- Dynamically populated in library.js -->
                     </div>
 
-                    <!-- Disclaimer Button -->
+                    <!-- Sourcing & Disclaimer Button -->
                     <div class="library-modal-disclaimer-row">
-                        <button onclick="openDisclaimerModal()" class="library-disclaimer-trigger-btn">
-                            <i class="fas fa-exclamation-circle"></i> Content Disclaimer
+                        <button type="button" onclick="openDisclaimerModal()" class="library-disclaimer-trigger-btn">
+                            <i class="fas fa-exclamation-circle"></i> Sourcing & Content Disclaimer
                         </button>
                     </div>
                 </div>
@@ -123,41 +127,38 @@
 <div id="disclaimerModal" class="library-disclaimer-modal hidden" role="alertdialog" aria-modal="true" onclick="closeDisclaimerModal()">
     <div class="library-disclaimer-modal-backdrop"></div>
     <div class="library-disclaimer-content" onclick="event.stopPropagation()">
-
-        <button onclick="closeDisclaimerModal()" id="disclaimer-modal-close" class="library-disclaimer-close-btn" aria-label="Close disclaimer">
+        <button type="button" onclick="closeDisclaimerModal()" id="disclaimer-modal-close" class="library-disclaimer-close-btn" aria-label="Close disclaimer">
             <i class="fas fa-times"></i>
         </button>
 
         <div class="library-disclaimer-header">
             <div class="library-disclaimer-icon-box">
-                 <i class="fas fa-exclamation-triangle"></i>
+                <i class="fas fa-shield-alt"></i>
             </div>
-            <h3 class="library-disclaimer-title">Disclaimer</h3>
+            <h3 class="library-disclaimer-title">Content Sourcing & Terms</h3>
         </div>
         
         <!-- Tabs Row -->
-        <div class="disclaimer-tabs-row hidden" id="disclaimer-tabs">
-            <button class="disclaimer-tab-btn active" id="tab-disc-standard" onclick="switchDisclaimerTab('standard')">Disclaimer</button>
-            <button class="disclaimer-tab-btn" id="tab-disc-license" onclick="switchDisclaimerTab('license')">License</button>
+        <div class="disclaimer-tabs-row" id="disclaimer-tabs">
+            <button type="button" class="disclaimer-tab-btn active" id="tab-disc-standard" onclick="switchDisclaimerTab('standard')">Overview</button>
+            <button type="button" class="disclaimer-tab-btn" id="tab-disc-license" onclick="switchDisclaimerTab('license')">License & Sourcing</button>
         </div>
         
         <div class="library-disclaimer-body-box" id="disclaimer-standard-view">
             <p class="library-disclaimer-text">
-                 The books and materials in this digital library are provided for educational and informational purposes
-                 only. Hesten's Learning makes no claims of ownership over third-party content. Please ensure your use of
-                 these materials complies with applicable copyright laws before downloading.
+                The books, primary documents, and educational materials in this digital library are provided exclusively for educational, historical research, and classroom instruction purposes. Hesten's Learning makes no claims of ownership over third-party materials or public domain historical texts.
             </p>
         </div>
 
         <div class="library-disclaimer-body-box hidden" id="disclaimer-license-view" style="display: none;">
-            <p class="library-disclaimer-license-text">
-                 <!-- Populated dynamically by library.js -->
+            <p class="library-disclaimer-license-text" id="modal-license-text">
+                <!-- Populated dynamically by library.js -->
             </p>
         </div>
         
         <div class="library-disclaimer-footer">
-            <button onclick="closeDisclaimerModal()" class="library-disclaimer-action-btn">
-                I Understand
+            <button type="button" onclick="closeDisclaimerModal()" class="library-disclaimer-action-btn">
+                Got It
             </button>
         </div>
     </div>
@@ -166,71 +167,44 @@
 <!-- Lexile Info Modal -->
 <div id="lexileInfoModal" class="library-modal hidden" role="dialog" aria-modal="true" style="z-index: 3000;">
     <div class="library-modal-backdrop" onclick="closeLexileInfoModal()"></div>
-    <div class="library-modal-content" style="max-width: 38rem; padding: 2rem; max-height: 85vh; overflow-y: auto;" onclick="event.stopPropagation()">
-        <button onclick="closeLexileInfoModal()" class="library-modal-close-btn" aria-label="Close">
+    <div class="library-modal-content info-explainer-content" onclick="event.stopPropagation()">
+        <button type="button" onclick="closeLexileInfoModal()" class="library-modal-close-btn" aria-label="Close Lexile Explainer">
             <i class="fas fa-times"></i>
         </button>
-        <h3 style="font-family: var(--site-font-family, 'Outfit', sans-serif); font-size: 1.5rem; font-weight: 800; color: #10b981; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
-            <i class="fas fa-chart-line"></i> The Lexile® Framework
+        <h3 class="explainer-modal-title emerald-title">
+            <i class="fas fa-chart-line mr-2"></i> The Lexile® Framework for Reading
         </h3>
         
-        <div style="font-size: 0.9rem; line-height: 1.6; color: var(--color-text-secondary); text-align: left;">
-            <p style="margin-bottom: 1rem;">
+        <div class="explainer-modal-body">
+            <p>
                 <strong>What is a Lexile Measure?</strong><br>
-                A Lexile reader measure represents a student's reading ability, while a Lexile text measure represents the difficulty of a text (such as a book or article). Both are placed on a single scale developed by <em>MetaMetrics®</em>, allowing readers to easily find books that match their current reading level.
+                A Lexile reader measure represents a student's reading comprehension ability, while a Lexile text measure represents the complexity of a book or article. Both are calibrated on a unified scale developed by <em>MetaMetrics®</em>.
             </p>
-            <p style="margin-bottom: 1.5rem;">
+            <p>
                 <strong>How it Works:</strong><br>
-                Lexile measures range from <strong>200L</strong> for beginning readers to <strong>1600L+</strong> for advanced texts. When a reader's score matches a book's measure (for example, a 600L reader reading a 600L book), they are in their "sweet spot" (75% comprehension range)—challenging enough to grow their vocabulary without causing frustration.
+                Measures range from <strong>200L</strong> for beginning readers to <strong>1600L+</strong> for advanced and collegiate literature. Matching a student's score with a book's measure places them in the optimal comprehension zone (75% comprehension range).
             </p>
         </div>
 
-        <h4 style="font-size: 1rem; font-weight: 700; margin-bottom: 0.75rem; text-align: left; border-bottom: 1px solid var(--color-border); padding-bottom: 0.5rem;">Typical Lexile Grade Bands:</h4>
-        <div style="max-height: 250px; overflow-y: auto; border: 1px solid var(--color-border); border-radius: 0.75rem; background: var(--color-base-bg);">
-            <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem; text-align: left;">
+        <h4 class="explainer-table-heading">Typical Lexile Grade Bands:</h4>
+        <div class="explainer-table-wrap">
+            <table class="explainer-table">
                 <thead>
-                    <tr style="border-bottom: 1px solid var(--color-border); background-color: rgba(0,0,0,0.02); font-weight: 700;">
-                        <th style="padding: 0.75rem 1rem;">Grade Level</th>
-                        <th style="padding: 0.75rem 1rem;">Lexile Range</th>
+                    <tr>
+                        <th>Grade Level</th>
+                        <th>Lexile Range</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr style="border-bottom: 1px solid var(--color-border);">
-                        <td style="padding: 0.5rem 1rem;">Kindergarten</td>
-                        <td style="padding: 0.5rem 1rem;">BR (Beginning Reader) - 275L</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid var(--color-border);">
-                        <td style="padding: 0.5rem 1rem;">Grade 1</td>
-                        <td style="padding: 0.5rem 1rem;">190L to 530L</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid var(--color-border);">
-                        <td style="padding: 0.5rem 1rem;">Grade 2</td>
-                        <td style="padding: 0.5rem 1rem;">420L to 650L</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid var(--color-border);">
-                        <td style="padding: 0.5rem 1rem;">Grade 3</td>
-                        <td style="padding: 0.5rem 1rem;">520L to 820L</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid var(--color-border);">
-                        <td style="padding: 0.5rem 1rem;">Grade 4</td>
-                        <td style="padding: 0.5rem 1rem;">740L to 940L</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid var(--color-border);">
-                        <td style="padding: 0.5rem 1rem;">Grade 5</td>
-                        <td style="padding: 0.5rem 1rem;">830L to 1010L</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid var(--color-border);">
-                        <td style="padding: 0.5rem 1rem;">Grades 6 - 8</td>
-                        <td style="padding: 0.5rem 1rem;">925L to 1185L</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid var(--color-border);">
-                        <td style="padding: 0.5rem 1rem;">Grades 9 - 10</td>
-                        <td style="padding: 0.5rem 1rem;">1050L to 1335L</td>
-                    </tr>
-                    <tr>
-                        <td style="padding: 0.5rem 1rem;">Grades 11 - 12</td>
-                        <td style="padding: 0.5rem 1rem;">1185L to 1385L+</td>
-                    </tr>
+                    <tr><td>Kindergarten</td><td>BR (Beginning Reader) - 275L</td></tr>
+                    <tr><td>Grade 1</td><td>190L to 530L</td></tr>
+                    <tr><td>Grade 2</td><td>420L to 650L</td></tr>
+                    <tr><td>Grade 3</td><td>520L to 820L</td></tr>
+                    <tr><td>Grade 4</td><td>740L to 940L</td></tr>
+                    <tr><td>Grade 5</td><td>830L to 1010L</td></tr>
+                    <tr><td>Grades 6 - 8</td><td>925L to 1185L</td></tr>
+                    <tr><td>Grades 9 - 10</td><td>1050L to 1335L</td></tr>
+                    <tr><td>Grades 11 - 12</td><td>1185L to 1385L+</td></tr>
                 </tbody>
             </table>
         </div>
@@ -240,67 +214,61 @@
 <!-- DDC Info Modal -->
 <div id="ddcInfoModal" class="library-modal hidden" role="dialog" aria-modal="true" style="z-index: 3000;">
     <div class="library-modal-backdrop" onclick="closeDdcInfoModal()"></div>
-    <div class="library-modal-content" style="max-width: 38rem; padding: 2rem; max-height: 85vh; overflow-y: auto;" onclick="event.stopPropagation()">
-        <button onclick="closeDdcInfoModal()" class="library-modal-close-btn" aria-label="Close">
+    <div class="library-modal-content info-explainer-content" onclick="event.stopPropagation()">
+        <button type="button" onclick="closeDdcInfoModal()" class="library-modal-close-btn" aria-label="Close DDC Explainer">
             <i class="fas fa-times"></i>
         </button>
-        <h3 style="font-family: var(--site-font-family, 'Outfit', sans-serif); font-size: 1.5rem; font-weight: 800; color: #a25afd; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
-            <i class="fas fa-sitemap"></i> The Dewey Decimal Classification
+        <h3 class="explainer-modal-title purple-title">
+            <i class="fas fa-sitemap mr-2"></i> The Dewey Decimal Classification
         </h3>
         
-        <div style="font-size: 0.9rem; line-height: 1.6; color: var(--color-text-secondary); text-align: left;">
-            <p style="margin-bottom: 1rem;">
+        <div class="explainer-modal-body">
+            <p>
                 <strong>What is the Dewey Decimal System?</strong><br>
-                The Dewey Decimal Classification (DDC) is a proprietary library classification system first published in the United States by Melvil Dewey in 1876. It organizes a library's books onto shelves in a structured, logical order based on subject matter.
-            </p>
-            <p style="margin-bottom: 1.5rem;">
-                <strong>How it Works:</strong><br>
-                The DDC divides all human knowledge into <strong>10 Main Classes</strong>, each represented by a three-digit number. These classes are subdivided into divisions, sections, and further decimal divisions (e.g., <code>500</code> for Science, <code>510</code> for Mathematics, <code>516</code> for Geometry) to keep related topics grouped together.
+                The Dewey Decimal Classification (DDC) is a library classification system first conceived by Melvil Dewey in 1876. It organizes human knowledge into a structured, numerical shelf order based on subject matter.
             </p>
         </div>
 
-        <h4 style="font-size: 1rem; font-weight: 700; margin-bottom: 0.75rem; text-align: left; border-bottom: 1px solid var(--color-border); padding-bottom: 0.5rem;">The 10 Core DDC Classes:</h4>
-        <div style="max-height: 250px; overflow-y: auto; border: 1px solid var(--color-border); border-radius: 0.75rem; background: var(--color-base-bg); font-size: 0.85rem; text-align: left; padding: 0.5rem 1rem;">
-            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-border);">
-                <strong>000 - 099</strong>
-                <span style="flex-grow: 1; margin-left: 1.5rem;">Computer Science, Information & General Works</span>
-            </div>
-            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-border);">
-                <strong>100 - 199</strong>
-                <span style="flex-grow: 1; margin-left: 1.5rem;">Philosophy & Psychology</span>
-            </div>
-            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-border);">
-                <strong>200 - 299</strong>
-                <span style="flex-grow: 1; margin-left: 1.5rem;">Religion</span>
-            </div>
-            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-border);">
-                <strong>300 - 399</strong>
-                <span style="flex-grow: 1; margin-left: 1.5rem;">Social Sciences</span>
-            </div>
-            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-border);">
-                <strong>400 - 499</strong>
-                <span style="flex-grow: 1; margin-left: 1.5rem;">Language</span>
-            </div>
-            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-border);">
-                <strong>500 - 599</strong>
-                <span style="flex-grow: 1; margin-left: 1.5rem;">Science</span>
-            </div>
-            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-border);">
-                <strong>600 - 699</strong>
-                <span style="flex-grow: 1; margin-left: 1.5rem;">Technology & Applied Science</span>
-            </div>
-            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-border);">
-                <strong>700 - 799</strong>
-                <span style="flex-grow: 1; margin-left: 1.5rem;">Arts & Recreation</span>
-            </div>
-            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-border);">
-                <strong>800 - 899</strong>
-                <span style="flex-grow: 1; margin-left: 1.5rem;">Literature & Rhetoric</span>
-            </div>
-            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0;">
-                <strong>900 - 999</strong>
-                <span style="flex-grow: 1; margin-left: 1.5rem;">History & Geography</span>
-            </div>
+        <h4 class="explainer-table-heading">The 10 Core DDC Classes:</h4>
+        <div class="explainer-classes-list">
+            <div class="ddc-class-row"><strong>000 - 099</strong><span>Computer Science, Information & General Works</span></div>
+            <div class="ddc-class-row"><strong>100 - 199</strong><span>Philosophy & Psychology</span></div>
+            <div class="ddc-class-row"><strong>200 - 299</strong><span>Religion</span></div>
+            <div class="ddc-class-row"><strong>300 - 399</strong><span>Social Sciences</span></div>
+            <div class="ddc-class-row"><strong>400 - 499</strong><span>Language</span></div>
+            <div class="ddc-class-row"><strong>500 - 599</strong><span>Science</span></div>
+            <div class="ddc-class-row"><strong>600 - 699</strong><span>Technology & Applied Science</span></div>
+            <div class="ddc-class-row"><strong>700 - 799</strong><span>Arts & Recreation</span></div>
+            <div class="ddc-class-row"><strong>800 - 899</strong><span>Literature & Rhetoric</span></div>
+            <div class="ddc-class-row"><strong>900 - 999</strong><span>History & Geography</span></div>
+        </div>
+    </div>
+</div>
+
+<!-- Citation Generator Modal -->
+<div id="bookCitationModal" class="library-modal hidden" role="dialog" aria-modal="true" style="z-index: 3000;">
+    <div class="library-modal-backdrop" onclick="closeBookCitationModal()"></div>
+    <div class="library-modal-content info-explainer-content" onclick="event.stopPropagation()">
+        <button type="button" onclick="closeBookCitationModal()" class="library-modal-close-btn" aria-label="Close Citation Modal">
+            <i class="fas fa-times"></i>
+        </button>
+        <h3 class="explainer-modal-title primary-title">
+            <i class="fas fa-quote-right mr-2"></i> Academic Citation Generator
+        </h3>
+        <p class="explainer-subtitle">Copy standard academic citations for this source:</p>
+
+        <div class="citation-format-tabs">
+            <button type="button" class="citation-tab-btn active" onclick="switchCitationStyle('mla')">MLA 9</button>
+            <button type="button" class="citation-tab-btn" onclick="switchCitationStyle('apa')">APA 7</button>
+            <button type="button" class="citation-tab-btn" onclick="switchCitationStyle('chicago')">Chicago 17</button>
+            <button type="button" class="citation-tab-btn" onclick="switchCitationStyle('harvard')">Harvard</button>
+        </div>
+
+        <div class="citation-preview-box">
+            <div id="citation-text" class="citation-text-render"></div>
+            <button type="button" id="citation-copy-btn" class="citation-copy-btn" onclick="copyCitationText()">
+                <i class="fas fa-copy"></i> <span>Copy Citation</span>
+            </button>
         </div>
     </div>
 </div>

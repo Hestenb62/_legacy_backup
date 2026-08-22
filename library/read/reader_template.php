@@ -1,12 +1,13 @@
 <?php
-
 /**
- * reader_template.php - Modular Digital Reader Layout
- * Renders the reading layout with custom controls, themes, progress bar, TTS, and study guides.
+ * library/read/reader_template.php - Unified Digital Reader Template
+ * Implements distraction-free editorial reading, customizable typography,
+ * Text-to-Speech narration, chapter TOC drawer, vocabulary flashcards,
+ * comprehension quizzes, persistent annotations, and academic citations.
  */
 
 if (!defined('ABSPATH')) {
-  define('ABSPATH', dirname(dirname(__DIR__)) . '/');
+    define('ABSPATH', dirname(dirname(__DIR__)) . '/');
 }
 
 // Default fallbacks
@@ -21,630 +22,461 @@ if (!isset($isTeacherUnlocked)) $isTeacherUnlocked = false;
 if (!isset($authError)) $authError = '';
 if (!isset($quizQuestions)) $quizQuestions = [];
 if (!isset($vocabList)) $vocabList = [];
+if (!isset($bookToc)) $bookToc = [];
 if (!isset($book) || !is_array($book)) $book = [];
-if (!isset($bookToc) || !is_array($bookToc)) $bookToc = [];
 
-$hasTeacherResources = !empty($book['hasTeacherResources']);
-$isTeacherChapter = ($hasTeacherResources && $totalChapters > 1 && $chapterNum === $totalChapters);
-
-$currentChapterTitle = $bookToc[$chapterNum]['title'] ?? ($isTeacherChapter ? "Teacher Resources" : ($totalChapters > 1 ? "Chapter $chapterNum" : $bookTitle));
-
-// Determine next/prev links
+// Determine navigation URLs
 $prevChapterNum = $chapterNum - 1;
 $nextChapterNum = $chapterNum + 1;
 $hasPrev = $prevChapterNum >= 1;
 $hasNext = $nextChapterNum <= $totalChapters;
 
-$prevUrl = $hasPrev ? "/library/read/index.php?book=$bookId&chapter=chapter-$prevChapterNum" : "#";
-$nextUrl = $hasNext ? "/library/read/index.php?book=$bookId&chapter=chapter-$nextChapterNum" : "#";
+$prevUrl = $hasPrev ? "/library/read/index.php?book=" . urlencode($bookId) . "&chapter=chapter-$prevChapterNum" : "#";
+$nextUrl = $hasNext ? "/library/read/index.php?book=" . urlencode($bookId) . "&chapter=chapter-$nextChapterNum" : "#";
 
-// Page Metadata for Header
-$pageTitle = "$bookTitle - $currentChapterTitle | Hesten's Learning";
-$pageDescription = "Read $bookTitle by $bookAuthor online at Hesten's Learning Library.";
-$pageKeywords = "reading, ebook, online reader, accessible learning, education";
-$pageAuthor = $bookAuthor;
+// Get active chapter title from TOC if available
+$currentChapterTitle = "Chapter $chapterNum";
+if ($chapter === 'intro') {
+    $currentChapterTitle = "Author Introduction";
+} elseif (!empty($bookToc) && isset($bookToc[(string)$chapterNum]['title'])) {
+    $currentChapterTitle = $bookToc[(string)$chapterNum]['title'];
+}
+
+// Page Metadata
+$pageTitle = "$bookTitle - " . ($chapter === 'intro' ? "Intro" : ($chapterNum === $totalChapters && $totalChapters > 1 && !empty($book['hasTeacherResources']) ? "Teacher Resources" : "Chapter $chapterNum")) . " | Hesten's Learning Library";
+$pageDescription = "Read $bookTitle by $bookAuthor online with audio narration, study guides, and vocabulary flashcards.";
 
 include ABSPATH . 'src/header.php';
 ?>
 
-<!-- Include Core Library and Reader Stylesheets -->
-<link rel="stylesheet" href="/library/library.css">
 <link rel="stylesheet" href="/library/read/reader.css">
 
-<!-- Background Aurora Mesh -->
-<div class="library-aurora-bg">
-  <div class="library-aurora-blob blob-1"></div>
-  <div class="library-aurora-blob blob-2"></div>
-  <div class="library-aurora-blob blob-3"></div>
+<!-- Reading Progress Bar -->
+<div id="progress-bar-container" aria-hidden="true">
+    <div id="progress-bar"></div>
 </div>
 
-<!-- Scroll Progress Bar -->
-<div id="progress-bar-container">
-  <div id="progress-bar"></div>
-</div>
+<main id="main-content" class="library-main reader-main-layout">
 
-<main id="main-content" class="reader-main-content">
-  <div class="container" style="max-width: 800px; margin: 0 auto; padding: 2rem 1rem;">
-
-    <!-- Back Navigation -->
-    <?php if ($chapterNum <= 1): ?>
-    <div class="reader-back-nav" style="margin-bottom: 2rem;">
-      <a href="/library/" class="controls-nav-btn" style="display: inline-flex; align-items: center; gap: 0.5rem;">
-        <i class="fas fa-arrow-left"></i> Back to Library
-      </a>
+    <!-- Top Navigation Bar -->
+    <div class="reader-back-nav">
+        <a href="/library/" class="reader-back-btn" title="Return to Digital Library Catalog">
+            <i class="fas fa-arrow-left"></i> <span>Catalog</span>
+        </a>
+        <div class="reader-title-badge">
+            <span class="reader-book-name"><?php echo htmlspecialchars($bookTitle); ?></span>
+            <span class="reader-sep">&bull;</span>
+            <span class="reader-ch-name"><?php echo htmlspecialchars($currentChapterTitle); ?></span>
+        </div>
+        <button type="button" class="reader-license-btn" onclick="openLicenseModal()" title="View Book License & Sourcing">
+            <i class="fas fa-info-circle"></i>
+        </button>
     </div>
-    <?php endif; ?>
 
-    <!-- Title Header -->
+    <!-- Book Title Header (Displayed on Chapter 1 and Intro) -->
     <?php if ($chapterNum <= 1): ?>
-    <header class="reader-page-header animate-reveal" style="text-align: center; margin-bottom: 3rem;">
-      <div class="library-hero-badge">
-        <span class="library-badge-dot"></span>
-        <span class="library-badge-text"><i class="fas fa-book-open"></i> Reader Mode</span>
-      </div>
-      <h1 class="library-hero-title" style="font-size: clamp(2rem, 5vw, 3rem); line-height: 1.1; margin-bottom: 0.5rem; background: linear-gradient(135deg, var(--color-primary), var(--color-secondary), var(--color-accent)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">
-        <?php echo htmlspecialchars($bookTitle); ?>
-      </h1>
-      <p style="font-size: 1.25rem; font-weight: 700; color: var(--color-text-secondary); margin: 0;">by <?php echo htmlspecialchars($bookAuthor); ?></p>
-    </header>
+        <header class="reader-hero-header animate-reveal">
+            <h1 class="reader-main-title">
+                <?php echo htmlspecialchars($bookTitle); ?>
+            </h1>
+            <p class="reader-main-author">by <?php echo htmlspecialchars($bookAuthor); ?></p>
+        </header>
     <?php endif; ?>
 
-    <!-- Author Pre-Read Introduction Chapter -->
+    <!-- Author Pre-Read Introduction Card -->
     <?php if ($chapter === 'intro'): ?>
-      <div class="author-intro-card animate-reveal" style="background: var(--color-content-bg); border: 1px solid var(--color-border); border-radius: 1.5rem; padding: 2.5rem; box-shadow: var(--shadow-xl); text-align: left; margin-bottom: 3rem; margin-top: 1rem;">
-        <div style="display: flex; align-items: center; gap: 1.25rem; margin-bottom: 2rem; border-bottom: 1px solid var(--color-border); padding-bottom: 1.25rem;">
-          <div style="background: var(--color-primary-light, rgba(79, 70, 229, 0.1)); color: var(--color-primary); width: 3.5rem; height: 3.5rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">
-            <i class="fas fa-user-feather"></i>
-          </div>
-          <div>
-            <h2 style="font-family: var(--site-font-family, 'Outfit', sans-serif); font-size: 1.6rem; font-weight: 800; margin: 0; color: var(--color-text-default);">About the Author</h2>
-            <p style="margin: 0; font-size: 0.95rem; font-weight: 700; color: var(--color-text-secondary);"><?php echo htmlspecialchars($bookAuthor); ?></p>
-          </div>
-        </div>
-        
-        <?php if (!empty($book['authorBio'])): ?>
-          <div style="margin-bottom: 2rem; background: var(--color-base-bg); padding: 1.25rem 1.5rem; border-radius: 1rem; border-left: 4px solid var(--color-primary);">
-            <p style="font-size: 1rem; line-height: 1.6; color: var(--color-text-default); margin: 0; font-style: italic;">
-              <?php echo htmlspecialchars($book['authorBio']); ?>
-            </p>
-          </div>
-        <?php endif; ?>
+        <section class="author-intro-card animate-reveal">
+            <div class="intro-header-row">
+                <div class="intro-icon-circle">
+                    <i class="fas fa-feather-alt"></i>
+                </div>
+                <div>
+                    <h2 class="intro-card-title">About the Author & Context</h2>
+                    <p class="intro-card-author"><?php echo htmlspecialchars($bookAuthor); ?></p>
+                </div>
+            </div>
 
-        <div style="display: flex; flex-direction: column; gap: 1.75rem;">
-          <?php if (!empty($book['introWhy'])): ?>
-            <div>
-              <h3 style="font-family: var(--site-font-family, 'Outfit', sans-serif); font-size: 1.15rem; font-weight: 800; color: var(--color-text-default); margin: 0 0 0.5rem 0; display: flex; align-items: center; gap: 0.5rem;"><i class="fas fa-question-circle" style="color: var(--color-secondary);"></i> Why the Author wrote this book:</h3>
-              <p style="font-size: 0.95rem; line-height: 1.6; color: var(--color-text-secondary); margin: 0;"><?php echo htmlspecialchars($book['introWhy']); ?></p>
-            </div>
-          <?php endif; ?>
-          
-          <?php if (!empty($book['introHow'])): ?>
-            <div>
-              <h3 style="font-family: var(--site-font-family, 'Outfit', sans-serif); font-size: 1.15rem; font-weight: 800; color: var(--color-text-default); margin: 0 0 0.5rem 0; display: flex; align-items: center; gap: 0.5rem;"><i class="fas fa-hammer" style="color: var(--color-primary);"></i> How it was written:</h3>
-              <p style="font-size: 0.95rem; line-height: 1.6; color: var(--color-text-secondary); margin: 0;"><?php echo htmlspecialchars($book['introHow']); ?></p>
-            </div>
-          <?php endif; ?>
-          
-          <?php if (!empty($book['introWhat'])): ?>
-            <div>
-              <h3 style="font-family: var(--site-font-family, 'Outfit', sans-serif); font-size: 1.15rem; font-weight: 800; color: var(--color-text-default); margin: 0 0 0.5rem 0; display: flex; align-items: center; gap: 0.5rem;"><i class="fas fa-compass" style="color: var(--color-accent);"></i> What it explores:</h3>
-              <p style="font-size: 0.95rem; line-height: 1.6; color: var(--color-text-secondary); margin: 0;"><?php echo htmlspecialchars($book['introWhat']); ?></p>
-            </div>
-          <?php endif; ?>
-        </div>
+            <div class="intro-body-grid">
+                <?php if (!empty($book['authorBio'])): ?>
+                    <div class="intro-block">
+                        <h3><i class="fas fa-user-circle"></i> Author Background</h3>
+                        <p><?php echo htmlspecialchars($book['authorBio']); ?></p>
+                    </div>
+                <?php endif; ?>
+                
+                <?php if (!empty($book['introWhy'])): ?>
+                    <div class="intro-block">
+                        <h3><i class="fas fa-lightbulb"></i> Purpose & Historical Context</h3>
+                        <p><?php echo htmlspecialchars($book['introWhy']); ?></p>
+                    </div>
+                <?php endif; ?>
 
-        <div style="text-align: center; margin-top: 3.5rem; border-top: 1px solid var(--color-border); padding-top: 2rem;">
-          <a href="/library/read/index.php?book=<?php echo urlencode($bookId); ?>&chapter=chapter-1" class="controls-nav-btn" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 2rem; border-radius: 9999px; background-color: var(--color-primary); color: white; border: none; font-size: 1rem; font-weight: 800; cursor: pointer; box-shadow: var(--shadow-lg);">
-            Start Reading (Chapter 1) <i class="fas fa-arrow-right"></i>
-          </a>
-        </div>
-      </div>
+                <?php if (!empty($book['introHow'])): ?>
+                    <div class="intro-block">
+                        <h3><i class="fas fa-pen-nib"></i> Composition & Method</h3>
+                        <p><?php echo htmlspecialchars($book['introHow']); ?></p>
+                    </div>
+                <?php endif; ?>
+                
+                <?php if (!empty($book['introWhat'])): ?>
+                    <div class="intro-block">
+                        <h3><i class="fas fa-compass"></i> Themes Explored</h3>
+                        <p><?php echo htmlspecialchars($book['introWhat']); ?></p>
+                    </div>
+                <?php endif; ?>
+            </div>
+
+            <div class="intro-cta-wrap">
+                <a href="/library/read/index.php?book=<?php echo urlencode($bookId); ?>&chapter=chapter-1" class="intro-start-btn">
+                    <span>Start Reading (Chapter 1)</span> <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </section>
     <?php endif; ?>
 
     <?php if ($chapter !== 'intro'): ?>
-    <!-- Controls Bar -->
-    <nav id="reader-controls">
-      <!-- Left: Navigation (Prev / Chapter Label / Next) -->
-      <div class="controls-nav-group">
-        <a href="<?php echo $prevUrl; ?>"
-          id="prev-chapter"
-          class="controls-nav-btn <?php echo !$hasPrev ? 'disabled' : ''; ?>"
-          aria-label="Previous Chapter">
-          <i class="fas fa-chevron-left"></i> Prev
-        </a>
-        <span id="current-chapter" style="font-weight: 700; font-size: 0.9rem; padding: 0 0.5rem; max-width: 140px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block; vertical-align: middle;" title="<?php echo htmlspecialchars($currentChapterTitle); ?>">
-          <?php 
-            if ($isTeacherChapter) {
-                echo 'Teacher';
-            } elseif (!empty($bookToc[$chapterNum]['title'])) {
-                $t = $bookToc[$chapterNum]['title'];
-                if (preg_match('/^(Chapter \d+|Part [IVXLCDM]+|Preface)/i', $t, $m)) {
-                    echo htmlspecialchars($m[1]);
-                } else {
-                    echo 'Ch ' . $chapterNum;
-                }
-            } else {
-                echo ($totalChapters > 1) ? 'Ch ' . $chapterNum : 'Read';
-            }
-          ?>
-        </span>
-        <a href="<?php echo $nextUrl; ?>"
-          id="next-chapter"
-          class="controls-nav-btn <?php echo !$hasNext ? 'disabled' : ''; ?>"
-          aria-label="Next Chapter">
-          Next <i class="fas fa-chevron-right"></i>
-        </a>
-      </div>
-
-      <!-- Center: Text to Speech (TTS) Controls -->
-      <div class="controls-speech-group">
-        <button id="tts-speak-btn" class="speech-btn" title="Listen to Chapter Aloud">
-          <i class="fas fa-volume-up"></i> Listen
-        </button>
-        <button id="tts-stop-btn" class="speech-btn speech-btn-stop hidden" title="Stop Reading">
-          <i class="fas fa-stop"></i> Stop
-        </button>
-      </div>
-
-      <!-- Right: Settings and Study Guides -->
-      <div class="controls-tools-group">
-        <!-- Citation Generator -->
-        <button id="open-citation-btn" class="tool-btn" title="Cite This Chapter" onclick="openChapterCitationModal()">
-          <i class="fas fa-quote-right"></i>
-        </button>
-
-        <button id="open-vocab-btn" class="tool-btn tool-btn-vocab" title="Study Guide, Notes & Quizzes">
-          <i class="fas fa-graduation-cap"></i>
-        </button>
-        <button id="open-settings-btn" class="tool-btn tool-btn-settings" title="Typography & Audio Settings">
-          <i class="fas fa-font"></i>
-        </button>
-
-        <?php if ($totalChapters > 1): ?>
-          <button id="open-toc-modal" class="tool-btn tool-btn-toc" title="Table of Chapters">
-            <i class="fas fa-list-ol"></i> Chapters
-          </button>
-        <?php endif; ?>
-
-        <!-- Typography & Text Customization Panel Dropdown -->
-        <div id="settings-panel" class="hidden">
-          <h4 class="settings-section-title">Font Family</h4>
-          <div class="settings-btn-row">
-            <button class="settings-row-btn active settings-font" data-font="font-sans">Sans</button>
-            <button class="settings-row-btn settings-font font-serif" data-font="font-serif">Serif</button>
-            <button class="settings-row-btn settings-font" data-font="font-dyslexic" style="font-family: 'OpenDyslexic', sans-serif;">Dyslexic</button>
-          </div>
-
-          <h4 class="settings-section-title">Text Size</h4>
-          <div class="settings-btn-row">
-            <button class="settings-row-btn settings-size" data-size="prose-base">A-</button>
-            <button class="settings-row-btn active settings-size" data-size="prose-lg">Aa</button>
-            <button class="settings-row-btn settings-size" data-size="prose-2xl">A+</button>
-          </div>
-
-          <h4 class="settings-section-title">Line Spacing</h4>
-          <div class="settings-btn-row">
-            <button class="settings-row-btn active settings-lineheight" data-lineheight="lh-normal">1.5x</button>
-            <button class="settings-row-btn settings-lineheight" data-lineheight="lh-wide">1.8x</button>
-            <button class="settings-row-btn settings-lineheight" data-lineheight="lh-extra">2.2x</button>
-          </div>
-
-          <h4 class="settings-section-title">Letter Spacing</h4>
-          <div class="settings-btn-row">
-            <button class="settings-row-btn active settings-letterspacing" data-letterspacing="ls-normal">Normal</button>
-            <button class="settings-row-btn settings-letterspacing" data-letterspacing="ls-wide">Wide</button>
-            <button class="settings-row-btn settings-letterspacing" data-letterspacing="ls-extra">Extra</button>
-          </div>
-
-          <h4 class="settings-section-title">Theme</h4>
-          <div class="theme-dots-row">
-            <button class="theme-dot-btn active dot-default settings-theme" data-theme="default" title="Light Theme"></button>
-            <button class="theme-dot-btn dot-sepia settings-theme" data-theme="sepia" title="Sepia Theme"></button>
-            <button class="theme-dot-btn dot-oled settings-theme" data-theme="dark" title="OLED Dark Theme"></button>
-          </div>
-
-          <h4 class="settings-section-title" style="margin-top: 1rem;">Speech Speed</h4>
-          <div class="speech-speed-container" style="display: flex; align-items: center; justify-content: space-between; background-color: var(--color-base-bg); padding: 0.5rem 0.75rem; border-radius: 0.75rem; margin-top: 0.5rem;">
-            <input type="range" id="tts-speed-slider" class="speech-speed-slider" min="0.5" max="2.0" step="0.1" value="1.0" style="flex: 1; margin-right: 0.75rem; height: 4px; accent-color: var(--color-primary); cursor: pointer;">
-            <span id="tts-speed-val" style="font-size: 0.8rem; font-weight: 700; color: var(--color-text-default); min-width: 2.20rem; text-align: right;">1.0x</span>
-          </div>
-
-          <h4 class="settings-section-title" style="margin-top: 1rem;">TTS Voice</h4>
-          <div class="speech-voice-container" style="background-color: var(--color-base-bg); padding: 0.5rem 0.75rem; border-radius: 0.75rem; margin-top: 0.5rem;">
-            <select id="tts-voice-select" style="width: 100%; font-size: 0.85rem; font-weight: 700; border: 1px solid var(--color-border); background-color: var(--color-content-bg); color: var(--color-text-default); outline: none; border-radius: 0.5rem; padding: 0.4rem; cursor: pointer; height: 2.25rem;">
-              <option value="default">Default System Voice</option>
-            </select>
-          </div>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Reading Content Container -->
-    <article id="book-content" class="prose prose-lg dark:prose-invert max-w-none text-text-default">
-      <?php if ($isTeacherChapter && !$isTeacherUnlocked): ?>
-        <!-- Teacher Resources Password Form -->
-        <div class="bg-content-bg p-8 rounded-[2rem] border border-accent/20 shadow-2xl max-w-md mx-auto text-center" style="background: var(--color-content-bg); border: 1px solid var(--color-border); box-shadow: var(--shadow-xl);">
-          <div class="modal-icon-circle circle-lock mx-auto mb-6" style="margin: 0 auto 1.5rem auto;">
-            <i class="fas fa-lock" style="font-size: 1.5rem;"></i>
-          </div>
-          <h3 style="font-family: var(--site-font-family, 'Outfit', sans-serif); font-size: 1.5rem; font-weight: 800; margin: 0 0 0.5rem 0; color: var(--color-text-default);">Authorized Access Only</h3>
-          <p style="color: var(--color-text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem;">What is Jenny's number?</p>
-          <form method="POST" action="/library/read/index.php?book=<?php echo urlencode($bookId); ?>&chapter=chapter-<?php echo $chapterNum; ?>">
-            <input type="password" name="teacher_password" class="auth-input mb-4" placeholder="•••••••" required autofocus autocomplete="off">
-            <?php if (!empty($authError)): ?>
-              <p class="auth-error mb-4"><?php echo htmlspecialchars($authError); ?></p>
-            <?php endif; ?>
-            <div class="auth-actions">
-              <a href="/library/read/index.php?book=<?php echo urlencode($bookId); ?>&chapter=chapter-1" class="auth-btn auth-btn-cancel text-center" style="display:block; line-height:2.2rem; text-decoration:none;">Cancel</a>
-              <button type="submit" class="auth-btn auth-btn-submit">Unlock</button>
+        <!-- Reader Controls Bar -->
+        <nav id="reader-controls" aria-label="Reading Controls">
+            <!-- Left: Navigation (Prev / Chapter Indicator / Next) -->
+            <div class="controls-nav-group">
+                <a href="<?php echo $prevUrl; ?>" 
+                   id="prev-chapter" 
+                   class="controls-nav-btn <?php echo !$hasPrev ? 'disabled' : ''; ?>" 
+                   aria-label="Previous Chapter"
+                   title="Previous Chapter">
+                    <i class="fas fa-chevron-left"></i> <span>Prev</span>
+                </a>
+                
+                <span id="current-chapter" class="controls-chapter-label" title="<?php echo htmlspecialchars($currentChapterTitle); ?>">
+                    <?php echo ($totalChapters > 1 && $chapterNum === $totalChapters && !empty($book['hasTeacherResources'])) ? 'Teacher Resources' : 'Ch ' . $chapterNum; ?>
+                </span>
+                
+                <a href="<?php echo $nextUrl; ?>" 
+                   id="next-chapter" 
+                   class="controls-nav-btn <?php echo !$hasNext ? 'disabled' : ''; ?>" 
+                   aria-label="Next Chapter"
+                   title="Next Chapter">
+                    <span>Next</span> <i class="fas fa-chevron-right"></i>
+                </a>
             </div>
-          </form>
-        </div>
-      <?php else: ?>
-        <!-- Output Chapter Header and Reading Time Badge -->
-        <div class="chapter-title text-3xl font-bold text-center text-primary" style="font-size: 2rem; font-weight: 800; color: var(--color-primary); text-align: center; margin-bottom: 0.5rem;">
-          <?php echo htmlspecialchars($currentChapterTitle); ?>
-        </div>
 
-        <div class="chapter-meta-row" style="text-align: center; margin-bottom: 2rem;">
-          <span id="reading-time-badge" class="reader-time-badge" title="Estimated Reading Time">
-            <i class="far fa-clock"></i> <span id="reading-time-text">Calculating reading time...</span>
-          </span>
-        </div>
+            <!-- Center: Text to Speech (TTS) Controls -->
+            <div class="controls-speech-group">
+                <button type="button" id="tts-speak-btn" class="speech-btn" title="Listen Aloud with Voice Narration" aria-label="Listen to chapter">
+                    <i class="fas fa-volume-up"></i> <span>Listen</span>
+                </button>
+                <button type="button" id="tts-stop-btn" class="speech-btn speech-btn-stop hidden" title="Stop Voice Narration" aria-label="Stop narration">
+                    <i class="fas fa-stop"></i> <span>Stop</span>
+                </button>
+            </div>
 
-        <?php echo $contentHtml; ?>
-      <?php endif; ?>
+            <!-- Right: Study Tools & Customization Settings -->
+            <div class="controls-tools-group">
+                <!-- Citation Generator -->
+                <button type="button" id="open-citation-btn" class="tool-btn" title="Generate Academic Citation" onclick="openChapterCitationModal()" aria-label="Generate Citation">
+                    <i class="fas fa-quote-right"></i>
+                </button>
+
+                <!-- Study Suite (Vocab, Flashcards, Quizzes, Notes) -->
+                <button type="button" id="open-vocab-btn" class="tool-btn tool-btn-vocab" title="Study Guide, Flashcards & Comprehension Quizzes" aria-label="Open Study Guide">
+                    <i class="fas fa-graduation-cap"></i>
+                </button>
+
+                <!-- Typography & Themes Panel Toggle -->
+                <button type="button" id="open-settings-btn" class="tool-btn tool-btn-settings" title="Typography, Font & Theme Settings" aria-label="Open Reader Settings">
+                    <i class="fas fa-font"></i>
+                </button>
+
+                <!-- Table of Contents Modal Trigger -->
+                <?php if ($totalChapters > 1): ?>
+                    <button type="button" id="open-toc-modal" class="tool-btn tool-btn-toc" title="Table of Contents" aria-label="Open Table of Contents">
+                        <i class="fas fa-list-ol"></i> <span>TOC</span>
+                    </button>
+                <?php endif; ?>
+
+                <!-- Typography Dropdown Panel -->
+                <div id="settings-panel" class="settings-dropdown hidden" role="region" aria-label="Reader Customization Panel">
+                    <h4 class="settings-section-title">Font Family</h4>
+                    <div class="settings-btn-row">
+                        <button type="button" class="settings-row-btn active settings-font" data-font="font-sans">Sans</button>
+                        <button type="button" class="settings-row-btn settings-font" data-font="font-serif">Serif</button>
+                        <button type="button" class="settings-row-btn settings-font" data-font="font-dyslexic" title="OpenDyslexic Font">Dyslexia</button>
+                    </div>
+
+                    <h4 class="settings-section-title">Font Size</h4>
+                    <div class="settings-btn-row">
+                        <button type="button" class="settings-row-btn settings-size" data-size="prose-base">Small</button>
+                        <button type="button" class="settings-row-btn active settings-size" data-size="prose-lg">Normal</button>
+                        <button type="button" class="settings-row-btn settings-size" data-size="prose-2xl">Large</button>
+                    </div>
+
+                    <h4 class="settings-section-title">Line Spacing</h4>
+                    <div class="settings-btn-row">
+                        <button type="button" class="settings-row-btn settings-lh" data-lh="lh-normal">Tight</button>
+                        <button type="button" class="settings-row-btn active settings-lh" data-lh="lh-wide">Relaxed</button>
+                        <button type="button" class="settings-row-btn settings-lh" data-lh="lh-extra">Loose</button>
+                    </div>
+
+                    <h4 class="settings-section-title">Reading Theme</h4>
+                    <div class="settings-btn-row">
+                        <button type="button" class="settings-row-btn settings-theme active" data-theme="theme-light">Light</button>
+                        <button type="button" class="settings-row-btn settings-theme" data-theme="theme-sepia">Sepia</button>
+                        <button type="button" class="settings-row-btn settings-theme" data-theme="theme-dark">Dark</button>
+                        <button type="button" class="settings-row-btn settings-theme" data-theme="theme-midnight">Midnight</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    <?php endif; ?>
+
+    <!-- Main Reader Reading Container -->
+    <article id="book-content" class="reader-main-content font-sans prose-lg lh-wide">
+        <?php if (!empty($book['hasTeacherResources']) && $chapterNum === $totalChapters && $totalChapters > 1 && !$isTeacherUnlocked): ?>
+            <!-- Protected Teacher Resources Screen -->
+            <div class="teacher-gate-card">
+                <div class="teacher-icon-circle">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <h2 class="teacher-gate-title">Teacher Resources Protected</h2>
+                <p class="teacher-gate-desc">This section contains educator answer keys, curriculum alignments, and discussion guides. Please enter the teacher PIN to unlock.</p>
+                
+                <?php if ($authError): ?>
+                    <div class="teacher-auth-error">
+                        <i class="fas fa-exclamation-circle"></i> <?php echo htmlspecialchars($authError); ?>
+                    </div>
+                <?php endif; ?>
+
+                <form method="POST" action="/library/read/index.php?book=<?php echo urlencode($bookId); ?>&chapter=chapter-<?php echo $totalChapters; ?>" class="teacher-auth-form">
+                    <input type="password" name="teacher_password" placeholder="Enter Teacher PIN..." class="teacher-pin-input" autofocus required autocomplete="off">
+                    <button type="submit" class="teacher-submit-btn">Unlock Resources</button>
+                </form>
+            </div>
+        <?php else: ?>
+            <?php echo $contentHtml; ?>
+        <?php endif; ?>
     </article>
 
-    <!-- Bottom Chapter Navigation -->
-    <?php if ($totalChapters > 1): ?>
-      <div class="reader-bottom-nav" style="margin-top: 3rem; display: flex; justify-content: space-between; align-items: center; padding-top: 1.5rem; border-top: 1px solid var(--color-border); flex-wrap: wrap; gap: 1rem;">
-        <a href="<?php echo $prevUrl; ?>" class="controls-nav-btn <?php echo !$hasPrev ? 'disabled' : ''; ?>" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none;">
-          <i class="fas fa-chevron-left"></i> Previous
-        </a>
-        <span style="font-weight: 700; color: var(--color-text-secondary); font-size: 0.95rem; text-align: center;">
-          <?php 
-            if (!empty($bookToc[$chapterNum]['title'])) {
-                echo htmlspecialchars($bookToc[$chapterNum]['title']);
-            } elseif ($isTeacherChapter) {
-                echo 'Teacher Resources';
-            } else {
-                echo 'Chapter ' . $chapterNum . ' of ' . $totalChapters;
-            }
-          ?>
-        </span>
-        <a href="<?php echo $nextUrl; ?>" class="controls-nav-btn <?php echo !$hasNext ? 'disabled' : ''; ?>" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none;">
-          Next <i class="fas fa-chevron-right"></i>
-        </a>
-      </div>
-    <?php endif; ?>
+    <!-- Bottom Pagination Nav -->
+    <?php if ($chapter !== 'intro' && $totalChapters > 1): ?>
+        <footer class="reader-bottom-nav">
+            <?php if ($hasPrev): ?>
+                <a href="<?php echo $prevUrl; ?>" class="reader-bottom-nav-btn prev-btn">
+                    <i class="fas fa-arrow-left"></i> <span>Previous Chapter</span>
+                </a>
+            <?php else: ?>
+                <div></div>
+            <?php endif; ?>
+
+            <?php if ($hasNext): ?>
+                <a href="<?php echo $nextUrl; ?>" class="reader-bottom-nav-btn next-btn">
+                    <span>Next Chapter</span> <i class="fas fa-arrow-right"></i>
+                </a>
+            <?php endif; ?>
+        </footer>
     <?php endif; ?>
 
-  </div>
 </main>
 
-<!-- Floating Multi-Color Highlight Actions Toolbar -->
-<div id="highlight-toolbar" class="highlight-toolbar-dock hidden" role="toolbar" aria-label="Highlight text">
-  <div class="hl-colors-row">
-    <button id="hl-color-yellow" class="hl-color-btn dot-yellow" title="Highlight Yellow (Key Idea)" data-color="yellow"></button>
-    <button id="hl-color-pink" class="hl-color-btn dot-pink" title="Highlight Pink (Important/Question)" data-color="pink"></button>
-    <button id="hl-color-green" class="hl-color-btn dot-green" title="Highlight Green (Vocabulary/Example)" data-color="green"></button>
-  </div>
-  <div class="hl-divider"></div>
-  <button id="hl-btn-note" class="hl-btn" title="Add Note to Scratchpad"><i class="fas fa-sticky-note"></i> Note</button>
-  <button id="hl-btn-copy" class="hl-btn" title="Copy Selected Text"><i class="fas fa-copy"></i> Copy</button>
+<!-- Inline Highlighting & Annotation Floating Toolbar -->
+<div id="highlight-toolbar" class="highlight-toolbar hidden" role="toolbar" aria-label="Text Highlight Tools">
+    <button type="button" id="hl-color-yellow" class="hl-color-btn hl-yellow" title="Highlight Yellow"></button>
+    <button type="button" id="hl-color-pink" class="hl-color-btn hl-pink" title="Highlight Pink"></button>
+    <button type="button" id="hl-color-green" class="hl-color-btn hl-green" title="Highlight Green"></button>
+    <div class="hl-sep"></div>
+    <button type="button" id="hl-btn-note" class="hl-action-btn" title="Add Note"><i class="fas fa-sticky-note"></i></button>
+    <button type="button" id="hl-btn-copy" class="hl-action-btn" title="Copy Quote"><i class="fas fa-copy"></i></button>
 </div>
 
-<!-- Instant Double-Click Dictionary Popover -->
-<div id="reader-dict-popover" class="reader-dict-popover hidden" role="tooltip" aria-live="polite">
-  <div class="dict-popover-header">
-    <div class="dict-popover-title-wrap">
-      <span id="dict-pop-word" class="dict-pop-word">Word</span>
-      <span id="dict-pop-phonetic" class="dict-pop-phonetic">/phonetic/</span>
-    </div>
-    <div class="dict-popover-actions">
-      <button id="dict-pop-audio-btn" class="dict-pop-audio-btn hidden" title="Listen to pronunciation"><i class="fas fa-volume-up"></i></button>
-      <button id="dict-pop-close-btn" class="dict-pop-close-btn" title="Close" onclick="closeDictPopover()">&times;</button>
-    </div>
-  </div>
-  <div class="dict-popover-body">
-    <div id="dict-pop-part" class="dict-pop-part">part of speech</div>
-    <p id="dict-pop-meaning" class="dict-pop-meaning">Definition loading...</p>
-  </div>
-  <div class="dict-popover-footer">
-    <a id="dict-pop-full-link" href="#" target="_blank" class="dict-pop-full-link"><i class="fas fa-external-link-alt"></i> Open in Lexicon</a>
-  </div>
-</div>
-
-<!-- Citation Generator Modal -->
-<div id="citation-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="citation-modal-title">
-  <div class="modal-card" style="max-width: 550px;">
-    <div class="modal-card-header">
-      <div class="modal-card-title">
-        <div class="modal-icon-circle circle-vocab">
-          <i class="fas fa-quote-right"></i>
+<!-- Study Guide, Flashcards & Quiz Modal Drawer -->
+<div id="vocab-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="vocab-modal-title">
+    <div class="modal-card vocab-modal-card">
+        <div class="modal-card-header">
+            <div class="modal-card-title">
+                <div class="modal-icon-circle">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div>
+                    <h3 id="vocab-modal-title">Study Suite & Exercises</h3>
+                    <p class="modal-subtitle">Vocabulary, Flashcards, Notes & Comprehension</p>
+                </div>
+            </div>
+            <button type="button" id="close-vocab-modal" class="modal-card-close-btn" aria-label="Close study suite">
+                <i class="fas fa-times"></i>
+            </button>
         </div>
-        <div style="text-align: left;">
-          <h3 id="citation-modal-title" style="font-family: var(--site-font-family, 'Outfit', sans-serif); font-size: 1.25rem; font-weight: 800; margin: 0; color: var(--color-text-default);">Cite This Chapter</h3>
-          <p style="color: var(--color-text-secondary); font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; margin: 0.25rem 0 0 0;">Academic Citation Generator</p>
+
+        <div class="vocab-tabs-row" role="tablist">
+            <button type="button" class="vocab-tab-btn active" id="tab-vocab-list" role="tab">Vocabulary List</button>
+            <button type="button" class="vocab-tab-btn" id="tab-vocab-flash" role="tab">Flashcard Drill</button>
+            <button type="button" class="vocab-tab-btn" id="tab-quiz" role="tab">Chapter Quiz</button>
+            <button type="button" class="vocab-tab-btn" id="tab-highlights" role="tab">My Highlights</button>
         </div>
-      </div>
-      <button onclick="closeChapterCitationModal()" class="modal-card-close-btn" aria-label="Close citation modal">
-        <i class="fas fa-times"></i>
-      </button>
+
+        <div class="modal-body vocab-modal-body">
+            <!-- Vocabulary List Tab View -->
+            <div id="vocab-list-container" class="vocab-list-grid">
+                <!-- Dynamically populated by reader.js -->
+            </div>
+
+            <!-- Flashcards Tab View -->
+            <div id="vocab-flash-container" class="vocab-flash-wrap hidden">
+                <div id="vocab-flashcard" class="flashcard-box" role="button" tabindex="0" aria-label="Flashcard - Click to flip">
+                    <div class="flashcard-inner">
+                        <div class="flashcard-front">
+                            <span class="flashcard-badge">WORD</span>
+                            <h4 id="flashcard-front-word" class="flashcard-term">Loading...</h4>
+                            <p class="flashcard-hint"><i class="fas fa-sync-alt mr-1"></i> Click to reveal definition</p>
+                        </div>
+                        <div class="flashcard-back">
+                            <span class="flashcard-badge">DEFINITION</span>
+                            <p id="flashcard-back-definition" class="flashcard-def">Loading...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flashcard-controls-row">
+                    <button type="button" id="flashcard-prev-btn" class="flashcard-nav-btn"><i class="fas fa-chevron-left"></i> Prev</button>
+                    <span id="flashcard-counter" class="flashcard-counter-label">1 of 1</span>
+                    <button type="button" id="flashcard-next-btn" class="flashcard-nav-btn">Next <i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+
+            <!-- Quiz Tab View -->
+            <div id="quiz-container" class="quiz-container hidden">
+                <!-- Injected by reader.js -->
+            </div>
+
+            <!-- Highlights & Notes Tab View -->
+            <div id="vocab-highlights-container" class="highlights-container hidden">
+                <!-- Injected by reader.js -->
+            </div>
+        </div>
     </div>
-    <div class="vocab-tabs-row">
-      <button class="vocab-tab-btn active" id="tab-cite-mla" onclick="switchCitationStyle('mla')">MLA 9</button>
-      <button class="vocab-tab-btn" id="tab-cite-apa" onclick="switchCitationStyle('apa')">APA 7</button>
-      <button class="vocab-tab-btn" id="tab-cite-chicago" onclick="switchCitationStyle('chicago')">Chicago</button>
-    </div>
-    <div class="modal-body" style="padding: 1.5rem; text-align: left;">
-      <div id="citation-text-box" class="citation-text-box">
-        <!-- Injected by reader.js -->
-      </div>
-      <div style="display: flex; justify-content: flex-end; margin-top: 1.25rem;">
-        <button id="copy-citation-btn" class="tooltip-btn" onclick="copyCitationToClipboard()" style="padding: 0.6rem 1.25rem; border-radius: 0.5rem; background: var(--color-primary); color: white; border: none; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem;">
-          <i class="fas fa-copy"></i> <span id="copy-citation-label">Copy Citation</span>
-        </button>
-      </div>
-    </div>
-  </div>
 </div>
 
-<!-- Back to Top Button -->
-<button id="go-to-top-btn" aria-label="Go to top">
-  <i class="fas fa-arrow-up"></i>
-</button>
-
-<!-- Table of Contents Modal Drawer -->
+<!-- Table of Contents Slide-Out Modal -->
 <?php if ($totalChapters > 1): ?>
-  <div id="toc-modal" role="dialog" aria-labelledby="toc-title">
-    <div class="toc-content">
-      <div class="toc-header">
-        <h2 id="toc-title" style="font-family: var(--site-font-family, 'Outfit', sans-serif); font-weight: 800; font-size: 1.5rem;">Table of Contents</h2>
-        <button class="toc-close" id="close-toc-modal" aria-label="Close menu">&times;</button>
-      </div>
-
-      <?php if (!empty($bookToc)): ?>
-        <!-- Hierarchical / Detailed TOC -->
-        <div class="toc-list-structured" style="overflow-y: auto; max-height: calc(100vh - 120px); padding-right: 0.5rem; text-align: left;">
-          <?php
-          $currentVolume = null;
-          $currentPart = null;
-          foreach ($bookToc as $itemNum => $item):
-              $itemVol = $item['volume'] ?? '';
-              $itemPart = $item['part'] ?? '';
-              $itemTitle = $item['title'] ?? "Chapter $itemNum";
-              $isActive = ($itemNum === $chapterNum);
-
-              if ($itemVol !== '' && $itemVol !== $currentVolume):
-                  $currentVolume = $itemVol;
-                  $currentPart = null;
-          ?>
-                  <div class="toc-volume-header" style="font-weight: 900; font-size: 1.1rem; color: var(--color-primary); margin: 1.5rem 0 0.5rem 0; padding-bottom: 0.25rem; border-bottom: 2px solid var(--color-primary); display: flex; align-items: center; gap: 0.5rem;">
-                    <i class="fas fa-layer-group"></i> <?php echo htmlspecialchars($itemVol); ?>
-                  </div>
-          <?php 
-              endif;
-
-              if ($itemPart !== '' && $itemPart !== $currentPart && $itemPart !== $itemTitle):
-                  $currentPart = $itemPart;
-          ?>
-                  <div class="toc-part-header" style="font-weight: 800; font-size: 0.9rem; color: var(--color-secondary); margin: 0.85rem 0 0.25rem 0.25rem; display: flex; align-items: center; gap: 0.4rem;">
-                    <i class="fas fa-bookmark"></i> <?php echo htmlspecialchars($itemPart); ?>
-                  </div>
-          <?php 
-              endif;
-          ?>
-              <a href="/library/read/index.php?book=<?php echo urlencode($bookId); ?>&chapter=chapter-<?php echo $itemNum; ?>"
-                 class="toc-item-row <?php echo $isActive ? 'active' : ''; ?>"
-                 style="display: flex; align-items: center; gap: 0.75rem; padding: 0.65rem 0.85rem; border-radius: 0.5rem; margin-bottom: 0.35rem; text-decoration: none; color: var(--color-text-default); background: <?php echo $isActive ? 'var(--color-primary-light, rgba(79, 70, 229, 0.15))' : 'transparent'; ?>; border: 1px solid <?php echo $isActive ? 'var(--color-primary)' : 'var(--color-border, #e5e7eb)'; ?>; font-weight: <?php echo $isActive ? '800' : '500'; ?>; transition: all 0.15s ease;">
-                <span style="font-size: 0.8rem; font-weight: 800; color: var(--color-primary); min-width: 1.75rem;">#<?php echo $itemNum; ?></span>
-                <span style="flex: 1; font-size: 0.88rem; line-height: 1.35;"><?php echo htmlspecialchars($itemTitle); ?></span>
-                <?php if ($isActive): ?>
-                  <i class="fas fa-check" style="color: var(--color-primary); font-size: 0.85rem;"></i>
-                <?php endif; ?>
-              </a>
-          <?php endforeach; ?>
-
-          <?php if ($hasTeacherResources): ?>
-            <a href="/library/read/index.php?book=<?php echo urlencode($bookId); ?>&chapter=chapter-<?php echo $totalChapters; ?>"
-               class="toc-item-row toc-teacher-btn <?php echo ($chapterNum === $totalChapters) ? 'active' : ''; ?>"
-               style="display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem; border-radius: 0.5rem; margin-top: 1rem; text-decoration: none; color: #d97706; background: rgba(217, 119, 6, 0.1); border: 1px solid #d97706; font-weight: 800;">
-              <i class="fas fa-chalkboard-teacher"></i> <span>TEACHER RESOURCES</span>
-            </a>
-          <?php endif; ?>
+    <div id="toc-modal" class="toc-modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="toc-title">
+        <div class="toc-content">
+            <div class="toc-header">
+                <h2 id="toc-title">Table of Contents</h2>
+                <button type="button" class="toc-close" id="close-toc-modal" aria-label="Close Table of Contents">&times;</button>
+            </div>
+            <div class="toc-grid">
+                <?php for ($i = 1; $i <= $totalChapters; $i++): 
+                    $isTeacherCh = ($i === $totalChapters && !empty($book['hasTeacherResources']));
+                    $chapterLabel = $isTeacherCh ? 'Teacher Resources' : 'Chapter ' . $i;
+                    if (!empty($bookToc) && isset($bookToc[(string)$i]['title'])) {
+                        $chapterLabel = $bookToc[(string)$i]['title'];
+                    }
+                ?>
+                    <a href="/library/read/index.php?book=<?php echo urlencode($bookId); ?>&chapter=chapter-<?php echo $i; ?>" 
+                       class="toc-link <?php echo ($i === $chapterNum) ? 'active' : ''; ?> <?php echo $isTeacherCh ? 'toc-teacher-link' : ''; ?>">
+                        <span class="toc-num"><?php echo $isTeacherCh ? '<i class="fas fa-chalkboard-teacher"></i>' : 'CH ' . $i; ?></span>
+                        <span class="toc-name"><?php echo htmlspecialchars($chapterLabel); ?></span>
+                    </a>
+                <?php endfor; ?>
+            </div>
         </div>
-      <?php else: ?>
-        <!-- Standard Grid TOC -->
-        <div class="toc-grid">
-          <?php 
-            $endLimit = $hasTeacherResources ? ($totalChapters - 1) : $totalChapters;
-            for ($i = 1; $i <= $endLimit; $i++): 
-          ?>
-            <a href="/library/read/index.php?book=<?php echo urlencode($bookId); ?>&chapter=chapter-<?php echo $i; ?>"
-              class="toc-link <?php echo ($i === $chapterNum) ? 'active' : ''; ?>"
-              data-chapter="<?php echo $i; ?>">CH <?php echo $i; ?></a>
-          <?php endfor; ?>
-
-          <?php if ($hasTeacherResources): ?>
-            <a href="/library/read/index.php?book=<?php echo urlencode($bookId); ?>&chapter=chapter-<?php echo $totalChapters; ?>"
-              class="toc-link toc-teacher-btn <?php echo ($chapterNum === $totalChapters) ? 'active' : ''; ?>"
-              data-chapter="<?php echo $totalChapters; ?>">
-              <i class="fas fa-chalkboard-teacher mr-2"></i> TEACHER RESOURCES
-            </a>
-          <?php endif; ?>
-        </div>
-      <?php endif; ?>
-
     </div>
-  </div>
 <?php endif; ?>
 
-<!-- License & Sourcing Info Modal -->
-<div id="license-modal" class="modal-overlay hidden" role="dialog" aria-labelledby="license-title">
-  <div class="modal-card" style="max-width: 500px;">
-    <div class="modal-card-header">
-      <div class="modal-card-title">
-        <div class="modal-icon-circle" style="background: var(--color-primary); color: white; display: flex; align-items: center; justify-content: center; width: 2rem; height: 2rem; border-radius: 50%;">
-          <i class="fas fa-info-circle"></i>
+<!-- Sourcing & Info Modal -->
+<div id="license-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="license-title">
+    <div class="modal-card license-modal-card">
+        <div class="modal-card-header">
+            <div class="modal-card-title">
+                <div class="modal-icon-circle">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+                <div>
+                    <h3 id="license-title">Book Sourcing & Information</h3>
+                    <p class="modal-subtitle">Metadata, License & Primary Sources</p>
+                </div>
+            </div>
+            <button type="button" id="close-license-modal" class="modal-card-close-btn" aria-label="Close license info">
+                <i class="fas fa-times"></i>
+            </button>
         </div>
-        <div style="text-align: left;">
-          <h3 id="license-title" style="font-family: var(--site-font-family, 'Outfit', sans-serif); font-size: 1.25rem; font-weight: 800; margin: 0; color: var(--color-text-default);">Book License & Info</h3>
-          <p style="color: var(--color-text-secondary); font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; margin: 0.25rem 0 0 0;">Metadata & Sourcing</p>
+        <div class="modal-body license-modal-body">
+            <div class="license-book-preview">
+                <img src="<?php echo htmlspecialchars($book['img'] ?? ''); ?>" alt="Cover" class="license-cover" onerror="this.onerror=null; this.src='https://placehold.co/100x150/1e293b/ffffff?text=Book';">
+                <div>
+                    <h4 class="license-book-title"><?php echo htmlspecialchars($bookTitle); ?></h4>
+                    <p class="license-book-author">by <?php echo htmlspecialchars($bookAuthor); ?></p>
+                    <span class="license-grade-tag"><i class="fas fa-graduation-cap mr-1"></i> <?php echo htmlspecialchars($book['grade'] ?? 'General Education'); ?></span>
+                </div>
+            </div>
+            <div class="license-text-block">
+                <p><strong>Source Provider:</strong> <?php echo htmlspecialchars($book['file-source'] ?? 'Public Domain Archive / Educational Fair Use'); ?></p>
+                <p><strong>Description:</strong> <?php echo htmlspecialchars($book['description'] ?? 'No additional metadata available.'); ?></p>
+            </div>
         </div>
-      </div>
-      <button id="close-license-modal" class="modal-card-close-btn" aria-label="Close licensing info">
-        <i class="fas fa-times"></i>
-      </button>
     </div>
-    <div class="modal-body" style="padding: 1.5rem; text-align: left; color: var(--color-text-default); max-height: 70vh; overflow-y: auto;">
-      <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem; align-items: center;">
-        <img src="<?php echo htmlspecialchars($book['img'] ?? ''); ?>" alt="<?php echo htmlspecialchars($bookTitle); ?>" style="width: 80px; height: auto; border-radius: 0.5rem; box-shadow: var(--shadow-md);">
-        <div>
-          <h4 style="margin: 0; font-size: 1.1rem; font-weight: 800;"><?php echo htmlspecialchars($bookTitle); ?></h4>
-          <p style="margin: 0.25rem 0 0 0; color: var(--color-text-secondary); font-size: 0.9rem;">by <?php echo htmlspecialchars($bookAuthor); ?></p>
-        </div>
-      </div>
-
-      <div style="margin-bottom: 1.25rem;">
-        <strong style="display: block; font-size: 0.8rem; color: var(--color-text-secondary); text-transform: uppercase; margin-bottom: 0.25rem; font-weight: 800;">Source & License</strong>
-        <p style="margin: 0; font-size: 0.95rem; line-height: 1.5; color: var(--color-text-default);">
-          <?php
-          $discKey = $book['disclaimer-key'] ?? 'default';
-          $discText = $book['disclaimer-text'] ?? '';
-
-          $disclaimers = json_decode(file_get_contents(ABSPATH . 'library/assets/disclaimers.json'), true) ?: [];
-          if (!empty($discText)) {
-            echo htmlspecialchars($discText);
-          } elseif (isset($disclaimers[$discKey])) {
-            echo htmlspecialchars($disclaimers[$discKey]);
-          } else {
-            echo htmlspecialchars($disclaimers['default'] ?? 'No license information is available for this book.');
-          }
-          ?>
-        </p>
-      </div>
-
-      <?php if (!empty($book['isbn']) && $book['isbn'] !== '#'): ?>
-        <div style="margin-bottom: 1.25rem;">
-          <strong style="display: block; font-size: 0.8rem; color: var(--color-text-secondary); text-transform: uppercase; margin-bottom: 0.25rem; font-weight: 800;">ISBN</strong>
-          <p style="margin: 0; font-size: 0.95rem; color: var(--color-text-default);"><?php echo htmlspecialchars($book['isbn']); ?></p>
-        </div>
-      <?php endif; ?>
-
-      <?php if (!empty($book['date'])): ?>
-        <div style="margin-bottom: 1.25rem;">
-          <strong style="display: block; font-size: 0.8rem; color: var(--color-text-secondary); text-transform: uppercase; margin-bottom: 0.25rem; font-weight: 800;">Original Release / Publication Date</strong>
-          <p style="margin: 0; font-size: 0.95rem; color: var(--color-text-default);"><?php echo htmlspecialchars($book['date']); ?></p>
-        </div>
-      <?php endif; ?>
-    </div>
-  </div>
 </div>
 
-<!-- Study Guide (Vocab, Highlights & Notes, Flashcards, Quiz) Modal -->
-<div id="vocab-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="study-guide-title">
-  <div class="modal-card" style="max-width: 650px;">
-    <div class="modal-card-header">
-      <div class="modal-card-title">
-        <div class="modal-icon-circle circle-vocab">
-          <i class="fas fa-graduation-cap"></i>
+<!-- Chapter Citation Modal -->
+<div id="chapterCitationModal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="chapter-cite-title">
+    <div class="modal-card citation-modal-card">
+        <div class="modal-card-header">
+            <div class="modal-card-title">
+                <div class="modal-icon-circle">
+                    <i class="fas fa-quote-right"></i>
+                </div>
+                <div>
+                    <h3 id="chapter-cite-title">Cite This Chapter</h3>
+                    <p class="modal-subtitle">Academic formats for citations & bibliography</p>
+                </div>
+            </div>
+            <button type="button" id="close-chapter-cite-modal" class="modal-card-close-btn" aria-label="Close citation modal">
+                <i class="fas fa-times"></i>
+            </button>
         </div>
-        <div style="text-align: left;">
-          <h3 id="study-guide-title" style="font-family: var(--site-font-family, 'Outfit', sans-serif); font-size: 1.25rem; font-weight: 800; margin: 0; color: var(--color-text-default);">Study Guide & Notes</h3>
-          <p style="color: var(--color-text-secondary); font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; margin: 0.25rem 0 0 0;">Chapter Interactive tools</p>
+        <div class="modal-body">
+            <div class="citation-format-tabs">
+                <button type="button" class="citation-tab-btn active" onclick="switchReaderCitationStyle('mla')">MLA 9</button>
+                <button type="button" class="citation-tab-btn" onclick="switchReaderCitationStyle('apa')">APA 7</button>
+                <button type="button" class="citation-tab-btn" onclick="switchReaderCitationStyle('chicago')">Chicago 17</button>
+                <button type="button" class="citation-tab-btn" onclick="switchReaderCitationStyle('harvard')">Harvard</button>
+            </div>
+            <div class="citation-preview-box">
+                <div id="reader-citation-text" class="citation-text-render"></div>
+                <button type="button" id="reader-citation-copy-btn" class="citation-copy-btn" onclick="copyReaderCitationText()">
+                    <i class="fas fa-copy"></i> <span>Copy Citation</span>
+                </button>
+            </div>
         </div>
-      </div>
-      <div style="display: flex; align-items: center; gap: 0.75rem;">
-        <button id="download-vocab-btn" class="tooltip-btn" style="background: var(--color-secondary); padding: 0.5rem 1rem; border-radius: 9999px; font-size: 0.8rem; font-weight: 700; border: none; cursor: pointer; display: inline-flex; align-items: center; gap: 0.4rem;" title="Download word list as TXT">
-          <i class="fas fa-download"></i> Download TXT
-        </button>
-        <button id="close-vocab-modal" class="modal-card-close-btn" aria-label="Close study guide">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
     </div>
-    <!-- Tabs Row -->
-    <div class="vocab-tabs-row">
-      <button class="vocab-tab-btn active" id="tab-vocab-list">Word List</button>
-      <button class="vocab-tab-btn" id="tab-highlights">Highlights & Notes</button>
-      <button class="vocab-tab-btn" id="tab-vocab-flash">Flashcards</button>
-      <button class="vocab-tab-btn" id="tab-quiz">Quiz</button>
-    </div>
-
-    <!-- Word List View -->
-    <div id="vocab-list-container" class="vocab-list">
-      <!-- Injected by reader.js -->
-    </div>
-
-    <!-- Highlights & Notes Tab View -->
-    <div id="vocab-highlights-container" class="vocab-list" style="display: none; flex-direction: column; max-height: 55vh; overflow-y: auto;">
-      <div id="highlights-list-container">
-        <!-- Injected by reader.js -->
-      </div>
-      <div style="padding: 1rem 0 0 0; border-top: 1px solid var(--color-border); display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
-        <button onclick="clearChapterHighlights()" class="tooltip-btn" style="padding: 0.4rem 0.8rem; font-size: 0.8rem; background: transparent; border: 1px solid var(--color-border); color: var(--color-danger, #ef4444); border-radius: 0.5rem; cursor: pointer;">
-          <i class="fas fa-trash-alt"></i> Clear Highlights
-        </button>
-        <button onclick="exportHighlightsMarkdown()" class="tooltip-btn" style="padding: 0.5rem 1rem; border-radius: 0.5rem; background: var(--color-primary); color: white; border: none; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 0.4rem;">
-          <i class="fas fa-file-export"></i> Export Markdown
-        </button>
-      </div>
-    </div>
-
-    <!-- Flashcards View -->
-    <div id="vocab-flash-container" class="vocab-list" style="text-align: center; display: none; flex-direction: column;">
-      <div class="flashcard-wrap">
-        <div class="flashcard" id="vocab-flashcard">
-          <div class="flashcard-face flashcard-front">
-            <h3 id="flashcard-front-word">Word</h3>
-            <p><i class="fas fa-sync-alt"></i> Click to flip</p>
-          </div>
-          <div class="flashcard-face flashcard-back">
-            <p id="flashcard-back-definition">Definition goes here...</p>
-          </div>
-        </div>
-      </div>
-      <div class="flashcard-nav">
-        <button id="flashcard-prev-btn" class="tooltip-btn" style="padding: 0.5rem 1rem;"><i class="fas fa-chevron-left"></i> Prev</button>
-        <span id="flashcard-counter" style="font-weight: 700; color: var(--color-text-secondary);">1 of 5</span>
-        <button id="flashcard-next-btn" class="tooltip-btn" style="padding: 0.5rem 1rem;">Next <i class="fas fa-chevron-right"></i></button>
-      </div>
-    </div>
-
-    <!-- Quiz View -->
-    <div id="quiz-container" class="quiz-container" style="display: none; flex-direction: column;">
-      <!-- Injected by reader.js -->
-    </div>
-  </div>
 </div>
 
 <!-- Floating Session Resume Alert Banner -->
 <div id="resume-toast" class="resume-toast hidden" role="alert">
-  <div class="resume-toast-content">
-    <i class="fas fa-bookmark resume-toast-icon"></i>
-    <div class="resume-toast-text">
-      <span class="resume-toast-title">Resume Reading?</span>
-      <span class="resume-toast-desc">Pick up from where you left off.</span>
+    <div class="resume-toast-content">
+        <i class="fas fa-bookmark resume-toast-icon"></i>
+        <div class="resume-toast-text">
+            <span class="resume-toast-title">Resume Reading?</span>
+            <span class="resume-toast-desc">Pick up from where you left off.</span>
+        </div>
+        <div class="resume-toast-actions">
+            <button type="button" id="resume-toast-dismiss" class="resume-toast-btn btn-secondary">Dismiss</button>
+            <button type="button" id="resume-toast-confirm" class="resume-toast-btn btn-primary">Resume</button>
+        </div>
     </div>
-    <div class="resume-toast-actions">
-      <button id="resume-toast-dismiss" class="resume-toast-btn btn-secondary">Dismiss</button>
-      <button id="resume-toast-confirm" class="resume-toast-btn btn-primary">Resume</button>
-    </div>
-  </div>
 </div>
 
-<!-- Send metadata to window context -->
+<!-- Send metadata to client window context -->
 <script>
-  window.BOOK_METADATA = {
-    id: <?php echo json_encode($bookId); ?>,
-    title: <?php echo json_encode($bookTitle); ?>,
-    chapterNum: <?php echo json_encode($chapterNum); ?>,
-    totalChapters: <?php echo json_encode($totalChapters); ?>
-  };
-  window.BOOK_QUIZ_QUESTIONS = <?php echo json_encode($quizQuestions); ?>;
-  window.BOOK_JSON_VOCAB = <?php echo json_encode($vocabList); ?>;
+    window.BOOK_METADATA = {
+        id: <?php echo json_encode($bookId); ?>,
+        title: <?php echo json_encode($bookTitle); ?>,
+        author: <?php echo json_encode($bookAuthor); ?>,
+        chapter: <?php echo json_encode($chapter); ?>,
+        chapterNum: <?php echo json_encode($chapterNum); ?>,
+        totalChapters: <?php echo json_encode($totalChapters); ?>,
+        chapterTitle: <?php echo json_encode($currentChapterTitle); ?>
+    };
+    window.BOOK_QUIZ_QUESTIONS = <?php echo json_encode($quizQuestions); ?>;
+    window.BOOK_JSON_VOCAB = <?php echo json_encode($vocabList); ?>;
 </script>
 
 <script src="/library/read/reader.js" defer></script>
