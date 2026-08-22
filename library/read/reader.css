@@ -7,6 +7,11 @@
 @import url('https://fonts.cdnfonts.com/css/open-dyslexic');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
 
+/* Utility Classes */
+.hidden {
+    display: none !important;
+}
+
 /* ==========================================================================
    1. Reader Typography & Accessibility Font Classes
    ========================================================================== */

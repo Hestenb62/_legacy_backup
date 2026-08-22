@@ -356,11 +356,11 @@ include ABSPATH . 'src/header.php';
 
 <!-- Table of Contents Slide-Out Modal -->
 <?php if ($totalChapters > 1): ?>
-    <div id="toc-modal" class="toc-modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="toc-title">
-        <div class="toc-content">
+    <div id="toc-modal" class="toc-modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="toc-title" onclick="closeTocModal()">
+        <div class="toc-content" onclick="event.stopPropagation()">
             <div class="toc-header">
                 <h2 id="toc-title">Table of Contents</h2>
-                <button type="button" class="toc-close" id="close-toc-modal" aria-label="Close Table of Contents">&times;</button>
+                <button type="button" class="toc-close" id="close-toc-modal" onclick="closeTocModal()" aria-label="Close Table of Contents">&times;</button>
             </div>
             <div class="toc-grid">
                 <?php for ($i = 1; $i <= $totalChapters; $i++): 
@@ -382,8 +382,8 @@ include ABSPATH . 'src/header.php';
 <?php endif; ?>
 
 <!-- Sourcing & Info Modal -->
-<div id="license-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="license-title">
-    <div class="modal-card license-modal-card">
+<div id="license-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="license-title" onclick="closeLicenseModal()">
+    <div class="modal-card license-modal-card" onclick="event.stopPropagation()">
         <div class="modal-card-header">
             <div class="modal-card-title">
                 <div class="modal-icon-circle">
@@ -394,7 +394,7 @@ include ABSPATH . 'src/header.php';
                     <p class="modal-subtitle">Metadata, License & Primary Sources</p>
                 </div>
             </div>
-            <button type="button" id="close-license-modal" class="modal-card-close-btn" aria-label="Close license info">
+            <button type="button" id="close-license-modal" class="modal-card-close-btn" onclick="closeLicenseModal()" aria-label="Close license info">
                 <i class="fas fa-times"></i>
             </button>
         </div>
@@ -416,8 +416,8 @@ include ABSPATH . 'src/header.php';
 </div>
 
 <!-- Chapter Citation Modal -->
-<div id="chapterCitationModal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="chapter-cite-title">
-    <div class="modal-card citation-modal-card">
+<div id="chapterCitationModal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="chapter-cite-title" onclick="closeChapterCitationModal()">
+    <div class="modal-card citation-modal-card" onclick="event.stopPropagation()">
         <div class="modal-card-header">
             <div class="modal-card-title">
                 <div class="modal-icon-circle">
@@ -428,7 +428,7 @@ include ABSPATH . 'src/header.php';
                     <p class="modal-subtitle">Academic formats for citations & bibliography</p>
                 </div>
             </div>
-            <button type="button" id="close-chapter-cite-modal" class="modal-card-close-btn" aria-label="Close citation modal">
+            <button type="button" id="close-chapter-cite-modal" class="modal-card-close-btn" onclick="closeChapterCitationModal()" aria-label="Close citation modal">
                 <i class="fas fa-times"></i>
             </button>
         </div>
