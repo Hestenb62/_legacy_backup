@@ -94,6 +94,10 @@
             // Reset theme
             document.body.classList.remove("theme-light", "theme-sepia", "theme-dark", "theme-midnight");
             document.body.classList.add(prefs.theme);
+            const cleanTheme = prefs.theme.replace("theme-", "");
+            document.documentElement.setAttribute("data-theme", cleanTheme);
+            document.documentElement.classList.remove("theme-light", "theme-sepia", "theme-dark", "theme-midnight");
+            document.documentElement.classList.add(prefs.theme);
 
             // Sync settings panel buttons
             document.querySelectorAll(".settings-font").forEach(b => b.classList.toggle("active", b.dataset.font === prefs.font));

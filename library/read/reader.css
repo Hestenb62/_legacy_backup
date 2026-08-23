@@ -61,82 +61,225 @@
    2. Reading Themes (Light, Sepia, Dark, Midnight Focus)
    ========================================================================== */
 
-/* Light Theme (Default) */
+/* Light Theme (Default Crisp Clean Paper) */
 body.theme-light {
-    --reader-bg: #ffffff;
-    --reader-surface: #f8fafc;
+    --reader-bg: #f8fafc;
+    --reader-surface: #ffffff;
     --reader-text: #0f172a;
     --reader-muted: #64748b;
-    --reader-border: rgba(0, 0, 0, 0.08);
+    --reader-border: rgba(0, 0, 0, 0.09);
+    --reader-card-shadow: 0 20px 45px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.03);
 }
 
-/* Sepia Theme (Warm Paper) */
+/* Sepia Theme (Warm Antique Paper) */
 body.theme-sepia {
-    --reader-bg: #fcf8ed;
-    --reader-surface: #f4ecd8;
+    --reader-bg: #f4ebd9;
+    --reader-surface: #fdf8ee;
     --reader-text: #3c2f23;
     --reader-muted: #7c6d5e;
-    --reader-border: rgba(60, 47, 35, 0.12);
-    background-color: var(--reader-bg) !important;
-    color: var(--reader-text) !important;
+    --reader-border: rgba(60, 47, 35, 0.14);
+    --reader-card-shadow: 0 20px 45px rgba(60, 47, 35, 0.12), 0 4px 12px rgba(60, 47, 35, 0.05);
 }
 
-body.theme-sepia .reader-main-content,
-body.theme-sepia #reader-controls,
-body.theme-sepia .modal-card,
-body.theme-sepia .toc-content {
-    background-color: var(--reader-surface) !important;
-    color: var(--reader-text) !important;
-    border-color: var(--reader-border) !important;
-}
-
-body.theme-sepia .controls-nav-btn,
-body.theme-sepia .tool-btn,
-body.theme-sepia .speech-btn,
-body.theme-sepia .vocab-tab-btn {
-    background-color: var(--reader-bg) !important;
-    color: var(--reader-text) !important;
-    border-color: var(--reader-border) !important;
-}
-
-/* Dark Theme */
+/* Dark Theme (Slate Night Paper) */
 body.theme-dark {
-    --reader-bg: #0f172a;
+    --reader-bg: #0b1120;
     --reader-surface: #1e293b;
     --reader-text: #f1f5f9;
     --reader-muted: #94a3b8;
-    --reader-border: rgba(255, 255, 255, 0.1);
-    background-color: var(--reader-bg) !important;
-    color: var(--reader-text) !important;
-}
-
-body.theme-dark .reader-main-content,
-body.theme-dark #reader-controls,
-body.theme-dark .modal-card,
-body.theme-dark .toc-content {
-    background-color: var(--reader-surface) !important;
-    color: var(--reader-text) !important;
-    border-color: var(--reader-border) !important;
+    --reader-border: rgba(255, 255, 255, 0.12);
+    --reader-card-shadow: 0 20px 45px rgba(0, 0, 0, 0.5), 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* Midnight OLED Focus Theme */
 body.theme-midnight {
     --reader-bg: #000000;
-    --reader-surface: #0a0a0a;
+    --reader-surface: #0c1017;
     --reader-text: #e2e8f0;
     --reader-muted: #64748b;
-    --reader-border: rgba(255, 255, 255, 0.08);
-    background-color: var(--reader-bg) !important;
-    color: var(--reader-text) !important;
+    --reader-border: rgba(255, 255, 255, 0.09);
+    --reader-card-shadow: 0 20px 45px rgba(0, 0, 0, 0.8), 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
-body.theme-midnight .reader-main-content,
-body.theme-midnight #reader-controls,
-body.theme-midnight .modal-card,
-body.theme-midnight .toc-content {
+/* Uniform theme styling across all reader elements */
+body.theme-light,
+body.theme-sepia,
+body.theme-dark,
+body.theme-midnight {
+    background-color: var(--reader-bg) !important;
+    color: var(--reader-text) !important;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.theme-light .single-book-frame,
+body.theme-sepia .single-book-frame,
+body.theme-dark .single-book-frame,
+body.theme-midnight .single-book-frame {
     background-color: var(--reader-surface) !important;
     color: var(--reader-text) !important;
     border-color: var(--reader-border) !important;
+    box-shadow: var(--reader-card-shadow) !important;
+}
+
+body.theme-light .reader-main-content,
+body.theme-sepia .reader-main-content,
+body.theme-dark .reader-main-content,
+body.theme-midnight .reader-main-content {
+    color: var(--reader-text) !important;
+}
+
+body.theme-light .reader-main-content p,
+body.theme-sepia .reader-main-content p,
+body.theme-dark .reader-main-content p,
+body.theme-midnight .reader-main-content p,
+body.theme-light .reader-main-content h1,
+body.theme-sepia .reader-main-content h1,
+body.theme-dark .reader-main-content h1,
+body.theme-midnight .reader-main-content h1,
+body.theme-light .reader-main-content h2,
+body.theme-sepia .reader-main-content h2,
+body.theme-dark .reader-main-content h2,
+body.theme-midnight .reader-main-content h2,
+body.theme-light .reader-main-content h3,
+body.theme-sepia .reader-main-content h3,
+body.theme-dark .reader-main-content h3,
+body.theme-midnight .reader-main-content h3,
+body.theme-light .reader-main-content h4,
+body.theme-sepia .reader-main-content h4,
+body.theme-dark .reader-main-content h4,
+body.theme-midnight .reader-main-content h4 {
+    color: var(--reader-text) !important;
+}
+
+body.theme-light .reader-main-title,
+body.theme-sepia .reader-main-title,
+body.theme-dark .reader-main-title,
+body.theme-midnight .reader-main-title {
+    color: var(--reader-text) !important;
+}
+
+body.theme-light .reader-main-author,
+body.theme-sepia .reader-main-author,
+body.theme-dark .reader-main-author,
+body.theme-midnight .reader-main-author {
+    color: var(--reader-muted) !important;
+}
+
+body.theme-light #reader-controls,
+body.theme-sepia #reader-controls,
+body.theme-dark #reader-controls,
+body.theme-midnight #reader-controls {
+    background-color: var(--reader-surface) !important;
+    color: var(--reader-text) !important;
+    border-color: var(--reader-border) !important;
+}
+
+body.theme-light .book-page-arrow,
+body.theme-sepia .book-page-arrow,
+body.theme-dark .book-page-arrow,
+body.theme-midnight .book-page-arrow {
+    background-color: var(--reader-surface) !important;
+    color: var(--reader-text) !important;
+    border-color: var(--reader-border) !important;
+}
+
+body.theme-light .book-running-header,
+body.theme-sepia .book-running-header,
+body.theme-dark .book-running-header,
+body.theme-midnight .book-running-header,
+body.theme-light .book-running-footer,
+body.theme-sepia .book-running-footer,
+body.theme-dark .book-running-footer,
+body.theme-midnight .book-running-footer {
+    border-color: var(--reader-border) !important;
+}
+
+body.theme-light .book-header-title,
+body.theme-sepia .book-header-title,
+body.theme-dark .book-header-title,
+body.theme-midnight .book-header-title {
+    color: var(--reader-text) !important;
+}
+
+body.theme-light .book-header-chapter,
+body.theme-sepia .book-header-chapter,
+body.theme-dark .book-header-chapter,
+body.theme-midnight .book-header-chapter {
+    color: var(--reader-muted) !important;
+}
+
+body.theme-light .book-page-pill,
+body.theme-sepia .book-page-pill,
+body.theme-dark .book-page-pill,
+body.theme-midnight .book-page-pill {
+    background-color: var(--reader-bg) !important;
+    color: var(--reader-muted) !important;
+    border-color: var(--reader-border) !important;
+}
+
+body.theme-light .book-scrubber-track,
+body.theme-sepia .book-scrubber-track,
+body.theme-dark .book-scrubber-track,
+body.theme-midnight .book-scrubber-track {
+    background-color: var(--reader-border) !important;
+}
+
+body.theme-light .controls-nav-btn,
+body.theme-sepia .controls-nav-btn,
+body.theme-dark .controls-nav-btn,
+body.theme-midnight .controls-nav-btn,
+body.theme-light .tool-btn,
+body.theme-sepia .tool-btn,
+body.theme-dark .tool-btn,
+body.theme-midnight .tool-btn,
+body.theme-light .reader-back-btn,
+body.theme-sepia .reader-back-btn,
+body.theme-dark .reader-back-btn,
+body.theme-midnight .reader-back-btn,
+body.theme-light .reader-license-btn,
+body.theme-sepia .reader-license-btn,
+body.theme-dark .reader-license-btn,
+body.theme-midnight .reader-license-btn,
+body.theme-light .vocab-tab-btn,
+body.theme-sepia .vocab-tab-btn,
+body.theme-dark .vocab-tab-btn,
+body.theme-midnight .vocab-tab-btn {
+    background-color: var(--reader-bg) !important;
+    color: var(--reader-text) !important;
+    border-color: var(--reader-border) !important;
+}
+
+body.theme-light .controls-chapter-label,
+body.theme-sepia .controls-chapter-label,
+body.theme-dark .controls-chapter-label,
+body.theme-midnight .controls-chapter-label,
+body.theme-light .reader-book-name,
+body.theme-sepia .reader-book-name,
+body.theme-dark .reader-book-name,
+body.theme-midnight .reader-book-name {
+    color: var(--reader-text) !important;
+}
+
+body.theme-light .modal-card,
+body.theme-sepia .modal-card,
+body.theme-dark .modal-card,
+body.theme-midnight .modal-card,
+body.theme-light .toc-content,
+body.theme-sepia .toc-content,
+body.theme-dark .toc-content,
+body.theme-midnight .toc-content,
+body.theme-light .settings-dropdown,
+body.theme-sepia .settings-dropdown,
+body.theme-dark .settings-dropdown,
+body.theme-midnight .settings-dropdown {
+    background-color: var(--reader-surface) !important;
+    color: var(--reader-text) !important;
+    border-color: var(--reader-border) !important;
+}
+
+body.theme-dark .single-book-frame::before,
+body.theme-midnight .single-book-frame::before {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.15) 50%, transparent 100%) !important;
 }
 
 /* ==========================================================================
@@ -1644,14 +1787,15 @@ body.dark .tts-active-sentence {
 /* Single Book Page Frame (Skeuomorphic Real Book Appearance) */
 .single-book-frame {
     position: relative;
-    background-color: var(--color-content-bg, #ffffff);
-    border: 1px solid var(--color-border, rgba(0, 0, 0, 0.08));
+    background-color: var(--reader-surface, #ffffff);
+    color: var(--reader-text, #0f172a);
+    border: 1px solid var(--reader-border, rgba(0, 0, 0, 0.08));
     border-radius: 1.25rem;
-    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.03), inset 0 0 80px rgba(0, 0, 0, 0.015);
+    box-shadow: var(--reader-card-shadow, 0 20px 45px rgba(0, 0, 0, 0.08));
     padding: 2rem 3rem 1.75rem 3rem;
     display: flex;
     flex-direction: column;
-    transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.3, 1), box-shadow 0.4s ease, background-color 0.3s ease;
+    transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.3, 1), box-shadow 0.4s ease, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
     transform-origin: center left;
 }
 
