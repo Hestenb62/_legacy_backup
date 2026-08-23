@@ -172,6 +172,11 @@ include ABSPATH . 'src/header.php';
 
             <!-- Right: Study Tools & Customization Settings -->
             <div class="controls-tools-group">
+                <!-- Book Page Flip / Scroll View Mode Switcher -->
+                <button type="button" id="toggle-view-mode-btn" class="tool-btn tool-btn-view-mode" title="Toggle Page Flip / Scroll View" aria-label="Toggle Reading Layout">
+                    <i class="fas fa-book-open"></i>
+                </button>
+
                 <!-- Citation Generator -->
                 <button type="button" id="open-citation-btn" class="tool-btn" title="Generate Academic Citation" onclick="openChapterCitationModal()" aria-label="Generate Citation">
                     <i class="fas fa-quote-right"></i>
@@ -196,6 +201,12 @@ include ABSPATH . 'src/header.php';
 
                 <!-- Typography Dropdown Panel -->
                 <div id="settings-panel" class="settings-dropdown hidden" role="region" aria-label="Reader Customization Panel">
+                    <h4 class="settings-section-title">Reading Mode</h4>
+                    <div class="settings-btn-row">
+                        <button type="button" class="settings-row-btn active settings-mode" data-mode="book"><i class="fas fa-book-open"></i> Page Flip</button>
+                        <button type="button" class="settings-row-btn settings-mode" data-mode="scroll"><i class="fas fa-scroll"></i> Scroll</button>
+                    </div>
+
                     <h4 class="settings-section-title">Font Family</h4>
                     <div class="settings-btn-row">
                         <button type="button" class="settings-row-btn active settings-font" data-font="font-sans">Sans</button>
@@ -229,32 +240,71 @@ include ABSPATH . 'src/header.php';
         </nav>
     <?php endif; ?>
 
-    <!-- Main Reader Reading Container -->
-    <article id="book-content" class="reader-main-content font-sans prose-lg lh-wide">
-        <?php if (!empty($book['hasTeacherResources']) && $chapterNum === $totalChapters && $totalChapters > 1 && !$isTeacherUnlocked): ?>
-            <!-- Protected Teacher Resources Screen -->
-            <div class="teacher-gate-card">
-                <div class="teacher-icon-circle">
-                    <i class="fas fa-lock"></i>
-                </div>
-                <h2 class="teacher-gate-title">Teacher Resources Protected</h2>
-                <p class="teacher-gate-desc">This section contains educator answer keys, curriculum alignments, and discussion guides. Please enter the teacher PIN to unlock.</p>
-                
-                <?php if ($authError): ?>
-                    <div class="teacher-auth-error">
-                        <i class="fas fa-exclamation-circle"></i> <?php echo htmlspecialchars($authError); ?>
-                    </div>
-                <?php endif; ?>
+    <!-- Single-Page Book Stage Wrapper -->
+    <div id="book-stage" class="single-book-stage">
+        <!-- Floating Side Page Turn Buttons -->
+        <button type="button" id="book-page-prev-btn" class="book-page-arrow prev-arrow" title="Previous Page (Left Arrow)" aria-label="Previous Page">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button type="button" id="book-page-next-btn" class="book-page-arrow next-arrow" title="Next Page (Right Arrow)" aria-label="Next Page">
+            <i class="fas fa-chevron-right"></i>
+        </button>
 
-                <form method="POST" action="/library/read/index.php?book=<?php echo urlencode($bookId); ?>&chapter=chapter-<?php echo $totalChapters; ?>" class="teacher-auth-form">
-                    <input type="password" name="teacher_password" placeholder="Enter Teacher PIN..." class="teacher-pin-input" autofocus required autocomplete="off">
-                    <button type="submit" class="teacher-submit-btn">Unlock Resources</button>
-                </form>
+        <!-- Single Book Page Frame -->
+        <div id="book-frame" class="single-book-frame">
+            <!-- Top Running Book Header -->
+            <div class="book-running-header">
+                <span class="book-header-title"><?php echo htmlspecialchars($bookTitle); ?></span>
+                <span class="book-header-dot">&bull;</span>
+                <span class="book-header-chapter"><?php echo htmlspecialchars($currentChapterTitle); ?></span>
             </div>
-        <?php else: ?>
-            <?php echo $contentHtml; ?>
-        <?php endif; ?>
-    </article>
+
+            <!-- Multi-Column Paginated Content Viewport -->
+            <div id="book-page-viewport" class="book-page-viewport">
+                <!-- Main Reader Reading Container -->
+                <article id="book-content" class="reader-main-content font-sans prose-lg lh-wide">
+                    <?php if (!empty($book['hasTeacherResources']) && $chapterNum === $totalChapters && $totalChapters > 1 && !$isTeacherUnlocked): ?>
+                        <!-- Protected Teacher Resources Screen -->
+                        <div class="teacher-gate-card">
+                            <div class="teacher-icon-circle">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <h2 class="teacher-gate-title">Teacher Resources Protected</h2>
+                            <p class="teacher-gate-desc">This section contains educator answer keys, curriculum alignments, and discussion guides. Please enter the teacher PIN to unlock.</p>
+                            
+                            <?php if ($authError): ?>
+                                <div class="teacher-auth-error">
+                                    <i class="fas fa-exclamation-circle"></i> <?php echo htmlspecialchars($authError); ?>
+                                </div>
+                            <?php endif; ?>
+
+                            <form method="POST" action="/library/read/index.php?book=<?php echo urlencode($bookId); ?>&chapter=chapter-<?php echo $totalChapters; ?>" class="teacher-auth-form">
+                                <input type="password" name="teacher_password" placeholder="Enter Teacher PIN..." class="teacher-pin-input" autofocus required autocomplete="off">
+                                <button type="submit" class="teacher-submit-btn">Unlock Resources</button>
+                            </form>
+                        </div>
+                    <?php else: ?>
+                        <?php echo $contentHtml; ?>
+                    <?php endif; ?>
+                </article>
+            </div>
+
+            <!-- Bottom Running Book Footer with Page Numbers, Reading Time, and Scrubber -->
+            <div class="book-running-footer">
+                <div class="book-footer-left">
+                    <span id="book-page-indicator" class="book-page-pill"><i class="fas fa-file-alt"></i> Page 1 of 1</span>
+                </div>
+                <div class="book-footer-center">
+                    <div id="book-scrubber-track" class="book-scrubber-track" title="Slide to jump to page">
+                        <div id="book-scrubber-fill" class="book-scrubber-fill"></div>
+                    </div>
+                </div>
+                <div class="book-footer-right">
+                    <span id="book-reading-time-pill" class="book-reading-time-pill" title="Estimated reading time remaining"><i class="fas fa-clock"></i> ~1 min left</span>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Bottom Pagination Nav -->
     <?php if ($chapter !== 'intro' && $totalChapters > 1): ?>
@@ -479,7 +529,8 @@ include ABSPATH . 'src/header.php';
         chapter: <?php echo json_encode($chapter); ?>,
         chapterNum: <?php echo json_encode($chapterNum); ?>,
         totalChapters: <?php echo json_encode($totalChapters); ?>,
-        chapterTitle: <?php echo json_encode($currentChapterTitle); ?>
+        chapterTitle: <?php echo json_encode($currentChapterTitle); ?>,
+        grade: <?php echo json_encode($book['grade'] ?? 'Grades 9-12'); ?>
     };
     window.BOOK_QUIZ_QUESTIONS = <?php echo json_encode($quizQuestions); ?>;
     window.BOOK_JSON_VOCAB = <?php echo json_encode($vocabList); ?>;
