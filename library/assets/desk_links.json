@@ -3,12 +3,106 @@
     {
       "title": "National Archives DocsTeach",
       "url": "https://www.docsteach.org/",
-      "description": "Access primary sources and interactive learning activities from the National Archives."
+      "desc": "Access thousands of digitized primary sources, letters, photographs, and classroom activities from the National Archives."
     },
     {
-      "title": "Library of Congress Digital Collections",
+      "title": "Library of Congress Digital Archive",
       "url": "https://www.loc.gov/collections/",
-      "description": "Explore millions of digitised books, recordings, photographs, and historical maps."
+      "desc": "Explore millions of historic manuscripts, prints, sound recordings, and high-resolution maps."
+    },
+    {
+      "title": "The Gilder Lehrman Institute",
+      "url": "https://www.gilderlehrman.org/",
+      "desc": "Dedicated to K-12 history education with essays, podcasts, and primary source spotlights."
+    }
+  ],
+  "World History": [
+    {
+      "title": "Perseus Digital Library",
+      "url": "https://www.perseus.tufts.edu/hopper/",
+      "desc": "Tufts University's flagship digital collection of Greco-Roman, Renaissance, and classical world literature."
+    },
+    {
+      "title": "Internet History Sourcebooks Project",
+      "url": "https://sourcebooks.fordham.edu/",
+      "desc": "Fordham University's curated repository of ancient, medieval, and modern historical primary texts."
+    },
+    {
+      "title": "World History Encyclopedia",
+      "url": "https://www.worldhistory.org/",
+      "desc": "Peer-reviewed, open-access historical articles, interactive maps, and timeline visualizers."
+    }
+  ],
+  "WW1": [
+    {
+      "title": "Imperial War Museums (IWM) Archive",
+      "url": "https://www.iwm.org.uk/collections",
+      "desc": "Official British wartime photographic archives, personal diaries, uniform exhibits, and oral histories."
+    },
+    {
+      "title": "World War I Document Archive (BYU)",
+      "url": "https://wwi.lib.byu.edu/",
+      "desc": "International treaties, official diplomatic correspondence, and wartime telegrams from 1914-1919."
+    }
+  ],
+  "WW2": [
+    {
+      "title": "The National WWII Museum Digital Archive",
+      "url": "https://www.nationalww2museum.org/",
+      "desc": "Oral history testimonies, battle timeline maps, and primary artifacts documenting the Second World War."
+    },
+    {
+      "title": "United States Holocaust Memorial Museum",
+      "url": "https://www.ushmm.org/collections",
+      "desc": "Archival documentation, historical witness accounts, and educational research materials."
+    }
+  ],
+  "Math": [
+    {
+      "title": "Wolfram MathWorld",
+      "url": "https://mathworld.wolfram.com/",
+      "desc": "The web's most extensive mathematics encyclopedia covering algebra, geometry, calculus, and topology."
+    },
+    {
+      "title": "MIT OpenCourseWare Mathematics",
+      "url": "https://ocw.mit.edu/courses/mathematics/",
+      "desc": "Free collegiate lecture notes, practice exams, and video courses from MIT faculty."
+    }
+  ],
+  "ELA": [
+    {
+      "title": "The Purdue Online Writing Lab (OWL)",
+      "url": "https://owl.purdue.edu/",
+      "desc": "Standard reference guide for writing, rhetoric, grammatical style, and academic citation formats."
+    },
+    {
+      "title": "Poetry Foundation Archive",
+      "url": "https://www.poetryfoundation.org/",
+      "desc": "Discover classic and contemporary poems, poet biographies, and literary audio essays."
+    }
+  ],
+  "Science": [
+    {
+      "title": "NASA Astrophysics Data System",
+      "url": "https://ui.adsabs.harvard.edu/",
+      "desc": "Harvard-Smithsonian digital library portal for peer-reviewed astronomy and physics papers."
+    },
+    {
+      "title": "OpenStax Science Textbooks",
+      "url": "https://openstax.org/subjects/science",
+      "desc": "Peer-reviewed, openly licensed textbooks covering Biology, Chemistry, Physics, and Astronomy."
+    }
+  ],
+  "Civics": [
+    {
+      "title": "National Constitution Center Interactive Constitution",
+      "url": "https://constitutioncenter.org/the-constitution",
+      "desc": "Clause-by-clause constitutional analysis co-authored by leading legal scholars."
+    },
+    {
+      "title": "Oyez Supreme Court Archive",
+      "url": "https://www.oyez.org/",
+      "desc": "Multimedia archive of Supreme Court case summaries, judicial opinions, and oral argument audio."
     }
   ]
 }

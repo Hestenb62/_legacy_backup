@@ -69,10 +69,6 @@
                         <span class="spec-label">Library of Congress</span>
                         <span id="modal-lc" class="spec-value spec-val-highlight-blue"></span>
                     </div>
-                    <div id="modal-grade-container" class="library-modal-spec-half hidden">
-                        <span class="spec-label">Grade Band</span>
-                        <span id="modal-grade" class="spec-value spec-val-highlight-pink"></span>
-                    </div>
                     <div id="modal-curriculum-container" class="library-modal-spec-full hidden">
                         <span class="spec-label"><i class="fas fa-graduation-cap text-primary"></i> Aligned Curriculum Tracks</span>
                         <div id="modal-curriculum-content" class="spec-val-curriculum-links"></div>
@@ -93,7 +89,6 @@
                         </a>
 
                         <div class="library-modal-downloads-row">
-                            <span class="downloads-label">Formats:</span>
                             <a id="modal-pdf-link" href="#" target="_blank" rel="noopener noreferrer" class="library-download-icon-btn pdf-btn" title="Download PDF" aria-label="Download PDF">
                                 <i class="fas fa-file-pdf"></i> <span>PDF</span>
                             </a>
@@ -126,7 +121,7 @@
     </div>
 </div>
 
-<!-- Disclaimer Modal -->
+<!-- Sourcing & Disclaimer Modal -->
 <div id="disclaimerModal" class="library-disclaimer-modal hidden" role="alertdialog" aria-modal="true" onclick="closeDisclaimerModal()">
     <div class="library-disclaimer-modal-backdrop"></div>
     <div class="library-disclaimer-content" onclick="event.stopPropagation()">
@@ -138,25 +133,66 @@
             <div class="library-disclaimer-icon-box">
                 <i class="fas fa-shield-alt"></i>
             </div>
-            <h3 class="library-disclaimer-title">Content Sourcing & Terms</h3>
+            <div>
+                <h3 class="library-disclaimer-title">Content Sourcing & Terms</h3>
+                <p class="library-disclaimer-subtitle">Open Educational Resources & Historical Preservation</p>
+            </div>
         </div>
         
         <!-- Tabs Row -->
         <div class="disclaimer-tabs-row" id="disclaimer-tabs">
-            <button type="button" class="disclaimer-tab-btn active" id="tab-disc-standard" onclick="switchDisclaimerTab('standard')">Overview</button>
-            <button type="button" class="disclaimer-tab-btn" id="tab-disc-license" onclick="switchDisclaimerTab('license')">License & Sourcing</button>
+            <button type="button" class="disclaimer-tab-btn active" id="tab-disc-license" onclick="switchDisclaimerTab('license')">
+                <i class="fas fa-certificate mr-1"></i> Book License & Source
+            </button>
+            <button type="button" class="disclaimer-tab-btn" id="tab-disc-standard" onclick="switchDisclaimerTab('standard')">
+                <i class="fas fa-shield-alt mr-1"></i> General Terms
+            </button>
         </div>
         
-        <div class="library-disclaimer-body-box" id="disclaimer-standard-view">
-            <p class="library-disclaimer-text">
-                The books, primary documents, and educational materials in this digital library are provided exclusively for educational, historical research, and classroom instruction purposes. Hesten's Learning makes no claims of ownership over third-party materials or public domain historical texts.
-            </p>
+        <!-- Tab 1: Book Specific License & Sourcing View -->
+        <div class="library-disclaimer-body-box" id="disclaimer-license-view">
+            <!-- Book Context Summary -->
+            <div id="modal-disc-book-context" class="disclaimer-book-card">
+                <div class="disc-book-info">
+                    <span class="disc-book-label">Resource</span>
+                    <h4 id="modal-disc-book-title" class="disc-book-title">Selected Title</h4>
+                    <p id="modal-disc-book-author" class="disc-book-author"></p>
+                </div>
+            </div>
+
+            <!-- Source & Attribution Metadata Badges -->
+            <div class="disclaimer-badges-row">
+                <span id="modal-disc-file-source" class="disc-meta-badge file-badge">
+                    <i class="fas fa-file-download"></i> <span class="badge-val">Source: Open Educational Archive</span>
+                </span>
+                <span id="modal-disc-info-source" class="disc-meta-badge info-badge">
+                    <i class="fas fa-database"></i> <span class="badge-val">Metadata: Open Library</span>
+                </span>
+                <span id="modal-disc-license-type" class="disc-meta-badge license-badge">
+                    <i class="fas fa-balance-scale"></i> <span class="badge-val">License: Public Domain / Open Educational Resource</span>
+                </span>
+            </div>
+
+            <!-- Sourcing Text Box -->
+            <div class="disclaimer-text-card">
+                <h5 class="disclaimer-card-title"><i class="fas fa-info-circle"></i> License & Attribution Statement</h5>
+                <p class="library-disclaimer-license-text" id="modal-license-text">
+                    <!-- Populated dynamically by library.js -->
+                </p>
+            </div>
         </div>
 
-        <div class="library-disclaimer-body-box hidden" id="disclaimer-license-view" style="display: none;">
-            <p class="library-disclaimer-license-text" id="modal-license-text">
-                <!-- Populated dynamically by library.js -->
-            </p>
+        <!-- Tab 2: General Terms View -->
+        <div class="library-disclaimer-body-box hidden" id="disclaimer-standard-view" style="display: none;">
+            <div class="disclaimer-text-card">
+                <h5 class="disclaimer-card-title"><i class="fas fa-university"></i> Educational Fair Use & Preservation Policy</h5>
+                <p class="library-disclaimer-text">
+                    The books, primary documents, textbooks, and educational materials in this digital library are provided exclusively for educational research, scholarship, and non-commercial classroom instruction under applicable fair-use and open-access licensing principles.
+                </p>
+                <p class="library-disclaimer-text">
+                    Hesten's Learning makes no claims of ownership over third-party materials, public domain historical texts, or open-access educational resources. All trademarks, covers, and original texts remain the property of their respective authors, estates, or publishers.
+                </p>
+            </div>
         </div>
         
         <div class="library-disclaimer-footer">

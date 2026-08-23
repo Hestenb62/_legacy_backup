@@ -366,14 +366,32 @@
         }
     }
 
+    const DESK_ICONS = {
+        'US History': 'fa-university',
+        'World History': 'fa-globe-americas',
+        'WW1': 'fa-shield-halved',
+        'WW2': 'fa-award',
+        'Math': 'fa-calculator',
+        'ELA': 'fa-spell-check',
+        'Science': 'fa-atom',
+        'Civics': 'fa-landmark'
+    };
+
     window.openResourcePortal = function (deskName) {
         activeDeskName = deskName;
         const mainLanding = document.getElementById('main-desk-landing');
         const deskWorkspace = document.getElementById('subject-desk-workspace');
         const drawerTitle = document.getElementById('drawer-title');
         const drawerSubtitle = document.getElementById('drawer-subtitle');
+        const breadcrumbCurrent = document.getElementById('drawer-breadcrumb-current');
+        const iconBadge = document.getElementById('drawer-icon-badge');
 
         if (!mainLanding || !deskWorkspace) return;
+
+        // Highlight active desk item in sidebar
+        document.querySelectorAll('.sidebar-item').forEach(item => {
+            item.classList.toggle('active', item.dataset.desk === deskName);
+        });
 
         mainLanding.classList.add('hidden');
         mainLanding.classList.remove('active');
@@ -382,6 +400,12 @@
 
         if (drawerTitle) drawerTitle.textContent = `${deskName} Research Desk`;
         if (drawerSubtitle) drawerSubtitle.textContent = `Curated primary sources, critical readings, and academic references.`;
+        if (breadcrumbCurrent) breadcrumbCurrent.textContent = `${deskName} Desk`;
+
+        if (iconBadge) {
+            const iconClass = DESK_ICONS[deskName] || 'fa-book-reader';
+            iconBadge.innerHTML = `<i class="fas ${iconClass}"></i>`;
+        }
 
         // Filter sections by deskName
         let visibleCount = 0;
@@ -400,9 +424,15 @@
         // Render External Links
         renderDeskExternalLinks(deskName);
 
-        // Reset drawer search
+        // Reset drawer search & clear button
         const drawerSearch = document.getElementById('drawer-search');
+        const searchClear = document.getElementById('drawer-search-clear');
         if (drawerSearch) drawerSearch.value = '';
+        if (searchClear) searchClear.classList.add('hidden');
+
+        // Reset sort dropdown
+        const sortSelect = document.getElementById('drawer-sort');
+        if (sortSelect) sortSelect.value = 'title-asc';
 
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
@@ -410,6 +440,11 @@
     window.closeResourcePortal = function () {
         const mainLanding = document.getElementById('main-desk-landing');
         const deskWorkspace = document.getElementById('subject-desk-workspace');
+
+        document.querySelectorAll('.sidebar-item').forEach(item => {
+            item.classList.remove('active');
+        });
+
         if (mainLanding && deskWorkspace) {
             deskWorkspace.classList.add('hidden');
             deskWorkspace.classList.remove('active');
@@ -418,9 +453,26 @@
         }
     };
 
+    window.clearDrawerSearch = function () {
+        const drawerSearch = document.getElementById('drawer-search');
+        const searchClear = document.getElementById('drawer-search-clear');
+        if (drawerSearch) {
+            drawerSearch.value = '';
+            drawerSearch.focus();
+        }
+        if (searchClear) searchClear.classList.add('hidden');
+        filterDrawerBooks();
+    };
+
     window.filterDrawerBooks = function () {
         const searchInput = document.getElementById('drawer-search');
+        const searchClear = document.getElementById('drawer-search-clear');
         const query = searchInput ? searchInput.value.trim().toLowerCase() : '';
+
+        if (searchClear) {
+            searchClear.classList.toggle('hidden', query === '');
+        }
+
         let total = 0;
 
         document.querySelectorAll('#drawer-grid .drawer-section').forEach(sec => {
@@ -430,7 +482,8 @@
             sec.querySelectorAll('.library-book-card').forEach(card => {
                 const title = (card.dataset.title || '').toLowerCase();
                 const author = (card.dataset.author || '').toLowerCase();
-                const matches = query === '' || title.includes(query) || author.includes(query);
+                const description = (card.dataset.description || '').toLowerCase();
+                const matches = query === '' || title.includes(query) || author.includes(query) || description.includes(query);
 
                 card.style.display = matches ? '' : 'none';
                 if (matches) {
@@ -450,21 +503,34 @@
 
     window.sortDrawerBooks = function () {
         const sortSelect = document.getElementById('drawer-sort');
-        const sortBy = sortSelect ? sortSelect.value : 'title';
+        const sortBy = sortSelect ? sortSelect.value : 'title-asc';
 
         document.querySelectorAll('#drawer-grid .drawer-section-grid').forEach(grid => {
             const cards = Array.from(grid.querySelectorAll('.library-book-card'));
             cards.sort((a, b) => {
-                if (sortBy === 'title') {
-                    return (a.dataset.title || '').localeCompare(b.dataset.title || '');
-                } else if (sortBy === 'date') {
-                    return (b.dataset.date || '').localeCompare(a.dataset.date || '');
-                } else if (sortBy === 'lexile') {
-                    const lA = parseInt((a.dataset.lexile || '').replace(/\D/g, ''), 10) || 0;
-                    const lB = parseInt((b.dataset.lexile || '').replace(/\D/g, ''), 10) || 0;
-                    return lA - lB;
+                const titleA = (a.dataset.title || '').toLowerCase();
+                const titleB = (b.dataset.title || '').toLowerCase();
+                const dateA = a.dataset.date || '';
+                const dateB = b.dataset.date || '';
+                const lexA = parseInt((a.dataset.lexile || '').replace(/\D/g, ''), 10) || 0;
+                const lexB = parseInt((b.dataset.lexile || '').replace(/\D/g, ''), 10) || 0;
+                const ddcA = a.dataset.dewey || '';
+                const ddcB = b.dataset.dewey || '';
+
+                if (sortBy === 'title-asc') {
+                    return titleA.localeCompare(titleB);
+                } else if (sortBy === 'title-desc') {
+                    return titleB.localeCompare(titleA);
+                } else if (sortBy === 'date-desc') {
+                    return dateB.localeCompare(dateA);
+                } else if (sortBy === 'date-asc') {
+                    return dateA.localeCompare(dateB);
+                } else if (sortBy === 'lexile-asc') {
+                    return lexA - lexB;
+                } else if (sortBy === 'lexile-desc') {
+                    return lexB - lexA;
                 } else if (sortBy === 'ddc') {
-                    return (a.dataset.dewey || '').localeCompare(b.dataset.dewey || '');
+                    return ddcA.localeCompare(ddcB);
                 }
                 return 0;
             });
@@ -561,12 +627,6 @@
         if (lcEl) lcEl.textContent = d.lc || '';
         if (lcCont) lcCont.classList.toggle('hidden', !d.lc);
 
-        // Grade Band
-        const gradeEl = document.getElementById('modal-grade');
-        const gradeCont = document.getElementById('modal-grade-container');
-        if (gradeEl) gradeEl.textContent = d.grade || '';
-        if (gradeCont) gradeCont.classList.toggle('hidden', !d.grade || d.grade === '#');
-
         // Description
         const descEl = document.getElementById('modal-description');
         if (descEl) descEl.textContent = d.description || 'No description available.';
@@ -608,9 +668,13 @@
             txtLink.style.display = (d.txtLink && d.txtLink !== '#') ? 'inline-flex' : 'none';
         }
 
-        // Sourcing text
+        // Sourcing metadata
         window.currentDisclaimerKey = d.disclaimerKey || '';
         window.currentDisclaimerText = d.disclaimerText || '';
+        window.currentFileSource = d.fileSource || '';
+        window.currentInfoSource = d.infoSource || '';
+        window.currentBookTitle = d.title || '';
+        window.currentBookAuthor = d.author || '';
 
         modal.classList.remove('hidden');
         document.body.style.overflow = 'hidden';
@@ -628,30 +692,87 @@
        8. Explainer & Disclaimer Modals
        ========================================================================== */
     function loadDisclaimers() {
-        fetch('/library/assets/disclaimers.json')
-            .then(res => res.json())
-            .then(data => { disclaimersData = data; })
-            .catch(() => {});
+        if (window.DISCLAIMERS_DATA && Object.keys(window.DISCLAIMERS_DATA).length > 0) {
+            disclaimersData = window.DISCLAIMERS_DATA;
+        } else {
+            fetch('/library/assets/disclaimers.json')
+                .then(res => res.json())
+                .then(data => { disclaimersData = data; })
+                .catch(() => {
+                    disclaimersData = {
+                        "default": "This work is sourced from open-source educational materials, public domain historical archives, and open-access digital repositories. Provided strictly for non-commercial educational instruction, classroom study, and scholarly research under fair use principles. Hesten's Learning makes no claims of copyright ownership over third-party open-source or public domain materials."
+                    };
+                });
+        }
     }
 
     window.openDisclaimerModal = function () {
         const modal = document.getElementById('disclaimerModal');
         const licenseText = document.getElementById('modal-license-text');
+        const bookTitleEl = document.getElementById('modal-disc-book-title');
+        const bookAuthorEl = document.getElementById('modal-disc-book-author');
+        const fileSourceBadge = document.getElementById('modal-disc-file-source');
+        const infoSourceBadge = document.getElementById('modal-disc-info-source');
+        const licenseBadge = document.getElementById('modal-disc-license-type');
+
         if (!modal) return;
 
-        if (licenseText) {
-            const key = window.currentDisclaimerKey;
-            const customText = window.currentDisclaimerText;
-            if (customText) {
-                licenseText.textContent = customText;
-            } else if (key && disclaimersData[key]) {
-                licenseText.textContent = disclaimersData[key];
-            } else {
-                licenseText.textContent = "Provided under open educational fair use for study and teaching purposes.";
+        if (!disclaimersData || Object.keys(disclaimersData).length === 0) {
+            if (window.DISCLAIMERS_DATA && Object.keys(window.DISCLAIMERS_DATA).length > 0) {
+                disclaimersData = window.DISCLAIMERS_DATA;
             }
         }
 
-        window.switchDisclaimerTab('standard');
+        const title = window.currentBookTitle || (currentBookData?.title || 'Selected Educational Resource');
+        const author = window.currentBookAuthor || (currentBookData?.author || '');
+        const key = window.currentDisclaimerKey || (currentBookData?.disclaimerKey || '');
+        const customText = window.currentDisclaimerText || (currentBookData?.disclaimerText || '');
+        const fileSource = window.currentFileSource || (currentBookData?.fileSource || '');
+        const infoSource = window.currentInfoSource || (currentBookData?.infoSource || '');
+
+        if (bookTitleEl) bookTitleEl.textContent = title;
+        if (bookAuthorEl) bookAuthorEl.textContent = author ? `by ${author}` : 'Public Domain & Open Educational Archive';
+
+        // Set Source Badges
+        if (fileSourceBadge) {
+            let srcVal = fileSource;
+            if (!srcVal) {
+                if (key === 'gutenberg') srcVal = 'Project Gutenberg';
+                else if (key === 'american-yawp') srcVal = 'The American Yawp';
+                else if (key === 'openstax') srcVal = 'OpenStax Repository';
+                else srcVal = 'Open Source Digital Archive';
+            }
+            fileSourceBadge.querySelector('.badge-val').textContent = `Source: ${srcVal}`;
+        }
+
+        if (infoSourceBadge) {
+            let infoVal = infoSource || 'Open Library & Educational Archives';
+            infoSourceBadge.querySelector('.badge-val').textContent = `Metadata: ${infoVal}`;
+        }
+
+        if (licenseBadge) {
+            let licVal = 'Public Domain / Open Educational Resource';
+            if (key === 'american-yawp') licVal = 'Creative Commons BY-SA 4.0';
+            else if (key === 'openstax') licVal = 'Creative Commons BY 4.0';
+            else if (key === 'gutenberg') licVal = 'Public Domain (US / Gutenberg)';
+            else if (key === 'standard_education') licVal = 'Educational Fair Use';
+            licenseBadge.querySelector('.badge-val').textContent = `License: ${licVal}`;
+        }
+
+        // Set Main License / Disclaimer Statement
+        if (licenseText) {
+            if (customText) {
+                licenseText.textContent = customText;
+            } else if (key && disclaimersData && disclaimersData[key]) {
+                licenseText.textContent = disclaimersData[key];
+            } else if (disclaimersData && disclaimersData['default']) {
+                licenseText.textContent = disclaimersData['default'];
+            } else {
+                licenseText.textContent = "This work is sourced from open-source educational materials, public domain historical archives, and open-access digital repositories. Provided strictly for non-commercial educational instruction, classroom study, and scholarly research under fair use principles. Hesten's Learning makes no claims of copyright ownership over third-party open-source or public domain materials.";
+            }
+        }
+
+        window.switchDisclaimerTab('license');
         modal.classList.remove('hidden');
     };
 

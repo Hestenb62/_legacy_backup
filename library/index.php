@@ -33,6 +33,10 @@ $drawerCategories = is_file($drawerJsonPath) ? (json_decode(file_get_contents($d
 $linksJsonPath = __DIR__ . '/assets/desk_links.json';
 $deskLinks = is_file($linksJsonPath) ? (json_decode(file_get_contents($linksJsonPath), true) ?: []) : [];
 
+// --- Load Disclaimers Data ---
+$disclaimersJsonPath = __DIR__ . '/assets/disclaimers.json';
+$disclaimersData = is_file($disclaimersJsonPath) ? (json_decode(file_get_contents($disclaimersJsonPath), true) ?: []) : [];
+
 // Total books count calculation
 $totalCatalogBooks = 0;
 foreach ($categories as $catBooks) {
@@ -64,40 +68,52 @@ include ABSPATH . 'src/header.php';
             <span class="sidebar-header-title">Research Desks</span>
         </div>
         <ul class="sidebar-menu">
-            <li class="sidebar-item" title="US History">
+            <li class="sidebar-item" data-desk="US History" title="US History">
                 <button type="button" onclick="openResourcePortal('US History')" class="sidebar-item-btn" aria-label="Open US History Desk">
                     <i class="fas fa-university"></i>
                     <span class="sidebar-label">US History</span>
                 </button>
             </li>
-            <li class="sidebar-item" title="World History">
+            <li class="sidebar-item" data-desk="World History" title="World History">
                 <button type="button" onclick="openResourcePortal('World History')" class="sidebar-item-btn" aria-label="Open World History Desk">
                     <i class="fas fa-globe-americas"></i>
                     <span class="sidebar-label">World History</span>
                 </button>
             </li>
-            <li class="sidebar-item" title="WW1">
+            <li class="sidebar-item" data-desk="WW1" title="WW1">
                 <button type="button" onclick="openResourcePortal('WW1')" class="sidebar-item-btn" aria-label="Open World War 1 Desk">
                     <i class="fas fa-shield-halved"></i>
                     <span class="sidebar-label">WW1</span>
                 </button>
             </li>
-            <li class="sidebar-item" title="WW2">
+            <li class="sidebar-item" data-desk="WW2" title="WW2">
                 <button type="button" onclick="openResourcePortal('WW2')" class="sidebar-item-btn" aria-label="Open World War 2 Desk">
                     <i class="fas fa-award"></i>
                     <span class="sidebar-label">WW2</span>
                 </button>
             </li>
-            <li class="sidebar-item" title="Math">
+            <li class="sidebar-item" data-desk="Math" title="Math">
                 <button type="button" onclick="openResourcePortal('Math')" class="sidebar-item-btn" aria-label="Open Mathematics Desk">
                     <i class="fas fa-calculator"></i>
                     <span class="sidebar-label">Math</span>
                 </button>
             </li>
-            <li class="sidebar-item" title="ELA">
+            <li class="sidebar-item" data-desk="ELA" title="ELA">
                 <button type="button" onclick="openResourcePortal('ELA')" class="sidebar-item-btn" aria-label="Open English Language Arts Desk">
                     <i class="fas fa-spell-check"></i>
                     <span class="sidebar-label">ELA</span>
+                </button>
+            </li>
+            <li class="sidebar-item" data-desk="Science" title="Science">
+                <button type="button" onclick="openResourcePortal('Science')" class="sidebar-item-btn" aria-label="Open Science Desk">
+                    <i class="fas fa-atom"></i>
+                    <span class="sidebar-label">Science</span>
+                </button>
+            </li>
+            <li class="sidebar-item" data-desk="Civics" title="Civics">
+                <button type="button" onclick="openResourcePortal('Civics')" class="sidebar-item-btn" aria-label="Open Civics Desk">
+                    <i class="fas fa-landmark"></i>
+                    <span class="sidebar-label">Civics</span>
                 </button>
             </li>
         </ul>
@@ -253,7 +269,15 @@ include ABSPATH . 'src/header.php';
                     <button onclick="closeResourcePortal()" class="library-desk-back-btn" aria-label="Back to main catalog">
                         <i class="fas fa-arrow-left"></i> <span>Back to Catalog</span>
                     </button>
-                    <div>
+                    <div id="drawer-icon-badge" class="drawer-header-icon-badge">
+                        <i class="fas fa-book-reader"></i>
+                    </div>
+                    <div class="drawer-header-text">
+                        <div class="drawer-breadcrumbs">
+                            <span onclick="closeResourcePortal()" class="breadcrumb-crumb linkable">Catalog</span>
+                            <i class="fas fa-chevron-right breadcrumb-sep"></i>
+                            <span id="drawer-breadcrumb-current" class="breadcrumb-crumb active">Research Desk</span>
+                        </div>
                         <h2 id="drawer-title" class="drawer-header-title">Subject Guide</h2>
                         <p id="drawer-subtitle" class="drawer-header-subtitle"></p>
                     </div>
@@ -270,15 +294,21 @@ include ABSPATH . 'src/header.php';
                                class="drawer-search-input"
                                autocomplete="off">
                         <i class="fas fa-search drawer-search-icon"></i>
+                        <button type="button" id="drawer-search-clear" onclick="clearDrawerSearch()" class="drawer-search-clear-btn hidden" aria-label="Clear search">
+                            <i class="fas fa-times"></i>
+                        </button>
                     </div>
                     
                     <!-- Drawer Sort -->
                     <div class="drawer-sort-container">
                         <select id="drawer-sort" onchange="sortDrawerBooks()" class="drawer-sort-select library-glass-shine" aria-label="Sort books">
-                            <option value="title">Title (A-Z)</option>
+                            <option value="title-asc">Title (A-Z)</option>
+                            <option value="title-desc">Title (Z-A)</option>
                             <option value="ddc">Call Number (DDC)</option>
-                            <option value="lexile">Reading Level (Lexile)</option>
-                            <option value="date">Publication Date</option>
+                            <option value="lexile-asc">Reading Level (Lowest First)</option>
+                            <option value="lexile-desc">Reading Level (Highest First)</option>
+                            <option value="date-desc">Publication Date (Newest)</option>
+                            <option value="date-asc">Publication Date (Oldest)</option>
                         </select>
                     </div>
 
@@ -360,6 +390,7 @@ include ABSPATH . 'src/header.php';
 
 <script>
   window.DESK_EXTERNAL_LINKS = <?php echo json_encode($deskLinks, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT); ?>;
+  window.DISCLAIMERS_DATA = <?php echo json_encode($disclaimersData, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT); ?>;
 </script>
 <script src="/library/assets/library.js" defer></script>
 
