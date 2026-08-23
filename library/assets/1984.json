@@ -84,29 +84,5 @@
       "correctIndex": 0,
       "explanation": "Winston dreams of his mother and sister sacrificed in a sinking ship while he remains alive."
     }
-  ],
-  "default": [
-    {
-      "question": "What is doublethink?",
-      "options": [
-        "Thinking about two things at once.",
-        "The power of holding two contradictory beliefs in one's mind simultaneously, and accepting both of them.",
-        "A mental exercise designed to increase brain capacity.",
-        "Believing everything you are told by others."
-      ],
-      "correctIndex": 1,
-      "explanation": "Doublethink is the core philosophical concept of the Party, allowing them to control logic and truth by holding contradictory beliefs."
-    },
-    {
-      "question": "Which Ministry is responsible for torture and law enforcement?",
-      "options": [
-        "Ministry of Truth",
-        "Ministry of Peace",
-        "Ministry of Love",
-        "Ministry of Plenty"
-      ],
-      "correctIndex": 2,
-      "explanation": "The Ministry of Love (Miniluv) maintains law and order through intense surveillance and torture."
-    }
   ]
 }
