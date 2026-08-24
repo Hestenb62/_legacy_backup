@@ -142,11 +142,35 @@ $currentUser = getCurrentUser();
                                 <i class="fas fa-chevron-down user-chevron"></i>
                             </button>
                             <div class="user-dropdown-menu" id="user-dropdown-menu">
+                                <a href="/profile.php" class="dropdown-item"><i class="fas fa-user"></i> Profile</a>
                                 <a href="/settings.php" class="dropdown-item"><i class="fas fa-cog"></i> Settings</a>
                                 <div class="dropdown-divider"></div>
                                 <a href="#" class="dropdown-item text-danger"><i class="fas fa-sign-out-alt"></i> Logout</a>
                             </div>
                         </div>
+                        
+                        <!-- Client-side script to load user preferences from localStorage -->
+                        <script>
+                            (function() {
+                                try {
+                                    const savedProfile = localStorage.getItem('hesten-user-profile');
+                                    if (savedProfile) {
+                                        const profile = JSON.parse(savedProfile);
+                                        const nameEl = document.querySelector('.user-name');
+                                        const avatarEls = document.querySelectorAll('.user-avatar');
+                                        
+                                        if (nameEl && profile.firstName) {
+                                            nameEl.textContent = profile.firstName;
+                                        }
+                                        if (avatarEls.length > 0 && profile.avatarData) {
+                                            avatarEls.forEach(img => img.src = profile.avatarData);
+                                        }
+                                    }
+                                } catch (e) {
+                                    console.error('Error loading user profile:', e);
+                                }
+                            })();
+                        </script>
                     </div>
                 </div>
             </nav>
