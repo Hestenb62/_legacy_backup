@@ -30,7 +30,7 @@ $modules = [
                 'name' => 'Introduction to Functions Studied this Year',
                 'skills' => [
                     //Lessons 1-5
-                    ['id' => 'k-math-m1-a-1', 'code' => 'K.M1.A.1', 'name' => 'Graphs of Piecewise Linear Functions'],
+                    ['id' => 'k-math-m1-a-1', 'code' => 'K.M1.A.1', 'name' => 'Graphs of Piecewise Linear Functions', 'url' => '../lessons/k-math-m1-a-1.php'],
                     ['id' => 'k-math-m1-a-2', 'code' => 'K.M1.A.2', 'name' => 'Graphs of Quadratic Functions'],
                     ['id' => 'k-math-m1-a-3', 'code' => 'K.M1.A.3', 'name' => 'Graphs of Exponential Functions'],
                     ['id' => 'k-math-m1-a-4', 'code' => 'K.M1.A.4', 'name' => 'Analyzing Graphs - Water Usage During a Typical Day at School'],
