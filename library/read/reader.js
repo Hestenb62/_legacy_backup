@@ -347,24 +347,27 @@
         const tabQuiz = document.getElementById("tab-quiz");
         const tabHl = document.getElementById("tab-highlights");
 
-        const contList = document.getElementById("vocab-list-container");
+        const contListWrap = document.getElementById("vocab-list-container-wrap") || document.getElementById("vocab-list-container");
         const contFlash = document.getElementById("vocab-flash-container");
-        const contQuiz = document.getElementById("quiz-container");
+        const contQuizWrap = document.getElementById("quiz-container-wrap") || document.getElementById("quiz-container");
         const contHl = document.getElementById("vocab-highlights-container");
+        
+        const contList = document.getElementById("vocab-list-container");
+        const contQuiz = document.getElementById("quiz-container");
 
         function switchStudyTab(tab) {
             [tabList, tabFlash, tabQuiz, tabHl].forEach(t => t && t.classList.remove("active"));
-            [contList, contFlash, contQuiz, contHl].forEach(c => c && c.classList.add("hidden"));
+            [contListWrap, contFlash, contQuizWrap, contHl].forEach(c => c && c.classList.add("hidden"));
 
             if (tab === 'list') {
                 if (tabList) tabList.classList.add("active");
-                if (contList) contList.classList.remove("hidden");
+                if (contListWrap) contListWrap.classList.remove("hidden");
             } else if (tab === 'flash') {
                 if (tabFlash) tabFlash.classList.add("active");
                 if (contFlash) contFlash.classList.remove("hidden");
             } else if (tab === 'quiz') {
                 if (tabQuiz) tabQuiz.classList.add("active");
-                if (contQuiz) contQuiz.classList.remove("hidden");
+                if (contQuizWrap) contQuizWrap.classList.remove("hidden");
             } else if (tab === 'highlights') {
                 if (tabHl) tabHl.classList.add("active");
                 if (contHl) contHl.classList.remove("hidden");
@@ -552,7 +555,56 @@
             scoreEl.textContent = `Your Score: ${score} / ${questions.length} (${pct}%)`;
             scoreEl.style.color = pct >= 70 ? "#10b981" : "#ef4444";
         }
+        
+        const dlBtn = document.getElementById("download-quiz-txt-btn");
+        if (dlBtn) {
+            dlBtn.classList.remove("hidden");
+        }
     };
+    
+    // --- Download Functions ---
+    document.addEventListener("click", (e) => {
+        if (e.target.closest("#download-vocab-txt-btn")) {
+            const vocabList = window.BOOK_JSON_VOCAB || [];
+            if (vocabList.length === 0) return alert("No vocabulary to download.");
+            let txt = `Vocabulary List\n==========================\n\n`;
+            vocabList.forEach(item => {
+                txt += `${item.word || item.term}: ${item.def || item.definition}\n\n`;
+            });
+            downloadTxt(txt, `vocabulary_chapter_${window.BOOK_METADATA?.chapterNum || 1}.txt`);
+        }
+        if (e.target.closest("#download-quiz-txt-btn")) {
+            const questions = window.activeQuizData || [];
+            const answers = window.selectedQuizAnswers || {};
+            if (questions.length === 0) return;
+            let txt = `Quiz Results\n==========================\n\n`;
+            let score = 0;
+            questions.forEach((q, idx) => {
+                const userChoice = answers[idx];
+                const isCorrect = userChoice === q.correctAnswer;
+                if (isCorrect) score++;
+                txt += `Q${idx + 1}: ${q.question}\n`;
+                txt += `Your Answer: ${userChoice !== undefined && q.options ? q.options[userChoice] : 'No Answer'}\n`;
+                txt += `Correct Answer: ${q.options ? q.options[q.correctAnswer] : ''}\n`;
+                txt += `Result: ${isCorrect ? 'Correct' : 'Incorrect'}\n`;
+                txt += `Explanation: ${q.explanation || 'N/A'}\n\n`;
+            });
+            const pct = Math.round((score / questions.length) * 100);
+            txt += `Final Score: ${score} / ${questions.length} (${pct}%)\n`;
+            downloadTxt(txt, `quiz_results_chapter_${window.BOOK_METADATA?.chapterNum || 1}.txt`);
+        }
+    });
+
+    function downloadTxt(content, filename) {
+        const blob = new Blob([content], { type: 'text/plain' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(a.href);
+    }
 
     /* ==========================================================================
        5. Inline Text Highlighting & Annotations

@@ -370,8 +370,15 @@ include ABSPATH . 'src/header.php';
 
         <div class="modal-body vocab-modal-body">
             <!-- Vocabulary List Tab View -->
-            <div id="vocab-list-container" class="vocab-list-grid">
-                <!-- Dynamically populated by reader.js -->
+            <div id="vocab-list-container-wrap" class="vocab-list-wrap">
+                <div style="text-align: right; margin-bottom: 1rem;">
+                    <button type="button" id="download-vocab-txt-btn" class="intro-start-btn" style="padding: 0.5rem 1rem; font-size: 0.85rem;">
+                        <i class="fas fa-file-download mr-1"></i> Download as TXT
+                    </button>
+                </div>
+                <div id="vocab-list-container" class="vocab-list-grid">
+                    <!-- Dynamically populated by reader.js -->
+                </div>
             </div>
 
             <!-- Flashcards Tab View -->
@@ -398,8 +405,15 @@ include ABSPATH . 'src/header.php';
             </div>
 
             <!-- Quiz Tab View -->
-            <div id="quiz-container" class="quiz-container hidden">
-                <!-- Injected by reader.js -->
+            <div id="quiz-container-wrap" class="quiz-container-wrap hidden">
+                <div style="text-align: right; margin-bottom: 1rem;">
+                    <button type="button" id="download-quiz-txt-btn" class="intro-start-btn hidden" style="padding: 0.5rem 1rem; font-size: 0.85rem; background: var(--color-success); border-color: var(--color-success);">
+                        <i class="fas fa-file-download mr-1"></i> Download Results
+                    </button>
+                </div>
+                <div id="quiz-container" class="quiz-container">
+                    <!-- Injected by reader.js -->
+                </div>
             </div>
 
             <!-- Highlights & Notes Tab View -->

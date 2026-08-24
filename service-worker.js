@@ -75,7 +75,7 @@ self.addEventListener('activate', (event) => {
 // Fetch Event: The Strategy
 self.addEventListener('fetch', (event) => {
   // 1. For HTML pages (PHP), use Network First, then Cache
-  if (event.request.headers.get('accept').includes('text/html')) {
+  if (event.request.headers.get('accept') && event.request.headers.get('accept').includes('text/html')) {
     event.respondWith(
       fetch(event.request)
         .then((response) => {
@@ -87,23 +87,25 @@ self.addEventListener('fetch', (event) => {
         .catch(() => {
           return caches.match(event.request).then((response) => {
             if (response) return response;
-            // Optional: Return a custom offline.php page if you create one
-            // return caches.match('/offline.php');
           });
         })
     );
   }
-  // 2. For images, fonts, and static assets, use Cache First, then Network
+  // 2. For images, fonts, and static assets (CSS/JS), use Stale-While-Revalidate
   else {
     event.respondWith(
-      caches.match(event.request).then((response) => {
-        return response || fetch(event.request).then((networkResponse) => {
+      caches.match(event.request).then((cachedResponse) => {
+        const fetchPromise = fetch(event.request).then((networkResponse) => {
           return caches.open(CACHE_NAME).then((cache) => {
-            // Cache new assets dynamically as they are fetched
             cache.put(event.request, networkResponse.clone());
             return networkResponse;
           });
+        }).catch(() => {
+          // Ignore network errors on background fetch
         });
+        
+        // Return cached response immediately if available, while network fetch happens in background
+        return cachedResponse || fetchPromise;
       })
     );
   }

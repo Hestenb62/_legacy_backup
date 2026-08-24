@@ -925,6 +925,16 @@ body.dark .tts-active-sentence {
 }
 
 /* Highlighting Spans */
+mark, 
+.hl-yellow, 
+.hl-pink, 
+.hl-green {
+    font-size: inherit !important;
+    font-family: inherit !important;
+    line-height: inherit !important;
+    color: inherit;
+}
+
 .hl-yellow {
     background-color: rgba(253, 224, 71, 0.6);
     border-radius: 0.2rem;
