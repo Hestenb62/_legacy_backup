@@ -1,6 +1,6 @@
 <?php
 /**
- * Hesten's Learning Odyssey - Lesson K.M1.A.1
+ * Hesten's Learning - Lesson 110.K.M1.A.1
  * Piecewise Linear Functions: Elevation vs Time
  */
 
@@ -26,7 +26,7 @@ include '../src/header.php';
             <i class="fas fa-chevron-right text-[8px] opacity-30" aria-hidden="true"></i>
             <a href="../levels/k.php" class="hover:text-rose-600 transition-colors">Level K</a>
             <i class="fas fa-chevron-right text-[8px] opacity-30" aria-hidden="true"></i>
-            <span class="text-gray-900 dark:text-white">Lesson K.M1.A.1</span>
+            <span class="text-gray-900 dark:text-white">Lesson 110.K.M1.A.1</span>
         </nav>
     </div>
 </div>
