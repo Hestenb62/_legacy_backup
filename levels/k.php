@@ -31,10 +31,10 @@ $modules = [
                 'skills' => [
                     //Lessons 1-5
                     ['id' => 'k-math-m1-a-1', 'code' => 'K.M1.A.1', 'name' => 'Graphs of Piecewise Linear Functions', 'url' => '../lessons/k-math-m1-a-1.php'],
-                    ['id' => 'k-math-m1-a-2', 'code' => 'K.M1.A.2', 'name' => 'Graphs of Quadratic Functions'],
-                    ['id' => 'k-math-m1-a-3', 'code' => 'K.M1.A.3', 'name' => 'Graphs of Exponential Functions'],
-                    ['id' => 'k-math-m1-a-4', 'code' => 'K.M1.A.4', 'name' => 'Analyzing Graphs - Water Usage During a Typical Day at School'],
-                    ['id' => 'k-math-m1-a-5', 'code' => 'K.M1.A.5', 'name' => 'Two Graphing Stories']
+                    ['id' => 'k-math-m1-a-2', 'code' => 'K.M1.A.2', 'name' => 'Graphs of Quadratic Functions', 'url' => '../lessons/k-math-m1-a-2.php'],
+                    ['id' => 'k-math-m1-a-3', 'code' => 'K.M1.A.3', 'name' => 'Graphs of Exponential Functions', 'url' => '../lessons/k-math-m1-a-3.php'],
+                    ['id' => 'k-math-m1-a-4', 'code' => 'K.M1.A.4', 'name' => 'Analyzing Graphs - Water Usage During a Typical Day at School', 'url' => '../lessons/k-math-m1-a-4.php'],
+                    ['id' => 'k-math-m1-a-5', 'code' => 'K.M1.A.5', 'name' => 'Two Graphing Stories', 'url' => '../lessons/k-math-m1-a-5.php']
                 ]
             ],
             [
@@ -42,10 +42,10 @@ $modules = [
                 'name' => 'The Structure of Expressions',
                 'skills' => [
                     //Lessons 6-9
-                    ['id' => 'k-math-m1-b-1', 'code' => 'K.M1.B.1', 'name' => 'Algebraic Expressions - The Distributive Property'],
-                    ['id' => 'k-math-m1-b-2', 'code' => 'K.M1.B.2', 'name' => 'Algebraic Expressions - The Commutative and Associative Properties'],
-                    ['id' => 'k-math-m1-b-3', 'code' => 'K.M1.B.3', 'name' => 'Adding and Subtracting Polynomials'],
-                    ['id' => 'k-math-m1-b-4', 'code' => 'K.M1.B.4', 'name' => 'Multiplying Polynomials']
+                    ['id' => 'k-math-m1-b-1', 'code' => 'K.M1.B.1', 'name' => 'Algebraic Expressions - The Distributive Property', 'url' => '../lessons/k-math-m1-b-1.php'],
+                    ['id' => 'k-math-m1-b-2', 'code' => 'K.M1.B.2', 'name' => 'Algebraic Expressions - The Commutative and Associative Properties', 'url' => '../lessons/k-math-m1-b-2.php'],
+                    ['id' => 'k-math-m1-b-3', 'code' => 'K.M1.B.3', 'name' => 'Adding and Subtracting Polynomials', 'url' => '../lessons/k-math-m1-b-3.php'],
+                    ['id' => 'k-math-m1-b-4', 'code' => 'K.M1.B.4', 'name' => 'Multiplying Polynomials', 'url' => '../lessons/k-math-m1-b-4.php']
                 ]
             ],
             [
