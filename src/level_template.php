@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Hesten's Learning - Level Page Template
  * This file provides the standardized structure for all level pages (A-O).
@@ -18,75 +19,85 @@ if (!isset($initialSubjectName)) $initialSubjectName = 'Math';
 if (!isset($initialSubjectDesc)) $initialSubjectDesc = '';
 if (!isset($modules)) $modules = [];
 
-function renderSubjectModules($modulesList, $subjectId, $subjectIcon, $themeColor) {
+/**
+ * Renders module UI elements for a given subject.
+ *
+ * @param array $modulesList
+ * @param string $subjectId
+ * @param string $subjectIcon
+ * @param string $themeColor
+ * @return bool
+ */
+function renderSubjectModules(array $modulesList, string $subjectId, string $subjectIcon, string $themeColor): bool
+{
     if (empty($modulesList)) {
         return false;
     }
     foreach ($modulesList as $mIndex => $module): ?>
-    <!-- Module <?php echo ($mIndex + 1); ?> Header & Overview -->
-    <div style="margin-bottom: 3rem; <?php echo ($mIndex > 0) ? 'margin-top: 4rem;' : ''; ?>">
-        <h2 class="module-number">
-            <i class="fas fa-layer-group"></i> Module <?php echo ($mIndex + 1); ?>
-        </h2>
-        <div class="module-header">
-            <div class="module-info">
-                <div class="module-icon">
-                    <i class="fas <?php echo $subjectIcon; ?>"></i>
+        <!-- Module <?php echo ($mIndex + 1); ?> Header & Overview -->
+        <div style="margin-bottom: 3rem; <?php echo ($mIndex > 0) ? 'margin-top: 4rem;' : ''; ?>">
+            <h2 class="module-number">
+                <i class="fas fa-layer-group"></i> Module <?php echo ($mIndex + 1); ?>
+            </h2>
+            <div class="module-header">
+                <div class="module-info">
+                    <div class="module-icon">
+                        <i class="fas <?php echo $subjectIcon; ?>"></i>
+                    </div>
+                    <div>
+                        <h3 class="module-title"><?php echo $module['title']; ?></h3>
+                        <p class="module-desc"><?php echo $module['description']; ?></p>
+                    </div>
                 </div>
-                <div>
-                    <h3 class="module-title"><?php echo $module['title']; ?></h3>
-                    <p class="module-desc"><?php echo $module['description']; ?></p>
-                </div>
-            </div>
 
-            <!-- Mastery Metric -->
-            <div class="mastery-container">
-                <div class="mastery-stats">
-                    <div class="mastery-label">Mastery</div>
-                    <div class="mastery-value module-progress-text" data-subject="<?php echo $subjectId; ?>" data-module="<?php echo $mIndex; ?>">0%</div>
-                </div>
-                <div class="progress-track">
-                    <div class="progress-fill module-progress-bar" data-subject="<?php echo $subjectId; ?>" data-module="<?php echo $mIndex; ?>" style="width: 0%"></div>
+                <!-- Mastery Metric -->
+                <div class="mastery-container">
+                    <div class="mastery-stats">
+                        <div class="mastery-label">Mastery</div>
+                        <div class="mastery-value module-progress-text" data-subject="<?php echo $subjectId; ?>" data-module="<?php echo $mIndex; ?>">0%</div>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-fill module-progress-bar" data-subject="<?php echo $subjectId; ?>" data-module="<?php echo $mIndex; ?>" style="width: 0%"></div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="space-y-16">
-        <?php foreach ($module['topics'] as $topic): ?>
-        <!-- Category <?php echo $topic['letter']; ?>: <?php echo $topic['name']; ?> -->
-        <div class="topic-section">
-            <div class="topic-header">
-                <span class="topic-letter"><?php echo $topic['letter']; ?></span>
-                <h3 class="topic-title"><?php echo $topic['name']; ?></h3>
-            </div>
+        <div class="space-y-16">
+            <?php foreach ($module['topics'] as $topic): ?>
+                <!-- Category <?php echo $topic['letter']; ?>: <?php echo $topic['name']; ?> -->
+                <div class="topic-section">
+                    <div class="topic-header">
+                        <span class="topic-letter"><?php echo $topic['letter']; ?></span>
+                        <h3 class="topic-title"><?php echo $topic['name']; ?></h3>
+                    </div>
 
-            <div class="skills-grid">
-                <?php foreach ($topic['skills'] as $skill): ?>
-                <!-- Skill <?php echo $skill['code']; ?> -->
-                <div class="skill-card" id="skill-<?php echo str_replace('.', '-', strtolower($skill['id'])); ?>">
-                     <div class="skill-info">
-                        <span class="skill-code"><?php echo $skill['code']; ?></span>
-                        <span class="skill-name">
-                            <?php if (isset($skill['url'])): ?>
-                                <a href="<?php echo htmlspecialchars($skill['url']); ?>"><?php echo htmlspecialchars($skill['name']); ?></a>
-                            <?php else: ?>
-                                <?php echo htmlspecialchars($skill['name']); ?>
-                            <?php endif; ?>
-                        </span>
-                     </div>
-                     <button onclick="toggleLesson('<?php echo $skill['id']; ?>', this)" 
-                             class="check-btn lesson-check-btn"
-                             aria-label="Mark as complete">
-                         <div class="check-icon"><i class="fas fa-check"></i></div>
-                     </button>
+                    <div class="skills-grid">
+                        <?php foreach ($topic['skills'] as $skill): ?>
+                            <!-- Skill <?php echo $skill['code']; ?> -->
+                            <div class="skill-card" id="skill-<?php echo str_replace('.', '-', strtolower($skill['id'])); ?>">
+                                <div class="skill-info">
+                                    <span class="skill-code"><?php echo $skill['code']; ?></span>
+                                    <span class="skill-name">
+                                        <?php if (isset($skill['url'])): ?>
+                                            <a href="<?php echo htmlspecialchars($skill['url']); ?>"><?php echo htmlspecialchars($skill['name']); ?></a>
+                                        <?php else: ?>
+                                            <?php echo htmlspecialchars($skill['name']); ?>
+                                        <?php endif; ?>
+                                    </span>
+                                </div>
+                                <button onclick="toggleLesson('<?php echo $skill['id']; ?>', this)"
+                                    class="check-btn lesson-check-btn"
+                                    aria-label="Mark as complete">
+                                    <div class="check-icon"><i class="fas fa-check"></i></div>
+                                </button>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
                 </div>
-                <?php endforeach; ?>
-            </div>
+            <?php endforeach; ?>
         </div>
-        <?php endforeach; ?>
-    </div>
-    <?php endforeach;
+<?php endforeach;
     return true;
 }
 ?>
@@ -102,7 +113,7 @@ function renderSubjectModules($modulesList, $subjectId, $subjectIcon, $themeColo
         <i class="fas fa-chevron-right" style="font-size: 8px; opacity: 0.3;"></i>
         <span class="breadcrumb-active"><?php echo $levelTitle; ?></span>
     </div>
-    
+
     <div class="subject-tabs" role="tablist" aria-label="Subject navigation tabs">
         <button onclick="switchTab('math')" id="tab-math"
             class="subject-tab <?php echo ($initialSubject == 'math') ? 'active' : ''; ?>"
@@ -144,10 +155,10 @@ function renderSubjectModules($modulesList, $subjectId, $subjectIcon, $themeColo
                 <?php echo $initialSubjectDesc; ?>
             </p>
         </div>
-        
+
         <!-- Assessment CTA -->
         <div style="animation: fadeUp 0.6s ease-out 0.1s backwards;">
-             <a href="../assessment/index.php" class="diagnostic-btn">
+            <a href="../assessment/index.php" class="diagnostic-btn">
                 <i class="fas fa-star" style="margin-right: 0.5rem; font-size: 10px;"></i> SKILL DIAGNOSTIC
             </a>
         </div>
@@ -221,7 +232,7 @@ function renderSubjectModules($modulesList, $subjectId, $subjectIcon, $themeColo
             <i class="fas fa-calendar-star skill-of-day-bg-icon"></i>
             <div style="position: relative; z-index: 10;">
                 <div>
-                     <span class="skill-of-day-badge">Skill of the Day</span>
+                    <span class="skill-of-day-badge">Skill of the Day</span>
                 </div>
                 <div id="day-skill-id" class="skill-of-day-id">...</div>
                 <h4 id="day-skill-name" class="skill-of-day-name">Loading recommendation...</h4>
@@ -316,7 +327,7 @@ function renderSubjectModules($modulesList, $subjectId, $subjectIcon, $themeColo
         try {
             const stored = localStorage.getItem(`hl_progress_${LEVEL_ID}`);
             if (stored) completedLessons = JSON.parse(stored);
-        } catch (e) { }
+        } catch (e) {}
     }
 
     function toggleLesson(lessonId, btn) {
@@ -335,17 +346,31 @@ function renderSubjectModules($modulesList, $subjectId, $subjectIcon, $themeColo
         confetti({
             particleCount: 100,
             spread: 70,
-            origin: { y: 0.6 },
+            origin: {
+                y: 0.6
+            },
             colors: [colors[THEME_COLOR] || '#e11d48']
         });
     }
 
     function switchTab(tabName) {
         const subjectData = {
-            'math': { name: 'Math', desc: '<?php echo $initialSubjectDesc; ?>' },
-            'ela': { name: 'Language Arts', desc: 'Developing strong literacy and communication skills for <?php echo $levelTitle; ?>.' },
-            'science': { name: 'Science', desc: 'Exploring natural phenomena and scientific inquiry.' },
-            'social': { name: 'Social Studies', desc: 'Understanding society, history, and civic responsibility.' }
+            'math': {
+                name: 'Math',
+                desc: '<?php echo $initialSubjectDesc; ?>'
+            },
+            'ela': {
+                name: 'Language Arts',
+                desc: 'Developing strong literacy and communication skills for <?php echo $levelTitle; ?>.'
+            },
+            'science': {
+                name: 'Science',
+                desc: 'Exploring natural phenomena and scientific inquiry for <?php echo $levelTitle; ?>.'
+            },
+            'social': {
+                name: 'Social Studies',
+                desc: 'Understanding society, history, and civic responsibility for <?php echo $levelTitle; ?>.'
+            }
         };
 
         const headerSubject = document.getElementById('header-subject');
@@ -363,7 +388,7 @@ function renderSubjectModules($modulesList, $subjectId, $subjectIcon, $themeColo
 
         const target = document.getElementById(`content-${tabName}`);
         if (target) target.classList.add('block');
-        
+
         const btn = document.getElementById(`tab-${tabName}`);
         if (btn) {
             btn.classList.add('active');
@@ -382,10 +407,12 @@ function renderSubjectModules($modulesList, $subjectId, $subjectIcon, $themeColo
         $social_modules ?? []
     ];
     ?>
-    <?php foreach($all_subject_modules as $subModules): ?>
-        <?php foreach($subModules as $m): foreach($m['topics'] as $t): foreach($t['skills'] as $s): ?>
-            flatSkills.push(<?php echo json_encode($s); ?>);
-        <?php endforeach; endforeach; endforeach; ?>
+    <?php foreach ($all_subject_modules as $subModules): ?>
+        <?php foreach ($subModules as $m): foreach ($m['topics'] as $t): foreach ($t['skills'] as $s): ?>
+                    flatSkills.push(<?php echo json_encode($s); ?>);
+        <?php endforeach;
+            endforeach;
+        endforeach; ?>
     <?php endforeach; ?>
 
     const modulesData = {
@@ -404,7 +431,10 @@ function renderSubjectModules($modulesList, $subjectId, $subjectIcon, $themeColo
             return;
         }
         list.innerHTML = recent.map(id => {
-            const skill = flatSkills.find(s => s.id === id) || { name: 'Unknown Skill', code: '??' };
+            const skill = flatSkills.find(s => s.id === id) || {
+                name: 'Unknown Skill',
+                code: '??'
+            };
             return `
                 <div class="recent-item">
                     <div class="recent-icon">
@@ -461,7 +491,7 @@ function renderSubjectModules($modulesList, $subjectId, $subjectIcon, $themeColo
             const doneCount = skillIds.filter(id => completedLessons.includes(id)).length;
             const percent = Math.round((doneCount / skillIds.length) * 100) || 0;
             el.innerText = percent + '%';
-            
+
             const bar = document.querySelector(`.module-progress-bar[data-subject="${subject}"][data-module="${mIndex}"]`);
             if (bar) {
                 bar.style.width = percent + '%';
@@ -474,11 +504,10 @@ function renderSubjectModules($modulesList, $subjectId, $subjectIcon, $themeColo
         if (badge) {
             const curr = (window.currentSettings && window.currentSettings.curriculum) || 'engageny';
             const names = {
-                'engageny': 'EngageNY / CC',
-                'teks': 'Texas TEKS',
-                'custom': "Hesten's Custom"
+                'engageny': 'EngageNY/CC',
+                'teks': 'Texas TEKS'
             };
-            badge.innerText = names[curr] || 'EngageNY / CC';
+            badge.innerText = names[curr] || 'EngageNY/CC';
         }
     }
 
@@ -487,7 +516,7 @@ function renderSubjectModules($modulesList, $subjectId, $subjectIcon, $themeColo
     updateAllUI();
     updateCurriculumBadge();
     window.addEventListener('settings-changed', updateCurriculumBadge);
-    
+
     // Auto-switch active subject tab if query parameter ?tab= exists
     try {
         const urlParams = new URLSearchParams(window.location.search);
