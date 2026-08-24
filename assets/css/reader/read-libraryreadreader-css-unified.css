@@ -1,0 +1,13 @@
+/* ==========================================================================
+   library/read/reader.css - Unified Digital Reader Design System
+   Distraction-Free Reading Layout, Editorial Typography, Themes,
+   Text-to-Speech Engine, Flashcard Flip Animation, and Study Tools.
+   ========================================================================== */
+
+@import url('https://fonts.cdnfonts.com/css/open-dyslexic');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
+
+/* Utility Classes */
+.hidden {
+    display: none !important;
+}

@@ -1,0 +1,84 @@
+/* ==========================================================================
+   Floating Text Selection Highlight & Note Toolbar
+   ========================================================================== */
+.highlight-toolbar {
+    position: fixed;
+    z-index: 5000;
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.45rem 0.85rem;
+    background-color: rgba(15, 23, 42, 0.94);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 9999px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.4);
+    pointer-events: auto;
+    animation: hlPop 0.18s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes hlPop {
+    from { opacity: 0; transform: translateY(6px) scale(0.94); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.hl-colors-group {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+.hl-color-btn {
+    width: 1.45rem;
+    height: 1.45rem;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.85);
+    cursor: pointer;
+    padding: 0;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.hl-color-btn:hover {
+    transform: scale(1.22);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.hl-color-btn.hl-yellow {
+    background: radial-gradient(circle at 35% 35%, #fef08a, #eab308);
+}
+
+.hl-color-btn.hl-pink {
+    background: radial-gradient(circle at 35% 35%, #fbcfe8, #ec4899);
+}
+
+.hl-color-btn.hl-green {
+    background: radial-gradient(circle at 35% 35%, #a7f3d0, #10b981);
+}
+
+.hl-sep {
+    width: 1px;
+    height: 1.35rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 0.15rem;
+}
+
+.hl-action-btn {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    padding: 0.35rem 0.65rem;
+    font-size: 0.82rem;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 9999px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: background-color 0.15s ease, transform 0.15s ease;
+}
+
+.hl-action-btn:hover {
+    background-color: rgba(255, 255, 255, 0.18);
+    transform: translateY(-1px);
+}

@@ -1,0 +1,44 @@
+/* ==========================================================================
+   1. Reader Typography & Accessibility Font Classes
+   ========================================================================== */
+
+.font-sans {
+    font-family: var(--site-font-family, 'Outfit', 'Inter', -apple-system, sans-serif) !important;
+}
+
+.font-serif {
+    font-family: 'Merriweather', 'Georgia', serif !important;
+}
+
+.font-dyslexic {
+    font-family: 'OpenDyslexic', 'Comic Sans MS', sans-serif !important;
+    letter-spacing: 0.06em !important;
+    word-spacing: 0.12em !important;
+    line-height: 2em !important;
+}
+
+/* Sizing Variables */
+.prose-base p, .prose-base li, .prose-base div.content-content {
+    font-size: 1.05rem !important;
+}
+
+.prose-lg p, .prose-lg li, .prose-lg div.content-content {
+    font-size: 1.25rem !important;
+}
+
+.prose-2xl p, .prose-2xl li, .prose-2xl div.content-content {
+    font-size: 1.5rem !important;
+}
+
+/* Line Height Variants */
+.lh-normal p, .lh-normal li {
+    line-height: 1.6em !important;
+}
+
+.lh-wide p, .lh-wide li {
+    line-height: 1.9em !important;
+}
+
+.lh-extra p, .lh-extra li {
+    line-height: 2.25em !important;
+}

@@ -1,0 +1,756 @@
+/* ==========================================================================
+   8. Modals (Book Overview, Disclaimer, Explainers, Citations)
+   ========================================================================== */
+
+.library-modal,
+.library-disclaimer-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    box-sizing: border-box;
+}
+
+.library-modal-backdrop,
+.library-disclaimer-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(10px);
+}
+
+.library-modal-content {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 820px;
+    background-color: var(--lib-bg-surface);
+    border: 1px solid var(--lib-border);
+    border-radius: var(--lib-radius-xl);
+    box-shadow: var(--lib-shadow-xl);
+    overflow: hidden;
+    animation: modalScaleIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes modalScaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.library-modal-close-btn {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    border: 1px solid var(--lib-border);
+    background: var(--lib-bg-base);
+    color: var(--lib-text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    z-index: 20;
+    transition: all 0.2s ease;
+}
+
+.library-modal-close-btn:hover {
+    color: #ef4444;
+    border-color: #ef4444;
+    transform: rotate(90deg);
+}
+
+.library-modal-body-wrapper {
+    display: flex;
+    overflow-y: auto;
+    max-height: calc(90vh - 2rem);
+}
+
+/* Modal Cover Pane */
+.library-modal-cover-pane {
+    width: 280px;
+    flex-shrink: 0;
+    background-color: var(--lib-bg-base);
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.25rem;
+    position: relative;
+    border-right: 1px solid var(--lib-border);
+}
+
+.library-modal-cover-glow {
+    position: absolute;
+    inset: 15%;
+    background: radial-gradient(circle, rgba(79, 70, 229, 0.25) 0%, transparent 70%);
+    filter: blur(30px);
+}
+
+.library-modal-cover-img {
+    width: 100%;
+    max-width: 200px;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    border-radius: var(--lib-radius-md);
+    box-shadow: var(--lib-shadow-lg);
+    position: relative;
+    z-index: 2;
+}
+
+/* Star / Cite Actions Under Cover Image */
+.library-modal-cover-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    width: 100%;
+    max-width: 200px;
+    position: relative;
+    z-index: 5;
+    margin-top: 0.25rem;
+}
+
+.modal-cover-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.65rem 1rem;
+    border-radius: var(--lib-radius-md);
+    border: 1px solid var(--lib-border);
+    background-color: var(--lib-bg-surface);
+    color: var(--lib-text-main);
+    font-weight: 700;
+    font-size: 0.88rem;
+    cursor: pointer;
+    box-shadow: var(--lib-shadow-sm);
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-cover-btn:hover {
+    border-color: var(--lib-primary);
+    color: var(--lib-primary);
+    transform: translateY(-2px);
+    box-shadow: var(--lib-shadow-md);
+}
+
+.modal-cover-btn.bookmark-btn.active {
+    background-color: #f59e0b;
+    color: #ffffff;
+    border-color: #f59e0b;
+}
+
+.modal-cover-btn.cite-btn:hover {
+    border-color: var(--lib-primary);
+    color: var(--lib-primary);
+}
+
+/* Modal Info Pane */
+.library-modal-info-pane {
+    flex-grow: 1;
+    padding: 2.5rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    min-width: 0;
+}
+
+.library-modal-title {
+    font-size: 1.85rem;
+    font-weight: 900;
+    margin: 0 0 0.35rem 0;
+    line-height: 1.2;
+    color: var(--lib-text-main);
+}
+
+.library-modal-author {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--lib-text-muted);
+    margin: 0;
+}
+
+/* Specs Grid */
+.library-modal-specs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem 1.5rem;
+    background-color: var(--lib-bg-base);
+    border: 1px solid var(--lib-border);
+    border-radius: var(--lib-radius-lg);
+    padding: 1.25rem;
+}
+
+.spec-label {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--lib-text-muted);
+    margin-bottom: 0.25rem;
+}
+
+.spec-value {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--lib-text-main);
+}
+
+.spec-val-mono {
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+}
+
+.spec-val-break {
+    word-break: break-all;
+}
+
+.spec-info-btn {
+    background: transparent;
+    border: none;
+    color: var(--lib-text-muted);
+    cursor: pointer;
+    padding: 0 0.25rem;
+    font-size: 0.75rem;
+}
+
+.spec-info-btn:hover {
+    color: var(--lib-primary);
+}
+
+.spec-value-flex {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.spec-action-icon-btn {
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: var(--lib-radius-sm);
+    border: 1px solid var(--lib-border);
+    background: var(--lib-bg-surface);
+    color: var(--lib-text-muted);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+}
+
+.spec-action-icon-btn.save-btn { color: #10b981; }
+.spec-action-icon-btn.cancel-btn { color: #ef4444; }
+
+.spec-edit-input {
+    width: 80px;
+    padding: 0.2rem 0.4rem;
+    border-radius: var(--lib-radius-sm);
+    border: 1px solid var(--lib-border);
+    font-size: 0.85rem;
+    font-weight: 700;
+    background: var(--lib-bg-surface);
+    color: var(--lib-text-main);
+}
+
+.spec-val-highlight-emerald {
+    color: #10b981;
+    font-weight: 800;
+}
+
+.spec-val-highlight-purple {
+    color: #8b5cf6;
+    font-weight: 800;
+}
+
+.spec-val-highlight-blue {
+    color: #3b82f6;
+    font-weight: 800;
+}
+
+.spec-val-highlight-pink {
+    color: #ec4899;
+    font-weight: 800;
+}
+
+.library-modal-spec-full {
+    grid-column: span 2;
+}
+
+.spec-val-curriculum-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.35rem;
+}
+
+/* Modal Description */
+.library-modal-desc-section {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: var(--lib-text-muted);
+}
+
+.library-modal-description {
+    margin: 0;
+}
+
+/* Modal Footer & Actions */
+.library-modal-footer-section {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.library-modal-actions-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.library-modal-read-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background-color: var(--lib-primary);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.75rem 1.75rem;
+    border-radius: var(--lib-radius-full);
+    font-weight: 800;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 14px rgba(79, 70, 229, 0.35);
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.library-modal-read-btn:hover {
+    background-color: var(--lib-primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(79, 70, 229, 0.45);
+}
+
+.library-modal-bookmark-btn,
+.library-modal-cite-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    background-color: var(--lib-bg-base);
+    border: 1px solid var(--lib-border);
+    color: var(--lib-text-main);
+    padding: 0.75rem 1.25rem;
+    border-radius: var(--lib-radius-full);
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.library-modal-bookmark-btn:hover,
+.library-modal-cite-btn:hover {
+    border-color: var(--lib-primary);
+    color: var(--lib-primary);
+}
+
+.library-modal-bookmark-btn.active {
+    background-color: #f59e0b;
+    color: #ffffff;
+    border-color: #f59e0b;
+}
+
+.library-modal-downloads-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.library-download-icon-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.5rem 0.85rem;
+    border-radius: var(--lib-radius-md);
+    border: 1px solid var(--lib-border);
+    background-color: var(--lib-bg-base);
+    color: var(--lib-text-muted);
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.library-download-icon-btn:hover {
+    transform: translateY(-2px);
+    border-color: var(--lib-primary);
+    color: var(--lib-primary);
+    background-color: var(--lib-bg-surface);
+    box-shadow: var(--lib-shadow-sm);
+}
+
+.library-modal-disclaimer-row {
+    border-top: 1px solid var(--lib-border);
+    padding-top: 0.85rem;
+}
+
+.library-disclaimer-trigger-btn {
+    background: transparent;
+    border: none;
+    color: var(--lib-text-muted);
+    font-size: 0.8rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.library-disclaimer-trigger-btn:hover {
+    color: var(--lib-primary);
+}
+
+/* Sourcing & Disclaimer Content */
+.library-disclaimer-content {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 580px;
+    background: var(--lib-bg-surface);
+    border: 1px solid var(--lib-border);
+    border-radius: var(--lib-radius-xl);
+    padding: 2.25rem;
+    box-shadow: var(--lib-shadow-xl);
+    text-align: left;
+}
+
+.library-disclaimer-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.library-disclaimer-icon-box {
+    width: 3.25rem;
+    height: 3.25rem;
+    border-radius: var(--lib-radius-md);
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(79, 70, 229, 0.15));
+    color: var(--lib-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.35rem;
+    flex-shrink: 0;
+}
+
+.library-disclaimer-title {
+    font-size: 1.35rem;
+    font-weight: 900;
+    margin: 0;
+    color: var(--lib-text-main);
+}
+
+.library-disclaimer-subtitle {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--lib-text-muted);
+    margin: 0.2rem 0 0 0;
+}
+
+.disclaimer-tabs-row {
+    display: flex;
+    gap: 0.5rem;
+    border-bottom: 1px solid var(--lib-border);
+    margin-bottom: 1.25rem;
+}
+
+.disclaimer-tab-btn {
+    background: transparent;
+    border: none;
+    padding: 0.55rem 1rem;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--lib-text-muted);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.disclaimer-tab-btn.active {
+    color: var(--lib-primary);
+    border-bottom-color: var(--lib-primary);
+}
+
+/* Book Context Card */
+.disclaimer-book-card {
+    background: var(--lib-bg-base);
+    border: 1px solid var(--lib-border);
+    border-radius: var(--lib-radius-md);
+    padding: 0.85rem 1.15rem;
+    margin-bottom: 1rem;
+}
+
+.disc-book-label {
+    display: block;
+    font-size: 0.68rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--lib-primary);
+    margin-bottom: 0.15rem;
+}
+
+.disc-book-title {
+    font-size: 1.05rem;
+    font-weight: 900;
+    margin: 0;
+    color: var(--lib-text-main);
+}
+
+.disc-book-author {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--lib-text-muted);
+    margin: 0.15rem 0 0 0;
+}
+
+/* Badges Row */
+.disclaimer-badges-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin-bottom: 1.15rem;
+}
+
+.disc-meta-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.3rem 0.75rem;
+    border-radius: var(--lib-radius-full);
+    border: 1px solid var(--lib-border);
+    background: var(--lib-bg-base);
+    color: var(--lib-text-main);
+}
+
+.disc-meta-badge.file-badge {
+    border-color: rgba(16, 185, 129, 0.3);
+    background: rgba(16, 185, 129, 0.08);
+    color: #10b981;
+}
+
+.disc-meta-badge.info-badge {
+    border-color: rgba(59, 130, 246, 0.3);
+    background: rgba(59, 130, 246, 0.08);
+    color: #3b82f6;
+}
+
+.disc-meta-badge.license-badge {
+    border-color: rgba(139, 92, 246, 0.3);
+    background: rgba(139, 92, 246, 0.08);
+    color: #8b5cf6;
+}
+
+/* Text Card */
+.disclaimer-text-card {
+    background: var(--lib-bg-base);
+    border: 1px solid var(--lib-border);
+    border-radius: var(--lib-radius-lg);
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.disclaimer-card-title {
+    font-size: 0.85rem;
+    font-weight: 800;
+    margin: 0 0 0.65rem 0;
+    color: var(--lib-text-main);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.library-disclaimer-text,
+.library-disclaimer-license-text {
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: var(--lib-text-muted);
+    margin: 0 0 0.75rem 0;
+}
+
+.library-disclaimer-text:last-child,
+.library-disclaimer-license-text:last-child {
+    margin-bottom: 0;
+}
+
+.library-disclaimer-action-btn {
+    background-color: var(--lib-primary);
+    color: #ffffff;
+    border: none;
+    padding: 0.7rem 1.75rem;
+    border-radius: var(--lib-radius-full);
+    font-weight: 800;
+    cursor: pointer;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 14px rgba(79, 70, 229, 0.35);
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.library-disclaimer-action-btn:hover {
+    background-color: var(--lib-primary-hover);
+    transform: translateY(-2px);
+}
+
+/* Info Explainer Modals */
+.info-explainer-content {
+    max-width: 600px;
+    padding: 2.25rem;
+}
+
+.explainer-modal-title {
+    font-size: 1.45rem;
+    font-weight: 900;
+    margin: 0 0 1rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.emerald-title { color: #10b981; }
+.purple-title { color: #8b5cf6; }
+.primary-title { color: var(--lib-primary); }
+
+.explainer-modal-body {
+    font-size: 0.92rem;
+    line-height: 1.65;
+    color: var(--lib-text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.explainer-table-heading {
+    font-size: 0.95rem;
+    font-weight: 800;
+    margin: 0 0 0.75rem 0;
+    color: var(--lib-text-main);
+}
+
+.explainer-table-wrap {
+    border: 1px solid var(--lib-border);
+    border-radius: var(--lib-radius-md);
+    overflow: hidden;
+}
+
+.explainer-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+    text-align: left;
+}
+
+.explainer-table th {
+    background-color: var(--lib-bg-base);
+    padding: 0.65rem 1rem;
+    font-weight: 800;
+    border-bottom: 1px solid var(--lib-border);
+}
+
+.explainer-table td {
+    padding: 0.55rem 1rem;
+    border-bottom: 1px solid var(--lib-border);
+}
+
+.explainer-classes-list {
+    border: 1px solid var(--lib-border);
+    border-radius: var(--lib-radius-md);
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+}
+
+.ddc-class-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.45rem 0;
+    border-bottom: 1px solid var(--lib-border);
+}
+
+.ddc-class-row:last-child {
+    border-bottom: none;
+}
+
+/* Citation Modal */
+.citation-format-tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin: 1.25rem 0;
+}
+
+.citation-tab-btn {
+    padding: 0.45rem 1rem;
+    border-radius: var(--lib-radius-md);
+    border: 1px solid var(--lib-border);
+    background: var(--lib-bg-base);
+    color: var(--lib-text-muted);
+    font-weight: 700;
+    font-size: 0.82rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.citation-tab-btn.active {
+    background-color: var(--lib-primary);
+    color: #ffffff;
+    border-color: var(--lib-primary);
+}
+
+.citation-preview-box {
+    background-color: var(--lib-bg-base);
+    border: 1px solid var(--lib-border);
+    border-radius: var(--lib-radius-lg);
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.citation-text-render {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: var(--lib-text-main);
+    word-break: break-word;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.citation-copy-btn {
+    background-color: var(--lib-primary);
+    color: #ffffff;
+    border: none;
+    padding: 0.55rem 1.25rem;
+    border-radius: var(--lib-radius-full);
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+}

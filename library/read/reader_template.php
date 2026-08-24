@@ -49,7 +49,7 @@ $pageDescription = "Read $bookTitle by $bookAuthor online with audio narration, 
 include ABSPATH . 'src/header.php';
 ?>
 
-<link rel="stylesheet" href="/library/read/reader.css">
+<link rel="stylesheet" href="/assets/css/reader.css">
 
 <!-- Reading Progress Bar -->
 <div id="progress-bar-container" aria-hidden="true">
@@ -550,6 +550,13 @@ include ABSPATH . 'src/header.php';
     window.BOOK_JSON_VOCAB = <?php echo json_encode($vocabList); ?>;
 </script>
 
-<script src="/library/read/reader.js" defer></script>
+<script src="/assets/js/reader/read-typography.js" defer></script>
+<script src="/assets/js/reader/read-scroll-progress.js" defer></script>
+<script src="/assets/js/reader/read-text.js" defer></script>
+<script src="/assets/js/reader/read-study-suite.js" defer></script>
+<script src="/assets/js/reader/read-inline-text-highlighting.js" defer></script>
+<script src="/assets/js/reader/read-modals.js" defer></script>
+<script src="/assets/js/reader/read-chapter-citation-generator.js" defer></script>
+<script src="/assets/js/reader/read-single.js" defer></script>
 
 <?php include ABSPATH . 'src/footer.php'; ?>

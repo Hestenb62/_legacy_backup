@@ -1,0 +1,78 @@
+/* ==========================================================================
+   Reader Academic Citation Modal
+   ========================================================================== */
+.citation-modal-card {
+    max-width: 600px;
+}
+
+.citation-format-tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.citation-tab-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 0.65rem;
+    border: 1px solid var(--color-border, rgba(0,0,0,0.08));
+    background-color: var(--color-base-bg, #f8fafc);
+    color: var(--color-text-secondary, #64748b);
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.citation-tab-btn:hover {
+    border-color: var(--color-primary, #4f46e5);
+    color: var(--color-primary, #4f46e5);
+}
+
+.citation-tab-btn.active {
+    background-color: var(--color-primary, #4f46e5);
+    color: #ffffff;
+    border-color: var(--color-primary, #4f46e5);
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
+}
+
+.citation-preview-box {
+    background-color: var(--color-base-bg, #f8fafc);
+    border: 1px solid var(--color-border, rgba(0,0,0,0.08));
+    border-radius: 1rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.citation-text-render {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: var(--color-text-default, #0f172a);
+    word-break: break-word;
+    text-align: left;
+}
+
+.citation-copy-btn {
+    align-self: flex-end;
+    background-color: var(--color-primary, #4f46e5);
+    color: #ffffff;
+    border: none;
+    padding: 0.6rem 1.35rem;
+    border-radius: 9999px;
+    font-weight: 800;
+    font-size: 0.88rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 14px rgba(79, 70, 229, 0.3);
+    transition: all 0.2s ease;
+}
+
+.citation-copy-btn:hover {
+    background-color: #4338ca;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(79, 70, 229, 0.4);
+}

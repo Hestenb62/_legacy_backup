@@ -1,0 +1,73 @@
+/* ==========================================================================
+   9. Responsive Breakpoints
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+    .library-main {
+        flex-direction: column;
+        padding-top: 1.5rem;
+    }
+
+    .library-sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        top: 0;
+        border-radius: var(--lib-radius-lg);
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .sidebar-menu {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .sidebar-item-btn {
+        width: 2.85rem;
+    }
+
+    .sidebar-toggle-btn,
+    .sidebar-header {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .library-hero-title {
+        font-size: 2.5rem;
+    }
+
+    .library-search-wrapper {
+        flex-direction: column;
+    }
+
+    .library-search-input-container,
+    .library-filter-select-container,
+    .library-view-switcher {
+        width: 100%;
+        flex: 1 1 100%;
+    }
+
+    .library-modal-body-wrapper {
+        flex-direction: column;
+    }
+
+    .library-modal-cover-pane {
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .library-modal-info-pane {
+        padding: 1.5rem;
+    }
+
+    .library-modal-specs-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .library-modal-spec-full {
+        grid-column: span 1;
+    }
+}

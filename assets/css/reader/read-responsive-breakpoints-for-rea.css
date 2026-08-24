@@ -1,0 +1,31 @@
+/* ==========================================================================
+   10. Responsive Breakpoints for Reader
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    .reader-main-content {
+        padding: 2rem 1.25rem;
+    }
+
+    #reader-controls {
+        flex-wrap: wrap;
+        border-radius: 1.25rem;
+        padding: 0.75rem 1rem;
+    }
+
+    .controls-nav-group,
+    .controls-speech-group,
+    .controls-tools-group {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .settings-dropdown {
+        width: calc(100vw - 3rem);
+        right: -1rem;
+    }
+
+    .author-intro-card {
+        padding: 1.5rem;
+    }
+}

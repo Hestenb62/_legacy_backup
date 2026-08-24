@@ -1,0 +1,122 @@
+/* ==========================================================================
+   6. Subject Desks Sidebar Navigation Rail
+   ========================================================================== */
+
+.library-sidebar {
+    width: 60px;
+    flex-shrink: 0;
+    background-color: var(--lib-bg-surface);
+    border: 1px solid var(--lib-border);
+    border-radius: var(--lib-radius-xl);
+    padding: 1.25rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: sticky;
+    top: 6rem;
+    height: fit-content;
+    box-shadow: var(--lib-shadow-sm);
+    transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 20;
+}
+
+.library-sidebar.expanded {
+    width: 200px;
+    align-items: stretch;
+}
+
+.sidebar-header {
+    display: none;
+    padding: 0 0.5rem 0.75rem 0.5rem;
+    border-bottom: 1px solid var(--lib-border);
+    margin-bottom: 0.75rem;
+}
+
+.library-sidebar.expanded .sidebar-header {
+    display: block;
+}
+
+.sidebar-header-title {
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--lib-text-muted);
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.sidebar-item-btn {
+    width: 100%;
+    height: 2.85rem;
+    border-radius: var(--lib-radius-md);
+    border: none;
+    background: transparent;
+    color: var(--lib-text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    padding: 0 0.75rem;
+}
+
+.sidebar-item-btn:hover {
+    color: var(--lib-primary);
+    background-color: rgba(79, 70, 229, 0.08);
+}
+
+.sidebar-item.active .sidebar-item-btn {
+    background-color: var(--lib-primary);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.35);
+}
+
+.sidebar-label {
+    display: none;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-left: 0.75rem;
+    white-space: nowrap;
+}
+
+.library-sidebar.expanded .sidebar-item-btn {
+    justify-content: flex-start;
+}
+
+.library-sidebar.expanded .sidebar-label {
+    display: inline;
+}
+
+.sidebar-toggle-btn {
+    margin-top: 1rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 1px solid var(--lib-border);
+    background-color: var(--lib-bg-base);
+    color: var(--lib-text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    transition: transform 0.3s ease, color 0.2s ease;
+}
+
+.sidebar-toggle-btn:hover {
+    color: var(--lib-primary);
+}
+
+.library-sidebar.expanded .sidebar-toggle-btn i {
+    transform: rotate(180deg);
+}

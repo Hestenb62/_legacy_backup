@@ -1,0 +1,145 @@
+/* ==========================================================================
+   1. Base Variables, Theme Tokens & Page Layout
+   ========================================================================== */
+
+:root {
+    --lib-primary: var(--color-primary, #4f46e5);
+    --lib-primary-hover: var(--color-primary-hover, #4338ca);
+    --lib-secondary: var(--color-secondary, #ec4899);
+    --lib-accent: var(--color-accent, #06b6d4);
+    --lib-bg-surface: var(--color-content-bg, #ffffff);
+    --lib-bg-base: var(--color-base-bg, #f8fafc);
+    --lib-border: var(--color-border, rgba(0, 0, 0, 0.08));
+    --lib-text-main: var(--color-text-default, #0f172a);
+    --lib-text-muted: var(--color-text-secondary, #64748b);
+    --lib-radius-sm: 0.5rem;
+    --lib-radius-md: 0.75rem;
+    --lib-radius-lg: 1.25rem;
+    --lib-radius-xl: 1.75rem;
+    --lib-radius-full: 9999px;
+    --lib-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+    --lib-shadow-md: 0 8px 24px rgba(0, 0, 0, 0.06);
+    --lib-shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.08);
+    --lib-shadow-xl: 0 24px 60px rgba(0, 0, 0, 0.12);
+}
+
+[data-theme="dark"],
+body.dark {
+    --lib-bg-surface: var(--color-content-bg, #1e293b);
+    --lib-bg-base: var(--color-base-bg, #0f172a);
+    --lib-border: var(--color-border, rgba(255, 255, 255, 0.1));
+    --lib-text-main: var(--color-text-default, #f8fafc);
+    --lib-text-muted: var(--color-text-secondary, #94a3b8);
+    --lib-shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
+    --lib-shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* Utility classes */
+.hidden {
+    display: none !important;
+}
+
+/* Main Container Layout */
+.library-main {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 6rem 1.5rem;
+    font-family: var(--site-font-family, 'Outfit', 'Inter', -apple-system, sans-serif);
+    color: var(--lib-text-main);
+    position: relative;
+    z-index: 1;
+    display: flex;
+    gap: 2rem;
+}
+
+.library-workspace {
+    flex-grow: 1;
+    min-width: 0;
+    position: relative;
+}
+
+/* Workspace Panels */
+.workspace-panel {
+    display: block;
+    width: 100%;
+    transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s ease;
+}
+
+.workspace-panel.hidden {
+    display: none !important;
+    opacity: 0;
+}
+
+/* Aurora Mesh Background */
+.library-aurora-bg {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: -10;
+    transition: background-color 0.5s ease;
+}
+
+.library-aurora-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    opacity: 0.18;
+    will-change: transform;
+    mix-blend-mode: multiply;
+    animation: float-aurora-blob 22s infinite ease-in-out;
+}
+
+[data-theme="dark"] .library-aurora-blob,
+body.dark .library-aurora-blob {
+    mix-blend-mode: screen;
+    opacity: 0.12;
+}
+
+.blob-1 {
+    top: -10%;
+    left: -5%;
+    width: 60vw;
+    height: 60vw;
+    background-color: var(--lib-primary);
+}
+
+.blob-2 {
+    top: 25%;
+    right: -5%;
+    width: 50vw;
+    height: 50vw;
+    background-color: var(--lib-secondary);
+    animation-delay: -5s;
+    animation-duration: 25s;
+}
+
+.blob-3 {
+    bottom: -10%;
+    left: 20%;
+    width: 45vw;
+    height: 45vw;
+    background-color: var(--lib-accent);
+    animation-delay: -10s;
+    animation-duration: 20s;
+}
+
+@keyframes float-aurora-blob {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(3vw, -5vh) scale(1.06); }
+    66% { transform: translate(-3vw, 4vh) scale(0.94); }
+}
+
+/* Animations */
+.library-animate-reveal {
+    animation: libRevealUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+@keyframes libRevealUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

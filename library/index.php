@@ -385,13 +385,23 @@ include ABSPATH . 'src/header.php';
 
 </main>
 
-<link rel="stylesheet" href="/library/library.css">
+<link rel="stylesheet" href="/assets/css/library.css">
 <?php include __DIR__ . '/modals.php'; ?>
 
 <script>
   window.DESK_EXTERNAL_LINKS = <?php echo json_encode($deskLinks, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT); ?>;
   window.DISCLAIMERS_DATA = <?php echo json_encode($disclaimersData, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT); ?>;
 </script>
-<script src="/library/assets/library.js" defer></script>
+<script src="/assets/js/library/lib-bookmarks.js" defer></script>
+<script src="/assets/js/library/lib-view-mode-switcher.js" defer></script>
+<script src="/assets/js/library/lib-real.js" defer></script>
+<script src="/assets/js/library/lib-horizontal-carousel-scroll-but.js" defer></script>
+<script src="/assets/js/library/lib-continue-reading-shelf.js" defer></script>
+<script src="/assets/js/library/lib-subject-research-desks-navigat.js" defer></script>
+<script src="/assets/js/library/lib-book-overview-modal.js" defer></script>
+<script src="/assets/js/library/lib-explainer.js" defer></script>
+<script src="/assets/js/library/lib-academic-citation-generator.js" defer></script>
+<script src="/assets/js/library/lib-inline-lexile-customization.js" defer></script>
+<script src="/assets/js/library/lib-keyboard-shortcuts.js" defer></script>
 
 <?php include ABSPATH . 'src/footer.php'; ?>
