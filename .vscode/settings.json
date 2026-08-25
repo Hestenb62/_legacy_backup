@@ -3,6 +3,12 @@
     "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
   },
   "fiveserver.php": "C:\\xampp\\php\\php.exe",
-  "php.validate.executablePath": "C:\\xampp\\php\\php.exe"
+  "php.validate.executablePath": "C:\\xampp\\php\\php.exe",
+  "fiveServer.highlight": true,
+  "fiveServer.injectBody": true,
+  "fiveServer.navigate": true,
+  "fiveServer.openTerminal": true,
+  "fiveServer.php.executable": "C:\\xampp\\php\\php.exe",
+  "fiveServer.php.ini": "C:\\xampp\\php\\php.int"
 }
 
