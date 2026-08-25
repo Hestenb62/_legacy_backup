@@ -6,7 +6,10 @@
  */
 
 // Global Header
-include '../src/header.php';
+if (!defined('ABSPATH')) {
+    define('ABSPATH', dirname(__DIR__) . '/');
+}
+include ABSPATH . 'src/header.php';
 
 // Default falling values
 if (!isset($themeColor)) $themeColor = 'rose';
@@ -102,12 +105,12 @@ function renderSubjectModules(array $modulesList, string $subjectId, string $sub
 }
 ?>
 
-<link rel="stylesheet" href="../assets/css/level_style.css">
+<link rel="stylesheet" href="/assets/css/level_style.css">
 
 <!-- Level Breadcrumb & Subject Navigation -->
 <div class="level-nav-container">
     <div class="level-breadcrumb" aria-label="Breadcrumb">
-        <a href="../index.php">Home</a>
+        <a href="/index.php">Home</a>
         <i class="fas fa-chevron-right" style="font-size: 8px; opacity: 0.3;"></i>
         <span style="color: var(--theme-color); opacity: 0.7;"><?php echo $gradeText; ?></span>
         <i class="fas fa-chevron-right" style="font-size: 8px; opacity: 0.3;"></i>
@@ -158,7 +161,7 @@ function renderSubjectModules(array $modulesList, string $subjectId, string $sub
 
         <!-- Assessment CTA -->
         <div style="animation: fadeUp 0.6s ease-out 0.1s backwards;">
-            <a href="../assessment/index.php" class="diagnostic-btn">
+            <a href="/assessment/index.php" class="diagnostic-btn">
                 <i class="fas fa-star" style="margin-right: 0.5rem; font-size: 10px;"></i> SKILL DIAGNOSTIC
             </a>
         </div>
@@ -529,4 +532,4 @@ function renderSubjectModules(array $modulesList, string $subjectId, string $sub
     }
 </script>
 
-<?php include '../src/footer.php'; ?>
+<?php include ABSPATH . 'src/footer.php'; ?>
