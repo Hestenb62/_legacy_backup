@@ -49,7 +49,7 @@ $pageDescription = "Read $bookTitle by $bookAuthor online with audio narration, 
 include ABSPATH . 'src/header.php';
 ?>
 
-<link rel="stylesheet" href="/assets/css/reader.css">
+<link rel="stylesheet" href="/assets/css/reader-main.css">
 
 <!-- Reading Progress Bar -->
 <div id="progress-bar-container" aria-hidden="true">

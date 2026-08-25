@@ -36,12 +36,12 @@ const ASSETS_TO_CACHE = [
 
   // JavaScript
   '/assets/js/assessment-core.js',
-  '/assets/js/questionGenerator.js',
-  '/assets/js/a11y.js',
-  '/assets/js/standard.js',
-  '/assets/js/index-page.js',
-  '/assets/js/announcements.js',
-  '/assets/js/core-ui.js'
+  '/assets/js/assessment-questionGenerator.js',
+  '/assets/js/global-a11y.js',
+  '/assets/js/global-standard.js',
+  '/assets/js/index-main.js',
+  '/assets/js/global-announcements.js',
+  '/assets/js/global-core-ui.js'
 ];
 
 // Install Event: Caches critical assets immediately

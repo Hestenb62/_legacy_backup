@@ -17,7 +17,7 @@ include '../../src/header.php';
 ?>
 
 <!-- Link Dedicated Research Vanilla CSS -->
-<link rel="stylesheet" href="/assets/css/research.css">
+<link rel="stylesheet" href="/assets/css/research-main.css">
 
 <!-- Google Font for Fira Code (Inter is already in header.php) -->
 <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">

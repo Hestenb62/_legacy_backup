@@ -8,7 +8,7 @@
         <div data-speed="0.04" class="hero-blob hero-blob-3"></div>
     </div>
 
-    <div class="container hero-content text-center flex flex-col items-center relative" style="z-index: 10;">
+    <div class="container hero-content" style="z-index: 10;">
         <!-- Pill Badge -->
         <div class="hero-pill animate-reveal">
             <span class="hero-ping-dot">
@@ -29,34 +29,34 @@
         </p>
 
         <!-- CTA Buttons -->
-        <div class="hero-actions flex flex-wrap justify-center gap-4 animate-reveal">
-            <a href="/assessment" class="btn-premium btn-primary flex items-center gap-2 group">
+        <div class="hero-actions animate-reveal">
+            <a href="/assessment" class="btn-premium btn-primary hero-btn-start">
                 <span>Start Your Journey</span>
-                <i class="fas fa-arrow-right hero-arrow-icon group-hover-translate"></i>
+                <i class="fas fa-arrow-right hero-arrow-icon"></i>
             </a>
-            <a href="/curriculum.php" class="btn-premium btn-secondary">
+            <a href="/pages/curriculum.php" class="btn-premium btn-secondary">
                 Explore Curriculum
             </a>
         </div>
 
         <!-- Quick Stats (Glass Cards) -->
-        <div class="hero-stats grid grid-cols-2 lg:grid-cols-4 gap-4 animate-reveal">
+        <div class="hero-stats animate-reveal">
             <div class="stats-card glass-panel">
                 <span class="stat-value text-primary" id="user-progress-stat">0%</span>
                 <span class="stat-label">Mastery</span>
             </div>
             <div class="stats-card glass-panel">
-                <div class="flex items-center gap-2 justify-center">
+                <div class="hero-stat-streak">
                     <i class="fas fa-fire" style="color: var(--color-warning);"></i>
                     <span class="stat-value" style="color: var(--color-warning);" id="streak-stat">0</span>
                 </div>
                 <span class="stat-label">Active Streak</span>
             </div>
-            <div class="stats-card glass-panel hidden md:flex">
+            <div class="stats-card glass-panel hero-stat-hidden-mobile">
                 <i class="fas fa-user-shield stat-icon" style="color: var(--color-success);"></i>
                 <span class="stat-label">Safe Space</span>
             </div>
-            <div class="stats-card glass-panel hidden md:flex">
+            <div class="stats-card glass-panel hero-stat-hidden-mobile">
                 <i class="fas fa-universal-access stat-icon" style="color: #a855f7;"></i>
                 <span class="stat-label">Accessible</span>
             </div>

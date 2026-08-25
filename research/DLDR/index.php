@@ -10,7 +10,7 @@ include '../../src/header.php';
 ?>
 
 <!-- Link Dedicated Research Vanilla CSS -->
-<link rel="stylesheet" href="/assets/css/research.css">
+<link rel="stylesheet" href="/assets/css/research-main.css">
 
 <!-- Hero Section -->
 <div class="research-hero">

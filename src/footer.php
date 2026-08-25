@@ -21,7 +21,7 @@
                         </div>
                     </div>
                     <p class="footer-about-desc">
-                        Empowering students with learning disabilities through personalized learning experiences. <a href="/about.php">Learn more</a>
+                        Empowering students with learning disabilities through personalized learning experiences. <a href="/pages/about.php">Learn more</a>
                     </p>
                     
                     <div class="footer-social-icons">
@@ -38,10 +38,10 @@
                         <i class="fas fa-link" style="color: var(--color-teal)"></i> Quick Links
                     </h4>
                     <ul class="footer-links">
-                        <li class="footer-link-item"><a href="/curriculum.php"><i class="fas fa-book footer-link-icon"></i> Curriculum</a></li>
+                        <li class="footer-link-item"><a href="/pages/curriculum.php"><i class="fas fa-book footer-link-icon"></i> Curriculum</a></li>
                         <li class="footer-link-item"><a href="https://research.hestena62.com" target="_blank" rel="noopener noreferrer" id="footer-research-link" onclick="return showA11yWarningModal(event, this);"><i class="fas fa-flask footer-link-icon"></i> Research</a></li>
                         <li class="footer-link-item"><a href="/library/"><i class="fas fa-book-open footer-link-icon"></i> Library</a></li>
-                        <li class="footer-link-item"><a href="/help-center.php"><i class="fas fa-question-circle footer-link-icon"></i> Help Center</a></li>
+                        <li class="footer-link-item"><a href="/pages/help-center.php"><i class="fas fa-question-circle footer-link-icon"></i> Help Center</a></li>
                     </ul>
                 </div>
 
@@ -51,10 +51,10 @@
                         <i class="fas fa-hand-holding-heart" style="color: var(--color-purple)"></i> Support
                     </h4>
                     <ul class="footer-links">
-                        <li class="footer-link-item"><a href="/contact.php"><i class="fas fa-envelope footer-link-icon"></i> Contact Us</a></li>
+                        <li class="footer-link-item"><a href="/pages/contact.php"><i class="fas fa-envelope footer-link-icon"></i> Contact Us</a></li>
                         <li class="footer-link-item"><a href="/student/index.php"><i class="fas fa-home footer-link-icon"></i> For Students</a></li>
-                        <li class="footer-link-item"><a href="/parents.php"><i class="fas fa-users footer-link-icon"></i> For Parents</a></li>
-                        <li class="footer-link-item"><a href="/teachers.php"><i class="fas fa-chalkboard-teacher footer-link-icon"></i> For Teachers</a></li>
+                        <li class="footer-link-item"><a href="/pages/parents.php"><i class="fas fa-users footer-link-icon"></i> For Parents</a></li>
+                        <li class="footer-link-item"><a href="/pages/teachers.php"><i class="fas fa-chalkboard-teacher footer-link-icon"></i> For Teachers</a></li>
                     </ul>
                 </div>
 
@@ -64,10 +64,10 @@
                         <i class="fas fa-balance-scale" style="color: var(--color-rose)"></i> Legal & Settings
                     </h4>
                     <ul class="footer-links">
-                        <li class="footer-link-item"><a href="/privacy.php"><i class="fas fa-shield-alt footer-link-icon"></i> Privacy Policy</a></li>
-                        <li class="footer-link-item"><a href="/terms-of-use.php"><i class="fas fa-file-contract footer-link-icon"></i> Terms of Use</a></li>
-                        <li class="footer-link-item"><a href="/settings.php"><i class="fas fa-universal-access footer-link-icon"></i> Accessibility</a></li>
-                        <li class="footer-link-item"><a href="/about.php"><i class="fas fa-info-circle footer-link-icon"></i> About Us</a></li>
+                        <li class="footer-link-item"><a href="/pages/privacy.php"><i class="fas fa-shield-alt footer-link-icon"></i> Privacy Policy</a></li>
+                        <li class="footer-link-item"><a href="/pages/terms-of-use.php"><i class="fas fa-file-contract footer-link-icon"></i> Terms of Use</a></li>
+                        <li class="footer-link-item"><a href="/pages/settings.php"><i class="fas fa-universal-access footer-link-icon"></i> Accessibility</a></li>
+                        <li class="footer-link-item"><a href="/pages/about.php"><i class="fas fa-info-circle footer-link-icon"></i> About Us</a></li>
                     </ul>
                 </div>
             </div>
@@ -138,7 +138,7 @@
 <script src="https://cdn.gtranslate.net/widgets/latest/popup.js" defer></script>
 
 <!-- Footer Scripts -->
-<script src="/assets/js/error-handler.js"></script>
+<script src="/assets/js/global-error-handler.js"></script>
 <script>
     // Year
     document.addEventListener("DOMContentLoaded", () => {
@@ -769,4 +769,4 @@
         }
     }
 </script>
-<script src="/assets/js/standard.js"></script>
+<script src="/assets/js/global-standard.js"></script>

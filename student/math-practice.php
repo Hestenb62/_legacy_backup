@@ -10,23 +10,25 @@ $welcomeParagraph = "Welcome! Select a topic below to start practicing and sharp
 
 // Include the header file, which contains the <html>, <head>, and opening <body> tags,
 // as well as the navigation bar, accessibility panel, and welcome popup.
-include '..\src\header.php';
+include '..\\src\\header.php';
 ?>
+
+<link rel="stylesheet" href="/assets/css/pages/student-hub.css">
 
     <!-- Main Content Area -->
     <main class="page-content-wrapper">
-        <h1 class="text-center text-4xl font-bold text-primary mb-4">Math Practice Problems</h1>
+        <h1 class="student-hub-title">Math Practice Problems</h1>
         <p class="text-center text-lg text-text-secondary mb-8">Test your knowledge and improve your skills with our comprehensive collection of math practice problems.</p>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="student-hub-grid">
             
             <!-- Algebra Practice -->
-            <div class="col-span-1">
+            <div >
                 <!-- Updated to use theme-aware classes -->
                 <div class="bg-card-bg rounded-base-rounded shadow-lg p-6 flex flex-col h-full transition-colors duration-300">
-                    <h5 class="text-xl font-semibold text-primary mb-3"><i class="fas fa-superscript mr-2" aria-hidden="true"></i>Algebra Practice</h5>
+                    <h5 class="student-hub-card-title"><i class="fas fa-superscript mr-2" aria-hidden="true"></i>Algebra Practice</h5>
                     <p class="text-text-secondary mb-4">Practice solving equations, inequalities, and working with functions. Problems for all levels.</p>
-                    <ul class="list-none space-y-2 flex-grow">
+                    <ul class="student-hub-card-list">
                         <li><a href="#" onclick="openDynamicModal('Basic Algebra'); return false;" class="text-link-color hover:underline"><i class="fas fa-angle-right mr-2" aria-hidden="true"></i>Basic Algebra</a></li>
                         <li><a href="#" onclick="openDynamicModal('Linear Equations'); return false;" class="text-link-color hover:underline"><i class="fas fa-angle-right mr-2" aria-hidden="true"></i>Linear Equations</a></li>
                         <li><a href="#" onclick="openDynamicModal('Quadratic Equations'); return false;" class="text-link-color hover:underline"><i class="fas fa-angle-right mr-2" aria-hidden="true"></i>Quadratic Equations</a></li>
@@ -38,12 +40,12 @@ include '..\src\header.php';
             </div>
 
             <!-- Geometry Exercises -->
-            <div class="col-span-1">
+            <div >
                 <!-- Updated to use theme-aware classes -->
                 <div class="bg-card-bg rounded-base-rounded shadow-lg p-6 flex flex-col h-full transition-colors duration-300">
-                    <h5 class="text-xl font-semibold text-primary mb-3"><i class="fas fa-shapes mr-2" aria-hidden="true"></i>Geometry Exercises</h5>
+                    <h5 class="student-hub-card-title"><i class="fas fa-shapes mr-2" aria-hidden="true"></i>Geometry Exercises</h5>
                     <p class="text-text-secondary mb-4">Work on problems involving shapes, angles, areas, and volumes. Perfect for visual learners.</p>
-                    <ul class="list-none space-y-2 flex-grow">
+                    <ul class="student-hub-card-list">
                         <li><a href="#" onclick="openDynamicModal('Angles and Lines'); return false;" class="text-link-color hover:underline"><i class="fas fa-angle-right mr-2" aria-hidden="true"></i>Angles and Lines</a></li>
                         <li><a href="#" onclick="openDynamicModal('Area and Perimeter'); return false;" class="text-link-color hover:underline"><i class="fas fa-angle-right mr-2" aria-hidden="true"></i>Area and Perimeter</a></li>
                         <li><a href="#" onclick="openDynamicModal('Volume and Surface Area'); return false;" class="text-link-color hover:underline"><i class="fas fa-angle-right mr-2" aria-hidden="true"></i>Volume and Surface Area</a></li>
@@ -55,12 +57,12 @@ include '..\src\header.php';
             </div>
 
             <!-- Calculus Worksheets -->
-            <div class="col-span-1">
+            <div >
                 <!-- Updated to use theme-aware classes -->
                 <div class="bg-card-bg rounded-base-rounded shadow-lg p-6 flex flex-col h-full transition-colors duration-300">
-                    <h5 class="text-xl font-semibold text-primary mb-3"><i class="fas fa-infinity mr-2" aria-hidden="true"></i>Calculus Worksheets</h5>
+                    <h5 class="student-hub-card-title"><i class="fas fa-infinity mr-2" aria-hidden="true"></i>Calculus Worksheets</h5>
                     <p class="text-text-secondary mb-4">Challenge yourself with problems on limits, derivatives, integrals, and their applications.</p>
-                    <ul class="list-none space-y-2 flex-grow">
+                    <ul class="student-hub-card-list">
                         <li><a href="#" onclick="openDynamicModal('Limits and Continuity'); return false;" class="text-link-color hover:underline"><i class="fas fa-angle-right mr-2" aria-hidden="true"></i>Limits and Continuity</a></li>
                         <li><a href="#" onclick="openDynamicModal('Differentiation'); return false;" class="text-link-color hover:underline"><i class="fas fa-angle-right mr-2" aria-hidden="true"></i>Differentiation</a></li>
                         <li><a href="#" onclick="openDynamicModal('Integration'); return false;" class="text-link-color hover:underline"><i class="fas fa-angle-right mr-2" aria-hidden="true"></i>Integration</a></li>
@@ -71,12 +73,12 @@ include '..\src\header.php';
             </div>
 
             <!-- Statistics Problems -->
-            <div class="col-span-1">
+            <div >
                 <!-- Updated to use theme-aware classes -->
                 <div class="bg-card-bg rounded-base-rounded shadow-lg p-6 flex flex-col h-full transition-colors duration-300">
-                    <h5 class="text-xl font-semibold text-primary mb-3"><i class="fas fa-chart-bar mr-2" aria-hidden="true"></i>Statistics Problems</h5>
+                    <h5 class="student-hub-card-title"><i class="fas fa-chart-bar mr-2" aria-hidden="true"></i>Statistics Problems</h5>
                     <p class="text-text-secondary mb-4">Practice data analysis, probability, and statistical inference with our curated problem sets.</p>
-                    <ul class="list-none space-y-2 flex-grow">
+                    <ul class="student-hub-card-list">
                         <li><a href="#" onclick="openDynamicModal('Descriptive Statistics'); return false;" class="text-link-color hover:underline"><i class="fas fa-angle-right mr-2" aria-hidden="true"></i>Descriptive Statistics</a></li>
                         <li><a href="#" onclick="openDynamicModal('Probability Distributions'); return false;" class="text-link-color hover:underline"><i class="fas fa-angle-right mr-2" aria-hidden="true"></i>Probability Distributions</a></li>
                         <li><a href="#" onclick="openDynamicModal('Hypothesis Testing'); return false;" class="text-link-color hover:underline"><i class="fas fa-angle-right mr-2" aria-hidden="true"></i>Hypothesis Testing</a></li>
@@ -87,12 +89,12 @@ include '..\src\header.php';
             </div>
 
             <!-- Number Theory Problems -->
-            <div class="col-span-1">
+            <div >
                 <!-- Updated to use theme-aware classes -->
                 <div class="bg-card-bg rounded-base-rounded shadow-lg p-6 flex flex-col h-full transition-colors duration-300">
-                    <h5 class="text-xl font-semibold text-primary mb-3"><i class="fas fa-hashtag mr-2" aria-hidden="true"></i>Number Theory Problems</h5>
+                    <h5 class="student-hub-card-title"><i class="fas fa-hashtag mr-2" aria-hidden="true"></i>Number Theory Problems</h5>
                     <p class="text-text-secondary mb-4">Explore the fascinating world of numbers with problems on prime numbers, divisibility, and modular arithmetic.</p>
-                    <ul class="list-none space-y-2 flex-grow">
+                    <ul class="student-hub-card-list">
                         <li><a href="#" onclick="openDynamicModal('Prime Numbers'); return false;" class="text-link-color hover:underline"><i class="fas fa-angle-right mr-2" aria-hidden="true"></i>Prime Numbers</a></li>
                         <li><a href="#" onclick="openDynamicModal('Divisibility Rules'); return false;" class="text-link-color hover:underline"><i class="fas fa-angle-right mr-2" aria-hidden="true"></i>Divisibility Rules</a></li>
                         <li><a href="#" onclick="openDynamicModal('Modular Arithmetic'); return false;" class="text-link-color hover:underline"><i class="fas fa-angle-right mr-2" aria-hidden="true"></i>Modular Arithmetic</a></li>
@@ -103,12 +105,12 @@ include '..\src\header.php';
             </div>
 
             <!-- Applied Math Challenges -->
-            <div class="col-span-1">
+            <div >
                 <!-- Updated to use theme-aware classes -->
                 <div class="bg-card-bg rounded-base-rounded shadow-lg p-6 flex flex-col h-full transition-colors duration-300">
-                    <h5 class="text-xl font-semibold text-primary mb-3"><i class="fas fa-puzzle-piece mr-2" aria-hidden="true"></i>Applied Math Challenges</h5>
+                    <h5 class="student-hub-card-title"><i class="fas fa-puzzle-piece mr-2" aria-hidden="true"></i>Applied Math Challenges</h5>
                     <p class="text-text-secondary mb-4">Apply mathematical concepts to real-world scenarios with these challenging application problems.</p>
-                    <ul class="list-none space-y-2 flex-grow">
+                    <ul class="student-hub-card-list">
                         <li><a href="#" onclick="openDynamicModal('Financial Math'); return false;" class="text-link-color hover:underline"><i class="fas fa-angle-right mr-2" aria-hidden="true"></i>Financial Math</a></li>
                         <li><a href="#" onclick="openDynamicModal('Physics Applications'); return false;" class="text-link-color hover:underline"><i class="fas fa-angle-right mr-2" aria-hidden="true"></i>Physics Applications</a></li>
                         <li><a href="#" onclick="openDynamicModal('Engineering Problems'); return false;" class="text-link-color hover:underline"><i class="fas fa-angle-right mr-2" aria-hidden="true"></i>Engineering Problems</a></li>

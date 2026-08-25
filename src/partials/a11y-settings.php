@@ -136,7 +136,7 @@
             
             <button onclick="localStorage.removeItem('hl_accessibility_settings'); location.reload()" class="settings-reset-btn">Reset</button>
             <div class="settings-footer">
-                <a href="/settings.php" class="settings-link">Full Settings Page</a>
+                <a href="/pages/settings.php" class="settings-link">Full Settings Page</a>
             </div>
         </div>
     </div>

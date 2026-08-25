@@ -385,7 +385,7 @@ include ABSPATH . 'src/header.php';
 
 </main>
 
-<link rel="stylesheet" href="/assets/css/library.css">
+<link rel="stylesheet" href="/assets/css/library-main.css">
 <?php include __DIR__ . '/modals.php'; ?>
 
 <script>

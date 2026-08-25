@@ -73,11 +73,10 @@ $currentUser = getCurrentUser();
     </style>
 
     <!-- Custom Modern Styles (Vanilla CSS Architecture) -->
-    <link rel="stylesheet" href="/assets/css/tokens.css?v=1.3">
-    <link rel="stylesheet" href="/assets/css/reset.css?v=1.3">
-    <link rel="stylesheet" href="/assets/css/primitives.css?v=1.3">
-    <link rel="stylesheet" href="/assets/css/utilities.css?v=1.3">
-    <link rel="stylesheet" href="/assets/css/components.css?v=1.3">
+    <link rel="stylesheet" href="/assets/css/global-tokens.css?v=1.3">
+    <link rel="stylesheet" href="/assets/css/global-reset.css?v=1.3">
+    <link rel="stylesheet" href="/assets/css/global-primitives.css?v=1.3">
+    <link rel="stylesheet" href="/assets/css/global-components.css?v=1.3">
     <link rel="stylesheet" href="/assets/css/components/fixed-tools.css?v=1.3">
     <link rel="stylesheet" href="/assets/css/layouts/header.css?v=1.3">
     <link rel="stylesheet" href="/assets/css/layouts/footer.css?v=1.3">
@@ -142,8 +141,8 @@ $currentUser = getCurrentUser();
                                 <i class="fas fa-chevron-down user-chevron"></i>
                             </button>
                             <div class="user-dropdown-menu" id="user-dropdown-menu">
-                                <a href="/profile.php" class="dropdown-item"><i class="fas fa-user"></i> Profile</a>
-                                <a href="/settings.php" class="dropdown-item"><i class="fas fa-cog"></i> Settings</a>
+                                <a href="/pages/profile.php" class="dropdown-item"><i class="fas fa-user"></i> Profile</a>
+                                <a href="/pages/settings.php" class="dropdown-item"><i class="fas fa-cog"></i> Settings</a>
                                 <div class="dropdown-divider"></div>
                                 <a href="#" class="dropdown-item text-danger"><i class="fas fa-sign-out-alt"></i> Logout</a>
                             </div>
@@ -211,8 +210,8 @@ $currentUser = getCurrentUser();
         </div>
     </header>
 
-    <script src="/assets/js/a11y.js"></script>
-    <script src="/assets/js/core-ui.js"></script>
+    <script src="/assets/js/global-a11y.js"></script>
+    <script src="/assets/js/global-core-ui.js"></script>
     <script>
         const navToggle = document.getElementById('nav-toggle');
         if (navToggle) {

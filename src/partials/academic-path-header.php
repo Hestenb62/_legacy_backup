@@ -9,7 +9,7 @@
         </div>
 
         <!-- Segmented Control -->
-        <div class="path-tabs hidden md:flex" role="tablist" aria-label="Filter learning paths">
+        <div class="path-tabs" role="tablist" aria-label="Filter learning paths">
             <button type="button" role="tab" aria-selected="true"
                 class="path-tab active"
                 onclick="setCategory(this, 'all', true)">
@@ -38,7 +38,7 @@
         </div>
 
         <!-- Mobile Select -->
-        <div class="path-mobile-select-wrapper md-hidden">
+        <div class="path-mobile-select-wrapper">
             <select aria-label="Select Category" class="path-mobile-select"
                 onchange="const tabs = document.querySelectorAll('.path-tab'); setCategory(tabs[0], this.value, true); Array.from(tabs).forEach((t, i) => t.setAttribute('aria-selected', i===this.selectedIndex));">
                 <option value="all">All Paths</option>
@@ -50,10 +50,10 @@
             <i class="fas fa-chevron-down select-chevron"></i>
         </div>
 
-        <div class="path-search-group group">
+        <div class="path-search-group">
             <input type="text" id="level-search" aria-label="Search levels" placeholder="Search grades, topics..."
                 class="path-search-input">
-            <i class="fas fa-search search-icon group-focus-within-primary"></i>
+            <i class="fas fa-search search-icon"></i>
             <button id="clear-search" onclick="resetFilters()" class="path-search-clear hidden" aria-label="Clear Search" type="button">
                 <i class="fas fa-times-circle"></i>
             </button>

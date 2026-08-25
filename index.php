@@ -11,11 +11,11 @@ $pageTitle = "Hesten's Learning"; // SEO Title
 include 'src/header.php';
 
 // --- DATA: Client-Side Loading Migration ---
-// Data is now loaded via <script src="data/learningLevels.js"></script> below
+// Data is now loaded via <script src="assets/data/global-learningLevels.js"></script> below
 ?>
 
 <!-- DATA IMPORT -->
-<script src="data/learningLevels.js"></script>
+<script src="assets/data/global-learningLevels.js"></script>
 
 <?php include __DIR__ . '/src/partials/hero.php'; ?>
 
@@ -35,7 +35,7 @@ include 'src/header.php';
 </main>
 
 <!-- PAGE SCRIPT -->
-<script src="assets/js/index-page.js?v=1.2"></script>
+<script src="assets/js/index-main.js?v=1.2"></script>
 
 <?php include __DIR__ . '/src/partials/migration-popup.php'; ?>
 

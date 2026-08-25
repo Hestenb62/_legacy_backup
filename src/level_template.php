@@ -105,7 +105,7 @@ function renderSubjectModules(array $modulesList, string $subjectId, string $sub
 }
 ?>
 
-<link rel="stylesheet" href="/assets/css/level_style.css">
+<link rel="stylesheet" href="/assets/css/level-style.css">
 
 <!-- Level Breadcrumb & Subject Navigation -->
 <div class="level-nav-container">

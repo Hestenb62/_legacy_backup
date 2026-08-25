@@ -12,6 +12,7 @@ $welcomeParagraph = "Welcome to the resource wiki! Select a subject below to exp
 include '../src/header.php';
 ?>
 
+<link rel="stylesheet" href="/assets/css/pages/student.css">
 <style>
 /* Page Layout */
 .wiki-container {
@@ -54,6 +55,26 @@ include '../src/header.php';
     max-width: 600px;
     margin: 0 auto;
     font-weight: 400;
+}
+
+/* Documents Hub Banner */
+.documents-hub-banner {
+    margin-bottom: var(--spacing-8);
+    padding: var(--spacing-6);
+    border-radius: var(--radius-2xl);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-4);
+    background: linear-gradient(135deg, rgba(79, 70, 229, 0.05), rgba(236, 72, 153, 0.05));
+    border: 1px solid var(--color-border);
+}
+
+@media (min-width: 640px) {
+    .documents-hub-banner {
+        flex-direction: row;
+    }
 }
 
 /* Gateway Grid Layout */
@@ -454,7 +475,7 @@ include '../src/header.php';
     <!-- Main Content Area -->
     <main>
         <!-- Documents Hub Promotion Banner -->
-        <div class="glass-panel" style="margin-bottom: var(--spacing-8); padding: var(--spacing-6); border-radius: var(--radius-2xl); display: flex; flex-direction: column; sm:flex-row; justify-content: space-between; align-items: center; gap: var(--spacing-4); background: linear-gradient(135deg, rgba(79, 70, 229, 0.05), rgba(236, 72, 153, 0.05)); border: 1px solid var(--color-border);">
+        <div class="glass-panel documents-hub-banner">
             <div style="display: flex; align-items: center; gap: var(--spacing-4);">
                 <div style="font-size: 2rem; color: var(--color-primary);"><i class="fas fa-folder-open"></i></div>
                 <div>
