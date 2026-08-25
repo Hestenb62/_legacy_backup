@@ -32,6 +32,17 @@ include ABSPATH . 'src/header.php';
             <p class="reader-main-author">Manage your identity and track your learning progress.</p>
         </header>
 
+        <!-- Announcement Banner -->
+        <div class="profile-announcement-banner animate-reveal" id="profile-announcement-banner">
+            <div class="announcement-content">
+                <span class="announcement-badge"><i class="fas fa-sync fa-spin"></i> Data Sync Update</span>
+                <p class="announcement-text">Updates are being added to have all user data sync across your devices.</p>
+            </div>
+            <button type="button" class="announcement-close-btn" id="dismiss-announcement-btn" aria-label="Dismiss Announcement">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
         <div class="profile-grid">
             <!-- Left Column: Identity & Settings -->
             <div class="profile-col profile-col-left">

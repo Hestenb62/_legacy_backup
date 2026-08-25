@@ -1,5 +1,18 @@
 // assets/js/profile.js
 document.addEventListener("DOMContentLoaded", () => {
+    // 0. Announcement Banner Logic
+    const annBanner = document.getElementById('profile-announcement-banner');
+    const dismissBtn = document.getElementById('dismiss-announcement-btn');
+    if (annBanner && dismissBtn) {
+        if (sessionStorage.getItem('profile-announcement-dismissed') === 'true') {
+            annBanner.classList.add('hidden');
+        }
+        dismissBtn.addEventListener('click', () => {
+            annBanner.classList.add('hidden');
+            sessionStorage.setItem('profile-announcement-dismissed', 'true');
+        });
+    }
+
     // 1. Profile Identity Logic
     const profileKey = 'hesten-user-profile';
     const avatarPreview = document.getElementById('profile-avatar-preview');
