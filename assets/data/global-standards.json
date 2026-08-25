@@ -1,0 +1,3506 @@
+[
+    {
+        "code": "CCSS.MATH.CONTENT.K.CC.A.1",
+        "grade": "K",
+        "subject": "Math",
+        "category": "Counting & Cardinality",
+        "text": "Count to 100 by ones and by tens.",
+        "explanation": "Students should be able to count out loud from 1 to 100. They should also be able to count by tens (10, 20, 30...) up to 100."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.K.OA.A.1",
+        "grade": "K",
+        "subject": "Math",
+        "category": "Operations & Algebraic Thinking",
+        "text": "Represent addition and subtraction with objects, fingers, mental images, drawings, sounds, acting out situations, verbal explanations, expressions, or equations.",
+        "explanation": "Show math using real things! Use fingers, blocks, or drawings to show what happens when you add things together or take them away."
+    },
+    {
+        "code": "CCSS.ELA-LITERACY.RL.5.2",
+        "grade": "5",
+        "subject": "ELA",
+        "category": "Reading: Literature",
+        "text": "Determine a theme of a story, drama, or poem from details in the text, including how characters in a story or drama respond to challenges or how the speaker in a poem reflects upon a topic; summarize the text.",
+        "explanation": "Read a story and figure out the \"big idea\" or lesson. Look at how characters handle problems to understand the message. Be able to retell the story in your own words."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.EE.A.1",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Expressions & Equations",
+        "text": "Know and apply the properties of integer exponents to generate equivalent numerical expressions.",
+        "explanation": "Understand how powers (exponents) work. For example, know that 3\u00b2 means 3 times 3, and be able to solve problems using these rules."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.HSF.IF.A.1",
+        "grade": "HS",
+        "subject": "Math",
+        "category": "Functions",
+        "text": "Understand that a function from one set (called the domain) to another set (called the range) assigns to each element of the domain exactly one element of the range.",
+        "explanation": "Learn that a function is like a machine: if you put one specific number in, you get exactly one specific answer out. It never gives two different answers for the same input."
+    },
+    {
+        "code": "CCSS.ELA-LITERACY.RI.9-10.1",
+        "grade": "HS",
+        "subject": "ELA",
+        "category": "Reading: Informational Text",
+        "text": "Cite strong and thorough textual evidence to support analysis of what the text says explicitly as well as inferences drawn from the text.",
+        "explanation": "When you make a claim about something you read, prove it! Point to the exact sentences in the text that support your idea, both for things directly stated and things you figured out (inferred)."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.K.CC.1",
+        "grade": "K",
+        "subject": "Math",
+        "category": "Counting and Cardinality",
+        "text": "Count\tto\t100\tby\tones\tand\tby\ttens.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.K.CC.2",
+        "grade": "K",
+        "subject": "Math",
+        "category": "Counting and Cardinality",
+        "text": "Count\tforward\tbeginning\tfrom\ta\tgiven\tnumber\twithin\tthe\tknown",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.K.CC.3",
+        "grade": "K",
+        "subject": "Math",
+        "category": "Counting and Cardinality",
+        "text": "Write\tnumbers\tfrom\t0\tto\t20.\tRepresent\ta\tnumber\tof\tobjects\twith\ta",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.K.CC.4",
+        "grade": "K",
+        "subject": "Math",
+        "category": "Counting and Cardinality",
+        "text": "Understand\tthe\trelationship\tbetween\tnumbers\tand\tquantities;\tconnect",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.K.CC.5",
+        "grade": "K",
+        "subject": "Math",
+        "category": "Counting and Cardinality",
+        "text": "Count\tto\tanswer\t\u201chow\tmany?\u201d\tquestions\tabout\tas\tmany\tas\t20\tthings",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.K.CC.6",
+        "grade": "K",
+        "subject": "Math",
+        "category": "Counting and Cardinality",
+        "text": "Identify\twhether\tthe\tnumber\tof\tobjects\tin\tone\tgroup\tis\tgreater\tthan,",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.K.CC.1",
+        "grade": "K",
+        "subject": "Math",
+        "category": "Counting and Cardinality",
+        "text": "Represent\taddition\tand\tsubtraction\twith\tobjects,\tfingers,\tmental",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.K.CC.2",
+        "grade": "K",
+        "subject": "Math",
+        "category": "Counting and Cardinality",
+        "text": "Solve\taddition\tand\tsubtraction\tword\tproblems,\tand\tadd\tand\tsubtract",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.K.CC.3",
+        "grade": "K",
+        "subject": "Math",
+        "category": "Counting and Cardinality",
+        "text": "Decompose\tnumbers\tless\tthan\tor\tequal\tto\t10\tinto\tpairs\tin\tmore",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.K.CC.4",
+        "grade": "K",
+        "subject": "Math",
+        "category": "Counting and Cardinality",
+        "text": "For\tany\tnumber\tfrom\t1\tto\t9,\tfind\tthe\tnumber\tthat\tmakes\t10\twhen",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.K.CC.5",
+        "grade": "K",
+        "subject": "Math",
+        "category": "Counting and Cardinality",
+        "text": "Fluently\tadd\tand\tsubtract\twithin\t5.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.K.CC.1",
+        "grade": "K",
+        "subject": "Math",
+        "category": "Counting and Cardinality",
+        "text": "Compose\tand\tdecompose\tnumbers\tfrom\t11\tto\t19\tinto\tten\tones\tand",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.K.CC.1",
+        "grade": "K",
+        "subject": "Math",
+        "category": "Counting and Cardinality",
+        "text": "Describe\tmeasurable\tattributes\tof\tobjects,\tsuch\tas\tlength\tor\tweight.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.K.CC.2",
+        "grade": "K",
+        "subject": "Math",
+        "category": "Counting and Cardinality",
+        "text": "Directly\tcompare\ttwo\tobjects\twith\ta\tmeasurable\tattribute\tin\tcommon,",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.K.CC.3",
+        "grade": "K",
+        "subject": "Math",
+        "category": "Counting and Cardinality",
+        "text": "Classify\tobjects\tinto\tgiven\tcategories;\tcount\tthe\tnumbers\tof\tobjects\tin",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.K.G.1",
+        "grade": "K",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Describe\tobjects\tin\tthe\tenvironment\tusing\tnames\tof\tshapes,\tand",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.K.G.2",
+        "grade": "K",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Correctly\tname\tshapes\tregardless\tof\ttheir\torientations\tor\toverall\tsize.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.K.G.3",
+        "grade": "K",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Identify\tshapes\tas\ttwo-dimensional\t(lying\tin\ta\tplane,\t\u201cflat\u201d)\tor\tthree-",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.K.G.4",
+        "grade": "K",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Analyze\tand\tcompare\ttwo-\tand\tthree-dimensional\tshapes,\tin",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.K.G.5",
+        "grade": "K",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Model\tshapes\tin\tthe\tworld\tby\tbuilding\tshapes\tfrom\tcomponents\t(e.g.,",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.K.G.6",
+        "grade": "K",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Compose\tsimple\tshapes\tto\tform\tlarger\tshapes.\tFor example, \u201cCan you",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.K.G.20",
+        "grade": "1",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "By\tcomparing\ta\tvariety\tof\tsolution\tstrategies,\tchildren\tbuild\ttheir",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.K.G.1",
+        "grade": "1",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Make\tsense\tof\tproblems\tand\tpersevere\tin",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.K.G.2",
+        "grade": "1",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Reason\tabstractly\tand\tquantitatively.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.K.G.3",
+        "grade": "1",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Construct\tviable\targuments\tand\tcritique",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.K.G.4",
+        "grade": "1",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Model\twith\tmathematics.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.K.G.5",
+        "grade": "1",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Use\tappropriate\ttools\tstrategically.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.K.G.6",
+        "grade": "1",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Attend\tto\tprecision.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.K.G.8",
+        "grade": "1",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Look\tfor\tand\texpress\tregularity\tin\trepeated",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.K.G.1",
+        "grade": "1",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Use\taddition\tand\tsubtraction\twithin\t20\tto\tsolve\tword\tproblems\tinvolving",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.K.G.2",
+        "grade": "1",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Solve\tword\tproblems\tthat\tcall\tfor\taddition\tof\tthree\twhole\tnumbers",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.K.G.3",
+        "grade": "1",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Apply\tproperties\tof\toperations\tas\tstrategies\tto\tadd\tand\tsubtract. 3 \tExamples:",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.K.G.4",
+        "grade": "1",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Understand\tsubtraction\tas\tan\tunknown-addend\tproblem.\tFor example,",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.K.G.5",
+        "grade": "1",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Relate\tcounting\tto\taddition\tand\tsubtraction\t(e.g.,\tby\tcounting\ton\t2\tto",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.K.G.6",
+        "grade": "1",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Add \tand \tsubtract \twithin \t20, \tdemonstrating \tfluency \tfor \taddition \tand",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.K.G.8",
+        "grade": "1",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Determine \tthe \tunknown \twhole \tnumber \tin \tan \taddition \tor \tsubtraction",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.K.G.1",
+        "grade": "1",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Count\tto\t120,\tstarting\tat\tany\tnumber\tless\tthan\t120.\tIn\tthis\trange,\tread",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.K.G.2",
+        "grade": "1",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Understand\t that\t the\t two\t digits\t of\t a\t two-digit\t number\t represent\t amounts",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.K.G.3",
+        "grade": "1",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Compare \ttwo \ttwo-digit \tnumbers \tbased \ton \tmeanings \tof \tthe \ttens \tand \tones",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.K.G.4",
+        "grade": "1",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Add \twithin \t100, \tincluding \tadding \ta \ttwo-digit \tnumber \tand \ta \tone-digit",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.K.G.5",
+        "grade": "1",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Given\ta\ttwo-digit\tnumber,\tmentally\tfind\t10\tmore\tor\t10\tless\tthan\tthe",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.K.G.6",
+        "grade": "1",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Subtract\tmultiples\tof\t10\tin\tthe\trange\t10-90\tfrom\tmultiples\tof\t10\tin\tthe",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.K.G.1",
+        "grade": "1",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Order\tthree\tobjects\tby\tlength;\tcompare\tthe\tlengths\tof\ttwo\tobjects",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.K.G.2",
+        "grade": "1",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Express\tthe\tlength\tof\tan\tobject\tas\ta\twhole\tnumber\tof\tlength\tunits,\tby",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.K.G.3",
+        "grade": "1",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "T ell\tand\twrite\ttime\tin\thours\tand\thalf-hours\tusing\tanalog\tand\tdigital",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.K.G.4",
+        "grade": "1",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Organize,\trepresent,\tand\tinterpret\tdata\twith\tup\tto\tthree\tcategories;\task",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.1.G.1",
+        "grade": "1",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Distinguish\tbetween\tdefining\tattributes\t(e.g.,\ttriangles\tare\tclosed\tand",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.1.G.2",
+        "grade": "1",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Compose\ttwo-dimensional\tshapes\t(rectangles,\tsquares,\ttrapezoids,",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.1.G.3",
+        "grade": "1",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Partition\tcircles\tand\trectangles\tinto\ttwo\tand\tfour\tequal\tshares,\tdescribe",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.1.G.1",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Make\tsense\tof\tproblems\tand\tpersevere\tin",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.1.G.2",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Reason\tabstractly\tand\tquantitatively.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.1.G.3",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Construct\tviable\targuments\tand\tcritique",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.1.G.4",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Model\twith\tmathematics.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.1.G.5",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Use\tappropriate\ttools\tstrategically.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.1.G.6",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Attend\tto\tprecision.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.1.G.8",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Look\tfor\tand\texpress\tregularity\tin\trepeated",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.1.G.1",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Use\taddition\tand\tsubtraction\twithin\t100\tto\tsolve\tone-\tand\ttwo-step",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.1.G.2",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Fluently\tadd\tand\tsubtract\twithin\t20\tusing\tmental\tstrategies. 2 \tBy\tend\tof",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.1.G.3",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Determine\twhether\ta\tgroup\tof\tobjects\t(up\tto\t20)\thas\tan\todd\tor\teven",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.1.G.4",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Use\taddition\tto\tfind\tthe\ttotal\tnumber\tof\tobjects\tarranged\tin",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.1.G.1",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Understand\tthat\tthe\tthree\tdigits\tof\ta\tthree-digit\tnumber\trepresent",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.1.G.2",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Count\twithin\t1000;\tskip-count\tby\t5s,\t10s,\tand\t100s.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.1.G.3",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Read\tand\twrite\tnumbers\tto\t1000\tusing\tbase-ten\tnumerals,\tnumber",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.1.G.4",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Compare\ttwo\tthree-digit\tnumbers\tbased\ton\tmeanings\tof\tthe\thundreds,",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.1.G.5",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Fluently\tadd\tand\tsubtract\twithin\t100\tusing\tstrategies\tbased\ton\tplace",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.1.G.6",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Add\tup\tto\tfour\ttwo-digit\tnumbers\tusing\tstrategies\tbased\ton\tplace",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.1.G.8",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Mentally\tadd\t10\tor\t100\tto\ta\tgiven\tnumber\t100\u2013900,\tand\tmentally",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.1.G.9",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Explain\twhy\taddition\tand\tsubtraction\tstrategies\twork,\tusing\tplace\tvalue",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.1.G.1",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Measure\tthe\tlength\tof\tan\tobject\tby\tselecting\tand\tusing\tappropriate",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.1.G.2",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Measure\tthe\tlength\tof\tan\tobject\ttwice,\tusing\tlength\tunits\tof",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.1.G.3",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Estimate\tlengths\tusing\tunits\tof\tinches,\tfeet,\tcentimeters,\tand\tmeters.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.1.G.4",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Measure\tto\tdetermine\thow\tmuch\tlonger\tone\tobject\tis\tthan\tanother,",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.1.G.5",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Use\taddition\tand\tsubtraction\twithin\t100\tto\tsolve\tword\tproblems",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.1.G.6",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Represent\twhole\tnumbers\tas\tlengths\tfrom\t0\ton\ta\tnumber\tline\tdiagram",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.1.G.8",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Solve\tword\tproblems\tinvolving\tdollar\tbills,\tquarters,\tdimes,\tnickels,\tand",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.1.G.9",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Generate\tmeasurement\tdata\tby\tmeasuring\tlengths\tof\tseveral\tobjects",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.1.G.10",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Draw\ta\tpicture\tgraph\tand\ta\tbar\tgraph\t(with\tsingle-unit\tscale)\tto",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.2.G.1",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Recognize\tand\tdraw\tshapes\thaving\tspecified\tattributes,\tsuch\tas\ta\tgiven",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.2.G.2",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Partition\ta\trectangle\tinto\trows\tand\tcolumns\tof\tsame-size\tsquares\tand",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.2.G.3",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Partition\tcircles\tand\trectangles\tinto\ttwo,\tthree,\tor\tfour\tequal\tshares,",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.2.G.1",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Make\tsense\tof\tproblems\tand\tpersevere\tin",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.2.G.2",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Reason\tabstractly\tand\tquantitatively.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.2.G.3",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Construct\tviable\targuments\tand\tcritique",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.2.G.4",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Model\twith\tmathematics.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.2.G.5",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Use\tappropriate\ttools\tstrategically.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.2.G.6",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Attend\tto\tprecision.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.2.G.8",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Look\tfor\tand\texpress\tregularity\tin\trepeated",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.2.G.1",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Make\tsense\tof\tproblems\tand\tpersevere\tin",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.2.G.2",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Reason\tabstractly\tand\tquantitatively.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.2.G.3",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Construct\tviable\targuments\tand\tcritique",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.2.G.4",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Model\twith\tmathematics.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.2.G.5",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Use\tappropriate\ttools\tstrategically.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.2.G.6",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Attend\tto\tprecision.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.2.G.8",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Look\tfor\tand\texpress\tregularity\tin\trepeated",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.2.G.1",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Interpret\tproducts\tof\twhole\tnumbers,\te.g.,\tinterpret\t5\t\u00d7\t7\tas\tthe\ttotal",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.2.G.2",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Interpret\twhole-number\tquotients\tof\twhole\tnumbers,\te.g.,\tinterpret",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.2.G.4",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Determine\tthe\tunknown\twhole\tnumber\tin\ta\tmultiplication\tor\tdivision",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.2.G.5",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Apply\tproperties\tof\toperations\tas\tstrategies\tto\tmultiply\tand",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.2.G.8",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Solve\ttwo-step\tword\tproblems\tusing\tthe\tfour\toperations.\tRepresent",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.2.G.9",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Identify\tarithmetic\tpatterns\t(including\tpatterns\tin\tthe\taddition\ttable\tor",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.2.G.1",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Use \tplace \tvalue \tunderstanding \tto \tround \twhole \tnumbers \tto \tthe \tnearest",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.2.G.2",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Fluently \tadd \tand \tsubtract \twithin \t1000 \tusing \tstrategies \tand \talgorithms",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.2.G.3",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Multiply \tone-digit \twhole \tnumbers \tby \tmultiples \tof \t10 \tin \tthe \trange",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.2.G.1",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Understand \ta \tfraction \t1\/b \tas \tthe \tquantity \tformed \tby \t1 \tpart \twhen \ta",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.2.G.2",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Understand \ta \tfraction \tas \ta \tnumber \ton \tthe \tnumber \tline; \trepresent",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.2.G.3",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Explain \tequivalence \tof \tfractions \tin \tspecial \tcases, \tand \tcompare",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.3.MD.1",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Measurement and Data",
+        "text": "T ell \tand \twrite \ttime \tto \tthe \tnearest \tminute \tand \tmeasure \ttime \tintervals",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.3.MD.2",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Measurement and Data",
+        "text": "Measure\tand\testimate\tliquid\tvolumes\tand\tmasses\tof\tobjects\tusing",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.3.MD.3",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Measurement and Data",
+        "text": "Draw\ta\tscaled\tpicture\tgraph\tand\ta\tscaled\tbar\tgraph\tto\trepresent\ta",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.3.MD.4",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Measurement and Data",
+        "text": "Generate\t measurement\t data\t by\t measuring\t lengths\t using\t rulers\t marked",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.3.MD.5",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Measurement and Data",
+        "text": "Recognize\tarea\tas\tan\tattribute\tof\tplane\tfigures\tand\tunderstand",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.3.MD.6",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Measurement and Data",
+        "text": "Measure\tareas\tby\tcounting\tunit\tsquares\t(square\tcm,\tsquare\tm,\tsquare",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.3.MD.8",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Measurement and Data",
+        "text": "Solve\treal\tworld\tand\tmathematical\tproblems\tinvolving\tperimeters",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.3.G.1",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Understand\tthat\tshapes\tin\tdifferent\tcategories\t(e.g.,\trhombuses,",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.3.G.2",
+        "grade": "2",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Partition\tshapes\tinto\tparts\twith\tequal\tareas.\tExpress\tthe\tarea\tof\teach",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.3.G.1",
+        "grade": "4",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Make\tsense\tof\tproblems\tand\tpersevere\tin",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.3.G.2",
+        "grade": "4",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Reason\tabstractly\tand\tquantitatively.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.3.G.3",
+        "grade": "4",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Construct\tviable\targuments\tand\tcritique",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.3.G.4",
+        "grade": "4",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Model\twith\tmathematics.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.3.G.5",
+        "grade": "4",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Use\tappropriate\ttools\tstrategically.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.3.G.6",
+        "grade": "4",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Attend\tto\tprecision.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.3.G.8",
+        "grade": "4",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Look\tfor\tand\texpress\tregularity\tin\trepeated",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.3.G.1",
+        "grade": "4",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Interpret\ta\tmultiplication\tequation\tas\ta\tcomparison,\te.g.,\tinterpret\t35",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.3.G.2",
+        "grade": "4",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Multiply\tor\tdivide\tto\tsolve\tword\tproblems\tinvolving\tmultiplicative",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.3.G.3",
+        "grade": "4",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Solve\tmultistep\tword\tproblems\tposed\twith\twhole\tnumbers\tand\thaving",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.3.G.4",
+        "grade": "4",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Find\tall\tfactor\tpairs\tfor\ta\twhole\tnumber\tin\tthe\trange\t1\u2013100.\tRecognize",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.3.G.5",
+        "grade": "4",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Generate\ta\tnumber\tor\tshape\tpattern\tthat\tfollows\ta\tgiven\trule.\tIdentify",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.3.G.1",
+        "grade": "4",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Recognize\tthat\tin\ta\tmulti-digit\twhole\tnumber,\ta\tdigit\tin\tone\tplace",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.3.G.3",
+        "grade": "4",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Use\tplace\tvalue\tunderstanding\tto\tround\tmulti-digit\twhole\tnumbers\tto",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.3.G.4",
+        "grade": "4",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Fluently\tadd\tand\tsubtract\tmulti-digit\twhole\tnumbers\tusing\tthe",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.3.G.5",
+        "grade": "4",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Multiply\ta\twhole\tnumber\tof\tup\tto\tfour\tdigits\tby\ta\tone-digit\twhole",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.3.G.6",
+        "grade": "4",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Find\twhole-number\tquotients\tand\tremainders\twith\tup\tto\tfour-digit",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.3.G.1",
+        "grade": "4",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Explain\twhy\ta\tfraction\ta\/b\tis\tequivalent\tto\ta\tfraction\t(n\t\u00d7\ta)\/(n\t\u00d7\tb)",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.3.G.2",
+        "grade": "4",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Compare\ttwo\tfractions\twith\tdifferent\tnumerators\tand\tdifferent",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.3.G.3",
+        "grade": "4",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Understand\ta\tfraction\ta\/b\twith\ta\t>\t1\tas\ta\tsum\tof\tfractions\t1\/b.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.3.G.4",
+        "grade": "4",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Apply\tand\textend\tprevious\tunderstandings\tof\tmultiplication\tto",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.3.G.5",
+        "grade": "4",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Express\ta\tfraction\twith\tdenominator\t10\tas\tan\tequivalent\tfraction\twith",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.3.G.6",
+        "grade": "4",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Use\tdecimal\tnotation\tfor\tfractions\twith\tdenominators\t10\tor\t100.\t For",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.3.G.1",
+        "grade": "4",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Know \trelative \tsizes \tof \tmeasurement \tunits \twithin \tone \tsystem \tof \tunits",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.3.G.3",
+        "grade": "4",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Apply\tthe\tarea\tand\tperimeter\tformulas\tfor\trectangles\tin\treal\tworld\tand",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.3.G.4",
+        "grade": "4",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Make\ta\tline\tplot\tto\tdisplay\ta\tdata\tset\tof\tmeasurements\tin\tfractions\tof",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.3.G.5",
+        "grade": "4",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Recognize\tangles\tas\tgeometric\tshapes\tthat\tare\tformed\twherever\ttwo",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.3.G.6",
+        "grade": "4",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Measure\tangles\tin\twhole-number\tdegrees\tusing\ta\tprotractor.\tSketch",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.4.G.1",
+        "grade": "4",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Draw\tpoints,\tlines,\tline\tsegments,\trays,\tangles\t(right,\tacute,\tobtuse),",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.4.G.2",
+        "grade": "4",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Classify\ttwo-dimensional\tfigures\tbased\ton\tthe\tpresence\tor\tabsence\tof",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.4.G.3",
+        "grade": "4",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Recognize\ta\tline\tof\tsymmetry\tfor\ta\ttwo-dimensional\tfigure\tas\ta\tline",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.4.G.1",
+        "grade": "5",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Make\tsense\tof\tproblems\tand\tpersevere\tin",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.4.G.2",
+        "grade": "5",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Reason\tabstractly\tand\tquantitatively.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.4.G.3",
+        "grade": "5",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Construct\tviable\targuments\tand\tcritique",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.4.G.4",
+        "grade": "5",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Model\twith\tmathematics.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.4.G.5",
+        "grade": "5",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Use\tappropriate\ttools\tstrategically.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.4.G.6",
+        "grade": "5",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Attend\tto\tprecision.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.4.G.8",
+        "grade": "5",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Look\tfor\tand\texpress\tregularity\tin\trepeated",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.4.G.1",
+        "grade": "5",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Use\tparentheses,\tbrackets,\tor\tbraces\tin\tnumerical\texpressions,\tand",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.4.G.2",
+        "grade": "5",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Write\tsimple\texpressions\tthat\trecord\tcalculations\twith\tnumbers,\tand",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.4.G.3",
+        "grade": "5",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Generate\ttwo\tnumerical\tpatterns\tusing\ttwo\tgiven\trules.\tIdentify",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.4.G.1",
+        "grade": "5",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Recognize\tthat\tin\ta\tmulti-digit\tnumber,\ta\tdigit\tin\tone\tplace\trepresents",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.4.G.2",
+        "grade": "5",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Explain\tpatterns\tin\tthe\tnumber\tof\tzeros\tof\tthe\tproduct\twhen",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.4.G.3",
+        "grade": "5",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Read,\twrite,\tand\tcompare\tdecimals\tto\tthousandths.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.4.G.4",
+        "grade": "5",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Use\tplace\tvalue\tunderstanding\tto\tround\tdecimals\tto\tany\tplace.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.4.G.5",
+        "grade": "5",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Fluently\tmultiply\tmulti-digit\twhole\tnumbers\tusing\tthe\tstandard",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.4.G.6",
+        "grade": "5",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Find\twhole-number\tquotients\tof\twhole\tnumbers\twith\tup\tto\tfour-digit",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.4.G.1",
+        "grade": "5",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Add\tand\tsubtract\tfractions\twith\tunlike\tdenominators\t(including\tmixed",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.4.G.2",
+        "grade": "5",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Solve\tword\tproblems\tinvolving\taddition\tand\tsubtraction\tof\tfractions",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.4.G.3",
+        "grade": "5",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Interpret\ta\tfraction\tas\tdivision\tof\tthe\tnumerator\tby\tthe\tdenominator",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.4.G.5",
+        "grade": "5",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Interpret\tmultiplication\tas\tscaling\t(resizing),\tby:",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.4.G.6",
+        "grade": "5",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Solve\treal\tworld\tproblems\tinvolving\tmultiplication\tof\tfractions\tand",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.4.G.1",
+        "grade": "5",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Convert\tamong\tdifferent-sized\tstandard\tmeasurement\tunits\twithin\ta",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.4.G.2",
+        "grade": "5",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Make\ta\tline\tplot\tto\tdisplay\ta\tdata\tset\tof\tmeasurements\tin\tfractions\tof",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.4.G.3",
+        "grade": "5",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Recognize\tvolume\tas\tan\tattribute\tof\tsolid\tfigures\tand\tunderstand",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.4.G.4",
+        "grade": "5",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Measure\tvolumes\tby\tcounting\tunit\tcubes,\tusing\tcubic\tcm,\tcubic\tin,",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.4.G.5",
+        "grade": "5",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Relate\tvolume\tto\tthe\toperations\tof\tmultiplication\tand\taddition\tand",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.5.G.1",
+        "grade": "5",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Use\ta\tpair\tof\tperpendicular\tnumber\tlines,\tcalled\taxes,\tto\tdefine\ta",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.5.G.2",
+        "grade": "5",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Represent\treal\tworld\tand\tmathematical\tproblems\tby\tgraphing\tpoints",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.5.G.3",
+        "grade": "5",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Understand\tthat\tattributes\tbelonging\tto\ta\tcategory\tof\ttwo-",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.5.G.1",
+        "grade": "6",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Make\tsense\tof\tproblems\tand\tpersevere\tin",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.5.G.2",
+        "grade": "6",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Reason\tabstractly\tand\tquantitatively.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.5.G.3",
+        "grade": "6",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Construct\tviable\targuments\tand\tcritique",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.5.G.4",
+        "grade": "6",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Model\twith\tmathematics.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.5.G.5",
+        "grade": "6",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Use\tappropriate\ttools\tstrategically.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.5.G.6",
+        "grade": "6",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Attend\tto\tprecision.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.5.G.8",
+        "grade": "6",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Look\tfor\tand\texpress\tregularity\tin\trepeated",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.5.G.1",
+        "grade": "6",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Understand\tthe\tconcept\tof\ta\tratio\tand\tuse\tratio\tlanguage\tto\tdescribe",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.5.G.2",
+        "grade": "6",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Understand\tthe\tconcept\tof\ta\tunit\trate\ta\/b\tassociated\twith\ta\tratio\t a:b",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.5.G.3",
+        "grade": "6",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Use\tratio\tand\trate\treasoning\tto\tsolve\treal-world\tand\tmathematical",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.5.G.1",
+        "grade": "6",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Interpret\tand\tcompute\tquotients\tof\tfractions,\tand\tsolve\tword",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.5.G.2",
+        "grade": "6",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Fluently\tdivide\tmulti-digit\tnumbers\tusing\tthe\tstandard\talgorithm.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.5.G.3",
+        "grade": "6",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Fluently\tadd,\tsubtract,\tmultiply,\tand\tdivide\tmulti-digit\tdecimals\tusing",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.5.G.4",
+        "grade": "6",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Find\tthe\tgreatest\tcommon\tfactor\tof\ttwo\twhole\tnumbers\tless\tthan\tor",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.5.G.5",
+        "grade": "6",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Understand\tthat\tpositive\tand\tnegative\tnumbers\tare\tused\ttogether",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.5.G.6",
+        "grade": "6",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Understand\ta\trational\tnumber\tas\ta\tpoint\ton\tthe\tnumber\tline.\tExtend",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.5.G.8",
+        "grade": "6",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Solve\treal-world\tand\tmathematical\tproblems\tby\tgraphing\tpoints\tin\tall",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.5.G.1",
+        "grade": "6",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Write\tand\tevaluate\tnumerical\texpressions\tinvolving\twhole-number",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.5.G.2",
+        "grade": "6",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Write,\tread,\tand\tevaluate\texpressions\tin\twhich\tletters\tstand\tfor",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.5.G.3",
+        "grade": "6",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Apply\tthe\tproperties\tof\toperations\tto\tgenerate\tequivalent\texpressions.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.5.G.5",
+        "grade": "6",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Understand\tsolving\tan\tequation\tor\tinequality\tas\ta\tprocess\tof",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.5.G.6",
+        "grade": "6",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Use\tvariables\tto\trepresent\tnumbers\tand\twrite\texpressions\twhen",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.5.G.8",
+        "grade": "6",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Write\tan\tinequality\tof\tthe\tform\tx\t>\tc\tor\tx <\tc to\trepresent\ta\tconstraint",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.5.G.9",
+        "grade": "6",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Use\tvariables\tto\trepresent\ttwo\tquantities\tin\ta\treal-world\tproblem\tthat",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.G.1",
+        "grade": "6",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Find\tthe\tarea\tof\tright\ttriangles,\tother\ttriangles,\tspecial\tquadrilaterals,",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.G.2",
+        "grade": "6",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Find\tthe\tvolume\tof\ta\tright\trectangular\tprism\twith\tfractional\tedge",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.G.3",
+        "grade": "6",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Draw\tpolygons\tin\tthe\tcoordinate\tplane\tgiven\tcoordinates\tfor\tthe",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.G.4",
+        "grade": "6",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Represent\tthree-dimensional\tfigures\tusing\tnets\tmade\tup\tof\trectangles",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.SP.1",
+        "grade": "6",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Recognize\ta\tstatistical\tquestion\tas\tone\tthat\tanticipates\tvariability\tin",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.SP.3",
+        "grade": "6",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Recognize\tthat\ta\tmeasure\tof\tcenter\tfor\ta\tnumerical\tdata\tset",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.SP.4",
+        "grade": "6",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Display\tnumerical\tdata\tin\tplots\ton\ta\tnumber\tline,\tincluding\tdot\tplots,",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.SP.5",
+        "grade": "6",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Summarize\tnumerical\tdata\tsets\tin\trelation\tto\ttheir\tcontext,\tsuch\tas\tby:",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.SP.1",
+        "grade": "7",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Make\tsense\tof\tproblems\tand\tpersevere\tin",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.SP.2",
+        "grade": "7",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Reason\tabstractly\tand\tquantitatively.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.SP.3",
+        "grade": "7",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Construct\tviable\targuments\tand\tcritique",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.SP.4",
+        "grade": "7",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Model\twith\tmathematics.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.SP.5",
+        "grade": "7",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Use\tappropriate\ttools\tstrategically.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.SP.6",
+        "grade": "7",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Attend\tto\tprecision.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.SP.8",
+        "grade": "7",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Look\tfor\tand\texpress\tregularity\tin\trepeated",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.SP.1",
+        "grade": "7",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Compute\tunit\trates\tassociated\twith\tratios\tof\tfractions,\tincluding\tratios",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.SP.2",
+        "grade": "7",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Recognize\tand\trepresent\tproportional\trelationships\tbetween",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.SP.3",
+        "grade": "7",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Use\tproportional\trelationships\tto\tsolve\tmultistep\tratio\tand\tpercent",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.SP.1",
+        "grade": "7",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Apply\t and\t extend\t previous\t understandings\t of\t addition\t and\t subtraction",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.SP.2",
+        "grade": "7",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Apply\tand\textend\tprevious\tunderstandings\tof\tmultiplication\tand",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.SP.3",
+        "grade": "7",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Solve\treal-world\tand\tmathematical\tproblems\tinvolving\tthe\tfour",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.SP.1",
+        "grade": "7",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Apply\tproperties\tof\toperations\tas\tstrategies\tto\tadd,\tsubtract,\tfactor,",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.SP.2",
+        "grade": "7",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Understand\tthat\trewriting\tan\texpression\tin\tdifferent\tforms\tin\ta",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.SP.3",
+        "grade": "7",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Solve\tmulti-step\treal-life\tand\tmathematical\tproblems\tposed\twith",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.SP.1",
+        "grade": "7",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Solve\tproblems\tinvolving\tscale\tdrawings\tof\tgeometric\tfigures,",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.SP.2",
+        "grade": "7",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Draw\t(freehand,\twith\truler\tand\tprotractor,\tand\twith\ttechnology)",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.SP.3",
+        "grade": "7",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Describe\tthe\ttwo-dimensional\tfigures\tthat\tresult\tfrom\tslicing\tthree-",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.SP.4",
+        "grade": "7",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Know\tthe\tformulas\tfor\tthe\tarea\tand\tcircumference\tof\ta\tcircle\tand\tuse",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.SP.5",
+        "grade": "7",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Use\tfacts\tabout\tsupplementary,\tcomplementary,\tvertical,\tand\tadjacent",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.SP.6",
+        "grade": "7",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Solve\treal-world\tand\tmathematical\tproblems\tinvolving\tarea,\tvolume",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.SP.1",
+        "grade": "7",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Understand\tthat\tstatistics\tcan\tbe\tused\tto\tgain\tinformation\tabout\ta",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.SP.2",
+        "grade": "7",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Use\tdata\tfrom\ta\trandom\tsample\tto\tdraw\tinferences\tabout\ta\tpopulation",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.SP.3",
+        "grade": "7",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Informally\tassess\tthe\tdegree\tof\tvisual\toverlap\tof\ttwo\tnumerical",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.SP.5",
+        "grade": "7",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Understand\tthat\tthe\tprobability\tof\ta\tchance\tevent\tis\ta\tnumber",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.SP.6",
+        "grade": "7",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Approximate\tthe\tprobability\tof\ta\tchance\tevent\tby\tcollecting\tdata\ton",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.SP.1",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Make\tsense\tof\tproblems\tand\tpersevere\tin",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.SP.2",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Reason\tabstractly\tand\tquantitatively.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.SP.3",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Construct\tviable\targuments\tand\tcritique",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.SP.4",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Model\twith\tmathematics.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.SP.5",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Use\tappropriate\ttools\tstrategically.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.SP.6",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Attend\tto\tprecision.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.SP.8",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Look\tfor\tand\texpress\tregularity\tin\trepeated",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.SP.1",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Know\tthat\tnumbers\tthat\tare\tnot\trational\tare\tcalled\tirrational.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.SP.2",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Use\trational\tapproximations\tof\tirrational\tnumbers\tto\tcompare\tthe\tsize",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.SP.1",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Know\tand\tapply\tthe\tproperties\tof\tinteger\texponents\tto\tgenerate",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.SP.2",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Use\tsquare\troot\tand\tcube\troot\tsymbols\tto\trepresent\tsolutions\tto",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.SP.3",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Use\tnumbers\texpressed\tin\tthe\tform\tof\ta\tsingle\tdigit\ttimes\tan\tinteger",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.SP.4",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Perform\toperations\twith\tnumbers\texpressed\tin\tscientific\tnotation,",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.SP.5",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Graph\tproportional\trelationships,\tinterpreting\tthe\tunit\trate\tas\tthe",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.SP.8",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Analyze\tand\tsolve\tpairs\tof\tsimultaneous\tlinear\tequations.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.SP.1",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Understand\tthat\ta\tfunction\tis\ta\trule\tthat\tassigns\tto\teach\tinput\texactly",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.SP.2",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Compare\tproperties\tof\ttwo\tfunctions\teach\trepresented\tin\ta\tdifferent",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.SP.4",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Construct\ta\tfunction\tto\tmodel\ta\tlinear\trelationship\tbetween\ttwo",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.6.SP.5",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Describe\tqualitatively\tthe\tfunctional\trelationship\tbetween\ttwo",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.G.1",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Verify\texperimentally\tthe\tproperties\tof\trotations,\treflections,\tand",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.G.2",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Understand\tthat\ta\ttwo-dimensional\tfigure\tis\tcongruent\tto\tanother\tif",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.G.3",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Describe\tthe\teffect\tof\tdilations,\ttranslations,\trotations,\tand\treflections",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.G.4",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Understand\tthat\ta\ttwo-dimensional\tfigure\tis\tsimilar\tto\tanother\tif\tthe",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.G.5",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Use\tinformal\targuments\tto\testablish\tfacts\tabout\tthe\tangle\tsum\tand",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.G.6",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Explain\ta\tproof\tof\tthe\tPythagorean\tTheorem\tand\tits\tconverse.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.G.8",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Apply\tthe\tPythagorean\tTheorem\tto\tfind\tthe\tdistance\tbetween\ttwo",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.G.9",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Geometry",
+        "text": "Know\tthe\tformulas\tfor\tthe\tvolumes\tof\tcones,\tcylinders,\tand\tspheres",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.1",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Construct\tand\tinterpret\tscatter\tplots\tfor\tbivariate\tmeasurement",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.2",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Know\tthat\tstraight\tlines\tare\twidely\tused\tto\tmodel\trelationships",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.3",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Use\tthe\tequation\tof\ta\tlinear\tmodel\tto\tsolve\tproblems\tin\tthe\tcontext",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.1",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Make\tsense\tof\tproblems\tand\tpersevere\tin",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.2",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Reason\tabstractly\tand\tquantitatively.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.3",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Construct\tviable\targuments\tand\tcritique",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.4",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Model\twith\tmathematics.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.5",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Use\tappropriate\ttools\tstrategically.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.6",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Attend\tto\tprecision.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.8",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Look\tfor\tand\texpress\tregularity\tin\trepeated",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.1",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Explain\thow\tthe\tdefinition\tof\tthe\tmeaning\tof\trational\texponents",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.2",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Rewrite\texpressions\tinvolving\tradicals\tand\trational\texponents\tusing",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.3",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Explain\twhy\tthe\tsum\tor\tproduct\tof\ttwo\trational\tnumbers\tis\trational;",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.1",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Use\tunits\tas\ta\tway\tto\tunderstand\tproblems\tand\tto\tguide\tthe\tsolution",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.2",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Define\tappropriate\tquantities\tfor\tthe\tpurpose\tof\tdescriptive\tmodeling.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.3",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Choose\ta\tlevel\tof\taccuracy\tappropriate\tto\tlimitations\ton\tmeasurement",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.1",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Know\tthere\tis\ta\tcomplex\tnumber\t i \tsuch\tthat\t i 2 \t=\t\u20131,\tand\tevery\tcomplex",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.2",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Use\tthe\trelation\t i 2 \t=\t\u20131\tand\tthe\tcommutative,\tassociative,\tand",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.3",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "(+)\tFind\tthe\tconjugate\tof\ta\tcomplex\tnumber;\tuse\tconjugates\tto\tfind",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.4",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "(+)\tRepresent\tcomplex\tnumbers\ton\tthe\tcomplex\tplane\tin\trectangular",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.5",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "(+)\tRepresent\taddition,\tsubtraction,\tmultiplication,\tand\tconjugation\tof",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.6",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "(+)\tCalculate\tthe\tdistance\tbetween\tnumbers\tin\tthe\tcomplex\tplane\tas",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.8",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "(+)\tExtend\tpolynomial\tidentities\tto\tthe\tcomplex\tnumbers.\t For example,",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.9",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "(+)\tKnow\tthe\tFundamental\tTheorem\tof\t Algebra;\tshow\tthat\t it\tis\ttrue\tfor",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.1",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "(+)\tRecognize \tvector\tquantities\tas\thaving\tboth\tmagnitude\tand",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.2",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "(+)\tFind\tthe\tcomponents\tof\ta\tvector\tby\tsubtracting\tthe\tcoordinates\tof",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.3",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "(+)\tSolve\tproblems\tinvolving\tvelocity\tand\tother\tquantities\tthat\tcan\tbe",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.4",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "(+)\tAdd\tand\tsubtract\tvectors.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.5",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "(+)\tMultiply\ta\tvector\tby\ta\tscalar.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.6",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "(+)\tUse\tmatrices\tto\trepresent\tand\tmanipulate\tdata,\te.g.,\tto\trepresent",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.8",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "(+)\tAdd,\tsubtract,\tand\tmultiply\tmatrices\tof\tappropriate\tdimensions.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.9",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "(+)\tUnderstand\tthat,\tunlike\tmultiplication\tof\tnumbers,\tmatrix",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.10",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "(+)\t Understand\t that\t the\t zero\t and\t identity\t matrices\t play\t a\t role\t in\t matrix",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.11",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "(+)\tMultiply\ta\tvector\t(regarded\tas\ta\tmatrix\twith\tone\tcolumn)\tby\ta",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.12",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "(+)\tWork\twith\t2\t\u00d7\t2\tmatrices\tas\ttransformations\tof\tthe\tplane,\tand",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.1",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Make\tsense\tof\tproblems\tand\tpersevere\tin",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.2",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Reason\tabstractly\tand\tquantitatively.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.3",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Construct\tviable\targuments\tand\tcritique",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.4",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Model\twith\tmathematics.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.5",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Use\tappropriate\ttools\tstrategically.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.6",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Attend\tto\tprecision.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.8",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Look\tfor\tand\texpress\tregularity\tin\trepeated",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.1",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Interpret\texpressions\tthat\trepresent\ta\tquantity\tin\tterms\tof\tits\tcontext. \u2605",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.2",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Use\tthe\tstructure\tof\tan\texpression\tto\tidentify\tways\tto\trewrite\tit.\t For",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.3",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Choose\tand\tproduce\tan\tequivalent\tform\tof\tan\texpression\tto\treveal\tand",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.4",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Derive\tthe\tformula\tfor\tthe\tsum\tof\ta\tfinite\tgeometric\tseries\t(when\tthe",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.1",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Understand\tthat\tpolynomials\tform\ta\tsystem\tanalogous\tto\tthe\tintegers,",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.2",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Know\tand\tapply\tthe\tRemainder\tTheorem:\tFor\ta\tpolynomial\t p ( x )\tand\ta",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.3",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Identify\tzeros\tof\tpolynomials\twhen\tsuitable\tfactorizations\tare",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.4",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Prove\tpolynomial\tidentities\tand\tuse\tthem\tto\tdescribe\tnumerical",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.5",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "(+)\tKnow\tand\tapply\t the\tBinomial\tTheorem\tfor\tthe\texpansion\tof\t( x",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.6",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Rewrite\tsimple\trational\texpressions\tin\tdifferent\tforms;\twrite\t a ( x ) \/ b ( x )",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.1",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Create\tequations\tand\tinequalities\tin\tone\tvariable\tand\tuse\tthem\tto",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.2",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Create\tequations\tin\ttwo\tor\tmore\tvariables\tto\trepresent\trelationships",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.3",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Represent\tconstraints\tby\tequations\tor\tinequalities,\tand\tby\tsystems\tof",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.1",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Explain\teach\tstep\tin\tsolving\ta\tsimple\tequation\tas\tfollowing\tfrom\tthe",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.2",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Solve\tsimple\trational\tand\tradical\tequations\tin\tone\tvariable,\tand\tgive",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.3",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Solve\tlinear\tequations\tand\tinequalities\tin\tone\tvariable,\tincluding",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.4",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Solve\tquadratic\tequations\tin\tone\tvariable.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.5",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Prove\tthat,\tgiven\ta\tsystem\tof\ttwo\tequations\tin\ttwo\tvariables,\treplacing",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.6",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Solve\tsystems\tof\tlinear\tequations\texactly\tand\tapproximately\t(e.g.,\twith",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.8",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "(+)\tRepresent\ta\tsystem\tof\tlinear\tequations\tas\ta\tsingle\tmatrix\tequation",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.9",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "(+)\tFind\tthe\tinverse\tof\ta\tmatrix\tif\tit\texists\tand\tuse\tit\tto\tsolve\tsystems",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.10",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Understand\tthat\tthe\tgraph\tof\tan\tequation\tin\ttwo\tvariables\tis\tthe\tset\tof",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.11",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Explain\twhy\tthe\tx-coordinates\tof\tthe\tpoints\twhere\tthe\tgraphs\tof",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.12",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Graph\tthe\tsolutions\tto\ta\tlinear\tinequality\tin\ttwo\tvariables\tas\ta\thalf-",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.1",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Make\tsense\tof\tproblems\tand\tpersevere\tin",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.2",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Reason\tabstractly\tand\tquantitatively.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.3",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Construct\tviable\targuments\tand\tcritique",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.4",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Model\twith\tmathematics.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.5",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Use\tappropriate\ttools\tstrategically.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.6",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Attend\tto\tprecision.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.8",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Look\tfor\tand\texpress\tregularity\tin\trepeated",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.1",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Understand\tthat\ta\tfunction\tfrom\tone\tset\t(called\tthe\tdomain)\tto",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.2",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Use\tfunction\tnotation,\tevaluate\tfunctions\tfor\tinputs\tin\ttheir\tdomains,",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.3",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Recognize\tthat\tsequences\tare\tfunctions,\tsometimes\tdefined",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.4",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "For\ta\tfunction\tthat\tmodels\ta\trelationship\tbetween\ttwo\tquantities,",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.5",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Relate\tthe\tdomain\tof\ta\tfunction\tto\tits\tgraph\tand,\twhere\tapplicable,\tto",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.6",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Calculate\tand\tinterpret\tthe\taverage\trate\tof\tchange\tof\ta\tfunction",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.8",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Write\ta\tfunction\tdefined\tby\tan\texpression\tin\tdifferent\tbut\tequivalent",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.9",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Compare\tproperties\tof\ttwo\tfunctions\teach\trepresented\tin\ta\tdifferent",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.1",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Write\ta\tfunction\tthat\tdescribes\ta\trelationship\tbetween\ttwo\tquantities. \u2605",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.3",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Identify\tthe\teffect\ton\tthe\tgraph\tof\treplacing\t f ( x )\tby\t f ( x )\t+\t k ,\tk \tf ( x ),",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.5",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "(+)\tUnderstand\tthe\tinverse\trelationship\tbetween\texponents\tand",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.1",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Distinguish\tbetween\tsituations\tthat\tcan\tbe\tmodeled\twith\tlinear",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.2",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Construct\tlinear\tand\texponential\tfunctions,\tincluding\tarithmetic\tand",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.3",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Observe\tusing\tgraphs\tand\ttables\tthat\ta\tquantity\tincreasing",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.4",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "For\texponential\tmodels,\texpress\tas\ta\tlogarithm\tthe\tsolution\tto",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.5",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Interpret\tthe\tparameters\tin\ta\tlinear\tor\texponential\tfunction\tin\tterms\tof",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.1",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Understand\tradian\tmeasure\tof\tan\tangle\tas\tthe\tlength\tof\tthe\tarc\ton\tthe",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.2",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Explain\thow\tthe\tunit\tcircle\tin\tthe\tcoordinate\tplane\tenables\tthe",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.3",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "(+)\tUse\tspecial\ttriangles\tto\tdetermine\tgeometrically\tthe\tvalues\tof\tsine,",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.4",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "(+)\tUse\tthe\tunit\tcircle\tto\texplain\tsymmetry\t(odd\tand\teven)\tand",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.5",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Choose\ttrigonometric\tfunctions\tto\tmodel\tperiodic\tphenomena\twith",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.6",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "(+)\tUnderstand\tthat\trestricting\ta\ttrigonometric\tfunction\tto\ta\tdomain",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.8",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Prove\tthe\tPythagorean\tidentity\tsin 2 (\u03b8)\t+\tcos 2 (\u03b8)\t=\t1\tand\tuse\tit\tto\tfind",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.9",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "(+)\tProve\tthe\taddition\tand\tsubtraction\tformulas\tfor\tsine,\tcosine,\tand",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.1",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Make\tsense\tof\tproblems\tand\tpersevere\tin",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.2",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Reason\tabstractly\tand\tquantitatively.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.3",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Construct\tviable\targuments\tand\tcritique",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.4",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Model\twith\tmathematics.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.5",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Use\tappropriate\ttools\tstrategically.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.6",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Attend\tto\tprecision.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.8",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Look\tfor\tand\texpress\tregularity\tin\trepeated",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.1",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Know\tprecise\tdefinitions\tof\tangle,\tcircle,\tperpendicular\tline,\tparallel",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.2",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Represent\ttransformations\tin\tthe\tplane\tusing,\te.g.,\ttransparencies",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.3",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Given\ta\trectangle,\tparallelogram,\ttrapezoid,\tor\tregular\tpolygon,",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.4",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Develop\tdefinitions\tof\trotations,\treflections,\tand\ttranslations\tin\tterms",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.5",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Given\ta\tgeometric\tfigure\tand\ta\trotation,\treflection,\tor\ttranslation,",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.6",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Use\tgeometric\tdescriptions\tof\trigid\tmotions\tto\ttransform\tfigures\tand",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.8",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Explain\thow\tthe\tcriteria\tfor\ttriangle\tcongruence\t(ASA,\tSAS,\tand\tSSS)",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.9",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Prove\ttheorems\tabout\tlines\tand\tangles.  Theorems include: vertical",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.12",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Make\tformal\tgeometric\tconstructions\twith\ta\tvariety\tof\ttools\tand",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.13",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Construct\tan\tequilateral\ttriangle,\ta\tsquare,\tand\ta\tregular\thexagon",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.1",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Verify\texperimentally\tthe\tproperties\tof\tdilations\tgiven\tby\ta\tcenter\tand",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.2",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Given\ttwo\tfigures,\tuse\tthe\tdefinition\tof\tsimilarity\tin\tterms\tof\tsimilarity",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.3",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Use\tthe\tproperties\tof\tsimilarity\ttransformations\tto\testablish\tthe\tAA",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.4",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Prove\ttheorems\tabout\ttriangles.\t Theorems include: a line parallel to one",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.6",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Understand\tthat\tby\tsimilarity,\tside\tratios\tin\tright\ttriangles\tare",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.8",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Use\ttrigonometric\tratios\tand\tthe\tPythagorean\tTheorem\tto\tsolve\tright",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.9",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "(+)\tDerive\tthe\tformula\t A \t=\t1\/2\t ab \tsin( C )\tfor\tthe\tarea\tof\ta\ttriangle\tby",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.10",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "(+)\tProve\tthe\tLaws\tof\tSines\tand\tCosines\tand\tuse\tthem\tto\tsolve",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.11",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "(+)\tUnderstand\tand\tapply\tthe\tLaw\tof\tSines\tand\tthe\tLaw\tof\tCosines",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.1",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Prove\tthat\tall\tcircles\tare\tsimilar.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.2",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Identify\tand\tdescribe\trelationships\tamong\tinscribed\tangles,\tradii,",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.4",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "(+)\tConstruct\ta\ttangent\tline\tfrom\ta\tpoint\toutside\ta\tgiven\tcircle\tto\tthe",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.5",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Derive\tusing\tsimilarity\tthe\tfact\tthat\tthe\tlength\tof\tthe\tarc\tintercepted",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.1",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Derive\tthe\tequation\tof\ta\tcircle\tof\tgiven\tcenter\tand\tradius\tusing\tthe",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.2",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Derive\tthe\tequation\tof\ta\tparabola\tgiven\ta\tfocus\tand\tdirectrix.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.3",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "(+)\tDerive\tthe\tequations\tof\tellipses\tand\thyperbolas\tgiven\tthe\tfoci,",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.4",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Use\tcoordinates\tto\tprove\tsimple\tgeometric\ttheorems\talgebraically.\t For",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.6",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Find\tthe\tpoint\ton\ta\tdirected\tline\tsegment\tbetween\ttwo\tgiven\tpoints",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.1",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Give\tan\tinformal\targument\tfor\tthe\tformulas\tfor\tthe\tcircumference\tof",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.2",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "(+)\tGive\tan\tinformal\targument\tusing\tCavalieri\u2019s\tprinciple\tfor\tthe",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.3",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Use\tvolume\tformulas\tfor\tcylinders,\tpyramids,\tcones,\tand\tspheres\tto",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.4",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Identify\tthe\tshapes\tof\ttwo-dimensional\tcross-sections\tof\tthree-",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.1",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Use\tgeometric\tshapes,\ttheir\tmeasures,\tand\ttheir\tproperties\tto\tdescribe",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.2",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Apply\tconcepts\tof\tdensity\tbased\ton\tarea\tand\tvolume\tin\tmodeling",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.3",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Apply\tgeometric\tmethods\tto\tsolve\tdesign\tproblems\t(e.g.,\tdesigning",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.1",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Make\tsense\tof\tproblems\tand\tpersevere\tin",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.2",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Reason\tabstractly\tand\tquantitatively.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.3",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Construct\tviable\targuments\tand\tcritique",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.4",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Model\twith\tmathematics.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.5",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Use\tappropriate\ttools\tstrategically.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.6",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Attend\tto\tprecision.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.8",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Look\tfor\tand\texpress\tregularity\tin\trepeated",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.1",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Represent\tdata\twith\tplots\ton\tthe\treal\tnumber\tline\t(dot\tplots,",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.2",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Use\tstatistics\tappropriate\tto\tthe\tshape\tof\tthe\tdata\tdistribution\tto",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.3",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Interpret\tdifferences\tin\tshape,\tcenter,\tand\tspread\tin\tthe\tcontext\tof",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.4",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Use\tthe\tmean\tand\tstandard\tdeviation\tof\ta\tdata\tset\tto\tfit\tit\tto\ta\tnormal",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.5",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Summarize\tcategorical\tdata\tfor\ttwo\tcategories\tin\ttwo-way\tfrequency",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.6",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Represent\tdata\ton\ttwo\tquantitative\tvariables\ton\ta\tscatter\tplot,\tand",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.8",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Compute\t(using\ttechnology)\tand\tinterpret\tthe\tcorrelation\tcoefficient",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.9",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Distinguish\tbetween\tcorrelation\tand\tcausation.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.1",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Understand\tstatistics\tas\ta\tprocess\tfor\tmaking\tinferences\tabout",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.2",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Decide\tif\ta\tspecified\tmodel\tis\tconsistent\twith\tresults\tfrom\ta\tgiven",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.3",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Recognize\tthe\tpurposes\tof\tand\tdifferences\tamong\tsample\tsurveys,",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.4",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Use\tdata\tfrom\ta\tsample\tsurvey\tto\testimate\ta\tpopulation\tmean\tor",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.5",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Use\tdata\tfrom\ta\trandomized\texperiment\tto\tcompare\ttwo\ttreatments;",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.6",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Evaluate\treports\tbased\ton\tdata.",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.1",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Describe\tevents\tas\tsubsets\tof\ta\tsample\tspace\t(the\tset\tof\toutcomes)",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.2",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Understand\tthat\ttwo\tevents\t A \tand\t B \tare\tindependent\tif\tthe\tprobability",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.3",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Understand\tthe\tconditional\tprobability\tof\t A \tgiven\t B \tas  P ( A \tand",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.4",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Construct\tand\tinterpret\ttwo-way\tfrequency\ttables\tof\tdata\twhen\ttwo",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.6",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "Find\tthe\tconditional\tprobability\tof\t A \tgiven\t B \tas\tthe\tfraction\tof\t B \u2019s",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.8",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "(+)\tApply\tthe\tgeneral\tMultiplication\tRule\tin\ta\tuniform\tprobability",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.9",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "(+)\tUse\tpermutations\tand\tcombinations\tto\tcompute\tprobabilities\tof",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.1",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "(+)\tDefine\ta\trandom\tvariable\tfor\ta\tquantity\tof\tinterest\tby\tassigning",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.2",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "(+)\tCalculate\tthe\texpected\tvalue\tof\ta\trandom\tvariable;\tinterpret\tit\tas",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.3",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "(+)\tDevelop\ta\tprobability\tdistribution\tfor\ta\trandom\tvariable\tdefined",
+        "explanation": "Explanation available upon request."
+    },
+    {
+        "code": "CCSS.MATH.CONTENT.8.SP.5",
+        "grade": "8",
+        "subject": "Math",
+        "category": "Statistics and Probability",
+        "text": "(+)\tWeigh\tthe\tpossible\toutcomes\tof\ta\tdecision\tby\tassigning",
+        "explanation": "Explanation available upon request."
+    }
+]
