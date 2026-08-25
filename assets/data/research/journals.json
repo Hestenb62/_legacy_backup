@@ -1,0 +1,30 @@
+[
+  {
+    "id": "dyslexia-Research",
+    "title": "Dyslexia & Learning Disabilities Research",
+    "cover": "Dyslexia Research",
+    "description": "A journal focusing on the latest research in dyslexia, exploring innovative teaching methods, and validating new interventions.",
+    "link": "DLDR/index.php",
+    "author": "Hesten Allison",
+    "date": "Oct 2025",
+    "tags": [
+      "Dyslexia",
+      "Intervention"
+    ],
+    "isPeerReviewed": false
+  },
+  {
+    "id": "dysgraphia-studies",
+    "title": "Dysgraphia Studies & Motor Skills",
+    "cover": "Dysgraphia Research",
+    "description": "Comprehensive studies on early signs of dysgraphia, neural pathways, and effective occupational therapy adaptations.",
+    "link": "#",
+    "author": "Hesten Allison",
+    "date": "Nov 2025",
+    "tags": [
+      "Dysgraphia",
+      "Motor Skills"
+    ],
+    "isPeerReviewed": false
+  }
+]

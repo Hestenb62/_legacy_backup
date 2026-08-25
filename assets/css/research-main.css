@@ -25,15 +25,15 @@
   position: relative;
   background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 40%, #4338ca 100%);
   color: #ffffff;
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  border-bottom-left-radius: 3rem;
-  border-bottom-right-radius: 3rem;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   overflow: hidden;
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -149,9 +149,9 @@
 }
 
 .research-hero-title {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 800;
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem;
   letter-spacing: -0.025em;
   color: #ffffff;
   margin-top: 1rem;
@@ -159,7 +159,7 @@
 
 @media (min-width: 768px) {
   .research-hero-title {
-    font-size: 4.5rem;
+    font-size: 3.5rem;
   }
 }
 
@@ -180,20 +180,20 @@
 }
 
 .research-hero-desc {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   color: #eff6ff;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
   font-weight: 300;
   max-width: 48rem;
   margin-left: auto;
   margin-right: auto;
-  line-height: 1.625;
+  line-height: 1.5;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
 
 @media (min-width: 768px) {
   .research-hero-desc {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 }
 
@@ -429,7 +429,7 @@
   height: 100%;
   background-color: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(20px);
-  border-radius: 2rem;
+  border-radius: 1.5rem;
   border: 1px solid var(--color-border);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
   overflow: hidden;
@@ -452,7 +452,7 @@
 
 .card-image-wrap {
   position: relative;
-  height: 18rem;
+  height: 12rem;
   overflow: hidden;
   background-color: var(--color-bg-base);
   border-bottom: 1px solid var(--color-border);
@@ -563,7 +563,7 @@
 }
 
 .card-body {
-  padding: 2rem;
+  padding: 1.5rem;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -575,10 +575,10 @@
 }
 
 .card-title {
-  font-size: 1.5rem;
-  font-weight: 900;
+  font-size: 1.25rem;
+  font-weight: 800;
   color: var(--color-text-main);
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
   line-height: 1.25;
   transition: color 0.2s ease;
 }
@@ -606,8 +606,9 @@
 
 .card-desc {
   color: var(--color-text-muted);
-  line-height: 1.625;
-  margin-bottom: 2rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  font-size: 0.95rem;
   flex: 1;
 }
 
@@ -1202,4 +1203,26 @@
 
 .toast-notification.show {
   opacity: 1;
+}
+
+/* --- Semantic Container Replacements --- */
+.research-container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 6rem;
+}
+
+.research-journal-icon {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 3rem;
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+.research-flask-icon {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
 }

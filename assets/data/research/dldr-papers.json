@@ -1,0 +1,32 @@
+[
+  {
+    "id": "scope-definition-001",
+    "title": "Journal Scope: The Multifaceted Impact of Dyslexia",
+    "author": "Research Team",
+    "date": "December 5, 2025",
+    "timestamp": 1764892800000,
+    "tags": [
+      "Overview",
+      "Neurobiology",
+      "Scope",
+      "Advocacy"
+    ],
+    "summary": "Our journal goes beyond \"reading backward.\" This inaugural post outlines the neurobiological, cognitive, and emotional scope of dyslexia that we will explore.",
+    "fileUrl": "/research/DLDR/texts/journal-scope.md"
+  },
+  {
+    "id": "entry-1",
+    "title": "Phonological Awareness: Rhyming & Impact on Students with Dyslexia",
+    "author": "Research Team",
+    "date": "December 5, 2025",
+    "timestamp": 1764892800000,
+    "tags": [
+      "Dyslexia",
+      "Phonological Awareness",
+      "Rhyming",
+      "Intervention"
+    ],
+    "summary": "This paper provides a comprehensive review of the critical relationship between phonological awareness and developmental dyslexia, focusing specifically on rhyming ability.",
+    "fileUrl": "/research/DLDR/texts/PA-Rhyming-Impact.md"
+  }
+]

@@ -1,6 +1,6 @@
 <?php
 // --- Page Configuration ---
-$pageTitle = "Hesten's Learning - Research";
+$pageTitle = "Research - Hesten's Learning";
 $pageDescription = "Explore our peer-reviewed journals on dyslexia, dysgraphia, and other learning disability research.";
 $pageKeywords = "research, journals, dyslexia, dysgraphia, learning disabilities, education";
 $pageAuthor = "Hesten Allison";
@@ -8,30 +8,13 @@ $pageAuthor = "Hesten Allison";
 include '../src/header.php';
 
 // Define Journals Data Array
-$journals = [
-    [
-        "id" => "dyslexia-Research",
-        "title" => "Dyslexia & Learning Disabilities Research",
-        "cover" => "Dyslexia Research",
-        "description" => "A peer-reviewed journal focusing on the latest research in dyslexia, exploring innovative teaching methods, and validating new interventions.",
-        "link" => "DLDR/index.php",
-        "author" => "Hesten Allison",
-        "date" => "Oct 2025",
-        "tags" => ["Dyslexia", "Intervention"],
-        "isPeerReviewed" => true
-    ],
-    [
-        "id" => "dysgraphia-studies",
-        "title" => "Dysgraphia Studies & Motor Skills",
-        "cover" => "assets/dysgraphia_cover.png",
-        "description" => "Comprehensive studies on early signs of dysgraphia, neural pathways, and effective occupational therapy adaptations.",
-        "link" => "#",
-        "author" => "Dr. Emily Chen",
-        "date" => "Nov 2025",
-        "tags" => ["Dysgraphia", "Motor Skills"],
-        "isPeerReviewed" => true
-    ]
-];
+// Load Journals Data from JSON
+$jsonString = file_get_contents('../assets/data/research/journals.json');
+$journals = json_decode($jsonString, true);
+
+if ($journals === null) {
+    $journals = []; // Fallback empty array if decoding fails
+}
 ?>
 
 <!-- Link Dedicated Research Vanilla CSS -->
@@ -63,7 +46,7 @@ $journals = [
     </div>
 </div>
 
-<main class="container mx-auto px-4 mb-24" id="main-content">
+<main class="research-container" id="main-content">
 
     <!-- Search & Filter Controls -->
     <div class="research-controls-section">
@@ -71,24 +54,30 @@ $journals = [
         <div class="research-search-wrap">
             <i class="fas fa-search research-search-icon"></i>
             <input type="text" 
+                   id="journalSearchInput"
                    class="research-search-input" 
                    placeholder="Search journals, authors, or topics...">
         </div>
         
         <!-- Category Pills -->
-        <div class="research-category-pills">
-            <button class="category-pill-btn active">All</button>
-            <button class="category-pill-btn">Dyslexia</button>
-            <button class="category-pill-btn">Dysgraphia</button>
-            <button class="category-pill-btn">Intervention</button>
-            <button class="category-pill-btn">AI in Ed</button>
+        <div class="research-category-pills" id="categoryPills">
+            <button class="category-pill-btn active" data-filter="all">All</button>
+            <button class="category-pill-btn" data-filter="dyslexia">Dyslexia</button>
+            <button class="category-pill-btn" data-filter="dysgraphia">Dysgraphia</button>
+            <button class="category-pill-btn" data-filter="intervention">Intervention</button>
+            <button class="category-pill-btn" data-filter="ai in ed">AI in Ed</button>
         </div>
     </div>
 
     <!-- Journals Grid -->
-    <div class="research-grid">
+    <div class="research-grid" id="journalsGrid">
         <?php foreach ($journals as $journal): ?>
-            <a href="<?php echo htmlspecialchars($journal['link']); ?>" class="research-card">
+            <a href="<?php echo htmlspecialchars($journal['link']); ?>" 
+               class="research-card journal-card"
+               data-title="<?php echo htmlspecialchars(strtolower($journal['title'])); ?>"
+               data-tags="<?php echo htmlspecialchars(strtolower(implode(',', $journal['tags'] ?? []))); ?>"
+               data-author="<?php echo htmlspecialchars(strtolower($journal['author'] ?? '')); ?>"
+               data-description="<?php echo htmlspecialchars(strtolower($journal['description'] ?? '')); ?>">
                 
                 <!-- Card Image & Overlay -->
                 <div class="card-image-wrap">
@@ -99,7 +88,7 @@ $journals = [
                         <div class="card-image-overlay"></div>
                     <?php else: ?>
                         <div class="card-placeholder-content">
-                            <i class="fas fa-book-open text-white/50 text-5xl mb-4"></i>
+                            <i class="fas fa-book-open research-journal-icon"></i>
                             <h2 class="card-placeholder-title"><?php echo htmlspecialchars($journal['cover']); ?></h2>
                         </div>
                         <div class="card-image-overlay"></div>
@@ -162,7 +151,7 @@ $journals = [
             <div class="coming-soon-icon-wrap">
                 <div class="coming-soon-ping"></div>
                 <div class="coming-soon-icon-inner">
-                    <i class="fas fa-flask text-3xl"></i>
+                    <i class="fas fa-flask research-flask-icon"></i>
                 </div>
             </div>
             <h3 class="coming-soon-title">Next Publication</h3>
@@ -173,3 +162,52 @@ $journals = [
 </main>
 
 <?php include '../src/footer.php'; ?>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('journalSearchInput');
+    const pills = document.querySelectorAll('.category-pill-btn');
+    const cards = document.querySelectorAll('.journal-card');
+
+    let currentFilter = 'all';
+    let searchQuery = '';
+
+    function filterCards() {
+        cards.forEach(card => {
+            const title = card.getAttribute('data-title') || '';
+            const tags = card.getAttribute('data-tags') || '';
+            const author = card.getAttribute('data-author') || '';
+            const desc = card.getAttribute('data-description') || '';
+
+            const matchesSearch = title.includes(searchQuery) || 
+                                  author.includes(searchQuery) || 
+                                  desc.includes(searchQuery) ||
+                                  tags.includes(searchQuery);
+
+            const matchesFilter = currentFilter === 'all' || tags.includes(currentFilter);
+
+            if (matchesSearch && matchesFilter) {
+                card.style.display = 'flex';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+
+    searchInput.addEventListener('input', (e) => {
+        searchQuery = e.target.value.toLowerCase().trim();
+        filterCards();
+    });
+
+    pills.forEach(pill => {
+        pill.addEventListener('click', () => {
+            // Update active state
+            pills.forEach(p => p.classList.remove('active'));
+            pill.classList.add('active');
+
+            currentFilter = pill.getAttribute('data-filter').toLowerCase();
+            filterCards();
+        });
+    });
+});
+</script>
