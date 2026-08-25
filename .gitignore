@@ -13,6 +13,8 @@
 *.userosscache
 *.sln.docstates
 *.tmp.driveupload
+*.vscode
+*.php_tmp
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
