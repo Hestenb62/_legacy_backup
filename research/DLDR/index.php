@@ -14,28 +14,28 @@ include '../../src/header.php';
 
 <!-- Hero Section -->
 <div class="research-hero">
-    <!-- Background Animated Orbs & Icons -->
-    <div class="research-hero-bg">
-        <i class="fas fa-brain research-hero-icon brain"></i>
-        <i class="fas fa-puzzle-piece research-hero-icon microscope"></i>
-        <i class="fas fa-book-open research-hero-icon dna"></i>
-        
-        <div class="research-orb research-orb-1"></div>
-        <div class="research-orb research-orb-2"></div>
-        <div class="research-orb research-orb-3"></div>
-    </div>
+  <!-- Background Animated Orbs & Icons -->
+  <div class="research-hero-bg">
+    <i class="fas fa-brain research-hero-icon brain"></i>
+    <i class="fas fa-puzzle-piece research-hero-icon microscope"></i>
+    <i class="fas fa-book-open research-hero-icon dna"></i>
 
-    <div class="research-hero-content">
-        <span class="research-hero-badge">
-            <i class="fas fa-flask"></i> Research Journal
-        </span>
-        <h1 class="research-hero-title">
-            <span class="hero-title-shadow">Dyslexia &</span> <span class="hero-title-gradient">Learning Disabilities</span>
-        </h1>
-        <p class="research-hero-desc">
-            Ongoing research exploring the educational journey of students with dyslexia.
-        </p>
-    </div>
+    <div class="research-orb research-orb-1"></div>
+    <div class="research-orb research-orb-2"></div>
+    <div class="research-orb research-orb-3"></div>
+  </div>
+
+  <div class="research-hero-content">
+    <span class="research-hero-badge">
+      <i class="fas fa-flask"></i> Research Journal
+    </span>
+    <h1 class="research-hero-title">
+      <span class="hero-title-shadow">Dyslexia &</span> <span class="hero-title-gradient">Learning Disabilities</span>
+    </h1>
+    <p class="research-hero-desc">
+      Ongoing research exploring the educational journey of students with dyslexia.
+    </p>
+  </div>
 </div>
 
 <main class="research-container" id="main-content">
@@ -133,15 +133,15 @@ include '../../src/header.php';
       <!-- Export & TTS Tools -->
       <div class="flex flex-wrap items-center gap-2">
         <button id="ttsBtn" class="btn-research">
-             <i class="fas fa-volume-up"></i> <span id="ttsBtnText">Listen</span>
+          <i class="fas fa-volume-up"></i> <span id="ttsBtnText">Listen</span>
         </button>
-        
+
         <div class="h-6 w-px bg-gray-300 dark:bg-gray-600 mx-2"></div>
-        
+
         <button id="shareBtn" class="btn-research btn-research-secondary" title="Copy Link">
           <i class="fas fa-link"></i> <span>Copy</span>
         </button>
-        
+
         <button id="pdfBtn" class="btn-research btn-research-secondary" title="Export as PDF">PDF</button>
         <button id="htmlBtn" class="btn-research btn-research-secondary" title="Export as HTML">HTML</button>
         <button id="txtBtn" class="btn-research btn-research-secondary" title="Export as Text">TXT</button>
@@ -201,7 +201,7 @@ include '../../src/header.php';
     // 1. Search Filter
     if (state.searchQuery) {
       const q = state.searchQuery.toLowerCase();
-      filtered = filtered.filter(entry => 
+      filtered = filtered.filter(entry =>
         entry.title.toLowerCase().includes(q) ||
         entry.summary.toLowerCase().includes(q) ||
         entry.tags.some(t => t.toLowerCase().includes(q))
@@ -275,7 +275,7 @@ include '../../src/header.php';
       paginationEl.classList.add('hidden');
       return;
     }
-    
+
     paginationEl.classList.remove('hidden');
     paginationEl.innerHTML = '';
 
@@ -309,7 +309,10 @@ include '../../src/header.php';
   function changePage(pageNum) {
     state.currentPage = pageNum;
     render();
-    container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    container.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
   }
 
   function setupEventListeners() {
@@ -388,16 +391,16 @@ include '../../src/header.php';
     document.getElementById('modalAuthor').textContent = entry.author;
     document.getElementById('modalDate').textContent = entry.date;
     document.getElementById('modalSummary').textContent = entry.summary;
-    
+
     // Fetch and parse Markdown content
     try {
-        document.getElementById('modalFullContent').innerHTML = '<p class="text-center"><i class="fas fa-spinner fa-spin text-2xl"></i> Loading...</p>';
-        const response = await fetch(entry.fileUrl);
-        if(!response.ok) throw new Error("Failed to load content.");
-        const mdText = await response.text();
-        document.getElementById('modalFullContent').innerHTML = marked.parse(mdText);
+      document.getElementById('modalFullContent').innerHTML = '<p class="text-center"><i class="fas fa-spinner fa-spin text-2xl"></i> Loading...</p>';
+      const response = await fetch(entry.fileUrl);
+      if (!response.ok) throw new Error("Failed to load content.");
+      const mdText = await response.text();
+      document.getElementById('modalFullContent').innerHTML = marked.parse(mdText);
     } catch (err) {
-        document.getElementById('modalFullContent').innerHTML = '<p class="text-red-500">Error loading paper content.</p>';
+      document.getElementById('modalFullContent').innerHTML = '<p class="text-red-500">Error loading paper content.</p>';
     }
 
     // Tags
@@ -484,7 +487,9 @@ include '../../src/header.php';
 
   function download(filename, content, mime) {
     const element = document.createElement('a');
-    const file = new Blob([content], { type: mime });
+    const file = new Blob([content], {
+      type: mime
+    });
     element.href = URL.createObjectURL(file);
     element.download = filename;
     document.body.appendChild(element);
@@ -498,48 +503,48 @@ include '../../src/header.php';
   let isSpeaking = false;
 
   function setupTTS() {
-      ttsBtn.addEventListener('click', toggleTTS);
-      document.getElementById('closeModalBtn').addEventListener('click', stopTTS);
+    ttsBtn.addEventListener('click', toggleTTS);
+    document.getElementById('closeModalBtn').addEventListener('click', stopTTS);
   }
 
   function toggleTTS() {
-      if (isSpeaking) {
-          stopTTS();
-      } else {
-          const entry = journalData.find(e => e.id === state.currentEntryId);
-          if (!entry) return;
+    if (isSpeaking) {
+      stopTTS();
+    } else {
+      const entry = journalData.find(e => e.id === state.currentEntryId);
+      if (!entry) return;
 
-          const content = document.getElementById('modalFullContent').innerText;
-          const textToRead = entry.title + ". " + entry.summary + ". " + content;
+      const content = document.getElementById('modalFullContent').innerText;
+      const textToRead = entry.title + ". " + entry.summary + ". " + content;
 
-          const utterance = new SpeechSynthesisUtterance(textToRead);
-          utterance.onend = () => {
-              isSpeaking = false;
-              updateTTSUI(false);
-          };
-          
-          window.speechSynthesis.speak(utterance);
-          isSpeaking = true;
-          updateTTSUI(true);
-      }
+      const utterance = new SpeechSynthesisUtterance(textToRead);
+      utterance.onend = () => {
+        isSpeaking = false;
+        updateTTSUI(false);
+      };
+
+      window.speechSynthesis.speak(utterance);
+      isSpeaking = true;
+      updateTTSUI(true);
+    }
   }
 
   function stopTTS() {
-      window.speechSynthesis.cancel();
-      isSpeaking = false;
-      updateTTSUI(false);
+    window.speechSynthesis.cancel();
+    isSpeaking = false;
+    updateTTSUI(false);
   }
 
   function updateTTSUI(speaking) {
-      if (speaking) {
-          ttsBtn.classList.add('bg-red-100', 'text-red-600');
-          ttsBtn.classList.remove('bg-primary/10', 'text-primary');
-          ttsBtn.innerHTML = '<i class="fas fa-stop"></i> <span>Stop</span>';
-      } else {
-          ttsBtn.classList.remove('bg-red-100', 'text-red-600');
-          ttsBtn.classList.add('bg-primary/10', 'text-primary');
-          ttsBtn.innerHTML = '<i class="fas fa-volume-up"></i> <span>Listen</span>';
-      }
+    if (speaking) {
+      ttsBtn.classList.add('bg-red-100', 'text-red-600');
+      ttsBtn.classList.remove('bg-primary/10', 'text-primary');
+      ttsBtn.innerHTML = '<i class="fas fa-stop"></i> <span>Stop</span>';
+    } else {
+      ttsBtn.classList.remove('bg-red-100', 'text-red-600');
+      ttsBtn.classList.add('bg-primary/10', 'text-primary');
+      ttsBtn.innerHTML = '<i class="fas fa-volume-up"></i> <span>Listen</span>';
+    }
   }
 
   setupTTS();
