@@ -1,0 +1,2835 @@
+{
+    "lessons": {
+        "k-ela-m1-a-1": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-ela-m1-a-2": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-ela-m1-b-1": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-ela-m1-b-2": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-ela-m2-a-1": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-ela-m2-a-2": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-ela-m2-b-1": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-ela-m2-b-2": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m1-a-1": {
+            "meta": {
+                "title": "Graphs of Piecewise Linear Functions | Hesten",
+                "description": "Learn how to define quantities, choose scales, and translate physical actions into piecewise graphs with interactive stories.",
+                "author": "Hesten",
+                "badge": "Math Lesson K.M1.A.1\n            ",
+                "badgeIcon": "fa-calculator"
+            },
+            "overview": {
+                "title": "Student & Teacher Overview: Lesson 1",
+                "pill": "Piecewise Linear Functions",
+                "text": "In this lesson, you will learn to define appropriate quantities from physical situations, choose logical scales, and translate actions into piecewise graphs. Explore the interactive ladder simulation below, and read the classroom discussion blocks to master these concepts.",
+                "outcomes": [
+                    "Define appropriate variables to represent a physical situation.",
+                    "Choose and interpret the scale and origin for a coordinate plane.",
+                    "Understand that the slope of each line segment represents the average rate of change."
+                ],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": [
+                {
+                    "term": "Piecewise Linear Function",
+                    "definition": "A function defined by multiple linear segments, each covering a specific interval of time or domain. The overall graph looks like joined straight lines with corners."
+                },
+                {
+                    "term": "Average Rate of Change",
+                    "definition": "The change in the dependent variable (elevation) divided by the change in the independent variable (time) over a given interval. Graphically, this is the slope of the line segment."
+                },
+                {
+                    "term": "Independent Variable",
+                    "definition": "The input value of a function, which changes independently (usually time, graphed on the horizontal axis)."
+                },
+                {
+                    "term": "Dependent Variable",
+                    "definition": "The output value of a function, which depends on the input value (usually elevation\/height, graphed on the vertical axis)."
+                }
+            ]
+        },
+        "k-math-m1-a-2": {
+            "meta": {
+                "title": "Growth of Square Areas and Functions | Hesten",
+                "description": "Examine how the area of a square grows compared to its side length, laying foundations for quadratic functions.",
+                "author": "Hesten",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [
+                    "Growing from $s=1$ to $s=2$ adds 3 units of area ($4 - 1$).",
+                    "Growing from $s=2$ to $s=3$ adds 5 units of area ($9 - 4$).",
+                    "Growing from $s=9$ to $s=10$ adds 19 units of area ($100 - 81$)."
+                ],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m1-a-3": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m1-a-4": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m1-a-5": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m1-b-1": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m1-b-2": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m1-b-3": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m1-b-4": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m1-b-5": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m1-b-6": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m1-c-1": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m1-c-10": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m1-c-11": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m1-c-12": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m1-c-13": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m1-c-14": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m1-c-2": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m1-c-3": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m1-c-4": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m1-c-5": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m1-c-6": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m1-c-7": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m1-c-8": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m1-c-9": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m1-d-1": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m1-d-2": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m1-d-3": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m2-a-1": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m2-a-2": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m2-a-3": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m2-b-1": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m2-b-2": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m2-b-3": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m2-b-4": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m2-b-5": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m2-c-1": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m2-c-2": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m2-c-3": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m2-d-1": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m2-d-2": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m2-d-3": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m2-d-4": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m2-d-5": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m2-d-6": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m2-d-7": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m3-a-1": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m3-a-2": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m3-a-3": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m3-a-4": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m3-a-5": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m3-a-6": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m3-a-7": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m3-a-8": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m3-b-1": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m3-b-2": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m3-b-3": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m3-b-4": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m3-b-5": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m3-b-6": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m3-c-1": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m3-c-2": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m3-c-3": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m3-c-4": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m3-c-5": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m3-d-1": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m3-d-2": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m3-d-3": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m3-d-4": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m4-a-1": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m4-a-2": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m4-a-3": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m4-a-4": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m4-a-5": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m4-a-6": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m4-a-7": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m4-a-8": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m4-b-1": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m4-b-2": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m4-b-3": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m4-b-4": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m4-b-5": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m4-b-6": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m4-b-7": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m4-c-1": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m4-c-2": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m4-c-3": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m4-c-4": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m4-c-5": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m4-c-6": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m4-c-7": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m5-a-1": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m5-a-2": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m5-a-3": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m5-b-1": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m5-b-2": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m5-b-3": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-math-m5-b-4": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-sci-m1-a-1": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-sci-m1-a-2": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-sci-m1-b-1": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-sci-m1-b-2": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-sci-m2-a-1": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-sci-m2-a-2": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-sci-m2-b-1": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-sci-m2-b-2": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-soc-m1-a-1": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-soc-m1-a-2": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-soc-m1-b-1": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-soc-m1-b-2": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-soc-m2-a-1": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-soc-m2-a-2": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-soc-m2-b-1": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        },
+        "k-soc-m2-b-2": {
+            "meta": {
+                "title": "Untitled Lesson",
+                "description": "",
+                "author": "Hesten's Learning Team",
+                "badge": "Lesson",
+                "badgeIcon": "fa-book"
+            },
+            "overview": {
+                "title": "Lesson Overview",
+                "pill": "",
+                "text": "",
+                "outcomes": [],
+                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
+            },
+            "content": [
+                {
+                    "type": "manual_migration_required",
+                    "note": "Interactive content must be migrated to components manually."
+                }
+            ],
+            "vocabulary": []
+        }
+    }
+}
