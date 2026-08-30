@@ -145,6 +145,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    height: 100%;
     padding: 1.5rem;
     border-radius: var(--radius-lg);
     background-color: rgba(255, 237, 213, 0.2);

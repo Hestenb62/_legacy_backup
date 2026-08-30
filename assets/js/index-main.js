@@ -496,7 +496,7 @@ function toggleCompletion(id, btn) {
 function markCardComplete(card, isComplete) {
     const bar = card.querySelector('.completion-bar');
     const btn = card.querySelector('.complete-btn');
-    const contentDiv = card.querySelector('.shadow-premium');
+    const contentDiv = card.querySelector('.level-card-inner');
 
     if (isComplete) {
         if (bar) bar.style.width = '100%';
@@ -531,12 +531,10 @@ function toggleBookmark(id, btn) {
 
 function markBtnBookmarked(btn, active) {
     if (active) {
-        btn.classList.add('text-amber-500', 'bg-amber-100', 'dark:bg-amber-500/20', 'border-transparent');
-        btn.classList.remove('text-gray-400', 'bg-gray-50', 'dark:bg-white/5', 'border-gray-200', 'dark:border-white/5');
+        btn.classList.add('btn-bookmarked');
         btn.innerHTML = '<i class="fas fa-star text-sm"></i>'; // Solid star
     } else {
-        btn.classList.remove('text-amber-500', 'bg-amber-100', 'dark:bg-amber-500/20', 'border-transparent');
-        btn.classList.add('text-gray-400', 'bg-gray-50', 'dark:bg-white/5', 'border-gray-200', 'dark:border-white/5');
+        btn.classList.remove('btn-bookmarked');
         btn.innerHTML = '<i class="far fa-star text-sm"></i>'; // Outline star
     }
 }

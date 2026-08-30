@@ -1,6 +1,13 @@
 /* assets/css/components/level-card.css */
 
 @layer components {
+  .level-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
   .level-card-inner {
     height: 100%;
     border-radius: var(--radius-2xl);
@@ -25,11 +32,18 @@
   }
 
   .level-card-glow {
-    display: none;
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    border-radius: var(--radius-2xl);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background: linear-gradient(135deg, color-mix(in srgb, var(--color-primary) 15%, transparent), color-mix(in srgb, var(--color-secondary) 15%, transparent));
+    z-index: 1;
   }
 
   .level-card:hover .level-card-glow {
-    background-color: color-mix(in srgb, var(--color-primary) 10%, transparent);
+    opacity: 1;
   }
 
   .level-card-header {
@@ -220,6 +234,12 @@
   .btn-completed {
     background-color: var(--color-success) !important;
     color: var(--color-text-inverse) !important;
+    border-color: transparent !important;
+  }
+
+  .btn-bookmarked {
+    background-color: color-mix(in srgb, var(--color-warning) 20%, transparent) !important;
+    color: var(--color-warning) !important;
     border-color: transparent !important;
   }
 
