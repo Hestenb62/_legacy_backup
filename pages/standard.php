@@ -74,7 +74,7 @@ function getStandardExample($std) {
 }
 
 // --- Data Loading ---
-$jsonString = file_get_contents(__DIR__ . '/data/standards.json');
+$jsonString = file_get_contents(__DIR__ . '/../assets/data/global-standards.json');
 $standards = json_decode($jsonString, true);
 if (!is_array($standards)) {
     $standards = [];

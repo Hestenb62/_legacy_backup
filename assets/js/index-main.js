@@ -191,7 +191,111 @@ function openDocModal(btn) {
     document.getElementById('modal-desc').textContent = desc;
 
     const docsContainer = document.getElementById('modal-docs');
-    if (docs && docs.trim() !== '') {
+    
+    // Attempt dynamic curriculum loading from window.curriculumData
+    let subjectsWithData = [];
+    const activeCurr = (window.currentSettings && window.currentSettings.curriculum) || 'engageny';
+    const resolvedCurr = (activeCurr === 'engageny') ? 'ccss' : activeCurr;
+
+    const GRADE_MAP = {
+        'Pre-K': 'Pre-K',
+        'Kindergarten': 'Kindergarten',
+        'Grade 1': '1st Grade',
+        'Grade 2': '2nd Grade',
+        'Grade 3': '3rd Grade',
+        'Grade 4': '4th Grade',
+        'Grade 5': '5th Grade',
+        'Grade 6': '6th Grade',
+        'Grade 7': '7th Grade',
+        'Grade 8': '8th Grade',
+        'Grade 9': '9th Grade',
+        'Grade 10': '10th Grade',
+        'Grade 11': '11th Grade',
+        'Grade 12': '12th Grade'
+    };
+    const curriculumGradeKey = GRADE_MAP[title] || title;
+
+    if (typeof window.curriculumData !== 'undefined') {
+        const subjects = ['math', 'ela', 'science', 'social'];
+        subjects.forEach(subjectKey => {
+            const subject = window.curriculumData[subjectKey];
+            const gradeData = (subject && subject.grades && subject.grades[curriculumGradeKey]) ? subject.grades[curriculumGradeKey] : null;
+            if (gradeData) {
+                const specData = gradeData[resolvedCurr] || gradeData['ccss'] || gradeData['teks'] || gradeData['custom'];
+                if (specData) {
+                    subjectsWithData.push({
+                        key: subjectKey,
+                        name: subjectKey === 'math' ? 'Mathematics' : (subjectKey === 'ela' ? 'English Language Arts' : (subject.desc ? subjectKey.charAt(0).toUpperCase() + subjectKey.slice(1) : subjectKey)),
+                        data: specData
+                    });
+                }
+            }
+        });
+    }
+
+    if (subjectsWithData.length > 0) {
+        let tabHeaders = '<div class="doc-modal-tab-container">';
+        tabHeaders += '<div id="modal-tab-slider" class="doc-modal-tab-slider"></div>';
+        let tabContents = '<div class="doc-modal-pane-container">';
+
+        subjectsWithData.forEach((subj, index) => {
+            const isActive = index === 0;
+            const activeClass = isActive ? 'active' : '';
+
+            tabHeaders += `<button type="button" class="modal-tab-pill ${activeClass}" data-index="${index}" onclick="switchModalTab(this, ${index})">
+                ${subj.name}
+            </button>`;
+
+            const contentClass = isActive ? 'doc-modal-pane active' : 'doc-modal-pane';
+            const staggerDelay = isActive ? '0s' : `${index * 0.05}s`;
+            
+            let paneHTML = `
+                <div class="doc-modal-pane-inner">
+                    <div class="doc-modal-pane-glow"></div>
+                    <div class="doc-modal-pane-content prose-content">
+                        <h5 class="text-lg font-bold text-primary mb-2">Overview</h5>
+                        <div class="mb-4">${subj.data.overview}</div>
+            `;
+            
+            if (subj.data.competencies && subj.data.competencies.length > 0) {
+                paneHTML += `
+                        <h5 class="text-lg font-bold text-primary mb-2 mt-4">Core Competencies</h5>
+                        <ul class="list-disc pl-5 mb-4">
+                            ${subj.data.competencies.map(comp => `<li>${comp}</li>`).join('')}
+                        </ul>
+                `;
+            }
+            
+            if (subj.data.standards && subj.data.standards.trim() !== '') {
+                paneHTML += `
+                        <h5 class="text-lg font-bold text-primary mb-2 mt-4">Curriculum Standards</h5>
+                        <div class="curr-standards-list">${subj.data.standards}</div>
+                `;
+            }
+            
+            paneHTML += `
+                    </div>
+                </div>
+            `;
+
+            tabContents += `<div class="${contentClass}" data-index="${index}" style="animation-delay: ${staggerDelay}">
+                ${paneHTML}
+            </div>`;
+        });
+
+        tabHeaders += '</div>';
+        tabContents += '</div>';
+
+        docsContainer.innerHTML = `<h4 class="doc-modal-curriculum-title">
+            <span class="doc-modal-curriculum-dot"></span> Core Subjects & Standards
+        </h4>${tabHeaders}${tabContents}`;
+
+        // Initialize slider position
+        setTimeout(() => {
+            const firstTab = document.querySelector('.modal-tab-pill');
+            if (firstTab) updateModalTabSlider(firstTab);
+        }, 50);
+    } else if (docs && docs.trim() !== '') {
         const parser = new DOMParser();
         const docEl = parser.parseFromString(docs, 'text/html');
         const h4 = docEl.querySelector('h4');
