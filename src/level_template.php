@@ -143,6 +143,12 @@ function renderSubjectModules(array $modulesList, string $subjectId, string $sub
 
 <!-- IXL-Style Clean Header -->
 <header class="level-hero">
+    <!-- Aurora Mesh Background -->
+    <div class="level-aurora-bg" aria-hidden="true">
+        <div class="level-aurora-blob blob-1"></div>
+        <div class="level-aurora-blob blob-2"></div>
+        <div class="level-aurora-blob blob-3"></div>
+    </div>
     <div class="hero-inner">
         <div>
             <div class="hero-title-group">

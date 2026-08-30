@@ -100,6 +100,8 @@ h1, h2, h3, h4 {
   padding: 4rem 1rem 3rem 1rem;
   background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
   border-bottom: 1px solid var(--glass-border);
+  position: relative;
+  overflow: hidden;
 }
 
 .hero-inner {
@@ -111,6 +113,78 @@ h1, h2, h3, h4 {
   flex-wrap: wrap;
   gap: 1.5rem;
   animation: fadeUp 0.6s ease-out;
+  position: relative;
+  z-index: 2;
+}
+
+/* Aurora Mesh Background for Level Hero */
+.level-aurora-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.level-aurora-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.15;
+  will-change: transform;
+  mix-blend-mode: multiply;
+  animation: float-level-blob 20s infinite ease-in-out;
+}
+
+:root[data-theme="dark"] .level-aurora-blob,
+:root[data-theme="midnight"] .level-aurora-blob,
+body.dark .level-aurora-blob {
+  mix-blend-mode: screen;
+  opacity: 0.1;
+}
+
+:root[data-theme="high-contrast"] .level-aurora-bg {
+  display: none;
+}
+
+.level-aurora-blob.blob-1 {
+  top: -30%;
+  left: 5%;
+  width: 25rem;
+  height: 25rem;
+  background-color: var(--theme-color);
+}
+
+.level-aurora-blob.blob-2 {
+  bottom: -40%;
+  right: 5%;
+  width: 22rem;
+  height: 22rem;
+  background-color: color-mix(in srgb, var(--theme-color) 40%, var(--color-accent, #06b6d4));
+  animation-delay: -5s;
+  animation-duration: 25s;
+}
+
+.level-aurora-blob.blob-3 {
+  top: -10%;
+  right: 35%;
+  width: 18rem;
+  height: 18rem;
+  background-color: color-mix(in srgb, var(--theme-color) 30%, var(--color-secondary, #ec4899));
+  animation-delay: -10s;
+  animation-duration: 18s;
+}
+
+@keyframes float-level-blob {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(4%, -8%) scale(1.08);
+  }
+  66% {
+    transform: translate(-3%, 5%) scale(0.92);
+  }
 }
 
 @keyframes fadeUp {
