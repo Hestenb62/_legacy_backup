@@ -850,6 +850,10 @@ function nextQuestionAdapter() {
   }
 }
 
+// Expose functions globally to HTML handlers
+window.filterQuestions = filterQuestions;
+window.nextQuestionAdapter = nextQuestionAdapter;
+
 // Feedback observer
 const observer = new MutationObserver((mutations) => {
   const fb = document.getElementById("feedback");

@@ -113,6 +113,7 @@ function applySettings(s) {
     b.classList.remove(...themes);
     r.classList.add(s.theme);
     b.classList.add(s.theme);
+    r.setAttribute('data-theme', s.theme);
 
     // --- Toggles ---
     const toggleClass = (el, cls, cond) => {

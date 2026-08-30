@@ -264,7 +264,7 @@ include '../src/header.php';
                 </div>
 
                 <!-- Hint Modal (Inline) -->
-                <div id="hintText" class="hint-box" style="display: none;">
+                <div id="hintText" class="hint-box hidden">
                     <strong>Hint:</strong> <span id="hint-content"></span>
                 </div>
             </div>

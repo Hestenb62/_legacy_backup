@@ -485,10 +485,6 @@
   .bg-indigo-900 { background-color: #1e1b4b; }
 
   /* Darker typography overrides for assessment content readability */
-  .assessment-container, .assessment-select-section {
-    --color-text-main: #0f172a; 
-    --color-text-muted: #334155;
-  }
 
   .assessment-container h2, 
   .assessment-container h3, 
