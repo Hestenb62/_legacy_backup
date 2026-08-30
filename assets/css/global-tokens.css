@@ -28,6 +28,7 @@
     --color-text-secondary: var(--color-text-muted);
     --color-base-bg: var(--color-bg-base);
     --color-content-bg: var(--color-bg-surface);
+    --color-surface: var(--color-bg-surface);
     --site-font-family: var(--font-body);
 
     /* State & Utility Colors */

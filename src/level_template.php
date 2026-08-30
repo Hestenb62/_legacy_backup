@@ -256,7 +256,7 @@ function renderSubjectModules(array $modulesList, string $subjectId, string $sub
         </div>
 
         <!-- Aligned Library Books & Literature -->
-        <div id="side-aligned-library" class="sidebar-card library-aligned-card" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 1.25rem; padding: 1.25rem; box-shadow: var(--shadow-sm); text-align: left;">
+        <div id="side-aligned-library" class="sidebar-card library-aligned-card" style="background: var(--bg-secondary); border: 1px solid var(--glass-border); border-radius: 1.25rem; padding: 1.25rem; box-shadow: var(--shadow-sm); text-align: left;">
             <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
                 <h4 style="font-family: var(--site-font-family, 'Outfit', sans-serif); font-size: 0.95rem; font-weight: 800; margin: 0; color: var(--color-text-default); display: flex; align-items: center; gap: 0.5rem;">
                     <i class="fas fa-book-reader" style="color: var(--color-primary);"></i> Curriculum Literature

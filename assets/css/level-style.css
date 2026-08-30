@@ -5,25 +5,8 @@
   --bg-secondary: var(--color-surface, #f9fafb);
   --text-main: var(--color-text-default, #111827);
   --text-muted: var(--color-text-secondary, #6b7280);
-  --glass-bg: rgba(255, 255, 255, 0.7);
-  --glass-border: rgba(255, 255, 255, 0.4);
   --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-}
-
-:root[data-theme="dark"], body.dark {
-  --glass-bg: rgba(17, 24, 39, 0.7);
-  --glass-border: rgba(255, 255, 255, 0.1);
-}
-
-:root[data-theme="midnight"] {
-  --glass-bg: rgba(10, 10, 10, 0.7);
-  --glass-border: rgba(255, 255, 255, 0.1);
-}
-
-:root[data-theme="sepia"] {
-  --glass-bg: rgba(244, 236, 216, 0.7);
-  --glass-border: rgba(220, 204, 170, 0.4);
 }
 
 body {

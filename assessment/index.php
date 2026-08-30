@@ -77,7 +77,7 @@ include '../src/header.php';
             <i class="fas fa-clipboard-list" style="font-size: 8rem; color: var(--color-text-main);"></i>
         </div>
         
-        <h2 class="assessment-hero-title" style="font-size: 2.25rem; text-align: center; margin-bottom: 1rem; background: linear-gradient(135deg, var(--color-primary), var(--color-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-family: 'Outfit', sans-serif; font-weight: 800;">
+        <h2 class="assessment-hero-title" style="font-size: 2.25rem; text-align: center; margin-bottom: 1rem; background: linear-gradient(135deg, var(--color-primary), var(--color-secondary)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-family: 'Outfit', sans-serif; font-weight: 800;">
             Ready to Begin?
         </h2>
         <p style="text-align: center; margin-bottom: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto; color: var(--color-text-muted); line-height: 1.6;">
