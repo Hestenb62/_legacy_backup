@@ -70,20 +70,21 @@ include '../src/header.php';
             </button>
         </div>
 
-        <!-- Active Game Container -->
-        <div id="game-arena" class="game-arena hidden">
+        <!-- Active Game Container (Accessible Popup Modal) -->
+        <div id="game-arena" class="game-arena hidden" role="dialog" aria-modal="true" aria-labelledby="arena-title">
+            <div class="game-arena-dialog" id="game-arena-dialog">
+                <!-- Game Header -->
+                <div class="game-arena-header">
+                    <h3 id="arena-title" class="arena-title">Game Title</h3>
+                    <button onclick="closeGame()" class="arena-close-btn" aria-label="Exit Game">
+                        <i class="fas fa-times"></i> Exit
+                    </button>
+                </div>
 
-            <!-- Game Header -->
-            <div class="game-arena-header">
-                <h3 id="arena-title" class="arena-title">Game Title</h3>
-                <button onclick="closeGame()" class="arena-close-btn">
-                    <i class="fas fa-times"></i> Exit Game
-                </button>
-            </div>
-
-            <!-- Game Canvas/Area -->
-            <div id="arena-content" class="arena-content">
-                <!-- Game content injected here via JS -->
+                <!-- Game Canvas/Area -->
+                <div id="arena-content" class="arena-content">
+                    <!-- Game content injected here via JS -->
+                </div>
             </div>
 
             <!-- ARIA Live Region for Screen Readers -->
@@ -136,43 +137,248 @@ include '../src/header.php';
     const arena = document.getElementById('game-arena');
     const arenaTitle = document.getElementById('arena-title');
     const arenaContent = document.getElementById('arena-content');
+    const arenaDialog = document.getElementById('game-arena-dialog');
 
+    let lastFocusedElement = null;
+
+    // Game Configurations State
+    let memoryDifficulty = 'medium'; // easy, medium, hard
+    let memoryTheme = 'icons'; // icons, numbers, letters
+    let mathOperation = 'addition'; // addition, subtraction, multiplication, mixed
+    let mathDifficulty = 'easy'; // easy, medium, hard
+
+    // Modal Controls & Keyboard Trapping
     function loadGame(gameType) {
+        lastFocusedElement = document.activeElement;
+        
         arena.classList.remove('hidden');
-        arena.scrollIntoView({ behavior: 'smooth' });
+        document.body.style.overflow = 'hidden';
 
-        if (gameType === 'memory') startMemoryGame();
-        if (gameType === 'math') startMathGame();
+        if (gameType === 'memory') showMemorySetup();
+        if (gameType === 'math') showMathSetup();
     }
 
     function closeGame() {
         arena.classList.add('hidden');
+        document.body.style.overflow = '';
         announce("Game closed.");
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        
+        if (lastFocusedElement) {
+            lastFocusedElement.focus();
+        }
     }
 
+    // Keyboard navigation & trap inside the modal
+    document.addEventListener('keydown', function(e) {
+        if (arena.classList.contains('hidden')) return;
+
+        // Escape Key closes the modal
+        if (e.key === 'Escape') {
+            closeGame();
+            return;
+        }
+
+        // Tab Trapping
+        if (e.key === 'Tab') {
+            const focusableSelectors = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+            const focusables = arena.querySelectorAll(focusableSelectors);
+            if (focusables.length === 0) return;
+
+            const first = focusables[0];
+            const last = focusables[focusables.length - 1];
+
+            if (e.shiftKey) { // Shift + Tab
+                if (document.activeElement === first) {
+                    last.focus();
+                    e.preventDefault();
+                }
+            } else { // Tab
+                if (document.activeElement === last) {
+                    first.focus();
+                    e.preventDefault();
+                }
+            }
+        }
+    });
+
+    // --- GAME SETUP SCREENS ---
+    function showMemorySetup() {
+        arenaTitle.textContent = "Memory Match - Options";
+        arenaDialog.classList.remove('wide');
+
+        let setupHtml = `
+            <div class="game-setup-container">
+                <div>
+                    <h4 class="setup-section-title">Difficulty / Grid Size</h4>
+                    <div class="options-button-group" role="radiogroup" aria-label="Difficulty">
+                        <button type="button" class="option-btn ${memoryDifficulty === 'easy' ? 'active' : ''}" onclick="setMemoryDifficulty('easy')" id="opt-mem-easy">Easy (3x4)</button>
+                        <button type="button" class="option-btn ${memoryDifficulty === 'medium' ? 'active' : ''}" onclick="setMemoryDifficulty('medium')" id="opt-mem-medium">Medium (4x4)</button>
+                        <button type="button" class="option-btn ${memoryDifficulty === 'hard' ? 'active' : ''}" onclick="setMemoryDifficulty('hard')" id="opt-mem-hard">Hard (4x5)</button>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="setup-section-title">Card Theme</h4>
+                    <div class="options-button-group" role="radiogroup" aria-label="Card Theme">
+                        <button type="button" class="option-btn ${memoryTheme === 'icons' ? 'active' : ''}" onclick="setMemoryTheme('icons')" id="opt-theme-icons">Icons</button>
+                        <button type="button" class="option-btn ${memoryTheme === 'numbers' ? 'active' : ''}" onclick="setMemoryTheme('numbers')" id="opt-theme-numbers">Numbers</button>
+                        <button type="button" class="option-btn ${memoryTheme === 'letters' ? 'active' : ''}" onclick="setMemoryTheme('letters')" id="opt-theme-letters">Letters</button>
+                    </div>
+                </div>
+                <button onclick="startMemoryGame()" class="start-game-btn">
+                    <i class="fas fa-play"></i> Start Game
+                </button>
+            </div>
+        `;
+        arenaContent.innerHTML = setupHtml;
+
+        setTimeout(() => {
+            const activeDifficulty = document.querySelector('.options-button-group [id^="opt-mem-"].active') || document.getElementById('opt-mem-medium');
+            if (activeDifficulty) activeDifficulty.focus();
+        }, 100);
+    }
+
+    function showMathSetup() {
+        arenaTitle.textContent = "Math Master - Options";
+        arenaDialog.classList.remove('wide');
+
+        let setupHtml = `
+            <div class="game-setup-container">
+                <div>
+                    <h4 class="setup-section-title">Operation</h4>
+                    <div class="options-button-group" role="radiogroup" aria-label="Operations">
+                        <button type="button" class="option-btn ${mathOperation === 'addition' ? 'active' : ''}" onclick="setMathOperation('addition')" id="opt-math-add">Addition (+)</button>
+                        <button type="button" class="option-btn ${mathOperation === 'subtraction' ? 'active' : ''}" onclick="setMathOperation('subtraction')" id="opt-math-sub">Subtraction (-)</button>
+                        <button type="button" class="option-btn ${mathOperation === 'multiplication' ? 'active' : ''}" onclick="setMathOperation('multiplication')" id="opt-math-mul">Multiplication (×)</button>
+                        <button type="button" class="option-btn ${mathOperation === 'mixed' ? 'active' : ''}" onclick="setMathOperation('mixed')" id="opt-math-mixed">Mixed</button>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="setup-section-title">Difficulty</h4>
+                    <div class="options-button-group" role="radiogroup" aria-label="Difficulty Level">
+                        <button type="button" class="option-btn ${mathDifficulty === 'easy' ? 'active' : ''}" onclick="setMathDifficulty('easy')" id="opt-math-easy">Easy (1-10)</button>
+                        <button type="button" class="option-btn ${mathDifficulty === 'medium' ? 'active' : ''}" onclick="setMathDifficulty('medium')" id="opt-math-medium">Medium (1-20)</button>
+                        <button type="button" class="option-btn ${mathDifficulty === 'hard' ? 'active' : ''}" onclick="setMathDifficulty('hard')" id="opt-math-hard">Hard (up to 100)</button>
+                    </div>
+                </div>
+                <button onclick="startMathGame()" class="start-game-btn">
+                    <i class="fas fa-play"></i> Start Game
+                </button>
+            </div>
+        `;
+        arenaContent.innerHTML = setupHtml;
+
+        setTimeout(() => {
+            const activeOp = document.querySelector('.options-button-group [id^="opt-math-"].active') || document.getElementById('opt-math-add');
+            if (activeOp) activeOp.focus();
+        }, 100);
+    }
+
+    // Setters for setup options
+    function setMemoryDifficulty(diff) {
+        memoryDifficulty = diff;
+        ['easy', 'medium', 'hard'].forEach(d => {
+            const btn = document.getElementById(`opt-mem-${d}`);
+            if (btn) btn.classList.toggle('active', d === diff);
+        });
+        sounds.click();
+        announce(`Difficulty set to ${diff}`);
+    }
+
+    function setMemoryTheme(theme) {
+        memoryTheme = theme;
+        ['icons', 'numbers', 'letters'].forEach(t => {
+            const btn = document.getElementById(`opt-theme-${t}`);
+            if (btn) btn.classList.toggle('active', t === theme);
+        });
+        sounds.click();
+        announce(`Theme set to ${theme}`);
+    }
+
+    function setMathOperation(op) {
+        mathOperation = op;
+        ['add', 'sub', 'mul', 'mixed'].forEach(o => {
+            const opName = o === 'add' ? 'addition' : o === 'sub' ? 'subtraction' : o === 'mul' ? 'multiplication' : 'mixed';
+            const btn = document.getElementById(`opt-math-${o}`);
+            if (btn) btn.classList.toggle('active', opName === op);
+        });
+        sounds.click();
+        announce(`Operation set to ${op}`);
+    }
+
+    function setMathDifficulty(diff) {
+        mathDifficulty = diff;
+        ['easy', 'medium', 'hard'].forEach(d => {
+            const btn = document.getElementById(`opt-math-${d}`);
+            if (btn) btn.classList.toggle('active', d === diff);
+        });
+        sounds.click();
+        announce(`Difficulty level set to ${diff}`);
+    }
+
+
     // --- GAME 1: MEMORY MATCH ---
+    const iconLibrary = ['star', 'heart', 'bolt', 'moon', 'cloud', 'sun', 'snowflake', 'leaf', 'smile', 'music'];
+    const numberLibrary = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
+    const letterLibrary = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
+
+    let flippedCards = [];
+    let matchedPairs = 0;
+    let totalPairs = 8;
+    let isProcessing = false;
+
     function startMemoryGame() {
         arenaTitle.textContent = "Memory Match";
-        announce("Memory Match started. Grid is 4 by 4. Use arrow keys to navigate, Enter to flip cards.");
 
-        const icons = ['star', 'heart', 'bolt', 'moon', 'cloud', 'sun', 'snowflake', 'leaf'];
+        // Determine pairs needed and modal width
+        let pairsNeeded = 8;
+        let gridClass = 'grid-medium';
+        if (memoryDifficulty === 'easy') {
+            pairsNeeded = 6;
+            gridClass = 'grid-easy';
+            arenaDialog.classList.remove('wide');
+        } else if (memoryDifficulty === 'hard') {
+            pairsNeeded = 10;
+            gridClass = 'grid-hard';
+            arenaDialog.classList.add('wide');
+        } else {
+            pairsNeeded = 8;
+            gridClass = 'grid-medium';
+            arenaDialog.classList.remove('wide');
+        }
+
+        announce(`Memory Match started. Difficulty is ${memoryDifficulty}. Theme is ${memoryTheme}. Use keyboard or click to match.`);
+
+        // Determine theme content library
+        let library;
+        if (memoryTheme === 'numbers') {
+            library = numberLibrary;
+        } else if (memoryTheme === 'letters') {
+            library = letterLibrary;
+        } else {
+            library = iconLibrary;
+        }
+
+        const activeSymbols = library.slice(0, pairsNeeded);
         // Duplicate and shuffle
-        let cards = [...icons, ...icons].sort(() => 0.5 - Math.random());
+        let cards = [...activeSymbols, ...activeSymbols].sort(() => 0.5 - Math.random());
 
-        let gridHtml = `<div class="memory-grid" role="grid" aria-label="Memory Game Board">`;
+        let gridHtml = `<div class="memory-grid ${gridClass}" role="grid" aria-label="Memory Game Board">`;
         cards.forEach((icon, index) => {
             gridHtml += `
                 <button id="card-${index}" class="memory-card state-hidden" 
                     onclick="flipCard(${index}, '${icon}')" 
                     aria-label="Card ${index + 1}, hidden">
                     <div class="memory-card-inner">
-                        <i class="fas fa-question icon-hidden"></i>
+                        ${getCardContent(icon, false)}
                     </div>
                 </button>
             `;
         });
-        gridHtml += `</div><div class="memory-controls"><button onclick="startMemoryGame()" class="memory-restart-btn">Restart Game</button></div>`;
+        gridHtml += `</div>
+        <div class="memory-controls">
+            <button onclick="showMemorySetup()" class="memory-restart-btn" style="margin-right: 0.5rem;">Options Setup</button>
+            <button onclick="startMemoryGame()" class="memory-restart-btn">Restart Game</button>
+        </div>`;
 
         arenaContent.innerHTML = gridHtml;
 
@@ -185,13 +391,20 @@ include '../src/header.php';
         // Reset Game State
         flippedCards = [];
         matchedPairs = 0;
-        totalPairs = icons.length;
+        totalPairs = pairsNeeded;
+        isProcessing = false;
     }
 
-    let flippedCards = [];
-    let matchedPairs = 0;
-    let totalPairs = 8;
-    let isProcessing = false;
+    function getCardContent(icon, isFlipped) {
+        if (!isFlipped) {
+            return `<i class="fas fa-question icon-hidden"></i>`;
+        }
+        if (memoryTheme === 'icons') {
+            return `<i class="fas fa-${icon}"></i>`;
+        } else {
+            return `<span class="card-text">${icon}</span>`;
+        }
+    }
 
     function flipCard(index, icon) {
         if (isProcessing) return;
@@ -205,7 +418,7 @@ include '../src/header.php';
         // Visual Flip
         btn.classList.remove('state-hidden');
         btn.classList.add('state-flipped');
-        btn.querySelector('.memory-card-inner').innerHTML = `<i class="fas fa-${icon}"></i>`;
+        btn.querySelector('.memory-card-inner').innerHTML = getCardContent(icon, true);
         btn.setAttribute('aria-label', `Card ${index + 1}, ${icon}`);
         announce(`${icon}`);
 
@@ -246,13 +459,13 @@ include '../src/header.php';
                 // Reset Card 1
                 btn1.classList.remove('state-flipped');
                 btn1.classList.add('state-hidden');
-                btn1.querySelector('.memory-card-inner').innerHTML = `<i class="fas fa-question icon-hidden"></i>`;
+                btn1.querySelector('.memory-card-inner').innerHTML = getCardContent(c1.icon, false);
                 btn1.setAttribute('aria-label', `Card ${c1.index + 1}, hidden`);
 
                 // Reset Card 2
                 btn2.classList.remove('state-flipped');
                 btn2.classList.add('state-hidden');
-                btn2.querySelector('.memory-card-inner').innerHTML = `<i class="fas fa-question icon-hidden"></i>`;
+                btn2.querySelector('.memory-card-inner').innerHTML = getCardContent(c2.icon, false);
                 btn2.setAttribute('aria-label', `Card ${c2.index + 1}, hidden`);
 
                 isProcessing = false;
@@ -269,12 +482,14 @@ include '../src/header.php';
                 <div class="memory-win-overlay">
                     <h4 class="win-title">Victory!</h4>
                     <p class="win-text">You cleared the board!</p>
-                    <button onclick="startMemoryGame()" class="win-btn">Play Again</button>
+                    <div style="display: flex; gap: 1rem; z-index: 20;">
+                        <button onclick="showMemorySetup()" class="win-btn" style="background-color: var(--color-bg-elevated); color: var(--color-text-main);">Change Options</button>
+                        <button onclick="startMemoryGame()" class="win-btn">Play Again</button>
+                    </div>
                 </div>
             `;
-            // Trap focus in Play Again
             setTimeout(() => {
-                const playAgainBtn = arenaContent.querySelector('.win-btn');
+                const playAgainBtn = arenaContent.querySelector('.memory-win-overlay .win-btn:last-child');
                 if (playAgainBtn) playAgainBtn.focus();
             }, 100);
         }
@@ -286,23 +501,74 @@ include '../src/header.php';
 
     function startMathGame() {
         arenaTitle.textContent = "Math Master";
+        arenaDialog.classList.remove('wide');
         announce("Math Master started. Type the correct answer and press Enter or click Submit.");
         generateMathProblem();
     }
 
     function generateMathProblem() {
-        const num1 = Math.floor(Math.random() * 10) + 1;
-        const num2 = Math.floor(Math.random() * 10) + 1;
-        const isAddition = Math.random() > 0.5;
+        let num1, num2, symbol, actualOp;
 
-        currentAnswer = isAddition ? num1 + num2 : num1 * num2;
-        const symbol = isAddition ? '+' : '×';
+        // Choose actual operation based on configuration choice
+        if (mathOperation === 'mixed') {
+            const ops = ['addition', 'subtraction', 'multiplication'];
+            actualOp = ops[Math.floor(Math.random() * ops.length)];
+        } else {
+            actualOp = mathOperation;
+        }
+
+        // Determine range limits based on difficulty
+        if (mathDifficulty === 'easy') {
+            if (actualOp === 'multiplication') {
+                num1 = Math.floor(Math.random() * 5) + 1; // 1-5
+                num2 = Math.floor(Math.random() * 5) + 1; // 1-5
+            } else {
+                num1 = Math.floor(Math.random() * 10) + 1; // 1-10
+                num2 = Math.floor(Math.random() * 10) + 1; // 1-10
+            }
+        } else if (mathDifficulty === 'medium') {
+            if (actualOp === 'multiplication') {
+                num1 = Math.floor(Math.random() * 10) + 1; // 1-10
+                num2 = Math.floor(Math.random() * 10) + 1; // 1-10
+            } else {
+                num1 = Math.floor(Math.random() * 20) + 1; // 1-20
+                num2 = Math.floor(Math.random() * 20) + 1; // 1-20
+            }
+        } else { // hard
+            if (actualOp === 'multiplication') {
+                num1 = Math.floor(Math.random() * 12) + 1; // 1-12
+                num2 = Math.floor(Math.random() * 12) + 1; // 1-12
+            } else {
+                num1 = Math.floor(Math.random() * 90) + 10; // 10-99
+                num2 = Math.floor(Math.random() * 90) + 10; // 10-99
+            }
+        }
+
+        // Calculate math target value
+        if (actualOp === 'addition') {
+            currentAnswer = num1 + num2;
+            symbol = '+';
+        } else if (actualOp === 'subtraction') {
+            // Keep subtraction positive for non-hard modes
+            if (num1 < num2 && mathDifficulty !== 'hard') {
+                const temp = num1;
+                num1 = num2;
+                num2 = temp;
+            }
+            currentAnswer = num1 - num2;
+            symbol = '-';
+        } else { // multiplication
+            currentAnswer = num1 * num2;
+            symbol = '×';
+        }
+
         const problemText = `${num1} ${symbol} ${num2}`;
+        const ariaLabelText = `Problem: ${num1} ${symbol === '+' ? 'plus' : symbol === '-' ? 'minus' : 'times'} ${num2}`;
 
         arenaContent.innerHTML = `
             <div class="math-container">
                 <div class="math-problem-box">
-                    <span class="math-problem-text" aria-label="Problem: ${num1} ${isAddition ? 'plus' : 'times'} ${num2}">${problemText}</span>
+                    <span class="math-problem-text" aria-label="${ariaLabelText}">${problemText}</span>
                 </div>
                 
                 <div class="math-input-group">
@@ -311,6 +577,10 @@ include '../src/header.php';
                 </div>
                 
                 <p id="math-feedback" class="math-feedback" aria-live="polite"></p>
+
+                <div style="margin-top: 2rem;">
+                    <button onclick="showMathSetup()" class="memory-restart-btn">Options Setup</button>
+                </div>
             </div>
         `;
 
@@ -323,7 +593,7 @@ include '../src/header.php';
         }
 
         // Speak the new problem
-        announce(`New problem: ${num1} ${isAddition ? 'plus' : 'times'} ${num2}`);
+        announce(`New problem: ${num1} ${symbol === '+' ? 'plus' : symbol === '-' ? 'minus' : 'times'} ${num2}`);
     }
 
     function checkMathAnswer() {

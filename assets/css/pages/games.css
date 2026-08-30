@@ -185,21 +185,56 @@
   }
 
   .game-arena {
-    background-color: var(--color-bg-base);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-2xl);
-    overflow: hidden;
-    border: 1px solid var(--color-border);
-    position: relative;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background-color: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    opacity: 1;
+    transition: opacity 0.25s ease;
   }
 
   .game-arena.hidden {
     display: none;
   }
 
+  .game-arena-dialog {
+    background-color: var(--color-bg-surface);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-2xl);
+    border: 1px solid var(--color-border);
+    width: 100%;
+    max-width: 32rem;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    animation: modal-entrance 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  }
+
+  .game-arena-dialog.wide {
+    max-width: 42rem;
+  }
+
+  @keyframes modal-entrance {
+    from {
+      opacity: 0;
+      transform: scale(0.95) translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+
   .game-arena-header {
     background-color: var(--color-bg-surface);
-    padding: 1rem;
+    padding: 1.25rem 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -216,9 +251,9 @@
     padding: 0.5rem 1rem;
     background-color: rgba(254, 226, 226, 1);
     color: rgba(185, 28, 28, 1);
-    border-radius: var(--radius-sm);
+    border-radius: var(--radius-md);
     font-weight: 700;
-    transition: background-color 0.2s;
+    transition: background-color 0.2s, transform 0.1s;
     border: none;
     cursor: pointer;
   }
@@ -227,32 +262,130 @@
     background-color: rgba(252, 165, 165, 1);
   }
 
+  .arena-close-btn:active {
+    transform: scale(0.95);
+  }
+
   .arena-content {
     padding: 2rem;
-    min-height: 25rem;
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    flex-grow: 1;
+  }
+
+  /* Game Options / Setup Screen */
+  .game-setup-container {
+    width: 100%;
+    max-width: 28rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .setup-section-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .options-button-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  .option-btn {
+    padding: 0.75rem 1rem;
+    background-color: var(--color-bg-base);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    font-weight: 600;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+    font-size: 0.875rem;
+  }
+
+  .option-btn:hover {
+    border-color: var(--color-primary-hover);
+    color: var(--color-primary-hover);
+    background-color: color-mix(in srgb, var(--color-primary) 5%, transparent);
+  }
+
+  .option-btn.active {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    background-color: color-mix(in srgb, var(--color-primary) 10%, transparent);
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--color-primary) 20%, transparent);
+  }
+
+  .start-game-btn {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--color-primary);
+    color: white;
+    font-size: 1.125rem;
+    font-weight: 700;
+    border-radius: var(--radius-lg);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .start-game-btn:hover {
+    background-color: var(--color-primary-hover);
+    transform: translateY(-1px);
+  }
+
+  .start-game-btn:active {
+    transform: translateY(0);
   }
 
   /* Memory Game Specifics */
   .memory-grid {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1rem;
     width: 100%;
-    max-width: 28rem;
+    margin-bottom: 1rem;
+  }
+
+  .memory-grid.grid-easy {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    max-width: 26rem;
+  }
+
+  .memory-grid.grid-medium {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    max-width: 26rem;
+  }
+
+  .memory-grid.grid-hard {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    max-width: 32rem;
   }
 
   .memory-card {
-    height: 6rem;
+    aspect-ratio: 1;
+    height: auto;
     width: 100%;
-    border-radius: var(--radius-sm);
+    border-radius: var(--radius-md);
     position: relative;
     color: white;
     font-size: 1.875rem;
-    transition: transform 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s;
     border: none;
     cursor: pointer;
     perspective: 1000px;
@@ -281,7 +414,7 @@
   }
 
   .state-hidden { background-color: var(--color-secondary); color: white; }
-  .state-flipped { background-color: white; color: var(--color-primary); }
+  .state-flipped { background-color: white; color: var(--color-primary); border: 2px solid var(--color-primary); }
   .state-matched { background-color: var(--color-success); color: white; cursor: default; }
 
   .memory-controls {
