@@ -10,13 +10,13 @@ if (!defined('ABSPATH')) {
 $pageTitle = "My Profile & Progress | Hesten's Learning";
 $pageDescription = "View your reading progress, edit your profile, and manage saved bookmarks and highlights.";
 
-include ABSPATH . 'src/header.php';
+include ABSPATH . '../src/header.php';
 ?>
 
 <!-- Import library and reader CSS for base layouts and typography -->
-<link rel="stylesheet" href="/assets/css/library-main.css">
-<link rel="stylesheet" href="/assets/css/reader-main.css">
-<link rel="stylesheet" href="/assets/css/pages/profile.css">
+<link rel="stylesheet" href="../assets/css/library-main.css">
+<link rel="stylesheet" href="../assets/css/reader-main.css">
+<link rel="stylesheet" href="../assets/css/pages/profile.css">
 
 <main id="main-content" class="library-main profile-main-layout">
     <!-- Aurora Mesh Background -->
@@ -129,6 +129,6 @@ include ABSPATH . 'src/header.php';
     </div>
 </main>
 
-<script src="/assets/js/profile-main.js" defer></script>
+<script src="../assets/js/profile-main.js" defer></script>
 
-<?php include ABSPATH . 'src/footer.php'; ?>
+<?php include ABSPATH . '../src/footer.php'; ?>
