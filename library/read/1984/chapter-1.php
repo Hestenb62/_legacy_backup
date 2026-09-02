@@ -90,7 +90,7 @@ include '../../../src/header.php';
 
 <main id="main-content" class="library-main reader-main-layout">
   <div class="reader-back-nav">
-    <a href="/library/read/index.php?book=1984" class="reader-back-btn">
+    <a href="index.php?book=1984" class="reader-back-btn">
       <i class="fas fa-arrow-left"></i> Back to Book
     </a>
   </div>
@@ -520,10 +520,10 @@ include '../../../src/header.php';
       <span class="reader-chapter-nav-btn reader-chapter-nav-prev disabled" aria-disabled="true">
         <i class="fas fa-chevron-left"></i> Start of Book
       </span>
-      <a href="/library/read/index.php?book=1984" class="reader-chapter-nav-btn" aria-label="Book contents">
+      <a href="index.php?book=1984" class="reader-chapter-nav-btn" aria-label="Book contents">
         <i class="fas fa-list"></i> All Chapters
       </a>
-      <a href="/library/read/index.php?book=1984&chapter=chapter-2" class="reader-chapter-nav-btn reader-chapter-nav-next">
+      <a href="index.php?book=1984&chapter=chapter-2" class="reader-chapter-nav-btn reader-chapter-nav-next">
         Chapter 2 <i class="fas fa-chevron-right"></i>
       </a>
     </nav>

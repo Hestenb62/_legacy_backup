@@ -31,7 +31,13 @@ $curriculum = $book['curriculum'] ?? ($book['grade'] ?? '');
      data-description="<?php echo htmlspecialchars($book['description'] ?? ''); ?>"
      data-pdf-link="<?php echo htmlspecialchars($book['pdf-link'] ?? '#'); ?>"
      data-epub-link="<?php echo htmlspecialchars($book['epub-link'] ?? '#'); ?>"
-     data-read-online-link="<?php echo htmlspecialchars($book['read-online-link'] ?? '#'); ?>"
+     data-read-online-link="<?php 
+         $rawReadLink = $book['read-online-link'] ?? '#';
+         if (strpos($rawReadLink, '/library/') === 0) {
+             $rawReadLink = substr($rawReadLink, 9);
+         }
+         echo htmlspecialchars($rawReadLink); 
+     ?>"
      data-txt-link="<?php echo htmlspecialchars($book['txt-link'] ?? '#'); ?>"
      data-mobi-link="<?php echo htmlspecialchars($book['mobi-link'] ?? '#'); ?>"
      data-word-link="<?php echo htmlspecialchars($book['word-link'] ?? '#'); ?>"

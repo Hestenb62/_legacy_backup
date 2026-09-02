@@ -10,11 +10,11 @@
 		<p>People of the newly independent United States sought to establish a system of government based on republican principles, avoiding the formal social inequalities and hierarchies of European societies. However, particularly when determining what shape their national government would take, Americans disagreed as to who was best fitted to govern in a postrevolutionary society. Advocates of both elite and popular rule disputed this issue well into the nineteenth century. What was made clear, however, was that political rights would extend only to certain Americans. Women, enslaved African Americans, and even many free men of color found themselves partly or wholly excluded from the benefits of citizenship in the new republic.</p>
 		<p>Throughout the colonial and revolutionary periods, then, a tension existed in America between those with full access to economic and political rights and those who had those rights denied them. This tension and the aspirations of laboring Americans shaped America’s early history and defined its emergence as an independent nation. Famous political leaders did not always control events. They were constantly challenged, and events themselves profoundly influenced, by the aspirations and experiences of the ordinary men and women of all cultures who built America.</p>
 		<h2>Chapters for Part I</h2>
-		<p><a href="/library/read/index.php?book=who-built-america&chapter=chapter-3">Chapter 1: A Meeting of Three Worlds: Europe, Africa, and American Colonization, 1492-1680</a></p>
-		<p><a href="/library/read/index.php?book=who-built-america&chapter=chapter-4">Chapter 2: Servitude, Slavery, and the Growth of the Southern Colonies, 1620-1760</a></p>
-		<p><a href="/library/read/index.php?book=who-built-america&chapter=chapter-5">Chapter 3: Family Labor and the Growth of the Northern Colonies, 1640-1760</a></p>
-		<p><a href="/library/read/index.php?book=who-built-america&chapter=chapter-6">Chapter 4: Toward Revolution, 1750-1776</a></p>
-		<p><a href="/library/read/index.php?book=who-built-america&chapter=chapter-7">Chapter 5: Revolution, Constitution, and the People, 1776-1815</a></p>
+		<p><a href="index.php?book=who-built-america&chapter=chapter-3">Chapter 1: A Meeting of Three Worlds: Europe, Africa, and American Colonization, 1492-1680</a></p>
+		<p><a href="index.php?book=who-built-america&chapter=chapter-4">Chapter 2: Servitude, Slavery, and the Growth of the Southern Colonies, 1620-1760</a></p>
+		<p><a href="index.php?book=who-built-america&chapter=chapter-5">Chapter 3: Family Labor and the Growth of the Northern Colonies, 1640-1760</a></p>
+		<p><a href="index.php?book=who-built-america&chapter=chapter-6">Chapter 4: Toward Revolution, 1750-1776</a></p>
+		<p><a href="index.php?book=who-built-america&chapter=chapter-7">Chapter 5: Revolution, Constitution, and the People, 1776-1815</a></p>
 	</div>
 	<h3>Historians Disagree: Atlantic World History</h3>
 	<div class="content-content">

@@ -90,7 +90,7 @@ include '../../../src/header.php';
 
 <main id="main-content" class="library-main reader-main-layout">
     <div class="reader-back-nav">
-        <a href="/library/read/index.php?book=1984" class="reader-back-btn">
+        <a href="index.php?book=1984" class="reader-back-btn">
             <i class="fas fa-arrow-left"></i> Back to Book
         </a>
     </div>
@@ -599,13 +599,13 @@ include '../../../src/header.php';
 </div>
 
         <nav class="reader-chapter-nav" aria-label="Chapter navigation">
-        <a href="/library/read/index.php?book=1984&chapter=chapter-18" class="reader-chapter-nav-btn reader-chapter-nav-prev">
+        <a href="index.php?book=1984&chapter=chapter-18" class="reader-chapter-nav-btn reader-chapter-nav-prev">
             <i class="fas fa-chevron-left"></i> Chapter 18
         </a>
-        <a href="/library/read/index.php?book=1984" class="reader-chapter-nav-btn" aria-label="Book contents">
+        <a href="index.php?book=1984" class="reader-chapter-nav-btn" aria-label="Book contents">
             <i class="fas fa-list"></i> All Chapters
         </a>
-        <a href="/library/read/index.php?book=1984&chapter=chapter-20" class="reader-chapter-nav-btn reader-chapter-nav-next">
+        <a href="index.php?book=1984&chapter=chapter-20" class="reader-chapter-nav-btn reader-chapter-nav-next">
             Chapter 20 <i class="fas fa-chevron-right"></i>
         </a>
         </nav>
@@ -613,3 +613,4 @@ include '../../../src/header.php';
 </main>
 
 <?php include '../../../src/footer.php'; ?>
+
