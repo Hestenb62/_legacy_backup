@@ -172,6 +172,13 @@ include ABSPATH . 'src/header.php';
 
             <!-- Right: Study Tools & Customization Settings -->
             <div class="controls-tools-group">
+                <!-- Dynamic Lexile Switcher -->
+                <div id="lexile-switcher-wrap" style="display: none; align-items: center; gap: 0.5rem; margin-right: 0.5rem;">
+                    <label for="lexile-switcher-select" style="font-size: 0.8rem; font-weight: 700; color: var(--color-text-secondary);"><i class="fas fa-brain"></i></label>
+                    <select id="lexile-switcher-select" class="tool-btn" style="appearance: auto; padding-right: 1.5rem; font-size: 0.9rem; border: 1px solid var(--color-border); border-radius: 8px;" title="Change Reading Level">
+                    </select>
+                </div>
+
                 <!-- Book Page Flip / Scroll View Mode Switcher -->
                 <button type="button" id="toggle-view-mode-btn" class="tool-btn tool-btn-view-mode" title="Toggle Page Flip / Scroll View" aria-label="Toggle Reading Layout">
                     <i class="fas fa-book-open"></i>
@@ -553,6 +560,7 @@ include ABSPATH . 'src/header.php';
 <script src="../../assets/js/reader/read-typography.js" defer></script>
 <script src="../../assets/js/reader/read-scroll-progress.js" defer></script>
 <script src="../../assets/js/reader/read-text.js" defer></script>
+<script src="../../assets/js/library/lib-reader-lexile.js" defer></script>
 <script src="../../assets/js/reader/read-study-suite.js" defer></script>
 <script src="../../assets/js/reader/read-inline-text-highlighting.js" defer></script>
 <script src="../../assets/js/reader/read-modals.js" defer></script>

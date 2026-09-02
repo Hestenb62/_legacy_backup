@@ -12,6 +12,8 @@
 *.cfg
 *.userosscache
 *.sln.docstates
+*.py
+*.ps1
 *.tmp.driveupload
 *.vscode
 *.php_tmp

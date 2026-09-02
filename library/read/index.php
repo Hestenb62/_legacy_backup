@@ -10,6 +10,14 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
+// --- DEV SERVER PROXY FIX ---
+// Recovers query string if a local dev proxy stripped it, using a cookie set by JS fallback.
+if (empty($_GET) && isset($_COOKIE['dev_fallback_query'])) {
+    parse_str($_COOKIE['dev_fallback_query'], $_GET);
+    $_SERVER['QUERY_STRING'] = $_COOKIE['dev_fallback_query'];
+    setcookie('dev_fallback_query', '', time() - 3600, '/');
+}
+
 $requestUri = $_SERVER['REQUEST_URI'] ?? (getenv('REQUEST_URI') ?: '');
 $requestPath = explode('?', $requestUri)[0];
 $queryString = $_SERVER['QUERY_STRING'] ?? (getenv('QUERY_STRING') ?: '');
@@ -354,6 +362,15 @@ if ($error !== '') {
     include __DIR__ . '/../../src/header.php';
     ?>
     <main id="main-content" class="library-main reader-main-layout">
+        <!-- Client-side proxy fallback script -->
+        <script>
+            // If the browser URL has a query string but PHP generated this error, 
+            // the dev server proxy likely stripped the query string.
+            if (window.location.search.length > 1 && !document.cookie.includes('dev_fallback_query')) {
+                document.cookie = "dev_fallback_query=" + encodeURIComponent(window.location.search.substring(1)) + "; path=/; max-age=10";
+                window.location.reload();
+            }
+        </script>
         <div class="reader-back-nav" style="margin-bottom: 2rem;">
             <a href="../index.php" class="reader-back-btn" style="text-decoration: none; padding: 0.65rem 1.5rem; background: var(--color-content-bg); border-radius: 9999px; border: 1px solid var(--color-border); font-weight: 700; color: var(--color-text-default); display: inline-flex; align-items: center; gap: 0.5rem;">
                 <i class="fas fa-arrow-left"></i> Return to Catalog
