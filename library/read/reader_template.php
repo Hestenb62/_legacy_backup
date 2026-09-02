@@ -31,8 +31,8 @@ $nextChapterNum = $chapterNum + 1;
 $hasPrev = $prevChapterNum >= 1;
 $hasNext = $nextChapterNum <= $totalChapters;
 
-$prevUrl = $hasPrev ? "/library/read/index.php?book=" . urlencode($bookId) . "&chapter=chapter-$prevChapterNum" : "#";
-$nextUrl = $hasNext ? "/library/read/index.php?book=" . urlencode($bookId) . "&chapter=chapter-$nextChapterNum" : "#";
+$prevUrl = $hasPrev ? "index.php?book=" . urlencode($bookId) . "&chapter=chapter-$prevChapterNum" : "#";
+$nextUrl = $hasNext ? "index.php?book=" . urlencode($bookId) . "&chapter=chapter-$nextChapterNum" : "#";
 
 // Get active chapter title from TOC if available
 $currentChapterTitle = "Chapter $chapterNum";
@@ -49,7 +49,7 @@ $pageDescription = "Read $bookTitle by $bookAuthor online with audio narration, 
 include ABSPATH . 'src/header.php';
 ?>
 
-<link rel="stylesheet" href="/assets/css/reader-main.css">
+<link rel="stylesheet" href="../../assets/css/reader-main.css">
 
 <!-- Reading Progress Bar -->
 <div id="progress-bar-container" aria-hidden="true">
@@ -60,7 +60,7 @@ include ABSPATH . 'src/header.php';
 
     <!-- Top Navigation Bar -->
     <div class="reader-back-nav">
-        <a href="/library/" class="reader-back-btn" title="Return to Digital Library Catalog">
+        <a href="../index.php" class="reader-back-btn" title="Return to Digital Library Catalog">
             <i class="fas fa-arrow-left"></i> <span>Catalog</span>
         </a>
         <div class="reader-title-badge">
@@ -127,7 +127,7 @@ include ABSPATH . 'src/header.php';
             </div>
 
             <div class="intro-cta-wrap">
-                <a href="/library/read/index.php?book=<?php echo urlencode($bookId); ?>&chapter=chapter-1" class="intro-start-btn">
+                <a href="index.php?book=<?php echo urlencode($bookId); ?>&chapter=chapter-1" class="intro-start-btn">
                     <span>Start Reading (Chapter 1)</span> <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
@@ -278,7 +278,7 @@ include ABSPATH . 'src/header.php';
                                 </div>
                             <?php endif; ?>
 
-                            <form method="POST" action="/library/read/index.php?book=<?php echo urlencode($bookId); ?>&chapter=chapter-<?php echo $totalChapters; ?>" class="teacher-auth-form">
+                            <form method="POST" action="index.php?book=<?php echo urlencode($bookId); ?>&chapter=chapter-<?php echo $totalChapters; ?>" class="teacher-auth-form">
                                 <input type="password" name="teacher_password" placeholder="Enter Teacher PIN..." class="teacher-pin-input" autofocus required autocomplete="off">
                                 <button type="submit" class="teacher-submit-btn">Unlock Resources</button>
                             </form>
@@ -440,7 +440,7 @@ include ABSPATH . 'src/header.php';
                         $chapterLabel = $bookToc[(string)$i]['title'];
                     }
                 ?>
-                    <a href="/library/read/index.php?book=<?php echo urlencode($bookId); ?>&chapter=chapter-<?php echo $i; ?>" 
+                    <a href="index.php?book=<?php echo urlencode($bookId); ?>&chapter=chapter-<?php echo $i; ?>" 
                        class="toc-link <?php echo ($i === $chapterNum) ? 'active' : ''; ?> <?php echo $isTeacherCh ? 'toc-teacher-link' : ''; ?>">
                         <span class="toc-num"><?php echo $isTeacherCh ? '<i class="fas fa-chalkboard-teacher"></i>' : 'CH ' . $i; ?></span>
                         <span class="toc-name"><?php echo htmlspecialchars($chapterLabel); ?></span>
@@ -550,13 +550,13 @@ include ABSPATH . 'src/header.php';
     window.BOOK_JSON_VOCAB = <?php echo json_encode($vocabList); ?>;
 </script>
 
-<script src="/assets/js/reader/read-typography.js" defer></script>
-<script src="/assets/js/reader/read-scroll-progress.js" defer></script>
-<script src="/assets/js/reader/read-text.js" defer></script>
-<script src="/assets/js/reader/read-study-suite.js" defer></script>
-<script src="/assets/js/reader/read-inline-text-highlighting.js" defer></script>
-<script src="/assets/js/reader/read-modals.js" defer></script>
-<script src="/assets/js/reader/read-chapter-citation-generator.js" defer></script>
-<script src="/assets/js/reader/read-single.js" defer></script>
+<script src="../../assets/js/reader/read-typography.js" defer></script>
+<script src="../../assets/js/reader/read-scroll-progress.js" defer></script>
+<script src="../../assets/js/reader/read-text.js" defer></script>
+<script src="../../assets/js/reader/read-study-suite.js" defer></script>
+<script src="../../assets/js/reader/read-inline-text-highlighting.js" defer></script>
+<script src="../../assets/js/reader/read-modals.js" defer></script>
+<script src="../../assets/js/reader/read-chapter-citation-generator.js" defer></script>
+<script src="../../assets/js/reader/read-single.js" defer></script>
 
 <?php include ABSPATH . 'src/footer.php'; ?>

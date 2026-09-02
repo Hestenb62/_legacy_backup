@@ -5,7 +5,7 @@
         if (window.DISCLAIMERS_DATA && Object.keys(window.DISCLAIMERS_DATA).length > 0) {
             disclaimersData = window.DISCLAIMERS_DATA;
         } else {
-            fetch('/library/assets/disclaimers.json')
+            fetch('../library/assets/disclaimers.json')
                 .then(res => res.json())
                 .then(data => { disclaimersData = data; })
                 .catch(() => {

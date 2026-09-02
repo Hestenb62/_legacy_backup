@@ -27,7 +27,7 @@
                             img: card.dataset.img || card.dataset.fallbackImg,
                             chapterNum: chapterNum,
                             pct: Math.min(Math.max(pct, 5), 100),
-                            readLink: card.dataset.readOnlineLink || `/library/read/index.php?book=${bookId}&chapter=chapter-${chapterNum}`
+                            readLink: card.dataset.readOnlineLink || `read/index.php?book=${bookId}&chapter=chapter-${chapterNum}`
                         });
                     }
                 }

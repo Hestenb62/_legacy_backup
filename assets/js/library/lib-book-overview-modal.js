@@ -60,7 +60,7 @@
         const readBtn = document.getElementById('modal-read-online-link');
         if (readBtn) {
             const hasReadLink = d.readOnlineLink && d.readOnlineLink !== '#' && d.readOnlineLink !== '';
-            readBtn.href = hasReadLink ? d.readOnlineLink : `/library/read/index.php?book=${d.id}`;
+            readBtn.href = hasReadLink ? d.readOnlineLink : `read/index.php?book=${d.id}`;
         }
 
         // Bookmark button state

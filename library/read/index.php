@@ -31,7 +31,7 @@ if (empty($_GET) && !empty($queryString)) {
 
 // Preserve old reader.php URL as a redirect into index.php
 if (basename($requestPath) === 'reader.php') {
-    $redirectUrl = '/library/read/index.php' . ($queryString ? '?' . $queryString : '');
+    $redirectUrl = 'index.php' . ($queryString ? '?' . $queryString : '');
     header('Location: ' . $redirectUrl, true, 301);
     exit;
 }
@@ -238,7 +238,7 @@ if ($bookId === '') {
                 if (trim($_POST['teacher_password']) === '8675309') {
                     $_SESSION['teacher_unlocked'] = true;
                     $isTeacherUnlocked = true;
-                    header('Location: /library/read/index.php?book=' . urlencode($bookId) . '&chapter=chapter-' . $totalChapters);
+                    header('Location: index.php?book=' . urlencode($bookId) . '&chapter=chapter-' . $totalChapters);
                     exit;
                 } else {
                     $authError = 'Incorrect password. Access Denied.';
@@ -355,7 +355,7 @@ if ($error !== '') {
     ?>
     <main id="main-content" class="library-main reader-main-layout">
         <div class="reader-back-nav" style="margin-bottom: 2rem;">
-            <a href="/library/" class="reader-back-btn" style="text-decoration: none; padding: 0.65rem 1.5rem; background: var(--color-content-bg); border-radius: 9999px; border: 1px solid var(--color-border); font-weight: 700; color: var(--color-text-default); display: inline-flex; align-items: center; gap: 0.5rem;">
+            <a href="../index.php" class="reader-back-btn" style="text-decoration: none; padding: 0.65rem 1.5rem; background: var(--color-content-bg); border-radius: 9999px; border: 1px solid var(--color-border); font-weight: 700; color: var(--color-text-default); display: inline-flex; align-items: center; gap: 0.5rem;">
                 <i class="fas fa-arrow-left"></i> Return to Catalog
             </a>
         </div>
@@ -365,7 +365,7 @@ if ($error !== '') {
             </div>
             <h2 style="font-size: 1.6rem; font-weight: 900; margin-bottom: 0.75rem; color: var(--color-text-default);">Unable to Load Book</h2>
             <p style="color: var(--color-text-secondary); margin-bottom: 2rem; line-height: 1.6; font-size: 0.95rem;"><?php echo htmlspecialchars($error); ?></p>
-            <a href="/library/" class="controls-nav-btn" style="text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 2rem; border-radius: 9999px; background: var(--color-primary); color: white; font-weight: 800;">
+            <a href="../index.php" class="controls-nav-btn" style="text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 2rem; border-radius: 9999px; background: var(--color-primary); color: white; font-weight: 800;">
                 <i class="fas fa-search"></i> Browse Library Catalog
             </a>
         </div>

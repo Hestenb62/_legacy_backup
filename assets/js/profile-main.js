@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
         emptyBooks.classList.remove('hidden');
     } else {
         listBooks.innerHTML = bookmarks.map(id => `
-            <a href="/library/read/index.php?book=${encodeURIComponent(id)}" class="profile-list-item">
+            <a href="../library/read/index.php?book=${encodeURIComponent(id)}" class="profile-list-item">
                 <div class="profile-item-icon"><i class="fas fa-book"></i></div>
                 <div class="profile-item-content">
                     <div class="profile-item-title">${id.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())}</div>

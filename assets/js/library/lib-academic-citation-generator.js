@@ -30,7 +30,8 @@
         const title = currentBookData.title || 'Untitled';
         const date = currentBookData.date || 'n.d.';
         const year = date.match(/\d{4}/) ? date.match(/\d{4}/)[0] : 'n.d.';
-        const url = window.location.origin + (currentBookData.readOnlineLink || `/library/read/index.php?book=${currentBookData.id}`);
+        const relativePath = (currentBookData.readOnlineLink || `read/index.php?book=${currentBookData.id}`).replace(/^\/+/, '');
+        const url = new URL(relativePath, window.location.href).href;
 
         let citation = '';
         if (currentCitationStyle === 'mla') {
