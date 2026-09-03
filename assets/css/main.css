@@ -1,0 +1,15 @@
+/* main.css - Entry point for Vite Bundling */
+
+/* 1. Variables and Tokens */
+@import './global-tokens.css';
+
+/* 2. Resets */
+@import './global-reset.css';
+
+/* 3. Global Primitives & Utilities */
+@import './global-primitives.css';
+
+/* 4. Components */
+@import './global-components.css';
+
+/* Any page specific overrides can go here */

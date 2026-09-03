@@ -7,11 +7,10 @@ if (!file_exists($verifyFile) || strtolower(hash_file('sha256', $verifyFile)) !=
     die("Error: Integrity check failed. The verification file is missing or has been modified.");
 }
 
-$pageTitle = "Hesten's Learning"; // SEO Title
-include 'src/header.php';
+$pageTitle = "Hesten's Learning";
 
-// --- DATA: Client-Side Loading Migration ---
-// Data is now loaded via <script src="assets/data/global-learningLevels.js"></script> below
+// Start output buffering for the main layout
+ob_start();
 ?>
 
 <!-- DATA IMPORT -->
@@ -36,9 +35,10 @@ include 'src/header.php';
 
 </main>
 
-<!-- PAGE SCRIPT -->
-<script src="assets/js/index-main.js?v=1.2"></script>
-
 <?php include __DIR__ . '/src/partials/migration-popup.php'; ?>
 
-<?php include 'src/footer.php'; ?>
+<?php
+// Capture the content and inject it into the layout
+$content = ob_get_clean();
+include __DIR__ . '/src/layouts/main.php';
+?>
