@@ -86,8 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // 3. Stats and List Rendering Logic
-    const bookmarksKey = 'library-bookmarks';
-    const highlightsKey = 'reader-highlights'; // Assuming standard key format
+    const bookmarksKey = 'hesten_library_bookmarks'; // FIXED: Match library
     
     // Load Bookmarks
     let bookmarks = [];
@@ -100,13 +99,17 @@ document.addEventListener("DOMContentLoaded", () => {
     let allNotes = 0;
     for (let i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i);
-        if (key && key.startsWith('reader-highlights-')) {
+        if (key && key.startsWith('hesten_highlights_')) { // FIXED: Match reader prefix
             try {
                 const hls = JSON.parse(localStorage.getItem(key)) || [];
                 hls.forEach(hl => {
-                    hl.bookId = key.replace('reader-highlights-', '');
-                    allHighlights.push(hl);
-                    if (hl.note) allNotes++;
+                    // Extract bookId from "hesten_highlights_{bookId}_chapter_{num}"
+                    const match = key.match(/^hesten_highlights_(.+)_chapter_\d+$/);
+                    if (match) {
+                        hl.bookId = match[1];
+                        allHighlights.push(hl);
+                        if (hl.note) allNotes++;
+                    }
                 });
             } catch(e) {}
         }
