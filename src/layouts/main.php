@@ -7,11 +7,11 @@ $viteCss = '';
 
 if (file_exists($manifestPath)) {
     $manifest = json_decode(file_get_contents($manifestPath), true);
-    if (isset($manifest['index-js'])) {
-        $viteJs = '/dist/' . $manifest['index-js']['file'];
+    if (isset($manifest['assets/js/index/main.js'])) {
+        $viteJs = '/dist/' . $manifest['assets/js/index/main.js']['file'];
     }
-    if (isset($manifest['index-css'])) {
-        $viteCss = '/dist/' . $manifest['index-css']['file'];
+    if (isset($manifest['assets/css/main.css'])) {
+        $viteCss = '/dist/' . $manifest['assets/css/main.css']['file'];
     }
 }
 

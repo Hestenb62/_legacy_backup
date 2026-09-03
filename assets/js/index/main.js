@@ -22,28 +22,26 @@ window.hl = {
 };
 
 // --- INIT ---
-document.addEventListener("DOMContentLoaded", () => {
-    console.log("Learning Odyssey initialized via Vite ES Modules!");
-    
-    loadState();
-    
-    // Ensure learningLevels data is loaded (via standard script tag before this module)
-    if (typeof learningLevels !== 'undefined') {
-        renderLevels(learningLevels);
-        applyFilters(); 
-    }
-    
-    checkStreak();
-    updateHeroGreeting();
-    renderFocusRecommendations(); 
+console.log("Learning Odyssey initialized via Vite ES Modules!");
 
-    // Search & Filter Listeners
-    const searchInput = document.getElementById('level-search');
-    if (searchInput) {
-        searchInput.addEventListener('input', (e) => {
-            const heroSearch = document.getElementById('hero-search');
-            if (heroSearch) heroSearch.value = e.target.value;
-            debounce(applyFilters, 200)();
-        });
-    }
-});
+loadState();
+
+// ES Modules run deferred, so the DOM is ready and window.learningLevels is populated
+if (typeof window.learningLevels !== 'undefined') {
+    renderLevels(window.learningLevels);
+    applyFilters(); 
+}
+
+checkStreak();
+updateHeroGreeting();
+renderFocusRecommendations(); 
+
+// Search & Filter Listeners
+const searchInput = document.getElementById('level-search');
+if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+        const heroSearch = document.getElementById('hero-search');
+        if (heroSearch) heroSearch.value = e.target.value;
+        debounce(applyFilters, 200)();
+    });
+}

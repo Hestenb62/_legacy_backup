@@ -4,7 +4,7 @@
  * Categorized by: elem (Elementary), middle (Middle School), high (High School), extra (Resources)
  */
 
-const learningLevels = [
+window.learningLevels = [
 
     /**
      * Hesten's Learning - Grade Level Data
