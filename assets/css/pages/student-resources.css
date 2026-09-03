@@ -1,0 +1,345 @@
+﻿
+/* Page Wrapper spacing */
+.page-content-wrapper {
+    padding-top: var(--spacing-8);
+    padding-bottom: var(--spacing-16);
+    min-height: 80vh;
+}
+
+/* Header & Intro */
+.resource-header {
+    text-align: center;
+    margin-bottom: var(--spacing-12);
+}
+
+.resource-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-3);
+    letter-spacing: -0.025em;
+}
+
+.resource-subtitle {
+    font-size: 1.125rem;
+    color: var(--color-text-muted);
+    max-width: 700px;
+    margin: 0 auto var(--spacing-8) auto;
+    line-height: 1.6;
+}
+
+/* Search and Filter Container */
+.search-filter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-6);
+    background-color: var(--color-bg-surface);
+    padding: var(--spacing-6);
+    border-radius: var(--radius-2xl);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-md);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Search Box */
+.search-box {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: var(--spacing-3) var(--spacing-4) var(--spacing-3) 2.75rem;
+    font-size: 1rem;
+    border-radius: var(--radius-full);
+    border: 1.5px solid var(--color-border);
+    background-color: var(--color-bg-base);
+    color: var(--color-text-main);
+    transition: all 0.2s ease;
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    background-color: var(--color-bg-surface);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+.search-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-text-muted);
+    font-size: 1rem;
+    pointer-events: none;
+}
+
+.clear-btn {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-text-muted);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.clear-btn:hover {
+    background-color: var(--color-border);
+    color: var(--color-text-main);
+}
+
+/* Filter Tabs */
+.filter-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-2);
+    width: 100%;
+}
+
+.filter-tab {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-radius: var(--radius-full);
+    background-color: var(--color-bg-base);
+    color: var(--color-text-muted);
+    border: 1px solid var(--color-border);
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.filter-tab:hover {
+    background-color: var(--color-border);
+    color: var(--color-text-main);
+}
+
+.filter-tab.active {
+    background-color: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+}
+
+/* Resources Cards Grid */
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: var(--spacing-6);
+    margin-top: var(--spacing-8);
+}
+
+@media (min-width: 768px) {
+    .resource-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1024px) {
+    .resource-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Card Styling */
+.resource-card {
+    background-color: var(--color-bg-surface);
+    border-radius: var(--radius-2xl);
+    border: 1px solid var(--color-border);
+    padding: var(--spacing-6);
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.resource-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(79, 70, 229, 0.3);
+}
+
+.resource-card-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-3);
+    margin-bottom: var(--spacing-3);
+}
+
+.resource-card-icon {
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    color: white;
+    box-shadow: var(--shadow-sm);
+}
+
+/* Category Gradient Schemes */
+.resource-card-icon.reading { background: linear-gradient(135deg, #6366f1, #4f46e5); }
+.resource-card-icon.writing { background: linear-gradient(135deg, #0d9488, #0f766e); }
+.resource-card-icon.grammar { background: linear-gradient(135deg, #2563eb, #1d4ed8); }
+.resource-card-icon.literature { background: linear-gradient(135deg, #ea580c, #c2410c); }
+
+.resource-card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+    margin: 0;
+}
+
+.resource-card-desc {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--spacing-4);
+    line-height: 1.5;
+}
+
+/* Tag Pills Container */
+.pills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: var(--spacing-6);
+}
+
+/* Topic Pills */
+.topic-pill {
+    padding: 0.5rem 0.85rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-radius: var(--radius-lg);
+    background-color: var(--color-bg-base);
+    color: var(--color-text-main);
+    border: 1px solid var(--color-border);
+    transition: all 0.2s ease;
+    cursor: pointer;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.topic-pill::before {
+    content: "\f105";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin-right: 0.5rem;
+    color: var(--color-primary);
+    transition: transform 0.2s ease;
+}
+
+.topic-pill:hover {
+    background-color: rgba(79, 70, 229, 0.08);
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.topic-pill:hover::before {
+    transform: translateX(3px);
+}
+
+.topic-pill:focus-visible {
+    outline: 3px solid var(--color-primary) !important;
+    outline-offset: 1px;
+}
+
+/* Action Button */
+.card-action-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 0.625rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    border-radius: var(--radius-lg);
+    background-color: var(--color-primary);
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.2s, transform 0.2s;
+    margin-top: auto; /* Push to bottom of flex container */
+    border: none;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+}
+
+.card-action-btn:hover {
+    background-color: var(--color-primary-hover);
+    transform: translateY(-1px);
+    color: white;
+}
+
+/* Empty State Styling */
+.no-results-box {
+    text-align: center;
+    padding: var(--spacing-12) var(--spacing-6);
+    background-color: var(--color-bg-surface);
+    border-radius: var(--radius-2xl);
+    border: 1px dashed var(--color-border);
+    max-width: 500px;
+    margin: var(--spacing-12) auto;
+    box-shadow: var(--shadow-sm);
+}
+
+.no-results-icon {
+    font-size: 3rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--spacing-4);
+}
+
+.no-results-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+    margin-bottom: var(--spacing-2);
+}
+
+.no-results-desc {
+    color: var(--color-text-muted);
+    margin-bottom: var(--spacing-6);
+}
+
+.reset-search-btn {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: var(--radius-full);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    box-shadow: var(--shadow-sm);
+}
+
+.reset-search-btn:hover {
+    background-color: var(--color-primary-hover);
+}
+
+
+/* Additional Gradients for Math, Science, Social */
+.resource-card-icon.math { background: linear-gradient(135deg, #6366f1, #4f46e5); }
+.resource-card-icon.science { background: linear-gradient(135deg, #10b981, #059669); }
+.resource-card-icon.social { background: linear-gradient(135deg, #f59e0b, #d97706); }
+.resource-card-icon.practice { background: linear-gradient(135deg, #0d9488, #0f766e); }
+.resource-card-icon.video { background: linear-gradient(135deg, #ef4444, #dc2626); }
+.resource-card-icon.study { background: linear-gradient(135deg, #db2777, #be185d); }
+.resource-card-icon.game { background: linear-gradient(135deg, #8b5cf6, #7c3aed); }
+

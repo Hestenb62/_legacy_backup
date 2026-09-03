@@ -13,27 +13,40 @@ $welcomeParagraph = "Welcome! Select a topic below to start practicing and sharp
 include '..\\src\\header.php';
 ?>
 
-<link rel="stylesheet" href="/assets/css/pages/student-hub.css">
+<link rel="stylesheet" href="/assets/css/pages/student-resources.css">
 
     <!-- Main Content Area -->
     <main class="page-content-wrapper">
-        <h1 class="student-hub-title">Math Practice Problems</h1>
-        <p class="text-center text-lg text-text-secondary mb-8">Test your knowledge and improve your skills with our comprehensive collection of math practice problems.</p>
-
-        <div class="student-hub-grid">
+        <div class="resource-header">
+    <h1 class="resource-title">Math Practice Problems</h1>
+    <p class="resource-subtitle">Test your knowledge and improve your skills with our comprehensive collection of math practice problems.</p>
+    <div class="search-filter-container">
+        <div class="search-box">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" id="topic-search" placeholder="Search topics..." aria-label="Search topics">
+            <button id="clear-search" class="clear-btn" aria-label="Clear search" style="display: none;">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="filter-tabs" role="tablist">
+            <button class="filter-tab active" data-category="all" role="tab" aria-selected="true">All Topics</button>
+        </div>
+    </div>
+</div>
+<div class="resource-grid" id="topics-grid">
             
             <!-- Algebra Practice -->
             <div >
                 <!-- Updated to use theme-aware classes -->
-                <div class="bg-card-bg rounded-base-rounded shadow-lg p-6 flex flex-col h-full transition-colors duration-300">
-                    <h5 class="student-hub-card-title"><i class="fas fa-superscript mr-2" aria-hidden="true"></i>Algebra Practice</h5>
+                <div class="resource-card" data-card-category="all">
+                    <div class="resource-card-header"><div class="resource-card-icon math"><i class="fas fa-superscript mr-2"></i></div><h2 class="resource-card-title">Algebra Practice</h2></div>
                     <p class="text-text-secondary mb-4">Practice solving equations, inequalities, and working with functions. Problems for all levels.</p>
-                    <ul class="student-hub-card-list">
-                        <li><a href="#" onclick="openDynamicModal('Basic Algebra'); return false;" class="text-link-color hover:underline"><i class="fas fa-angle-right mr-2" aria-hidden="true"></i>Basic Algebra</a></li>
-                        <li><a href="#" onclick="openDynamicModal('Linear Equations'); return false;" class="text-link-color hover:underline"><i class="fas fa-angle-right mr-2" aria-hidden="true"></i>Linear Equations</a></li>
-                        <li><a href="#" onclick="openDynamicModal('Quadratic Equations'); return false;" class="text-link-color hover:underline"><i class="fas fa-angle-right mr-2" aria-hidden="true"></i>Quadratic Equations</a></li>
-                        <li><a href="#" onclick="openDynamicModal('Systems of Equations'); return false;" class="text-link-color hover:underline"><i class="fas fa-angle-right mr-2" aria-hidden="true"></i>Systems of Equations</a></li>
-                    </ul>
+                    <div class="pills-container">
+<button onclick="openDynamicModal('Basic Algebra'); return false;" class="topic-pill" data-search-terms="basic algebra">Basic Algebra</button>
+<button onclick="openDynamicModal('Linear Equations'); return false;" class="topic-pill" data-search-terms="linear equations">Linear Equations</button>
+<button onclick="openDynamicModal('Quadratic Equations'); return false;" class="topic-pill" data-search-terms="quadratic equations">Quadratic Equations</button>
+<button onclick="openDynamicModal('Systems of Equations'); return false;" class="topic-pill" data-search-terms="systems of equations">Systems of Equations</button>
+</div>
                     <!-- MODIFIED: Changed <a> to <button> and added onclick -->
                     <button onclick="openModal('algebraModal')" class="mt-auto px-4 py-2 bg-primary text-white rounded-lg font-semibold hover:opacity-90 text-center transition-opacity duration-200 focus:outline-none focus:ring-4 focus:ring-accent">Start Algebra Practice</button>
                 </div>
@@ -42,15 +55,15 @@ include '..\\src\\header.php';
             <!-- Geometry Exercises -->
             <div >
                 <!-- Updated to use theme-aware classes -->
-                <div class="bg-card-bg rounded-base-rounded shadow-lg p-6 flex flex-col h-full transition-colors duration-300">
-                    <h5 class="student-hub-card-title"><i class="fas fa-shapes mr-2" aria-hidden="true"></i>Geometry Exercises</h5>
+                <div class="resource-card" data-card-category="all">
+                    <div class="resource-card-header"><div class="resource-card-icon math"><i class="fas fa-shapes mr-2"></i></div><h2 class="resource-card-title">Geometry Exercises</h2></div>
                     <p class="text-text-secondary mb-4">Work on problems involving shapes, angles, areas, and volumes. Perfect for visual learners.</p>
-                    <ul class="student-hub-card-list">
-                        <li><a href="#" onclick="openDynamicModal('Angles and Lines'); return false;" class="text-link-color hover:underline"><i class="fas fa-angle-right mr-2" aria-hidden="true"></i>Angles and Lines</a></li>
-                        <li><a href="#" onclick="openDynamicModal('Area and Perimeter'); return false;" class="text-link-color hover:underline"><i class="fas fa-angle-right mr-2" aria-hidden="true"></i>Area and Perimeter</a></li>
-                        <li><a href="#" onclick="openDynamicModal('Volume and Surface Area'); return false;" class="text-link-color hover:underline"><i class="fas fa-angle-right mr-2" aria-hidden="true"></i>Volume and Surface Area</a></li>
-                        <li><a href="#" onclick="openDynamicModal('Geometric Proofs'); return false;" class="text-link-color hover:underline"><i class="fas fa-angle-right mr-2" aria-hidden="true"></i>Geometric Proofs</a></li>
-                    </ul>
+                    <div class="pills-container">
+<button onclick="openDynamicModal('Angles and Lines'); return false;" class="topic-pill" data-search-terms="angles and lines">Angles and Lines</button>
+<button onclick="openDynamicModal('Area and Perimeter'); return false;" class="topic-pill" data-search-terms="area and perimeter">Area and Perimeter</button>
+<button onclick="openDynamicModal('Volume and Surface Area'); return false;" class="topic-pill" data-search-terms="volume and surface area">Volume and Surface Area</button>
+<button onclick="openDynamicModal('Geometric Proofs'); return false;" class="topic-pill" data-search-terms="geometric proofs">Geometric Proofs</button>
+</div>
                     <!-- MODIFIED: Changed <a> to <button> and added onclick -->
                     <button onclick="openModal('geometryModal')" class="mt-auto px-4 py-2 bg-primary text-white rounded-lg font-semibold hover:opacity-90 text-center transition-opacity duration-200 focus:outline-none focus:ring-4 focus:ring-accent">Do Geometry Exercises</button>
                 </div>
@@ -59,15 +72,15 @@ include '..\\src\\header.php';
             <!-- Calculus Worksheets -->
             <div >
                 <!-- Updated to use theme-aware classes -->
-                <div class="bg-card-bg rounded-base-rounded shadow-lg p-6 flex flex-col h-full transition-colors duration-300">
-                    <h5 class="student-hub-card-title"><i class="fas fa-infinity mr-2" aria-hidden="true"></i>Calculus Worksheets</h5>
+                <div class="resource-card" data-card-category="all">
+                    <div class="resource-card-header"><div class="resource-card-icon math"><i class="fas fa-infinity mr-2"></i></div><h2 class="resource-card-title">Calculus Worksheets</h2></div>
                     <p class="text-text-secondary mb-4">Challenge yourself with problems on limits, derivatives, integrals, and their applications.</p>
-                    <ul class="student-hub-card-list">
-                        <li><a href="#" onclick="openDynamicModal('Limits and Continuity'); return false;" class="text-link-color hover:underline"><i class="fas fa-angle-right mr-2" aria-hidden="true"></i>Limits and Continuity</a></li>
-                        <li><a href="#" onclick="openDynamicModal('Differentiation'); return false;" class="text-link-color hover:underline"><i class="fas fa-angle-right mr-2" aria-hidden="true"></i>Differentiation</a></li>
-                        <li><a href="#" onclick="openDynamicModal('Integration'); return false;" class="text-link-color hover:underline"><i class="fas fa-angle-right mr-2" aria-hidden="true"></i>Integration</a></li>
-                        <li><a href="#" onclick="openDynamicModal('Applications of Calculus'); return false;" class="text-link-color hover:underline"><i class="fas fa-angle-right mr-2" aria-hidden="true"></i>Applications of Calculus</a></li>
-                    </ul>
+                    <div class="pills-container">
+<button onclick="openDynamicModal('Limits and Continuity'); return false;" class="topic-pill" data-search-terms="limits and continuity">Limits and Continuity</button>
+<button onclick="openDynamicModal('Differentiation'); return false;" class="topic-pill" data-search-terms="differentiation">Differentiation</button>
+<button onclick="openDynamicModal('Integration'); return false;" class="topic-pill" data-search-terms="integration">Integration</button>
+<button onclick="openDynamicModal('Applications of Calculus'); return false;" class="topic-pill" data-search-terms="applications of calculus">Applications of Calculus</button>
+</div>
                     <a href="#" class="mt-auto px-4 py-2 bg-primary text-white rounded-lg font-semibold hover:opacity-90 text-center transition-opacity duration-200 focus:outline-none focus:ring-4 focus:ring-accent">Access Calculus Worksheets</a>
                 </div>
             </div>
@@ -75,15 +88,15 @@ include '..\\src\\header.php';
             <!-- Statistics Problems -->
             <div >
                 <!-- Updated to use theme-aware classes -->
-                <div class="bg-card-bg rounded-base-rounded shadow-lg p-6 flex flex-col h-full transition-colors duration-300">
-                    <h5 class="student-hub-card-title"><i class="fas fa-chart-bar mr-2" aria-hidden="true"></i>Statistics Problems</h5>
+                <div class="resource-card" data-card-category="all">
+                    <div class="resource-card-header"><div class="resource-card-icon math"><i class="fas fa-chart-bar mr-2"></i></div><h2 class="resource-card-title">Statistics Problems</h2></div>
                     <p class="text-text-secondary mb-4">Practice data analysis, probability, and statistical inference with our curated problem sets.</p>
-                    <ul class="student-hub-card-list">
-                        <li><a href="#" onclick="openDynamicModal('Descriptive Statistics'); return false;" class="text-link-color hover:underline"><i class="fas fa-angle-right mr-2" aria-hidden="true"></i>Descriptive Statistics</a></li>
-                        <li><a href="#" onclick="openDynamicModal('Probability Distributions'); return false;" class="text-link-color hover:underline"><i class="fas fa-angle-right mr-2" aria-hidden="true"></i>Probability Distributions</a></li>
-                        <li><a href="#" onclick="openDynamicModal('Hypothesis Testing'); return false;" class="text-link-color hover:underline"><i class="fas fa-angle-right mr-2" aria-hidden="true"></i>Hypothesis Testing</a></li>
-                        <li><a href="#" onclick="openDynamicModal('Regression Analysis'); return false;" class="text-link-color hover:underline"><i class="fas fa-angle-right mr-2" aria-hidden="true"></i>Regression Analysis</a></li>
-                    </ul>
+                    <div class="pills-container">
+<button onclick="openDynamicModal('Descriptive Statistics'); return false;" class="topic-pill" data-search-terms="descriptive statistics">Descriptive Statistics</button>
+<button onclick="openDynamicModal('Probability Distributions'); return false;" class="topic-pill" data-search-terms="probability distributions">Probability Distributions</button>
+<button onclick="openDynamicModal('Hypothesis Testing'); return false;" class="topic-pill" data-search-terms="hypothesis testing">Hypothesis Testing</button>
+<button onclick="openDynamicModal('Regression Analysis'); return false;" class="topic-pill" data-search-terms="regression analysis">Regression Analysis</button>
+</div>
                     <a href="#" class="mt-auto px-4 py-2 bg-primary text-white rounded-lg font-semibold hover:opacity-90 text-center transition-opacity duration-200 focus:outline-none focus:ring-4 focus:ring-accent">Solve Statistics Problems</a>
                 </div>
             </div>
@@ -91,15 +104,15 @@ include '..\\src\\header.php';
             <!-- Number Theory Problems -->
             <div >
                 <!-- Updated to use theme-aware classes -->
-                <div class="bg-card-bg rounded-base-rounded shadow-lg p-6 flex flex-col h-full transition-colors duration-300">
-                    <h5 class="student-hub-card-title"><i class="fas fa-hashtag mr-2" aria-hidden="true"></i>Number Theory Problems</h5>
+                <div class="resource-card" data-card-category="all">
+                    <div class="resource-card-header"><div class="resource-card-icon math"><i class="fas fa-hashtag mr-2"></i></div><h2 class="resource-card-title">Number Theory Problems</h2></div>
                     <p class="text-text-secondary mb-4">Explore the fascinating world of numbers with problems on prime numbers, divisibility, and modular arithmetic.</p>
-                    <ul class="student-hub-card-list">
-                        <li><a href="#" onclick="openDynamicModal('Prime Numbers'); return false;" class="text-link-color hover:underline"><i class="fas fa-angle-right mr-2" aria-hidden="true"></i>Prime Numbers</a></li>
-                        <li><a href="#" onclick="openDynamicModal('Divisibility Rules'); return false;" class="text-link-color hover:underline"><i class="fas fa-angle-right mr-2" aria-hidden="true"></i>Divisibility Rules</a></li>
-                        <li><a href="#" onclick="openDynamicModal('Modular Arithmetic'); return false;" class="text-link-color hover:underline"><i class="fas fa-angle-right mr-2" aria-hidden="true"></i>Modular Arithmetic</a></li>
-                        <li><a href="#" onclick="openDynamicModal('Diophantine Equations'); return false;" class="text-link-color hover:underline"><i class="fas fa-angle-right mr-2" aria-hidden="true"></i>Diophantine Equations</a></li>
-                    </ul>
+                    <div class="pills-container">
+<button onclick="openDynamicModal('Prime Numbers'); return false;" class="topic-pill" data-search-terms="prime numbers">Prime Numbers</button>
+<button onclick="openDynamicModal('Divisibility Rules'); return false;" class="topic-pill" data-search-terms="divisibility rules">Divisibility Rules</button>
+<button onclick="openDynamicModal('Modular Arithmetic'); return false;" class="topic-pill" data-search-terms="modular arithmetic">Modular Arithmetic</button>
+<button onclick="openDynamicModal('Diophantine Equations'); return false;" class="topic-pill" data-search-terms="diophantine equations">Diophantine Equations</button>
+</div>
                     <a href="#" class="mt-auto px-4 py-2 bg-primary text-white rounded-lg font-semibold hover:opacity-90 text-center transition-opacity duration-200 focus:outline-none focus:ring-4 focus:ring-accent">Explore Number Theory</a>
                 </div>
             </div>
@@ -107,20 +120,91 @@ include '..\\src\\header.php';
             <!-- Applied Math Challenges -->
             <div >
                 <!-- Updated to use theme-aware classes -->
-                <div class="bg-card-bg rounded-base-rounded shadow-lg p-6 flex flex-col h-full transition-colors duration-300">
-                    <h5 class="student-hub-card-title"><i class="fas fa-puzzle-piece mr-2" aria-hidden="true"></i>Applied Math Challenges</h5>
+                <div class="resource-card" data-card-category="all">
+                    <div class="resource-card-header"><div class="resource-card-icon math"><i class="fas fa-puzzle-piece mr-2"></i></div><h2 class="resource-card-title">Applied Math Challenges</h2></div>
                     <p class="text-text-secondary mb-4">Apply mathematical concepts to real-world scenarios with these challenging application problems.</p>
-                    <ul class="student-hub-card-list">
-                        <li><a href="#" onclick="openDynamicModal('Financial Math'); return false;" class="text-link-color hover:underline"><i class="fas fa-angle-right mr-2" aria-hidden="true"></i>Financial Math</a></li>
-                        <li><a href="#" onclick="openDynamicModal('Physics Applications'); return false;" class="text-link-color hover:underline"><i class="fas fa-angle-right mr-2" aria-hidden="true"></i>Physics Applications</a></li>
-                        <li><a href="#" onclick="openDynamicModal('Engineering Problems'); return false;" class="text-link-color hover:underline"><i class="fas fa-angle-right mr-2" aria-hidden="true"></i>Engineering Problems</a></li>
-                        <li><a href="#" onclick="openDynamicModal('Data Science Challenges'); return false;" class="text-link-color hover:underline"><i class="fas fa-angle-right mr-2" aria-hidden="true"></i>Data Science Challenges</a></li>
-                    </ul>
+                    <div class="pills-container">
+<button onclick="openDynamicModal('Financial Math'); return false;" class="topic-pill" data-search-terms="financial math">Financial Math</button>
+<button onclick="openDynamicModal('Physics Applications'); return false;" class="topic-pill" data-search-terms="physics applications">Physics Applications</button>
+<button onclick="openDynamicModal('Engineering Problems'); return false;" class="topic-pill" data-search-terms="engineering problems">Engineering Problems</button>
+<button onclick="openDynamicModal('Data Science Challenges'); return false;" class="topic-pill" data-search-terms="data science challenges">Data Science Challenges</button>
+</div>
                     <a href="#" class="mt-auto px-4 py-2 bg-primary text-white rounded-lg font-semibold hover:opacity-90 text-center transition-opacity duration-200 focus:outline-none focus:ring-4 focus:ring-accent">Tackle Applied Challenges</a>
                 </div>
             </div>
         </div>
-    </main>
+    
+<div id="no-results-state" class="no-results-box" style="display: none;">
+    <i class="fas fa-search-minus no-results-icon"></i>
+    <h3 class="no-results-title">No matching topics found</h3>
+    <p class="no-results-desc">Try checking your spelling.</p>
+    <button id="reset-search-btn" class="reset-search-btn">Reset Search</button>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const searchInput = document.getElementById("topic-search");
+    const clearBtn = document.getElementById("clear-search");
+    const filterTabs = document.querySelectorAll(".filter-tab");
+    const cards = document.querySelectorAll(".resource-card");
+    const noResultsState = document.getElementById("no-results-state");
+    const resetBtn = document.getElementById("reset-search-btn");
+    let currentCategory = "all";
+    let searchQuery = "";
+    function applyFilters() {
+        let visibleCardsCount = 0;
+        cards.forEach(card => {
+            const cardCategory = card.getAttribute("data-card-category");
+            const categoryMatch = currentCategory === "all" || cardCategory === currentCategory;
+            const pills = card.querySelectorAll(".topic-pill");
+            let matchingPillsInCard = 0;
+            pills.forEach(pill => {
+                const text = pill.textContent.toLowerCase();
+                const terms = pill.getAttribute("data-search-terms").toLowerCase();
+                const textMatch = text.includes(searchQuery) || terms.includes(searchQuery);
+                if (textMatch) { pill.style.display = "block"; matchingPillsInCard++; }
+                else { pill.style.display = "none"; }
+            });
+            const shouldBeVisible = categoryMatch && (searchQuery === "" || matchingPillsInCard > 0);
+            if (shouldBeVisible) { card.style.display = "flex"; visibleCardsCount++; }
+            else { card.style.display = "none"; }
+        });
+        if (visibleCardsCount === 0) {
+            noResultsState.style.display = "block";
+            document.getElementById("topics-grid").style.display = "none";
+        } else {
+            noResultsState.style.display = "none";
+            document.getElementById("topics-grid").style.display = "grid";
+        }
+    }
+    if (searchInput) searchInput.addEventListener("input", (e) => {
+        searchQuery = e.target.value.toLowerCase().trim();
+        clearBtn.style.display = searchQuery.length > 0 ? "block" : "none";
+        applyFilters();
+    });
+    if (clearBtn) clearBtn.addEventListener("click", () => {
+        searchInput.value = ""; searchQuery = "";
+        clearBtn.style.display = "none"; searchInput.focus();
+        applyFilters();
+    });
+    filterTabs.forEach(tab => {
+        tab.addEventListener("click", () => {
+            filterTabs.forEach(t => { t.classList.remove("active"); t.setAttribute("aria-selected", "false"); });
+            tab.classList.add("active"); tab.setAttribute("aria-selected", "true");
+            currentCategory = tab.getAttribute("data-category"); applyFilters();
+        });
+    });
+    if (resetBtn) resetBtn.addEventListener("click", () => {
+        searchInput.value = ""; searchQuery = ""; clearBtn.style.display = "none";
+        currentCategory = "all";
+        filterTabs.forEach(t => {
+            t.classList.remove("active"); t.setAttribute("aria-selected", "false");
+            if (t.getAttribute("data-category") === "all") { t.classList.add("active"); t.setAttribute("aria-selected", "true"); }
+        });
+        applyFilters();
+    });
+});
+</script>
+</main>
 
     <!-- 
       ==================================================

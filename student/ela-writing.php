@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 // Set variables required by header.php for dynamic content
 $pageTitle = "Writing Prompts & Guides - Hesten's Learning";
 $pageDescription = "Unleash your creativity and refine your writing skills with our diverse prompts and helpful guides.";
@@ -8,324 +8,14 @@ $pageAuthor = "Hesten's Learning Team";
 include '..\src\header.php';
 ?>
 
-<style>
-/* Page Wrapper spacing */
-.page-content-wrapper {
-    padding-top: var(--spacing-8);
-    padding-bottom: var(--spacing-16);
-    min-height: 80vh;
-}
+<link rel="stylesheet" href="/assets/css/pages/student-resources.css">
 
-/* Header & Intro */
-.writing-header {
-    text-align: center;
-    margin-bottom: var(--spacing-12);
-}
-
-.writing-title {
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: var(--color-primary);
-    margin-bottom: var(--spacing-3);
-    letter-spacing: -0.025em;
-}
-
-.writing-subtitle {
-    font-size: 1.125rem;
-    color: var(--color-text-muted);
-    max-width: 700px;
-    margin: 0 auto var(--spacing-8) auto;
-    line-height: 1.6;
-}
-
-/* Search and Filter Container */
-.search-filter-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--spacing-6);
-    background-color: var(--color-bg-surface);
-    padding: var(--spacing-6);
-    border-radius: var(--radius-2xl);
-    border: 1px solid var(--color-border);
-    box-shadow: var(--shadow-md);
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-/* Search Box */
-.search-box {
-    position: relative;
-    width: 100%;
-    max-width: 600px;
-}
-
-.search-box input {
-    width: 100%;
-    padding: var(--spacing-3) var(--spacing-4) var(--spacing-3) 2.75rem;
-    font-size: 1rem;
-    border-radius: var(--radius-full);
-    border: 1.5px solid var(--color-border);
-    background-color: var(--color-bg-base);
-    color: var(--color-text-main);
-    transition: all 0.2s ease;
-}
-
-.search-box input:focus {
-    outline: none;
-    border-color: var(--color-primary);
-    background-color: var(--color-bg-surface);
-    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
-}
-
-.search-icon {
-    position: absolute;
-    left: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--color-text-muted);
-    font-size: 1rem;
-    pointer-events: none;
-}
-
-.clear-btn {
-    position: absolute;
-    right: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--color-text-muted);
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0.25rem;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.2s;
-}
-
-.clear-btn:hover {
-    background-color: var(--color-border);
-    color: var(--color-text-main);
-}
-
-/* Filter Tabs */
-.filter-tabs {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: var(--spacing-2);
-    width: 100%;
-}
-
-.filter-tab {
-    padding: 0.5rem 1rem;
-    font-size: 0.875rem;
-    font-weight: 600;
-    border-radius: var(--radius-full);
-    background-color: var(--color-bg-base);
-    color: var(--color-text-muted);
-    border: 1px solid var(--color-border);
-    transition: all 0.2s ease;
-    cursor: pointer;
-}
-
-.filter-tab:hover {
-    background-color: var(--color-border);
-    color: var(--color-text-main);
-}
-
-.filter-tab.active {
-    background-color: var(--color-primary);
-    color: white;
-    border-color: var(--color-primary);
-}
-
-/* Writing Cards Grid */
-.writing-grid {
-    display: grid;
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-    gap: var(--spacing-6);
-    margin-top: var(--spacing-8);
-}
-
-@media (min-width: 768px) {
-    .writing-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
-@media (min-width: 1024px) {
-    .writing-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-}
-
-/* Card Styling */
-.writing-card {
-    background-color: var(--color-bg-surface);
-    border-radius: var(--radius-2xl);
-    border: 1px solid var(--color-border);
-    padding: var(--spacing-6);
-    display: flex;
-    flex-direction: column;
-    box-shadow: var(--shadow-md);
-    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
-    height: 100%;
-}
-
-.writing-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
-    border-color: rgba(79, 70, 229, 0.3);
-}
-
-.writing-card-header {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-3);
-    margin-bottom: var(--spacing-3);
-}
-
-.writing-card-icon {
-    width: 2.75rem;
-    height: 2.75rem;
-    border-radius: var(--radius-lg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.25rem;
-    color: white;
-    box-shadow: var(--shadow-sm);
-}
-
-/* Category Gradient Schemes */
-.writing-card-icon.creative { background: linear-gradient(135deg, #6366f1, #4f46e5); }
-.writing-card-icon.essay { background: linear-gradient(135deg, #0d9488, #0f766e); }
-.writing-card-icon.research { background: linear-gradient(135deg, #db2777, #be185d); }
-.writing-card-icon.grammar { background: linear-gradient(135deg, #d97706, #b45309); }
-.writing-card-icon.argumentative { background: linear-gradient(135deg, #2563eb, #1d4ed8); }
-.writing-card-icon.narrative { background: linear-gradient(135deg, #ea580c, #c2410c); }
-
-.writing-card-title {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--color-text-main);
-    margin: 0;
-}
-
-.writing-card-desc {
-    font-size: 0.95rem;
-    color: var(--color-text-muted);
-    margin-bottom: var(--spacing-4);
-    line-height: 1.5;
-}
-
-/* Tag Pills Container */
-.pills-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: auto; /* Push to bottom */
-}
-
-/* Topic Pills */
-.topic-pill {
-    padding: 0.5rem 0.85rem;
-    font-size: 0.875rem;
-    font-weight: 600;
-    border-radius: var(--radius-lg);
-    background-color: var(--color-bg-base);
-    color: var(--color-text-main);
-    border: 1px solid var(--color-border);
-    transition: all 0.2s ease;
-    cursor: pointer;
-    text-align: left;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-}
-
-.topic-pill::before {
-    content: "\f105";
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    margin-right: 0.5rem;
-    color: var(--color-primary);
-    transition: transform 0.2s ease;
-}
-
-.topic-pill:hover {
-    background-color: rgba(79, 70, 229, 0.08);
-    border-color: var(--color-primary);
-    color: var(--color-primary);
-}
-
-.topic-pill:hover::before {
-    transform: translateX(3px);
-}
-
-.topic-pill:focus-visible {
-    outline: 3px solid var(--color-primary) !important;
-    outline-offset: 1px;
-}
-
-/* Empty State Styling */
-.no-results-box {
-    text-align: center;
-    padding: var(--spacing-12) var(--spacing-6);
-    background-color: var(--color-bg-surface);
-    border-radius: var(--radius-2xl);
-    border: 1px dashed var(--color-border);
-    max-width: 500px;
-    margin: var(--spacing-12) auto;
-    box-shadow: var(--shadow-sm);
-}
-
-.no-results-icon {
-    font-size: 3rem;
-    color: var(--color-text-muted);
-    margin-bottom: var(--spacing-4);
-}
-
-.no-results-title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--color-text-main);
-    margin-bottom: var(--spacing-2);
-}
-
-.no-results-desc {
-    color: var(--color-text-muted);
-    margin-bottom: var(--spacing-6);
-}
-
-.reset-search-btn {
-    padding: 0.625rem 1.25rem;
-    font-size: 0.875rem;
-    font-weight: 700;
-    background-color: var(--color-primary);
-    color: white;
-    border-radius: var(--radius-full);
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.2s;
-    box-shadow: var(--shadow-sm);
-}
-
-.reset-search-btn:hover {
-    background-color: var(--color-primary-hover);
-}
-</style>
 
     <main class="page-content-wrapper container">
         <!-- Header/Hero Section -->
-        <div class="writing-header">
-            <h1 class="writing-title">Writing Prompts & Guides</h1>
-            <p class="writing-subtitle">Unleash your creativity and refine your writing skills with our diverse prompts and helpful guides.</p>
+        <div class="resource-header">
+            <h1 class="resource-title">Writing Prompts & Guides</h1>
+            <p class="resource-subtitle">Unleash your creativity and refine your writing skills with our diverse prompts and helpful guides.</p>
             
             <!-- Search and Filter Bar -->
             <div class="search-filter-container">
@@ -350,14 +40,14 @@ include '..\src\header.php';
         </div>
 
         <!-- Cards Grid -->
-        <div class="writing-grid" id="topics-grid">
+        <div class="resource-grid" id="topics-grid">
             <!-- 1. Creative Writing Prompts -->
-            <div class="writing-card" data-card-category="creative">
-                <div class="writing-card-header">
-                    <div class="writing-card-icon creative"><i class="fas fa-lightbulb"></i></div>
-                    <h2 class="writing-card-title">Creative Writing Prompts</h2>
+            <div class="resource-card" data-card-category="creative">
+                <div class="resource-card-header">
+                    <div class="resource-card-icon creative"><i class="fas fa-lightbulb"></i></div>
+                    <h2 class="resource-card-title">Creative Writing Prompts</h2>
                 </div>
-                <p class="writing-card-desc">Spark your imagination with prompts for short stories, poetry, and reflective pieces.</p>
+                <p class="resource-card-desc">Spark your imagination with prompts for short stories, poetry, and reflective pieces.</p>
                 <div class="pills-container">
                     <button onclick="openDynamicModal('Fantasy Prompts'); return false;" class="topic-pill" data-search-terms="fantasy prompts short stories imagination creative writing">Fantasy Prompts</button>
                     <button onclick="openDynamicModal('Sci-Fi Scenarios'); return false;" class="topic-pill" data-search-terms="sci-fi scenarios space technology future creative writing">Sci-Fi Scenarios</button>
@@ -367,12 +57,12 @@ include '..\src\header.php';
             </div>
 
             <!-- 2. Essay Writing Guide -->
-            <div class="writing-card" data-card-category="essay">
-                <div class="writing-card-header">
-                    <div class="writing-card-icon essay"><i class="fas fa-file-alt"></i></div>
-                    <h2 class="writing-card-title">Essay Writing Guide</h2>
+            <div class="resource-card" data-card-category="essay">
+                <div class="resource-card-header">
+                    <div class="resource-card-icon essay"><i class="fas fa-file-alt"></i></div>
+                    <h2 class="resource-card-title">Essay Writing Guide</h2>
                 </div>
-                <p class="writing-card-desc">Learn the structure and techniques for writing compelling essays, from argumentative to expository.</p>
+                <p class="resource-card-desc">Learn the structure and techniques for writing compelling essays, from argumentative to expository.</p>
                 <div class="pills-container">
                     <button onclick="openDynamicModal('Introduction & Thesis'); return false;" class="topic-pill" data-search-terms="introduction thesis hook claims essay writing guide structure">Introduction & Thesis</button>
                     <button onclick="openDynamicModal('Body Paragraph Development'); return false;" class="topic-pill" data-search-terms="body paragraph development evidence support transitions essay writing guide">Body Paragraph Development</button>
@@ -382,12 +72,12 @@ include '..\src\header.php';
             </div>
 
             <!-- 3. Research Paper Outline -->
-            <div class="writing-card" data-card-category="research">
-                <div class="writing-card-header">
-                    <div class="writing-card-icon research"><i class="fas fa-clipboard-list"></i></div>
-                    <h2 class="writing-card-title">Research Paper Outline</h2>
+            <div class="resource-card" data-card-category="research">
+                <div class="resource-card-header">
+                    <div class="resource-card-icon research"><i class="fas fa-clipboard-list"></i></div>
+                    <h2 class="resource-card-title">Research Paper Outline</h2>
                 </div>
-                <p class="writing-card-desc">Organize your research effectively with our detailed outlines and planning tools for academic papers.</p>
+                <p class="resource-card-desc">Organize your research effectively with our detailed outlines and planning tools for academic papers.</p>
                 <div class="pills-container">
                     <button onclick="openDynamicModal('Topic Selection'); return false;" class="topic-pill" data-search-terms="topic selection thesis focus planning research paper outline">Topic Selection</button>
                     <button onclick="openDynamicModal('Source Evaluation'); return false;" class="topic-pill" data-search-terms="source evaluation credibility bibliography facts research paper outline">Source Evaluation</button>
@@ -397,12 +87,12 @@ include '..\src\header.php';
             </div>
 
             <!-- 4. Grammar Checklists -->
-            <div class="writing-card" data-card-category="grammar">
-                <div class="writing-card-header">
-                    <div class="writing-card-icon grammar"><i class="fas fa-check-square"></i></div>
-                    <h2 class="writing-card-title">Grammar Checklists</h2>
+            <div class="resource-card" data-card-category="grammar">
+                <div class="resource-card-header">
+                    <div class="resource-card-icon grammar"><i class="fas fa-check-square"></i></div>
+                    <h2 class="resource-card-title">Grammar Checklists</h2>
                 </div>
-                <p class="writing-card-desc">Ensure your writing is grammatically sound with easy-to-follow checklists for common errors.</p>
+                <p class="resource-card-desc">Ensure your writing is grammatically sound with easy-to-follow checklists for common errors.</p>
                 <div class="pills-container">
                     <button onclick="openDynamicModal('Sentence Structure'); return false;" class="topic-pill" data-search-terms="sentence structure run-on fragments clauses grammar checklists">Sentence Structure</button>
                     <button onclick="openDynamicModal('Verb Tenses'); return false;" class="topic-pill" data-search-terms="verb tenses past present future aspects grammar checklists">Verb Tenses</button>
@@ -412,12 +102,12 @@ include '..\src\header.php';
             </div>
 
             <!-- 5. Argumentative Writing -->
-            <div class="writing-card" data-card-category="argumentative">
-                <div class="writing-card-header">
-                    <div class="writing-card-icon argumentative"><i class="fas fa-gavel"></i></div>
-                    <h2 class="writing-card-title">Argumentative Writing</h2>
+            <div class="resource-card" data-card-category="argumentative">
+                <div class="resource-card-header">
+                    <div class="resource-card-icon argumentative"><i class="fas fa-gavel"></i></div>
+                    <h2 class="resource-card-title">Argumentative Writing</h2>
                 </div>
-                <p class="writing-card-desc">Learn to construct strong arguments, support claims with evidence, and refute counterarguments.</p>
+                <p class="resource-card-desc">Learn to construct strong arguments, support claims with evidence, and refute counterarguments.</p>
                 <div class="pills-container">
                     <button onclick="openDynamicModal('Developing Arguments'); return false;" class="topic-pill" data-search-terms="developing arguments claims thesis persuasive argumentative writing">Developing Arguments</button>
                     <button onclick="openDynamicModal('Evidence & Support'); return false;" class="topic-pill" data-search-terms="evidence support facts citations logic argumentative writing">Evidence & Support</button>
@@ -427,12 +117,12 @@ include '..\src\header.php';
             </div>
 
             <!-- 6. Narrative Writing -->
-            <div class="writing-card" data-card-category="narrative">
-                <div class="writing-card-header">
-                    <div class="writing-card-icon narrative"><i class="fas fa-scroll"></i></div>
-                    <h2 class="writing-card-title">Narrative Writing</h2>
+            <div class="resource-card" data-card-category="narrative">
+                <div class="resource-card-header">
+                    <div class="resource-card-icon narrative"><i class="fas fa-scroll"></i></div>
+                    <h2 class="resource-card-title">Narrative Writing</h2>
                 </div>
-                <p class="writing-card-desc">Craft compelling stories with engaging plots, vivid characters, and descriptive settings.</p>
+                <p class="resource-card-desc">Craft compelling stories with engaging plots, vivid characters, and descriptive settings.</p>
                 <div class="pills-container">
                     <button onclick="openDynamicModal('Story Planning'); return false;" class="topic-pill" data-search-terms="story planning plot outline arcs narrative writing">Story Planning</button>
                     <button onclick="openDynamicModal('Character Development'); return false;" class="topic-pill" data-search-terms="character development traits motivations protagonist antagonist narrative writing">Character Development</button>
@@ -573,3 +263,5 @@ include '..\src\resource-modal.php';
 // Include the footer file
 include '..\src\footer.php';
 ?>
+
+
