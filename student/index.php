@@ -57,6 +57,74 @@ include '../src/header.php';
     font-weight: 400;
 }
 
+/* Continue Learning Section */
+.continue-learning-section {
+    margin-bottom: var(--spacing-8);
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: var(--spacing-4);
+    color: var(--color-text-main);
+}
+
+.continue-learning-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-4);
+}
+
+.continue-card {
+    background: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-4);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-4);
+    text-decoration: none;
+    color: var(--color-text-main);
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-sm);
+}
+
+.continue-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-primary);
+}
+
+.continue-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-lg);
+    background: rgba(79, 70, 229, 0.1);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.continue-info h4 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1rem;
+    font-weight: 700;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.continue-info p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+}
+
 /* Documents Hub Banner */
 .documents-hub-banner {
     margin-bottom: var(--spacing-8);
@@ -467,7 +535,7 @@ include '../src/header.php';
             <i class="fas fa-book-open" style="bottom: 10%; right: 8%; font-size: 6rem;"></i>
         </div>
         <div class="relative">
-            <h1 class="student-hero-title">Student Resource Wiki</h1>
+            <h1 class="student-hero-title" id="dashboard-greeting">Student Resource Wiki</h1>
             <p class="student-hero-desc">Explore interactive guides, practice tools, and key study resources organized by subject.</p>
         </div>
     </div>
@@ -487,6 +555,14 @@ include '../src/header.php';
                 <span>Go to Documents Hub</span>
                 <i class="fas fa-arrow-right" style="color: white; font-size: 0.85rem;"></i>
             </a>
+        </div>
+
+        <!-- Continue Learning / Recent Activity -->
+        <div id="continue-learning-container" class="continue-learning-section" style="display: none;">
+            <h2 class="section-title">Continue Learning</h2>
+            <div class="continue-learning-grid" id="continue-learning-grid">
+                <!-- Populated by JS -->
+            </div>
         </div>
 
         <div class="subject-gateway-grid">
@@ -770,6 +846,55 @@ document.addEventListener('DOMContentLoaded', () => {
         if (banner) {
             banner.style.display = 'flex';
         }
+    }
+
+    // Dynamic Greeting
+    try {
+        const savedProfile = localStorage.getItem('hesten-user-profile');
+        if (savedProfile) {
+            const profile = JSON.parse(savedProfile);
+            if (profile.firstName) {
+                const greetingEl = document.getElementById('dashboard-greeting');
+                if (greetingEl) {
+                    greetingEl.textContent = `Welcome back, ${profile.firstName}!`;
+                }
+            }
+        }
+    } catch (e) {
+        console.error('Error loading user profile:', e);
+    }
+
+    // Populate Continue Learning
+    try {
+        const bookmarks = JSON.parse(localStorage.getItem('library-bookmarks')) || [];
+        if (bookmarks.length > 0) {
+            const container = document.getElementById('continue-learning-container');
+            const grid = document.getElementById('continue-learning-grid');
+            
+            // Show up to 3 recent bookmarks
+            const recentBookmarks = bookmarks.slice(-3).reverse();
+            
+            let html = '';
+            recentBookmarks.forEach(id => {
+                const title = id.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+                html += `
+                    <a href="/library/read/index.php?book=${encodeURIComponent(id)}" class="continue-card">
+                        <div class="continue-icon"><i class="fas fa-book-reader"></i></div>
+                        <div class="continue-info">
+                            <h4>${title}</h4>
+                            <p>Pick up where you left off</p>
+                        </div>
+                    </a>
+                `;
+            });
+            
+            if (grid && container) {
+                grid.innerHTML = html;
+                container.style.display = 'block';
+            }
+        }
+    } catch(e) {
+        console.error('Error loading bookmarks:', e);
     }
 });
 </script>

@@ -18,6 +18,63 @@ include ABSPATH . '../src/header.php';
 <link rel="stylesheet" href="../assets/css/reader-main.css">
 <link rel="stylesheet" href="../assets/css/pages/profile.css">
 
+<style>
+/* Gamification Badges */
+.badges-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: var(--spacing-4);
+    margin-top: var(--spacing-4);
+}
+
+.badge-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--spacing-2);
+    opacity: 0.4;
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
+}
+
+.badge-item.unlocked {
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
+.badge-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--color-bg-surface);
+    border: 2px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    color: var(--color-text-muted);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+}
+
+.badge-item.unlocked .badge-icon {
+    background: linear-gradient(135deg, rgba(79, 70, 229, 0.1), rgba(236, 72, 153, 0.1));
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    box-shadow: 0 0 15px rgba(79, 70, 229, 0.3);
+}
+
+.badge-item.unlocked .badge-icon.gold { border-color: #f59e0b; color: #f59e0b; box-shadow: 0 0 15px rgba(245, 158, 11, 0.3); }
+.badge-item.unlocked .badge-icon.green { border-color: #10b981; color: #10b981; box-shadow: 0 0 15px rgba(16, 185, 129, 0.3); }
+
+.badge-title {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+}
+</style>
+
 <main id="main-content" class="library-main profile-main-layout">
     <!-- Aurora Mesh Background -->
     <div class="library-aurora-bg">
@@ -87,6 +144,14 @@ include ABSPATH . '../src/header.php';
                             <div class="profile-stat-num" id="stat-notes">0</div>
                             <div class="profile-stat-label">Study Notes</div>
                         </div>
+                    </div>
+                </section>
+                
+                <!-- Achievements Card -->
+                <section class="profile-card animate-reveal" style="animation-delay: 0.15s">
+                    <h2 class="profile-card-title"><i class="fas fa-medal"></i> Achievements</h2>
+                    <div class="badges-grid" id="badges-container">
+                        <!-- Populated by JS -->
                     </div>
                 </section>
             </div>

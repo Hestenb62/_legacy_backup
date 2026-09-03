@@ -168,4 +168,22 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem(bookmarksKey, JSON.stringify(bms));
         window.location.reload();
     };
+
+    // 4. Badges Logic
+    const badgesContainer = document.getElementById('badges-container');
+    if (badgesContainer) {
+        const badges = [
+            { id: 'first-book', icon: 'fas fa-book', color: 'blue', title: 'First Book', condition: bookmarks.length >= 1 },
+            { id: 'avid-reader', icon: 'fas fa-book-reader', color: 'gold', title: 'Avid Reader', condition: bookmarks.length >= 5 },
+            { id: 'highlighter', icon: 'fas fa-highlighter', color: 'green', title: 'Highlighter', condition: allHighlights.length >= 1 },
+            { id: 'scholar', icon: 'fas fa-pen-fancy', color: 'gold', title: 'Scholar', condition: allNotes >= 5 }
+        ];
+
+        badgesContainer.innerHTML = badges.map(b => `
+            <div class="badge-item ${b.condition ? 'unlocked' : ''}">
+                <div class="badge-icon ${b.color}"><i class="${b.icon}"></i></div>
+                <div class="badge-title">${b.title}</div>
+            </div>
+        `).join('');
+    }
 });
