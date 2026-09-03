@@ -770,3 +770,8 @@
     }
 </script>
 <script src="/assets/js/global-standard.js"></script>
+
+<!-- Google API Scripts for Global Auto-Sync -->
+<script async defer src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
+<script async defer src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script>
+<script src="/assets/js/gdrive-sync.js"></script>

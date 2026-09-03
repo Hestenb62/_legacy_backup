@@ -376,7 +376,7 @@ include '../src/header.php';
                     <!-- Simulated Export feature -->
                     <button onclick="exportSettings()"
                         class="settings-btn settings-btn-export">
-                        <i class="fas fa-download"></i> Export Settings
+                        <i class="fas fa-download"></i> Export All Data
                     </button>
                 </div>
 
@@ -397,6 +397,17 @@ include '../src/header.php';
                             class="settings-btn settings-btn-restore">
                             <i class="fas fa-cloud-download-alt"></i> Restore from Drive
                         </button>
+                    </div>
+                    <div class="mt-4" style="display: flex; align-items: center; justify-content: space-between; padding: 1rem; background: var(--color-bg-secondary); border-radius: 8px;">
+                        <div>
+                            <span class="settings-toggle-title">Auto-Sync to Google Drive</span>
+                            <span class="settings-toggle-desc">Automatically backup changes in the background.</span>
+                        </div>
+                        <label class="settings-switch">
+                            <input type="checkbox" id="gdrive-autosync-toggle" class="settings-switch-input"
+                                onchange="localStorage.setItem('auto_sync_gdrive', this.checked); if(this.checked) triggerAutoSync();">
+                            <div class="settings-switch-slider"></div>
+                        </label>
                     </div>
                 </div>
             </section>
@@ -430,204 +441,7 @@ include '../src/header.php';
 
 </main>
 
-<!-- Google API Scripts -->
-<script async defer src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
-<script async defer src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script>
-
-<script>
-    // --- GOOGLE DRIVE SYNC LOGIC ---
-    // IMPORTANT: Replace 'YOUR_GOOGLE_CLIENT_ID_HERE' with your actual Google Cloud Project Client ID for this to work natively!
-    const CLIENT_ID = '988211241767-n13gda92d0t48la0ibou2jl5cir723nc.apps.googleusercontent.com'; 
-    const DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/drive/v3/rest"];
-    const SCOPES = 'https://www.googleapis.com/auth/drive.file'; // drive.file scope so users can actually see the file in their Drive
-
-    let tokenClient;
-    let gapiInited = false;
-    let gisInited = false;
-
-    function gapiLoaded() {
-        gapi.load('client', initializeGapiClient);
-    }
-
-    async function initializeGapiClient() {
-        await gapi.client.init({
-            discoveryDocs: DISCOVERY_DOCS,
-        });
-        gapiInited = true;
-        maybeEnableButtons();
-    }
-
-    function gisLoaded() {
-        tokenClient = google.accounts.oauth2.initTokenClient({
-            client_id: CLIENT_ID,
-            scope: SCOPES,
-            callback: '', // defined at request time
-        });
-        gisInited = true;
-        maybeEnableButtons();
-    }
-
-    function maybeEnableButtons() {
-        if (gapiInited && gisInited) {
-            document.getElementById('gdrive-save-btn').disabled = false;
-            document.getElementById('gdrive-load-btn').disabled = false;
-        }
-    }
-
-    function getAllSiteData() {
-        let data = {};
-        for (let i = 0; i < localStorage.length; i++) {
-            let key = localStorage.key(i);
-            data[key] = localStorage.getItem(key);
-        }
-        return JSON.stringify(data);
-    }
-
-    function restoreSiteData(jsonString) {
-        try {
-            let data = typeof jsonString === 'string' ? JSON.parse(jsonString) : jsonString;
-            for (let key in data) {
-                localStorage.setItem(key, data[key]);
-            }
-            alert('Data restored successfully from Google Drive! The page will now reload.');
-            window.location.reload();
-        } catch (e) {
-            alert('Error parsing site data from Drive.');
-            console.error(e);
-        }
-    }
-
-    async function saveToGoogleDrive() {
-        if (CLIENT_ID === 'YOUR_GOOGLE_CLIENT_ID_HERE') {
-            alert('Setup Required: Please edit settings.php and replace YOUR_GOOGLE_CLIENT_ID_HERE with a valid Google Client ID from the Google Cloud Console.');
-            return;
-        }
-        
-        tokenClient.callback = async (resp) => {
-            if (resp.error !== undefined) {
-                console.error(resp);
-                return;
-            }
-            try {
-                // Show loading state
-                const saveBtn = document.getElementById('gdrive-save-btn');
-                const originalText = saveBtn.innerHTML;
-                saveBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Saving...';
-                saveBtn.disabled = true;
-
-                let fileContent = getAllSiteData();
-                const accessToken = gapi.client.getToken().access_token;
-
-                // 1. Check if file already exists in user's drive
-                const response = await gapi.client.drive.files.list({
-                    fields: 'files(id, name)',
-                    pageSize: 10,
-                    q: "name='hestens_learning_data.json' and trashed=false"
-                });
-                const files = response.result.files;
-                
-                let fileId;
-
-                if (files && files.length > 0) {
-                    fileId = files[0].id;
-                } else {
-                    // 2. Create the file metadata first
-                    const metaResponse = await fetch('https://www.googleapis.com/drive/v3/files', {
-                        method: 'POST',
-                        headers: {
-                            'Authorization': 'Bearer ' + accessToken,
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({
-                            name: 'hestens_learning_data.json'
-                        })
-                    });
-                    const metaData = await metaResponse.json();
-                    fileId = metaData.id;
-                }
-
-                // 3. Upload the content to the fileId
-                await fetch('https://www.googleapis.com/upload/drive/v3/files/' + fileId + '?uploadType=media', {
-                    method: 'PATCH',
-                    headers: {
-                        'Authorization': 'Bearer ' + accessToken,
-                        'Content-Type': 'application/json'
-                    },
-                    body: fileContent
-                });
-                
-                saveBtn.innerHTML = originalText;
-                saveBtn.disabled = false;
-                alert('Site data backed up to your Google Drive seamlessly! You should see hestens_learning_data.json in your Drive.');
-            } catch (err) {
-                alert('Error saving to Google Drive: ' + err.message);
-                console.error(err);
-                const saveBtn = document.getElementById('gdrive-save-btn');
-                saveBtn.innerHTML = '<i class="fas fa-cloud-upload-alt"></i> Backup to Drive';
-                saveBtn.disabled = false;
-            }
-        };
-
-        if (gapi.client.getToken() === null) {
-            tokenClient.requestAccessToken({prompt: 'consent'});
-        } else {
-            tokenClient.requestAccessToken({prompt: ''});
-        }
-    }
-
-    async function loadFromGoogleDrive() {
-        if (CLIENT_ID === 'YOUR_GOOGLE_CLIENT_ID_HERE') {
-            alert('Setup Required: Please edit settings.php and replace YOUR_GOOGLE_CLIENT_ID_HERE with a valid Google Client ID from the Google Cloud Console.');
-            return;
-        }
-
-        tokenClient.callback = async (resp) => {
-            if (resp.error !== undefined) {
-                console.error(resp);
-                return;
-            }
-            try {
-                // Show loading state
-                const loadBtn = document.getElementById('gdrive-load-btn');
-                const originalText = loadBtn.innerHTML;
-                loadBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Loading...';
-                loadBtn.disabled = true;
-
-                const response = await gapi.client.drive.files.list({
-                    fields: 'files(id, name)',
-                    pageSize: 10,
-                    q: "name='hestens_learning_data.json' and trashed=false"
-                });
-                const files = response.result.files;
-                
-                if (files && files.length > 0) {
-                    const fileResponse = await gapi.client.drive.files.get({
-                        fileId: files[0].id,
-                        alt: 'media'
-                    });
-                    restoreSiteData(fileResponse.body);
-                } else {
-                    alert('No saved data found in your Google Drive. Try backing it up first!');
-                }
-                loadBtn.innerHTML = originalText;
-                loadBtn.disabled = false;
-            } catch (err) {
-                alert('Error loading from Google Drive: ' + err.message);
-                console.error(err);
-                const loadBtn = document.getElementById('gdrive-load-btn');
-                loadBtn.innerHTML = '<i class="fas fa-cloud-download-alt"></i> Restore from Drive';
-                loadBtn.disabled = false;
-            }
-        };
-
-        if (gapi.client.getToken() === null) {
-            tokenClient.requestAccessToken({prompt: 'consent'});
-        } else {
-            tokenClient.requestAccessToken({prompt: ''});
-        }
-    }
-
-    // --- SETTINGS PAGE SYNC LOGIC ---
+<script>    // --- SETTINGS PAGE SYNC LOGIC ---
 
     function syncPageUI(s) {
         if (!s) s = loadSettings(); // Default to global load if not provided
@@ -686,17 +500,22 @@ include '../src/header.php';
                 btn.setAttribute('aria-selected', c === activeCurriculum ? 'true' : 'false');
             }
         });
+
+        // Sync Auto-Sync Toggle
+        if (document.getElementById('gdrive-autosync-toggle')) {
+            document.getElementById('gdrive-autosync-toggle').checked = localStorage.getItem('auto_sync_gdrive') === 'true';
+        }
     }
 
     function exportSettings() {
-        const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(loadSettings()));
+        const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(getAllSiteData());
         const downloadAnchorNode = document.createElement('a');
         downloadAnchorNode.setAttribute("href", dataStr);
-        downloadAnchorNode.setAttribute("download", "hesten-settings.json");
+        downloadAnchorNode.setAttribute("download", "hestens_learning_data.json");
         document.body.appendChild(downloadAnchorNode);
         downloadAnchorNode.click();
         downloadAnchorNode.remove();
-        alert('Settings downloaded as hesten-settings.json');
+        alert('Data downloaded as hestens_learning_data.json');
     }
 
     // Initialize UI on Load
