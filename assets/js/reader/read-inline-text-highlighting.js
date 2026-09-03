@@ -58,7 +58,7 @@
             setTimeout(checkSelection, 30);
         });
 
-        function applyHighlight(colorClass) {
+        function applyHighlight(colorClass, note = '') {
             if (!currentSelectedRange) return;
             const text = currentSelectedRange.toString();
             if (!text) return;
@@ -76,7 +76,8 @@
             toolbar.classList.add("hidden");
             toolbar.style.display = "none";
 
-            saveHighlight(text, colorClass, highlightsKey);
+            saveHighlight(text, colorClass, highlightsKey, note);
+            currentSelectedRange = null;
         }
 
         if (hlYellow) hlYellow.addEventListener("click", () => applyHighlight("hl-yellow"));
@@ -90,6 +91,7 @@
                     toolbar.classList.add("hidden");
                     toolbar.style.display = "none";
                     window.getSelection().removeAllRanges();
+                    currentSelectedRange = null;
                 }
             });
         }
@@ -99,8 +101,7 @@
                 if (currentSelectedRange) {
                     const note = prompt("Add a study note for this selection:");
                     if (note) {
-                        applyHighlight("hl-yellow");
-                        saveHighlight(currentSelectedRange.toString(), "hl-yellow", highlightsKey, note);
+                        applyHighlight("hl-yellow", note);
                     }
                 }
             });

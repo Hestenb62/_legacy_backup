@@ -76,6 +76,8 @@
                 handleUrlHash();
             } else {
                 bookContent.style.transform = '';
+                bookContent.style.columnWidth = '';
+                bookContent.style.columnGap = '';
             }
         }
 
