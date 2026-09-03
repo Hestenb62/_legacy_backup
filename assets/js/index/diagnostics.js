@@ -50,7 +50,7 @@ export function renderFocusRecommendations() {
     let cardsHtml = '';
     missed.forEach(item => {
         // Assume learningLevels is available globally for now
-        const levelData = typeof window.learningLevels !== 'undefined' ? window.learningLevels.find(l => l.id === item.id) : null;
+        const levelData = typeof learningLevels !== 'undefined' ? learningLevels.find(l => l.id === item.id) : null;
         if (!levelData) return;
 
         const link = levelData.link || '#';

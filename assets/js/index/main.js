@@ -28,8 +28,8 @@ document.addEventListener("DOMContentLoaded", () => {
     loadState();
     
     // Ensure learningLevels data is loaded (via standard script tag before this module)
-    if (typeof window.learningLevels !== 'undefined') {
-        renderLevels(window.learningLevels);
+    if (typeof learningLevels !== 'undefined') {
+        renderLevels(learningLevels);
         applyFilters(); 
     }
     
