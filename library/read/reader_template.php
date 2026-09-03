@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * library/read/reader_template.php - Unified Digital Reader Template
  * Implements distraction-free editorial reading, customizable typography,
@@ -522,6 +522,26 @@ include ABSPATH . 'src/header.php';
     </div>
 </div>
 
+
+<!-- Custom Study Note Modal -->
+<div id="note-input-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="note-modal-title" style="z-index: 9999;">
+    <div class="modal-card" style="max-width: 400px; padding: 1.5rem;">
+        <div class="modal-card-header" style="border-bottom: none; margin-bottom: 0.5rem; padding-bottom: 0;">
+            <div class="modal-card-title">
+                <div>
+                    <h3 id="note-modal-title" style="margin: 0; font-size: 1.25rem;">Add a Study Note</h3>
+                </div>
+            </div>
+        </div>
+        <div class="modal-body">
+            <textarea id="study-note-textarea" rows="4" style="width: 100%; padding: 0.75rem; border-radius: 0.5rem; border: 1px solid var(--color-border); font-family: inherit; margin-bottom: 1rem; resize: none;" placeholder="Type your insights here..."></textarea>
+            <div style="display: flex; justify-content: flex-end; gap: 0.5rem;">
+                <button type="button" id="cancel-note-btn" style="padding: 0.5rem 1rem; border-radius: 0.5rem; border: none; background: transparent; cursor: pointer; font-weight: 600; color: var(--color-text-secondary);">Cancel</button>
+                <button type="button" id="save-note-btn" style="padding: 0.5rem 1.25rem; border-radius: 0.5rem; border: none; background: var(--color-primary, #4f46e5); color: white; cursor: pointer; font-weight: 700; box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);">Save Note</button>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- Send metadata to client window context -->
 <script>
     window.BOOK_METADATA = {

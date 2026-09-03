@@ -12,7 +12,7 @@
 @import url('./reader/read-reader-academic-citation-modal.css');
 @import url('./reader/read-book-sourcing-information-moda.css');
 @import url('./reader/read-responsive-breakpoints-for-rea.css');
-@import url('./reader/read-realistic-single.css');
+
 /* Inline Page Markers for Scroll Mode */
 .inline-page-marker {
     display: flex;

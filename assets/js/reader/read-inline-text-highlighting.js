@@ -99,9 +99,33 @@
         if (hlNote) {
             hlNote.addEventListener("click", () => {
                 if (currentSelectedRange) {
-                    const note = prompt("Add a study note for this selection:");
-                    if (note) {
-                        applyHighlight("hl-yellow", note);
+                    const noteModal = document.getElementById("note-input-modal");
+                    const noteTextarea = document.getElementById("study-note-textarea");
+                    const saveBtn = document.getElementById("save-note-btn");
+                    const cancelBtn = document.getElementById("cancel-note-btn");
+                    
+                    if (noteModal && noteTextarea) {
+                        noteTextarea.value = '';
+                        noteModal.classList.remove("hidden");
+                        noteModal.style.display = "flex";
+                        noteTextarea.focus();
+
+                        const cleanup = () => {
+                            noteModal.classList.add("hidden");
+                            noteModal.style.display = "none";
+                            saveBtn.onclick = null;
+                            cancelBtn.onclick = null;
+                        };
+
+                        cancelBtn.onclick = cleanup;
+
+                        saveBtn.onclick = () => {
+                            const note = noteTextarea.value.trim();
+                            if (note) {
+                                applyHighlight("hl-yellow", note);
+                            }
+                            cleanup();
+                        };
                     }
                 }
             });
