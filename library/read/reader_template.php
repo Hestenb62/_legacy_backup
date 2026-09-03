@@ -57,6 +57,7 @@ include ABSPATH . 'src/header.php';
 </div>
 
 <main id="main-content" class="library-main reader-main-layout">
+    <script>document.body.classList.add("mode-scroll");</script>
 
     <!-- Top Navigation Bar -->
     <div class="reader-back-nav">
@@ -179,11 +180,6 @@ include ABSPATH . 'src/header.php';
                     </select>
                 </div>
 
-                <!-- Book Page Flip / Scroll View Mode Switcher -->
-                <button type="button" id="toggle-view-mode-btn" class="tool-btn tool-btn-view-mode" title="Toggle Page Flip / Scroll View" aria-label="Toggle Reading Layout">
-                    <i class="fas fa-book-open"></i>
-                </button>
-
                 <!-- Citation Generator -->
                 <button type="button" id="open-citation-btn" class="tool-btn" title="Generate Academic Citation" onclick="openChapterCitationModal()" aria-label="Generate Citation">
                     <i class="fas fa-quote-right"></i>
@@ -208,12 +204,6 @@ include ABSPATH . 'src/header.php';
 
                 <!-- Typography Dropdown Panel -->
                 <div id="settings-panel" class="settings-dropdown hidden" role="region" aria-label="Reader Customization Panel">
-                    <h4 class="settings-section-title">Reading Mode</h4>
-                    <div class="settings-btn-row">
-                        <button type="button" class="settings-row-btn active settings-mode" data-mode="book"><i class="fas fa-book-open"></i> Page Flip</button>
-                        <button type="button" class="settings-row-btn settings-mode" data-mode="scroll"><i class="fas fa-scroll"></i> Scroll</button>
-                    </div>
-
                     <h4 class="settings-section-title">Font Family</h4>
                     <div class="settings-btn-row">
                         <button type="button" class="settings-row-btn active settings-font" data-font="font-sans">Sans</button>
@@ -296,16 +286,7 @@ include ABSPATH . 'src/header.php';
                 </article>
             </div>
 
-            <!-- Bottom Running Book Footer with Page Numbers, Reading Time, and Scrubber -->
-            <div class="book-running-footer">
-                <div class="book-footer-left">
-                    <span id="book-page-indicator" class="book-page-pill"><i class="fas fa-file-alt"></i> Page 1 of 1</span>
-                </div>
-                <div class="book-footer-center">
-                    <div id="book-scrubber-track" class="book-scrubber-track" title="Slide to jump to page">
-                        <div id="book-scrubber-fill" class="book-scrubber-fill"></div>
-                    </div>
-                </div>
+            </div>
                 <div class="book-footer-right">
                     <span id="book-reading-time-pill" class="book-reading-time-pill" title="Estimated reading time remaining"><i class="fas fa-clock"></i> ~1 min left</span>
                 </div>
@@ -565,6 +546,6 @@ include ABSPATH . 'src/header.php';
 <script src="../../assets/js/reader/read-inline-text-highlighting.js" defer></script>
 <script src="../../assets/js/reader/read-modals.js" defer></script>
 <script src="../../assets/js/reader/read-chapter-citation-generator.js" defer></script>
-<script src="../../assets/js/reader/read-single.js" defer></script>
+<script src="../../assets/js/reader/read-scroll-markers.js" defer></script>
 
 <?php include ABSPATH . 'src/footer.php'; ?>

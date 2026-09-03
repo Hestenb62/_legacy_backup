@@ -13,3 +13,32 @@
 @import url('./reader/read-book-sourcing-information-moda.css');
 @import url('./reader/read-responsive-breakpoints-for-rea.css');
 @import url('./reader/read-realistic-single.css');
+/* Inline Page Markers for Scroll Mode */
+.inline-page-marker {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem 0;
+    opacity: 0.7;
+    user-select: none;
+}
+
+.inline-page-marker .marker-line {
+    flex-grow: 1;
+    border: none;
+    border-top: 1px solid var(--color-border);
+    margin: 0;
+}
+
+.inline-page-marker .marker-pill {
+    margin: 0 1rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-text-muted);
+    background: var(--color-bg-surface);
+    padding: 0.25rem 1rem;
+    border-radius: 1rem;
+    border: 1px solid var(--color-border);
+}
+
