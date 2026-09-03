@@ -7,7 +7,7 @@ const ASSETS_TO_CACHE = [
   '/about.php',
   '/assessment/index.php',
   '/contact.php',
-  '/curriculum.php',
+  '/standards.php',
   '/help-center.php',
   '/index.php',
   '/manifest.json',

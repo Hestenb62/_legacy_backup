@@ -34,8 +34,8 @@
                 <span>Start Your Journey</span>
                 <i class="fas fa-arrow-right hero-arrow-icon"></i>
             </a>
-            <a href="/pages/curriculum.php" class="btn-premium btn-secondary">
-                Explore Curriculum
+            <a href="/pages/standards.php" class="btn-premium btn-secondary">
+                Explore Standards
             </a>
         </div>
 

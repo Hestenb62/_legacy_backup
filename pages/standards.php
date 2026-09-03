@@ -1,6 +1,6 @@
 <?php
   // Define page-specific variables for the header
-  $pageTitle = 'Curriculum Standards & Outlines | Hesten\'s Learning';
+  $pageTitle = 'Standards & Outlines | Hesten\'s Learning';
   $pageDescription = 'In-depth curriculum outlines and standards alignment for Math, ELA, Science, and Social Studies across all grade levels.';
   
   include '../src/header.php';
