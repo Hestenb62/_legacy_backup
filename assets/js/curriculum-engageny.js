@@ -19,13 +19,6 @@
         'icon': 'fa-calculator',
         'grades': {
             'Pre-K': {
-                'teks': {
-                    'title': 'Pre-K Math Foundations (Texas TEKS)',
-                    'overview': '<p>Early introduction to numbers up to 10 and subitizing objects based on Texas Pre-Kindergarten Guidelines.</p>',
-                    'standards': '<div class="curr-standard-item"><h4 class="curr-standard-title">TEKS PK.V.A</h4><p class="curr-standard-desc">Child demonstrates an understanding of numbers and counting up to 10.</p></div>',
-                    'competencies': ['Number recognition up to 10', 'Subitizing visual patterns', 'Basic shape comparison'],
-                    'level': 'A'
-                },
                 'ccss': {
                     'title': 'Pre-K Math Foundations (CCSS Aligned)',
                     'overview': '<p>Introduction to basic counting, cardinalities, and spatial reasoning to prepare for Common Core Kindergarten expectations.</p>',
@@ -35,13 +28,6 @@
                 }
             },
             'Kindergarten': {
-                'teks': {
-                    'title': 'Kindergarten Math Foundations (Texas TEKS)',
-                    'overview': '<p>Focuses on counting, comparing sets, and identifying two-dimensional and three-dimensional shapes based on TEKS math curriculum.</p>',
-                    'standards': '<div class="curr-standard-item"><h4 class="curr-standard-title">TEKS K.2.A</h4><p class="curr-standard-desc">Count forward and backward to at least 20 with and without objects.</p></div>',
-                    'competencies': ['Count forward/backward to 20', 'Describe 2D & 3D shapes', 'Compare numbers up to 20'],
-                    'level': 'B'
-                },
                 'ccss': {
                     'title': 'Kindergarten Math (CCSS)',
                     'overview': '<p>Focus on representing and comparing whole numbers, initially with sets of objects, and describing shapes and space.</p>',

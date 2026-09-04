@@ -169,7 +169,9 @@
 </main>
 
 <script src="/assets/js/curriculum-engageny.js"></script>
+<!-- 
 <script src="/assets/js/curriculum-teks.js"></script>
+-->
 <script>
     let currentSubject = 'math';
     let currentGrade = 'Kindergarten';
