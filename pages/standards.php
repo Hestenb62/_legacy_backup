@@ -293,6 +293,10 @@
             syncCurriculumSelect();
             updateView();
         });
+
+        window.addEventListener('curriculum-loaded', () => {
+            updateView();
+        });
     });
 </script>
 
