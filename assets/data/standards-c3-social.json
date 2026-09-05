@@ -1,0 +1,182 @@
+{
+    "_comment": "College, Career, and Civic Life (C3) Framework Social Studies Alignment Data",
+    "_description": "Contains grade-by-grade Social Studies standards across Civics (D2.Civ), Economics (D2.Eco), Geography (D2.Geo), and History (D2.His).",
+    "_subjects": [
+        "social"
+    ],
+    "_grades_covered": [
+        "Pre-K",
+        "Kindergarten",
+        "1st Grade",
+        "2nd Grade",
+        "3rd Grade",
+        "4th Grade",
+        "5th Grade",
+        "6th Grade",
+        "7th Grade",
+        "8th Grade",
+        "High School"
+    ],
+    "social": {
+        "name": "Social Studies",
+        "desc": "Inquiry into human societies, civic engagement, global geography, economics, and world history aligned to the C3 Framework.",
+        "color": "amber",
+        "icon": "fa-globe-americas",
+        "grades": {
+            "Pre-K": {
+                "ccss": {
+                    "title": "Pre-K Self, Family, & Community Foundations",
+                    "overview": "<p>Developing foundational awareness of self, family traditions, classroom rules, community helpers, and spatial awareness within the school environment.</p>",
+                    "standards": "<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Civic Ideals & Classroom Citizenship (PK.C3.Civ)</h4>\n    <p class=\"curr-standard-desc\"><strong>PK.Civ.1:</strong> Understand and follow simple classroom and family rules, demonstrating fairness and turn-taking.</p>\n    <p class=\"curr-standard-desc\"><strong>PK.Civ.2:</strong> Identify community helpers (firefighters, doctors, mail carriers, teachers) and their roles.</p>\n</div>\n<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Geography: Spatial Awareness (PK.C3.Geo)</h4>\n    <p class=\"curr-standard-desc\"><strong>PK.Geo.1:</strong> Use spatial terms (near, far, up, down, inside, outside) to describe physical locations in the school and home.</p>\n</div>\n<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Economics: Needs and Wants (PK.C3.Eco)</h4>\n    <p class=\"curr-standard-desc\"><strong>PK.Eco.1:</strong> Distinguish between basic needs (food, water, shelter) and wants (toys, treats).</p>\n</div>",
+                    "competencies": [
+                        "Demonstrate fair play and follow shared group rules",
+                        "Recognize roles of community helpers",
+                        "Use spatial vocabulary to describe locations",
+                        "Differentiate between basic needs and wants"
+                    ],
+                    "level": "A"
+                }
+            },
+            "Kindergarten": {
+                "ccss": {
+                    "title": "Kindergarten Social Studies: Being a Good Citizen (C3)",
+                    "overview": "<p>Learning what it means to be a responsible citizen in a community, understanding the purpose of rules and laws, using basic maps, and exploring national symbols and holidays.</p>",
+                    "standards": "<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Civics: Rules, Rights, and Responsibilities (D2.Civ.K)</h4>\n    <p class=\"curr-standard-desc\"><strong>D2.Civ.1.K-2:</strong> Describe how people benefit from and are challenged by working together, including through government, workplace, voluntary organizations, and families.</p>\n    <p class=\"curr-standard-desc\"><strong>D2.Civ.3.K-2:</strong> Explain the need for and purposes of rules in various settings, inside and outside of school.</p>\n    <p class=\"curr-standard-desc\"><strong>D2.Civ.7.K-2:</strong> Apply civic virtues (e.g., honesty, mutual respect, cooperation) when participating in school settings.</p>\n</div>\n<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Geography: Maps and Places (D2.Geo.K)</h4>\n    <p class=\"curr-standard-desc\"><strong>D2.Geo.1.K-2:</strong> Construct maps, graphs, and other representations of familiar places (e.g., classroom, bedroom, neighborhood).</p>\n    <p class=\"curr-standard-desc\"><strong>D2.Geo.3.K-2:</strong> Use location terms and geographic representations to describe places and environmental characteristics.</p>\n</div>\n<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Economics: Goods, Services, and Scarcity (D2.Eco.K)</h4>\n    <p class=\"curr-standard-desc\"><strong>D2.Eco.1.K-2:</strong> Explain how scarcity necessitates decision making and choices.</p>\n    <p class=\"curr-standard-desc\"><strong>D2.Eco.2.K-2:</strong> Identify the goods and services that people produce and those that are produced in other communities.</p>\n</div>\n<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">History: Change Over Time & Heritage (D2.His.K)</h4>\n    <p class=\"curr-standard-desc\"><strong>D2.His.1.K-2:</strong> Create a chronological sequence of events in their own lives and families.</p>\n    <p class=\"curr-standard-desc\"><strong>D2.His.3.K-2:</strong> Generate questions about individuals and groups who have shaped significant historical events and national holidays.</p>\n</div>",
+                    "competencies": [
+                        "Explain purposes of laws and civic responsibilities",
+                        "Draw and interpret basic maps of familiar spaces",
+                        "Identify choices made due to economic scarcity",
+                        "Order personal and historical events chronologically"
+                    ],
+                    "level": "B"
+                }
+            },
+            "1st Grade": {
+                "ccss": {
+                    "title": "1st Grade Social Studies: Families, Culture, & Neighborhoods (C3)",
+                    "overview": "<p>Investigating family histories, diverse cultural traditions, local neighborhood geography, basic trade and money, and democratic decision-making through voting.</p>",
+                    "standards": "<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Civics: Democratic Participation (D2.Civ.1)</h4>\n    <p class=\"curr-standard-desc\"><strong>D2.Civ.2.K-2:</strong> Explain how all people, not just official leaders, play important roles in a community.</p>\n    <p class=\"curr-standard-desc\"><strong>D2.Civ.14.K-2:</strong> Describe how groups of people make decisions to promote the common good (e.g., voting and consensus).</p>\n</div>\n<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Geography: Neighborhood Landscapes & Globes (D2.Geo.1)</h4>\n    <p class=\"curr-standard-desc\"><strong>D2.Geo.2.K-2:</strong> Use maps, globes, and other simple geographic models to identify land and water features (continents and oceans).</p>\n    <p class=\"curr-standard-desc\"><strong>D2.Geo.7.K-2:</strong> Explain how people modify and adapt to their physical environment (shelters, clothing, transportation).</p>\n</div>\n<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Economics: Work, Earning, and Saving (D2.Eco.1)</h4>\n    <p class=\"curr-standard-desc\"><strong>D2.Eco.4.K-2:</strong> Describe the goods and services that people produce and why people trade with one another using money.</p>\n    <p class=\"curr-standard-desc\"><strong>D2.Eco.6.K-2:</strong> Explain how people save money for future goods and services.</p>\n</div>",
+                    "competencies": [
+                        "Describe democratic voting and community decision making",
+                        "Identify continents, oceans, and landforms on globes",
+                        "Explain how human choices adapt to physical environments",
+                        "Understand earning, spending, trading, and saving money"
+                    ],
+                    "level": "C"
+                }
+            },
+            "2nd Grade": {
+                "ccss": {
+                    "title": "2nd Grade Social Studies: Global Communities & Local Government (C3)",
+                    "overview": "<p>Understanding local and municipal government structures, mayors and town councils, world geography, comparing diverse cultures, and producers/consumers in the local economy.</p>",
+                    "standards": "<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Civics: Government and Community Leadership (D2.Civ.2)</h4>\n    <p class=\"curr-standard-desc\"><strong>D2.Civ.5.K-2:</strong> Explain what governments are and some of their key functions (e.g., public safety, parks, schools, roads).</p>\n    <p class=\"curr-standard-desc\"><strong>D2.Civ.6.K-2:</strong> Describe how people choose leaders through elections in local government.</p>\n</div>\n<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Geography: Human Settlement & Spatial Interaction (D2.Geo.2)</h4>\n    <p class=\"curr-standard-desc\"><strong>D2.Geo.6.K-2:</strong> Identify cultural and environmental characteristics of different communities and nations around the world.</p>\n    <p class=\"curr-standard-desc\"><strong>D2.Geo.8.K-2:</strong> Compare how people in different places use natural resources to meet their needs.</p>\n</div>\n<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Economics: Producers and Consumers (D2.Eco.2)</h4>\n    <p class=\"curr-standard-desc\"><strong>D2.Eco.9.K-2:</strong> Describe the role of banks and financial institutions in saving and investing.</p>\n    <p class=\"curr-standard-desc\"><strong>D2.Eco.12.K-2:</strong> Describe how specialized workers produce goods that are traded regionally and globally.</p>\n</div>",
+                    "competencies": [
+                        "Explain functions of local town councils, mayors, and municipal services",
+                        "Compare global cultural traditions and geographic adaptations",
+                        "Distinguish between producer and consumer roles",
+                        "Analyze how natural resources shape regional economies"
+                    ],
+                    "level": "D"
+                }
+            },
+            "3rd Grade": {
+                "ccss": {
+                    "title": "3rd Grade Social Studies: Regional Cultures & World Geography (C3)",
+                    "overview": "<p>Deep inquiry into indigenous cultures, early settlement patterns, geographic regions, human interaction with environment, and basic principles of supply and demand.</p>",
+                    "standards": "<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Civics: Civic Participation & Deliberation (D2.Civ.3)</h4>\n    <p class=\"curr-standard-desc\"><strong>D2.Civ.8.3-5:</strong> Identify core civic virtues and democratic principles that guide government and citizen actions.</p>\n    <p class=\"curr-standard-desc\"><strong>D2.Civ.10.3-5:</strong> Identify the beliefs, experiences, perspectives, and values that underlie points of view on public issues.</p>\n</div>\n<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Geography: Regions, Resources, and Maps (D2.Geo.3)</h4>\n    <p class=\"curr-standard-desc\"><strong>D2.Geo.2.3-5:</strong> Use maps, satellite images, photographs, and other representations to explain relationships between the locations of places and regions.</p>\n    <p class=\"curr-standard-desc\"><strong>D2.Geo.5.3-5:</strong> Explain how the cultural and environmental characteristics of places change over time.</p>\n</div>\n<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Economics: Markets, Supply, and Demand (D2.Eco.3)</h4>\n    <p class=\"curr-standard-desc\"><strong>D2.Eco.3.3-5:</strong> Identify examples of the variety of resources (human, capital, and natural) that are used to produce goods and services.</p>\n    <p class=\"curr-standard-desc\"><strong>D2.Eco.6.3-5:</strong> Explain how pricing influences the decisions of buyers and sellers in competitive markets.</p>\n</div>\n<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">History: Indigenous Peoples & Settlement (D2.His.3)</h4>\n    <p class=\"curr-standard-desc\"><strong>D2.His.2.3-5:</strong> Compare life in specific historical periods with life today, focusing on indigenous nations and early settlers.</p>\n</div>",
+                    "competencies": [
+                        "Analyze diverse viewpoints on civic community issues",
+                        "Interpret topographic, political, and thematic regional maps",
+                        "Identify human, natural, and capital resources in economic production",
+                        "Examine history and cultural heritage of indigenous peoples"
+                    ],
+                    "level": "E"
+                }
+            },
+            "4th Grade": {
+                "ccss": {
+                    "title": "4th Grade Social Studies: State History & Physical Geography (C3)",
+                    "overview": "<p>In-depth exploration of state history, colonial expansion, frontier migrations, state government, industrial innovations, and conservation of natural resources.</p>",
+                    "standards": "<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Civics: State Government & Constitution (D2.Civ.4)</h4>\n    <p class=\"curr-standard-desc\"><strong>D2.Civ.5.3-5:</strong> Explain the origins, functions, and structure of state government (executive, legislative, judicial branches).</p>\n    <p class=\"curr-standard-desc\"><strong>D2.Civ.6.3-5:</strong> Describe ways in which people benefit from and are challenged by state laws and public policies.</p>\n</div>\n<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Geography: State Regions & Physical Systems (D2.Geo.4)</h4>\n    <p class=\"curr-standard-desc\"><strong>D2.Geo.4.3-5:</strong> Explain how culture influences the way people modify and adapt to their environments in different state regions.</p>\n    <p class=\"curr-standard-desc\"><strong>D2.Geo.9.3-5:</strong> Analyze the effects of catastrophic environmental events on human populations and settlement patterns.</p>\n</div>\n<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">History: State Exploration, Colonization, and Growth (D2.His.4)</h4>\n    <p class=\"curr-standard-desc\"><strong>D2.His.3.3-5:</strong> Generate questions about individuals and groups who have shaped significant historical events in state development.</p>\n    <p class=\"curr-standard-desc\"><strong>D2.His.14.3-5:</strong> Explain probable causes and effects of events and developments in state history (railroads, agriculture, urbanization).</p>\n</div>",
+                    "competencies": [
+                        "Analyze the three branches of state government and the state constitution",
+                        "Evaluate human environmental modification and conservation efforts",
+                        "Examine primary and secondary sources in state historical archives",
+                        "Trace cause-and-effect relationships in economic and industrial growth"
+                    ],
+                    "level": "F"
+                }
+            },
+            "5th Grade": {
+                "ccss": {
+                    "title": "5th Grade Social Studies: Early United States History (C3)",
+                    "overview": "<p>United States history from pre-Columbian eras through the American Revolution, the drafting of the U.S. Constitution, the Bill of Rights, and early westward expansion.</p>",
+                    "standards": "<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Civics: Principles of the U.S. Constitution (D2.Civ.5)</h4>\n    <p class=\"curr-standard-desc\"><strong>D2.Civ.3.3-5:</strong> Examine the origins and purposes of the Declaration of Independence, the U.S. Constitution, and the Bill of Rights.</p>\n    <p class=\"curr-standard-desc\"><strong>D2.Civ.4.3-5:</strong> Explain how the U.S. Constitution protects individual freedoms and rights and establishes checks and balances.</p>\n</div>\n<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Geography: North American Exploration & Territories (D2.Geo.5)</h4>\n    <p class=\"curr-standard-desc\"><strong>D2.Geo.7.3-5:</strong> Explain how physical and cultural characteristics of places in North America influenced the movement of people, goods, and ideas.</p>\n</div>\n<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">History: Colonization, Revolution, & New Nation (D2.His.5)</h4>\n    <p class=\"curr-standard-desc\"><strong>D2.His.1.3-5:</strong> Create and use chronological timelines to plot key events leading to the American Revolutionary War.</p>\n    <p class=\"curr-standard-desc\"><strong>D2.His.9.3-5:</strong> Summarize the differing perspectives of Loyalists, Patriots, enslaved individuals, and Native Americans during the American Revolution.</p>\n    <p class=\"curr-standard-desc\"><strong>D2.His.16.3-5:</strong> Use evidence to develop a claim about the past regarding early constitutional debates.</p>\n</div>",
+                    "competencies": [
+                        "Analyze foundational civic texts: Declaration of Independence & Constitution",
+                        "Explain checks and balances, separation of powers, and the Bill of Rights",
+                        "Evaluate multiple perspectives on the American Revolutionary War",
+                        "Synthesize historical evidence to evaluate early American governance"
+                    ],
+                    "level": "G"
+                }
+            },
+            "6th Grade": {
+                "ccss": {
+                    "title": "6th Grade Social Studies: Ancient World Civilizations (C3)",
+                    "overview": "<p>Comprehensive world history from the Neolithic revolution through river valley civilizations (Mesopotamia, Egypt, Indus Valley, Yellow River), Classical Greece, Rome, and Silk Road trade networks.</p>",
+                    "standards": "<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Civics: Origins of Governance & Legal Codes (D2.Civ.6)</h4>\n    <p class=\"curr-standard-desc\"><strong>D2.Civ.1.6-8:</strong> Distinguish the powers and responsibilities of citizens, political leaders, and military rulers in ancient city-states (Hammurabi's Code, Athenian Democracy, Roman Republic).</p>\n    <p class=\"curr-standard-desc\"><strong>D2.Civ.3.6-8:</strong> Examine the origins, purposes, and impact of constitutions, treaties, and law codes in classical antiquity.</p>\n</div>\n<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Geography: River Valleys & Trade Corridors (D2.Geo.6)</h4>\n    <p class=\"curr-standard-desc\"><strong>D2.Geo.4.6-8:</strong> Explain how cultural patterns and economic decisions shaped the development of agricultural river basins (Tigris, Euphrates, Nile, Indus, Yangtze).</p>\n    <p class=\"curr-standard-desc\"><strong>D2.Geo.7.6-8:</strong> Analyze the environmental factors that facilitated ancient trade networks, such as the Silk Roads and Mediterranean maritime routes.</p>\n</div>\n<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">History: Classical Philosophy, Innovation, and Decline (D2.His.6)</h4>\n    <p class=\"curr-standard-desc\"><strong>D2.His.1.6-8:</strong> Analyze connections between ancient philosophical traditions (Confucianism, Buddhism, Greek philosophy) and civic organization.</p>\n    <p class=\"curr-standard-desc\"><strong>D2.His.14.6-8:</strong> Explain multiple causes and effects of the rise, expansion, and collapse of classical empires.</p>\n</div>",
+                    "competencies": [
+                        "Compare early legal and political systems: Hammurabi to Athenian Democracy",
+                        "Evaluate geographic factors essential to agricultural surplus and civilization",
+                        "Analyze cultural diffusion across Afro-Eurasian trade routes",
+                        "Examine technological, philosophical, and architectural innovations of antiquity"
+                    ],
+                    "level": "H"
+                }
+            },
+            "7th Grade": {
+                "ccss": {
+                    "title": "7th Grade Social Studies: Medieval History & Global Encounters (C3)",
+                    "overview": "<p>Medieval Europe, Islamic Golden Age, Sub-Saharan African empires (Ghana, Mali), imperial China, feudal Japan, Mayan/Incan civilizations, and the global age of exploration.</p>",
+                    "standards": "<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Civics: Feudalism, Theocracies, and Empires (D2.Civ.7)</h4>\n    <p class=\"curr-standard-desc\"><strong>D2.Civ.4.6-8:</strong> Explain the relationships between social hierarchies, feudal contracts, and central authority in medieval Eurasia.</p>\n    <p class=\"curr-standard-desc\"><strong>D2.Civ.13.6-8:</strong> Analyze the Magna Carta and the emergence of limited government and parliamentary institutions.</p>\n</div>\n<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Geography: Trans-Saharan & Maritime Diffusion (D2.Geo.7)</h4>\n    <p class=\"curr-standard-desc\"><strong>D2.Geo.8.6-8:</strong> Analyze how human modifications to geographic landscapes influenced cultural exchange in medieval trading cities (Timbuktu, Baghdad, Venice, Chang'an).</p>\n    <p class=\"curr-standard-desc\"><strong>D2.Geo.11.6-8:</strong> Explain how navigation innovations (astrolabe, compass, caravel) enabled oceanic global exchange.</p>\n</div>\n<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">History: The Renaissance, Reformation, and Colombian Exchange (D2.His.7)</h4>\n    <p class=\"curr-standard-desc\"><strong>D2.His.2.6-8:</strong> Classify series of historical events and developments as examples of change and/or continuity over time (Renaissance humanism, scientific revolution).</p>\n    <p class=\"curr-standard-desc\"><strong>D2.His.15.6-8:</strong> Evaluate the profound demographic and ecological consequences of the Columbian Exchange across the Americas, Africa, and Europe.</p>\n</div>",
+                    "competencies": [
+                        "Trace historical emergence of constitutional constraints: Magna Carta (1215)",
+                        "Analyze scholastic and scientific innovations during the Islamic Golden Age",
+                        "Examine cultural and mercantile strength of West African empires",
+                        "Evaluate social, ecological, and economic impacts of the Columbian Exchange"
+                    ],
+                    "level": "I"
+                }
+            },
+            "8th Grade": {
+                "ccss": {
+                    "title": "8th Grade Social Studies: U.S. History from Revolution to Reconstruction (C3)",
+                    "overview": "<p>Rigorous study of American history from the Constitutional Convention through Westward Expansion, the antebellum reform movements, the Civil War, and Reconstruction.</p>",
+                    "standards": "<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Civics: Federalism and the Constitutional Republic (D2.Civ.8)</h4>\n    <p class=\"curr-standard-desc\"><strong>D2.Civ.6.6-8:</strong> Describe the roles of political parties, interest groups, and media in influencing public policy in the early republic.</p>\n    <p class=\"curr-standard-desc\"><strong>D2.Civ.8.6-8:</strong> Analyze judicial review and landmark Supreme Court decisions (Marbury v. Madison, McCulloch v. Maryland, Dred Scott v. Sandford).</p>\n</div>\n<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Economics: Sectionalism & Industrialization (D2.Eco.8)</h4>\n    <p class=\"curr-standard-desc\"><strong>D2.Eco.7.6-8:</strong> Analyze how technological innovations (cotton gin, steam engines, canals) produced diverging economic systems in the North and South.</p>\n    <p class=\"curr-standard-desc\"><strong>D2.Eco.8.6-8:</strong> Explain the institutional economic foundation of slavery and its pervasive national impact.</p>\n</div>\n<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">History: Civil War, Abolition, and Reconstruction Amendments (D2.His.8)</h4>\n    <p class=\"curr-standard-desc\"><strong>D2.His.4.6-8:</strong> Analyze multiple factors that influenced the perspectives of people during the abolitionist movement, women's suffrage, and secession crisis.</p>\n    <p class=\"curr-standard-desc\"><strong>D2.His.14.6-8:</strong> Explain the strategic, human, and ideological dimensions of the Civil War (Gettysburg, Emancipation Proclamation).</p>\n    <p class=\"curr-standard-desc\"><strong>D2.His.16.6-8:</strong> Evaluate the successes and failures of Reconstruction, including the 13th, 14th, and 15th Amendments and the rise of Jim Crow laws.</p>\n</div>",
+                    "competencies": [
+                        "Evaluate Constitutional federalism, judicial review, and sectional crises",
+                        "Analyze economic divergences: Northern industrialization vs. Southern agrarian slavery",
+                        "Examine abolitionist rhetoric, speeches, and primary historical documents",
+                        "Assess the legal and social impact of the Reconstruction Amendments"
+                    ],
+                    "level": "J"
+                }
+            },
+            "High School": {
+                "ccss": {
+                    "title": "High School Social Studies: U.S. Government, Economics, & Modern World (C3)",
+                    "overview": "<p>Advanced inquiry into American democratic institutions, macroeconomics, international relations, modern global conflicts, human rights declarations, and contemporary civic participation.</p>",
+                    "standards": "<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">U.S. Government & Constitutional Law (D2.Civ.9-12)</h4>\n    <p class=\"curr-standard-desc\"><strong>D2.Civ.2.9-12:</strong> Analyze the role of citizens in the U.S. political system, and evaluate the collateral effects of elections at national, state, and local levels.</p>\n    <p class=\"curr-standard-desc\"><strong>D2.Civ.4.9-12:</strong> Explain how the U.S. Constitution grants and distributes power to government to achieve the common good while protecting individual rights.</p>\n    <p class=\"curr-standard-desc\"><strong>D2.Civ.14.9-12:</strong> Analyze how judicial review shapes public policy and individual rights through Fourteenth Amendment Due Process and Equal Protection jurisprudence.</p>\n</div>\n<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Macroeconomics & Global Markets (D2.Eco.9-12)</h4>\n    <p class=\"curr-standard-desc\"><strong>D2.Eco.1.9-12:</strong> Analyze how economic systems (market, command, mixed) answer foundational questions of production and distribution.</p>\n    <p class=\"curr-standard-desc\"><strong>D2.Eco.6.9-12:</strong> Generate possible explanations for a government role in market failure, antitrust regulation, monetary policy (Federal Reserve), and fiscal policy.</p>\n</div>\n<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Modern World & U.S. History (D2.His.9-12)</h4>\n    <p class=\"curr-standard-desc\"><strong>D2.His.1.9-12:</strong> Evaluate how historical events and developments were shaped by unique circumstances of time and place (World Wars, Cold War, Decolonization, Civil Rights Movement).</p>\n    <p class=\"curr-standard-desc\"><strong>D2.His.16.9-12:</strong> Integrate evidence from multiple relevant historical sources and interpretations into a reasoned argument about past policy decisions.</p>\n</div>",
+                    "competencies": [
+                        "Analyze Constitutional law, Federalism, and civil rights jurisprudence",
+                        "Evaluate macroeconomic indicators (GDP, inflation, unemployment) and Federal Reserve policy",
+                        "Synthesize multi-source historical archives on twentieth-century geopolitical conflicts",
+                        "Formulate evidence-based policy briefs addressing complex civic dilemmas"
+                    ],
+                    "level": "K-M"
+                }
+            }
+        }
+    }
+}

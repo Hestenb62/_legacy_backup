@@ -44,8 +44,10 @@
     }
 
     const filesToLoad = [
-        { name: 'math', url: baseDataDir + 'standards-ccss-math.json', fallback: 'assets/data/standards-ccss-math.json' },
-        { name: 'ela',  url: baseDataDir + 'standards-ccss-ela.json',  fallback: 'assets/data/standards-ccss-ela.json' }
+        { name: 'math',    url: baseDataDir + 'standards-ccss-math.json',    fallback: 'assets/data/standards-ccss-math.json' },
+        { name: 'ela',     url: baseDataDir + 'standards-ccss-ela.json',     fallback: 'assets/data/standards-ccss-ela.json' },
+        { name: 'science', url: baseDataDir + 'standards-ngss-science.json', fallback: 'assets/data/standards-ngss-science.json' },
+        { name: 'social',  url: baseDataDir + 'standards-c3-social.json',   fallback: 'assets/data/standards-c3-social.json' }
     ];
 
     function fetchFile(item) {

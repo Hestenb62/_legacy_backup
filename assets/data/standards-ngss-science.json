@@ -1,0 +1,182 @@
+{
+    "_comment": "Next Generation Science Standards (NGSS) Alignment Data",
+    "_description": "Contains grade-by-grade NGSS standards, domains (Physical Sciences, Life Sciences, Earth & Space, Engineering), overviews, and competencies.",
+    "_subjects": [
+        "science"
+    ],
+    "_grades_covered": [
+        "Pre-K",
+        "Kindergarten",
+        "1st Grade",
+        "2nd Grade",
+        "3rd Grade",
+        "4th Grade",
+        "5th Grade",
+        "6th Grade",
+        "7th Grade",
+        "8th Grade",
+        "High School"
+    ],
+    "science": {
+        "name": "Science",
+        "desc": "Inquiry-based investigation, scientific modeling, and engineering practices aligned to Next Generation Science Standards (NGSS).",
+        "color": "emerald",
+        "icon": "fa-flask",
+        "grades": {
+            "Pre-K": {
+                "ccss": {
+                    "title": "Pre-K Early Science & Sensory Inquiry",
+                    "overview": "<p>Early exploratory inquiry focusing on sensory observation, basic living vs. non-living objects, weather patterns, and investigating the natural world through hands-on play.</p>",
+                    "standards": "<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Physical Sciences: Matter & Motion (PK-PS)</h4>\n    <p class=\"curr-standard-desc\"><strong>PK-PS1:</strong> Explore and describe observable properties of materials (hard/soft, rough/smooth, heavy/light, sink/float).</p>\n    <p class=\"curr-standard-desc\"><strong>PK-PS2:</strong> Experiment with pushes and pulls to investigate how objects move and interact.</p>\n</div>\n<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Life Sciences: Living Things (PK-LS)</h4>\n    <p class=\"curr-standard-desc\"><strong>PK-LS1:</strong> Identify basic needs of plants and animals (sunlight, water, food, shelter).</p>\n    <p class=\"curr-standard-desc\"><strong>PK-LS2:</strong> Observe and describe the life cycle of plants (seeds sprouting, growth, flowers).</p>\n</div>\n<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Earth & Space: Daily Weather (PK-ESS)</h4>\n    <p class=\"curr-standard-desc\"><strong>PK-ESS1:</strong> Observe daily weather conditions (sunny, rainy, cloudy, windy) and seasonal clothing choices.</p>\n</div>",
+                    "competencies": [
+                        "Sensory observation and describing object properties",
+                        "Investigating push and pull motions",
+                        "Recognizing plant and animal needs",
+                        "Observing and recording daily weather"
+                    ],
+                    "level": "A"
+                }
+            },
+            "Kindergarten": {
+                "ccss": {
+                    "title": "Kindergarten Science (NGSS)",
+                    "overview": "<p>Formulating answers to questions such as 'What happens if you push or pull an object harder?' and 'Where do animals live and why?' Students develop models and conduct simple investigations.</p>",
+                    "standards": "<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Forces and Interactions: Pushes and Pulls (K-PS2)</h4>\n    <p class=\"curr-standard-desc\"><strong>K-PS2-1:</strong> Plan and conduct an investigation to compare the effects of different strengths or different directions of pushes and pulls on the motion of an object.</p>\n    <p class=\"curr-standard-desc\"><strong>K-PS2-2:</strong> Analyze data to determine if a design solution works as intended to change the speed or direction of an object with a push or a pull.</p>\n</div>\n<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Interdependent Relationships in Ecosystems: Animals, Plants, and Their Environment (K-LS1 / K-ESS3)</h4>\n    <p class=\"curr-standard-desc\"><strong>K-LS1-1:</strong> Use observations to describe patterns of what plants and animals (including humans) need to survive.</p>\n    <p class=\"curr-standard-desc\"><strong>K-ESS3-1:</strong> Use a model to represent the relationship between the needs of different plants or animals and the places they live.</p>\n    <p class=\"curr-standard-desc\"><strong>K-ESS3-3:</strong> Communicate solutions that will reduce the impact of humans on the land, water, air, and/or other living things in the local environment.</p>\n</div>\n<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Weather and Climate (K-ESS2)</h4>\n    <p class=\"curr-standard-desc\"><strong>K-ESS2-1:</strong> Use and share observations of local weather conditions to describe patterns over time.</p>\n    <p class=\"curr-standard-desc\"><strong>K-PS3-1:</strong> Make observations to determine the effect of sunlight on Earth's surface.</p>\n</div>\n<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Engineering Design (K-2-ETS1)</h4>\n    <p class=\"curr-standard-desc\"><strong>K-2-ETS1-1:</strong> Ask questions, make observations, and gather information about a situation people want to change to define a simple problem that can be solved through the development of a new or improved object or tool.</p>\n</div>",
+                    "competencies": [
+                        "Investigate force, direction, and motion (pushes & pulls)",
+                        "Describe survival needs of plants and animals",
+                        "Track and record weather patterns over time",
+                        "Design simple tools to solve practical problems"
+                    ],
+                    "level": "B"
+                }
+            },
+            "1st Grade": {
+                "ccss": {
+                    "title": "1st Grade Science (NGSS)",
+                    "overview": "<p>Developing understanding of the relationship between sound and vibrating materials, light and materials, external structures of plants and animals, and patterns in the sun, moon, and stars.</p>",
+                    "standards": "<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Waves: Light and Sound (1-PS4)</h4>\n    <p class=\"curr-standard-desc\"><strong>1-PS4-1:</strong> Plan and conduct investigations to provide evidence that vibrating materials can make sound and that sound can make materials vibrate.</p>\n    <p class=\"curr-standard-desc\"><strong>1-PS4-2:</strong> Make observations to construct an evidence-based account that objects can be seen only when illuminated.</p>\n    <p class=\"curr-standard-desc\"><strong>1-PS4-3:</strong> Plan and conduct an investigation to determine the effect of placing objects made with different materials in the path of a beam of light.</p>\n</div>\n<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Structure, Function, and Information Processing (1-LS1 / 1-LS3)</h4>\n    <p class=\"curr-standard-desc\"><strong>1-LS1-1:</strong> Use materials to design a solution to a human problem by mimicking how plants and/or animals use their external parts to help them survive, grow, and meet their needs.</p>\n    <p class=\"curr-standard-desc\"><strong>1-LS3-1:</strong> Make observations to construct an evidence-based account that young plants and animals are like, but not exactly like, their parents.</p>\n</div>\n<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Space Systems: Patterns and Cycles (1-ESS1)</h4>\n    <p class=\"curr-standard-desc\"><strong>1-ESS1-1:</strong> Use observations of the sun, moon, and stars to describe patterns that can be predicted.</p>\n    <p class=\"curr-standard-desc\"><strong>1-ESS1-2:</strong> Make observations at different times of year to relate the amount of daylight to the time of year.</p>\n</div>",
+                    "competencies": [
+                        "Demonstrate connection between vibration and sound",
+                        "Investigate transparent, translucent, and opaque materials with light",
+                        "Biomimicry: design tools inspired by animal and plant structures",
+                        "Predict observable patterns of the sun, moon, and seasonal daylight"
+                    ],
+                    "level": "C"
+                }
+            },
+            "2nd Grade": {
+                "ccss": {
+                    "title": "2nd Grade Science (NGSS)",
+                    "overview": "<p>Investigating properties of matter, seed dispersal, pollination, plant dependence on sunlight and water, diversity of living habitats, and changes to Earth's landforms over time.</p>",
+                    "standards": "<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Structure and Properties of Matter (2-PS1)</h4>\n    <p class=\"curr-standard-desc\"><strong>2-PS1-1:</strong> Plan and conduct an investigation to describe and classify different kinds of materials by their observable properties.</p>\n    <p class=\"curr-standard-desc\"><strong>2-PS1-2:</strong> Analyze data obtained from testing different materials to determine which materials have the properties that are best suited for an intended purpose.</p>\n    <p class=\"curr-standard-desc\"><strong>2-PS1-4:</strong> Construct an argument with evidence that some changes caused by heating or cooling can be reversed and some cannot.</p>\n</div>\n<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Interdependent Relationships in Ecosystems (2-LS2 / 2-LS4)</h4>\n    <p class=\"curr-standard-desc\"><strong>2-LS2-1:</strong> Plan and conduct an investigation to determine if plants need sunlight and water to grow.</p>\n    <p class=\"curr-standard-desc\"><strong>2-LS2-2:</strong> Develop a simple model that mimics the function of an animal in dispersing seeds or pollinating plants.</p>\n    <p class=\"curr-standard-desc\"><strong>2-LS4-1:</strong> Make observations of plants and animals to compare the diversity of life in different habitats.</p>\n</div>\n<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Earth's Systems: Processes that Shape the Earth (2-ESS1 / 2-ESS2)</h4>\n    <p class=\"curr-standard-desc\"><strong>2-ESS1-1:</strong> Use information from several sources to provide evidence that Earth events can occur quickly or slowly (volcanoes, earthquakes vs. erosion).</p>\n    <p class=\"curr-standard-desc\"><strong>2-ESS2-2:</strong> Develop a model to represent the shapes and kinds of land and bodies of water in an area.</p>\n</div>",
+                    "competencies": [
+                        "Classify materials by solid/liquid properties and thermal change",
+                        "Design models of plant pollination and seed dispersal",
+                        "Compare biodiversity across terrestrial and aquatic habitats",
+                        "Model landforms and water bodies; evaluate rapid vs. slow geological changes"
+                    ],
+                    "level": "D"
+                }
+            },
+            "3rd Grade": {
+                "ccss": {
+                    "title": "3rd Grade Science (NGSS)",
+                    "overview": "<p>Exploring balanced and unbalanced forces, electric and magnetic interactions, plant and animal life cycles, fossil evidence of past environments, and regional climates and weather hazards.</p>",
+                    "standards": "<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Forces and Interactions (3-PS2)</h4>\n    <p class=\"curr-standard-desc\"><strong>3-PS2-1:</strong> Plan and conduct an investigation to provide evidence of the effects of balanced and unbalanced forces on the motion of an object.</p>\n    <p class=\"curr-standard-desc\"><strong>3-PS2-3:</strong> Ask questions to determine cause and effect relationships of electric or magnetic interactions between two objects not in contact with each other.</p>\n</div>\n<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Interdependent Relationships in Ecosystems (3-LS2 / 3-LS4)</h4>\n    <p class=\"curr-standard-desc\"><strong>3-LS2-1:</strong> Construct an argument that some animals form groups that help members survive.</p>\n    <p class=\"curr-standard-desc\"><strong>3-LS4-1:</strong> Analyze and interpret data from fossils to provide evidence of the organisms and the environments in which they lived long ago.</p>\n    <p class=\"curr-standard-desc\"><strong>3-LS4-3:</strong> Construct an argument with evidence that in a particular habitat some organisms can survive well, some survive less well, and some cannot survive at all.</p>\n</div>\n<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Inheritance and Variation of Traits: Life Cycles (3-LS1 / 3-LS3)</h4>\n    <p class=\"curr-standard-desc\"><strong>3-LS1-1:</strong> Develop models to describe that organisms have unique and diverse life cycles but all have in common birth, growth, reproduction, and death.</p>\n    <p class=\"curr-standard-desc\"><strong>3-LS3-1:</strong> Analyze and interpret data to provide evidence that plants and animals have traits inherited from parents and that variation of these traits exists in a group of similar organisms.</p>\n</div>\n<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Weather and Climate (3-ESS2 / 3-ESS3)</h4>\n    <p class=\"curr-standard-desc\"><strong>3-ESS2-1:</strong> Represent data in tables and graphical displays to describe typical weather conditions expected during a particular season.</p>\n    <p class=\"curr-standard-desc\"><strong>3-ESS3-1:</strong> Make a claim about the merit of a design solution that reduces the impacts of a weather-related hazard.</p>\n</div>",
+                    "competencies": [
+                        "Investigate magnetic force and balanced/unbalanced motions",
+                        "Analyze fossil evidence to reconstruct prehistoric environments",
+                        "Model life cycles and inherited traits vs. environmental influences",
+                        "Analyze climate patterns and design severe weather hazard solutions"
+                    ],
+                    "level": "E"
+                }
+            },
+            "4th Grade": {
+                "ccss": {
+                    "title": "4th Grade Science (NGSS)",
+                    "overview": "<p>Focusing on energy transfer, collision effects, wave properties and information transfer, internal and external sensory structures, and landscape changes caused by weathering and erosion.</p>",
+                    "standards": "<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Energy (4-PS3)</h4>\n    <p class=\"curr-standard-desc\"><strong>4-PS3-1:</strong> Use evidence to construct an explanation relating the speed of an object to the energy of that object.</p>\n    <p class=\"curr-standard-desc\"><strong>4-PS3-2:</strong> Make observations to provide evidence that energy can be transferred from place to place by sound, light, heat, and electric currents.</p>\n    <p class=\"curr-standard-desc\"><strong>4-PS3-4:</strong> Apply scientific ideas to design, test, and refine a device that converts energy from one form to another.</p>\n</div>\n<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Waves and Information Transfer (4-PS4)</h4>\n    <p class=\"curr-standard-desc\"><strong>4-PS4-1:</strong> Develop a model of waves to describe patterns in terms of amplitude and wavelength and that waves can cause objects to move.</p>\n    <p class=\"curr-standard-desc\"><strong>4-PS4-3:</strong> Generate and compare multiple solutions that use patterns to transfer information (e.g., binary code, Morse code, drum pulses).</p>\n</div>\n<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Structure, Function, and Information Processing (4-LS1)</h4>\n    <p class=\"curr-standard-desc\"><strong>4-LS1-1:</strong> Construct an argument that plants and animals have internal and external structures that function to support survival, growth, behavior, and reproduction.</p>\n    <p class=\"curr-standard-desc\"><strong>4-LS1-2:</strong> Use a model to describe that animals receive different types of information through their senses, process the information in their brain, and respond to the information in different ways.</p>\n</div>\n<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Earth's Systems: Processes that Shape the Earth (4-ESS1 / 4-ESS2)</h4>\n    <p class=\"curr-standard-desc\"><strong>4-ESS1-1:</strong> Identify evidence from patterns in rock formations and fossils in rock layers to support an explanation for changes in a landscape over time.</p>\n    <p class=\"curr-standard-desc\"><strong>4-ESS2-1:</strong> Make observations and/or measurements to provide evidence of the effects of weathering or the rate of erosion by water, ice, wind, or vegetation.</p>\n</div>",
+                    "competencies": [
+                        "Investigate kinetic, thermal, electrical, and sound energy transfer",
+                        "Model wave properties (wavelength, amplitude) and digitized communication",
+                        "Analyze anatomical sensory pathways and brain responses",
+                        "Examine rock stratification and weathering/erosion mechanisms"
+                    ],
+                    "level": "F"
+                }
+            },
+            "5th Grade": {
+                "ccss": {
+                    "title": "5th Grade Science (NGSS)",
+                    "overview": "<p>Examining matter at particle scales, chemical reactions, matter cycling and energy flow in ecosystems, Earth's interconnected spheres (atmosphere, hydrosphere, geosphere, biosphere), and solar brightness.</p>",
+                    "standards": "<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Structure and Properties of Matter (5-PS1)</h4>\n    <p class=\"curr-standard-desc\"><strong>5-PS1-1:</strong> Develop a model to describe that matter is made of particles too small to be seen.</p>\n    <p class=\"curr-standard-desc\"><strong>5-PS1-2:</strong> Measure and graph quantities to provide evidence that regardless of the type of change that occurs when heating, cooling, or mixing substances, the total weight of matter is conserved.</p>\n    <p class=\"curr-standard-desc\"><strong>5-PS1-4:</strong> Conduct an investigation to determine whether the mixing of two or more substances results in new substances (chemical reaction).</p>\n</div>\n<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Matter and Energy in Organisms and Ecosystems (5-PS3 / 5-LS1 / 5-LS2)</h4>\n    <p class=\"curr-standard-desc\"><strong>5-PS3-1:</strong> Use models to describe that energy in animals' food (used for body repair, growth, motion, and to maintain body warmth) was once energy from the sun.</p>\n    <p class=\"curr-standard-desc\"><strong>5-LS2-1:</strong> Develop a model to describe the movement of matter among plants, animals, decomposers, and the environment (food webs and nutrient cycles).</p>\n</div>\n<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Earth's Systems (5-ESS2 / 5-ESS3)</h4>\n    <p class=\"curr-standard-desc\"><strong>5-ESS2-1:</strong> Develop a model using an example to describe ways the geosphere, biosphere, hydrosphere, and/or atmosphere interact.</p>\n    <p class=\"curr-standard-desc\"><strong>5-ESS2-2:</strong> Describe and graph the amounts of salt water and fresh water in various reservoirs to provide evidence about the distribution of water on Earth.</p>\n    <p class=\"curr-standard-desc\"><strong>5-ESS3-1:</strong> Obtain and combine information about ways individual communities use science ideas to protect the Earth's resources and environment.</p>\n</div>\n<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Space Systems: Stars and the Solar System (5-ESS1)</h4>\n    <p class=\"curr-standard-desc\"><strong>5-ESS1-1:</strong> Support an argument that differences in the apparent brightness of the sun compared to other stars is due to their relative distances from the Earth.</p>\n    <p class=\"curr-standard-desc\"><strong>5-ESS1-2:</strong> Represent data in graphical displays to reveal patterns of daily changes in length and direction of shadows, day and night, and the seasonal appearance of some stars in the night sky.</p>\n</div>",
+                    "competencies": [
+                        "Model particulate matter and demonstrate conservation of mass",
+                        "Trace thermodynamic energy pathways through food webs and ecosystems",
+                        "Analyze systemic interactions among Earth's four spheres",
+                        "Explain stellar apparent brightness and Earth rotation/revolution effects"
+                    ],
+                    "level": "G"
+                }
+            },
+            "6th Grade": {
+                "ccss": {
+                    "title": "6th Grade Science: Earth & Space Systems (NGSS)",
+                    "overview": "<p>Comprehensive Earth and Space Science: planetary motion, lunar phases, gravity, plate tectonics, rock cycles, atmospheric and oceanic circulation, and global climate drivers.</p>",
+                    "standards": "<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Earth's Place in the Universe (MS-ESS1)</h4>\n    <p class=\"curr-standard-desc\"><strong>MS-ESS1-1:</strong> Develop and use a model of the Earth-sun-moon system to describe the cyclic patterns of lunar phases, eclipses of the sun and moon, and seasons.</p>\n    <p class=\"curr-standard-desc\"><strong>MS-ESS1-2:</strong> Develop and use a model to describe the role of gravity in the motions within galaxies and the solar system.</p>\n    <p class=\"curr-standard-desc\"><strong>MS-ESS1-4:</strong> Construct a scientific explanation based on evidence from rock strata for how the geologic time scale is used to organize Earth's 4.6-billion-year-old history.</p>\n</div>\n<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Earth's Systems: Geoscience Processes (MS-ESS2)</h4>\n    <p class=\"curr-standard-desc\"><strong>MS-ESS2-1:</strong> Develop a model to describe the cycling of Earth's materials and the flow of energy that drives this process (rock cycle).</p>\n    <p class=\"curr-standard-desc\"><strong>MS-ESS2-2:</strong> Construct an explanation based on evidence for how geoscience processes have changed Earth's surface at varying time and spatial scales (plate tectonics, volcanic activity).</p>\n    <p class=\"curr-standard-desc\"><strong>MS-ESS2-4:</strong> Develop a model to describe the cycling of water through Earth's systems driven by energy from the sun and the force of gravity.</p>\n    <p class=\"curr-standard-desc\"><strong>MS-ESS2-6:</strong> Develop and use a model to describe how unequal heating and rotation of the Earth cause atmospheric and oceanic circulation that determines regional climates.</p>\n</div>\n<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Human Impacts on Earth Systems (MS-ESS3)</h4>\n    <p class=\"curr-standard-desc\"><strong>MS-ESS3-3:</strong> Apply scientific principles to design a method for monitoring and minimizing a human impact on the environment.</p>\n    <p class=\"curr-standard-desc\"><strong>MS-ESS3-5:</strong> Ask questions to clarify evidence of the factors that have caused the rise in global temperatures over the past century.</p>\n</div>",
+                    "competencies": [
+                        "Model orbital mechanics, eclipses, lunar phases, and seasonal tilts",
+                        "Analyze plate tectonics, convection currents, and stratigraphic dating",
+                        "Model atmospheric and oceanic currents driving global weather",
+                        "Evaluate anthropogenic greenhouse emissions and environmental stewardship"
+                    ],
+                    "level": "H"
+                }
+            },
+            "7th Grade": {
+                "ccss": {
+                    "title": "7th Grade Science: Life Systems & Cellular Biology (NGSS)",
+                    "overview": "<p>Cellular structure and function, body systems interaction, photosynthesis and cellular respiration, genetics and inheritance, evolutionary adaptations, and natural selection.</p>",
+                    "standards": "<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">From Molecules to Organisms: Structures and Processes (MS-LS1)</h4>\n    <p class=\"curr-standard-desc\"><strong>MS-LS1-1:</strong> Conduct an investigation to provide evidence that living things are made of cells; either one cell or many different numbers and types of cells.</p>\n    <p class=\"curr-standard-desc\"><strong>MS-LS1-2:</strong> Develop and use a model to describe the function of a cell as a whole and ways parts of cells contribute to the function (organelles).</p>\n    <p class=\"curr-standard-desc\"><strong>MS-LS1-3:</strong> Use argument supported by evidence for how the body is a system of interacting subsystems composed of cells, tissues, organs, and organ systems.</p>\n    <p class=\"curr-standard-desc\"><strong>MS-LS1-6:</strong> Construct a scientific explanation based on evidence for the role of photosynthesis in the cycling of matter and flow of energy into and out of organisms.</p>\n    <p class=\"curr-standard-desc\"><strong>MS-LS1-7:</strong> Develop a model to describe how food is rearranged through chemical reactions forming new molecules that support growth and/or release energy (cellular respiration).</p>\n</div>\n<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Heredity: Inheritance and Variation of Traits (MS-LS3)</h4>\n    <p class=\"curr-standard-desc\"><strong>MS-LS3-1:</strong> Develop and use a model to describe why structural changes to genes (mutations) located on chromosomes may affect proteins and may result in harmful, beneficial, or neutral effects to the structure and function of the organism.</p>\n    <p class=\"curr-standard-desc\"><strong>MS-LS3-2:</strong> Develop and use a model to describe why asexual reproduction results in offspring with identical genetic information and sexual reproduction results in offspring with genetic variation.</p>\n</div>\n<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Biological Evolution: Unity and Diversity (MS-LS4)</h4>\n    <p class=\"curr-standard-desc\"><strong>MS-LS4-2:</strong> Apply scientific ideas to construct an explanation for the anatomical similarities and differences among modern organisms and between modern and fossil organisms to infer evolutionary relationships.</p>\n    <p class=\"curr-standard-desc\"><strong>MS-LS4-4:</strong> Construct an explanation based on evidence that describes how genetic variations of traits in a population increase some individuals' probability of surviving and reproducing in a specific environment (natural selection).</p>\n</div>",
+                    "competencies": [
+                        "Investigate microscopic cell structures and organelle functions",
+                        "Model biochemical energetics: photosynthesis and cellular respiration",
+                        "Analyze Mendelian genetics, Punnett squares, and genetic mutations",
+                        "Evaluate comparative anatomy and natural selection dynamics"
+                    ],
+                    "level": "I"
+                }
+            },
+            "8th Grade": {
+                "ccss": {
+                    "title": "8th Grade Science: Physical Science (NGSS)",
+                    "overview": "<p>Atomic theory, chemical bonding and reactions, Newton's laws of motion, gravitational and electromagnetic fields, and mechanical and electromagnetic wave behavior.</p>",
+                    "standards": "<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Matter and Its Interactions (MS-PS1)</h4>\n    <p class=\"curr-standard-desc\"><strong>MS-PS1-1:</strong> Develop models to describe the atomic composition of simple molecules and extended structures.</p>\n    <p class=\"curr-standard-desc\"><strong>MS-PS1-2:</strong> Analyze and interpret data on the properties of substances before and after the substances interact to determine if a chemical reaction has occurred.</p>\n    <p class=\"curr-standard-desc\"><strong>MS-PS1-5:</strong> Develop and use a model to describe how the total number of atoms does not change in a chemical reaction and thus mass is conserved.</p>\n</div>\n<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Motion and Stability: Forces and Interactions (MS-PS2)</h4>\n    <p class=\"curr-standard-desc\"><strong>MS-PS2-1:</strong> Apply Newton's Third Law to design a solution to a problem involving the motion of two colliding objects.</p>\n    <p class=\"curr-standard-desc\"><strong>MS-PS2-2:</strong> Plan an investigation to provide evidence that the change in an object's motion depends on the sum of the forces on the object and the mass of the object (Newton's Second Law: F=ma).</p>\n    <p class=\"curr-standard-desc\"><strong>MS-PS2-5:</strong> Conduct an investigation and evaluate the experimental design to provide evidence that fields exist between objects exerting forces on each other even though the objects are not in contact (gravitational, electric, magnetic fields).</p>\n</div>\n<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">Energy, Waves, and Electromagnetic Radiation (MS-PS3 / MS-PS4)</h4>\n    <p class=\"curr-standard-desc\"><strong>MS-PS3-1:</strong> Construct and interpret graphical displays of data to describe the relationships of kinetic energy to the mass of an object and to the speed of an object.</p>\n    <p class=\"curr-standard-desc\"><strong>MS-PS4-1:</strong> Use mathematical representations to describe a simple model for waves that includes how the amplitude of a wave is related to the energy in a wave.</p>\n    <p class=\"curr-standard-desc\"><strong>MS-PS4-2:</strong> Develop and use a model to describe that waves are reflected, absorbed, or transmitted through various materials.</p>\n</div>",
+                    "competencies": [
+                        "Model atomic bonding, molecule formation, and chemical stoichiometry",
+                        "Apply Newton's three laws of motion to mechanical engineering problems",
+                        "Investigate non-contact field forces (gravity, magnetism, electrostatics)",
+                        "Calculate kinetic and potential energy; analyze wave reflection and refraction"
+                    ],
+                    "level": "J"
+                }
+            },
+            "High School": {
+                "ccss": {
+                    "title": "High School Science: Integrated Physics, Chemistry, & Biology (NGSS)",
+                    "overview": "<p>Rigorous college-preparatory science across Physics, Chemistry, and Biology: thermodynamics, quantum mechanics, organic chemistry, molecular genetics, astrophysics, and bioengineering.</p>",
+                    "standards": "<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">HS-PS: Physical Sciences (Chemistry & Physics)</h4>\n    <p class=\"curr-standard-desc\"><strong>HS-PS1-1:</strong> Use the periodic table as a model to predict the relative properties of elements based on the patterns of electrons in the outermost energy level of atoms.</p>\n    <p class=\"curr-standard-desc\"><strong>HS-PS1-7:</strong> Use mathematical representations to support the claim that atoms, and therefore mass, are conserved during a chemical reaction.</p>\n    <p class=\"curr-standard-desc\"><strong>HS-PS2-1:</strong> Analyze data to support the claim that Newton's second law of motion describes the mathematical relationship among the net force on a macroscopic object, its mass, and its acceleration.</p>\n    <p class=\"curr-standard-desc\"><strong>HS-PS3-1:</strong> Create a computational model to calculate the change in the energy of one component in a system when the change in energy of the other component(s) and energy flows in and out of the system are known.</p>\n    <p class=\"curr-standard-desc\"><strong>HS-PS4-3:</strong> Evaluate the claims, evidence, and reasoning behind the idea that electromagnetic radiation can be described either by a wave model or a particle model (wave-particle duality).</p>\n</div>\n<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">HS-LS: Life Sciences (Cellular, Genetic, & Ecological Systems)</h4>\n    <p class=\"curr-standard-desc\"><strong>HS-LS1-1:</strong> Construct an explanation based on evidence for how the structure of DNA determines the structure of proteins which carry out the essential functions of life through systems of specialized cells.</p>\n    <p class=\"curr-standard-desc\"><strong>HS-LS3-1:</strong> Ask questions to clarify relationships about the role of DNA and chromosomes in coding the instructions for characteristic traits passed from parents to offspring.</p>\n    <p class=\"curr-standard-desc\"><strong>HS-LS4-1:</strong> Communicate scientific information that common ancestry and biological evolution are supported by multiple lines of empirical evidence.</p>\n</div>\n<div class=\"curr-standard-item\">\n    <h4 class=\"curr-standard-title\">HS-ESS: Earth & Space Sciences</h4>\n    <p class=\"curr-standard-desc\"><strong>HS-ESS1-2:</strong> Construct an explanation of the Big Bang theory based on astronomical evidence of light spectra, motion of distant galaxies, and composition of matter in the universe.</p>\n    <p class=\"curr-standard-desc\"><strong>HS-ESS2-4:</strong> Use a model to describe how variations in the flow of energy into and out of Earth's systems result in changes in climate.</p>\n</div>",
+                    "competencies": [
+                        "Periodic trends, electron configurations, and stoichiometry",
+                        "Kinematics, momentum conservation, and thermodynamic equilibria",
+                        "DNA replication, protein synthesis, and CRISPR/genetic engineering",
+                        "Astrophysical cosmological models and quantitative climate feedback"
+                    ],
+                    "level": "K-M"
+                }
+            }
+        }
+    }
+}
