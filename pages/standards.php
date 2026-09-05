@@ -73,11 +73,11 @@
         <div class="curr-header-inner">
             <div class="curr-header-content">
                 <h1 class="curr-header-title">
-                    Curriculum <span id="display-subject-name" class="color-indigo">Mathematics</span>
+                    Standards <span id="display-subject-name" class="color-indigo">Mathematics</span>
                 </h1>
-                <p id="display-subject-desc" class="curr-header-desc">
+                <!--<p id="display-subject-desc" class="curr-header-desc">
                     Detailed learning paths, state standards alignment, and core competencies for every stage of development.
-                </p>
+                </p>-->
 
                 <!-- Grade Selection Chips -->
                 <div class="curr-chips">
