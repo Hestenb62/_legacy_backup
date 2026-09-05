@@ -85,6 +85,19 @@
                         <button type="button" class="curr-btn-print" onclick="window.print()" title="Print Standards Guide">
                             <i class="fas fa-print"></i> Print Guide
                         </button>
+                        <div class="curr-export-dropdown" id="curr-export-dropdown">
+                            <button type="button" class="curr-btn-export" onclick="toggleExportMenu(event)" title="Export standards data">
+                                <i class="fas fa-file-export"></i> Export <i class="fas fa-caret-down" style="font-size: 0.75rem; margin-left: 0.25rem;"></i>
+                            </button>
+                            <div class="curr-export-menu" id="curr-export-menu">
+                                <button type="button" class="curr-export-item" onclick="exportStandardsCSV()">
+                                    <i class="fas fa-file-csv"></i> Export as CSV
+                                </button>
+                                <button type="button" class="curr-export-item" onclick="exportStandardsJSON()">
+                                    <i class="fas fa-file-code"></i> Export as JSON
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -155,11 +168,16 @@
 
                         <!-- Standards Search & Domain Filters Toolbar -->
                         <div class="curr-standards-toolbar">
-                            <div class="curr-search-box">
-                                <i class="fas fa-search curr-search-icon"></i>
-                                <input type="text" id="standards-search-input" placeholder="Search standards by code, keyword, or domain..." autocomplete="off" oninput="handleStandardsSearch()" />
-                                <button type="button" id="standards-search-clear" class="curr-search-clear" title="Clear search" style="display: none;" onclick="clearStandardsSearch()">
-                                    <i class="fas fa-times"></i>
+                            <div class="curr-toolbar-row">
+                                <div class="curr-search-box">
+                                    <i class="fas fa-search curr-search-icon"></i>
+                                    <input type="text" id="standards-search-input" placeholder="Search standards by code, keyword, or domain..." autocomplete="off" oninput="handleStandardsSearch()" />
+                                    <button type="button" id="standards-search-clear" class="curr-search-clear" title="Clear search" style="display: none;" onclick="clearStandardsSearch()">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </div>
+                                <button type="button" id="btn-toggle-accordions" class="curr-btn-accordion-toggle" onclick="toggleAllAccordions()" title="Expand or collapse all domain sections">
+                                    <i class="fas fa-compress-alt"></i> <span id="toggle-accordions-text">Collapse All</span>
                                 </button>
                             </div>
                             <div class="curr-domain-filters" id="domain-filters-bar">
@@ -365,7 +383,7 @@
             const standardsContainer = document.getElementById('view-standards');
             standardsContainer.innerHTML = gradeData.standards || '<p>Standards data coming soon.</p>';
             
-            // Process standard items: add copy badges and assign domain tags
+            // Process standard items: add copy badges, wrap in accordion cards, and assign domain tags
             const standardItems = standardsContainer.querySelectorAll('.curr-standard-item');
             const domainSet = new Set();
             let totalStandardCodesCount = 0;
@@ -377,7 +395,7 @@
                 domainSet.add(domainTitle);
 
                 // Enhance standard description codes with interactive badges
-                const descElements = item.querySelectorAll('.curr-standard-desc');
+                const descElements = Array.from(item.querySelectorAll('.curr-standard-desc'));
                 descElements.forEach(descEl => {
                     let html = descEl.innerHTML;
                     // Match <strong>CODE:</strong> or <strong>CODE</strong>
@@ -388,12 +406,64 @@
                     });
                     descEl.innerHTML = html;
                 });
+
+                const descCount = descElements.length || 1;
+
+                // Wrap into Accordion card if title exists
+                if (titleEl && !item.querySelector('.curr-accordion-header')) {
+                    const bodyNodes = [];
+                    let next = titleEl.nextSibling;
+                    while (next) {
+                        const current = next;
+                        next = next.nextSibling;
+                        bodyNodes.push(current);
+                    }
+
+                    const headerDiv = document.createElement('div');
+                    headerDiv.className = 'curr-accordion-header';
+                    headerDiv.setAttribute('role', 'button');
+                    headerDiv.setAttribute('aria-expanded', 'true');
+                    headerDiv.setAttribute('tabindex', '0');
+                    headerDiv.innerHTML = `
+                        <div class="curr-accordion-title-wrap">
+                            <h4 class="curr-standard-title">${escapeHtml(domainTitle)}</h4>
+                            <span class="curr-accordion-count">${descCount} standard${descCount === 1 ? '' : 's'}</span>
+                        </div>
+                        <i class="fas fa-chevron-down curr-accordion-chevron"></i>
+                    `;
+
+                    const bodyDiv = document.createElement('div');
+                    bodyDiv.className = 'curr-accordion-body';
+                    bodyNodes.forEach(node => bodyDiv.appendChild(node));
+
+                    titleEl.remove();
+                    item.appendChild(headerDiv);
+                    item.appendChild(bodyDiv);
+
+                    headerDiv.addEventListener('click', (e) => {
+                        if (e.target.closest('button')) return;
+                        item.classList.toggle('collapsed');
+                        headerDiv.setAttribute('aria-expanded', !item.classList.contains('collapsed'));
+                        updateAccordionToggleBtnState();
+                    });
+
+                    headerDiv.addEventListener('keydown', (e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            headerDiv.click();
+                        }
+                    });
+                }
             });
 
             // If no codes were in <strong> tags, count items as standards
             if (totalStandardCodesCount === 0) {
                 totalStandardCodesCount = standardItems.length;
             }
+
+            // Reset accordion toggle button state
+            allAccordionsExpanded = true;
+            updateAccordionToggleBtnState();
 
             // Build Domain Filter Pills
             const filterBar = document.getElementById('domain-filters-bar');
@@ -544,12 +614,21 @@
 
             if (titleMatches || matchingParas > 0) {
                 item.style.display = 'block';
+                // Auto-expand card if search query matches
+                if (query) {
+                    item.classList.remove('collapsed');
+                    const header = item.querySelector('.curr-accordion-header');
+                    if (header) header.setAttribute('aria-expanded', 'true');
+                }
                 visibleDomainCount++;
                 matchCount += matchingParas || 1;
             } else {
                 item.style.display = 'none';
             }
         });
+
+        // Update accordion toggle button state
+        updateAccordionToggleBtnState();
 
         // Empty state
         let noResultsEl = document.getElementById('curr-standards-no-results');
@@ -584,6 +663,156 @@
                 counter.style.display = 'none';
             }
         }
+    }
+
+    // Accordion Controls
+    let allAccordionsExpanded = true;
+    function toggleAllAccordions() {
+        const items = document.querySelectorAll('#view-standards .curr-standard-item');
+        allAccordionsExpanded = !allAccordionsExpanded;
+        items.forEach(item => {
+            item.classList.toggle('collapsed', !allAccordionsExpanded);
+            const header = item.querySelector('.curr-accordion-header');
+            if (header) header.setAttribute('aria-expanded', allAccordionsExpanded);
+        });
+        updateAccordionToggleBtnState();
+    }
+
+    function updateAccordionToggleBtnState() {
+        const items = Array.from(document.querySelectorAll('#view-standards .curr-standard-item'));
+        if (!items.length) return;
+        const collapsedCount = items.filter(i => i.classList.contains('collapsed')).length;
+        const btn = document.getElementById('btn-toggle-accordions');
+        const text = document.getElementById('toggle-accordions-text');
+        const icon = btn?.querySelector('i');
+
+        if (collapsedCount > items.length / 2) {
+            allAccordionsExpanded = false;
+            if (text) text.innerText = 'Expand All';
+            if (icon) icon.className = 'fas fa-expand-alt';
+        } else {
+            allAccordionsExpanded = true;
+            if (text) text.innerText = 'Collapse All';
+            if (icon) icon.className = 'fas fa-compress-alt';
+        }
+    }
+
+    // Data Export Functionality (CSV & JSON)
+    function toggleExportMenu(e) {
+        if (e) e.stopPropagation();
+        const menu = document.getElementById('curr-export-menu');
+        menu?.classList.toggle('show');
+    }
+
+    function csvEscape(val) {
+        if (val === null || val === undefined) return '""';
+        const str = String(val).replace(/"/g, '""').trim();
+        return `"${str}"`;
+    }
+
+    function exportStandardsCSV() {
+        const levelCode = document.getElementById('stat-level-code')?.innerText || '';
+        const rows = [
+            ['Subject', 'Grade Level', 'Curriculum Level', 'Domain / Strand', 'Standard Code', 'Description']
+        ];
+
+        const items = document.querySelectorAll('#view-standards .curr-standard-item');
+        items.forEach(item => {
+            const domain = item.dataset.domain || 'General';
+            const descs = item.querySelectorAll('.curr-standard-desc');
+            if (descs.length > 0) {
+                descs.forEach(p => {
+                    const badge = p.querySelector('.std-code-badge');
+                    const code = badge ? (badge.dataset.code || badge.innerText.trim()) : '';
+                    let descText = p.innerText;
+                    if (code) {
+                        descText = descText.replace(code, '').replace(/^\s*[:\-–]\s*/, '').trim();
+                    }
+                    rows.push([
+                        subjectsMap[currentSubject]?.name || currentSubject,
+                        currentGrade,
+                        levelCode,
+                        domain,
+                        code,
+                        descText
+                    ]);
+                });
+            } else {
+                rows.push([
+                    subjectsMap[currentSubject]?.name || currentSubject,
+                    currentGrade,
+                    levelCode,
+                    domain,
+                    '',
+                    item.innerText.trim()
+                ]);
+            }
+        });
+
+        const csvString = rows.map(r => r.map(csvEscape).join(',')).join('\r\n');
+        const blob = new Blob(['\uFEFF' + csvString], { type: 'text/csv;charset=utf-8;' });
+        const cleanGrade = currentGrade.toLowerCase().replace(/\s+/g, '-');
+        downloadFile(blob, `standards-${currentSubject}-${cleanGrade}.csv`);
+        document.getElementById('curr-export-menu')?.classList.remove('show');
+    }
+
+    function exportStandardsJSON() {
+        const levelCode = document.getElementById('stat-level-code')?.innerText || '';
+        const exportData = {
+            metadata: {
+                generator: "Hesten's Learning Standards & Outlines",
+                exportedAt: new Date().toISOString(),
+                subject: currentSubject,
+                subjectName: subjectsMap[currentSubject]?.name || currentSubject,
+                grade: currentGrade,
+                level: levelCode
+            },
+            title: document.getElementById('view-title')?.innerText || '',
+            overview: document.getElementById('view-overview')?.innerText || '',
+            competencies: Array.from(document.querySelectorAll('#view-competencies .curr-comp-text')).map(el => el.innerText.trim()),
+            domains: []
+        };
+
+        const items = document.querySelectorAll('#view-standards .curr-standard-item');
+        items.forEach(item => {
+            const domain = item.dataset.domain || 'General';
+            const standards = [];
+            item.querySelectorAll('.curr-standard-desc').forEach(p => {
+                const badge = p.querySelector('.std-code-badge');
+                const code = badge ? (badge.dataset.code || badge.innerText.trim()) : '';
+                let descText = p.innerText;
+                if (code) {
+                    descText = descText.replace(code, '').replace(/^\s*[:\-–]\s*/, '').trim();
+                }
+                standards.push({
+                    code: code,
+                    description: descText
+                });
+            });
+            exportData.domains.push({
+                domain: domain,
+                standardsCount: standards.length,
+                standards: standards
+            });
+        });
+
+        const jsonString = JSON.stringify(exportData, null, 2);
+        const blob = new Blob([jsonString], { type: 'application/json;charset=utf-8;' });
+        const cleanGrade = currentGrade.toLowerCase().replace(/\s+/g, '-');
+        downloadFile(blob, `standards-${currentSubject}-${cleanGrade}.json`);
+        document.getElementById('curr-export-menu')?.classList.remove('show');
+    }
+
+    function downloadFile(blob, filename) {
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        showCopyToast(`Exported ${filename}`);
     }
 
     // 1-Click Copy Standard Code to Clipboard
@@ -679,6 +908,13 @@
             });
         }
         
+        // Close export menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('#curr-export-dropdown')) {
+                document.getElementById('curr-export-menu')?.classList.remove('show');
+            }
+        });
+
         window.addEventListener('settings-changed', (e) => {
             syncCurriculumSelect();
             updateView();
