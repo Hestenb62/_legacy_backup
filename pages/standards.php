@@ -75,9 +75,9 @@
                 <h1 class="curr-header-title">
                     Standards <span id="display-subject-name" class="color-indigo">Mathematics</span>
                 </h1>
-                <!--<p id="display-subject-desc" class="curr-header-desc">
+                <p id="display-subject-desc" class="curr-header-desc">
                     Detailed learning paths, state standards alignment, and core competencies for every stage of development.
-                </p>-->
+                </p>
 
                 <!-- Grade Selection Chips -->
                 <div class="curr-chips">
@@ -152,6 +152,15 @@
                                 <span class="curr-comp-text">Simple Addition/Subtraction</span>
                             </li>
                         </ul>
+                    </div>
+
+                    <!-- Mathematical Practices Card -->
+                    <div id="view-practices-card" class="curr-competencies-card" style="display: none; margin-top: 1.5rem;">
+                        <h4 class="curr-card-badge badge-indigo">
+                            <i class="fas fa-brain"></i> Mathematical Practices
+                        </h4>
+                        <ol id="view-practices" class="curr-comp-list" style="list-style-type: decimal; padding-left: 1.5rem;">
+                        </ol>
                     </div>
 
                     <!-- Level Link -->
@@ -265,6 +274,22 @@
                     <span class="curr-comp-text">${c}</span>
                 </li>
             `).join('');
+
+            // Mathematical Practices (if present for this grade)
+            const practicesCard = document.getElementById('view-practices-card');
+            const practicesList = document.getElementById('view-practices');
+            if (practicesCard && practicesList) {
+                if (gradeData.practices && gradeData.practices.length > 0) {
+                    practicesList.innerHTML = gradeData.practices.map(p => `
+                        <li class="curr-comp-item" style="display: list-item; margin-bottom: 0.5rem;">
+                            <span class="curr-comp-text">${p.replace(/^\d+\.\s*/, '')}</span>
+                        </li>
+                    `).join('');
+                    practicesCard.style.display = 'block';
+                } else {
+                    practicesCard.style.display = 'none';
+                }
+            }
 
             const levelLink = document.getElementById('view-level-link');
             levelLink.href = `/levels/${gradeData.level.toLowerCase()}.php`;
