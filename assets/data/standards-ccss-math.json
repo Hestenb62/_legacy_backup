@@ -1,5 +1,6 @@
 {
     "_comment": "Common Core State Standards (CCSS) / EngageNY Mathematics Curriculum Data",
+    /* This is a multi-line comment block */
     "_description": "Contains grade-by-grade CCSS Math domains, standards, overviews, competencies, and level mappings.",
     "_subjects": [
         "math"
