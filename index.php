@@ -16,7 +16,7 @@ include 'src/header.php';
 
 <!-- DATA IMPORT -->
 <script src="assets/data/global-learningLevels.js"></script>
-<script src="assets/js/curriculum-engageny.js"></script>
+<script src="assets/js/standards-ccss-math-ela.js"></script>
 <script src="assets/js/curriculum-teks.js"></script>
 
 <?php include __DIR__ . '/src/partials/hero.php'; ?>
