@@ -1,0 +1,47 @@
+[
+  {
+    "id": "dsms-scope-001",
+    "title": "Journal Scope: Neurological Foundations of Dysgraphia and Graphomotor Impairments",
+    "author": "Research Team",
+    "date": "January 15, 2026",
+    "timestamp": 1768435200000,
+    "tags": [
+      "Overview",
+      "Neurobiology",
+      "Dysgraphia",
+      "Classification"
+    ],
+    "summary": "An editorial overview outlining the diagnostic boundaries, sub-types (spatial, motor, and dyslexic dysgraphia), and neurological mechanisms of graphomotor learning disabilities.",
+    "fileUrl": "/research/DSMS/texts/journal-scope.md"
+  },
+  {
+    "id": "dsms-kinematics-002",
+    "title": "Kinematic Analysis of Handwriting in Developmental Dysgraphia: Fine Motor Velocity, Pen Pressure, and Digital Scaffolding",
+    "author": "Research Team & Hesten Allison",
+    "date": "February 2, 2026",
+    "timestamp": 1769990400000,
+    "tags": [
+      "Kinematics",
+      "Motor Skills",
+      "Intervention",
+      "Handwriting"
+    ],
+    "summary": "This empirical investigation utilizes digitized graphic tablets to measure stroke duration, velocity profiles, and pen-tip pressure variations in students with developmental dysgraphia.",
+    "fileUrl": "/research/DSMS/texts/kinematics-fine-motor.md"
+  },
+  {
+    "id": "dsms-accommodations-003",
+    "title": "Occupational Therapy Adaptations and Assistive Writing Technologies in K-12 Classrooms",
+    "author": "Research Team",
+    "date": "March 1, 2026",
+    "timestamp": 1772323200000,
+    "tags": [
+      "Classroom",
+      "Occupational Therapy",
+      "Assistive Tech",
+      "Accommodations"
+    ],
+    "summary": "A comprehensive review of evidence-based classroom accommodations, biomechanical modifications, speech-to-text tools, and structured graphomotor interventions.",
+    "fileUrl": "/research/DSMS/texts/classroom-accommodations.md"
+  }
+]

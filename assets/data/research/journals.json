@@ -2,29 +2,35 @@
   {
     "id": "dyslexia-Research",
     "title": "Dyslexia & Learning Disabilities Research",
-    "cover": "Dyslexia Research",
-    "description": "A journal focusing on the latest research in dyslexia, exploring innovative teaching methods, and validating new interventions.",
+    "cover": "/research/assets/dyslexia_cover.png",
+    "description": "A peer-reviewed journal focusing on phonological processing, neurobiological foundations, and evidence-based interventions for dyslexia.",
     "link": "DLDR/index.php",
-    "author": "Hesten Allison",
+    "author": "Hesten Allison & Research Team",
     "date": "Oct 2025",
+    "articleCount": 2,
     "tags": [
       "Dyslexia",
-      "Intervention"
+      "Intervention",
+      "Neurobiology",
+      "Phonology"
     ],
-    "isPeerReviewed": false
+    "isPeerReviewed": true
   },
   {
     "id": "dysgraphia-studies",
     "title": "Dysgraphia Studies & Motor Skills",
-    "cover": "Dysgraphia Research",
-    "description": "Comprehensive studies on early signs of dysgraphia, neural pathways, and effective occupational therapy adaptations.",
-    "link": "#",
-    "author": "Hesten Allison",
+    "cover": "/research/assets/dysgraphia_cover.png",
+    "description": "Comprehensive studies on graphomotor impairments, fine motor kinematics, neural pathways, and occupational therapy adaptations.",
+    "link": "DSMS/index.php",
+    "author": "Hesten Allison & Research Team",
     "date": "Nov 2025",
+    "articleCount": 3,
     "tags": [
       "Dysgraphia",
-      "Motor Skills"
+      "Motor Skills",
+      "Kinematics",
+      "Intervention"
     ],
-    "isPeerReviewed": false
+    "isPeerReviewed": true
   }
 ]

@@ -1,8 +1,8 @@
 <?php
 // --- Page-Specific Variables ---
-$pageTitle = 'Dyslexia & Learning Disabilities Research | Research Platform';
-$pageDescription = 'An ongoing peer-reviewed research journal exploring the cognitive, neurobiological, and instructional dimensions of dyslexia.';
-$pageKeywords = 'dyslexia, research, journal, education, classroom, phonology, reading, phonological awareness, neurobiology';
+$pageTitle = 'Dysgraphia Studies & Motor Skills | Research Platform';
+$pageDescription = 'A peer-reviewed journal exploring fine-motor kinematics, neurobiological substrates, and evidence-based interventions for developmental dysgraphia.';
+$pageKeywords = 'dysgraphia, motor skills, kinematics, fine motor, occupational therapy, graphomotor, learning disability, research';
 $pageAuthor = 'Research Team';
 
 // --- Include Header ---
@@ -13,12 +13,12 @@ include '../../src/header.php';
 <link rel="stylesheet" href="/assets/css/research-main.css">
 
 <!-- Hero Section -->
-<div class="research-hero dldr-hero">
+<div class="research-hero dsms-hero">
   <!-- Background Animated Orbs & Icons -->
   <div class="research-hero-bg">
-    <i class="fas fa-brain research-hero-icon brain"></i>
-    <i class="fas fa-puzzle-piece research-hero-icon microscope"></i>
-    <i class="fas fa-book-open research-hero-icon dna"></i>
+    <i class="fas fa-pen-nib research-hero-icon microscope"></i>
+    <i class="fas fa-hand-holding research-hero-icon brain"></i>
+    <i class="fas fa-wave-square research-hero-icon dna"></i>
 
     <div class="research-orb research-orb-1"></div>
     <div class="research-orb research-orb-2"></div>
@@ -27,13 +27,13 @@ include '../../src/header.php';
 
   <div class="research-hero-content">
     <span class="research-hero-badge">
-      <i class="fas fa-flask"></i> Research Journal
+      <i class="fas fa-feather-alt"></i> Research Journal
     </span>
     <h1 class="research-hero-title">
-      <span class="hero-title-shadow">Dyslexia &</span> <span class="hero-title-gradient">Learning Disabilities</span>
+      <span class="hero-title-shadow">Dysgraphia Studies &</span> <span class="hero-title-gradient">Motor Skills</span>
     </h1>
     <p class="research-hero-desc">
-      Ongoing peer-reviewed investigations into phonological processing, reading interventions, and assistive technologies.
+      Empirical studies into graphomotor mechanics, occupational therapy protocols, and assistive writing technologies.
     </p>
     <div class="research-hero-breadcrumbs">
       <a href="/research/" class="hero-breadcrumb-link"><i class="fas fa-arrow-left"></i> All Journals</a>
@@ -51,7 +51,7 @@ include '../../src/header.php';
       <!-- Search -->
       <div class="research-search-wrap">
         <i class="fas fa-search research-search-icon"></i>
-        <input type="text" id="searchInput" placeholder="Search papers, phonology, authors, tags..."
+        <input type="text" id="searchInput" placeholder="Search papers, kinematics, authors, tags..."
           class="research-search-input">
       </div>
 
@@ -100,7 +100,7 @@ include '../../src/header.php';
     <div class="modal-header">
       <div class="modal-header-info">
         <div class="modal-header-topline">
-          <span class="modal-badge-journal"><i class="fas fa-book-open mr-1"></i> Dyslexia & Learning Disabilities Research</span>
+          <span class="modal-badge-journal"><i class="fas fa-feather-alt mr-1"></i> Dysgraphia Studies & Motor Skills</span>
           <span id="modalReadingTime" class="modal-read-time-pill"><i class="far fa-clock mr-1"></i> Estimating...</span>
         </div>
         <h2 class="modal-header-title" id="modalTitle">Loading Paper...</h2>
@@ -249,8 +249,8 @@ include '../../src/header.php';
   import { JournalEngine } from '/assets/js/research/journal-engine.js';
 
   const engine = new JournalEngine({
-    dataUrl: '/assets/data/research/dldr-papers.json',
-    journalName: 'Dyslexia & Learning Disabilities Research'
+    dataUrl: '/assets/data/research/dsms-papers.json',
+    journalName: 'Dysgraphia Studies & Motor Skills'
   });
 
   engine.init();
