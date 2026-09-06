@@ -242,8 +242,16 @@ if ($bookId === '') {
 
         // Handle teacher resources password authorization
         if ($hasTeacherResources && $chapterNum === $totalChapters) {
+            $verifyConfigFile = dirname(__DIR__, 2) . '/assets/verify.php';
+            $teacherPassword = '8675309';
+            if (file_exists($verifyConfigFile)) {
+                require_once $verifyConfigFile;
+            }
+
             if (isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['teacher_password'])) {
-                if (trim($_POST['teacher_password']) === '8675309') {
+                $submittedPassword = trim($_POST['teacher_password']);
+                $expectedPassword = (string)($teacherPassword ?? ($teacher_password ?? '8675309'));
+                if ($submittedPassword === $expectedPassword) {
                     $_SESSION['teacher_unlocked'] = true;
                     $isTeacherUnlocked = true;
                     header('Location: index.php?book=' . urlencode($bookId) . '&chapter=chapter-' . $totalChapters);

@@ -1,6 +1,6 @@
 <?php
 $verifyFile = __DIR__ . '/assets/verify.php';
-$expectedHash = '258bca037e128c7e5e20159d9821df36e68e42cddd91127251214f26a80da6c5';
+$expectedHash = 'b9ec849f5efc65de95a7680e35f52426fda570d857d6281e58f18b62f9ade5c1';
 
 if (!file_exists($verifyFile) || strtolower(hash_file('sha256', $verifyFile)) !== $expectedHash) {
     http_response_code(403);
