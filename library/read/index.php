@@ -220,7 +220,29 @@ if ($bookId === '') {
             $chapter = $hasIntro ? 'intro' : 'chapter-1';
         }
 
-        if ($chapter === 'intro') {
+        // Detect if this is the Teacher Resources page (after all chapters)
+        $isTeacherPage = false;
+        if ($hasTeacherResources) {
+            if ($chapter === 'teacher-resources' || $chapter === 'teacher' || $chapter === 'resources') {
+                $isTeacherPage = true;
+            } elseif (preg_match('/^chapter-(\d+)$/', $chapter, $matches)) {
+                $requestedChapterNum = intval($matches[1]);
+                if ($requestedChapterNum > $totalChapters) {
+                    // Redirect legacy chapter requests (e.g. chapter-26) to teacher-resources
+                    header('Location: index.php?book=' . urlencode($bookId) . '&chapter=teacher-resources', true, 301);
+                    exit;
+                }
+            }
+        }
+
+        if ($isTeacherPage) {
+            $chapter = 'teacher-resources';
+            $chapterNum = 0; // Does not count as a chapter number
+            $chapterFile = $bookFolder . '/teacher-resources.php';
+            if (!is_file($chapterFile)) {
+                $chapterFile = $bookFolder . '/chapter-' . ($totalChapters + 1) . '.php';
+            }
+        } elseif ($chapter === 'intro') {
             $chapterNum = 0;
             $chapterFile = '';
         } else {
@@ -241,11 +263,19 @@ if ($bookId === '') {
         }
 
         // Handle teacher resources password authorization
-        if ($hasTeacherResources && $chapterNum === $totalChapters) {
+        if ($isTeacherPage) {
             $verifyConfigFile = dirname(__DIR__, 2) . '/assets/verify.php';
             $teacherPassword = '8675309';
             if (file_exists($verifyConfigFile)) {
                 require_once $verifyConfigFile;
+            }
+
+            // Allow relocking / signing out
+            if (isset($_GET['lock']) && $_GET['lock'] === '1') {
+                unset($_SESSION['teacher_unlocked']);
+                $isTeacherUnlocked = false;
+                header('Location: index.php?book=' . urlencode($bookId) . '&chapter=teacher-resources');
+                exit;
             }
 
             if (isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['teacher_password'])) {
@@ -254,7 +284,7 @@ if ($bookId === '') {
                 if ($submittedPassword === $expectedPassword) {
                     $_SESSION['teacher_unlocked'] = true;
                     $isTeacherUnlocked = true;
-                    header('Location: index.php?book=' . urlencode($bookId) . '&chapter=chapter-' . $totalChapters);
+                    header('Location: index.php?book=' . urlencode($bookId) . '&chapter=teacher-resources');
                     exit;
                 } else {
                     $authError = 'Incorrect password. Access Denied.';
@@ -318,7 +348,7 @@ if ($bookId === '') {
 
         // Load Quiz questions and vocab list from assets directory
         $quizJsonPath = __DIR__ . '/../assets/' . $bookId . '.json';
-        if (is_file($quizJsonPath)) {
+        if (is_file($quizJsonPath) && !$isTeacherPage) {
             $quizData = json_decode(file_get_contents($quizJsonPath), true);
             if (is_array($quizData)) {
                 $quizQuestions = $quizData['chapter-' . $chapterNum] ?? $quizData['default'] ?? [];

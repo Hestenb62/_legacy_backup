@@ -12,12 +12,12 @@ include 'src/header.php';
 
 // --- DATA: Client-Side Loading Migration ---
 // Data is now loaded via <script src="assets/data/global-learningLevels.js"></script> below
+// <script src="assets/js/curriculum-teks.js"></script>
 ?>
 
 <!-- DATA IMPORT -->
 <script src="assets/data/global-learningLevels.js"></script>
 <script src="assets/js/standards-ccss-math-ela.js"></script>
-<script src="assets/js/curriculum-teks.js"></script>
 
 <?php include __DIR__ . '/src/partials/hero.php'; ?>
 

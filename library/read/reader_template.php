@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /**
  * library/read/reader_template.php - Unified Digital Reader Template
  * Implements distraction-free editorial reading, customizable typography,
@@ -17,33 +17,68 @@ if (!isset($bookAuthor)) $bookAuthor = 'Unknown Author';
 if (!isset($chapter)) $chapter = 'chapter-1';
 if (!isset($chapterNum)) $chapterNum = 1;
 if (!isset($totalChapters)) $totalChapters = 1;
+if (!isset($prevChapterNum)) $prevChapterNum = 0;
+if (!isset($nextChapterNum)) $nextChapterNum = 2;
 if (!isset($contentHtml)) $contentHtml = '<p>No content available.</p>';
 if (!isset($isTeacherUnlocked)) $isTeacherUnlocked = false;
+if (!isset($isTeacherPage)) $isTeacherPage = false;
+if (!isset($hasTeacherResources)) $hasTeacherResources = !empty($book['hasTeacherResources']);
 if (!isset($authError)) $authError = '';
 if (!isset($quizQuestions)) $quizQuestions = [];
 if (!isset($vocabList)) $vocabList = [];
 if (!isset($bookToc)) $bookToc = [];
 if (!isset($book) || !is_array($book)) $book = [];
 
+// Check if book has author intro card
+$hasIntro = (!empty($book['authorBio']) || !empty($book['introWhy']) || !empty($book['introHow']) || !empty($book['introWhat']));
+
 // Determine navigation URLs
-$prevChapterNum = $chapterNum - 1;
-$nextChapterNum = $chapterNum + 1;
-$hasPrev = $prevChapterNum >= 1;
-$hasNext = $nextChapterNum <= $totalChapters;
-
-$prevUrl = $hasPrev ? "index.php?book=" . urlencode($bookId) . "&chapter=chapter-$prevChapterNum" : "#";
-$nextUrl = $hasNext ? "index.php?book=" . urlencode($bookId) . "&chapter=chapter-$nextChapterNum" : "#";
-
-// Get active chapter title from TOC if available
-$currentChapterTitle = "Chapter $chapterNum";
-if ($chapter === 'intro') {
+$nextIsTeacher = false;
+if ($isTeacherPage) {
+    $hasPrev = true;
+    $prevChapterNum = $totalChapters;
+    $prevUrl = "index.php?book=" . urlencode($bookId) . "&chapter=chapter-$totalChapters";
+    $hasNext = false;
+    $nextUrl = "#";
+    $currentChapterTitle = "Teacher Resources";
+} elseif ($chapter === 'intro') {
+    $hasPrev = false;
+    $prevChapterNum = 0;
+    $prevUrl = "#";
+    $hasNext = ($totalChapters >= 1);
+    $nextChapterNum = 1;
+    $nextUrl = $hasNext ? "index.php?book=" . urlencode($bookId) . "&chapter=chapter-1" : "#";
     $currentChapterTitle = "Author Introduction";
-} elseif (!empty($bookToc) && isset($bookToc[(string)$chapterNum]['title'])) {
-    $currentChapterTitle = $bookToc[(string)$chapterNum]['title'];
+} else {
+    $prevChapterNum = $chapterNum - 1;
+    $hasPrev = ($prevChapterNum >= 1) || ($chapterNum === 1 && $hasIntro);
+    $prevUrl = ($prevChapterNum >= 1) 
+        ? "index.php?book=" . urlencode($bookId) . "&chapter=chapter-$prevChapterNum" 
+        : ($hasIntro ? "index.php?book=" . urlencode($bookId) . "&chapter=intro" : "#");
+
+    if ($chapterNum < $totalChapters) {
+        $nextChapterNum = $chapterNum + 1;
+        $hasNext = true;
+        $nextUrl = "index.php?book=" . urlencode($bookId) . "&chapter=chapter-$nextChapterNum";
+        $nextIsTeacher = false;
+    } elseif ($chapterNum === $totalChapters && $hasTeacherResources) {
+        $hasNext = true;
+        $nextUrl = "index.php?book=" . urlencode($bookId) . "&chapter=teacher-resources";
+        $nextIsTeacher = true;
+    } else {
+        $hasNext = false;
+        $nextUrl = "#";
+        $nextIsTeacher = false;
+    }
+
+    $currentChapterTitle = "Chapter $chapterNum";
+    if (!empty($bookToc) && isset($bookToc[(string)$chapterNum]['title'])) {
+        $currentChapterTitle = $bookToc[(string)$chapterNum]['title'];
+    }
 }
 
 // Page Metadata
-$pageTitle = "$bookTitle - " . ($chapter === 'intro' ? "Intro" : ($chapterNum === $totalChapters && $totalChapters > 1 && !empty($book['hasTeacherResources']) ? "Teacher Resources" : "Chapter $chapterNum")) . " | Hesten's Learning Library";
+$pageTitle = "$bookTitle - " . ($chapter === 'intro' ? "Intro" : ($isTeacherPage ? "Teacher Resources" : "Chapter $chapterNum")) . " | Hesten's Learning Library";
 $pageDescription = "Read $bookTitle by $bookAuthor online with audio narration, study guides, and vocabulary flashcards.";
 
 include ABSPATH . 'src/header.php';
@@ -149,7 +184,13 @@ include ABSPATH . 'src/header.php';
                 </a>
                 
                 <span id="current-chapter" class="controls-chapter-label" title="<?php echo htmlspecialchars($currentChapterTitle); ?>">
-                    <?php echo ($totalChapters > 1 && $chapterNum === $totalChapters && !empty($book['hasTeacherResources'])) ? 'Teacher Resources' : 'Ch ' . $chapterNum; ?>
+                    <?php if ($isTeacherPage): ?>
+                        <i class="fas fa-chalkboard-teacher"></i> Teacher Resources
+                    <?php elseif ($chapter === 'intro'): ?>
+                        Intro
+                    <?php else: ?>
+                        Ch <?php echo $chapterNum; ?>
+                    <?php endif; ?>
                 </span>
                 
                 <a href="<?php echo $nextUrl; ?>" 
@@ -260,14 +301,14 @@ include ABSPATH . 'src/header.php';
             <div id="book-page-viewport" class="book-page-viewport">
                 <!-- Main Reader Reading Container -->
                 <article id="book-content" class="reader-main-content font-sans prose-lg lh-wide">
-                    <?php if (!empty($book['hasTeacherResources']) && $chapterNum === $totalChapters && $totalChapters > 1 && !$isTeacherUnlocked): ?>
+                    <?php if ($isTeacherPage && !$isTeacherUnlocked): ?>
                         <!-- Protected Teacher Resources Screen -->
                         <div class="teacher-gate-card">
                             <div class="teacher-icon-circle">
-                                <i class="fas fa-lock"></i>
+                                <i class="fas fa-shield-alt"></i>
                             </div>
-                            <h2 class="teacher-gate-title">Teacher Resources Protected</h2>
-                            <p class="teacher-gate-desc">This section contains educator answer keys, curriculum alignments, and discussion guides. Please enter the teacher PIN to unlock.</p>
+                            <h2 class="teacher-gate-title">Protected Educator Portal</h2>
+                            <p class="teacher-gate-desc">This section contains educator answer keys, curriculum alignments, unit lesson plans, and discussion guides. Please enter the teacher PIN to unlock.</p>
                             
                             <?php if ($authError): ?>
                                 <div class="teacher-auth-error">
@@ -275,9 +316,16 @@ include ABSPATH . 'src/header.php';
                                 </div>
                             <?php endif; ?>
 
-                            <form method="POST" action="index.php?book=<?php echo urlencode($bookId); ?>&chapter=chapter-<?php echo $totalChapters; ?>" class="teacher-auth-form">
-                                <input type="password" name="teacher_password" placeholder="Enter Teacher PIN..." class="teacher-pin-input" autofocus required autocomplete="off">
-                                <button type="submit" class="teacher-submit-btn">Unlock Resources</button>
+                            <form method="POST" action="index.php?book=<?php echo urlencode($bookId); ?>&chapter=teacher-resources" class="teacher-auth-form">
+                                <div class="teacher-input-wrap">
+                                    <input type="password" name="teacher_password" placeholder="Enter Teacher PIN..." class="teacher-pin-input" autofocus required autocomplete="off">
+                                </div>
+                                <button type="submit" class="teacher-submit-btn">
+                                    <i class="fas fa-unlock-alt"></i> Unlock Educator Suite
+                                </button>
+                                <div class="teacher-pin-hint">
+                                    <i class="fas fa-lightbulb"></i> <span><strong>Hint:</strong> What is Jenny's number?</span>
+                                </div>
                             </form>
                         </div>
                     <?php else: ?>
@@ -295,20 +343,24 @@ include ABSPATH . 'src/header.php';
     </div>
 
     <!-- Bottom Pagination Nav -->
-    <?php if ($chapter !== 'intro' && $totalChapters > 1): ?>
+    <?php if ($chapter !== 'intro' && ($totalChapters > 1 || $hasTeacherResources)): ?>
         <footer class="reader-bottom-nav">
             <?php if ($hasPrev): ?>
                 <a href="<?php echo $prevUrl; ?>" class="reader-bottom-nav-btn prev-btn">
-                    <i class="fas fa-arrow-left"></i> <span>Previous Chapter</span>
+                    <i class="fas fa-arrow-left"></i> <span><?php echo $isTeacherPage ? 'Chapter ' . $totalChapters : ((($prevChapterNum ?? 0) === 0) ? 'Author Introduction' : 'Previous Chapter'); ?></span>
                 </a>
             <?php else: ?>
                 <div></div>
             <?php endif; ?>
 
             <?php if ($hasNext): ?>
-                <a href="<?php echo $nextUrl; ?>" class="reader-bottom-nav-btn next-btn">
-                    <span>Next Chapter</span> <i class="fas fa-arrow-right"></i>
+                <a href="<?php echo $nextUrl; ?>" class="reader-bottom-nav-btn next-btn <?php echo !empty($nextIsTeacher) ? 'teacher-next-btn' : ''; ?>">
+                    <span><?php echo !empty($nextIsTeacher) ? 'Teacher Resources <i class="fas fa-chalkboard-teacher ml-1"></i>' : 'Next Chapter <i class="fas fa-arrow-right"></i>'; ?></span>
                 </a>
+            <?php else: ?>
+                <span class="reader-bottom-nav-btn next-btn disabled" aria-disabled="true">
+                    <span>End of Book</span> <i class="fas fa-check-circle"></i>
+                </span>
             <?php endif; ?>
         </footer>
     <?php endif; ?>
@@ -413,28 +465,56 @@ include ABSPATH . 'src/header.php';
 </div>
 
 <!-- Table of Contents Slide-Out Modal -->
-<?php if ($totalChapters > 1): ?>
+<?php if ($totalChapters > 1 || $hasTeacherResources): ?>
     <div id="toc-modal" class="toc-modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="toc-title" onclick="closeTocModal()">
         <div class="toc-content" onclick="event.stopPropagation()">
             <div class="toc-header">
                 <h2 id="toc-title">Table of Contents</h2>
                 <button type="button" class="toc-close" id="close-toc-modal" onclick="closeTocModal()" aria-label="Close Table of Contents">&times;</button>
             </div>
+
+            <?php if ($hasIntro): ?>
+                <div class="toc-intro-section">
+                    <a href="index.php?book=<?php echo urlencode($bookId); ?>&chapter=intro" 
+                       class="toc-link <?php echo ($chapter === 'intro') ? 'active' : ''; ?>">
+                        <span class="toc-num"><i class="fas fa-feather-alt"></i></span>
+                        <span class="toc-name">Author Introduction</span>
+                    </a>
+                </div>
+            <?php endif; ?>
+
             <div class="toc-grid">
                 <?php for ($i = 1; $i <= $totalChapters; $i++): 
-                    $isTeacherCh = ($i === $totalChapters && !empty($book['hasTeacherResources']));
-                    $chapterLabel = $isTeacherCh ? 'Teacher Resources' : 'Chapter ' . $i;
+                    $chapterLabel = 'Chapter ' . $i;
                     if (!empty($bookToc) && isset($bookToc[(string)$i]['title'])) {
                         $chapterLabel = $bookToc[(string)$i]['title'];
                     }
                 ?>
                     <a href="index.php?book=<?php echo urlencode($bookId); ?>&chapter=chapter-<?php echo $i; ?>" 
-                       class="toc-link <?php echo ($i === $chapterNum) ? 'active' : ''; ?> <?php echo $isTeacherCh ? 'toc-teacher-link' : ''; ?>">
-                        <span class="toc-num"><?php echo $isTeacherCh ? '<i class="fas fa-chalkboard-teacher"></i>' : 'CH ' . $i; ?></span>
+                       class="toc-link <?php echo (!$isTeacherPage && $i === $chapterNum) ? 'active' : ''; ?>">
+                        <span class="toc-num">CH <?php echo $i; ?></span>
                         <span class="toc-name"><?php echo htmlspecialchars($chapterLabel); ?></span>
                     </a>
                 <?php endfor; ?>
             </div>
+
+            <?php if ($hasTeacherResources): ?>
+                <div class="toc-teacher-section">
+                    <div class="toc-teacher-divider">
+                        <span>Educator Portal</span>
+                    </div>
+                    <a href="index.php?book=<?php echo urlencode($bookId); ?>&chapter=teacher-resources" 
+                       class="toc-link toc-teacher-link <?php echo $isTeacherPage ? 'active' : ''; ?>">
+                        <span class="toc-num"><i class="fas fa-chalkboard-teacher"></i></span>
+                        <div class="toc-teacher-info">
+                            <span class="toc-name">Teacher Resources</span>
+                            <span class="toc-teacher-badge <?php echo $isTeacherUnlocked ? 'unlocked' : 'locked'; ?>">
+                                <?php echo $isTeacherUnlocked ? '<i class="fas fa-unlock"></i> Unlocked' : '<i class="fas fa-lock"></i> PIN Protected'; ?>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            <?php endif; ?>
         </div>
     </div>
 <?php endif; ?>

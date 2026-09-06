@@ -539,8 +539,8 @@ include '../../../src/header.php';
         <a href="index.php?book=1984" class="reader-chapter-nav-btn" aria-label="Book contents">
             <i class="fas fa-list"></i> All Chapters
         </a>
-        <a href="index.php?book=1984&chapter=chapter-26" class="reader-chapter-nav-btn reader-chapter-nav-next">
-            Chapter 26 <i class="fas fa-chevron-right"></i>
+        <a href="index.php?book=1984&chapter=teacher-resources" class="reader-chapter-nav-btn reader-chapter-nav-next">
+            Teacher Resources <i class="fas fa-chalkboard-teacher"></i>
         </a>
         </nav>
     </article>
