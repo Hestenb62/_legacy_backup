@@ -39,7 +39,7 @@
                     </h4>
                     <ul class="footer-links">
                         <li class="footer-link-item"><a href="/pages/standards.php"><i class="fas fa-book footer-link-icon"></i> Standards</a></li>
-                        <li class="footer-link-item"><a href="https://research.hestena62.com" target="_blank" rel="noopener noreferrer" id="footer-research-link" onclick="return showA11yWarningModal(event, this);"><i class="fas fa-flask footer-link-icon"></i> Research</a></li>
+                        <li class="footer-link-item"><a href="/research/"><i class="fas fa-flask footer-link-icon"></i> Research</a></li>
                         <li class="footer-link-item"><a href="/library/"><i class="fas fa-book-open footer-link-icon"></i> Library</a></li>
                         <li class="footer-link-item"><a href="/pages/help-center.php"><i class="fas fa-question-circle footer-link-icon"></i> Help Center</a></li>
                     </ul>
