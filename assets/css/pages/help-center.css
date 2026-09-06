@@ -1008,6 +1008,24 @@
 .help-article-icon.updating      { background: rgba(14, 165, 233, 0.12); color: #0ea5e9; }
 .help-article-icon.general       { background: rgba(168, 85, 247, 0.12); color: #a855f7; }
 
+.help-article-badges {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.help-article-file-tag {
+    font-size: 0.72rem;
+    font-weight: 700;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    padding: 0.25rem 0.6rem;
+    border-radius: 0.5rem;
+    background: rgba(79, 70, 229, 0.08);
+    color: var(--color-primary, #4f46e5);
+    border: 1px solid rgba(79, 70, 229, 0.2);
+}
+
 .help-article-topic {
     font-size: 0.75rem;
     font-weight: 800;
@@ -1018,6 +1036,37 @@
     background: var(--color-bg-base, #f8fafc);
     color: var(--color-text-muted, #64748b);
     border: 1px solid var(--color-border, #e2e8f0);
+}
+
+.help-article-img-box {
+    margin: 1.25rem 0 1.75rem 0;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 1px solid var(--color-border, #e2e8f0);
+    background: var(--color-bg-base, #f8fafc);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.help-article-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.help-article-caption {
+    display: block;
+    padding: 0.6rem 1rem;
+    font-size: 0.82rem;
+    color: var(--color-text-muted, #64748b);
+    border-top: 1px solid var(--color-border, #e2e8f0);
+    background: var(--color-bg-surface, #ffffff);
+}
+
+.help-article-divider {
+    border: none;
+    border-top: 1px dashed var(--color-border, #e2e8f0);
+    margin: 1.75rem 0;
 }
 
 .help-article-title {

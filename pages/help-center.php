@@ -10,12 +10,12 @@ $pageAuthor      = "Hesten's Learning";
  * Automatically handles headings, bold, italic, inline code, lists, excerpts, and read time.
  */
 function getHelpArticles() {
-    $articlesDir = dirname(__DIR__) . DIRECTORY_SEPARATOR . 'assets' . DIRECTORY_SEPARATOR . 'text';
+    $articlesDir = str_replace('\\', '/', dirname(__DIR__)) . '/assets/text';
     if (!is_dir($articlesDir)) {
         return [];
     }
 
-    $files = glob($articlesDir . DIRECTORY_SEPARATOR . 'hc*.md');
+    $files = glob($articlesDir . '/hc*.md');
     $articles = [];
 
     if (!$files) {
@@ -35,13 +35,28 @@ function getHelpArticles() {
         $title = '';
         $bodyLines = [];
 
-        foreach ($lines as $line) {
+        // Extract Title: check ATX (# Header) or Setext (Header text followed by === or ---)
+        for ($i = 0; $i < count($lines); $i++) {
+            $line = $lines[$i];
             $trimmed = trim($line);
-            if (empty($title) && preg_match('/^#{1,3}\s+(.+)$/', $trimmed, $m)) {
-                $title = trim($m[1]);
-            } else {
-                $bodyLines[] = $line;
+
+            if (empty($title)) {
+                if (preg_match('/^#{1,3}\s+(.+)$/', $trimmed, $m)) {
+                    $title = trim($m[1]);
+                    continue;
+                }
+                if (isset($lines[$i + 1]) && preg_match('/^={3,}$/', trim($lines[$i + 1])) && !empty($trimmed)) {
+                    $title = $trimmed;
+                    $i++; // skip the underline
+                    continue;
+                }
+                if (isset($lines[$i + 1]) && preg_match('/^-{3,}$/', trim($lines[$i + 1])) && !empty($trimmed)) {
+                    $title = $trimmed;
+                    $i++; // skip the underline
+                    continue;
+                }
             }
+            $bodyLines[] = $line;
         }
 
         $baseName = pathinfo($filename, PATHINFO_FILENAME);
@@ -74,15 +89,27 @@ function getHelpArticles() {
             $iconClass = 'updating';
         }
 
+        // Excerpt extraction: skip metadata headers, links, and hr dividers
         $excerpt = '';
         foreach ($bodyLines as $bLine) {
             $bTrim = trim($bLine);
-            if (!empty($bTrim) && !str_starts_with($bTrim, '#') && !str_starts_with($bTrim, '-') && !str_starts_with($bTrim, '*')) {
-                $cleanText = preg_replace('/\*\*(.*?)\*\*/', '$1', $bTrim);
-                $cleanText = preg_replace('/[\*\_](.*?)[\*\_]/', '$1', $cleanText);
+            if (empty($bTrim)) continue;
+            if (str_starts_with($bTrim, '#') || str_starts_with($bTrim, '=') || str_starts_with($bTrim, '-') || str_starts_with($bTrim, '*')) continue;
+            if (stripos($bTrim, 'Creation Date:') !== false || stripos($bTrim, 'Created By:') !== false || stripos($bTrim, 'StepCapture') !== false) continue;
+            if (str_starts_with($bTrim, '![')) continue;
+
+            $cleanText = preg_replace('/!\[(.*?)\]\((.*?)\)/', '', $bTrim);
+            $cleanText = preg_replace('/\[(.*?)\]\((.*?)\)/', '$1', $cleanText);
+            $cleanText = preg_replace('/\*\*(.*?)\*\*/', '$1', $cleanText);
+            $cleanText = preg_replace('/[\*\_](.*?)[\*\_]/', '$1', $cleanText);
+            $cleanText = trim($cleanText);
+            if (!empty($cleanText)) {
                 $excerpt = $cleanText;
                 break;
             }
+        }
+        if (empty($excerpt)) {
+            $excerpt = "Step-by-step walkthrough guide for " . strtolower($title) . ".";
         }
 
         $parsedHtml = '';
@@ -92,10 +119,20 @@ function getHelpArticles() {
         $flushParagraph = function() use (&$parsedHtml, &$paragraph) {
             if (!empty($paragraph)) {
                 $text = implode(' ', $paragraph);
+                // Parse markdown images
+                $text = preg_replace('/!\[(.*?)\]\((https?:\/\/[^\)]+)\)/', '<div class="help-article-img-box"><img src="$2" alt="$1" class="help-article-img" loading="lazy"><span class="help-article-caption">$1</span></div>', $text);
+                // Parse markdown links
+                $text = preg_replace('/\[(.*?)\]\((https?:\/\/[^\)]+)\)/', '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>', $text);
+                // Bold, Italics, Code
                 $text = preg_replace('/\*\*(.*?)\*\*/', '<strong>$1</strong>', $text);
                 $text = preg_replace('/(?<!\*)\*(?!\*)(.*?)(?<!\*)\*(?!\*)/', '<em>$1</em>', $text);
                 $text = preg_replace('/`([^`]+)`/', '<code>$1</code>', $text);
-                $parsedHtml .= '<p>' . $text . '</p>' . "\n";
+
+                if (str_starts_with($text, '<div class="help-article-img-box">')) {
+                    $parsedHtml .= $text . "\n";
+                } else {
+                    $parsedHtml .= '<p>' . $text . '</p>' . "\n";
+                }
                 $paragraph = [];
             }
         };
@@ -112,6 +149,15 @@ function getHelpArticles() {
                 continue;
             }
 
+            // Horizontal Rules
+            if (preg_match('/^(\*\s*){3,}$/', $trimmed) || preg_match('/^(\-\s*){3,}$/', $trimmed)) {
+                $flushParagraph();
+                if ($inList) { $parsedHtml .= "</ul>\n"; $inList = false; }
+                $parsedHtml .= '<hr class="help-article-divider">' . "\n";
+                continue;
+            }
+
+            // Bullet lists
             if (preg_match('/^[\*\-]\s+(.+)$/', $trimmed, $m)) {
                 $flushParagraph();
                 if (!$inList) {
@@ -119,6 +165,8 @@ function getHelpArticles() {
                     $inList = true;
                 }
                 $itemContent = $m[1];
+                $itemContent = preg_replace('/!\[(.*?)\]\((https?:\/\/[^\)]+)\)/', '<img src="$2" alt="$1" class="help-article-img">', $itemContent);
+                $itemContent = preg_replace('/\[(.*?)\]\((https?:\/\/[^\)]+)\)/', '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>', $itemContent);
                 $itemContent = preg_replace('/\*\*(.*?)\*\*/', '<strong>$1</strong>', $itemContent);
                 $itemContent = preg_replace('/(?<!\*)\*(?!\*)(.*?)(?<!\*)\*(?!\*)/', '<em>$1</em>', $itemContent);
                 $itemContent = preg_replace('/`([^`]+)`/', '<code>$1</code>', $itemContent);
@@ -131,13 +179,21 @@ function getHelpArticles() {
                 $inList = false;
             }
 
+            // Standalone image line
+            if (preg_match('/^!\[(.*?)\]\((https?:\/\/[^\)]+)\)$/', $trimmed, $m)) {
+                $flushParagraph();
+                $parsedHtml .= '<div class="help-article-img-box"><img src="' . htmlspecialchars($m[2]) . '" alt="' . htmlspecialchars($m[1]) . '" class="help-article-img" loading="lazy"><span class="help-article-caption">' . htmlspecialchars($m[1]) . '</span></div>' . "\n";
+                continue;
+            }
+
+            // Subheadings
             if (preg_match('/^#{3,4}\s+(.+)$/', $trimmed, $m)) {
                 $flushParagraph();
                 $parsedHtml .= '<h4>' . htmlspecialchars($m[1]) . '</h4>' . "\n";
                 continue;
             }
 
-            $paragraph[] = htmlspecialchars($trimmed, ENT_NOQUOTES, 'UTF-8');
+            $paragraph[] = $trimmed;
         }
 
         $flushParagraph();
@@ -481,7 +537,10 @@ include '../src/header.php';
                         <div class="help-article-icon <?= htmlspecialchars($article['iconClass']) ?>" aria-hidden="true">
                             <i class="<?= htmlspecialchars($article['icon']) ?>"></i>
                         </div>
-                        <span class="help-article-topic"><?= htmlspecialchars($article['topic']) ?></span>
+                        <div class="help-article-badges">
+                            <span class="help-article-file-tag"><?= htmlspecialchars($article['filename']) ?></span>
+                            <span class="help-article-topic"><?= htmlspecialchars($article['topic']) ?></span>
+                        </div>
                     </div>
                     <h3 class="help-article-title"><?= htmlspecialchars($article['title']) ?></h3>
                     <div class="help-article-meta">
@@ -764,14 +823,15 @@ include '../src/header.php';
 
         // Filter Articles
         articleCards.forEach(card => {
-            const id = card.getAttribute('data-article-id');
+            const id = card.getAttribute('data-article-id') || '';
             const article = helpArticlesData ? helpArticlesData[id] : null;
+            const filename = article?.filename ? article.filename.toLowerCase() : '';
             const title = card.querySelector('.help-article-title')?.textContent.toLowerCase() || '';
             const topic = card.querySelector('.help-article-topic')?.textContent.toLowerCase() || '';
             const excerpt = card.querySelector('.help-article-excerpt')?.textContent.toLowerCase() || '';
             const full = article?.html ? article.html.toLowerCase() : '';
 
-            if (query === '' || title.includes(query) || topic.includes(query) || excerpt.includes(query) || full.includes(query)) {
+            if (query === '' || filename.includes(query) || id.includes(query) || title.includes(query) || topic.includes(query) || excerpt.includes(query) || full.includes(query)) {
                 card.classList.remove('is-hidden');
                 articleMatches++;
             } else {
