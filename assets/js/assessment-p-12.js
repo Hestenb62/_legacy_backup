@@ -971,11 +971,12 @@ function loadQuestions(gradeName, subjectFilter = 'All') {
         domainMatches.sort(() => Math.random() - 0.5);
         remaining.sort(() => Math.random() - 0.5);
 
-        // Assemble 10 prioritized questions
-        currentQuestions = [...exactMatches, ...domainMatches, ...remaining].slice(0, 10);
+        // Assemble prioritized questions
+        const qLimit = window.targetedQuestionCount || 10;
+        currentQuestions = [...exactMatches, ...domainMatches, ...remaining].slice(0, qLimit);
     } else {
         pool.sort(() => Math.random() - 0.5);
-        currentQuestions = pool;
+        currentQuestions = window.targetedQuestionCount ? pool.slice(0, window.targetedQuestionCount) : pool;
     }
 
     if (typeof window !== 'undefined') {

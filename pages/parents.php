@@ -12,61 +12,8 @@ $pageAuthor      = 'Hesten\'s Learning';
 // --- Include Header Template ---
 include '../src/header.php';
 ?>
-
-<!-- 
-  FRESH STYLES & ANIMATIONS
--->
-<style>
-    html {
-        scroll-behavior: smooth;
-    }
-
-    /* Hide scrollbar for clean look in specific areas */
-    .no-scrollbar::-webkit-scrollbar {
-        display: none;
-    }
-
-    .no-scrollbar {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-    }
-
-    /* Glassmorphism Utilities */
-    .glass-panel {
-        background: rgba(255, 255, 255, 0.7);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        border: 1px solid rgba(255, 255, 255, 0.3);
-    }
-
-    .dark .glass-panel {
-        background: rgba(31, 41, 55, 0.7);
-        /* dark:bg-gray-800 with opacity */
-        border: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    /* Gradient Text */
-    .text-gradient {
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-image: linear-gradient(to right, #4F46E5, #9333EA, #DB2777);
-    }
-
-    .dark .text-gradient {
-        background-image: linear-gradient(to right, #818CF8, #C084FC, #F472B6);
-    }
-
-    /* Card Hover Lift */
-    .hover-lift {
-        transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .hover-lift:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.15);
-    }
-</style>
+<!-- Parents Hub Page Stylesheet -->
+<link rel="stylesheet" href="<?= assetVersion('/assets/css/pages/parents.css') ?>">
 
 <!-- 
   HERO SECTION 
@@ -233,37 +180,73 @@ include '../src/header.php';
             <section id="tools" class="scroll-mt-28">
                 <h2 class="text-2xl font-bold text-slate-800 dark:text-white mb-6">Essential Tools</h2>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-                    <!-- Featured Tool (Spans 2 cols on desktop) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+                    <!-- Featured Tool: Progress & Competency Dashboard -->
                     <div
-                        class="md:col-span-2 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl shadow-lg p-8 text-white relative overflow-hidden group">
+                        class="bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl shadow-lg p-6 text-white relative overflow-hidden group flex flex-col justify-between">
                         <div
-                            class="absolute right-0 top-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -mr-16 -mt-16 transition-transform group-hover:scale-110">
+                            class="absolute right-0 top-0 w-48 h-48 bg-white/10 rounded-full blur-3xl -mr-12 -mt-12 transition-transform group-hover:scale-110">
                         </div>
                         <div class="relative z-10">
                             <div
-                                class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4">
-                                <i class="fas fa-star"></i> Most Used
+                                class="inline-flex items-center gap-1.5 bg-white/20 backdrop-blur-sm px-2.5 py-0.5 rounded-full text-xs font-bold uppercase tracking-wider mb-3">
+                                <i class="fas fa-star"></i> Student Portal
                             </div>
-                            <h3 class="text-2xl font-bold mb-2">Progress Dashboard</h3>
-                            <p class="text-blue-100 mb-6 max-w-sm">Track grades, attendance, and learning milestones in
-                                real-time.</p>
-                            <a href="#"
-                                class="inline-flex items-center gap-2 bg-white text-blue-600 px-5 py-2.5 rounded-lg font-bold hover:bg-blue-50 transition-colors">
-                                Launch Dashboard <i class="fas fa-arrow-right"></i>
-                            </a>
+                            <h3 class="text-xl font-bold mb-1">Competency Reports</h3>
+                            <p class="text-blue-100 text-xs mb-4">Track letter grades, daily quests, GPA, and print official report cards.</p>
                         </div>
+                        <a href="/pages/profile.php"
+                            class="inline-flex items-center gap-2 bg-white text-blue-600 px-4 py-2 rounded-lg text-sm font-bold hover:bg-blue-50 transition-colors w-fit relative z-10">
+                            View Report Card <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
                     </div>
 
-                    <!-- Vertical Tool -->
-                    <a href="#"
-                        class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-6 border border-gray-100 dark:border-gray-700 hover:border-purple-500 dark:hover:border-purple-500 transition-colors group flex flex-col justify-center items-center text-center">
-                        <div
-                            class="w-16 h-16 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center text-purple-600 mb-4 group-hover:scale-110 transition-transform">
-                            <i class="fas fa-calendar-alt text-2xl"></i>
+                    <!-- Tool 2: 36-Week Pacing Guide -->
+                    <a href="/pages/teachers.php#pacing"
+                        class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-6 border border-gray-100 dark:border-gray-700 hover:border-purple-500 dark:hover:border-purple-500 transition-all group flex flex-col justify-between">
+                        <div>
+                            <div
+                                class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-xl flex items-center justify-center text-purple-600 mb-3 group-hover:scale-110 transition-transform">
+                                <i class="fas fa-calendar-check text-xl"></i>
+                            </div>
+                            <h3 class="font-bold text-slate-800 dark:text-white text-lg">36-Week Pacing</h3>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Structured quarter-by-quarter curriculum scope and print syllabus.</p>
                         </div>
-                        <h3 class="font-bold text-slate-800 dark:text-white">Scheduler</h3>
-                        <p class="text-sm text-slate-500 dark:text-slate-400 mt-2">Plan the week</p>
+                        <span class="inline-flex items-center gap-1 text-xs font-bold text-purple-600 dark:text-purple-400 mt-4 group-hover:gap-2 transition-all">
+                            Open Pacing Guide <i class="fas fa-arrow-right"></i>
+                        </span>
+                    </a>
+
+                    <!-- Tool 3: Assignment Link Builder -->
+                    <a href="/pages/teachers.php#builder"
+                        class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-6 border border-gray-100 dark:border-gray-700 hover:border-teal-500 dark:hover:border-teal-500 transition-all group flex flex-col justify-between">
+                        <div>
+                            <div
+                                class="w-12 h-12 bg-teal-100 dark:bg-teal-900/30 rounded-xl flex items-center justify-center text-teal-600 mb-3 group-hover:scale-110 transition-transform">
+                                <i class="fas fa-magic text-xl"></i>
+                            </div>
+                            <h3 class="font-bold text-slate-800 dark:text-white text-lg">Assignment Builder</h3>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Generate targeted quiz URLs, 60s sprints, and Google Classroom links.</p>
+                        </div>
+                        <span class="inline-flex items-center gap-1 text-xs font-bold text-teal-600 dark:text-teal-400 mt-4 group-hover:gap-2 transition-all">
+                            Build Assignment <i class="fas fa-arrow-right"></i>
+                        </span>
+                    </a>
+
+                    <!-- Tool 4: Printable Worksheets & Keys -->
+                    <a href="/assessment/"
+                        class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-6 border border-gray-100 dark:border-gray-700 hover:border-amber-500 dark:hover:border-amber-500 transition-all group flex flex-col justify-between">
+                        <div>
+                            <div
+                                class="w-12 h-12 bg-amber-100 dark:bg-amber-900/30 rounded-xl flex items-center justify-center text-amber-600 mb-3 group-hover:scale-110 transition-transform">
+                                <i class="fas fa-print text-xl"></i>
+                            </div>
+                            <h3 class="font-bold text-slate-800 dark:text-white text-lg">Printable Worksheets</h3>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Download paper test sheets with educator answer keys and explanations.</p>
+                        </div>
+                        <span class="inline-flex items-center gap-1 text-xs font-bold text-amber-600 dark:text-amber-400 mt-4 group-hover:gap-2 transition-all">
+                            Generate Worksheets <i class="fas fa-arrow-right"></i>
+                        </span>
                     </a>
                 </div>
             </section>

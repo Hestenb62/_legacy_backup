@@ -408,4 +408,167 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     initStandardsMasteryMatrix();
+
+    // 5. Reading Tracker & Daily Streak Display
+    function initReadingTrackerDisplay() {
+        let data = {
+            totalMinutes: 0,
+            todayMinutes: 0,
+            currentStreakDays: 1,
+            booksRead: []
+        };
+
+        try {
+            const raw = localStorage.getItem('hesten_reading_tracker');
+            if (raw) data = { ...data, ...JSON.parse(raw) };
+        } catch (e) {}
+
+        const streakEl = document.getElementById('reading-stat-streak');
+        const todayEl = document.getElementById('reading-stat-today');
+        const totalEl = document.getElementById('reading-stat-total');
+        const booksEl = document.getElementById('reading-stat-books');
+
+        const streak = data.currentStreakDays || 0;
+        if (streakEl) streakEl.textContent = `${streak} Day${streak === 1 ? '' : 's'}`;
+        if (todayEl) todayEl.textContent = `${data.todayMinutes || 0} min`;
+        if (totalEl) {
+            const total = data.totalMinutes || 0;
+            if (total >= 60) {
+                totalEl.textContent = `${(total / 60).toFixed(1)} hrs`;
+            } else {
+                totalEl.textContent = `${total} min`;
+            }
+        }
+        if (booksEl) booksEl.textContent = (data.booksRead || []).length;
+    }
+
+    initReadingTrackerDisplay();
+    window.addEventListener('reading-tracker-updated', initReadingTrackerDisplay);
+
+    // 6. Official Student Report Card & Transcript Modal Logic
+    function openStudentReportCardModal() {
+        const modal = document.getElementById('student-report-card-modal');
+        if (!modal) return;
+
+        // 1. Populate Student Name from profile
+        const nameEl = document.getElementById('report-student-name');
+        if (nameEl) {
+            nameEl.textContent = (currentProfile && currentProfile.firstName) ? currentProfile.firstName : 'Student Scholar';
+        }
+
+        // 2. Issue Date & Document ID
+        const dateEl = document.getElementById('report-issue-date');
+        const docIdEl = document.getElementById('report-doc-id');
+        const now = new Date();
+        if (dateEl) {
+            dateEl.textContent = now.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });
+        }
+        if (docIdEl) {
+            const seed = Math.abs(now.getTime() % 900000) + 100000;
+            docIdEl.textContent = `HL-TR-${seed}`;
+        }
+
+        // 3. Standards Mastery data
+        let mastery = {};
+        try {
+            const raw = localStorage.getItem('hesten_standards_mastery');
+            if (raw) mastery = JSON.parse(raw);
+        } catch (e) {}
+
+        const items = Object.values(mastery);
+        const masteredCount = items.filter(item => (item.bestScore || 0) >= 80).length;
+        const totalTested = items.length;
+        const avgAccuracy = totalTested > 0 ? Math.round(items.reduce((acc, cur) => acc + (cur.bestScore || 0), 0) / totalTested) : 0;
+
+        const masteredMetric = document.getElementById('report-metric-mastered');
+        const accuracyMetric = document.getElementById('report-metric-accuracy');
+        if (masteredMetric) masteredMetric.textContent = `${masteredCount} / ${totalTested || 0}`;
+        if (accuracyMetric) accuracyMetric.textContent = `${avgAccuracy}%`;
+
+        // 4. Reading Tracker data
+        let readingData = { totalMinutes: 0, currentStreakDays: 1 };
+        try {
+            const rawRead = localStorage.getItem('hesten_reading_tracker');
+            if (rawRead) readingData = { ...readingData, ...JSON.parse(rawRead) };
+        } catch (e) {}
+
+        const readingMetric = document.getElementById('report-metric-reading');
+        const streakMetric = document.getElementById('report-metric-streak');
+        if (readingMetric) readingMetric.textContent = `${readingData.totalMinutes || 0} min`;
+        if (streakMetric) streakMetric.textContent = `${readingData.currentStreakDays || 0} Days`;
+
+        // 5. Overall Status
+        const statusBadge = document.getElementById('report-overall-status');
+        if (statusBadge) {
+            if (avgAccuracy >= 80 && masteredCount >= 3) {
+                statusBadge.textContent = 'Distinction & Honors';
+                statusBadge.style.background = '#dcfce7';
+                statusBadge.style.color = '#15803d';
+            } else if (avgAccuracy >= 60 || totalTested > 0) {
+                statusBadge.textContent = 'Good Standing';
+                statusBadge.style.background = '#e0f2fe';
+                statusBadge.style.color = '#0369a1';
+            } else {
+                statusBadge.textContent = 'Enrolled / Introductory';
+                statusBadge.style.background = '#f1f5f9';
+                statusBadge.style.color = '#475569';
+            }
+        }
+
+        // 6. Table Rows
+        const tbody = document.getElementById('report-table-body');
+        if (tbody) {
+            if (items.length === 0) {
+                tbody.innerHTML = `
+                    <tr>
+                        <td colspan="5" style="text-align: center; padding: 2rem; color: #64748b; font-style: italic;">
+                            No official standards assessments recorded yet. Diagnostic evaluations will be automatically itemized here upon completion.
+                        </td>
+                    </tr>
+                `;
+            } else {
+                tbody.innerHTML = items.map(item => {
+                    const score = item.bestScore || item.percentage || 0;
+                    const isMastered = score >= 80;
+                    const isProficient = score >= 60 && score < 80;
+                    const statusText = isMastered ? 'Mastered' : (isProficient ? 'Proficient' : 'Developing');
+                    const badgeBg = isMastered ? '#dcfce7' : (isProficient ? '#fef3c7' : '#ffe4e6');
+                    const badgeColor = isMastered ? '#15803d' : (isProficient ? '#b45309' : '#b91c1c');
+                    const dateStr = item.lastTested ? new Date(item.lastTested).toLocaleDateString() : 'Active';
+
+                    return `
+                        <tr>
+                            <td style="font-family: monospace; font-weight: 800; color: #0f172a;">${item.standard}</td>
+                            <td style="font-weight: 600;">${item.subject || 'Core General'}</td>
+                            <td style="font-weight: 800;">${score}%</td>
+                            <td>
+                                <span style="display: inline-block; padding: 0.15rem 0.5rem; border-radius: 9999px; background: ${badgeBg}; color: ${badgeColor}; font-weight: 800; font-size: 0.75rem;">
+                                    ${statusText}
+                                </span>
+                            </td>
+                            <td style="color: #64748b; font-size: 0.8125rem;">${dateStr}</td>
+                        </tr>
+                    `;
+                }).join('');
+            }
+        }
+
+        modal.classList.remove('hidden');
+        modal.style.display = 'flex';
+        document.body.classList.add('modal-open');
+    }
+
+    function closeStudentReportCardModal() {
+        const modal = document.getElementById('student-report-card-modal');
+        if (modal) {
+            modal.classList.add('hidden');
+            modal.style.display = 'none';
+            document.body.classList.remove('modal-open');
+        }
+    }
+
+    window.openStudentReportCardModal = openStudentReportCardModal;
+    window.closeStudentReportCardModal = closeStudentReportCardModal;
 });
+
+

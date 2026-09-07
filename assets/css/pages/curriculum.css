@@ -1277,6 +1277,172 @@
     box-shadow: var(--shadow-md);
   }
 
+  /* Standards Mastery Progress Overlay & Toggle */
+  .curr-toolbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .curr-progress-toggle-wrap {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    cursor: pointer;
+    background: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    padding: 0.35rem 0.85rem;
+    border-radius: var(--radius-full);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+    transition: all 0.2s ease;
+    user-select: none;
+  }
+
+  .curr-progress-toggle-wrap:hover {
+    border-color: var(--color-primary);
+    background: color-mix(in srgb, var(--color-primary) 6%, var(--color-bg-surface));
+  }
+
+  .curr-progress-toggle-wrap input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+  }
+
+  .curr-progress-slider {
+    position: relative;
+    width: 2rem;
+    height: 1.15rem;
+    background: var(--color-border);
+    border-radius: var(--radius-full);
+    transition: all 0.25s ease;
+    flex-shrink: 0;
+  }
+
+  .curr-progress-slider::before {
+    content: '';
+    position: absolute;
+    width: 0.85rem;
+    height: 0.85rem;
+    left: 0.15rem;
+    top: 0.15rem;
+    background: #ffffff;
+    border-radius: 50%;
+    transition: all 0.25s ease;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .curr-progress-toggle-wrap input:checked + .curr-progress-slider {
+    background: var(--color-primary);
+  }
+
+  .curr-progress-toggle-wrap input:checked + .curr-progress-slider::before {
+    transform: translateX(0.85rem);
+  }
+
+  .curr-progress-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    white-space: nowrap;
+  }
+
+  .curr-progress-label i {
+    color: var(--color-accent);
+  }
+
+  /* Progress Badges on Standards */
+  .std-code-wrap {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+    margin-bottom: 0.25rem;
+    flex-wrap: wrap;
+  }
+
+  .std-progress-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.15rem 0.5rem;
+    border-radius: var(--radius-full);
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    animation: rise-in 0.3s ease;
+  }
+
+  .std-progress-badge.mastered {
+    background: #d1fae5;
+    color: #065f46;
+    border: 1px solid #10b981;
+  }
+
+  .std-progress-badge.proficient {
+    background: #fef3c7;
+    color: #92400e;
+    border: 1px solid #f59e0b;
+  }
+
+  .std-progress-badge.developing {
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #ef4444;
+  }
+
+  .std-progress-badge.untested {
+    background: #f1f5f9;
+    color: #64748b;
+    border: 1px dashed #cbd5e1;
+  }
+
+  [data-theme="dark"] .std-progress-badge.mastered {
+    background: #064e3b;
+    color: #6ee7b7;
+    border-color: #059669;
+  }
+
+  [data-theme="dark"] .std-progress-badge.proficient {
+    background: #451a03;
+    color: #fcd34d;
+    border-color: #d97706;
+  }
+
+  [data-theme="dark"] .std-progress-badge.developing {
+    background: #450a0a;
+    color: #fca5a5;
+    border-color: #dc2626;
+  }
+
+  [data-theme="dark"] .std-progress-badge.untested {
+    background: #1e293b;
+    color: #94a3b8;
+    border-color: #475569;
+  }
+
+  /* Card Accents when Progress Overlay is Active */
+  .show-mastery-overlay .curr-standard-item.std-item-mastered {
+    border-left: 4px solid #10b981 !important;
+    background: color-mix(in srgb, #10b981 3%, var(--color-bg-surface));
+  }
+
+  .show-mastery-overlay .curr-standard-item.std-item-proficient {
+    border-left: 4px solid #f59e0b !important;
+    background: color-mix(in srgb, #f59e0b 3%, var(--color-bg-surface));
+  }
+
+  .show-mastery-overlay .curr-standard-item.std-item-developing {
+    border-left: 4px solid #f97316 !important;
+    background: color-mix(in srgb, #f97316 3%, var(--color-bg-surface));
+  }
+
   /* Print Optimization */
   @media print {
     .curr-nav-container,

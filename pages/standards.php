@@ -176,9 +176,16 @@
                                         <i class="fas fa-times"></i>
                                     </button>
                                 </div>
-                                <button type="button" id="btn-toggle-accordions" class="curr-btn-accordion-toggle" onclick="toggleAllAccordions()" title="Expand or collapse all domain sections">
-                                    <i class="fas fa-compress-alt"></i> <span id="toggle-accordions-text">Collapse All</span>
-                                </button>
+                                <div class="curr-toolbar-actions">
+                                    <label class="curr-progress-toggle-wrap" title="Overlay your tested mastery scores and checkmarks onto standards">
+                                        <input type="checkbox" id="toggle-standards-progress" onchange="toggleStandardsProgressOverlay(this.checked)">
+                                        <span class="curr-progress-slider"></span>
+                                        <span class="curr-progress-label"><i class="fas fa-award"></i> Show My Progress</span>
+                                    </label>
+                                    <button type="button" id="btn-toggle-accordions" class="curr-btn-accordion-toggle" onclick="toggleAllAccordions()" title="Expand or collapse all domain sections">
+                                        <i class="fas fa-compress-alt"></i> <span id="toggle-accordions-text">Collapse All</span>
+                                    </button>
+                                </div>
                             </div>
                             <div class="curr-domain-filters" id="domain-filters-bar">
                                 <!-- Populated dynamically via JS -->
@@ -498,9 +505,10 @@
                     html = html.replace(/<strong>([A-Za-z0-9\.\-_ ]+?):?<\/strong>/g, (match, code) => {
                         totalStandardCodesCount++;
                         const cleanCode = code.trim();
-                        return `<span class="std-code-wrap">` +
+                        return `<span class="std-code-wrap" data-std-code="${cleanCode}">` +
                             `<button type="button" class="std-code-badge" data-code="${cleanCode}" title="Click to copy standard code"><i class="far fa-copy"></i> ${cleanCode}</button>` +
                             `<button type="button" class="std-info-btn" data-code="${cleanCode}" aria-label="View Standard Details for ${cleanCode}" title="View detailed standard mastery dossier"><i class="fas fa-info-circle"></i></button>` +
+                            `<span class="std-progress-badge" data-code="${cleanCode}" style="display: none;"></span>` +
                         `</span>`;
                     });
                     descEl.innerHTML = html;
@@ -835,6 +843,95 @@
                 counter.style.display = 'none';
             }
         }
+
+        // Apply mastery progress overlay onto visible items
+        applyProgressOverlay();
+    }
+
+    // ==========================================
+    // Standards Progress Mastery Overlay
+    // ==========================================
+    let showProgressOverlay = (localStorage.getItem('hesten_show_standards_progress') === 'true');
+
+    function toggleStandardsProgressOverlay(enabled) {
+        showProgressOverlay = enabled;
+        localStorage.setItem('hesten_show_standards_progress', enabled ? 'true' : 'false');
+        const toggleEl = document.getElementById('toggle-standards-progress');
+        if (toggleEl) toggleEl.checked = enabled;
+        applyProgressOverlay();
+    }
+
+    function applyProgressOverlay() {
+        const stdContainer = document.getElementById('view-standards');
+        if (!stdContainer) return;
+
+        if (!showProgressOverlay) {
+            stdContainer.classList.remove('show-mastery-overlay');
+            document.querySelectorAll('.std-progress-badge').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.curr-standard-item').forEach(el => {
+                el.classList.remove('std-item-mastered', 'std-item-proficient', 'std-item-developing');
+            });
+            return;
+        }
+
+        stdContainer.classList.add('show-mastery-overlay');
+        let masteryData = {};
+        try {
+            const raw = localStorage.getItem('hesten_standards_mastery');
+            if (raw) masteryData = JSON.parse(raw);
+        } catch(e){}
+
+        document.querySelectorAll('.std-code-wrap').forEach(wrap => {
+            const code = wrap.dataset.stdCode;
+            if (!code) return;
+
+            let item = masteryData[code];
+            if (!item) {
+                // Check if any key in masteryData matches this code or vice versa
+                const codeClean = code.toLowerCase().replace(/[^a-z0-9]/g, '');
+                for (const k in masteryData) {
+                    const kClean = k.toLowerCase().replace(/[^a-z0-9]/g, '');
+                    if (kClean === codeClean || codeClean.includes(kClean) || kClean.includes(codeClean)) {
+                        item = masteryData[k];
+                        break;
+                    }
+                }
+            }
+
+            const badge = wrap.querySelector('.std-progress-badge');
+            const parentCard = wrap.closest('.curr-standard-item');
+
+            if (badge) {
+                if (item) {
+                    const score = item.bestScore !== undefined ? item.bestScore : (item.score || 0);
+                    let statusClass = 'developing';
+                    let statusIcon = 'fa-redo';
+                    let statusLabel = `${score}%`;
+
+                    if (item.status === 'mastered' || score >= 80) {
+                        statusClass = 'mastered';
+                        statusIcon = 'fa-check-circle';
+                        if (parentCard) parentCard.classList.add('std-item-mastered');
+                    } else if (item.status === 'proficient' || score >= 60) {
+                        statusClass = 'proficient';
+                        statusIcon = 'fa-chart-line';
+                        if (parentCard) parentCard.classList.add('std-item-proficient');
+                    } else {
+                        if (parentCard) parentCard.classList.add('std-item-developing');
+                    }
+
+                    badge.className = `std-progress-badge ${statusClass}`;
+                    badge.innerHTML = `<i class="fas ${statusIcon}"></i> ${statusLabel}`;
+                    badge.title = `Your Highest Mastery: ${score}% (${item.totalAttempts || 1} attempt${(item.totalAttempts || 1) === 1 ? '' : 's'})`;
+                    badge.style.display = 'inline-flex';
+                } else {
+                    badge.className = 'std-progress-badge untested';
+                    badge.innerHTML = `<i class="far fa-circle"></i> Untested`;
+                    badge.title = 'Standard has not been tested yet — click (i) to test';
+                    badge.style.display = 'inline-flex';
+                }
+            }
+        });
     }
 
     // Cross-Grade Jump Action
@@ -1243,6 +1340,10 @@
         switchSubject(currentSubject, false);
         switchGrade(currentGrade, null, false);
         syncCurriculumSelect();
+        const toggleEl = document.getElementById('toggle-standards-progress');
+        if (toggleEl) {
+            toggleEl.checked = showProgressOverlay;
+        }
         updateView();
 
         // Browser back/forward navigation support

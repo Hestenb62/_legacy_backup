@@ -84,9 +84,14 @@ include ABSPATH . '../src/header.php';
     </div>
 
     <div class="library-workspace">
-        <header class="reader-hero-header animate-reveal">
-            <h1 class="reader-main-title">My Profile</h1>
-            <p class="reader-main-author">Manage your identity and track your learning progress.</p>
+        <header class="reader-hero-header animate-reveal" style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1.5rem;">
+            <div>
+                <h1 class="reader-main-title">My Profile</h1>
+                <p class="reader-main-author">Manage your identity and track your learning progress.</p>
+            </div>
+            <button type="button" class="profile-btn-primary" onclick="window.openStudentReportCardModal && window.openStudentReportCardModal()" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.65rem 1.5rem; border-radius: 9999px; text-decoration: none; width: auto;">
+                <i class="fas fa-print"></i> Official Report Card
+            </button>
         </header>
 
         <!-- Announcement Banner -->
@@ -209,6 +214,43 @@ include ABSPATH . '../src/header.php';
             </div>
         </div>
 
+        <!-- Literary Reading Tracker & Daily Streak Section -->
+        <section class="profile-card animate-reveal" style="margin-top: 2rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
+                <div>
+                    <h2 class="profile-card-title" style="margin-bottom: 0.25rem;">
+                        <i class="fas fa-book-reader" style="color: #f97316;"></i> Literary Reading Streak & Log
+                    </h2>
+                    <p style="font-size: 0.875rem; color: var(--color-text-muted); margin: 0;">
+                        Track your active digital library reading sessions, daily reading streaks, and literature explored.
+                    </p>
+                </div>
+                <a href="/library/" class="profile-btn-secondary" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; width: auto; padding: 0.5rem 1.25rem; border-radius: 9999px; font-size: 0.8rem;">
+                    <i class="fas fa-book-open"></i> Open Library
+                </a>
+            </div>
+
+            <!-- Reading Metrics Row -->
+            <div class="standards-summary-row">
+                <div class="std-summary-box">
+                    <div class="std-summary-num" id="reading-stat-streak" style="color: #f97316;">0 Days</div>
+                    <div class="std-summary-label">Current Reading Streak 🔥</div>
+                </div>
+                <div class="std-summary-box">
+                    <div class="std-summary-num" id="reading-stat-today" style="color: var(--color-primary, #4f46e5);">0 min</div>
+                    <div class="std-summary-label">Read Today ⏱️</div>
+                </div>
+                <div class="std-summary-box">
+                    <div class="std-summary-num" id="reading-stat-total" style="color: var(--color-success, #10b981);">0 min</div>
+                    <div class="std-summary-label">Total Time in Library 📚</div>
+                </div>
+                <div class="std-summary-box">
+                    <div class="std-summary-num" id="reading-stat-books">0</div>
+                    <div class="std-summary-label">Books Explored 📖</div>
+                </div>
+            </div>
+        </section>
+
         <!-- Standard Mastery Matrix Section -->
         <section class="profile-card animate-reveal" style="margin-top: 2rem;">
             <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
@@ -270,6 +312,104 @@ include ABSPATH . '../src/header.php';
                 </div>
             </div>
         </section>
+
+        <!-- Official Student Report Card & Transcript Modal -->
+        <div id="student-report-card-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="report-card-modal-title">
+            <div class="modal-card report-card-modal-card">
+                <div class="report-modal-toolbar no-print">
+                    <div>
+                        <h3 id="report-card-modal-title" style="margin:0; font-size:1.15rem; font-weight:800; color: var(--color-text-main);">Academic Competency Transcript</h3>
+                        <p style="margin:0; font-size:0.8rem; color:var(--color-text-muted);">Printable portfolio document for homeschool & certified evaluation</p>
+                    </div>
+                    <div style="display: flex; gap: 0.5rem;">
+                        <button type="button" class="profile-btn-primary" onclick="window.print()" style="padding: 0.5rem 1.25rem; font-size: 0.85rem; border-radius: 9999px; width: auto;">
+                            <i class="fas fa-print"></i> Print Transcript
+                        </button>
+                        <button type="button" class="modal-card-close-btn" onclick="closeStudentReportCardModal()" aria-label="Close report card">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Printable Sheet Frame -->
+                <div class="report-card-sheet" id="printable-report-card">
+                    <div class="report-sheet-header">
+                        <div class="report-crest-wrap">
+                            <i class="fas fa-graduation-cap report-crest-icon"></i>
+                            <div>
+                                <h1 class="report-institution-name">HESTEN'S LEARNING ACADEMY</h1>
+                                <p class="report-doc-title">Official Competency Transcript & Academic Progress Report</p>
+                            </div>
+                        </div>
+                        <div class="report-meta-box">
+                            <div><strong>Date Issued:</strong> <span id="report-issue-date">--</span></div>
+                            <div><strong>Academic Year:</strong> 2025–2026</div>
+                            <div><strong>Document ID:</strong> <span id="report-doc-id" style="font-family: monospace;">--</span></div>
+                        </div>
+                    </div>
+
+                    <div class="report-student-info-grid">
+                        <div><strong>Student Name:</strong> <span id="report-student-name">Student Scholar</span></div>
+                        <div><strong>Curriculum Program:</strong> EngageNY / Common Core / TEKS</div>
+                        <div><strong>Proficiency Status:</strong> <span id="report-overall-status" class="report-status-badge">Good Standing</span></div>
+                        <div><strong>Reading Level:</strong> High School (Grades 9–12)</div>
+                    </div>
+
+                    <!-- Executive Metrics -->
+                    <div class="report-metrics-row">
+                        <div class="report-metric-card">
+                            <div class="report-metric-val" id="report-metric-mastered">0</div>
+                            <div class="report-metric-lbl">Standards Mastered (&ge;80%)</div>
+                        </div>
+                        <div class="report-metric-card">
+                            <div class="report-metric-val" id="report-metric-accuracy">0%</div>
+                            <div class="report-metric-lbl">Diagnostic Accuracy Average</div>
+                        </div>
+                        <div class="report-metric-card">
+                            <div class="report-metric-val" id="report-metric-reading">0 min</div>
+                            <div class="report-metric-lbl">Digital Library Reading Log</div>
+                        </div>
+                        <div class="report-metric-card">
+                            <div class="report-metric-val" id="report-metric-streak">0 Days</div>
+                            <div class="report-metric-lbl">Consecutive Study Streak</div>
+                        </div>
+                    </div>
+
+                    <!-- Competency Table -->
+                    <h3 class="report-section-heading">Academic Standards Evaluation Record</h3>
+                    <table class="report-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 24%;">Standard Code</th>
+                                <th style="width: 22%;">Core Subject</th>
+                                <th style="width: 18%;">Score / Accuracy</th>
+                                <th style="width: 18%;">Mastery Level</th>
+                                <th style="width: 18%;">Status Date</th>
+                            </tr>
+                        </thead>
+                        <tbody id="report-table-body">
+                            <!-- Populated dynamically by JS -->
+                        </tbody>
+                    </table>
+
+                    <!-- Endorsement Signatures -->
+                    <div class="report-signatures-wrap">
+                        <div class="report-sig-box">
+                            <div class="report-sig-line"></div>
+                            <div class="report-sig-title">Certified Educator / Proctor Signature</div>
+                        </div>
+                        <div class="report-sig-box">
+                            <div class="report-sig-line"></div>
+                            <div class="report-sig-title">Parent / Guardian Verification</div>
+                        </div>
+                        <div class="report-sig-box">
+                            <div class="report-sig-line"></div>
+                            <div class="report-sig-title">Evaluation Date</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </main>
 

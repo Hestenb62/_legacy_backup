@@ -189,6 +189,45 @@ include '../src/header.php';
                 </div>
             </div>
         </div>
+
+        <!-- Additional Testing Modes (Fluency Sprint & Printable Worksheet) -->
+        <div style="margin-top: 2rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
+            <!-- 60-Second Fluency Sprint Mode -->
+            <div class="assessment-card" style="padding: 1.5rem; border-top: 4px solid var(--color-accent); display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <div style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.2rem 0.65rem; border-radius: var(--radius-full); background: color-mix(in srgb, var(--color-accent) 15%, transparent); color: var(--color-accent); font-size: 0.75rem; font-weight: 800; text-transform: uppercase; margin-bottom: 0.5rem;">
+                        <i class="fas fa-bolt"></i> Speed Challenge
+                    </div>
+                    <h4 style="font-size: 1.15rem; font-weight: 800; margin: 0 0 0.5rem 0; color: var(--color-text-main);">
+                        60-Second Fluency Sprint
+                    </h4>
+                    <p style="font-size: 0.85rem; color: var(--color-text-muted); line-height: 1.5; margin: 0 0 1rem 0;">
+                        Rapid-fire fluency sprint testing mental arithmetic and vocabulary under a 60-second timer. Auto-advances immediately on answer selection!
+                    </p>
+                </div>
+                <button type="button" onclick="startFluencySprintMode()" class="hero-nav-btn hero-nav-btn-primary" style="width: 100%; justify-content: center; padding: 0.65rem 1rem; border-radius: var(--radius-md); font-size: 0.875rem; border: none; cursor: pointer;">
+                    <i class="fas fa-stopwatch" style="margin-right: 0.5rem;"></i> Launch 60s Sprint
+                </button>
+            </div>
+
+            <!-- Printable Worksheet & Teacher Key -->
+            <div class="assessment-card" style="padding: 1.5rem; border-top: 4px solid var(--color-primary); display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <div style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.2rem 0.65rem; border-radius: var(--radius-full); background: color-mix(in srgb, var(--color-primary) 15%, transparent); color: var(--color-primary); font-size: 0.75rem; font-weight: 800; text-transform: uppercase; margin-bottom: 0.5rem;">
+                        <i class="fas fa-file-alt"></i> Offline / Classroom
+                    </div>
+                    <h4 style="font-size: 1.15rem; font-weight: 800; margin: 0 0 0.5rem 0; color: var(--color-text-main);">
+                        Printable Worksheet & Answer Key
+                    </h4>
+                    <p style="font-size: 0.85rem; color: var(--color-text-muted); line-height: 1.5; margin: 0 0 1rem 0;">
+                        Generate a printable PDF test worksheet with student name headers, multiple-choice bubbles, standard codes, and an educator answer key.
+                    </p>
+                </div>
+                <button type="button" onclick="openPrintableWorksheetModal()" class="hero-nav-btn hero-nav-btn-outline" style="width: 100%; justify-content: center; padding: 0.65rem 1rem; border-radius: var(--radius-md); font-size: 0.875rem; cursor: pointer;">
+                    <i class="fas fa-print" style="margin-right: 0.5rem;"></i> Generate Printable Worksheet
+                </button>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -365,10 +404,23 @@ include '../src/header.php';
             
             <!-- Review Mode Container (Hidden initially) -->
             <div id="review-container" class="assessment-card" style="display: none; margin-top: 2rem;">
-                <h3 class="assessment-card-title">
-                    <i class="fas fa-clipboard-list" style="color: var(--color-primary);"></i> Assessment Review
-                </h3>
-                <div id="review-content" style="display: flex; flex-direction: column; gap: 1rem; max-height: 500px; overflow-y: auto; padding-right: 0.5rem;">
+                <div class="review-header-row">
+                    <h3 class="assessment-card-title" style="margin: 0;">
+                        <i class="fas fa-clipboard-list" style="color: var(--color-primary);"></i> Question-by-Question Review & Explanations
+                    </h3>
+                    <div class="review-filter-pills" id="review-filter-pills" role="tablist">
+                        <button type="button" class="review-pill-btn active" data-filter="all" onclick="filterReviewItems('all')">
+                            All Questions <span class="pill-count" id="review-count-all">0</span>
+                        </button>
+                        <button type="button" class="review-pill-btn text-success" data-filter="correct" onclick="filterReviewItems('correct')">
+                            <i class="fas fa-check-circle"></i> Correct <span class="pill-count" id="review-count-correct">0</span>
+                        </button>
+                        <button type="button" class="review-pill-btn text-error" data-filter="incorrect" onclick="filterReviewItems('incorrect')">
+                            <i class="fas fa-times-circle"></i> Missed <span class="pill-count" id="review-count-incorrect">0</span>
+                        </button>
+                    </div>
+                </div>
+                <div id="review-content" class="review-content-list">
                     <!-- Review items injected by JS -->
                 </div>
             </div>
@@ -394,6 +446,32 @@ include '../src/header.php';
 
         <div id="mastery-report-printable-area" class="mastery-printable-document">
             <!-- Dynamically populated report content -->
+        </div>
+    </div>
+</div>
+
+<!-- Printable Quiz Worksheet & Teacher Answer Key Modal -->
+<div id="quiz-worksheet-modal" class="mastery-report-modal" role="dialog" aria-modal="true" aria-labelledby="worksheet-modal-title" style="display: none;">
+    <div class="mastery-report-backdrop" onclick="closePrintableWorksheetModal()"></div>
+    <div class="mastery-report-dialog card-surface">
+        <div class="mastery-report-toolbar no-print">
+            <div class="toolbar-title" id="worksheet-modal-title">
+                <i class="fas fa-print" style="color: var(--color-primary);"></i> Printable Quiz Worksheet & Answer Key
+            </div>
+            <div class="toolbar-actions" style="display: flex; align-items: center; gap: 0.75rem;">
+                <label style="display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.8125rem; font-weight: 700; cursor: pointer; user-select: none; color: var(--color-text-main);">
+                    <input type="checkbox" id="worksheet-include-key" checked onchange="toggleWorksheetAnswerKey(this.checked)">
+                    <span>Include Educator Answer Key</span>
+                </label>
+                <button type="button" class="hero-nav-btn hero-nav-btn-primary" onclick="window.print()" style="padding: 0.5rem 1.25rem; font-size: 0.875rem;">
+                    <i class="fas fa-print"></i> Print Worksheet
+                </button>
+                <button type="button" class="report-modal-close" onclick="closePrintableWorksheetModal()" aria-label="Close Worksheet">&times;</button>
+            </div>
+        </div>
+
+        <div id="quiz-worksheet-printable-area" class="mastery-printable-document worksheet-printable-sheet">
+            <!-- Dynamically populated worksheet content -->
         </div>
     </div>
 </div>

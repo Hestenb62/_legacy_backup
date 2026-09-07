@@ -78,7 +78,7 @@ function renderSubjectModules(array $modulesList, string $subjectId, string $sub
                     <div class="skills-grid">
                         <?php foreach ($topic['skills'] as $skill): ?>
                             <!-- Skill <?php echo $skill['code']; ?> -->
-                            <div class="skill-card" id="skill-<?php echo str_replace('.', '-', strtolower($skill['id'])); ?>">
+                            <div class="skill-card" id="skill-<?php echo str_replace('.', '-', strtolower($skill['id'])); ?>" data-skill-id="<?php echo htmlspecialchars($skill['id']); ?>" data-skill-code="<?php echo htmlspecialchars($skill['code']); ?>">
                                 <div class="skill-info">
                                     <span class="skill-code"><?php echo $skill['code']; ?></span>
                                     <span class="skill-name">
@@ -88,12 +88,18 @@ function renderSubjectModules(array $modulesList, string $subjectId, string $sub
                                             <?php echo htmlspecialchars($skill['name']); ?>
                                         <?php endif; ?>
                                     </span>
+                                    <span class="skill-mastery-slot"></span>
                                 </div>
-                                <button onclick="toggleLesson('<?php echo $skill['id']; ?>', this)"
-                                    class="check-btn lesson-check-btn"
-                                    aria-label="Mark as complete">
-                                    <div class="check-icon"><i class="fas fa-check"></i></div>
-                                </button>
+                                <div class="skill-actions">
+                                    <a href="/assessment/#standard=<?php echo urlencode($skill['code']); ?>" class="skill-quick-test-btn" title="Practice or test this standard" aria-label="Test standard <?php echo htmlspecialchars($skill['code']); ?>">
+                                        <i class="fas fa-bullseye"></i>
+                                    </a>
+                                    <button onclick="toggleLesson('<?php echo $skill['id']; ?>', this)"
+                                        class="check-btn lesson-check-btn"
+                                        aria-label="Mark as complete">
+                                        <div class="check-icon"><i class="fas fa-check"></i></div>
+                                    </button>
+                                </div>
                             </div>
                         <?php endforeach; ?>
                     </div>
@@ -158,6 +164,9 @@ function renderSubjectModules(array $modulesList, string $subjectId, string $sub
                 </h1>
                 <span id="level-curriculum-badge" class="hero-badge">
                     ENGAGENY / CC
+                </span>
+                <span id="level-mastery-badge" class="hero-mastery-pill">
+                    <i class="fas fa-award"></i> 0 Mastered
                 </span>
             </div>
             <p id="header-description" class="hero-description">
@@ -507,17 +516,69 @@ function renderSubjectModules(array $modulesList, string $subjectId, string $sub
     function updateAllUI() {
         updateRecentActivity();
         updateSkillOfTheDay();
+
+        let standardsMastery = {};
+        try {
+            const raw = localStorage.getItem('hesten_standards_mastery');
+            if (raw) standardsMastery = JSON.parse(raw);
+        } catch (e) {}
+
         document.querySelectorAll('.skill-card').forEach(card => {
-            const btn = card.querySelector('.lesson-check-btn');
-            const onclickText = btn.getAttribute('onclick');
-            const id = onclickText.match(/'([^']+)'/)[1];
+            const id = card.getAttribute('data-skill-id');
+            const code = card.getAttribute('data-skill-code') || '';
+            const slot = card.querySelector('.skill-mastery-slot');
             const isDone = completedLessons.includes(id);
+
             if (isDone) {
                 card.classList.add('completed');
             } else {
                 card.classList.remove('completed');
             }
+
+            // Check if standard or code is recorded in mastery
+            let masteryRec = null;
+            const cleanCode = code.replace(/[^a-zA-Z0-9]/g, '').toUpperCase();
+            for (const [key, rec] of Object.entries(standardsMastery)) {
+                const cleanKey = key.replace(/[^a-zA-Z0-9]/g, '').toUpperCase();
+                if (cleanKey === cleanCode || (cleanCode && cleanKey.includes(cleanCode)) || (cleanKey && cleanCode.includes(cleanKey))) {
+                    masteryRec = rec;
+                    break;
+                }
+            }
+
+            if (slot) {
+                if (masteryRec) {
+                    const pct = masteryRec.percentage ?? (masteryRec.bestScore ?? (masteryRec.score ?? 0));
+                    if (pct >= 80) {
+                        slot.innerHTML = `<span class="skill-mastery-tag mastery-tag-mastered" title="Mastered on assessment (${pct}%)"><i class="fas fa-star"></i> Mastered ${pct}%</span>`;
+                    } else if (pct >= 60) {
+                        slot.innerHTML = `<span class="skill-mastery-tag mastery-tag-proficient" title="Proficient on assessment (${pct}%)"><i class="fas fa-chart-line"></i> ${pct}%</span>`;
+                    } else {
+                        slot.innerHTML = `<span class="skill-mastery-tag mastery-tag-developing" title="Needs practice (${pct}%)"><i class="fas fa-redo"></i> ${pct}%</span>`;
+                    }
+                } else if (isDone) {
+                    slot.innerHTML = `<span class="skill-mastery-tag mastery-tag-completed" title="Lesson completed"><i class="fas fa-check"></i> Completed</span>`;
+                } else {
+                    slot.innerHTML = '';
+                }
+            }
         });
+
+        // Update overall level mastery pill
+        const levelMasteryBadge = document.getElementById('level-mastery-badge');
+        if (levelMasteryBadge) {
+            const totalSkills = flatSkills.length;
+            const completedCount = flatSkills.filter(s => completedLessons.includes(s.id)).length;
+            const masteredCount = flatSkills.filter(s => {
+                const cleanCode = (s.code || '').replace(/[^a-zA-Z0-9]/g, '').toUpperCase();
+                return Object.entries(standardsMastery).some(([k, r]) => {
+                    const cleanKey = k.replace(/[^a-zA-Z0-9]/g, '').toUpperCase();
+                    return (cleanKey === cleanCode || (cleanCode && cleanKey.includes(cleanCode))) && ((r.percentage || r.bestScore || 0) >= 80);
+                });
+            }).length;
+            levelMasteryBadge.innerHTML = `<i class="fas fa-award"></i> ${masteredCount} Mastered · ${completedCount}/${totalSkills} Lessons`;
+        }
+
         updateMetrics();
     }
 

@@ -132,10 +132,27 @@ document.addEventListener("DOMContentLoaded", () => {
     return "Math";
   }
 
-  function getHashStandard() {
+  function getHashParam(param) {
     const hash = window.location.hash || "";
-    const match = hash.match(/standard=([^&]+)/i);
+    const match = hash.match(new RegExp(param + "=([^&]+)", "i"));
     return match ? decodeURIComponent(match[1]).trim() : null;
+  }
+
+  function getHashStandard() {
+    return urlParams.get("standard") || getHashParam("standard");
+  }
+
+  const initialCountParam = urlParams.get("count") || getHashParam("count");
+  if (initialCountParam) {
+    const parsedCount = parseInt(initialCountParam, 10);
+    if (!isNaN(parsedCount) && parsedCount > 0) {
+      window.targetedQuestionCount = parsedCount;
+    }
+  }
+
+  const initialModeParam = (urlParams.get("mode") || getHashParam("mode") || "").toLowerCase();
+  if (initialModeParam === "sprint") {
+    window.isSprintMode = true;
   }
 
   const initialHashStandard = getHashStandard();
@@ -421,9 +438,14 @@ document.addEventListener("DOMContentLoaded", () => {
       }
   };
 
-  // Auto-launch targeted test if hash is present on initialization
+  // Auto-launch targeted test or sprint mode on initialization
   if (initialHashStandard) {
       launchStandardTargetedTest(initialHashStandard);
+      if (window.isSprintMode && typeof window.startFluencySprintMode === "function") {
+          window.startFluencySprintMode();
+      }
+  } else if (window.isSprintMode && typeof window.startFluencySprintMode === "function") {
+      window.startFluencySprintMode();
   }
 
   // Dynamic hash listener for standard switches
@@ -559,13 +581,16 @@ window.skipQuestion = function () {
     if (q) {
       window.quizResultsData.push({
         question: q.question,
+        options: q.options || [],
         selected: "Skipped",
         correct: q.answer,
         isCorrect: false,
         timestamp: new Date().toLocaleTimeString(),
         hint: q.hint || "No hint available.",
+        explanation: q.explanation || q.hint || `The correct answer is "${q.answer}". Review this concept in grade curriculum lessons.`,
         subject: q.subject || "General",
         standard: q.standard || window.targetedStandard || null,
+        grade: q.grade || document.getElementById("header-grade-name")?.textContent || "Core Curriculum"
       });
       playIncorrectSound(); // Optional feedback for skip
     }
@@ -588,13 +613,16 @@ if (typeof checkAnswer === "function") {
         if (q) {
           window.quizResultsData.push({
             question: q.question,
+            options: q.options || [],
             selected: selected,
             correct: correct,
             isCorrect: isCorrect,
             timestamp: new Date().toLocaleTimeString(),
             hint: q.hint || "No explanation available.",
+            explanation: q.explanation || q.hint || (isCorrect ? `Correct! "${correct}" satisfies the standard benchmark.` : `The correct answer is "${correct}".`),
             subject: q.subject || "General",
             standard: q.standard || window.targetedStandard || null,
+            grade: q.grade || document.getElementById("header-grade-name")?.textContent || "Core Curriculum"
           });
 
           // Track learning focus recommendations if incorrect
@@ -621,6 +649,24 @@ if (typeof checkAnswer === "function") {
       playCorrectSound();
     } else {
       playIncorrectSound();
+    }
+
+    // Fast-track auto advance in 60-Second Fluency Sprint Mode
+    if (window.isFluencySprint) {
+      if (isCorrect) {
+        window.fluencyScore = (window.fluencyScore || 0) + 1;
+      }
+      const hudScore = document.getElementById("sprint-hud-score");
+      if (hudScore) hudScore.textContent = window.fluencyScore || 0;
+
+      if (btnElement) {
+        btnElement.classList.add(isCorrect ? "sprint-btn-correct" : "sprint-btn-incorrect");
+      }
+
+      setTimeout(() => {
+        nextQuestionAdapter();
+      }, 250);
+      return;
     }
 
     originalCheckAnswer(selected, correct, btnElement);
@@ -773,25 +819,45 @@ if (typeof finishQuiz === "function") {
         });
       }
 
-      // Inject Action Buttons (Mastery Report + Download Text)
+      // Inject Action Buttons (Review + Mastery Report + Worksheet + Download Text)
       if (resultDiv) {
         const btnContainer = document.createElement("div");
         btnContainer.className = "mastery-actions-container";
         btnContainer.style.cssText = "display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; align-items: center; margin-top: 1.5rem;";
 
+        const reviewBtn = document.createElement("button");
+        reviewBtn.className = "hero-nav-btn hero-nav-btn-primary";
+        reviewBtn.style.cssText = "padding: 0.85rem 1.75rem; border-radius: var(--radius-full); font-weight: 800; font-size: 1rem; cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem; border: none; box-shadow: 0 8px 16px -4px rgba(0,0,0,0.25);";
+        reviewBtn.innerHTML = '<i class="fas fa-clipboard-check"></i> Review All Answers & Explanations';
+        reviewBtn.onclick = () => {
+          const rev = document.getElementById("review-container");
+          if (rev) {
+            rev.style.display = "block";
+            rev.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        };
+
         const reportBtn = document.createElement("button");
-        reportBtn.className = "hero-nav-btn hero-nav-btn-primary";
-        reportBtn.style.cssText = "padding: 0.85rem 1.75rem; border-radius: var(--radius-full); font-weight: 800; font-size: 1rem; cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem; box-shadow: 0 10px 20px -5px rgba(0,0,0,0.3); border: none;";
-        reportBtn.innerHTML = '<i class="fas fa-file-invoice"></i> View & Print Mastery Report';
+        reportBtn.className = "hero-nav-btn hero-nav-btn-outline";
+        reportBtn.style.cssText = "padding: 0.85rem 1.75rem; border-radius: var(--radius-full); font-weight: 700; font-size: 0.95rem; cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem;";
+        reportBtn.innerHTML = '<i class="fas fa-file-invoice"></i> Mastery Report Card';
         reportBtn.onclick = () => window.openMasteryReportCard();
+
+        const worksheetBtn = document.createElement("button");
+        worksheetBtn.className = "hero-nav-btn hero-nav-btn-outline";
+        worksheetBtn.style.cssText = "padding: 0.85rem 1.75rem; border-radius: var(--radius-full); font-weight: 700; font-size: 0.95rem; cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem;";
+        worksheetBtn.innerHTML = '<i class="fas fa-print"></i> Printable Quiz & Key';
+        worksheetBtn.onclick = () => window.openPrintableWorksheetModal();
 
         const downloadBtn = document.createElement("button");
         downloadBtn.className = "hero-nav-btn hero-nav-btn-outline";
         downloadBtn.style.cssText = "padding: 0.85rem 1.75rem; border-radius: var(--radius-full); font-weight: 700; font-size: 0.95rem; cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem;";
-        downloadBtn.innerHTML = '<i class="fas fa-file-download"></i> Download Text Summary';
+        downloadBtn.innerHTML = '<i class="fas fa-file-download"></i> Download Text';
         downloadBtn.onclick = generateAndDownloadText;
 
+        btnContainer.appendChild(reviewBtn);
         btnContainer.appendChild(reportBtn);
+        btnContainer.appendChild(worksheetBtn);
         btnContainer.appendChild(downloadBtn);
         resultDiv.appendChild(btnContainer);
       }
@@ -894,7 +960,7 @@ if (typeof finishQuiz === "function") {
   };
 }
 
-// 8. Generate Review Mode
+// 8. Generate Review Mode with Question-by-Question Pedagogical Explanations
 function buildReviewMode() {
   const reviewContainer = document.getElementById("review-container");
   const reviewContent = document.getElementById("review-content");
@@ -902,42 +968,118 @@ function buildReviewMode() {
 
   reviewContent.innerHTML = "";
 
-  if (window.quizResultsData.length === 0) {
-    reviewContent.innerHTML =
-      "<p class='text-text-secondary'>No questions were answered.</p>";
-  } else {
-    window.quizResultsData.forEach((item, idx) => {
-      const isCorrect = item.isCorrect;
-      const bgClass =
-        isCorrect ?
-          "bg-green-50 dark:bg-green-900/10 border-green-200 dark:border-green-800"
-        : "bg-red-50 dark:bg-red-900/10 border-red-200 dark:border-red-800";
-      const icon =
-        isCorrect ?
-          '<i class="fas fa-check-circle text-green-500 mt-1"></i>'
-        : '<i class="fas fa-times-circle text-red-500 mt-1"></i>';
+  const results = window.quizResultsData || [];
+  let correctCount = 0;
+  let incorrectCount = 0;
 
-      let html = `
-                <div class="p-4 rounded-xl border ${bgClass} flex gap-3">
-                    ${icon}
-                    <div class="flex-grow">
-                        <p class="font-bold text-text-default mb-1">Q${idx + 1}: ${item.question}</p>
-                        <p class="text-sm text-text-secondary"><span class="font-medium">Your Answer:</span> ${item.selected}</p>
-            `;
-      if (!isCorrect) {
-        html += `<p class="text-sm text-text-secondary"><span class="font-medium text-green-600">Correct Answer:</span> ${item.correct}</p>`;
-        if (item.hint) {
-          html += `<div class="mt-2 text-xs bg-white/50 dark:bg-black/20 p-2 rounded border border-gray-200 dark:border-gray-700 font-medium italic"><i class="fas fa-info-circle"></i> Explanation: ${item.hint}</div>`;
-        }
-      }
-      html += `</div></div>`;
-      reviewContent.insertAdjacentHTML("beforeend", html);
+  results.forEach(item => {
+    if (item.isCorrect) correctCount++;
+    else incorrectCount++;
+  });
+
+  const countAll = document.getElementById("review-count-all");
+  const countCorr = document.getElementById("review-count-correct");
+  const countIncorr = document.getElementById("review-count-incorrect");
+  if (countAll) countAll.textContent = results.length;
+  if (countCorr) countCorr.textContent = correctCount;
+  if (countIncorr) countIncorr.textContent = incorrectCount;
+
+  if (results.length === 0) {
+    reviewContent.innerHTML = "<p style='color: var(--color-text-muted); text-align: center; padding: 2.5rem;'>No questions were completed during this session.</p>";
+  } else {
+    // Grade Letter Helper
+    const gradeKey = (document.getElementById("grade-key")?.value || "3").toLowerCase();
+    const gradeToLetter = {
+      "pre-k": "a", "k": "b", "1": "c", "2": "d", "3": "e", "4": "f",
+      "5": "g", "6": "h", "7": "i", "8": "j", "9": "k", "10": "l", "11": "m", "12": "n"
+    };
+    const gradeLetter = gradeToLetter[gradeKey] || "e";
+
+    results.forEach((item, idx) => {
+      const isCorrect = item.isCorrect;
+      const statusClass = isCorrect ? "correct" : "incorrect";
+      const statusBadge = isCorrect 
+        ? `<span class="review-status-pill correct"><i class="fas fa-check-circle"></i> Correct</span>`
+        : `<span class="review-status-pill incorrect"><i class="fas fa-times-circle"></i> Needs Review</span>`;
+
+      const stdCode = item.standard || window.targetedStandard || null;
+      const stdBadge = stdCode 
+        ? `<span class="review-std-pill" title="Aligned Academic Standard"><i class="fas fa-bullseye"></i> ${escapeHtml(stdCode)}</span>` 
+        : '';
+
+      const practiceBtn = stdCode 
+        ? `<a href="/levels/${gradeLetter}.php#standard=${encodeURIComponent(stdCode)}" class="review-action-btn" target="_blank" title="Practice standard in curriculum lessons"><i class="fas fa-graduation-cap"></i> Practice Lesson</a>`
+        : '';
+
+      const retestBtn = stdCode 
+        ? `<a href="/assessment/#standard=${encodeURIComponent(stdCode)}" class="review-action-btn review-retest-btn" title="Retest this specific standard"><i class="fas fa-redo"></i> Retest Standard</a>`
+        : '';
+
+      const explanation = item.explanation || item.hint || (isCorrect ? `Correct! "${escapeHtml(item.correct)}" accurately satisfies the problem requirements.` : `The correct answer is "${escapeHtml(item.correct)}".`);
+
+      const card = document.createElement("div");
+      card.className = `review-item-card status-${statusClass}`;
+      card.setAttribute("data-status", statusClass);
+      card.innerHTML = `
+        <div class="review-card-header">
+          <div class="review-card-meta">
+            <span class="review-q-num">Question ${idx + 1}</span>
+            <span class="review-subject-tag">${escapeHtml(item.subject || 'Core Subject')}</span>
+            ${stdBadge}
+          </div>
+          ${statusBadge}
+        </div>
+
+        <h4 class="review-q-title">${escapeHtml(item.question)}</h4>
+
+        <div class="review-answers-grid">
+          <div class="review-answer-box ${isCorrect ? 'box-correct' : 'box-incorrect'}">
+            <span class="answer-box-label"><i class="fas ${isCorrect ? 'fa-check' : 'fa-times'}"></i> Your Answer:</span>
+            <span class="answer-box-val">${escapeHtml(item.selected)}</span>
+          </div>
+          ${!isCorrect ? `
+            <div class="review-answer-box box-correct">
+              <span class="answer-box-label"><i class="fas fa-check-double"></i> Correct Answer:</span>
+              <span class="answer-box-val">${escapeHtml(item.correct)}</span>
+            </div>
+          ` : ''}
+        </div>
+
+        <div class="review-explanation-box">
+          <div class="explanation-box-header">
+            <i class="fas fa-lightbulb"></i>
+            <span>Pedagogical Explanation & Concept Breakdown</span>
+          </div>
+          <p class="explanation-box-text">${escapeHtml(explanation)}</p>
+        </div>
+
+        ${(practiceBtn || retestBtn) ? `
+          <div class="review-card-footer">
+            ${practiceBtn}
+            ${retestBtn}
+          </div>
+        ` : ''}
+      `;
+      reviewContent.appendChild(card);
     });
   }
 
-  reviewContainer.classList.remove("hidden");
-  reviewContainer.scrollIntoView({ behavior: "smooth", block: "start" });
+  reviewContainer.style.display = "block";
 }
+
+window.filterReviewItems = function(filter) {
+  const buttons = document.querySelectorAll('.review-pill-btn');
+  buttons.forEach(btn => btn.classList.toggle('active', btn.getAttribute('data-filter') === filter));
+
+  const cards = document.querySelectorAll('.review-item-card');
+  cards.forEach(card => {
+    if (filter === 'all' || card.getAttribute('data-status') === filter) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+};
 
 // 9. Download Report Generation
 function generateAndDownloadText() {
@@ -1360,3 +1502,236 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+// =========================================================================
+// 11. Printable Quiz Worksheet & Teacher Answer Key Generator
+// =========================================================================
+window.openPrintableWorksheetModal = function() {
+  const modal = document.getElementById("quiz-worksheet-modal");
+  const area = document.getElementById("quiz-worksheet-printable-area");
+  if (!modal || !area) return;
+
+  const questions = (window.currentQuestions && window.currentQuestions.length > 0)
+    ? window.currentQuestions
+    : (window.quizResultsData && window.quizResultsData.length > 0 ? window.quizResultsData : []);
+
+  if (questions.length === 0) {
+    alert("Please select an assessment grade to generate a printable worksheet.");
+    return;
+  }
+
+  const grade = document.getElementById("header-grade-name")?.textContent || "Core Curriculum";
+  const subject = window.currentAssessmentSubject || "General Academic";
+  const dateStr = new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+
+  let qListHtml = '';
+  let answerKeyRows = '';
+
+  questions.slice(0, 15).forEach((q, i) => {
+    const letters = ['A', 'B', 'C', 'D'];
+    let optionsHtml = '';
+
+    if (q.options && Array.isArray(q.options)) {
+      optionsHtml = `<div class="ws-options-grid">` +
+        q.options.map((opt, optIdx) => {
+          const letter = letters[optIdx] || `(${optIdx + 1})`;
+          return `<div class="ws-option-item">
+            <span class="ws-bubble">${letter}</span>
+            <span class="ws-opt-text">${escapeHtml(opt)}</span>
+          </div>`;
+        }).join('') +
+      `</div>`;
+    }
+
+    const stdCode = q.standard || window.targetedStandard || 'General Standard';
+
+    qListHtml += `
+      <div class="ws-question-block">
+        <div class="ws-question-header">
+          <span class="ws-q-num">Question ${i + 1}</span>
+          <span class="ws-q-standard">[Standard: ${escapeHtml(stdCode)}]</span>
+        </div>
+        <p class="ws-q-text">${escapeHtml(q.question)}</p>
+        ${optionsHtml}
+      </div>
+    `;
+
+    answerKeyRows += `
+      <tr class="ws-key-row">
+        <td class="ws-key-num">#${i + 1}</td>
+        <td class="ws-key-std"><code>${escapeHtml(stdCode)}</code></td>
+        <td class="ws-key-ans"><strong>${escapeHtml(q.correct || q.answer)}</strong></td>
+        <td class="ws-key-exp">${escapeHtml(q.explanation || q.hint || 'Review aligned grade standard.')}</td>
+      </tr>
+    `;
+  });
+
+  area.innerHTML = `
+    <!-- PART 1: STUDENT ASSESSMENT WORKSHEET -->
+    <div class="worksheet-student-page">
+      <div class="ws-header">
+        <div class="ws-brand-row">
+          <div class="ws-logo">
+            <i class="fas fa-graduation-cap"></i> Hesten's Learning
+          </div>
+          <div class="ws-exam-title">DIAGNOSTIC ASSESSMENT WORKSHEET</div>
+        </div>
+        <div class="ws-info-bar">
+          <div><strong>Grade / Level:</strong> ${escapeHtml(grade)}</div>
+          <div><strong>Subject:</strong> ${escapeHtml(subject)}</div>
+          <div><strong>Date Generated:</strong> ${escapeHtml(dateStr)}</div>
+        </div>
+        <div class="ws-student-meta-fields">
+          <div class="ws-field-line"><span>Student Name:</span> _________________________________________________</div>
+          <div class="ws-field-line"><span>Date:</span> ___________________ <span>Score:</span> _______ / ${Math.min(questions.length, 15)}</div>
+        </div>
+        <div class="ws-instructions">
+          <strong>Directions:</strong> Carefully read each question below. Solve the problem and clearly bubble in the letter of your chosen answer. Show all necessary work in the margins.
+        </div>
+      </div>
+
+      <div class="ws-questions-container">
+        ${qListHtml}
+      </div>
+    </div>
+
+    <!-- PART 2: EDUCATOR ANSWER KEY & STANDARDS MATRIX -->
+    <div class="worksheet-teacher-page" id="worksheet-teacher-key-section">
+      <div class="ws-key-header">
+        <div class="ws-key-badge"><i class="fas fa-key"></i> EDUCATOR & PARENT ANSWER KEY</div>
+        <h2 class="ws-key-title">${escapeHtml(grade)} • ${escapeHtml(subject)} Alignment Matrix</h2>
+        <p class="ws-key-subtitle">Includes question answers, academic standard benchmarks, and pedagogical explanation notes.</p>
+      </div>
+
+      <table class="ws-key-table">
+        <thead>
+          <tr>
+            <th style="width: 8%;">Q#</th>
+            <th style="width: 22%;">Standard</th>
+            <th style="width: 25%;">Correct Answer</th>
+            <th style="width: 45%;">Pedagogical Explanation</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${answerKeyRows}
+        </tbody>
+      </table>
+
+      <div class="ws-key-footer">
+        <p>Hesten's Learning Open Curriculum • Standard Alignment Engine • Available at <a href="https://hestenslearning.com">hestenslearning.com</a></p>
+      </div>
+    </div>
+  `;
+
+  modal.style.display = "flex";
+};
+
+window.closePrintableWorksheetModal = function() {
+  const modal = document.getElementById("quiz-worksheet-modal");
+  if (modal) modal.style.display = "none";
+};
+
+window.toggleWorksheetAnswerKey = function(includeKey) {
+  const keySection = document.getElementById("worksheet-teacher-key-section");
+  if (keySection) {
+    keySection.style.display = includeKey ? "block" : "none";
+  }
+};
+
+// =========================================================================
+// 12. 60-Second Timed Fluency Sprint Mode
+// =========================================================================
+window.startFluencySprintMode = function() {
+  window.isFluencySprint = true;
+  window.fluencyScore = 0;
+  window.fluencyTimeRemaining = 60;
+  window.quizResultsData = [];
+
+  const startMenu = document.getElementById("assessment-start-menu");
+  const quizHeader = document.getElementById("quiz-header");
+  const quizContainer = document.getElementById("quiz-container");
+
+  if (startMenu) startMenu.classList.add("hidden");
+  if (quizHeader) quizHeader.classList.remove("hidden");
+  if (quizContainer) quizContainer.classList.remove("hidden");
+
+  // Inject Fluency Sprint HUD banner into quiz card
+  let hud = document.getElementById("fluency-sprint-hud");
+  if (!hud) {
+    const card = document.querySelector(".assessment-quiz-card");
+    if (card) {
+      hud = document.createElement("div");
+      hud.id = "fluency-sprint-hud";
+      hud.className = "fluency-sprint-hud";
+      card.insertBefore(hud, card.firstChild);
+    }
+  }
+
+  if (hud) {
+    hud.innerHTML = `
+      <div class="sprint-hud-inner">
+        <div class="sprint-hud-badge">
+          <i class="fas fa-bolt"></i> 60-Second Fluency Sprint
+        </div>
+        <div class="sprint-hud-stats">
+          <span class="sprint-stat-item">
+            <i class="fas fa-stopwatch"></i> Time: <strong id="sprint-hud-timer">60s</strong>
+          </span>
+          <span class="sprint-stat-item">
+            <i class="fas fa-star" style="color: var(--color-warning);"></i> Score: <strong id="sprint-hud-score">0</strong>
+          </span>
+        </div>
+      </div>
+    `;
+    hud.style.display = "block";
+  }
+
+  // Hide manual advance buttons in sprint mode
+  document.getElementById("skip-btn")?.classList.add("hidden");
+  document.getElementById("next-btn")?.classList.add("hidden");
+
+  // Load questions (Math sprint priority)
+  const gradeName = document.getElementById("header-grade-name")?.textContent || "Third Grade";
+  if (typeof loadQuestions === "function") {
+    loadQuestions(gradeName, "Math");
+  }
+
+  // Sprint Timer Countdown
+  if (window.sprintInterval) clearInterval(window.sprintInterval);
+  window.sprintInterval = setInterval(() => {
+    window.fluencyTimeRemaining--;
+    const timerEl = document.getElementById("sprint-hud-timer");
+    if (timerEl) timerEl.textContent = `${window.fluencyTimeRemaining}s`;
+
+    if (window.fluencyTimeRemaining <= 0) {
+      clearInterval(window.sprintInterval);
+      finishFluencySprint();
+    }
+  }, 1000);
+};
+
+function finishFluencySprint() {
+  window.isFluencySprint = false;
+  clearInterval(window.sprintInterval);
+
+  const hud = document.getElementById("fluency-sprint-hud");
+  if (hud) hud.style.display = "none";
+
+  // Save Fluency High Score
+  try {
+    const KEY = 'hesten_fluency_highscores';
+    const scores = JSON.parse(localStorage.getItem(KEY)) || [];
+    scores.push({
+      score: window.fluencyScore || 0,
+      timestamp: new Date().toISOString()
+    });
+    scores.sort((a, b) => b.score - a.score);
+    localStorage.setItem(KEY, JSON.stringify(scores.slice(0, 10)));
+  } catch(e){}
+
+  // Finish quiz and show celebratory results
+  if (typeof finishQuiz === "function") {
+    finishQuiz();
+  }
+}
+

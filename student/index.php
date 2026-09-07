@@ -60,6 +60,82 @@ include '../src/header.php';
             </div>
         </div>
 
+        <!-- Daily Learning Quests Widget -->
+        <div id="daily-quests-widget" class="daily-quests-panel glass-panel">
+            <div class="quests-header">
+                <div class="quests-title-wrap">
+                    <span class="quests-badge"><i class="fas fa-calendar-day"></i> Daily Missions</span>
+                    <h2 class="quests-title">Today's Learning Quests</h2>
+                    <p class="quests-desc">Complete daily challenges to earn XP and level up your academic profile.</p>
+                </div>
+                <div class="quests-overall-progress">
+                    <div class="quests-progress-text">
+                        <span id="quests-completed-count">0/3</span> Completed
+                    </div>
+                    <div class="quests-progress-track">
+                        <div id="quests-progress-fill" class="quests-progress-fill" style="width: 0%;"></div>
+                    </div>
+                    <span id="quests-xp-reward" class="quests-xp-reward"><i class="fas fa-bolt"></i> +175 XP Total</span>
+                </div>
+            </div>
+
+            <div class="quests-list" id="quests-list">
+                <!-- Quest 1: Lesson Explorer -->
+                <div class="quest-card" id="quest-card-lesson">
+                    <div class="quest-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="quest-info">
+                        <div class="quest-name-row">
+                            <span class="quest-name">Curriculum Lesson Explorer</span>
+                            <span class="quest-xp">+50 XP</span>
+                        </div>
+                        <p class="quest-detail">Complete at least 1 interactive curriculum lesson or practice check.</p>
+                        <div class="quest-mini-track">
+                            <div id="quest-progress-lesson" class="quest-mini-fill" style="width: 0%;"></div>
+                        </div>
+                    </div>
+                    <div class="quest-action">
+                        <a href="/levels/k.php" class="quest-btn" id="quest-btn-lesson">Start Lesson</a>
+                    </div>
+                </div>
+
+                <!-- Quest 2: Reading Time -->
+                <div class="quest-card" id="quest-card-read">
+                    <div class="quest-icon" style="color: #f97316; background: rgba(249, 115, 22, 0.1);"><i class="fas fa-book-reader"></i></div>
+                    <div class="quest-info">
+                        <div class="quest-name-row">
+                            <span class="quest-name">Daily Reading Drill</span>
+                            <span class="quest-xp">+50 XP</span>
+                        </div>
+                        <p class="quest-detail" id="quest-detail-read">Read literature in the Digital Library for 10+ active minutes.</p>
+                        <div class="quest-mini-track">
+                            <div id="quest-progress-read" class="quest-mini-fill" style="width: 0%;"></div>
+                        </div>
+                    </div>
+                    <div class="quest-action">
+                        <a href="/library/" class="quest-btn" id="quest-btn-read">Open Reader</a>
+                    </div>
+                </div>
+
+                <!-- Quest 3: Assessment Mastery -->
+                <div class="quest-card" id="quest-card-mastery">
+                    <div class="quest-icon" style="color: #10b981; background: rgba(16, 185, 129, 0.1);"><i class="fas fa-award"></i></div>
+                    <div class="quest-info">
+                        <div class="quest-name-row">
+                            <span class="quest-name">Standard Mastery Challenge</span>
+                            <span class="quest-xp">+75 XP</span>
+                        </div>
+                        <p class="quest-detail" id="quest-detail-mastery">Score 80%+ on any targeted academic standard assessment.</p>
+                        <div class="quest-mini-track">
+                            <div id="quest-progress-mastery" class="quest-mini-fill" style="width: 0%;"></div>
+                        </div>
+                    </div>
+                    <div class="quest-action">
+                        <a href="/assessment/" class="quest-btn" id="quest-btn-mastery">Take Test</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Standards Mastery Progress Widget -->
         <div id="student-standards-widget" class="glass-panel" style="margin-bottom: 2.5rem; padding: 1.5rem; border-radius: var(--radius-xl); border: 1px solid var(--color-border); background: var(--color-bg-surface); display: none;">
             <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem;">
@@ -446,6 +522,88 @@ document.addEventListener('DOMContentLoaded', () => {
                 widget.style.display = 'block';
             }
         } catch(e){}
+
+        // Populate and evaluate Daily Learning Quests
+        try {
+            let completedCount = 0;
+
+            // Quest 1: Check lesson completion in localStorage
+            let hasCompletedLesson = false;
+            for (let i = 0; i < localStorage.length; i++) {
+                const k = localStorage.key(i);
+                if (k && k.startsWith('hl_progress_')) {
+                    try {
+                        const arr = JSON.parse(localStorage.getItem(k));
+                        if (Array.isArray(arr) && arr.length > 0) {
+                            hasCompletedLesson = true;
+                            break;
+                        }
+                    } catch(err){}
+                }
+            }
+            const qLessonCard = document.getElementById('quest-card-lesson');
+            const qLessonBar = document.getElementById('quest-progress-lesson');
+            const qLessonBtn = document.getElementById('quest-btn-lesson');
+            if (hasCompletedLesson) {
+                completedCount++;
+                if (qLessonCard) qLessonCard.classList.add('completed');
+                if (qLessonBar) qLessonBar.style.width = '100%';
+                if (qLessonBtn) qLessonBtn.innerHTML = '<i class="fas fa-check"></i> Completed';
+            }
+
+            // Quest 2: Check reading tracker
+            let readMinutes = 0;
+            try {
+                const rawTracker = localStorage.getItem('hesten_reading_tracker');
+                if (rawTracker) {
+                    const parsed = JSON.parse(rawTracker);
+                    readMinutes = parsed.todayMinutes || 0;
+                }
+            } catch(err){}
+            const qReadCard = document.getElementById('quest-card-read');
+            const qReadBar = document.getElementById('quest-progress-read');
+            const qReadBtn = document.getElementById('quest-btn-read');
+            const qReadDetail = document.getElementById('quest-detail-read');
+            const readPct = Math.min(100, Math.round((readMinutes / 10) * 100));
+            if (qReadBar) qReadBar.style.width = `${readPct}%`;
+            if (qReadDetail) qReadDetail.textContent = `Progress: ${readMinutes}/10 minutes read in library today.`;
+            if (readMinutes >= 10) {
+                completedCount++;
+                if (qReadCard) qReadCard.classList.add('completed');
+                if (qReadBtn) qReadBtn.innerHTML = '<i class="fas fa-check"></i> Completed';
+            }
+
+            // Quest 3: Check standard mastery >= 80%
+            let hasMasteredStandard = false;
+            try {
+                const rawMastery = localStorage.getItem('hesten_standards_mastery');
+                if (rawMastery) {
+                    const parsed = JSON.parse(rawMastery);
+                    hasMasteredStandard = Object.values(parsed).some(item => (item.bestScore || 0) >= 80);
+                }
+            } catch(err){}
+            const qMasteryCard = document.getElementById('quest-card-mastery');
+            const qMasteryBar = document.getElementById('quest-progress-mastery');
+            const qMasteryBtn = document.getElementById('quest-btn-mastery');
+            if (hasMasteredStandard) {
+                completedCount++;
+                if (qMasteryCard) qMasteryCard.classList.add('completed');
+                if (qMasteryBar) qMasteryBar.style.width = '100%';
+                if (qMasteryBtn) qMasteryBtn.innerHTML = '<i class="fas fa-check"></i> Completed';
+            }
+
+            // Overall Quests progress
+            const countEl = document.getElementById('quests-completed-count');
+            const fillEl = document.getElementById('quests-progress-fill');
+            const xpRewardEl = document.getElementById('quests-xp-reward');
+            if (countEl) countEl.textContent = `${completedCount}/3`;
+            if (fillEl) fillEl.style.width = `${Math.round((completedCount / 3) * 100)}%`;
+            if (completedCount === 3 && xpRewardEl) {
+                xpRewardEl.innerHTML = '<i class="fas fa-check-circle" style="color: #10b981;"></i> All Quests Complete! (+175 XP)';
+            }
+        } catch(e) {
+            console.warn('Error evaluating daily quests:', e);
+        }
     } catch(e) {
         console.error('Error loading bookmarks:', e);
     }

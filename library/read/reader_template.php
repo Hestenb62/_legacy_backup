@@ -105,6 +105,11 @@ include ABSPATH . 'src/header.php';
             <span class="reader-ch-name"><?php echo htmlspecialchars($currentChapterTitle); ?></span>
         </div>
         <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <div id="reader-session-timer-pill" class="reader-session-timer-pill" title="Daily Reading Tracker">
+                <i class="fas fa-stopwatch" style="color: var(--color-primary, #e11d48);"></i>
+                <span id="reading-session-time">0m today</span>
+                <span id="reading-streak-badge" class="reading-streak-badge"><i class="fas fa-fire" style="color: #f97316;"></i> 1d</span>
+            </div>
             <button type="button" id="reader-bookmark-btn" class="reader-license-btn" onclick="window.toggleBookBookmark && window.toggleBookBookmark()" title="Bookmark this Book" aria-label="Bookmark this Book">
                 <i class="far fa-bookmark" id="reader-bookmark-icon"></i>
             </button>
@@ -590,12 +595,19 @@ include ABSPATH . 'src/header.php';
                 <button type="button" class="citation-tab-btn" onclick="switchReaderCitationStyle('apa')">APA 7</button>
                 <button type="button" class="citation-tab-btn" onclick="switchReaderCitationStyle('chicago')">Chicago 17</button>
                 <button type="button" class="citation-tab-btn" onclick="switchReaderCitationStyle('harvard')">Harvard</button>
+                <button type="button" class="citation-tab-btn" onclick="switchReaderCitationStyle('bibtex')">BibTeX</button>
+                <button type="button" class="citation-tab-btn" onclick="switchReaderCitationStyle('ris')">RIS</button>
             </div>
             <div class="citation-preview-box">
                 <div id="reader-citation-text" class="citation-text-render"></div>
-                <button type="button" id="reader-citation-copy-btn" class="citation-copy-btn" onclick="copyReaderCitationText()">
-                    <i class="fas fa-copy"></i> <span>Copy Citation</span>
-                </button>
+                <div style="display: flex; gap: 0.5rem; justify-content: flex-end; margin-top: 1rem; flex-wrap: wrap;">
+                    <button type="button" id="reader-citation-dl-btn" class="citation-download-btn" onclick="downloadReaderCitationFile()" title="Download citation file">
+                        <i class="fas fa-file-download"></i> <span>Download File</span>
+                    </button>
+                    <button type="button" id="reader-citation-copy-btn" class="citation-copy-btn" onclick="copyReaderCitationText()">
+                        <i class="fas fa-copy"></i> <span>Copy Citation</span>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
@@ -660,6 +672,8 @@ include ABSPATH . 'src/header.php';
 <script src="../../assets/js/reader/read-inline-text-highlighting.js" defer></script>
 <script src="../../assets/js/reader/read-modals.js" defer></script>
 <script src="../../assets/js/reader/read-chapter-citation-generator.js" defer></script>
+<script src="../../assets/js/reader/read-tracker.js" defer></script>
+<script src="../../assets/js/reader/read-vocab-tooltip.js" defer></script>
 <script src="../../assets/js/reader/read-scroll-markers.js" defer></script>
 
 <?php include ABSPATH . 'src/footer.php'; ?>

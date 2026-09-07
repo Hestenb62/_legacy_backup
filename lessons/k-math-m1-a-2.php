@@ -133,6 +133,39 @@ updateSquare(5);
 </script>
 
 <?php
+$lessonId = 'k-math-m1-a-2';
+$lessonCode = 'K.M1.A.2';
+$lessonTitle = 'Growth of Square Areas and Functions';
+$lessonStandard = 'HSA.CED.A.2';
+$levelId = 'k';
+$levelUrl = '../levels/k.php';
+$prevLessonUrl = 'k-math-m1-a-1.php';
+$nextLessonUrl = 'k-math-m1-a-3.php';
+$practiceQuestions = [
+    [
+        'question' => 'How does the perimeter of a square change when its side length increases from 3 to 4 units?',
+        'options' => [
+            'Increases by 4 units',
+            'Increases by 7 units',
+            'Increases by 12 units',
+            'Increases by 16 units'
+        ],
+        'correct' => 0,
+        'explanation' => 'Perimeter is linear: P(s) = 4s. For s=3, P=12. For s=4, P=16. The increase is exactly 16 - 12 = 4 units.'
+    ],
+    [
+        'question' => 'Why does area growth represent a quadratic function rather than a linear function?',
+        'options' => [
+            'The perimeter always remains constant',
+            'The rate of change increases at every step because the variable is squared (A = s²)',
+            'The area can never exceed the perimeter',
+            'Quadratic functions only apply to non-geometric shapes'
+        ],
+        'correct' => 1,
+        'explanation' => 'In A(s) = s², the rate of change is not constant. Each successive unit increase in side length yields a larger increase in area than the previous one.'
+    ]
+];
+include '../src/lesson_runner.php';
 include '../src/footer.php';
 ?>
 

@@ -763,5 +763,38 @@ include '../src/header.php';
 </script>
 
 <?php
+$lessonId = 'k-math-m1-a-1';
+$lessonCode = 'K.M1.A.1';
+$lessonTitle = 'Graphs of Piecewise Linear Functions';
+$lessonStandard = 'HSF.IF.B.4';
+$levelId = 'k';
+$levelUrl = '../levels/k.php';
+$prevLessonUrl = '../levels/k.php';
+$nextLessonUrl = 'k-math-m1-a-2.php';
+$practiceQuestions = [
+    [
+        'question' => 'A climber ascends 4 feet in 2 seconds, pauses for 3 seconds, then descends 2 feet in 1 second. What is the slope of the graph during the 3-second pause?',
+        'options' => [
+            '2 feet per second',
+            '0 feet per second',
+            '-2 feet per second',
+            '4 feet per second'
+        ],
+        'correct' => 1,
+        'explanation' => 'During a pause, elevation remains unchanged while time advances. Rate of change (Δy / Δt) = 0 / 3 = 0.'
+    ],
+    [
+        'question' => 'On an elevation-versus-time graph, what physical action does a segment with a negative slope depict?',
+        'options' => [
+            'The climber is stationary at rest',
+            'The climber is ascending to higher rungs',
+            'The climber is descending towards the ground',
+            'The climber has completed the entire climb'
+        ],
+        'correct' => 2,
+        'explanation' => 'A negative slope means the elevation quantity is decreasing over time, representing a physical descent.'
+    ]
+];
+include '../src/lesson_runner.php';
 include '../src/footer.php';
 ?>
