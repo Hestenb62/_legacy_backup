@@ -42,6 +42,18 @@
       "Accommodations"
     ],
     "summary": "A comprehensive review of evidence-based classroom accommodations, biomechanical modifications, speech-to-text tools, and structured graphomotor interventions.",
-    "fileUrl": "/research/DSMS/texts/classroom-accommodations.md"
+    "fileUrl": "/research/DSMS/texts/classroom-accommodations.md",
+    "relatedLessons": [
+      {
+        "title": "Fine-Motor Visual Foundations: Shapes & Directionality",
+        "url": "/lessons/k-math-m1-a-1.php",
+        "grade": "Early Elementary"
+      },
+      {
+        "title": "Interactive Writing Practice & Word Tracing",
+        "url": "/lessons/k-ela-m2-a-1.php",
+        "grade": "Primary ELA"
+      }
+    ]
   }
 ]

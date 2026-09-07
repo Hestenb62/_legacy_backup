@@ -1,4 +1,12 @@
 <?php
+// Core HTTP Security Headers
+if (!headers_sent()) {
+    header("X-Content-Type-Options: nosniff");
+    header("X-Frame-Options: SAMEORIGIN");
+    header("Referrer-Policy: strict-origin-when-cross-origin");
+    header("Permissions-Policy: geolocation=(), camera=()");
+}
+
 // Ensure this script is not executed directly.
 if (!defined('ABSPATH')) {
     define('ABSPATH', dirname(__DIR__) . '/');
@@ -17,6 +25,18 @@ if (!function_exists('getCurrentUser')) {
 }
 
 $currentUser = getCurrentUser();
+
+// Helper to append dynamic filemtime for automatic cache busting
+if (!function_exists('assetVersion')) {
+    function assetVersion($relPath) {
+        $cleanPath = ltrim(explode('?', $relPath)[0], '/');
+        $fullPath = rtrim(ABSPATH, '/\\') . DIRECTORY_SEPARATOR . str_replace('/', DIRECTORY_SEPARATOR, $cleanPath);
+        if (file_exists($fullPath)) {
+            return '/' . $cleanPath . '?v=' . filemtime($fullPath);
+        }
+        return '/' . $cleanPath . '?v=1.4';
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
@@ -47,44 +67,84 @@ $currentUser = getCurrentUser();
     <link rel="shortcut icon" href="/assets/images/6791421e-7ca7-40bd-83d3-06a479bf7f36.png" type="image/x-icon">
     <link rel="apple-touch-icon" href="/assets/images/6791421e-7ca7-40bd-83d3-06a479bf7f36.png">
 
+    <!-- Preconnect Resource Hints for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- MathJax Configuration -->
+    <!-- MathJax On-Demand / Conditional Loader -->
     <script>
-        MathJax = {
+        window.MathJax = window.MathJax || {
             tex: {
                 inlineMath: [['$', '$'], ['\\(', '\\)']],
                 displayMath: [['$$', '$$'], ['\\[', '\\]']]
             },
-            svg: {
-                fontCache: 'global'
-            }
+            svg: { fontCache: 'global' }
+        };
+
+        window.ensureMathJax = function() {
+            return new Promise((resolve, reject) => {
+                if (window.MathJax && window.MathJax.typesetPromise) {
+                    resolve(window.MathJax);
+                    return;
+                }
+                const existing = document.getElementById('MathJax-script');
+                if (existing) {
+                    existing.addEventListener('load', () => resolve(window.MathJax));
+                    existing.addEventListener('error', reject);
+                    return;
+                }
+                const script = document.createElement('script');
+                script.id = 'MathJax-script';
+                script.async = true;
+                script.src = '<?= assetVersion('/assets/js/mathjax-4.1.3/tex-svg.js') ?>';
+                script.onload = () => {
+                    let tries = 0;
+                    const poll = setInterval(() => {
+                        if (window.MathJax && window.MathJax.typesetPromise) {
+                            clearInterval(poll);
+                            resolve(window.MathJax);
+                        } else if (++tries > 20) {
+                            clearInterval(poll);
+                            resolve(window.MathJax);
+                        }
+                    }, 50);
+                };
+                script.onerror = reject;
+                document.head.appendChild(script);
+            });
         };
     </script>
-    <script id="MathJax-script" async src="/assets/js/mathjax-4.1.3/tex-svg.js"></script>
-
+    <?php if (!empty($requiresMathJax)): ?>
+        <script>window.ensureMathJax();</script>
+    <?php endif; ?>
 
     <style>
         /* CSS Cascade Layers Definition (Vanilla CSS Architecture) */
         @layer reset, tokens, base, primitives, components, utilities, overrides;
     </style>
 
-    <!-- Custom Modern Styles (Vanilla CSS Architecture) -->
-    <link rel="stylesheet" href="/assets/css/global-tokens.css?v=1.3">
-    <link rel="stylesheet" href="/assets/css/global-reset.css?v=1.3">
-    <link rel="stylesheet" href="/assets/css/global-primitives.css?v=1.3">
-    <link rel="stylesheet" href="/assets/css/global-components.css?v=1.3">
-    <link rel="stylesheet" href="/assets/css/components/fixed-tools.css?v=1.3">
-    <link rel="stylesheet" href="/assets/css/layouts/header.css?v=1.3">
-    <link rel="stylesheet" href="/assets/css/layouts/footer.css?v=1.3">
+    <!-- Custom Modern Styles (Vanilla CSS Architecture with Dynamic Cache-Busting) -->
+    <link rel="stylesheet" href="<?= assetVersion('/assets/css/global-tokens.css') ?>">
+    <link rel="stylesheet" href="<?= assetVersion('/assets/css/global-reset.css') ?>">
+    <link rel="stylesheet" href="<?= assetVersion('/assets/css/global-primitives.css') ?>">
+    <link rel="stylesheet" href="<?= assetVersion('/assets/css/global-components.css') ?>">
+    <link rel="stylesheet" href="<?= assetVersion('/assets/css/components/fixed-tools.css') ?>">
+    <link rel="stylesheet" href="<?= assetVersion('/assets/css/layouts/header.css') ?>">
+    <link rel="stylesheet" href="<?= assetVersion('/assets/css/layouts/footer.css') ?>">
 </head>
 
 <body>
     <!-- Skip Navigation Link (WCAG 2.4.1) -->
     <a href="#main-content" class="skip-link sr-only sr-only-focusable">Skip to main content</a>
+
+    <!-- Global Screen Reader Live Region for Accessibility Announcements -->
+    <div id="a11y-live-region" class="sr-only" aria-live="polite" aria-atomic="true"></div>
 
     <!-- Fixed Tools & Overlays -->
     <?php include __DIR__ . '/partials/fixed-tools.php'; ?>
@@ -210,8 +270,8 @@ $currentUser = getCurrentUser();
         </div>
     </header>
 
-    <script src="/assets/js/global-a11y.js"></script>
-    <script src="/assets/js/global-core-ui.js"></script>
+    <script src="<?= assetVersion('/assets/js/global-a11y.js') ?>"></script>
+    <script src="<?= assetVersion('/assets/js/global-core-ui.js') ?>"></script>
     <script>
         const navToggle = document.getElementById('nav-toggle');
         if (navToggle) {

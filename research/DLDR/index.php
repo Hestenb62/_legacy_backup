@@ -158,6 +158,13 @@ include '../../src/header.php';
         <p id="modalSummary" class="abstract-callout-text"></p>
       </div>
 
+      <!-- Classroom Applications & Practice Link -->
+      <div id="modalClassroomLink" class="classroom-app-box hidden">
+        <h4 class="classroom-app-title"><i class="fas fa-chalkboard-teacher mr-1"></i> Classroom Applications &amp; Practice</h4>
+        <p class="classroom-app-desc">Apply this paper's evidence-based findings with interactive student lessons:</p>
+        <div id="modalLessonsList" class="classroom-lessons-grid"></div>
+      </div>
+
       <!-- Full Markdown Paper Content -->
       <div class="prose research-paper-prose max-w-none">
         <div id="modalFullContent" class="paper-markdown-body space-y-4 leading-relaxed"></div>
@@ -243,6 +250,7 @@ include '../../src/header.php';
 <!-- Libraries -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.9/purify.min.js"></script>
 
 <!-- Application Logic -->
 <script type="module">

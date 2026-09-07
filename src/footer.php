@@ -774,4 +774,4 @@
 <!-- Google API Scripts for Global Auto-Sync -->
 <script async defer src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
 <script async defer src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script>
-<script src="/assets/js/gdrive-sync.js"></script>
+<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/gdrive-sync.js') : '/assets/js/gdrive-sync.js' ?>"></script>

@@ -353,20 +353,54 @@ export class JournalEngine {
     if (nextEntryBtn) nextEntryBtn.addEventListener('click', () => this.navigateModal(1));
   }
 
+  trapFocus(container, event) {
+    if (!container) return;
+    const focusables = Array.from(container.querySelectorAll(
+      'button:not([disabled]):not([aria-hidden="true"]), [href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+    )).filter(el => el.offsetParent !== null);
+
+    if (focusables.length === 0) {
+      event.preventDefault();
+      return;
+    }
+
+    const first = focusables[0];
+    const last = focusables[focusables.length - 1];
+
+    if (event.shiftKey && (document.activeElement === first || !container.contains(document.activeElement))) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  }
+
   setupKeyboardShortcuts() {
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        if (this.modal && this.modal.classList.contains('active')) {
+      const citationModal = document.getElementById('citationModal');
+      const isCitationOpen = citationModal && citationModal.classList.contains('active');
+
+      if (e.key === 'Tab') {
+        if (isCitationOpen) {
+          this.trapFocus(citationModal, e);
+        } else if (this.isModalOpen()) {
+          this.trapFocus(this.modal, e);
+        }
+      } else if (e.key === 'Escape') {
+        if (isCitationOpen) {
+          citationModal.classList.remove('active');
+          citationModal.classList.add('hidden');
+          if (this.citationTriggerElement && typeof this.citationTriggerElement.focus === 'function') {
+            this.citationTriggerElement.focus();
+          }
+        } else if (this.modal && this.modal.classList.contains('active')) {
           this.showModal(false);
         }
-        const citationModal = document.getElementById('citationModal');
-        if (citationModal && citationModal.classList.contains('active')) {
-          citationModal.classList.remove('active');
-        }
-      } else if (e.key === '/' && document.activeElement !== this.searchInput && !this.isModalOpen()) {
+      } else if (e.key === '/' && document.activeElement !== this.searchInput && !this.isModalOpen() && !isCitationOpen) {
         e.preventDefault();
         if (this.searchInput) this.searchInput.focus();
-      } else if (this.isModalOpen()) {
+      } else if (this.isModalOpen() && !isCitationOpen) {
         if ((e.key === 'f' || e.key === 'F') && !['input', 'textarea'].includes(document.activeElement.tagName.toLowerCase())) {
           e.preventDefault();
           this.toggleFullscreen();
@@ -399,9 +433,15 @@ export class JournalEngine {
   showModal(show = true) {
     if (!this.modal) return;
     if (show) {
+      this.previousActiveElement = document.activeElement;
       document.body.style.overflow = 'hidden';
       this.modal.classList.remove('hidden');
       this.modal.classList.add('active');
+
+      setTimeout(() => {
+        const firstFocusable = this.modal.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+        if (firstFocusable) firstFocusable.focus();
+      }, 50);
     } else {
       this.stopTTS();
       document.body.style.overflow = '';
@@ -421,6 +461,11 @@ export class JournalEngine {
       // Reset scroll
       const modalContentArea = document.getElementById('modalContentArea');
       if (modalContentArea) modalContentArea.scrollTop = 0;
+
+      // Restore focus to opener element
+      if (this.previousActiveElement && typeof this.previousActiveElement.focus === 'function') {
+        this.previousActiveElement.focus();
+      }
     }
   }
 
@@ -464,6 +509,25 @@ export class JournalEngine {
       });
     }
 
+    // Classroom Interventions / Lessons Link
+    const classroomBox = document.getElementById('modalClassroomLink');
+    const lessonsList = document.getElementById('modalLessonsList');
+    if (classroomBox && lessonsList) {
+      if (entry.relatedLessons && entry.relatedLessons.length > 0) {
+        lessonsList.innerHTML = entry.relatedLessons.map(l => `
+          <a href="${l.url}" class="classroom-lesson-card" target="_blank" rel="noopener noreferrer">
+            <span class="lesson-grade-pill">${l.grade || 'Lesson'}</span>
+            <span class="lesson-card-title">${l.title}</span>
+            <i class="fas fa-arrow-right lesson-card-icon"></i>
+          </a>
+        `).join('');
+        classroomBox.classList.remove('hidden');
+      } else {
+        classroomBox.classList.add('hidden');
+        lessonsList.innerHTML = '';
+      }
+    }
+
     // Fetch Markdown Content
     if (fullContentEl) {
       fullContentEl.innerHTML = `
@@ -492,11 +556,21 @@ export class JournalEngine {
             breaks: true,
             headerIds: true
           });
-          fullContentEl.innerHTML = marked.parse(mdText);
+          const parsedHtml = marked.parse(mdText);
+          fullContentEl.innerHTML = (window.DOMPurify && typeof window.DOMPurify.sanitize === 'function')
+            ? window.DOMPurify.sanitize(parsedHtml)
+            : parsedHtml;
           this.generateTableOfContents(fullContentEl);
           
-          // Re-render MathJax if present
-          if (window.MathJax && window.MathJax.typesetPromise) {
+          // Re-render MathJax if present or load on-demand if math is detected
+          const hasMathNotation = /[$]|\\\(|\\\[/.test(mdText);
+          if (hasMathNotation && typeof window.ensureMathJax === 'function') {
+            window.ensureMathJax().then((mj) => {
+              if (mj && mj.typesetPromise) {
+                mj.typesetPromise([fullContentEl]).catch(err => console.debug("MathJax render:", err));
+              }
+            }).catch(err => console.debug("MathJax load error:", err));
+          } else if (window.MathJax && window.MathJax.typesetPromise) {
             window.MathJax.typesetPromise([fullContentEl]).catch(err => console.debug("MathJax render:", err));
           }
         } else {
@@ -651,9 +725,15 @@ export class JournalEngine {
         const entry = this.journalData.find(e => e.id === this.state.currentEntryId);
         if (!entry) return;
 
+        this.citationTriggerElement = document.activeElement;
         this.generateCitations(entry);
         citationModal.classList.remove('hidden');
         citationModal.classList.add('active');
+
+        setTimeout(() => {
+          const first = citationModal.querySelector('button, [href], input, [tabindex]:not([tabindex="-1"])');
+          if (first) first.focus();
+        }, 50);
       });
     }
 
@@ -661,6 +741,9 @@ export class JournalEngine {
       closeCitationBtn.addEventListener('click', () => {
         citationModal.classList.remove('active');
         citationModal.classList.add('hidden');
+        if (this.citationTriggerElement && typeof this.citationTriggerElement.focus === 'function') {
+          this.citationTriggerElement.focus();
+        }
       });
     }
 

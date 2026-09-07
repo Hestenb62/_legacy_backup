@@ -1860,3 +1860,88 @@
     width: 16rem;
   }
 }
+
+/* --- Classroom Applications Callout --- */
+.classroom-app-box {
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.06), rgba(6, 182, 212, 0.06));
+  border: 1px solid rgba(79, 70, 229, 0.2);
+  border-radius: var(--radius-xl);
+  padding: 1.25rem 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.dark .classroom-app-box {
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.15), rgba(6, 182, 212, 0.1));
+  border-color: rgba(79, 70, 229, 0.35);
+}
+
+.classroom-app-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0 0 0.5rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.classroom-app-desc {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin: 0 0 1rem 0;
+}
+
+.classroom-lessons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0.75rem;
+}
+
+.classroom-lesson-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  color: var(--color-text-main);
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.classroom-lesson-card:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  color: var(--color-primary);
+}
+
+.lesson-grade-pill {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: 9999px;
+  background: rgba(79, 70, 229, 0.1);
+  color: var(--color-primary);
+  white-space: nowrap;
+}
+
+.lesson-card-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  flex: 1;
+  line-height: 1.3;
+}
+
+.lesson-card-icon {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  transition: transform 0.2s ease;
+}
+
+.classroom-lesson-card:hover .lesson-card-icon {
+  transform: translateX(3px);
+  color: var(--color-primary);
+}

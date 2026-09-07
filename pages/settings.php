@@ -378,6 +378,10 @@ include '../src/header.php';
                         class="settings-btn settings-btn-export">
                         <i class="fas fa-download"></i> Export All Data
                     </button>
+                    <button onclick="exportAccommodationSheet()"
+                        class="settings-btn settings-btn-export" style="background: linear-gradient(135deg, var(--color-primary), var(--color-accent)); color: #ffffff; border: none;">
+                        <i class="fas fa-file-medical-alt"></i> Export IEP / 504 Accommodation Sheet
+                    </button>
                 </div>
 
                 <div class="settings-sync-container">
@@ -398,14 +402,17 @@ include '../src/header.php';
                             <i class="fas fa-cloud-download-alt"></i> Restore from Drive
                         </button>
                     </div>
-                    <div class="mt-4" style="display: flex; align-items: center; justify-content: space-between; padding: 1rem; background: var(--color-bg-secondary); border-radius: 8px;">
+                    <div class="mt-4" style="display: flex; align-items: center; justify-content: space-between; padding: 1rem; background: var(--color-bg-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);">
                         <div>
-                            <span class="settings-toggle-title">Auto-Sync to Google Drive</span>
-                            <span class="settings-toggle-desc">Automatically backup changes in the background.</span>
+                            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.25rem;">
+                                <span class="settings-toggle-title" style="margin-bottom: 0;">Auto-Sync to Google Drive</span>
+                                <span id="gdrive-sync-status" class="sync-status-badge disabled">Checking...</span>
+                            </div>
+                            <span class="settings-toggle-desc">Automatically backup changes in the background when settings or progress change.</span>
                         </div>
                         <label class="settings-switch">
                             <input type="checkbox" id="gdrive-autosync-toggle" class="settings-switch-input"
-                                onchange="localStorage.setItem('auto_sync_gdrive', this.checked); if(this.checked) triggerAutoSync();">
+                                onchange="toggleAutoSync(this.checked)">
                             <div class="settings-switch-slider"></div>
                         </label>
                     </div>
@@ -516,6 +523,255 @@ include '../src/header.php';
         downloadAnchorNode.click();
         downloadAnchorNode.remove();
         alert('Data downloaded as hestens_learning_data.json');
+    }
+
+    function exportAccommodationSheet() {
+        const s = window.currentSettings || {};
+        let profile = { firstName: 'Student', lastName: '' };
+        try {
+            const rawProfile = localStorage.getItem('hesten-user-profile');
+            if (rawProfile) profile = { ...profile, ...JSON.parse(rawProfile) };
+        } catch (e) {}
+
+        const studentName = (profile.firstName + ' ' + (profile.lastName || '')).trim() || 'Student';
+        const dateStr = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+        const html = `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IEP & 504 Accommodation Profile - ${studentName}</title>
+    <style>
+        @page { size: letter; margin: 0.75in; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            color: #1e293b;
+            line-height: 1.5;
+            background: #ffffff;
+            margin: 0;
+            padding: 24px;
+        }
+        .header {
+            border-bottom: 3px solid #4f46e5;
+            padding-bottom: 16px;
+            margin-bottom: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .title { font-size: 24px; font-weight: 800; color: #0f172a; margin: 0 0 4px; }
+        .subtitle { font-size: 14px; color: #64748b; margin: 0; }
+        .badge {
+            display: inline-block;
+            background: #eef2ff;
+            color: #4338ca;
+            padding: 6px 12px;
+            border-radius: 9999px;
+            font-weight: 700;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .student-info {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 24px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+        .info-item { display: flex; flex-direction: column; }
+        .info-label { font-size: 11px; font-weight: 700; text-transform: uppercase; color: #64748b; }
+        .info-value { font-size: 15px; font-weight: 600; color: #0f172a; }
+        .section-heading {
+            font-size: 16px;
+            font-weight: 700;
+            color: #1e293b;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 6px;
+            margin-top: 20px;
+            margin-bottom: 12px;
+        }
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 16px;
+        }
+        .table th, .table td {
+            text-align: left;
+            padding: 8px 12px;
+            border-bottom: 1px solid #e2e8f0;
+            font-size: 13px;
+        }
+        .table th {
+            background: #f1f5f9;
+            font-weight: 700;
+            color: #334155;
+        }
+        .tag-active {
+            color: #047857;
+            background: #ecfdf5;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 11px;
+            display: inline-block;
+        }
+        .tag-inactive {
+            color: #64748b;
+            font-size: 11px;
+        }
+        .footer {
+            margin-top: 32px;
+            padding-top: 16px;
+            border-top: 1px solid #e2e8f0;
+            font-size: 11px;
+            color: #94a3b8;
+            display: flex;
+            justify-content: space-between;
+        }
+        @media print {
+            .no-print { display: none !important; }
+            body { padding: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="no-print" style="margin-bottom: 16px; text-align: right;">
+        <button onclick="window.print()" style="background: #4f46e5; color: #fff; border: none; padding: 10px 20px; border-radius: 6px; font-weight: 700; cursor: pointer;">
+            Print / Save to PDF
+        </button>
+    </div>
+
+    <div class="header">
+        <div>
+            <h1 class="title">Digital Accessibility & Learning Accommodations</h1>
+            <p class="subtitle">Individualized Education Program (IEP) & Section 504 Recommendation Profile</p>
+        </div>
+        <div class="badge">Hesten's Learning</div>
+    </div>
+
+    <div class="student-info">
+        <div class="info-item">
+            <span class="info-label">Learner</span>
+            <span class="info-value">${studentName}</span>
+        </div>
+        <div class="info-item">
+            <span class="info-label">Date Generated</span>
+            <span class="info-value">${dateStr}</span>
+        </div>
+        <div class="info-item">
+            <span class="info-label">Curriculum Track</span>
+            <span class="info-value">${(s.curriculum || 'EngageNY').toUpperCase()}</span>
+        </div>
+    </div>
+
+    <h2 class="section-heading">1. Visual & Cognitive Presentation Accommodations</h2>
+    <table class="table">
+        <thead>
+            <tr><th>Accommodation Feature</th><th>Target Value / Setting</th><th>Classroom / Device Recommendation</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Dyslexic / Accessible Font</strong></td>
+                <td>${s.fontFamily || 'Outfit'}</td>
+                <td>Ensure high letter-differentiation font is configured on student reading terminals.</td>
+            </tr>
+            <tr>
+                <td><strong>Font Size & Scale</strong></td>
+                <td>${s.fontSize || 1.0}x Scale (${Math.round((s.fontSize || 1.0) * 16)}px base)</td>
+                <td>Provide magnified test prints or enable 125%+ browser display zoom.</td>
+            </tr>
+            <tr>
+                <td><strong>Line & Word Spacing</strong></td>
+                <td>Line: ${s.lineHeight || 1.6}, Word: +${s.wordSpacing || 0}em</td>
+                <td>Use increased line and character leading to prevent visual crowding.</td>
+            </tr>
+            <tr>
+                <td><strong>Theme & Contrast</strong></td>
+                <td>${(s.theme || 'light').toUpperCase()}</td>
+                <td>${s.theme === 'sepia' ? 'Warm tint reduces glare (Irlen sensitivity).' : (s.theme === 'high-contrast' ? 'Maximum contrast for low-vision clarity.' : 'Standard light/dark accommodation.')}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 class="section-heading">2. Focus & Attention Assistance (ADHD / Executive Function)</h2>
+    <table class="table">
+        <thead>
+            <tr><th>Assistive Tool</th><th>Status</th><th>Recommended Classroom Application</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Reading Mask / Line Tracker</strong></td>
+                <td>${s.readingMask ? '<span class="tag-active">ACTIVE (' + Math.round((s.maskOpacity || 0.7) * 100) + '% Shading)</span>' : '<span class="tag-inactive">Not Active</span>'}</td>
+                <td>Provide physical reading ruler or digital cursor tracking guide during testing.</td>
+            </tr>
+            <tr>
+                <td><strong>Spotlight Focus Mode</strong></td>
+                <td>${s.spotlightMode ? '<span class="tag-active">ACTIVE</span>' : '<span class="tag-inactive">Not Active</span>'}</td>
+                <td>Block peripheral page clutter and isolate one exercise item at a time.</td>
+            </tr>
+            <tr>
+                <td><strong>Distraction Reduction (Hide Images)</strong></td>
+                <td>${s.hideImages ? '<span class="tag-active">ACTIVE</span>' : '<span class="tag-inactive">Not Active</span>'}</td>
+                <td>Provide text-first worksheets without non-essential decorative graphics.</td>
+            </tr>
+            <tr>
+                <td><strong>Vestibular Support (Reduced Motion)</strong></td>
+                <td>${s.stopAnimations ? '<span class="tag-active">ACTIVE</span>' : '<span class="tag-inactive">Not Active</span>'}</td>
+                <td>Disable auto-playing UI transitions and flashing graphic stimuli.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 class="section-heading">3. Auditory & Sensory Supports</h2>
+    <table class="table">
+        <thead>
+            <tr><th>Support Tool</th><th>Status</th><th>Notes</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Text-to-Speech (TTS)</strong></td>
+                <td>${s.textToSpeech ? '<span class="tag-active">ACTIVE</span>' : '<span class="tag-inactive">Standard</span>'}</td>
+                <td>Permit audio read-aloud headset support during independent reading & exams.</td>
+            </tr>
+            <tr>
+                <td><strong>Acoustic Audio Ticks</strong></td>
+                <td>${s.acousticTicks ? '<span class="tag-active">ACTIVE</span>' : '<span class="tag-inactive">Standard</span>'}</td>
+                <td>Auditory confirmation for button activations and navigation events.</td>
+            </tr>
+            <tr>
+                <td><strong>Large Cursor Tracking</strong></td>
+                <td>${s.cursorSize === 'large' ? '<span class="tag-active">LARGE</span>' : '<span class="tag-inactive">Standard</span>'}</td>
+                <td>Enlarged high-visibility pointer for motor coordination tracking.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="footer">
+        <span>Prepared via Hesten\\'s Learning Platform Accessibility Engine</span>
+        <span>Valid for educational accommodation discussions under IDEA / Section 504</span>
+    </div>
+</body>
+</html>`;
+
+        const printWindow = window.open('', '_blank');
+        if (printWindow) {
+            printWindow.document.write(html);
+            printWindow.document.close();
+        } else {
+            const blob = new Blob([html], { type: 'text/html;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `IEP_Accommodation_Profile_${studentName.replace(/\\s+/g, '_')}.html`;
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+            URL.revokeObjectURL(url);
+        }
     }
 
     // Initialize UI on Load

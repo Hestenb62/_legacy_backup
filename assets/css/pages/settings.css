@@ -843,4 +843,43 @@
     color: var(--color-success);
     margin-right: 0.25rem;
   }
+
+  /* Sync Status Badge */
+  .sync-status-badge {
+    font-size: 0.725rem;
+    font-weight: 700;
+    padding: 0.15rem 0.55rem;
+    border-radius: 9999px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    line-height: 1.2;
+    transition: all 0.3s ease;
+  }
+  .sync-status-badge.synced {
+    background: rgba(16, 185, 129, 0.12);
+    color: #059669;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+  }
+  .sync-status-badge.syncing,
+  .sync-status-badge.connecting {
+    background: rgba(59, 130, 246, 0.12);
+    color: #2563eb;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+  }
+  .sync-status-badge.auth_required {
+    background: rgba(245, 158, 11, 0.12);
+    color: #d97706;
+    border: 1px solid rgba(245, 158, 11, 0.3);
+  }
+  .sync-status-badge.error {
+    background: rgba(239, 68, 68, 0.12);
+    color: #dc2626;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+  }
+  .sync-status-badge.disabled {
+    background: rgba(100, 116, 139, 0.1);
+    color: var(--color-text-muted);
+    border: 1px solid var(--color-border);
+  }
 }

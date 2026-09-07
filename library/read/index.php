@@ -281,7 +281,15 @@ if ($bookId === '') {
             if (isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['teacher_password'])) {
                 $submittedPassword = trim($_POST['teacher_password']);
                 $expectedPassword = (string)($teacherPassword ?? ($teacher_password ?? '8675309'));
-                if ($submittedPassword === $expectedPassword) {
+                $isValidPassword = false;
+
+                if (!empty($teacherPasswordHash) && password_verify($submittedPassword, $teacherPasswordHash)) {
+                    $isValidPassword = true;
+                } elseif ($submittedPassword === $expectedPassword) {
+                    $isValidPassword = true;
+                }
+
+                if ($isValidPassword) {
                     $_SESSION['teacher_unlocked'] = true;
                     $isTeacherUnlocked = true;
                     header('Location: index.php?book=' . urlencode($bookId) . '&chapter=teacher-resources');

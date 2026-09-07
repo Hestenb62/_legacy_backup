@@ -33,15 +33,48 @@ const defaultSettings = {
 let currentSettings = defaultSettings;
 let speechUtterance = null; // For TTS
 
+// Live Screen Reader Announcement Function
+function announceA11y(message) {
+    if (!message) return;
+    const region = document.getElementById('a11y-live-region');
+    if (region) {
+        region.textContent = '';
+        setTimeout(() => {
+            region.textContent = message;
+        }, 50);
+    }
+}
+window.announceA11y = announceA11y;
+
 (function init() {
     try {
         const stored = localStorage.getItem(STORAGE_KEY);
-        if (stored) currentSettings = {
-            ...defaultSettings,
-            ...JSON.parse(stored)
-        };
+        if (stored) {
+            currentSettings = {
+                ...defaultSettings,
+                ...JSON.parse(stored)
+            };
+        } else {
+            // Check OS accessibility and appearance preferences
+            if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                currentSettings.stopAnimations = true;
+            }
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                currentSettings.theme = 'dark';
+            }
+        }
         // Expose settings to window
         window.currentSettings = currentSettings;
+
+        // Listen for OS reduced-motion changes dynamically
+        if (window.matchMedia) {
+            window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', (e) => {
+                const isStored = localStorage.getItem(STORAGE_KEY);
+                if (!isStored) {
+                    updateGlobalSetting('stopAnimations', e.matches);
+                }
+            });
+        }
 
         // Init toolbar immediately
         initSelectionToolbar();
@@ -57,6 +90,24 @@ function updateGlobalSetting(key, value) {
     saveSettingsInternal();
     applySettings(currentSettings);
     
+    // Announce setting changes to assistive technologies
+    const friendlyAnnouncements = {
+        theme: `Theme set to ${value}`,
+        fontFamily: `Font family changed to ${value}`,
+        readingMask: value ? 'Reading mask enabled' : 'Reading mask disabled',
+        spotlightMode: value ? 'Spotlight focus mode enabled' : 'Spotlight focus mode disabled',
+        stopAnimations: value ? 'Animations disabled' : 'Animations enabled',
+        textToSpeech: value ? 'Text to speech enabled' : 'Text to speech disabled',
+        acousticTicks: value ? 'Acoustic audio ticks enabled' : 'Acoustic audio ticks disabled',
+        fontSize: `Font size adjusted to ${value} rem`,
+        lineHeight: `Line height adjusted to ${value}`,
+        letterSpacing: `Letter spacing adjusted to ${value}`,
+        wordSpacing: `Word spacing adjusted to ${value}`
+    };
+    if (friendlyAnnouncements[key]) {
+        announceA11y(friendlyAnnouncements[key]);
+    }
+
     // Play toggle sound if acoustic ticks are active
     if (currentSettings.acousticTicks) {
         playA11yTick('toggle');

@@ -1,12 +1,4 @@
 <?php
-$verifyFile = __DIR__ . '/assets/verify.php';
-$expectedHash = 'b9ec849f5efc65de95a7680e35f52426fda570d857d6281e58f18b62f9ade5c1';
-
-if (!file_exists($verifyFile) || strtolower(hash_file('sha256', $verifyFile)) !== $expectedHash) {
-    http_response_code(403);
-    die("Error: Integrity check failed. The verification file is missing or has been modified.");
-}
-
 $pageTitle = "Hesten's Learning"; // SEO Title
 include 'src/header.php';
 
@@ -37,7 +29,7 @@ include 'src/header.php';
 </main>
 
 <!-- PAGE SCRIPT -->
-<script src="assets/js/index-main.js?v=1.2"></script>
+<script src="<?= assetVersion('/assets/js/index-main.js') ?>"></script>
 
 <?php include __DIR__ . '/src/partials/migration-popup.php'; ?>
 

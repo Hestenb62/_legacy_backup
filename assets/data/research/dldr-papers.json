@@ -27,6 +27,18 @@
       "Intervention"
     ],
     "summary": "This paper provides a comprehensive review of the critical relationship between phonological awareness and developmental dyslexia, focusing specifically on rhyming ability.",
-    "fileUrl": "/research/DLDR/texts/PA-Rhyming-Impact.md"
+    "fileUrl": "/research/DLDR/texts/PA-Rhyming-Impact.md",
+    "relatedLessons": [
+      {
+        "title": "Kindergarten ELA: Letter Sounds & Rhyme Isolation",
+        "url": "/lessons/k-ela-m1-a-1.php",
+        "grade": "Kindergarten"
+      },
+      {
+        "title": "Kindergarten ELA: Blending & Phonemic Awareness",
+        "url": "/lessons/k-ela-m1-b-1.php",
+        "grade": "Grade K-1"
+      }
+    ]
   }
 ]

@@ -1,55 +1,66 @@
-const CACHE_NAME = 'hestens-learning-v3';
+const CACHE_NAME = 'hestens-learning-v4';
 const ASSETS_TO_CACHE = [
 
-  // Main Directory Files A-Z
+  // Main Directory Pages & Manifest
   '/',
-  '/about-me.php',
-  '/about.php',
-  '/assessment/index.php',
-  '/contact.php',
-  '/standards.php',
-  '/help-center.php',
   '/index.php',
   '/manifest.json',
-  '/mission.php',
-  '/parents.php',
-  '/service-worker.js',
-  '/settings.php',
-  '/standard.php',
-  '/student/index.php',
-  '/teachers.php',
-  '/terms-of-use.php',
+  '/assessment/index.php',
   '/library/index.php',
+  '/research/index.php',
+  '/student/index.php',
 
-  // Images
+  // Pages Directory
+  '/pages/about-me.php',
+  '/pages/about.php',
+  '/pages/contact.php',
+  '/pages/help-center.php',
+  '/pages/mission.php',
+  '/pages/parents.php',
+  '/pages/privacy.php',
+  '/pages/profile.php',
+  '/pages/settings.php',
+  '/pages/standards.php',
+  '/pages/teachers.php',
+  '/pages/terms-of-use.php',
+
+  // Images & Icons
   '/assets/images/6791421e-7ca7-40bd-83d3-06a479bf7f36.png',
 
-  // CSS Layers
-  '/assets/css/tokens.css',
-  '/assets/css/reset.css',
-  '/assets/css/primitives.css',
-  '/assets/css/utilities.css',
-  '/assets/css/components.css',
+  // CSS Layers & Layouts
+  '/assets/css/global-tokens.css',
+  '/assets/css/global-reset.css',
+  '/assets/css/global-primitives.css',
+  '/assets/css/global-components.css',
   '/assets/css/components/fixed-tools.css',
   '/assets/css/layouts/header.css',
   '/assets/css/layouts/footer.css',
 
-  // JavaScript
+  // JavaScript Core & Data
   '/assets/js/assessment-core.js',
   '/assets/js/assessment-questionGenerator.js',
   '/assets/js/global-a11y.js',
   '/assets/js/global-standard.js',
   '/assets/js/index-main.js',
   '/assets/js/global-announcements.js',
-  '/assets/js/global-core-ui.js'
+  '/assets/js/global-core-ui.js',
+  '/assets/js/gdrive-sync.js',
+  '/assets/data/global-learningLevels.js',
+  '/assets/js/standards-ccss-math-ela.js'
 ];
 
-// Install Event: Caches critical assets immediately
+// Install Event: Caches critical assets safely with individual fallback
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => {
+    caches.open(CACHE_NAME).then(async (cache) => {
       console.log('[Service Worker] Caching pre-defined assets');
-      return cache.addAll(ASSETS_TO_CACHE);
+      await Promise.allSettled(
+        ASSETS_TO_CACHE.map((url) =>
+          cache.add(url).catch((err) => {
+            console.warn(`[Service Worker] Non-critical cache fail for: ${url}`, err);
+          })
+        )
+      );
     })
   );
   self.skipWaiting();
