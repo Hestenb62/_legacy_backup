@@ -21,7 +21,7 @@ $prevLessonUrl = '/levels/k.php';
 $nextLessonUrl = '/lesson.php?id=k-math-m1-a-2';
 
 $useStandardLayout = false;
-$lessonCssUrl = '/assets/css/pages/lesson.css';
+$lessonCssUrl = '../../assets/css/pages/lesson.css';
 
 ob_start();
 ?>
@@ -801,5 +801,5 @@ $practiceQuestions = [
 ];
 
 $lessonHtmlContent = ob_get_clean();
-include '../src/layouts/lesson-layout.php';
+include '../../src/layouts/lesson-layout.php';
 ?>
