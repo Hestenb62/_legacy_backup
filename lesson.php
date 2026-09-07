@@ -4,8 +4,8 @@
 $id = isset($_GET['id']) ? $_GET['id'] : '';
 
 // Validate the ID to prevent directory traversal
-if (!preg_match('/^[a-z0-9\-]+$/', $id)) {
-    die("Invalid lesson ID");
+if (!preg_match('/^[a-zA-Z0-9\-\._]+$/', $id)) {
+    die("Invalid lesson ID: " . htmlspecialchars($id));
 }
 
 $contentFile = __DIR__ . "/src/lessons-content/{$id}.php";
