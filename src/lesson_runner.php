@@ -77,6 +77,10 @@ if (!isset($practiceQuestions) || empty($practiceQuestions)) {
 
         <!-- Right: Lesson Completion Toggle & Sequential Nav -->
         <div class="runner-dock-right">
+            <button type="button" id="runner-bookmark-btn" class="runner-btn runner-btn-subtle runner-btn-bookmark" onclick="toggleRunnerLessonBookmark()" title="Bookmark this lesson" aria-label="Bookmark this lesson">
+                <i class="far fa-bookmark" id="runner-bookmark-icon"></i>
+                <span id="runner-bookmark-text">Save</span>
+            </button>
             <button type="button" id="runner-toggle-complete-btn" class="runner-btn runner-btn-toggle" onclick="toggleRunnerComplete()" aria-label="Mark lesson as complete">
                 <i class="fas fa-check" id="runner-complete-icon"></i>
                 <span id="runner-complete-text">Mark Complete</span>
@@ -155,7 +159,10 @@ if (!isset($practiceQuestions) || empty($practiceQuestions)) {
         // 2. Pre-render practice questions
         renderPracticeQuestions();
 
-        // 3. Ensure confetti helper is loaded
+        // 3. Sync bookmark status
+        updateBookmarkButton();
+
+        // 4. Ensure confetti helper is loaded
         if (typeof confetti === 'undefined') {
             const s = document.createElement('script');
             s.src = 'https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js';
@@ -367,10 +374,49 @@ if (!isset($practiceQuestions) || empty($practiceQuestions)) {
         }
     }
 
+    function updateBookmarkButton() {
+        const btn = document.getElementById('runner-bookmark-btn');
+        const text = document.getElementById('runner-bookmark-text');
+        const icon = document.getElementById('runner-bookmark-icon');
+        if (!btn || !text || !icon) return;
+
+        const isBm = window.UniversalBookmarks ? window.UniversalBookmarks.isBookmarked(LESSON_ID) : false;
+        if (isBm) {
+            btn.classList.add('bookmarked');
+            text.textContent = 'Saved';
+            icon.className = 'fas fa-bookmark';
+            btn.title = 'Saved to your Bookmarks';
+        } else {
+            btn.classList.remove('bookmarked');
+            text.textContent = 'Save';
+            icon.className = 'far fa-bookmark';
+            btn.title = 'Bookmark this lesson';
+        }
+    }
+
+    function toggleRunnerLessonBookmark() {
+        if (!window.UniversalBookmarks) return;
+        const nowBookmarked = window.UniversalBookmarks.toggle({
+            id: LESSON_ID,
+            title: LESSON_TITLE,
+            type: 'lesson',
+            url: window.location.pathname,
+            category: LEVEL_ID.toUpperCase() + ' Grade',
+            icon: 'fa-graduation-cap'
+        });
+        updateBookmarkButton();
+        if (typeof window.announceA11y === 'function') {
+            window.announceA11y(nowBookmarked ? 'Lesson saved to bookmarks' : 'Lesson removed from bookmarks');
+        }
+    }
+
+    window.addEventListener('bookmarks-updated', updateBookmarkButton);
+
     // Expose globals
     window.openLessonPracticeModal = openLessonPracticeModal;
     window.closeLessonPracticeModal = closeLessonPracticeModal;
     window.toggleRunnerComplete = toggleRunnerComplete;
+    window.toggleRunnerLessonBookmark = toggleRunnerLessonBookmark;
 
     // Run on load
     if (document.readyState === 'loading') {

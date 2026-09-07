@@ -583,6 +583,17 @@ main.container {
     color: #10b981;
 }
 
+.runner-btn-bookmark.bookmarked {
+    background: rgba(99, 102, 241, 0.12);
+    border-color: #6366f1;
+    color: #6366f1;
+}
+
+.runner-btn-bookmark.bookmarked:hover {
+    border-color: #4f46e5;
+    color: #4f46e5;
+}
+
 .runner-nav-group {
     display: flex;
     align-items: center;

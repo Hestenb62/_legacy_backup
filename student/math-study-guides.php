@@ -5,7 +5,7 @@ $pageDescription = "Comprehensive guides and detailed notes to help you understa
 $pageAuthor = "Hesten's Learning Team";
 
 // Include the header file
-include '..\\src\\header.php';
+include '../src/header.php';
 ?>
 
 <link rel="stylesheet" href="/assets/css/pages/student-resources.css">
@@ -193,8 +193,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 <?php
 // Include the footer file
-include '..\src\resource-modal.php';
+include '../src/resource-modal.php';
 // Include the footer file
-include '..\src\footer.php';
+include '../src/footer.php';
 ?>
 

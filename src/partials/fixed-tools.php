@@ -8,6 +8,7 @@
     <div id="fab-container" class="fab-container">
         <!-- Collapsible Tools Menu -->
         <div id="fab-menu" class="fab-menu">
+            <button onclick="window.openCommandPalette()" class="fab-item-btn fab-command" title="Command Palette (Ctrl+K)" type="button"><i class="fas fa-terminal"></i></button>
             <button onclick="window.print()" class="fab-item-btn fab-print" title="Print Page" type="button"><i class="fas fa-print"></i></button>
             <button id="citation-toggle" class="fab-item-btn fab-citation" title="Citation" type="button"><i class="fas fa-quote-right"></i></button>
             <button id="timer-toggle" class="fab-item-btn fab-timer" title="Timer" type="button"><i class="fas fa-stopwatch"></i></button>

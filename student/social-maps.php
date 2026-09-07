@@ -5,7 +5,7 @@ $pageDescription = "Explore the world\'s geography and historical changes throug
 $pageAuthor = "Hesten's Learning Team";
 
 // Include the header file
-include '..\\src\\header.php';
+include '../src/header.php';
 ?>
 
 <link rel="stylesheet" href="/assets/css/pages/student-resources.css">
@@ -193,8 +193,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 <?php
 // Include the footer file
-include '..\src\resource-modal.php';
+include '../src/resource-modal.php';
 // Include the footer file
-include '..\src\footer.php';
+include '../src/footer.php';
 ?>
 

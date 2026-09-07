@@ -135,6 +135,7 @@ if (!function_exists('assetVersion')) {
     <link rel="stylesheet" href="<?= assetVersion('/assets/css/global-primitives.css') ?>">
     <link rel="stylesheet" href="<?= assetVersion('/assets/css/global-components.css') ?>">
     <link rel="stylesheet" href="<?= assetVersion('/assets/css/components/fixed-tools.css') ?>">
+    <link rel="stylesheet" href="<?= assetVersion('/assets/css/components/command-palette.css') ?>">
     <link rel="stylesheet" href="<?= assetVersion('/assets/css/layouts/header.css') ?>">
     <link rel="stylesheet" href="<?= assetVersion('/assets/css/layouts/footer.css') ?>">
 </head>
@@ -148,6 +149,7 @@ if (!function_exists('assetVersion')) {
 
     <!-- Fixed Tools & Overlays -->
     <?php include __DIR__ . '/partials/fixed-tools.php'; ?>
+    <?php include __DIR__ . '/partials/command-palette.php'; ?>
     <!-- Interactive Panels -->
     <?php include __DIR__ . '/partials/timer.php'; ?>
     <?php include __DIR__ . '/partials/scratchpad.php'; ?>
@@ -190,6 +192,11 @@ if (!function_exists('assetVersion')) {
                                 <i class="fas fa-search search-icon"></i>
                             </button>
                         </form>
+
+                        <button type="button" class="header-cmd-palette-btn" onclick="window.openCommandPalette()" title="Command Palette (Ctrl+K)" aria-label="Open Command Palette">
+                            <i class="fas fa-terminal" aria-hidden="true"></i>
+                            <span style="font-size: 0.6875rem; font-weight: 700; opacity: 0.85; font-family: monospace;">Ctrl K</span>
+                        </button>
                         
                         <div class="user-dropdown-container">
                             <button class="user-pill" id="user-pill-btn" aria-expanded="false" aria-haspopup="true" aria-controls="user-dropdown-menu">
@@ -272,6 +279,8 @@ if (!function_exists('assetVersion')) {
 
     <script src="<?= assetVersion('/assets/js/global-a11y.js') ?>"></script>
     <script src="<?= assetVersion('/assets/js/global-core-ui.js') ?>"></script>
+    <script src="<?= assetVersion('/assets/js/universal-bookmarks.js') ?>"></script>
+    <script src="<?= assetVersion('/assets/js/command-palette.js') ?>"></script>
     <script>
         const navToggle = document.getElementById('nav-toggle');
         if (navToggle) {

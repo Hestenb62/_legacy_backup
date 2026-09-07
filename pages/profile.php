@@ -147,7 +147,7 @@ include ABSPATH . '../src/header.php';
                         </div>
                         <div class="profile-stat-box">
                             <div class="profile-stat-num" id="stat-bookmarks">0</div>
-                            <div class="profile-stat-label">Saved Books</div>
+                            <div class="profile-stat-label">Saved Items</div>
                         </div>
                         <div class="profile-stat-box">
                             <div class="profile-stat-num" id="stat-highlights">0</div>
@@ -182,17 +182,22 @@ include ABSPATH . '../src/header.php';
             <div class="profile-col profile-col-right animate-reveal" style="animation-delay: 0.2s">
                 <section class="profile-card profile-activity-card">
                     <div class="profile-tabs-row" role="tablist">
-                        <button type="button" class="profile-tab-btn active" id="tab-books" role="tab">My Books</button>
-                        <button type="button" class="profile-tab-btn" id="tab-highlights" role="tab">My Highlights</button>
+                        <button type="button" class="profile-tab-btn active" id="tab-all-bookmarks" data-category="all" role="tab"><i class="fas fa-bookmark"></i> All Saved</button>
+                        <button type="button" class="profile-tab-btn" id="tab-books" data-category="book" role="tab"><i class="fas fa-book"></i> Books</button>
+                        <button type="button" class="profile-tab-btn" id="tab-lessons" data-category="lesson" role="tab"><i class="fas fa-graduation-cap"></i> Lessons</button>
+                        <button type="button" class="profile-tab-btn" id="tab-highlights" data-category="highlights" role="tab"><i class="fas fa-highlighter"></i> Highlights</button>
                     </div>
                     
                     <div class="profile-tab-content">
-                        <!-- Books Tab -->
+                        <!-- Bookmarks Tab Pane -->
                         <div id="content-books" class="profile-tab-pane">
                             <div class="profile-empty-state hidden" id="empty-books">
-                                <i class="fas fa-book-open"></i>
-                                <p>You haven't saved any books yet.</p>
-                                <a href="/library/" class="profile-btn-secondary">Explore Library</a>
+                                <i class="fas fa-bookmark"></i>
+                                <p id="empty-bookmarks-msg">You haven't saved any items yet.</p>
+                                <div style="display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; margin-top: 0.75rem;">
+                                    <a href="/levels/" class="profile-btn-secondary" style="font-size: 0.8125rem;"><i class="fas fa-layer-group"></i> Browse Levels</a>
+                                    <a href="/library/" class="profile-btn-secondary" style="font-size: 0.8125rem;"><i class="fas fa-book-open"></i> Explore Library</a>
+                                </div>
                             </div>
                             <div id="list-books" class="profile-list">
                                 <!-- Populated by JS -->

@@ -60,12 +60,18 @@
         const bookContent = document.getElementById("book-content");
         const openSettingsBtn = document.getElementById("open-settings-btn");
         const settingsPanel = document.getElementById("settings-panel");
+        const fontDecBtn = document.getElementById("reader-font-dec");
+        const fontIncBtn = document.getElementById("reader-font-inc");
+        const fontPctLabel = document.getElementById("reader-font-pct");
+        const scaleSlider = document.getElementById("reader-scale-slider");
 
         let defaultPrefs = {
             font: "font-sans",
             size: "prose-lg",
             lh: "lh-wide",
-            theme: "theme-light"
+            theme: "theme-light",
+            scalePct: 100,
+            tracking: "tracking-normal"
         };
 
         try {
@@ -75,22 +81,50 @@
             }
         } catch (e) {}
 
+        // Ensure scalePct is valid
+        if (typeof defaultPrefs.scalePct !== 'number' || isNaN(defaultPrefs.scalePct)) {
+            if (defaultPrefs.size === 'prose-base') defaultPrefs.scalePct = 90;
+            else if (defaultPrefs.size === 'prose-2xl') defaultPrefs.scalePct = 130;
+            else defaultPrefs.scalePct = 100;
+        }
+
         function applyPrefs(prefs) {
             if (!bookContent) return;
 
-            // Reset fonts
-            bookContent.classList.remove("font-sans", "font-serif", "font-dyslexic");
+            // Reset and apply fonts
+            bookContent.classList.remove("font-sans", "font-serif", "font-dyslexic", "font-hyperlegible", "font-mono");
             bookContent.classList.add(prefs.font);
 
-            // Reset sizes
-            bookContent.classList.remove("prose-base", "prose-lg", "prose-2xl");
-            bookContent.classList.add(prefs.size);
+            // Dynamic Font Scale calculation (base: 1.15rem = 100%)
+            const remVal = (1.15 * (prefs.scalePct / 100)).toFixed(2) + 'rem';
+            bookContent.style.setProperty('--reader-font-size', remVal);
 
-            // Reset line height
-            bookContent.classList.remove("lh-normal", "lh-wide", "lh-extra");
+            // Also keep classes in sync for fallback
+            bookContent.classList.remove("prose-sm", "prose-base", "prose-lg", "prose-xl", "prose-2xl", "prose-3xl");
+            if (prefs.scalePct <= 85) bookContent.classList.add("prose-sm");
+            else if (prefs.scalePct <= 95) bookContent.classList.add("prose-base");
+            else if (prefs.scalePct <= 115) bookContent.classList.add("prose-lg");
+            else if (prefs.scalePct <= 135) bookContent.classList.add("prose-xl");
+            else if (prefs.scalePct <= 160) bookContent.classList.add("prose-2xl");
+            else bookContent.classList.add("prose-3xl");
+
+            // Update on-screen scale labels and slider
+            if (fontPctLabel) {
+                fontPctLabel.textContent = `${prefs.scalePct}%`;
+            }
+            if (scaleSlider && parseInt(scaleSlider.value, 10) !== prefs.scalePct) {
+                scaleSlider.value = prefs.scalePct;
+            }
+
+            // Reset and apply line height
+            bookContent.classList.remove("lh-tight", "lh-normal", "lh-wide", "lh-extra");
             bookContent.classList.add(prefs.lh);
 
-            // Reset theme
+            // Reset and apply tracking / kerning
+            bookContent.classList.remove("tracking-normal", "tracking-spaced", "tracking-wide");
+            bookContent.classList.add(prefs.tracking || "tracking-normal");
+
+            // Reset and apply theme
             document.body.classList.remove("theme-light", "theme-sepia", "theme-dark", "theme-midnight");
             document.body.classList.add(prefs.theme);
             const cleanTheme = prefs.theme.replace("theme-", "");
@@ -100,14 +134,16 @@
 
             // Sync settings panel buttons
             document.querySelectorAll(".settings-font").forEach(b => b.classList.toggle("active", b.dataset.font === prefs.font));
-            document.querySelectorAll(".settings-size").forEach(b => b.classList.toggle("active", b.dataset.size === prefs.size));
             document.querySelectorAll(".settings-lh").forEach(b => b.classList.toggle("active", b.dataset.lh === prefs.lh));
+            document.querySelectorAll(".settings-tracking").forEach(b => b.classList.toggle("active", b.dataset.tracking === (prefs.tracking || "tracking-normal")));
             document.querySelectorAll(".settings-theme").forEach(b => b.classList.toggle("active", b.dataset.theme === prefs.theme));
+            document.querySelectorAll(".settings-scale-chip").forEach(b => b.classList.toggle("active", parseInt(b.dataset.scale, 10) === prefs.scalePct));
 
             try {
                 localStorage.setItem(prefsKey, JSON.stringify(prefs));
             } catch (e) {}
 
+            // Reflow single page book mode if active
             if (window.recalculateReaderPages) {
                 setTimeout(window.recalculateReaderPages, 60);
             }
@@ -115,7 +151,37 @@
 
         applyPrefs(defaultPrefs);
 
-        // Toggle panel
+        // Quick Scaler Buttons
+        if (fontDecBtn) {
+            fontDecBtn.addEventListener("click", (e) => {
+                e.preventDefault();
+                defaultPrefs.scalePct = Math.max(75, defaultPrefs.scalePct - 10);
+                applyPrefs(defaultPrefs);
+                if (window.announceA11y) window.announceA11y(`Font size reduced to ${defaultPrefs.scalePct}%`);
+            });
+        }
+
+        if (fontIncBtn) {
+            fontIncBtn.addEventListener("click", (e) => {
+                e.preventDefault();
+                defaultPrefs.scalePct = Math.min(200, defaultPrefs.scalePct + 10);
+                applyPrefs(defaultPrefs);
+                if (window.announceA11y) window.announceA11y(`Font size increased to ${defaultPrefs.scalePct}%`);
+            });
+        }
+
+        // Font Scale Slider
+        if (scaleSlider) {
+            scaleSlider.addEventListener("input", (e) => {
+                defaultPrefs.scalePct = parseInt(e.target.value, 10);
+                applyPrefs(defaultPrefs);
+            });
+            scaleSlider.addEventListener("change", (e) => {
+                if (window.announceA11y) window.announceA11y(`Font size set to ${defaultPrefs.scalePct}%`);
+            });
+        }
+
+        // Toggle settings dropdown panel
         if (openSettingsBtn && settingsPanel) {
             openSettingsBtn.addEventListener("click", (e) => {
                 e.stopPropagation();
@@ -134,13 +200,22 @@
             btn.addEventListener("click", () => {
                 defaultPrefs.font = btn.dataset.font;
                 applyPrefs(defaultPrefs);
+                const fontNames = {
+                    'font-sans': 'Sans-Serif',
+                    'font-serif': 'Editorial Serif',
+                    'font-dyslexic': 'OpenDyslexic',
+                    'font-hyperlegible': 'Atkinson Hyperlegible',
+                    'font-mono': 'Monospace'
+                };
+                if (window.announceA11y) window.announceA11y(`Font family set to ${fontNames[btn.dataset.font] || btn.dataset.font}`);
             });
         });
 
-        document.querySelectorAll(".settings-size").forEach(btn => {
+        document.querySelectorAll(".settings-scale-chip").forEach(btn => {
             btn.addEventListener("click", () => {
-                defaultPrefs.size = btn.dataset.size;
+                defaultPrefs.scalePct = parseInt(btn.dataset.scale, 10);
                 applyPrefs(defaultPrefs);
+                if (window.announceA11y) window.announceA11y(`Font size set to ${defaultPrefs.scalePct}%`);
             });
         });
 
@@ -151,10 +226,18 @@
             });
         });
 
+        document.querySelectorAll(".settings-tracking").forEach(btn => {
+            btn.addEventListener("click", () => {
+                defaultPrefs.tracking = btn.dataset.tracking;
+                applyPrefs(defaultPrefs);
+            });
+        });
+
         document.querySelectorAll(".settings-theme").forEach(btn => {
             btn.addEventListener("click", () => {
                 defaultPrefs.theme = btn.dataset.theme;
                 applyPrefs(defaultPrefs);
+                if (window.announceA11y) window.announceA11y(`Theme set to ${btn.dataset.theme.replace('theme-', '')}`);
             });
         });
     }

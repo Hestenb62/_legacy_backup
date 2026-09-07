@@ -91,6 +91,9 @@ function renderSubjectModules(array $modulesList, string $subjectId, string $sub
                                     <span class="skill-mastery-slot"></span>
                                 </div>
                                 <div class="skill-actions">
+                                    <button type="button" class="skill-bookmark-btn" onclick="toggleSkillBookmark('<?php echo htmlspecialchars($skill['id']); ?>', '<?php echo addslashes($skill['name']); ?>', '<?php echo addslashes($skill['code']); ?>', '<?php echo isset($skill['url']) ? addslashes($skill['url']) : ''; ?>', this)" title="Bookmark this skill" aria-label="Bookmark skill <?php echo htmlspecialchars($skill['name']); ?>">
+                                        <i class="far fa-bookmark"></i>
+                                    </button>
                                     <a href="/assessment/#standard=<?php echo urlencode($skill['code']); ?>" class="skill-quick-test-btn" title="Practice or test this standard" aria-label="Test standard <?php echo htmlspecialchars($skill['code']); ?>">
                                         <i class="fas fa-bullseye"></i>
                                     </a>
@@ -391,6 +394,22 @@ function renderSubjectModules(array $modulesList, string $subjectId, string $sub
         updateAllUI();
     }
 
+    window.toggleSkillBookmark = function(id, name, code, url, btn) {
+        if (!window.UniversalBookmarks) return;
+        const nowBookmarked = window.UniversalBookmarks.toggle({
+            id: id,
+            title: `${code}: ${name}`,
+            type: 'skill',
+            url: url || (window.location.pathname + `#skill-${id.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}`),
+            category: 'Skill: ' + code,
+            icon: 'fa-bullseye'
+        });
+        updateAllUI();
+        if (typeof window.announceA11y === 'function') {
+            window.announceA11y(nowBookmarked ? `Skill ${code} saved to bookmarks` : `Skill ${code} removed from bookmarks`);
+        }
+    };
+
     function triggerWinEffect() {
         confetti({
             particleCount: 100,
@@ -562,6 +581,22 @@ function renderSubjectModules(array $modulesList, string $subjectId, string $sub
                     slot.innerHTML = '';
                 }
             }
+
+            // Sync bookmark button status
+            const bmBtn = card.querySelector('.skill-bookmark-btn');
+            if (bmBtn && window.UniversalBookmarks) {
+                const isBm = window.UniversalBookmarks.isBookmarked(id);
+                const bmIcon = bmBtn.querySelector('i');
+                if (isBm) {
+                    bmBtn.classList.add('bookmarked');
+                    bmBtn.title = 'Skill saved in Bookmarks';
+                    if (bmIcon) bmIcon.className = 'fas fa-bookmark';
+                } else {
+                    bmBtn.classList.remove('bookmarked');
+                    bmBtn.title = 'Bookmark this skill';
+                    if (bmIcon) bmIcon.className = 'far fa-bookmark';
+                }
+            }
         });
 
         // Update overall level mastery pill
@@ -617,6 +652,7 @@ function renderSubjectModules(array $modulesList, string $subjectId, string $sub
     updateAllUI();
     updateCurriculumBadge();
     window.addEventListener('settings-changed', updateCurriculumBadge);
+    window.addEventListener('bookmarks-updated', updateAllUI);
 
     // Auto-switch active subject tab if query parameter ?tab= exists
     try {

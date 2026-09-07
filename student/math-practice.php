@@ -10,7 +10,7 @@ $welcomeParagraph = "Welcome! Select a topic below to start practicing and sharp
 
 // Include the header file, which contains the <html>, <head>, and opening <body> tags,
 // as well as the navigation bar, accessibility panel, and welcome popup.
-include '..\\src\\header.php';
+include '../src/header.php';
 ?>
 
 <link rel="stylesheet" href="/assets/css/pages/student-resources.css">
@@ -554,7 +554,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 <?php
 // Include the footer file, which contains the <footer>, modals, and closing </body> and </html> tags.
-include '..\src\resource-modal.php';
+include '../src/resource-modal.php';
 // Include the footer file
-include '..\src\footer.php';
+include '../src/footer.php';
 ?>

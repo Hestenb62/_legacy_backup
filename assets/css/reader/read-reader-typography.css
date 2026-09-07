@@ -2,6 +2,21 @@
    1. Reader Typography & Accessibility Font Classes
    ========================================================================== */
 
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=JetBrains+Mono:wght@400;600&family=Merriweather:ital,wght@0,400;0,700;1,300&display=swap');
+
+/* Dynamic Real-Time Typography Scaling */
+#book-content {
+    font-size: var(--reader-font-size, 1.2rem);
+}
+
+#book-content p,
+#book-content li,
+#book-content div.content-content,
+#book-content blockquote {
+    font-size: var(--reader-font-size, 1.2rem) !important;
+}
+
+/* Font Family Classes */
 .font-sans {
     font-family: var(--site-font-family, 'Outfit', 'Inter', -apple-system, sans-serif) !important;
 }
@@ -17,28 +32,40 @@
     line-height: 2em !important;
 }
 
-/* Sizing Variables */
-.prose-base p, .prose-base li, .prose-base div.content-content {
-    font-size: 1.05rem !important;
+.font-hyperlegible {
+    font-family: 'Atkinson Hyperlegible', 'Trebuchet MS', sans-serif !important;
+    letter-spacing: 0.03em !important;
 }
 
-.prose-lg p, .prose-lg li, .prose-lg div.content-content {
-    font-size: 1.25rem !important;
+.font-mono {
+    font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace !important;
+    letter-spacing: -0.01em !important;
 }
 
-.prose-2xl p, .prose-2xl li, .prose-2xl div.content-content {
-    font-size: 1.5rem !important;
-}
+/* Stepped Sizing Fallback Classes */
+.prose-sm p, .prose-sm li, .prose-sm div.content-content { font-size: 0.95rem !important; }
+.prose-base p, .prose-base li, .prose-base div.content-content { font-size: 1.05rem !important; }
+.prose-lg p, .prose-lg li, .prose-lg div.content-content { font-size: 1.25rem !important; }
+.prose-xl p, .prose-xl li, .prose-xl div.content-content { font-size: 1.45rem !important; }
+.prose-2xl p, .prose-2xl li, .prose-2xl div.content-content { font-size: 1.70rem !important; }
+.prose-3xl p, .prose-3xl li, .prose-3xl div.content-content { font-size: 2.00rem !important; }
 
 /* Line Height Variants */
-.lh-normal p, .lh-normal li {
-    line-height: 1.6em !important;
-}
+.lh-tight p, .lh-tight li { line-height: 1.45em !important; }
+.lh-normal p, .lh-normal li { line-height: 1.65em !important; }
+.lh-wide p, .lh-wide li { line-height: 1.95em !important; }
+.lh-extra p, .lh-extra li { line-height: 2.35em !important; }
 
-.lh-wide p, .lh-wide li {
-    line-height: 1.9em !important;
-}
+/* Kerning & Word Spacing Assistance */
+.tracking-normal p, .tracking-normal li { letter-spacing: normal !important; word-spacing: normal !important; }
+.tracking-spaced p, .tracking-spaced li { letter-spacing: 0.05em !important; word-spacing: 0.08em !important; }
+.tracking-wide p, .tracking-wide li { letter-spacing: 0.10em !important; word-spacing: 0.16em !important; }
 
-.lh-extra p, .lh-extra li {
-    line-height: 2.25em !important;
+/* Font Scaling Slider */
+.reader-scale-slider {
+    width: 100%;
+    accent-color: var(--color-primary, #4f46e5);
+    height: 6px;
+    border-radius: 9999px;
+    cursor: pointer;
 }

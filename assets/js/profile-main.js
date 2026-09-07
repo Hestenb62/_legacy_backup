@@ -66,44 +66,113 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // 2. Tabs Logic
+    const tabAll = document.getElementById('tab-all-bookmarks');
     const tabBooks = document.getElementById('tab-books');
+    const tabLessons = document.getElementById('tab-lessons');
     const tabHl = document.getElementById('tab-highlights');
     const contBooks = document.getElementById('content-books');
     const contHl = document.getElementById('content-highlights');
+    const tabBtns = [tabAll, tabBooks, tabLessons, tabHl].filter(Boolean);
 
-    tabBooks.addEventListener('click', () => {
-        tabBooks.classList.add('active');
-        tabHl.classList.remove('active');
-        contBooks.classList.remove('hidden');
-        contHl.classList.add('hidden');
-    });
+    let activeBookmarkCategory = 'all';
 
-    tabHl.addEventListener('click', () => {
-        tabHl.classList.add('active');
-        tabBooks.classList.remove('active');
-        contHl.classList.remove('hidden');
-        contBooks.classList.add('hidden');
-    });
+    function switchTab(btn, category) {
+        tabBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        if (category === 'highlights') {
+            contHl.classList.remove('hidden');
+            contBooks.classList.add('hidden');
+        } else {
+            contBooks.classList.remove('hidden');
+            contHl.classList.add('hidden');
+            activeBookmarkCategory = category;
+            renderBookmarksList(category);
+        }
+    }
+
+    if (tabAll) tabAll.addEventListener('click', () => switchTab(tabAll, 'all'));
+    if (tabBooks) tabBooks.addEventListener('click', () => switchTab(tabBooks, 'book'));
+    if (tabLessons) tabLessons.addEventListener('click', () => switchTab(tabLessons, 'lesson'));
+    if (tabHl) tabHl.addEventListener('click', () => switchTab(tabHl, 'highlights'));
 
     // 3. Stats and List Rendering Logic
-    const bookmarksKey = 'hesten_library_bookmarks'; // FIXED: Match library
-    
-    // Load Bookmarks
-    let bookmarks = [];
-    try {
-        bookmarks = JSON.parse(localStorage.getItem(bookmarksKey)) || [];
-    } catch(e) {}
-    
-    // Load Highlights (Note: reader.js saves highlights per-book, so we need to scan localStorage keys)
+    function getUniversalBookmarksList(category) {
+        if (window.UniversalBookmarks) {
+            return window.UniversalBookmarks.getAll(category);
+        }
+        // Fallback
+        try {
+            const raw = localStorage.getItem('hesten_universal_bookmarks') || localStorage.getItem('hesten_library_bookmarks');
+            const parsed = JSON.parse(raw) || [];
+            if (Array.isArray(parsed) && parsed.length > 0 && typeof parsed[0] === 'string') {
+                return parsed.map(id => ({
+                    id: id,
+                    title: id.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()),
+                    type: 'book',
+                    url: `../library/read/index.php?book=${encodeURIComponent(id)}`,
+                    category: 'Literature',
+                    icon: 'fa-book'
+                }));
+            }
+            return Array.isArray(parsed) ? parsed : [];
+        } catch(e) {
+            return [];
+        }
+    }
+
+    function renderBookmarksList(category) {
+        const listBooks = document.getElementById('list-books');
+        const emptyBooks = document.getElementById('empty-books');
+        const emptyMsg = document.getElementById('empty-bookmarks-msg');
+        if (!listBooks || !emptyBooks) return;
+
+        const items = getUniversalBookmarksList(category);
+
+        if (items.length === 0) {
+            emptyBooks.classList.remove('hidden');
+            listBooks.innerHTML = '';
+            if (emptyMsg) {
+                if (category === 'book') emptyMsg.textContent = "You haven't saved any books yet.";
+                else if (category === 'lesson') emptyMsg.textContent = "You haven't saved any lessons yet.";
+                else emptyMsg.textContent = "You haven't saved any items yet.";
+            }
+        } else {
+            emptyBooks.classList.add('hidden');
+            listBooks.innerHTML = items.map(item => `
+                <a href="${item.url || '#'}" class="profile-list-item">
+                    <div class="profile-item-icon" style="background: rgba(99, 102, 241, 0.1); color: #6366f1;">
+                        <i class="fas ${item.icon || (item.type === 'book' ? 'fa-book' : (item.type === 'skill' ? 'fa-bullseye' : 'fa-graduation-cap'))}"></i>
+                    </div>
+                    <div class="profile-item-content">
+                        <div class="profile-item-title">${escapeHtml(item.title || item.id)}</div>
+                        <div class="profile-item-desc" style="display: flex; gap: 0.5rem; align-items: center; margin-top: 0.2rem;">
+                            <span style="font-size: 0.6875rem; font-weight: 700; text-transform: uppercase; background: rgba(0,0,0,0.05); padding: 0.1rem 0.4rem; border-radius: 4px;">${escapeHtml(item.type || 'item')}</span>
+                            ${item.category ? `<span style="font-size: 0.75rem; color: var(--color-text-muted);">${escapeHtml(item.category)}</span>` : ''}
+                        </div>
+                    </div>
+                    <button class="profile-item-action" onclick="event.preventDefault(); removeUniversalBookmark('${item.id}')" title="Remove Bookmark">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </a>
+            `).join('');
+        }
+
+        // Update stat counter
+        const allItems = getUniversalBookmarksList('all');
+        const statBm = document.getElementById('stat-bookmarks');
+        if (statBm) statBm.textContent = allItems.length;
+    }
+
+    // Load Highlights (reader.js saves highlights per-book)
     let allHighlights = [];
     let allNotes = 0;
     for (let i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i);
-        if (key && key.startsWith('hesten_highlights_')) { // FIXED: Match reader prefix
+        if (key && key.startsWith('hesten_highlights_')) {
             try {
                 const hls = JSON.parse(localStorage.getItem(key)) || [];
                 hls.forEach(hl => {
-                    // Extract bookId from "hesten_highlights_{bookId}_chapter_{num}"
                     const match = key.match(/^hesten_highlights_(.+)_chapter_\d+$/);
                     if (match) {
                         hl.bookId = match[1];
@@ -116,61 +185,66 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Update Stats
-    document.getElementById('stat-bookmarks').textContent = bookmarks.length;
-    document.getElementById('stat-highlights').textContent = allHighlights.length;
-    document.getElementById('stat-notes').textContent = allNotes;
+    const statHl = document.getElementById('stat-highlights');
+    const statNotes = document.getElementById('stat-notes');
+    if (statHl) statHl.textContent = allHighlights.length;
+    if (statNotes) statNotes.textContent = allNotes;
 
-    // Render Books
-    const listBooks = document.getElementById('list-books');
-    const emptyBooks = document.getElementById('empty-books');
-    if (bookmarks.length === 0) {
-        emptyBooks.classList.remove('hidden');
-    } else {
-        listBooks.innerHTML = bookmarks.map(id => `
-            <a href="../library/read/index.php?book=${encodeURIComponent(id)}" class="profile-list-item">
-                <div class="profile-item-icon"><i class="fas fa-book"></i></div>
-                <div class="profile-item-content">
-                    <div class="profile-item-title">${id.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())}</div>
-                    <div class="profile-item-desc">Saved to your reading list</div>
-                </div>
-                <button class="profile-item-action" onclick="event.preventDefault(); removeBookmark('${id}')" title="Remove Bookmark">
-                    <i class="fas fa-trash"></i>
-                </button>
-            </a>
-        `).join('');
-    }
+    // Render initial bookmarks list
+    renderBookmarksList('all');
 
     // Render Highlights
     const listHl = document.getElementById('list-highlights');
     const emptyHl = document.getElementById('empty-highlights');
-    if (allHighlights.length === 0) {
-        emptyHl.classList.remove('hidden');
-    } else {
-        // Sort newest first based on timestamp (if it existed) or just reverse
-        allHighlights.reverse();
-        listHl.innerHTML = allHighlights.map(hl => {
-            const bookTitle = hl.bookId.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
-            return `
-            <div class="profile-list-item">
-                <div class="profile-item-icon"><i class="fas fa-highlighter"></i></div>
-                <div class="profile-item-content">
-                    <div class="profile-item-title">${bookTitle}</div>
-                    <div class="profile-item-desc">"${hl.text}"</div>
-                    ${hl.note ? `<div class="profile-item-meta"><i class="fas fa-sticky-note"></i> Note: ${hl.note}</div>` : ''}
+    if (listHl && emptyHl) {
+        if (allHighlights.length === 0) {
+            emptyHl.classList.remove('hidden');
+        } else {
+            allHighlights.reverse();
+            listHl.innerHTML = allHighlights.map(hl => {
+                const bookTitle = hl.bookId.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+                return `
+                <div class="profile-list-item">
+                    <div class="profile-item-icon"><i class="fas fa-highlighter"></i></div>
+                    <div class="profile-item-content">
+                        <div class="profile-item-title">${bookTitle}</div>
+                        <div class="profile-item-desc">"${hl.text}"</div>
+                        ${hl.note ? `<div class="profile-item-meta"><i class="fas fa-sticky-note"></i> Note: ${hl.note}</div>` : ''}
+                    </div>
                 </div>
-            </div>
-            `;
-        }).join('');
+                `;
+            }).join('');
+        }
     }
 
     // Global helper to remove bookmark from profile
-    window.removeBookmark = function(id) {
-        if (!confirm('Remove this book from your list?')) return;
-        let bms = JSON.parse(localStorage.getItem(bookmarksKey)) || [];
-        bms = bms.filter(b => b !== id);
-        localStorage.setItem(bookmarksKey, JSON.stringify(bms));
-        window.location.reload();
+    window.removeUniversalBookmark = function(id) {
+        if (window.UniversalBookmarks) {
+            window.UniversalBookmarks.remove(id);
+        } else {
+            try {
+                const raw = localStorage.getItem('hesten_universal_bookmarks');
+                if (raw) {
+                    let items = JSON.parse(raw);
+                    items = items.filter(it => it.id !== id);
+                    localStorage.setItem('hesten_universal_bookmarks', JSON.stringify(items));
+                }
+            } catch(e) {}
+        }
+        renderBookmarksList(activeBookmarkCategory);
     };
+
+    window.removeBookmark = window.removeUniversalBookmark;
+
+    function escapeHtml(str) {
+        if (!str) return '';
+        return String(str)
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#039;');
+    }
 
     // 4. Daily Learning Streak & Study Goals Logic
     function initStreakAndGoals() {

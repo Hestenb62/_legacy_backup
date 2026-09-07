@@ -240,6 +240,17 @@ include ABSPATH . 'src/header.php';
                     </select>
                 </div>
 
+                <!-- Quick Font Scaler (A- / 100% / A+) -->
+                <div class="controls-quick-scaler" id="reader-quick-scaler" title="Adjust Font Size">
+                    <button type="button" id="reader-font-dec" class="scaler-btn" aria-label="Decrease Font Size" title="Decrease Font Size (A-)">
+                        <span style="font-size: 0.75rem; font-weight: 800;">A-</span>
+                    </button>
+                    <span id="reader-font-pct" class="scaler-label" title="Current Font Scale">100%</span>
+                    <button type="button" id="reader-font-inc" class="scaler-btn" aria-label="Increase Font Size" title="Increase Font Size (A+)">
+                        <span style="font-size: 0.95rem; font-weight: 800;">A+</span>
+                    </button>
+                </div>
+
                 <!-- Citation Generator -->
                 <button type="button" id="open-citation-btn" class="tool-btn" title="Generate Academic Citation" onclick="openChapterCitationModal()" aria-label="Generate Citation">
                     <i class="fas fa-quote-right"></i>
@@ -263,26 +274,41 @@ include ABSPATH . 'src/header.php';
                 <?php endif; ?>
 
                 <!-- Typography Dropdown Panel -->
-                <div id="settings-panel" class="settings-dropdown hidden" role="region" aria-label="Reader Customization Panel">
+                <div id="settings-panel" class="settings-dropdown hidden" role="region" aria-label="Reader Customization Panel" style="width: 320px;">
                     <h4 class="settings-section-title">Font Family</h4>
                     <div class="settings-btn-row">
                         <button type="button" class="settings-row-btn active settings-font" data-font="font-sans">Sans</button>
                         <button type="button" class="settings-row-btn settings-font" data-font="font-serif">Serif</button>
                         <button type="button" class="settings-row-btn settings-font" data-font="font-dyslexic" title="OpenDyslexic Font">Dyslexia</button>
+                        <button type="button" class="settings-row-btn settings-font" data-font="font-hyperlegible" title="Atkinson Hyperlegible Font">Hyperlegible</button>
+                        <button type="button" class="settings-row-btn settings-font" data-font="font-mono" title="Clean Monospace Font">Mono</button>
                     </div>
 
-                    <h4 class="settings-section-title">Font Size</h4>
+                    <h4 class="settings-section-title">Font Scale</h4>
                     <div class="settings-btn-row">
-                        <button type="button" class="settings-row-btn settings-size" data-size="prose-base">Small</button>
-                        <button type="button" class="settings-row-btn active settings-size" data-size="prose-lg">Normal</button>
-                        <button type="button" class="settings-row-btn settings-size" data-size="prose-2xl">Large</button>
+                        <button type="button" class="settings-row-btn settings-scale-chip" data-scale="85">85%</button>
+                        <button type="button" class="settings-row-btn active settings-scale-chip" data-scale="100">100%</button>
+                        <button type="button" class="settings-row-btn settings-scale-chip" data-scale="115">115%</button>
+                        <button type="button" class="settings-row-btn settings-scale-chip" data-scale="130">130%</button>
+                        <button type="button" class="settings-row-btn settings-scale-chip" data-scale="150">150%</button>
+                    </div>
+                    <div style="margin: 0.25rem 0 1rem 0;">
+                        <input type="range" id="reader-scale-slider" min="75" max="200" step="5" value="100" class="reader-scale-slider" aria-label="Font Size Slider">
                     </div>
 
                     <h4 class="settings-section-title">Line Spacing</h4>
                     <div class="settings-btn-row">
-                        <button type="button" class="settings-row-btn settings-lh" data-lh="lh-normal">Tight</button>
+                        <button type="button" class="settings-row-btn settings-lh" data-lh="lh-tight">Tight</button>
+                        <button type="button" class="settings-row-btn settings-lh" data-lh="lh-normal">Normal</button>
                         <button type="button" class="settings-row-btn active settings-lh" data-lh="lh-wide">Relaxed</button>
                         <button type="button" class="settings-row-btn settings-lh" data-lh="lh-extra">Loose</button>
+                    </div>
+
+                    <h4 class="settings-section-title">Word & Letter Spacing</h4>
+                    <div class="settings-btn-row">
+                        <button type="button" class="settings-row-btn active settings-tracking" data-tracking="tracking-normal">Standard</button>
+                        <button type="button" class="settings-row-btn settings-tracking" data-tracking="tracking-spaced">Spaced</button>
+                        <button type="button" class="settings-row-btn settings-tracking" data-tracking="tracking-wide">Extra Wide</button>
                     </div>
 
                     <h4 class="settings-section-title">Reading Theme</h4>

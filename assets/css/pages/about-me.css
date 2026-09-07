@@ -1,0 +1,338 @@
+/* ==========================================================================
+   About Me Page Stylesheet (assets/css/pages/about-me.css)
+   Pure Vanilla CSS Architecture with Glassmorphism, Dark Mode & Responsive Layout
+   100% Free of TailwindCSS dependencies
+   ========================================================================== */
+
+/* --- Hero Banner Background Icons --- */
+.about-hero-icon-1 {
+    position: absolute;
+    top: 2.5rem;
+    left: 2.5rem;
+    font-size: 7rem;
+    color: rgba(255, 255, 255, 0.1);
+}
+
+.about-hero-icon-2 {
+    position: absolute;
+    bottom: 4rem;
+    right: 3rem;
+    font-size: 11rem;
+    color: rgba(255, 255, 255, 0.05);
+    transform: rotate(12deg);
+}
+
+/* --- Container & Layout --- */
+.about-container {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 6rem 1.5rem;
+}
+
+/* --- Profile Card --- */
+.about-card {
+    background: var(--color-surface, #ffffff);
+    border: 1px solid var(--color-border, #e2e8f0);
+    border-radius: 1.5rem;
+    box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.07);
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+[data-theme="dark"] .about-card,
+.dark .about-card {
+    background: #1e293b;
+    border-color: #334155;
+    box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.3);
+}
+
+.about-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+@media (min-width: 860px) {
+    .about-layout {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 3.5rem;
+    }
+}
+
+/* --- Avatar Column --- */
+.about-avatar-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 260px;
+}
+
+.about-avatar-frame {
+    position: relative;
+    margin-bottom: 1.25rem;
+}
+
+.about-avatar-img {
+    width: 14rem;
+    height: 14rem;
+    object-fit: cover;
+    border-radius: 9999px;
+    border: 4px solid var(--color-primary, #4f46e5);
+    box-shadow: 0 12px 30px -5px rgba(79, 70, 229, 0.25);
+    background: #f1f5f9;
+}
+
+.about-role-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(79, 70, 229, 0.08);
+    color: var(--color-primary, #4f46e5);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    padding: 0.35rem 0.85rem;
+    border-radius: 9999px;
+    border: 1px solid rgba(79, 70, 229, 0.2);
+    margin-bottom: 0.5rem;
+}
+
+[data-theme="dark"] .about-role-pill,
+.dark .about-role-pill {
+    background: rgba(129, 140, 248, 0.12);
+    color: #818cf8;
+    border-color: rgba(129, 140, 248, 0.25);
+}
+
+.about-credential-badge {
+    font-size: 0.75rem;
+    color: var(--color-text-muted, #64748b);
+    font-weight: 600;
+}
+
+/* --- Story & Bio Column --- */
+.about-content-col {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-heading {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--color-primary, #4f46e5);
+    margin: 0 0 0.5rem 0;
+    line-height: 1.2;
+}
+
+[data-theme="dark"] .about-heading,
+.dark .about-heading {
+    color: #818cf8;
+}
+
+.about-subtitle {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--color-text-main, #334155);
+    margin: 0 0 1.25rem 0;
+}
+
+[data-theme="dark"] .about-subtitle,
+.dark .about-subtitle {
+    color: #cbd5e1;
+}
+
+.about-lead-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-text-main, #1e293b);
+    margin: 0 0 1.25rem 0;
+}
+
+.about-body-text {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    color: var(--color-text-muted, #475569);
+    margin: 0 0 1.25rem 0;
+}
+
+[data-theme="dark"] .about-lead-text,
+.dark .about-lead-text {
+    color: #f1f5f9;
+}
+
+[data-theme="dark"] .about-body-text,
+.dark .about-body-text {
+    color: #94a3b8;
+}
+
+/* --- Mission Highlight Callout Box --- */
+.about-mission-box {
+    background: linear-gradient(135deg, rgba(79, 70, 229, 0.05) 0%, rgba(147, 51, 234, 0.05) 100%);
+    border-left: 4px solid var(--color-primary, #4f46e5);
+    border-radius: 0 0.85rem 0.85rem 0;
+    padding: 1.15rem 1.35rem;
+    margin: 0.5rem 0 1.5rem 0;
+}
+
+[data-theme="dark"] .about-mission-box,
+.dark .about-mission-box {
+    background: rgba(79, 70, 229, 0.1);
+    border-left-color: #818cf8;
+}
+
+.about-mission-text {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: var(--color-text-main, #1e293b);
+    margin: 0;
+    font-style: italic;
+}
+
+[data-theme="dark"] .about-mission-text,
+.dark .about-mission-text {
+    color: #e2e8f0;
+}
+
+/* --- Contact Info List --- */
+.about-contact-list {
+    list-style: none;
+    padding: 1.25rem 0 0 0;
+    margin: 0 0 1.5rem 0;
+    border-top: 1px solid var(--color-border, #e2e8f0);
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+[data-theme="dark"] .about-contact-list,
+.dark .about-contact-list {
+    border-top-color: #334155;
+}
+
+.about-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.9375rem;
+    color: var(--color-text-main, #334155);
+}
+
+.about-contact-icon {
+    width: 1.75rem;
+    color: var(--color-primary, #4f46e5);
+    text-align: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+[data-theme="dark"] .about-contact-icon,
+.dark .about-contact-icon {
+    color: #818cf8;
+}
+
+.about-contact-link {
+    color: var(--color-text-main, #334155);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.about-contact-link:hover {
+    color: var(--color-primary, #4f46e5);
+    text-decoration: underline;
+}
+
+[data-theme="dark"] .about-contact-item,
+.dark .about-contact-item,
+[data-theme="dark"] .about-contact-link,
+.dark .about-contact-link {
+    color: #cbd5e1;
+}
+
+/* --- Action Button Row --- */
+.about-actions-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.about-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1.25rem;
+    border-radius: 0.625rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.about-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+.about-btn-linkedin {
+    background: #0a66c2;
+    color: #ffffff;
+}
+
+.about-btn-linkedin:hover {
+    background: #084e96;
+}
+
+.about-btn-email {
+    background: var(--color-primary, #4f46e5);
+    color: #ffffff;
+}
+
+.about-btn-email:hover {
+    background: #4338ca;
+}
+
+.about-btn-phone {
+    background: #059669;
+    color: #ffffff;
+}
+
+.about-btn-phone:hover {
+    background: #047857;
+}
+
+/* --- Print Styles (@media print) --- */
+@media print {
+    header,
+    footer,
+    .page-hero,
+    .about-actions-row,
+    .no-print {
+        display: none !important;
+    }
+
+    body {
+        background: #ffffff !important;
+        color: #000000 !important;
+    }
+
+    .about-container {
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+
+    .about-card {
+        border: 1px solid #000000 !important;
+        box-shadow: none !important;
+        padding: 1.5rem !important;
+    }
+}

@@ -81,7 +81,7 @@
                         Made with <i class="fas fa-heart footer-heart"></i> for education
                     </p>
                     <p class="footer-license">
-                        <a href="/">Hesten's Learning</a> by Hesten Allison is licensed under 
+                        <a href="/">Hesten's Learning</a> by  <a href="/pages/about-me.php" style="font-weight: 800; color: var(--footer-heading)">Hesten Allison</a> is licensed under 
                         <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" class="license-badge-link">
                             CC BY-NC-SA 4.0
                             <img style="height:16px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt="">

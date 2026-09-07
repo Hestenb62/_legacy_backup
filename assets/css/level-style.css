@@ -471,6 +471,50 @@ body.dark .level-aurora-blob {
   text-decoration-color: var(--theme-color);
 }
 
+.skill-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.skill-quick-test-btn,
+.skill-bookmark-btn {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 1px solid var(--color-border, rgba(0, 0, 0, 0.1));
+  background: var(--color-surface, #ffffff);
+  color: var(--color-text-muted, #94a3b8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.8125rem;
+  text-decoration: none;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0;
+}
+
+.skill-quick-test-btn:hover {
+  transform: scale(1.1);
+  border-color: #6366f1;
+  color: #6366f1;
+  background: rgba(99, 102, 241, 0.08);
+}
+
+.skill-bookmark-btn:hover {
+  transform: scale(1.1);
+  border-color: #f59e0b;
+  color: #f59e0b;
+  background: rgba(245, 158, 11, 0.08);
+}
+
+.skill-bookmark-btn.bookmarked {
+  background: rgba(245, 158, 11, 0.12);
+  border-color: #f59e0b;
+  color: #f59e0b;
+}
+
 .check-btn {
   width: 2rem;
   height: 2rem;
