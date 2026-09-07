@@ -669,7 +669,66 @@ function logMissedStandard(gradeKey, gradeName, subject) {
   } catch (e) {}
 }
 
-// 7. Hook into finishQuiz to inject UI (Review, Download, Confetti)
+function saveStandardMasteryResults() {
+  try {
+    const STORAGE_KEY = 'hesten_standards_mastery';
+    const existing = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
+    const results = window.quizResultsData || [];
+    if (results.length === 0) return;
+
+    const stdMap = {};
+    results.forEach(item => {
+      const std = item.standard || window.targetedStandard;
+      if (!std) return;
+      if (!stdMap[std]) {
+        stdMap[std] = {
+          standard: std,
+          subject: item.subject || window.currentAssessmentSubject || 'Math',
+          correct: 0,
+          total: 0,
+          grade: document.getElementById("header-grade-name")?.textContent || "Core Curriculum"
+        };
+      }
+      stdMap[std].total++;
+      if (item.isCorrect) stdMap[std].correct++;
+    });
+
+    if (window.targetedStandard && Object.keys(stdMap).length === 0) {
+      let corr = 0;
+      results.forEach(i => { if (i.isCorrect) corr++; });
+      stdMap[window.targetedStandard] = {
+        standard: window.targetedStandard,
+        subject: window.currentAssessmentSubject || 'Math',
+        correct: corr,
+        total: results.length,
+        grade: document.getElementById("header-grade-name")?.textContent || "Core Curriculum"
+      };
+    }
+
+    Object.values(stdMap).forEach(data => {
+      const pct = Math.round((data.correct / data.total) * 100);
+      const currentRecord = existing[data.standard] || { bestScore: 0, attempts: 0 };
+      existing[data.standard] = {
+        standard: data.standard,
+        subject: data.subject,
+        grade: data.grade,
+        lastScore: pct,
+        bestScore: Math.max(currentRecord.bestScore || 0, pct),
+        lastCorrect: data.correct,
+        lastTotal: data.total,
+        attempts: (currentRecord.attempts || 0) + 1,
+        status: pct >= 80 ? 'Mastered' : (pct >= 60 ? 'Developing' : 'Needs Review'),
+        lastTested: new Date().toISOString()
+      };
+    });
+
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(existing));
+  } catch (e) {
+    console.warn("Failed to persist standard mastery:", e);
+  }
+}
+
+// 7. Hook into finishQuiz to inject UI (Review, Download, Confetti, Standard Mastery Sync)
 if (typeof finishQuiz === "function") {
   const originalFinishQuiz = finishQuiz;
   finishQuiz = function () {
@@ -692,6 +751,9 @@ if (typeof finishQuiz === "function") {
         window.quizResultsData.length > 0 ?
           (scoreCount / window.quizResultsData.length) * 100
         : 0;
+
+      // Save Standard Mastery records to localStorage
+      saveStandardMasteryResults();
 
       // Trigger Confetti if score >= 80%
       if (percentage >= 80 && typeof confetti === "function") {

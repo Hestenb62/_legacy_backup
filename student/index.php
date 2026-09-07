@@ -60,6 +60,27 @@ include '../src/header.php';
             </div>
         </div>
 
+        <!-- Standards Mastery Progress Widget -->
+        <div id="student-standards-widget" class="glass-panel" style="margin-bottom: 2.5rem; padding: 1.5rem; border-radius: var(--radius-xl); border: 1px solid var(--color-border); background: var(--color-bg-surface); display: none;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem;">
+                <div>
+                    <h3 style="margin: 0 0 0.25rem 0; font-size: 1.2rem; font-weight: 800; color: var(--color-text-main); display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fas fa-certificate" style="color: var(--color-primary);"></i> Standard Mastery Progress
+                    </h3>
+                    <p style="margin: 0; font-size: 0.85rem; color: var(--color-text-muted);">
+                        Competency badges earned from targeted standard checks and diagnostic assessments.
+                    </p>
+                </div>
+                <a href="/pages/profile.php" style="display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; font-weight: 700; color: var(--color-primary); text-decoration: none;">
+                    <span>View Full Mastery Matrix</span> <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div id="student-standards-badge-list" style="display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+
         <div class="subject-gateway-grid">
             
             <!-- 1. Math Section -->
@@ -401,6 +422,30 @@ document.addEventListener('DOMContentLoaded', () => {
             const minsEl = document.getElementById('student-hero-mins');
             if (minsEl) minsEl.textContent = storedMins.minutes || 0;
         }
+
+        // Populate Standards Mastery widget
+        try {
+            const mastery = JSON.parse(localStorage.getItem('hesten_standards_mastery')) || {};
+            const items = Object.values(mastery);
+            const widget = document.getElementById('student-standards-widget');
+            const badgeList = document.getElementById('student-standards-badge-list');
+            if (widget && badgeList && items.length > 0) {
+                badgeList.innerHTML = items.slice(0, 6).map(item => {
+                    const isMastered = item.bestScore >= 80;
+                    const bg = isMastered ? 'color-mix(in srgb, var(--color-success, #10b981) 15%, transparent)' : 'color-mix(in srgb, var(--color-warning, #f59e0b) 15%, transparent)';
+                    const color = isMastered ? 'var(--color-success, #10b981)' : 'var(--color-warning, #f59e0b)';
+                    const icon = isMastered ? 'fa-award' : 'fa-hourglass-half';
+                    return `
+                        <a href="/assessment/#standard=${encodeURIComponent(item.standard)}" style="text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.45rem 0.85rem; border-radius: var(--radius-full); background: ${bg}; border: 1px solid ${color}; color: var(--color-text-main); font-size: 0.8125rem; font-weight: 700; transition: transform 0.2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">
+                            <i class="fas ${icon}" style="color: ${color};"></i>
+                            <span style="font-family: monospace; font-weight: 800;">${item.standard}</span>
+                            <span style="color: ${color}; font-size: 0.75rem;">(${item.bestScore}%)</span>
+                        </a>
+                    `;
+                }).join('');
+                widget.style.display = 'block';
+            }
+        } catch(e){}
     } catch(e) {
         console.error('Error loading bookmarks:', e);
     }

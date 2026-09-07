@@ -769,6 +769,171 @@ const questionBank = [
     { grade: "Twelfth Grade", subject: "Social Studies", question: "Monetary Policy?", options: ["Interest Rates/Money", "Taxes", "Laws", "Trade"], answer: "Interest Rates/Money", hint: "Fed." },
 ];
 
+// ==========================================================================
+// Automatic Standard Assignment & Pedagogical Alignment Engine
+// ==========================================================================
+function assignStandardToQuestion(q) {
+    if (q.standard) return q.standard;
+    const g = q.grade || '';
+    const s = q.subject || '';
+    const text = ((q.question || '') + ' ' + (q.hint || '')).toLowerCase();
+    
+    const gradeNumMap = {
+        'Pre-K': 'PK',
+        'Kindergarten': 'K',
+        'First Grade': '1',
+        'Second Grade': '2',
+        'Third Grade': '3',
+        'Fourth Grade': '4',
+        'Fifth Grade': '5',
+        'Sixth Grade': '6',
+        'Seventh Grade': '7',
+        'Eighth Grade': '8',
+        'Ninth Grade': '9',
+        'Tenth Grade': '10',
+        'Eleventh Grade': '11',
+        'Twelfth Grade': '12'
+    };
+    const gn = gradeNumMap[g] || '3';
+
+    if (s === 'Math') {
+        if (gn === 'PK' || gn === 'K') {
+            if (/shape|circle|square|triangle|rectangle|round/i.test(text)) return 'K.G.A.2';
+            if (/count|after|number|dots|how many|smallest|biggest/i.test(text)) return 'K.CC.A.1';
+            if (/add|plus|more|together/i.test(text)) return 'K.OA.A.1';
+            return 'K.CC.B.4';
+        }
+        if (gn === '1' || gn === '2') {
+            if (/shape|sides|corner/i.test(text)) return `${gn}.G.A.1`;
+            if (/clock|time|hour|minute|inch|measure/i.test(text)) return `${gn}.MD.B.3`;
+            if (/ten|place value|hundred|digit/i.test(text)) return `${gn}.NBT.A.1`;
+            if (/add|plus|\+|subtract|minus|\-/i.test(text)) return `${gn}.OA.A.1`;
+            return `${gn}.OA.B.2`;
+        }
+        if (gn === '3') {
+            if (/perimeter|area|square with side/i.test(text)) return '3.MD.C.7';
+            if (/divided|division|quotient/i.test(text)) return '3.OA.A.2';
+            if (/fraction|half|quarter|numerator|denominator/i.test(text)) return '3.NF.A.1';
+            if (/round|nearest/i.test(text)) return '3.NBT.A.1';
+            if (/x|times|multiply|multiplication|product/i.test(text)) return '3.OA.A.1';
+            return '3.OA.D.8';
+        }
+        if (gn === '4') {
+            if (/fraction|decimal/i.test(text)) return '4.NF.A.1';
+            if (/angle|degree|parallel|perpendicular/i.test(text)) return '4.G.A.1';
+            if (/perimeter|area/i.test(text)) return '4.MD.A.3';
+            if (/multiply|factor|prime|composite/i.test(text)) return '4.OA.B.4';
+            return '4.NBT.B.5';
+        }
+        if (gn === '5') {
+            if (/decimal|thousandth|hundredth/i.test(text)) return '5.NBT.A.3';
+            if (/fraction|mixed number/i.test(text)) return '5.NF.A.1';
+            if (/volume|cubic/i.test(text)) return '5.MD.C.3';
+            if (/coordinate|grid|x-axis|y-axis/i.test(text)) return '5.G.A.1';
+            return '5.NBT.B.5';
+        }
+        if (gn === '6') {
+            if (/ratio|rate|percent/i.test(text)) return '6.RP.A.1';
+            if (/negative|absolute value|integer/i.test(text)) return '6.NS.C.5';
+            if (/variable|expression|equation|solve/i.test(text)) return '6.EE.B.5';
+            if (/area|surface|volume/i.test(text)) return '6.G.A.1';
+            return '6.SP.A.1';
+        }
+        if (gn === '7') {
+            if (/proportion|percent|discount/i.test(text)) return '7.RP.A.2';
+            if (/negative|rational|fraction/i.test(text)) return '7.NS.A.1';
+            if (/equation|inequality/i.test(text)) return '7.EE.B.4';
+            if (/circle|radius|diameter|circumference/i.test(text)) return '7.G.B.4';
+            return '7.SP.C.5';
+        }
+        if (gn === '8') {
+            if (/slope|linear|function|intercept/i.test(text)) return '8.F.A.1';
+            if (/pythagorean|hypotenuse|triangle/i.test(text)) return '8.G.B.7';
+            if (/exponent|scientific notation|root/i.test(text)) return '8.EE.A.1';
+            return '8.EE.C.7';
+        }
+        // High School Math
+        if (/equation|solve for x|polynomial|factor/i.test(text)) return 'HSA.REI.B.3';
+        if (/function|f\(x\)|domain|range/i.test(text)) return 'HSF.IF.A.1';
+        if (/angle|triangle|proof|circle|sin|cos|tan/i.test(text)) return 'HSG.SRT.C.6';
+        if (/probability|mean|median|standard deviation/i.test(text)) return 'HSS.ID.A.2';
+        return 'HSN.RN.A.1';
+    }
+
+    if (s === 'Language Arts') {
+        if (gn === 'PK' || gn === 'K' || gn === '1') {
+            if (/rhyme|sound|letter|starts with|first letter|spelled/i.test(text)) return `RF.${gn}.2`;
+            if (/opposite|antonym|synonym|word means/i.test(text)) return `L.${gn}.5`;
+            return `RL.${gn}.1`;
+        }
+        if (['2','3','4','5'].includes(gn)) {
+            if (/noun|verb|adjective|pronoun|adverb|punctuation|plural/i.test(text)) return `L.${gn}.1`;
+            if (/synonym|antonym|prefix|suffix|idiom|metaphor/i.test(text)) return `L.${gn}.4`;
+            if (/main idea|nonfiction|author's purpose|fact|opinion/i.test(text)) return `RI.${gn}.2`;
+            return `RL.${gn}.1`;
+        }
+        if (['6','7','8'].includes(gn)) {
+            if (/clause|comma|semicolon|active|passive/i.test(text)) return `L.${gn}.1`;
+            if (/theme|inference|character|plot|climax/i.test(text)) return `RL.${gn}.2`;
+            if (/argument|evidence|claim|bias|source/i.test(text)) return `RI.${gn}.8`;
+            return `L.${gn}.4`;
+        }
+        if (/rhetoric|argument|fallacy|ethos|pathos|logos/i.test(text)) return 'RI.9-10.6';
+        if (/symbolism|allegory|irony|tragedy|motif/i.test(text)) return 'RL.9-10.4';
+        if (/parallel structure|colon|syntax/i.test(text)) return 'L.9-10.1';
+        return 'RL.11-12.1';
+    }
+
+    if (s === 'Science') {
+        if (['PK','K','1','2'].includes(gn)) {
+            if (/animal|plant|tree|fish|bird|legs|wings|nest|water/i.test(text)) return 'K-LS1-1';
+            if (/sun|moon|stars|rain|cloud|weather|cold|hot/i.test(text)) return 'K-ESS2-1';
+            return 'K-PS2-1';
+        }
+        if (['3','4','5'].includes(gn)) {
+            if (/gravity|motion|force|magnet|electricity|energy|light|sound/i.test(text)) return `${gn}-PS2-1`;
+            if (/fossil|rock|soil|weather|erosion|water cycle|earth/i.test(text)) return `${gn}-ESS2-1`;
+            if (/photosynthesis|food chain|organism|adaptation|ecosystem/i.test(text)) return `${gn}-LS1-1`;
+            return `${gn}-PS1-1`;
+        }
+        if (['6','7','8'].includes(gn)) {
+            if (/cell|mitosis|dna|genetics|evolution/i.test(text)) return 'MS-LS1-1';
+            if (/atom|molecule|chemical|reaction|periodic|element/i.test(text)) return 'MS-PS1-1';
+            if (/plate tectonics|earthquake|volcano|atmosphere/i.test(text)) return 'MS-ESS2-1';
+            return 'MS-PS3-1';
+        }
+        if (/cell|protein|dna|rna|enzyme|membrane/i.test(text)) return 'HS-LS1-1';
+        if (/electron|covalent|ionic|moles|reaction|thermodynamics/i.test(text)) return 'HS-PS1-1';
+        if (/gravity|momentum|newton|velocity|acceleration/i.test(text)) return 'HS-PS2-1';
+        return 'HS-ESS1-1';
+    }
+
+    if (s === 'Social Studies') {
+        if (/president|constitution|amendment|branch|court|congress|vote|law|civic|rights/i.test(text)) return 'NCSS.5';
+        if (/map|compass|latitude|longitude|continent|ocean|equator|hemisphere/i.test(text)) return 'NCSS.3';
+        if (/money|supply|demand|goods|services|tax|trade|market|economic/i.test(text)) return 'NCSS.7';
+        if (/war|revolution|colony|declaration|treaty|history|ancient|century/i.test(text)) return 'NCSS.2';
+        if (/culture|tradition|holiday|language|religion/i.test(text)) return 'NCSS.1';
+        return 'NCSS.10';
+    }
+
+    return 'CCSS.ELA-LITERACY.1';
+}
+
+// Tag every question in questionBank
+questionBank.forEach(q => {
+    if (!q.standard) {
+        q.standard = assignStandardToQuestion(q);
+    }
+    if (!q.standards) {
+        q.standards = [q.standard];
+    }
+});
+
+if (typeof window !== 'undefined') {
+    window.questionBank = questionBank;
+}
+
 /**
  * Initializes the quiz based on grade and subject filters
  * @param {string} gradeName - The grade level (e.g., 'Third Grade')
@@ -783,15 +948,39 @@ function loadQuestions(gradeName, subjectFilter = 'All') {
     // Normalize inputs
     const gName = gradeName.trim();
 
-    // Filter logic
-    currentQuestions = questionBank.filter(q => {
+    // Grade and subject pool
+    let pool = questionBank.filter(q => {
         const gradeMatch = q.grade === gName;
         const subjectMatch = subjectFilter === 'All' || q.subject === subjectFilter;
         return gradeMatch && subjectMatch;
     });
 
-    // Shuffle questions for variety
-    currentQuestions.sort(() => Math.random() - 0.5);
+    // Targeted standard prioritization
+    if (window.targetedStandard) {
+        const target = window.targetedStandard.trim();
+        const targetDomain = target.split('.').slice(0, 2).join('.');
+
+        // Exact match
+        const exactMatches = pool.filter(q => q.standard === target || (Array.isArray(q.standards) && q.standards.includes(target)));
+        // Domain cluster match
+        const domainMatches = pool.filter(q => !exactMatches.includes(q) && (q.standard && q.standard.startsWith(targetDomain)));
+        // Remaining
+        const remaining = pool.filter(q => !exactMatches.includes(q) && !domainMatches.includes(q));
+
+        exactMatches.sort(() => Math.random() - 0.5);
+        domainMatches.sort(() => Math.random() - 0.5);
+        remaining.sort(() => Math.random() - 0.5);
+
+        // Assemble 10 prioritized questions
+        currentQuestions = [...exactMatches, ...domainMatches, ...remaining].slice(0, 10);
+    } else {
+        pool.sort(() => Math.random() - 0.5);
+        currentQuestions = pool;
+    }
+
+    if (typeof window !== 'undefined') {
+        window.currentQuestions = currentQuestions;
+    }
 
     // Initial UI Update
     updateProgressBar(0);
@@ -826,6 +1015,26 @@ function loadCurrentQuestion() {
 
     // Update Question Text
     document.getElementById('question').textContent = q.question;
+
+    // Render Standard Alignment Badge if available
+    let stdBadgeEl = document.getElementById('question-standard-badge');
+    if (!stdBadgeEl) {
+        stdBadgeEl = document.createElement('div');
+        stdBadgeEl.id = 'question-standard-badge';
+        const qEl = document.getElementById('question');
+        if (qEl && qEl.parentNode) {
+            qEl.parentNode.insertBefore(stdBadgeEl, qEl);
+        }
+    }
+    if (stdBadgeEl) {
+        const stdCode = q.standard || (q.standards && q.standards[0]) || window.targetedStandard;
+        if (stdCode) {
+            stdBadgeEl.innerHTML = `<span style="display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.2rem 0.65rem; border-radius: var(--radius-full, 9999px); background: color-mix(in srgb, var(--color-primary, #2563eb) 12%, transparent); color: var(--color-primary, #2563eb); font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem;"><i class="fas fa-bullseye"></i> Aligned Standard: ${stdCode}</span>`;
+            stdBadgeEl.style.display = 'block';
+        } else {
+            stdBadgeEl.style.display = 'none';
+        }
+    }
 
     // Update Counter
     document.getElementById('question-count').innerHTML = `${currentQuestionIndex + 1}<span class="text-xl text-gray-400 font-medium">/${currentQuestions.length}</span>`;

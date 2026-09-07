@@ -208,9 +208,71 @@ include ABSPATH . '../src/header.php';
                 </section>
             </div>
         </div>
+
+        <!-- Standard Mastery Matrix Section -->
+        <section class="profile-card animate-reveal" style="margin-top: 2rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
+                <div>
+                    <h2 class="profile-card-title" style="margin-bottom: 0.25rem;">
+                        <i class="fas fa-certificate" style="color: var(--color-primary);"></i> Standard Mastery Tracker
+                    </h2>
+                    <p style="font-size: 0.875rem; color: var(--color-text-muted); margin: 0;">
+                        Real-time competency tracking across state & national academic standards (CCSS, NGSS, NCSS, TEKS).
+                    </p>
+                </div>
+                
+                <div class="standards-filter-pills" id="standards-subject-filters">
+                    <button type="button" class="std-filter-pill active" data-subject="All">All Subjects</button>
+                    <button type="button" class="std-filter-pill" data-subject="Math">Math</button>
+                    <button type="button" class="std-filter-pill" data-subject="Language Arts">ELA</button>
+                    <button type="button" class="std-filter-pill" data-subject="Science">Science</button>
+                    <button type="button" class="std-filter-pill" data-subject="Social Studies">Social Studies</button>
+                </div>
+            </div>
+
+            <!-- Overview Metrics -->
+            <div class="standards-summary-row">
+                <div class="std-summary-box">
+                    <div class="std-summary-num" id="std-stat-tested">0</div>
+                    <div class="std-summary-label">Standards Tested</div>
+                </div>
+                <div class="std-summary-box">
+                    <div class="std-summary-num" id="std-stat-mastered" style="color: var(--color-success, #10b981);">0</div>
+                    <div class="std-summary-label">Mastered (&ge;80%)</div>
+                </div>
+                <div class="std-summary-box">
+                    <div class="std-summary-num" id="std-stat-avg-score" style="color: var(--color-primary, #4f46e5);">0%</div>
+                    <div class="std-summary-label">Average Proficiency</div>
+                </div>
+            </div>
+
+            <!-- Standards Grid Container -->
+            <div id="standards-matrix-grid" class="standards-matrix-grid">
+                <!-- Populated dynamically by JS -->
+            </div>
+
+            <!-- Empty State if no tests taken yet -->
+            <div id="standards-empty-state" class="standards-empty-state" style="display: none;">
+                <div style="width: 4rem; height: 4rem; border-radius: 9999px; background: color-mix(in srgb, var(--color-primary, #4f46e5) 12%, transparent); color: var(--color-primary, #4f46e5); display: flex; align-items: center; justify-content: center; font-size: 1.75rem; margin: 0 auto 1rem auto;">
+                    <i class="fas fa-award"></i>
+                </div>
+                <h3 style="font-size: 1.15rem; font-weight: 800; margin-bottom: 0.5rem; color: var(--color-text-main);">No Standards Tested Yet</h3>
+                <p style="font-size: 0.875rem; color: var(--color-text-muted); max-width: 460px; margin: 0 auto 1.5rem auto; line-height: 1.6;">
+                    Take a targeted standard diagnostic or entrance exam to certify your proficiency and build your mastery badge collection!
+                </p>
+                <div style="display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap;">
+                    <a href="/pages/standards.php" class="profile-btn-primary" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; width: auto; padding: 0.75rem 1.75rem; border-radius: 9999px;">
+                        <i class="fas fa-book"></i> Browse Standards Guide
+                    </a>
+                    <a href="/assessment/" class="profile-btn-secondary" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; width: auto; padding: 0.75rem 1.75rem; border-radius: 9999px;">
+                        <i class="fas fa-play"></i> Start Assessment
+                    </a>
+                </div>
+            </div>
+        </section>
     </div>
 </main>
 
-<script src="../assets/js/profile-main.js" defer></script>
+<script src="../assets/js/profile-main.js?v=1.2" defer></script>
 
 <?php include ABSPATH . '../src/footer.php'; ?>

@@ -174,6 +174,37 @@ function renderSubjectModules(array $modulesList, string $subjectId, string $sub
     </div>
 </header>
 
+<!-- Targeted Standard Notification Banner -->
+<div id="standard-deep-link-banner" class="standard-deep-link-banner" style="display: none;">
+    <div class="std-banner-inner">
+        <div class="std-banner-left">
+            <div class="std-banner-icon">
+                <i class="fas fa-bullseye"></i>
+            </div>
+            <div>
+                <div class="std-banner-tags">
+                    <span class="std-banner-badge">Targeted Standard Practice</span>
+                    <span id="std-banner-subject-pill" class="std-banner-badge badge-subtle">Core Subject</span>
+                </div>
+                <div class="std-banner-title">
+                    Focusing on: <span id="std-banner-code" class="std-banner-code-text">Standard Code</span>
+                </div>
+                <div id="std-banner-desc" class="std-banner-desc-text">
+                    Lessons and skill practice exercises matching this academic benchmark are highlighted below.
+                </div>
+            </div>
+        </div>
+        <div class="std-banner-actions">
+            <a id="std-banner-assess-link" href="/assessment/#standard=" class="std-banner-btn std-banner-btn-test">
+                <i class="fas fa-tasks"></i> Test This Standard
+            </a>
+            <button type="button" class="std-banner-btn std-banner-btn-dismiss" onclick="dismissStandardDeepLink()">
+                <i class="fas fa-times"></i> Dismiss
+            </button>
+        </div>
+    </div>
+</div>
+
 <!-- Main Content Area -->
 <main id="main-content" class="main-container" tabindex="-1">
     <div>
@@ -536,6 +567,153 @@ function renderSubjectModules(array $modulesList, string $subjectId, string $sub
     } catch (e) {
         console.warn("Failed to auto-switch tab:", e);
     }
+
+    // Standard Deep-Linking & Skill Highlighting Logic
+    function inferSubjectFromStandard(code) {
+        if (!code) return 'math';
+        const c = code.trim().toUpperCase();
+        if (/\b(OA|NBT|NF|MD|RP|NS|EE|HSN|HSA|HSF|HSG|HSS)\b/.test(c) || /^(K|\d+)\.(OA|NBT|NF|MD|G|RP|NS|EE|SP)/.test(c)) {
+            return 'math';
+        }
+        if (/\b(RL|RI|RF|W|SL|L)\b/.test(c) || /^(RL|RI|RF|W|SL|L)\./.test(c)) {
+            return 'ela';
+        }
+        if (/(PS|LS|ESS|ETS)/.test(c) || /NGSS/i.test(c)) {
+            return 'science';
+        }
+        if (/(HIST|GEO|GOV|ECON|CIV|NCSS|SOC)/.test(c)) {
+            return 'social';
+        }
+        return 'math';
+    }
+
+    function getStandardKeywords(code) {
+        const c = code.trim().toUpperCase();
+        if (/\bOA\b/.test(c)) return ['multiplication', 'division', 'operations', 'algebraic', 'fluency'];
+        if (/\bNBT\b/.test(c)) return ['base ten', 'place value', 'addition', 'subtraction', 'number'];
+        if (/\bNF\b/.test(c)) return ['fraction', 'equivalent', 'numerator', 'denominator'];
+        if (/\bMD\b/.test(c)) return ['measurement', 'data', 'area', 'perimeter', 'time', 'volume'];
+        if (/\bG\b/.test(c)) return ['geometry', 'shape', 'angle', 'polygon'];
+        if (/\b(RL|RI|RF)\b/.test(c)) return ['reading', 'comprehension', 'phonics', 'literary', 'text'];
+        if (/\b(W|SL|L)\b/.test(c)) return ['writing', 'grammar', 'vocabulary', 'conventions'];
+        if (/PS/.test(c)) return ['physical', 'matter', 'force', 'energy'];
+        if (/LS/.test(c)) return ['life', 'ecosystem', 'organism', 'cell'];
+        if (/ESS/.test(c)) return ['earth', 'space', 'climate', 'solar'];
+        if (/HIST/.test(c)) return ['history', 'historical', 'timeline'];
+        if (/GEO/.test(c)) return ['geography', 'map', 'continent'];
+        if (/CIV/.test(c)) return ['civics', 'government', 'community'];
+        return [];
+    }
+
+    function handleStandardDeepLink() {
+        const hash = window.location.hash || '';
+        const match = hash.match(/standard=([^&]+)/i);
+        const urlParams = new URLSearchParams(window.location.search);
+        const standardCode = match ? decodeURIComponent(match[1]).trim() : (urlParams.get('standard') ? urlParams.get('standard').trim() : null);
+
+        if (!standardCode) return;
+
+        const subjectKey = inferSubjectFromStandard(standardCode);
+        const subjectNames = {
+            'math': 'Mathematics',
+            'ela': 'Language Arts',
+            'science': 'Science',
+            'social': 'Social Studies'
+        };
+
+        // Auto-switch to the corresponding subject tab
+        switchTab(subjectKey);
+
+        // Update banner details
+        const banner = document.getElementById('standard-deep-link-banner');
+        const bannerCode = document.getElementById('std-banner-code');
+        const bannerSubj = document.getElementById('std-banner-subject-pill');
+        const assessLink = document.getElementById('std-banner-assess-link');
+
+        if (bannerCode) bannerCode.textContent = standardCode;
+        if (bannerSubj) bannerSubj.textContent = subjectNames[subjectKey] || 'Core Subject';
+        if (assessLink) assessLink.href = `/assessment/#standard=${encodeURIComponent(standardCode)}`;
+        if (banner) banner.style.display = 'block';
+
+        // Find matching skill card within active tab
+        setTimeout(() => {
+            const activeSection = document.getElementById(`content-${subjectKey}`);
+            if (!activeSection) return;
+
+            const cards = Array.from(activeSection.querySelectorAll('.skill-card'));
+            if (cards.length === 0) return;
+
+            const cleanCode = standardCode.toLowerCase().replace(/[^a-z0-9]/g, '');
+            const keywords = getStandardKeywords(standardCode);
+
+            let targetCard = null;
+
+            // 1. Exact or partial code match
+            targetCard = cards.find(card => {
+                const cardText = (card.textContent || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+                return cardText.includes(cleanCode);
+            });
+
+            // 2. Keyword match
+            if (!targetCard && keywords.length > 0) {
+                targetCard = cards.find(card => {
+                    const text = (card.textContent || '').toLowerCase();
+                    return keywords.some(kw => text.includes(kw));
+                });
+            }
+
+            // 3. Fallback to first card in active section
+            if (!targetCard) {
+                targetCard = cards[0];
+            }
+
+            if (targetCard) {
+                // Clear any previous highlights
+                document.querySelectorAll('.standard-targeted-skill').forEach(c => {
+                    c.classList.remove('standard-targeted-skill');
+                    const oldPill = c.querySelector('.standard-targeted-pill');
+                    if (oldPill) oldPill.remove();
+                });
+
+                // Attach highlight and pill
+                targetCard.classList.add('standard-targeted-skill');
+                const infoContainer = targetCard.querySelector('.skill-info') || targetCard;
+                if (!infoContainer.querySelector('.standard-targeted-pill')) {
+                    const pill = document.createElement('div');
+                    pill.className = 'standard-targeted-pill';
+                    pill.innerHTML = `<i class="fas fa-bullseye"></i> Aligned: ${standardCode}`;
+                    infoContainer.insertBefore(pill, infoContainer.firstChild);
+                }
+
+                targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }, 150);
+    }
+
+    function dismissStandardDeepLink() {
+        const banner = document.getElementById('standard-deep-link-banner');
+        if (banner) banner.style.display = 'none';
+
+        document.querySelectorAll('.standard-targeted-skill').forEach(c => {
+            c.classList.remove('standard-targeted-skill');
+            const pill = c.querySelector('.standard-targeted-pill');
+            if (pill) pill.remove();
+        });
+
+        // Clean hash without causing a page jump
+        if (window.location.hash.includes('standard=')) {
+            history.replaceState(null, null, window.location.pathname + window.location.search);
+        }
+    }
+
+    window.dismissStandardDeepLink = dismissStandardDeepLink;
+    window.handleStandardDeepLink = handleStandardDeepLink;
+
+    // Check on startup
+    handleStandardDeepLink();
+
+    // Listen for hash change
+    window.addEventListener('hashchange', handleStandardDeepLink);
 </script>
 
 <?php include ABSPATH . 'src/footer.php'; ?>

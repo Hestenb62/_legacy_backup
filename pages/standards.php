@@ -1204,7 +1204,7 @@
         // Footer Action Buttons
         const lessonBtn = document.getElementById('dossier-lesson-btn');
         if (lessonBtn) {
-            lessonBtn.href = `/levels/${gradeLetter}.php`;
+            lessonBtn.href = `/levels/${gradeLetter}.php#standard=${encodeURIComponent(code)}`;
             lessonBtn.innerHTML = `<i class="fas fa-book-open"></i> Go to Level ${gradeLetter.toUpperCase()} Practice`;
         }
 

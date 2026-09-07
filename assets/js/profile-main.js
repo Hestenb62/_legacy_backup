@@ -240,11 +240,17 @@ document.addEventListener("DOMContentLoaded", () => {
     // 5. Achievements & Gamification Badges
     const badgesContainer = document.getElementById('badges-container');
     if (badgesContainer) {
+        const standardsMastery = JSON.parse(localStorage.getItem('hesten_standards_mastery')) || {};
+        const standardsTestedCount = Object.keys(standardsMastery).length;
+        const standardsMasteredCount = Object.values(standardsMastery).filter(s => s.bestScore >= 80).length;
+
         const badges = [
             { id: 'first-book', icon: 'fas fa-book', color: 'blue', title: 'First Book', condition: bookmarks.length >= 1 },
             { id: 'avid-reader', icon: 'fas fa-book-reader', color: 'gold', title: 'Avid Reader', condition: bookmarks.length >= 5 },
             { id: 'highlighter', icon: 'fas fa-highlighter', color: 'green', title: 'Highlighter', condition: allHighlights.length >= 1 },
             { id: 'scholar', icon: 'fas fa-pen-fancy', color: 'gold', title: 'Scholar', condition: allNotes >= 5 },
+            { id: 'std-tester', icon: 'fas fa-crosshairs', color: 'blue', title: 'First Benchmark', condition: standardsTestedCount >= 1 },
+            { id: 'std-master', icon: 'fas fa-award', color: 'gold', title: 'Standard Master', condition: standardsMasteredCount >= 3 },
             { id: 'streak-3', icon: 'fas fa-fire', color: 'gold', title: '3-Day Streak', condition: streakInfo.streak >= 3 },
             { id: 'streak-7', icon: 'fas fa-bolt', color: 'purple', title: '7-Day Habit', condition: streakInfo.streak >= 7 },
             { id: 'focus-master', icon: 'fas fa-stopwatch', color: 'green', title: 'Focus Master', condition: streakInfo.focusSessions >= 1 }
@@ -257,4 +263,149 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
         `).join('');
     }
+
+    // 6. Standard Mastery Tracker Matrix Controller
+    function initStandardsMasteryMatrix() {
+        const grid = document.getElementById('standards-matrix-grid');
+        const emptyState = document.getElementById('standards-empty-state');
+        const statTested = document.getElementById('std-stat-tested');
+        const statMastered = document.getElementById('std-stat-mastered');
+        const statAvg = document.getElementById('std-stat-avg-score');
+        const filterContainer = document.getElementById('standards-subject-filters');
+
+        if (!grid || !emptyState) return;
+
+        let masteryData = {};
+        try {
+            masteryData = JSON.parse(localStorage.getItem('hesten_standards_mastery')) || {};
+        } catch(e){}
+
+        const items = Object.values(masteryData);
+        const totalTested = items.length;
+        const totalMastered = items.filter(i => i.bestScore >= 80).length;
+        const totalScoreSum = items.reduce((acc, i) => acc + (i.bestScore || 0), 0);
+        const avgScore = totalTested > 0 ? Math.round(totalScoreSum / totalTested) : 0;
+
+        if (statTested) statTested.textContent = totalTested;
+        if (statMastered) statMastered.textContent = totalMastered;
+        if (statAvg) statAvg.textContent = `${avgScore}%`;
+
+        let activeSubject = 'All';
+
+        const gradeLetterMap = {
+            'Pre-K': 'a',
+            'Kindergarten': 'b',
+            'First Grade': 'c',
+            'Second Grade': 'd',
+            'Third Grade': 'e',
+            'Fourth Grade': 'f',
+            'Fifth Grade': 'g',
+            'Sixth Grade': 'h',
+            'Seventh Grade': 'i',
+            'Eighth Grade': 'j',
+            'Ninth Grade': 'k',
+            'Tenth Grade': 'l',
+            'Eleventh Grade': 'm',
+            'Twelfth Grade': 'n'
+        };
+
+        function inferGradeLetter(code, gradeStr) {
+            if (gradeStr && gradeLetterMap[gradeStr]) return gradeLetterMap[gradeStr];
+            const c = (code || '').trim();
+            if (/^K\./i.test(c) || /\bK\b/i.test(c)) return 'b';
+            const m = c.match(/^(\d+)\./) || c.match(/[A-Z]+\.(\d+)\./i);
+            if (m) {
+                const num = parseInt(m[1], 10);
+                const letters = ['b','c','d','e','f','g','h','i','j','k','l','m','n'];
+                return letters[num] || 'e';
+            }
+            return 'e';
+        }
+
+        function renderMatrix() {
+            const filtered = items.filter(item => {
+                if (activeSubject === 'All') return true;
+                return (item.subject || '').toLowerCase() === activeSubject.toLowerCase();
+            });
+
+            if (filtered.length === 0) {
+                grid.innerHTML = '';
+                emptyState.style.display = 'block';
+                return;
+            }
+
+            emptyState.style.display = 'none';
+            grid.innerHTML = filtered.map(item => {
+                const score = item.bestScore || 0;
+                let statusClass = 'review';
+                let statusLabel = 'Needs Review';
+                let barColor = 'var(--color-error, #ef4444)';
+
+                if (score >= 80) {
+                    statusClass = 'mastered';
+                    statusLabel = 'Mastered';
+                    barColor = 'var(--color-success, #10b981)';
+                } else if (score >= 60) {
+                    statusClass = 'developing';
+                    statusLabel = 'Developing';
+                    barColor = 'var(--color-warning, #f59e0b)';
+                }
+
+                const gradeLetter = inferGradeLetter(item.standard, item.grade);
+                const lastDateStr = item.lastTested ? new Date(item.lastTested).toLocaleDateString(undefined, { month: 'short', day: 'numeric' }) : 'Recent';
+
+                return `
+                    <div class="std-matrix-card">
+                        <div>
+                            <div class="std-matrix-card-header">
+                                <span class="std-matrix-badge">${item.standard}</span>
+                                <span class="std-matrix-status ${statusClass}">${statusLabel}</span>
+                            </div>
+                            <div class="std-matrix-subject-label">
+                                <i class="fas fa-tag mr-1" style="opacity: 0.7;"></i> ${item.subject} &bull; ${item.grade || 'Core Benchmark'}
+                            </div>
+                            <div style="display: flex; justify-content: space-between; font-size: 0.8125rem; font-weight: 700; margin-top: 0.5rem;">
+                                <span>Proficiency</span>
+                                <span style="color: ${barColor};">${score}%</span>
+                            </div>
+                            <div class="std-matrix-bar-wrap">
+                                <div class="std-matrix-bar-fill" style="width: ${score}%; background: ${barColor};"></div>
+                            </div>
+                        </div>
+
+                        <div class="std-matrix-footer">
+                            <span class="std-matrix-meta">
+                                <i class="fas fa-history mr-1"></i> ${item.attempts || 1} attempt${(item.attempts || 1) === 1 ? '' : 's'} &bull; ${lastDateStr}
+                            </span>
+                            <div class="std-matrix-actions">
+                                <a href="/levels/${gradeLetter}.php#standard=${encodeURIComponent(item.standard)}" class="std-matrix-btn std-matrix-btn-practice" title="Practice this standard">
+                                    <i class="fas fa-book-open"></i> Practice
+                                </a>
+                                <a href="/assessment/#standard=${encodeURIComponent(item.standard)}" class="std-matrix-btn std-matrix-btn-test" title="Test this standard">
+                                    <i class="fas fa-play"></i> Test
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Filter button click handlers
+        if (filterContainer) {
+            const pills = filterContainer.querySelectorAll('.std-filter-pill');
+            pills.forEach(pill => {
+                pill.addEventListener('click', () => {
+                    pills.forEach(p => p.classList.remove('active'));
+                    pill.classList.add('active');
+                    activeSubject = pill.dataset.subject || 'All';
+                    renderMatrix();
+                });
+            });
+        }
+
+        renderMatrix();
+    }
+
+    initStandardsMasteryMatrix();
 });
