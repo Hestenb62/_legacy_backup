@@ -84,46 +84,107 @@ include '../src/header.php';
             Select how you would like to test your skills today. You can take a mixed Entrance Exam to evaluate your grade-level placement, or focus on a single subject.
         </p>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6" style="margin-top: 1rem;">
-            <!-- Card 1: Entrance Exam -->
-            <div class="assessment-card assessment-card-accent-top" style="display: flex; flex-direction: column; justify-content: space-between; border-color: var(--color-primary); padding: 2rem; height: 100%;">
+        <div class="assessment-card assessment-card-accent-top" style="border-color: var(--color-primary); padding: 2rem; margin-bottom: 2rem;">
+            <div style="display: flex; flex-direction: column; gap: 1.5rem; justify-content: space-between;">
                 <div>
-                    <div style="width: 3.5rem; height: 3.5rem; border-radius: var(--radius-xl); background-color: color-mix(in srgb, var(--color-primary) 10%, transparent); color: var(--color-primary); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.5rem;">
-                        <i class="fas fa-graduation-cap"></i>
+                    <div style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.25rem 0.75rem; border-radius: var(--radius-full); background: color-mix(in srgb, var(--color-primary) 15%, transparent); color: var(--color-primary); font-size: 0.75rem; font-weight: 800; text-transform: uppercase; margin-bottom: 0.75rem;">
+                        <i class="fas fa-layer-group"></i> Comprehensive Diagnostic
                     </div>
-                    <h3 class="assessment-card-title" style="font-size: 1.25rem; font-weight: 800; margin-bottom: 0.75rem;">Entrance Exam</h3>
-                    <p style="font-size: 0.875rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.5rem;">
-                        A comprehensive diagnostic test that mixes all core subjects. Upon completion, you will receive customized lesson recommendations based on your performance.
+                    <h3 class="assessment-card-title" style="font-size: 1.5rem; font-weight: 800; margin-bottom: 0.5rem;">Grade Placement Entrance Exam</h3>
+                    <p style="font-size: 0.9375rem; color: var(--color-text-muted); line-height: 1.6; max-width: 650px; margin: 0;">
+                        A comprehensive multi-subject evaluation that tests knowledge across Math, Language Arts, Science, and Social Studies. Generates personalized lesson recommendations upon completion.
                     </p>
                 </div>
-                <button onclick="startAssessmentMode('All')" class="hero-nav-btn hero-nav-btn-primary" style="width: 100%; border: none; text-align: center; justify-content: center; padding: 0.75rem 1.5rem; border-radius: var(--radius-lg); font-weight: 700;">
-                    Start Entrance Exam
-                </button>
+                <div>
+                    <button onclick="startAssessmentMode('All')" class="hero-nav-btn hero-nav-btn-primary" style="border: none; text-align: center; justify-content: center; padding: 0.85rem 2rem; border-radius: var(--radius-lg); font-weight: 700; cursor: pointer;">
+                        <i class="fas fa-play" style="margin-right: 0.5rem;"></i> Start Entrance Exam
+                    </button>
+                </div>
             </div>
+        </div>
 
-            <!-- Card 2: Subject Tests -->
-            <div class="assessment-card assessment-card-accent-top" style="display: flex; flex-direction: column; justify-content: space-between; border-color: var(--color-secondary); padding: 2rem; height: 100%;">
-                <div>
-                    <div style="width: 3.5rem; height: 3.5rem; border-radius: var(--radius-xl); background-color: color-mix(in srgb, var(--color-secondary) 10%, transparent); color: var(--color-secondary); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.5rem;">
-                        <i class="fas fa-filter"></i>
+        <div style="margin-top: 1.5rem;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem;">
+                <h3 style="font-size: 1.25rem; font-weight: 800; margin: 0; color: var(--color-text-main);">
+                    <i class="fas fa-crosshairs" style="color: var(--color-secondary); margin-right: 0.5rem;"></i> Dedicated Subject Tests
+                </h3>
+                <span style="font-size: 0.8125rem; color: var(--color-text-muted);">Select a specific subject benchmark</span>
+            </div>
+            
+            <div class="subject-test-grid">
+                <!-- Math -->
+                <div class="subject-test-card">
+                    <div>
+                        <div class="subject-test-card-header">
+                            <div class="subject-test-card-icon" style="background: color-mix(in srgb, var(--color-primary) 15%, transparent); color: var(--color-primary);">
+                                <i class="fas fa-calculator"></i>
+                            </div>
+                            <div>
+                                <span style="font-size: 0.6875rem; font-weight: 800; text-transform: uppercase; color: var(--color-primary); letter-spacing: 0.05em;">CCSS.MATH & TEKS §111</span>
+                                <h4 class="subject-test-card-title">Mathematics</h4>
+                            </div>
+                        </div>
+                        <p class="subject-test-card-desc">Operations, algebraic thinking, fractions, numbers in base ten, and geometric concepts.</p>
                     </div>
-                    <h3 class="assessment-card-title" style="font-size: 1.25rem; font-weight: 800; margin-bottom: 0.75rem;">Subject Checks</h3>
-                    <p style="font-size: 0.875rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.5rem;">
-                        Select a single subject to focus on. Perfect for targeting a specific standard or checking your growth in one area.
-                    </p>
+                    <button onclick="startAssessmentMode('Math')" class="hero-nav-btn hero-nav-btn-outline" style="width: 100%; justify-content: center; padding: 0.65rem 1.25rem; border-radius: var(--radius-md); font-size: 0.875rem; cursor: pointer;">
+                        <i class="fas fa-play" style="margin-right: 0.5rem;"></i> Start Math Test
+                    </button>
                 </div>
-                <div class="focus-filter-list" style="gap: 0.5rem; margin: 0; display: flex; flex-direction: column;">
-                    <button onclick="startAssessmentMode('Math')" class="focus-filter-btn" style="text-align: left; padding: 0.6rem 1rem; font-size: 0.875rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); display: flex; align-items: center; width: 100%;">
-                        <i class="fas fa-calculator" style="color: var(--color-primary); width: 1.5rem; margin-right: 0.5rem;"></i> Math Test
+
+                <!-- Language Arts -->
+                <div class="subject-test-card">
+                    <div>
+                        <div class="subject-test-card-header">
+                            <div class="subject-test-card-icon" style="background: color-mix(in srgb, #ec4899 15%, transparent); color: #ec4899;">
+                                <i class="fas fa-book-reader"></i>
+                            </div>
+                            <div>
+                                <span style="font-size: 0.6875rem; font-weight: 800; text-transform: uppercase; color: #ec4899; letter-spacing: 0.05em;">CCSS.ELA & TEKS §110</span>
+                                <h4 class="subject-test-card-title">Language Arts</h4>
+                            </div>
+                        </div>
+                        <p class="subject-test-card-desc">Reading comprehension, literary analysis, grammar conventions, and textual vocabulary.</p>
+                    </div>
+                    <button onclick="startAssessmentMode('Language Arts')" class="hero-nav-btn hero-nav-btn-outline" style="width: 100%; justify-content: center; padding: 0.65rem 1.25rem; border-radius: var(--radius-md); font-size: 0.875rem; cursor: pointer;">
+                        <i class="fas fa-play" style="margin-right: 0.5rem;"></i> Start ELA Test
                     </button>
-                    <button onclick="startAssessmentMode('Language Arts')" class="focus-filter-btn" style="text-align: left; padding: 0.6rem 1rem; font-size: 0.875rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); display: flex; align-items: center; width: 100%;">
-                        <i class="fas fa-book-reader" style="color: #ec4899; width: 1.5rem; margin-right: 0.5rem;"></i> Language Arts Test
+                </div>
+
+                <!-- Science -->
+                <div class="subject-test-card">
+                    <div>
+                        <div class="subject-test-card-header">
+                            <div class="subject-test-card-icon" style="background: color-mix(in srgb, #10b981 15%, transparent); color: #10b981;">
+                                <i class="fas fa-flask"></i>
+                            </div>
+                            <div>
+                                <span style="font-size: 0.6875rem; font-weight: 800; text-transform: uppercase; color: #10b981; letter-spacing: 0.05em;">NGSS & TEKS §112</span>
+                                <h4 class="subject-test-card-title">Science</h4>
+                            </div>
+                        </div>
+                        <p class="subject-test-card-desc">Physical sciences, ecosystems, earth and space systems, and scientific inquiry principles.</p>
+                    </div>
+                    <button onclick="startAssessmentMode('Science')" class="hero-nav-btn hero-nav-btn-outline" style="width: 100%; justify-content: center; padding: 0.65rem 1.25rem; border-radius: var(--radius-md); font-size: 0.875rem; cursor: pointer;">
+                        <i class="fas fa-play" style="margin-right: 0.5rem;"></i> Start Science Test
                     </button>
-                    <button onclick="startAssessmentMode('Science')" class="focus-filter-btn" style="text-align: left; padding: 0.6rem 1rem; font-size: 0.875rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); display: flex; align-items: center; width: 100%;">
-                        <i class="fas fa-flask" style="color: #10b981; width: 1.5rem; margin-right: 0.5rem;"></i> Science Test
-                    </button>
-                    <button onclick="startAssessmentMode('Social Studies')" class="focus-filter-btn" style="text-align: left; padding: 0.6rem 1rem; font-size: 0.875rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); display: flex; align-items: center; width: 100%;">
-                        <i class="fas fa-globe-americas" style="color: #f59e0b; width: 1.5rem; margin-right: 0.5rem;"></i> Social Studies Test
+                </div>
+
+                <!-- Social Studies -->
+                <div class="subject-test-card">
+                    <div>
+                        <div class="subject-test-card-header">
+                            <div class="subject-test-card-icon" style="background: color-mix(in srgb, #f59e0b 15%, transparent); color: #f59e0b;">
+                                <i class="fas fa-globe-americas"></i>
+                            </div>
+                            <div>
+                                <span style="font-size: 0.6875rem; font-weight: 800; text-transform: uppercase; color: #f59e0b; letter-spacing: 0.05em;">NCSS Strands & TEKS §113</span>
+                                <h4 class="subject-test-card-title">Social Studies</h4>
+                            </div>
+                        </div>
+                        <p class="subject-test-card-desc">History, geography, civic principles, community economics, and global cultures.</p>
+                    </div>
+                    <button onclick="startAssessmentMode('Social Studies')" class="hero-nav-btn hero-nav-btn-outline" style="width: 100%; justify-content: center; padding: 0.65rem 1.25rem; border-radius: var(--radius-md); font-size: 0.875rem; cursor: pointer;">
+                        <i class="fas fa-play" style="margin-right: 0.5rem;"></i> Start Social Studies Test
                     </button>
                 </div>
             </div>
@@ -135,6 +196,26 @@ include '../src/header.php';
     <!-- Hidden inputs for JavaScript -->
     <input type="hidden" id="force-grade" value="" />
     <input type="hidden" id="grade-key" value="" />
+
+    <!-- TARGETED STANDARD TEST BANNER (Shown when visiting /assessment/#standard=...) -->
+    <div id="targeted-standard-banner" class="targeted-standard-banner hidden" style="margin-bottom: 1.75rem;">
+        <div class="targeted-standard-content">
+            <div id="targeted-standard-icon" class="targeted-standard-icon">
+                <i class="fas fa-bullseye"></i>
+            </div>
+            <div>
+                <div class="targeted-standard-pill-row">
+                    <span class="targeted-standard-pill"><i class="fas fa-crosshairs" style="margin-right: 0.35rem;"></i> Targeted Standard Evaluation</span>
+                    <span id="targeted-standard-subject-pill" class="targeted-standard-pill pill-subtle">Core Subject</span>
+                </div>
+                <h3 id="targeted-standard-title" class="targeted-standard-title">Standard Check</h3>
+                <p id="targeted-standard-desc" class="targeted-standard-desc">Assessing student proficiency and conceptual mastery for this specific learning benchmark.</p>
+            </div>
+        </div>
+        <button type="button" class="targeted-standard-exit-btn" onclick="exitStandardTargetedTest()">
+            <i class="fas fa-arrow-left"></i> Exit to All Assessments
+        </button>
+    </div>
 
     <div class="assessment-grid">
         <!-- Sidebar -->
@@ -320,6 +401,6 @@ include '../src/header.php';
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 <script src="/assets/js/assessment-p-12.js"></script>
 <script src="/assets/js/assessment-ap.js"></script>
-<script src="/assets/js/assessment-main.js?v=1.2"></script>
+<script src="/assets/js/assessment-main.js?v=1.3"></script>
 
 <?php include '../src/footer.php'; ?>

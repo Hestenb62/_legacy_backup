@@ -241,6 +241,80 @@
         </div>
     </div>
 
+    <!-- Standard Mastery Dossier Modal (Large Detail Popup) -->
+    <div id="std-dossier-modal" class="std-dossier-modal" role="dialog" aria-modal="true" aria-labelledby="dossier-standard-code" style="display: none;">
+        <div class="std-dossier-backdrop" onclick="closeStandardDossier()"></div>
+        <div class="std-dossier-dialog card-surface">
+            <!-- Modal Header -->
+            <div class="std-dossier-header">
+                <div class="std-dossier-header-info">
+                    <div class="std-dossier-badges">
+                        <span id="dossier-subject-badge" class="std-dossier-pill pill-indigo">Mathematics</span>
+                        <span id="dossier-grade-badge" class="std-dossier-pill pill-emerald">Kindergarten • Level B</span>
+                        <span id="dossier-domain-badge" class="std-dossier-pill pill-slate">Domain</span>
+                    </div>
+                    <h2 id="dossier-standard-code" class="std-dossier-code-title">CCSS.MATH.CONTENT.K.CC.A.1</h2>
+                </div>
+                <button type="button" class="std-dossier-close-btn" onclick="closeStandardDossier()" aria-label="Close Standard Details">&times;</button>
+            </div>
+
+            <!-- Modal Scrollable Body -->
+            <div class="std-dossier-body">
+                <!-- 1. Official Standard Statement -->
+                <section class="std-dossier-section">
+                    <h3 class="std-dossier-section-title">
+                        <i class="fas fa-bookmark color-indigo"></i> Official Standard Statement & Description
+                    </h3>
+                    <div id="dossier-standard-statement" class="std-dossier-statement-box"></div>
+                </section>
+
+                <!-- 2. Two-Column Grid: Objectives & Prerequisites -->
+                <div class="std-dossier-grid">
+                    <!-- Core Objectives -->
+                    <section class="std-dossier-section">
+                        <h3 class="std-dossier-section-title">
+                            <i class="fas fa-bullseye color-emerald"></i> Key Competencies & Mastery Focus
+                        </h3>
+                        <ul id="dossier-objectives-list" class="std-dossier-list"></ul>
+                    </section>
+
+                    <!-- Learning Trajectory / Prerequisites -->
+                    <section class="std-dossier-section">
+                        <h3 class="std-dossier-section-title">
+                            <i class="fas fa-stream color-amber"></i> Learning Continuum & Progression
+                        </h3>
+                        <div id="dossier-progression-box" class="std-dossier-progression-box"></div>
+                    </section>
+                </div>
+
+                <!-- 3. Pedagogical Scaffolding & Neurodivergent Supports -->
+                <section class="std-dossier-section">
+                    <h3 class="std-dossier-section-title">
+                        <i class="fas fa-hands-helping color-rose"></i> Pedagogical & Neurodivergent Scaffolding
+                    </h3>
+                    <div id="dossier-scaffolding-box" class="std-dossier-scaffolding-box"></div>
+                </section>
+            </div>
+
+            <!-- Modal Footer with Lesson & Test Buttons -->
+            <div class="std-dossier-footer">
+                <div class="std-dossier-footer-left">
+                    <button type="button" id="dossier-copy-btn" class="std-dossier-btn-secondary" onclick="copyCurrentDossierCode()">
+                        <i class="far fa-copy"></i> Copy Code
+                    </button>
+                </div>
+                <div class="std-dossier-footer-actions">
+                    <a id="dossier-lesson-btn" href="/levels/b.php" class="std-dossier-btn-lesson">
+                        <i class="fas fa-book-open"></i> Go to Lesson / Practice
+                    </a>
+                    <a id="dossier-test-btn" href="/assessment/#standard=3.OA.A.1" class="std-dossier-btn-test">
+                        <i class="fas fa-tasks"></i> Test This Standard <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Toast Notification for Standard Copy -->
     <div id="std-copy-toast" class="std-copy-toast" role="alert" aria-live="polite">
         <i class="fas fa-check-circle"></i> <span id="std-copy-toast-text">Standard copied to clipboard!</span>
@@ -413,7 +487,7 @@
 
                 const currentLevelLetter = (gradeData.level || 'a').toLowerCase();
 
-                // Enhance standard description codes with interactive badges and direct practice/test links
+                // Enhance standard description codes with copy badge and info (i) popup trigger
                 const descElements = Array.from(item.querySelectorAll('.curr-standard-desc'));
                 descElements.forEach(descEl => {
                     if (!descEl.dataset.originalHtml) {
@@ -426,8 +500,7 @@
                         const cleanCode = code.trim();
                         return `<span class="std-code-wrap">` +
                             `<button type="button" class="std-code-badge" data-code="${cleanCode}" title="Click to copy standard code"><i class="far fa-copy"></i> ${cleanCode}</button>` +
-                            `<a href="/levels/${currentLevelLetter}.php" class="std-action-btn std-practice-btn" title="Practice Level ${currentLevelLetter.toUpperCase()} interactive skills aligned with ${cleanCode}"><i class="fas fa-play"></i> Practice</a>` +
-                            `<a href="/assessment/index.php" class="std-action-btn std-assess-btn" title="Launch Diagnostic Assessment"><i class="fas fa-clipboard-check"></i> Test</a>` +
+                            `<button type="button" class="std-info-btn" data-code="${cleanCode}" aria-label="View Standard Details for ${cleanCode}" title="View detailed standard mastery dossier"><i class="fas fa-info-circle"></i></button>` +
                         `</span>`;
                     });
                     descEl.innerHTML = html;
@@ -978,6 +1051,185 @@
         return (str || '').replace(/["'\\]/g, '\\$&');
     }
 
+    let currentDossierCode = '';
+
+    function openStandardDossier(code, itemEl) {
+        if (!code) return;
+        currentDossierCode = code;
+
+        const modal = document.getElementById('std-dossier-modal');
+        if (!modal) return;
+
+        const domain = itemEl?.dataset?.domain || 'General';
+        const subjInfo = subjectsMap[currentSubject] || { name: 'Curriculum', color: 'indigo' };
+        const gradeLetter = (document.getElementById('stat-level-code')?.innerText || 'Level A').replace('Level ', '').toLowerCase();
+
+        // Header Badges
+        const subjBadge = document.getElementById('dossier-subject-badge');
+        if (subjBadge) {
+            subjBadge.innerText = subjInfo.name;
+            subjBadge.className = `std-dossier-pill pill-${subjInfo.color || 'indigo'}`;
+        }
+
+        const gradeBadge = document.getElementById('dossier-grade-badge');
+        if (gradeBadge) {
+            gradeBadge.innerText = `${currentGrade} • Level ${gradeLetter.toUpperCase()}`;
+        }
+
+        const domainBadge = document.getElementById('dossier-domain-badge');
+        if (domainBadge) {
+            domainBadge.innerText = domain;
+        }
+
+        const codeTitle = document.getElementById('dossier-standard-code');
+        if (codeTitle) {
+            codeTitle.innerText = code;
+        }
+
+        // Find standard description text
+        let descText = "";
+        if (itemEl) {
+            const descs = Array.from(itemEl.querySelectorAll('.curr-standard-desc'));
+            const matchingDesc = descs.find(d => d.innerText.includes(code)) || descs[0];
+            if (matchingDesc) {
+                const clone = matchingDesc.cloneNode(true);
+                clone.querySelectorAll('.std-code-wrap, .std-code-badge, .std-info-btn').forEach(el => el.remove());
+                descText = clone.innerText.replace(/^\s*[:\-–]\s*/, '').trim();
+            }
+        }
+        if (!descText) {
+            descText = `Core standard requirements aligned with the ${currentGrade} ${subjInfo.name} curriculum.`;
+        }
+
+        const stmtBox = document.getElementById('dossier-standard-statement');
+        if (stmtBox) {
+            stmtBox.innerHTML = `<p>${escapeHtml(descText)}</p>`;
+        }
+
+        // Objectives
+        const objList = document.getElementById('dossier-objectives-list');
+        if (objList) {
+            let objectives = [];
+            if (currentSubject === 'math') {
+                objectives = [
+                    `Master foundational understanding of <strong>${escapeHtml(domain)}</strong> principles.`,
+                    `Apply problem-solving strategies using multiple concrete, pictorial, and symbolic representations.`,
+                    `Demonstrate procedural fluency and communicate mathematical reasoning clearly.`
+                ];
+            } else if (currentSubject === 'ela') {
+                objectives = [
+                    `Cite key textual evidence and analyze core ideas within grade-level literature or informational texts.`,
+                    `Develop vocabulary acquisition and contextual word analysis skills.`,
+                    `Construct coherent spoken and written responses adhering to standard conventions.`
+                ];
+            } else if (currentSubject === 'science') {
+                objectives = [
+                    `Formulate testable scientific questions and engage in inquiry-based investigations.`,
+                    `Construct evidence-based explanations connecting cause and effect.`,
+                    `Analyze patterns across physical, life, and earth systems.`
+                ];
+            } else {
+                objectives = [
+                    `Evaluate primary and secondary sources to examine chronological and spatial perspectives.`,
+                    `Analyze civic roles, democratic institutions, and economic interactions.`,
+                    `Communicate informed conclusions through reasoned discourse and evidence.`
+                ];
+            }
+            objList.innerHTML = objectives.map(obj => `
+                <li class="std-dossier-list-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>${obj}</span>
+                </li>
+            `).join('');
+        }
+
+        // Progression Continuum
+        const progBox = document.getElementById('dossier-progression-box');
+        if (progBox) {
+            progBox.innerHTML = `
+                <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                    <div>
+                        <strong style="color: var(--color-primary); display: flex; align-items: center; gap: 0.35rem; font-size: 0.8rem; text-transform: uppercase;">
+                            <i class="fas fa-arrow-circle-down"></i> Foundational Precursor Skills
+                        </strong>
+                        <p style="margin: 0.25rem 0 0 0; color: var(--color-text-muted); font-size: 0.85rem;">
+                            Draws upon foundational readiness and intuitive exploration developed in earlier levels.
+                        </p>
+                    </div>
+                    <div style="padding-top: 0.5rem; border-top: 1px dashed var(--color-border);">
+                        <strong style="color: var(--color-success); display: flex; align-items: center; gap: 0.35rem; font-size: 0.8rem; text-transform: uppercase;">
+                            <i class="fas fa-arrow-circle-up"></i> Future Progression & Extension
+                        </strong>
+                        <p style="margin: 0.25rem 0 0 0; color: var(--color-text-muted); font-size: 0.85rem;">
+                            Prepares students for higher-order synthesis and multi-step applications in subsequent grade progressions.
+                        </p>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Pedagogical & Neurodivergent Scaffolding
+        const scafBox = document.getElementById('dossier-scaffolding-box');
+        if (scafBox) {
+            scafBox.innerHTML = `
+                <div style="display: grid; grid-template-columns: 1fr; gap: 0.75rem;">
+                    <div style="background: var(--color-bg-surface); padding: 0.75rem 1rem; border-radius: var(--radius-lg); border: 1px solid var(--color-border);">
+                        <strong style="color: var(--color-primary); font-size: 0.8125rem;">
+                            <i class="fas fa-eye mr-1"></i> Visual & Tactile Scaffolding:
+                        </strong>
+                        <span style="font-size: 0.8125rem; color: var(--color-text-muted); margin-left: 0.35rem;">
+                            Employ color-coding, manipulatives, graphic organizers, and step-by-step visual models.
+                        </span>
+                    </div>
+                    <div style="background: var(--color-bg-surface); padding: 0.75rem 1rem; border-radius: var(--radius-lg); border: 1px solid var(--color-border);">
+                        <strong style="color: var(--color-secondary); font-size: 0.8125rem;">
+                            <i class="fas fa-brain mr-1"></i> Working Memory & ADHD Supports:
+                        </strong>
+                        <span style="font-size: 0.8125rem; color: var(--color-text-muted); margin-left: 0.35rem;">
+                            Chunk multi-step problems into modular milestones with self-checking checklists and acoustic focus aids.
+                        </span>
+                    </div>
+                    <div style="background: var(--color-bg-surface); padding: 0.75rem 1rem; border-radius: var(--radius-lg); border: 1px solid var(--color-border);">
+                        <strong style="color: var(--color-warning); font-size: 0.8125rem;">
+                            <i class="fas fa-book-reader mr-1"></i> Dyslexia & Universal Design (UDL):
+                        </strong>
+                        <span style="font-size: 0.8125rem; color: var(--color-text-muted); margin-left: 0.35rem;">
+                            Provide synthesized text-to-speech, adjustable font kerning, and multiple modalities for expressing comprehension.
+                        </span>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Footer Action Buttons
+        const lessonBtn = document.getElementById('dossier-lesson-btn');
+        if (lessonBtn) {
+            lessonBtn.href = `/levels/${gradeLetter}.php`;
+            lessonBtn.innerHTML = `<i class="fas fa-book-open"></i> Go to Level ${gradeLetter.toUpperCase()} Practice`;
+        }
+
+        const testBtn = document.getElementById('dossier-test-btn');
+        if (testBtn) {
+            testBtn.href = `/assessment/#standard=${encodeURIComponent(code)}`;
+            testBtn.innerHTML = `<i class="fas fa-tasks"></i> Test This Standard <i class="fas fa-arrow-right"></i>`;
+        }
+
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeStandardDossier() {
+        const modal = document.getElementById('std-dossier-modal');
+        if (modal) modal.style.display = 'none';
+        document.body.style.overflow = '';
+    }
+
+    function copyCurrentDossierCode() {
+        if (currentDossierCode) {
+            copyStandardCode(currentDossierCode);
+        }
+    }
+
     // Initialize Select Dropdown and Listeners
     function syncCurriculumSelect() {
         const select = document.getElementById('curriculum-select');
@@ -1002,10 +1254,18 @@
             if (g !== currentGrade) switchGrade(g, null, false);
         });
 
-        // Click delegation on standards container for copy badges
+        // Click delegation on standards container for copy badges and info (i) dossier triggers
         const stdContainer = document.getElementById('view-standards');
         if (stdContainer) {
             stdContainer.addEventListener('click', (e) => {
+                const infoBtn = e.target.closest('.std-info-btn');
+                if (infoBtn && infoBtn.dataset.code) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    openStandardDossier(infoBtn.dataset.code, infoBtn.closest('.curr-standard-item'));
+                    return;
+                }
+
                 const badge = e.target.closest('.std-code-badge');
                 if (badge && badge.dataset.code) {
                     e.preventDefault();
@@ -1014,6 +1274,13 @@
                 }
             });
         }
+
+        // Escape key closes dossier modal
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeStandardDossier();
+            }
+        });
         
         // Close export menu when clicking outside
         document.addEventListener('click', (e) => {

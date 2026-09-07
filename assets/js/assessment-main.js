@@ -93,15 +93,61 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   };
 
-  // === GET PARAMETER ===
+  // === GET PARAMETER & TARGETED STANDARD HASH ===
   const urlParams = new URLSearchParams(window.location.search);
   let grade = urlParams.get("grade");
+
+  // Helper functions for standard inference & hash routing
+  function inferGradeFromStandard(code) {
+    if (!code) return "3";
+    const c = code.trim();
+    if (/^K\./i.test(c) || /\bK\b/i.test(c)) return "k";
+    const leadingNumMatch = c.match(/^(\d+)\./);
+    if (leadingNumMatch) return leadingNumMatch[1];
+    const middleNumMatch = c.match(/[A-Z]+\.(\d+)\./i);
+    if (middleNumMatch) return middleNumMatch[1];
+    if (/9-10/i.test(c)) return "9";
+    if (/11-12/i.test(c)) return "11";
+    if (/^MS-/i.test(c)) return "7";
+    if (/^HS-/i.test(c)) return "10";
+    if (/^HS[A-Z]/i.test(c)) return "10";
+    return "3";
+  }
+
+  function inferSubjectFromStandard(code) {
+    if (!code) return "Math";
+    const c = code.trim().toUpperCase();
+    if (/\b(OA|NBT|NF|MD|RP|NS|EE|HSN|HSA|HSF|HSG|HSS)\b/.test(c) || /^(K|\d+)\.(OA|NBT|NF|MD|G|RP|NS|EE|SP)/.test(c)) {
+      return "Math";
+    }
+    if (/\b(RL|RI|RF|W|SL|L)\b/.test(c) || /^(RL|RI|RF|W|SL|L)\./.test(c)) {
+      return "Language Arts";
+    }
+    if (/(PS|LS|ESS|ETS)/.test(c) || /NGSS/i.test(c)) {
+      return "Science";
+    }
+    if (/(HIST|GEO|GOV|ECON|CIV|NCSS|SOC)/.test(c)) {
+      return "Social Studies";
+    }
+    return "Math";
+  }
+
+  function getHashStandard() {
+    const hash = window.location.hash || "";
+    const match = hash.match(/standard=([^&]+)/i);
+    return match ? decodeURIComponent(match[1]).trim() : null;
+  }
+
+  const initialHashStandard = getHashStandard();
+  if ((!grade || grade.trim() === "") && initialHashStandard) {
+    grade = inferGradeFromStandard(initialHashStandard);
+  }
 
   const quizHeader = document.getElementById("quiz-header");
   const quizContainer = document.getElementById("quiz-container");
   const selectionContainer = document.getElementById("assessment-selection");
 
-  // === MODE 1: LANDING PAGE (No Grade Selected) ===
+  // === MODE 1: LANDING PAGE (No Grade Selected and No Targeted Standard) ===
   if (!grade || grade.trim() === "") {
     if (quizHeader) quizHeader.classList.add("hidden");
     if (quizContainer) quizContainer.classList.add("hidden");
@@ -311,6 +357,11 @@ document.addEventListener("DOMContentLoaded", () => {
       window.currentAssessmentType = subjectFilter === 'All' ? 'Entrance Exam' : 'Subject Assessment';
       window.currentAssessmentSubject = subjectFilter;
       
+      // Clear any standard banner if moving back to normal mode
+      const banner = document.getElementById("targeted-standard-banner");
+      if (banner) banner.classList.add("hidden");
+      window.targetedStandard = null;
+
       // Set the sidebar filter highlight to active for the selected subject
       updateSidebarFilterUI(subjectFilter);
       
@@ -319,6 +370,71 @@ document.addEventListener("DOMContentLoaded", () => {
           loadQuestions(gradeName, subjectFilter);
       }
   };
+
+  // Standard-targeted test launcher
+  window.launchStandardTargetedTest = function(standardCode) {
+      if (!standardCode) return;
+      window.targetedStandard = standardCode;
+
+      const banner = document.getElementById("targeted-standard-banner");
+      const bannerTitle = document.getElementById("targeted-standard-title");
+      const bannerSubj = document.getElementById("targeted-standard-subject-pill");
+      const bannerDesc = document.getElementById("targeted-standard-desc");
+
+      const subject = inferSubjectFromStandard(standardCode);
+
+      if (banner) {
+          banner.classList.remove("hidden");
+          if (bannerTitle) bannerTitle.textContent = `Standard Mastery: ${standardCode}`;
+          if (bannerSubj) bannerSubj.textContent = subject;
+          if (bannerDesc) bannerDesc.textContent = `Targeted assessment evaluating key competencies, operational fluency, and conceptual understanding for standard ${standardCode}.`;
+      }
+
+      if (startMenu) startMenu.classList.add("hidden");
+      if (quizHeader) quizHeader.classList.remove("hidden");
+      if (quizContainer) quizContainer.classList.remove("hidden");
+
+      window.currentAssessmentType = `Standard Assessment: ${standardCode}`;
+      window.currentAssessmentSubject = subject;
+
+      updateSidebarFilterUI(subject);
+
+      if (typeof loadQuestions === "function") {
+          loadQuestions(gradeName, subject);
+      }
+  };
+
+  // Exit targeted test mode
+  window.exitStandardTargetedTest = function(updateHash = true) {
+      window.targetedStandard = null;
+      const banner = document.getElementById("targeted-standard-banner");
+      if (banner) banner.classList.add("hidden");
+
+      if (updateHash) {
+          history.replaceState(null, null, window.location.pathname + (window.location.search || ""));
+      }
+
+      if (startMenu) {
+          startMenu.classList.remove("hidden");
+          if (quizHeader) quizHeader.classList.add("hidden");
+          if (quizContainer) quizContainer.classList.add("hidden");
+      }
+  };
+
+  // Auto-launch targeted test if hash is present on initialization
+  if (initialHashStandard) {
+      launchStandardTargetedTest(initialHashStandard);
+  }
+
+  // Dynamic hash listener for standard switches
+  window.addEventListener("hashchange", () => {
+      const std = getHashStandard();
+      if (std) {
+          launchStandardTargetedTest(std);
+      } else if (window.targetedStandard) {
+          exitStandardTargetedTest(false);
+      }
+  });
 });
 
 // ==========================================
@@ -449,6 +565,7 @@ window.skipQuestion = function () {
         timestamp: new Date().toLocaleTimeString(),
         hint: q.hint || "No hint available.",
         subject: q.subject || "General",
+        standard: q.standard || window.targetedStandard || null,
       });
       playIncorrectSound(); // Optional feedback for skip
     }
@@ -477,6 +594,7 @@ if (typeof checkAnswer === "function") {
             timestamp: new Date().toLocaleTimeString(),
             hint: q.hint || "No explanation available.",
             subject: q.subject || "General",
+            standard: q.standard || window.targetedStandard || null,
           });
 
           // Track learning focus recommendations if incorrect
@@ -996,6 +1114,25 @@ window.openMasteryReportCard = function() {
         <p style="font-size: 0.9rem; margin: 0; line-height: 1.5; opacity: 0.95;">${tierDesc}</p>
       </div>
     </div>
+
+    ${window.targetedStandard ? `
+      <div style="background: color-mix(in srgb, var(--color-primary) 8%, transparent); border: 1.5px solid var(--color-primary); border-radius: var(--radius-lg); padding: 1rem 1.25rem; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <div style="width: 2.5rem; height: 2.5rem; border-radius: var(--radius-full); background: var(--color-primary); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0;">
+            <i class="fas fa-crosshairs"></i>
+          </div>
+          <div>
+            <div style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; color: var(--color-primary); letter-spacing: 0.05em;">Targeted Standard Certification</div>
+            <strong style="font-size: 1.05rem; color: var(--color-text-main);">Benchmark: ${window.targetedStandard}</strong>
+          </div>
+        </div>
+        <div style="text-align: right;">
+          <span style="font-weight: 800; font-size: 0.85rem; padding: 0.35rem 0.85rem; border-radius: 9999px; background: ${percentage >= 80 ? 'var(--color-success)' : 'var(--color-warning)'}; color: #fff;">
+            ${percentage >= 80 ? 'Standard Mastered' : 'Progressing toward Standard'}
+          </span>
+        </div>
+      </div>
+    ` : ''}
 
     <h4 style="font-size: 1.1rem; font-weight: 800; margin: 0 0 1rem 0; display: flex; align-items: center; gap: 0.5rem;">
       <i class="fas fa-layer-group" style="color: var(--color-primary);"></i> Domain Proficiency & Standard Alignment

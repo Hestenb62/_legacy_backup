@@ -913,46 +913,306 @@
     transition: all 0.2s;
   }
 
-  /* Standard Action Buttons (Practice / Test) */
-  .std-action-btn {
+  /* Standard Info (i) Button */
+  .std-info-btn {
     display: inline-flex;
     align-items: center;
-    gap: 0.25rem;
-    font-size: 0.6875rem;
-    font-weight: 700;
-    padding: 0.15rem 0.5rem;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
     border-radius: var(--radius-full);
-    text-decoration: none;
-    margin-left: 0.35rem;
-    vertical-align: middle;
-    transition: all 0.2s ease;
-    border: 1px solid transparent;
-  }
-
-  .std-practice-btn {
-    background-color: color-mix(in srgb, var(--color-success) 12%, transparent);
-    color: var(--color-success);
-    border-color: color-mix(in srgb, var(--color-success) 25%, transparent);
-  }
-
-  .std-practice-btn:hover {
-    background-color: var(--color-success);
-    color: #ffffff;
-    transform: translateY(-1px);
-    box-shadow: var(--shadow-sm);
-  }
-
-  .std-assess-btn {
     background-color: color-mix(in srgb, var(--color-primary) 12%, transparent);
     color: var(--color-primary);
-    border-color: color-mix(in srgb, var(--color-primary) 25%, transparent);
+    border: 1px solid color-mix(in srgb, var(--color-primary) 25%, transparent);
+    font-size: 0.75rem;
+    cursor: pointer;
+    margin-left: 0.35rem;
+    vertical-align: middle;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
-  .std-assess-btn:hover {
+  .std-info-btn:hover {
     background-color: var(--color-primary);
+    color: #ffffff;
+    transform: scale(1.15);
+    box-shadow: 0 4px 12px color-mix(in srgb, var(--color-primary) 30%, transparent);
+  }
+
+  .std-info-btn:active {
+    transform: scale(0.95);
+  }
+
+  /* Standard Mastery Dossier Modal (Large Detail Popup) */
+  .std-dossier-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+  }
+
+  .std-dossier-backdrop {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  .std-dossier-dialog {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 52rem;
+    max-height: 88vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-2xl);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    animation: modalSlideUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  @keyframes modalSlideUp {
+    from {
+      opacity: 0;
+      transform: translateY(1.5rem) scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  .std-dossier-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 1.75rem 2rem 1.25rem 2rem;
+    border-bottom: 1px solid var(--color-border);
+    background: color-mix(in srgb, var(--color-bg-base) 50%, var(--color-bg-surface));
+  }
+
+  .std-dossier-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .std-dossier-pill {
+    font-size: 0.6875rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-full);
+  }
+
+  .pill-indigo {
+    background-color: color-mix(in srgb, var(--color-primary) 12%, transparent);
+    color: var(--color-primary);
+  }
+
+  .pill-emerald {
+    background-color: color-mix(in srgb, var(--color-success) 12%, transparent);
+    color: var(--color-success);
+  }
+
+  .pill-slate {
+    background-color: color-mix(in srgb, var(--color-text-muted) 15%, transparent);
+    color: var(--color-text-main);
+  }
+
+  .std-dossier-code-title {
+    font-size: 1.5rem;
+    font-weight: 850;
+    color: var(--color-text-main);
+    letter-spacing: -0.01em;
+    font-family: 'Outfit', sans-serif;
+  }
+
+  .std-dossier-close-btn {
+    background: transparent;
+    border: none;
+    font-size: 1.75rem;
+    line-height: 1;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    border-radius: var(--radius-md);
+    padding: 0.25rem 0.5rem;
+    transition: all 0.2s ease;
+  }
+
+  .std-dossier-close-btn:hover {
+    color: var(--color-text-main);
+    background-color: color-mix(in srgb, var(--color-border) 40%, transparent);
+  }
+
+  .std-dossier-body {
+    padding: 2rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+  }
+
+  .std-dossier-section-title {
+    font-size: 0.875rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-text-muted);
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .std-dossier-statement-box {
+    background-color: var(--color-bg-base);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: 1.25rem 1.5rem;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-text-main);
+    font-weight: 500;
+  }
+
+  .std-dossier-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .std-dossier-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .std-dossier-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+  }
+
+  .std-dossier-list-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: var(--color-text-main);
+    background: var(--color-bg-base);
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+  }
+
+  .std-dossier-list-item i {
+    color: var(--color-success);
+    margin-top: 0.2rem;
+    flex-shrink: 0;
+  }
+
+  .std-dossier-progression-box,
+  .std-dossier-scaffolding-box {
+    background-color: var(--color-bg-base);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: 1.25rem 1.5rem;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: var(--color-text-main);
+  }
+
+  .std-dossier-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1.25rem 2rem;
+    background: color-mix(in srgb, var(--color-bg-base) 70%, var(--color-bg-surface));
+    border-top: 1px solid var(--color-border);
+  }
+
+  .std-dossier-footer-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .std-dossier-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1.25rem;
+    border-radius: var(--radius-lg);
+    background: transparent;
+    border: 1px solid var(--color-border);
+    color: var(--color-text-main);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .std-dossier-btn-secondary:hover {
+    background-color: var(--color-border);
+  }
+
+  .std-dossier-btn-lesson {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1.25rem;
+    border-radius: var(--radius-lg);
+    background-color: color-mix(in srgb, var(--color-secondary) 15%, transparent);
+    color: var(--color-secondary);
+    border: 1px solid color-mix(in srgb, var(--color-secondary) 30%, transparent);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .std-dossier-btn-lesson:hover {
+    background-color: var(--color-secondary);
     color: #ffffff;
     transform: translateY(-1px);
     box-shadow: var(--shadow-sm);
+  }
+
+  .std-dossier-btn-test {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1.5rem;
+    border-radius: var(--radius-lg);
+    background: var(--color-primary);
+    color: #ffffff;
+    font-size: 0.8125rem;
+    font-weight: 800;
+    text-decoration: none;
+    box-shadow: 0 4px 12px color-mix(in srgb, var(--color-primary) 30%, transparent);
+    transition: all 0.2s ease;
+  }
+
+  .std-dossier-btn-test:hover {
+    background-color: color-mix(in srgb, var(--color-primary) 85%, black);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px color-mix(in srgb, var(--color-primary) 40%, transparent);
   }
 
   /* Search Highlight */
