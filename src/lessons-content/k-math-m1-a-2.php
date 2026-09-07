@@ -3,20 +3,21 @@ $pageTitle = "Growth of Square Areas and Functions | Hesten's Learning";
 $pageDescription = "Examine how the area of a square grows compared to its side length, laying foundations for quadratic functions.";
 $pageAuthor = "Hesten's Learning Team";
 
-include '../src/header.php';
-?>
+// The lesson metadata
+$lessonId = 'k-math-m1-a-2';
+$lessonCode = 'K.M1.A.2';
+$lessonSubjectBadge = 'Math Lesson';
+$lessonTitle = 'Growth of Square Areas and Functions';
+$lessonStandard = 'HSA.CED.A.2';
+$levelId = 'k';
+$levelUrl = '/levels/k.php';
+$prevLessonUrl = '/lesson.php?id=k-math-m1-a-1';
+$nextLessonUrl = '/lesson.php?id=k-math-m1-a-3';
 
-<div class="bg-gray-50 dark:bg-slate-900 border-b border-gray-200 dark:border-slate-800 py-4 transition-colors">
-    <div class="page-content-wrapper">
-        <nav class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">
-            <a href="../index.php" class="hover:text-rose-600 transition-colors">Home</a>
-            <i class="fas fa-chevron-right text-[8px] opacity-30"></i>
-            <a href="../levels/k.php" class="hover:text-rose-600 transition-colors">Level K</a>
-            <i class="fas fa-chevron-right text-[8px] opacity-30"></i>
-            <span class="text-gray-900 dark:text-white">Lesson K.M1.A.2</span>
-        </nav>
-    </div>
-</div>
+$useStandardLayout = true;
+
+ob_start();
+?>
 
 <main class="container mx-auto px-4 py-12 max-w-4xl">
     <div class="bg-white dark:bg-slate-900 rounded-3xl border border-gray-100 dark:border-slate-800 shadow-xl overflow-hidden p-8 sm:p-12 transition-all">
@@ -133,14 +134,6 @@ updateSquare(5);
 </script>
 
 <?php
-$lessonId = 'k-math-m1-a-2';
-$lessonCode = 'K.M1.A.2';
-$lessonTitle = 'Growth of Square Areas and Functions';
-$lessonStandard = 'HSA.CED.A.2';
-$levelId = 'k';
-$levelUrl = '../levels/k.php';
-$prevLessonUrl = 'k-math-m1-a-1.php';
-$nextLessonUrl = 'k-math-m1-a-3.php';
 $practiceQuestions = [
     [
         'question' => 'How does the perimeter of a square change when its side length increases from 3 to 4 units?',
@@ -165,7 +158,7 @@ $practiceQuestions = [
         'explanation' => 'In A(s) = s², the rate of change is not constant. Each successive unit increase in side length yields a larger increase in area than the previous one.'
     ]
 ];
-include '../src/lesson_runner.php';
-include '../src/footer.php';
-?>
 
+$lessonHtmlContent = ob_get_clean();
+include '../src/layouts/lesson-layout.php';
+?>

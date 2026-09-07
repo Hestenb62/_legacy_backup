@@ -8,22 +8,16 @@ const ASSETS_TO_CACHE = [
   '/manifest.json',
   '/assessment/index.php',
   '/library/index.php',
-  '/research/index.php',
   '/student/index.php',
 
   // Pages Directory
-  '/pages/about-me.php',
-  '/pages/about.php',
-  '/pages/contact.php',
   '/pages/help-center.php',
   '/pages/mission.php',
   '/pages/parents.php',
-  '/pages/privacy.php',
   '/pages/profile.php',
   '/pages/settings.php',
   '/pages/standards.php',
   '/pages/teachers.php',
-  '/pages/terms-of-use.php',
 
   // Images & Icons
   '/assets/images/6791421e-7ca7-40bd-83d3-06a479bf7f36.png',

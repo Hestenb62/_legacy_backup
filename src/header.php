@@ -42,6 +42,19 @@ if (!function_exists('assetVersion')) {
 <html lang="en" data-theme="light">
 
 <head>
+    <script>
+        (function() {
+            try {
+                const settings = localStorage.getItem('hl_accessibility_settings');
+                if (settings) {
+                    const parsed = JSON.parse(settings);
+                    if (parsed.theme) {
+                        document.documentElement.setAttribute('data-theme', parsed.theme);
+                    }
+                }
+            } catch (e) {}
+        })();
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Hesten's Learning</title>

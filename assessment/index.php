@@ -479,6 +479,6 @@ include '../src/header.php';
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 <script src="/assets/js/assessment-p-12.js"></script>
 <script src="/assets/js/assessment-ap.js"></script>
-<script src="/assets/js/assessment-main.js?v=1.3"></script>
+<script src="/assets/js/assessment-main.js"></script>
 
 <?php include '../src/footer.php'; ?>

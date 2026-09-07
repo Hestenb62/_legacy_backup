@@ -9,10 +9,22 @@ $pageTitle = "Graphs of Piecewise Linear Functions | Hesten's Learning";
 $pageDescription = "Learn how to define quantities, choose scales, and translate physical actions into piecewise graphs with interactive stories.";
 $pageAuthor = "Hesten's Learning Team";
 
-include '../src/header.php';
-?>
+// The lesson metadata
+$lessonId = 'k-math-m1-a-1';
+$lessonCode = 'K.M1.A.1';
+$lessonSubjectBadge = 'Math Lesson';
+$lessonTitle = 'Graphs of Piecewise Linear Functions';
+$lessonStandard = 'HSF.IF.B.4';
+$levelId = 'k';
+$levelUrl = '/levels/k.php';
+$prevLessonUrl = '/levels/k.php';
+$nextLessonUrl = '/lesson.php?id=k-math-m1-a-2';
 
-<link rel="stylesheet" href="../assets/css/pages/lesson.css">
+$useStandardLayout = false;
+$lessonCssUrl = '/assets/css/pages/lesson.css';
+
+ob_start();
+?>
 
 <main class="lesson-container">
     <div class="lesson-card">
@@ -763,14 +775,6 @@ include '../src/header.php';
 </script>
 
 <?php
-$lessonId = 'k-math-m1-a-1';
-$lessonCode = 'K.M1.A.1';
-$lessonTitle = 'Graphs of Piecewise Linear Functions';
-$lessonStandard = 'HSF.IF.B.4';
-$levelId = 'k';
-$levelUrl = '../levels/k.php';
-$prevLessonUrl = '../levels/k.php';
-$nextLessonUrl = 'k-math-m1-a-2.php';
 $practiceQuestions = [
     [
         'question' => 'A climber ascends 4 feet in 2 seconds, pauses for 3 seconds, then descends 2 feet in 1 second. What is the slope of the graph during the 3-second pause?',
@@ -795,6 +799,7 @@ $practiceQuestions = [
         'explanation' => 'A negative slope means the elevation quantity is decreasing over time, representing a physical descent.'
     ]
 ];
-include '../src/lesson_runner.php';
-include '../src/footer.php';
+
+$lessonHtmlContent = ob_get_clean();
+include '../src/layouts/lesson-layout.php';
 ?>
