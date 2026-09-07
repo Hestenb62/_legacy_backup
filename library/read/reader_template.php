@@ -104,9 +104,14 @@ include ABSPATH . 'src/header.php';
             <span class="reader-sep">&bull;</span>
             <span class="reader-ch-name"><?php echo htmlspecialchars($currentChapterTitle); ?></span>
         </div>
-        <button type="button" class="reader-license-btn" onclick="openLicenseModal()" title="View Book License & Sourcing">
-            <i class="fas fa-info-circle"></i>
-        </button>
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <button type="button" id="reader-bookmark-btn" class="reader-license-btn" onclick="window.toggleBookBookmark && window.toggleBookBookmark()" title="Bookmark this Book" aria-label="Bookmark this Book">
+                <i class="far fa-bookmark" id="reader-bookmark-icon"></i>
+            </button>
+            <button type="button" class="reader-license-btn" onclick="openLicenseModal()" title="View Book License & Sourcing">
+                <i class="fas fa-info-circle"></i>
+            </button>
+        </div>
     </div>
 
     <!-- Book Title Header (Displayed on Chapter 1 and Intro) -->
@@ -203,12 +208,21 @@ include ABSPATH . 'src/header.php';
             </div>
 
             <!-- Center: Text to Speech (TTS) Controls -->
-            <div class="controls-speech-group">
+            <div class="controls-speech-group" id="reader-tts-toolbar">
                 <button type="button" id="tts-speak-btn" class="speech-btn" title="Listen Aloud with Voice Narration" aria-label="Listen to chapter">
                     <i class="fas fa-volume-up"></i> <span>Listen</span>
                 </button>
+                <button type="button" id="tts-pause-btn" class="speech-btn speech-btn-pause hidden" title="Pause Voice Narration" aria-label="Pause narration">
+                    <i class="fas fa-pause"></i> <span>Pause</span>
+                </button>
+                <button type="button" id="tts-resume-btn" class="speech-btn speech-btn-resume hidden" title="Resume Voice Narration" aria-label="Resume narration">
+                    <i class="fas fa-play"></i> <span>Resume</span>
+                </button>
                 <button type="button" id="tts-stop-btn" class="speech-btn speech-btn-stop hidden" title="Stop Voice Narration" aria-label="Stop narration">
                     <i class="fas fa-stop"></i> <span>Stop</span>
+                </button>
+                <button type="button" id="tts-speed-btn" class="speech-btn speech-btn-speed hidden" title="Change Narration Speed" aria-label="Narration Speed">
+                    1.0x
                 </button>
             </div>
 

@@ -248,8 +248,16 @@ body.dark .profile-card {
 /* Stats Section */
 .profile-stats-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
     gap: 1rem;
+}
+
+.daily-goal-card {
+    margin-top: 1.25rem;
+    padding: 1.25rem;
+    background: var(--lib-bg-surface);
+    border: 1px solid var(--lib-border);
+    border-radius: var(--lib-radius-lg);
 }
 
 .profile-stat-box {

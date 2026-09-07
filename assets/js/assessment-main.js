@@ -593,15 +593,27 @@ if (typeof finishQuiz === "function") {
         });
       }
 
-      // Inject Download Button
+      // Inject Action Buttons (Mastery Report + Download Text)
       if (resultDiv) {
+        const btnContainer = document.createElement("div");
+        btnContainer.className = "mastery-actions-container";
+        btnContainer.style.cssText = "display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; align-items: center; margin-top: 1.5rem;";
+
+        const reportBtn = document.createElement("button");
+        reportBtn.className = "hero-nav-btn hero-nav-btn-primary";
+        reportBtn.style.cssText = "padding: 0.85rem 1.75rem; border-radius: var(--radius-full); font-weight: 800; font-size: 1rem; cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem; box-shadow: 0 10px 20px -5px rgba(0,0,0,0.3); border: none;";
+        reportBtn.innerHTML = '<i class="fas fa-file-invoice"></i> View & Print Mastery Report';
+        reportBtn.onclick = () => window.openMasteryReportCard();
+
         const downloadBtn = document.createElement("button");
-        downloadBtn.className =
-          "bg-green-600 text-white px-8 py-3 rounded-full font-bold hover:bg-green-700 transition-all mt-4 md:ml-4 block md:inline-block w-full md:w-auto shadow-xl hover:shadow-2xl hover:-translate-y-1 flex items-center justify-center gap-2";
-        downloadBtn.innerHTML =
-          '<i class="fas fa-file-download mr-2"></i> Download Results';
+        downloadBtn.className = "hero-nav-btn hero-nav-btn-outline";
+        downloadBtn.style.cssText = "padding: 0.85rem 1.75rem; border-radius: var(--radius-full); font-weight: 700; font-size: 0.95rem; cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem;";
+        downloadBtn.innerHTML = '<i class="fas fa-file-download"></i> Download Text Summary';
         downloadBtn.onclick = generateAndDownloadText;
-        resultDiv.appendChild(downloadBtn);
+
+        btnContainer.appendChild(reportBtn);
+        btnContainer.appendChild(downloadBtn);
+        resultDiv.appendChild(btnContainer);
       }
 
       // Only show diagnostics if Entrance Exam was taken
@@ -799,6 +811,238 @@ function generateAndDownloadText() {
   document.body.removeChild(a);
   URL.revokeObjectURL(url);
 }
+
+// 10. Open and Render Diagnostic Mastery Report Card Modal
+window.openMasteryReportCard = function() {
+  const modal = document.getElementById("mastery-report-modal");
+  const printableArea = document.getElementById("mastery-report-printable-area");
+  if (!modal || !printableArea) return;
+
+  // Retrieve user & assessment profile
+  let studentName = "Student";
+  try {
+    const prof = JSON.parse(localStorage.getItem('hesten-user-profile'));
+    if (prof && prof.firstName) studentName = prof.firstName;
+  } catch(e){}
+
+  const grade = document.getElementById("header-grade-name")?.textContent || "Core Curriculum";
+  const assessmentType = window.currentAssessmentType || "Knowledge Diagnostic";
+  const dateStr = new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+  
+  const mins = Math.floor(sessionSeconds / 60);
+  const secs = sessionSeconds % 60;
+  const timeFormatted = `${mins}m ${secs.toString().padStart(2, '0')}s`;
+
+  // Score stats
+  const totalQuestions = window.quizResultsData.length;
+  let correctCount = 0;
+  const subjectBreakdown = {};
+
+  window.quizResultsData.forEach((q) => {
+    if (q.isCorrect) correctCount++;
+    const subj = q.subject || 'General';
+    if (!subjectBreakdown[subj]) {
+      subjectBreakdown[subj] = { total: 0, correct: 0 };
+    }
+    subjectBreakdown[subj].total++;
+    if (q.isCorrect) subjectBreakdown[subj].correct++;
+  });
+
+  const percentage = totalQuestions > 0 ? Math.round((correctCount / totalQuestions) * 100) : 0;
+
+  // Tier determination
+  let tierClass = "tier-support";
+  let tierIcon = "fa-compass";
+  let tierTitle = "Targeted Support Recommended";
+  let tierDesc = `Student scored ${percentage}%. Targeted instructional interventions and foundational concept practice are recommended.`;
+
+  if (percentage >= 85) {
+    tierClass = "tier-mastery";
+    tierIcon = "fa-trophy";
+    tierTitle = "Mastery Demonstrated";
+    tierDesc = `Outstanding performance! Student scored ${percentage}%, showing comprehensive mastery of ${grade} standards.`;
+  } else if (percentage >= 70) {
+    tierClass = "tier-approaching";
+    tierIcon = "fa-check-circle";
+    tierTitle = "Approaching Mastery";
+    tierDesc = `Solid foundation with ${percentage}% accuracy. Focused review on specific domains will reinforce fluency.`;
+  }
+
+  // Active Accessibility & Accommodations
+  const a11ySettings = window.currentSettings || {};
+  let accommodationsList = [];
+  if (a11ySettings.fontFamily === 'OpenDyslexic') accommodationsList.push("Dyslexia-Optimized Typography (OpenDyslexic)");
+  if (a11ySettings.readingMask) accommodationsList.push("Focus Reading Mask Active");
+  if (a11ySettings.spotlightMode) accommodationsList.push("Reading Spotlight Guided Tracking");
+  if (a11ySettings.fontSize && a11ySettings.fontSize !== '100%') accommodationsList.push(`Text Magnification (${a11ySettings.fontSize})`);
+  if (a11ySettings.stopAnimations) accommodationsList.push("Reduced Motion / Sensory Stabilization");
+  if (accommodationsList.length === 0) accommodationsList.push("Standard Visual Presentation (No special accommodations active)");
+
+  // Standard alignments map
+  const standardMap = {
+    'Math': {
+      standards: 'CCSS.MATH (OA, NBT, NF, MD) & Texas TEKS §111',
+      icon: 'fa-calculator',
+      color: 'var(--color-primary)'
+    },
+    'Language Arts': {
+      standards: 'CCSS.ELA (RL, RI, RF, L) & Texas TEKS §110',
+      icon: 'fa-book-reader',
+      color: 'var(--color-secondary)'
+    },
+    'Science': {
+      standards: 'NGSS Science Framework & Texas TEKS §112',
+      icon: 'fa-flask',
+      color: 'var(--color-success)'
+    },
+    'Social Studies': {
+      standards: 'NCSS Thematic Strands & Texas TEKS §113',
+      icon: 'fa-globe-americas',
+      color: 'var(--color-warning)'
+    },
+    'General': {
+      standards: 'Core Interdisciplinary Academic Standards',
+      icon: 'fa-graduation-cap',
+      color: 'var(--color-primary)'
+    }
+  };
+
+  // Build Subjects HTML
+  let domainHtml = '';
+  Object.entries(subjectBreakdown).forEach(([subj, data]) => {
+    const subjPct = Math.round((data.correct / data.total) * 100);
+    const meta = standardMap[subj] || standardMap['General'];
+    const barColor = subjPct >= 80 ? 'var(--color-success)' : (subjPct >= 60 ? 'var(--color-warning)' : 'var(--color-error)');
+    const statusText = subjPct >= 80 ? 'Mastered' : (subjPct >= 60 ? 'Developing' : 'Needs Review');
+    const statusBg = subjPct >= 80 ? 'var(--color-success)' : (subjPct >= 60 ? 'var(--color-warning)' : 'var(--color-error)');
+
+    domainHtml += `
+      <div class="mastery-domain-row">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; flex-wrap: wrap;">
+          <div>
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <i class="fas ${meta.icon}" style="color: ${meta.color};"></i>
+              <strong style="font-size: 1.05rem;">${subj}</strong>
+            </div>
+            <p style="font-size: 0.75rem; color: var(--color-text-muted); margin: 0.25rem 0 0 0;">
+              ${meta.standards}
+            </p>
+          </div>
+          <div style="text-align: right;">
+            <span style="font-weight: 800; font-size: 1.1rem; color: ${barColor};">${subjPct}%</span>
+            <span style="font-size: 0.8rem; color: var(--color-text-muted); margin-left: 0.25rem;">(${data.correct}/${data.total})</span>
+            <div style="display: inline-block; margin-left: 0.5rem; padding: 0.15rem 0.6rem; border-radius: 9999px; font-size: 0.7rem; font-weight: 700; color: #fff; background-color: ${statusBg};">
+              ${statusText}
+            </div>
+          </div>
+        </div>
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" style="width: ${subjPct}%; background-color: ${barColor};"></div>
+        </div>
+      </div>
+    `;
+  });
+
+  // Assemble full report markup
+  printableArea.innerHTML = `
+    <div class="report-letterhead">
+      <div>
+        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+          <img src="/assets/images/6791421e-7ca7-40bd-83d3-06a479bf7f36.png" alt="Logo" style="height: 2.5rem; width: auto;" onerror="this.style.display='none'">
+          <h2 class="report-brand-title">Hesten's Learning Platform</h2>
+        </div>
+        <p class="report-brand-sub">Comprehensive Diagnostic Assessment & Standard Mastery Report</p>
+      </div>
+      <div style="text-align: right;">
+        <span style="display: inline-block; padding: 0.35rem 0.85rem; border-radius: 9999px; background: color-mix(in srgb, var(--color-primary) 15%, transparent); color: var(--color-primary); font-weight: 700; font-size: 0.85rem;">
+          Official Record
+        </span>
+      </div>
+    </div>
+
+    <div class="report-meta-grid">
+      <div>
+        <div class="report-meta-label">Student Name</div>
+        <div class="report-meta-val">${studentName}</div>
+      </div>
+      <div>
+        <div class="report-meta-label">Assessment Level</div>
+        <div class="report-meta-val">${grade}</div>
+      </div>
+      <div>
+        <div class="report-meta-label">Exam Type</div>
+        <div class="report-meta-val">${assessmentType}</div>
+      </div>
+      <div>
+        <div class="report-meta-label">Date Completed</div>
+        <div class="report-meta-val" style="font-size: 0.95rem;">${dateStr}</div>
+      </div>
+      <div>
+        <div class="report-meta-label">Time Spent</div>
+        <div class="report-meta-val">${timeFormatted}</div>
+      </div>
+      <div>
+        <div class="report-meta-label">Cumulative Score</div>
+        <div class="report-meta-val" style="color: ${percentage >= 80 ? 'var(--color-success)' : (percentage >= 60 ? 'var(--color-warning)' : 'var(--color-error)')};">
+          ${percentage}% (${correctCount}/${totalQuestions})
+        </div>
+      </div>
+    </div>
+
+    <div class="mastery-tier-banner ${tierClass}">
+      <i class="fas ${tierIcon}" style="font-size: 2.25rem;"></i>
+      <div>
+        <h3 style="font-size: 1.25rem; font-weight: 800; margin: 0 0 0.25rem 0;">${tierTitle}</h3>
+        <p style="font-size: 0.9rem; margin: 0; line-height: 1.5; opacity: 0.95;">${tierDesc}</p>
+      </div>
+    </div>
+
+    <h4 style="font-size: 1.1rem; font-weight: 800; margin: 0 0 1rem 0; display: flex; align-items: center; gap: 0.5rem;">
+      <i class="fas fa-layer-group" style="color: var(--color-primary);"></i> Domain Proficiency & Standard Alignment
+    </h4>
+    <div style="margin-bottom: 2rem;">
+      ${domainHtml}
+    </div>
+
+    <h4 style="font-size: 1.1rem; font-weight: 800; margin: 0 0 0.75rem 0; display: flex; align-items: center; gap: 0.5rem;">
+      <i class="fas fa-universal-access" style="color: var(--color-secondary);"></i> Accommodations & Assessment Conditions
+    </h4>
+    <div style="background-color: var(--color-bg-base); padding: 1rem 1.25rem; border-radius: var(--radius-lg); border: 1px solid var(--color-border); margin-bottom: 2rem;">
+      <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.85rem; color: var(--color-text-muted); line-height: 1.7;">
+        ${accommodationsList.map(acc => `<li>${acc}</li>`).join('')}
+      </ul>
+    </div>
+
+    <div class="report-signature-block">
+      <div>
+        <div class="signature-line">
+          <strong>Teacher / Educational Specialist Signature</strong> &nbsp;&bull;&nbsp; Date
+        </div>
+      </div>
+      <div>
+        <div class="signature-line">
+          <strong>Parent / Guardian Signature</strong> &nbsp;&bull;&nbsp; Date
+        </div>
+      </div>
+    </div>
+  `;
+
+  modal.style.display = "flex";
+  document.body.style.overflow = "hidden";
+};
+
+window.closeMasteryReportCard = function() {
+  const modal = document.getElementById("mastery-report-modal");
+  if (modal) modal.style.display = "none";
+  document.body.style.overflow = "";
+};
+
+// Escape key listener for mastery modal
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    window.closeMasteryReportCard();
+  }
+});
 
 // ==========================================
 // END CUSTOM LOGIC

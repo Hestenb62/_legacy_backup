@@ -913,8 +913,108 @@
     transition: all 0.2s;
   }
 
-  .curr-btn-reset-filter:hover {
-    transform: scale(1.02);
+  /* Standard Action Buttons (Practice / Test) */
+  .std-action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    padding: 0.15rem 0.5rem;
+    border-radius: var(--radius-full);
+    text-decoration: none;
+    margin-left: 0.35rem;
+    vertical-align: middle;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+  }
+
+  .std-practice-btn {
+    background-color: color-mix(in srgb, var(--color-success) 12%, transparent);
+    color: var(--color-success);
+    border-color: color-mix(in srgb, var(--color-success) 25%, transparent);
+  }
+
+  .std-practice-btn:hover {
+    background-color: var(--color-success);
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .std-assess-btn {
+    background-color: color-mix(in srgb, var(--color-primary) 12%, transparent);
+    color: var(--color-primary);
+    border-color: color-mix(in srgb, var(--color-primary) 25%, transparent);
+  }
+
+  .std-assess-btn:hover {
+    background-color: var(--color-primary);
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+  }
+
+  /* Search Highlight */
+  .std-highlight {
+    background-color: color-mix(in srgb, var(--color-warning) 30%, transparent);
+    color: inherit;
+    font-weight: 700;
+    padding: 0.05rem 0.25rem;
+    border-radius: var(--radius-sm);
+    box-shadow: 0 0 0 1px color-mix(in srgb, var(--color-warning) 50%, transparent);
+  }
+
+  /* Cross-Grade Suggestion Banner */
+  .curr-cross-grade-alert {
+    margin-top: 1.25rem;
+    padding: 1.25rem 1.5rem;
+    border-radius: var(--radius-xl);
+    background-color: color-mix(in srgb, var(--color-primary) 8%, transparent);
+    border: 1px solid color-mix(in srgb, var(--color-primary) 25%, transparent);
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: left;
+  }
+
+  .curr-cross-grade-title {
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .curr-cross-grade-title i {
+    color: var(--color-primary);
+  }
+
+  .curr-cross-grade-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .curr-cross-grade-chip-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-lg);
+    background: var(--color-primary);
+    color: var(--color-text-inverse);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .curr-cross-grade-chip-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
   }
 
   /* Print Optimization */
@@ -1021,3 +1121,4 @@
       break-inside: avoid;
     }
   }
+}

@@ -183,7 +183,7 @@ if (!function_exists('assetVersion')) {
                     </div>
                     
                     <div class="header-actions">
-                        <form action="/search.php" method="GET" class="search-form" role="search">
+                        <form action="/pages/search.php" method="GET" class="search-form" role="search">
                             <label for="header-search" class="sr-only">Search the site</label>
                             <input type="text" id="header-search" name="q" placeholder="Search..." class="search-input" />
                             <button type="submit" aria-label="Search" style="background: none; border: none; padding: 0; cursor: pointer; color: inherit;">

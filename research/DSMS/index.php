@@ -55,6 +55,18 @@ include '../../src/header.php';
           class="research-search-input">
       </div>
 
+      <!-- Pedagogical Focus Filter -->
+      <div class="research-select-wrap">
+        <select id="focusSelect" class="research-sort-select" aria-label="Filter by Pedagogical Focus">
+          <option value="all">All Pedagogical Focuses</option>
+          <option value="dyscalculia">Dyscalculia & Math Cognition</option>
+          <option value="dyslexia">Dyslexia & Phonology</option>
+          <option value="adhd">ADHD & Executive Function</option>
+          <option value="udl">Universal Design for Learning (UDL)</option>
+        </select>
+        <i class="fas fa-chevron-down research-select-arrow"></i>
+      </div>
+
       <!-- Sort Actions -->
       <div class="research-select-wrap">
         <select id="sortSelect" class="research-sort-select">
@@ -230,12 +242,14 @@ include '../../src/header.php';
       <div class="citation-tabs flex gap-2 border-b border-border pb-2">
         <button class="citation-tab-btn active" data-format="apa">APA 7th</button>
         <button class="citation-tab-btn" data-format="mla">MLA 9th</button>
+        <button class="citation-tab-btn" data-format="chicago">Chicago 17th</button>
         <button class="citation-tab-btn" data-format="bibtex">BibTeX</button>
       </div>
 
       <div class="citation-content-box">
         <div id="citationApa" class="citation-code-block font-mono text-xs select-all" data-format="apa"></div>
         <div id="citationMla" class="citation-code-block hidden font-mono text-xs select-all" data-format="mla"></div>
+        <div id="citationChicago" class="citation-code-block hidden font-mono text-xs select-all" data-format="chicago"></div>
         <pre id="citationBibtex" class="citation-code-block hidden font-mono text-xs select-all" data-format="bibtex"></pre>
       </div>
     </div>

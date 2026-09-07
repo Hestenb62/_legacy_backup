@@ -295,6 +295,28 @@ include '../src/header.php';
     </div>
 </div>
 
+<!-- Diagnostic Mastery Report Card Modal -->
+<div id="mastery-report-modal" class="mastery-report-modal" role="dialog" aria-modal="true" aria-labelledby="report-modal-title" style="display: none;">
+    <div class="mastery-report-backdrop" onclick="closeMasteryReportCard()"></div>
+    <div class="mastery-report-dialog card-surface">
+        <div class="mastery-report-toolbar no-print">
+            <div class="toolbar-title" id="report-modal-title">
+                <i class="fas fa-file-invoice" style="color: var(--color-primary);"></i> Diagnostic Mastery Report Card
+            </div>
+            <div class="toolbar-actions">
+                <button type="button" class="hero-nav-btn hero-nav-btn-primary" onclick="window.print()" style="padding: 0.5rem 1.25rem; font-size: 0.875rem;">
+                    <i class="fas fa-print"></i> Print / Save as PDF
+                </button>
+                <button type="button" class="report-modal-close" onclick="closeMasteryReportCard()" aria-label="Close Report">&times;</button>
+            </div>
+        </div>
+
+        <div id="mastery-report-printable-area" class="mastery-printable-document">
+            <!-- Dynamically populated report content -->
+        </div>
+    </div>
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 <script src="/assets/js/assessment-p-12.js"></script>
 <script src="/assets/js/assessment-ap.js"></script>

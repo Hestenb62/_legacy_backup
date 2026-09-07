@@ -11,6 +11,7 @@ export class JournalEngine {
       containerId: config.containerId || 'journalEntriesContainer',
       paginationId: config.paginationId || 'paginationControls',
       searchInputId: config.searchInputId || 'searchInput',
+      focusSelectId: config.focusSelectId || 'focusSelect',
       sortSelectId: config.sortSelectId || 'sortSelect',
       activeFiltersWrapId: config.activeFiltersWrapId || 'activeFilters',
       filterTagTextId: config.filterTagTextId || 'filterTagText',
@@ -26,6 +27,7 @@ export class JournalEngine {
       entries: [],
       searchQuery: '',
       filterTag: null,
+      focusFilter: 'all',
       sortBy: 'newest',
       currentPage: 1,
       itemsPerPage: this.config.itemsPerPage,
@@ -43,6 +45,7 @@ export class JournalEngine {
     this.container = document.getElementById(this.config.containerId);
     this.paginationEl = document.getElementById(this.config.paginationId);
     this.searchInput = document.getElementById(this.config.searchInputId);
+    this.focusSelect = document.getElementById(this.config.focusSelectId);
     this.sortSelect = document.getElementById(this.config.sortSelectId);
     this.activeFiltersWrap = document.getElementById(this.config.activeFiltersWrapId);
     this.filterTagText = document.getElementById(this.config.filterTagTextId);
@@ -97,6 +100,10 @@ export class JournalEngine {
     if (params.get('tag')) {
       this.state.filterTag = params.get('tag');
     }
+    if (params.get('focus')) {
+      this.state.focusFilter = params.get('focus');
+      if (this.focusSelect) this.focusSelect.value = this.state.focusFilter;
+    }
     if (params.get('sort')) {
       this.state.sortBy = params.get('sort');
       if (this.sortSelect) this.sortSelect.value = this.state.sortBy;
@@ -125,6 +132,24 @@ export class JournalEngine {
         (entry.author && entry.author.toLowerCase().includes(q)) ||
         (entry.tags && entry.tags.some(t => t.toLowerCase().includes(q)))
       );
+    }
+
+    // 1b. Pedagogical Focus Filter
+    if (this.state.focusFilter && this.state.focusFilter !== 'all') {
+      const focus = this.state.focusFilter.toLowerCase();
+      filtered = filtered.filter(entry => {
+        const text = `${entry.title} ${entry.summary || ''} ${(entry.tags || []).join(' ')}`.toLowerCase();
+        if (focus === 'dyslexia') {
+          return text.includes('dyslexia') || text.includes('phonolog') || text.includes('reading') || text.includes('decod');
+        } else if (focus === 'adhd') {
+          return text.includes('adhd') || text.includes('attention') || text.includes('executive') || text.includes('focus');
+        } else if (focus === 'dyscalculia') {
+          return text.includes('dyscalculia') || text.includes('math') || text.includes('number') || text.includes('arithmetic') || text.includes('kinematic');
+        } else if (focus === 'udl') {
+          return text.includes('udl') || text.includes('universal design') || text.includes('assistive') || text.includes('accessibility');
+        }
+        return text.includes(focus);
+      });
     }
 
     // 2. Tag Filter
@@ -173,9 +198,12 @@ export class JournalEngine {
         resetBtn.addEventListener('click', () => {
           this.state.searchQuery = '';
           this.state.filterTag = null;
+          this.state.focusFilter = 'all';
           if (this.searchInput) this.searchInput.value = '';
+          if (this.focusSelect) this.focusSelect.value = 'all';
           this.updateUrlState('q', null);
           this.updateUrlState('tag', null);
+          this.updateUrlState('focus', null);
           this.processData();
           this.render();
         });
@@ -287,6 +315,16 @@ export class JournalEngine {
         this.state.searchQuery = e.target.value;
         this.state.currentPage = 1;
         this.updateUrlState('q', this.state.searchQuery || null);
+        this.processData();
+        this.render();
+      });
+    }
+
+    if (this.focusSelect) {
+      this.focusSelect.addEventListener('change', (e) => {
+        this.state.focusFilter = e.target.value;
+        this.state.currentPage = 1;
+        this.updateUrlState('focus', this.state.focusFilter !== 'all' ? this.state.focusFilter : null);
         this.processData();
         this.render();
       });
@@ -457,6 +495,7 @@ export class JournalEngine {
         expandModalBtn.title = 'Toggle Fullscreen (F)';
       }
       this.state.currentEntryId = null;
+      window.CURRENT_PAPER_METADATA = null;
       this.updateUrlState('paper', null);
       // Reset scroll
       const modalContentArea = document.getElementById('modalContentArea');
@@ -489,6 +528,15 @@ export class JournalEngine {
     if (authorEl) authorEl.textContent = entry.author;
     if (dateEl) dateEl.textContent = entry.date;
     if (summaryEl) summaryEl.textContent = entry.summary || '';
+
+    // Expose active paper metadata globally for universal citation extractor
+    window.CURRENT_PAPER_METADATA = {
+      title: entry.title,
+      author: entry.author || 'Research Team',
+      date: entry.date,
+      publisher: this.config.journalName,
+      url: window.location.origin + window.location.pathname + '?paper=' + entry.id
+    };
 
     // Tags
     const tagsContainer = document.getElementById('modalTags');
@@ -782,16 +830,22 @@ export class JournalEngine {
     const title = entry.title;
     const journal = this.config.journalName;
     const currentUrl = window.location.origin + window.location.pathname + '?paper=' + entry.id;
+    const accessDate = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 
     // APA 7th
-    const apa = `${authors}. (${year}). ${title}. ${journal}. Retrieved from ${currentUrl}`;
+    const apa = `${authors}. (${year}). ${title}. ${journal}. Retrieved ${accessDate}, from ${currentUrl}`;
     const apaEl = document.getElementById('citationApa');
     if (apaEl) apaEl.textContent = apa;
 
     // MLA 9th
-    const mla = `${authors}. "${title}." ${journal}, ${year}, ${currentUrl}.`;
+    const mla = `${authors}. "${title}." ${journal}, ${year}, ${currentUrl}. Accessed ${accessDate}.`;
     const mlaEl = document.getElementById('citationMla');
     if (mlaEl) mlaEl.textContent = mla;
+
+    // Chicago 17th
+    const chicago = `${authors}. "${title}." ${journal} (${year}). Accessed ${accessDate}. ${currentUrl}.`;
+    const chicagoEl = document.getElementById('citationChicago');
+    if (chicagoEl) chicagoEl.textContent = chicago;
 
     // BibTeX
     const bibtexKey = entry.id.replace(/[^a-zA-Z0-9]/g, '');
@@ -800,10 +854,24 @@ export class JournalEngine {
   title = {${title}},
   journal = {${journal}},
   year = {${year}},
-  url = {${currentUrl}}
+  url = {${currentUrl}},
+  urldate = {${accessDate}}
 }`;
     const bibtexEl = document.getElementById('citationBibtex');
     if (bibtexEl) bibtexEl.textContent = bibtex;
+
+    // Sync with global citation generator panel if present
+    const globalTitle = document.getElementById('cite-title');
+    const globalAuthor = document.getElementById('cite-author');
+    const globalPublisher = document.getElementById('cite-publisher');
+    const globalYear = document.getElementById('cite-year');
+    if (globalTitle) globalTitle.value = title;
+    if (globalAuthor) globalAuthor.value = authors;
+    if (globalPublisher) globalPublisher.value = journal;
+    if (globalYear) globalYear.value = year;
+    if (typeof window.populateAndGenerateCitations === 'function') {
+      window.populateAndGenerateCitations();
+    }
   }
 
   setupExports() {

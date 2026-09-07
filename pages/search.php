@@ -147,7 +147,7 @@ include '../src/header.php';
     </h1>
 
     <!-- Search Input Form -->
-    <form action="/search.php" method="GET" class="search-form-card">
+    <form action="/pages/search.php" method="GET" class="search-form-card">
         <div class="search-input-group">
             <i class="fas fa-search search-input-icon"></i>
             <input type="text" name="q" value="<?php echo htmlspecialchars($query); ?>"

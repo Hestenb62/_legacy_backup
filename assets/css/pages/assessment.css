@@ -515,4 +515,249 @@
   .hidden {
     display: none !important;
   }
+
+  /* ====================================================
+     Diagnostic Mastery Report Modal & Print Styles
+     ==================================================== */
+  .mastery-report-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    overflow-y: auto;
+  }
+
+  .mastery-report-backdrop {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+  }
+
+  .mastery-report-dialog {
+    position: relative;
+    z-index: 1010;
+    width: 100%;
+    max-width: 54rem;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: var(--radius-2xl, 1.5rem);
+    background-color: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mastery-report-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.75rem;
+    border-bottom: 1px solid var(--color-border);
+    background-color: var(--color-bg-base);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+  }
+
+  .toolbar-title {
+    font-weight: 800;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .toolbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .report-modal-close {
+    background: transparent;
+    border: none;
+    font-size: 1.75rem;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    line-height: 1;
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--radius-md);
+  }
+
+  .report-modal-close:hover {
+    color: var(--color-text-main);
+  }
+
+  .mastery-printable-document {
+    padding: 2.5rem;
+    color: var(--color-text-main);
+    background-color: var(--color-bg-surface);
+  }
+
+  .report-letterhead {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid var(--color-primary);
+    margin-bottom: 2rem;
+  }
+
+  .report-brand-title {
+    font-size: 1.75rem;
+    font-weight: 850;
+    color: var(--color-primary);
+    margin: 0;
+  }
+
+  .report-brand-sub {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin: 0.25rem 0 0 0;
+  }
+
+  .report-meta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    gap: 1rem;
+    padding: 1.25rem;
+    background-color: var(--color-bg-base);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--color-border);
+    margin-bottom: 2rem;
+  }
+
+  .report-meta-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+  }
+
+  .report-meta-val {
+    font-size: 1.125rem;
+    font-weight: 800;
+    color: var(--color-text-main);
+    margin-top: 0.25rem;
+  }
+
+  .mastery-tier-banner {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.25rem 1.5rem;
+    border-radius: var(--radius-xl);
+    margin-bottom: 2rem;
+  }
+
+  .mastery-tier-banner.tier-mastery {
+    background-color: color-mix(in srgb, var(--color-success) 12%, var(--color-bg-surface));
+    border: 1px solid var(--color-success);
+  }
+
+  .mastery-tier-banner.tier-approaching {
+    background-color: color-mix(in srgb, var(--color-warning) 12%, var(--color-bg-surface));
+    border: 1px solid var(--color-warning);
+  }
+
+  .mastery-tier-banner.tier-support {
+    background-color: color-mix(in srgb, var(--color-error) 12%, var(--color-bg-surface));
+    border: 1px solid var(--color-error);
+  }
+
+  .mastery-domain-row {
+    padding: 1.25rem;
+    border-radius: var(--radius-lg);
+    background-color: var(--color-bg-base);
+    border: 1px solid var(--color-border);
+    margin-bottom: 1rem;
+  }
+
+  .progress-bar-bg {
+    height: 8px;
+    background-color: color-mix(in srgb, var(--color-border) 60%, transparent);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+    margin-top: 0.5rem;
+  }
+
+  .progress-bar-fill {
+    height: 100%;
+    border-radius: var(--radius-full);
+    transition: width 0.6s ease;
+  }
+
+  .report-signature-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px dashed var(--color-border);
+  }
+
+  .signature-line {
+    border-top: 1px solid var(--color-border);
+    margin-top: 2.5rem;
+    padding-top: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+  }
+
+  @media print {
+    body * {
+      visibility: hidden !important;
+    }
+    .mastery-report-modal,
+    .mastery-report-modal * {
+      visibility: visible !important;
+    }
+    .mastery-report-modal {
+      position: absolute !important;
+      inset: 0 !important;
+      padding: 0 !important;
+      background: #ffffff !important;
+      color: #000000 !important;
+    }
+    .mastery-report-backdrop,
+    .no-print {
+      display: none !important;
+    }
+    .mastery-report-dialog {
+      max-width: 100% !important;
+      border: none !important;
+      box-shadow: none !important;
+      background: #ffffff !important;
+      color: #000000 !important;
+    }
+    .mastery-printable-document {
+      padding: 0 !important;
+      background: #ffffff !important;
+      color: #000000 !important;
+    }
+    .report-meta-grid,
+    .mastery-domain-row {
+      background-color: #f8fafc !important;
+      border-color: #cbd5e1 !important;
+      color: #0f172a !important;
+    }
+    .report-brand-title {
+      color: #1e3a8a !important;
+    }
+    .report-meta-val,
+    .report-meta-label {
+      color: #0f172a !important;
+    }
+    .signature-line {
+      border-color: #64748b !important;
+      color: #334155 !important;
+    }
+  }
 }
+

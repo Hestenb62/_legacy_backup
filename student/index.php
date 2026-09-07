@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 // Set variables required by header.php for dynamic content
 $pageTitle = "Student Wiki - Hesten's Learning";
 $pageDescription = "A wiki of resources for Math, ELA, Science, and Social Studies to support students with learning disabilities.";
@@ -25,6 +25,13 @@ include '../src/header.php';
         <div class="relative">
             <h1 class="student-hero-title" id="dashboard-greeting">Student Resource Wiki</h1>
             <p class="student-hero-desc">Explore interactive guides, practice tools, and key study resources organized by subject.</p>
+            <div class="student-streak-badge-wrap" style="display: inline-flex; align-items: center; gap: 0.75rem; margin-top: 1.25rem; padding: 0.45rem 1.25rem; background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(8px); border-radius: var(--radius-full); border: 1px solid rgba(255, 255, 255, 0.25); font-size: 0.95rem; font-weight: 700; color: white;">
+                <span><i class="fas fa-fire" style="color: #f59e0b;"></i> <span id="student-hero-streak">1</span> Day Streak</span>
+                <span style="opacity: 0.6;">&bull;</span>
+                <span><i class="fas fa-bullseye" style="color: #38bdf8;"></i> <span id="student-hero-mins">0</span>m Studied Today</span>
+                <span style="opacity: 0.6;">&bull;</span>
+                <a href="/pages/profile.php" style="color: #f8fafc; text-decoration: underline; font-size: 0.85rem;">View Profile</a>
+            </div>
         </div>
     </div>
 
@@ -380,6 +387,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 grid.innerHTML = html;
                 container.style.display = 'block';
             }
+        }
+
+        // Populate streak & study goals
+        const streakData = JSON.parse(localStorage.getItem('hesten_learning_streak'));
+        if (streakData && streakData.streak) {
+            const streakEl = document.getElementById('student-hero-streak');
+            if (streakEl) streakEl.textContent = streakData.streak;
+        }
+        const todayStr = new Date().toISOString().slice(0, 10);
+        const storedMins = JSON.parse(localStorage.getItem('hesten_today_study_minutes'));
+        if (storedMins && storedMins.date === todayStr) {
+            const minsEl = document.getElementById('student-hero-mins');
+            if (minsEl) minsEl.textContent = storedMins.minutes || 0;
         }
     } catch(e) {
         console.error('Error loading bookmarks:', e);

@@ -263,11 +263,18 @@
         'social': { name: 'Social Studies', color: 'amber', icon: 'fa-globe-americas', desc: 'Detailed learning paths, state standards alignment, and core competencies for C3 Framework Social Studies.' }
     };
 
-    // Deep-linking helper: sync subject & grade with URL query params
+    // Deep-linking helper: sync subject, grade & query with URL query params
     function syncUrlParams() {
         const url = new URL(window.location);
         url.searchParams.set('subject', currentSubject);
         url.searchParams.set('grade', currentGrade);
+        const searchInput = document.getElementById('standards-search-input');
+        const q = searchInput ? searchInput.value.trim() : '';
+        if (q) {
+            url.searchParams.set('q', q);
+        } else {
+            url.searchParams.delete('q');
+        }
         window.history.replaceState(null, '', url);
     }
 
@@ -276,6 +283,7 @@
         const params = new URLSearchParams(window.location.search);
         const subjParam = params.get('subject');
         const gradeParam = params.get('grade');
+        const qParam = params.get('q');
 
         if (subjParam && ['math', 'ela', 'science', 'social'].includes(subjParam.toLowerCase())) {
             currentSubject = subjParam.toLowerCase();
@@ -287,6 +295,15 @@
             );
             if (matchingChip) {
                 currentGrade = matchingChip.dataset.grade;
+            }
+        }
+
+        if (qParam) {
+            const searchInput = document.getElementById('standards-search-input');
+            const clearBtn = document.getElementById('standards-search-clear');
+            if (searchInput) {
+                searchInput.value = qParam;
+                if (clearBtn) clearBtn.style.display = 'inline-flex';
             }
         }
     }
@@ -394,17 +411,27 @@
                 item.dataset.domain = domainTitle;
                 domainSet.add(domainTitle);
 
-                // Enhance standard description codes with interactive badges
+                const currentLevelLetter = (gradeData.level || 'a').toLowerCase();
+
+                // Enhance standard description codes with interactive badges and direct practice/test links
                 const descElements = Array.from(item.querySelectorAll('.curr-standard-desc'));
                 descElements.forEach(descEl => {
-                    let html = descEl.innerHTML;
+                    if (!descEl.dataset.originalHtml) {
+                        descEl.dataset.originalHtml = descEl.innerHTML;
+                    }
+                    let html = descEl.dataset.originalHtml;
                     // Match <strong>CODE:</strong> or <strong>CODE</strong>
                     html = html.replace(/<strong>([A-Za-z0-9\.\-_ ]+?):?<\/strong>/g, (match, code) => {
                         totalStandardCodesCount++;
                         const cleanCode = code.trim();
-                        return `<button type="button" class="std-code-badge" data-code="${cleanCode}" title="Click to copy standard code"><i class="far fa-copy"></i> ${cleanCode}</button>`;
+                        return `<span class="std-code-wrap">` +
+                            `<button type="button" class="std-code-badge" data-code="${cleanCode}" title="Click to copy standard code"><i class="far fa-copy"></i> ${cleanCode}</button>` +
+                            `<a href="/levels/${currentLevelLetter}.php" class="std-action-btn std-practice-btn" title="Practice Level ${currentLevelLetter.toUpperCase()} interactive skills aligned with ${cleanCode}"><i class="fas fa-play"></i> Practice</a>` +
+                            `<a href="/assessment/index.php" class="std-action-btn std-assess-btn" title="Launch Diagnostic Assessment"><i class="fas fa-clipboard-check"></i> Test</a>` +
+                        `</span>`;
                     });
                     descEl.innerHTML = html;
+                    descEl.dataset.processedHtml = html;
                 });
 
                 const descCount = descElements.length || 1;
@@ -482,11 +509,14 @@
                 }
             }
 
-            // Reset search input
+            // Synchronize search input and clear button state without wiping user query
             const searchInput = document.getElementById('standards-search-input');
             const searchClear = document.getElementById('standards-search-clear');
-            if (searchInput) searchInput.value = '';
-            if (searchClear) searchClear.style.display = 'none';
+            if (searchInput && searchInput.value.trim().length > 0) {
+                if (searchClear) searchClear.style.display = 'inline-flex';
+            } else {
+                if (searchClear) searchClear.style.display = 'none';
+            }
 
             // Update Quick Stats Bar
             const statDomains = document.getElementById('stat-domains-count');
@@ -562,6 +592,7 @@
         if (searchInput && clearBtn) {
             clearBtn.style.display = searchInput.value.trim().length > 0 ? 'inline-flex' : 'none';
         }
+        syncUrlParams();
         applyStandardsFilters();
     }
 
@@ -570,6 +601,7 @@
         const clearBtn = document.getElementById('standards-search-clear');
         if (searchInput) searchInput.value = '';
         if (clearBtn) clearBtn.style.display = 'none';
+        syncUrlParams();
         applyStandardsFilters();
     }
 
@@ -592,7 +624,10 @@
 
             if (!query) {
                 item.style.display = 'block';
-                item.querySelectorAll('.curr-standard-desc').forEach(p => p.style.display = 'block');
+                item.querySelectorAll('.curr-standard-desc').forEach(p => {
+                    p.style.display = 'block';
+                    if (p.dataset.processedHtml) p.innerHTML = p.dataset.processedHtml;
+                });
                 visibleDomainCount++;
                 matchCount += item.querySelectorAll('.curr-standard-desc').length || 1;
                 return;
@@ -603,12 +638,26 @@
             let matchingParas = 0;
 
             item.querySelectorAll('.curr-standard-desc').forEach(p => {
+                const baseHtml = p.dataset.processedHtml || p.innerHTML;
                 const pText = p.innerText.toLowerCase();
                 if (titleMatches || pText.includes(query)) {
                     p.style.display = 'block';
                     matchingParas++;
+                    // Dynamic query highlighting (avoiding breaking HTML tags)
+                    if (query.length >= 2) {
+                        try {
+                            const escapedQuery = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+                            const regex = new RegExp(`(?![^<]*>)(${escapedQuery})`, 'gi');
+                            p.innerHTML = baseHtml.replace(regex, '<mark class="std-highlight">$1</mark>');
+                        } catch(e) {
+                            p.innerHTML = baseHtml;
+                        }
+                    } else {
+                        p.innerHTML = baseHtml;
+                    }
                 } else {
                     p.style.display = 'none';
+                    p.innerHTML = baseHtml;
                 }
             });
 
@@ -630,7 +679,7 @@
         // Update accordion toggle button state
         updateAccordionToggleBtnState();
 
-        // Empty state
+        // Empty state & Cross-Grade Discovery
         let noResultsEl = document.getElementById('curr-standards-no-results');
         const standardsContainer = document.getElementById('view-standards');
         if (matchCount === 0 && items.length > 0 && standardsContainer) {
@@ -640,13 +689,63 @@
                 noResultsEl.className = 'curr-no-results';
                 standardsContainer.appendChild(noResultsEl);
             }
+
+            // Cross-Grade Standards Discovery
+            let crossGradeMatchesHtml = '';
+            if (query.length >= 2 && typeof curriculumData !== 'undefined') {
+                const subjData = curriculumData[currentSubject];
+                if (subjData && subjData.grades) {
+                    const crossMatches = [];
+                    Object.entries(subjData.grades).forEach(([gName, gVal]) => {
+                        if (gName.toLowerCase() === currentGrade.toLowerCase()) return;
+                        const resolved = (gVal.ccss || gVal.teks || gVal);
+                        if (resolved && resolved.standards) {
+                            const tempDiv = document.createElement('div');
+                            tempDiv.innerHTML = resolved.standards;
+                            let count = 0;
+                            tempDiv.querySelectorAll('.curr-standard-desc, .curr-standard-title').forEach(el => {
+                                if (el.innerText.toLowerCase().includes(query)) count++;
+                            });
+                            if (count > 0) {
+                                crossMatches.push({
+                                    grade: gName,
+                                    level: resolved.level || 'A',
+                                    count: count
+                                });
+                            }
+                        }
+                    });
+
+                    if (crossMatches.length > 0) {
+                        crossGradeMatchesHtml = `
+                            <div class="curr-cross-grade-alert">
+                                <div class="curr-cross-grade-title">
+                                    <i class="fas fa-compass"></i>
+                                    <span>Standards matching "<strong>${escapeHtml(query)}</strong>" found in other grades:</span>
+                                </div>
+                                <div class="curr-cross-grade-chips">
+                                    ${crossMatches.map(m => `
+                                        <button type="button" class="curr-cross-grade-chip-btn" onclick="jumpToGrade('${escapeAttr(m.grade)}', '${escapeAttr(m.level)}')">
+                                            <i class="fas fa-layer-group"></i> ${escapeHtml(m.grade)} (Level ${escapeHtml(m.level.toUpperCase())}) &bull; ${m.count} match${m.count === 1 ? '' : 'es'} &rarr;
+                                        </button>
+                                    `).join('')}
+                                </div>
+                            </div>
+                        `;
+                    }
+                }
+            }
+
             noResultsEl.innerHTML = `
                 <i class="fas fa-search-minus curr-no-results-icon"></i>
                 <h4 class="curr-no-results-title">No matching standards found</h4>
                 <p class="curr-no-results-desc">No standards matched "<strong>${escapeHtml(query)}</strong>" in ${escapeHtml(currentGrade)} ${escapeHtml(currentSubject.toUpperCase())}.</p>
-                <button type="button" class="curr-btn-reset-filter" onclick="clearStandardsSearch(); filterByDomain('all');">
-                    <i class="fas fa-undo"></i> Reset Search & Filters
-                </button>
+                ${crossGradeMatchesHtml}
+                <div style="margin-top: 1.25rem;">
+                    <button type="button" class="curr-btn-reset-filter" onclick="clearStandardsSearch(); filterByDomain('all');">
+                        <i class="fas fa-undo"></i> Reset Search & Filters
+                    </button>
+                </div>
             `;
             noResultsEl.style.display = 'block';
         } else if (noResultsEl) {
@@ -663,6 +762,16 @@
                 counter.style.display = 'none';
             }
         }
+    }
+
+    // Cross-Grade Jump Action
+    function jumpToGrade(gradeName, level) {
+        currentGrade = gradeName;
+        document.querySelectorAll('.curr-chip').forEach(chip => {
+            chip.classList.toggle('active', chip.dataset.grade === gradeName);
+        });
+        syncUrlParams();
+        updateView();
     }
 
     // Accordion Controls
@@ -724,10 +833,9 @@
                 descs.forEach(p => {
                     const badge = p.querySelector('.std-code-badge');
                     const code = badge ? (badge.dataset.code || badge.innerText.trim()) : '';
-                    let descText = p.innerText;
-                    if (code) {
-                        descText = descText.replace(code, '').replace(/^\s*[:\-–]\s*/, '').trim();
-                    }
+                    const clone = p.cloneNode(true);
+                    clone.querySelectorAll('.std-action-btn, .std-code-badge').forEach(el => el.remove());
+                    let descText = clone.innerText.replace(/^\s*[:\-–]\s*/, '').trim();
                     rows.push([
                         subjectsMap[currentSubject]?.name || currentSubject,
                         currentGrade,
@@ -780,10 +888,9 @@
             item.querySelectorAll('.curr-standard-desc').forEach(p => {
                 const badge = p.querySelector('.std-code-badge');
                 const code = badge ? (badge.dataset.code || badge.innerText.trim()) : '';
-                let descText = p.innerText;
-                if (code) {
-                    descText = descText.replace(code, '').replace(/^\s*[:\-–]\s*/, '').trim();
-                }
+                const clone = p.cloneNode(true);
+                clone.querySelectorAll('.std-action-btn, .std-code-badge').forEach(el => el.remove());
+                let descText = clone.innerText.replace(/^\s*[:\-–]\s*/, '').trim();
                 standards.push({
                     code: code,
                     description: descText

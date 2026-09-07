@@ -172,14 +172,82 @@ document.addEventListener("DOMContentLoaded", () => {
         window.location.reload();
     };
 
-    // 4. Badges Logic
+    // 4. Daily Learning Streak & Study Goals Logic
+    function initStreakAndGoals() {
+        const STREAK_KEY = 'hesten_learning_streak';
+        const TODAY_MINS_KEY = 'hesten_today_study_minutes';
+        const FOCUS_SESSIONS_KEY = 'hesten_focus_sessions_completed';
+        const todayStr = new Date().toISOString().slice(0, 10);
+
+        let streakData = { streak: 1, lastDate: todayStr, history: [todayStr] };
+        try {
+            const raw = localStorage.getItem(STREAK_KEY);
+            if (raw) streakData = JSON.parse(raw);
+        } catch(e){}
+
+        if (streakData.lastDate !== todayStr) {
+            const lastDateObj = new Date(streakData.lastDate);
+            const todayObj = new Date(todayStr);
+            const diffDays = Math.round((todayObj - lastDateObj) / (1000 * 60 * 60 * 24));
+
+            if (diffDays === 1) {
+                streakData.streak += 1;
+                streakData.lastDate = todayStr;
+                if (!streakData.history.includes(todayStr)) streakData.history.push(todayStr);
+            } else if (diffDays > 1) {
+                streakData.streak = 1;
+                streakData.lastDate = todayStr;
+                streakData.history = [todayStr];
+            }
+            try { localStorage.setItem(STREAK_KEY, JSON.stringify(streakData)); } catch(e){}
+        }
+
+        let todayMinutes = 0;
+        try {
+            const storedMins = JSON.parse(localStorage.getItem(TODAY_MINS_KEY));
+            if (storedMins && storedMins.date === todayStr) {
+                todayMinutes = storedMins.minutes || 0;
+            } else {
+                localStorage.setItem(TODAY_MINS_KEY, JSON.stringify({ date: todayStr, minutes: 0 }));
+            }
+        } catch(e){}
+
+        const dailyGoalMins = 20;
+        const progressPct = Math.min(100, Math.round((todayMinutes / dailyGoalMins) * 100));
+
+        const streakEl = document.getElementById('stat-streak');
+        const studyMinsEl = document.getElementById('stat-study-mins');
+        const goalFillEl = document.getElementById('goal-progress-fill');
+        const goalPctEl = document.getElementById('goal-progress-pct');
+
+        if (streakEl) streakEl.textContent = `${streakData.streak} 🔥`;
+        if (studyMinsEl) studyMinsEl.textContent = `${todayMinutes}m`;
+        if (goalFillEl) goalFillEl.style.width = `${progressPct}%`;
+        if (goalPctEl) goalPctEl.textContent = `${progressPct}% (${todayMinutes}/${dailyGoalMins}m)`;
+
+        let focusCount = 0;
+        try { focusCount = parseInt(localStorage.getItem(FOCUS_SESSIONS_KEY), 10) || 0; } catch(e){}
+
+        return {
+            streak: streakData.streak,
+            todayMinutes: todayMinutes,
+            focusSessions: focusCount
+        };
+    }
+
+    const streakInfo = initStreakAndGoals();
+
+    // 5. Achievements & Gamification Badges
     const badgesContainer = document.getElementById('badges-container');
     if (badgesContainer) {
         const badges = [
             { id: 'first-book', icon: 'fas fa-book', color: 'blue', title: 'First Book', condition: bookmarks.length >= 1 },
             { id: 'avid-reader', icon: 'fas fa-book-reader', color: 'gold', title: 'Avid Reader', condition: bookmarks.length >= 5 },
             { id: 'highlighter', icon: 'fas fa-highlighter', color: 'green', title: 'Highlighter', condition: allHighlights.length >= 1 },
-            { id: 'scholar', icon: 'fas fa-pen-fancy', color: 'gold', title: 'Scholar', condition: allNotes >= 5 }
+            { id: 'scholar', icon: 'fas fa-pen-fancy', color: 'gold', title: 'Scholar', condition: allNotes >= 5 },
+            { id: 'streak-3', icon: 'fas fa-fire', color: 'gold', title: '3-Day Streak', condition: streakInfo.streak >= 3 },
+            { id: 'streak-7', icon: 'fas fa-bolt', color: 'purple', title: '7-Day Habit', condition: streakInfo.streak >= 7 },
+            { id: 'focus-master', icon: 'fas fa-stopwatch', color: 'green', title: 'Focus Master', condition: streakInfo.focusSessions >= 1 }
         ];
 
         badgesContainer.innerHTML = badges.map(b => `

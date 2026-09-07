@@ -133,6 +133,14 @@ include ABSPATH . '../src/header.php';
                     <h2 class="profile-card-title"><i class="fas fa-chart-line"></i> Learning Progress</h2>
                     <div class="profile-stats-grid">
                         <div class="profile-stat-box">
+                            <div class="profile-stat-num" id="stat-streak" style="color: #f59e0b;">1 🔥</div>
+                            <div class="profile-stat-label">Daily Streak</div>
+                        </div>
+                        <div class="profile-stat-box">
+                            <div class="profile-stat-num" id="stat-study-mins" style="color: var(--color-primary);">0m</div>
+                            <div class="profile-stat-label">Today's Focus</div>
+                        </div>
+                        <div class="profile-stat-box">
                             <div class="profile-stat-num" id="stat-bookmarks">0</div>
                             <div class="profile-stat-label">Saved Books</div>
                         </div>
@@ -140,9 +148,18 @@ include ABSPATH . '../src/header.php';
                             <div class="profile-stat-num" id="stat-highlights">0</div>
                             <div class="profile-stat-label">Highlights</div>
                         </div>
-                        <div class="profile-stat-box">
-                            <div class="profile-stat-num" id="stat-notes">0</div>
-                            <div class="profile-stat-label">Study Notes</div>
+                    </div>
+
+                    <!-- Daily Goal Widget -->
+                    <div class="daily-goal-card">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                            <span style="font-size: 0.85rem; font-weight: 700; color: var(--color-text-main); display: flex; align-items: center; gap: 0.4rem;">
+                                <i class="fas fa-bullseye" style="color: var(--color-primary);"></i> Daily Focus Goal (20m)
+                            </span>
+                            <span id="goal-progress-pct" style="font-size: 0.8rem; font-weight: 800; color: var(--color-primary);">0% (0/20m)</span>
+                        </div>
+                        <div style="height: 8px; background-color: var(--color-border); border-radius: 9999px; overflow: hidden;">
+                            <div id="goal-progress-fill" style="height: 100%; width: 0%; background: linear-gradient(90deg, var(--color-primary), var(--color-secondary)); border-radius: 9999px; transition: width 0.6s ease;"></div>
                         </div>
                     </div>
                 </section>
