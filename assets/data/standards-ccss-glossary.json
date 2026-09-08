@@ -1,0 +1,469 @@
+{
+  "source": "Common Core State Standards for Mathematics - Appendix & Glossary",
+  "attribution": "From the \"Common Core State Standards for MATHEMATICS\" (Glossary, Tables 1-5)",
+  "terms": [
+    {
+      "term": "Bivariate data",
+      "letter": "B",
+      "definition": "Pairs of linked numerical observations.",
+      "example": "A list of heights and weights for each player on a football team."
+    },
+    {
+      "term": "Box plot",
+      "letter": "B",
+      "definition": "A method of visually displaying a distribution of data values by using the median, quartiles, and extremes of the data set. A box shows the middle 50% of the data.",
+      "seeAlso": "First quartile, Median, Third quartile, Interquartile range"
+    },
+    {
+      "term": "Complex fraction",
+      "letter": "C",
+      "definition": "A fraction $A/B$ where $A$ and/or $B$ are fractions ($B$ nonzero)."
+    },
+    {
+      "term": "Computation algorithm",
+      "letter": "C",
+      "definition": "A set of predefined steps applicable to a class of problems that gives the correct result in every case when the steps are carried out correctly.",
+      "seeAlso": "Computation strategy"
+    },
+    {
+      "term": "Computation strategy",
+      "letter": "C",
+      "definition": "Purposeful manipulations that may be chosen for specific problems, may not have a fixed order, and may be aimed at converting one problem into another.",
+      "seeAlso": "Computation algorithm"
+    },
+    {
+      "term": "Congruent",
+      "letter": "C",
+      "definition": "Two plane or solid figures are congruent if one can be obtained from the other by a sequence of rigid motions (rotations, reflections, and translations)."
+    },
+    {
+      "term": "Counting on",
+      "letter": "C",
+      "definition": "A strategy for finding the number of objects in a group without having to count every member of the group.",
+      "example": "If a stack of books is known to have 8 books and 3 more are added to the top, it is not necessary to count the stack all over again; one can find the total by counting on—pointing to the top books and saying \"eight,\" then counting on \"nine, ten, eleven. There are eleven books now.\""
+    },
+    {
+      "term": "Dilation",
+      "letter": "D",
+      "definition": "A transformation that moves each point along the ray through the point emanating from a fixed center, and multiplies its distance from the point by a common scale factor."
+    },
+    {
+      "term": "Dot plot",
+      "letter": "D",
+      "definition": "A method of visually displaying a distribution of data values where each data value is shown as a dot or mark above a number line.",
+      "seeAlso": "Line plot"
+    },
+    {
+      "term": "Expanded form",
+      "letter": "E",
+      "definition": "A multi-digit number is expressed in expanded form when it is written as a sum of single-digit multiples of powers of ten.",
+      "example": "$643 = 600 + 40 + 3$"
+    },
+    {
+      "term": "Expected value",
+      "letter": "E",
+      "definition": "For a random variable, the weighted average of its possible values, with weights given by their respective probabilities."
+    },
+    {
+      "term": "First quartile",
+      "letter": "F",
+      "definition": "For a data set with median $M$, the first quartile is the median of the data values less than $M$.",
+      "example": "For the data set $\\{1, 3, 6, 7, 10, 12, 14, 15, 22, 120\\}$, the median is $11$. The data values less than $11$ are $\\{1, 3, 6, 7, 10\\}$. The median of these values is $6$; therefore, the first quartile is $6$.",
+      "seeAlso": "Median, Third quartile, Interquartile range"
+    },
+    {
+      "term": "Fraction",
+      "letter": "F",
+      "definition": "A number expressible in the form $a/b$ where $a$ is a whole number and $b$ is a positive whole number. (The word fraction in these standards always refers to a non-negative number.)",
+      "seeAlso": "Rational number"
+    },
+    {
+      "term": "Identity property of 0",
+      "letter": "I",
+      "definition": "For any number $a$, $a + 0 = 0 + a = a$.",
+      "seeAlso": "Table 3: Properties of Operations"
+    },
+    {
+      "term": "Integer",
+      "letter": "I",
+      "definition": "A number expressible in the form $a$ or $-a$ for some whole number $a$. The set of integers includes positive whole numbers, negative whole numbers, and zero: $\\{\\dots, -3, -2, -1, 0, 1, 2, 3, \\dots\\}$."
+    },
+    {
+      "term": "Interquartile range",
+      "letter": "I",
+      "definition": "A measure of variation in a set of numerical data. The interquartile range is the distance between the first and third quartiles of the data set.",
+      "example": "For the data set $\\{1, 3, 6, 7, 10, 12, 14, 15, 22, 120\\}$, the first quartile is $6$ and the third quartile is $15$; the interquartile range is $15 - 6 = 9$.",
+      "seeAlso": "First quartile, Third quartile"
+    },
+    {
+      "term": "Line plot",
+      "letter": "L",
+      "definition": "A method of visually displaying a distribution of data values where each data value is shown as a dot or mark above a number line. Also known as a dot plot."
+    },
+    {
+      "term": "Mean",
+      "letter": "M",
+      "definition": "A measure of center in a set of numerical data, computed by adding the values in a list and then dividing by the number of values in the list.",
+      "example": "For the data set $\\{1, 3, 6, 7, 10, 12, 14, 15, 22, 120\\}$, the mean is $21$."
+    },
+    {
+      "term": "Mean absolute deviation",
+      "letter": "M",
+      "definition": "A measure of variation in a set of numerical data, computed by adding the distances between each data value and the mean, then dividing by the number of data values.",
+      "example": "For the data set $\\{2, 3, 6, 7, 10, 12, 14, 15, 22, 120\\}$, the mean absolute deviation is $20$."
+    },
+    {
+      "term": "Median",
+      "letter": "M",
+      "definition": "A measure of center in a set of numerical data. The median of a list of values is the value appearing at the center of a sorted version of the list—or the mean of the two central values, if the list contains an even number of values.",
+      "example": "For the data set $\\{2, 3, 6, 7, 10, 12, 14, 15, 22, 90\\}$, the median is $11$."
+    },
+    {
+      "term": "Midline",
+      "letter": "M",
+      "definition": "In the graph of a trigonometric function, the horizontal line halfway between its maximum and minimum values."
+    },
+    {
+      "term": "Multiplication and division situations",
+      "letter": "M",
+      "definition": "Standard situations categorized by Equal Groups, Arrays/Area, and Compare situations across Unknown Product, Group Size Unknown, and Number of Groups Unknown.",
+      "seeAlso": "Table 2: Common Multiplication and Division Situations"
+    },
+    {
+      "term": "Number line diagram",
+      "letter": "N",
+      "definition": "A diagram of the number line used to represent numbers and support reasoning about numbers. In non-negative coordinates, the line begins with $0$ and goes on indefinitely to the right with unit length equal to the distance between consecutive whole numbers."
+    },
+    {
+      "term": "Percent rate of change",
+      "letter": "P",
+      "definition": "A rate of change expressed as a percent.",
+      "example": "If a population grows from $50$ to $55$ in a year, it grew by $(55-50)/50 = 5/50 = 10\\%$ per year."
+    },
+    {
+      "term": "Probability",
+      "letter": "P",
+      "definition": "A number between $0$ and $1$ used to quantify likelihood for processes that have uncertain outcomes (such as tossing a coin, selecting a person at random from a group of people, tossing a ball at a target, or testing for a medical condition)."
+    },
+    {
+      "term": "Probability distribution",
+      "letter": "P",
+      "definition": "The set of possible values of a random variable with a probability assigned to each."
+    },
+    {
+      "term": "Probability model",
+      "letter": "P",
+      "definition": "A probability model is used to assign probabilities to outcomes of a chance process by examining the nature of the process. The set of all outcomes is called the sample space, and their probabilities sum to $1$.",
+      "seeAlso": "Uniform probability model"
+    },
+    {
+      "term": "Properties of equality",
+      "letter": "P",
+      "definition": "Foundational mathematical truths governing equal expressions (Reflexive, Symmetric, Transitive, Addition, Subtraction, Multiplication, Division, and Substitution).",
+      "seeAlso": "Table 4: Properties of Equality"
+    },
+    {
+      "term": "Properties of inequality",
+      "letter": "P",
+      "definition": "Mathematical properties that maintain inequality direction under addition, subtraction, positive scaling, and reversed direction under negative scaling.",
+      "seeAlso": "Table 5: Properties of Inequality"
+    },
+    {
+      "term": "Properties of operations",
+      "letter": "P",
+      "definition": "Fundamental rules of arithmetic governing addition and multiplication (Associative, Commutative, Additive Identity, Multiplicative Identity, Inverses, and Distributive).",
+      "seeAlso": "Table 3: Properties of Operations"
+    },
+    {
+      "term": "Random variable",
+      "letter": "R",
+      "definition": "An assignment of a numerical value to each outcome in a sample space."
+    },
+    {
+      "term": "Ratio",
+      "letter": "R",
+      "definition": "A relationship between two quantities where for every $a$ units of one quantity there are $b$ units of the other quantity. Often written $a:b$ or $a\\text{ to }b$."
+    },
+    {
+      "term": "Rational expression",
+      "letter": "R",
+      "definition": "A quotient of two polynomials with a non-zero denominator."
+    },
+    {
+      "term": "Rational number",
+      "letter": "R",
+      "definition": "A number expressible in the form $a/b$ or $-a/b$ for some whole number $a$ and some positive whole number $b$. The rational numbers include the integers."
+    },
+    {
+      "term": "Real number",
+      "letter": "R",
+      "definition": "A number from the continuum of points on a line. The set of real numbers includes all rational and irrational numbers."
+    },
+    {
+      "term": "Repeating decimal",
+      "letter": "R",
+      "definition": "The decimal form of a rational number where a sequence of one or more digits repeats indefinitely without terminating.",
+      "seeAlso": "Terminating decimal"
+    },
+    {
+      "term": "Sample space",
+      "letter": "S",
+      "definition": "In a probability model for a random process, a list of the individual outcomes that are to be considered."
+    },
+    {
+      "term": "Scatter plot",
+      "letter": "S",
+      "definition": "A graphic display of bivariate data on a coordinate plane with one variable on each axis."
+    },
+    {
+      "term": "Similarity transformation",
+      "letter": "S",
+      "definition": "A rigid motion (rotation, reflection, translation) followed by a dilation."
+    },
+    {
+      "term": "Standard deviation",
+      "letter": "S",
+      "definition": "A measure of the spread of a set of data from its mean. It is the square root of the variance: $\\sigma = \\sqrt{\\frac{1}{N}\\sum_{i=1}^N (x_i - \\mu)^2}$."
+    },
+    {
+      "term": "Tape diagram",
+      "letter": "T",
+      "definition": "A drawing that looks like a segment of tape, used to illustrate number relationships. Also known as a strip diagram, bar model, fraction strip, or length model."
+    },
+    {
+      "term": "Terminating decimal",
+      "letter": "T",
+      "definition": "A decimal is called terminating if its repeating digit is $0$ (for example, $0.25000\\dots = 0.25$)."
+    },
+    {
+      "term": "Third quartile",
+      "letter": "T",
+      "definition": "For a data set with median $M$, the third quartile is the median of the data values greater than $M$.",
+      "example": "For the data set $\\{2, 3, 6, 7, 10, 12, 14, 15, 22, 120\\}$, the median is $11$. The data values greater than $11$ are $\\{12, 14, 15, 22, 120\\}$. The median of these values is $15$; therefore, the third quartile is $15$.",
+      "seeAlso": "First quartile, Median, Interquartile range"
+    },
+    {
+      "term": "Transitivity principle for indirect measurement",
+      "letter": "T",
+      "definition": "If the length of object $A$ is greater than the length of object $B$, and the length of object $B$ is greater than the length of object $C$, then the length of object $A$ is greater than the length of object $C$. Symbolically, if $A > B$ and $B > C$, then $A > C$."
+    },
+    {
+      "term": "Uniform probability model",
+      "letter": "U",
+      "definition": "A probability model which assigns equal probability to all outcomes.",
+      "seeAlso": "Probability model"
+    },
+    {
+      "term": "Vector",
+      "letter": "V",
+      "definition": "A quantity with magnitude and direction in the plane or in space, represented by an arrow from an initial point to a terminal point."
+    },
+    {
+      "term": "Visual fraction model",
+      "letter": "V",
+      "definition": "A tape diagram, number line diagram, or area model used to visually represent fraction operations and equivalence."
+    },
+    {
+      "term": "Whole numbers",
+      "letter": "W",
+      "definition": "The numbers $0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, \\dots$"
+    }
+  ],
+  "tables": [
+    {
+      "id": "table-1",
+      "number": 1,
+      "title": "Common Addition and Subtraction Situations",
+      "description": "Classification of addition and subtraction situations across problem types and unknown positions, directly from Table 1 of the CCSS Mathematics Glossary.",
+      "headers": ["Type", "Result Unknown", "Change Unknown", "Start Unknown"],
+      "rows": [
+        {
+          "type": "Add to",
+          "resultUnknown": "Two bunnies sat on the grass. Three more bunnies hopped there. How many bunnies are on the grass now?<br>$$2 + 3 = ?$$",
+          "changeUnknown": "Two bunnies were sitting on the grass. Some more bunnies hopped there. Then there were five bunnies. How many bunnies hopped over?<br>$$2 + ? = 5$$",
+          "startUnknown": "Some bunnies were sitting on the grass. Three more bunnies hopped there. Then there were five bunnies. How many bunnies were on the grass before?<br>$$? + 3 = 5$$"
+        },
+        {
+          "type": "Take from",
+          "resultUnknown": "Five apples were on the table. I ate two apples. How many apples are on the table now?<br>$$5 - 2 = ?$$",
+          "changeUnknown": "Five apples were on the table. I ate some apples. Then there were three apples. How many apples did I eat?<br>$$5 - ? = 3$$",
+          "startUnknown": "Some apples were on the table. I ate two apples. Then there were three apples. How many apples were on the table before?<br>$$? - 2 = 3$$"
+        },
+        {
+          "type": "Put Together / Take Apart",
+          "resultUnknown": "Three red apples and two green apples are on the table. How many apples are on the table?<br>$$3 + 2 = ?$$",
+          "changeUnknown": "Five apples are on the table. Three are red and the rest are green. How many apples are green?<br>$$3 + ? = 5, \\quad 5 - 3 = ?$$",
+          "startUnknown": "Grandma has five flowers. How many can she put in her red vase and how many in her blue vase?<br>$$5 = 0 + 5, \\ 5 = 1 + 4, \\ 5 = 2 + 3, \\dots$$"
+        },
+        {
+          "type": "Compare",
+          "resultUnknown": "(\"How many more?\") Lucy has two apples. Julie has five apples. How many more apples does Julie have than Lucy?<br>(\"How many fewer?\") Lucy has two apples. Julie has five apples. How many fewer apples does Lucy have than Julie?<br>$$2 + ? = 5, \\quad 5 - 2 = ?$$",
+          "changeUnknown": "(Version with \"more\") Julie has 3 more apples than Lucy. Lucy has 2 apples. How many apples does Julie have?<br>(Version with \"fewer\") Lucy has 3 fewer apples than Julie. Lucy has 2 apples. How many apples does Julie have?<br>$$2 + 3 = ?$$",
+          "startUnknown": "(Version with \"more\") Julie has 3 more apples than Lucy. Julie has 5 apples. How many apples does Lucy have?<br>(Version with \"fewer\") Lucy has 3 fewer apples than Julie. Julie has 5 apples. How many apples does Lucy have?<br>$$5 - 3 = ?, \\quad ? + 3 = 5$$"
+        }
+      ]
+    },
+    {
+      "id": "table-2",
+      "number": 2,
+      "title": "Common Multiplication and Division Situations",
+      "description": "Classification of multiplication and division situations across Equal Groups, Arrays/Area, and Compare situations, directly from Table 2 of the CCSS Mathematics Glossary.",
+      "headers": ["Type", "Unknown Product", "Group Size Unknown (\"How many in each group?\")", "Number of Groups Unknown (\"How many groups?\")"],
+      "rows": [
+        {
+          "type": "Equal Groups",
+          "unknownProduct": "There are $3$ bags with $6$ plums in each bag. How many plums are there in all?<br>Measurement example: You need $3$ lengths of string, each $6$ inches long. How much string will you need altogether?<br>$$3 \\times 6 = ?$$",
+          "groupSizeUnknown": "If $18$ plums are shared equally into $3$ bags, then how many plums will be in each bag?<br>Measurement example: You have $18$ inches of string, which you will cut into $3$ equal pieces. How long will each piece of string be?<br>$$3 \\times ? = 18, \\quad 18 \\div 3 = ?$$",
+          "numGroupsUnknown": "If $18$ plums are to be packed $6$ to a bag, then how many bags are needed?<br>Measurement example: You have $18$ inches of string, which you will cut into pieces that are $6$ inches long. How many pieces of string will you have?<br>$$? \\times 6 = 18, \\quad 18 \\div 6 = ?$$"
+        },
+        {
+          "type": "Arrays, Area",
+          "unknownProduct": "There are $3$ rows of apples with $6$ apples in each row. How many apples are there?<br>Area example: What is the area of a $3\\text{ cm} \\times 6\\text{ cm}$ rectangle?<br>$$3 \\times 6 = ?$$",
+          "groupSizeUnknown": "If $18$ apples are arranged into $3$ equal rows, how many apples will be in each row?<br>Area example: A rectangle has area $18\\text{ cm}^2$. If one side is $3\\text{ cm}$ long, how long is a side that is perpendicular to it?<br>$$3 \\times ? = 18, \\quad 18 \\div 3 = ?$$",
+          "numGroupsUnknown": "If $18$ apples are arranged into equal rows of $6$ apples, how many rows will there be?<br>Area example: A rectangle has area $18\\text{ cm}^2$. If one side is $6\\text{ cm}$ long, how long is a side that is perpendicular to it?<br>$$? \\times 6 = 18, \\quad 18 \\div 6 = ?$$"
+        },
+        {
+          "type": "Compare",
+          "unknownProduct": "A blue hat costs $\\$6$. A red hat costs $3$ times as much as the blue hat. How much does the red hat cost?<br>Measurement example: A rubber band is $6\\text{ cm}$ long. How long will the rubber band be when it is stretched to be $3$ times as long?<br>$$3 \\times 6 = ?$$",
+          "groupSizeUnknown": "A red hat costs $\\$18$ and that is $3$ times as much as a blue hat costs. How much does a blue hat cost?<br>Measurement example: A rubber band is stretched to be $18\\text{ cm}$ long and that is $3$ times as long as it was at first. How long was the rubber band at first?<br>$$3 \\times ? = 18, \\quad 18 \\div 3 = ?$$",
+          "numGroupsUnknown": "A red hat costs $\\$18$ and a blue hat costs $\\$6$. How many times as much does the red hat cost as the blue hat?<br>Measurement example: A rubber band was $6\\text{ cm}$ long at first. Now it is stretched to be $18\\text{ cm}$ long. How many times as long is the rubber band now as it was at first?<br>$$? \\times 6 = 18, \\quad 18 \\div 6 = ?$$"
+        }
+      ]
+    },
+    {
+      "id": "table-3",
+      "number": 3,
+      "title": "The Properties of Operations",
+      "description": "Here $a$, $b$, and $c$ stand for arbitrary numbers in a given number system. The properties of operations apply to the rational number system, the real number system, and the complex number system.",
+      "headers": ["Property", "Symbolic Statement"],
+      "rows": [
+        {
+          "property": "Associative property of addition",
+          "statement": "$$(a + b) + c = a + (b + c)$$"
+        },
+        {
+          "property": "Commutative property of addition",
+          "statement": "$$a + b = b + a$$"
+        },
+        {
+          "property": "Additive identity property of 0",
+          "statement": "$$a + 0 = 0 + a = a$$"
+        },
+        {
+          "property": "Existence of additive inverses",
+          "statement": "For every $a$ there exists $-a$ such that $$a + (-a) = (-a) + a = 0$$"
+        },
+        {
+          "property": "Associative property of multiplication",
+          "statement": "$$(a \\times b) \\times c = a \\times (b \\times c)$$"
+        },
+        {
+          "property": "Commutative property of multiplication",
+          "statement": "$$a \\times b = b \\times a$$"
+        },
+        {
+          "property": "Multiplicative identity property of 1",
+          "statement": "$$a \\times 1 = 1 \\times a = a$$"
+        },
+        {
+          "property": "Existence of multiplicative inverses",
+          "statement": "For every $a \\neq 0$ there exists $1/a$ such that $$a \\times 1/a = 1/a \\times a = 1$$"
+        },
+        {
+          "property": "Distributive property of multiplication over addition",
+          "statement": "$$a \\times (b + c) = a \\times b + a \\times c$$"
+        }
+      ]
+    },
+    {
+      "id": "table-4",
+      "number": 4,
+      "title": "The Properties of Equality",
+      "description": "Here $a$, $b$, and $c$ stand for arbitrary numbers in the rational, real, or complex number systems.",
+      "headers": ["Property", "Symbolic Statement"],
+      "rows": [
+        {
+          "property": "Reflexive property of equality",
+          "statement": "$$a = a$$"
+        },
+        {
+          "property": "Symmetric property of equality",
+          "statement": "If $a = b$, then $$b = a$$"
+        },
+        {
+          "property": "Transitive property of equality",
+          "statement": "If $a = b$ and $b = c$, then $$a = c$$"
+        },
+        {
+          "property": "Addition property of equality",
+          "statement": "If $a = b$, then $$a + c = b + c$$"
+        },
+        {
+          "property": "Subtraction property of equality",
+          "statement": "If $a = b$, then $$a - c = b - c$$"
+        },
+        {
+          "property": "Multiplication property of equality",
+          "statement": "If $a = b$, then $$a \\times c = b \\times c$$"
+        },
+        {
+          "property": "Division property of equality",
+          "statement": "If $a = b$ and $c \\neq 0$, then $$a \\div c = b \\div c$$"
+        },
+        {
+          "property": "Substitution property of equality",
+          "statement": "If $a = b$, then $b$ may be substituted for $a$ in any expression containing $a$."
+        }
+      ]
+    },
+    {
+      "id": "table-5",
+      "number": 5,
+      "title": "The Properties of Inequality",
+      "description": "Here $a$, $b$, and $c$ stand for arbitrary real numbers.",
+      "headers": ["Property", "Symbolic Statement"],
+      "rows": [
+        {
+          "property": "Trichotomy",
+          "statement": "Exactly one of $a < b$, $a = b$, or $a > b$ is true."
+        },
+        {
+          "property": "Transitive property of inequality",
+          "statement": "If $a > b$ and $b > c$, then $$a > c$$"
+        },
+        {
+          "property": "Reversal property",
+          "statement": "If $a > b$, then $$b < a$$"
+        },
+        {
+          "property": "Opposite / Negation property",
+          "statement": "If $a > b$, then $$-a < -b$$"
+        },
+        {
+          "property": "Addition property of inequality",
+          "statement": "If $a > b$, then $$a + c > b + c$$"
+        },
+        {
+          "property": "Subtraction property of inequality",
+          "statement": "If $a > b$, then $$a - c > b - c$$"
+        },
+        {
+          "property": "Multiplication property (positive factor)",
+          "statement": "If $a > b$ and $c > 0$, then $$a \\times c > b \\times c$$"
+        },
+        {
+          "property": "Multiplication property (negative factor)",
+          "statement": "If $a > b$ and $c < 0$, then $$a \\times c < b \\times c$$"
+        },
+        {
+          "property": "Division property (positive divisor)",
+          "statement": "If $a > b$ and $c > 0$, then $$a \\div c > b \\div c$$"
+        },
+        {
+          "property": "Division property (negative divisor)",
+          "statement": "If $a > b$ and $c < 0$, then $$a \\div c < b \\div c$$"
+        }
+      ]
+    }
+  ]
+}

@@ -329,6 +329,9 @@
                                     <button type="button" id="btn-toggle-accordions" class="curr-btn-accordion-toggle" onclick="toggleAllAccordions()" title="Expand or collapse all domain sections">
                                         <i class="fas fa-compress-alt"></i> <span id="toggle-accordions-text">Collapse All</span>
                                     </button>
+                                    <button type="button" id="btn-open-glossary" class="curr-btn-accordion-toggle" onclick="openGlossaryModal()" title="Open official CCSS Mathematics Glossary & Reference Tables">
+                                        <i class="fas fa-book-bookmark" style="color: #f59e0b;"></i> <span>Glossary</span>
+                                    </button>
                                 </div>
                             </div>
                             <div class="curr-domain-filters" id="domain-filters-bar">
@@ -379,6 +382,17 @@
                         </ol>
                     </div>
 
+                    <!-- CCSS Glossary Quick Link Card -->
+                    <div id="side-glossary-card" class="curr-card curr-glossary-side-card" style="margin-top: 1.5rem;">
+                        <h4 class="curr-card-badge badge-amber">
+                            <i class="fas fa-book-bookmark"></i> CCSS Glossary
+                        </h4>
+                        <p class="curr-link-desc">Explore official mathematical definitions & situation tables 1–5 from the CCSS PDF.</p>
+                        <button type="button" onclick="openGlossaryModal()" class="curr-btn-glossary-jump">
+                            <span>Open Glossary Popup</span> <i class="fas fa-external-link-alt"></i>
+                        </button>
+                    </div>
+
                     <!-- Level Link -->
                     <div class="curr-card curr-link-card">
                         <h4 class="curr-card-badge badge-gray">Practice Skills</h4>
@@ -388,6 +402,83 @@
                         </a>
                     </div>
                 </aside>
+            </div>
+        </div>
+    </div>
+
+    <!-- CCSS Mathematics Glossary & Reference Tables Modal Popup -->
+    <div id="ccss-glossary-modal" class="curr-glossary-modal" role="dialog" aria-modal="true" aria-labelledby="glossary-modal-title" style="display: none;">
+        <div class="curr-glossary-backdrop" onclick="closeGlossaryModal()"></div>
+        <div class="curr-glossary-dialog card-surface">
+            <!-- Modal Header -->
+            <div class="curr-glossary-modal-header">
+                <div class="curr-glossary-title-wrap">
+                    <div class="curr-glossary-badge-row">
+                        <span class="curr-card-badge badge-amber">
+                            <i class="fas fa-book-bookmark"></i> CCSS Mathematics Glossary
+                        </span>
+                        <span class="curr-glossary-pdf-pill"><i class="fas fa-file-pdf"></i> Official PDF Appendix</span>
+                    </div>
+                    <h2 id="glossary-modal-title" class="curr-glossary-modal-heading">Glossary & Reference Tables</h2>
+                    <p class="curr-glossary-desc">Official vocabulary definitions and situation tables from the <strong>Common Core State Standards for Mathematics</strong> document.</p>
+                </div>
+                <div class="curr-glossary-header-actions">
+                    <div class="curr-glossary-view-switcher" role="tablist" aria-label="Glossary Display Mode">
+                        <button type="button" id="btn-view-terms" class="curr-glossary-toggle-btn active" onclick="switchGlossaryView('terms')" role="tab" aria-selected="true">
+                            <i class="fas fa-spell-check"></i> <span>Vocabulary</span> (<span id="glossary-terms-total">48</span>)
+                        </button>
+                        <button type="button" id="btn-view-tables" class="curr-glossary-toggle-btn" onclick="switchGlossaryView('tables')" role="tab" aria-selected="false">
+                            <i class="fas fa-table-cells"></i> <span>Tables 1–5</span>
+                        </button>
+                    </div>
+                    <button type="button" class="curr-glossary-close-btn" onclick="closeGlossaryModal()" aria-label="Close Glossary">&times;</button>
+                </div>
+            </div>
+
+            <!-- Modal Body (Scrollable) -->
+            <div class="curr-glossary-modal-body">
+                <!-- 1. Vocabulary View -->
+                <div id="glossary-pane-terms" class="curr-glossary-pane">
+                    <!-- Filter & Search Toolbar -->
+                    <div class="curr-glossary-toolbar">
+                        <div class="curr-glossary-search-box">
+                            <i class="fas fa-search curr-search-icon"></i>
+                            <input type="text" id="glossary-search-input" placeholder="Search terms or definitions (e.g., bivariate, box plot, fraction)..." autocomplete="off" oninput="handleGlossarySearch()">
+                            <button type="button" id="glossary-search-clear" class="curr-search-clear" onclick="clearGlossarySearch()" style="display: none;" title="Clear glossary search">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <div class="curr-glossary-pills-bar" id="glossary-letter-pills" role="navigation" aria-label="Alphabetical index">
+                            <!-- Populated dynamically via JS: ALL, B, C... -->
+                        </div>
+                    </div>
+
+                    <!-- Terms Grid -->
+                    <div id="glossary-terms-grid" class="curr-glossary-grid" aria-live="polite">
+                        <div class="curr-glossary-loading">
+                            <i class="fas fa-spinner fa-spin"></i> Loading CCSS Glossary definitions...
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Tables View -->
+                <div id="glossary-pane-tables" class="curr-glossary-pane" style="display: none;">
+                    <div class="curr-glossary-tables-nav" id="glossary-tables-nav" role="tablist">
+                        <button type="button" class="curr-table-nav-pill active" onclick="showGlossaryTable(1)">Table 1: Addition & Subtraction</button>
+                        <button type="button" class="curr-table-nav-pill" onclick="showGlossaryTable(2)">Table 2: Multiplication & Division</button>
+                        <button type="button" class="curr-table-nav-pill" onclick="showGlossaryTable(3)">Table 3: Properties of Operations</button>
+                        <button type="button" class="curr-table-nav-pill" onclick="showGlossaryTable(4)">Table 4: Properties of Equality</button>
+                        <button type="button" class="curr-table-nav-pill" onclick="showGlossaryTable(5)">Table 5: Properties of Inequality</button>
+                    </div>
+                    <div id="glossary-active-table-box" class="curr-glossary-table-box">
+                        <!-- Populated dynamically via JS -->
+                    </div>
+                </div>
+
+                <div class="curr-disclaimer-box" style="margin-top: 1.5rem;">
+                    <i class="fas fa-info-circle"></i>
+                    <span>Attribution: From the "Common Core State Standards for MATHEMATICS" (Appendix & Glossary, Tables 1–5).</span>
+                </div>
             </div>
         </div>
     </div>
@@ -897,6 +988,7 @@
 
             // Apply filter and animate view
             applyStandardsFilters();
+            updateGlossaryVisibility();
             view.style.opacity = '1';
             view.style.transform = 'translateY(0)';
 
@@ -1734,6 +1826,300 @@
         }
     }
 
+    // =========================================================================
+    // CCSS Mathematics Glossary & Reference Tables Module
+    // =========================================================================
+    let ccssGlossaryData = null;
+    let selectedGlossaryLetter = 'ALL';
+    let currentGlossarySearch = '';
+    let activeGlossaryView = 'terms';
+    let currentGlossaryTableNum = 1;
+
+    async function loadCcssGlossary() {
+        if (ccssGlossaryData) return;
+        try {
+            const resp = await fetch('/assets/data/standards-ccss-glossary.json');
+            if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+            ccssGlossaryData = await resp.json();
+            const totalEl = document.getElementById('glossary-terms-total');
+            if (totalEl) totalEl.innerText = ccssGlossaryData.terms.length;
+            renderGlossaryLetters();
+            renderGlossaryTerms();
+            renderGlossaryTable(1);
+        } catch (err) {
+            console.error('Failed to load CCSS Glossary:', err);
+            const grid = document.getElementById('glossary-terms-grid');
+            if (grid) {
+                grid.innerHTML = `<div class="curr-glossary-empty"><i class="fas fa-exclamation-triangle"></i> Unable to load glossary data.</div>`;
+            }
+        }
+    }
+
+    function renderGlossaryLetters() {
+        const bar = document.getElementById('glossary-letter-pills');
+        if (!bar || !ccssGlossaryData || !ccssGlossaryData.terms) return;
+        
+        const letters = new Set();
+        ccssGlossaryData.terms.forEach(t => {
+            if (t.letter) letters.add(t.letter.toUpperCase());
+        });
+        const sortedLetters = Array.from(letters).sort();
+
+        let html = `<button type="button" class="curr-letter-pill ${selectedGlossaryLetter === 'ALL' ? 'active' : ''}" onclick="selectGlossaryLetter('ALL')">ALL</button>`;
+        sortedLetters.forEach(l => {
+            const isActive = selectedGlossaryLetter === l ? 'active' : '';
+            html += `<button type="button" class="curr-letter-pill ${isActive}" onclick="selectGlossaryLetter('${l}')">${l}</button>`;
+        });
+        bar.innerHTML = html;
+    }
+
+    function selectGlossaryLetter(letter) {
+        selectedGlossaryLetter = letter;
+        renderGlossaryLetters();
+        renderGlossaryTerms();
+    }
+
+    function handleGlossarySearch() {
+        const input = document.getElementById('glossary-search-input');
+        const clearBtn = document.getElementById('glossary-search-clear');
+        currentGlossarySearch = (input?.value || '').trim().toLowerCase();
+        if (clearBtn) {
+            clearBtn.style.display = currentGlossarySearch.length > 0 ? 'inline-flex' : 'none';
+        }
+        renderGlossaryTerms();
+    }
+
+    function clearGlossarySearch() {
+        const input = document.getElementById('glossary-search-input');
+        const clearBtn = document.getElementById('glossary-search-clear');
+        if (input) input.value = '';
+        if (clearBtn) clearBtn.style.display = 'none';
+        currentGlossarySearch = '';
+        renderGlossaryTerms();
+    }
+
+    function renderGlossaryTerms() {
+        const grid = document.getElementById('glossary-terms-grid');
+        if (!grid || !ccssGlossaryData || !ccssGlossaryData.terms) return;
+
+        let filtered = ccssGlossaryData.terms;
+
+        // Filter by letter
+        if (selectedGlossaryLetter !== 'ALL') {
+            filtered = filtered.filter(t => (t.letter || '').toUpperCase() === selectedGlossaryLetter);
+        }
+
+        // Filter by search query
+        if (currentGlossarySearch) {
+            filtered = filtered.filter(t => {
+                const termMatch = (t.term || '').toLowerCase().includes(currentGlossarySearch);
+                const defMatch = (t.definition || '').toLowerCase().includes(currentGlossarySearch);
+                const exMatch = (t.example || '').toLowerCase().includes(currentGlossarySearch);
+                const seeMatch = (t.seeAlso || '').toLowerCase().includes(currentGlossarySearch);
+                return termMatch || defMatch || exMatch || seeMatch;
+            });
+        }
+
+        if (filtered.length === 0) {
+            grid.innerHTML = `
+                <div class="curr-glossary-empty">
+                    <i class="fas fa-search"></i>
+                    <h4>No matching definitions found</h4>
+                    <p>Try searching for a different keyword or select another letter.</p>
+                </div>
+            `;
+            return;
+        }
+
+        let html = '';
+        filtered.forEach(item => {
+            html += `
+                <article class="curr-term-card" id="term-${encodeURIComponent(item.term.toLowerCase().replace(/\\s+/g, '-'))}">
+                    <div class="curr-term-header">
+                        <h4 class="curr-term-title">${escapeHtml(item.term)}</h4>
+                        <span class="curr-term-letter">${escapeHtml(item.letter || item.term[0].toUpperCase())}</span>
+                    </div>
+                    <div class="curr-term-def">
+                        ${item.definition}
+                    </div>
+                    ${item.example ? `
+                        <div class="curr-term-example">
+                            <span class="curr-term-example-label"><i class="fas fa-lightbulb"></i> Example:</span>
+                            <div class="curr-term-example-body">${item.example}</div>
+                        </div>
+                    ` : ''}
+                    ${item.seeAlso ? `
+                        <div class="curr-term-seealso">
+                            <span class="curr-term-seealso-label"><i class="fas fa-link"></i> See also:</span>
+                            <span class="curr-term-seealso-text">${escapeHtml(item.seeAlso)}</span>
+                        </div>
+                    ` : ''}
+                </article>
+            `;
+        });
+        grid.innerHTML = html;
+
+        // Typeset LaTeX / MathJax inside terms grid
+        if (typeof window.ensureMathJax === 'function') {
+            window.ensureMathJax().then(mj => {
+                if (mj && mj.typesetPromise) {
+                    mj.typesetPromise([grid]).catch(e => console.debug('Glossary MathJax:', e));
+                }
+            }).catch(e => console.debug('Glossary ensureMathJax:', e));
+        }
+    }
+
+    function switchGlossaryView(mode) {
+        activeGlossaryView = mode;
+        const termsBtn = document.getElementById('btn-view-terms');
+        const tablesBtn = document.getElementById('btn-view-tables');
+        const termsPane = document.getElementById('glossary-pane-terms');
+        const tablesPane = document.getElementById('glossary-pane-tables');
+
+        if (mode === 'terms') {
+            termsBtn?.classList.add('active');
+            termsBtn?.setAttribute('aria-selected', 'true');
+            tablesBtn?.classList.remove('active');
+            tablesBtn?.setAttribute('aria-selected', 'false');
+            if (termsPane) termsPane.style.display = 'block';
+            if (tablesPane) tablesPane.style.display = 'none';
+        } else {
+            tablesBtn?.classList.add('active');
+            tablesBtn?.setAttribute('aria-selected', 'true');
+            termsBtn?.classList.remove('active');
+            termsBtn?.setAttribute('aria-selected', 'false');
+            if (tablesPane) tablesPane.style.display = 'block';
+            if (termsPane) termsPane.style.display = 'none';
+            renderGlossaryTable(currentGlossaryTableNum);
+        }
+    }
+
+    function showGlossaryTable(num) {
+        currentGlossaryTableNum = num;
+        document.querySelectorAll('#glossary-tables-nav .curr-table-nav-pill').forEach((btn, idx) => {
+            btn.classList.toggle('active', idx + 1 === num);
+        });
+        renderGlossaryTable(num);
+    }
+
+    function renderGlossaryTable(num) {
+        const container = document.getElementById('glossary-active-table-box');
+        if (!container || !ccssGlossaryData || !ccssGlossaryData.tables) return;
+
+        const table = ccssGlossaryData.tables.find(t => t.number === num);
+        if (!table) return;
+
+        let tableHtml = `
+            <div class="curr-table-card">
+                <div class="curr-table-card-header">
+                    <span class="curr-table-pill">Table ${table.number}</span>
+                    <h4 class="curr-table-title">${escapeHtml(table.title)}</h4>
+                    <p class="curr-table-desc">${escapeHtml(table.description)}</p>
+                </div>
+                <div class="curr-table-responsive">
+                    <table class="curr-glossary-table">
+                        <thead>
+                            <tr>
+                                ${table.headers.map(h => `<th>${escapeHtml(h)}</th>`).join('')}
+                            </tr>
+                        </thead>
+                        <tbody>
+        `;
+
+        if (num === 1) {
+            table.rows.forEach(r => {
+                tableHtml += `
+                    <tr>
+                        <td class="curr-table-cell-lead"><strong>${escapeHtml(r.type)}</strong></td>
+                        <td>${r.resultUnknown}</td>
+                        <td>${r.changeUnknown}</td>
+                        <td>${r.startUnknown}</td>
+                    </tr>
+                `;
+            });
+        } else if (num === 2) {
+            table.rows.forEach(r => {
+                tableHtml += `
+                    <tr>
+                        <td class="curr-table-cell-lead"><strong>${escapeHtml(r.type)}</strong></td>
+                        <td>${r.unknownProduct}</td>
+                        <td>${r.groupSizeUnknown}</td>
+                        <td>${r.numGroupsUnknown}</td>
+                    </tr>
+                `;
+            });
+        } else if (num === 3) {
+            table.rows.forEach(r => {
+                tableHtml += `
+                    <tr>
+                        <td class="curr-table-cell-lead"><strong>${escapeHtml(r.property)}</strong></td>
+                        <td>${r.statement}</td>
+                    </tr>
+                `;
+            });
+        } else if (num === 4) {
+            table.rows.forEach(r => {
+                tableHtml += `
+                    <tr>
+                        <td class="curr-table-cell-lead"><strong>${escapeHtml(r.property)}</strong></td>
+                        <td>${r.statement}</td>
+                    </tr>
+                `;
+            });
+        } else if (num === 5) {
+            table.rows.forEach(r => {
+                tableHtml += `
+                    <tr>
+                        <td class="curr-table-cell-lead"><strong>${escapeHtml(r.property)}</strong></td>
+                        <td>${r.statement}</td>
+                    </tr>
+                `;
+            });
+        }
+
+        tableHtml += `
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        `;
+
+        container.innerHTML = tableHtml;
+
+        if (typeof window.ensureMathJax === 'function') {
+            window.ensureMathJax().then(mj => {
+                if (mj && mj.typesetPromise) {
+                    mj.typesetPromise([container]).catch(e => console.debug('Table MathJax:', e));
+                }
+            }).catch(e => console.debug('Table ensureMathJax:', e));
+        }
+    }
+
+    function openGlossaryModal() {
+        const modal = document.getElementById('ccss-glossary-modal');
+        if (!modal) return;
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+        loadCcssGlossary();
+    }
+
+    function closeGlossaryModal() {
+        const modal = document.getElementById('ccss-glossary-modal');
+        if (modal) modal.style.display = 'none';
+        document.body.style.overflow = '';
+    }
+
+    function updateGlossaryVisibility() {
+        const sideCard = document.getElementById('side-glossary-card');
+        const toolbarBtn = document.getElementById('btn-open-glossary');
+        const activeCurr = (window.currentSettings && window.currentSettings.curriculum) || 'engageny';
+        const isCcssOrEngage = (activeCurr === 'ccss' || activeCurr === 'engageny');
+        
+        const shouldShow = (currentSubject === 'math' || isCcssOrEngage);
+        if (sideCard) sideCard.style.display = shouldShow ? 'block' : 'none';
+        if (toolbarBtn) toolbarBtn.style.display = shouldShow ? 'inline-flex' : 'none';
+    }
+
     // Initialize Select Dropdown and Listeners
     function syncCurriculumSelect() {
         const select = document.getElementById('curriculum-select');
@@ -1751,6 +2137,7 @@
         if (toggleEl) {
             toggleEl.checked = showProgressOverlay;
         }
+        loadCcssGlossary();
         updateView();
 
         // Browser back/forward navigation support
@@ -1783,10 +2170,11 @@
             });
         }
 
-        // Escape key closes dossier modal or open grade drawer
+        // Escape key closes modals or open grade drawer
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
                 closeStandardDossier();
+                closeGlossaryModal();
                 closeAllGradeGroups();
             } else if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
                 e.preventDefault();

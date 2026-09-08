@@ -2155,6 +2155,549 @@
     }
   }
 
+  /* ==========================================================================
+     CCSS Mathematics Glossary & Reference Tables (Modal Popup)
+     ========================================================================== */
+  .curr-glossary-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    animation: currModalFadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  @keyframes currModalFadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .curr-glossary-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.72);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .curr-glossary-dialog {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 64rem;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    border-top: 4px solid #f59e0b;
+    border-radius: var(--radius-2xl);
+    box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.45);
+    overflow: hidden;
+    animation: currModalSlideUp 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  @keyframes currModalSlideUp {
+    from {
+      transform: translateY(20px) scale(0.97);
+    }
+    to {
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  .curr-glossary-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.25rem;
+    padding: 1.5rem 1.75rem 1.25rem 1.75rem;
+    border-bottom: 1px solid var(--color-border);
+    background: var(--color-bg-surface);
+    flex-shrink: 0;
+  }
+
+  .curr-glossary-title-wrap {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .curr-glossary-badge-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.35rem;
+  }
+
+  .curr-glossary-pdf-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.25rem 0.65rem;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: var(--radius-full);
+    background: color-mix(in srgb, #ef4444 12%, transparent);
+    color: #ef4444;
+    border: 1px solid color-mix(in srgb, #ef4444 25%, transparent);
+  }
+
+  .curr-glossary-modal-heading {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--color-text-main);
+    letter-spacing: -0.02em;
+    margin: 0.25rem 0 0.35rem 0;
+  }
+
+  .curr-glossary-desc {
+    font-size: 0.8125rem;
+    color: var(--color-text-muted);
+    line-height: 1.45;
+    margin: 0;
+  }
+
+  .curr-glossary-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+    flex-shrink: 0;
+  }
+
+  .curr-glossary-close-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    padding: 0;
+    background: var(--color-bg-base);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+    color: var(--color-text-muted);
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .curr-glossary-close-btn:hover {
+    color: var(--color-text-main);
+    border-color: #ef4444;
+    background: color-mix(in srgb, #ef4444 10%, transparent);
+  }
+
+  .curr-glossary-modal-body {
+    padding: 1.5rem 1.75rem;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    flex: 1;
+  }
+
+  .curr-glossary-view-switcher {
+    display: inline-flex;
+    padding: 0.25rem;
+    background: var(--color-bg-base);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    gap: 0.25rem;
+  }
+
+  .curr-glossary-toggle-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: var(--color-text-muted);
+    background: transparent;
+    border: none;
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+  }
+
+  .curr-glossary-toggle-btn:hover {
+    color: var(--color-text-main);
+  }
+
+  .curr-glossary-toggle-btn.active {
+    background: var(--color-bg-surface);
+    color: #f59e0b;
+    box-shadow: var(--shadow-sm);
+  }
+
+  /* Glossary Toolbar */
+  .curr-glossary-toolbar {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .curr-glossary-search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .curr-glossary-search-box input {
+    width: 100%;
+    padding: 0.75rem 2.5rem 0.75rem 2.5rem;
+    background-color: var(--color-bg-base);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    color: var(--color-text-main);
+    font-size: 0.875rem;
+    outline: none;
+    transition: all 0.2s ease;
+  }
+
+  .curr-glossary-search-box input:focus {
+    border-color: #f59e0b;
+    background-color: var(--color-bg-surface);
+    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.15);
+  }
+
+  .curr-glossary-search-icon {
+    position: absolute;
+    left: 1rem;
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+    pointer-events: none;
+  }
+
+  /* Letter Pills */
+  .curr-glossary-pills-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    align-items: center;
+  }
+
+  .curr-letter-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2rem;
+    height: 2rem;
+    padding: 0 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--color-text-muted);
+    background: var(--color-bg-base);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+
+  .curr-letter-pill:hover {
+    color: #f59e0b;
+    border-color: #f59e0b;
+    transform: translateY(-1px);
+  }
+
+  .curr-letter-pill.active {
+    background: #f59e0b;
+    color: #ffffff;
+    border-color: #f59e0b;
+    box-shadow: 0 2px 8px -1px rgba(245, 158, 11, 0.35);
+  }
+
+  /* Terms Grid & Cards */
+  .curr-glossary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1rem;
+  }
+
+  .curr-term-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+    background: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    transition: all 0.2s ease;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .curr-term-card:hover {
+    border-color: color-mix(in srgb, #f59e0b 60%, var(--color-border));
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .curr-term-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 0.65rem;
+  }
+
+  .curr-term-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+    line-height: 1.3;
+    margin: 0;
+  }
+
+  .curr-term-letter {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: var(--radius-md);
+    background: color-mix(in srgb, #f59e0b 15%, transparent);
+    color: #d97706;
+    font-size: 0.75rem;
+    font-weight: 800;
+    flex-shrink: 0;
+  }
+
+  .curr-term-def {
+    font-size: 0.875rem;
+    color: var(--color-text-main);
+    line-height: 1.55;
+    flex: 1;
+  }
+
+  .curr-term-example {
+    margin-top: 0.85rem;
+    padding: 0.65rem 0.85rem;
+    background: var(--color-bg-base);
+    border-left: 3px solid #f59e0b;
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    font-size: 0.8125rem;
+  }
+
+  .curr-term-example-label {
+    display: block;
+    font-weight: 700;
+    color: #d97706;
+    margin-bottom: 0.25rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .curr-term-example-body {
+    color: var(--color-text-main);
+    line-height: 1.5;
+  }
+
+  .curr-term-seealso {
+    margin-top: 0.75rem;
+    padding-top: 0.65rem;
+    border-top: 1px dashed var(--color-border);
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+  }
+
+  .curr-term-seealso-label {
+    font-weight: 700;
+    color: var(--color-text-muted);
+    margin-right: 0.35rem;
+  }
+
+  .curr-term-seealso-text {
+    color: var(--color-primary);
+    font-weight: 600;
+  }
+
+  /* Empty state */
+  .curr-glossary-empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 3rem 1.5rem;
+    background: var(--color-bg-base);
+    border-radius: var(--radius-lg);
+    border: 1px dashed var(--color-border);
+    color: var(--color-text-muted);
+  }
+
+  .curr-glossary-empty i {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+    opacity: 0.6;
+  }
+
+  .curr-glossary-empty h4 {
+    font-size: 1.05rem;
+    color: var(--color-text-main);
+    margin-bottom: 0.35rem;
+  }
+
+  .curr-glossary-loading {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 2.5rem;
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+  }
+
+  /* Tables View Navigation & Display */
+  .curr-glossary-tables-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .curr-table-nav-pill {
+    padding: 0.55rem 1rem;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: var(--color-text-muted);
+    background: var(--color-bg-base);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .curr-table-nav-pill:hover {
+    color: #f59e0b;
+    border-color: #f59e0b;
+  }
+
+  .curr-table-nav-pill.active {
+    background: #f59e0b;
+    color: #ffffff;
+    border-color: #f59e0b;
+    box-shadow: 0 2px 10px -2px rgba(245, 158, 11, 0.4);
+  }
+
+  .curr-table-card {
+    background: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .curr-table-card-header {
+    margin-bottom: 1.25rem;
+  }
+
+  .curr-table-pill {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    background: color-mix(in srgb, #f59e0b 15%, transparent);
+    color: #d97706;
+    border-radius: var(--radius-full);
+    font-size: 0.6875rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+  }
+
+  .curr-table-title {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--color-text-main);
+    margin-bottom: 0.35rem;
+  }
+
+  .curr-table-desc {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+  }
+
+  .curr-table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+  }
+
+  .curr-glossary-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+    text-align: left;
+  }
+
+  .curr-glossary-table th {
+    background: var(--color-bg-base);
+    color: var(--color-text-main);
+    font-weight: 700;
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid var(--color-border);
+    white-space: nowrap;
+  }
+
+  .curr-glossary-table td {
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid var(--color-border);
+    color: var(--color-text-main);
+    vertical-align: top;
+    line-height: 1.5;
+  }
+
+  .curr-glossary-table tr:last-child td {
+    border-bottom: none;
+  }
+
+  .curr-glossary-table tr:hover td {
+    background: color-mix(in srgb, var(--color-primary) 4%, transparent);
+  }
+
+  .curr-table-cell-lead {
+    background: color-mix(in srgb, var(--color-bg-base) 60%, transparent);
+    font-weight: 700;
+    color: var(--color-text-main);
+    white-space: nowrap;
+  }
+
+  /* Sidebar Quick Jump Card */
+  .curr-glossary-side-card {
+    border-top: 3px solid #f59e0b;
+  }
+
+  .curr-btn-glossary-jump {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin-top: 0.75rem;
+    background: color-mix(in srgb, #f59e0b 12%, transparent);
+    color: #d97706;
+    border: 1px solid color-mix(in srgb, #f59e0b 30%, transparent);
+    border-radius: var(--radius-lg);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .curr-btn-glossary-jump:hover {
+    background: #f59e0b;
+    color: #ffffff;
+    border-color: #f59e0b;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px -2px rgba(245, 158, 11, 0.35);
+  }
+
   /* Suppress MathJax Context Menu and Info Popups */
   .CtxtMenu_MenuFrame,
   .CtxtMenu_Info,
