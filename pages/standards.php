@@ -6,7 +6,7 @@
   
   include '../src/header.php';
   ?>
-  <link rel="stylesheet" href="/assets/css/pages/curriculum.css">
+  <link rel="stylesheet" href="<?= function_exists('assetVersion') ? assetVersion('/assets/css/pages/standards.css') : '/assets/css/pages/standards.css' ?>">
   <?php
   // include 'assets/js/standards-ccss-math-ela.js';
   // include 'assets/js/curriculum-teks.js';
