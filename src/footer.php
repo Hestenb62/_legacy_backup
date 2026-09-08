@@ -143,6 +143,10 @@
 <script src="/assets/js/global-standard.js"></script>
 
 <!-- Google API Scripts for Global Auto-Sync -->
-<script async defer src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
-<script async defer src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script>
+<script>
+    window.gapiLoaded = window.gapiLoaded || function() { window._gapiLoaded = true; };
+    window.gisLoaded = window.gisLoaded || function() { window._gisLoaded = true; };
+</script>
 <script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/gdrive-sync.js') : '/assets/js/gdrive-sync.js' ?>"></script>
+<script async defer src="https://apis.google.com/js/api.js" onload="if (typeof window.gapiLoaded === 'function') { window.gapiLoaded(); } else { window._gapiLoaded = true; }"></script>
+<script async defer src="https://accounts.google.com/gsi/client" onload="if (typeof window.gisLoaded === 'function') { window.gisLoaded(); } else { window._gisLoaded = true; }"></script>

@@ -43,6 +43,14 @@ function gisLoaded() {
 }
 window.gisLoaded = gisLoaded;
 
+// If Google API scripts finished loading before gdrive-sync.js ran, process them now
+if (window._gapiLoaded) {
+    gapiLoaded();
+}
+if (window._gisLoaded) {
+    gisLoaded();
+}
+
 // 3. Status UI Management
 function updateSyncStatus(text, state) {
     const statusEl = document.getElementById('gdrive-sync-status');
