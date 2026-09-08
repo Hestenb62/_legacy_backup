@@ -16,7 +16,11 @@
                 if (!target[key]) target[key] = {};
                 mergeCurriculumData(target[key], source[key]);
             } else {
-                target[key] = source[key];
+                if ((key === 'standards' || key === 'overview') && Array.isArray(source[key])) {
+                    target[key] = source[key].join('\n');
+                } else {
+                    target[key] = source[key];
+                }
             }
         }
     }

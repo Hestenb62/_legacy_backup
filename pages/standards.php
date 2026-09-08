@@ -699,7 +699,8 @@
             
             // Format and Inject Standards with Copy Badges
             const standardsContainer = document.getElementById('view-standards');
-            standardsContainer.innerHTML = gradeData.standards || '<p>Standards data coming soon.</p>';
+            const rawStandards = Array.isArray(gradeData.standards) ? gradeData.standards.join('\n') : gradeData.standards;
+            standardsContainer.innerHTML = rawStandards || '<p>Standards data coming soon.</p>';
             
             // Process standard items: add copy badges, wrap in accordion cards, and assign domain tags
             const standardItems = standardsContainer.querySelectorAll('.curr-standard-item');
@@ -1002,7 +1003,7 @@
                         const resolved = (gVal.ccss || gVal.teks || gVal);
                         if (resolved && resolved.standards) {
                             const tempDiv = document.createElement('div');
-                            tempDiv.innerHTML = resolved.standards;
+                            tempDiv.innerHTML = Array.isArray(resolved.standards) ? resolved.standards.join('\n') : resolved.standards;
                             let count = 0;
                             tempDiv.querySelectorAll('.curr-standard-desc, .curr-standard-title').forEach(el => {
                                 if (el.innerText.toLowerCase().includes(query)) count++;
