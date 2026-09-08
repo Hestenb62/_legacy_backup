@@ -28,7 +28,13 @@ $currentUser = getCurrentUser();
 
 // Helper to append dynamic filemtime for automatic cache busting
 if (!function_exists('assetVersion')) {
-    function assetVersion($relPath) {
+    /**
+     * Appends dynamic filemtime for automatic cache busting.
+     *
+     * @param string $relPath Relative path to the asset.
+     * @return string Versioned asset URL path.
+     */
+    function assetVersion(string $relPath): string {
         $cleanPath = ltrim(explode('?', $relPath)[0], '/');
         $fullPath = rtrim(ABSPATH, '/\\') . DIRECTORY_SEPARATOR . str_replace('/', DIRECTORY_SEPARATOR, $cleanPath);
         if (file_exists($fullPath)) {
