@@ -101,8 +101,8 @@
                 <span class="curr-select-label">Curriculum:</span>
                 <select id="curriculum-select" onchange="updateGlobalSetting('curriculum', this.value)" 
                     class="curr-select" aria-label="Select curriculum framework">
-                    <option value="engageny">Common Core / EngageNY</option>
-                    <option value="teks">Texas TEKS</option>
+                    <option value="engageny">CCSS / EngageNY</option>
+                    <!-- <option value="teks">Texas TEKS</option> -->
                 </select>
                 <i class="fas fa-chevron-down curr-select-chevron"></i>
             </div>
