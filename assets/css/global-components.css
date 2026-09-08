@@ -57,3 +57,27 @@
     cursor: pointer;
   }
 }
+
+/* Site-wide MathJax Dialog & Expression Explorer Suppression */
+mjx-dialog,
+.mjx-dialog,
+.mjx-dialog-container,
+[id^="mjx-dialog"],
+[aria-labelledby*="mjx-dialog"],
+.CtxtMenu_MenuFrame,
+.CtxtMenu_Info,
+.CtxtMenu_overlay,
+.MathJax_Menu,
+.MathJax_About,
+.MathJax_Zoom {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  opacity: 0 !important;
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}

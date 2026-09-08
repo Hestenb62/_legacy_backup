@@ -97,8 +97,39 @@ if (!function_exists('assetVersion')) {
                 inlineMath: [['$', '$'], ['\\(', '\\)']],
                 displayMath: [['$$', '$$'], ['\\[', '\\]']]
             },
+            options: {
+                enableMenu: false,          // Disables right-click context menu
+                enableExplorer: false,      // Disables Expression Explorer
+                enableExplorerHelp: false,  // Disables Expression Explorer Help popup
+                enableSpeech: false,        // Disables Speech generator
+                enableBraille: false,       // Disables Braille generator
+                enableComplexity: false,    // Disables Complexity analysis
+                enableEnrichment: false     // Disables a11y semantic enrichment
+            },
             svg: { fontCache: 'global' }
         };
+
+        // Site-wide safety remover for any MathJax dialog or Expression Explorer elements
+        (function() {
+            const removeMathJaxDialogs = () => {
+                document.querySelectorAll('mjx-dialog, .mjx-dialog, [id*="mjx-dialog"], [aria-labelledby*="mjx-dialog"]').forEach(el => el.remove());
+            };
+            if (window.MutationObserver) {
+                new MutationObserver(mutations => {
+                    for (const m of mutations) {
+                        for (const node of m.addedNodes) {
+                            if (node.nodeType === 1) {
+                                if (node.matches && node.matches('mjx-dialog, .mjx-dialog, [id*="mjx-dialog"], [aria-labelledby*="mjx-dialog"]')) {
+                                    node.remove();
+                                } else if (node.querySelector) {
+                                    node.querySelectorAll('mjx-dialog, .mjx-dialog, [id*="mjx-dialog"], [aria-labelledby*="mjx-dialog"]').forEach(el => el.remove());
+                                }
+                            }
+                        }
+                    }
+                }).observe(document.documentElement, { childList: true, subtree: true });
+            }
+        })();
 
         window.ensureMathJax = function() {
             return new Promise((resolve, reject) => {

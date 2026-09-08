@@ -2048,4 +2048,16 @@
       break-inside: avoid;
     }
   }
+
+  /* Suppress MathJax Context Menu and Info Popups */
+  .CtxtMenu_MenuFrame,
+  .CtxtMenu_Info,
+  .CtxtMenu_overlay,
+  .MathJax_Menu,
+  .MathJax_About,
+  .MathJax_Zoom {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
 }
