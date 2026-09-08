@@ -2,6 +2,7 @@
   // Define page-specific variables for the header
   $pageTitle = 'Standards & Outlines | Hesten\'s Learning';
   $pageDescription = 'In-depth curriculum outlines and standards alignment for Math, ELA, Science, and Social Studies across all grade levels.';
+  $requiresMathJax = true;
   
   include '../src/header.php';
   ?>
@@ -875,6 +876,15 @@
             applyStandardsFilters();
             view.style.opacity = '1';
             view.style.transform = 'translateY(0)';
+
+            // Render MathJax equations if present
+            if (typeof window.ensureMathJax === 'function') {
+                window.ensureMathJax().then(mj => {
+                    if (mj && mj.typesetPromise) {
+                        mj.typesetPromise([standardsContainer]).catch(err => console.debug('MathJax typeset:', err));
+                    }
+                }).catch(e => console.debug('MathJax ensure:', e));
+            }
         }, 200);
     }
 
