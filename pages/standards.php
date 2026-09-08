@@ -766,6 +766,15 @@
                     bodyDiv.className = 'curr-accordion-body';
                     bodyNodes.forEach(node => bodyDiv.appendChild(node));
 
+                    // Disclaimer at the bottom of every CCSS standard expander
+                    if (resolvedCurr === 'ccss') {
+                        const disclaimerDiv = document.createElement('div');
+                        disclaimerDiv.className = 'curr-standard-disclaimer';
+                        const subjectName = (currentSubject === 'math') ? 'MATHEMATICS' : ((subject && subject.name) ? subject.name.toUpperCase() : 'MATHEMATICS');
+                        disclaimerDiv.innerHTML = `<i class="fas fa-bookmark mr-1"></i> From the "Common Core State Standards for ${subjectName}"`;
+                        bodyDiv.appendChild(disclaimerDiv);
+                    }
+
                     titleEl.remove();
                     item.appendChild(headerDiv);
                     item.appendChild(bodyDiv);

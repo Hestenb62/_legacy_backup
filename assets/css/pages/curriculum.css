@@ -1333,6 +1333,33 @@
     border-color: var(--color-border);
   }
 
+  .curr-standard-disclaimer {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px dashed var(--color-border);
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    letter-spacing: 0.025em;
+    opacity: 0.85;
+    user-select: none;
+    transition: opacity 0.2s ease, color 0.2s ease;
+  }
+
+  .curr-standard-disclaimer i {
+    color: var(--color-primary);
+    font-size: 0.82rem;
+    flex-shrink: 0;
+  }
+
+  .curr-standard-disclaimer:hover {
+    opacity: 1;
+    color: var(--color-primary);
+  }
+
   /* Toast Notification */
   .std-copy-toast {
     position: fixed;
