@@ -136,16 +136,31 @@
                         <button type="button" class="curr-btn-print" onclick="window.print()" title="Print Standards Guide">
                             <i class="fas fa-print"></i> Print Guide
                         </button>
-                        <div class="curr-export-dropdown" id="curr-export-dropdown">
-                            <button type="button" class="curr-btn-export" onclick="toggleExportMenu(event)" title="Export standards data">
+                        <div class="curr-export-dropdown" id="curr-header-export-dropdown">
+                            <button type="button" id="btn-header-export" class="curr-btn-export" onclick="toggleExportMenu(event)" title="Export standards in TXT, CSV, or JSON format" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-file-export"></i> Export <i class="fas fa-caret-down curr-caret"></i>
                             </button>
-                            <div class="curr-export-menu" id="curr-export-menu">
-                                <button type="button" class="curr-export-item" onclick="exportStandardsCSV()">
-                                    <i class="fas fa-file-csv"></i> Export as CSV
+                            <div class="curr-export-menu" id="curr-header-export-menu" role="menu">
+                                <button type="button" class="curr-export-item" onclick="exportStandardsAsTxt()" role="menuitem">
+                                    <i class="fas fa-file-lines" style="color: #10b981;"></i>
+                                    <div class="curr-export-info">
+                                        <span class="curr-export-title">Plain Text (.txt)</span>
+                                        <span class="curr-export-sub">Formatted outline with domains & equations</span>
+                                    </div>
                                 </button>
-                                <button type="button" class="curr-export-item" onclick="exportStandardsJSON()">
-                                    <i class="fas fa-file-code"></i> Export as JSON
+                                <button type="button" class="curr-export-item" onclick="exportStandardsCSV()" role="menuitem">
+                                    <i class="fas fa-file-csv" style="color: #3b82f6;"></i>
+                                    <div class="curr-export-info">
+                                        <span class="curr-export-title">Spreadsheet (.csv)</span>
+                                        <span class="curr-export-sub">Structured table with codes & descriptions</span>
+                                    </div>
+                                </button>
+                                <button type="button" class="curr-export-item" onclick="exportStandardsJSON()" role="menuitem">
+                                    <i class="fas fa-file-code" style="color: #f59e0b;"></i>
+                                    <div class="curr-export-info">
+                                        <span class="curr-export-title">Raw Data (.json)</span>
+                                        <span class="curr-export-sub">Full JSON schema with competencies</span>
+                                    </div>
                                 </button>
                             </div>
                         </div>
@@ -314,6 +329,36 @@
                                     <button type="button" id="btn-toggle-accordions" class="curr-btn-accordion-toggle" onclick="toggleAllAccordions()" title="Expand or collapse all domain sections">
                                         <i class="fas fa-compress-alt"></i> <span id="toggle-accordions-text">Collapse All</span>
                                     </button>
+                                    <div class="curr-export-dropdown-wrap">
+                                        <button type="button" id="btn-export-dropdown" class="curr-btn-export-trigger" onclick="toggleExportMenu(event)" aria-haspopup="true" aria-expanded="false" title="Export standards in TXT, CSV, or JSON format">
+                                            <i class="fas fa-file-export"></i>
+                                            <span>Export</span>
+                                            <i class="fas fa-chevron-down curr-export-arrow"></i>
+                                        </button>
+                                        <div id="curr-export-menu" class="curr-export-menu" role="menu">
+                                            <button type="button" class="curr-export-item" onclick="exportStandardsAsTxt()" role="menuitem">
+                                                <i class="fas fa-file-lines" style="color: #10b981;"></i>
+                                                <div class="curr-export-info">
+                                                    <span class="curr-export-title">Plain Text (.txt)</span>
+                                                    <span class="curr-export-sub">Formatted outline with domains & equations</span>
+                                                </div>
+                                            </button>
+                                            <button type="button" class="curr-export-item" onclick="exportStandardsCSV()" role="menuitem">
+                                                <i class="fas fa-file-csv" style="color: #3b82f6;"></i>
+                                                <div class="curr-export-info">
+                                                    <span class="curr-export-title">Spreadsheet (.csv)</span>
+                                                    <span class="curr-export-sub">Structured table with codes & descriptions</span>
+                                                </div>
+                                            </button>
+                                            <button type="button" class="curr-export-item" onclick="exportStandardsJSON()" role="menuitem">
+                                                <i class="fas fa-file-code" style="color: #f59e0b;"></i>
+                                                <div class="curr-export-info">
+                                                    <span class="curr-export-title">Raw Data (.json)</span>
+                                                    <span class="curr-export-sub">Full JSON schema with competencies</span>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="curr-domain-filters" id="domain-filters-bar">
@@ -458,9 +503,8 @@
 </main>
 
 <script src="/assets/js/standards-ccss-math-ela.js"></script>
-<!-- 
 <script src="/assets/js/curriculum-teks.js"></script>
--->
+
 <script>
     let currentSubject = 'math';
     let currentGrade = 'Kindergarten';
@@ -1216,11 +1260,31 @@
         }
     }
 
-    // Data Export Functionality (CSV & JSON)
+    // Data Export Functionality (TXT, CSV, & JSON)
+    function closeAllExportMenus() {
+        document.querySelectorAll('.curr-export-menu').forEach(m => m.classList.remove('show'));
+        document.querySelectorAll('.curr-btn-export, .curr-btn-export-trigger').forEach(b => {
+            b.setAttribute('aria-expanded', 'false');
+            b.classList.remove('active');
+        });
+    }
+
     function toggleExportMenu(e) {
         if (e) e.stopPropagation();
-        const menu = document.getElementById('curr-export-menu');
-        menu?.classList.toggle('show');
+        const container = e?.currentTarget?.closest('.curr-export-dropdown, .curr-export-dropdown-wrap');
+        const menu = container ? container.querySelector('.curr-export-menu') : document.getElementById('curr-export-menu');
+        const btn = e?.currentTarget || document.getElementById('btn-export-dropdown');
+        const wasOpen = menu?.classList.contains('show');
+
+        closeAllExportMenus();
+
+        if (!wasOpen && menu) {
+            menu.classList.add('show');
+            if (btn) {
+                btn.setAttribute('aria-expanded', 'true');
+                btn.classList.add('active');
+            }
+        }
     }
 
     function csvEscape(val) {
@@ -1271,7 +1335,7 @@
         const blob = new Blob(['\uFEFF' + csvString], { type: 'text/csv;charset=utf-8;' });
         const cleanGrade = currentGrade.toLowerCase().replace(/\s+/g, '-');
         downloadFile(blob, `standards-${currentSubject}-${cleanGrade}.csv`);
-        document.getElementById('curr-export-menu')?.classList.remove('show');
+        closeAllExportMenus();
     }
 
     function exportStandardsJSON() {
@@ -1317,8 +1381,141 @@
         const blob = new Blob([jsonString], { type: 'application/json;charset=utf-8;' });
         const cleanGrade = currentGrade.toLowerCase().replace(/\s+/g, '-');
         downloadFile(blob, `standards-${currentSubject}-${cleanGrade}.json`);
-        document.getElementById('curr-export-menu')?.classList.remove('show');
+        closeAllExportMenus();
     }
+
+    // Export Standards as Human-Readable Text File (.txt)
+    function exportStandardsAsTxt() {
+        const levelCode = document.getElementById('stat-level-code')?.innerText || '';
+        const subjectName = subjectsMap[currentSubject]?.name || currentSubject.toUpperCase();
+        const overview = document.getElementById('view-overview')?.innerText || '';
+        const competencies = Array.from(document.querySelectorAll('#view-competencies .curr-comp-text')).map(el => el.innerText.trim());
+        const practices = Array.from(document.querySelectorAll('#view-practices .curr-comp-text')).map(el => el.innerText.trim());
+
+        const activeCurr = (window.currentSettings && window.currentSettings.curriculum) || 'engageny';
+        const resolvedCurr = (activeCurr === 'engageny') ? 'ccss' : activeCurr;
+        const currFrameworkName = (resolvedCurr === 'ccss') ? 'Common Core State Standards (CCSS)' : (resolvedCurr === 'teks' ? 'Texas Essential Knowledge and Skills (TEKS)' : "Hesten's Custom Curriculum");
+
+        const divider = '='.repeat(80);
+        const subDivider = '-'.repeat(80);
+
+        let lines = [];
+        lines.push(divider);
+        lines.push("HESTEN'S LEARNING - CURRICULUM STANDARDS OUTLINE");
+        lines.push(divider);
+        lines.push(`Subject:             ${subjectName}`);
+        lines.push(`Grade Level:         ${currentGrade} (${levelCode})`);
+        lines.push(`Framework:           ${currFrameworkName}`);
+        lines.push(`Exported On:         ${new Date().toLocaleString()}`);
+        lines.push(`Source URL:          https://hestenslearning.com/pages/standards.php`);
+        lines.push(divider);
+        lines.push('');
+
+        // Overview Section
+        if (overview) {
+            lines.push(subDivider);
+            lines.push('CURRICULUM OVERVIEW');
+            lines.push(subDivider);
+            lines.push(overview);
+            lines.push('');
+        }
+
+        // Key Competencies Section
+        if (competencies.length > 0) {
+            lines.push(subDivider);
+            lines.push('KEY COMPETENCIES');
+            lines.push(subDivider);
+            competencies.forEach((comp, idx) => {
+                lines.push(`  [${idx + 1}] ${comp}`);
+            });
+            lines.push('');
+        }
+
+        // Mathematical Practices (if present)
+        if (practices.length > 0) {
+            lines.push(subDivider);
+            lines.push('STANDARDS FOR MATHEMATICAL PRACTICE');
+            lines.push(subDivider);
+            practices.forEach((prac, idx) => {
+                lines.push(`  MP.${idx + 1}: ${prac}`);
+            });
+            lines.push('');
+        }
+
+        // Standards Alignment Section
+        lines.push(subDivider);
+        lines.push('STANDARDS ALIGNMENT BY DOMAIN');
+        lines.push(subDivider);
+
+        const items = document.querySelectorAll('#view-standards .curr-standard-item');
+        let domainIndex = 1;
+        let totalStandardsExported = 0;
+
+        items.forEach(item => {
+            if (item.style.display === 'none') return; // Skip if filtered out
+
+            const domain = item.dataset.domain || item.querySelector('.curr-standard-title')?.innerText || 'General Domain';
+            lines.push('');
+            lines.push(`[DOMAIN ${domainIndex++}] ${domain.toUpperCase()}`);
+            lines.push('~'.repeat(Math.min(80, domain.length + 12)));
+
+            const descs = item.querySelectorAll('.curr-standard-desc');
+            if (descs.length > 0) {
+                descs.forEach(p => {
+                    if (p.style.display === 'none') return; // Skip if search query excluded it
+
+                    const badge = p.querySelector('.std-code-badge');
+                    const code = badge ? (badge.dataset.code || badge.innerText.trim()) : '';
+
+                    const clone = p.cloneNode(true);
+                    clone.querySelectorAll('.std-action-btn, .std-code-badge, .std-info-btn, .std-progress-badge').forEach(el => el.remove());
+                    let descText = clone.innerText.replace(/^\s*[:\-–]\s*/, '').trim();
+
+                    // Format LaTeX / MathJax markers into readable plain text
+                    descText = descText
+                        .replace(/\\times/g, '×')
+                        .replace(/\\div/g, '÷')
+                        .replace(/\\pi/g, 'π')
+                        .replace(/\\sqrt\{([^}]+)\}/g, '√($1)')
+                        .replace(/\\frac\{([^}]+)\}\{([^}]+)\}/g, '($1/$2)')
+                        .replace(/\$([^$]+)\$/g, '$1');
+
+                    if (code) {
+                        lines.push(`  • [${code}]`);
+                        lines.push(`    ${descText}`);
+                    } else {
+                        lines.push(`  • ${descText}`);
+                    }
+                    totalStandardsExported++;
+                });
+            } else {
+                lines.push(`  • ${item.innerText.trim()}`);
+                totalStandardsExported++;
+            }
+        });
+
+        lines.push('');
+        lines.push(divider);
+        if (resolvedCurr === 'ccss') {
+            lines.push(`Attribution: From the "Common Core State Standards for ${subjectName === 'Mathematics' ? 'MATHEMATICS' : subjectName.toUpperCase()}"`);
+        }
+        lines.push(`Total Standards Exported: ${totalStandardsExported}`);
+        lines.push("Generated by Hesten's Learning Platform");
+        lines.push(divider);
+
+        const txtContent = lines.join('\r\n');
+        const blob = new Blob([txtContent], { type: 'text/plain;charset=utf-8;' });
+        const cleanGrade = currentGrade.toLowerCase().replace(/\s+/g, '-');
+        downloadFile(blob, `standards-${currentSubject}-${cleanGrade}.txt`);
+        closeAllExportMenus();
+    }
+
+    // Global listener to dismiss export dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.curr-export-dropdown, .curr-export-dropdown-wrap')) {
+            closeAllExportMenus();
+        }
+    });
 
     function downloadFile(blob, filename) {
         const url = URL.createObjectURL(blob);

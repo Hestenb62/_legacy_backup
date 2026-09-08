@@ -360,11 +360,12 @@
     white-space: nowrap;
   }
 
-  .curr-btn-export:hover {
+  .curr-btn-export:hover,
+  .curr-btn-export.active {
     background-color: var(--color-bg-base);
     border-color: var(--color-primary);
     color: var(--color-primary);
-    transform: translateY(-2px);
+    transform: translateY(-1px);
     box-shadow: var(--shadow-md);
   }
 
@@ -374,7 +375,8 @@
     transition: transform 0.2s ease;
   }
 
-  .curr-export-dropdown:hover .curr-caret {
+  .curr-btn-export:hover .curr-caret,
+  .curr-btn-export.active .curr-caret {
     transform: rotate(180deg);
   }
 
@@ -382,21 +384,22 @@
     position: absolute;
     top: calc(100% + 0.5rem);
     right: 0;
-    z-index: 50;
-    min-width: 12.5rem;
+    z-index: 100;
+    min-width: 17.5rem;
     background-color: var(--color-bg-surface);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-xl);
-    box-shadow: var(--shadow-xl);
-    padding: 0.5rem;
+    box-shadow: 0 16px 36px -4px rgba(0, 0, 0, 0.25);
+    padding: 0.4rem;
     display: none;
     flex-direction: column;
     gap: 0.25rem;
-    animation: rise-in 0.2s ease-out forwards;
+    backdrop-filter: blur(12px);
   }
 
   .curr-export-menu.show {
     display: flex;
+    animation: rise-in 0.18s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   }
 
   .curr-export-item {
@@ -404,7 +407,7 @@
     align-items: center;
     gap: 0.75rem;
     width: 100%;
-    padding: 0.625rem 0.875rem;
+    padding: 0.65rem 0.85rem;
     border-radius: var(--radius-lg);
     border: none;
     background: transparent;
@@ -413,18 +416,43 @@
     font-weight: 600;
     cursor: pointer;
     text-align: left;
-    transition: background-color 0.15s ease, color 0.15s ease;
+    transition: background-color 0.15s ease, color 0.15s ease, transform 0.1s ease;
   }
 
   .curr-export-item i {
-    font-size: 0.875rem;
-    color: var(--color-primary);
-    width: 1rem;
+    font-size: 1.15rem;
+    width: 1.5rem;
     text-align: center;
+    flex-shrink: 0;
+  }
+
+  .curr-export-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .curr-export-title {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+    line-height: 1.25;
+  }
+
+  .curr-export-sub {
+    font-size: 0.7188rem;
+    color: var(--color-text-muted);
+    line-height: 1.25;
+    font-weight: 400;
   }
 
   .curr-export-item:hover {
     background-color: color-mix(in srgb, var(--color-primary) 10%, transparent);
+  }
+
+  .curr-export-item:hover .curr-export-title {
     color: var(--color-primary);
   }
 
@@ -1061,6 +1089,56 @@
 
   .curr-btn-accordion-toggle i {
     font-size: 0.75rem;
+    color: var(--color-primary);
+  }
+
+  /* Export Dropdown in Filters Toolbar */
+  .curr-export-dropdown-wrap {
+    position: relative;
+    display: inline-flex;
+    flex-shrink: 0;
+  }
+
+  .curr-btn-export-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--color-border);
+    background-color: var(--color-bg-surface);
+    color: var(--color-text-main);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .curr-btn-export-trigger i.fa-file-export {
+    font-size: 0.8125rem;
+    color: var(--color-primary);
+  }
+
+  .curr-export-arrow {
+    font-size: 0.6875rem;
+    color: var(--color-text-muted);
+    transition: transform 0.2s ease, color 0.2s ease;
+    margin-left: 0.15rem;
+  }
+
+  .curr-btn-export-trigger:hover,
+  .curr-btn-export-trigger.active {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    background-color: var(--color-bg-base);
+    box-shadow: var(--shadow-md);
+  }
+
+  .curr-btn-export-trigger.active .curr-export-arrow,
+  .curr-btn-export-trigger:hover .curr-export-arrow {
+    transform: rotate(180deg);
     color: var(--color-primary);
   }
 
@@ -1981,6 +2059,7 @@
     .std-copy-toast,
     .std-code-badge i,
     .curr-export-dropdown,
+    .curr-export-dropdown-wrap,
     .curr-btn-accordion-toggle,
     .curr-accordion-chevron,
     .curr-accordion-count,
