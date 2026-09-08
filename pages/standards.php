@@ -28,6 +28,48 @@
     ['name' => '12th Grade', 'level' => 'N', 'color' => 'slate'],
   ];
 
+  // Define expandable grade groups
+  $gradeGroups = [
+    'elementary' => [
+      'id' => 'elementary',
+      'name' => 'Grade School',
+      'subtitle' => 'Pre-K – 5th Grade',
+      'icon' => 'fa-shapes',
+      'grades' => [
+        ['name' => 'Pre-K', 'level' => 'A'],
+        ['name' => 'Kindergarten', 'level' => 'B'],
+        ['name' => '1st Grade', 'level' => 'C'],
+        ['name' => '2nd Grade', 'level' => 'D'],
+        ['name' => '3rd Grade', 'level' => 'E'],
+        ['name' => '4th Grade', 'level' => 'F'],
+        ['name' => '5th Grade', 'level' => 'G'],
+      ]
+    ],
+    'middle' => [
+      'id' => 'middle',
+      'name' => 'Middle School',
+      'subtitle' => '6th – 8th Grade',
+      'icon' => 'fa-school',
+      'grades' => [
+        ['name' => '6th Grade', 'level' => 'H'],
+        ['name' => '7th Grade', 'level' => 'I'],
+        ['name' => '8th Grade', 'level' => 'J'],
+      ]
+    ],
+    'high' => [
+      'id' => 'high',
+      'name' => 'High School',
+      'subtitle' => '9th – 12th Grade',
+      'icon' => 'fa-graduation-cap',
+      'grades' => [
+        ['name' => '9th Grade', 'level' => 'K'],
+        ['name' => '10th Grade', 'level' => 'L'],
+        ['name' => '11th Grade', 'level' => 'M'],
+        ['name' => '12th Grade', 'level' => 'N'],
+      ]
+    ]
+  ];
+
   $subjects = [
     'math' => ['name' => 'Mathematics', 'icon' => 'fa-calculator', 'color' => 'indigo'],
     'ela' => ['name' => 'Language Arts', 'icon' => 'fa-book-open', 'color' => 'rose'],
@@ -36,7 +78,7 @@
   ];
 ?>
 
-<!-- Subject Navigation (Sticky) -->
+<!-- Subject Navigation (Sticky Frosted Glass) -->
 <div class="curr-nav-container">
     <div class="curr-nav-inner">
         <div class="curr-nav-flex">
@@ -44,22 +86,25 @@
                 <?php foreach ($subjects as $id => $subj): ?>
                 <button onclick="switchSubject('<?php echo $id; ?>')" id="tab-<?php echo $id; ?>"
                     class="curr-tab-btn <?php echo ($id === 'math') ? 'active tab-color-' . $subj['color'] : ''; ?>"
+                    data-subject="<?php echo $id; ?>"
                     data-color="<?php echo $subj['color']; ?>"
                     role="tab" aria-selected="<?php echo ($id === 'math') ? 'true' : 'false'; ?>">
-                    <i class="fas <?php echo $subj['icon']; ?> curr-tab-icon"></i>
-                    <?php echo strtoupper($subj['name']); ?>
+                    <span class="curr-tab-icon-wrap"><i class="fas <?php echo $subj['icon']; ?>"></i></span>
+                    <span class="curr-tab-label"><?php echo strtoupper($subj['name']); ?></span>
                 </button>
                 <?php endforeach; ?>
             </div>
 
             <!-- Curriculum Selector -->
             <div class="curr-select-container">
+                <span class="curr-select-icon"><i class="fas fa-layer-group"></i></span>
                 <span class="curr-select-label">Curriculum:</span>
                 <select id="curriculum-select" onchange="updateGlobalSetting('curriculum', this.value)" 
-                    class="curr-select">
-                    <option value="engageny">EngageNY/Common Core</option>
+                    class="curr-select" aria-label="Select curriculum framework">
+                    <option value="engageny">Common Core / EngageNY</option>
                     <option value="teks">Texas TEKS</option>
                 </select>
+                <i class="fas fa-chevron-down curr-select-chevron"></i>
             </div>
         </div>
     </div>
@@ -68,12 +113,17 @@
 <!-- Page Content -->
 <main id="main-content" class="curr-main">
     
-    <!-- Grade Level Switcher (Header) -->
-    <header class="curr-header">
+    <!-- Grade Level Switcher (Header with Dynamic Ambient Glow) -->
+    <header class="curr-header" id="curr-header" data-subject="math">
+        <div class="curr-header-ambient-glow" aria-hidden="true"></div>
         <div class="curr-header-inner">
             <div class="curr-header-content">
                 <div class="curr-header-top-row">
-                    <div>
+                    <div class="curr-header-info">
+                        <div class="curr-badge-pill" id="curr-subject-badge">
+                            <i class="fas fa-calculator"></i>
+                            <span>Standards & Curriculum Alignment</span>
+                        </div>
                         <h1 class="curr-header-title">
                             Standards <span id="display-subject-name" class="color-indigo">Mathematics</span>
                         </h1>
@@ -87,7 +137,7 @@
                         </button>
                         <div class="curr-export-dropdown" id="curr-export-dropdown">
                             <button type="button" class="curr-btn-export" onclick="toggleExportMenu(event)" title="Export standards data">
-                                <i class="fas fa-file-export"></i> Export <i class="fas fa-caret-down" style="font-size: 0.75rem; margin-left: 0.25rem;"></i>
+                                <i class="fas fa-file-export"></i> Export <i class="fas fa-caret-down curr-caret"></i>
                             </button>
                             <div class="curr-export-menu" id="curr-export-menu">
                                 <button type="button" class="curr-export-item" onclick="exportStandardsCSV()">
@@ -101,34 +151,108 @@
                     </div>
                 </div>
 
-                <!-- Grade Selection Chips -->
-                <div class="curr-chips">
-                    <?php foreach ($grades as $index => $grade): ?>
-                    <button onclick="switchGrade('<?php echo $grade['name']; ?>', '<?php echo $grade['level']; ?>')" 
-                        class="curr-chip <?php echo ($index === 1) ? 'active' : ''; ?>"
-                        data-grade="<?php echo $grade['name']; ?>">
-                        <?php echo $grade['name']; ?>
-                    </button>
-                    <?php endforeach; ?>
+                <!-- Expandable Grade Groups (Grade School, Middle, High) -->
+                <div class="curr-grade-groups-container">
+                    <!-- Group Tabs / Triggers -->
+                    <div class="curr-group-tabs" role="tablist" aria-label="Grade group selection">
+                        <?php foreach ($gradeGroups as $gid => $group): ?>
+                        <button type="button" 
+                            onclick="toggleGradeGroup('<?php echo $gid; ?>', true)" 
+                            id="group-btn-<?php echo $gid; ?>"
+                            class="curr-group-btn <?php echo ($gid === 'elementary') ? 'active expanded' : ''; ?>"
+                            data-group="<?php echo $gid; ?>"
+                            role="tab" 
+                            aria-expanded="<?php echo ($gid === 'elementary') ? 'true' : 'false'; ?>"
+                            aria-controls="group-panel-<?php echo $gid; ?>">
+                            <div class="curr-group-btn-left">
+                                <span class="curr-group-icon-wrap"><i class="fas <?php echo $group['icon']; ?>"></i></span>
+                                <div class="curr-group-text">
+                                    <span class="curr-group-name"><?php echo $group['name']; ?></span>
+                                    <span class="curr-group-sub"><?php echo $group['subtitle']; ?></span>
+                                </div>
+                            </div>
+                            <div class="curr-group-btn-right">
+                                <span class="curr-group-active-badge" id="group-badge-<?php echo $gid; ?>" style="<?php echo ($gid === 'elementary') ? '' : 'display: none;'; ?>">
+                                    <?php echo ($gid === 'elementary') ? 'Kindergarten' : ''; ?>
+                                </span>
+                                <i class="fas fa-chevron-down curr-group-chevron"></i>
+                            </div>
+                        </button>
+                        <?php endforeach; ?>
+                    </div>
+
+                    <!-- Expandable Group Panels -->
+                    <div class="curr-group-panels">
+                        <?php foreach ($gradeGroups as $gid => $group): ?>
+                        <div id="group-panel-<?php echo $gid; ?>" 
+                            class="curr-group-panel <?php echo ($gid === 'elementary') ? 'open' : ''; ?>"
+                            data-group="<?php echo $gid; ?>"
+                            role="region" 
+                            aria-labelledby="group-btn-<?php echo $gid; ?>">
+                            <div class="curr-group-panel-inner">
+                                <div class="curr-panel-header">
+                                    <span class="curr-panel-label">
+                                        <i class="fas <?php echo $group['icon']; ?>"></i> 
+                                        <?php echo $group['name']; ?> (<?php echo $group['subtitle']; ?>)
+                                    </span>
+                                </div>
+                                <div class="curr-chips">
+                                    <?php foreach ($group['grades'] as $grade): ?>
+                                    <button onclick="switchGrade('<?php echo $grade['name']; ?>', '<?php echo $grade['level']; ?>')" 
+                                        class="curr-chip curr-grade-card <?php echo ($grade['name'] === 'Kindergarten') ? 'active' : ''; ?>"
+                                        data-grade="<?php echo $grade['name']; ?>"
+                                        data-level="<?php echo $grade['level']; ?>"
+                                        data-parent-group="<?php echo $gid; ?>"
+                                        role="tab" 
+                                        aria-selected="<?php echo ($grade['name'] === 'Kindergarten') ? 'true' : 'false'; ?>">
+                                        <span class="curr-grade-name"><?php echo $grade['name']; ?></span>
+                                        <span class="curr-grade-level">Level <?php echo $grade['level']; ?></span>
+                                    </button>
+                                    <?php endforeach; ?>
+                                </div>
+                            </div>
+                        </div>
+                        <?php endforeach; ?>
+                    </div>
                 </div>
 
-                <!-- Quick Stats Counter Bar -->
+                <!-- Modern Quick Stats Counter Grid -->
                 <div class="curr-stats-bar" id="curr-stats-bar">
-                    <div class="curr-stat-item">
-                        <span class="curr-stat-value" id="stat-domains-count">-</span>
-                        <span class="curr-stat-label">Domains / Strands</span>
+                    <div class="curr-stat-card">
+                        <div class="curr-stat-icon-wrap stat-icon-domains">
+                            <i class="fas fa-shapes"></i>
+                        </div>
+                        <div class="curr-stat-info">
+                            <span class="curr-stat-value" id="stat-domains-count">-</span>
+                            <span class="curr-stat-label">Domains & Strands</span>
+                        </div>
                     </div>
-                    <div class="curr-stat-item">
-                        <span class="curr-stat-value" id="stat-standards-count">-</span>
-                        <span class="curr-stat-label">Standards Focus</span>
+                    <div class="curr-stat-card">
+                        <div class="curr-stat-icon-wrap stat-icon-standards">
+                            <i class="fas fa-list-check"></i>
+                        </div>
+                        <div class="curr-stat-info">
+                            <span class="curr-stat-value" id="stat-standards-count">-</span>
+                            <span class="curr-stat-label">Standards Focus</span>
+                        </div>
                     </div>
-                    <div class="curr-stat-item">
-                        <span class="curr-stat-value" id="stat-competencies-count">-</span>
-                        <span class="curr-stat-label">Key Competencies</span>
+                    <div class="curr-stat-card">
+                        <div class="curr-stat-icon-wrap stat-icon-competencies">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <div class="curr-stat-info">
+                            <span class="curr-stat-value" id="stat-competencies-count">-</span>
+                            <span class="curr-stat-label">Key Competencies</span>
+                        </div>
                     </div>
-                    <div class="curr-stat-item">
-                        <span class="curr-stat-value" id="stat-level-code">Level B</span>
-                        <span class="curr-stat-label">Curriculum Level</span>
+                    <div class="curr-stat-card">
+                        <div class="curr-stat-icon-wrap stat-icon-level">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="curr-stat-info">
+                            <span class="curr-stat-value" id="stat-level-code">Level B</span>
+                            <span class="curr-stat-label">Curriculum Level</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -172,6 +296,7 @@
                                 <div class="curr-search-box">
                                     <i class="fas fa-search curr-search-icon"></i>
                                     <input type="text" id="standards-search-input" placeholder="Search standards by code, keyword, or domain..." autocomplete="off" oninput="handleStandardsSearch()" />
+                                    <span class="curr-search-kbd-hint"><kbd>Ctrl</kbd> <kbd>K</kbd></span>
                                     <button type="button" id="standards-search-clear" class="curr-search-clear" title="Clear search" style="display: none;" onclick="clearStandardsSearch()">
                                         <i class="fas fa-times"></i>
                                     </button>
@@ -408,6 +533,16 @@
         }
 
         // Update Header
+        const headerEl = document.getElementById('curr-header');
+        if (headerEl) {
+            headerEl.setAttribute('data-subject', id);
+        }
+        const badgeEl = document.getElementById('curr-subject-badge');
+        if (badgeEl) {
+            const iconClass = data.icon || subjectsMap[id]?.icon || 'fa-graduation-cap';
+            badgeEl.innerHTML = `<i class="fas ${iconClass}"></i> <span>${data.name || subjectsMap[id]?.name || 'Curriculum'} Standards Alignment</span>`;
+        }
+
         const nameEl = document.getElementById('display-subject-name');
         if (nameEl) {
             nameEl.innerText = activeBtn ? activeBtn.innerText.trim() : (data.name || id);
@@ -422,12 +557,71 @@
         updateView();
     }
 
+    function getGroupForGrade(gradeName) {
+        const chip = document.querySelector(`.curr-chip[data-grade="${gradeName}"]`);
+        if (chip && chip.dataset.parentGroup) return chip.dataset.parentGroup;
+        if (['Pre-K', 'Kindergarten', '1st Grade', '2nd Grade', '3rd Grade', '4th Grade', '5th Grade'].includes(gradeName)) {
+            return 'elementary';
+        }
+        if (['6th Grade', '7th Grade', '8th Grade'].includes(gradeName)) {
+            return 'middle';
+        }
+        return 'high';
+    }
+
+    function toggleGradeGroup(groupId, autoSelect = false) {
+        expandGradeGroup(groupId, autoSelect);
+    }
+
+    function expandGradeGroup(groupId, autoSelect = false) {
+        // Update group buttons
+        document.querySelectorAll('.curr-group-btn').forEach(btn => {
+            const isTarget = (btn.dataset.group === groupId);
+            btn.classList.toggle('active', isTarget);
+            btn.classList.toggle('expanded', isTarget);
+            btn.setAttribute('aria-expanded', isTarget ? 'true' : 'false');
+        });
+
+        // Update group panels
+        document.querySelectorAll('.curr-group-panel').forEach(panel => {
+            panel.classList.toggle('open', panel.dataset.group === groupId);
+        });
+
+        // If autoSelect is true and currentGrade is not in this group, switch to first grade in this group
+        if (autoSelect) {
+            const panel = document.getElementById(`group-panel-${groupId}`);
+            const currentInGroup = panel?.querySelector(`.curr-chip[data-grade="${currentGrade}"]`);
+            if (!currentInGroup) {
+                const firstChip = panel?.querySelector('.curr-chip');
+                if (firstChip) {
+                    switchGrade(firstChip.dataset.grade, firstChip.dataset.level);
+                }
+            }
+        }
+    }
+
     function switchGrade(gradeName, level, syncUrl = true) {
         currentGrade = gradeName;
         
         document.querySelectorAll('.curr-chip').forEach(chip => {
-            chip.classList.toggle('active', chip.dataset.grade === gradeName);
+            const isActive = chip.dataset.grade === gradeName;
+            chip.classList.toggle('active', isActive);
+            chip.setAttribute('aria-selected', isActive ? 'true' : 'false');
         });
+
+        // Expand parent group and update active badge
+        const parentGroupId = getGroupForGrade(gradeName);
+        expandGradeGroup(parentGroupId, false);
+
+        document.querySelectorAll('.curr-group-active-badge').forEach(badge => {
+            badge.innerText = '';
+            badge.style.display = 'none';
+        });
+        const activeBadge = document.getElementById(`group-badge-${parentGroupId}`);
+        if (activeBadge) {
+            activeBadge.innerText = gradeName;
+            activeBadge.style.display = 'inline-flex';
+        }
 
         if (syncUrl) syncUrlParams();
         updateView();
@@ -1380,6 +1574,20 @@
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
                 closeStandardDossier();
+            } else if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+                e.preventDefault();
+                const searchInput = document.getElementById('standards-search-input');
+                if (searchInput) {
+                    searchInput.focus();
+                    searchInput.select();
+                }
+            } else if (e.key === '/' && !['INPUT', 'TEXTAREA'].includes(document.activeElement?.tagName)) {
+                e.preventDefault();
+                const searchInput = document.getElementById('standards-search-input');
+                if (searchInput) {
+                    searchInput.focus();
+                    searchInput.select();
+                }
             }
         });
         
