@@ -9,7 +9,7 @@ $pageTitle = "Graphs of Piecewise Linear Functions | Hesten's Learning";
 $pageDescription = "Learn how to define quantities, choose scales, and translate physical actions into piecewise graphs with interactive stories.";
 $pageAuthor = "Hesten's Learning Team";
 
-include '../src/header.php';
+include __DIR__ . '/../src/header.php';
 ?>
 
 <link rel="stylesheet" href="../assets/css/pages/lesson.css">
@@ -808,6 +808,6 @@ $practiceQuestions = [
         'explanation' => 'A negative slope means the elevation quantity is decreasing over time, representing a physical descent.'
     ]
 ];
-include '../src/lesson_runner.php';
-include '../src/footer.php';
+include __DIR__ . '/../src/lesson_runner.php';
+include __DIR__ . '/../src/footer.php';
 ?>
