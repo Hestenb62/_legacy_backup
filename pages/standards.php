@@ -157,12 +157,12 @@
                     <div class="curr-group-tabs" role="tablist" aria-label="Grade group selection">
                         <?php foreach ($gradeGroups as $gid => $group): ?>
                         <button type="button" 
-                            onclick="toggleGradeGroup('<?php echo $gid; ?>', true)" 
+                            onclick="toggleGradeGroup('<?php echo $gid; ?>', false)" 
                             id="group-btn-<?php echo $gid; ?>"
-                            class="curr-group-btn <?php echo ($gid === 'elementary') ? 'active expanded' : ''; ?>"
+                            class="curr-group-btn <?php echo ($gid === 'elementary') ? 'active' : ''; ?>"
                             data-group="<?php echo $gid; ?>"
                             role="tab" 
-                            aria-expanded="<?php echo ($gid === 'elementary') ? 'true' : 'false'; ?>"
+                            aria-expanded="false"
                             aria-controls="group-panel-<?php echo $gid; ?>">
                             <div class="curr-group-btn-left">
                                 <span class="curr-group-icon-wrap"><i class="fas <?php echo $group['icon']; ?>"></i></span>
@@ -185,7 +185,7 @@
                     <div class="curr-group-panels">
                         <?php foreach ($gradeGroups as $gid => $group): ?>
                         <div id="group-panel-<?php echo $gid; ?>" 
-                            class="curr-group-panel <?php echo ($gid === 'elementary') ? 'open' : ''; ?>"
+                            class="curr-group-panel"
                             data-group="<?php echo $gid; ?>"
                             role="region" 
                             aria-labelledby="group-btn-<?php echo $gid; ?>">
@@ -195,10 +195,13 @@
                                         <i class="fas <?php echo $group['icon']; ?>"></i> 
                                         <?php echo $group['name']; ?> (<?php echo $group['subtitle']; ?>)
                                     </span>
+                                    <button type="button" class="curr-panel-close-btn" onclick="closeAllGradeGroups()" aria-label="Close <?php echo $group['name']; ?> selection" title="Close grade selection">
+                                        <i class="fas fa-check"></i> Done
+                                    </button>
                                 </div>
                                 <div class="curr-chips">
                                     <?php foreach ($group['grades'] as $grade): ?>
-                                    <button onclick="switchGrade('<?php echo $grade['name']; ?>', '<?php echo $grade['level']; ?>')" 
+                                    <button onclick="switchGrade('<?php echo $grade['name']; ?>', '<?php echo $grade['level']; ?>', true, true)" 
                                         class="curr-chip curr-grade-card <?php echo ($grade['name'] === 'Kindergarten') ? 'active' : ''; ?>"
                                         data-grade="<?php echo $grade['name']; ?>"
                                         data-level="<?php echo $grade['level']; ?>"
@@ -570,7 +573,23 @@
     }
 
     function toggleGradeGroup(groupId, autoSelect = false) {
-        expandGradeGroup(groupId, autoSelect);
+        const panel = document.getElementById(`group-panel-${groupId}`);
+        const isCurrentlyOpen = panel && panel.classList.contains('open');
+        if (isCurrentlyOpen) {
+            closeAllGradeGroups();
+        } else {
+            expandGradeGroup(groupId, autoSelect);
+        }
+    }
+
+    function closeAllGradeGroups() {
+        document.querySelectorAll('.curr-group-btn').forEach(btn => {
+            btn.classList.remove('expanded');
+            btn.setAttribute('aria-expanded', 'false');
+        });
+        document.querySelectorAll('.curr-group-panel').forEach(panel => {
+            panel.classList.remove('open');
+        });
     }
 
     function expandGradeGroup(groupId, autoSelect = false) {
@@ -594,13 +613,13 @@
             if (!currentInGroup) {
                 const firstChip = panel?.querySelector('.curr-chip');
                 if (firstChip) {
-                    switchGrade(firstChip.dataset.grade, firstChip.dataset.level);
+                    switchGrade(firstChip.dataset.grade, firstChip.dataset.level, true, false);
                 }
             }
         }
     }
 
-    function switchGrade(gradeName, level, syncUrl = true) {
+    function switchGrade(gradeName, level, syncUrl = true, shouldClose = false) {
         currentGrade = gradeName;
         
         document.querySelectorAll('.curr-chip').forEach(chip => {
@@ -609,9 +628,11 @@
             chip.setAttribute('aria-selected', isActive ? 'true' : 'false');
         });
 
-        // Expand parent group and update active badge
+        // Update parent group button active indicator and badge
         const parentGroupId = getGroupForGrade(gradeName);
-        expandGradeGroup(parentGroupId, false);
+        document.querySelectorAll('.curr-group-btn').forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.group === parentGroupId);
+        });
 
         document.querySelectorAll('.curr-group-active-badge').forEach(badge => {
             badge.innerText = '';
@@ -621,6 +642,11 @@
         if (activeBadge) {
             activeBadge.innerText = gradeName;
             activeBadge.style.display = 'inline-flex';
+        }
+
+        // Close dropdown when requested (e.g. user selected grade)
+        if (shouldClose) {
+            setTimeout(closeAllGradeGroups, 180);
         }
 
         if (syncUrl) syncUrlParams();
@@ -1570,10 +1596,11 @@
             });
         }
 
-        // Escape key closes dossier modal
+        // Escape key closes dossier modal or open grade drawer
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
                 closeStandardDossier();
+                closeAllGradeGroups();
             } else if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
                 e.preventDefault();
                 const searchInput = document.getElementById('standards-search-input');
@@ -1591,10 +1618,13 @@
             }
         });
         
-        // Close export menu when clicking outside
+        // Close export menu and grade drawers when clicking outside
         document.addEventListener('click', (e) => {
             if (!e.target.closest('#curr-export-dropdown')) {
                 document.getElementById('curr-export-menu')?.classList.remove('show');
+            }
+            if (!e.target.closest('.curr-grade-groups-container')) {
+                closeAllGradeGroups();
             }
         });
 
