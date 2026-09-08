@@ -329,36 +329,6 @@
                                     <button type="button" id="btn-toggle-accordions" class="curr-btn-accordion-toggle" onclick="toggleAllAccordions()" title="Expand or collapse all domain sections">
                                         <i class="fas fa-compress-alt"></i> <span id="toggle-accordions-text">Collapse All</span>
                                     </button>
-                                    <div class="curr-export-dropdown-wrap">
-                                        <button type="button" id="btn-export-dropdown" class="curr-btn-export-trigger" onclick="toggleExportMenu(event)" aria-haspopup="true" aria-expanded="false" title="Export standards in TXT, CSV, or JSON format">
-                                            <i class="fas fa-file-export"></i>
-                                            <span>Export</span>
-                                            <i class="fas fa-chevron-down curr-export-arrow"></i>
-                                        </button>
-                                        <div id="curr-export-menu" class="curr-export-menu" role="menu">
-                                            <button type="button" class="curr-export-item" onclick="exportStandardsAsTxt()" role="menuitem">
-                                                <i class="fas fa-file-lines" style="color: #10b981;"></i>
-                                                <div class="curr-export-info">
-                                                    <span class="curr-export-title">Plain Text (.txt)</span>
-                                                    <span class="curr-export-sub">Formatted outline with domains & equations</span>
-                                                </div>
-                                            </button>
-                                            <button type="button" class="curr-export-item" onclick="exportStandardsCSV()" role="menuitem">
-                                                <i class="fas fa-file-csv" style="color: #3b82f6;"></i>
-                                                <div class="curr-export-info">
-                                                    <span class="curr-export-title">Spreadsheet (.csv)</span>
-                                                    <span class="curr-export-sub">Structured table with codes & descriptions</span>
-                                                </div>
-                                            </button>
-                                            <button type="button" class="curr-export-item" onclick="exportStandardsJSON()" role="menuitem">
-                                                <i class="fas fa-file-code" style="color: #f59e0b;"></i>
-                                                <div class="curr-export-info">
-                                                    <span class="curr-export-title">Raw Data (.json)</span>
-                                                    <span class="curr-export-sub">Full JSON schema with competencies</span>
-                                                </div>
-                                            </button>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                             <div class="curr-domain-filters" id="domain-filters-bar">
@@ -1407,7 +1377,7 @@
         lines.push(`Grade Level:         ${currentGrade} (${levelCode})`);
         lines.push(`Framework:           ${currFrameworkName}`);
         lines.push(`Exported On:         ${new Date().toLocaleString()}`);
-        lines.push(`Source URL:          https://hestenslearning.com/pages/standards.php`);
+        lines.push(`Source URL:          https://hestena62.com/pages/standards.php`);
         lines.push(divider);
         lines.push('');
 
