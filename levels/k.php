@@ -4,6 +4,27 @@
  * Using the master level template for consistency.
  */
 
+// Dynamic Single-Lesson Router: Check if a lesson is requested via query string (e.g. ?k-math-m1-a-1 or ?lesson=k-math-m1-a-1)
+$requestedLesson = null;
+if (!empty($_GET['lesson'])) {
+    $requestedLesson = preg_replace('/[^a-zA-Z0-9\-_]/', '', trim($_GET['lesson']));
+} elseif (!empty($_SERVER['QUERY_STRING'])) {
+    $rawQuery = trim(explode('&', $_SERVER['QUERY_STRING'])[0]);
+    if (!empty($rawQuery) && !str_contains($rawQuery, '=')) {
+        $requestedLesson = preg_replace('/[^a-zA-Z0-9\-_]/', '', $rawQuery);
+    }
+}
+
+if (!empty($requestedLesson)) {
+    $lessonFile = dirname(__DIR__) . '/lessons/' . $requestedLesson . '.php';
+    if (file_exists($lessonFile)) {
+        $levelUrl = 'k.php';
+        $levelTitle = 'Level K';
+        include $lessonFile;
+        exit;
+    }
+}
+
 // Page-Specific Metadata
 $pageTitle       = "Grade 9 Level K | Hesten's Learning";
 $pageDescription = "Algebra I foundations, literature analysis, chemical properties, and global civilizations.";
@@ -30,7 +51,7 @@ $modules = [
                 'name' => 'Introduction to Functions Studied this Year',
                 'skills' => [
                     //Lessons 1-5
-                    ['id' => 'k-math-m1-a-1', 'code' => 'K.M1.A.1', 'name' => 'Graphs of Piecewise Linear Functions', 'url' => '../lessons/k-math-m1-a-1.php'],
+                    ['id' => 'k-math-m1-a-1', 'code' => 'K.M1.A.1', 'name' => 'Graphs of Piecewise Linear Functions', 'url' => 'k.php?k-math-m1-a-1'],
                     ['id' => 'k-math-m1-a-2', 'code' => 'K.M1.A.2', 'name' => 'Growth of Square Areas and Functions', 'url' => '../lessons/k-math-m1-a-2.php'],
                     ['id' => 'k-math-m1-a-3', 'code' => 'K.M1.A.3', 'name' => 'Graphs of Exponential Functions', 'url' => '../lessons/k-math-m1-a-3.php'],
                     ['id' => 'k-math-m1-a-4', 'code' => 'K.M1.A.4', 'name' => 'Analyzing Graphs - Water Usage During a Typical Day at School', 'url' => '../lessons/k-math-m1-a-4.php'],

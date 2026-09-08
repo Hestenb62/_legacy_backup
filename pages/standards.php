@@ -1000,6 +1000,13 @@
                     }
                 }).catch(e => console.debug('MathJax ensure:', e));
             }
+
+            if (pendingTargetCode) {
+                const codeToHighlight = pendingTargetCode;
+                setTimeout(() => {
+                    highlightTargetStandard(codeToHighlight);
+                }, 350);
+            }
         }, 200);
     }
 
@@ -2118,6 +2125,98 @@
         const shouldShow = (currentSubject === 'math' || isCcssOrEngage);
         if (sideCard) sideCard.style.display = shouldShow ? 'block' : 'none';
         if (toolbarBtn) toolbarBtn.style.display = shouldShow ? 'inline-flex' : 'none';
+    }
+
+
+    let pendingTargetCode = null;
+
+    function syncUrlParams() {
+        try {
+            const url = new URL(window.location.href);
+            url.searchParams.set('subject', currentSubject);
+            url.searchParams.set('grade', currentGrade);
+            const searchInput = document.getElementById('standards-search-input');
+            if (searchInput && searchInput.value.trim()) {
+                url.searchParams.set('q', searchInput.value.trim());
+            } else {
+                url.searchParams.delete('q');
+            }
+            if (pendingTargetCode) {
+                url.searchParams.set('code', pendingTargetCode);
+            }
+            window.history.replaceState({ subject: currentSubject, grade: currentGrade }, '', url.toString());
+        } catch(e) {}
+    }
+
+    function initFromUrl() {
+        try {
+            const params = new URLSearchParams(window.location.search);
+            const s = params.get('subject');
+            const g = params.get('grade');
+            const code = params.get('code') || window.location.hash.replace(/^#/, '');
+            const q = params.get('q');
+
+            if (s && subjectsMap[s]) {
+                currentSubject = s;
+            }
+            if (g) {
+                currentGrade = g;
+            }
+            if (code) {
+                pendingTargetCode = code.trim();
+            }
+            if (q) {
+                const searchInput = document.getElementById('standards-search-input');
+                if (searchInput) searchInput.value = q;
+            }
+        } catch (e) {
+            console.debug('initFromUrl error:', e);
+        }
+    }
+
+    function highlightTargetStandard(targetCode) {
+        if (!targetCode) return;
+        const cleanTarget = targetCode.trim().toLowerCase();
+        const stdContainer = document.getElementById('view-standards');
+        if (!stdContainer) return;
+
+        let targetEl = null;
+        const allWraps = Array.from(stdContainer.querySelectorAll('.std-code-wrap, .std-code-badge'));
+        for (const el of allWraps) {
+            const code = (el.dataset.stdCode || el.dataset.code || el.innerText || '').trim().toLowerCase();
+            if (code === cleanTarget || code.startsWith(cleanTarget) || cleanTarget.startsWith(code.split(' ')[0])) {
+                targetEl = el;
+                break;
+            }
+        }
+
+        if (!targetEl) {
+            const descs = Array.from(stdContainer.querySelectorAll('.curr-standard-desc'));
+            for (const p of descs) {
+                if (p.innerText.toLowerCase().includes(cleanTarget)) {
+                    targetEl = p;
+                    break;
+                }
+            }
+        }
+
+        if (targetEl) {
+            const card = targetEl.closest('.curr-standard-item');
+            if (card) {
+                card.classList.remove('collapsed');
+                const header = card.querySelector('.curr-accordion-header');
+                if (header) header.setAttribute('aria-expanded', 'true');
+                if (typeof updateAccordionToggleBtnState === 'function') updateAccordionToggleBtnState();
+            }
+
+            targetEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            targetEl.classList.remove('std-pulse-highlight');
+            void targetEl.offsetWidth;
+            targetEl.classList.add('std-pulse-highlight');
+            setTimeout(() => {
+                targetEl.classList.remove('std-pulse-highlight');
+            }, 3200);
+        }
     }
 
     // Initialize Select Dropdown and Listeners

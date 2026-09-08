@@ -2709,4 +2709,27 @@
     visibility: hidden !important;
     pointer-events: none !important;
   }
+
+  /* Deep Link Standard Highlight Pulse */
+  @keyframes stdPulseGlow {
+    0% {
+      box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.7);
+      outline: 2px solid var(--color-primary);
+    }
+    50% {
+      box-shadow: 0 0 0 12px rgba(79, 70, 229, 0);
+      outline: 2px solid var(--color-primary);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(79, 70, 229, 0);
+      outline: 2px solid transparent;
+    }
+  }
+
+  .std-pulse-highlight {
+    animation: stdPulseGlow 1.4s ease-out 2;
+    border-radius: var(--radius-sm);
+    background-color: color-mix(in srgb, var(--color-primary) 14%, transparent) !important;
+  }
+
 }

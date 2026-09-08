@@ -16,6 +16,13 @@ include '../src/header.php';
 
 <main class="lesson-container">
     <div class="lesson-card">
+        <!-- Navigation Back to Level K -->
+        <nav class="lesson-top-nav" aria-label="Breadcrumb navigation" style="margin-bottom: 1.5rem;">
+            <a href="<?= isset($levelUrl) ? htmlspecialchars($levelUrl) : '../levels/k.php' ?>" class="lesson-back-btn" style="display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; font-weight: 700; color: var(--color-primary); text-decoration: none; padding: 0.45rem 1rem; background: color-mix(in srgb, var(--color-primary) 10%, transparent); border: 1px solid color-mix(in srgb, var(--color-primary) 20%, transparent); border-radius: 9999px; transition: all 0.2s ease;">
+                <i class="fas fa-arrow-left"></i>
+                <span>Back to Level K (Algebra I)</span>
+            </a>
+        </nav>
 
         <!-- Header / Title -->
         <div class="lesson-header">
@@ -768,9 +775,15 @@ $lessonCode = 'K.M1.A.1';
 $lessonTitle = 'Graphs of Piecewise Linear Functions';
 $lessonStandard = 'HSF.IF.B.4';
 $levelId = 'k';
-$levelUrl = '../levels/k.php';
-$prevLessonUrl = '../levels/k.php';
-$nextLessonUrl = 'k-math-m1-a-2.php';
+if (!isset($levelUrl)) {
+    $levelUrl = '../levels/k.php';
+}
+if (!isset($prevLessonUrl)) {
+    $prevLessonUrl = $levelUrl;
+}
+if (!isset($nextLessonUrl)) {
+    $nextLessonUrl = ($levelUrl === 'k.php') ? 'k.php?k-math-m1-a-2' : 'k-math-m1-a-2.php';
+}
 $practiceQuestions = [
     [
         'question' => 'A climber ascends 4 feet in 2 seconds, pauses for 3 seconds, then descends 2 feet in 1 second. What is the slope of the graph during the 3-second pause?',

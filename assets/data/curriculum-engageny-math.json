@@ -1,0 +1,1083 @@
+{
+    "_comment": "EngageNY / Eureka Math Mathematics Curriculum Sequence & Standards Alignment",
+    "_description": "Contains grade-by-grade EngageNY instructional modules, topics, lessons, and subsequent CCSS standard IDs.",
+    "curriculum": "engageny",
+    "subject": "math",
+    "grades": {
+        "9th Grade": {
+            "course": "Algebra I",
+            "title": "Algebra I (EngageNY / CCSS Aligned)",
+            "level": "K",
+            "overview": "Algebra I focuses on relationships between quantities and reasoning with equations, linear and exponential functions, descriptive statistics, and quadratic expressions, equations, and functions.",
+            "modules": [
+                {
+                    "moduleNumber": 1,
+                    "title": "Relationships Between Quantities and Reasoning with Equations and Their Graphs",
+                    "description": "Reasoning with equations and their graphs, setting the foundation for high school algebra.",
+                    "topics": [
+                        {
+                            "letter": "A",
+                            "title": "Introduction to Functions Studied this Year",
+                            "lessons": [
+                                {
+                                    "id": "k-math-m1-a-1",
+                                    "code": "K.M1.A.1",
+                                    "lessonNumber": 1,
+                                    "title": "Graphs of Piecewise Linear Functions",
+                                    "standards": [
+                                        "HSN-Q.A.2",
+                                        "HSA-CED.A.2"
+                                    ],
+                                    "url": "/levels/k.php?k-math-m1-a-1"
+                                },
+                                {
+                                    "id": "k-math-m1-a-2",
+                                    "code": "K.M1.A.2",
+                                    "lessonNumber": 2,
+                                    "title": "Growth of Square Areas and Functions",
+                                    "standards": [
+                                        "HSA-SSE.A.1",
+                                        "HSF-IF.A.2"
+                                    ],
+                                    "url": "/lessons/k-math-m1-a-2.php"
+                                },
+                                {
+                                    "id": "k-math-m1-a-3",
+                                    "code": "K.M1.A.3",
+                                    "lessonNumber": 3,
+                                    "title": "Graphs of Exponential Functions",
+                                    "standards": [
+                                        "HSF-IF.A.2",
+                                        "HSF-IF.B.4",
+                                        "HSF-IF.C.7"
+                                    ],
+                                    "url": "/lessons/k-math-m1-a-3.php"
+                                },
+                                {
+                                    "id": "k-math-m1-a-4",
+                                    "code": "K.M1.A.4",
+                                    "lessonNumber": 4,
+                                    "title": "Analyzing Graphs - Water Usage During a Typical Day at School",
+                                    "standards": [
+                                        "HSF-IF.B.4",
+                                        "HSN-Q.A.1"
+                                    ],
+                                    "url": "/lessons/k-math-m1-a-4.php"
+                                },
+                                {
+                                    "id": "k-math-m1-a-5",
+                                    "code": "K.M1.A.5",
+                                    "lessonNumber": 5,
+                                    "title": "Two Graphing Stories",
+                                    "standards": [
+                                        "HSN-Q.A.1",
+                                        "HSF-IF.B.4"
+                                    ],
+                                    "url": "/lessons/k-math-m1-a-5.php"
+                                }
+                            ]
+                        },
+                        {
+                            "letter": "B",
+                            "title": "The Structure of Expressions",
+                            "lessons": [
+                                {
+                                    "id": "k-math-m1-b-1",
+                                    "code": "K.M1.B.1",
+                                    "lessonNumber": 6,
+                                    "title": "Algebraic Expressions - The Distributive Property",
+                                    "standards": [
+                                        "HSA-SSE.A.2"
+                                    ],
+                                    "url": "/lessons/k-math-m1-b-1.php"
+                                },
+                                {
+                                    "id": "k-math-m1-b-2",
+                                    "code": "K.M1.B.2",
+                                    "lessonNumber": 7,
+                                    "title": "Algebraic Expressions - The Commutative and Associative Properties",
+                                    "standards": [
+                                        "HSA-SSE.A.2"
+                                    ],
+                                    "url": "/lessons/k-math-m1-b-2.php"
+                                },
+                                {
+                                    "id": "k-math-m1-b-3",
+                                    "code": "K.M1.B.3",
+                                    "lessonNumber": 8,
+                                    "title": "Adding and Subtracting Polynomials",
+                                    "standards": [
+                                        "HSA-APR.A.1"
+                                    ],
+                                    "url": "/lessons/k-math-m1-b-3.php"
+                                },
+                                {
+                                    "id": "k-math-m1-b-4",
+                                    "code": "K.M1.B.4",
+                                    "lessonNumber": 9,
+                                    "title": "Multiplying Polynomials",
+                                    "standards": [
+                                        "HSA-APR.A.1"
+                                    ],
+                                    "url": "/lessons/k-math-m1-b-4.php"
+                                }
+                            ]
+                        },
+                        {
+                            "letter": "C",
+                            "title": "Solving Equations and Inequalities",
+                            "lessons": [
+                                {
+                                    "id": "k-math-m1-c-1",
+                                    "code": "K.M1.C.1",
+                                    "lessonNumber": 10,
+                                    "title": "True and False Equations",
+                                    "standards": [
+                                        "HSA-CED.A.1",
+                                        "HSA-REI.A.1"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m1-c-2",
+                                    "code": "K.M1.C.2",
+                                    "lessonNumber": 11,
+                                    "title": "Solution Sets for Equations and Inequalities",
+                                    "standards": [
+                                        "HSA-CED.A.1",
+                                        "HSA-REI.B.3"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m1-c-3",
+                                    "code": "K.M1.C.3",
+                                    "lessonNumber": 12,
+                                    "title": "Solving Equations",
+                                    "standards": [
+                                        "HSA-REI.A.1",
+                                        "HSA-REI.B.3"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m1-c-4",
+                                    "code": "K.M1.C.4",
+                                    "lessonNumber": 13,
+                                    "title": "Some Potential Dangers when Solving Equations",
+                                    "standards": [
+                                        "HSA-REI.A.1"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m1-c-5",
+                                    "code": "K.M1.C.5",
+                                    "lessonNumber": 14,
+                                    "title": "Solving Inequalities",
+                                    "standards": [
+                                        "HSA-CED.A.1",
+                                        "HSA-REI.B.3"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m1-c-6",
+                                    "code": "K.M1.C.6",
+                                    "lessonNumber": 15,
+                                    "title": "Solution Sets of Two or More Equations or Inequalities Joined by And or Or",
+                                    "standards": [
+                                        "HSA-CED.A.1",
+                                        "HSA-REI.B.3"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m1-c-7",
+                                    "code": "K.M1.C.7",
+                                    "lessonNumber": 16,
+                                    "title": "Solving and Graphing Inequalities Joined by \"And\" or \"Or\"",
+                                    "standards": [
+                                        "HSA-CED.A.1",
+                                        "HSA-REI.B.3"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m1-c-8",
+                                    "code": "K.M1.C.8",
+                                    "lessonNumber": 17,
+                                    "title": "Equations Involving Factored Expressions",
+                                    "standards": [
+                                        "HSA-SSE.A.2",
+                                        "HSA-REI.B.4"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m1-c-9",
+                                    "code": "K.M1.C.9",
+                                    "lessonNumber": 18,
+                                    "title": "Equations Involving a Variable Expression in the Denominator",
+                                    "standards": [
+                                        "HSA-REI.A.1",
+                                        "HSA-REI.A.2"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m1-c-10",
+                                    "code": "K.M1.C.10",
+                                    "lessonNumber": 19,
+                                    "title": "Rearranging Formulas",
+                                    "standards": [
+                                        "HSA-CED.A.4"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m1-c-11",
+                                    "code": "K.M1.C.11",
+                                    "lessonNumber": 20,
+                                    "title": "Solution Sets to Equations with Two Variables",
+                                    "standards": [
+                                        "HSA-REI.D.10"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m1-c-12",
+                                    "code": "K.M1.C.12",
+                                    "lessonNumber": 21,
+                                    "title": "Solution Sets to Inequalities with Two Variables",
+                                    "standards": [
+                                        "HSA-REI.D.12"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m1-c-13",
+                                    "code": "K.M1.C.13",
+                                    "lessonNumber": 22,
+                                    "title": "Solution Sets to Simultaneous Equations",
+                                    "standards": [
+                                        "HSA-REI.C.5",
+                                        "HSA-REI.C.6"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m1-c-14",
+                                    "code": "K.M1.C.14",
+                                    "lessonNumber": 23,
+                                    "title": "Applications of Systems of Equations and Inequalities",
+                                    "standards": [
+                                        "HSA-CED.A.3",
+                                        "HSA-REI.C.6"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "letter": "D",
+                            "title": "Creating Equations to Solve Problems",
+                            "lessons": [
+                                {
+                                    "id": "k-math-m1-d-1",
+                                    "code": "K.M1.D.1",
+                                    "lessonNumber": 24,
+                                    "title": "Solving Problems in Two Ways - Rates and Algebra",
+                                    "standards": [
+                                        "HSN-Q.A.1",
+                                        "HSA-CED.A.1"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m1-d-2",
+                                    "code": "K.M1.D.2",
+                                    "lessonNumber": 25,
+                                    "title": "Recursive Challenge Problem - The Double and Add 5 Game",
+                                    "standards": [
+                                        "HSA-CED.A.1"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m1-d-3",
+                                    "code": "K.M1.D.3",
+                                    "lessonNumber": 26,
+                                    "title": "Federal Income Tax",
+                                    "standards": [
+                                        "HSN-Q.A.1",
+                                        "HSA-CED.A.1"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "moduleNumber": 2,
+                    "title": "Descriptive Statistics",
+                    "description": "Summarizing, representing, and interpreting data on single and bivariate variables.",
+                    "topics": [
+                        {
+                            "letter": "A",
+                            "title": "Shapes and Centers of Distributions",
+                            "lessons": [
+                                {
+                                    "id": "k-math-m2-a-1",
+                                    "code": "K.M2.A.1",
+                                    "lessonNumber": 1,
+                                    "title": "Distributions and Their Shapes",
+                                    "standards": [
+                                        "HSS-ID.A.1"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m2-a-2",
+                                    "code": "K.M2.A.2",
+                                    "lessonNumber": 2,
+                                    "title": "Describing the Center of a Distribution",
+                                    "standards": [
+                                        "HSS-ID.A.2"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m2-a-3",
+                                    "code": "K.M2.A.3",
+                                    "lessonNumber": 3,
+                                    "title": "Estimating Centers and Interpreting the Mean as a Balance Point",
+                                    "standards": [
+                                        "HSS-ID.A.2"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "letter": "B",
+                            "title": "Describing Variability and Comparing Distributions",
+                            "lessons": [
+                                {
+                                    "id": "k-math-m2-b-1",
+                                    "code": "K.M2.B.1",
+                                    "lessonNumber": 4,
+                                    "title": "Summarizing Deviations from the Mean",
+                                    "standards": [
+                                        "HSS-ID.A.2"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m2-b-2",
+                                    "code": "K.M2.B.2",
+                                    "lessonNumber": 5,
+                                    "title": "Measuring Variability for Symmetrical Distributions",
+                                    "standards": [
+                                        "HSS-ID.A.2"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m2-b-3",
+                                    "code": "K.M2.B.3",
+                                    "lessonNumber": 6,
+                                    "title": "Interpreting the Standard Deviation",
+                                    "standards": [
+                                        "HSS-ID.A.2"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m2-b-4",
+                                    "code": "K.M2.B.4",
+                                    "lessonNumber": 7,
+                                    "title": "Measuring Variability for Skewed Distributions Interquartile Range",
+                                    "standards": [
+                                        "HSS-ID.A.2",
+                                        "HSS-ID.A.3"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m2-b-5",
+                                    "code": "K.M2.B.5",
+                                    "lessonNumber": 8,
+                                    "title": "Comparing Distributions",
+                                    "standards": [
+                                        "HSS-ID.A.2",
+                                        "HSS-ID.A.3"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "letter": "C",
+                            "title": "Categorical Data on Two Variables",
+                            "lessons": [
+                                {
+                                    "id": "k-math-m2-c-1",
+                                    "code": "K.M2.C.1",
+                                    "lessonNumber": 9,
+                                    "title": "Summarizing Bivariate Categorical Data",
+                                    "standards": [
+                                        "HSS-ID.B.5"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m2-c-2",
+                                    "code": "K.M2.C.2",
+                                    "lessonNumber": 10,
+                                    "title": "Summarizing Bivariate Categorical Data with Relative Frequencies",
+                                    "standards": [
+                                        "HSS-ID.B.5"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m2-c-3",
+                                    "code": "K.M2.C.3",
+                                    "lessonNumber": 11,
+                                    "title": "Conditional Relative Frequencies and Association",
+                                    "standards": [
+                                        "HSS-ID.B.5"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "letter": "D",
+                            "title": "Numerical Data on Two Variables",
+                            "lessons": [
+                                {
+                                    "id": "k-math-m2-d-1",
+                                    "code": "K.M2.D.1",
+                                    "lessonNumber": 12,
+                                    "title": "Relationships Between Two Numerical Variables",
+                                    "standards": [
+                                        "HSS-ID.B.6"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m2-d-2",
+                                    "code": "K.M2.D.2",
+                                    "lessonNumber": 13,
+                                    "title": "Modeling Relationships with a Line",
+                                    "standards": [
+                                        "HSS-ID.B.6",
+                                        "HSS-ID.C.7"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m2-d-3",
+                                    "code": "K.M2.D.3",
+                                    "lessonNumber": 14,
+                                    "title": "Interpreting Residuals from a Line",
+                                    "standards": [
+                                        "HSS-ID.B.6"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m2-d-4",
+                                    "code": "K.M2.D.4",
+                                    "lessonNumber": 15,
+                                    "title": "More on Modeling Relationships with a Line",
+                                    "standards": [
+                                        "HSS-ID.B.6",
+                                        "HSS-ID.C.7"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m2-d-5",
+                                    "code": "K.M2.D.5",
+                                    "lessonNumber": 16,
+                                    "title": "Analyzing Residuals",
+                                    "standards": [
+                                        "HSS-ID.B.6"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m2-d-6",
+                                    "code": "K.M2.D.6",
+                                    "lessonNumber": 17,
+                                    "title": "Interpreting Correlation",
+                                    "standards": [
+                                        "HSS-ID.C.8",
+                                        "HSS-ID.C.9"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m2-d-7",
+                                    "code": "K.M2.D.7",
+                                    "lessonNumber": 18,
+                                    "title": "Analyzing Data Collected on Two Variables",
+                                    "standards": [
+                                        "HSS-ID.B.6"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "moduleNumber": 3,
+                    "title": "Linear and Exponential Functions",
+                    "description": "Exploring integer sequences, exponential growth, and graph transformations.",
+                    "topics": [
+                        {
+                            "letter": "A",
+                            "title": "Linear and Exponential Sequences",
+                            "lessons": [
+                                {
+                                    "id": "k-math-m3-a-1",
+                                    "code": "K.M3.A.1",
+                                    "lessonNumber": 1,
+                                    "title": "Integer Sequences Should You Believe in Patterns?",
+                                    "standards": [
+                                        "HSF-IF.A.3",
+                                        "HSF-BF.A.1"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m3-a-2",
+                                    "code": "K.M3.A.2",
+                                    "lessonNumber": 2,
+                                    "title": "Recursive Formulas for Sequences",
+                                    "standards": [
+                                        "HSF-IF.A.3",
+                                        "HSF-BF.A.2"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m3-a-3",
+                                    "code": "K.M3.A.3",
+                                    "lessonNumber": 3,
+                                    "title": "Arithmetic and Geometric Sequences",
+                                    "standards": [
+                                        "HSF-BF.A.2",
+                                        "HSF-LE.A.2"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m3-a-4",
+                                    "code": "K.M3.A.4",
+                                    "lessonNumber": 4,
+                                    "title": "Why Do Banks Pay YOU to Provide Their Services?",
+                                    "standards": [
+                                        "HSF-LE.A.1",
+                                        "HSF-LE.A.2"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m3-a-5",
+                                    "code": "K.M3.A.5",
+                                    "lessonNumber": 5,
+                                    "title": "The Power of Exponential Growth",
+                                    "standards": [
+                                        "HSF-LE.A.1"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m3-a-6",
+                                    "code": "K.M3.A.6",
+                                    "lessonNumber": 6,
+                                    "title": "Exponential Growth U.S. Population and World Population",
+                                    "standards": [
+                                        "HSF-LE.A.1",
+                                        "HSF-LE.A.2"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m3-a-7",
+                                    "code": "K.M3.A.7",
+                                    "lessonNumber": 7,
+                                    "title": "Exponential Decay",
+                                    "standards": [
+                                        "HSF-LE.A.1"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m3-a-8",
+                                    "code": "K.M3.A.8",
+                                    "lessonNumber": 8,
+                                    "title": "Reflections on Exponential Functions",
+                                    "standards": [
+                                        "HSF-LE.A.1",
+                                        "HSF-BF.B.3"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "letter": "B",
+                            "title": "Functions and Their Graphs",
+                            "lessons": [
+                                {
+                                    "id": "k-math-m3-b-1",
+                                    "code": "K.M3.B.1",
+                                    "lessonNumber": 9,
+                                    "title": "Why Stay with Whole Numbers?",
+                                    "standards": [
+                                        "HSF-IF.A.1",
+                                        "HSF-IF.A.2"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m3-b-2",
+                                    "code": "K.M3.B.2",
+                                    "lessonNumber": 10,
+                                    "title": "Representing, Naming, and Evaluating Functions",
+                                    "standards": [
+                                        "HSF-IF.A.1",
+                                        "HSF-IF.A.2"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m3-b-3",
+                                    "code": "K.M3.B.3",
+                                    "lessonNumber": 11,
+                                    "title": "The Graph of a Function",
+                                    "standards": [
+                                        "HSF-IF.B.4",
+                                        "HSF-IF.B.5"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m3-b-4",
+                                    "code": "K.M3.B.4",
+                                    "lessonNumber": 12,
+                                    "title": "The Graph of the Equation y=f(x)",
+                                    "standards": [
+                                        "HSF-IF.B.4",
+                                        "HSF-IF.C.7"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m3-b-5",
+                                    "code": "K.M3.B.5",
+                                    "lessonNumber": 13,
+                                    "title": "Interpreting the Graph of a Function",
+                                    "standards": [
+                                        "HSF-IF.B.4",
+                                        "HSF-IF.B.6"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m3-b-6",
+                                    "code": "K.M3.B.6",
+                                    "lessonNumber": 14,
+                                    "title": "Linear and Exponential Models Comparing Growth Rates",
+                                    "standards": [
+                                        "HSF-LE.A.1",
+                                        "HSF-LE.A.3"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "letter": "C",
+                            "title": "Transformations of Functions",
+                            "lessons": [
+                                {
+                                    "id": "k-math-m3-c-1",
+                                    "code": "K.M3.C.1",
+                                    "lessonNumber": 15,
+                                    "title": "Piecewise Functions",
+                                    "standards": [
+                                        "HSF-IF.C.7"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m3-c-2",
+                                    "code": "K.M3.C.2",
+                                    "lessonNumber": 16,
+                                    "title": "Graphs Can Solve Equations Too",
+                                    "standards": [
+                                        "HSA-REI.D.11"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m3-c-3",
+                                    "code": "K.M3.C.3",
+                                    "lessonNumber": 17,
+                                    "title": "Four Interesting Transformations of Functions",
+                                    "standards": [
+                                        "HSF-BF.B.3"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m3-c-4",
+                                    "code": "K.M3.C.4",
+                                    "lessonNumber": 18,
+                                    "title": "Stretching and Shrinking Graphs of Functions",
+                                    "standards": [
+                                        "HSF-BF.B.3"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m3-c-5",
+                                    "code": "K.M3.C.5",
+                                    "lessonNumber": 19,
+                                    "title": "Comparing Linear and Exponential Models",
+                                    "standards": [
+                                        "HSF-LE.A.1",
+                                        "HSF-LE.A.3"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "letter": "D",
+                            "title": "Using Functions and Graphs to Solve Problems",
+                            "lessons": [
+                                {
+                                    "id": "k-math-m3-d-1",
+                                    "code": "K.M3.D.1",
+                                    "lessonNumber": 20,
+                                    "title": "Comparing Linear and Exponential Models Again",
+                                    "standards": [
+                                        "HSF-LE.A.1",
+                                        "HSF-LE.A.3"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m3-d-2",
+                                    "code": "K.M3.D.2",
+                                    "lessonNumber": 21,
+                                    "title": "Modeling an Invasive Species Population",
+                                    "standards": [
+                                        "HSF-LE.A.1",
+                                        "HSF-BF.A.1"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m3-d-3",
+                                    "code": "K.M3.D.3",
+                                    "lessonNumber": 22,
+                                    "title": "Newtons Law of Cooling",
+                                    "standards": [
+                                        "HSF-LE.A.1",
+                                        "HSF-IF.B.4"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m3-d-4",
+                                    "code": "K.M3.D.4",
+                                    "lessonNumber": 23,
+                                    "title": "Piecewise and Step Functions in Context",
+                                    "standards": [
+                                        "HSF-IF.C.7"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "moduleNumber": 4,
+                    "title": "Polynomial and Quadratic Expressions, Equations, and Functions",
+                    "description": "Factoring polynomials, solving quadratic equations, and graphing parabolas.",
+                    "topics": [
+                        {
+                            "letter": "A",
+                            "title": "Quadratic Expressions, Equations, Functions, and Their Connection to Rectangles",
+                            "lessons": [
+                                {
+                                    "id": "k-math-m4-a-1",
+                                    "code": "K.M4.A.1",
+                                    "lessonNumber": 1,
+                                    "title": "Multiplying and Factoring Polynomial Expressions",
+                                    "standards": [
+                                        "HSA-SSE.A.2",
+                                        "HSA-APR.A.1"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m4-a-2",
+                                    "code": "K.M4.A.2",
+                                    "lessonNumber": 2,
+                                    "title": "Advanced Factoring Strategies for Quadratic Expressions",
+                                    "standards": [
+                                        "HSA-SSE.A.2"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m4-a-3",
+                                    "code": "K.M4.A.3",
+                                    "lessonNumber": 3,
+                                    "title": "The Zero Product Property",
+                                    "standards": [
+                                        "HSA-APR.B.3",
+                                        "HSA-REI.B.4"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m4-a-4",
+                                    "code": "K.M4.A.4",
+                                    "lessonNumber": 4,
+                                    "title": "Solving Basic One-Variable Quadratic Equations",
+                                    "standards": [
+                                        "HSA-REI.B.4"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m4-a-5",
+                                    "code": "K.M4.A.5",
+                                    "lessonNumber": 5,
+                                    "title": "Creating and Solving Quadratic Equations in One Variable",
+                                    "standards": [
+                                        "HSA-CED.A.1",
+                                        "HSA-REI.B.4"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m4-a-6",
+                                    "code": "K.M4.A.6",
+                                    "lessonNumber": 6,
+                                    "title": "Exploring the Symmetry in Graphs of Quadratic Functions",
+                                    "standards": [
+                                        "HSF-IF.B.4",
+                                        "HSF-IF.C.7"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m4-a-7",
+                                    "code": "K.M4.A.7",
+                                    "lessonNumber": 7,
+                                    "title": "Graphing Quadratic Functions from Factored Form",
+                                    "standards": [
+                                        "HSF-IF.C.7",
+                                        "HSA-APR.B.3"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m4-a-8",
+                                    "code": "K.M4.A.8",
+                                    "lessonNumber": 8,
+                                    "title": "Interpreting Quadratic Functions from Graphs and Tables",
+                                    "standards": [
+                                        "HSF-IF.B.4",
+                                        "HSF-IF.B.6"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "letter": "B",
+                            "title": "Using Different Forms for Quadratic Functions",
+                            "lessons": [
+                                {
+                                    "id": "k-math-m4-b-1",
+                                    "code": "K.M4.B.1",
+                                    "lessonNumber": 9,
+                                    "title": "Completing the Square",
+                                    "standards": [
+                                        "HSA-SSE.B.3",
+                                        "HSA-REI.B.4"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m4-b-2",
+                                    "code": "K.M4.B.2",
+                                    "lessonNumber": 10,
+                                    "title": "Solving Quadratic Equations by Completing the Square",
+                                    "standards": [
+                                        "HSA-REI.B.4"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m4-b-3",
+                                    "code": "K.M4.B.3",
+                                    "lessonNumber": 11,
+                                    "title": "Deriving the Quadratic Formula",
+                                    "standards": [
+                                        "HSA-REI.B.4"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m4-b-4",
+                                    "code": "K.M4.B.4",
+                                    "lessonNumber": 12,
+                                    "title": "Using the Quadratic Formula",
+                                    "standards": [
+                                        "HSA-REI.B.4"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m4-b-5",
+                                    "code": "K.M4.B.5",
+                                    "lessonNumber": 13,
+                                    "title": "Graphing Quadratic Equations from the Vertex Form",
+                                    "standards": [
+                                        "HSF-IF.C.7",
+                                        "HSA-SSE.B.3"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m4-b-6",
+                                    "code": "K.M4.B.6",
+                                    "lessonNumber": 14,
+                                    "title": "Graphing Quadratic Functions from the Standard Form",
+                                    "standards": [
+                                        "HSF-IF.C.7"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m4-b-7",
+                                    "code": "K.M4.B.7",
+                                    "lessonNumber": 15,
+                                    "title": "Applying the Quadratic Formula",
+                                    "standards": [
+                                        "HSA-CED.A.1",
+                                        "HSA-REI.B.4"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "letter": "C",
+                            "title": "Function Transformations and Modeling",
+                            "lessons": [
+                                {
+                                    "id": "k-math-m4-c-1",
+                                    "code": "K.M4.C.1",
+                                    "lessonNumber": 16,
+                                    "title": "Graphing Cubic, Square Root, and Cube Root Functions",
+                                    "standards": [
+                                        "HSF-IF.C.7"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m4-c-2",
+                                    "code": "K.M4.C.2",
+                                    "lessonNumber": 17,
+                                    "title": "Translating Graphs of Functions",
+                                    "standards": [
+                                        "HSF-BF.B.3"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m4-c-3",
+                                    "code": "K.M4.C.3",
+                                    "lessonNumber": 18,
+                                    "title": "Stretching and Shrinking Graphs of Functions",
+                                    "standards": [
+                                        "HSF-BF.B.3"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m4-c-4",
+                                    "code": "K.M4.C.4",
+                                    "lessonNumber": 19,
+                                    "title": "Transformations of the Quadratic Parent Function",
+                                    "standards": [
+                                        "HSF-BF.B.3"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m4-c-5",
+                                    "code": "K.M4.C.5",
+                                    "lessonNumber": 20,
+                                    "title": "Comparing Quadratic, Square Root, and Cube Root Functions Represented in Different Ways",
+                                    "standards": [
+                                        "HSF-IF.C.9"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m4-c-6",
+                                    "code": "K.M4.C.6",
+                                    "lessonNumber": 21,
+                                    "title": "Modeling with Quadratic Functions",
+                                    "standards": [
+                                        "HSF-BF.A.1",
+                                        "HSA-CED.A.1"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m4-c-7",
+                                    "code": "K.M4.C.7",
+                                    "lessonNumber": 22,
+                                    "title": "Modeling with Polynomials",
+                                    "standards": [
+                                        "HSF-BF.A.1",
+                                        "HSA-CED.A.1"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "moduleNumber": 5,
+                    "title": "A Synthesis of Modeling with Equations and Functions",
+                    "description": "Using linear, quadratic, and exponential models to evaluate and interpret real-world behaviors.",
+                    "topics": [
+                        {
+                            "letter": "A",
+                            "title": "Elements of Modeling",
+                            "lessons": [
+                                {
+                                    "id": "k-math-m5-a-1",
+                                    "code": "K.M5.A.1",
+                                    "lessonNumber": 1,
+                                    "title": "Analyzing a Graph",
+                                    "standards": [
+                                        "HSF-IF.B.4",
+                                        "HSF-LE.A.1"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m5-a-2",
+                                    "code": "K.M5.A.2",
+                                    "lessonNumber": 2,
+                                    "title": "Analyzing a Data Set",
+                                    "standards": [
+                                        "HSS-ID.B.6",
+                                        "HSF-LE.A.1"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m5-a-3",
+                                    "code": "K.M5.A.3",
+                                    "lessonNumber": 3,
+                                    "title": "Analyzing a Verbal Description",
+                                    "standards": [
+                                        "HSA-CED.A.1",
+                                        "HSF-LE.A.1"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "letter": "B",
+                            "title": "Completing the Modeling Cycle",
+                            "lessons": [
+                                {
+                                    "id": "k-math-m5-b-1",
+                                    "code": "K.M5.B.1",
+                                    "lessonNumber": 4,
+                                    "title": "Modeling a Context from a Graph",
+                                    "standards": [
+                                        "HSF-BF.A.1",
+                                        "HSF-IF.B.4"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m5-b-2",
+                                    "code": "K.M5.B.2",
+                                    "lessonNumber": 5,
+                                    "title": "Modeling from a Sequence",
+                                    "standards": [
+                                        "HSF-BF.A.2",
+                                        "HSF-LE.A.2"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m5-b-3",
+                                    "code": "K.M5.B.3",
+                                    "lessonNumber": 6,
+                                    "title": "Modeling a Context from Data",
+                                    "standards": [
+                                        "HSS-ID.B.6",
+                                        "HSF-BF.A.1"
+                                    ]
+                                },
+                                {
+                                    "id": "k-math-m5-b-4",
+                                    "code": "K.M5.B.4",
+                                    "lessonNumber": 7,
+                                    "title": "Modeling with Exponential Functions",
+                                    "standards": [
+                                        "HSF-LE.A.1",
+                                        "HSF-BF.A.1"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

@@ -1,11 +1,15 @@
 /**
  * Common Core State Standards (CCSS) Math & ELA Curriculum Loader
- * Dynamically loads standard data from:
+ * Dynamically loads standard data and curriculum outlines from:
  *   - assets/data/standards-ccss-math.json (Common Core Mathematics)
  *   - assets/data/standards-ccss-ela.json  (Common Core English Language Arts)
+ *   - assets/data/standards-ngss-science.json (NGSS Science)
+ *   - assets/data/standards-c3-social.json (C3 Social Studies)
+ *   - assets/data/curriculum-engageny-math.json (EngageNY Mathematics Outline)
  */
 (function() {
     window.curriculumData = window.curriculumData || {};
+    window.curriculumOutlines = window.curriculumOutlines || {};
     
     function mergeCurriculumData(target, source) {
         for (const key in source) {
@@ -48,10 +52,11 @@
     }
 
     const filesToLoad = [
-        { name: 'math',    url: baseDataDir + 'standards-ccss-math.json',    fallback: 'assets/data/standards-ccss-math.json' },
-        { name: 'ela',     url: baseDataDir + 'standards-ccss-ela.json',     fallback: 'assets/data/standards-ccss-ela.json' },
-        { name: 'science', url: baseDataDir + 'standards-ngss-science.json', fallback: 'assets/data/standards-ngss-science.json' },
-        { name: 'social',  url: baseDataDir + 'standards-c3-social.json',   fallback: 'assets/data/standards-c3-social.json' }
+        { name: 'math',          type: 'standards', url: baseDataDir + 'standards-ccss-math.json',       fallback: 'assets/data/standards-ccss-math.json' },
+        { name: 'ela',           type: 'standards', url: baseDataDir + 'standards-ccss-ela.json',        fallback: 'assets/data/standards-ccss-ela.json' },
+        { name: 'science',       type: 'standards', url: baseDataDir + 'standards-ngss-science.json',    fallback: 'assets/data/standards-ngss-science.json' },
+        { name: 'social',        type: 'standards', url: baseDataDir + 'standards-c3-social.json',      fallback: 'assets/data/standards-c3-social.json' },
+        { name: 'engagenyMath',  type: 'outline',   url: baseDataDir + 'curriculum-engageny-math.json',  fallback: 'assets/data/curriculum-engageny-math.json' }
     ];
 
     function fetchFile(item) {
@@ -63,23 +68,41 @@
                 return res;
             })
             .then(res => res.text())
-            .then(text => parseJSONC(text))
+            .then(text => ({
+                name: item.name,
+                type: item.type || 'standards',
+                data: parseJSONC(text)
+            }))
             .catch(err => {
-                console.warn(`Failed to load ${item.name} standards JSON:`, err);
-                return null;
+                console.warn(`Failed to load ${item.name} JSON:`, err);
+                return { name: item.name, type: item.type || 'standards', data: null };
             });
     }
 
-    // Load both math and ELA standards concurrently
+    // Load standards and curriculum outlines concurrently
     Promise.all(filesToLoad.map(fetchFile))
         .then(results => {
-            results.forEach(data => {
-                if (data) {
-                    mergeCurriculumData(window.curriculumData, data);
+            results.forEach(res => {
+                if (!res || !res.data) return;
+                if (res.type === 'outline') {
+                    const currName = res.data.curriculum || 'engageny';
+                    const subj = res.data.subject || 'math';
+                    if (!window.curriculumOutlines[currName]) {
+                        window.curriculumOutlines[currName] = {};
+                    }
+                    window.curriculumOutlines[currName][subj] = res.data;
+                } else {
+                    mergeCurriculumData(window.curriculumData, res.data);
                 }
             });
+            window.curriculumData.outlines = window.curriculumOutlines;
             window.curriculumDataLoaded = true;
-            window.dispatchEvent(new CustomEvent('curriculum-loaded', { detail: window.curriculumData }));
+            window.dispatchEvent(new CustomEvent('curriculum-loaded', {
+                detail: {
+                    standards: window.curriculumData,
+                    outlines: window.curriculumOutlines
+                }
+            }));
             
             // Re-render view if on the standards page
             if (typeof updateView === 'function') {
@@ -87,8 +110,9 @@
             }
         })
         .catch(err => {
-            console.error('Failed loading CCSS standards JSON files:', err);
+            console.error('Failed loading CCSS standards or curriculum outline JSON files:', err);
         });
 })();
 
 var curriculumData = window.curriculumData;
+var curriculumOutlines = window.curriculumOutlines;
