@@ -177,36 +177,314 @@ document.addEventListener("DOMContentLoaded", () => {
   const quizContainer = document.getElementById("quiz-container");
   const selectionContainer = document.getElementById("assessment-selection");
 
+  // === GRADE LEVEL BANDS & CURATED STARTERS ===
+  const GRADE_BANDS = {
+    elem: ["pre-k", "k", "1", "2", "3", "4", "5"],
+    middle: ["6", "7", "8"],
+    high: ["9", "10", "11", "12", "ap"]
+  };
+
+  const startersConfig = {
+    elem: [
+      {
+        title: "Pre-K Mid-Module 1 Observational Rubric",
+        category: "Early Childhood Math",
+        desc: "4-step counting, 1-to-1 correspondence, and number conservation rubric with printable conference reports.",
+        icon: "fa-shapes",
+        color: "bg-pink-500",
+        badge: "Observational Rubric",
+        badgeClass: "badge-pink",
+        href: "/assessment/GPK-MID-M1.php",
+        actionText: "Open Rubric"
+      },
+      {
+        title: "Kindergarten Phonics & Numbers Starter",
+        category: "Early Foundations",
+        desc: "5-question micro-starter assessing letter sounds, sight words, and basic counting to 10.",
+        icon: "fa-child",
+        color: "bg-purple-500",
+        badge: "Quick Check (5 Qs)",
+        badgeClass: "badge-purple",
+        href: "?grade=k&count=5",
+        actionText: "Launch Starter"
+      },
+      {
+        title: "Grade 3 Math & ELA Fast Sprint",
+        category: "Elementary Sprint",
+        desc: "5-minute timed rapid-fire diagnostic covering foundational multiplication, fractions, and reading comprehension.",
+        icon: "fa-bolt",
+        color: "bg-sky-500",
+        badge: "5-Min Sprint",
+        badgeClass: "badge-sky",
+        href: "?grade=3&mode=sprint&count=5",
+        actionText: "Start Sprint"
+      },
+      {
+        title: "Elementary Adaptive Growth Diagnostic",
+        category: "AI Adaptive Engine",
+        desc: "Dynamic skill evaluation that scaffolds difficulty based on real-time student responses to pinpoint exact mastery.",
+        icon: "fa-brain",
+        color: "bg-emerald-500",
+        badge: "Adaptive Screener",
+        badgeClass: "badge-emerald",
+        href: "/assessment/diagnostic.php",
+        actionText: "Launch Diagnostic"
+      }
+    ],
+    middle: [
+      {
+        title: "Grade 8 Pre-Algebra & Equations Starter",
+        category: "Expressions & Equations (8.EE)",
+        desc: "5-question targeted starter on multi-step linear equations, integer exponents, and square roots.",
+        icon: "fa-calculator",
+        color: "bg-yellow-600",
+        badge: "Standard 8.EE",
+        badgeClass: "badge-yellow",
+        href: "?grade=8&standard=8.EE&count=5",
+        actionText: "Launch Starter"
+      },
+      {
+        title: "Grade 7 Ratios & Proportional Reasoning",
+        category: "Ratios & Proportions (7.RP)",
+        desc: "Targeted check on unit rates, multistep ratio and percent problems, and proportional graphs.",
+        icon: "fa-balance-scale",
+        color: "bg-lime-600",
+        badge: "Standard 7.RP",
+        badgeClass: "badge-lime",
+        href: "?grade=7&standard=7.RP&count=5",
+        actionText: "Launch Starter"
+      },
+      {
+        title: "Grade 6 Rapid Diagnostic Sprint",
+        category: "Middle School Sprint",
+        desc: "High-tempo 5-question sprint testing Grade 6 ratio concepts, number systems, and algebraic reasoning.",
+        icon: "fa-bolt",
+        color: "bg-green-500",
+        badge: "5-Min Sprint",
+        badgeClass: "badge-green",
+        href: "?grade=6&mode=sprint&count=5",
+        actionText: "Start Sprint"
+      },
+      {
+        title: "Middle School Adaptive Growth Diagnostic",
+        category: "AI Adaptive Engine",
+        desc: "Comprehensive diagnostic assessing fractions, pre-algebra readiness, and critical informational text analysis.",
+        icon: "fa-brain",
+        color: "bg-teal-500",
+        badge: "Adaptive Screener",
+        badgeClass: "badge-teal",
+        href: "/assessment/diagnostic.php",
+        actionText: "Launch Diagnostic"
+      }
+    ],
+    high: [
+      {
+        title: "High School Algebra I Starter (HSA-SSE)",
+        category: "Algebraic Expressions",
+        desc: "5-question starter interpreting structure of quadratic expressions, factoring, and polynomial transformations.",
+        icon: "fa-atom",
+        color: "bg-orange-600",
+        badge: "Standard HSA-SSE",
+        badgeClass: "badge-orange",
+        href: "?grade=9&standard=HSA-SSE&count=5",
+        actionText: "Launch Starter"
+      },
+      {
+        title: "High School Biology & Life Systems (HS-LS1)",
+        category: "NGSS Life Science",
+        desc: "Starter check covering DNA transcription, protein synthesis, cellular transport, and homeostatic regulation.",
+        icon: "fa-dna",
+        color: "bg-red-600",
+        badge: "Standard HS-LS1",
+        badgeClass: "badge-red",
+        href: "?grade=10&standard=HS-LS1&count=5",
+        actionText: "Launch Starter"
+      },
+      {
+        title: "AP Computer Science A Starter",
+        category: "College Board Prep",
+        desc: "College Board-aligned starter evaluating Java syntax, control structures, object references, and array algorithms.",
+        icon: "fa-laptop-code",
+        color: "bg-indigo-900",
+        badge: "AP CSA Starter",
+        badgeClass: "badge-indigo",
+        href: "?grade=ap&standard=AP-CSA&count=5",
+        actionText: "Launch Starter"
+      },
+      {
+        title: "High School Adaptive Placement Diagnostic",
+        category: "AI Adaptive Engine",
+        desc: "Full multi-stage diagnostic evaluating advanced STEM, algebraic problem-solving, and synthesis reading.",
+        icon: "fa-graduation-cap",
+        color: "bg-rose-600",
+        badge: "Adaptive Screener",
+        badgeClass: "badge-rose",
+        href: "/assessment/diagnostic.php",
+        actionText: "Launch Diagnostic"
+      }
+    ]
+  };
+
+  startersConfig.all = [
+    startersConfig.elem[3],   // Adaptive Growth Diagnostic
+    startersConfig.elem[0],   // Pre-K Rubric
+    startersConfig.middle[0], // Grade 8 Pre-Algebra
+    startersConfig.high[2]    // AP CS A Starter
+  ];
+
+  function getLevelCategoryFromHash() {
+    const rawHash = (window.location.hash || "").toLowerCase().replace(/^#/, "").trim();
+    if (!rawHash) return "all";
+
+    // Clean any param style like high?xyz or high&xyz
+    const cleanHash = rawHash.split("&")[0].split("?")[0];
+
+    // High school aliases
+    if (["high", "hs", "highschool", "high-school", "9-12", "ap"].includes(cleanHash)) {
+      return "high";
+    }
+    // Middle school aliases
+    if (["middle", "ms", "middleschool", "middle-school", "junior-high", "6-8"].includes(cleanHash)) {
+      return "middle";
+    }
+    // Elementary aliases
+    if (["elem", "elementary", "primary", "p-5", "k-5", "prek-5"].includes(cleanHash)) {
+      return "elem";
+    }
+    return "all";
+  }
+
+  function renderLandingSelection(category) {
+    if (!selectionContainer) return;
+    selectionContainer.classList.remove("hidden");
+
+    // 1. Update active tab pill
+    document.querySelectorAll(".assessment-level-tab").forEach(tab => {
+      const level = tab.getAttribute("data-level");
+      const isActive = (level === category);
+      tab.classList.toggle("active", isActive);
+      tab.setAttribute("aria-selected", isActive ? "true" : "false");
+    });
+
+    // 2. Update Header Titles & Descriptions
+    const titleEl = document.getElementById("assessment-selection-title");
+    const subtitleEl = document.getElementById("assessment-selection-subtitle");
+    const startersTitleEl = document.getElementById("starters-section-title");
+    const startersDescEl = document.getElementById("starters-section-desc");
+    const gradesTitleEl = document.getElementById("grades-section-title");
+    const gradesDescEl = document.getElementById("grades-section-desc");
+    const countBadge = document.getElementById("grade-count-badge");
+
+    if (category === "high") {
+      if (titleEl) titleEl.textContent = "High School Assessments (Grades 9–12 & AP)";
+      if (subtitleEl) subtitleEl.textContent = "Explore high school standard-aligned knowledge checks, AP readiness starters, and comprehensive subject diagnostics.";
+      if (startersTitleEl) startersTitleEl.innerHTML = '<i class="fas fa-bolt text-amber-500"></i> High School Starters &amp; Diagnostics';
+      if (startersDescEl) startersDescEl.textContent = "Targeted micro-starters in Algebra I, NGSS Biology, AP Computer Science, and Adaptive Placement.";
+      if (gradesTitleEl) gradesTitleEl.innerHTML = '<i class="fas fa-graduation-cap text-indigo-500"></i> High School Grade Levels';
+      if (gradesDescEl) gradesDescEl.textContent = "Full-curriculum high school knowledge checks and AP course benchmarks.";
+      if (countBadge) countBadge.textContent = "Showing 5 High School Levels";
+    } else if (category === "middle") {
+      if (titleEl) titleEl.textContent = "Middle School Assessments (Grades 6–8)";
+      if (subtitleEl) subtitleEl.textContent = "Targeted knowledge checks covering pre-algebra, proportions, ratios, and middle school STEM foundations.";
+      if (startersTitleEl) startersTitleEl.innerHTML = '<i class="fas fa-bolt text-amber-500"></i> Middle School Starters &amp; Diagnostics';
+      if (startersDescEl) startersDescEl.textContent = "Targeted micro-starters in Pre-Algebra (8.EE), Ratios (7.RP), Grade 6 Sprint, and Adaptive Growth.";
+      if (gradesTitleEl) gradesTitleEl.innerHTML = '<i class="fas fa-compass text-indigo-500"></i> Middle School Grade Levels';
+      if (gradesDescEl) gradesDescEl.textContent = "Curriculum benchmarks designed for middle school standards mastery.";
+      if (countBadge) countBadge.textContent = "Showing 3 Middle School Levels";
+    } else if (category === "elem") {
+      if (titleEl) titleEl.textContent = "Elementary Assessments (Pre-K through Grade 5)";
+      if (subtitleEl) subtitleEl.textContent = "Foundational knowledge checks, early childhood observation rubrics, and diagnostic screeners.";
+      if (startersTitleEl) startersTitleEl.innerHTML = '<i class="fas fa-bolt text-amber-500"></i> Elementary Starters &amp; Diagnostics';
+      if (startersDescEl) startersDescEl.textContent = "Observational counting rubrics, kindergarten phonics, 3rd grade sprints, and adaptive screeners.";
+      if (gradesTitleEl) gradesTitleEl.innerHTML = '<i class="fas fa-shapes text-indigo-500"></i> Elementary Grade Levels';
+      if (gradesDescEl) gradesDescEl.textContent = "Foundational benchmarks supporting early numeracy, phonics, and elementary growth.";
+      if (countBadge) countBadge.textContent = "Showing 7 Elementary Levels";
+    } else {
+      if (titleEl) titleEl.textContent = "Select Your Assessment Level";
+      if (subtitleEl) subtitleEl.textContent = "Choose a grade level or launch a targeted starter assessment to begin your personalized knowledge check.";
+      if (startersTitleEl) startersTitleEl.innerHTML = '<i class="fas fa-bolt text-amber-500"></i> Featured Starters &amp; Diagnostics';
+      if (startersDescEl) startersDescEl.textContent = "Targeted micro-assessments, diagnostic screeners, and observational rubrics across all grade bands.";
+      if (gradesTitleEl) gradesTitleEl.innerHTML = '<i class="fas fa-book-reader text-indigo-500"></i> Grade Level Assessments';
+      if (gradesDescEl) gradesDescEl.textContent = "Comprehensive full-curriculum grade benchmarks aligned to state standards.";
+      if (countBadge) countBadge.textContent = "Showing 15 Grades";
+    }
+
+    // 3. Render Starters Cards
+    const startersGrid = document.getElementById("assessment-starters-grid");
+    if (startersGrid) {
+      startersGrid.innerHTML = "";
+      const list = startersConfig[category] || startersConfig.all;
+      list.forEach(item => {
+        const card = document.createElement("a");
+        card.href = item.href;
+        card.className = "assessment-starter-card";
+        card.innerHTML = `
+          <div class="assessment-starter-top">
+            <div class="assessment-starter-icon-box ${item.color || "bg-indigo-600"}">
+              <i class="fas ${item.icon || "fa-bolt"}"></i>
+            </div>
+            <span class="assessment-starter-badge ${item.badgeClass || "badge-indigo"}">${escapeHtml(item.badge)}</span>
+          </div>
+          <div class="assessment-starter-category">${escapeHtml(item.category)}</div>
+          <h3 class="assessment-starter-title">${escapeHtml(item.title)}</h3>
+          <p class="assessment-starter-desc">${escapeHtml(item.desc)}</p>
+          <span class="assessment-starter-btn">
+            ${escapeHtml(item.actionText)} <i class="fas fa-arrow-right"></i>
+          </span>
+        `;
+        startersGrid.appendChild(card);
+      });
+    }
+
+    // 4. Render Grade Level Cards
+    const grid = document.getElementById("grade-selection-grid");
+    if (grid) {
+      grid.innerHTML = "";
+      const allowedKeys = GRADE_BANDS[category] || Object.keys(gradeConfig);
+      allowedKeys.forEach(key => {
+        const info = gradeConfig[key];
+        if (!info) return;
+
+        const card = document.createElement("a");
+        card.href = `?grade=${key}`;
+        card.className = "assessment-grade-card group";
+
+        const iconColor = info.color || "bg-blue-500";
+
+        card.innerHTML = `
+          <div class="assessment-grade-card-icon-wrapper ${iconColor}">
+            <i class="fas ${info.icon || "fa-star"} text-white/30"></i>
+            <i class="fas ${info.icon || "fa-star"} text-white"></i>
+          </div>
+          <div class="assessment-grade-card-info">
+            <h3 class="assessment-grade-card-title">${escapeHtml(info.label)}</h3>
+            <span class="assessment-grade-card-action-text">Start Assessment <i class="fas fa-arrow-right" style="margin-left: 0.25rem;"></i></span>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+  }
+
   // === MODE 1: LANDING PAGE (No Grade Selected and No Targeted Standard) ===
   if (!grade || grade.trim() === "") {
     if (quizHeader) quizHeader.classList.add("hidden");
     if (quizContainer) quizContainer.classList.add("hidden");
-    if (selectionContainer) {
-      selectionContainer.classList.remove("hidden");
-      const grid = document.getElementById("grade-selection-grid");
-      if (grid) {
-        grid.innerHTML = ""; // Clear existing
-        Object.entries(gradeConfig).forEach(([key, info]) => {
-          const card = document.createElement("a");
-          card.href = `?grade=${key}`;
-          card.className = "assessment-grade-card group";
 
-          const iconColor = info.color || "bg-blue-500";
+    // Initial render based on URL hash
+    renderLandingSelection(getLevelCategoryFromHash());
 
-          card.innerHTML = `
-                        <div class="assessment-grade-card-icon-wrapper ${iconColor}">
-                            <i class="fas ${info.icon || "fa-star"} text-white/30"></i>
-                            <i class="fas ${info.icon || "fa-star"} text-white"></i>
-                        </div>
-                        <div class="assessment-grade-card-info">
-                            <h3 class="assessment-grade-card-title">${info.label}</h3>
-                            <span class="assessment-grade-card-action-text">Start Assessment <i class="fas fa-arrow-right" style="margin-left: 0.25rem;"></i></span>
-                        </div>
-                    `;
-          grid.appendChild(card);
-        });
+    // Listen to hashchange event so switching #elem, #middle, #high works dynamically
+    window.addEventListener("hashchange", () => {
+      // If a standard is targeted via hash (e.g. #standard=8.EE), reload to start quiz
+      const newStandard = getHashStandard();
+      if (newStandard) {
+        window.location.reload();
+        return;
       }
-    }
+      renderLandingSelection(getLevelCategoryFromHash());
+    });
+
     return; // Stop here, do not load quiz logic
   }
 

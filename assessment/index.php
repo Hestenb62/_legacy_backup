@@ -9,16 +9,66 @@ include '../src/header.php';
 <!-- Assessment Selection View (Hidden by default, shown if no grade selected) -->
 <div id="assessment-selection" class="assessment-select-section hidden">
     <div class="assessment-select-header">
-        <h1 class="assessment-select-title">
+        <div class="assessment-select-badge">
+            <i class="fas fa-layer-group"></i> Level Navigator &amp; Starters
+        </div>
+        <h1 class="assessment-select-title" id="assessment-selection-title">
             Select Your Assessment Level
         </h1>
-        <p class="assessment-select-subtitle">
-            Choose a grade level to begin your personalized knowledge check. We'll track your progress as you go.
+        <p class="assessment-select-subtitle" id="assessment-selection-subtitle">
+            Choose a grade level or launch a targeted starter assessment to begin your personalized knowledge check.
         </p>
+
+        <!-- Category Level Filter Tabs (#all, #elem, #middle, #high) -->
+        <div class="assessment-level-tabs" role="tablist" aria-label="Assessment Grade Bands">
+            <a href="#all" class="assessment-level-tab active" data-level="all" role="tab" aria-selected="true">
+                <i class="fas fa-th-large"></i> All Levels
+            </a>
+            <a href="#elem" class="assessment-level-tab" data-level="elem" role="tab" aria-selected="false">
+                <i class="fas fa-shapes"></i> Elementary (P–5)
+            </a>
+            <a href="#middle" class="assessment-level-tab" data-level="middle" role="tab" aria-selected="false">
+                <i class="fas fa-compass"></i> Middle School (6–8)
+            </a>
+            <a href="#high" class="assessment-level-tab" data-level="high" role="tab" aria-selected="false">
+                <i class="fas fa-graduation-cap"></i> High School (9–12 &amp; AP)
+            </a>
+        </div>
     </div>
 
-    <div id="grade-selection-grid" class="grade-selection-grid">
-        <!-- Grid items injected by JS -->
+    <!-- Quick Starters Section -->
+    <div id="assessment-starters-section" class="assessment-starters-section">
+        <div class="assessment-section-header">
+            <div>
+                <h2 class="assessment-section-title" id="starters-section-title">
+                    <i class="fas fa-bolt text-amber-500"></i> Featured Starters &amp; Diagnostics
+                </h2>
+                <p class="assessment-section-desc" id="starters-section-desc">
+                    Targeted micro-assessments, diagnostic screeners, and observational rubrics.
+                </p>
+            </div>
+        </div>
+        <div id="assessment-starters-grid" class="assessment-starters-grid">
+            <!-- Rendered dynamically by JS based on hash -->
+        </div>
+    </div>
+
+    <!-- Grade Selection Section -->
+    <div class="assessment-grades-section">
+        <div class="assessment-section-header">
+            <div>
+                <h2 class="assessment-section-title" id="grades-section-title">
+                    <i class="fas fa-book-reader text-indigo-500"></i> Grade Level Assessments
+                </h2>
+                <p class="assessment-section-desc" id="grades-section-desc">
+                    Comprehensive full-curriculum grade benchmarks aligned to state standards.
+                </p>
+            </div>
+            <span id="grade-count-badge" class="assessment-count-pill">Showing 15 Grades</span>
+        </div>
+        <div id="grade-selection-grid" class="grade-selection-grid">
+            <!-- Grid items injected by JS based on hash -->
+        </div>
     </div>
 </div>
 
