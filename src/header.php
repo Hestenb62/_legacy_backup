@@ -152,13 +152,32 @@ if (!function_exists('assetVersion')) {
 
         window.ensureMathJax = function() {
             return new Promise((resolve, reject) => {
+                const onReady = (mj) => {
+                    if (mj && mj.typesetPromise && !mj._dyscalculiaHooked) {
+                        mj._dyscalculiaHooked = true;
+                        const origTypeset = mj.typesetPromise.bind(mj);
+                        mj.typesetPromise = function(elements) {
+                            return origTypeset(elements).then(res => {
+                                if (window.accommodationEngine && window.accommodationEngine.profile.dyscalculiaEnabled) {
+                                    window.accommodationEngine.colorizeMathSymbols();
+                                }
+                                return res;
+                            });
+                        };
+                    }
+                    if (window.accommodationEngine && window.accommodationEngine.profile.dyscalculiaEnabled) {
+                        setTimeout(() => window.accommodationEngine.colorizeMathSymbols(), 100);
+                    }
+                    resolve(mj);
+                };
+
                 if (window.MathJax && window.MathJax.typesetPromise) {
-                    resolve(window.MathJax);
+                    onReady(window.MathJax);
                     return;
                 }
                 const existing = document.getElementById('MathJax-script');
                 if (existing) {
-                    existing.addEventListener('load', () => resolve(window.MathJax));
+                    existing.addEventListener('load', () => onReady(window.MathJax));
                     existing.addEventListener('error', reject);
                     return;
                 }
@@ -171,10 +190,10 @@ if (!function_exists('assetVersion')) {
                     const poll = setInterval(() => {
                         if (window.MathJax && window.MathJax.typesetPromise) {
                             clearInterval(poll);
-                            resolve(window.MathJax);
+                            onReady(window.MathJax);
                         } else if (++tries > 20) {
                             clearInterval(poll);
-                            resolve(window.MathJax);
+                            onReady(window.MathJax);
                         }
                     }, 50);
                 };
@@ -201,6 +220,7 @@ if (!function_exists('assetVersion')) {
     <link rel="stylesheet" href="<?= assetVersion('/assets/css/components/command-palette.css') ?>">
     <link rel="stylesheet" href="<?= assetVersion('/assets/css/components/shortcuts-modal.css') ?>">
     <link rel="stylesheet" href="<?= assetVersion('/assets/css/components/quest-badges.css') ?>">
+    <link rel="stylesheet" href="<?= assetVersion('/assets/css/components/accommodations.css') ?>">
     <link rel="stylesheet" href="<?= assetVersion('/assets/css/layouts/header.css') ?>">
     <link rel="stylesheet" href="<?= assetVersion('/assets/css/layouts/footer.css') ?>">
     <link rel="stylesheet" href="<?= assetVersion('/assets/css/layouts/print.css') ?>" media="print">
@@ -223,6 +243,7 @@ if (!function_exists('assetVersion')) {
     <?php include __DIR__ . '/partials/citation.php'; ?>
     <?php include __DIR__ . '/partials/flashcard-studio.php'; ?>
     <?php include __DIR__ . '/partials/quest-badges-modal.php'; ?>
+    <?php include __DIR__ . '/partials/accommodations-modal.php'; ?>
 
     <!-- Scroll Progress Indicator -->
     <div class="scroll-progress-container" style="position: fixed; top: 0; left: 0; width: 100%; height: 3px; z-index: 100;">

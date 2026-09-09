@@ -15,6 +15,7 @@
             <button id="scratchpad-toggle" class="fab-item-btn fab-scratchpad" title="Scratchpad (Alt+S)" type="button"><i class="fas fa-pen"></i></button>
             <button id="flashcard-toggle" onclick="window.toggleFlashcardStudio ? window.toggleFlashcardStudio() : null" class="fab-item-btn fab-flashcards" title="Flashcard Studio (Alt+F)" type="button"><i class="fas fa-layer-group"></i></button>
             <button id="quest-toggle" onclick="window.toggleQuestStudio ? window.toggleQuestStudio() : null" class="fab-item-btn fab-quests" title="Quests & Achievements (Alt+Q)" type="button"><i class="fas fa-trophy"></i></button>
+            <button id="acc-studio-toggle" onclick="window.toggleAccommodationsStudio ? window.toggleAccommodationsStudio() : null" class="fab-item-btn fab-accommodations" title="IEP Accommodations & Focus (Alt+O)" type="button"><i class="fas fa-glasses"></i></button>
             <button id="a11y-toggle-button" class="fab-item-btn fab-a11y" title="Accessibility (Alt+A)" type="button"><i class="fas fa-universal-access"></i></button>
             <button onclick="window.toggleShortcutsModal ? window.toggleShortcutsModal() : null" class="fab-item-btn fab-shortcuts" title="Keyboard Shortcuts (?)" type="button"><i class="fas fa-keyboard"></i></button>
         </div>

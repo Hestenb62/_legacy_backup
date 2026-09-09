@@ -79,6 +79,41 @@ include '../src/header.php';
             </div>
         </div>
 
+        <!-- Phase 3 Feature Hub: Interactive Labs & Adaptive Diagnostic -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+            <!-- Interactive Labs Card -->
+            <div class="glass-panel" style="padding: 1.5rem; border-radius: var(--radius-2xl); border: 1px solid color-mix(in srgb, #3b82f6 30%, var(--color-border)); background: radial-gradient(circle at top left, color-mix(in srgb, #3b82f6 10%, var(--color-bg-surface)), var(--color-bg-surface)); display: flex; flex-direction: column; justify-content: space-between; gap: 1rem;">
+                <div>
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
+                        <span style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; padding: 0.2rem 0.6rem; border-radius: var(--radius-sm); background: rgba(59, 130, 246, 0.15); color: #3b82f6;">Multi-Sensory Labs</span>
+                        <i class="fas fa-flask" style="font-size: 1.5rem; color: #3b82f6;"></i>
+                    </div>
+                    <h3 style="margin: 0 0 0.35rem 0; font-size: 1.2rem; font-weight: 900; color: var(--color-text-main);">Interactive Virtual Manipulatives</h3>
+                    <p style="margin: 0; font-size: 0.875rem; color: var(--color-text-muted); line-height: 1.4;">Tactile fraction strips, phonics morpheme constructors, physics balance scales, and chronological history sorters.</p>
+                </div>
+                <a href="/student/interactive-labs.php" class="subpage-link-btn" style="padding: 0.65rem 1.25rem; border-radius: var(--radius-full); background: #3b82f6; color: white; border: none; font-weight: 800; font-size: 0.875rem; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; text-decoration: none;">
+                    <span>Open Interactive Labs</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- Adaptive Diagnostic Card -->
+            <div class="glass-panel" style="padding: 1.5rem; border-radius: var(--radius-2xl); border: 1px solid color-mix(in srgb, #10b981 30%, var(--color-border)); background: radial-gradient(circle at top right, color-mix(in srgb, #10b981 10%, var(--color-bg-surface)), var(--color-bg-surface)); display: flex; flex-direction: column; justify-content: space-between; gap: 1rem;">
+                <div>
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
+                        <span style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; padding: 0.2rem 0.6rem; border-radius: var(--radius-sm); background: rgba(16, 185, 129, 0.15); color: #10b981;">Adaptive Diagnostic</span>
+                        <i class="fas fa-brain" style="font-size: 1.5rem; color: #10b981;"></i>
+                    </div>
+                    <h3 style="margin: 0 0 0.35rem 0; font-size: 1.2rem; font-weight: 900; color: var(--color-text-main);">Personalized Learning Prescription</h3>
+                    <p style="margin: 0; font-size: 0.875rem; color: var(--color-text-muted); line-height: 1.4;">Take an adaptive evaluation that diagnoses standard skill gaps and automatically generates a targeted remediation plan.</p>
+                </div>
+                <a href="/assessment/diagnostic.php" class="subpage-link-btn" style="padding: 0.65rem 1.25rem; border-radius: var(--radius-full); background: #10b981; color: white; border: none; font-weight: 800; font-size: 0.875rem; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; text-decoration: none;">
+                    <span>Start Adaptive Diagnostic</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
         <!-- Continue Learning / Recent Activity -->
         <div id="continue-learning-container" class="continue-learning-section" style="display: none;">
             <h2 class="section-title">Continue Learning</h2>

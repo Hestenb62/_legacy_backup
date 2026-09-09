@@ -1,0 +1,497 @@
+/* assets/css/pages/interactive-labs.css */
+
+.labs-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem 1.5rem;
+}
+
+/* Hero Section */
+.labs-hero {
+  background: radial-gradient(circle at top left, color-mix(in srgb, var(--color-primary) 18%, var(--color-bg-surface)), var(--color-bg-surface));
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl);
+  padding: 2.5rem 2rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.labs-hero-title {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--color-text-main);
+  margin: 0 0 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.labs-hero-desc {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  max-width: 44rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Tabs Navigation */
+.labs-tabs-nav {
+  display: flex;
+  gap: 0.75rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.lab-tab-btn {
+  padding: 0.85rem 1.5rem;
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-weight: 800;
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.lab-tab-btn:hover {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  background: color-mix(in srgb, var(--color-primary) 8%, transparent);
+}
+
+.lab-tab-btn.active {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-md);
+}
+
+/* Workbench Cards */
+.lab-workbench {
+  display: none;
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl);
+  padding: 2rem;
+  box-shadow: var(--shadow-xl);
+  animation: labFadeIn 0.3s ease forwards;
+}
+
+.lab-workbench.active {
+  display: block;
+}
+
+@keyframes labFadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.wb-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.wb-title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--color-text-main);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.wb-desc {
+  margin: 0.35rem 0 0 0;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+/* 1. Math Fraction Workbench */
+.fraction-palette {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+  background: var(--color-bg-base);
+  padding: 1rem;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-border);
+}
+
+.fraction-strip-item {
+  padding: 0.6rem 1.1rem;
+  border-radius: var(--radius-md);
+  color: white;
+  font-weight: 800;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.fraction-strip-item:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: var(--shadow-md);
+}
+
+.math-target-bar-wrap {
+  margin-bottom: 1.5rem;
+}
+
+.target-bar-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--color-text-main);
+  margin-bottom: 0.4rem;
+}
+
+.math-target-track {
+  height: 1.25rem;
+  background: var(--color-bg-base);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  position: relative;
+}
+
+.math-target-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary), #10b981);
+  transition: width 0.3s ease;
+}
+
+.math-drop-zone {
+  min-height: 5.5rem;
+  background: var(--color-bg-base);
+  border: 2px dashed var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+.active-fraction-piece {
+  min-width: 4rem;
+  height: 3.5rem;
+  border-radius: var(--radius-lg);
+  color: white;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.75rem;
+  box-shadow: var(--shadow-sm);
+  animation: popIn 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes popIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.remove-strip-btn {
+  background: rgba(0, 0, 0, 0.25);
+  border: none;
+  color: white;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}
+
+/* 2. ELA Morpheme Workbench */
+.morpheme-palette {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.morpheme-column {
+  background: var(--color-bg-base);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 1rem;
+}
+
+.morpheme-column h4 {
+  margin: 0 0 0.75rem 0;
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.morpheme-piece-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.morpheme-piece {
+  padding: 0.45rem 0.85rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-surface);
+  color: var(--color-text-main);
+  font-weight: 800;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.morpheme-piece:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-primary);
+  background: color-mix(in srgb, var(--color-primary) 10%, transparent);
+}
+
+.morpheme-piece.used {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.ela-drop-zone {
+  min-height: 5rem;
+  background: var(--color-bg-base);
+  border: 2px dashed var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.active-morpheme-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.85rem;
+  border-radius: var(--radius-lg);
+  font-weight: 800;
+  box-shadow: var(--shadow-sm);
+}
+
+.tag-prefix { background: #dbeafe; color: #1e40af; border: 1px solid #bfdbfe; }
+.tag-root { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
+.tag-suffix { background: #dcfce7; color: #166534; border: 1px solid #bbf7d0; }
+
+.remove-morpheme {
+  background: transparent;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: inherit;
+  opacity: 0.7;
+}
+
+.remove-morpheme:hover {
+  opacity: 1;
+}
+
+/* 3. Science Balance Scale Workbench */
+.science-scale-stage {
+  background: var(--color-bg-base);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl);
+  padding: 2.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.scale-fulcrum-wrap {
+  position: relative;
+  width: 320px;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.scale-beam {
+  position: absolute;
+  top: 40px;
+  width: 280px;
+  height: 12px;
+  background: var(--color-primary);
+  border-radius: var(--radius-full);
+  transform-origin: center center;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.scale-pan-left,
+.scale-pan-right {
+  position: absolute;
+  top: 12px;
+  width: 60px;
+  height: 40px;
+  background: var(--color-bg-surface);
+  border: 2px solid var(--color-border);
+  border-radius: 0 0 16px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.scale-pan-left { left: 10px; }
+.scale-pan-right { right: 10px; }
+
+.scale-fulcrum {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 60px solid var(--color-text-muted);
+}
+
+.scale-controls-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+.scale-pan-control-card {
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* 4. Social Timeline Sorter */
+.timeline-slots-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.timeline-sort-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: var(--color-bg-base);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.timeline-sort-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-md);
+}
+
+.timeline-slot-num {
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: var(--color-primary);
+  width: 2rem;
+}
+
+.timeline-card-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-grow: 1;
+}
+
+.timeline-card-content i {
+  font-size: 1.35rem;
+  color: var(--color-primary);
+}
+
+.timeline-shift-controls {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.btn-shift-up,
+.btn-shift-down {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-surface);
+  color: var(--color-text-main);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+}
+
+.btn-shift-up:hover:not(:disabled),
+.btn-shift-down:hover:not(:disabled) {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+.btn-shift-up:disabled,
+.btn-shift-down:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* Actions & Feedback */
+.wb-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.feedback-container {
+  font-size: 0.95rem;
+  font-weight: 700;
+}

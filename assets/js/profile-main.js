@@ -318,9 +318,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const standardsTestedCount = Object.keys(standardsMastery).length;
         const standardsMasteredCount = Object.values(standardsMastery).filter(s => s.bestScore >= 80).length;
 
+        const userBookmarks = getUniversalBookmarksList('all');
+
         const badges = [
-            { id: 'first-book', icon: 'fas fa-book', color: 'blue', title: 'First Book', condition: bookmarks.length >= 1 },
-            { id: 'avid-reader', icon: 'fas fa-book-reader', color: 'gold', title: 'Avid Reader', condition: bookmarks.length >= 5 },
+            { id: 'first-book', icon: 'fas fa-book', color: 'blue', title: 'First Book', condition: userBookmarks.length >= 1 },
+            { id: 'avid-reader', icon: 'fas fa-book-reader', color: 'gold', title: 'Avid Reader', condition: userBookmarks.length >= 5 },
             { id: 'highlighter', icon: 'fas fa-highlighter', color: 'green', title: 'Highlighter', condition: allHighlights.length >= 1 },
             { id: 'scholar', icon: 'fas fa-pen-fancy', color: 'gold', title: 'Scholar', condition: allNotes >= 5 },
             { id: 'std-tester', icon: 'fas fa-crosshairs', color: 'blue', title: 'First Benchmark', condition: standardsTestedCount >= 1 },

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'hestens-learning-v11';
+const CACHE_NAME = 'hestens-learning-v12';
 const ASSETS_TO_CACHE = [
 
   // Main Directory Pages & Manifest
@@ -8,9 +8,11 @@ const ASSETS_TO_CACHE = [
   '/updates.php',
   '/manifest.json',
   '/assessment/index.php',
+  '/assessment/diagnostic.php',
   '/library/index.php',
   '/student/index.php',
   '/student/skill-tree.php',
+  '/student/interactive-labs.php',
 
   // Pages Directory
   '/pages/accessibility.php',
@@ -33,15 +35,21 @@ const ASSETS_TO_CACHE = [
   '/assets/css/pages/accessibility.css',
   '/assets/css/pages/updates.css',
   '/assets/css/pages/skill-tree.css',
+  '/assets/css/pages/interactive-labs.css',
+  '/assets/css/pages/diagnostic.css',
   '/assets/css/components/fixed-tools.css',
   '/assets/css/components/quest-badges.css',
+  '/assets/css/components/accommodations.css',
   '/assets/css/layouts/header.css',
   '/assets/css/layouts/footer.css',
 
   // JavaScript Core & Data
   '/assets/js/assessment-core.js',
   '/assets/js/assessment-questionGenerator.js',
+  '/assets/js/assessment/adaptive-diagnostic.js',
   '/assets/js/global-a11y.js',
+  '/assets/js/accessibility/accommodation-engine.js',
+  '/assets/js/labs/interactive-labs.js',
   '/assets/js/offline-status.js',
   '/assets/js/offline-storage-manager.js',
   // Statutory & Standards Research Documents
