@@ -315,7 +315,6 @@
                                 <div class="curr-search-box">
                                     <i class="fas fa-search curr-search-icon"></i>
                                     <input type="text" id="standards-search-input" placeholder="Search standards by code, keyword, or domain..." autocomplete="off" oninput="handleStandardsSearch()" />
-                                    <span class="curr-search-kbd-hint"><kbd>Ctrl</kbd> <kbd>K</kbd></span>
                                     <button type="button" id="standards-search-clear" class="curr-search-clear" title="Clear search" style="display: none;" onclick="clearStandardsSearch()">
                                         <i class="fas fa-times"></i>
                                     </button>
@@ -328,9 +327,6 @@
                                     </label>
                                     <button type="button" id="btn-toggle-accordions" class="curr-btn-accordion-toggle" onclick="toggleAllAccordions()" title="Expand or collapse all domain sections">
                                         <i class="fas fa-compress-alt"></i> <span id="toggle-accordions-text">Collapse All</span>
-                                    </button>
-                                    <button type="button" id="btn-open-glossary" class="curr-btn-accordion-toggle" onclick="openGlossaryModal()" title="Open official CCSS Mathematics Glossary & Reference Tables">
-                                        <i class="fas fa-book-bookmark" style="color: #f59e0b;"></i> <span>Glossary</span>
                                     </button>
                                 </div>
                             </div>
@@ -909,14 +905,49 @@
             allAccordionsExpanded = true;
             updateAccordionToggleBtnState();
 
-            // Build Domain Filter Pills
+            // Helper to extract standard numbers and letters for domain buttons (e.g. "K.CC", "8.EE", "HSA-SSE")
+            function getDomainShortCode(domainStr) {
+                if (!domainStr) return '';
+                const trimmed = domainStr.trim();
+                // 1. Prefix code like "HS-PS: Physical Sciences..."
+                const prefixMatch = trimmed.match(/^([A-Z0-9]+(?:-[A-Z0-9]+)*):/i);
+                if (prefixMatch && prefixMatch[1].length <= 12) {
+                    return prefixMatch[1].trim();
+                }
+                // 2. Parentheses code at end like "Counting and Cardinality (K.CC)"
+                const parenMatch = trimmed.match(/\(([^()]+)\)\s*$/);
+                if (parenMatch) {
+                    const candidate = parenMatch[1].trim();
+                    if (/^[A-Za-z0-9\.\-\/\s]+$/.test(candidate) && candidate.length <= 25) {
+                        return candidate;
+                    }
+                }
+                // 3. Any parenthetical containing standard letters/numbers
+                const allParens = trimmed.match(/\(([^()]+)\)/g);
+                if (allParens) {
+                    for (let i = allParens.length - 1; i >= 0; i--) {
+                        const candidate = allParens[i].replace(/[()]/g, '').trim();
+                        if (/^[A-Za-z0-9\.\-\/\s]+$/.test(candidate) && candidate.length <= 20 && /[0-9]/.test(candidate)) {
+                            return candidate;
+                        }
+                    }
+                }
+                // 4. Short strings as-is
+                if (trimmed.length <= 15) {
+                    return trimmed;
+                }
+                return trimmed;
+            }
+
+            // Build Domain Filter Pills (Displaying Standard Numbers & Letters)
             const filterBar = document.getElementById('domain-filters-bar');
             currentDomainFilter = 'all';
             if (filterBar) {
                 if (domainSet.size > 1) {
                     let pillsHtml = `<button type="button" class="curr-domain-pill active" data-domain="all" onclick="filterByDomain('all')">All (${standardItems.length})</button>`;
                     domainSet.forEach(domain => {
-                        pillsHtml += `<button type="button" class="curr-domain-pill" data-domain="${escapeAttr(domain)}" onclick="filterByDomain('${escapeAttr(domain)}')" title="${escapeAttr(domain)}">${escapeHtml(domain)}</button>`;
+                        const shortCode = getDomainShortCode(domain);
+                        pillsHtml += `<button type="button" class="curr-domain-pill" data-domain="${escapeAttr(domain)}" onclick="filterByDomain('${escapeAttr(domain)}')" title="${escapeAttr(domain)}">${escapeHtml(shortCode)}</button>`;
                     });
                     filterBar.innerHTML = pillsHtml;
                     filterBar.style.display = 'flex';
