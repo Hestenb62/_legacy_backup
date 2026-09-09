@@ -220,6 +220,7 @@ if (!function_exists('assetVersion')) {
     <?php include __DIR__ . '/partials/timer.php'; ?>
     <?php include __DIR__ . '/partials/scratchpad.php'; ?>
     <?php include __DIR__ . '/partials/citation.php'; ?>
+    <?php include __DIR__ . '/partials/flashcard-studio.php'; ?>
 
     <!-- Scroll Progress Indicator -->
     <div class="scroll-progress-container" style="position: fixed; top: 0; left: 0; width: 100%; height: 3px; z-index: 100;">

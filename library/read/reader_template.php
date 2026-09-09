@@ -472,13 +472,17 @@ body.zen-mode {
 <!-- Inline Highlighting & Annotation Floating Toolbar -->
 <div id="highlight-toolbar" class="highlight-toolbar hidden" role="toolbar" aria-label="Text Highlight Tools">
     <div class="hl-colors-group">
-        <button type="button" id="hl-color-yellow" class="hl-color-btn hl-yellow" title="Highlight Yellow" aria-label="Highlight Yellow"></button>
-        <button type="button" id="hl-color-pink" class="hl-color-btn hl-pink" title="Highlight Pink" aria-label="Highlight Pink"></button>
-        <button type="button" id="hl-color-green" class="hl-color-btn hl-green" title="Highlight Green" aria-label="Highlight Green"></button>
+        <button type="button" id="hl-color-yellow" class="hl-color-btn hl-yellow" title="Key Idea (Goldenrod)" aria-label="Highlight Key Idea"></button>
+        <button type="button" id="hl-color-green" class="hl-color-btn hl-green" title="Supporting Evidence (Seafoam)" aria-label="Highlight Supporting Evidence"></button>
+        <button type="button" id="hl-color-blue" class="hl-color-btn hl-blue" title="Vocabulary &amp; Terms (Cyan)" aria-label="Highlight Vocabulary"></button>
+        <button type="button" id="hl-color-pink" class="hl-color-btn hl-pink" title="Question &amp; Review (Coral)" aria-label="Highlight Question"></button>
     </div>
     <div class="hl-sep"></div>
     <button type="button" id="hl-btn-note" class="hl-action-btn" title="Add Study Note" aria-label="Add Study Note">
         <i class="fas fa-sticky-note"></i> <span>Note</span>
+    </button>
+    <button type="button" id="hl-btn-flashcard" class="hl-action-btn" title="Create Flashcard in Leitner Studio" aria-label="Create Flashcard">
+        <i class="fas fa-layer-group"></i> <span>+ Card</span>
     </button>
     <button type="button" id="hl-btn-copy" class="hl-action-btn" title="Copy Quote" aria-label="Copy Quote">
         <i class="fas fa-copy"></i> <span>Copy</span>

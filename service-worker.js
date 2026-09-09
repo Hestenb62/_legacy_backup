@@ -1,4 +1,4 @@
-const CACHE_NAME = 'hestens-learning-v9';
+const CACHE_NAME = 'hestens-learning-v10';
 const ASSETS_TO_CACHE = [
 
   // Main Directory Pages & Manifest
@@ -48,6 +48,7 @@ const ASSETS_TO_CACHE = [
   '/assets/texts/accessability-udl.md',
   '/assets/js/global-standard.js',
   '/assets/js/global-study-tools.js',
+  '/assets/js/flashcard-studio.js',
   '/assets/js/index-main.js',
   '/assets/js/global-announcements.js',
   '/assets/js/global-core-ui.js',

@@ -220,7 +220,8 @@ body.dark .tts-active-sentence {
 mark, 
 .hl-yellow, 
 .hl-pink, 
-.hl-green {
+.hl-green,
+.hl-blue {
     font-size: inherit !important;
     font-family: inherit !important;
     line-height: inherit !important;
@@ -241,6 +242,12 @@ mark,
 
 .hl-green {
     background-color: rgba(110, 231, 183, 0.6);
+    border-radius: 0.2rem;
+    padding: 0 0.15rem;
+}
+
+.hl-blue {
+    background-color: rgba(103, 232, 249, 0.6);
     border-radius: 0.2rem;
     padding: 0 0.15rem;
 }

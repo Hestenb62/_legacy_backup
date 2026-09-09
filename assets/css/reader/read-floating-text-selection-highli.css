@@ -56,6 +56,10 @@
     background: radial-gradient(circle at 35% 35%, #a7f3d0, #10b981);
 }
 
+.hl-color-btn.hl-blue {
+    background: radial-gradient(circle at 35% 35%, #a5f3fc, #06b6d4);
+}
+
 .hl-sep {
     width: 1px;
     height: 1.35rem;
@@ -80,5 +84,50 @@
 
 .hl-action-btn:hover {
     background-color: rgba(255, 255, 255, 0.18);
+    transform: translateY(-1px);
+}
+
+/* Marginalia Note Indicator Badge */
+mark[data-note] {
+    position: relative;
+    cursor: help;
+}
+
+mark[data-note]::after {
+    content: " 📝";
+    font-size: 0.75rem;
+    vertical-align: super;
+    cursor: pointer;
+}
+
+/* Study Guide Export Controls */
+.study-guide-export-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding: 0.75rem 1rem;
+    background: var(--color-bg-muted, #f8fafc);
+    border-radius: 12px;
+    border: 1px solid var(--color-border, #e2e8f0);
+}
+
+.export-study-guide-btn {
+    background: var(--color-primary, #6366f1);
+    color: #ffffff;
+    border: none;
+    padding: 0.45rem 0.95rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: all 0.2s ease;
+}
+
+.export-study-guide-btn:hover {
+    filter: brightness(1.1);
     transform: translateY(-1px);
 }

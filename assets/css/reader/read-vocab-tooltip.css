@@ -199,3 +199,183 @@
     border-color: #6366f1;
     color: #6366f1;
 }
+
+/* Syllable & Phonetic Anatomy Breakdown */
+.vocab-syllable-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.6rem;
+    background: var(--color-bg-muted, #f8fafc);
+    border-radius: 8px;
+    border: 1px solid var(--color-border, #e2e8f0);
+}
+
+.vocab-syllable-display {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--color-primary, #6366f1);
+    letter-spacing: 0.08em;
+}
+
+.vocab-phonics-btn {
+    border: none;
+    background: rgba(99, 102, 241, 0.1);
+    color: #6366f1;
+    border-radius: 6px;
+    padding: 0.2rem 0.45rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    transition: all 0.2s;
+}
+
+.vocab-phonics-btn:hover {
+    background: #6366f1;
+    color: #ffffff;
+}
+
+/* Morpheme Breakdown Box */
+.vocab-morpheme-container {
+    padding: 0.5rem 0.65rem;
+    background: rgba(99, 102, 241, 0.05);
+    border-radius: 8px;
+    border: 1px dashed rgba(99, 102, 241, 0.25);
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.vocab-morpheme-header {
+    font-size: 0.68rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-primary, #6366f1);
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.vocab-morpheme-chips {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+}
+
+.morpheme-chip {
+    display: inline-flex;
+    flex-direction: column;
+    padding: 0.25rem 0.45rem;
+    background: var(--color-bg-surface, #ffffff);
+    border: 1px solid var(--color-border, #e2e8f0);
+    border-radius: 6px;
+    font-size: 0.72rem;
+    line-height: 1.2;
+}
+
+.morpheme-part {
+    font-weight: 800;
+    color: var(--color-primary, #6366f1);
+}
+
+.morpheme-meaning {
+    font-size: 0.65rem;
+    color: var(--color-text-secondary, #64748b);
+}
+
+/* Tooltip Theme Overrides */
+[data-theme="dark"] .reader-vocab-tooltip,
+.dark .reader-vocab-tooltip {
+    background: #0f172a;
+    border-color: #334155;
+    color: #f8fafc;
+}
+[data-theme="dark"] .vocab-tooltip-word,
+.dark .vocab-tooltip-word,
+[data-theme="dark"] .vocab-tooltip-def,
+.dark .vocab-tooltip-def {
+    color: #f8fafc;
+}
+[data-theme="dark"] .vocab-syllable-row,
+.dark .vocab-syllable-row,
+[data-theme="dark"] .vocab-tooltip-action-btn,
+.dark .vocab-tooltip-action-btn,
+[data-theme="dark"] .morpheme-chip,
+.dark .morpheme-chip {
+    background: #1e293b;
+    border-color: #334155;
+    color: #e2e8f0;
+}
+
+[data-theme="midnight"] .reader-vocab-tooltip,
+.midnight .reader-vocab-tooltip {
+    background: #050814;
+    border-color: #1e293b;
+    color: #e2e8f0;
+}
+[data-theme="midnight"] .vocab-tooltip-word,
+.midnight .vocab-tooltip-word,
+[data-theme="midnight"] .vocab-tooltip-def,
+.midnight .vocab-tooltip-def {
+    color: #f8fafc;
+}
+[data-theme="midnight"] .vocab-syllable-row,
+.midnight .vocab-syllable-row,
+[data-theme="midnight"] .vocab-tooltip-action-btn,
+.midnight .vocab-tooltip-action-btn,
+[data-theme="midnight"] .morpheme-chip,
+.midnight .morpheme-chip {
+    background: #0d1329;
+    border-color: #1e293b;
+    color: #e2e8f0;
+}
+
+[data-theme="sepia"] .reader-vocab-tooltip,
+.sepia .reader-vocab-tooltip {
+    background: #fbf0d9;
+    border-color: #e6d3b3;
+    color: #433422;
+}
+[data-theme="sepia"] .vocab-tooltip-word,
+.sepia .vocab-tooltip-word,
+[data-theme="sepia"] .vocab-tooltip-def,
+.sepia .vocab-tooltip-def {
+    color: #2c2216;
+}
+[data-theme="sepia"] .vocab-syllable-row,
+.sepia .vocab-syllable-row,
+[data-theme="sepia"] .vocab-tooltip-action-btn,
+.sepia .vocab-tooltip-action-btn,
+[data-theme="sepia"] .morpheme-chip,
+.sepia .morpheme-chip {
+    background: #f4e4c1;
+    border-color: #dec59f;
+    color: #433422;
+}
+
+[data-theme="high-contrast"] .reader-vocab-tooltip,
+.high-contrast .reader-vocab-tooltip,
+[data-theme="high-contrast"] .vocab-syllable-row,
+.high-contrast .vocab-syllable-row,
+[data-theme="high-contrast"] .vocab-tooltip-action-btn,
+.high-contrast .vocab-tooltip-action-btn,
+[data-theme="high-contrast"] .morpheme-chip,
+.high-contrast .morpheme-chip {
+    background: #000000 !important;
+    color: #ffffff !important;
+    border: 2px solid #ffffff !important;
+    box-shadow: none !important;
+}
+[data-theme="high-contrast"] .vocab-tooltip-word,
+.high-contrast .vocab-tooltip-word,
+[data-theme="high-contrast"] .vocab-syllable-display,
+.high-contrast .vocab-syllable-display,
+[data-theme="high-contrast"] .morpheme-part,
+.high-contrast .morpheme-part {
+    color: #ffff00 !important;
+}
+
