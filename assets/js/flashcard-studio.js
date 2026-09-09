@@ -187,6 +187,18 @@
             if (el) el.textContent = counts[b];
         }
 
+        // Highlight active Leitner box
+        if (cards.length > 0 && currentCardIdx < cards.length) {
+            const currentBox = cards[currentCardIdx].box || 1;
+            document.querySelectorAll('.leitner-box-item').forEach(item => {
+                if (Number(item.dataset.box) === currentBox) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+        }
+
         // Retention rate estimate: weighted average of cards in boxes
         const retentionEl = document.getElementById('flashcard-retention-rate');
         if (retentionEl) {
@@ -209,15 +221,21 @@
         if (cardIndexEl) cardIndexEl.textContent = cards.length > 0 ? (currentCardIdx + 1) : 0;
         if (cardTotalEl) cardTotalEl.textContent = cards.length;
 
-        // Reset flip state
+        // Reset flip state explicitly
         isFlipped = false;
-        if (flipper) flipper.classList.remove('is-flipped');
+        if (flipper) {
+            flipper.classList.remove('flipped');
+            flipper.classList.remove('is-flipped');
+        }
 
         if (cards.length === 0) {
             const front = document.getElementById('flashcard-front-text');
             const back = document.getElementById('flashcard-back-text');
+            const ex = document.getElementById('flashcard-example-text');
             if (front) front.textContent = "This deck is empty! Highlight text in the Reader and click 'Import Highlights' or choose another deck.";
-            if (back) back.textContent = "";
+            if (back) back.textContent = "No cards available.";
+            if (ex) ex.textContent = "";
+            updateLeitnerCounts();
             return;
         }
 
@@ -243,11 +261,10 @@
         if (clozeDisplay) {
             const sentence = card.example || card.definition;
             const regex = new RegExp(card.term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
-            clozeDisplay.innerHTML = sentence.replace(regex, '<span class="cloze-blank-box">_______</span>');
+            clozeDisplay.innerHTML = sentence.replace(regex, '<span style="color: var(--color-primary); text-decoration: underline; font-weight: 800;">________</span>');
         }
         if (clozeInput) {
             clozeInput.value = '';
-            clozeInput.focus();
         }
         if (clozeFeedback) clozeFeedback.style.display = 'none';
 
@@ -257,7 +274,7 @@
         const spellingFeedback = document.getElementById('spelling-feedback-msg');
 
         if (spellingInput) spellingInput.value = '';
-        if (spellingHint) spellingHint.textContent = `Definition: ${card.definition.slice(0, 120)}...`;
+        if (spellingHint) spellingHint.textContent = `Definition hint: ${card.definition.slice(0, 120)}...`;
         if (spellingFeedback) spellingFeedback.style.display = 'none';
 
         updateLeitnerCounts();
@@ -302,11 +319,18 @@
     function toggleFlip() {
         const flipper = document.getElementById('flashcard-flipper');
         if (!flipper) return;
+
         isFlipped = !isFlipped;
         if (isFlipped) {
+            flipper.classList.add('flipped');
             flipper.classList.add('is-flipped');
         } else {
+            flipper.classList.remove('flipped');
             flipper.classList.remove('is-flipped');
+        }
+
+        if (typeof window.announceA11y === 'function') {
+            window.announceA11y(isFlipped ? 'Card flipped to back: definition visible' : 'Card flipped to front: term visible');
         }
     }
 
@@ -344,7 +368,8 @@
         if (!('speechSynthesis' in window)) return;
 
         window.speechSynthesis.cancel();
-        const u = new SpeechSynthesisUtterance(card.term);
+        const text = isFlipped ? card.definition : card.term;
+        const u = new SpeechSynthesisUtterance(text);
         u.rate = speed;
         u.pitch = 1.0;
         window.speechSynthesis.speak(u);
@@ -358,19 +383,28 @@
         const closeBtn = document.getElementById('flashcard-modal-close');
         const deckSelect = document.getElementById('flashcard-deck-select');
         const scene = document.getElementById('flashcard-card-scene');
+        const flipper = document.getElementById('flashcard-flipper');
 
         const prevBtn = document.getElementById('btn-flashcard-prev');
         const nextBtn = document.getElementById('btn-flashcard-next');
+        const flipActionBtn = document.getElementById('btn-flashcard-flip-action');
         const exportBtn = document.getElementById('btn-flashcard-export');
         const importBtn = document.getElementById('btn-flashcard-import-notes');
 
-        // Toggle open/close
+        const frontAudioBtn = document.getElementById('btn-front-audio');
+        const backAudioBtn = document.getElementById('btn-back-audio');
+
+        // Toggle open/close API
         window.openFlashcardStudio = function (deckKey = null) {
+            loadDecks();
             if (deckKey && userDecks[deckKey]) {
                 activeDeckKey = deckKey;
                 if (deckSelect) deckSelect.value = deckKey;
             }
-            if (modal) modal.style.display = 'flex';
+            if (modal) {
+                modal.classList.add('active');
+                modal.style.display = 'flex';
+            }
             currentCardIdx = 0;
             renderCurrentCard();
             if (scene) scene.focus();
@@ -380,8 +414,51 @@
         };
 
         window.closeFlashcardStudio = function () {
-            if (modal) modal.style.display = 'none';
+            if (modal) {
+                modal.classList.remove('active');
+                modal.style.display = 'none';
+            }
             if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+            if (typeof window.announceA11y === 'function') {
+                window.announceA11y('Flashcard Studio closed.');
+            }
+        };
+
+        window.toggleFlashcardStudio = function (openOrClose = null, deckKey = null) {
+            const isOpen = modal && (modal.classList.contains('active') || modal.style.display === 'flex');
+            if (openOrClose === true) {
+                window.openFlashcardStudio(deckKey);
+            } else if (openOrClose === false) {
+                window.closeFlashcardStudio();
+            } else {
+                if (isOpen) {
+                    window.closeFlashcardStudio();
+                } else {
+                    window.openFlashcardStudio(deckKey);
+                }
+            }
+        };
+
+        // Add card to deck external hook
+        window.addFlashcardToDeck = function (deckKey, term, definition, example = '') {
+            loadDecks();
+            const targetKey = userDecks[deckKey] ? deckKey : 'custom';
+            if (!userDecks[targetKey]) {
+                userDecks[targetKey] = { title: 'Custom Student Deck', cards: [] };
+            }
+            userDecks[targetKey].cards.push({
+                id: 'card-' + Date.now() + '-' + Math.floor(Math.random() * 1000),
+                term: term,
+                definition: definition,
+                example: example,
+                box: 1,
+                lastReviewed: null,
+                nextDue: 0
+            });
+            saveDecks();
+            if (activeDeckKey === targetKey) {
+                renderCurrentCard();
+            }
         };
 
         if (backdrop) backdrop.addEventListener('click', window.closeFlashcardStudio);
@@ -405,9 +482,13 @@
         if (btnCloze) btnCloze.addEventListener('click', () => switchStudyMode('cloze'));
         if (btnSpelling) btnSpelling.addEventListener('click', () => switchStudyMode('spelling'));
 
-        // Flip triggers
+        // Flip triggers on scene, flipper, and flip button
         if (scene) {
-            scene.addEventListener('click', toggleFlip);
+            scene.addEventListener('click', (e) => {
+                // If audio button inside was clicked, don't flip
+                if (e.target.closest('.flashcard-audio-icon-btn')) return;
+                toggleFlip();
+            });
             scene.addEventListener('keydown', (e) => {
                 if (e.key === ' ' || e.key === 'Enter') {
                     e.preventDefault();
@@ -416,9 +497,31 @@
             });
         }
 
+        if (flipActionBtn) {
+            flipActionBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                toggleFlip();
+            });
+        }
+
+        // Audio icons
+        if (frontAudioBtn) {
+            frontAudioBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                speakTerm(1.0);
+            });
+        }
+        if (backAudioBtn) {
+            backAudioBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                speakTerm(1.0);
+            });
+        }
+
         // Leitner rating buttons
         document.querySelectorAll('.leitner-grade-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
                 gradeCard(btn.dataset.grade);
             });
         });
@@ -458,12 +561,12 @@
 
             clozeFeedback.style.display = 'block';
             if (answer === target) {
+                clozeFeedback.className = 'cloze-feedback correct';
                 clozeFeedback.innerHTML = '<i class="fas fa-check-circle" style="color: #10b981;"></i> Correct! Outstanding recall.';
-                clozeFeedback.style.color = '#10b981';
                 setTimeout(() => gradeCard('good'), 1200);
             } else {
-                clozeFeedback.innerHTML = `<i class="fas fa-times-circle" style="color: #ef4444;"></i> Answer: <strong>${card.term}</strong>.`;
-                clozeFeedback.style.color = '#ef4444';
+                clozeFeedback.className = 'cloze-feedback incorrect';
+                clozeFeedback.innerHTML = `<i class="fas fa-times-circle" style="color: #ef4444;"></i> The correct term is: <strong>${card.term}</strong>.`;
             }
         }
 
@@ -493,12 +596,12 @@
 
             spellingFeedback.style.display = 'block';
             if (typed === correct) {
+                spellingFeedback.className = 'cloze-feedback correct';
                 spellingFeedback.innerHTML = '<i class="fas fa-check-circle" style="color: #10b981;"></i> 100% Accurate Spelling!';
-                spellingFeedback.style.color = '#10b981';
                 setTimeout(() => gradeCard('good'), 1200);
             } else {
+                spellingFeedback.className = 'cloze-feedback incorrect';
                 spellingFeedback.innerHTML = `<i class="fas fa-times-circle" style="color: #ef4444;"></i> Correct spelling is: <strong>${card.term}</strong>`;
-                spellingFeedback.style.color = '#ef4444';
             }
         }
 
@@ -530,7 +633,6 @@
         if (importBtn) {
             importBtn.addEventListener('click', () => {
                 try {
-                    // Pull highlights from localStorage
                     const allKeys = Object.keys(localStorage);
                     const hlKeys = allKeys.filter(k => k.includes('highlight') || k.includes('hl_'));
                     const importedTerms = [];
@@ -540,12 +642,12 @@
                             const val = JSON.parse(localStorage.getItem(k));
                             if (Array.isArray(val)) {
                                 val.forEach(item => {
-                                    if (item.text && item.text.length < 80) {
+                                    if (item.text && item.text.length < 90) {
                                         importedTerms.push({
                                             id: 'imp-' + Date.now() + '-' + Math.random().toString(36).substr(2, 4),
                                             term: item.text,
                                             definition: item.note || "Curriculum key concept captured from active reading annotations.",
-                                            example: item.context || "",
+                                            example: item.page ? `Page ${item.page}` : "",
                                             box: 1,
                                             nextDue: 0
                                         });
@@ -572,17 +674,53 @@
             });
         }
 
-        // Global shortcut Alt+F
+        // Global shortcuts
         window.addEventListener('keydown', (e) => {
-            if (e.altKey && (e.key === 'f' || e.key === 'F')) {
+            const isModalOpen = modal && (modal.classList.contains('active') || modal.style.display === 'flex');
+
+            // Alt+F toggle
+            if (e.altKey && (e.key === 'f' || e.key === 'F' || e.code === 'KeyF')) {
                 e.preventDefault();
-                if (modal && modal.style.display === 'flex') {
+                window.toggleFlashcardStudio();
+                return;
+            }
+
+            // Keyboard navigation inside open modal
+            if (isModalOpen) {
+                // Escape key
+                if (e.key === 'Escape') {
+                    e.preventDefault();
                     window.closeFlashcardStudio();
-                } else {
-                    window.openFlashcardStudio();
+                    return;
                 }
-            } else if (e.key === 'Escape' && modal && modal.style.display === 'flex') {
-                window.closeFlashcardStudio();
+
+                // If typing inside an input field, do not capture single keys
+                if (['input', 'textarea', 'select'].includes(document.activeElement?.tagName?.toLowerCase())) {
+                    return;
+                }
+
+                // Arrow keys for Next / Prev
+                if (e.key === 'ArrowRight') {
+                    e.preventDefault();
+                    nextBtn?.click();
+                } else if (e.key === 'ArrowLeft') {
+                    e.preventDefault();
+                    prevBtn?.click();
+                }
+                // Number keys 1, 2, 3, 4 for Leitner grading
+                else if (e.key === '1') {
+                    e.preventDefault();
+                    gradeCard('again');
+                } else if (e.key === '2') {
+                    e.preventDefault();
+                    gradeCard('hard');
+                } else if (e.key === '3') {
+                    e.preventDefault();
+                    gradeCard('good');
+                } else if (e.key === '4') {
+                    e.preventDefault();
+                    gradeCard('easy');
+                }
             }
         });
     }

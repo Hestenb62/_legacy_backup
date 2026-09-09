@@ -1,0 +1,538 @@
+/* ==========================================================================
+   assets/css/pages/skill-tree.css
+   Interactive Visual Skill & Knowledge Tree Page Styles
+   ========================================================================== */
+
+.skill-tree-page-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem 1rem;
+}
+
+/* Hero & Discipline Filter Bar */
+.skill-tree-hero {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl, 1.25rem);
+  padding: 1.75rem 2rem;
+  box-shadow: var(--shadow-md);
+}
+
+@media (min-width: 900px) {
+  .skill-tree-hero {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.skill-tree-hero-content {
+  max-width: 600px;
+}
+
+.skill-tree-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  background-color: color-mix(in srgb, var(--color-primary) 12%, transparent);
+  color: var(--color-primary);
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.skill-tree-hero-title {
+  font-size: 1.75rem;
+  font-weight: 900;
+  color: var(--color-text-main);
+  font-family: var(--font-display);
+  line-height: 1.2;
+  margin: 0 0 0.5rem 0;
+}
+
+.skill-tree-hero-desc {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Discipline Navigation Pills */
+.discipline-nav-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  background-color: var(--color-bg-base);
+  padding: 0.4rem;
+  border-radius: var(--radius-xl, 14px);
+  border: 1px solid var(--color-border);
+}
+
+.discipline-btn {
+  border: none;
+  background: transparent;
+  padding: 0.6rem 1.15rem;
+  border-radius: var(--radius-lg, 10px);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  transition: all 0.2s ease;
+}
+
+.discipline-btn:hover {
+  color: var(--color-text-main);
+  background-color: color-mix(in srgb, var(--color-text-main) 5%, transparent);
+}
+
+.discipline-btn.active {
+  background-color: var(--color-primary);
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
+
+/* Main Layout & Viewport */
+.skill-tree-main-layout {
+  position: relative;
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl, 1.25rem);
+  box-shadow: var(--shadow-xl);
+  overflow: hidden;
+  height: 680px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Toolbar & Bloom's Legend */
+.skill-tree-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-bg-base);
+  border-bottom: 1px solid var(--color-border);
+  z-index: 10;
+}
+
+.blooms-legend-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.blooms-legend-title {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--color-text-main);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-right: 0.25rem;
+}
+
+.bloom-pill {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+}
+
+.bloom-pill.tier-1 { color: #cd7f32; border-color: rgba(205, 127, 50, 0.4); }
+.bloom-pill.tier-2 { color: #94a3b8; border-color: rgba(148, 163, 184, 0.4); }
+.bloom-pill.tier-3 { color: #f59e0b; border-color: rgba(245, 158, 11, 0.4); }
+.bloom-pill.tier-4 { color: #06b6d4; border-color: rgba(6, 182, 212, 0.4); }
+
+.canvas-zoom-controls {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.zoom-btn {
+  width: 2rem;
+  height: 2rem;
+  border-radius: var(--radius-md, 6px);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-bg-surface);
+  color: var(--color-text-main);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.82rem;
+  transition: all 0.2s;
+}
+
+.zoom-btn:hover {
+  background-color: var(--color-bg-base);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+/* SVG Graph Viewport */
+.skill-tree-viewport {
+  flex-grow: 1;
+  position: relative;
+  overflow: hidden;
+  cursor: grab;
+  user-select: none;
+  background: radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--color-primary) 3%, transparent) 0%, transparent 80%),
+              repeating-linear-gradient(0deg, var(--color-border) 0, var(--color-border) 1px, transparent 1px, transparent 40px),
+              repeating-linear-gradient(90deg, var(--color-border) 0, var(--color-border) 1px, transparent 1px, transparent 40px);
+  background-size: auto, 40px 40px, 40px 40px;
+}
+
+.skill-tree-svg-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* SVG Graph Nodes & Connections */
+.skill-connection-line {
+  fill: none;
+  stroke: var(--color-border);
+  stroke-width: 3;
+  stroke-linecap: round;
+  transition: stroke 0.3s, stroke-width 0.3s;
+}
+
+.skill-node-group {
+  cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.skill-node-group:hover,
+.skill-node-group:focus-visible {
+  outline: none;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.15));
+}
+
+.skill-node-group:hover .skill-node-card {
+  fill: var(--color-bg-elevated, var(--color-bg-surface));
+}
+
+.skill-node-card {
+  fill: var(--color-bg-surface);
+  transition: fill 0.2s;
+}
+
+.skill-node-border {
+  fill: none;
+  stroke-width: 2.5;
+  transition: stroke-width 0.2s;
+}
+
+.skill-node-group.selected .skill-node-border {
+  stroke-width: 4;
+  filter: drop-shadow(0 0 8px var(--color-primary));
+}
+
+.skill-node-title {
+  fill: var(--color-text-main);
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 800;
+  text-anchor: middle;
+}
+
+.skill-node-code {
+  fill: var(--color-text-muted);
+  font-family: monospace;
+  font-size: 11px;
+  font-weight: 700;
+  text-anchor: middle;
+}
+
+.skill-node-tier-label {
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-anchor: middle;
+}
+
+/* Node Details Slide-Over Drawer */
+.node-detail-drawer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 380px;
+  background-color: var(--color-bg-surface);
+  border-left: 1px solid var(--color-border);
+  box-shadow: -10px 0 25px rgba(0, 0, 0, 0.15);
+  z-index: 20;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  animation: slideInDrawer 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideInDrawer {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+.drawer-header {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.drawer-discipline-tag {
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-primary);
+}
+
+.drawer-close-btn {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: transparent;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.drawer-close-btn:hover {
+  background-color: var(--color-bg-base);
+  color: var(--color-text-main);
+}
+
+.drawer-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  flex-grow: 1;
+}
+
+.drawer-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.drawer-node-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: var(--radius-lg, 10px);
+  background-color: color-mix(in srgb, var(--color-primary) 12%, transparent);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  flex-shrink: 0;
+}
+
+.drawer-node-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-text-main);
+  margin: 0 0 0.2rem 0;
+  line-height: 1.3;
+}
+
+.drawer-code-badge {
+  font-size: 0.75rem;
+  font-family: monospace;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  background-color: var(--color-bg-base);
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  border: 1px solid var(--color-border);
+}
+
+.drawer-bloom-card {
+  padding: 1rem;
+  background-color: var(--color-bg-base);
+  border-radius: var(--radius-lg, 10px);
+  border: 1px solid var(--color-border);
+}
+
+.drawer-bloom-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.82rem;
+  margin-bottom: 0.5rem;
+}
+
+.drawer-bloom-label {
+  color: var(--color-text-muted);
+}
+
+.drawer-bloom-value {
+  font-weight: 800;
+}
+
+.drawer-bloom-progress-track {
+  width: 100%;
+  height: 6px;
+  background-color: var(--color-border);
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.drawer-bloom-progress-fill {
+  height: 100%;
+  border-radius: 9999px;
+  transition: width 0.3s;
+}
+
+.drawer-section-title {
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+  margin: 0 0 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.drawer-desc {
+  font-size: 0.88rem;
+  color: var(--color-text-main);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.prereq-chips-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.prereq-chip {
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.35rem 0.65rem;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.prereq-chip.unlocked {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.prereq-chip.root {
+  background-color: color-mix(in srgb, var(--color-primary) 10%, transparent);
+  color: var(--color-primary);
+  border: 1px solid color-mix(in srgb, var(--color-primary) 25%, transparent);
+}
+
+.drawer-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.drawer-btn {
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: var(--radius-md, 8px);
+  font-size: 0.88rem;
+  font-weight: 800;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  border: none;
+  transition: all 0.2s;
+}
+
+.drawer-btn.primary {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.drawer-btn.primary:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+.drawer-btn.secondary {
+  background-color: var(--color-bg-base);
+  color: var(--color-text-main);
+  border: 1px solid var(--color-border);
+}
+
+.drawer-btn.secondary:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+/* Multi-theme support for Skill Tree */
+[data-theme="high-contrast"] .skill-tree-hero,
+.high-contrast .skill-tree-hero,
+[data-theme="high-contrast"] .skill-tree-main-layout,
+.high-contrast .skill-tree-main-layout,
+[data-theme="high-contrast"] .node-detail-drawer,
+.high-contrast .node-detail-drawer,
+[data-theme="high-contrast"] .skill-node-card,
+.high-contrast .skill-node-card,
+[data-theme="high-contrast"] .drawer-btn.secondary,
+.high-contrast .drawer-btn.secondary {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border: 2px solid #ffffff !important;
+  box-shadow: none !important;
+}
+
+[data-theme="high-contrast"] .skill-node-title,
+.high-contrast .skill-node-title,
+[data-theme="high-contrast"] .skill-tree-hero-title,
+.high-contrast .skill-tree-hero-title,
+[data-theme="high-contrast"] .drawer-node-title,
+.high-contrast .drawer-node-title {
+  fill: #ffffff !important;
+  color: #ffffff !important;
+}
+
+[data-theme="high-contrast"] .skill-node-tier-label,
+.high-contrast .skill-node-tier-label,
+[data-theme="high-contrast"] .skill-tree-badge,
+.high-contrast .skill-tree-badge {
+  fill: #ffff00 !important;
+  color: #ffff00 !important;
+}

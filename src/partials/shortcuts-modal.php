@@ -61,6 +61,10 @@
                         <span class="shortcut-keys"><kbd>Alt</kbd> + <kbd>F</kbd></span>
                     </div>
                     <div class="shortcut-item">
+                        <span class="shortcut-desc">Toggle Quests & Achievements</span>
+                        <span class="shortcut-keys"><kbd>Alt</kbd> + <kbd>Q</kbd></span>
+                    </div>
+                    <div class="shortcut-item">
                         <span class="shortcut-desc">Toggle citation generator</span>
                         <span class="shortcut-keys"><kbd>Alt</kbd> + <kbd>C</kbd></span>
                     </div>

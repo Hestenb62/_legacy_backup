@@ -1,4 +1,4 @@
-const CACHE_NAME = 'hestens-learning-v10';
+const CACHE_NAME = 'hestens-learning-v11';
 const ASSETS_TO_CACHE = [
 
   // Main Directory Pages & Manifest
@@ -10,6 +10,7 @@ const ASSETS_TO_CACHE = [
   '/assessment/index.php',
   '/library/index.php',
   '/student/index.php',
+  '/student/skill-tree.php',
 
   // Pages Directory
   '/pages/accessibility.php',
@@ -31,7 +32,9 @@ const ASSETS_TO_CACHE = [
   '/assets/css/global-components.css',
   '/assets/css/pages/accessibility.css',
   '/assets/css/pages/updates.css',
+  '/assets/css/pages/skill-tree.css',
   '/assets/css/components/fixed-tools.css',
+  '/assets/css/components/quest-badges.css',
   '/assets/css/layouts/header.css',
   '/assets/css/layouts/footer.css',
 
@@ -49,6 +52,8 @@ const ASSETS_TO_CACHE = [
   '/assets/js/global-standard.js',
   '/assets/js/global-study-tools.js',
   '/assets/js/flashcard-studio.js',
+  '/assets/js/gamification/quest-manager.js',
+  '/assets/js/gamification/skill-tree.js',
   '/assets/js/index-main.js',
   '/assets/js/global-announcements.js',
   '/assets/js/global-core-ui.js',

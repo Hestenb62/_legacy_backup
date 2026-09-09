@@ -52,6 +52,33 @@ include '../src/header.php';
             </a>
         </div>
 
+        <!-- Skill Tree & Gamification Mastery Hub Banner -->
+        <div class="glass-panel" style="margin-bottom: 2rem; padding: 1.5rem 2rem; border-radius: var(--radius-2xl); border: 1px solid color-mix(in srgb, var(--color-primary) 30%, var(--color-border)); background: radial-gradient(circle at top right, color-mix(in srgb, var(--color-primary) 12%, var(--color-bg-surface)), var(--color-bg-surface)); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.5rem;">
+            <div style="display: flex; align-items: center; gap: 1.25rem; max-width: 38rem;">
+                <div style="width: 3.75rem; height: 3.75rem; border-radius: var(--radius-xl); background: linear-gradient(135deg, #f59e0b, #ec4899); color: white; display: flex; align-items: center; justify-content: center; font-size: 1.75rem; box-shadow: 0 8px 16px rgba(245, 158, 11, 0.25); flex-shrink: 0;">
+                    <i class="fas fa-sitemap"></i>
+                </div>
+                <div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.25rem;">
+                        <span style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; padding: 0.2rem 0.5rem; border-radius: var(--radius-sm); background: color-mix(in srgb, var(--color-primary) 15%, transparent); color: var(--color-primary);">Interactive Knowledge Graph</span>
+                        <span id="student-hub-level-badge" style="font-size: 0.75rem; font-weight: 800; padding: 0.2rem 0.5rem; border-radius: var(--radius-sm); background: #f59e0b; color: #1e1b4b;"><i class="fas fa-star"></i> Level <span id="student-hub-level-num">1</span> &bull; <span id="student-hub-rank-title">Novice Scholar</span></span>
+                    </div>
+                    <h2 style="margin: 0 0 0.25rem 0; font-size: 1.25rem; font-weight: 900; color: var(--color-text-main);">Skill & Knowledge Tree</h2>
+                    <p style="margin: 0; font-size: 0.875rem; color: var(--color-text-muted); line-height: 1.4;">Explore interactive curriculum branches across Math, ELA, Science, and Social Studies with Bloom's Taxonomy mastery tiers.</p>
+                </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+                <button type="button" onclick="window.toggleQuestStudio ? window.toggleQuestStudio() : null" class="btn" style="padding: 0.7rem 1.25rem; border-radius: var(--radius-full); background: var(--color-bg-base); color: var(--color-text-main); border: 1px solid var(--color-border); font-weight: 800; font-size: 0.875rem; display: inline-flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                    <i class="fas fa-trophy" style="color: #f59e0b;"></i>
+                    <span>Badges & Quests</span>
+                </button>
+                <a href="/student/skill-tree.php" class="subpage-link-btn" style="padding: 0.75rem 1.5rem; border-radius: var(--radius-full); background: linear-gradient(135deg, var(--color-primary), #6366f1); color: white; border: none; font-weight: 800; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; box-shadow: var(--shadow-md);">
+                    <span>Launch Skill Tree</span>
+                    <i class="fas fa-arrow-right" style="font-size: 0.85rem;"></i>
+                </a>
+            </div>
+        </div>
+
         <!-- Continue Learning / Recent Activity -->
         <div id="continue-learning-container" class="continue-learning-section" style="display: none;">
             <h2 class="section-title">Continue Learning</h2>
@@ -455,6 +482,17 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch (e) {
         console.error('Error loading user profile:', e);
     }
+
+    // Populate Level & Rank in Banner
+    try {
+        const gameProfile = JSON.parse(localStorage.getItem('hl_gamification_profile'));
+        if (gameProfile) {
+            const lvlEl = document.getElementById('student-hub-level-num');
+            const rankEl = document.getElementById('student-hub-rank-title');
+            if (lvlEl && gameProfile.level) lvlEl.textContent = gameProfile.level;
+            if (rankEl && gameProfile.rank) rankEl.textContent = gameProfile.rank;
+        }
+    } catch(e) {}
 
     // Populate Continue Learning
     try {

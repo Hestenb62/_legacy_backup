@@ -141,6 +141,7 @@
 <script src="/assets/js/global-error-handler.js"></script>
 <script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/global-study-tools.js') : '/assets/js/global-study-tools.js' ?>"></script>
 <script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/flashcard-studio.js') : '/assets/js/flashcard-studio.js' ?>"></script>
+<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/gamification/quest-manager.js') : '/assets/js/gamification/quest-manager.js' ?>"></script>
 <script src="/assets/js/global-standard.js"></script>
 
 <!-- Google API Scripts for Global Auto-Sync -->
