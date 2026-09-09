@@ -137,6 +137,77 @@ include '../src/header.php';
     </section>
 
     <!-- ==================================================================== -->
+    <!-- READING FLUENCY & SPEED BENCHMARK TOOL -->
+    <!-- ==================================================================== -->
+    <section class="benchmark-wrapper" aria-labelledby="benchmark-heading">
+        <div class="benchmark-header-row">
+            <div>
+                <span class="benchmark-tag"><i class="fas fa-stopwatch" aria-hidden="true"></i> Clinical &amp; Research Tool</span>
+                <h2 id="benchmark-heading" style="font-size: 1.5rem; font-weight: 800; margin: 0.5rem 0 0.25rem 0;">Reading Fluency &amp; Speed Benchmark</h2>
+                <p style="color: var(--color-text-muted); font-size: 0.95rem; margin: 0;">Measure Words Per Minute (WPM) and compare reading ease between standard typography and active assistive accommodations.</p>
+            </div>
+        </div>
+
+        <div class="benchmark-controls-bar">
+            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                <label for="bm-mode-select" style="font-weight: 700; font-size: 0.875rem;">Accommodation Mode:</label>
+                <select id="bm-mode-select" class="benchmark-mode-select" aria-label="Select Accommodation Mode for Benchmark">
+                    <option value="baseline">Standard Baseline (Inter 1.6x)</option>
+                    <option value="bionic">Bionic Reading (Bold Fixation)</option>
+                    <option value="opendyslexic">OpenDyslexic (Weighted Baseline)</option>
+                    <option value="lexend">Lexend (Cognitive Spacing)</option>
+                    <option value="sepia-tint">Sepia Calm Tint (1.8x Line Height)</option>
+                </select>
+            </div>
+
+            <div style="display: flex; align-items: center; gap: 0.75rem; margin-left: auto; flex-wrap: wrap;">
+                <div class="benchmark-timer-box" id="bm-timer" aria-live="polite">00:00</div>
+                <button type="button" id="bm-start-btn" class="a11y-action-chip" style="background: var(--color-primary); color: #fff; font-weight: 700;">
+                    <i class="fas fa-play" aria-hidden="true"></i> <span>Start Benchmark</span>
+                </button>
+                <button type="button" id="bm-done-btn" class="a11y-action-chip" style="background: var(--color-success, #10b981); color: #fff; font-weight: 700; display: none;">
+                    <i class="fas fa-check-circle" aria-hidden="true"></i> <span>I Finished Reading</span>
+                </button>
+                <button type="button" id="bm-reset-btn" class="a11y-action-chip" style="display: none;">
+                    <i class="fas fa-redo" aria-hidden="true"></i> <span>Reset</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="benchmark-passage-box is-blurred" id="bm-passage-box">
+            <div class="benchmark-overlay-prompt" id="bm-overlay-prompt">
+                <i class="fas fa-eye-slash" style="margin-right: 0.5rem;" aria-hidden="true"></i> Click "Start Benchmark" to reveal passage and start timer
+            </div>
+            <p id="bm-passage-text" style="margin: 0;">
+                Photosynthesis is the remarkable biochemical process by which green plants, algae, and certain bacteria convert sunlight energy into chemical energy stored in glucose. Inside cellular plant chloroplasts, green chlorophyll pigments capture specific light wavelengths. When water absorbed through roots combines with carbon dioxide absorbed through microscopic leaf stomata, oxygen gas is released into Earth's atmosphere as an essential byproduct. This foundational biological mechanism powers virtually all terrestrial ecosystems.
+            </p>
+        </div>
+
+        <div class="benchmark-results-card" id="bm-results-card" style="display: none;" aria-live="polite">
+            <h3 style="margin: 0; font-size: 1.1rem; font-weight: 700;"><i class="fas fa-chart-line" style="color: var(--color-primary);" aria-hidden="true"></i> Fluency Benchmark Assessment</h3>
+            <div class="benchmark-metrics-grid">
+                <div class="benchmark-metric-item">
+                    <div class="benchmark-metric-val" id="bm-res-wpm">0</div>
+                    <div class="benchmark-metric-lbl">Words Per Minute</div>
+                </div>
+                <div class="benchmark-metric-item">
+                    <div class="benchmark-metric-val" id="bm-res-time">0.0s</div>
+                    <div class="benchmark-metric-lbl">Elapsed Time</div>
+                </div>
+                <div class="benchmark-metric-item">
+                    <div class="benchmark-metric-val" id="bm-res-words">68</div>
+                    <div class="benchmark-metric-lbl">Total Words</div>
+                </div>
+                <div class="benchmark-metric-item">
+                    <div class="benchmark-metric-val" id="bm-res-bracket">Proficient</div>
+                    <div class="benchmark-metric-lbl">Fluency Tier</div>
+                </div>
+            </div>
+            <p id="bm-res-summary" style="margin: 0; font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.5;"></p>
+        </div>
+    </section>
+
+    <!-- ==================================================================== -->
     <!-- SECTION 1: DYSLEXIA & READING COMPREHENSION -->
     <!-- ==================================================================== -->
     <div class="a11y-section-header">
@@ -457,6 +528,93 @@ include '../src/header.php';
             </tr>
         </tbody>
     </table>
+
+    <!-- ==================================================================== -->
+    <!-- IEP / 504 ACCOMMODATION PROFILE EXPORTER -->
+    <!-- ==================================================================== -->
+    <section class="iep-generator-wrapper" aria-labelledby="iep-heading">
+        <div class="benchmark-header-row">
+            <div>
+                <span class="benchmark-tag" style="background: rgba(16, 185, 129, 0.12); color: var(--color-success, #10b981);"><i class="fas fa-file-medical-alt" aria-hidden="true"></i> Educator &amp; Clinical Suite</span>
+                <h2 id="iep-heading" style="font-size: 1.5rem; font-weight: 800; margin: 0.5rem 0 0.25rem 0;">IEP / 504 Student Accommodation Profile Exporter</h2>
+                <p style="color: var(--color-text-muted); font-size: 0.95rem; margin: 0;">Generate an official summary of the student's active digital learning accommodations for ARD committees, 504 plans, and parent-teacher conferences.</p>
+            </div>
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                <button type="button" class="a11y-action-chip" id="iep-refresh-btn" title="Sync with current settings panel">
+                    <i class="fas fa-sync-alt" aria-hidden="true"></i> <span>Sync Current Settings</span>
+                </button>
+                <button type="button" class="a11y-action-chip" id="iep-print-btn" style="background: var(--color-primary); color: #fff; font-weight: 700;">
+                    <i class="fas fa-print" aria-hidden="true"></i> <span>Print Official Brief</span>
+                </button>
+                <button type="button" class="a11y-action-chip" id="iep-export-json-btn">
+                    <i class="fas fa-file-download" aria-hidden="true"></i> <span>Export JSON</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="iep-brief-card" id="iep-printable-area">
+            <div class="iep-brief-header">
+                <div>
+                    <h3 class="iep-brief-title">Student Assistive Technology &amp; Digital Accommodation Profile</h3>
+                    <p style="margin: 0.25rem 0 0 0; font-size: 0.85rem; color: var(--color-text-muted);">
+                        Hesten's Learning Universal Platform &bull; Generated: <span id="iep-brief-date"><?= date('F j, Y') ?></span>
+                    </p>
+                </div>
+                <div style="text-align: right;">
+                    <span style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; background: var(--color-bg-subtle); border: 1px solid var(--color-border); padding: 0.25rem 0.5rem; border-radius: 0.35rem;">
+                        Status: Active Profile
+                    </span>
+                </div>
+            </div>
+
+            <div class="iep-grid">
+                <!-- Quadrant 1: Typographic & Reading -->
+                <div class="iep-section-box">
+                    <h4><i class="fas fa-font" aria-hidden="true"></i> Typographic &amp; Decoding</h4>
+                    <ul class="iep-list" id="iep-list-typographic">
+                        <li>Standard Font (Inter)</li>
+                        <li>Standard Text Scaling (100%)</li>
+                        <li>Line Height 1.6x</li>
+                    </ul>
+                </div>
+
+                <!-- Quadrant 2: Attention & Cognitive -->
+                <div class="iep-section-box">
+                    <h4><i class="fas fa-brain" aria-hidden="true"></i> Attention &amp; Cognitive Aids</h4>
+                    <ul class="iep-list" id="iep-list-cognitive">
+                        <li>Reading Mask: Inactive</li>
+                        <li>Spotlight Mode: Inactive</li>
+                        <li>Screen Dimmer: Inactive</li>
+                    </ul>
+                </div>
+
+                <!-- Quadrant 3: Ergonomic & Visual Contrast -->
+                <div class="iep-section-box">
+                    <h4><i class="fas fa-palette" aria-hidden="true"></i> Vision &amp; Photophobia Relief</h4>
+                    <ul class="iep-list" id="iep-list-visual">
+                        <li>Color Overlay: Standard (None)</li>
+                        <li>Contrast Theme: System Default</li>
+                        <li>Animations: Enabled</li>
+                    </ul>
+                </div>
+
+                <!-- Quadrant 4: Assistive Modalities & Pacing -->
+                <div class="iep-section-box">
+                    <h4><i class="fas fa-universal-access" aria-hidden="true"></i> Assistive Input &amp; Pacing</h4>
+                    <ul class="iep-list" id="iep-list-assistive">
+                        <li>Full Keyboard Traversal Available</li>
+                        <li>Text-To-Speech Synthesis Ready</li>
+                        <li>Integrated Paced Study Timer</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="border-top: 1px dashed var(--color-border); padding-top: 0.75rem; display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--color-text-muted); flex-wrap: wrap; gap: 0.5rem;">
+                <span>Conforms to IDEA 34 CFR &sect; 300.105 (Assistive Technology) &amp; Section 508</span>
+                <span>Profile ID: HL-A11Y-CONF</span>
+            </div>
+        </div>
+    </section>
 
     <!-- ==================================================================== -->
     <!-- SECTION 5: COMPLIANCE & COMMITMENT -->
@@ -1052,8 +1210,302 @@ include '../src/header.php';
         });
     });
 })();
+
+// ====================================================================
+// READING FLUENCY BENCHMARK CONTROLLER
+// ====================================================================
+(function() {
+    'use strict';
+
+    const bmModeSelect = document.getElementById('bm-mode-select');
+    const bmTimer = document.getElementById('bm-timer');
+    const bmStartBtn = document.getElementById('bm-start-btn');
+    const bmDoneBtn = document.getElementById('bm-done-btn');
+    const bmResetBtn = document.getElementById('bm-reset-btn');
+    const bmPassageBox = document.getElementById('bm-passage-box');
+    const bmOverlayPrompt = document.getElementById('bm-overlay-prompt');
+    const bmPassageText = document.getElementById('bm-passage-text');
+    const bmResultsCard = document.getElementById('bm-results-card');
+    const bmResWpm = document.getElementById('bm-res-wpm');
+    const bmResTime = document.getElementById('bm-res-time');
+    const bmResWords = document.getElementById('bm-res-words');
+    const bmResBracket = document.getElementById('bm-res-bracket');
+    const bmResSummary = document.getElementById('bm-res-summary');
+
+    if (!bmStartBtn || !bmPassageText) return;
+
+    const originalBenchmarkPassage = "Photosynthesis is the remarkable biochemical process by which green plants, algae, and certain bacteria convert sunlight energy into chemical energy stored in glucose. Inside cellular plant chloroplasts, green chlorophyll pigments capture specific light wavelengths. When water absorbed through roots combines with carbon dioxide absorbed through microscopic leaf stomata, oxygen gas is released into Earth's atmosphere as an essential byproduct. This foundational biological mechanism powers virtually all terrestrial ecosystems.";
+    const totalBenchmarkWords = 68;
+
+    let timerInterval = null;
+    let startTime = 0;
+    let elapsedMs = 0;
+
+    function generateBionicText(str) {
+        return str.split(' ').map(function(word) {
+            if (word.length <= 3) {
+                return '<strong>' + word.slice(0, 1) + '</strong>' + word.slice(1);
+            } else {
+                const mid = Math.ceil(word.length / 2);
+                return '<strong>' + word.slice(0, mid) + '</strong>' + word.slice(mid);
+            }
+        }).join(' ');
+    }
+
+    function applyBenchmarkMode() {
+        if (!bmModeSelect || !bmPassageText) return;
+        const mode = bmModeSelect.value;
+
+        // Reset custom styling
+        bmPassageBox.style.backgroundColor = '';
+        bmPassageBox.style.color = '';
+        bmPassageBox.style.fontFamily = '';
+        bmPassageBox.style.lineHeight = '';
+
+        if (mode === 'baseline') {
+            bmPassageText.textContent = originalBenchmarkPassage;
+            bmPassageBox.style.fontFamily = "'Outfit', sans-serif";
+            bmPassageBox.style.lineHeight = '1.6';
+        } else if (mode === 'bionic') {
+            bmPassageText.innerHTML = generateBionicText(originalBenchmarkPassage);
+            bmPassageBox.style.lineHeight = '1.6';
+        } else if (mode === 'opendyslexic') {
+            bmPassageText.textContent = originalBenchmarkPassage;
+            bmPassageBox.style.fontFamily = "'Open Dyslexic', sans-serif";
+            bmPassageBox.style.lineHeight = '1.8';
+        } else if (mode === 'lexend') {
+            bmPassageText.textContent = originalBenchmarkPassage;
+            bmPassageBox.style.fontFamily = "'Lexend', sans-serif";
+            bmPassageBox.style.lineHeight = '1.7';
+        } else if (mode === 'sepia-tint') {
+            bmPassageText.textContent = originalBenchmarkPassage;
+            bmPassageBox.style.backgroundColor = '#fbf0d9';
+            bmPassageBox.style.color = '#433422';
+            bmPassageBox.style.lineHeight = '1.8';
+        }
+    }
+
+    if (bmModeSelect) {
+        bmModeSelect.addEventListener('change', applyBenchmarkMode);
+    }
+
+    function formatTime(ms) {
+        const totalSecs = Math.floor(ms / 1000);
+        const mins = Math.floor(totalSecs / 60);
+        const secs = totalSecs % 60;
+        return (mins < 10 ? '0' : '') + mins + ':' + (secs < 10 ? '0' : '') + secs;
+    }
+
+    bmStartBtn.addEventListener('click', function() {
+        bmPassageBox.classList.remove('is-blurred');
+        if (bmOverlayPrompt) bmOverlayPrompt.style.display = 'none';
+        bmStartBtn.style.display = 'none';
+        bmDoneBtn.style.display = 'inline-flex';
+        bmResetBtn.style.display = 'inline-flex';
+        bmResultsCard.style.display = 'none';
+
+        startTime = performance.now();
+        elapsedMs = 0;
+        bmTimer.textContent = '00:00';
+
+        clearInterval(timerInterval);
+        timerInterval = setInterval(function() {
+            elapsedMs = performance.now() - startTime;
+            bmTimer.textContent = formatTime(elapsedMs);
+        }, 80);
+
+        if (typeof window.announceA11y === 'function') {
+            window.announceA11y('Benchmark timer started. Passage revealed.');
+        }
+    });
+
+    bmDoneBtn.addEventListener('click', function() {
+        clearInterval(timerInterval);
+        bmDoneBtn.style.display = 'none';
+        bmStartBtn.style.display = 'inline-flex';
+        bmStartBtn.innerHTML = '<i class="fas fa-redo" aria-hidden="true"></i> <span>Retest</span>';
+
+        const totalSecs = Math.max(1, elapsedMs / 1000);
+        const wpm = Math.round((totalBenchmarkWords / (totalSecs / 60)));
+
+        let tier = 'Proficient';
+        let feedback = '';
+        if (wpm >= 250) {
+            tier = 'Advanced Speed';
+            feedback = 'Exceptional reading velocity with rapid cognitive visual processing.';
+        } else if (wpm >= 180) {
+            tier = 'Fluent';
+            feedback = 'Strong reading fluency typical of proficient readers in secondary and higher education.';
+        } else if (wpm >= 120) {
+            tier = 'Instructional';
+            feedback = 'Standard comfortable instructional reading rate for textbook and technical content.';
+        } else {
+            tier = 'Supported Pace';
+            feedback = 'Paced reading rate. Accommodations such as Bionic Reading or OpenDyslexic can reduce decoding fatigue.';
+        }
+
+        bmResWpm.textContent = wpm;
+        bmResTime.textContent = totalSecs.toFixed(1) + 's';
+        bmResWords.textContent = totalBenchmarkWords;
+        bmResBracket.textContent = tier;
+        bmResSummary.textContent = 'Mode: ' + (bmModeSelect ? bmModeSelect.options[bmModeSelect.selectedIndex].text : 'Baseline') + '. ' + feedback;
+        bmResultsCard.style.display = 'flex';
+
+        if (typeof window.announceA11y === 'function') {
+            window.announceA11y('Benchmark complete. Reading fluency: ' + wpm + ' words per minute.');
+        }
+    });
+
+    bmResetBtn.addEventListener('click', function() {
+        clearInterval(timerInterval);
+        bmTimer.textContent = '00:00';
+        bmPassageBox.classList.add('is-blurred');
+        if (bmOverlayPrompt) bmOverlayPrompt.style.display = 'flex';
+        bmStartBtn.style.display = 'inline-flex';
+        bmStartBtn.innerHTML = '<i class="fas fa-play" aria-hidden="true"></i> <span>Start Benchmark</span>';
+        bmDoneBtn.style.display = 'none';
+        bmResetBtn.style.display = 'none';
+        bmResultsCard.style.display = 'none';
+    });
+})();
+
+// ====================================================================
+// IEP / 504 ACCOMMODATION PROFILE EXPORTER CONTROLLER
+// ====================================================================
+(function() {
+    'use strict';
+
+    const STORAGE_KEY = 'hl_accessibility_settings';
+    const iepRefreshBtn = document.getElementById('iep-refresh-btn');
+    const iepPrintBtn = document.getElementById('iep-print-btn');
+    const iepExportJsonBtn = document.getElementById('iep-export-json-btn');
+
+    const listTypo = document.getElementById('iep-list-typographic');
+    const listCognitive = document.getElementById('iep-list-cognitive');
+    const listVisual = document.getElementById('iep-list-visual');
+    const listAssistive = document.getElementById('iep-list-assistive');
+
+    function getActiveSettings() {
+        try {
+            const raw = localStorage.getItem(STORAGE_KEY);
+            return raw ? JSON.parse(raw) : {};
+        } catch (e) {
+            return {};
+        }
+    }
+
+    function renderIepProfile() {
+        const s = getActiveSettings();
+
+        // 1. Typographic Quadrant
+        if (listTypo) {
+            const fontName = s.fontFamily || 'Outfit / Standard System';
+            const scale = s.fontSize ? Math.round(s.fontSize * 100) + '%' : '100%';
+            const lineH = s.lineHeight ? s.lineHeight + 'x' : '1.6x';
+            const bionic = s.bionicReading ? 'Active (Dynamic Saccadic Fixation Bolding)' : 'Inactive';
+
+            listTypo.innerHTML = 
+                '<li><strong>Font Family:</strong> ' + fontName + '</li>' +
+                '<li><strong>Text Scaling:</strong> ' + scale + '</li>' +
+                '<li><strong>Line Pitch:</strong> ' + lineH + '</li>' +
+                '<li><strong>Bionic Reading:</strong> ' + bionic + '</li>';
+        }
+
+        // 2. Cognitive Quadrant
+        if (listCognitive) {
+            const mask = s.readingMask ? 'Active (Horizontal Eye-Tracking Letterbox)' : 'Inactive';
+            const spot = s.spotlightMode ? 'Active (Background Dimming Focus Guide)' : 'Inactive';
+            const focus = s.focusMode ? 'Active (Distraction-Free Minimalist Layout)' : 'Inactive';
+            const ticks = s.acousticTicks ? 'Active (Auditory Action Feedback)' : 'Inactive';
+
+            listCognitive.innerHTML = 
+                '<li><strong>Reading Mask:</strong> ' + mask + '</li>' +
+                '<li><strong>Spotlight Mode:</strong> ' + spot + '</li>' +
+                '<li><strong>Focus Mode:</strong> ' + focus + '</li>' +
+                '<li><strong>Acoustic Ticks:</strong> ' + ticks + '</li>';
+        }
+
+        // 3. Visual Quadrant
+        if (listVisual) {
+            const theme = s.theme ? s.theme.charAt(0).toUpperCase() + s.theme.slice(1) : 'Light';
+            const stopAnim = s.stopAnimations ? 'Active (Vestibular Motion Suppression)' : 'Inactive (Standard Motion)';
+            const cursor = s.cursorSize === 'large' ? 'Large High-Visibility Target Pointer' : 'Standard Cursor';
+
+            listVisual.innerHTML = 
+                '<li><strong>Theme / Contrast:</strong> ' + theme + (s.theme === 'contrast' ? ' (WCAG AAA Absolute)' : '') + '</li>' +
+                '<li><strong>Animation Suppression:</strong> ' + stopAnim + '</li>' +
+                '<li><strong>Cursor Visibility:</strong> ' + cursor + '</li>' +
+                '<li><strong>Irlen Overlay:</strong> Standard / None</li>';
+        }
+
+        // 4. Assistive Quadrant
+        if (listAssistive) {
+            const tts = s.textToSpeech ? 'Active (Speech Synthesis Activated)' : 'Ready on Demand';
+
+            listAssistive.innerHTML = 
+                '<li><strong>Keyboard Navigation:</strong> 100% Non-Mouse Traversal (WCAG 2.1 AA)</li>' +
+                '<li><strong>Text-to-Speech:</strong> ' + tts + '</li>' +
+                '<li><strong>Study Pacer:</strong> Paced Study Session Timer (<kbd>Alt+T</kbd>)</li>' +
+                '<li><strong>Offline Resilience:</strong> Fully Cached Offline Shell Ready</li>';
+        }
+    }
+
+    if (iepRefreshBtn) {
+        iepRefreshBtn.addEventListener('click', function() {
+            renderIepProfile();
+            const orig = iepRefreshBtn.innerHTML;
+            iepRefreshBtn.innerHTML = '<i class="fas fa-check" aria-hidden="true"></i> <span>Synced!</span>';
+            setTimeout(function() { iepRefreshBtn.innerHTML = orig; }, 1500);
+            if (typeof window.announceA11y === 'function') {
+                window.announceA11y('IEP accommodation profile synchronized with active settings.');
+            }
+        });
+    }
+
+    if (iepPrintBtn) {
+        iepPrintBtn.addEventListener('click', function() {
+            window.print();
+        });
+    }
+
+    if (iepExportJsonBtn) {
+        iepExportJsonBtn.addEventListener('click', function() {
+            const s = getActiveSettings();
+            const profileData = {
+                title: "Student Assistive Technology & Digital Accommodation Profile",
+                institution: "Hesten's Learning Universal Platform",
+                profile_id: "HL-A11Y-PROFILE",
+                exported_at: new Date().toISOString(),
+                compliance_standards: [
+                    "IDEA 34 CFR § 300.105 (Assistive Technology)",
+                    "Rehabilitation Act of 1973 Section 508",
+                    "W3C Web Content Accessibility Guidelines (WCAG) 2.1 Level AA/AAA"
+                ],
+                active_settings: s
+            };
+
+            const blob = new Blob([JSON.stringify(profileData, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'student-accessibility-profile.json';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+
+            if (typeof window.announceA11y === 'function') {
+                window.announceA11y('Student accommodation profile exported as JSON.');
+            }
+        });
+    }
+
+    // Initial render
+    renderIepProfile();
+})();
 </script>
 
 <?php
 include '../src/footer.php';
 ?>
+

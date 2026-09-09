@@ -407,6 +407,7 @@ if (!function_exists('assetVersion')) {
     <script src="<?= assetVersion('/assets/js/command-palette.js') ?>"></script>
     <script src="<?= assetVersion('/assets/js/global-shortcuts.js') ?>"></script>
     <script src="<?= assetVersion('/assets/js/header-search-autocomplete.js') ?>"></script>
+    <script src="<?= assetVersion('/assets/js/offline-status.js') ?>"></script>
     <script>
         const navToggle = document.getElementById('nav-toggle');
         if (navToggle) {

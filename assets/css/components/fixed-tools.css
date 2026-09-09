@@ -1251,4 +1251,60 @@
     background: #ffffff;
     color: #000000;
   }
+
+  /* Offline Connectivity Status Pill */
+  .hl-offline-pill {
+    position: fixed;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    z-index: 9999;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.65rem 1.15rem;
+    border-radius: 9999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    pointer-events: auto;
+  }
+
+  .hl-offline-pill.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(1.5rem);
+    pointer-events: none;
+  }
+
+  .hl-offline-pill.is-offline {
+    background: #451a03;
+    color: #fef3c7;
+    border: 1px solid #f59e0b;
+  }
+
+  .hl-offline-pill.is-online {
+    background: #064e3b;
+    color: #d1fae5;
+    border: 1px solid #10b981;
+  }
+
+  [data-theme="dark"] .hl-offline-pill.is-offline,
+  .dark .hl-offline-pill.is-offline {
+    background: #451a03;
+    color: #fef3c7;
+    border-color: #d97706;
+  }
+
+  [data-theme="high-contrast"] .hl-offline-pill,
+  .high-contrast .hl-offline-pill {
+    background: #000000 !important;
+    color: #ffffff !important;
+    border: 2px solid #ffffff !important;
+    box-shadow: none !important;
+  }
+  [data-theme="high-contrast"] .hl-offline-pill i,
+  .high-contrast .hl-offline-pill i {
+    color: #ffff00 !important;
+  }
 }

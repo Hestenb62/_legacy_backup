@@ -39,6 +39,7 @@ const ASSETS_TO_CACHE = [
   '/assets/js/assessment-core.js',
   '/assets/js/assessment-questionGenerator.js',
   '/assets/js/global-a11y.js',
+  '/assets/js/offline-status.js',
   // Statutory & Standards Research Documents
   '/assets/texts/accessability-wcag-2-1-aa.md',
   '/assets/texts/accessability-wcag-aaa.md',

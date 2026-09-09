@@ -287,6 +287,12 @@ $firstDoc = $docs[0] ?? null;
                     <button type="button" id="btn-copy-doc-link" class="upd-btn-action" title="Copy link to this document">
                         <i class="fas fa-link"></i> Copy Link
                     </button>
+                    <button type="button" id="btn-download-md" class="upd-btn-action" title="Download Markdown file">
+                        <i class="fas fa-download"></i> Download .md
+                    </button>
+                    <button type="button" id="btn-print-doc" class="upd-btn-action" title="Print document or export PDF">
+                        <i class="fas fa-print"></i> Print Doc
+                    </button>
                     <button type="button" id="btn-view-raw-md" class="upd-btn-action" title="View or copy raw Markdown">
                         <i class="fab fa-markdown"></i> Raw Markdown
                     </button>
@@ -294,6 +300,16 @@ $firstDoc = $docs[0] ?? null;
             </div>
             <h1 class="upd-viewer-title" id="viewer-title">Loading document...</h1>
             <p class="upd-viewer-summary" id="viewer-summary"></p>
+            <!-- Clickable Document Tags -->
+            <div class="upd-viewer-tags" id="viewer-tags"></div>
+            <!-- Auto-Generated Table of Contents -->
+            <nav class="upd-toc-container" id="viewer-toc" aria-label="Table of Contents" style="display: none;">
+                <div class="upd-toc-header">
+                    <i class="fas fa-list-ul"></i>
+                    <span>Table of Contents</span>
+                </div>
+                <div class="upd-toc-list" id="viewer-toc-list"></div>
+            </nav>
         </div>
 
         <!-- Rendered Markdown Body -->
@@ -548,6 +564,50 @@ $firstDoc = $docs[0] ?? null;
             }
         }
 
+        // Render Tags
+        const tagsEl = document.getElementById('viewer-tags');
+        if (tagsEl) {
+            if (doc.tags && doc.tags.length > 0) {
+                tagsEl.innerHTML = doc.tags.map(t => {
+                    const safeTag = (t || '').replace(/'/g, "\\'");
+                    return `<button type="button" class="upd-viewer-tag" onclick="filterByTag('${safeTag}')"><i class="fas fa-tag"></i> ${t}</button>`;
+                }).join('');
+                tagsEl.style.display = 'flex';
+            } else {
+                tagsEl.innerHTML = '';
+                tagsEl.style.display = 'none';
+            }
+        }
+
+        // Generate Table of Contents (TOC)
+        const tocEl = document.getElementById('viewer-toc');
+        const tocListEl = document.getElementById('viewer-toc-list');
+        if (tocEl && tocListEl && contentEl) {
+            const headings = contentEl.querySelectorAll('h2, h3');
+            if (headings.length >= 2) {
+                let tocHtml = '';
+                headings.forEach((h, idx) => {
+                    const id = 'heading-' + idx + '-' + h.textContent.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-');
+                    h.id = id;
+                    const level = h.tagName.toLowerCase() === 'h3' ? 'level-3' : 'level-2';
+                    tocHtml += `<a href="#${id}" class="upd-toc-item ${level}">${h.textContent}</a>`;
+                });
+                tocListEl.innerHTML = tocHtml;
+                tocEl.style.display = 'block';
+
+                tocListEl.querySelectorAll('.upd-toc-item').forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const target = document.querySelector(link.getAttribute('href'));
+                        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    });
+                });
+            } else {
+                tocEl.style.display = 'none';
+                tocListEl.innerHTML = '';
+            }
+        }
+
         // Update URL hash for direct deep-linking
         if (syncHash) {
             window.location.hash = `doc=${encodeURIComponent(docId)}`;
@@ -740,6 +800,47 @@ $firstDoc = $docs[0] ?? null;
         if (rawBtn) {
             rawBtn.addEventListener('click', openRawModal);
         }
+
+        // Download Markdown File Button
+        const downloadBtn = document.getElementById('btn-download-md');
+        if (downloadBtn) {
+            downloadBtn.addEventListener('click', () => {
+                const doc = updatesDocs.find(d => d.id === activeDocId);
+                if (!doc) return;
+                const blob = new Blob([doc.raw_content], { type: 'text/markdown;charset=utf-8' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = doc.filename || `${doc.id}.md`;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+                showToast(`Downloaded ${doc.filename}`);
+            });
+        }
+
+        // Print Document Button
+        const printBtn = document.getElementById('btn-print-doc');
+        if (printBtn) {
+            printBtn.addEventListener('click', () => {
+                window.print();
+            });
+        }
+
+        // Tag Filter Helper
+        window.filterByTag = function(tag) {
+            const searchInput = document.getElementById('upd-search-input');
+            const searchClear = document.getElementById('upd-search-clear');
+            if (searchInput) {
+                searchInput.value = tag;
+                searchQuery = tag;
+                if (searchClear) searchClear.style.display = 'block';
+                applyFilters();
+                searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                showToast(`Filtered by tag: ${tag}`);
+            }
+        };
 
         // Copy Raw text button
         const copyRawBtn = document.getElementById('btn-copy-raw-text');
