@@ -1,10 +1,10 @@
-const CACHE_NAME = 'hestens-learning-v5';
+const CACHE_NAME = 'hestens-learning-v6';
 const ASSETS_TO_CACHE = [
 
   // Main Directory Pages & Manifest
   '/',
   '/index.php',
-  '/offline.html',
+  '/offline.php',
   '/manifest.json',
   '/assessment/index.php',
   '/library/index.php',
@@ -94,7 +94,7 @@ self.addEventListener('fetch', (event) => {
         .catch(() => {
           return caches.match(event.request).then((response) => {
             if (response) return response;
-            return caches.match('/offline.html');
+            return caches.match('/offline.php');
           });
         })
     );

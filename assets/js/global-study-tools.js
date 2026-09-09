@@ -131,7 +131,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const t = document.getElementById(tid), p = document.getElementById(pid), c = document.getElementById(cid);
         if (!t || !p) return;
         const toggle = () => {
-            p.classList.toggle('active');
+            const active = p.classList.toggle('active');
+            if (window.announceA11y) {
+                const label = pid.replace('-panel', '').replace('a11y-', 'accessibility ');
+                window.announceA11y(active ? `${label} panel opened` : `${label} panel closed`);
+            }
         };
         t.onclick = toggle;
         if (c) c.onclick = toggle;
@@ -171,25 +175,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const tabPomodoro = document.getElementById('tab-btn-pomodoro');
     const tabStopwatch = document.getElementById('tab-btn-stopwatch');
     const tabReminders = document.getElementById('tab-btn-reminders');
+    const tabAmbient = document.getElementById('tab-btn-ambient');
     const panePomodoro = document.getElementById('pane-pomodoro');
     const paneStopwatch = document.getElementById('pane-stopwatch');
     const paneReminders = document.getElementById('pane-reminders');
+    const paneAmbient = document.getElementById('pane-ambient');
 
     const switchTab = (tabName, index) => {
         if (tabSlider) {
-            tabSlider.style.transform = `translateX(${index * 8}rem)`;
+            tabSlider.style.transform = `translateX(${index * 7}rem)`;
         }
-        [tabPomodoro, tabStopwatch, tabReminders].forEach((btn, idx) => {
+        [tabPomodoro, tabStopwatch, tabReminders, tabAmbient].forEach((btn, idx) => {
             if (btn) btn.classList.toggle('active', idx === index);
         });
         if (panePomodoro) panePomodoro.style.display = tabName === 'pomodoro' ? 'block' : 'none';
         if (paneStopwatch) paneStopwatch.style.display = tabName === 'stopwatch' ? 'block' : 'none';
         if (paneReminders) paneReminders.style.display = tabName === 'reminders' ? 'block' : 'none';
+        if (paneAmbient) paneAmbient.style.display = tabName === 'ambient' ? 'block' : 'none';
     };
 
     if (tabPomodoro) tabPomodoro.onclick = () => switchTab('pomodoro', 0);
     if (tabStopwatch) tabStopwatch.onclick = () => switchTab('stopwatch', 1);
     if (tabReminders) tabReminders.onclick = () => switchTab('reminders', 2);
+    if (tabAmbient) tabAmbient.onclick = () => switchTab('ambient', 3);
 
     // Synthesized Sound Player (No external MP3 required)
     function playChime() {
@@ -211,19 +219,26 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch(e){}
     }
 
-    // Pomodoro Study Timer Logic
+    // Pomodoro & Flowmodoro Study Timer Logic
     let pomodoroInterval = null;
     let studyTimeTotal = 1500; 
     let breakTimeTotal = 300;
     let pomodoroTimeLeft = studyTimeTotal;
     let isPomodoroRunning = false;
-    let pomodoroCurrentMode = 'study'; 
+    let pomodoroCurrentMode = 'study'; // 'study' or 'break'
+    let timerStyle = 'countdown'; // 'countdown' or 'flowmodoro'
+    let flowmodoroSeconds = 0;
 
     const pomodoroDisplay = document.getElementById('pomodoro-display');
     const pomodoroState = document.getElementById('pomodoro-state');
     const pomodoroStartBtn = document.getElementById('pomodoro-start');
     const pomodoroResetBtn = document.getElementById('pomodoro-reset');
     const assessmentCheckbox = document.getElementById('timer-assessment-mode');
+    const modeCountdownBtn = document.getElementById('timer-mode-countdown');
+    const modeFlowmodoroBtn = document.getElementById('timer-mode-flowmodoro');
+    const pomodoroPresets = document.getElementById('pomodoro-presets');
+    const flowmodoroBreakCard = document.getElementById('flowmodoro-break-card');
+    const flowmodoroEarnedBreak = document.getElementById('flowmodoro-earned-break');
 
     if (assessmentCheckbox) {
         if (window.location.pathname.includes('/assessment/') || document.getElementById('quiz-container')) {
@@ -232,12 +247,36 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const updatePomodoroDisplay = () => {
-        if (pomodoroDisplay) {
-            const m = Math.floor(pomodoroTimeLeft / 60);
-            const s = pomodoroTimeLeft % 60;
-            pomodoroDisplay.textContent = `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+        if (!pomodoroDisplay) return;
+        const total = timerStyle === 'flowmodoro' ? flowmodoroSeconds : pomodoroTimeLeft;
+        const m = Math.floor(total / 60);
+        const s = total % 60;
+        pomodoroDisplay.textContent = `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+        
+        if (timerStyle === 'flowmodoro' && flowmodoroEarnedBreak) {
+            const earnedMins = Math.max(1, Math.round(flowmodoroSeconds / 300));
+            flowmodoroEarnedBreak.textContent = `${earnedMins} mins`;
         }
     };
+
+    if (modeCountdownBtn && modeFlowmodoroBtn) {
+        modeCountdownBtn.onclick = () => {
+            timerStyle = 'countdown';
+            modeCountdownBtn.classList.add('active');
+            modeFlowmodoroBtn.classList.remove('active');
+            if (pomodoroPresets) pomodoroPresets.style.display = 'flex';
+            if (flowmodoroBreakCard) flowmodoroBreakCard.style.display = 'none';
+            resetPomodoro();
+        };
+        modeFlowmodoroBtn.onclick = () => {
+            timerStyle = 'flowmodoro';
+            modeFlowmodoroBtn.classList.add('active');
+            modeCountdownBtn.classList.remove('active');
+            if (pomodoroPresets) pomodoroPresets.style.display = 'none';
+            if (flowmodoroBreakCard) flowmodoroBreakCard.style.display = 'block';
+            resetPomodoro();
+        };
+    }
 
     const togglePomodoro = () => {
         if (isPomodoroRunning) {
@@ -248,35 +287,40 @@ document.addEventListener('DOMContentLoaded', () => {
             isPomodoroRunning = true;
             if (pomodoroStartBtn) pomodoroStartBtn.textContent = 'Pause';
             pomodoroInterval = setInterval(() => {
-                pomodoroTimeLeft--;
-                updatePomodoroDisplay();
+                if (timerStyle === 'flowmodoro') {
+                    flowmodoroSeconds++;
+                    updatePomodoroDisplay();
+                } else {
+                    pomodoroTimeLeft--;
+                    updatePomodoroDisplay();
 
-                if (pomodoroTimeLeft <= 0) {
-                    clearInterval(pomodoroInterval);
-                    isPomodoroRunning = false;
-                    if (pomodoroStartBtn) pomodoroStartBtn.textContent = 'Start';
-                    playChime();
+                    if (pomodoroTimeLeft <= 0) {
+                        clearInterval(pomodoroInterval);
+                        isPomodoroRunning = false;
+                        if (pomodoroStartBtn) pomodoroStartBtn.textContent = 'Start';
+                        playChime();
 
-                    if (pomodoroCurrentMode === 'study') {
-                        const isTest = assessmentCheckbox && assessmentCheckbox.checked;
-                        if (isTest) {
-                            window.showMessageBox("Study session completed! Great job focusing during your assessment.");
-                            resetPomodoro();
+                        if (pomodoroCurrentMode === 'study') {
+                            const isTest = assessmentCheckbox && assessmentCheckbox.checked;
+                            if (isTest) {
+                                window.showMessageBox("Study session completed! Great job focusing during your assessment.");
+                                resetPomodoro();
+                            } else {
+                                window.showMessageBox("Time for a break! Take a few minutes to stretch.");
+                                pomodoroCurrentMode = 'break';
+                                pomodoroTimeLeft = breakTimeTotal;
+                                if (pomodoroState) pomodoroState.textContent = 'Break Session';
+                                if (pomodoroState) pomodoroState.style.color = 'var(--color-success)';
+                                togglePomodoro(); 
+                            }
                         } else {
-                            window.showMessageBox("Time for a break! Take a few minutes to stretch.");
-                            pomodoroCurrentMode = 'break';
-                            pomodoroTimeLeft = breakTimeTotal;
-                            if (pomodoroState) pomodoroState.textContent = 'Break Session';
-                            if (pomodoroState) pomodoroState.style.color = 'var(--color-success)';
-                            togglePomodoro(); 
+                            window.showMessageBox("Break ended! Ready to start studying again?");
+                            pomodoroCurrentMode = 'study';
+                            pomodoroTimeLeft = studyTimeTotal;
+                            if (pomodoroState) pomodoroState.textContent = 'Study Session';
+                            if (pomodoroState) pomodoroState.style.color = 'var(--color-primary)';
+                            updatePomodoroDisplay();
                         }
-                    } else {
-                        window.showMessageBox("Break ended! Ready to start studying again?");
-                        pomodoroCurrentMode = 'study';
-                        pomodoroTimeLeft = studyTimeTotal;
-                        if (pomodoroState) pomodoroState.textContent = 'Study Session';
-                        if (pomodoroState) pomodoroState.style.color = 'var(--color-primary)';
-                        updatePomodoroDisplay();
                     }
                 }
             }, 1000);
@@ -288,8 +332,9 @@ document.addEventListener('DOMContentLoaded', () => {
         isPomodoroRunning = false;
         pomodoroCurrentMode = 'study';
         pomodoroTimeLeft = studyTimeTotal;
+        flowmodoroSeconds = 0;
         if (pomodoroStartBtn) pomodoroStartBtn.textContent = 'Start';
-        if (pomodoroState) pomodoroState.textContent = 'Study Session';
+        if (pomodoroState) pomodoroState.textContent = timerStyle === 'flowmodoro' ? 'Flow Session' : 'Study Session';
         if (pomodoroState) pomodoroState.style.color = 'var(--color-primary)';
         updatePomodoroDisplay();
     };
@@ -306,6 +351,137 @@ document.addEventListener('DOMContentLoaded', () => {
             resetPomodoro();
         };
     });
+
+    // --- Ambient Noise Synthesizer (Web Audio API) ---
+    let ambientAudioCtx = null;
+    let ambientSourceNode = null;
+    let ambientGainNode = null;
+    let currentAmbientSound = 'brown';
+    let isAmbientPlaying = false;
+
+    function createNoiseBuffer(ctx, type) {
+        const bufferSize = ctx.sampleRate * 2;
+        const buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
+        const data = buffer.getChannelData(0);
+
+        if (type === 'white') {
+            for (let i = 0; i < bufferSize; i++) {
+                data[i] = Math.random() * 2 - 1;
+            }
+        } else if (type === 'pink') {
+            let b0 = 0, b1 = 0, b2 = 0, b3 = 0, b4 = 0, b5 = 0, b6 = 0;
+            for (let i = 0; i < bufferSize; i++) {
+                const white = Math.random() * 2 - 1;
+                b0 = 0.99886 * b0 + white * 0.0555179;
+                b1 = 0.99332 * b1 + white * 0.0750759;
+                b2 = 0.96900 * b2 + white * 0.1538520;
+                b3 = 0.86650 * b3 + white * 0.3104856;
+                b4 = 0.55000 * b4 + white * 0.5329522;
+                b5 = -0.7616 * b5 - white * 0.0168980;
+                data[i] = (b0 + b1 + b2 + b3 + b4 + b5 + b6 + white * 0.5362) * 0.11;
+                b6 = white * 0.115926;
+            }
+        } else if (type === 'brown' || type === 'rain') {
+            let lastOut = 0.0;
+            for (let i = 0; i < bufferSize; i++) {
+                const white = Math.random() * 2 - 1;
+                data[i] = (lastOut + (0.02 * white)) / 1.02;
+                lastOut = data[i];
+                data[i] *= 3.5;
+                if (type === 'rain' && Math.random() < 0.002) {
+                    data[i] += (Math.random() * 0.4 - 0.2);
+                }
+            }
+        }
+        return buffer;
+    }
+
+    function startAmbientSound(type) {
+        stopAmbientSound();
+        try {
+            const AudioCtx = window.AudioContext || window.webkitAudioContext;
+            if (!AudioCtx) return;
+            if (!ambientAudioCtx) ambientAudioCtx = new AudioCtx();
+            if (ambientAudioCtx.state === 'suspended') ambientAudioCtx.resume();
+
+            const buffer = createNoiseBuffer(ambientAudioCtx, type);
+            ambientSourceNode = ambientAudioCtx.createBufferSource();
+            ambientSourceNode.buffer = buffer;
+            ambientSourceNode.loop = true;
+
+            ambientGainNode = ambientAudioCtx.createGain();
+            const volSlider = document.getElementById('ambient-volume');
+            const vol = volSlider ? parseFloat(volSlider.value) : 0.3;
+            ambientGainNode.gain.setValueAtTime(vol * 0.5, ambientAudioCtx.currentTime);
+
+            ambientSourceNode.connect(ambientGainNode);
+            ambientGainNode.connect(ambientAudioCtx.destination);
+            ambientSourceNode.start(0);
+            isAmbientPlaying = true;
+            updateAmbientUI(true);
+        } catch (e) {
+            console.warn('Ambient noise error:', e);
+        }
+    }
+
+    function stopAmbientSound() {
+        if (ambientSourceNode) {
+            try {
+                ambientSourceNode.stop();
+                ambientSourceNode.disconnect();
+            } catch (e) {}
+            ambientSourceNode = null;
+        }
+        isAmbientPlaying = false;
+        updateAmbientUI(false);
+    }
+
+    function updateAmbientUI(playing) {
+        const btn = document.getElementById('ambient-toggle');
+        const icon = document.getElementById('ambient-toggle-icon');
+        const text = document.getElementById('ambient-toggle-text');
+        if (!btn || !icon || !text) return;
+        if (playing) {
+            btn.style.backgroundColor = 'var(--color-danger, #ef4444)';
+            icon.className = 'fas fa-stop';
+            text.textContent = 'Stop Sound';
+        } else {
+            btn.style.backgroundColor = 'var(--color-primary)';
+            icon.className = 'fas fa-play';
+            text.textContent = 'Play Sound';
+        }
+    }
+
+    const ambientToggleBtn = document.getElementById('ambient-toggle');
+    if (ambientToggleBtn) {
+        ambientToggleBtn.onclick = () => {
+            if (isAmbientPlaying) {
+                stopAmbientSound();
+            } else {
+                startAmbientSound(currentAmbientSound);
+            }
+        };
+    }
+
+    document.querySelectorAll('.ambient-btn').forEach(btn => {
+        btn.onclick = () => {
+            document.querySelectorAll('.ambient-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            currentAmbientSound = btn.getAttribute('data-sound') || 'brown';
+            if (isAmbientPlaying) {
+                startAmbientSound(currentAmbientSound);
+            }
+        };
+    });
+
+    const ambientVolSlider = document.getElementById('ambient-volume');
+    if (ambientVolSlider) {
+        ambientVolSlider.oninput = () => {
+            if (ambientGainNode && ambientAudioCtx) {
+                ambientGainNode.gain.setValueAtTime(parseFloat(ambientVolSlider.value) * 0.5, ambientAudioCtx.currentTime);
+            }
+        };
+    }
 
     // Stopwatch Logic
     let stopwatchInterval = null;

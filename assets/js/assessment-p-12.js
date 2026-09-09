@@ -1049,6 +1049,10 @@ function loadCurrentQuestion() {
     document.getElementById('next-btn').classList.add('hidden');
     document.getElementById('next-btn').disabled = true;
 
+    // Clear old explanation card if present
+    const expCard = document.getElementById('answer-explanation-card');
+    if (expCard) expCard.style.display = 'none';
+
     // Render Options
     const optionsContainer = document.getElementById('options');
     optionsContainer.innerHTML = ''; // Clear old options
@@ -1089,14 +1093,46 @@ function checkAnswer(selected, correct, btnElement) {
         score++;
         streak++;
         updateStreak(streak);
-        document.getElementById('feedback').textContent = "Correct! Great job."; // Trigger mutation observer
+        document.getElementById('feedback').textContent = "Correct! Great job.";
     } else {
         streak = 0;
         updateStreak(streak);
-        document.getElementById('feedback').textContent = `Incorrect. The answer was ${correct}.`; // Trigger mutation observer
+        document.getElementById('feedback').textContent = `Incorrect. The answer was ${correct}.`;
 
         // Highlight chosen wrong answer Red
         btnElement.classList.add('bg-red-100', 'border-red-500', 'text-red-800', 'dark:bg-red-900', 'dark:text-red-200');
+    }
+
+    // Constructive, non-punitive explanation card for neurodivergent learners
+    let explanationCard = document.getElementById('answer-explanation-card');
+    if (!explanationCard) {
+        explanationCard = document.createElement('div');
+        explanationCard.id = 'answer-explanation-card';
+        explanationCard.style.marginTop = '1.25rem';
+        explanationCard.style.padding = '1rem 1.25rem';
+        explanationCard.style.borderRadius = '0.75rem';
+        explanationCard.style.fontSize = '0.95rem';
+        explanationCard.style.lineHeight = '1.5';
+        const nextBtnEl = document.getElementById('next-btn');
+        if (nextBtnEl && nextBtnEl.parentNode) {
+            nextBtnEl.parentNode.insertBefore(explanationCard, nextBtnEl);
+        } else {
+            optionsContainer.parentNode.appendChild(explanationCard);
+        }
+    }
+    explanationCard.style.display = 'block';
+
+    const q = currentQuestions[currentQuestionIndex];
+    const explanation = q ? (q.hint || q.explanation || `Take note: "${correct}" satisfies this learning standard.`) : `The key answer is "${correct}".`;
+
+    if (isCorrect) {
+        explanationCard.style.background = 'rgba(16, 185, 129, 0.12)';
+        explanationCard.style.border = '1px solid #10b981';
+        explanationCard.innerHTML = `<div style="display:flex; align-items:center; gap:0.5rem; font-weight:800; color:#10b981; margin-bottom:0.35rem;"><i class="fas fa-check-circle"></i> Outstanding!</div><div>${explanation}</div>`;
+    } else {
+        explanationCard.style.background = 'rgba(245, 158, 11, 0.12)';
+        explanationCard.style.border = '1px solid #f59e0b';
+        explanationCard.innerHTML = `<div style="display:flex; align-items:center; gap:0.5rem; font-weight:800; color:#d97706; margin-bottom:0.35rem;"><i class="fas fa-lightbulb"></i> Learning Opportunity: The correct answer is <strong>${correct}</strong></div><div style="opacity:0.95;">${explanation}</div>`;
     }
 
     // Update Progress
@@ -1111,6 +1147,16 @@ function checkAnswer(selected, correct, btnElement) {
     // Focus next button for accessibility
     nextBtn.focus();
 }
+
+window.isUntimedAssessment = false;
+window.toggleUntimedAssessmentMode = function(enabled) {
+    window.isUntimedAssessment = !!enabled;
+    const timerEls = document.querySelectorAll('.fluency-timer, #sprint-hud, .assessment-timer');
+    timerEls.forEach(el => el.style.display = enabled ? 'none' : '');
+    if (window.announceA11y) {
+        window.announceA11y(enabled ? 'Untimed practice mode enabled' : 'Untimed practice mode disabled');
+    }
+};
 
 /**
  * Reveals the hint

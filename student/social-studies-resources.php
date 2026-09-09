@@ -39,7 +39,7 @@ include '../src/header.php';
 <button onclick="openDynamicModal('US History Documents'); return false;" class="topic-pill" data-search-terms="us history documents">US History Documents</button>
 <button onclick="openDynamicModal('Historical Figures'); return false;" class="topic-pill" data-search-terms="historical figures">Historical Figures</button>
 </div>
-                    <a href="/social-history.php" class="card-action-btn">Explore History</a>
+                    <a href="/levels/k.php?subject=social" class="card-action-btn">Practice in Level K (History)</a>
                 </div>
             </div>
 
@@ -54,7 +54,7 @@ include '../src/header.php';
 <button onclick="openDynamicModal('Human Geography'); return false;" class="topic-pill" data-search-terms="human geography">Human Geography</button>
 <button onclick="openDynamicModal('Geographic Data Analysis'); return false;" class="topic-pill" data-search-terms="geographic data analysis">Geographic Data Analysis</button>
 </div>
-                    <a href="/social-maps.php" class="card-action-btn">Discover Geography</a>
+                    <a href="/levels/l.php?subject=social" class="card-action-btn">Practice in Level L (Geography)</a>
                 </div>
             </div>
 
@@ -69,7 +69,7 @@ include '../src/header.php';
 <button onclick="openDynamicModal('Constitutional Law'); return false;" class="topic-pill" data-search-terms="constitutional law">Constitutional Law</button>
 <button onclick="openDynamicModal('Electoral Process'); return false;" class="topic-pill" data-search-terms="electoral process">Electoral Process</button>
 </div>
-                    <a href="/social-civics.php" class="card-action-btn">Learn Civics</a>
+                    <a href="/levels/m.php?subject=social" class="card-action-btn">Practice in Level M (Civics)</a>
                 </div>
             </div>
 
@@ -84,7 +84,7 @@ include '../src/header.php';
 <button onclick="openDynamicModal('Supply and Demand'); return false;" class="topic-pill" data-search-terms="supply and demand">Supply and Demand</button>
 <button onclick="openDynamicModal('Global Economy'); return false;" class="topic-pill" data-search-terms="global economy">Global Economy</button>
 </div>
-                    <a href="#" class="card-action-btn">Study Economics</a>
+                    <a href="/levels/n.php?subject=social" class="card-action-btn">Practice in Level N (Economics)</a>
                 </div>
             </div>
 
@@ -99,7 +99,7 @@ include '../src/header.php';
 <button onclick="openDynamicModal('Social Issues Discussions'); return false;" class="topic-pill" data-search-terms="social issues discussions">Social Issues Discussions</button>
 <button onclick="openDynamicModal('Economic Trends'); return false;" class="topic-pill" data-search-terms="economic trends">Economic Trends</button>
 </div>
-                    <a href="/social-current-events.php" class="card-action-btn">Analyze Current Events</a>
+                    <a href="/levels/o.php?subject=social" class="card-action-btn">Practice in Level O (Global Studies)</a>
                 </div>
             </div>
 
@@ -114,7 +114,7 @@ include '../src/header.php';
 <button onclick="openDynamicModal('Anthropology Insights'); return false;" class="topic-pill" data-search-terms="anthropology insights">Anthropology Insights</button>
 <button onclick="openDynamicModal('Global Traditions'); return false;" class="topic-pill" data-search-terms="global traditions">Global Traditions</button>
 </div>
-                    <a href="#" class="card-action-btn">Explore Cultures</a>
+                    <a href="/library/index.php" class="card-action-btn">Explore in Digital Library</a>
                 </div>
             </div>
         </div>

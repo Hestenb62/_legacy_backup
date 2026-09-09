@@ -39,7 +39,7 @@ include '../src/header.php';
 <button onclick="openDynamicModal('Ecology & Environment'); return false;" class="topic-pill" data-search-terms="ecology & environment">Ecology & Environment</button>
 <button onclick="openDynamicModal('Human Body Systems'); return false;" class="topic-pill" data-search-terms="human body systems">Human Body Systems</button>
 </div>
-                    <a href="#" class="card-action-btn">Explore Biology</a>
+                    <a href="/levels/m.php?subject=science" class="card-action-btn">Practice in Level M (Biology)</a>
                 </div>
             </div>
 
@@ -50,11 +50,11 @@ include '../src/header.php';
                     <p class="resource-card-desc">Unravel the mysteries of matter and its properties with our chemistry guides and experiments.</p>
                     <div class="pills-container">
 <button onclick="openDynamicModal('Periodic Table'); return false;" class="topic-pill" data-search-terms="periodic table">Periodic Table</button>
-<button onclick="openDynamicModal('Chemical Reactions'); return false;" class="topic-pill" data-search-terms="chemical reactions">Chemical Reactions</button>
+<button onclick="openDynamicModal('Chemical Reactions'); return false;" class="topic-pill" data-search-terms="chemical Reactions">Chemical Reactions</button>
 <button onclick="openDynamicModal('Acids and Bases'); return false;" class="topic-pill" data-search-terms="acids and bases">Acids and Bases</button>
 <button onclick="openDynamicModal('Organic Chemistry Basics'); return false;" class="topic-pill" data-search-terms="organic chemistry basics">Organic Chemistry Basics</button>
 </div>
-                    <a href="#" class="card-action-btn">Discover Chemistry</a>
+                    <a href="/levels/n.php?subject=science" class="card-action-btn">Practice in Level N (Chemistry)</a>
                 </div>
             </div>
 
@@ -69,7 +69,7 @@ include '../src/header.php';
 <button onclick="openDynamicModal('Waves & Optics'); return false;" class="topic-pill" data-search-terms="waves & optics">Waves & Optics</button>
 <button onclick="openDynamicModal('Thermodynamics'); return false;" class="topic-pill" data-search-terms="thermodynamics">Thermodynamics</button>
 </div>
-                    <a href="#" class="card-action-btn">Learn Physics</a>
+                    <a href="/levels/o.php?subject=science" class="card-action-btn">Practice in Level O (Physics)</a>
                 </div>
             </div>
 
@@ -84,7 +84,7 @@ include '../src/header.php';
 <button onclick="openDynamicModal('Oceanography'); return false;" class="topic-pill" data-search-terms="oceanography">Oceanography</button>
 <button onclick="openDynamicModal('Astronomy & Space'); return false;" class="topic-pill" data-search-terms="astronomy & space">Astronomy & Space</button>
 </div>
-                    <a href="#" class="card-action-btn">Study Earth Science</a>
+                    <a href="/levels/k.php?subject=science" class="card-action-btn">Practice in Level K (Earth Science)</a>
                 </div>
             </div>
 
@@ -99,7 +99,7 @@ include '../src/header.php';
 <button onclick="openDynamicModal('Physics Simulations'); return false;" class="topic-pill" data-search-terms="physics simulations">Physics Simulations</button>
 <button onclick="openDynamicModal('At-Home Experiments'); return false;" class="topic-pill" data-search-terms="at-home experiments">At-Home Experiments</button>
 </div>
-                    <a href="/science-experiments.php" class="card-action-btn">View Experiments</a>
+                    <a href="/levels/l.php?subject=science" class="card-action-btn">Practice in Level L Science</a>
                 </div>
             </div>
 
@@ -114,7 +114,7 @@ include '../src/header.php';
 <button onclick="openDynamicModal('Space Exploration Articles'); return false;" class="topic-pill" data-search-terms="space exploration articles">Space Exploration Articles</button>
 <button onclick="openDynamicModal('Health & Medicine Updates'); return false;" class="topic-pill" data-search-terms="health & medicine updates">Health & Medicine Updates</button>
 </div>
-                    <a href="/science-articles.php" class="card-action-btn">Read Articles</a>
+                    <a href="/library/index.php" class="card-action-btn">Read in Digital Library</a>
                 </div>
             </div>
         </div>

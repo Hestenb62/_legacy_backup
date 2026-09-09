@@ -101,7 +101,7 @@ function initTextToSpeech(bookContent) {
             if (pauseBtn) pauseBtn.classList.add("hidden");
             if (resumeBtn) resumeBtn.classList.add("hidden");
             stopBtn.classList.add("hidden");
-            if (speedBtn) speedBtn.classList.add("hidden");
+            if (speedBtn) speedBtn.classList.remove("hidden");
         }
     }
 

@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 // Set variables required by header.php for dynamic content
 $pageTitle = "Grammar & Vocabulary - Hesten's Learning";
 $pageDescription = "Master the building blocks of language with our comprehensive grammar rules and vocabulary builders.";
@@ -55,6 +55,7 @@ include '../src/header.php';
                     <button onclick="openDynamicModal('Prepositions & Conjunctions'); return false;" class="topic-pill" data-search-terms="prepositions conjunctions location time and but under linking">Prepositions & Conjunctions</button>
                     <button onclick="openDynamicModal('Interjections & Articles'); return false;" class="topic-pill" data-search-terms="interjections articles parts of speech wow ouch a an the determiners emotional exclamation">Interjections & Articles</button>
                 </div>
+                <a href="/levels/k.php?subject=ela" class="card-action-btn">Practice in Level K ELA</a>
             </div>
 
             <!-- 2. Punctuation Rules -->
@@ -71,6 +72,7 @@ include '../src/header.php';
                     <button onclick="openDynamicModal('Hyphens & Dashes'); return false;" class="topic-pill" data-search-terms="hyphens dashes compound words pausing emphasis">Hyphens & Dashes</button>
                     <button onclick="openDynamicModal('Parentheses & Ellipses'); return false;" class="topic-pill" data-search-terms="parentheses ellipses brackets punctuation pauses omissions extra information quotes">Parentheses & Ellipses</button>
                 </div>
+                <a href="/levels/l.php?subject=ela" class="card-action-btn">Practice in Level L ELA</a>
             </div>
 
             <!-- 3. Vocabulary Building -->
@@ -87,6 +89,7 @@ include '../src/header.php';
                     <button onclick="openDynamicModal('Synonym & Antonym Games'); return false;" class="topic-pill" data-search-terms="synonym antonym opposite same similar words">Synonym & Antonym Games</button>
                     <button onclick="openDynamicModal('Roots & Etymology'); return false;" class="topic-pill" data-search-terms="roots etymology greek latin word origins history prefix suffix meanings base">Roots & Etymology</button>
                 </div>
+                <a href="/levels/m.php?subject=ela" class="card-action-btn">Practice in Level M ELA</a>
             </div>
 
             <!-- 4. Common Errors Guide -->
@@ -103,6 +106,7 @@ include '../src/header.php';
                     <button onclick="openDynamicModal('Dangling Modifiers'); return false;" class="topic-pill" data-search-terms="dangling modifiers descriptive hungry boys pizza correct sentences">Dangling Modifiers</button>
                     <button onclick="openDynamicModal('Pronoun-Antecedent Agreement'); return false;" class="topic-pill" data-search-terms="pronoun antecedent agreement singular plural company its gender match reference grammar errors">Pronoun-Antecedent Agreement</button>
                 </div>
+                <a href="/levels/n.php?subject=ela" class="card-action-btn">Practice in Level N ELA</a>
             </div>
 
             <!-- 5. Sentence Structure -->
@@ -119,6 +123,7 @@ include '../src/header.php';
                     <button onclick="openDynamicModal('Sentence Combining'); return false;" class="topic-pill" data-search-terms="sentence combining joining clauses short choppy smooth">Sentence Combining</button>
                     <button onclick="openDynamicModal('Compound-Complex Sentences'); return false;" class="topic-pill" data-search-terms="compound complex sentences clauses dependent independent joining coordinating subordinating">Compound-Complex Sentences</button>
                 </div>
+                <a href="/levels/o.php?subject=ela" class="card-action-btn">Practice in Level O ELA</a>
             </div>
 
             <!-- 6. Figurative Language -->
@@ -135,6 +140,7 @@ include '../src/header.php';
                     <button onclick="openDynamicModal('Symbolism & Imagery'); return false;" class="topic-pill" data-search-terms="symbolism imagery dove representing peace sensory detail sound sight smell taste touch crisp bang">Symbolism & Imagery</button>
                     <button onclick="openDynamicModal('Alliteration & Onomatopoeia'); return false;" class="topic-pill" data-search-terms="alliteration onomatopoeia sounds words repeating pop buzzing crackle sound effects figures of speech">Alliteration & Onomatopoeia</button>
                 </div>
+                <a href="/library/index.php" class="card-action-btn">Explore in Digital Library</a>
             </div>
         </div>
 
@@ -152,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.getElementById('topic-search');
     const clearBtn = document.getElementById('clear-search');
     const filterTabs = document.querySelectorAll('.filter-tab');
-    const cards = document.querySelectorAll('.grammar-card');
+    const cards = document.querySelectorAll('.resource-card');
     const noResultsState = document.getElementById('no-results-state');
     const resetBtn = document.getElementById('reset-search-btn');
 

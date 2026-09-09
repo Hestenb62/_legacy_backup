@@ -29,7 +29,7 @@ include '../src/header.php';
 </div>
 <div class="resource-grid" id="topics-grid">
             <!-- Algebra Study Guides -->
-            <div >
+            <div>
                 <div class="resource-card" data-card-category="all">
                     <div class="resource-card-header"><div class="resource-card-icon math"><i class="fas fa-file-alt mr-2"></i></div><h2 class="resource-card-title">Algebra Study Guides</h2></div>
                     <p class="resource-card-desc">Concise summaries and important formulas for all algebra topics.</p>
@@ -39,7 +39,7 @@ include '../src/header.php';
 <button onclick="openDynamicModal('Solving Inequalities Guide'); return false;" class="topic-pill" data-search-terms="solving inequalities guide">Solving Inequalities Guide</button>
 <button onclick="openDynamicModal('Factoring Polynomials Notes'); return false;" class="topic-pill" data-search-terms="factoring polynomials notes">Factoring Polynomials Notes</button>
 </div>
-                    <a href="#" class="card-action-btn">Download Algebra Guides</a>
+                    <a href="/levels/k.php?subject=math" class="card-action-btn">Practice in Level K (Algebra)</a>
                 </div>
             </div>
 
@@ -54,7 +54,7 @@ include '../src/header.php';
 <button onclick="openDynamicModal('Triangle Congruence Postulates'); return false;" class="topic-pill" data-search-terms="triangle congruence postulates">Triangle Congruence Postulates</button>
 <button onclick="openDynamicModal('Volume Formulas'); return false;" class="topic-pill" data-search-terms="volume formulas">Volume Formulas</button>
 </div>
-                    <a href="#" class="card-action-btn">Access Geometry Notes</a>
+                    <a href="/levels/l.php?subject=math" class="card-action-btn">Practice in Level L (Geometry)</a>
                 </div>
             </div>
 
@@ -69,7 +69,7 @@ include '../src/header.php';
 <button onclick="openDynamicModal('Integration Techniques'); return false;" class="topic-pill" data-search-terms="integration techniques">Integration Techniques</button>
 <button onclick="openDynamicModal('Series & Sequences Notes'); return false;" class="topic-pill" data-search-terms="series & sequences notes">Series & Sequences Notes</button>
 </div>
-                    <a href="#" class="card-action-btn">Explore Calculus Guides</a>
+                    <a href="/levels/o.php?subject=math" class="card-action-btn">Practice in Level O (Calculus)</a>
                 </div>
             </div>
 
@@ -84,7 +84,7 @@ include '../src/header.php';
 <button onclick="openDynamicModal('Hypothesis Testing Guide'); return false;" class="topic-pill" data-search-terms="hypothesis testing guide">Hypothesis Testing Guide</button>
 <button onclick="openDynamicModal('Confidence Intervals Notes'); return false;" class="topic-pill" data-search-terms="confidence intervals notes">Confidence Intervals Notes</button>
 </div>
-                    <a href="#" class="card-action-btn">Get Stats & Probability Notes</a>
+                    <a href="/levels/k.php?subject=math" class="card-action-btn">Practice in Level K (Statistics)</a>
                 </div>
             </div>
 
@@ -99,7 +99,7 @@ include '../src/header.php';
 <button onclick="openDynamicModal('Graph Theory Concepts'); return false;" class="topic-pill" data-search-terms="graph theory concepts">Graph Theory Concepts</button>
 <button onclick="openDynamicModal('Combinatorics Formulas'); return false;" class="topic-pill" data-search-terms="combinatorics formulas">Combinatorics Formulas</button>
 </div>
-                    <a href="#" class="card-action-btn">View Discrete Math Summaries</a>
+                    <a href="/levels/n.php?subject=math" class="card-action-btn">Practice in Level N (Discrete Math)</a>
                 </div>
             </div>
 
@@ -114,7 +114,7 @@ include '../src/header.php';
 <button onclick="openDynamicModal('Geometric Formulas'); return false;" class="topic-pill" data-search-terms="geometric formulas">Geometric Formulas</button>
 <button onclick="openDynamicModal('Trigonometric Identities'); return false;" class="topic-pill" data-search-terms="trigonometric identities">Trigonometric Identities</button>
 </div>
-                    <a href="#" class="card-action-btn">Access All Formulas</a>
+                    <a href="/pages/standards.php?subject=math" class="card-action-btn">Explore All Math Standards</a>
                 </div>
             </div>
         </div>

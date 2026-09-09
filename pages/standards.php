@@ -976,8 +976,10 @@
             // Update Practice Skills / Level Link
             const levelLink = document.getElementById('view-level-link');
             if (levelLink && gradeData.level) {
-                levelLink.href = `/levels/${gradeData.level.toLowerCase()}.php`;
-                levelLink.innerHTML = `GO TO LEVEL ${gradeData.level.toUpperCase()} <i class="fas fa-arrow-right ml-2"></i>`;
+                const subjParam = currentSubject ? `?subject=${encodeURIComponent(currentSubject)}` : '';
+                levelLink.href = `/levels/${gradeData.level.toLowerCase()}.php${subjParam}`;
+                const subjTitle = (subject && subject.name) ? subject.name : (currentSubject || '');
+                levelLink.innerHTML = `PRACTICE LEVEL ${gradeData.level.toUpperCase()} ${subjTitle.toUpperCase()} <i class="fas fa-arrow-right ml-2"></i>`;
             }
 
             // Content icon

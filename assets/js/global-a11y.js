@@ -27,6 +27,7 @@ const defaultSettings = {
     showPermalinks: false,
     spotlightMode: false, // NEW
     acousticTicks: false, // NEW
+    bionicReading: false, // NEW: Saccadic Fixation for ADHD/Dyslexia
     curriculum: 'engageny' // NEW: Curriculum Selection Toggle
 };
 
@@ -99,6 +100,7 @@ function updateGlobalSetting(key, value) {
         stopAnimations: value ? 'Animations disabled' : 'Animations enabled',
         textToSpeech: value ? 'Text to speech enabled' : 'Text to speech disabled',
         acousticTicks: value ? 'Acoustic audio ticks enabled' : 'Acoustic audio ticks disabled',
+        bionicReading: value ? 'Bionic reading fixation enabled' : 'Bionic reading fixation disabled',
         fontSize: `Font size adjusted to ${value} rem`,
         lineHeight: `Line height adjusted to ${value}`,
         letterSpacing: `Letter spacing adjusted to ${value}`,
@@ -185,6 +187,9 @@ function applySettings(s) {
     // Dynamic Spotlight isolation mode
     updateSpotlightModeState(!!s.spotlightMode);
 
+    // Bionic Saccadic Reading
+    applyBionicReading(!!s.bionicReading);
+
     // Also apply to HTML for consistency if needed for Tailwind
     toggleClass(r, 'focus-mode', !!s.focusMode);
 
@@ -249,6 +254,7 @@ function syncPanelInputs(s) {
     if (el('panel-permalinks')) el('panel-permalinks').checked = !!s.showPermalinks;
     if (el('panel-spotlight')) el('panel-spotlight').checked = !!s.spotlightMode;
     if (el('panel-ticks')) el('panel-ticks').checked = !!s.acousticTicks;
+    if (el('panel-bionic')) el('panel-bionic').checked = !!s.bionicReading;
     
     if (el('panel-letter-spacing')) el('panel-letter-spacing').value = s.letterSpacing;
     if (el('panel-word-spacing')) el('panel-word-spacing').value = s.wordSpacing;
@@ -687,4 +693,66 @@ document.addEventListener('click', (e) => {
         }
     }
 });
+
+// --- BIONIC / SACCADIC READING FIXATION ENGINE ---
+function applyBionicReading(enable) {
+    const targetSelectors = [
+        '.prose',
+        '.reader-text-container',
+        '.reading-content',
+        '.lesson-body',
+        '.lesson-container p',
+        '.topic-section p',
+        '.research-paper-body',
+        '.study-guide-content',
+        '#chapter-content',
+        '.module-desc'
+    ];
+    
+    document.querySelectorAll(targetSelectors.join(', ')).forEach(container => {
+        if (enable) {
+            if (container.getAttribute('data-bionic-applied') === 'true') return;
+            container.setAttribute('data-bionic-original', container.innerHTML);
+            container.setAttribute('data-bionic-applied', 'true');
+            
+            const walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT, {
+                acceptNode: function(node) {
+                    if (!node.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+                    const parentTag = node.parentElement ? node.parentElement.tagName.toLowerCase() : '';
+                    if (['script', 'style', 'code', 'pre', 'mjx-container', 'mjx-assistive-mml', 'svg', 'button'].includes(parentTag)) {
+                        return NodeFilter.FILTER_REJECT;
+                    }
+                    return NodeFilter.FILTER_ACCEPT;
+                }
+            });
+            
+            const nodesToReplace = [];
+            while (walker.nextNode()) {
+                nodesToReplace.push(walker.currentNode);
+            }
+            
+            nodesToReplace.forEach(node => {
+                const text = node.nodeValue;
+                const span = document.createElement('span');
+                span.className = 'bionic-text-node';
+                span.innerHTML = text.replace(/([a-zA-Z0-9]{2,})/g, (match) => {
+                    const mid = Math.ceil(match.length / 2);
+                    return `<b class="bionic-fixation" style="font-weight:700;">${match.slice(0, mid)}</b>${match.slice(mid)}`;
+                });
+                if (node.parentNode) {
+                    node.parentNode.replaceChild(span, node);
+                }
+            });
+        } else {
+            if (container.getAttribute('data-bionic-applied') === 'true') {
+                const orig = container.getAttribute('data-bionic-original');
+                if (orig) container.innerHTML = orig;
+                container.removeAttribute('data-bionic-applied');
+                container.removeAttribute('data-bionic-original');
+            }
+        }
+    });
+}
+window.applyBionicReading = applyBionicReading;
+
 

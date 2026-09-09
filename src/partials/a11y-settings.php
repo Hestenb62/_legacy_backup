@@ -89,6 +89,10 @@
                     <input type="checkbox" id="panel-mask" onchange="updateGlobalSetting('readingMask', this.checked)" class="settings-checkbox">
                 </label>
                 <label class="settings-toggle-row">
+                    <span class="settings-toggle-label">Bionic Reading</span>
+                    <input type="checkbox" id="panel-bionic" onchange="updateGlobalSetting('bionicReading', this.checked)" class="settings-checkbox">
+                </label>
+                <label class="settings-toggle-row">
                     <span class="settings-toggle-label">Large Cursor</span>
                     <input type="checkbox" id="panel-cursor" onchange="updateGlobalSetting('cursorSize', this.checked ? 'large' : 'normal')" class="settings-checkbox">
                 </label>

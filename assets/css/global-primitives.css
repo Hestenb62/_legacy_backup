@@ -418,6 +418,8 @@
   .font-mono { font-family: var(--font-mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace) !important; }
   .select-all { user-select: all !important; }
   .hidden { display: none !important; }
+  .bionic-fixation { font-weight: 800 !important; color: inherit; }
+  .bionic-text-node { display: inline; }
 }
 
 

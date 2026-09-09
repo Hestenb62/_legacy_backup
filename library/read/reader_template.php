@@ -81,10 +81,25 @@ if ($isTeacherPage) {
 $pageTitle = "$bookTitle - " . ($chapter === 'intro' ? "Intro" : ($isTeacherPage ? "Teacher Resources" : "Chapter $chapterNum")) . " | Hesten's Learning Library";
 $pageDescription = "Read $bookTitle by $bookAuthor online with audio narration, study guides, and vocabulary flashcards.";
 
+$wordCount = str_word_count(strip_tags($contentHtml));
+$estMinutes = max(1, ceil($wordCount / 180));
+
 include ABSPATH . 'src/header.php';
 ?>
 
-<link rel="stylesheet" href="../../assets/css/reader-main.css">
+<link rel="stylesheet" href="<?= function_exists('assetVersion') ? assetVersion('/assets/css/reader-main.css') : '../../assets/css/reader-main.css' ?>">
+<style>
+body.zen-mode .header-main,
+body.zen-mode .footer-main,
+body.zen-mode .fixed-tools-container,
+body.zen-mode .breadcrumb-nav,
+body.zen-mode .scroll-progress-container {
+    display: none !important;
+}
+body.zen-mode {
+    padding-top: 0.5rem !important;
+}
+</style>
 
 <!-- Reading Progress Bar -->
 <div id="progress-bar-container" aria-hidden="true">
@@ -226,7 +241,7 @@ include ABSPATH . 'src/header.php';
                 <button type="button" id="tts-stop-btn" class="speech-btn speech-btn-stop hidden" title="Stop Voice Narration" aria-label="Stop narration">
                     <i class="fas fa-stop"></i> <span>Stop</span>
                 </button>
-                <button type="button" id="tts-speed-btn" class="speech-btn speech-btn-speed hidden" title="Change Narration Speed" aria-label="Narration Speed">
+                <button type="button" id="tts-speed-btn" class="speech-btn speech-btn-speed" title="Change Narration Speed" aria-label="Narration Speed">
                     1.0x
                 </button>
             </div>
@@ -264,6 +279,11 @@ include ABSPATH . 'src/header.php';
                 <!-- Typography & Themes Panel Toggle -->
                 <button type="button" id="open-settings-btn" class="tool-btn tool-btn-settings" title="Typography, Font & Theme Settings" aria-label="Open Reader Settings">
                     <i class="fas fa-font"></i>
+                </button>
+
+                <!-- Zen Distraction-Free Mode Toggle -->
+                <button type="button" id="zen-mode-toggle" class="tool-btn" title="Toggle Distraction-Free Zen Mode (Esc to Exit)" aria-label="Toggle Zen Mode">
+                    <i class="fas fa-expand"></i>
                 </button>
 
                 <!-- Table of Contents Modal Trigger -->
@@ -340,6 +360,8 @@ include ABSPATH . 'src/header.php';
                 <span class="book-header-title"><?php echo htmlspecialchars($bookTitle); ?></span>
                 <span class="book-header-dot">&bull;</span>
                 <span class="book-header-chapter"><?php echo htmlspecialchars($currentChapterTitle); ?></span>
+                <span class="book-header-dot">&bull;</span>
+                <span class="book-header-readtime" title="<?php echo number_format($wordCount); ?> words (~180 WPM)" style="opacity: 0.85; font-size: 0.85em;"><i class="far fa-clock"></i> ~<?php echo $estMinutes; ?> min read</span>
             </div>
 
             <!-- Multi-Column Paginated Content Viewport -->
@@ -690,16 +712,40 @@ include ABSPATH . 'src/header.php';
     window.BOOK_JSON_VOCAB = <?php echo json_encode($vocabList); ?>;
 </script>
 
-<script src="../../assets/js/reader/read-typography.js" defer></script>
-<script src="../../assets/js/reader/read-scroll-progress.js" defer></script>
-<script src="../../assets/js/reader/read-text.js" defer></script>
-<script src="../../assets/js/library/lib-reader-lexile.js" defer></script>
-<script src="../../assets/js/reader/read-study-suite.js" defer></script>
-<script src="../../assets/js/reader/read-inline-text-highlighting.js" defer></script>
-<script src="../../assets/js/reader/read-modals.js" defer></script>
-<script src="../../assets/js/reader/read-chapter-citation-generator.js" defer></script>
-<script src="../../assets/js/reader/read-tracker.js" defer></script>
-<script src="../../assets/js/reader/read-vocab-tooltip.js" defer></script>
-<script src="../../assets/js/reader/read-scroll-markers.js" defer></script>
+<script>
+    // Zen Mode Handler
+    (function() {
+        const zenBtn = document.getElementById('zen-mode-toggle');
+        if (zenBtn) {
+            zenBtn.addEventListener('click', () => {
+                const isZen = document.body.classList.toggle('zen-mode');
+                zenBtn.innerHTML = isZen ? '<i class="fas fa-compress"></i>' : '<i class="fas fa-expand"></i>';
+                zenBtn.title = isZen ? 'Exit Zen Mode (Esc)' : 'Toggle Distraction-Free Zen Mode (Esc to Exit)';
+                if (window.announceA11y) {
+                    window.announceA11y(isZen ? 'Distraction-free zen mode activated' : 'Zen mode deactivated');
+                }
+            });
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && document.body.classList.contains('zen-mode')) {
+                    document.body.classList.remove('zen-mode');
+                    zenBtn.innerHTML = '<i class="fas fa-expand"></i>';
+                    zenBtn.title = 'Toggle Distraction-Free Zen Mode (Esc to Exit)';
+                }
+            });
+        }
+    })();
+</script>
+
+<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/reader/read-typography.js') : '../../assets/js/reader/read-typography.js' ?>" defer></script>
+<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/reader/read-scroll-progress.js') : '../../assets/js/reader/read-scroll-progress.js' ?>" defer></script>
+<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/reader/read-text.js') : '../../assets/js/reader/read-text.js' ?>" defer></script>
+<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/library/lib-reader-lexile.js') : '../../assets/js/library/lib-reader-lexile.js' ?>" defer></script>
+<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/reader/read-study-suite.js') : '../../assets/js/reader/read-study-suite.js' ?>" defer></script>
+<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/reader/read-inline-text-highlighting.js') : '../../assets/js/reader/read-inline-text-highlighting.js' ?>" defer></script>
+<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/reader/read-modals.js') : '../../assets/js/reader/read-modals.js' ?>" defer></script>
+<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/reader/read-chapter-citation-generator.js') : '../../assets/js/reader/read-chapter-citation-generator.js' ?>" defer></script>
+<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/reader/read-tracker.js') : '../../assets/js/reader/read-tracker.js' ?>" defer></script>
+<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/reader/read-vocab-tooltip.js') : '../../assets/js/reader/read-vocab-tooltip.js' ?>" defer></script>
+<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/reader/read-scroll-markers.js') : '../../assets/js/reader/read-scroll-markers.js' ?>" defer></script>
 
 <?php include ABSPATH . 'src/footer.php'; ?>

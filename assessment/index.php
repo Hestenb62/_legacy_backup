@@ -4,7 +4,7 @@ include '../src/header.php';
 ?>
 
 <!-- Link Assessment Page Specific Stylesheet -->
-<link rel="stylesheet" href="/assets/css/pages/assessment.css?v=1.2">
+<link rel="stylesheet" href="<?= function_exists('assetVersion') ? assetVersion('/assets/css/pages/assessment.css') : '/assets/css/pages/assessment.css' ?>">
 
 <!-- Assessment Selection View (Hidden by default, shown if no grade selected) -->
 <div id="assessment-selection" class="assessment-select-section hidden">
@@ -282,6 +282,21 @@ include '../src/header.php';
                 </p>
             </div>
 
+            <!-- Low-Anxiety / Untimed Mode Toggle -->
+            <div class="assessment-card" style="border-top: 3px solid var(--color-teal, #14b8a6);">
+                <div style="display: flex; align-items: center; justify-content: space-between;">
+                    <div>
+                        <h4 style="font-size: 0.95rem; font-weight: 800; margin: 0; color: var(--color-text-main); display: flex; align-items: center; gap: 0.4rem;">
+                            <i class="fas fa-feather-alt" style="color: var(--color-teal, #14b8a6);"></i> Untimed Practice
+                        </h4>
+                        <p style="font-size: 0.78rem; color: var(--color-text-muted); margin: 0.25rem 0 0 0;">Low-anxiety practice without timers.</p>
+                    </div>
+                    <label class="settings-switch" style="position: relative; display: inline-block; width: 42px; height: 22px; margin: 0;">
+                        <input type="checkbox" id="untimed-mode-toggle" onchange="window.toggleUntimedAssessmentMode && window.toggleUntimedAssessmentMode(this.checked)" style="width: 1.15rem; height: 1.15rem; cursor: pointer;">
+                    </label>
+                </div>
+            </div>
+
             <!-- Subject Filter -->
             <div class="assessment-card">
                 <h3 class="assessment-card-title">
@@ -477,8 +492,8 @@ include '../src/header.php';
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-<script src="/assets/js/assessment-p-12.js"></script>
-<script src="/assets/js/assessment-ap.js"></script>
-<script src="/assets/js/assessment-main.js"></script>
+<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/assessment-p-12.js') : '/assets/js/assessment-p-12.js' ?>"></script>
+<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/assessment-ap.js') : '/assets/js/assessment-ap.js' ?>"></script>
+<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/assessment-main.js') : '/assets/js/assessment-main.js' ?>"></script>
 
 <?php include '../src/footer.php'; ?>

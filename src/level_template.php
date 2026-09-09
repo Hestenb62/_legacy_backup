@@ -23,6 +23,175 @@ if (!isset($initialSubjectDesc)) $initialSubjectDesc = '';
 if (!isset($modules)) $modules = [];
 
 /**
+ * Hydrates module list from official standards datasets if current list is empty or minimal.
+ */
+if (!function_exists('hydrateLevelModules')) {
+    function hydrateLevelModules(string $levelId, string $subject, array $existingModules): array {
+        $skillCount = 0;
+        foreach ($existingModules as $m) {
+            if (!empty($m['topics'])) {
+                foreach ($m['topics'] as $t) {
+                    $skillCount += count($t['skills'] ?? []);
+                }
+            }
+        }
+        if ($skillCount > 2) {
+            return $existingModules;
+        }
+
+        $gradeMap = [
+            'a' => 'Pre-K',
+            'b' => 'Kindergarten',
+            'c' => '1st Grade',
+            'd' => '2nd Grade',
+            'e' => '3rd Grade',
+            'f' => '4th Grade',
+            'g' => '5th Grade',
+            'h' => '6th Grade',
+            'i' => '7th Grade',
+            'j' => '8th Grade',
+            'k' => '9th Grade',
+            'l' => '10th Grade',
+            'm' => '11th Grade',
+            'n' => '12th Grade',
+            'o' => 'Advanced Placement'
+        ];
+
+        $gradeName = $gradeMap[strtolower($levelId)] ?? null;
+        if (!$gradeName) return $existingModules;
+
+        $baseDir = defined('ABSPATH') ? ABSPATH : (dirname(__DIR__) . '/');
+        $dataDir = rtrim($baseDir, '/\\') . '/assets/data/';
+
+        // Check for dedicated EngageNY Math curriculum outline for Grade 9 (Level K)
+        if ($subject === 'math' && strtolower($levelId) === 'k') {
+            $engPath = $dataDir . 'curriculum-engageny-math.json';
+            if (file_exists($engPath)) {
+                $raw = json_decode(file_get_contents($engPath), true);
+                $gData = $raw['grades'][$gradeName] ?? null;
+                if ($gData && !empty($gData['modules'])) {
+                    $out = [];
+                    foreach ($gData['modules'] as $mod) {
+                        $topics = [];
+                        foreach ($mod['topics'] ?? [] as $top) {
+                            $skills = [];
+                            foreach ($top['lessons'] ?? [] as $les) {
+                                $skills[] = [
+                                    'id' => $les['id'] ?? ('k-math-' . strtolower($les['code'] ?? '')),
+                                    'code' => $les['code'] ?? '',
+                                    'name' => $les['title'] ?? '',
+                                    'url' => $les['url'] ?? ('/levels/k.php?' . ($les['id'] ?? ''))
+                                ];
+                            }
+                            $topics[] = [
+                                'letter' => $top['letter'] ?? 'A',
+                                'name' => $top['title'] ?? 'Core Topic',
+                                'skills' => $skills
+                            ];
+                        }
+                        $out[] = [
+                            'title' => $mod['title'] ?? ('Module ' . ($mod['moduleNumber'] ?? 1)),
+                            'description' => $mod['description'] ?? '',
+                            'topics' => $topics
+                        ];
+                    }
+                    if (!empty($out)) return $out;
+                }
+            }
+        }
+
+        // Standard datasets by subject
+        $fileMap = [
+            'math' => 'standards-ccss-math.json',
+            'ela' => 'standards-ccss-ela.json',
+            'science' => 'standards-ngss-science.json',
+            'social' => 'standards-c3-social.json'
+        ];
+
+        $targetFile = $fileMap[$subject] ?? null;
+        if (!$targetFile) return $existingModules;
+
+        $fullPath = $dataDir . $targetFile;
+        if (!file_exists($fullPath)) return $existingModules;
+
+        $data = json_decode(file_get_contents($fullPath), true);
+        if (!$data || !isset($data[$subject]['grades'][$gradeName])) return $existingModules;
+
+        $gradeData = $data[$subject]['grades'][$gradeName];
+        $rawStandards = $gradeData['ccss']['standards'] ?? ($gradeData['ngss']['standards'] ?? ($gradeData['c3']['standards'] ?? []));
+        $allHtml = is_array($rawStandards) ? implode("\n", $rawStandards) : (string)$rawStandards;
+        if (empty(trim($allHtml))) return $existingModules;
+
+        // Extract each standard item block (<div class="curr-standard-item">...</div>)
+        if (preg_match_all('/<div\s+class=["\']curr-standard-item["\'][^>]*>(.*?)<\/div>/is', $allHtml, $itemMatches)) {
+            $standardItems = $itemMatches[1];
+        } else {
+            $standardItems = [$allHtml];
+        }
+
+        $topics = [];
+        $topicLetterOrd = 65; // ASCII 'A'
+
+        foreach ($standardItems as $itemHtml) {
+            preg_match('/<h4[^>]*>(.*?)<\/h4>/i', $itemHtml, $titleMatch);
+            $domainTitle = isset($titleMatch[1]) ? strip_tags($titleMatch[1]) : 'Core Concepts';
+
+            preg_match_all('/<p[^>]*>(?:<strong[^>]*>(.*?)<\/strong>)?(.*?)(?:<\/p>|$)/is', $itemHtml, $descMatches, PREG_SET_ORDER);
+
+            $skills = [];
+            foreach ($descMatches as $dm) {
+                $code = trim(strip_tags($dm[1] ?? ''));
+                $code = rtrim($code, ':');
+                $desc = trim(strip_tags($dm[2] ?? ''));
+                if (empty($code) && empty($desc)) continue;
+
+                if (empty($code)) {
+                    $code = strtoupper($levelId) . '.' . strtoupper(substr($subject, 0, 3));
+                }
+
+                $skillSlug = strtolower(preg_replace('/[^a-zA-Z0-9]/', '-', $code));
+                $skillId = strtolower($levelId) . '-' . $subject . '-' . $skillSlug;
+
+                $skills[] = [
+                    'id' => $skillId,
+                    'code' => $code,
+                    'name' => $desc ?: $code,
+                    'url' => '/pages/standards.php?code=' . urlencode($code)
+                ];
+            }
+
+            if (!empty($skills)) {
+                $topics[] = [
+                    'letter' => chr($topicLetterOrd++),
+                    'name' => $domainTitle,
+                    'skills' => $skills
+                ];
+            }
+        }
+
+        if (empty($topics)) return $existingModules;
+
+        $topicChunks = array_chunk($topics, 3);
+        $generatedModules = [];
+        foreach ($topicChunks as $idx => $chunk) {
+            $generatedModules[] = [
+                'title' => ucfirst($subject) . ' Standards & Skills - Module ' . ($idx + 1),
+                'description' => 'Comprehensive academic competencies for ' . $gradeName . ' aligned with national frameworks.',
+                'topics' => $chunk
+            ];
+        }
+
+        return $generatedModules;
+    }
+}
+
+// Hydrate subjects with standards data if not populated
+$modules = hydrateLevelModules($levelId, 'math', $modules ?? []);
+$ela_modules = hydrateLevelModules($levelId, 'ela', $ela_modules ?? []);
+$science_modules = hydrateLevelModules($levelId, 'science', $science_modules ?? []);
+$social_modules = hydrateLevelModules($levelId, 'social', $social_modules ?? []);
+
+/**
  * Renders module UI elements for a given subject.
  *
  * @param array $modulesList
