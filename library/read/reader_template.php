@@ -84,6 +84,38 @@ $pageDescription = "Read $bookTitle by $bookAuthor online with audio narration, 
 $wordCount = str_word_count(strip_tags($contentHtml));
 $estMinutes = max(1, ceil($wordCount / 180));
 
+// Calculate reading time estimates for all TOC chapters
+$chapterReadTimes = [];
+$bookFolder = __DIR__ . '/' . $bookId;
+if ($totalChapters > 1 && is_dir($bookFolder)) {
+    for ($ci = 1; $ci <= $totalChapters; $ci++) {
+        if ($ci === $chapterNum && !empty($estMinutes)) {
+            $chapterReadTimes[$ci] = $estMinutes;
+        } else {
+            $cf = $bookFolder . '/chapter-' . $ci . '.php';
+            if (is_file($cf)) {
+                $chRaw = file_get_contents($cf);
+                $chClean = preg_replace('/<\?php.*?\?>/is', '', $chRaw);
+                $chClean = strip_tags($chClean);
+                $chWords = str_word_count($chClean);
+                $chapterReadTimes[$ci] = max(1, ceil($chWords / 180));
+            } else {
+                $chapterReadTimes[$ci] = null;
+            }
+        }
+    }
+}
+
+// Intro reading time estimate
+$introEstMinutes = 3;
+if ($hasIntro) {
+    $introText = strip_tags(($book['authorBio'] ?? '') . ' ' . ($book['introWhy'] ?? '') . ' ' . ($book['introHow'] ?? '') . ' ' . ($book['introWhat'] ?? ''));
+    $introWords = str_word_count($introText);
+    if ($introWords > 50) {
+        $introEstMinutes = max(1, ceil($introWords / 180));
+    }
+}
+
 include ABSPATH . 'src/header.php';
 ?>
 
@@ -539,7 +571,17 @@ body.zen-mode {
     <div id="toc-modal" class="toc-modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="toc-title" onclick="closeTocModal()">
         <div class="toc-content" onclick="event.stopPropagation()">
             <div class="toc-header">
-                <h2 id="toc-title">Table of Contents</h2>
+                <div>
+                    <h2 id="toc-title">Table of Contents</h2>
+                    <?php 
+                        $totalBookMinutes = array_sum(array_filter($chapterReadTimes));
+                        if ($totalBookMinutes > 0): 
+                    ?>
+                        <div class="toc-total-time" title="Combined estimated reading time for entire book">
+                            <i class="fas fa-book-reader mr-1"></i> Total Book: ~<?php echo ($totalBookMinutes >= 60) ? floor($totalBookMinutes / 60) . 'h ' . ($totalBookMinutes % 60) . 'm' : $totalBookMinutes . ' min'; ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
                 <button type="button" class="toc-close" id="close-toc-modal" onclick="closeTocModal()" aria-label="Close Table of Contents">&times;</button>
             </div>
 
@@ -549,6 +591,7 @@ body.zen-mode {
                        class="toc-link <?php echo ($chapter === 'intro') ? 'active' : ''; ?>">
                         <span class="toc-num"><i class="fas fa-feather-alt"></i></span>
                         <span class="toc-name">Author Introduction</span>
+                        <span class="toc-time" title="Estimated reading time"><i class="far fa-clock"></i> ~<?php echo $introEstMinutes; ?> min</span>
                     </a>
                 </div>
             <?php endif; ?>
@@ -564,6 +607,9 @@ body.zen-mode {
                        class="toc-link <?php echo (!$isTeacherPage && $i === $chapterNum) ? 'active' : ''; ?>">
                         <span class="toc-num">CH <?php echo $i; ?></span>
                         <span class="toc-name"><?php echo htmlspecialchars($chapterLabel); ?></span>
+                        <?php if (!empty($chapterReadTimes[$i])): ?>
+                            <span class="toc-time" title="Estimated reading time"><i class="far fa-clock"></i> ~<?php echo $chapterReadTimes[$i]; ?> min</span>
+                        <?php endif; ?>
                     </a>
                 <?php endfor; ?>
             </div>
@@ -582,6 +628,7 @@ body.zen-mode {
                                 <?php echo $isTeacherUnlocked ? '<i class="fas fa-unlock"></i> Unlocked' : '<i class="fas fa-lock"></i> PIN Protected'; ?>
                             </span>
                         </div>
+                        <span class="toc-time"><i class="far fa-clock"></i> Guide</span>
                     </a>
                 </div>
             <?php endif; ?>

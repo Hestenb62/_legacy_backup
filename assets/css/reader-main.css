@@ -273,4 +273,55 @@
     }
 }
 
+/* ==========================================================================
+   Table of Contents (TOC) Popout Reading Time Badges
+   ========================================================================== */
+.toc-total-time {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--color-primary, #6366f1);
+    margin-top: 0.25rem;
+    letter-spacing: 0.02em;
+}
+
+.toc-time {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.35rem !important;
+    font-size: 0.76rem !important;
+    font-weight: 700 !important;
+    white-space: nowrap !important;
+    padding: 0.25rem 0.65rem !important;
+    border-radius: 9999px !important;
+    background: rgba(0, 0, 0, 0.06) !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    color: var(--color-text-secondary, #64748b) !important;
+    flex-shrink: 0 !important;
+    transition: all 0.2s ease !important;
+}
+
+.toc-link.active .toc-time {
+    background: rgba(255, 255, 255, 0.25) !important;
+    border-color: rgba(255, 255, 255, 0.35) !important;
+    color: #ffffff !important;
+}
+
+body.theme-dark .toc-time,
+body.theme-midnight .toc-time,
+[data-theme="dark"] .toc-time {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
+    color: #94a3b8 !important;
+}
+
+body.theme-sepia .toc-time {
+    background: rgba(60, 47, 35, 0.08) !important;
+    border-color: rgba(60, 47, 35, 0.14) !important;
+    color: #7c6d5e !important;
+}
+
+
 
