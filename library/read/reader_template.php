@@ -338,33 +338,42 @@ body.zen-mode {
                         <button type="button" class="settings-row-btn settings-theme" data-theme="theme-dark">Dark</button>
                         <button type="button" class="settings-row-btn settings-theme" data-theme="theme-midnight">Midnight</button>
                     </div>
+
+                    <h4 class="settings-section-title">Reading Width</h4>
+                    <div class="settings-btn-row">
+                        <button type="button" class="settings-row-btn settings-width" data-width="compact">Compact</button>
+                        <button type="button" class="settings-row-btn active settings-width" data-width="standard">Adaptive</button>
+                        <button type="button" class="settings-row-btn settings-width" data-width="wide">Wide</button>
+                        <button type="button" class="settings-row-btn settings-width" data-width="full">Full</button>
+                    </div>
                 </div>
             </div>
         </nav>
     <?php endif; ?>
 
-    <!-- Single-Page Book Stage Wrapper -->
+    <!-- Reader Main Stage Wrapper -->
     <div id="book-stage" class="single-book-stage">
-        <!-- Floating Side Page Turn Buttons -->
-        <button type="button" id="book-page-prev-btn" class="book-page-arrow prev-arrow" title="Previous Page (Left Arrow)" aria-label="Previous Page">
-            <i class="fas fa-chevron-left"></i>
-        </button>
-        <button type="button" id="book-page-next-btn" class="book-page-arrow next-arrow" title="Next Page (Right Arrow)" aria-label="Next Page">
-            <i class="fas fa-chevron-right"></i>
-        </button>
-
         <!-- Single Book Page Frame -->
         <div id="book-frame" class="single-book-frame">
             <!-- Top Running Book Header -->
-            <div class="book-running-header">
-                <span class="book-header-title"><?php echo htmlspecialchars($bookTitle); ?></span>
-                <span class="book-header-dot">&bull;</span>
-                <span class="book-header-chapter"><?php echo htmlspecialchars($currentChapterTitle); ?></span>
-                <span class="book-header-dot">&bull;</span>
-                <span class="book-header-readtime" title="<?php echo number_format($wordCount); ?> words (~180 WPM)" style="opacity: 0.85; font-size: 0.85em;"><i class="far fa-clock"></i> ~<?php echo $estMinutes; ?> min read</span>
-            </div>
+            <header class="book-running-header" aria-label="Book and Chapter Details">
+                <div class="book-header-left">
+                    <span class="book-header-title">
+                        <i class="fas fa-book-open"></i> <?php echo htmlspecialchars($bookTitle); ?>
+                    </span>
+                    <span class="book-header-dot" aria-hidden="true">&bull;</span>
+                    <span class="book-header-chapter">
+                        <?php echo htmlspecialchars($currentChapterTitle); ?>
+                    </span>
+                </div>
+                <div class="book-header-right">
+                    <span class="book-header-readtime" title="<?php echo number_format($wordCount); ?> words (~180 WPM)">
+                        <i class="far fa-clock"></i> ~<?php echo $estMinutes; ?> min read
+                    </span>
+                </div>
+            </header>
 
-            <!-- Multi-Column Paginated Content Viewport -->
+            <!-- Content Viewport -->
             <div id="book-page-viewport" class="book-page-viewport">
                 <!-- Main Reader Reading Container -->
                 <article id="book-content" class="reader-main-content font-sans prose-lg lh-wide">
@@ -399,12 +408,6 @@ body.zen-mode {
                         <?php echo $contentHtml; ?>
                     <?php endif; ?>
                 </article>
-            </div>
-
-            </div>
-                <div class="book-footer-right">
-                    <span id="book-reading-time-pill" class="book-reading-time-pill" title="Estimated reading time remaining"><i class="fas fa-clock"></i> ~1 min left</span>
-                </div>
             </div>
         </div>
     </div>

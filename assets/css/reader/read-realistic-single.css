@@ -242,7 +242,6 @@ body.mode-book .reader-main-content p {
 }
 
 /* Scroll View Mode override */
-body.mode-scroll .book-running-header,
 body.mode-scroll .book-running-footer,
 body.mode-scroll .book-page-arrow {
     display: none !important;

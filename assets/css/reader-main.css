@@ -43,3 +43,234 @@
     border: 1px solid var(--color-border);
 }
 
+/* ==========================================================================
+   Adaptive Digital Reader Layout & Responsive Text Box
+   ========================================================================== */
+
+/* Main Reader Shell - Adaptive Width with Graceful Scaling */
+.reader-main-layout {
+    width: 100% !important;
+    max-width: min(94vw, 1080px) !important;
+    margin: 0 auto !important;
+    padding: 1.25rem clamp(0.75rem, 3vw, 2.5rem) 5rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    box-sizing: border-box !important;
+    transition: max-width 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* Width Override Classes (for user customization) */
+.reader-main-layout.width-compact { max-width: min(92vw, 780px) !important; }
+.reader-main-layout.width-standard { max-width: min(94vw, 980px) !important; }
+.reader-main-layout.width-wide { max-width: min(96vw, 1180px) !important; }
+.reader-main-layout.width-full { max-width: 96vw !important; }
+
+/* Stage and Frame Resets */
+.single-book-stage {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto 2.5rem auto !important;
+    perspective: none !important;
+    box-sizing: border-box !important;
+}
+
+.single-book-frame {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    box-sizing: border-box !important;
+    display: block !important;
+}
+
+.single-book-frame::before {
+    display: none !important;
+}
+
+.book-page-viewport {
+    width: 100% !important;
+    height: auto !important;
+    overflow: visible !important;
+    box-sizing: border-box !important;
+}
+
+/* Completely Hide Obsolete Single-Page Turn Buttons */
+#book-page-prev-btn,
+#book-page-next-btn,
+.book-page-arrow {
+    display: none !important;
+}
+
+/* ==========================================================================
+   Top Running Book Header (Styled, Unified, and Responsive)
+   ========================================================================== */
+.book-running-header {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    flex-wrap: wrap !important;
+    gap: 0.75rem 1.25rem !important;
+    width: 100% !important;
+    padding: 0.85rem 1.5rem !important;
+    margin-bottom: 1.25rem !important;
+    background: var(--reader-surface, var(--color-content-bg, rgba(30, 41, 59, 0.7))) !important;
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
+    border: 1px solid var(--reader-border, var(--color-border, rgba(255, 255, 255, 0.1))) !important;
+    border-radius: 9999px !important;
+    box-shadow: var(--reader-card-shadow, 0 4px 20px rgba(0, 0, 0, 0.08)) !important;
+    box-sizing: border-box !important;
+    font-size: 0.86rem !important;
+    letter-spacing: 0.02em !important;
+    color: var(--reader-muted, var(--color-text-secondary, #94a3b8)) !important;
+    user-select: none !important;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease !important;
+}
+
+.book-header-left {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    min-width: 0;
+}
+
+.book-header-title {
+    color: var(--reader-text, var(--color-text-default, #f1f5f9)) !important;
+    font-weight: 800 !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+.book-header-chapter {
+    color: var(--color-primary, #6366f1) !important;
+    font-weight: 700 !important;
+}
+
+.book-header-dot {
+    opacity: 0.35;
+    font-size: 0.75em;
+}
+
+.book-header-right {
+    display: inline-flex;
+    align-items: center;
+}
+
+.book-header-readtime {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.4rem !important;
+    padding: 0.25rem 0.8rem !important;
+    border-radius: 9999px !important;
+    background: var(--color-bg-subtle, rgba(255, 255, 255, 0.06)) !important;
+    border: 1px solid var(--reader-border, rgba(255, 255, 255, 0.08)) !important;
+    font-size: 0.8rem !important;
+    font-weight: 600 !important;
+    color: var(--reader-muted, #94a3b8) !important;
+}
+
+/* ==========================================================================
+   Adaptive Text Box / Reading Surface
+   ========================================================================== */
+.reader-main-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    background-color: var(--reader-surface, var(--color-content-bg, #1e293b)) !important;
+    color: var(--reader-text, var(--color-text-default, #f1f5f9)) !important;
+    border: 1px solid var(--reader-border, rgba(255, 255, 255, 0.1)) !important;
+    border-radius: clamp(1rem, 2vw, 1.75rem) !important;
+    padding: clamp(1.75rem, 4.5vw, 4rem) clamp(1.25rem, 4.5vw, 3.5rem) !important;
+    box-shadow: var(--reader-card-shadow, 0 16px 40px rgba(0, 0, 0, 0.3)) !important;
+    box-sizing: border-box !important;
+    text-align: left !important;
+    min-height: 60vh !important;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, padding 0.25s ease !important;
+}
+
+.reader-main-content p {
+    max-width: 100% !important;
+    line-height: 1.85 !important;
+    font-size: clamp(1.05rem, 0.35vw + 0.95rem, 1.25rem) !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    margin-bottom: 1.6em !important;
+}
+
+/* Fluid responsive headings inside reader */
+.reader-main-content h1 { font-size: clamp(1.75rem, 3.5vw, 2.4rem) !important; }
+.reader-main-content h2 { font-size: clamp(1.4rem, 2.5vw, 1.9rem) !important; }
+.reader-main-content h3 { font-size: clamp(1.2rem, 2vw, 1.5rem) !important; }
+.reader-main-content h4 { font-size: clamp(1.05rem, 1.5vw, 1.25rem) !important; }
+
+/* ==========================================================================
+   Lexile Switcher & Sticky Controls Responsiveness
+   ========================================================================== */
+#reader-controls {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+#lexile-switcher-wrap {
+    align-items: center;
+    gap: 0.35rem;
+}
+
+#lexile-switcher-select {
+    background: var(--color-bg-surface, rgba(255, 255, 255, 0.1)) !important;
+    color: var(--color-text-default, inherit) !important;
+    border: 1px solid var(--color-border, rgba(255, 255, 255, 0.2)) !important;
+    border-radius: 9999px !important;
+    padding: 0.35rem 0.75rem !important;
+    font-size: 0.82rem !important;
+    font-weight: 700 !important;
+    cursor: pointer !important;
+    outline: none !important;
+}
+
+#lexile-switcher-select option {
+    background: #1e293b;
+    color: #f1f5f9;
+}
+
+/* ==========================================================================
+   Mobile & Tablet Adaptive Media Queries
+   ========================================================================== */
+@media (max-width: 768px) {
+    .reader-main-layout {
+        padding: 0.75rem 0.75rem 4rem 0.75rem !important;
+    }
+
+    .book-running-header {
+        border-radius: 1.25rem !important;
+        padding: 0.85rem 1rem !important;
+        flex-direction: column !important;
+        text-align: center !important;
+        justify-content: center !important;
+        gap: 0.5rem !important;
+    }
+
+    .book-header-left {
+        justify-content: center !important;
+    }
+
+    .reader-main-content {
+        padding: 1.75rem 1.15rem !important;
+        border-radius: 1rem !important;
+    }
+
+    #reader-controls {
+        flex-wrap: wrap !important;
+        border-radius: 1.25rem !important;
+        padding: 0.6rem 0.85rem !important;
+        gap: 0.5rem !important;
+        justify-content: center !important;
+    }
+}
+
+

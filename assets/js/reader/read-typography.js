@@ -71,7 +71,8 @@
             lh: "lh-wide",
             theme: "theme-light",
             scalePct: 100,
-            tracking: "tracking-normal"
+            tracking: "tracking-normal",
+            readingWidth: "standard"
         };
 
         try {
@@ -132,12 +133,21 @@
             document.documentElement.classList.remove("theme-light", "theme-sepia", "theme-dark", "theme-midnight");
             document.documentElement.classList.add(prefs.theme);
 
+            // Apply reading width to outer layout
+            const readerLayout = document.querySelector('.reader-main-layout');
+            if (readerLayout) {
+                readerLayout.classList.remove('width-compact', 'width-standard', 'width-wide', 'width-full');
+                const rw = prefs.readingWidth || 'standard';
+                readerLayout.classList.add(`width-${rw}`);
+            }
+
             // Sync settings panel buttons
             document.querySelectorAll(".settings-font").forEach(b => b.classList.toggle("active", b.dataset.font === prefs.font));
             document.querySelectorAll(".settings-lh").forEach(b => b.classList.toggle("active", b.dataset.lh === prefs.lh));
             document.querySelectorAll(".settings-tracking").forEach(b => b.classList.toggle("active", b.dataset.tracking === (prefs.tracking || "tracking-normal")));
             document.querySelectorAll(".settings-theme").forEach(b => b.classList.toggle("active", b.dataset.theme === prefs.theme));
             document.querySelectorAll(".settings-scale-chip").forEach(b => b.classList.toggle("active", parseInt(b.dataset.scale, 10) === prefs.scalePct));
+            document.querySelectorAll(".settings-width").forEach(b => b.classList.toggle("active", b.dataset.width === (prefs.readingWidth || "standard")));
 
             try {
                 localStorage.setItem(prefsKey, JSON.stringify(prefs));
@@ -238,6 +248,14 @@
                 defaultPrefs.theme = btn.dataset.theme;
                 applyPrefs(defaultPrefs);
                 if (window.announceA11y) window.announceA11y(`Theme set to ${btn.dataset.theme.replace('theme-', '')}`);
+            });
+        });
+
+        document.querySelectorAll(".settings-width").forEach(btn => {
+            btn.addEventListener("click", () => {
+                defaultPrefs.readingWidth = btn.dataset.width;
+                applyPrefs(defaultPrefs);
+                if (window.announceA11y) window.announceA11y(`Reading width set to ${btn.dataset.width}`);
             });
         });
     }
