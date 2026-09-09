@@ -139,8 +139,9 @@
             </div>
             
             <button onclick="localStorage.removeItem('hl_accessibility_settings'); location.reload()" class="settings-reset-btn">Reset</button>
-            <div class="settings-footer">
-                <a href="/pages/settings.php" class="settings-link">Full Settings Page</a>
+            <div class="settings-footer" style="display: flex; justify-content: space-between; gap: 0.5rem; flex-wrap: wrap;">
+                <a href="/pages/accessibility.php" class="settings-link"><i class="fas fa-info-circle"></i> Accessibility Hub</a>
+                <a href="/pages/settings.php" class="settings-link"><i class="fas fa-cog"></i> Settings Page</a>
             </div>
         </div>
     </div>

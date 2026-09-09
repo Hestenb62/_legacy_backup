@@ -1,4 +1,4 @@
-const CACHE_NAME = 'hestens-learning-v7';
+const CACHE_NAME = 'hestens-learning-v8';
 const ASSETS_TO_CACHE = [
 
   // Main Directory Pages & Manifest
@@ -12,6 +12,7 @@ const ASSETS_TO_CACHE = [
   '/student/index.php',
 
   // Pages Directory
+  '/pages/accessibility.php',
   '/pages/help-center.php',
   '/pages/mission.php',
   '/pages/parents.php',
@@ -28,6 +29,7 @@ const ASSETS_TO_CACHE = [
   '/assets/css/global-reset.css',
   '/assets/css/global-primitives.css',
   '/assets/css/global-components.css',
+  '/assets/css/pages/accessibility.css',
   '/assets/css/pages/updates.css',
   '/assets/css/components/fixed-tools.css',
   '/assets/css/layouts/header.css',

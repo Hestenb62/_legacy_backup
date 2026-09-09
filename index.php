@@ -17,6 +17,7 @@ include 'src/header.php';
 <main class="main-content-container" id="main-content" tabindex="-1">
 
     <?php include __DIR__ . '/src/partials/resume-banner.php'; ?>
+    <?php include __DIR__ . '/src/partials/learning-streak.php'; ?>
 
     <?php include __DIR__ . '/src/partials/academic-path-header.php'; ?>
 

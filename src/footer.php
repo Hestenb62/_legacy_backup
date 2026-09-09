@@ -66,7 +66,7 @@
                     <ul class="footer-links">
                         <li class="footer-link-item"><a href="/pages/privacy.php"><i class="fas fa-shield-alt footer-link-icon"></i> Privacy Policy</a></li>
                         <li class="footer-link-item"><a href="/pages/terms-of-use.php"><i class="fas fa-file-contract footer-link-icon"></i> Terms of Use</a></li>
-                        <li class="footer-link-item"><a href="/pages/settings.php"><i class="fas fa-universal-access footer-link-icon"></i> Accessibility</a></li>
+                        <li class="footer-link-item"><a href="/pages/accessibility.php"><i class="fas fa-universal-access footer-link-icon"></i> Accessibility</a></li>
                         <li class="footer-link-item"><a href="/pages/about.php"><i class="fas fa-info-circle footer-link-icon"></i> About Us</a></li>
                     </ul>
                 </div>

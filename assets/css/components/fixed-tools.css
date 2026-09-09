@@ -101,6 +101,7 @@
   .fab-timer { background-color: var(--color-success); }
   .fab-scratchpad { background-color: var(--color-primary); }
   .fab-a11y { background-color: var(--color-info); }
+  .fab-shortcuts { background-color: #ec4899; }
 
   .fab-main-btn {
     width: 3.5rem;

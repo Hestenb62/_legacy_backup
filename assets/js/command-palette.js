@@ -153,6 +153,17 @@
             url: '/pages/profile.php',
             keywords: ['profile', 'report card', 'mastery', 'grades', 'progress', 'stats']
         },
+        {
+            id: 'nav-accessibility',
+            title: 'Accessibility & Accommodations Hub',
+            desc: 'Comprehensive guide and interactive sandbox for all platform accommodations',
+            icon: 'fa-universal-access',
+            iconColor: 'icon-purple',
+            category: 'nav',
+            badge: 'A11y',
+            url: '/pages/accessibility.php',
+            keywords: ['accessibility', 'a11y', 'hub', 'dyslexia', 'accommodations', 'contrast', 'reading mask', 'bionic', 'adhd', 'screen reader']
+        },
 
         // Platform Actions
         {

@@ -63,17 +63,30 @@ if (!function_exists('assetVersion')) {
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Hesten's Learning</title>
+    <?php
+    $siteBaseTitle = "Hesten's Learning";
+    $finalPageTitle = !empty($pageTitle) ? htmlspecialchars($pageTitle) : $siteBaseTitle;
+    $finalPageDesc = !empty($pageDescription) ? htmlspecialchars($pageDescription) : "Empowering students through accessible, custom educational levels and tools.";
+    $finalOgImage = !empty($ogImage) ? htmlspecialchars($ogImage) : "/assets/images/6791421e-7ca7-40bd-83d3-06a479bf7f36.png";
+    $currentHost = $_SERVER['HTTP_HOST'] ?? 'localhost';
+    $currentUri = $_SERVER['REQUEST_URI'] ?? '/';
+    $isHttps = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || (!empty($_SERVER['SERVER_PORT']) && $_SERVER['SERVER_PORT'] == 443);
+    $currentUrl = ($isHttps ? "https" : "http") . "://" . $currentHost . $currentUri;
+    ?>
+    <title><?= $finalPageTitle ?></title>
+    <meta name="description" content="<?= $finalPageDesc ?>">
+    <link rel="canonical" href="<?= htmlspecialchars($currentUrl) ?>">
 
     <!-- OpenGraph & Social Sharing Meta Tags -->
-    <meta property="og:title" content="Hesten's Learning">
-    <meta property="og:description" content="Empowering students through accessible, custom educational levels and tools.">
-    <meta property="og:image" content="/assets/images/6791421e-7ca7-40bd-83d3-06a479bf7f36.png">
+    <meta property="og:title" content="<?= $finalPageTitle ?>">
+    <meta property="og:description" content="<?= $finalPageDesc ?>">
+    <meta property="og:image" content="<?= $finalOgImage ?>">
+    <meta property="og:url" content="<?= htmlspecialchars($currentUrl) ?>">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Hesten's Learning">
-    <meta name="twitter:description" content="Empowering students through accessible, custom educational levels and tools.">
-    <meta name="twitter:image" content="/assets/images/6791421e-7ca7-40bd-83d3-06a479bf7f36.png">
+    <meta name="twitter:title" content="<?= $finalPageTitle ?>">
+    <meta name="twitter:description" content="<?= $finalPageDesc ?>">
+    <meta name="twitter:image" content="<?= $finalOgImage ?>">
 
     <!-- PWA Meta Tags -->
     <meta name="theme-color" content="#ffffff">
@@ -186,8 +199,10 @@ if (!function_exists('assetVersion')) {
     <link rel="stylesheet" href="<?= assetVersion('/assets/css/global-components.css') ?>">
     <link rel="stylesheet" href="<?= assetVersion('/assets/css/components/fixed-tools.css') ?>">
     <link rel="stylesheet" href="<?= assetVersion('/assets/css/components/command-palette.css') ?>">
+    <link rel="stylesheet" href="<?= assetVersion('/assets/css/components/shortcuts-modal.css') ?>">
     <link rel="stylesheet" href="<?= assetVersion('/assets/css/layouts/header.css') ?>">
     <link rel="stylesheet" href="<?= assetVersion('/assets/css/layouts/footer.css') ?>">
+    <link rel="stylesheet" href="<?= assetVersion('/assets/css/layouts/print.css') ?>" media="print">
 </head>
 
 <body>
@@ -200,6 +215,7 @@ if (!function_exists('assetVersion')) {
     <!-- Fixed Tools & Overlays -->
     <?php include __DIR__ . '/partials/fixed-tools.php'; ?>
     <?php include __DIR__ . '/partials/command-palette.php'; ?>
+    <?php include __DIR__ . '/partials/shortcuts-modal.php'; ?>
     <!-- Interactive Panels -->
     <?php include __DIR__ . '/partials/timer.php'; ?>
     <?php include __DIR__ . '/partials/scratchpad.php'; ?>
@@ -389,6 +405,8 @@ if (!function_exists('assetVersion')) {
     <script src="<?= assetVersion('/assets/js/global-core-ui.js') ?>"></script>
     <script src="<?= assetVersion('/assets/js/universal-bookmarks.js') ?>"></script>
     <script src="<?= assetVersion('/assets/js/command-palette.js') ?>"></script>
+    <script src="<?= assetVersion('/assets/js/global-shortcuts.js') ?>"></script>
+    <script src="<?= assetVersion('/assets/js/header-search-autocomplete.js') ?>"></script>
     <script>
         const navToggle = document.getElementById('nav-toggle');
         if (navToggle) {

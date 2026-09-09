@@ -1,0 +1,165 @@
+/* assets/css/layouts/print.css
+ * Universal Print Stylesheet for Hesten's Learning
+ * Ensures clean, high-contrast, paper-friendly worksheets and documentation.
+ */
+
+@media print {
+    /* 1. Global Reset for Paper */
+    *, *::before, *::after {
+        background: transparent !important;
+        color: #000000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+        filter: none !important;
+        backdrop-filter: none !important;
+    }
+
+    @page {
+        margin: 1.5cm;
+        size: auto;
+    }
+
+    html, body {
+        background: #ffffff !important;
+        color: #000000 !important;
+        font-size: 11pt !important;
+        line-height: 1.5 !important;
+        font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* 2. Hide Non-Printable Elements */
+    header.header-main,
+    footer.footer-main,
+    .fixed-tools-wrapper,
+    .fab-container,
+    .scroll-top-btn,
+    .scroll-progress-container,
+    #a11y-settings-panel,
+    #reading-mask-overlay,
+    #reading-guide-overlay,
+    #command-palette-modal,
+    #shortcuts-modal,
+    #timer-panel,
+    #scratchpad-panel,
+    #citation-modal,
+    #announcement-bar,
+    .mobile-menu-btn,
+    .header-actions,
+    .search-form,
+    .user-dropdown-container,
+    .btn-print,
+    .upd-btn-action,
+    .upd-search-bar,
+    .upd-filter-pills,
+    .nav-toggle,
+    .skip-link,
+    .print-hidden,
+    [aria-hidden="true"].fas,
+    [aria-hidden="true"].far,
+    button:not(.printable-btn) {
+        display: none !important;
+    }
+
+    /* 3. Main Content Full Width */
+    main,
+    .main-content-container,
+    .container,
+    .upd-container,
+    .content-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    /* 4. Headings & Typography */
+    h1, h2, h3, h4, h5, h6 {
+        page-break-after: avoid;
+        break-after: avoid;
+        color: #000000 !important;
+        font-weight: 700 !important;
+    }
+
+    h1 { font-size: 20pt !important; margin-bottom: 0.5rem !important; }
+    h2 { font-size: 16pt !important; margin-top: 1rem !important; margin-bottom: 0.4rem !important; }
+    h3 { font-size: 13pt !important; margin-top: 0.8rem !important; margin-bottom: 0.3rem !important; }
+
+    /* 5. Clean Layout for Cards & Accordions */
+    .level-card,
+    .standard-item,
+    .curr-unit-card,
+    .upd-doc-view,
+    .upd-card,
+    .stat-card,
+    article,
+    section {
+        page-break-inside: avoid;
+        break-inside: avoid;
+        border: 1px solid #d1d5db !important;
+        border-radius: 4px !important;
+        margin-bottom: 1rem !important;
+        padding: 0.75rem !important;
+        background: #ffffff !important;
+    }
+
+    /* Expand collapsed accordions so the full curriculum prints */
+    .curr-accordion-body,
+    .collapsed .curr-accordion-body,
+    .collapse:not(.show),
+    details:not([open]) > :not(summary) {
+        display: block !important;
+        height: auto !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    /* 6. Tables & Code Blocks */
+    table {
+        border-collapse: collapse !important;
+        width: 100% !important;
+        page-break-inside: avoid;
+    }
+
+    th, td {
+        border: 1px solid #d1d5db !important;
+        padding: 6px 10px !important;
+        text-align: left !important;
+    }
+
+    th {
+        background-color: #f3f4f6 !important;
+        font-weight: 700 !important;
+    }
+
+    pre, code {
+        font-family: monospace !important;
+        background: #f8fafc !important;
+        border: 1px solid #e2e8f0 !important;
+        border-radius: 3px !important;
+        page-break-inside: avoid;
+        white-space: pre-wrap !important;
+        word-break: break-word !important;
+    }
+
+    /* 7. Links: Underline for Clarity */
+    a {
+        text-decoration: underline !important;
+        color: #000000 !important;
+    }
+
+    a[href^="http"]:after {
+        content: " (" attr(href) ")";
+        font-size: 80%;
+        color: #555555 !important;
+    }
+
+    /* Don't show URL for anchors or internal javascript */
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+}

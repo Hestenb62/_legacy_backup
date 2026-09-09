@@ -1,0 +1,238 @@
+/* assets/css/components/learning-streak.css
+ * Student Daily Learning Streak & Goal Widget Styling
+ * Supports Light, Dark, Midnight, Sepia, and High Contrast
+ */
+
+@layer components {
+    .learning-streak-wrapper {
+        margin: 1.5rem 0;
+        width: 100%;
+    }
+
+    .learning-streak-card {
+        background: linear-gradient(135deg, color-mix(in srgb, var(--color-primary) 8%, var(--color-bg-surface)), var(--color-bg-surface));
+        border: 1px solid var(--color-border, #e2e8f0);
+        border-radius: 1.25rem;
+        padding: 1.25rem 1.5rem;
+        box-shadow: var(--shadow-sm, 0 1px 2px 0 rgba(0, 0, 0, 0.05));
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .learning-streak-card:hover {
+        box-shadow: var(--shadow-md, 0 4px 6px -1px rgba(0, 0, 0, 0.1));
+    }
+
+    .streak-header {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        justify-content: space-between;
+    }
+
+    .streak-badge {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        background: color-mix(in srgb, #f59e0b 12%, var(--color-bg-surface));
+        border: 1px solid color-mix(in srgb, #f59e0b 30%, transparent);
+        padding: 0.5rem 0.85rem;
+        border-radius: 1rem;
+        flex-shrink: 0;
+    }
+
+    .streak-flame {
+        font-size: 1.75rem;
+        line-height: 1;
+        animation: flameWobble 2s infinite ease-in-out;
+    }
+
+    @keyframes flameWobble {
+        0%, 100% { transform: scale(1) rotate(0deg); }
+        50% { transform: scale(1.12) rotate(4deg); }
+    }
+
+    .streak-count-box {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .streak-number {
+        font-size: 1.25rem;
+        font-weight: 800;
+        line-height: 1.1;
+        color: #d97706;
+    }
+
+    .streak-label {
+        font-size: 0.7rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--color-text-muted, #64748b);
+    }
+
+    .streak-message-box {
+        flex: 1 1 240px;
+    }
+
+    .streak-title {
+        font-size: 1.05rem;
+        font-weight: 700;
+        margin: 0 0 0.25rem 0;
+        color: var(--color-text-main, #0f172a);
+    }
+
+    .streak-subtitle {
+        font-size: 0.825rem;
+        margin: 0;
+        color: var(--color-text-muted, #64748b);
+        line-height: 1.4;
+    }
+
+    .streak-goal-box {
+        flex: 1 1 200px;
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+
+    .goal-info-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.75rem;
+    }
+
+    .goal-label {
+        font-weight: 600;
+        color: var(--color-text-muted, #64748b);
+        display: flex;
+        align-items: center;
+        gap: 0.35rem;
+    }
+
+    .goal-label i {
+        color: var(--color-primary, #3b82f6);
+    }
+
+    .goal-progress-text {
+        font-weight: 700;
+        color: var(--color-text-main, #0f172a);
+    }
+
+    .goal-progress-track {
+        width: 100%;
+        height: 0.5rem;
+        background: var(--color-bg-subtle, #e2e8f0);
+        border-radius: 9999px;
+        overflow: hidden;
+    }
+
+    .goal-progress-bar {
+        height: 100%;
+        background: linear-gradient(90deg, #f59e0b, var(--color-primary, #3b82f6));
+        border-radius: 9999px;
+        transition: width 0.4s ease;
+    }
+
+    .streak-action-box {
+        flex-shrink: 0;
+    }
+
+    .streak-action-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: var(--color-primary, #3b82f6);
+        color: #ffffff;
+        font-size: 0.875rem;
+        font-weight: 600;
+        padding: 0.6rem 1.1rem;
+        border: none;
+        border-radius: 0.75rem;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        box-shadow: 0 2px 4px rgba(59, 130, 246, 0.25);
+    }
+
+    .streak-action-btn:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 8px rgba(59, 130, 246, 0.35);
+        opacity: 0.95;
+    }
+
+    /* Theme Adaptations */
+    [data-theme="dark"] .learning-streak-card,
+    .dark .learning-streak-card {
+        background: #1e293b;
+        border-color: #334155;
+    }
+    [data-theme="dark"] .streak-number,
+    .dark .streak-number {
+        color: #fbbf24;
+    }
+
+    [data-theme="midnight"] .learning-streak-card,
+    .midnight .learning-streak-card {
+        background: #0f172a;
+        border-color: #1e293b;
+    }
+
+    [data-theme="sepia"] .learning-streak-card,
+    .sepia .learning-streak-card {
+        background: #fbf0d9;
+        border-color: #ded0b0;
+    }
+
+    /* High Contrast Mode */
+    [data-theme="high-contrast"] .learning-streak-card,
+    .high-contrast .learning-streak-card {
+        background: #000000 !important;
+        border: 2px solid #ffffff !important;
+        box-shadow: none !important;
+    }
+    [data-theme="high-contrast"] .streak-badge,
+    .high-contrast .streak-badge {
+        background: #000000 !important;
+        border: 2px solid #ffff00 !important;
+    }
+    [data-theme="high-contrast"] .streak-number,
+    [data-theme="high-contrast"] .streak-title,
+    [data-theme="high-contrast"] .goal-progress-text,
+    .high-contrast .streak-number,
+    .high-contrast .streak-title,
+    .high-contrast .goal-progress-text {
+        color: #ffff00 !important;
+    }
+    [data-theme="high-contrast"] .streak-label,
+    [data-theme="high-contrast"] .streak-subtitle,
+    [data-theme="high-contrast"] .goal-label,
+    .high-contrast .streak-label,
+    .high-contrast .streak-subtitle,
+    .high-contrast .goal-label {
+        color: #ffffff !important;
+    }
+    [data-theme="high-contrast"] .goal-progress-track,
+    .high-contrast .goal-progress-track {
+        background: #333333 !important;
+        border: 1px solid #ffffff !important;
+    }
+    [data-theme="high-contrast"] .goal-progress-bar,
+    .high-contrast .goal-progress-bar {
+        background: #ffff00 !important;
+    }
+    [data-theme="high-contrast"] .streak-action-btn,
+    .high-contrast .streak-action-btn {
+        background: #ffff00 !important;
+        color: #000000 !important;
+        border: 2px solid #ffffff !important;
+        font-weight: 800 !important;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .streak-flame {
+            animation: none !important;
+        }
+    }
+}

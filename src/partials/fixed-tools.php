@@ -14,6 +14,7 @@
             <button id="timer-toggle" class="fab-item-btn fab-timer" title="Timer" type="button"><i class="fas fa-stopwatch"></i></button>
             <button id="scratchpad-toggle" class="fab-item-btn fab-scratchpad" title="Scratchpad" type="button"><i class="fas fa-pen"></i></button>
             <button id="a11y-toggle-button" class="fab-item-btn fab-a11y" title="Accessibility" type="button"><i class="fas fa-universal-access"></i></button>
+            <button onclick="window.toggleShortcutsModal ? window.toggleShortcutsModal() : null" class="fab-item-btn fab-shortcuts" title="Keyboard Shortcuts (?)" type="button"><i class="fas fa-keyboard"></i></button>
         </div>
 
         <!-- Main FAB Toggle -->
