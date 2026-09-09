@@ -413,4 +413,250 @@
   .focus-mode .library-breadcrumb {
     display: none !important;
   }
+
+  /* ==========================================================================
+     Expandable Resources Mega Dropdown
+     ========================================================================== */
+  .nav-dropdown-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  .nav-dropdown-btn {
+    display: inline-flex;
+    align-items: center;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-lg);
+    transition: color 0.2s, background-color 0.2s;
+  }
+
+  .nav-dropdown-btn:hover,
+  .nav-dropdown-btn[aria-expanded="true"] {
+    color: var(--color-primary);
+    background-color: var(--color-bg-surface);
+  }
+
+  .nav-chevron {
+    margin-left: 0.35rem;
+    font-size: 0.7rem;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .nav-dropdown-btn[aria-expanded="true"] .nav-chevron {
+    transform: rotate(180deg);
+  }
+
+  .nav-mega-dropdown {
+    display: none;
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 0;
+    width: min(calc(100vw - 2rem), 760px);
+    max-width: calc(100vw - 2rem);
+    max-height: calc(100vh - 5rem);
+    overflow-y: auto;
+    background: var(--color-bg-surface, #ffffff);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl, 1rem);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.25), 0 0 0 1px var(--color-border);
+    z-index: 100;
+    box-sizing: border-box;
+    animation: navFlyoutIn 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .nav-mega-dropdown.active {
+    display: block;
+  }
+
+  @keyframes navFlyoutIn {
+    from {
+      opacity: 0;
+      transform: translateY(-8px) scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  .nav-mega-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+    padding: 1.25rem;
+  }
+
+  .nav-mega-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .nav-mega-col-title {
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-text-muted);
+    padding-bottom: 0.35rem;
+    border-bottom: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+  }
+
+  .nav-mega-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .nav-mega-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    padding: 0.45rem 0.65rem;
+    border-radius: var(--radius-md, 0.5rem);
+    text-decoration: none;
+    color: var(--color-text-main);
+    transition: background-color 0.15s ease, transform 0.15s ease, color 0.15s ease;
+  }
+
+  .nav-mega-item:hover,
+  .nav-mega-item:focus-visible {
+    background-color: color-mix(in srgb, var(--color-primary) 10%, transparent);
+    color: var(--color-primary);
+    outline: none;
+    transform: translateX(3px);
+  }
+
+  .nav-mega-item.featured-item {
+    background: color-mix(in srgb, var(--color-primary) 6%, transparent);
+    border: 1px dashed color-mix(in srgb, var(--color-primary) 35%, transparent);
+  }
+
+  .item-icon {
+    font-size: 0.95rem;
+    margin-top: 0.2rem;
+    flex-shrink: 0;
+    width: 1.25rem;
+    text-align: center;
+  }
+
+  .item-title {
+    display: block;
+    font-size: 0.825rem;
+    font-weight: 700;
+    line-height: 1.25;
+  }
+
+  .item-desc {
+    display: block;
+    font-size: 0.725rem;
+    color: var(--color-text-muted);
+    line-height: 1.2;
+    margin-top: 0.1rem;
+  }
+
+  .level-tag {
+    display: inline-block;
+    padding: 0.15rem 0.4rem;
+    font-size: 0.65rem;
+    font-weight: 800;
+    border-radius: var(--radius-sm, 4px);
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+    text-align: center;
+  }
+
+  .tag-teal { background: rgba(20, 184, 166, 0.15); color: #0d9488; }
+  .tag-blue { background: rgba(59, 130, 246, 0.15); color: #2563eb; }
+  .tag-green { background: rgba(34, 197, 94, 0.15); color: #16a34a; }
+  .tag-purple { background: rgba(168, 85, 247, 0.15); color: #9333ea; }
+  .tag-amber { background: rgba(245, 158, 11, 0.15); color: #d97706; }
+  .tag-rose { background: rgba(244, 63, 94, 0.15); color: #e11d48; }
+
+  .nav-mega-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.75rem 1.25rem;
+    background: color-mix(in srgb, var(--color-bg-base) 40%, var(--color-bg-surface));
+    border-top: 1px solid var(--color-border);
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .nav-mega-footer-link {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--color-text-muted);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: color 0.15s ease;
+  }
+
+  .nav-mega-footer-link:hover {
+    color: var(--color-primary);
+  }
+
+  /* Mobile Responsive drawer adjustments */
+  @media (max-width: 1023px) {
+    .nav-dropdown-container {
+      width: 100%;
+    }
+    .nav-dropdown-btn {
+      width: 100%;
+      justify-content: space-between;
+      padding: var(--space-2) var(--space-3);
+    }
+    .nav-mega-dropdown {
+      position: static;
+      width: 100%;
+      max-width: 100%;
+      max-height: none;
+      overflow-y: visible;
+      box-shadow: none;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      margin-top: 0.35rem;
+      animation: none;
+    }
+    .nav-mega-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      padding: 1rem;
+    }
+    .nav-mega-footer {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+      padding: 0.75rem 1rem;
+    }
+  }
+
+  /* High contrast mode adaptations */
+  [data-theme="high-contrast"] .nav-mega-dropdown,
+  .high-contrast .nav-mega-dropdown {
+    background: #000000 !important;
+    border: 2px solid #ffffff !important;
+    color: #ffffff !important;
+  }
+  [data-theme="high-contrast"] .nav-mega-item:hover,
+  .high-contrast .nav-mega-item:hover {
+    background: #ffff00 !important;
+    color: #000000 !important;
+  }
 }

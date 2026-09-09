@@ -272,6 +272,194 @@ if (!function_exists('assetVersion')) {
                         <a href="/" class="nav-link"><i class="fas fa-home" style="margin-right: 0.25rem; opacity: 0.7;"></i> Home</a>
                         <a href="/assessment" class="nav-link"><i class="fas fa-tasks" style="margin-right: 0.25rem; opacity: 0.7;"></i> Assessment</a>
                         <a href="/library/" class="nav-link"><i class="fas fa-book" style="margin-right: 0.25rem; opacity: 0.7;"></i> Library</a>
+
+                        <!-- Expandable Resources Dropdown Menu -->
+                        <div class="nav-dropdown-container" id="resources-dropdown-container">
+                            <button type="button" class="nav-link nav-dropdown-btn" id="resources-dropdown-btn" aria-expanded="false" aria-haspopup="true" aria-controls="resources-dropdown-menu">
+                                <i class="fas fa-th-large" style="margin-right: 0.35rem; opacity: 0.75;" aria-hidden="true"></i>
+                                <span>Resources</span>
+                                <i class="fas fa-chevron-down nav-chevron" id="resources-nav-chevron" aria-hidden="true"></i>
+                            </button>
+
+                            <div class="nav-mega-dropdown" id="resources-dropdown-menu" role="menu" aria-labelledby="resources-dropdown-btn">
+                                <div class="nav-mega-grid">
+                                    <!-- Column 1: Books & Library -->
+                                    <div class="nav-mega-col">
+                                        <span class="nav-mega-col-title">
+                                            <i class="fas fa-book-open" style="color: #10b981;"></i> Books &amp; Library
+                                        </span>
+                                        <ul class="nav-mega-list">
+                                            <li>
+                                                <a href="/library/index.php" class="nav-mega-item" role="menuitem">
+                                                    <i class="fas fa-archive item-icon" style="color: #10b981;"></i>
+                                                    <div>
+                                                        <span class="item-title">Digital Library Catalog</span>
+                                                        <span class="item-desc">Browse full literature collection</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/library/read/?book=the-time-machine" class="nav-mega-item" role="menuitem">
+                                                    <i class="fas fa-clock item-icon" style="color: #06b6d4;"></i>
+                                                    <div>
+                                                        <span class="item-title">The Time Machine</span>
+                                                        <span class="item-desc">H.G. Wells classic sci-fi</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/library/read/?book=frankenstein" class="nav-mega-item" role="menuitem">
+                                                    <i class="fas fa-bolt item-icon" style="color: #8b5cf6;"></i>
+                                                    <div>
+                                                        <span class="item-title">Frankenstein</span>
+                                                        <span class="item-desc">Mary Shelley gothic classic</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/library/read/?book=the-american-yawp" class="nav-mega-item" role="menuitem">
+                                                    <i class="fas fa-landmark item-icon" style="color: #f59e0b;"></i>
+                                                    <div>
+                                                        <span class="item-title">The American Yawp</span>
+                                                        <span class="item-desc">Open U.S. history reader</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Column 2: Assessment by Grade -->
+                                    <div class="nav-mega-col">
+                                        <span class="nav-mega-col-title">
+                                            <i class="fas fa-tasks" style="color: #3b82f6;"></i> Assessments
+                                        </span>
+                                        <ul class="nav-mega-list">
+                                            <li>
+                                                <a href="/assessment/diagnostic.php" class="nav-mega-item featured-item" role="menuitem">
+                                                    <i class="fas fa-brain item-icon" style="color: #ec4899;"></i>
+                                                    <div>
+                                                        <span class="item-title">Adaptive Diagnostic</span>
+                                                        <span class="item-desc">AI growth &amp; placement</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/assessment/index.php#elem" class="nav-mega-item" role="menuitem">
+                                                    <i class="fas fa-shapes item-icon" style="color: #10b981;"></i>
+                                                    <div>
+                                                        <span class="item-title">Early &amp; Kindergarten</span>
+                                                        <span class="item-desc">Phonics &amp; basic numbers</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/assessment/index.php#elem" class="nav-mega-item" role="menuitem">
+                                                    <i class="fas fa-pencil-ruler item-icon" style="color: #3b82f6;"></i>
+                                                    <div>
+                                                        <span class="item-title">Elementary (Grades 1–5)</span>
+                                                        <span class="item-desc">Math sprints &amp; reading check</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/assessment/index.php#middle" class="nav-mega-item" role="menuitem">
+                                                    <i class="fas fa-calculator item-icon" style="color: #f97316;"></i>
+                                                    <div>
+                                                        <span class="item-title">Middle School (6–8)</span>
+                                                        <span class="item-desc">Pre-algebra &amp; text analysis</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/assessment/index.php#high" class="nav-mega-item" role="menuitem">
+                                                    <i class="fas fa-graduation-cap item-icon" style="color: #8b5cf6;"></i>
+                                                    <div>
+                                                        <span class="item-title">High School (9–12)</span>
+                                                        <span class="item-desc">Algebra 1, bio &amp; chem</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Column 3: Quick Curriculum Levels -->
+                                    <div class="nav-mega-col">
+                                        <span class="nav-mega-col-title">
+                                            <i class="fas fa-layer-group" style="color: #8b5cf6;"></i> Curriculum Levels
+                                        </span>
+                                        <ul class="nav-mega-list">
+                                            <li>
+                                                <a href="/levels/a.php" class="nav-mega-item" role="menuitem">
+                                                    <span class="level-tag tag-teal">Level A</span>
+                                                    <div>
+                                                        <span class="item-title">Pre-K Readiness</span>
+                                                        <span class="item-desc">Early foundational skills</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/levels/b.php" class="nav-mega-item" role="menuitem">
+                                                    <span class="level-tag tag-blue">Level B</span>
+                                                    <div>
+                                                        <span class="item-title">Kindergarten</span>
+                                                        <span class="item-desc">Early math &amp; phonics</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/levels/g.php" class="nav-mega-item" role="menuitem">
+                                                    <span class="level-tag tag-green">Level G</span>
+                                                    <div>
+                                                        <span class="item-title">5th Grade Mastery</span>
+                                                        <span class="item-desc">Fractions &amp; ecosystems</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/levels/k.php" class="nav-mega-item" role="menuitem">
+                                                    <span class="level-tag tag-purple">Level K</span>
+                                                    <div>
+                                                        <span class="item-title">9th Grade High School</span>
+                                                        <span class="item-desc">Algebra 1 &amp; literature</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/levels/ap-us-history.php" class="nav-mega-item" role="menuitem">
+                                                    <span class="level-tag tag-amber">AP</span>
+                                                    <div>
+                                                        <span class="item-title">AP U.S. History</span>
+                                                        <span class="item-desc">College-prep curriculum</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/levels/practice-ged.php" class="nav-mega-item" role="menuitem">
+                                                    <span class="level-tag tag-rose">GED</span>
+                                                    <div>
+                                                        <span class="item-title">Practice GED Prep</span>
+                                                        <span class="item-desc">Equivalency exam suite</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Footer bar inside mega menu -->
+                                <div class="nav-mega-footer">
+                                    <a href="/pages/standards.php" class="nav-mega-footer-link">
+                                        <i class="fas fa-book"></i> Standards Explorer
+                                    </a>
+                                    <a href="/student/interactive-labs.php" class="nav-mega-footer-link">
+                                        <i class="fas fa-flask"></i> Interactive Labs
+                                    </a>
+                                    <a href="/research/" class="nav-mega-footer-link">
+                                        <i class="fas fa-microscope"></i> Research Papers
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     
                     <div class="header-actions">
@@ -464,16 +652,111 @@ if (!function_exists('assetVersion')) {
         // User Dropdown Logic
         const userBtn = document.getElementById('user-pill-btn');
         const userMenu = document.getElementById('user-dropdown-menu');
+        const resBtn = document.getElementById('resources-dropdown-btn');
+        const resMenu = document.getElementById('resources-dropdown-menu');
+        const resContainer = document.getElementById('resources-dropdown-container');
+
         if (userBtn && userMenu) {
             userBtn.addEventListener('click', function(e) {
                 e.stopPropagation();
                 const active = userMenu.classList.toggle('active');
                 userBtn.setAttribute('aria-expanded', active ? 'true' : 'false');
+                if (active && resMenu) {
+                    resMenu.classList.remove('active');
+                    if (resBtn) resBtn.setAttribute('aria-expanded', 'false');
+                }
             });
             document.addEventListener('click', function(e) {
                 if (!userBtn.contains(e.target) && !userMenu.contains(e.target)) {
                     userMenu.classList.remove('active');
                     userBtn.setAttribute('aria-expanded', 'false');
+                }
+            });
+        }
+
+        // Resources Expandable Dropdown Logic
+        if (resBtn && resMenu) {
+            const repositionMegaMenu = function() {
+                if (window.innerWidth < 1024) {
+                    resMenu.style.left = '';
+                    resMenu.style.right = '';
+                    return;
+                }
+                
+                // Reset left offset to measure natural layout
+                resMenu.style.left = '0px';
+                resMenu.style.right = 'auto';
+
+                const rect = resMenu.getBoundingClientRect();
+                const padding = 16;
+                const viewportWidth = window.innerWidth;
+
+                // If menu extends past right edge of the screen, shift it left
+                if (rect.right > viewportWidth - padding) {
+                    const overflowRight = rect.right - (viewportWidth - padding);
+                    resMenu.style.left = `-${overflowRight}px`;
+                }
+
+                // Safety check: ensure left edge doesn't get pushed off-screen to the left
+                const updatedRect = resMenu.getBoundingClientRect();
+                if (updatedRect.left < padding) {
+                    const currentLeft = parseFloat(resMenu.style.left || '0');
+                    const underflowLeft = padding - updatedRect.left;
+                    resMenu.style.left = `${currentLeft + underflowLeft}px`;
+                }
+            };
+
+            const toggleResMenu = function(forceState) {
+                const isCurrentlyActive = resMenu.classList.contains('active');
+                const willBeActive = typeof forceState === 'boolean' ? forceState : !isCurrentlyActive;
+                if (willBeActive) {
+                    resMenu.classList.add('active');
+                    resBtn.setAttribute('aria-expanded', 'true');
+                    repositionMegaMenu();
+                    // Close user menu if open
+                    if (userMenu && userMenu.classList.contains('active')) {
+                        userMenu.classList.remove('active');
+                        if (userBtn) userBtn.setAttribute('aria-expanded', 'false');
+                    }
+                } else {
+                    resMenu.classList.remove('active');
+                    resBtn.setAttribute('aria-expanded', 'false');
+                    resMenu.style.left = '';
+                    resMenu.style.right = '';
+                }
+            };
+
+            resBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                toggleResMenu();
+            });
+
+            // Adjust position if window is resized while open
+            window.addEventListener('resize', function() {
+                if (resMenu.classList.contains('active')) {
+                    repositionMegaMenu();
+                }
+            });
+
+            // Keyboard accessibility (Escape key closes and returns focus)
+            resBtn.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    toggleResMenu(false);
+                    resBtn.focus();
+                }
+            });
+
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && resMenu.classList.contains('active')) {
+                    toggleResMenu(false);
+                    resBtn.focus();
+                }
+            });
+
+            // Outside click dismissal
+            document.addEventListener('click', function(e) {
+                if (resContainer && !resContainer.contains(e.target)) {
+                    toggleResMenu(false);
                 }
             });
         }
