@@ -463,11 +463,38 @@ include '../src/header.php';
     <!-- ==================================================================== -->
     <section class="a11y-compliance-banner">
         <h3><i class="fas fa-check-circle" style="color: var(--color-success, #10b981);"></i> Our Commitment to Universal Inclusion</h3>
-        <p>
-            Hesten's Learning conforms to the <strong>Web Content Accessibility Guidelines (WCAG) 2.1 Level AA</strong> requirements, with multiple core features meeting <strong>Level AAA</strong> contrast and cognitive standards. Our platform adheres to <strong>Section 508 of the Rehabilitation Act</strong> and the principles of <strong>Universal Design for Learning (UDL)</strong>.
+        <p class="compliance-statement-lead">
+            Hesten's Learning conforms to the 
+            <span class="compliance-term-wrap">
+                <strong>(WCAG) 2.1 Level AA</strong>
+                <button type="button" class="a11y-info-btn" data-standard="wcag-2-1-aa" title="Research overview & verbatim text for WCAG 2.1 Level AA" aria-label="Learn about WCAG 2.1 Level AA requirements">
+                    <i class="fas fa-info-circle" aria-hidden="true"></i>
+                </button>
+            </span> 
+            requirements, with multiple core features meeting 
+            <span class="compliance-term-wrap">
+                <strong>Level AAA</strong>
+                <button type="button" class="a11y-info-btn" data-standard="wcag-aaa" title="Research overview & verbatim text for Level AAA" aria-label="Learn about Level AAA standards">
+                    <i class="fas fa-info-circle" aria-hidden="true"></i>
+                </button>
+            </span> 
+            contrast and cognitive standards. Our platform adheres to 
+            <span class="compliance-term-wrap">
+                <strong>Section 508 of the Rehabilitation Act</strong>
+                <button type="button" class="a11y-info-btn" data-standard="section-508" title="Research overview & verbatim text for Section 508" aria-label="Learn about Section 508 of the Rehabilitation Act">
+                    <i class="fas fa-info-circle" aria-hidden="true"></i>
+                </button>
+            </span> 
+            and the principles of 
+            <span class="compliance-term-wrap">
+                <strong>Universal Design for Learning (UDL)</strong>
+                <button type="button" class="a11y-info-btn" data-standard="udl" title="Research overview & verbatim text for UDL Guidelines" aria-label="Learn about Universal Design for Learning">
+                    <i class="fas fa-info-circle" aria-hidden="true"></i>
+                </button>
+            </span>.
         </p>
         <p>
-            We continually audit our codebase using automated accessibility linters, keyboard-only regression testing, and screen reader testing (NVDA, VoiceOver, JAWS).
+            We continually audit our codebase using automated accessibility linters, keyboard-only regression testing, and screen reader testing (NVDA, VoiceOver, JAWS). Click any <i class="fas fa-info-circle" style="color: var(--color-primary);"></i> icon above to inspect the legal overview and word-for-word statutory text.
         </p>
         <p style="margin-top: 0.5rem;">
             <strong>Encounter an accessibility barrier?</strong> We welcome all feedback from students, educators, and parents. Please contact us directly at <a href="mailto:admin@hestena62.com" style="color: var(--color-primary); font-weight: 700; text-decoration: underline;">admin@hestena62.com</a> or visit our <a href="/pages/contact.php" style="color: var(--color-primary); font-weight: 700; text-decoration: underline;">Contact Page</a>.
@@ -586,6 +613,444 @@ include '../src/header.php';
     }
 
     updateSandbox();
+})();
+</script>
+
+<!-- Standards & Policies Research Modal -->
+<div id="standards-research-modal" class="standards-modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="s-modal-title">
+    <div class="standards-modal-panel">
+        <!-- Modal Header -->
+        <div class="standards-modal-header">
+            <div class="standards-header-info">
+                <span class="standards-type-badge" id="s-modal-badge">Official Standard & Policy</span>
+                <h2 id="s-modal-title">Official Accessibility Standard</h2>
+            </div>
+            <div class="standards-header-actions">
+                <button type="button" class="standards-action-btn" id="s-copy-btn" title="Copy citation and text excerpt">
+                    <i class="fas fa-copy" aria-hidden="true"></i> <span>Copy Citation</span>
+                </button>
+                <button type="button" class="standards-close-btn" id="s-modal-close" aria-label="Close standards modal">
+                    <i class="fas fa-times" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Navigation Tabs -->
+        <div class="standards-modal-tabs" role="tablist">
+            <button type="button" class="standards-tab is-active" id="tab-overview" role="tab" aria-selected="true" aria-controls="view-overview">
+                <i class="fas fa-compass" aria-hidden="true"></i> Overview & Clinical Intent
+            </button>
+            <button type="button" class="standards-tab" id="tab-verbatim" role="tab" aria-selected="false" aria-controls="view-verbatim">
+                <i class="fas fa-file-contract" aria-hidden="true"></i> Verbatim Official Text (Word-for-Word)
+            </button>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="standards-modal-body">
+            <!-- View 1: Overview & Clinical Context -->
+            <div id="view-overview" class="standards-tab-content is-active" role="tabpanel" aria-labelledby="tab-overview">
+                <div class="overview-grid" id="s-overview-container">
+                    <!-- Populated dynamically -->
+                </div>
+            </div>
+
+            <!-- View 2: Verbatim Statutory Text -->
+            <div id="view-verbatim" class="standards-tab-content" role="tabpanel" aria-labelledby="tab-verbatim">
+                <!-- Search within text -->
+                <div class="standards-search-bar">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                    <input type="text" id="s-text-search" placeholder="Search verbatim sections, keywords, criteria..." class="standards-search-input">
+                    <span class="standards-search-counter" id="s-search-counter"></span>
+                </div>
+                <div class="standards-verbatim-container" id="s-verbatim-content">
+                    <div class="standards-loading-state">
+                        <i class="fas fa-spinner fa-spin" aria-hidden="true"></i> Loading official text from assets/texts/...
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="standards-modal-footer">
+            <span class="standards-source-cite" id="s-modal-source">Source: Official Statutory Repository</span>
+            <button type="button" class="standards-done-btn" id="s-modal-done">Close Guide</button>
+        </div>
+    </div>
+</div>
+
+<!-- Standards Research Script -->
+<script>
+(function () {
+    'use strict';
+
+    const STANDARDS_CATALOG = {
+        'wcag-2-1-aa': {
+            title: 'W3C Web Content Accessibility Guidelines (WCAG) 2.1 — Level AA',
+            badge: 'Global Digital Accessibility Standard',
+            file: 'accessability-wcag-2-1-aa.md',
+            citation: 'W3C Recommendation 05 June 2018. Web Content Accessibility Guidelines (WCAG) 2.1. World Wide Web Consortium. https://www.w3.org/TR/WCAG21/',
+            overview: [
+                {
+                    title: 'Statutory Purpose & Legal Enforceability',
+                    icon: 'fa-balance-scale',
+                    body: 'WCAG 2.1 Level AA is the universally recognized global benchmark for digital accessibility. It is codified into law under Title II and Title III of the Americans with Disabilities Act (ADA), Section 508 of the Rehabilitation Act, and European Standard EN 301 549, mandating that digital learning environments afford equal access to individuals with physical, sensory, and cognitive disabilities.'
+                },
+                {
+                    title: 'The 4 Foundational Principles',
+                    icon: 'fa-cubes',
+                    body: 'All content must satisfy four pillars: (1) Perceivable (information must be visible or audible across all senses), (2) Operable (every button, link, and tool must work via keyboard without time limits), (3) Understandable (text must be clear and navigation predictable), and (4) Robust (code must cleanly parse across assistive screen readers and alternative input devices).'
+                },
+                {
+                    title: 'Clinical Accommodations at Hesten\'s Learning',
+                    icon: 'fa-check-double',
+                    body: 'Our platform fulfills Level AA via strict 4.5:1 text contrast ratios, 200% zoom text scaling without page truncation, bypass blocks (Skip-to-Content links), non-text contrast 3:1 on form boundaries, and full keyboard operability without timing restrictions.'
+                }
+            ]
+        },
+        'wcag-aaa': {
+            title: 'W3C WCAG 2.1 — Conformance Level AAA (Enhanced Accessibility)',
+            badge: 'Highest Accessibility & Neurodivergent Tier',
+            file: 'accessability-wcag-aaa.md',
+            citation: 'W3C (2018). Understanding Conformance: Understanding WCAG 2.1 Level AAA. World Wide Web Consortium. https://www.w3.org/TR/WCAG21/#conformance-requirements',
+            overview: [
+                {
+                    title: 'The Highest Tier of Digital Accessibility',
+                    icon: 'fa-award',
+                    body: 'Level AAA represents the most stringent tier of digital accessibility. While the W3C does not mandate AAA conformance across entire websites due to domain-specific limitations, Hesten\'s Learning intentionally adopts core Level AAA criteria to directly accommodate neurodivergent thinkers, dyslexic readers, and learners with severe low vision.'
+                },
+                {
+                    title: 'Visual Presentation (Success Criterion 1.4.8)',
+                    icon: 'fa-eye',
+                    body: 'Criterion 1.4.8 is the gold standard for reading accommodations: users must have mechanisms to select foreground and background colors, limit line lengths to 80 characters, relax line spacing to at least 1.5x, avoid justified text, and resize text to 200% without horizontal scrolling. All of these are natively implemented in our Accessibility Settings panel.'
+                },
+                {
+                    title: 'Enhanced Contrast & Cognitive Support',
+                    icon: 'fa-bolt',
+                    body: 'Provides enhanced 7:1 contrast (surpassed by our High Contrast Theme\'s 19.5:1 ratio), complete elimination of flashing motion, suppression of unexpected interruptions, context-sensitive vocabulary tooltips, and Bionic Reading eye saccade guidance.'
+                }
+            ]
+        },
+        'section-508': {
+            title: 'Section 508 of the Rehabilitation Act of 1973 (29 U.S.C. § 794d)',
+            badge: 'U.S. Federal Education & Civil Rights Law',
+            file: 'accessability-section-508.md',
+            citation: '29 U.S.C. § 794d; 36 C.F.R. Part 1194. Information and Communication Technology (ICT) Standards and Guidelines. U.S. Access Board (2017 Refresh).',
+            overview: [
+                {
+                    title: 'Federal Civil Rights Mandate',
+                    icon: 'fa-landmark',
+                    body: 'Enacted to eliminate electronic barriers for individuals with disabilities, Section 508 requires all federal departments, state educational agencies receiving federal grants, and public educational institutions to develop, procure, and use accessible information and communication technology (ICT).'
+                },
+                {
+                    title: 'Application to K-12 and Public Education',
+                    icon: 'fa-graduation-cap',
+                    body: 'Under joint enforcement by the U.S. Department of Justice (DOJ) and the U.S. Department of Education (ED) Office for Civil Rights (OCR), school districts and virtual learning platforms are prohibited under Section 504 and ADA Title II from providing discriminatory or inaccessible digital instructional materials to students.'
+                },
+                {
+                    title: 'Subpart C Functional Performance Criteria',
+                    icon: 'fa-universal-access',
+                    body: 'Guarantees operational modalities for students: without vision, with limited vision, without color perception, without hearing, with limited manipulation (single-switch and keyboard navigation), and with limited cognitive or learning abilities.'
+                }
+            ]
+        },
+        'udl': {
+            title: 'Universal Design for Learning (UDL) Guidelines Version 2.2',
+            badge: 'Evidence-Based Educational Neuroscience Framework',
+            file: 'accessability-udl.md',
+            citation: 'CAST (2018). Universal Design for Learning Guidelines version 2.2. Wakefield, MA: CAST. https://udlguidelines.cast.org/',
+            overview: [
+                {
+                    title: 'Neuroscience Foundation of Learning',
+                    icon: 'fa-brain',
+                    body: 'Developed by the Center for Applied Special Technology (CAST) based on cognitive neuroscience research, UDL addresses the primary barrier in education: rigid curricula that impose unintended obstacles on learners. Rather than treating disability as a deficit within the child, UDL redesigns the learning environment to be inherently flexible.'
+                },
+                {
+                    title: 'The 3 Primary Brain Networks',
+                    icon: 'fa-network-wired',
+                    body: 'UDL aligns with three distinct neurological networks: (1) Affective Networks (Multiple Means of Engagement) to stimulate interest and self-regulation; (2) Recognition Networks (Multiple Means of Representation) to present information through diverse perceptual channels; and (3) Strategic Networks (Multiple Means of Action & Expression) to give students varied ways of demonstrating mastery.'
+                },
+                {
+                    title: 'Direct Implementation on Hesten\'s Learning',
+                    icon: 'fa-chalkboard-teacher',
+                    body: 'We implement UDL by providing dyslexic fonts (OpenDyslexic, Lexend), Bionic Reading saccade scaffolding, audio Text-to-Speech narration, customizable study focus timers, digital scratchpads, and printable paper-friendly worksheets for tactile practice.'
+                }
+            ]
+        }
+    };
+
+    let activeStandardKey = null;
+    let rawMarkdownText = '';
+    let parsedHTML = '';
+    let cachedFiles = {};
+
+    const modal = document.getElementById('standards-research-modal');
+    const modalTitle = document.getElementById('s-modal-title');
+    const modalBadge = document.getElementById('s-modal-badge');
+    const modalSource = document.getElementById('s-modal-source');
+    const overviewContainer = document.getElementById('s-overview-container');
+    const verbatimContainer = document.getElementById('s-verbatim-content');
+    const searchInput = document.getElementById('s-text-search');
+    const searchCounter = document.getElementById('s-search-counter');
+    const copyBtn = document.getElementById('s-copy-btn');
+    const tabOverview = document.getElementById('tab-overview');
+    const tabVerbatim = document.getElementById('tab-verbatim');
+    const viewOverview = document.getElementById('view-overview');
+    const viewVerbatim = document.getElementById('view-verbatim');
+    const closeBtn = document.getElementById('s-modal-close');
+    const doneBtn = document.getElementById('s-modal-done');
+
+    let previousFocus = null;
+
+    // Convert markdown to clean HTML
+    function simpleMarkdownToHTML(md) {
+        if (!md) return '';
+        const lines = md.split('\n');
+        let html = '';
+        let inList = false;
+
+        lines.forEach(function (line) {
+            line = line.trimEnd();
+
+            // Headers
+            if (line.startsWith('### ')) {
+                if (inList) { html += '</ul>'; inList = false; }
+                html += '<h3>' + formatInline(line.slice(4)) + '</h3>';
+            } else if (line.startsWith('## ')) {
+                if (inList) { html += '</ul>'; inList = false; }
+                html += '<h2>' + formatInline(line.slice(3)) + '</h2>';
+            } else if (line.startsWith('# ')) {
+                if (inList) { html += '</ul>'; inList = false; }
+                html += '<h1>' + formatInline(line.slice(2)) + '</h1>';
+            } else if (line.startsWith('---')) {
+                if (inList) { html += '</ul>'; inList = false; }
+                html += '<hr style="margin: 1.25rem 0; border: none; border-top: 1px solid var(--color-border);">';
+            } else if (line.startsWith('* ') || line.startsWith('- ')) {
+                if (!inList) { html += '<ul>'; inList = true; }
+                html += '<li>' + formatInline(line.slice(2)) + '</li>';
+            } else if (line.trim() === '') {
+                if (inList) { html += '</ul>'; inList = false; }
+            } else {
+                if (inList) { html += '</ul>'; inList = false; }
+                html += '<p>' + formatInline(line) + '</p>';
+            }
+        });
+
+        if (inList) html += '</ul>';
+        return html;
+    }
+
+    function formatInline(str) {
+        return str
+            .replace(/[&<>'"]/g, function (tag) {
+                return ({
+                    '&': '&amp;',
+                    '<': '&lt;',
+                    '>': '&gt;',
+                    "'": '&#39;',
+                    '"': '&quot;'
+                }[tag] || tag);
+            })
+            .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+            .replace(/\*(.*?)\*/g, '<em>$1</em>')
+            .replace(/`([^`]+)`/g, '<code>$1</code>');
+    }
+
+    function openStandardModal(key) {
+        const item = STANDARDS_CATALOG[key];
+        if (!item) return;
+
+        activeStandardKey = key;
+        previousFocus = document.activeElement;
+
+        modalTitle.textContent = item.title;
+        modalBadge.textContent = item.badge;
+        modalSource.textContent = item.citation;
+
+        // Render Overview Tab
+        overviewContainer.innerHTML = item.overview.map(function (c) {
+            return `
+                <div class="overview-card">
+                    <h3 class="overview-card-title"><i class="fas ${c.icon}" aria-hidden="true"></i> ${c.title}</h3>
+                    <p class="overview-card-body">${c.body}</p>
+                </div>
+            `;
+        }).join('');
+
+        // Switch to Overview Tab by default
+        switchTab('overview');
+
+        // Clear Search
+        if (searchInput) searchInput.value = '';
+        if (searchCounter) searchCounter.textContent = '';
+
+        // Load Markdown text
+        verbatimContainer.innerHTML = '<div class="standards-loading-state"><i class="fas fa-spinner fa-spin" aria-hidden="true"></i> Loading official text from assets/texts/...</div>';
+
+        modal.classList.remove('hidden');
+
+        if (typeof window.announceA11y === 'function') {
+            window.announceA11y(item.title + ' guide opened. Press Escape to close.');
+        }
+
+        // Fetch Verbatim File
+        const fileName = item.file;
+        if (cachedFiles[fileName]) {
+            renderVerbatim(cachedFiles[fileName]);
+        } else {
+            // Attempt /assets/texts/ then /assets/text/
+            fetch('/assets/texts/' + fileName)
+                .then(function (r) {
+                    if (!r.ok) return fetch('/assets/text/' + fileName);
+                    return r;
+                })
+                .then(function (r) { return r.text(); })
+                .then(function (text) {
+                    cachedFiles[fileName] = text;
+                    renderVerbatim(text);
+                })
+                .catch(function (err) {
+                    verbatimContainer.innerHTML = '<p style="color: var(--color-error);">Unable to load official text file (' + fileName + '). Please verify network connection.</p>';
+                });
+        }
+
+        if (closeBtn) {
+            setTimeout(function () { closeBtn.focus(); }, 60);
+        }
+    }
+
+    function renderVerbatim(text) {
+        rawMarkdownText = text;
+        parsedHTML = simpleMarkdownToHTML(text);
+        verbatimContainer.innerHTML = parsedHTML;
+    }
+
+    function switchTab(tabName) {
+        if (tabName === 'overview') {
+            tabOverview.classList.add('is-active');
+            tabOverview.setAttribute('aria-selected', 'true');
+            tabVerbatim.classList.remove('is-active');
+            tabVerbatim.setAttribute('aria-selected', 'false');
+
+            viewOverview.classList.add('is-active');
+            viewVerbatim.classList.remove('is-active');
+        } else {
+            tabVerbatim.classList.add('is-active');
+            tabVerbatim.setAttribute('aria-selected', 'true');
+            tabOverview.classList.remove('is-active');
+            tabOverview.setAttribute('aria-selected', 'false');
+
+            viewVerbatim.classList.add('is-active');
+            viewOverview.classList.remove('is-active');
+
+            if (searchInput) searchInput.focus();
+        }
+    }
+
+    function closeStandardModal() {
+        if (modal.classList.contains('hidden')) return;
+        modal.classList.add('hidden');
+        if (previousFocus && typeof previousFocus.focus === 'function') {
+            try { previousFocus.focus(); } catch (e) {}
+        }
+        if (typeof window.announceA11y === 'function') {
+            window.announceA11y('Standards guide closed.');
+        }
+    }
+
+    // Filter/Search in Verbatim Text
+    if (searchInput) {
+        searchInput.addEventListener('input', function () {
+            const query = searchInput.value.trim().toLowerCase();
+            if (!query) {
+                verbatimContainer.innerHTML = parsedHTML;
+                searchCounter.textContent = '';
+                return;
+            }
+
+            // Highlight matches
+            const regex = new RegExp('(' + query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+            let matchCount = 0;
+
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = parsedHTML;
+
+            const textNodes = [];
+            const walk = document.createTreeWalker(tempDiv, NodeFilter.SHOW_TEXT, null, false);
+            let n;
+            while (n = walk.nextNode()) {
+                if (n.nodeValue.toLowerCase().includes(query)) {
+                    textNodes.push(n);
+                }
+            }
+
+            textNodes.forEach(function (node) {
+                const parent = node.parentNode;
+                if (!parent) return;
+                const matches = node.nodeValue.match(regex);
+                if (matches) matchCount += matches.length;
+
+                const frag = document.createElement('span');
+                frag.innerHTML = node.nodeValue.replace(regex, '<mark>$1</mark>');
+                parent.replaceChild(frag, node);
+            });
+
+            verbatimContainer.innerHTML = tempDiv.innerHTML;
+            searchCounter.textContent = matchCount + (matchCount === 1 ? ' match' : ' matches');
+
+            // Scroll to first mark
+            const firstMark = verbatimContainer.querySelector('mark');
+            if (firstMark) {
+                firstMark.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        });
+    }
+
+    // Copy Citation Button
+    if (copyBtn) {
+        copyBtn.addEventListener('click', function () {
+            const item = STANDARDS_CATALOG[activeStandardKey];
+            if (!item) return;
+
+            const clipboardText = item.title + '\n' + item.citation + '\n\n' + rawMarkdownText.slice(0, 500) + '...\n\n[Official text hosted on Hesten\'s Learning Platform]';
+
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(clipboardText).then(function () {
+                    const orig = copyBtn.innerHTML;
+                    copyBtn.innerHTML = '<i class="fas fa-check" aria-hidden="true"></i> Copied!';
+                    setTimeout(function () { copyBtn.innerHTML = orig; }, 1800);
+                    if (typeof window.announceA11y === 'function') {
+                        window.announceA11y('Citation copied to clipboard.');
+                    }
+                });
+            }
+        });
+    }
+
+    // Event listeners
+    if (tabOverview) tabOverview.addEventListener('click', function () { switchTab('overview'); });
+    if (tabVerbatim) tabVerbatim.addEventListener('click', function () { switchTab('verbatim'); });
+    if (closeBtn) closeBtn.addEventListener('click', closeStandardModal);
+    if (doneBtn) doneBtn.addEventListener('click', closeStandardModal);
+
+    modal.addEventListener('click', function (e) {
+        if (e.target === modal) closeStandardModal();
+    });
+
+    window.addEventListener('keydown', function (e) {
+        if ((e.key === 'Escape' || e.keyCode === 27) && !modal.classList.contains('hidden')) {
+            e.preventDefault();
+            closeStandardModal();
+        }
+    });
+
+    // Attach click listeners to all info buttons
+    document.querySelectorAll('.a11y-info-btn').forEach(function (btn) {
+        btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            const std = this.getAttribute('data-standard');
+            openStandardModal(std);
+        });
+    });
 })();
 </script>
 
