@@ -129,3 +129,11 @@ window.downloadReaderCitationFile = function () {
     document.body.removeChild(link);
     URL.revokeObjectURL(link.href);
 };
+
+// Global exports
+window.renderReaderCitation = renderReaderCitation;
+window.initChapterCitationGenerator = function (meta) {
+    if (typeof renderReaderCitation === 'function') {
+        renderReaderCitation(meta || window.BOOK_METADATA || {});
+    }
+};

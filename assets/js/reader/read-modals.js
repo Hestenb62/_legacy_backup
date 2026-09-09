@@ -52,7 +52,11 @@
 
         window.openChapterCitationModal = function () {
             if (citeModal) {
-                renderReaderCitation(window.BOOK_METADATA || {});
+                if (typeof renderReaderCitation === 'function') {
+                    renderReaderCitation(window.BOOK_METADATA || {});
+                } else if (typeof window.renderReaderCitation === 'function') {
+                    window.renderReaderCitation(window.BOOK_METADATA || {});
+                }
                 citeModal.classList.remove("hidden");
                 citeModal.style.display = "flex";
             }

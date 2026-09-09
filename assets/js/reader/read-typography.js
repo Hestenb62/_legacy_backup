@@ -29,28 +29,36 @@
         } catch (e) {}
 
         // --- 1. Typography & Theme Settings ---
-        initTypographyAndTheme(PREFS_KEY);
+        if (typeof initTypographyAndTheme === 'function') initTypographyAndTheme(PREFS_KEY);
 
         // --- 2. Scroll Progress & Resume Toast ---
-        initScrollProgress(SCROLL_POS_KEY, COMPLETION_KEY, currentChapter, totalChapters);
+        if (typeof initScrollProgress === 'function') initScrollProgress(SCROLL_POS_KEY, COMPLETION_KEY, currentChapter, totalChapters);
 
         // --- 3. Text-to-Speech (TTS) Narration Engine ---
-        initTextToSpeech(bookContent);
+        if (typeof initTextToSpeech === 'function') initTextToSpeech(bookContent);
 
         // --- 4. Study Suite (Vocab, Flashcards, Quizzes, Highlights) ---
-        initStudySuite(bookId, currentChapter, HIGHLIGHTS_KEY);
+        if (typeof initStudySuite === 'function') initStudySuite(bookId, currentChapter, HIGHLIGHTS_KEY);
 
         // --- 5. Inline Highlighting & Annotation Floating Toolbar ---
-        initHighlightToolbar(bookContent, HIGHLIGHTS_KEY);
+        if (typeof initHighlightToolbar === 'function') initHighlightToolbar(bookContent, HIGHLIGHTS_KEY);
 
         // --- 6. Table of Contents & Info Modals ---
-        initModalsAndDrawers();
+        if (typeof initModalsAndDrawers === 'function') initModalsAndDrawers();
 
         // --- 7. Chapter Citation Generator ---
-        initChapterCitationGenerator(meta);
+        if (typeof initChapterCitationGenerator === 'function') {
+            initChapterCitationGenerator(meta);
+        } else if (typeof window.initChapterCitationGenerator === 'function') {
+            window.initChapterCitationGenerator(meta);
+        }
 
         // --- 8. Realistic Single-Page Book Mode & Page-Flip Engine ---
-        initSinglePageBookMode(meta, PREFS_KEY);
+        if (typeof initSinglePageBookMode === 'function') {
+            initSinglePageBookMode(meta, PREFS_KEY);
+        } else if (typeof window.initSinglePageBookMode === 'function') {
+            window.initSinglePageBookMode(meta, PREFS_KEY);
+        }
     });
 
     /* ==========================================================================
