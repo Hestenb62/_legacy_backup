@@ -40,7 +40,7 @@
                     <ul class="footer-links">
                         <li class="footer-link-item"><a href="/pages/standards.php"><i class="fas fa-book footer-link-icon"></i> Standards</a></li>
                         <li class="footer-link-item"><a href="/research/"><i class="fas fa-flask footer-link-icon"></i> Research</a></li>
-                        <li class="footer-link-item"><a href="/library/"><i class="fas fa-book-open footer-link-icon"></i> Library</a></li>
+                        <li class="footer-link-item"><a href="/updates.php"><i class="fas fa-newspaper footer-link-icon"></i> Updates</a></li>
                         <li class="footer-link-item"><a href="/pages/help-center.php"><i class="fas fa-question-circle footer-link-icon"></i> Help Center</a></li>
                     </ul>
                 </div>
