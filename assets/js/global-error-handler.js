@@ -459,19 +459,55 @@
         if (closeBtn) closeBtn.focus();
     }
 
+    const IGNORED_ERROR_PATTERNS = [
+        'Script error.',
+        'ResizeObserver',
+        'Non-Error promise rejection captured',
+        'Load failed',
+        'Failed to fetch',
+        'NetworkError',
+        'AbortError',
+        'chrome-extension://',
+        'moz-extension://',
+        'safari-extension://',
+        'gtranslate',
+        'buymeacoffee',
+        'googleapis.com',
+        'accounts.google.com'
+    ];
+
+    function shouldIgnoreError(msg, source) {
+        if (!msg) return true;
+        const lowerMsg = String(msg).toLowerCase();
+        const lowerSrc = source ? String(source).toLowerCase() : '';
+
+        for (const pattern of IGNORED_ERROR_PATTERNS) {
+            const lowerPat = pattern.toLowerCase();
+            if (lowerMsg.includes(lowerPat) || lowerSrc.includes(lowerPat)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     window.addEventListener('error', function(event) {
-        if (event.message && typeof event.message === 'string') {
-            if (event.message.includes('Script error.') || event.message.includes('ResizeObserver')) return;
-        } else if (event.target && (event.target.tagName === 'IMG' || event.target.tagName === 'SCRIPT' || event.target.tagName === 'LINK')) {
+        if (event.target && (event.target.tagName === 'IMG' || event.target.tagName === 'SCRIPT' || event.target.tagName === 'LINK')) {
             return;
         }
 
         const msg = event.message || 'Unknown Object Error';
+        if (shouldIgnoreError(msg, event.filename)) return;
+
         showSiteError(msg, event.filename, event.lineno, event.colno, event.error);
     });
 
     window.addEventListener('unhandledrejection', function(event) {
-        const message = event.reason ? (event.reason.message || event.reason.toString()) : 'Unhandled Promise Rejection';
+        const reason = event.reason;
+        const message = reason ? (reason.message || reason.toString()) : 'Unhandled Promise Rejection';
+        const stack = reason && reason.stack ? reason.stack : '';
+
+        if (shouldIgnoreError(message, stack)) return;
+
         showSiteError(message, 'PromiseRejection', null, null, event.reason);
     });
 

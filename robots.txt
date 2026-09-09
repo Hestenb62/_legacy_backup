@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /src/
+Disallow: /updates/docs/
+Disallow: /.tmp/
+Disallow: /assets/data/.search-index-cache.json
+
+Sitemap: https://hestena62.com/sitemap.xml

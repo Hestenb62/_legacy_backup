@@ -41,6 +41,7 @@
       this.applyAll();
       this.initShortcuts();
       this.initObserver();
+      this.initSyncListeners();
     }
 
     loadProfile() {
@@ -52,7 +53,7 @@
       }
     }
 
-    saveProfile() {
+    saveProfile(skipSyncBroadcast = false) {
       try {
         localStorage.setItem(STORAGE_KEY, JSON.stringify(this.profile));
       } catch (e) {
@@ -60,6 +61,11 @@
       }
       this.applyAll();
       this.syncUI();
+      if (!skipSyncBroadcast) {
+        window.dispatchEvent(new CustomEvent('hl-bionic-sync', {
+          detail: { enabled: !!this.profile.bionicEnabled, source: 'accommodation-engine' }
+        }));
+      }
     }
 
     initDOM() {
@@ -358,6 +364,8 @@
       this.initAudioContext();
       if (!this.audioCtx) return;
 
+      window.dispatchEvent(new CustomEvent('hl-audio-play', { detail: { source: 'accommodation-engine' } }));
+
       const type = this.profile.soundscapeActive;
       const vol = Math.max(0.01, Math.min(1.0, this.profile.soundscapeVolume || 0.3));
 
@@ -512,6 +520,34 @@
         if (e.altKey && (e.key === 'o' || e.key === 'O')) {
           e.preventDefault();
           window.toggleAccommodationsStudio ? window.toggleAccommodationsStudio() : null;
+        }
+      });
+    }
+
+    initSyncListeners() {
+      // 1. Cross-module Bionic Reading synchronization
+      window.addEventListener('hl-bionic-sync', (e) => {
+        if (e.detail && e.detail.source !== 'accommodation-engine') {
+          const isEnabled = !!e.detail.enabled;
+          if (this.profile.bionicEnabled !== isEnabled) {
+            this.profile.bionicEnabled = isEnabled;
+            try {
+              localStorage.setItem(STORAGE_KEY, JSON.stringify(this.profile));
+            } catch (err) {}
+            this.applyAll();
+            this.syncUI();
+          }
+        }
+      });
+
+      // 2. Audio playback coordination
+      window.addEventListener('hl-audio-play', (e) => {
+        if (e.detail && e.detail.source !== 'accommodation-engine') {
+          if (this.profile.soundscapeActive !== 'none') {
+            this.profile.soundscapeActive = 'none';
+            this.stopSoundscape();
+            this.syncUI();
+          }
         }
       });
     }

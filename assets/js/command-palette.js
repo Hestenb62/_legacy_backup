@@ -18,7 +18,7 @@
             iconColor: 'icon-purple',
             category: 'nav',
             badge: 'Navigation',
-            url: '/levels/',
+            url: '/index.php#levels',
             keywords: ['curriculum', 'grade', 'kindergarten', 'elementary', 'skills', 'maps']
         },
         {
@@ -29,7 +29,7 @@
             iconColor: 'icon-blue',
             category: 'nav',
             badge: 'Launcher',
-            url: '/src/lesson_runner.php',
+            url: '/lessons/k-math-m1-a-1.php',
             keywords: ['lesson', 'runner', 'player', 'practice', 'start', 'interactive']
         },
         {

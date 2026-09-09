@@ -34,16 +34,37 @@ document.addEventListener("DOMContentLoaded", () => {
         avatarPreview.src = currentProfile.avatarData;
     }
 
-    // Handle avatar upload (Base64)
+    // Handle avatar upload with canvas downscaling to protect localStorage quota
     avatarUpload.addEventListener('change', (e) => {
         const file = e.target.files[0];
         if (!file) return;
 
         const reader = new FileReader();
         reader.onload = (event) => {
-            const base64Str = event.target.result;
-            avatarPreview.src = base64Str;
-            currentProfile.avatarData = base64Str;
+            const img = new Image();
+            img.onload = () => {
+                const maxDim = 192;
+                let w = img.width;
+                let h = img.height;
+                if (w > maxDim || h > maxDim) {
+                    if (w > h) {
+                        h = Math.round((h * maxDim) / w);
+                        w = maxDim;
+                    } else {
+                        w = Math.round((w * maxDim) / h);
+                        h = maxDim;
+                    }
+                }
+                const canvas = document.createElement('canvas');
+                canvas.width = w;
+                canvas.height = h;
+                const ctx = canvas.getContext('2d');
+                ctx.drawImage(img, 0, 0, w, h);
+                const compressedBase64 = canvas.toDataURL('image/jpeg', 0.85);
+                avatarPreview.src = compressedBase64;
+                currentProfile.avatarData = compressedBase64;
+            };
+            img.src = event.target.result;
         };
         reader.readAsDataURL(file);
     });
@@ -51,7 +72,14 @@ document.addEventListener("DOMContentLoaded", () => {
     // Handle save
     saveBtn.addEventListener('click', () => {
         currentProfile.firstName = firstNameInput.value.trim();
-        localStorage.setItem(profileKey, JSON.stringify(currentProfile));
+        try {
+            localStorage.setItem(profileKey, JSON.stringify(currentProfile));
+            saveMsg.classList.remove('hidden');
+            setTimeout(() => saveMsg.classList.add('hidden'), 3000);
+        } catch (err) {
+            console.warn('Profile save quota error:', err);
+            alert('Storage quota exceeded. Please choose a smaller image.');
+        }
         
         // Update global header immediately
         const nameEl = document.querySelector('.user-name');
@@ -60,9 +88,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if (avatarEls.length > 0 && currentProfile.avatarData) {
             avatarEls.forEach(img => img.src = currentProfile.avatarData);
         }
-
-        saveMsg.classList.remove('hidden');
-        setTimeout(() => saveMsg.classList.add('hidden'), 3000);
     });
 
     // 2. Tabs Logic

@@ -89,6 +89,10 @@ body.bionic-reading-active .bionic-fix {
   letter-spacing: -0.01em;
 }
 
+body:not(.bionic-reading-active) .bionic-fix {
+  font-weight: inherit !important;
+}
+
 /* ==========================================================================
    4. Dyscalculia Math Operator Colorizer (HTML, MathJax SVG, and CHTML)
    ========================================================================== */

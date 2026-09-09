@@ -79,6 +79,20 @@ window.announceA11y = announceA11y;
 
         // Init toolbar immediately
         initSelectionToolbar();
+
+        // Listen for cross-module Bionic Reading synchronization
+        window.addEventListener('hl-bionic-sync', (e) => {
+            if (e.detail && e.detail.source !== 'global-a11y') {
+                const isEnabled = !!e.detail.enabled;
+                if (currentSettings.bionicReading !== isEnabled) {
+                    currentSettings.bionicReading = isEnabled;
+                    saveSettingsInternal();
+                    applyBionicReading(isEnabled);
+                    const chk = document.getElementById('panel-bionic');
+                    if (chk) chk.checked = isEnabled;
+                }
+            }
+        });
     } catch (e) {
         console.warn('LocalStorage access denied', e);
     }
@@ -90,6 +104,12 @@ function updateGlobalSetting(key, value) {
     window.currentSettings = currentSettings;
     saveSettingsInternal();
     applySettings(currentSettings);
+
+    if (key === 'bionicReading') {
+        window.dispatchEvent(new CustomEvent('hl-bionic-sync', {
+            detail: { enabled: !!value, source: 'global-a11y' }
+        }));
+    }
     
     // Announce setting changes to assistive technologies
     const friendlyAnnouncements = {

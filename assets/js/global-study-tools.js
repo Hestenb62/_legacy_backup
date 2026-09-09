@@ -419,10 +419,20 @@ document.addEventListener('DOMContentLoaded', () => {
             ambientSourceNode.start(0);
             isAmbientPlaying = true;
             updateAmbientUI(true);
+            window.dispatchEvent(new CustomEvent('hl-audio-play', { detail: { source: 'study-tools' } }));
         } catch (e) {
             console.warn('Ambient noise error:', e);
         }
     }
+
+    // Stop ambient sound if external sound starts (e.g. accommodations modal)
+    window.addEventListener('hl-audio-play', (e) => {
+        if (e.detail && e.detail.source !== 'study-tools') {
+            if (isAmbientPlaying) {
+                stopAmbientSound();
+            }
+        }
+    });
 
     function stopAmbientSound() {
         if (ambientSourceNode) {

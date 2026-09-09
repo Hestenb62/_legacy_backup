@@ -77,7 +77,7 @@
             <div class="footer-bottom">
                 <div class="footer-bottom-text">
                     <p>
-                        &copy; <span id="year">2025</span> <span style="font-weight: 800; color: var(--footer-heading)">Hesten's Learning</span>. All rights reserved. | 
+                        &copy; <span id="year"><?= date('Y') ?></span> <span style="font-weight: 800; color: var(--footer-heading)">Hesten's Learning</span>. All rights reserved. | 
                         Made with <i class="fas fa-heart footer-heart"></i> for education
                     </p>
                     <p class="footer-license">
@@ -138,18 +138,40 @@
 <script src="https://cdn.gtranslate.net/widgets/latest/popup.js" defer></script>
 
 <!-- Footer Scripts -->
-<script src="/assets/js/global-error-handler.js"></script>
+<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/global-error-handler.js') : '/assets/js/global-error-handler.js' ?>"></script>
 <script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/global-study-tools.js') : '/assets/js/global-study-tools.js' ?>"></script>
 <script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/flashcard-studio.js') : '/assets/js/flashcard-studio.js' ?>"></script>
 <script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/gamification/quest-manager.js') : '/assets/js/gamification/quest-manager.js' ?>"></script>
 <script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/accessibility/accommodation-engine.js') : '/assets/js/accessibility/accommodation-engine.js' ?>"></script>
-<script src="/assets/js/global-standard.js"></script>
+<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/global-standard.js') : '/assets/js/global-standard.js' ?>"></script>
 
-<!-- Google API Scripts for Global Auto-Sync -->
+<!-- Google API Scripts for Global Auto-Sync (Loaded when sync is active or on settings/profile) -->
 <script>
     window.gapiLoaded = window.gapiLoaded || function() { window._gapiLoaded = true; };
     window.gisLoaded = window.gisLoaded || function() { window._gisLoaded = true; };
+    (function() {
+        try {
+            const needsSync = localStorage.getItem('gdrive_autosync_enabled') === 'true' ||
+                              document.getElementById('gdrive-save-btn') ||
+                              document.getElementById('gdrive-sync-status') ||
+                              window.hlNeedsDriveSync;
+            if (needsSync) {
+                const s1 = document.createElement('script');
+                s1.src = '<?= function_exists('assetVersion') ? assetVersion('/assets/js/gdrive-sync.js') : '/assets/js/gdrive-sync.js' ?>';
+                document.body.appendChild(s1);
+
+                const s2 = document.createElement('script');
+                s2.async = true; s2.defer = true;
+                s2.src = 'https://apis.google.com/js/api.js';
+                s2.onload = () => { if (typeof window.gapiLoaded === 'function') window.gapiLoaded(); else window._gapiLoaded = true; };
+                document.body.appendChild(s2);
+
+                const s3 = document.createElement('script');
+                s3.async = true; s3.defer = true;
+                s3.src = 'https://accounts.google.com/gsi/client';
+                s3.onload = () => { if (typeof window.gisLoaded === 'function') window.gisLoaded(); else window._gisLoaded = true; };
+                document.body.appendChild(s3);
+            }
+        } catch (e) {}
+    })();
 </script>
-<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/gdrive-sync.js') : '/assets/js/gdrive-sync.js' ?>"></script>
-<script async defer src="https://apis.google.com/js/api.js" onload="if (typeof window.gapiLoaded === 'function') { window.gapiLoaded(); } else { window._gapiLoaded = true; }"></script>
-<script async defer src="https://accounts.google.com/gsi/client" onload="if (typeof window.gisLoaded === 'function') { window.gisLoaded(); } else { window._gisLoaded = true; }"></script>

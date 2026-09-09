@@ -75,178 +75,214 @@ if ($query !== '') {
         }
     }
 
-    // 1. CRAWL SITE FILES (.php and .md)
-    try {
-        $dirIterator = new RecursiveDirectoryIterator($rootDir, RecursiveDirectoryIterator::SKIP_DOTS);
-        $filterIterator = new RecursiveCallbackFilterIterator(
-            $dirIterator,
-            function ($current, $key, $iterator) use ($ignoreDirs, $rootDir) {
-                $pathname = str_replace('\\', '/', $current->getPathname());
-                $rootNorm = str_replace('\\', '/', $rootDir);
-                $prefix = $rootNorm . '/';
-                $relativePath = (stripos($pathname, $prefix) === 0) ? substr($pathname, strlen($prefix)) : $pathname;
-                
-                $parts = explode('/', $relativePath);
-                if (in_array($parts[0], $ignoreDirs, true)) {
-                    return false;
+    // 1. CRAWL SITE FILES (.php and .md) - WITH CACHING
+    $cacheFile = $rootDir . '/assets/data/.search-index-cache.json';
+    $cacheTtl = 3600; // 1-hour TTL
+    $siteDocs = null;
+
+    if (file_exists($cacheFile) && (time() - filemtime($cacheFile) < $cacheTtl) && empty($_GET['nocache'])) {
+        $cachedData = @json_decode(file_get_contents($cacheFile), true);
+        if (is_array($cachedData) && !empty($cachedData)) {
+            $siteDocs = $cachedData;
+        }
+    }
+
+    if ($siteDocs === null) {
+        $siteDocs = [];
+        try {
+            $dirIterator = new RecursiveDirectoryIterator($rootDir, RecursiveDirectoryIterator::SKIP_DOTS);
+            $filterIterator = new RecursiveCallbackFilterIterator(
+                $dirIterator,
+                function ($current, $key, $iterator) use ($ignoreDirs, $rootDir) {
+                    $pathname = str_replace('\\', '/', $current->getPathname());
+                    $rootNorm = str_replace('\\', '/', $rootDir);
+                    $prefix = $rootNorm . '/';
+                    $relativePath = (stripos($pathname, $prefix) === 0) ? substr($pathname, strlen($prefix)) : $pathname;
+                    
+                    $parts = explode('/', $relativePath);
+                    if (in_array($parts[0], $ignoreDirs, true)) {
+                        return false;
+                    }
+                    return true;
                 }
-                return true;
-            }
-        );
+            );
 
-        $iterator = new RecursiveIteratorIterator($filterIterator);
-        $iterator->rewind();
+            $iterator = new RecursiveIteratorIterator($filterIterator);
+            $iterator->rewind();
 
-        while ($iterator->valid()) {
-            try {
-                $file = $iterator->current();
+            while ($iterator->valid()) {
+                try {
+                    $file = $iterator->current();
 
-                if ($file && $file->isFile()) {
-                    $ext = strtolower($file->getExtension());
-                    $filename = $file->getFilename();
+                    if ($file && $file->isFile()) {
+                        $ext = strtolower($file->getExtension());
+                        $filename = $file->getFilename();
 
-                    // Process PHP and Markdown research files, skip self and root search.php
-                    if (($ext === 'php' || $ext === 'md') && $filename !== 'search.php' && $filename !== 'offline.html') {
-                        $pathnameNorm = str_replace('\\', '/', $file->getPathname());
-                        $rootNorm = str_replace('\\', '/', $rootDir);
-                        $prefix = $rootNorm . '/';
-                        $relPath = (stripos($pathnameNorm, $prefix) === 0) ? substr($pathnameNorm, strlen($prefix)) : $pathnameNorm;
-                        $firstFolder = explode('/', $relPath)[0];
+                        // Process PHP and Markdown research files, skip self and root search.php
+                        if (($ext === 'php' || $ext === 'md') && $filename !== 'search.php' && $filename !== 'offline.html') {
+                            $pathnameNorm = str_replace('\\', '/', $file->getPathname());
+                            $rootNorm = str_replace('\\', '/', $rootDir);
+                            $prefix = $rootNorm . '/';
+                            $relPath = (stripos($pathnameNorm, $prefix) === 0) ? substr($pathnameNorm, strlen($prefix)) : $pathnameNorm;
+                            $firstFolder = explode('/', $relPath)[0];
 
-                        // Skip root utility files
-                        if (strpos($relPath, '/') === false && $filename !== 'index.php') {
-                            $iterator->next();
-                            continue;
-                        }
-
-                        // Determine category and icon metadata
-                        $category = 'pages';
-                        $categoryName = 'Guide & Info';
-                        $categoryIcon = 'fas fa-compass';
-                        $actionLabel = 'Visit Page';
-
-                        if ($firstFolder === 'lessons') {
-                            $category = 'lessons';
-                            $categoryName = 'Curriculum Lesson';
-                            $categoryIcon = 'fas fa-graduation-cap';
-                            $actionLabel = 'Start Lesson';
-                        } elseif ($firstFolder === 'levels') {
-                            $category = 'levels';
-                            $categoryName = 'Curriculum Level';
-                            $categoryIcon = 'fas fa-layer-group';
-                            $actionLabel = 'Explore Level';
-                        } elseif ($firstFolder === 'library') {
-                            $category = 'library';
-                            $categoryName = 'Digital Library';
-                            $categoryIcon = 'fas fa-book-open';
-                            $actionLabel = 'Read in Library';
-                        } elseif ($firstFolder === 'research') {
-                            $category = 'research';
-                            $categoryName = 'Research Journal';
-                            $categoryIcon = 'fas fa-microscope';
-                            $actionLabel = 'View Paper';
-                        } elseif ($firstFolder === 'assessment') {
-                            $category = 'assessment';
-                            $categoryName = 'Assessment';
-                            $categoryIcon = 'fas fa-clipboard-check';
-                            $actionLabel = 'Take Quiz';
-                        } elseif ($firstFolder === 'student') {
-                            $category = 'student';
-                            $categoryName = 'Student Resource';
-                            $categoryIcon = 'fas fa-user-graduate';
-                            $actionLabel = 'Open Tool';
-                        }
-
-                        // Read file contents safely
-                        $content = @file_get_contents($file->getPathname());
-                        if ($content === false || strlen(trim($content)) === 0) {
-                            $iterator->next();
-                            continue;
-                        }
-
-                        // Extract title
-                        $title = '';
-                        if ($ext === 'php') {
-                            if (preg_match('/\$pageTitle\s*=\s*["\']([^"\']+)["\'];/i', $content, $matches)) {
-                                $title = explode('|', $matches[1])[0];
-                            } elseif (preg_match('/<title>(.*?)<\/title>/i', $content, $matches)) {
-                                $title = explode('|', $matches[1])[0];
-                            } elseif (preg_match('/<h1[^>]*>(.*?)<\/h1>/is', $content, $matches)) {
-                                $title = strip_tags($matches[1]);
-                            }
-                        } elseif ($ext === 'md') {
-                            if (preg_match('/^#\s+(.+)$/m', $content, $matches)) {
-                                $title = trim($matches[1]);
-                            }
-                        }
-
-                        // Fallback title formatting
-                        if (empty(trim($title))) {
-                            if ($category === 'lessons') {
-                                $title = formatLessonTitle($filename);
-                            } elseif ($category === 'levels') {
-                                $title = formatLevelTitle($filename);
-                            } else {
-                                $title = ucwords(str_replace(['-', '_', '.php', '.md'], ' ', $filename));
-                            }
-                        }
-                        $title = trim($title);
-
-                        // Strip code, style, scripts, tags for text search
-                        $cleanedContent = preg_replace('/<script\b[^>]*>(.*?)<\/script>/is', '', $content);
-                        $cleanedContent = preg_replace('/<style\b[^>]*>(.*?)<\/style>/is', '', $cleanedContent);
-                        $cleanedContent = preg_replace('/<\?(php|=)?.*?(\?>|$)/is', '', $cleanedContent);
-                        $cleanText = strip_tags($cleanedContent);
-                        $cleanText = html_entity_decode($cleanText, ENT_QUOTES | ENT_HTML5, 'UTF-8');
-                        $cleanText = preg_replace('/\s+/', ' ', $cleanText);
-
-                        // Check match in title or clean text
-                        if (stripos($cleanText, $query) !== false || stripos($title, $query) !== false) {
-                            $pos = stripos($cleanText, $query);
-                            if ($pos !== false) {
-                                $start = max(0, $pos - 50);
-                                $length = min(strlen($cleanText) - $start, 150);
-                                $snippet = substr($cleanText, $start, $length);
-                                if ($start > 0) $snippet = '...' . ltrim($snippet);
-                                if ($start + $length < strlen($cleanText)) $snippet = rtrim($snippet) . '...';
-                            } else {
-                                $snippet = substr($cleanText, 0, 150);
-                                if (strlen($cleanText) > 150) $snippet .= '...';
+                            // Skip root utility files
+                            if (strpos($relPath, '/') === false && $filename !== 'index.php') {
+                                $iterator->next();
+                                continue;
                             }
 
-                            // Highlight query match
-                            $highlightedSnippet = preg_replace(
-                                '/(' . preg_quote($query, '/') . ')/i',
-                                '<mark class="search-highlight">$1</mark>',
-                                htmlspecialchars($snippet, ENT_QUOTES, 'UTF-8')
-                            );
+                            // Determine category and icon metadata
+                            $category = 'pages';
+                            $categoryName = 'Guide & Info';
+                            $categoryIcon = 'fas fa-compass';
+                            $actionLabel = 'Visit Page';
 
-                            $link = '/' . $relPath;
+                            if ($firstFolder === 'lessons') {
+                                $category = 'lessons';
+                                $categoryName = 'Curriculum Lesson';
+                                $categoryIcon = 'fas fa-graduation-cap';
+                                $actionLabel = 'Start Lesson';
+                            } elseif ($firstFolder === 'levels') {
+                                $category = 'levels';
+                                $categoryName = 'Curriculum Level';
+                                $categoryIcon = 'fas fa-layer-group';
+                                $actionLabel = 'Explore Level';
+                            } elseif ($firstFolder === 'library') {
+                                $category = 'library';
+                                $categoryName = 'Digital Library';
+                                $categoryIcon = 'fas fa-book-open';
+                                $actionLabel = 'Read in Library';
+                            } elseif ($firstFolder === 'research') {
+                                $category = 'research';
+                                $categoryName = 'Research Journal';
+                                $categoryIcon = 'fas fa-microscope';
+                                $actionLabel = 'View Paper';
+                            } elseif ($firstFolder === 'assessment') {
+                                $category = 'assessment';
+                                $categoryName = 'Assessment';
+                                $categoryIcon = 'fas fa-clipboard-check';
+                                $actionLabel = 'Take Quiz';
+                            } elseif ($firstFolder === 'student') {
+                                $category = 'student';
+                                $categoryName = 'Student Resource';
+                                $categoryIcon = 'fas fa-user-graduate';
+                                $actionLabel = 'Open Tool';
+                            }
 
-                            $results[] = [
-                                'title'         => $title,
-                                'desc'          => $highlightedSnippet,
-                                'link'          => $link,
-                                'category'      => $category,
-                                'categoryName'  => $categoryName,
-                                'categoryIcon'  => $categoryIcon,
-                                'actionLabel'   => $actionLabel
+                            // Read file contents safely
+                            $content = @file_get_contents($file->getPathname());
+                            if ($content === false || strlen(trim($content)) === 0) {
+                                $iterator->next();
+                                continue;
+                            }
+
+                            // Extract title
+                            $title = '';
+                            if ($ext === 'php') {
+                                if (preg_match('/\$pageTitle\s*=\s*["\']([^"\']+)["\'];/i', $content, $matches)) {
+                                    $title = explode('|', $matches[1])[0];
+                                } elseif (preg_match('/<title>(.*?)<\/title>/i', $content, $matches)) {
+                                    $title = explode('|', $matches[1])[0];
+                                } elseif (preg_match('/<h1[^>]*>(.*?)<\/h1>/is', $content, $matches)) {
+                                    $title = strip_tags($matches[1]);
+                                }
+                            } elseif ($ext === 'md') {
+                                if (preg_match('/^#\s+(.+)$/m', $content, $matches)) {
+                                    $title = trim($matches[1]);
+                                }
+                            }
+
+                            // Fallback title formatting
+                            if (empty(trim($title))) {
+                                if ($category === 'lessons') {
+                                    $title = formatLessonTitle($filename);
+                                } elseif ($category === 'levels') {
+                                    $title = formatLevelTitle($filename);
+                                } else {
+                                    $title = ucwords(str_replace(['-', '_', '.php', '.md'], ' ', $filename));
+                                }
+                            }
+                            $title = trim($title);
+
+                            // Strip code, style, scripts, tags for text search
+                            $cleanedContent = preg_replace('/<script\b[^>]*>(.*?)<\/script>/is', '', $content);
+                            $cleanedContent = preg_replace('/<style\b[^>]*>(.*?)<\/style>/is', '', $cleanedContent);
+                            $cleanedContent = preg_replace('/<\?(php|=)?.*?(\?>|$)/is', '', $cleanedContent);
+                            $cleanText = strip_tags($cleanedContent);
+                            $cleanText = html_entity_decode($cleanText, ENT_QUOTES | ENT_HTML5, 'UTF-8');
+                            $cleanText = preg_replace('/\s+/', ' ', $cleanText);
+                            $cleanText = mb_substr($cleanText, 0, 4000);
+
+                            $siteDocs[] = [
+                                'title'        => $title,
+                                'relPath'      => $relPath,
+                                'category'     => $category,
+                                'categoryName' => $categoryName,
+                                'categoryIcon' => $categoryIcon,
+                                'actionLabel'  => $actionLabel,
+                                'cleanText'    => $cleanText
                             ];
-
-                            $categoryCounts['all']++;
-                            if (isset($categoryCounts[$category])) {
-                                $categoryCounts[$category]++;
-                            }
                         }
                     }
+                } catch (Exception $e) {
+                    // Skip locked/unreadable files safely
                 }
-            } catch (Exception $e) {
-                // Skip locked/unreadable files safely
+                $iterator->next();
             }
-            $iterator->next();
+        } catch (Exception $e) {
+            // Safe directory iterator fallback
         }
-    } catch (Exception $e) {
-        // Safe directory iterator fallback
+        @file_put_contents($cacheFile, json_encode($siteDocs));
+    }
+
+    // Process matching documents from $siteDocs
+    foreach ($siteDocs as $doc) {
+        $cleanText = $doc['cleanText'];
+        $title = $doc['title'];
+        $relPath = $doc['relPath'];
+        $category = $doc['category'];
+        $categoryName = $doc['categoryName'];
+        $categoryIcon = $doc['categoryIcon'];
+        $actionLabel = $doc['actionLabel'];
+
+        if (stripos($cleanText, $query) !== false || stripos($title, $query) !== false) {
+            $pos = stripos($cleanText, $query);
+            if ($pos !== false) {
+                $start = max(0, $pos - 50);
+                $length = min(strlen($cleanText) - $start, 150);
+                $snippet = substr($cleanText, $start, $length);
+                if ($start > 0) $snippet = '...' . ltrim($snippet);
+                if ($start + $length < strlen($cleanText)) $snippet = rtrim($snippet) . '...';
+            } else {
+                $snippet = substr($cleanText, 0, 150);
+                if (strlen($cleanText) > 150) $snippet .= '...';
+            }
+
+            // Highlight query match
+            $highlightedSnippet = preg_replace(
+                '/(' . preg_quote($query, '/') . ')/i',
+                '<mark class="search-highlight">$1</mark>',
+                htmlspecialchars($snippet, ENT_QUOTES, 'UTF-8')
+            );
+
+            $link = '/' . $relPath;
+
+            $results[] = [
+                'title'         => $title,
+                'desc'          => $highlightedSnippet,
+                'link'          => $link,
+                'category'      => $category,
+                'categoryName'  => $categoryName,
+                'categoryIcon'  => $categoryIcon,
+                'actionLabel'   => $actionLabel
+            ];
+
+            $categoryCounts['all']++;
+            if (isset($categoryCounts[$category])) {
+                $categoryCounts[$category]++;
+            }
+        }
     }
 
     // 2. INDEX DIGITAL LIBRARY BOOKS (from library/assets/bookd.json)

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'hestens-learning-v12';
+const CACHE_NAME = 'hestens-learning-v13';
 const ASSETS_TO_CACHE = [
 
   // Main Directory Pages & Manifest
@@ -38,10 +38,13 @@ const ASSETS_TO_CACHE = [
   '/assets/css/pages/interactive-labs.css',
   '/assets/css/pages/diagnostic.css',
   '/assets/css/components/fixed-tools.css',
+  '/assets/css/components/command-palette.css',
+  '/assets/css/components/shortcuts-modal.css',
   '/assets/css/components/quest-badges.css',
   '/assets/css/components/accommodations.css',
   '/assets/css/layouts/header.css',
   '/assets/css/layouts/footer.css',
+  '/assets/css/layouts/print.css',
 
   // JavaScript Core & Data
   '/assets/js/assessment-core.js',
@@ -57,6 +60,7 @@ const ASSETS_TO_CACHE = [
   '/assets/texts/accessability-wcag-aaa.md',
   '/assets/texts/accessability-section-508.md',
   '/assets/texts/accessability-udl.md',
+  '/assets/js/global-error-handler.js',
   '/assets/js/global-standard.js',
   '/assets/js/global-study-tools.js',
   '/assets/js/flashcard-studio.js',
@@ -106,15 +110,23 @@ self.addEventListener('activate', (event) => {
 
 // Fetch Event: The Strategy
 self.addEventListener('fetch', (event) => {
+  // Only process GET requests from http/https schemes
+  if (event.request.method !== 'GET' || !event.request.url.startsWith('http')) {
+    return;
+  }
+
   // 1. For HTML pages (PHP), use Network First, then Cache
   if (event.request.headers.get('accept') && event.request.headers.get('accept').includes('text/html')) {
     event.respondWith(
       fetch(event.request)
         .then((response) => {
-          return caches.open(CACHE_NAME).then((cache) => {
-            cache.put(event.request, response.clone());
-            return response;
-          });
+          if (response && response.status === 200) {
+            const copy = response.clone();
+            caches.open(CACHE_NAME).then((cache) => {
+              cache.put(event.request, copy);
+            });
+          }
+          return response;
         })
         .catch(() => {
           return caches.match(event.request).then((response) => {
@@ -129,12 +141,16 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(
       caches.match(event.request).then((cachedResponse) => {
         const fetchPromise = fetch(event.request).then((networkResponse) => {
-          return caches.open(CACHE_NAME).then((cache) => {
-            cache.put(event.request, networkResponse.clone());
-            return networkResponse;
-          });
+          if (networkResponse && networkResponse.status === 200) {
+            const copy = networkResponse.clone();
+            caches.open(CACHE_NAME).then((cache) => {
+              cache.put(event.request, copy);
+            });
+          }
+          return networkResponse;
         }).catch(() => {
-          // Ignore network errors on background fetch
+          // Network failed, return cached if available
+          return cachedResponse;
         });
         
         // Return cached response immediately if available, while network fetch happens in background
