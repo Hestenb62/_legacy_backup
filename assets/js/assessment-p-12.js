@@ -1058,10 +1058,10 @@ function loadCurrentQuestion() {
     optionsContainer.innerHTML = ''; // Clear old options
 
     // Create buttons for each option
-    q.options.forEach(opt => {
+    q.options.forEach((opt, idx) => {
         const btn = document.createElement('button');
-        btn.className = "w-full text-left p-4 rounded-xl border-2 border-gray-200 dark:border-gray-700 hover:border-blue-500 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all font-medium text-lg text-gray-700 dark:text-gray-200 shadow-sm hover:shadow-md active:scale-[0.98]";
-        btn.textContent = opt;
+        btn.className = "w-full text-left p-4 rounded-xl border-2 border-gray-200 dark:border-gray-700 hover:border-blue-500 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all font-medium text-lg text-gray-700 dark:text-gray-200 shadow-sm hover:shadow-md active:scale-[0.98] flex items-center justify-between";
+        btn.innerHTML = `<span style="display:flex; align-items:center; gap:0.75rem;"><span class="opt-num-badge">${idx + 1}</span><span>${opt}</span></span><i class="fas fa-arrow-right" style="opacity:0.3; font-size:0.875rem;"></i>`;
         btn.onclick = () => checkAnswer(opt, q.answer, btn);
         optionsContainer.appendChild(btn);
     });
@@ -1082,7 +1082,9 @@ function checkAnswer(selected, correct, btnElement) {
     for (let btn of buttons) {
         btn.disabled = true;
         btn.classList.add('opacity-70', 'cursor-not-allowed');
-        if (btn.textContent === correct) {
+        const btnTextSpan = btn.querySelector('span > span:last-child');
+        const btnText = btnTextSpan ? btnTextSpan.textContent.trim() : btn.textContent.trim();
+        if (btnText === correct) {
             // Highlight correct answer Green
             btn.classList.remove('border-gray-200', 'hover:border-blue-500');
             btn.classList.add('bg-green-100', 'border-green-500', 'text-green-800', 'dark:bg-green-900', 'dark:text-green-200');
@@ -1093,10 +1095,12 @@ function checkAnswer(selected, correct, btnElement) {
         score++;
         streak++;
         updateStreak(streak);
+        if (typeof window.playCorrectSound === 'function') window.playCorrectSound();
         document.getElementById('feedback').textContent = "Correct! Great job.";
     } else {
         streak = 0;
         updateStreak(streak);
+        if (typeof window.playIncorrectSound === 'function') window.playIncorrectSound();
         document.getElementById('feedback').textContent = `Incorrect. The answer was ${correct}.`;
 
         // Highlight chosen wrong answer Red
@@ -1123,7 +1127,14 @@ function checkAnswer(selected, correct, btnElement) {
     explanationCard.style.display = 'block';
 
     const q = currentQuestions[currentQuestionIndex];
-    const explanation = q ? (q.hint || q.explanation || `Take note: "${correct}" satisfies this learning standard.`) : `The key answer is "${correct}".`;
+    const explanation = q ? (q.explanation || q.hint || `Take note: "${correct}" satisfies this learning standard.`) : `The key answer is "${correct}".`;
+
+    // Also update feedback-explanation in the top feedback area if present
+    const fbExp = document.getElementById('feedback-explanation');
+    if (fbExp) {
+        fbExp.innerHTML = `<strong>Explanation:</strong> ${explanation}`;
+        fbExp.style.display = 'block';
+    }
 
     if (isCorrect) {
         explanationCard.style.background = 'rgba(16, 185, 129, 0.12)';

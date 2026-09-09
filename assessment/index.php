@@ -227,6 +227,24 @@ include '../src/header.php';
                     <i class="fas fa-print" style="margin-right: 0.5rem;"></i> Generate Printable Worksheet
                 </button>
             </div>
+
+            <!-- Teacher Observation Rubrics -->
+            <div class="assessment-card" style="padding: 1.5rem; border-top: 4px solid #10b981; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <div style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.2rem 0.65rem; border-radius: var(--radius-full); background: rgba(16, 185, 129, 0.15); color: #10b981; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; margin-bottom: 0.5rem;">
+                        <i class="fas fa-clipboard-check"></i> Educator Rubrics
+                    </div>
+                    <h4 style="font-size: 1.15rem; font-weight: 800; margin: 0 0 0.5rem 0; color: var(--color-text-main);">
+                        Teacher Observation Rubrics
+                    </h4>
+                    <p style="font-size: 0.85rem; color: var(--color-text-muted); line-height: 1.5; margin: 0 0 1rem 0;">
+                        One-on-one performance protocols and 4-step observation scoring instruments with real-time score calculation and conference reports.
+                    </p>
+                </div>
+                <a href="/assessment/rubrics.php" class="hero-nav-btn hero-nav-btn-outline" style="width: 100%; justify-content: center; padding: 0.65rem 1rem; border-radius: var(--radius-md); font-size: 0.875rem; text-decoration: none; display: inline-flex; align-items: center;">
+                    <i class="fas fa-folder-open" style="margin-right: 0.5rem;"></i> Open Rubrics Suite
+                </a>
+            </div>
         </div>
     </div>
 </div>
@@ -344,6 +362,12 @@ include '../src/header.php';
                     </div>
                     <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 0.5rem;">
                         <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; justify-content: flex-end;">
+                            <span class="kb-shortcuts-hint no-mobile" title="Press keys 1-4 to select answers, Enter to advance, H for hint, R for read aloud">
+                                <i class="fas fa-keyboard" style="opacity: 0.75;"></i> 1–4 to pick · Enter to advance
+                            </span>
+                            <button id="tts-read-btn" type="button" onclick="window.readCurrentQuestionAloud && window.readCurrentQuestionAloud()" style="background: var(--color-bg-base); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 0.35rem 0.7rem; color: var(--color-text-main); font-size: 0.8rem; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 0.35rem; transition: all 0.2s;" title="Read question aloud (Text-to-Speech) [Shortcut: R]">
+                                <i class="fas fa-volume-up" style="color: var(--color-primary);"></i> <span class="no-mobile">Read Aloud</span>
+                            </button>
                             <button id="untimed-mode-btn" type="button" style="background: var(--color-bg-base); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 0.35rem 0.7rem; color: var(--color-text-muted); font-size: 0.8rem; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 0.35rem; transition: all 0.2s;" title="Toggle Low-Anxiety Untimed Practice Mode">
                                 <i class="fas fa-infinity"></i> <span id="untimed-mode-label">Untimed Mode</span>
                             </button>
@@ -366,6 +390,7 @@ include '../src/header.php';
                 </div>
 
                 <div style="flex-grow: 1; margin-bottom: 2rem;">
+                    <div id="question-standard-tag" style="display: none; margin-bottom: 0.75rem;"></div>
                     <h2 id="question" style="font-size: 1.5rem; font-weight: 700; color: var(--color-text-main); margin-bottom: 2rem; line-height: 1.4; min-height: 4rem;">
                         Loading Question...
                     </h2>
@@ -379,9 +404,10 @@ include '../src/header.php';
                 <div id="feedback-area" class="feedback-box">
                     <div style="display: flex; align-items: start; gap: 0.75rem;">
                         <div id="feedback-icon" style="font-size: 1.5rem;"></div>
-                        <div>
+                        <div style="flex-grow: 1;">
                             <h4 id="feedback-title" style="font-weight: 700; font-size: 1.125rem; margin: 0 0 0.25rem 0;"></h4>
                             <p id="feedback" style="font-size: 0.875rem; margin: 0; opacity: 0.9;"></p>
+                            <div id="feedback-explanation" style="margin-top: 0.65rem; padding-top: 0.65rem; border-top: 1px dashed rgba(255,255,255,0.25); font-size: 0.875rem; line-height: 1.55; display: none;"></div>
                         </div>
                     </div>
                 </div>
@@ -454,7 +480,10 @@ include '../src/header.php';
             <div class="toolbar-title" id="report-modal-title">
                 <i class="fas fa-file-invoice" style="color: var(--color-primary);"></i> Diagnostic Mastery Report Card
             </div>
-            <div class="toolbar-actions">
+            <div class="toolbar-actions" style="display: flex; align-items: center; gap: 0.5rem;">
+                <button type="button" class="hero-nav-btn hero-nav-btn-outline" onclick="window.exportMasteryReportCSV && window.exportMasteryReportCSV()" style="padding: 0.5rem 1.25rem; font-size: 0.875rem;">
+                    <i class="fas fa-file-csv"></i> Export CSV
+                </button>
                 <button type="button" class="hero-nav-btn hero-nav-btn-primary" onclick="window.print()" style="padding: 0.5rem 1.25rem; font-size: 0.875rem;">
                     <i class="fas fa-print"></i> Print / Save as PDF
                 </button>
@@ -476,7 +505,13 @@ include '../src/header.php';
             <div class="toolbar-title" id="worksheet-modal-title">
                 <i class="fas fa-print" style="color: var(--color-primary);"></i> Printable Quiz Worksheet & Answer Key
             </div>
-            <div class="toolbar-actions" style="display: flex; align-items: center; gap: 0.75rem;">
+            <div class="toolbar-actions" style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+                <select id="worksheet-count-select" onchange="window.updateWorksheetCount && window.updateWorksheetCount(this.value)" style="background: var(--color-bg-base); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 0.4rem 0.65rem; font-size: 0.8125rem; font-weight: 700; color: var(--color-text-main);">
+                    <option value="5">5 Questions</option>
+                    <option value="10">10 Questions</option>
+                    <option value="15" selected>15 Questions</option>
+                    <option value="20">20 Questions</option>
+                </select>
                 <label style="display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.8125rem; font-weight: 700; cursor: pointer; user-select: none; color: var(--color-text-main);">
                     <input type="checkbox" id="worksheet-include-key" checked onchange="toggleWorksheetAnswerKey(this.checked)">
                     <span>Include Educator Answer Key</span>

@@ -1,98 +1,111 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // === GRADE CONFIGURATION ===
-  const gradeConfig = {
-    "pre-k": {
-      label: "Pre-K",
-      link: "/levels/a.php",
-      icon: "fa-shapes",
-      color: "bg-pink-500",
-    },
-    k: {
-      label: "Kindergarten",
-      link: "/levels/b.php",
-      icon: "fa-child",
-      color: "bg-purple-500",
-    },
-    1: {
-      label: "First Grade",
-      link: "/levels/c.php",
-      icon: "fa-star",
-      color: "bg-indigo-500",
-    },
-    2: {
-      label: "Second Grade",
-      link: "/levels/d.php",
-      icon: "fa-rocket",
-      color: "bg-blue-500",
-    },
-    3: {
-      label: "Third Grade",
-      link: "/levels/e.php",
-      icon: "fa-book-open",
-      color: "bg-sky-500",
-    },
-    4: {
-      label: "Fourth Grade",
-      link: "/levels/f.php",
-      icon: "fa-map",
-      color: "bg-teal-500",
-    },
-    5: {
-      label: "Fifth Grade",
-      link: "/levels/g.php",
-      icon: "fa-flask",
-      color: "bg-emerald-500",
-    },
-    6: {
-      label: "Sixth Grade",
-      link: "/levels/h.php",
-      icon: "fa-globe",
-      color: "bg-green-500",
-    },
-    7: {
-      label: "Seventh Grade",
-      link: "/levels/i.php",
-      icon: "fa-landmark",
-      color: "bg-lime-600",
-    },
-    8: {
-      label: "Eighth Grade",
-      link: "/levels/j.php",
-      icon: "fa-dna",
-      color: "bg-yellow-600",
-    },
-    9: {
-      label: "Ninth Grade",
-      link: "/levels/k.php",
-      icon: "fa-atom",
-      color: "bg-orange-600",
-    },
-    10: {
-      label: "Tenth Grade",
-      link: "/levels/l.php",
-      icon: "fa-microscope",
-      color: "bg-red-600",
-    },
-    11: {
-      label: "Eleventh Grade",
-      link: "/levels/m.php",
-      icon: "fa-brain",
-      color: "bg-rose-600",
-    },
-    12: {
-      label: "Twelfth Grade",
-      link: "/levels/n.php",
-      icon: "fa-graduation-cap",
-      color: "bg-slate-700",
-    },
-    ap: {
-      label: "Advanced Placement",
-      link: "#",
-      icon: "fa-university",
-      color: "bg-indigo-900",
-    },
-  };
+// Helper function to safely escape HTML in templates
+function escapeHtml(str) {
+  if (typeof str !== "string") return str == null ? "" : String(str);
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+window.escapeHtml = escapeHtml;
 
+// === GLOBAL GRADE CONFIGURATION ===
+const gradeConfig = {
+  "pre-k": {
+    label: "Pre-K",
+    link: "/levels/a.php",
+    icon: "fa-shapes",
+    color: "bg-pink-500",
+  },
+  k: {
+    label: "Kindergarten",
+    link: "/levels/b.php",
+    icon: "fa-child",
+    color: "bg-purple-500",
+  },
+  1: {
+    label: "First Grade",
+    link: "/levels/c.php",
+    icon: "fa-star",
+    color: "bg-indigo-500",
+  },
+  2: {
+    label: "Second Grade",
+    link: "/levels/d.php",
+    icon: "fa-rocket",
+    color: "bg-blue-500",
+  },
+  3: {
+    label: "Third Grade",
+    link: "/levels/e.php",
+    icon: "fa-book-open",
+    color: "bg-sky-500",
+  },
+  4: {
+    label: "Fourth Grade",
+    link: "/levels/f.php",
+    icon: "fa-map",
+    color: "bg-teal-500",
+  },
+  5: {
+    label: "Fifth Grade",
+    link: "/levels/g.php",
+    icon: "fa-flask",
+    color: "bg-emerald-500",
+  },
+  6: {
+    label: "Sixth Grade",
+    link: "/levels/h.php",
+    icon: "fa-globe",
+    color: "bg-green-500",
+  },
+  7: {
+    label: "Seventh Grade",
+    link: "/levels/i.php",
+    icon: "fa-landmark",
+    color: "bg-lime-600",
+  },
+  8: {
+    label: "Eighth Grade",
+    link: "/levels/j.php",
+    icon: "fa-dna",
+    color: "bg-yellow-600",
+  },
+  9: {
+    label: "Ninth Grade",
+    link: "/levels/k.php",
+    icon: "fa-atom",
+    color: "bg-orange-600",
+  },
+  10: {
+    label: "Tenth Grade",
+    link: "/levels/l.php",
+    icon: "fa-microscope",
+    color: "bg-red-600",
+  },
+  11: {
+    label: "Eleventh Grade",
+    link: "/levels/m.php",
+    icon: "fa-brain",
+    color: "bg-rose-600",
+  },
+  12: {
+    label: "Twelfth Grade",
+    link: "/levels/n.php",
+    icon: "fa-graduation-cap",
+    color: "bg-slate-700",
+  },
+  ap: {
+    label: "Advanced Placement",
+    link: "#",
+    icon: "fa-university",
+    color: "bg-indigo-900",
+  },
+};
+window.gradeConfig = gradeConfig;
+
+document.addEventListener("DOMContentLoaded", () => {
   // === GET PARAMETER & TARGETED STANDARD HASH ===
   const urlParams = new URLSearchParams(window.location.search);
   let grade = urlParams.get("grade");
@@ -500,6 +513,74 @@ function playIncorrectSound() {
   playTone(300, "triangle", 0.3);
   setTimeout(() => playTone(250, "triangle", 0.3), 150);
 }
+
+// Expose sounds globally for question engines
+window.playCorrectSound = playCorrectSound;
+window.playIncorrectSound = playIncorrectSound;
+
+// Text-to-Speech Read Aloud function
+window.readCurrentQuestionAloud = function() {
+  if (!('speechSynthesis' in window)) {
+    alert("Text-to-speech audio is not supported in this browser.");
+    return;
+  }
+  window.speechSynthesis.cancel();
+
+  const qText = document.getElementById("question")?.textContent || "";
+  const opts = Array.from(document.querySelectorAll("#options button")).map((btn, idx) => {
+    return `Option ${idx + 1}: ${btn.textContent.trim()}`;
+  });
+
+  if (!qText || qText === "Loading Question...") return;
+
+  const fullText = `Question: ${qText}. ` + (opts.length > 0 ? opts.join(". ") : "");
+  const utterance = new SpeechSynthesisUtterance(fullText);
+  utterance.rate = 0.95;
+  utterance.pitch = 1.0;
+
+  const btn = document.getElementById("tts-read-btn");
+  if (btn) {
+    btn.classList.add("tts-speaking");
+    utterance.onend = () => btn.classList.remove("tts-speaking");
+    utterance.onerror = () => btn.classList.remove("tts-speaking");
+  }
+
+  window.speechSynthesis.speak(utterance);
+};
+
+// Global Keyboard Navigation (1-4 for options, Enter for next, H for hint, R for read aloud)
+document.addEventListener("keydown", (e) => {
+  if (["INPUT", "TEXTAREA", "SELECT"].includes(e.target.tagName)) return;
+  const quiz = document.getElementById("quiz-container");
+  if (!quiz || quiz.classList.contains("hidden") || quiz.style.display === "none") return;
+
+  // Options 1-4
+  if (["1", "2", "3", "4"].includes(e.key)) {
+    const idx = parseInt(e.key, 10) - 1;
+    const buttons = document.querySelectorAll("#options button");
+    if (buttons[idx] && !buttons[idx].disabled) {
+      buttons[idx].click();
+    }
+  }
+
+  // Next Question with Enter
+  if (e.key === "Enter") {
+    const nextBtn = document.getElementById("next-btn");
+    if (nextBtn && !nextBtn.classList.contains("hidden") && !nextBtn.disabled) {
+      nextBtn.click();
+    }
+  }
+
+  // Hint with H
+  if (e.key.toLowerCase() === "h") {
+    if (typeof showHint === "function") showHint();
+  }
+
+  // Read aloud with R
+  if (e.key.toLowerCase() === "r") {
+    if (window.readCurrentQuestionAloud) window.readCurrentQuestionAloud();
+  }
+});
 
 // 3. Timer Logic
 function updateTimerDisplay() {
@@ -1554,6 +1635,49 @@ document.addEventListener("DOMContentLoaded", () => {
 // =========================================================================
 // 11. Printable Quiz Worksheet & Teacher Answer Key Generator
 // =========================================================================
+window.currentWorksheetQuestionCount = 15;
+
+window.updateWorksheetCount = function(count) {
+  window.currentWorksheetQuestionCount = parseInt(count, 10) || 15;
+  if (typeof window.openPrintableWorksheetModal === "function") {
+    window.openPrintableWorksheetModal();
+  }
+};
+
+window.exportMasteryReportCSV = function() {
+  const results = window.quizResultsData || [];
+  if (results.length === 0) {
+    alert("No assessment results available to export yet. Please complete questions first.");
+    return;
+  }
+
+  let csv = "Question Number,Subject,Standard,Question,Student Answer,Correct Answer,Result,Explanation\n";
+  results.forEach((r, idx) => {
+    const clean = str => `"${String(str || '').replace(/"/g, '""')}"`;
+    csv += [
+      idx + 1,
+      clean(r.subject || 'General'),
+      clean(r.standard || 'General Standard'),
+      clean(r.question || ''),
+      clean(r.userAnswer || ''),
+      clean(r.correct || r.answer || ''),
+      r.isCorrect ? "Correct" : "Incorrect",
+      clean(r.explanation || r.hint || '')
+    ].join(",") + "\n";
+  });
+
+  const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  const grade = (document.getElementById("header-grade-name")?.textContent || "Assessment").trim().replace(/\s+/g, '_');
+  link.setAttribute("href", url);
+  link.setAttribute("download", `Hestens_Learning_${grade}_Mastery_Report_${new Date().toISOString().slice(0,10)}.csv`);
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+  URL.revokeObjectURL(url);
+};
+
 window.openPrintableWorksheetModal = function() {
   const modal = document.getElementById("quiz-worksheet-modal");
   const area = document.getElementById("quiz-worksheet-printable-area");
@@ -1571,11 +1695,12 @@ window.openPrintableWorksheetModal = function() {
   const grade = document.getElementById("header-grade-name")?.textContent || "Core Curriculum";
   const subject = window.currentAssessmentSubject || "General Academic";
   const dateStr = new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+  const countLimit = window.currentWorksheetQuestionCount || 15;
 
   let qListHtml = '';
   let answerKeyRows = '';
 
-  questions.slice(0, 15).forEach((q, i) => {
+  questions.slice(0, countLimit).forEach((q, i) => {
     const letters = ['A', 'B', 'C', 'D'];
     let optionsHtml = '';
 

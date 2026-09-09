@@ -13,7 +13,20 @@
   'use strict';
 
   const QUESTION_BANK = [
-    // Math - Foundational & Intermediate
+    // Math - Foundational, Intermediate & Advanced
+    {
+      id: 'm0',
+      subject: 'Math',
+      standard: 'K.CC.B.4',
+      difficulty: 1,
+      blooms: 'Remember',
+      question: 'How many sides does a rectangle have?',
+      options: ['3', '4', '5', '6'],
+      correctIndex: 1,
+      hint: 'Count the straight lines enclosing the shape: top, bottom, left, right.',
+      prerequisiteLesson: '/levels/b.php?subject=math',
+      prerequisiteFlashcard: 'math-core'
+    },
     {
       id: 'm1',
       subject: 'Math',
@@ -53,8 +66,34 @@
       prerequisiteLesson: '/student/math-study-guides.php',
       prerequisiteFlashcard: 'math-core'
     },
+    {
+      id: 'm4',
+      subject: 'Math',
+      standard: 'HSA.REI.B.4',
+      difficulty: 4,
+      blooms: 'Evaluate',
+      question: 'What are the roots of the quadratic equation x² - 5x + 6 = 0?',
+      options: ['x = 2 and x = 3', 'x = -2 and x = -3', 'x = 1 and x = 6', 'x = -1 and x = 5'],
+      correctIndex: 0,
+      hint: 'Factor into (x - a)(x - b) = 0 where a + b = 5 and a × b = 6.',
+      prerequisiteLesson: '/levels/k.php?subject=math',
+      prerequisiteFlashcard: 'math-core'
+    },
 
-    // ELA - Reading & Grammar
+    // ELA - Foundational, Intermediate & Advanced
+    {
+      id: 'e0',
+      subject: 'ELA',
+      standard: 'CCSS.ELA.RF.1.3',
+      difficulty: 1,
+      blooms: 'Remember',
+      question: 'Which pair of words are rhyming word families?',
+      options: ['Cat and Hat', 'Dog and Fish', 'Tree and Book', 'Sun and Cloud'],
+      correctIndex: 0,
+      hint: 'Rhyming words end with the same sound pattern.',
+      prerequisiteLesson: '/levels/c.php?subject=language-arts',
+      prerequisiteFlashcard: 'ela-vocab'
+    },
     {
       id: 'e1',
       subject: 'ELA',
@@ -99,8 +138,39 @@
       prerequisiteLesson: '/student/ela-literature.php',
       prerequisiteFlashcard: 'ela-vocab'
     },
+    {
+      id: 'e4',
+      subject: 'ELA',
+      standard: 'CCSS.ELA.RI.11-12.6',
+      difficulty: 4,
+      blooms: 'Evaluate',
+      question: 'When an author employs subtle rhetorical irony, what is the reader expected to discern?',
+      options: [
+        'The literal truth of every statement without skepticism',
+        'The underlying discrepancy between what is stated and what is actually meant',
+        'Grammatical punctuation errors in the narrative',
+        'A list of factual chronological dates'
+      ],
+      correctIndex: 1,
+      hint: 'Irony creates meaning through the gap between appearance and reality.',
+      prerequisiteLesson: '/levels/m.php?subject=language-arts',
+      prerequisiteFlashcard: 'ela-vocab'
+    },
 
-    // Science
+    // Science - Foundational, Intermediate & Advanced
+    {
+      id: 's0',
+      subject: 'Science',
+      standard: 'NGSS.2-LS2-1',
+      difficulty: 1,
+      blooms: 'Remember',
+      question: 'What two basic ingredients do green plants require to produce their own food through photosynthesis?',
+      options: ['Sunlight and Water', 'Meat and Salt', 'Darkness and Sand', 'Milk and Sugar'],
+      correctIndex: 0,
+      hint: 'Plants need energy from light and moisture from their roots.',
+      prerequisiteLesson: '/levels/d.php?subject=science',
+      prerequisiteFlashcard: 'science-terms'
+    },
     {
       id: 's1',
       subject: 'Science',
@@ -119,8 +189,47 @@
       prerequisiteLesson: '/student/science-experiments.php',
       prerequisiteFlashcard: 'science-terms'
     },
+    {
+      id: 's2',
+      subject: 'Science',
+      standard: 'NGSS.HS-PS1-1',
+      difficulty: 3,
+      blooms: 'Analyze',
+      question: 'The number of which subatomic particles determines the atomic number and elemental identity of an atom?',
+      options: ['Neutrons', 'Protons', 'Electrons', 'Photons'],
+      correctIndex: 1,
+      hint: 'The nucleus contains positively charged protons.',
+      prerequisiteLesson: '/levels/l.php?subject=science',
+      prerequisiteFlashcard: 'science-terms'
+    },
+    {
+      id: 's3',
+      subject: 'Science',
+      standard: 'NGSS.HS-LS1-7',
+      difficulty: 4,
+      blooms: 'Evaluate',
+      question: 'During aerobic cellular respiration, which process yields the largest net quantity of ATP?',
+      options: ['Glycolysis', 'Krebs Cycle (Citric Acid Cycle)', 'Oxidative Phosphorylation (ETC)', 'Lactic Acid Fermentation'],
+      correctIndex: 2,
+      hint: 'ATP synthase in the mitochondrial inner membrane generates ~28-34 ATP per glucose.',
+      prerequisiteLesson: '/levels/l.php?subject=science',
+      prerequisiteFlashcard: 'science-terms'
+    },
 
-    // Social Studies
+    // Social Studies - Foundational, Intermediate & Advanced
+    {
+      id: 'ss0',
+      subject: 'Social Studies',
+      standard: 'NCSS.D2.Civ.2.K-2',
+      difficulty: 1,
+      blooms: 'Remember',
+      question: 'Why do communities establish laws and traffic safety rules?',
+      options: ['To ensure safety, fairness, and order', 'To make driving difficult', 'To close schools', 'To prevent play'],
+      correctIndex: 0,
+      hint: 'Rules help people live and travel together safely.',
+      prerequisiteLesson: '/levels/b.php?subject=social-studies',
+      prerequisiteFlashcard: 'history-dates'
+    },
     {
       id: 'ss1',
       subject: 'Social Studies',
@@ -137,6 +246,37 @@
       correctIndex: 1,
       hint: 'It declared that the 13 colonies were free and independent sovereign states.',
       prerequisiteLesson: '/student/social-history.php',
+      prerequisiteFlashcard: 'history-dates'
+    },
+    {
+      id: 'ss2',
+      subject: 'Social Studies',
+      standard: 'NCSS.D2.Civ.4.9-12',
+      difficulty: 3,
+      blooms: 'Analyze',
+      question: 'Which constitutional mechanism ensures that no single branch of government becomes tyrannical?',
+      options: ['Checks and Balances', 'Direct Democracy', 'Unicameral Legislature', 'Executive Fiat'],
+      correctIndex: 0,
+      hint: 'Each branch has constitutional powers to limit the other branches.',
+      prerequisiteLesson: '/levels/k.php?subject=social-studies',
+      prerequisiteFlashcard: 'history-dates'
+    },
+    {
+      id: 'ss3',
+      subject: 'Social Studies',
+      standard: 'NCSS.D2.Eco.1.9-12',
+      difficulty: 4,
+      blooms: 'Evaluate',
+      question: 'In macroeconomic policy, what is the typical result of a central bank raising interest rates during inflation?',
+      options: [
+        'Borrowing slows down and consumer spending cools, curbing price rises',
+        'Hyperinflation accelerates immediately',
+        'Money supply expands exponentially',
+        'Government automatically repeals all taxes'
+      ],
+      correctIndex: 0,
+      hint: 'Higher borrowing costs reduce aggregate demand to stabilize prices.',
+      prerequisiteLesson: '/levels/n.php?subject=social-studies',
       prerequisiteFlashcard: 'history-dates'
     }
   ];
@@ -314,6 +454,41 @@
       const masteredList = Object.values(standardResults).filter(s => s.correct);
       const focusList = Object.values(standardResults).filter(s => !s.correct);
 
+      // Calculate Domain-by-Domain Mastery
+      const domainStats = {
+        'Math': { total: 0, correct: 0, icon: 'fa-calculator', color: 'var(--color-primary, #2563eb)' },
+        'ELA': { total: 0, correct: 0, icon: 'fa-book-reader', color: '#ec4899' },
+        'Science': { total: 0, correct: 0, icon: 'fa-flask', color: '#10b981' },
+        'Social Studies': { total: 0, correct: 0, icon: 'fa-globe-americas', color: '#f59e0b' }
+      };
+
+      this.responses.forEach(r => {
+        const subj = r.question.subject;
+        if (domainStats[subj]) {
+          domainStats[subj].total++;
+          if (r.isCorrect) domainStats[subj].correct++;
+        }
+      });
+
+      const domainCardsHtml = Object.entries(domainStats).map(([subj, data]) => {
+        if (data.total === 0) return '';
+        const pct = Math.round((data.correct / data.total) * 100);
+        return `
+          <div class="presc-domain-card" style="background: var(--color-bg-surface, #fff); border: 1px solid var(--color-border); border-radius: var(--radius-lg, 0.75rem); padding: 1rem 1.25rem; display: flex; flex-direction: column; gap: 0.5rem;">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <span style="font-weight: 800; font-size: 0.9rem; color: var(--color-text-main); display: flex; align-items: center; gap: 0.4rem;">
+                <i class="fas ${data.icon}" style="color: ${data.color};"></i> ${subj}
+              </span>
+              <span style="font-weight: 800; font-size: 0.95rem; color: ${pct >= 70 ? '#10b981' : (pct >= 50 ? '#f59e0b' : '#ef4444')};">${pct}%</span>
+            </div>
+            <div style="height: 6px; background: rgba(0,0,0,0.06); border-radius: 9999px; overflow: hidden;">
+              <div style="height: 100%; width: ${pct}%; background: ${data.color}; border-radius: 9999px; transition: width 0.4s ease;"></div>
+            </div>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted);">${data.correct} of ${data.total} standards proficient</span>
+          </div>
+        `;
+      }).filter(Boolean).join('');
+
       container.innerHTML = `
         <div class="prescription-header-card">
           <div class="prescription-score-circle">
@@ -326,6 +501,11 @@
             <p>Estimated Bloom's Mastery Level: <strong>${bloomsTier}</strong>. Score: <strong>${this.abilityScore.toFixed(2)}/4.00</strong></p>
             <div class="xp-awarded-pill"><i class="fas fa-bolt"></i> +100 XP Awarded to Profile!</div>
           </div>
+        </div>
+
+        <!-- Domain Mastery Summary Row -->
+        <div class="prescription-domain-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1.5rem; margin-bottom: 1.5rem;">
+          ${domainCardsHtml}
         </div>
 
         <div class="prescription-grid">
@@ -366,11 +546,14 @@
           </div>
         </div>
 
-        <div class="presc-footer-actions">
+        <div class="presc-footer-actions" style="margin-top: 2rem; display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center;">
           <a href="/student/skill-tree.php" class="btn" style="padding: 0.85rem 1.75rem; border-radius: var(--radius-full); background: linear-gradient(135deg, var(--color-primary), #6366f1); color: white; border: none; font-weight: 800; font-size: 0.95rem; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; box-shadow: var(--shadow-md);">
             <i class="fas fa-sitemap"></i>
             <span>View Updated Skill Tree</span>
           </a>
+          <button type="button" onclick="window.print()" class="btn" style="padding: 0.85rem 1.5rem; border-radius: var(--radius-full); background: var(--color-bg-base); color: var(--color-text-main); border: 1px solid var(--color-border); font-weight: 800; font-size: 0.95rem; cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem;">
+            <i class="fas fa-print"></i> Print Prescription
+          </button>
           <button type="button" onclick="location.reload()" class="btn" style="padding: 0.85rem 1.5rem; border-radius: var(--radius-full); background: var(--color-bg-base); color: var(--color-text-main); border: 1px solid var(--color-border); font-weight: 800; font-size: 0.95rem; cursor: pointer;">
             <i class="fas fa-redo"></i> Retake Diagnostic
           </button>

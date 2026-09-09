@@ -1510,6 +1510,54 @@
       color: #334155 !important;
     }
   }
+
+  /* Interactive Assessment UI Polish */
+  .kb-shortcuts-hint {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--color-text-muted);
+    background: var(--color-bg-base);
+    border: 1px solid var(--color-border);
+    padding: 0.35rem 0.65rem;
+    border-radius: var(--radius-md);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    user-select: none;
+  }
+
+  .opt-num-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: var(--radius-full, 9999px);
+    background: color-mix(in srgb, var(--color-primary) 12%, transparent);
+    color: var(--color-primary);
+    font-size: 0.8125rem;
+    font-weight: 800;
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+  }
+
+  button:hover .opt-num-badge {
+    background: var(--color-primary);
+    color: #ffffff;
+    transform: scale(1.08);
+  }
+
+  .tts-speaking {
+    animation: ttsPulse 1.2s infinite ease-in-out;
+    background: color-mix(in srgb, var(--color-primary) 15%, transparent) !important;
+    color: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
+  }
+
+  @keyframes ttsPulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.8; }
+  }
 }
 
 
