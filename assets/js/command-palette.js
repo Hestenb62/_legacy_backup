@@ -132,6 +132,17 @@
             keywords: ['about', 'hesten', 'creator', 'bio', 'story', 'mission']
         },
         {
+            id: 'nav-updates',
+            title: 'Platform Updates & Planning Docs',
+            desc: 'Engineering changelogs, implementation plans, and release walkthroughs',
+            icon: 'fa-code-branch',
+            iconColor: 'icon-indigo',
+            category: 'nav',
+            badge: 'Docs',
+            url: '/updates.php',
+            keywords: ['updates', 'plans', 'walkthroughs', 'changelog', 'roadmap', 'release', 'notes', 'docs']
+        },
+        {
             id: 'nav-profile',
             title: 'Official Report Card & Mastery',
             desc: 'Review mastery velocity, grades, and completed lessons',

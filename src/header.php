@@ -243,10 +243,7 @@ if (!function_exists('assetVersion')) {
                             </button>
                         </form>
 
-                        <button type="button" class="header-cmd-palette-btn" onclick="window.openCommandPalette()" title="Command Palette (Ctrl+K)" aria-label="Open Command Palette">
-                            <i class="fas fa-terminal" aria-hidden="true"></i>
-                            <span style="font-size: 0.6875rem; font-weight: 700; opacity: 0.85; font-family: monospace;">Ctrl K</span>
-                        </button>
+                      
                         
                         <div class="user-dropdown-container">
                             <button class="user-pill" id="user-pill-btn" aria-expanded="false" aria-haspopup="true" aria-controls="user-dropdown-menu">

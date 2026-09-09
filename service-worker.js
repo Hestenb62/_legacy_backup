@@ -1,10 +1,11 @@
-const CACHE_NAME = 'hestens-learning-v6';
+const CACHE_NAME = 'hestens-learning-v7';
 const ASSETS_TO_CACHE = [
 
   // Main Directory Pages & Manifest
   '/',
   '/index.php',
   '/offline.php',
+  '/updates.php',
   '/manifest.json',
   '/assessment/index.php',
   '/library/index.php',
@@ -27,6 +28,7 @@ const ASSETS_TO_CACHE = [
   '/assets/css/global-reset.css',
   '/assets/css/global-primitives.css',
   '/assets/css/global-components.css',
+  '/assets/css/pages/updates.css',
   '/assets/css/components/fixed-tools.css',
   '/assets/css/layouts/header.css',
   '/assets/css/layouts/footer.css',
