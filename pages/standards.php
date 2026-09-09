@@ -786,8 +786,9 @@
                 };
                 const activeCurrName = currNames[resolvedCurr] || activeCurr;
                 
+                const displaySubj = (subject && subject.name) || subjectsMap[currentSubject]?.name || (currentSubject || '');
                 gradeData = {
-                    title: `${currentGrade} ${(subject ? subject.name : currentSubject).toUpperCase()} Outline (${activeCurrName})`,
+                    title: `${currentGrade} ${displaySubj.toUpperCase()} Outline (${activeCurrName})`,
                     overview: `<p>Outline and detailed curriculum for ${currentGrade} ${currentSubject} (${activeCurrName}) is being updated. Please check back soon or visit the specific level page.</p>`,
                     standards: '<p>Standards data coming soon.</p>',
                     competencies: ['Information Pending'],
@@ -871,7 +872,7 @@
                     if (resolvedCurr === 'ccss') {
                         const disclaimerDiv = document.createElement('div');
                         disclaimerDiv.className = 'curr-standard-disclaimer';
-                        const subjectName = (currentSubject === 'math') ? 'MATHEMATICS' : ((subject && subject.name) ? subject.name.toUpperCase() : 'MATHEMATICS');
+                        const subjectName = (currentSubject === 'math') ? 'MATHEMATICS' : (((subject && subject.name) || subjectsMap[currentSubject]?.name || 'MATHEMATICS')).toUpperCase();
                         disclaimerDiv.innerHTML = `<i class="fas fa-bookmark mr-1"></i> From the "Common Core State Standards for ${subjectName}"`;
                         bodyDiv.appendChild(disclaimerDiv);
                     }
@@ -975,7 +976,7 @@
             if (statDomains) statDomains.innerText = domainSet.size || (standardItems.length ? standardItems.length : '-');
             if (statStandards) statStandards.innerText = totalStandardCodesCount || '-';
             if (statCompetencies) statCompetencies.innerText = (gradeData.competencies && gradeData.competencies.length) || '0';
-            if (statLevel) statLevel.innerText = `Level ${gradeData.level ? gradeData.level.toUpperCase() : 'A'}`;
+            if (statLevel) statLevel.innerText = `Level ${(gradeData && gradeData.level ? gradeData.level : 'A').toUpperCase()}`;
 
             // Update Competencies list
             const compList = document.getElementById('view-competencies');
@@ -1006,11 +1007,13 @@
 
             // Update Practice Skills / Level Link
             const levelLink = document.getElementById('view-level-link');
-            if (levelLink && gradeData.level) {
+            if (levelLink && gradeData && gradeData.level) {
                 const subjParam = currentSubject ? `?subject=${encodeURIComponent(currentSubject)}` : '';
                 levelLink.href = `/levels/${gradeData.level.toLowerCase()}.php${subjParam}`;
-                const subjTitle = (subject && subject.name) ? subject.name : (currentSubject || '');
-                levelLink.innerHTML = `PRACTICE LEVEL ${gradeData.level.toUpperCase()} ${subjTitle.toUpperCase()} <i class="fas fa-arrow-right ml-2"></i>`;
+                const subjTitle = (subject && subject.name) ? subject.name : (subjectsMap[currentSubject]?.name || currentSubject || '');
+                const safeLvl = (gradeData.level || 'A').toUpperCase();
+                const safeSubj = (subjTitle || '').toUpperCase();
+                levelLink.innerHTML = `PRACTICE LEVEL ${safeLvl} ${safeSubj} <i class="fas fa-arrow-right ml-2"></i>`;
             }
 
             // Content icon
@@ -1210,8 +1213,8 @@
                                 </div>
                                 <div class="curr-cross-grade-chips">
                                     ${crossMatches.map(m => `
-                                        <button type="button" class="curr-cross-grade-chip-btn" onclick="jumpToGrade('${escapeAttr(m.grade)}', '${escapeAttr(m.level)}')">
-                                            <i class="fas fa-layer-group"></i> ${escapeHtml(m.grade)} (Level ${escapeHtml(m.level.toUpperCase())}) &bull; ${m.count} match${m.count === 1 ? '' : 'es'} &rarr;
+                                        <button type="button" class="curr-cross-grade-chip-btn" onclick="jumpToGrade('${escapeAttr(m.grade)}', '${escapeAttr(m.level || 'A')}')">
+                                            <i class="fas fa-layer-group"></i> ${escapeHtml(m.grade)} (Level ${escapeHtml(((m && m.level) || 'A').toUpperCase())}) &bull; ${m.count} match${m.count === 1 ? '' : 'es'} &rarr;
                                         </button>
                                     `).join('')}
                                 </div>
@@ -1224,7 +1227,7 @@
             noResultsEl.innerHTML = `
                 <i class="fas fa-search-minus curr-no-results-icon"></i>
                 <h4 class="curr-no-results-title">No matching standards found</h4>
-                <p class="curr-no-results-desc">No standards matched "<strong>${escapeHtml(query)}</strong>" in ${escapeHtml(currentGrade)} ${escapeHtml(currentSubject.toUpperCase())}.</p>
+                <p class="curr-no-results-desc">No standards matched "<strong>${escapeHtml(query)}</strong>" in ${escapeHtml(currentGrade)} ${escapeHtml((currentSubject || '').toUpperCase())}.</p>
                 ${crossGradeMatchesHtml}
                 <div style="margin-top: 1.25rem;">
                     <button type="button" class="curr-btn-reset-filter" onclick="clearStandardsSearch(); filterByDomain('all');">
@@ -1507,7 +1510,8 @@
     // Export Standards as Human-Readable Text File (.txt)
     function exportStandardsAsTxt() {
         const levelCode = document.getElementById('stat-level-code')?.innerText || '';
-        const subjectName = subjectsMap[currentSubject]?.name || currentSubject.toUpperCase();
+        const subject = (typeof curriculumData !== 'undefined' && curriculumData[currentSubject]) ? curriculumData[currentSubject] : subjectsMap[currentSubject];
+        const subjectName = (subject && subject.name) || subjectsMap[currentSubject]?.name || (currentSubject || '').toUpperCase();
         const overview = document.getElementById('view-overview')?.innerText || '';
         const competencies = Array.from(document.querySelectorAll('#view-competencies .curr-comp-text')).map(el => el.innerText.trim());
         const practices = Array.from(document.querySelectorAll('#view-practices .curr-comp-text')).map(el => el.innerText.trim());
@@ -1576,7 +1580,7 @@
 
             const domain = item.dataset.domain || item.querySelector('.curr-standard-title')?.innerText || 'General Domain';
             lines.push('');
-            lines.push(`[DOMAIN ${domainIndex++}] ${domain.toUpperCase()}`);
+            lines.push(`[DOMAIN ${domainIndex++}] ${(domain || '').toUpperCase()}`);
             lines.push('~'.repeat(Math.min(80, domain.length + 12)));
 
             const descs = item.querySelectorAll('.curr-standard-desc');
@@ -1617,7 +1621,7 @@
         lines.push('');
         lines.push(divider);
         if (resolvedCurr === 'ccss') {
-            lines.push(`Attribution: From the "Common Core State Standards for ${subjectName === 'Mathematics' ? 'MATHEMATICS' : subjectName.toUpperCase()}"`);
+            lines.push(`Attribution: From the "Common Core State Standards for ${subjectName === 'Mathematics' ? 'MATHEMATICS' : (subjectName || '').toUpperCase()}"`);
         }
         lines.push(`Total Standards Exported: ${totalStandardsExported}`);
         lines.push("Generated by Hesten's Learning Platform");
@@ -1716,7 +1720,9 @@
 
         const domain = itemEl?.dataset?.domain || 'General';
         const subjInfo = subjectsMap[currentSubject] || { name: 'Curriculum', color: 'indigo' };
-        const gradeLetter = (document.getElementById('stat-level-code')?.innerText || 'Level A').replace('Level ', '').toLowerCase();
+        const rawStat = document.getElementById('stat-level-code')?.innerText || 'Level A';
+        const gradeLetter = (rawStat.replace(/Level\s*/i, '').trim() || 'A').toLowerCase();
+        const safeGradeUpper = gradeLetter.toUpperCase();
 
         // Header Badges
         const subjBadge = document.getElementById('dossier-subject-badge');
@@ -1727,7 +1733,7 @@
 
         const gradeBadge = document.getElementById('dossier-grade-badge');
         if (gradeBadge) {
-            gradeBadge.innerText = `${currentGrade} • Level ${gradeLetter.toUpperCase()}`;
+            gradeBadge.innerText = `${currentGrade} • Level ${safeGradeUpper}`;
         }
 
         const domainBadge = document.getElementById('dossier-domain-badge');
@@ -1859,7 +1865,7 @@
         const lessonBtn = document.getElementById('dossier-lesson-btn');
         if (lessonBtn) {
             lessonBtn.href = `/levels/${gradeLetter}.php#standard=${encodeURIComponent(code)}`;
-            lessonBtn.innerHTML = `<i class="fas fa-book-open"></i> Go to Level ${gradeLetter.toUpperCase()} Practice`;
+            lessonBtn.innerHTML = `<i class="fas fa-book-open"></i> Go to Level ${safeGradeUpper} Practice`;
         }
 
         const testBtn = document.getElementById('dossier-test-btn');
@@ -1995,7 +2001,7 @@
                 <article class="curr-term-card" id="term-${encodeURIComponent(item.term.toLowerCase().replace(/\\s+/g, '-'))}">
                     <div class="curr-term-header">
                         <h4 class="curr-term-title">${escapeHtml(item.term)}</h4>
-                        <span class="curr-term-letter">${escapeHtml(item.letter || item.term[0].toUpperCase())}</span>
+                        <span class="curr-term-letter">${escapeHtml(item.letter || (item.term && item.term.length > 0 ? item.term[0].toUpperCase() : 'A'))}</span>
                     </div>
                     <div class="curr-term-def">
                         ${item.definition}

@@ -14,6 +14,7 @@
     
     const localData = {
     'math': {
+        'name': 'Mathematics',
         'desc': 'Detailed learning paths, state standards alignment, and core competencies for Mathematics.',
         'color': 'indigo',
         'icon': 'fa-calculator',
@@ -39,6 +40,7 @@
         }
     },
     'ela': {
+        'name': 'Language Arts',
         'desc': 'Literacy development, phonics, and classical literature analysis for every grade level.',
         'color': 'rose',
         'icon': 'fa-book-open',
@@ -49,6 +51,7 @@
                     'overview': '<p>Phonological awareness and alphabet recognition matching Texas pre-elementary standards.</p>',
                     'standards': '<div class="curr-standard-item"><h4 class="curr-standard-title">TEKS PK.III.A</h4><p class="curr-standard-desc">Child demonstrates phonological awareness skills.</p></div>',
                     'competencies': ['Name letters of alphabet', 'Produce rhyming words', 'Identify initial sounds'],
+                    'level': 'A'
                 }
             }
         }
