@@ -432,6 +432,39 @@
     gap: 0.75rem;
   }
 
+  .scratchpad-dictate-btn {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    transition: all 0.2s;
+    background: color-mix(in srgb, var(--color-primary) 10%, transparent);
+    border: 1px solid color-mix(in srgb, var(--color-primary) 25%, transparent);
+    border-radius: var(--radius-md);
+    padding: 0.35rem 0.75rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .scratchpad-dictate-btn:hover {
+    background: color-mix(in srgb, var(--color-primary) 20%, transparent);
+    transform: translateY(-1px);
+  }
+
+  .scratchpad-dictate-btn.is-listening {
+    background: rgba(239, 68, 68, 0.15);
+    border-color: #ef4444;
+    color: #ef4444;
+    animation: dictatePulse 1.5s infinite;
+  }
+
+  @keyframes dictatePulse {
+    0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }
+    70% { box-shadow: 0 0 0 8px rgba(239, 68, 68, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+  }
+
   .scratchpad-clear-btn {
     font-size: 0.875rem;
     font-weight: 700;

@@ -1222,3 +1222,61 @@ body.hide-images .upd-content img {
     color: #ffff00;
     border: 2px solid #ffffff;
 }
+
+/* Companion Document Box */
+.upd-companion-card {
+    background: color-mix(in srgb, var(--color-primary) 8%, transparent);
+    border: 1.5px solid color-mix(in srgb, var(--color-primary) 30%, transparent);
+    border-radius: var(--radius-lg, 0.75rem);
+    padding: 1rem 1.25rem;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    transition: all 0.2s ease;
+}
+
+.upd-companion-card:hover {
+    border-color: var(--color-primary);
+    box-shadow: 0 4px 12px color-mix(in srgb, var(--color-primary) 15%, transparent);
+}
+
+.upd-companion-info {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+}
+
+.upd-companion-icon {
+    font-size: 1.25rem;
+    color: var(--color-primary);
+}
+
+/* Search Term Highlighting */
+.upd-card-item mark {
+    background: #fde047;
+    color: #000000;
+    border-radius: 3px;
+    padding: 0.05rem 0.25rem;
+    font-weight: 700;
+}
+
+[data-theme="high-contrast"] .upd-companion-card,
+.high-contrast .upd-companion-card {
+    background: #000000 !important;
+    border: 2px solid #ffffff !important;
+}
+
+[data-theme="high-contrast"] .upd-companion-icon,
+.high-contrast .upd-companion-icon {
+    color: #ffff00 !important;
+}
+
+[data-theme="high-contrast"] .upd-card-item mark,
+.high-contrast .upd-card-item mark {
+    background: #ffff00 !important;
+    color: #000000 !important;
+}
+

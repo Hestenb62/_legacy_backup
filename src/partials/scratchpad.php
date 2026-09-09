@@ -82,6 +82,9 @@
                 <i class="fas fa-check-circle"></i> Saved locally
             </span>
             <div class="scratchpad-actions">
+                <button type="button" id="scratchpad-dictate-btn" class="scratchpad-dictate-btn" title="Toggle Voice Dictation (Speech-to-Text)" aria-label="Toggle Voice Dictation">
+                    <i class="fas fa-microphone" aria-hidden="true"></i> <span>Dictate</span>
+                </button>
                 <button id="clear-notes-btn" class="scratchpad-clear-btn" aria-label="Clear Notes">
                     <i class="fas fa-trash-alt"></i> Clear All
                 </button>

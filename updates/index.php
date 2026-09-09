@@ -281,6 +281,8 @@ $firstDoc = $docs[0] ?? null;
                     <span>&bull;</span>
                     <span id="viewer-read-time"><i class="far fa-clock"></i> ~4 min read</span>
                     <span>&bull;</span>
+                    <span id="viewer-word-count"><i class="fas fa-file-alt"></i> ~1,000 words</span>
+                    <span>&bull;</span>
                     <span id="viewer-author"><i class="fas fa-user-edit"></i> Antigravity & Hesten</span>
                 </div>
                 <div class="upd-viewer-actions">
@@ -310,6 +312,19 @@ $firstDoc = $docs[0] ?? null;
                 </div>
                 <div class="upd-toc-list" id="viewer-toc-list"></div>
             </nav>
+            <!-- Companion Document Link (Plan <-> Walkthrough) -->
+            <div id="viewer-companion-box" class="upd-companion-card" style="display: none;">
+                <div class="upd-companion-info">
+                    <i class="fas fa-link upd-companion-icon" aria-hidden="true"></i>
+                    <div>
+                        <strong id="viewer-companion-type">Companion Document Available</strong>
+                        <p id="viewer-companion-title" style="margin: 0.15rem 0 0 0; font-size: 0.85rem; color: var(--color-text-muted);"></p>
+                    </div>
+                </div>
+                <button type="button" id="btn-jump-companion" class="upd-btn-action" style="background: var(--color-primary); color: #fff; border: none; font-weight: 700;">
+                    <span>Open Companion</span> &rarr;
+                </button>
+            </div>
         </div>
 
         <!-- Rendered Markdown Body -->
@@ -539,6 +554,9 @@ $firstDoc = $docs[0] ?? null;
         const readEl = document.getElementById('viewer-read-time');
         if (readEl) readEl.innerHTML = `<i class="far fa-clock"></i> ${doc.read_time}`;
 
+        const wordEl = document.getElementById('viewer-word-count');
+        if (wordEl) wordEl.innerHTML = `<i class="fas fa-file-alt"></i> ${doc.word_count ? Number(doc.word_count).toLocaleString() + ' words' : 'Document'}`;
+
         const authorEl = document.getElementById('viewer-author');
         if (authorEl) authorEl.innerHTML = `<i class="fas fa-user-edit"></i> ${doc.author || "Hesten's Learning"}`;
 
@@ -562,6 +580,34 @@ $firstDoc = $docs[0] ?? null;
             if (typeof window.announceA11y === 'function') {
                 window.announceA11y(`Now viewing ${doc.category}: ${doc.title}`);
             }
+        }
+
+        // Detect Companion Document (e.g. -plan.md matching -walkthrough.md)
+        const companionBox = document.getElementById('viewer-companion-box');
+        const companionType = document.getElementById('viewer-companion-type');
+        const companionTitle = document.getElementById('viewer-companion-title');
+        const companionBtn = document.getElementById('btn-jump-companion');
+
+        let companionDoc = null;
+        let companionLabel = '';
+
+        if (doc.id.endsWith('-plan')) {
+            const partnerId = doc.id.replace(/-plan$/, '-walkthrough');
+            companionDoc = updatesDocs.find(d => d.id === partnerId);
+            companionLabel = 'Completed Walkthrough Available';
+        } else if (doc.id.endsWith('-walkthrough')) {
+            const partnerId = doc.id.replace(/-walkthrough$/, '-plan');
+            companionDoc = updatesDocs.find(d => d.id === partnerId);
+            companionLabel = 'Technical Implementation Plan';
+        }
+
+        if (companionBox && companionDoc) {
+            if (companionType) companionType.textContent = companionLabel;
+            if (companionTitle) companionTitle.textContent = `${companionDoc.title} (${companionDoc.date})`;
+            if (companionBtn) companionBtn.onclick = () => selectDocument(companionDoc.id);
+            companionBox.style.display = 'flex';
+        } else if (companionBox) {
+            companionBox.style.display = 'none';
         }
 
         // Render Tags
@@ -646,9 +692,22 @@ $firstDoc = $docs[0] ?? null;
                 matchesSearch = inTitle || inSummary || inTags || inContent;
             }
 
+            const titleNode = card.querySelector('.upd-card-title');
+            const descNode = card.querySelector('.upd-card-desc');
+
             if (matchesCat && matchesSearch) {
                 card.style.display = 'block';
                 visibleCount++;
+
+                if (searchQuery && searchQuery.length >= 2) {
+                    const esc = searchQuery.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+                    const reg = new RegExp(`(${esc})`, 'gi');
+                    if (titleNode) titleNode.innerHTML = doc.title.replace(reg, '<mark>$1</mark>');
+                    if (descNode) descNode.innerHTML = doc.summary.replace(reg, '<mark>$1</mark>');
+                } else {
+                    if (titleNode) titleNode.textContent = doc.title;
+                    if (descNode) descNode.textContent = doc.summary;
+                }
             } else {
                 card.style.display = 'none';
             }

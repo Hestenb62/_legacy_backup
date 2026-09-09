@@ -1272,6 +1272,253 @@
         color: #ffff00 !important;
     }
 
+    /* ====================================================================
+       CLINICAL VISION & COLORBLINDNESS SIMULATION STUDIO
+       ==================================================================== */
+    .vision-sim-wrapper,
+    .karaoke-demo-wrapper,
+    .pwa-storage-wrapper {
+        background: var(--color-bg-surface, #ffffff);
+        border: 1px solid var(--color-border, #e2e8f0);
+        border-radius: 1.5rem;
+        padding: 2rem;
+        margin: 2rem 0;
+        box-shadow: var(--shadow-md);
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .vision-controls-bar {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        background: var(--color-bg-subtle, #f8fafc);
+        border: 1px solid var(--color-border, #e2e8f0);
+        border-radius: 1rem;
+        padding: 1rem 1.25rem;
+    }
+
+    .vision-specimen-box {
+        background: var(--color-bg-surface);
+        border: 2px solid var(--color-border);
+        border-radius: 1rem;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        transition: filter 0.3s ease;
+    }
+
+    .vision-specimen-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        border-bottom: 1px solid var(--color-border);
+        padding-bottom: 0.75rem;
+    }
+
+    .vision-color-spectrum {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        height: 3rem;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        border: 1px solid var(--color-border);
+    }
+
+    .vision-color-spectrum div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: #ffffff;
+        text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+    }
+
+    .vision-specimen-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1rem;
+    }
+
+    .vision-specimen-card {
+        background: var(--color-bg-subtle, #f8fafc);
+        border: 1px solid var(--color-border);
+        border-radius: 0.75rem;
+        padding: 1.25rem;
+    }
+
+    .vision-info-callout {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+        background: color-mix(in srgb, var(--color-primary) 8%, transparent);
+        border: 1px solid color-mix(in srgb, var(--color-primary) 25%, transparent);
+        border-radius: 0.75rem;
+        padding: 1rem;
+        font-size: 0.85rem;
+        line-height: 1.5;
+        color: var(--color-text-main);
+    }
+
+    /* Global viewport filter classes */
+    body.sim-protanopia { filter: url(#protanopia-filter) !important; }
+    body.sim-deuteranopia { filter: url(#deuteranopia-filter) !important; }
+    body.sim-tritanopia { filter: url(#tritanopia-filter) !important; }
+    body.sim-achromatopsia { filter: url(#achromatopsia-filter) !important; }
+    body.sim-cataracts { filter: url(#cataracts-filter) !important; }
+
+    /* ====================================================================
+       KARAOKE SYNCHRONIZED WORD TRACKING
+       ==================================================================== */
+    .karaoke-passage-box {
+        background: var(--color-bg-surface);
+        border: 2px solid var(--color-primary);
+        border-radius: 1rem;
+        padding: 1.75rem;
+        font-size: 1.25rem;
+        line-height: 2;
+    }
+
+    .karaoke-text-stream {
+        margin: 0;
+        color: var(--color-text-main);
+    }
+
+    .karaoke-word {
+        display: inline-block;
+        padding: 0.1rem 0.25rem;
+        border-radius: 0.3rem;
+        transition: all 0.15s ease;
+    }
+
+    .karaoke-word.is-active {
+        background: #fde047;
+        color: #000000 !important;
+        font-weight: 800;
+        transform: scale(1.08);
+        box-shadow: 0 4px 10px rgba(250, 204, 21, 0.4);
+    }
+
+    /* ====================================================================
+       PWA STORAGE & OFFLINE DIAGNOSTICS
+       ==================================================================== */
+    .pwa-storage-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.25rem;
+    }
+
+    .pwa-metric-card {
+        background: var(--color-bg-subtle, #f8fafc);
+        border: 1px solid var(--color-border);
+        border-radius: 1rem;
+        padding: 1.5rem;
+    }
+
+    .pwa-progress-track {
+        height: 0.75rem;
+        background: var(--color-border);
+        border-radius: 9999px;
+        overflow: hidden;
+        margin-top: 0.5rem;
+    }
+
+    .pwa-progress-fill {
+        height: 100%;
+        background: var(--color-primary);
+        border-radius: 9999px;
+        transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Themes Adaptations for Vision, Karaoke & Storage */
+    [data-theme="dark"] .vision-sim-wrapper,
+    [data-theme="dark"] .karaoke-demo-wrapper,
+    [data-theme="dark"] .pwa-storage-wrapper,
+    .dark .vision-sim-wrapper,
+    .dark .karaoke-demo-wrapper,
+    .dark .pwa-storage-wrapper {
+        background: #1e293b;
+        border-color: #334155;
+    }
+    [data-theme="dark"] .vision-controls-bar,
+    [data-theme="dark"] .vision-specimen-card,
+    [data-theme="dark"] .pwa-metric-card,
+    .dark .vision-controls-bar,
+    .dark .vision-specimen-card,
+    .dark .pwa-metric-card {
+        background: #0f172a;
+        border-color: #334155;
+    }
+
+    [data-theme="midnight"] .vision-sim-wrapper,
+    [data-theme="midnight"] .karaoke-demo-wrapper,
+    [data-theme="midnight"] .pwa-storage-wrapper,
+    .midnight .vision-sim-wrapper,
+    .midnight .karaoke-demo-wrapper,
+    .midnight .pwa-storage-wrapper {
+        background: #0f172a;
+        border-color: #1e293b;
+    }
+    [data-theme="midnight"] .vision-controls-bar,
+    [data-theme="midnight"] .vision-specimen-card,
+    [data-theme="midnight"] .pwa-metric-card,
+    .midnight .vision-controls-bar,
+    .midnight .vision-specimen-card,
+    .midnight .pwa-metric-card {
+        background: #020617;
+        border-color: #1e293b;
+    }
+
+    [data-theme="sepia"] .vision-sim-wrapper,
+    [data-theme="sepia"] .karaoke-demo-wrapper,
+    [data-theme="sepia"] .pwa-storage-wrapper,
+    .sepia .vision-sim-wrapper,
+    .sepia .karaoke-demo-wrapper,
+    .sepia .pwa-storage-wrapper {
+        background: #fbf0d9;
+        border-color: #e4d5b7;
+    }
+    [data-theme="sepia"] .vision-controls-bar,
+    [data-theme="sepia"] .vision-specimen-card,
+    [data-theme="sepia"] .pwa-metric-card,
+    .sepia .vision-controls-bar,
+    .sepia .vision-specimen-card,
+    .sepia .pwa-metric-card {
+        background: #f4e4c1;
+        border-color: #ded0b0;
+    }
+
+    [data-theme="high-contrast"] .vision-sim-wrapper,
+    [data-theme="high-contrast"] .karaoke-demo-wrapper,
+    [data-theme="high-contrast"] .pwa-storage-wrapper,
+    .high-contrast .vision-sim-wrapper,
+    .high-contrast .karaoke-demo-wrapper,
+    .high-contrast .pwa-storage-wrapper {
+        background: #000000 !important;
+        border: 2px solid #ffffff !important;
+    }
+    [data-theme="high-contrast"] .vision-controls-bar,
+    [data-theme="high-contrast"] .vision-specimen-card,
+    [data-theme="high-contrast"] .pwa-metric-card,
+    .high-contrast .vision-controls-bar,
+    .high-contrast .vision-specimen-card,
+    .high-contrast .pwa-metric-card {
+        background: #000000 !important;
+        border: 1px solid #ffffff !important;
+    }
+    [data-theme="high-contrast"] .karaoke-word.is-active,
+    .high-contrast .karaoke-word.is-active {
+        background: #ffff00 !important;
+        color: #000000 !important;
+        border: 1px solid #ffffff !important;
+    }
+
     @media (prefers-reduced-motion: reduce) {
         .a11y-action-chip,
         .a11y-feature-card,

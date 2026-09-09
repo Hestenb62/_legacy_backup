@@ -287,6 +287,39 @@ include '../src/header.php';
     </div>
 
     <!-- ==================================================================== -->
+    <!-- KARAOKE SYNCHRONIZED WORD-BY-WORD READ-ALOUD DEMONSTRATION -->
+    <!-- ==================================================================== -->
+    <section class="karaoke-demo-wrapper" aria-labelledby="karaoke-heading">
+        <div class="benchmark-header-row">
+            <div>
+                <span class="benchmark-tag" style="background: rgba(99, 102, 241, 0.12); color: #6366f1;"><i class="fas fa-volume-up" aria-hidden="true"></i> Phonemic Fluency &amp; Audio-Visual Decoding</span>
+                <h3 id="karaoke-heading" style="font-size: 1.4rem; font-weight: 800; margin: 0.5rem 0 0.25rem 0;">Synchronized Word-by-Word "Karaoke" Read-Aloud</h3>
+                <p style="color: var(--color-text-muted); font-size: 0.95rem; margin: 0;">Multi-sensory bimodal reading pairs synthesized speech with real-time word-level optical tracking, strengthening vocabulary acquisition and dyslexic comprehension.</p>
+            </div>
+            <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
+                <label for="karaoke-speed-select" style="font-size: 0.85rem; font-weight: 700;">Rate:</label>
+                <select id="karaoke-speed-select" class="benchmark-mode-select" style="padding: 0.35rem 0.6rem;">
+                    <option value="0.75">0.75x (Supported)</option>
+                    <option value="1.0" selected>1.0x (Standard)</option>
+                    <option value="1.25">1.25x (Accelerated)</option>
+                </select>
+                <button type="button" id="karaoke-play-btn" class="a11y-action-chip" style="background: var(--color-primary); color: #fff; font-weight: 700;">
+                    <i class="fas fa-play" aria-hidden="true"></i> <span>Listen &amp; Track</span>
+                </button>
+                <button type="button" id="karaoke-stop-btn" class="a11y-action-chip" style="display: none;">
+                    <i class="fas fa-stop" aria-hidden="true"></i> <span>Stop</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="karaoke-passage-box" id="karaoke-passage-box" aria-live="polite">
+            <p id="karaoke-text-container" class="karaoke-text-stream">
+                Effective reading instruction combines auditory sound patterns with visual word recognition. When each word illuminates synchronously as spoken, cognitive processing barriers dissolve, empowering struggling readers to build automatic word decoding and fluid comprehension.
+            </p>
+        </div>
+    </section>
+
+    <!-- ==================================================================== -->
     <!-- SECTION 2: ATTENTION & COGNITIVE SUPPORTS (ADHD & FOCUS) -->
     <!-- ==================================================================== -->
     <div class="a11y-section-header">
@@ -443,6 +476,118 @@ include '../src/header.php';
             </div>
         </article>
     </div>
+
+    <!-- ==================================================================== -->
+    <!-- CLINICAL VISION & COLORBLINDNESS SIMULATION STUDIO -->
+    <!-- ==================================================================== -->
+    <section class="vision-sim-wrapper" aria-labelledby="vision-sim-heading">
+        <!-- Embedded SVG Color Matrix Filter Definitions -->
+        <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+                <!-- Protanopia (Red-Blind / Weak L-cones) -->
+                <filter id="protanopia-filter">
+                    <feColorMatrix type="matrix" values="0.567, 0.433, 0, 0, 0   0.558, 0.442, 0, 0, 0   0, 0.242, 0.758, 0, 0   0, 0, 0, 1, 0" />
+                </filter>
+                <!-- Deuteranopia (Green-Blind / Weak M-cones) -->
+                <filter id="deuteranopia-filter">
+                    <feColorMatrix type="matrix" values="0.625, 0.375, 0, 0, 0   0.7, 0.3, 0, 0, 0   0, 0.3, 0.7, 0, 0   0, 0, 0, 1, 0" />
+                </filter>
+                <!-- Tritanopia (Blue-Blind / Weak S-cones) -->
+                <filter id="tritanopia-filter">
+                    <feColorMatrix type="matrix" values="0.95, 0.05, 0, 0, 0   0, 0.433, 0.567, 0, 0   0, 0.475, 0.525, 0, 0   0, 0, 0, 1, 0" />
+                </filter>
+                <!-- Achromatopsia (Monochromacy / Zero Color) -->
+                <filter id="achromatopsia-filter">
+                    <feColorMatrix type="matrix" values="0.299, 0.587, 0.114, 0, 0   0.299, 0.587, 0.114, 0, 0   0.299, 0.587, 0.114, 0, 0   0, 0, 0, 1, 0" />
+                </filter>
+                <!-- Cataracts (Diffused Blur + Severe Contrast Attenuation) -->
+                <filter id="cataracts-filter">
+                    <feGaussianBlur stdDeviation="1.8" />
+                    <feColorMatrix type="matrix" values="0.75, 0, 0, 0, 0.1   0, 0.75, 0, 0, 0.1   0, 0, 0.75, 0, 0.1   0, 0, 0, 1, 0" />
+                </filter>
+            </defs>
+        </svg>
+
+        <div class="benchmark-header-row">
+            <div>
+                <span class="benchmark-tag" style="background: rgba(234, 88, 12, 0.12); color: #ea580c;"><i class="fas fa-eye" aria-hidden="true"></i> Clinical Simulation &amp; Audit</span>
+                <h3 id="vision-sim-heading" style="font-size: 1.4rem; font-weight: 800; margin: 0.5rem 0 0.25rem 0;">Clinical Vision &amp; Colorblindness Simulation Studio</h3>
+                <p style="color: var(--color-text-muted); font-size: 0.95rem; margin: 0;">Experience instructional materials through the visual perception of students with color vision deficiency, cataracts, or contrast impairment.</p>
+            </div>
+        </div>
+
+        <div class="vision-controls-bar">
+            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                <label for="vision-sim-select" style="font-weight: 700; font-size: 0.875rem;"><i class="fas fa-glasses" aria-hidden="true"></i> Pathology / Simulation:</label>
+                <select id="vision-sim-select" class="benchmark-mode-select" aria-label="Select Vision Simulation Condition">
+                    <option value="none">Normal Trichromatic Vision (Standard)</option>
+                    <option value="protanopia">Protanopia (Red-Blind / L-Cone Deficiency)</option>
+                    <option value="deuteranopia">Deuteranopia (Green-Blind / M-Cone Deficiency)</option>
+                    <option value="tritanopia">Tritanopia (Blue-Blind / S-Cone Deficiency)</option>
+                    <option value="achromatopsia">Achromatopsia (Monochromacy / Zero Color)</option>
+                    <option value="cataracts">Cataracts (Diffused Clouding &amp; Contrast Loss)</option>
+                </select>
+            </div>
+
+            <div style="display: flex; align-items: center; gap: 0.75rem; margin-left: auto; flex-wrap: wrap;">
+                <button type="button" id="btn-toggle-site-sim" class="a11y-action-chip" title="Simulate this condition across the entire website">
+                    <i class="fas fa-globe" aria-hidden="true"></i> <span>Audit Whole Site</span>
+                </button>
+                <button type="button" id="btn-reset-vision-sim" class="a11y-action-chip">
+                    <i class="fas fa-undo" aria-hidden="true"></i> <span>Reset Vision</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Visual Specimen Box for Testing Color & Contrast -->
+        <div class="vision-specimen-box" id="vision-specimen-box">
+            <div class="vision-specimen-header">
+                <div>
+                    <h4 style="margin: 0; font-size: 1.05rem; font-weight: 700;">Diagnostic Curriculum Specimen</h4>
+                    <span style="font-size: 0.8rem; color: var(--color-text-muted);">Active Filter: <strong id="vision-active-label" style="color: var(--color-primary);">Normal Trichromatic</strong></span>
+                </div>
+                <span class="benchmark-tag" style="background: var(--color-bg-subtle); border: 1px solid var(--color-border); font-size: 0.75rem;">Multi-Color Calibration</span>
+            </div>
+
+            <!-- Color Bar Spectrum Test -->
+            <div class="vision-color-spectrum" aria-label="Color spectrum calibration bar">
+                <div style="background: #ef4444;" title="Red (#ef4444)"><span>Red</span></div>
+                <div style="background: #f97316;" title="Orange (#f97316)"><span>Orange</span></div>
+                <div style="background: #eab308;" title="Yellow (#eab308)"><span>Yellow</span></div>
+                <div style="background: #22c55e;" title="Green (#22c55e)"><span>Green</span></div>
+                <div style="background: #06b6d4;" title="Cyan (#06b6d4)"><span>Cyan</span></div>
+                <div style="background: #3b82f6;" title="Blue (#3b82f6)"><span>Blue</span></div>
+                <div style="background: #a855f7;" title="Purple (#a855f7)"><span>Purple</span></div>
+                <div style="background: #ec4899;" title="Pink (#ec4899)"><span>Pink</span></div>
+            </div>
+
+            <!-- Complex Specimen Grid: Text, Math, Buttons & Badges -->
+            <div class="vision-specimen-grid">
+                <div class="vision-specimen-card">
+                    <h5 style="margin: 0 0 0.5rem 0; font-size: 0.9rem; color: #3b82f6;"><i class="fas fa-calculator" aria-hidden="true"></i> Mathematics &amp; Algebra</h5>
+                    <p style="font-size: 0.85rem; line-height: 1.6; margin: 0 0 0.5rem 0;">Solve for $x$ where $f(x) = 2x^2 - 4x + 7$. Identify the vertex $(h, k)$ on the Cartesian coordinate plane.</p>
+                    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                        <span class="benchmark-tag" style="background: rgba(34, 197, 94, 0.15); color: #16a34a;">Correct (+10 pts)</span>
+                        <span class="benchmark-tag" style="background: rgba(239, 68, 68, 0.15); color: #dc2626;">Error Alert</span>
+                    </div>
+                </div>
+
+                <div class="vision-specimen-card">
+                    <h5 style="margin: 0 0 0.5rem 0; font-size: 0.9rem; color: #8b5cf6;"><i class="fas fa-atom" aria-hidden="true"></i> Science Data Plot</h5>
+                    <p style="font-size: 0.85rem; line-height: 1.6; margin: 0 0 0.5rem 0;">Examine cellular respiration rates across varying ambient oxygen percentages. Blue curves denote aerobic, red curves denote anaerobic.</p>
+                    <div style="display: flex; gap: 0.5rem;">
+                        <button type="button" class="a11y-action-chip" style="background: #3b82f6; color: #fff; border: none; font-size: 0.75rem;">Aerobic (Blue)</button>
+                        <button type="button" class="a11y-action-chip" style="background: #ef4444; color: #fff; border: none; font-size: 0.75rem;">Anaerobic (Red)</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vision-info-callout" id="vision-info-callout">
+                <i class="fas fa-info-circle" style="color: var(--color-primary); flex-shrink: 0;" aria-hidden="true"></i>
+                <span id="vision-callout-text">Under normal trichromatic vision, all spectral hues and alerts are readily distinguished. Notice how red and green converge toward olive-brown under Protanopia and Deuteranopia, illustrating why WCAG 2.1 Principle 1.4.1 mandates never relying on color alone.</span>
+            </div>
+        </div>
+    </section>
 
     <!-- ==================================================================== -->
     <!-- SECTION 4: KEYBOARD NAVIGATION & SCREEN READERS -->
@@ -614,6 +759,57 @@ include '../src/header.php';
                 <span>Profile ID: HL-A11Y-CONF</span>
             </div>
         </div>
+    </section>
+
+    <!-- ==================================================================== -->
+    <!-- PWA STORAGE & OFFLINE CACHE MANAGEMENT DASHBOARD -->
+    <!-- ==================================================================== -->
+    <section class="pwa-storage-wrapper" id="pwa-storage-section" aria-labelledby="pwa-storage-heading">
+        <div class="benchmark-header-row">
+            <div>
+                <span class="benchmark-tag" style="background: rgba(16, 185, 129, 0.12); color: var(--color-success, #10b981);"><i class="fas fa-database" aria-hidden="true"></i> Offline Diagnostics &amp; Resilience</span>
+                <h3 id="pwa-storage-heading" style="font-size: 1.4rem; font-weight: 800; margin: 0.5rem 0 0.25rem 0;">PWA Offline Cache &amp; Storage Management</h3>
+                <p style="color: var(--color-text-muted); font-size: 0.95rem; margin: 0;">Inspect local browser storage quota, active Cache Storage inventories, and pre-cache entire curriculum course packs for disconnected field use.</p>
+            </div>
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                <button type="button" class="a11y-action-chip" id="btn-precache-coursepack" style="background: var(--color-primary); color: #fff; font-weight: 700;">
+                    <i class="fas fa-cloud-download-alt" aria-hidden="true"></i> <span>Cache Complete Course Pack</span>
+                </button>
+                <button type="button" class="a11y-action-chip" id="btn-purge-cache" style="color: #ef4444; border-color: rgba(239, 68, 68, 0.3);">
+                    <i class="fas fa-trash" aria-hidden="true"></i> <span>Purge Cache</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="pwa-storage-grid">
+            <!-- Quota Meter Card -->
+            <div class="pwa-metric-card">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem;">
+                    <span style="font-size: 0.85rem; font-weight: 700; color: var(--color-text-muted);">Indexed Storage Quota</span>
+                    <span id="pwa-storage-val" style="font-size: 1.25rem; font-weight: 800; color: var(--color-primary);">Calculating...</span>
+                </div>
+                <div class="pwa-progress-track">
+                    <div id="pwa-progress-bar" class="pwa-progress-fill" style="width: 0%;"></div>
+                </div>
+                <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--color-text-muted); margin-top: 0.5rem;">
+                    <span id="pwa-usage-label">0 MB used</span>
+                    <span id="pwa-quota-label">Quota: Detecting</span>
+                </div>
+            </div>
+
+            <!-- Active Caches Inventory -->
+            <div class="pwa-metric-card">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem;">
+                    <span style="font-size: 0.85rem; font-weight: 700; color: var(--color-text-muted);">Cache Storage Keys</span>
+                    <span id="pwa-cache-count" class="benchmark-tag" style="font-size: 0.75rem;">0 active caches</span>
+                </div>
+                <ul class="iep-list" id="pwa-caches-list" style="margin: 0; padding-left: 1.25rem; font-size: 0.85rem;">
+                    <li>Scanning service worker caches...</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="pwa-cache-status-msg" style="display: none; font-size: 0.85rem; font-weight: 600; padding: 0.75rem 1rem; border-radius: 0.5rem; background: var(--color-bg-subtle); border: 1px solid var(--color-border);" aria-live="polite"></div>
     </section>
 
     <!-- ==================================================================== -->
@@ -1503,9 +1699,361 @@ include '../src/header.php';
     // Initial render
     renderIepProfile();
 })();
+
+// ====================================================================
+// CLINICAL VISION SIMULATION CONTROLLER
+// ====================================================================
+(function() {
+    'use strict';
+    const simSelect = document.getElementById('vision-sim-select');
+    const specimen = document.getElementById('vision-specimen-box');
+    const label = document.getElementById('vision-active-label');
+    const callout = document.getElementById('vision-callout-text');
+    const toggleSiteBtn = document.getElementById('btn-toggle-site-sim');
+    const resetBtn = document.getElementById('btn-reset-vision-sim');
+
+    let siteAuditActive = false;
+
+    const SIM_DESCRIPTIONS = {
+        'none': {
+            name: 'Normal Trichromatic Vision',
+            filter: '',
+            bodyClass: '',
+            text: 'Under normal trichromatic vision, all spectral hues and alerts are readily distinguished. Notice how red and green converge toward olive-brown under Protanopia and Deuteranopia, illustrating why WCAG 2.1 Principle 1.4.1 mandates never relying on color alone.'
+        },
+        'protanopia': {
+            name: 'Protanopia (Red-Blind)',
+            filter: 'url(#protanopia-filter)',
+            bodyClass: 'sim-protanopia',
+            text: 'Protanopia is caused by the complete absence of red-sensitive L-cones. Pure reds appear dark or black, while orange, yellow, and green converge into yellow-brown shades. Critical red error badges appear indistinct without secondary shape or icon cues.'
+        },
+        'deuteranopia': {
+            name: 'Deuteranopia (Green-Blind)',
+            filter: 'url(#deuteranopia-filter)',
+            bodyClass: 'sim-deuteranopia',
+            text: 'Deuteranopia results from missing green-sensitive M-cones (affecting ~6% of males). Red and green hues cannot be distinguished by wavelength. Notice how both aerobic (blue) and anaerobic (red) curves in charts rely on labeled axes and text legends for clarity.'
+        },
+        'tritanopia': {
+            name: 'Tritanopia (Blue-Blind)',
+            filter: 'url(#tritanopia-filter)',
+            bodyClass: 'sim-tritanopia',
+            text: 'Tritanopia is a rare autosomal condition affecting blue-sensitive S-cones. Blue appears greenish and yellow appears violet or light grey. Yellow warning banners become muted, emphasizing the requirement for high-contrast border definition.'
+        },
+        'achromatopsia': {
+            name: 'Achromatopsia (Monochromacy)',
+            filter: 'url(#achromatopsia-filter)',
+            bodyClass: 'sim-achromatopsia',
+            text: 'Achromatopsia is the total absence of cone photoreceptor function, leaving the learner entirely dependent on rods. Visual acuity is limited and all information is perceived strictly through shades of grey and luminance contrast.'
+        },
+        'cataracts': {
+            name: 'Cataracts (Clouding & Blur)',
+            filter: 'url(#cataracts-filter)',
+            bodyClass: 'sim-cataracts',
+            text: 'Cataracts cause intraocular lens clouding, resulting in severe light scattering, decreased contrast sensitivity, and generalized blurring. High-contrast typography and anti-glare overlays are essential accommodations.'
+        }
+    };
+
+    function applySimulation() {
+        if (!simSelect || !specimen) return;
+        const key = simSelect.value;
+        const config = SIM_DESCRIPTIONS[key] || SIM_DESCRIPTIONS['none'];
+
+        specimen.style.filter = config.filter;
+        if (label) label.textContent = config.name;
+        if (callout) callout.textContent = config.text;
+
+        document.body.classList.remove('sim-protanopia', 'sim-deuteranopia', 'sim-tritanopia', 'sim-achromatopsia', 'sim-cataracts');
+        if (siteAuditActive && config.bodyClass) {
+            document.body.classList.add(config.bodyClass);
+        }
+
+        if (typeof window.announceA11y === 'function') {
+            window.announceA11y('Vision simulation updated to ' + config.name);
+        }
+    }
+
+    if (simSelect) {
+        simSelect.addEventListener('change', applySimulation);
+    }
+
+    if (toggleSiteBtn) {
+        toggleSiteBtn.addEventListener('click', function() {
+            siteAuditActive = !siteAuditActive;
+            if (siteAuditActive) {
+                toggleSiteBtn.style.background = '#ea580c';
+                toggleSiteBtn.style.color = '#ffffff';
+                toggleSiteBtn.innerHTML = '<i class="fas fa-times" aria-hidden="true"></i> <span>Stop Site Audit</span>';
+            } else {
+                toggleSiteBtn.style.background = '';
+                toggleSiteBtn.style.color = '';
+                toggleSiteBtn.innerHTML = '<i class="fas fa-globe" aria-hidden="true"></i> <span>Audit Whole Site</span>';
+            }
+            applySimulation();
+        });
+    }
+
+    if (resetBtn) {
+        resetBtn.addEventListener('click', function() {
+            if (simSelect) simSelect.value = 'none';
+            siteAuditActive = false;
+            if (toggleSiteBtn) {
+                toggleSiteBtn.style.background = '';
+                toggleSiteBtn.style.color = '';
+                toggleSiteBtn.innerHTML = '<i class="fas fa-globe" aria-hidden="true"></i> <span>Audit Whole Site</span>';
+            }
+            applySimulation();
+        });
+    }
+})();
+
+// ====================================================================
+// KARAOKE SYNCHRONIZED READ-ALOUD CONTROLLER
+// ====================================================================
+(function() {
+    'use strict';
+    const playBtn = document.getElementById('karaoke-play-btn');
+    const stopBtn = document.getElementById('karaoke-stop-btn');
+    const rateSelect = document.getElementById('karaoke-speed-select');
+    const textContainer = document.getElementById('karaoke-text-container');
+
+    if (!playBtn || !textContainer) return;
+
+    const rawPassage = "Effective reading instruction combines auditory sound patterns with visual word recognition. When each word illuminates synchronously as spoken, cognitive processing barriers dissolve, empowering struggling readers to build automatic word decoding and fluid comprehension.";
+    
+    const tokens = rawPassage.split(/(\s+)/);
+    let wordIndex = 0;
+    textContainer.innerHTML = '';
+    const wordSpans = [];
+
+    tokens.forEach(token => {
+        if (/^\s+$/.test(token)) {
+            textContainer.appendChild(document.createTextNode(token));
+        } else {
+            const span = document.createElement('span');
+            span.className = 'karaoke-word';
+            span.dataset.idx = wordIndex++;
+            span.textContent = token;
+            textContainer.appendChild(span);
+            wordSpans.push(span);
+        }
+    });
+
+    let isPlaying = false;
+    let fallbackTimer = null;
+
+    function resetHighlights() {
+        wordSpans.forEach(s => s.classList.remove('is-active'));
+    }
+
+    function stopKaraoke() {
+        if ('speechSynthesis' in window) {
+            window.speechSynthesis.cancel();
+        }
+        clearInterval(fallbackTimer);
+        resetHighlights();
+        isPlaying = false;
+        playBtn.style.display = 'inline-flex';
+        stopBtn.style.display = 'none';
+    }
+
+    playBtn.addEventListener('click', function() {
+        if (!('speechSynthesis' in window)) {
+            alert('Speech Synthesis is not supported in this browser.');
+            return;
+        }
+
+        stopKaraoke();
+        isPlaying = true;
+        playBtn.style.display = 'none';
+        stopBtn.style.display = 'inline-flex';
+
+        const utterance = new SpeechSynthesisUtterance(rawPassage);
+        utterance.rate = parseFloat(rateSelect?.value || '1.0');
+        utterance.pitch = 1.0;
+
+        let boundaryFired = false;
+
+        utterance.onboundary = function(e) {
+            if (e.name === 'word') {
+                boundaryFired = true;
+                const textUpToChar = rawPassage.slice(0, e.charIndex);
+                const wordsBefore = (textUpToChar.match(/\S+/g) || []).length;
+                if (wordsBefore < wordSpans.length) {
+                    resetHighlights();
+                    wordSpans[wordsBefore].classList.add('is-active');
+                }
+            }
+        };
+
+        utterance.onend = function() {
+            stopKaraoke();
+            if (typeof window.announceA11y === 'function') {
+                window.announceA11y('Karaoke read-aloud completed.');
+            }
+        };
+
+        utterance.onerror = function() {
+            stopKaraoke();
+        };
+
+        window.speechSynthesis.speak(utterance);
+
+        setTimeout(function() {
+            if (isPlaying && !boundaryFired) {
+                let currentFallback = 0;
+                const msPerWord = (60000 / (150 * utterance.rate));
+                fallbackTimer = setInterval(function() {
+                    if (currentFallback < wordSpans.length) {
+                        resetHighlights();
+                        wordSpans[currentFallback].classList.add('is-active');
+                        currentFallback++;
+                    } else {
+                        clearInterval(fallbackTimer);
+                    }
+                }, msPerWord);
+            }
+        }, 500);
+
+        if (typeof window.announceA11y === 'function') {
+            window.announceA11y('Karaoke tracking started. Words lighting up synchronously.');
+        }
+    });
+
+    if (stopBtn) {
+        stopBtn.addEventListener('click', stopKaraoke);
+    }
+})();
+
+// ====================================================================
+// PWA STORAGE & OFFLINE CACHE CONTROLLER
+// ====================================================================
+(function() {
+    'use strict';
+    const storageVal = document.getElementById('pwa-storage-val');
+    const progressBar = document.getElementById('pwa-progress-bar');
+    const usageLabel = document.getElementById('pwa-usage-label');
+    const quotaLabel = document.getElementById('pwa-quota-label');
+    const cachesList = document.getElementById('pwa-caches-list');
+    const cacheCount = document.getElementById('pwa-cache-count');
+    const precacheBtn = document.getElementById('btn-precache-coursepack');
+    const purgeBtn = document.getElementById('btn-purge-cache');
+    const statusMsg = document.getElementById('pwa-cache-status-msg');
+
+    async function updateStorageStats() {
+        if ('storage' in navigator && 'estimate' in navigator.storage) {
+            try {
+                const estimate = await navigator.storage.estimate();
+                const usageMB = ((estimate.usage || 0) / (1024 * 1024)).toFixed(1);
+                const quotaGB = ((estimate.quota || 0) / (1024 * 1024 * 1024)).toFixed(1);
+                const pct = estimate.quota ? Math.max(0.5, Math.min(100, (estimate.usage / estimate.quota) * 100)).toFixed(1) : 0;
+
+                if (storageVal) storageVal.textContent = usageMB + ' MB';
+                if (usageLabel) usageLabel.textContent = usageMB + ' MB indexed (' + pct + '%)';
+                if (quotaLabel) quotaLabel.textContent = 'Quota: ' + quotaGB + ' GB';
+                if (progressBar) progressBar.style.width = pct + '%';
+            } catch(e) {
+                if (storageVal) storageVal.textContent = 'Unavailable';
+            }
+        }
+
+        if ('caches' in window) {
+            try {
+                const keys = await window.caches.keys();
+                if (cacheCount) cacheCount.textContent = keys.length + ' active cache' + (keys.length === 1 ? '' : 's');
+                if (cachesList) {
+                    if (keys.length === 0) {
+                        cachesList.innerHTML = '<li>No caches currently stored.</li>';
+                    } else {
+                        cachesList.innerHTML = '';
+                        for (const k of keys) {
+                            const c = await window.caches.open(k);
+                            const reqs = await c.keys();
+                            const li = document.createElement('li');
+                            li.innerHTML = '<strong>' + k + ':</strong> ' + reqs.length + ' assets pre-cached';
+                            cachesList.appendChild(li);
+                        }
+                    }
+                }
+            } catch(e) {
+                if (cachesList) cachesList.innerHTML = '<li>Error loading cache inventory.</li>';
+            }
+        }
+    }
+
+    if (precacheBtn) {
+        precacheBtn.addEventListener('click', async function() {
+            precacheBtn.disabled = true;
+            precacheBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> <span>Caching Course Pack...</span>';
+            const coursePackUrls = [
+                '/',
+                '/pages/accessibility.php',
+                '/updates/index.php',
+                '/offline.php',
+                '/assets/css/global-components.css',
+                '/assets/js/index-main.js',
+                '/assets/texts/accessability-wcag-2-1-aa.md',
+                '/assets/texts/accessability-section-508.md'
+            ];
+
+            try {
+                const cache = await window.caches.open('hestens-learning-coursepack');
+                let count = 0;
+                for (const url of coursePackUrls) {
+                    try {
+                        await cache.add(url);
+                        count++;
+                    } catch(err) {}
+                }
+
+                if (statusMsg) {
+                    statusMsg.style.display = 'block';
+                    statusMsg.style.color = '#10b981';
+                    statusMsg.innerHTML = '<i class="fas fa-check-circle"></i> Complete Course Pack successfully cached (' + count + ' resources)! The platform is 100% offline-ready.';
+                }
+                if (typeof window.announceA11y === 'function') {
+                    window.announceA11y('Complete Course Pack cached for offline access.');
+                }
+                updateStorageStats();
+            } catch(e) {
+                if (statusMsg) {
+                    statusMsg.style.display = 'block';
+                    statusMsg.style.color = '#ef4444';
+                    statusMsg.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Caching failed: ' + e.message;
+                }
+            } finally {
+                precacheBtn.disabled = false;
+                precacheBtn.innerHTML = '<i class="fas fa-cloud-download-alt"></i> <span>Cache Complete Course Pack</span>';
+            }
+        });
+    }
+
+    if (purgeBtn) {
+        purgeBtn.addEventListener('click', async function() {
+            if (!confirm('Purge cached assets? Your saved notes and preferences will remain intact.')) return;
+            try {
+                const keys = await window.caches.keys();
+                for (const k of keys) {
+                    if (k.includes('coursepack')) {
+                        await window.caches.delete(k);
+                    }
+                }
+                if (statusMsg) {
+                    statusMsg.style.display = 'block';
+                    statusMsg.style.color = '#3b82f6';
+                    statusMsg.innerHTML = '<i class="fas fa-info-circle"></i> Transient caches purged.';
+                }
+                updateStorageStats();
+            } catch(e) {}
+        });
+    }
+
+    // Initial query
+    updateStorageStats();
+})();
 </script>
 
 <?php
 include '../src/footer.php';
 ?>
+
 

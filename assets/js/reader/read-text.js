@@ -139,6 +139,15 @@ function initTextToSpeech(bookContent) {
         utterance.rate = currentRate;
         if (preferredVoice) utterance.voice = preferredVoice;
 
+        utterance.onboundary = (event) => {
+            if (event.name === 'word' && targetP) {
+                const charIdx = event.charIndex;
+                const sentenceText = sentences[currentIdx];
+                const wordsBefore = (sentenceText.slice(0, charIdx).match(/\S+/g) || []).length;
+                targetP.setAttribute('data-word-idx', wordsBefore);
+            }
+        };
+
         utterance.onend = () => {
             if (isSpeaking && !isPaused) {
                 currentIdx++;

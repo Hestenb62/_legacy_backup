@@ -704,6 +704,107 @@ document.addEventListener('DOMContentLoaded', () => {
             };
         }
 
+        // Voice Dictation (Speech-to-Text) Controller
+        const dictateBtn = document.getElementById('scratchpad-dictate-btn');
+        let recognition = null;
+        let isDictating = false;
+        const SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+        if (dictateBtn) {
+            if (!SpeechRec) {
+                dictateBtn.title = "Voice dictation is not supported in this browser.";
+                dictateBtn.style.opacity = "0.6";
+                dictateBtn.onclick = () => {
+                    alert("Speech recognition is not supported in this browser. Please use Chrome, Edge, or Safari.");
+                };
+            } else {
+                recognition = new SpeechRec();
+                recognition.continuous = true;
+                recognition.interimResults = true;
+                recognition.lang = 'en-US';
+
+                function stopDictation() {
+                    isDictating = false;
+                    dictateBtn.classList.remove('is-listening');
+                    dictateBtn.innerHTML = '<i class="fas fa-microphone" aria-hidden="true"></i> <span>Dictate</span>';
+                    if (scratchpadStatus) {
+                        scratchpadStatus.innerHTML = '<i class="fas fa-check-circle"></i> Saved locally';
+                        scratchpadStatus.style.color = 'var(--color-success)';
+                    }
+                    if (typeof window.announceA11y === 'function') {
+                        window.announceA11y('Voice dictation stopped.');
+                    }
+                }
+
+                recognition.onstart = () => {
+                    isDictating = true;
+                    dictateBtn.classList.add('is-listening');
+                    dictateBtn.innerHTML = '<i class="fas fa-circle" style="color: #ef4444;" aria-hidden="true"></i> <span>Listening...</span>';
+                    if (scratchpadStatus) {
+                        scratchpadStatus.innerHTML = '<i class="fas fa-microphone"></i> Dictation active...';
+                        scratchpadStatus.style.color = 'var(--color-primary)';
+                    }
+                    if (typeof window.announceA11y === 'function') {
+                        window.announceA11y('Voice dictation started. Speak into your microphone.');
+                    }
+                };
+
+                recognition.onresult = (event) => {
+                    let finalTranscript = '';
+                    for (let i = event.resultIndex; i < event.results.length; ++i) {
+                        if (event.results[i].isFinal) {
+                            finalTranscript += event.results[i][0].transcript;
+                        }
+                    }
+
+                    if (finalTranscript) {
+                        let text = finalTranscript.trim();
+                        if (text.toLowerCase() === 'new line' || text.toLowerCase() === 'newline') {
+                            n.value += '\n';
+                        } else if (text.toLowerCase() === 'clear notes' || text.toLowerCase() === 'clear all') {
+                            n.value = '';
+                        } else {
+                            const needsSpace = n.value.length > 0 && !n.value.endsWith(' ') && !n.value.endsWith('\n');
+                            n.value += (needsSpace ? ' ' : '') + text;
+                        }
+                        n.dispatchEvent(new Event('input'));
+                        n.scrollTop = n.scrollHeight;
+                    }
+                };
+
+                recognition.onerror = (event) => {
+                    console.warn('SpeechRecognition error:', event.error);
+                    stopDictation();
+                    if (scratchpadStatus) {
+                        scratchpadStatus.innerHTML = '<i class="fas fa-exclamation-circle"></i> Mic: ' + event.error;
+                        scratchpadStatus.style.color = '#ef4444';
+                    }
+                };
+
+                recognition.onend = () => {
+                    if (isDictating) {
+                        try { recognition.start(); } catch(e) { stopDictation(); }
+                    } else {
+                        stopDictation();
+                    }
+                };
+
+                dictateBtn.onclick = () => {
+                    if (isDictating) {
+                        isDictating = false;
+                        recognition.stop();
+                        stopDictation();
+                    } else {
+                        try {
+                            recognition.start();
+                        } catch(e) {
+                            console.error(e);
+                        }
+                    }
+                };
+            }
+        }
+
         // Backdrop Close
         if (scratchpadBackdrop) {
             scratchpadBackdrop.onclick = () => {
