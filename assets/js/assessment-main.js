@@ -555,6 +555,54 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  // Untimed / Low-Anxiety Practice Mode
+  const untimedBtn = document.getElementById("untimed-mode-btn");
+  const untimedLabel = document.getElementById("untimed-mode-label");
+  const timerWrap = document.getElementById("session-timer-wrap");
+
+  try {
+    window.isUntimedAssessment = localStorage.getItem("hl_untimed_assessment") === "true";
+  } catch (e) {
+    window.isUntimedAssessment = false;
+  }
+
+  function renderUntimedState() {
+    if (!untimedBtn) return;
+    if (window.isUntimedAssessment) {
+      untimedBtn.style.backgroundColor = "color-mix(in srgb, var(--color-success, #10b981) 18%, transparent)";
+      untimedBtn.style.borderColor = "var(--color-success, #10b981)";
+      untimedBtn.style.color = "var(--color-success, #10b981)";
+      if (untimedLabel) untimedLabel.textContent = "Untimed (Active)";
+      if (timerWrap) timerWrap.style.display = "none";
+      stopTimer();
+    } else {
+      untimedBtn.style.backgroundColor = "var(--color-bg-base)";
+      untimedBtn.style.borderColor = "var(--color-border)";
+      untimedBtn.style.color = "var(--color-text-muted)";
+      if (untimedLabel) untimedLabel.textContent = "Untimed Mode";
+      if (timerWrap) timerWrap.style.display = "flex";
+      startTimer();
+    }
+  }
+
+  if (untimedBtn) {
+    renderUntimedState();
+    untimedBtn.addEventListener("click", () => {
+      window.isUntimedAssessment = !window.isUntimedAssessment;
+      try {
+        localStorage.setItem("hl_untimed_assessment", window.isUntimedAssessment);
+      } catch (e) {}
+      renderUntimedState();
+      if (window.announceA11y) {
+        window.announceA11y(
+          window.isUntimedAssessment
+            ? "Untimed practice mode activated. Timer hidden."
+            : "Timed mode activated. Timer restored."
+        );
+      }
+    });
+  }
 });
 
 // 4. Hook into loadQuestions to reset data/timer on start/restart

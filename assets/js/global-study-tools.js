@@ -445,10 +445,12 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.style.backgroundColor = 'var(--color-danger, #ef4444)';
             icon.className = 'fas fa-stop';
             text.textContent = 'Stop Sound';
+            if (window.announceA11y) window.announceA11y(`Ambient sound playing: ${currentAmbientSound} noise`);
         } else {
             btn.style.backgroundColor = 'var(--color-primary)';
             icon.className = 'fas fa-play';
             text.textContent = 'Play Sound';
+            if (window.announceA11y) window.announceA11y('Ambient sound stopped');
         }
     }
 

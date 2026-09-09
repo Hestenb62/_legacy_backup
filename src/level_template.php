@@ -292,7 +292,7 @@ function renderSubjectModules(array $modulesList, string $subjectId, string $sub
         <i class="fas fa-chevron-right" style="font-size: 8px; opacity: 0.3;"></i>
         <span style="color: var(--theme-color); opacity: 0.7;"><?php echo $gradeText; ?></span>
         <i class="fas fa-chevron-right" style="font-size: 8px; opacity: 0.3;"></i>
-        <span class="breadcrumb-active"><?php echo $levelTitle; ?></span>
+        <span class="breadcrumb-active" id="level-breadcrumb-active"><?php echo $levelTitle; ?> <span id="level-breadcrumb-subj"><?php echo strtoupper($initialSubjectName ?? $initialSubject ?? 'Math'); ?></span></span>
     </div>
 
     <div class="subject-tabs" role="tablist" aria-label="Subject navigation tabs">
@@ -631,6 +631,19 @@ function renderSubjectModules(array $modulesList, string $subjectId, string $sub
             btn.classList.add('active');
             btn.setAttribute('aria-selected', 'true');
         }
+
+        // Update in-page breadcrumb active subject
+        const breadcrumbSubj = document.getElementById('level-breadcrumb-subj');
+        if (breadcrumbSubj && subjectData[tabName]) {
+            breadcrumbSubj.innerText = subjectData[tabName].name.toUpperCase();
+        }
+
+        // Keep browser URL query in sync so direct sharing, back button, and reload remember the active subject
+        try {
+            const currentUrl = new URL(window.location.href);
+            currentUrl.searchParams.set('subject', tabName);
+            window.history.replaceState(null, '', currentUrl.toString());
+        } catch (e) {}
     }
 
     const allSkills = <?php echo json_encode(array_merge(...array_column($modules, 'topics'))['skills'] ?? []); ?>;

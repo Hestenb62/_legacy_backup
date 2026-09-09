@@ -1041,6 +1041,24 @@
         applyStandardsFilters();
     }
 
+    // Keyboard shortcut for standards search: Ctrl+K / Cmd+K to focus, Escape to clear
+    document.addEventListener('keydown', function(e) {
+        if ((e.ctrlKey || e.metaKey) && (e.key === 'k' || e.key === 'K')) {
+            e.preventDefault();
+            const searchInput = document.getElementById('standards-search-input');
+            if (searchInput) {
+                searchInput.focus();
+                searchInput.select();
+            }
+        } else if (e.key === 'Escape') {
+            const searchInput = document.getElementById('standards-search-input');
+            if (searchInput && (document.activeElement === searchInput || searchInput.value)) {
+                clearStandardsSearch();
+                searchInput.blur();
+            }
+        }
+    });
+
     function applyStandardsFilters() {
         const searchInput = document.getElementById('standards-search-input');
         const query = (searchInput ? searchInput.value : '').toLowerCase().trim();

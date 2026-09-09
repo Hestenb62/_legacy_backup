@@ -698,6 +698,9 @@ document.addEventListener('click', (e) => {
 function applyBionicReading(enable) {
     const targetSelectors = [
         '.prose',
+        '.reader-main-content',
+        '#book-content',
+        '.single-book-frame',
         '.reader-text-container',
         '.reading-content',
         '.lesson-body',

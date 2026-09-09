@@ -343,11 +343,14 @@ include '../src/header.php';
                         </div>
                     </div>
                     <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 0.5rem;">
-                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                        <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; justify-content: flex-end;">
+                            <button id="untimed-mode-btn" type="button" style="background: var(--color-bg-base); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 0.35rem 0.7rem; color: var(--color-text-muted); font-size: 0.8rem; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 0.35rem; transition: all 0.2s;" title="Toggle Low-Anxiety Untimed Practice Mode">
+                                <i class="fas fa-infinity"></i> <span id="untimed-mode-label">Untimed Mode</span>
+                            </button>
                             <button id="sound-toggle-btn" style="color: var(--color-text-muted); background: transparent; border: none; cursor: pointer; transition: color 0.2s;" title="Toggle Sound">
                                 <i class="fas fa-volume-up" style="font-size: 1.25rem;"></i>
                             </button>
-                            <div style="display: flex; align-items: center; background-color: var(--color-bg-base); border-radius: var(--radius-md); padding: 0.25rem; border: 1px solid var(--color-border);">
+                            <div id="session-timer-wrap" style="display: flex; align-items: center; background-color: var(--color-bg-base); border-radius: var(--radius-md); padding: 0.25rem; border: 1px solid var(--color-border);">
                                 <button id="timer-toggle-btn" style="background: transparent; border: none; padding: 0 0.5rem; color: var(--color-text-muted); cursor: pointer;" title="Hide/Show Timer">
                                     <i class="fas fa-eye" style="font-size: 0.875rem;"></i>
                                 </button>

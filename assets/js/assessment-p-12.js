@@ -1132,7 +1132,18 @@ function checkAnswer(selected, correct, btnElement) {
     } else {
         explanationCard.style.background = 'rgba(245, 158, 11, 0.12)';
         explanationCard.style.border = '1px solid #f59e0b';
-        explanationCard.innerHTML = `<div style="display:flex; align-items:center; gap:0.5rem; font-weight:800; color:#d97706; margin-bottom:0.35rem;"><i class="fas fa-lightbulb"></i> Learning Opportunity: The correct answer is <strong>${correct}</strong></div><div style="opacity:0.95;">${explanation}</div>`;
+        
+        let levelReviewLink = '';
+        try {
+            const urlParams = new URLSearchParams(window.location.search);
+            const currentGrade = (urlParams.get("grade") || document.getElementById("grade-key")?.value || "3").trim().toLowerCase();
+            const letterMap = { 'pre-k':'a', 'k':'b', '1':'c', '2':'d', '3':'e', '4':'f', '5':'g', '6':'h', '7':'i', '8':'j', '9':'k', '10':'l', '11':'m', '12':'n' };
+            const lvl = letterMap[currentGrade] || 'k';
+            const subj = (q && q.subject) ? q.subject.toLowerCase() : 'math';
+            levelReviewLink = `<div style="margin-top:0.75rem;"><a href="/levels/${lvl}.php?subject=${encodeURIComponent(subj)}" target="_blank" style="display:inline-flex; align-items:center; gap:0.4rem; padding:0.35rem 0.75rem; background:rgba(217, 119, 6, 0.15); border:1px solid rgba(217, 119, 6, 0.4); border-radius:0.5rem; font-size:0.8rem; font-weight:700; color:#b45309; text-decoration:none;"><i class="fas fa-graduation-cap"></i> Review this topic in Level ${lvl.toUpperCase()} ${subj.toUpperCase()} <i class="fas fa-arrow-right" style="font-size:0.7rem;"></i></a></div>`;
+        } catch (e) {}
+
+        explanationCard.innerHTML = `<div style="display:flex; align-items:center; gap:0.5rem; font-weight:800; color:#d97706; margin-bottom:0.35rem;"><i class="fas fa-lightbulb"></i> Learning Opportunity: The correct answer is <strong>${correct}</strong></div><div style="opacity:0.95;">${explanation}</div>${levelReviewLink}`;
     }
 
     // Update Progress
