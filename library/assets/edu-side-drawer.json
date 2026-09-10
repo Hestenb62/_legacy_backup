@@ -54,7 +54,6 @@
             "read-online-link": "#",
             "lexile": "1350L",
             "dewey": "342.7308",
-            "lc": "KF4744",
             "grade": "Grades 8-12",
             "disclaimer-key": "gutenberg"
         },
@@ -73,7 +72,6 @@
             "read-online-link": "/library/read/index.php?book=federalist-papers",
             "lexile": "1450L",
             "dewey": "342.7302",
-            "lc": "JK154",
             "grade": "Grades 10-12",
             "disclaimer-key": "gutenberg"
         },
@@ -432,7 +430,7 @@
             "txt-link": "",
             "lexile": "Reference",
             "grade": "All Grades",
-            "disclaimer-key": ""
+            "disclaimer-key": "default"
         },
         {
             "id": "language-facts-repo",
@@ -449,10 +447,8 @@
             "read-online-link": "/library/read/index.php?book=language-facts-repo",
             "txt-link": "",
             "lexile": "Reference",
-            "dewey": "415",
-            "lc": "PE",
             "grade": "All Grades",
-            "disclaimer-key": ""
+            "disclaimer-key": "default"
         },
         {
             "id": "science-facts-repo",
@@ -469,10 +465,8 @@
             "read-online-link": "/library/read/index.php?book=science-facts-repo",
             "txt-link": "",
             "lexile": "Reference",
-            "dewey": "500",
-            "lc": "Q",
             "grade": "All Grades",
-            "disclaimer-key": ""
+            "disclaimer-key": "default"
         }
     ]
 }
