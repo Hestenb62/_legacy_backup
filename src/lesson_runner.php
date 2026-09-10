@@ -140,6 +140,7 @@ if (!isset($practiceQuestions) || empty($practiceQuestions)) {
 <script>
 (function() {
     const LESSON_ID = <?= json_encode($lessonId) ?>;
+    const LESSON_TITLE = <?= json_encode($lessonTitle) ?>;
     const LEVEL_ID = <?= json_encode($levelId) ?>;
     const STANDARD_CODE = <?= json_encode($lessonStandard) ?>;
     const PRACTICE_QUESTIONS = <?= json_encode($practiceQuestions) ?>;
@@ -414,12 +415,14 @@ if (!isset($practiceQuestions) || empty($practiceQuestions)) {
 
     function toggleRunnerLessonBookmark() {
         if (!window.UniversalBookmarks) return;
+        const currentUrl = window.location.pathname + (window.location.search || '');
+        const safeTitle = (typeof LESSON_TITLE !== 'undefined' && LESSON_TITLE) ? LESSON_TITLE : (document.title || LESSON_ID);
         const nowBookmarked = window.UniversalBookmarks.toggle({
             id: LESSON_ID,
-            title: LESSON_TITLE,
+            title: safeTitle,
             type: 'lesson',
-            url: window.location.pathname,
-            category: LEVEL_ID.toUpperCase() + ' Grade',
+            url: currentUrl,
+            category: (LEVEL_ID ? LEVEL_ID.toUpperCase() : 'General') + ' Grade',
             icon: 'fa-graduation-cap'
         });
         updateBookmarkButton();
