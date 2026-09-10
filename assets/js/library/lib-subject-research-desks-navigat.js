@@ -13,6 +13,7 @@
     }
 
     const DESK_ICONS = {
+        'General Resources': 'fa-layer-group',
         'US History': 'fa-university',
         'World History': 'fa-globe-americas',
         'WW1': 'fa-shield-halved',

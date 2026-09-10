@@ -68,6 +68,12 @@ include ABSPATH . 'src/header.php';
             <span class="sidebar-header-title">Research Desks</span>
         </div>
         <ul class="sidebar-menu">
+            <li class="sidebar-item" data-desk="General Resources" title="General Resources">
+                <button type="button" onclick="openResourcePortal('General Resources')" class="sidebar-item-btn" aria-label="Open General Resources Desk">
+                    <i class="fas fa-layer-group"></i>
+                    <span class="sidebar-label">General Resources</span>
+                </button>
+            </li>
             <li class="sidebar-item" data-desk="US History" title="US History">
                 <button type="button" onclick="openResourcePortal('US History')" class="sidebar-item-btn" aria-label="Open US History Desk">
                     <i class="fas fa-university"></i>
@@ -338,35 +344,8 @@ include ABSPATH . 'src/header.php';
                     </div>
                 </div>
                 
-                <!-- Controls row (Search & Sort inside drawer) -->
+                <!-- Controls row -->
                 <div class="drawer-header-right">
-                    <!-- Drawer Search -->
-                    <div class="drawer-search-container">
-                        <input type="text" 
-                               id="drawer-search" 
-                               oninput="filterDrawerBooks()" 
-                               placeholder="Search in this desk..." 
-                               class="drawer-search-input"
-                               autocomplete="off">
-                        <i class="fas fa-search drawer-search-icon"></i>
-                        <button type="button" id="drawer-search-clear" onclick="clearDrawerSearch()" class="drawer-search-clear-btn hidden" aria-label="Clear search">
-                            <i class="fas fa-times"></i>
-                        </button>
-                    </div>
-                    
-                    <!-- Drawer Sort -->
-                    <div class="drawer-sort-container">
-                        <select id="drawer-sort" onchange="sortDrawerBooks()" class="drawer-sort-select library-glass-shine" aria-label="Sort books">
-                            <option value="title-asc">Title (A-Z)</option>
-                            <option value="title-desc">Title (Z-A)</option>
-                            <option value="ddc">Call Number (DDC)</option>
-                            <option value="lexile-asc">Reading Level (Lowest First)</option>
-                            <option value="lexile-desc">Reading Level (Highest First)</option>
-                            <option value="date-desc">Publication Date (Newest)</option>
-                            <option value="date-asc">Publication Date (Oldest)</option>
-                        </select>
-                    </div>
-
                     <!-- Dedicated Close Button -->
                     <button onclick="closeResourcePortal()" class="library-drawer-close-btn" aria-label="Close Subject Portal" title="Close Subject Portal">
                         <i class="fas fa-times"></i>

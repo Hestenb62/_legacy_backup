@@ -1,0 +1,30 @@
+{
+    "1": {
+        "num": 1,
+        "title": "Parts of Speech & Grammatical Roles",
+        "volume": "",
+        "part": "Part I: Grammar Foundations",
+        "url": "/library/read/index.php?book=language-facts-repo&chapter=chapter-1"
+    },
+    "2": {
+        "num": 2,
+        "title": "Syntax, Sentence Architecture & Punctuation",
+        "volume": "",
+        "part": "Part II: Sentence Structure & Mechanics",
+        "url": "/library/read/index.php?book=language-facts-repo&chapter=chapter-2"
+    },
+    "3": {
+        "num": 3,
+        "title": "Literary Devices, Figures of Speech & Rhetoric",
+        "volume": "",
+        "part": "Part III: Literary Craft & Rhetoric",
+        "url": "/library/read/index.php?book=language-facts-repo&chapter=chapter-3"
+    },
+    "4": {
+        "num": 4,
+        "title": "Etymology, Greek & Latin Roots & Morphology",
+        "volume": "",
+        "part": "Part IV: Word Origins & Vocabulary Building",
+        "url": "/library/read/index.php?book=language-facts-repo&chapter=chapter-4"
+    }
+}

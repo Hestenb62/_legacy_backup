@@ -414,5 +414,67 @@
             "grade": "Grades 11-12",
             "disclaimer-key": "gutenberg"
         }
+    ],
+    "General Resources": [
+        {
+            "id": "math-facts-repo",
+            "section": "Foundational Mathematics & Number Theory",
+            "title": "Mathematical Facts, Constants & Formulas Compendium",
+            "author": "Hesten's Learning Reference Series",
+            "isbn": "HL-REF-MATH-001",
+            "date": "2026-01-01",
+            "img": "https://placehold.co/300x450/4f46e5/white?text=Math+Facts+%26+Formulas",
+            "fallback-img": "https://placehold.co/300x450/4f46e5/white?text=Math+Facts+%26+Formulas",
+            "description": "A comprehensive multi-chapter reference compendium covering arithmetic properties, prime theory, algebraic identities, geometry theorems, trigonometric identities, calculus fundamentals, and key mathematical constants. Rendered with full MathJax typesetting for precise formula display.",
+            "pdf-link": "",
+            "epub-link": "",
+            "read-online-link": "/library/read/index.php?book=math-facts-repo",
+            "txt-link": "",
+            "lexile": "Reference",
+            "dewey": "510",
+            "lc": "QA",
+            "grade": "All Grades",
+            "disclaimer-key": ""
+        },
+        {
+            "id": "language-facts-repo",
+            "section": "Language Arts & Rhetoric",
+            "title": "Language, Grammar & Linguistics Compendium",
+            "author": "Hesten's Learning Reference Series",
+            "isbn": "HL-REF-ELA-001",
+            "date": "2026-01-01",
+            "img": "https://placehold.co/300x450/0f766e/white?text=Language+%26+Grammar+Facts",
+            "fallback-img": "https://placehold.co/300x450/0f766e/white?text=Language+%26+Grammar+Facts",
+            "description": "A deep-dive reference compendium covering all 8 parts of speech, syntax and clause architecture, punctuation mechanics, 30+ literary devices and rhetorical figures, and a comprehensive Greek and Latin root, prefix, and suffix directory for powerful vocabulary building.",
+            "pdf-link": "",
+            "epub-link": "",
+            "read-online-link": "/library/read/index.php?book=language-facts-repo",
+            "txt-link": "",
+            "lexile": "Reference",
+            "dewey": "415",
+            "lc": "PE",
+            "grade": "All Grades",
+            "disclaimer-key": ""
+        },
+        {
+            "id": "science-facts-repo",
+            "section": "Natural Sciences & Scientific Laws",
+            "title": "Scientific Laws, Physical Constants & Taxonomy Compendium",
+            "author": "Hesten's Learning Reference Series",
+            "isbn": "HL-REF-SCI-001",
+            "date": "2026-01-01",
+            "img": "https://placehold.co/300x450/b45309/white?text=Science+Laws+%26+Constants",
+            "fallback-img": "https://placehold.co/300x450/b45309/white?text=Science+Laws+%26+Constants",
+            "description": "A broad-spectrum reference compendium covering Newton's laws and fundamental physical constants, atomic structure and periodic table principles, Linnaean biological taxonomy, cell theory and genetics, and the four laws of thermodynamics alongside Earth systems and astrophysics.",
+            "pdf-link": "",
+            "epub-link": "",
+            "read-online-link": "/library/read/index.php?book=science-facts-repo",
+            "txt-link": "",
+            "lexile": "Reference",
+            "dewey": "500",
+            "lc": "Q",
+            "grade": "All Grades",
+            "disclaimer-key": ""
+        }
     ]
 }

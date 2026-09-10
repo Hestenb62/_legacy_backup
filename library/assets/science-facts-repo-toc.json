@@ -1,0 +1,30 @@
+{
+    "1": {
+        "num": 1,
+        "title": "Fundamental Physical Constants & Laws of Motion",
+        "volume": "",
+        "part": "Part I: Physics & Mechanics",
+        "url": "/library/read/index.php?book=science-facts-repo&chapter=chapter-1"
+    },
+    "2": {
+        "num": 2,
+        "title": "Atomic Structure, Periodic Table & Chemical Principles",
+        "volume": "",
+        "part": "Part II: Chemistry & Atomic Theory",
+        "url": "/library/read/index.php?book=science-facts-repo&chapter=chapter-2"
+    },
+    "3": {
+        "num": 3,
+        "title": "Biological Kingdoms, Cell Theory & Genetics",
+        "volume": "",
+        "part": "Part III: Life Sciences & Biology",
+        "url": "/library/read/index.php?book=science-facts-repo&chapter=chapter-3"
+    },
+    "4": {
+        "num": 4,
+        "title": "Earth Systems, Thermodynamics & Astrophysics",
+        "volume": "",
+        "part": "Part IV: Earth & Space Sciences",
+        "url": "/library/read/index.php?book=science-facts-repo&chapter=chapter-4"
+    }
+}

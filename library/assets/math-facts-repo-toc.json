@@ -1,0 +1,30 @@
+{
+    "1": {
+        "num": 1,
+        "title": "Arithmetic, Primes & Number Systems",
+        "volume": "",
+        "part": "Part I: Foundational Mathematics",
+        "url": "/library/read/index.php?book=math-facts-repo&chapter=chapter-1"
+    },
+    "2": {
+        "num": 2,
+        "title": "Algebraic Identities & Equations",
+        "volume": "",
+        "part": "Part II: Algebra & Functions",
+        "url": "/library/read/index.php?book=math-facts-repo&chapter=chapter-2"
+    },
+    "3": {
+        "num": 3,
+        "title": "Geometry Theorems & Trigonometric Identities",
+        "volume": "",
+        "part": "Part III: Geometry & Trigonometry",
+        "url": "/library/read/index.php?book=math-facts-repo&chapter=chapter-3"
+    },
+    "4": {
+        "num": 4,
+        "title": "Calculus Essentials & Mathematical Constants",
+        "volume": "",
+        "part": "Part IV: Calculus & Constants",
+        "url": "/library/read/index.php?book=math-facts-repo&chapter=chapter-4"
+    }
+}
