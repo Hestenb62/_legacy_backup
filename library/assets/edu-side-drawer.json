@@ -425,7 +425,7 @@
             "date": "2026-01-01",
             "img": "https://placehold.co/300x450/4f46e5/white?text=Math+Facts+%26+Formulas",
             "fallback-img": "https://placehold.co/300x450/4f46e5/white?text=Math+Facts+%26+Formulas",
-            "description": "A comprehensive multi-chapter anthology covering arithmetic, number theory, algebra, geometry, trigonometry, calculus, and key mathematical constants. Rendered with full MathJax typesetting for precise formula display.",
+            "description": "A comprehensive multi-chapter anthology covering arithmetic, number theory, algebra, geometry, trigonometry, calculus, and key mathematical constants. Rendered with full MathJax typesetting.",
             "pdf-link": "",
             "epub-link": "",
             "read-online-link": "/library/read/index.php?book=math-facts-repo",
