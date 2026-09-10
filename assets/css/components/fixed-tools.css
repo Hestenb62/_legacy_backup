@@ -2088,4 +2088,380 @@
   .high-contrast .flashcard-icon-box i {
     color: #ffff00 !important;
   }
+
+  /* ==========================================================================
+     Full-Screen Site Overhaul Announcement Modal
+     ========================================================================== */
+  body.overhaul-modal-open {
+    overflow: hidden !important;
+  }
+
+  .overhaul-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s ease;
+  }
+
+  .overhaul-modal.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .overhaul-modal.hidden {
+    display: none !important;
+  }
+
+  .overhaul-modal.closing {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .overhaul-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.82);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+
+  .overhaul-modal-dialog {
+    position: relative;
+    z-index: 1205;
+    width: 92%;
+    max-width: 44rem;
+    max-height: 90vh;
+    overflow-y: auto;
+    margin: 1.5rem auto;
+    transform: scale(0.95) translateY(12px);
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .overhaul-modal.visible .overhaul-modal-dialog {
+    transform: scale(1) translateY(0);
+  }
+
+  .overhaul-modal.closing .overhaul-modal-dialog {
+    transform: scale(0.95) translateY(12px);
+  }
+
+  .overhaul-modal-content {
+    background: var(--color-bg-surface, #ffffff);
+    color: var(--color-text, #1e293b);
+    border-radius: 1.25rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.15);
+    padding: 2rem;
+    position: relative;
+  }
+
+  .dark .overhaul-modal-content,
+  .midnight .overhaul-modal-content {
+    background: #0f172a;
+    color: #f8fafc;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(255, 255, 255, 0.08);
+  }
+
+  .high-contrast .overhaul-modal-content,
+  [data-theme="high-contrast"] .overhaul-modal-content {
+    background: #000000 !important;
+    color: #ffffff !important;
+    border: 3px solid #ffffff !important;
+    box-shadow: none !important;
+  }
+
+  .overhaul-modal-close {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: rgba(0, 0, 0, 0.04);
+    color: inherit;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .dark .overhaul-modal-close,
+  .midnight .overhaul-modal-close {
+    border-color: rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .overhaul-modal-close:hover {
+    background: rgba(0, 0, 0, 0.1);
+    transform: rotate(90deg);
+  }
+
+  .overhaul-modal-close:focus-visible {
+    outline: 2px solid #6366f1;
+    outline-offset: 2px;
+  }
+
+  .overhaul-modal-header {
+    display: flex;
+    align-items: center;
+    gap: 1.15rem;
+    margin-bottom: 0.85rem;
+    padding-right: 2.5rem;
+  }
+
+  .overhaul-icon-badge {
+    width: 3.25rem;
+    height: 3.25rem;
+    border-radius: 0.85rem;
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #ffffff;
+    flex-shrink: 0;
+    box-shadow: 0 10px 15px -3px rgba(245, 158, 11, 0.35);
+  }
+
+  .overhaul-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.2rem 0.65rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background: rgba(245, 158, 11, 0.15);
+    color: #d97706;
+    margin-bottom: 0.35rem;
+  }
+
+  .dark .overhaul-pill,
+  .midnight .overhaul-pill {
+    background: rgba(245, 158, 11, 0.2);
+    color: #fbbf24;
+  }
+
+  .overhaul-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1.25;
+    margin: 0;
+    color: inherit;
+  }
+
+  .overhaul-lead {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: #64748b;
+    margin: 0 0 1.5rem 0;
+  }
+
+  .dark .overhaul-lead,
+  .midnight .overhaul-lead {
+    color: #94a3b8;
+  }
+
+  .high-contrast .overhaul-lead {
+    color: #ffffff;
+  }
+
+  .overhaul-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+    margin-bottom: 1.75rem;
+  }
+
+  @media (min-width: 640px) {
+    .overhaul-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+  }
+
+  .overhaul-card {
+    display: flex;
+    gap: 0.85rem;
+    padding: 1.05rem;
+    border-radius: 0.85rem;
+    background: rgba(241, 245, 249, 0.65);
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .dark .overhaul-card,
+  .midnight .overhaul-card {
+    background: rgba(30, 41, 59, 0.65);
+    border-color: rgba(51, 65, 85, 0.8);
+  }
+
+  .high-contrast .overhaul-card,
+  [data-theme="high-contrast"] .overhaul-card {
+    background: #000000 !important;
+    border: 2px solid #ffffff !important;
+  }
+
+  .overhaul-card.highlight-card {
+    background: rgba(16, 185, 129, 0.08);
+    border-color: rgba(16, 185, 129, 0.3);
+  }
+
+  .dark .overhaul-card.highlight-card,
+  .midnight .overhaul-card.highlight-card {
+    background: rgba(16, 185, 129, 0.12);
+    border-color: rgba(16, 185, 129, 0.4);
+  }
+
+  .overhaul-card-icon {
+    width: 2.35rem;
+    height: 2.35rem;
+    border-radius: 0.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.05rem;
+    flex-shrink: 0;
+  }
+
+  .icon-amber {
+    background: rgba(245, 158, 11, 0.15);
+    color: #d97706;
+  }
+  .icon-rose {
+    background: rgba(244, 63, 94, 0.15);
+    color: #e11d48;
+  }
+  .icon-indigo {
+    background: rgba(99, 102, 241, 0.15);
+    color: #4f46e5;
+  }
+  .icon-emerald {
+    background: rgba(16, 185, 129, 0.15);
+    color: #059669;
+  }
+
+  .dark .icon-amber { color: #fbbf24; }
+  .dark .icon-rose { color: #fb7185; }
+  .dark .icon-indigo { color: #818cf8; }
+  .dark .icon-emerald { color: #34d399; }
+
+  .overhaul-card-body {
+    flex: 1;
+  }
+
+  .overhaul-card-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin: 0 0 0.25rem 0;
+    color: inherit;
+  }
+
+  .overhaul-card-text {
+    font-size: 0.825rem;
+    line-height: 1.45;
+    color: #64748b;
+    margin: 0;
+  }
+
+  .dark .overhaul-card-text,
+  .midnight .overhaul-card-text {
+    color: #94a3b8;
+  }
+
+  .high-contrast .overhaul-card-text {
+    color: #ffffff;
+  }
+
+  .overhaul-modal-footer {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 0.75rem;
+    justify-content: flex-end;
+    align-items: stretch;
+    margin-top: 0.5rem;
+  }
+
+  @media (min-width: 640px) {
+    .overhaul-modal-footer {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  .overhaul-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.4rem;
+    border-radius: 0.65rem;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+    min-height: 2.75rem;
+  }
+
+  .overhaul-btn-primary {
+    background: linear-gradient(135deg, #4f46e5, #6366f1);
+    color: #ffffff !important;
+    border: none;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+  }
+
+  .overhaul-btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(79, 70, 229, 0.4);
+  }
+
+  .overhaul-btn-primary:focus-visible {
+    outline: 2px solid #6366f1;
+    outline-offset: 2px;
+  }
+
+  .overhaul-btn-secondary {
+    background: transparent;
+    color: #4f46e5;
+    border: 1.5px solid rgba(99, 102, 241, 0.5);
+  }
+
+  .dark .overhaul-btn-secondary,
+  .midnight .overhaul-btn-secondary {
+    color: #818cf8;
+    border-color: rgba(129, 140, 248, 0.4);
+  }
+
+  .overhaul-btn-secondary:hover {
+    background: rgba(99, 102, 241, 0.08);
+    border-color: #6366f1;
+  }
+
+  .overhaul-btn-secondary:focus-visible {
+    outline: 2px solid #6366f1;
+    outline-offset: 2px;
+  }
+
+  .high-contrast .overhaul-btn-primary {
+    background: #ffff00 !important;
+    color: #000000 !important;
+    border: 2px solid #ffffff !important;
+    font-weight: 800;
+  }
+
+  .high-contrast .overhaul-btn-secondary {
+    background: #000000 !important;
+    color: #ffffff !important;
+    border: 2px solid #ffffff !important;
+  }
 }
+

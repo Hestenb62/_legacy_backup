@@ -32,6 +32,4 @@ include 'src/header.php';
 <!-- PAGE SCRIPT -->
 <script src="<?= assetVersion('/assets/js/index-main.js') ?>"></script>
 
-<?php include __DIR__ . '/src/partials/migration-popup.php'; ?>
-
 <?php include 'src/footer.php'; ?>

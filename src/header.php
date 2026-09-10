@@ -352,6 +352,7 @@ if (!function_exists('assetVersion')) {
     <!-- Accessibility Settings Panel -->
     <?php include __DIR__ . '/partials/a11y-settings.php'; ?>
     <?php include __DIR__ . '/partials/reading-mask.php'; ?>
+    <?php include __DIR__ . '/partials/overhaul-modal.php'; ?>
     <?php include __DIR__ . '/partials/announcement-bar.php'; ?>
 
     <header class="header-main">
