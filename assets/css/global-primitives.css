@@ -301,6 +301,19 @@
     padding: 0 !important;
   }
 
+  /* Hide Breadcrumbs Accessibility Feature */
+  .hide-breadcrumbs .breadcrumb-nav,
+  .hide-breadcrumbs .level-breadcrumb,
+  .hide-breadcrumbs .lesson-top-nav,
+  .hide-breadcrumbs .drawer-breadcrumbs,
+  .hide-breadcrumbs .research-hero-breadcrumbs,
+  .hide-breadcrumbs nav[aria-label*="Breadcrumb"],
+  .hide-breadcrumbs nav[aria-label*="breadcrumb"],
+  .hide-breadcrumbs [aria-label="Breadcrumb"],
+  .hide-breadcrumbs [aria-label="Breadcrumb navigation"] {
+    display: none !important;
+  }
+
   /* Visual Highlights */
   .highlight-links a {
     text-decoration: underline !important;

@@ -101,6 +101,10 @@
                     <input type="checkbox" id="panel-images" onchange="updateGlobalSetting('hideImages', this.checked)" class="settings-checkbox">
                 </label>
                 <label class="settings-toggle-row">
+                    <span class="settings-toggle-label">Hide Breadcrumbs</span>
+                    <input type="checkbox" id="panel-breadcrumbs" onchange="updateGlobalSetting('hideBreadcrumbs', this.checked)" class="settings-checkbox">
+                </label>
+                <label class="settings-toggle-row">
                     <span class="settings-toggle-label">Teacher Mode</span>
                     <input type="checkbox" id="panel-teacher" onchange="updateGlobalSetting('teacherMode', this.checked)" class="settings-checkbox">
                 </label>

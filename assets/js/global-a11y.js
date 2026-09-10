@@ -17,6 +17,7 @@ const defaultSettings = {
     maskOpacity: 0.7,
     cursorSize: 'normal',
     hideImages: false,
+    hideBreadcrumbs: false,
     focusMode: false,
     teacherMode: false,
     highlightLinks: false,
@@ -116,6 +117,8 @@ function updateGlobalSetting(key, value) {
         theme: `Theme set to ${value}`,
         fontFamily: `Font family changed to ${value}`,
         readingMask: value ? 'Reading mask enabled' : 'Reading mask disabled',
+        hideImages: value ? 'Images hidden' : 'Images visible',
+        hideBreadcrumbs: value ? 'Breadcrumbs hidden' : 'Breadcrumbs visible',
         spotlightMode: value ? 'Spotlight focus mode enabled' : 'Spotlight focus mode disabled',
         stopAnimations: value ? 'Animations disabled' : 'Animations enabled',
         textToSpeech: value ? 'Text to speech enabled' : 'Text to speech disabled',
@@ -198,6 +201,7 @@ function applySettings(s) {
     toggleClass(b, 'teacher-mode', !!s.teacherMode);
     toggleClass(b, 'cursor-large', s.cursorSize === 'large');
     toggleClass(b, 'hide-images', !!s.hideImages);
+    toggleClass(b, 'hide-breadcrumbs', !!s.hideBreadcrumbs);
 
     // New Toggles
     toggleClass(b, 'highlight-links', !!s.highlightLinks);
@@ -264,6 +268,7 @@ function syncPanelInputs(s) {
     if (el('panel-mask')) el('panel-mask').checked = !!s.readingMask;
     if (el('panel-cursor')) el('panel-cursor').checked = (s.cursorSize === 'large');
     if (el('panel-images')) el('panel-images').checked = !!s.hideImages;
+    if (el('panel-breadcrumbs')) el('panel-breadcrumbs').checked = !!s.hideBreadcrumbs;
     if (el('panel-teacher')) el('panel-teacher').checked = !!s.teacherMode;
     if (el('panel-focus')) el('panel-focus').checked = !!s.focusMode;
 
