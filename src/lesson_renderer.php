@@ -100,6 +100,9 @@ if (isset($lessonsData['lessons'][$lessonId])) {
 // Set Page Meta
 $pageTitle = $meta['title'] . " | Hesten's Learning";
 $pageDescription = $meta['description'];
+if (!empty($rawSubj) && $rawSubj === 'math' || str_contains($lessonId ?? '', 'math')) {
+    $requiresMathJax = true;
+}
 
 include ABSPATH . 'src/header.php';
 ?>

@@ -11,6 +11,7 @@ if (!defined('ABSPATH')) {
 $pageTitle = "Growth of Square Areas and Functions | Hesten's Learning";
 $pageDescription = "Examine how the area of a square grows compared to its side length, laying foundations for quadratic functions.";
 $pageAuthor = "Hesten's Learning Team";
+$requiresMathJax = true;
 
 include ABSPATH . 'src/header.php';
 ?>

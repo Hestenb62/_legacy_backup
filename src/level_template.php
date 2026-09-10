@@ -25,6 +25,9 @@ if (!empty($requestedLesson)) {
     $lessonFile = rtrim(ABSPATH, '/\\') . '/lessons/' . $requestedLesson . '.php';
     $levelUrl = basename($_SERVER['PHP_SELF']);
     $levelTitle = $levelTitle ?? ('Level ' . strtoupper($levelId ?? ''));
+    if (str_contains($requestedLesson, 'math')) {
+        $requiresMathJax = true;
+    }
     if (file_exists($lessonFile)) {
         include $lessonFile;
         exit;

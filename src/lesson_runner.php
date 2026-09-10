@@ -283,6 +283,9 @@ if (!isset($practiceQuestions) || empty($practiceQuestions)) {
         });
 
         container.innerHTML = html;
+        if (typeof window.ensureMathJax === 'function') {
+            window.ensureMathJax(container);
+        }
     }
 
     window.__hlSelectPracticeOption = function(qIdx, optIdx) {
@@ -309,6 +312,9 @@ if (!isset($practiceQuestions) || empty($practiceQuestions)) {
         if (expBox) {
             expBox.style.display = 'block';
             expBox.classList.add(isCorrect ? 'exp-correct' : 'exp-incorrect');
+            if (typeof window.ensureMathJax === 'function') {
+                window.ensureMathJax(expBox);
+            }
         }
 
         // Check if all answered

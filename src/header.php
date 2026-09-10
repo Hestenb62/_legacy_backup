@@ -114,7 +114,8 @@ if (!function_exists('assetVersion')) {
         window.MathJax = window.MathJax || {
             tex: {
                 inlineMath: [['$', '$'], ['\\(', '\\)']],
-                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
             },
             options: {
                 enableMenu: false,          // Disables right-click context menu
@@ -150,22 +151,37 @@ if (!function_exists('assetVersion')) {
             }
         })();
 
-        window.ensureMathJax = function() {
+        window.ensureMathJax = function(elements) {
             return new Promise((resolve, reject) => {
                 const onReady = (mj) => {
                     if (mj && mj.typesetPromise && !mj._dyscalculiaHooked) {
                         mj._dyscalculiaHooked = true;
                         const origTypeset = mj.typesetPromise.bind(mj);
-                        mj.typesetPromise = function(elements) {
-                            return origTypeset(elements).then(res => {
-                                if (window.accommodationEngine && window.accommodationEngine.profile.dyscalculiaEnabled) {
+                        mj.typesetPromise = function(elems) {
+                            return origTypeset(elems).then(res => {
+                                if (window.accommodationEngine && window.accommodationEngine.profile && window.accommodationEngine.profile.dyscalculiaEnabled) {
                                     window.accommodationEngine.colorizeMathSymbols();
                                 }
                                 return res;
                             });
                         };
                     }
-                    if (window.accommodationEngine && window.accommodationEngine.profile.dyscalculiaEnabled) {
+
+                    // Trigger typesetting on requested elements or full document
+                    const doTypeset = () => {
+                        if (mj && mj.typesetPromise) {
+                            const targets = elements ? (Array.isArray(elements) ? elements : [elements]) : null;
+                            mj.typesetPromise(targets).catch(err => console.debug('MathJax typeset:', err));
+                        }
+                    };
+
+                    if (document.readyState === 'loading') {
+                        document.addEventListener('DOMContentLoaded', doTypeset);
+                    } else {
+                        doTypeset();
+                    }
+
+                    if (window.accommodationEngine && window.accommodationEngine.profile && window.accommodationEngine.profile.dyscalculiaEnabled) {
                         setTimeout(() => window.accommodationEngine.colorizeMathSymbols(), 100);
                     }
                     resolve(mj);
@@ -191,7 +207,7 @@ if (!function_exists('assetVersion')) {
                         if (window.MathJax && window.MathJax.typesetPromise) {
                             clearInterval(poll);
                             onReady(window.MathJax);
-                        } else if (++tries > 20) {
+                        } else if (++tries > 100) {
                             clearInterval(poll);
                             onReady(window.MathJax);
                         }
@@ -201,7 +217,31 @@ if (!function_exists('assetVersion')) {
                 document.head.appendChild(script);
             });
         };
+
+        // Client-side auto-detector: trigger MathJax if inline math delimiters are found in page content
+        document.addEventListener('DOMContentLoaded', () => {
+            const bodyText = document.body ? document.body.innerText : '';
+            if (bodyText.includes('$') || bodyText.includes('\\(')) {
+                if (/\$[^$\n]+\$|\\\([^\\]+\\\)/.test(bodyText)) {
+                    window.ensureMathJax();
+                }
+            }
+        });
     </script>
+    <?php 
+    // Auto-detect math lessons/pages if not explicitly flagged
+    if (empty($requiresMathJax)) {
+        $checkUri = $_SERVER['REQUEST_URI'] ?? '';
+        $checkQuery = $_SERVER['QUERY_STRING'] ?? '';
+        if (
+            str_contains($checkUri, 'math') ||
+            str_contains($checkQuery, 'math') ||
+            (!empty($lessonId) && str_contains($lessonId, 'math'))
+        ) {
+            $requiresMathJax = true;
+        }
+    }
+    ?>
     <?php if (!empty($requiresMathJax)): ?>
         <script>window.ensureMathJax();</script>
     <?php endif; ?>

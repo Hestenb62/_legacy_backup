@@ -11,6 +11,7 @@ if (!defined('ABSPATH')) {
 $pageTitle = "Graphs of Exponential Functions | Hesten's Learning";
 $pageDescription = "Examine how quantities grow by constant factors rather than constant differences with interactive exponential simulations.";
 $pageAuthor = "Hesten's Learning Team";
+$requiresMathJax = true;
 
 include ABSPATH . 'src/header.php';
 ?>

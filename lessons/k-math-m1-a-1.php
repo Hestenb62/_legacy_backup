@@ -8,6 +8,7 @@
 $pageTitle = "Graphs of Piecewise Linear Functions | Hesten's Learning";
 $pageDescription = "Learn how to define quantities, choose scales, and translate physical actions into piecewise graphs with interactive stories.";
 $pageAuthor = "Hesten's Learning Team";
+$requiresMathJax = true;
 
 include __DIR__ . '/../src/header.php';
 ?>
