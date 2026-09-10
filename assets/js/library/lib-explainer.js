@@ -82,9 +82,97 @@
             }
         }
 
+        loadGutenbergLicenseFile();
         window.switchDisclaimerTab('license');
         modal.classList.remove('hidden');
     };
+
+    function parseGutenbergMarkdown(md) {
+        if (!md) return '';
+        const lines = md.split('\n');
+        let html = '';
+        let inList = false;
+        let inBlockquote = false;
+
+        function esc(t) {
+            return t.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        }
+        function fmt(t) {
+            let s = esc(t);
+            s = s.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+            s = s.replace(/\*(.*?)\*/g, '<em>$1</em>');
+            s = s.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" style="color: var(--lib-primary); text-decoration: underline;">$1</a>');
+            return s;
+        }
+
+        lines.forEach(line => {
+            const trimmed = line.trimEnd();
+            if (trimmed.startsWith('# ')) {
+                if (inList) { html += '</ul>\n'; inList = false; }
+                if (inBlockquote) { html += '</blockquote>\n'; inBlockquote = false; }
+                html += '<h4 class="gutenberg-h1">' + esc(trimmed.slice(2)) + '</h4>\n';
+            } else if (trimmed.startsWith('## ')) {
+                if (inList) { html += '</ul>\n'; inList = false; }
+                if (inBlockquote) { html += '</blockquote>\n'; inBlockquote = false; }
+                html += '<h5 class="gutenberg-h2">' + esc(trimmed.slice(3)) + '</h5>\n';
+            } else if (trimmed.startsWith('### ')) {
+                if (inList) { html += '</ul>\n'; inList = false; }
+                if (inBlockquote) { html += '</blockquote>\n'; inBlockquote = false; }
+                html += '<h6 class="gutenberg-h3">' + esc(trimmed.slice(4)) + '</h6>\n';
+            } else if (trimmed === '---') {
+                if (inList) { html += '</ul>\n'; inList = false; }
+                if (inBlockquote) { html += '</blockquote>\n'; inBlockquote = false; }
+                html += '<hr class="gutenberg-divider">\n';
+            } else if (trimmed.startsWith('> ')) {
+                if (inList) { html += '</ul>\n'; inList = false; }
+                if (!inBlockquote) { html += '<blockquote class="gutenberg-quote">'; inBlockquote = true; }
+                html += '<p>' + fmt(trimmed.slice(2)) + '</p>\n';
+            } else if (trimmed.startsWith('* ') || trimmed.startsWith('- ') || /^\d+\.\s/.test(trimmed)) {
+                if (inBlockquote) { html += '</blockquote>\n'; inBlockquote = false; }
+                if (!inList) { html += '<ul class="gutenberg-list">'; inList = true; }
+                const content = trimmed.replace(/^(\*|-|\d+\.)\s+/, '');
+                html += '<li>' + fmt(content) + '</li>\n';
+            } else if (trimmed.trim() === '') {
+                if (inList) { html += '</ul>\n'; inList = false; }
+                if (inBlockquote) { html += '</blockquote>\n'; inBlockquote = false; }
+            } else {
+                if (inList) { html += '</ul>\n'; inList = false; }
+                if (inBlockquote) { html += '</blockquote>\n'; inBlockquote = false; }
+                html += '<p class="library-disclaimer-text">' + fmt(trimmed) + '</p>\n';
+            }
+        });
+        if (inList) html += '</ul>\n';
+        if (inBlockquote) html += '</blockquote>\n';
+        return html;
+    }
+
+    function loadGutenbergLicenseFile() {
+        const container = document.getElementById('modal-gutenberg-content');
+        if (!container) return;
+        if (container.textContent && container.textContent.trim().length > 100) return;
+
+        const candidates = [
+            '../assets/text/library-gutenburg.md',
+            'assets/text/library-gutenburg.md',
+            '/assets/text/library-gutenburg.md'
+        ];
+
+        function tryFetch(i) {
+            if (i >= candidates.length) return;
+            fetch(candidates[i])
+                .then(r => {
+                    if (!r.ok) throw new Error('File not found at ' + candidates[i]);
+                    return r.text();
+                })
+                .then(md => {
+                    container.innerHTML = parseGutenbergMarkdown(md);
+                })
+                .catch(() => {
+                    tryFetch(i + 1);
+                });
+        }
+        tryFetch(0);
+    }
 
     window.closeDisclaimerModal = function () {
         const modal = document.getElementById('disclaimerModal');
@@ -98,15 +186,39 @@
         const tabLic = document.getElementById('tab-disc-license');
 
         if (tab === 'standard') {
-            if (stdView) stdView.style.display = 'block';
-            if (licView) licView.style.display = 'none';
-            if (tabStd) tabStd.classList.add('active');
-            if (tabLic) tabLic.classList.remove('active');
+            if (stdView) {
+                stdView.classList.remove('hidden');
+                stdView.style.display = 'block';
+            }
+            if (licView) {
+                licView.classList.add('hidden');
+                licView.style.display = 'none';
+            }
+            if (tabStd) {
+                tabStd.classList.add('active');
+                tabStd.setAttribute('aria-selected', 'true');
+            }
+            if (tabLic) {
+                tabLic.classList.remove('active');
+                tabLic.setAttribute('aria-selected', 'false');
+            }
         } else {
-            if (stdView) stdView.style.display = 'none';
-            if (licView) licView.style.display = 'block';
-            if (tabStd) tabStd.classList.remove('active');
-            if (tabLic) tabLic.classList.add('active');
+            if (stdView) {
+                stdView.classList.add('hidden');
+                stdView.style.display = 'none';
+            }
+            if (licView) {
+                licView.classList.remove('hidden');
+                licView.style.display = 'block';
+            }
+            if (tabStd) {
+                tabStd.classList.remove('active');
+                tabStd.setAttribute('aria-selected', 'false');
+            }
+            if (tabLic) {
+                tabLic.classList.add('active');
+                tabLic.setAttribute('aria-selected', 'true');
+            }
         }
     };
 

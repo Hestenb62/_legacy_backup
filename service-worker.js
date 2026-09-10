@@ -60,6 +60,7 @@ const ASSETS_TO_CACHE = [
   '/assets/text/accessability-wcag-aaa.md',
   '/assets/text/accessability-section-508.md',
   '/assets/text/accessability-udl.md',
+  '/assets/text/library-gutenburg.md',
   '/assets/js/global-error-handler.js',
   '/assets/js/global-standard.js',
   '/assets/js/global-study-tools.js',

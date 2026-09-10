@@ -1,3 +1,65 @@
+<?php
+// Load Full Project Gutenberg License from assets/text/library-gutenburg.md
+$gutenbergLicenseFile = __DIR__ . '/../assets/text/library-gutenburg.md';
+$gutenbergMarkdown = is_file($gutenbergLicenseFile) ? file_get_contents($gutenbergLicenseFile) : '';
+
+if (!function_exists('renderGutenbergLicenseHtml')) {
+    function renderGutenbergLicenseHtml($md) {
+        if (empty($md)) return '<p class="library-disclaimer-text">License documentation unavailable.</p>';
+        $lines = explode("\n", $md);
+        $html = '';
+        $inList = false;
+        $inBlockquote = false;
+
+        foreach ($lines as $line) {
+            $trimmed = rtrim($line);
+            if (strpos($trimmed, '# ') === 0) {
+                if ($inList) { $html .= "</ul>\n"; $inList = false; }
+                if ($inBlockquote) { $html .= "</blockquote>\n"; $inBlockquote = false; }
+                $html .= '<h4 class="gutenberg-h1">' . htmlspecialchars(substr($trimmed, 2)) . "</h4>\n";
+            } elseif (strpos($trimmed, '## ') === 0) {
+                if ($inList) { $html .= "</ul>\n"; $inList = false; }
+                if ($inBlockquote) { $html .= "</blockquote>\n"; $inBlockquote = false; }
+                $html .= '<h5 class="gutenberg-h2">' . htmlspecialchars(substr($trimmed, 3)) . "</h5>\n";
+            } elseif (strpos($trimmed, '### ') === 0) {
+                if ($inList) { $html .= "</ul>\n"; $inList = false; }
+                if ($inBlockquote) { $html .= "</blockquote>\n"; $inBlockquote = false; }
+                $html .= '<h6 class="gutenberg-h3">' . htmlspecialchars(substr($trimmed, 4)) . "</h6>\n";
+            } elseif ($trimmed === '---') {
+                if ($inList) { $html .= "</ul>\n"; $inList = false; }
+                if ($inBlockquote) { $html .= "</blockquote>\n"; $inBlockquote = false; }
+                $html .= '<hr class="gutenberg-divider">' . "\n";
+            } elseif (strpos($trimmed, '> ') === 0) {
+                if ($inList) { $html .= "</ul>\n"; $inList = false; }
+                if (!$inBlockquote) { $html .= '<blockquote class="gutenberg-quote">'; $inBlockquote = true; }
+                $text = substr($trimmed, 2);
+                $formatted = preg_replace('/\*\*(.*?)\*\*/', '<strong>$1</strong>', htmlspecialchars($text));
+                $formatted = preg_replace('/\[(.*?)\]\((.*?)\)/', '<a href="$2" target="_blank" rel="noopener noreferrer" style="color: var(--lib-primary); text-decoration: underline;">$1</a>', $formatted);
+                $html .= '<p>' . $formatted . "</p>\n";
+            } elseif (strpos($trimmed, '* ') === 0 || strpos($trimmed, '- ') === 0 || preg_match('/^\d+\.\s/', $trimmed)) {
+                if ($inBlockquote) { $html .= "</blockquote>\n"; $inBlockquote = false; }
+                if (!$inList) { $html .= '<ul class="gutenberg-list">'; $inList = true; }
+                $content = preg_replace('/^(\*|-|\d+\.)\s+/', '', $trimmed);
+                $formatted = preg_replace('/\*\*(.*?)\*\*/', '<strong>$1</strong>', htmlspecialchars($content));
+                $formatted = preg_replace('/\[(.*?)\]\((.*?)\)/', '<a href="$2" target="_blank" rel="noopener noreferrer" style="color: var(--lib-primary); text-decoration: underline;">$1</a>', $formatted);
+                $html .= '<li>' . $formatted . "</li>\n";
+            } elseif (trim($trimmed) === '') {
+                if ($inList) { $html .= "</ul>\n"; $inList = false; }
+                if ($inBlockquote) { $html .= "</blockquote>\n"; $inBlockquote = false; }
+            } else {
+                if ($inList) { $html .= "</ul>\n"; $inList = false; }
+                if ($inBlockquote) { $html .= "</blockquote>\n"; $inBlockquote = false; }
+                $formatted = preg_replace('/\*\*(.*?)\*\*/', '<strong>$1</strong>', htmlspecialchars($trimmed));
+                $formatted = preg_replace('/\[(.*?)\]\((.*?)\)/', '<a href="$2" target="_blank" rel="noopener noreferrer" style="color: var(--lib-primary); text-decoration: underline;">$1</a>', $formatted);
+                $html .= '<p class="library-disclaimer-text">' . $formatted . "</p>\n";
+            }
+        }
+        if ($inList) $html .= "</ul>\n";
+        if ($inBlockquote) $html .= "</blockquote>\n";
+        return $html;
+    }
+}
+?>
 <!-- Book Knowledge Modal -->
 <div id="bookModal" class="library-modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
     <!-- Backdrop -->
@@ -26,6 +88,13 @@
                         <i class="fas fa-quote-right"></i> <span>Cite Book</span>
                     </button>
                 </div>
+
+                <!-- Sourcing & Disclaimer Button Under Cite and Save Buttons -->
+                <div class="library-modal-disclaimer-row">
+                    <button type="button" onclick="openDisclaimerModal()" class="library-disclaimer-trigger-btn" aria-label="View sourcing and content disclaimer">
+                        <i class="fas fa-exclamation-circle"></i> <span>Sourcing Disclaimer</span>
+                    </button>
+                </div>
             </div>
 
             <!-- Details Pane -->
@@ -38,7 +107,6 @@
 
                 <!-- Specs Grid -->
                 <div class="library-modal-specs-grid">
-                    <div class="library-modal-specs-decor"></div>
                     <div id="modal-date-container">
                         <span class="spec-label">Published</span>
                         <span id="modal-date" class="spec-value spec-val-mono"></span>
@@ -108,13 +176,6 @@
                     <div id="modal-collection-actions" class="library-modal-collection-list hidden">
                         <!-- Dynamically populated in library.js -->
                     </div>
-
-                    <!-- Sourcing & Disclaimer Button -->
-                    <div class="library-modal-disclaimer-row">
-                        <button type="button" onclick="openDisclaimerModal()" class="library-disclaimer-trigger-btn">
-                            <i class="fas fa-exclamation-circle"></i> Sourcing & Content Disclaimer
-                        </button>
-                    </div>
                 </div>
             </div>
         </div>
@@ -140,17 +201,17 @@
         </div>
         
         <!-- Tabs Row -->
-        <div class="disclaimer-tabs-row" id="disclaimer-tabs">
-            <button type="button" class="disclaimer-tab-btn active" id="tab-disc-license" onclick="switchDisclaimerTab('license')">
-                <i class="fas fa-certificate mr-1"></i> Book License & Source
+        <div class="disclaimer-tabs-row" id="disclaimer-tabs" role="tablist" aria-label="Disclaimer Categories">
+            <button type="button" class="disclaimer-tab-btn active" id="tab-disc-license" role="tab" aria-selected="true" aria-controls="disclaimer-license-view" onclick="switchDisclaimerTab('license')">
+                <i class="fas fa-book-open mr-1"></i> Book License &amp; Source
             </button>
-            <button type="button" class="disclaimer-tab-btn" id="tab-disc-standard" onclick="switchDisclaimerTab('standard')">
-                <i class="fas fa-shield-alt mr-1"></i> General Terms
+            <button type="button" class="disclaimer-tab-btn" id="tab-disc-standard" role="tab" aria-selected="false" aria-controls="disclaimer-standard-view" onclick="switchDisclaimerTab('standard')">
+                <i class="fas fa-balance-scale mr-1"></i> General Terms &amp; Full License
             </button>
         </div>
         
         <!-- Tab 1: Book Specific License & Sourcing View -->
-        <div class="library-disclaimer-body-box" id="disclaimer-license-view">
+        <div class="library-disclaimer-body-box" id="disclaimer-license-view" role="tabpanel" aria-labelledby="tab-disc-license">
             <!-- Book Context Summary -->
             <div id="modal-disc-book-context" class="disclaimer-book-card">
                 <div class="disc-book-info">
@@ -160,37 +221,70 @@
                 </div>
             </div>
 
-            <!-- Source & Attribution Metadata Badges -->
-            <div class="disclaimer-badges-row">
-                <span id="modal-disc-file-source" class="disc-meta-badge file-badge">
-                    <i class="fas fa-file-download"></i> <span class="badge-val">Source: Open Educational Archive</span>
-                </span>
-                <span id="modal-disc-info-source" class="disc-meta-badge info-badge">
-                    <i class="fas fa-database"></i> <span class="badge-val">Metadata: Open Library</span>
-                </span>
-                <span id="modal-disc-license-type" class="disc-meta-badge license-badge">
-                    <i class="fas fa-balance-scale"></i> <span class="badge-val">License: Public Domain / Open Educational Resource</span>
-                </span>
-            </div>
-
-            <!-- Sourcing Text Box -->
+            <!-- Sourcing Text Box (Dynamic Volume Attribution) Under Book License & Source Tab -->
             <div class="disclaimer-text-card">
-                <h5 class="disclaimer-card-title"><i class="fas fa-info-circle"></i> License & Attribution Statement</h5>
+                <h5 class="disclaimer-card-title"><i class="fas fa-info-circle"></i> License &amp; Attribution Statement</h5>
                 <p class="library-disclaimer-license-text" id="modal-license-text">
                     <!-- Populated dynamically by library.js -->
                 </p>
             </div>
         </div>
 
-        <!-- Tab 2: General Terms View -->
-        <div class="library-disclaimer-body-box hidden" id="disclaimer-standard-view" style="display: none;">
+        <!-- Tab 2: General Terms & Full License View -->
+        <div class="library-disclaimer-body-box" id="disclaimer-standard-view" role="tabpanel" aria-labelledby="tab-disc-standard" style="display: none;">
+            <!-- Full Project Gutenberg License Pulled from assets/text/library-gutenburg.md -->
+            <div class="disclaimer-text-card" id="modal-gutenberg-card">
+                <h5 class="disclaimer-card-title"><i class="fas fa-file-contract"></i> Project Gutenberg™ Full License Agreement</h5>
+                <div id="modal-gutenberg-content" class="gutenberg-rendered-text">
+                    <?php echo renderGutenbergLicenseHtml($gutenbergMarkdown); ?>
+                </div>
+            </div>
             <div class="disclaimer-text-card">
-                <h5 class="disclaimer-card-title"><i class="fas fa-university"></i> Educational Fair Use & Preservation Policy</h5>
+                <h5 class="disclaimer-card-title"><i class="fas fa-university"></i> 1. Educational Fair Use &amp; Open Access Policy</h5>
                 <p class="library-disclaimer-text">
-                    The books, primary documents, textbooks, and educational materials in this digital library are provided exclusively for educational research, scholarship, and non-commercial classroom instruction under applicable fair-use and open-access licensing principles.
+                    The books, textbooks, primary source documents, historical treatises, and pedagogical materials in this digital library are assembled exclusively for academic instruction, scholarly research, non-commercial education, and personal historical study under Section 107 of the United States Copyright Act (17 U.S.C. § 107) and international fair dealing doctrines.
                 </p>
+            </div>
+
+            <div class="disclaimer-text-card">
+                <h5 class="disclaimer-card-title"><i class="fas fa-landmark"></i> 2. Public Domain Verification &amp; Dedication</h5>
                 <p class="library-disclaimer-text">
-                    Hesten's Learning makes no claims of ownership over third-party materials, public domain historical texts, or open-access educational resources. All trademarks, covers, and original texts remain the property of their respective authors, estates, or publishers.
+                    Literary and historical works published prior to January 1, 1928, or explicitly dedicated to the worldwide public domain, are free of known copyright restrictions within the United States. Titles originating from <strong>Project Gutenberg</strong>, the <strong>Internet Archive</strong>, and <strong>Open Library</strong> are provided in compliance with their open-access distribution mandates. Users residing outside the United States are solely responsible for verifying copyright term lengths and local laws prior to downloading or distributing works.
+                </p>
+            </div>
+
+            <div class="disclaimer-text-card">
+                <h5 class="disclaimer-card-title"><i class="fas fa-creative-commons"></i> 3. Open Educational Licensing (Creative Commons)</h5>
+                <p class="library-disclaimer-text">
+                    Textbooks and reference curricula designated under Creative Commons frameworks—including <strong>OpenStax (CC BY 4.0)</strong>, <strong>The American Yawp (CC BY-SA 4.0)</strong>, and <strong>Public Domain Dedication (CC0 1.0)</strong>—remain protected by their respective licenses. Users are entitled to share, adapt, and distribute these materials in accordance with the attribution and share-alike conditions stipulated by each license deed.
+                </p>
+            </div>
+
+            <div class="disclaimer-text-card">
+                <h5 class="disclaimer-card-title"><i class="fas fa-shield-alt"></i> 4. Intellectual Property &amp; Trademarks</h5>
+                <p class="library-disclaimer-text">
+                    Hesten's Learning asserts no proprietary copyright or commercial ownership over third-party materials, open-source repositories, historical manuscripts, or publisher-issued cover artwork. All authorial rights, trademarks, and associated intellectual property remain the exclusive property of their respective creators, estates, and original publishers.
+                </p>
+            </div>
+
+            <div class="disclaimer-text-card">
+                <h5 class="disclaimer-card-title"><i class="fas fa-graduation-cap"></i> 5. Academic Integrity &amp; Mandatory Citation</h5>
+                <p class="library-disclaimer-text">
+                    Users, educators, and scholars are expected to maintain the highest standards of academic integrity. When utilizing materials from this repository in academic papers, coursework, or curriculum guides, users must provide proper scholarly attribution. Built-in citation generators (MLA 9th, APA 7th, and Chicago 17th) are provided in each volume's overview portal.
+                </p>
+            </div>
+
+            <div class="disclaimer-text-card">
+                <h5 class="disclaimer-card-title"><i class="fas fa-exclamation-triangle"></i> 6. Disclaimer of Warranties &amp; Limitation of Liability</h5>
+                <p class="library-disclaimer-text">
+                    All texts and digital assets are provided strictly on an <em>"AS IS"</em> and <em>"AS AVAILABLE"</em> basis without warranties of any kind, whether express, statutory, or implied. Hesten's Learning makes no warranty that digital transcriptions are error-free or that historical content reflects contemporary scientific, medical, or legal consensus.
+                </p>
+            </div>
+
+            <div class="disclaimer-text-card">
+                <h5 class="disclaimer-card-title"><i class="fas fa-envelope-open-text"></i> 7. DMCA Compliance &amp; Rights Inquiries</h5>
+                <p class="library-disclaimer-text">
+                    If you are a copyright holder or authorized representative who believes that any material hosted in this digital library infringes your rights, please submit a formal takedown notice to our compliance administration at <a href="mailto:admin@hestena62.com" style="color: var(--lib-primary); font-weight: 700; text-decoration: underline;">admin@hestena62.com</a> including the specific work, URL location, and verified proof of ownership for immediate remediation.
                 </p>
             </div>
         </div>
