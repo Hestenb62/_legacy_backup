@@ -216,11 +216,17 @@ include '../src/header.php';
                             <textarea id="message" name="message" rows="5" required class="form-textarea" placeholder="How can we help you today?"></textarea>
                         </div>
 
-                        <!-- Submit Button -->
-                        <button type="submit" class="form-submit-btn">
-                            <span>Send Message</span>
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
+                        <!-- Submit & Direct Mailto Actions -->
+                        <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center;">
+                            <button type="submit" class="form-submit-btn" style="flex: 1; min-width: 180px;">
+                                <span>Send Message</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                            <a href="mailto:admin@hestena62.com?subject=Contact%20Form%20Inquiry&body=Hello%20Hesten%27s%20Learning%20Team%2C%0A%0A" class="form-submit-btn" style="background: var(--color-bg-surface); color: var(--color-text-main); border: 1px solid var(--color-border); text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; flex: 1; min-width: 180px;" title="Send directly via your desktop or mobile email app">
+                                <i class="fas fa-envelope-open-text" style="color: var(--color-primary);"></i>
+                                <span>Open in Email App</span>
+                            </a>
+                        </div>
                     </form>
                 <?php endif; ?>
             </div>

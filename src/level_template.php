@@ -9,6 +9,35 @@
 if (!defined('ABSPATH')) {
     define('ABSPATH', dirname(__DIR__) . '/');
 }
+
+// Dynamic Single-Lesson Router: Check if a lesson is requested via query string on ANY level page
+$requestedLesson = null;
+if (!empty($_GET['lesson'])) {
+    $requestedLesson = preg_replace('/[^a-zA-Z0-9\-_]/', '', trim($_GET['lesson']));
+} elseif (!empty($_SERVER['QUERY_STRING'])) {
+    $rawQuery = trim(explode('&', $_SERVER['QUERY_STRING'])[0]);
+    if (!empty($rawQuery) && !str_contains($rawQuery, '=')) {
+        $requestedLesson = preg_replace('/[^a-zA-Z0-9\-_]/', '', $rawQuery);
+    }
+}
+
+if (!empty($requestedLesson)) {
+    $lessonFile = rtrim(ABSPATH, '/\\') . '/lessons/' . $requestedLesson . '.php';
+    $levelUrl = basename($_SERVER['PHP_SELF']);
+    $levelTitle = $levelTitle ?? ('Level ' . strtoupper($levelId ?? ''));
+    if (file_exists($lessonFile)) {
+        include $lessonFile;
+        exit;
+    } else {
+        $lessonRenderer = rtrim(ABSPATH, '/\\') . '/src/lesson_renderer.php';
+        if (file_exists($lessonRenderer)) {
+            $lessonId = $requestedLesson;
+            include $lessonRenderer;
+            exit;
+        }
+    }
+}
+
 include ABSPATH . 'src/header.php';
 
 // Default falling values
@@ -251,16 +280,16 @@ function renderSubjectModules(array $modulesList, string $subjectId, string $sub
                                 <div class="skill-info">
                                     <span class="skill-code"><?php echo $skill['code']; ?></span>
                                     <span class="skill-name">
-                                        <?php if (isset($skill['url'])): ?>
-                                            <a href="<?php echo htmlspecialchars($skill['url']); ?>"><?php echo htmlspecialchars($skill['name']); ?></a>
-                                        <?php else: ?>
-                                            <?php echo htmlspecialchars($skill['name']); ?>
-                                        <?php endif; ?>
+                                        <?php 
+                                            $currPage = basename($_SERVER['PHP_SELF']);
+                                            $skillTargetUrl = $currPage . '?' . urlencode($skill['id']);
+                                        ?>
+                                        <a href="<?php echo htmlspecialchars($skillTargetUrl); ?>"><?php echo htmlspecialchars($skill['name']); ?></a>
                                     </span>
                                     <span class="skill-mastery-slot"></span>
                                 </div>
                                 <div class="skill-actions">
-                                    <button type="button" class="skill-bookmark-btn" onclick="toggleSkillBookmark('<?php echo htmlspecialchars($skill['id']); ?>', '<?php echo addslashes($skill['name']); ?>', '<?php echo addslashes($skill['code']); ?>', '<?php echo isset($skill['url']) ? addslashes($skill['url']) : ''; ?>', this)" title="Bookmark this skill" aria-label="Bookmark skill <?php echo htmlspecialchars($skill['name']); ?>">
+                                    <button type="button" class="skill-bookmark-btn" onclick="toggleSkillBookmark('<?php echo htmlspecialchars($skill['id']); ?>', '<?php echo addslashes($skill['name']); ?>', '<?php echo addslashes($skill['code']); ?>', '<?php echo addslashes($skillTargetUrl); ?>', this)" title="Bookmark this skill" aria-label="Bookmark skill <?php echo htmlspecialchars($skill['name']); ?>">
                                         <i class="far fa-bookmark"></i>
                                     </button>
                                     <a href="/assessment/#standard=<?php echo urlencode($skill['code']); ?>" class="skill-quick-test-btn" title="Practice or test this standard" aria-label="Test standard <?php echo htmlspecialchars($skill['code']); ?>">

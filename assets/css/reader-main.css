@@ -323,5 +323,35 @@ body.theme-sepia .toc-time {
     color: #7c6d5e !important;
 }
 
+/* ==========================================================================
+   Zen / Distraction-Free Reading Mode
+   ========================================================================== */
+body.zen-mode .header-main,
+body.zen-mode .breadcrumb-nav,
+body.zen-mode .library-sidebar,
+body.zen-mode .fixed-tools-wrapper,
+body.zen-mode .footer-main,
+body.zen-mode .announcement-banner,
+body.zen-mode .scroll-progress-container {
+    display: none !important;
+}
+
+body.zen-mode .reader-main-layout {
+    max-width: 860px !important;
+    margin: 2rem auto 6rem auto !important;
+    padding: 0 1.5rem !important;
+}
+
+body.zen-mode #reader-controls {
+    position: sticky;
+    top: 1rem;
+    z-index: 50;
+    backdrop-filter: blur(12px);
+    background: color-mix(in srgb, var(--color-bg-surface) 85%, transparent);
+    box-shadow: var(--shadow-md);
+    border-radius: var(--radius-xl);
+}
+
+
 
 

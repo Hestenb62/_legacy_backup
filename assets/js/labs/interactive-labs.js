@@ -446,9 +446,32 @@
         });
       }
     }
+
+    exportLabToScratchpad(labName, noteContent) {
+      try {
+        const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        const entry = `\n\n--- 🧪 ${labName} Lab Finding (${time}) ---\n${noteContent}\n`;
+        const existing = localStorage.getItem('hl_scratchpad_notes') || '';
+        localStorage.setItem('hl_scratchpad_notes', existing + entry);
+
+        const padEl = document.getElementById('scratchpad-textarea');
+        if (padEl) padEl.value = localStorage.getItem('hl_scratchpad_notes');
+
+        if (typeof window.announceA11y === 'function') {
+          window.announceA11y(`Saved ${labName} findings to scratchpad.`);
+        }
+        if (typeof window.showMessageBox === 'function') {
+          window.showMessageBox(`Saved ${labName} findings to your Scratchpad notes! (Alt+S)`);
+        }
+        this.playSuccess();
+      } catch (e) {
+        console.warn('Could not save lab note:', e);
+      }
+    }
   }
 
   document.addEventListener('DOMContentLoaded', () => {
     window.interactiveLabs = new InteractiveLabs();
+    window.exportLabToScratchpad = (name, text) => window.interactiveLabs?.exportLabToScratchpad(name, text);
   });
 })();

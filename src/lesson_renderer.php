@@ -9,19 +9,93 @@ if (!defined('ABSPATH')) {
 }
 
 // 1. Load Lesson Data
-$lessonsData = json_decode(file_get_contents(ABSPATH . 'assets/data/lessons.json'), true);
-$lessonId = $_GET['id'] ?? '';
+$lessonsFile = ABSPATH . 'assets/data/lessons.json';
+$lessonsData = file_exists($lessonsFile) ? json_decode(file_get_contents($lessonsFile), true) : ['lessons' => []];
 
-if (!isset($lessonsData['lessons'][$lessonId])) {
-    http_response_code(404);
-    include ABSPATH . 'src/header.php';
-    echo "<main class='container'><div class='error-card'><h1>Lesson Not Found</h1><p>The requested lesson could not be located.</p></div></main>";
-    include ABSPATH . 'src/footer.php';
-    exit;
+if (empty($lessonId)) {
+    if (!empty($_GET['id'])) {
+        $lessonId = preg_replace('/[^a-zA-Z0-9\-_]/', '', trim($_GET['id']));
+    } elseif (!empty($_GET['lesson'])) {
+        $lessonId = preg_replace('/[^a-zA-Z0-9\-_]/', '', trim($_GET['lesson']));
+    } elseif (!empty($_SERVER['QUERY_STRING']) && !str_contains($_SERVER['QUERY_STRING'], '=')) {
+        $lessonId = preg_replace('/[^a-zA-Z0-9\-_]/', '', trim(explode('&', $_SERVER['QUERY_STRING'])[0]));
+    } else {
+        $lessonId = basename($_SERVER['PHP_SELF'], '.php');
+    }
 }
 
-$lesson = $lessonsData['lessons'][$lessonId];
-$meta = $lesson['meta'];
+// 2. Fetch or dynamically scaffold lesson
+if (isset($lessonsData['lessons'][$lessonId])) {
+    $lesson = $lessonsData['lessons'][$lessonId];
+    $meta = $lesson['meta'];
+} else {
+    // Intelligent Curriculum Scaffolder for all standards
+    $parts = explode('-', $lessonId);
+    $rawLevel = strtolower($parts[0] ?? 'k');
+    $rawSubj = strtolower($parts[1] ?? 'math');
+    $rawMod = strtoupper($parts[2] ?? 'M1');
+    $rawTopic = strtoupper($parts[3] ?? 'A');
+    $rawLesson = $parts[4] ?? '1';
+
+    $gradeNames = [
+        'a' => 'Level A (Pre-K)',
+        'b' => 'Level B (Kindergarten)',
+        'c' => 'Level C (1st Grade)',
+        'd' => 'Level D (2nd Grade)',
+        'e' => 'Level E (3rd Grade)',
+        'f' => 'Level F (4th Grade)',
+        'g' => 'Level G (5th Grade)',
+        'h' => 'Level H (6th Grade)',
+        'i' => 'Level I (7th Grade)',
+        'j' => 'Level J (8th Grade)',
+        'k' => 'Level K (Grade 9)',
+        'l' => 'Level L (Grade 10)',
+        'm' => 'Level M (Grade 11)',
+        'n' => 'Level N (Grade 12)',
+        'o' => 'Level O (AP Prep)'
+    ];
+    $subjConfig = [
+        'math' => ['name' => 'Mathematics', 'icon' => 'fa-calculator', 'color' => '#3b82f6'],
+        'ela' => ['name' => 'English Language Arts', 'icon' => 'fa-book-open', 'color' => '#ec4899'],
+        'sci' => ['name' => 'Science Inquiry', 'icon' => 'fa-flask', 'color' => '#10b981'],
+        'science' => ['name' => 'Science Inquiry', 'icon' => 'fa-flask', 'color' => '#10b981'],
+        'soc' => ['name' => 'Social Studies & Civics', 'icon' => 'fa-landmark', 'color' => '#f59e0b'],
+        'social' => ['name' => 'Social Studies & Civics', 'icon' => 'fa-landmark', 'color' => '#f59e0b']
+    ];
+
+    $levelDisplay = $gradeNames[$rawLevel] ?? ('Level ' . strtoupper($rawLevel));
+    $subjData = $subjConfig[$rawSubj] ?? ['name' => ucfirst($rawSubj), 'icon' => 'fa-book', 'color' => '#6366f1'];
+    $codeStr = strtoupper(str_replace('-', '.', $lessonId));
+
+    $meta = [
+        'title' => "{$subjData['name']}: {$rawMod} Topic {$rawTopic} • Lesson {$rawLesson}",
+        'description' => "Standard-aligned interactive curriculum practice and core concept reinforcement for {$levelDisplay}.",
+        'badge' => "{$subjData['name']} {$codeStr}",
+        'badgeIcon' => $subjData['icon']
+    ];
+
+    $lesson = [
+        'meta' => $meta,
+        'overview' => [
+            'title' => "Core Learning Objectives & Overview",
+            'pill' => "{$levelDisplay} • {$subjData['name']}",
+            'text' => "In this lesson, explore the essential concepts of {$rawMod} Topic {$rawTopic}. Build mental models through multi-sensory examples, track your personal study notes in the scratchpad, and verify your comprehension using the docked runner.",
+            'outcomes' => [
+                "Identify and interpret the key structural principles of Topic {$rawTopic}.",
+                "Apply systematic reasoning and problem-solving steps to real-world models.",
+                "Verify understanding and quantify outcomes using analytical reasoning."
+            ],
+            'teacherInsight' => "Encourage students to use the digital scratchpad (Alt+S) and reading mask (Alt+M) to scaffold multi-step problems and reduce visual crowding."
+        ],
+        'content' => [],
+        'vocabulary' => [
+            ['term' => 'Core Concept', 'definition' => 'The foundational idea or principle anchoring this standard competency.'],
+            ['term' => 'Constraint', 'definition' => 'A limit, rule, or boundary condition governing a system or mathematical equation.'],
+            ['term' => 'Evidence', 'definition' => 'Data, observations, or textual proof utilized to support a reasoned hypothesis or conclusion.'],
+            ['term' => 'Synthesis', 'definition' => 'Combining multiple pieces of information or principles into a cohesive understanding.']
+        ]
+    ];
+}
 
 // Set Page Meta
 $pageTitle = $meta['title'] . " | Hesten's Learning";
@@ -104,8 +178,16 @@ include ABSPATH . 'src/header.php';
                     <?php endforeach; ?>
                 </div>
             </div>
-        </section>
     </div>
 </main>
+
+<?php
+$levelId = $rawLevel ?? 'k';
+$levelUrl = '/levels/' . ($rawLevel ?? 'k') . '.php';
+$lessonCode = strtoupper(str_replace('-', '.', $lessonId));
+$lessonTitle = $meta['title'] ?? 'Curriculum Lesson';
+$lessonStandard = 'CCSS.' . strtoupper($rawSubj ?? 'MATH') . '.' . strtoupper($rawLevel ?? 'K') . '.' . strtoupper($rawMod ?? 'M1');
+include ABSPATH . 'src/lesson_runner.php';
+?>
 
 <?php include ABSPATH . 'src/footer.php'; ?>

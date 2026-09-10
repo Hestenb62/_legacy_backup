@@ -195,6 +195,15 @@ $firstDoc = $docs[0] ?? null;
                 </div>
             </div>
         </div>
+
+        <div class="upd-feed-badge-row" style="margin-top: 1.25rem; display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap;">
+            <a href="/updates/feed.php?format=rss" class="upd-btn-action" style="text-decoration: none; font-size: 0.8rem; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.35rem 0.85rem; border-radius: 9999px; background: rgba(245, 158, 11, 0.15); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3);" title="Subscribe via RSS 2.0 Feed" target="_blank" rel="noopener">
+                <i class="fas fa-rss"></i> RSS Feed
+            </a>
+            <a href="/updates/feed.php?format=json" class="upd-btn-action" style="text-decoration: none; font-size: 0.8rem; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.35rem 0.85rem; border-radius: 9999px; background: rgba(59, 130, 246, 0.15); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.3);" title="Programmatic JSON Feed" target="_blank" rel="noopener">
+                <i class="fas fa-code"></i> JSON API
+            </a>
+        </div>
     </div>
 </header>
 
@@ -298,6 +307,9 @@ $firstDoc = $docs[0] ?? null;
                     <button type="button" id="btn-view-raw-md" class="upd-btn-action" title="View or copy raw Markdown">
                         <i class="fab fa-markdown"></i> Raw Markdown
                     </button>
+                    <a href="/updates/feed.php?format=rss" class="upd-btn-action" title="Subscribe to RSS 2.0 Feed" target="_blank" rel="noopener">
+                        <i class="fas fa-rss"></i> RSS
+                    </a>
                 </div>
             </div>
             <h1 class="upd-viewer-title" id="viewer-title">Loading document...</h1>

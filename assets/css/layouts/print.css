@@ -162,4 +162,16 @@
     a[href^="javascript:"]:after {
         content: "";
     }
+
+    /* 8. Assessment Worksheets & Diagnostic Cards */
+    .worksheet-question-card,
+    .worksheet-item,
+    .mastery-report-card,
+    .mastery-printable-document .question-block,
+    .assessment-question-card,
+    .diag-question-card {
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+        margin-bottom: 1.5rem !important;
+    }
 }

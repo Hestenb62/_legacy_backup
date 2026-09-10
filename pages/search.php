@@ -37,8 +37,21 @@ if ($query !== '') {
             $parts = explode('-', $base);
             if (count($parts) >= 4) {
                 $gradeMap = [
-                    'k' => 'Kindergarten', '1' => '1st Grade', '2' => '2nd Grade',
-                    '3' => '3rd Grade', '4' => '4th Grade', '5' => '5th Grade'
+                    'a' => 'Level A (Pre-K)',
+                    'b' => 'Level B (Kindergarten)',
+                    'c' => 'Level C (1st Grade)',
+                    'd' => 'Level D (2nd Grade)',
+                    'e' => 'Level E (3rd Grade)',
+                    'f' => 'Level F (4th Grade)',
+                    'g' => 'Level G (5th Grade)',
+                    'h' => 'Level H (6th Grade)',
+                    'i' => 'Level I (7th Grade)',
+                    'j' => 'Level J (8th Grade)',
+                    'k' => 'Level K (Grade 9)',
+                    'l' => 'Level L (Grade 10)',
+                    'm' => 'Level M (Grade 11)',
+                    'n' => 'Level N (Grade 12)',
+                    'o' => 'Level O (AP Prep)'
                 ];
                 $subjectMap = [
                     'math' => 'Math', 'ela' => 'ELA', 'sci' => 'Science', 'soc' => 'Social Studies'

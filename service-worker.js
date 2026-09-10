@@ -1,4 +1,4 @@
-const CACHE_NAME = 'hestens-learning-v13';
+const CACHE_NAME = 'hestens-learning-v14';
 const ASSETS_TO_CACHE = [
 
   // Main Directory Pages & Manifest
@@ -56,10 +56,10 @@ const ASSETS_TO_CACHE = [
   '/assets/js/offline-status.js',
   '/assets/js/offline-storage-manager.js',
   // Statutory & Standards Research Documents
-  '/assets/texts/accessability-wcag-2-1-aa.md',
-  '/assets/texts/accessability-wcag-aaa.md',
-  '/assets/texts/accessability-section-508.md',
-  '/assets/texts/accessability-udl.md',
+  '/assets/text/accessability-wcag-2-1-aa.md',
+  '/assets/text/accessability-wcag-aaa.md',
+  '/assets/text/accessability-section-508.md',
+  '/assets/text/accessability-udl.md',
   '/assets/js/global-error-handler.js',
   '/assets/js/global-standard.js',
   '/assets/js/global-study-tools.js',

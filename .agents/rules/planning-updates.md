@@ -1,3 +1,7 @@
+---
+trigger: always_on
+---
+
 # Rule: Mandatory Persistence of Planning & Walkthrough Documents
 
 ## Invariant Rule

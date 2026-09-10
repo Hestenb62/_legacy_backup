@@ -267,7 +267,7 @@ if (!function_exists('assetVersion')) {
                     <i class="fas fa-bars"></i>
                 </button>
                 
-                <div class="header-nav-content" id="nav-content" style="display: none;">
+                <div class="header-nav-content" id="nav-content">
                     <div class="header-nav-links">
                         <a href="/" class="nav-link"><i class="fas fa-home" style="margin-right: 0.25rem; opacity: 0.7;"></i> Home</a>
                         <a href="/assessment" class="nav-link"><i class="fas fa-tasks" style="margin-right: 0.25rem; opacity: 0.7;"></i> Assessment</a>

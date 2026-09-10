@@ -1208,6 +1208,16 @@ if (typeof finishQuiz === "function") {
       // Save Standard Mastery records to localStorage
       saveStandardMasteryResults();
 
+      // Dispatch Assessment Completed Event for Quest & XP tracking
+      window.dispatchEvent(new CustomEvent('hl:assessment-complete', {
+        detail: {
+          score: scoreCount,
+          total: window.quizResultsData ? window.quizResultsData.length : 10,
+          scorePct: Math.round(percentage),
+          title: (document.getElementById('header-grade-name')?.innerText || 'Grade') + ' Assessment'
+        }
+      }));
+
       // Trigger Confetti if score >= 80%
       if (percentage >= 80 && typeof confetti === "function") {
         confetti({

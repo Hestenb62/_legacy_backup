@@ -65,6 +65,12 @@
     transition: all 0.3s ease;
     margin-top: var(--space-4);
   }
+
+  @media (max-width: 1023px) {
+    .header-nav-content:not(.open):not([style*="display: flex"]) {
+      display: none;
+    }
+  }
   
   @media (min-width: 1024px) {
     .header-nav-content {

@@ -153,12 +153,19 @@
         }
     ];
 
+    function getLocalDateString(d = new Date()) {
+        const year = d.getFullYear();
+        const month = String(d.getMonth() + 1).padStart(2, '0');
+        const day = String(d.getDate()).padStart(2, '0');
+        return `${year}-${month}-${day}`;
+    }
+
     let userProfile = {
         xp: 150,
         level: 2,
         totalStudyMinutes: 45,
         streakDays: 1,
-        lastActiveDate: new Date().toISOString().slice(0, 10),
+        lastActiveDate: getLocalDateString(),
         unlockedBadges: ['first-steps'],
         completedQuests: [],
         dailyQuests: [],
@@ -205,7 +212,7 @@
     }
 
     function ensureDailyQuests() {
-        const today = new Date().toISOString().slice(0, 10);
+        const today = getLocalDateString();
         if (userProfile.dailyQuestsDate !== today || !userProfile.dailyQuests || userProfile.dailyQuests.length === 0) {
             userProfile.dailyQuestsDate = today;
             userProfile.dailyQuests = [
@@ -613,6 +620,17 @@
                 window.toggleQuestStudio();
             } else if (e.key === 'Escape' && modal && (modal.classList.contains('active') || modal.style.display === 'flex')) {
                 window.closeQuestStudio();
+            }
+        });
+
+        // Assessment completion auto-reward listener
+        window.addEventListener('hl:assessment-complete', (e) => {
+            const detail = e.detail || {};
+            const scorePct = detail.scorePct ?? 0;
+            const xpAward = Math.max(25, Math.round((detail.score || 1) * 15));
+            addXP(xpAward, detail.title || 'Assessment Knowledge Check');
+            if (scorePct >= 100) {
+                unlockBadge('quiz-sharpshooter');
             }
         });
 

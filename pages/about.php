@@ -46,8 +46,8 @@ include '../src/header.php';
             <h2 class="section-heading">Our Mission</h2>
             <p class="section-paragraph">Our mission is to provide the best services to our customers and
                 ensure their satisfaction. We strive to innovate and continuously improve our offerings to meet the
-                evolving needs of our clients. Specifically, we focus on **empowering students with learning
-                disabilities** through personalized and research-backed educational experiences. <a href="/pages/mission.php"
+                evolving needs of our clients. Specifically, we focus on <strong>empowering students with learning
+                disabilities</strong> through personalized and research-backed educational experiences. <a href="/pages/mission.php"
                     class="section-link">Read our full Mission & Vision &rsaquo;</a></p>
         </section>
 

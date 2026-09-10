@@ -143,8 +143,20 @@ if (!isset($practiceQuestions) || empty($practiceQuestions)) {
     const LEVEL_ID = <?= json_encode($levelId) ?>;
     const STANDARD_CODE = <?= json_encode($lessonStandard) ?>;
     const PRACTICE_QUESTIONS = <?= json_encode($practiceQuestions) ?>;
+    const PREV_URL = <?= json_encode($prevLessonUrl) ?>;
+    const NEXT_URL = <?= json_encode($nextLessonUrl) ?>;
 
     let userAnswers = {};
+
+    // Keyboard navigation [ and ]
+    document.addEventListener('keydown', function(e) {
+        if (e.target && e.target.matches('input, textarea, select, [contenteditable="true"]')) return;
+        if (e.key === '[' && PREV_URL && PREV_URL !== '#' && PREV_URL !== '') {
+            window.location.href = PREV_URL;
+        } else if (e.key === ']' && NEXT_URL && NEXT_URL !== '#' && NEXT_URL !== '') {
+            window.location.href = NEXT_URL;
+        }
+    });
 
     function initRunner() {
         // 1. Sync completion status from localStorage

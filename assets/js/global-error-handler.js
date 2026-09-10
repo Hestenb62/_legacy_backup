@@ -211,6 +211,25 @@
                 background: linear-gradient(135deg, #dc2626, #b91c1c);
                 box-shadow: 0 6px 18px rgba(239, 68, 68, 0.45);
             }
+            .global-error-suppress-row {
+                margin: -0.5rem 0 1.15rem 0;
+                text-align: left;
+                font-size: 0.8rem;
+                color: #64748b;
+            }
+            .global-error-checkbox-label {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;
+                cursor: pointer;
+                user-select: none;
+            }
+            .global-error-checkbox-label input[type="checkbox"] {
+                cursor: pointer;
+                accent-color: #ef4444;
+                width: 15px;
+                height: 15px;
+            }
 
             /* Dark theme overrides */
             html[data-theme="dark"] #global-error-card,
@@ -224,7 +243,10 @@
             }
             html[data-theme="dark"] .global-error-desc,
             body.theme-dark .global-error-desc,
-            body.theme-midnight .global-error-desc {
+            body.theme-midnight .global-error-desc,
+            html[data-theme="dark"] .global-error-suppress-row,
+            body.theme-dark .global-error-suppress-row,
+            body.theme-midnight .global-error-suppress-row {
                 color: #94a3b8 !important;
             }
             html[data-theme="dark"] #global-error-dismiss,
@@ -290,6 +312,12 @@
                         <p id="global-error-message"></p>
                         <p id="global-error-code"></p>
                     </div>
+                    <div class="global-error-suppress-row">
+                        <label class="global-error-checkbox-label" for="global-error-suppress-checkbox">
+                            <input type="checkbox" id="global-error-suppress-checkbox">
+                            <span>Don't show error dialogs again this session</span>
+                        </label>
+                    </div>
                     <div class="global-error-actions">
                         <button type="button" id="global-error-dismiss" class="global-error-btn">
                             <i class="fas fa-times mr-1"></i> Dismiss
@@ -309,6 +337,15 @@
     function closeErrorModal() {
         const modal = document.getElementById('global-error-modal');
         if (!modal) return;
+
+        // Check if suppress option was selected
+        const suppressCheckbox = document.getElementById('global-error-suppress-checkbox');
+        if (suppressCheckbox && suppressCheckbox.checked) {
+            try {
+                sessionStorage.setItem('hl_suppress_errors', 'true');
+            } catch(e) {}
+        }
+
         modal.classList.remove('is-visible');
         document.body.style.overflow = '';
         setTimeout(() => {
@@ -330,6 +367,25 @@
             const dismissBtn = document.getElementById('global-error-dismiss');
             const reloadBtn = document.getElementById('global-error-reload');
             const copyBtn = document.getElementById('global-error-copy');
+            const suppressCheckbox = document.getElementById('global-error-suppress-checkbox');
+
+            if (suppressCheckbox) {
+                try {
+                    if (sessionStorage.getItem('hl_suppress_errors') === 'true') {
+                        suppressCheckbox.checked = true;
+                    }
+                } catch(e) {}
+
+                suppressCheckbox.addEventListener('change', function() {
+                    try {
+                        if (this.checked) {
+                            sessionStorage.setItem('hl_suppress_errors', 'true');
+                        } else {
+                            sessionStorage.removeItem('hl_suppress_errors');
+                        }
+                    } catch(e) {}
+                });
+            }
 
             // 1. Close Button
             if (closeBtn) {
@@ -399,6 +455,13 @@
     };
 
     function displayError(message, source, lineno, colno, errorObj) {
+        try {
+            if (sessionStorage.getItem('hl_suppress_errors') === 'true') {
+                console.warn('[GlobalErrorHandler] Dialog suppressed due to user session preference:', message, source);
+                return;
+            }
+        } catch(e) {}
+
         initErrorModal();
 
         const modal = document.getElementById('global-error-modal');
@@ -478,6 +541,13 @@
 
     function shouldIgnoreError(msg, source) {
         if (!msg) return true;
+
+        try {
+            if (sessionStorage.getItem('hl_suppress_errors') === 'true') {
+                return true;
+            }
+        } catch(e) {}
+
         const lowerMsg = String(msg).toLowerCase();
         const lowerSrc = source ? String(source).toLowerCase() : '';
 

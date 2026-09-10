@@ -94,7 +94,8 @@ include '../src/header.php';
         <!-- Actions -->
         <div class="wb-actions">
             <div id="math-feedback-msg" class="feedback-container"></div>
-            <div style="display: flex; gap: 0.75rem;">
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                <button type="button" onclick="const t = document.getElementById('math-fraction-total')?.innerText || '0%'; window.exportLabToScratchpad && window.exportLabToScratchpad('Fraction Strips', 'Target 1.0 Whole | Total assembled: ' + t);" class="btn" style="padding: 0.6rem 1rem; border-radius: var(--radius-md); background: var(--color-bg-base); border: 1px solid var(--color-border); color: var(--color-text-main); font-weight: 800; cursor: pointer;" title="Save findings to digital scratchpad"><i class="fas fa-pen"></i> Note</button>
                 <button type="button" id="math-reset-btn" class="btn" style="padding: 0.6rem 1.25rem; border-radius: var(--radius-md); background: var(--color-bg-base); border: 1px solid var(--color-border); color: var(--color-text-main); font-weight: 800; cursor: pointer;">Reset</button>
                 <button type="button" id="math-check-btn" class="btn" style="padding: 0.6rem 1.5rem; border-radius: var(--radius-md); background: var(--color-primary); color: white; border: none; font-weight: 800; cursor: pointer;">Check Equivalence</button>
             </div>
@@ -158,7 +159,8 @@ include '../src/header.php';
 
         <div class="wb-actions">
             <div id="ela-feedback-msg" class="feedback-container"></div>
-            <div style="display: flex; gap: 0.75rem;">
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                <button type="button" onclick="const w = document.getElementById('ela-full-word-display')?.innerText || '---'; window.exportLabToScratchpad && window.exportLabToScratchpad('Phonics & Morphemes', 'Constructed word analysis: ' + w);" class="btn" style="padding: 0.6rem 1rem; border-radius: var(--radius-md); background: var(--color-bg-base); border: 1px solid var(--color-border); color: var(--color-text-main); font-weight: 800; cursor: pointer;" title="Save findings to digital scratchpad"><i class="fas fa-pen"></i> Note</button>
                 <button type="button" id="ela-speak-btn" class="btn" style="padding: 0.6rem 1.25rem; border-radius: var(--radius-md); background: var(--color-bg-base); border: 1px solid var(--color-border); color: var(--color-text-main); font-weight: 800; cursor: pointer;"><i class="fas fa-volume-up"></i> Pronounce</button>
                 <button type="button" id="ela-clear-btn" class="btn" style="padding: 0.6rem 1.25rem; border-radius: var(--radius-md); background: var(--color-bg-base); border: 1px solid var(--color-border); color: var(--color-text-main); font-weight: 800; cursor: pointer;">Clear</button>
                 <button type="button" id="ela-check-btn" class="btn" style="padding: 0.6rem 1.5rem; border-radius: var(--radius-md); background: var(--color-primary); color: white; border: none; font-weight: 800; cursor: pointer;">Validate Word</button>
@@ -224,7 +226,10 @@ include '../src/header.php';
             <div id="sci-balance-status" class="feedback-container">
                 <span style="color: var(--color-text-muted);">Scale is empty. Add masses to test balance!</span>
             </div>
-            <button type="button" id="sci-reset-btn" class="btn" style="padding: 0.6rem 1.25rem; border-radius: var(--radius-md); background: var(--color-bg-base); border: 1px solid var(--color-border); color: var(--color-text-main); font-weight: 800; cursor: pointer;">Reset Scale</button>
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                <button type="button" onclick="const l = document.getElementById('sci-left-mass-val')?.innerText || '0'; const r = document.getElementById('sci-right-mass-val')?.innerText || '0'; window.exportLabToScratchpad && window.exportLabToScratchpad('Torque Balance', 'Left pan: ' + l + ' vs Right pan: ' + r);" class="btn" style="padding: 0.6rem 1rem; border-radius: var(--radius-md); background: var(--color-bg-base); border: 1px solid var(--color-border); color: var(--color-text-main); font-weight: 800; cursor: pointer;" title="Save findings to digital scratchpad"><i class="fas fa-pen"></i> Note</button>
+                <button type="button" id="sci-reset-btn" class="btn" style="padding: 0.6rem 1.25rem; border-radius: var(--radius-md); background: var(--color-bg-base); border: 1px solid var(--color-border); color: var(--color-text-main); font-weight: 800; cursor: pointer;">Reset Scale</button>
+            </div>
         </div>
     </div>
 
@@ -248,7 +253,8 @@ include '../src/header.php';
 
         <div class="wb-actions">
             <div id="soc-timeline-feedback" class="feedback-container"></div>
-            <div style="display: flex; gap: 0.75rem;">
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                <button type="button" onclick="window.exportLabToScratchpad && window.exportLabToScratchpad('Chrono-Timeline', 'Milestones: 1775 Lexington & Concord -> 1776 Dec of Independence -> 1787 Constitutional Convention -> 1791 Bill of Rights');" class="btn" style="padding: 0.6rem 1rem; border-radius: var(--radius-md); background: var(--color-bg-base); border: 1px solid var(--color-border); color: var(--color-text-main); font-weight: 800; cursor: pointer;" title="Save findings to digital scratchpad"><i class="fas fa-pen"></i> Note</button>
                 <button type="button" id="soc-reset-timeline" class="btn" style="padding: 0.6rem 1.25rem; border-radius: var(--radius-md); background: var(--color-bg-base); border: 1px solid var(--color-border); color: var(--color-text-main); font-weight: 800; cursor: pointer;">Shuffle Again</button>
                 <button type="button" id="soc-check-timeline" class="btn" style="padding: 0.6rem 1.5rem; border-radius: var(--radius-md); background: var(--color-primary); color: white; border: none; font-weight: 800; cursor: pointer;">Verify Sequence</button>
             </div>

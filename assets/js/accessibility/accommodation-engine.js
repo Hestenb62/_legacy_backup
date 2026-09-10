@@ -158,7 +158,9 @@
             lavender: 'rgba(221, 214, 254, '
           };
           const baseRgb = colorMap[this.profile.tintColor] || colorMap.peach;
-          this.tintEl.style.backgroundColor = `${baseRgb}${this.profile.tintOpacity})`;
+          // Contrast Guardian: cap opacity at 0.38 to preserve WCAG AA text contrast
+          const safeOpacity = Math.min(0.38, parseFloat(this.profile.tintOpacity) || 0.25);
+          this.tintEl.style.backgroundColor = `${baseRgb}${safeOpacity})`;
         } else {
           this.tintEl.classList.remove('active');
           this.tintEl.style.backgroundColor = 'transparent';
@@ -540,14 +542,14 @@
         }
       });
 
-      // 2. Audio playback coordination
-      window.addEventListener('hl-audio-play', (e) => {
-        if (e.detail && e.detail.source !== 'accommodation-engine') {
-          if (this.profile.soundscapeActive !== 'none') {
-            this.profile.soundscapeActive = 'none';
-            this.stopSoundscape();
+      // 3. Cross-tab localStorage synchronization
+      window.addEventListener('storage', (e) => {
+        if (e.key === STORAGE_KEY && e.newValue) {
+          try {
+            this.profile = Object.assign({}, defaultProfile, JSON.parse(e.newValue));
+            this.applyAll();
             this.syncUI();
-          }
+          } catch (err) {}
         }
       });
     }

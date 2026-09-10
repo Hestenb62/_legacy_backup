@@ -774,16 +774,20 @@ body.zen-mode {
             zenBtn.addEventListener('click', () => {
                 const isZen = document.body.classList.toggle('zen-mode');
                 zenBtn.innerHTML = isZen ? '<i class="fas fa-compress"></i>' : '<i class="fas fa-expand"></i>';
-                zenBtn.title = isZen ? 'Exit Zen Mode (Esc)' : 'Toggle Distraction-Free Zen Mode (Esc to Exit)';
+                zenBtn.title = isZen ? 'Exit Zen Mode (Esc or Z)' : 'Toggle Distraction-Free Zen Mode (Z)';
                 if (window.announceA11y) {
                     window.announceA11y(isZen ? 'Distraction-free zen mode activated' : 'Zen mode deactivated');
                 }
             });
             document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && document.body.classList.contains('zen-mode')) {
+                if (e.target && e.target.matches('input, textarea, select, [contenteditable="true"]')) return;
+                if ((e.key === 'z' || e.key === 'Z') && !e.ctrlKey && !e.metaKey && !e.altKey) {
+                    e.preventDefault();
+                    zenBtn.click();
+                } else if (e.key === 'Escape' && document.body.classList.contains('zen-mode')) {
                     document.body.classList.remove('zen-mode');
                     zenBtn.innerHTML = '<i class="fas fa-expand"></i>';
-                    zenBtn.title = 'Toggle Distraction-Free Zen Mode (Esc to Exit)';
+                    zenBtn.title = 'Toggle Distraction-Free Zen Mode (Z)';
                 }
             });
         }
