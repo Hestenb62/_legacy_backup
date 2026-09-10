@@ -174,68 +174,97 @@ include '../src/header.php';
                 </div>
             </section>
 
-            <!-- Tools Section (Bento Grid) -->
+            <!-- Essential Tools & Student Portal Section (Bento Grid) -->
             <section id="tools" class="parents-section">
                 <div class="parents-section-header">
-                    <h2 class="parents-section-title">Essential Tools</h2>
+                    <h2 class="parents-section-title">
+                        <i class="fas fa-toolbox" style="color: #8b5cf6;"></i> Essential Tools &amp; Student Portal
+                    </h2>
+                    <p class="parents-section-desc">Key academic dashboards, curriculum builders, and printable resources to power your homeschool environment.</p>
                 </div>
 
                 <div class="parents-tools-grid">
-                    <!-- Featured Tool: Progress & Competency Dashboard -->
+                    <!-- Featured Hero Card: Student Competency & Academic Portal -->
                     <div class="parents-tool-featured">
                         <div class="parents-tool-glow"></div>
-                        <div class="parents-tool-featured-content">
-                            <span class="parents-tool-badge">
-                                <i class="fas fa-star"></i> Student Portal
-                            </span>
-                            <h3 class="parents-tool-title-featured">Competency Reports</h3>
-                            <p class="parents-tool-desc-featured">Track letter grades, daily quests, GPA, and print official report cards.</p>
-                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.5rem;">
-                            <a href="/pages/profile.php" class="parents-tool-btn">
-                                View Report Card <i class="fas fa-arrow-right"></i>
+                        <div class="parents-tool-featured-top">
+                            <div class="parents-tool-badges-row">
+                                <span class="parents-tool-badge">
+                                    <i class="fas fa-user-graduate"></i> Student Portal &amp; Gradebook
+                                </span>
+                                <span class="parents-tool-live-pill">
+                                    <span class="live-dot"></span> Live Transcripts
+                                </span>
+                            </div>
+                            <h3 class="parents-tool-title-featured">Student Competency &amp; Academic Honors Dashboard</h3>
+                            <p class="parents-tool-desc-featured">
+                                Monitor real-time letter grades, GPA calculation, daily quest milestones, and printable official report cards formatted for state compliance and homeschool portfolios.
+                            </p>
+                        </div>
+
+                        <!-- Highlights Micro-Row -->
+                        <div class="parents-tool-metrics-preview">
+                            <div class="tool-metric-item">
+                                <span class="tool-metric-val"><i class="fas fa-chart-pie" style="color:#60a5fa;"></i> CCSS &amp; NGSS</span>
+                                <span class="tool-metric-lbl">Standards Mastery</span>
+                            </div>
+                            <div class="tool-metric-item">
+                                <span class="tool-metric-val"><i class="fas fa-award" style="color:#fbbf24;"></i> 4.0 Scale</span>
+                                <span class="tool-metric-lbl">Official GPA</span>
+                            </div>
+                            <div class="tool-metric-item">
+                                <span class="tool-metric-val"><i class="fas fa-file-invoice" style="color:#34d399;"></i> PDF &amp; Print</span>
+                                <span class="tool-metric-lbl">Report Cards</span>
+                            </div>
+                        </div>
+
+                        <!-- Action Buttons Row -->
+                        <div class="parents-tool-actions-row">
+                            <a href="/pages/profile.php" class="parents-tool-btn parents-tool-btn-primary">
+                                <i class="fas fa-user-circle"></i> Open Student Gradebook <i class="fas fa-arrow-right"></i>
                             </a>
-                            <button type="button" class="parents-tool-btn" style="background: linear-gradient(135deg, #f59e0b, #d97706); cursor: pointer; border: none;" onclick="window.openCertificateModal && window.openCertificateModal()">
-                                Print Diploma <i class="fas fa-award"></i>
+                            <button type="button" class="parents-tool-btn parents-tool-btn-gold" onclick="window.openCertificateModal && window.openCertificateModal()">
+                                <i class="fas fa-award"></i> Print Official Diploma
                             </button>
                         </div>
                     </div>
 
-                    <!-- Tool 2: 36-Week Pacing Guide -->
+                    <!-- Companion Tool 1: 36-Week Pacing Guide -->
                     <a href="/pages/teachers.php#pacing" class="parents-tool-card hover-lift">
-                        <div>
+                        <div class="parents-tool-card-content">
                             <div class="parents-tool-icon icon-purple">
                                 <i class="fas fa-calendar-check"></i>
                             </div>
-                            <h3 class="parents-tool-title">36-Week Pacing</h3>
-                            <p class="parents-tool-desc">Structured quarter-by-quarter curriculum scope and print syllabus.</p>
+                            <h3 class="parents-tool-title">36-Week Pacing Guide</h3>
+                            <p class="parents-tool-desc">Structured quarter-by-quarter curriculum scope, weekly milestones, and printable syllabus.</p>
                         </div>
                         <span class="parents-tool-action action-purple">
                             Open Pacing Guide <i class="fas fa-arrow-right"></i>
                         </span>
                     </a>
 
-                    <!-- Tool 3: Assignment Link Builder -->
+                    <!-- Companion Tool 2: Assignment & Quiz Builder -->
                     <a href="/pages/teachers.php#builder" class="parents-tool-card hover-lift">
-                        <div>
+                        <div class="parents-tool-card-content">
                             <div class="parents-tool-icon icon-teal">
                                 <i class="fas fa-magic"></i>
                             </div>
                             <h3 class="parents-tool-title">Assignment Builder</h3>
-                            <p class="parents-tool-desc">Generate targeted quiz URLs, 60s sprints, and Google Classroom links.</p>
+                            <p class="parents-tool-desc">Generate targeted quiz links, 60-second fluency sprints, and classroom assignments.</p>
                         </div>
                         <span class="parents-tool-action action-teal">
                             Build Assignment <i class="fas fa-arrow-right"></i>
                         </span>
                     </a>
 
-                    <!-- Tool 4: Printable Worksheets & Keys -->
+                    <!-- Companion Tool 3: Printable Worksheets & Rubrics -->
                     <a href="/assessment/" class="parents-tool-card hover-lift">
-                        <div>
+                        <div class="parents-tool-card-content">
                             <div class="parents-tool-icon icon-amber">
                                 <i class="fas fa-print"></i>
                             </div>
                             <h3 class="parents-tool-title">Printable Worksheets</h3>
-                            <p class="parents-tool-desc">Download paper test sheets with educator answer keys and explanations.</p>
+                            <p class="parents-tool-desc">Download clean 2-page practice packets with educator answer keys and scoring rubrics.</p>
                         </div>
                         <span class="parents-tool-action action-amber">
                             Generate Worksheets <i class="fas fa-arrow-right"></i>

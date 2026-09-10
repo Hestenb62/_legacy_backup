@@ -39,7 +39,8 @@ Delivered three major platform enhancements across **Hesten's Learning Platform*
   - Added tabs for "Daily Time Rhythm" and "36-Week Homeschool Checklist" in `#schedule`.
   - Implemented 5-Day Monday–Friday interactive checklist matrix across Math, ELA, Science, Social Studies, and Fluency Sprints, persisting progress to `localStorage` (`hesten_homeschool_checklist`).
   - Added `#certificates` section with interactive customizer (Student Name, Grade Level Pre-K to HS, Subject, Milestone Title, Honors Tier, Coach Signature) and live heraldic golden preview card.
-- **[MODIFY]** [`assets/css/pages/parents.css`](/assets/css/pages/parents.css): Added styles for `.schedule-tabs-bar`, `.weekly-matrix-toolbar`, `.week-days-grid`, `.week-day-col`, `.week-task-card`, `.certificate-customizer-card`, and `@media print` rules.
+  - **Restyled Essential Tools & Student Portal Bento Grid**: Transformed the Student Portal into a high-impact, full-width glassmorphic hero card featuring animated live status badges, standards & GPA micro-metrics chips, and dual action buttons (`Open Student Gradebook` and `Print Official Diploma`).
+- **[MODIFY]** [`assets/css/pages/parents.css`](/assets/css/pages/parents.css): Added styles for `.schedule-tabs-bar`, `.weekly-matrix-toolbar`, `.week-days-grid`, `.week-day-col`, `.week-task-card`, `.certificate-customizer-card`, `.parents-tool-featured`, `.parents-tool-metrics-preview`, `.parents-tool-btn-gold`, and `@media print` rules.
 - **[MODIFY]** [`assets/js/certificate-generator.js`](/assets/js/certificate-generator.js): Upgraded `openCertificateModal` to support dynamic grade levels, honors distinctions, custom issue dates, credential IDs, and customizable educator/parent signatures.
 
 ---
