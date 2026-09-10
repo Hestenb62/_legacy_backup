@@ -81,3 +81,43 @@ mjx-dialog,
   height: 0 !important;
   overflow: hidden !important;
 }
+
+/* ==========================================================================
+   Universal MathJax SVG Container Typography & Responsive Layout
+   ========================================================================== */
+mjx-container[jax="SVG"] {
+  outline: none;
+  font-family: inherit;
+}
+
+/* Inline Mathematical Expressions (Baseline Preservation) */
+mjx-container[jax="SVG"]:not([display="true"]) {
+  display: inline-block;
+  vertical-align: -0.22ex;
+  margin: 0 0.15em;
+  font-size: inherit;
+  line-height: 0;
+}
+
+/* Block / Display Mathematical Expressions (Centered & Responsive Overflow) */
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1.25rem auto;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.35rem 0.25rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+/* Vector Glyph Color & Sharpness */
+mjx-container[jax="SVG"] > svg {
+  fill: currentColor;
+  stroke: currentColor;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+

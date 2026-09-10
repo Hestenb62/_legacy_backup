@@ -1064,9 +1064,30 @@
 .roster-action-icon-btn.dossier-btn {
     color: #4f46e5;
     background: rgba(79, 70, 229, 0.1);
+    border: 1px solid rgba(79, 70, 229, 0.25);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
 }
 .roster-action-icon-btn.dossier-btn:hover {
-    background: rgba(79, 70, 229, 0.25);
+    background: rgba(79, 70, 229, 0.22);
+    border-color: #4f46e5;
+    transform: translateY(-1px);
+}
+
+.roster-student-cell.interactive-cell {
+    cursor: pointer;
+    border-radius: 0.5rem;
+    padding: 0.25rem 0.4rem;
+    margin: -0.25rem -0.4rem;
+    transition: background-color 0.15s ease;
+}
+.roster-student-cell.interactive-cell:hover {
+    background-color: rgba(99, 102, 241, 0.08);
+}
+.roster-student-cell.interactive-cell:hover .roster-student-name {
+    color: #4f46e5;
+    text-decoration: underline;
 }
 
 /* --- STUDENT DIAGNOSTIC DOSSIER MODAL --- */
@@ -1080,12 +1101,37 @@
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     z-index: 10000;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     padding: 1.5rem;
     overflow-y: auto;
+}
+
+.dossier-modal-overlay.active {
+    display: flex !important;
     animation: fadeInDossier 0.25s ease-out;
+}
+
+.dossier-close-btn {
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 9999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+.dossier-close-btn:hover {
+    background: rgba(239, 68, 68, 0.9);
+    border-color: #ef4444;
+    transform: rotate(90deg);
 }
 
 .dossier-modal-container {

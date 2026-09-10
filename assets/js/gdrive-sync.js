@@ -80,7 +80,8 @@ function maybeEnableButtons() {
         if (saveBtn) saveBtn.disabled = false;
         if (loadBtn) loadBtn.disabled = false;
         
-        const isAutoSync = localStorage.getItem('auto_sync_gdrive') === 'true';
+        const isAutoSync = localStorage.getItem('auto_sync_gdrive') === 'true' || 
+                           localStorage.getItem('gdrive_autosync_enabled') === 'true';
         if (toggle) {
             toggle.checked = isAutoSync;
         }
@@ -137,11 +138,13 @@ async function toggleAutoSync(enabled) {
                 if (resp && resp.error) {
                     console.warn('[GDrive Sync] Authorization cancelled or failed:', resp);
                     localStorage.setItem('auto_sync_gdrive', 'false');
+                    localStorage.setItem('gdrive_autosync_enabled', 'false');
                     if (toggle) toggle.checked = false;
                     updateSyncStatus('Sign-in cancelled', 'error');
                     return;
                 }
                 localStorage.setItem('auto_sync_gdrive', 'true');
+                localStorage.setItem('gdrive_autosync_enabled', 'true');
                 if (toggle) toggle.checked = true;
                 updateSyncStatus('Syncing to Google Drive...', 'syncing');
                 await saveToGoogleDrive(true);
@@ -150,12 +153,14 @@ async function toggleAutoSync(enabled) {
             tokenClient.requestAccessToken({ prompt: 'consent' });
         } else {
             localStorage.setItem('auto_sync_gdrive', 'true');
+            localStorage.setItem('gdrive_autosync_enabled', 'true');
             updateSyncStatus('Syncing to Google Drive...', 'syncing');
             await saveToGoogleDrive(true);
             updateSyncStatus('Connected & Synced', 'synced');
         }
     } else {
         localStorage.setItem('auto_sync_gdrive', 'false');
+        localStorage.setItem('gdrive_autosync_enabled', 'false');
         updateSyncStatus('Auto-Sync disabled', 'disabled');
     }
 }
@@ -364,7 +369,9 @@ window.loadFromGoogleDrive = loadFromGoogleDrive;
 
 // 9. Auto-Sync Trigger & Event Listeners
 function triggerAutoSync() {
-    if (localStorage.getItem('auto_sync_gdrive') !== 'true') return;
+    const isAutoSyncActive = localStorage.getItem('auto_sync_gdrive') === 'true' || 
+                             localStorage.getItem('gdrive_autosync_enabled') === 'true';
+    if (!isAutoSyncActive) return;
     if (!gapiInited || !gisInited) return;
 
     clearTimeout(gdriveAutoSyncDebounce);

@@ -814,6 +814,9 @@ include '../src/header.php';
     function saveAccommodations(arr) {
         try {
             localStorage.setItem(STORAGE_KEY_ACC, JSON.stringify(arr));
+            if (typeof window.hlBroadcastSync === 'function') {
+                window.hlBroadcastSync('accommodations', arr);
+            }
         } catch (e) {}
     }
 
@@ -983,6 +986,10 @@ include '../src/header.php';
     document.addEventListener('DOMContentLoaded', () => {
         loadSavedAccommodations();
         updateScheduleTimes();
+
+        window.addEventListener('hl:accommodations-updated', () => {
+            loadSavedAccommodations();
+        });
     });
 </script>
 

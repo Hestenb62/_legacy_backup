@@ -155,7 +155,9 @@
     window.gisLoaded = window.gisLoaded || function() { window._gisLoaded = true; };
     (function() {
         try {
-            const needsSync = localStorage.getItem('gdrive_autosync_enabled') === 'true' ||
+            const isAutoSyncActive = localStorage.getItem('auto_sync_gdrive') === 'true' ||
+                                     localStorage.getItem('gdrive_autosync_enabled') === 'true';
+            const needsSync = isAutoSyncActive ||
                               document.getElementById('gdrive-save-btn') ||
                               document.getElementById('gdrive-sync-status') ||
                               window.hlNeedsDriveSync;

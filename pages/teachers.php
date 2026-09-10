@@ -520,7 +520,7 @@ include '../src/header.php';
 <!-- ================================================================= -->
 <!-- STUDENT DIAGNOSTIC DOSSIER POPUP MODAL                            -->
 <!-- ================================================================= -->
-<div id="modal-student-dossier" class="dossier-modal-overlay" style="display: none;" role="dialog" aria-modal="true" aria-labelledby="dossier-student-name">
+<div id="modal-student-dossier" class="dossier-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="dossier-student-name">
     <div class="dossier-modal-container">
         <!-- Header Banner -->
         <div class="dossier-header">
@@ -537,9 +537,14 @@ include '../src/header.php';
                     <h3 class="dossier-student-name" id="dossier-student-name">Student Name</h3>
                 </div>
             </div>
-            <div class="dossier-score-chip" id="dossier-score-chip">
-                <span class="dossier-score-num" id="dossier-score-num">85%</span>
-                <span class="dossier-score-label" id="dossier-score-status">Honors Proficient</span>
+            <div class="dossier-header-actions" style="display: flex; align-items: center; gap: 1rem;">
+                <div class="dossier-score-chip" id="dossier-score-chip">
+                    <span class="dossier-score-num" id="dossier-score-num">85%</span>
+                    <span class="dossier-score-label" id="dossier-score-status">Honors Proficient</span>
+                </div>
+                <button type="button" class="dossier-close-btn" onclick="window.closeDossierModal()" aria-label="Close Dossier" title="Close Dossier">
+                    <i class="fas fa-times"></i>
+                </button>
             </div>
         </div>
 
