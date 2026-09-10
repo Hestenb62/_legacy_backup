@@ -157,6 +157,9 @@ body.zen-mode {
                 <span id="reading-session-time">0m today</span>
                 <span id="reading-streak-badge" class="reading-streak-badge"><i class="fas fa-fire" style="color: #f97316;"></i> 1d</span>
             </div>
+            <button type="button" id="reader-offline-cache-btn" class="reader-license-btn" onclick="cacheCurrentBookOffline()" title="Save Entire Book for Offline Reading" aria-label="Save Book Offline">
+                <i class="fas fa-cloud-download-alt" id="reader-offline-icon"></i>
+            </button>
             <button type="button" id="reader-bookmark-btn" class="reader-license-btn" onclick="window.toggleBookBookmark && window.toggleBookBookmark()" title="Bookmark this Book" aria-label="Bookmark this Book">
                 <i class="far fa-bookmark" id="reader-bookmark-icon"></i>
             </button>
@@ -440,6 +443,33 @@ body.zen-mode {
                         <?php echo $contentHtml; ?>
                     <?php endif; ?>
                 </article>
+
+                <!-- End-of-Chapter Reading Comprehension Checkpoint -->
+                <?php if ($chapter !== 'intro' && !$isTeacherPage): ?>
+                    <section class="chapter-comprehension-checkpoint" id="chapter-checkpoint" aria-label="Chapter Comprehension Checkpoint">
+                        <div class="chk-header">
+                            <div class="chk-icon-wrap">
+                                <i class="fas fa-clipboard-check"></i>
+                            </div>
+                            <div>
+                                <h3 class="chk-title">Chapter <?php echo $chapterNum; ?> Comprehension Checkpoint</h3>
+                                <p class="chk-subtitle">Quick 2-question pulse check to lock in key themes and literary analysis before advancing.</p>
+                            </div>
+                        </div>
+                        <div id="chk-questions-container" class="chk-questions-container">
+                            <!-- Populated dynamically by reader checkpoint engine -->
+                        </div>
+                        <div id="chk-feedback-box" class="chk-feedback-box" style="display: none;"></div>
+                        <div class="chk-actions">
+                            <button type="button" id="chk-submit-btn" class="chk-submit-btn" onclick="submitChapterCheckpoint()">
+                                <i class="fas fa-check-circle"></i> Submit Answers
+                            </button>
+                            <button type="button" id="chk-reset-btn" class="chk-secondary-btn" onclick="resetChapterCheckpoint()" style="display: none;">
+                                <i class="fas fa-redo"></i> Try Again
+                            </button>
+                        </div>
+                    </section>
+                <?php endif; ?>
             </div>
         </div>
     </div>
@@ -804,6 +834,278 @@ body.zen-mode {
 <script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/reader/read-chapter-citation-generator.js') : '../../assets/js/reader/read-chapter-citation-generator.js' ?>" defer></script>
 <script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/reader/read-tracker.js') : '../../assets/js/reader/read-tracker.js' ?>" defer></script>
 <script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/reader/read-vocab-tooltip.js') : '../../assets/js/reader/read-vocab-tooltip.js' ?>" defer></script>
-<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/reader/read-scroll-markers.js') : '../../assets/js/reader/read-scroll-markers.js' ?>" defer></script>
+<script>
+    // =========================================================================
+    // One-Click Offline Book Downloader (Service Worker CacheStorage)
+    // =========================================================================
+    async function cacheCurrentBookOffline() {
+        const btn = document.getElementById('reader-offline-cache-btn');
+        const icon = document.getElementById('reader-offline-icon');
+        const meta = window.BOOK_METADATA || {};
+        if (!meta.id) return;
+
+        if (!('caches' in window)) {
+            alert('Offline CacheStorage is not supported in this browser environment.');
+            return;
+        }
+
+        if (icon) icon.className = 'fas fa-spinner fa-spin';
+        if (btn) btn.title = 'Caching book chapters for offline use...';
+
+        try {
+            const cache = await caches.open('hesten-library-offline-v1');
+            const urlsToCache = [];
+            const total = parseInt(meta.totalChapters || '1', 10);
+
+            // Intro
+            urlsToCache.push(`index.php?book=${encodeURIComponent(meta.id)}&chapter=intro`);
+            // Chapters 1..N
+            for (let c = 1; c <= total; c++) {
+                urlsToCache.push(`index.php?book=${encodeURIComponent(meta.id)}&chapter=chapter-${c}`);
+            }
+
+            // Fetch and cache each URL
+            let cachedCount = 0;
+            for (const url of urlsToCache) {
+                try {
+                    const resp = await fetch(url, { cache: 'reload' });
+                    if (resp.ok) {
+                        await cache.put(url, resp);
+                        cachedCount++;
+                    }
+                } catch(err) {
+                    console.warn('Could not cache chapter:', url, err);
+                }
+            }
+
+            localStorage.setItem(`hl_offline_book_${meta.id}`, JSON.stringify({
+                title: meta.title,
+                cachedAt: Date.now(),
+                chapters: cachedCount
+            }));
+
+            if (icon) {
+                icon.className = 'fas fa-check-circle';
+                icon.style.color = '#10b981';
+            }
+            if (btn) btn.title = `Book Saved Offline (${cachedCount}/${urlsToCache.length} chapters cached)`;
+
+            if (typeof window.announceA11y === 'function') {
+                window.announceA11y(`${meta.title} successfully saved for offline reading!`);
+            }
+            if (typeof window.showMessageBox === 'function') {
+                window.showMessageBox(`🎉 "${meta.title}" (${cachedCount} chapters) is now saved offline! You can read it anytime without an internet connection.`);
+            }
+            if (typeof confetti === 'function') {
+                confetti({ particleCount: 60, spread: 50, origin: { y: 0.3 } });
+            }
+        } catch(e) {
+            console.error('Offline caching failed:', e);
+            if (icon) icon.className = 'fas fa-exclamation-triangle';
+            if (btn) btn.title = 'Failed to cache book for offline use';
+        }
+    }
+
+    // Check offline status on startup
+    document.addEventListener('DOMContentLoaded', () => {
+        const meta = window.BOOK_METADATA || {};
+        if (meta.id && localStorage.getItem(`hl_offline_book_${meta.id}`)) {
+            const icon = document.getElementById('reader-offline-icon');
+            const btn = document.getElementById('reader-offline-cache-btn');
+            if (icon) {
+                icon.className = 'fas fa-check-circle';
+                icon.style.color = '#10b981';
+            }
+            if (btn) btn.title = `Book Cached for Offline Reading`;
+        }
+        initChapterCheckpoint();
+    });
+
+    // =========================================================================
+    // End-of-Chapter Reading Comprehension Checkpoint Engine
+    // =========================================================================
+    let activeCheckpointQuestions = [];
+    let selectedAnswers = {};
+
+    function initChapterCheckpoint() {
+        const container = document.getElementById('chk-questions-container');
+        if (!container) return;
+
+        const meta = window.BOOK_METADATA || {};
+        const chkKey = `${meta.id}_ch${meta.chapterNum}`;
+        
+        // Check if book has predefined quiz questions
+        const quizPool = Array.isArray(window.BOOK_QUIZ_QUESTIONS) ? window.BOOK_QUIZ_QUESTIONS : [];
+        if (quizPool.length >= 2) {
+            activeCheckpointQuestions = quizPool.slice(0, 2).map((q, idx) => ({
+                id: idx,
+                question: q.question,
+                options: q.options,
+                correct: q.answer
+            }));
+        } else {
+            // Adaptive literary analysis questions tailored to book & chapter
+            activeCheckpointQuestions = [
+                {
+                    id: 0,
+                    question: `Which central theme or character dynamic is most prominently developed in ${meta.chapterTitle || 'this chapter'}?`,
+                    options: [
+                        `An underlying tension between personal conscience and external systemic pressures.`,
+                        `A comedic misunderstanding with no lasting impact on character development.`,
+                        `A purely technical exposition devoid of emotional or thematic significance.`,
+                        `An immediate and permanent resolution of all central plot conflicts.`
+                    ],
+                    correct: 0
+                },
+                {
+                    id: 1,
+                    question: `How does the author's tone and descriptive framing in "${meta.title}" guide the reader's analytical perspective?`,
+                    options: [
+                        `By utilizing evocative symbolism and narrative tension to provoke deeper critical reflection.`,
+                        `By presenting completely neutral journalistic reportage without rhetorical intent.`,
+                        `By randomly shifting viewpoints to obscure the principal message of the work.`,
+                        `By ignoring historical and social realities in favor of trivial distractions.`
+                    ],
+                    correct: 0
+                }
+            ];
+        }
+
+        renderCheckpointQuestions();
+
+        // Restore prior completion if exists
+        try {
+            const saved = JSON.parse(localStorage.getItem('hesten_reading_comprehension') || '{}');
+            if (saved[chkKey]) {
+                const feedback = document.getElementById('chk-feedback-box');
+                const submitBtn = document.getElementById('chk-submit-btn');
+                const resetBtn = document.getElementById('chk-reset-btn');
+                if (feedback) {
+                    feedback.className = 'chk-feedback-box success';
+                    feedback.innerHTML = `<i class="fas fa-check-circle"></i> Checkpoint previously completed with ${saved[chkKey].score}% accuracy!`;
+                    feedback.style.display = 'block';
+                }
+                if (submitBtn) submitBtn.style.display = 'none';
+                if (resetBtn) resetBtn.style.display = 'inline-flex';
+            }
+        } catch(e) {}
+    }
+
+    function renderCheckpointQuestions() {
+        const container = document.getElementById('chk-questions-container');
+        if (!container) return;
+        container.innerHTML = '';
+        selectedAnswers = {};
+
+        activeCheckpointQuestions.forEach((q, qIdx) => {
+            const block = document.createElement('div');
+            block.className = 'chk-q-block';
+            block.innerHTML = `
+                <h4 class="chk-q-title">Question ${qIdx + 1}: ${q.question}</h4>
+                <div class="chk-options-list" role="radiogroup" aria-label="Question ${qIdx + 1} Options"></div>
+            `;
+            const optList = block.querySelector('.chk-options-list');
+
+            q.options.forEach((optText, optIdx) => {
+                const optBtn = document.createElement('button');
+                optBtn.type = 'button';
+                optBtn.className = 'chk-option-btn';
+                optBtn.innerHTML = `<i class="far fa-circle" style="color: var(--color-text-muted);"></i> <span>${optText}</span>`;
+                optBtn.addEventListener('click', () => {
+                    optList.querySelectorAll('.chk-option-btn').forEach(b => {
+                        b.classList.remove('selected');
+                        b.querySelector('i').className = 'far fa-circle';
+                    });
+                    optBtn.classList.add('selected');
+                    optBtn.querySelector('i').className = 'fas fa-dot-circle';
+                    selectedAnswers[qIdx] = optIdx;
+                });
+                optList.appendChild(optBtn);
+            });
+
+            container.appendChild(block);
+        });
+    }
+
+    window.submitChapterCheckpoint = function() {
+        const feedback = document.getElementById('chk-feedback-box');
+        const submitBtn = document.getElementById('chk-submit-btn');
+        const resetBtn = document.getElementById('chk-reset-btn');
+        const meta = window.BOOK_METADATA || {};
+        const chkKey = `${meta.id}_ch${meta.chapterNum}`;
+
+        if (Object.keys(selectedAnswers).length < activeCheckpointQuestions.length) {
+            if (feedback) {
+                feedback.className = 'chk-feedback-box error';
+                feedback.innerHTML = `<i class="fas fa-exclamation-triangle"></i> Please answer both questions before submitting!`;
+                feedback.style.display = 'block';
+            }
+            return;
+        }
+
+        let correctCount = 0;
+        const blocks = document.querySelectorAll('.chk-q-block');
+        activeCheckpointQuestions.forEach((q, qIdx) => {
+            const chosen = selectedAnswers[qIdx];
+            const isCorrect = chosen === q.correct;
+            if (isCorrect) correctCount++;
+
+            const block = blocks[qIdx];
+            if (block) {
+                const optBtns = block.querySelectorAll('.chk-option-btn');
+                optBtns.forEach((btn, optIdx) => {
+                    btn.disabled = true;
+                    if (optIdx === q.correct) {
+                        btn.classList.add('correct');
+                        btn.querySelector('i').className = 'fas fa-check-circle';
+                    } else if (optIdx === chosen && !isCorrect) {
+                        btn.classList.add('incorrect');
+                        btn.querySelector('i').className = 'fas fa-times-circle';
+                    }
+                });
+            }
+        });
+
+        const pct = Math.round((correctCount / activeCheckpointQuestions.length) * 100);
+        try {
+            const saved = JSON.parse(localStorage.getItem('hesten_reading_comprehension') || '{}');
+            saved[chkKey] = {
+                score: pct,
+                date: new Date().toISOString()
+            };
+            localStorage.setItem('hesten_reading_comprehension', JSON.stringify(saved));
+        } catch(e) {}
+
+        if (feedback) {
+            if (pct >= 50) {
+                feedback.className = 'chk-feedback-box success';
+                feedback.innerHTML = `<i class="fas fa-award"></i> Excellent comprehension! You scored ${pct}% (${correctCount}/${activeCheckpointQuestions.length}). +25 XP awarded!`;
+                if (window.questManager) window.questManager.addXP(25, 'Reading Checkpoint Master');
+                if (pct === 100 && typeof confetti === 'function') {
+                    confetti({ particleCount: 80, spread: 60, origin: { y: 0.7 } });
+                }
+            } else {
+                feedback.className = 'chk-feedback-box error';
+                feedback.innerHTML = `<i class="fas fa-info-circle"></i> You scored ${pct}%. Review key passages in this chapter and try again!`;
+            }
+            feedback.style.display = 'block';
+        }
+
+        if (submitBtn) submitBtn.style.display = 'none';
+        if (resetBtn) resetBtn.style.display = 'inline-flex';
+    };
+
+    window.resetChapterCheckpoint = function() {
+        const feedback = document.getElementById('chk-feedback-box');
+        const submitBtn = document.getElementById('chk-submit-btn');
+        const resetBtn = document.getElementById('chk-reset-btn');
+
+        if (feedback) feedback.style.display = 'none';
+        if (submitBtn) submitBtn.style.display = 'inline-flex';
+        if (resetBtn) resetBtn.style.display = 'none';
+
+        renderCheckpointQuestions();
+    };
+</script>
 
 <?php include ABSPATH . 'src/footer.php'; ?>

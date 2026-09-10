@@ -662,6 +662,691 @@
     }
 }
 
+/* --- Lesson Plan & Quiz Customizer Styles --- */
+.lp-output-card {
+    background: var(--color-surface, #ffffff);
+    border: 1px solid var(--color-border, #e2e8f0);
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+}
+
+.lesson-plan-sheet {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.lp-sheet-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+    border-bottom: 2px solid var(--color-border, #e2e8f0);
+    padding-bottom: 1.25rem;
+}
+
+.lp-sheet-badge {
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-primary, #4f46e5);
+    background: rgba(79, 70, 229, 0.1);
+    padding: 0.25rem 0.65rem;
+    border-radius: 9999px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-bottom: 0.5rem;
+}
+
+.lp-sheet-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--color-text-main, #0f172a);
+    margin: 0 0 0.25rem 0;
+}
+
+.lp-sheet-subtitle {
+    font-size: 0.9375rem;
+    color: var(--color-text-muted, #64748b);
+    margin: 0;
+}
+
+.lp-meta-pill-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.lp-meta-pill {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    background: var(--color-background, #f8fafc);
+    border: 1px solid var(--color-border, #cbd5e1);
+    color: var(--color-text-main, #0f172a);
+    padding: 0.35rem 0.75rem;
+    border-radius: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.lp-stage-card {
+    background: var(--color-background, #f8fafc);
+    border: 1px solid var(--color-border, #e2e8f0);
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+}
+
+.lp-stage-title {
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--color-text-main, #0f172a);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.lp-stage-content {
+    font-size: 0.9375rem;
+    color: var(--color-text-main, #334155);
+    line-height: 1.6;
+}
+
+.lp-vocab-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.lp-vocab-pill {
+    background: var(--color-surface, #ffffff);
+    border: 1px solid var(--color-border, #cbd5e1);
+    border-radius: 0.5rem;
+    padding: 0.35rem 0.65rem;
+    font-size: 0.8125rem;
+    color: var(--color-text-main, #0f172a);
+}
+
+.lp-quiz-container {
+    background: var(--color-surface, #ffffff);
+    border: 2px dashed rgba(79, 70, 229, 0.3);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin-top: 1rem;
+}
+
+.lp-quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    border-bottom: 1px solid var(--color-border, #e2e8f0);
+    padding-bottom: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.lp-questions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.lp-question-item {
+    background: var(--color-background, #f8fafc);
+    border: 1px solid var(--color-border, #e2e8f0);
+    border-radius: 0.75rem;
+    padding: 1rem;
+}
+
+.lp-question-text {
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: var(--color-text-main, #0f172a);
+    margin: 0 0 0.75rem 0;
+}
+
+.lp-choices-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+@media (min-width: 640px) {
+    .lp-choices-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.lp-choice-item {
+    background: var(--color-surface, #ffffff);
+    border: 1px solid var(--color-border, #cbd5e1);
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.lp-choice-letter {
+    font-weight: 800;
+    color: var(--color-primary, #4f46e5);
+}
+
+.lp-answer-key-box {
+    background: rgba(16, 185, 129, 0.08);
+    border: 1px solid rgba(16, 185, 129, 0.25);
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8125rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.lp-key-badge {
+    font-weight: 800;
+    color: #059669;
+}
+
+.lp-rationale-text {
+    color: var(--color-text-muted, #64748b);
+}
+
+/* --- Class Roster Styles --- */
+.roster-metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.roster-metric-chip {
+    background: var(--color-background, #f8fafc);
+    border: 1px solid var(--color-border, #e2e8f0);
+    border-radius: 0.75rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.roster-metric-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-text-muted, #64748b);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.roster-metric-val {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--color-text-main, #0f172a);
+}
+
+.roster-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    background: var(--color-surface, #ffffff);
+    border: 1px solid var(--color-border, #e2e8f0);
+    border-radius: 0.75rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.roster-add-form {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.roster-export-group {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.roster-table-wrapper {
+    overflow-x: auto;
+    background: var(--color-surface, #ffffff);
+    border: 1px solid var(--color-border, #e2e8f0);
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.roster-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.9375rem;
+}
+
+.roster-table th {
+    background: var(--color-background, #f8fafc);
+    padding: 0.85rem 1rem;
+    font-weight: 700;
+    color: var(--color-text-muted, #64748b);
+    border-bottom: 1px solid var(--color-border, #e2e8f0);
+    white-space: nowrap;
+}
+
+.roster-table td {
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid var(--color-border, #e2e8f0);
+    vertical-align: middle;
+}
+
+.roster-student-cell {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.roster-avatar-init {
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 9999px;
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    color: white;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.875rem;
+}
+
+.roster-student-name {
+    font-weight: 700;
+    color: var(--color-text-main, #0f172a);
+    display: block;
+}
+
+.roster-last-check {
+    font-size: 0.75rem;
+    color: var(--color-text-muted, #64748b);
+}
+
+.roster-grade-badge {
+    background: var(--color-background, #f1f5f9);
+    border: 1px solid var(--color-border, #cbd5e1);
+    border-radius: 0.375rem;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+}
+
+.roster-prog-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8125rem;
+    font-weight: 700;
+}
+
+.roster-mini-bar {
+    width: 60px;
+    height: 6px;
+    background: var(--color-border, #e2e8f0);
+    border-radius: 9999px;
+    overflow: hidden;
+}
+
+.roster-mini-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #4f46e5, #10b981);
+    border-radius: 9999px;
+}
+
+.roster-status-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.25rem 0.65rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.status-honors { background: rgba(16, 185, 129, 0.12); color: #059669; }
+.status-on-track { background: rgba(99, 102, 241, 0.12); color: #4f46e5; }
+.status-support { background: rgba(239, 68, 68, 0.12); color: #dc2626; }
+
+.roster-row-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.roster-action-icon-btn {
+    border: none;
+    border-radius: 0.375rem;
+    padding: 0.35rem 0.6rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.roster-action-icon-btn.check-btn {
+    background: rgba(16, 185, 129, 0.15);
+    color: #059669;
+}
+
+.roster-action-icon-btn.check-btn:hover {
+    background: rgba(16, 185, 129, 0.25);
+}
+
+.roster-action-icon-btn.delete-btn {
+    background: rgba(239, 68, 68, 0.15);
+    color: #dc2626;
+}
+
+.roster-action-icon-btn.delete-btn:hover {
+    background: rgba(239, 68, 68, 0.25);
+}
+
+.roster-action-icon-btn.dossier-btn {
+    color: #4f46e5;
+    background: rgba(79, 70, 229, 0.1);
+}
+.roster-action-icon-btn.dossier-btn:hover {
+    background: rgba(79, 70, 229, 0.25);
+}
+
+/* --- STUDENT DIAGNOSTIC DOSSIER MODAL --- */
+.dossier-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    overflow-y: auto;
+    animation: fadeInDossier 0.25s ease-out;
+}
+
+.dossier-modal-container {
+    background: var(--color-surface, #ffffff);
+    color: var(--color-text, #0f172a);
+    border: 1px solid var(--color-border, #e2e8f0);
+    border-radius: 1.5rem;
+    max-width: 840px;
+    width: 100%;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+    animation: scaleUpDossier 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes fadeInDossier {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes scaleUpDossier {
+    from { opacity: 0; transform: scale(0.96) translateY(10px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.dossier-header {
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    color: #ffffff;
+    padding: 1.75rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dossier-header-main {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.dossier-avatar {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 1rem;
+    background: linear-gradient(135deg, #4f46e5, #818cf8);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    box-shadow: 0 8px 16px rgba(79, 70, 229, 0.3);
+}
+
+.dossier-meta-tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.35rem;
+}
+
+.dossier-grade-badge {
+    background: rgba(99, 102, 241, 0.25);
+    color: #a5b4fc;
+    border: 1px solid rgba(99, 102, 241, 0.4);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.2rem 0.6rem;
+    border-radius: 9999px;
+}
+
+.dossier-date-badge,
+.dossier-source-badge {
+    color: #94a3b8;
+    font-size: 0.75rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.dossier-student-name {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin: 0;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+}
+
+.dossier-score-chip {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.dossier-score-num {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #10b981;
+    line-height: 1;
+}
+
+.dossier-score-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 0.25rem;
+}
+
+.dossier-body {
+    padding: 1.75rem 2rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.dossier-section-title {
+    font-size: 0.95rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-text, #0f172a);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.dossier-subjects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 1rem;
+}
+
+.dossier-subj-card {
+    background: var(--color-bg, #f8fafc);
+    border: 1px solid var(--color-border, #e2e8f0);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.dossier-subj-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 0.65rem;
+}
+
+.dossier-progress-track {
+    width: 100%;
+    height: 0.5rem;
+    background: var(--color-border, #e2e8f0);
+    border-radius: 9999px;
+    overflow: hidden;
+}
+
+.dossier-progress-fill {
+    height: 100%;
+    border-radius: 9999px;
+    transition: width 0.4s ease;
+}
+
+.dossier-progress-fill.math-fill { background: #3b82f6; }
+.dossier-progress-fill.ela-fill { background: #8b5cf6; }
+.dossier-progress-fill.science-fill { background: #10b981; }
+.dossier-progress-fill.social-fill { background: #f59e0b; }
+
+.dossier-standards-split {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1rem;
+}
+
+.dossier-standards-block {
+    background: var(--color-bg, #f8fafc);
+    border: 1px solid var(--color-border, #e2e8f0);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.dossier-sub-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.65rem;
+}
+
+.dossier-tags-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.dossier-tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.3rem 0.65rem;
+    border-radius: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.dossier-tag.mastered {
+    background: rgba(16, 185, 129, 0.12);
+    color: #059669;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.dossier-tag.intervention {
+    background: rgba(239, 68, 68, 0.12);
+    color: #dc2626;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.dossier-tag.accommodation {
+    background: rgba(99, 102, 241, 0.1);
+    color: #4f46e5;
+    border: 1px solid rgba(99, 102, 241, 0.25);
+}
+
+.dossier-notes-textarea {
+    width: 100%;
+    min-height: 85px;
+    background: var(--color-bg, #f8fafc);
+    border: 1px solid var(--color-border, #e2e8f0);
+    border-radius: 0.75rem;
+    padding: 0.85rem;
+    font-family: inherit;
+    font-size: 0.9rem;
+    color: var(--color-text, #0f172a);
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+.dossier-notes-textarea:focus {
+    outline: none;
+    border-color: #4f46e5;
+    background: #ffffff;
+}
+
+.dossier-footer {
+    padding: 1.25rem 2rem;
+    background: var(--color-bg, #f8fafc);
+    border-top: 1px solid var(--color-border, #e2e8f0);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.75rem;
+}
+
 /* --- High-Quality Print Stylesheet (@media print) --- */
 @media print {
     /* Hide navigational Chrome and decorative overlays */
@@ -691,7 +1376,9 @@
         max-width: 100% !important;
     }
 
-    #tab-pacing {
+    #tab-pacing.active,
+    #tab-lesson-plan.active,
+    #tab-roster.active {
         display: block !important;
     }
 
@@ -767,5 +1454,36 @@
 
     .pacing-checkbox {
         border: 1px solid #000000 !important;
+    }
+
+    body.printing-dossier .teacher-page-container,
+    body.printing-dossier header,
+    body.printing-dossier footer,
+    body.printing-dossier .site-header {
+        display: none !important;
+    }
+
+    body.printing-dossier #modal-student-dossier {
+        position: static !important;
+        background: transparent !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    body.printing-dossier .dossier-modal-container {
+        border: none !important;
+        box-shadow: none !important;
+        max-width: 100% !important;
+        max-height: none !important;
+    }
+
+    body.printing-dossier .dossier-header {
+        background: #ffffff !important;
+        color: #000000 !important;
+        border-bottom: 2px solid #000000 !important;
+    }
+
+    body.printing-dossier .dossier-student-name {
+        color: #000000 !important;
     }
 }

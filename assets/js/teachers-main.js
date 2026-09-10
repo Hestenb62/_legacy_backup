@@ -329,6 +329,8 @@
     initTabs();
     initAssignmentBuilder();
     initPacingGuide();
+    initLessonPlanCustomizer();
+    initClassRosterTracker();
     handleUrlHashRouting();
   });
 
@@ -372,6 +374,10 @@
       switchTab('tab-resources');
     } else if (hash === 'builder' || hash === 'assignments') {
       switchTab('tab-builder');
+    } else if (hash === 'lesson' || hash === 'lesson-plan' || hash === 'quiz') {
+      switchTab('tab-lesson-plan');
+    } else if (hash === 'roster' || hash === 'students' || hash === 'class') {
+      switchTab('tab-roster');
     }
   }
 
@@ -660,6 +666,1068 @@
   window.handleWeekCheck = function (weekNum, isChecked) {
     toggleWeekCompletion(weekNum, isChecked);
   };
+
+  // --- TAB 4: LESSON PLAN & QUIZ CUSTOMIZER ENGINE ---
+  function initLessonPlanCustomizer() {
+    const gradeSelect = document.getElementById('lp-grade-select');
+    const subjectSelect = document.getElementById('lp-subject-select');
+    const standardSelect = document.getElementById('lp-standard-select');
+    const durationSelect = document.getElementById('lp-duration-select');
+    const modelSelect = document.getElementById('lp-model-select');
+    const generateBtn = document.getElementById('btn-generate-lesson-plan');
+    const outputContainer = document.getElementById('lp-output-container');
+
+    if (!gradeSelect || !standardSelect || !generateBtn) return;
+
+    function refreshStandards() {
+      const grade = gradeSelect.value;
+      const subject = subjectSelect.value;
+      const list = (STANDARDS_REGISTRY[grade] && STANDARDS_REGISTRY[grade][subject]) || [];
+      standardSelect.innerHTML = '';
+
+      if (list.length > 0) {
+        list.forEach(item => {
+          const opt = document.createElement('option');
+          opt.value = item.code;
+          opt.textContent = `${item.code} - ${item.title}`;
+          standardSelect.appendChild(opt);
+        });
+      } else {
+        const opt = document.createElement('option');
+        opt.value = 'General';
+        opt.textContent = 'General Core Subject Standards';
+        standardSelect.appendChild(opt);
+      }
+    }
+
+    gradeSelect.addEventListener('change', refreshStandards);
+    subjectSelect.addEventListener('change', refreshStandards);
+    refreshStandards();
+
+    generateBtn.addEventListener('click', () => {
+      const gradeVal = gradeSelect.value;
+      const gradeName = (GRADE_CONFIG[gradeVal] && GRADE_CONFIG[gradeVal].name) || gradeVal;
+      const subjectVal = subjectSelect.value;
+      const standardCode = standardSelect.value;
+      const standardText = standardSelect.options[standardSelect.selectedIndex] ? standardSelect.options[standardSelect.selectedIndex].text : standardCode;
+      const durationVal = durationSelect.value;
+      const modelVal = modelSelect.value;
+
+      const modelNames = {
+        'cra': 'Concrete-Representational-Abstract (CRA Explicit Model)',
+        'inquiry': '5E Guided Inquiry & Scientific Discovery',
+        'workshop': 'Reader/Writer Workshop & Socratic Dialogue'
+      };
+      const modelName = modelNames[modelVal] || modelVal;
+
+      // Generate dynamic pedagogy components
+      const lessonPlanData = buildLessonPlanDetails(gradeName, subjectVal, standardCode, standardText, durationVal, modelName);
+
+      outputContainer.innerHTML = `
+        <div class="lesson-plan-sheet" id="lesson-plan-sheet">
+          <div class="lp-sheet-header">
+            <div>
+              <span class="lp-sheet-badge"><i class="fas fa-certificate"></i> Standards-Aligned Syllabus</span>
+              <h3 class="lp-sheet-title">${escapeHtml(subjectVal)}: ${escapeHtml(standardCode)}</h3>
+              <p class="lp-sheet-subtitle">${escapeHtml(standardText)}</p>
+            </div>
+            <div class="lp-meta-pill-group">
+              <span class="lp-meta-pill"><i class="fas fa-graduation-cap"></i> ${escapeHtml(gradeName)}</span>
+              <span class="lp-meta-pill"><i class="fas fa-clock"></i> ${escapeHtml(durationVal)} Minutes</span>
+              <span class="lp-meta-pill"><i class="fas fa-chalkboard-teacher"></i> ${escapeHtml(modelName.split(' ')[0])}</span>
+            </div>
+          </div>
+
+          <!-- Section 1: Objective & Essential Question -->
+          <div class="lp-stage-card">
+            <div class="lp-stage-title"><i class="fas fa-bullseye text-indigo-600"></i> Stage 1: Objective & Essential Question</div>
+            <div class="lp-stage-content">
+              <p><strong>Learning Target (SWBAT):</strong> ${escapeHtml(lessonPlanData.objective)}</p>
+              <p style="margin-top: 0.5rem;"><strong>Essential Question:</strong> <em>"${escapeHtml(lessonPlanData.essentialQuestion)}"</em></p>
+            </div>
+          </div>
+
+          <!-- Section 2: Materials & Key Vocabulary -->
+          <div class="lp-stage-card">
+            <div class="lp-stage-title"><i class="fas fa-boxes text-purple-600"></i> Stage 2: Materials & Key Vocabulary</div>
+            <div class="lp-stage-content">
+              <p><strong>Required Materials:</strong> ${escapeHtml(lessonPlanData.materials)}</p>
+              <div class="lp-vocab-pills" style="margin-top: 0.5rem;">
+                ${lessonPlanData.vocab.map(v => `<span class="lp-vocab-pill"><strong>${escapeHtml(v.term)}:</strong> ${escapeHtml(v.def)}</span>`).join('')}
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 3: Direct Instruction ("I Do") -->
+          <div class="lp-stage-card">
+            <div class="lp-stage-title"><i class="fas fa-user-tie text-emerald-600"></i> Stage 3: Direct Instruction & Modeling ("I Do" • ${Math.round(durationVal * 0.35)} min)</div>
+            <div class="lp-stage-content">
+              <p>${escapeHtml(lessonPlanData.directInstruction)}</p>
+            </div>
+          </div>
+
+          <!-- Section 4: Guided Practice ("We Do") -->
+          <div class="lp-stage-card">
+            <div class="lp-stage-title"><i class="fas fa-user-friends text-blue-600"></i> Stage 4: Guided & Collaborative Practice ("We Do" • ${Math.round(durationVal * 0.35)} min)</div>
+            <div class="lp-stage-content">
+              <p>${escapeHtml(lessonPlanData.guidedPractice)}</p>
+            </div>
+          </div>
+
+          <!-- Section 5: Independent Practice & Exit Ticket ("You Do") -->
+          <div class="lp-stage-card">
+            <div class="lp-stage-title"><i class="fas fa-user-check text-amber-600"></i> Stage 5: Independent Practice & Exit Ticket ("You Do" • ${Math.round(durationVal * 0.30)} min)</div>
+            <div class="lp-stage-content">
+              <p>${escapeHtml(lessonPlanData.independentPractice)}</p>
+            </div>
+          </div>
+
+          <!-- Formative Assessment Quiz Worksheet -->
+          <div class="lp-quiz-container" id="lp-quiz-printable">
+            <div class="lp-quiz-header">
+              <h4 style="margin: 0; font-size: 1.2rem; font-weight: 800; color: var(--color-text-main);">
+                <i class="fas fa-tasks text-indigo-600"></i> Formative Diagnostic Quiz (5 Questions)
+              </h4>
+              <span style="font-size: 0.85rem; color: var(--color-text-muted);">Standard Target: ${escapeHtml(standardCode)}</span>
+            </div>
+
+            <div class="lp-questions-list">
+              ${lessonPlanData.quiz.map((q, idx) => `
+                <div class="lp-question-item">
+                  <p class="lp-question-text"><strong>${idx + 1}.</strong> ${escapeHtml(q.prompt)}</p>
+                  <div class="lp-choices-grid">
+                    ${q.choices.map((c, cIdx) => `
+                      <div class="lp-choice-item">
+                        <span class="lp-choice-letter">${['A', 'B', 'C', 'D'][cIdx]})</span>
+                        <span>${escapeHtml(c)}</span>
+                      </div>
+                    `).join('')}
+                  </div>
+                  <div class="lp-answer-key-box">
+                    <span class="lp-key-badge"><i class="fas fa-check"></i> Answer: ${escapeHtml(q.answer)}</span>
+                    <span class="lp-rationale-text"><strong>Rationale:</strong> ${escapeHtml(q.rationale)}</span>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+
+          <!-- Action Buttons Bar -->
+          <div class="builder-actions-row no-print" style="margin-top: 1.5rem; justify-content: flex-end;">
+            <button type="button" class="builder-action-btn builder-btn-secondary" id="btn-copy-lp-md">
+              <i class="fas fa-copy"></i> Copy Markdown Plan
+            </button>
+            <button type="button" class="builder-action-btn builder-btn-primary" id="btn-print-lp">
+              <i class="fas fa-print"></i> Print Lesson Plan & Quiz (PDF)
+            </button>
+          </div>
+        </div>
+      `;
+
+      outputContainer.style.display = 'block';
+      outputContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+      // Attach print & copy events
+      const printBtn = document.getElementById('btn-print-lp');
+      if (printBtn) {
+        printBtn.addEventListener('click', () => window.print());
+      }
+
+      const copyBtn = document.getElementById('btn-copy-lp-md');
+      if (copyBtn) {
+        copyBtn.addEventListener('click', () => {
+          const mdContent = `# Lesson Plan: ${subjectVal} - ${standardCode}\n\n` +
+            `**Grade:** ${gradeName} | **Duration:** ${durationVal} min | **Model:** ${modelName}\n\n` +
+            `## Stage 1: Objective & Essential Question\n- **Target:** ${lessonPlanData.objective}\n- **Essential Question:** ${lessonPlanData.essentialQuestion}\n\n` +
+            `## Stage 2: Materials & Key Vocabulary\n- **Materials:** ${lessonPlanData.materials}\n- **Vocabulary:**\n${lessonPlanData.vocab.map(v => `  - **${v.term}:** ${v.def}`).join('\n')}\n\n` +
+            `## Stage 3: Direct Instruction ("I Do")\n${lessonPlanData.directInstruction}\n\n` +
+            `## Stage 4: Guided Practice ("We Do")\n${lessonPlanData.guidedPractice}\n\n` +
+            `## Stage 5: Independent Practice ("You Do")\n${lessonPlanData.independentPractice}\n\n` +
+            `## Formative Quiz (5 Questions)\n` +
+            lessonPlanData.quiz.map((q, i) => `${i+1}. ${q.prompt}\n` + q.choices.map((c, ci) => `   ${['A','B','C','D'][ci]}) ${c}`).join('\n') + `\n   *Answer:* ${q.answer} - ${q.rationale}`).join('\n\n');
+
+          if (navigator.clipboard) {
+            navigator.clipboard.writeText(mdContent).then(() => {
+              showToast("Copied complete lesson plan to clipboard!");
+            });
+          }
+        });
+      }
+
+      showToast(`Generated lesson plan for ${standardCode}!`);
+    });
+  }
+
+  function buildLessonPlanDetails(grade, subject, code, text, duration, model) {
+    let objective = `Students will be able to demonstrate mastery of ${code} by analyzing core principles, constructing mathematical/conceptual representations, and completing formative exit items with 80%+ accuracy.`;
+    let essentialQuestion = `How do fundamental patterns in ${subject} enable us to describe, predict, and solve authentic problems?`;
+    let materials = `Student notebooks, highlighters, digital curriculum runner (/levels/), and interactive manipulatives / graphic organizers.`;
+    let vocab = [
+      { term: 'Concept Formulation', def: 'The systematic organization of observations into a unified academic rule.' },
+      { term: 'Representation', def: 'A visual, symbolic, or concrete model of a concept.' },
+      { term: 'Verification', def: 'Checking reasoning using inverse operations or empirical proof.' },
+      { term: 'Mastery Benchmark', def: 'The standard criterion indicating independent competency.' }
+    ];
+    let directInstruction = `Teacher opens with a 3-minute anchor hook connecting to prior learning. The educator explicitly models the targeted standard using the ${model} framework. The teacher thinks aloud while solving an anchor problem, highlighting common misconceptions, correct terminology, and organizational steps.`;
+    let guidedPractice = `Students pair with elbow partners to solve two scaffolded exploration problems. The educator conducts active room circulation, posing probing questions and providing immediate feedback. Groups display their solution strategies on miniature whiteboards for whole-group consensus.`;
+    let independentPractice = `Learners complete an individual 3-task application assignment to solidify mastery. Students then complete the 5-question formative diagnostic exit ticket below to evaluate retention and inform subsequent pacing adjustments.`;
+
+    // 5 standard-aligned quiz questions
+    let quiz = [
+      {
+        prompt: `Which of the following best demonstrates the core principle of ${code}?`,
+        choices: [
+          `Recognizing and applying the fundamental standard definition accurately`,
+          `Skipping intermediate steps and relying on arbitrary estimation`,
+          `Ignoring variable constraints and relationship definitions`,
+          `Memorizing disconnected facts without conceptual proof`
+        ],
+        answer: `A`,
+        rationale: `Option A correctly reflects rigorous standard competency and structured understanding.`
+      },
+      {
+        prompt: `When applying ${code} to an unfamiliar context, what is the most reliable first step?`,
+        choices: [
+          `Deconstruct the prompt to identify given information, constraints, and the target goal`,
+          `Select the first number presented and multiply by ten`,
+          `Assume the answer is always between zero and one`,
+          `Guess without re-reading the prompt requirements`
+        ],
+        answer: `A`,
+        rationale: `Systematic problem decomposition ensures all standard parameters are addressed.`
+      },
+      {
+        prompt: `A student solves a problem aligned with ${code} but gets an unreasonable result. What should they do next?`,
+        choices: [
+          `Use inverse operations or a visual model to trace and verify their calculation steps`,
+          `Erase their scratchwork and copy a neighbor's answer`,
+          `Assume the problem is flawed and move on`,
+          `Increase the answer by five until it matches a choice`
+        ],
+        answer: `A`,
+        rationale: `Self-monitoring and mathematical/scientific verification are core pedagogical practices.`
+      },
+      {
+        prompt: `Which representation provides the strongest evidence of deep conceptual mastery for ${code}?`,
+        choices: [
+          `An accurate dual representation combining symbolic equations with concrete or pictorial models`,
+          `A handwritten note with no explanation or mathematical structure`,
+          `A repetitive list of non-standard abbreviations`,
+          `A vague verbal summary lacking technical terminology`
+        ],
+        answer: `A`,
+        rationale: `Dual concrete and symbolic representations verify deep procedural and conceptual fluency.`
+      },
+      {
+        prompt: `How does mastering ${code} prepare learners for upcoming advanced coursework in ${subject}?`,
+        choices: [
+          `It serves as an essential foundational scaffold for complex higher-grade standards`,
+          `It is completely isolated from all other academic domains`,
+          `It removes the need to practice future skills`,
+          `It only applies to multiple-choice exams`
+        ],
+        answer: `A`,
+        rationale: `Standards within Hesten's Learning follow an interconnected, procedural spiral hierarchy.`
+      }
+    ];
+
+    return { objective, essentialQuestion, materials, vocab, directInstruction, guidedPractice, independentPractice, quiz };
+  }
+
+
+  // --- TAB 5: CLASS ROSTER & PROGRESS TRACKER ENGINE ---
+  const STORAGE_KEY_ROSTER = 'hesten_teacher_roster';
+  const DEFAULT_ROSTER = [
+    {
+      id: 's1',
+      name: 'Maya Chen',
+      grade: 'Grade 5',
+      math: 92,
+      ela: 88,
+      science: 95,
+      social: 90,
+      lastCheck: 'Today',
+      standards: { '5.OA.A.1': 95, '5.NBT.A.1': 92, '5.NF.A.1': 90, '5.MD.C.5': 88, 'RL.5.1': 90, 'RI.5.2': 86 },
+      accommodations: ['Visual Anchor Charts', 'Enrichment Challenges'],
+      notes: 'Demonstrates exceptional mathematical modeling and deep conceptual understanding.'
+    },
+    {
+      id: 's2',
+      name: 'Leo Martinez',
+      grade: 'Grade 5',
+      math: 78,
+      ela: 82,
+      science: 80,
+      social: 75,
+      lastCheck: 'Yesterday',
+      standards: { '5.OA.A.1': 82, '5.NF.A.1': 68, '5.NBT.B.5': 74, 'RL.5.1': 85 },
+      accommodations: ['Chunked Assignments', 'Calculator for Complex Division'],
+      notes: 'Benefits from visual fractions models during multi-step fractions practice.'
+    },
+    {
+      id: 's3',
+      name: 'Samira Patel',
+      grade: 'Grade 5',
+      math: 96,
+      ela: 94,
+      science: 92,
+      social: 95,
+      lastCheck: 'Today',
+      standards: { '5.OA.A.2': 98, '5.NF.B.4': 95, 'RL.5.2': 94, '5-PS1-1': 92 },
+      accommodations: ['Self-Paced Inquiry', 'Peer Mentoring Opportunities'],
+      notes: 'Top performer across STEM disciplines, ready for middle school pre-algebra enrichment.'
+    },
+    {
+      id: 's4',
+      name: 'Jordan Taylor',
+      grade: 'Grade 5',
+      math: 64,
+      ela: 70,
+      science: 68,
+      social: 72,
+      lastCheck: '2 days ago',
+      standards: { '5.NBT.B.6': 60, '5.NF.B.3': 65, '5.MD.C.5': 58, 'RL.5.3': 72 },
+      accommodations: ['Extended Time (1.5x)', 'Read Aloud / Text-to-Speech', 'Reduced Distraction Seating'],
+      notes: 'Requires concrete manipulatives when working with multi-digit division and volume calculation.'
+    },
+    {
+      id: 's5',
+      name: 'Alex Rivera',
+      grade: 'Grade 5',
+      math: 88,
+      ela: 85,
+      science: 86,
+      social: 89,
+      lastCheck: 'Today',
+      standards: { '5.OA.A.1': 88, '5.NBT.A.3': 90, 'RL.5.4': 85, '5-ESS2-1': 86 },
+      accommodations: ['Graphic Organizers', 'Frequent Check-ins'],
+      notes: 'Consistent engagement and strong peer collaboration skills.'
+    }
+  ];
+
+  function getRoster() {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY_ROSTER);
+      if (raw) {
+        const parsed = JSON.parse(raw);
+        if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+      }
+    } catch (e) {}
+    return DEFAULT_ROSTER;
+  }
+
+  function saveRoster(roster) {
+    try {
+      localStorage.setItem(STORAGE_KEY_ROSTER, JSON.stringify(roster));
+    } catch (e) {}
+  }
+
+  // --- REPORT CARD JSON NORMALIZER ---
+  function normalizeReportCard(raw, filename) {
+    let data = raw;
+    if (typeof data === 'string') {
+      try {
+        data = JSON.parse(data);
+      } catch (e) {
+        throw new Error('Invalid JSON format: ' + e.message);
+      }
+    }
+
+    // Format B: Platform Portfolio Export ({ meta, data: { ... } })
+    if (data && data.data && typeof data.data === 'object') {
+      const d = data.data;
+      const meta = data.meta || {};
+
+      let profile = {};
+      if (typeof d['hesten-user-profile'] === 'string') {
+        try { profile = JSON.parse(d['hesten-user-profile']); } catch (e) {}
+      } else if (d['hesten-user-profile'] && typeof d['hesten-user-profile'] === 'object') {
+        profile = d['hesten-user-profile'];
+      }
+
+      const name = profile.displayName || profile.name || meta.student || (filename ? filename.replace(/\.[^/.]+$/, '').replace(/[-_]/g, ' ') : 'Student');
+      let grade = profile.grade || profile.gradeLevel || 'Grade 5';
+      if (/^\d+$/.test(grade)) grade = `Grade ${grade}`;
+
+      const parseScore = (key, fallback = 75) => {
+        let val = d[key];
+        if (val === undefined) {
+          const suffix = key.replace('hesten_student_mastery_', '');
+          val = d[suffix];
+        }
+        if (val === undefined) return fallback;
+        const num = parseInt(val, 10);
+        return isNaN(num) ? fallback : Math.max(0, Math.min(100, num));
+      };
+
+      const math = parseScore('hesten_student_mastery_math', 75);
+      const ela = parseScore('hesten_student_mastery_ela', 75);
+      const science = parseScore('hesten_student_mastery_science', 75);
+      const social = parseScore('hesten_student_mastery_social', 75);
+
+      let standards = {};
+      if (d['hesten_diagnostic_standards']) {
+        try {
+          standards = typeof d['hesten_diagnostic_standards'] === 'string' ? JSON.parse(d['hesten_diagnostic_standards']) : d['hesten_diagnostic_standards'];
+        } catch (e) {}
+      }
+
+      let accommodations = [];
+      if (d['hesten_parent_accommodations']) {
+        try {
+          accommodations = typeof d['hesten_parent_accommodations'] === 'string' ? JSON.parse(d['hesten_parent_accommodations']) : d['hesten_parent_accommodations'];
+        } catch (e) {}
+      }
+
+      return {
+        name,
+        grade,
+        date: meta.exportedAt ? new Date(meta.exportedAt).toLocaleDateString() : 'Today',
+        math,
+        ela,
+        science,
+        social,
+        standards: standards && typeof standards === 'object' ? standards : {},
+        accommodations: Array.isArray(accommodations) ? accommodations : [],
+        notes: profile.notes || 'Imported from platform backup export archive.'
+      };
+    }
+
+    // Format A: Direct Student Report Card JSON
+    const name = data.student || data.studentName || data.name || (filename ? filename.replace(/\.[^/.]+$/, '').replace(/[-_]/g, ' ') : 'Student');
+    let grade = data.grade || data.gradeLevel || 'Grade 5';
+    if (typeof grade === 'number' || (typeof grade === 'string' && /^\d+$/.test(grade))) {
+      grade = `Grade ${grade}`;
+    }
+
+    let math = 75, ela = 75, science = 75, social = 75;
+    if (data.mastery && typeof data.mastery === 'object') {
+      math = Number(data.mastery.math !== undefined ? data.mastery.math : math);
+      ela = Number(data.mastery.ela !== undefined ? data.mastery.ela : (data.mastery.reading !== undefined ? data.mastery.reading : ela));
+      science = Number(data.mastery.science !== undefined ? data.mastery.science : science);
+      social = Number(data.mastery.social !== undefined ? data.mastery.social : (data.mastery.socialStudies !== undefined ? data.mastery.socialStudies : social));
+    } else if (data.scores && typeof data.scores === 'object') {
+      math = Number(data.scores.math !== undefined ? data.scores.math : math);
+      ela = Number(data.scores.ela !== undefined ? data.scores.ela : (data.scores.reading !== undefined ? data.scores.reading : ela));
+      science = Number(data.scores.science !== undefined ? data.scores.science : science);
+      social = Number(data.scores.social !== undefined ? data.scores.social : (data.scores.socialStudies !== undefined ? data.scores.socialStudies : social));
+    } else {
+      if (data.math !== undefined) math = Number(data.math);
+      if (data.ela !== undefined) ela = Number(data.ela);
+      if (data.science !== undefined) science = Number(data.science);
+      if (data.social !== undefined || data.socialStudies !== undefined) social = Number(data.social !== undefined ? data.social : data.socialStudies);
+    }
+
+    math = Math.max(0, Math.min(100, Math.round(math || 75)));
+    ela = Math.max(0, Math.min(100, Math.round(ela || 75)));
+    science = Math.max(0, Math.min(100, Math.round(science || 75)));
+    social = Math.max(0, Math.min(100, Math.round(social || 75)));
+
+    const standards = data.standards && typeof data.standards === 'object' ? data.standards : {};
+    const accommodations = Array.isArray(data.accommodations) ? data.accommodations : [];
+    const notes = data.notes || data.comments || 'Uploaded student report card diagnostic data.';
+    const date = data.date || data.evaluationDate || 'Today';
+
+    return {
+      name,
+      grade,
+      date,
+      math,
+      ela,
+      science,
+      social,
+      standards,
+      accommodations,
+      notes
+    };
+  }
+
+  let currentDossierStudent = null;
+
+  function openStudentDossier(student) {
+    currentDossierStudent = student;
+    const modal = document.getElementById('modal-student-dossier');
+    if (!modal) return;
+
+    // Header Details
+    const avatarEl = document.getElementById('dossier-avatar');
+    const nameEl = document.getElementById('dossier-student-name');
+    const gradeEl = document.getElementById('dossier-grade-badge');
+    const dateEl = document.getElementById('dossier-date-badge');
+    const sourceEl = document.getElementById('dossier-source-badge');
+
+    if (avatarEl) {
+      avatarEl.innerHTML = `<span style="font-size:1.6rem; font-weight:800; color:#4f46e5;">${escapeHtml(student.name.charAt(0).toUpperCase())}</span>`;
+    }
+    if (nameEl) nameEl.textContent = student.name;
+    if (gradeEl) gradeEl.textContent = student.grade || 'Grade 5';
+    if (dateEl) dateEl.innerHTML = `<i class="fas fa-calendar-alt"></i> Evaluated: ${escapeHtml(student.date || student.lastCheck || 'Today')}`;
+    if (sourceEl) {
+      sourceEl.innerHTML = `<i class="fas fa-file-code"></i> ${student.standards && Object.keys(student.standards).length > 0 ? 'Diagnostic Report Card' : 'Classroom Roster'}`;
+    }
+
+    // Overall Average Score & Standing Chip
+    const avg = Math.round(((student.math || 0) + (student.ela || 0) + (student.science || 0) + (student.social || 0)) / 4);
+    const scoreNumEl = document.getElementById('dossier-score-num');
+    const scoreStatusEl = document.getElementById('dossier-score-status');
+    const scoreChip = document.getElementById('dossier-score-chip');
+
+    if (scoreNumEl) scoreNumEl.textContent = `${avg}%`;
+    if (scoreStatusEl) {
+      scoreStatusEl.textContent = avg >= 85 ? 'Honors Proficient' : avg >= 70 ? 'On Track' : 'Targeted Support';
+    }
+    if (scoreChip) {
+      scoreChip.style.background = avg >= 85 ? 'rgba(16, 185, 129, 0.1)' : avg >= 70 ? 'rgba(99, 102, 241, 0.1)' : 'rgba(225, 29, 72, 0.1)';
+      scoreChip.style.borderColor = avg >= 85 ? 'rgba(16, 185, 129, 0.25)' : avg >= 70 ? 'rgba(99, 102, 241, 0.25)' : 'rgba(225, 29, 72, 0.25)';
+    }
+
+    // Subject Progress Meters
+    const updateMeter = (pctId, fillId, val) => {
+      const pEl = document.getElementById(pctId);
+      const fEl = document.getElementById(fillId);
+      if (pEl) pEl.textContent = `${val}%`;
+      if (fEl) fEl.style.width = `${val}%`;
+    };
+    updateMeter('dossier-math-pct', 'dossier-math-fill', student.math || 0);
+    updateMeter('dossier-ela-pct', 'dossier-ela-fill', student.ela || 0);
+    updateMeter('dossier-science-pct', 'dossier-science-fill', student.science || 0);
+    updateMeter('dossier-social-pct', 'dossier-social-fill', student.social || 0);
+
+    // Standards Breakdown: Mastered (>=80%) vs Intervention (<70%)
+    const masteredWrap = document.getElementById('dossier-mastered-standards');
+    const weakWrap = document.getElementById('dossier-weak-standards');
+    const standards = student.standards || {};
+    const stdKeys = Object.keys(standards);
+
+    if (masteredWrap) {
+      masteredWrap.innerHTML = '';
+      const mastered = stdKeys.filter(k => (Number(standards[k]) || 0) >= 80);
+      if (mastered.length > 0) {
+        mastered.forEach(code => {
+          const val = standards[code];
+          masteredWrap.innerHTML += `<span class="dossier-tag mastered"><i class="fas fa-check"></i> ${escapeHtml(code)} (${val}%)</span>`;
+        });
+      } else {
+        masteredWrap.innerHTML = `<span class="text-xs text-slate-400 italic">No evaluated standards at ≥80% yet.</span>`;
+      }
+    }
+
+    if (weakWrap) {
+      weakWrap.innerHTML = '';
+      const weak = stdKeys.filter(k => (Number(standards[k]) || 0) < 70);
+      if (weak.length > 0) {
+        weak.forEach(code => {
+          const val = standards[code];
+          weakWrap.innerHTML += `<span class="dossier-tag intervention"><i class="fas fa-exclamation-circle"></i> ${escapeHtml(code)} (${val}%)</span>`;
+        });
+      } else {
+        weakWrap.innerHTML = `<span class="text-xs text-emerald-600 font-medium"><i class="fas fa-check-double"></i> All evaluated standards performing at or above 70%.</span>`;
+      }
+    }
+
+    // Accommodations
+    const accomWrap = document.getElementById('dossier-accommodations-list');
+    if (accomWrap) {
+      accomWrap.innerHTML = '';
+      const accoms = student.accommodations || [];
+      if (accoms.length > 0) {
+        accoms.forEach(acc => {
+          accomWrap.innerHTML += `<span class="dossier-tag accommodation"><i class="fas fa-universal-access"></i> ${escapeHtml(acc)}</span>`;
+        });
+      } else {
+        accomWrap.innerHTML = `<span class="text-xs text-slate-400 italic">Standard general education setting. No active accommodations recorded.</span>`;
+      }
+    }
+
+    // Notes
+    const notesTextarea = document.getElementById('dossier-teacher-notes');
+    if (notesTextarea) {
+      notesTextarea.value = student.notes || '';
+    }
+
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeDossierModal() {
+    const modal = document.getElementById('modal-student-dossier');
+    if (modal) {
+      modal.classList.remove('active');
+    }
+    document.body.style.overflow = '';
+  }
+
+  function printStudentDossier() {
+    document.body.classList.add('printing-dossier');
+    window.print();
+    setTimeout(() => {
+      document.body.classList.remove('printing-dossier');
+    }, 1000);
+  }
+
+  function initClassRosterTracker() {
+    const tableBody = document.getElementById('roster-table-body');
+    const addBtn = document.getElementById('btn-add-roster-student');
+    const resetBtn = document.getElementById('btn-reset-roster');
+    const exportCsvBtn = document.getElementById('btn-export-roster-csv');
+    const uploadBtn = document.getElementById('btn-upload-report-card');
+    const fileInput = document.getElementById('roster-report-card-file');
+
+    if (!tableBody) return;
+
+    function renderRoster() {
+      const roster = getRoster();
+      const totalCount = roster.length;
+      let totalSum = 0;
+      let honorsCount = 0;
+      let supportCount = 0;
+
+      tableBody.innerHTML = '';
+
+      roster.forEach(st => {
+        const avg = Math.round((st.math + st.ela + st.science + st.social) / 4);
+        totalSum += avg;
+        if (avg >= 85) honorsCount++;
+        if (avg < 70) supportCount++;
+
+        const statusBadge = avg >= 85
+          ? `<span class="roster-status-pill status-honors"><i class="fas fa-award"></i> Honors Proficient</span>`
+          : avg >= 70
+          ? `<span class="roster-status-pill status-on-track"><i class="fas fa-check-circle"></i> On Track</span>`
+          : `<span class="roster-status-pill status-support"><i class="fas fa-exclamation-triangle"></i> Targeted Support</span>`;
+
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td>
+            <div class="roster-student-cell">
+              <span class="roster-avatar-init">${escapeHtml(st.name.charAt(0))}</span>
+              <div>
+                <span class="roster-student-name">${escapeHtml(st.name)}</span>
+                <span class="roster-last-check">Checked: ${escapeHtml(st.lastCheck)}</span>
+              </div>
+            </div>
+          </td>
+          <td><span class="roster-grade-badge">${escapeHtml(st.grade)}</span></td>
+          <td>
+            <div class="roster-prog-group">
+              <span>${st.math}%</span>
+              <div class="roster-mini-bar"><div class="roster-mini-fill" style="width:${st.math}%;"></div></div>
+            </div>
+          </td>
+          <td>
+            <div class="roster-prog-group">
+              <span>${st.ela}%</span>
+              <div class="roster-mini-bar"><div class="roster-mini-fill" style="width:${st.ela}%;"></div></div>
+            </div>
+          </td>
+          <td>
+            <div class="roster-prog-group">
+              <span>${st.science}%</span>
+              <div class="roster-mini-bar"><div class="roster-mini-fill" style="width:${st.science}%;"></div></div>
+            </div>
+          </td>
+          <td>
+            <strong style="font-size: 1.05rem; color: ${avg >= 85 ? '#10b981' : avg >= 70 ? '#6366f1' : '#e11d48'};">
+              ${avg}%
+            </strong>
+          </td>
+          <td>${statusBadge}</td>
+          <td class="no-print">
+            <div class="roster-row-actions">
+              <button type="button" class="roster-action-icon-btn dossier-btn" onclick="window.viewStudentDossier('${st.id}')" title="View Diagnostic Dossier & Report Card" style="color: #4f46e5; border-color: #c7d2fe;">
+                <i class="fas fa-id-card"></i>
+              </button>
+              <button type="button" class="roster-action-icon-btn check-btn" onclick="window.incrementStudentMastery('${st.id}')" title="Log Assessment Check (+5% Mastery)">
+                <i class="fas fa-plus"></i> 5%
+              </button>
+              <button type="button" class="roster-action-icon-btn delete-btn" onclick="window.removeStudentFromRoster('${st.id}')" title="Remove Student">
+                <i class="fas fa-trash-alt"></i>
+              </button>
+            </div>
+          </td>
+        `;
+        tableBody.appendChild(tr);
+      });
+
+      // Update Summary metrics
+      const classAvg = totalCount > 0 ? Math.round(totalSum / totalCount) : 0;
+      const totalEl = document.getElementById('roster-stat-total');
+      const avgEl = document.getElementById('roster-stat-avg');
+      const honorsEl = document.getElementById('roster-stat-honors');
+      const supportEl = document.getElementById('roster-stat-support');
+
+      if (totalEl) totalEl.textContent = totalCount;
+      if (avgEl) avgEl.textContent = `${classAvg}%`;
+      if (honorsEl) honorsEl.textContent = honorsCount;
+      if (supportEl) supportEl.textContent = supportCount;
+    }
+
+    // Process Report Card File Upload
+    function processStudentReportCard(rawJson, filename) {
+      const studentData = normalizeReportCard(rawJson, filename);
+      let roster = getRoster();
+
+      const existingIndex = roster.findIndex(s => s.name.toLowerCase() === studentData.name.toLowerCase());
+      let studentObj;
+
+      if (existingIndex >= 0) {
+        studentObj = {
+          ...roster[existingIndex],
+          grade: studentData.grade,
+          math: studentData.math,
+          ela: studentData.ela,
+          science: studentData.science,
+          social: studentData.social,
+          standards: studentData.standards,
+          accommodations: studentData.accommodations,
+          notes: studentData.notes,
+          lastCheck: 'Just uploaded'
+        };
+        roster[existingIndex] = studentObj;
+      } else {
+        studentObj = {
+          id: 's_' + Date.now(),
+          name: studentData.name,
+          grade: studentData.grade,
+          math: studentData.math,
+          ela: studentData.ela,
+          science: studentData.science,
+          social: studentData.social,
+          standards: studentData.standards,
+          accommodations: studentData.accommodations,
+          notes: studentData.notes,
+          lastCheck: 'Just uploaded'
+        };
+        roster.push(studentObj);
+      }
+
+      saveRoster(roster);
+      renderRoster();
+      showToast(`Imported report card for ${studentObj.name}!`);
+
+      // Immediately display Diagnostic Dossier popup
+      openStudentDossier(studentObj);
+    }
+
+    // Wire Report Card Upload Toolbar Button
+    if (uploadBtn && fileInput) {
+      uploadBtn.addEventListener('click', () => {
+        fileInput.value = '';
+        fileInput.click();
+      });
+
+      fileInput.addEventListener('change', (e) => {
+        const file = e.target.files && e.target.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = (evt) => {
+          try {
+            processStudentReportCard(evt.target.result, file.name);
+          } catch (err) {
+            alert('Failed to parse report card JSON: ' + err.message);
+          }
+        };
+        reader.onerror = () => {
+          alert('Could not read the uploaded report card file.');
+        };
+        reader.readAsText(file);
+      });
+    }
+
+    // Modal Action: Generate Remediation Lesson
+    const genLessonBtn = document.getElementById('btn-dossier-gen-lesson');
+    if (genLessonBtn) {
+      genLessonBtn.addEventListener('click', () => {
+        if (!currentDossierStudent) return;
+
+        // Discover weakest standard or priority intervention standard (<70%)
+        let targetStd = null;
+        let lowestVal = 999;
+        const standards = currentDossierStudent.standards || {};
+        for (const [code, val] of Object.entries(standards)) {
+          const num = Number(val) || 0;
+          if (num < lowestVal) {
+            lowestVal = num;
+            targetStd = code;
+          }
+        }
+
+        // Determine grade key for lesson customizer
+        let gradeKey = '5';
+        const rawGrade = (currentDossierStudent.grade || '').toLowerCase();
+        if (rawGrade.includes('pre-k') || rawGrade.includes('prek')) gradeKey = 'pre-k';
+        else if (rawGrade.includes('kindergarten') || rawGrade === 'k' || rawGrade.startsWith('k.')) gradeKey = 'k';
+        else if (rawGrade.includes('high') || rawGrade.includes('hs')) gradeKey = 'hs';
+        else {
+          const m = rawGrade.match(/\d+/);
+          if (m) gradeKey = m[0];
+        }
+
+        // Determine subject
+        let subj = 'Math';
+        if (targetStd) {
+          const upper = targetStd.toUpperCase();
+          if (upper.startsWith('RL') || upper.startsWith('RI') || upper.startsWith('RF') || upper.startsWith('W.') || upper.startsWith('L.') || upper.includes('ELA')) {
+            subj = 'Language Arts';
+          } else if (upper.includes('PS') || upper.includes('LS') || upper.includes('ESS') || upper.includes('SCI')) {
+            subj = 'Science';
+          } else if (upper.includes('SS') || upper.includes('SOC') || upper.includes('HIST')) {
+            subj = 'Social Studies';
+          } else {
+            subj = 'Math';
+          }
+        } else {
+          // If no specific standards, pick student's lowest subject
+          const scores = [
+            { subj: 'Math', val: currentDossierStudent.math || 0 },
+            { subj: 'Language Arts', val: currentDossierStudent.ela || 0 },
+            { subj: 'Science', val: currentDossierStudent.science || 0 },
+            { subj: 'Social Studies', val: currentDossierStudent.social || 0 }
+          ];
+          scores.sort((a, b) => a.val - b.val);
+          subj = scores[0].subj;
+
+          const list = (STANDARDS_REGISTRY[gradeKey] && STANDARDS_REGISTRY[gradeKey][subj]) || [];
+          if (list.length > 0) {
+            targetStd = list[0].code;
+          } else {
+            targetStd = `${gradeKey}.CORE.1`;
+          }
+        }
+
+        // Close modal and navigate to Tab 3 (tab-lesson-plan)
+        closeDossierModal();
+        switchTab('tab-lesson-plan');
+
+        const gradeSelect = document.getElementById('lp-grade-select');
+        const subjectSelect = document.getElementById('lp-subject-select');
+        const standardSelect = document.getElementById('lp-standard-select');
+        const generateBtn = document.getElementById('btn-generate-lesson-plan');
+
+        if (gradeSelect) gradeSelect.value = gradeKey;
+        if (subjectSelect) {
+          subjectSelect.value = subj;
+          subjectSelect.dispatchEvent(new Event('change'));
+        }
+
+        if (standardSelect && targetStd) {
+          let found = false;
+          for (let i = 0; i < standardSelect.options.length; i++) {
+            if (standardSelect.options[i].value === targetStd || standardSelect.options[i].value.includes(targetStd)) {
+              standardSelect.selectedIndex = i;
+              found = true;
+              break;
+            }
+          }
+          if (!found) {
+            const opt = document.createElement('option');
+            opt.value = targetStd;
+            opt.textContent = `${targetStd} - Targeted Priority Remediation`;
+            standardSelect.prepend(opt);
+            standardSelect.selectedIndex = 0;
+          }
+        }
+
+        // Trigger lesson plan generation
+        if (generateBtn) {
+          setTimeout(() => {
+            generateBtn.click();
+            const sheet = document.getElementById('lesson-plan-sheet') || document.getElementById('lp-output-container');
+            if (sheet) {
+              sheet.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }, 150);
+        }
+
+        showToast(`Generated targeted remediation plan for ${currentDossierStudent.name}!`);
+      });
+    }
+
+    // Modal Action: Launch Diagnostic Quiz
+    const launchQuizBtn = document.getElementById('btn-dossier-launch-quiz');
+    if (launchQuizBtn) {
+      launchQuizBtn.addEventListener('click', () => {
+        if (!currentDossierStudent) return;
+        let targetStd = '';
+        let lowestVal = 999;
+        const standards = currentDossierStudent.standards || {};
+        for (const [code, val] of Object.entries(standards)) {
+          const num = Number(val) || 0;
+          if (num < lowestVal) {
+            lowestVal = num;
+            targetStd = code;
+          }
+        }
+
+        const targetUrl = targetStd
+          ? `/assessment/index.php?standard=${encodeURIComponent(targetStd)}&student=${encodeURIComponent(currentDossierStudent.name)}`
+          : `/assessment/index.php?student=${encodeURIComponent(currentDossierStudent.name)}`;
+
+        window.open(targetUrl, '_blank');
+        showToast(`Launched diagnostic checkpoint for ${currentDossierStudent.name}!`);
+      });
+    }
+
+    // Modal Action: Save & Sync to Roster
+    const saveRosterBtn = document.getElementById('btn-dossier-save-roster');
+    if (saveRosterBtn) {
+      saveRosterBtn.addEventListener('click', () => {
+        if (!currentDossierStudent) return;
+        const notesEl = document.getElementById('dossier-teacher-notes');
+        const newNotes = notesEl ? notesEl.value.trim() : '';
+        currentDossierStudent.notes = newNotes;
+        currentDossierStudent.lastCheck = 'Just now';
+
+        const roster = getRoster();
+        const idx = roster.findIndex(s => s.id === currentDossierStudent.id || s.name.toLowerCase() === currentDossierStudent.name.toLowerCase());
+        if (idx >= 0) {
+          roster[idx] = { ...roster[idx], ...currentDossierStudent };
+        } else {
+          roster.push(currentDossierStudent);
+        }
+        saveRoster(roster);
+        renderRoster();
+        showToast(`Saved notes & synchronized ${currentDossierStudent.name} to roster!`);
+      });
+    }
+
+    // Close Modal on Background Click
+    const modal = document.getElementById('modal-student-dossier');
+    if (modal) {
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          closeDossierModal();
+        }
+      });
+    }
+
+    // Close Modal on Escape Key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeDossierModal();
+      }
+    });
+
+    // Add Student Manually
+    if (addBtn) {
+      addBtn.addEventListener('click', () => {
+        const nameInput = document.getElementById('roster-new-name');
+        const gradeInput = document.getElementById('roster-new-grade');
+        if (!nameInput || !nameInput.value.trim()) {
+          alert('Please enter a student name.');
+          return;
+        }
+
+        const roster = getRoster();
+        const newStudent = {
+          id: 's_' + Date.now(),
+          name: nameInput.value.trim(),
+          grade: gradeInput ? gradeInput.value : 'Grade 5',
+          math: 75,
+          ela: 75,
+          science: 75,
+          social: 75,
+          standards: {},
+          accommodations: [],
+          notes: 'Manually enrolled student.',
+          lastCheck: 'Just now'
+        };
+
+        roster.push(newStudent);
+        saveRoster(roster);
+        nameInput.value = '';
+        renderRoster();
+        showToast(`Enrolled student ${newStudent.name}!`);
+      });
+    }
+
+    // Reset Demo Class
+    if (resetBtn) {
+      resetBtn.addEventListener('click', () => {
+        if (confirm('Reset class roster to default 5-student sample cohort?')) {
+          saveRoster(DEFAULT_ROSTER);
+          renderRoster();
+          showToast('Reset class roster to demo cohort.');
+        }
+      });
+    }
+
+    // Export CSV
+    if (exportCsvBtn) {
+      exportCsvBtn.addEventListener('click', () => {
+        const roster = getRoster();
+        if (roster.length === 0) {
+          alert('Roster is empty.');
+          return;
+        }
+
+        let csv = 'Student ID,Student Name,Grade Level,Math Mastery %,ELA Mastery %,Science Mastery %,Social Studies Mastery %,Overall Competency %,Status,Last Evaluated\r\n';
+        roster.forEach(s => {
+          const avg = Math.round((s.math + s.ela + s.science + s.social) / 4);
+          const status = avg >= 85 ? 'Honors Proficient' : avg >= 70 ? 'On Track' : 'Targeted Support';
+          csv += `"${s.id}","${s.name.replace(/"/g, '""')}","${s.grade}",${s.math},${s.ela},${s.science},${s.social},${avg},"${status}","${s.lastCheck}"\r\n`;
+        });
+
+        const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.setAttribute('href', url);
+        link.setAttribute('download', 'hesten-classroom-roster.csv');
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+
+        showToast('Exported classroom roster to CSV!');
+      });
+    }
+
+    window.incrementStudentMastery = function(studentId) {
+      const roster = getRoster();
+      const st = roster.find(s => s.id === studentId);
+      if (st) {
+        st.math = Math.min(100, st.math + 5);
+        st.ela = Math.min(100, st.ela + 5);
+        st.science = Math.min(100, st.science + 5);
+        st.social = Math.min(100, st.social + 5);
+        st.lastCheck = 'Just now';
+        saveRoster(roster);
+        renderRoster();
+        showToast(`Updated mastery for ${st.name} (+5%)`);
+      }
+    };
+
+    window.removeStudentFromRoster = function(studentId) {
+      let roster = getRoster();
+      const st = roster.find(s => s.id === studentId);
+      if (!st) return;
+      if (confirm(`Remove ${st.name} from class roster?`)) {
+        roster = roster.filter(s => s.id !== studentId);
+        saveRoster(roster);
+        renderRoster();
+        showToast(`Removed ${st.name} from roster.`);
+      }
+    };
+
+    renderRoster();
+  }
+
+  // Window exports
+  window.buildLessonPlanDetails = buildLessonPlanDetails;
+  window.getClassRoster = getRoster;
+  window.viewStudentDossier = function(studentId) {
+    const roster = getRoster();
+    const student = roster.find(s => s.id === studentId);
+    if (student) {
+      openStudentDossier(student);
+    }
+  };
+  window.openStudentDossier = openStudentDossier;
+  window.closeDossierModal = closeDossierModal;
+  window.printStudentDossier = printStudentDossier;
+  window.normalizeReportCard = normalizeReportCard;
+  window.switchTeacherTab = switchTab;
 
   // --- UTILITY TOAST ---
   function showToast(message) {

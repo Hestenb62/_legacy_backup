@@ -25,6 +25,7 @@
       this.initELALab();
       this.initScienceLab();
       this.initSocialLab();
+      this.initChemistryLab();
     }
 
     // Audio click synthesis for tactile feedback
@@ -443,6 +444,88 @@
           renderTimeline();
           const feedback = document.getElementById('soc-timeline-feedback');
           if (feedback) feedback.innerHTML = '';
+        });
+      }
+    }
+
+    // =========================================================================
+    // 5. CHEMISTRY LAB: pH Scale & Litmus Indicator Simulation
+    // =========================================================================
+    initChemistryLab() {
+      const substanceBtns = document.querySelectorAll('.chem-substance-btn');
+      const nameEl = document.getElementById('chem-liquid-name');
+      const descEl = document.getElementById('chem-liquid-desc');
+      const liquidEl = document.getElementById('chem-beaker-liquid');
+      const litmusStrip = document.getElementById('chem-litmus-strip');
+      const pointerEl = document.getElementById('chem-ph-pointer');
+      const readingEl = document.getElementById('chem-ph-reading');
+      const dipBtn = document.getElementById('chem-dip-strip-btn');
+      const feedback = document.getElementById('chem-feedback-msg');
+      if (!nameEl || !liquidEl) return;
+
+      let currentPH = 2.0;
+      let currentColor = '#ef4444';
+
+      const updateChemistryStage = (ph, name, color, desc) => {
+        currentPH = ph;
+        currentColor = color;
+
+        if (nameEl) nameEl.textContent = name;
+        if (descEl) descEl.textContent = desc;
+        if (readingEl) readingEl.textContent = `pH: ${ph.toFixed(1)}`;
+        if (liquidEl) {
+          liquidEl.style.background = color + '55';
+          liquidEl.style.borderTopColor = color;
+        }
+
+        const pct = Math.min(Math.max((ph / 14) * 100, 2), 98);
+        if (pointerEl) pointerEl.style.left = `${pct}%`;
+
+        if (litmusStrip) {
+          litmusStrip.style.background = '#e2e8f0';
+          litmusStrip.style.transform = 'translateX(-50%) translateY(0)';
+        }
+
+        this.playClick(440 + (ph * 25), 'sine', 0.05);
+      };
+
+      substanceBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          substanceBtns.forEach(b => {
+            b.classList.remove('active');
+            b.style.border = '1px solid var(--color-border)';
+            b.style.background = 'var(--color-bg-surface)';
+          });
+          btn.classList.add('active');
+          const color = btn.dataset.color || '#ef4444';
+          btn.style.border = `1.5px solid ${color}`;
+          btn.style.background = color + '18';
+
+          const ph = parseFloat(btn.dataset.ph);
+          const name = btn.dataset.name;
+          const desc = btn.dataset.desc;
+          updateChemistryStage(ph, name, color, desc);
+        });
+      });
+
+      if (dipBtn) {
+        dipBtn.addEventListener('click', () => {
+          if (!litmusStrip) return;
+          litmusStrip.style.transform = 'translateX(-50%) translateY(40px)';
+          this.playClick(520, 'triangle', 0.08);
+
+          setTimeout(() => {
+            litmusStrip.style.background = currentColor;
+            this.playSuccess();
+            if (feedback) {
+              const nature = currentPH < 7 ? 'Acidic' : (currentPH === 7 ? 'Neutral' : 'Alkaline (Base)');
+              feedback.innerHTML = `<span style="color: #10b981; font-weight: 800;"><i class="fas fa-check-circle"></i> Litmus color reacted! Detected ${nature} solution (pH ${currentPH.toFixed(1)}). +35 XP awarded!</span>`;
+            }
+            if (window.questManager) window.questManager.addXP(35, 'Chemistry Lab Scholar');
+            setTimeout(() => {
+              litmusStrip.style.transform = 'translateX(-50%) translateY(0)';
+            }, 600);
+          }, 400);
         });
       }
     }

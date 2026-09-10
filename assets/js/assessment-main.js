@@ -915,51 +915,100 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Untimed / Low-Anxiety Practice Mode
+  // Low-Anxiety Exam Mode & Untimed Engine
   const untimedBtn = document.getElementById("untimed-mode-btn");
   const untimedLabel = document.getElementById("untimed-mode-label");
+  const heroLowAnxietyBtn = document.getElementById("hero-low-anxiety-btn");
+  const heroLowAnxietyText = document.getElementById("hero-low-anxiety-text");
+  const sidebarUntimedToggle = document.getElementById("untimed-mode-toggle");
   const timerWrap = document.getElementById("session-timer-wrap");
 
   try {
-    window.isUntimedAssessment = localStorage.getItem("hl_untimed_assessment") === "true";
+    window.isLowAnxietyMode = localStorage.getItem("hl_low_anxiety_mode") === "true" || localStorage.getItem("hl_untimed_assessment") === "true";
   } catch (e) {
-    window.isUntimedAssessment = false;
+    window.isLowAnxietyMode = false;
   }
+  window.isUntimedAssessment = window.isLowAnxietyMode;
 
-  function renderUntimedState() {
-    if (!untimedBtn) return;
-    if (window.isUntimedAssessment) {
-      untimedBtn.style.backgroundColor = "color-mix(in srgb, var(--color-success, #10b981) 18%, transparent)";
-      untimedBtn.style.borderColor = "var(--color-success, #10b981)";
-      untimedBtn.style.color = "var(--color-success, #10b981)";
-      if (untimedLabel) untimedLabel.textContent = "Untimed (Active)";
+  window.applyLowAnxietyUI = function() {
+    const isCalm = !!window.isLowAnxietyMode;
+    const quizContainer = document.getElementById("quiz-container");
+
+    if (isCalm) {
+      document.body.classList.add("low-anxiety-mode");
+      if (quizContainer) quizContainer.classList.add("low-anxiety-mode");
       if (timerWrap) timerWrap.style.display = "none";
-      stopTimer();
+      if (typeof stopTimer === "function") stopTimer();
     } else {
-      untimedBtn.style.backgroundColor = "var(--color-bg-base)";
-      untimedBtn.style.borderColor = "var(--color-border)";
-      untimedBtn.style.color = "var(--color-text-muted)";
-      if (untimedLabel) untimedLabel.textContent = "Untimed Mode";
+      document.body.classList.remove("low-anxiety-mode");
+      if (quizContainer) quizContainer.classList.remove("low-anxiety-mode");
       if (timerWrap) timerWrap.style.display = "flex";
-      startTimer();
+      if (typeof startTimer === "function") startTimer();
     }
-  }
+
+    if (sidebarUntimedToggle) {
+      sidebarUntimedToggle.checked = isCalm;
+    }
+
+    if (untimedBtn) {
+      if (isCalm) {
+        untimedBtn.style.backgroundColor = "color-mix(in srgb, var(--color-teal, #0d9488) 18%, transparent)";
+        untimedBtn.style.borderColor = "var(--color-teal, #0d9488)";
+        untimedBtn.style.color = "var(--color-teal, #0d9488)";
+        if (untimedLabel) untimedLabel.textContent = "Low-Anxiety (Active)";
+      } else {
+        untimedBtn.style.backgroundColor = "var(--color-bg-base)";
+        untimedBtn.style.borderColor = "var(--color-border)";
+        untimedBtn.style.color = "var(--color-text-muted)";
+        if (untimedLabel) untimedLabel.textContent = "Low-Anxiety Mode";
+      }
+    }
+
+    if (heroLowAnxietyBtn) {
+      if (isCalm) {
+        heroLowAnxietyBtn.style.backgroundColor = "color-mix(in srgb, var(--color-teal, #0d9488) 18%, transparent)";
+        heroLowAnxietyBtn.style.borderColor = "var(--color-teal, #0d9488)";
+        heroLowAnxietyBtn.style.color = "var(--color-teal, #0d9488)";
+        if (heroLowAnxietyText) heroLowAnxietyText.textContent = "Low-Anxiety: Active";
+      } else {
+        heroLowAnxietyBtn.style.backgroundColor = "";
+        heroLowAnxietyBtn.style.borderColor = "";
+        heroLowAnxietyBtn.style.color = "";
+        if (heroLowAnxietyText) heroLowAnxietyText.textContent = "Low-Anxiety Mode";
+      }
+    }
+  };
+
+  window.toggleLowAnxietyExamMode = function(explicitState) {
+    if (typeof explicitState === "boolean") {
+      window.isLowAnxietyMode = explicitState;
+    } else {
+      window.isLowAnxietyMode = !window.isLowAnxietyMode;
+    }
+    window.isUntimedAssessment = window.isLowAnxietyMode;
+
+    try {
+      localStorage.setItem("hl_low_anxiety_mode", window.isLowAnxietyMode ? "true" : "false");
+      localStorage.setItem("hl_untimed_assessment", window.isLowAnxietyMode ? "true" : "false");
+    } catch (e) {}
+
+    window.applyLowAnxietyUI();
+
+    if (window.announceA11y) {
+      window.announceA11y(
+        window.isLowAnxietyMode
+          ? "Low-Anxiety Exam Mode activated. Timers, question counters, and percentage progress bars are hidden."
+          : "Standard Exam Mode activated. Timers, counters, and progress restored."
+      );
+    }
+  };
+  window.toggleUntimedAssessmentMode = window.toggleLowAnxietyExamMode;
+
+  window.applyLowAnxietyUI();
 
   if (untimedBtn) {
-    renderUntimedState();
     untimedBtn.addEventListener("click", () => {
-      window.isUntimedAssessment = !window.isUntimedAssessment;
-      try {
-        localStorage.setItem("hl_untimed_assessment", window.isUntimedAssessment);
-      } catch (e) {}
-      renderUntimedState();
-      if (window.announceA11y) {
-        window.announceA11y(
-          window.isUntimedAssessment
-            ? "Untimed practice mode activated. Timer hidden."
-            : "Timed mode activated. Timer restored."
-        );
-      }
+      window.toggleLowAnxietyExamMode();
     });
   }
 });
@@ -1236,16 +1285,22 @@ if (typeof finishQuiz === "function") {
         });
       }
 
-      // Inject Action Buttons (Review + Mastery Report + Worksheet + Download Text)
+      // Inject Action Buttons (Scorecard + Review + Mastery Report + Worksheet + Download Text)
       if (resultDiv) {
         const btnContainer = document.createElement("div");
         btnContainer.className = "mastery-actions-container";
         btnContainer.style.cssText = "display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; align-items: center; margin-top: 1.5rem;";
 
+        const scorecardBtn = document.createElement("button");
+        scorecardBtn.className = "hero-nav-btn hero-nav-btn-primary";
+        scorecardBtn.style.cssText = "padding: 0.85rem 1.75rem; border-radius: var(--radius-full); font-weight: 800; font-size: 0.95rem; cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem; border: none; box-shadow: 0 4px 14px rgba(37,99,235,0.3);";
+        scorecardBtn.innerHTML = '<i class="fas fa-print"></i> Printable Diagnostic Mastery Scorecard';
+        scorecardBtn.onclick = () => window.printMasteryScorecard();
+
         const reviewBtn = document.createElement("button");
-        reviewBtn.className = "hero-nav-btn hero-nav-btn-primary";
-        reviewBtn.style.cssText = "padding: 0.85rem 1.75rem; border-radius: var(--radius-full); font-weight: 800; font-size: 1rem; cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem; border: none; box-shadow: 0 8px 16px -4px rgba(0,0,0,0.25);";
-        reviewBtn.innerHTML = '<i class="fas fa-clipboard-check"></i> Review All Answers & Explanations';
+        reviewBtn.className = "hero-nav-btn hero-nav-btn-outline";
+        reviewBtn.style.cssText = "padding: 0.85rem 1.75rem; border-radius: var(--radius-full); font-weight: 700; font-size: 0.95rem; cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem;";
+        reviewBtn.innerHTML = '<i class="fas fa-clipboard-check"></i> Review Answers &amp; Explanations';
         reviewBtn.onclick = () => {
           const rev = document.getElementById("review-container");
           if (rev) {
@@ -1257,13 +1312,13 @@ if (typeof finishQuiz === "function") {
         const reportBtn = document.createElement("button");
         reportBtn.className = "hero-nav-btn hero-nav-btn-outline";
         reportBtn.style.cssText = "padding: 0.85rem 1.75rem; border-radius: var(--radius-full); font-weight: 700; font-size: 0.95rem; cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem;";
-        reportBtn.innerHTML = '<i class="fas fa-file-invoice"></i> Mastery Report Card';
+        reportBtn.innerHTML = '<i class="fas fa-file-invoice"></i> View Report Card';
         reportBtn.onclick = () => window.openMasteryReportCard();
 
         const worksheetBtn = document.createElement("button");
         worksheetBtn.className = "hero-nav-btn hero-nav-btn-outline";
         worksheetBtn.style.cssText = "padding: 0.85rem 1.75rem; border-radius: var(--radius-full); font-weight: 700; font-size: 0.95rem; cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem;";
-        worksheetBtn.innerHTML = '<i class="fas fa-print"></i> Printable Quiz & Key';
+        worksheetBtn.innerHTML = '<i class="fas fa-file-alt"></i> Printable Quiz &amp; Key';
         worksheetBtn.onclick = () => window.openPrintableWorksheetModal();
 
         const downloadBtn = document.createElement("button");
@@ -1272,6 +1327,7 @@ if (typeof finishQuiz === "function") {
         downloadBtn.innerHTML = '<i class="fas fa-file-download"></i> Download Text';
         downloadBtn.onclick = generateAndDownloadText;
 
+        btnContainer.appendChild(scorecardBtn);
         btnContainer.appendChild(reviewBtn);
         btnContainer.appendChild(reportBtn);
         btnContainer.appendChild(worksheetBtn);
@@ -1279,96 +1335,201 @@ if (typeof finishQuiz === "function") {
         resultDiv.appendChild(btnContainer);
       }
 
-      // Only show diagnostics if Entrance Exam was taken
-      if (window.currentAssessmentType === 'Entrance Exam') {
-          const subjectStats = {};
-          
-          // Count total and correct per subject
-          window.quizResultsData.forEach((item) => {
-              const subj = item.subject || 'General';
-              if (!subjectStats[subj]) {
-                  subjectStats[subj] = { total: 0, correct: 0 };
-              }
-              subjectStats[subj].total++;
-              if (item.isCorrect) {
-                  subjectStats[subj].correct++;
-              }
-          });
-          
-          // Generate recommendations
-          const recommendations = [];
-          const currentKey = document.getElementById("grade-key")?.value || "3";
-          
-          // Level links based on gradeConfig
-          const levelLink = gradeConfig[currentKey]?.link || "/";
-          const gradeLabel = gradeConfig[currentKey]?.label || "this Grade";
+      // Automatic Remediation Dispatcher
+      // Evaluates per-standard and per-subject mastery across all questions in window.quizResultsData
+      const standardStats = {};
+      const subjectStats = {};
 
-          Object.entries(subjectStats).forEach(([subj, stats]) => {
-              const pct = (stats.correct / stats.total) * 100;
-              if (pct < 80) {
-                  recommendations.push({
-                      subject: subj,
-                      score: Math.round(pct),
-                      total: stats.total,
-                      correct: stats.correct,
-                      link: levelLink,
-                      message: `Scored ${Math.round(pct)}% in ${subj}. We suggest reviewing ${gradeLabel} ${subj} curriculum lessons.`
-                  });
-              }
-          });
-          
-          // Display recommendations
-          const diagContainer = document.getElementById("diagnostic-container");
-          const diagList = document.getElementById("diagnostic-list");
-          if (diagContainer && diagList) {
-              diagList.innerHTML = "";
-              if (recommendations.length > 0) {
-                  recommendations.forEach(rec => {
-                      const item = document.createElement("div");
-                      item.className = "assessment-card";
-                      item.style.margin = "0";
-                      item.style.padding = "1rem";
-                      item.style.borderLeft = "4px solid var(--color-warning)";
-                      item.style.display = "flex";
-                      item.style.justifyContent = "space-between";
-                      item.style.alignItems = "center";
-                      item.style.backgroundColor = "var(--color-bg-base)";
-                      
-                      let subjectIcon = "fa-book";
-                      if (rec.subject === 'Math') subjectIcon = "fa-calculator";
-                      else if (rec.subject === 'Language Arts') subjectIcon = "fa-book-reader";
-                      else if (rec.subject === 'Science') subjectIcon = "fa-flask";
-                      else if (rec.subject === 'Social Studies') subjectIcon = "fa-globe-americas";
+      window.quizResultsData.forEach((item) => {
+        const subj = item.subject || 'General';
+        if (!subjectStats[subj]) {
+          subjectStats[subj] = { total: 0, correct: 0, missedItems: [] };
+        }
+        subjectStats[subj].total++;
+        if (item.isCorrect) {
+          subjectStats[subj].correct++;
+        } else {
+          subjectStats[subj].missedItems.push(item);
+        }
 
-                      item.innerHTML = `
-                          <div style="display: flex; align-items: center; gap: 0.75rem;">
-                              <i class="fas ${subjectIcon}" style="color: var(--color-warning); font-size: 1.25rem;"></i>
-                              <div>
-                                  <p style="font-weight: 700; font-size: 0.95rem; margin: 0;">Focus Area: ${rec.subject}</p>
-                                  <p style="font-size: 0.8rem; color: var(--color-text-muted); margin: 0.25rem 0 0 0;">${rec.message}</p>
-                              </div>
-                          </div>
-                          <a href="${rec.link}" class="hero-nav-btn hero-nav-btn-outline" style="padding: 0.4rem 1rem; font-size: 0.75rem; border-radius: var(--radius-md); font-weight: 700; white-space: nowrap;">
-                              Study ${rec.subject}
-                          </a>
-                      `;
-                      diagList.appendChild(item);
-                  });
-                  diagContainer.style.display = "block";
-              } else {
-                  // Perfect score suggestion
-                  diagList.innerHTML = `
-                      <div class="assessment-card" style="margin: 0; padding: 1.5rem; border-left: 4px solid var(--color-success); background-color: var(--color-bg-base); display: flex; align-items: center; gap: 0.75rem;">
-                          <i class="fas fa-check-double" style="color: var(--color-success); font-size: 1.5rem;"></i>
-                          <div>
-                              <p style="font-weight: 700; font-size: 0.95rem; margin: 0;">Excellent Placement!</p>
-                              <p style="font-size: 0.8rem; color: var(--color-text-muted); margin: 0.25rem 0 0 0;">You've demonstrated solid mastery (&gt;80%) in all core subjects for ${gradeLabel}! You are ready to move on to the next grade level curriculum.</p>
-                          </div>
-                      </div>
-                  `;
-                  diagContainer.style.display = "block";
-              }
+        const std = item.standard || (item.standards && item.standards[0]) || null;
+        if (std) {
+          if (!standardStats[std]) {
+            standardStats[std] = { code: std, subject: subj, total: 0, correct: 0, missedItems: [] };
           }
+          standardStats[std].total++;
+          if (item.isCorrect) {
+            standardStats[std].correct++;
+          } else {
+            standardStats[std].missedItems.push(item);
+          }
+        }
+      });
+
+      const currentKey = document.getElementById("grade-key")?.value || "k";
+      const levelLink = (window.gradeConfig && window.gradeConfig[currentKey]?.link) || `/levels/${currentKey}.php`;
+      const gradeLabel = (window.gradeConfig && window.gradeConfig[currentKey]?.label) || "Current Grade";
+
+      const recommendations = [];
+
+      // Evaluate standards with accuracy < 70%
+      Object.values(standardStats).forEach((st) => {
+        const pct = (st.correct / st.total) * 100;
+        if (pct < 70) {
+          let lessonUrl = levelLink;
+          let lessonTitle = `Review ${st.code} Lessons`;
+
+          if (currentKey === 'k' || currentKey === 'b' || currentKey === '9') {
+            if (st.code.includes('K.MD') || st.code.includes('M1.A.4') || st.missedItems.some(m => (m.question || '').toLowerCase().includes('graph') || (m.question || '').toLowerCase().includes('water'))) {
+              lessonUrl = '/levels/k.php?k-math-m1-a-4';
+              lessonTitle = 'Analyzing Graphs: Water Usage (K.M1.A.4)';
+            } else if (st.code.includes('K.OA') || st.code.includes('M1.A.1')) {
+              lessonUrl = '/levels/k.php?k-math-m1-a-1';
+              lessonTitle = 'Analyzing Numbers and Sums (K.M1.A.1)';
+            } else if (st.code.includes('K.CC') || st.code.includes('M1.A.2')) {
+              lessonUrl = '/levels/k.php?k-math-m1-a-2';
+              lessonTitle = 'Counting & Cardinality Foundations (K.M1.A.2)';
+            } else {
+              lessonUrl = `/levels/k.php?k-math-m1-a-4`;
+              lessonTitle = 'Targeted Standard Remediation Lesson';
+            }
+          } else {
+            lessonUrl = `${levelLink}#${st.subject.toLowerCase().replace(/\s+/g, '-')}`;
+            lessonTitle = `${gradeLabel} ${st.subject} Curriculum`;
+          }
+
+          recommendations.push({
+            type: 'standard',
+            title: `Standard ${st.code}`,
+            subject: st.subject,
+            score: Math.round(pct),
+            total: st.total,
+            correct: st.correct,
+            lessonUrl: lessonUrl,
+            lessonTitle: lessonTitle,
+            standardCode: st.code,
+            message: `Scored ${Math.round(pct)}% on standard ${st.code} (${st.correct}/${st.total} correct). Remediation recommended to achieve benchmark fluency.`
+          });
+        }
+      });
+
+      // Also evaluate subjects with accuracy < 70% if not already flagged
+      Object.entries(subjectStats).forEach(([subj, st]) => {
+        const pct = (st.correct / st.total) * 100;
+        if (pct < 70 && !recommendations.some(r => r.subject === subj)) {
+          let lessonUrl = `${levelLink}#${subj.toLowerCase().replace(/\s+/g, '-')}`;
+          let lessonTitle = `${gradeLabel} ${subj} Modules`;
+
+          if (subj === 'Math' && (currentKey === 'k' || currentKey === 'b' || currentKey === '9')) {
+            lessonUrl = '/levels/k.php?k-math-m1-a-4';
+            lessonTitle = 'Analyzing Graphs & Linear Models (k-math-m1-a-4)';
+          } else if (subj === 'Math') {
+            lessonUrl = '/student/math-practice.php';
+            lessonTitle = 'Adaptive Math Practice Workbench';
+          } else if (subj === 'Language Arts') {
+            lessonUrl = '/student/ela-grammar.php';
+            lessonTitle = 'Grammar Workshop & Sentence Doctor';
+          } else if (subj === 'Science') {
+            lessonUrl = '/student/interactive-labs.php';
+            lessonTitle = 'Interactive Lab Workstation';
+          }
+
+          recommendations.push({
+            type: 'subject',
+            title: `Core Subject: ${subj}`,
+            subject: subj,
+            score: Math.round(pct),
+            total: st.total,
+            correct: st.correct,
+            lessonUrl: lessonUrl,
+            lessonTitle: lessonTitle,
+            standardCode: null,
+            message: `Scored ${Math.round(pct)}% in ${subj} (${st.correct}/${st.total} correct). Targeted practice is suggested to build competency.`
+          });
+        }
+      });
+
+      // Save recommendations to localStorage for platform-wide availability
+      try {
+        localStorage.setItem('hl_remediation_recommendations', JSON.stringify({
+          date: new Date().toISOString(),
+          gradeKey: currentKey,
+          recommendations: recommendations
+        }));
+        window.dispatchEvent(new CustomEvent('hl:remediation-updated', { detail: recommendations }));
+      } catch (e) {}
+
+      // Display recommendations
+      const diagContainer = document.getElementById("diagnostic-container");
+      const diagList = document.getElementById("diagnostic-list");
+      if (diagContainer && diagList) {
+        diagList.innerHTML = "";
+        if (recommendations.length > 0) {
+          recommendations.forEach(rec => {
+            const item = document.createElement("div");
+            item.className = "remediation-card";
+            
+            let subjectIcon = "fa-book";
+            if (rec.subject === 'Math') subjectIcon = "fa-calculator";
+            else if (rec.subject === 'Language Arts') subjectIcon = "fa-book-reader";
+            else if (rec.subject === 'Science') subjectIcon = "fa-flask";
+            else if (rec.subject === 'Social Studies') subjectIcon = "fa-globe-americas";
+
+            const badgeClass = rec.score < 50 ? 'remediation-badge-danger' : 'remediation-badge-warning';
+
+            item.innerHTML = `
+              <div style="display: flex; align-items: flex-start; gap: 1rem; flex: 1 1 320px;">
+                <div style="width: 2.75rem; height: 2.75rem; border-radius: var(--radius-lg); background: color-mix(in srgb, var(--color-warning) 12%, transparent); color: var(--color-warning); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; flex-shrink: 0; margin-top: 0.15rem;">
+                  <i class="fas ${subjectIcon}"></i>
+                </div>
+                <div style="flex: 1;">
+                  <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.35rem;">
+                    <strong style="font-size: 1.05rem; color: var(--color-text-main);">${rec.title}</strong>
+                    <span class="remediation-badge ${badgeClass}">
+                      <i class="fas fa-exclamation-triangle"></i> ${rec.score}% Mastery (${rec.correct}/${rec.total})
+                    </span>
+                    ${rec.standardCode ? `<span class="remediation-badge remediation-badge-warning">${rec.standardCode}</span>` : ''}
+                  </div>
+                  <p style="font-size: 0.85rem; color: var(--color-text-muted); margin: 0 0 0.5rem 0; line-height: 1.5;">${rec.message}</p>
+                  <div style="font-size: 0.8rem; font-weight: 700; color: var(--color-primary);">
+                    <i class="fas fa-arrow-circle-right" style="margin-right: 0.35rem;"></i>Recommended Lesson: <em>${rec.lessonTitle}</em>
+                  </div>
+                </div>
+              </div>
+              <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
+                <a href="${rec.lessonUrl}" class="hero-nav-btn hero-nav-btn-primary" style="padding: 0.6rem 1.25rem; font-size: 0.85rem; border-radius: var(--radius-md); font-weight: 800; white-space: nowrap; border: none; text-decoration: none;">
+                  <i class="fas fa-play" style="margin-right: 0.35rem;"></i> Launch Lesson
+                </a>
+                ${rec.standardCode ? `
+                  <a href="/assessment/#standard=${encodeURIComponent(rec.standardCode)}" class="hero-nav-btn hero-nav-btn-outline" style="padding: 0.6rem 1rem; font-size: 0.85rem; border-radius: var(--radius-md); font-weight: 700; white-space: nowrap; text-decoration: none;" title="Take standard micro-quiz">
+                    <i class="fas fa-bullseye" style="margin-right: 0.35rem;"></i> Standard Drill
+                  </a>
+                ` : ''}
+              </div>
+            `;
+            diagList.appendChild(item);
+          });
+          diagContainer.style.display = "block";
+        } else {
+          // Mastery Demonstrated
+          diagList.innerHTML = `
+            <div class="remediation-card" style="border-left-color: var(--color-success); background-color: var(--color-bg-base);">
+              <div style="display: flex; align-items: center; gap: 1rem;">
+                <div style="width: 2.75rem; height: 2.75rem; border-radius: var(--radius-lg); background: color-mix(in srgb, var(--color-success) 15%, transparent); color: var(--color-success); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0;">
+                  <i class="fas fa-check-double"></i>
+                </div>
+                <div>
+                  <h4 style="font-weight: 800; font-size: 1.05rem; margin: 0 0 0.25rem 0; color: var(--color-text-main);">Proficiency Demonstrated (&ge; 70% Across All Tested Standards)</h4>
+                  <p style="font-size: 0.85rem; color: var(--color-text-muted); margin: 0; line-height: 1.5;">Outstanding performance! You have met or exceeded the benchmark criteria across all tested domains for ${gradeLabel}. No targeted remediation is required at this time.</p>
+                </div>
+              </div>
+              <a href="${levelLink}" class="hero-nav-btn hero-nav-btn-outline" style="padding: 0.6rem 1.25rem; font-size: 0.85rem; border-radius: var(--radius-md); font-weight: 700; white-space: nowrap;">
+                <i class="fas fa-award" style="margin-right: 0.35rem;"></i> View Curriculum
+              </a>
+            </div>
+          `;
+          diagContainer.style.display = "block";
+        }
       }
 
       // Build Review Mode Screen
@@ -1550,6 +1711,16 @@ function generateAndDownloadText() {
   document.body.removeChild(a);
   URL.revokeObjectURL(url);
 }
+
+// Printable Diagnostic Mastery Scorecard 1-Click Trigger
+window.printMasteryScorecard = function() {
+  if (typeof window.openMasteryReportCard === 'function') {
+    window.openMasteryReportCard();
+  }
+  setTimeout(() => {
+    window.print();
+  }, 350);
+};
 
 // 10. Open and Render Diagnostic Mastery Report Card Modal
 window.openMasteryReportCard = function() {

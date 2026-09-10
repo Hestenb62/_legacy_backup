@@ -832,6 +832,9 @@
                         return `<span class="std-code-wrap" data-std-code="${cleanCode}">` +
                             `<button type="button" class="std-code-badge" data-code="${cleanCode}" title="Click to copy standard code"><i class="far fa-copy"></i> ${cleanCode}</button>` +
                             `<button type="button" class="std-info-btn" data-code="${cleanCode}" aria-label="View Standard Details for ${cleanCode}" title="View detailed standard mastery dossier"><i class="fas fa-info-circle"></i></button>` +
+                            `<a href="/assessment/#standard=${encodeURIComponent(cleanCode)}" class="std-action-btn std-quiz-btn" title="Launch targeted assessment quiz for ${cleanCode}"><i class="fas fa-bullseye"></i> Practice</a>` +
+                            `<a href="/levels/${currentLevelLetter}.php?standard=${encodeURIComponent(cleanCode)}" class="std-action-btn std-lesson-btn" title="Jump to Level ${currentLevelLetter.toUpperCase()} curriculum lesson"><i class="fas fa-book-open"></i> Lesson</a>` +
+                            `<span class="std-mastery-checkmark" data-code="${cleanCode}" style="display: none;"></span>` +
                             `<span class="std-progress-badge" data-code="${cleanCode}" style="display: none;"></span>` +
                         `</span>`;
                     });
@@ -910,34 +913,65 @@
             function getDomainShortCode(domainStr) {
                 if (!domainStr) return '';
                 const trimmed = domainStr.trim();
-                // 1. Prefix code like "HS-PS: Physical Sciences..."
-                const prefixMatch = trimmed.match(/^([A-Z0-9]+(?:-[A-Z0-9]+)*):/i);
-                if (prefixMatch && prefixMatch[1].length <= 12) {
-                    return prefixMatch[1].trim();
-                }
-                // 2. Parentheses code at end like "Counting and Cardinality (K.CC)"
+
+                // 1. Parentheses standard code at end, e.g. "Counting and Cardinality (K.CC)" or "Reading: Literature (RL)"
                 const parenMatch = trimmed.match(/\(([^()]+)\)\s*$/);
                 if (parenMatch) {
                     const candidate = parenMatch[1].trim();
-                    if (/^[A-Za-z0-9\.\-\/\s]+$/.test(candidate) && candidate.length <= 25) {
+                    if (/^[A-Za-z0-9\.\-\/\s]+$/.test(candidate) && candidate.length <= 12) {
                         return candidate;
                     }
                 }
-                // 3. Any parenthetical containing standard letters/numbers
+
+                // 2. Any internal parenthetical containing standard letters/numbers (e.g. "(8.EE)")
                 const allParens = trimmed.match(/\(([^()]+)\)/g);
                 if (allParens) {
                     for (let i = allParens.length - 1; i >= 0; i--) {
                         const candidate = allParens[i].replace(/[()]/g, '').trim();
-                        if (/^[A-Za-z0-9\.\-\/\s]+$/.test(candidate) && candidate.length <= 20 && /[0-9]/.test(candidate)) {
+                        if (/^[A-Za-z0-9\.\-\/\s]+$/.test(candidate) && candidate.length <= 10 && /[0-9]/.test(candidate)) {
                             return candidate;
                         }
                     }
                 }
-                // 4. Short strings as-is
-                if (trimmed.length <= 15) {
-                    return trimmed;
+
+                // 3. Prefix standard code before colon (e.g. "8.EE: Expressions...", "HSA-SSE: Seeing...", "HS-PS: Physical...")
+                const prefixMatch = trimmed.match(/^([A-Za-z0-9]+(?:[\.\-][A-Za-z0-9]+)*):/);
+                if (prefixMatch) {
+                    const cand = prefixMatch[1].trim();
+                    if (cand.length <= 10 && (/[\.\-0-9]/.test(cand) || cand === cand.toUpperCase())) {
+                        return cand;
+                    }
                 }
-                return trimmed;
+
+                // 4. Concise standard domain code map (strictly numbers and letters)
+                const domainLower = trimmed.toLowerCase();
+                if (domainLower.includes('counting') && domainLower.includes('cardinality')) return 'K.CC';
+                if (domainLower.includes('operations') && domainLower.includes('algebraic')) return 'OA';
+                if (domainLower.includes('base ten') || domainLower.includes('base 10')) return 'NBT';
+                if (domainLower.includes('fraction')) return 'NF';
+                if (domainLower.includes('measurement') && domainLower.includes('data')) return 'MD';
+                if (domainLower.includes('geometry')) return 'G';
+                if (domainLower.includes('ratio') || domainLower.includes('proportional')) return 'RP';
+                if (domainLower.includes('number system')) return 'NS';
+                if (domainLower.includes('expression') || domainLower.includes('equation')) return 'EE';
+                if (domainLower.includes('function')) return 'F';
+                if (domainLower.includes('statistic') || domainLower.includes('probability')) return 'SP';
+                if (domainLower.includes('literature')) return 'RL';
+                if (domainLower.includes('informational')) return 'RI';
+                if (domainLower.includes('foundational')) return 'RF';
+                if (domainLower.includes('writing')) return 'W';
+                if (domainLower.includes('speaking') || domainLower.includes('listening')) return 'SL';
+                if (domainLower.includes('language')) return 'L';
+                if (domainLower.includes('physical science')) return 'PS';
+                if (domainLower.includes('life science')) return 'LS';
+                if (domainLower.includes('earth') || domainLower.includes('space')) return 'ESS';
+                if (domainLower.includes('engineering')) return 'ETS';
+
+                // 5. Short concise code fallback (strictly letters/numbers)
+                const words = trimmed.split(/[\s\-–—:]+/).filter(Boolean);
+                if (words.length === 1 && words[0].length <= 8) return words[0].toUpperCase();
+                const acronym = words.map(w => w[0]).join('').toUpperCase();
+                return acronym.slice(0, 6);
             }
 
             // Build Domain Filter Pills (Displaying Standard Numbers & Letters)
@@ -1251,8 +1285,51 @@
             }
         }
 
-        // Apply mastery progress overlay onto visible items
+        // Apply mastery progress overlay and real-time mastery checkmarks onto visible items
+        renderMasteryCheckmarks();
         applyProgressOverlay();
+    }
+
+    // ==========================================
+    // Real-Time Personal Mastery Checkmarks (>= 80%)
+    // ==========================================
+    function renderMasteryCheckmarks() {
+        let masteryData = {};
+        try {
+            const raw = localStorage.getItem('hesten_standards_mastery');
+            if (raw) masteryData = JSON.parse(raw);
+        } catch(e){}
+
+        document.querySelectorAll('.std-code-wrap').forEach(wrap => {
+            const code = wrap.dataset.stdCode;
+            if (!code) return;
+
+            let item = masteryData[code];
+            if (!item) {
+                const codeClean = code.toLowerCase().replace(/[^a-z0-9]/g, '');
+                for (const k in masteryData) {
+                    const kClean = k.toLowerCase().replace(/[^a-z0-9]/g, '');
+                    if (kClean === codeClean || codeClean.includes(kClean) || kClean.includes(codeClean)) {
+                        item = masteryData[k];
+                        break;
+                    }
+                }
+            }
+
+            const checkmarkEl = wrap.querySelector('.std-mastery-checkmark');
+            if (checkmarkEl) {
+                const score = item ? (item.bestScore !== undefined ? item.bestScore : (item.score || 0)) : 0;
+                const isMastered = item && (score >= 80 || item.status === 'Mastered' || item.status === 'mastered');
+                if (isMastered) {
+                    checkmarkEl.className = 'std-mastery-checkmark active';
+                    checkmarkEl.innerHTML = `<i class="fas fa-check-circle" style="color: #10b981;"></i> ${score}% Mastered`;
+                    checkmarkEl.title = `Standard Mastered! High score: ${score}% on official evaluation`;
+                    checkmarkEl.style.display = 'inline-flex';
+                } else {
+                    checkmarkEl.style.display = 'none';
+                }
+            }
+        });
     }
 
     // ==========================================
@@ -1265,6 +1342,7 @@
         localStorage.setItem('hesten_show_standards_progress', enabled ? 'true' : 'false');
         const toggleEl = document.getElementById('toggle-standards-progress');
         if (toggleEl) toggleEl.checked = enabled;
+        renderMasteryCheckmarks();
         applyProgressOverlay();
     }
 
@@ -2366,6 +2444,19 @@
 
         window.addEventListener('curriculum-loaded', () => {
             updateView();
+        });
+
+        // Real-time synchronization when assessment finishes or storage changes
+        window.addEventListener('storage', (e) => {
+            if (e.key === 'hesten_standards_mastery') {
+                renderMasteryCheckmarks();
+                applyProgressOverlay();
+            }
+        });
+
+        window.addEventListener('hl:assessment-complete', () => {
+            renderMasteryCheckmarks();
+            applyProgressOverlay();
         });
     });
 </script>

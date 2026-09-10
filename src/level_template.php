@@ -257,11 +257,15 @@ function renderSubjectModules(array $modulesList, string $subjectId, string $sub
                 <!-- Mastery Metric -->
                 <div class="mastery-container">
                     <div class="mastery-stats">
-                        <div class="mastery-label">Mastery</div>
+                        <div class="mastery-label">Module Mastery</div>
                         <div class="mastery-value module-progress-text" data-subject="<?php echo $subjectId; ?>" data-module="<?php echo $mIndex; ?>">0%</div>
                     </div>
                     <div class="progress-track">
                         <div class="progress-fill module-progress-bar" data-subject="<?php echo $subjectId; ?>" data-module="<?php echo $mIndex; ?>" style="width: 0%"></div>
+                    </div>
+                    <div class="module-progress-subtext" data-subject="<?php echo $subjectId; ?>" data-module="<?php echo $mIndex; ?>">
+                        <span class="mod-stat-skills">0 / 0 Lessons</span>
+                        <span class="mod-stat-mastery">0 Mastered (80%+)</span>
                     </div>
                 </div>
             </div>
@@ -274,6 +278,22 @@ function renderSubjectModules(array $modulesList, string $subjectId, string $sub
                     <div class="topic-header">
                         <span class="topic-letter"><?php echo $topic['letter']; ?></span>
                         <h3 class="topic-title"><?php echo $topic['name']; ?></h3>
+                    </div>
+
+                    <!-- Topic Milestone Honors Celebration -->
+                    <div class="topic-milestone-honors" id="honors-topic-<?php echo $subjectId; ?>-<?php echo $mIndex; ?>-<?php echo $topic['letter']; ?>" style="display: none;">
+                        <div class="honors-ribbon-content">
+                            <div class="honors-left">
+                                <i class="fas fa-medal honors-medal-icon"></i>
+                                <div>
+                                    <strong class="honors-title">Topic <?php echo $topic['letter']; ?> Honors Achieved!</strong>
+                                    <p class="honors-subtext">All skills in <?php echo htmlspecialchars($topic['name']); ?> completed or mastered!</p>
+                                </div>
+                            </div>
+                            <button type="button" class="honors-claim-btn" onclick="claimTopicCertificate('<?php echo addslashes($topic['name']); ?>', '<?php echo $subjectId; ?>', '<?php echo $topic['letter']; ?>')">
+                                <i class="fas fa-certificate"></i> Claim Honors Certificate
+                            </button>
+                        </div>
                     </div>
 
                     <div class="skills-grid">
@@ -325,6 +345,15 @@ function renderSubjectModules(array $modulesList, string $subjectId, string $sub
         <span style="color: var(--theme-color); opacity: 0.7;"><?php echo $gradeText; ?></span>
         <i class="fas fa-chevron-right" style="font-size: 8px; opacity: 0.3;"></i>
         <span class="breadcrumb-active" id="level-breadcrumb-active"><?php echo $levelTitle; ?> <span id="level-breadcrumb-subj"><?php echo strtoupper($initialSubjectName ?? $initialSubject ?? 'Math'); ?></span></span>
+    </div>
+
+    <!-- Live Skill Search Filter -->
+    <div class="level-search-wrapper" role="search" aria-label="Filter skills by keyword or standard code">
+        <i class="fas fa-search level-search-icon" aria-hidden="true"></i>
+        <input type="search" id="level-skill-search" class="level-search-input" placeholder="Search skills, topics, standards (e.g. algebra, HSA-SSE)..." aria-label="Search skills in this level" oninput="filterLevelSkills(this.value)">
+        <button type="button" id="level-search-clear" class="level-search-clear" onclick="clearLevelSkillSearch()" aria-label="Clear skill search" style="display: none;">
+            <i class="fas fa-times"></i>
+        </button>
     </div>
 
     <div class="subject-tabs" role="tablist" aria-label="Subject navigation tabs">
@@ -832,6 +861,12 @@ function renderSubjectModules(array $modulesList, string $subjectId, string $sub
     }
 
     function updateMetrics() {
+        let standardsMastery = {};
+        try {
+            const raw = localStorage.getItem('hesten_standards_mastery');
+            if (raw) standardsMastery = JSON.parse(raw);
+        } catch (e) {}
+
         document.querySelectorAll('.module-progress-text').forEach((el) => {
             const subject = el.getAttribute('data-subject') || 'math';
             const mIndex = parseInt(el.getAttribute('data-module'), 10);
@@ -839,15 +874,124 @@ function renderSubjectModules(array $modulesList, string $subjectId, string $sub
             if (!moduleData) return;
             const skillIds = [].concat(...moduleData.topics.map(t => t.skills.map(s => s.id)));
             const doneCount = skillIds.filter(id => completedLessons.includes(id)).length;
-            const percent = Math.round((doneCount / skillIds.length) * 100) || 0;
+            const totalSkills = skillIds.length;
+            const percent = totalSkills > 0 ? Math.round((doneCount / totalSkills) * 100) : 0;
             el.innerText = percent + '%';
 
             const bar = document.querySelector(`.module-progress-bar[data-subject="${subject}"][data-module="${mIndex}"]`);
             if (bar) {
                 bar.style.width = percent + '%';
             }
+
+            // Subtext metrics
+            const subtext = document.querySelector(`.module-progress-subtext[data-subject="${subject}"][data-module="${mIndex}"]`);
+            if (subtext) {
+                const skillsSpan = subtext.querySelector('.mod-stat-skills');
+                const masterySpan = subtext.querySelector('.mod-stat-mastery');
+                if (skillsSpan) skillsSpan.textContent = `${doneCount} / ${totalSkills} Lessons`;
+
+                // Calculate standards mastered in this module
+                const modSkills = [].concat(...moduleData.topics.map(t => t.skills));
+                const modMasteredCount = modSkills.filter(s => {
+                    const cleanCode = (s.code || '').replace(/[^a-zA-Z0-9]/g, '').toUpperCase();
+                    return Object.entries(standardsMastery).some(([k, r]) => {
+                        const cleanKey = k.replace(/[^a-zA-Z0-9]/g, '').toUpperCase();
+                        return (cleanKey === cleanCode || (cleanCode && cleanKey.includes(cleanCode))) && ((r.percentage || r.bestScore || 0) >= 80);
+                    });
+                }).length;
+                if (masterySpan) masterySpan.textContent = `${modMasteredCount} Mastered (80%+)`;
+            }
+        });
+
+        // Topic Honors Check
+        Object.entries(modulesData).forEach(([subj, mList]) => {
+            if (!mList || !Array.isArray(mList)) return;
+            mList.forEach((mod, mIdx) => {
+                if (!mod || !mod.topics) return;
+                mod.topics.forEach((topic) => {
+                    const honorsEl = document.getElementById(`honors-topic-${subj}-${mIdx}-${topic.letter}`);
+                    if (!honorsEl) return;
+                    const topicSkillIds = (topic.skills || []).map(s => s.id);
+                    if (topicSkillIds.length === 0) {
+                        honorsEl.style.display = 'none';
+                        return;
+                    }
+                    const allDone = topicSkillIds.every(id => completedLessons.includes(id));
+                    const allMastered = (topic.skills || []).every(s => {
+                        const cleanCode = (s.code || '').replace(/[^a-zA-Z0-9]/g, '').toUpperCase();
+                        return Object.entries(standardsMastery).some(([k, r]) => {
+                            const cleanKey = k.replace(/[^a-zA-Z0-9]/g, '').toUpperCase();
+                            return (cleanKey === cleanCode || (cleanCode && cleanKey.includes(cleanCode))) && ((r.percentage || r.bestScore || 0) >= 80);
+                        });
+                    });
+
+                    if (allDone || allMastered) {
+                        honorsEl.style.display = 'block';
+                    } else {
+                        honorsEl.style.display = 'none';
+                    }
+                });
+            });
         });
     }
+
+    window.claimTopicCertificate = function(topicName, subjectId, topicLetter) {
+        triggerWinEffect();
+        const subjectNames = {
+            'math': 'Mathematics',
+            'ela': 'Language Arts',
+            'science': 'Science',
+            'social': 'Social Studies'
+        };
+        const subjDisplay = subjectNames[subjectId] || subjectId.toUpperCase();
+        if (typeof window.openCertificateModal === 'function') {
+            window.openCertificateModal({
+                courseTitle: `${LEVEL_ID.toUpperCase()} ${subjDisplay} • Topic ${topicLetter}: ${topicName}`
+            });
+        }
+    };
+
+    window.filterLevelSkills = function(query) {
+        const q = (query || '').trim().toLowerCase();
+        const clearBtn = document.getElementById('level-search-clear');
+        if (clearBtn) clearBtn.style.display = q ? 'flex' : 'none';
+
+        document.querySelectorAll('.tab-content').forEach(section => {
+            const cards = section.querySelectorAll('.skill-card');
+            const topicSections = section.querySelectorAll('.topic-section');
+
+            if (!q) {
+                cards.forEach(c => c.style.display = '');
+                topicSections.forEach(t => t.style.display = '');
+                return;
+            }
+
+            cards.forEach(card => {
+                const text = (card.textContent || '').toLowerCase();
+                const code = (card.getAttribute('data-skill-code') || '').toLowerCase();
+                const id = (card.getAttribute('data-skill-id') || '').toLowerCase();
+                if (text.includes(q) || code.includes(q) || id.includes(q)) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            topicSections.forEach(topic => {
+                const visibleCards = topic.querySelectorAll('.skill-card:not([style*="display: none"])');
+                topic.style.display = visibleCards.length > 0 ? '' : 'none';
+            });
+        });
+    };
+
+    window.clearLevelSkillSearch = function() {
+        const input = document.getElementById('level-skill-search');
+        if (input) {
+            input.value = '';
+            window.filterLevelSkills('');
+            input.focus();
+        }
+    };
 
     function updateCurriculumBadge() {
         const badge = document.getElementById('level-curriculum-badge');

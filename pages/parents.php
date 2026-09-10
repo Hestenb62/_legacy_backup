@@ -63,6 +63,22 @@ include '../src/header.php';
                             </a>
                         </li>
                         <li class="parents-nav-item">
+                            <a href="#accommodations" class="parents-nav-link nav-link-green">
+                                <span class="parents-nav-icon nav-icon-green">
+                                    <i class="fas fa-universal-access"></i>
+                                </span>
+                                IEP & Accommodations
+                            </a>
+                        </li>
+                        <li class="parents-nav-item">
+                            <a href="#schedule" class="parents-nav-link nav-link-amber">
+                                <span class="parents-nav-icon nav-icon-amber">
+                                    <i class="fas fa-clock"></i>
+                                </span>
+                                Daily Schedule
+                            </a>
+                        </li>
+                        <li class="parents-nav-item">
                             <a href="#laws" class="parents-nav-link nav-link-teal">
                                 <span class="parents-nav-icon nav-icon-teal">
                                     <i class="fas fa-map-marked-alt"></i>
@@ -217,6 +233,180 @@ include '../src/header.php';
                             Generate Worksheets <i class="fas fa-arrow-right"></i>
                         </span>
                     </a>
+                </div>
+            </section>
+
+            <!-- IEP & Neurodiversity Accommodations Guide -->
+            <section id="accommodations" class="parents-section">
+                <div class="glass-panel parents-accommodations-card">
+                    <div class="parents-section-header" style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+                        <div>
+                            <h2 class="parents-section-title">
+                                <i class="fas fa-universal-access" style="color:#10b981;"></i> IEP & Neurodiversity Accommodations Guide
+                            </h2>
+                            <p class="parents-section-desc">Interactive checklist of evidence-based accommodations for ADHD, Autism, Dyslexia, and Sensory Processing.</p>
+                        </div>
+                        <div class="no-print" style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
+                            <span class="accommodations-counter-pill" id="accommodations-counter-pill">
+                                <i class="fas fa-check-circle" style="color:#10b981;"></i> <span id="accommodations-active-count">0</span> Active Supports
+                            </span>
+                            <button type="button" onclick="window.printAccommodationsGuide()" class="parents-tool-btn" style="background: var(--color-primary, #4f46e5); padding: 0.45rem 1rem; font-size: 0.85rem; border: none; cursor: pointer;">
+                                <i class="fas fa-print"></i> Print Accommodations Plan (PDF)
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="accommodations-grid" id="accommodations-grid">
+                        <!-- Category 1: Sensory & Emotional Regulation -->
+                        <div class="accommodation-category-card">
+                            <h3 class="accommodation-cat-title"><i class="fas fa-spa" style="color:#0d9488;"></i> Sensory & Emotional Regulation</h3>
+                            <div class="accommodation-items-list">
+                                <label class="accommodation-item">
+                                    <input type="checkbox" data-acc="sensory-retreat" onchange="toggleAccommodation(this)">
+                                    <div class="acc-text-wrap">
+                                        <span class="acc-title">Dedicated Calm Focus Retreat</span>
+                                        <span class="acc-tip">Establish a designated low-stimulus nook free from bright lighting and foot traffic for emotional regulation.</span>
+                                    </div>
+                                </label>
+                                <label class="accommodation-item">
+                                    <input type="checkbox" data-acc="movement-breaks" onchange="toggleAccommodation(this)">
+                                    <div class="acc-text-wrap">
+                                        <span class="acc-title">Scheduled 5-Minute Movement Resets</span>
+                                        <span class="acc-tip">Insert structured kinesthetic stretches, jumping jacks, or balance exercises between seated focus blocks.</span>
+                                    </div>
+                                </label>
+                                <label class="accommodation-item">
+                                    <input type="checkbox" data-acc="sensory-tools" onchange="toggleAccommodation(this)">
+                                    <div class="acc-text-wrap">
+                                        <span class="acc-title">Sensory Fidget & Proprioceptive Tools</span>
+                                        <span class="acc-tip">Allow textured grips, weighted lap pads, or wobble cushions to maintain tactile engagement during study.</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Category 2: Dyslexia & Reading Accessibility -->
+                        <div class="accommodation-category-card">
+                            <h3 class="accommodation-cat-title"><i class="fas fa-book-reader" style="color:#7c3aed;"></i> Dyslexia & Reading Supports</h3>
+                            <div class="accommodation-items-list">
+                                <label class="accommodation-item">
+                                    <input type="checkbox" data-acc="opendyslexic" onchange="toggleAccommodation(this)">
+                                    <div class="acc-text-wrap">
+                                        <span class="acc-title">OpenDyslexic Typeface & High Contrast</span>
+                                        <span class="acc-tip">Enable bottom-heavy letterforms and warm background tint via the global Accessibility menu to prevent visual crowding.</span>
+                                    </div>
+                                </label>
+                                <label class="accommodation-item">
+                                    <input type="checkbox" data-acc="reading-ruler" onchange="toggleAccommodation(this)">
+                                    <div class="acc-text-wrap">
+                                        <span class="acc-title">Line-Highlight Reading Ruler Guide</span>
+                                        <span class="acc-tip">Utilize focused line-by-line reading guides to eliminate skipping lines while reading literature or word problems.</span>
+                                    </div>
+                                </label>
+                                <label class="accommodation-item">
+                                    <input type="checkbox" data-acc="tts-audio" onchange="toggleAccommodation(this)">
+                                    <div class="acc-text-wrap">
+                                        <span class="acc-title">Bimodal Text-to-Speech Synchronized Audio</span>
+                                        <span class="acc-tip">Use the built-in TTS audio speech player across lessons and library readers for simultaneous auditory and visual decoding.</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Category 3: Executive Functioning & Focus -->
+                        <div class="accommodation-category-card">
+                            <h3 class="accommodation-cat-title"><i class="fas fa-stopwatch" style="color:#ea580c;"></i> Executive Functioning & Pacing</h3>
+                            <div class="accommodation-items-list">
+                                <label class="accommodation-item">
+                                    <input type="checkbox" data-acc="untimed-mode" onchange="toggleAccommodation(this)">
+                                    <div class="acc-text-wrap">
+                                        <span class="acc-title">Low-Anxiety Untimed Practice Mode</span>
+                                        <span class="acc-tip">Suppress countdown timers and high-pressure counters on quizzes using our Calm Focus Practice toggle.</span>
+                                    </div>
+                                </label>
+                                <label class="accommodation-item">
+                                    <input type="checkbox" data-acc="chunked-tasks" onchange="toggleAccommodation(this)">
+                                    <div class="acc-text-wrap">
+                                        <span class="acc-title">Chunked Task Presentation (5 at a time)</span>
+                                        <span class="acc-tip">Break extended problem sets into 5-question micro-milestones to protect executive working memory.</span>
+                                    </div>
+                                </label>
+                                <label class="accommodation-item">
+                                    <input type="checkbox" data-acc="visual-schedule" onchange="toggleAccommodation(this)">
+                                    <div class="acc-text-wrap">
+                                        <span class="acc-title">Visible Visual Checklists & Milestones</span>
+                                        <span class="acc-tip">Display checkable task timelines on the wall or screen so children anticipate upcoming transitions easily.</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Category 4: Mastery Progression & Sovereignty -->
+                        <div class="accommodation-category-card">
+                            <h3 class="accommodation-cat-title"><i class="fas fa-medal" style="color:#2563eb;"></i> Mastery-Based Progression</h3>
+                            <div class="accommodation-items-list">
+                                <label class="accommodation-item">
+                                    <input type="checkbox" data-acc="mastery-gate" onchange="toggleAccommodation(this)">
+                                    <div class="acc-text-wrap">
+                                        <span class="acc-title">Competency-Based Advancement</span>
+                                        <span class="acc-tip">Advance subjects based on demonstrated mastery (80%+) rather than rigid age-locked grade levels.</span>
+                                    </div>
+                                </label>
+                                <label class="accommodation-item">
+                                    <input type="checkbox" data-acc="offline-sovereignty" onchange="toggleAccommodation(this)">
+                                    <div class="acc-text-wrap">
+                                        <span class="acc-title">Offline Resilient Study Sessions</span>
+                                        <span class="acc-tip">Complete lessons and literature reading without active internet connections to prevent online distractions.</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Visual Home Routine & Daily Schedule Builder -->
+            <section id="schedule" class="parents-section">
+                <div class="glass-panel parents-schedule-card">
+                    <div class="parents-section-header" style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+                        <div>
+                            <h2 class="parents-section-title">
+                                <i class="fas fa-calendar-alt" style="color:#d97706;"></i> Visual Home Routine & Daily Schedule
+                            </h2>
+                            <p class="parents-section-desc">Design a balanced, neurodiversity-friendly daily routine and print a wall schedule for your homeschool space.</p>
+                        </div>
+                        <div class="no-print" style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
+                            <button type="button" onclick="window.printDailySchedule()" class="parents-tool-btn" style="background: linear-gradient(135deg, #f59e0b, #d97706); padding: 0.45rem 1rem; font-size: 0.85rem; border: none; cursor: pointer;">
+                                <i class="fas fa-print"></i> Print Refrigerator Schedule
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Schedule Configuration Toolbar -->
+                    <div class="schedule-config-bar no-print">
+                        <div class="schedule-config-item">
+                            <label for="sched-start-time" class="schedule-config-label"><i class="fas fa-sun" style="color:#f59e0b;"></i> Morning Start Time:</label>
+                            <select id="sched-start-time" onchange="updateScheduleTimes()" class="parents-form-input" style="padding: 0.4rem 0.75rem; width: auto; font-size: 0.875rem;">
+                                <option value="8:00">8:00 AM</option>
+                                <option value="8:30" selected>8:30 AM</option>
+                                <option value="9:00">9:00 AM</option>
+                                <option value="9:30">9:30 AM</option>
+                            </select>
+                        </div>
+                        <div class="schedule-config-item">
+                            <label for="sched-pacing-style" class="schedule-config-label"><i class="fas fa-sliders-h" style="color:#6366f1;"></i> Pacing Rhythm:</label>
+                            <select id="sched-pacing-style" onchange="updateScheduleTimes()" class="parents-form-input" style="padding: 0.4rem 0.75rem; width: auto; font-size: 0.875rem;">
+                                <option value="standard" selected>Balanced Focus (40m blocks / 15m breaks)</option>
+                                <option value="pomodoro">Pomodoro (25m blocks / 5m sensory resets)</option>
+                                <option value="gentle">Gentle Pacing (30m blocks / 20m breaks)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Timeline Block Cards -->
+                    <div class="schedule-blocks-container" id="schedule-blocks-container">
+                        <!-- Populated dynamically via JS -->
+                    </div>
                 </div>
             </section>
 
@@ -608,6 +798,191 @@ include '../src/header.php';
             if (typeof showMessageBox === 'function') showMessageBox('Please enter your feedback.');
             else alert('Feedback cannot be empty.');
         }
+    });
+
+    // --- IEP & Accommodations Persistence ---
+    const STORAGE_KEY_ACC = 'hesten_parent_accommodations';
+
+    function getSavedAccommodations() {
+        try {
+            const raw = localStorage.getItem(STORAGE_KEY_ACC);
+            if (raw) return JSON.parse(raw);
+        } catch (e) {}
+        return ['sensory-retreat', 'movement-breaks', 'opendyslexic', 'untimed-mode'];
+    }
+
+    function saveAccommodations(arr) {
+        try {
+            localStorage.setItem(STORAGE_KEY_ACC, JSON.stringify(arr));
+        } catch (e) {}
+    }
+
+    function toggleAccommodation(checkbox) {
+        const key = checkbox.getAttribute('data-acc');
+        let current = getSavedAccommodations();
+        if (checkbox.checked) {
+            if (!current.includes(key)) current.push(key);
+        } else {
+            current = current.filter(k => k !== key);
+        }
+        saveAccommodations(current);
+        updateAccommodationsCountBadge();
+    }
+
+    function updateAccommodationsCountBadge() {
+        const active = getSavedAccommodations();
+        const countEl = document.getElementById('accommodations-active-count');
+        if (countEl) countEl.textContent = active.length;
+    }
+
+    function loadSavedAccommodations() {
+        const saved = getSavedAccommodations();
+        const checkboxes = document.querySelectorAll('#accommodations-grid input[type="checkbox"]');
+        checkboxes.forEach(cb => {
+            const key = cb.getAttribute('data-acc');
+            cb.checked = saved.includes(key);
+        });
+        updateAccommodationsCountBadge();
+    }
+
+    window.printAccommodationsGuide = function() {
+        window.print();
+    };
+
+    // --- Daily Schedule Builder ---
+    function formatMinutesToTime(totalMins) {
+        let hours = Math.floor(totalMins / 60);
+        let mins = totalMins % 60;
+        let period = hours >= 12 ? 'PM' : 'AM';
+        let displayHour = hours % 12;
+        if (displayHour === 0) displayHour = 12;
+        let displayMins = mins < 10 ? '0' + mins : mins;
+        return `${displayHour}:${displayMins} ${period}`;
+    }
+
+    function updateScheduleTimes() {
+        const startSelect = document.getElementById('sched-start-time');
+        const pacingSelect = document.getElementById('sched-pacing-style');
+        const container = document.getElementById('schedule-blocks-container');
+        if (!container) return;
+
+        const startVal = startSelect ? startSelect.value : '8:30';
+        const [sH, sM] = startVal.split(':').map(Number);
+        let currentMinutes = sH * 60 + sM;
+
+        const pacing = pacingSelect ? pacingSelect.value : 'standard';
+        let focusMins = 40, breakMins = 15, lunchMins = 50;
+        if (pacing === 'pomodoro') {
+            focusMins = 25; breakMins = 5; lunchMins = 45;
+        } else if (pacing === 'gentle') {
+            focusMins = 30; breakMins = 20; lunchMins = 60;
+        }
+
+        const routineBlocks = [
+            {
+                title: "Morning Launch & Mindful Warmup",
+                desc: "Check-in conversation, daily goal setting, and sensory breathing warmup.",
+                duration: 15,
+                icon: "fa-sun",
+                color: "#4f46e5",
+                tag: "Mindset"
+            },
+            {
+                title: "Core Mathematics Mastery",
+                desc: "Standard-aligned math exploration with concrete manipulatives or interactive curriculum lessons.",
+                duration: focusMins,
+                icon: "fa-calculator",
+                color: "#059669",
+                tag: "Academic",
+                link: "/levels/"
+            },
+            {
+                title: "Sensory Movement Reset & Healthy Snack",
+                desc: "Proprioceptive stretching, water hydration, and healthy brain-fuel nourishment.",
+                duration: breakMins,
+                icon: "fa-apple-alt",
+                color: "#0d9488",
+                tag: "Wellness"
+            },
+            {
+                title: "English Language Arts & Literature Reading",
+                desc: "Reading comprehension, vocabulary popovers, or Parts of Speech grammar investigation.",
+                duration: focusMins,
+                icon: "fa-book-reader",
+                color: "#7c3aed",
+                tag: "Academic",
+                link: "/library/"
+            },
+            {
+                title: "Science Inquiry & Multimodal Lab Exploration",
+                desc: "Hands-on Chemistry pH testing, timeline investigation, or interactive simulation labs.",
+                duration: focusMins,
+                icon: "fa-flask",
+                color: "#ea580c",
+                tag: "Discovery",
+                link: "/student/interactive-labs.php"
+            },
+            {
+                title: "Nourishing Lunch & Outdoor Kinesthetic Play",
+                desc: "Social family mealtime, sunshine, and unstructured physical movement.",
+                duration: lunchMins,
+                icon: "fa-running",
+                color: "#10b981",
+                tag: "Recharge"
+            },
+            {
+                title: "Educational Play & Speed Sprint Fluency",
+                desc: "Celebratory educational play: 60-Second Speed Sprint arithmetic or Memory Match.",
+                duration: 25,
+                icon: "fa-bolt",
+                color: "#f59e0b",
+                tag: "Fluency",
+                link: "/pages/games.php"
+            }
+        ];
+
+        let html = '';
+        routineBlocks.forEach((block, idx) => {
+            const blockStart = formatMinutesToTime(currentMinutes);
+            currentMinutes += block.duration;
+            const blockEnd = formatMinutesToTime(currentMinutes);
+
+            html += `
+                <div class="schedule-block-row">
+                    <div class="schedule-time-badge">
+                        <span class="sched-start">${blockStart}</span>
+                        <span class="sched-to">to</span>
+                        <span class="sched-end">${blockEnd}</span>
+                        <span class="sched-dur">(${block.duration} min)</span>
+                    </div>
+                    <div class="schedule-block-content">
+                        <div class="sched-icon-pill" style="background: ${block.color}15; color: ${block.color};">
+                            <i class="fas ${block.icon}"></i>
+                        </div>
+                        <div class="sched-details">
+                            <div class="sched-header-line">
+                                <h4 class="sched-title">${block.title}</h4>
+                                <span class="sched-tag" style="border-color: ${block.color}40; color: ${block.color};">${block.tag}</span>
+                            </div>
+                            <p class="sched-desc">${block.desc}</p>
+                            ${block.link ? `<a href="${block.link}" class="sched-link no-print" target="_blank">Open Resource <i class="fas fa-arrow-right"></i></a>` : ''}
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+
+        container.innerHTML = html;
+    }
+
+    window.printDailySchedule = function() {
+        window.print();
+    };
+
+    // Load initial parents hub states
+    document.addEventListener('DOMContentLoaded', () => {
+        loadSavedAccommodations();
+        updateScheduleTimes();
     });
 </script>
 

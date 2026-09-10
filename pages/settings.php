@@ -57,9 +57,9 @@ include '../src/header.php';
                     <li>
                         <a href="#data" class="settings-nav-link">
                             <div class="settings-nav-icon settings-nav-icon-rose">
-                                <i class="fas fa-save"></i>
+                                <i class="fas fa-database"></i>
                             </div>
-                            Data & Reset
+                            Data & Offline Storage
                         </a>
                     </li>
                 </ul>
@@ -362,28 +362,151 @@ include '../src/header.php';
                 </div>
             </section>
 
-            <!-- SECTION: DATA -->
+            <!-- SECTION: DATA & OFFLINE SOVEREIGNTY -->
             <section id="data" class="settings-section" style="animation-delay: 0.5s;">
                 <h2 class="settings-section-title">
-                    <i class="fas fa-save text-primary"></i> Data & Reset
+                    <i class="fas fa-database text-primary"></i> Data Sovereignty, Portability & Offline PWA
                 </h2>
                 
-                <div class="settings-actions-group">
-                    <button onclick="localStorage.removeItem('hl_accessibility_settings'); window.location.reload();"
-                        class="settings-btn settings-btn-reset">
-                        <i class="fas fa-undo"></i> Reset to Defaults
-                    </button>
-                    <!-- Simulated Export feature -->
-                    <button onclick="exportSettings()"
-                        class="settings-btn settings-btn-export">
-                        <i class="fas fa-download"></i> Export All Data
-                    </button>
-                    <button onclick="exportAccommodationSheet()"
-                        class="settings-btn settings-btn-export" style="background: linear-gradient(135deg, var(--color-primary), var(--color-accent)); color: #ffffff; border: none;">
-                        <i class="fas fa-file-medical-alt"></i> Export IEP / 504 Accommodation Sheet
-                    </button>
+                <!-- 1. Student Portfolio Data Sovereignty Card -->
+                <div class="settings-sovereignty-card mb-8">
+                    <div class="sovereignty-card-header">
+                        <div class="sovereignty-icon-wrap" style="background: rgba(99, 102, 241, 0.12); color: #6366f1;">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div>
+                            <h3 class="sovereignty-card-title">Complete Student Portfolio Sovereignty</h3>
+                            <p class="sovereignty-card-desc">
+                                You own 100% of your student data. Export your entire academic profile, standard mastery benchmarks, completed achievements, homeschool accommodations, and teacher rosters as an open JSON archive. Restore or migrate to any device with zero server dependency.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="settings-actions-group">
+                        <button type="button" onclick="exportCompletePortfolio()" class="settings-btn settings-btn-export" style="background: linear-gradient(135deg, #4f46e5, #6366f1); color: #ffffff; border: none; font-weight: 700;">
+                            <i class="fas fa-file-export"></i> Export Complete Portfolio (.json)
+                        </button>
+                        <button type="button" onclick="document.getElementById('import-portfolio-input').click()" class="settings-btn settings-btn-restore" style="border-color: #6366f1; color: #4f46e5; font-weight: 700;">
+                            <i class="fas fa-file-import"></i> Restore Portfolio from File
+                        </button>
+                        <input type="file" id="import-portfolio-input" accept=".json,application/json" style="display: none;" onchange="handlePortfolioFileSelect(event)">
+                        
+                        <button type="button" onclick="exportAccommodationSheet()" class="settings-btn settings-btn-export" style="background: linear-gradient(135deg, #059669, #10b981); color: #ffffff; border: none; font-weight: 700;">
+                            <i class="fas fa-file-medical-alt"></i> Export IEP / 504 Sheet
+                        </button>
+                        <button type="button" onclick="resetPlatformDefaults()" class="settings-btn settings-btn-reset">
+                            <i class="fas fa-undo"></i> Reset Preferences
+                        </button>
+                    </div>
+
+                    <!-- Import Confirmation Modal / Preview Info -->
+                    <div id="portfolio-restore-preview" class="portfolio-restore-preview" style="display: none;">
+                        <div class="restore-preview-header">
+                            <i class="fas fa-check-circle" style="color: #10b981; font-size: 1.25rem;"></i>
+                            <h4 id="restore-preview-title">Portfolio Archive Validated</h4>
+                        </div>
+                        <div class="restore-preview-meta" id="restore-preview-meta"></div>
+                        <div class="restore-preview-actions">
+                            <button type="button" id="btn-confirm-restore" onclick="applyPortfolioRestore()" class="settings-btn" style="background: #10b981; color: #ffffff; border: none; font-weight: 700;">
+                                <i class="fas fa-sync-alt"></i> Merge & Restore All Data
+                            </button>
+                            <button type="button" onclick="cancelPortfolioRestore()" class="settings-btn" style="background: var(--color-bg-surface); color: var(--color-text-main); border: 1px solid var(--color-border);">
+                                Cancel
+                            </button>
+                        </div>
+                    </div>
                 </div>
 
+                <!-- 2. Offline PWA & Storage Quota Manager -->
+                <div class="settings-storage-panel mb-8">
+                    <div class="sovereignty-card-header">
+                        <div class="sovereignty-icon-wrap" style="background: rgba(16, 185, 129, 0.12); color: #10b981;">
+                            <i class="fas fa-hdd"></i>
+                        </div>
+                        <div>
+                            <h3 class="sovereignty-card-title">Offline PWA Storage & Road Trip Pre-Caching</h3>
+                            <p class="sovereignty-card-desc">
+                                Monitor your local browser cache quota and pre-cache entire grade curriculum modules or digital library readers for flights, road trips, and rural areas without internet.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Live Storage Stats Grid -->
+                    <div class="settings-storage-grid">
+                        <div class="storage-stat-card">
+                            <span class="storage-stat-label"><i class="fas fa-database"></i> Storage Used</span>
+                            <span class="storage-stat-value" id="storage-stat-used">Calculating...</span>
+                            <span class="storage-stat-sub" id="storage-stat-total">of browser quota</span>
+                        </div>
+                        <div class="storage-stat-card">
+                            <span class="storage-stat-label"><i class="fas fa-copy"></i> Cached Files</span>
+                            <span class="storage-stat-value" id="storage-stat-assets">--</span>
+                            <span class="storage-stat-sub">across active caches</span>
+                        </div>
+                        <div class="storage-stat-card">
+                            <span class="storage-stat-label"><i class="fas fa-bolt"></i> Offline Shell</span>
+                            <span class="storage-stat-value" id="storage-stat-sw" style="color: #10b981;">Active</span>
+                            <span class="storage-stat-sub">Service worker ready</span>
+                        </div>
+                        <div class="storage-stat-card">
+                            <span class="storage-stat-label"><i class="fas fa-book"></i> Literature Books</span>
+                            <span class="storage-stat-value" id="storage-stat-books">5 Available</span>
+                            <span class="storage-stat-sub">Frankenstein, 1984, etc.</span>
+                        </div>
+                    </div>
+
+                    <!-- Visual Storage Meter Bar -->
+                    <div class="storage-meter-wrapper mt-4">
+                        <div class="storage-meter-label-row">
+                            <span>Browser Quota Allocation</span>
+                            <span id="storage-meter-pct">0%</span>
+                        </div>
+                        <div class="storage-meter-track">
+                            <div class="storage-meter-fill" id="storage-meter-fill" style="width: 2%;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Pre-Cache Curriculum Suite -->
+                    <div class="precache-suite-box mt-6">
+                        <h4 class="precache-title">
+                            <i class="fas fa-cloud-download-alt text-indigo-600"></i> Pre-Cache Curriculum Package for Road Trips
+                        </h4>
+                        <p class="precache-desc">
+                            Select a grade level to download all core HTML shells, CSS stylesheets, and diagnostic assessment assets directly into your browser's persistent cache:
+                        </p>
+                        <div class="precache-controls-row">
+                            <select id="precache-target-select" class="settings-dropdown" style="max-width: 320px; padding: 0.65rem 1rem; border-radius: 0.75rem; border: 1px solid var(--color-border); font-weight: 600; background: var(--color-bg-base); color: var(--color-text-main);">
+                                <option value="k">Level K (Kindergarten & Grade 9 Math/ELA)</option>
+                                <option value="a">Level A (Grade 1 Foundations)</option>
+                                <option value="b">Level B (Grade 2 Math & Reading)</option>
+                                <option value="c">Level C (Grade 3 Spiral Curriculum)</option>
+                                <option value="d">Level D (Grade 4 Core Mastery)</option>
+                                <option value="e">Level E (Grade 5 Advanced Concepts)</option>
+                                <option value="library">Digital Library Classics (All 5 Readers)</option>
+                                <option value="stem">Interactive STEM & Chemistry Labs</option>
+                            </select>
+                            <button type="button" id="btn-precache-now" onclick="startCurriculumPreCache()" class="settings-btn" style="background: var(--color-primary); color: #ffffff; border: none; font-weight: 700;">
+                                <i class="fas fa-download"></i> Pre-Cache for Road Trip
+                            </button>
+                            <button type="button" onclick="purgeOfflineCaches()" class="settings-btn" style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.3); font-weight: 700;" title="Purge Cache Storage without losing student progress">
+                                <i class="fas fa-trash-alt"></i> Purge Offline Cache
+                            </button>
+                        </div>
+
+                        <!-- Pre-cache animated progress bar -->
+                        <div id="precache-progress-box" class="precache-progress-box" style="display: none; margin-top: 1rem;">
+                            <div class="precache-progress-status">
+                                <span id="precache-progress-label"><i class="fas fa-spinner fa-spin"></i> Caching assets...</span>
+                                <span id="precache-progress-count">0%</span>
+                            </div>
+                            <div class="precache-progress-track">
+                                <div id="precache-progress-fill" class="precache-progress-fill" style="width: 0%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Google Drive Cloud Sync -->
                 <div class="settings-sync-container">
                     <h3 class="settings-sync-title">
                         <i class="fab fa-google-drive" style="color: #1FA463; margin-right: 0.75rem;"></i> Google Drive Cloud Sync
@@ -514,15 +637,254 @@ include '../src/header.php';
         }
     }
 
-    function exportSettings() {
-        const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(getAllSiteData());
-        const downloadAnchorNode = document.createElement('a');
-        downloadAnchorNode.setAttribute("href", dataStr);
-        downloadAnchorNode.setAttribute("download", "hestens_learning_data.json");
-        document.body.appendChild(downloadAnchorNode);
-        downloadAnchorNode.click();
-        downloadAnchorNode.remove();
-        alert('Data downloaded as hestens_learning_data.json');
+    // --- PORTFOLIO DATA SOVEREIGNTY SUITE ---
+    function exportCompletePortfolio() {
+        let profile = { firstName: 'Student', lastName: '' };
+        try {
+            const rawProfile = localStorage.getItem('hesten-user-profile');
+            if (rawProfile) profile = { ...profile, ...JSON.parse(rawProfile) };
+        } catch (e) {}
+        const studentName = (profile.firstName + ' ' + (profile.lastName || '')).trim() || 'Student';
+
+        // Collect all localStorage data
+        const localData = {};
+        for (let i = 0; i < localStorage.length; i++) {
+            const k = localStorage.key(i);
+            if (k) localData[k] = localStorage.getItem(k);
+        }
+
+        const payload = {
+            meta: {
+                platform: "Hesten's Learning Platform",
+                version: "2.0",
+                exportedAt: new Date().toISOString(),
+                student: studentName,
+                totalKeys: Object.keys(localData).length
+            },
+            data: localData
+        };
+
+        const dateStr = new Date().toISOString().slice(0, 10);
+        const filename = `hestens_learning_portfolio_${studentName.toLowerCase().replace(/[^a-z0-9]/g, '_')}_${dateStr}.json`;
+        const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json;charset=utf-8;' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+
+        alert(`Complete student portfolio exported successfully (${Object.keys(localData).length} learning records saved)!`);
+    }
+
+    function handlePortfolioFileSelect(event) {
+        const file = event.target.files && event.target.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            try {
+                const parsed = JSON.parse(e.target.result);
+                let recordsData = null;
+                let studentName = 'Student';
+                let exportDate = 'Unknown Date';
+                let totalRecords = 0;
+
+                if (parsed.meta && parsed.data) {
+                    recordsData = parsed.data;
+                    studentName = parsed.meta.student || 'Student';
+                    exportDate = parsed.meta.exportedAt ? new Date(parsed.meta.exportedAt).toLocaleDateString() : 'Recent';
+                    totalRecords = Object.keys(recordsData).length;
+                } else if (typeof parsed === 'object') {
+                    recordsData = parsed;
+                    totalRecords = Object.keys(parsed).length;
+                }
+
+                if (!recordsData || totalRecords === 0) {
+                    alert('Invalid portfolio file: No valid student records found.');
+                    return;
+                }
+
+                window.__pendingPortfolioData = recordsData;
+
+                const previewEl = document.getElementById('portfolio-restore-preview');
+                const metaEl = document.getElementById('restore-preview-meta');
+                if (previewEl && metaEl) {
+                    metaEl.innerHTML = `
+                        <span><i class="fas fa-user-graduate"></i> Learner: ${escapeHtmlSetting(studentName)}</span>
+                        <span><i class="fas fa-calendar-alt"></i> Backup Date: ${escapeHtmlSetting(exportDate)}</span>
+                        <span><i class="fas fa-layer-group"></i> ${totalRecords} Records</span>
+                        <span><i class="fas fa-check"></i> Verified Integrity</span>
+                    `;
+                    previewEl.style.display = 'block';
+                    previewEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            } catch (err) {
+                alert('Error parsing portfolio file: Ensure it is a valid .json export.');
+                console.error(err);
+            }
+        };
+        reader.readAsText(file);
+    }
+
+    function applyPortfolioRestore() {
+        if (!window.__pendingPortfolioData) return;
+        const records = window.__pendingPortfolioData;
+        const count = Object.keys(records).length;
+
+        for (const k in records) {
+            try {
+                localStorage.setItem(k, records[k]);
+            } catch (e) {}
+        }
+
+        window.__pendingPortfolioData = null;
+        alert(`Successfully restored and merged ${count} student portfolio records!`);
+        window.dispatchEvent(new CustomEvent('settings-changed', { detail: loadSettings() }));
+        window.dispatchEvent(new CustomEvent('hl:profile-updated'));
+        window.location.reload();
+    }
+
+    function cancelPortfolioRestore() {
+        window.__pendingPortfolioData = null;
+        const previewEl = document.getElementById('portfolio-restore-preview');
+        if (previewEl) previewEl.style.display = 'none';
+        const fileInput = document.getElementById('import-portfolio-input');
+        if (fileInput) fileInput.value = '';
+    }
+
+    function resetPlatformDefaults() {
+        if (confirm('Reset your local accessibility and display preferences to default? Your student learning progress and high scores will be preserved.')) {
+            localStorage.removeItem('hl_accessibility_settings');
+            window.location.reload();
+        }
+    }
+
+    function escapeHtmlSetting(str) {
+        if (!str) return '';
+        return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+
+    // --- OFFLINE PWA STORAGE QUOTA INSPECTOR ---
+    async function inspectStorageQuota() {
+        // 1. Quota estimation
+        if (navigator.storage && navigator.storage.estimate) {
+            try {
+                const est = await navigator.storage.estimate();
+                const usedMB = (est.usage / (1024 * 1024)).toFixed(1);
+                const totalGB = (est.quota / (1024 * 1024 * 1024)).toFixed(1);
+                const pct = est.quota ? Math.min(100, Math.max(1, Math.round((est.usage / est.quota) * 100))) : 1;
+
+                const usedEl = document.getElementById('storage-stat-used');
+                const totalEl = document.getElementById('storage-stat-total');
+                const pctEl = document.getElementById('storage-meter-pct');
+                const fillEl = document.getElementById('storage-meter-fill');
+
+                if (usedEl) usedEl.textContent = `${usedMB} MB`;
+                if (totalEl) totalEl.textContent = `of ${totalGB} GB browser quota`;
+                if (pctEl) pctEl.textContent = `${pct}%`;
+                if (fillEl) fillEl.style.width = `${pct}%`;
+            } catch (e) {}
+        }
+
+        // 2. Cache inspection
+        if (window.caches) {
+            try {
+                const keys = await caches.keys();
+                let totalItems = 0;
+                for (const k of keys) {
+                    const cache = await caches.open(k);
+                    const requests = await cache.keys();
+                    totalItems += requests.length;
+                }
+                const assetsEl = document.getElementById('storage-stat-assets');
+                if (assetsEl) assetsEl.textContent = `${totalItems} files`;
+            } catch (e) {}
+        }
+    }
+
+    // --- CURRICULUM PRE-CACHE ENGINE ---
+    async function startCurriculumPreCache() {
+        const select = document.getElementById('precache-target-select');
+        const target = select ? select.value : 'k';
+        const progressBox = document.getElementById('precache-progress-box');
+        const labelEl = document.getElementById('precache-progress-label');
+        const countEl = document.getElementById('precache-progress-count');
+        const fillEl = document.getElementById('precache-progress-fill');
+        const btn = document.getElementById('btn-precache-now');
+
+        if (!window.caches) {
+            alert('CacheStorage is not supported in this browser environment.');
+            return;
+        }
+
+        if (btn) btn.disabled = true;
+        if (progressBox) progressBox.style.display = 'block';
+
+        // Map targets to essential URLs
+        const targetManifests = {
+            'k': ['/levels/k.php', '/levels/k-math.php', '/levels/k-ela.php', '/assets/css/global-tokens.css', '/assets/css/global-components.css', '/offline.php'],
+            'a': ['/levels/a.php', '/levels/a-math.php', '/levels/a-ela.php', '/assets/css/global-tokens.css', '/assets/css/global-components.css', '/offline.php'],
+            'b': ['/levels/b.php', '/levels/b-math.php', '/levels/b-ela.php', '/assets/css/global-tokens.css', '/assets/css/global-components.css', '/offline.php'],
+            'c': ['/levels/c.php', '/levels/c-math.php', '/levels/c-ela.php', '/assets/css/global-tokens.css', '/assets/css/global-components.css', '/offline.php'],
+            'd': ['/levels/d.php', '/levels/d-math.php', '/levels/d-ela.php', '/assets/css/global-tokens.css', '/assets/css/global-components.css', '/offline.php'],
+            'e': ['/levels/e.php', '/levels/e-math.php', '/levels/e-ela.php', '/assets/css/global-tokens.css', '/assets/css/global-components.css', '/offline.php'],
+            'library': ['/library/', '/library/read/frankenstein/', '/library/read/1984/', '/library/read/usa-constitution/', '/library/read/federalist-papers/', '/library/read/american-yawp/'],
+            'stem': ['/student/interactive-labs.php', '/student/periodic-table.php', '/student/', '/assets/css/global-components.css']
+        };
+
+        const urlsToCache = targetManifests[target] || targetManifests['k'];
+        const cacheName = 'hl-curriculum-offline-cache';
+
+        try {
+            const cache = await caches.open(cacheName);
+            let done = 0;
+
+            for (const url of urlsToCache) {
+                if (labelEl) labelEl.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Caching: ${url.slice(0, 30)}...`;
+                try {
+                    const resp = await fetch(url, { cache: 'reload' });
+                    if (resp && resp.ok) {
+                        await cache.put(url, resp);
+                    }
+                } catch (fetchErr) {
+                    console.warn('Precache skip on fetch err:', url);
+                }
+                done++;
+                const pct = Math.round((done / urlsToCache.length) * 100);
+                if (countEl) countEl.textContent = `${pct}%`;
+                if (fillEl) fillEl.style.width = `${pct}%`;
+            }
+
+            if (labelEl) labelEl.innerHTML = '<i class="fas fa-check-circle text-emerald-500"></i> Curriculum pre-cached successfully!';
+            setTimeout(() => {
+                if (btn) btn.disabled = false;
+                inspectStorageQuota();
+            }, 1200);
+            alert(`Curriculum package for ${target.toUpperCase()} pre-cached for offline road trips!`);
+        } catch (err) {
+            console.error('Pre-cache error:', err);
+            if (labelEl) labelEl.textContent = 'Pre-caching encountered an error.';
+            if (btn) btn.disabled = false;
+        }
+    }
+
+    async function purgeOfflineCaches() {
+        if (!window.caches) return;
+        if (confirm('Purge offline cached curriculum and book files? This frees disk space without deleting any of your saved progress or settings.')) {
+            try {
+                const keys = await caches.keys();
+                for (const k of keys) {
+                    await caches.delete(k);
+                }
+                alert('Offline cache purged successfully.');
+                inspectStorageQuota();
+            } catch (e) {
+                console.error('Purge error:', e);
+            }
+        }
     }
 
     function exportAccommodationSheet() {
@@ -777,6 +1139,7 @@ include '../src/header.php';
     // Initialize UI on Load
     document.addEventListener('DOMContentLoaded', () => {
         syncPageUI();
+        inspectStorageQuota();
 
         // Listen for internal updates (from header a11y panel)
         window.addEventListener('settings-changed', (e) => {

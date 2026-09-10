@@ -3,6 +3,7 @@
 $pageTitle = "Math Practice Problems - Hesten's Learning";
 $pageDescription = "Test your knowledge and improve your skills with our comprehensive collection of math practice problems for Algebra, Geometry, Calculus, and more.";
 $pageAuthor = "Hesten's Learning Team";
+$requiresMathJax = true;
 
 // Variables for the welcome popup (located in header.php)
 $welcomeMessage = "Math Practice Zone";
@@ -33,6 +34,96 @@ include '../src/header.php';
         </div>
     </div>
 </div>
+
+<!-- ========================================================================= -->
+<!-- ADAPTIVE INFINITE MATH PRACTICE PROBLEM GENERATOR WORKBENCH -->
+<!-- ========================================================================= -->
+<section class="math-generator-workbench" id="math-practice-workbench" aria-label="Adaptive Infinite Math Practice Generator">
+    <div class="mg-header">
+        <div class="mg-title-group">
+            <span class="mg-badge"><i class="fas fa-bolt"></i> Infinite Problem Generator</span>
+            <h2 class="mg-title">Adaptive Practice Workbench</h2>
+            <p class="mg-subtitle">Sharpen your computational fluency with dynamically generated practice problems, step-by-step MathJax proofs, and streak rewards.</p>
+        </div>
+        <div class="mg-stats-panel">
+            <div class="mg-stat-box">
+                <span class="mg-stat-label">Current Streak</span>
+                <span class="mg-stat-val" id="mg-streak-val">🔥 0</span>
+            </div>
+            <div class="mg-stat-box">
+                <span class="mg-stat-label">Solved</span>
+                <span class="mg-stat-val" id="mg-solved-val">0</span>
+            </div>
+            <div class="mg-stat-box">
+                <span class="mg-stat-label">Accuracy</span>
+                <span class="mg-stat-val" id="mg-accuracy-val">100%</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Category Selector Tabs -->
+    <div class="mg-category-nav" role="tablist" aria-label="Select Math Topic">
+        <button type="button" class="mg-cat-btn active" data-cat="linear" onclick="switchMathGenCategory('linear')">
+            <i class="fas fa-equals"></i> Linear Equations
+        </button>
+        <button type="button" class="mg-cat-btn" data-cat="quadratic" onclick="switchMathGenCategory('quadratic')">
+            <i class="fas fa-superscript"></i> Quadratic Factoring
+        </button>
+        <button type="button" class="mg-cat-btn" data-cat="fractions" onclick="switchMathGenCategory('fractions')">
+            <i class="fas fa-divide"></i> Fractions & Decimals
+        </button>
+        <button type="button" class="mg-cat-btn" data-cat="pythagorean" onclick="switchMathGenCategory('pythagorean')">
+            <i class="fas fa-shapes"></i> Pythagorean Theorem
+        </button>
+    </div>
+
+    <!-- Active Problem Stage -->
+    <div class="mg-stage-card">
+        <div class="mg-prompt-meta">
+            <span class="mg-standard-tag" id="mg-standard-tag">CCSS.MATH.CONTENT.HSA.REI.B.3</span>
+            <span class="mg-difficulty-tag">Adaptive Difficulty: Level 1</span>
+        </div>
+        <h3 class="mg-instruction" id="mg-instruction-text">Solve for \(x\):</h3>
+        
+        <div class="mg-equation-display" id="mg-equation-display">
+            <!-- Dynamic MathJax Equation Rendered Here -->
+            \[ 3x - 7 = 14 \]
+        </div>
+
+        <form id="mg-answer-form" class="mg-input-form" onsubmit="handleMathGenSubmit(event)">
+            <div class="mg-input-wrapper">
+                <label for="mg-user-input" class="sr-only">Your Answer</label>
+                <input type="text" id="mg-user-input" class="mg-answer-input" placeholder="Enter your answer (e.g. 7)" autocomplete="off" required>
+                <button type="submit" class="mg-btn-submit" id="mg-submit-btn">
+                    <i class="fas fa-check-circle"></i> Check Answer
+                </button>
+            </div>
+            <div class="mg-btn-group">
+                <button type="button" class="mg-btn-secondary" onclick="generateNewMathProblem()">
+                    <i class="fas fa-random"></i> New Problem
+                </button>
+                <button type="button" class="mg-btn-secondary" id="mg-toggle-solution-btn" onclick="toggleMathGenSolution()">
+                    <i class="fas fa-lightbulb"></i> View Solution
+                </button>
+            </div>
+        </form>
+
+        <!-- Feedback Alert -->
+        <div id="mg-feedback-box" class="mg-feedback-box" style="display: none;"></div>
+
+        <!-- Step-by-Step Worked Solution Drawer -->
+        <div id="mg-solution-drawer" class="mg-solution-drawer" style="display: none;">
+            <div class="mg-solution-header">
+                <i class="fas fa-book-open"></i>
+                <strong>Step-by-Step Worked Solution:</strong>
+            </div>
+            <div id="mg-solution-content" class="mg-solution-body">
+                <!-- Step-by-step MathJax Explanation -->
+            </div>
+        </div>
+    </div>
+</section>
+
 <div class="resource-grid" id="topics-grid">
             
             <!-- Algebra Practice -->
@@ -549,6 +640,239 @@ document.addEventListener("DOMContentLoaded", () => {
                 resultElement.className = "mt-2 text-sm font-medium feedback-incorrect";
             }
         }
+
+        /**
+         * Adaptive Infinite Math Practice Problem Generator
+         */
+        (function() {
+            let currentCategory = 'linear';
+            let currentProblem = null;
+            let streak = 0;
+            let solved = 0;
+            let totalAttempts = 0;
+
+            try {
+                streak = parseInt(localStorage.getItem('hl_math_gen_streak') || '0', 10);
+                solved = parseInt(localStorage.getItem('hl_math_gen_solved') || '0', 10);
+                totalAttempts = parseInt(localStorage.getItem('hl_math_gen_attempts') || '0', 10);
+            } catch(e) {}
+
+            function updateStatsUI() {
+                const streakEl = document.getElementById('mg-streak-val');
+                const solvedEl = document.getElementById('mg-solved-val');
+                const accuracyEl = document.getElementById('mg-accuracy-val');
+                if (streakEl) streakEl.textContent = `🔥 ${streak}`;
+                if (solvedEl) solvedEl.textContent = solved;
+                if (accuracyEl) {
+                    const acc = totalAttempts > 0 ? Math.round((solved / totalAttempts) * 100) : 100;
+                    accuracyEl.textContent = `${acc}%`;
+                }
+                try {
+                    localStorage.setItem('hl_math_gen_streak', streak.toString());
+                    localStorage.setItem('hl_math_gen_solved', solved.toString());
+                    localStorage.setItem('hl_math_gen_attempts', totalAttempts.toString());
+                } catch(e) {}
+            }
+
+            function getRandomInt(min, max) {
+                return Math.floor(Math.random() * (max - min + 1)) + min;
+            }
+
+            function generateProblem(cat) {
+                let prob = {};
+                if (cat === 'linear') {
+                    const a = getRandomInt(2, 8);
+                    const x = getRandomInt(-9, 12);
+                    const b = getRandomInt(-15, 18);
+                    const c = a * x + b;
+                    const bStr = b >= 0 ? `+ ${b}` : `- ${Math.abs(b)}`;
+                    prob = {
+                        cat: 'linear',
+                        standard: 'CCSS.MATH.CONTENT.HSA.REI.B.3',
+                        instruction: 'Solve for \\(x\\):',
+                        latex: `\\[ ${a}x ${bStr} = ${c} \\]`,
+                        correctAnswers: [x.toString()],
+                        solutionHtml: `<p>1. Subtract ${b} from both sides: \\(${a}x = ${c - b}\\)</p><p>2. Divide both sides by ${a}: \\(x = \\frac{${c - b}}{${a}} = ${x}\\)</p>`
+                    };
+                } else if (cat === 'quadratic') {
+                    const r1 = getRandomInt(-7, 7) || 2;
+                    let r2 = getRandomInt(-7, 7) || 3;
+                    if (r1 === r2) r2 += 1;
+                    const b = -(r1 + r2);
+                    const c = r1 * r2;
+                    const bStr = b === 0 ? '' : (b > 0 ? (b === 1 ? '+ x' : `+ ${b}x`) : (b === -1 ? '- x' : `- ${Math.abs(b)}x`));
+                    const cStr = c >= 0 ? `+ ${c}` : `- ${Math.abs(c)}`;
+                    prob = {
+                        cat: 'quadratic',
+                        standard: 'CCSS.MATH.CONTENT.HSA.REI.B.4',
+                        instruction: 'Find the solutions for \\(x\\) (separate with comma, e.g. 2, -3):',
+                        latex: `\\[ x^2 ${bStr} ${cStr} = 0 \\]`,
+                        correctAnswers: [r1.toString(), r2.toString()],
+                        solutionHtml: `<p>1. Factor into two binomials: \\((x ${r1 >= 0 ? '- ' + r1 : '+ ' + Math.abs(r1)})(x ${r2 >= 0 ? '- ' + r2 : '+ ' + Math.abs(r2)}) = 0\\)</p><p>2. Set each factor equal to zero: \\(x = ${r1}\\) or \\(x = ${r2}\\)</p>`
+                    };
+                } else if (cat === 'fractions') {
+                    const denoms = [2, 3, 4, 5, 6, 8, 10];
+                    const b = denoms[getRandomInt(0, denoms.length - 1)];
+                    const d = denoms[getRandomInt(0, denoms.length - 1)];
+                    const a = getRandomInt(1, b - 1) || 1;
+                    const c = getRandomInt(1, d - 1) || 1;
+                    const num = a * d + c * b;
+                    const den = b * d;
+                    const gcd = (x, y) => y === 0 ? x : gcd(y, x % y);
+                    const g = gcd(num, den);
+                    const redNum = num / g;
+                    const redDen = den / g;
+                    const ansFrac = redDen === 1 ? `${redNum}` : `${redNum}/${redDen}`;
+                    const ansDec = (num / den).toFixed(2);
+                    prob = {
+                        cat: 'fractions',
+                        standard: 'CCSS.MATH.CONTENT.5.NF.A.1',
+                        instruction: 'Compute and simplify the fraction sum (e.g. 5/6 or decimal):',
+                        latex: `\\[ \\frac{${a}}{${b}} + \\frac{${c}}{${d}} = ? \\]`,
+                        correctAnswers: [ansFrac, `${num}/${den}`, ansDec],
+                        solutionHtml: `<p>1. Find a common denominator: \\(\\text{LCD} = ${b * d}\\)</p><p>2. Convert fractions: \\(\\frac{${a * d}}{${b * d}} + \\frac{${c * b}}{${b * d}} = \\frac{${num}}{${den}}\\)</p><p>3. Simplify by dividing by common factor ${g}: \\(\\mathbf{${ansFrac}}\\)</p>`
+                    };
+                } else if (cat === 'pythagorean') {
+                    const triples = [
+                        [3, 4, 5], [5, 12, 13], [6, 8, 10], [8, 15, 17], [7, 24, 25], [9, 12, 15]
+                    ];
+                    const t = triples[getRandomInt(0, triples.length - 1)];
+                    const findHypotenuse = Math.random() > 0.4;
+                    if (findHypotenuse) {
+                        prob = {
+                            cat: 'pythagorean',
+                            standard: 'CCSS.MATH.CONTENT.8.G.B.7',
+                            instruction: `In a right triangle with legs \\(a = ${t[0]}\\) and \\(b = ${t[1]}\\), find the hypotenuse \\(c\\):`,
+                            latex: `\\[ a^2 + b^2 = c^2 \\quad \\Longrightarrow \\quad ${t[0]}^2 + ${t[1]}^2 = c^2 \\]`,
+                            correctAnswers: [t[2].toString()],
+                            solutionHtml: `<p>1. Square each leg: \\(${t[0]}^2 = ${t[0]*t[0]}\\), \\(${t[1]}^2 = ${t[1]*t[1]}\\)</p><p>2. Add squares: \\(${t[0]*t[0]} + ${t[1]*t[1]} = ${t[2]*t[2]}\\)</p><p>3. Take the square root: \\(c = \\sqrt{${t[2]*t[2]}} = \\mathbf{${t[2]}}\\)</p>`
+                        };
+                    } else {
+                        prob = {
+                            cat: 'pythagorean',
+                            standard: 'CCSS.MATH.CONTENT.8.G.B.7',
+                            instruction: `In a right triangle with hypotenuse \\(c = ${t[2]}\\) and leg \\(a = ${t[0]}\\), find leg \\(b\\):`,
+                            latex: `\\[ ${t[0]}^2 + b^2 = ${t[2]}^2 \\]`,
+                            correctAnswers: [t[1].toString()],
+                            solutionHtml: `<p>1. Rearrange for \\(b^2\\): \\(b^2 = ${t[2]}^2 - ${t[0]}^2 = ${t[2]*t[2]} - ${t[0]*t[0]} = ${t[1]*t[1]}\\)</p><p>2. Take the square root: \\(b = \\sqrt{${t[1]*t[1]}} = \\mathbf{${t[1]}}\\)</p>`
+                        };
+                    }
+                }
+                return prob;
+            }
+
+            function renderCurrentProblem() {
+                if (!currentProblem) currentProblem = generateProblem(currentCategory);
+                
+                const stdTag = document.getElementById('mg-standard-tag');
+                const instrText = document.getElementById('mg-instruction-text');
+                const eqDisplay = document.getElementById('mg-equation-display');
+                const userInput = document.getElementById('mg-user-input');
+                const feedbackBox = document.getElementById('mg-feedback-box');
+                const solutionDrawer = document.getElementById('mg-solution-drawer');
+                const solutionContent = document.getElementById('mg-solution-content');
+
+                if (stdTag) stdTag.textContent = currentProblem.standard;
+                if (instrText) instrText.innerHTML = currentProblem.instruction;
+                if (eqDisplay) eqDisplay.innerHTML = currentProblem.latex;
+                if (userInput) {
+                    userInput.value = '';
+                    userInput.focus();
+                }
+                if (feedbackBox) feedbackBox.style.display = 'none';
+                if (solutionDrawer) solutionDrawer.style.display = 'none';
+                if (solutionContent) solutionContent.innerHTML = currentProblem.solutionHtml;
+
+                if (window.ensureMathJax) {
+                    window.ensureMathJax([eqDisplay, instrText, solutionContent]);
+                } else if (window.MathJax && window.MathJax.typesetPromise) {
+                    window.MathJax.typesetPromise([eqDisplay, instrText, solutionContent]);
+                }
+            }
+
+            window.switchMathGenCategory = function(cat) {
+                currentCategory = cat;
+                document.querySelectorAll('.mg-cat-btn').forEach(btn => {
+                    btn.classList.toggle('active', btn.dataset.cat === cat);
+                });
+                currentProblem = null;
+                renderCurrentProblem();
+            };
+
+            window.generateNewMathProblem = function() {
+                currentProblem = null;
+                renderCurrentProblem();
+            };
+
+            window.toggleMathGenSolution = function() {
+                const drawer = document.getElementById('mg-solution-drawer');
+                if (drawer) {
+                    const isHidden = drawer.style.display === 'none';
+                    drawer.style.display = isHidden ? 'block' : 'none';
+                    if (isHidden && window.ensureMathJax) {
+                        window.ensureMathJax([drawer]);
+                    }
+                }
+            };
+
+            window.handleMathGenSubmit = function(e) {
+                e.preventDefault();
+                if (!currentProblem) return;
+                const input = document.getElementById('mg-user-input');
+                const feedback = document.getElementById('mg-feedback-box');
+                const val = (input?.value || '').trim().toLowerCase().replace(/\s+/g, '');
+                if (!val) return;
+
+                totalAttempts++;
+                const correctList = currentProblem.correctAnswers.map(a => a.toLowerCase().replace(/\s+/g, ''));
+                
+                let isMatch = false;
+                if (currentProblem.cat === 'quadratic') {
+                    const userParts = val.split(',').map(s => s.replace(/[^0-9\-]/g, '')).filter(Boolean).sort();
+                    const expectedParts = correctList.map(s => s.replace(/[^0-9\-]/g, '')).sort();
+                    if (userParts.length === expectedParts.length && userParts.every((p, idx) => p === expectedParts[idx])) {
+                        isMatch = true;
+                    } else if (userParts.length === 1 && expectedParts.includes(userParts[0])) {
+                        isMatch = true;
+                    }
+                } else {
+                    isMatch = correctList.some(ans => ans === val || ans.replace(/^x=/, '') === val.replace(/^x=/, ''));
+                }
+
+                if (isMatch) {
+                    streak++;
+                    solved++;
+                    updateStatsUI();
+                    if (feedback) {
+                        feedback.className = 'mg-feedback-box mg-feedback-success';
+                        feedback.innerHTML = '<i class="fas fa-check-circle"></i> Correct! Outstanding mathematical work!';
+                        feedback.style.display = 'block';
+                    }
+                    if (window.questManager) window.questManager.addXP(15, 'Math Problem Master');
+                    if (streak > 0 && streak % 3 === 0 && typeof confetti === 'function') {
+                        confetti({ particleCount: 75, spread: 60, origin: { y: 0.6 } });
+                    }
+                } else {
+                    streak = 0;
+                    updateStatsUI();
+                    if (feedback) {
+                        feedback.className = 'mg-feedback-box mg-feedback-error';
+                        feedback.innerHTML = `<i class="fas fa-times-circle"></i> Not quite. Check your calculation or click "View Solution" for step-by-step guidance!`;
+                        feedback.style.display = 'block';
+                    }
+                }
+            };
+
+            document.addEventListener('DOMContentLoaded', () => {
+                updateStatsUI();
+                renderCurrentProblem();
+            });
+            // Also call immediately if DOM is already ready
+            if (document.readyState !== 'loading') {
+                updateStatsUI();
+                renderCurrentProblem();
+            }
+        })();
     </script>
 
 

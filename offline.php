@@ -345,6 +345,141 @@
             color: var(--off-text);
         }
 
+        /* Diagnostic Health Bar */
+        .off-health-bar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.65rem;
+            margin-top: 1.25rem;
+        }
+
+        .off-health-chip {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid var(--off-border);
+            padding: 0.4rem 0.85rem;
+            border-radius: 9999px;
+            font-size: 0.825rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--off-muted);
+            transition: all 0.2s ease;
+        }
+
+        .off-health-chip strong {
+            color: var(--off-text);
+        }
+
+        .off-health-chip:hover {
+            border-color: var(--off-primary);
+            background: rgba(30, 41, 59, 0.9);
+        }
+
+        /* Reconnection Toast */
+        .off-reconnect-toast {
+            position: fixed;
+            top: 1.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #064e3b;
+            color: #d1fae5;
+            border: 1px solid #10b981;
+            padding: 0.85rem 1.5rem;
+            border-radius: 9999px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 0.9rem;
+            animation: slideDown 0.3s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translate(-50%, -20px); }
+            to { opacity: 1; transform: translate(-50%, 0); }
+        }
+
+        .off-btn-sm {
+            padding: 0.35rem 0.75rem;
+            border-radius: 0.5rem;
+            font-size: 0.8rem;
+            font-weight: 700;
+            cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            transition: all 0.15s ease;
+        }
+
+        .off-btn-sm:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .off-btn-sm.primary {
+            background: #10b981;
+            border-color: #10b981;
+            color: #064e3b;
+            font-weight: 800;
+        }
+
+        /* Drill Mode Selector */
+        .off-drill-mode-row {
+            display: flex;
+            justify-content: center;
+            gap: 0.4rem;
+            margin-bottom: 0.85rem;
+        }
+
+        .off-mode-pill {
+            background: var(--off-surface);
+            border: 1px solid var(--off-border);
+            color: var(--off-muted);
+            padding: 0.25rem 0.65rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.15s ease;
+        }
+
+        .off-mode-pill:hover,
+        .off-mode-pill.active {
+            background: var(--off-primary);
+            border-color: var(--off-primary);
+            color: #ffffff;
+        }
+
+        /* Diagnostics Card */
+        .off-diag-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
+        }
+
+        .off-diag-item {
+            background: #0f172a;
+            border: 1px solid var(--off-border);
+            border-radius: 0.75rem;
+            padding: 0.75rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .off-diag-item span {
+            font-size: 0.75rem;
+            color: var(--off-muted);
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .off-diag-item strong {
+            font-size: 1.1rem;
+            color: var(--off-text);
+        }
+
         /* Footer */
         .off-footer {
             text-align: center;
@@ -358,10 +493,19 @@
             .off-title { font-size: 1.6rem; }
             .off-hero { padding: 2rem 1.25rem; }
             .off-drill-options { grid-template-columns: 1fr; }
+            .off-diag-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
+
+    <!-- Reconnection Toast Banner -->
+    <div id="off-reconnect-toast" class="off-reconnect-toast" style="display: none;" role="alert">
+        <i class="fas fa-wifi" style="color: #34d399; font-size: 1.1rem;"></i>
+        <span><strong>Connection Restored!</strong> Returning online in <span id="reconnect-countdown">3</span>s...</span>
+        <button type="button" onclick="cancelAutoReload()" class="off-btn-sm">Stay Offline</button>
+        <button type="button" onclick="window.location.reload()" class="off-btn-sm primary">Return Now</button>
+    </div>
 
     <div class="off-container">
         <!-- Hero Status Card -->
@@ -389,6 +533,26 @@
             <div class="off-status-pill" id="offline-status" role="status">
                 <span class="status-dot" id="status-dot"></span>
                 <span id="status-text">Offline Shell Active &bull; Local Storage Ready</span>
+            </div>
+
+            <!-- Health Status Chips -->
+            <div class="off-health-bar">
+                <div class="off-health-chip">
+                    <i class="fas fa-bolt" style="color: #34d399;"></i>
+                    <span>SW: <strong id="health-sw-status">Active</strong></span>
+                </div>
+                <div class="off-health-chip">
+                    <i class="fas fa-layer-group" style="color: #60a5fa;"></i>
+                    <span>Caches: <strong id="health-cache-count">Scanning...</strong></span>
+                </div>
+                <div class="off-health-chip">
+                    <i class="fas fa-hdd" style="color: #c084fc;"></i>
+                    <span>Storage: <strong id="health-storage-stat">Ready</strong></span>
+                </div>
+                <div class="off-health-chip" id="health-ping-chip" onclick="testConnection()" style="cursor: pointer;" title="Click to test ping latency">
+                    <i class="fas fa-satellite-dish" style="color: #fbbf24;"></i>
+                    <span>Ping: <strong id="health-ping-stat">Test Ping</strong></span>
+                </div>
             </div>
         </header>
 
@@ -421,7 +585,48 @@
                 </div>
             </section>
 
-            <!-- 2. Mental Math Workout -->
+            <!-- 2. Diagnostic Health & Cache Inspector -->
+            <section class="off-card" aria-labelledby="card-diag-title">
+                <div class="off-card-header">
+                    <div class="off-card-icon" style="background: rgba(99, 102, 241, 0.15); color: #818cf8;" aria-hidden="true">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <div>
+                        <h2 id="card-diag-title" class="off-card-title">PWA Health & Cache Diagnostics</h2>
+                    </div>
+                </div>
+                <p style="font-size: 0.85rem; color: var(--off-muted); margin: 0;">
+                    Live inspection of browser cache registries, storage quota, and service worker status:
+                </p>
+                <div class="off-diag-grid">
+                    <div class="off-diag-item">
+                        <span>Cached Assets</span>
+                        <strong id="diag-cached-assets">Calculating...</strong>
+                    </div>
+                    <div class="off-diag-item">
+                        <span>Active Caches</span>
+                        <strong id="diag-cache-stores">Scanning...</strong>
+                    </div>
+                    <div class="off-diag-item">
+                        <span>Storage Quota</span>
+                        <strong id="diag-storage-quota">-- MB</strong>
+                    </div>
+                    <div class="off-diag-item">
+                        <span>Network Ping</span>
+                        <strong id="diag-ping-stat">Offline</strong>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 0.5rem; margin-top: 0.25rem;">
+                    <button type="button" onclick="testConnection()" class="off-btn off-btn-secondary" style="flex: 1; padding: 0.5rem; font-size: 0.825rem;">
+                        <i class="fas fa-satellite-dish"></i> Ping Latency
+                    </button>
+                    <button type="button" onclick="purgeStaleOfflineCache()" class="off-btn off-btn-secondary" style="padding: 0.5rem; font-size: 0.825rem; color: #f87171;" title="Purge cached files to free disk space">
+                        <i class="fas fa-trash-alt"></i> Purge Cache
+                    </button>
+                </div>
+            </section>
+
+            <!-- 3. Mental Math Workout Drill -->
             <section class="off-card" aria-labelledby="card-drill-title">
                 <div class="off-card-header">
                     <div class="off-card-icon" style="background: rgba(16, 185, 129, 0.15); color: #34d399;" aria-hidden="true">
@@ -432,8 +637,12 @@
                     </div>
                 </div>
                 <div class="off-drill-box">
-                    <div style="font-size: 0.8rem; color: var(--off-muted); text-transform: uppercase; font-weight: 700; letter-spacing: 0.05em;">
-                        Mental Math Drill
+                    <div class="off-drill-mode-row">
+                        <button type="button" class="off-mode-pill active" onclick="setDrillOp('all', this)">Mixed</button>
+                        <button type="button" class="off-mode-pill" onclick="setDrillOp('+', this)">Addition</button>
+                        <button type="button" class="off-mode-pill" onclick="setDrillOp('-', this)">Subtract</button>
+                        <button type="button" class="off-mode-pill" onclick="setDrillOp('*', this)">Multiply</button>
+                        <button type="button" class="off-mode-pill" onclick="setDrillOp('/', this)">Divide</button>
                     </div>
                     <div class="off-drill-question" id="drill-question">8 &times; 7 = ?</div>
                     <div class="off-drill-options" id="drill-options">
@@ -442,6 +651,7 @@
                     <div class="off-drill-stats">
                         <span>Score: <span class="off-drill-stat-num" id="stat-score">0</span></span>
                         <span>Streak: <span class="off-drill-stat-num" id="stat-streak">0</span> &starf;</span>
+                        <span>Best: <span class="off-drill-stat-num" id="stat-best-streak">0</span></span>
                         <span>Accuracy: <span class="off-drill-stat-num" id="stat-acc">100%</span></span>
                     </div>
                 </div>
@@ -527,17 +737,28 @@
         // ==========================================
         // 1. Connection Monitoring & Automatic Reload
         // ==========================================
+        let reloadTimer = null;
+        let reloadCount = 3;
+
         function testConnection() {
             const statusText = document.getElementById('status-text');
-            const statusDot = document.getElementById('status-dot');
+            const pingStat = document.getElementById('health-ping-stat');
+            const diagPing = document.getElementById('diag-ping-stat');
             if (statusText) statusText.innerText = 'Checking connectivity...';
+            if (pingStat) pingStat.innerText = 'Testing...';
 
-            fetch('/manifest.json', { method: 'HEAD', cache: 'no-store' })
+            const start = performance.now();
+            fetch('/manifest.json?ping=' + Date.now(), { method: 'HEAD', cache: 'no-store' })
                 .then(() => {
+                    const elapsed = Math.round(performance.now() - start);
+                    if (pingStat) pingStat.innerText = `${elapsed}ms`;
+                    if (diagPing) diagPing.innerText = `${elapsed}ms (Online)`;
                     handleOnline();
                 })
                 .catch(() => {
                     if (statusText) statusText.innerText = 'Still offline. Check Wi-Fi or mobile data.';
+                    if (pingStat) pingStat.innerText = 'Timeout';
+                    if (diagPing) diagPing.innerText = 'Unreachable';
                     setTimeout(() => {
                         if (!navigator.onLine && statusText) {
                             statusText.innerText = 'Offline Shell Active • Local Storage Ready';
@@ -550,23 +771,106 @@
             const status = document.getElementById('offline-status');
             const statusDot = document.getElementById('status-dot');
             const statusText = document.getElementById('status-text');
+            const toast = document.getElementById('off-reconnect-toast');
+            const countdownEl = document.getElementById('reconnect-countdown');
 
             if (status && statusDot && statusText) {
                 statusDot.style.background = '#22c55e';
                 status.style.background = 'rgba(34, 197, 94, 0.2)';
                 status.style.borderColor = 'rgba(34, 197, 94, 0.4)';
                 status.style.color = '#86efac';
-                statusText.innerText = 'Connection Restored! Reloading page...';
+                statusText.innerText = 'Connection Restored! Returning online...';
             }
-            setTimeout(() => {
-                window.location.reload();
-            }, 900);
+
+            if (toast) {
+                toast.style.display = 'flex';
+                reloadCount = 3;
+                if (countdownEl) countdownEl.innerText = reloadCount;
+                if (reloadTimer) clearInterval(reloadTimer);
+                reloadTimer = setInterval(() => {
+                    reloadCount--;
+                    if (countdownEl) countdownEl.innerText = reloadCount;
+                    if (reloadCount <= 0) {
+                        clearInterval(reloadTimer);
+                        window.location.reload();
+                    }
+                }, 1000);
+            } else {
+                setTimeout(() => window.location.reload(), 1200);
+            }
+        }
+
+        function cancelAutoReload() {
+            if (reloadTimer) clearInterval(reloadTimer);
+            const toast = document.getElementById('off-reconnect-toast');
+            if (toast) toast.style.display = 'none';
         }
 
         window.addEventListener('online', handleOnline);
 
         // ==========================================
-        // 2. Local Scratchpad Integration
+        // 2. Offline Diagnostics Inspector
+        // ==========================================
+        async function inspectOfflineDiagnostics() {
+            // SW Controller
+            const swEl = document.getElementById('health-sw-status');
+            if (navigator.serviceWorker && navigator.serviceWorker.controller) {
+                if (swEl) swEl.innerText = 'Controlling';
+            } else if (navigator.serviceWorker) {
+                if (swEl) swEl.innerText = 'Registered';
+            }
+
+            // Cache inspection
+            if (window.caches) {
+                try {
+                    const keys = await caches.keys();
+                    let totalItems = 0;
+                    for (const k of keys) {
+                        const cache = await caches.open(k);
+                        const requests = await cache.keys();
+                        totalItems += requests.length;
+                    }
+                    const chipCount = document.getElementById('health-cache-count');
+                    const diagAssets = document.getElementById('diag-cached-assets');
+                    const diagStores = document.getElementById('diag-cache-stores');
+
+                    if (chipCount) chipCount.innerText = `${totalItems} files`;
+                    if (diagAssets) diagAssets.innerText = `${totalItems} items`;
+                    if (diagStores) diagStores.innerText = `${keys.length} store${keys.length === 1 ? '' : 's'}`;
+                } catch (e) {}
+            }
+
+            // Storage estimate
+            if (navigator.storage && navigator.storage.estimate) {
+                try {
+                    const est = await navigator.storage.estimate();
+                    const usedMB = (est.usage / (1024 * 1024)).toFixed(1);
+                    const chipStorage = document.getElementById('health-storage-stat');
+                    const diagStorage = document.getElementById('diag-storage-quota');
+                    if (chipStorage) chipStorage.innerText = `${usedMB} MB`;
+                    if (diagStorage) diagStorage.innerText = `${usedMB} MB`;
+                } catch (e) {}
+            }
+        }
+
+        async function purgeStaleOfflineCache() {
+            if (!window.caches) return;
+            if (confirm('Purge cached pages to free local storage? Note: Pre-cached books or curriculum will re-download when you go back online.')) {
+                try {
+                    const keys = await caches.keys();
+                    for (const k of keys) {
+                        await caches.delete(k);
+                    }
+                    alert('Offline cache cleared.');
+                    inspectOfflineDiagnostics();
+                } catch (e) {
+                    console.error('Purge error:', e);
+                }
+            }
+        }
+
+        // ==========================================
+        // 3. Local Scratchpad Integration
         // ==========================================
         const notesInput = document.getElementById('off-notes-input');
         const notesCount = document.getElementById('off-notes-count');
@@ -629,30 +933,56 @@
         loadNotes();
 
         // ==========================================
-        // 3. Offline Mental Math Drill Engine
+        // 4. Offline Mental Math Drill Engine
         // ==========================================
         let score = 0;
         let streak = 0;
+        let bestStreak = parseInt(localStorage.getItem('hl_offline_best_streak') || '0', 10);
         let totalAnswered = 0;
         let currentProblem = null;
+        let drillOp = 'all';
+
+        const bestEl = document.getElementById('stat-best-streak');
+        if (bestEl) bestEl.innerText = bestStreak;
+
+        function setDrillOp(op, btn) {
+            drillOp = op;
+            document.querySelectorAll('.off-mode-pill').forEach(p => p.classList.remove('active'));
+            if (btn) btn.classList.add('active');
+            renderProblem();
+        }
 
         function generateProblem() {
-            const ops = ['+', '-', '*'];
+            let ops = ['+', '-', '*'];
+            if (drillOp === '+') ops = ['+'];
+            else if (drillOp === '-') ops = ['-'];
+            else if (drillOp === '*') ops = ['*'];
+            else if (drillOp === '/') ops = ['/'];
+            else ops = ['+', '-', '*', '/'];
+
             const op = ops[Math.floor(Math.random() * ops.length)];
-            let n1, n2, ans;
+            let n1, n2, ans, symbol;
 
             if (op === '+') {
                 n1 = Math.floor(Math.random() * 80) + 12;
                 n2 = Math.floor(Math.random() * 80) + 8;
                 ans = n1 + n2;
+                symbol = '+';
             } else if (op === '-') {
                 n1 = Math.floor(Math.random() * 90) + 20;
                 n2 = Math.floor(Math.random() * n1) + 5;
                 ans = n1 - n2;
-            } else {
+                symbol = '&minus;';
+            } else if (op === '*') {
                 n1 = Math.floor(Math.random() * 11) + 2;
                 n2 = Math.floor(Math.random() * 11) + 2;
                 ans = n1 * n2;
+                symbol = '&times;';
+            } else {
+                n2 = Math.floor(Math.random() * 11) + 2;
+                ans = Math.floor(Math.random() * 11) + 2;
+                n1 = n2 * ans;
+                symbol = '&divide;';
             }
 
             const choices = new Set([ans]);
@@ -664,7 +994,7 @@
 
             const shuffledChoices = Array.from(choices).sort(() => Math.random() - 0.5);
             return {
-                display: `${n1} ${op === '*' ? '&times;' : (op === '-' ? '&minus;' : '+')} ${n2} = ?`,
+                display: `${n1} ${symbol} ${n2} = ?`,
                 ans: ans,
                 choices: shuffledChoices
             };
@@ -696,6 +1026,11 @@
                 btn.classList.add('correct');
                 score += 10;
                 streak++;
+                if (streak > bestStreak) {
+                    bestStreak = streak;
+                    try { localStorage.setItem('hl_offline_best_streak', bestStreak); } catch(e) {}
+                    if (bestEl) bestEl.innerText = bestStreak;
+                }
             } else {
                 btn.classList.add('wrong');
                 streak = 0;
@@ -716,10 +1051,11 @@
                 accEl.innerText = `${acc}%`;
             }
 
-            setTimeout(renderProblem, 1200);
+            setTimeout(renderProblem, 1100);
         }
 
         renderProblem();
+        inspectOfflineDiagnostics();
     </script>
 </body>
 </html>

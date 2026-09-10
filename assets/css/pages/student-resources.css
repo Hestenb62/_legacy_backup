@@ -1,4 +1,4 @@
-﻿
+
 /* Page Wrapper spacing */
 .page-content-wrapper {
     padding-top: var(--spacing-8);
@@ -342,4 +342,409 @@
 .resource-card-icon.video { background: linear-gradient(135deg, #ef4444, #dc2626); }
 .resource-card-icon.study { background: linear-gradient(135deg, #db2777, #be185d); }
 .resource-card-icon.game { background: linear-gradient(135deg, #8b5cf6, #7c3aed); }
+
+/* =========================================================================
+   Adaptive Math Generator Workbench
+   ========================================================================= */
+.math-generator-workbench {
+    max-width: 960px;
+    margin: 0 auto 3rem auto;
+    background: var(--color-bg-surface, #ffffff);
+    border: 1px solid var(--color-border, #e2e8f0);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+    position: relative;
+    overflow: hidden;
+}
+
+.math-generator-workbench::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #6366f1, #3b82f6, #06b6d4);
+}
+
+.mg-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.mg-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    background: rgba(99, 102, 241, 0.12);
+    color: #4f46e5;
+    margin-bottom: 0.5rem;
+}
+
+.mg-title {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--color-text-main, #0f172a);
+    margin: 0 0 0.25rem 0;
+    letter-spacing: -0.02em;
+}
+
+.mg-subtitle {
+    font-size: 0.95rem;
+    color: var(--color-text-muted, #64748b);
+    margin: 0;
+    max-width: 580px;
+    line-height: 1.5;
+}
+
+.mg-stats-panel {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.mg-stat-box {
+    background: var(--color-bg-base, #f8fafc);
+    border: 1px solid var(--color-border, #e2e8f0);
+    border-radius: 0.85rem;
+    padding: 0.6rem 1rem;
+    text-align: center;
+    min-width: 80px;
+}
+
+.mg-stat-label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted, #64748b);
+}
+
+.mg-stat-val {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 900;
+    color: var(--color-text-main, #0f172a);
+    margin-top: 0.15rem;
+}
+
+.mg-category-nav {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--color-border, #e2e8f0);
+}
+
+.mg-cat-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.55rem 1.15rem;
+    border-radius: 9999px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    background: transparent;
+    border: 1px solid var(--color-border, #e2e8f0);
+    color: var(--color-text-muted, #64748b);
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+}
+
+.mg-cat-btn:hover {
+    color: #4f46e5;
+    border-color: #4f46e5;
+    background: rgba(99, 102, 241, 0.05);
+}
+
+.mg-cat-btn.active {
+    background: #4f46e5;
+    color: #ffffff;
+    border-color: #4f46e5;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
+}
+
+.mg-stage-card {
+    background: var(--color-bg-base, #f8fafc);
+    border: 1px solid var(--color-border, #e2e8f0);
+    border-radius: 1.25rem;
+    padding: 1.75rem;
+}
+
+.mg-prompt-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.mg-standard-tag {
+    color: #4f46e5;
+    background: rgba(99, 102, 241, 0.1);
+    padding: 0.2rem 0.6rem;
+    border-radius: 9999px;
+}
+
+.mg-difficulty-tag {
+    color: var(--color-text-muted, #64748b);
+}
+
+.mg-instruction {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--color-text-main, #0f172a);
+    margin: 0 0 1rem 0;
+}
+
+.mg-equation-display {
+    background: var(--color-bg-surface, #ffffff);
+    border: 1.5px dashed var(--color-border, #cbd5e1);
+    border-radius: 1rem;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    font-size: 1.6rem;
+    color: var(--color-text-main, #0f172a);
+    margin-bottom: 1.5rem;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: auto;
+}
+
+.mg-input-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.mg-input-wrapper {
+    display: flex;
+    gap: 0.75rem;
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.mg-answer-input {
+    flex: 1;
+    padding: 0.75rem 1.25rem;
+    border-radius: 9999px;
+    border: 1.5px solid var(--color-border, #cbd5e1);
+    background: var(--color-bg-surface, #ffffff);
+    color: var(--color-text-main, #0f172a);
+    font-size: 1.05rem;
+    font-weight: 700;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.mg-answer-input:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+}
+
+.mg-btn-submit {
+    background: linear-gradient(135deg, #4f46e5, #4338ca);
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 0.95rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
+
+.mg-btn-submit:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(79, 70, 229, 0.4);
+}
+
+.mg-btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.mg-btn-secondary {
+    background: var(--color-bg-surface, #ffffff);
+    border: 1px solid var(--color-border, #cbd5e1);
+    color: var(--color-text-main, #0f172a);
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: all 0.2s ease;
+}
+
+.mg-btn-secondary:hover {
+    background: var(--color-bg-base, #f1f5f9);
+    border-color: #94a3b8;
+}
+
+.mg-feedback-box {
+    margin-top: 1.25rem;
+    padding: 1rem 1.25rem;
+    border-radius: 0.85rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    animation: fadeIn 0.3s ease;
+}
+
+.mg-feedback-success {
+    background: rgba(16, 185, 129, 0.12);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    color: #059669;
+}
+
+.mg-feedback-error {
+    background: rgba(239, 68, 68, 0.12);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    color: #dc2626;
+}
+
+.mg-solution-drawer {
+    margin-top: 1.25rem;
+    background: var(--color-bg-surface, #ffffff);
+    border: 1px solid var(--color-border, #cbd5e1);
+    border-radius: 1rem;
+    padding: 1.25rem;
+    animation: fadeIn 0.3s ease;
+}
+
+.mg-solution-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: #4f46e5;
+    margin-bottom: 0.75rem;
+}
+
+.mg-solution-body {
+    font-size: 0.95rem;
+    color: var(--color-text-main, #0f172a);
+    line-height: 1.6;
+}
+
+/* =========================================================================
+   ELA Grammar Mechanics Workshop
+   ========================================================================= */
+.grammar-workshop-workbench {
+    max-width: 960px;
+    margin: 0 auto 3rem auto;
+    background: var(--color-bg-surface, #ffffff);
+    border: 1px solid var(--color-border, #e2e8f0);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.grammar-workshop-workbench::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #ec4899, #8b5cf6, #3b82f6);
+}
+
+.gw-sentence-box {
+    background: var(--color-bg-base, #f8fafc);
+    border: 1.5px solid var(--color-border, #cbd5e1);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.8;
+    color: var(--color-text-main, #0f172a);
+    margin: 1.5rem 0;
+    letter-spacing: 0.01em;
+}
+
+.gw-word-btn {
+    background: none;
+    border: 1px solid transparent;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.4rem;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: inherit;
+}
+
+.gw-word-btn:hover {
+    background: rgba(99, 102, 241, 0.15);
+    border-color: rgba(99, 102, 241, 0.4);
+}
+
+.gw-word-btn.selected {
+    background: #4f46e5;
+    color: #ffffff;
+    border-color: #4f46e5;
+}
+
+.gw-pos-selector {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1.25rem 0;
+}
+
+.gw-pos-btn {
+    background: var(--color-bg-base, #f1f5f9);
+    border: 1px solid var(--color-border, #cbd5e1);
+    padding: 0.45rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: var(--color-text-main, #0f172a);
+}
+
+.gw-pos-btn:hover {
+    background: #e0e7ff;
+    color: #4338ca;
+}
+
+.gw-pos-btn.active {
+    background: #4f46e5;
+    color: #ffffff;
+    border-color: #4f46e5;
+}
+
 

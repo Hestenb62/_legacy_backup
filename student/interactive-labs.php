@@ -48,6 +48,10 @@ include '../src/header.php';
             <i class="fas fa-history"></i>
             <span>4. History Chrono-Timeline</span>
         </button>
+        <button type="button" class="lab-tab-btn" data-lab="chem" role="tab" aria-selected="false">
+            <i class="fas fa-vial"></i>
+            <span>5. Chemistry pH Scale</span>
+        </button>
     </div>
 
     <!-- =================================================================== -->
@@ -257,6 +261,97 @@ include '../src/header.php';
                 <button type="button" onclick="window.exportLabToScratchpad && window.exportLabToScratchpad('Chrono-Timeline', 'Milestones: 1775 Lexington & Concord -> 1776 Dec of Independence -> 1787 Constitutional Convention -> 1791 Bill of Rights');" class="btn" style="padding: 0.6rem 1rem; border-radius: var(--radius-md); background: var(--color-bg-base); border: 1px solid var(--color-border); color: var(--color-text-main); font-weight: 800; cursor: pointer;" title="Save findings to digital scratchpad"><i class="fas fa-pen"></i> Note</button>
                 <button type="button" id="soc-reset-timeline" class="btn" style="padding: 0.6rem 1.25rem; border-radius: var(--radius-md); background: var(--color-bg-base); border: 1px solid var(--color-border); color: var(--color-text-main); font-weight: 800; cursor: pointer;">Shuffle Again</button>
                 <button type="button" id="soc-check-timeline" class="btn" style="padding: 0.6rem 1.5rem; border-radius: var(--radius-md); background: var(--color-primary); color: white; border: none; font-weight: 800; cursor: pointer;">Verify Sequence</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- =================================================================== -->
+    <!-- 5. CHEMISTRY PH SCALE & ACID-BASE WORKBENCH -->
+    <!-- =================================================================== -->
+    <div id="lab-chem" class="lab-workbench">
+        <div class="wb-header">
+            <div>
+                <h2 class="wb-title"><i class="fas fa-vial" style="color: #ec4899;"></i> Chemistry pH Scale & Chemical Indicator Station</h2>
+                <p class="wb-desc">Dip simulated universal litmus paper into acidic, neutral, and alkaline solutions to measure logarithmic hydronium \([H^+]\) concentrations.</p>
+            </div>
+            <div style="font-size: 0.85rem; font-weight: 800; padding: 0.35rem 0.85rem; border-radius: var(--radius-full); background: color-mix(in srgb, #ec4899 15%, transparent); color: #ec4899;">
+                Standard: NGSS MS-PS1-2 & HS-PS1-2
+            </div>
+        </div>
+
+        <div class="chem-lab-stage" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1rem; align-items: start;">
+            <!-- Left: Substance Palette & Controls -->
+            <div class="chem-controls-card" style="background: var(--color-bg-base); border: 1px solid var(--color-border); border-radius: 1.25rem; padding: 1.5rem;">
+                <span style="font-size: 0.8rem; font-weight: 800; text-transform: uppercase; color: var(--color-text-muted); display: block; margin-bottom: 0.75rem;">Select Test Liquid:</span>
+                <div class="chem-substance-list" style="display: flex; flex-direction: column; gap: 0.5rem;" role="radiogroup" aria-label="Chemical Solutions">
+                    <button type="button" class="chem-substance-btn active" data-ph="2.0" data-name="Lemon Juice (Citric Acid)" data-color="#ef4444" data-desc="Strong natural acid. High [H+] concentration." style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 1rem; border-radius: 0.75rem; border: 1.5px solid #ef4444; background: rgba(239, 68, 68, 0.08); cursor: pointer; text-align: left;">
+                        <span style="font-weight: 700;">🍋 Lemon Juice</span>
+                        <strong style="color: #ef4444; font-size: 0.85rem;">pH 2.0 (Acid)</strong>
+                    </button>
+                    <button type="button" class="chem-substance-btn" data-ph="5.0" data-name="Black Coffee" data-color="#f59e0b" data-desc="Weak organic acid commonly consumed." style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 1rem; border-radius: 0.75rem; border: 1px solid var(--color-border); background: var(--color-bg-surface); cursor: pointer; text-align: left;">
+                        <span style="font-weight: 700;">☕ Black Coffee</span>
+                        <strong style="color: #f59e0b; font-size: 0.85rem;">pH 5.0 (Weak Acid)</strong>
+                    </button>
+                    <button type="button" class="chem-substance-btn" data-ph="7.0" data-name="Pure Distilled Water" data-color="#10b981" data-desc="Neutral chemical baseline: [H+] = [OH-]." style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 1rem; border-radius: 0.75rem; border: 1px solid var(--color-border); background: var(--color-bg-surface); cursor: pointer; text-align: left;">
+                        <span style="font-weight: 700;">💧 Pure Water</span>
+                        <strong style="color: #10b981; font-size: 0.85rem;">pH 7.0 (Neutral)</strong>
+                    </button>
+                    <button type="button" class="chem-substance-btn" data-ph="8.5" data-name="Baking Soda Solution" data-color="#06b6d4" data-desc="Mild alkaline base that neutralizes stomach acid." style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 1rem; border-radius: 0.75rem; border: 1px solid var(--color-border); background: var(--color-bg-surface); cursor: pointer; text-align: left;">
+                        <span style="font-weight: 700;">🥄 Baking Soda</span>
+                        <strong style="color: #06b6d4; font-size: 0.85rem;">pH 8.5 (Mild Base)</strong>
+                    </button>
+                    <button type="button" class="chem-substance-btn" data-ph="11.5" data-name="Household Ammonia" data-color="#6366f1" data-desc="Concentrated alkaline cleaning agent. High [OH-]." style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 1rem; border-radius: 0.75rem; border: 1px solid var(--color-border); background: var(--color-bg-surface); cursor: pointer; text-align: left;">
+                        <span style="font-weight: 700;">🧴 Ammonia</span>
+                        <strong style="color: #6366f1; font-size: 0.85rem;">pH 11.5 (Strong Base)</strong>
+                    </button>
+                    <button type="button" class="chem-substance-btn" data-ph="13.0" data-name="Chlorine Bleach" data-color="#8b5cf6" data-desc="Caustic alkaline solution with extreme basicity." style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 1rem; border-radius: 0.75rem; border: 1px solid var(--color-border); background: var(--color-bg-surface); cursor: pointer; text-align: left;">
+                        <span style="font-weight: 700;">🧼 Bleach</span>
+                        <strong style="color: #8b5cf6; font-size: 0.85rem;">pH 13.0 (Extreme Base)</strong>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right: Interactive Beaker & Litmus Strip -->
+            <div class="chem-beaker-card" style="background: var(--color-bg-base); border: 1px solid var(--color-border); border-radius: 1.25rem; padding: 1.5rem; text-align: center;">
+                <div style="margin-bottom: 1rem;">
+                    <h3 id="chem-liquid-name" style="margin: 0; font-size: 1.15rem; font-weight: 800; color: var(--color-text-main);">Lemon Juice (Citric Acid)</h3>
+                    <p id="chem-liquid-desc" style="font-size: 0.85rem; color: var(--color-text-muted); margin: 0.25rem 0 0 0;">Strong natural acid. High [H+] concentration.</p>
+                </div>
+
+                <!-- Animated Beaker Graphic -->
+                <div class="chem-beaker-graphic" style="position: relative; width: 140px; height: 180px; margin: 0 auto 1.5rem auto; border: 4px solid var(--color-border); border-top: none; border-radius: 0 0 1.5rem 1.5rem; overflow: hidden; background: rgba(0,0,0,0.02);">
+                    <!-- Litmus Paper Strip dipped -->
+                    <div id="chem-litmus-strip" style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 28px; height: 110px; background: #e2e8f0; border: 1px solid #cbd5e1; border-radius: 3px; z-index: 5; transition: all 0.5s ease;">
+                        <span style="font-size: 0.6rem; writing-mode: vertical-rl; transform: rotate(180deg); color: #64748b; font-weight: 700; margin-top: 6px; display: block;">LITMUS</span>
+                    </div>
+                    <!-- Liquid in Beaker -->
+                    <div id="chem-beaker-liquid" style="position: absolute; bottom: 0; left: 0; right: 0; height: 120px; background: rgba(239, 68, 68, 0.35); border-top: 2px solid rgba(239, 68, 68, 0.8); transition: all 0.5s ease;"></div>
+                </div>
+
+                <!-- pH Color Spectrum Scale -->
+                <div class="chem-ph-gauge" style="margin-top: 1rem;">
+                    <div style="display: flex; justify-content: space-between; font-size: 0.75rem; font-weight: 800; margin-bottom: 0.35rem;">
+                        <span style="color: #ef4444;">0 (Acid)</span>
+                        <span style="color: #10b981;">7 (Neutral)</span>
+                        <span style="color: #8b5cf6;">14 (Base)</span>
+                    </div>
+                    <div style="height: 12px; border-radius: 9999px; background: linear-gradient(90deg, #ef4444 0%, #f59e0b 25%, #10b981 50%, #06b6d4 70%, #6366f1 85%, #8b5cf6 100%); position: relative;">
+                        <div id="chem-ph-pointer" style="position: absolute; top: -4px; left: 14.3%; width: 20px; height: 20px; border-radius: 50%; background: #ffffff; border: 3px solid #0f172a; transform: translateX(-50%); box-shadow: 0 2px 5px rgba(0,0,0,0.3); transition: left 0.4s ease;"></div>
+                    </div>
+                    <div style="margin-top: 0.85rem; font-size: 1.25rem; font-weight: 900; color: var(--color-text-main);" id="chem-ph-reading">
+                        pH: 2.0
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="wb-actions">
+            <div id="chem-feedback-msg" class="feedback-container">
+                <span style="color: #10b981;"><i class="fas fa-check-circle"></i> Indicator reading matches acid baseline. +35 XP awarded on testing!</span>
+            </div>
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                <button type="button" onclick="const n = document.getElementById('chem-liquid-name')?.innerText || ''; const p = document.getElementById('chem-ph-reading')?.innerText || ''; window.exportLabToScratchpad && window.exportLabToScratchpad('Chemistry pH Scale', n + ' measured at ' + p); " class="btn" style="padding: 0.6rem 1rem; border-radius: var(--radius-md); background: var(--color-bg-base); border: 1px solid var(--color-border); color: var(--color-text-main); font-weight: 800; cursor: pointer;" title="Save findings to digital scratchpad"><i class="fas fa-pen"></i> Note</button>
+                <button type="button" id="chem-dip-strip-btn" class="btn" style="padding: 0.6rem 1.5rem; border-radius: var(--radius-md); background: #ec4899; color: white; border: none; font-weight: 800; cursor: pointer;"><i class="fas fa-vial"></i> Dip Litmus Paper</button>
             </div>
         </div>
     </div>

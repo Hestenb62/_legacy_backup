@@ -2732,4 +2732,82 @@
     background-color: color-mix(in srgb, var(--color-primary) 14%, transparent) !important;
   }
 
+  /* ==========================================================================
+     Standards 1-Click Action Links & Real-Time Mastery Checkmarks
+     ========================================================================== */
+  .std-code-wrap {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    flex-wrap: wrap;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+  }
+
+  .std-action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.18rem 0.6rem;
+    font-size: 0.725rem;
+    font-weight: 750;
+    border-radius: var(--radius-full, 9999px);
+    text-decoration: none;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    user-select: none;
+    line-height: 1.35;
+    vertical-align: middle;
+  }
+
+  .std-quiz-btn {
+    background: color-mix(in srgb, var(--color-primary, #2563eb) 12%, transparent);
+    color: var(--color-primary, #2563eb);
+    border: 1px solid color-mix(in srgb, var(--color-primary, #2563eb) 30%, transparent);
+  }
+
+  .std-quiz-btn:hover {
+    background: var(--color-primary, #2563eb);
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(37, 99, 235, 0.3);
+  }
+
+  .std-lesson-btn {
+    background: color-mix(in srgb, var(--color-teal, #0d9488) 12%, transparent);
+    color: var(--color-teal, #0d9488);
+    border: 1px solid color-mix(in srgb, var(--color-teal, #0d9488) 30%, transparent);
+  }
+
+  .std-lesson-btn:hover {
+    background: var(--color-teal, #0d9488);
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(13, 148, 136, 0.3);
+  }
+
+  /* Real-Time Personal Mastery Checkmark Badge (>= 80% mastery) */
+  .std-mastery-checkmark {
+    display: none;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.18rem 0.6rem;
+    border-radius: var(--radius-full, 9999px);
+    background: color-mix(in srgb, var(--color-success, #10b981) 15%, transparent);
+    color: var(--color-success, #059669);
+    border: 1px solid color-mix(in srgb, var(--color-success, #10b981) 35%, transparent);
+    font-size: 0.725rem;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    vertical-align: middle;
+    animation: fadeInCheckmark 0.25s ease;
+  }
+
+  .std-mastery-checkmark.active {
+    display: inline-flex !important;
+  }
+
+  @keyframes fadeInCheckmark {
+    from { opacity: 0; transform: scale(0.88); }
+    to { opacity: 1; transform: scale(1); }
+  }
 }

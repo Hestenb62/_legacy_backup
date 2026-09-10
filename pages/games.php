@@ -70,6 +70,10 @@ include '../src/header.php';
                     <span class="chip-label"><i class="fas fa-calculator" style="color: #ea580c;"></i> Math Max Streak</span>
                     <span class="chip-value" style="color: #ea580c;" id="stat-math-streak">0 🔥</span>
                 </div>
+                <div class="banner-stat-chip">
+                    <span class="chip-label"><i class="fas fa-bolt" style="color: #f59e0b;"></i> Sprint Best</span>
+                    <span class="chip-value highlight-amber" id="stat-sprint-best">0 pts ⚡</span>
+                </div>
             </div>
         </div>
 
@@ -100,6 +104,21 @@ include '../src/header.php';
                     <span class="games-tag tag-blue">Math Practice</span>
                     <h3 class="games-card-title">Math Master</h3>
                     <p class="games-card-desc">Practice your arithmetic at your own pace. No falling numbers, just you and the math.</p>
+                    <span class="games-play-link">
+                        Play Now <i class="fas fa-arrow-right icon-arrow"></i>
+                    </span>
+                </div>
+            </button>
+
+            <!-- Game Card 3 -->
+            <button onclick="loadGame('sprint')" class="games-card card-sprint" id="card-sprint">
+                <div class="games-card-bg-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <div class="games-card-content">
+                    <span class="games-tag tag-amber">Speed & Agility</span>
+                    <h3 class="games-card-title">60-Second Speed Sprint</h3>
+                    <p class="games-card-desc">Race against the clock! Solve rapid mental math equations, build high streaks, and multiply your score.</p>
                     <span class="games-play-link">
                         Play Now <i class="fas fa-arrow-right icon-arrow"></i>
                     </span>
@@ -191,11 +210,7 @@ include '../src/header.php';
     const STORAGE_KEY_QUEST = 'hesten_games_daily_quest';
 
     function getGameScores() {
-        try {
-            const raw = localStorage.getItem(STORAGE_KEY_SCORES);
-            if (raw) return JSON.parse(raw);
-        } catch (e) {}
-        return {
+        let scores = {
             memory: {
                 easy: { bestTime: null, fewestMoves: null },
                 medium: { bestTime: null, fewestMoves: null },
@@ -205,8 +220,24 @@ include '../src/header.php';
             math: {
                 bestStreak: 0,
                 totalSolved: 0
+            },
+            sprint: {
+                highScore: 0,
+                bestStreak: 0,
+                totalRounds: 0,
+                totalSolved: 0
             }
         };
+        try {
+            const raw = localStorage.getItem(STORAGE_KEY_SCORES);
+            if (raw) {
+                const parsed = JSON.parse(raw);
+                if (parsed.memory) scores.memory = { ...scores.memory, ...parsed.memory };
+                if (parsed.math) scores.math = { ...scores.math, ...parsed.math };
+                if (parsed.sprint) scores.sprint = { ...scores.sprint, ...parsed.sprint };
+            }
+        } catch (e) {}
+        return scores;
     }
 
     function saveGameScores(scores) {
@@ -218,7 +249,10 @@ include '../src/header.php';
 
     function getStudentXP() {
         try {
-            return parseInt(localStorage.getItem(STORAGE_KEY_XP), 10) || 0;
+            const rawXp = parseInt(localStorage.getItem(STORAGE_KEY_XP), 10) || 0;
+            const profileRaw = localStorage.getItem('hesten-user-profile');
+            const profXp = profileRaw ? (JSON.parse(profileRaw).xp || 0) : 0;
+            return Math.max(rawXp, profXp);
         } catch (e) {
             return 0;
         }
@@ -239,6 +273,22 @@ include '../src/header.php';
         const newXP = currentXP + amount;
         try {
             localStorage.setItem(STORAGE_KEY_XP, newXP.toString());
+            
+            // Synchronize with global user profile
+            const profileRaw = localStorage.getItem('hesten-user-profile');
+            let prof = profileRaw ? JSON.parse(profileRaw) : {};
+            prof.xp = (prof.xp || 0) + amount;
+            prof.level = calculateLevel(prof.xp);
+            localStorage.setItem('hesten-user-profile', JSON.stringify(prof));
+            
+            window.dispatchEvent(new CustomEvent('hl:profile-updated', {
+                detail: { xp: prof.xp, level: prof.level }
+            }));
+
+            if (window.questManager && typeof window.questManager.addXP === 'function') {
+                window.questManager.addXP(amount, reason);
+            }
+
             if (typeof window.scheduleAutoSync === 'function') window.scheduleAutoSync();
         } catch (e) {}
 
@@ -331,6 +381,7 @@ include '../src/header.php';
         const xpEl = document.getElementById('stat-total-xp');
         const memEl = document.getElementById('stat-memory-best');
         const mathEl = document.getElementById('stat-math-streak');
+        const sprintEl = document.getElementById('stat-sprint-best');
 
         if (lvlEl) lvlEl.textContent = `Lv. ${level}`;
         if (xpEl) xpEl.textContent = `${xp.toLocaleString()} XP`;
@@ -346,6 +397,10 @@ include '../src/header.php';
 
         if (mathEl) {
             mathEl.textContent = `${scores.math.bestStreak || 0} 🔥`;
+        }
+
+        if (sprintEl) {
+            sprintEl.textContent = `${(scores.sprint && scores.sprint.highScore) || 0} pts ⚡`;
         }
     }
 
@@ -372,6 +427,19 @@ include '../src/header.php';
     let mathOperation = 'addition'; // addition, subtraction, multiplication, mixed
     let mathDifficulty = 'easy'; // easy, medium, hard
 
+    // Sprint Game State
+    let sprintOperation = 'mixed'; // addition, subtraction, multiplication, division, mixed
+    let sprintDifficulty = 'allstar'; // rookie, allstar, halloffame
+    let sprintTimer = null;
+    let sprintSecondsLeft = 60;
+    let sprintScore = 0;
+    let sprintStreak = 0;
+    let sprintMaxStreak = 0;
+    let sprintTotalQuestions = 0;
+    let sprintCorrectCount = 0;
+    let sprintCurrentProblem = null;
+    let sprintKeyHandler = null;
+
     function loadGame(gameType) {
         lastFocusedElement = document.activeElement;
         
@@ -380,12 +448,21 @@ include '../src/header.php';
 
         if (gameType === 'memory') showMemorySetup();
         if (gameType === 'math') showMathSetup();
+        if (gameType === 'sprint') showSprintSetup();
     }
 
     function closeGame() {
         if (memoryTimer) {
             clearInterval(memoryTimer);
             memoryTimer = null;
+        }
+        if (sprintTimer) {
+            clearInterval(sprintTimer);
+            sprintTimer = null;
+        }
+        if (sprintKeyHandler) {
+            document.removeEventListener('keydown', sprintKeyHandler);
+            sprintKeyHandler = null;
         }
         arena.classList.add('hidden');
         if (arenaHud) arenaHud.classList.add('hidden');
@@ -1034,6 +1111,420 @@ include '../src/header.php';
             input.value = '';
             input.focus();
         }
+    }
+
+    // --- GAME 3: 60-SECOND SPEED SPRINT ---
+    function showSprintSetup() {
+        if (sprintTimer) {
+            clearInterval(sprintTimer);
+            sprintTimer = null;
+        }
+        if (sprintKeyHandler) {
+            document.removeEventListener('keydown', sprintKeyHandler);
+            sprintKeyHandler = null;
+        }
+        if (arenaHud) arenaHud.classList.add('hidden');
+        arenaTitle.textContent = "60-Second Speed Sprint - Options";
+        arenaDialog.classList.remove('wide');
+
+        const scores = getGameScores();
+        const sprintStats = scores.sprint || { highScore: 0, bestStreak: 0 };
+
+        let setupHtml = `
+            <div class="game-setup-container">
+                <div>
+                    <h4 class="setup-section-title">Sprint Mode / Operations</h4>
+                    <div class="options-button-group" role="radiogroup" aria-label="Operations">
+                        <button type="button" class="option-btn ${sprintOperation === 'mixed' ? 'active' : ''}" onclick="setSprintOperation('mixed')" id="opt-sprint-mixed">Grand Slam (All)</button>
+                        <button type="button" class="option-btn ${sprintOperation === 'addition' ? 'active' : ''}" onclick="setSprintOperation('addition')" id="opt-sprint-add">Addition (+)</button>
+                        <button type="button" class="option-btn ${sprintOperation === 'subtraction' ? 'active' : ''}" onclick="setSprintOperation('subtraction')" id="opt-sprint-sub">Subtraction (-)</button>
+                        <button type="button" class="option-btn ${sprintOperation === 'multiplication' ? 'active' : ''}" onclick="setSprintOperation('multiplication')" id="opt-sprint-mul">Multiplication (×)</button>
+                        <button type="button" class="option-btn ${sprintOperation === 'division' ? 'active' : ''}" onclick="setSprintOperation('division')" id="opt-sprint-div">Division (÷)</button>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="setup-section-title">Difficulty Tier</h4>
+                    <div class="options-button-group" role="radiogroup" aria-label="Difficulty Tier">
+                        <button type="button" class="option-btn ${sprintDifficulty === 'rookie' ? 'active' : ''}" onclick="setSprintDifficulty('rookie')" id="opt-sprint-rookie">Rookie (1–10)</button>
+                        <button type="button" class="option-btn ${sprintDifficulty === 'allstar' ? 'active' : ''}" onclick="setSprintDifficulty('allstar')" id="opt-sprint-allstar">All-Star (1–25)</button>
+                        <button type="button" class="option-btn ${sprintDifficulty === 'halloffame' ? 'active' : ''}" onclick="setSprintDifficulty('halloffame')" id="opt-sprint-halloffame">Hall of Fame (1–100)</button>
+                    </div>
+                </div>
+                <div style="background:var(--color-bg-base); padding: 0.85rem 1rem; border-radius: var(--radius-md); border: 1px solid var(--color-border); font-size: 0.85rem; color: var(--color-text-muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:0.5rem;">
+                    <div><i class="fas fa-trophy" style="color:#f59e0b; margin-right:0.35rem;"></i> High Score: <strong style="color:var(--color-text-main);">${sprintStats.highScore || 0} pts</strong></div>
+                    <div><i class="fas fa-fire" style="color:#ea580c; margin-right:0.35rem;"></i> Best Streak: <strong style="color:var(--color-text-main);">${sprintStats.bestStreak || 0} 🔥</strong></div>
+                </div>
+                <div class="sprint-rules-callout">
+                    <i class="fas fa-bolt" style="color:#f59e0b; font-size:1.15rem;"></i>
+                    <span><strong>Sprint Rules:</strong> 60 seconds on the clock. Answer rapidly using <strong>keys 1–4</strong> or clicking. Consecutive correct answers unlock up to <strong>×2.0 score multipliers</strong>!</span>
+                </div>
+                <button onclick="startSprintGame()" class="start-game-btn sprint-start-btn">
+                    <i class="fas fa-bolt"></i> Start 60-Second Sprint!
+                </button>
+            </div>
+        `;
+        arenaContent.innerHTML = setupHtml;
+
+        setTimeout(() => {
+            const activeBtn = document.querySelector('.options-button-group [id^="opt-sprint-"].active') || document.getElementById('opt-sprint-mixed');
+            if (activeBtn) activeBtn.focus();
+        }, 100);
+    }
+
+    function setSprintOperation(op) {
+        sprintOperation = op;
+        ['mixed', 'add', 'sub', 'mul', 'div'].forEach(o => {
+            const opName = o === 'add' ? 'addition' : o === 'sub' ? 'subtraction' : o === 'mul' ? 'multiplication' : o === 'div' ? 'division' : 'mixed';
+            const btn = document.getElementById(`opt-sprint-${o}`);
+            if (btn) btn.classList.toggle('active', opName === op);
+        });
+        sounds.click();
+        announce(`Sprint mode set to ${op}`);
+    }
+
+    function setSprintDifficulty(diff) {
+        sprintDifficulty = diff;
+        ['rookie', 'allstar', 'halloffame'].forEach(d => {
+            const btn = document.getElementById(`opt-sprint-${d}`);
+            if (btn) btn.classList.toggle('active', d === diff);
+        });
+        sounds.click();
+        announce(`Difficulty set to ${diff}`);
+    }
+
+    function startSprintGame() {
+        arenaTitle.textContent = "60-Second Speed Sprint";
+        arenaDialog.classList.remove('wide');
+
+        if (sprintTimer) {
+            clearInterval(sprintTimer);
+            sprintTimer = null;
+        }
+        if (sprintKeyHandler) {
+            document.removeEventListener('keydown', sprintKeyHandler);
+            sprintKeyHandler = null;
+        }
+
+        sprintSecondsLeft = 60;
+        sprintScore = 0;
+        sprintStreak = 0;
+        sprintMaxStreak = 0;
+        sprintTotalQuestions = 0;
+        sprintCorrectCount = 0;
+        sprintCurrentProblem = null;
+
+        // Populate HUD
+        if (arenaHud && hudStatsGroup) {
+            hudStatsGroup.innerHTML = `
+                <span class="hud-badge sprint-timer-badge" id="hud-sprint-time"><i class="fas fa-stopwatch"></i> <span id="sprint-time-val">60s</span></span>
+                <span class="hud-badge sprint-score-badge"><i class="fas fa-trophy" style="color:#f59e0b;"></i> <span id="sprint-score-val">0</span> pts</span>
+                <span class="hud-badge streak-badge" id="hud-sprint-mult"><i class="fas fa-fire"></i> <span id="sprint-streak-val">0</span> (<span id="sprint-mult-val">×1.0</span>)</span>
+                <span class="hud-badge"><i class="fas fa-check" style="color:#10b981;"></i> <span id="sprint-solved-val">0</span></span>
+            `;
+            arenaHud.classList.remove('hidden');
+        }
+        updateHUDXP();
+
+        // Bind keyboard shortcuts 1, 2, 3, 4
+        sprintKeyHandler = function(e) {
+            if (arena.classList.contains('hidden')) return;
+            let choiceIdx = -1;
+            if (e.key === '1' || e.code === 'Digit1' || e.code === 'Numpad1') choiceIdx = 0;
+            else if (e.key === '2' || e.code === 'Digit2' || e.code === 'Numpad2') choiceIdx = 1;
+            else if (e.key === '3' || e.code === 'Digit3' || e.code === 'Numpad3') choiceIdx = 2;
+            else if (e.key === '4' || e.code === 'Digit4' || e.code === 'Numpad4') choiceIdx = 3;
+
+            if (choiceIdx >= 0) {
+                e.preventDefault();
+                selectSprintChoice(choiceIdx);
+            }
+        };
+        document.addEventListener('keydown', sprintKeyHandler);
+
+        // Start 60s countdown
+        sprintTimer = setInterval(() => {
+            sprintSecondsLeft--;
+            updateSprintTimerUI();
+
+            if (sprintSecondsLeft <= 0) {
+                endSprintGame();
+            }
+        }, 1000);
+
+        announce("Speed sprint started! 60 seconds on the clock. Press keys 1 through 4 or click an answer choice.");
+        generateSprintProblem();
+    }
+
+    function updateSprintTimerUI() {
+        const timeVal = document.getElementById('sprint-time-val');
+        const badge = document.getElementById('hud-sprint-time');
+        if (timeVal) timeVal.textContent = `${sprintSecondsLeft}s`;
+        if (badge) {
+            if (sprintSecondsLeft <= 10) {
+                badge.classList.add('timer-urgent');
+            } else {
+                badge.classList.remove('timer-urgent');
+            }
+        }
+    }
+
+    function getSprintMultiplier() {
+        if (sprintStreak >= 10) return 2.0;
+        if (sprintStreak >= 5) return 1.5;
+        return 1.0;
+    }
+
+    function generateSprintProblem() {
+        let op = sprintOperation;
+        if (op === 'mixed') {
+            const ops = ['addition', 'subtraction', 'multiplication', 'division'];
+            op = ops[Math.floor(Math.random() * ops.length)];
+        }
+
+        let n1, n2, symbol, ans;
+        let maxRange = sprintDifficulty === 'rookie' ? 10 : sprintDifficulty === 'allstar' ? 25 : 100;
+
+        if (op === 'addition') {
+            symbol = '+';
+            n1 = Math.floor(Math.random() * maxRange) + 1;
+            n2 = Math.floor(Math.random() * maxRange) + 1;
+            ans = n1 + n2;
+        } else if (op === 'subtraction') {
+            symbol = '-';
+            n1 = Math.floor(Math.random() * maxRange) + 1;
+            n2 = Math.floor(Math.random() * maxRange) + 1;
+            if (n1 < n2) { const t = n1; n1 = n2; n2 = t; }
+            ans = n1 - n2;
+        } else if (op === 'multiplication') {
+            symbol = '×';
+            let multMax = sprintDifficulty === 'rookie' ? 6 : sprintDifficulty === 'allstar' ? 10 : 12;
+            n1 = Math.floor(Math.random() * multMax) + 2;
+            n2 = Math.floor(Math.random() * multMax) + 2;
+            ans = n1 * n2;
+        } else { // division
+            symbol = '÷';
+            let divMax = sprintDifficulty === 'rookie' ? 6 : sprintDifficulty === 'allstar' ? 10 : 12;
+            n2 = Math.floor(Math.random() * divMax) + 2; // divisor
+            ans = Math.floor(Math.random() * divMax) + 1; // quotient
+            n1 = n2 * ans; // dividend
+        }
+
+        // Generate 3 unique distractors
+        const choices = [ans];
+        const distractorOffsets = [-1, 1, -2, 2, -10, 10, -5, 5];
+        while (choices.length < 4) {
+            let offset = distractorOffsets[Math.floor(Math.random() * distractorOffsets.length)];
+            let candidate = ans + offset;
+            if (candidate < 0) candidate = Math.abs(candidate) + 1;
+            if (candidate === ans || choices.includes(candidate)) {
+                candidate = ans + Math.floor(Math.random() * 15) - 7;
+                if (candidate < 0) candidate = ans + choices.length + 2;
+            }
+            if (!choices.includes(candidate)) {
+                choices.push(candidate);
+            }
+        }
+        // Shuffle choices
+        choices.sort(() => 0.5 - Math.random());
+
+        sprintCurrentProblem = {
+            n1, n2, symbol, ans, choices,
+            answered: false
+        };
+
+        const problemText = `${n1} ${symbol} ${n2} = ?`;
+        const ariaLabelText = `Problem: ${n1} ${symbol === '+' ? 'plus' : symbol === '-' ? 'minus' : symbol === '×' ? 'times' : 'divided by'} ${n2}`;
+
+        let multFactor = getSprintMultiplier();
+        let multBadgeText = multFactor > 1 ? `<div class="sprint-multiplier-pill">🔥 ×${multFactor.toFixed(1)} MULTIPLIER ACTIVE!</div>` : '';
+
+        arenaContent.innerHTML = `
+            <div class="sprint-container">
+                <div class="sprint-problem-card">
+                    ${multBadgeText}
+                    <div class="sprint-equation" aria-label="${ariaLabelText}">${problemText}</div>
+                </div>
+
+                <div class="sprint-choices-grid" role="group" aria-label="Answer choices">
+                    ${choices.map((choice, i) => `
+                        <button type="button" class="sprint-choice-btn" id="sprint-choice-${i}" onclick="selectSprintChoice(${i})" aria-label="Choice ${i+1}: ${choice}">
+                            <span class="sprint-key-tag">[${i+1}]</span>
+                            <span class="sprint-choice-num">${choice}</span>
+                        </button>
+                    `).join('')}
+                </div>
+
+                <div id="sprint-feedback" class="sprint-feedback" aria-live="assertive"></div>
+            </div>
+        `;
+
+        announce(`Problem: ${n1} ${symbol === '+' ? 'plus' : symbol === '-' ? 'minus' : symbol === '×' ? 'times' : 'divided by'} ${n2}`);
+    }
+
+    function selectSprintChoice(index) {
+        if (!sprintCurrentProblem || sprintCurrentProblem.answered || sprintSecondsLeft <= 0) return;
+        sprintCurrentProblem.answered = true;
+
+        sprintTotalQuestions++;
+        const chosen = sprintCurrentProblem.choices[index];
+        const correct = sprintCurrentProblem.ans;
+        const btn = document.getElementById(`sprint-choice-${index}`);
+        const feedback = document.getElementById(`sprint-feedback`);
+
+        if (chosen === correct) {
+            sounds.match();
+            sprintStreak++;
+            sprintCorrectCount++;
+            if (sprintStreak > sprintMaxStreak) sprintMaxStreak = sprintStreak;
+
+            const mult = getSprintMultiplier();
+            const earnedPoints = Math.round(100 * mult);
+            sprintScore += earnedPoints;
+
+            if (btn) btn.classList.add('choice-correct');
+
+            if (sprintStreak === 5 || sprintStreak === 10) {
+                sounds.streak();
+            }
+
+            if (feedback) {
+                feedback.innerHTML = `<span class="sprint-pop-score">+${earnedPoints} pts! ${mult > 1 ? `(×${mult.toFixed(1)})` : ''}</span>`;
+            }
+
+            updateSprintHUD();
+            recordMathSolved();
+
+            setTimeout(() => {
+                if (sprintSecondsLeft > 0) generateSprintProblem();
+            }, 180);
+        } else {
+            sounds.wrong();
+            sprintStreak = 0;
+            if (btn) btn.classList.add('choice-wrong');
+
+            // Also highlight the correct one
+            const correctIdx = sprintCurrentProblem.choices.indexOf(correct);
+            const correctBtn = document.getElementById(`sprint-choice-${correctIdx}`);
+            if (correctBtn) correctBtn.classList.add('choice-correct');
+
+            if (feedback) {
+                feedback.innerHTML = `<span class="sprint-pop-wrong">Miss! Streak reset</span>`;
+            }
+
+            updateSprintHUD();
+
+            setTimeout(() => {
+                if (sprintSecondsLeft > 0) generateSprintProblem();
+            }, 450);
+        }
+    }
+
+    function updateSprintHUD() {
+        const scoreEl = document.getElementById('sprint-score-val');
+        const streakEl = document.getElementById('sprint-streak-val');
+        const multEl = document.getElementById('sprint-mult-val');
+        const solvedEl = document.getElementById('sprint-solved-val');
+        const mult = getSprintMultiplier();
+
+        if (scoreEl) scoreEl.textContent = sprintScore.toLocaleString();
+        if (streakEl) streakEl.textContent = sprintStreak;
+        if (multEl) multEl.textContent = `×${mult.toFixed(1)}`;
+        if (solvedEl) solvedEl.textContent = `${sprintCorrectCount}/${sprintTotalQuestions}`;
+    }
+
+    function endSprintGame() {
+        if (sprintTimer) {
+            clearInterval(sprintTimer);
+            sprintTimer = null;
+        }
+        if (sprintKeyHandler) {
+            document.removeEventListener('keydown', sprintKeyHandler);
+            sprintKeyHandler = null;
+        }
+
+        sounds.win();
+        if (typeof window.triggerConfetti === 'function') {
+            window.triggerConfetti();
+        }
+
+        recordGamePlayed();
+
+        const scores = getGameScores();
+        scores.sprint = scores.sprint || { highScore: 0, bestStreak: 0, totalRounds: 0, totalSolved: 0 };
+        scores.sprint.totalRounds = (scores.sprint.totalRounds || 0) + 1;
+        scores.sprint.totalSolved = (scores.sprint.totalSolved || 0) + sprintCorrectCount;
+
+        let isNewHighScore = false;
+        if (sprintScore > (scores.sprint.highScore || 0)) {
+            scores.sprint.highScore = sprintScore;
+            isNewHighScore = true;
+        }
+
+        if (sprintMaxStreak > (scores.sprint.bestStreak || 0)) {
+            scores.sprint.bestStreak = sprintMaxStreak;
+        }
+
+        saveGameScores(scores);
+
+        // Calculate XP
+        let xpEarned = 40 + Math.min(110, Math.floor(sprintScore / 25));
+        if (isNewHighScore && sprintScore > 0) xpEarned += 35;
+        awardXP(xpEarned, "Sprint Championship");
+
+        const accuracyPct = sprintTotalQuestions > 0 ? Math.round((sprintCorrectCount / sprintTotalQuestions) * 100) : 0;
+
+        let stars = 1;
+        if (sprintScore >= 2000 || sprintCorrectCount >= 18) stars = 3;
+        else if (sprintScore >= 1000 || sprintCorrectCount >= 10) stars = 2;
+        const starsHtml = '⭐'.repeat(stars) + '<span style="opacity:0.3;">' + '⭐'.repeat(3 - stars) + '</span>';
+
+        announce(`Sprint Complete! Final score: ${sprintScore}. Accuracy: ${accuracyPct}%. XP earned: ${xpEarned}.`);
+
+        arenaContent.innerHTML = `
+            <div class="sprint-summary-overlay">
+                <div class="win-stars">${starsHtml}</div>
+                <h4 class="win-title" style="color:#f59e0b;">Time's Up! Sprint Complete!</h4>
+                ${isNewHighScore && sprintScore > 0 ? `<div class="win-record-badge"><i class="fas fa-crown"></i> New All-Time High Score!</div>` : ''}
+
+                <div class="sprint-score-banner">
+                    <span class="sprint-score-banner-label">Final Score</span>
+                    <span class="sprint-score-banner-val">${sprintScore.toLocaleString()} <span style="font-size:1.15rem;opacity:0.8;">pts</span></span>
+                </div>
+
+                <div class="win-stats-grid">
+                    <div class="win-stat-box">
+                        <div class="win-stat-label">Correct Answers</div>
+                        <div class="win-stat-value">${sprintCorrectCount} / ${sprintTotalQuestions}</div>
+                    </div>
+                    <div class="win-stat-box">
+                        <div class="win-stat-label">Accuracy</div>
+                        <div class="win-stat-value">${accuracyPct}%</div>
+                    </div>
+                    <div class="win-stat-box">
+                        <div class="win-stat-label">Max Streak</div>
+                        <div class="win-stat-value">${sprintMaxStreak} 🔥</div>
+                    </div>
+                    <div class="win-stat-box">
+                        <div class="win-stat-label">Best Record</div>
+                        <div class="win-stat-value">${scores.sprint.highScore} pts</div>
+                    </div>
+                </div>
+
+                <p style="margin-bottom: 1.25rem; font-weight: 700; color: #fcd34d;">
+                    <i class="fas fa-bolt"></i> +${xpEarned} XP Earned!
+                </p>
+
+                <div style="display: flex; gap: 1rem; z-index: 20; justify-content: center; flex-wrap: wrap;">
+                    <button onclick="showSprintSetup()" class="win-btn" style="background-color: var(--color-bg-elevated); color: var(--color-text-main);">Options Setup</button>
+                    <button onclick="startSprintGame()" class="win-btn sprint-play-again-btn"><i class="fas fa-redo"></i> Play Again</button>
+                </div>
+            </div>
+        `;
+
+        setTimeout(() => {
+            const btn = arenaContent.querySelector('.sprint-play-again-btn');
+            if (btn) btn.focus();
+        }, 100);
     }
 
     // --- Page Initialization ---

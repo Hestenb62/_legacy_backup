@@ -107,6 +107,12 @@ include '../src/header.php';
                 <i class="fas fa-th"></i> Return to Curriculum
             </a>
 
+            <!-- Low-Anxiety Exam Mode Toggle in Hero Header -->
+            <button id="hero-low-anxiety-btn" type="button" onclick="window.toggleLowAnxietyExamMode && window.toggleLowAnxietyExamMode()" class="hero-nav-btn hero-nav-btn-outline" title="Toggle Low-Anxiety Exam Mode (Hides timers, question counters, and percentage progress bars)">
+                <i class="fas fa-feather-alt" style="color: var(--color-teal, #14b8a6);"></i>
+                <span id="hero-low-anxiety-text">Low-Anxiety Mode</span>
+            </button>
+
             <!-- Next Button -->
             <a id="btn-next" href="#" class="hero-nav-btn hero-nav-btn-outline hidden">
                 <span id="btn-next-label">Next</span>
@@ -333,7 +339,7 @@ include '../src/header.php';
                     <i class="fas fa-chart-pie" style="color: var(--color-primary);"></i> Your Progress
                 </h3>
                 <div style="margin-top: 1rem;">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                    <div class="progress-standard-label" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
                         <span style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--color-primary); background-color: color-mix(in srgb, var(--color-primary) 10%, transparent); padding: 0.25rem 0.75rem; border-radius: var(--radius-full);">
                             Current Score
                         </span>
@@ -344,8 +350,12 @@ include '../src/header.php';
                     <div class="assessment-progress-wrapper">
                         <div style="width: 0%;" class="assessment-progress-bar progress-bar-animated"></div>
                     </div>
+                    <div class="calm-progress-note" style="display: none; margin-top: 0.6rem;">
+                        <i class="fas fa-seedling" style="color: var(--color-teal, #14b8a6); margin-right: 0.35rem;"></i>
+                        <span>Calm Focus Mode active: No score pressure. Take your time!</span>
+                    </div>
                 </div>
-                <p style="font-size: 0.875rem; color: var(--color-text-muted); font-style: italic; display: flex; align-items: center; gap: 0.5rem; margin-top: 1rem;">
+                <p class="anxious-counter" style="font-size: 0.875rem; color: var(--color-text-muted); font-style: italic; display: flex; align-items: center; gap: 0.5rem; margin-top: 1rem;">
                     <i class="fas fa-info-circle"></i> Complete questions to earn badges!
                 </p>
             </div>
@@ -355,12 +365,12 @@ include '../src/header.php';
                 <div style="display: flex; align-items: center; justify-content: space-between;">
                     <div>
                         <h4 style="font-size: 0.95rem; font-weight: 800; margin: 0; color: var(--color-text-main); display: flex; align-items: center; gap: 0.4rem;">
-                            <i class="fas fa-feather-alt" style="color: var(--color-teal, #14b8a6);"></i> Untimed Practice
+                            <i class="fas fa-feather-alt" style="color: var(--color-teal, #14b8a6);"></i> Low-Anxiety Exam Mode
                         </h4>
-                        <p style="font-size: 0.78rem; color: var(--color-text-muted); margin: 0.25rem 0 0 0;">Low-anxiety practice without timers.</p>
+                        <p style="font-size: 0.78rem; color: var(--color-text-muted); margin: 0.25rem 0 0 0;">Calm focus without timers or counters.</p>
                     </div>
                     <label class="settings-switch" style="position: relative; display: inline-block; width: 42px; height: 22px; margin: 0;">
-                        <input type="checkbox" id="untimed-mode-toggle" onchange="window.toggleUntimedAssessmentMode && window.toggleUntimedAssessmentMode(this.checked)" style="width: 1.15rem; height: 1.15rem; cursor: pointer;">
+                        <input type="checkbox" id="untimed-mode-toggle" onchange="window.toggleLowAnxietyExamMode && window.toggleLowAnxietyExamMode(this.checked)" style="width: 1.15rem; height: 1.15rem; cursor: pointer;" title="Toggle Low-Anxiety Exam Mode">
                     </label>
                 </div>
             </div>
@@ -405,9 +415,12 @@ include '../src/header.php';
 
                 <div class="assessment-quiz-header">
                     <div>
-                        <span class="question-counter-label">Question</span>
-                        <div id="question-count" class="question-counter-big">
+                        <span class="question-counter-label anxious-counter">Question</span>
+                        <div id="question-count" class="question-counter-big anxious-counter">
                             1<span class="question-counter-total">/10</span>
+                        </div>
+                        <div class="calm-counter-badge" style="display: none;">
+                            <i class="fas fa-feather-alt"></i> Calm Focus Practice
                         </div>
                     </div>
                     <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 0.5rem;">
@@ -418,8 +431,8 @@ include '../src/header.php';
                             <button id="tts-read-btn" type="button" onclick="window.readCurrentQuestionAloud && window.readCurrentQuestionAloud()" style="background: var(--color-bg-base); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 0.35rem 0.7rem; color: var(--color-text-main); font-size: 0.8rem; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 0.35rem; transition: all 0.2s;" title="Read question aloud (Text-to-Speech) [Shortcut: R]">
                                 <i class="fas fa-volume-up" style="color: var(--color-primary);"></i> <span class="no-mobile">Read Aloud</span>
                             </button>
-                            <button id="untimed-mode-btn" type="button" style="background: var(--color-bg-base); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 0.35rem 0.7rem; color: var(--color-text-muted); font-size: 0.8rem; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 0.35rem; transition: all 0.2s;" title="Toggle Low-Anxiety Untimed Practice Mode">
-                                <i class="fas fa-infinity"></i> <span id="untimed-mode-label">Untimed Mode</span>
+                            <button id="untimed-mode-btn" type="button" onclick="window.toggleLowAnxietyExamMode && window.toggleLowAnxietyExamMode()" style="background: var(--color-bg-base); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 0.35rem 0.7rem; color: var(--color-text-muted); font-size: 0.8rem; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 0.35rem; transition: all 0.2s;" title="Toggle Low-Anxiety Exam Mode (Hides timers, counters, and progress bar)">
+                                <i class="fas fa-feather-alt"></i> <span id="untimed-mode-label">Low-Anxiety Mode</span>
                             </button>
                             <button id="sound-toggle-btn" style="color: var(--color-text-muted); background: transparent; border: none; cursor: pointer; transition: color 0.2s;" title="Toggle Sound">
                                 <i class="fas fa-volume-up" style="font-size: 1.25rem;"></i>
@@ -484,12 +497,17 @@ include '../src/header.php';
             </div>
             
             <!-- Diagnostic Recommendations Card (Hidden initially) -->
-            <div id="diagnostic-container" class="assessment-card assessment-card-accent-top" style="display: none; margin-top: 2rem; border-color: var(--color-success);">
-                <h3 class="assessment-card-title" style="margin-bottom: 0.5rem;">
-                    <i class="fas fa-lightbulb" style="color: var(--color-success);"></i> Diagnostic Recommendations
-                </h3>
-                <p style="font-size: 0.875rem; color: var(--color-text-muted); margin-bottom: 1.5rem; line-height: 1.6;">
-                    Based on your Entrance Exam performance, we suggest focusing on the following curriculum levels to strengthen your skills:
+            <div id="diagnostic-container" class="assessment-card assessment-card-accent-top" style="display: none; margin-top: 2rem; border-color: var(--color-warning);">
+                <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 0.5rem;">
+                    <h3 class="assessment-card-title" style="margin: 0; display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fas fa-bullseye" style="color: var(--color-warning);"></i> Targeted Learning Recommendations
+                    </h3>
+                    <span id="diagnostic-badge-count" style="font-size: 0.75rem; font-weight: 800; padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: color-mix(in srgb, var(--color-warning) 15%, transparent); color: var(--color-warning);">
+                        Action Recommended (&lt; 70% Mastery)
+                    </span>
+                </div>
+                <p id="diagnostic-desc" style="font-size: 0.875rem; color: var(--color-text-muted); margin-bottom: 1.25rem; line-height: 1.6;">
+                    Based on your assessment performance, our diagnostic engine detected standards scoring below the 70% proficiency threshold. Strengthen your foundation with the targeted curriculum lessons below:
                 </p>
                 <div id="diagnostic-list" style="display: flex; flex-direction: column; gap: 1rem;">
                     <!-- Suggested lessons injected by JS -->
