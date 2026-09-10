@@ -137,12 +137,16 @@
 </script>
 <script src="https://cdn.gtranslate.net/widgets/latest/popup.js" defer></script>
 
+<!-- Certificate of Academic Mastery Modal -->
+<?php include __DIR__ . '/partials/certificate-modal.php'; ?>
+
 <!-- Footer Scripts -->
 <script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/global-error-handler.js') : '/assets/js/global-error-handler.js' ?>"></script>
 <script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/global-study-tools.js') : '/assets/js/global-study-tools.js' ?>"></script>
 <script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/flashcard-studio.js') : '/assets/js/flashcard-studio.js' ?>"></script>
 <script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/gamification/quest-manager.js') : '/assets/js/gamification/quest-manager.js' ?>"></script>
 <script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/accessibility/accommodation-engine.js') : '/assets/js/accessibility/accommodation-engine.js' ?>"></script>
+<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/certificate-generator.js') : '/assets/js/certificate-generator.js' ?>"></script>
 <script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/global-standard.js') : '/assets/js/global-standard.js' ?>"></script>
 
 <!-- Google API Scripts for Global Auto-Sync (Loaded when sync is active or on settings/profile) -->

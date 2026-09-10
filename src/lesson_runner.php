@@ -63,8 +63,15 @@ if (!isset($practiceQuestions) || empty($practiceQuestions)) {
             </div>
         </div>
 
-        <!-- Center: Interactive Check Understanding & Assessment -->
+        <!-- Center: Interactive Check Understanding, Assessment & Read Aloud -->
         <div class="runner-dock-center">
+            <button type="button" id="runner-tts-btn" class="runner-btn runner-btn-tts" onclick="toggleLessonSpeechNarration()" title="Listen aloud with voice narration" aria-label="Listen aloud">
+                <i class="fas fa-volume-up" id="runner-tts-icon"></i>
+                <span id="runner-tts-text">Listen</span>
+            </button>
+            <button type="button" id="runner-tts-speed-btn" class="runner-btn runner-btn-subtle" style="display: none; padding: 0.35rem 0.65rem; font-size: 0.75rem; font-weight: 800;" onclick="cycleLessonSpeechSpeed()" title="Adjust narration speed">
+                1.0x
+            </button>
             <button type="button" class="runner-btn runner-btn-practice" onclick="openLessonPracticeModal()" title="Take a quick 2-minute practice check">
                 <i class="fas fa-lightbulb"></i>
                 <span>Check Understanding</span>
@@ -433,11 +440,133 @@ if (!isset($practiceQuestions) || empty($practiceQuestions)) {
 
     window.addEventListener('bookmarks-updated', updateBookmarkButton);
 
+    // Lesson Text-to-Speech (TTS) Engine
+    let ttsSpeaking = false;
+    let ttsPaused = false;
+    let ttsRate = 1.0;
+    const ttsSpeeds = [0.75, 1.0, 1.25, 1.5];
+    let ttsSegments = [];
+    let ttsCurrentIndex = 0;
+
+    function cycleLessonSpeechSpeed() {
+        const nextIdx = (ttsSpeeds.indexOf(ttsRate) + 1) % ttsSpeeds.length;
+        ttsRate = ttsSpeeds[nextIdx];
+        const speedBtn = document.getElementById('runner-tts-speed-btn');
+        if (speedBtn) speedBtn.textContent = `${ttsRate}x`;
+        if (ttsSpeaking && !ttsPaused && 'speechSynthesis' in window) {
+            window.speechSynthesis.cancel();
+            speakNextSegment();
+        }
+    }
+
+    function toggleLessonSpeechNarration() {
+        if (!('speechSynthesis' in window)) {
+            alert('Text-to-Speech narration is not supported in this browser.');
+            return;
+        }
+
+        const icon = document.getElementById('runner-tts-icon');
+        const text = document.getElementById('runner-tts-text');
+        const speedBtn = document.getElementById('runner-tts-speed-btn');
+
+        if (ttsSpeaking) {
+            window.speechSynthesis.cancel();
+            ttsSpeaking = false;
+            ttsPaused = false;
+            ttsCurrentIndex = 0;
+            if (icon) icon.className = 'fas fa-volume-up';
+            if (text) text.textContent = 'Listen';
+            if (speedBtn) speedBtn.style.display = 'none';
+            document.querySelectorAll('.lesson-tts-highlight').forEach(el => el.classList.remove('lesson-tts-highlight'));
+            return;
+        }
+
+        ttsSegments = [];
+        const candidates = document.querySelectorAll(
+            '.lesson-header h1, .lesson-desc, .lesson-overview-text, .lesson-outcomes-list li, .lesson-insights-text, .lesson-vocab-card, .lesson-problem-prompt, .lesson-discussion-card p'
+        );
+
+        candidates.forEach(el => {
+            const raw = el.innerText.trim();
+            if (raw.length > 2) {
+                ttsSegments.push({ el, text: raw });
+            }
+        });
+
+        if (ttsSegments.length === 0) {
+            const main = document.querySelector('main') || document.body;
+            ttsSegments.push({ el: main, text: main.innerText.slice(0, 500) });
+        }
+
+        ttsSpeaking = true;
+        ttsPaused = false;
+        ttsCurrentIndex = 0;
+
+        if (icon) icon.className = 'fas fa-stop';
+        if (text) text.textContent = 'Stop';
+        if (speedBtn) {
+            speedBtn.style.display = 'inline-flex';
+            speedBtn.textContent = `${ttsRate}x`;
+        }
+
+        speakNextSegment();
+    }
+
+    function speakNextSegment() {
+        if (!ttsSpeaking || ttsCurrentIndex >= ttsSegments.length) {
+            window.speechSynthesis.cancel();
+            ttsSpeaking = false;
+            ttsPaused = false;
+            ttsCurrentIndex = 0;
+            const icon = document.getElementById('runner-tts-icon');
+            const text = document.getElementById('runner-tts-text');
+            const speedBtn = document.getElementById('runner-tts-speed-btn');
+            if (icon) icon.className = 'fas fa-volume-up';
+            if (text) text.textContent = 'Listen';
+            if (speedBtn) speedBtn.style.display = 'none';
+            document.querySelectorAll('.lesson-tts-highlight').forEach(el => el.classList.remove('lesson-tts-highlight'));
+            return;
+        }
+
+        const segment = ttsSegments[ttsCurrentIndex];
+        document.querySelectorAll('.lesson-tts-highlight').forEach(el => el.classList.remove('lesson-tts-highlight'));
+        if (segment.el) {
+            segment.el.classList.add('lesson-tts-highlight');
+            segment.el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        const utterance = new SpeechSynthesisUtterance(segment.text);
+        utterance.rate = ttsRate;
+        utterance.pitch = 1.0;
+
+        const voices = window.speechSynthesis.getVoices();
+        const bestVoice = voices.find(v => v.lang.startsWith('en') && (v.name.includes('Natural') || v.name.includes('Google') || v.name.includes('Samantha'))) || voices.find(v => v.lang.startsWith('en'));
+        if (bestVoice) utterance.voice = bestVoice;
+
+        utterance.onend = () => {
+            ttsCurrentIndex++;
+            speakNextSegment();
+        };
+
+        utterance.onerror = () => {
+            ttsCurrentIndex++;
+            speakNextSegment();
+        };
+
+        window.speechSynthesis.speak(utterance);
+    }
+
+    window.addEventListener('beforeunload', () => {
+        if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+    });
+
     // Expose globals
     window.openLessonPracticeModal = openLessonPracticeModal;
     window.closeLessonPracticeModal = closeLessonPracticeModal;
     window.toggleRunnerComplete = toggleRunnerComplete;
     window.toggleRunnerLessonBookmark = toggleRunnerLessonBookmark;
+    window.toggleLessonSpeechNarration = toggleLessonSpeechNarration;
+    window.cycleLessonSpeechSpeed = cycleLessonSpeechSpeed;
 
     // Run on load
     if (document.readyState === 'loading') {

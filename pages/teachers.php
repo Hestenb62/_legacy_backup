@@ -304,6 +304,22 @@ include '../src/header.php';
                         Browse Digital Library <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
+
+                <!-- Card 6: Official Certificate of Mastery -->
+                <div class="resource-feature-card">
+                    <div>
+                        <div class="resource-icon-wrapper" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b;">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3 class="resource-card-title">Official Achievement Diplomas</h3>
+                        <p class="resource-card-desc">
+                            Generate and print official 8.5" x 11" landscape mastery diplomas with gold seals, credential IDs, and educator/parent signatures for homeschool portfolios.
+                        </p>
+                    </div>
+                    <button type="button" class="resource-action-link" style="background: none; border: none; cursor: pointer; padding: 0; font-weight: 800; font-size: 0.9rem; color: #d97706; display: inline-flex; align-items: center; gap: 0.4rem;" onclick="window.openCertificateModal && window.openCertificateModal()">
+                        <span>Generate Student Diploma</span> <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
             </div>
         </section>
 

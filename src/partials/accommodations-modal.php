@@ -126,6 +126,7 @@
                     <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
                         <select id="acc-sound-select" class="acc-select" onchange="window.accommodationEngine.setSoundscape(this.value)">
                             <option value="none">🔇 Soundscape Off</option>
+                            <option value="brown">🤎 Deep Brownian Noise (ADHD Focus)</option>
                             <option value="pink">🌸 Synthesized Pink Noise</option>
                             <option value="rain">🌧️ Gentle Ambient Rain</option>
                             <option value="ocean">🌊 Deep Ocean Surf</option>
@@ -134,6 +135,13 @@
                             <span>Volume</span>
                             <input type="range" id="acc-sound-volume" class="acc-range-input" min="0.05" max="1.0" step="0.05" oninput="window.accommodationEngine.setSoundscapeVolume(this.value)">
                         </div>
+                    </div>
+                    <div class="acc-sound-chips" style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.25rem;">
+                        <button type="button" class="tool-btn" style="font-size: 0.8rem; padding: 0.35rem 0.75rem; border-radius: 9999px;" onclick="window.accommodationEngine.setSoundscape('brown')">🤎 Brown Noise</button>
+                        <button type="button" class="tool-btn" style="font-size: 0.8rem; padding: 0.35rem 0.75rem; border-radius: 9999px;" onclick="window.accommodationEngine.setSoundscape('pink')">🌸 Pink Noise</button>
+                        <button type="button" class="tool-btn" style="font-size: 0.8rem; padding: 0.35rem 0.75rem; border-radius: 9999px;" onclick="window.accommodationEngine.setSoundscape('rain')">🌧️ Rain</button>
+                        <button type="button" class="tool-btn" style="font-size: 0.8rem; padding: 0.35rem 0.75rem; border-radius: 9999px;" onclick="window.accommodationEngine.setSoundscape('ocean')">🌊 Ocean</button>
+                        <button type="button" class="tool-btn" style="font-size: 0.8rem; padding: 0.35rem 0.75rem; border-radius: 9999px; color: #ef4444;" onclick="window.accommodationEngine.setSoundscape('none')">🔇 Mute</button>
                     </div>
                 </div>
             </div>

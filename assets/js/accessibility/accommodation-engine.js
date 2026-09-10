@@ -469,12 +469,79 @@
         oceanSource.start();
         lfo.start();
         this.activeSoundNodes.push(oceanSource, lfo, lowPass, swellGain);
+
+      } else if (type === 'brown') {
+        // Brownian / Brown Noise: Leaky integrator on white noise (-6dB/octave slope)
+        let lastOut = 0.0;
+        for (let i = 0; i < bufferSize; i++) {
+          const white = Math.random() * 2 - 1;
+          output[i] = (lastOut + (0.02 * white)) / 1.02;
+          lastOut = output[i];
+          output[i] *= 3.5;
+        }
+
+        const brownSource = this.audioCtx.createBufferSource();
+        brownSource.buffer = noiseBuffer;
+        brownSource.loop = true;
+
+        const lowPass = this.audioCtx.createBiquadFilter();
+        lowPass.type = 'lowpass';
+        lowPass.frequency.setValueAtTime(680, this.audioCtx.currentTime);
+
+        brownSource.connect(lowPass);
+        lowPass.connect(masterGain);
+        brownSource.start();
+        this.activeSoundNodes.push(brownSource, lowPass);
+      }
+
+      this.updateSoundscapeIndicator(type);
+    }
+
+    updateSoundscapeIndicator(type) {
+      let indicator = document.getElementById('hl-soundscape-indicator');
+      if (!indicator) {
+        indicator = document.createElement('div');
+        indicator.id = 'hl-soundscape-indicator';
+        indicator.className = 'hl-soundscape-indicator';
+        document.body.appendChild(indicator);
+      }
+
+      const names = {
+        pink: 'Pink Noise',
+        brown: 'Brown Noise',
+        rain: 'Gentle Rain',
+        ocean: 'Ocean Surf'
+      };
+
+      indicator.classList.remove('hidden');
+      indicator.innerHTML = `
+        <span class="soundscape-pulse"><i class="fas fa-headphones-alt"></i></span>
+        <span>Focus: <strong>${names[type] || type}</strong></span>
+        <button type="button" class="soundscape-stop-btn" onclick="window.accommodationEngine.setSoundscape('none')" title="Stop ambient audio">Stop</button>
+      `;
+    }
+
+    hideSoundscapeIndicator() {
+      const indicator = document.getElementById('hl-soundscape-indicator');
+      if (indicator) {
+        indicator.classList.add('hidden');
       }
     }
 
     setSoundscape(type) {
       this.profile.soundscapeActive = type;
+      if (type === 'none') {
+        this.hideSoundscapeIndicator();
+      }
       this.saveProfile();
+    }
+
+    toggleSoundscape(type) {
+      if (this.profile.soundscapeActive === type) {
+        this.setSoundscape('none');
+      } else {
+        this.setSoundscape(type);
+      }
     }
 
     setSoundscapeVolume(vol) {

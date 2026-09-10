@@ -89,9 +89,14 @@ include ABSPATH . '../src/header.php';
                 <h1 class="reader-main-title">My Profile</h1>
                 <p class="reader-main-author">Manage your identity and track your learning progress.</p>
             </div>
-            <button type="button" class="profile-btn-primary" onclick="window.openStudentReportCardModal && window.openStudentReportCardModal()" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.65rem 1.5rem; border-radius: 9999px; text-decoration: none; width: auto;">
-                <i class="fas fa-print"></i> Official Report Card
-            </button>
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                <button type="button" class="profile-btn-primary" onclick="window.openCertificateModal && window.openCertificateModal()" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.65rem 1.5rem; border-radius: 9999px; text-decoration: none; width: auto; background: linear-gradient(135deg, #f59e0b, #d97706); border: none; box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);">
+                    <i class="fas fa-award"></i> Certificate of Mastery
+                </button>
+                <button type="button" class="profile-btn-primary" onclick="window.openStudentReportCardModal && window.openStudentReportCardModal()" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.65rem 1.5rem; border-radius: 9999px; text-decoration: none; width: auto;">
+                    <i class="fas fa-print"></i> Official Report Card
+                </button>
+            </div>
         </header>
 
         <!-- Announcement Banner -->
@@ -358,6 +363,16 @@ include ABSPATH . '../src/header.php';
                         <div><strong>Curriculum Program:</strong> EngageNY / Common Core / TEKS</div>
                         <div><strong>Proficiency Status:</strong> <span id="report-overall-status" class="report-status-badge">Good Standing</span></div>
                         <div><strong>Reading Level:</strong> High School (Grades 9–12)</div>
+                    </div>
+
+                    <!-- IEP / 504 Accommodations Record -->
+                    <div class="report-accommodations-box" id="report-accommodations-box" style="margin: 1rem 0; padding: 0.85rem 1.25rem; border-radius: 0.75rem; background: #f8fafc; border: 1px solid #cbd5e1; text-align: left;">
+                        <div style="font-weight: 800; font-size: 0.8rem; text-transform: uppercase; color: #475569; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="fas fa-universal-access" style="color: #6366f1;"></i> Active IEP / 504 Personalized Accommodations
+                        </div>
+                        <div id="report-acc-list" style="display: flex; gap: 0.5rem; flex-wrap: wrap; font-size: 0.8rem;">
+                            <!-- Populated dynamically by JS -->
+                        </div>
                     </div>
 
                     <!-- Executive Metrics -->

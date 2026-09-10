@@ -1313,3 +1313,194 @@ main.container {
     font-weight: 700;
 }
 
+/* ==========================================================================
+   FORMATIVE EXIT TICKET & MASTERY CHECK STYLES
+   ========================================================================== */
+.lesson-exit-ticket-section {
+    background: color-mix(in srgb, var(--color-surface, #1e293b) 95%, transparent);
+    border: 1px solid var(--color-border, #334155);
+    border-radius: 1.25rem;
+    padding: 2rem;
+    margin-top: 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.exit-ticket-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.75rem;
+    border-bottom: 1px solid var(--color-border, #334155);
+    padding-bottom: 1.25rem;
+}
+
+.exit-ticket-title-wrap h3 {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--color-text-default, #f8fafc);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin: 0 0 0.4rem 0;
+}
+
+.exit-ticket-desc {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary, #94a3b8);
+    margin: 0;
+}
+
+.exit-ticket-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    background: color-mix(in srgb, var(--color-primary, #6366f1) 15%, transparent);
+    color: var(--color-primary, #6366f1);
+    border: 1px solid color-mix(in srgb, var(--color-primary, #6366f1) 30%, transparent);
+}
+
+.exit-ticket-card {
+    background: var(--color-base-bg, #0f172a);
+    border: 1px solid var(--color-border, #334155);
+    border-radius: 1rem;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1.25rem;
+    transition: all 0.2s ease;
+}
+
+.exit-ticket-question {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--color-text-default, #f8fafc);
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.exit-ticket-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.exit-ticket-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    border-radius: 0.6rem;
+    background: var(--color-surface, #1e293b);
+    border: 1px solid var(--color-border, #334155);
+    cursor: pointer;
+    font-size: 0.875rem;
+    color: var(--color-text-secondary, #cbd5e1);
+    transition: all 0.2s ease;
+}
+
+.exit-ticket-option input[type="radio"] {
+    margin-top: 0.2rem;
+    accent-color: var(--color-primary, #6366f1);
+}
+
+.exit-ticket-option:hover {
+    border-color: var(--color-primary, #6366f1);
+    background: color-mix(in srgb, var(--color-primary, #6366f1) 8%, var(--color-surface, #1e293b));
+}
+
+.exit-ticket-option.correct-choice {
+    border-color: #10b981 !important;
+    background: rgba(16, 185, 129, 0.12) !important;
+    color: #34d399 !important;
+}
+
+.exit-ticket-option.incorrect-choice {
+    border-color: #ef4444 !important;
+    background: rgba(239, 68, 68, 0.12) !important;
+    color: #f87171 !important;
+}
+
+.exit-ticket-explanation {
+    margin-top: 0.85rem;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    background: rgba(59, 130, 246, 0.1);
+    border-left: 3px solid #3b82f6;
+    font-size: 0.85rem;
+    color: #93c5fd;
+    display: none;
+    line-height: 1.5;
+}
+
+.exit-ticket-explanation.visible {
+    display: block;
+}
+
+.exit-ticket-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.exit-ticket-submit-btn {
+    padding: 0.75rem 1.75rem;
+    border-radius: 9999px;
+    background: var(--color-primary, #6366f1);
+    color: white;
+    font-weight: 800;
+    font-size: 0.95rem;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 14px color-mix(in srgb, var(--color-primary, #6366f1) 40%, transparent);
+    transition: all 0.2s ease;
+}
+
+.exit-ticket-submit-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px color-mix(in srgb, var(--color-primary, #6366f1) 50%, transparent);
+}
+
+.exit-ticket-score-banner {
+    display: none;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.6rem 1.25rem;
+    border-radius: 9999px;
+    font-weight: 800;
+    font-size: 0.95rem;
+}
+
+.exit-ticket-score-banner.visible {
+    display: inline-flex;
+}
+
+.exit-ticket-score-banner.mastered {
+    background: rgba(16, 185, 129, 0.15);
+    color: #10b981;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.exit-ticket-score-banner.retry {
+    background: rgba(245, 158, 11, 0.15);
+    color: #f59e0b;
+    border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+/* TTS Active Speaking Glow */
+.lesson-tts-highlight {
+    outline: 2px solid var(--color-primary, #6366f1) !important;
+    background: color-mix(in srgb, var(--color-primary, #6366f1) 12%, transparent) !important;
+    border-radius: 8px;
+    box-shadow: 0 0 16px color-mix(in srgb, var(--color-primary, #6366f1) 25%, transparent);
+    transition: all 0.25s ease;
+}
+

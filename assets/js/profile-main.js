@@ -598,6 +598,37 @@ document.addEventListener("DOMContentLoaded", () => {
         if (readingMetric) readingMetric.textContent = `${readingData.totalMinutes || 0} min`;
         if (streakMetric) streakMetric.textContent = `${readingData.currentStreakDays || 0} Days`;
 
+        // 4b. Active IEP/504 Accommodations
+        const accListEl = document.getElementById('report-acc-list');
+        if (accListEl) {
+            accListEl.innerHTML = '';
+            let accProfile = {};
+            try {
+                const rawAcc = localStorage.getItem('hl_accommodations_profile');
+                if (rawAcc) accProfile = JSON.parse(rawAcc);
+            } catch (e) {}
+
+            const activeAccs = [];
+            if (accProfile.rulerEnabled) activeAccs.push('Guided Reading Ruler (Visual Tracking)');
+            if (accProfile.bionicEnabled) activeAccs.push('Bionic Reading Fixations (Dyslexia Support)');
+            if (accProfile.tintEnabled) activeAccs.push(`Screen Color Tint (${(accProfile.tintColor || 'peach').toUpperCase()})`);
+            if (accProfile.dyscalculiaEnabled) activeAccs.push('Dyscalculia Math Operator Colorizer');
+            if (accProfile.soundscapeActive && accProfile.soundscapeActive !== 'none') {
+                activeAccs.push(`Ambient Focus Soundscape (${accProfile.soundscapeActive.toUpperCase()})`);
+            }
+
+            if (activeAccs.length === 0) {
+                accListEl.innerHTML = '<span style="color: #64748b; font-style: italic;">Standard Universal Design (No specialized accommodations active)</span>';
+            } else {
+                activeAccs.forEach(acc => {
+                    const pill = document.createElement('span');
+                    pill.style.cssText = 'background: #e0e7ff; color: #4338ca; padding: 0.25rem 0.65rem; border-radius: 9999px; font-weight: 700; border: 1px solid #c7d2fe;';
+                    pill.textContent = acc;
+                    accListEl.appendChild(pill);
+                });
+            }
+        }
+
         // 5. Overall Status
         const statusBadge = document.getElementById('report-overall-status');
         if (statusBadge) {

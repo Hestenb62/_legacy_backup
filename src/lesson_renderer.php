@@ -181,6 +181,236 @@ include ABSPATH . 'src/header.php';
                     <?php endforeach; ?>
                 </div>
             </div>
+        </section>
+
+        <?php
+        // Prepare Formative Exit Ticket Questions based on subject
+        $exitQuestions = [];
+        if ($rawSubj === 'math') {
+            $exitQuestions = [
+                [
+                    'question' => 'When analyzing a real-world functional relationship, what does the rate of change $\\frac{\\Delta y}{\\Delta x}$ represent in context?',
+                    'options' => [
+                        'The ratio or speed at which the dependent output changes per unit change of the independent input.',
+                        'The total sum of all coordinate coordinates plotted on the plane.',
+                        'A static constant that always equals zero regardless of situation.',
+                        'The vertical distance between the origin $(0,0)$ and the graph maximum.'
+                    ],
+                    'correct' => 0,
+                    'explanation' => 'The rate of change measures slope $\\frac{\\Delta y}{\\Delta x}$, quantifying how fast the output variable responds to unit changes in the input.'
+                ],
+                [
+                    'question' => 'Why must mathematical models account for domain restrictions (such as $t \\ge 0$) in physical applications?',
+                    'options' => [
+                        'Physical quantities like elapsed time, mass, or liquid volume cannot be negative in physical reality.',
+                        'Coordinate planes cannot display points with negative coordinates.',
+                        'Equations stop functioning if negative inputs are evaluated.',
+                        'Domain restrictions are optional artistic styling choices.'
+                    ],
+                    'correct' => 0,
+                    'explanation' => 'Physical real-world variables have natural boundary constraints ($t \\ge 0$, volume $V \\ge 0$) that define the valid operational domain of the model.'
+                ],
+                [
+                    'question' => 'On a continuous piecewise graph of a physical process, what does a horizontal line segment ($m = 0$) indicate?',
+                    'options' => [
+                        'The rate of change is zero, meaning the measured quantity remained constant over that time interval.',
+                        'The system was increasing at an infinite rate.',
+                        'The input variable was running backwards in time.',
+                        'The graph is broken and cannot be interpreted.'
+                    ],
+                    'correct' => 0,
+                    'explanation' => 'A horizontal segment indicates a slope of zero, meaning as the independent variable progressed, the dependent quantity did not change.'
+                ]
+            ];
+        } elseif ($rawSubj === 'ela') {
+            $exitQuestions = [
+                [
+                    'question' => 'What is the primary role of supporting textual evidence in an analytical or argumentative claim?',
+                    'options' => [
+                        'Grounding claims in verified quotes and direct observations to justify reasoned conclusions.',
+                        'Making the paragraph visually longer to meet word count minimums.',
+                        'Replacing the need for a thesis statement or central argument.',
+                        'Proving that opposing viewpoints should never be acknowledged.'
+                    ],
+                    'correct' => 0,
+                    'explanation' => 'Textual evidence provides verifiable citations that connect the student\'s analytical reasoning with the author\'s original text.'
+                ],
+                [
+                    'question' => 'When analyzing authorial tone and diction, which literary element is most critical to investigate?',
+                    'options' => [
+                        'The emotional connotations, stylistic nuances, and specific word choices selected by the author.',
+                        'The font typography and page margin width in the physical book.',
+                        'The alphabetical order of words in the glossary index.',
+                        'Strictly the punctuation mark at the very end of the final paragraph.'
+                    ],
+                    'correct' => 0,
+                    'explanation' => 'Authorial tone is established through deliberate word choice (diction) and syntactical structure.'
+                ],
+                [
+                    'question' => 'How does identifying a text\'s central theme differ from identifying its plot summary?',
+                    'options' => [
+                        'Theme conveys a universal insight about human nature or life, whereas plot outlines the chronological sequence of events.',
+                        'Theme is only found in non-fiction articles, while plot only exists in poetry.',
+                        'There is no distinction; theme and plot are completely interchangeable terms.',
+                        'Plot describes the moral lesson, while theme lists character names.'
+                    ],
+                    'correct' => 0,
+                    'explanation' => 'Plot describes what happens chronologically, while theme articulates the deeper universal message or truth.'
+                ]
+            ];
+        } else {
+            $exitQuestions = [
+                [
+                    'question' => 'Why is isolating a single independent variable essential in scientific and historical inquiry?',
+                    'options' => [
+                        'To ensure that observed outcomes can be confidently attributed to that specific cause or factor.',
+                        'To minimize the amount of data needed to write a conclusion.',
+                        'Because systems can never have more than one variable in nature.',
+                        'To prevent mathematical formulas from being used in the analysis.'
+                    ],
+                    'correct' => 0,
+                    'explanation' => 'Controlling extraneous variables allows researchers to establish direct cause-and-effect relationships.'
+                ],
+                [
+                    'question' => 'What differentiates empirical evidence from unsupported conjecture in analytical reasoning?',
+                    'options' => [
+                        'Empirical evidence is grounded in repeatable observations, data, and primary documentation.',
+                        'Empirical evidence is based solely on personal opinion and popularity.',
+                        'Conjecture requires mathematical proof, while evidence does not.',
+                        'There is no functional difference in scholarly analysis.'
+                    ],
+                    'correct' => 0,
+                    'explanation' => 'Empirical evidence relies on observable, verifiable, and documented findings.'
+                ],
+                [
+                    'question' => 'When synthesizing multiple sources with conflicting conclusions, what is the best analytical approach?',
+                    'options' => [
+                        'Evaluate methodology, source credibility, and bias before reconciling differences.',
+                        'Discard both sources immediately and guess the answer.',
+                        'Assume the first published source is always universally correct.',
+                        'Only select the source that confirms your initial assumption.'
+                    ],
+                    'correct' => 0,
+                    'explanation' => 'Rigorous synthesis demands critically evaluating author perspectives, methodology, and empirical rigor.'
+                ]
+            ];
+        }
+        ?>
+
+        <!-- Formative Exit Ticket & Mastery Check -->
+        <section class="lesson-exit-ticket-section" id="exit-ticket-section">
+            <div class="exit-ticket-header">
+                <div class="exit-ticket-title-wrap">
+                    <span class="exit-ticket-badge"><i class="fas fa-clipboard-check"></i> Standard Competency Check</span>
+                    <h3>Exit Ticket: Quick Mastery Check</h3>
+                    <p class="exit-ticket-desc">Demonstrate your understanding of this lesson's key concepts to log mastery to your profile.</p>
+                </div>
+            </div>
+
+            <form id="exit-ticket-form" onsubmit="event.preventDefault(); submitExitTicket();">
+                <?php foreach ($exitQuestions as $qIdx => $q): ?>
+                    <div class="exit-ticket-card" id="exit-q-<?= $qIdx ?>">
+                        <div class="exit-ticket-question">
+                            <strong>Question <?= ($qIdx + 1) ?>:</strong> <?= htmlspecialchars($q['question']) ?>
+                        </div>
+                        <div class="exit-ticket-options">
+                            <?php foreach ($q['options'] as $oIdx => $opt): ?>
+                                <label class="exit-ticket-option" id="exit-opt-<?= $qIdx ?>-<?= $oIdx ?>">
+                                    <input type="radio" name="exit_q_<?= $qIdx ?>" value="<?= $oIdx ?>" required>
+                                    <span><?= htmlspecialchars($opt) ?></span>
+                                </label>
+                            <?php endforeach; ?>
+                        </div>
+                        <div class="exit-ticket-explanation" id="exit-exp-<?= $qIdx ?>">
+                            <strong><i class="fas fa-info-circle"></i> Explanation:</strong> <?= htmlspecialchars($q['explanation']) ?>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+
+                <div class="exit-ticket-actions">
+                    <button type="submit" id="exit-ticket-submit-btn" class="exit-ticket-submit-btn">
+                        <i class="fas fa-check-circle"></i> Submit & Check Mastery
+                    </button>
+                    <div id="exit-ticket-score" class="exit-ticket-score-banner"></div>
+                </div>
+            </form>
+        </section>
+
+        <script>
+        const EXIT_QUESTIONS = <?= json_encode($exitQuestions) ?>;
+        const LESSON_CODE = <?= json_encode($codeStr) ?>;
+        const LESSON_STD = <?= json_encode('CCSS.' . strtoupper($rawSubj ?? 'MATH') . '.' . strtoupper($rawLevel ?? 'K') . '.' . strtoupper($rawMod ?? 'M1')) ?>;
+        const LESSON_LVL = <?= json_encode($rawLevel ?? 'k') ?>;
+        const LESSON_TITLE = <?= json_encode($meta['title'] ?? 'Curriculum Lesson') ?>;
+
+        function submitExitTicket() {
+            let correctCount = 0;
+            const total = EXIT_QUESTIONS.length;
+
+            EXIT_QUESTIONS.forEach((q, idx) => {
+                const selected = document.querySelector(`input[name="exit_q_${idx}"]:checked`);
+                const expEl = document.getElementById(`exit-exp-${idx}`);
+                if (expEl) expEl.classList.add('visible');
+
+                q.options.forEach((_, optIdx) => {
+                    const optLabel = document.getElementById(`exit-opt-${idx}-${optIdx}`);
+                    if (!optLabel) return;
+                    optLabel.classList.remove('correct-choice', 'incorrect-choice');
+                    if (optIdx === q.correct) {
+                        optLabel.classList.add('correct-choice');
+                    }
+                });
+
+                if (selected) {
+                    const userVal = parseInt(selected.value, 10);
+                    const chosenLabel = document.getElementById(`exit-opt-${idx}-${userVal}`);
+                    if (userVal === q.correct) {
+                        correctCount++;
+                    } else if (chosenLabel) {
+                        chosenLabel.classList.add('incorrect-choice');
+                    }
+                }
+            });
+
+            const pct = Math.round((correctCount / total) * 100);
+            const scoreBanner = document.getElementById('exit-ticket-score');
+            if (scoreBanner) {
+                scoreBanner.className = 'exit-ticket-score-banner visible';
+                if (pct >= 80) {
+                    scoreBanner.classList.add('mastered');
+                    scoreBanner.innerHTML = `<i class="fas fa-trophy"></i> Mastered! ${correctCount}/${total} (${pct}%) • Saved to Profile`;
+                } else {
+                    scoreBanner.classList.add('retry');
+                    scoreBanner.innerHTML = `<i class="fas fa-redo"></i> Score: ${correctCount}/${total} (${pct}%) • Review explanations above`;
+                }
+            }
+
+            // Save mastery to localStorage
+            try {
+                let mastery = {};
+                const raw = localStorage.getItem('hesten_standards_mastery');
+                if (raw) mastery = JSON.parse(raw);
+                const prev = mastery[LESSON_CODE] || {};
+                mastery[LESSON_CODE] = {
+                    code: LESSON_CODE,
+                    name: LESSON_TITLE,
+                    standard: LESSON_STD,
+                    bestScore: Math.max(prev.bestScore || 0, pct),
+                    lastAttempt: new Date().toISOString().split('T')[0],
+                    attempts: (prev.attempts || 0) + 1,
+                    level: LESSON_LVL
+                };
+                localStorage.setItem('hesten_standards_mastery', JSON.stringify(mastery));
+                window.dispatchEvent(new CustomEvent('standards-mastery-updated', { detail: mastery[LESSON_CODE] }));
+            } catch (e) {
+                console.warn('Failed to record mastery:', e);
+            }
+
+            if (window.ensureMathJax) {
+                window.ensureMathJax([document.getElementById('exit-ticket-section')]);
+            }
+        }
+        </script>
     </div>
 </main>
 

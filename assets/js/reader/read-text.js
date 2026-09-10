@@ -280,6 +280,12 @@ function initTextToSpeech(bookContent) {
     document.addEventListener("DOMContentLoaded", () => {
         updateBookmarkIcon();
 
+        // Initialize Text-to-Speech narration
+        const bookContent = document.getElementById("book-content");
+        if (bookContent) {
+            initTextToSpeech(bookContent);
+        }
+
         // Also ensure current reading chapter is saved & synced
         try {
             const progressKey = `hesten_progress_${bookId}_lastChapter`;

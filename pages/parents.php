@@ -166,10 +166,14 @@ include '../src/header.php';
                             </span>
                             <h3 class="parents-tool-title-featured">Competency Reports</h3>
                             <p class="parents-tool-desc-featured">Track letter grades, daily quests, GPA, and print official report cards.</p>
+                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.5rem;">
+                            <a href="/pages/profile.php" class="parents-tool-btn">
+                                View Report Card <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <button type="button" class="parents-tool-btn" style="background: linear-gradient(135deg, #f59e0b, #d97706); cursor: pointer; border: none;" onclick="window.openCertificateModal && window.openCertificateModal()">
+                                Print Diploma <i class="fas fa-award"></i>
+                            </button>
                         </div>
-                        <a href="/pages/profile.php" class="parents-tool-btn">
-                            View Report Card <i class="fas fa-arrow-right"></i>
-                        </a>
                     </div>
 
                     <!-- Tool 2: 36-Week Pacing Guide -->
