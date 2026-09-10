@@ -16,7 +16,7 @@
         let studentName = config.studentName;
         if (!studentName) {
             try {
-                const profileRaw = localStorage.getItem('hesten_user_profile');
+                const profileRaw = localStorage.getItem('hesten_user_profile') || localStorage.getItem('hesten-user-profile');
                 if (profileRaw) {
                     const prof = JSON.parse(profileRaw);
                     if (prof.firstName) studentName = prof.firstName;
@@ -28,24 +28,49 @@
         const nameEl = document.getElementById('cert-recipient-name');
         if (nameEl) nameEl.textContent = studentName;
 
-        // 2. Course / Standard Title
+        // 2. Course / Standard / Milestone Title
         const courseEl = document.getElementById('cert-course-name');
         if (courseEl) {
-            courseEl.textContent = config.courseTitle || 'Algebra I Foundations & Mathematical Reasoning (Level K)';
+            let courseText = config.courseTitle || 'Core Competency & Standards Mastery';
+            if (config.gradeLevel && !courseText.includes(config.gradeLevel)) {
+                courseText += ` (${config.gradeLevel})`;
+            }
+            if (config.honorsDistinction && config.honorsDistinction !== 'standard') {
+                courseText += ` — ${config.honorsDistinction}`;
+            }
+            courseEl.textContent = courseText;
         }
 
         // 3. Issue Date
         const dateEl = document.getElementById('cert-issue-date');
         if (dateEl) {
-            const now = new Date();
-            dateEl.textContent = now.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });
+            if (config.issueDate) {
+                dateEl.textContent = config.issueDate;
+            } else {
+                const now = new Date();
+                dateEl.textContent = now.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });
+            }
         }
 
         // 4. Credential ID
         const idEl = document.getElementById('cert-doc-id');
         if (idEl) {
-            const seed = Math.abs(Date.now() % 900000) + 100000;
-            idEl.textContent = `HL-CERT-${seed}`;
+            if (config.docId) {
+                idEl.textContent = config.docId;
+            } else {
+                const seed = Math.abs(Date.now() % 900000) + 100000;
+                idEl.textContent = `HL-CERT-${seed}`;
+            }
+        }
+
+        // 5. Custom Signatures if provided
+        const proctorEl = document.querySelector('.cert-sig-box:first-of-type .cert-sig-label');
+        if (proctorEl && config.proctorName) {
+            proctorEl.textContent = config.proctorName;
+        }
+        const parentEl = document.querySelector('.cert-sig-box:last-of-type .cert-sig-label');
+        if (parentEl && config.parentName) {
+            parentEl.textContent = config.parentName;
         }
 
         // Reveal Modal

@@ -147,6 +147,7 @@
 <script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/gamification/quest-manager.js') : '/assets/js/gamification/quest-manager.js' ?>"></script>
 <script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/accessibility/accommodation-engine.js') : '/assets/js/accessibility/accommodation-engine.js' ?>"></script>
 <script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/certificate-generator.js') : '/assets/js/certificate-generator.js' ?>"></script>
+<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/command-palette.js') : '/assets/js/command-palette.js' ?>"></script>
 <script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/global-standard.js') : '/assets/js/global-standard.js' ?>"></script>
 
 <!-- Google API Scripts for Global Auto-Sync (Loaded when sync is active or on settings/profile) -->

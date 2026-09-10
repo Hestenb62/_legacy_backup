@@ -12,7 +12,8 @@
             "epub-link": "https://cdn.hestena62.com/library/Nineteen%20eighty-four%20-%20George%20Orwell.epub",
             "read-online-link": "/library/read/index.php?book=1984",
             "txt-link": "https://cdn.hestena62.com/library/Nineteen%20eighty-four%20-%20George%20Orwell.txt",
-            "mobi-link": "https://cdn.hestena62.com/library/Nineteen%20eighty-four%20-%20George%20Orwell.mobi",
+            "mobi-link": "",
+            "word-link": "",
             "lexile": "1090L",
             "grade": "Grades 9-12",
             "disclaimer-key": "gutenberg",
@@ -101,8 +102,7 @@
                     "read-online-link": "#",
                     "lexile": "960L"
                 }
-            ],
-            "grade": "Grades 8-12"
+            ]
         },
         {
             "id": "the-hobbit",
@@ -153,8 +153,8 @@
             "epub-link": "https://cdn.hestena62.com/library/The%20American%20Yawp.epub",
             "read-online-link": "/library/read/index.php?book=american-yawp",
             "txt-link": "https://cdn.hestena62.com/library/The%20American%20Yawp.txt",
-            "mobi-link": "https://cdn.hestena62.com/library/The%20American%20Yawp.mobi",
-            "word-link": "https://cdn.hestena62.com/library/The%20American%20Yawp.docx",
+            "mobi-link": "",
+            "word-link": "",
             "lexile": "1150L",
             "grade": "Grades 11-12",
             "disclaimer-key": "american-yawp"

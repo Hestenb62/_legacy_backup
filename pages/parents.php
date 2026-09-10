@@ -73,9 +73,17 @@ include '../src/header.php';
                         <li class="parents-nav-item">
                             <a href="#schedule" class="parents-nav-link nav-link-amber">
                                 <span class="parents-nav-icon nav-icon-amber">
-                                    <i class="fas fa-clock"></i>
+                                    <i class="fas fa-calendar-alt"></i>
                                 </span>
-                                Daily Schedule
+                                Daily & Weekly Schedule
+                            </a>
+                        </li>
+                        <li class="parents-nav-item">
+                            <a href="#certificates" class="parents-nav-link" style="color: #d97706;">
+                                <span class="parents-nav-icon" style="background: rgba(245, 158, 11, 0.15); color: #d97706;">
+                                    <i class="fas fa-award"></i>
+                                </span>
+                                Milestone Diplomas
                             </a>
                         </li>
                         <li class="parents-nav-item">
@@ -365,47 +373,228 @@ include '../src/header.php';
                 </div>
             </section>
 
-            <!-- Visual Home Routine & Daily Schedule Builder -->
+            <!-- Visual Home Routine & Daily/Weekly Schedule Builder -->
             <section id="schedule" class="parents-section">
                 <div class="glass-panel parents-schedule-card">
+                    <!-- Schedule Tabs Navigation -->
+                    <div class="schedule-tabs-bar no-print">
+                        <button type="button" class="schedule-tab-btn active" id="btn-tab-sched-daily" onclick="switchScheduleView('daily')">
+                            <i class="fas fa-clock"></i> Daily Time Rhythm
+                        </button>
+                        <button type="button" class="schedule-tab-btn" id="btn-tab-sched-weekly" onclick="switchScheduleView('weekly')">
+                            <i class="fas fa-calendar-check"></i> 36-Week Homeschool Checklist
+                        </button>
+                    </div>
+
+                    <!-- VIEW 1: DAILY TIME RHYTHM -->
+                    <div id="schedule-daily-view">
+                        <div class="parents-section-header" style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+                            <div>
+                                <h2 class="parents-section-title">
+                                    <i class="fas fa-calendar-alt" style="color:#d97706;"></i> Visual Home Routine & Daily Schedule
+                                </h2>
+                                <p class="parents-section-desc">Design a balanced, neurodiversity-friendly daily routine and print a wall schedule for your homeschool space.</p>
+                            </div>
+                            <div class="no-print" style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
+                                <button type="button" onclick="window.printDailySchedule()" class="parents-tool-btn" style="background: linear-gradient(135deg, #f59e0b, #d97706); padding: 0.45rem 1rem; font-size: 0.85rem; border: none; cursor: pointer;">
+                                    <i class="fas fa-print"></i> Print Refrigerator Schedule
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Schedule Configuration Toolbar -->
+                        <div class="schedule-config-bar no-print">
+                            <div class="schedule-config-item">
+                                <label for="sched-start-time" class="schedule-config-label"><i class="fas fa-sun" style="color:#f59e0b;"></i> Morning Start Time:</label>
+                                <select id="sched-start-time" onchange="updateScheduleTimes()" class="parents-form-input" style="padding: 0.4rem 0.75rem; width: auto; font-size: 0.875rem;">
+                                    <option value="8:00">8:00 AM</option>
+                                    <option value="8:30" selected>8:30 AM</option>
+                                    <option value="9:00">9:00 AM</option>
+                                    <option value="9:30">9:30 AM</option>
+                                </select>
+                            </div>
+                            <div class="schedule-config-item">
+                                <label for="sched-pacing-style" class="schedule-config-label"><i class="fas fa-sliders-h" style="color:#6366f1;"></i> Pacing Rhythm:</label>
+                                <select id="sched-pacing-style" onchange="updateScheduleTimes()" class="parents-form-input" style="padding: 0.4rem 0.75rem; width: auto; font-size: 0.875rem;">
+                                    <option value="standard" selected>Balanced Focus (40m blocks / 15m breaks)</option>
+                                    <option value="pomodoro">Pomodoro (25m blocks / 5m sensory resets)</option>
+                                    <option value="gentle">Gentle Pacing (30m blocks / 20m breaks)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Interactive Timeline Block Cards -->
+                        <div class="schedule-blocks-container" id="schedule-blocks-container">
+                            <!-- Populated dynamically via JS -->
+                        </div>
+                    </div>
+
+                    <!-- VIEW 2: 36-WEEK HOMESCHOOL PACING CHECKLIST -->
+                    <div id="schedule-weekly-view" style="display: none;">
+                        <div class="parents-section-header" style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+                            <div>
+                                <h2 class="parents-section-title">
+                                    <i class="fas fa-tasks text-emerald-600"></i> 36-Week Homeschool Pacing Checklist
+                                </h2>
+                                <p class="parents-section-desc">Interactive Monday–Friday curriculum matrix covering all subjects across all grades. Check off completed lessons in real time.</p>
+                            </div>
+                            <div class="no-print" style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
+                                <button type="button" onclick="window.printWeeklySchedule()" class="parents-tool-btn" style="background: #059669; padding: 0.45rem 1rem; font-size: 0.85rem; border: none; cursor: pointer;">
+                                    <i class="fas fa-print"></i> Print Weekly Checklist
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Weekly Matrix Toolbar -->
+                        <div class="weekly-matrix-toolbar no-print">
+                            <div class="weekly-selector-group">
+                                <label for="week-grade-select" class="weekly-selector-label"><i class="fas fa-graduation-cap" style="color:#6366f1;"></i> Target Grade:</label>
+                                <select id="week-grade-select" class="parents-form-input" style="padding: 0.4rem 0.75rem; width: auto; font-size: 0.875rem;" onchange="renderWeeklyPacingMatrix()">
+                                    <option value="pre-k">Pre-K (Level A)</option>
+                                    <option value="k">Kindergarten (Level B)</option>
+                                    <option value="1">1st Grade (Level C)</option>
+                                    <option value="2">2nd Grade (Level D)</option>
+                                    <option value="3" selected>3rd Grade (Level E)</option>
+                                    <option value="4">4th Grade (Level F)</option>
+                                    <option value="5">5th Grade (Level G)</option>
+                                    <option value="6">6th Grade (Level H)</option>
+                                    <option value="7">7th Grade (Level I)</option>
+                                    <option value="8">8th Grade (Level J)</option>
+                                    <option value="hs">High School (Level K-N)</option>
+                                </select>
+                            </div>
+
+                            <div class="weekly-selector-group">
+                                <label for="week-quarter-select" class="weekly-selector-label"><i class="fas fa-chart-pie" style="color:#f59e0b;"></i> Quarter:</label>
+                                <select id="week-quarter-select" class="parents-form-input" style="padding: 0.4rem 0.75rem; width: auto; font-size: 0.875rem;" onchange="handleQuarterChange()">
+                                    <option value="1" selected>Quarter 1 (Weeks 1–9)</option>
+                                    <option value="2">Quarter 2 (Weeks 10–18)</option>
+                                    <option value="3">Quarter 3 (Weeks 19–27)</option>
+                                    <option value="4">Quarter 4 (Weeks 28–36)</option>
+                                </select>
+                            </div>
+
+                            <div class="weekly-selector-group">
+                                <label for="week-number-select" class="weekly-selector-label"><i class="fas fa-list-ol" style="color:#10b981;"></i> Week Number:</label>
+                                <select id="week-number-select" class="parents-form-input" style="padding: 0.4rem 0.75rem; width: auto; font-size: 0.875rem;" onchange="renderWeeklyPacingMatrix()">
+                                    <!-- Populated dynamically -->
+                                </select>
+                            </div>
+
+                            <!-- Progress Track -->
+                            <div class="weekly-progress-wrap">
+                                <div class="weekly-progress-track">
+                                    <div class="weekly-progress-fill" id="weekly-prog-fill" style="width: 0%;"></div>
+                                </div>
+                                <span class="weekly-progress-text" id="weekly-prog-text">0 / 5 Completed (0%)</span>
+                            </div>
+                        </div>
+
+                        <!-- 5-Day Monday to Friday Grid -->
+                        <div class="week-days-grid" id="week-days-grid">
+                            <!-- Rendered dynamically by JS -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Milestone Mastery & Achievement Diplomas -->
+            <section id="certificates" class="parents-section">
+                <div class="certificate-customizer-card">
                     <div class="parents-section-header" style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
                         <div>
+                            <span class="parents-tool-badge" style="background: rgba(245,158,11,0.15); color: #d97706; margin-bottom: 0.5rem; display: inline-flex; align-items: center; gap: 0.35rem;">
+                                <i class="fas fa-award"></i> Homeschool Milestone Credentials
+                            </span>
                             <h2 class="parents-section-title">
-                                <i class="fas fa-calendar-alt" style="color:#d97706;"></i> Visual Home Routine & Daily Schedule
+                                Official Achievement Diplomas & Certificate Generator
                             </h2>
-                            <p class="parents-section-desc">Design a balanced, neurodiversity-friendly daily routine and print a wall schedule for your homeschool space.</p>
+                            <p class="parents-section-desc">Generate official 8.5" x 11" landscape mastery diplomas with gold foil seals, credential IDs, and customizable signatures for student portfolios.</p>
                         </div>
-                        <div class="no-print" style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
-                            <button type="button" onclick="window.printDailySchedule()" class="parents-tool-btn" style="background: linear-gradient(135deg, #f59e0b, #d97706); padding: 0.45rem 1rem; font-size: 0.85rem; border: none; cursor: pointer;">
-                                <i class="fas fa-print"></i> Print Refrigerator Schedule
+                    </div>
+
+                    <!-- Customizer Form Grid -->
+                    <div class="cert-form-grid no-print">
+                        <div class="builder-field-group">
+                            <label class="weekly-selector-label" for="cert-input-name">
+                                <i class="fas fa-user-graduate" style="color:#6366f1;"></i> Student Scholar Name:
+                            </label>
+                            <input type="text" id="cert-input-name" class="parents-form-input" placeholder="e.g. Leo Vance" oninput="updateCertPreview()">
+                        </div>
+
+                        <div class="builder-field-group">
+                            <label class="weekly-selector-label" for="cert-input-grade">
+                                <i class="fas fa-graduation-cap" style="color:#10b981;"></i> Grade Level:
+                            </label>
+                            <select id="cert-input-grade" class="parents-form-input" onchange="updateCertPreview()">
+                                <option value="Pre-K (Level A)">Pre-K (Level A)</option>
+                                <option value="Kindergarten (Level B)">Kindergarten (Level B)</option>
+                                <option value="1st Grade (Level C)">1st Grade (Level C)</option>
+                                <option value="2nd Grade (Level D)">2nd Grade (Level D)</option>
+                                <option value="3rd Grade (Level E)" selected>3rd Grade (Level E)</option>
+                                <option value="4th Grade (Level F)">4th Grade (Level F)</option>
+                                <option value="5th Grade (Level G)">5th Grade (Level G)</option>
+                                <option value="6th Grade (Level H)">6th Grade (Level H)</option>
+                                <option value="7th Grade (Level I)">7th Grade (Level I)</option>
+                                <option value="8th Grade (Level J)">8th Grade (Level J)</option>
+                                <option value="High School (Level K-N)">High School (Level K-N)</option>
+                            </select>
+                        </div>
+
+                        <div class="builder-field-group">
+                            <label class="weekly-selector-label" for="cert-input-subject">
+                                <i class="fas fa-book" style="color:#f59e0b;"></i> Subject or Field:
+                            </label>
+                            <select id="cert-input-subject" class="parents-form-input" onchange="updateCertPreview()">
+                                <option value="Mathematics Competency & Problem Solving" selected>Mathematics (CCSS)</option>
+                                <option value="English Language Arts & Literature Analysis">English Language Arts (CCSS)</option>
+                                <option value="Science & Empirical Inquiry (NGSS)">Science (NGSS)</option>
+                                <option value="Social Studies & Civic Inquiry (C3)">Social Studies (C3)</option>
+                                <option value="All-Subject Academic Honor Roll & Pacing Mastery">Cumulative All-Subject Mastery</option>
+                            </select>
+                        </div>
+
+                        <div class="builder-field-group">
+                            <label class="weekly-selector-label" for="cert-input-milestone">
+                                <i class="fas fa-flag-checkered" style="color:#ec4899;"></i> Milestone / Benchmark Title:
+                            </label>
+                            <input type="text" id="cert-input-milestone" class="parents-form-input" placeholder="e.g. Quarter 1 36-Week Pacing Completion" value="Quarter 1 Master Curriculum Completion" oninput="updateCertPreview()">
+                        </div>
+
+                        <div class="builder-field-group">
+                            <label class="weekly-selector-label" for="cert-input-honors">
+                                <i class="fas fa-medal" style="color:#d97706;"></i> Honors Distinction:
+                            </label>
+                            <select id="cert-input-honors" class="parents-form-input" onchange="updateCertPreview()">
+                                <option value="Summa Cum Laude Honors (95%+)" selected>Summa Cum Laude (95%+ Mastery)</option>
+                                <option value="High Honors Distinction (90%+)">High Honors Distinction (90%+)</option>
+                                <option value="Academic Mastery (80%+)">Academic Mastery (80%+)</option>
+                                <option value="Exemplary Effort & Persistence">Exemplary Effort & Persistence</option>
+                            </select>
+                        </div>
+
+                        <div class="builder-field-group">
+                            <label class="weekly-selector-label" for="cert-input-coach">
+                                <i class="fas fa-signature" style="color:#0d9488;"></i> Parent / Educator Signature:
+                            </label>
+                            <input type="text" id="cert-input-coach" class="parents-form-input" placeholder="e.g. Eleanor Vance, Learning Coach" value="Homeschool Learning Coach" oninput="updateCertPreview()">
+                        </div>
+                    </div>
+
+                    <!-- Live Diploma Preview Box -->
+                    <div class="cert-preview-card">
+                        <div style="font-size: 0.75rem; text-transform: uppercase; font-weight: 800; color: #b45309; letter-spacing: 0.05em; margin-bottom: 0.5rem;">
+                            <i class="fas fa-eye"></i> Live Credential Preview
+                        </div>
+                        <h3 id="prev-cert-name" style="margin: 0; font-size: 1.5rem; font-weight: 800; color: #78350f; font-family: 'Cinzel', serif, Georgia;">Student Scholar</h3>
+                        <p id="prev-cert-course" style="margin: 0.35rem 0 0 0; font-size: 0.95rem; color: #92400e; font-weight: 600;">
+                            Quarter 1 Master Curriculum Completion (3rd Grade - Level E) — Summa Cum Laude Honors
+                        </p>
+                        <div style="margin-top: 1.25rem; display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap;">
+                            <button type="button" class="parents-tool-btn" style="background: linear-gradient(135deg, #f59e0b, #d97706); border: none; cursor: pointer; padding: 0.6rem 1.5rem; font-size: 0.95rem;" onclick="launchGeneratedDiploma()">
+                                <i class="fas fa-print"></i> Generate & Print Official Diploma
                             </button>
                         </div>
-                    </div>
-
-                    <!-- Schedule Configuration Toolbar -->
-                    <div class="schedule-config-bar no-print">
-                        <div class="schedule-config-item">
-                            <label for="sched-start-time" class="schedule-config-label"><i class="fas fa-sun" style="color:#f59e0b;"></i> Morning Start Time:</label>
-                            <select id="sched-start-time" onchange="updateScheduleTimes()" class="parents-form-input" style="padding: 0.4rem 0.75rem; width: auto; font-size: 0.875rem;">
-                                <option value="8:00">8:00 AM</option>
-                                <option value="8:30" selected>8:30 AM</option>
-                                <option value="9:00">9:00 AM</option>
-                                <option value="9:30">9:30 AM</option>
-                            </select>
-                        </div>
-                        <div class="schedule-config-item">
-                            <label for="sched-pacing-style" class="schedule-config-label"><i class="fas fa-sliders-h" style="color:#6366f1;"></i> Pacing Rhythm:</label>
-                            <select id="sched-pacing-style" onchange="updateScheduleTimes()" class="parents-form-input" style="padding: 0.4rem 0.75rem; width: auto; font-size: 0.875rem;">
-                                <option value="standard" selected>Balanced Focus (40m blocks / 15m breaks)</option>
-                                <option value="pomodoro">Pomodoro (25m blocks / 5m sensory resets)</option>
-                                <option value="gentle">Gentle Pacing (30m blocks / 20m breaks)</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <!-- Interactive Timeline Block Cards -->
-                    <div class="schedule-blocks-container" id="schedule-blocks-container">
-                        <!-- Populated dynamically via JS -->
                     </div>
                 </div>
             </section>
@@ -982,10 +1171,245 @@ include '../src/header.php';
         window.print();
     };
 
+    // =========================================================================
+    // 36-WEEK INTERACTIVE WEEKLY HOMESCHOOL PACING MATRIX
+    // =========================================================================
+    const STORAGE_KEY_CHECKLIST = 'hesten_homeschool_checklist';
+
+    function getChecklistState() {
+        try {
+            const raw = localStorage.getItem(STORAGE_KEY_CHECKLIST);
+            if (raw) return JSON.parse(raw);
+        } catch (e) {}
+        return {};
+    }
+
+    function saveChecklistState(state) {
+        try {
+            localStorage.setItem(STORAGE_KEY_CHECKLIST, JSON.stringify(state));
+        } catch (e) {}
+    }
+
+    window.switchScheduleView = function(view) {
+        const dailyBtn = document.getElementById('btn-tab-sched-daily');
+        const weeklyBtn = document.getElementById('btn-tab-sched-weekly');
+        const dailyView = document.getElementById('schedule-daily-view');
+        const weeklyView = document.getElementById('schedule-weekly-view');
+
+        if (view === 'weekly') {
+            if (dailyBtn) dailyBtn.classList.remove('active');
+            if (weeklyBtn) weeklyBtn.classList.add('active');
+            if (dailyView) dailyView.style.display = 'none';
+            if (weeklyView) weeklyView.style.display = 'block';
+            handleQuarterChange();
+        } else {
+            if (weeklyBtn) weeklyBtn.classList.remove('active');
+            if (dailyBtn) dailyBtn.classList.add('active');
+            if (weeklyView) weeklyView.style.display = 'none';
+            if (dailyView) dailyView.style.display = 'block';
+        }
+    };
+
+    window.handleQuarterChange = function() {
+        const qSelect = document.getElementById('week-quarter-select');
+        const wSelect = document.getElementById('week-number-select');
+        if (!qSelect || !wSelect) return;
+
+        const q = parseInt(qSelect.value, 10) || 1;
+        const startWeek = (q - 1) * 9 + 1;
+        const endWeek = q * 9;
+
+        wSelect.innerHTML = '';
+        for (let w = startWeek; w <= endWeek; w++) {
+            const opt = document.createElement('option');
+            opt.value = w;
+            opt.textContent = `Week ${w}`;
+            wSelect.appendChild(opt);
+        }
+
+        renderWeeklyPacingMatrix();
+    };
+
+    window.renderWeeklyPacingMatrix = function() {
+        const gradeSelect = document.getElementById('week-grade-select');
+        const weekSelect = document.getElementById('week-number-select');
+        const grid = document.getElementById('week-days-grid');
+        if (!grid) return;
+
+        const grade = gradeSelect ? gradeSelect.value : '3';
+        const week = weekSelect ? parseInt(weekSelect.value, 10) || 1 : 1;
+        const checklist = getChecklistState();
+
+        const gradeNames = {
+            'pre-k': 'Pre-K', 'k': 'Kindergarten', '1': 'Grade 1', '2': 'Grade 2',
+            '3': 'Grade 3', '4': 'Grade 4', '5': 'Grade 5', '6': 'Grade 6',
+            '7': 'Grade 7', '8': 'Grade 8', 'hs': 'High School'
+        };
+        const gradeLabel = gradeNames[grade] || `Grade ${grade}`;
+
+        // Generate 5 days of structured homeschool curriculum tasks
+        const weekData = [
+            {
+                day: 'Monday',
+                focus: 'Math Mastery',
+                badge: 'badge-math',
+                subject: 'Mathematics Core',
+                taskTitle: `${gradeLabel} Mathematics (Week ${week})`,
+                desc: `Standard benchmark focus: procedural fluency, conceptual modeling, and visual representation.`,
+                link: `/pages/teachers.php#builder`
+            },
+            {
+                day: 'Tuesday',
+                focus: 'ELA & Literature',
+                badge: 'badge-ela',
+                subject: 'English Language Arts',
+                taskTitle: `${gradeLabel} Text Analysis & Writing`,
+                desc: `Guided close reading, vocabulary context clues, and central theme textual evidence.`,
+                link: `/library/`
+            },
+            {
+                day: 'Wednesday',
+                focus: 'Science Inquiry',
+                badge: 'badge-sci',
+                subject: 'Science & Discovery',
+                taskTitle: `${gradeLabel} Empirical Investigation`,
+                desc: `Hands-on inquiry lab, data observation tables, and Claim-Evidence-Reasoning (CER) synthesis.`,
+                link: `/student/interactive-labs.php`
+            },
+            {
+                day: 'Thursday',
+                focus: 'Social Studies',
+                badge: 'badge-soc',
+                subject: 'Social Studies & Civics',
+                taskTitle: `${gradeLabel} Historical & Civic Inquiry`,
+                desc: `Primary source document exploration, geographical spatial mapping, and civic principles.`,
+                link: `/pages/standards.php`
+            },
+            {
+                day: 'Friday',
+                focus: 'Review & Sprints',
+                badge: 'badge-read',
+                subject: 'Fluency & Independent Reading',
+                taskTitle: `Weekly Sprint & Reading Log`,
+                desc: `60-Second Speed Sprint fluency checkpoint, independent library reading streak, and portfolio update.`,
+                link: `/pages/games.php`
+            }
+        ];
+
+        let completedCount = 0;
+        let html = '';
+
+        weekData.forEach((dayItem, idx) => {
+            const taskId = `task_${grade}_w${week}_d${idx+1}`;
+            const isDone = !!checklist[taskId];
+            if (isDone) completedCount++;
+
+            html += `
+                <div class="week-day-col">
+                    <div class="week-day-header">
+                        <h4 class="week-day-title">${dayItem.day}</h4>
+                        <span class="week-day-tag">${dayItem.focus}</span>
+                    </div>
+                    <div class="week-task-list">
+                        <label class="week-task-card ${isDone ? 'completed' : ''}" for="${taskId}">
+                            <input type="checkbox" id="${taskId}" class="week-task-checkbox" ${isDone ? 'checked' : ''} onchange="toggleWeeklyTask('${taskId}')">
+                            <div class="week-task-info">
+                                <span class="week-task-badge ${dayItem.badge}">${dayItem.subject}</span>
+                                <div class="week-task-subject">${dayItem.taskTitle}</div>
+                                <div class="week-task-desc">${dayItem.desc}</div>
+                                ${dayItem.link ? `<a href="${dayItem.link}" class="sched-link no-print" target="_blank">Open Lesson <i class="fas fa-arrow-right"></i></a>` : ''}
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            `;
+        });
+
+        grid.innerHTML = html;
+
+        // Update progress track
+        const pct = Math.round((completedCount / 5) * 100);
+        const fillEl = document.getElementById('weekly-prog-fill');
+        const textEl = document.getElementById('weekly-prog-text');
+        if (fillEl) fillEl.style.width = `${pct}%`;
+        if (textEl) textEl.textContent = `${completedCount} / 5 Completed (${pct}%)`;
+    };
+
+    window.toggleWeeklyTask = function(taskId) {
+        const checklist = getChecklistState();
+        checklist[taskId] = !checklist[taskId];
+        saveChecklistState(checklist);
+        renderWeeklyPacingMatrix();
+    };
+
+    window.printWeeklySchedule = function() {
+        window.print();
+    };
+
+    // =========================================================================
+    // MILESTONE MASTERY CERTIFICATE GENERATOR CONTROLS
+    // =========================================================================
+    window.updateCertPreview = function() {
+        const nameInput = document.getElementById('cert-input-name');
+        const gradeInput = document.getElementById('cert-input-grade');
+        const subjectInput = document.getElementById('cert-input-subject');
+        const milestoneInput = document.getElementById('cert-input-milestone');
+        const honorsInput = document.getElementById('cert-input-honors');
+
+        const prevName = document.getElementById('prev-cert-name');
+        const prevCourse = document.getElementById('prev-cert-course');
+
+        let studentName = nameInput ? nameInput.value.trim() : '';
+        if (!studentName) {
+            try {
+                const profileRaw = localStorage.getItem('hesten_user_profile') || localStorage.getItem('hesten-user-profile');
+                if (profileRaw) {
+                    const prof = JSON.parse(profileRaw);
+                    if (prof.firstName) studentName = prof.firstName;
+                }
+            } catch (e) {}
+        }
+        if (!studentName) studentName = 'Student Scholar';
+
+        const grade = gradeInput ? gradeInput.value : '3rd Grade (Level E)';
+        const milestone = milestoneInput ? milestoneInput.value.trim() : 'Academic Milestone Mastery';
+        const honors = honorsInput ? honorsInput.value : 'Summa Cum Laude Honors';
+
+        if (prevName) prevName.textContent = studentName;
+        if (prevCourse) prevCourse.textContent = `${milestone} (${grade}) — ${honors}`;
+    };
+
+    window.launchGeneratedDiploma = function() {
+        const nameInput = document.getElementById('cert-input-name');
+        const gradeInput = document.getElementById('cert-input-grade');
+        const subjectInput = document.getElementById('cert-input-subject');
+        const milestoneInput = document.getElementById('cert-input-milestone');
+        const honorsInput = document.getElementById('cert-input-honors');
+        const coachInput = document.getElementById('cert-input-coach');
+
+        let studentName = nameInput ? nameInput.value.trim() : '';
+        const grade = gradeInput ? gradeInput.value : '3rd Grade (Level E)';
+        const milestone = milestoneInput ? milestoneInput.value.trim() : 'Mastery Benchmark';
+        const honors = honorsInput ? honorsInput.value : 'Summa Cum Laude Honors';
+        const coach = coachInput ? coachInput.value.trim() : 'Homeschool Learning Coach';
+
+        if (window.openCertificateModal) {
+            window.openCertificateModal({
+                studentName: studentName,
+                courseTitle: milestone,
+                gradeLevel: grade,
+                honorsDistinction: honors,
+                parentName: coach
+            });
+        }
+    };
+
     // Load initial parents hub states
     document.addEventListener('DOMContentLoaded', () => {
         loadSavedAccommodations();
         updateScheduleTimes();
+        handleQuarterChange();
+        updateCertPreview();
 
         window.addEventListener('hl:accommodations-updated', () => {
             loadSavedAccommodations();

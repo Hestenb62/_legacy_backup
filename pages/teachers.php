@@ -410,9 +410,12 @@ include '../src/header.php';
                     </div>
                 </div>
 
-                <div class="builder-actions-row" style="margin-top: 1.5rem;">
+                <div class="builder-actions-row" style="margin-top: 1.5rem; display: flex; gap: 0.75rem; flex-wrap: wrap;">
                     <button type="button" id="btn-generate-lesson-plan" class="builder-action-btn builder-btn-primary">
-                        <i class="fas fa-magic"></i> Generate Complete Lesson Plan & Formative Quiz
+                        <i class="fas fa-magic"></i> Generate 5-Stage Lesson Plan & Formative Quiz
+                    </button>
+                    <button type="button" id="btn-generate-worksheet" class="builder-action-btn builder-btn-secondary" style="border-color: #6366f1; color: #4f46e5; background: #ffffff;">
+                        <i class="fas fa-print"></i> Generate Printable Student Worksheet & Answer Key
                     </button>
                 </div>
 
@@ -477,17 +480,25 @@ include '../src/header.php';
                     </div>
 
                     <div class="roster-export-group">
+                        <button type="button" id="btn-cluster-groups" class="builder-action-btn builder-btn-secondary" style="border-color: #ec4899; color: #db2777; background: #ffffff;">
+                            <i class="fas fa-layer-group"></i> Intervention Clusters
+                        </button>
                         <button type="button" id="btn-upload-report-card" class="builder-action-btn builder-btn-primary" style="background: linear-gradient(135deg, #4f46e5, #6366f1); border: none;">
-                            <i class="fas fa-file-upload"></i> Upload Student Report Card (.json)
+                            <i class="fas fa-file-upload"></i> Upload Report Card (.json)
                         </button>
                         <input type="file" id="roster-report-card-file" accept=".json,application/json" style="display: none;">
                         <button type="button" id="btn-reset-roster" class="builder-action-btn builder-btn-secondary" title="Reset to standard 5-student sample class">
-                            <i class="fas fa-undo"></i> Reset Demo Class
+                            <i class="fas fa-undo"></i> Reset Demo
                         </button>
                         <button type="button" id="btn-export-roster-csv" class="builder-action-btn builder-btn-primary" style="background:#059669; border-color:#059669;">
-                            <i class="fas fa-file-csv"></i> Download Roster CSV
+                            <i class="fas fa-file-csv"></i> Export CSV
                         </button>
                     </div>
+                </div>
+
+                <!-- Differentiated Intervention Clusters Container -->
+                <div id="intervention-clusters-container" class="intervention-clusters-section no-print" style="display: none; margin-bottom: 1.5rem;">
+                    <!-- Rendered dynamically by JS -->
                 </div>
 
                 <!-- Roster Data Table Container -->

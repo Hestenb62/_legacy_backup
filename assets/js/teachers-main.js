@@ -856,7 +856,278 @@
 
       showToast(`Generated lesson plan for ${standardCode}!`);
     });
+
+    // --- WORKSHEET GENERATOR BUTTON HANDLER ---
+    const worksheetBtn = document.getElementById('btn-generate-worksheet');
+    if (worksheetBtn) {
+      worksheetBtn.addEventListener('click', () => {
+        const gradeVal = gradeSelect.value;
+        const gradeName = (GRADE_CONFIG[gradeVal] && GRADE_CONFIG[gradeVal].name) || gradeVal;
+        const subjectVal = subjectSelect.value;
+        const standardCode = standardSelect.value;
+        const standardText = standardSelect.options[standardSelect.selectedIndex] ? standardSelect.options[standardSelect.selectedIndex].text : standardCode;
+
+        const worksheetData = buildWorksheetData(gradeName, subjectVal, standardCode, standardText);
+
+        outputContainer.innerHTML = `
+          <div class="worksheet-output-wrapper" id="worksheet-packet">
+            <!-- Toolbar -->
+            <div class="lp-sheet-actions no-print" style="margin-bottom: 1rem; display: flex; gap: 0.75rem; flex-wrap: wrap;">
+              <button type="button" class="builder-action-btn builder-btn-primary" onclick="window.printWorksheet('student')">
+                <i class="fas fa-print"></i> Print Student Sheet (Page 1)
+              </button>
+              <button type="button" class="builder-action-btn builder-btn-secondary" onclick="window.printWorksheet('teacher')">
+                <i class="fas fa-key"></i> Print Teacher Key & Rubric (Page 2)
+              </button>
+              <button type="button" class="builder-action-btn builder-btn-secondary" onclick="window.printWorksheet('all')">
+                <i class="fas fa-file-pdf"></i> Print Full 2-Page Packet
+              </button>
+            </div>
+
+            <!-- PAGE 1: STUDENT PRACTICE WORKSHEET -->
+            <div class="worksheet-page" id="worksheet-page-student">
+              <div class="worksheet-top-banner">
+                <div class="worksheet-title-group">
+                  <span class="lp-sheet-badge" style="background:#e0e7ff; color:#4f46e5;"><i class="fas fa-graduation-cap"></i> ${escapeHtml(gradeName)} • ${escapeHtml(subjectVal)}</span>
+                  <h2>${escapeHtml(standardCode)} Practice Packet</h2>
+                  <p>${escapeHtml(standardText)}</p>
+                </div>
+                <div class="worksheet-student-lines">
+                  <div class="worksheet-input-line">Student Name: _______________________</div>
+                  <div class="worksheet-input-line">Date: ____________</div>
+                  <div class="worksheet-input-line">Class Period: _______</div>
+                  <div class="worksheet-input-line">Mastery Goal: 80%+</div>
+                </div>
+              </div>
+
+              <!-- Core Concept Summary -->
+              <div class="worksheet-summary-box">
+                <strong><i class="fas fa-lightbulb text-amber-500"></i> Core Concept & Essential Rule:</strong>
+                <p style="margin: 0.35rem 0 0 0;">${escapeHtml(worksheetData.conceptSummary)}</p>
+              </div>
+
+              <!-- Guided Model Step-by-Step -->
+              <div class="worksheet-guided-model">
+                <strong><i class="fas fa-hands-helping text-emerald-600"></i> Guided Example (Model Problem):</strong>
+                <p style="margin: 0.35rem 0 0.25rem 0; font-weight: 700;">${escapeHtml(worksheetData.guidedModel.prompt)}</p>
+                <div style="font-size: 0.875rem; color: #166534; background: #ffffff; padding: 0.65rem 0.85rem; border-radius: 0.35rem; border: 1px solid #bbf7d0;">
+                  ${worksheetData.guidedModel.steps.map((s, idx) => `<div><strong>Step ${idx+1}:</strong> ${escapeHtml(s)}</div>`).join('')}
+                </div>
+              </div>
+
+              <!-- Independent Practice Exercises (4 Problems) -->
+              <h4 style="font-size: 1rem; font-weight: 800; margin: 1.25rem 0 0.75rem 0; color: #0f172a;">
+                <i class="fas fa-pencil-alt text-indigo-600"></i> Independent Application Exercises
+              </h4>
+              <div class="worksheet-problems-grid">
+                ${worksheetData.problems.map((p, idx) => `
+                  <div class="worksheet-problem-card">
+                    <div class="worksheet-problem-prompt">${idx+1}. ${escapeHtml(p.prompt)}</div>
+                    <div class="worksheet-work-space">
+                      <span>Show your thinking / work here:</span>
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+
+              <!-- Reflection Scale -->
+              <div class="worksheet-reflection-box">
+                <span><strong>Self-Assessment:</strong> How confident do you feel applying ${escapeHtml(standardCode)}?</span>
+                <span>⭐ 1 (Need Support) &nbsp; | &nbsp; ⭐⭐ 2 (Getting There) &nbsp; | &nbsp; ⭐⭐⭐ 3 (Mastered!)</span>
+              </div>
+            </div>
+
+            <!-- PAGE 2: EDUCATOR ANSWER KEY & RUBRIC -->
+            <div class="worksheet-page" id="worksheet-page-teacher" style="margin-top: 1.5rem;">
+              <div class="worksheet-top-banner" style="border-color: #4f46e5;">
+                <div class="worksheet-title-group">
+                  <span class="lp-sheet-badge" style="background:#fee2e2; color:#dc2626;"><i class="fas fa-lock"></i> Educator Solution Guide & Scoring Rubric</span>
+                  <h2>${escapeHtml(standardCode)} - Worked Answer Key</h2>
+                  <p>Grade Level: ${escapeHtml(gradeName)} | Subject: ${escapeHtml(subjectVal)}</p>
+                </div>
+              </div>
+
+              <!-- Solutions -->
+              <h4 style="font-size: 1rem; font-weight: 800; margin: 0 0 0.75rem 0; color: #0f172a;">
+                <i class="fas fa-check-circle text-emerald-600"></i> Worked Solutions & Computational Verification
+              </h4>
+              <div class="worksheet-problems-grid">
+                ${worksheetData.problems.map((p, idx) => `
+                  <div class="worksheet-problem-card" style="background: #f8fafc; border-color: #cbd5e1;">
+                    <div class="worksheet-problem-prompt">${idx+1}. ${escapeHtml(p.prompt)}</div>
+                    <div style="font-size: 0.875rem; color: #059669; font-weight: 700; margin-top: 0.5rem; background: #ecfdf5; padding: 0.5rem; border-radius: 0.35rem;">
+                      Solution: ${escapeHtml(p.solution)}
+                    </div>
+                    <div style="font-size: 0.775rem; color: #64748b; margin-top: 0.35rem;">
+                      <em>Rationale: ${escapeHtml(p.rationale)}</em>
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+
+              <!-- Common Misconceptions to Watch For -->
+              <div style="background: #fffbeb; border: 1px solid #fde68a; border-radius: 0.5rem; padding: 1rem; margin-bottom: 1.5rem;">
+                <strong style="color: #b45309;"><i class="fas fa-exclamation-triangle"></i> Common Student Misconceptions:</strong>
+                <ul style="margin: 0.4rem 0 0 1.25rem; font-size: 0.85rem; color: #92400e;">
+                  ${worksheetData.misconceptions.map(m => `<li>${escapeHtml(m)}</li>`).join('')}
+                </ul>
+              </div>
+
+              <!-- 4-Level Standards-Based Grading Rubric -->
+              <h4 style="font-size: 1rem; font-weight: 800; margin: 0 0 0.5rem 0; color: #0f172a;">
+                <i class="fas fa-table text-indigo-600"></i> Standards-Based Evaluative Rubric
+              </h4>
+              <table class="worksheet-rubric-table">
+                <thead>
+                  <tr>
+                    <th>Score / Level</th>
+                    <th>Demonstrated Criteria</th>
+                    <th>Next Step Pedagogical Recommendation</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Level 4 (Exemplary)</strong></td>
+                    <td>100% computational accuracy; explains reasoning with multiple mathematical or textual representations.</td>
+                    <td>Provide extension challenges and peer-mentoring roles.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Level 3 (Proficient)</strong></td>
+                    <td>80–99% accuracy; demonstrates clear conceptual grasp with minor transcription errors.</td>
+                    <td>Ready for procedural spiral progression.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Level 2 (Developing)</strong></td>
+                    <td>60–79% accuracy; understands basic definitions but struggles with multi-step synthesis.</td>
+                    <td>Targeted small group practice with visual scaffolding.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Level 1 (Beginning)</strong></td>
+                    <td>&lt;60% accuracy; significant conceptual gaps or procedural confusion.</td>
+                    <td>Concrete manipulative intervention and one-on-one re-teaching.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        `;
+
+        outputContainer.style.display = 'block';
+        outputContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        showToast(`Generated printable worksheet for ${standardCode}!`);
+      });
+    }
   }
+
+  // --- WORKSHEET DATA GENERATOR (ALL GRADES & SUBJECTS) ---
+  function buildWorksheetData(grade, subject, code, title) {
+    const isMath = subject.includes('Math');
+    const isELA = subject.includes('Language') || subject.includes('Arts') || subject.includes('Reading');
+    const isSci = subject.includes('Science');
+    const isSoc = subject.includes('Social');
+
+    let conceptSummary = `Standard ${code} (${title}) establishes foundational proficiency in ${subject}. Learners decompose complex tasks, model relationships, and verify solutions systematically.`;
+    
+    let guidedModel = {
+      prompt: `Analyze the core standard scenario: apply ${code} to evaluate a two-step problem.`,
+      steps: [
+        `Identify the given data, unknown variable, and explicit criteria in the prompt.`,
+        `Select the appropriate strategy (e.g. visual model, algorithm, textual evidence).`,
+        `Execute the step-by-step procedure while self-monitoring for precision.`,
+        `Verify that the final answer is mathematically/conceptually sound and answer the core question.`
+      ]
+    };
+
+    let problems = [
+      {
+        prompt: `Solve the foundational application problem for ${code}: Determine the primary value or evidence supporting the relationship.`,
+        solution: `Correctly apply standard ${code} formula / textual evidence analysis.`,
+        rationale: `Directly adheres to ${code} standard benchmark guidelines.`
+      },
+      {
+        prompt: `Multi-step scenario: A problem requires decomposing two interconnected parts. Calculate or justify the combined outcome.`,
+        solution: `Step 1 yields initial value A; Step 2 yields final solution B.`,
+        rationale: `Reinforces procedural fluency and logical chaining.`
+      },
+      {
+        prompt: `Contextual application: An authentic real-world challenge requires interpreting given parameters under ${code}.`,
+        solution: `Model the authentic scenario and state the verified result with correct units / citations.`,
+        rationale: `Demonstrates transference of abstract skills into authentic contexts.`
+      },
+      {
+        prompt: `Error analysis & critical thinking: A student made an error in their work for ${code}. Identify the flaw and provide the corrected solution.`,
+        solution: `The misconception occurred in step 2; the corrected calculation gives the verified answer.`,
+        rationale: `Develops metacognitive evaluation and deep conceptual rigor.`
+      }
+    ];
+
+    let misconceptions = [
+      `Confusing procedural shortcuts with underlying conceptual meaning.`,
+      `Overlooking unit labels, contextual constraints, or precise textual qualifiers.`,
+      `Skipping intermediate scratchwork and self-checking verification steps.`
+    ];
+
+    if (isMath) {
+      conceptSummary = `In ${grade} Mathematics, standard ${code} requires students to model numbers, operations, and spatial/algebraic relationships with conceptual fluency and algorithmic precision.`;
+      guidedModel.prompt = `Model Problem: Solve and verify the relationship representing ${code}.`;
+      misconceptions = [
+        `Applying algorithms mechanically without checking if the numerical magnitude is reasonable.`,
+        `Misaligning place values, fractional denominators, or operational signs.`,
+        `Failing to use inverse operations to check the final answer.`
+      ];
+    } else if (isELA) {
+      conceptSummary = `In ${grade} Language Arts, standard ${code} emphasizes extracting direct textual evidence, identifying central themes, and analyzing author purpose and craft.`;
+      guidedModel.prompt = `Model Problem: Cite two pieces of evidence from the text to prove the central claim.`;
+      misconceptions = [
+        `Offering personal opinions rather than directly citing textual proof.`,
+        `Confusing the topic (subject) with the author's deeper theme / central idea.`,
+        `Ignoring contextual clues when decoding domain-specific vocabulary.`
+      ];
+    } else if (isSci) {
+      conceptSummary = `In ${grade} Science (NGSS), standard ${code} focuses on empirical observation, scientific modeling, hypothesis testing, and Claim-Evidence-Reasoning (CER) synthesis.`;
+      guidedModel.prompt = `Model Problem: Construct a scientific claim supported by empirical data from the investigation table.`;
+      misconceptions = [
+        `Stating a hypothesis as an established fact without experimental evidence.`,
+        `Confusing correlation with direct cause-and-effect mechanisms.`,
+        `Misreading independent vs. dependent variables in graphical data.`
+      ];
+    } else if (isSoc) {
+      conceptSummary = `In ${grade} Social Studies (C3), standard ${code} develops historical thinking, primary source analysis, geographical spatial awareness, and civic participation.`;
+      guidedModel.prompt = `Model Problem: Analyze the primary source document and determine the historical perspective of the author.`;
+      misconceptions = [
+        `Judging historical events solely through modern assumptions without considering historical context.`,
+        `Confusing primary firsthand accounts with secondary retrospective summaries.`,
+        `Overlooking geographic or economic factors influencing historical decisions.`
+      ];
+    }
+
+    return { grade, subject, code, title, conceptSummary, guidedModel, problems, misconceptions };
+  }
+
+  // --- PRINT WORKSHEET HELPER ---
+  window.printWorksheet = function(target) {
+    const studentPage = document.getElementById('worksheet-page-student');
+    const teacherPage = document.getElementById('worksheet-page-teacher');
+
+    if (target === 'student') {
+      if (teacherPage) teacherPage.style.display = 'none';
+      if (studentPage) studentPage.style.display = 'block';
+    } else if (target === 'teacher') {
+      if (studentPage) studentPage.style.display = 'none';
+      if (teacherPage) teacherPage.style.display = 'block';
+    } else {
+      if (studentPage) studentPage.style.display = 'block';
+      if (teacherPage) teacherPage.style.display = 'block';
+    }
+
+    window.print();
+
+    // Restore displays
+    setTimeout(() => {
+      if (studentPage) studentPage.style.display = 'block';
+      if (teacherPage) teacherPage.style.display = 'block';
+    }, 1000);
+  };
 
   function buildLessonPlanDetails(grade, subject, code, text, duration, model) {
     let objective = `Students will be able to demonstrate mastery of ${code} by analyzing core principles, constructing mathematical/conceptual representations, and completing formative exit items with 80%+ accuracy.`;
@@ -1690,6 +1961,186 @@
       });
     }
 
+    // Differentiated Intervention Clusters Generator
+    function renderInterventionClusters() {
+      const container = document.getElementById('intervention-clusters-container');
+      if (!container) return;
+
+      const roster = getRoster();
+      const clusterMap = {}; // key: standardCode or subjectKey -> { title, subject, grade, students: [] }
+
+      roster.forEach(st => {
+        let hasWeakStandard = false;
+        const stStandards = st.standards || {};
+        for (const [code, val] of Object.entries(stStandards)) {
+          const score = Number(val) || 0;
+          if (score < 70) {
+            hasWeakStandard = true;
+            if (!clusterMap[code]) {
+              let subj = 'Math';
+              const upper = code.toUpperCase();
+              if (upper.startsWith('RL') || upper.startsWith('RI') || upper.startsWith('RF') || upper.startsWith('W.') || upper.startsWith('L.') || upper.includes('ELA')) {
+                subj = 'Language Arts';
+              } else if (upper.includes('PS') || upper.includes('LS') || upper.includes('ESS') || upper.includes('SCI')) {
+                subj = 'Science';
+              } else if (upper.includes('SS') || upper.includes('SOC') || upper.includes('HIST')) {
+                subj = 'Social Studies';
+              }
+
+              let gKey = '5';
+              const rawG = (st.grade || '').toLowerCase();
+              if (rawG.includes('pre-k') || rawG.includes('prek')) gKey = 'pre-k';
+              else if (rawG.includes('k') || rawG.includes('kindergarten')) gKey = 'k';
+              else if (rawG.includes('hs') || rawG.includes('high')) gKey = 'hs';
+              else {
+                const m = rawG.match(/\d+/);
+                if (m) gKey = m[0];
+              }
+
+              clusterMap[code] = {
+                title: `Standard ${code}`,
+                standardCode: code,
+                subject: subj,
+                grade: gKey,
+                gradeLabel: st.grade || 'Grade 5',
+                students: []
+              };
+            }
+            clusterMap[code].students.push({ student: st, score: score });
+          }
+        }
+
+        // If no explicit standard was logged, check overall subject scores < 70
+        if (!hasWeakStandard) {
+          const subjects = [
+            { name: 'Math', score: st.math },
+            { name: 'Language Arts', score: st.ela },
+            { name: 'Science', score: st.science },
+            { name: 'Social Studies', score: st.social }
+          ];
+          subjects.forEach(sub => {
+            if (sub.score < 70) {
+              const clusterKey = `${sub.name}-Foundations`;
+              if (!clusterMap[clusterKey]) {
+                let gKey = '5';
+                const rawG = (st.grade || '').toLowerCase();
+                if (rawG.includes('pre-k') || rawG.includes('prek')) gKey = 'pre-k';
+                else if (rawG.includes('k') || rawG.includes('kindergarten')) gKey = 'k';
+                else if (rawG.includes('hs') || rawG.includes('high')) gKey = 'hs';
+                else {
+                  const m = rawG.match(/\d+/);
+                  if (m) gKey = m[0];
+                }
+
+                clusterMap[clusterKey] = {
+                  title: `${sub.name} Core Foundations`,
+                  standardCode: `${gKey}.CORE.1`,
+                  subject: sub.name,
+                  grade: gKey,
+                  gradeLabel: st.grade || 'Grade 5',
+                  students: []
+                };
+              }
+              clusterMap[clusterKey].students.push({ student: st, score: sub.score });
+            }
+          });
+        }
+      });
+
+      const clusterKeys = Object.keys(clusterMap);
+
+      if (clusterKeys.length === 0) {
+        container.innerHTML = `
+          <div style="background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 0.75rem; padding: 1.25rem; display: flex; align-items: center; gap: 1rem;">
+            <div style="width: 44px; height: 44px; border-radius: 50%; background: #10b981; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; flex-shrink: 0;">
+              <i class="fas fa-check-circle"></i>
+            </div>
+            <div>
+              <h4 style="margin: 0; font-size: 1rem; color: #065f46; font-weight: 800;">All Enrolled Students Are Currently On Track (≥70% Mastery)</h4>
+              <p style="margin: 0.25rem 0 0 0; font-size: 0.85rem; color: #047857;">
+                No priority intervention clusters detected. You can launch extension projects, peer mentorship pairings, or higher-level enrichment challenges!
+              </p>
+            </div>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = `
+        <div class="intervention-header" style="margin-bottom: 1rem; display: flex; justify-content: space-between; align-items: center;">
+          <div>
+            <h3 style="margin: 0; font-size: 1.15rem; font-weight: 800; color: #831843; display: flex; align-items: center; gap: 0.5rem;">
+              <i class="fas fa-layer-group text-pink-600"></i> Differentiated Intervention Clusters (${clusterKeys.length} Active Groups)
+            </h3>
+            <p style="margin: 0.25rem 0 0 0; font-size: 0.85rem; color: #9d174d;">
+              Students grouped automatically by shared benchmark targets requiring tier-2 small-group remediation.
+            </p>
+          </div>
+          <button type="button" class="builder-action-btn builder-btn-secondary" onclick="document.getElementById('intervention-clusters-container').style.display='none';" style="font-size: 0.75rem; padding: 0.35rem 0.75rem;">
+            <i class="fas fa-times"></i> Dismiss
+          </button>
+        </div>
+
+        <div class="clusters-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1rem;">
+          ${clusterKeys.map(k => {
+            const group = clusterMap[k];
+            return `
+              <div class="cluster-card" style="background: #ffffff; border: 1px solid #fbcfe8; border-radius: 0.75rem; padding: 1.25rem; box-shadow: 0 4px 12px rgba(236,72,153,0.08); border-top: 4px solid #ec4899;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.75rem;">
+                  <div>
+                    <span style="display: inline-block; font-size: 0.7rem; font-weight: 800; text-transform: uppercase; background: #fce7f3; color: #be185d; padding: 0.2rem 0.5rem; border-radius: 0.35rem; margin-bottom: 0.35rem;">
+                      ${escapeHtml(group.subject)} • ${escapeHtml(group.gradeLabel)}
+                    </span>
+                    <h4 style="margin: 0; font-size: 1.05rem; font-weight: 800; color: #0f172a;">${escapeHtml(group.title)}</h4>
+                  </div>
+                  <span style="font-size: 0.8rem; font-weight: 800; color: #e11d48; background: #ffe4e6; padding: 0.25rem 0.6rem; border-radius: 9999px;">
+                    ${group.students.length} ${group.students.length === 1 ? 'Student' : 'Students'}
+                  </span>
+                </div>
+
+                <div style="margin-bottom: 1rem;">
+                  <strong style="font-size: 0.75rem; text-transform: uppercase; color: #64748b; letter-spacing: 0.05em;">Target Cohort:</strong>
+                  <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.4rem;">
+                    ${group.students.map(item => `
+                      <span class="interactive-cell" onclick="window.viewStudentDossier('${item.student.id}')" style="display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.8rem; font-weight: 700; background: #fdf2f8; color: #9d174d; border: 1px solid #fbcfe8; padding: 0.25rem 0.5rem; border-radius: 0.35rem; cursor: pointer;" title="View ${escapeHtml(item.student.name)}'s Dossier">
+                        <i class="fas fa-user-circle"></i> ${escapeHtml(item.student.name)} (${item.score}%)
+                      </span>
+                    `).join('')}
+                  </div>
+                </div>
+
+                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                  <button type="button" class="builder-action-btn builder-btn-primary" onclick="window.planClusterLesson('${group.grade}', '${group.subject}', '${group.standardCode}')" style="font-size: 0.8rem; padding: 0.45rem 0.85rem; flex: 1; min-width: 140px;">
+                    <i class="fas fa-magic"></i> Plan Lesson Plan
+                  </button>
+                  <button type="button" class="builder-action-btn builder-btn-secondary" onclick="window.generateClusterWorksheet('${group.grade}', '${group.subject}', '${group.standardCode}')" style="font-size: 0.8rem; padding: 0.45rem 0.85rem; flex: 1; min-width: 140px; border-color: #6366f1; color: #4f46e5;">
+                    <i class="fas fa-print"></i> Printable Packet
+                  </button>
+                </div>
+              </div>
+            `;
+          }).join('')}
+        </div>
+      `;
+    }
+
+    // Wire Intervention Clusters Button
+    const clusterBtn = document.getElementById('btn-cluster-groups');
+    if (clusterBtn) {
+      clusterBtn.addEventListener('click', () => {
+        const container = document.getElementById('intervention-clusters-container');
+        if (container) {
+          if (container.style.display === 'none' || !container.style.display) {
+            renderInterventionClusters();
+            container.style.display = 'block';
+            container.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          } else {
+            container.style.display = 'none';
+          }
+        }
+      });
+    }
+
     // Export CSV
     if (exportCsvBtn) {
       exportCsvBtn.addEventListener('click', () => {
@@ -1753,9 +2204,122 @@
     });
   }
 
+  // Window helper for Cluster targeted lesson planning
+  window.planClusterLesson = function(grade, subject, standardCode) {
+    switchTab('tab-lesson-plan');
+
+    const gradeSelect = document.getElementById('lp-grade-select');
+    const subjectSelect = document.getElementById('lp-subject-select');
+    const standardSelect = document.getElementById('lp-standard-select');
+    const generateBtn = document.getElementById('btn-generate-lesson-plan');
+
+    if (gradeSelect) gradeSelect.value = grade;
+    if (subjectSelect) {
+      subjectSelect.value = subject;
+      subjectSelect.dispatchEvent(new Event('change'));
+    }
+
+    if (standardSelect && standardCode) {
+      let found = false;
+      for (let i = 0; i < standardSelect.options.length; i++) {
+        if (standardSelect.options[i].value === standardCode || standardSelect.options[i].value.includes(standardCode)) {
+          standardSelect.selectedIndex = i;
+          found = true;
+          break;
+        }
+      }
+      if (!found) {
+        const opt = document.createElement('option');
+        opt.value = standardCode;
+        opt.textContent = `${standardCode} - Priority Cluster Target`;
+        standardSelect.prepend(opt);
+        standardSelect.selectedIndex = 0;
+      }
+    }
+
+    if (generateBtn) {
+      setTimeout(() => {
+        generateBtn.click();
+        const sheet = document.getElementById('lesson-plan-sheet') || document.getElementById('lp-output-container');
+        if (sheet) sheet.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 150);
+    }
+  };
+
+  // Window helper for Cluster targeted worksheet generation
+  window.generateClusterWorksheet = function(grade, subject, standardCode) {
+    switchTab('tab-lesson-plan');
+
+    const gradeSelect = document.getElementById('lp-grade-select');
+    const subjectSelect = document.getElementById('lp-subject-select');
+    const standardSelect = document.getElementById('lp-standard-select');
+    const worksheetBtn = document.getElementById('btn-generate-worksheet');
+
+    if (gradeSelect) gradeSelect.value = grade;
+    if (subjectSelect) {
+      subjectSelect.value = subject;
+      subjectSelect.dispatchEvent(new Event('change'));
+    }
+
+    if (standardSelect && standardCode) {
+      let found = false;
+      for (let i = 0; i < standardSelect.options.length; i++) {
+        if (standardSelect.options[i].value === standardCode || standardSelect.options[i].value.includes(standardCode)) {
+          standardSelect.selectedIndex = i;
+          found = true;
+          break;
+        }
+      }
+      if (!found) {
+        const opt = document.createElement('option');
+        opt.value = standardCode;
+        opt.textContent = `${standardCode} - Priority Cluster Target`;
+        standardSelect.prepend(opt);
+        standardSelect.selectedIndex = 0;
+      }
+    }
+
+    if (worksheetBtn) {
+      setTimeout(() => {
+        worksheetBtn.click();
+        const sheet = document.getElementById('worksheet-packet') || document.getElementById('lp-output-container');
+        if (sheet) sheet.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 150);
+    }
+  };
+
+  // Selective Printable Worksheet Handler
+  window.printWorksheet = function(mode) {
+    const studentPage = document.getElementById('worksheet-page-student');
+    const teacherPage = document.getElementById('worksheet-page-teacher');
+
+    if (mode === 'student') {
+      if (studentPage) studentPage.style.display = 'block';
+      if (teacherPage) teacherPage.style.display = 'none';
+      window.print();
+      if (teacherPage) teacherPage.style.display = 'block';
+    } else if (mode === 'teacher') {
+      if (studentPage) studentPage.style.display = 'none';
+      if (teacherPage) teacherPage.style.display = 'block';
+      window.print();
+      if (studentPage) studentPage.style.display = 'block';
+    } else {
+      if (studentPage) studentPage.style.display = 'block';
+      if (teacherPage) teacherPage.style.display = 'block';
+      window.print();
+    }
+  };
+
   // Window exports
-  window.buildLessonPlanDetails = buildLessonPlanDetails;
+  window.buildLessonPlanDetails = typeof buildLessonPlanDetails !== 'undefined' ? buildLessonPlanDetails : null;
+  window.buildWorksheetData = buildWorksheetData;
   window.getClassRoster = getRoster;
+  window.renderInterventionClusters = function() {
+    const container = document.getElementById('intervention-clusters-container');
+    if (container) {
+      container.style.display = 'block';
+    }
+  };
   window.viewStudentDossier = function(studentId) {
     const roster = getRoster();
     const student = roster.find(s => String(s.id) === String(studentId)) ||

@@ -563,13 +563,11 @@ if (!function_exists('assetVersion')) {
                     </div>
                     
                     <div class="header-actions">
-                        <form action="/pages/search.php" method="GET" class="search-form" role="search">
-                            <label for="header-search" class="sr-only">Search the site</label>
-                            <input type="text" id="header-search" name="q" placeholder="Search..." class="search-input" />
-                            <button type="submit" aria-label="Search" style="background: none; border: none; padding: 0; cursor: pointer; color: inherit;">
-                                <i class="fas fa-search search-icon"></i>
-                            </button>
-                        </form>
+                        <button type="button" class="global-search-trigger-btn no-print" onclick="window.openCommandPalette()" aria-label="Quick Search (Ctrl+K)" title="Quick Search (Ctrl+K)">
+                            <i class="fas fa-search"></i>
+                            <span class="search-trigger-text">Search...</span>
+                            <kbd class="search-trigger-kbd">Ctrl K</kbd>
+                        </button>
 
                       
                         
@@ -861,3 +859,38 @@ if (!function_exists('assetVersion')) {
             });
         }
     </script>
+
+    <!-- Global Spotlight Search & Command Palette Modal (Ctrl+K) -->
+    <div id="global-command-palette" class="cmd-palette-overlay" role="dialog" aria-modal="true" aria-label="Command Palette">
+        <div class="cmd-palette-modal">
+            <div class="cmd-search-header">
+                <i class="fas fa-search cmd-search-icon"></i>
+                <input type="text" id="cmd-search-input" class="cmd-search-input" placeholder="Search lessons, standards, tools, books, or portals..." autocomplete="off" spellcheck="false">
+                <button type="button" id="cmd-close-btn" class="cmd-close-btn" aria-label="Close Command Palette">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="cmd-filters-bar">
+                <button type="button" class="cmd-filter-pill active" data-filter="all">All</button>
+                <button type="button" class="cmd-filter-pill" data-filter="curriculum">Curriculum</button>
+                <button type="button" class="cmd-filter-pill" data-filter="teacher">Teacher</button>
+                <button type="button" class="cmd-filter-pill" data-filter="parent">Parent</button>
+                <button type="button" class="cmd-filter-pill" data-filter="assessment">Assessment</button>
+                <button type="button" class="cmd-filter-pill" data-filter="library">Library</button>
+            </div>
+            <ul id="cmd-results-list" class="cmd-results-list" role="listbox">
+                <!-- Injected dynamically via JS -->
+            </ul>
+            <div class="cmd-footer">
+                <div class="cmd-shortcuts-guide">
+                    <span class="cmd-key-hint"><kbd>↑</kbd><kbd>↓</kbd> Navigate</span>
+                    <span class="cmd-key-hint"><kbd>↵</kbd> Select</span>
+                    <span class="cmd-key-hint"><kbd>ESC</kbd> Close</span>
+                </div>
+                <span>Hesten's Learning Quick-Launcher</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Command Palette Engine -->
+    <script src="<?= assetVersion('/assets/js/command-palette.js') ?>"></script>

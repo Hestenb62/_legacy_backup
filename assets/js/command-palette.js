@@ -1,565 +1,477 @@
 /**
- * Global Command Palette & Keyboard Launcher
- * File: assets/js/command-palette.js
- * Pure Vanilla JavaScript (Zero Dependencies)
+ * Global Command Palette & Spotlight Search Engine (assets/js/command-palette.js)
+ * High-performance instant fuzzy search across all levels, standards, tools, and portals.
  */
 
 (function () {
-    'use strict';
+  'use strict';
 
-    // Command Catalog
-    const COMMAND_ITEMS = [
-        // Navigation Destinations
-        {
-            id: 'nav-levels',
-            title: 'Curriculum Levels',
-            desc: 'Browse Kindergarten through 6th grade skill maps',
-            icon: 'fa-layer-group',
-            iconColor: 'icon-purple',
-            category: 'nav',
-            badge: 'Navigation',
-            url: '/index.php#levels',
-            keywords: ['curriculum', 'grade', 'kindergarten', 'elementary', 'skills', 'maps']
-        },
-        {
-            id: 'nav-runner',
-            title: 'Universal Lesson Runner',
-            desc: 'Interactive lesson player with step-by-step guidance',
-            icon: 'fa-play',
-            iconColor: 'icon-blue',
-            category: 'nav',
-            badge: 'Launcher',
-            url: '/lessons/k-math-m1-a-1.php',
-            keywords: ['lesson', 'runner', 'player', 'practice', 'start', 'interactive']
-        },
-        {
-            id: 'nav-assessment',
-            title: 'Assessments & Diagnostic Quizzes',
-            desc: 'Subject testing, fluency sprints, and printable sheets',
-            icon: 'fa-clipboard-check',
-            iconColor: 'icon-teal',
-            category: 'nav',
-            badge: 'Testing',
-            url: '/assessment/',
-            keywords: ['assessment', 'test', 'quiz', 'sprint', 'fluency', 'diagnostic', 'worksheet']
-        },
-        {
-            id: 'nav-teachers',
-            title: 'Teacher Suite & 36-Week Pacing',
-            desc: 'Standards alignment, lesson plans, and classroom pacing',
-            icon: 'fa-chalkboard-teacher',
-            iconColor: 'icon-amber',
-            category: 'nav',
-            badge: 'Educator',
-            url: '/pages/teachers.php',
-            keywords: ['teacher', 'educator', 'pacing', 'standards', 'lesson plan', 'curriculum']
-        },
-        {
-            id: 'nav-parents',
-            title: 'Parents Resource Hub',
-            desc: 'Home practice guides, IEP support, and progress trackers',
-            icon: 'fa-heart',
-            iconColor: 'icon-rose',
-            category: 'nav',
-            badge: 'Family',
-            url: '/pages/parents.php',
-            keywords: ['parents', 'family', 'home', 'iep', 'support', 'guide']
-        },
-        {
-            id: 'nav-library',
-            title: 'Digital Story Library',
-            desc: 'Accessible story reader with multi-level books and audio',
-            icon: 'fa-book-reader',
-            iconColor: 'icon-emerald',
-            category: 'nav',
-            badge: 'Reading',
-            url: '/library/',
-            keywords: ['library', 'books', 'stories', 'reading', 'read', 'literature']
-        },
-        {
-            id: 'nav-student',
-            title: 'Student Hub & Daily Quests',
-            desc: 'View daily challenges, streak counter, and earned XP',
-            icon: 'fa-user-graduate',
-            iconColor: 'icon-blue',
-            category: 'nav',
-            badge: 'Dashboard',
-            url: '/student/',
-            keywords: ['student', 'quests', 'xp', 'streak', 'rewards', 'dashboard']
-        },
-        {
-            id: 'nav-games',
-            title: 'Accessible Games Zone',
-            desc: 'Phonics bingo, math sprint, memory match, and sound games',
-            icon: 'fa-gamepad',
-            iconColor: 'icon-purple',
-            category: 'nav',
-            badge: 'Games',
-            url: '/pages/games.php',
-            keywords: ['games', 'play', 'arcade', 'bingo', 'math race', 'fun', 'activities']
-        },
-        {
-            id: 'nav-search',
-            title: 'Full-Site Search Engine',
-            desc: 'Search all levels, books, guides, and lessons instantaneously',
-            icon: 'fa-search',
-            iconColor: 'icon-teal',
-            category: 'nav',
-            badge: 'Search',
-            url: '/pages/search.php',
-            keywords: ['search', 'find', 'lookup', 'index', 'explore']
-        },
-        {
-            id: 'nav-standards',
-            title: 'Academic Standards Directory',
-            desc: 'CCSS, TEKS, and national curriculum benchmarks',
-            icon: 'fa-award',
-            iconColor: 'icon-amber',
-            category: 'nav',
-            badge: 'Standards',
-            url: '/pages/standards.php',
-            keywords: ['standards', 'ccss', 'teks', 'common core', 'benchmarks']
-        },
-        {
-            id: 'nav-about',
-            title: 'About the Creator',
-            desc: 'Hesten\'s background, educational mission, and classroom roots',
-            icon: 'fa-address-card',
-            iconColor: 'icon-rose',
-            category: 'nav',
-            badge: 'About',
-            url: '/pages/about-me.php',
-            keywords: ['about', 'hesten', 'creator', 'bio', 'story', 'mission']
-        },
-        {
-            id: 'nav-updates',
-            title: 'Platform Updates & Planning Docs',
-            desc: 'Engineering changelogs, implementation plans, and release walkthroughs',
-            icon: 'fa-code-branch',
-            iconColor: 'icon-indigo',
-            category: 'nav',
-            badge: 'Docs',
-            url: '/updates.php',
-            keywords: ['updates', 'plans', 'walkthroughs', 'changelog', 'roadmap', 'release', 'notes', 'docs']
-        },
-        {
-            id: 'nav-profile',
-            title: 'Official Report Card & Mastery',
-            desc: 'Review mastery velocity, grades, and completed lessons',
-            icon: 'fa-chart-line',
-            iconColor: 'icon-emerald',
-            category: 'nav',
-            badge: 'Profile',
-            url: '/pages/profile.php',
-            keywords: ['profile', 'report card', 'mastery', 'grades', 'progress', 'stats']
-        },
-        {
-            id: 'nav-accessibility',
-            title: 'Accessibility & Accommodations Hub',
-            desc: 'Comprehensive guide and interactive sandbox for all platform accommodations',
-            icon: 'fa-universal-access',
-            iconColor: 'icon-purple',
-            category: 'nav',
-            badge: 'A11y',
-            url: '/pages/accessibility.php',
-            keywords: ['accessibility', 'a11y', 'hub', 'dyslexia', 'accommodations', 'contrast', 'reading mask', 'bionic', 'adhd', 'screen reader']
-        },
+  // Comprehensive Indexed Search Database
+  const SEARCH_DATABASE = [
+    // --- PORTALS & HUBS ---
+    {
+      title: "Teacher & Homeschool Suite",
+      desc: "Assignment builder, 36-week pacing guide, lesson customizer & class roster.",
+      category: "Teacher",
+      icon: "fa-chalkboard-teacher",
+      iconClass: "teacher-icon",
+      url: "/pages/teachers.php",
+      tags: ["teacher", "educator", "classroom", "roster", "lesson plan", "pacing"]
+    },
+    {
+      title: "Classroom Roster & Diagnostic Dossier",
+      desc: "Upload report cards, evaluate mastery, and track student interventions.",
+      category: "Teacher",
+      icon: "fa-users",
+      iconClass: "teacher-icon",
+      url: "/pages/teachers.php#roster",
+      tags: ["roster", "students", "report card", "dossier", "intervention", "json"]
+    },
+    {
+      title: "36-Week Curriculum Pacing Guide",
+      desc: "Comprehensive standards-aligned spiral curriculum for 36 academic weeks.",
+      category: "Teacher",
+      icon: "fa-calendar-check",
+      iconClass: "teacher-icon",
+      url: "/pages/teachers.php#pacing",
+      tags: ["pacing", "curriculum", "syllabus", "weeks", "quarter", "schedule"]
+    },
+    {
+      title: "Lesson Plan & Quiz Customizer",
+      desc: "Generate 5-stage lesson plans (CRA/Inquiry) and printable worksheets.",
+      category: "Teacher",
+      icon: "fa-file-alt",
+      iconClass: "teacher-icon",
+      url: "/pages/teachers.php#lesson-plan",
+      tags: ["lesson", "customizer", "quiz", "worksheet", "cra", "inquiry"]
+    },
+    {
+      title: "Parents Hub & Resource Center",
+      desc: "Homeschool routines, IEP accommodations, state laws, and certificates.",
+      category: "Parent",
+      icon: "fa-heart",
+      iconClass: "parent-icon",
+      url: "/pages/parents.php",
+      tags: ["parents", "homeschool", "routine", "iep", "accommodations", "laws"]
+    },
+    {
+      title: "Visual Home Routine & Daily Schedule",
+      desc: "Interactive schedule planner and printable refrigerator routines.",
+      category: "Parent",
+      icon: "fa-clock",
+      iconClass: "parent-icon",
+      url: "/pages/parents.php#schedule",
+      tags: ["schedule", "routine", "daily", "planner", "printable", "time"]
+    },
+    {
+      title: "IEP & Neurodiversity Accommodations",
+      desc: "Sensory retreat, dyslexia overlays, untimed modes, and bimodal TTS.",
+      category: "Parent",
+      icon: "fa-universal-access",
+      iconClass: "parent-icon",
+      url: "/pages/parents.php#accommodations",
+      tags: ["iep", "accommodations", "dyslexia", "adhd", "sensory", "tts", "bionic"]
+    },
+    {
+      title: "Interactive State Homeschool Laws Map",
+      desc: "State-by-state legal requirements, HSLDA guidelines, and compliance rules.",
+      category: "Parent",
+      icon: "fa-map-marked-alt",
+      iconClass: "parent-icon",
+      url: "/pages/parents.php#laws",
+      tags: ["laws", "state", "hslda", "legal", "compliance", "regulations"]
+    },
+    {
+      title: "Milestone Mastery Certificate Generator",
+      desc: "Create and print official heraldic achievement certificates.",
+      category: "Parent",
+      icon: "fa-award",
+      iconClass: "parent-icon",
+      url: "/pages/parents.php#milestones",
+      tags: ["certificate", "milestone", "award", "achievement", "honors", "print"]
+    },
+    {
+      title: "Standards Explorer (CCSS & NGSS)",
+      desc: "Granular standard domain browser with concise grade codes.",
+      category: "Standards",
+      icon: "fa-book",
+      iconClass: "math-icon",
+      url: "/pages/standards.php",
+      tags: ["standards", "ccss", "ngss", "common core", "domains", "k.cc", "5.nf"]
+    },
 
-        // Platform Actions
-        {
-            id: 'action-theme',
-            title: 'Toggle Light / Dark Theme',
-            desc: 'Switch between crisp daytime and eye-friendly dark mode',
-            icon: 'fa-moon',
-            iconColor: 'icon-purple',
-            category: 'actions',
-            badge: 'Theme',
-            action: function () {
-                if (typeof window.toggleTheme === 'function') {
-                    window.toggleTheme();
-                } else {
-                    const html = document.documentElement;
-                    const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-                    html.setAttribute('data-theme', next);
-                    try { localStorage.setItem('theme', next); } catch (e) {}
-                }
-            },
-            keywords: ['theme', 'dark', 'light', 'mode', 'contrast', 'color']
-        },
-        {
-            id: 'action-timer',
-            title: 'Open Focus Timer & Stopwatch',
-            desc: 'Track study sessions with the floating countdown tool',
-            icon: 'fa-stopwatch',
-            iconColor: 'icon-rose',
-            category: 'actions',
-            badge: 'Utility',
-            action: function () {
-                const btn = document.getElementById('timer-toggle');
-                if (btn) btn.click();
-            },
-            keywords: ['timer', 'stopwatch', 'clock', 'sprint', 'pomodoro']
-        },
-        {
-            id: 'action-scratchpad',
-            title: 'Open Scratchpad & Notepad',
-            desc: 'Sketch math problems or jot down quick ideas on screen',
-            icon: 'fa-pen',
-            iconColor: 'icon-emerald',
-            category: 'actions',
-            badge: 'Utility',
-            action: function () {
-                const btn = document.getElementById('scratchpad-toggle');
-                if (btn) btn.click();
-            },
-            keywords: ['scratchpad', 'notes', 'draw', 'sketch', 'notepad']
-        },
-        {
-            id: 'action-citation',
-            title: 'Generate Academic Citation',
-            desc: 'APA, MLA, and Chicago reference generator for this page',
-            icon: 'fa-quote-right',
-            iconColor: 'icon-blue',
-            category: 'actions',
-            badge: 'Cite',
-            action: function () {
-                const btn = document.getElementById('citation-toggle');
-                if (btn) btn.click();
-            },
-            keywords: ['citation', 'cite', 'apa', 'mla', 'bib', 'reference']
-        },
-        {
-            id: 'action-print',
-            title: 'Print Current Page',
-            desc: 'Clean, printable layout optimized for worksheets and notes',
-            icon: 'fa-print',
-            iconColor: 'icon-amber',
-            category: 'actions',
-            badge: 'Print',
-            action: function () {
-                window.print();
-            },
-            keywords: ['print', 'pdf', 'paper', 'export', 'hardcopy']
-        },
+    // --- INTERACTIVE TOOLS & APPS ---
+    {
+      title: "Adaptive Diagnostic Assessment",
+      desc: "Multi-subject skill placement with real-time adaptive questioning.",
+      category: "Assessment",
+      icon: "fa-brain",
+      iconClass: "tool-icon",
+      url: "/assessment/diagnostic.php",
+      tags: ["assessment", "diagnostic", "adaptive", "quiz", "test", "placement"]
+    },
+    {
+      title: "Math Sprints & Fluency Checkpoint",
+      desc: "Timed or untimed arithmetic sprints with instant answer feedback.",
+      category: "Assessment",
+      icon: "fa-bolt",
+      iconClass: "tool-icon",
+      url: "/assessment/index.php#elem",
+      tags: ["sprint", "speed", "fluency", "math", "drills", "timed"]
+    },
+    {
+      title: "Interactive Science & STEM Labs",
+      desc: "Virtual lab simulations, chemical reactions, and physics experiments.",
+      category: "Labs",
+      icon: "fa-flask",
+      iconClass: "sci-icon",
+      url: "/student/interactive-labs.php",
+      tags: ["science", "lab", "stem", "simulation", "chemistry", "physics"]
+    },
+    {
+      title: "Library Classic Readers",
+      desc: "Full-text classics with dyslexia font, audio read-aloud, and dictionary.",
+      category: "Library",
+      icon: "fa-book-reader",
+      iconClass: "ela-icon",
+      url: "/library/index.php",
+      tags: ["library", "books", "classics", "reading", "literature", "stories"]
+    },
+    {
+      title: "Updates Portal & System Changelogs",
+      desc: "Live platform documentation, implementation plans, and release logs.",
+      category: "System",
+      icon: "fa-rss",
+      iconClass: "tool-icon",
+      url: "/updates.php",
+      tags: ["updates", "changelog", "news", "release", "docs", "plans"]
+    },
 
-        // Accessibility Controls
-        {
-            id: 'a11y-dyslexia',
-            title: 'Toggle Dyslexia-Friendly Font',
-            desc: 'Enable OpenDyslexic weighted typeface across the whole site',
-            icon: 'fa-font',
-            iconColor: 'icon-blue',
-            category: 'a11y',
-            badge: 'A11y',
-            action: function () {
-                if (typeof window.toggleDyslexiaFont === 'function') {
-                    window.toggleDyslexiaFont();
-                } else {
-                    document.body.classList.toggle('dyslexia-font');
-                }
-            },
-            keywords: ['dyslexia', 'font', 'opendyslexic', 'typography', 'accessibility', 'a11y']
-        },
-        {
-            id: 'a11y-reading-mask',
-            title: 'Toggle Reading Focus Mask',
-            desc: 'Dim surrounding content with a customizable horizontal window',
-            icon: 'fa-eye',
-            iconColor: 'icon-teal',
-            category: 'a11y',
-            badge: 'A11y',
-            action: function () {
-                if (typeof window.toggleReadingMask === 'function') {
-                    window.toggleReadingMask();
-                } else {
-                    const mask = document.getElementById('reading-mask');
-                    if (mask) mask.classList.toggle('active');
-                }
-            },
-            keywords: ['reading mask', 'focus', 'adhd', 'ruler', 'guide', 'tracking']
-        },
-        {
-            id: 'a11y-panel',
-            title: 'Open Accessibility Settings Panel',
-            desc: 'Adjust line spacing, contrast, cursor size, and motion',
-            icon: 'fa-universal-access',
-            iconColor: 'icon-purple',
-            category: 'a11y',
-            badge: 'A11y',
-            action: function () {
-                const btn = document.getElementById('a11y-toggle-button');
-                if (btn) btn.click();
-            },
-            keywords: ['accessibility', 'contrast', 'text size', 'cursor', 'reduce motion']
-        }
-    ];
-
-    let overlay = null;
-    let searchInput = null;
-    let resultsContainer = null;
-    let activeCategory = 'all';
-    let filteredItems = [];
-    let selectedIndex = 0;
-    let lastActiveElement = null;
-
-    function init() {
-        overlay = document.getElementById('cmd-palette-overlay');
-        if (!overlay) return;
-
-        searchInput = document.getElementById('cmd-search-input');
-        resultsContainer = document.getElementById('cmd-palette-results');
-        const closeBtn = document.getElementById('cmd-close-btn');
-        const backdrop = document.getElementById('cmd-palette-backdrop');
-        const tabBtns = overlay.querySelectorAll('.cmd-tab-btn');
-
-        // Close handlers
-        if (closeBtn) closeBtn.addEventListener('click', closePalette);
-        if (backdrop) backdrop.addEventListener('click', closePalette);
-
-        // Tab selection
-        tabBtns.forEach(function (btn) {
-            btn.addEventListener('click', function () {
-                tabBtns.forEach(b => {
-                    b.classList.remove('active');
-                    b.setAttribute('aria-selected', 'false');
-                });
-                btn.classList.add('active');
-                btn.setAttribute('aria-selected', 'true');
-                activeCategory = btn.getAttribute('data-category') || 'all';
-                renderResults();
-            });
-        });
-
-        // Search typing
-        if (searchInput) {
-            searchInput.addEventListener('input', function () {
-                renderResults();
-            });
-
-            // Keyboard navigation inside search input
-            searchInput.addEventListener('keydown', handleKeyNavigation);
-        }
-
-        // Global hotkeys (Ctrl+K, Cmd+K, ?)
-        document.addEventListener('keydown', function (e) {
-            // Check for Ctrl+K or Cmd+K
-            if ((e.ctrlKey || e.metaKey) && (e.key === 'k' || e.key === 'K')) {
-                e.preventDefault();
-                togglePalette();
-                return;
-            }
-
-            // Check for '?' when not typing in an editable field
-            if (e.key === '?' && !isEditingText(e.target)) {
-                e.preventDefault();
-                openPalette();
-                return;
-            }
-
-            // ESC to close when palette is open
-            if (e.key === 'Escape' && overlay.style.display !== 'none') {
-                e.preventDefault();
-                closePalette();
-            }
-        });
-
-        // Expose global methods
-        window.openCommandPalette = openPalette;
-        window.closeCommandPalette = closePalette;
-        window.toggleCommandPalette = togglePalette;
+    // --- CURRICULUM LEVELS (PRE-K to HIGH SCHOOL) ---
+    {
+      title: "Pre-K Early Foundations (Level A)",
+      desc: "Counting objects up to 10, letter shapes, sensory exploration & community.",
+      category: "Curriculum",
+      icon: "fa-shapes",
+      iconClass: "math-icon",
+      url: "/src/lesson_runner.php?subject=math&level=1",
+      tags: ["pre-k", "prek", "early", "level a", "counting", "shapes", "alphabet"]
+    },
+    {
+      title: "Kindergarten Core (Level B)",
+      desc: "Numbers to 100, basic addition/subtraction, phonics, and living things.",
+      category: "Curriculum",
+      icon: "fa-child",
+      iconClass: "math-icon",
+      url: "/src/lesson_runner.php?subject=math&level=2",
+      tags: ["kindergarten", "level b", "k.cc", "k.oa", "phonics", "sight words"]
+    },
+    {
+      title: "Grade 1 Foundations (Level C)",
+      desc: "Addition within 20, place value tens and ones, reading comprehension.",
+      category: "Curriculum",
+      icon: "fa-cube",
+      iconClass: "math-icon",
+      url: "/src/lesson_runner.php?subject=math&level=3",
+      tags: ["1st grade", "grade 1", "level c", "1.oa", "1.nbt", "phonics"]
+    },
+    {
+      title: "Grade 2 Math & ELA (Level D)",
+      desc: "Multi-digit addition, measurement, arrays, and informational texts.",
+      category: "Curriculum",
+      icon: "fa-layer-group",
+      iconClass: "math-icon",
+      url: "/src/lesson_runner.php?subject=math&level=4",
+      tags: ["2nd grade", "grade 2", "level d", "2.oa", "2.nbt", "2.md"]
+    },
+    {
+      title: "Grade 3 Multiplication & Fractions (Level E)",
+      desc: "Times tables, fractional parts, area models, and story themes.",
+      category: "Curriculum",
+      icon: "fa-th-large",
+      iconClass: "math-icon",
+      url: "/src/lesson_runner.php?subject=math&level=5",
+      tags: ["3rd grade", "grade 3", "level e", "3.oa", "3.nf", "multiplication"]
+    },
+    {
+      title: "Grade 4 Multi-Digit & Decimals (Level F)",
+      desc: "Multi-digit multiplication/division, equivalent fractions, earth systems.",
+      category: "Curriculum",
+      icon: "fa-superscript",
+      iconClass: "math-icon",
+      url: "/src/lesson_runner.php?subject=math&level=6",
+      tags: ["4th grade", "grade 4", "level f", "4.nbt", "4.nf", "decimals"]
+    },
+    {
+      title: "Grade 5 Fractions & Decimal Operations (Level G)",
+      desc: "Fraction arithmetic, volume geometry, coordinate plane, and historical documents.",
+      category: "Curriculum",
+      icon: "fa-cubes",
+      iconClass: "math-icon",
+      url: "/src/lesson_runner.php?subject=math&level=7",
+      tags: ["5th grade", "grade 5", "level g", "5.nf", "5.md", "volume", "fractions"]
+    },
+    {
+      title: "Grade 6 Ratios & Expressions (Level H)",
+      desc: "Ratio reasoning, algebraic expressions, surface area, and cell biology.",
+      category: "Curriculum",
+      icon: "fa-percentage",
+      iconClass: "math-icon",
+      url: "/src/lesson_runner.php?subject=math&level=8",
+      tags: ["6th grade", "grade 6", "level h", "6.rp", "6.ee", "ratios", "middle school"]
+    },
+    {
+      title: "Grade 7 Proportions & Integers (Level I)",
+      desc: "Signed numbers, proportional equations, linear geometry, and chemistry models.",
+      category: "Curriculum",
+      icon: "fa-chart-line",
+      iconClass: "math-icon",
+      url: "/src/lesson_runner.php?subject=math&level=9",
+      tags: ["7th grade", "grade 7", "level i", "7.rp", "7.ns", "7.ee", "integers"]
+    },
+    {
+      title: "Grade 8 Pre-Algebra & Functions (Level J)",
+      desc: "Linear functions, Pythagorean theorem, scientific notation, and genetics.",
+      category: "Curriculum",
+      icon: "fa-square-root-alt",
+      iconClass: "math-icon",
+      url: "/src/lesson_runner.php?subject=math&level=10",
+      tags: ["8th grade", "grade 8", "level j", "8.ee", "8.f", "functions", "pythagorean"]
+    },
+    {
+      title: "High School Algebra 1 & Biology (Level K)",
+      desc: "Quadratic equations, exponential models, cellular energy, and U.S. governance.",
+      category: "Curriculum",
+      icon: "fa-graduation-cap",
+      iconClass: "math-icon",
+      url: "/levels/high-school-stem.php",
+      tags: ["high school", "algebra 1", "level k", "hs", "quadratics", "biology", "ap"]
     }
+  ];
 
-    function isEditingText(element) {
-        if (!element) return false;
-        const tag = element.tagName.toLowerCase();
-        if (tag === 'input' || tag === 'textarea' || tag === 'select') return true;
-        if (element.isContentEditable) return true;
-        return false;
-    }
+  let activeIndex = -1;
+  let currentResults = [];
+
+  function initCommandPalette() {
+    const overlay = document.getElementById('global-command-palette');
+    const input = document.getElementById('cmd-search-input');
+    const resultsContainer = document.getElementById('cmd-results-list');
+    const closeBtn = document.getElementById('cmd-close-btn');
+    const filterPills = document.querySelectorAll('.cmd-filter-pill');
+
+    if (!overlay || !input || !resultsContainer) return;
+
+    // Filter by tag or all
+    let currentFilter = 'all';
 
     function openPalette() {
-        if (!overlay) return;
-        lastActiveElement = document.activeElement;
-        overlay.style.display = 'flex';
-        if (searchInput) {
-            searchInput.value = '';
-            searchInput.focus();
-        }
-        selectedIndex = 0;
-        renderResults();
+      overlay.classList.add('active');
+      overlay.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+      input.value = '';
+      currentFilter = 'all';
+      filterPills.forEach(p => p.classList.toggle('active', p.getAttribute('data-filter') === 'all'));
+      renderResults(SEARCH_DATABASE);
+      setTimeout(() => input.focus(), 50);
     }
 
     function closePalette() {
-        if (!overlay) return;
-        overlay.style.display = 'none';
-        if (lastActiveElement && typeof lastActiveElement.focus === 'function') {
-            lastActiveElement.focus();
-        }
+      overlay.classList.remove('active');
+      overlay.style.display = 'none';
+      document.body.style.overflow = '';
+      activeIndex = -1;
     }
 
-    function togglePalette() {
-        if (overlay && overlay.style.display !== 'none') {
-            closePalette();
-        } else {
-            openPalette();
-        }
-    }
+    function renderResults(list) {
+      currentResults = list;
+      activeIndex = list.length > 0 ? 0 : -1;
+      resultsContainer.innerHTML = '';
 
-    function renderResults() {
-        if (!resultsContainer) return;
+      if (list.length === 0) {
+        resultsContainer.innerHTML = `
+          <div class="cmd-empty-state">
+            <i class="fas fa-search cmd-empty-icon"></i>
+            <div class="cmd-empty-title">No matching resources found</div>
+            <div class="cmd-empty-desc">Try searching for standard codes like "5.NF", grades, or topics like "fractions".</div>
+          </div>
+        `;
+        return;
+      }
 
-        const query = (searchInput ? searchInput.value : '').toLowerCase().trim();
+      // Group items by category
+      const groups = {};
+      list.forEach((item, idx) => {
+        if (!groups[item.category]) groups[item.category] = [];
+        groups[item.category].push({ ...item, originalIdx: idx });
+      });
 
-        // Filter items
-        filteredItems = COMMAND_ITEMS.filter(function (item) {
-            // Category match
-            if (activeCategory !== 'all') {
-                if (activeCategory === 'a11y' && item.category !== 'a11y') return false;
-                if (activeCategory === 'actions' && item.category !== 'actions') return false;
-                if (activeCategory === 'nav' && item.category !== 'nav') return false;
-            }
+      let renderIdx = 0;
+      for (const [catName, items] of Object.entries(groups)) {
+        const groupHeader = document.createElement('li');
+        groupHeader.className = 'cmd-group-label';
+        groupHeader.textContent = catName;
+        resultsContainer.appendChild(groupHeader);
 
-            // Query match
-            if (!query) return true;
-            if (item.title.toLowerCase().includes(query)) return true;
-            if (item.desc.toLowerCase().includes(query)) return true;
-            if (item.keywords && item.keywords.some(k => k.toLowerCase().includes(query))) return true;
+        items.forEach(item => {
+          const li = document.createElement('li');
+          const isSelected = renderIdx === activeIndex;
+          li.className = `cmd-result-item ${isSelected ? 'selected' : ''}`;
+          li.setAttribute('data-index', renderIdx);
+          li.setAttribute('role', 'option');
+          li.setAttribute('aria-selected', isSelected ? 'true' : 'false');
 
-            return false;
+          li.innerHTML = `
+            <div class="cmd-result-icon ${item.iconClass || 'tool-icon'}">
+              <i class="fas ${item.icon}"></i>
+            </div>
+            <div class="cmd-result-content">
+              <div class="cmd-result-title">
+                <span>${escapeHtml(item.title)}</span>
+                <span class="cmd-result-badge">${escapeHtml(item.category)}</span>
+              </div>
+              <div class="cmd-result-desc">${escapeHtml(item.desc)}</div>
+            </div>
+            <span class="cmd-result-enter-hint"><i class="fas fa-level-down-alt fa-rotate-90"></i> Go</span>
+          `;
+
+          li.addEventListener('click', () => {
+            navigateTo(item.url);
+          });
+
+          li.addEventListener('mouseenter', () => {
+            updateSelection(parseInt(li.getAttribute('data-index'), 10));
+          });
+
+          resultsContainer.appendChild(li);
+          renderIdx++;
         });
+      }
+    }
 
-        // Ensure selected index is valid
-        if (selectedIndex >= filteredItems.length) {
-            selectedIndex = Math.max(0, filteredItems.length - 1);
+    function updateSelection(newIdx) {
+      const items = resultsContainer.querySelectorAll('.cmd-result-item');
+      if (items.length === 0) return;
+
+      if (newIdx < 0) newIdx = items.length - 1;
+      if (newIdx >= items.length) newIdx = 0;
+
+      activeIndex = newIdx;
+      items.forEach((it, idx) => {
+        const isSel = idx === activeIndex;
+        it.classList.toggle('selected', isSel);
+        it.setAttribute('aria-selected', isSel ? 'true' : 'false');
+        if (isSel) {
+          it.scrollIntoView({ block: 'nearest' });
         }
+      });
+    }
 
-        // Render empty state or items
-        if (filteredItems.length === 0) {
-            resultsContainer.innerHTML = `
-                <div class="cmd-empty-state">
-                    <i class="fas fa-search-minus"></i>
-                    <p style="font-weight: 700; margin-bottom: 0.25rem;">No commands or destinations found</p>
-                    <p style="font-size: 0.8125rem;">Try searching for "levels", "theme", "games", or "a11y"</p>
-                </div>
-            `;
-            return;
-        }
+    function navigateTo(url) {
+      closePalette();
+      window.location.href = url;
+    }
 
-        // Group by category if viewing 'all'
-        let html = '';
-        filteredItems.forEach(function (item, index) {
-            const isSelected = index === selectedIndex;
-            html += `
-                <div class="cmd-item ${isSelected ? 'is-selected' : ''}" 
-                     data-index="${index}" 
-                     role="option" 
-                     aria-selected="${isSelected}">
-                    <div class="cmd-item-left">
-                        <div class="cmd-item-icon ${item.iconColor}">
-                            <i class="fas ${item.icon}" aria-hidden="true"></i>
-                        </div>
-                        <div class="cmd-item-text">
-                            <span class="cmd-item-title">${escapeHtml(item.title)}</span>
-                            <span class="cmd-item-desc">${escapeHtml(item.desc)}</span>
-                        </div>
-                    </div>
-                    <span class="cmd-item-badge">${escapeHtml(item.badge)}</span>
-                </div>
-            `;
+    function performSearch() {
+      const query = input.value.trim().toLowerCase();
+      let filtered = SEARCH_DATABASE;
+
+      if (currentFilter !== 'all') {
+        filtered = filtered.filter(item => {
+          const cat = item.category.toLowerCase();
+          return cat === currentFilter || item.tags.some(t => t.includes(currentFilter));
         });
+      }
 
-        resultsContainer.innerHTML = html;
+      if (query.length > 0) {
+        filtered = filtered.filter(item => {
+          const title = item.title.toLowerCase();
+          const desc = item.desc.toLowerCase();
+          const cat = item.category.toLowerCase();
+          const tags = item.tags.join(' ').toLowerCase();
 
-        // Wire click and hover events on rendered items
-        const itemEls = resultsContainer.querySelectorAll('.cmd-item');
-        itemEls.forEach(function (el) {
-            el.addEventListener('click', function () {
-                const idx = parseInt(el.getAttribute('data-index'), 10);
-                executeItem(filteredItems[idx]);
-            });
-
-            el.addEventListener('mouseenter', function () {
-                const idx = parseInt(el.getAttribute('data-index'), 10);
-                selectedIndex = idx;
-                updateSelectionUI();
-            });
+          return title.includes(query) || desc.includes(query) || cat.includes(query) || tags.includes(query);
         });
+      }
 
-        scrollSelectedIntoView();
+      renderResults(filtered);
     }
 
-    function updateSelectionUI() {
-        if (!resultsContainer) return;
-        const itemEls = resultsContainer.querySelectorAll('.cmd-item');
-        itemEls.forEach(function (el, idx) {
-            if (idx === selectedIndex) {
-                el.classList.add('is-selected');
-                el.setAttribute('aria-selected', 'true');
-            } else {
-                el.classList.remove('is-selected');
-                el.setAttribute('aria-selected', 'false');
-            }
-        });
-    }
+    // Input Search Listener
+    input.addEventListener('input', performSearch);
 
-    function scrollSelectedIntoView() {
-        if (!resultsContainer) return;
-        const selectedEl = resultsContainer.querySelector('.cmd-item.is-selected');
-        if (selectedEl) {
-            selectedEl.scrollIntoView({ block: 'nearest' });
+    // Filter Pills Click Listeners
+    filterPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        filterPills.forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        currentFilter = pill.getAttribute('data-filter') || 'all';
+        performSearch();
+      });
+    });
+
+    // Keyboard Shortcuts Navigation
+    input.addEventListener('keydown', (e) => {
+      const items = resultsContainer.querySelectorAll('.cmd-result-item');
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        updateSelection(activeIndex + 1);
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        updateSelection(activeIndex - 1);
+      } else if (e.key === 'Enter') {
+        e.preventDefault();
+        if (currentResults[activeIndex]) {
+          navigateTo(currentResults[activeIndex].url);
         }
-    }
-
-    function handleKeyNavigation(e) {
-        if (filteredItems.length === 0) return;
-
-        if (e.key === 'ArrowDown') {
-            e.preventDefault();
-            selectedIndex = (selectedIndex + 1) % filteredItems.length;
-            updateSelectionUI();
-            scrollSelectedIntoView();
-        } else if (e.key === 'ArrowUp') {
-            e.preventDefault();
-            selectedIndex = (selectedIndex - 1 + filteredItems.length) % filteredItems.length;
-            updateSelectionUI();
-            scrollSelectedIntoView();
-        } else if (e.key === 'Enter') {
-            e.preventDefault();
-            if (filteredItems[selectedIndex]) {
-                executeItem(filteredItems[selectedIndex]);
-            }
-        }
-    }
-
-    function executeItem(item) {
-        if (!item) return;
+      } else if (e.key === 'Escape') {
         closePalette();
+      }
+    });
 
-        if (typeof item.action === 'function') {
-            try {
-                item.action();
-            } catch (err) {
-                console.error('[CommandPalette] Action error:', err);
-            }
-        } else if (item.url) {
-            window.location.href = item.url;
+    // Global Keydown Shortcut (Ctrl+K or Cmd+K)
+    document.addEventListener('keydown', (e) => {
+      if ((e.ctrlKey || e.metaKey) && (e.key === 'k' || e.key === 'K')) {
+        e.preventDefault();
+        if (overlay.classList.contains('active')) {
+          closePalette();
+        } else {
+          openPalette();
         }
+      } else if (e.key === 'Escape' && overlay.classList.contains('active')) {
+        closePalette();
+      }
+    });
+
+    // Close on overlay backdrop click
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) {
+        closePalette();
+      }
+    });
+
+    if (closeBtn) {
+      closeBtn.addEventListener('click', closePalette);
     }
 
-    function escapeHtml(str) {
-        if (!str) return '';
-        return String(str)
-            .replace(/&/g, '&amp;')
-            .replace(/</g, '&lt;')
-            .replace(/>/g, '&gt;')
-            .replace(/"/g, '&quot;')
-            .replace(/'/g, '&#039;');
-    }
+    // Expose Global Helper
+    window.openCommandPalette = openPalette;
+    window.closeCommandPalette = closePalette;
+  }
 
-    // Auto-init on DOMContentLoaded or immediately if ready
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', init);
-    } else {
-        init();
-    }
+  function escapeHtml(str) {
+    if (!str) return '';
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
+  }
+
+  // Auto-init on DOMContentLoaded
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCommandPalette);
+  } else {
+    initCommandPalette();
+  }
 })();
