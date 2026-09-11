@@ -392,28 +392,28 @@ body.zen-mode {
     <div id="book-stage" class="single-book-stage">
         <!-- Single Book Page Frame -->
         <div id="book-frame" class="single-book-frame">
-            <!-- Top Running Book Header -->
-            <header class="book-running-header" aria-label="Book and Chapter Details">
-                <div class="book-header-left">
-                    <span class="book-header-title">
-                        <i class="fas fa-book-open"></i> <?php echo htmlspecialchars($bookTitle); ?>
-                    </span>
-                    <span class="book-header-dot" aria-hidden="true">&bull;</span>
-                    <span class="book-header-chapter">
-                        <?php echo htmlspecialchars($currentChapterTitle); ?>
-                    </span>
-                </div>
-                <div class="book-header-right">
-                    <span class="book-header-readtime" title="<?php echo number_format($wordCount); ?> words (~180 WPM)">
-                        <i class="far fa-clock"></i> ~<?php echo $estMinutes; ?> min read
-                    </span>
-                </div>
-            </header>
-
             <!-- Content Viewport -->
             <div id="book-page-viewport" class="book-page-viewport">
                 <!-- Main Reader Reading Container -->
                 <article id="book-content" class="reader-main-content font-sans prose-lg lh-wide">
+                    <!-- Top Running Book Header integrated at top of chapter box -->
+                    <header class="book-running-header" aria-label="Book and Chapter Details">
+                        <div class="book-header-left">
+                            <span class="book-header-title">
+                                <i class="fas fa-book-open"></i> <?php echo htmlspecialchars($bookTitle); ?>
+                            </span>
+                            <span class="book-header-dot" aria-hidden="true">&bull;</span>
+                            <span class="book-header-chapter">
+                                <?php echo htmlspecialchars($currentChapterTitle); ?>
+                            </span>
+                        </div>
+                        <div class="book-header-right">
+                            <span class="book-header-readtime" title="<?php echo number_format($wordCount); ?> words (~180 WPM)">
+                                <i class="far fa-clock"></i> ~<?php echo $estMinutes; ?> min read
+                            </span>
+                        </div>
+                    </header>
+
                     <?php if ($isTeacherPage && !$isTeacherUnlocked): ?>
                         <!-- Protected Teacher Resources Screen -->
                         <div class="teacher-gate-card">

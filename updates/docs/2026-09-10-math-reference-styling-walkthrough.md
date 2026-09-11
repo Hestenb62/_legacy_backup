@@ -32,8 +32,9 @@ The digital **Mathematical Facts, Constants & Formulas Compendium** (`math-facts
   - `.ref-table-wrap` & `.ref-table`: Publication-grade tables with sticky headers, zebra stripes, and responsive touch scroll.
 
 ### 2. Digital Reader Interface & Top Navigation Streamlining
-- **File**: `library/read/reader_template.php`.
-- **Streamlined Top Bar**: Removed the redundant middle title badge between the `← Catalog` return button and the reading tracker/session tools, creating a cleaner, uncluttered top navigation bar.
+- **File**: `library/read/reader_template.php`, `assets/css/reader-main.css`.
+- **Streamlined Top Bar**: Removed the redundant middle title badge between the `← Catalog` return button and the reading tracker/session tools.
+- **Seamless Running Header Integration**: Moved the secondary running header directly inside the main chapter reading card (`#book-content`) as a clean, integrated top bar with a subtle bottom divider line, removing the floating pill containers and pill borders around the reading time.
 
 ### 3. MathJax Typography & Dynamic Page Font Adaptation
 - **Files**: `assets/css/reader/read-reader-typography.css`, `assets/js/reader/read-typography.js`, `library/read/reader_template.php`.
