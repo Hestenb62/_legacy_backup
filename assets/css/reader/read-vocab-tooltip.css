@@ -22,6 +22,87 @@
     display: none !important;
 }
 
+/* Integrated Unified Highlighting & Annotation Bar inside Tooltip */
+.vocab-tooltip-actions-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.4rem;
+    padding: 0.35rem 0.5rem;
+    background: rgba(15, 23, 42, 0.06);
+    border: 1px solid var(--color-border, rgba(0, 0, 0, 0.08));
+    border-radius: 9999px;
+    margin-bottom: 0.25rem;
+}
+
+[data-theme="dark"] .vocab-tooltip-actions-row,
+[data-theme="midnight"] .vocab-tooltip-actions-row {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.vtt-hl-colors {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.vtt-hl-btn {
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+    padding: 0;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    flex-shrink: 0;
+}
+
+.vtt-hl-btn:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 8px rgba(99, 102, 241, 0.5);
+}
+
+.vtt-hl-btn.hl-yellow {
+    background: radial-gradient(circle at 35% 35%, #fef08a, #eab308);
+}
+.vtt-hl-btn.hl-pink {
+    background: radial-gradient(circle at 35% 35%, #fbcfe8, #ec4899);
+}
+.vtt-hl-btn.hl-green {
+    background: radial-gradient(circle at 35% 35%, #a7f3d0, #10b981);
+}
+.vtt-hl-btn.hl-blue {
+    background: radial-gradient(circle at 35% 35%, #a5f3fc, #06b6d4);
+}
+
+.vtt-sep {
+    width: 1px;
+    height: 1rem;
+    background-color: var(--color-border, rgba(0, 0, 0, 0.15));
+    margin: 0 0.1rem;
+}
+
+.vtt-tool-btn {
+    background: transparent;
+    border: none;
+    color: var(--color-text-default, #0f172a);
+    padding: 0.2rem 0.45rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 9999px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    transition: all 0.15s ease;
+}
+
+.vtt-tool-btn:hover {
+    background: rgba(99, 102, 241, 0.15);
+    color: var(--color-primary, #6366f1);
+}
+
 .vocab-tooltip-header {
     display: flex;
     align-items: center;
@@ -151,6 +232,42 @@
     background: rgba(16, 185, 129, 0.12);
     border-color: #10b981;
     color: #10b981;
+}
+
+/* Online API Source Badge & Loading State */
+.vtt-source-badge {
+    font-size: 0.625rem;
+    font-weight: 700;
+    padding: 0.15rem 0.45rem;
+    border-radius: 4px;
+    background: rgba(99, 102, 241, 0.08);
+    color: var(--color-primary, #6366f1);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.vtt-loading-spinner {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-text-secondary, #64748b);
+    font-size: 0.85rem;
+    padding: 0.5rem 0;
+}
+
+.vtt-audio-playing {
+    animation: vttPulse 0.8s infinite alternate ease-in-out;
+    background: #6366f1 !important;
+    color: #ffffff !important;
+}
+
+@keyframes vttPulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.18); box-shadow: 0 0 10px rgba(99, 102, 241, 0.6); }
 }
 
 /* Reading Session Timer Pill in Reader Top Navigation */

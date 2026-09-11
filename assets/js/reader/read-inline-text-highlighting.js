@@ -34,6 +34,21 @@
                     currentSelectedRange = range.cloneRange();
                     const rect = range.getBoundingClientRect();
 
+                    // For single words, open the unified definition & highlight card
+                    if (!text.includes(' ') && text.length >= 1) {
+                        toolbar.classList.add("hidden");
+                        toolbar.style.display = "none";
+                        if (window.lookupReaderWord) {
+                            window.lookupReaderWord(text, rect, range);
+                        }
+                        return;
+                    }
+
+                    // For multi-word phrase selections, show the phrase highlight bar
+                    if (window.hideReaderVocabTooltip) {
+                        window.hideReaderVocabTooltip();
+                    }
+
                     const top = Math.max(rect.top - 54, 12);
                     const left = Math.max(rect.left + (rect.width / 2) - 130, 16);
 
