@@ -405,3 +405,76 @@ if (!function_exists('renderGutenbergLicenseHtml')) {
         </div>
     </div>
 </div>
+
+<!-- Library User Guide / How It Works Modal -->
+<div id="libraryGuideModal" class="library-modal hidden" role="dialog" aria-modal="true" aria-labelledby="guide-modal-title" style="z-index: 3000;">
+    <div class="library-modal-backdrop" onclick="closeLibraryGuideModal()"></div>
+    <div class="library-modal-content info-explainer-content library-guide-modal-content" onclick="event.stopPropagation()">
+        <button type="button" onclick="closeLibraryGuideModal()" class="library-modal-close-btn" aria-label="Close Library Guide">
+            <i class="fas fa-times"></i>
+        </button>
+        <h3 id="guide-modal-title" class="explainer-modal-title primary-title">
+            <i class="fas fa-compass mr-2"></i> How Hesten's Digital Library Works
+        </h3>
+        <p class="explainer-subtitle">A comprehensive scholar's guide to navigating catalogs, research desks, and accessible study tools.</p>
+        
+        <div class="library-guide-grid">
+            <div class="library-guide-card">
+                <div class="guide-card-icon" style="color: #6366f1; background: rgba(99, 102, 241, 0.12);">
+                    <i class="fas fa-book-open"></i>
+                </div>
+                <div class="guide-card-content">
+                    <h4>1. Finding &amp; Reading Books</h4>
+                    <p>Browse categorized shelves for classic literature, science fiction, and historical narratives. Open any book card to read online immediately, download EPUB/PDF files, or view detailed summaries, historical context, and curriculum alignment.</p>
+                </div>
+            </div>
+
+            <div class="library-guide-card">
+                <div class="guide-card-icon" style="color: #ec4899; background: rgba(236, 72, 153, 0.12);">
+                    <i class="fas fa-layer-group"></i>
+                </div>
+                <div class="guide-card-content">
+                    <h4>2. Subject Research Desks</h4>
+                    <p>Click the <strong>"More Resources"</strong> button on any shelf header to enter dedicated Research Desks for US History, Math, ELA, Science, Civics, and World Wars. Explore primary sources, open textbooks, and verified external academic archives.</p>
+                </div>
+            </div>
+
+            <div class="library-guide-card">
+                <div class="guide-card-icon" style="color: #10b981; background: rgba(16, 185, 129, 0.12);">
+                    <i class="fas fa-filter"></i>
+                </div>
+                <div class="guide-card-content">
+                    <h4>3. Smart Search &amp; View Modes</h4>
+                    <p>Search in real-time by title, author, grade band, or topic. Filter by Lexile reading band (Elementary, Middle, High School), and switch seamlessly between <strong>Carousel</strong>, <strong>Grid</strong>, and <strong>Academic Table</strong> view modes.</p>
+                </div>
+            </div>
+
+            <div class="library-guide-card">
+                <div class="guide-card-icon" style="color: #f59e0b; background: rgba(245, 158, 11, 0.12);">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="guide-card-content">
+                    <h4>4. Personal Reading List &amp; Sync</h4>
+                    <p>Star any book to save it to your <strong>My Reading List</strong>. The <strong>Jump Back In</strong> shelf tracks your latest reading progress automatically, syncing securely across devices via Google Drive cloud auto-sync and offline storage.</p>
+                </div>
+            </div>
+
+            <div class="library-guide-card">
+                <div class="guide-card-icon" style="color: #06b6d4; background: rgba(6, 182, 212, 0.12);">
+                    <i class="fas fa-universal-access"></i>
+                </div>
+                <div class="guide-card-content">
+                    <h4>5. Accessibility &amp; Citations</h4>
+                    <p>Built with full Universal Design for Learning (UDL) support: OpenDyslexic typography, Irlen color overlays, screen reader optimization, MathJax formula rendering, and 1-click academic citation generation (MLA, APA, Chicago, Harvard).</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="library-guide-footer">
+            <button type="button" onclick="closeLibraryGuideModal()" class="btn-primary-glow" style="width: 100%; justify-content: center; display: flex; align-items: center; gap: 0.5rem;">
+                <i class="fas fa-check-circle"></i> <span>Got It — Start Exploring!</span>
+            </button>
+        </div>
+    </div>
+</div>
+

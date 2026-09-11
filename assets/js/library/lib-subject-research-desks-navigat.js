@@ -2,14 +2,7 @@
        6. Subject Research Desks Navigation & Workspace Panel
        ========================================================================== */
     function setupSidebarToggle() {
-        const sidebar = document.getElementById('library-sidebar');
-        const toggleBtn = document.getElementById('sidebar-toggle');
-        if (sidebar && toggleBtn) {
-            toggleBtn.addEventListener('click', () => {
-                sidebar.classList.toggle('expanded');
-                sidebar.classList.toggle('collapsed');
-            });
-        }
+        // Obsolete sidebar toggle retained as safe no-op
     }
 
     const DESK_ICONS = {
@@ -35,9 +28,13 @@
 
         if (!mainLanding || !deskWorkspace) return;
 
-        // Highlight active desk item in sidebar
-        document.querySelectorAll('.sidebar-item').forEach(item => {
-            item.classList.toggle('active', item.dataset.desk === deskName);
+        // Highlight active desk tab in top switcher bar
+        document.querySelectorAll('.desk-switcher-tab').forEach(tab => {
+            const isActive = tab.dataset.desk === deskName;
+            tab.classList.toggle('active', isActive);
+            if (isActive) {
+                tab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+            }
         });
 
         mainLanding.classList.add('hidden');
@@ -88,8 +85,8 @@
         const mainLanding = document.getElementById('main-desk-landing');
         const deskWorkspace = document.getElementById('subject-desk-workspace');
 
-        document.querySelectorAll('.sidebar-item').forEach(item => {
-            item.classList.remove('active');
+        document.querySelectorAll('.desk-switcher-tab').forEach(tab => {
+            tab.classList.remove('active');
         });
 
         if (mainLanding && deskWorkspace) {
@@ -219,3 +216,42 @@
             container.style.display = 'none';
         }
     }
+
+    window.openCategoryResources = function (categoryName) {
+        const categoryDeskMap = {
+            'Classic Fiction': 'ELA',
+            'Fantasy & Sci-Fi': 'ELA',
+            'Literature': 'ELA',
+            'English Language Arts': 'ELA',
+            'US History': 'US History',
+            'World History': 'World History',
+            'WW1': 'WW1',
+            'WW2': 'WW2',
+            'Math': 'Math',
+            'Mathematics': 'Math',
+            'Science': 'Science',
+            'Civics': 'Civics',
+            'General Resources': 'General Resources'
+        };
+
+        const targetDesk = categoryDeskMap[categoryName] || categoryName;
+
+        // Check if matching desk exists
+        const matchingSidebarItem = document.querySelector(`.sidebar-item[data-desk="${targetDesk}"]`);
+        if (matchingSidebarItem || (window.DESK_EXTERNAL_LINKS && window.DESK_EXTERNAL_LINKS[targetDesk])) {
+            window.openResourcePortal(targetDesk);
+        } else {
+            // Fallback: Filter catalog by category or open General Resources
+            const catFilter = document.getElementById('category-filter');
+            if (catFilter) {
+                catFilter.value = categoryName;
+                catFilter.dispatchEvent(new Event('change'));
+                const container = document.getElementById('library-catalog-container');
+                if (container) {
+                    container.scrollIntoView({ behavior: 'smooth' });
+                }
+            } else {
+                window.openResourcePortal('General Resources');
+            }
+        }
+    };

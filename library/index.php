@@ -62,72 +62,6 @@ include ABSPATH . 'src/header.php';
 
 <main id="main-content" class="library-main">
 
-    <!-- Collapsible left sidebar for Subject Desks -->
-    <aside id="library-sidebar" class="library-sidebar collapsed" aria-label="Subject Research Desks">
-        <div class="sidebar-header">
-            <span class="sidebar-header-title">Research Desks</span>
-        </div>
-        <ul class="sidebar-menu">
-            <li class="sidebar-item" data-desk="General Resources" title="General Resources">
-                <button type="button" onclick="openResourcePortal('General Resources')" class="sidebar-item-btn" aria-label="Open General Resources Desk">
-                    <i class="fas fa-layer-group"></i>
-                    <span class="sidebar-label">General Resources</span>
-                </button>
-            </li>
-            <li class="sidebar-item" data-desk="US History" title="US History">
-                <button type="button" onclick="openResourcePortal('US History')" class="sidebar-item-btn" aria-label="Open US History Desk">
-                    <i class="fas fa-university"></i>
-                    <span class="sidebar-label">US History</span>
-                </button>
-            </li>
-            <li class="sidebar-item" data-desk="World History" title="World History">
-                <button type="button" onclick="openResourcePortal('World History')" class="sidebar-item-btn" aria-label="Open World History Desk">
-                    <i class="fas fa-globe-americas"></i>
-                    <span class="sidebar-label">World History</span>
-                </button>
-            </li>
-            <li class="sidebar-item" data-desk="WW1" title="WW1">
-                <button type="button" onclick="openResourcePortal('WW1')" class="sidebar-item-btn" aria-label="Open World War 1 Desk">
-                    <i class="fas fa-shield-halved"></i>
-                    <span class="sidebar-label">WW1</span>
-                </button>
-            </li>
-            <li class="sidebar-item" data-desk="WW2" title="WW2">
-                <button type="button" onclick="openResourcePortal('WW2')" class="sidebar-item-btn" aria-label="Open World War 2 Desk">
-                    <i class="fas fa-award"></i>
-                    <span class="sidebar-label">WW2</span>
-                </button>
-            </li>
-            <li class="sidebar-item" data-desk="Math" title="Math">
-                <button type="button" onclick="openResourcePortal('Math')" class="sidebar-item-btn" aria-label="Open Mathematics Desk">
-                    <i class="fas fa-calculator"></i>
-                    <span class="sidebar-label">Math</span>
-                </button>
-            </li>
-            <li class="sidebar-item" data-desk="ELA" title="ELA">
-                <button type="button" onclick="openResourcePortal('ELA')" class="sidebar-item-btn" aria-label="Open English Language Arts Desk">
-                    <i class="fas fa-spell-check"></i>
-                    <span class="sidebar-label">ELA</span>
-                </button>
-            </li>
-            <li class="sidebar-item" data-desk="Science" title="Science">
-                <button type="button" onclick="openResourcePortal('Science')" class="sidebar-item-btn" aria-label="Open Science Desk">
-                    <i class="fas fa-atom"></i>
-                    <span class="sidebar-label">Science</span>
-                </button>
-            </li>
-            <li class="sidebar-item" data-desk="Civics" title="Civics">
-                <button type="button" onclick="openResourcePortal('Civics')" class="sidebar-item-btn" aria-label="Open Civics Desk">
-                    <i class="fas fa-landmark"></i>
-                    <span class="sidebar-label">Civics</span>
-                </button>
-            </li>
-        </ul>
-        <button id="sidebar-toggle" class="sidebar-toggle-btn" aria-label="Toggle Subject Desks Sidebar" title="Toggle Sidebar">
-            <i class="fas fa-chevron-right"></i>
-        </button>
-    </aside>
-
     <div class="library-workspace">
 
         <!-- Panel 1: General Library Landing Page -->
@@ -135,17 +69,21 @@ include ABSPATH . 'src/header.php';
 
             <!-- Hero Section -->
             
-            <!-- Modern Cinematic Hero & Academic Dashboard -->
+            <!-- Modern Cinematic Welcome Hero & Academic Dashboard -->
             <section class="library-modern-hero library-animate-reveal">
-                <div class="hero-featured-book">
+                <div class="hero-featured-book hero-welcome-card">
                     <div class="featured-bg-blur"></div>
                     <div class="featured-content">
-                        <span class="featured-label"><i class="fas fa-star"></i> Featured Read</span>
-                        <h1 class="featured-title">Narrative of the Life of Frederick Douglass</h1>
-                        <p class="featured-desc">A profound and gripping autobiographical account of slavery, resilience, and the pursuit of freedom in 19th-century America.</p>
+                        <span class="featured-label"><i class="fas fa-book-reader"></i> Digital Archive &amp; Research Portal</span>
+                        <h1 class="featured-title">Welcome to Hesten's Learning Library</h1>
+                        <p class="featured-desc">Explore our curated collection of classic literature, foundational textbooks, and historical primary sources. Learn how to search, research, and use accessible learning tools.</p>
                         <div class="featured-actions">
-                            <a href="/library/read/index.php?book=frederick-douglass-narrative" class="btn-primary-glow"><i class="fas fa-book-open"></i> Start Reading</a>
-                            <button onclick="openBookModal('frederick-douglass-narrative')" class="btn-secondary-glass"><i class="fas fa-info-circle"></i> Details</button>
+                            <button type="button" onclick="openLibraryGuideModal()" class="btn-primary-glow" id="hero-read-more-btn" aria-label="Open library user guide modal">
+                                <i class="fas fa-compass"></i> <span>Read More &amp; User Guide</span>
+                            </button>
+                            <a href="#library-catalog-container" class="btn-secondary-glass">
+                                <i class="fas fa-book-open"></i> <span>Browse Catalog</span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -286,14 +224,23 @@ include ABSPATH . 'src/header.php';
                             <h2 class="library-row-title">
                                 <?php echo htmlspecialchars($categoryName); ?>
                             </h2>
-                            <div class="library-row-divider"></div>
-                            <div class="library-scroll-buttons">
-                                <button class="library-scroll-btn scroll-left" aria-label="Scroll left in <?php echo htmlspecialchars($categoryName); ?>">
-                                    <i class="fas fa-chevron-left"></i>
+                            <div class="library-row-controls">
+                                <button type="button" 
+                                        class="library-more-resources-btn" 
+                                        onclick="openCategoryResources('<?php echo htmlspecialchars($categoryName, ENT_QUOTES); ?>')" 
+                                        aria-label="More resources for <?php echo htmlspecialchars($categoryName); ?>"
+                                        title="Explore additional academic resources and primary texts for <?php echo htmlspecialchars($categoryName); ?>">
+                                    <i class="fas fa-layer-group" aria-hidden="true"></i>
+                                    <span>More Resources</span>
                                 </button>
-                                <button class="library-scroll-btn scroll-right" aria-label="Scroll right in <?php echo htmlspecialchars($categoryName); ?>">
-                                    <i class="fas fa-chevron-right"></i>
-                                </button>
+                                <div class="library-scroll-buttons">
+                                    <button class="library-scroll-btn scroll-left" aria-label="Scroll left in <?php echo htmlspecialchars($categoryName); ?>">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </button>
+                                    <button class="library-scroll-btn scroll-right" aria-label="Scroll right in <?php echo htmlspecialchars($categoryName); ?>">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </button>
+                                </div>
                             </div>
                         </div>
 
@@ -327,9 +274,6 @@ include ABSPATH . 'src/header.php';
             <!-- Workspace Header Bar -->
             <header class="library-drawer-header">
                 <div class="drawer-header-left">
-                    <button onclick="closeResourcePortal()" class="library-desk-back-btn" aria-label="Back to main catalog">
-                        <i class="fas fa-arrow-left"></i> <span>Back to Catalog</span>
-                    </button>
                     <div id="drawer-icon-badge" class="drawer-header-icon-badge">
                         <i class="fas fa-book-reader"></i>
                     </div>
@@ -352,6 +296,37 @@ include ABSPATH . 'src/header.php';
                     </button>
                 </div>
             </header>
+
+            <!-- Subject Switcher Tabs Bar -->
+            <nav class="desk-switcher-bar" aria-label="Switch Subject Research Desk">
+                <button type="button" class="desk-switcher-tab" data-desk="General Resources" onclick="openResourcePortal('General Resources')">
+                    <i class="fas fa-layer-group"></i> <span>General</span>
+                </button>
+                <button type="button" class="desk-switcher-tab" data-desk="US History" onclick="openResourcePortal('US History')">
+                    <i class="fas fa-university"></i> <span>US History</span>
+                </button>
+                <button type="button" class="desk-switcher-tab" data-desk="World History" onclick="openResourcePortal('World History')">
+                    <i class="fas fa-globe-americas"></i> <span>World History</span>
+                </button>
+                <button type="button" class="desk-switcher-tab" data-desk="WW1" onclick="openResourcePortal('WW1')">
+                    <i class="fas fa-shield-halved"></i> <span>WW1</span>
+                </button>
+                <button type="button" class="desk-switcher-tab" data-desk="WW2" onclick="openResourcePortal('WW2')">
+                    <i class="fas fa-award"></i> <span>WW2</span>
+                </button>
+                <button type="button" class="desk-switcher-tab" data-desk="Math" onclick="openResourcePortal('Math')">
+                    <i class="fas fa-calculator"></i> <span>Math</span>
+                </button>
+                <button type="button" class="desk-switcher-tab" data-desk="ELA" onclick="openResourcePortal('ELA')">
+                    <i class="fas fa-spell-check"></i> <span>ELA</span>
+                </button>
+                <button type="button" class="desk-switcher-tab" data-desk="Science" onclick="openResourcePortal('Science')">
+                    <i class="fas fa-atom"></i> <span>Science</span>
+                </button>
+                <button type="button" class="desk-switcher-tab" data-desk="Civics" onclick="openResourcePortal('Civics')">
+                    <i class="fas fa-landmark"></i> <span>Civics</span>
+                </button>
+            </nav>
 
             <!-- Workspace Content Area -->
             <div class="library-drawer-content">

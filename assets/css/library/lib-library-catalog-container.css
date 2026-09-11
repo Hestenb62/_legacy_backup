@@ -16,8 +16,11 @@
 .library-row-header {
     display: flex;
     align-items: center;
-    gap: 1.25rem;
+    justify-content: space-between;
+    gap: 1rem;
     margin-bottom: 1.5rem;
+    padding-bottom: 0.85rem;
+    border-bottom: 1px solid var(--lib-border);
 }
 
 .library-row-title {
@@ -29,10 +32,52 @@
     white-space: nowrap;
 }
 
-.library-row-divider {
-    height: 1px;
-    flex-grow: 1;
-    background: linear-gradient(90deg, var(--lib-border), transparent);
+.library-row-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-shrink: 0;
+}
+
+.library-more-resources-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.55rem 1.1rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--lib-text-muted);
+    background-color: var(--lib-bg-surface);
+    border: 1px solid var(--lib-border);
+    border-radius: var(--lib-radius-md);
+    cursor: pointer;
+    box-shadow: var(--lib-shadow-sm);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    text-decoration: none;
+    white-space: nowrap;
+    line-height: 1;
+}
+
+.library-more-resources-btn:hover {
+    color: #ffffff;
+    background: linear-gradient(135deg, var(--lib-primary), #6366f1);
+    border-color: transparent;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(79, 70, 229, 0.3);
+}
+
+.library-more-resources-btn:focus-visible {
+    outline: 2px solid var(--lib-primary);
+    outline-offset: 2px;
+}
+
+.library-more-resources-btn i {
+    font-size: 0.85rem;
+    transition: transform 0.2s ease;
+}
+
+.library-more-resources-btn:hover i {
+    transform: scale(1.15);
 }
 
 .library-scroll-buttons {
@@ -62,6 +107,25 @@
     border-color: var(--lib-primary);
     transform: scale(1.05);
     background-color: var(--lib-bg-base);
+}
+
+.library-scroll-btn:focus-visible {
+    outline: 2px solid var(--lib-primary);
+    outline-offset: 2px;
+}
+
+@media (max-width: 640px) {
+    .library-row-header {
+        flex-wrap: wrap;
+        gap: 0.75rem;
+    }
+    .library-row-title {
+        font-size: 1.4rem;
+    }
+    .library-row-controls {
+        width: 100%;
+        justify-content: space-between;
+    }
 }
 
 /* Mode 1: Carousel View (Horizontal Scroll) */

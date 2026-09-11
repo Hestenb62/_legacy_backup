@@ -241,3 +241,19 @@
         const m = document.getElementById('ddcInfoModal');
         if (m) m.classList.add('hidden');
     };
+
+    window.openLibraryGuideModal = function () {
+        const m = document.getElementById('libraryGuideModal');
+        if (m) {
+            m.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+    };
+
+    window.closeLibraryGuideModal = function () {
+        const m = document.getElementById('libraryGuideModal');
+        if (m) {
+            m.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+    };

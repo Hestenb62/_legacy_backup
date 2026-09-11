@@ -9,6 +9,7 @@
                 window.closeLexileInfoModal();
                 window.closeDdcInfoModal();
                 window.closeBookCitationModal();
+                if (window.closeLibraryGuideModal) window.closeLibraryGuideModal();
             }
             // Press '/' to search catalog
             if (e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
