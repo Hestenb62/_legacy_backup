@@ -153,11 +153,6 @@ body.zen-mode {
         <a href="../index.php" class="reader-back-btn" title="Return to Digital Library Catalog">
             <i class="fas fa-arrow-left"></i> <span>Catalog</span>
         </a>
-        <div class="reader-title-badge">
-            <span class="reader-book-name"><?php echo htmlspecialchars($bookTitle); ?></span>
-            <span class="reader-sep">&bull;</span>
-            <span class="reader-ch-name"><?php echo htmlspecialchars($currentChapterTitle); ?></span>
-        </div>
         <div style="display: flex; align-items: center; gap: 0.5rem;">
             <div id="reader-session-timer-pill" class="reader-session-timer-pill" title="Daily Reading Tracker">
                 <i class="fas fa-stopwatch" style="color: var(--color-primary, #e11d48);"></i>

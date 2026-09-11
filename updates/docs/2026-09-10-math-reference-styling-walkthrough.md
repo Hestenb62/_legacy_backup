@@ -31,7 +31,11 @@ The digital **Mathematical Facts, Constants & Formulas Compendium** (`math-facts
   - `.math-summary-sheet`: Chapter-end cheat sheets with multi-column quick-reference cards.
   - `.ref-table-wrap` & `.ref-table`: Publication-grade tables with sticky headers, zebra stripes, and responsive touch scroll.
 
-### 2. MathJax Typography & Dynamic Page Font Adaptation
+### 2. Digital Reader Interface & Top Navigation Streamlining
+- **File**: `library/read/reader_template.php`.
+- **Streamlined Top Bar**: Removed the redundant middle title badge between the `← Catalog` return button and the reading tracker/session tools, creating a cleaner, uncluttered top navigation bar.
+
+### 3. MathJax Typography & Dynamic Page Font Adaptation
 - **Files**: `assets/css/reader/read-reader-typography.css`, `assets/js/reader/read-typography.js`, `library/read/reader_template.php`.
 - **Dynamic Font Inheritance**: MathJax SVG equations and text glyphs (`text`, `mjx-mtext`) inherit the active reader font family (`font-sans`, `font-serif`, `font-dyslexic`, `font-hyperlegible`, `font-mono`).
 - **Real-Time Scaling**: Connected MathJax container sizes to `--reader-font-size` so formulas scale synchronously with the quick scaler (`A-` / `A+`) and the font slider (`75%`–`200%`).
