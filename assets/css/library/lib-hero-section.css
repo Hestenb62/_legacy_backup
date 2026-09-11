@@ -259,3 +259,160 @@ body.dark .view-switch-btn:hover {
     position: relative;
     overflow: hidden;
 }
+
+/* Quick Curriculum & Grade Filter Chips Bar */
+.library-chips-wrapper {
+    max-width: 950px;
+    width: 100%;
+    margin: 1rem auto 0 auto;
+    overflow: hidden;
+}
+
+.library-chips-scroll {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    overflow-x: auto;
+    padding: 0.25rem 0.25rem 0.5rem 0.25rem;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+}
+
+.library-chips-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.library-chip-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.45rem 1rem;
+    border-radius: var(--lib-radius-full);
+    border: 1px solid var(--lib-border);
+    background-color: var(--lib-bg-surface);
+    color: var(--lib-text-muted);
+    font-size: 0.82rem;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: var(--lib-shadow-sm);
+    flex-shrink: 0;
+}
+
+.library-chip-btn:hover {
+    color: var(--lib-text-main);
+    border-color: var(--lib-primary);
+    transform: translateY(-1px);
+}
+
+.library-chip-btn.active {
+    background: linear-gradient(135deg, var(--lib-primary), #6366f1);
+    color: #ffffff;
+    border-color: transparent;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.35);
+}
+
+.library-chip-btn:focus-visible {
+    outline: 2px solid var(--lib-primary);
+    outline-offset: 2px;
+}
+
+/* Academic Dashboard Goal Ring & Streaks */
+.greeting-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+}
+
+.dashboard-streak-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.35rem 0.85rem;
+    border-radius: var(--lib-radius-full);
+    background: rgba(245, 158, 11, 0.12);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    color: #d97706;
+    font-weight: 800;
+    font-size: 0.82rem;
+    box-shadow: var(--lib-shadow-sm);
+}
+
+[data-theme="dark"] .dashboard-streak-badge,
+body.dark .dashboard-streak-badge {
+    color: #fbbf24;
+}
+
+.dash-stat-card {
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dash-stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--lib-primary);
+    box-shadow: var(--lib-shadow-md);
+}
+
+.goal-ring-wrap {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.goal-ring-svg {
+    width: 40px;
+    height: 40px;
+    transform: rotate(-90deg);
+}
+
+.goal-ring-bg {
+    stroke: var(--lib-border);
+}
+
+.goal-ring-fill {
+    stroke: #10b981;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 0.6s ease;
+}
+
+.stat-icon-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.85rem;
+    color: #10b981;
+}
+
+/* Gamification Toast */
+.library-gamification-toast {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.85rem 1.35rem;
+    border-radius: var(--lib-radius-lg);
+    background: #0f172a;
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 0.9rem;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.library-gamification-toast.show {
+    transform: translateY(0);
+    opacity: 1;
+}

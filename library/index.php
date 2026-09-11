@@ -88,28 +88,48 @@ include ABSPATH . 'src/header.php';
                     </div>
                 </div>
 
-                <!-- Academic Dashboard Stats -->
+                <!-- Academic Dashboard Stats & Goals -->
                 <div class="hero-academic-dashboard">
                     <div class="dashboard-greeting">
-                        <h2>Welcome back, Scholar</h2>
-                        <p>Your digital archive holds <span class="highlight-stat"><?php echo $totalCatalogBooks; ?></span> volumes.</p>
+                        <div class="greeting-header-row">
+                            <div>
+                                <h2>Welcome back, Scholar</h2>
+                                <p>Your digital archive holds <span class="highlight-stat"><?php echo $totalCatalogBooks; ?></span> volumes.</p>
+                            </div>
+                            <div class="dashboard-streak-badge" title="Consecutive days reading">
+                                <i class="fas fa-fire text-amber-500"></i> <span id="dash-streak-count">1</span> Day Streak
+                            </div>
+                        </div>
                     </div>
                     <div class="dashboard-stats-grid">
-                        <div class="dash-stat-card">
+                        <div class="dash-stat-card goal-card" onclick="openGoalModal()" style="cursor: pointer;" title="Set or adjust your daily reading goal">
+                            <div class="goal-ring-wrap">
+                                <svg class="goal-ring-svg" viewBox="0 0 40 40">
+                                    <circle class="goal-ring-bg" cx="20" cy="20" r="18" fill="none" stroke-width="3"></circle>
+                                    <circle id="dash-goal-ring-fill" class="goal-ring-fill" cx="20" cy="20" r="18" fill="none" stroke-width="3" stroke-dasharray="113.1" stroke-dashoffset="75"></circle>
+                                </svg>
+                                <i class="fas fa-bullseye stat-icon-center"></i>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-value" id="dash-goal-progress">5/15m</span>
+                                <span class="stat-label">Daily Goal <i class="fas fa-pencil-alt opacity-60" style="font-size: 0.65rem;"></i></span>
+                            </div>
+                        </div>
+                        <div class="dash-stat-card" onclick="document.querySelector('.library-chip-btn[data-chip=saved]')?.click()" style="cursor: pointer;" title="Filter by saved books">
                             <i class="fas fa-bookmark stat-icon" style="color: #6366f1;"></i>
                             <div class="stat-info">
                                 <span class="stat-value" id="dash-saved-count">0</span>
                                 <span class="stat-label">Saved Books</span>
                             </div>
                         </div>
-                        <div class="dash-stat-card">
+                        <div class="dash-stat-card" onclick="openStudyNotebookModal()" style="cursor: pointer;" title="Open Study Notebook with all highlights">
                             <i class="fas fa-highlighter stat-icon" style="color: #ec4899;"></i>
                             <div class="stat-info">
                                 <span class="stat-value" id="dash-highlights-count">0</span>
                                 <span class="stat-label">Highlights</span>
                             </div>
                         </div>
-                        <div class="dash-stat-card">
+                        <div class="dash-stat-card" onclick="openStudyNotebookModal()" style="cursor: pointer;" title="Open Study Notebook with notes & flashcards">
                             <i class="fas fa-sticky-note stat-icon" style="color: #f59e0b;"></i>
                             <div class="stat-info">
                                 <span class="stat-value" id="dash-notes-count">0</span>
@@ -124,7 +144,8 @@ include ABSPATH . 'src/header.php';
             document.addEventListener("DOMContentLoaded", () => {
                 // Populate Dashboard Stats
                 const bookmarks = JSON.parse(localStorage.getItem('hesten_library_bookmarks')) || [];
-                document.getElementById('dash-saved-count').textContent = bookmarks.length;
+                const savedEl = document.getElementById('dash-saved-count');
+                if (savedEl) savedEl.textContent = bookmarks.length;
 
                 let allHighlights = 0;
                 let allNotes = 0;
@@ -138,8 +159,10 @@ include ABSPATH . 'src/header.php';
                         } catch(e) {}
                     }
                 }
-                document.getElementById('dash-highlights-count').textContent = allHighlights;
-                document.getElementById('dash-notes-count').textContent = allNotes;
+                const hlsEl = document.getElementById('dash-highlights-count');
+                const notesEl = document.getElementById('dash-notes-count');
+                if (hlsEl) hlsEl.textContent = allHighlights;
+                if (notesEl) notesEl.textContent = allNotes;
             });
             </script>
 
@@ -183,6 +206,18 @@ include ABSPATH . 'src/header.php';
                         <i class="fas fa-graduation-cap library-filter-icon"></i>
                     </div>
 
+                    <!-- Multi-Facet Sort Dropdown -->
+                    <div class="library-filter-select-container">
+                        <select id="catalog-sort" aria-label="Sort Catalog" class="library-category-select library-glass-shine">
+                            <option value="default">Sort: Default</option>
+                            <option value="title-asc">Title: A to Z</option>
+                            <option value="title-desc">Title: Z to A</option>
+                            <option value="lexile-asc">Lexile: Low to High</option>
+                            <option value="lexile-desc">Lexile: High to Low</option>
+                        </select>
+                        <i class="fas fa-sort-amount-down library-filter-icon"></i>
+                    </div>
+
                     <!-- Catalog View Switcher -->
                     <div class="library-view-switcher" role="group" aria-label="Catalog View Mode">
                         <button id="view-mode-carousel" class="view-switch-btn active" onclick="switchLibraryView('carousel')" title="Carousel Rows View" aria-label="Carousel Rows View">
@@ -196,6 +231,33 @@ include ABSPATH . 'src/header.php';
                         </button>
                     </div>
                 </section>
+
+                <!-- Quick Curriculum & Grade Filter Chips -->
+                <div class="library-chips-wrapper library-animate-reveal">
+                    <div class="library-chips-scroll" role="tablist" aria-label="Curriculum quick filter chips">
+                        <button type="button" class="library-chip-btn active" data-chip="all" role="tab" aria-selected="true">
+                            <i class="fas fa-sparkles"></i> <span>All Works</span>
+                        </button>
+                        <button type="button" class="library-chip-btn" data-chip="elementary" role="tab" aria-selected="false">
+                            <i class="fas fa-child"></i> <span>Elementary (K-5)</span>
+                        </button>
+                        <button type="button" class="library-chip-btn" data-chip="middle" role="tab" aria-selected="false">
+                            <i class="fas fa-user-graduate"></i> <span>Middle School (6-8)</span>
+                        </button>
+                        <button type="button" class="library-chip-btn" data-chip="high" role="tab" aria-selected="false">
+                            <i class="fas fa-university"></i> <span>High School (9-12)</span>
+                        </button>
+                        <button type="button" class="library-chip-btn" data-chip="primary-sources" role="tab" aria-selected="false">
+                            <i class="fas fa-scroll"></i> <span>Primary Documents</span>
+                        </button>
+                        <button type="button" class="library-chip-btn" data-chip="math-ref" role="tab" aria-selected="false">
+                            <i class="fas fa-calculator"></i> <span>Math Reference</span>
+                        </button>
+                        <button type="button" class="library-chip-btn" data-chip="saved" role="tab" aria-selected="false">
+                            <i class="fas fa-star text-amber-400"></i> <span>My Saved List</span>
+                        </button>
+                    </div>
+                </div>
 
             <!-- Continue Reading Shelf (Populated dynamically from localStorage) -->
             <section id="continue-reading-shelf" class="continue-reading-section hidden library-animate-reveal">
@@ -411,6 +473,9 @@ include ABSPATH . 'src/header.php';
 <script src="../assets/js/library/lib-explainer.js" defer></script>
 <script src="../assets/js/library/lib-academic-citation-generator.js" defer></script>
 <script src="../assets/js/library/lib-inline-lexile-customization.js" defer></script>
+<script src="../assets/js/library/lib-reading-gamification.js" defer></script>
+<script src="../assets/js/library/lib-study-notebook.js" defer></script>
+<script src="../assets/js/library/lib-classroom-share.js" defer></script>
 <script src="../assets/js/library/lib-keyboard-shortcuts.js" defer></script>
 
 <?php include ABSPATH . 'src/footer.php'; ?>

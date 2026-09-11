@@ -20,17 +20,17 @@
     }
 
     document.addEventListener("DOMContentLoaded", () => {
-        applyStoredLexileOverrides();
-        setupScrollButtons();
-        setupFilters();
-        loadDisclaimers();
-        setupSidebarToggle();
-        setupProgressBars();
-        setupLexileEditing();
-        initBookmarks();
-        initContinueReadingShelf();
-        initViewSwitcher();
-        setupKeyboardShortcuts();
+        if (typeof applyStoredLexileOverrides === 'function') applyStoredLexileOverrides();
+        if (typeof setupScrollButtons === 'function') setupScrollButtons();
+        if (typeof setupFilters === 'function') setupFilters();
+        if (typeof loadDisclaimers === 'function') loadDisclaimers();
+        if (typeof setupSidebarToggle === 'function') setupSidebarToggle();
+        if (typeof setupProgressBars === 'function') setupProgressBars();
+        if (typeof setupLexileEditing === 'function') setupLexileEditing();
+        if (typeof initBookmarks === 'function') initBookmarks();
+        if (typeof initContinueReadingShelf === 'function') initContinueReadingShelf();
+        if (typeof initViewSwitcher === 'function') initViewSwitcher();
+        if (typeof setupKeyboardShortcuts === 'function') setupKeyboardShortcuts();
     });
 
     /* ==========================================================================

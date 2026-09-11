@@ -935,3 +935,315 @@
 .library-guide-footer {
     margin-top: 0.5rem;
 }
+
+/* 1. Goal Setting Modal */
+.goal-modal-content {
+    max-width: 500px;
+    padding: 2rem 2.25rem;
+}
+
+.goal-setting-body {
+    margin: 1.5rem 0;
+}
+
+.goal-input-wrap {
+    margin-bottom: 1.25rem;
+}
+
+.goal-input-label {
+    display: block;
+    font-size: 0.88rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--lib-text-main);
+}
+
+.goal-input-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.goal-number-input {
+    width: 120px;
+    height: 3rem;
+    padding: 0.5rem 1rem;
+    border-radius: var(--lib-radius-md);
+    border: 2px solid var(--lib-border);
+    background: var(--lib-bg-base);
+    color: var(--lib-text-main);
+    font-size: 1.25rem;
+    font-weight: 800;
+    outline: none;
+    text-align: center;
+}
+
+.goal-number-input:focus {
+    border-color: var(--lib-primary);
+}
+
+.goal-input-unit {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--lib-text-muted);
+}
+
+.goal-preset-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.goal-preset-btn {
+    padding: 0.4rem 0.85rem;
+    border-radius: var(--lib-radius-full);
+    border: 1px solid var(--lib-border);
+    background: var(--lib-bg-base);
+    color: var(--lib-text-muted);
+    font-size: 0.82rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.goal-preset-btn:hover {
+    color: var(--lib-text-main);
+    border-color: var(--lib-primary);
+}
+
+.goal-reward-banner {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.85rem 1rem;
+    border-radius: var(--lib-radius-md);
+    background: rgba(245, 158, 11, 0.1);
+    border: 1px solid rgba(245, 158, 11, 0.25);
+    font-size: 0.85rem;
+    color: var(--lib-text-main);
+}
+
+/* 2. Study Notebook Modal */
+.notebook-modal-content {
+    max-width: 800px;
+    padding: 2.25rem 2.25rem 2rem 2.25rem;
+}
+
+.notebook-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.notebook-badge {
+    display: inline-flex;
+    padding: 0.35rem 0.85rem;
+    border-radius: var(--lib-radius-full);
+    background: rgba(99, 102, 241, 0.12);
+    border: 1px solid rgba(99, 102, 241, 0.25);
+    color: var(--lib-primary);
+    font-weight: 800;
+    font-size: 0.8rem;
+}
+
+.notebook-toolbar {
+    display: flex;
+    gap: 0.6rem;
+    padding: 0.65rem 0.85rem;
+    background: var(--lib-bg-base);
+    border: 1px solid var(--lib-border);
+    border-radius: var(--lib-radius-md);
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
+}
+
+.notebook-tool-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.85rem;
+    border-radius: var(--lib-radius-sm);
+    border: 1px solid var(--lib-border);
+    background: var(--lib-bg-surface);
+    color: var(--lib-text-main);
+    font-size: 0.82rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.notebook-tool-btn:hover {
+    border-color: var(--lib-primary);
+    color: var(--lib-primary);
+}
+
+.notebook-entries-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    max-height: 52vh;
+    overflow-y: auto;
+    padding-right: 0.35rem;
+}
+
+.notebook-entry-card {
+    background: var(--lib-bg-base);
+    border: 1px solid var(--lib-border);
+    border-radius: var(--lib-radius-md);
+    padding: 1rem 1.15rem;
+    text-align: left;
+}
+
+.notebook-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.notebook-book-tag {
+    font-size: 0.78rem;
+    font-weight: 800;
+    color: var(--lib-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.notebook-date {
+    font-size: 0.72rem;
+    color: var(--lib-text-muted);
+}
+
+.notebook-quote {
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: var(--lib-text-main);
+    border-left: 3px solid var(--lib-primary);
+    padding-left: 0.75rem;
+    margin-bottom: 0.65rem;
+    font-style: italic;
+}
+
+.notebook-user-note {
+    font-size: 0.85rem;
+    color: var(--lib-text-main);
+    background: rgba(245, 158, 11, 0.08);
+    border-radius: var(--lib-radius-sm);
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 0.65rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.notebook-card-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.notebook-link-btn {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--lib-text-muted);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.notebook-link-btn:hover {
+    color: var(--lib-primary);
+}
+
+.notebook-empty-state {
+    text-align: center;
+    padding: 3rem 1.5rem;
+    color: var(--lib-text-muted);
+}
+
+.notebook-empty-icon {
+    font-size: 2.5rem;
+    opacity: 0.4;
+    margin-bottom: 1rem;
+}
+
+/* 3. Classroom Share Modal */
+.share-modal-content {
+    max-width: 540px;
+    padding: 2.25rem;
+}
+
+.share-options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin: 1.25rem 0;
+}
+
+.share-opt-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    background: var(--lib-bg-base);
+    border: 1px solid var(--lib-border);
+    border-radius: var(--lib-radius-md);
+    padding: 0.65rem 0.85rem;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--lib-text-main);
+    cursor: pointer;
+}
+
+.share-opt-toggle input {
+    cursor: pointer;
+    accent-color: var(--lib-primary);
+}
+
+.share-link-box {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.share-link-input {
+    flex-grow: 1;
+    height: 2.85rem;
+    padding: 0.5rem 0.85rem;
+    border-radius: var(--lib-radius-md);
+    border: 1px solid var(--lib-border);
+    background: var(--lib-bg-base);
+    color: var(--lib-text-main);
+    font-size: 0.85rem;
+    outline: none;
+}
+
+.share-qr-section {
+    text-align: center;
+    border-top: 1px solid var(--lib-border);
+    padding-top: 1.25rem;
+}
+
+.share-qr-caption {
+    font-size: 0.82rem;
+    color: var(--lib-text-muted);
+    margin: 0 0 0.85rem 0;
+}
+
+.share-qr-wrapper {
+    display: inline-block;
+    padding: 0.75rem;
+    background: #ffffff;
+    border-radius: var(--lib-radius-lg);
+    box-shadow: var(--lib-shadow-md);
+    border: 1px solid var(--lib-border);
+}
+
+.share-qr-img {
+    width: 150px;
+    height: 150px;
+    display: block;
+}

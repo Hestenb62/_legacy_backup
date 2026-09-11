@@ -79,13 +79,16 @@ if (!function_exists('renderGutenbergLicenseHtml')) {
                 <div class="library-modal-cover-glow"></div>
                 <img id="modal-img" src="" alt="Book Cover" class="library-modal-cover-img" onerror="this.onerror=null; this.src='https://placehold.co/300x450/1e293b/ffffff?text=No+Cover';">
                 
-                <!-- Star (Bookmark) and Cite Buttons Under Cover Image -->
+                <!-- Star (Bookmark), Cite, and Assign Buttons Under Cover Image -->
                 <div class="library-modal-cover-actions">
                     <button id="modal-bookmark-btn" onclick="toggleModalBookmark()" class="modal-cover-btn bookmark-btn" title="Save to My Reading List" aria-label="Save to My Reading List">
                         <i class="far fa-star"></i> <span>Save to List</span>
                     </button>
                     <button type="button" id="modal-citation-btn" onclick="openBookCitationModal()" class="modal-cover-btn cite-btn" title="Generate Citations" aria-label="Generate Citation">
                         <i class="fas fa-quote-right"></i> <span>Cite Book</span>
+                    </button>
+                    <button type="button" id="modal-share-btn" onclick="openClassroomShareModal(window.currentBookId || (currentBookData?.id))" class="modal-cover-btn share-btn" title="Assign & Share Link" aria-label="Assign and Share Resource">
+                        <i class="fas fa-share-nodes"></i> <span>Assign / Share</span>
                     </button>
                 </div>
 
@@ -477,4 +480,134 @@ if (!function_exists('renderGutenbergLicenseHtml')) {
         </div>
     </div>
 </div>
+
+<!-- Reading Goal Setting Modal -->
+<div id="readingGoalModal" class="library-modal hidden" role="dialog" aria-modal="true" aria-labelledby="goal-modal-title" style="z-index: 3000;">
+    <div class="library-modal-backdrop" onclick="closeGoalModal()"></div>
+    <div class="library-modal-content info-explainer-content goal-modal-content" onclick="event.stopPropagation()">
+        <button type="button" onclick="closeGoalModal()" class="library-modal-close-btn" aria-label="Close Goal Modal">
+            <i class="fas fa-times"></i>
+        </button>
+        <h3 id="goal-modal-title" class="explainer-modal-title primary-title">
+            <i class="fas fa-bullseye mr-2"></i> Daily Reading Goal
+        </h3>
+        <p class="explainer-subtitle">Set your daily reading target to maintain your streak and earn scholar XP rewards.</p>
+
+        <div class="goal-setting-body">
+            <div class="goal-input-wrap">
+                <label for="goal-minutes-input" class="goal-input-label">Target Minutes Per Day:</label>
+                <div class="goal-input-row">
+                    <input type="number" id="goal-minutes-input" min="5" max="180" step="5" value="15" class="goal-number-input">
+                    <span class="goal-input-unit">minutes</span>
+                </div>
+            </div>
+
+            <div class="goal-preset-buttons">
+                <button type="button" class="goal-preset-btn" onclick="document.getElementById('goal-minutes-input').value = 10;">10 min</button>
+                <button type="button" class="goal-preset-btn" onclick="document.getElementById('goal-minutes-input').value = 20;">20 min</button>
+                <button type="button" class="goal-preset-btn" onclick="document.getElementById('goal-minutes-input').value = 30;">30 min</button>
+                <button type="button" class="goal-preset-btn" onclick="document.getElementById('goal-minutes-input').value = 45;">45 min</button>
+                <button type="button" class="goal-preset-btn" onclick="document.getElementById('goal-minutes-input').value = 60;">60 min</button>
+            </div>
+
+            <div class="goal-reward-banner">
+                <i class="fas fa-bolt text-amber-400"></i>
+                <span>Completing your daily goal awards <strong>+50 Scholar XP</strong> toward your profile level!</span>
+            </div>
+        </div>
+
+        <div class="goal-modal-footer">
+            <button type="button" onclick="saveReadingGoal()" class="btn-primary-glow" style="width: 100%;">
+                <i class="fas fa-check"></i> <span>Save Reading Goal</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Centralized Study Notebook Modal -->
+<div id="studyNotebookModal" class="library-modal hidden" role="dialog" aria-modal="true" aria-labelledby="notebook-modal-title" style="z-index: 3000;">
+    <div class="library-modal-backdrop" onclick="closeStudyNotebookModal()"></div>
+    <div class="library-modal-content info-explainer-content notebook-modal-content" onclick="event.stopPropagation()">
+        <button type="button" onclick="closeStudyNotebookModal()" class="library-modal-close-btn" aria-label="Close Study Notebook">
+            <i class="fas fa-times"></i>
+        </button>
+        
+        <div class="notebook-header-row">
+            <div>
+                <h3 id="notebook-modal-title" class="explainer-modal-title primary-title">
+                    <i class="fas fa-book-reader mr-2"></i> Scholar Study Notebook
+                </h3>
+                <p class="explainer-subtitle">All your highlights, marginal notes, and citations in one central binder.</p>
+            </div>
+            <span id="notebook-total-count" class="notebook-badge">0 Entries</span>
+        </div>
+
+        <!-- Notebook Toolbar -->
+        <div class="notebook-toolbar">
+            <button type="button" class="notebook-tool-btn" onclick="exportNotebookMarkdown()" title="Export all notes to a Markdown file">
+                <i class="fab fa-markdown"></i> <span>Export .MD</span>
+            </button>
+            <button type="button" class="notebook-tool-btn" onclick="exportNotebookFlashcards()" title="Export flashcards for Anki / Quizlet">
+                <i class="fas fa-layer-group"></i> <span>Flashcards CSV</span>
+            </button>
+            <button type="button" class="notebook-tool-btn" onclick="printStudyNotebook()" title="Print study sheet">
+                <i class="fas fa-print"></i> <span>Print Sheet</span>
+            </button>
+        </div>
+
+        <!-- Notebook Entries List -->
+        <div id="notebook-entries-list" class="notebook-entries-list">
+            <!-- Dynamically populated by lib-study-notebook.js -->
+        </div>
+    </div>
+</div>
+
+<!-- Classroom & Assignment Share Modal -->
+<div id="classroomShareModal" class="library-modal hidden" role="dialog" aria-modal="true" aria-labelledby="share-modal-title" style="z-index: 3000;">
+    <div class="library-modal-backdrop" onclick="closeClassroomShareModal()"></div>
+    <div class="library-modal-content info-explainer-content share-modal-content" onclick="event.stopPropagation()">
+        <button type="button" onclick="closeClassroomShareModal()" class="library-modal-close-btn" aria-label="Close Share Modal">
+            <i class="fas fa-times"></i>
+        </button>
+        
+        <h3 id="share-modal-title" class="explainer-modal-title primary-title">
+            <i class="fas fa-share-nodes mr-2"></i> Assign &amp; Share Resource
+        </h3>
+        <p class="explainer-subtitle">Generate a custom classroom link with pre-configured student accommodations:</p>
+
+        <div class="share-options-grid">
+            <label class="share-opt-toggle">
+                <input type="checkbox" id="share-opt-dyslexic" onchange="updateShareLinkPreview()">
+                <span><i class="fas fa-font"></i> OpenDyslexic Font</span>
+            </label>
+            <label class="share-opt-toggle">
+                <input type="checkbox" id="share-opt-tint" onchange="updateShareLinkPreview()">
+                <span><i class="fas fa-eye"></i> Irlen Reading Tint</span>
+            </label>
+            <label class="share-opt-toggle">
+                <input type="checkbox" id="share-opt-untimed" onchange="updateShareLinkPreview()">
+                <span><i class="fas fa-hourglass-start"></i> Untimed Practice</span>
+            </label>
+            <label class="share-opt-toggle">
+                <input type="checkbox" id="share-opt-mathjax" checked onchange="updateShareLinkPreview()">
+                <span><i class="fas fa-square-root-variable"></i> MathJax Math</span>
+            </label>
+        </div>
+
+        <div class="share-link-box">
+            <input type="text" id="share-link-input" readonly class="share-link-input">
+            <button type="button" id="share-copy-btn" class="btn-primary-glow" onclick="copyClassroomLink()">
+                <i class="fas fa-copy"></i> <span>Copy Link</span>
+            </button>
+        </div>
+
+        <div class="share-qr-section">
+            <p class="share-qr-caption">Or scan QR code to open directly on student tablets:</p>
+            <div class="share-qr-wrapper">
+                <img id="share-qr-preview-img" src="" alt="Classroom Assignment QR Code" class="share-qr-img">
+            </div>
+        </div>
+    </div>
+</div>
+
 
