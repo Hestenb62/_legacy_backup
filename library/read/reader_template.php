@@ -127,6 +127,7 @@ include ABSPATH . 'src/header.php';
 ?>
 
 <link rel="stylesheet" href="<?= function_exists('assetVersion') ? assetVersion('/assets/css/reader-main.css') : '../../assets/css/reader-main.css' ?>">
+<link rel="stylesheet" href="<?= function_exists('assetVersion') ? assetVersion('/assets/css/components/sticky-reading-bar.css') : '../../assets/css/components/sticky-reading-bar.css' ?>">
 <style>
 body.zen-mode .header-main,
 body.zen-mode .footer-main,
@@ -140,43 +141,220 @@ body.zen-mode {
 }
 </style>
 
-<!-- Reading Progress Bar -->
-<div id="progress-bar-container" aria-hidden="true">
-    <div id="progress-bar"></div>
-</div>
+<!-- Unified Sticky Reading Bar with Bottom Progress Indicator -->
+<header id="sticky-reading-bar" class="sticky-reading-bar is-active sticky-reader-unified" aria-label="Reading Controls & Progress" role="region">
+    <div class="sticky-bar-inner">
+        <!-- Left: Back to Catalog, Book Title, Chapter Subtitle, Session Timer -->
+        <div class="sticky-bar-left">
+            <a href="../index.php" class="sticky-bar-back-btn" title="Return to Digital Library Catalog" aria-label="Back to Catalog">
+                <i class="fas fa-arrow-left" aria-hidden="true"></i>
+            </a>
+            <div class="sticky-bar-info">
+                <span class="sticky-bar-title"><?php echo htmlspecialchars($bookTitle); ?></span>
+                <?php if (!empty($currentChapterTitle)): ?>
+                    <span class="sticky-bar-subtitle">
+                        <span class="sticky-badge-pill"><i class="fas fa-book-open"></i> <?php echo htmlspecialchars($currentChapterTitle); ?></span>
+                    </span>
+                <?php endif; ?>
+            </div>
+            <div id="reader-session-timer-pill" class="reader-session-timer-pill" title="Daily Reading Tracker">
+                <i class="fas fa-stopwatch" style="color: var(--color-primary, #e11d48);" aria-hidden="true"></i>
+                <span id="reading-session-time">0m today</span>
+                <span id="reading-streak-badge" class="reading-streak-badge"><i class="fas fa-fire" style="color: #f97316;" aria-hidden="true"></i> 1d</span>
+            </div>
+        </div>
 
-<?php 
-$barTitle = $bookTitle;
-$barSubtitle = $currentChapterTitle;
-$barBackUrl = "/library/read/index.php?book=" . urlencode($bookId);
-include_once ABSPATH . 'src/partials/sticky-reading-bar.php'; 
-?>
+        <!-- Center: Chapter Navigation + TTS Speech Controls -->
+        <div class="sticky-bar-center">
+            <?php if ($chapter !== 'intro'): ?>
+                <div class="controls-nav-group">
+                    <a href="<?php echo $prevUrl; ?>" 
+                       id="prev-chapter" 
+                       class="controls-nav-btn <?php echo !$hasPrev ? 'disabled' : ''; ?>" 
+                       aria-label="Previous Chapter"
+                       title="Previous Chapter">
+                        <i class="fas fa-chevron-left" aria-hidden="true"></i> <span>Prev</span>
+                    </a>
+                    
+                    <span id="current-chapter" class="controls-chapter-label" title="<?php echo htmlspecialchars($currentChapterTitle); ?>">
+                        <?php if ($isTeacherPage): ?>
+                            <i class="fas fa-chalkboard-teacher" aria-hidden="true"></i> Teacher
+                        <?php elseif ($chapter === 'intro'): ?>
+                            Intro
+                        <?php else: ?>
+                            Ch <?php echo $chapterNum; ?>
+                        <?php endif; ?>
+                    </span>
+                    
+                    <a href="<?php echo $nextUrl; ?>" 
+                       id="next-chapter" 
+                       class="controls-nav-btn <?php echo !$hasNext ? 'disabled' : ''; ?>" 
+                       aria-label="Next Chapter"
+                       title="Next Chapter">
+                        <span>Next</span> <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+
+                <!-- Text to Speech (TTS) Controls -->
+                <div class="controls-speech-group" id="reader-tts-toolbar">
+                    <button type="button" id="tts-speak-btn" class="speech-btn" title="Listen Aloud with Voice Narration" aria-label="Listen to chapter">
+                        <i class="fas fa-volume-up" aria-hidden="true"></i> <span>Listen</span>
+                    </button>
+                    <button type="button" id="tts-pause-btn" class="speech-btn speech-btn-pause hidden" title="Pause Voice Narration" aria-label="Pause narration">
+                        <i class="fas fa-pause" aria-hidden="true"></i> <span>Pause</span>
+                    </button>
+                    <button type="button" id="tts-resume-btn" class="speech-btn speech-btn-resume hidden" title="Resume Voice Narration" aria-label="Resume narration">
+                        <i class="fas fa-play" aria-hidden="true"></i> <span>Resume</span>
+                    </button>
+                    <button type="button" id="tts-stop-btn" class="speech-btn speech-btn-stop hidden" title="Stop Voice Narration" aria-label="Stop narration">
+                        <i class="fas fa-stop" aria-hidden="true"></i> <span>Stop</span>
+                    </button>
+                    <button type="button" id="tts-speed-btn" class="speech-btn speech-btn-speed" title="Change Narration Speed" aria-label="Narration Speed">
+                        1.0x
+                    </button>
+                </div>
+            <?php endif; ?>
+        </div>
+
+        <!-- Right: Progress Meta, Scaler, Study Tools & Settings -->
+        <div class="sticky-bar-right">
+            <!-- Scroll Depth / Time Left -->
+            <div class="sticky-bar-meta">
+                <div id="sticky-time-left" class="sticky-time-left" title="Estimated reading time remaining">
+                    <i class="far fa-clock" aria-hidden="true"></i> <span>Calculating...</span>
+                </div>
+                <span id="sticky-pct-badge" class="sticky-pct-badge" aria-label="Scroll percentage">0%</span>
+            </div>
+
+            <!-- Dynamic Lexile Switcher -->
+            <div id="lexile-switcher-wrap" style="display: none; align-items: center; gap: 0.35rem;">
+                <label for="lexile-switcher-select" style="font-size: 0.8rem; font-weight: 700; color: var(--color-text-secondary);"><i class="fas fa-brain" aria-hidden="true"></i></label>
+                <select id="lexile-switcher-select" class="tool-btn" style="appearance: auto; padding-right: 1.5rem; font-size: 0.85rem; border: 1px solid var(--color-border); border-radius: 8px;" title="Change Reading Level">
+                </select>
+            </div>
+
+            <?php if ($chapter !== 'intro'): ?>
+                <!-- Quick Font Scaler (A- / 100% / A+) -->
+                <div class="controls-quick-scaler" id="reader-quick-scaler" title="Adjust Font Size">
+                    <button type="button" id="reader-font-dec" class="scaler-btn" aria-label="Decrease Font Size" title="Decrease Font Size (A-)">
+                        <span style="font-size: 0.75rem; font-weight: 800;">A-</span>
+                    </button>
+                    <span id="reader-font-pct" class="scaler-label" title="Current Font Scale">100%</span>
+                    <button type="button" id="reader-font-inc" class="scaler-btn" aria-label="Increase Font Size" title="Increase Font Size (A+)">
+                        <span style="font-size: 0.95rem; font-weight: 800;">A+</span>
+                    </button>
+                </div>
+            <?php endif; ?>
+
+            <div class="sticky-bar-tools controls-tools-group">
+                <!-- Citation Generator -->
+                <button type="button" id="open-citation-btn" class="tool-btn" title="Generate Academic Citation" onclick="openChapterCitationModal()" aria-label="Generate Citation">
+                    <i class="fas fa-quote-right" aria-hidden="true"></i>
+                </button>
+
+                <!-- Study Suite (Vocab, Flashcards, Quizzes, Notes) -->
+                <button type="button" id="open-vocab-btn" class="tool-btn tool-btn-vocab" title="Study Guide, Flashcards & Comprehension Quizzes" aria-label="Open Study Guide">
+                    <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                </button>
+
+                <!-- Typography & Themes Panel Toggle -->
+                <button type="button" id="open-settings-btn" class="tool-btn tool-btn-settings" title="Typography, Font & Theme Settings" aria-label="Open Reader Settings">
+                    <i class="fas fa-font" aria-hidden="true"></i>
+                </button>
+
+                <!-- Zen Distraction-Free Mode Toggle -->
+                <button type="button" id="zen-mode-toggle" class="tool-btn" title="Toggle Distraction-Free Zen Mode (Esc or Z)" aria-label="Toggle Zen Mode">
+                    <i class="fas fa-expand" aria-hidden="true"></i>
+                </button>
+
+                <!-- Offline Cache Button -->
+                <button type="button" id="reader-offline-cache-btn" class="tool-btn" onclick="cacheCurrentBookOffline()" title="Save Entire Book for Offline Reading" aria-label="Save Book Offline">
+                    <i class="fas fa-cloud-download-alt" id="reader-offline-icon" aria-hidden="true"></i>
+                </button>
+
+                <!-- Bookmark Button -->
+                <button type="button" id="reader-bookmark-btn" class="tool-btn" onclick="window.toggleBookBookmark && window.toggleBookBookmark()" title="Bookmark this Book" aria-label="Bookmark this Book">
+                    <i class="far fa-bookmark" id="reader-bookmark-icon" aria-hidden="true"></i>
+                </button>
+
+                <!-- Table of Contents Modal Trigger -->
+                <?php if ($totalChapters > 1): ?>
+                    <button type="button" id="open-toc-modal" class="tool-btn tool-btn-toc" title="Table of Contents" aria-label="Open Table of Contents">
+                        <i class="fas fa-list-ol" aria-hidden="true"></i> <span>TOC</span>
+                    </button>
+                <?php endif; ?>
+
+                <!-- Book License & Sourcing -->
+                <button type="button" class="tool-btn" onclick="openLicenseModal()" title="View Book License & Sourcing" aria-label="View Book License">
+                    <i class="fas fa-info-circle" aria-hidden="true"></i>
+                </button>
+
+                <!-- Typography Dropdown Panel -->
+                <div id="settings-panel" class="settings-dropdown hidden" role="region" aria-label="Reader Customization Panel" style="width: 320px;">
+                    <h4 class="settings-section-title">Font Family</h4>
+                    <div class="settings-btn-row">
+                        <button type="button" class="settings-row-btn active settings-font" data-font="font-sans">Sans</button>
+                        <button type="button" class="settings-row-btn settings-font" data-font="font-serif">Serif</button>
+                        <button type="button" class="settings-row-btn settings-font" data-font="font-dyslexic" title="OpenDyslexic Font">Dyslexia</button>
+                        <button type="button" class="settings-row-btn settings-font" data-font="font-hyperlegible" title="Atkinson Hyperlegible Font">Hyperlegible</button>
+                        <button type="button" class="settings-row-btn settings-font" data-font="font-mono" title="Clean Monospace Font">Mono</button>
+                    </div>
+
+                    <h4 class="settings-section-title">Font Scale</h4>
+                    <div class="settings-btn-row">
+                        <button type="button" class="settings-row-btn settings-scale-chip" data-scale="85">85%</button>
+                        <button type="button" class="settings-row-btn active settings-scale-chip" data-scale="100">100%</button>
+                        <button type="button" class="settings-row-btn settings-scale-chip" data-scale="115">115%</button>
+                        <button type="button" class="settings-row-btn settings-scale-chip" data-scale="130">130%</button>
+                        <button type="button" class="settings-row-btn settings-scale-chip" data-scale="150">150%</button>
+                    </div>
+                    <div style="margin: 0.25rem 0 1rem 0;">
+                        <input type="range" id="reader-scale-slider" min="75" max="200" step="5" value="100" class="reader-scale-slider" aria-label="Font Size Slider">
+                    </div>
+
+                    <h4 class="settings-section-title">Line Spacing</h4>
+                    <div class="settings-btn-row">
+                        <button type="button" class="settings-row-btn settings-lh" data-lh="lh-tight">Tight</button>
+                        <button type="button" class="settings-row-btn settings-lh" data-lh="lh-normal">Normal</button>
+                        <button type="button" class="settings-row-btn active settings-lh" data-lh="lh-wide">Relaxed</button>
+                        <button type="button" class="settings-row-btn settings-lh" data-lh="lh-extra">Loose</button>
+                    </div>
+
+                    <h4 class="settings-section-title">Word & Letter Spacing</h4>
+                    <div class="settings-btn-row">
+                        <button type="button" class="settings-row-btn active settings-tracking" data-tracking="tracking-normal">Standard</button>
+                        <button type="button" class="settings-row-btn settings-tracking" data-tracking="tracking-spaced">Spaced</button>
+                        <button type="button" class="settings-row-btn settings-tracking" data-tracking="tracking-wide">Extra Wide</button>
+                    </div>
+
+                    <h4 class="settings-section-title">Reading Theme</h4>
+                    <div class="settings-btn-row">
+                        <button type="button" class="settings-row-btn settings-theme active" data-theme="theme-light">Light</button>
+                        <button type="button" class="settings-row-btn settings-theme" data-theme="theme-sepia">Sepia</button>
+                        <button type="button" class="settings-row-btn settings-theme" data-theme="theme-dark">Dark</button>
+                        <button type="button" class="settings-row-btn settings-theme" data-theme="theme-midnight">Midnight</button>
+                    </div>
+
+                    <h4 class="settings-section-title">Reading Width</h4>
+                    <div class="settings-btn-row">
+                        <button type="button" class="settings-row-btn settings-width" data-width="compact">Compact</button>
+                        <button type="button" class="settings-row-btn active settings-width" data-width="standard">Adaptive</button>
+                        <button type="button" class="settings-row-btn settings-width" data-width="wide">Wide</button>
+                        <button type="button" class="settings-row-btn settings-width" data-width="full">Full</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Micro-Progress Line (The only scroll indicator on page) -->
+    <div class="sticky-progress-line" aria-hidden="true">
+        <div id="sticky-progress-fill" class="sticky-progress-fill"></div>
+    </div>
+</header>
 
 <main id="main-content" class="library-main reader-main-layout">
     <script>document.body.classList.add("mode-scroll");</script>
-
-    <!-- Top Navigation Bar -->
-    <div class="reader-back-nav">
-        <a href="../index.php" class="reader-back-btn" title="Return to Digital Library Catalog">
-            <i class="fas fa-arrow-left"></i> <span>Catalog</span>
-        </a>
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-            <div id="reader-session-timer-pill" class="reader-session-timer-pill" title="Daily Reading Tracker">
-                <i class="fas fa-stopwatch" style="color: var(--color-primary, #e11d48);"></i>
-                <span id="reading-session-time">0m today</span>
-                <span id="reading-streak-badge" class="reading-streak-badge"><i class="fas fa-fire" style="color: #f97316;"></i> 1d</span>
-            </div>
-            <button type="button" id="reader-offline-cache-btn" class="reader-license-btn" onclick="cacheCurrentBookOffline()" title="Save Entire Book for Offline Reading" aria-label="Save Book Offline">
-                <i class="fas fa-cloud-download-alt" id="reader-offline-icon"></i>
-            </button>
-            <button type="button" id="reader-bookmark-btn" class="reader-license-btn" onclick="window.toggleBookBookmark && window.toggleBookBookmark()" title="Bookmark this Book" aria-label="Bookmark this Book">
-                <i class="far fa-bookmark" id="reader-bookmark-icon"></i>
-            </button>
-            <button type="button" class="reader-license-btn" onclick="openLicenseModal()" title="View Book License & Sourcing">
-                <i class="fas fa-info-circle"></i>
-            </button>
-        </div>
-    </div>
 
     <!-- Book Title Header (Displayed on Chapter 1 and Intro) -->
     <?php if ($chapterNum <= 1): ?>
@@ -239,161 +417,7 @@ include_once ABSPATH . 'src/partials/sticky-reading-bar.php';
         </section>
     <?php endif; ?>
 
-    <?php if ($chapter !== 'intro'): ?>
-        <!-- Reader Controls Bar -->
-        <nav id="reader-controls" aria-label="Reading Controls">
-            <!-- Left: Navigation (Prev / Chapter Indicator / Next) -->
-            <div class="controls-nav-group">
-                <a href="<?php echo $prevUrl; ?>" 
-                   id="prev-chapter" 
-                   class="controls-nav-btn <?php echo !$hasPrev ? 'disabled' : ''; ?>" 
-                   aria-label="Previous Chapter"
-                   title="Previous Chapter">
-                    <i class="fas fa-chevron-left"></i> <span>Prev</span>
-                </a>
-                
-                <span id="current-chapter" class="controls-chapter-label" title="<?php echo htmlspecialchars($currentChapterTitle); ?>">
-                    <?php if ($isTeacherPage): ?>
-                        <i class="fas fa-chalkboard-teacher"></i> Teacher Resources
-                    <?php elseif ($chapter === 'intro'): ?>
-                        Intro
-                    <?php else: ?>
-                        Ch <?php echo $chapterNum; ?>
-                    <?php endif; ?>
-                </span>
-                
-                <a href="<?php echo $nextUrl; ?>" 
-                   id="next-chapter" 
-                   class="controls-nav-btn <?php echo !$hasNext ? 'disabled' : ''; ?>" 
-                   aria-label="Next Chapter"
-                   title="Next Chapter">
-                    <span>Next</span> <i class="fas fa-chevron-right"></i>
-                </a>
-            </div>
 
-            <!-- Center: Text to Speech (TTS) Controls -->
-            <div class="controls-speech-group" id="reader-tts-toolbar">
-                <button type="button" id="tts-speak-btn" class="speech-btn" title="Listen Aloud with Voice Narration" aria-label="Listen to chapter">
-                    <i class="fas fa-volume-up"></i> <span>Listen</span>
-                </button>
-                <button type="button" id="tts-pause-btn" class="speech-btn speech-btn-pause hidden" title="Pause Voice Narration" aria-label="Pause narration">
-                    <i class="fas fa-pause"></i> <span>Pause</span>
-                </button>
-                <button type="button" id="tts-resume-btn" class="speech-btn speech-btn-resume hidden" title="Resume Voice Narration" aria-label="Resume narration">
-                    <i class="fas fa-play"></i> <span>Resume</span>
-                </button>
-                <button type="button" id="tts-stop-btn" class="speech-btn speech-btn-stop hidden" title="Stop Voice Narration" aria-label="Stop narration">
-                    <i class="fas fa-stop"></i> <span>Stop</span>
-                </button>
-                <button type="button" id="tts-speed-btn" class="speech-btn speech-btn-speed" title="Change Narration Speed" aria-label="Narration Speed">
-                    1.0x
-                </button>
-            </div>
-
-            <!-- Right: Study Tools & Customization Settings -->
-            <div class="controls-tools-group">
-                <!-- Dynamic Lexile Switcher -->
-                <div id="lexile-switcher-wrap" style="display: none; align-items: center; gap: 0.5rem; margin-right: 0.5rem;">
-                    <label for="lexile-switcher-select" style="font-size: 0.8rem; font-weight: 700; color: var(--color-text-secondary);"><i class="fas fa-brain"></i></label>
-                    <select id="lexile-switcher-select" class="tool-btn" style="appearance: auto; padding-right: 1.5rem; font-size: 0.9rem; border: 1px solid var(--color-border); border-radius: 8px;" title="Change Reading Level">
-                    </select>
-                </div>
-
-                <!-- Quick Font Scaler (A- / 100% / A+) -->
-                <div class="controls-quick-scaler" id="reader-quick-scaler" title="Adjust Font Size">
-                    <button type="button" id="reader-font-dec" class="scaler-btn" aria-label="Decrease Font Size" title="Decrease Font Size (A-)">
-                        <span style="font-size: 0.75rem; font-weight: 800;">A-</span>
-                    </button>
-                    <span id="reader-font-pct" class="scaler-label" title="Current Font Scale">100%</span>
-                    <button type="button" id="reader-font-inc" class="scaler-btn" aria-label="Increase Font Size" title="Increase Font Size (A+)">
-                        <span style="font-size: 0.95rem; font-weight: 800;">A+</span>
-                    </button>
-                </div>
-
-                <!-- Citation Generator -->
-                <button type="button" id="open-citation-btn" class="tool-btn" title="Generate Academic Citation" onclick="openChapterCitationModal()" aria-label="Generate Citation">
-                    <i class="fas fa-quote-right"></i>
-                </button>
-
-                <!-- Study Suite (Vocab, Flashcards, Quizzes, Notes) -->
-                <button type="button" id="open-vocab-btn" class="tool-btn tool-btn-vocab" title="Study Guide, Flashcards & Comprehension Quizzes" aria-label="Open Study Guide">
-                    <i class="fas fa-graduation-cap"></i>
-                </button>
-
-                <!-- Typography & Themes Panel Toggle -->
-                <button type="button" id="open-settings-btn" class="tool-btn tool-btn-settings" title="Typography, Font & Theme Settings" aria-label="Open Reader Settings">
-                    <i class="fas fa-font"></i>
-                </button>
-
-                <!-- Zen Distraction-Free Mode Toggle -->
-                <button type="button" id="zen-mode-toggle" class="tool-btn" title="Toggle Distraction-Free Zen Mode (Esc to Exit)" aria-label="Toggle Zen Mode">
-                    <i class="fas fa-expand"></i>
-                </button>
-
-                <!-- Table of Contents Modal Trigger -->
-                <?php if ($totalChapters > 1): ?>
-                    <button type="button" id="open-toc-modal" class="tool-btn tool-btn-toc" title="Table of Contents" aria-label="Open Table of Contents">
-                        <i class="fas fa-list-ol"></i> <span>TOC</span>
-                    </button>
-                <?php endif; ?>
-
-                <!-- Typography Dropdown Panel -->
-                <div id="settings-panel" class="settings-dropdown hidden" role="region" aria-label="Reader Customization Panel" style="width: 320px;">
-                    <h4 class="settings-section-title">Font Family</h4>
-                    <div class="settings-btn-row">
-                        <button type="button" class="settings-row-btn active settings-font" data-font="font-sans">Sans</button>
-                        <button type="button" class="settings-row-btn settings-font" data-font="font-serif">Serif</button>
-                        <button type="button" class="settings-row-btn settings-font" data-font="font-dyslexic" title="OpenDyslexic Font">Dyslexia</button>
-                        <button type="button" class="settings-row-btn settings-font" data-font="font-hyperlegible" title="Atkinson Hyperlegible Font">Hyperlegible</button>
-                        <button type="button" class="settings-row-btn settings-font" data-font="font-mono" title="Clean Monospace Font">Mono</button>
-                    </div>
-
-                    <h4 class="settings-section-title">Font Scale</h4>
-                    <div class="settings-btn-row">
-                        <button type="button" class="settings-row-btn settings-scale-chip" data-scale="85">85%</button>
-                        <button type="button" class="settings-row-btn active settings-scale-chip" data-scale="100">100%</button>
-                        <button type="button" class="settings-row-btn settings-scale-chip" data-scale="115">115%</button>
-                        <button type="button" class="settings-row-btn settings-scale-chip" data-scale="130">130%</button>
-                        <button type="button" class="settings-row-btn settings-scale-chip" data-scale="150">150%</button>
-                    </div>
-                    <div style="margin: 0.25rem 0 1rem 0;">
-                        <input type="range" id="reader-scale-slider" min="75" max="200" step="5" value="100" class="reader-scale-slider" aria-label="Font Size Slider">
-                    </div>
-
-                    <h4 class="settings-section-title">Line Spacing</h4>
-                    <div class="settings-btn-row">
-                        <button type="button" class="settings-row-btn settings-lh" data-lh="lh-tight">Tight</button>
-                        <button type="button" class="settings-row-btn settings-lh" data-lh="lh-normal">Normal</button>
-                        <button type="button" class="settings-row-btn active settings-lh" data-lh="lh-wide">Relaxed</button>
-                        <button type="button" class="settings-row-btn settings-lh" data-lh="lh-extra">Loose</button>
-                    </div>
-
-                    <h4 class="settings-section-title">Word & Letter Spacing</h4>
-                    <div class="settings-btn-row">
-                        <button type="button" class="settings-row-btn active settings-tracking" data-tracking="tracking-normal">Standard</button>
-                        <button type="button" class="settings-row-btn settings-tracking" data-tracking="tracking-spaced">Spaced</button>
-                        <button type="button" class="settings-row-btn settings-tracking" data-tracking="tracking-wide">Extra Wide</button>
-                    </div>
-
-                    <h4 class="settings-section-title">Reading Theme</h4>
-                    <div class="settings-btn-row">
-                        <button type="button" class="settings-row-btn settings-theme active" data-theme="theme-light">Light</button>
-                        <button type="button" class="settings-row-btn settings-theme" data-theme="theme-sepia">Sepia</button>
-                        <button type="button" class="settings-row-btn settings-theme" data-theme="theme-dark">Dark</button>
-                        <button type="button" class="settings-row-btn settings-theme" data-theme="theme-midnight">Midnight</button>
-                    </div>
-
-                    <h4 class="settings-section-title">Reading Width</h4>
-                    <div class="settings-btn-row">
-                        <button type="button" class="settings-row-btn settings-width" data-width="compact">Compact</button>
-                        <button type="button" class="settings-row-btn active settings-width" data-width="standard">Adaptive</button>
-                        <button type="button" class="settings-row-btn settings-width" data-width="wide">Wide</button>
-                        <button type="button" class="settings-row-btn settings-width" data-width="full">Full</button>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    <?php endif; ?>
 
     <!-- Reader Main Stage Wrapper -->
     <div id="book-stage" class="single-book-stage">
@@ -843,6 +867,7 @@ include_once ABSPATH . 'src/partials/sticky-reading-bar.php';
 <script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/reader/read-chapter-citation-generator.js') : '../../assets/js/reader/read-chapter-citation-generator.js' ?>" defer></script>
 <script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/reader/read-tracker.js') : '../../assets/js/reader/read-tracker.js' ?>" defer></script>
 <script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/reader/read-vocab-tooltip.js') : '../../assets/js/reader/read-vocab-tooltip.js' ?>" defer></script>
+<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/components/sticky-reading-bar.js') : '../../assets/js/components/sticky-reading-bar.js' ?>" defer></script>
 <script>
     // =========================================================================
     // One-Click Offline Book Downloader (Service Worker CacheStorage)

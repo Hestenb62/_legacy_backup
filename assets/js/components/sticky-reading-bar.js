@@ -96,8 +96,10 @@
       const winHeight = window.innerHeight;
       const maxScroll = docHeight - winHeight;
 
-      // Reveal bar after scrolling past 150px
-      if (scrollY > 150) {
+      // Reveal bar after scrolling past 150px, or keep pinned if unified reader bar
+      if (this.bar.classList.contains('sticky-reader-unified')) {
+        this.bar.classList.add('is-active');
+      } else if (scrollY > 150) {
         this.bar.classList.add('is-active');
       } else {
         this.bar.classList.remove('is-active');
