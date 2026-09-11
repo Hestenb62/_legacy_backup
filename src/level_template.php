@@ -450,6 +450,7 @@ function renderSubjectModules(array $modulesList, string $subjectId, string $sub
 <!-- Main Content Area -->
 <main id="main-content" class="main-container" tabindex="-1">
     <div>
+        <?php if (!empty($customLevelHeader)) { echo $customLevelHeader; } ?>
         <!-- MATH SECTION -->
         <section id="content-math" class="tab-content <?php echo ($initialSubject == 'math') ? 'block' : ''; ?>" role="tabpanel">
             <?php if (!renderSubjectModules($modules, 'math', 'fa-calculator', $themeColor)): ?>
@@ -1170,5 +1171,7 @@ function renderSubjectModules(array $modulesList, string $subjectId, string $sub
     // Listen for hash change
     window.addEventListener('hashchange', handleStandardDeepLink);
 </script>
+
+<?php if (!empty($customLevelFooter)) { echo $customLevelFooter; } ?>
 
 <?php include ABSPATH . 'src/footer.php'; ?>
