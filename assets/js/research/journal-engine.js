@@ -816,6 +816,9 @@ export class JournalEngine {
         if (!activeBlock) return;
         navigator.clipboard.writeText(activeBlock.innerText).then(() => {
           copyCitationBtn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+          if (typeof window.announceA11y === 'function') {
+            window.announceA11y('Citation copied to clipboard');
+          }
           setTimeout(() => {
             copyCitationBtn.innerHTML = '<i class="far fa-copy"></i> Copy Citation';
           }, 2000);

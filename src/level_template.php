@@ -1151,11 +1151,53 @@ function renderSubjectModules(array $modulesList, string $subjectId, string $sub
     window.dismissStandardDeepLink = dismissStandardDeepLink;
     window.handleStandardDeepLink = handleStandardDeepLink;
 
+    // Handle direct skill query deep links (e.g. ?a-math-m1-a-1 or ?skill=...)
+    function handleSkillQueryDeepLink() {
+        try {
+            const search = window.location.search ? window.location.search.substring(1) : '';
+            if (!search) return;
+            let targetSkillId = null;
+            if (search.includes('=')) {
+                const params = new URLSearchParams(window.location.search);
+                targetSkillId = params.get('skill') || params.get('id') || params.get('lesson');
+            } else {
+                targetSkillId = search.split('&')[0];
+            }
+            if (!targetSkillId || targetSkillId.includes('tab=') || targetSkillId.includes('standard=')) return;
+
+            const cleanId = decodeURIComponent(targetSkillId).trim().toLowerCase();
+            const matchingCard = document.querySelector(`.skill-card[data-skill-id="${cleanId}"]`) ||
+                                 document.querySelector(`.skill-card[data-skill-code="${cleanId}"]`) ||
+                                 document.getElementById(`skill-${cleanId.replace(/[^a-zA-Z0-9]/g, '-')}`);
+
+            if (matchingCard) {
+                // Find parent tab panel
+                const parentSection = matchingCard.closest('.tab-content');
+                if (parentSection && parentSection.id) {
+                    const subj = parentSection.id.replace('content-', '');
+                    if (typeof switchTab === 'function') switchTab(subj);
+                }
+                setTimeout(() => {
+                    matchingCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    matchingCard.classList.remove('standard-targeted-skill');
+                    void matchingCard.offsetWidth;
+                    matchingCard.classList.add('standard-targeted-skill');
+                }, 200);
+            }
+        } catch (e) {
+            console.debug('handleSkillQueryDeepLink note:', e);
+        }
+    }
+
     // Check on startup
     handleStandardDeepLink();
+    handleSkillQueryDeepLink();
 
     // Listen for hash change
-    window.addEventListener('hashchange', handleStandardDeepLink);
+    window.addEventListener('hashchange', () => {
+        handleStandardDeepLink();
+        handleSkillQueryDeepLink();
+    });
 </script>
 
 <?php if (!empty($customLevelFooter)) { echo $customLevelFooter; } ?>

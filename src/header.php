@@ -563,12 +563,6 @@ if (!function_exists('assetVersion')) {
                     </div>
                     
                     <div class="header-actions">
-                        <button type="button" class="global-search-trigger-btn no-print" onclick="window.openCommandPalette()" aria-label="Quick Search (Ctrl+K)" title="Quick Search (Ctrl+K)">
-                            <i class="fas fa-search"></i>
-                            <span class="search-trigger-text">Search...</span>
-                            <kbd class="search-trigger-kbd">Ctrl K</kbd>
-                        </button>
-
                       
                         
                         <div class="user-dropdown-container">

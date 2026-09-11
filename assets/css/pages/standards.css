@@ -173,7 +173,12 @@
     font-weight: 700;
     color: var(--color-text-main);
     cursor: pointer;
-    outline: none;
+    border-radius: var(--radius-sm, 4px);
+  }
+
+  .curr-select:focus-visible {
+    outline: 2px solid var(--color-primary, #4f46e5);
+    outline-offset: 2px;
   }
 
   .curr-select-chevron {

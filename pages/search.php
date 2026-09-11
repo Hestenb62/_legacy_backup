@@ -131,8 +131,8 @@ if ($query !== '') {
                         $ext = strtolower($file->getExtension());
                         $filename = $file->getFilename();
 
-                        // Process PHP and Markdown research files, skip self and root search.php
-                        if (($ext === 'php' || $ext === 'md') && $filename !== 'search.php' && $filename !== 'offline.html') {
+                        // Process PHP and Markdown research files, skip self and root search.php/offline.php
+                        if (($ext === 'php' || $ext === 'md') && $filename !== 'search.php' && $filename !== 'offline.php') {
                             $pathnameNorm = str_replace('\\', '/', $file->getPathname());
                             $rootNorm = str_replace('\\', '/', $rootDir);
                             $prefix = $rootNorm . '/';

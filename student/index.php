@@ -680,6 +680,37 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch(e) {
         console.error('Error loading bookmarks:', e);
     }
+
+    // Cross-tab and role synchronization listeners
+    window.addEventListener('storage', (e) => {
+        if (['hesten-user-profile', 'hl_gamification_profile', 'hesten_standards_mastery', 'hesten_learning_streak', 'library-bookmarks'].includes(e.key)) {
+            // Re-sync dashboard widgets dynamically
+            try {
+                const gameProfile = JSON.parse(localStorage.getItem('hl_gamification_profile'));
+                if (gameProfile) {
+                    const lvlEl = document.getElementById('student-hub-level-num');
+                    const rankEl = document.getElementById('student-hub-rank-title');
+                    if (lvlEl && gameProfile.level) lvlEl.textContent = gameProfile.level;
+                    if (rankEl && gameProfile.rank) rankEl.textContent = gameProfile.rank;
+                }
+                const streakData = JSON.parse(localStorage.getItem('hesten_learning_streak'));
+                if (streakData && streakData.streak) {
+                    const streakEl = document.getElementById('student-hero-streak');
+                    if (streakEl) streakEl.textContent = streakData.streak;
+                }
+            } catch (err) {}
+        }
+    });
+
+    window.addEventListener('hl:assessment-complete', () => {
+        try {
+            const streakData = JSON.parse(localStorage.getItem('hesten_learning_streak'));
+            if (streakData && streakData.streak) {
+                const streakEl = document.getElementById('student-hero-streak');
+                if (streakEl) streakEl.textContent = streakData.streak;
+            }
+        } catch (err) {}
+    });
 });
 </script>
 

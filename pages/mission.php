@@ -141,9 +141,11 @@ include '../src/header.php';
                     </p>
                 </div>
                 <div class="story-author">
-                    <img src="/assets/images/signature-placeholder.png" alt="Hesten Allison" class="author-signature" onerror="this.style.display='none'">
+                    <svg class="author-signature" aria-label="Signature of Hesten Allison" role="img" viewBox="0 0 240 60" width="200" height="50" style="max-width: 100%; height: auto; display: block; margin-bottom: 0.5rem;">
+                        <path d="M 15 42 Q 25 15, 38 12 Q 45 10, 48 24 Q 50 35, 42 45 Q 38 48, 52 40 Q 65 32, 75 35 Q 85 38, 92 32 Q 98 28, 102 36 Q 106 42, 115 35 T 130 33 M 70 20 L 78 45 M 140 18 Q 148 10, 155 22 Q 160 32, 158 46 M 150 32 Q 165 30, 180 32 M 175 22 L 175 42 M 185 35 Q 192 30, 200 34 Q 208 38, 220 32" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+                    </svg>
                     <p class="author-name">Hesten Allison</p>
-                    <p class="author-title">Founder & Developer</p>
+                    <p class="author-title">Founder &amp; Developer</p>
                 </div>
             </div>
 

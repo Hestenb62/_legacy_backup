@@ -3,8 +3,8 @@
             <h2 class="settings-title">
                 <i class="fas fa-sliders-h settings-title-icon"></i> Settings
             </h2>
-            <button id="a11y-close-button" class="settings-close-btn">
-                <i class="fas fa-times"></i>
+            <button id="a11y-close-button" class="settings-close-btn" aria-label="Close accessibility settings" title="Close settings">
+                <i class="fas fa-times" aria-hidden="true"></i>
             </button>
         </div>
         <div class="settings-content">
@@ -77,9 +77,9 @@
             <div class="settings-section">
                 <h3 class="settings-section-title">Text Alignment</h3>
                 <div class="settings-align-grid">
-                    <button class="settings-action-btn" onclick="updateGlobalSetting('textAlign', 'left')"><i class="fas fa-align-left"></i></button>
-                    <button class="settings-action-btn" onclick="updateGlobalSetting('textAlign', 'center')"><i class="fas fa-align-center"></i></button>
-                    <button class="settings-action-btn" onclick="updateGlobalSetting('textAlign', 'justify')"><i class="fas fa-align-justify"></i></button>
+                    <button class="settings-action-btn" onclick="updateGlobalSetting('textAlign', 'left')" aria-label="Align text left" title="Align Left"><i class="fas fa-align-left" aria-hidden="true"></i></button>
+                    <button class="settings-action-btn" onclick="updateGlobalSetting('textAlign', 'center')" aria-label="Align text center" title="Align Center"><i class="fas fa-align-center" aria-hidden="true"></i></button>
+                    <button class="settings-action-btn" onclick="updateGlobalSetting('textAlign', 'justify')" aria-label="Justify text" title="Justify Text"><i class="fas fa-align-justify" aria-hidden="true"></i></button>
                 </div>
             </div>
 

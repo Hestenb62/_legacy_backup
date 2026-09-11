@@ -30,8 +30,6 @@
 		<p>Europe’s encounter with the Americas would transform both continents, and soon would involve Africa, too. Traders, warriors, missionaries, and adventurers would forge commercial, political, and religious changes on all three continents, bringing new wealth to some people and exposing others to great brutality and misery. Even in Europe, the chief beneficiary of contact with the New World, conquest and colonization would contribute to inequality and social conflict.</p>
 		<p>Europeans dreamed of finding wealth in the New World, but knew that to do so they would need much labor. Columbus predicted that the Native peoples he encountered “should be good and intelligent servants.” The history of the Americas would be shaped by the efforts of conquerors and settlers to use first Native American, and then European and African labor to exploit the continent’s riches. In the process most of these laborers had to endure poverty and untimely death, but they were the people who built America.</p><a href="#slug-peoples_of_the_new_world">
 			<h2 id="slug-peoples_of_the_new_world">Peoples of the New World</h2>
-		</a><a href="#slug-">
-			<h3 id="slug-"></h3>
 		</a>
 		<div class="content-content">
 			<p>None of those involved in the encounter between Europe, the Americas, and Africa were a single people. Most varied of all were the inhabitants of the Americas. Evidence about their origins is thin and uneven, and archaeologists continue to debate it hotly. Until recently it was conventional to trace the earliest Americans to a period approximately 13,000 years ago, late in the last Ice Age, when groups from Siberia migrated across the dry land that linked Asia with Alaska before rising sea levels separated the continents. Recent findings suggest that people may also have reached the Americas by sea from South East Asia via Polynesia as much as 20,000 or more years ago, and that several different migrations populated the continent before about 4,000 BCE. At any event, migrants and their descendants spread across North and South America and to the Caribbean islands, building a vast array of cultures and languages. By 1492, there may have been as many as 50 or 100 million people in the Americas, perhaps one-seventh of the world’s population. But their isolation from the rest of the world—particularly their lack of immunity to European diseases—left them vulnerable as Europeans started coming to the Americas in the late fifteenth century.</p>
@@ -140,8 +138,6 @@
 			<p>A second factor was the process that scholars now call the Columbian Exchange. European contact with Africa and the Americas initiated an exchange of flora, fauna, and microorganisms hitherto isolated from one another. New World crop seeds were carried to Europe, along with diseases such as syphilis, which spread there rapidly after arriving in the 1520s. But the effect of European organisms on America was more dramatic. Newly introduced grasses drove out existing species, and domesticated livestock flourished on a continent where they had been unknown. Most damaging was the fact that new human diseases had disastrous effects on populations who initially lacked immunity to them. In some areas, typhus, influenza, measles, and smallpox wiped out ninety percent of Native peoples by 1600. Such devastation—by reducing Native populations and undermining their societies—would help conquerors and settlers shape their colonies to serve their own purposes.</p>
 		</div><a href="#slug-the_background_to_overseas_expansion_europe_and_africa">
 			<h2 id="slug-the_background_to_overseas_expansion_europe_and_africa">The Background to Overseas Expansion: Europe and Africa</h2>
-		</a><a href="#slug-">
-			<h3 id="slug-"></h3>
 		</a>
 		<div class="content-content">
 			<p>Led by Hernán Cortés, a Spanish expedition set out in 1518 to conquer Mexico. Successive waves of conquistadores followed. One wrote that he did so “for King, God, and Gold,” summing up the motivations that drove Europeans to explore and seize overseas territory. Changes in Europe over the centuries before 1500 had initiated political consolidation, religious division, and commercial development. These in turn fostered overseas trade and conquest, which first led to closer links between Europe and West Africa and to the colonization of Atlantic islands. As Europe’s interest in the Americas deepened, it drew Africa more tightly into the process.</p>
@@ -267,8 +263,6 @@
 			<p>West African societies’ strength and commercial sophistication enabled them to trade with Europeans while confining them largely to river and coastal centers. The disease-riddled environment also proved harsh for Europeans, who succumbed at alarming rates to malaria and other fatal tropical afflictions. Consequently Europeans made little effort to establish extensive colonial settlements in West Africa. But they did use African commerce and slavery as instruments in their encounters with the newly-found Americas.</p>
 		</div><a href="#slug-the_invasion_of_the_americas_begins_portugal_spain_and_the_need_for_labor_">
 			<h2 id="slug-the_invasion_of_the_americas_begins_portugal_spain_and_the_need_for_labor_">The Invasion of the Americas Begins: Portugal, Spain, and the Need for Labor </h2>
-		</a><a href="#slug-">
-			<h3 id="slug-"></h3>
 		</a>
 		<div class="content-content">
 			<p>The immediate cause of Europeans’ interest in the Americas lay in developments in Spain and Portugal. Since early in the fifteenth century, Portuguese fishing and trading vessels had probed the Atlantic. In time, they established the island colonies of Madeira, the Cape Verde Islands, and the island of São Tomé off the African coast. Navigational experience and trade with West Africa after 1470 led to a concerted effort to reach the East Indies. In 1487 a voyage led by Bartholomeu Dias rounded southern Africa; ten years later Vasco da Gama and his crew sailed all the way to India.</p>
@@ -368,9 +362,7 @@
 		</a>
 		<div class="content-content">
 			<p>New territory could enhance a nation’s power and prestige. Conquered peoples could be converted to Christianity. New land could provide wealth from mining, farming, or trade for governments, investors, and settlers. The Spanish crown, keen to use colonization as a means of rewarding, and thus controlling, Spain’s lesser nobility, placed the conduct of overseas conquest under central control, creating the Council of the Indies in 1524 to administer the whole Spanish empire from the port city of Seville. But success depended on obtaining and directing the labor of millions of people.</p>
-		</div><a href="#slug-">
-			<h3 id="slug-"></h3>
-		</a>
+		</div>
 		<div class="content-content">
 			<p>Conquistadors and noble settlers did not intend to do any work themselves, nor could they attract sufficient emigrants from Spain or Portugal to work for them in the Americas. From Columbus onward they hoped labor would be extracted from Native peoples who could be forced to work for their new masters. Whether they were priests seeking souls to convert, planters seeking crops to export, or officials seeking taxes to collect, forced labor helped to give them what they wanted.</p>
 			<p>Adapting practices both from southern Spain and the Canary islands and from Aztec society, the Spanish crown granted conquistadors in Mexico and Peru rights to share in the forced labor of Native settlements. Cortés alone had 23,000 workers under this <em>encomienda</em> system by the mid-1520s, and in parts of Spanish America it was used until the late seventeenth century to provide labor for missions, mines, and large farms. In Florida and New Mexico, missionaries resettled Native people into peasant communities, forcing them to work erecting buildings and growing crops. The missions in Florida, with just seventy priests between them, claimed to have over 25,000 Native Christian converts working for them by the mid-seventeenth century. Colonial governors exploited Native labor to obtain private income. Church and government disputed over the right to put Native inhabitants to work. In the Southwest, Pueblo peoples came into the missions in part to evade harassment by marauding Spanish soldiers.</p>
@@ -511,8 +503,6 @@
 
 		</div><a href="#slug-early_colonization_efforts_in_north_america">
 			<h2 id="slug-early_colonization_efforts_in_north_america">Early Colonization Efforts in North America</h2>
-		</a><a href="#slug-">
-			<h3 id="slug-"></h3>
 		</a>
 		<div class="content-content">
 			<p>Spain’s colonization of Central and South America extended to the Americas the process of formal conquest that had occurred in Spain itself in previous centuries. In contrast, northwestern Europeans’ ventures in America grew out of fishing and commerce, and initially made a more tentative impact on the continent. There were no powerful empires to be conquered, as Spain had overrun the Aztecs or the Incas. French, Dutch, and English explorers and traders pursued varied ambitions. During the seventeenth century, however, they established settlements that transformed this part of the continent as surely as the Spanish did further south.</p>
@@ -585,8 +575,6 @@
 			<p>Though the English took part in fishing and the fur trade, they became more concerned than the French or the Dutch with establishing settlements that occupied and cultivated the land. After the English captured New Netherland and renamed it New York in 1664 during one of several wars against Holland’s commercial empire, the Dutch relinquished their colony to secure more valuable territories elsewhere. Similarly, when British forces seized New France a century later in the French and Indian War (see Chapter 4), the French chose to give it up in return for keeping wealthier Caribbean sugar islands.</p>
 		</div><a href="#slug-the_english_colonial_experience">
 			<h2 id="slug-the_english_colonial_experience">The English Colonial Experience</h2>
-		</a><a href="#slug-">
-			<h3 id="slug-"></h3>
 		</a>
 		<div class="content-content">
 			<p>The English colonies that came to occupy North America’s eastern seaboard were more than just land claims or commercial outposts. They became permanent homes for streams of migrants from the British Isles and elsewhere. Between 1620 and 1640 alone, almost forty thousand men and women left England to live in North America. Some English colonists, including the merchants who organized and financed expeditions, sought to make their fortunes. But a majority probably had more modest hopes: to achieve economic independence, or religious or political freedoms denied them at home. All were influenced by changes that had been taking place in England over the previous two centuries. The conditions that impelled them to leave for the New World shaped the character of English colonies, and the variations among them.</p>
@@ -837,8 +825,6 @@
 			<p>Both Cromwell and the restored monarchy pursued vigorous policies to regulate trade, promote colonies, and fight wars with commercial rivals, particularly the Dutch. Guided by economic doctrines loosely known as “mercantilism,” which held that overall wealth was roughly fixed, and that states could only enrich themselves by diverting flows of income from rival nations, English governments passed trade laws, including the Navigation Acts, aimed at ensuring a net inflow of wealth into the country. Overseas colonies would be an important source of commodities and raw materials for England’s development. Later policies would also seek to expand colonial markets for English goods, again with the aim of assuring profits for the mother country.</p>
 		</div><a href="#slug-native_americans_decline_resistance_exchange">
 			<h2 id="slug-native_americans_decline_resistance_exchange">Native Americans: Decline, Resistance, Exchange</h2>
-		</a><a href="#slug-">
-			<h3 id="slug-"></h3>
 		</a>
 		<div class="content-content">
 			<p>English attitudes to American colonization had been shaped by their earlier conquest and settlement of parts of Ireland. “Planters” in Ireland disdained the Gaelic Irish peasants whose land they occupied, considering them to be “savages.”&nbsp; Some early settlers in America compared the Native peoples they encountered favorably with the hated Irish, but often the settlers’ view of the Irish prepared them to hold similar contempt for Native Americans.</p>

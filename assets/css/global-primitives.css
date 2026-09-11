@@ -173,9 +173,12 @@
     transition: top 0.2s ease-in-out;
   }
 
-  .skip-link:focus {
+  .skip-link:focus,
+  .skip-link:focus-visible {
     top: 0;
-    outline: none;
+    outline: 3px solid var(--color-accent, #06b6d4);
+    outline-offset: 3px;
+    box-shadow: 0 0 0 4px rgba(6, 182, 212, 0.35), var(--shadow-lg);
   }
 
   @media (prefers-reduced-motion: reduce) {

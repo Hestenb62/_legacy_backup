@@ -7,7 +7,7 @@ $pageAuthor = 'Hesten Allison';
 include '../../../src/header.php';
 ?>
 
-<link rel="stylesheet" href="/library/library.css">
+<link rel="stylesheet" href="<?= function_exists('assetVersion') ? assetVersion('/assets/css/reader-main.css') : '/assets/css/reader-main.css' ?>">
 
 <main id="main-content" class="library-main reader-main-layout">
     <div class="reader-back-nav">
