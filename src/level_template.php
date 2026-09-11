@@ -254,14 +254,24 @@ function renderSubjectModules(array $modulesList, string $subjectId, string $sub
                     </div>
                 </div>
 
-                <!-- Mastery Metric -->
+                <!-- Mastery Metric with Live Radial Ring -->
                 <div class="mastery-container">
-                    <div class="mastery-stats">
-                        <div class="mastery-label">Module Mastery</div>
-                        <div class="mastery-value module-progress-text" data-subject="<?php echo $subjectId; ?>" data-module="<?php echo $mIndex; ?>">0%</div>
-                    </div>
-                    <div class="progress-track">
-                        <div class="progress-fill module-progress-bar" data-subject="<?php echo $subjectId; ?>" data-module="<?php echo $mIndex; ?>" style="width: 0%"></div>
+                    <div class="mastery-header-row" style="display: flex; align-items: center; justify-content: space-between; gap: 0.75rem;">
+                        <div class="module-radial-wrap" aria-hidden="true" style="flex-shrink: 0;">
+                            <svg class="module-radial-svg" viewBox="0 0 44 44" width="44" height="44" style="display: block;">
+                                <circle class="radial-bg" cx="22" cy="22" r="18" fill="none" stroke="var(--color-border, #e2e8f0)" stroke-width="3.5" />
+                                <circle class="radial-ring module-radial-ring" data-subject="<?php echo $subjectId; ?>" data-module="<?php echo $mIndex; ?>" cx="22" cy="22" r="18" fill="none" stroke="var(--color-primary, #e11d48)" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="113.1" stroke-dashoffset="113.1" transform="rotate(-90 22 22)" style="transition: stroke-dashoffset 0.6s cubic-bezier(0.4, 0, 0.2, 1);" />
+                            </svg>
+                        </div>
+                        <div style="flex-grow: 1;">
+                            <div class="mastery-stats">
+                                <div class="mastery-label">Module Mastery</div>
+                                <div class="mastery-value module-progress-text" data-subject="<?php echo $subjectId; ?>" data-module="<?php echo $mIndex; ?>">0%</div>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill module-progress-bar" data-subject="<?php echo $subjectId; ?>" data-module="<?php echo $mIndex; ?>" style="width: 0%"></div>
+                            </div>
+                        </div>
                     </div>
                     <div class="module-progress-subtext" data-subject="<?php echo $subjectId; ?>" data-module="<?php echo $mIndex; ?>">
                         <span class="mod-stat-skills">0 / 0 Lessons</span>
@@ -868,6 +878,18 @@ function renderSubjectModules(array $modulesList, string $subjectId, string $sub
             const bar = document.querySelector(`.module-progress-bar[data-subject="${subject}"][data-module="${mIndex}"]`);
             if (bar) {
                 bar.style.width = percent + '%';
+            }
+
+            const radialRing = document.querySelector(`.module-radial-ring[data-subject="${subject}"][data-module="${mIndex}"]`);
+            if (radialRing) {
+                const circumference = 113.1;
+                const offset = circumference - (percent / 100) * circumference;
+                radialRing.style.strokeDashoffset = Math.max(0, offset);
+                if (percent === 100) {
+                    radialRing.style.stroke = '#10b981'; // Success emerald
+                } else if (percent > 0) {
+                    radialRing.style.stroke = 'var(--color-primary, #e11d48)';
+                }
             }
 
             // Subtext metrics

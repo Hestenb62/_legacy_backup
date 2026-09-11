@@ -29,7 +29,10 @@ const defaultSettings = {
     spotlightMode: false, // NEW
     acousticTicks: false, // NEW
     bionicReading: false, // NEW: Saccadic Fixation for ADHD/Dyslexia
-    curriculum: 'engageny' // NEW: Curriculum Selection Toggle
+    curriculum: 'engageny', // NEW: Curriculum Selection Toggle
+    readingRuler: false, // Guided Reading Ruler
+    rulerHeight: 65,
+    rulerDimOpacity: 0.45
 };
 
 let currentSettings = defaultSettings;
@@ -112,11 +115,22 @@ function updateGlobalSetting(key, value) {
         }));
     }
     
+    if (key === 'readingRuler' && window.accommodationEngine) {
+        window.accommodationEngine.setAccommodation('rulerEnabled', !!value);
+    } else if (key === 'rulerHeight' && window.accommodationEngine) {
+        window.accommodationEngine.setAccommodation('rulerHeight', parseInt(value, 10));
+    } else if (key === 'rulerDimOpacity' && window.accommodationEngine) {
+        window.accommodationEngine.setAccommodation('rulerDimOpacity', parseFloat(value));
+    }
+    
     // Announce setting changes to assistive technologies
     const friendlyAnnouncements = {
         theme: `Theme set to ${value}`,
         fontFamily: `Font family changed to ${value}`,
         readingMask: value ? 'Reading mask enabled' : 'Reading mask disabled',
+        readingRuler: value ? 'Reading ruler activated' : 'Reading ruler deactivated',
+        rulerHeight: `Reading ruler height set to ${value} pixels`,
+        rulerDimOpacity: `Reading ruler dim opacity set to ${value}`,
         hideImages: value ? 'Images hidden' : 'Images visible',
         hideBreadcrumbs: value ? 'Breadcrumbs hidden' : 'Breadcrumbs visible',
         spotlightMode: value ? 'Spotlight focus mode enabled' : 'Spotlight focus mode disabled',
@@ -280,6 +294,14 @@ function syncPanelInputs(s) {
     if (el('panel-spotlight')) el('panel-spotlight').checked = !!s.spotlightMode;
     if (el('panel-ticks')) el('panel-ticks').checked = !!s.acousticTicks;
     if (el('panel-bionic')) el('panel-bionic').checked = !!s.bionicReading;
+    if (el('panel-ruler')) {
+        const isRulerActive = window.accommodationEngine ? window.accommodationEngine.profile.rulerEnabled : !!s.readingRuler;
+        el('panel-ruler').checked = isRulerActive;
+    }
+    if (el('panel-ruler-dim')) {
+        const dimVal = window.accommodationEngine ? window.accommodationEngine.profile.rulerDimOpacity : (s.rulerDimOpacity || 0.45);
+        el('panel-ruler-dim').value = dimVal;
+    }
     
     if (el('panel-letter-spacing')) el('panel-letter-spacing').value = s.letterSpacing;
     if (el('panel-word-spacing')) el('panel-word-spacing').value = s.wordSpacing;
@@ -287,6 +309,24 @@ function syncPanelInputs(s) {
     if (el('panel-stop-animations')) el('panel-stop-animations').checked = !!s.stopAnimations;
     if (el('panel-color-overlay')) el('panel-color-overlay').value = s.colorOverlay || 'none';
 }
+
+// Keep reading ruler inputs in sync if toggled via keyboard shortcut (Alt+R) or accommodation engine
+window.addEventListener('hl:accommodations-updated', (e) => {
+    if (e.detail) {
+        const el = (id) => document.getElementById(id);
+        if (e.detail.rulerEnabled !== undefined) {
+            currentSettings.readingRuler = e.detail.rulerEnabled;
+            if (el('panel-ruler')) el('panel-ruler').checked = e.detail.rulerEnabled;
+        }
+        if (e.detail.rulerHeight !== undefined) {
+            currentSettings.rulerHeight = e.detail.rulerHeight;
+        }
+        if (e.detail.rulerDimOpacity !== undefined) {
+            currentSettings.rulerDimOpacity = e.detail.rulerDimOpacity;
+            if (el('panel-ruler-dim')) el('panel-ruler-dim').value = e.detail.rulerDimOpacity;
+        }
+    }
+});
 
 // --- Selection Toolbar (Define & TTS) ---
 let toolbarInitialized = false;

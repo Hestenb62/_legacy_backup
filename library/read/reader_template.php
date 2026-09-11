@@ -145,6 +145,13 @@ body.zen-mode {
     <div id="progress-bar"></div>
 </div>
 
+<?php 
+$barTitle = $bookTitle;
+$barSubtitle = $currentChapterTitle;
+$barBackUrl = "/library/read/index.php?book=" . urlencode($bookId);
+include_once ABSPATH . 'src/partials/sticky-reading-bar.php'; 
+?>
+
 <main id="main-content" class="library-main reader-main-layout">
     <script>document.body.classList.add("mode-scroll");</script>
 

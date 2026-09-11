@@ -61,6 +61,17 @@
                 <label class="settings-label">Reading Mask Opacity</label>
                 <input type="range" id="panel-mask-opacity" class="settings-range" min="0.1" max="0.95" step="0.05" oninput="updateGlobalSetting('maskOpacity', this.value)">
             </div>
+
+            <div class="settings-section" id="panel-ruler-controls">
+                <label class="settings-label">Reading Ruler Height</label>
+                <div class="settings-size-actions" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.35rem; margin-bottom: 0.5rem;">
+                    <button type="button" class="settings-action-btn" onclick="updateGlobalSetting('rulerHeight', 40)" title="1 Line Narrow (40px)" aria-label="1 Line Narrow">1 Line</button>
+                    <button type="button" class="settings-action-btn" onclick="updateGlobalSetting('rulerHeight', 65)" title="2 Lines Medium (65px)" aria-label="2 Lines Medium">2 Lines</button>
+                    <button type="button" class="settings-action-btn" onclick="updateGlobalSetting('rulerHeight', 95)" title="3 Lines Broad (95px)" aria-label="3 Lines Broad">3 Lines</button>
+                </div>
+                <label class="settings-label">Ruler Backdrop Dimming</label>
+                <input type="range" id="panel-ruler-dim" class="settings-range" min="0.1" max="0.85" step="0.05" oninput="updateGlobalSetting('rulerDimOpacity', this.value)">
+            </div>
             
             <div class="settings-section">
                 <h3 class="settings-section-title">Color Overlay</h3>
@@ -84,6 +95,10 @@
             </div>
 
             <div class="settings-toggles-container">
+                <label class="settings-toggle-row">
+                    <span class="settings-toggle-label">Reading Ruler (Alt+R)</span>
+                    <input type="checkbox" id="panel-ruler" onchange="updateGlobalSetting('readingRuler', this.checked)" class="settings-checkbox">
+                </label>
                 <label class="settings-toggle-row">
                     <span class="settings-toggle-label">Reading Mask</span>
                     <input type="checkbox" id="panel-mask" onchange="updateGlobalSetting('readingMask', this.checked)" class="settings-checkbox">

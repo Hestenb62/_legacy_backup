@@ -290,6 +290,7 @@
       this.totalQuestionsToAsk = 6;
       this.selectedAnswer = null;
       this.confidenceLevel = 'medium';
+      this.isSpeaking = false;
 
       this.init();
     }
@@ -300,6 +301,7 @@
     }
 
     pickNextQuestion() {
+      this.stopSpeech();
       // Filter out already answered questions
       const answeredIds = this.responses.map(r => r.question.id);
       const available = QUESTION_BANK.filter(q => !answeredIds.includes(q.id));
@@ -339,6 +341,9 @@
           </span>
           <span class="diag-standard-code"><i class="fas fa-tag"></i> Standard: ${this.currentQuestion.standard}</span>
           <span class="diag-blooms-tag"><i class="fas fa-layer-group"></i> Bloom's: ${this.currentQuestion.blooms}</span>
+          <button type="button" id="diag-speak-btn" class="diag-speak-btn" title="Listen to question and options aloud" aria-label="Read Question and Options Aloud">
+            <i class="fas fa-volume-up" id="diag-speak-icon" aria-hidden="true"></i> <span>Read Aloud</span>
+          </button>
         </div>
 
         <h3 class="diag-question-text">${this.currentQuestion.question}</h3>
@@ -362,6 +367,12 @@
         </div>
       `;
 
+      // Read aloud button listener
+      const speakBtn = card.querySelector('#diag-speak-btn');
+      if (speakBtn) {
+        speakBtn.addEventListener('click', () => this.toggleSpeech());
+      }
+
       // Option click listeners
       card.querySelectorAll('.diag-option-btn').forEach(btn => {
         btn.addEventListener('click', () => {
@@ -382,6 +393,101 @@
       });
     }
 
+    toggleSpeech() {
+      if (!('speechSynthesis' in window)) {
+        if (window.announceA11y) window.announceA11y("Text to speech is not supported in this browser.");
+        return;
+      }
+
+      if (window.speechSynthesis.speaking) {
+        this.stopSpeech();
+        return;
+      }
+
+      this.isSpeaking = true;
+      this.updateSpeakBtnUI(true);
+
+      const qText = this.currentQuestion ? this.currentQuestion.question : '';
+      const options = this.currentQuestion ? this.currentQuestion.options : [];
+      const card = document.getElementById('diag-question-card');
+      const optionButtons = card ? Array.from(card.querySelectorAll('.diag-option-btn')) : [];
+
+      const qUtterance = new SpeechSynthesisUtterance(`Question: ${qText}`);
+      qUtterance.rate = 0.95;
+
+      qUtterance.onend = () => {
+        if (!this.isSpeaking) return;
+        this.speakOptionsSequentially(options, optionButtons, 0);
+      };
+
+      qUtterance.onerror = () => {
+        this.stopSpeech();
+      };
+
+      window.speechSynthesis.speak(qUtterance);
+    }
+
+    speakOptionsSequentially(options, optionButtons, index) {
+      if (!this.isSpeaking || index >= options.length) {
+        this.stopSpeech();
+        return;
+      }
+
+      this.clearOptionHighlights();
+      if (optionButtons[index]) {
+        optionButtons[index].classList.add('tts-speaking-option');
+      }
+
+      const optLetter = String.fromCharCode(65 + index);
+      const optUtterance = new SpeechSynthesisUtterance(`Option ${optLetter}: ${options[index]}`);
+      optUtterance.rate = 0.95;
+
+      optUtterance.onend = () => {
+        if (optionButtons[index]) {
+          optionButtons[index].classList.remove('tts-speaking-option');
+        }
+        if (this.isSpeaking) {
+          this.speakOptionsSequentially(options, optionButtons, index + 1);
+        }
+      };
+
+      optUtterance.onerror = () => {
+        this.stopSpeech();
+      };
+
+      window.speechSynthesis.speak(optUtterance);
+    }
+
+    clearOptionHighlights() {
+      const card = document.getElementById('diag-question-card');
+      if (card) {
+        card.querySelectorAll('.diag-option-btn').forEach(b => b.classList.remove('tts-speaking-option'));
+      }
+    }
+
+    updateSpeakBtnUI(speaking) {
+      const btn = document.getElementById('diag-speak-btn');
+      if (!btn) return;
+      if (speaking) {
+        btn.classList.add('speaking');
+        btn.setAttribute('aria-pressed', 'true');
+        btn.innerHTML = '<i class="fas fa-stop" aria-hidden="true"></i> <span>Stop</span>';
+      } else {
+        btn.classList.remove('speaking');
+        btn.setAttribute('aria-pressed', 'false');
+        btn.innerHTML = '<i class="fas fa-volume-up" aria-hidden="true"></i> <span>Read Aloud</span>';
+      }
+    }
+
+    stopSpeech() {
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+      }
+      this.isSpeaking = false;
+      this.clearOptionHighlights();
+      this.updateSpeakBtnUI(false);
+    }
+
     bindEvents() {
       const nextBtn = document.getElementById('diag-next-btn');
       if (nextBtn) {
@@ -390,9 +496,34 @@
           this.recordResponse();
         });
       }
+
+      // Hotkey accessibility (R = Read Aloud, 1-4 = Select options, Enter = Next)
+      document.addEventListener('keydown', (e) => {
+        if (['INPUT', 'TEXTAREA', 'SELECT'].includes(e.target.tagName)) return;
+        if (this.isComplete) return;
+
+        if (e.key === 'r' || e.key === 'R') {
+          e.preventDefault();
+          this.toggleSpeech();
+        } else if (['1', '2', '3', '4'].includes(e.key)) {
+          const idx = parseInt(e.key, 10) - 1;
+          const card = document.getElementById('diag-question-card');
+          if (card) {
+            const btns = card.querySelectorAll('.diag-option-btn');
+            if (btns[idx]) btns[idx].click();
+          }
+        } else if (e.key === 'Enter') {
+          if (nextBtn && !nextBtn.disabled) {
+            nextBtn.click();
+          }
+        }
+      });
+
+      window.addEventListener('beforeunload', () => this.stopSpeech());
     }
 
     recordResponse() {
+      this.stopSpeech();
       const isCorrect = this.selectedAnswer === this.currentQuestion.correctIndex;
 
       // Adjust ability score
@@ -412,6 +543,7 @@
     }
 
     finishDiagnostic() {
+      this.stopSpeech();
       this.isComplete = true;
       const testView = document.getElementById('diag-test-view');
       const resultsView = document.getElementById('diag-results-view');

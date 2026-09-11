@@ -694,7 +694,30 @@
                 </div>
             </section>
 
-            <!-- 4. Curriculum Level Shortcuts -->
+            <!-- 4. My Downloaded Materials & Offline Lessons -->
+            <section class="off-card" aria-labelledby="card-downloads-title">
+                <div class="off-card-header" style="justify-content: space-between;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                        <div class="off-card-icon" style="background: rgba(16, 185, 129, 0.15); color: #10b981;" aria-hidden="true">
+                            <i class="fas fa-download"></i>
+                        </div>
+                        <div>
+                            <h2 id="card-downloads-title" class="off-card-title">Saved Materials &amp; Offline Lessons</h2>
+                        </div>
+                    </div>
+                    <button type="button" id="btn-clear-downloads" onclick="clearAllDownloadedMaterials()" class="off-btn-sm" style="display: none; color: #f87171;" title="Remove all saved materials to free storage">
+                        <i class="fas fa-trash-alt"></i> Clear All
+                    </button>
+                </div>
+                <p style="font-size: 0.85rem; color: var(--off-muted); margin: 0;">
+                    Books, chapters, and lessons downloaded for offline study:
+                </p>
+                <div class="off-book-list" id="off-downloads-list">
+                    <!-- Populated dynamically via JS -->
+                </div>
+            </section>
+
+            <!-- 5. Curriculum Level Shortcuts -->
             <section class="off-card" aria-labelledby="card-curric-title">
                 <div class="off-card-header">
                     <div class="off-card-icon" style="background: rgba(245, 158, 11, 0.15); color: #fbbf24;" aria-hidden="true">
@@ -1054,8 +1077,103 @@
             setTimeout(renderProblem, 1100);
         }
 
+        // ==========================================
+        // 5. Downloaded Offline Materials Manager
+        // ==========================================
+        function escapeHtml(str) {
+            if (!str) return '';
+            return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+        }
+
+        function renderDownloadedMaterials() {
+            const listEl = document.getElementById('off-downloads-list');
+            const clearBtn = document.getElementById('btn-clear-downloads');
+            if (!listEl) return;
+
+            let downloads = [];
+            try {
+                const raw = localStorage.getItem('hl_offline_downloads');
+                if (raw) downloads = JSON.parse(raw);
+            } catch(e) {}
+
+            if (!downloads || downloads.length === 0) {
+                if (clearBtn) clearBtn.style.display = 'none';
+                listEl.innerHTML = `
+                    <div style="text-align: center; padding: 1.5rem 1rem; color: var(--off-muted); font-size: 0.85rem; background: #0f172a; border-radius: 0.75rem; border: 1px dashed var(--off-border);">
+                        <i class="fas fa-cloud-download-alt" style="font-size: 1.75rem; margin-bottom: 0.5rem; opacity: 0.4; display: block;"></i>
+                        No downloaded books or lessons yet.<br>
+                        <span style="font-size: 0.75rem; opacity: 0.7;">Click the download icon on any chapter or lesson sticky reading bar to save it for offline study.</span>
+                    </div>
+                `;
+                return;
+            }
+
+            if (clearBtn) clearBtn.style.display = 'inline-flex';
+            listEl.innerHTML = downloads.map(item => `
+                <div class="off-book-item" style="display: flex; align-items: center; justify-content: space-between; gap: 0.75rem;">
+                    <a href="${item.url}" style="display: flex; align-items: center; gap: 0.65rem; color: inherit; text-decoration: none; flex-grow: 1; overflow: hidden;">
+                        <i class="fas ${item.type === 'lesson' ? 'fa-chalkboard-teacher' : 'fa-book'}" style="color: ${item.type === 'lesson' ? '#3b82f6' : '#a78bfa'}; flex-shrink: 0;"></i>
+                        <div style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                            <div style="font-weight: 700; font-size: 0.875rem;">${escapeHtml(item.title)}</div>
+                            <div style="font-size: 0.75rem; color: var(--off-muted);">${escapeHtml(item.subtitle || '')} &bull; Saved ${escapeHtml(item.date)}</div>
+                        </div>
+                    </a>
+                    <div style="display: flex; align-items: center; gap: 0.35rem; flex-shrink: 0;">
+                        <a href="${item.url}" class="off-btn-sm" style="background: rgba(59, 130, 246, 0.2); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.3); text-decoration: none;">
+                            Study <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <button type="button" onclick="removeDownloadedMaterial('${item.id}', '${item.url}')" class="off-btn-sm" style="color: #f87171; border: none; background: transparent; padding: 0.35rem 0.5rem;" title="Remove from offline downloads" aria-label="Remove ${escapeHtml(item.title)}">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        async function removeDownloadedMaterial(id, url) {
+            try {
+                let downloads = JSON.parse(localStorage.getItem('hl_offline_downloads') || '[]');
+                downloads = downloads.filter(d => d.id !== id);
+                localStorage.setItem('hl_offline_downloads', JSON.stringify(downloads));
+
+                if ('caches' in window) {
+                    const cache = await window.caches.open('hestens-learning-v14');
+                    await cache.delete(url);
+                }
+                renderDownloadedMaterials();
+                inspectOfflineDiagnostics();
+            } catch(e) {
+                console.warn('Could not remove offline item', e);
+            }
+        }
+
+        async function clearAllDownloadedMaterials() {
+            if (!confirm('Remove all downloaded materials from this device?')) return;
+            try {
+                let downloads = JSON.parse(localStorage.getItem('hl_offline_downloads') || '[]');
+                if ('caches' in window) {
+                    const cache = await window.caches.open('hestens-learning-v14');
+                    for (const item of downloads) {
+                        await cache.delete(item.url);
+                    }
+                }
+                localStorage.removeItem('hl_offline_downloads');
+                renderDownloadedMaterials();
+                inspectOfflineDiagnostics();
+            } catch(e) {
+                console.warn('Could not clear offline downloads', e);
+            }
+        }
+
+        window.addEventListener('storage', (e) => {
+            if (e.key === 'hl_offline_downloads') {
+                renderDownloadedMaterials();
+            }
+        });
+
         renderProblem();
         inspectOfflineDiagnostics();
+        renderDownloadedMaterials();
     </script>
 </body>
 </html>

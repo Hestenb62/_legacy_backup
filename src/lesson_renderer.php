@@ -109,6 +109,13 @@ include ABSPATH . 'src/header.php';
 
 <link rel="stylesheet" href="/assets/css/pages/lesson.css">
 
+<?php
+$barTitle = $meta['title'] ?? 'Lesson';
+$barSubtitle = $meta['badge'] ?? '';
+$barBackUrl = '/levels/' . strtolower($rawLevel ?? 'k') . '.php';
+include_once ABSPATH . 'src/partials/sticky-reading-bar.php';
+?>
+
 <main class="lesson-container">
     <div class="lesson-card">
         <!-- Header -->

@@ -9,6 +9,13 @@ include '../../../src/header.php';
 
 <link rel="stylesheet" href="<?= function_exists('assetVersion') ? assetVersion('/assets/css/reader-main.css') : '/assets/css/reader-main.css' ?>">
 
+<?php 
+$barTitle = 'Frankenstein';
+$barSubtitle = 'Chapter 1';
+$barBackUrl = '/library/read/index.php?book=frankenstein';
+include_once __DIR__ . '/../../../src/partials/sticky-reading-bar.php'; 
+?>
+
 <main id="main-content" class="library-main reader-main-layout">
     <div class="reader-back-nav">
         <a href="index.php?book=frankenstein" class="reader-back-btn">

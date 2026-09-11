@@ -796,34 +796,90 @@ function playIncorrectSound() {
 window.playCorrectSound = playCorrectSound;
 window.playIncorrectSound = playIncorrectSound;
 
-// Text-to-Speech Read Aloud function
+// Text-to-Speech Read Aloud function with active option highlighting
 window.readCurrentQuestionAloud = function() {
   if (!('speechSynthesis' in window)) {
-    alert("Text-to-speech audio is not supported in this browser.");
+    if (window.announceA11y) window.announceA11y("Text-to-speech audio is not supported in this browser.");
     return;
   }
-  window.speechSynthesis.cancel();
-
-  const qText = document.getElementById("question")?.textContent || "";
-  const opts = Array.from(document.querySelectorAll("#options button")).map((btn, idx) => {
-    return `Option ${idx + 1}: ${btn.textContent.trim()}`;
-  });
-
-  if (!qText || qText === "Loading Question...") return;
-
-  const fullText = `Question: ${qText}. ` + (opts.length > 0 ? opts.join(". ") : "");
-  const utterance = new SpeechSynthesisUtterance(fullText);
-  utterance.rate = 0.95;
-  utterance.pitch = 1.0;
-
+  
   const btn = document.getElementById("tts-read-btn");
-  if (btn) {
-    btn.classList.add("tts-speaking");
-    utterance.onend = () => btn.classList.remove("tts-speaking");
-    utterance.onerror = () => btn.classList.remove("tts-speaking");
+  const optButtons = Array.from(document.querySelectorAll("#options button"));
+
+  const clearOptionStyles = () => {
+    optButtons.forEach(b => b.classList.remove("tts-speaking-option", "ring-2", "ring-primary"));
+  };
+
+  if (window.speechSynthesis.speaking) {
+    window.speechSynthesis.cancel();
+    if (btn) {
+      btn.classList.remove("tts-speaking");
+      btn.setAttribute("aria-pressed", "false");
+    }
+    clearOptionStyles();
+    return;
   }
 
-  window.speechSynthesis.speak(utterance);
+  const qText = document.getElementById("question")?.textContent || "";
+  if (!qText || qText === "Loading Question...") return;
+
+  if (btn) {
+    btn.classList.add("tts-speaking");
+    btn.setAttribute("aria-pressed", "true");
+  }
+
+  // 1. Speak question first
+  const qUtterance = new SpeechSynthesisUtterance(`Question: ${qText}`);
+  qUtterance.rate = 0.95;
+  qUtterance.pitch = 1.0;
+
+  const speakOptionAt = (index) => {
+    if (index >= optButtons.length) {
+      clearOptionStyles();
+      if (btn) {
+        btn.classList.remove("tts-speaking");
+        btn.setAttribute("aria-pressed", "false");
+      }
+      return;
+    }
+
+    clearOptionStyles();
+    const currentBtn = optButtons[index];
+    currentBtn.classList.add("tts-speaking-option", "ring-2", "ring-primary");
+
+    const optUtterance = new SpeechSynthesisUtterance(`Option ${index + 1}: ${currentBtn.textContent.trim()}`);
+    optUtterance.rate = 0.95;
+    optUtterance.onend = () => speakOptionAt(index + 1);
+    optUtterance.onerror = () => {
+      clearOptionStyles();
+      if (btn) {
+        btn.classList.remove("tts-speaking");
+        btn.setAttribute("aria-pressed", "false");
+      }
+    };
+    window.speechSynthesis.speak(optUtterance);
+  };
+
+  qUtterance.onend = () => {
+    if (optButtons.length > 0) {
+      speakOptionAt(0);
+    } else {
+      if (btn) {
+        btn.classList.remove("tts-speaking");
+        btn.setAttribute("aria-pressed", "false");
+      }
+    }
+  };
+
+  qUtterance.onerror = () => {
+    clearOptionStyles();
+    if (btn) {
+      btn.classList.remove("tts-speaking");
+      btn.setAttribute("aria-pressed", "false");
+    }
+  };
+
+  window.speechSynthesis.speak(qUtterance);
 };
 
 // Global Keyboard Navigation (1-4 for options, Enter for next, H for hint, R for read aloud)

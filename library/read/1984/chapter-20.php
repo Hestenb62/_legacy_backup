@@ -88,6 +88,13 @@ include '../../../src/header.php';
   }
 </style>
 
+<?php 
+$barTitle = '1984';
+$barSubtitle = 'Chapter 20';
+$barBackUrl = '/library/read/index.php?book=1984';
+include_once __DIR__ . '/../../../src/partials/sticky-reading-bar.php'; 
+?>
+
 <main id="main-content" class="library-main reader-main-layout">
     <div class="reader-back-nav">
         <a href="index.php?book=1984" class="reader-back-btn">

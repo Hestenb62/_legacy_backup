@@ -287,6 +287,9 @@ include '../src/header.php';
                             <span class="accommodations-counter-pill" id="accommodations-counter-pill">
                                 <i class="fas fa-check-circle" style="color:#10b981;"></i> <span id="accommodations-active-count">0</span> Active Supports
                             </span>
+                            <button type="button" onclick="window.openIepBriefModal()" class="parents-tool-btn" style="background: linear-gradient(135deg, #10b981, #059669); padding: 0.45rem 1rem; font-size: 0.85rem; border: none; cursor: pointer; color: #ffffff; font-weight: 700; border-radius: 9999px; display: inline-flex; align-items: center; gap: 0.4rem;" aria-label="Generate IEP or 504 Meeting Brief">
+                                <i class="fas fa-file-signature"></i> IEP/504 Meeting Brief
+                            </button>
                             <button type="button" onclick="window.printAccommodationsGuide()" class="parents-tool-btn" style="background: var(--color-primary, #4f46e5); padding: 0.45rem 1rem; font-size: 0.85rem; border: none; cursor: pointer;">
                                 <i class="fas fa-print"></i> Print Accommodations Plan (PDF)
                             </button>
@@ -1433,6 +1436,190 @@ include '../src/header.php';
         }
     };
 
+    // =========================================================================
+    // IEP / 504 MEETING BRIEF GENERATOR
+    // =========================================================================
+    const ACC_DETAILS_MAP = {
+        'sensory-retreat': { title: 'Dedicated Calm Focus Retreat', cat: 'Sensory & Regulation', desc: 'Designated low-stimulus workspace free from visual and auditory distractions.' },
+        'movement-breaks': { title: 'Scheduled 5-Minute Movement Resets', cat: 'Sensory & Regulation', desc: 'Kinesthetic breaks and proprioceptive stretching between seated focus blocks.' },
+        'sensory-tools': { title: 'Sensory Fidget & Proprioceptive Tools', cat: 'Sensory & Regulation', desc: 'Textured grips, weighted lap pads, or wobble cushions to sustain tactile focus.' },
+        'opendyslexic': { title: 'OpenDyslexic Typeface & Contrast Tints', cat: 'Dyslexia & Reading', desc: 'High-contrast bottom-weighted typography to prevent letter flipping and crowding.' },
+        'reading-ruler': { title: 'Guided Line-Highlight Reading Ruler', cat: 'Dyslexia & Reading', desc: 'Focus aperture to guide eye tracking and eliminate line skipping.' },
+        'tts-audio': { title: 'Synchronized Text-to-Speech Audio', cat: 'Dyslexia & Reading', desc: 'Bimodal auditory and visual decoding for all texts, word problems, and questions.' },
+        'untimed-mode': { title: 'Low-Anxiety Untimed Practice Mode', cat: 'Executive Function', desc: 'Elimination of countdown timers to protect against executive processing anxiety.' },
+        'chunked-tasks': { title: 'Chunked Problem Sets (5 at a time)', cat: 'Executive Function', desc: 'Micro-milestones to manage working memory and prevent cognitive overload.' },
+        'visual-schedule': { title: 'Visual Checklists & Daily Pacing Timelines', cat: 'Executive Function', desc: 'Predictable visual schedule to ease task switching and transitions.' },
+        'mastery-gate': { title: 'Competency-Based Advancement (80%+)', cat: 'Mastery Progression', desc: 'Progress based on verified mastery rather than arbitrary seat-time.' },
+        'offline-sovereignty': { title: 'Offline-Resilient Study Sessions', cat: 'Mastery Progression', desc: 'Distraction-free offline access for literature and core curriculum practice.' }
+    };
+
+    window.openIepBriefModal = function() {
+        const modal = document.getElementById('iep-brief-modal');
+        if (!modal) return;
+
+        // Auto-fill student profile
+        let studentName = '';
+        let gradeLevel = '3rd Grade (Level E)';
+        try {
+            const rawProf = localStorage.getItem('hesten_user_profile') || localStorage.getItem('hesten-user-profile');
+            if (rawProf) {
+                const p = JSON.parse(rawProf);
+                if (p.firstName) studentName = p.firstName + (p.lastName ? (' ' + p.lastName) : '');
+                if (p.grade) gradeLevel = p.grade;
+            }
+        } catch (e) {}
+
+        const nameInput = document.getElementById('iep-student-name');
+        const gradeInput = document.getElementById('iep-student-grade');
+        const dateInput = document.getElementById('iep-meeting-date');
+        const mgrInput = document.getElementById('iep-case-manager');
+
+        if (nameInput) nameInput.value = studentName || 'Student Scholar';
+        if (gradeInput) gradeInput.value = gradeLevel;
+        if (dateInput && !dateInput.value) dateInput.value = new Date().toISOString().split('T')[0];
+        if (mgrInput && !mgrInput.value) mgrInput.value = 'Homeschool Learning Coach';
+
+        window.syncIepBriefPreview();
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    };
+
+    window.closeIepBriefModal = function() {
+        const modal = document.getElementById('iep-brief-modal');
+        if (modal) modal.style.display = 'none';
+        document.body.style.overflow = '';
+    };
+
+    window.syncIepBriefPreview = function() {
+        const container = document.getElementById('iep-brief-sheet');
+        if (!container) return;
+
+        const name = (document.getElementById('iep-student-name')?.value || 'Student Scholar').trim();
+        const grade = (document.getElementById('iep-student-grade')?.value || 'Current Grade').trim();
+        const meetingDate = document.getElementById('iep-meeting-date')?.value || new Date().toLocaleDateString();
+        const manager = (document.getElementById('iep-case-manager')?.value || 'Homeschool Learning Coach').trim();
+
+        // Active Accommodations
+        const activeKeys = getSavedAccommodations();
+        const activeAccs = activeKeys.map(k => ACC_DETAILS_MAP[k]).filter(Boolean);
+
+        // Standards Mastery Statistics
+        let standards = {};
+        try {
+            const rawStd = localStorage.getItem('hesten_standards_mastery');
+            if (rawStd) standards = JSON.parse(rawStd);
+        } catch (e) {}
+
+        const stdEntries = Object.entries(standards);
+        const totalAssessed = stdEntries.length;
+        let masteredCount = 0;
+        let proficientCount = 0;
+        let developingCount = 0;
+
+        stdEntries.forEach(([_, data]) => {
+            const score = data.percentage ?? (data.bestScore ?? (data.score ?? 0));
+            if (score >= 80) masteredCount++;
+            else if (score >= 60) proficientCount++;
+            else developingCount++;
+        });
+
+        // HTML Sheet
+        container.innerHTML = `
+            <div class="iep-sheet-header">
+                <div>
+                    <h3 class="iep-sheet-title">INDIVIDUALIZED ACCOMMODATION &amp; MASTERY BRIEF</h3>
+                    <p class="iep-sheet-subtitle">Official Student Portfolio Document for IEP, 504 Plan, and Committee Reviews</p>
+                </div>
+                <div style="text-align: right; font-size: 0.75rem; color: #64748b;">
+                    <strong>Hesten's Learning Platform</strong><br>
+                    Standards-Aligned Portfolio
+                </div>
+            </div>
+
+            <table class="iep-meta-table">
+                <tr>
+                    <td class="meta-label">Student Name:</td>
+                    <td><strong>${name}</strong></td>
+                    <td class="meta-label">Grade / Academic Level:</td>
+                    <td>${grade}</td>
+                </tr>
+                <tr>
+                    <td class="meta-label">Meeting / Effective Date:</td>
+                    <td>${meetingDate}</td>
+                    <td class="meta-label">Case Manager / Coach:</td>
+                    <td>${manager}</td>
+                </tr>
+            </table>
+
+            <h4 class="iep-sheet-section-title">
+                <i class="fas fa-check-circle" style="color: #10b981;"></i> Active Section 504 / IEP Instructional Accommodations
+            </h4>
+            ${activeAccs.length > 0 ? `
+                <div class="iep-acc-list">
+                    ${activeAccs.map(a => `
+                        <div class="iep-acc-item">
+                            <strong>${a.title}</strong> (${a.cat})<br>
+                            <span style="font-size: 0.75rem; color: #475569;">${a.desc}</span>
+                        </div>
+                    `).join('')}
+                </div>
+            ` : `
+                <p style="font-size: 0.85rem; color: #64748b; font-style: italic;">No specific platform accommodations currently checked. Student is utilizing standard accessible baseline settings.</p>
+            `}
+
+            <h4 class="iep-sheet-section-title">
+                <i class="fas fa-chart-line" style="color: #3b82f6;"></i> Standardized Formative Mastery &amp; Performance Summary
+            </h4>
+            <div class="iep-mastery-stats-grid">
+                <div class="iep-mastery-stat-box">
+                    <div class="iep-stat-num" style="color: #10b981;">${masteredCount}</div>
+                    <div class="iep-stat-label">Standards Mastered (80%+)</div>
+                </div>
+                <div class="iep-mastery-stat-box">
+                    <div class="iep-stat-num" style="color: #3b82f6;">${proficientCount}</div>
+                    <div class="iep-stat-label">Proficient Competencies (60–79%)</div>
+                </div>
+                <div class="iep-mastery-stat-box">
+                    <div class="iep-stat-num" style="color: #f59e0b;">${totalAssessed}</div>
+                    <div class="iep-stat-label">Total Standards Evaluated</div>
+                </div>
+            </div>
+
+            <h4 class="iep-sheet-section-title">
+                <i class="fas fa-lightbulb" style="color: #f59e0b;"></i> Universal Design for Learning (UDL) Scaffolds In Effect
+            </h4>
+            <ul style="font-size: 0.825rem; line-height: 1.6; color: #334155; margin: 0 0 1.5rem 1.25rem; padding: 0;">
+                <li><strong>Multimodal Representation:</strong> Synchronized text-to-speech audio with visual word and option highlighting across all formative assessments and reading passages.</li>
+                <li><strong>Flexible Expression:</strong> Keyboard shortcuts (1-4 option hotkeys, Enter navigation) and digital scratchpad support for multi-step reasoning.</li>
+                <li><strong>Cognitive Regulation:</strong> Untimed low-anxiety mode and sensory retreat options protecting against test anxiety and cognitive overload.</li>
+            </ul>
+
+            <div class="iep-signature-grid">
+                <div class="iep-sig-line">
+                    Parent / Guardian Signature &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Date
+                </div>
+                <div class="iep-sig-line">
+                    Special Education Case Manager / Educator &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Date
+                </div>
+            </div>
+        `;
+    };
+
+    window.printIepBrief = function() {
+        document.body.classList.add('printing-iep-brief');
+        window.print();
+        window.addEventListener('afterprint', () => {
+            document.body.classList.remove('printing-iep-brief');
+        }, { once: true });
+    };
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            window.closeIepBriefModal();
+        }
+    });
+
     // Load initial parents hub states
     document.addEventListener('DOMContentLoaded', () => {
         loadSavedAccommodations();
@@ -1446,4 +1633,61 @@ include '../src/header.php';
     });
 </script>
 
+<!-- One-Click IEP / 504 Meeting Brief Modal -->
+<div id="iep-brief-modal" class="iep-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="iep-modal-title" style="display: none;">
+    <div class="iep-modal-card">
+        <div class="iep-modal-header">
+            <div>
+                <span class="parents-tool-badge" style="background: rgba(16, 185, 129, 0.15); color: #059669; margin-bottom: 0.35rem; display: inline-flex; align-items: center; gap: 0.35rem;">
+                    <i class="fas fa-file-signature"></i> Official Meeting Documentation
+                </span>
+                <h2 id="iep-modal-title" class="iep-modal-title">IEP / 504 Accommodation &amp; Progress Brief</h2>
+            </div>
+            <button type="button" class="iep-modal-close" onclick="window.closeIepBriefModal()" aria-label="Close modal">
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <div class="iep-modal-body">
+            <p class="iep-modal-desc">
+                Synthesize active platform accommodations, formative standards mastery, and educator notes into an official brief for ARD, Section 504, or IEP committee meetings.
+            </p>
+
+            <div class="iep-form-grid no-print">
+                <div class="iep-field-group">
+                    <label for="iep-student-name">Student Scholar Name:</label>
+                    <input type="text" id="iep-student-name" class="parents-form-input" placeholder="e.g. Leo Vance" oninput="window.syncIepBriefPreview()">
+                </div>
+                <div class="iep-field-group">
+                    <label for="iep-student-grade">Current Academic Grade:</label>
+                    <input type="text" id="iep-student-grade" class="parents-form-input" placeholder="e.g. 3rd Grade (Level E)" oninput="window.syncIepBriefPreview()">
+                </div>
+                <div class="iep-field-group">
+                    <label for="iep-meeting-date">Meeting / Effective Date:</label>
+                    <input type="date" id="iep-meeting-date" class="parents-form-input" onchange="window.syncIepBriefPreview()">
+                </div>
+                <div class="iep-field-group">
+                    <label for="iep-case-manager">Parent Coach / Educator:</label>
+                    <input type="text" id="iep-case-manager" class="parents-form-input" placeholder="e.g. Sarah Vance, M.Ed." oninput="window.syncIepBriefPreview()">
+                </div>
+            </div>
+
+            <!-- Printable Sheet Preview Container -->
+            <div id="iep-brief-sheet" class="iep-brief-sheet">
+                <!-- Rendered dynamically -->
+            </div>
+        </div>
+
+        <div class="iep-modal-footer no-print">
+            <button type="button" class="iep-modal-btn iep-btn-secondary" onclick="window.closeIepBriefModal()">
+                Close
+            </button>
+            <button type="button" class="iep-modal-btn iep-btn-primary" onclick="window.printIepBrief()">
+                <i class="fas fa-print"></i> Print Official IEP/504 Brief (PDF)
+            </button>
+        </div>
+    </div>
+</div>
+
 <?php include '../src/footer.php'; ?>
+
