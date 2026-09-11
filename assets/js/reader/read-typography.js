@@ -20,19 +20,22 @@
         const PREFS_KEY = 'hesten_reader_prefs';
         const PROGRESS_KEY = `hesten_progress_${bookId}_lastChapter`;
         const SCROLL_POS_KEY = `hesten_scroll_pos_${bookId}_chapter_${currentChapter}`;
+        const SCROLL_PCT_KEY = `hesten_scroll_pct_${bookId}_chapter_${currentChapter}`;
         const COMPLETION_KEY = `hesten_completion_pct_${bookId}`;
         const HIGHLIGHTS_KEY = `hesten_highlights_${bookId}_chapter_${currentChapter}`;
 
-        // Save last active chapter
+        // Save last active chapter and slug
         try {
             localStorage.setItem(PROGRESS_KEY, currentChapter);
+            localStorage.setItem(`hesten_progress_${bookId}_lastChapterSlug`, meta.chapter || `chapter-${currentChapter}`);
+            localStorage.setItem(`hesten_last_read_${bookId}`, Date.now());
         } catch (e) {}
 
         // --- 1. Typography & Theme Settings ---
         if (typeof initTypographyAndTheme === 'function') initTypographyAndTheme(PREFS_KEY);
 
         // --- 2. Scroll Progress & Resume Toast ---
-        if (typeof initScrollProgress === 'function') initScrollProgress(SCROLL_POS_KEY, COMPLETION_KEY, currentChapter, totalChapters);
+        if (typeof initScrollProgress === 'function') initScrollProgress(SCROLL_POS_KEY, COMPLETION_KEY, currentChapter, totalChapters, SCROLL_PCT_KEY, bookId, meta);
 
         // --- 3. Text-to-Speech (TTS) Narration Engine ---
         if (typeof initTextToSpeech === 'function') initTextToSpeech(bookContent);

@@ -159,6 +159,23 @@
                 userDecks[key] = JSON.parse(JSON.stringify(DEFAULT_DECKS[key]));
             }
         });
+
+        // Normalize and sanitize existing cards across all decks
+        Object.keys(userDecks).forEach(key => {
+            if (userDecks[key] && Array.isArray(userDecks[key].cards)) {
+                userDecks[key].cards = userDecks[key].cards.filter(c => c && typeof c === 'object').map(c => {
+                    return {
+                        id: c.id || ('card-' + Date.now() + '-' + Math.floor(Math.random() * 1000)),
+                        term: String(c.term || c.word || c.front || c.title || '').trim(),
+                        definition: String(c.definition || c.meaning || c.back || c.desc || '').trim(),
+                        example: String(c.example || '').trim(),
+                        box: Math.max(1, Math.min(5, Number(c.box) || 1)),
+                        lastReviewed: c.lastReviewed || null,
+                        nextDue: Number(c.nextDue) || 0
+                    };
+                });
+            }
+        });
     }
 
     function saveDecks() {
@@ -171,7 +188,8 @@
 
     function getActiveCards() {
         const deck = userDecks[activeDeckKey];
-        return (deck && deck.cards) ? deck.cards : [];
+        if (!deck || !Array.isArray(deck.cards)) return [];
+        return deck.cards.filter(c => c && typeof c === 'object');
     }
 
     function updateLeitnerCounts() {
@@ -243,15 +261,20 @@
         if (currentCardIdx < 0) currentCardIdx = cards.length - 1;
 
         const card = cards[currentCardIdx];
+        if (!card) return;
+
+        const term = String(card.term || card.word || card.front || card.title || '').trim();
+        const definition = String(card.definition || card.meaning || card.back || card.desc || '').trim();
+        const example = String(card.example || '').trim();
 
         // 1. Classic Flip
         const frontText = document.getElementById('flashcard-front-text');
         const backText = document.getElementById('flashcard-back-text');
         const exampleText = document.getElementById('flashcard-example-text');
 
-        if (frontText) frontText.textContent = card.term;
-        if (backText) backText.textContent = card.definition;
-        if (exampleText) exampleText.textContent = card.example ? `"${card.example}"` : '';
+        if (frontText) frontText.textContent = term || 'Untitled Card';
+        if (backText) backText.textContent = definition || 'No definition available.';
+        if (exampleText) exampleText.textContent = example ? `"${example}"` : '';
 
         // 2. Cloze Recall
         const clozeDisplay = document.getElementById('cloze-sentence-display');
@@ -259,9 +282,17 @@
         const clozeFeedback = document.getElementById('cloze-feedback-msg');
 
         if (clozeDisplay) {
-            const sentence = card.example || card.definition;
-            const regex = new RegExp(card.term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
-            clozeDisplay.innerHTML = sentence.replace(regex, '<span style="color: var(--color-primary); text-decoration: underline; font-weight: 800;">________</span>');
+            const sentence = example || definition || term;
+            if (term && sentence) {
+                try {
+                    const regex = new RegExp(term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+                    clozeDisplay.innerHTML = sentence.replace(regex, '<span style="color: var(--color-primary); text-decoration: underline; font-weight: 800;">________</span>');
+                } catch (e) {
+                    clozeDisplay.textContent = sentence;
+                }
+            } else {
+                clozeDisplay.textContent = sentence || 'No cloze text available.';
+            }
         }
         if (clozeInput) {
             clozeInput.value = '';
@@ -274,7 +305,7 @@
         const spellingFeedback = document.getElementById('spelling-feedback-msg');
 
         if (spellingInput) spellingInput.value = '';
-        if (spellingHint) spellingHint.textContent = `Definition hint: ${card.definition.slice(0, 120)}...`;
+        if (spellingHint) spellingHint.textContent = definition ? `Definition hint: ${definition.slice(0, 120)}...` : (term ? `Word length: ${term.length} letters` : '');
         if (spellingFeedback) spellingFeedback.style.display = 'none';
 
         updateLeitnerCounts();
@@ -365,10 +396,13 @@
         const cards = getActiveCards();
         if (cards.length === 0) return;
         const card = cards[currentCardIdx];
-        if (!('speechSynthesis' in window)) return;
+        if (!card || !('speechSynthesis' in window)) return;
 
         window.speechSynthesis.cancel();
-        const text = isFlipped ? card.definition : card.term;
+        const term = String(card.term || card.word || card.front || '');
+        const def = String(card.definition || card.meaning || card.back || '');
+        const text = isFlipped ? def : term;
+        if (!text) return;
         const u = new SpeechSynthesisUtterance(text);
         u.rate = speed;
         u.pitch = 1.0;
@@ -442,15 +476,31 @@
         // Add card to deck external hook
         window.addFlashcardToDeck = function (deckKey, term, definition, example = '') {
             loadDecks();
-            const targetKey = userDecks[deckKey] ? deckKey : 'custom';
+            let targetKey = deckKey;
+            let termVal = term;
+            let defVal = definition;
+            let exVal = example;
+
+            // Handle invocation as (term, definition, example) without deckKey
+            if (typeof defVal === 'undefined' && typeof termVal === 'string') {
+                defVal = termVal;
+                termVal = targetKey;
+                targetKey = 'custom';
+            }
+
+            targetKey = (userDecks && userDecks[targetKey]) ? targetKey : 'custom';
             if (!userDecks[targetKey]) {
                 userDecks[targetKey] = { title: 'Custom Student Deck', cards: [] };
             }
+            if (!Array.isArray(userDecks[targetKey].cards)) {
+                userDecks[targetKey].cards = [];
+            }
+
             userDecks[targetKey].cards.push({
                 id: 'card-' + Date.now() + '-' + Math.floor(Math.random() * 1000),
-                term: term,
-                definition: definition,
-                example: example,
+                term: String(termVal || '').trim(),
+                definition: String(defVal || '').trim(),
+                example: String(exVal || '').trim(),
                 box: 1,
                 lastReviewed: null,
                 nextDue: 0
@@ -556,17 +606,19 @@
             const cards = getActiveCards();
             if (cards.length === 0 || !clozeInput || !clozeFeedback) return;
             const card = cards[currentCardIdx];
+            if (!card) return;
+            const term = String(card.term || card.word || card.front || '').trim();
             const answer = clozeInput.value.trim().toLowerCase();
-            const target = card.term.trim().toLowerCase();
+            const target = term.toLowerCase();
 
             clozeFeedback.style.display = 'block';
-            if (answer === target) {
+            if (answer && target && answer === target) {
                 clozeFeedback.className = 'cloze-feedback correct';
                 clozeFeedback.innerHTML = '<i class="fas fa-check-circle" style="color: #10b981;"></i> Correct! Outstanding recall.';
                 setTimeout(() => gradeCard('good'), 1200);
             } else {
                 clozeFeedback.className = 'cloze-feedback incorrect';
-                clozeFeedback.innerHTML = `<i class="fas fa-times-circle" style="color: #ef4444;"></i> The correct term is: <strong>${card.term}</strong>.`;
+                clozeFeedback.innerHTML = `<i class="fas fa-times-circle" style="color: #ef4444;"></i> The correct term is: <strong>${term || 'N/A'}</strong>.`;
             }
         }
 
@@ -591,17 +643,19 @@
             const cards = getActiveCards();
             if (cards.length === 0 || !spellingInput || !spellingFeedback) return;
             const card = cards[currentCardIdx];
+            if (!card) return;
+            const term = String(card.term || card.word || card.front || '').trim();
             const typed = spellingInput.value.trim().toLowerCase();
-            const correct = card.term.trim().toLowerCase();
+            const correct = term.toLowerCase();
 
             spellingFeedback.style.display = 'block';
-            if (typed === correct) {
+            if (typed && correct && typed === correct) {
                 spellingFeedback.className = 'cloze-feedback correct';
                 spellingFeedback.innerHTML = '<i class="fas fa-check-circle" style="color: #10b981;"></i> 100% Accurate Spelling!';
                 setTimeout(() => gradeCard('good'), 1200);
             } else {
                 spellingFeedback.className = 'cloze-feedback incorrect';
-                spellingFeedback.innerHTML = `<i class="fas fa-times-circle" style="color: #ef4444;"></i> Correct spelling is: <strong>${card.term}</strong>`;
+                spellingFeedback.innerHTML = `<i class="fas fa-times-circle" style="color: #ef4444;"></i> Correct spelling is: <strong>${term || 'N/A'}</strong>`;
             }
         }
 

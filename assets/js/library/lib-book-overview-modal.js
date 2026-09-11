@@ -56,11 +56,33 @@
         const descEl = document.getElementById('modal-description');
         if (descEl) descEl.textContent = d.description || 'No description available.';
 
-        // Read Online Button
+        // Read Online / Continue Reading Button
         const readBtn = document.getElementById('modal-read-online-link');
         if (readBtn) {
-            const hasReadLink = d.readOnlineLink && d.readOnlineLink !== '#' && d.readOnlineLink !== '';
-            readBtn.href = hasReadLink ? d.readOnlineLink : `read/index.php?book=${d.id}`;
+            let lastChapter = null;
+            let lastChapterSlug = null;
+            let lastPct = null;
+            try {
+                lastChapter = localStorage.getItem(`hesten_progress_${d.id}_lastChapter`);
+                lastChapterSlug = localStorage.getItem(`hesten_progress_${d.id}_lastChapterSlug`);
+                lastPct = localStorage.getItem(`hesten_scroll_pct_${d.id}_chapter_${lastChapter}`);
+            } catch(e) {}
+
+            if (lastChapter !== null && lastChapter !== undefined && lastChapter !== '') {
+                const chNum = parseInt(lastChapter, 10);
+                const chSlug = lastChapterSlug || (chNum === 0 ? 'intro' : `chapter-${chNum}`);
+                const pctVal = Math.round(parseFloat(lastPct || '0'));
+                const chLabel = (chSlug === 'intro' || chNum === 0) ? 'Intro' : `Ch. ${chNum}`;
+
+                readBtn.href = `read/index.php?book=${encodeURIComponent(d.id)}&chapter=${encodeURIComponent(chSlug)}&pct=${pctVal}&resume=true`;
+                readBtn.innerHTML = `<i class="fas fa-bookmark mr-1"></i> <span>Continue Reading (${chLabel} &bull; ${pctVal}%)</span>`;
+                readBtn.setAttribute('title', `Continue reading at ${chLabel} (${pctVal}%)`);
+            } else {
+                const hasReadLink = d.readOnlineLink && d.readOnlineLink !== '#' && d.readOnlineLink !== '';
+                readBtn.href = hasReadLink ? d.readOnlineLink : `read/index.php?book=${encodeURIComponent(d.id)}`;
+                readBtn.innerHTML = `<i class="fas fa-book-open mr-1"></i> <span>Read Online</span>`;
+                readBtn.removeAttribute('title');
+            }
         }
 
         // Bookmark button state
