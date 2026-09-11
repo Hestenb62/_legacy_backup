@@ -1,30 +1,50 @@
 {
-    "1": {
-        "num": 1,
-        "title": "Arithmetic, Primes & Number Systems",
-        "volume": "",
-        "part": "Part I: Foundational Mathematics",
-        "url": "/library/read/index.php?book=math-facts-repo&chapter=chapter-1"
-    },
-    "2": {
-        "num": 2,
-        "title": "Algebraic Identities & Equations",
-        "volume": "",
-        "part": "Part II: Algebra & Functions",
-        "url": "/library/read/index.php?book=math-facts-repo&chapter=chapter-2"
-    },
-    "3": {
-        "num": 3,
-        "title": "Geometry Theorems & Trigonometric Identities",
-        "volume": "",
-        "part": "Part III: Geometry & Trigonometry",
-        "url": "/library/read/index.php?book=math-facts-repo&chapter=chapter-3"
-    },
-    "4": {
-        "num": 4,
-        "title": "Calculus Essentials & Mathematical Constants",
-        "volume": "",
-        "part": "Part IV: Calculus & Constants",
-        "url": "/library/read/index.php?book=math-facts-repo&chapter=chapter-4"
-    }
+  "1": {
+    "title": "Grade 1: Number Sense, Addition, Subtraction & Foundations",
+    "subtitle": "Counting within 120, fact families, place value tens/ones, 2D shapes, and 'Make a 10' mental math hacks."
+  },
+  "2": {
+    "title": "Grade 2: Place Value to 1,000, Regrouping, Arrays & Money",
+    "subtitle": "3-digit base-ten models, column addition/subtraction regrouping, rectangular arrays, coin currency, and compensation hacks."
+  },
+  "3": {
+    "title": "Grade 3: Multiplication, Division, Fractions & Area",
+    "subtitle": "0-12 Times tables, distributive multiplication decomposition, unit fractions, area (A = lw), perimeter, and 9s finger tricks."
+  },
+  "4": {
+    "title": "Grade 4: Multi-Digit Algorithms, Factors, Fraction Operations & Angles",
+    "subtitle": "Multi-digit multiplication area models, long division with remainders, prime/composite, fraction + -, decimals, and divisibility rules."
+  },
+  "5": {
+    "title": "Grade 5: Fraction × ÷, Multi-Digit Decimals, Volume & Order of Operations",
+    "subtitle": "Fraction multiplication and division (KCF), decimal arithmetic, coordinate plane, 3D prism volume, GEMDAS, and butterfly method."
+  },
+  "6": {
+    "title": "Grade 6: Ratios, Unit Rates, Negative Integers & Pre-Algebra",
+    "subtitle": "Proportions, unit rates, negative integers, absolute value, one-step equations, statistical spread (IQR), and polygon area."
+  },
+  "7": {
+    "title": "Grade 7: Signed Integers, Direct Proportions, Percentages & Two-Step Equations",
+    "subtitle": "Signed integer arithmetic, direct variation (y = kx), percent applications, two-step equations/inequalities, and circle geometry."
+  },
+  "8": {
+    "title": "Grade 8: Linear Functions (y = mx + b), Exponent Laws & The Pythagorean Theorem",
+    "subtitle": "Slope-intercept form, systems of equations, integer exponent rules, scientific notation, Pythagoras (a² + b² = c²), and 3D curved volumes."
+  },
+  "9": {
+    "title": "Grade 9: Polynomial Factoring, Quadratic Theory & Exponential Functions",
+    "subtitle": "Polynomial arithmetic, quadratic ac-factoring, Quadratic Formula & discriminant (Δ), parabola vertex, and exponential growth/decay."
+  },
+  "10": {
+    "title": "Grade 10: Deductive Proofs, Trigonometry (SOH-CAH-TOA) & Circles",
+    "subtitle": "Two-column congruence proofs (SSS, SAS, ASA, AAS, HL), right triangle trigonometry, special triangles, circle theorems, and trig hand trick."
+  },
+  "11": {
+    "title": "Grade 11: Complex Numbers, Logarithms, Unit Circle & Series",
+    "subtitle": "Complex field (C), synthetic division, logarithm laws & ln, complete Unit Circle, trigonometric identities, and infinite geometric series."
+  },
+  "12": {
+    "title": "Grade 12: Limits, Derivatives, Integrals & Advanced Constants",
+    "subtitle": "L'Hôpital's rule, derivative rules (Power, Product, Quotient, Chain), optimization, FTC, U-substitution, tabular integration, and Euler's constants."
+  }
 }

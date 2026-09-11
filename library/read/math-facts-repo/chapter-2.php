@@ -1,302 +1,280 @@
-<div class="cdn-book-reader-content">
-    <div class="math-section-badge"><i class="fas fa-square-root-alt"></i> Part II: Algebra &amp; Functions</div>
-    <h2>Chapter 2: Algebraic Identities, Equations &amp; Functions</h2>
+<div class="math-reference-content">
+    <!-- Chapter 2 Banner -->
+    <div class="math-chapter-hero">
+        <div class="math-hero-badge"><i class="fas fa-cubes"></i> Level: Grade 2 Mathematics</div>
+        <h1 class="math-hero-title">Grade 2: Place Value to 1,000, Regrouping, Arrays &amp; Money</h1>
+        <p class="math-hero-desc">The comprehensive Grade 2 reference covering 3-digit place value, multi-digit addition and subtraction with regrouping, even/odd number logic, arrays as foundations of multiplication, currency arithmetic, and mental math speed hacks.</p>
+    </div>
 
-    <div class="content-content">
-        <p>Algebra is the foundational language of mathematical relations, functions, and transformations. This chapter compiles the complete set of algebraic laws of exponents, polynomial factoring formulas, quadratic and polynomial equation techniques, logarithm theorems, matrix determinants, and sequence summations. Rendered with publication-grade MathJax typography.</p>
+    <!-- Quick Navigation Pills -->
+    <nav class="math-toc-pills" aria-label="Chapter sections">
+        <a href="#sec-2-1" class="math-pill"><i class="fas fa-layer-group"></i> 2.1 Place Value to 1,000</a>
+        <a href="#sec-2-2" class="math-pill"><i class="fas fa-plus"></i> 2.2 Addition &amp; Regrouping</a>
+        <a href="#sec-2-3" class="math-pill"><i class="fas fa-minus"></i> 2.3 Subtraction &amp; Borrowing</a>
+        <a href="#sec-2-4" class="math-pill"><i class="fas fa-th"></i> 2.4 Arrays &amp; Foundations of Multiplication</a>
+        <a href="#sec-2-5" class="math-pill"><i class="fas fa-coins"></i> 2.5 Money &amp; Currency Math</a>
+        <a href="#sec-2-6" class="math-pill"><i class="fas fa-ruler"></i> 2.6 Measurement &amp; Line Plots</a>
+        <a href="#sec-2-7" class="math-pill"><i class="fas fa-brain"></i> 2.7 Mental Math &amp; Study Hacks</a>
+        <a href="#sec-2-8" class="math-pill"><i class="fas fa-file-invoice"></i> 2.8 Grade 2 Cheat Sheet</a>
+    </nav>
 
-        <!-- Quick Section Navigation -->
-        <nav class="math-toc-pills" aria-label="Chapter 2 Quick Navigation">
-            <a href="#sec-2-1" class="math-toc-pill"><i class="fas fa-superscript"></i> 2.1 Exponents &amp; Radicals</a>
-            <a href="#sec-2-2" class="math-toc-pill"><i class="fas fa-cubes"></i> 2.2 Polynomial Identities</a>
-            <a href="#sec-2-3" class="math-toc-pill"><i class="fas fa-project-diagram"></i> 2.3 Linear Systems</a>
-            <a href="#sec-2-4" class="math-toc-pill"><i class="fas fa-bezier-curve"></i> 2.4 Quadratic Theory</a>
-            <a href="#sec-2-5" class="math-toc-pill"><i class="fas fa-wave-square"></i> 2.5 Logarithms</a>
-            <a href="#sec-2-6" class="math-toc-pill"><i class="fas fa-less-than-equal"></i> 2.6 Inequalities</a>
-            <a href="#sec-2-7" class="math-toc-pill"><i class="fas fa-infinity"></i> 2.7 Sequences &amp; Series</a>
-            <a href="#sec-2-8" class="math-toc-pill"><i class="fas fa-pen-fancy"></i> 2.8 Worked Solutions</a>
-            <a href="#sec-2-9" class="math-toc-pill"><i class="fas fa-clipboard-list"></i> 2.9 Summary Sheet</a>
-        </nav>
-
-        <!-- 2.1 Exponents & Radicals -->
-        <h3 id="sec-2-1">2.1 Axiomatic Laws of Exponents &amp; Radical Simplification</h3>
-        <p>For non-zero real bases \(a, b \in \mathbb{R} \setminus \{0\}\) and rational exponents \(m, n \in \mathbb{Q}\), the fundamental exponent rules are defined as follows:</p>
-
-        <div class="ref-table-wrap">
-            <table class="ref-table">
-                <thead>
-                    <tr>
-                        <th scope="col">Exponent Law</th>
-                        <th scope="col">Algebraic Formulation</th>
-                        <th scope="col">Domain / Preconditions</th>
-                        <th scope="col">Exemplary Evaluation</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td><strong>Product Rule</strong></td><td>\(a^m \cdot a^n = a^{m+n}\)</td><td>Same base</td><td>\(x^4 \cdot x^7 = x^{11}\)</td></tr>
-                    <tr><td><strong>Quotient Rule</strong></td><td>\(\frac{a^m}{a^n} = a^{m-n}\)</td><td>\(a \neq 0\)</td><td>\(\frac{2^8}{2^3} = 2^5 = 32\)</td></tr>
-                    <tr><td><strong>Power of a Power</strong></td><td>\((a^m)^n = a^{m \cdot n}\)</td><td>Nested powers</td><td>\((y^3)^4 = y^{12}\)</td></tr>
-                    <tr><td><strong>Power of a Product</strong></td><td>\((ab)^n = a^n b^n\)</td><td>Distributive over multiplication</td><td>\((3x)^3 = 27x^3\)</td></tr>
-                    <tr><td><strong>Power of a Quotient</strong></td><td>\(\left(\frac{a}{b}\right)^n = \frac{a^n}{b^n}\)</td><td>\(b \neq 0\)</td><td>\(\left(\frac{2}{5}\right)^3 = \frac{8}{125}\)</td></tr>
-                    <tr><td><strong>Zero Exponent</strong></td><td>\(a^0 = 1\)</td><td>\(a \neq 0\) (\(0^0\) is indeterminate)</td><td>\((-15.7)^0 = 1\)</td></tr>
-                    <tr><td><strong>Negative Exponent</strong></td><td>\(a^{-n} = \frac{1}{a^n}\)</td><td>\(a \neq 0\)</td><td>\(4^{-2} = \frac{1}{16}\)</td></tr>
-                    <tr><td><strong>Fractional Exponent</strong></td><td>\(a^{m/n} = \sqrt[n]{a^m} = (\sqrt[n]{a})^m\)</td><td>\(n \in \mathbb{Z}^+, a \geq 0\) for even \(n\)</td><td>\(27^{2/3} = (\sqrt[3]{27})^2 = 3^2 = 9\)</td></tr>
-                </tbody>
-            </table>
+    <!-- Section 2.1 -->
+    <section id="sec-2-1" class="math-section">
+        <div class="math-section-header">
+            <span class="math-section-num">2.1</span>
+            <h2 class="math-section-title">3-Digit Place Value: Hundreds, Tens &amp; Ones</h2>
         </div>
 
         <div class="math-def-box">
             <div class="math-def-header">
-                <h4 class="math-def-title"><i class="fas fa-square-root-alt"></i> Definition 2.1: Radical Properties &amp; Conjugate Rationalization</h4>
-                <span class="math-def-chip">Radicals</span>
+                <span class="math-def-badge"><i class="fas fa-book"></i> Definition 2.1.1</span>
+                <span class="math-def-domain">Base-10 Structure</span>
             </div>
-            <p>For \(a, b \geq 0\): \[\sqrt[n]{ab} = \sqrt[n]{a} \cdot \sqrt[n]{b} \qquad \text{and} \qquad \sqrt[n]{\frac{a}{b}} = \frac{\sqrt[n]{a}}{\sqrt[n]{b}} \quad (b > 0)\]</p>
-            <p><strong>Conjugate Multiplication:</strong> To rationalize a binomial denominator containing square roots, multiply numerator and denominator by its conjugate: \[\frac{1}{\sqrt{a} \pm \sqrt{b}} \times \frac{\sqrt{a} \mp \sqrt{b}}{\sqrt{a} \mp \sqrt{b}} = \frac{\sqrt{a} \mp \sqrt{b}}{a - b}\]</p>
+            <div class="math-def-body">
+                A 3-digit number $N$ is decomposed into <strong>Hundreds ($H$)</strong>, <strong>Tens ($T$)</strong>, and <strong>Ones ($O$)</strong>:
+                $$N = (H \times 100) + (T \times 10) + (O \times 1)$$
+                $$\text{Example: } 742 = 7 \text{ Hundreds } (700) + 4 \text{ Tens } (40) + 2 \text{ Ones } (2)$$
+            </div>
         </div>
 
-        <!-- 2.2 Polynomial Identities -->
-        <h3 id="sec-2-2">2.2 Polynomial Identities, Special Products &amp; Binomial Theorem</h3>
+        <div class="math-formula-grid">
+            <div class="math-formula-card">
+                <div class="math-formula-title">Standard Form</div>
+                <div class="math-formula-latex">$$583$$</div>
+                <div class="math-formula-desc">Written directly as digits.</div>
+            </div>
+            <div class="math-formula-card">
+                <div class="math-formula-title">Expanded Form</div>
+                <div class="math-formula-latex">$$500 + 80 + 3$$</div>
+                <div class="math-formula-desc">Shows the exact value of each digit.</div>
+            </div>
+            <div class="math-formula-card">
+                <div class="math-formula-title">Word Form</div>
+                <div class="math-formula-latex">\text{"Five hundred eighty-three"}</div>
+                <div class="math-formula-desc">Written out in formal English words.</div>
+            </div>
+        </div>
+    </section>
 
-        <div class="ref-table-wrap">
-            <table class="ref-table">
-                <thead>
-                    <tr>
-                        <th scope="col">Algebraic Identity Name</th>
-                        <th scope="col">Expansion / Factoring Formula</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td><strong>Square of a Sum</strong></td><td>\((a + b)^2 = a^2 + 2ab + b^2\)</td></tr>
-                    <tr><td><strong>Square of a Difference</strong></td><td>\((a - b)^2 = a^2 - 2ab + b^2\)</td></tr>
-                    <tr><td><strong>Difference of Squares</strong></td><td>\(a^2 - b^2 = (a + b)(a - b)\)</td></tr>
-                    <tr><td><strong>Sum of Squares (Complex)</strong></td><td>\(a^2 + b^2 = (a + bi)(a - bi)\)</td></tr>
-                    <tr><td><strong>Sum of Cubes</strong></td><td>\(a^3 + b^3 = (a + b)(a^2 - ab + b^2)\)</td></tr>
-                    <tr><td><strong>Difference of Cubes</strong></td><td>\(a^3 - b^3 = (a - b)(a^2 + ab + b^2)\)</td></tr>
-                    <tr><td><strong>Cube of a Sum</strong></td><td>\((a + b)^3 = a^3 + 3a^2b + 3ab^2 + b^3\)</td></tr>
-                    <tr><td><strong>Cube of a Difference</strong></td><td>\((a - b)^3 = a^3 - 3a^2b + 3ab^2 - b^3\)</td></tr>
-                    <tr><td><strong>Square of a Trinomial</strong></td><td>\((a + b + c)^2 = a^2 + b^2 + c^2 + 2ab + 2bc + 2ca\)</td></tr>
-                </tbody>
-            </table>
+    <!-- Section 2.2 -->
+    <section id="sec-2-2" class="math-section">
+        <div class="math-section-header">
+            <span class="math-section-num">2.2</span>
+            <h2 class="math-section-title">2-Digit &amp; 3-Digit Addition with Regrouping (Carrying)</h2>
         </div>
 
         <div class="math-theorem-box">
-            <div class="math-theorem-header">
-                <h4 class="math-theorem-title"><i class="fas fa-layer-group"></i> Theorem 2.1: The Binomial Theorem</h4>
-                <span class="math-theorem-badge">Combinatorics &amp; Algebra</span>
+            <div class="math-thm-header">
+                <span class="math-thm-badge"><i class="fas fa-sync-alt"></i> Algorithm 2.2</span>
+                <span class="math-thm-title">The Regrouping Axiom for Addition</span>
             </div>
-            <p>For any integer \(n \geq 0\) and real numbers \(a, b\): \[(a + b)^n = \sum_{k=0}^n \binom{n}{k} a^{n-k} b^k = \binom{n}{0}a^n + \binom{n}{1}a^{n-1}b + \dots + \binom{n}{n}b^n\] where the binomial coefficient is defined as: \[\binom{n}{k} = \frac{n!}{k!(n-k)!} = \frac{n(n-1)\cdots(n-k+1)}{k(k-1)\cdots 1}\]</p>
-        </div>
-
-        <!-- 2.3 Linear Systems -->
-        <h3 id="sec-2-3">2.3 Linear Equations, Systems &amp; Matrix Determinants</h3>
-        <p>A linear equation in two variables represents a straight geometric line on the Cartesian coordinate plane:</p>
-
-        <div class="math-formula-grid">
-            <div class="math-grid-card">
-                <h4><i class="fas fa-chart-line"></i> Slope-Intercept Form</h4>
-                <p>\[y = mx + b\]</p>
-                <p>Slope \(m = \frac{\Delta y}{\Delta x}\), y-intercept \((0, b)\).</p>
-            </div>
-            <div class="math-grid-card">
-                <h4><i class="fas fa-dot-circle"></i> Point-Slope Form</h4>
-                <p>\[y - y_1 = m(x - x_1)\]</p>
-                <p>Through point \((x_1, y_1)\) with slope \(m\).</p>
-            </div>
-            <div class="math-grid-card">
-                <h4><i class="fas fa-sliders-h"></i> Standard Form</h4>
-                <p>\[Ax + By = C\]</p>
-                <p>Integers \(A, B, C\), slope \(m = -\frac{A}{B}\).</p>
-            </div>
-            <div class="math-grid-card">
-                <h4><i class="fas fa-arrows-alt-v"></i> Parallel &amp; Perpendicular</h4>
-                <p>Parallel: \(m_1 = m_2\)<br>Perpendicular: \(m_1 \cdot m_2 = -1\)</p>
+            <div class="math-thm-body">
+                Whenever the sum of digits in any column equals $10$ or more ($S \geq 10$):
+                $$\text{Keep the Ones digit in the column, and carry } 1 \text{ Ten to the next column to the left.}$$
+                $$10 \text{ Ones} \longrightarrow 1 \text{ Ten}, \quad 10 \text{ Tens} \longrightarrow 1 \text{ Hundred}$$
             </div>
         </div>
-
-        <div class="math-formula-card">
-            <div class="math-formula-title"><i class="fas fa-table"></i> Cramer's Rule for \(2 \times 2\) Linear Systems</div>
-            <p>For the system \(\begin{cases} a_1 x + b_1 y = c_1 \\ a_2 x + b_2 y = c_2 \end{cases}\) with coefficient determinant \(D \neq 0\):</p>
-            <div class="math-equation-display">
-                \[D = \begin{vmatrix} a_1 & b_1 \\ a_2 & b_2 \end{vmatrix} = a_1 b_2 - a_2 b_1 \qquad D_x = \begin{vmatrix} c_1 & b_1 \\ c_2 & b_2 \end{vmatrix} = c_1 b_2 - c_2 b_1 \qquad D_y = \begin{vmatrix} a_1 & c_1 \\ a_2 & c_2 \end{vmatrix} = a_1 c_2 - a_2 c_1\]
-                \[x = \frac{D_x}{D} \qquad \text{and} \qquad y = \frac{D_y}{D}\]
-            </div>
-        </div>
-
-        <!-- 2.4 Quadratic Theory -->
-        <h3 id="sec-2-4">2.4 Quadratic Theory, Parabolic Functions &amp; Vieta's Relations</h3>
-
-        <div class="math-theorem-box">
-            <div class="math-theorem-header">
-                <h4 class="math-theorem-title"><i class="fas fa-calculator"></i> Theorem 2.2: The Quadratic Formula</h4>
-                <span class="math-theorem-badge">Exact Roots</span>
-            </div>
-            <p>For any second-degree polynomial equation \(ax^2 + bx + c = 0\) with \(a \neq 0\), the exact roots are given by: \[x = \frac{-b \pm \sqrt{\Delta}}{2a} \qquad \text{where } \Delta = b^2 - 4ac \text{ is the Discriminant}\]</p>
-        </div>
-
-        <div class="ref-table-wrap">
-            <table class="ref-table">
-                <thead>
-                    <tr>
-                        <th scope="col">Discriminant Value</th>
-                        <th scope="col">Nature of Roots</th>
-                        <th scope="col">Geometric Parabolic Intercepts</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>\(\Delta > 0\) (and a perfect square)</td><td>Two distinct rational roots</td><td>Two distinct x-intercepts</td></tr>
-                    <tr><td>\(\Delta > 0\) (not a perfect square)</td><td>Two distinct irrational conjugate roots</td><td>Two distinct irrational x-intercepts</td></tr>
-                    <tr><td>\(\Delta = 0\)</td><td>One real root with multiplicity 2 (repeated)</td><td>Vertex is tangent to the x-axis</td></tr>
-                    <tr><td>\(\Delta < 0\)</td><td>Two complex conjugate roots: \(x = \frac{-b \pm i\sqrt{|\Delta|}}{2a}\)</td><td>No real x-intercepts (curve lies strictly above/below axis)</td></tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="math-formula-grid">
-            <div class="math-grid-card">
-                <h4><i class="fas fa-arrows-alt"></i> Vertex &amp; Axis of Symmetry</h4>
-                <p>Axis: \(x = -\frac{b}{2a}\)<br>Vertex: \((h, k) = \left(-\frac{b}{2a}, \; f\left(-\frac{b}{2a}\right)\right)\)<br>Standard Vertex Form: \(y = a(x - h)^2 + k\)</p>
-            </div>
-            <div class="math-grid-card">
-                <h4><i class="fas fa-link"></i> Vieta's Formulas</h4>
-                <p>For roots \(r_1, r_2\):<br>Sum of roots: \(r_1 + r_2 = -\frac{b}{a}\)<br>Product of roots: \(r_1 \cdot r_2 = \frac{c}{a}\)</p>
-            </div>
-        </div>
-
-        <!-- 2.5 Logarithms -->
-        <h3 id="sec-2-5">2.5 Exponential &amp; Logarithmic Functions</h3>
-        <p>The logarithm \(\log_b x = y\) is the inverse operation to exponentiation, stating that \(b^y = x\) (for base \(b > 0, b \neq 1\) and argument \(x > 0\)).</p>
-
-        <div class="ref-table-wrap">
-            <table class="ref-table">
-                <thead>
-                    <tr>
-                        <th scope="col">Logarithmic Law</th>
-                        <th scope="col">Mathematical Identity</th>
-                        <th scope="col">Explanation</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td><strong>Product Rule</strong></td><td>\(\log_b(xy) = \log_b x + \log_b y\)</td><td>Converts multiplication to addition</td></tr>
-                    <tr><td><strong>Quotient Rule</strong></td><td>\(\log_b\!\left(\frac{x}{y}\right) = \log_b x - \log_b y\)</td><td>Converts division to subtraction</td></tr>
-                    <tr><td><strong>Power Rule</strong></td><td>\(\log_b(x^k) = k \log_b x\)</td><td>Brings power to coefficient multiplier</td></tr>
-                    <tr><td><strong>Change of Base</strong></td><td>\(\log_b x = \frac{\ln x}{\ln b} = \frac{\log_{10} x}{\log_{10} b}\)</td><td>Enables computation in any standard base</td></tr>
-                    <tr><td><strong>Inverse Identity</strong></td><td>\(b^{\log_b x} = x \quad \text{and} \quad \log_b(b^x) = x\)</td><td>Cancellation of inverse operations</td></tr>
-                    <tr><td><strong>Base Constants</strong></td><td>\(\log_b 1 = 0 \quad \text{and} \quad \log_b b = 1\)</td><td>Zero and unity log values</td></tr>
-                </tbody>
-            </table>
-        </div>
-
-        <!-- 2.6 Inequalities -->
-        <h3 id="sec-2-6">2.6 Inequalities &amp; Absolute Value Intervals</h3>
-        <div class="math-caution-box">
-            <div class="math-caution-header"><i class="fas fa-exclamation-circle"></i> Caution 2.1: Reversing Inequality Direction</div>
-            <p>Whenever multiplying or dividing both sides of an inequality by a negative quantity, the inequality symbol must be strictly reversed: \[a < b \iff -a > -b\]</p>
-        </div>
-
-        <div class="math-formula-grid">
-            <div class="math-grid-card">
-                <h4><i class="fas fa-compress"></i> Bounded Intersection</h4>
-                <p>\[|x - c| \leq r \iff c - r \leq x \leq c + r \iff x \in [c-r, c+r]\]</p>
-            </div>
-            <div class="math-grid-card">
-                <h4><i class="fas fa-expand"></i> Unbounded Union</h4>
-                <p>\[|x - c| \geq r \iff x \leq c - r \text{ or } x \geq c + r\]</p>
-            </div>
-        </div>
-
-        <!-- 2.7 Sequences & Series -->
-        <h3 id="sec-2-7">2.7 Sequences, Series &amp; Summation Formulas</h3>
-
-        <div class="ref-table-wrap">
-            <table class="ref-table">
-                <thead>
-                    <tr>
-                        <th scope="col">Type of Sequence</th>
-                        <th scope="col">General \(n\)-th Term \(a_n\)</th>
-                        <th scope="col">Sum of First \(n\) Terms \(S_n\)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Arithmetic Progression</strong></td>
-                        <td>\(a_n = a_1 + (n - 1)d\)</td>
-                        <td>\(S_n = \frac{n}{2}(a_1 + a_n) = \frac{n}{2}[2a_1 + (n-1)d]\)</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Finite Geometric Progression</strong></td>
-                        <td>\(a_n = a_1 \cdot r^{n-1}\)</td>
-                        <td>\(S_n = a_1 \frac{1 - r^n}{1 - r} \quad (r \neq 1)\)</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Infinite Geometric Series</strong></td>
-                        <td>\(a_n = a_1 \cdot r^{n-1} \quad (|r| < 1)\)</td>
-                        <td>\(S_\infty = \frac{a_1}{1 - r} \quad (\text{Convergent if } |r| < 1)\)</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="math-formula-card">
-            <div class="math-formula-title"><i class="fas fa-sigma"></i> Closed-Form Summation Formulas</div>
-            <div class="math-equation-display">
-                \[\sum_{k=1}^n 1 = n \qquad \sum_{k=1}^n k = \frac{n(n+1)}{2} \qquad \sum_{k=1}^n k^2 = \frac{n(n+1)(2n+1)}{6} \qquad \sum_{k=1}^n k^3 = \left[\frac{n(n+1)}{2}\right]^2\]
-            </div>
-        </div>
-
-        <!-- 2.8 Worked Solutions -->
-        <h3 id="sec-2-8">2.8 Worked Step-by-Step Problem Walkthroughs</h3>
 
         <div class="math-example-box">
-            <div class="math-example-header"><i class="fas fa-pencil-alt"></i> Example 2.1: Solving a Quadratic with Complex Roots</div>
-            <p>Solve the quadratic equation: \[2x^2 - 6x + 5 = 0\]</p>
-            <div class="math-example-steps">
-                <div><strong>Step 1 (Identify Coefficients):</strong> \(a = 2, b = -6, c = 5\)</div>
-                <div><strong>Step 2 (Compute Discriminant):</strong> \(\Delta = b^2 - 4ac = (-6)^2 - 4(2)(5) = 36 - 40 = -4\)</div>
-                <div><strong>Step 3 (Apply Quadratic Formula):</strong> \(x = \frac{-(-6) \pm \sqrt{-4}}{2(2)} = \frac{6 \pm 2i}{4}\)</div>
-                <div><strong>Step 4 (Simplify Fractions):</strong> \(x = \frac{3}{2} \pm \frac{1}{2}i\)</div>
+            <div class="math-ex-header">
+                <span class="math-ex-badge"><i class="fas fa-lightbulb"></i> Worked Example 2.2</span>
+                <span class="math-ex-title">3-Digit Column Addition</span>
             </div>
-            <div class="math-example-result"><i class="fas fa-check"></i> Exact Solutions: \(x = \frac{3}{2} + \frac{1}{2}i, \quad x = \frac{3}{2} - \frac{1}{2}i\)</div>
+            <div class="math-ex-body">
+                <p><strong>Problem:</strong> Calculate $368 + 275$.</p>
+                <div class="math-ex-solution">
+                    <p><strong>Step 1 (Ones):</strong> $8 + 5 = 13 \implies$ write $3$, carry $1$ ten.</p>
+                    <p><strong>Step 2 (Tens):</strong> $1 \text{ (carried)} + 6 + 7 = 14 \implies$ write $4$, carry $1$ hundred.</p>
+                    <p><strong>Step 3 (Hundreds):</strong> $1 \text{ (carried)} + 3 + 2 = 6 \implies$ write $6$.</p>
+                </div>
+                <div class="math-ex-result"><i class="fas fa-check-circle"></i> Result: $368 + 275 = \mathbf{643}$.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2.3 -->
+    <section id="sec-2-3" class="math-section">
+        <div class="math-section-header">
+            <span class="math-section-num">2.3</span>
+            <h2 class="math-section-title">Multi-Digit Subtraction with Regrouping (Decomposition)</h2>
         </div>
 
-        <!-- 2.9 Summary Sheet -->
-        <section class="math-summary-sheet" id="sec-2-9">
-            <div class="math-summary-header">
-                <i class="fas fa-star" style="color: var(--color-primary, #6366f1); font-size: 1.5rem;"></i>
-                <div>
-                    <h3>Chapter 2 Reference Quick Sheet</h3>
-                    <p style="margin: 0; font-size: 0.88rem; color: var(--color-text-secondary);">Core algebraic identities, equations, and series formulas</p>
-                </div>
+        <div class="math-def-box">
+            <div class="math-def-header">
+                <span class="math-def-badge"><i class="fas fa-cut"></i> Rule 2.3.1</span>
+                <span class="math-def-domain">Borrowing Across Zeros</span>
             </div>
-            <div class="math-summary-grid">
-                <div class="math-summary-col">
-                    <h4>Factoring &amp; Powers</h4>
-                    <ul>
-                        <li>\(a^2 - b^2 = (a+b)(a-b)\)</li>
-                        <li>\(a^3 \pm b^3 = (a \pm b)(a^2 \mp ab + b^2)\)</li>
-                        <li>\((a+b)^n = \sum \binom{n}{k} a^{n-k}b^k\)</li>
-                        <li>\(a^{-n} = 1/a^n, \; a^{m/n} = \sqrt[n]{a^m}\)</li>
-                    </ul>
-                </div>
-                <div class="math-summary-col">
-                    <h4>Quadratics &amp; Logarithms</h4>
-                    <ul>
-                        <li>\(x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}\)</li>
-                        <li>Vieta: \(r_1+r_2 = -b/a, \; r_1 r_2 = c/a\)</li>
-                        <li>\(\log(xy) = \log x + \log y\)</li>
-                        <li>\(\log_b x = \frac{\ln x}{\ln b}\)</li>
-                    </ul>
-                </div>
-                <div class="math-summary-col">
-                    <h4>Sequences &amp; Sums</h4>
-                    <ul>
-                        <li>Arithmetic: \(a_n = a_1 + (n-1)d\)</li>
-                        <li>Geometric: \(S_n = a_1 \frac{1-r^n}{1-r}\)</li>
-                        <li>Infinite: \(S_\infty = \frac{a_1}{1-r} \quad (|r|<1)\)</li>
-                        <li>\(\sum_{k=1}^n k = \frac{n(n+1)}{2}\)</li>
-                    </ul>
-                </div>
+            <div class="math-def-body">
+                When subtracting $A - B$, if the top digit is smaller than the bottom digit ($A_{\text{col}} < B_{\text{col}}$):
+                $$\text{Borrow } 1 \text{ from the next column left, reducing it by } 1, \text{ and add } 10 \text{ to the current column.}$$
+                $$\text{Example: } 500 - 247 \implies 4 \text{ Hundreds}, 9 \text{ Tens}, 10 \text{ Ones} - 247 = 253$$
             </div>
-        </section>
+        </div>
+    </section>
 
-    </div>
+    <!-- Section 2.4 -->
+    <section id="sec-2-4" class="math-section">
+        <div class="math-section-header">
+            <span class="math-section-num">2.4</span>
+            <h2 class="math-section-title">Rectangular Arrays &amp; Foundations of Multiplication</h2>
+        </div>
+
+        <div class="math-formula-grid">
+            <div class="math-formula-card">
+                <div class="math-formula-title">Rectangular Array Formula</div>
+                <div class="math-formula-latex">$$\text{Total Items} = \text{Rows} \times \text{Columns}$$</div>
+                <div class="math-formula-desc">An array of 4 rows and 5 columns has: $4 \times 5 = 20$ objects.</div>
+            </div>
+
+            <div class="math-formula-card">
+                <div class="math-formula-title">Repeated Addition Law</div>
+                <div class="math-formula-latex">$$3 \text{ rows of } 6 = 6 + 6 + 6 = 18$$</div>
+                <div class="math-formula-desc">Multiplication is rapid repeated addition of identical groups.</div>
+            </div>
+        </div>
+
+        <div class="math-def-box">
+            <div class="math-def-header">
+                <span class="math-def-badge"><i class="fas fa-check-double"></i> Definition 2.4.1</span>
+                <span class="math-def-domain">Even vs. Odd Numbers</span>
+            </div>
+            <div class="math-def-body">
+                <ul>
+                    <li><strong>Even Numbers:</strong> Can be divided into 2 equal teams or paired with zero remainder. Ends in $\{0, 2, 4, 6, 8\}$.</li>
+                    <li><strong>Odd Numbers:</strong> Has 1 leftover when paired into groups of 2. Ends in $\{1, 3, 5, 7, 9\}$.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2.5 -->
+    <section id="sec-2-5" class="math-section">
+        <div class="math-section-header">
+            <span class="math-section-num">2.5</span>
+            <h2 class="math-section-title">Money &amp; Coin Currency Arithmetic</h2>
+        </div>
+
+        <div class="ref-table-wrap">
+            <table class="ref-table">
+                <thead>
+                    <tr>
+                        <th>Coin / Bill</th>
+                        <th>Value (Cents)</th>
+                        <th>Decimal Value</th>
+                        <th>Key Multiples</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Penny</strong></td><td>$1\text{¢}$</td><td>$\$0.01$</td><td>$100\text{ pennies} = \$1.00$</td></tr>
+                    <tr><td><strong>Nickel</strong></td><td>$5\text{¢}$</td><td>$\$0.05$</td><td>$5, 10, 15, 20, 25\text{¢} \dots$</td></tr>
+                    <tr><td><strong>Dime</strong></td><td>$10\text{¢}$</td><td>$\$0.10$</td><td>$10\text{ dimes} = \$1.00$</td></tr>
+                    <tr><td><strong>Quarter</strong></td><td>$25\text{¢}$</td><td>$\$0.25$</td><td>$25\text{¢}, 50\text{¢}, 75\text{¢}, \$1.00$</td></tr>
+                    <tr><td><strong>Dollar Bill</strong></td><td>$100\text{¢}$</td><td>$\$1.00$</td><td>$4\text{ quarters} = 1\text{ dollar}$</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Section 2.6 -->
+    <section id="sec-2-6" class="math-section">
+        <div class="math-section-header">
+            <span class="math-section-num">2.6</span>
+            <h2 class="math-section-title">Telling Time to 5 Minutes &amp; Length Units</h2>
+        </div>
+
+        <div class="math-formula-grid">
+            <div class="math-formula-card">
+                <div class="math-formula-title">Clock Face 5-Minute Skip Rule</div>
+                <div class="math-formula-latex">$$\text{Minutes} = \text{Clock Number} \times 5$$</div>
+                <div class="math-formula-desc">If long hand points to $7$: $7 \times 5 = 35\text{ minutes past the hour}$.</div>
+            </div>
+
+            <div class="math-formula-card">
+                <div class="math-formula-title">Standard Measurement Conversions</div>
+                <div class="math-formula-latex">$$1\text{ foot} = 12\text{ inches} \quad \text{and} \quad 1\text{ meter} = 100\text{ cm}$$</div>
+                <div class="math-formula-desc">3 feet = 1 yard (36 inches).</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2.7: Math Hacks & Study Hacks -->
+    <section id="sec-2-7" class="math-section">
+        <div class="math-section-header">
+            <span class="math-section-num">2.7</span>
+            <h2 class="math-section-title">Grade 2 Mental Math &amp; Speed Calculation Hacks</h2>
+        </div>
+
+        <div class="math-constant-grid">
+            <div class="math-constant-card">
+                <div class="math-const-sym"><i class="fas fa-bolt" style="color: #f59e0b;"></i> Hack #1</div>
+                <div class="math-const-name">Left-to-Right Mental Addition</div>
+                <div class="math-const-val">$$47 + 36 = (40 + 30) + (7 + 6) = 70 + 13 = 83$$</div>
+                <div class="math-const-desc">Add the tens first in your head, then add the ones. This eliminates mental carrying strain!</div>
+            </div>
+
+            <div class="math-constant-card">
+                <div class="math-const-sym"><i class="fas fa-adjust" style="color: #6366f1;"></i> Hack #2</div>
+                <div class="math-const-name">Compensation Hack (Friendly Numbers)</div>
+                <div class="math-const-val">$$58 + 27 = (58 + 2) + 25 = 60 + 25 = 85$$</div>
+                <div class="math-const-desc">When a number ends in 8 or 9, round it up to the nearest 10 by borrowing from the other number.</div>
+            </div>
+
+            <div class="math-constant-card">
+                <div class="math-const-sym"><i class="fas fa-backward" style="color: #10b981;"></i> Hack #3</div>
+                <div class="math-const-name">Subtraction by "Adding Up"</div>
+                <div class="math-const-val">$$72 - 58 \implies 58 + \mathbf{2} = 60, \ 60 + \mathbf{12} = 72 \implies 2 + 12 = 14$$</div>
+                <div class="math-const-desc">Cashier's change method: never subtract with regrouping in your head. Hop up from $58$ to $72$!</div>
+            </div>
+
+            <div class="math-constant-card">
+                <div class="math-const-sym"><i class="fas fa-coins" style="color: #ec4899;"></i> Hack #4</div>
+                <div class="math-const-name">Quarter Counting Rhythm</div>
+                <div class="math-const-val">$$\mathbf{25\text{¢}}, \mathbf{50\text{¢}}, \mathbf{75\text{¢}}, \mathbf{\$1.00}, \mathbf{\$1.25}, \mathbf{\$1.50}, \mathbf{\$1.75}, \mathbf{\$2.00}$$</div>
+                <div class="math-const-desc">Chant the 25 pattern aloud. You will count any amount of change instantly.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2.8: Summary Cheat Sheet -->
+    <section id="sec-2-8" class="math-section">
+        <div class="math-section-header">
+            <span class="math-section-num">2.8</span>
+            <h2 class="math-section-title">Grade 2 Comprehensive Summary Cheat Sheet</h2>
+        </div>
+
+        <div class="math-summary-sheet">
+            <div class="math-summary-col">
+                <h4>Place Value Units</h4>
+                <ul>
+                    <li>$10 \text{ ones} = 1 \text{ ten}$</li>
+                    <li>$10 \text{ tens} = 1 \text{ hundred}$</li>
+                    <li>$10 \text{ hundreds} = 1 \text{ thousand}$</li>
+                    <li>Even: Ends in $0,2,4,6,8$</li>
+                    <li>Odd: Ends in $1,3,5,7,9$</li>
+                </ul>
+            </div>
+
+            <div class="math-summary-col">
+                <h4>Money &amp; Time Rules</h4>
+                <ul>
+                    <li>1 Quarter = 25¢ (4 = $1.00)</li>
+                    <li>1 Dime = 10¢ (10 = $1.00)</li>
+                    <li>1 Nickel = 5¢ (20 = $1.00)</li>
+                    <li>60 minutes = 1 hour</li>
+                    <li>24 hours = 1 day</li>
+                </ul>
+            </div>
+
+            <div class="math-summary-col">
+                <h4>Geometry &amp; Measurement</h4>
+                <ul>
+                    <li>12 inches = 1 foot</li>
+                    <li>3 feet = 1 yard = 36 inches</li>
+                    <li>100 centimeters = 1 meter</li>
+                    <li>Quadrilateral: 4 sides &amp; 4 angles</li>
+                    <li>Pentagon: 5 sides &bull; Hexagon: 6</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 </div>
