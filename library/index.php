@@ -340,11 +340,6 @@ include ABSPATH . 'src/header.php';
                         <i class="fas fa-book-reader"></i>
                     </div>
                     <div class="drawer-header-text">
-                        <div class="drawer-breadcrumbs">
-                            <span onclick="closeResourcePortal()" class="breadcrumb-crumb linkable">Catalog</span>
-                            <i class="fas fa-chevron-right breadcrumb-sep"></i>
-                            <span id="drawer-breadcrumb-current" class="breadcrumb-crumb active">Research Desk</span>
-                        </div>
                         <h2 id="drawer-title" class="drawer-header-title">Subject Guide</h2>
                         <p id="drawer-subtitle" class="drawer-header-subtitle"></p>
                     </div>

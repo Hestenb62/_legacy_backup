@@ -35,11 +35,6 @@ include '../../src/header.php';
     <p class="research-hero-desc">
       Empirical studies into graphomotor mechanics, occupational therapy protocols, and assistive writing technologies.
     </p>
-    <div class="research-hero-breadcrumbs">
-      <a href="/research/" class="hero-breadcrumb-link"><i class="fas fa-arrow-left"></i> All Journals</a>
-      <span class="hero-breadcrumb-separator">/</span>
-      <span class="hero-breadcrumb-current">Volume I &bull; Open Access</span>
-    </div>
   </div>
 </div>
 

@@ -35,11 +35,6 @@ include '../../src/header.php';
     <p class="research-hero-desc">
       Ongoing peer-reviewed investigations into phonological processing, reading interventions, and assistive technologies.
     </p>
-    <div class="research-hero-breadcrumbs">
-      <a href="/research/" class="hero-breadcrumb-link"><i class="fas fa-arrow-left"></i> All Journals</a>
-      <span class="hero-breadcrumb-separator">/</span>
-      <span class="hero-breadcrumb-current">Volume I &bull; Open Access</span>
-    </div>
   </div>
 </div>
 

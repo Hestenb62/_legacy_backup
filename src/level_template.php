@@ -337,16 +337,8 @@ function renderSubjectModules(array $modulesList, string $subjectId, string $sub
 
 <link rel="stylesheet" href="/assets/css/level-style.css">
 
-<!-- Level Breadcrumb & Subject Navigation -->
+<!-- Level Navigation & Subject Tabs -->
 <div class="level-nav-container">
-    <div class="level-breadcrumb" aria-label="Breadcrumb">
-        <a href="/index.php">Home</a>
-        <i class="fas fa-chevron-right" style="font-size: 8px; opacity: 0.3;"></i>
-        <span style="color: var(--theme-color); opacity: 0.7;"><?php echo $gradeText; ?></span>
-        <i class="fas fa-chevron-right" style="font-size: 8px; opacity: 0.3;"></i>
-        <span class="breadcrumb-active" id="level-breadcrumb-active"><?php echo $levelTitle; ?> <span id="level-breadcrumb-subj"><?php echo strtoupper($initialSubjectName ?? $initialSubject ?? 'Math'); ?></span></span>
-    </div>
-
     <!-- Live Skill Search Filter -->
     <div class="level-search-wrapper" role="search" aria-label="Filter skills by keyword or standard code">
         <i class="fas fa-search level-search-icon" aria-hidden="true"></i>
@@ -692,12 +684,6 @@ function renderSubjectModules(array $modulesList, string $subjectId, string $sub
         if (btn) {
             btn.classList.add('active');
             btn.setAttribute('aria-selected', 'true');
-        }
-
-        // Update in-page breadcrumb active subject
-        const breadcrumbSubj = document.getElementById('level-breadcrumb-subj');
-        if (breadcrumbSubj && subjectData[tabName]) {
-            breadcrumbSubj.innerText = subjectData[tabName].name.toUpperCase();
         }
 
         // Keep browser URL query in sync so direct sharing, back button, and reload remember the active subject

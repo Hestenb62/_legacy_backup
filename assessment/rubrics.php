@@ -8,17 +8,6 @@ include __DIR__ . '/../src/header.php';
 ?>
 
 <div class="container" style="max-width: 1100px; margin: 2rem auto; padding: 0 1.5rem 5rem 1.5rem;">
-    <!-- Breadcrumb -->
-    <nav aria-label="Breadcrumb" style="margin-bottom: 1.5rem;">
-        <ol style="display: flex; align-items: center; gap: 0.5rem; list-style: none; padding: 0; margin: 0; font-size: 0.85rem; color: var(--color-text-muted);">
-            <li><a href="/" style="color: var(--color-text-muted); text-decoration: none;">Home</a></li>
-            <li><i class="fas fa-chevron-right" style="font-size: 0.7rem; opacity: 0.5;"></i></li>
-            <li><a href="/assessment/" style="color: var(--color-text-muted); text-decoration: none;">Assessment</a></li>
-            <li><i class="fas fa-chevron-right" style="font-size: 0.7rem; opacity: 0.5;"></i></li>
-            <li aria-current="page" style="color: var(--color-primary); font-weight: 700;">Teacher Rubrics</li>
-        </ol>
-    </nav>
-
     <!-- Header Hero Banner -->
     <div style="background: linear-gradient(135deg, color-mix(in srgb, var(--color-primary) 15%, var(--color-bg-surface)), var(--color-bg-surface)); border: 1px solid var(--color-border); border-radius: var(--radius-2xl, 1.5rem); padding: 2.5rem; margin-bottom: 3rem; position: relative; overflow: hidden; box-shadow: var(--shadow-sm);">
         <div style="max-width: 700px; position: relative; z-index: 2;">

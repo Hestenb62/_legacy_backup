@@ -21,7 +21,7 @@ include ABSPATH . 'src/header.php';
 <main class="lesson-container">
     <div class="lesson-card">
         <!-- Navigation Back to Level K -->
-        <nav class="lesson-top-nav" aria-label="Breadcrumb navigation" style="margin-bottom: 1.5rem;">
+        <nav class="lesson-top-nav" aria-label="Lesson navigation" style="margin-bottom: 1.5rem;">
             <a href="<?= isset($levelUrl) ? htmlspecialchars($levelUrl) : '../levels/k.php' ?>" class="lesson-back-btn" style="display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; font-weight: 700; color: var(--color-primary); text-decoration: none; padding: 0.45rem 1rem; background: color-mix(in srgb, var(--color-primary) 10%, transparent); border: 1px solid color-mix(in srgb, var(--color-primary) 20%, transparent); border-radius: 9999px; transition: all 0.2s ease;">
                 <i class="fas fa-arrow-left" aria-hidden="true"></i>
                 <span>Back to Level K (Algebra I)</span>
