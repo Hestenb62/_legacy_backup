@@ -153,6 +153,8 @@ body.zen-mode .sticky-reading-bar {
 .sticky-reader-unified .settings-dropdown {
   top: calc(100% + 0.5rem);
   right: 0;
+  width: min(440px, 94vw);
+  max-width: 95vw;
 }
 
 /* Left Group */

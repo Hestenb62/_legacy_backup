@@ -184,7 +184,8 @@ body.dark #reader-controls {
     position: absolute;
     top: calc(100% + 0.75rem);
     right: 0;
-    width: 280px;
+    width: min(440px, 94vw);
+    max-width: 95vw;
     background-color: var(--color-content-bg, #ffffff);
     border: 1px solid var(--color-border, rgba(0,0,0,0.08));
     border-radius: 1.25rem;
@@ -214,15 +215,17 @@ body.dark #reader-controls {
 }
 
 .settings-row-btn {
-    flex: 1;
-    padding: 0.4rem 0.5rem;
+    flex: 1 1 0;
+    padding: 0.45rem 0.25rem;
     border-radius: 0.5rem;
     border: 1px solid var(--color-border, rgba(0,0,0,0.08));
     background-color: var(--color-base-bg, #f8fafc);
     color: var(--color-text-secondary, #64748b);
     font-weight: 700;
-    font-size: 0.78rem;
+    font-size: 0.76rem;
     cursor: pointer;
+    white-space: nowrap;
+    text-align: center;
     transition: all 0.2s ease;
     text-align: center;
 }

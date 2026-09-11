@@ -144,19 +144,11 @@ body.zen-mode {
 <!-- Unified Sticky Reading Bar with Bottom Progress Indicator -->
 <header id="sticky-reading-bar" class="sticky-reading-bar is-active sticky-reader-unified" aria-label="Reading Controls & Progress" role="region">
     <div class="sticky-bar-inner">
-        <!-- Left: Back to Catalog, Book Title, Chapter Subtitle, Session Timer -->
+        <!-- Left: Back to Catalog & Session Timer -->
         <div class="sticky-bar-left">
             <a href="../index.php" class="sticky-bar-back-btn" title="Return to Digital Library Catalog" aria-label="Back to Catalog">
                 <i class="fas fa-arrow-left" aria-hidden="true"></i>
             </a>
-            <div class="sticky-bar-info">
-                <span class="sticky-bar-title"><?php echo htmlspecialchars($bookTitle); ?></span>
-                <?php if (!empty($currentChapterTitle)): ?>
-                    <span class="sticky-bar-subtitle">
-                        <span class="sticky-badge-pill"><i class="fas fa-book-open"></i> <?php echo htmlspecialchars($currentChapterTitle); ?></span>
-                    </span>
-                <?php endif; ?>
-            </div>
             <div id="reader-session-timer-pill" class="reader-session-timer-pill" title="Daily Reading Tracker">
                 <i class="fas fa-stopwatch" style="color: var(--color-primary, #e11d48);" aria-hidden="true"></i>
                 <span id="reading-session-time">0m today</span>
@@ -247,11 +239,6 @@ body.zen-mode {
             <?php endif; ?>
 
             <div class="sticky-bar-tools controls-tools-group">
-                <!-- Citation Generator -->
-                <button type="button" id="open-citation-btn" class="tool-btn" title="Generate Academic Citation" onclick="openChapterCitationModal()" aria-label="Generate Citation">
-                    <i class="fas fa-quote-right" aria-hidden="true"></i>
-                </button>
-
                 <!-- Study Suite (Vocab, Flashcards, Quizzes, Notes) -->
                 <button type="button" id="open-vocab-btn" class="tool-btn tool-btn-vocab" title="Study Guide, Flashcards & Comprehension Quizzes" aria-label="Open Study Guide">
                     <i class="fas fa-graduation-cap" aria-hidden="true"></i>
@@ -284,13 +271,13 @@ body.zen-mode {
                     </button>
                 <?php endif; ?>
 
-                <!-- Book License & Sourcing -->
-                <button type="button" class="tool-btn" onclick="openLicenseModal()" title="View Book License & Sourcing" aria-label="View Book License">
+                <!-- Book Info, License & Citation Modal -->
+                <button type="button" id="open-license-modal-btn" class="tool-btn" onclick="openLicenseModal()" title="View Book Info, License & Citation" aria-label="View Book Info & Citation">
                     <i class="fas fa-info-circle" aria-hidden="true"></i>
                 </button>
 
                 <!-- Typography Dropdown Panel -->
-                <div id="settings-panel" class="settings-dropdown hidden" role="region" aria-label="Reader Customization Panel" style="width: 320px;">
+                <div id="settings-panel" class="settings-dropdown hidden" role="region" aria-label="Reader Customization Panel">
                     <h4 class="settings-section-title">Font Family</h4>
                     <div class="settings-btn-row">
                         <button type="button" class="settings-row-btn active settings-font" data-font="font-sans">Sans</button>
@@ -703,20 +690,20 @@ body.zen-mode {
     </div>
 <?php endif; ?>
 
-<!-- Sourcing & Info Modal -->
+<!-- Book Information, Sourcing & Academic Citation Modal -->
 <div id="license-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="license-title" onclick="closeLicenseModal()">
-    <div class="modal-card license-modal-card" onclick="event.stopPropagation()">
+    <div id="chapterCitationModal" class="modal-card license-modal-card citation-modal-card" onclick="event.stopPropagation()" style="max-width: 680px; width: 95%;">
         <div class="modal-card-header">
             <div class="modal-card-title">
                 <div class="modal-icon-circle">
                     <i class="fas fa-info-circle"></i>
                 </div>
                 <div>
-                    <h3 id="license-title">Book Sourcing & Information</h3>
-                    <p class="modal-subtitle">Metadata, License & Primary Sources</p>
+                    <h3 id="license-title">Book Details & Citation</h3>
+                    <p class="modal-subtitle">Metadata, License & Academic Citation Formats</p>
                 </div>
             </div>
-            <button type="button" id="close-license-modal" class="modal-card-close-btn" onclick="closeLicenseModal()" aria-label="Close license info">
+            <button type="button" id="close-license-modal" class="modal-card-close-btn" onclick="closeLicenseModal()" aria-label="Close book info modal">
                 <i class="fas fa-times"></i>
             </button>
         </div>
@@ -733,45 +720,33 @@ body.zen-mode {
                 <p><strong>Source Provider:</strong> <?php echo htmlspecialchars($book['file-source'] ?? 'Public Domain Archive / Educational Fair Use'); ?></p>
                 <p><strong>Description:</strong> <?php echo htmlspecialchars($book['description'] ?? 'No additional metadata available.'); ?></p>
             </div>
-        </div>
-    </div>
-</div>
 
-<!-- Chapter Citation Modal -->
-<div id="chapterCitationModal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="chapter-cite-title" onclick="closeChapterCitationModal()">
-    <div class="modal-card citation-modal-card" onclick="event.stopPropagation()">
-        <div class="modal-card-header">
-            <div class="modal-card-title">
-                <div class="modal-icon-circle">
-                    <i class="fas fa-quote-right"></i>
+            <!-- Chapter Citation Section -->
+            <div class="license-citation-section" style="margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid var(--color-border, rgba(0, 0, 0, 0.1));">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
+                    <h4 style="font-size: 0.95rem; font-weight: 800; display: flex; align-items: center; gap: 0.5rem; margin: 0; color: var(--color-text-main, #0f172a);">
+                        <i class="fas fa-quote-right" style="color: var(--color-primary, #4f46e5);"></i> Cite This Chapter
+                    </h4>
+                    <span style="font-size: 0.78rem; color: var(--color-text-muted, #64748b); font-weight: 600;">Standard Formats</span>
                 </div>
-                <div>
-                    <h3 id="chapter-cite-title">Cite This Chapter</h3>
-                    <p class="modal-subtitle">Academic formats for citations & bibliography</p>
+                <div class="citation-format-tabs">
+                    <button type="button" class="citation-tab-btn active" onclick="switchReaderCitationStyle('mla')">MLA 9</button>
+                    <button type="button" class="citation-tab-btn" onclick="switchReaderCitationStyle('apa')">APA 7</button>
+                    <button type="button" class="citation-tab-btn" onclick="switchReaderCitationStyle('chicago')">Chicago 17</button>
+                    <button type="button" class="citation-tab-btn" onclick="switchReaderCitationStyle('harvard')">Harvard</button>
+                    <button type="button" class="citation-tab-btn" onclick="switchReaderCitationStyle('bibtex')">BibTeX</button>
+                    <button type="button" class="citation-tab-btn" onclick="switchReaderCitationStyle('ris')">RIS</button>
                 </div>
-            </div>
-            <button type="button" id="close-chapter-cite-modal" class="modal-card-close-btn" onclick="closeChapterCitationModal()" aria-label="Close citation modal">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <div class="modal-body">
-            <div class="citation-format-tabs">
-                <button type="button" class="citation-tab-btn active" onclick="switchReaderCitationStyle('mla')">MLA 9</button>
-                <button type="button" class="citation-tab-btn" onclick="switchReaderCitationStyle('apa')">APA 7</button>
-                <button type="button" class="citation-tab-btn" onclick="switchReaderCitationStyle('chicago')">Chicago 17</button>
-                <button type="button" class="citation-tab-btn" onclick="switchReaderCitationStyle('harvard')">Harvard</button>
-                <button type="button" class="citation-tab-btn" onclick="switchReaderCitationStyle('bibtex')">BibTeX</button>
-                <button type="button" class="citation-tab-btn" onclick="switchReaderCitationStyle('ris')">RIS</button>
-            </div>
-            <div class="citation-preview-box">
-                <div id="reader-citation-text" class="citation-text-render"></div>
-                <div style="display: flex; gap: 0.5rem; justify-content: flex-end; margin-top: 1rem; flex-wrap: wrap;">
-                    <button type="button" id="reader-citation-dl-btn" class="citation-download-btn" onclick="downloadReaderCitationFile()" title="Download citation file">
-                        <i class="fas fa-file-download"></i> <span>Download File</span>
-                    </button>
-                    <button type="button" id="reader-citation-copy-btn" class="citation-copy-btn" onclick="copyReaderCitationText()">
-                        <i class="fas fa-copy"></i> <span>Copy Citation</span>
-                    </button>
+                <div class="citation-preview-box">
+                    <div id="reader-citation-text" class="citation-text-render"></div>
+                    <div style="display: flex; gap: 0.5rem; justify-content: flex-end; margin-top: 1rem; flex-wrap: wrap;">
+                        <button type="button" id="reader-citation-dl-btn" class="citation-download-btn" onclick="downloadReaderCitationFile()" title="Download citation file">
+                            <i class="fas fa-file-download"></i> <span>Download File</span>
+                        </button>
+                        <button type="button" id="reader-citation-copy-btn" class="citation-copy-btn" onclick="copyReaderCitationText()">
+                            <i class="fas fa-copy"></i> <span>Copy Citation</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

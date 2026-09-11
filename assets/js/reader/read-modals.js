@@ -38,6 +38,11 @@
 
         window.openLicenseModal = function () {
             if (licenseModal) {
+                if (typeof renderReaderCitation === 'function') {
+                    renderReaderCitation(window.BOOK_METADATA || {});
+                } else if (typeof window.renderReaderCitation === 'function') {
+                    window.renderReaderCitation(window.BOOK_METADATA || {});
+                }
                 licenseModal.classList.remove("hidden");
                 licenseModal.style.display = "flex";
             }
@@ -51,22 +56,11 @@
         };
 
         window.openChapterCitationModal = function () {
-            if (citeModal) {
-                if (typeof renderReaderCitation === 'function') {
-                    renderReaderCitation(window.BOOK_METADATA || {});
-                } else if (typeof window.renderReaderCitation === 'function') {
-                    window.renderReaderCitation(window.BOOK_METADATA || {});
-                }
-                citeModal.classList.remove("hidden");
-                citeModal.style.display = "flex";
-            }
+            window.openLicenseModal();
         };
 
         window.closeChapterCitationModal = function () {
-            if (citeModal) {
-                citeModal.classList.add("hidden");
-                citeModal.style.display = "none";
-            }
+            window.closeLicenseModal();
         };
 
         // DOM Click bindings
