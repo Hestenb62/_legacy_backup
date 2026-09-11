@@ -430,7 +430,11 @@
             "txt-link": "",
             "lexile": "Reference",
             "grade": "All Grades",
-            "disclaimer-key": "default"
+            "disclaimer-key": "default",
+            "authorBio": "Hesten's Learning Editorial Mathematics Guild — developed by mathematics educators, curriculum specialists, and typographers to produce an authoritative, gold-standard reference handbook across arithmetic, algebra, geometry, trigonometry, and calculus.",
+            "introWhy": "To provide students, teachers, and independent scholars with an unambiguous, publication-grade mathematical handbook featuring rigorous definitions, axiomatic theorems, exact constants, and dynamic LaTeX/MathJax typesetting.",
+            "introHow": "Systematically structured into four core branches of mathematical knowledge: Number Systems & Arithmetic Laws, Algebraic Identities & Equations, Euclidean & Trigonometric Geometry, and Calculus Essentials with Fundamental Constants.",
+            "introWhat": "A comprehensive 4-volume reference handbook featuring over 100+ formal theorems, definitions, step-by-step worked solutions, exact trigonometric tables, prime factorizations, integral rosters, and Greek notation standards."
         },
         {
             "id": "language-facts-repo",

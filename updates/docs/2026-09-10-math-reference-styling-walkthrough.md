@@ -19,6 +19,8 @@ The digital **Mathematical Facts, Constants & Formulas Compendium** (`math-facts
 
 ### 1. Dedicated Math Reference Stylesheet & Theme System
 - **File**: `assets/css/reader/read-math-reference.css` (imported directly in `assets/css/reader-main.css`).
+- **Pre-Read Overview Card**:
+  - Implemented the full Author & Compendium Context Overview screen (`chapter=intro`) matching the 1984 book architecture with `authorBio`, `introWhy`, `introHow`, and `introWhat`.
 - **Mathematical Callout Components**:
   - `.math-def-box`: Formal definition callouts with domain chips and notation summaries.
   - `.math-theorem-box`: Formal theorems, lemmas, and corollaries with numbered pill badges.
