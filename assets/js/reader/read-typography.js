@@ -165,6 +165,14 @@
             if (window.recalculateReaderPages) {
                 setTimeout(window.recalculateReaderPages, 60);
             }
+
+            // Synchronize MathJax rendering to match new font scale and family
+            if (window.ensureMathJax) {
+                if (window._readerMathJaxTimer) clearTimeout(window._readerMathJaxTimer);
+                window._readerMathJaxTimer = setTimeout(() => {
+                    window.ensureMathJax(bookContent);
+                }, 80);
+            }
         }
 
         applyPrefs(defaultPrefs);

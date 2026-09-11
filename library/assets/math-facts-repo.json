@@ -1,0 +1,182 @@
+{
+  "vocab-chapter-1": [
+    {
+      "word": "Natural Numbers (\\(\\mathbb{N}\\))",
+      "definition": "The set of positive counting integers: \\(\\{1, 2, 3, 4, 5, \\dots\\}\\)."
+    },
+    {
+      "word": "Rational Numbers (\\(\\mathbb{Q}\\))",
+      "definition": "Any number expressible as the quotient \\(\\frac{p}{q}\\) of two integers, where \\(q \\neq 0\\)."
+    },
+    {
+      "word": "Prime Number",
+      "definition": "An integer greater than 1 whose only positive divisors are 1 and itself."
+    },
+    {
+      "word": "Fundamental Theorem of Arithmetic",
+      "definition": "Every integer \\(n \\geq 2\\) has a unique factorization as a product of prime powers."
+    },
+    {
+      "word": "Greatest Common Divisor (\\(\\gcd\\))",
+      "definition": "The largest positive integer that divides each of two or more given integers without a remainder."
+    },
+    {
+      "word": "Triangle Inequality",
+      "definition": "The mathematical property stating that \\(|a + b| \\leq |a| + |b|\\) for all real numbers."
+    }
+  ],
+  "chapter-1": [
+    {
+      "question": "Which of the following numbers belongs to the set of irrational numbers (\\(\\mathbb{I}\\))?",
+      "options": [
+        "\\(\\frac{22}{7}\\)",
+        "\\(0.375\\)",
+        "\\(\\sqrt{2}\\)",
+        "\\(-4\\)"
+      ],
+      "correctIndex": 2,
+      "explanation": "\\(\\sqrt{2}\\) cannot be expressed as a quotient of integers \\(p/q\\) and has a non-terminating, non-repeating decimal expansion."
+    },
+    {
+      "question": "If \\(\\gcd(a, b) = 12\\) and \\(a \\cdot b = 1728\\), what is \\(\\text{lcm}(a, b)\\)?",
+      "options": [
+        "\\(144\\)",
+        "\\(72\\)",
+        "\\(288\\)",
+        "\\(12\\)"
+      ],
+      "correctIndex": 0,
+      "explanation": "By the GCD-LCM duality theorem: \\(\\text{lcm}(a, b) = \\frac{a \\cdot b}{\\gcd(a, b)} = \\frac{1728}{12} = 144\\)."
+    }
+  ],
+  "vocab-chapter-2": [
+    {
+      "word": "Difference of Squares",
+      "definition": "The algebraic factoring identity: \\(a^2 - b^2 = (a + b)(a - b)\\)."
+    },
+    {
+      "word": "Discriminant (\\(\\Delta\\))",
+      "definition": "The quantity \\(\\Delta = b^2 - 4ac\\) in a quadratic equation that reveals the nature of its roots."
+    },
+    {
+      "word": "Logarithm (\\(\\log_b x\\))",
+      "definition": "The inverse function of exponentiation, indicating the exponent to which base \\(b\\) must be raised to equal \\(x\\)."
+    },
+    {
+      "word": "Binomial Theorem",
+      "definition": "The formula expressing \\((a + b)^n = \\sum_{k=0}^n \\binom{n}{k} a^{n-k} b^k\\)."
+    },
+    {
+      "word": "Vieta's Formulas",
+      "definition": "Relations linking the coefficients of a polynomial to sums and products of its roots."
+    }
+  ],
+  "chapter-2": [
+    {
+      "question": "If the discriminant of a quadratic equation is \\(\\Delta = -16\\), what is the nature of its roots?",
+      "options": [
+        "Two distinct rational roots",
+        "One repeated real root",
+        "Two complex conjugate roots",
+        "Two distinct irrational roots"
+      ],
+      "correctIndex": 2,
+      "explanation": "When \\(\\Delta < 0\\), the square root \\(\\sqrt{\\Delta}\\) produces imaginary numbers, yielding two complex conjugate roots."
+    },
+    {
+      "question": "What is the sum of the infinite geometric series \\(S = 16 + 8 + 4 + 2 + \\dots\\)?",
+      "options": [
+        "\\(32\\)",
+        "\\(24\\)",
+        "\\(64\\)",
+        "The series diverges"
+      ],
+      "correctIndex": 0,
+      "explanation": "With first term \\(a_1 = 16\\) and common ratio \\(r = 1/2\\), the sum is \\(S_\\infty = \\frac{a_1}{1 - r} = \\frac{16}{1 - 1/2} = 32\\)."
+    }
+  ],
+  "vocab-chapter-3": [
+    {
+      "word": "Pythagorean Theorem",
+      "definition": "In any Euclidean right triangle: \\(a^2 + b^2 = c^2\\) where \\(c\\) is the hypotenuse."
+    },
+    {
+      "word": "Law of Cosines",
+      "definition": "The generalized triangle relation: \\(c^2 = a^2 + b^2 - 2ab\\cos C\\)."
+    },
+    {
+      "word": "Inscribed Angle Theorem",
+      "definition": "An angle inscribed in a circle equals exactly half the measure of the central angle subtending the same arc."
+    },
+    {
+      "word": "Dot Product (\\(\\vec{u} \\cdot \\vec{v}\\))",
+      "definition": "The scalar product \\(\\|\\vec{u}\\|\\|\\vec{v}\\|\\cos\\theta\\), equaling zero when vectors are orthogonal."
+    }
+  ],
+  "chapter-3": [
+    {
+      "question": "What is the exact value of \\(\\cos(60^\\circ)\\) or \\(\\cos(\\frac{\\pi}{3})\\)?",
+      "options": [
+        "\\(\\frac{\\sqrt{3}}{2}\\)",
+        "\\(\\frac{1}{2}\\)",
+        "\\(\\frac{\\sqrt{2}}{2}\\)",
+        "\\(1\\)"
+      ],
+      "correctIndex": 1,
+      "explanation": "In an equilateral triangle bisected into a 30-60-90 right triangle, \\(\\cos(60^\\circ) = \\frac{\\text{adjacent}}{\\text{hypotenuse}} = \\frac{1}{2}\\)."
+    },
+    {
+      "question": "What is the volume formula for a right circular cone of radius \\(r\\) and height \\(h\\)?",
+      "options": [
+        "\\(V = \\pi r^2 h\\)",
+        "\\(V = \\frac{4}{3}\\pi r^3\\)",
+        "\\(V = \\frac{1}{3}\\pi r^2 h\\)",
+        "\\(V = 2\\pi r h\\)"
+      ],
+      "correctIndex": 2,
+      "explanation": "A cone occupies exactly one-third the volume of a cylinder with identical base and height: \\(V = \\frac{1}{3}\\pi r^2 h\\)."
+    }
+  ],
+  "vocab-chapter-4": [
+    {
+      "word": "Derivative (\\(f'(x)\\))",
+      "definition": "The limit of difference quotients representing the instantaneous rate of change: \\(\\lim_{h\\to 0}\\frac{f(x+h)-f(x)}{h}\\)."
+    },
+    {
+      "word": "Fundamental Theorem of Calculus",
+      "definition": "Unites differentiation and integration by proving that \\(\\frac{d}{dx}\\int_a^x f(t)dt = f(x)\\) and \\(\\int_a^b f(x)dx = F(b)-F(a)\\)."
+    },
+    {
+      "word": "Euler's Identity",
+      "definition": "The mathematical unity equation \\(e^{i\\pi} + 1 = 0\\), connecting \\(e, i, \\pi, 1,\\) and \\(0\\)."
+    },
+    {
+      "word": "L'Hôpital's Rule",
+      "definition": "A technique to evaluate limits of indeterminate forms \\(\\frac{0}{0}\\) or \\(\\frac{\\pm\\infty}{\\pm\\infty}\\) using derivatives of numerator and denominator."
+    }
+  ],
+  "chapter-4": [
+    {
+      "question": "What is the derivative of \\(f(x) = x^2 e^x\\)?",
+      "options": [
+        "\\(2x e^x\\)",
+        "\\(x^2 e^x\\)",
+        "\\(2x e^x + x^2 e^x\\)",
+        "\\(2x + e^x\\)"
+      ],
+      "correctIndex": 2,
+      "explanation": "By the Product Rule \\((fg)' = f'g + fg'\\): \\(\\frac{d}{dx}[x^2 e^x] = (2x)(e^x) + (x^2)(e^x) = (2x + x^2)e^x\\)."
+    },
+    {
+      "question": "Which of the following constants represents the base of the natural logarithm?",
+      "options": [
+        "\\(\\pi \\approx 3.14159\\)",
+        "\\(e \\approx 2.71828\\)",
+        "\\(\\varphi \\approx 1.61803\\)",
+        "\\(\\gamma \\approx 0.57721\\)"
+      ],
+      "correctIndex": 1,
+      "explanation": "Euler's number \\(e \\approx 2.71828\\) is the unique base such that \\(\\frac{d}{dx}[e^x] = e^x\\) and \\(\\ln e = 1\\)."
+    }
+  ]
+}

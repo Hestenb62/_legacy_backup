@@ -116,6 +116,13 @@ if ($hasIntro) {
     }
 }
 
+// Ensure MathJax is loaded if this is a math book or math notation is present
+if (!isset($requiresMathJax)) {
+    if (strpos($bookId, 'math') !== false || preg_match('/\$\$|\$|\\\\\(|\\\\\[|\\begin\{/', $contentHtml)) {
+        $requiresMathJax = true;
+    }
+}
+
 include ABSPATH . 'src/header.php';
 ?>
 

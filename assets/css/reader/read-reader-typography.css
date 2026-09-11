@@ -12,32 +12,65 @@
 #book-content p,
 #book-content li,
 #book-content div.content-content,
-#book-content blockquote {
+#book-content blockquote,
+#book-content td,
+#book-content th,
+#book-content .math-formula-card,
+#book-content .math-def-box,
+#book-content .math-theorem-box,
+#book-content .math-example-box {
     font-size: var(--reader-font-size, 1.2rem) !important;
 }
 
-/* Font Family Classes */
-.font-sans {
+/* MathJax Dynamic Font Scaling & Responsive Em Sizes */
+#book-content mjx-container[jax="SVG"] {
+    font-size: 1.05em !important;
+    vertical-align: middle;
+    transition: font-size 0.2s ease;
+}
+
+#book-content mjx-container[jax="SVG"]:not([display="true"]) {
+    display: inline-block;
+    vertical-align: -0.22ex;
+    font-size: 1em !important;
+}
+
+#book-content mjx-container[jax="SVG"][display="true"] {
+    font-size: 1.15em !important;
+}
+
+/* Font Family Classes & MathJax Text Adaptation */
+.font-sans,
+.font-sans mjx-container text,
+.font-sans [class*="mjx-mtext"] {
     font-family: var(--site-font-family, 'Outfit', 'Inter', -apple-system, sans-serif) !important;
 }
 
-.font-serif {
+.font-serif,
+.font-serif mjx-container text,
+.font-serif [class*="mjx-mtext"] {
     font-family: 'Merriweather', 'Georgia', serif !important;
 }
 
-.font-dyslexic {
+.font-dyslexic,
+.font-dyslexic mjx-container text,
+.font-dyslexic [class*="mjx-mtext"] {
     font-family: 'OpenDyslexic', 'Comic Sans MS', sans-serif !important;
     letter-spacing: 0.06em !important;
     word-spacing: 0.12em !important;
     line-height: 2em !important;
 }
 
-.font-hyperlegible {
+.font-hyperlegible,
+.font-hyperlegible mjx-container text,
+.font-hyperlegible [class*="mjx-mtext"] {
     font-family: 'Atkinson Hyperlegible', 'Trebuchet MS', sans-serif !important;
     letter-spacing: 0.03em !important;
 }
 
-.font-mono {
+.font-mono,
+.font-mono mjx-container text,
+.font-mono [class*="mjx-mtext"] {
     font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace !important;
     letter-spacing: -0.01em !important;
 }

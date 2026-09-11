@@ -1,0 +1,481 @@
+/* ==========================================================================
+   Math Reference Book & Handbook Styling System
+   Hesten's Learning Platform - WCAG AAA & Mathematical Typography Standard
+   ========================================================================== */
+
+/* --- Math Reference Section Header & Badges --- */
+.math-section-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    background: rgba(79, 70, 229, 0.12);
+    color: var(--color-primary, #6366f1);
+    border: 1px solid rgba(79, 70, 229, 0.25);
+    margin-bottom: 0.75rem;
+}
+
+.math-toc-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1.5rem 0 2.5rem 0;
+    padding: 1rem 1.25rem;
+    background: var(--color-bg-subtle, rgba(255, 255, 255, 0.04));
+    border: 1px solid var(--color-border, rgba(255, 255, 255, 0.1));
+    border-radius: 1rem;
+}
+
+.math-toc-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.82rem;
+    font-weight: 700;
+    padding: 0.35rem 0.85rem;
+    border-radius: 9999px;
+    background: var(--color-content-bg, #1e293b);
+    color: var(--color-text-default, #f1f5f9);
+    border: 1px solid var(--color-border, rgba(255, 255, 255, 0.12));
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.math-toc-pill:hover,
+.math-toc-pill:focus-visible {
+    background: var(--color-primary, #6366f1);
+    color: #ffffff;
+    border-color: var(--color-primary, #6366f1);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+/* --- Formal Mathematical Definition Box --- */
+.math-def-box {
+    margin: 2rem 0;
+    padding: 1.5rem 1.75rem;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(99, 102, 241, 0.04) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-left: 5px solid #3b82f6;
+    border-radius: 1rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.math-def-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.85rem;
+}
+
+.math-def-title {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: #2563eb;
+    margin: 0;
+}
+
+[data-theme="dark"] .math-def-title,
+[data-theme="midnight"] .math-def-title {
+    color: #60a5fa;
+}
+
+.math-def-chip {
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.2rem 0.6rem;
+    border-radius: 9999px;
+    background: rgba(59, 130, 246, 0.15);
+    color: #2563eb;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+[data-theme="dark"] .math-def-chip,
+[data-theme="midnight"] .math-def-chip {
+    color: #93c5fd;
+    background: rgba(59, 130, 246, 0.25);
+}
+
+/* --- Formal Mathematical Theorem & Lemma Box --- */
+.math-theorem-box {
+    margin: 2.25rem 0;
+    padding: 1.5rem 1.75rem;
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(5, 150, 105, 0.03) 100%);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    border-left: 5px solid #10b981;
+    border-radius: 1rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.math-theorem-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.85rem;
+}
+
+.math-theorem-title {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: #059669;
+    margin: 0;
+}
+
+[data-theme="dark"] .math-theorem-title,
+[data-theme="midnight"] .math-theorem-title {
+    color: #34d399;
+}
+
+.math-theorem-badge {
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.2rem 0.6rem;
+    border-radius: 9999px;
+    background: rgba(16, 185, 129, 0.15);
+    color: #059669;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+[data-theme="dark"] .math-theorem-badge,
+[data-theme="midnight"] .math-theorem-badge {
+    color: #6ee7b7;
+    background: rgba(16, 185, 129, 0.25);
+}
+
+/* --- Formula Cards & Highlight Grids --- */
+.math-formula-card {
+    margin: 2rem 0;
+    padding: 1.5rem 1.75rem;
+    background: var(--color-bg-subtle, rgba(255, 255, 255, 0.03));
+    border: 1px solid var(--color-border, rgba(255, 255, 255, 0.12));
+    border-radius: 1.25rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    position: relative;
+    overflow: hidden;
+}
+
+.math-formula-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #6366f1, #3b82f6, #ec4899);
+}
+
+.math-formula-title {
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--color-text-default);
+    margin-top: 0.25rem;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.math-formula-card .math-equation-display {
+    padding: 1rem 1.25rem;
+    margin: 1rem 0;
+    background: var(--color-content-bg, rgba(0, 0, 0, 0.2));
+    border-radius: 0.75rem;
+    border: 1px solid var(--color-border, rgba(255, 255, 255, 0.08));
+    text-align: center;
+    overflow-x: auto;
+}
+
+.math-formula-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+    margin: 2rem 0;
+}
+
+.math-grid-card {
+    padding: 1.25rem;
+    background: var(--color-bg-subtle, rgba(255, 255, 255, 0.03));
+    border: 1px solid var(--color-border, rgba(255, 255, 255, 0.1));
+    border-radius: 1rem;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.math-grid-card:hover {
+    border-color: var(--color-primary, #6366f1);
+    transform: translateY(-2px);
+}
+
+.math-grid-card h4 {
+    margin: 0 0 0.5rem 0 !important;
+    font-size: 0.98rem !important;
+    font-weight: 800;
+    color: var(--color-primary, #6366f1);
+}
+
+/* --- Worked Reference Example Box --- */
+.math-example-box {
+    margin: 2.25rem 0;
+    padding: 1.5rem 1.75rem;
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.06) 0%, rgba(217, 119, 6, 0.02) 100%);
+    border: 1px solid rgba(245, 158, 11, 0.25);
+    border-left: 5px solid #f59e0b;
+    border-radius: 1rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+}
+
+.math-example-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    font-weight: 800;
+    color: #d97706;
+    margin-bottom: 0.75rem;
+}
+
+[data-theme="dark"] .math-example-header,
+[data-theme="midnight"] .math-example-header {
+    color: #fbbf24;
+}
+
+.math-example-steps {
+    margin: 1rem 0;
+    padding-left: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.math-example-result {
+    margin-top: 1rem;
+    padding: 0.65rem 1rem;
+    background: rgba(245, 158, 11, 0.12);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    border-radius: 0.5rem;
+    font-weight: 700;
+    display: inline-block;
+}
+
+/* --- Caution & Pitfall Box --- */
+.math-caution-box {
+    margin: 2rem 0;
+    padding: 1.25rem 1.5rem;
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.07) 0%, rgba(220, 38, 38, 0.02) 100%);
+    border: 1px solid rgba(239, 68, 68, 0.25);
+    border-left: 5px solid #ef4444;
+    border-radius: 1rem;
+}
+
+.math-caution-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: #dc2626;
+    margin-bottom: 0.5rem;
+}
+
+[data-theme="dark"] .math-caution-header,
+[data-theme="midnight"] .math-caution-header {
+    color: #f87171;
+}
+
+/* --- Mathematical Constant Cards --- */
+.math-constant-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem;
+    margin: 2rem 0;
+}
+
+.math-constant-card {
+    padding: 1.35rem;
+    background: var(--color-bg-subtle, rgba(255, 255, 255, 0.03));
+    border: 1px solid var(--color-border, rgba(255, 255, 255, 0.1));
+    border-radius: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: relative;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.math-constant-card .constant-sym {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--color-primary, #6366f1);
+    line-height: 1;
+}
+
+.math-constant-card .constant-name {
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--color-text-default);
+}
+
+.math-constant-card .constant-val {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.88rem;
+    background: var(--color-content-bg, rgba(0, 0, 0, 0.2));
+    padding: 0.4rem 0.6rem;
+    border-radius: 0.4rem;
+    border: 1px solid var(--color-border, rgba(255, 255, 255, 0.06));
+    word-break: break-all;
+    color: var(--color-primary, #6366f1);
+}
+
+/* --- Publication-Grade Reference Tables (.ref-table) --- */
+.ref-table-wrap {
+    width: 100%;
+    margin: 2rem 0;
+    overflow-x: auto;
+    border-radius: 1rem;
+    border: 1px solid var(--color-border, rgba(255, 255, 255, 0.12));
+    background: var(--color-content-bg, #1e293b);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+}
+
+.ref-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: clamp(0.88rem, 0.2vw + 0.84rem, 1rem);
+    text-align: left;
+}
+
+.ref-table th,
+.ref-table td {
+    padding: 0.9rem 1.15rem;
+    border-bottom: 1px solid var(--color-border, rgba(255, 255, 255, 0.08));
+    vertical-align: middle;
+}
+
+.ref-table th {
+    background: var(--color-bg-subtle, rgba(255, 255, 255, 0.06));
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    color: var(--color-text-secondary, #94a3b8);
+    border-bottom: 2px solid var(--color-border, rgba(255, 255, 255, 0.15));
+    white-space: nowrap;
+}
+
+.ref-table tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.ref-table tbody tr:hover {
+    background: rgba(99, 102, 241, 0.06);
+}
+
+.ref-table td:first-child {
+    font-weight: 700;
+    color: var(--color-text-default);
+}
+
+/* --- Chapter Summary Sheet / Quick Reference Cheat Sheet --- */
+.math-summary-sheet {
+    margin: 3.5rem 0 1.5rem 0;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.06) 0%, rgba(139, 92, 246, 0.04) 100%);
+    border: 2px solid rgba(99, 102, 241, 0.3);
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.math-summary-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.math-summary-header h3 {
+    margin: 0 !important;
+    font-size: 1.35rem !important;
+    font-weight: 900;
+    color: var(--color-primary, #6366f1);
+}
+
+.math-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem;
+}
+
+.math-summary-col {
+    padding: 1.25rem;
+    background: var(--color-content-bg, #1e293b);
+    border: 1px solid var(--color-border, rgba(255, 255, 255, 0.08));
+    border-radius: 1rem;
+}
+
+.math-summary-col h4 {
+    margin: 0 0 0.75rem 0 !important;
+    font-size: 0.95rem !important;
+    font-weight: 800;
+    color: var(--color-primary, #6366f1);
+    border-bottom: 1px dashed var(--color-border, rgba(255, 255, 255, 0.1));
+    padding-bottom: 0.4rem;
+}
+
+.math-summary-col ul {
+    margin: 0;
+    padding-left: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    font-size: 0.9rem;
+}
+
+/* --- Theme Adaptations --- */
+[data-theme="sepia"] .math-def-box {
+    background: #f4ede0;
+    border-color: #d6c6b2;
+}
+[data-theme="sepia"] .math-theorem-box {
+    background: #edf5ea;
+    border-color: #c7dec1;
+}
+[data-theme="sepia"] .math-example-box {
+    background: #faf3e8;
+    border-color: #ecdcc1;
+}
+[data-theme="sepia"] .math-formula-card,
+[data-theme="sepia"] .math-grid-card,
+[data-theme="sepia"] .ref-table-wrap,
+[data-theme="sepia"] .math-summary-sheet {
+    background: #fdfaf6;
+    border-color: #e5dac9;
+}
+[data-theme="sepia"] .ref-table th {
+    background: #f4ede0;
+    color: #635345;
+}
+[data-theme="sepia"] .ref-table tbody tr:nth-child(even) {
+    background: rgba(0, 0, 0, 0.02);
+}
