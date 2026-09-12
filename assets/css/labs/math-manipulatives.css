@@ -1,0 +1,190 @@
+/* ==========================================================================
+   assets/css/labs/math-manipulatives.css
+   Floating Math Manipulatives Tray
+   ========================================================================== */
+
+.math-manipulatives-tray {
+  position: fixed;
+  bottom: 0;
+  left: 2rem;
+  width: 440px;
+  background: var(--bg-card, #ffffff);
+  border: 1px solid var(--border-color, #cbd5e1);
+  border-bottom: none;
+  border-radius: 16px 16px 0 0;
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.18);
+  z-index: 9998;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.math-manipulatives-tray.collapsed {
+  transform: translateY(calc(100% - 42px));
+}
+
+[data-theme="dark"] .math-manipulatives-tray {
+  background: #0f172a;
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.manipulatives-bar {
+  padding: 0.6rem 1rem;
+  background: #10b981;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.88rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  border-radius: 15px 15px 0 0;
+}
+
+.manipulatives-content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.manipulatives-tabs {
+  display: flex;
+  gap: 0.5rem;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 0.5rem;
+}
+
+[data-theme="dark"] .manipulatives-tabs {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.mani-tab {
+  background: transparent;
+  border: none;
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: #64748b;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+}
+
+.mani-tab.active {
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.12);
+}
+
+.mani-panel {
+  display: none;
+}
+
+.mani-panel.active {
+  display: block;
+}
+
+.ten-frame-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  background: #e2e8f0;
+  padding: 6px;
+  border-radius: 8px;
+}
+
+[data-theme="dark"] .ten-frame-grid {
+  background: #1e293b;
+}
+
+.ten-frame-cell {
+  aspect-ratio: 1;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+[data-theme="dark"] .ten-frame-cell {
+  background: #0f172a;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.ten-frame-cell.filled::after {
+  content: '';
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+  background: #ef4444;
+  box-shadow: 0 2px 4px rgba(239, 68, 68, 0.4);
+}
+
+.number-line-track {
+  position: relative;
+  height: 6px;
+  background: #94a3b8;
+  border-radius: 9999px;
+  margin: 1.5rem 1rem;
+}
+
+.number-line-marker {
+  position: absolute;
+  top: -12px;
+  width: 28px;
+  height: 28px;
+  background: #2563eb;
+  color: #ffffff;
+  border-radius: 50%;
+  font-weight: 800;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-50%);
+  transition: left 0.2s ease;
+}
+
+.fraction-bar-row {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 6px;
+}
+
+.fraction-block {
+  padding: 0.4rem 0.2rem;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.75rem;
+  color: #ffffff;
+  border-radius: 4px;
+}
+
+.f-whole { flex: 1; background: #3b82f6; }
+.f-half { flex: 0.5; background: #10b981; }
+.f-fourth { flex: 0.25; background: #f59e0b; }
+
+.mani-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.75rem;
+}
+
+.mani-btn {
+  padding: 0.3rem 0.7rem;
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+[data-theme="dark"] .mani-btn {
+  background: #1e293b;
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #e2e8f0;
+}

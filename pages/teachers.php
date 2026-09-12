@@ -7,6 +7,7 @@ include '../src/header.php';
 
 <!-- Teacher Suite Page Stylesheet -->
 <link rel="stylesheet" href="<?= assetVersion('/assets/css/pages/teachers.css') ?>">
+<link rel="stylesheet" href="<?= assetVersion('/assets/css/teacher/mastery-heatmap.css') ?>">
 
 <main class="flex-grow" id="main-content">
 
@@ -501,6 +502,9 @@ include '../src/header.php';
                     <!-- Rendered dynamically by JS -->
                 </div>
 
+                <!-- Classroom Standards Mastery Heatmap -->
+                <div id="class-mastery-heatmap-root"></div>
+
                 <!-- Roster Data Table Container -->
                 <div class="roster-table-wrapper">
                     <table class="roster-table" id="roster-table">
@@ -663,5 +667,6 @@ include '../src/header.php';
 <script src="<?= assetVersion('/assets/js/standards-ccss-math-ela.js') ?>"></script>
 <!-- Load Teacher Hub Script -->
 <script src="<?= assetVersion('/assets/js/teachers-main.js') ?>"></script>
+<script src="<?= assetVersion('/assets/js/teacher/mastery-heatmap.js') ?>"></script>
 
 <?php include '../src/footer.php'; ?>

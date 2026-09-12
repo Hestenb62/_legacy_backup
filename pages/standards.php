@@ -2461,6 +2461,8 @@
     });
 </script>
 
+<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/standards/standards-challenge.js') : '/assets/js/standards/standards-challenge.js' ?>" defer></script>
+
 <?php
   // Include the footer
   include '../src/footer.php';

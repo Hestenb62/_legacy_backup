@@ -563,7 +563,12 @@ if (!function_exists('assetVersion')) {
                     </div>
                     
                     <div class="header-actions">
-                      
+                        <button type="button" class="header-icon-action" id="btn-header-breathe" onclick="if(window.HLSensory)window.HLSensory.open();" title="Sensory Breathe &amp; Reset (Alt+B)" aria-label="Sensory Breathe &amp; Reset (Alt+B)" style="display:inline-flex; align-items:center; justify-content:center; width:2.25rem; height:2.25rem; border-radius:9999px; background:var(--color-bg-surface); border:1px solid var(--color-border); color:var(--color-text-main); cursor:pointer;">
+                            <i class="fas fa-spa" style="color:#0ea5e9;"></i>
+                        </button>
+                        <button type="button" class="header-icon-action" id="btn-header-sound" onclick="if(window.HLSound){const m=window.HLSound.toggleMute();this.innerHTML=m?'<i class=\'fas fa-volume-mute\' style=\'color:#94a3b8;\'></i>':'<i class=\'fas fa-volume-up\' style=\'color:#10b981;\'></i>';}" title="Toggle Sound Feedback" aria-label="Toggle Sound Feedback" style="display:inline-flex; align-items:center; justify-content:center; width:2.25rem; height:2.25rem; border-radius:9999px; background:var(--color-bg-surface); border:1px solid var(--color-border); color:var(--color-text-main); cursor:pointer;">
+                            <i class="fas fa-volume-up" style="color:#10b981;"></i>
+                        </button>
                         
                         <div class="user-dropdown-container">
                             <button class="user-pill" id="user-pill-btn" aria-expanded="false" aria-haspopup="true" aria-controls="user-dropdown-menu">
@@ -575,6 +580,9 @@ if (!function_exists('assetVersion')) {
                                 <i class="fas fa-chevron-down user-chevron"></i>
                             </button>
                             <div class="user-dropdown-menu" id="user-dropdown-menu">
+                                <a href="#" class="dropdown-item" onclick="if(window.HLProfileSwitcher)window.HLProfileSwitcher.open();return false;"><i class="fas fa-users-cog" style="color:#3b82f6;"></i> Switch Profile...</a>
+                                <a href="#" class="dropdown-item" onclick="if(window.HLSensory)window.HLSensory.open();return false;"><i class="fas fa-spa" style="color:#0ea5e9;"></i> Breathe &amp; Reset</a>
+                                <div class="dropdown-divider"></div>
                                 <a href="/pages/profile.php" class="dropdown-item"><i class="fas fa-user"></i> Profile</a>
                                 <a href="/pages/settings.php" class="dropdown-item"><i class="fas fa-cog"></i> Settings</a>
                                 <div class="dropdown-divider"></div>

@@ -121,6 +121,42 @@ include '../src/header.php';
         <!-- MAIN CONTENT -->
         <main class="parents-main-content">
 
+            <!-- Weekly Growth Digest & Family Conversation Starters -->
+            <section id="weekly-digest" class="parents-section" style="margin-bottom: 2.5rem;">
+                <div class="glass-panel" style="padding: 1.75rem 2rem; border-radius: 20px; border: 1px solid var(--color-border); background: linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, rgba(16, 185, 129, 0.05) 100%);">
+                    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem; border-bottom: 1px solid var(--color-border); padding-bottom: 0.75rem;">
+                        <div>
+                            <span style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; background: rgba(37, 99, 235, 0.15); color: #2563eb; padding: 0.2rem 0.6rem; border-radius: 9999px;">Family Insights</span>
+                            <h2 style="margin: 0.5rem 0 0 0; font-size: 1.35rem; font-weight: 800;"><i class="fas fa-seedling" style="color: #10b981;"></i> Weekly Growth Digest &amp; Discussion Prompts</h2>
+                        </div>
+                        <!-- 20-20-20 Screen Hygiene Timer Trigger -->
+                        <button type="button" class="hl-btn" onclick="if(window.HLSensory)window.HLSensory.open();" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; border-radius: 9999px; background: #0ea5e9; color: white; border: none; font-weight: 700; cursor: pointer;">
+                            <i class="fas fa-eye"></i> <span>20-20-20 Eye Break</span>
+                        </button>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
+                        <div style="background: var(--color-bg-surface); padding: 1.25rem; border-radius: 14px; border: 1px solid var(--color-border);">
+                            <h4 style="margin: 0 0 0.5rem 0; font-size: 1rem; color: #2563eb;"><i class="fas fa-book-reader"></i> Reading Accomplishments</h4>
+                            <p style="margin: 0; font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.5;">
+                                Your learner explored <strong>George Orwell's 1984</strong> in both Original and Plain English Lexile modes this week.
+                            </p>
+                            <div style="margin-top: 0.75rem; font-size: 0.82rem; font-weight: 700; color: #10b981;">
+                                <i class="fas fa-check-circle"></i> 100% Reading Goal Achieved
+                            </div>
+                        </div>
+
+                        <div style="background: var(--color-bg-surface); padding: 1.25rem; border-radius: 14px; border: 1px solid var(--color-border);">
+                            <h4 style="margin: 0 0 0.5rem 0; font-size: 1rem; color: #f59e0b;"><i class="fas fa-comments"></i> Dinner Table Conversation Starters</h4>
+                            <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.5;">
+                                <li>"Why do you think the characters in 1984 had to be so careful about what they wrote?"</li>
+                                <li>"How did breaking down fractions with the fraction bars help today?"</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!-- Resources Section -->
             <section id="resources" class="parents-section">
                 <div class="parents-section-header">

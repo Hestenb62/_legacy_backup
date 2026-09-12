@@ -13,6 +13,7 @@ include '../src/header.php';
 ?>
 
 <link rel="stylesheet" href="/assets/css/pages/student.css">
+<link rel="stylesheet" href="/assets/css/gamification/daily-quests.css">
 
 
 <div class="wiki-container">
@@ -51,6 +52,9 @@ include '../src/header.php';
                 <i class="fas fa-arrow-right" style="color: white; font-size: 0.85rem;"></i>
             </a>
         </div>
+
+        <!-- Today's Daily Rotating Quests Widget -->
+        <div id="daily-quests-root" class="daily-quests-container" style="margin-bottom: 2rem;"></div>
 
         <!-- Skill Tree & Gamification Mastery Hub Banner -->
         <div class="glass-panel" style="margin-bottom: 2rem; padding: 1.5rem 2rem; border-radius: var(--radius-2xl); border: 1px solid color-mix(in srgb, var(--color-primary) 30%, var(--color-border)); background: radial-gradient(circle at top right, color-mix(in srgb, var(--color-primary) 12%, var(--color-bg-surface)), var(--color-bg-surface)); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.5rem;">

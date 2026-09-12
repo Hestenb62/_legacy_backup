@@ -8,6 +8,7 @@ include '../../../src/header.php';
 ?>
 
 <link rel="stylesheet" href="<?= function_exists('assetVersion') ? assetVersion('/assets/css/reader-main.css') : '/assets/css/reader-main.css' ?>">
+<link rel="stylesheet" href="<?= function_exists('assetVersion') ? assetVersion('/assets/css/reader/read-comparative-view.css') : '/assets/css/reader/read-comparative-view.css' ?>">
 
 <style>
   .reader-chapter-nav {
@@ -193,6 +194,7 @@ include_once __DIR__ . '/../../../src/partials/sticky-reading-bar.php';
 </main>
 
 <script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/library/lib-reader-lexile.js') : '/assets/js/library/lib-reader-lexile.js' ?>" defer></script>
+<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/reader/read-comparative-view.js') : '/assets/js/reader/read-comparative-view.js' ?>" defer></script>
 
 <?php include '../../../src/footer.php'; ?>
 

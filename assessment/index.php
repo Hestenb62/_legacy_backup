@@ -5,6 +5,7 @@ include '../src/header.php';
 
 <!-- Link Assessment Page Specific Stylesheet -->
 <link rel="stylesheet" href="<?= function_exists('assetVersion') ? assetVersion('/assets/css/pages/assessment.css') : '/assets/css/pages/assessment.css' ?>">
+<link rel="stylesheet" href="<?= function_exists('assetVersion') ? assetVersion('/assets/css/assessment/assessment-scratchpad.css') : '/assets/css/assessment/assessment-scratchpad.css' ?>">
 
 <!-- Assessment Selection View (Hidden by default, shown if no grade selected) -->
 <div id="assessment-selection" class="assessment-select-section hidden">
@@ -601,5 +602,7 @@ include '../src/header.php';
 <script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/assessment-p-12.js') : '/assets/js/assessment-p-12.js' ?>"></script>
 <script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/assessment-ap.js') : '/assets/js/assessment-ap.js' ?>"></script>
 <script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/assessment-main.js') : '/assets/js/assessment-main.js' ?>"></script>
+<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/assessment/assessment-scratchpad.js') : '/assets/js/assessment/assessment-scratchpad.js' ?>"></script>
+<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/assessment/diagnostic-prescription.js') : '/assets/js/assessment/diagnostic-prescription.js' ?>"></script>
 
 <?php include '../src/footer.php'; ?>

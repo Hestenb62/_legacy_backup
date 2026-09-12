@@ -1,0 +1,115 @@
+/* ==========================================================================
+   assets/css/teacher/mastery-heatmap.css
+   Classroom Standards Mastery Heatmap Matrix
+   ========================================================================== */
+
+.mastery-heatmap-card {
+  background: var(--bg-card, #ffffff);
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: var(--shadow-sm, 0 1px 3px rgba(0,0,0,0.1));
+}
+
+[data-theme="dark"] .mastery-heatmap-card {
+  background: #1e293b;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.heatmap-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.heatmap-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.heatmap-header p {
+  margin: 0.25rem 0 0 0;
+  font-size: 0.88rem;
+  color: var(--text-muted, #64748b);
+}
+
+.heatmap-legend {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.legend-cell {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+}
+
+.legend-cell.mastered, .score-cell.mastered {
+  background: rgba(16, 185, 129, 0.18);
+  color: #059669;
+}
+
+.legend-cell.developing, .score-cell.developing {
+  background: rgba(234, 179, 8, 0.18);
+  color: #b45309;
+}
+
+.legend-cell.support, .score-cell.support {
+  background: rgba(239, 68, 68, 0.18);
+  color: #dc2626;
+}
+
+.legend-cell.unassessed, .score-cell.unassessed {
+  background: rgba(148, 163, 184, 0.12);
+  color: #94a3b8;
+}
+
+.heatmap-table-wrap {
+  overflow-x: auto;
+}
+
+.heatmap-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 4px;
+  font-size: 0.85rem;
+}
+
+.heatmap-table th {
+  padding: 0.6rem 0.75rem;
+  background: var(--bg-hover, #f8fafc);
+  font-weight: 800;
+  text-align: center;
+  border-radius: 6px;
+}
+
+[data-theme="dark"] .heatmap-table th {
+  background: #0f172a;
+}
+
+.heatmap-table th.col-student {
+  text-align: left;
+}
+
+.heatmap-table td {
+  padding: 0.6rem 0.75rem;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.heatmap-table td.student-cell {
+  text-align: left;
+  background: var(--bg-hover, #f8fafc);
+}
+
+[data-theme="dark"] .heatmap-table td.student-cell {
+  background: #0f172a;
+}

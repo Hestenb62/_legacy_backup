@@ -15,6 +15,8 @@ include '../src/header.php';
 ?>
 
 <link rel="stylesheet" href="/assets/css/pages/student-resources.css">
+<link rel="stylesheet" href="/assets/css/labs/math-manipulatives.css">
+<link rel="stylesheet" href="/assets/css/assessment/assessment-scratchpad.css">
 
     <!-- Main Content Area -->
     <main class="page-content-wrapper">
@@ -874,6 +876,8 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         })();
     </script>
+<script src="/assets/js/labs/math-manipulatives.js" defer></script>
+<script src="/assets/js/assessment/assessment-scratchpad.js" defer></script>
 
 
 <?php
