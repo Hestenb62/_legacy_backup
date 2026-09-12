@@ -362,17 +362,18 @@ body.zen-mode #reader-controls {
 }
 
 /* ==========================================================================
-   End-of-Chapter Reading Comprehension Checkpoint
+   End-of-Chapter Reading Comprehension Checkpoint (Slide-Up Drawer)
    ========================================================================== */
 .chapter-comprehension-checkpoint {
     margin: 3.5rem auto 2rem auto;
     background: var(--color-bg-surface, #ffffff);
-    border: 1px solid var(--color-border, #e2e8f0);
+    border: 1.5px solid var(--color-border, #e2e8f0);
     border-radius: 1.25rem;
-    padding: 2rem;
+    padding: 0;
     box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
     position: relative;
     overflow: hidden;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .chapter-comprehension-checkpoint::before {
@@ -383,13 +384,42 @@ body.zen-mode #reader-controls {
     right: 0;
     height: 4px;
     background: linear-gradient(90deg, var(--color-primary, #e11d48), #f59e0b, #3b82f6);
+    z-index: 2;
 }
 
-.chk-header {
+.chapter-comprehension-checkpoint.completed {
+    border-color: rgba(16, 185, 129, 0.35);
+}
+
+.chapter-comprehension-checkpoint.completed::before {
+    background: linear-gradient(90deg, #10b981, #059669);
+}
+
+/* Checkpoint Toggle Header Banner */
+.chk-toggle-bar {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
+    justify-content: space-between;
+    padding: 1.25rem 1.75rem;
+    cursor: pointer;
+    background: transparent;
+    transition: background 0.2s ease;
+    user-select: none;
+}
+
+.chk-toggle-bar:hover {
+    background: color-mix(in srgb, var(--color-primary, #e11d48) 4%, transparent);
+}
+
+.chk-toggle-bar:focus-visible {
+    outline: 2px solid var(--color-primary, #e11d48);
+    outline-offset: -2px;
+}
+
+.chk-toggle-left {
+    display: flex;
+    align-items: center;
+    gap: 1.15rem;
 }
 
 .chk-icon-wrap {
@@ -403,10 +433,27 @@ body.zen-mode #reader-controls {
     justify-content: center;
     font-size: 1.25rem;
     flex-shrink: 0;
+    transition: transform 0.25s ease;
+}
+
+.chapter-comprehension-checkpoint.completed .chk-icon-wrap {
+    background: rgba(16, 185, 129, 0.15);
+    color: #10b981;
+}
+
+.chk-toggle-info {
+    min-width: 0;
+}
+
+.chk-title-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
 }
 
 .chk-title {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     font-weight: 800;
     color: var(--color-text-main, #0f172a);
     margin: 0;
@@ -416,6 +463,139 @@ body.zen-mode #reader-controls {
     font-size: 0.85rem;
     color: var(--color-text-muted, #64748b);
     margin: 0.25rem 0 0 0;
+}
+
+.chk-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.2rem 0.65rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    background: color-mix(in srgb, var(--color-primary, #e11d48) 12%, transparent);
+    color: var(--color-primary, #e11d48);
+    white-space: nowrap;
+}
+
+.chk-badge.chk-badge-success {
+    background: rgba(16, 185, 129, 0.15);
+    color: #059669;
+}
+
+[data-theme="dark"] .chk-badge.chk-badge-success,
+body.dark .chk-badge.chk-badge-success {
+    background: rgba(16, 185, 129, 0.25);
+    color: #34d399;
+}
+
+.chk-open-btn {
+    background: linear-gradient(135deg, var(--color-primary, #e11d48), #be123c);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 0.55rem 1.25rem;
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 12px color-mix(in srgb, var(--color-primary, #e11d48) 25%, transparent);
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    white-space: nowrap;
+}
+
+.chk-open-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px color-mix(in srgb, var(--color-primary, #e11d48) 35%, transparent);
+}
+
+.chk-open-btn i {
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Collapsible Slide-Up Quiz Body */
+.chk-collapsible-body {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateY(14px);
+    pointer-events: none;
+    transition: max-height 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+                opacity 0.35s ease,
+                transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.chapter-comprehension-checkpoint.expanded .chk-collapsible-body {
+    max-height: 2500px;
+    opacity: 1;
+    overflow: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.chk-body-inner {
+    padding: 1rem 1.75rem 1.75rem 1.75rem;
+    border-top: 1px dashed var(--color-border, #e2e8f0);
+}
+
+.chk-body-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.25rem;
+    gap: 1rem;
+}
+
+.chk-body-hint {
+    font-size: 0.82rem;
+    color: var(--color-text-muted, #64748b);
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+.chk-minimize-btn {
+    background: transparent;
+    border: none;
+    color: var(--color-text-muted, #64748b);
+    font-size: 0.8rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.35rem 0.65rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+.chk-minimize-btn:hover {
+    color: var(--color-text-main, #0f172a);
+    background: color-mix(in srgb, var(--color-text-muted, #64748b) 12%, transparent);
+}
+
+.chk-done-btn {
+    background: #10b981;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 0.6rem 1.25rem;
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25);
+}
+
+.chk-done-btn:hover {
+    background: #059669;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(16, 185, 129, 0.35);
 }
 
 .chk-q-block {

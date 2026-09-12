@@ -466,27 +466,53 @@ body.zen-mode {
 
                 <!-- End-of-Chapter Reading Comprehension Checkpoint -->
                 <?php if ($chapter !== 'intro' && !$isTeacherPage): ?>
-                    <section class="chapter-comprehension-checkpoint" id="chapter-checkpoint" aria-label="Chapter Comprehension Checkpoint">
-                        <div class="chk-header">
-                            <div class="chk-icon-wrap">
-                                <i class="fas fa-clipboard-check"></i>
+                    <section class="chapter-comprehension-checkpoint collapsed" id="chapter-checkpoint" aria-label="Chapter Comprehension Checkpoint">
+                        <!-- Clickable Toggle Banner / Trigger -->
+                        <div class="chk-toggle-bar" id="chk-toggle-trigger" role="button" tabindex="0" aria-expanded="false" aria-controls="chk-collapsible-body" onclick="toggleChapterCheckpoint()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleChapterCheckpoint();}">
+                            <div class="chk-toggle-left">
+                                <div class="chk-icon-wrap">
+                                    <i class="fas fa-clipboard-check"></i>
+                                </div>
+                                <div class="chk-toggle-info">
+                                    <div class="chk-title-row">
+                                        <h3 class="chk-title">Chapter <?php echo $chapterNum; ?> Checkpoint</h3>
+                                        <span class="chk-badge" id="chk-status-badge"><i class="fas fa-question-circle"></i> 2 Questions</span>
+                                    </div>
+                                    <p class="chk-subtitle">Quick comprehension pulse check before advancing to the next chapter.</p>
+                                </div>
                             </div>
-                            <div>
-                                <h3 class="chk-title">Chapter <?php echo $chapterNum; ?> Comprehension Checkpoint</h3>
-                                <p class="chk-subtitle">Quick 2-question pulse check to lock in key themes and literary analysis before advancing.</p>
+                            <div class="chk-toggle-right">
+                                <button type="button" class="chk-open-btn" id="chk-toggle-btn" aria-label="Toggle Chapter Comprehension Quiz">
+                                    <span id="chk-toggle-btn-text">Take Quiz</span> <i class="fas fa-chevron-up" id="chk-toggle-chevron"></i>
+                                </button>
                             </div>
                         </div>
-                        <div id="chk-questions-container" class="chk-questions-container">
-                            <!-- Populated dynamically by reader checkpoint engine -->
-                        </div>
-                        <div id="chk-feedback-box" class="chk-feedback-box" style="display: none;"></div>
-                        <div class="chk-actions">
-                            <button type="button" id="chk-submit-btn" class="chk-submit-btn" onclick="submitChapterCheckpoint()">
-                                <i class="fas fa-check-circle"></i> Submit Answers
-                            </button>
-                            <button type="button" id="chk-reset-btn" class="chk-secondary-btn" onclick="resetChapterCheckpoint()" style="display: none;">
-                                <i class="fas fa-redo"></i> Try Again
-                            </button>
+
+                        <!-- Collapsible Slide-up Quiz Body -->
+                        <div class="chk-collapsible-body" id="chk-collapsible-body">
+                            <div class="chk-body-inner">
+                                <div class="chk-body-header">
+                                    <span class="chk-body-hint"><i class="fas fa-lightbulb"></i> Answer both questions below, then submit to check comprehension.</span>
+                                    <button type="button" class="chk-minimize-btn" onclick="toggleChapterCheckpoint(false)" aria-label="Minimize Quiz">
+                                        <i class="fas fa-chevron-down"></i> Minimize
+                                    </button>
+                                </div>
+                                <div id="chk-questions-container" class="chk-questions-container">
+                                    <!-- Populated dynamically by reader checkpoint engine -->
+                                </div>
+                                <div id="chk-feedback-box" class="chk-feedback-box" style="display: none;"></div>
+                                <div class="chk-actions">
+                                    <button type="button" id="chk-submit-btn" class="chk-submit-btn" onclick="submitChapterCheckpoint()">
+                                        <i class="fas fa-check-circle"></i> Submit Answers
+                                    </button>
+                                    <button type="button" id="chk-reset-btn" class="chk-secondary-btn" onclick="resetChapterCheckpoint()" style="display: none;">
+                                        <i class="fas fa-redo"></i> Retake Quiz
+                                    </button>
+                                    <button type="button" id="chk-done-close-btn" class="chk-done-btn" onclick="toggleChapterCheckpoint(false)" style="display: none;">
+                                        <i class="fas fa-check"></i> Done &amp; Close
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </section>
                 <?php endif; ?>
@@ -989,6 +1015,10 @@ body.zen-mode {
                 const feedback = document.getElementById('chk-feedback-box');
                 const submitBtn = document.getElementById('chk-submit-btn');
                 const resetBtn = document.getElementById('chk-reset-btn');
+                const doneBtn = document.getElementById('chk-done-close-btn');
+                const statusBadge = document.getElementById('chk-status-badge');
+                const toggleBtnText = document.getElementById('chk-toggle-btn-text');
+
                 if (feedback) {
                     feedback.className = 'chk-feedback-box success';
                     feedback.innerHTML = `<i class="fas fa-check-circle"></i> Checkpoint previously completed with ${saved[chkKey].score}% accuracy!`;
@@ -996,9 +1026,62 @@ body.zen-mode {
                 }
                 if (submitBtn) submitBtn.style.display = 'none';
                 if (resetBtn) resetBtn.style.display = 'inline-flex';
+                if (doneBtn) doneBtn.style.display = 'inline-flex';
+                if (statusBadge) {
+                    statusBadge.className = 'chk-badge chk-badge-success';
+                    statusBadge.innerHTML = `<i class="fas fa-check-circle"></i> Completed: ${saved[chkKey].score}%`;
+                }
+                if (toggleBtnText) toggleBtnText.textContent = 'Review Quiz';
             }
         } catch(e) {}
     }
+
+    // Toggle Checkpoint Slide-up Drawer
+    window.chkAutoCloseTimer = null;
+    window.toggleChapterCheckpoint = function(forceOpen) {
+        const section = document.getElementById('chapter-checkpoint');
+        if (!section) return;
+
+        const trigger = document.getElementById('chk-toggle-trigger');
+        const toggleBtnText = document.getElementById('chk-toggle-btn-text');
+        const chevron = document.getElementById('chk-toggle-chevron');
+        const meta = window.BOOK_METADATA || {};
+        const chkKey = `${meta.id}_ch${meta.chapterNum}`;
+        const isCurrentlyExpanded = section.classList.contains('expanded');
+        const shouldOpen = (forceOpen !== undefined) ? forceOpen : !isCurrentlyExpanded;
+
+        if (window.chkAutoCloseTimer) {
+            clearTimeout(window.chkAutoCloseTimer);
+            window.chkAutoCloseTimer = null;
+        }
+
+        if (shouldOpen) {
+            section.classList.remove('collapsed');
+            section.classList.add('expanded');
+            if (trigger) trigger.setAttribute('aria-expanded', 'true');
+            if (toggleBtnText) toggleBtnText.textContent = 'Minimize Quiz';
+            if (chevron) chevron.className = 'fas fa-chevron-down';
+
+            // Smoothly scroll checkpoint into view
+            setTimeout(() => {
+                section.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }, 100);
+        } else {
+            section.classList.remove('expanded');
+            section.classList.add('collapsed');
+            if (trigger) trigger.setAttribute('aria-expanded', 'false');
+            
+            // Check if completed to label button appropriately
+            let isDone = false;
+            try {
+                const saved = JSON.parse(localStorage.getItem('hesten_reading_comprehension') || '{}');
+                if (saved[chkKey]) isDone = true;
+            } catch(e) {}
+
+            if (toggleBtnText) toggleBtnText.textContent = isDone ? 'Review Quiz' : 'Take Quiz';
+            if (chevron) chevron.className = 'fas fa-chevron-up';
+        }
+    };
 
     function renderCheckpointQuestions() {
         const container = document.getElementById('chk-questions-container');
@@ -1040,6 +1123,9 @@ body.zen-mode {
         const feedback = document.getElementById('chk-feedback-box');
         const submitBtn = document.getElementById('chk-submit-btn');
         const resetBtn = document.getElementById('chk-reset-btn');
+        const doneBtn = document.getElementById('chk-done-close-btn');
+        const statusBadge = document.getElementById('chk-status-badge');
+        const section = document.getElementById('chapter-checkpoint');
         const meta = window.BOOK_METADATA || {};
         const chkKey = `${meta.id}_ch${meta.chapterNum}`;
 
@@ -1100,18 +1186,42 @@ body.zen-mode {
             feedback.style.display = 'block';
         }
 
+        if (statusBadge) {
+            statusBadge.className = pct >= 50 ? 'chk-badge chk-badge-success' : 'chk-badge';
+            statusBadge.innerHTML = `<i class="${pct >= 50 ? 'fas fa-check-circle' : 'fas fa-info-circle'}"></i> Score: ${pct}%`;
+        }
+
+        if (section && pct >= 50) {
+            section.classList.add('completed');
+        }
+
         if (submitBtn) submitBtn.style.display = 'none';
         if (resetBtn) resetBtn.style.display = 'inline-flex';
+        if (doneBtn) doneBtn.style.display = 'inline-flex';
+
+        // Auto-close when done after a brief celebratory view
+        if (pct >= 50) {
+            if (window.chkAutoCloseTimer) clearTimeout(window.chkAutoCloseTimer);
+            window.chkAutoCloseTimer = setTimeout(() => {
+                window.toggleChapterCheckpoint(false);
+            }, 3800);
+        }
     };
 
     window.resetChapterCheckpoint = function() {
+        if (window.chkAutoCloseTimer) {
+            clearTimeout(window.chkAutoCloseTimer);
+            window.chkAutoCloseTimer = null;
+        }
         const feedback = document.getElementById('chk-feedback-box');
         const submitBtn = document.getElementById('chk-submit-btn');
         const resetBtn = document.getElementById('chk-reset-btn');
+        const doneBtn = document.getElementById('chk-done-close-btn');
 
         if (feedback) feedback.style.display = 'none';
         if (submitBtn) submitBtn.style.display = 'inline-flex';
         if (resetBtn) resetBtn.style.display = 'none';
+        if (doneBtn) doneBtn.style.display = 'none';
 
         renderCheckpointQuestions();
     };
