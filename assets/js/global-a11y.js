@@ -115,12 +115,27 @@ function updateGlobalSetting(key, value) {
         }));
     }
     
-    if (key === 'readingRuler' && window.accommodationEngine) {
-        window.accommodationEngine.setAccommodation('rulerEnabled', !!value);
-    } else if (key === 'rulerHeight' && window.accommodationEngine) {
-        window.accommodationEngine.setAccommodation('rulerHeight', parseInt(value, 10));
-    } else if (key === 'rulerDimOpacity' && window.accommodationEngine) {
-        window.accommodationEngine.setAccommodation('rulerDimOpacity', parseFloat(value));
+    if (window.accommodationEngine) {
+        if (typeof window.accommodationEngine.setAccommodation === 'function') {
+            if (key === 'readingRuler') {
+                window.accommodationEngine.setAccommodation('rulerEnabled', !!value);
+            } else if (key === 'rulerHeight') {
+                window.accommodationEngine.setAccommodation('rulerHeight', parseInt(value, 10));
+            } else if (key === 'rulerDimOpacity') {
+                window.accommodationEngine.setAccommodation('rulerDimOpacity', parseFloat(value));
+            }
+        } else if (window.accommodationEngine.profile) {
+            if (key === 'readingRuler') {
+                window.accommodationEngine.profile.rulerEnabled = !!value;
+            } else if (key === 'rulerHeight') {
+                window.accommodationEngine.profile.rulerHeight = parseInt(value, 10);
+            } else if (key === 'rulerDimOpacity') {
+                window.accommodationEngine.profile.rulerDimOpacity = parseFloat(value);
+            }
+            if (typeof window.accommodationEngine.saveProfile === 'function') {
+                window.accommodationEngine.saveProfile();
+            }
+        }
     }
     
     // Announce setting changes to assistive technologies

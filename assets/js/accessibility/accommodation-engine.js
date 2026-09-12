@@ -65,6 +65,9 @@
         window.dispatchEvent(new CustomEvent('hl-bionic-sync', {
           detail: { enabled: !!this.profile.bionicEnabled, source: 'accommodation-engine' }
         }));
+        window.dispatchEvent(new CustomEvent('hl:accommodations-updated', {
+          detail: Object.assign({}, this.profile)
+        }));
       }
     }
 
@@ -547,6 +550,21 @@
     setSoundscapeVolume(vol) {
       this.profile.soundscapeVolume = parseFloat(vol);
       this.saveProfile();
+    }
+
+    setAccommodation(key, value) {
+      if (!this.profile) this.profile = Object.assign({}, defaultProfile);
+
+      // Support alternative or mapped key names
+      if (key === 'readingRuler') key = 'rulerEnabled';
+      if (key === 'bionicReading') key = 'bionicEnabled';
+      if (key === 'dyscalculia') key = 'dyscalculiaEnabled';
+      if (key === 'colorTint') key = 'tintEnabled';
+
+      if (key in this.profile) {
+        this.profile[key] = value;
+        this.saveProfile();
+      }
     }
 
     setPreset(presetName) {
