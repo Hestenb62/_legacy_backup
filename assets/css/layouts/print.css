@@ -1,42 +1,51 @@
 /* assets/css/layouts/print.css
- * Universal Print Stylesheet for Hesten's Learning
- * Ensures clean, high-contrast, paper-friendly worksheets and documentation.
+ * Universal High-Fidelity Print & PDF Export Stylesheet for Hesten's Learning
+ * Ensures clean multi-page document pagination, crisp typography, no blank pages,
+ * and perfectly scoped modal / worksheet printing.
  */
 
 @media print {
-    /* 1. Global Reset for Paper */
+    /* 1. Global Box & Color Reset */
     *, *::before, *::after {
-        background: transparent !important;
-        color: #000000 !important;
         box-shadow: none !important;
         text-shadow: none !important;
         filter: none !important;
         backdrop-filter: none !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
     }
 
     @page {
-        margin: 1.5cm;
+        margin: 1.2cm 1.2cm 1.2cm 1.2cm;
         size: auto;
     }
 
     html, body {
         background: #ffffff !important;
-        color: #000000 !important;
+        color: #0f172a !important;
         font-size: 11pt !important;
-        line-height: 1.5 !important;
-        font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+        line-height: 1.55 !important;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
         width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
         margin: 0 !important;
         padding: 0 !important;
+        position: static !important;
+        overflow: visible !important;
     }
 
-    /* 2. Hide Non-Printable Elements */
+    /* 2. Universal Non-Printable Elements */
     header.header-main,
     footer.footer-main,
     .fixed-tools-wrapper,
     .fab-container,
     .scroll-top-btn,
     .scroll-progress-container,
+    .sticky-reading-bar,
+    .reader-chapter-nav,
+    .lexile-switcher-wrap,
+    .reader-back-nav,
     #a11y-settings-panel,
     #reading-mask-overlay,
     #reading-guide-overlay,
@@ -46,6 +55,11 @@
     #scratchpad-panel,
     #citation-modal,
     #announcement-bar,
+    #sensory-chamber-modal,
+    #hl-scratchpad-drawer,
+    #math-manipulatives-tray,
+    #standards-challenge-modal,
+    #a11y-warning-modal,
     .mobile-menu-btn,
     .header-actions,
     .search-form,
@@ -57,121 +71,287 @@
     .nav-toggle,
     .skip-link,
     .print-hidden,
-    [aria-hidden="true"].fas,
-    [aria-hidden="true"].far,
+    .no-print,
+    .gtranslate_wrapper,
+    .coffee-btn,
+    .reader-header .reader-meta-badge,
     button:not(.printable-btn) {
         display: none !important;
     }
 
-    /* 3. Main Content Full Width */
+    /* 3. Fluid Page Flow & Container Unwrapping (Prevents blank pages and 1-page truncations) */
     main,
+    #main-content,
     .main-content-container,
     .container,
     .upd-container,
-    .content-wrapper {
+    .content-wrapper,
+    .page-content-wrapper,
+    .wiki-container,
+    .library-main,
+    .reader-main-layout,
+    .cdn-book-reader-container,
+    .cdn-book-reader-content {
         width: 100% !important;
         max-width: 100% !important;
         margin: 0 !important;
         padding: 0 !important;
         display: block !important;
+        position: static !important;
+        overflow: visible !important;
+        height: auto !important;
+        min-height: auto !important;
+        border: none !important;
+        box-shadow: none !important;
     }
 
-    /* 4. Headings & Typography */
+    /* 4. Article & Section Flow (CRITICAL: Do NOT avoid page breaks on large content wrappers) */
+    article,
+    section {
+        break-inside: auto !important;
+        page-break-inside: auto !important;
+        border: none !important;
+        box-shadow: none !important;
+        margin: 0 0 1.25rem 0 !important;
+        padding: 0 !important;
+        background: transparent !important;
+        height: auto !important;
+        overflow: visible !important;
+    }
+
+    /* Headings */
     h1, h2, h3, h4, h5, h6 {
         page-break-after: avoid;
         break-after: avoid;
-        color: #000000 !important;
+        color: #0f172a !important;
         font-weight: 700 !important;
     }
 
-    h1 { font-size: 20pt !important; margin-bottom: 0.5rem !important; }
-    h2 { font-size: 16pt !important; margin-top: 1rem !important; margin-bottom: 0.4rem !important; }
-    h3 { font-size: 13pt !important; margin-top: 0.8rem !important; margin-bottom: 0.3rem !important; }
+    h1 { font-size: 18pt !important; margin-bottom: 0.5rem !important; }
+    h2 { font-size: 14pt !important; margin-top: 1rem !important; margin-bottom: 0.35rem !important; }
+    h3 { font-size: 12pt !important; margin-top: 0.75rem !important; margin-bottom: 0.25rem !important; }
 
-    /* 5. Clean Layout for Cards & Accordions */
+    p, blockquote {
+        orphans: 3;
+        widows: 3;
+        margin-bottom: 0.75rem !important;
+        color: #1e293b !important;
+    }
+
+    /* 5. Atomic Discrete Cards (Avoid breaking mid-question or mid-card) */
     .level-card,
     .standard-item,
-    .curr-unit-card,
-    .upd-doc-view,
-    .upd-card,
     .stat-card,
-    article,
-    section {
-        page-break-inside: avoid;
-        break-inside: avoid;
-        border: 1px solid #d1d5db !important;
-        border-radius: 4px !important;
+    .worksheet-question-card,
+    .ws-question-block,
+    .question-card,
+    .diag-question-card,
+    .prescription-item,
+    .quest-item,
+    .iep-accommodations-card,
+    .dossier-subj-card {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
         margin-bottom: 1rem !important;
+        border: 1px solid #e2e8f0 !important;
+        border-radius: 6px !important;
         padding: 0.75rem !important;
         background: #ffffff !important;
     }
 
-    /* Expand collapsed accordions so the full curriculum prints */
-    .curr-accordion-body,
-    .collapsed .curr-accordion-body,
-    .collapse:not(.show),
-    details:not([open]) > :not(summary) {
-        display: block !important;
-        height: auto !important;
-        visibility: visible !important;
-        opacity: 1 !important;
+    /* 6. Inactive / Hidden Lexile Versions Must Stay Hidden */
+    .lexile-version[style*="display: none"],
+    .lexile-version:not(.active):not(.split-pane) {
+        display: none !important;
     }
 
-    /* 6. Tables & Code Blocks */
+    /* Comparative Split View Print Layout */
+    .cdn-book-reader-content.comparative-split-grid {
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 1.5rem !important;
+        width: 100% !important;
+    }
+
+    .split-pane {
+        flex: 1 !important;
+        width: 50% !important;
+        page-break-inside: auto !important;
+        break-inside: auto !important;
+        border: 1px solid #e2e8f0 !important;
+        padding: 1rem !important;
+    }
+
+    /* 7. Tables & MathJax */
     table {
         border-collapse: collapse !important;
         width: 100% !important;
+        page-break-inside: auto;
+    }
+
+    tr {
         page-break-inside: avoid;
+        break-inside: avoid;
     }
 
     th, td {
-        border: 1px solid #d1d5db !important;
+        border: 1px solid #cbd5e1 !important;
         padding: 6px 10px !important;
         text-align: left !important;
     }
 
     th {
-        background-color: #f3f4f6 !important;
+        background-color: #f1f5f9 !important;
         font-weight: 700 !important;
     }
 
-    pre, code {
-        font-family: monospace !important;
-        background: #f8fafc !important;
-        border: 1px solid #e2e8f0 !important;
-        border-radius: 3px !important;
-        page-break-inside: avoid;
-        white-space: pre-wrap !important;
-        word-break: break-word !important;
+    /* MathJax SVGs */
+    mjx-container {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
     }
 
-    /* 7. Links: Underline for Clarity */
-    a {
-        text-decoration: underline !important;
+    mjx-container svg {
+        fill: #000000 !important;
         color: #000000 !important;
     }
 
-    a[href^="http"]:after {
-        content: " (" attr(href) ")";
-        font-size: 80%;
-        color: #555555 !important;
+    /* 8. Links: Clean formatting without huge trailing URL bloat */
+    a {
+        text-decoration: none !important;
+        color: inherit !important;
     }
 
-    /* Don't show URL for anchors or internal javascript */
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
+    /* 9. SCOPED MODAL PRINTING (Worksheets, Teacher Dossiers, IEP Briefs) */
+
+    /* Case A: Printable Quiz Worksheet Modal */
+    body.printing-worksheet > :not(#quiz-worksheet-modal),
+    body:has(#quiz-worksheet-modal:not([style*="display: none"])) > :not(#quiz-worksheet-modal) {
+        display: none !important;
     }
 
-    /* 8. Assessment Worksheets & Diagnostic Cards */
-    .worksheet-question-card,
-    .worksheet-item,
-    .mastery-report-card,
-    .mastery-printable-document .question-block,
-    .assessment-question-card,
-    .diag-question-card {
-        break-inside: avoid !important;
-        page-break-inside: avoid !important;
-        margin-bottom: 1.5rem !important;
+    body.printing-worksheet #quiz-worksheet-modal,
+    body:has(#quiz-worksheet-modal:not([style*="display: none"])) #quiz-worksheet-modal {
+        display: block !important;
+        position: static !important;
+        width: 100% !important;
+        height: auto !important;
+        overflow: visible !important;
+        background: #ffffff !important;
+        padding: 0 !important;
+    }
+
+    #quiz-worksheet-modal .mastery-report-backdrop {
+        display: none !important;
+    }
+
+    #quiz-worksheet-modal .mastery-report-dialog {
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        margin: 0 !important;
+        background: transparent !important;
+        overflow: visible !important;
+        position: static !important;
+    }
+
+    /* Case B: Student Diagnostic Dossier */
+    body.printing-dossier > :not(#modal-student-dossier) {
+        display: none !important;
+    }
+
+    body.printing-dossier #modal-student-dossier {
+        display: block !important;
+        position: static !important;
+        width: 100% !important;
+        height: auto !important;
+        overflow: visible !important;
+        background: #ffffff !important;
+        padding: 0 !important;
+    }
+
+    #modal-student-dossier .dossier-modal-container {
+        box-shadow: none !important;
+        border: none !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow: visible !important;
+        position: static !important;
+    }
+
+    /* Case C: IEP Accommodations Brief */
+    body.printing-iep > :not(#modal-iep-accommodations-brief),
+    body.printing-iep-brief > :not(#modal-iep-accommodations-brief),
+    body:has(#modal-iep-accommodations-brief:not([style*="display: none"])) > :not(#modal-iep-accommodations-brief) {
+        display: none !important;
+    }
+
+    body.printing-iep #modal-iep-accommodations-brief,
+    body.printing-iep-brief #modal-iep-accommodations-brief,
+    body:has(#modal-iep-accommodations-brief:not([style*="display: none"])) #modal-iep-accommodations-brief {
+        display: block !important;
+        position: static !important;
+        width: 100% !important;
+        height: auto !important;
+        overflow: visible !important;
+        background: #ffffff !important;
+        padding: 0 !important;
+    }
+
+    #modal-iep-accommodations-brief .iep-modal-content {
+        box-shadow: none !important;
+        border: none !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow: visible !important;
+        position: static !important;
+    }
+
+    /* Case D: Mastery Report Card Modal */
+    body.printing-mastery-report > :not(#mastery-report-modal),
+    body:has(#mastery-report-modal:not([style*="display: none"])) > :not(#mastery-report-modal) {
+        display: none !important;
+    }
+
+    body.printing-mastery-report #mastery-report-modal,
+    body:has(#mastery-report-modal:not([style*="display: none"])) #mastery-report-modal {
+        display: block !important;
+        position: static !important;
+        width: 100% !important;
+        height: auto !important;
+        overflow: visible !important;
+        background: #ffffff !important;
+        padding: 0 !important;
+    }
+
+    /* Case E: Student Report Card / Transcript Modal */
+    body.printing-transcript > :not(#student-report-card-modal),
+    body:has(#student-report-card-modal:not(.hidden)) > :not(#student-report-card-modal) {
+        display: none !important;
+    }
+
+    body.printing-transcript #student-report-card-modal,
+    body:has(#student-report-card-modal:not(.hidden)) #student-report-card-modal {
+        display: block !important;
+        position: static !important;
+        width: 100% !important;
+        height: auto !important;
+        overflow: visible !important;
+        background: #ffffff !important;
+        padding: 0 !important;
+    }
+
+    /* Hide unused modals during regular page printing */
+    body:not(.printing-certificate) #hl-certificate-modal,
+    body:not(.printing-worksheet):not(:has(#quiz-worksheet-modal:not([style*="display: none"]))) #quiz-worksheet-modal,
+    body:not(.printing-mastery-report):not(:has(#mastery-report-modal:not([style*="display: none"]))) #mastery-report-modal,
+    body:not(.printing-transcript):not(:has(#student-report-card-modal:not(.hidden))) #student-report-card-modal,
+    body:not(.printing-dossier) #modal-student-dossier:not(.active),
+    body:not(.printing-iep):not(.printing-iep-brief):not(:has(#modal-iep-accommodations-brief:not([style*="display: none"]))) #modal-iep-accommodations-brief {
+        display: none !important;
     }
 }

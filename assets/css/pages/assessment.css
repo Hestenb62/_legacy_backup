@@ -1689,61 +1689,100 @@
   }
 
   @media print {
-    body * {
-      visibility: hidden !important;
-    }
-    .mastery-report-modal,
-    .mastery-report-modal *,
-    #quiz-worksheet-modal,
-    #quiz-worksheet-modal * {
-      visibility: visible !important;
-    }
-    .mastery-report-modal {
-      position: absolute !important;
-      inset: 0 !important;
-      padding: 0 !important;
+    /* Scoped printing for Mastery Report and Worksheet modals */
+    body.printing-mastery-report,
+    body.printing-worksheet {
       background: #ffffff !important;
       color: #000000 !important;
+      margin: 0 !important;
+      padding: 0 !important;
     }
-    .mastery-report-backdrop,
-    .no-print {
+
+    body.printing-mastery-report header,
+    body.printing-mastery-report footer,
+    body.printing-mastery-report .assessment-hero,
+    body.printing-mastery-report .assessment-main-content,
+    body.printing-mastery-report .assessment-sidebar,
+    body.printing-mastery-report .stage-container,
+    body.printing-mastery-report .mastery-report-backdrop,
+    body.printing-mastery-report .mastery-report-toolbar,
+    body.printing-mastery-report .no-print,
+    body.printing-worksheet header,
+    body.printing-worksheet footer,
+    body.printing-worksheet .assessment-hero,
+    body.printing-worksheet .assessment-main-content,
+    body.printing-worksheet .assessment-sidebar,
+    body.printing-worksheet .stage-container,
+    body.printing-worksheet .mastery-report-backdrop,
+    body.printing-worksheet .mastery-report-toolbar,
+    body.printing-worksheet .no-print {
       display: none !important;
     }
-    .mastery-report-dialog {
+
+    body.printing-mastery-report #mastery-report-modal,
+    body.printing-worksheet #quiz-worksheet-modal {
+      position: static !important;
+      inset: auto !important;
+      display: block !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      background: #ffffff !important;
+      color: #000000 !important;
+      overflow: visible !important;
+      height: auto !important;
+      width: 100% !important;
+    }
+
+    body.printing-mastery-report .mastery-report-dialog,
+    body.printing-worksheet .mastery-report-dialog {
       max-width: 100% !important;
+      width: 100% !important;
       border: none !important;
       box-shadow: none !important;
       background: #ffffff !important;
       color: #000000 !important;
+      overflow: visible !important;
+      height: auto !important;
+      padding: 0 !important;
+      margin: 0 !important;
     }
+
     .mastery-printable-document,
     .worksheet-printable-sheet {
       padding: 0 !important;
       background: #ffffff !important;
       color: #000000 !important;
       box-shadow: none !important;
+      overflow: visible !important;
+      height: auto !important;
     }
+
     .worksheet-teacher-page {
       page-break-before: always !important;
       break-before: page !important;
     }
+
     .ws-question-block {
       page-break-inside: avoid !important;
       break-inside: avoid !important;
     }
+
     .report-meta-grid,
     .mastery-domain-row {
       background-color: #f8fafc !important;
       border-color: #cbd5e1 !important;
       color: #0f172a !important;
     }
+
     .report-brand-title {
       color: #1e3a8a !important;
     }
+
     .report-meta-val,
     .report-meta-label {
       color: #0f172a !important;
     }
+
     .signature-line {
       border-color: #64748b !important;
       color: #334155 !important;

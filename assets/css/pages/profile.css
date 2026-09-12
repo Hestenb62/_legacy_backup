@@ -872,22 +872,35 @@ body.dark .profile-card {
 
 /* Print Styles */
 @media print {
-    body * {
-        visibility: hidden;
+    body.printing-transcript {
+        background: #ffffff !important;
+        color: #000000 !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
-    #student-report-card-modal,
-    #student-report-card-modal * {
-        visibility: visible;
+
+    body.printing-transcript header,
+    body.printing-transcript footer,
+    body.printing-transcript .profile-hero,
+    body.printing-transcript .profile-grid,
+    body.printing-transcript .profile-sidebar,
+    body.printing-transcript .profile-main-content,
+    body.printing-transcript .report-modal-toolbar,
+    body.printing-transcript .no-print {
+        display: none !important;
     }
-    #student-report-card-modal {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
+
+    body.printing-transcript #student-report-card-modal {
+        position: static !important;
+        inset: auto !important;
+        width: 100% !important;
         background: transparent !important;
         padding: 0 !important;
         display: block !important;
+        overflow: visible !important;
+        height: auto !important;
     }
+
     .report-card-modal-card {
         max-width: 100% !important;
         width: 100% !important;
@@ -895,15 +908,23 @@ body.dark .profile-card {
         box-shadow: none !important;
         padding: 0 !important;
         background: transparent !important;
+        overflow: visible !important;
+        height: auto !important;
     }
+
     .report-modal-toolbar,
     .no-print {
         display: none !important;
     }
+
     .report-card-sheet {
         border: 1px solid #000000 !important;
         box-shadow: none !important;
-        padding: 2rem !important;
+        padding: 1.5rem !important;
+        background: #ffffff !important;
+        color: #000000 !important;
+        overflow: visible !important;
+        height: auto !important;
     }
 }
 

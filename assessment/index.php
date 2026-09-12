@@ -553,7 +553,7 @@ include '../src/header.php';
                 <button type="button" class="hero-nav-btn hero-nav-btn-outline" onclick="window.exportMasteryReportCSV && window.exportMasteryReportCSV()" style="padding: 0.5rem 1.25rem; font-size: 0.875rem;">
                     <i class="fas fa-file-csv"></i> Export CSV
                 </button>
-                <button type="button" class="hero-nav-btn hero-nav-btn-primary" onclick="window.print()" style="padding: 0.5rem 1.25rem; font-size: 0.875rem;">
+                <button type="button" class="hero-nav-btn hero-nav-btn-primary" onclick="document.body.classList.add('printing-mastery-report'); window.print(); setTimeout(() => document.body.classList.remove('printing-mastery-report'), 800);" style="padding: 0.5rem 1.25rem; font-size: 0.875rem;">
                     <i class="fas fa-print"></i> Print / Save as PDF
                 </button>
                 <button type="button" class="report-modal-close" onclick="closeMasteryReportCard()" aria-label="Close Report">&times;</button>
@@ -585,7 +585,7 @@ include '../src/header.php';
                     <input type="checkbox" id="worksheet-include-key" checked onchange="toggleWorksheetAnswerKey(this.checked)">
                     <span>Include Educator Answer Key</span>
                 </label>
-                <button type="button" class="hero-nav-btn hero-nav-btn-primary" onclick="window.print()" style="padding: 0.5rem 1.25rem; font-size: 0.875rem;">
+                <button type="button" class="hero-nav-btn hero-nav-btn-primary" onclick="document.body.classList.add('printing-worksheet'); window.print(); setTimeout(() => document.body.classList.remove('printing-worksheet'), 800);" style="padding: 0.5rem 1.25rem; font-size: 0.875rem;">
                     <i class="fas fa-print"></i> Print Worksheet
                 </button>
                 <button type="button" class="report-modal-close" onclick="closePrintableWorksheetModal()" aria-label="Close Worksheet">&times;</button>

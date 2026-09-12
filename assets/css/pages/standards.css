@@ -2129,8 +2129,8 @@
       padding: 1.5rem !important;
       background: #fff !important;
       margin-bottom: 1.5rem !important;
-      page-break-inside: avoid;
-      break-inside: avoid;
+      page-break-inside: auto !important;
+      break-inside: auto !important;
     }
 
     .curr-standard-item {

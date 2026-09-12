@@ -5,7 +5,6 @@ const path = require('path');
 const jsFiles = [
   'assets/js/audio-feedback.js',
   'assets/js/sensory-chamber.js',
-  'assets/js/profile-switcher.js',
   'assets/js/reader/read-comparative-view.js',
   'assets/js/assessment/assessment-scratchpad.js',
   'assets/js/assessment/diagnostic-prescription.js',
@@ -36,7 +35,6 @@ jsFiles.forEach(file => {
 
 const cssFiles = [
   'assets/css/sensory-chamber.css',
-  'assets/css/profile-switcher.css',
   'assets/css/reader/read-comparative-view.css',
   'assets/css/assessment/assessment-scratchpad.css',
   'assets/css/gamification/daily-quests.css',
@@ -58,7 +56,6 @@ const phpFiles = [
   'src/header.php',
   'src/footer.php',
   'src/partials/sensory-chamber-modal.php',
-  'src/partials/profile-switcher-modal.php',
   'library/read/1984/chapter-1.php',
   'assessment/index.php',
   'student/math-practice.php',

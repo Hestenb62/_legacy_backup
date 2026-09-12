@@ -580,7 +580,6 @@ if (!function_exists('assetVersion')) {
                                 <i class="fas fa-chevron-down user-chevron"></i>
                             </button>
                             <div class="user-dropdown-menu" id="user-dropdown-menu">
-                                <a href="#" class="dropdown-item" onclick="if(window.HLProfileSwitcher)window.HLProfileSwitcher.open();return false;"><i class="fas fa-users-cog" style="color:#3b82f6;"></i> Switch Profile...</a>
                                 <a href="#" class="dropdown-item" onclick="if(window.HLSensory)window.HLSensory.open();return false;"><i class="fas fa-spa" style="color:#0ea5e9;"></i> Breathe &amp; Reset</a>
                                 <div class="dropdown-divider"></div>
                                 <a href="/pages/profile.php" class="dropdown-item"><i class="fas fa-user"></i> Profile</a>

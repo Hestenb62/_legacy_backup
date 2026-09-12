@@ -87,8 +87,16 @@
     }
 
     function printCertificate() {
+        document.body.classList.add('printing-certificate');
         window.print();
+        setTimeout(() => {
+            document.body.classList.remove('printing-certificate');
+        }, 800);
     }
+
+    window.addEventListener('afterprint', () => {
+        document.body.classList.remove('printing-certificate');
+    });
 
     // Keyboard shortcut Escape closes certificate
     window.addEventListener('keydown', (e) => {

@@ -385,40 +385,34 @@
     color: #64748b;
 }
 
-/* Print Styles */
+/* Print Styles - Scoped strictly to Certificate Printing */
 @media print {
-    body * {
-        visibility: hidden;
-    }
-    #hl-certificate-modal,
-    #hl-certificate-modal * {
-        visibility: visible;
-    }
-    #hl-certificate-modal {
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 100vw;
-        height: 100vh;
-        background: none;
-        padding: 0;
-        display: block !important;
-    }
-    .cert-toolbar {
+    body.printing-certificate > :not(#hl-certificate-modal) {
         display: none !important;
     }
-    .cert-modal-container {
+    body.printing-certificate #hl-certificate-modal {
+        display: block !important;
+        position: static !important;
+        width: 100% !important;
+        height: auto !important;
+        background: none !important;
+        padding: 0 !important;
+    }
+    body.printing-certificate .cert-toolbar {
+        display: none !important;
+    }
+    body.printing-certificate .cert-modal-container {
         max-width: 100% !important;
         margin: 0 !important;
+        box-shadow: none !important;
     }
-    .cert-diploma-sheet {
+    body.printing-certificate .cert-diploma-sheet {
         box-shadow: none !important;
         padding: 0 !important;
         border-radius: 0 !important;
     }
-    @page {
-        size: landscape;
-        margin: 0.4in;
+    body:not(.printing-certificate) #hl-certificate-modal {
+        display: none !important;
     }
 }
 </style>

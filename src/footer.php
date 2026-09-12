@@ -143,14 +143,10 @@
 <!-- Sensory Breathe & Reset Modal -->
 <?php include __DIR__ . '/partials/sensory-chamber-modal.php'; ?>
 
-<!-- Multi-Profile Switcher Modal -->
-<?php include __DIR__ . '/partials/profile-switcher-modal.php'; ?>
-
 <!-- Footer Scripts -->
 <script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/global-error-handler.js') : '/assets/js/global-error-handler.js' ?>"></script>
 <script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/audio-feedback.js') : '/assets/js/audio-feedback.js' ?>"></script>
 <script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/sensory-chamber.js') : '/assets/js/sensory-chamber.js' ?>"></script>
-<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/profile-switcher.js') : '/assets/js/profile-switcher.js' ?>"></script>
 <script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/gamification/daily-quests.js') : '/assets/js/gamification/daily-quests.js' ?>"></script>
 <script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/global-study-tools.js') : '/assets/js/global-study-tools.js' ?>"></script>
 <script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/flashcard-studio.js') : '/assets/js/flashcard-studio.js' ?>"></script>

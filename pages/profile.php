@@ -332,7 +332,7 @@ include ABSPATH . '../src/header.php';
                         <p style="margin:0; font-size:0.8rem; color:var(--color-text-muted);">Printable portfolio document for homeschool & certified evaluation</p>
                     </div>
                     <div style="display: flex; gap: 0.5rem;">
-                        <button type="button" class="profile-btn-primary" onclick="window.print()" style="padding: 0.5rem 1.25rem; font-size: 0.85rem; border-radius: 9999px; width: auto;">
+                        <button type="button" class="profile-btn-primary" onclick="document.body.classList.add('printing-transcript'); window.print(); setTimeout(() => document.body.classList.remove('printing-transcript'), 800);" style="padding: 0.5rem 1.25rem; font-size: 0.85rem; border-radius: 9999px; width: auto;">
                             <i class="fas fa-print"></i> Print Transcript
                         </button>
                         <button type="button" class="modal-card-close-btn" onclick="closeStudentReportCardModal()" aria-label="Close report card">
