@@ -201,6 +201,8 @@ if ($bookId === '') {
         $bookToc = json_decode(file_get_contents($tocJsonPath), true) ?: [];
     }
 
+    $bookCreditsText = '';
+
     // Scan for chapters in book folder
     $bookFolder = __DIR__ . '/' . $bookId;
     $chapterFiles = is_dir($bookFolder) ? glob($bookFolder . '/chapter-*.php') : [];
@@ -346,9 +348,7 @@ if ($bookId === '') {
                             '<a href="$1" target="_blank" rel="noopener noreferrer" style="color: var(--color-primary); text-decoration: underline;">$1</a>',
                             $escapedCredits
                         );
-                        $contentHtml .= '<div class="book-credits-container" style="margin-top: 3.5rem; padding-top: 1.5rem; border-top: 1px dashed var(--color-border); font-size: 0.85rem; color: var(--color-text-secondary); line-height: 1.6;">' . 
-                                        '<strong>Credits & Primary Sources:</strong> <span class="book-credits-text">' . $clickableCredits . '</span>' .
-                                        '</div>';
+                        $bookCreditsText = $clickableCredits;
                     }
                 }
             }

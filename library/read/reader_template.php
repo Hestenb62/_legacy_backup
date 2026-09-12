@@ -461,61 +461,78 @@ body.zen-mode {
                         </div>
                     <?php else: ?>
                         <?php echo $contentHtml; ?>
+
+                        <!-- End of Chapter Footer: Credits Line & Take Quiz Launch Button -->
+                        <div class="reader-chapter-end-row">
+                            <div class="book-credits-container">
+                                <div class="book-credits-text-wrap">
+                                    <?php if (!empty($bookCreditsText)): ?>
+                                        <strong>Credits &amp; Primary Sources:</strong> <span class="book-credits-text"><?php echo $bookCreditsText; ?></span>
+                                    <?php else: ?>
+                                        <span class="book-edition-meta"><i class="fas fa-book-reader mr-1" aria-hidden="true"></i> Hesten's Learning Library Edition</span>
+                                    <?php endif; ?>
+                                </div>
+                                <?php if ($chapter !== 'intro' && !$isTeacherPage): ?>
+                                    <div class="chk-launch-wrap">
+                                        <button type="button" class="chk-launch-btn" id="chk-launch-btn" onclick="toggleChapterCheckpoint(true)" aria-label="Take Chapter Comprehension Quiz">
+                                            <i class="fas fa-clipboard-check" aria-hidden="true"></i> <span id="chk-launch-btn-text">Take Quiz</span> <span class="chk-launch-badge" id="chk-launch-badge"><i class="fas fa-question-circle" aria-hidden="true"></i> 2 Qs</span>
+                                        </button>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+
+                        <!-- End-of-Chapter Reading Comprehension Checkpoint (Slide-Up Overlay Over Text) -->
+                        <?php if ($chapter !== 'intro' && !$isTeacherPage): ?>
+                            <section class="chapter-comprehension-checkpoint collapsed" id="chapter-checkpoint" aria-label="Chapter Comprehension Checkpoint" role="dialog" aria-modal="true" aria-labelledby="chk-modal-title">
+                                <!-- Sticky Header of the Checkpoint Overlay -->
+                                <div class="chk-overlay-header">
+                                    <div class="chk-overlay-header-left">
+                                        <div class="chk-icon-wrap" aria-hidden="true">
+                                            <i class="fas fa-clipboard-check"></i>
+                                        </div>
+                                        <div class="chk-toggle-info">
+                                            <div class="chk-title-row">
+                                                <h3 class="chk-title" id="chk-modal-title">Chapter <?php echo $chapterNum; ?> Checkpoint</h3>
+                                                <span class="chk-badge" id="chk-status-badge"><i class="fas fa-question-circle" aria-hidden="true"></i> 2 Questions</span>
+                                            </div>
+                                            <p class="chk-subtitle">Quick comprehension pulse check before advancing to the next chapter.</p>
+                                        </div>
+                                    </div>
+                                    <div class="chk-overlay-header-right">
+                                        <button type="button" class="chk-close-btn" onclick="toggleChapterCheckpoint(false)" aria-label="Close Quiz" title="Close Quiz (Esc)">
+                                            <i class="fas fa-times" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Scrollable Quiz Body with Questions & Controls -->
+                                <div class="chk-overlay-body" id="chk-collapsible-body">
+                                    <div class="chk-body-inner">
+                                        <div class="chk-body-header">
+                                            <span class="chk-body-hint"><i class="fas fa-lightbulb" aria-hidden="true"></i> Answer both questions below, then submit to check comprehension.</span>
+                                        </div>
+                                        <div id="chk-questions-container" class="chk-questions-container">
+                                            <!-- Populated dynamically by reader checkpoint engine -->
+                                        </div>
+                                        <div id="chk-feedback-box" class="chk-feedback-box" style="display: none;"></div>
+                                        <div class="chk-actions">
+                                            <button type="button" id="chk-submit-btn" class="chk-submit-btn" onclick="submitChapterCheckpoint()">
+                                                <i class="fas fa-check-circle" aria-hidden="true"></i> Submit Answers
+                                            </button>
+                                            <button type="button" id="chk-reset-btn" class="chk-secondary-btn" onclick="resetChapterCheckpoint()" style="display: none;">
+                                                <i class="fas fa-redo" aria-hidden="true"></i> Retake Quiz
+                                            </button>
+                                            <button type="button" id="chk-done-close-btn" class="chk-done-btn" onclick="toggleChapterCheckpoint(false)" style="display: none;">
+                                                <i class="fas fa-check" aria-hidden="true"></i> Done &amp; Close
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        <?php endif; ?>
                     <?php endif; ?>
                 </article>
-
-                <!-- End-of-Chapter Reading Comprehension Checkpoint -->
-                <?php if ($chapter !== 'intro' && !$isTeacherPage): ?>
-                    <section class="chapter-comprehension-checkpoint collapsed" id="chapter-checkpoint" aria-label="Chapter Comprehension Checkpoint">
-                        <!-- Clickable Toggle Banner / Trigger -->
-                        <div class="chk-toggle-bar" id="chk-toggle-trigger" role="button" tabindex="0" aria-expanded="false" aria-controls="chk-collapsible-body" onclick="toggleChapterCheckpoint()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleChapterCheckpoint();}">
-                            <div class="chk-toggle-left">
-                                <div class="chk-icon-wrap">
-                                    <i class="fas fa-clipboard-check"></i>
-                                </div>
-                                <div class="chk-toggle-info">
-                                    <div class="chk-title-row">
-                                        <h3 class="chk-title">Chapter <?php echo $chapterNum; ?> Checkpoint</h3>
-                                        <span class="chk-badge" id="chk-status-badge"><i class="fas fa-question-circle"></i> 2 Questions</span>
-                                    </div>
-                                    <p class="chk-subtitle">Quick comprehension pulse check before advancing to the next chapter.</p>
-                                </div>
-                            </div>
-                            <div class="chk-toggle-right">
-                                <button type="button" class="chk-open-btn" id="chk-toggle-btn" aria-label="Toggle Chapter Comprehension Quiz">
-                                    <span id="chk-toggle-btn-text">Take Quiz</span> <i class="fas fa-chevron-up" id="chk-toggle-chevron"></i>
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Collapsible Slide-up Quiz Body -->
-                        <div class="chk-collapsible-body" id="chk-collapsible-body">
-                            <div class="chk-body-inner">
-                                <div class="chk-body-header">
-                                    <span class="chk-body-hint"><i class="fas fa-lightbulb"></i> Answer both questions below, then submit to check comprehension.</span>
-                                    <button type="button" class="chk-minimize-btn" onclick="toggleChapterCheckpoint(false)" aria-label="Minimize Quiz">
-                                        <i class="fas fa-chevron-down"></i> Minimize
-                                    </button>
-                                </div>
-                                <div id="chk-questions-container" class="chk-questions-container">
-                                    <!-- Populated dynamically by reader checkpoint engine -->
-                                </div>
-                                <div id="chk-feedback-box" class="chk-feedback-box" style="display: none;"></div>
-                                <div class="chk-actions">
-                                    <button type="button" id="chk-submit-btn" class="chk-submit-btn" onclick="submitChapterCheckpoint()">
-                                        <i class="fas fa-check-circle"></i> Submit Answers
-                                    </button>
-                                    <button type="button" id="chk-reset-btn" class="chk-secondary-btn" onclick="resetChapterCheckpoint()" style="display: none;">
-                                        <i class="fas fa-redo"></i> Retake Quiz
-                                    </button>
-                                    <button type="button" id="chk-done-close-btn" class="chk-done-btn" onclick="toggleChapterCheckpoint(false)" style="display: none;">
-                                        <i class="fas fa-check"></i> Done &amp; Close
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                <?php endif; ?>
             </div>
         </div>
     </div>
@@ -1017,11 +1034,13 @@ body.zen-mode {
                 const resetBtn = document.getElementById('chk-reset-btn');
                 const doneBtn = document.getElementById('chk-done-close-btn');
                 const statusBadge = document.getElementById('chk-status-badge');
-                const toggleBtnText = document.getElementById('chk-toggle-btn-text');
+                const launchBtn = document.getElementById('chk-launch-btn');
+                const launchBtnText = document.getElementById('chk-launch-btn-text');
+                const launchBadge = document.getElementById('chk-launch-badge');
 
                 if (feedback) {
                     feedback.className = 'chk-feedback-box success';
-                    feedback.innerHTML = `<i class="fas fa-check-circle"></i> Checkpoint previously completed with ${saved[chkKey].score}% accuracy!`;
+                    feedback.innerHTML = `<i class="fas fa-check-circle" aria-hidden="true"></i> Checkpoint previously completed with ${saved[chkKey].score}% accuracy!`;
                     feedback.style.display = 'block';
                 }
                 if (submitBtn) submitBtn.style.display = 'none';
@@ -1029,22 +1048,27 @@ body.zen-mode {
                 if (doneBtn) doneBtn.style.display = 'inline-flex';
                 if (statusBadge) {
                     statusBadge.className = 'chk-badge chk-badge-success';
-                    statusBadge.innerHTML = `<i class="fas fa-check-circle"></i> Completed: ${saved[chkKey].score}%`;
+                    statusBadge.innerHTML = `<i class="fas fa-check-circle" aria-hidden="true"></i> Completed: ${saved[chkKey].score}%`;
                 }
-                if (toggleBtnText) toggleBtnText.textContent = 'Review Quiz';
+                if (launchBtn) launchBtn.classList.add('completed');
+                if (launchBtnText) launchBtnText.textContent = 'Review Quiz';
+                if (launchBadge) {
+                    launchBadge.className = 'chk-launch-badge chk-badge-success';
+                    launchBadge.innerHTML = `<i class="fas fa-check-circle" aria-hidden="true"></i> ${saved[chkKey].score}%`;
+                }
             }
         } catch(e) {}
     }
 
-    // Toggle Checkpoint Slide-up Drawer
+    // Toggle Checkpoint Slide-up Overlay Over Text
     window.chkAutoCloseTimer = null;
     window.toggleChapterCheckpoint = function(forceOpen) {
         const section = document.getElementById('chapter-checkpoint');
         if (!section) return;
 
-        const trigger = document.getElementById('chk-toggle-trigger');
-        const toggleBtnText = document.getElementById('chk-toggle-btn-text');
-        const chevron = document.getElementById('chk-toggle-chevron');
+        const launchBtn = document.getElementById('chk-launch-btn');
+        const launchBtnText = document.getElementById('chk-launch-btn-text');
+        const launchBadge = document.getElementById('chk-launch-badge');
         const meta = window.BOOK_METADATA || {};
         const chkKey = `${meta.id}_ch${meta.chapterNum}`;
         const isCurrentlyExpanded = section.classList.contains('expanded');
@@ -1058,30 +1082,49 @@ body.zen-mode {
         if (shouldOpen) {
             section.classList.remove('collapsed');
             section.classList.add('expanded');
-            if (trigger) trigger.setAttribute('aria-expanded', 'true');
-            if (toggleBtnText) toggleBtnText.textContent = 'Minimize Quiz';
-            if (chevron) chevron.className = 'fas fa-chevron-down';
 
-            // Smoothly scroll checkpoint into view
-            setTimeout(() => {
-                section.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            }, 100);
+            // Accessibility: Focus into the overlay close button or first interactive element
+            const closeBtn = section.querySelector('.chk-close-btn');
+            if (closeBtn) {
+                setTimeout(() => closeBtn.focus(), 120);
+            }
         } else {
             section.classList.remove('expanded');
             section.classList.add('collapsed');
-            if (trigger) trigger.setAttribute('aria-expanded', 'false');
+
+            // Return focus to the launch button for keyboard accessibility
+            if (launchBtn) {
+                launchBtn.focus();
+            }
             
             // Check if completed to label button appropriately
             let isDone = false;
+            let score = 0;
             try {
                 const saved = JSON.parse(localStorage.getItem('hesten_reading_comprehension') || '{}');
-                if (saved[chkKey]) isDone = true;
+                if (saved[chkKey]) {
+                    isDone = true;
+                    score = saved[chkKey].score;
+                }
             } catch(e) {}
 
-            if (toggleBtnText) toggleBtnText.textContent = isDone ? 'Review Quiz' : 'Take Quiz';
-            if (chevron) chevron.className = 'fas fa-chevron-up';
+            if (launchBtnText) launchBtnText.textContent = isDone ? 'Review Quiz' : 'Take Quiz';
+            if (launchBadge && isDone) {
+                launchBadge.className = 'chk-launch-badge chk-badge-success';
+                launchBadge.innerHTML = `<i class="fas fa-check-circle" aria-hidden="true"></i> ${score}%`;
+            }
         }
     };
+
+    // Close overlay on Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            const section = document.getElementById('chapter-checkpoint');
+            if (section && section.classList.contains('expanded')) {
+                window.toggleChapterCheckpoint(false);
+            }
+        }
+    });
 
     function renderCheckpointQuestions() {
         const container = document.getElementById('chk-questions-container');
@@ -1193,6 +1236,17 @@ body.zen-mode {
 
         if (section && pct >= 50) {
             section.classList.add('completed');
+        }
+
+        const launchBtn = document.getElementById('chk-launch-btn');
+        const launchBtnText = document.getElementById('chk-launch-btn-text');
+        const launchBadge = document.getElementById('chk-launch-badge');
+
+        if (launchBtn && pct >= 50) launchBtn.classList.add('completed');
+        if (launchBtnText) launchBtnText.textContent = 'Review Quiz';
+        if (launchBadge) {
+            launchBadge.className = pct >= 50 ? 'chk-launch-badge chk-badge-success' : 'chk-launch-badge';
+            launchBadge.innerHTML = `<i class="${pct >= 50 ? 'fas fa-check-circle' : 'fas fa-info-circle'}"></i> ${pct}%`;
         }
 
         if (submitBtn) submitBtn.style.display = 'none';

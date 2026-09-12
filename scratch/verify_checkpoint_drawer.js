@@ -14,16 +14,17 @@ console.log("=== Verifying Chapter Checkpoint Slide-Up Drawer ===");
 // 1. Check markup structure
 assert(content.includes('id="chapter-checkpoint"'), "Section id chapter-checkpoint must exist");
 assert(content.includes('class="chapter-comprehension-checkpoint collapsed"'), "Must have collapsed class by default");
-assert(content.includes('id="chk-toggle-trigger"'), "Must have toggle trigger");
+assert(content.includes('id="chk-launch-btn"'), "Must have launch button next to credits");
 assert(content.includes('id="chk-collapsible-body"'), "Must have collapsible body");
 assert(content.includes('id="chk-done-close-btn"'), "Must have Done & Close button");
+assert(content.includes('class="chk-close-btn"'), "Must have close button in header");
 
 // 2. Check JavaScript logic
 assert(content.includes('window.toggleChapterCheckpoint = function'), "toggleChapterCheckpoint must be defined");
 assert(content.includes('window.chkAutoCloseTimer'), "chkAutoCloseTimer must be defined");
 assert(content.includes('section.classList.remove(\'collapsed\')'), "Must support expanding");
 assert(content.includes('section.classList.add(\'collapsed\')'), "Must support collapsing");
-assert(content.includes('setTimeout(() => {\r\n                window.toggleChapterCheckpoint(false);') || content.includes('window.toggleChapterCheckpoint(false);'), "Must auto-close on success");
+assert(content.includes('window.toggleChapterCheckpoint(false);'), "Must auto-close on success");
 
 // 3. Extract script content and verify JS syntax
 const scriptMatches = [...content.matchAll(/<script>([\s\S]*?)<\/script>/gi)];
@@ -44,9 +45,9 @@ scriptMatches.forEach((match, idx) => {
 
 // 4. Verify CSS file contains checkpoint slide-up styles
 const cssContent = fs.readFileSync('assets/css/reader-main.css', 'utf8');
-assert(cssContent.includes('.chapter-comprehension-checkpoint.expanded .chk-collapsible-body'), "CSS must define expanded body styles");
-assert(cssContent.includes('.chk-collapsible-body'), "CSS must define collapsible body styles");
-assert(cssContent.includes('.chk-toggle-bar'), "CSS must define toggle bar styles");
-console.log("✔ CSS styles for slide-up drawer verified.");
+assert(cssContent.includes('.chapter-comprehension-checkpoint.expanded'), "CSS must define expanded styles");
+assert(cssContent.includes('.chk-overlay-body'), "CSS must define overlay body styles");
+assert(cssContent.includes('.chk-launch-btn'), "CSS must define launch button styles");
+console.log("✔ CSS styles for slide-up overlay verified.");
 
-console.log("All checkpoint drawer validations passed!");
+console.log("All checkpoint overlay validations passed!");
