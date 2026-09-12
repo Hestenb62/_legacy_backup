@@ -68,6 +68,10 @@ function initTextToSpeech(bookContent) {
 
         const paragraphs = bookContent.querySelectorAll("p, h2, h3, h4, li, blockquote");
         paragraphs.forEach(p => {
+            const lexileParent = p.closest('.lexile-version');
+            if (lexileParent && (!lexileParent.classList.contains('active') || lexileParent.style.display === 'none')) {
+                return;
+            }
             const rawText = p.textContent.trim();
             if (rawText.length > 0) {
                 const parts = rawText.match(/[^.!?]+[.!?]+/g) || [rawText];
@@ -81,6 +85,13 @@ function initTextToSpeech(bookContent) {
             }
         });
     }
+
+    window.addEventListener('hl:lexile-changed', () => {
+        if (isSpeaking) {
+            stopNarration();
+        }
+        prepareSentences();
+    });
 
     function updateControlUI(state) {
         // state: 'idle' | 'playing' | 'paused'

@@ -50,6 +50,11 @@
         }
       }, { passive: true });
 
+      window.addEventListener('hl:content-changed', () => {
+        this.totalWords = this.estimateWordCount();
+        this.updateProgress();
+      });
+
       // Zen Mode Toggle
       if (this.zenBtn) {
         this.zenBtn.addEventListener('click', () => {
