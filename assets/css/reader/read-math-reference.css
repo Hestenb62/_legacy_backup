@@ -1,173 +1,228 @@
 /* ==========================================================================
    Math Reference Book & Handbook Styling System
-   Hesten's Learning Platform - WCAG AAA & Mathematical Typography Standard
+   Hesten's Learning Platform - Classical Library Reference Volume Aesthetic
+   WCAG 2.1/2.2 AAA & Universal Mathematical Typography Standard
    ========================================================================== */
 
-/* --- Math Chapter Hero Banner --- */
-.math-chapter-hero {
+/* --- Library Archival Bookplate & Cataloging Header --- */
+.math-reference-content {
     position: relative;
-    margin: 0.5rem 0 2rem 0;
-    padding: 2.25rem 2rem;
-    background: linear-gradient(135deg, rgba(99, 102, 241, 0.12) 0%, rgba(168, 85, 247, 0.08) 50%, rgba(59, 130, 246, 0.05) 100%);
-    border: 1px solid rgba(99, 102, 241, 0.25);
-    border-radius: 1.25rem;
-    overflow: hidden;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-    transition: all 0.3s ease;
+    font-family: 'Merriweather', 'Georgia', 'Cambria', serif;
+    color: var(--reader-text, #0f172a);
+    line-height: 1.75;
 }
 
-.math-chapter-hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, #6366f1, #8b5cf6, #3b82f6);
+.math-book-callout-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding: 0.6rem 1.25rem;
+    margin-bottom: 1.25rem;
+    border-top: 2px solid var(--reader-border, rgba(0, 0, 0, 0.15));
+    border-bottom: 1px solid var(--reader-border, rgba(0, 0, 0, 0.1));
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--reader-muted, #64748b);
+    background: var(--reader-surface, rgba(0, 0, 0, 0.02));
+}
+
+.math-catalog-seal {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    color: var(--color-primary, #1e3a8a);
+}
+
+.math-catalog-callno {
+    font-weight: 600;
+}
+
+/* --- Classical Reference Hero Banner (Bookplate Frontispiece) --- */
+.math-chapter-hero {
+    position: relative;
+    margin: 1rem 0 2.5rem 0;
+    padding: 2.75rem 2.5rem;
+    background: var(--reader-surface, #ffffff);
+    border: 1px solid var(--reader-border, rgba(0, 0, 0, 0.15));
+    outline: 3px double var(--reader-border, rgba(0, 0, 0, 0.15));
+    outline-offset: -7px;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    text-align: center;
 }
 
 .math-hero-badge {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    font-size: 0.78rem;
-    font-weight: 800;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.76rem;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
-    padding: 0.3rem 0.85rem;
-    border-radius: 9999px;
-    background: rgba(99, 102, 241, 0.18);
-    color: var(--color-primary, #6366f1);
-    border: 1px solid rgba(99, 102, 241, 0.32);
-    margin-bottom: 0.85rem;
-}
-
-body.theme-light .math-hero-badge {
-    background: #eef2ff;
-    color: #4338ca;
-    border-color: #c7d2fe;
+    letter-spacing: 0.14em;
+    padding: 0.35rem 1rem;
+    border-radius: 2px;
+    background: transparent;
+    color: var(--reader-muted, #475569);
+    border: 1px solid var(--reader-border, rgba(0, 0, 0, 0.2));
+    margin-bottom: 1.25rem;
 }
 
 .math-hero-title {
-    font-size: clamp(1.45rem, 2.8vw, 2.15rem);
+    font-family: 'Merriweather', 'Georgia', serif;
+    font-size: clamp(1.6rem, 3.2vw, 2.35rem);
     font-weight: 900;
-    line-height: 1.25;
-    color: var(--reader-text, var(--color-text-default, #0f172a));
-    margin: 0 0 0.85rem 0;
-    letter-spacing: -0.02em;
+    line-height: 1.3;
+    color: var(--reader-text, #0f172a);
+    margin: 0 auto 0.75rem auto;
+    max-width: 900px;
+    letter-spacing: -0.01em;
+}
+
+.math-hero-subtitle {
+    font-family: 'Merriweather', 'Georgia', serif;
+    font-size: 1.05rem;
+    font-style: italic;
+    color: var(--reader-muted, #64748b);
+    max-width: 820px;
+    margin: 0 auto 1.25rem auto;
+    line-height: 1.6;
+}
+
+.math-book-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.25rem auto;
+    position: relative;
+    max-width: 320px;
+}
+
+.math-book-divider::before,
+.math-book-divider::after {
+    content: "";
+    flex: 1;
+    border-top: 1px solid var(--reader-border, rgba(0, 0, 0, 0.2));
+}
+
+.math-fleuron {
+    padding: 0 1rem;
+    font-size: 1.15rem;
+    color: var(--reader-muted, #94a3b8);
 }
 
 .math-hero-desc {
+    font-family: 'Merriweather', 'Georgia', serif;
     font-size: 0.98rem;
-    line-height: 1.65;
-    color: var(--reader-muted, var(--color-text-secondary, #64748b));
-    max-width: 880px;
-    margin: 0;
+    line-height: 1.8;
+    color: var(--reader-text, #334155);
+    max-width: 820px;
+    margin: 0 auto;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
-/* --- Quick Navigation Pills --- */
+/* --- Reference Index / Thumb-Tab Bar --- */
 .math-toc-pills {
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
-    gap: 0.55rem;
-    margin: 1.5rem 0 2.5rem 0;
-    padding: 0.95rem 1.25rem;
-    background: var(--reader-surface, var(--color-bg-subtle, rgba(255, 255, 255, 0.04)));
-    border: 1px solid var(--reader-border, var(--color-border, rgba(0, 0, 0, 0.1)));
-    border-radius: 1rem;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+    gap: 0.45rem;
+    margin: 1.75rem 0 3rem 0;
+    padding: 0.85rem 1.25rem;
+    background: var(--reader-surface, #ffffff);
+    border-top: 1px solid var(--reader-border, rgba(0, 0, 0, 0.15));
+    border-bottom: 2px solid var(--reader-border, rgba(0, 0, 0, 0.2));
+    border-radius: 0.25rem;
+}
+
+.math-toc-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    color: var(--reader-muted, #64748b);
+    margin-right: 0.5rem;
 }
 
 .math-pill,
 .math-toc-pill {
     display: inline-flex;
     align-items: center;
-    gap: 0.45rem;
+    gap: 0.35rem;
+    font-family: 'JetBrains Mono', monospace;
     font-size: 0.82rem;
     font-weight: 700;
-    padding: 0.4rem 0.9rem;
-    border-radius: 9999px;
-    background: var(--reader-surface, #ffffff);
+    padding: 0.35rem 0.75rem;
+    border-radius: 3px;
+    background: var(--reader-bg, rgba(0, 0, 0, 0.03));
     color: var(--reader-text, #0f172a);
-    border: 1px solid var(--reader-border, rgba(0, 0, 0, 0.12));
+    border: 1px solid var(--reader-border, rgba(0, 0, 0, 0.15));
     text-decoration: none;
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.18s ease;
 }
 
 .math-pill:hover,
 .math-pill:focus-visible,
 .math-toc-pill:hover,
 .math-toc-pill:focus-visible {
-    background: var(--color-primary, #6366f1) !important;
-    color: #ffffff !important;
-    border-color: var(--color-primary, #6366f1) !important;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.35);
+    background: var(--reader-text, #0f172a) !important;
+    color: var(--reader-surface, #ffffff) !important;
+    border-color: var(--reader-text, #0f172a) !important;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* --- Math Reference Section & Headers --- */
+/* --- Classical Book Sections & Stately Numbering --- */
 .math-section {
-    margin-bottom: 3.5rem;
-    scroll-margin-top: 5.5rem;
+    margin-bottom: 4rem;
+    scroll-margin-top: 6rem;
 }
 
 .math-section-header {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     gap: 0.85rem;
-    margin-bottom: 1.5rem;
-    padding-bottom: 0.75rem;
-    border-bottom: 2px solid var(--reader-border, rgba(0, 0, 0, 0.08));
+    margin-bottom: 1.75rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 3px double var(--reader-border, rgba(0, 0, 0, 0.2));
 }
 
 .math-section-num {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'JetBrains Mono', monospace, sans-serif;
-    font-size: 0.92rem;
-    font-weight: 800;
-    padding: 0.25rem 0.65rem;
-    border-radius: 0.5rem;
-    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
-    color: #ffffff !important;
-    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
+    font-family: 'Merriweather', 'Georgia', serif;
+    font-size: 1.35rem;
+    font-weight: 900;
+    color: var(--color-primary, #1e3a8a);
+    letter-spacing: 0.02em;
     flex-shrink: 0;
 }
 
 .math-section-title {
-    margin: 0;
-    font-size: clamp(1.2rem, 2vw, 1.45rem);
+    font-family: 'Merriweather', 'Georgia', serif;
+    font-size: clamp(1.3rem, 2.2vw, 1.6rem);
     font-weight: 800;
-    color: var(--reader-text, var(--color-text-default, #0f172a));
+    color: var(--reader-text, #0f172a);
+    margin: 0;
     letter-spacing: -0.01em;
 }
 
-.math-section-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    font-size: 0.75rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    padding: 0.25rem 0.75rem;
-    border-radius: 9999px;
-    background: rgba(79, 70, 229, 0.12);
-    color: var(--color-primary, #6366f1);
-    border: 1px solid rgba(79, 70, 229, 0.25);
-    margin-bottom: 0.75rem;
-}
-
-/* --- Formal Mathematical Definition Box --- */
+/* --- Formal Mathematical Treatise Boxes (Definitions & Axioms) --- */
 .math-def-box {
     margin: 2rem 0;
-    padding: 1.5rem 1.75rem;
-    background: linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(99, 102, 241, 0.04) 100%);
-    border: 1px solid rgba(59, 130, 246, 0.3);
-    border-left: 5px solid #3b82f6;
-    border-radius: 1rem;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    padding: 1.5rem 1.85rem;
+    background: var(--reader-surface, #ffffff);
+    border: 1px solid var(--reader-border, rgba(0, 0, 0, 0.15));
+    border-left: 4px solid var(--color-primary, #1e3a8a);
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
 }
 
 .math-def-header {
@@ -177,80 +232,55 @@ body.theme-light .math-hero-badge {
     flex-wrap: wrap;
     gap: 0.5rem;
     margin-bottom: 0.85rem;
-}
-
-.math-def-title {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 1.05rem;
-    font-weight: 800;
-    color: #2563eb;
-    margin: 0;
-}
-
-body.theme-dark .math-def-title,
-body.theme-midnight .math-def-title,
-[data-theme="dark"] .math-def-title,
-[data-theme="midnight"] .math-def-title {
-    color: #60a5fa;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px dotted var(--reader-border, rgba(0, 0, 0, 0.15));
 }
 
 .math-def-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-primary, #1e3a8a);
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
-    font-size: 0.85rem;
-    font-weight: 800;
-    color: #2563eb;
 }
 
-body.theme-dark .math-def-badge,
-body.theme-midnight .math-def-badge,
-[data-theme="dark"] .math-def-badge,
-[data-theme="midnight"] .math-def-badge {
-    color: #60a5fa;
-}
-
-.math-def-domain,
-.math-def-chip {
-    font-size: 0.72rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    padding: 0.2rem 0.6rem;
-    border-radius: 9999px;
-    background: rgba(59, 130, 246, 0.15);
-    color: #2563eb;
-    border: 1px solid rgba(59, 130, 246, 0.3);
-}
-
-body.theme-dark .math-def-domain,
-body.theme-dark .math-def-chip,
-body.theme-midnight .math-def-domain,
-body.theme-midnight .math-def-chip,
-[data-theme="dark"] .math-def-chip,
-[data-theme="midnight"] .math-def-chip {
-    color: #93c5fd;
-    background: rgba(59, 130, 246, 0.25);
+.math-def-domain {
+    font-family: 'Merriweather', 'Georgia', serif;
+    font-size: 0.82rem;
+    font-style: italic;
+    color: var(--reader-muted, #64748b);
 }
 
 .math-def-body {
-    font-size: 0.95rem;
-    line-height: 1.65;
-    color: var(--reader-text, #0f172a);
+    font-family: 'Merriweather', 'Georgia', serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--reader-text, #1e293b);
 }
 
-/* --- Formal Mathematical Theorem & Lemma Box --- */
+.math-term {
+    font-weight: 800;
+    font-style: normal;
+    color: var(--reader-text, #0f172a);
+    text-decoration: underline;
+    text-decoration-color: rgba(30, 58, 138, 0.3);
+    text-underline-offset: 3px;
+}
+
+/* --- Formal Principles, Theorems & Enunciations --- */
 .math-theorem-box,
 .math-thm-box {
     margin: 2.25rem 0;
-    padding: 1.5rem 1.75rem;
-    background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(5, 150, 105, 0.03) 100%);
-    border: 1px solid rgba(16, 185, 129, 0.3);
-    border-left: 5px solid #10b981;
-    border-radius: 1rem;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    padding: 1.5rem 1.85rem;
+    background: var(--reader-surface, #ffffff);
+    border: 1px solid var(--reader-border, rgba(0, 0, 0, 0.15));
+    border-left: 4px solid #065f46;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
 }
 
 .math-theorem-header,
@@ -261,425 +291,319 @@ body.theme-midnight .math-def-chip,
     flex-wrap: wrap;
     gap: 0.5rem;
     margin-bottom: 0.85rem;
-}
-
-.math-theorem-title,
-.math-thm-title {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 1.05rem;
-    font-weight: 800;
-    color: #059669;
-    margin: 0;
-}
-
-body.theme-dark .math-theorem-title,
-body.theme-dark .math-thm-title,
-body.theme-midnight .math-theorem-title,
-body.theme-midnight .math-thm-title,
-[data-theme="dark"] .math-theorem-title,
-[data-theme="midnight"] .math-theorem-title {
-    color: #34d399;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px dotted var(--reader-border, rgba(0, 0, 0, 0.15));
 }
 
 .math-theorem-badge,
 .math-thm-badge {
-    font-size: 0.72rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
     font-weight: 800;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
-    letter-spacing: 0.06em;
-    padding: 0.2rem 0.6rem;
-    border-radius: 9999px;
-    background: rgba(16, 185, 129, 0.15);
-    color: #059669;
-    border: 1px solid rgba(16, 185, 129, 0.3);
+    color: #065f46;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
 }
 
-body.theme-dark .math-theorem-badge,
-body.theme-dark .math-thm-badge,
-body.theme-midnight .math-theorem-badge,
-body.theme-midnight .math-thm-badge,
-[data-theme="dark"] .math-theorem-badge,
-[data-theme="midnight"] .math-theorem-badge {
-    color: #6ee7b7;
-    background: rgba(16, 185, 129, 0.25);
+.math-theorem-title,
+.math-thm-title {
+    font-family: 'Merriweather', 'Georgia', serif;
+    font-size: 0.95rem;
+    font-weight: 800;
+    font-style: italic;
+    color: #065f46;
 }
 
 .math-thm-body {
-    font-size: 0.95rem;
-    line-height: 1.65;
-    color: var(--reader-text, #0f172a);
+    font-family: 'Merriweather', 'Georgia', serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--reader-text, #1e293b);
 }
 
-/* --- Formula Cards & Highlight Grids --- */
+/* --- Handbook Formulary Cards & Mathematical Plates --- */
+.math-formula-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
 .math-formula-card {
-    margin: 1.5rem 0;
-    padding: 1.5rem 1.75rem;
+    padding: 1.6rem 1.5rem;
     background: var(--reader-surface, #ffffff);
-    border: 1px solid var(--reader-border, rgba(0, 0, 0, 0.12));
-    border-radius: 1.25rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    border: 1px solid var(--reader-border, rgba(0, 0, 0, 0.15));
+    border-radius: 0.25rem;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.03);
     position: relative;
-    overflow: hidden;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
 }
 
-.math-formula-card:hover {
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-}
-
-.math-formula-card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, #6366f1, #3b82f6, #ec4899);
+.math-formula-meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--reader-muted, #64748b);
+    margin-bottom: 0.4rem;
 }
 
 .math-formula-title {
-    font-size: 1rem;
+    font-family: 'Merriweather', 'Georgia', serif;
+    font-size: 1.05rem;
     font-weight: 800;
     color: var(--reader-text, #0f172a);
-    margin-top: 0.25rem;
     margin-bottom: 0.75rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    line-height: 1.4;
 }
 
-.math-formula-card .math-equation-display,
 .math-formula-latex {
-    padding: 0.85rem 1.15rem;
-    margin: 0.85rem 0;
-    background: var(--reader-bg, rgba(0, 0, 0, 0.04));
-    border-radius: 0.75rem;
-    border: 1px solid var(--reader-border, rgba(0, 0, 0, 0.08));
+    padding: 1rem 0.85rem;
+    margin: 0.75rem 0 1rem 0;
+    background: var(--reader-bg, rgba(0, 0, 0, 0.03));
+    border-top: 1px solid var(--reader-border, rgba(0, 0, 0, 0.1));
+    border-bottom: 1px solid var(--reader-border, rgba(0, 0, 0, 0.1));
     text-align: center;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
 }
 
-body.theme-dark .math-formula-latex,
-body.theme-midnight .math-formula-latex {
-    background: rgba(0, 0, 0, 0.35);
-    border-color: rgba(255, 255, 255, 0.08);
-}
-
 .math-formula-desc {
-    font-size: 0.88rem;
-    line-height: 1.55;
-    color: var(--reader-muted, #64748b);
+    font-family: 'Merriweather', 'Georgia', serif;
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: var(--reader-text, #334155);
 }
 
-.math-formula-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.25rem;
-    margin: 2rem 0;
-}
-
-.math-grid-card {
-    padding: 1.25rem;
-    background: var(--reader-surface, rgba(255, 255, 255, 0.03));
-    border: 1px solid var(--reader-border, rgba(0, 0, 0, 0.1));
-    border-radius: 1rem;
-    transition: transform 0.2s ease, border-color 0.2s ease;
-}
-
-.math-grid-card:hover {
-    border-color: var(--color-primary, #6366f1);
-    transform: translateY(-2px);
-}
-
-.math-grid-card h4 {
-    margin: 0 0 0.5rem 0 !important;
-    font-size: 0.98rem !important;
-    font-weight: 800;
-    color: var(--color-primary, #6366f1);
-}
-
-/* --- Worked Reference Example Box --- */
+/* --- Worked Reference Problems (Exempla) --- */
 .math-example-box {
-    margin: 2.25rem 0;
-    padding: 1.5rem 1.75rem;
-    background: linear-gradient(135deg, rgba(245, 158, 11, 0.06) 0%, rgba(217, 119, 6, 0.02) 100%);
-    border: 1px solid rgba(245, 158, 11, 0.25);
-    border-left: 5px solid #f59e0b;
-    border-radius: 1rem;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+    margin: 2.5rem 0;
+    padding: 1.75rem 2rem;
+    background: var(--reader-surface, #ffffff);
+    border: 1px solid var(--reader-border, rgba(0, 0, 0, 0.15));
+    border-left: 4px solid #b45309;
+    border-radius: 0.25rem;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.03);
 }
 
-.math-example-header,
 .math-ex-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 0.5rem;
-    margin-bottom: 0.85rem;
-}
-
-.math-example-header {
-    font-size: 1rem;
-    font-weight: 800;
-    color: #d97706;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px dotted var(--reader-border, rgba(0, 0, 0, 0.15));
 }
 
 .math-ex-badge {
-    font-size: 0.72rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
     font-weight: 800;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
-    letter-spacing: 0.06em;
-    padding: 0.2rem 0.6rem;
-    border-radius: 9999px;
-    background: rgba(245, 158, 11, 0.15);
-    color: #d97706;
-    border: 1px solid rgba(245, 158, 11, 0.3);
-}
-
-body.theme-dark .math-ex-badge,
-body.theme-midnight .math-ex-badge {
-    color: #fbbf24;
-    background: rgba(245, 158, 11, 0.25);
-}
-
-.math-ex-title {
-    font-size: 1rem;
-    font-weight: 800;
-    color: #d97706;
-}
-
-body.theme-dark .math-example-header,
-body.theme-dark .math-ex-title,
-body.theme-midnight .math-example-header,
-body.theme-midnight .math-ex-title,
-[data-theme="dark"] .math-example-header,
-[data-theme="midnight"] .math-example-header {
-    color: #fbbf24;
-}
-
-.math-ex-body {
-    font-size: 0.95rem;
-    line-height: 1.65;
-    color: var(--reader-text, #0f172a);
-}
-
-.math-example-steps,
-.math-ex-solution {
-    margin: 1rem 0;
-    padding: 1rem 1.25rem;
-    background: var(--reader-surface, rgba(0, 0, 0, 0.03));
-    border-left: 3px solid #f59e0b;
-    border-radius: 0.5rem;
-    font-size: 0.92rem;
-    line-height: 1.6;
-}
-
-.math-example-steps {
-    padding-left: 1.25rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-}
-
-.math-example-result,
-.math-ex-result {
-    margin-top: 1rem;
-    padding: 0.65rem 1rem;
-    background: rgba(245, 158, 11, 0.12);
-    border: 1px solid rgba(245, 158, 11, 0.3);
-    border-radius: 0.5rem;
-    font-weight: 700;
-    display: inline-block;
-    color: var(--reader-text, #0f172a);
-}
-
-/* --- Caution & Pitfall Box --- */
-.math-caution-box {
-    margin: 2rem 0;
-    padding: 1.25rem 1.5rem;
-    background: linear-gradient(135deg, rgba(239, 68, 68, 0.07) 0%, rgba(220, 38, 38, 0.02) 100%);
-    border: 1px solid rgba(239, 68, 68, 0.25);
-    border-left: 5px solid #ef4444;
-    border-radius: 1rem;
-}
-
-.math-caution-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    font-size: 0.95rem;
-    font-weight: 800;
-    color: #dc2626;
-    margin-bottom: 0.5rem;
-}
-
-body.theme-dark .math-caution-header,
-body.theme-midnight .math-caution-header,
-[data-theme="dark"] .math-caution-header,
-[data-theme="midnight"] .math-caution-header {
-    color: #f87171;
-}
-
-.math-caution-badge {
-    font-size: 0.72rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    padding: 0.2rem 0.6rem;
-    border-radius: 9999px;
-    background: rgba(239, 68, 68, 0.15);
-    color: #dc2626;
-    border: 1px solid rgba(239, 68, 68, 0.3);
-}
-
-body.theme-dark .math-caution-badge,
-body.theme-midnight .math-caution-badge {
-    color: #fca5a5;
-    background: rgba(239, 68, 68, 0.25);
-}
-
-.math-caution-title {
-    font-size: 1rem;
-    font-weight: 800;
-    color: #dc2626;
-}
-
-body.theme-dark .math-caution-title,
-body.theme-midnight .math-caution-title {
-    color: #f87171;
-}
-
-.math-caution-body {
-    font-size: 0.95rem;
-    line-height: 1.65;
-    color: var(--reader-text, #0f172a);
-}
-
-/* --- Mathematical Constant & Hack Cards --- */
-.math-constant-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.25rem;
-    margin: 2rem 0;
-}
-
-.math-constant-card {
-    padding: 1.35rem;
-    background: var(--reader-surface, #ffffff);
-    border: 1px solid var(--reader-border, rgba(0, 0, 0, 0.1));
-    border-radius: 1.25rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    position: relative;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
-    transition: transform 0.2s ease, border-color 0.2s ease;
-}
-
-.math-constant-card:hover {
-    border-color: var(--color-primary, #6366f1);
-    transform: translateY(-2px);
-}
-
-.math-constant-card .constant-sym,
-.math-const-sym {
-    font-size: 1.05rem;
-    font-weight: 800;
-    color: var(--color-primary, #6366f1);
-    line-height: 1.2;
+    color: #b45309;
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
 }
 
-.math-constant-card .constant-name,
-.math-const-name {
-    font-size: 1rem;
+.math-ex-title {
+    font-family: 'Merriweather', 'Georgia', serif;
+    font-size: 0.95rem;
     font-weight: 800;
-    color: var(--reader-text, #0f172a);
+    font-style: italic;
+    color: #b45309;
 }
 
-.math-constant-card .constant-val,
-.math-const-val {
+.math-ex-body {
+    font-family: 'Merriweather', 'Georgia', serif;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.math-ex-problem {
+    margin-bottom: 1rem;
+}
+
+.math-ex-solution {
+    margin: 1.25rem 0;
+    padding: 1.25rem 1.5rem;
+    background: var(--reader-bg, rgba(0, 0, 0, 0.02));
+    border-left: 2px solid var(--reader-border, rgba(0, 0, 0, 0.2));
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.math-sol-step {
+    line-height: 1.7;
+}
+
+.math-ex-result {
+    margin-top: 1rem;
+    padding: 0.75rem 1.25rem;
+    background: var(--reader-surface, #ffffff);
+    border: 1px solid var(--reader-border, rgba(0, 0, 0, 0.15));
+    border-radius: 2px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.math-qed {
+    font-size: 0.95rem;
+    color: var(--reader-muted, #64748b);
     font-family: 'JetBrains Mono', monospace;
-    font-size: 0.88rem;
-    background: var(--reader-bg, rgba(0, 0, 0, 0.04));
+}
+
+/* --- Common Pitfalls & Scholastic Warnings --- */
+.math-caution-box {
+    margin: 2.25rem 0;
+    padding: 1.4rem 1.75rem;
+    background: var(--reader-surface, #ffffff);
+    border: 1px solid var(--reader-border, rgba(0, 0, 0, 0.15));
+    border-left: 4px solid #b91c1c;
+    border-radius: 0.25rem;
+}
+
+.math-caution-header {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.6rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px dotted var(--reader-border, rgba(0, 0, 0, 0.15));
+}
+
+.math-caution-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #b91c1c;
+}
+
+.math-caution-title {
+    font-family: 'Merriweather', 'Georgia', serif;
+    font-size: 0.95rem;
+    font-weight: 800;
+    font-style: italic;
+    color: #b91c1c;
+}
+
+.math-caution-body {
+    font-family: 'Merriweather', 'Georgia', serif;
+    font-size: 0.96rem;
+    line-height: 1.75;
+}
+
+/* --- Scholia & Computational Heuristics Cards --- */
+.math-constant-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.math-constant-card {
+    padding: 1.5rem 1.4rem;
+    background: var(--reader-surface, #ffffff);
+    border: 1px solid var(--reader-border, rgba(0, 0, 0, 0.15));
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.math-const-sym {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-primary, #1e3a8a);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.math-const-name {
+    font-family: 'Merriweather', 'Georgia', serif;
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: var(--reader-text, #0f172a);
+    margin-bottom: 0.25rem;
+}
+
+.math-const-val {
     padding: 0.65rem 0.85rem;
-    border-radius: 0.5rem;
-    border: 1px solid var(--reader-border, rgba(0, 0, 0, 0.08));
+    background: var(--reader-bg, rgba(0, 0, 0, 0.03));
+    border-top: 1px solid var(--reader-border, rgba(0, 0, 0, 0.1));
+    border-bottom: 1px solid var(--reader-border, rgba(0, 0, 0, 0.1));
     text-align: center;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    color: var(--color-primary, #6366f1);
-}
-
-body.theme-dark .math-const-val,
-body.theme-midnight .math-const-val {
-    background: rgba(0, 0, 0, 0.35);
-    border-color: rgba(255, 255, 255, 0.08);
 }
 
 .math-const-desc {
+    font-family: 'Merriweather', 'Georgia', serif;
     font-size: 0.88rem;
-    line-height: 1.5;
-    color: var(--reader-muted, #64748b);
+    line-height: 1.65;
+    color: var(--reader-text, #334155);
 }
 
-/* --- Publication-Grade Reference Tables (.ref-table) --- */
+/* --- Classical Academic Reference Tables --- */
 .ref-table-wrap {
     width: 100%;
-    margin: 2rem 0;
+    margin: 2.25rem 0;
     overflow-x: auto;
-    border-radius: 1rem;
-    border: 1px solid var(--reader-border, rgba(0, 0, 0, 0.12));
+    border-top: 2px solid var(--reader-border, #0f172a);
+    border-bottom: 2px solid var(--reader-border, #0f172a);
     background: var(--reader-surface, #ffffff);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
     -webkit-overflow-scrolling: touch;
-    scrollbar-width: thin;
 }
 
 .ref-table {
     width: 100%;
     border-collapse: collapse;
-    font-size: clamp(0.88rem, 0.2vw + 0.84rem, 1rem);
+    font-family: 'Merriweather', 'Georgia', serif;
+    font-size: clamp(0.88rem, 0.2vw + 0.84rem, 0.98rem);
     text-align: left;
+    line-height: 1.6;
 }
 
 .ref-table th,
 .ref-table td {
-    padding: 0.9rem 1.15rem;
-    border-bottom: 1px solid var(--reader-border, rgba(0, 0, 0, 0.08));
+    padding: 0.85rem 1.15rem;
+    border-bottom: 1px solid var(--reader-border, rgba(0, 0, 0, 0.1));
     vertical-align: middle;
 }
 
 .ref-table th {
-    background: var(--reader-bg, rgba(0, 0, 0, 0.04));
+    background: var(--reader-surface, #ffffff);
+    font-family: 'JetBrains Mono', monospace;
     font-weight: 800;
     text-transform: uppercase;
-    font-size: 0.78rem;
-    letter-spacing: 0.06em;
-    color: var(--reader-muted, #64748b);
-    border-bottom: 2px solid var(--reader-border, rgba(0, 0, 0, 0.12));
+    font-size: 0.76rem;
+    letter-spacing: 0.08em;
+    color: var(--reader-text, #0f172a);
+    border-bottom: 1px solid var(--reader-border, #0f172a);
     white-space: nowrap;
 }
 
-.ref-table tbody tr:nth-child(even) {
-    background: rgba(0, 0, 0, 0.015);
-}
-
-body.theme-dark .ref-table tbody tr:nth-child(even),
-body.theme-midnight .ref-table tbody tr:nth-child(even) {
-    background: rgba(255, 255, 255, 0.02);
-}
-
 .ref-table tbody tr:hover {
-    background: rgba(99, 102, 241, 0.06);
+    background: var(--reader-bg, rgba(0, 0, 0, 0.02));
 }
 
 .ref-table td:first-child {
@@ -687,53 +611,61 @@ body.theme-midnight .ref-table tbody tr:nth-child(even) {
     color: var(--reader-text, #0f172a);
 }
 
-/* --- Chapter Summary Sheet / Quick Reference Cheat Sheet --- */
+/* --- Synoptic Appendix / Conspectus of Formulas --- */
 .math-summary-sheet {
-    margin: 3.5rem 0 1.5rem 0;
-    padding: 2rem;
-    background: linear-gradient(135deg, rgba(99, 102, 241, 0.06) 0%, rgba(139, 92, 246, 0.04) 100%);
-    border: 2px solid rgba(99, 102, 241, 0.25);
-    border-radius: 1.5rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    margin: 4rem 0 2rem 0;
+    padding: 2.25rem;
+    background: var(--reader-surface, #ffffff);
+    border: 1px solid var(--reader-border, rgba(0, 0, 0, 0.15));
+    outline: 2px double var(--reader-border, rgba(0, 0, 0, 0.15));
+    outline-offset: -5px;
+    border-radius: 0.25rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
 }
 
 .math-summary-header {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
     margin-bottom: 1.5rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--reader-border, rgba(0, 0, 0, 0.15));
 }
 
 .math-summary-header h3 {
-    margin: 0 !important;
-    font-size: 1.35rem !important;
+    font-family: 'Merriweather', 'Georgia', serif;
+    font-size: 1.25rem !important;
     font-weight: 900;
-    color: var(--color-primary, #6366f1);
+    color: var(--reader-text, #0f172a);
+    margin: 0 !important;
+    letter-spacing: -0.01em;
 }
 
 .math-summary-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.25rem;
+    gap: 1.5rem;
 }
 
 .math-summary-col {
-    padding: 1.35rem;
-    background: var(--reader-surface, #ffffff);
-    border: 1px solid var(--reader-border, rgba(0, 0, 0, 0.08));
-    border-radius: 1rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    padding: 1.4rem;
+    background: var(--reader-bg, rgba(0, 0, 0, 0.02));
+    border: 1px solid var(--reader-border, rgba(0, 0, 0, 0.1));
+    border-radius: 0.25rem;
 }
 
 .math-summary-col h4 {
-    margin: 0 0 0.75rem 0 !important;
-    font-size: 0.95rem !important;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.82rem !important;
     font-weight: 800;
-    color: var(--color-primary, #6366f1);
-    border-bottom: 1px dashed var(--reader-border, rgba(0, 0, 0, 0.1));
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--reader-text, #0f172a);
+    border-bottom: 1px solid var(--reader-border, rgba(0, 0, 0, 0.15));
     padding-bottom: 0.4rem;
+    margin: 0 0 0.85rem 0 !important;
 }
 
 .math-summary-col ul {
@@ -741,59 +673,267 @@ body.theme-midnight .ref-table tbody tr:nth-child(even) {
     padding-left: 1.2rem;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-    font-size: 0.9rem;
-    color: var(--reader-text, #0f172a);
+    gap: 0.55rem;
+    font-size: 0.92rem;
+    color: var(--reader-text, #1e293b);
 }
 
-/* --- Theme Adaptations (Sepia) --- */
+/* ==========================================================================
+   Reading Theme Overrides (Warm Antique Sepia, Dark Vellum & Midnight)
+   ========================================================================== */
+
+/* --- Sepia Theme (Authentic Antique Parchment / Calfskin Reference Tome) --- */
+body.theme-sepia .math-reference-content,
+[data-theme="sepia"] .math-reference-content {
+    color: #382b1f;
+}
+
+body.theme-sepia .math-book-callout-header,
+[data-theme="sepia"] .math-book-callout-header {
+    border-color: #c9bca9;
+    color: #705d4b;
+    background: rgba(112, 93, 75, 0.06);
+}
+
 body.theme-sepia .math-chapter-hero,
 [data-theme="sepia"] .math-chapter-hero {
-    background: linear-gradient(135deg, #f4ebd9 0%, #ebe0cb 100%);
-    border-color: #d6c6b2;
+    background: #fbf5ea;
+    border-color: #c9bca9;
+    outline-color: #c9bca9;
+    color: #382b1f;
+}
+
+body.theme-sepia .math-hero-badge,
+[data-theme="sepia"] .math-hero-badge {
+    border-color: #b8aa97;
+    color: #63513f;
+}
+
+body.theme-sepia .math-hero-title,
+[data-theme="sepia"] .math-hero-title {
+    color: #2b1f14;
+}
+
+body.theme-sepia .math-toc-pills,
+[data-theme="sepia"] .math-toc-pills {
+    background: #fbf5ea;
+    border-color: #c9bca9;
+}
+
+body.theme-sepia .math-pill,
+[data-theme="sepia"] .math-pill,
+body.theme-sepia .math-toc-pill,
+[data-theme="sepia"] .math-toc-pill {
+    background: #ede3d1;
+    color: #382b1f;
+    border-color: #c4b6a2;
+}
+
+body.theme-sepia .math-pill:hover,
+body.theme-sepia .math-pill:focus-visible,
+[data-theme="sepia"] .math-pill:hover,
+[data-theme="sepia"] .math-pill:focus-visible {
+    background: #382b1f !important;
+    color: #fbf5ea !important;
+    border-color: #382b1f !important;
+}
+
+body.theme-sepia .math-section-header,
+[data-theme="sepia"] .math-section-header {
+    border-color: #c4b6a2;
+}
+
+body.theme-sepia .math-section-num,
+[data-theme="sepia"] .math-section-num {
+    color: #78350f;
 }
 
 body.theme-sepia .math-def-box,
 [data-theme="sepia"] .math-def-box {
-    background: #f4ede0;
+    background: #fdfaf4;
     border-color: #d6c6b2;
+    border-left-color: #854d0e;
+}
+
+body.theme-sepia .math-def-badge,
+[data-theme="sepia"] .math-def-badge {
+    color: #854d0e;
 }
 
 body.theme-sepia .math-theorem-box,
 body.theme-sepia .math-thm-box,
 [data-theme="sepia"] .math-theorem-box,
 [data-theme="sepia"] .math-thm-box {
-    background: #edf5ea;
+    background: #f6f8f2;
     border-color: #c7dec1;
+    border-left-color: #2d6a4f;
 }
 
-body.theme-sepia .math-example-box,
-[data-theme="sepia"] .math-example-box {
-    background: #faf3e8;
-    border-color: #ecdcc1;
+body.theme-sepia .math-theorem-badge,
+body.theme-sepia .math-thm-badge,
+[data-theme="sepia"] .math-theorem-badge,
+[data-theme="sepia"] .math-thm-badge {
+    color: #2d6a4f;
 }
 
 body.theme-sepia .math-formula-card,
-body.theme-sepia .math-grid-card,
-body.theme-sepia .ref-table-wrap,
-body.theme-sepia .math-summary-sheet,
-body.theme-sepia .math-summary-col,
+body.theme-sepia .math-example-box,
 body.theme-sepia .math-constant-card,
+body.theme-sepia .math-summary-sheet,
 [data-theme="sepia"] .math-formula-card,
-[data-theme="sepia"] .math-grid-card,
-[data-theme="sepia"] .ref-table-wrap,
+[data-theme="sepia"] .math-example-box,
+[data-theme="sepia"] .math-constant-card,
 [data-theme="sepia"] .math-summary-sheet {
-    background: #fdfaf6;
-    border-color: #e5dac9;
+    background: #fdfaf4;
+    border-color: #d6c6b2;
+}
+
+body.theme-sepia .ref-table-wrap,
+[data-theme="sepia"] .ref-table-wrap {
+    border-color: #382b1f;
+    background: #fdfaf4;
 }
 
 body.theme-sepia .ref-table th,
 [data-theme="sepia"] .ref-table th {
-    background: #f4ede0;
-    color: #635345;
+    background: #ede3d1;
+    border-color: #382b1f;
+    color: #382b1f;
 }
 
-body.theme-sepia .ref-table tbody tr:nth-child(even),
-[data-theme="sepia"] .ref-table tbody tr:nth-child(even) {
-    background: rgba(0, 0, 0, 0.02);
+/* --- Dark & Midnight Theme (Rare Manuscript Nocturne) --- */
+body.theme-dark .math-book-callout-header,
+body.theme-midnight .math-book-callout-header,
+[data-theme="dark"] .math-book-callout-header,
+[data-theme="midnight"] .math-book-callout-header {
+    border-color: rgba(255, 255, 255, 0.15);
+    color: #94a3b8;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+body.theme-dark .math-chapter-hero,
+body.theme-midnight .math-chapter-hero,
+[data-theme="dark"] .math-chapter-hero,
+[data-theme="midnight"] .math-chapter-hero {
+    background: #0f172a;
+    border-color: rgba(255, 255, 255, 0.18);
+    outline-color: rgba(255, 255, 255, 0.18);
+    color: #f1f5f9;
+}
+
+body.theme-dark .math-hero-title,
+body.theme-midnight .math-hero-title,
+[data-theme="dark"] .math-hero-title,
+[data-theme="midnight"] .math-hero-title {
+    color: #f8fafc;
+}
+
+body.theme-dark .math-hero-subtitle,
+body.theme-midnight .math-hero-subtitle,
+[data-theme="dark"] .math-hero-subtitle,
+[data-theme="midnight"] .math-hero-subtitle {
+    color: #94a3b8;
+}
+
+body.theme-dark .math-hero-desc,
+body.theme-midnight .math-hero-desc,
+[data-theme="dark"] .math-hero-desc,
+[data-theme="midnight"] .math-hero-desc {
+    color: #cbd5e1;
+}
+
+body.theme-dark .math-toc-pills,
+body.theme-midnight .math-toc-pills,
+[data-theme="dark"] .math-toc-pills,
+[data-theme="midnight"] .math-toc-pills {
+    background: #0f172a;
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+body.theme-dark .math-pill,
+body.theme-midnight .math-pill,
+[data-theme="dark"] .math-pill,
+[data-theme="midnight"] .math-pill {
+    background: #1e293b;
+    color: #f1f5f9;
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+body.theme-dark .math-pill:hover,
+body.theme-midnight .math-pill:hover,
+[data-theme="dark"] .math-pill:hover,
+[data-theme="midnight"] .math-pill:hover {
+    background: #38bdf8 !important;
+    color: #0f172a !important;
+    border-color: #38bdf8 !important;
+}
+
+body.theme-dark .math-section-header,
+body.theme-midnight .math-section-header,
+[data-theme="dark"] .math-section-header,
+[data-theme="midnight"] .math-section-header {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+body.theme-dark .math-section-num,
+body.theme-midnight .math-section-num,
+[data-theme="dark"] .math-section-num,
+[data-theme="midnight"] .math-section-num {
+    color: #60a5fa;
+}
+
+body.theme-dark .math-section-title,
+body.theme-midnight .math-section-title,
+[data-theme="dark"] .math-section-title,
+[data-theme="midnight"] .math-section-title {
+    color: #f8fafc;
+}
+
+body.theme-dark .math-def-box,
+body.theme-dark .math-theorem-box,
+body.theme-dark .math-formula-card,
+body.theme-dark .math-example-box,
+body.theme-dark .math-caution-box,
+body.theme-dark .math-constant-card,
+body.theme-dark .math-summary-sheet,
+body.theme-midnight .math-def-box,
+body.theme-midnight .math-theorem-box,
+body.theme-midnight .math-formula-card,
+body.theme-midnight .math-example-box,
+body.theme-midnight .math-caution-box,
+body.theme-midnight .math-constant-card,
+body.theme-midnight .math-summary-sheet,
+[data-theme="dark"] .math-def-box,
+[data-theme="dark"] .math-theorem-box,
+[data-theme="dark"] .math-formula-card,
+[data-theme="dark"] .math-example-box,
+[data-theme="dark"] .math-caution-box,
+[data-theme="dark"] .math-constant-card,
+[data-theme="dark"] .math-summary-sheet,
+[data-theme="midnight"] .math-def-box,
+[data-theme="midnight"] .math-theorem-box,
+[data-theme="midnight"] .math-formula-card,
+[data-theme="midnight"] .math-example-box,
+[data-theme="midnight"] .math-caution-box,
+[data-theme="midnight"] .math-constant-card,
+[data-theme="midnight"] .math-summary-sheet {
+    background: #0f172a;
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+body.theme-dark .ref-table-wrap,
+body.theme-midnight .ref-table-wrap,
+[data-theme="dark"] .ref-table-wrap,
+[data-theme="midnight"] .ref-table-wrap {
+    border-color: rgba(255, 255, 255, 0.25);
+    background: #0f172a;
+}
+
+body.theme-dark .ref-table th,
+body.theme-midnight .ref-table th,
+[data-theme="dark"] .ref-table th,
+[data-theme="midnight"] .ref-table th {
+    background: #1e293b;
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #f1f5f9;
 }
