@@ -1,10 +1,4 @@
 <div class="math-reference-content">
-    <!-- Chapter 1 Banner -->
-    <div class="math-chapter-hero">
-        <h1 class="math-hero-title">Grade 1: Number Sense, Addition, Subtraction & Foundations</h1>
-        <p class="math-hero-desc">The foundational handbook for counting, composing and decomposing numbers within 20,
-            place value tens and ones, basic 2D geometry, measurement, and mental arithmetic hacks.</p>
-    </div>
 
     <!-- Section 1.1 -->
     <section id="sec-1-1" class="math-section">
