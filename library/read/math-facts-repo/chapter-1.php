@@ -6,23 +6,10 @@
         <p class="math-hero-desc">The foundational handbook for counting, composing and decomposing numbers within 20, place value tens and ones, basic 2D geometry, measurement, and mental arithmetic hacks.</p>
     </div>
 
-    <!-- Quick Navigation Pills -->
-    <nav class="math-toc-pills" aria-label="Chapter sections">
-        <a href="#sec-1-1" class="math-pill"><i class="fas fa-hashtag"></i> 1.1 Counting & Number Line</a>
-        <a href="#sec-1-2" class="math-pill"><i class="fas fa-plus-minus"></i> 1.2 Addition & Subtraction (Within 20)</a>
-        <a href="#sec-1-3" class="math-pill"><i class="fas fa-cubes"></i> 1.3 Place Value (Tens & Ones)</a>
-        <a href="#sec-1-4" class="math-pill"><i class="fas fa-balance-scale"></i> 1.4 Comparing Numbers (<, =, >)</a>
-        <a href="#sec-1-5" class="math-pill"><i class="fas fa-draw-polygon"></i> 1.5 Basic 2D Shapes & Fractions</a>
-        <a href="#sec-1-6" class="math-pill"><i class="fas fa-clock"></i> 1.6 Telling Time & Measurement</a>
-        <a href="#sec-1-7" class="math-pill"><i class="fas fa-brain"></i> 1.7 Mental Math & Study Hacks</a>
-        <a href="#sec-1-8" class="math-pill"><i class="fas fa-file-invoice"></i> 1.8 Grade 1 Cheat Sheet</a>
-    </nav>
-
     <!-- Section 1.1 -->
     <section id="sec-1-1" class="math-section">
         <div class="math-section-header">
-            <span class="math-section-num">1.1</span>
-            <h2 class="math-section-title">Counting Principles & The Number Line</h2>
+            <h2 class="math-section-title">1.1 Counting Principles & The Number Line</h2>
         </div>
 
         <div class="math-def-box">
