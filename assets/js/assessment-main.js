@@ -1061,12 +1061,6 @@ document.addEventListener("DOMContentLoaded", () => {
   window.toggleUntimedAssessmentMode = window.toggleLowAnxietyExamMode;
 
   window.applyLowAnxietyUI();
-
-  if (untimedBtn) {
-    untimedBtn.addEventListener("click", () => {
-      window.toggleLowAnxietyExamMode();
-    });
-  }
 });
 
 // 4. Hook into loadQuestions to reset data/timer on start/restart
@@ -1104,13 +1098,12 @@ window.skipQuestion = function () {
         standard: q.standard || window.targetedStandard || null,
         grade: q.grade || document.getElementById("header-grade-name")?.textContent || "Core Curriculum"
       });
-      playIncorrectSound(); // Optional feedback for skip
     }
   }
   nextQuestionAdapter();
 };
 
-// 6. Hook into checkAnswer to capture data per question and play sound
+// 6. Hook into checkAnswer to capture data per question
 if (typeof checkAnswer === "function") {
   const originalCheckAnswer = checkAnswer;
   checkAnswer = function (selected, correct, btnElement) {
@@ -1154,13 +1147,6 @@ if (typeof checkAnswer === "function") {
       }
     } catch (e) {
       console.error("Error logging answer for report:", e);
-    }
-
-    // Audio Feedback
-    if (isCorrect) {
-      playCorrectSound();
-    } else {
-      playIncorrectSound();
     }
 
     // Fast-track auto advance in 60-Second Fluency Sprint Mode
@@ -1629,6 +1615,30 @@ function buildReviewMode() {
     };
     const gradeLetter = gradeToLetter[gradeKey] || "e";
 
+    // Interactive Quick Overview Matrix Bar
+    const matrixGrid = document.createElement("div");
+    matrixGrid.className = "review-overview-matrix";
+    matrixGrid.style.cssText = "display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; padding: 1rem; background: var(--color-bg-base); border-radius: var(--radius-lg); border: 1px solid var(--color-border);";
+    
+    results.forEach((item, idx) => {
+      const chip = document.createElement("button");
+      chip.type = "button";
+      chip.className = `review-matrix-chip ${item.isCorrect ? 'chip-correct' : 'chip-incorrect'}`;
+      chip.style.cssText = `display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.4rem 0.85rem; border-radius: var(--radius-full); font-size: 0.8125rem; font-weight: 800; cursor: pointer; border: 1px solid ${item.isCorrect ? 'rgba(16,185,129,0.3)' : 'rgba(239,68,68,0.3)'}; background: ${item.isCorrect ? 'rgba(16,185,129,0.08)' : 'rgba(239,68,68,0.08)'}; color: ${item.isCorrect ? '#059669' : '#dc2626'}; transition: transform 0.15s;`;
+      chip.innerHTML = `<span>Q${idx + 1}</span> <i class="fas ${item.isCorrect ? 'fa-check-circle' : 'fa-times-circle'}"></i> <span style="font-weight:600; opacity:0.85;">${item.isCorrect ? 'Correct' : 'Missed'}</span>`;
+      chip.title = `Jump to Question ${idx + 1} (${item.isCorrect ? 'Correct' : 'Missed'})`;
+      chip.onclick = () => {
+        const targetCard = document.getElementById(`review-item-${idx + 1}`);
+        if (targetCard) {
+          targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          targetCard.style.outline = '2px solid var(--color-primary)';
+          setTimeout(() => { targetCard.style.outline = ''; }, 1500);
+        }
+      };
+      matrixGrid.appendChild(chip);
+    });
+    reviewContent.appendChild(matrixGrid);
+
     results.forEach((item, idx) => {
       const isCorrect = item.isCorrect;
       const statusClass = isCorrect ? "correct" : "incorrect";
@@ -1652,6 +1662,7 @@ function buildReviewMode() {
       const explanation = item.explanation || item.hint || (isCorrect ? `Correct! "${escapeHtml(item.correct)}" accurately satisfies the problem requirements.` : `The correct answer is "${escapeHtml(item.correct)}".`);
 
       const card = document.createElement("div");
+      card.id = `review-item-${idx + 1}`;
       card.className = `review-item-card status-${statusClass}`;
       card.setAttribute("data-status", statusClass);
       card.innerHTML = `
@@ -1699,6 +1710,9 @@ function buildReviewMode() {
   }
 
   reviewContainer.style.display = "block";
+  if (window.ensureMathJax) {
+    window.ensureMathJax(reviewContainer);
+  }
 }
 
 window.filterReviewItems = function(filter) {

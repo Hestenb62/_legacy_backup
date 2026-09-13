@@ -279,6 +279,16 @@ function openDocModal(btn) {
             let paneHTML = `
                 <div class="doc-modal-pane-inner">
                     <div class="doc-modal-pane-glow"></div>
+                    <div class="doc-modal-subject-toolbar">
+                        <div class="doc-modal-subject-tag">
+                            <i class="fas fa-book-open"></i>
+                            <span>${escapeHtml(subj.name)}</span>
+                        </div>
+                        <button type="button" class="doc-modal-subject-print-btn" onclick="printCurriculumSubject(${index})" title="Print ${escapeHtml(subj.name)} Curriculum">
+                            <i class="fas fa-print"></i>
+                            <span>Print ${escapeHtml(subj.name)}</span>
+                        </button>
+                    </div>
                     <div class="doc-modal-pane-content prose-content">
                         <h5 class="text-lg font-bold text-primary mb-2">Overview</h5>
                         <div class="mb-4">${subj.data.overview}</div>
@@ -416,10 +426,14 @@ function openDocModal(btn) {
             <span class="doc-modal-curriculum-dot"></span> Core Subjects & Standards
         </h4>${tabHeaders}${tabContents}`;
 
-        // Initialize slider position
+        // Initialize slider position & footer subject print label
         setTimeout(() => {
             const firstTab = document.querySelector('.modal-tab-pill');
-            if (firstTab) updateModalTabSlider(firstTab);
+            if (firstTab) {
+                updateModalTabSlider(firstTab);
+                const printSubjLabel = document.getElementById('modal-print-subject-label');
+                if (printSubjLabel) printSubjLabel.textContent = `Print ${firstTab.textContent.trim()}`;
+            }
         }, 50);
     } else if (docs && docs.trim() !== '') {
         const parser = new DOMParser();
@@ -456,6 +470,16 @@ function openDocModal(btn) {
                 tabContents += `<div class="${contentClass}" data-index="${index}" style="animation-delay: ${staggerDelay}">
                     <div class="doc-modal-pane-inner">
                         <div class="doc-modal-pane-glow"></div>
+                        <div class="doc-modal-subject-toolbar">
+                            <div class="doc-modal-subject-tag">
+                                <i class="fas fa-book-open"></i>
+                                <span>${escapeHtml(subjectName)}</span>
+                            </div>
+                            <button type="button" class="doc-modal-subject-print-btn" onclick="printCurriculumSubject(${index})" title="Print ${escapeHtml(subjectName)} Curriculum">
+                                <i class="fas fa-print"></i>
+                                <span>Print ${escapeHtml(subjectName)}</span>
+                            </button>
+                        </div>
                         <div class="doc-modal-pane-content prose-content">
                             ${bodyHtml}
                         </div>
@@ -470,10 +494,14 @@ function openDocModal(btn) {
                 <span class="doc-modal-curriculum-dot"></span> ${titleText}
             </h4>${tabHeaders}${tabContents}`;
 
-            // Initialize slider position
+            // Initialize slider position & footer subject print label
             setTimeout(() => {
                 const firstTab = document.querySelector('.modal-tab-pill');
-                if (firstTab) updateModalTabSlider(firstTab);
+                if (firstTab) {
+                    updateModalTabSlider(firstTab);
+                    const printSubjLabel = document.getElementById('modal-print-subject-label');
+                    if (printSubjLabel) printSubjLabel.textContent = `Print ${firstTab.textContent.trim()}`;
+                }
             }, 50);
         } else {
             docsContainer.innerHTML = `<div class="doc-modal-fallback-box">${docs}</div>`;
@@ -553,13 +581,15 @@ function printCurriculum() {
         panes.forEach((pane, idx) => {
             const subjectName = pills[idx] ? pills[idx].textContent.trim() : `Module ${idx + 1}`;
             const content = pane.querySelector('.doc-modal-pane-content, .prose-content') || pane;
+            const clone = content.cloneNode(true);
+            clone.querySelectorAll('.doc-modal-subject-toolbar, .doc-modal-subject-print-btn, button').forEach(el => el.remove());
             curriculumSectionsHtml += `
                 <div style="margin-bottom: 2rem; page-break-inside: avoid;">
                     <h2 style="font-size: 1.2rem; font-weight: 700; color: #1e40af; border-bottom: 2px solid #3b82f6; padding-bottom: 0.35rem; margin-bottom: 0.75rem;">
                         ${subjectName}
                     </h2>
                     <div class="prose-content" style="font-size: 0.95rem; color: #1f2937; line-height: 1.6;">
-                        ${content.innerHTML}
+                        ${clone.innerHTML}
                     </div>
                 </div>
             `;
@@ -579,28 +609,39 @@ function printCurriculum() {
         <html>
         <head>
             <meta charset="UTF-8">
-            <title>${modalTitle} - Printed Curriculum</title>
+            <title>${modalTitle} - Printed Curriculum | Hesten's Learning</title>
             <style>
+                @page {
+                    size: letter portrait;
+                    margin: 0.6in 0.7in;
+                }
+                *, *::before, *::after {
+                    box-sizing: border-box;
+                    -webkit-print-color-adjust: exact !important;
+                    print-color-adjust: exact !important;
+                }
                 body {
                     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
                     margin: 0;
-                    padding: 2.5rem;
+                    padding: 0;
                     color: #111827;
                     background: #fff;
+                    font-size: 10pt;
+                    line-height: 1.55;
                 }
                 .header {
-                    margin-bottom: 2rem;
+                    margin-bottom: 1.5rem;
                     padding-bottom: 1rem;
                     border-bottom: 2px solid #e5e7eb;
                 }
                 .title {
-                    font-size: 2rem;
+                    font-size: 1.75rem;
                     font-weight: 800;
                     margin: 0 0 0.35rem 0;
                     color: #0f172a;
                 }
                 .subtitle {
-                    font-size: 1.05rem;
+                    font-size: 1rem;
                     font-weight: 600;
                     color: #64748b;
                     margin: 0;
@@ -608,17 +649,17 @@ function printCurriculum() {
                 .desc-box {
                     background: #f8fafc;
                     border-left: 4px solid #3b82f6;
-                    padding: 1rem;
-                    margin-bottom: 2rem;
+                    padding: 0.85rem 1rem;
+                    margin-bottom: 1.5rem;
                     border-radius: 0 0.5rem 0.5rem 0;
-                    font-size: 0.95rem;
+                    font-size: 0.9rem;
                     color: #334155;
                 }
                 .prose-content h5 {
-                    font-size: 1.1rem;
+                    font-size: 1.05rem;
                     font-weight: 700;
                     color: #1d4ed8;
-                    margin: 1.25rem 0 0.35rem 0;
+                    margin: 1.15rem 0 0.35rem 0;
                 }
                 .prose-content p {
                     margin: 0 0 0.5rem 0;
@@ -635,23 +676,59 @@ function printCurriculum() {
                     border-radius: 0.25rem;
                     margin-top: 0.35rem;
                 }
+                .doc-modal-module-card {
+                    border: 1px solid #e2e8f0;
+                    border-radius: 6px;
+                    margin-bottom: 0.85rem;
+                    page-break-inside: avoid;
+                    break-inside: avoid;
+                }
+                .doc-modal-module-header {
+                    padding: 0.5rem 0.75rem;
+                    background: #f8fafc;
+                    border-bottom: 1px solid #e2e8f0;
+                    display: flex;
+                    justify-content: space-between;
+                }
+                .doc-modal-module-pill {
+                    font-size: 7.5pt;
+                    font-weight: 700;
+                    background: #2563eb;
+                    color: #fff;
+                    padding: 0.15rem 0.45rem;
+                    border-radius: 4px;
+                    margin-right: 0.4rem;
+                }
+                .doc-modal-module-title {
+                    font-size: 9pt;
+                    font-weight: 700;
+                    display: inline;
+                }
+                .doc-modal-module-body {
+                    padding: 0.5rem 0.75rem;
+                    display: block !important;
+                }
+                .doc-modal-module-chevron,
+                .doc-modal-link-icon {
+                    display: none !important;
+                }
                 .footer {
-                    margin-top: 3rem;
+                    margin-top: 2rem;
                     padding-top: 1rem;
                     border-top: 1px solid #e2e8f0;
-                    font-size: 0.85rem;
+                    font-size: 8pt;
                     color: #94a3b8;
                     text-align: center;
                 }
                 @media print {
-                    body { padding: 1.5rem; }
+                    body { padding: 0; }
                 }
             </style>
         </head>
         <body>
             <div class="header">
                 <h1 class="title">${modalTitle}</h1>
-                <p class="subtitle">${modalSubtitle} • Hesten's Learning</p>
+                <p class="subtitle">${modalSubtitle} • Complete Curriculum Scope & Sequence</p>
             </div>
             ${modalDesc ? `<div class="desc-box">${modalDesc}</div>` : ''}
             <div>
@@ -674,6 +751,316 @@ function printCurriculum() {
     printWin.document.close();
 }
 
+function printActiveCurriculumSubject() {
+    const docsContainer = document.getElementById('modal-docs');
+    if (!docsContainer) {
+        printCurriculum();
+        return;
+    }
+    const activePill = docsContainer.querySelector('.modal-tab-pill.active');
+    const activeIndex = activePill ? parseInt(activePill.dataset.index || '0', 10) : 0;
+    printCurriculumSubject(activeIndex);
+}
+
+function printCurriculumSubject(subjectIndex) {
+    const modalTitle = document.getElementById('modal-title')?.textContent.trim() || 'Curriculum';
+    const modalSubtitle = document.getElementById('modal-subtitle')?.textContent.trim() || '';
+    const docsContainer = document.getElementById('modal-docs');
+
+    if (!docsContainer) {
+        window.print();
+        return;
+    }
+
+    const pills = Array.from(docsContainer.querySelectorAll('.modal-tab-pill'));
+    const panes = Array.from(docsContainer.querySelectorAll('.doc-modal-pane'));
+
+    const targetPill = pills[subjectIndex] || pills[0];
+    const targetPane = panes[subjectIndex] || panes[0];
+
+    if (!targetPane) {
+        printCurriculum();
+        return;
+    }
+
+    const subjectName = targetPill ? targetPill.textContent.trim() : 'Subject Curriculum';
+    const contentEl = targetPane.querySelector('.doc-modal-pane-content, .prose-content') || targetPane;
+    
+    // Clone content and remove nested print buttons
+    const clonedContent = contentEl.cloneNode(true);
+    clonedContent.querySelectorAll('.doc-modal-subject-toolbar, .doc-modal-subject-print-btn, button').forEach(b => b.remove());
+
+    const printWin = window.open('', '_blank', 'width=900,height=750');
+    if (!printWin) {
+        window.print();
+        return;
+    }
+
+    const printDoc = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title>${subjectName} - ${modalTitle} Curriculum | Hesten's Learning</title>
+            <style>
+                @page {
+                    size: letter portrait;
+                    margin: 0.6in 0.7in;
+                }
+                *, *::before, *::after {
+                    box-sizing: border-box;
+                    -webkit-print-color-adjust: exact !important;
+                    print-color-adjust: exact !important;
+                }
+                body {
+                    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+                    margin: 0;
+                    padding: 0;
+                    color: #0f172a;
+                    background: #ffffff;
+                    font-size: 10pt;
+                    line-height: 1.55;
+                }
+                .header {
+                    margin-bottom: 1.5rem;
+                    padding-bottom: 1rem;
+                    border-bottom: 2px solid #0f172a;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    gap: 1rem;
+                }
+                .title-group h1 {
+                    font-size: 18pt;
+                    font-weight: 800;
+                    margin: 0 0 0.25rem 0;
+                    color: #0f172a;
+                }
+                .title-group h2 {
+                    font-size: 12pt;
+                    font-weight: 700;
+                    color: #2563eb;
+                    margin: 0 0 0.2rem 0;
+                }
+                .title-group p {
+                    font-size: 9pt;
+                    color: #64748b;
+                    margin: 0;
+                    font-weight: 600;
+                }
+                .header-badge {
+                    border: 1px solid #cbd5e1;
+                    border-radius: 6px;
+                    padding: 0.35rem 0.65rem;
+                    font-size: 8pt;
+                    font-weight: 700;
+                    color: #334155;
+                    text-transform: uppercase;
+                    background: #f8fafc;
+                    text-align: right;
+                    white-space: nowrap;
+                }
+                .prose-content {
+                    overflow: visible;
+                }
+                .prose-content h5 {
+                    font-size: 11pt;
+                    font-weight: 700;
+                    color: #1e3a8a;
+                    margin: 1.25rem 0 0.4rem 0;
+                    border-bottom: 1px solid #e2e8f0;
+                    padding-bottom: 0.25rem;
+                    page-break-after: avoid;
+                    break-after: avoid;
+                }
+                .prose-content p {
+                    margin: 0 0 0.65rem 0;
+                    line-height: 1.6;
+                    color: #334155;
+                }
+                .prose-content ul {
+                    margin: 0.35rem 0 1rem 1.25rem;
+                    padding: 0;
+                    color: #334155;
+                }
+                .prose-content li {
+                    margin-bottom: 0.35rem;
+                }
+                .doc-modal-course-card {
+                    background: #f8fafc !important;
+                    border: 1px solid #cbd5e1 !important;
+                    border-radius: 6px !important;
+                    padding: 0.85rem !important;
+                    margin-bottom: 1.25rem !important;
+                    page-break-inside: avoid;
+                    break-inside: avoid;
+                }
+                .doc-modal-course-badge {
+                    font-size: 8pt;
+                    font-weight: 700;
+                    color: #2563eb;
+                    text-transform: uppercase;
+                    margin-bottom: 0.25rem;
+                }
+                .doc-modal-course-title {
+                    font-size: 13pt;
+                    font-weight: 800;
+                    color: #0f172a;
+                    margin: 0 0 0.35rem 0;
+                }
+                .doc-modal-course-overview {
+                    font-size: 9pt;
+                    color: #475569;
+                    margin: 0;
+                }
+                .doc-modal-module-card {
+                    border: 1px solid #e2e8f0 !important;
+                    border-radius: 6px !important;
+                    margin-bottom: 0.85rem !important;
+                    page-break-inside: avoid;
+                    break-inside: avoid;
+                    background: #ffffff !important;
+                }
+                .doc-modal-module-header {
+                    padding: 0.5rem 0.75rem !important;
+                    background: #f1f5f9 !important;
+                    border-bottom: 1px solid #e2e8f0 !important;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                .doc-modal-module-pill {
+                    font-size: 7.5pt;
+                    font-weight: 800;
+                    background: #2563eb;
+                    color: #ffffff;
+                    padding: 0.15rem 0.45rem;
+                    border-radius: 4px;
+                    margin-right: 0.5rem;
+                }
+                .doc-modal-module-title {
+                    font-size: 9.5pt;
+                    font-weight: 700;
+                    color: #0f172a;
+                    display: inline;
+                    margin: 0;
+                }
+                .doc-modal-module-lessons-count {
+                    font-size: 8pt;
+                    font-weight: 600;
+                    color: #64748b;
+                }
+                .doc-modal-module-body {
+                    padding: 0.65rem 0.75rem !important;
+                    display: block !important;
+                }
+                .doc-modal-module-desc {
+                    font-size: 8.5pt;
+                    color: #475569;
+                    margin: 0 0 0.5rem 0;
+                }
+                .doc-modal-topic-block {
+                    margin-bottom: 0.5rem;
+                    padding-left: 0.5rem;
+                    border-left: 2px solid #e2e8f0;
+                }
+                .doc-modal-topic-badge {
+                    font-size: 7.5pt;
+                    font-weight: 700;
+                    color: #4338ca;
+                    margin-right: 0.35rem;
+                }
+                .doc-modal-topic-name {
+                    font-size: 8.5pt;
+                    font-weight: 700;
+                    color: #1e293b;
+                }
+                .doc-modal-lessons-list {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0.25rem 0 0 0;
+                }
+                .doc-modal-lesson-item {
+                    font-size: 8pt;
+                    padding: 0.2rem 0;
+                    color: #334155;
+                    display: flex;
+                    justify-content: space-between;
+                    border-bottom: 1px dashed #f1f5f9;
+                }
+                .doc-modal-lesson-num {
+                    font-weight: 700;
+                    color: #64748b;
+                    margin-right: 0.5rem;
+                    min-width: 60px;
+                }
+                .doc-modal-std-tag {
+                    font-size: 7pt;
+                    font-weight: 700;
+                    background: #e0e7ff;
+                    color: #3730a3;
+                    padding: 0.1rem 0.3rem;
+                    border-radius: 3px;
+                    margin-left: 0.25rem;
+                }
+                .doc-modal-module-chevron,
+                .doc-modal-link-icon {
+                    display: none !important;
+                }
+                .footer {
+                    margin-top: 2rem;
+                    padding-top: 0.75rem;
+                    border-top: 1px solid #cbd5e1;
+                    font-size: 8pt;
+                    color: #64748b;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    page-break-inside: avoid;
+                }
+                @media print {
+                    body { padding: 0; }
+                }
+            </style>
+        </head>
+        <body>
+            <div class="header">
+                <div class="title-group">
+                    <h2>${escapeHtml(modalTitle)}</h2>
+                    <h1>${escapeHtml(subjectName)}</h1>
+                    <p>${escapeHtml(modalSubtitle)} • Scope, Sequence & Instructional Modules</p>
+                </div>
+                <div class="header-badge">
+                    <div>HESTEN'S LEARNING</div>
+                    <div style="font-weight: normal; font-size: 7pt; margin-top: 2px;">Curriculum Syllabus</div>
+                </div>
+            </div>
+            <div class="prose-content">
+                ${clonedContent.innerHTML}
+            </div>
+            <div class="footer">
+                <div>Hesten's Learning Academy &copy; ${new Date().getFullYear()} • Printed Curriculum</div>
+                <div>Subject: <strong>${escapeHtml(subjectName)}</strong> • Grade: <strong>${escapeHtml(modalTitle)}</strong></div>
+            </div>
+            <script>
+                window.onload = function() {
+                    window.print();
+                    setTimeout(function() { window.close(); }, 500);
+                };
+            </script>
+        </body>
+        </html>
+    `;
+
+    printWin.document.write(printDoc);
+    printWin.document.close();
+}
+
+// Global Exports
+window.printCurriculum = printCurriculum;
+window.printActiveCurriculumSubject = printActiveCurriculumSubject;
+window.printCurriculumSubject = printCurriculumSubject;
+
 function switchModalTab(btn, index) {
     const container = btn.closest('#modal-docs');
     const btns = container.querySelectorAll('.modal-tab-pill');
@@ -686,6 +1073,11 @@ function switchModalTab(btn, index) {
     btn.classList.add('active');
 
     updateModalTabSlider(btn);
+
+    const printSubjLabel = document.getElementById('modal-print-subject-label');
+    if (printSubjLabel) {
+        printSubjLabel.textContent = `Print ${btn.textContent.trim()}`;
+    }
 
     panes.forEach(p => {
         if (parseInt(p.dataset.index) === index) {

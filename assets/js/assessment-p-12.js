@@ -985,7 +985,10 @@ function loadQuestions(gradeName, subjectFilter = 'All') {
 
     // Initial UI Update
     updateProgressBar(0);
-    document.getElementById('question-count').innerHTML = `1<span class="text-xl text-gray-400 font-medium">/${currentQuestions.length}</span>`;
+    const circleGauge = document.getElementById('question-circle-gauge');
+    if (circleGauge) circleGauge.classList.remove('hidden');
+    document.getElementById('question-count').innerHTML = `1<span class="question-counter-total">/${currentQuestions.length}</span>`;
+    updateQuestionCircleProgress(1, currentQuestions.length);
 
     // Reset Feedback UI via inline observer triggers
     const feedbackEl = document.getElementById('feedback');
@@ -1038,7 +1041,8 @@ function loadCurrentQuestion() {
     }
 
     // Update Counter
-    document.getElementById('question-count').innerHTML = `${currentQuestionIndex + 1}<span class="text-xl text-gray-400 font-medium">/${currentQuestions.length}</span>`;
+    document.getElementById('question-count').innerHTML = `${currentQuestionIndex + 1}<span class="question-counter-total">/${currentQuestions.length}</span>`;
+    updateQuestionCircleProgress(currentQuestionIndex + 1, currentQuestions.length);
 
     // Setup Hint
     document.getElementById('hint-content').textContent = q.hint;
@@ -1049,9 +1053,14 @@ function loadCurrentQuestion() {
     document.getElementById('next-btn').classList.add('hidden');
     document.getElementById('next-btn').disabled = true;
 
-    // Clear old explanation card if present
+    // Clear old explanation card and timer if present
+    clearExplanationDismissTimer();
+    explanationIsHovered = false;
     const expCard = document.getElementById('answer-explanation-card');
-    if (expCard) expCard.style.display = 'none';
+    if (expCard) {
+        expCard.style.display = 'none';
+        expCard.style.opacity = '0';
+    }
 
     // Render Options
     const optionsContainer = document.getElementById('options');
@@ -1067,6 +1076,50 @@ function loadCurrentQuestion() {
     });
 }
 
+// 5-Second Auto-Dismiss & Hover-Pause Management for Feedback Banner
+let explanationDismissTimer = null;
+let explanationIsHovered = false;
+
+function clearExplanationDismissTimer() {
+    if (explanationDismissTimer) {
+        clearTimeout(explanationDismissTimer);
+        explanationDismissTimer = null;
+    }
+}
+
+function startExplanationDismissTimer(durationMs = 5000) {
+    clearExplanationDismissTimer();
+    const progressBar = document.getElementById('feedback-timer-progress');
+    if (progressBar) {
+        progressBar.style.transition = 'none';
+        progressBar.style.width = '100%';
+        void progressBar.offsetWidth;
+        progressBar.style.transition = `width ${durationMs}ms linear`;
+        progressBar.style.width = '0%';
+    }
+
+    explanationDismissTimer = setTimeout(() => {
+        if (!explanationIsHovered) {
+            window.hideExplanationCard();
+        }
+    }, durationMs);
+}
+
+window.hideExplanationCard = function() {
+    clearExplanationDismissTimer();
+    const card = document.getElementById('answer-explanation-card');
+    if (card && card.style.display !== 'none') {
+        card.style.transition = 'opacity 0.35s ease, transform 0.35s ease';
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(-6px)';
+        setTimeout(() => {
+            if (card && card.style.opacity === '0') {
+                card.style.display = 'none';
+            }
+        }, 350);
+    }
+};
+
 /**
  * Validates the user's selection
  * @param {string} selected - The option text clicked
@@ -1078,96 +1131,46 @@ function checkAnswer(selected, correct, btnElement) {
     const optionsContainer = document.getElementById('options');
     const buttons = optionsContainer.getElementsByTagName('button');
 
-    // Disable all buttons to prevent double answers
+    // Disable all buttons to lock the selection
     for (let btn of buttons) {
         btn.disabled = true;
         btn.classList.add('opacity-70', 'cursor-not-allowed');
-        const btnTextSpan = btn.querySelector('span > span:last-child');
-        const btnText = btnTextSpan ? btnTextSpan.textContent.trim() : btn.textContent.trim();
-        if (btnText === correct) {
-            // Highlight correct answer Green
-            btn.classList.remove('border-gray-200', 'hover:border-blue-500');
-            btn.classList.add('bg-green-100', 'border-green-500', 'text-green-800', 'dark:bg-green-900', 'dark:text-green-200');
-        }
     }
 
+    // Highlight user's chosen option with a clean, neutral active selection state (no red/green reveal mid-test)
+    if (btnElement) {
+        btnElement.classList.remove('opacity-70');
+        btnElement.classList.remove('border-gray-200', 'dark:border-gray-700');
+        btnElement.classList.add('border-blue-500', 'bg-blue-50', 'text-blue-800', 'dark:bg-blue-900/40', 'dark:text-blue-200', 'ring-2', 'ring-blue-400');
+    }
+
+    // Track score and streak internally
     if (isCorrect) {
         score++;
         streak++;
         updateStreak(streak);
-        if (typeof window.playCorrectSound === 'function') window.playCorrectSound();
-        document.getElementById('feedback').textContent = "Correct! Great job.";
     } else {
         streak = 0;
         updateStreak(streak);
-        if (typeof window.playIncorrectSound === 'function') window.playIncorrectSound();
-        document.getElementById('feedback').textContent = `Incorrect. The answer was ${correct}.`;
-
-        // Highlight chosen wrong answer Red
-        btnElement.classList.add('bg-red-100', 'border-red-500', 'text-red-800', 'dark:bg-red-900', 'dark:text-red-200');
     }
 
-    // Constructive, non-punitive explanation card for neurodivergent learners
-    let explanationCard = document.getElementById('answer-explanation-card');
-    if (!explanationCard) {
-        explanationCard = document.createElement('div');
-        explanationCard.id = 'answer-explanation-card';
-        explanationCard.style.marginTop = '1.25rem';
-        explanationCard.style.padding = '1rem 1.25rem';
-        explanationCard.style.borderRadius = '0.75rem';
-        explanationCard.style.fontSize = '0.95rem';
-        explanationCard.style.lineHeight = '1.5';
-        const nextBtnEl = document.getElementById('next-btn');
-        if (nextBtnEl && nextBtnEl.parentNode) {
-            nextBtnEl.parentNode.insertBefore(explanationCard, nextBtnEl);
-        } else {
-            optionsContainer.parentNode.appendChild(explanationCard);
-        }
-    }
-    explanationCard.style.display = 'block';
-
-    const q = currentQuestions[currentQuestionIndex];
-    const explanation = q ? (q.explanation || q.hint || `Take note: "${correct}" satisfies this learning standard.`) : `The key answer is "${correct}".`;
-
-    // Also update feedback-explanation in the top feedback area if present
-    const fbExp = document.getElementById('feedback-explanation');
-    if (fbExp) {
-        fbExp.innerHTML = `<strong>Explanation:</strong> ${explanation}`;
-        fbExp.style.display = 'block';
-    }
-
-    if (isCorrect) {
-        explanationCard.style.background = 'rgba(16, 185, 129, 0.12)';
-        explanationCard.style.border = '1px solid #10b981';
-        explanationCard.innerHTML = `<div style="display:flex; align-items:center; gap:0.5rem; font-weight:800; color:#10b981; margin-bottom:0.35rem;"><i class="fas fa-check-circle"></i> Outstanding!</div><div>${explanation}</div>`;
-    } else {
-        explanationCard.style.background = 'rgba(245, 158, 11, 0.12)';
-        explanationCard.style.border = '1px solid #f59e0b';
-        
-        let levelReviewLink = '';
-        try {
-            const urlParams = new URLSearchParams(window.location.search);
-            const currentGrade = (urlParams.get("grade") || document.getElementById("grade-key")?.value || "3").trim().toLowerCase();
-            const letterMap = { 'pre-k':'a', 'k':'b', '1':'c', '2':'d', '3':'e', '4':'f', '5':'g', '6':'h', '7':'i', '8':'j', '9':'k', '10':'l', '11':'m', '12':'n' };
-            const lvl = letterMap[currentGrade] || 'k';
-            const subj = (q && q.subject) ? q.subject.toLowerCase() : 'math';
-            levelReviewLink = `<div style="margin-top:0.75rem;"><a href="/levels/${lvl}.php?subject=${encodeURIComponent(subj)}" target="_blank" style="display:inline-flex; align-items:center; gap:0.4rem; padding:0.35rem 0.75rem; background:rgba(217, 119, 6, 0.15); border:1px solid rgba(217, 119, 6, 0.4); border-radius:0.5rem; font-size:0.8rem; font-weight:700; color:#b45309; text-decoration:none;"><i class="fas fa-graduation-cap"></i> Review this topic in Level ${lvl.toUpperCase()} ${subj.toUpperCase()} <i class="fas fa-arrow-right" style="font-size:0.7rem;"></i></a></div>`;
-        } catch (e) {}
-
-        explanationCard.innerHTML = `<div style="display:flex; align-items:center; gap:0.5rem; font-weight:800; color:#d97706; margin-bottom:0.35rem;"><i class="fas fa-lightbulb"></i> Learning Opportunity: The correct answer is <strong>${correct}</strong></div><div style="opacity:0.95;">${explanation}</div>${levelReviewLink}`;
+    // Ensure any mid-test explanation card remains hidden
+    const explanationCard = document.getElementById('answer-explanation-card');
+    if (explanationCard) {
+        explanationCard.style.display = 'none';
     }
 
     // Update Progress
     currentQuestionIndex++;
-    updateProgressBar((score / currentQuestions.length) * 100);
+    updateProgressBar((currentQuestionIndex / currentQuestions.length) * 100);
 
     // Show Next Button
     const nextBtn = document.getElementById('next-btn');
-    nextBtn.classList.remove('hidden');
-    nextBtn.disabled = false;
-
-    // Focus next button for accessibility
-    nextBtn.focus();
+    if (nextBtn) {
+        nextBtn.classList.remove('hidden');
+        nextBtn.disabled = false;
+        nextBtn.focus();
+    }
 }
 
 window.isUntimedAssessment = false;
@@ -1193,6 +1196,56 @@ function showHint() {
 /**
  * Updates the visual progress bar
  */
+/**
+ * Updates the circular progress ring around the question counter
+ */
+function updateQuestionCircleProgress(current, total) {
+    const circleBar = document.getElementById('question-circle-bar');
+    const gauge = document.getElementById('question-circle-gauge');
+    if (!circleBar) return;
+
+    const c = parseInt(current, 10);
+    const t = parseInt(total, 10);
+    if (isNaN(c) || isNaN(t) || t <= 0) return;
+
+    const percent = Math.min(Math.max((c / t) * 100, 0), 100);
+    const circumference = 257.61; // 2 * Math.PI * 41
+    const offset = circumference - (percent / 100) * circumference;
+
+    circleBar.style.strokeDashoffset = offset.toFixed(2);
+    if (gauge) {
+        gauge.setAttribute('aria-valuenow', Math.round(percent));
+        gauge.setAttribute('title', `Question ${c} of ${t} (${Math.round(percent)}% Progress)`);
+    }
+}
+window.updateQuestionCircleProgress = updateQuestionCircleProgress;
+
+// Automatic MutationObserver to keep circular progress gauge synced with #question-count text
+(function setupQuestionCircleObserver() {
+    function initObserver() {
+        const countEl = document.getElementById('question-count');
+        if (!countEl) return;
+
+        function syncCircle() {
+            const text = countEl.textContent.trim();
+            const match = text.match(/(\d+)\s*\/\s*(\d+)/);
+            if (match) {
+                updateQuestionCircleProgress(match[1], match[2]);
+            }
+        }
+
+        const observer = new MutationObserver(syncCircle);
+        observer.observe(countEl, { childList: true, subtree: true, characterData: true });
+        syncCircle();
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initObserver);
+    } else {
+        initObserver();
+    }
+})();
+
 function updateProgressBar(percent) {
     const bar = document.querySelector('.progress-bar-animated');
     const text = document.querySelector('.progress-bar-text');
@@ -1222,9 +1275,13 @@ function finishQuiz() {
     const container = document.getElementById('options');
     document.getElementById('question').textContent = "Assessment Complete!";
     document.getElementById('question-count').classList.add('hidden');
+    const circleGauge = document.getElementById('question-circle-gauge');
+    if (circleGauge) circleGauge.classList.add('hidden');
     document.getElementById('next-btn').classList.add('hidden');
 
-    const finalScore = Math.round((score / currentQuestions.length) * 100);
+    const totalQuestions = currentQuestions.length;
+    const finalScore = Math.round((score / totalQuestions) * 100);
+    const missedCount = totalQuestions - score;
 
     let message = "";
     let icon = "";
@@ -1235,13 +1292,26 @@ function finishQuiz() {
     else { message = "Keep trying! Practice makes perfect."; icon = "💪"; }
 
     container.innerHTML = `
-        <div class="text-center p-8 bg-blue-50 dark:bg-gray-700 rounded-xl">
-            <div class="text-6xl mb-4">${icon}</div>
-            <h3 class="text-2xl font-bold mb-2">You scored ${finalScore}%</h3>
-            <p class="text-lg text-gray-600 dark:text-gray-300 mb-6">${message}</p>
-            <button onclick="location.reload()" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-700 transition">
-                Try Again
-            </button>
+        <div class="text-center p-8 bg-blue-50 dark:bg-gray-700 rounded-xl" style="box-shadow: 0 4px 14px rgba(0,0,0,0.06);">
+            <div class="text-6xl mb-3">${icon}</div>
+            <h3 class="text-3xl font-extrabold mb-2" style="color: var(--color-text-main);">You scored ${finalScore}%</h3>
+            <p class="text-lg text-gray-600 dark:text-gray-300 mb-4">${message}</p>
+            <div style="display: flex; gap: 0.75rem; justify-content: center; align-items: center; flex-wrap: wrap; margin-bottom: 1.5rem;">
+                <span style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.4rem 1rem; border-radius: 9999px; background: rgba(16, 185, 129, 0.15); color: #059669; font-weight: 800; font-size: 0.95rem;">
+                    <i class="fas fa-check-circle"></i> ${score} Correct
+                </span>
+                <span style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.4rem 1rem; border-radius: 9999px; background: rgba(239, 68, 68, 0.15); color: #dc2626; font-weight: 800; font-size: 0.95rem;">
+                    <i class="fas fa-times-circle"></i> ${missedCount} Missed
+                </span>
+                <span style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.4rem 1rem; border-radius: 9999px; background: rgba(59, 130, 246, 0.15); color: #2563eb; font-weight: 800; font-size: 0.95rem;">
+                    <i class="fas fa-list-ol"></i> ${totalQuestions} Total Questions
+                </span>
+            </div>
+            <div style="display: flex; gap: 0.75rem; justify-content: center; align-items: center; flex-wrap: wrap; margin-top: 1.25rem;" id="finish-quiz-action-buttons">
+                <button onclick="location.reload()" class="hero-nav-btn hero-nav-btn-primary" style="padding: 0.85rem 1.75rem; border-radius: var(--radius-full); font-weight: 800; font-size: 0.95rem; cursor: pointer; border: none; box-shadow: 0 4px 14px rgba(37,99,235,0.3);">
+                    <i class="fas fa-redo"></i> Try Again
+                </button>
+            </div>
         </div>
     `;
 }

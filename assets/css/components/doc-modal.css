@@ -306,6 +306,74 @@
     background-color: var(--color-border);
   }
 
+  .doc-modal-print-subject-btn {
+    background: linear-gradient(135deg, var(--color-primary, #4f46e5), #6366f1) !important;
+    color: #ffffff !important;
+    border: none !important;
+    box-shadow: 0 2px 8px rgba(79, 70, 229, 0.25);
+  }
+
+  .doc-modal-print-subject-btn:hover {
+    opacity: 0.92;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.35);
+  }
+
+  /* Per-Subject In-Pane Toolbar */
+  .doc-modal-subject-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding: 0.65rem 0.95rem;
+    margin-bottom: 1.25rem;
+    background: var(--color-bg-base);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .doc-modal-subject-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+  }
+
+  .doc-modal-subject-tag i {
+    color: var(--color-primary);
+  }
+
+  .doc-modal-subject-print-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.4rem 0.9rem;
+    border-radius: var(--radius-sm);
+    background: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-main);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .doc-modal-subject-print-btn:hover {
+    background: var(--color-primary);
+    color: #ffffff;
+    border-color: var(--color-primary);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .doc-modal-subject-print-btn:active {
+    transform: translateY(0);
+  }
+
   .print-text-full { display: none; }
   .print-text-short { display: inline; }
 

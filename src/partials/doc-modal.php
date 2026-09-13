@@ -38,12 +38,16 @@
             <div class="doc-modal-footer">
                 <p class="doc-modal-copyright">Hesten's Learning &copy; 2026</p>
                 <div class="doc-modal-actions">
-                    <button onclick="printCurriculum()" class="doc-modal-print-btn">
+                    <button type="button" onclick="printActiveCurriculumSubject()" class="doc-modal-print-btn doc-modal-print-subject-btn" id="modal-print-subject-btn" title="Print the current subject syllabus">
                         <i class="fas fa-print"></i> 
-                        <span class="print-text-full">Print Path</span>
-                        <span class="print-text-short">Print</span>
+                        <span id="modal-print-subject-label">Print Subject</span>
                     </button>
-                    <button onclick="closeDocModal()" class="doc-modal-close-btn">
+                    <button type="button" onclick="printCurriculum()" class="doc-modal-print-btn doc-modal-print-all-btn" title="Print all subjects in this grade">
+                        <i class="fas fa-file-invoice"></i> 
+                        <span class="print-text-full">Print All</span>
+                        <span class="print-text-short">All</span>
+                    </button>
+                    <button type="button" onclick="closeDocModal()" class="doc-modal-close-btn">
                         Close
                     </button>
                 </div>

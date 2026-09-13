@@ -4,8 +4,10 @@ include '../src/header.php';
 ?>
 
 <!-- Link Assessment Page Specific Stylesheet -->
-<link rel="stylesheet" href="<?= function_exists('assetVersion') ? assetVersion('/assets/css/pages/assessment.css') : '/assets/css/pages/assessment.css' ?>">
-<link rel="stylesheet" href="<?= function_exists('assetVersion') ? assetVersion('/assets/css/assessment/assessment-scratchpad.css') : '/assets/css/assessment/assessment-scratchpad.css' ?>">
+<link rel="stylesheet"
+    href="<?= function_exists('assetVersion') ? assetVersion('/assets/css/pages/assessment.css') : '/assets/css/pages/assessment.css' ?>">
+<link rel="stylesheet"
+    href="<?= function_exists('assetVersion') ? assetVersion('/assets/css/assessment/assessment-scratchpad.css') : '/assets/css/assessment/assessment-scratchpad.css' ?>">
 
 <!-- Assessment Selection View (Hidden by default, shown if no grade selected) -->
 <div id="assessment-selection" class="assessment-select-section hidden">
@@ -109,7 +111,10 @@ include '../src/header.php';
             </a>
 
             <!-- Low-Anxiety Exam Mode Toggle in Hero Header -->
-            <button id="hero-low-anxiety-btn" type="button" onclick="window.toggleLowAnxietyExamMode && window.toggleLowAnxietyExamMode()" class="hero-nav-btn hero-nav-btn-outline" title="Toggle Low-Anxiety Exam Mode (Hides timers, question counters, and percentage progress bars)">
+            <button id="hero-low-anxiety-btn" type="button"
+                onclick="window.toggleLowAnxietyExamMode && window.toggleLowAnxietyExamMode()"
+                class="hero-nav-btn hero-nav-btn-outline"
+                title="Toggle Low-Anxiety Exam Mode (Hides timers, question counters, and percentage progress bars)">
                 <i class="fas fa-feather-alt" style="color: var(--color-teal, #14b8a6);"></i>
                 <span id="hero-low-anxiety-text">Low-Anxiety Mode</span>
             </button>
@@ -133,27 +138,37 @@ include '../src/header.php';
         <div style="position: absolute; top: 0; right: 0; padding: 1rem; opacity: 0.05; pointer-events: none;">
             <i class="fas fa-clipboard-list" style="font-size: 8rem; color: var(--color-text-main);"></i>
         </div>
-        
-        <h2 class="assessment-hero-title" style="font-size: 2.25rem; text-align: center; margin-bottom: 1rem; background: linear-gradient(135deg, var(--color-primary), var(--color-secondary)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-family: 'Outfit', sans-serif; font-weight: 800;">
+
+        <h2 class="assessment-hero-title"
+            style="font-size: 2.25rem; text-align: center; margin-bottom: 1rem; background: linear-gradient(135deg, var(--color-primary), var(--color-secondary)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-family: 'Outfit', sans-serif; font-weight: 800;">
             Ready to Begin?
         </h2>
-        <p style="text-align: center; margin-bottom: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto; color: var(--color-text-muted); line-height: 1.6;">
-            Select how you would like to test your skills today. You can take a mixed Entrance Exam to evaluate your grade-level placement, or focus on a single subject.
+        <p
+            style="text-align: center; margin-bottom: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto; color: var(--color-text-muted); line-height: 1.6;">
+            Select how you would like to test your skills today. You can take a mixed Entrance Exam to evaluate your
+            grade-level placement, or focus on a single subject.
         </p>
-        
-        <div class="assessment-card assessment-card-accent-top" style="border-color: var(--color-primary); padding: 2rem; margin-bottom: 2rem;">
+
+        <div class="assessment-card assessment-card-accent-top"
+            style="border-color: var(--color-primary); padding: 2rem; margin-bottom: 2rem;">
             <div style="display: flex; flex-direction: column; gap: 1.5rem; justify-content: space-between;">
                 <div>
-                    <div style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.25rem 0.75rem; border-radius: var(--radius-full); background: color-mix(in srgb, var(--color-primary) 15%, transparent); color: var(--color-primary); font-size: 0.75rem; font-weight: 800; text-transform: uppercase; margin-bottom: 0.75rem;">
+                    <div
+                        style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.25rem 0.75rem; border-radius: var(--radius-full); background: color-mix(in srgb, var(--color-primary) 15%, transparent); color: var(--color-primary); font-size: 0.75rem; font-weight: 800; text-transform: uppercase; margin-bottom: 0.75rem;">
                         <i class="fas fa-layer-group"></i> Comprehensive Diagnostic
                     </div>
-                    <h3 class="assessment-card-title" style="font-size: 1.5rem; font-weight: 800; margin-bottom: 0.5rem;">Grade Placement Entrance Exam</h3>
-                    <p style="font-size: 0.9375rem; color: var(--color-text-muted); line-height: 1.6; max-width: 650px; margin: 0;">
-                        A comprehensive multi-subject evaluation that tests knowledge across Math, Language Arts, Science, and Social Studies. Generates personalized lesson recommendations upon completion.
+                    <h3 class="assessment-card-title"
+                        style="font-size: 1.5rem; font-weight: 800; margin-bottom: 0.5rem;">Grade Placement Entrance
+                        Exam</h3>
+                    <p
+                        style="font-size: 0.9375rem; color: var(--color-text-muted); line-height: 1.6; max-width: 650px; margin: 0;">
+                        A comprehensive multi-subject evaluation that tests knowledge across Math, Language Arts,
+                        Science, and Social Studies. Generates personalized lesson recommendations upon completion.
                     </p>
                 </div>
                 <div>
-                    <button onclick="startAssessmentMode('All')" class="hero-nav-btn hero-nav-btn-primary" style="border: none; text-align: center; justify-content: center; padding: 0.85rem 2rem; border-radius: var(--radius-lg); font-weight: 700; cursor: pointer;">
+                    <button onclick="startAssessmentMode('All')" class="hero-nav-btn hero-nav-btn-primary"
+                        style="border: none; text-align: center; justify-content: center; padding: 0.85rem 2rem; border-radius: var(--radius-lg); font-weight: 700; cursor: pointer;">
                         <i class="fas fa-play" style="margin-right: 0.5rem;"></i> Start Entrance Exam
                     </button>
                 </div>
@@ -163,27 +178,34 @@ include '../src/header.php';
         <div style="margin-top: 1.5rem;">
             <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem;">
                 <h3 style="font-size: 1.25rem; font-weight: 800; margin: 0; color: var(--color-text-main);">
-                    <i class="fas fa-crosshairs" style="color: var(--color-secondary); margin-right: 0.5rem;"></i> Dedicated Subject Tests
+                    <i class="fas fa-crosshairs" style="color: var(--color-secondary); margin-right: 0.5rem;"></i>
+                    Dedicated Subject Tests
                 </h3>
-                <span style="font-size: 0.8125rem; color: var(--color-text-muted);">Select a specific subject benchmark</span>
+                <span style="font-size: 0.8125rem; color: var(--color-text-muted);">Select a specific subject
+                    benchmark</span>
             </div>
-            
+
             <div class="subject-test-grid">
                 <!-- Math -->
                 <div class="subject-test-card">
                     <div>
                         <div class="subject-test-card-header">
-                            <div class="subject-test-card-icon" style="background: color-mix(in srgb, var(--color-primary) 15%, transparent); color: var(--color-primary);">
+                            <div class="subject-test-card-icon"
+                                style="background: color-mix(in srgb, var(--color-primary) 15%, transparent); color: var(--color-primary);">
                                 <i class="fas fa-calculator"></i>
                             </div>
                             <div>
-                                <span style="font-size: 0.6875rem; font-weight: 800; text-transform: uppercase; color: var(--color-primary); letter-spacing: 0.05em;">CCSS.MATH & TEKS §111</span>
+                                <span
+                                    style="font-size: 0.6875rem; font-weight: 800; text-transform: uppercase; color: var(--color-primary); letter-spacing: 0.05em;">CCSS.MATH
+                                    & TEKS §111</span>
                                 <h4 class="subject-test-card-title">Mathematics</h4>
                             </div>
                         </div>
-                        <p class="subject-test-card-desc">Operations, algebraic thinking, fractions, numbers in base ten, and geometric concepts.</p>
+                        <p class="subject-test-card-desc">Operations, algebraic thinking, fractions, numbers in base
+                            ten, and geometric concepts.</p>
                     </div>
-                    <button onclick="startAssessmentMode('Math')" class="hero-nav-btn hero-nav-btn-outline" style="width: 100%; justify-content: center; padding: 0.65rem 1.25rem; border-radius: var(--radius-md); font-size: 0.875rem; cursor: pointer;">
+                    <button onclick="startAssessmentMode('Math')" class="hero-nav-btn hero-nav-btn-outline"
+                        style="width: 100%; justify-content: center; padding: 0.65rem 1.25rem; border-radius: var(--radius-md); font-size: 0.875rem; cursor: pointer;">
                         <i class="fas fa-play" style="margin-right: 0.5rem;"></i> Start Math Test
                     </button>
                 </div>
@@ -192,17 +214,22 @@ include '../src/header.php';
                 <div class="subject-test-card">
                     <div>
                         <div class="subject-test-card-header">
-                            <div class="subject-test-card-icon" style="background: color-mix(in srgb, #ec4899 15%, transparent); color: #ec4899;">
+                            <div class="subject-test-card-icon"
+                                style="background: color-mix(in srgb, #ec4899 15%, transparent); color: #ec4899;">
                                 <i class="fas fa-book-reader"></i>
                             </div>
                             <div>
-                                <span style="font-size: 0.6875rem; font-weight: 800; text-transform: uppercase; color: #ec4899; letter-spacing: 0.05em;">CCSS.ELA & TEKS §110</span>
+                                <span
+                                    style="font-size: 0.6875rem; font-weight: 800; text-transform: uppercase; color: #ec4899; letter-spacing: 0.05em;">CCSS.ELA
+                                    & TEKS §110</span>
                                 <h4 class="subject-test-card-title">Language Arts</h4>
                             </div>
                         </div>
-                        <p class="subject-test-card-desc">Reading comprehension, literary analysis, grammar conventions, and textual vocabulary.</p>
+                        <p class="subject-test-card-desc">Reading comprehension, literary analysis, grammar conventions,
+                            and textual vocabulary.</p>
                     </div>
-                    <button onclick="startAssessmentMode('Language Arts')" class="hero-nav-btn hero-nav-btn-outline" style="width: 100%; justify-content: center; padding: 0.65rem 1.25rem; border-radius: var(--radius-md); font-size: 0.875rem; cursor: pointer;">
+                    <button onclick="startAssessmentMode('Language Arts')" class="hero-nav-btn hero-nav-btn-outline"
+                        style="width: 100%; justify-content: center; padding: 0.65rem 1.25rem; border-radius: var(--radius-md); font-size: 0.875rem; cursor: pointer;">
                         <i class="fas fa-play" style="margin-right: 0.5rem;"></i> Start ELA Test
                     </button>
                 </div>
@@ -211,17 +238,22 @@ include '../src/header.php';
                 <div class="subject-test-card">
                     <div>
                         <div class="subject-test-card-header">
-                            <div class="subject-test-card-icon" style="background: color-mix(in srgb, #10b981 15%, transparent); color: #10b981;">
+                            <div class="subject-test-card-icon"
+                                style="background: color-mix(in srgb, #10b981 15%, transparent); color: #10b981;">
                                 <i class="fas fa-flask"></i>
                             </div>
                             <div>
-                                <span style="font-size: 0.6875rem; font-weight: 800; text-transform: uppercase; color: #10b981; letter-spacing: 0.05em;">NGSS & TEKS §112</span>
+                                <span
+                                    style="font-size: 0.6875rem; font-weight: 800; text-transform: uppercase; color: #10b981; letter-spacing: 0.05em;">NGSS
+                                    & TEKS §112</span>
                                 <h4 class="subject-test-card-title">Science</h4>
                             </div>
                         </div>
-                        <p class="subject-test-card-desc">Physical sciences, ecosystems, earth and space systems, and scientific inquiry principles.</p>
+                        <p class="subject-test-card-desc">Physical sciences, ecosystems, earth and space systems, and
+                            scientific inquiry principles.</p>
                     </div>
-                    <button onclick="startAssessmentMode('Science')" class="hero-nav-btn hero-nav-btn-outline" style="width: 100%; justify-content: center; padding: 0.65rem 1.25rem; border-radius: var(--radius-md); font-size: 0.875rem; cursor: pointer;">
+                    <button onclick="startAssessmentMode('Science')" class="hero-nav-btn hero-nav-btn-outline"
+                        style="width: 100%; justify-content: center; padding: 0.65rem 1.25rem; border-radius: var(--radius-md); font-size: 0.875rem; cursor: pointer;">
                         <i class="fas fa-play" style="margin-right: 0.5rem;"></i> Start Science Test
                     </button>
                 </div>
@@ -230,17 +262,22 @@ include '../src/header.php';
                 <div class="subject-test-card">
                     <div>
                         <div class="subject-test-card-header">
-                            <div class="subject-test-card-icon" style="background: color-mix(in srgb, #f59e0b 15%, transparent); color: #f59e0b;">
+                            <div class="subject-test-card-icon"
+                                style="background: color-mix(in srgb, #f59e0b 15%, transparent); color: #f59e0b;">
                                 <i class="fas fa-globe-americas"></i>
                             </div>
                             <div>
-                                <span style="font-size: 0.6875rem; font-weight: 800; text-transform: uppercase; color: #f59e0b; letter-spacing: 0.05em;">NCSS Strands & TEKS §113</span>
+                                <span
+                                    style="font-size: 0.6875rem; font-weight: 800; text-transform: uppercase; color: #f59e0b; letter-spacing: 0.05em;">NCSS
+                                    Strands & TEKS §113</span>
                                 <h4 class="subject-test-card-title">Social Studies</h4>
                             </div>
                         </div>
-                        <p class="subject-test-card-desc">History, geography, civic principles, community economics, and global cultures.</p>
+                        <p class="subject-test-card-desc">History, geography, civic principles, community economics, and
+                            global cultures.</p>
                     </div>
-                    <button onclick="startAssessmentMode('Social Studies')" class="hero-nav-btn hero-nav-btn-outline" style="width: 100%; justify-content: center; padding: 0.65rem 1.25rem; border-radius: var(--radius-md); font-size: 0.875rem; cursor: pointer;">
+                    <button onclick="startAssessmentMode('Social Studies')" class="hero-nav-btn hero-nav-btn-outline"
+                        style="width: 100%; justify-content: center; padding: 0.65rem 1.25rem; border-radius: var(--radius-md); font-size: 0.875rem; cursor: pointer;">
                         <i class="fas fa-play" style="margin-right: 0.5rem;"></i> Start Social Studies Test
                     </button>
                 </div>
@@ -248,57 +285,76 @@ include '../src/header.php';
         </div>
 
         <!-- Additional Testing Modes (Fluency Sprint & Printable Worksheet) -->
-        <div style="margin-top: 2rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
+        <div
+            style="margin-top: 2rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
             <!-- 60-Second Fluency Sprint Mode -->
-            <div class="assessment-card" style="padding: 1.5rem; border-top: 4px solid var(--color-accent); display: flex; flex-direction: column; justify-content: space-between;">
+            <div class="assessment-card"
+                style="padding: 1.5rem; border-top: 4px solid var(--color-accent); display: flex; flex-direction: column; justify-content: space-between;">
                 <div>
-                    <div style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.2rem 0.65rem; border-radius: var(--radius-full); background: color-mix(in srgb, var(--color-accent) 15%, transparent); color: var(--color-accent); font-size: 0.75rem; font-weight: 800; text-transform: uppercase; margin-bottom: 0.5rem;">
+                    <div
+                        style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.2rem 0.65rem; border-radius: var(--radius-full); background: color-mix(in srgb, var(--color-accent) 15%, transparent); color: var(--color-accent); font-size: 0.75rem; font-weight: 800; text-transform: uppercase; margin-bottom: 0.5rem;">
                         <i class="fas fa-bolt"></i> Speed Challenge
                     </div>
-                    <h4 style="font-size: 1.15rem; font-weight: 800; margin: 0 0 0.5rem 0; color: var(--color-text-main);">
+                    <h4
+                        style="font-size: 1.15rem; font-weight: 800; margin: 0 0 0.5rem 0; color: var(--color-text-main);">
                         60-Second Fluency Sprint
                     </h4>
-                    <p style="font-size: 0.85rem; color: var(--color-text-muted); line-height: 1.5; margin: 0 0 1rem 0;">
-                        Rapid-fire fluency sprint testing mental arithmetic and vocabulary under a 60-second timer. Auto-advances immediately on answer selection!
+                    <p
+                        style="font-size: 0.85rem; color: var(--color-text-muted); line-height: 1.5; margin: 0 0 1rem 0;">
+                        Rapid-fire fluency sprint testing mental arithmetic and vocabulary under a 60-second timer.
+                        Auto-advances immediately on answer selection!
                     </p>
                 </div>
-                <button type="button" onclick="startFluencySprintMode()" class="hero-nav-btn hero-nav-btn-primary" style="width: 100%; justify-content: center; padding: 0.65rem 1rem; border-radius: var(--radius-md); font-size: 0.875rem; border: none; cursor: pointer;">
+                <button type="button" onclick="startFluencySprintMode()" class="hero-nav-btn hero-nav-btn-primary"
+                    style="width: 100%; justify-content: center; padding: 0.65rem 1rem; border-radius: var(--radius-md); font-size: 0.875rem; border: none; cursor: pointer;">
                     <i class="fas fa-stopwatch" style="margin-right: 0.5rem;"></i> Launch 60s Sprint
                 </button>
             </div>
 
             <!-- Printable Worksheet & Teacher Key -->
-            <div class="assessment-card" style="padding: 1.5rem; border-top: 4px solid var(--color-primary); display: flex; flex-direction: column; justify-content: space-between;">
+            <div class="assessment-card"
+                style="padding: 1.5rem; border-top: 4px solid var(--color-primary); display: flex; flex-direction: column; justify-content: space-between;">
                 <div>
-                    <div style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.2rem 0.65rem; border-radius: var(--radius-full); background: color-mix(in srgb, var(--color-primary) 15%, transparent); color: var(--color-primary); font-size: 0.75rem; font-weight: 800; text-transform: uppercase; margin-bottom: 0.5rem;">
+                    <div
+                        style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.2rem 0.65rem; border-radius: var(--radius-full); background: color-mix(in srgb, var(--color-primary) 15%, transparent); color: var(--color-primary); font-size: 0.75rem; font-weight: 800; text-transform: uppercase; margin-bottom: 0.5rem;">
                         <i class="fas fa-file-alt"></i> Offline / Classroom
                     </div>
-                    <h4 style="font-size: 1.15rem; font-weight: 800; margin: 0 0 0.5rem 0; color: var(--color-text-main);">
+                    <h4
+                        style="font-size: 1.15rem; font-weight: 800; margin: 0 0 0.5rem 0; color: var(--color-text-main);">
                         Printable Worksheet & Answer Key
                     </h4>
-                    <p style="font-size: 0.85rem; color: var(--color-text-muted); line-height: 1.5; margin: 0 0 1rem 0;">
-                        Generate a printable PDF test worksheet with student name headers, multiple-choice bubbles, standard codes, and an educator answer key.
+                    <p
+                        style="font-size: 0.85rem; color: var(--color-text-muted); line-height: 1.5; margin: 0 0 1rem 0;">
+                        Generate a printable PDF test worksheet with student name headers, multiple-choice bubbles,
+                        standard codes, and an educator answer key.
                     </p>
                 </div>
-                <button type="button" onclick="openPrintableWorksheetModal()" class="hero-nav-btn hero-nav-btn-outline" style="width: 100%; justify-content: center; padding: 0.65rem 1rem; border-radius: var(--radius-md); font-size: 0.875rem; cursor: pointer;">
+                <button type="button" onclick="openPrintableWorksheetModal()" class="hero-nav-btn hero-nav-btn-outline"
+                    style="width: 100%; justify-content: center; padding: 0.65rem 1rem; border-radius: var(--radius-md); font-size: 0.875rem; cursor: pointer;">
                     <i class="fas fa-print" style="margin-right: 0.5rem;"></i> Generate Printable Worksheet
                 </button>
             </div>
 
             <!-- Teacher Observation Rubrics -->
-            <div class="assessment-card" style="padding: 1.5rem; border-top: 4px solid #10b981; display: flex; flex-direction: column; justify-content: space-between;">
+            <div class="assessment-card"
+                style="padding: 1.5rem; border-top: 4px solid #10b981; display: flex; flex-direction: column; justify-content: space-between;">
                 <div>
-                    <div style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.2rem 0.65rem; border-radius: var(--radius-full); background: rgba(16, 185, 129, 0.15); color: #10b981; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; margin-bottom: 0.5rem;">
+                    <div
+                        style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.2rem 0.65rem; border-radius: var(--radius-full); background: rgba(16, 185, 129, 0.15); color: #10b981; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; margin-bottom: 0.5rem;">
                         <i class="fas fa-clipboard-check"></i> Educator Rubrics
                     </div>
-                    <h4 style="font-size: 1.15rem; font-weight: 800; margin: 0 0 0.5rem 0; color: var(--color-text-main);">
+                    <h4
+                        style="font-size: 1.15rem; font-weight: 800; margin: 0 0 0.5rem 0; color: var(--color-text-main);">
                         Teacher Observation Rubrics
                     </h4>
-                    <p style="font-size: 0.85rem; color: var(--color-text-muted); line-height: 1.5; margin: 0 0 1rem 0;">
-                        One-on-one performance protocols and 4-step observation scoring instruments with real-time score calculation and conference reports.
+                    <p
+                        style="font-size: 0.85rem; color: var(--color-text-muted); line-height: 1.5; margin: 0 0 1rem 0;">
+                        One-on-one performance protocols and 4-step observation scoring instruments with real-time score
+                        calculation and conference reports.
                     </p>
                 </div>
-                <a href="/assessment/rubrics.php" class="hero-nav-btn hero-nav-btn-outline" style="width: 100%; justify-content: center; padding: 0.65rem 1rem; border-radius: var(--radius-md); font-size: 0.875rem; text-decoration: none; display: inline-flex; align-items: center;">
+                <a href="/assessment/rubrics.php" class="hero-nav-btn hero-nav-btn-outline"
+                    style="width: 100%; justify-content: center; padding: 0.65rem 1rem; border-radius: var(--radius-md); font-size: 0.875rem; text-decoration: none; display: inline-flex; align-items: center;">
                     <i class="fas fa-folder-open" style="margin-right: 0.5rem;"></i> Open Rubrics Suite
                 </a>
             </div>
@@ -319,11 +375,14 @@ include '../src/header.php';
             </div>
             <div>
                 <div class="targeted-standard-pill-row">
-                    <span class="targeted-standard-pill"><i class="fas fa-crosshairs" style="margin-right: 0.35rem;"></i> Targeted Standard Evaluation</span>
-                    <span id="targeted-standard-subject-pill" class="targeted-standard-pill pill-subtle">Core Subject</span>
+                    <span class="targeted-standard-pill"><i class="fas fa-crosshairs"
+                            style="margin-right: 0.35rem;"></i> Targeted Standard Evaluation</span>
+                    <span id="targeted-standard-subject-pill" class="targeted-standard-pill pill-subtle">Core
+                        Subject</span>
                 </div>
                 <h3 id="targeted-standard-title" class="targeted-standard-title">Standard Check</h3>
-                <p id="targeted-standard-desc" class="targeted-standard-desc">Assessing student proficiency and conceptual mastery for this specific learning benchmark.</p>
+                <p id="targeted-standard-desc" class="targeted-standard-desc">Assessing student proficiency and
+                    conceptual mastery for this specific learning benchmark.</p>
             </div>
         </div>
         <button type="button" class="targeted-standard-exit-btn" onclick="exitStandardTargetedTest()">
@@ -334,47 +393,7 @@ include '../src/header.php';
     <div class="assessment-grid">
         <!-- Sidebar -->
         <div class="assessment-sidebar">
-            <!-- Stats -->
-            <div class="assessment-card assessment-card-accent-top">
-                <h3 class="assessment-card-title">
-                    <i class="fas fa-chart-pie" style="color: var(--color-primary);"></i> Your Progress
-                </h3>
-                <div style="margin-top: 1rem;">
-                    <div class="progress-standard-label" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-                        <span style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--color-primary); background-color: color-mix(in srgb, var(--color-primary) 10%, transparent); padding: 0.25rem 0.75rem; border-radius: var(--radius-full);">
-                            Current Score
-                        </span>
-                        <span class="progress-bar-text" style="font-size: 1.125rem; font-weight: 700; color: var(--color-primary);">
-                            0%
-                        </span>
-                    </div>
-                    <div class="assessment-progress-wrapper">
-                        <div style="width: 0%;" class="assessment-progress-bar progress-bar-animated"></div>
-                    </div>
-                    <div class="calm-progress-note" style="display: none; margin-top: 0.6rem;">
-                        <i class="fas fa-seedling" style="color: var(--color-teal, #14b8a6); margin-right: 0.35rem;"></i>
-                        <span>Calm Focus Mode active: No score pressure. Take your time!</span>
-                    </div>
-                </div>
-                <p class="anxious-counter" style="font-size: 0.875rem; color: var(--color-text-muted); font-style: italic; display: flex; align-items: center; gap: 0.5rem; margin-top: 1rem;">
-                    <i class="fas fa-info-circle"></i> Complete questions to earn badges!
-                </p>
-            </div>
 
-            <!-- Low-Anxiety / Untimed Mode Toggle -->
-            <div class="assessment-card" style="border-top: 3px solid var(--color-teal, #14b8a6);">
-                <div style="display: flex; align-items: center; justify-content: space-between;">
-                    <div>
-                        <h4 style="font-size: 0.95rem; font-weight: 800; margin: 0; color: var(--color-text-main); display: flex; align-items: center; gap: 0.4rem;">
-                            <i class="fas fa-feather-alt" style="color: var(--color-teal, #14b8a6);"></i> Low-Anxiety Exam Mode
-                        </h4>
-                        <p style="font-size: 0.78rem; color: var(--color-text-muted); margin: 0.25rem 0 0 0;">Calm focus without timers or counters.</p>
-                    </div>
-                    <label class="settings-switch" style="position: relative; display: inline-block; width: 42px; height: 22px; margin: 0;">
-                        <input type="checkbox" id="untimed-mode-toggle" onchange="window.toggleLowAnxietyExamMode && window.toggleLowAnxietyExamMode(this.checked)" style="width: 1.15rem; height: 1.15rem; cursor: pointer;" title="Toggle Low-Anxiety Exam Mode">
-                    </label>
-                </div>
-            </div>
 
             <!-- Subject Filter -->
             <div class="assessment-card">
@@ -415,47 +434,84 @@ include '../src/header.php';
                 </div>
 
                 <div class="assessment-quiz-header">
-                    <div>
-                        <span class="question-counter-label anxious-counter">Question</span>
-                        <div id="question-count" class="question-counter-big anxious-counter">
-                            1<span class="question-counter-total">/10</span>
+                    <div class="question-counter-wrapper">
+                        <div class="question-circle-gauge anxious-counter" id="question-circle-gauge" role="progressbar"
+                            aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" aria-label="Question Progress">
+                            <svg class="question-progress-svg" viewBox="0 0 100 100" width="86" height="86"
+                                aria-hidden="true">
+                                <defs>
+                                    <linearGradient id="question-progress-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="var(--color-primary, #4f46e5)" />
+                                        <stop offset="100%" stop-color="#06b6d4" />
+                                    </linearGradient>
+                                </defs>
+                                <circle class="question-circle-track" cx="50" cy="50" r="41" fill="none"
+                                    stroke-width="6" />
+                                <circle class="question-circle-bar" id="question-circle-bar" cx="50" cy="50" r="41"
+                                    fill="none" stroke-width="6" stroke-linecap="round"
+                                    stroke="url(#question-progress-grad)"
+                                    style="stroke-dasharray: 257.61; stroke-dashoffset: 231.85;" />
+                            </svg>
+                            <div class="question-circle-content">
+                                <span class="question-counter-label">Question</span>
+                                <div id="question-count" class="question-counter-big">
+                                    1<span class="question-counter-total">/10</span>
+                                </div>
+                            </div>
                         </div>
                         <div class="calm-counter-badge" style="display: none;">
                             <i class="fas fa-feather-alt"></i> Calm Focus Practice
                         </div>
                     </div>
                     <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 0.5rem;">
-                        <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; justify-content: flex-end;">
-                            <span class="kb-shortcuts-hint no-mobile" title="Press keys 1-4 to select answers, Enter to advance, H for hint, R for read aloud">
-                                <i class="fas fa-keyboard" style="opacity: 0.75;"></i> 1–4 to pick · Enter to advance
-                            </span>
-                            <button id="tts-read-btn" type="button" onclick="window.readCurrentQuestionAloud && window.readCurrentQuestionAloud()" style="background: var(--color-bg-base); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 0.35rem 0.7rem; color: var(--color-text-main); font-size: 0.8rem; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 0.35rem; transition: all 0.2s;" title="Read question aloud (Text-to-Speech) [Shortcut: R]">
-                                <i class="fas fa-volume-up" style="color: var(--color-primary);"></i> <span class="no-mobile">Read Aloud</span>
+                        <div
+                            style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; justify-content: flex-end;">
+                            <button id="tts-read-btn" type="button"
+                                onclick="window.readCurrentQuestionAloud && window.readCurrentQuestionAloud()"
+                                style="background: var(--color-bg-base); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 0.35rem 0.7rem; color: var(--color-text-main); font-size: 0.8rem; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 0.35rem; transition: all 0.2s;"
+                                title="Read question aloud (Text-to-Speech) [Shortcut: R]">
+                                <i class="fas fa-volume-up" style="color: var(--color-primary);"></i> <span
+                                    class="no-mobile">Read Aloud</span>
                             </button>
-                            <button id="untimed-mode-btn" type="button" onclick="window.toggleLowAnxietyExamMode && window.toggleLowAnxietyExamMode()" style="background: var(--color-bg-base); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 0.35rem 0.7rem; color: var(--color-text-muted); font-size: 0.8rem; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 0.35rem; transition: all 0.2s;" title="Toggle Low-Anxiety Exam Mode (Hides timers, counters, and progress bar)">
+                            <button id="untimed-mode-btn" type="button"
+                                onclick="window.toggleLowAnxietyExamMode && window.toggleLowAnxietyExamMode()"
+                                style="background: var(--color-bg-base); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 0.35rem 0.7rem; color: var(--color-text-muted); font-size: 0.8rem; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 0.35rem; transition: all 0.2s;"
+                                title="Toggle Low-Anxiety Exam Mode (Hides timers, counters, and progress bar)">
                                 <i class="fas fa-feather-alt"></i> <span id="untimed-mode-label">Low-Anxiety Mode</span>
                             </button>
-                            <button id="sound-toggle-btn" style="color: var(--color-text-muted); background: transparent; border: none; cursor: pointer; transition: color 0.2s;" title="Toggle Sound">
+                            <button id="sound-toggle-btn"
+                                style="color: var(--color-text-muted); background: transparent; border: none; cursor: pointer; transition: color 0.2s;"
+                                title="Toggle Sound">
                                 <i class="fas fa-volume-up" style="font-size: 1.25rem;"></i>
                             </button>
-                            <div id="session-timer-wrap" style="display: flex; align-items: center; background-color: var(--color-bg-base); border-radius: var(--radius-md); padding: 0.25rem; border: 1px solid var(--color-border);">
-                                <button id="timer-toggle-btn" style="background: transparent; border: none; padding: 0 0.5rem; color: var(--color-text-muted); cursor: pointer;" title="Hide/Show Timer">
+                            <div id="session-timer-wrap"
+                                style="display: flex; align-items: center; background-color: var(--color-bg-base); border-radius: var(--radius-md); padding: 0.25rem; border: 1px solid var(--color-border);">
+                                <button id="timer-toggle-btn"
+                                    style="background: transparent; border: none; padding: 0 0.5rem; color: var(--color-text-muted); cursor: pointer;"
+                                    title="Hide/Show Timer">
                                     <i class="fas fa-eye" style="font-size: 0.875rem;"></i>
                                 </button>
-                                <span id="session-timer" style="font-family: monospace; font-size: 1.125rem; font-weight: 700; color: var(--color-primary); padding: 0 0.5rem; min-width: 70px; text-align: center;">
+                                <span id="session-timer"
+                                    style="font-family: monospace; font-size: 1.125rem; font-weight: 700; color: var(--color-primary); padding: 0 0.5rem; min-width: 70px; text-align: center;">
                                     00:00
                                 </span>
                             </div>
                         </div>
-                        <span id="streak-counter" style="padding: 0.25rem 0.75rem; background-color: color-mix(in srgb, var(--color-warning) 10%, transparent); color: var(--color-warning); border-radius: var(--radius-full); font-size: 0.875rem; font-weight: 700; display: none;">
+                        <span id="streak-counter"
+                            style="padding: 0.25rem 0.75rem; background-color: color-mix(in srgb, var(--color-warning) 10%, transparent); color: var(--color-warning); border-radius: var(--radius-full); font-size: 0.875rem; font-weight: 700; display: none;">
                             🔥 0 streak
                         </span>
                     </div>
                 </div>
 
-                <div style="flex-grow: 1; margin-bottom: 2rem;">
+                <div id="question-content-section" style="flex-grow: 1; margin-bottom: 2rem; position: relative;">
+                    <!-- Top Feedback / Learning Opportunity Card -->
+                    <div id="answer-explanation-card" class="answer-explanation-card" role="status" aria-live="polite"
+                        style="display: none;"></div>
+
                     <div id="question-standard-tag" style="display: none; margin-bottom: 0.75rem;"></div>
-                    <h2 id="question" style="font-size: 1.5rem; font-weight: 700; color: var(--color-text-main); margin-bottom: 2rem; line-height: 1.4; min-height: 4rem;">
+                    <h2 id="question"
+                        style="font-size: 1.5rem; font-weight: 700; color: var(--color-text-main); margin-bottom: 2rem; line-height: 1.4; min-height: 4rem;">
                         Loading Question...
                     </h2>
 
@@ -464,29 +520,35 @@ include '../src/header.php';
                     </div>
                 </div>
 
-                <!-- Feedback Area -->
-                <div id="feedback-area" class="feedback-box">
+                <!-- Legacy Feedback Area (Kept hidden for screen-reader backward compatibility) -->
+                <div id="feedback-area" class="feedback-box" style="display: none !important;">
                     <div style="display: flex; align-items: start; gap: 0.75rem;">
                         <div id="feedback-icon" style="font-size: 1.5rem;"></div>
                         <div style="flex-grow: 1;">
-                            <h4 id="feedback-title" style="font-weight: 700; font-size: 1.125rem; margin: 0 0 0.25rem 0;"></h4>
+                            <h4 id="feedback-title"
+                                style="font-weight: 700; font-size: 1.125rem; margin: 0 0 0.25rem 0;"></h4>
                             <p id="feedback" style="font-size: 0.875rem; margin: 0; opacity: 0.9;"></p>
-                            <div id="feedback-explanation" style="margin-top: 0.65rem; padding-top: 0.65rem; border-top: 1px dashed rgba(255,255,255,0.25); font-size: 0.875rem; line-height: 1.55; display: none;"></div>
+                            <div id="feedback-explanation"
+                                style="margin-top: 0.65rem; padding-top: 0.65rem; border-top: 1px dashed rgba(255,255,255,0.25); font-size: 0.875rem; line-height: 1.55; display: none;">
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="assessment-card-actions">
                     <div style="display: flex; gap: 0.5rem;">
-                        <button onclick="showHint()" style="color: var(--color-secondary); background-color: color-mix(in srgb, var(--color-secondary) 10%, transparent); border: none; padding: 0.5rem 1rem; border-radius: var(--radius-md); font-weight: 700; font-size: 0.875rem; cursor: pointer; transition: background 0.2s; display: flex; align-items: center; gap: 0.5rem;">
+                        <button onclick="showHint()"
+                            style="color: var(--color-secondary); background-color: color-mix(in srgb, var(--color-secondary) 10%, transparent); border: none; padding: 0.5rem 1rem; border-radius: var(--radius-md); font-weight: 700; font-size: 0.875rem; cursor: pointer; transition: background 0.2s; display: flex; align-items: center; gap: 0.5rem;">
                             <i class="far fa-lightbulb"></i> Need a Hint?
                         </button>
-                        <button id="skip-btn" onclick="skipQuestion()" style="color: var(--color-warning); background-color: color-mix(in srgb, var(--color-warning) 10%, transparent); border: none; padding: 0.5rem 1rem; border-radius: var(--radius-md); font-weight: 700; font-size: 0.875rem; cursor: pointer; transition: background 0.2s; display: flex; align-items: center; gap: 0.5rem;">
+                        <button id="skip-btn" onclick="skipQuestion()"
+                            style="color: var(--color-warning); background-color: color-mix(in srgb, var(--color-warning) 10%, transparent); border: none; padding: 0.5rem 1rem; border-radius: var(--radius-md); font-weight: 700; font-size: 0.875rem; cursor: pointer; transition: background 0.2s; display: flex; align-items: center; gap: 0.5rem;">
                             <i class="fas fa-forward"></i> Skip
                         </button>
                     </div>
 
-                    <button id="next-btn" onclick="nextQuestionAdapter()" class="hero-nav-btn-primary hidden" style="border: none; padding: 0.75rem 2rem; border-radius: var(--radius-lg); font-weight: 700; font-size: 1rem; cursor: pointer;">
+                    <button id="next-btn" onclick="nextQuestionAdapter()" class="hero-nav-btn-primary hidden"
+                        style="border: none; padding: 0.75rem 2rem; border-radius: var(--radius-lg); font-weight: 700; font-size: 1rem; cursor: pointer;">
                         Next Question <i class="fas fa-arrow-right" style="margin-left: 0.5rem;"></i>
                     </button>
                 </div>
@@ -496,40 +558,53 @@ include '../src/header.php';
                     <strong>Hint:</strong> <span id="hint-content"></span>
                 </div>
             </div>
-            
+
             <!-- Diagnostic Recommendations Card (Hidden initially) -->
-            <div id="diagnostic-container" class="assessment-card assessment-card-accent-top" style="display: none; margin-top: 2rem; border-color: var(--color-warning);">
-                <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 0.5rem;">
-                    <h3 class="assessment-card-title" style="margin: 0; display: flex; align-items: center; gap: 0.5rem;">
-                        <i class="fas fa-bullseye" style="color: var(--color-warning);"></i> Targeted Learning Recommendations
+            <div id="diagnostic-container" class="assessment-card assessment-card-accent-top"
+                style="display: none; margin-top: 2rem; border-color: var(--color-warning);">
+                <div
+                    style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 0.5rem;">
+                    <h3 class="assessment-card-title"
+                        style="margin: 0; display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fas fa-bullseye" style="color: var(--color-warning);"></i> Targeted Learning
+                        Recommendations
                     </h3>
-                    <span id="diagnostic-badge-count" style="font-size: 0.75rem; font-weight: 800; padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: color-mix(in srgb, var(--color-warning) 15%, transparent); color: var(--color-warning);">
+                    <span id="diagnostic-badge-count"
+                        style="font-size: 0.75rem; font-weight: 800; padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: color-mix(in srgb, var(--color-warning) 15%, transparent); color: var(--color-warning);">
                         Action Recommended (&lt; 70% Mastery)
                     </span>
                 </div>
-                <p id="diagnostic-desc" style="font-size: 0.875rem; color: var(--color-text-muted); margin-bottom: 1.25rem; line-height: 1.6;">
-                    Based on your assessment performance, our diagnostic engine detected standards scoring below the 70% proficiency threshold. Strengthen your foundation with the targeted curriculum lessons below:
+                <p id="diagnostic-desc"
+                    style="font-size: 0.875rem; color: var(--color-text-muted); margin-bottom: 1.25rem; line-height: 1.6;">
+                    Based on your assessment performance, our diagnostic engine detected standards scoring below the 70%
+                    proficiency threshold. Strengthen your foundation with the targeted curriculum lessons below:
                 </p>
                 <div id="diagnostic-list" style="display: flex; flex-direction: column; gap: 1rem;">
                     <!-- Suggested lessons injected by JS -->
                 </div>
             </div>
-            
+
             <!-- Review Mode Container (Hidden initially) -->
             <div id="review-container" class="assessment-card" style="display: none; margin-top: 2rem;">
                 <div class="review-header-row">
                     <h3 class="assessment-card-title" style="margin: 0;">
-                        <i class="fas fa-clipboard-list" style="color: var(--color-primary);"></i> Question-by-Question Review & Explanations
+                        <i class="fas fa-clipboard-list" style="color: var(--color-primary);"></i> Question-by-Question
+                        Review & Explanations
                     </h3>
                     <div class="review-filter-pills" id="review-filter-pills" role="tablist">
-                        <button type="button" class="review-pill-btn active" data-filter="all" onclick="filterReviewItems('all')">
+                        <button type="button" class="review-pill-btn active" data-filter="all"
+                            onclick="filterReviewItems('all')">
                             All Questions <span class="pill-count" id="review-count-all">0</span>
                         </button>
-                        <button type="button" class="review-pill-btn text-success" data-filter="correct" onclick="filterReviewItems('correct')">
-                            <i class="fas fa-check-circle"></i> Correct <span class="pill-count" id="review-count-correct">0</span>
+                        <button type="button" class="review-pill-btn text-success" data-filter="correct"
+                            onclick="filterReviewItems('correct')">
+                            <i class="fas fa-check-circle"></i> Correct <span class="pill-count"
+                                id="review-count-correct">0</span>
                         </button>
-                        <button type="button" class="review-pill-btn text-error" data-filter="incorrect" onclick="filterReviewItems('incorrect')">
-                            <i class="fas fa-times-circle"></i> Missed <span class="pill-count" id="review-count-incorrect">0</span>
+                        <button type="button" class="review-pill-btn text-error" data-filter="incorrect"
+                            onclick="filterReviewItems('incorrect')">
+                            <i class="fas fa-times-circle"></i> Missed <span class="pill-count"
+                                id="review-count-incorrect">0</span>
                         </button>
                     </div>
                 </div>
@@ -542,7 +617,8 @@ include '../src/header.php';
 </div>
 
 <!-- Diagnostic Mastery Report Card Modal -->
-<div id="mastery-report-modal" class="mastery-report-modal" role="dialog" aria-modal="true" aria-labelledby="report-modal-title" style="display: none;">
+<div id="mastery-report-modal" class="mastery-report-modal" role="dialog" aria-modal="true"
+    aria-labelledby="report-modal-title" style="display: none;">
     <div class="mastery-report-backdrop" onclick="closeMasteryReportCard()"></div>
     <div class="mastery-report-dialog card-surface">
         <div class="mastery-report-toolbar no-print">
@@ -550,13 +626,18 @@ include '../src/header.php';
                 <i class="fas fa-file-invoice" style="color: var(--color-primary);"></i> Diagnostic Mastery Report Card
             </div>
             <div class="toolbar-actions" style="display: flex; align-items: center; gap: 0.5rem;">
-                <button type="button" class="hero-nav-btn hero-nav-btn-outline" onclick="window.exportMasteryReportCSV && window.exportMasteryReportCSV()" style="padding: 0.5rem 1.25rem; font-size: 0.875rem;">
+                <button type="button" class="hero-nav-btn hero-nav-btn-outline"
+                    onclick="window.exportMasteryReportCSV && window.exportMasteryReportCSV()"
+                    style="padding: 0.5rem 1.25rem; font-size: 0.875rem;">
                     <i class="fas fa-file-csv"></i> Export CSV
                 </button>
-                <button type="button" class="hero-nav-btn hero-nav-btn-primary" onclick="document.body.classList.add('printing-mastery-report'); window.print(); setTimeout(() => document.body.classList.remove('printing-mastery-report'), 800);" style="padding: 0.5rem 1.25rem; font-size: 0.875rem;">
+                <button type="button" class="hero-nav-btn hero-nav-btn-primary"
+                    onclick="document.body.classList.add('printing-mastery-report'); window.print(); setTimeout(() => document.body.classList.remove('printing-mastery-report'), 800);"
+                    style="padding: 0.5rem 1.25rem; font-size: 0.875rem;">
                     <i class="fas fa-print"></i> Print / Save as PDF
                 </button>
-                <button type="button" class="report-modal-close" onclick="closeMasteryReportCard()" aria-label="Close Report">&times;</button>
+                <button type="button" class="report-modal-close" onclick="closeMasteryReportCard()"
+                    aria-label="Close Report">&times;</button>
             </div>
         </div>
 
@@ -567,7 +648,8 @@ include '../src/header.php';
 </div>
 
 <!-- Printable Quiz Worksheet & Teacher Answer Key Modal -->
-<div id="quiz-worksheet-modal" class="mastery-report-modal" role="dialog" aria-modal="true" aria-labelledby="worksheet-modal-title" style="display: none;">
+<div id="quiz-worksheet-modal" class="mastery-report-modal" role="dialog" aria-modal="true"
+    aria-labelledby="worksheet-modal-title" style="display: none;">
     <div class="mastery-report-backdrop" onclick="closePrintableWorksheetModal()"></div>
     <div class="mastery-report-dialog card-surface">
         <div class="mastery-report-toolbar no-print">
@@ -575,20 +657,27 @@ include '../src/header.php';
                 <i class="fas fa-print" style="color: var(--color-primary);"></i> Printable Quiz Worksheet & Answer Key
             </div>
             <div class="toolbar-actions" style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
-                <select id="worksheet-count-select" onchange="window.updateWorksheetCount && window.updateWorksheetCount(this.value)" style="background: var(--color-bg-base); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 0.4rem 0.65rem; font-size: 0.8125rem; font-weight: 700; color: var(--color-text-main);">
+                <select id="worksheet-count-select"
+                    onchange="window.updateWorksheetCount && window.updateWorksheetCount(this.value)"
+                    style="background: var(--color-bg-base); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 0.4rem 0.65rem; font-size: 0.8125rem; font-weight: 700; color: var(--color-text-main);">
                     <option value="5">5 Questions</option>
                     <option value="10">10 Questions</option>
                     <option value="15" selected>15 Questions</option>
                     <option value="20">20 Questions</option>
                 </select>
-                <label style="display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.8125rem; font-weight: 700; cursor: pointer; user-select: none; color: var(--color-text-main);">
-                    <input type="checkbox" id="worksheet-include-key" checked onchange="toggleWorksheetAnswerKey(this.checked)">
+                <label
+                    style="display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.8125rem; font-weight: 700; cursor: pointer; user-select: none; color: var(--color-text-main);">
+                    <input type="checkbox" id="worksheet-include-key" checked
+                        onchange="toggleWorksheetAnswerKey(this.checked)">
                     <span>Include Educator Answer Key</span>
                 </label>
-                <button type="button" class="hero-nav-btn hero-nav-btn-primary" onclick="document.body.classList.add('printing-worksheet'); window.print(); setTimeout(() => document.body.classList.remove('printing-worksheet'), 800);" style="padding: 0.5rem 1.25rem; font-size: 0.875rem;">
+                <button type="button" class="hero-nav-btn hero-nav-btn-primary"
+                    onclick="document.body.classList.add('printing-worksheet'); window.print(); setTimeout(() => document.body.classList.remove('printing-worksheet'), 800);"
+                    style="padding: 0.5rem 1.25rem; font-size: 0.875rem;">
                     <i class="fas fa-print"></i> Print Worksheet
                 </button>
-                <button type="button" class="report-modal-close" onclick="closePrintableWorksheetModal()" aria-label="Close Worksheet">&times;</button>
+                <button type="button" class="report-modal-close" onclick="closePrintableWorksheetModal()"
+                    aria-label="Close Worksheet">&times;</button>
             </div>
         </div>
 
@@ -599,10 +688,15 @@ include '../src/header.php';
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/assessment-p-12.js') : '/assets/js/assessment-p-12.js' ?>"></script>
-<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/assessment-ap.js') : '/assets/js/assessment-ap.js' ?>"></script>
-<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/assessment-main.js') : '/assets/js/assessment-main.js' ?>"></script>
-<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/assessment/assessment-scratchpad.js') : '/assets/js/assessment/assessment-scratchpad.js' ?>"></script>
-<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/assessment/diagnostic-prescription.js') : '/assets/js/assessment/diagnostic-prescription.js' ?>"></script>
+<script
+    src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/assessment-p-12.js') : '/assets/js/assessment-p-12.js' ?>"></script>
+<script
+    src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/assessment-ap.js') : '/assets/js/assessment-ap.js' ?>"></script>
+<script
+    src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/assessment-main.js') : '/assets/js/assessment-main.js' ?>"></script>
+<script
+    src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/assessment/assessment-scratchpad.js') : '/assets/js/assessment/assessment-scratchpad.js' ?>"></script>
+<script
+    src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/assessment/diagnostic-prescription.js') : '/assets/js/assessment/diagnostic-prescription.js' ?>"></script>
 
 <?php include '../src/footer.php'; ?>
