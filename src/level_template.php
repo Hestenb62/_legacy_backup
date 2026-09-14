@@ -589,6 +589,13 @@ function renderSubjectModules(array $modulesList, string $subjectId, string $sub
 <script>
     const LEVEL_ID = '<?php echo $levelId; ?>';
     const THEME_COLOR = '<?php echo $themeColor; ?>';
+    window.HL_PAGE_CONTEXT = {
+        type: 'level',
+        levelId: '<?php echo $levelId; ?>',
+        levelTitle: '<?php echo addslashes($levelTitle); ?>',
+        gradeText: '<?php echo addslashes($gradeText ?? ''); ?>',
+        subject: '<?php echo $initialSubject; ?>'
+    };
     let completedLessons = [];
 
     // Initialize CSS Variables based on Theme
@@ -702,6 +709,17 @@ function renderSubjectModules(array $modulesList, string $subjectId, string $sub
             currentUrl.searchParams.set('subject', tabName);
             window.history.replaceState(null, '', currentUrl.toString());
         } catch (e) {}
+
+        if (window.HL_PAGE_CONTEXT) {
+            window.HL_PAGE_CONTEXT.subject = tabName;
+        }
+        window.dispatchEvent(new CustomEvent('hl:subject-switched', {
+            detail: {
+                levelId: LEVEL_ID,
+                gradeText: '<?php echo addslashes($gradeText ?? ''); ?>',
+                subject: tabName
+            }
+        }));
     }
 
     const allSkills = <?php echo json_encode(array_merge(...array_column($modules, 'topics'))['skills'] ?? []); ?>;

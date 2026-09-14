@@ -1,0 +1,477 @@
+{
+    "grade_4_math": {
+        "title": "Grade 4: Mathematics",
+        "badge": "Grade 4 Math",
+        "category": "curriculum",
+        "grade": "Grade 4",
+        "subject": "math",
+        "cards": [
+            {
+                "id": "g4-m-1",
+                "term": "Multi-Digit Multiplication",
+                "definition": "The process of multiplying numbers with more than one digit using place value, area models, or the standard algorithm.",
+                "example": "To calculate 24 × 16, multiply 24 by 6 (144) and 24 by 10 (240), then sum to get 384.",
+                "box": 1
+            },
+            {
+                "id": "g4-m-2",
+                "term": "Remainder",
+                "definition": "The amount left over after dividing a number into equal whole parts.",
+                "example": "In 25 ÷ 4 = 6 R 1, the number 1 is the remainder that cannot be evenly grouped.",
+                "box": 1
+            },
+            {
+                "id": "g4-m-3",
+                "term": "Equivalent Fractions",
+                "definition": "Fractions that have different numerators and denominators but represent the exact same value or proportion of a whole.",
+                "example": "2/4 and 3/6 are equivalent to 1/2 because they represent half of the whole.",
+                "box": 1
+            },
+            {
+                "id": "g4-m-4",
+                "term": "Prime Number",
+                "definition": "A whole number greater than 1 whose only positive factors are 1 and itself.",
+                "example": "7 is prime because its only factor pair is 1 × 7.",
+                "box": 1
+            },
+            {
+                "id": "g4-m-5",
+                "term": "Composite Number",
+                "definition": "A whole number greater than 1 that has more than two factors.",
+                "example": "12 is composite because its factors include 1, 2, 3, 4, 6, and 12.",
+                "box": 1
+            },
+            {
+                "id": "g4-m-6",
+                "term": "Perimeter",
+                "definition": "The continuous linear distance around the outside boundary of a closed two-dimensional shape.",
+                "example": "A rectangle with length 8 cm and width 5 cm has a perimeter of 2(8 + 5) = 26 cm.",
+                "box": 1
+            },
+            {
+                "id": "g4-m-7",
+                "term": "Area",
+                "definition": "The total amount of two-dimensional surface space enclosed inside a boundary, measured in square units.",
+                "example": "The area of a 6 ft by 4 ft rug is 6 × 4 = 24 square feet.",
+                "box": 1
+            },
+            {
+                "id": "g4-m-8",
+                "term": "Acute, Right, & Obtuse Angles",
+                "definition": "An acute angle measures less than 90°; a right angle measures exactly 90°; an obtuse angle measures between 90° and 180°.",
+                "example": "The corner of a standard sheet of paper forms a right angle of 90 degrees.",
+                "box": 1
+            },
+            {
+                "id": "g4-m-9",
+                "term": "Decimal Fraction",
+                "definition": "A fraction where the denominator is a power of ten (such as 10, 100, or 1000), easily converted to decimal notation.",
+                "example": "35/100 is written in decimal form as 0.35.",
+                "box": 1
+            },
+            {
+                "id": "g4-m-10",
+                "term": "Line of Symmetry",
+                "definition": "An imaginary line dividing a figure into two identical mirror-image halves.",
+                "example": "A square has four lines of symmetry: horizontal, vertical, and two diagonals.",
+                "box": 1
+            }
+        ]
+    },
+    "grade_4_social": {
+        "title": "Grade 4: Social Studies & Civics",
+        "badge": "Grade 4 Social Studies",
+        "category": "curriculum",
+        "grade": "Grade 4",
+        "subject": "social",
+        "cards": [
+            {
+                "id": "g4-ss-1",
+                "term": "Geographic Region",
+                "definition": "An area of land distinguished by common natural, cultural, or physical characteristics such as climate, landforms, or resources.",
+                "example": "The Coastal Plain region features flat topography, sandy soil, and sea access.",
+                "box": 1
+            },
+            {
+                "id": "g4-ss-2",
+                "term": "Indigenous Peoples",
+                "definition": "The original native inhabitants of a geographic territory prior to colonization or foreign settlement.",
+                "example": "The Iroquois Confederacy and Algonquin tribes adapted their shelter and food sources to northeastern forests.",
+                "box": 1
+            },
+            {
+                "id": "g4-ss-3",
+                "term": "Colonial Trade & Barter",
+                "definition": "An economic exchange of goods, crops, and raw materials without using modern paper currency.",
+                "example": "Early colonists traded beaver pelts and timber in exchange for manufactured European iron tools.",
+                "box": 1
+            },
+            {
+                "id": "g4-ss-4",
+                "term": "Three Branches of Government",
+                "definition": "The division of democratic power into Legislative (law-making), Executive (law-enforcing), and Judicial (law-interpreting).",
+                "example": "The governor leads the state executive branch, while the state legislature votes on new laws.",
+                "box": 1
+            },
+            {
+                "id": "g4-ss-5",
+                "term": "Civic Duty & Voting",
+                "definition": "The voluntary and legal obligations of citizens to participate in community governance, serve on juries, and vote in elections.",
+                "example": "Voting in town elections is a vital civic responsibility in a representative democracy.",
+                "box": 1
+            },
+            {
+                "id": "g4-ss-6",
+                "term": "Supply & Demand",
+                "definition": "The economic principle that prices rise when goods are scarce (low supply/high demand) and fall when goods are plentiful.",
+                "example": "When a frost destroyed orange crops, orange juice prices rose due to reduced supply.",
+                "box": 1
+            },
+            {
+                "id": "g4-ss-7",
+                "term": "American Revolution",
+                "definition": "The 1775–1783 war in which thirteen North American colonies declared independence from British imperial rule.",
+                "example": "The Declaration of Independence in 1776 announced the colonies' right to self-governance.",
+                "box": 1
+            },
+            {
+                "id": "g4-ss-8",
+                "term": "Primary Source vs. Secondary Source",
+                "definition": "A primary source is an immediate, first-hand account created during the event (diary, letter); a secondary source analyzes or interprets it later (textbook).",
+                "example": "A soldier's 1777 wartime diary is a primary source; a 2024 history book is a secondary source.",
+                "box": 1
+            }
+        ]
+    },
+    "grade_4_science": {
+        "title": "Grade 4: Science Inquiry",
+        "badge": "Grade 4 Science",
+        "category": "curriculum",
+        "grade": "Grade 4",
+        "subject": "science",
+        "cards": [
+            {
+                "id": "g4-sci-1",
+                "term": "Energy Transfer",
+                "definition": "The movement of energy from one object, place, or system to another through heat, light, sound, or mechanical motion.",
+                "example": "When a baseball bat strikes a ball, mechanical kinetic energy transfers to the ball.",
+                "box": 1
+            },
+            {
+                "id": "g4-sci-2",
+                "term": "Weathering & Erosion",
+                "definition": "Weathering breaks rocks down into smaller sediments; erosion transports those loosened sediments by wind, water, or ice.",
+                "example": "Water freezing in rock crevices causes weathering, while rivers erode sediments downstream.",
+                "box": 1
+            },
+            {
+                "id": "g4-sci-3",
+                "term": "Renewable vs. Nonrenewable Resources",
+                "definition": "Renewable resources replenish naturally in a short timeframe (solar, wind); nonrenewable resources exist in limited supply (coal, oil).",
+                "example": "Solar panels generate renewable electrical power from sunlight every day.",
+                "box": 1
+            },
+            {
+                "id": "g4-sci-4",
+                "term": "Sensory Adaptation",
+                "definition": "Specialized physical structures and behaviors that animals use to perceive and respond to environmental stimuli for survival.",
+                "example": "An owl possesses large forward-facing eyes and sensitive ear tufts for nocturnal hunting.",
+                "box": 1
+            },
+            {
+                "id": "g4-sci-5",
+                "term": "Wave Properties (Amplitude & Wavelength)",
+                "definition": "Wavelength is the distance between consecutive crests; amplitude is the height from resting position indicating wave energy.",
+                "example": "Louder sounds and brighter lights have waves with higher amplitude.",
+                "box": 1
+            },
+            {
+                "id": "g4-sci-6",
+                "term": "Fossil Record",
+                "definition": "The preserved remains, imprints, or traces of prehistoric organisms embedded in sedimentary rock layers.",
+                "example": "Finding marine shell fossils on mountain summits reveals those rocks were once submerged seafloors.",
+                "box": 1
+            }
+        ]
+    },
+    "grade_4_ela": {
+        "title": "Grade 4: English Language Arts",
+        "badge": "Grade 4 Language Arts",
+        "category": "curriculum",
+        "grade": "Grade 4",
+        "subject": "ela",
+        "cards": [
+            {
+                "id": "g4-ela-1",
+                "term": "Theme vs. Main Idea",
+                "definition": "The theme is the underlying moral or universal message about life; the main idea is what the specific text is mostly about.",
+                "example": "In The Tortoise and the Hare, the main idea is a race, but the theme is perseverance beats arrogance.",
+                "box": 1
+            },
+            {
+                "id": "g4-ela-2",
+                "term": "Simile & Metaphor",
+                "definition": "A simile compares two things using 'like' or 'as'; a metaphor compares two things directly without using 'like' or 'as'.",
+                "example": "Simile: 'Her voice was as clear as a bell.' Metaphor: 'The classroom was a bustling beehive.'",
+                "box": 1
+            },
+            {
+                "id": "g4-ela-3",
+                "term": "Point of View (1st vs. 3rd Person)",
+                "definition": "1st person is narrated by a character using 'I/we'; 3rd person is told by an outside narrator using 'he/she/they'.",
+                "example": "'I opened the heavy oak door' is first-person narration.",
+                "box": 1
+            },
+            {
+                "id": "g4-ela-4",
+                "term": "Text Structure",
+                "definition": "The organizational framework of an informational text, such as chronological order, cause and effect, or compare and contrast.",
+                "example": "An article detailing the causes and effects of a forest fire uses cause-and-effect text structure.",
+                "box": 1
+            },
+            {
+                "id": "g4-ela-5",
+                "term": "Context Clues",
+                "definition": "Hints found within surrounding sentences that readers use to infer the meaning of an unfamiliar word.",
+                "example": "In 'The arid desert received no rainfall for months', 'no rainfall' is a context clue that arid means dry.",
+                "box": 1
+            },
+            {
+                "id": "g4-ela-6",
+                "term": "Affixes (Prefixes & Suffixes)",
+                "definition": "Morphemes added to root words: prefixes attach at the beginning (un-, re-) and suffixes at the end (-ful, -less).",
+                "example": "Adding the prefix 'un-' and suffix '-able' transforms 'predict' into 'unpredictable'.",
+                "box": 1
+            }
+        ]
+    },
+    "book_1984": {
+        "title": "1984 - George Orwell",
+        "badge": "Digital Reader: 1984",
+        "category": "reader",
+        "bookId": "1984",
+        "cards": [
+            {
+                "id": "b1984-1",
+                "term": "Telescreen",
+                "definition": "A two-way television monitor used by the Party and Thought Police to continuously observe citizens while broadcasting propaganda.",
+                "example": "Winston positioned his desk in the alcove, just out of the telescreen's direct line of sight.",
+                "box": 1
+            },
+            {
+                "id": "b1984-2",
+                "term": "Doublethink",
+                "definition": "The psychological capability of simultaneously holding two contradictory beliefs in one's mind and accepting both as true.",
+                "example": "Doublethink allows Party members to know that the Ministry of Peace concerns itself with war.",
+                "box": 1
+            },
+            {
+                "id": "b1984-3",
+                "term": "Thoughtcrime",
+                "definition": "The cognitive act of holding unorthodox opinions or rebellious thoughts unaligned with Ingsoc dogma.",
+                "example": "Writing 'DOWN WITH BIG BROTHER' in his clandestine diary was the ultimate thoughtcrime.",
+                "box": 1
+            },
+            {
+                "id": "b1984-4",
+                "term": "Big Brother",
+                "definition": "The mysterious, supreme, and ubiquitous titular leader of the Party in Oceania.",
+                "example": "Posters across London bore the ominous caption: 'BIG BROTHER IS WATCHING YOU.'",
+                "box": 1
+            },
+            {
+                "id": "b1984-5",
+                "term": "Newspeak",
+                "definition": "The engineered language created by the Party to restrict range of thought and render dissenting ideas impossible.",
+                "example": "Syme excitedly explained how the Eleventh Edition of the Newspeak dictionary eliminated thousands of words.",
+                "box": 1
+            },
+            {
+                "id": "b1984-6",
+                "term": "Memory Hole",
+                "definition": "Pneumatic chute receptacles in the Ministry of Truth through which inconvenient historical records are incinerated.",
+                "example": "Winston rolled the discarded speech draft into a cylinder and deposited it into the memory hole.",
+                "box": 1
+            },
+            {
+                "id": "b1984-7",
+                "term": "Proles",
+                "definition": "The impoverished, working-class masses of Oceania, making up 85% of the total population.",
+                "example": "Winston reflected: 'If there is hope, it lies in the proles.'",
+                "box": 1
+            },
+            {
+                "id": "b1984-8",
+                "term": "Ministry of Truth (Minitrue)",
+                "definition": "The governmental department responsible for falsifying historical documents, news, literature, and educational media.",
+                "example": "At Minitrue, history was rewritten every morning to match whatever alliance the Party proclaimed.",
+                "box": 1
+            }
+        ]
+    },
+    "book_frankenstein": {
+        "title": "Frankenstein - Mary Shelley",
+        "badge": "Digital Reader: Frankenstein",
+        "category": "reader",
+        "bookId": "frankenstein",
+        "cards": [
+            {
+                "id": "bfr-1",
+                "term": "Galvanism",
+                "definition": "The early 19th-century scientific theory that electrical currents could stimulate muscular contraction and reanimate biological tissue.",
+                "example": "Mary Shelley drew upon Luigi Galvani's electrical experiments when imagining the creature's awakening.",
+                "box": 1
+            },
+            {
+                "id": "bfr-2",
+                "term": "Hubris",
+                "definition": "Excessive pride, ambition, or self-confidence that ultimately causes a character's tragic downfall.",
+                "example": "Victor Frankenstein's hubris led him to usurp natural biological laws without anticipating the consequences.",
+                "box": 1
+            },
+            {
+                "id": "bfr-3",
+                "term": "Modern Prometheus",
+                "definition": "The subtitle of the novel, referencing the Greek Titan who stole fire from the gods to give to humanity and suffered eternal torment.",
+                "example": "Like Prometheus bringing forbidden fire, Victor creates life from non-living matter and endures unbearable suffering.",
+                "box": 1
+            },
+            {
+                "id": "bfr-4",
+                "term": "Gothic Romanticism",
+                "definition": "A literary movement blending terrifying uncanny motifs, sublime natural landscapes, emotional passion, and moral critique.",
+                "example": "The frozen Arctic glaciers and gloomy Swiss castles underscore the novel's Gothic Romantic atmosphere.",
+                "box": 1
+            },
+            {
+                "id": "bfr-5",
+                "term": "The Sublime",
+                "definition": "A philosophical and aesthetic quality of overwhelming greatness, awe, and terror inspired by vast natural wonders.",
+                "example": "Gazing at Mont Blanc, Victor experiences the sublime power of towering glaciers that dwarf mortal ambition.",
+                "box": 1
+            },
+            {
+                "id": "bfr-6",
+                "term": "Solitude & Alienation",
+                "definition": "The devastating emotional state of social isolation, experienced by both the creator in his laboratory and the shunned monster.",
+                "example": "The creature laments: 'I am malicious because I am miserable. Am I not shunned and hated by all mankind?'",
+                "box": 1
+            }
+        ]
+    },
+    "book_federalist_papers": {
+        "title": "The Federalist Papers",
+        "badge": "Digital Reader: Federalist Papers",
+        "category": "reader",
+        "bookId": "federalist-papers",
+        "cards": [
+            {
+                "id": "bfed-1",
+                "term": "Federalism",
+                "definition": "A dual-sovereignty governance structure dividing powers between a national central government and individual constituent states.",
+                "example": "Federalist No. 45 explains how state governments retain extensive residual jurisdiction over local citizens.",
+                "box": 1
+            },
+            {
+                "id": "bfed-2",
+                "term": "Separation of Powers",
+                "definition": "The constitutional doctrine allocating distinct legislative, executive, and judicial functions to separate governing bodies.",
+                "example": "Federalist No. 51 famously asserts: 'Ambition must be made to counteract ambition.'",
+                "box": 1
+            },
+            {
+                "id": "bfed-3",
+                "term": "Faction",
+                "definition": "A group of citizens united by a common passion or economic interest contrary to the rights of others or public welfare.",
+                "example": "In Federalist No. 10, James Madison argues that a large commercial republic is the best defense against majority factions.",
+                "box": 1
+            },
+            {
+                "id": "bfed-4",
+                "term": "Checks & Balances",
+                "definition": "Constitutional mechanisms enabling each branch of government to restrain the unilateral powers of the other two branches.",
+                "example": "The presidential veto and congressional override represent fundamental checks and balances.",
+                "box": 1
+            },
+            {
+                "id": "bfed-5",
+                "term": "Constitutional Republic",
+                "definition": "A representative democracy where elected officials govern in accordance with a supreme written constitution safeguarding individual liberties.",
+                "example": "Madison distinguished a direct democracy from an extended republic governed by chosen representatives.",
+                "box": 1
+            }
+        ]
+    },
+    "book_american_yawp": {
+        "title": "The American Yawp: U.S. History",
+        "badge": "Digital Reader: American Yawp",
+        "category": "reader",
+        "bookId": "american-yawp",
+        "cards": [
+            {
+                "id": "byawp-1",
+                "term": "Columbian Exchange",
+                "definition": "The widespread transatlantic transfer of plants, animals, culture, human populations, communicable diseases, and ideas between the Americas and Afro-Eurasia.",
+                "example": "Potatoes and maize were introduced to Europe, while European smallpox caused catastrophic mortality among Native populations.",
+                "box": 1
+            },
+            {
+                "id": "byawp-2",
+                "term": "Mercantilism",
+                "definition": "An economic policy where empires maximize national wealth and bullion by strictly regulating colonial trade to generate trade surpluses.",
+                "example": "The Navigation Acts enforced British mercantilism by requiring colonial goods to be shipped on British vessels.",
+                "box": 1
+            },
+            {
+                "id": "byawp-3",
+                "term": "Reconstruction Era",
+                "definition": "The post-Civil War period (1865–1877) focused on reintegrating Southern states and securing civil rights for formerly enslaved African Americans.",
+                "example": "The 13th, 14th, and 15th Amendments formed the constitutional bedrock of Reconstruction.",
+                "box": 1
+            },
+            {
+                "id": "byawp-4",
+                "term": "Great Migration",
+                "definition": "The movement of over six million African Americans from the rural South to northern and western urban centers between 1910 and 1970.",
+                "example": "The Great Migration fueled the cultural renaissance in Harlem, Chicago, and Detroit.",
+                "box": 1
+            }
+        ]
+    },
+    "book_math_facts_repo": {
+        "title": "Mathematics Reference Codex",
+        "badge": "Digital Reader: Math Codex",
+        "category": "reader",
+        "bookId": "math-facts-repo",
+        "cards": [
+            {
+                "id": "bmf-1",
+                "term": "Euler's Identity",
+                "definition": "The landmark mathematical equation e^(iπ) + 1 = 0, uniting arithmetic, algebra, trigonometry, and analysis.",
+                "example": "Euler's identity combines the five most foundational constants: 0, 1, e, i, and π.",
+                "box": 1
+            },
+            {
+                "id": "bmf-2",
+                "term": "Piecewise Linear Function",
+                "definition": "A function composed of distinct linear intervals, each governed by its own slope and linear rule across specified domains.",
+                "example": "f(x) = { 2x for x < 0; x + 3 for x ≥ 0 } is a piecewise linear function.",
+                "box": 1
+            },
+            {
+                "id": "bmf-3",
+                "term": "Derivative (Instantaneous Rate of Change)",
+                "definition": "The limit of the average rate of change as the interval approaches zero, geometrically representing the tangent slope to a curve.",
+                "example": "The derivative of position with respect to time represents instantaneous velocity: v(t) = s'(t).",
+                "box": 1
+            },
+            {
+                "id": "bmf-4",
+                "term": "Standard Deviation",
+                "definition": "A statistical measure quantifying the amount of dispersion or variation of values around the arithmetic mean.",
+                "example": "A low standard deviation indicates that data points cluster tightly around the average.",
+                "box": 1
+            }
+        ]
+    }
+}

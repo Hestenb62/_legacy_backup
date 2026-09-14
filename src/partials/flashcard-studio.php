@@ -31,7 +31,12 @@
             <!-- Deck Selector & Leitner Stats Bar -->
             <div class="flashcard-control-row">
                 <div class="flashcard-deck-picker">
-                    <label for="flashcard-deck-select" class="flashcard-deck-label"><i class="fas fa-folder-open"></i> Deck:</label>
+                    <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                        <label for="flashcard-deck-select" class="flashcard-deck-label"><i class="fas fa-folder-open"></i> Deck:</label>
+                        <span id="flashcard-context-indicator" class="flashcard-context-chip" style="display: none; font-size: 0.72rem; font-weight: 700; background: color-mix(in srgb, var(--color-primary, #e11d48) 12%, var(--color-surface, #fff)); color: var(--color-primary, #e11d48); padding: 0.2rem 0.55rem; border-radius: 9999px; border: 1px solid color-mix(in srgb, var(--color-primary, #e11d48) 30%, transparent); align-items: center; gap: 0.35rem;">
+                            <i class="fas fa-bullseye" aria-hidden="true"></i> <span id="flashcard-context-chip-text">Auto-tailored to page</span>
+                        </span>
+                    </div>
                     <select id="flashcard-deck-select" class="flashcard-select" aria-label="Select Flashcard Deck">
                         <option value="biology">Cellular Biology &amp; Photosynthesis</option>
                         <option value="algebra">Algebra &amp; Coordinate Geometry</option>
