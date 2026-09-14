@@ -841,20 +841,10 @@ ksort($groupedTerms);
 $alphabet = range('A', 'Z');
 ?>
 
-<link rel="stylesheet" href="<?= function_exists('assetVersion') ? assetVersion('/assets/css/pages/math.css') : '/assets/css/pages/math.css' ?>">
+<link rel="stylesheet"
+    href="<?= function_exists('assetVersion') ? assetVersion('/assets/css/pages/math.css') : '/assets/css/pages/math.css' ?>">
 
 <main id="main-content" class="math-index-page">
-
-    <!-- Breadcrumbs -->
-    <nav class="breadcrumb-nav mb-6" aria-label="Breadcrumb">
-        <div class="container mx-auto px-4 flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400">
-            <a href="/index.php" class="hover:text-primary transition-colors">Home</a>
-            <span>/</span>
-            <a href="/library/index.php" class="hover:text-primary transition-colors">Library</a>
-            <span>/</span>
-            <span class="text-gray-900 dark:text-gray-100 font-semibold" aria-current="page">A–Z Mathematics Codex & Index</span>
-        </div>
-    </nav>
 
     <!-- Page Hero Section -->
     <header class="math-index-hero">
@@ -876,7 +866,8 @@ $alphabet = range('A', 'Z');
                 <input type="text" id="math-search-input" class="math-index-search-input"
                     placeholder="Search terms, formulas, axioms, grades (e.g. 'Pythagorean', 'Fraction', 'Grade 8')..."
                     aria-label="Search A-Z mathematical index" autocomplete="off" spellcheck="false">
-                <button type="button" id="math-clear-search" class="math-index-clear-btn" aria-label="Clear search input">
+                <button type="button" id="math-clear-search" class="math-index-clear-btn"
+                    aria-label="Clear search input">
                     <i class="fas fa-times"></i>
                 </button>
             </div>
@@ -889,14 +880,13 @@ $alphabet = range('A', 'Z');
             <?php foreach ($alphabet as $letter): ?>
                 <?php $hasTerms = isset($groupedTerms[$letter]); ?>
                 <?php if ($hasTerms): ?>
-                    <a href="#letter-<?= $letter ?>"
-                        class="math-az-letter-btn"
-                        data-az-letter="<?= $letter ?>"
+                    <a href="#letter-<?= $letter ?>" class="math-az-letter-btn" data-az-letter="<?= $letter ?>"
                         title="Jump to Letter <?= $letter ?> (<?= count($groupedTerms[$letter]) ?> terms)">
                         <?= $letter ?>
                     </a>
                 <?php else: ?>
-                    <span class="math-az-letter-btn disabled" aria-disabled="true" title="No terms starting with <?= $letter ?>">
+                    <span class="math-az-letter-btn disabled" aria-disabled="true"
+                        title="No terms starting with <?= $letter ?>">
                         <?= $letter ?>
                     </span>
                 <?php endif; ?>
@@ -933,7 +923,8 @@ $alphabet = range('A', 'Z');
             <span class="math-filter-label"><i class="fas fa-graduation-cap"></i> Specific Grade:</span>
             <div class="math-pills-wrap" role="tablist" aria-label="Filter by Individual Grade">
                 <?php for ($g = 1; $g <= 12; $g++): ?>
-                    <button type="button" class="math-pill-btn" data-grade="grade-<?= $g ?>" role="tab" aria-selected="false">
+                    <button type="button" class="math-pill-btn" data-grade="grade-<?= $g ?>" role="tab"
+                        aria-selected="false">
                         Grade <?= $g ?>
                     </button>
                 <?php endfor; ?>
@@ -972,13 +963,16 @@ $alphabet = range('A', 'Z');
     <!-- Status & Action Bar -->
     <div class="math-status-bar">
         <div class="math-match-count" aria-live="polite">
-            Showing <strong id="math-match-count-num"><?= count($mathTerms) ?></strong> of <span id="math-total-count-num"><?= count($mathTerms) ?></span> indexed mathematical concepts
+            Showing <strong id="math-match-count-num"><?= count($mathTerms) ?></strong> of <span
+                id="math-total-count-num"><?= count($mathTerms) ?></span> indexed mathematical concepts
         </div>
         <div class="math-view-toggle">
-            <button type="button" id="math-export-btn" class="math-index-export-btn" title="Export currently filtered terms as a plain text study sheet">
+            <button type="button" id="math-export-btn" class="math-index-export-btn"
+                title="Export currently filtered terms as a plain text study sheet">
                 <i class="fas fa-download"></i> Export Study Sheet
             </button>
-            <button type="button" id="math-print-btn" class="math-index-print-btn" title="Print this mathematical reference index">
+            <button type="button" id="math-print-btn" class="math-index-print-btn"
+                title="Print this mathematical reference index">
                 <i class="fas fa-print"></i> Print Index
             </button>
         </div>
@@ -992,17 +986,16 @@ $alphabet = range('A', 'Z');
                 <div class="math-az-letter-header">
                     <div class="math-az-letter-badge"><?= $letter ?></div>
                     <h2 class="math-az-letter-title"><?= $letter ?> — Concepts</h2>
-                    <span class="math-az-letter-count"><?= count($terms) ?> <?= count($terms) === 1 ? 'term' : 'terms' ?></span>
+                    <span class="math-az-letter-count"><?= count($terms) ?>
+                        <?= count($terms) === 1 ? 'term' : 'terms' ?></span>
                 </div>
 
                 <!-- Lexicon Entries List -->
                 <div class="math-lexicon-list">
                     <?php foreach ($terms as $term): ?>
-                        <article class="math-term-card math-lexicon-entry"
-                            data-term-id="<?= htmlspecialchars($term['id']) ?>"
-                            data-grade="<?= htmlspecialchars((string)$term['grade']) ?>"
-                            data-branch="<?= htmlspecialchars($term['branch']) ?>"
-                            data-letter="<?= $letter ?>"
+                        <article class="math-term-card math-lexicon-entry" data-term-id="<?= htmlspecialchars($term['id']) ?>"
+                            data-grade="<?= htmlspecialchars((string) $term['grade']) ?>"
+                            data-branch="<?= htmlspecialchars($term['branch']) ?>" data-letter="<?= $letter ?>"
                             data-keywords="<?= htmlspecialchars($term['keywords']) ?>">
 
                             <!-- Entry Header -->
@@ -1031,10 +1024,8 @@ $alphabet = range('A', 'Z');
                                         aria-label="Copy formula for <?= htmlspecialchars($term['name']) ?>">
                                         <i class="far fa-copy"></i>
                                     </button>
-                                    <button type="button" class="math-action-btn math-btn-fav"
-                                        title="Save to My Study List"
-                                        aria-label="Bookmark <?= htmlspecialchars($term['name']) ?>"
-                                        aria-pressed="false">
+                                    <button type="button" class="math-action-btn math-btn-fav" title="Save to My Study List"
+                                        aria-label="Bookmark <?= htmlspecialchars($term['name']) ?>" aria-pressed="false">
                                         <i class="far fa-star"></i>
                                     </button>
                                 </div>
@@ -1101,8 +1092,7 @@ $alphabet = range('A', 'Z');
                                     <i class="fas fa-bookmark"></i> Reference Codex Vol. <?= $term['grade'] ?>
                                 </span>
                                 <a href="/library/read/index.php?book=math-facts-repo&chapter=chapter-<?= $term['codexChapter'] ?>"
-                                    class="math-codex-link"
-                                    title="Read full Grade <?= $term['grade'] ?> Codex in Library">
+                                    class="math-codex-link" title="Read full Grade <?= $term['grade'] ?> Codex in Library">
                                     Explore Full Chapter <i class="fas fa-arrow-right"></i>
                                 </a>
                             </footer>
@@ -1132,6 +1122,7 @@ $alphabet = range('A', 'Z');
 
 </main>
 
-<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/pages/math-index.js') : '/assets/js/pages/math-index.js' ?>"></script>
+<script
+    src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/pages/math-index.js') : '/assets/js/pages/math-index.js' ?>"></script>
 
 <?php include '../src/footer.php'; ?>

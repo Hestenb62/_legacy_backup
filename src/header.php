@@ -425,6 +425,16 @@ if (!function_exists('assetVersion')) {
                                                     </div>
                                                 </a>
                                             </li>
+
+                                            <li>
+                                                <a href="/pages/math.php" class="nav-mega-item" role="menuitem">
+                                                    <i class="fas fa-calculator item-icon" style="color: #6366f1;"></i>
+                                                    <div>
+                                                        <span class="item-title">Mathematics Codex</span>
+                                                        <span class="item-desc">Math Definitions, Procedures, and Examples</span>
+                                                    </div>
+                                                </a>
+                                            </li>
                                         </ul>
                                     </div>
 
