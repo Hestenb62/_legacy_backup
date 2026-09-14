@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 // Set variables required by header.php for dynamic content
 $pageTitle = "ELA Resources - Hesten's Learning";
 $pageDescription = "Improve your English Language Arts skills with our comprehensive resources.";
@@ -29,6 +29,7 @@ include '../src/header.php';
                 
                 <div class="filter-tabs" role="tablist" aria-label="Filter resources by category">
                     <button class="filter-tab active" data-category="all" role="tab" aria-selected="true">All Resources</button>
+                    <button class="filter-tab" data-category="stories" role="tab" aria-selected="false">Stories &amp; Poems</button>
                     <button class="filter-tab" data-category="reading" role="tab" aria-selected="false">Reading</button>
                     <button class="filter-tab" data-category="writing" role="tab" aria-selected="false">Writing</button>
                     <button class="filter-tab" data-category="grammar" role="tab" aria-selected="false">Grammar & Vocab</button>
@@ -102,6 +103,22 @@ include '../src/header.php';
                 </div>
                 <a href="ela-literature.php" class="card-action-btn">Analyze Literature</a>
             </div>
+
+            <!-- 5. Short Stories & Poems -->
+            <div class="resource-card" data-card-category="stories">
+                <div class="resource-card-header">
+                    <div class="resource-card-icon literature" style="background: rgba(139, 92, 246, 0.15); color: #8b5cf6;"><i class="fas fa-feather-alt"></i></div>
+                    <h2 class="resource-card-title">Short Stories &amp; Poems</h2>
+                </div>
+                <p class="resource-card-desc">Read and listen to classic short stories, fables, and celebrated poems with dyslexia-friendly audio tools.</p>
+                <div class="pills-container">
+                    <button onclick="window.location.href='/student/#short-stories-poems'; return false;" class="topic-pill" data-search-terms="short stories poems poetry literature classics fables audio read">The Gift of the Magi</button>
+                    <button onclick="window.location.href='/student/#short-stories-poems'; return false;" class="topic-pill" data-search-terms="tell-tale heart poe gothic suspense guilt stories">The Tell-Tale Heart</button>
+                    <button onclick="window.location.href='/student/#short-stories-poems'; return false;" class="topic-pill" data-search-terms="road not taken robert frost poetry stanzas metaphor">The Road Not Taken</button>
+                    <button onclick="window.location.href='/student/#short-stories-poems'; return false;" class="topic-pill" data-search-terms="hope feathers emily dickinson poetry lyric resilience">Hope is the thing with feathers</button>
+                </div>
+                <a href="/student/#short-stories-poems" class="card-action-btn" style="background: #8b5cf6; color: white;">Explore Anthology</a>
+            </div>
         </div>
 
         <!-- Empty State -->
@@ -118,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.getElementById('topic-search');
     const clearBtn = document.getElementById('clear-search');
     const filterTabs = document.querySelectorAll('.filter-tab');
-    const cards = document.querySelectorAll('.resources-card');
+    const cards = document.querySelectorAll('.resource-card');
     const noResultsState = document.getElementById('no-results-state');
     const resetBtn = document.getElementById('reset-search-btn');
 

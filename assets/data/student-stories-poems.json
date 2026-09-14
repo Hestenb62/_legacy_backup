@@ -1,0 +1,1043 @@
+[
+  {
+    "id": "k-lion-mouse",
+    "title": "The Lion and the Mouse",
+    "author": "Aesop",
+    "type": "story",
+    "grade": "K",
+    "gradeBand": "k-2",
+    "gradeLabel": "Kindergarten",
+    "lexile": "350L",
+    "genre": "Fable",
+    "readTime": "2 min read",
+    "tags": ["Kindness", "Helping Others", "Fable", "Animals"],
+    "summary": "A mighty lion spares a tiny mouse. Later, when the lion is caught in a hunter's net, the little mouse chews through the ropes and sets the lion free.",
+    "fullText": "<p class=\"story-para\">Once upon a time, a great Lion was asleep in the warm sun. A tiny Mouse ran across his nose. The Lion woke up with a loud roar! He put his big paw over the little Mouse.</p><p class=\"story-para\">'Please do not eat me, King Lion!' squeaked the Mouse. 'If you let me go, maybe one day I can help you!' The Lion laughed. 'How could a tiny mouse ever help a big, strong lion?' But he was kind and let the Mouse go.</p><p class=\"story-para\">A few days later, hunters caught the Lion in a strong rope net. The Lion roared and roared. The little Mouse heard him. She ran to the net and began to gnaw on the thick ropes with her sharp little teeth.</p><p class=\"story-para\">Snap! Snap! The ropes broke. The Lion slipped out of the net and was free. 'Thank you, little friend,' said the Lion. 'You were right. Even the smallest friend can be a big help.'</p>",
+    "literaryElements": {
+      "theme": "No act of kindness is ever wasted, and even the smallest creature can help someone big and strong.",
+      "devices": [
+        "Fable Moral: A simple story that teaches a lesson about friendship and kindness.",
+        "Contrast: A gigantic, powerful lion compared to a tiny, quiet mouse."
+      ],
+      "vocabulary": [
+        "Gnaw: To chew or bite something again and again.",
+        "Mighty: Very strong and powerful."
+      ]
+    },
+    "quiz": [
+      {
+        "question": "How does the tiny Mouse help the big Lion?",
+        "options": ["She brings him food", "She chews through the hunter's ropes", "She scares the hunters away", "She hides in a tree"],
+        "answerIndex": 1,
+        "explanation": "The mouse uses her sharp teeth to gnaw through the thick ropes and free the lion."
+      },
+      {
+        "question": "What is the lesson of this story?",
+        "options": ["Little friends can be a big help", "Lions should never sleep in the sun", "Mice should run away fast", "Never talk to strangers"],
+        "answerIndex": 0,
+        "explanation": "The lion learned that even small friends can do great things when they help each other."
+      }
+    ]
+  },
+  {
+    "id": "k-the-swing",
+    "title": "The Swing",
+    "author": "Robert Louis Stevenson",
+    "type": "poem",
+    "grade": "K",
+    "gradeBand": "k-2",
+    "gradeLabel": "Kindergarten",
+    "lexile": "Poetry (Early)",
+    "genre": "Rhyming Poem",
+    "readTime": "1 min read",
+    "tags": ["Play", "Joy", "Rhyme", "Outdoors"],
+    "summary": "A delightful, rhythmic poem capturing the thrilling sensation of soaring up into the blue sky on a playground swing.",
+    "fullText": "<div class=\"poem-stanza\"><span class=\"poem-line\">How do you like to go up in a swing,</span><span class=\"poem-line\">Up in the air so blue?</span><span class=\"poem-line\">Oh, I do think it the pleasantest thing</span><span class=\"poem-line\">Ever a child can do!</span></div><div class=\"poem-stanza\"><span class=\"poem-line\">Up in the air and over the wall,</span><span class=\"poem-line\">Till I can see so wide,</span><span class=\"poem-line\">Rivers and trees and cattle and all</span><span class=\"poem-line\">Over the countryside—</span></div><div class=\"poem-stanza\"><span class=\"poem-line\">Till I look down on the garden green,</span><span class=\"poem-line\">Down on the roof so brown—</span><span class=\"poem-line\">Up in the air I go flying again,</span><span class=\"poem-line\">Up in the air and down!</span></div>",
+    "literaryElements": {
+      "theme": "The simple joys of childhood play and imagination allow us to see the world from new heights.",
+      "devices": [
+        "Rhythm & Rhyme: ABAB rhyme scheme mimicking the back-and-forth movement of a swing.",
+        "Color Imagery: 'Air so blue', 'garden green', and 'roof so brown'."
+      ],
+      "vocabulary": [
+        "Pleasantest: Most enjoyable, wonderful, or happy.",
+        "Cattle: Cows and farm animals."
+      ]
+    },
+    "quiz": [
+      {
+        "question": "What is 'the pleasantest thing ever a child can do' according to the poem?",
+        "options": ["Going to sleep", "Swinging up in the air", "Drawing pictures", "Running in the rain"],
+        "answerIndex": 1,
+        "explanation": "The speaker exclaims that going up in a swing is the pleasantest thing a child can do."
+      },
+      {
+        "question": "What does the child see from high up on the swing?",
+        "options": ["Rivers, trees, and cattle", "Only the stars", "A giant castle", "The ocean waves"],
+        "answerIndex": 0,
+        "explanation": "When the child swings over the wall, they can see rivers, trees, and cattle over the countryside."
+      }
+    ]
+  },
+  {
+    "id": "g1-boy-who-cried-wolf",
+    "title": "The Boy Who Cried Wolf",
+    "author": "Aesop",
+    "type": "story",
+    "grade": "1",
+    "gradeBand": "k-2",
+    "gradeLabel": "Grade 1",
+    "lexile": "420L",
+    "genre": "Moral Fable",
+    "readTime": "2 min read",
+    "tags": ["Honesty", "Trust", "Responsibility", "Fable"],
+    "summary": "A shepherd boy tricks the villagers by falsely shouting that a wolf is attacking his sheep. When a real wolf arrives, no one believes his cries.",
+    "fullText": "<p class=\"story-para\">A shepherd boy tended his sheep on a green hillside near a quiet village. One day, he felt very bored. To have some fun, he ran toward the village shouting: 'Wolf! Wolf! A wolf is chasing the sheep!'</p><p class=\"story-para\">The villagers dropped their tools and ran up the hill to help him. But when they arrived, there was no wolf. The boy laughed out loud at his silly trick. 'Do not cry wolf when there is no wolf!' warned an elder.</p><p class=\"story-para\">A few days later, the boy did the same thing again. 'Wolf! Wolf!' he cried. Once more, the villagers rushed up to save the sheep, only to find the boy laughing. They shook their heads and went back down the hill.</p><p class=\"story-para\">Then, one evening at sunset, a real wolf crept out from the dark forest. The boy was terrified. 'Wolf! Wolf! Please help me! A real wolf is here!' he screamed with all his might.</p><p class=\"story-para\">The villagers heard his cries, but they thought he was playing another trick. Nobody came. The wolf scattered the flock into the hills. The boy learned a painful lesson: Nobody believes a liar, even when he tells the truth.</p>",
+    "literaryElements": {
+      "theme": "Honesty builds trust; when you tell lies, people will not believe you even when you are telling the truth.",
+      "devices": [
+        "Repetition: Crying 'Wolf!' three times demonstrates cause and effect.",
+        "Moral Lesson: The ending explicitly provides guidance on integrity."
+      ],
+      "vocabulary": [
+        "Shepherd: A person who tends, feeds, and guards sheep.",
+        "Scattered: Separated and moved off in different directions."
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Why did the villagers ignore the boy when the real wolf appeared?",
+        "options": ["They were too busy sleeping", "They thought he was tricking them again", "They did not hear his cries", "They were afraid of sheep"],
+        "answerIndex": 1,
+        "explanation": "Because the boy had lied twice before, the villagers believed he was playing another trick."
+      },
+      {
+        "question": "What important lesson does the boy learn?",
+        "options": ["Always shout louder", "Never tell lies because you will lose people's trust", "Sheep can run very fast", "Wolves only hunt in the morning"],
+        "answerIndex": 1,
+        "explanation": "The moral of the fable is that a liar will not be believed, even when telling the truth."
+      }
+    ]
+  },
+  {
+    "id": "g1-at-the-seaside",
+    "title": "At the Seaside",
+    "author": "Robert Louis Stevenson",
+    "type": "poem",
+    "grade": "1",
+    "gradeBand": "k-2",
+    "gradeLabel": "Grade 1",
+    "lexile": "Poetry (Early)",
+    "genre": "Poetic Miniature",
+    "readTime": "1 min read",
+    "tags": ["Ocean", "Nature", "Rhyme", "Simplicity"],
+    "summary": "A short, vivid four-line poem about digging holes in the sand with a wooden spade and watching the sea fill them up.",
+    "fullText": "<div class=\"poem-stanza\"><span class=\"poem-line\">When I was down beside the sea</span><span class=\"poem-line\">A wooden spade they gave to me</span><span class=\"poem-line\">To dig the sandy shore.</span></div><div class=\"poem-stanza\"><span class=\"poem-line\">My holes were empty like a cup,</span><span class=\"poem-line\">In every hole the sea came up,</span><span class=\"poem-line\">Till it could hold no more.</span></div>",
+    "literaryElements": {
+      "theme": "Nature has boundless power and rhythm that gently interacts with our playful human efforts.",
+      "devices": [
+        "Simile: 'My holes were empty like a cup' compares dug sand to a drinking vessel.",
+        "AABB Rhyme Scheme: Simple, musical rhythm perfect for beginning readers."
+      ],
+      "vocabulary": [
+        "Spade: A small shovel used for digging dirt or sand.",
+        "Shore: The land along the edge of a sea, lake, or ocean."
+      ]
+    },
+    "quiz": [
+      {
+        "question": "What tool was the child given to dig on the beach?",
+        "options": ["A metal bucket", "A wooden spade", "A plastic scoop", "A long stick"],
+        "answerIndex": 1,
+        "explanation": "The poem states: 'A wooden spade they gave to me to dig the sandy shore.'"
+      },
+      {
+        "question": "What filled up the empty holes the child dug?",
+        "options": ["Sea shells", "The rising sea water", "Driftwood", "Rain drops"],
+        "answerIndex": 1,
+        "explanation": "The ocean waves rolled in and filled every hole 'till it could hold no more.'"
+      }
+    ]
+  },
+  {
+    "id": "g2-velveteen-rabbit",
+    "title": "The Velveteen Rabbit (Excerpt)",
+    "author": "Margery Williams",
+    "type": "story",
+    "grade": "2",
+    "gradeBand": "k-2",
+    "gradeLabel": "Grade 2",
+    "lexile": "580L",
+    "genre": "Classic Allegory",
+    "readTime": "3 min read",
+    "tags": ["Love", "Empathy", "Becoming Real", "Toys"],
+    "summary": "The wise old Skin Horse explains to the Velveteen Rabbit that being 'Real' is not about how you are made, but about being deeply loved by a child.",
+    "fullText": "<p class=\"story-para\">There was once a velveteen rabbit with thread whiskers and ears lined with pink sateen. He lived in the toy nursery, where other shiny mechanical toys boasted about how modern they were.</p><p class=\"story-para\">The Skin Horse had lived in the nursery longer than any of the others. He was so old that his brown coat was bald in patches, but he was very wise.</p><p class=\"story-para\">'What is REAL?' asked the Rabbit one day. 'Does it mean having things that buzz inside you and a key to wind you up?'</p><p class=\"story-para\">'Real isn't how you are made,' said the Skin Horse gently. 'It's a thing that happens to you. When a child loves you for a long, long time, not just to play with, but REALLY loves you, then you become Real.'</p><p class=\"story-para\">'Does it hurt?' asked the Rabbit.</p><p class=\"story-para\">'Sometimes,' said the Skin Horse. 'When you are Real, you don't mind being hurt. Generally, by the time you are Real, most of your hair has been loved off, your eyes drop out, and you get loose in the joints. But these things don't matter at all, because once you are Real you can't be ugly, except to people who don't understand.'</p>",
+    "literaryElements": {
+      "theme": "True beauty and self-worth come from love, shared experiences, and emotional connection.",
+      "devices": [
+        "Dialogue: Emotional conversation between an experienced elder and a curious youth.",
+        "Symbolism: Worn patches and loose joints represent a life full of love and service."
+      ],
+      "vocabulary": [
+        "Velveteen: A soft cotton fabric with a short, dense pile resembling velvet.",
+        "Wisdom: Having knowledge, experience, and good judgment."
+      ]
+    },
+    "quiz": [
+      {
+        "question": "According to the Skin Horse, what makes a toy 'Real'?",
+        "options": ["Having batteries and gears", "Being loved by a child for a long time", "Staying inside a glass box", "Costing a lot of money"],
+        "answerIndex": 1,
+        "explanation": "The Skin Horse explains that love transforms a toy and makes it truly Real."
+      },
+      {
+        "question": "What happens to a toy's appearance as it becomes Real?",
+        "options": ["It gets shinier and newer", "It gets worn, loose in the joints, and loved", "It turns into wood", "It never changes"],
+        "answerIndex": 1,
+        "explanation": "The toy becomes worn and shabby from being cuddled and loved over many years."
+      }
+    ]
+  },
+  {
+    "id": "g2-my-shadow",
+    "title": "My Shadow",
+    "author": "Robert Louis Stevenson",
+    "type": "poem",
+    "grade": "2",
+    "gradeBand": "k-2",
+    "gradeLabel": "Grade 2",
+    "lexile": "Poetry (Elementary)",
+    "genre": "Lyrical Rhyme",
+    "readTime": "2 min read",
+    "tags": ["Shadows", "Sunlight", "Play", "Observation"],
+    "summary": "A child observes his companion shadow that mimics his every move, jumping into bed before him and shooting up tall like a rubber ball.",
+    "fullText": "<div class=\"poem-stanza\"><span class=\"poem-line\">I have a little shadow that goes in and out with me,</span><span class=\"poem-line\">And what can be the use of him is more than I can see.</span><span class=\"poem-line\">He is very, very like me from the heels up to the head;</span><span class=\"poem-line\">And I see him jump before me, when I jump into my bed.</span></div><div class=\"poem-stanza\"><span class=\"poem-line\">The funniest thing about him is the way he likes to grow—</span><span class=\"poem-line\">Not at all like proper children, which is always very slow;</span><span class=\"poem-line\">For he sometimes shoots up taller like an india-rubber ball,</span><span class=\"poem-line\">And he sometimes gets so little that there's none of him at all.</span></div><div class=\"poem-stanza\"><span class=\"poem-line\">One morning, very early, before the sun was up,</span><span class=\"poem-line\">I rose and found the shining dew on every buttercup;</span><span class=\"poem-line\">But my lazy little shadow, like an arrant sleepy-head,</span><span class=\"poem-line\">Had stayed at home behind me and was fast asleep in bed.</span></div>",
+    "literaryElements": {
+      "theme": "Childhood curiosity turns natural scientific phenomena like light and shadows into playful companions.",
+      "devices": [
+        "Personification: Treating the shadow as a living child who sleeps in bed.",
+        "Simile: 'Shoots up taller like an india-rubber ball'."
+      ],
+      "vocabulary": [
+        "Dew: Tiny drops of water that form on cool surfaces at night.",
+        "Arrant: Complete, total, or thorough."
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Why was the shadow not outside with the child early in the morning?",
+        "options": ["It ran away to school", "The sun was not up yet to cast a shadow", "It was raining outside", "The child was wearing a coat"],
+        "answerIndex": 1,
+        "explanation": "Without sunlight or a light source, no shadow can be cast."
+      },
+      {
+        "question": "How does the shadow grow differently than real children?",
+        "options": ["It never changes size", "It shoots up tall quickly and then gets tiny", "It only grows sideways", "It gets older each year"],
+        "answerIndex": 1,
+        "explanation": "Depending on the angle of the sun, the shadow stretches tall or shrinks down immediately."
+      }
+    ]
+  },
+  {
+    "id": "g3-ant-grasshopper",
+    "title": "The Ant and the Grasshopper",
+    "author": "Aesop",
+    "type": "story",
+    "grade": "3",
+    "gradeBand": "3-5",
+    "gradeLabel": "Grade 3",
+    "lexile": "620L",
+    "genre": "Classic Fable",
+    "readTime": "3 min read",
+    "tags": ["Preparation", "Hard Work", "Foresight", "Seasons"],
+    "summary": "During summer, industrious ants store grain for winter while a grasshopper spends his days singing. When the snow arrives, the grasshopper finds himself hungry.",
+    "fullText": "<p class=\"story-para\">On a warm summer day, a Grasshopper was hopping about in a meadow, chirping and singing to his heart's content. An Ant passed by, bearing along with great effort an ear of corn he was taking to his nest.</p><p class=\"story-para\">'Why not come and sing with me,' said the Grasshopper, 'instead of toiling and dragging that heavy load?'</p><p class=\"story-para\">'I am helping to lay up food for the coming winter,' said the Ant, 'and I recommend you do the same. Winter will be cold and food will be scarce.'</p><p class=\"story-para\">'Why bother about winter?' said the Grasshopper. 'We have plenty of food at present, and the sun is warm.' But the Ant went on its way and continued its toil.</p><p class=\"story-para\">When winter came, freezing winds swept the meadow and snow covered the ground. The Grasshopper found himself dying of hunger, while he saw the ants distributing corn and grain every day from the stores they had collected in the summer.</p><p class=\"story-para\">Then the Grasshopper knew: It is wise to prepare today for the needs of tomorrow.</p>",
+    "literaryElements": {
+      "theme": "Preparation and responsible work today ensure security and comfort in the future.",
+      "devices": [
+        "Character Contrast: The industrious, forward-thinking ant versus the careless, impulsive grasshopper.",
+        "Seasonal Symbolism: Summer represents abundance and opportunity; winter represents scarcity and consequence."
+      ],
+      "vocabulary": [
+        "Toil: To work extremely hard and continuously.",
+        "Scarce: Insufficient for the demand; rare or hard to find."
+      ]
+    },
+    "quiz": [
+      {
+        "question": "What did the Ant do during the summer while the Grasshopper sang?",
+        "options": ["Slept under flowers", "Gathered and stored grain for winter", "Flew over the meadow", "Swam in the creek"],
+        "answerIndex": 1,
+        "explanation": "The ant worked tirelessly to gather and store food for the harsh winter ahead."
+      },
+      {
+        "question": "What lesson does the story convey about planning?",
+        "options": ["Always wait until winter to gather food", "Singing is more important than eating", "It is wise to prepare today for the needs of tomorrow", "Never share with ants"],
+        "answerIndex": 2,
+        "explanation": "Foresight and early preparation prevent crisis when difficult times arrive."
+      }
+    ]
+  },
+  {
+    "id": "g3-wynken-blynken-nod",
+    "title": "Wynken, Blynken, and Nod",
+    "author": "Eugene Field",
+    "type": "poem",
+    "grade": "3",
+    "gradeBand": "3-5",
+    "gradeLabel": "Grade 3",
+    "lexile": "Poetry (Elementary)",
+    "genre": "Lullaby / Fantasy",
+    "readTime": "2 min read",
+    "tags": ["Lullaby", "Night Sky", "Imagination", "Stars"],
+    "summary": "A magical bedtime voyage where three fishermen—representing a child's eyes and sleepy head—sail into a sea of stars in a wooden shoe.",
+    "fullText": "<div class=\"poem-stanza\"><span class=\"poem-line\">Wynken, Blynken, and Nod one night</span><span class=\"poem-line\">Sailed off in a wooden shoe—</span><span class=\"poem-line\">Sailed on a river of crystal light,</span><span class=\"poem-line\">Into a sea of dew.</span><span class=\"poem-line\">\"Where are you going, and what do you wish?\"</span><span class=\"poem-line\">The old moon asked the three.</span><span class=\"poem-line\">\"We have come to fish for the herring fish</span><span class=\"poem-line\">That live in this beautiful sea;</span><span class=\"poem-line\">Nets of silver and gold have we!\"</span><span class=\"poem-line\">Said Wynken, Blynken, and Nod.</span></div><div class=\"poem-stanza\"><span class=\"poem-line\">The little stars were the herring fish</span><span class=\"poem-line\">That twinklered in that misty sea,</span><span class=\"poem-line\">And they cast their nets wherever they wished,</span><span class=\"poem-line\">Through the glittering foam and spree.</span><span class=\"poem-line\">Now Wynken and Blynken are two little eyes,</span><span class=\"poem-line\">And Nod is a little head,</span><span class=\"poem-line\">And the wooden shoe that sailed the skies</span><span class=\"poem-line\">Is a wee one's trundle-bed.</span></div>",
+    "literaryElements": {
+      "theme": "Bedtime and dreams are a whimsical voyage across the universe powered by a child's imagination.",
+      "devices": [
+        "Metaphor: Wynken and Blynken are a baby's blinking eyes, Nod is a nodding sleepy head, and the shoe is a bed.",
+        "Sensory Imagery: 'Crystal light', 'sea of dew', 'nets of silver and gold'."
+      ],
+      "vocabulary": [
+        "Crystal: Clear and transparent like fine glass.",
+        "Trundle-bed: A low bed on wheels that can be rolled beneath another bed."
+      ]
+    },
+    "quiz": [
+      {
+        "question": "What do Wynken, Blynken, and Nod represent in reality?",
+        "options": ["Three kittens", "Two blinking eyes and a sleepy head", "Three little birds", "Stars in the night sky"],
+        "answerIndex": 1,
+        "explanation": "The poem reveals at the end that Wynken and Blynken are a baby's eyes, and Nod is the sleepy nodding head."
+      },
+      {
+        "question": "What was the 'wooden shoe' that sailed into the sky?",
+        "options": ["A real boat", "A child's bed", "A kite", "A magical bird"],
+        "answerIndex": 1,
+        "explanation": "The wooden shoe is a poetic metaphor for the child's cozy trundle-bed."
+      }
+    ]
+  },
+  {
+    "id": "g4-selfish-giant",
+    "title": "The Selfish Giant (Excerpt)",
+    "author": "Oscar Wilde",
+    "type": "story",
+    "grade": "4",
+    "gradeBand": "3-5",
+    "gradeLabel": "Grade 4",
+    "lexile": "710L",
+    "genre": "Fairy Tale",
+    "readTime": "4 min read",
+    "tags": ["Generosity", "Transformation", "Spring", "Compassion"],
+    "summary": "A giant builds a high wall to ban children from his beautiful garden, plunging it into perpetual winter until he realizes that love and laughter bring the spring.",
+    "fullText": "<p class=\"story-para\">Every afternoon, as they were coming from school, the children used to go and play in the Giant's garden. It was a large lovely garden, with soft green grass and peach-trees that in spring-time broke out into delicate blossoms of pink and pearl.</p><p class=\"story-para\">One day the Giant returned from a long journey. When he saw the children playing in his garden, he cried in a rough voice: 'My own garden is my own garden! Anyone can understand that, and I will allow nobody to play in it but myself.' So he built a high wall all round it, and put up a notice-board: TRESPASSERS WILL BE PROSECUTED.</p><p class=\"story-para\">Then the Spring came, and all over the country there were little blossoms and little birds. Only in the garden of the Selfish Giant it was still Winter. The birds did not care to sing in it as there were no children, and the trees forgot to blossom. The only people who were pleased were the Snow and the Frost. 'Spring has forgotten this garden,' they cried, 'so we will live here all the year round.'</p><p class=\"story-para\">One morning the Giant was lying awake in bed when he heard lovely music. A little linnet was singing outside his window. Through a little hole in the wall the children had crept in, and they were sitting in the branches of the trees. In every tree that he could see there was a little child. And the trees were so glad to have the children back again that they had covered themselves with blossoms!</p><p class=\"story-para\">And the Giant's heart melted as he looked out. 'How selfish I have been!' he said. 'Now I know why the Spring would not come here. I will knock down the wall, and my garden shall be the children's playground for ever and ever.'</p>",
+    "literaryElements": {
+      "theme": "Selfishness brings emotional coldness and isolation, while generosity and sharing restore warmth and joy to life.",
+      "devices": [
+        "Pathetic Fallacy: Nature mirrors the Giant's internal state—winter reflects his selfishness, spring reflects his love.",
+        "Personification: Snow, Frost, North Wind, and Hail are depicted as guests residing in the barren garden."
+      ],
+      "vocabulary": [
+        "Prosecuted: Brought before a court for breaking a rule or law.",
+        "Perpetual: Never ending or changing; occurring continually."
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Why did Spring refuse to enter the Giant's garden?",
+        "options": ["The garden was too small", "The Giant had banished the children and built a wall", "The trees were dead", "It was located on a snowy mountain"],
+        "answerIndex": 1,
+        "explanation": "Because the Giant selfishly shut out the children, nature withheld its warmth and left the garden in perpetual winter."
+      },
+      {
+        "question": "What did the Giant do when he realized his mistake?",
+        "options": ["He built a higher wall", "He knocked down the wall to let the children play forever", "He moved away to another town", "He sold the garden"],
+        "answerIndex": 1,
+        "explanation": "The Giant's heart melted; he broke down the wall and welcomed the children back into his garden."
+      }
+    ]
+  },
+  {
+    "id": "g4-hope-feathers",
+    "title": "Hope is the thing with feathers",
+    "author": "Emily Dickinson",
+    "type": "poem",
+    "grade": "4",
+    "gradeBand": "3-5",
+    "gradeLabel": "Grade 4",
+    "lexile": "Poetry (All Grades)",
+    "genre": "Lyric Poetry",
+    "readTime": "2 min read",
+    "tags": ["Hope", "Resilience", "Extended Metaphor", "Strength"],
+    "summary": "Dickinson personifies hope as an indomitable little songbird that perches in the human soul and sings through the fiercest storms without ever asking for a crumb.",
+    "fullText": "<div class=\"poem-stanza\"><span class=\"poem-line\">\"Hope\" is the thing with feathers -</span><span class=\"poem-line\">That perches in the soul -</span><span class=\"poem-line\">And sings the tune without the words -</span><span class=\"poem-line\">And never stops - at all -</span></div><div class=\"poem-stanza\"><span class=\"poem-line\">And sweetest - in the Gale - is heard -</span><span class=\"poem-line\">And sore must be the storm -</span><span class=\"poem-line\">That could abash the little Bird</span><span class=\"poem-line\">That kept so many warm -</span></div><div class=\"poem-stanza\"><span class=\"poem-line\">I've heard it in the chillest land -</span><span class=\"poem-line\">And on the strangest Sea -</span><span class=\"poem-line\">Yet - never - in Extremity,</span><span class=\"poem-line\">It asked a crumb - of me.</span></div>",
+    "literaryElements": {
+      "theme": "Hope is a resilient, unconditional inner strength that sustains us through our deepest hardships.",
+      "devices": [
+        "Extended Metaphor: Hope compared to a persistent singing bird.",
+        "Em-Dashes: Rhythmic pauses creating quiet reflection."
+      ],
+      "vocabulary": [
+        "Abash: To silence, intimidate, or disconcert.",
+        "Gale: A fierce, howling windstorm."
+      ]
+    },
+    "quiz": [
+      {
+        "question": "What does the bird of hope ask for in return for its song?",
+        "options": ["A warm shelter", "Nothing at all, not even a crumb", "Daily seeds", "Gold coins"],
+        "answerIndex": 1,
+        "explanation": "Dickinson emphasizes that hope gives comfort freely without demanding anything from us."
+      },
+      {
+        "question": "Where does this little bird perch?",
+        "options": ["In an oak tree", "In the soul", "On a windowsill", "In the clouds"],
+        "answerIndex": 1,
+        "explanation": "The poem opens by stating that hope 'perches in the soul'."
+      }
+    ]
+  },
+  {
+    "id": "g5-rip-van-winkle",
+    "title": "Rip Van Winkle (Excerpt)",
+    "author": "Washington Irving",
+    "type": "story",
+    "grade": "5",
+    "gradeBand": "3-5",
+    "gradeLabel": "Grade 5",
+    "lexile": "830L",
+    "genre": "American Folklore",
+    "readTime": "5 min read",
+    "tags": ["Folklore", "Catskills", "Time Passage", "American Revolution"],
+    "summary": "An easy-going Dutch-American colonist wanders into the magical Catskill Mountains, drinks a strange draught with mysterious bowling figures, and awakens twenty years later to a transformed nation.",
+    "fullText": "<p class=\"story-para\">Whoever has made a voyage up the Hudson must remember the Catskill Mountains. In a little village at the foot of these fairy mountains lived a simple, good-natured fellow of the name of Rip Van Winkle.</p><p class=\"story-para\">Rip was a great favourite among all the good wives of the village, and the children would shout with joy whenever he approached. He assisted at their sports, made their playthings, and flew their kites. The great error in Rip's composition was an insuperable aversion to all kinds of profitable labour.</p><p class=\"story-para\">On a fine autumnal day, Rip had unscrupulously scrambled to one of the highest parts of the Catskill mountains. Toward evening, as he was about to descend, he heard a voice from afar calling: 'Rip Van Winkle! Rip Van Winkle!' He looked round and perceived a strange figure slowly toiling up the rocks, bending under the weight of something bound on his back.</p><p class=\"story-para\">Rip helped the stranger carry his heavy cask into an amphitheater surrounded by perpendicular precipices. In the center, a company of odd-looking personages in antique Dutch dress were playing at nine-pins. The rolling balls echoed along the mountains like rumbling peals of thunder.</p><p class=\"story-para\">Rip ventured to taste the beverage from the flagon. One taste provoked another, until at length his senses were overpowered, his eyes swam in his head, and he fell into a deep sleep.</p><p class=\"story-para\">On waking, he found himself on the green knoll. He rubbed his eyes—it was a bright sunny morning. 'Surely,' thought Rip, 'I have not slept here all night!' He looked for his gun, but found an old, rusted firelock with the barrel encrusted with rust. As he rose to walk, he found his joints stiff. His beard had grown a foot long! When he returned to his village, everything was changed: the houses were different, strangers walked the streets, and instead of King George III, a painted sign honored General George Washington. Rip had slept through the American Revolution!</p>",
+    "literaryElements": {
+      "theme": "Time moves inexorably forward; refusing to engage with life's responsibilities leaves one stranded in the past.",
+      "devices": [
+        "Regional Color / Folklore: Vivid descriptions of the Hudson River Valley and mystical Catskill lore.",
+        "Historical Irony: Rip slept peacefully through the monumental birth of an independent nation."
+      ],
+      "vocabulary": [
+        "Insuperable: Impossible to overcome or surpass.",
+        "Aversion: A strong dislike or disinclination towards something.",
+        "Precipice: A very steep rock face or cliff."
+      ]
+    },
+    "quiz": [
+      {
+        "question": "How long was Rip Van Winkle asleep in the Catskill mountains?",
+        "options": ["One single night", "Seven days", "Twenty years", "One hundred years"],
+        "answerIndex": 2,
+        "explanation": "Rip slept for twenty years, missing the entire Revolutionary War and awakening an old man."
+      },
+      {
+        "question": "What major change greeted Rip when he returned to his village?",
+        "options": ["The village was abandoned", "His portrait had replaced the King's", "America had become an independent nation under President George Washington", "The mountains had vanished"],
+        "answerIndex": 2,
+        "explanation": "The village inn sign with King George had been repainted with General George Washington, signaling the birth of the United States."
+      }
+    ]
+  },
+  {
+    "id": "g5-road-not-taken",
+    "title": "The Road Not Taken",
+    "author": "Robert Frost",
+    "type": "poem",
+    "grade": "5",
+    "gradeBand": "3-5",
+    "gradeLabel": "Grade 5",
+    "lexile": "Poetry (Intermediate)",
+    "genre": "Reflective Poetry",
+    "readTime": "2 min read",
+    "tags": ["Decisions", "Life Journey", "Individuality", "Nature"],
+    "summary": "At a fork in an autumn wood, a traveler must choose between two diverging paths, contemplating how a single choice alters the course of a lifetime.",
+    "fullText": "<div class=\"poem-stanza\"><span class=\"poem-line\">Two roads diverged in a yellow wood,</span><span class=\"poem-line\">And sorry I could not travel both</span><span class=\"poem-line\">And be one traveler, long I stood</span><span class=\"poem-line\">And looked down one as far as I could</span><span class=\"poem-line\">To where it bent in the undergrowth;</span></div><div class=\"poem-stanza\"><span class=\"poem-line\">Then took the other, as just as fair,</span><span class=\"poem-line\">And having perhaps the better claim,</span><span class=\"poem-line\">Because it was grassy and wanted wear;</span><span class=\"poem-line\">Though as for that the passing there</span><span class=\"poem-line\">Had worn them really about the same,</span></div><div class=\"poem-stanza\"><span class=\"poem-line\">And both that morning equally lay</span><span class=\"poem-line\">In leaves no step had trodden black.</span><span class=\"poem-line\">Oh, I kept the first for another day!</span><span class=\"poem-line\">Yet knowing how way leads on to way,</span><span class=\"poem-line\">I doubted if I should ever come back.</span></div><div class=\"poem-stanza\"><span class=\"poem-line\">I shall be telling this with a sigh</span><span class=\"poem-line\">Somewhere ages and ages hence:</span><span class=\"poem-line\">Two roads diverged in a wood, and I—</span><span class=\"poem-line\">I took the one less traveled by,</span><span class=\"poem-line\">And that has made all the difference.</span></div>",
+    "literaryElements": {
+      "theme": "Every major decision in life closes off alternative possibilities and irreversibly shapes who we become.",
+      "devices": [
+        "Extended Metaphor: Roads in a forest represent choices in life.",
+        "Rhyme Scheme: ABAAB stanzaic structure."
+      ],
+      "vocabulary": [
+        "Diverged: Split off in two different directions.",
+        "Trodden: Stepped upon or walked over."
+      ]
+    },
+    "quiz": [
+      {
+        "question": "What do the two paths in the yellow wood symbolize?",
+        "options": ["A shortcut to town", "Different seasons", "Major life choices and directions", "Left and right hands"],
+        "answerIndex": 2,
+        "explanation": "Frost uses the forest crossroads as an extended metaphor for the life choices that define our future."
+      },
+      {
+        "question": "Why does the traveler doubt he will ever walk the first road again?",
+        "options": ["Because he will forget where it was", "Because one path naturally leads forward to another", "Because the road was washed out", "Because it is getting dark"],
+        "answerIndex": 1,
+        "explanation": "Frost recognizes that 'way leads on to way'—choices compound and lead us too far ahead to easily retrace our steps."
+      }
+    ]
+  },
+  {
+    "id": "g6-gift-of-magi",
+    "title": "The Gift of the Magi",
+    "author": "O. Henry",
+    "type": "story",
+    "grade": "6",
+    "gradeBand": "6-8",
+    "gradeLabel": "Grade 6",
+    "lexile": "870L",
+    "genre": "Classic Short Story",
+    "readTime": "6 min read",
+    "tags": ["Situational Irony", "Sacrifice", "Generosity", "Christmas"],
+    "summary": "Della and Jim each secretly sell their most prized possession to purchase an accessory for the other's treasure, demonstrating the purest spirit of giving.",
+    "fullText": "<p class=\"story-para\">One dollar and eighty-seven cents. That was all. And sixty cents of it was in pennies saved by close bargaining with the grocer. Three times Della counted it. And the next day would be Christmas.</p><p class=\"story-para\">Now, there were two possessions of the James Dillingham Youngs in which they both took a mighty pride. One was Jim's gold watch that had been his father's and his grandfather's. The other was Della's hair, which rippled like a cascade of brown waters below her knee.</p><p class=\"story-para\">Della ran to Madame Sofronie's shop. 'Will you buy my hair?' asked Della. 'Twenty dollars,' said Madame. With the money, Della searched the stores for Jim's gift and found a platinum watch chain, chaste and worthy of his heirloom watch.</p><p class=\"story-para\">When Jim arrived home, he stopped inside the door, transfixed. Della had shorn her locks! Jim drew a package from his pocket. Della opened it with an ecstatic cry, followed by tears. For there lay The Combs—pure tortoise shell with jewelled rims, long admired in a shop window, now useless for her vanished hair.</p><p class=\"story-para\">Smiling through her tears, Della held out her gift: 'Give me your watch, Jim! Let's see how it looks!' Jim tumbled on the sofa and smiled: 'Della, let's put our presents away a while. I sold the watch to get the money to buy your combs.'</p><p class=\"story-para\">Of all who give gifts, these two were the wisest.</p>",
+    "literaryElements": {
+      "theme": "The ultimate gift is the willing sacrifice of what is dearest to us out of pure love for another.",
+      "devices": [
+        "Situational Irony: Each character's sacrifice renders the other's gift practically useless but emotionally priceless.",
+        "Biblical Allusion: The Magi of Bethlehem who invented the wisdom of gift-giving."
+      ],
+      "vocabulary": [
+        "Parsimony: Stinginess; extreme reluctance to spend money.",
+        "Chaste: Simple and unrestrained by excessive ornament."
+      ]
+    },
+    "quiz": [
+      {
+        "question": "What is the central situational irony of the story?",
+        "options": ["Jim bought gifts for himself", "Della sold her hair to buy a watch chain, and Jim sold his watch to buy hair combs", "Both gifts were stolen", "Neither character liked their present"],
+        "answerIndex": 1,
+        "explanation": "Each partner sacrificed the very possession that their partner's gift was designed to enhance."
+      },
+      {
+        "question": "Why does the narrator call them 'the wisest'?",
+        "options": ["They saved money", "They proved that mutual self-sacrifice is more valuable than any possession", "They planned ahead", "They returned their gifts"],
+        "answerIndex": 1,
+        "explanation": "Their gifts symbolized pure, selfless love, which surpasses all material wealth."
+      }
+    ]
+  },
+  {
+    "id": "g6-harlem-dream",
+    "title": "Harlem (A Dream Deferred)",
+    "author": "Langston Hughes",
+    "type": "poem",
+    "grade": "6",
+    "gradeBand": "6-8",
+    "gradeLabel": "Grade 6",
+    "lexile": "Poetry (Middle/High)",
+    "genre": "Harlem Renaissance Poetry",
+    "readTime": "2 min read",
+    "tags": ["Civil Rights", "Social Justice", "Simile", "Urgency"],
+    "summary": "Hughes questions what happens to human dreams and aspirations when they are denied and postponed, warning of the explosive social consequences.",
+    "fullText": "<div class=\"poem-stanza\"><span class=\"poem-line\">What happens to a dream deferred?</span></div><div class=\"poem-stanza\"><span class=\"poem-line\">Does it dry up</span><span class=\"poem-line\">like a raisin in the sun?</span><span class=\"poem-line\">Or fester like a sore—</span><span class=\"poem-line\">And then run?</span><span class=\"poem-line\">Does it stink like rotten meat?</span><span class=\"poem-line\">Or crust and sugar over—</span><span class=\"poem-line\">like a syrupy sweet?</span></div><div class=\"poem-stanza\"><span class=\"poem-line\">Maybe it just sags</span><span class=\"poem-line\">like a heavy load.</span></div><div class=\"poem-stanza\"><span class=\"poem-line\"><em>Or does it explode?</em></span></div>",
+    "literaryElements": {
+      "theme": "Prolonged denial of equality and personal hope creates internal pressure that will inevitably ignite social upheaval.",
+      "devices": [
+        "Sensory Similes: Decaying meat, festering sores, and sun-baked raisins evoke visceral discomfort.",
+        "Climactic Ending: The closing question changes from passive deterioration to sudden violent explosion."
+      ],
+      "vocabulary": [
+        "Deferred: Postponed, delayed, or put off to a later time.",
+        "Fester: To become infected, produce pus, and rot."
+      ]
+    },
+    "quiz": [
+      {
+        "question": "What is the central question explored in Hughes's poem?",
+        "options": ["How to get a good night's sleep", "What happens when dreams and rights are withheld", "How to make raisins", "How to write jazz lyrics"],
+        "answerIndex": 1,
+        "explanation": "Hughes investigates the painful psychological and social consequences when human equality is continuously delayed."
+      },
+      {
+        "question": "What does the final italicized line suggest?",
+        "options": ["People will simply forget their dreams", "Unaddressed injustice will eventually lead to an explosion of resistance", "Sugar turns into candy", "The sun sets in Harlem"],
+        "answerIndex": 1,
+        "explanation": "The final line warns that deferred justice cannot remain dormant; it will inevitably explode."
+      }
+    ]
+  },
+  {
+    "id": "g7-tell-tale-heart",
+    "title": "The Tell-Tale Heart",
+    "author": "Edgar Allan Poe",
+    "type": "story",
+    "grade": "7",
+    "gradeBand": "6-8",
+    "gradeLabel": "Grade 7",
+    "lexile": "820L",
+    "genre": "Gothic Psychological Horror",
+    "readTime": "6 min read",
+    "tags": ["Unreliable Narrator", "Paranoia", "Guilt", "Gothic"],
+    "summary": "A narrator who vigorously denies his insanity confesses to murdering an old man because of his pale 'vulture eye', only for his own overwhelming guilt to hallucinate the victim's heartbeat.",
+    "fullText": "<p class=\"story-para\">True!—nervous—very dreadfully nervous I had been and am; but why will you say that I am mad? The disease had sharpened my senses. Above all was the sense of hearing acute. How, then, am I mad? Hearken! and observe how calmly I can tell you the whole story.</p><p class=\"story-para\">It was his eye! He had the eye of a vulture—a pale blue eye, with a film over it. Whenever it fell upon me, my blood ran cold; and so I made up my mind to take the life of the old man, and thus rid myself of the eye forever.</p><p class=\"story-para\">Every night, about midnight, I turned the latch of his door. On the eighth night, I slipped inside. A low, dull, quick sound came to my ears, such as a watch makes when enveloped in cotton. It was the beating of the old man's heart! With a loud yell, I sprang into the room and suffocated him under the heavy bed.</p><p class=\"story-para\">I tore up three floorboards and concealed the dismembered corpse beneath the timbers. When three police officers arrived in the morning to investigate a shriek, I smiled and placed my chair directly over the boards hiding the body.</p><p class=\"story-para\">They chatted amiably, but soon my head ached. A low, dull, quick sound arose. It grew louder, louder! Did they not hear it? They were mocking my agony! 'Villains!' I shrieked, 'dissemble no more! I admit the deed!—tear up the planks! here, here!—it is the beating of his hideous heart!'</p>",
+    "literaryElements": {
+      "theme": "The human conscience cannot permanently suppress guilt; psychological mania will betray the deceiver.",
+      "devices": [
+        "Unreliable Narrator: The speaker's frantic declarations of sanity prove his mental instability.",
+        "Auditory Symbolism: The heartbeat symbolizes conscience, mortality, and ticking time."
+      ],
+      "vocabulary": [
+        "Dissimulation: Concealment of one's thoughts, feelings, or real character.",
+        "Sagacity: Sharp mental discernment and sound judgment."
+      ]
+    },
+    "quiz": [
+      {
+        "question": "What about the old man drove the narrator to commit the murder?",
+        "options": ["His gold and fortune", "His insults", "His pale blue 'vulture eye'", "His barking dog"],
+        "answerIndex": 2,
+        "explanation": "The narrator states explicitly that he loved the old man, but could not bear his pale, filmed-over vulture eye."
+      },
+      {
+        "question": "Why does the narrator scream his confession to the police?",
+        "options": ["The police found the body", "He believes the officers hear the beating heart and are mocking his guilt", "He wanted a reward", "His attorney advised him to confess"],
+        "answerIndex": 1,
+        "explanation": "His hallucinated sound of the beating heart drove him into a frenzy of paranoia."
+      }
+    ]
+  },
+  {
+    "id": "g7-annabel-lee",
+    "title": "Annabel Lee",
+    "author": "Edgar Allan Poe",
+    "type": "poem",
+    "grade": "7",
+    "gradeBand": "6-8",
+    "gradeLabel": "Grade 7",
+    "lexile": "Poetry (Middle School)",
+    "genre": "Romantic Gothic Ballad",
+    "readTime": "3 min read",
+    "tags": ["Love", "Grief", "Ocean", "Ballad Meter"],
+    "summary": "In a kingdom by the sea, a speaker mourns his deceased maiden, insisting that even angels in heaven could never sever their eternal love.",
+    "fullText": "<div class=\"poem-stanza\"><span class=\"poem-line\">It was many and many a year ago,</span><span class=\"poem-line\">In a kingdom by the sea,</span><span class=\"poem-line\">That a maiden there lived whom you may know</span><span class=\"poem-line\">By the name of Annabel Lee;</span><span class=\"poem-line\">And this maiden she lived with no other thought</span><span class=\"poem-line\">Than to love and be loved by me.</span></div><div class=\"poem-stanza\"><span class=\"poem-line\">I was a child and she was a child,</span><span class=\"poem-line\">In this kingdom by the sea,</span><span class=\"poem-line\">But we loved with a love that was more than love—</span><span class=\"poem-line\">I and my Annabel Lee—</span><span class=\"poem-line\">With a love that the winged seraphs of Heaven</span><span class=\"poem-line\">Coveted her and me.</span></div><div class=\"poem-stanza\"><span class=\"poem-line\">And this was the reason that, long ago,</span><span class=\"poem-line\">In this kingdom by the sea,</span><span class=\"poem-line\">A wind blew out of a cloud, chilling</span><span class=\"poem-line\">My beautiful Annabel Lee;</span><span class=\"poem-line\">So that her highborn kinsmen came</span><span class=\"poem-line\">And bore her away from me,</span><span class=\"poem-line\">To shut her up in a sepulchre</span><span class=\"poem-line\">In this kingdom by the sea.</span></div><div class=\"poem-stanza\"><span class=\"poem-line\">For the moon never beams, without bringing me dreams</span><span class=\"poem-line\">Of the beautiful Annabel Lee;</span><span class=\"poem-line\">And the stars never rise, but I feel the bright eyes</span><span class=\"poem-line\">Of the beautiful Annabel Lee;</span><span class=\"poem-line\">And so, all the night-tide, I lie down by the side</span><span class=\"poem-line\">Of my darling—my darling—my life and my bride,</span><span class=\"poem-line\">In her sepulchre there by the sea—</span><span class=\"poem-line\">In her tomb by the sounding sea.</span></div>",
+    "literaryElements": {
+      "theme": "True spiritual devotion transcends mortality and endures beyond the physical boundary of death.",
+      "devices": [
+        "Internal Rhyme & Anaphora: 'Beams/dreams', 'rise/eyes', and the recurring refrain 'kingdom by the sea'.",
+        "Romantic Mythologizing: Angels in heaven envying the pure love of earthly mortals."
+      ],
+      "vocabulary": [
+        "Seraphs: Angels of the highest order associated with light and love.",
+        "Sepulchre: A small room or monument, cut in rock or built of stone, in which a dead person is buried."
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Why does the speaker believe the chilling wind blew down from heaven?",
+        "options": ["A winter snowstorm arrived", "The angels were jealous of their pure love", "The kingdom had no shelter", "The sea created a hurricane"],
+        "answerIndex": 1,
+        "explanation": "The speaker believes the winged seraphs envied their devotion and took Annabel Lee away."
+      },
+      {
+        "question": "What refrain is repeated throughout the poem to create its melodic cadence?",
+        "options": ["'In the dark of night'", "'In a kingdom by the sea'", "'Beneath the mountain high'", "'Across the stormy road'"],
+        "answerIndex": 1,
+        "explanation": "The phrase 'In a kingdom by the sea' anchors the musical ballad structure."
+      }
+    ]
+  },
+  {
+    "id": "g8-monkeys-paw",
+    "title": "The Monkey's Paw (Excerpt)",
+    "author": "W.W. Jacobs",
+    "type": "story",
+    "grade": "8",
+    "gradeBand": "6-8",
+    "gradeLabel": "Grade 8",
+    "lexile": "890L",
+    "genre": "Supernatural Suspense",
+    "readTime": "6 min read",
+    "tags": ["Fate", "Three Wishes", "Consequences", "Suspense"],
+    "summary": "A mummified talisman grants three wishes to its possessor, but with a horrifying warning: interfering with fate exacts a catastrophic price.",
+    "fullText": "<p class=\"story-para\">Without, the night was cold and wet, but in the small parlour of Laburnam Villa the blinds were drawn and the fire burned brightly. Sergeant-Major Morris, returned from twenty-one years in India, sat with Mr. and Mrs. White and their grown son Herbert.</p><p class=\"story-para\">The soldier produced a small, dried mummified paw from his pocket. 'An old fakir put a spell on it,' said the sergeant-major. 'He wanted to show that fate ruled people's lives, and that those who interfered with it did so to their sorrow. It grants three separate men three wishes each.'</p><p class=\"story-para\">'If you've had your three wishes, it's no good to you now, Morris,' said Mr. White. 'What do you keep it for?'</p><p class=\"story-para\">'Better let it burn,' said the soldier, and tossed it into the hearth. Mr. White darted forward and snatched it from the flames. 'Pitch it on the fire again,' warned Morris grimly. 'If you keep it, don't blame me for what happens.'</p><p class=\"story-para\">That evening, half in jest, Mr. White held the paw aloft. 'I wish for two hundred pounds,' he said. As he spoke, a shudder passed through him. 'It twisted in my hand like a snake!' he cried.</p><p class=\"story-para\">The next afternoon, a somber representative from the factory where Herbert worked arrived at the door. He cleared his throat uneasily. 'I am deeply sorry. Herbert was caught in the machinery. The firm disclaims all liability, but in consideration of his services, they wish to present you with a compensation.' The man paused: 'The sum is two hundred pounds.' Mrs. White shrieked in horror. Their wish had been granted—at the cost of their son's life.</p>",
+    "literaryElements": {
+      "theme": "Meddling with destiny and greedily attempting to manipulate fate yields devastating, unforeseen consequences.",
+      "devices": [
+        "Foreshadowing: The sergeant-major's grim warnings and the twisting talisman foreshadow tragedy.",
+        "Macabre Motif: The traditional three wishes archetype inverted into a cautionary nightmare."
+      ],
+      "vocabulary": [
+        "Fakir: A religious ascetic who lives under vows of poverty and spiritual discipline.",
+        "Talisman: An object thought to possess magical powers and to bring good or ill luck."
+      ]
+    },
+    "quiz": [
+      {
+        "question": "How did the family receive the two hundred pounds they wished for?",
+        "options": ["They won a lottery", "As compensation for Herbert's fatal workplace accident", "Found in an ancient chest", "An inheritance from a wealthy uncle"],
+        "answerIndex": 1,
+        "explanation": "The factory gave them exactly two hundred pounds as compensation for Herbert being killed in the machinery."
+      },
+      {
+        "question": "What lesson did the fakir want to demonstrate through the talisman?",
+        "options": ["Money brings happiness", "Fate rules human lives, and interfering with it brings sorrow", "Soldiers are the bravest men", "Wishes should always be doubled"],
+        "answerIndex": 1,
+        "explanation": "The spell was cast specifically to prove that attempting to alter fate results in grief."
+      }
+    ]
+  },
+  {
+    "id": "g8-ozymandias",
+    "title": "Ozymandias",
+    "author": "Percy Bysshe Shelley",
+    "type": "poem",
+    "grade": "8",
+    "gradeBand": "6-8",
+    "gradeLabel": "Grade 8",
+    "lexile": "Poetry (Middle/High)",
+    "genre": "Romantic Sonnet",
+    "readTime": "2 min read",
+    "tags": ["Hubris", "Power", "Time", "Irony"],
+    "summary": "A traveler describes the shattered colossus of an ancient king lying in an empty desert, proving that political tyranny is powerless against time.",
+    "fullText": "<div class=\"poem-stanza\"><span class=\"poem-line\">I met a traveller from an antique land,</span><span class=\"poem-line\">Who said—\"Two vast and trunkless legs of stone</span><span class=\"poem-line\">Stand in the desert. . . . Near them, on the sand,</span><span class=\"poem-line\">Half sunk a shattered visage lies, whose frown,</span><span class=\"poem-line\">And wrinkled lip, and sneer of cold command,</span><span class=\"poem-line\">Tell that its sculptor well those passions read</span><span class=\"poem-line\">Which yet survive, stamped on these lifeless things,</span><span class=\"poem-line\">The hand that mocked them, and the heart that fed;</span><span class=\"poem-line\">And on the pedestal, these words appear:</span><span class=\"poem-line\">My name is Ozymandias, King of Kings;</span><span class=\"poem-line\">Look on my Works, ye Mighty, and despair!</span><span class=\"poem-line\">Nothing beside remains. Round the decay</span><span class=\"poem-line\">Of that colossal Wreck, boundless and bare</span><span class=\"poem-line\">The lone and level sands stretch far away.\"</span></div>",
+    "literaryElements": {
+      "theme": "Temporal power and tyrannical arrogance are fleeting; nature and history ultimately erase human monuments.",
+      "devices": [
+        "Dramatic Irony: The grand pedestal inscription contrasts with empty desert wasteland.",
+        "Frame Narrative: The speaker recounts what a traveler witnessed."
+      ],
+      "vocabulary": [
+        "Visage: The face or facial expression of a person.",
+        "Colossal: Extremely large, immense, or magnificent in scale."
+      ]
+    },
+    "quiz": [
+      {
+        "question": "What is ironic about the inscription 'Look on my Works, ye Mighty, and despair!'?",
+        "options": ["The king was never born", "Nothing remains of his works except ruins and empty desert sands", "The statue is made of gold", "The sculptor misspelled the king's name"],
+        "answerIndex": 1,
+        "explanation": "The inscription boasts of everlasting greatness, yet time has reduced all his works to empty sand."
+      },
+      {
+        "question": "What poetic form does Shelley use for 'Ozymandias'?",
+        "options": ["A 14-line sonnet", "A four-line limerick", "An epic narrative canticle", "A prose paragraph"],
+        "answerIndex": 0,
+        "explanation": "The poem is a 14-line sonnet with an unconventional rhyme scheme."
+      }
+    ]
+  },
+  {
+    "id": "g9-the-necklace",
+    "title": "The Necklace",
+    "author": "Guy de Maupassant",
+    "type": "story",
+    "grade": "9",
+    "gradeBand": "9-12",
+    "gradeLabel": "Grade 9",
+    "lexile": "960L",
+    "genre": "Realist Short Story",
+    "readTime": "7 min read",
+    "tags": ["Vanity", "Pride", "Social Class", "Irony"],
+    "summary": "A dissatisfied clerk's wife borrows an exquisite diamond necklace for a grand ball, loses it, and spends ten brutal years of manual labor to pay for a replacement—only to learn the original was costume jewelry.",
+    "fullText": "<p class=\"story-para\">Mathilde Loisel was one of those pretty, charming girls born as if by an accident of fate into a family of clerks. She suffered endlessly from the poverty of her dwelling, feeling born for all the delicacies and luxuries of wealth.</p><p class=\"story-para\">Her husband, a minor official in the Ministry of Public Instruction, secured an invitation to a formal ball at the palace. But Mathilde wept: 'I have no gown, and not a jewel to put on!' Her husband sacrificed his savings to buy her a gown, and suggested she borrow jewelry from her wealthy friend, Madame Forestier.</p><p class=\"story-para\">At Forestier's mansion, Mathilde chose a superb diamond necklace. At the ball, Mathilde was the prettiest of all: elegant, gracious, smiling, and intoxicated with admiration. She danced in a cloud of triumph.</p><p class=\"story-para\">When they returned home at four in the morning, Mathilde looked in the mirror to admire herself once more. Suddenly, she uttered a cry. The necklace was gone! It had slipped from her neck into the street.</p><p class=\"story-para\">They searched everywhere in vain. Too proud to admit the loss, the Loisels bought a replacement necklace for thirty-six thousand francs, mortgaging their lives and borrowing from usurers. For ten long years, they lived in wretched squalor. Her husband worked evenings keeping double-entry ledgers, while Mathilde washed pots, scrubbed floors, and lived the brutal life of the destitute.</p><p class=\"story-para\">One Sunday in the Champs-Élysées, a weathered, aged Mathilde encountered Madame Forestier, who did not even recognize her. Mathilde proudly confessed that her ruin came from replacing the lost necklace. Forestier seized her hands with pity: 'Oh, my poor Mathilde! Why, mine was paste! It was worth five hundred francs at most!'</p>",
+    "literaryElements": {
+      "theme": "Superficial vanity, obsession with social status, and false pride can destroy an entire lifetime.",
+      "devices": [
+        "Twist Ending / Situational Irony: The tragic revelation that a fortune was spent replacing worthless costume jewelry.",
+        "Symbolism: The false necklace symbolizes the hollow illusions of high society."
+      ],
+      "vocabulary": [
+        "Paste: Fake jewelry made of heavy glass simulating gemstones.",
+        "Usurers: Money lenders who charge unfairly high interest rates."
+      ]
+    },
+    "quiz": [
+      {
+        "question": "What shocking truth does Mathilde discover at the end of ten years of hard labor?",
+        "options": ["The necklace was returned to her apartment", "The borrowed necklace was made of cheap fake glass worth only 500 francs", "Madame Forestier had kept the money", "Her husband had hidden the original necklace"],
+        "answerIndex": 1,
+        "explanation": "Madame Forestier reveals that the original necklace was imitation costume jewelry worth almost nothing."
+      },
+      {
+        "question": "What character flaw drove the Loisels into ten years of poverty?",
+        "options": ["Greed for diamonds", "False pride and inability to honestly admit the loss", "Carelessness with bank accounts", "Laziness"],
+        "answerIndex": 1,
+        "explanation": "Rather than confessing the loss to her friend, their pride drove them to borrow exorbitant sums and live in squalor."
+      }
+    ]
+  },
+  {
+    "id": "g9-if",
+    "title": "If—",
+    "author": "Rudyard Kipling",
+    "type": "poem",
+    "grade": "9",
+    "gradeBand": "9-12",
+    "gradeLabel": "Grade 9",
+    "lexile": "Poetry (High School)",
+    "genre": "Didactic Poetry / Stoicism",
+    "readTime": "3 min read",
+    "tags": ["Integrity", "Stoicism", "Maturity", "Character"],
+    "summary": "A father offers masterfully structured life advice to his son on maintaining stoic resilience, integrity, humility, and perseverance in the face of triumph and disaster.",
+    "fullText": "<div class=\"poem-stanza\"><span class=\"poem-line\">If you can keep your head when all about you</span><span class=\"poem-line\">Are losing theirs and blaming it on you,</span><span class=\"poem-line\">If you can trust yourself when all men doubt you,</span><span class=\"poem-line\">But make allowance for their doubting too;</span><span class=\"poem-line\">If you can wait and not be tired by waiting,</span><span class=\"poem-line\">Or being lied about, don't deal in lies,</span><span class=\"poem-line\">Or being hated, don't give way to hating,</span><span class=\"poem-line\">And yet don't look too good, nor talk too wise:</span></div><div class=\"poem-stanza\"><span class=\"poem-line\">If you can dream—and not make dreams your master;</span><span class=\"poem-line\">If you can think—and not make thoughts your aim;</span><span class=\"poem-line\">If you can meet with Triumph and Disaster</span><span class=\"poem-line\">And treat those two impostors just the same;</span><span class=\"poem-line\">If you can fill the unforgiving minute</span><span class=\"poem-line\">With sixty seconds' worth of distance run,</span><span class=\"poem-line\">Yours is the Earth and everything that's in it,</span><span class=\"poem-line\">And—which is more—you'll be a Man, my son!</span></div>",
+    "literaryElements": {
+      "theme": "True character is defined by emotional balance, patience, self-discipline, and moral integrity under adversity.",
+      "devices": [
+        "Conditional Anaphora: The repetition of 'If' builds cumulative moral and rhythmic momentum.",
+        "Personification: 'Triumph and Disaster' portrayed as twin impostors."
+      ],
+      "vocabulary": [
+        "Impostors: Persons who deceive others by pretending to be someone else.",
+        "Allowance: Giving consideration or understanding to someone's doubts or shortcomings."
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Why does Kipling describe Triumph and Disaster as 'two impostors'?",
+        "options": ["Because they are criminals", "Because both success and failure are temporary illusions that should not disrupt our inner character", "Because winning is the only thing that matters", "Because disaster never happens"],
+        "answerIndex": 1,
+        "explanation": "Both extremes are deceptive; stoic maturity requires treating victory and defeat with equanimity."
+      },
+      {
+        "question": "What is the ultimate reward described in the final lines?",
+        "options": ["A fortune in gold", "The Earth and the achievement of authentic, mature character", "A high political office", "A palace by the sea"],
+        "answerIndex": 1,
+        "explanation": "Kipling declares: 'Yours is the Earth and everything that's in it, And—which is more—you'll be a Man, my son!'"
+      }
+    ]
+  },
+  {
+    "id": "g10-cask-amontillado",
+    "title": "The Cask of Amontillado",
+    "author": "Edgar Allan Poe",
+    "type": "story",
+    "grade": "10",
+    "gradeBand": "9-12",
+    "gradeLabel": "Grade 10",
+    "lexile": "920L",
+    "genre": "Gothic Revenge Fiction",
+    "readTime": "6 min read",
+    "tags": ["Revenge", "Carnival", "Catacombs", "Irony"],
+    "summary": "During carnival in an unnamed Italian city, Montresor exacts ruthless revenge on his rival Fortunato by luring him with rare wine into the family catacombs and walling him up alive.",
+    "fullText": "<p class=\"story-para\">The thousand injuries of Fortunato I had borne as I best could, but when he ventured upon insult I vowed revenge. I must not only punish, but punish with impunity. A wrong is unredressed when retribution overtakes its redresser.</p><p class=\"story-para\">It was about dusk, one evening during the supreme madness of the carnival season, that I encountered my friend. Fortunato had on a tight-fitting parti-striped dress, and his head was surmounted by the conical cap and bells. I was so pleased to see him that I thought I should never have done wringing his hand.</p><p class=\"story-para\">'My dear Fortunato,' I said, 'you are luckily met. I have received a pipe of what passes for Amontillado, and I have my doubts. As you are engaged, I am on my way to Luchesi. If anyone has a critical turn it is he.'</p><p class=\"story-para\">'Luchesi cannot tell Amontillado from Sherry!' cried Fortunato in pride. 'Come, let us go to your vaults.'</p><p class=\"story-para\">We descended through the damp vaults lined with nitre and human bones. At the deepest recess of the catacombs, Fortunato reached a granite niche. In an instant I fettered him to the granite wall with iron chains. He was too much astounded to resist.</p><p class=\"story-para\">With trowel and mortar, I began vigorously to wall up the entrance. Layer by layer the wall rose. There came a low laugh from the niche: 'Ha! ha! ha!—a very good joke indeed—an excellent jest. But is it not getting late? Will they not be awaiting us at the palazzo?'</p><p class=\"story-para\">'Yes,' I said, 'let us be gone.' 'For the love of God, Montresor!' 'Yes,' I said, 'for the love of God!' I forced the last stone into position. Against the new masonry I re-erected the old rampart of bones. For the half of a century no mortal has disturbed them. <em>In pace requiescat!</em></p>",
+    "literaryElements": {
+      "theme": "Consuming obsession with revenge dehumanizes the seeker and leaves an icy, permanent moral decay.",
+      "devices": [
+        "Dramatic Irony: Fortunato wears jester's bells, unaware he is walking into his own tomb.",
+        "Atmospheric Setting: The festive carnival above directly contrasts with the damp, bone-strewn catacombs below."
+      ],
+      "vocabulary": [
+        "Impunity: Exemption from punishment or freedom from the injurious consequences of an action.",
+        "Retribution: Punishment inflicted on someone as vengeance for a wrong or criminal act."
+      ]
+    },
+    "quiz": [
+      {
+        "question": "How does Montresor manipulate Fortunato into entering the catacombs?",
+        "options": ["He threatens him with a sword", "He appeals to Fortunato's pride in wine connoisseurship by mentioning rival Luchesi", "He promises him a royal title", "He pays him gold coins"],
+        "answerIndex": 1,
+        "explanation": "Montresor preys on Fortunato's vanity by claiming he will ask Luchesi to authenticate the Amontillado if Fortunato is too busy."
+      },
+      {
+        "question": "What is the motto of the Montresor family coat of arms mentioned in the story?",
+        "options": ["'Love conquers all'", "'Nemo me impune lacessit' (No one wounds me with impunity)", "'Peace in death'", "'Truth is light'"],
+        "answerIndex": 1,
+        "explanation": "The Latin motto reflects Montresor's philosophy of exacting merciless vengeance without suffering consequence."
+      }
+    ]
+  },
+  {
+    "id": "g10-do-not-go-gentle",
+    "title": "Do not go gentle into that good night",
+    "author": "Dylan Thomas",
+    "type": "poem",
+    "grade": "10",
+    "gradeBand": "9-12",
+    "gradeLabel": "Grade 10",
+    "lexile": "Poetry (High School)",
+    "genre": "Villanelle",
+    "readTime": "2 min read",
+    "tags": ["Villanelle", "Mortality", "Resistance", "Passion"],
+    "summary": "Thomas pleads passionately with his dying father to resist the inevitable onset of death with fierce, defiant vitality.",
+    "fullText": "<div class=\"poem-stanza\"><span class=\"poem-line\">Do not go gentle into that good night,</span><span class=\"poem-line\">Old age should burn and rave at close of day;</span><span class=\"poem-line\">Rage, rage against the dying of the light.</span></div><div class=\"poem-stanza\"><span class=\"poem-line\">Though wise men at their end know dark is right,</span><span class=\"poem-line\">Because their words had forked no lightning they</span><span class=\"poem-line\">Do not go gentle into that good night.</span></div><div class=\"poem-stanza\"><span class=\"poem-line\">Good men, the last wave by, crying how bright</span><span class=\"poem-line\">Their frail deeds might have danced in a green bay,</span><span class=\"poem-line\">Rage, rage against the dying of the light.</span></div><div class=\"poem-stanza\"><span class=\"poem-line\">Wild men who caught and sang the sun in flight,</span><span class=\"poem-line\">And learn, too late, they grieved it on its way,</span><span class=\"poem-line\">Do not go gentle into that good night.</span></div><div class=\"poem-stanza\"><span class=\"poem-line\">And you, my father, there on the sad height,</span><span class=\"poem-line\">Curse, bless, me now with your fierce tears, I pray.</span><span class=\"poem-line\">Do not go gentle into that good night.</span><span class=\"poem-line\">Rage, rage against the dying of the light.</span></div>",
+    "literaryElements": {
+      "theme": "Death is inevitable, but humanity's greatest triumph is meeting mortality with unyielding passion and defiance.",
+      "devices": [
+        "Villanelle Structure: Strict 19-line form with five tercets, a quatrain, and two repeating refrains.",
+        "Metaphor: Night and the dying light represent death; burning and raging represent vital life."
+      ],
+      "vocabulary": [
+        "Frail: Weak and delicate; easily broken.",
+        "Tercet: A three-line poetic stanza."
+      ]
+    },
+    "quiz": [
+      {
+        "question": "What strict poetic form does Dylan Thomas use in this poem?",
+        "options": ["A Shakespearean sonnet", "A 19-line villanelle with two repeating refrains", "A continuous free verse canto", "A ballad in iambic tetrameter"],
+        "answerIndex": 1,
+        "explanation": "The poem is one of the world's most famous examples of a villanelle, repeating two alternating refrain lines."
+      },
+      {
+        "question": "What does the speaker urge his father to do in the face of death?",
+        "options": ["Accept death quietly in sleep", "Rage fiercely against the dying of the light", "Forgive his enemies", "Leave all his possessions behind"],
+        "answerIndex": 1,
+        "explanation": "Thomas implores his father to fight with fierce determination rather than slipping quietly into death."
+      }
+    ]
+  },
+  {
+    "id": "g11-owl-creek-bridge",
+    "title": "An Occurrence at Owl Creek Bridge (Excerpt)",
+    "author": "Ambrose Bierce",
+    "type": "story",
+    "grade": "11",
+    "gradeBand": "9-12",
+    "gradeLabel": "Grade 11",
+    "lexile": "1010L",
+    "genre": "Civil War Realism / Psychological Fiction",
+    "readTime": "6 min read",
+    "tags": ["Time Perception", "Civil War", "Stream of Consciousness", "Twist Ending"],
+    "summary": "During the American Civil War, a Confederate sympathizer stands upon a railroad bridge with a noose around his neck. As the plank falls, his mind weaves an extraordinary, sensory escape—until reality reclaims him.",
+    "fullText": "<p class=\"story-para\">A man stood upon a railroad bridge in northern Alabama, looking down into the swift water twenty feet below. The man's hands were behind his back, the wrists bound with a cord. A rope closely encircled his neck. It was attached to a stout cross-timber above his head.</p><p class=\"story-para\">Peyton Farquhar was a civilian, a well-to-do planter of an old and respectable Alabama family. Devoted to the Southern cause, he had been tricked by a Federal scout into attempting to burn the Owl Creek Bridge.</p><p class=\"story-para\">The sergeant stepped aside. The plank tilted. Farquhar fell straight down through the bridge.</p><p class=\"story-para\">Suddenly, he was conscious of a sharp pain in his neck, followed by suffocating darkness. Then, with a sudden convulsion, the rope seemed to snap! He plunged into the cold stream. He tore at the cords upon his wrists until they parted. He rose to the surface, gasping for air. His senses were preternaturally keen. He saw the individual veins of the leaves in the forest, the grey eye of the marksman looking through the rifle sight.</p><p class=\"story-para\">Bullets sang through the air. Farquhar dove deep, swimming furiously down-stream with the current. He reached the shore, stumbled up the bank, and plunged into the boundless forest. He walked all night, driven by the thought of his wife and children.</p><p class=\"story-para\">At last, by the morning light, he stood at the gate of his own home. His wife stepped down from the veranda to meet him. As he sprang forward with extended arms, he felt a stunning blow upon the back of the neck; a blinding white light blazed about him with a sound like the shock of a cannon—then all is darkness and silence!</p><p class=\"story-para\">Peyton Farquhar was dead; his body, with a broken neck, swung gently from side to side beneath the timbers of the Owl Creek bridge.</p>",
+    "literaryElements": {
+      "theme": "The human mind will fabricate an entire reality to escape mortality; psychological time can expand a split second into an epic delusion.",
+      "devices": [
+        "Subjective Time Dilatation: Seconds of hanging dilated into an elaborate hours-long mental escape.",
+        "Sensory Hyper-acuity: Farquhar observing the prismatic water drops and vein patterns on leaves foreshadows hallucination."
+      ],
+      "vocabulary": [
+        "Preternaturally: Beyond what is normal or natural; exceptionally keen.",
+        "Undulation: A rising and falling rhythm or smooth wavelike motion."
+      ]
+    },
+    "quiz": [
+      {
+        "question": "What really happens to Farquhar during his miraculous 'escape' down the river?",
+        "options": ["He successfully swam home to Alabama", "He was captured by Union cavalry", "His mind hallucinated the entire escape in the split second before the rope broke his neck", "He was rescued by Confederate scouts"],
+        "answerIndex": 2,
+        "explanation": "Bierce demonstrates the psychological power of the brain fabricating a complete escape fantasy in the fraction of a second before death."
+      },
+      {
+        "question": "What literary technique makes Bierce's ending one of the most celebrated in American literature?",
+        "options": ["A chronological timeline", "Psychological stream of consciousness combined with a shock twist ending", "A humorous dialogue", "A rhyming conclusion"],
+        "answerIndex": 1,
+        "explanation": "The abrupt transition from his wife's embrace back to his swinging corpse beneath the bridge created the modern psychological twist."
+      }
+    ]
+  },
+  {
+    "id": "g11-prufrock",
+    "title": "The Love Song of J. Alfred Prufrock (Excerpt)",
+    "author": "T.S. Eliot",
+    "type": "poem",
+    "grade": "11",
+    "gradeBand": "9-12",
+    "gradeLabel": "Grade 11",
+    "lexile": "Poetry (Advanced)",
+    "genre": "Modernist Dramatic Monologue",
+    "readTime": "3 min read",
+    "tags": ["Modernism", "Alienation", "Paralysis", "Stream of Consciousness"],
+    "summary": "Prufrock wanders through a foggy industrial city, paralyzed by social anxiety, questioning whether he dares to 'disturb the universe'.",
+    "fullText": "<div class=\"poem-stanza\"><span class=\"poem-line\">Let us go then, you and I,</span><span class=\"poem-line\">When the evening is spread out against the sky</span><span class=\"poem-line\">Like a patient etherized upon a table;</span><span class=\"poem-line\">Let us go, through certain half-deserted streets,</span><span class=\"poem-line\">The muttering retreats</span><span class=\"poem-line\">Of restless nights in one-night cheap hotels.</span></div><div class=\"poem-stanza\"><span class=\"poem-line\">In the room the women come and go</span><span class=\"poem-line\">Talking of Michelangelo.</span></div><div class=\"poem-stanza\"><span class=\"poem-line\">And indeed there will be time</span><span class=\"poem-line\">For the yellow smoke that slides along the street,</span><span class=\"poem-line\">Rubbing its back upon the window-panes;</span><span class=\"poem-line\">There will be time, there will be time</span><span class=\"poem-line\">To prepare a face to meet the faces that you meet;</span><span class=\"poem-line\">Do I dare</span><span class=\"poem-line\">Disturb the universe?</span></div><div class=\"poem-stanza\"><span class=\"poem-line\">For I have known them all already, known them all:</span><span class=\"poem-line\">Have known the evenings, mornings, afternoons,</span><span class=\"poem-line\">I have measured out my life with coffee spoons.</span></div>",
+    "literaryElements": {
+      "theme": "Modern existence induces profound alienation, hesitation, and existential paralysis in the face of superficial social rituals.",
+      "devices": [
+        "Shocking Modernist Simile: Comparing the evening sky to a 'patient etherized upon a table'.",
+        "Metonymy: 'I have measured out my life with coffee spoons' compresses a lifetime of mundane social conformism."
+      ],
+      "vocabulary": [
+        "Etherized: Anesthetized or put under with ether.",
+        "Mundane: Lacking interest or excitement; dull."
+      ]
+    },
+    "quiz": [
+      {
+        "question": "What shocking modern simile opens the poem?",
+        "options": ["A red, red rose in summer", "An evening spread out like a patient etherized upon a table", "A golden chariot across the sun", "A weeping willow by a river"],
+        "answerIndex": 1,
+        "explanation": "Eliot broke with traditional Romantic nature imagery by comparing the sky to an anesthetized medical patient."
+      },
+      {
+        "question": "What famous phrase does Prufrock use to express the mundane futility of his daily routine?",
+        "options": ["'I have fought with lions'", "'I have measured out my life with coffee spoons'", "'I have conquered the oceans'", "'I have lived among the kings'"],
+        "answerIndex": 1,
+        "explanation": "The metaphor of 'coffee spoons' captures the tedious, uneventful repetition of his bourgeois existence."
+      }
+    ]
+  },
+  {
+    "id": "g12-metamorphosis",
+    "title": "The Metamorphosis (Chapter 1 Excerpt)",
+    "author": "Franz Kafka",
+    "type": "story",
+    "grade": "12",
+    "gradeBand": "9-12",
+    "gradeLabel": "Grade 12",
+    "lexile": "1120L",
+    "genre": "Existential Absurdism / Modernist Fiction",
+    "readTime": "6 min read",
+    "tags": ["Absurdism", "Alienation", "Family Duty", "Dehumanization"],
+    "summary": "Traveling salesman Gregor Samsa awakens one morning from troubled dreams to find himself transformed into a monstrous insect, yet his primary anxiety remains catching the 7:00 AM commuter train.",
+    "fullText": "<p class=\"story-para\">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved helplessly before his eyes.</p><p class=\"story-para\">'What's happened to me?' he thought. It was not a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls. Above the table hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.</p><p class=\"story-para\">Gregor then turned to look out the window at the dull weather. Drops of rain could be heard hitting the pane, which made him feel quite sad. 'How about if I sleep a little bit longer and forget all this nonsense,' he thought, but that was something he was unable to do because he was used to sleeping on his right, and in his present state he could not get into that position.</p><p class=\"story-para\">'Oh, God,' he thought, 'what a strenuous career it is that I've chosen! Traveling day in and day out. Doing business like this takes much more effort than doing your own business at home, and on top of that there's the curse of travelling: worries about train connections, bad and irregular food, contact with different people all the time so that you can never get to know anyone or become friendly with them. It can all go to the devil!'</p><p class=\"story-para\">He looked up at the alarm clock ticking on the chest of drawers. 'Heavenly Father!' he thought. It was half past six and the hands were quietly moving on. The next train went at seven o'clock; to catch that he would have to rush like a madman.</p>",
+    "literaryElements": {
+      "theme": "The dehumanizing pressures of modern economic obligation can alienate an individual to the point where literal monstrousness feels secondary to clockwork labor.",
+      "devices": [
+        "Kafkaesque Absurdism: Presenting an impossible, grotesque transformation in calm, matter-of-fact bureaucratic prose.",
+        "Symbolic Allegory: Gregor's physical vermin form represents how his family and employer already treated him as a functional parasite."
+      ],
+      "vocabulary": [
+        "Vermin: Pests or parasites offensive to humans.",
+        "Strenuous: Requiring or using great exertion or endurance."
+      ]
+    },
+    "quiz": [
+      {
+        "question": "What is Gregor Samsa's immediate concern upon waking up transformed into a monstrous vermin?",
+        "options": ["Seeking immediate medical attention", "Worrying about missing his train and being reprimanded by his boss", "Calling the police", "Looking for food in the garden"],
+        "answerIndex": 1,
+        "explanation": "Kafka highlights the absurdity of modern work: transformed into an insect, Gregor's first panic is missing the 7:00 AM commuter train."
+      },
+      {
+        "question": "What does Gregor's insect transformation symbolize in modern literary critique?",
+        "options": ["A literal biological mutation", "Alienation and dehumanization under oppressive societal and economic pressures", "A superpower discovery", "A desire to become an entomologist"],
+        "answerIndex": 1,
+        "explanation": "Gregor's physical transformation manifests the psychological alienation and exhaustion he already suffered under commercial exploitation."
+      }
+    ]
+  },
+  {
+    "id": "g12-grecian-urn",
+    "title": "Ode on a Grecian Urn",
+    "author": "John Keats",
+    "type": "poem",
+    "grade": "12",
+    "gradeBand": "9-12",
+    "gradeLabel": "Grade 12",
+    "lexile": "Poetry (Advanced)",
+    "genre": "Romantic Ode",
+    "readTime": "3 min read",
+    "tags": ["Art & Eternity", "Truth & Beauty", "Ode", "Romanticism"],
+    "summary": "Keats addresses an ancient marble urn, meditating on how static art captures timeless passion and truth while human lives fade and decay.",
+    "fullText": "<div class=\"poem-stanza\"><span class=\"poem-line\">Thou still unravish'd bride of quietness,</span><span class=\"poem-line\">Thou foster-child of silence and slow time,</span><span class=\"poem-line\">Sylvan historian, who canst thus express</span><span class=\"poem-line\">A flowery tale more sweetly than our rhyme:</span><span class=\"poem-line\">What leaf-fring'd legend haunts about thy shape</span><span class=\"poem-line\">Of deities or mortals, or of both,</span><span class=\"poem-line\">In Tempe or the dales of Arcady?</span></div><div class=\"poem-stanza\"><span class=\"poem-line\">Heard melodies are sweet, but those unheard</span><span class=\"poem-line\">Are sweeter; therefore, ye soft pipes, play on;</span><span class=\"poem-line\">Not to the sensual ear, but, more endear'd,</span><span class=\"poem-line\">Pipe to the spirit ditties of no tone:</span><span class=\"poem-line\">Bold Lover, never, never canst thou kiss,</span><span class=\"poem-line\">Though winning near the goal—yet, do not grieve;</span><span class=\"poem-line\">She cannot fade, though thou hast not thy bliss,</span><span class=\"poem-line\">For ever wilt thou love, and she be fair!</span></div><div class=\"poem-stanza\"><span class=\"poem-line\">When old age shall this generation waste,</span><span class=\"poem-line\">Thou shalt remain, in midst of other woe</span><span class=\"poem-line\">Than ours, a friend to man, to whom thou say'st,</span><span class=\"poem-line\">\"Beauty is truth, truth beauty,—that is all</span><span class=\"poem-line\">Ye know on earth, and all ye need to know.\"</span></div>",
+    "literaryElements": {
+      "theme": "Art preserves pure beauty and truth indefinitely, transcending the grief, aging, and mortality of human existence.",
+      "devices": [
+        "Ekphrasis: A detailed, reflective poetic description of a visual work of art.",
+        "Paradox: 'Heard melodies are sweet, but those unheard are sweeter'."
+      ],
+      "vocabulary": [
+        "Sylvan: Associated with woods, forests, or rural pastures.",
+        "Ekphrasis: The poetic representation of a visual artwork."
+      ]
+    },
+    "quiz": [
+      {
+        "question": "What famous philosophical maxim does the urn deliver in the poem's concluding lines?",
+        "options": ["'Knowledge is power, power knowledge'", "'Beauty is truth, truth beauty,—that is all ye know on earth'", "'Time conquers all things'", "'Love fades like autumn leaves'"],
+        "answerIndex": 1,
+        "explanation": "The urn's enduring message to humanity is that truth and aesthetic beauty are unified and immortal."
+      },
+      {
+        "question": "Why does Keats declare that 'unheard melodies are sweeter'?",
+        "options": ["Because instruments are too noisy", "Because imagined music created in the spirit is untainted by mortal imperfection", "Because ancient Greeks were deaf", "Because he disliked music"],
+        "answerIndex": 1,
+        "explanation": "Music imagined by the soul can achieve ideal perfection beyond physical sound."
+      }
+    ]
+  }
+]

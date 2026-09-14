@@ -13,7 +13,6 @@ include '../src/header.php';
 ?>
 
 <link rel="stylesheet" href="/assets/css/pages/student.css">
-<link rel="stylesheet" href="/assets/css/gamification/daily-quests.css">
 
 
 <div class="wiki-container">
@@ -53,10 +52,7 @@ include '../src/header.php';
             </a>
         </div>
 
-        <!-- Today's Daily Rotating Quests Widget -->
-        <div id="daily-quests-root" class="daily-quests-container" style="margin-bottom: 2rem;"></div>
-
-        <!-- Skill Tree & Gamification Mastery Hub Banner -->
+        <!-- Skill Tree & Knowledge Mastery Hub Banner -->
         <div class="glass-panel" style="margin-bottom: 2rem; padding: 1.5rem 2rem; border-radius: var(--radius-2xl); border: 1px solid color-mix(in srgb, var(--color-primary) 30%, var(--color-border)); background: radial-gradient(circle at top right, color-mix(in srgb, var(--color-primary) 12%, var(--color-bg-surface)), var(--color-bg-surface)); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.5rem;">
             <div style="display: flex; align-items: center; gap: 1.25rem; max-width: 38rem;">
                 <div style="width: 3.75rem; height: 3.75rem; border-radius: var(--radius-xl); background: linear-gradient(135deg, #f59e0b, #ec4899); color: white; display: flex; align-items: center; justify-content: center; font-size: 1.75rem; box-shadow: 0 8px 16px rgba(245, 158, 11, 0.25); flex-shrink: 0;">
@@ -65,17 +61,12 @@ include '../src/header.php';
                 <div>
                     <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.25rem;">
                         <span style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; padding: 0.2rem 0.5rem; border-radius: var(--radius-sm); background: color-mix(in srgb, var(--color-primary) 15%, transparent); color: var(--color-primary);">Interactive Knowledge Graph</span>
-                        <span id="student-hub-level-badge" style="font-size: 0.75rem; font-weight: 800; padding: 0.2rem 0.5rem; border-radius: var(--radius-sm); background: #f59e0b; color: #1e1b4b;"><i class="fas fa-star"></i> Level <span id="student-hub-level-num">1</span> &bull; <span id="student-hub-rank-title">Novice Scholar</span></span>
                     </div>
-                    <h2 style="margin: 0 0 0.25rem 0; font-size: 1.25rem; font-weight: 900; color: var(--color-text-main);">Skill & Knowledge Tree</h2>
+                    <h2 style="margin: 0 0 0.25rem 0; font-size: 1.25rem; font-weight: 900; color: var(--color-text-main);">Skill &amp; Knowledge Tree</h2>
                     <p style="margin: 0; font-size: 0.875rem; color: var(--color-text-muted); line-height: 1.4;">Explore interactive curriculum branches across Math, ELA, Science, and Social Studies with Bloom's Taxonomy mastery tiers.</p>
                 </div>
             </div>
             <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
-                <button type="button" onclick="window.toggleQuestStudio ? window.toggleQuestStudio() : null" class="btn" style="padding: 0.7rem 1.25rem; border-radius: var(--radius-full); background: var(--color-bg-base); color: var(--color-text-main); border: 1px solid var(--color-border); font-weight: 800; font-size: 0.875rem; display: inline-flex; align-items: center; gap: 0.5rem; cursor: pointer;">
-                    <i class="fas fa-trophy" style="color: #f59e0b;"></i>
-                    <span>Badges & Quests</span>
-                </button>
                 <a href="/student/skill-tree.php" class="subpage-link-btn" style="padding: 0.75rem 1.5rem; border-radius: var(--radius-full); background: linear-gradient(135deg, var(--color-primary), #6366f1); color: white; border: none; font-weight: 800; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; box-shadow: var(--shadow-md);">
                     <span>Launch Skill Tree</span>
                     <i class="fas fa-arrow-right" style="font-size: 0.85rem;"></i>
@@ -126,81 +117,7 @@ include '../src/header.php';
             </div>
         </div>
 
-        <!-- Daily Learning Quests Widget -->
-        <div id="daily-quests-widget" class="daily-quests-panel glass-panel">
-            <div class="quests-header">
-                <div class="quests-title-wrap">
-                    <span class="quests-badge"><i class="fas fa-calendar-day"></i> Daily Missions</span>
-                    <h2 class="quests-title">Today's Learning Quests</h2>
-                    <p class="quests-desc">Complete daily challenges to earn XP and level up your academic profile.</p>
-                </div>
-                <div class="quests-overall-progress">
-                    <div class="quests-progress-text">
-                        <span id="quests-completed-count">0/3</span> Completed
-                    </div>
-                    <div class="quests-progress-track">
-                        <div id="quests-progress-fill" class="quests-progress-fill" style="width: 0%;"></div>
-                    </div>
-                    <span id="quests-xp-reward" class="quests-xp-reward"><i class="fas fa-bolt"></i> +175 XP Total</span>
-                </div>
-            </div>
 
-            <div class="quests-list" id="quests-list">
-                <!-- Quest 1: Lesson Explorer -->
-                <div class="quest-card" id="quest-card-lesson">
-                    <div class="quest-icon"><i class="fas fa-graduation-cap"></i></div>
-                    <div class="quest-info">
-                        <div class="quest-name-row">
-                            <span class="quest-name">Curriculum Lesson Explorer</span>
-                            <span class="quest-xp">+50 XP</span>
-                        </div>
-                        <p class="quest-detail">Complete at least 1 interactive curriculum lesson or practice check.</p>
-                        <div class="quest-mini-track">
-                            <div id="quest-progress-lesson" class="quest-mini-fill" style="width: 0%;"></div>
-                        </div>
-                    </div>
-                    <div class="quest-action">
-                        <a href="/levels/k.php" class="quest-btn" id="quest-btn-lesson">Start Lesson</a>
-                    </div>
-                </div>
-
-                <!-- Quest 2: Reading Time -->
-                <div class="quest-card" id="quest-card-read">
-                    <div class="quest-icon" style="color: #f97316; background: rgba(249, 115, 22, 0.1);"><i class="fas fa-book-reader"></i></div>
-                    <div class="quest-info">
-                        <div class="quest-name-row">
-                            <span class="quest-name">Daily Reading Drill</span>
-                            <span class="quest-xp">+50 XP</span>
-                        </div>
-                        <p class="quest-detail" id="quest-detail-read">Read literature in the Digital Library for 10+ active minutes.</p>
-                        <div class="quest-mini-track">
-                            <div id="quest-progress-read" class="quest-mini-fill" style="width: 0%;"></div>
-                        </div>
-                    </div>
-                    <div class="quest-action">
-                        <a href="/library/" class="quest-btn" id="quest-btn-read">Open Reader</a>
-                    </div>
-                </div>
-
-                <!-- Quest 3: Assessment Mastery -->
-                <div class="quest-card" id="quest-card-mastery">
-                    <div class="quest-icon" style="color: #10b981; background: rgba(16, 185, 129, 0.1);"><i class="fas fa-award"></i></div>
-                    <div class="quest-info">
-                        <div class="quest-name-row">
-                            <span class="quest-name">Standard Mastery Challenge</span>
-                            <span class="quest-xp">+75 XP</span>
-                        </div>
-                        <p class="quest-detail" id="quest-detail-mastery">Score 80%+ on any targeted academic standard assessment.</p>
-                        <div class="quest-mini-track">
-                            <div id="quest-progress-mastery" class="quest-mini-fill" style="width: 0%;"></div>
-                        </div>
-                    </div>
-                    <div class="quest-action">
-                        <a href="/assessment/" class="quest-btn" id="quest-btn-mastery">Take Test</a>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <!-- Standards Mastery Progress Widget -->
         <div id="student-standards-widget" class="glass-panel" style="margin-bottom: 2.5rem; padding: 1.5rem; border-radius: var(--radius-xl); border: 1px solid var(--color-border); background: var(--color-bg-surface); display: none;">
@@ -222,6 +139,56 @@ include '../src/header.php';
                 <!-- Populated by JS -->
             </div>
         </div>
+
+        <!-- Short Stories & Poems Literary Showcase Section -->
+        <section id="short-stories-poems" class="stories-poems-section" aria-labelledby="short-stories-poems-title">
+            <div class="story-poem-header-wrap">
+                <div class="story-poem-badge-row">
+                    <span class="story-poem-pill-badge"><i class="fas fa-feather-alt"></i> Literary Anthology</span>
+                    <span style="font-size: 0.8rem; font-weight: 700; color: var(--color-text-muted);">&bull; Accessible &amp; Dyslexia-Friendly</span>
+                </div>
+                <h2 id="short-stories-poems-title" class="story-poem-section-title">
+                    <span>Short Stories &amp; Poems</span>
+                </h2>
+                <p class="story-poem-section-desc">
+                    Explore celebrated classic short stories, fables, and poetry across grade levels with audio read-aloud, dyslexia fonts, literary analysis breakdowns, and interactive reading checks.
+                </p>
+            </div>
+
+            <!-- Filter Tabs & Real-Time Search -->
+            <div class="story-poem-controls">
+                <div class="story-poem-filter-tabs" role="tablist" aria-label="Filter literary works">
+                    <button type="button" class="story-poem-filter-tab active" data-filter="all" role="tab" aria-selected="true">
+                        <i class="fas fa-th-large"></i> All Works
+                    </button>
+                    <button type="button" class="story-poem-filter-tab" data-filter="story" role="tab" aria-selected="false">
+                        <i class="fas fa-book-open"></i> Short Stories
+                    </button>
+                    <button type="button" class="story-poem-filter-tab" data-filter="poem" role="tab" aria-selected="false">
+                        <i class="fas fa-feather-alt"></i> Poems &amp; Poetry
+                    </button>
+                    <button type="button" class="story-poem-filter-tab" data-filter="elem" role="tab" aria-selected="false">
+                        <i class="fas fa-shapes"></i> Grades K–5
+                    </button>
+                    <button type="button" class="story-poem-filter-tab" data-filter="secondary" role="tab" aria-selected="false">
+                        <i class="fas fa-graduation-cap"></i> Grades 6–12
+                    </button>
+                </div>
+
+                <div class="story-poem-search-wrap">
+                    <i class="fas fa-search story-poem-search-icon" aria-hidden="true"></i>
+                    <input type="text" id="story-poem-search" class="story-poem-search-input" placeholder="Search by title, author, theme..." aria-label="Search short stories and poems">
+                    <button type="button" id="story-poem-clear-search" class="story-poem-clear-btn" aria-label="Clear search">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Cards Grid -->
+            <div id="story-poem-grid" class="story-poem-grid" aria-live="polite">
+                <!-- Dynamically populated by student-stories-poems.js -->
+            </div>
+        </section>
 
         <div class="subject-gateway-grid">
             
@@ -308,6 +275,10 @@ include '../src/header.php';
                         <a href="/student/ela-literature.php" class="subpage-link-btn">
                             <i class="fas fa-highlighter"></i>
                             <span>Literature Analysis</span>
+                        </a>
+                        <a href="#short-stories-poems" class="subpage-link-btn" style="grid-column: 1 / -1; background: color-mix(in srgb, var(--color-primary) 8%, var(--color-bg-base)); border-color: color-mix(in srgb, var(--color-primary) 30%, var(--color-border));">
+                            <i class="fas fa-feather-alt" style="color: var(--color-primary);"></i>
+                            <span>Short Stories &amp; Poems Anthology</span>
                         </a>
                     </div>
                     
@@ -446,7 +417,296 @@ include '../src/header.php';
             </div>
 
         </div>
+
+        <!-- Short Stories & Poems Daily Showcase & AI Studio Section -->
+        <section id="short-stories-poems" class="stories-poems-section" aria-labelledby="stories-poems-title">
+            <div class="story-poem-header-wrap">
+                <div class="story-poem-badge-row">
+                    <span class="story-poem-pill-badge"><i class="fas fa-feather-alt"></i> Daily Literature &amp; Poetry</span>
+                    <span class="story-poem-pill-badge" style="background: rgba(16, 185, 129, 0.12); color: #059669; border-color: rgba(16, 185, 129, 0.25);"><i class="fas fa-graduation-cap"></i> Grades K–12</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem;">
+                    <div>
+                        <h2 id="stories-poems-title" class="story-poem-section-title">
+                            Short Stories &amp; Poems Anthology
+                        </h2>
+                        <p class="story-poem-section-desc">
+                            Explore curriculum-aligned classic literature and AI-generated original stories &amp; poems across all 13 grade levels (Kindergarten through Grade 12), rotating fresh every single day with built-in accessibility and comprehension tools.
+                        </p>
+                    </div>
+                    <button type="button" class="ai-studio-btn" onclick="window.openAIStudioModal()">
+                        <i class="fas fa-wand-magic-sparkles"></i>
+                        <span>AI Story Studio</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Daily Spotlight (Story of the Day & Poem of the Day) -->
+            <div id="story-poem-spotlight"></div>
+
+            <!-- Interactive Filters, Grade Dropdown, & Search Bar -->
+            <div class="story-poem-controls">
+                <div class="story-poem-filter-tabs" role="tablist" aria-label="Literature category filters">
+                    <button type="button" class="story-poem-filter-tab active" data-filter="all" role="tab" aria-selected="true">
+                        <i class="fas fa-layer-group"></i> All Works
+                    </button>
+                    <button type="button" class="story-poem-filter-tab" data-filter="story" role="tab" aria-selected="false">
+                        <i class="fas fa-book-open"></i> Short Stories
+                    </button>
+                    <button type="button" class="story-poem-filter-tab" data-filter="poem" role="tab" aria-selected="false">
+                        <i class="fas fa-feather-alt"></i> Poems
+                    </button>
+                    <button type="button" class="story-poem-filter-tab" data-filter="k-2" role="tab" aria-selected="false">
+                        K–2
+                    </button>
+                    <button type="button" class="story-poem-filter-tab" data-filter="3-5" role="tab" aria-selected="false">
+                        3–5
+                    </button>
+                    <button type="button" class="story-poem-filter-tab" data-filter="6-8" role="tab" aria-selected="false">
+                        6–8
+                    </button>
+                    <button type="button" class="story-poem-filter-tab" data-filter="9-12" role="tab" aria-selected="false">
+                        9–12
+                    </button>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+                    <div style="display: inline-flex; align-items: center; gap: 0.4rem;">
+                        <label for="story-poem-grade-select" style="font-size: 0.8rem; font-weight: 700; color: var(--color-text-muted);"><i class="fas fa-filter"></i> Grade:</label>
+                        <select id="story-poem-grade-select" class="story-poem-grade-select" aria-label="Filter by specific grade level">
+                            <option value="all">All Grades (K–12)</option>
+                            <option value="K">Kindergarten (K)</option>
+                            <option value="1">Grade 1</option>
+                            <option value="2">Grade 2</option>
+                            <option value="3">Grade 3</option>
+                            <option value="4">Grade 4</option>
+                            <option value="5">Grade 5</option>
+                            <option value="6">Grade 6</option>
+                            <option value="7">Grade 7</option>
+                            <option value="8">Grade 8</option>
+                            <option value="9">Grade 9</option>
+                            <option value="10">Grade 10</option>
+                            <option value="11">Grade 11</option>
+                            <option value="12">Grade 12</option>
+                        </select>
+                    </div>
+
+                    <div class="story-poem-search-wrap">
+                        <i class="fas fa-search story-poem-search-icon" aria-hidden="true"></i>
+                        <input type="text" id="story-poem-search" class="story-poem-search-input" placeholder="Search by title, author, grade, or theme..." aria-label="Search stories and poems">
+                        <button type="button" id="story-poem-clear-search" class="story-poem-clear-btn" aria-label="Clear search query" style="display: none;">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dynamic Literature Cards Grid -->
+            <div id="story-poem-grid" class="stories-poems-grid" role="region" aria-live="polite" aria-label="Stories and poems grid"></div>
+        </section>
     </main>
+</div>
+
+<!-- Story & Poem Accessible Reader Modal -->
+<div id="story-poem-modal" class="story-modal-overlay" style="display: none;" role="dialog" aria-modal="true" aria-labelledby="modal-work-title" aria-hidden="true">
+    <div class="story-modal-backdrop" onclick="closeStoryModal()"></div>
+    <div class="story-modal-card">
+        <!-- Modal Header -->
+        <div class="story-modal-header">
+            <div class="story-modal-meta">
+                <div class="story-modal-pills">
+                    <span id="modal-work-type-badge" class="story-type-badge"><i class="fas fa-book-open"></i> Literature</span>
+                    <span id="modal-work-grade" class="story-grade-badge"><i class="fas fa-graduation-cap"></i> Grades</span>
+                    <span id="modal-work-genre" class="story-card-tag">Genre</span>
+                </div>
+                <h3 id="modal-work-title" class="story-modal-title">Work Title</h3>
+                <p id="modal-work-author" class="story-modal-author">by Author</p>
+            </div>
+            <button type="button" id="modal-story-close-btn" class="story-modal-close-icon" onclick="closeStoryModal()" aria-label="Close reading view">
+                &times;
+            </button>
+        </div>
+
+        <!-- Reading & Accessibility Toolbar -->
+        <div class="story-modal-toolbar">
+            <div class="story-toolbar-group">
+                <button type="button" id="btn-tts-listen" class="story-toolbar-btn" onclick="toggleStoryTTS()" aria-label="Listen aloud with text to speech">
+                    <i class="fas fa-volume-up"></i>
+                    <span id="lbl-tts-listen">Listen Aloud</span>
+                </button>
+                <button type="button" id="btn-dyslexia-toggle" class="story-toolbar-btn" onclick="toggleDyslexicFont()" aria-pressed="false" aria-label="Toggle OpenDyslexic font">
+                    <i class="fas fa-font"></i> Dyslexia Font
+                </button>
+            </div>
+
+            <div class="story-toolbar-group">
+                <span style="font-size: 0.75rem; font-weight: 700; color: var(--color-text-muted);">Size:</span>
+                <button type="button" class="story-toolbar-btn" onclick="adjustFontSize(-10)" aria-label="Decrease text size" style="padding: 0.25rem 0.55rem;">A-</button>
+                <button type="button" class="story-toolbar-btn" onclick="adjustFontSize(10)" aria-label="Increase text size" style="padding: 0.25rem 0.55rem;">A+</button>
+                
+                <span style="font-size: 0.75rem; font-weight: 700; color: var(--color-text-muted); margin-left: 0.25rem;">Tint:</span>
+                <button type="button" class="story-toolbar-btn" onclick="setReadingTint('none')" title="Default white/dark background" aria-label="Reset background tint" style="padding: 0.25rem 0.5rem;"><i class="fas fa-ban"></i></button>
+                <button type="button" class="story-toolbar-btn" onclick="setReadingTint('peach')" title="Peach tint" aria-label="Peach background tint" style="background: #fff3e0; color: #7c2d12; padding: 0.25rem 0.5rem;"><i class="fas fa-circle" style="color: #fb923c;"></i></button>
+                <button type="button" class="story-toolbar-btn" onclick="setReadingTint('mint')" title="Mint tint" aria-label="Mint background tint" style="background: #e8f5e9; color: #14532d; padding: 0.25rem 0.5rem;"><i class="fas fa-circle" style="color: #34d399;"></i></button>
+                <button type="button" class="story-toolbar-btn" onclick="setReadingTint('blue')" title="Blue tint" aria-label="Blue background tint" style="background: #e3f2fd; color: #1e3a8a; padding: 0.25rem 0.5rem;"><i class="fas fa-circle" style="color: #60a5fa;"></i></button>
+            </div>
+
+            <div class="story-toolbar-group">
+                <button type="button" class="story-toolbar-btn" onclick="bookmarkActiveWork()" title="Save to bookmarks" aria-label="Save to bookmarks">
+                    <i class="far fa-bookmark"></i> Bookmark
+                </button>
+                <button type="button" class="story-toolbar-btn" onclick="exportWorkToScratchpad()" title="Export outline to notes" aria-label="Export to Scratchpad">
+                    <i class="far fa-sticky-note"></i> Notes
+                </button>
+            </div>
+        </div>
+
+        <!-- Tabs: Read / Literary Analysis / Quiz -->
+        <div class="story-modal-tabs" role="tablist" aria-label="Modal content tabs">
+            <button type="button" class="modal-tab-btn active" data-tab="read" onclick="switchModalTab('read')" role="tab" aria-selected="true">
+                <i class="fas fa-book-reader"></i> Read Text
+            </button>
+            <button type="button" class="modal-tab-btn" data-tab="analysis" onclick="switchModalTab('analysis')" role="tab" aria-selected="false">
+                <i class="fas fa-search"></i> Literary Analysis
+            </button>
+            <button type="button" class="modal-tab-btn" data-tab="quiz" onclick="switchModalTab('quiz')" role="tab" aria-selected="false">
+                <i class="fas fa-question-circle"></i> Comprehension Check
+            </button>
+        </div>
+
+        <!-- Modal Body Content -->
+        <div class="story-modal-body">
+            <!-- Panel 1: Read Text -->
+            <div id="modal-panel-read" class="modal-tab-panel">
+                <div id="modal-reader-text" class="modal-reader-text prose-layout"></div>
+            </div>
+
+            <!-- Panel 2: Literary Analysis -->
+            <div id="modal-panel-analysis" class="modal-tab-panel" style="display: none;">
+                <div class="analysis-card">
+                    <h4 class="analysis-card-title"><i class="fas fa-lightbulb" style="color: #f59e0b;"></i> Central Theme &amp; Meaning</h4>
+                    <p id="modal-analysis-theme" style="margin: 0; font-size: 0.95rem; color: var(--color-text-main); line-height: 1.6;"></p>
+                </div>
+                <div class="analysis-card">
+                    <h4 class="analysis-card-title"><i class="fas fa-highlighter" style="color: #8b5cf6;"></i> Literary Devices &amp; Craft</h4>
+                    <ul id="modal-analysis-devices" class="analysis-list"></ul>
+                </div>
+                <div class="analysis-card">
+                    <h4 class="analysis-card-title"><i class="fas fa-spell-check" style="color: #10b981;"></i> Key Vocabulary in Context</h4>
+                    <ul id="modal-analysis-vocab" class="analysis-list"></ul>
+                </div>
+            </div>
+
+            <!-- Panel 3: Comprehension Check & XP -->
+            <div id="modal-panel-quiz" class="modal-tab-panel" style="display: none;">
+                <div style="margin-bottom: 1.25rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
+                    <div>
+                        <h4 style="margin: 0; font-size: 1.1rem; font-weight: 800; color: var(--color-text-main);">Reading Check &amp; Understanding</h4>
+                        <p style="margin: 0.25rem 0 0 0; font-size: 0.85rem; color: var(--color-text-muted);">Answer both questions to verify your comprehension and review key concepts.</p>
+                    </div>
+                    <span style="display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.3rem 0.75rem; border-radius: var(--radius-full); background: rgba(16, 185, 129, 0.12); color: #059669; font-size: 0.85rem; font-weight: 800;">
+                        <i class="fas fa-check-circle"></i> Comprehension Check
+                    </span>
+                </div>
+                <div id="modal-quiz-container"></div>
+            </div>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="story-modal-footer">
+            <span class="modal-footer-info">
+                <i class="fas fa-info-circle"></i> Press <kbd style="padding: 0.15rem 0.4rem; border-radius: 4px; border: 1px solid var(--color-border); font-size: 0.75rem;">Esc</kbd> anytime to close reader.
+            </span>
+            <button type="button" class="modal-footer-close-btn" onclick="closeStoryModal()">
+                Close Reader
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- AI Story Studio Modal Dialog -->
+<div id="ai-story-studio-modal" class="ai-studio-modal-overlay" style="display: none;" role="dialog" aria-modal="true" aria-labelledby="ai-studio-modal-title" aria-hidden="true">
+    <div class="ai-studio-backdrop" onclick="closeAIStudioModal()"></div>
+    <div class="ai-studio-card">
+        <div class="ai-studio-header">
+            <h3 id="ai-studio-modal-title" class="ai-studio-title">
+                <i class="fas fa-wand-magic-sparkles" style="color: #8b5cf6;"></i>
+                <span>AI Literature Studio</span>
+            </h3>
+            <button type="button" class="story-modal-close-icon" onclick="closeAIStudioModal()" aria-label="Close AI Story Studio">
+                &times;
+            </button>
+        </div>
+        <div class="ai-studio-body">
+            <p style="margin: 0 0 0.5rem 0; font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.5;">
+                Generate original curriculum-aligned stories or poems for any grade level (Kindergarten through Grade 12) with full literary analysis and comprehension checks.
+            </p>
+            
+            <div class="ai-form-group">
+                <label for="ai-grade-select" class="ai-form-label"><i class="fas fa-graduation-cap"></i> Target Grade Level</label>
+                <select id="ai-grade-select" class="ai-form-control">
+                    <option value="K">Kindergarten (Level K)</option>
+                    <option value="1">Grade 1</option>
+                    <option value="2">Grade 2</option>
+                    <option value="3">Grade 3</option>
+                    <option value="4">Grade 4</option>
+                    <option value="5" selected>Grade 5 (Intermediate)</option>
+                    <option value="6">Grade 6</option>
+                    <option value="7">Grade 7</option>
+                    <option value="8">Grade 8 (Middle School)</option>
+                    <option value="9">Grade 9 (Freshman)</option>
+                    <option value="10">Grade 10 (Sophomore)</option>
+                    <option value="11">Grade 11 (Junior)</option>
+                    <option value="12">Grade 12 (Senior / Advanced)</option>
+                </select>
+            </div>
+
+            <div class="ai-form-group">
+                <label for="ai-type-select" class="ai-form-label"><i class="fas fa-book-open"></i> Literary Form</label>
+                <select id="ai-type-select" class="ai-form-control">
+                    <option value="story">Short Story (Narrative Prose)</option>
+                    <option value="poem">Poem (Verse &amp; Stanzas)</option>
+                </select>
+            </div>
+
+            <div class="ai-form-group">
+                <label for="ai-genre-select" class="ai-form-label"><i class="fas fa-palette"></i> Genre</label>
+                <select id="ai-genre-select" class="ai-form-control">
+                    <option value="Adventure">Adventure &amp; Exploration</option>
+                    <option value="Science Fiction">Science Fiction &amp; Discovery</option>
+                    <option value="Nature &amp; Wildlife">Nature &amp; Wildlife</option>
+                    <option value="Historical Fiction">Historical Fiction &amp; Inquiry</option>
+                    <option value="Mystery">Mystery &amp; Problem Solving</option>
+                    <option value="Philosophical Reflection">Philosophical &amp; Lyrical</option>
+                </select>
+            </div>
+
+            <div class="ai-form-group">
+                <label for="ai-theme-select" class="ai-form-label"><i class="fas fa-lightbulb"></i> Core Theme</label>
+                <select id="ai-theme-select" class="ai-form-control">
+                    <option value="Courage &amp; Perseverance">Courage &amp; Perseverance</option>
+                    <option value="Kindness &amp; Empathy">Kindness &amp; Empathy</option>
+                    <option value="Curiosity &amp; Innovation">Curiosity &amp; Innovation</option>
+                    <option value="Stewardship &amp; Ecology">Stewardship &amp; Ecology</option>
+                    <option value="Integrity &amp; Truth">Integrity &amp; Truth</option>
+                </select>
+            </div>
+
+            <div class="ai-form-group">
+                <label for="ai-custom-prompt" class="ai-form-label"><i class="fas fa-pen-fancy"></i> Custom Title or Prompt (Optional)</label>
+                <input type="text" id="ai-custom-prompt" class="ai-form-control" placeholder="e.g. The Clockwork Hummingbird of Whispering Hill">
+            </div>
+        </div>
+        <div class="ai-studio-footer">
+            <button type="button" class="btn" onclick="closeAIStudioModal()" style="padding: 0.55rem 1.25rem; border-radius: var(--radius-full); background: var(--color-bg-surface); border: 1px solid var(--color-border); color: var(--color-text-main); font-weight: 700; cursor: pointer;">
+                Cancel
+            </button>
+            <button type="button" class="btn" onclick="generateCustomAIStory()" style="padding: 0.55rem 1.5rem; border-radius: var(--radius-full); background: linear-gradient(135deg, #8b5cf6, #ec4899); color: white; border: none; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem; box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);">
+                <i class="fas fa-magic"></i>
+                <span>Generate Literature</span>
+            </button>
+        </div>
+    </div>
 </div>
 
 <!-- Admin Notice Popup Banner -->
@@ -522,16 +782,6 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error('Error loading user profile:', e);
     }
 
-    // Populate Level & Rank in Banner
-    try {
-        const gameProfile = JSON.parse(localStorage.getItem('hl_gamification_profile'));
-        if (gameProfile) {
-            const lvlEl = document.getElementById('student-hub-level-num');
-            const rankEl = document.getElementById('student-hub-rank-title');
-            if (lvlEl && gameProfile.level) lvlEl.textContent = gameProfile.level;
-            if (rankEl && gameProfile.rank) rankEl.textContent = gameProfile.rank;
-        }
-    } catch(e) {}
 
     // Populate Continue Learning
     try {
@@ -600,103 +850,16 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         } catch(e){}
 
-        // Populate and evaluate Daily Learning Quests
-        try {
-            let completedCount = 0;
 
-            // Quest 1: Check lesson completion in localStorage
-            let hasCompletedLesson = false;
-            for (let i = 0; i < localStorage.length; i++) {
-                const k = localStorage.key(i);
-                if (k && k.startsWith('hl_progress_')) {
-                    try {
-                        const arr = JSON.parse(localStorage.getItem(k));
-                        if (Array.isArray(arr) && arr.length > 0) {
-                            hasCompletedLesson = true;
-                            break;
-                        }
-                    } catch(err){}
-                }
-            }
-            const qLessonCard = document.getElementById('quest-card-lesson');
-            const qLessonBar = document.getElementById('quest-progress-lesson');
-            const qLessonBtn = document.getElementById('quest-btn-lesson');
-            if (hasCompletedLesson) {
-                completedCount++;
-                if (qLessonCard) qLessonCard.classList.add('completed');
-                if (qLessonBar) qLessonBar.style.width = '100%';
-                if (qLessonBtn) qLessonBtn.innerHTML = '<i class="fas fa-check"></i> Completed';
-            }
-
-            // Quest 2: Check reading tracker
-            let readMinutes = 0;
-            try {
-                const rawTracker = localStorage.getItem('hesten_reading_tracker');
-                if (rawTracker) {
-                    const parsed = JSON.parse(rawTracker);
-                    readMinutes = parsed.todayMinutes || 0;
-                }
-            } catch(err){}
-            const qReadCard = document.getElementById('quest-card-read');
-            const qReadBar = document.getElementById('quest-progress-read');
-            const qReadBtn = document.getElementById('quest-btn-read');
-            const qReadDetail = document.getElementById('quest-detail-read');
-            const readPct = Math.min(100, Math.round((readMinutes / 10) * 100));
-            if (qReadBar) qReadBar.style.width = `${readPct}%`;
-            if (qReadDetail) qReadDetail.textContent = `Progress: ${readMinutes}/10 minutes read in library today.`;
-            if (readMinutes >= 10) {
-                completedCount++;
-                if (qReadCard) qReadCard.classList.add('completed');
-                if (qReadBtn) qReadBtn.innerHTML = '<i class="fas fa-check"></i> Completed';
-            }
-
-            // Quest 3: Check standard mastery >= 80%
-            let hasMasteredStandard = false;
-            try {
-                const rawMastery = localStorage.getItem('hesten_standards_mastery');
-                if (rawMastery) {
-                    const parsed = JSON.parse(rawMastery);
-                    hasMasteredStandard = Object.values(parsed).some(item => (item.bestScore || 0) >= 80);
-                }
-            } catch(err){}
-            const qMasteryCard = document.getElementById('quest-card-mastery');
-            const qMasteryBar = document.getElementById('quest-progress-mastery');
-            const qMasteryBtn = document.getElementById('quest-btn-mastery');
-            if (hasMasteredStandard) {
-                completedCount++;
-                if (qMasteryCard) qMasteryCard.classList.add('completed');
-                if (qMasteryBar) qMasteryBar.style.width = '100%';
-                if (qMasteryBtn) qMasteryBtn.innerHTML = '<i class="fas fa-check"></i> Completed';
-            }
-
-            // Overall Quests progress
-            const countEl = document.getElementById('quests-completed-count');
-            const fillEl = document.getElementById('quests-progress-fill');
-            const xpRewardEl = document.getElementById('quests-xp-reward');
-            if (countEl) countEl.textContent = `${completedCount}/3`;
-            if (fillEl) fillEl.style.width = `${Math.round((completedCount / 3) * 100)}%`;
-            if (completedCount === 3 && xpRewardEl) {
-                xpRewardEl.innerHTML = '<i class="fas fa-check-circle" style="color: #10b981;"></i> All Quests Complete! (+175 XP)';
-            }
-        } catch(e) {
-            console.warn('Error evaluating daily quests:', e);
-        }
     } catch(e) {
         console.error('Error loading bookmarks:', e);
     }
 
     // Cross-tab and role synchronization listeners
     window.addEventListener('storage', (e) => {
-        if (['hesten-user-profile', 'hl_gamification_profile', 'hesten_standards_mastery', 'hesten_learning_streak', 'library-bookmarks'].includes(e.key)) {
+        if (['hesten-user-profile', 'hesten_standards_mastery', 'hesten_learning_streak', 'library-bookmarks'].includes(e.key)) {
             // Re-sync dashboard widgets dynamically
             try {
-                const gameProfile = JSON.parse(localStorage.getItem('hl_gamification_profile'));
-                if (gameProfile) {
-                    const lvlEl = document.getElementById('student-hub-level-num');
-                    const rankEl = document.getElementById('student-hub-rank-title');
-                    if (lvlEl && gameProfile.level) lvlEl.textContent = gameProfile.level;
-                    if (rankEl && gameProfile.rank) rankEl.textContent = gameProfile.rank;
-                }
                 const streakData = JSON.parse(localStorage.getItem('hesten_learning_streak'));
                 if (streakData && streakData.streak) {
                     const streakEl = document.getElementById('student-hero-streak');
@@ -717,6 +880,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 </script>
+
+<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/student-stories-poems.js') : '/assets/js/student-stories-poems.js' ?>"></script>
 
 <?php
 // Include the footer file
