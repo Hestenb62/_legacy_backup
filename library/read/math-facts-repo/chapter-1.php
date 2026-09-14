@@ -18,35 +18,6 @@
             mental calculation heuristics according to national mathematical standards.</p>
     </header>
 
-    <!-- Quick Navigation Index / Thumb-Tab Bar -->
-    <nav class="math-toc-pills" aria-label="Reference Sections Concordance">
-        <span class="math-toc-label"><i class="fas fa-list-ol"></i> SECTIONS:</span>
-        <a href="#sec-1-1" class="math-pill" title="1.1 Counting &amp; Numbers to 120"><i
-                class="fas fa-sort-numeric-up"></i> 1.1</a>
-        <a href="#sec-1-2" class="math-pill" title="1.2 Addition Strategies within 20"><i class="fas fa-plus"></i>
-            1.2</a>
-        <a href="#sec-1-3" class="math-pill" title="1.3 Subtraction Strategies within 20"><i class="fas fa-minus"></i>
-            1.3</a>
-        <a href="#sec-1-4" class="math-pill" title="1.4 Word Problems Master Guide"><i class="fas fa-calculator"></i>
-            1.4</a>
-        <a href="#sec-1-5" class="math-pill" title="1.5 Place Value: Tens &amp; Ones"><i class="fas fa-layer-group"></i>
-            1.5</a>
-        <a href="#sec-1-6" class="math-pill" title="1.6 Comparing Numbers (&gt;, &lt;, =)"><i
-                class="fas fa-greater-than-equal"></i> 1.6</a>
-        <a href="#sec-1-7" class="math-pill" title="1.7 Measurement &amp; Length"><i
-                class="fas fa-ruler-horizontal"></i> 1.7</a>
-        <a href="#sec-1-8" class="math-pill" title="1.8 Chronometry: Telling Time"><i class="fas fa-clock"></i> 1.8</a>
-        <a href="#sec-1-9" class="math-pill" title="1.9 Coins &amp; Money Arithmetic"><i class="fas fa-coins"></i>
-            1.9</a>
-        <a href="#sec-1-10" class="math-pill" title="1.10 Geometry &amp; Equal Shares"><i class="fas fa-shapes"></i>
-            1.10</a>
-        <a href="#sec-1-11" class="math-pill" title="1.11 Data, Tally Charts &amp; Graphs"><i
-                class="fas fa-chart-bar"></i> 1.11</a>
-        <a href="#sec-1-12" class="math-pill" title="1.12 Mental Math Speed Hacks"><i class="fas fa-brain"></i> 1.12</a>
-        <a href="#sec-1-13" class="math-pill" title="1.13 Synoptic Tables &amp; Cheat Sheet"><i
-                class="fas fa-file-invoice"></i> 1.13</a>
-    </nav>
-
     <!-- ==========================================================================
          Section 1.1: Counting & Number Foundations to 120
          ========================================================================== -->
