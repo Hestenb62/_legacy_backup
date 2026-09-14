@@ -36,6 +36,7 @@ We successfully converted lesson `k-math-m1-a-1` from a static PHP file (`lesson
   - **Modular Block Dispatcher**: Executes component PHP files from `src/components/` and supports raw `html` blocks.
   - **Dynamic Practice Questions**: Evaluates and displays practice questions directly from the JSON definition.
   - **Script & Citation Injection**: Automatically injects client-side simulation scripts and MLA citation footers when declared in JSON.
+  - **Open Side-by-Side Vocabulary**: Displayed full-width with vocabulary cards rendered open by default next to one another in a responsive 4-column grid rather than stacked or collapsed into accordions.
   - **Standard Integration**: Binds standards mastery tracking (`localStorage.hesten_standards_mastery`) to the standard and code defined in JSON.
 
 ---

@@ -177,7 +177,7 @@ include_once ABSPATH . 'src/partials/sticky-reading-bar.php';
 
         <!-- Vocabulary -->
         <?php if (!empty($lesson['vocabulary'])): ?>
-        <section class="lesson-vocab-section">
+        <section class="lesson-vocab-section lesson-vocab-section-full">
             <div class="lesson-vocab-panel">
                 <div>
                     <h3 class="lesson-vocab-main-title">
@@ -186,12 +186,12 @@ include_once ABSPATH . 'src/partials/sticky-reading-bar.php';
                 </div>
                 <div class="lesson-vocab-grid">
                     <?php foreach (($lesson['vocabulary'] ?? []) as $index => $vocab): ?>
-                        <div onclick="toggleVocabCard('vocab-<?php echo (int)$index; ?>')" class="lesson-vocab-card">
+                        <div class="lesson-vocab-card lesson-vocab-card-open">
                             <div class="lesson-vocab-header">
                                 <h4 class="lesson-vocab-title"><?php echo htmlspecialchars($vocab['term'] ?? ''); ?></h4>
-                                <span class="lesson-vocab-icon" id="vocab-<?php echo (int)$index; ?>-icon"><i class="fas fa-chevron-down"></i></span>
+                                <span class="lesson-vocab-icon" aria-hidden="true"><i class="fas fa-bookmark"></i></span>
                             </div>
-                            <div id="vocab-<?php echo (int)$index; ?>-body" class="lesson-vocab-body">
+                            <div class="lesson-vocab-body">
                                 <p class="lesson-vocab-text"><?php echo htmlspecialchars($vocab['definition'] ?? ''); ?></p>
                             </div>
                         </div>

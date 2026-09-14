@@ -375,22 +375,78 @@
 .lesson-builder-interp-list li { margin-bottom: 0.5rem; }
 
 /* Vocab */
-.lesson-vocab-section { display: grid; grid-template-columns: 1fr; gap: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--color-border); }
-@media (min-width: 1024px) { .lesson-vocab-section { grid-template-columns: 7fr 5fr; } }
-.lesson-vocab-panel { display: flex; flex-direction: column; gap: 1.5rem; }
+.lesson-vocab-section { display: grid; grid-template-columns: 1fr; gap: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--color-border); width: 100%; }
+@media (min-width: 1024px) { 
+    .lesson-vocab-section:has(.lesson-study-guide-panel) { grid-template-columns: 7fr 5fr; } 
+}
+.lesson-vocab-section-full { grid-template-columns: 1fr !important; }
+.lesson-vocab-panel { display: flex; flex-direction: column; gap: 1.25rem; width: 100%; }
 .lesson-vocab-main-title { font-size: 1.25rem; font-weight: 900; color: var(--color-text-default); font-family: 'Outfit', sans-serif; margin-bottom: 0.25rem; }
-.lesson-icon { color: #e11d48; margin-right: 0.5rem; }
-.lesson-vocab-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
-@media (min-width: 640px) { .lesson-vocab-grid { grid-template-columns: 1fr 1fr; } }
-.lesson-vocab-card { background-color: var(--color-surface); border: 1px solid var(--color-border); padding: 1.25rem; border-radius: 1rem; cursor: pointer; transition: all 0.3s; }
-.lesson-vocab-card:hover { background-color: rgba(225, 29, 72, 0.05); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
-.lesson-vocab-header { display: flex; justify-content: space-between; align-items: flex-start; }
-.lesson-vocab-title { font-size: 0.875rem; font-weight: 700; color: var(--color-text-default); font-family: 'Outfit', sans-serif; transition: color 0.2s; }
-.lesson-vocab-card:hover .lesson-vocab-title { color: #e11d48; }
-.lesson-vocab-icon { color: var(--color-text-muted); font-size: 0.75rem; transition: color 0.2s; }
-.lesson-vocab-card:hover .lesson-vocab-icon { color: #e11d48; }
-.lesson-vocab-body { max-height: 0; overflow: hidden; transition: max-height 0.35s ease-in-out; }
-.lesson-vocab-text { font-size: 0.75rem; color: var(--color-text-secondary); font-weight: 500; margin-top: 0.75rem; line-height: 1.625; border-top: 1px solid var(--color-border); padding-top: 0.5rem; }
+.lesson-icon { color: var(--color-primary, #e11d48); margin-right: 0.5rem; }
+.lesson-vocab-grid { 
+    display: grid; 
+    grid-template-columns: 1fr; 
+    gap: 1.25rem; 
+    width: 100%;
+}
+@media (min-width: 640px) { 
+    .lesson-vocab-grid { 
+        grid-template-columns: repeat(2, 1fr); 
+    } 
+}
+@media (min-width: 1024px) { 
+    .lesson-vocab-grid { 
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+    } 
+}
+.lesson-vocab-card { 
+    background-color: var(--color-surface); 
+    border: 1px solid var(--color-border); 
+    padding: 1.25rem; 
+    border-radius: 1rem; 
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+    display: flex;
+    flex-direction: column;
+}
+.lesson-vocab-card:hover { 
+    border-color: color-mix(in srgb, var(--color-primary, #e11d48) 40%, var(--color-border));
+    background-color: color-mix(in srgb, var(--color-primary, #e11d48) 4%, var(--color-surface));
+    box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.2); 
+    transform: translateY(-2px);
+}
+.lesson-vocab-header { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--color-border);
+}
+.lesson-vocab-title { 
+    font-size: 0.95rem; 
+    font-weight: 800; 
+    color: var(--color-text-default); 
+    font-family: 'Outfit', sans-serif; 
+    line-height: 1.35;
+    transition: color 0.2s;
+}
+.lesson-vocab-card:hover .lesson-vocab-title { color: var(--color-primary, #e11d48); }
+.lesson-vocab-icon { color: var(--color-text-muted); font-size: 0.8rem; transition: color 0.2s; opacity: 0.7; }
+.lesson-vocab-card:hover .lesson-vocab-icon { color: var(--color-primary, #e11d48); opacity: 1; }
+.lesson-vocab-body { 
+    max-height: none; 
+    overflow: visible; 
+    display: block; 
+    flex: 1;
+}
+.lesson-vocab-text { 
+    font-size: 0.85rem; 
+    color: var(--color-text-secondary); 
+    font-weight: 500; 
+    line-height: 1.6; 
+    margin: 0;
+}
 
 /* Study Guides */
 .lesson-study-guide-panel { display: flex; flex-direction: column; gap: 1.5rem; justify-content: space-between; }
