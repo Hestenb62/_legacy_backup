@@ -832,8 +832,6 @@
                         return `<span class="std-code-wrap" data-std-code="${cleanCode}">` +
                             `<button type="button" class="std-code-badge" data-code="${cleanCode}" title="Click to copy standard code"><i class="far fa-copy"></i> ${cleanCode}</button>` +
                             `<button type="button" class="std-info-btn" data-code="${cleanCode}" aria-label="View Standard Details for ${cleanCode}" title="View detailed standard mastery dossier"><i class="fas fa-info-circle"></i></button>` +
-                            `<a href="/assessment/#standard=${encodeURIComponent(cleanCode)}" class="std-action-btn std-quiz-btn" title="Launch targeted assessment quiz for ${cleanCode}"><i class="fas fa-bullseye"></i> Practice</a>` +
-                            `<a href="/levels/${currentLevelLetter}.php?standard=${encodeURIComponent(cleanCode)}" class="std-action-btn std-lesson-btn" title="Jump to Level ${currentLevelLetter.toUpperCase()} curriculum lesson"><i class="fas fa-book-open"></i> Lesson</a>` +
                             `<span class="std-mastery-checkmark" data-code="${cleanCode}" style="display: none;"></span>` +
                             `<span class="std-progress-badge" data-code="${cleanCode}" style="display: none;"></span>` +
                         `</span>`;
