@@ -244,6 +244,11 @@ body.zen-mode {
                     <i class="fas fa-graduation-cap" aria-hidden="true"></i>
                 </button>
 
+                <!-- Flashcard Studio Quick Trigger -->
+                <button type="button" id="open-reader-flashcards-btn" class="tool-btn" onclick="window.toggleFlashcardStudio && window.toggleFlashcardStudio(true)" title="Open Flashcard Studio (Alt+F)" aria-label="Open Flashcard Studio">
+                    <i class="fas fa-layer-group" aria-hidden="true"></i>
+                </button>
+
                 <!-- Typography & Themes Panel Toggle -->
                 <button type="button" id="open-settings-btn" class="tool-btn tool-btn-settings" title="Typography, Font & Theme Settings" aria-label="Open Reader Settings">
                     <i class="fas fa-font" aria-hidden="true"></i>
@@ -640,6 +645,11 @@ body.zen-mode {
                     <button type="button" id="flashcard-prev-btn" class="flashcard-nav-btn"><i class="fas fa-chevron-left"></i> Prev</button>
                     <span id="flashcard-counter" class="flashcard-counter-label">1 of 1</span>
                     <button type="button" id="flashcard-next-btn" class="flashcard-nav-btn">Next <i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div style="text-align: center; margin-top: 1rem;">
+                    <button type="button" class="intro-start-btn" onclick="window.toggleFlashcardStudio && window.toggleFlashcardStudio(true)" style="padding: 0.5rem 1.25rem; font-size: 0.85rem;">
+                        <i class="fas fa-layer-group mr-1"></i> Open in Leitner Flashcard Studio
+                    </button>
                 </div>
             </div>
 

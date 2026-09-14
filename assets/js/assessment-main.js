@@ -10,6 +10,128 @@ function escapeHtml(str) {
 }
 window.escapeHtml = escapeHtml;
 
+// === REMEDIATION FLASHCARD SUITE INTEGRATION ===
+window.openRemediationFlashcards = function (subject, standardCode) {
+  const currentKey = document.getElementById("grade-key")?.value || "k";
+  const gradeLabel = (window.gradeConfig && window.gradeConfig[currentKey]?.label) || "Current Grade";
+
+  // Find missed questions specifically matching standardCode (or subject fallback)
+  let targetMissed = [];
+  if (Array.isArray(window.quizResultsData)) {
+    targetMissed = window.quizResultsData.filter(item => {
+      if (item.isCorrect) return false;
+      if (standardCode) {
+        return item.standard === standardCode || (item.standards && item.standards.includes(standardCode));
+      }
+      if (subject) {
+        return item.subject && item.subject.toLowerCase() === subject.toLowerCase();
+      }
+      return true;
+    });
+  }
+
+  const deckKey = standardCode 
+    ? `remediation-${standardCode.toLowerCase().replace(/[^a-z0-9]/g, '-')}` 
+    : `remediation-${(subject || 'general').toLowerCase().replace(/[^a-z0-9]/g, '-')}`;
+
+  const deckTitle = standardCode
+    ? `Remediation Drill: Standard ${standardCode}`
+    : `Remediation Drill: ${gradeLabel} ${subject || 'Concepts'}`;
+
+  try {
+    const KEY = 'hl_leitner_decks';
+    const decks = JSON.parse(localStorage.getItem(KEY) || '{}');
+
+    if (targetMissed.length > 0) {
+      decks[deckKey] = {
+        name: deckTitle,
+        subject: subject || 'General',
+        grade: gradeLabel,
+        cards: targetMissed.map((q, idx) => ({
+          id: `rem-${Date.now()}-${idx}`,
+          front: q.question || 'Concept Question',
+          back: `Correct Answer: ${q.correctAnswer || (q.options && q.options[q.correctIndex]) || 'Review required'}${q.explanation ? '\n\nExplanation: ' + q.explanation : ''}`,
+          example: standardCode ? `Standard: ${standardCode}` : `${gradeLabel} ${subject}`,
+          box: 1,
+          nextReview: Date.now()
+        }))
+      };
+      localStorage.setItem(KEY, JSON.stringify(decks));
+      window.dispatchEvent(new CustomEvent('hl:data-sync', { detail: { key: KEY } }));
+    }
+  } catch (err) {
+    console.warn("Could not save remediation deck to localStorage:", err);
+  }
+
+  let targetDeckId = deckKey;
+  if (targetMissed.length === 0) {
+    const numGrade = currentKey.replace(/[^0-9]/g, '');
+    const cleanSubj = (subject || 'math').toLowerCase();
+    if (cleanSubj.includes('math')) {
+      targetDeckId = numGrade ? `grade-${numGrade}-math` : 'math-facts-repo-deck';
+    } else if (cleanSubj.includes('ela') || cleanSubj.includes('language') || cleanSubj.includes('reading')) {
+      targetDeckId = numGrade ? `grade-${numGrade}-ela` : 'elementary-sight-words';
+    } else if (cleanSubj.includes('science')) {
+      targetDeckId = numGrade ? `grade-${numGrade}-science` : 'science-facts-repo-deck';
+    } else if (cleanSubj.includes('social')) {
+      targetDeckId = numGrade ? `grade-${numGrade}-social` : 'american-yawp-deck';
+    }
+  }
+
+  if (window.announceA11y) {
+    window.announceA11y(`Opened targeted flashcard deck for ${standardCode || subject || 'remediation'}`);
+  }
+
+  if (typeof window.toggleFlashcardStudio === 'function') {
+    window.toggleFlashcardStudio(true, targetDeckId);
+  }
+};
+
+window.openAssessmentFlashcards = function () {
+  const currentKey = document.getElementById("grade-key")?.value || "k";
+  const gradeLabel = (window.gradeConfig && window.gradeConfig[currentKey]?.label) || "Current Grade";
+
+  let allMissed = [];
+  if (Array.isArray(window.quizResultsData)) {
+    allMissed = window.quizResultsData.filter(item => !item.isCorrect);
+  }
+
+  const deckKey = `assessment-remediation-${currentKey}`;
+  const deckTitle = `${gradeLabel} Assessment Remediation Drill`;
+
+  try {
+    const KEY = 'hl_leitner_decks';
+    const decks = JSON.parse(localStorage.getItem(KEY) || '{}');
+
+    if (allMissed.length > 0) {
+      decks[deckKey] = {
+        name: deckTitle,
+        grade: gradeLabel,
+        cards: allMissed.map((q, idx) => ({
+          id: `asmt-rem-${Date.now()}-${idx}`,
+          front: q.question || 'Concept Question',
+          back: `Correct Answer: ${q.correctAnswer || (q.options && q.options[q.correctIndex]) || 'Review required'}${q.explanation ? '\n\nExplanation: ' + q.explanation : ''}`,
+          example: q.standard ? `Standard: ${q.standard}` : (q.subject || gradeLabel),
+          box: 1,
+          nextReview: Date.now()
+        }))
+      };
+      localStorage.setItem(KEY, JSON.stringify(decks));
+      window.dispatchEvent(new CustomEvent('hl:data-sync', { detail: { key: KEY } }));
+    }
+  } catch (err) {
+    console.warn("Could not save assessment remediation deck:", err);
+  }
+
+  if (window.announceA11y) {
+    window.announceA11y(`Opened assessment remediation flashcard deck`);
+  }
+
+  if (typeof window.toggleFlashcardStudio === 'function') {
+    window.toggleFlashcardStudio(true, allMissed.length > 0 ? deckKey : null);
+  }
+};
+
 // === GLOBAL GRADE CONFIGURATION ===
 const gradeConfig = {
   "pre-k": {
@@ -1369,7 +1491,14 @@ if (typeof finishQuiz === "function") {
         downloadBtn.innerHTML = '<i class="fas fa-file-download"></i> Download Text';
         downloadBtn.onclick = generateAndDownloadText;
 
+        const flashcardBtn = document.createElement("button");
+        flashcardBtn.className = "hero-nav-btn hero-nav-btn-outline";
+        flashcardBtn.style.cssText = "padding: 0.85rem 1.75rem; border-radius: var(--radius-full); font-weight: 700; font-size: 0.95rem; cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem;";
+        flashcardBtn.innerHTML = '<i class="fas fa-layer-group" style="color: var(--color-primary);"></i> Practice Targeted Flashcards';
+        flashcardBtn.onclick = () => window.openAssessmentFlashcards();
+
         btnContainer.appendChild(scorecardBtn);
+        btnContainer.appendChild(flashcardBtn);
         btnContainer.appendChild(reviewBtn);
         btnContainer.appendChild(reportBtn);
         btnContainer.appendChild(worksheetBtn);
@@ -1414,10 +1543,10 @@ if (typeof finishQuiz === "function") {
 
       const recommendations = [];
 
-      // Evaluate standards with accuracy < 70%
+      // Evaluate standards with accuracy < 80% (Benchmark Mastery Standard)
       Object.values(standardStats).forEach((st) => {
         const pct = (st.correct / st.total) * 100;
-        if (pct < 70) {
+        if (pct < 80) {
           let lessonUrl = levelLink;
           let lessonTitle = `Review ${st.code} Lessons`;
 
@@ -1455,10 +1584,10 @@ if (typeof finishQuiz === "function") {
         }
       });
 
-      // Also evaluate subjects with accuracy < 70% if not already flagged
+      // Also evaluate subjects with accuracy < 80% if not already flagged
       Object.entries(subjectStats).forEach(([subj, st]) => {
         const pct = (st.correct / st.total) * 100;
-        if (pct < 70 && !recommendations.some(r => r.subject === subj)) {
+        if (pct < 80 && !recommendations.some(r => r.subject === subj)) {
           let lessonUrl = `${levelLink}#${subj.toLowerCase().replace(/\s+/g, '-')}`;
           let lessonTitle = `${gradeLabel} ${subj} Modules`;
 
@@ -1542,6 +1671,9 @@ if (typeof finishQuiz === "function") {
                 <a href="${rec.lessonUrl}" class="hero-nav-btn hero-nav-btn-primary" style="padding: 0.6rem 1.25rem; font-size: 0.85rem; border-radius: var(--radius-md); font-weight: 800; white-space: nowrap; border: none; text-decoration: none;">
                   <i class="fas fa-play" style="margin-right: 0.35rem;"></i> Launch Lesson
                 </a>
+                <button type="button" class="hero-nav-btn hero-nav-btn-outline" style="padding: 0.6rem 1rem; font-size: 0.85rem; border-radius: var(--radius-md); font-weight: 700; white-space: nowrap; cursor: pointer;" onclick="window.openRemediationFlashcards('${escapeHtml(rec.subject || '')}', '${escapeHtml(rec.standardCode || '')}')">
+                  <i class="fas fa-layer-group" style="margin-right: 0.35rem; color: var(--color-primary);"></i> Study Flashcards
+                </button>
                 ${rec.standardCode ? `
                   <a href="/assessment/#standard=${encodeURIComponent(rec.standardCode)}" class="hero-nav-btn hero-nav-btn-outline" style="padding: 0.6rem 1rem; font-size: 0.85rem; border-radius: var(--radius-md); font-weight: 700; white-space: nowrap; text-decoration: none;" title="Take standard micro-quiz">
                     <i class="fas fa-bullseye" style="margin-right: 0.35rem;"></i> Standard Drill
@@ -1561,7 +1693,7 @@ if (typeof finishQuiz === "function") {
                   <i class="fas fa-check-double"></i>
                 </div>
                 <div>
-                  <h4 style="font-weight: 800; font-size: 1.05rem; margin: 0 0 0.25rem 0; color: var(--color-text-main);">Proficiency Demonstrated (&ge; 70% Across All Tested Standards)</h4>
+                  <h4 style="font-weight: 800; font-size: 1.05rem; margin: 0 0 0.25rem 0; color: var(--color-text-main);">Proficiency Demonstrated (&ge; 80% Across All Tested Standards)</h4>
                   <p style="font-size: 0.85rem; color: var(--color-text-muted); margin: 0; line-height: 1.5;">Outstanding performance! You have met or exceeded the benchmark criteria across all tested domains for ${gradeLabel}. No targeted remediation is required at this time.</p>
                 </div>
               </div>

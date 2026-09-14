@@ -131,27 +131,49 @@
                     const text = currentSelectedRange.toString().trim();
                     if (text) {
                         applyHighlight("hl-blue", "Saved to Leitner Flashcards");
+
+                        // Detect active book context
+                        const urlParams = new URLSearchParams(window.location.search);
+                        const activeBookId = (window.BOOK_METADATA && window.BOOK_METADATA.id) || 
+                                             (window.HL_PAGE_CONTEXT && window.HL_PAGE_CONTEXT.bookId) ||
+                                             urlParams.get('book') ||
+                                             (window.location.pathname.includes('/frankenstein/') ? 'frankenstein' : '') ||
+                                             (window.location.pathname.includes('/1984/') ? '1984' : '') ||
+                                             'custom';
+                        
+                        const deckId = activeBookId !== 'custom' ? `${activeBookId}-deck` : 'custom';
+                        const bookTitle = (window.BOOK_METADATA && window.BOOK_METADATA.title) || 
+                                          (activeBookId !== 'custom' ? activeBookId.charAt(0).toUpperCase() + activeBookId.slice(1).replace(/-/g, ' ') : 'Reader');
+                        const chapterInfo = window.CURRENT_READER_PAGE ? `Page ${window.CURRENT_READER_PAGE}` : (urlParams.get('chapter') || 'Chapter 1');
+
                         // Add card to Flashcard Studio
-                        if (window.addFlashcardToDeck) {
-                            window.addFlashcardToDeck('custom', text, 'Vocabulary or concept from reading', '');
+                        if (typeof window.addFlashcardToDeck === 'function') {
+                            window.addFlashcardToDeck(deckId, text, `Vocabulary concept from ${bookTitle}`, chapterInfo);
                         } else {
                             try {
                                 const decks = JSON.parse(localStorage.getItem('hl_leitner_decks') || '{}');
-                                if (!decks.custom) decks.custom = { name: 'Custom Student Deck', cards: [] };
-                                decks.custom.cards.push({
+                                if (!decks[deckId]) {
+                                    decks[deckId] = { name: `${bookTitle} Vocabulary`, cards: [] };
+                                }
+                                decks[deckId].cards.push({
                                     id: 'card-' + Date.now(),
                                     front: text,
-                                    back: 'Concept saved from reader',
-                                    example: 'Page ' + (window.CURRENT_READER_PAGE || 1),
+                                    back: `Concept saved from ${bookTitle}`,
+                                    example: chapterInfo,
                                     box: 1,
                                     nextReview: Date.now()
                                 });
                                 localStorage.setItem('hl_leitner_decks', JSON.stringify(decks));
+                                window.dispatchEvent(new CustomEvent('hl:data-sync', { detail: { key: 'hl_leitner_decks' } }));
                             } catch (err) {}
                         }
 
-                        if (window.toggleFlashcardStudio) {
-                            window.toggleFlashcardStudio(true);
+                        if (window.announceA11y) {
+                            window.announceA11y(`Saved "${text.slice(0, 25)}" to ${bookTitle} Leitner Flashcard Deck`);
+                        }
+
+                        if (typeof window.toggleFlashcardStudio === 'function') {
+                            window.toggleFlashcardStudio(true, deckId);
                         }
                     }
                 }
