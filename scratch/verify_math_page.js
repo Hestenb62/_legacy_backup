@@ -6,7 +6,8 @@ console.log('=== Verifying pages/math.php & Related Assets ===');
 const files = [
     'pages/math.php',
     'assets/css/pages/math.css',
-    'assets/js/pages/math-index.js'
+    'assets/js/pages/math-index.js',
+    'assets/data/math-php.json'
 ];
 
 files.forEach(f => {
@@ -28,14 +29,16 @@ try {
     process.exit(1);
 }
 
-// 3. Inspect pages/math.php
+// 3. Inspect JSON dataset & PHP file
+const jsonData = JSON.parse(fs.readFileSync('assets/data/math-php.json', 'utf8'));
 const phpContent = fs.readFileSync('pages/math.php', 'utf8');
+console.log(`[PASS] assets/data/math-php.json parsed successfully (${jsonData.length} terms)`);
 
-// Check grade representation 1 through 12
+// Check grade representation 1 through 12 in JSON dataset
 for (let g = 1; g <= 12; g++) {
-    const hasGrade = phpContent.includes(`'grade' => ${g}`);
+    const hasGrade = jsonData.some(t => t.grade === g);
     if (!hasGrade) {
-        console.error(`[FAIL] Grade ${g} not found in pages/math.php`);
+        console.error(`[FAIL] Grade ${g} not found in assets/data/math-php.json`);
         process.exit(1);
     }
 }
