@@ -317,120 +317,24 @@ include_once ABSPATH . 'src/partials/sticky-reading-bar.php';
         }
         ?>
 
-        <!-- Formative Exit Ticket & Mastery Check -->
-        <section class="lesson-exit-ticket-section" id="exit-ticket-section">
-            <div class="exit-ticket-header">
-                <div class="exit-ticket-title-wrap">
-                    <span class="exit-ticket-badge"><i class="fas fa-clipboard-check"></i> Standard Competency Check</span>
-                    <h3>Exit Ticket: Quick Mastery Check</h3>
-                    <p class="exit-ticket-desc">Demonstrate your understanding of this lesson's key concepts to log mastery to your profile.</p>
-                </div>
+        <!-- Interactive Check Understanding Trigger Card -->
+        <section class="lesson-check-understanding-card" style="margin-top: 2.5rem; margin-bottom: 2rem; padding: 1.75rem 2rem; background: color-mix(in srgb, var(--color-primary, #e11d48) 5%, var(--color-surface)); border: 1px solid color-mix(in srgb, var(--color-primary, #e11d48) 20%, transparent); border-radius: 1.25rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1.5rem;">
+            <div style="max-width: 600px;">
+                <span class="lesson-badge" style="margin-bottom: 0.5rem; display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; color: var(--color-primary); letter-spacing: 0.05em;">
+                    <i class="fas fa-clipboard-check"></i> Standard Competency Check
+                </span>
+                <h3 style="font-size: 1.35rem; font-weight: 900; color: var(--color-text-default); margin: 0 0 0.35rem 0; font-family: 'Outfit', sans-serif;">
+                    Ready to Check Your Understanding?
+                </h3>
+                <p style="font-size: 0.9rem; color: var(--color-text-secondary); margin: 0; line-height: 1.5;">
+                    Complete the quick exit ticket practice check to verify your understanding of this lesson and track standard mastery on your profile.
+                </p>
             </div>
-
-            <form id="exit-ticket-form" onsubmit="event.preventDefault(); submitExitTicket();">
-                <?php foreach ($exitQuestions as $qIdx => $q): ?>
-                    <div class="exit-ticket-card" id="exit-q-<?= $qIdx ?>">
-                        <div class="exit-ticket-question">
-                            <strong>Question <?= ($qIdx + 1) ?>:</strong> <?= htmlspecialchars($q['question']) ?>
-                        </div>
-                        <div class="exit-ticket-options">
-                            <?php foreach ($q['options'] as $oIdx => $opt): ?>
-                                <label class="exit-ticket-option" id="exit-opt-<?= $qIdx ?>-<?= $oIdx ?>">
-                                    <input type="radio" name="exit_q_<?= $qIdx ?>" value="<?= $oIdx ?>" required>
-                                    <span><?= htmlspecialchars($opt) ?></span>
-                                </label>
-                            <?php endforeach; ?>
-                        </div>
-                        <div class="exit-ticket-explanation" id="exit-exp-<?= $qIdx ?>">
-                            <strong><i class="fas fa-info-circle"></i> Explanation:</strong> <?= htmlspecialchars($q['explanation']) ?>
-                        </div>
-                    </div>
-                <?php endforeach; ?>
-
-                <div class="exit-ticket-actions">
-                    <button type="submit" id="exit-ticket-submit-btn" class="exit-ticket-submit-btn">
-                        <i class="fas fa-check-circle"></i> Submit & Check Mastery
-                    </button>
-                    <div id="exit-ticket-score" class="exit-ticket-score-banner"></div>
-                </div>
-            </form>
+            <button type="button" onclick="openLessonPracticeModal()" class="lesson-btn-primary" style="display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.85rem 1.75rem; font-size: 0.95rem; font-weight: 700; border-radius: 9999px; cursor: pointer; box-shadow: 0 4px 14px color-mix(in srgb, var(--color-primary, #e11d48) 35%, transparent); transition: all 0.2s ease;">
+                <i class="fas fa-lightbulb"></i>
+                <span>Check Understanding</span>
+            </button>
         </section>
-
-        <script>
-        const EXIT_QUESTIONS = <?= json_encode($exitQuestions) ?>;
-        const LESSON_CODE = <?= json_encode($lesson['code'] ?? ($codeStr ?? strtoupper(str_replace('-', '.', $lessonId)))) ?>;
-        const LESSON_STD = <?= json_encode($lesson['standard'] ?? ('CCSS.' . strtoupper($rawSubj ?? 'MATH') . '.' . strtoupper($rawLevel ?? 'K') . '.' . strtoupper($rawMod ?? 'M1'))) ?>;
-        const LESSON_LVL = <?= json_encode($lesson['levelId'] ?? ($rawLevel ?? 'k')) ?>;
-        const LESSON_TITLE = <?= json_encode($meta['title'] ?? 'Curriculum Lesson') ?>;
-
-        function submitExitTicket() {
-            let correctCount = 0;
-            const total = EXIT_QUESTIONS.length;
-
-            EXIT_QUESTIONS.forEach((q, idx) => {
-                const selected = document.querySelector(`input[name="exit_q_${idx}"]:checked`);
-                const expEl = document.getElementById(`exit-exp-${idx}`);
-                if (expEl) expEl.classList.add('visible');
-
-                q.options.forEach((_, optIdx) => {
-                    const optLabel = document.getElementById(`exit-opt-${idx}-${optIdx}`);
-                    if (!optLabel) return;
-                    optLabel.classList.remove('correct-choice', 'incorrect-choice');
-                    if (optIdx === q.correct) {
-                        optLabel.classList.add('correct-choice');
-                    }
-                });
-
-                if (selected) {
-                    const userVal = parseInt(selected.value, 10);
-                    const chosenLabel = document.getElementById(`exit-opt-${idx}-${userVal}`);
-                    if (userVal === q.correct) {
-                        correctCount++;
-                    } else if (chosenLabel) {
-                        chosenLabel.classList.add('incorrect-choice');
-                    }
-                }
-            });
-
-            const pct = Math.round((correctCount / total) * 100);
-            const scoreBanner = document.getElementById('exit-ticket-score');
-            if (scoreBanner) {
-                scoreBanner.className = 'exit-ticket-score-banner visible';
-                if (pct >= 80) {
-                    scoreBanner.classList.add('mastered');
-                    scoreBanner.innerHTML = `<i class="fas fa-trophy"></i> Mastered! ${correctCount}/${total} (${pct}%) • Saved to Profile`;
-                } else {
-                    scoreBanner.classList.add('retry');
-                    scoreBanner.innerHTML = `<i class="fas fa-redo"></i> Score: ${correctCount}/${total} (${pct}%) • Review explanations above`;
-                }
-            }
-
-            // Save mastery to localStorage
-            try {
-                let mastery = {};
-                const raw = localStorage.getItem('hesten_standards_mastery');
-                if (raw) mastery = JSON.parse(raw);
-                const prev = mastery[LESSON_CODE] || {};
-                mastery[LESSON_CODE] = {
-                    code: LESSON_CODE,
-                    name: LESSON_TITLE,
-                    standard: LESSON_STD,
-                    bestScore: Math.max(prev.bestScore || 0, pct),
-                    lastAttempt: new Date().toISOString().split('T')[0],
-                    attempts: (prev.attempts || 0) + 1,
-                    level: LESSON_LVL
-                };
-                localStorage.setItem('hesten_standards_mastery', JSON.stringify(mastery));
-                window.dispatchEvent(new CustomEvent('standards-mastery-updated', { detail: mastery[LESSON_CODE] }));
-            } catch (e) {
-                console.warn('Failed to record mastery:', e);
-            }
-
-            if (window.ensureMathJax) {
-                window.ensureMathJax([document.getElementById('exit-ticket-section')]);
-            }
-        }
-        </script>
 
         <?php if (!empty($lesson['citation'])): ?>
             <!-- Source Citation & Metadata Footer -->
@@ -468,6 +372,7 @@ $levelUrl = !empty($levelUrl) ? $levelUrl : ('/levels/' . ($rawLevel ?? 'k') . '
 $lessonCode = $lesson['code'] ?? ($codeStr ?? strtoupper(str_replace('-', '.', $lessonId)));
 $lessonTitle = $meta['title'] ?? 'Curriculum Lesson';
 $lessonStandard = $lesson['standard'] ?? ('CCSS.' . strtoupper($rawSubj ?? 'MATH') . '.' . strtoupper($rawLevel ?? 'K') . '.' . strtoupper($rawMod ?? 'M1'));
+$practiceQuestions = $exitQuestions;
 include ABSPATH . 'src/lesson_runner.php';
 ?>
 

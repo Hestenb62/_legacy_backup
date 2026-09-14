@@ -37,6 +37,7 @@ We successfully converted lesson `k-math-m1-a-1` from a static PHP file (`lesson
   - **Dynamic Practice Questions**: Evaluates and displays practice questions directly from the JSON definition.
   - **Script & Citation Injection**: Automatically injects client-side simulation scripts and MLA citation footers when declared in JSON.
   - **Open Side-by-Side Vocabulary**: Displayed full-width with vocabulary cards rendered open by default next to one another in a responsive 4-column grid rather than stacked or collapsed into accordions.
+  - **Modal "Check Understanding" Practice**: Removed the static in-page exit ticket form and routed all practice questions into the interactive "Check Understanding" practice modal triggered from both the docked runner and in-page callout.
   - **Standard Integration**: Binds standards mastery tracking (`localStorage.hesten_standards_mastery`) to the standard and code defined in JSON.
 
 ---

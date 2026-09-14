@@ -243,8 +243,12 @@ if (!isset($practiceQuestions) || empty($practiceQuestions)) {
         if (modal) {
             modal.style.display = 'flex';
             document.body.classList.add('modal-open');
+            if (typeof window.ensureMathJax === 'function') {
+                window.ensureMathJax(modal);
+            }
         }
     }
+    window.openLessonPracticeModal = openLessonPracticeModal;
 
     function closeLessonPracticeModal() {
         const modal = document.getElementById('lesson-practice-modal');
@@ -253,6 +257,7 @@ if (!isset($practiceQuestions) || empty($practiceQuestions)) {
             document.body.classList.remove('modal-open');
         }
     }
+    window.closeLessonPracticeModal = closeLessonPracticeModal;
 
     function renderPracticeQuestions() {
         const container = document.getElementById('practice-questions-container');
