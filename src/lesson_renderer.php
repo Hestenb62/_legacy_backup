@@ -8,10 +8,7 @@ if (!defined('ABSPATH')) {
     define('ABSPATH', dirname(__DIR__) . '/');
 }
 
-// 1. Load Lesson Data
-$lessonsFile = ABSPATH . 'assets/data/lessons.json';
-$lessonsData = file_exists($lessonsFile) ? json_decode(file_get_contents($lessonsFile), true) : ['lessons' => []];
-
+// 1. Identify Lesson ID
 if (empty($lessonId)) {
     if (!empty($_GET['id'])) {
         $lessonId = preg_replace('/[^a-zA-Z0-9\-_]/', '', trim($_GET['id']));
@@ -24,49 +21,56 @@ if (empty($lessonId)) {
     }
 }
 
-// 2. Fetch or dynamically scaffold lesson
-if (isset($lessonsData['lessons'][$lessonId])) {
+// 2. Load Lesson Data (Individual JSON file or central lessons.json)
+$individualFile = ABSPATH . 'assets/data/lessons/' . $lessonId . '.json';
+$lessonsFile = ABSPATH . 'assets/data/lessons.json';
+$lessonsData = file_exists($lessonsFile) ? json_decode(file_get_contents($lessonsFile), true) : ['lessons' => []];
+
+$parts = explode('-', $lessonId);
+$rawLevel = strtolower($parts[0] ?? 'k');
+$rawSubj = strtolower($parts[1] ?? 'math');
+$rawMod = strtoupper($parts[2] ?? 'M1');
+$rawTopic = strtoupper($parts[3] ?? 'A');
+$rawLesson = $parts[4] ?? '1';
+
+$gradeNames = [
+    'a' => 'Level A (Pre-K)',
+    'b' => 'Level B (Kindergarten)',
+    'c' => 'Level C (1st Grade)',
+    'd' => 'Level D (2nd Grade)',
+    'e' => 'Level E (3rd Grade)',
+    'f' => 'Level F (4th Grade)',
+    'g' => 'Level G (5th Grade)',
+    'h' => 'Level H (6th Grade)',
+    'i' => 'Level I (7th Grade)',
+    'j' => 'Level J (8th Grade)',
+    'k' => 'Level K (Grade 9)',
+    'l' => 'Level L (Grade 10)',
+    'm' => 'Level M (Grade 11)',
+    'n' => 'Level N (Grade 12)',
+    'o' => 'Level O (AP Prep)'
+];
+$subjConfig = [
+    'math' => ['name' => 'Mathematics', 'icon' => 'fa-calculator', 'color' => '#3b82f6'],
+    'ela' => ['name' => 'English Language Arts', 'icon' => 'fa-book-open', 'color' => '#ec4899'],
+    'sci' => ['name' => 'Science Inquiry', 'icon' => 'fa-flask', 'color' => '#10b981'],
+    'science' => ['name' => 'Science Inquiry', 'icon' => 'fa-flask', 'color' => '#10b981'],
+    'soc' => ['name' => 'Social Studies & Civics', 'icon' => 'fa-landmark', 'color' => '#f59e0b'],
+    'social' => ['name' => 'Social Studies & Civics', 'icon' => 'fa-landmark', 'color' => '#f59e0b']
+];
+
+$levelDisplay = $gradeNames[$rawLevel] ?? ('Level ' . strtoupper($rawLevel));
+$subjData = $subjConfig[$rawSubj] ?? ['name' => ucfirst($rawSubj), 'icon' => 'fa-book', 'color' => '#6366f1'];
+$codeStr = strtoupper(str_replace('-', '.', $lessonId));
+
+if (file_exists($individualFile)) {
+    $lesson = json_decode(file_get_contents($individualFile), true);
+    $meta = $lesson['meta'] ?? [];
+} elseif (isset($lessonsData['lessons'][$lessonId])) {
     $lesson = $lessonsData['lessons'][$lessonId];
-    $meta = $lesson['meta'];
+    $meta = $lesson['meta'] ?? [];
 } else {
     // Intelligent Curriculum Scaffolder for all standards
-    $parts = explode('-', $lessonId);
-    $rawLevel = strtolower($parts[0] ?? 'k');
-    $rawSubj = strtolower($parts[1] ?? 'math');
-    $rawMod = strtoupper($parts[2] ?? 'M1');
-    $rawTopic = strtoupper($parts[3] ?? 'A');
-    $rawLesson = $parts[4] ?? '1';
-
-    $gradeNames = [
-        'a' => 'Level A (Pre-K)',
-        'b' => 'Level B (Kindergarten)',
-        'c' => 'Level C (1st Grade)',
-        'd' => 'Level D (2nd Grade)',
-        'e' => 'Level E (3rd Grade)',
-        'f' => 'Level F (4th Grade)',
-        'g' => 'Level G (5th Grade)',
-        'h' => 'Level H (6th Grade)',
-        'i' => 'Level I (7th Grade)',
-        'j' => 'Level J (8th Grade)',
-        'k' => 'Level K (Grade 9)',
-        'l' => 'Level L (Grade 10)',
-        'm' => 'Level M (Grade 11)',
-        'n' => 'Level N (Grade 12)',
-        'o' => 'Level O (AP Prep)'
-    ];
-    $subjConfig = [
-        'math' => ['name' => 'Mathematics', 'icon' => 'fa-calculator', 'color' => '#3b82f6'],
-        'ela' => ['name' => 'English Language Arts', 'icon' => 'fa-book-open', 'color' => '#ec4899'],
-        'sci' => ['name' => 'Science Inquiry', 'icon' => 'fa-flask', 'color' => '#10b981'],
-        'science' => ['name' => 'Science Inquiry', 'icon' => 'fa-flask', 'color' => '#10b981'],
-        'soc' => ['name' => 'Social Studies & Civics', 'icon' => 'fa-landmark', 'color' => '#f59e0b'],
-        'social' => ['name' => 'Social Studies & Civics', 'icon' => 'fa-landmark', 'color' => '#f59e0b']
-    ];
-
-    $levelDisplay = $gradeNames[$rawLevel] ?? ('Level ' . strtoupper($rawLevel));
-    $subjData = $subjConfig[$rawSubj] ?? ['name' => ucfirst($rawSubj), 'icon' => 'fa-book', 'color' => '#6366f1'];
-    $codeStr = strtoupper(str_replace('-', '.', $lessonId));
-
     $meta = [
         'title' => "{$subjData['name']}: {$rawMod} Topic {$rawTopic} • Lesson {$rawLesson}",
         'description' => "Standard-aligned interactive curriculum practice and core concept reinforcement for {$levelDisplay}.",
@@ -98,9 +102,10 @@ if (isset($lessonsData['lessons'][$lessonId])) {
 }
 
 // Set Page Meta
-$pageTitle = $meta['title'] . " | Hesten's Learning";
-$pageDescription = $meta['description'];
-if (!empty($rawSubj) && $rawSubj === 'math' || str_contains($lessonId ?? '', 'math')) {
+$pageTitle = $meta['pageTitle'] ?? (($meta['title'] ?? 'Lesson') . " | Hesten's Learning");
+$pageDescription = $meta['pageDescription'] ?? ($meta['description'] ?? '');
+$pageAuthor = $meta['author'] ?? "Hesten's Learning Team";
+if (!empty($lesson['requiresMathJax']) || !empty($meta['requiresMathJax']) || $rawSubj === 'math' || str_contains($lessonId ?? '', 'math')) {
     $requiresMathJax = true;
 }
 
@@ -112,7 +117,7 @@ include ABSPATH . 'src/header.php';
 <?php
 $barTitle = $meta['title'] ?? 'Lesson';
 $barSubtitle = $meta['badge'] ?? '';
-$barBackUrl = '/levels/' . strtolower($rawLevel ?? 'k') . '.php';
+$barBackUrl = !empty($levelUrl) ? $levelUrl : ('/levels/' . strtolower($rawLevel ?? 'k') . '.php');
 include_once ABSPATH . 'src/partials/sticky-reading-bar.php';
 ?>
 
@@ -154,6 +159,10 @@ include_once ABSPATH . 'src/partials/sticky-reading-bar.php';
         <?php foreach (($lesson['content'] ?? []) as $block): ?>
             <?php 
                 $type = preg_replace('/[^a-zA-Z0-9\-_]/', '', $block['type'] ?? '');
+                if ($type === 'html' && !empty($block['html'])) {
+                    echo $block['html'];
+                    continue;
+                }
                 // Components are stored in src/components/
                 $componentPath = ABSPATH . "src/components/{$type}.php";
                 if (!empty($type) && file_exists($componentPath)) {
@@ -167,6 +176,7 @@ include_once ABSPATH . 'src/partials/sticky-reading-bar.php';
         <?php endforeach; ?>
 
         <!-- Vocabulary -->
+        <?php if (!empty($lesson['vocabulary'])): ?>
         <section class="lesson-vocab-section">
             <div class="lesson-vocab-panel">
                 <div>
@@ -189,11 +199,14 @@ include_once ABSPATH . 'src/partials/sticky-reading-bar.php';
                 </div>
             </div>
         </section>
+        <?php endif; ?>
 
         <?php
-        // Prepare Formative Exit Ticket Questions based on subject
+        // Prepare Formative Exit Ticket Questions based on JSON or fallback subject defaults
         $exitQuestions = [];
-        if ($rawSubj === 'math') {
+        if (!empty($lesson['practiceQuestions']) && is_array($lesson['practiceQuestions'])) {
+            $exitQuestions = $lesson['practiceQuestions'];
+        } elseif ($rawSubj === 'math') {
             $exitQuestions = [
                 [
                     'question' => 'When analyzing a real-world functional relationship, what does the rate of change $\\frac{\\Delta y}{\\Delta x}$ represent in context?',
@@ -345,9 +358,9 @@ include_once ABSPATH . 'src/partials/sticky-reading-bar.php';
 
         <script>
         const EXIT_QUESTIONS = <?= json_encode($exitQuestions) ?>;
-        const LESSON_CODE = <?= json_encode($codeStr) ?>;
-        const LESSON_STD = <?= json_encode('CCSS.' . strtoupper($rawSubj ?? 'MATH') . '.' . strtoupper($rawLevel ?? 'K') . '.' . strtoupper($rawMod ?? 'M1')) ?>;
-        const LESSON_LVL = <?= json_encode($rawLevel ?? 'k') ?>;
+        const LESSON_CODE = <?= json_encode($lesson['code'] ?? ($codeStr ?? strtoupper(str_replace('-', '.', $lessonId)))) ?>;
+        const LESSON_STD = <?= json_encode($lesson['standard'] ?? ('CCSS.' . strtoupper($rawSubj ?? 'MATH') . '.' . strtoupper($rawLevel ?? 'K') . '.' . strtoupper($rawMod ?? 'M1'))) ?>;
+        const LESSON_LVL = <?= json_encode($lesson['levelId'] ?? ($rawLevel ?? 'k')) ?>;
         const LESSON_TITLE = <?= json_encode($meta['title'] ?? 'Curriculum Lesson') ?>;
 
         function submitExitTicket() {
@@ -418,15 +431,43 @@ include_once ABSPATH . 'src/partials/sticky-reading-bar.php';
             }
         }
         </script>
+
+        <?php if (!empty($lesson['citation'])): ?>
+            <!-- Source Citation & Metadata Footer -->
+            <div class="lesson-footer" style="margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid color-mix(in srgb, var(--color-text) 10%, transparent); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem;">
+                <div class="lesson-citation-box">
+                    <span class="lesson-citation-title" style="display: block; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: var(--color-primary); letter-spacing: 0.05em; margin-bottom: 0.25rem;"><?php echo htmlspecialchars($lesson['citation']['title'] ?? 'Source Citation (MLA)'); ?></span>
+                    <p class="lesson-citation-text" style="font-size: 0.875rem; color: var(--color-text-muted, #64748b); margin: 0;"><?php echo htmlspecialchars($lesson['citation']['text'] ?? ''); ?></p>
+                    <?php if (!empty($lesson['citation']['subtext'])): ?>
+                        <p class="lesson-citation-subtext" style="font-size: 0.775rem; color: var(--color-text-muted, #94a3b8); margin: 0.2rem 0 0;"><?php echo htmlspecialchars($lesson['citation']['subtext']); ?></p>
+                    <?php endif; ?>
+                </div>
+
+                <div class="lesson-footer-meta" style="display: flex; align-items: center; gap: 1rem;">
+                    <?php if (!empty($lesson['citation']['lessonId'])): ?>
+                        <div style="font-size: 0.8rem; color: var(--color-text-muted, #94a3b8);">Unique Lesson ID: <span class="lesson-meta-id" style="font-family: monospace; font-weight: 600; color: var(--color-text);"><?php echo htmlspecialchars($lesson['citation']['lessonId']); ?></span></div>
+                    <?php endif; ?>
+                    <a href="<?php echo htmlspecialchars($barBackUrl); ?>" class="lesson-btn-back" style="display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; font-weight: 700; color: var(--color-primary); text-decoration: none; padding: 0.4rem 0.8rem; border-radius: 6px; border: 1px solid color-mix(in srgb, var(--color-primary) 30%, transparent);">
+                        <i class="fas fa-arrow-left lesson-btn-icon" aria-hidden="true"></i> BACK TO <?php echo htmlspecialchars(strtoupper($levelDisplay ?? 'LEVEL ' . ($rawLevel ?? 'K'))); ?>
+                    </a>
+                </div>
+            </div>
+        <?php endif; ?>
+
+        <?php if (!empty($lesson['scripts'])): ?>
+            <script>
+                <?php echo $lesson['scripts']; ?>
+            </script>
+        <?php endif; ?>
     </div>
 </main>
 
 <?php
-$levelId = $rawLevel ?? 'k';
-$levelUrl = '/levels/' . ($rawLevel ?? 'k') . '.php';
-$lessonCode = strtoupper(str_replace('-', '.', $lessonId));
+$levelId = $lesson['levelId'] ?? ($rawLevel ?? 'k');
+$levelUrl = !empty($levelUrl) ? $levelUrl : ('/levels/' . ($rawLevel ?? 'k') . '.php');
+$lessonCode = $lesson['code'] ?? ($codeStr ?? strtoupper(str_replace('-', '.', $lessonId)));
 $lessonTitle = $meta['title'] ?? 'Curriculum Lesson';
-$lessonStandard = 'CCSS.' . strtoupper($rawSubj ?? 'MATH') . '.' . strtoupper($rawLevel ?? 'K') . '.' . strtoupper($rawMod ?? 'M1');
+$lessonStandard = $lesson['standard'] ?? ('CCSS.' . strtoupper($rawSubj ?? 'MATH') . '.' . strtoupper($rawLevel ?? 'K') . '.' . strtoupper($rawMod ?? 'M1'));
 include ABSPATH . 'src/lesson_runner.php';
 ?>
 

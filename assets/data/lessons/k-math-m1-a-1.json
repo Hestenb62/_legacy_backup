@@ -1,0 +1,126 @@
+{
+    "id": "k-math-m1-a-1",
+    "code": "K.M1.A.1",
+    "standard": "HSF.IF.B.4",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "Graphs of Piecewise Linear Functions",
+        "pageTitle": "Graphs of Piecewise Linear Functions | Hesten's Learning",
+        "description": "Define appropriate quantities from physical situations, choose logical scales, and translate actions into piecewise graphs.",
+        "pageDescription": "Learn how to define quantities, choose scales, and translate physical actions into piecewise graphs with interactive stories.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M1.A.1",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 1",
+        "pill": "Piecewise Linear Functions",
+        "text": "In this lesson, you will learn to define appropriate quantities from physical situations, choose logical scales, and translate actions into piecewise graphs. Explore the interactive ladder simulation below, and read the classroom discussion blocks to master these concepts.",
+        "outcomes": [
+            "Define appropriate variables to represent a physical situation.",
+            "Choose and interpret the scale and origin for a coordinate plane.",
+            "Understand that the slope of each line segment represents the average rate of change."
+        ],
+        "teacherInsight": "If students struggle, physically act out the story. Place tape on the floor and have them walk forward (positive slope), stand still (zero slope), and walk backward (negative slope) while drawing the graph together."
+    },
+    "content": [
+        {
+            "type": "interactive-ladder",
+            "title": "Animated Ladder Descent",
+            "desc": "Observe the physical elevation of the climber as he descends and pauses.",
+            "graphTitle": "Graph: Elevation vs. Time #3",
+            "graphDesc": "Watch the live synchronized marker trace the slope changes on the piecewise graph."
+        },
+        {
+            "type": "teacher-concepts",
+            "title": "Teacher Guide Concepts: Deepen Your Understanding",
+            "concepts": [
+                {
+                    "title": "Concept 1: Is a 2.5 ft/min Descent Speed Realistic on a Ladder?",
+                    "text": "In Example 1 of the teacher materials, students analyze a graph with a slope representing $2.5\\text{ ft/min}$. While mathematically sound, a rate of $2.5\\text{ ft/min}$ is incredibly slow for a person physically moving down a standard ladder (about $0.5\\text{ inches per second}$). If we shift the horizontal unit of time from minutes to seconds, a speed of $2.5\\text{ ft/sec}$ becomes perfectly realistic for a steady descent."
+                },
+                {
+                    "title": "Concept 2: Calculating Average Rate of Change",
+                    "text": "To compute the average rate of change over any interval, use the change in elevation divided by the change in time:",
+                    "formula": "Average Rate of Change = \\frac{\\Delta \\text{Elevation}}{\\Delta \\text{Time}} = \\frac{h(t_2) - h(t_1)}{t_2 - t_1}",
+                    "example": "For instance, between $t = 0$ and $t = 6$ seconds on our ladder descent: $\\frac{3 - 10}{6 - 0} = \\frac{-7}{6} \\approx -1.17\\text{ ft/sec}$. This negative rate represents a descent. When discussing descent speed, we refer to its absolute value: $1.17\\text{ ft/sec}$."
+                },
+                {
+                    "title": "Concept 3: The 9 Distinct Time Intervals of the Video Story",
+                    "text": "In the lesson Exit Ticket, teachers analyze the full video of a man traversing stairs and platforms, which features nine distinct linear segments. Segmenting graphs into non-overlapping time intervals is a vital skill. Here are the exact nine time intervals identified in the curriculum guide:",
+                    "intervals": [
+                        "1. Between 0 and 3 sec",
+                        "2. Between 3 and 5.5 sec",
+                        "3. Between 5.5 and 7 sec",
+                        "4. Between 7 and 8.5 sec",
+                        "5. Between 8.5 and 9 sec",
+                        "6. Between 9 and 11 sec",
+                        "7. Between 11 and 12.7 sec",
+                        "8. Between 12.7 and 13 sec",
+                        "9. From 13 sec onward"
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "story-builder",
+            "title": "Design Your Own Piecewise Graphing Story",
+            "desc": "Modify each step of the journey and watch the custom graph below transform accordingly."
+        },
+        {
+            "type": "study-guides",
+            "title": "Visual Study Guides",
+            "desc": "Toggle tabs below to explore interactive visual explainers of core concepts."
+        }
+    ],
+    "vocabulary": [
+        {
+            "term": "Piecewise Linear Function",
+            "definition": "A function defined by multiple linear segments, each covering a specific interval of time or domain. The overall graph looks like joined straight lines with corners."
+        },
+        {
+            "term": "Average Rate of Change",
+            "definition": "The change in the dependent variable (elevation) divided by the change in the independent variable (time) over a given interval. Graphically, this is the slope of the line segment."
+        },
+        {
+            "term": "Independent Variable",
+            "definition": "The input value of a function, which changes independently (usually time, graphed on the horizontal axis)."
+        },
+        {
+            "term": "Dependent Variable",
+            "definition": "The output value of a function, which depends on the input value (usually elevation/height, graphed on the vertical axis)."
+        }
+    ],
+    "practiceQuestions": [
+        {
+            "question": "A climber ascends 4 feet in 2 seconds, pauses for 3 seconds, then descends 2 feet in 1 second. What is the slope of the graph during the 3-second pause?",
+            "options": [
+                "2 feet per second",
+                "0 feet per second",
+                "-2 feet per second",
+                "4 feet per second"
+            ],
+            "correct": 1,
+            "explanation": "During a pause, elevation remains unchanged while time advances. Rate of change (Δy / Δt) = 0 / 3 = 0."
+        },
+        {
+            "question": "On an elevation-versus-time graph, what physical action does a segment with a negative slope depict?",
+            "options": [
+                "The climber is stationary at rest",
+                "The climber is ascending to higher rungs",
+                "The climber is descending towards the ground",
+                "The climber has completed the entire climb"
+            ],
+            "correct": 2,
+            "explanation": "A negative slope means the elevation quantity is decreasing over time, representing a physical descent."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Graphs of Piecewise Linear Functions.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Developed using lesson materials from standard algebra curricula.",
+        "lessonId": "L-ID-PIECEWISE-L1"
+    },
+    "scripts": "\n    // ==================== LESSON 1: LADDER DESCENT ANIMATION ENGINE ====================\n    let ladderAnimationTimer = null;\n    let ladderTime = 0;\n    const totalLadderDuration = 15; // seconds\n    const ladderClimber = document.getElementById('ladder-climber');\n    const trackerDot = document.getElementById('tracker-dot');\n    const displayTimeL1 = document.getElementById('display-time-l1');\n    const displayStatusL1 = document.getElementById('display-status-l1');\n    const btnPlayL1 = document.getElementById('btn-play-l1');\n\n    function toggleLadderAnimation() {\n        if (ladderAnimationTimer) {\n            // Pause animation\n            clearInterval(ladderAnimationTimer);\n            ladderAnimationTimer = null;\n            if (btnPlayL1) btnPlayL1.innerText = 'Resume Journey';\n            if (displayStatusL1) displayStatusL1.innerText = 'Paused';\n        } else {\n            // Start animation loop\n            if (btnPlayL1) btnPlayL1.innerText = 'Pause Journey';\n            if (displayStatusL1) displayStatusL1.innerText = 'Climbing';\n            if (trackerDot) trackerDot.style.display = 'block';\n\n            ladderAnimationTimer = setInterval(() => {\n                ladderTime += 0.05;\n                if (ladderTime >= totalLadderDuration) {\n                    ladderTime = totalLadderDuration;\n                    clearInterval(ladderAnimationTimer);\n                    ladderAnimationTimer = null;\n                    if (btnPlayL1) btnPlayL1.innerText = 'Restart Journey';\n                    if (displayStatusL1) displayStatusL1.innerText = 'Completed';\n                }\n                updateLadderState(ladderTime);\n            }, 50);\n        }\n    }\n\n    function resetLadderAnimation() {\n        if (ladderAnimationTimer) {\n            clearInterval(ladderAnimationTimer);\n            ladderAnimationTimer = null;\n        }\n        ladderTime = 0;\n        updateLadderState(0);\n        if (btnPlayL1) btnPlayL1.innerText = 'Start Journey';\n        if (displayStatusL1) displayStatusL1.innerText = 'Ready';\n        if (trackerDot) trackerDot.style.display = 'none';\n    }\n\n    // Calculate and update the physical and graphed position coordinates\n    function updateLadderState(time) {\n        let height = 10;\n        let statusText = 'Descending';\n\n        // Reset segment highlight stylings\n        for (let i = 1; i <= 4; i++) {\n            const segEl = document.getElementById(`segment-info-${i}`);\n            if (segEl) {\n                segEl.className = 'lesson-segment-item';\n            }\n        }\n\n        if (time <= 6) {\n            // Interval 1: 0 to 6 seconds. Linear descent from 10ft down to 3ft.\n            height = 10 - (7 / 6) * time;\n            const s1 = document.getElementById('segment-info-1');\n            if (s1) s1.className = 'lesson-segment-item font-bold text-rose-500';\n        } else if (time <= 8.5) {\n            // Interval 2: 6 to 8.5 seconds. Drinking water (stays flat at 3ft)\n            height = 3;\n            statusText = 'Drinking Water';\n            const s2 = document.getElementById('segment-info-2');\n            if (s2) s2.className = 'lesson-segment-item font-bold text-rose-500';\n        } else if (time <= 10) {\n            // Interval 3: 8.5 to 10 seconds. Descent to ground (3ft to 0ft)\n            height = 3 - (3 / 1.5) * (time - 8.5);\n            const s3 = document.getElementById('segment-info-3');\n            if (s3) s3.className = 'lesson-segment-item font-bold text-rose-500';\n        } else {\n            // Interval 4: 10 to 15 seconds. Walk in the kitchen (0ft elevation)\n            height = 0;\n            statusText = 'Walking into kitchen';\n            const s4 = document.getElementById('segment-info-4');\n            if (s4) s4.className = 'lesson-segment-item font-bold text-rose-500';\n        }\n\n        // Limit bounds safely\n        height = Math.max(0, Math.min(10, height));\n\n        // Update physical climber height on page layout\n        const bottomPercent = 24 + (height * 22.8);\n        if (ladderClimber) ladderClimber.style.bottom = `${bottomPercent}px`;\n        const bubble = document.getElementById('elevation-bubble');\n        if (bubble) bubble.innerText = `Height: ${height.toFixed(1)} ft`;\n        if (displayTimeL1) displayTimeL1.innerText = time.toFixed(1);\n        if (displayStatusL1) displayStatusL1.innerText = statusText;\n\n        // Map graph tracking node position\n        const trackerX = 40 + (time / 15) * 340;\n        const trackerY = 260 - (height / 10) * 240;\n\n        if (trackerDot) {\n            trackerDot.setAttribute('cx', trackerX);\n            trackerDot.setAttribute('cy', trackerY);\n        }\n    }\n\n    // ==================== USER CUSTOM STORY PLOTTER ====================\n    function updateCustomGraph() {\n        const valAEl = document.getElementById('custom-val-a');\n        const valBEl = document.getElementById('custom-val-b');\n        const valCEl = document.getElementById('custom-val-c');\n        if (!valAEl || !valBEl || !valCEl) return;\n\n        const valA = parseFloat(valAEl.value);\n        const valB = parseFloat(valBEl.value);\n        const valC = parseFloat(valCEl.value);\n\n        // Update text labels\n        const lblA = document.getElementById('custom-lbl-a');\n        const lblB = document.getElementById('custom-lbl-b');\n        const lblC = document.getElementById('custom-lbl-c');\n        if (lblA) lblA.innerText = valA;\n        if (lblB) lblB.innerText = valB;\n        if (lblC) lblC.innerText = valC;\n\n        // Update SVG nodes\n        const yA = 170 - (valA / 15) * 150;\n        const yB = 170 - (valB / 15) * 150;\n        const yC = 170 - (valC / 15) * 150;\n\n        const nodeA = document.getElementById('user-node-a');\n        const nodeB = document.getElementById('user-node-b');\n        const nodeC = document.getElementById('user-node-c');\n        if (nodeA) nodeA.setAttribute('cy', yA);\n        if (nodeB) nodeB.setAttribute('cy', yB);\n        if (nodeC) nodeC.setAttribute('cy', yC);\n\n        // Reconstruct path string\n        const pathD = `M 30,170 L 130,${yA} L 205,${yB} L 280,${yC}`;\n        const pathEl = document.getElementById('user-graph-path');\n        if (pathEl) pathEl.setAttribute('d', pathD);\n\n        // Generate verbal descriptions\n        const storyList = document.getElementById('custom-story-output');\n        if (!storyList) return;\n        storyList.innerHTML = '';\n\n        let segment1Text = `0 to 4s: Climber `;\n        if (valA > 0) {\n            segment1Text += `climbs from ground level to ${valA} feet.`;\n        } else {\n            segment1Text += `remains flat at ground level.`;\n        }\n\n        let segment2Text = `4 to 7s: Climber `;\n        if (valB > valA) {\n            segment2Text += `continues climbing up from ${valA} feet to ${valB} feet.`;\n        } else if (valB < valA) {\n            segment2Text += `descends down from ${valA} feet to ${valB} feet.`;\n        } else {\n            segment2Text += `remains completely stationary at ${valA} feet.`;\n        }\n\n        let segment3Text = `7 to 10s: Climber `;\n        if (valC > valB) {\n            segment3Text += `ascends up to ${valC} feet.`;\n        } else if (valC < valB) {\n            segment3Text += `descends down to ${valC} feet.`;\n        } else {\n            segment3Text += `holds position constant at ${valB} feet.`;\n        }\n\n        storyList.innerHTML += `<li>${segment1Text}</li>`;\n        storyList.innerHTML += `<li>${segment2Text}</li>`;\n        storyList.innerHTML += `<li>${segment3Text}</li>`;\n    }\n\n    // ==================== LESSON VOCAB & NOTES FUNCTIONALITY ====================\n    function toggleVocabCard(id) {\n        const body = document.getElementById(`${id}-body`);\n        const icon = document.getElementById(`${id}-icon`);\n        if (!body) return;\n\n        if (body.style.maxHeight && body.style.maxHeight !== '0px') {\n            body.style.maxHeight = '0px';\n            if (icon) icon.innerHTML = '<i class=\"fas fa-chevron-down\"></i>';\n        } else {\n            // Close other open cards\n            const allBodies = document.querySelectorAll('[id$=\"-body\"]');\n            const allIcons = document.querySelectorAll('[id$=\"-icon\"]');\n            allBodies.forEach(b => {\n                if (b.id.startsWith('vocab-')) b.style.maxHeight = '0px';\n            });\n            allIcons.forEach(i => {\n                if (i.id.startsWith('vocab-')) i.innerHTML = '<i class=\"fas fa-chevron-down\"></i>';\n            });\n\n            body.style.maxHeight = body.scrollHeight + 'px';\n            if (icon) icon.innerHTML = '<i class=\"fas fa-chevron-up\"></i>';\n        }\n    }\n\n    function switchExplainerTab(tabId) {\n        const tabs = ['tab-slope', 'tab-intervals', 'tab-speed'];\n\n        tabs.forEach(t => {\n            const btn = document.getElementById(`btn-${t}`);\n            const content = document.getElementById(`content-${t}`);\n\n            if (t === tabId) {\n                if (btn) btn.classList.add('active');\n                if (content) content.classList.add('active');\n            } else {\n                if (btn) btn.classList.remove('active');\n                if (content) content.classList.remove('active');\n            }\n        });\n    }\n\n    document.addEventListener('DOMContentLoaded', () => {\n        updateCustomGraph();\n    });\n    if (document.readyState === 'complete' || document.readyState === 'interactive') {\n        setTimeout(updateCustomGraph, 100);\n    }\n"
+}

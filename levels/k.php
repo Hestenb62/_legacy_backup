@@ -23,6 +23,25 @@ if (!empty($requestedLesson)) {
         include $lessonFile;
         exit;
     }
+
+    // Dynamic JSON Lesson Router: If static PHP file does not exist, render from JSON
+    $jsonLessonFile = dirname(__DIR__) . '/assets/data/lessons/' . $requestedLesson . '.json';
+    $mainLessonsFile = dirname(__DIR__) . '/assets/data/lessons.json';
+    $hasJson = file_exists($jsonLessonFile);
+    if (!$hasJson && file_exists($mainLessonsFile)) {
+        $data = json_decode(file_get_contents($mainLessonsFile), true);
+        if (isset($data['lessons'][$requestedLesson])) {
+            $hasJson = true;
+        }
+    }
+
+    if ($hasJson) {
+        $lessonId = $requestedLesson;
+        $levelUrl = 'k.php';
+        $levelTitle = 'Level K';
+        include dirname(__DIR__) . '/src/lesson_renderer.php';
+        exit;
+    }
 }
 
 // Page-Specific Metadata
