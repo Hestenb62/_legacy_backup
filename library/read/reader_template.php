@@ -888,6 +888,57 @@ body.zen-mode {
 <script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/components/sticky-reading-bar.js') : '../../assets/js/components/sticky-reading-bar.js' ?>" defer></script>
 <script>
     // =========================================================================
+    // Universal Math Reference Codex: Synoptic Table Handlers
+    // =========================================================================
+    window.printSynopticTables = window.printSynopticTables || function() {
+        document.body.classList.add('printing-math-synoptic');
+        window.print();
+        setTimeout(function () {
+            document.body.classList.remove('printing-math-synoptic');
+        }, 1000);
+    };
+
+    window.downloadSynopticMarkdown = window.downloadSynopticMarkdown || function() {
+        const sheet = document.querySelector('.math-summary-sheet');
+        if (!sheet) {
+            alert('No synoptic reference table found to download on this page.');
+            return;
+        }
+        const title = document.querySelector('.math-bookplate-title')?.innerText || document.title || 'Math Reference Summary';
+        const volume = document.querySelector('.math-catalog-badge')?.innerText || '';
+        let text = '========================================================================\n';
+        text += title.toUpperCase() + (volume ? ' - ' + volume : '') + '\n';
+        text += '========================================================================\n\n';
+        
+        const cols = sheet.querySelectorAll('.math-summary-col');
+        cols.forEach(function(col) {
+            const heading = col.querySelector('h4')?.innerText || 'Section';
+            text += '--- ' + heading.toUpperCase() + ' ---\n';
+            const items = col.querySelectorAll('li');
+            if (items.length > 0) {
+                items.forEach(function(item) {
+                    text += '  * ' + item.innerText.replace(/\s+/g, ' ').trim() + '\n';
+                });
+            } else {
+                text += col.innerText.replace(/\s+/g, ' ').trim() + '\n';
+            }
+            text += '\n';
+        });
+
+        const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        const bookSlug = (window.BOOK_METADATA && window.BOOK_METADATA.id) ? window.BOOK_METADATA.id : 'math-facts';
+        const chSlug = (window.BOOK_METADATA && window.BOOK_METADATA.chapter) ? window.BOOK_METADATA.chapter : 'summary';
+        link.download = bookSlug + '-' + chSlug + '.txt';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+    };
+
+    // =========================================================================
     // One-Click Offline Book Downloader (Service Worker CacheStorage)
     // =========================================================================
     async function cacheCurrentBookOffline() {

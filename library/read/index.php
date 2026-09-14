@@ -310,10 +310,11 @@ if ($bookId === '') {
             if ($chapterHtml === false) {
                 $error = 'Failed to load chapter content.';
             } else {
-                // Extract core reader content cleanly without truncation
-                $cleaned = preg_replace('/<\?php.*?\?>/is', '', $chapterHtml);
+                // Clean PHP tags and local styles
+                $cleaned = preg_replace('/<\?(php|=)?[\s\S]*?\?>/is', '', $chapterHtml);
                 $cleaned = preg_replace('/<style\b[^>]*>(.*?)<\/style>/is', '', $cleaned);
-                $cleaned = preg_replace('/<script\b[^>]*>(.*?)<\/script>/is', '', $cleaned);
+                // Strip external redundant script tags with src attributes, while retaining inline chapter scripts
+                $cleaned = preg_replace('/<script\b[^>]*\bsrc\b[\s\S]*?<\/script>/is', '', $cleaned);
                 $cleaned = preg_replace('/<nav\b[^>]*class="[^"]*reader-chapter-nav[^"]*"[^>]*>(.*?)<\/nav>/is', '', $cleaned);
                 $cleaned = preg_replace('/<nav\b[^>]*id="reader-controls"[^>]*>(.*?)<\/nav>/is', '', $cleaned);
 
