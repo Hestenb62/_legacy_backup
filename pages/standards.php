@@ -796,118 +796,18 @@
                 };
             }
 
-            // Update Titles & Overview
-            document.getElementById('view-title').innerText = gradeData.title;
-            document.getElementById('view-overview').innerHTML = gradeData.overview;
-            
-            // Format and Inject Standards with Copy Badges
-            const standardsContainer = document.getElementById('view-standards');
-            const rawStandards = Array.isArray(gradeData.standards) ? gradeData.standards.join('\n') : gradeData.standards;
-            standardsContainer.innerHTML = rawStandards || '<p>Standards data coming soon.</p>';
-            
-            // Process standard items: add copy badges, wrap in accordion cards, and assign domain tags
-            const standardItems = standardsContainer.querySelectorAll('.curr-standard-item');
-            const domainSet = new Set();
-            let totalStandardCodesCount = 0;
-
-            standardItems.forEach(item => {
-                const titleEl = item.querySelector('.curr-standard-title');
-                const domainTitle = titleEl ? titleEl.innerText.trim() : 'General';
-                item.dataset.domain = domainTitle;
-                domainSet.add(domainTitle);
-
-                const currentLevelLetter = (gradeData.level || 'a').toLowerCase();
-
-                // Enhance standard description codes with copy badge and info (i) popup trigger
-                const descElements = Array.from(item.querySelectorAll('.curr-standard-desc'));
-                descElements.forEach(descEl => {
-                    if (!descEl.dataset.originalHtml) {
-                        descEl.dataset.originalHtml = descEl.innerHTML;
-                    }
-                    let html = descEl.dataset.originalHtml;
-                    // Match <strong>CODE:</strong> or <strong>CODE</strong>
-                    html = html.replace(/<strong>([A-Za-z0-9\.\-_ ]+?):?<\/strong>/g, (match, code) => {
-                        totalStandardCodesCount++;
-                        const cleanCode = code.trim();
-                        return `<span class="std-code-wrap" data-std-code="${cleanCode}">` +
-                            `<button type="button" class="std-code-badge" data-code="${cleanCode}" title="Click to copy standard code"><i class="far fa-copy"></i> ${cleanCode}</button>` +
-                            `<button type="button" class="std-info-btn" data-code="${cleanCode}" aria-label="View Standard Details for ${cleanCode}" title="View detailed standard mastery dossier"><i class="fas fa-info-circle"></i></button>` +
-                            `<span class="std-mastery-checkmark" data-code="${cleanCode}" style="display: none;"></span>` +
-                            `<span class="std-progress-badge" data-code="${cleanCode}" style="display: none;"></span>` +
-                        `</span>`;
-                    });
-                    descEl.innerHTML = html;
-                    descEl.dataset.processedHtml = html;
-                });
-
-                const descCount = descElements.length || 1;
-
-                // Wrap into Accordion card if title exists
-                if (titleEl && !item.querySelector('.curr-accordion-header')) {
-                    const bodyNodes = [];
-                    let next = titleEl.nextSibling;
-                    while (next) {
-                        const current = next;
-                        next = next.nextSibling;
-                        bodyNodes.push(current);
-                    }
-
-                    const headerDiv = document.createElement('div');
-                    headerDiv.className = 'curr-accordion-header';
-                    headerDiv.setAttribute('role', 'button');
-                    headerDiv.setAttribute('aria-expanded', 'true');
-                    headerDiv.setAttribute('tabindex', '0');
-                    headerDiv.innerHTML = `
-                        <div class="curr-accordion-title-wrap">
-                            <h4 class="curr-standard-title">${escapeHtml(domainTitle)}</h4>
-                            <span class="curr-accordion-count">${descCount} standard${descCount === 1 ? '' : 's'}</span>
-                        </div>
-                        <i class="fas fa-chevron-down curr-accordion-chevron"></i>
-                    `;
-
-                    const bodyDiv = document.createElement('div');
-                    bodyDiv.className = 'curr-accordion-body';
-                    bodyNodes.forEach(node => bodyDiv.appendChild(node));
-
-                    // Disclaimer at the bottom of every CCSS standard expander
-                    if (resolvedCurr === 'ccss') {
-                        const disclaimerDiv = document.createElement('div');
-                        disclaimerDiv.className = 'curr-standard-disclaimer';
-                        const subjectName = (currentSubject === 'math') ? 'MATHEMATICS' : (((subject && subject.name) || subjectsMap[currentSubject]?.name || 'MATHEMATICS')).toUpperCase();
-                        disclaimerDiv.innerHTML = `<i class="fas fa-bookmark mr-1"></i> From the "Common Core State Standards for ${subjectName}"`;
-                        bodyDiv.appendChild(disclaimerDiv);
-                    }
-
-                    titleEl.remove();
-                    item.appendChild(headerDiv);
-                    item.appendChild(bodyDiv);
-
-                    headerDiv.addEventListener('click', (e) => {
-                        if (e.target.closest('button')) return;
-                        item.classList.toggle('collapsed');
-                        headerDiv.setAttribute('aria-expanded', !item.classList.contains('collapsed'));
-                        updateAccordionToggleBtnState();
-                    });
-
-                    headerDiv.addEventListener('keydown', (e) => {
-                        if (e.key === 'Enter' || e.key === ' ') {
-                            e.preventDefault();
-                            headerDiv.click();
-                        }
-                    });
-                }
-            });
-
-            // If no codes were in <strong> tags, count items as standards
-            if (totalStandardCodesCount === 0) {
-                totalStandardCodesCount = standardItems.length;
+            // Toggle Presentation Document Mode for CCSS Math
+            const currGrid = document.querySelector('.curr-grid');
+            if (currentSubject === 'math') {
+                currGrid?.classList.add('is-ccss-doc');
+            } else {
+                currGrid?.classList.remove('is-ccss-doc');
             }
 
-            // Reset accordion toggle button state
-            allAccordionsExpanded = true;
-            updateAccordionToggleBtnState();
+            // Update Titles & Overview
+            document.getElementById('view-title').innerText = gradeData.title;
 
-            // Helper to extract standard numbers and letters for domain buttons (e.g. "K.CC", "8.EE", "HSA-SSE")
+            // Helper to extract concise standard numbers and letters for domain buttons and strips (e.g. "K.CC", "8.EE", "HSA-SSE")
             function getDomainShortCode(domainStr) {
                 if (!domainStr) return '';
                 const trimmed = domainStr.trim();
@@ -971,6 +871,243 @@
                 const acronym = words.map(w => w[0]).join('').toUpperCase();
                 return acronym.slice(0, 6);
             }
+
+            if (currentSubject === 'math') {
+                // Build authentic CCSS publication header & 2-column Grade Overview
+                let domainSummariesHtml = '';
+                if (gradeData.competencies && gradeData.competencies.length > 0) {
+                    const domainGroups = {};
+                    gradeData.competencies.forEach(comp => {
+                        const colonIdx = comp.indexOf(':');
+                        if (colonIdx !== -1) {
+                            const dName = comp.substring(0, colonIdx).trim();
+                            const bullet = comp.substring(colonIdx + 1).trim();
+                            if (!domainGroups[dName]) domainGroups[dName] = [];
+                            domainGroups[dName].push(bullet);
+                        } else {
+                            if (!domainGroups['General']) domainGroups['General'] = [];
+                            domainGroups['General'].push(comp.trim());
+                        }
+                    });
+
+                    for (const [dName, bullets] of Object.entries(domainGroups)) {
+                        domainSummariesHtml += `
+                            <div class="ccss-pdf-domain-summary-card">
+                                <h4 class="ccss-pdf-domain-summary-title">${escapeHtml(dName)}</h4>
+                                <ul class="ccss-pdf-cluster-bullets">
+                                    ${bullets.map(b => `<li class="ccss-pdf-cluster-bullet-item">${escapeHtml(b)}</li>`).join('')}
+                                </ul>
+                            </div>
+                        `;
+                    }
+                }
+
+                const defaultMathPractices = [
+                    "Make sense of problems and persevere in solving them.",
+                    "Reason abstractly and quantitatively.",
+                    "Construct viable arguments and critique the reasoning of others.",
+                    "Model with mathematics.",
+                    "Use appropriate tools strategically.",
+                    "Attend to precision.",
+                    "Look for and make use of structure.",
+                    "Look for and express regularity in repeated reasoning."
+                ];
+                const practicesToRender = (gradeData.practices && gradeData.practices.length > 0) ? gradeData.practices : defaultMathPractices;
+                const practicesListHtml = practicesToRender.map(p => {
+                    const cleanPractice = p.replace(/^\d+\.\s*/, '');
+                    return `<li class="ccss-pdf-practices-item">${escapeHtml(cleanPractice)}</li>`;
+                }).join('');
+
+                document.getElementById('view-overview').innerHTML = `
+                    <div class="ccss-pdf-running-header">
+                        <div style="display: flex; align-items: center; gap: 1rem; width: 100%; justify-content: space-between; flex-wrap: wrap;">
+                            <span style="letter-spacing: 0.08em;">COMMON CORE STATE STANDARDS for MATHEMATICS</span>
+                            <button type="button" onclick="openGlossaryModal()" class="ccss-pdf-header-glossary-btn" title="View CCSS Mathematics Glossary & Reference Tables" style="background: rgba(255,255,255,0.18); border: 1px solid rgba(255,255,255,0.3); color: #ffffff; padding: 0.2rem 0.65rem; border-radius: 4px; font-size: 0.72rem; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 0.35rem; transition: background 0.15s ease;">
+                                <i class="fas fa-book-bookmark"></i> <span>Glossary & Tables</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="ccss-pdf-page-wrapper">
+                        <div class="ccss-pdf-page-stamp">
+                            <span>COMMON CORE STATE STANDARDS for MATHEMATICS</span>
+                            <span>${escapeHtml(currentGrade.toUpperCase())}</span>
+                        </div>
+                        <h1 class="ccss-pdf-main-title">
+                            <span class="ccss-pdf-title-subject">Mathematics</span>
+                            <span class="ccss-pdf-title-sep">|</span>
+                            <span class="ccss-pdf-title-grade">${escapeHtml(currentGrade)}</span>
+                        </h1>
+                        <div class="ccss-pdf-lead">
+                            ${gradeData.overview}
+                        </div>
+                        ${(domainSummariesHtml || practicesListHtml) ? `
+                        <div class="ccss-pdf-overview-section">
+                            <h2 class="ccss-pdf-section-heading">${escapeHtml(currentGrade)} Overview</h2>
+                            <div class="ccss-pdf-overview-grid">
+                                <div class="ccss-pdf-domain-summaries">
+                                    ${domainSummariesHtml}
+                                </div>
+                                <div class="ccss-pdf-practices-card">
+                                    <h3 class="ccss-pdf-practices-title">Mathematical Practices</h3>
+                                    <ol class="ccss-pdf-practices-list">
+                                        ${practicesListHtml}
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>` : ''}
+                    </div>
+                `;
+            } else {
+                document.getElementById('view-overview').innerHTML = gradeData.overview;
+            }
+            
+            // Format and Inject Standards with Copy Badges
+            const standardsContainer = document.getElementById('view-standards');
+            const rawStandards = Array.isArray(gradeData.standards) ? gradeData.standards.join('\n') : gradeData.standards;
+            standardsContainer.innerHTML = rawStandards || '<p>Standards data coming soon.</p>';
+            
+            // Process standard items: add copy badges, wrap in accordion cards, and assign domain tags
+            const standardItems = standardsContainer.querySelectorAll('.curr-standard-item');
+            const domainSet = new Set();
+            let totalStandardCodesCount = 0;
+
+            standardItems.forEach(item => {
+                const titleEl = item.querySelector('.curr-standard-title');
+                const domainTitle = titleEl ? titleEl.innerText.trim() : 'General';
+                item.dataset.domain = domainTitle;
+                domainSet.add(domainTitle);
+
+                const currentLevelLetter = (gradeData.level || 'a').toLowerCase();
+
+                // Enhance standard description codes with copy badge and info (i) popup trigger
+                const descElements = Array.from(item.querySelectorAll('.curr-standard-desc'));
+                descElements.forEach(descEl => {
+                    if (!descEl.dataset.originalHtml) {
+                        descEl.dataset.originalHtml = descEl.innerHTML;
+                    }
+                    let html = descEl.dataset.originalHtml;
+                    // Match <strong>CODE:</strong> or <strong>CODE</strong>
+                    html = html.replace(/<strong>([A-Za-z0-9\.\-_ ]+?):?<\/strong>/g, (match, code) => {
+                        totalStandardCodesCount++;
+                        const cleanCode = code.trim();
+                        return `<span class="std-code-wrap" data-std-code="${cleanCode}">` +
+                            `<button type="button" class="std-code-badge" data-code="${cleanCode}" title="Click to copy standard code"><i class="far fa-copy"></i> ${cleanCode}</button>` +
+                            `<button type="button" class="std-info-btn" data-code="${cleanCode}" aria-label="View Standard Details for ${cleanCode}" title="View detailed standard mastery dossier"><i class="fas fa-info-circle"></i></button>` +
+                            `<span class="std-mastery-checkmark" data-code="${cleanCode}" style="display: none;"></span>` +
+                            `<span class="std-progress-badge" data-code="${cleanCode}" style="display: none;"></span>` +
+                        `</span>`;
+                    });
+                    descEl.innerHTML = html;
+                    descEl.dataset.processedHtml = html;
+                });
+
+                const descCount = descElements.length || 1;
+
+                // Wrap into Accordion card if title exists
+                if (titleEl && !item.querySelector('.curr-accordion-header')) {
+                    const bodyNodes = [];
+                    let next = titleEl.nextSibling;
+                    while (next) {
+                        const current = next;
+                        next = next.nextSibling;
+                        bodyNodes.push(current);
+                    }
+
+                    const headerDiv = document.createElement('div');
+                    headerDiv.setAttribute('role', 'button');
+                    headerDiv.setAttribute('aria-expanded', 'true');
+                    headerDiv.setAttribute('tabindex', '0');
+
+                    if (currentSubject === 'math') {
+                        const cleanDomainTitle = domainTitle.replace(/\s*\([^)]+\)\s*$/, '').replace(/^[A-Za-z0-9\.\-_]+:\s*/, '').trim();
+                        const shortCode = getDomainShortCode(domainTitle);
+                        headerDiv.className = 'curr-accordion-header ccss-pdf-domain-strip';
+                        headerDiv.innerHTML = `
+                            <div class="curr-accordion-title-wrap" style="display: flex; align-items: baseline; gap: 0.75rem; flex-wrap: wrap;">
+                                <h4 class="curr-standard-title ccss-pdf-domain-title">${escapeHtml(cleanDomainTitle || domainTitle)}</h4>
+                                <span class="curr-accordion-count" style="font-size: 0.8rem; font-weight: 700; color: #7A1E28; opacity: 0.85;">(${descCount} standard${descCount === 1 ? '' : 's'})</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.75rem; flex-shrink: 0;">
+                                ${shortCode ? `<span class="ccss-pdf-domain-code">${escapeHtml(shortCode)}</span>` : ''}
+                                <i class="fas fa-chevron-down curr-accordion-chevron" style="color: #7A1E28;"></i>
+                            </div>
+                        `;
+                    } else {
+                        headerDiv.className = 'curr-accordion-header';
+                        headerDiv.innerHTML = `
+                            <div class="curr-accordion-title-wrap">
+                                <h4 class="curr-standard-title">${escapeHtml(domainTitle)}</h4>
+                                <span class="curr-accordion-count">${descCount} standard${descCount === 1 ? '' : 's'}</span>
+                            </div>
+                            <i class="fas fa-chevron-down curr-accordion-chevron"></i>
+                        `;
+                    }
+
+                    const bodyDiv = document.createElement('div');
+                    bodyDiv.className = 'curr-accordion-body';
+                    bodyNodes.forEach(node => bodyDiv.appendChild(node));
+
+                    // Disclaimer at the bottom of every non-math CCSS standard expander
+                    if (resolvedCurr === 'ccss' && currentSubject !== 'math') {
+                        const disclaimerDiv = document.createElement('div');
+                        disclaimerDiv.className = 'curr-standard-disclaimer';
+                        const subjectName = (((subject && subject.name) || subjectsMap[currentSubject]?.name || 'MATHEMATICS')).toUpperCase();
+                        disclaimerDiv.innerHTML = `<i class="fas fa-bookmark mr-1"></i> From the "Common Core State Standards for ${subjectName}"`;
+                        bodyDiv.appendChild(disclaimerDiv);
+                    }
+
+                    titleEl.remove();
+                    item.appendChild(headerDiv);
+                    item.appendChild(bodyDiv);
+
+                    headerDiv.addEventListener('click', (e) => {
+                        if (e.target.closest('button')) return;
+                        item.classList.toggle('collapsed');
+                        headerDiv.setAttribute('aria-expanded', !item.classList.contains('collapsed'));
+                        updateAccordionToggleBtnState();
+                    });
+
+                    headerDiv.addEventListener('keydown', (e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            headerDiv.click();
+                        }
+                    });
+                }
+            });
+
+            // Math PDF layout: Append Footnotes & running bottom stamp
+            if (currentSubject === 'math') {
+                if (gradeData.footnotes && Array.isArray(gradeData.footnotes) && gradeData.footnotes.length > 0) {
+                    const footnotesDiv = document.createElement('div');
+                    footnotesDiv.className = 'ccss-pdf-footnotes';
+                    footnotesDiv.innerHTML = `
+                        <div style="font-weight: 800; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.04em; color: #7A1E28;">Footnotes</div>
+                        ${gradeData.footnotes.map(fn => `<div class="ccss-pdf-footnote-item">${fn}</div>`).join('')}
+                    `;
+                    standardsContainer.appendChild(footnotesDiv);
+                }
+
+                const bottomStamp = document.createElement('div');
+                bottomStamp.className = 'ccss-pdf-page-stamp';
+                bottomStamp.style.marginTop = '2rem';
+                bottomStamp.style.paddingTop = '1rem';
+                bottomStamp.style.borderTop = '1px solid var(--color-border, #e5e7eb)';
+                bottomStamp.innerHTML = `
+                    <span>COMMON CORE STATE STANDARDS for MATHEMATICS</span>
+                    <span>Hesten's Learning Standards Explorer</span>
+                `;
+                standardsContainer.appendChild(bottomStamp);
+            }
+
+            // If no codes were in <strong> tags, count items as standards
+            if (totalStandardCodesCount === 0) {
+                totalStandardCodesCount = standardItems.length;
+            }
+
+            // Reset accordion toggle button state
+            allAccordionsExpanded = true;
+            updateAccordionToggleBtnState();
 
             // Build Domain Filter Pills (Displaying Standard Numbers & Letters)
             const filterBar = document.getElementById('domain-filters-bar');
@@ -1064,7 +1201,10 @@
             if (typeof window.ensureMathJax === 'function') {
                 window.ensureMathJax().then(mj => {
                     if (mj && mj.typesetPromise) {
-                        mj.typesetPromise([standardsContainer]).catch(err => console.debug('MathJax typeset:', err));
+                        const viewOverview = document.getElementById('view-overview');
+                        const targets = [standardsContainer];
+                        if (viewOverview) targets.push(viewOverview);
+                        mj.typesetPromise(targets).catch(err => console.debug('MathJax typeset:', err));
                     }
                 }).catch(e => console.debug('MathJax ensure:', e));
             }

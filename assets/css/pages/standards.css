@@ -2816,3 +2816,427 @@
     to { opacity: 1; transform: scale(1); }
   }
 }
+
+/* ==========================================================================
+   CCSS Mathematics Authentic PDF Document Layout Styles
+   Matching Common Core State Standards for Mathematics publication (k.pdf)
+   ========================================================================== */
+
+/* Document Presentation Mode for CCSS Math */
+.curr-grid.is-ccss-doc {
+  display: block;
+  max-width: 62rem;
+  margin: 0 auto;
+}
+
+.curr-grid.is-ccss-doc .curr-col-main {
+  width: 100%;
+}
+
+.curr-grid.is-ccss-doc .curr-col-side {
+  display: none;
+}
+
+.curr-grid.is-ccss-doc .curr-card-overview {
+  padding: 0;
+  overflow: hidden;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom: none;
+  background: var(--color-bg-surface, #ffffff);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.06);
+}
+
+.curr-grid.is-ccss-doc .curr-card-overview .curr-card-bg-icon,
+.curr-grid.is-ccss-doc .curr-card-overview > .curr-card-badge,
+.curr-grid.is-ccss-doc .curr-card-overview > .curr-card-title {
+  display: none;
+}
+
+.curr-grid.is-ccss-doc .curr-card-overview .curr-card-text {
+  margin: 0;
+  padding: 0;
+}
+
+.curr-grid.is-ccss-doc .curr-card-standards {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  margin-top: 0;
+  border-top: 1px dashed var(--color-border, #e5e7eb);
+  background: var(--color-bg-surface, #ffffff);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+}
+
+.curr-grid.is-ccss-doc .curr-standard-item {
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  margin-bottom: 2.25rem;
+}
+
+.curr-grid.is-ccss-doc .curr-standard-item.collapsed {
+  background: transparent;
+  padding-bottom: 0;
+}
+
+.curr-grid.is-ccss-doc .curr-accordion-header.ccss-pdf-domain-strip {
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s ease;
+}
+
+.curr-grid.is-ccss-doc .curr-accordion-header.ccss-pdf-domain-strip:hover {
+  background: #ede2e5;
+  border-color: #d1bcc2;
+}
+
+.curr-grid.is-ccss-doc .curr-accordion-header.ccss-pdf-domain-strip:focus-visible {
+  outline: 3px solid #7A1E28;
+  outline-offset: 2px;
+}
+
+[data-theme="dark"] .curr-grid.is-ccss-doc .curr-accordion-header.ccss-pdf-domain-strip:hover {
+  background: rgba(153, 27, 27, 0.32);
+  border-color: rgba(239, 68, 68, 0.4);
+}
+
+.ccss-pdf-document {
+  max-width: 60rem;
+  margin: 0 auto 3rem auto;
+  background: var(--color-bg-surface, #ffffff);
+  border: 1px solid var(--color-border, #e5e7eb);
+  border-radius: 8px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+  font-family: inherit;
+  color: var(--color-text-base, #1f2937);
+  transition: all 0.3s ease;
+}
+
+/* 1. Top Running Header Banner */
+.ccss-pdf-running-header {
+  background: linear-gradient(90deg, #7A1E28 0%, #8E2734 100%);
+  color: #ffffff;
+  padding: 0.4rem 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 0.725rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+.ccss-pdf-page-wrapper {
+  padding: 2.25rem 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .ccss-pdf-page-wrapper {
+    padding: 1.5rem 1.25rem;
+  }
+}
+
+/* Running Edge Page Stamp */
+.ccss-pdf-page-stamp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #9ca3af;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--color-border, #f3f4f6);
+  padding-bottom: 0.5rem;
+}
+
+/* 2. Cover / Section Title */
+.ccss-pdf-main-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0 0 1.5rem 0;
+  color: #1f2937;
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.ccss-pdf-title-subject {
+  color: #7A1E28;
+  font-weight: 900;
+}
+
+.ccss-pdf-title-sep {
+  color: #9ca3af;
+  font-weight: 300;
+}
+
+.ccss-pdf-title-grade {
+  color: var(--color-text-base, #374151);
+  font-weight: 700;
+}
+
+/* Lead & Critical Areas */
+.ccss-pdf-lead {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--color-text-base, #374151);
+  margin-bottom: 1.5rem;
+}
+
+.ccss-pdf-critical-area {
+  margin: 1.25rem 0;
+  padding: 1.1rem 1.35rem;
+  background: color-mix(in srgb, #7A1E28 3.5%, var(--color-bg-surface, #ffffff));
+  border-left: 3.5px solid #7A1E28;
+  border-radius: 0 6px 6px 0;
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.ccss-pdf-critical-area p {
+  margin: 0;
+}
+
+.ccss-pdf-critical-area strong {
+  color: #7A1E28;
+  font-weight: 800;
+}
+
+/* 3. Grade Overview (Two-Column Layout) */
+.ccss-pdf-overview-section {
+  margin: 2.5rem 0;
+  padding-top: 2rem;
+  border-top: 2px solid var(--color-border, #e5e7eb);
+}
+
+.ccss-pdf-section-heading {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #7A1E28;
+  margin: 0 0 1.5rem 0;
+}
+
+.ccss-pdf-overview-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.9fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (max-width: 860px) {
+  .ccss-pdf-overview-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.ccss-pdf-domain-summary-card {
+  margin-bottom: 1.25rem;
+}
+
+.ccss-pdf-domain-summary-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #7A1E28;
+  margin: 0 0 0.35rem 0;
+}
+
+.ccss-pdf-cluster-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+}
+
+.ccss-pdf-cluster-bullet-item {
+  position: relative;
+  padding-left: 1.2rem;
+  font-size: 0.925rem;
+  line-height: 1.5;
+  color: var(--color-text-base, #374151);
+  margin-bottom: 0.35rem;
+}
+
+.ccss-pdf-cluster-bullet-item::before {
+  content: "•";
+  position: absolute;
+  left: 0.1rem;
+  top: 0;
+  color: #7A1E28;
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+/* Mathematical Practices Shaded Box */
+.ccss-pdf-practices-card {
+  background: var(--color-bg-base, #f3f4f6);
+  border: 1px solid var(--color-border, #e5e7eb);
+  border-radius: 8px;
+  padding: 1.5rem 1.75rem;
+}
+
+.ccss-pdf-practices-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #7A1E28;
+  margin: 0 0 1rem 0;
+  border-bottom: 2px solid color-mix(in srgb, #7A1E28 20%, transparent);
+  padding-bottom: 0.5rem;
+}
+
+.ccss-pdf-practices-list {
+  list-style-type: decimal;
+  padding-left: 1.35rem;
+  margin: 0;
+}
+
+.ccss-pdf-practices-item {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  margin-bottom: 0.65rem;
+  color: var(--color-text-base, #374151);
+}
+
+.ccss-pdf-practices-item:last-child {
+  margin-bottom: 0;
+}
+
+/* 4. Standards Section (The CCSS Specification Pages) */
+.ccss-pdf-standards-section {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 2px solid var(--color-border, #e5e7eb);
+}
+
+/* Domain Header Strip */
+.ccss-pdf-domain-strip {
+  background: #f4ecee;
+  border: 1px solid #e2d2d6;
+  border-radius: 6px;
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2.25rem 0 1rem 0;
+}
+
+.ccss-pdf-domain-strip:first-child {
+  margin-top: 0;
+}
+
+.ccss-pdf-domain-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #7A1E28;
+  margin: 0;
+}
+
+.ccss-pdf-domain-code {
+  background: #7A1E28;
+  color: #ffffff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-weight: 800;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+}
+
+/* Cluster Subheading */
+.ccss-pdf-cluster-header,
+.curr-cluster-heading {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--color-text-base, #111827);
+  margin: 1.5rem 0 0.85rem 0;
+  padding-left: 0.25rem;
+}
+
+/* Footnotes Section */
+.ccss-pdf-footnotes {
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border, #d1d5db);
+  font-size: 0.825rem;
+  line-height: 1.55;
+  color: var(--color-text-muted, #6b7280);
+}
+
+.ccss-pdf-footnote-item {
+  margin-bottom: 0.45rem;
+}
+
+.ccss-pdf-footnote-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Dark Mode Theme Adaptation */
+[data-theme="dark"] .ccss-pdf-document {
+  background: #18181b;
+  border-color: #27272a;
+  color: #e4e4e7;
+}
+
+[data-theme="dark"] .ccss-pdf-running-header {
+  background: linear-gradient(90deg, #991b1b 0%, #7f1d1d 100%);
+}
+
+[data-theme="dark"] .ccss-pdf-title-subject {
+  color: #f87171;
+}
+
+[data-theme="dark"] .ccss-pdf-title-grade {
+  color: #f4f4f5;
+}
+
+[data-theme="dark"] .ccss-pdf-section-heading,
+[data-theme="dark"] .ccss-pdf-domain-summary-title,
+[data-theme="dark"] .ccss-pdf-domain-title,
+[data-theme="dark"] .ccss-pdf-practices-title {
+  color: #f87171;
+}
+
+[data-theme="dark"] .ccss-pdf-lead,
+[data-theme="dark"] .ccss-pdf-cluster-bullet-item,
+[data-theme="dark"] .ccss-pdf-practices-item {
+  color: #d4d4d8;
+}
+
+[data-theme="dark"] .ccss-pdf-critical-area {
+  background: rgba(239, 68, 68, 0.08);
+  border-left-color: #ef4444;
+}
+
+[data-theme="dark"] .ccss-pdf-critical-area strong {
+  color: #fca5a5;
+}
+
+[data-theme="dark"] .ccss-pdf-domain-strip {
+  background: rgba(153, 27, 27, 0.22);
+  border-color: rgba(239, 68, 68, 0.25);
+}
+
+[data-theme="dark"] .ccss-pdf-domain-code {
+  background: #991b1b;
+}
+
+[data-theme="dark"] .ccss-pdf-practices-card {
+  background: #27272a;
+  border-color: #3f3f46;
+}
+
+[data-theme="dark"] .ccss-pdf-cluster-header,
+[data-theme="dark"] .curr-cluster-heading {
+  color: #f4f4f5;
+}
+
+[data-theme="dark"] .ccss-pdf-footnotes {
+  border-top-color: #3f3f46;
+  color: #a1a1aa;
+}
+
