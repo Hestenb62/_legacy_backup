@@ -2,34 +2,49 @@
     <!-- Archival Cataloging Header -->
     <div class="math-book-callout-header">
         <span class="math-catalog-seal"><i class="fas fa-landmark"></i> HESTEN ACADEMIC REFERENCE ARCHIVE</span>
-        <span class="math-catalog-callno">CALL NO: QA107 .H47 2026 &bull; DEWEY: 510.71 &bull; VOL. I</span>
+        <span class="math-catalog-callno">CALL NO: QA107.H47 2026 &bull; DEWEY: 510.71 &bull; VOL. I</span>
     </div>
 
     <!-- Chapter 1 Bookplate Frontispiece -->
     <header class="math-chapter-hero">
-        <div class="math-hero-badge"><i class="fas fa-bookmark"></i> Volume I &bull; Primary Mathematics Compendium</div>
+        <div class="math-hero-badge"><i class="fas fa-bookmark"></i> Volume I &bull; Primary Mathematics Compendium
+        </div>
         <h1 class="math-hero-title">First Grade Mathematics Reference Codex</h1>
-        <div class="math-hero-subtitle">The Complete Scholastic Guide to Counting to 120, Addition &amp; Subtraction Strategies, Place Value, Mensuration, Coins, Geometry, Mental Math Hacks &amp; Synoptic Concordance</div>
+        <div class="math-hero-subtitle">The Complete Scholastic Guide to Counting to 120, Addition &amp; Subtraction
+            Strategies, Place Value, Mensuration, Coins, Geometry, Mental Math Hacks &amp; Synoptic Concordance</div>
         <div class="math-book-divider"><span class="math-fleuron">&#10086;</span></div>
-        <p class="math-hero-desc">An authoritative library reference handbook compiled for scholars, instructors, and independent students. Codifying fundamental numerical principles, arithmetic laws, spatial geometry, and mental calculation heuristics according to national mathematical standards.</p>
+        <p class="math-hero-desc">An authoritative library reference handbook compiled for scholars, instructors, and
+            independent students. Codifying fundamental numerical principles, arithmetic laws, spatial geometry, and
+            mental calculation heuristics according to national mathematical standards.</p>
     </header>
 
     <!-- Quick Navigation Index / Thumb-Tab Bar -->
     <nav class="math-toc-pills" aria-label="Reference Sections Concordance">
         <span class="math-toc-label"><i class="fas fa-list-ol"></i> SECTIONS:</span>
-        <a href="#sec-1-1" class="math-pill" title="1.1 Counting &amp; Numbers to 120"><i class="fas fa-sort-numeric-up"></i> 1.1</a>
-        <a href="#sec-1-2" class="math-pill" title="1.2 Addition Strategies within 20"><i class="fas fa-plus"></i> 1.2</a>
-        <a href="#sec-1-3" class="math-pill" title="1.3 Subtraction Strategies within 20"><i class="fas fa-minus"></i> 1.3</a>
-        <a href="#sec-1-4" class="math-pill" title="1.4 Word Problems Master Guide"><i class="fas fa-calculator"></i> 1.4</a>
-        <a href="#sec-1-5" class="math-pill" title="1.5 Place Value: Tens &amp; Ones"><i class="fas fa-layer-group"></i> 1.5</a>
-        <a href="#sec-1-6" class="math-pill" title="1.6 Comparing Numbers (&gt;, &lt;, =)"><i class="fas fa-greater-than-equal"></i> 1.6</a>
-        <a href="#sec-1-7" class="math-pill" title="1.7 Measurement &amp; Length"><i class="fas fa-ruler-horizontal"></i> 1.7</a>
+        <a href="#sec-1-1" class="math-pill" title="1.1 Counting &amp; Numbers to 120"><i
+                class="fas fa-sort-numeric-up"></i> 1.1</a>
+        <a href="#sec-1-2" class="math-pill" title="1.2 Addition Strategies within 20"><i class="fas fa-plus"></i>
+            1.2</a>
+        <a href="#sec-1-3" class="math-pill" title="1.3 Subtraction Strategies within 20"><i class="fas fa-minus"></i>
+            1.3</a>
+        <a href="#sec-1-4" class="math-pill" title="1.4 Word Problems Master Guide"><i class="fas fa-calculator"></i>
+            1.4</a>
+        <a href="#sec-1-5" class="math-pill" title="1.5 Place Value: Tens &amp; Ones"><i class="fas fa-layer-group"></i>
+            1.5</a>
+        <a href="#sec-1-6" class="math-pill" title="1.6 Comparing Numbers (&gt;, &lt;, =)"><i
+                class="fas fa-greater-than-equal"></i> 1.6</a>
+        <a href="#sec-1-7" class="math-pill" title="1.7 Measurement &amp; Length"><i
+                class="fas fa-ruler-horizontal"></i> 1.7</a>
         <a href="#sec-1-8" class="math-pill" title="1.8 Chronometry: Telling Time"><i class="fas fa-clock"></i> 1.8</a>
-        <a href="#sec-1-9" class="math-pill" title="1.9 Coins &amp; Money Arithmetic"><i class="fas fa-coins"></i> 1.9</a>
-        <a href="#sec-1-10" class="math-pill" title="1.10 Geometry &amp; Equal Shares"><i class="fas fa-shapes"></i> 1.10</a>
-        <a href="#sec-1-11" class="math-pill" title="1.11 Data, Tally Charts &amp; Graphs"><i class="fas fa-chart-bar"></i> 1.11</a>
+        <a href="#sec-1-9" class="math-pill" title="1.9 Coins &amp; Money Arithmetic"><i class="fas fa-coins"></i>
+            1.9</a>
+        <a href="#sec-1-10" class="math-pill" title="1.10 Geometry &amp; Equal Shares"><i class="fas fa-shapes"></i>
+            1.10</a>
+        <a href="#sec-1-11" class="math-pill" title="1.11 Data, Tally Charts &amp; Graphs"><i
+                class="fas fa-chart-bar"></i> 1.11</a>
         <a href="#sec-1-12" class="math-pill" title="1.12 Mental Math Speed Hacks"><i class="fas fa-brain"></i> 1.12</a>
-        <a href="#sec-1-13" class="math-pill" title="1.13 Synoptic Tables &amp; Cheat Sheet"><i class="fas fa-file-invoice"></i> 1.13</a>
+        <a href="#sec-1-13" class="math-pill" title="1.13 Synoptic Tables &amp; Cheat Sheet"><i
+                class="fas fa-file-invoice"></i> 1.13</a>
     </nav>
 
     <!-- ==========================================================================
@@ -47,31 +62,39 @@
                 <span class="math-def-domain">Topic: Cardinality &amp; One-to-One Correspondence</span>
             </div>
             <div class="math-def-body">
-                <p><dfn class="math-term">Cardinality</dfn> &mdash; In an orderly enumeration of discrete objects, every element is matched to exactly one number tag ($1, 2, 3\dots$). The final number spoken represents the total magnitude (size) of the collection.</p>
+                <p><dfn class="math-term">Cardinality</dfn> &mdash; In an orderly enumeration of discrete objects, every
+                    element is matched to exactly one number tag ($1, 2, 3\dots$). The final number spoken represents
+                    the total magnitude (size) of the collection.</p>
                 $$\text{Discrete Sequence: } \{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, \dots, 100, 110, 120\}$$
             </div>
         </div>
 
         <!-- Student How-To Guide: 120-Chart Navigation -->
         <div class="math-howto-box">
-            <div class="math-howto-header"><i class="fas fa-compass"></i> Student Guide: How to Navigate the 120-Chart like a Compass</div>
-            <p>The 120-Chart is organized into 10 columns and 12 rows. You can move across it without counting by ones:</p>
+            <div class="math-howto-header"><i class="fas fa-compass"></i> Student Guide: How to Navigate the 120-Chart
+                like a Compass</div>
+            <p>The 120-Chart is organized into 10 columns and 12 rows. You can move across it without counting by ones:
+            </p>
             <div class="math-howto-steps">
                 <div class="math-step-item">
                     <span class="math-step-badge">RIGHT (&rarr;)</span>
-                    <div><strong>Add 1 ($+1$):</strong> Move one square right along the same row. Example: $34 \to 35$.</div>
+                    <div><strong>Add 1 ($+1$):</strong> Move one square right along the same row. Example: $34 \to 35$.
+                    </div>
                 </div>
                 <div class="math-step-item">
                     <span class="math-step-badge">LEFT (&larr;)</span>
-                    <div><strong>Subtract 1 ($-1$):</strong> Move one square left along the same row. Example: $34 \to 33$.</div>
+                    <div><strong>Subtract 1 ($-1$):</strong> Move one square left along the same row. Example: $34 \to
+                        33$.</div>
                 </div>
                 <div class="math-step-item">
                     <span class="math-step-badge">DOWN (&darr;)</span>
-                    <div><strong>Add 10 ($+10$):</strong> Drop down directly into the next row. The tens digit increases by $1$; the ones digit stays identical. Example: $34 \to 44$.</div>
+                    <div><strong>Add 10 ($+10$):</strong> Drop down directly into the next row. The tens digit increases
+                        by $1$; the ones digit stays identical. Example: $34 \to 44$.</div>
                 </div>
                 <div class="math-step-item">
                     <span class="math-step-badge">UP (&uarr;)</span>
-                    <div><strong>Subtract 10 ($-10$):</strong> Jump straight up one row. The tens digit decreases by $1$; the ones digit stays identical. Example: $34 \to 24$.</div>
+                    <div><strong>Subtract 10 ($-10$):</strong> Jump straight up one row. The tens digit decreases by
+                        $1$; the ones digit stays identical. Example: $34 \to 24$.</div>
                 </div>
             </div>
         </div>
@@ -120,43 +143,53 @@
                 <div class="math-formula-meta">ARITHMETIC LAW I</div>
                 <div class="math-formula-title">Commutative Property of Addition</div>
                 <div class="math-formula-latex">$$a + b = b + a$$</div>
-                <div class="math-formula-desc">Order never changes the sum. Example: $3 + 9 = 9 + 3 = 12$. Always begin with the larger addend!</div>
+                <div class="math-formula-desc">Order never changes the sum. Example: $3 + 9 = 9 + 3 = 12$. Always begin
+                    with the larger addend!</div>
             </div>
 
             <div class="math-formula-card">
                 <div class="math-formula-meta">ARITHMETIC LAW II</div>
                 <div class="math-formula-title">Associative Property (3 Addends)</div>
                 <div class="math-formula-latex">$$(a + b) + c = a + (b + c)$$</div>
-                <div class="math-formula-desc">When adding three numbers, group friend-of-ten pairs first: $(4 + 7) + 6 = (4 + 6) + 7 = 10 + 7 = 17$.</div>
+                <div class="math-formula-desc">When adding three numbers, group friend-of-ten pairs first: $(4 + 7) + 6
+                    = (4 + 6) + 7 = 10 + 7 = 17$.</div>
             </div>
 
             <div class="math-formula-card">
                 <div class="math-formula-meta">ARITHMETIC LAW III</div>
                 <div class="math-formula-title">Identity Property of Zero</div>
                 <div class="math-formula-latex">$$a + 0 = a \quad \text{and} \quad a - 0 = a$$</div>
-                <div class="math-formula-desc">Adding or taking away zero leaves the original quantity untouched: $14 + 0 = 14$.</div>
+                <div class="math-formula-desc">Adding or taking away zero leaves the original quantity untouched: $14 +
+                    0 = 14$.</div>
             </div>
         </div>
 
         <!-- Student How-To Guide: The 4 Core Addition Strategies -->
         <div class="math-howto-box">
-            <div class="math-howto-header"><i class="fas fa-lightbulb"></i> Student Guide: The 4 Core Addition Strategies (Choose the Best Tool)</div>
+            <div class="math-howto-header"><i class="fas fa-lightbulb"></i> Student Guide: The 4 Core Addition
+                Strategies (Choose the Best Tool)</div>
             <div class="math-howto-steps">
                 <div class="math-step-item">
                     <span class="math-step-badge">STRATEGY 1</span>
-                    <div><strong>Counting On (Best when adding $+1, +2, +3$):</strong> Lock the bigger number in your head, then count on. For $4 + 9$: start at $9$, then count on: <em>10, 11, 12, 13!</em> ($4 + 9 = 13$).</div>
+                    <div><strong>Counting On (Best when adding $+1, +2, +3$):</strong> Lock the bigger number in your
+                        head, then count on. For $4 + 9$: start at $9$, then count on: <em>10, 11, 12, 13!</em> ($4 + 9
+                        = 13$).</div>
                 </div>
                 <div class="math-step-item">
                     <span class="math-step-badge">STRATEGY 2</span>
-                    <div><strong>Make a 10 (Best when one number is close to 10: $8$ or $9$):</strong> Steal from the smaller number to make a full 10. For $8 + 5$: decompose $5$ into $2 + 3$. Give $2$ to $8$ to make $10$. Now $10 + 3 = 13$.</div>
+                    <div><strong>Make a 10 (Best when one number is close to 10: $8$ or $9$):</strong> Steal from the
+                        smaller number to make a full 10. For $8 + 5$: decompose $5$ into $2 + 3$. Give $2$ to $8$ to
+                        make $10$. Now $10 + 3 = 13$.</div>
                 </div>
                 <div class="math-step-item">
                     <span class="math-step-badge">STRATEGY 3</span>
-                    <div><strong>Doubles &amp; Near-Doubles (Best when numbers are contiguous: $6+7, 7+8$):</strong> Use known doubles: $6 + 6 = 12$. Since $7$ is $6 + 1$, the sum is $12 + 1 = 13$.</div>
+                    <div><strong>Doubles &amp; Near-Doubles (Best when numbers are contiguous: $6+7, 7+8$):</strong> Use
+                        known doubles: $6 + 6 = 12$. Since $7$ is $6 + 1$, the sum is $12 + 1 = 13$.</div>
                 </div>
                 <div class="math-step-item">
                     <span class="math-step-badge">STRATEGY 4</span>
-                    <div><strong>Ten-Frames &amp; Counters:</strong> Fill a top ten-frame ($5$ and $5$), then continue onto the second frame to easily see $10 + \text{ones}$.</div>
+                    <div><strong>Ten-Frames &amp; Counters:</strong> Fill a top ten-frame ($5$ and $5$), then continue
+                        onto the second frame to easily see $10 + \text{ones}$.</div>
                 </div>
             </div>
         </div>
@@ -168,14 +201,18 @@
                 <span class="math-ex-title">Associative Addition with 3 Addends</span>
             </div>
             <div class="math-ex-body">
-                <p class="math-ex-problem"><strong>Problem:</strong> Calculate $3 + 8 + 7$ by finding friendly numbers first.</p>
+                <p class="math-ex-problem"><strong>Problem:</strong> Calculate $3 + 8 + 7$ by finding friendly numbers
+                    first.</p>
                 <div class="math-ex-solution">
-                    <div class="math-sol-step"><strong>Step 1 (Scan for Friends of 10):</strong> Notice $3$ and $7$ are partners of $10$: $3 + 7 = 10$.</div>
-                    <div class="math-sol-step"><strong>Step 2 (Regroup with Associative Law):</strong> $(3 + 7) + 8 = 10 + 8$.</div>
+                    <div class="math-sol-step"><strong>Step 1 (Scan for Friends of 10):</strong> Notice $3$ and $7$ are
+                        partners of $10$: $3 + 7 = 10$.</div>
+                    <div class="math-sol-step"><strong>Step 2 (Regroup with Associative Law):</strong> $(3 + 7) + 8 = 10
+                        + 8$.</div>
                     <div class="math-sol-step"><strong>Step 3 (Add the Remainder):</strong> $10 + 8 = 18$.</div>
                 </div>
                 <div class="math-ex-result">
-                    <span><i class="fas fa-check-circle" style="color: #059669;"></i> <strong>Result:</strong> $3 + 8 + 7 = \mathbf{18}$.</span>
+                    <span><i class="fas fa-check-circle" style="color: #059669;"></i> <strong>Result:</strong> $3 + 8 +
+                        7 = \mathbf{18}$.</span>
                     <span class="math-qed">&#9632; Q.E.D.</span>
                 </div>
             </div>
@@ -205,19 +242,26 @@
 
         <!-- Student How-To Guide: The 3 Core Subtraction Strategies -->
         <div class="math-howto-box">
-            <div class="math-howto-header"><i class="fas fa-cut"></i> Student Guide: The 3 Core Subtraction Strategies</div>
+            <div class="math-howto-header"><i class="fas fa-cut"></i> Student Guide: The 3 Core Subtraction Strategies
+            </div>
             <div class="math-howto-steps">
                 <div class="math-step-item">
                     <span class="math-step-badge">STRATEGY 1</span>
-                    <div><strong>Counting Back (Best when subtracting $1, 2,$ or $3$):</strong> Start at the big number and hop backward on the number line. For $15 - 3$: start at $15$, count back: <em>14, 13, 12!</em> ($15 - 3 = 12$).</div>
+                    <div><strong>Counting Back (Best when subtracting $1, 2,$ or $3$):</strong> Start at the big number
+                        and hop backward on the number line. For $15 - 3$: start at $15$, count back: <em>14, 13,
+                            12!</em> ($15 - 3 = 12$).</div>
                 </div>
                 <div class="math-step-item">
                     <span class="math-step-badge">STRATEGY 2</span>
-                    <div><strong>Counting Up / Finding the Distance (Best when numbers are close: $13 - 11$):</strong> Put the smaller number in your head and count up to the bigger number. From $11$ to $13$: <em>12, 13 (2 hops!)</em>. Difference is $2$.</div>
+                    <div><strong>Counting Up / Finding the Distance (Best when numbers are close: $13 - 11$):</strong>
+                        Put the smaller number in your head and count up to the bigger number. From $11$ to $13$:
+                        <em>12, 13 (2 hops!)</em>. Difference is $2$.</div>
                 </div>
                 <div class="math-step-item">
                     <span class="math-step-badge">STRATEGY 3</span>
-                    <div><strong>Think-Addition / Fact Family Bond:</strong> Turn subtraction into an addition question! For $14 - 9 = \square$, ask: <em>"What plus 9 makes 14?"</em> Since $9 + 5 = 14$, then $14 - 9 = 5$.</div>
+                    <div><strong>Think-Addition / Fact Family Bond:</strong> Turn subtraction into an addition question!
+                        For $14 - 9 = \square$, ask: <em>"What plus 9 makes 14?"</em> Since $9 + 5 = 14$, then $14 - 9 =
+                        5$.</div>
                 </div>
             </div>
         </div>
@@ -228,14 +272,19 @@
                 <span class="math-ex-title">Missing Addend / Part-Part-Whole Subtraction</span>
             </div>
             <div class="math-ex-body">
-                <p class="math-ex-problem"><strong>Problem:</strong> Jordan has 16 marbles in a bag. 9 of them are blue and the rest are green. How many marbles are green?</p>
+                <p class="math-ex-problem"><strong>Problem:</strong> Jordan has 16 marbles in a bag. 9 of them are blue
+                    and the rest are green. How many marbles are green?</p>
                 <div class="math-ex-solution">
-                    <div class="math-sol-step"><strong>Step 1 (Identify Whole &amp; Parts):</strong> Whole $= 16$, Part 1 $= 9$, Part 2 $= \square$.</div>
-                    <div class="math-sol-step"><strong>Step 2 (Formulate Equation):</strong> $9 + \square = 16 \iff 16 - 9 = \square$.</div>
-                    <div class="math-sol-step"><strong>Step 3 (Bridge Through Ten):</strong> $16 - 6 = 10$, then $10 - 3 = 7$.</div>
+                    <div class="math-sol-step"><strong>Step 1 (Identify Whole &amp; Parts):</strong> Whole $= 16$, Part
+                        1 $= 9$, Part 2 $= \square$.</div>
+                    <div class="math-sol-step"><strong>Step 2 (Formulate Equation):</strong> $9 + \square = 16 \iff 16 -
+                        9 = \square$.</div>
+                    <div class="math-sol-step"><strong>Step 3 (Bridge Through Ten):</strong> $16 - 6 = 10$, then $10 - 3
+                        = 7$.</div>
                 </div>
                 <div class="math-ex-result">
-                    <span><i class="fas fa-check-circle" style="color: #059669;"></i> <strong>Result:</strong> Jordan has <strong>7 green marbles</strong> ($16 - 9 = 7$).</span>
+                    <span><i class="fas fa-check-circle" style="color: #059669;"></i> <strong>Result:</strong> Jordan
+                        has <strong>7 green marbles</strong> ($16 - 9 = 7$).</span>
                     <span class="math-qed">&#9632; Q.E.D.</span>
                 </div>
             </div>
@@ -252,15 +301,18 @@
         </div>
 
         <div class="math-howto-box">
-            <div class="math-howto-header"><i class="fas fa-project-diagram"></i> The 4-Step Word Problem Solving Framework</div>
+            <div class="math-howto-header"><i class="fas fa-project-diagram"></i> The 4-Step Word Problem Solving
+                Framework</div>
             <div class="math-howto-steps">
                 <div class="math-step-item">
                     <span class="math-step-badge">STEP 1: READ</span>
-                    <div>Read the problem twice. Circle numbers. Underline what the question is asking you to discover.</div>
+                    <div>Read the problem twice. Circle numbers. Underline what the question is asking you to discover.
+                    </div>
                 </div>
                 <div class="math-step-item">
                     <span class="math-step-badge">STEP 2: DRAW</span>
-                    <div>Draw a simple sketch, Part-Part-Whole box, or tape bar model to visualize the relationship.</div>
+                    <div>Draw a simple sketch, Part-Part-Whole box, or tape bar model to visualize the relationship.
+                    </div>
                 </div>
                 <div class="math-step-item">
                     <span class="math-step-badge">STEP 3: WRITE</span>
@@ -328,7 +380,9 @@
                 <span class="math-def-domain">Topic: Base-Ten Bundles</span>
             </div>
             <div class="math-def-body">
-                <p><dfn class="math-term">The Ten-Bundle Principle</dfn> &mdash; $10$ individual ones are grouped together to form exactly $1$ bundle called a <strong>Ten</strong> (a Ten Rod). Any two-digit number represents a combination of tens and loose ones:</p>
+                <p><dfn class="math-term">The Ten-Bundle Principle</dfn> &mdash; $10$ individual ones are grouped
+                    together to form exactly $1$ bundle called a <strong>Ten</strong> (a Ten Rod). Any two-digit number
+                    represents a combination of tens and loose ones:</p>
                 $$\text{Two-Digit Number } N = (T \times 10) + (O \times 1)$$
                 $$\text{Example: } 68 = 6 \text{ Tens } + 8 \text{ Ones } = 60 + 8$$
             </div>
@@ -379,12 +433,15 @@
         </div>
 
         <div class="math-howto-box">
-            <div class="math-howto-header"><i class="fas fa-brain"></i> Mental Math: How to Add and Subtract Multiples of 10</div>
+            <div class="math-howto-header"><i class="fas fa-brain"></i> Mental Math: How to Add and Subtract Multiples
+                of 10</div>
             <p>Because tens and ones live in separate houses, adding tens only changes the tens place!</p>
             <ul>
-                <li><strong>2-Digit + 1-Digit (No Regrouping):</strong> Add ones to ones: $42 + 5 = 40 + (2 + 5) = 47$.</li>
+                <li><strong>2-Digit + 1-Digit (No Regrouping):</strong> Add ones to ones: $42 + 5 = 40 + (2 + 5) = 47$.
+                </li>
                 <li><strong>2-Digit + Multiple of 10:</strong> Add tens to tens: $35 + 40 = (30 + 40) + 5 = 75$.</li>
-                <li><strong>Subtracting Multiples of 10:</strong> Think single-digit facts: $80 - 30 = \text{8 tens} - \text{3 tens} = \text{5 tens} = 50$.</li>
+                <li><strong>Subtracting Multiples of 10:</strong> Think single-digit facts: $80 - 30 = \text{8 tens} -
+                    \text{3 tens} = \text{5 tens} = 50$.</li>
             </ul>
         </div>
     </section>
@@ -410,7 +467,8 @@
                 <div class="math-formula-meta">RELATIONAL AXIOM II</div>
                 <div class="math-formula-title">Less Than ($&lt;$)</div>
                 <div class="math-formula-latex">$$a &lt; b \iff a \text{ is smaller than } b$$</div>
-                <div class="math-formula-desc">Small pointy vertex points directly at the smaller quantity: $29 &lt; 51$.</div>
+                <div class="math-formula-desc">Small pointy vertex points directly at the smaller quantity: $29 &lt;
+                    51$.</div>
             </div>
 
             <div class="math-formula-card">
@@ -422,15 +480,19 @@
         </div>
 
         <div class="math-howto-box">
-            <div class="math-howto-header"><i class="fas fa-check-double"></i> Student Guide: How to Compare Any Two 2-Digit Numbers</div>
+            <div class="math-howto-header"><i class="fas fa-check-double"></i> Student Guide: How to Compare Any Two
+                2-Digit Numbers</div>
             <div class="math-howto-steps">
                 <div class="math-step-item">
                     <span class="math-step-badge">STEP 1</span>
-                    <div><strong>Look at the Tens place first!</strong> The number with more tens is ALWAYS larger, regardless of how big the ones are. Example: $51 &gt; 49$ because $5 \text{ tens} &gt; 4 \text{ tens}$.</div>
+                    <div><strong>Look at the Tens place first!</strong> The number with more tens is ALWAYS larger,
+                        regardless of how big the ones are. Example: $51 &gt; 49$ because $5 \text{ tens} &gt; 4 \text{
+                        tens}$.</div>
                 </div>
                 <div class="math-step-item">
                     <span class="math-step-badge">STEP 2</span>
-                    <div><strong>If Tens are tied, compare the Ones place!</strong> For $67$ vs $63$: both have $6$ tens. Compare ones: $7 &gt; 3$, so $67 &gt; 63$.</div>
+                    <div><strong>If Tens are tied, compare the Ones place!</strong> For $67$ vs $63$: both have $6$
+                        tens. Compare ones: $7 &gt; 3$, so $67 &gt; 63$.</div>
                 </div>
                 <div class="math-step-item">
                     <span class="math-step-badge">STEP 3</span>
@@ -455,7 +517,9 @@
                 <span class="math-def-domain">Topic: Non-Standard Unit Iteration</span>
             </div>
             <div class="math-def-body">
-                <p><dfn class="math-term">Linear Length Iteration</dfn> &mdash; The length of an object is the number of same-size unit lengths (paper clips, cubes) that span it from end to end with <strong>no gaps</strong> and <strong>no overlaps</strong>.</p>
+                <p><dfn class="math-term">Linear Length Iteration</dfn> &mdash; The length of an object is the number of
+                    same-size unit lengths (paper clips, cubes) that span it from end to end with <strong>no
+                        gaps</strong> and <strong>no overlaps</strong>.</p>
                 $$\text{Length Rule: Align at baseline } \to \text{lay units end-to-end without gaps or overlaps}$$
             </div>
         </div>
@@ -463,9 +527,12 @@
         <div class="math-howto-box">
             <div class="math-howto-header"><i class="fas fa-tasks"></i> Student Rules for Accurate Measurement</div>
             <ul>
-                <li><strong>Baseline Alignment:</strong> Always align the zero end of your measuring tool or unit with the start of the object.</li>
-                <li><strong>Indirect Comparison (Transitivity):</strong> If Pencil A is longer than Ribbon B, and Ribbon B is longer than Crayon C, then Pencil A is guaranteed longer than Crayon C!</li>
-                <li><strong>Ordering 3 Objects:</strong> Order items strictly from shortest to longest or longest to shortest.</li>
+                <li><strong>Baseline Alignment:</strong> Always align the zero end of your measuring tool or unit with
+                    the start of the object.</li>
+                <li><strong>Indirect Comparison (Transitivity):</strong> If Pencil A is longer than Ribbon B, and Ribbon
+                    B is longer than Crayon C, then Pencil A is guaranteed longer than Crayon C!</li>
+                <li><strong>Ordering 3 Objects:</strong> Order items strictly from shortest to longest or longest to
+                    shortest.</li>
             </ul>
         </div>
     </section>
@@ -484,14 +551,16 @@
                 <div class="math-formula-meta">CHRONOMETRY I</div>
                 <div class="math-formula-title">Telling Time to the Hour (:00)</div>
                 <div class="math-formula-latex">$$\text{Long Hand on } 12 \implies \text{Hour:00 (O'Clock)}$$</div>
-                <div class="math-formula-desc">Short hand points directly at the hour number. Example: Short hand on $4$, long hand on $12 \implies 4:00$.</div>
+                <div class="math-formula-desc">Short hand points directly at the hour number. Example: Short hand on
+                    $4$, long hand on $12 \implies 4:00$.</div>
             </div>
 
             <div class="math-formula-card">
                 <div class="math-formula-meta">CHRONOMETRY II</div>
                 <div class="math-formula-title">Telling Time to the Half-Hour (:30)</div>
                 <div class="math-formula-latex">$$\text{Long Hand on } 6 \implies \text{Hour:30 (Half-Past)}$$</div>
-                <div class="math-formula-desc">Short hand has traveled halfway between two hours. Always read the hour it has already passed!</div>
+                <div class="math-formula-desc">Short hand has traveled halfway between two hours. Always read the hour
+                    it has already passed!</div>
             </div>
         </div>
 
@@ -574,19 +643,24 @@
         </div>
 
         <div class="math-howto-box">
-            <div class="math-howto-header"><i class="fas fa-coins"></i> Student Guide: How to Count a Pocket of Mixed Coins</div>
+            <div class="math-howto-header"><i class="fas fa-coins"></i> Student Guide: How to Count a Pocket of Mixed
+                Coins</div>
             <div class="math-howto-steps">
                 <div class="math-step-item">
                     <span class="math-step-badge">STEP 1</span>
-                    <div><strong>Sort coins into piles</strong> by denomination: Quarters first, then Dimes, Nickels, and Pennies last.</div>
+                    <div><strong>Sort coins into piles</strong> by denomination: Quarters first, then Dimes, Nickels,
+                        and Pennies last.</div>
                 </div>
                 <div class="math-step-item">
                     <span class="math-step-badge">STEP 2</span>
-                    <div><strong>Start counting with the highest value coin.</strong> If you have $1$ Dime, $2$ Nickels, $3$ Pennies:</div>
+                    <div><strong>Start counting with the highest value coin.</strong> If you have $1$ Dime, $2$ Nickels,
+                        $3$ Pennies:</div>
                 </div>
                 <div class="math-step-item">
                     <span class="math-step-badge">STEP 3</span>
-                    <div><strong>Count on continuously:</strong> Start at Dime ($10&cent;$), add Nickels by 5s ($15&cent;, 20&cent;$), add Pennies by 1s ($21&cent;, 22&cent;, 23&cent;$). Total $= \mathbf{23&cent;}$!</div>
+                    <div><strong>Count on continuously:</strong> Start at Dime ($10&cent;$), add Nickels by 5s
+                        ($15&cent;, 20&cent;$), add Pennies by 1s ($21&cent;, 22&cent;, 23&cent;$). Total $=
+                        \mathbf{23&cent;}$!</div>
                 </div>
             </div>
         </div>
@@ -679,11 +753,18 @@
                 <span class="math-def-domain">Topic: Fraction Foundations (Equal Shares)</span>
             </div>
             <div class="math-def-body">
-                <p><dfn class="math-term">Equal Shares Rule</dfn> &mdash; When a whole shape (circle or rectangle) is partitioned into equal shares:</p>
+                <p><dfn class="math-term">Equal Shares Rule</dfn> &mdash; When a whole shape (circle or rectangle) is
+                    partitioned into equal shares:</p>
                 <ul>
-                    <li><strong>Halves ($\frac{1}{2}$):</strong> Decomposes the whole into exactly <strong>$2$ equal-sized shares</strong>. Two halves make the whole ($2 \text{ halves} = 1 \text{ whole}$).</li>
-                    <li><strong>Fourths / Quarters ($\frac{1}{4}$):</strong> Decomposes the whole into exactly <strong>$4$ equal-sized shares</strong>. Four fourths make the whole ($4 \text{ fourths} = 1 \text{ whole}$).</li>
-                    <li><strong>Axiom of Inverse Share Size:</strong> Decomposing into <em>more</em> equal shares creates <em>smaller</em> shares! (A fourth is smaller than a half: $\frac{1}{4} &lt; \frac{1}{2}$).</li>
+                    <li><strong>Halves ($\frac{1}{2}$):</strong> Decomposes the whole into exactly <strong>$2$
+                            equal-sized shares</strong>. Two halves make the whole ($2 \text{ halves} = 1 \text{
+                        whole}$).</li>
+                    <li><strong>Fourths / Quarters ($\frac{1}{4}$):</strong> Decomposes the whole into exactly
+                        <strong>$4$ equal-sized shares</strong>. Four fourths make the whole ($4 \text{ fourths} = 1
+                        \text{ whole}$).</li>
+                    <li><strong>Axiom of Inverse Share Size:</strong> Decomposing into <em>more</em> equal shares
+                        creates <em>smaller</em> shares! (A fourth is smaller than a half: $\frac{1}{4} &lt;
+                        \frac{1}{2}$).</li>
                 </ul>
             </div>
         </div>
@@ -699,19 +780,23 @@
         </div>
 
         <div class="math-howto-box">
-            <div class="math-howto-header"><i class="fas fa-chart-line"></i> How to Organize &amp; Interpret 1st Grade Data</div>
+            <div class="math-howto-header"><i class="fas fa-chart-line"></i> How to Organize &amp; Interpret 1st Grade
+                Data</div>
             <div class="math-howto-steps">
                 <div class="math-step-item">
                     <span class="math-step-badge">TALLY MARKS</span>
-                    <div>Draw vertical lines for each item: $|, ||, |||, ||||$. For the 5th item, draw a diagonal slash across the four lines: $\rlap{||||}/$ to make a closed gate of $5$. Count gates by 5s!</div>
+                    <div>Draw vertical lines for each item: $|, ||, |||, ||||$. For the 5th item, draw a diagonal slash
+                        across the four lines: $\rlap{||||}/$ to make a closed gate of $5$. Count gates by 5s!</div>
                 </div>
                 <div class="math-step-item">
                     <span class="math-step-badge">PICTURE GRAPHS</span>
-                    <div>Each picture symbol represents $1$ object (e.g. &#9733; $= 1$ student favorite). Count symbols in each category row to compare.</div>
+                    <div>Each picture symbol represents $1$ object (e.g. &#9733; $= 1$ student favorite). Count symbols
+                        in each category row to compare.</div>
                 </div>
                 <div class="math-step-item">
                     <span class="math-step-badge">COMPARISON QUESTIONS</span>
-                    <div>To answer <em>"How many more did A have than B?"</em>, find the difference: $\text{Category A} - \text{Category B} = \text{Difference}$.</div>
+                    <div>To answer <em>"How many more did A have than B?"</em>, find the difference: $\text{Category A}
+                        - \text{Category B} = \text{Difference}$.</div>
                 </div>
             </div>
         </div>
@@ -731,28 +816,32 @@
                 <div class="math-const-sym"><i class="fas fa-bolt" style="color: #b45309;"></i> HACK I</div>
                 <div class="math-const-name">The "Make a 10" Bridge Hack</div>
                 <div class="math-const-val">$$8 + 6 = (8 + 2) + 4 = 10 + 4 = 14$$</div>
-                <div class="math-const-desc">Always look for pairs that make 10: $(9+1, 8+2, 7+3, 6+4, 5+5)$. Steal just enough from the other number to make 10, then add the rest!</div>
+                <div class="math-const-desc">Always look for pairs that make 10: $(9+1, 8+2, 7+3, 6+4, 5+5)$. Steal just
+                    enough from the other number to make 10, then add the rest!</div>
             </div>
 
             <div class="math-constant-card">
                 <div class="math-const-sym"><i class="fas fa-magic" style="color: #1e3a8a;"></i> HACK II</div>
                 <div class="math-const-name">The "Plus-9 is Plus-10 Minus-1" Shortcut</div>
                 <div class="math-const-val">$$9 + 7 = (10 + 7) - 1 = 17 - 1 = 16$$</div>
-                <div class="math-const-desc">Adding 9 is easy! Just add 10 to the number, then drop back 1. Example: $9 + 5 \to 15 - 1 = 14$.</div>
+                <div class="math-const-desc">Adding 9 is easy! Just add 10 to the number, then drop back 1. Example: $9
+                    + 5 \to 15 - 1 = 14$.</div>
             </div>
 
             <div class="math-constant-card">
                 <div class="math-const-sym"><i class="fas fa-arrows-alt-h" style="color: #065f46;"></i> HACK III</div>
                 <div class="math-const-name">Doubles &plusmn; 1 (Near-Doubles Hack)</div>
                 <div class="math-const-val">$$7 + 8 = (7 + 7) + 1 = 14 + 1 = 15$$</div>
-                <div class="math-const-desc">Memorize your doubles ($5+5=10, 6+6=12, 7+7=14, 8+8=16$). Then any neighbors are just 1 more or 1 less!</div>
+                <div class="math-const-desc">Memorize your doubles ($5+5=10, 6+6=12, 7+7=14, 8+8=16$). Then any
+                    neighbors are just 1 more or 1 less!</div>
             </div>
 
             <div class="math-constant-card">
                 <div class="math-const-sym"><i class="fas fa-shield-alt" style="color: #9d174d;"></i> HACK IV</div>
                 <div class="math-const-name">Turn Subtraction Into Missing Addition</div>
                 <div class="math-const-val">$$15 - 8 = \square \iff 8 + \square = 15 \implies 7$$</div>
-                <div class="math-const-desc">Our brains add faster than they subtract. Never count backward from 15. Think: "What plus 8 equals 15?" Answer: 7!</div>
+                <div class="math-const-desc">Our brains add faster than they subtract. Never count backward from 15.
+                    Think: "What plus 8 equals 15?" Answer: 7!</div>
             </div>
         </div>
     </section>
@@ -770,13 +859,16 @@
             <div class="math-summary-header">
                 <div>
                     <h3><i class="fas fa-scroll"></i> Grade 1 Master Reference Concordance</h3>
-                    <p style="margin: 0.25rem 0 0 0; font-size: 0.85rem; color: var(--reader-muted);">Authorized curriculum reference concordance &bull; Grade 1 Standards Complete</p>
+                    <p style="margin: 0.25rem 0 0 0; font-size: 0.85rem; color: var(--reader-muted);">Authorized
+                        curriculum reference concordance &bull; Grade 1 Standards Complete</p>
                 </div>
                 <div class="math-summary-actions">
-                    <button type="button" class="math-print-btn" onclick="printSynopticTables()" aria-label="Print or Save Synoptic Tables as PDF">
+                    <button type="button" class="math-print-btn" onclick="printSynopticTables()"
+                        aria-label="Print or Save Synoptic Tables as PDF">
                         <i class="fas fa-print"></i> Print / Save PDF
                     </button>
-                    <button type="button" class="math-print-btn" onclick="downloadSynopticMarkdown()" aria-label="Download Synoptic Tables as Text File">
+                    <button type="button" class="math-print-btn" onclick="downloadSynopticMarkdown()"
+                        aria-label="Download Synoptic Tables as Text File">
                         <i class="fas fa-download"></i> Download Text File
                     </button>
                 </div>
@@ -856,7 +948,8 @@
                         <li><strong>$=$:</strong> Balance / Equivalent ($6 + 4 = 10$)</li>
                         <li><strong>Hour (:00):</strong> Long hand on 12</li>
                         <li><strong>Half-Hour (:30):</strong> Long hand on 6</li>
-                        <li>$1 \text{ Hour} = 60 \text{ Minutes} \quad \vert \quad \text{Half-Hour} = 30 \text{ Min}$</li>
+                        <li>$1 \text{ Hour} = 60 \text{ Minutes} \quad \vert \quad \text{Half-Hour} = 30 \text{ Min}$
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -868,7 +961,7 @@
         function printSynopticTables() {
             document.body.classList.add('printing-math-synoptic');
             window.print();
-            setTimeout(function() {
+            setTimeout(function () {
                 document.body.classList.remove('printing-math-synoptic');
             }, 1000);
         }
@@ -876,7 +969,7 @@
         function downloadSynopticMarkdown() {
             var textContent = "========================================================================\n" +
                 "HESTEN ACADEMIC REFERENCE ARCHIVE - FIRST GRADE MATHEMATICS CONCORDANCE\n" +
-                "CALL NO: QA107 .H47 2026 | DEWEY: 510.71 | VOLUME I\n" +
+                "CALL NO: QA107.H47 2026 | DEWEY: 510.71 | VOLUME I\n" +
                 "========================================================================\n\n" +
                 "1. FRIENDS OF 10 BONDS:\n" +
                 "   1 + 9 = 10 | 9 + 1 = 10\n" +
