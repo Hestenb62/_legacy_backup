@@ -33,6 +33,19 @@ $rawMod = strtoupper($parts[2] ?? 'M1');
 $rawTopic = strtoupper($parts[3] ?? 'A');
 $rawLesson = $parts[4] ?? '1';
 
+// GED Subject & Level Normalization
+if ($rawLevel === 'ged') {
+    if ($rawSubj === 'm') {
+        $rawSubj = 'math';
+    } elseif (in_array($rawSubj, ['r', 'w', 'rla'])) {
+        $rawSubj = 'ela';
+    } elseif (in_array($rawSubj, ['s', 'sci'])) {
+        $rawSubj = 'science';
+    } elseif (in_array($rawSubj, ['ss', 'soc'])) {
+        $rawSubj = 'social';
+    }
+}
+
 $gradeNames = [
     'a' => 'Level A (Pre-K)',
     'b' => 'Level B (Kindergarten)',
@@ -48,7 +61,8 @@ $gradeNames = [
     'l' => 'Level L (Grade 10)',
     'm' => 'Level M (Grade 11)',
     'n' => 'Level N (Grade 12)',
-    'o' => 'Level O (AP Prep)'
+    'o' => 'Level O (AP Prep)',
+    'ged' => 'Practice GED (High School Equivalency)'
 ];
 $subjConfig = [
     'math' => ['name' => 'Mathematics', 'icon' => 'fa-calculator', 'color' => '#3b82f6'],
@@ -71,10 +85,17 @@ if (file_exists($individualFile)) {
     $meta = $lesson['meta'] ?? [];
 } else {
     // Intelligent Curriculum Scaffolder for all standards
+    $scaffoldTitle = ($rawLevel === 'ged')
+        ? "GED {$subjData['name']}: Module {$rawMod} • Skill {$rawTopic}"
+        : "{$subjData['name']}: {$rawMod} Topic {$rawTopic} • Lesson {$rawLesson}";
+    $scaffoldBadge = ($rawLevel === 'ged')
+        ? "GED {$subjData['name']} {$codeStr}"
+        : "{$subjData['name']} {$codeStr}";
+
     $meta = [
-        'title' => "{$subjData['name']}: {$rawMod} Topic {$rawTopic} • Lesson {$rawLesson}",
+        'title' => $scaffoldTitle,
         'description' => "Standard-aligned interactive curriculum practice and core concept reinforcement for {$levelDisplay}.",
-        'badge' => "{$subjData['name']} {$codeStr}",
+        'badge' => $scaffoldBadge,
         'badgeIcon' => $subjData['icon']
     ];
 
@@ -117,7 +138,7 @@ include ABSPATH . 'src/header.php';
 <?php
 $barTitle = $meta['title'] ?? 'Lesson';
 $barSubtitle = $meta['badge'] ?? '';
-$barBackUrl = !empty($levelUrl) ? $levelUrl : ('/levels/' . strtolower($rawLevel ?? 'k') . '.php');
+$barBackUrl = !empty($levelUrl) ? $levelUrl : (($rawLevel === 'ged') ? '/levels/practice-ged.php' : ('/levels/' . strtolower($rawLevel ?? 'k') . '.php'));
 include_once ABSPATH . 'src/partials/sticky-reading-bar.php';
 ?>
 
@@ -367,11 +388,12 @@ include_once ABSPATH . 'src/partials/sticky-reading-bar.php';
 </main>
 
 <?php
-$levelId = $lesson['levelId'] ?? ($rawLevel ?? 'k');
-$levelUrl = !empty($levelUrl) ? $levelUrl : ('/levels/' . ($rawLevel ?? 'k') . '.php');
+$levelId = $lesson['levelId'] ?? ($rawLevel === 'ged' ? 'practice-ged' : ($rawLevel ?? 'k'));
+$levelUrl = !empty($levelUrl) ? $levelUrl : (($rawLevel === 'ged') ? '/levels/practice-ged.php' : ('/levels/' . ($rawLevel ?? 'k') . '.php'));
 $lessonCode = $lesson['code'] ?? ($codeStr ?? strtoupper(str_replace('-', '.', $lessonId)));
 $lessonTitle = $meta['title'] ?? 'Curriculum Lesson';
-$lessonStandard = $lesson['standard'] ?? ('CCSS.' . strtoupper($rawSubj ?? 'MATH') . '.' . strtoupper($rawLevel ?? 'K') . '.' . strtoupper($rawMod ?? 'M1'));
+$defaultStandard = ($rawLevel === 'ged') ? ('GED.' . strtoupper($parts[1] ?? 'M') . '.' . ($parts[2] ?? '1') . '.' . ($parts[3] ?? '1')) : ('CCSS.' . strtoupper($rawSubj ?? 'MATH') . '.' . strtoupper($rawLevel ?? 'K') . '.' . strtoupper($rawMod ?? 'M1'));
+$lessonStandard = $lesson['standard'] ?? $defaultStandard;
 $practiceQuestions = $exitQuestions;
 include ABSPATH . 'src/lesson_runner.php';
 ?>

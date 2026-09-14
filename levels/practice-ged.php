@@ -5,6 +5,45 @@
  * Integrated with Interactive Formula Sheet, TI-30XS Calculator Simulator, Essay Lab, and Readiness Scale.
  */
 
+// Dynamic Single-Lesson Router: Check if a lesson is requested via query string (e.g. ?ged-m-1-1 or ?lesson=ged-m-1-1)
+$requestedLesson = null;
+if (!empty($_GET['lesson'])) {
+    $requestedLesson = preg_replace('/[^a-zA-Z0-9\-_]/', '', trim($_GET['lesson']));
+} elseif (!empty($_SERVER['QUERY_STRING'])) {
+    $rawQuery = trim(explode('&', $_SERVER['QUERY_STRING'])[0]);
+    if (!empty($rawQuery) && !str_contains($rawQuery, '=')) {
+        $requestedLesson = preg_replace('/[^a-zA-Z0-9\-_]/', '', $rawQuery);
+    }
+}
+
+if (!empty($requestedLesson)) {
+    $lessonFile = dirname(__DIR__) . '/lessons/' . $requestedLesson . '.php';
+    $levelUrl = !empty($levelUrl) ? $levelUrl : 'practice-ged.php';
+    $levelTitle = !empty($levelTitle) ? $levelTitle : 'Practice GED';
+
+    if (file_exists($lessonFile)) {
+        include $lessonFile;
+        exit;
+    }
+
+    // Dynamic JSON Lesson Router: If static PHP file does not exist, render from JSON or scaffolding
+    $jsonLessonFile = dirname(__DIR__) . '/assets/data/lessons/' . $requestedLesson . '.json';
+    $mainLessonsFile = dirname(__DIR__) . '/assets/data/lessons.json';
+    $hasJson = file_exists($jsonLessonFile);
+    if (!$hasJson && file_exists($mainLessonsFile)) {
+        $data = json_decode(file_get_contents($mainLessonsFile), true);
+        if (isset($data['lessons'][$requestedLesson])) {
+            $hasJson = true;
+        }
+    }
+
+    if ($hasJson || str_starts_with($requestedLesson, 'ged-')) {
+        $lessonId = $requestedLesson;
+        include dirname(__DIR__) . '/src/lesson_renderer.php';
+        exit;
+    }
+}
+
 $pageTitle       = "Practice GED | Hesten's Learning";
 $pageDescription = "Comprehensive prep for the GED equivalency exam covering Mathematical Reasoning, Language Arts (RLA), Science, and Social Studies.";
 $pageKeywords    = "GED, High School Equivalency, GED Practice Test, Math Reasoning, RLA, Science, Social Studies, Formula Sheet, TI-30XS";
