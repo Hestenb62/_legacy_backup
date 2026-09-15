@@ -747,4 +747,447 @@
     border-color: #4f46e5;
 }
 
+/* ==========================================================================
+   Hero Badges & Enhanced Card Visual Tokens
+   ========================================================================== */
+.resource-pill-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.35rem 1rem;
+    border-radius: var(--radius-full, 9999px);
+    background: rgba(79, 70, 229, 0.1);
+    color: var(--color-primary, #4f46e5);
+    border: 1px solid rgba(79, 70, 229, 0.25);
+    font-size: 0.825rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.75rem;
+}
+
+[data-theme="dark"] .resource-pill-badge,
+.dark .resource-pill-badge {
+    background: rgba(129, 140, 248, 0.15);
+    color: #a5b4fc;
+    border-color: rgba(129, 140, 248, 0.3);
+}
+
+/* ==========================================================================
+   Grammar & Sentence Playground Workbench
+   ========================================================================== */
+.grammar-playground-workbench {
+    max-width: 960px;
+    margin: 4rem auto 2rem auto;
+    background: var(--color-bg-surface, #ffffff);
+    border: 1px solid var(--color-border, #e2e8f0);
+    border-radius: 2rem;
+    padding: 2.25rem;
+    box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+[data-theme="dark"] .grammar-playground-workbench,
+.dark .grammar-playground-workbench {
+    background: #1e293b;
+    border-color: #334155;
+    box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.3);
+}
+
+.grammar-playground-workbench::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #3b82f6, #10b981, #f59e0b, #ec4899, #8b5cf6);
+}
+
+.gp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    margin-bottom: 1.75rem;
+}
+
+.gp-title-group {
+    max-width: 720px;
+}
+
+.gp-title {
+    margin: 0.35rem 0 0.5rem 0;
+    font-size: 1.85rem;
+    font-weight: 900;
+    color: var(--color-text-main, #0f172a);
+    letter-spacing: -0.02em;
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+}
+
+[data-theme="dark"] .gp-title,
+.dark .gp-title {
+    color: #f8fafc;
+}
+
+.gp-desc {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--color-text-muted, #64748b);
+    line-height: 1.6;
+}
+
+/* Presets Bar */
+.gp-presets-wrap {
+    margin-bottom: 1.25rem;
+}
+
+.gp-presets-label {
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-text-muted, #64748b);
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-bottom: 0.5rem;
+}
+
+.gp-presets-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.gp-preset-btn {
+    padding: 0.35rem 0.85rem;
+    border-radius: var(--radius-full, 9999px);
+    background: var(--color-bg-base, #f8fafc);
+    border: 1px solid var(--color-border, #cbd5e1);
+    color: var(--color-text-main, #0f172a);
+    font-size: 0.8rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+[data-theme="dark"] .gp-preset-btn,
+.dark .gp-preset-btn {
+    background: #0f172a;
+    border-color: #334155;
+    color: #e2e8f0;
+}
+
+.gp-preset-btn:hover {
+    border-color: var(--color-primary, #4f46e5);
+    background: rgba(79, 70, 229, 0.08);
+    color: var(--color-primary, #4f46e5);
+    transform: translateY(-1px);
+}
+
+/* Input Sandbox */
+.gp-input-card {
+    background: var(--color-bg-base, #f8fafc);
+    border: 1.5px solid var(--color-border, #cbd5e1);
+    border-radius: 1.25rem;
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.03);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+[data-theme="dark"] .gp-input-card,
+.dark .gp-input-card {
+    background: #0f172a;
+    border-color: #334155;
+}
+
+.gp-input-card:focus-within {
+    border-color: var(--color-primary, #4f46e5);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+.gp-textarea {
+    width: 100%;
+    min-height: 85px;
+    border: none;
+    background: transparent;
+    color: var(--color-text-main, #0f172a);
+    font-family: inherit;
+    font-size: 1.15rem;
+    font-weight: 600;
+    line-height: 1.7;
+    resize: vertical;
+    outline: none;
+    box-sizing: border-box;
+}
+
+[data-theme="dark"] .gp-textarea,
+.dark .gp-textarea {
+    color: #f8fafc;
+}
+
+.gp-input-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--color-border, #e2e8f0);
+}
+
+[data-theme="dark"] .gp-input-footer,
+.dark .gp-input-footer {
+    border-top-color: #334155;
+}
+
+.gp-counts {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--color-text-muted, #64748b);
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+}
+
+.gp-btn-analyze {
+    padding: 0.65rem 1.35rem;
+    border-radius: var(--radius-full, 9999px);
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 800;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    transition: all 0.2s ease;
+    box-shadow: 0 3px 10px rgba(79, 70, 229, 0.35);
+}
+
+.gp-btn-analyze:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 15px rgba(79, 70, 229, 0.45);
+}
+
+/* Playground Tabs Navigation */
+.gp-tabs-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--color-border, #e2e8f0);
+    padding-bottom: 0.75rem;
+}
+
+[data-theme="dark"] .gp-tabs-nav,
+.dark .gp-tabs-nav {
+    border-bottom-color: #334155;
+}
+
+.gp-tab-btn {
+    padding: 0.5rem 1.15rem;
+    border-radius: var(--radius-lg, 0.75rem);
+    background: transparent;
+    border: 1px solid transparent;
+    color: var(--color-text-muted, #64748b);
+    font-size: 0.875rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+.gp-tab-btn:hover {
+    color: var(--color-text-main, #0f172a);
+    background: var(--color-bg-base, #f8fafc);
+}
+
+[data-theme="dark"] .gp-tab-btn:hover,
+.dark .gp-tab-btn:hover {
+    background: #0f172a;
+    color: #f8fafc;
+}
+
+.gp-tab-btn.active {
+    background: rgba(79, 70, 229, 0.1);
+    color: var(--color-primary, #4f46e5);
+    border-color: rgba(79, 70, 229, 0.3);
+}
+
+[data-theme="dark"] .gp-tab-btn.active,
+.dark .gp-tab-btn.active {
+    background: rgba(129, 140, 248, 0.2);
+    color: #a5b4fc;
+    border-color: rgba(129, 140, 248, 0.4);
+}
+
+/* Colorizer Legend & Output */
+.gp-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1.25rem;
+}
+
+.gp-legend-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: var(--radius-sm, 0.375rem);
+    font-size: 0.75rem;
+    font-weight: 800;
+}
+
+.gp-token-output {
+    background: var(--color-bg-base, #f8fafc);
+    border: 1px solid var(--color-border, #cbd5e1);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    font-size: 1.25rem;
+    line-height: 2.2;
+    min-height: 80px;
+}
+
+[data-theme="dark"] .gp-token-output,
+.dark .gp-token-output {
+    background: #0f172a;
+    border-color: #334155;
+}
+
+.gp-word-chip {
+    display: inline-block;
+    padding: 0.15rem 0.5rem;
+    margin: 0.15rem 0.2rem;
+    border-radius: 0.45rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.gp-word-chip:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Tooltip Card for clicked word */
+.gp-word-tooltip {
+    margin-top: 1rem;
+    background: var(--color-bg-surface, #ffffff);
+    border: 1.5px solid var(--color-border, #cbd5e1);
+    border-radius: 0.85rem;
+    padding: 1rem 1.25rem;
+    animation: fadeIn 0.2s ease;
+}
+
+[data-theme="dark"] .gp-word-tooltip,
+.dark .gp-word-tooltip {
+    background: #1e293b;
+    border-color: #334155;
+}
+
+/* Structure & Voice Badges */
+.gp-structure-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.25rem;
+}
+
+.gp-metric-card {
+    background: var(--color-bg-base, #f8fafc);
+    border: 1px solid var(--color-border, #e2e8f0);
+    border-radius: 1rem;
+    padding: 1.25rem;
+}
+
+[data-theme="dark"] .gp-metric-card,
+.dark .gp-metric-card {
+    background: #0f172a;
+    border-color: #334155;
+}
+
+.gp-metric-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.gp-metric-title {
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-text-muted, #64748b);
+}
+
+.gp-metric-val {
+    font-size: 1.25rem;
+    font-weight: 900;
+    color: var(--color-text-main, #0f172a);
+}
+
+[data-theme="dark"] .gp-metric-val,
+.dark .gp-metric-val {
+    color: #f8fafc;
+}
+
+.gp-metric-note {
+    font-size: 0.85rem;
+    color: var(--color-text-muted, #64748b);
+    line-height: 1.5;
+    margin-top: 0.35rem;
+}
+
+/* Diagnostics checklist */
+.gp-diag-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.gp-diag-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.85rem 1rem;
+    border-radius: 0.75rem;
+    background: var(--color-bg-base, #f8fafc);
+    border: 1px solid var(--color-border, #e2e8f0);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-text-main, #0f172a);
+}
+
+[data-theme="dark"] .gp-diag-item,
+.dark .gp-diag-item {
+    background: #0f172a;
+    border-color: #334155;
+    color: #f8fafc;
+}
+
+.gp-diag-pass {
+    border-left: 4px solid #10b981;
+}
+
+.gp-diag-warn {
+    border-left: 4px solid #f59e0b;
+}
+
+.gp-diag-info {
+    border-left: 4px solid #3b82f6;
+}
+
 
