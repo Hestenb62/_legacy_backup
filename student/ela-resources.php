@@ -104,21 +104,6 @@ include '../src/header.php';
                 <a href="ela-literature.php" class="card-action-btn">Analyze Literature</a>
             </div>
 
-            <!-- 5. Short Stories & Poems -->
-            <div class="resource-card" data-card-category="stories">
-                <div class="resource-card-header">
-                    <div class="resource-card-icon literature" style="background: rgba(139, 92, 246, 0.15); color: #8b5cf6;"><i class="fas fa-feather-alt"></i></div>
-                    <h2 class="resource-card-title">Short Stories &amp; Poems</h2>
-                </div>
-                <p class="resource-card-desc">Read and listen to classic short stories, fables, and celebrated poems with dyslexia-friendly audio tools.</p>
-                <div class="pills-container">
-                    <button onclick="window.location.href='/student/#short-stories-poems'; return false;" class="topic-pill" data-search-terms="short stories poems poetry literature classics fables audio read">The Gift of the Magi</button>
-                    <button onclick="window.location.href='/student/#short-stories-poems'; return false;" class="topic-pill" data-search-terms="tell-tale heart poe gothic suspense guilt stories">The Tell-Tale Heart</button>
-                    <button onclick="window.location.href='/student/#short-stories-poems'; return false;" class="topic-pill" data-search-terms="road not taken robert frost poetry stanzas metaphor">The Road Not Taken</button>
-                    <button onclick="window.location.href='/student/#short-stories-poems'; return false;" class="topic-pill" data-search-terms="hope feathers emily dickinson poetry lyric resilience">Hope is the thing with feathers</button>
-                </div>
-                <a href="/student/#short-stories-poems" class="card-action-btn" style="background: #8b5cf6; color: white;">Explore Anthology</a>
-            </div>
         </div>
 
         <!-- Empty State -->

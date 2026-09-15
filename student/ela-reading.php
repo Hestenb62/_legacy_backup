@@ -49,7 +49,7 @@ include '../src/header.php';
                 </div>
                 <p class="resource-card-desc">Engage with diverse fictional stories and answer questions to test your understanding.</p>
                 <div class="pills-container">
-                    <button onclick="window.location.href='/student/#short-stories-poems'; return false;" class="topic-pill" data-search-terms="short stories fiction narrative plot tales readers poems">Short Stories &amp; Poems</button>
+                    <button onclick="openDynamicModal('Short Stories'); return false;" class="topic-pill" data-search-terms="short stories fiction narrative plot tales readers poems">Short Stories</button>
                     <button onclick="openDynamicModal('Novel Excerpts'); return false;" class="topic-pill" data-search-terms="novel excerpts book chapters passages long reading fiction">Novel Excerpts</button>
                     <button onclick="openDynamicModal('Fantasy & Sci-Fi'); return false;" class="topic-pill" data-search-terms="fantasy sci-fi magic space future dragons technology fiction">Fantasy & Sci-Fi</button>
                     <button onclick="openDynamicModal('Mystery & Adventure'); return false;" class="topic-pill" data-search-terms="mystery adventure detective puzzle suspense exciting fiction">Mystery & Adventure</button>
