@@ -129,6 +129,10 @@ if (!function_exists('renderGutenbergLicenseHtml')) {
                             <button type="button" id="edit-lexile-btn" class="spec-action-icon-btn edit-btn" title="Edit Reading Level"><i class="fas fa-edit"></i></button>
                         </div>
                     </div>
+                    <div id="modal-callno-container" class="library-modal-spec-half hidden">
+                        <span class="spec-label"><i class="fas fa-barcode text-primary"></i> Call Number</span>
+                        <span id="modal-callno" class="spec-value spec-val-highlight-amber" style="font-family: monospace; font-weight: 700;"></span>
+                    </div>
                     <div id="modal-dewey-container" class="library-modal-spec-half hidden">
                         <span class="spec-label">Dewey Decimal <button type="button" class="spec-info-btn" onclick="openDdcInfoModal()" title="What is DDC?"><i class="fas fa-info-circle"></i></button></span>
                         <span id="modal-dewey" class="spec-value spec-val-highlight-purple"></span>

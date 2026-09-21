@@ -39,36 +39,82 @@
     align-items: center;
     gap: 0.5rem;
     padding: 0.55rem 1.15rem;
-    border-radius: var(--lib-radius-full);
-    border: 1px solid var(--lib-border);
-    background-color: var(--lib-bg-surface);
+    border-radius: var(--radius-full, 9999px);
+    border: 1px solid var(--lib-glass-border);
+    background-color: var(--lib-glass-bg);
     color: var(--lib-text-muted);
     font-size: 0.85rem;
     font-weight: 700;
     cursor: pointer;
     white-space: nowrap;
-    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-    box-shadow: var(--lib-shadow-sm);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: var(--shadow-sm);
     flex-shrink: 0;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .desk-switcher-tab:hover {
     color: var(--lib-text-main);
-    border-color: var(--lib-primary);
-    background-color: var(--lib-bg-base);
-    transform: translateY(-1px);
+    border-color: var(--color-primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
 }
 
 .desk-switcher-tab.active {
     color: #ffffff;
-    background: linear-gradient(135deg, var(--lib-primary), #6366f1);
+    background: linear-gradient(135deg, var(--color-primary), #6366f1);
     border-color: transparent;
-    box-shadow: 0 4px 14px rgba(79, 70, 229, 0.35);
+    box-shadow: 0 4px 14px rgba(79, 70, 229, 0.4);
+    transform: translateY(-1px);
+}
+
+/* Subject-Specific Active Colors */
+.desk-switcher-tab[data-desk="Math"].active {
+    background: linear-gradient(135deg, #4f46e5, #6366f1);
+    box-shadow: 0 4px 14px rgba(79, 70, 229, 0.4);
+}
+
+.desk-switcher-tab[data-desk="ELA"].active {
+    background: linear-gradient(135deg, #e11d48, #f43f5e);
+    box-shadow: 0 4px 14px rgba(244, 63, 94, 0.4);
+}
+
+.desk-switcher-tab[data-desk="Science"].active {
+    background: linear-gradient(135deg, #059669, #10b981);
+    box-shadow: 0 4px 14px rgba(16, 185, 129, 0.4);
+}
+
+.desk-switcher-tab[data-desk="US History"].active,
+.desk-switcher-tab[data-desk="World History"].active,
+.desk-switcher-tab[data-desk="WW1"].active,
+.desk-switcher-tab[data-desk="WW2"].active {
+    background: linear-gradient(135deg, #d97706, #f59e0b);
+    box-shadow: 0 4px 14px rgba(245, 158, 11, 0.4);
+}
+
+.desk-switcher-tab[data-desk="Civics"].active {
+    background: linear-gradient(135deg, #0891b2, #06b6d4);
+    box-shadow: 0 4px 14px rgba(6, 182, 212, 0.4);
 }
 
 .desk-switcher-tab:focus-visible {
-    outline: 2px solid var(--lib-primary);
+    outline: 2px solid var(--color-primary);
     outline-offset: 2px;
+}
+
+[data-theme="high-contrast"] .desk-switcher-tab,
+body.high-contrast .desk-switcher-tab {
+    background: #000000;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+}
+
+[data-theme="high-contrast"] .desk-switcher-tab.active,
+body.high-contrast .desk-switcher-tab.active {
+    background: #ffff00;
+    color: #000000;
+    border-color: #ffff00;
 }
 
 .desk-switcher-tab i {

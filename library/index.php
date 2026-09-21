@@ -53,6 +53,8 @@ if (!defined('ABSPATH')) {
 include ABSPATH . 'src/header.php';
 ?>
 
+<link rel="stylesheet" href="<?= function_exists('assetVersion') ? assetVersion('/assets/css/library-main.css') : '/assets/css/library-main.css' ?>">
+
 <!-- AURORA MESH BACKGROUND -->
 <div class="library-aurora-bg" aria-hidden="true">
     <div class="library-aurora-blob blob-1"></div>
@@ -67,23 +69,27 @@ include ABSPATH . 'src/header.php';
         <!-- Panel 1: General Library Landing Page -->
         <div id="main-desk-landing" class="workspace-panel active">
 
-            <!-- Hero Section -->
-            
             <!-- Modern Cinematic Welcome Hero & Academic Dashboard -->
             <section class="library-modern-hero library-animate-reveal">
                 <div class="hero-featured-book hero-welcome-card">
-                    <div class="featured-bg-blur"></div>
                     <div class="featured-content">
-                        <span class="featured-label"><i class="fas fa-book-reader"></i> Digital Archive &amp; Research Portal</span>
-                        <h1 class="featured-title">Welcome to Hesten's Learning Library</h1>
-                        <p class="featured-desc">Explore our curated collection of classic literature, foundational textbooks, and historical primary sources. Learn how to search, research, and use accessible learning tools.</p>
+                        <!-- Radar Pulse Pill Badge -->
+                        <div class="hero-pill">
+                            <span class="hero-ping-dot">
+                                <span class="ping-anim"></span>
+                                <span class="ping-core"></span>
+                            </span>
+                            <span>Digital Archive &amp; Research Portal</span>
+                        </div>
+                        <h1 class="featured-title">Explore Hesten's <span class="hero-title-highlight">Digital Library</span></h1>
+                        <p class="featured-desc">Browse our curated collection of classic literature, foundational textbooks, and historical primary sources. Search, research, annotate, and navigate across all academic levels.</p>
                         <div class="featured-actions">
-                            <button type="button" onclick="openLibraryGuideModal()" class="btn-primary-glow" id="hero-read-more-btn" aria-label="Open library user guide modal">
-                                <i class="fas fa-compass"></i> <span>Read More &amp; User Guide</span>
-                            </button>
-                            <a href="#library-catalog-container" class="btn-secondary-glass">
+                            <a href="#library-catalog-container" class="btn-premium btn-primary">
                                 <i class="fas fa-book-open"></i> <span>Browse Catalog</span>
                             </a>
+                            <button type="button" onclick="openLibraryGuideModal()" class="btn-premium btn-secondary" id="hero-read-more-btn" aria-label="Open library user guide modal">
+                                <i class="fas fa-compass"></i> <span>User Guide &amp; Tools</span>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -93,8 +99,8 @@ include ABSPATH . 'src/header.php';
                     <div class="dashboard-greeting">
                         <div class="greeting-header-row">
                             <div>
-                                <h2>Welcome back, Scholar</h2>
-                                <p>Your digital archive holds <span class="highlight-stat"><?php echo $totalCatalogBooks; ?></span> volumes.</p>
+                                <h2>Scholar Dashboard</h2>
+                                <p>Your archive holds <span class="highlight-stat"><?php echo $totalCatalogBooks; ?></span> volumes</p>
                             </div>
                             <div class="dashboard-streak-badge" title="Consecutive days reading">
                                 <i class="fas fa-fire text-amber-500"></i> <span id="dash-streak-count">1</span> Day Streak
@@ -102,7 +108,7 @@ include ABSPATH . 'src/header.php';
                         </div>
                     </div>
                     <div class="dashboard-stats-grid">
-                        <div class="dash-stat-card goal-card" onclick="openGoalModal()" style="cursor: pointer;" title="Set or adjust your daily reading goal">
+                        <div class="dash-stat-card goal-card" onclick="openGoalModal()" style="cursor: pointer;" title="Set or adjust your daily reading goal" tabindex="0" role="button" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openGoalModal();}">
                             <div class="goal-ring-wrap">
                                 <svg class="goal-ring-svg" viewBox="0 0 40 40">
                                     <circle class="goal-ring-bg" cx="20" cy="20" r="18" fill="none" stroke-width="3"></circle>
@@ -115,22 +121,22 @@ include ABSPATH . 'src/header.php';
                                 <span class="stat-label">Daily Goal <i class="fas fa-pencil-alt opacity-60" style="font-size: 0.65rem;"></i></span>
                             </div>
                         </div>
-                        <div class="dash-stat-card" onclick="document.querySelector('.library-chip-btn[data-chip=saved]')?.click()" style="cursor: pointer;" title="Filter by saved books">
-                            <i class="fas fa-bookmark stat-icon" style="color: #6366f1;"></i>
+                        <div class="dash-stat-card" onclick="document.querySelector('.library-chip-btn[data-chip=saved]')?.click()" style="cursor: pointer;" title="Filter by saved books" tabindex="0" role="button" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();document.querySelector('.library-chip-btn[data-chip=saved]')?.click();}">
+                            <i class="fas fa-bookmark stat-icon" style="color: var(--color-primary);"></i>
                             <div class="stat-info">
                                 <span class="stat-value" id="dash-saved-count">0</span>
-                                <span class="stat-label">Saved Books</span>
+                                <span class="stat-label">Saved</span>
                             </div>
                         </div>
-                        <div class="dash-stat-card" onclick="openStudyNotebookModal()" style="cursor: pointer;" title="Open Study Notebook with all highlights">
-                            <i class="fas fa-highlighter stat-icon" style="color: #ec4899;"></i>
+                        <div class="dash-stat-card" onclick="openStudyNotebookModal()" style="cursor: pointer;" title="Open Study Notebook with all highlights" tabindex="0" role="button" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openStudyNotebookModal();}">
+                            <i class="fas fa-highlighter stat-icon" style="color: var(--color-secondary);"></i>
                             <div class="stat-info">
                                 <span class="stat-value" id="dash-highlights-count">0</span>
                                 <span class="stat-label">Highlights</span>
                             </div>
                         </div>
-                        <div class="dash-stat-card" onclick="openStudyNotebookModal()" style="cursor: pointer;" title="Open Study Notebook with notes & flashcards">
-                            <i class="fas fa-sticky-note stat-icon" style="color: #f59e0b;"></i>
+                        <div class="dash-stat-card" onclick="openStudyNotebookModal()" style="cursor: pointer;" title="Open Study Notebook with notes & flashcards" tabindex="0" role="button" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openStudyNotebookModal();}">
+                            <i class="fas fa-sticky-note stat-icon" style="color: var(--color-warning);"></i>
                             <div class="stat-info">
                                 <span class="stat-value" id="dash-notes-count">0</span>
                                 <span class="stat-label">Study Notes</span>
@@ -455,26 +461,37 @@ include ABSPATH . 'src/header.php';
 
 </main>
 
-<link rel="stylesheet" href="../assets/css/library-main.css">
 <?php include __DIR__ . '/modals.php'; ?>
 
 <script>
   window.DESK_EXTERNAL_LINKS = <?php echo json_encode($deskLinks, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT); ?>;
   window.DISCLAIMERS_DATA = <?php echo json_encode($disclaimersData, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT); ?>;
+
+  // Interactive Aurora Parallax
+  document.addEventListener('mousemove', (e) => {
+      const blobs = document.querySelectorAll('.library-aurora-blob');
+      if (!blobs.length) return;
+      const x = (e.clientX / window.innerWidth - 0.5) * 30;
+      const y = (e.clientY / window.innerHeight - 0.5) * 30;
+      blobs.forEach((b, i) => {
+          const factor = (i + 1) * 0.35;
+          b.style.transform = `translate(${x * factor}px, ${y * factor}px)`;
+      });
+  });
 </script>
-<script src="../assets/js/library/lib-bookmarks.js" defer></script>
-<script src="../assets/js/library/lib-view-mode-switcher.js" defer></script>
-<script src="../assets/js/library/lib-real.js" defer></script>
-<script src="../assets/js/library/lib-horizontal-carousel-scroll-but.js" defer></script>
-<script src="../assets/js/library/lib-continue-reading-shelf.js" defer></script>
-<script src="../assets/js/library/lib-subject-research-desks-navigat.js" defer></script>
-<script src="../assets/js/library/lib-book-overview-modal.js" defer></script>
-<script src="../assets/js/library/lib-explainer.js" defer></script>
-<script src="../assets/js/library/lib-academic-citation-generator.js" defer></script>
-<script src="../assets/js/library/lib-inline-lexile-customization.js" defer></script>
-<script src="../assets/js/library/lib-reading-gamification.js" defer></script>
-<script src="../assets/js/library/lib-study-notebook.js" defer></script>
-<script src="../assets/js/library/lib-classroom-share.js" defer></script>
-<script src="../assets/js/library/lib-keyboard-shortcuts.js" defer></script>
+<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/library/lib-bookmarks.js') : '/assets/js/library/lib-bookmarks.js' ?>" defer></script>
+<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/library/lib-view-mode-switcher.js') : '/assets/js/library/lib-view-mode-switcher.js' ?>" defer></script>
+<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/library/lib-real.js') : '/assets/js/library/lib-real.js' ?>" defer></script>
+<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/library/lib-horizontal-carousel-scroll-but.js') : '/assets/js/library/lib-horizontal-carousel-scroll-but.js' ?>" defer></script>
+<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/library/lib-continue-reading-shelf.js') : '/assets/js/library/lib-continue-reading-shelf.js' ?>" defer></script>
+<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/library/lib-subject-research-desks-navigat.js') : '/assets/js/library/lib-subject-research-desks-navigat.js' ?>" defer></script>
+<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/library/lib-book-overview-modal.js') : '/assets/js/library/lib-book-overview-modal.js' ?>" defer></script>
+<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/library/lib-explainer.js') : '/assets/js/library/lib-explainer.js' ?>" defer></script>
+<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/library/lib-academic-citation-generator.js') : '/assets/js/library/lib-academic-citation-generator.js' ?>" defer></script>
+<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/library/lib-inline-lexile-customization.js') : '/assets/js/library/lib-inline-lexile-customization.js' ?>" defer></script>
+<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/library/lib-reading-gamification.js') : '/assets/js/library/lib-reading-gamification.js' ?>" defer></script>
+<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/library/lib-study-notebook.js') : '/assets/js/library/lib-study-notebook.js' ?>" defer></script>
+<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/library/lib-classroom-share.js') : '/assets/js/library/lib-classroom-share.js' ?>" defer></script>
+<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/library/lib-keyboard-shortcuts.js') : '/assets/js/library/lib-keyboard-shortcuts.js' ?>" defer></script>
 
 <?php include ABSPATH . 'src/footer.php'; ?>

@@ -40,6 +40,12 @@
         if (lexileEl) lexileEl.textContent = d.lexile || 'Unrated';
         if (lexileCont) lexileCont.classList.toggle('hidden', !d.lexile || d.lexile === '#');
 
+        // Call Number
+        const callnoEl = document.getElementById('modal-callno');
+        const callnoCont = document.getElementById('modal-callno-container');
+        if (callnoEl) callnoEl.textContent = d.callNumber || '';
+        if (callnoCont) callnoCont.classList.toggle('hidden', !d.callNumber);
+
         // Dewey Decimal
         const deweyEl = document.getElementById('modal-dewey');
         const deweyCont = document.getElementById('modal-dewey-container');

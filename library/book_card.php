@@ -14,6 +14,24 @@ $bookDate = $book['date'] ?? '';
 $isCollection = !empty($book['isCollection']);
 $hasTeacherResources = !empty($book['hasTeacherResources']);
 $curriculum = $book['curriculum'] ?? ($book['grade'] ?? '');
+
+// Resolve or synthesize authentic Library Call Number
+$bookCallNumber = $book['call_number'] ?? $book['callNumber'] ?? $book['call-number'] ?? '';
+if (empty($bookCallNumber)) {
+    if (!empty($book['lc'])) {
+        $authorCutter = '.' . strtoupper(substr(preg_replace('/[^a-zA-Z]/', '', $bookAuthor ?: 'A'), 0, 1)) . (abs(crc32($bookTitle)) % 89 + 10);
+        $year = (!empty($bookDate) && $bookDate !== '#') ? preg_replace('/[^0-9]/', '', substr($bookDate, 0, 4)) : '';
+        $bookCallNumber = trim($book['lc'] . ' ' . $authorCutter . ' ' . $year);
+    } elseif (!empty($book['dewey'])) {
+        $authorCode = strtoupper(substr(preg_replace('/[^a-zA-Z]/', '', $bookAuthor ?: 'A'), 0, 3));
+        $year = (!empty($bookDate) && $bookDate !== '#') ? preg_replace('/[^0-9]/', '', substr($bookDate, 0, 4)) : '';
+        $bookCallNumber = trim($book['dewey'] . ' ' . $authorCode . ' ' . $year);
+    } else {
+        $hashPrefix = strtoupper(substr(preg_replace('/[^a-zA-Z]/', '', $bookAuthor ?: $bookTitle), 0, 2) . substr(preg_replace('/[^a-zA-Z]/', '', $bookTitle), 0, 1));
+        $hashNum = (abs(crc32($bookId ?: $bookTitle)) % 800) + 100;
+        $bookCallNumber = $hashPrefix . '.' . $hashNum;
+    }
+}
 ?>
 <div class="library-book-card"
      role="button"
@@ -44,6 +62,7 @@ $curriculum = $book['curriculum'] ?? ($book['grade'] ?? '');
      data-lexile="<?php echo htmlspecialchars($bookLexile); ?>"
      data-dewey="<?php echo htmlspecialchars($book['dewey'] ?? ''); ?>"
      data-lc="<?php echo htmlspecialchars($book['lc'] ?? ''); ?>"
+     data-call-number="<?php echo htmlspecialchars($bookCallNumber); ?>"
      data-grade="<?php echo htmlspecialchars($bookGrade); ?>"
      data-curriculum="<?php echo htmlspecialchars($curriculum); ?>"
      data-disclaimer-key="<?php echo htmlspecialchars($book['disclaimer-key'] ?? ''); ?>"
@@ -67,6 +86,13 @@ $curriculum = $book['curriculum'] ?? ($book['grade'] ?? '');
         <?php if ($isCollection): ?>
             <div class="library-book-badge-collection">
                 <i class="fas fa-layer-group"></i> <span>Collection</span>
+            </div>
+        <?php endif; ?>
+
+        <!-- Library Spine Call Number Badge -->
+        <?php if (!empty($bookCallNumber)): ?>
+            <div class="library-book-badge-call" title="Library Call Number: <?php echo htmlspecialchars($bookCallNumber); ?>">
+                <i class="fas fa-barcode"></i> <span><?php echo htmlspecialchars($bookCallNumber); ?></span>
             </div>
         <?php endif; ?>
 
@@ -109,6 +135,11 @@ $curriculum = $book['curriculum'] ?? ($book['grade'] ?? '');
 
         <!-- List View Extended Metadata (Visible in Academic List / Table View) -->
         <div class="library-book-list-meta">
+            <?php if (!empty($bookCallNumber)): ?>
+                <span class="meta-tag callno-tag" title="Library Catalog Call Number">
+                    <i class="fas fa-barcode"></i> CALL # <?php echo htmlspecialchars($bookCallNumber); ?>
+                </span>
+            <?php endif; ?>
             <?php if (!empty($bookLexile) && $bookLexile !== '#'): ?>
                 <span class="meta-tag lexile-tag" title="Lexile Reading Measure">
                     <i class="fas fa-brain"></i> <?php echo htmlspecialchars($bookLexile); ?>

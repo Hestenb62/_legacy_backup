@@ -93,6 +93,7 @@
                 const title = (card.dataset.title || '').toLowerCase();
                 const author = (card.dataset.author || '').toLowerCase();
                 const isbn = (card.dataset.isbn || '').toLowerCase();
+                const callNumber = (card.dataset.callNumber || '').toLowerCase();
                 const grade = (card.dataset.grade || '').toLowerCase();
                 const curriculum = (card.dataset.curriculum || '').toLowerCase();
                 const lexileStr = (card.dataset.lexile || '').replace(/[^0-9]/g, '');
@@ -135,6 +136,7 @@
                     queryMatches = title.includes(query) ||
                                    author.includes(query) ||
                                    isbn.includes(query) ||
+                                   callNumber.includes(query) ||
                                    grade.includes(query) ||
                                    curriculum.includes(query);
                 }
