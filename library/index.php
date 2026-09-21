@@ -347,6 +347,10 @@ include ABSPATH . 'src/header.php';
                 
                 <!-- Controls row -->
                 <div class="drawer-header-right">
+                    <!-- Share Desk Button with Hashed Deeplink (#) Code -->
+                    <button type="button" id="desk-share-btn" onclick="copyDeskShareLink()" class="library-drawer-share-btn" aria-label="Copy direct link for this research desk" title="Copy direct link to this research desk">
+                        <i class="fas fa-link"></i> <span id="desk-share-btn-text">Share Desk</span>
+                    </button>
                     <!-- Dedicated Close Button -->
                     <button onclick="closeResourcePortal()" class="library-drawer-close-btn" aria-label="Close Subject Portal" title="Close Subject Portal">
                         <i class="fas fa-times"></i>

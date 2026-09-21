@@ -242,6 +242,42 @@
     box-sizing: border-box;
 }
 
+.library-drawer-share-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    height: 2.4rem;
+    padding: 0 1rem;
+    border-radius: var(--lib-radius-md);
+    border: 1px solid var(--lib-border);
+    background: var(--lib-bg-surface);
+    color: var(--lib-text-main);
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: var(--lib-shadow-sm);
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.library-drawer-share-btn:hover {
+    border-color: var(--lib-primary);
+    color: var(--lib-primary);
+    background-color: var(--lib-bg-base);
+    transform: translateY(-1px);
+    box-shadow: var(--lib-shadow-md);
+}
+
+.library-drawer-share-btn:focus-visible {
+    outline: 2px solid var(--lib-primary);
+    outline-offset: 2px;
+}
+
+.library-drawer-share-btn.copied {
+    border-color: #10b981;
+    color: #10b981;
+    background-color: rgba(16, 185, 129, 0.08);
+}
+
 .library-drawer-close-btn {
     width: 2.4rem;
     height: 2.4rem;

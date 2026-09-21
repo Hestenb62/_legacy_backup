@@ -17,7 +17,74 @@
         'Civics': 'fa-landmark'
     };
 
-    window.openResourcePortal = function (deskName) {
+    // Opaque 8-character cryptographic hashes for Subject Research Desks (non-obvious URLs)
+    const DESK_HASH_CODES = {
+        'General Resources': 'e27d1c34',
+        'US History': 'cd90fec6',
+        'World History': '2a870513',
+        'WW1': '85e68cd6',
+        'WW2': 'ae6f5594',
+        'Math': '6b3a0fb1',
+        'ELA': '2593f14f',
+        'Science': '79d226aa',
+        'Civics': '2396a9be'
+    };
+
+    // Comprehensive reverse-lookup map supporting opaque hashes, prefixed hashes, and readable aliases
+    const HASH_TO_DESK = {
+        // 1. Opaque 8-character cryptographic hashes
+        'e27d1c34': 'General Resources',
+        'cd90fec6': 'US History',
+        '2a870513': 'World History',
+        '85e68cd6': 'WW1',
+        'ae6f5594': 'WW2',
+        '6b3a0fb1': 'Math',
+        '2593f14f': 'ELA',
+        '79d226aa': 'Science',
+        '2396a9be': 'Civics',
+
+        // 2. Prefixed opaque hashes
+        'desk-e27d1c34': 'General Resources',
+        'desk-cd90fec6': 'US History',
+        'desk-2a870513': 'World History',
+        'desk-85e68cd6': 'WW1',
+        'desk-ae6f5594': 'WW2',
+        'desk-6b3a0fb1': 'Math',
+        'desk-2593f14f': 'ELA',
+        'desk-79d226aa': 'Science',
+        'desk-2396a9be': 'Civics',
+
+        // 3. Readable fallback aliases
+        'general-resources': 'General Resources',
+        'desk-general': 'General Resources',
+        'general': 'General Resources',
+        'us-history': 'US History',
+        'desk-us-history': 'US History',
+        'ushistory': 'US History',
+        'world-history': 'World History',
+        'desk-world-history': 'World History',
+        'worldhistory': 'World History',
+        'ww1': 'WW1',
+        'desk-ww1': 'WW1',
+        'world-war-1': 'WW1',
+        'ww2': 'WW2',
+        'desk-ww2': 'WW2',
+        'world-war-2': 'WW2',
+        'math': 'Math',
+        'desk-math': 'Math',
+        'mathematics': 'Math',
+        'ela': 'ELA',
+        'desk-ela': 'ELA',
+        'reading': 'ELA',
+        'english': 'ELA',
+        'science': 'Science',
+        'desk-science': 'Science',
+        'civics': 'Civics',
+        'desk-civics': 'Civics',
+        'government': 'Civics'
+    };
+
+    window.openResourcePortal = function (deskName, updateHash = true) {
         activeDeskName = deskName;
         const mainLanding = document.getElementById('main-desk-landing');
         const deskWorkspace = document.getElementById('subject-desk-workspace');
@@ -27,6 +94,14 @@
         const iconBadge = document.getElementById('drawer-icon-badge');
 
         if (!mainLanding || !deskWorkspace) return;
+
+        // Synchronize browser URL hash with opaque hashed value without scroll jumping
+        if (updateHash && DESK_HASH_CODES[deskName]) {
+            const hashCode = DESK_HASH_CODES[deskName];
+            if (window.location.hash !== '#' + hashCode) {
+                history.replaceState(null, '', '#' + hashCode);
+            }
+        }
 
         // Highlight active desk tab in top switcher bar
         document.querySelectorAll('.desk-switcher-tab').forEach(tab => {
@@ -81,7 +156,7 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
-    window.closeResourcePortal = function () {
+    window.closeResourcePortal = function (updateHash = true) {
         const mainLanding = document.getElementById('main-desk-landing');
         const deskWorkspace = document.getElementById('subject-desk-workspace');
 
@@ -95,6 +170,42 @@
             mainLanding.classList.remove('hidden');
             mainLanding.classList.add('active');
         }
+
+        // Clean URL hash if closing active research desk
+        if (updateHash && window.location.hash) {
+            const rawHash = window.location.hash.replace(/^#/, '').toLowerCase().trim();
+            if (HASH_TO_DESK[rawHash]) {
+                history.replaceState(null, '', window.location.pathname + window.location.search);
+            }
+        }
+    };
+
+    window.copyDeskShareLink = function () {
+        if (!activeDeskName) return;
+        const hashCode = DESK_HASH_CODES[activeDeskName];
+        const shareUrl = window.location.origin + window.location.pathname + (hashCode ? '#' + hashCode : '');
+
+        navigator.clipboard.writeText(shareUrl).then(() => {
+            const shareBtn = document.getElementById('desk-share-btn');
+            const shareText = document.getElementById('desk-share-btn-text');
+            const icon = shareBtn ? shareBtn.querySelector('i') : null;
+
+            if (shareBtn) shareBtn.classList.add('copied');
+            if (icon) icon.className = 'fas fa-check text-emerald-400';
+            if (shareText) shareText.textContent = 'Link Copied!';
+
+            if (typeof window.announceA11y === 'function') {
+                window.announceA11y(`Direct hashed link copied for ${activeDeskName} research desk.`);
+            }
+
+            setTimeout(() => {
+                if (shareBtn) shareBtn.classList.remove('copied');
+                if (icon) icon.className = 'fas fa-link';
+                if (shareText) shareText.textContent = 'Share Desk';
+            }, 2500);
+        }).catch(err => {
+            console.error('Failed to copy link:', err);
+        });
     };
 
     window.clearDrawerSearch = function () {
@@ -255,3 +366,41 @@
             }
         }
     };
+
+    /* ==========================================================================
+       Hash Routing & Deep-Linking Resolution Engine
+       ========================================================================== */
+    function resolveDeskFromHash(hashStr) {
+        if (!hashStr) return null;
+        const clean = hashStr.replace(/^#/, '').toLowerCase().trim();
+        return HASH_TO_DESK[clean] || null;
+    }
+
+    function checkDeskHash() {
+        if (!window.location.hash) return;
+        const desk = resolveDeskFromHash(window.location.hash);
+        if (desk) {
+            window.openResourcePortal(desk, false);
+        }
+    }
+
+    // React to browser Back/Forward navigation or direct hash code alterations
+    window.addEventListener('hashchange', () => {
+        const desk = resolveDeskFromHash(window.location.hash);
+        if (desk) {
+            window.openResourcePortal(desk, false);
+        } else if (!window.location.hash || !window.location.hash.trim()) {
+            const deskWorkspace = document.getElementById('subject-desk-workspace');
+            if (deskWorkspace && !deskWorkspace.classList.contains('hidden')) {
+                window.closeResourcePortal(false);
+            }
+        }
+    });
+
+    // Check initial URL hash on page load
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => setTimeout(checkDeskHash, 60));
+    } else {
+        setTimeout(checkDeskHash, 60);
+    }
+

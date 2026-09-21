@@ -73,9 +73,12 @@ export class JournalEngine {
       this.processData();
       this.render();
 
-      // Check if deep linked to a paper
+      // Check if deep linked to a paper (via query param or hash)
       const urlParams = new URLSearchParams(window.location.search);
-      const paperId = urlParams.get('paper');
+      let paperId = urlParams.get('paper');
+      if (!paperId && window.location.hash) {
+        paperId = window.location.hash.replace(/^#/, '').trim();
+      }
       if (paperId) {
         this.openEntryModal(paperId, false);
       }
@@ -389,6 +392,18 @@ export class JournalEngine {
     const nextEntryBtn = document.getElementById('nextEntryBtn');
     if (prevEntryBtn) prevEntryBtn.addEventListener('click', () => this.navigateModal(-1));
     if (nextEntryBtn) nextEntryBtn.addEventListener('click', () => this.navigateModal(1));
+
+    window.addEventListener('hashchange', () => {
+      const hash = window.location.hash.replace(/^#/, '').trim();
+      if (hash && hash !== this.state.currentEntryId) {
+        const found = this.journalData.find(e => e.id === hash);
+        if (found) {
+          this.openEntryModal(hash, false);
+        }
+      } else if (!hash && this.isModalOpen()) {
+        this.showModal(false);
+      }
+    });
   }
 
   trapFocus(container, event) {
@@ -497,6 +512,9 @@ export class JournalEngine {
       this.state.currentEntryId = null;
       window.CURRENT_PAPER_METADATA = null;
       this.updateUrlState('paper', null);
+      if (window.location.hash) {
+        history.replaceState(null, '', window.location.pathname + window.location.search);
+      }
       // Reset scroll
       const modalContentArea = document.getElementById('modalContentArea');
       if (modalContentArea) modalContentArea.scrollTop = 0;
@@ -515,6 +533,9 @@ export class JournalEngine {
     this.state.currentEntryId = id;
     if (pushUrl) {
       this.updateUrlState('paper', id);
+      if (window.location.hash !== '#' + id) {
+        history.replaceState(null, '', '#' + id);
+      }
     }
 
     const titleEl = document.getElementById('modalTitle');
@@ -887,7 +908,7 @@ export class JournalEngine {
         const entry = getEntry();
         if (!entry) return;
 
-        const shareUrl = window.location.origin + window.location.pathname + '?paper=' + entry.id;
+        const shareUrl = window.location.origin + window.location.pathname + '#' + entry.id;
         navigator.clipboard.writeText(shareUrl).then(() => {
           const icon = shareBtn.querySelector('i');
           const span = shareBtn.querySelector('span');

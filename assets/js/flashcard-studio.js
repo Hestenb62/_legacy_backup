@@ -1245,6 +1245,24 @@
                 }
             }
         });
+
+        // Hash-based deck direct launch check (e.g. #deck-biology or #deck=grade_4_math)
+        function checkDeckHash() {
+            if (!window.location.hash) return;
+            const raw = window.location.hash.replace(/^#/, '').toLowerCase().trim();
+            let targetDeck = null;
+            if (raw.startsWith('deck-')) {
+                targetDeck = raw.replace(/^deck-/, '');
+            } else if (raw.startsWith('deck=')) {
+                targetDeck = raw.replace(/^deck=/, '');
+            } else if (raw.startsWith('flashcards-')) {
+                targetDeck = raw.replace(/^flashcards-/, '');
+            }
+            if (targetDeck && userDecks && userDecks[targetDeck]) {
+                window.openFlashcardStudio(targetDeck);
+            }
+        }
+        setTimeout(checkDeckHash, 120);
     }
 
     if (document.readyState === 'loading') {
