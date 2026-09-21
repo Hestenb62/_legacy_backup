@@ -13,6 +13,8 @@ include 'src/header.php';
 
 <?php include __DIR__ . '/src/partials/hero.php'; ?>
 
+<?php include __DIR__ . '/src/partials/role-portals.php'; ?>
+
 <!-- MAIN CONTENT -->
 <main class="main-content-container" id="main-content" tabindex="-1">
 

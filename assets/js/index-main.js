@@ -33,14 +33,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     checkStreak();
     updateHeroGreeting();
+    setupTabKeyboardNav();
     renderFocusRecommendations(); // NEW: Diagnostic Recommendations Loop
 
     // Search & Filter Listeners
     const searchInput = document.getElementById('level-search');
     if (searchInput) {
-        searchInput.addEventListener('input', (e) => {
-            const heroSearch = document.getElementById('hero-search');
-            if (heroSearch) heroSearch.value = e.target.value;
+        searchInput.addEventListener('input', () => {
             debounce(applyFilters, 200)();
         });
     }
@@ -1180,15 +1179,23 @@ function updateStats() {
 function setCategory(btn, cat, scrollToGrid = false) {
     currentCategory = cat;
 
-    // Update Tab active states
+    // Update Tab active states & roving tabindex
     document.querySelectorAll('.path-tab').forEach(t => {
         t.classList.remove('active');
         t.setAttribute('aria-selected', 'false');
+        t.setAttribute('tabindex', '-1');
     });
 
     if (btn && btn.classList.contains('path-tab')) {
         btn.classList.add('active');
         btn.setAttribute('aria-selected', 'true');
+        btn.setAttribute('tabindex', '0');
+    }
+
+    // Sync mobile select if present
+    const mobileSelect = document.getElementById('path-mobile-select');
+    if (mobileSelect && mobileSelect.value !== cat) {
+        mobileSelect.value = cat;
     }
 
     // Update Path Cards
@@ -1204,30 +1211,65 @@ function setCategory(btn, cat, scrollToGrid = false) {
 
     if (scrollToGrid) {
         const grid = document.getElementById('main-content');
-        grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if (grid) grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 }
 
+function setupTabKeyboardNav() {
+    const tablist = document.querySelector('.path-tabs[role="tablist"]');
+    if (!tablist) return;
+
+    const tabs = Array.from(tablist.querySelectorAll('.path-tab[role="tab"]'));
+    tabs.forEach((tab, index) => {
+        tab.addEventListener('keydown', (e) => {
+            let nextIndex = null;
+            if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+                e.preventDefault();
+                nextIndex = (index + 1) % tabs.length;
+            } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+                e.preventDefault();
+                nextIndex = (index - 1 + tabs.length) % tabs.length;
+            } else if (e.key === 'Home') {
+                e.preventDefault();
+                nextIndex = 0;
+            } else if (e.key === 'End') {
+                e.preventDefault();
+                nextIndex = tabs.length - 1;
+            }
+
+            if (nextIndex !== null) {
+                tabs[nextIndex].click();
+                tabs[nextIndex].focus();
+            }
+        });
+    });
+}
+
 function applyFilters() {
-    const term = document.getElementById('level-search').value.toLowerCase().trim();
+    const searchEl = document.getElementById('level-search');
+    const term = searchEl ? searchEl.value.toLowerCase().trim() : '';
     const cards = document.querySelectorAll('.level-card');
     const clearBtn = document.getElementById('clear-search');
     let visibleCount = 0;
 
-    if (term) clearBtn.classList.remove('hidden');
-    else clearBtn.classList.add('hidden');
+    if (clearBtn) {
+        if (term) clearBtn.classList.remove('hidden');
+        else clearBtn.classList.add('hidden');
+    }
 
     cards.forEach(card => {
         const cat = card.dataset.category;
         const cardId = card.dataset.id;
         
-        // 'all' shows main academic paths + Test/Extra tile after Grade 12
-        // 'extra' tab shows ONLY the 3 new tiles: AP US History, American Yawp, and Practice GED
         let matchesCat = false;
         if (currentCategory === 'all') {
             matchesCat = cat !== 'extra' || cardId === 'test-section';
         } else if (currentCategory === 'extra') {
             matchesCat = cat === 'extra' && cardId !== 'test-section';
+        } else if (currentCategory === 'bookmarked') {
+            matchesCat = bookmarkedLevels.includes(cardId);
+        } else if (currentCategory === 'in-progress') {
+            matchesCat = !completedLevels.includes(cardId);
         } else {
             matchesCat = cat === currentCategory;
         }
@@ -1253,11 +1295,11 @@ function applyFilters() {
     const sectionTitle = document.getElementById('section-title');
 
     if (visibleCount === 0) {
-        grid.classList.add('hidden');
-        noRes.classList.remove('hidden');
+        if (grid) grid.classList.add('hidden');
+        if (noRes) noRes.classList.remove('hidden');
     } else {
-        grid.classList.remove('hidden');
-        noRes.classList.add('hidden');
+        if (grid) grid.classList.remove('hidden');
+        if (noRes) noRes.classList.add('hidden');
     }
 
     const catNames = {
@@ -1265,16 +1307,20 @@ function applyFilters() {
         'elem': 'Elementary Path',
         'middle': 'Middle School Path',
         'high': 'High School Path',
-        'extra': 'Extra Resources'
+        'extra': 'Extra Resources',
+        'bookmarked': 'Saved Levels',
+        'in-progress': 'In Progress'
     };
 
-    sectionTitle.textContent = catNames[currentCategory] || 'Academic Path';
-    countLabel.textContent = `${visibleCount} levels available`;
+    if (sectionTitle) sectionTitle.textContent = catNames[currentCategory] || 'Academic Path';
+    if (countLabel) countLabel.textContent = `${visibleCount} levels available`;
 }
 
 function resetFilters() {
-    document.getElementById('level-search').value = '';
-    setCategory(null, 'all');
+    const searchEl = document.getElementById('level-search');
+    if (searchEl) searchEl.value = '';
+    const allTab = document.getElementById('tab-all');
+    setCategory(allTab, 'all');
 }
 
 // --- UTILS ---
@@ -1289,33 +1335,22 @@ function debounce(func, wait) {
 }
 
 function checkStreak() {
-    const lastVisit = localStorage.getItem('hl_last_visit');
-    const streakCount = parseInt(localStorage.getItem('hl_streak') || '0');
-    const today = new Date().toDateString();
-    const el = document.getElementById('streak-stat');
-
-    if (!el) return;
-
-    if (lastVisit === today) {
-        el.textContent = streakCount;
-    } else if (lastVisit) {
-        const yesterday = new Date();
-        yesterday.setDate(yesterday.getDate() - 1);
-        if (lastVisit === yesterday.toDateString()) {
-            const newStreak = streakCount + 1;
-            localStorage.setItem('hl_streak', newStreak);
-            el.textContent = newStreak;
-            localStorage.setItem('hl_last_visit', today);
+    const STREAK_KEY = 'hesten_learning_streak';
+    let streakCount = 1;
+    try {
+        const raw = localStorage.getItem(STREAK_KEY);
+        if (raw) {
+            const parsed = JSON.parse(raw);
+            streakCount = parsed.streak || 1;
         } else {
-            localStorage.setItem('hl_streak', 1);
-            el.textContent = 1;
-            localStorage.setItem('hl_last_visit', today);
+            streakCount = parseInt(localStorage.getItem('hl_streak') || '1');
         }
-    } else {
-        localStorage.setItem('hl_streak', 1);
-        el.textContent = 1;
-        localStorage.setItem('hl_last_visit', today);
+    } catch(e) {
+        streakCount = parseInt(localStorage.getItem('hl_streak') || '1');
     }
+
+    const el = document.getElementById('streak-stat');
+    if (el) el.textContent = streakCount;
 }
 
 function triggerConfettiBtn(btn) {
@@ -1356,12 +1391,38 @@ function updateHeroGreeting() {
     const el = document.getElementById('hero-dynamic-greeting');
     if (!el) return;
 
-    let greeting = "THE LEARNING ODYSSEY";
-    if (hour < 12) greeting = "Good Morning Odyssey";
-    else if (hour < 18) greeting = "Good Afternoon Journey";
-    else greeting = "Good Evening Odyssey";
+    let profile = null;
+    try {
+        const raw = localStorage.getItem('hesten-user-profile');
+        if (raw) profile = JSON.parse(raw);
+    } catch (e) {}
 
-    el.textContent = greeting.toUpperCase();
+    const firstName = profile && profile.firstName ? profile.firstName.trim() : null;
+    let timeGreeting = "Morning";
+    if (hour >= 12 && hour < 18) timeGreeting = "Afternoon";
+    else if (hour >= 18) timeGreeting = "Evening";
+
+    if (firstName) {
+        el.textContent = `GOOD ${timeGreeting.toUpperCase()}, ${firstName.toUpperCase()}!`;
+    } else {
+        el.textContent = `GOOD ${timeGreeting.toUpperCase()} ODYSSEY`;
+    }
+
+    // Configure 1-click grade jump button if grade is in profile
+    const jumpBtn = document.getElementById('hero-grade-jump');
+    const jumpLabel = document.getElementById('hero-grade-jump-label');
+    if (jumpBtn && profile && profile.grade) {
+        const gradeKey = profile.grade.toLowerCase().replace(/\s+/g, '-');
+        const targetCard = typeof learningLevels !== 'undefined'
+            ? learningLevels.find(l => l.id.toLowerCase() === gradeKey || l.title.toLowerCase().includes(profile.grade.toLowerCase()))
+            : null;
+
+        if (targetCard && targetCard.link) {
+            jumpBtn.href = targetCard.link;
+            if (jumpLabel) jumpLabel.textContent = `Resume ${profile.grade}`;
+            jumpBtn.classList.remove('hidden');
+        }
+    }
 }
 
 function syncSearch(val) {
@@ -1372,14 +1433,43 @@ function syncSearch(val) {
     }
 }
 
+let currentSpeakingBtn = null;
+
 function speakCard(btn, title, desc) {
-    if ('speechSynthesis' in window) {
-        if (window.speechSynthesis.speaking) {
-            window.speechSynthesis.cancel();
+    if (!('speechSynthesis' in window)) return;
+
+    if (window.speechSynthesis.speaking) {
+        window.speechSynthesis.cancel();
+        if (currentSpeakingBtn) {
+            currentSpeakingBtn.classList.remove('speaking');
+            currentSpeakingBtn.innerHTML = '<i class="fas fa-volume-up" aria-hidden="true"></i>';
+            if (currentSpeakingBtn === btn) {
+                currentSpeakingBtn = null;
+                return;
+            }
         }
-        const utterance = new SpeechSynthesisUtterance(title + ". " + desc);
-        window.speechSynthesis.speak(utterance);
     }
+
+    const cleanTitle = (title || '').replace(/\\'/g, "'");
+    const cleanDesc = (desc || '').replace(/\\'/g, "'");
+    const utterance = new SpeechSynthesisUtterance(cleanTitle + ". " + cleanDesc);
+
+    btn.classList.add('speaking');
+    btn.innerHTML = '<i class="fas fa-volume-mute" aria-hidden="true"></i>';
+    currentSpeakingBtn = btn;
+
+    utterance.onend = () => {
+        btn.classList.remove('speaking');
+        btn.innerHTML = '<i class="fas fa-volume-up" aria-hidden="true"></i>';
+        if (currentSpeakingBtn === btn) currentSpeakingBtn = null;
+    };
+    utterance.onerror = () => {
+        btn.classList.remove('speaking');
+        btn.innerHTML = '<i class="fas fa-volume-up" aria-hidden="true"></i>';
+        if (currentSpeakingBtn === btn) currentSpeakingBtn = null;
+    };
+
+    window.speechSynthesis.speak(utterance);
 }
 
 // --- DIAGNOSTIC RECOMMENDED FOCUS AREAS ---

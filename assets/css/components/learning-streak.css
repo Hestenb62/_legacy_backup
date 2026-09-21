@@ -138,6 +138,10 @@
 
     .streak-action-box {
         flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        flex-wrap: wrap;
     }
 
     .streak-action-btn {
@@ -160,6 +164,30 @@
         transform: translateY(-1px);
         box-shadow: 0 4px 8px rgba(59, 130, 246, 0.35);
         opacity: 0.95;
+    }
+
+    .streak-action-btn:focus-visible {
+        outline: 3px solid var(--color-primary);
+        outline-offset: 2px;
+    }
+
+    .streak-action-btn.btn-secondary {
+        background: var(--color-bg-subtle, rgba(0, 0, 0, 0.05));
+        color: var(--color-text-main, #0f172a);
+        border: 1px solid var(--color-border, #cbd5e1);
+        box-shadow: none;
+    }
+
+    [data-theme="dark"] .streak-action-btn.btn-secondary {
+        background: rgba(255, 255, 255, 0.08);
+        color: #f1f5f9;
+        border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .streak-action-btn.btn-secondary:hover {
+        background: var(--color-bg-surface);
+        border-color: var(--color-primary);
+        color: var(--color-primary);
     }
 
     /* Theme Adaptations */

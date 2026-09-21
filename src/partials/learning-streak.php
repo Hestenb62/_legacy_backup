@@ -31,6 +31,10 @@
                     <i class="fas fa-play" aria-hidden="true"></i>
                     <span>Focus Timer</span>
                 </button>
+                <button type="button" class="streak-action-btn btn-secondary" onclick="if(window.openQuestModal){window.openQuestModal();}else{window.location.href='/student/index.php';}" title="View Daily Quests &amp; Challenges">
+                    <i class="fas fa-trophy" style="color: #f59e0b;" aria-hidden="true"></i>
+                    <span>Today's Quests</span>
+                </button>
             </div>
         </div>
     </div>
@@ -80,6 +84,7 @@
         const progressPct = Math.min(100, Math.round((todayMinutes / dailyGoalMins) * 100));
 
         const countEl = document.getElementById('home-streak-count');
+        const heroStreakEl = document.getElementById('streak-stat');
         const titleEl = document.getElementById('home-streak-title');
         const subEl = document.getElementById('home-streak-sub');
         const textEl = document.getElementById('home-goal-text');
@@ -87,6 +92,7 @@
         const trackEl = document.getElementById('home-goal-track');
 
         if (countEl) countEl.textContent = streakData.streak;
+        if (heroStreakEl) heroStreakEl.textContent = streakData.streak;
         if (textEl) textEl.textContent = todayMinutes + ' / ' + dailyGoalMins + 'm (' + progressPct + '%)';
         if (barEl) barEl.style.width = progressPct + '%';
         if (trackEl) trackEl.setAttribute('aria-valuenow', progressPct);
