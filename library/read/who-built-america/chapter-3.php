@@ -1,28 +1,6 @@
 <div class="cdn-book-reader-content">
 	<p class="book-chapter-volume">Volume 1, Chapter 1</p>
-	<h1>A Meeting of Three Worlds: Europe, Africa, and American Colonization, 1492-1680</h1>
 	<div class="content-content">
-		<p>
-		<aside class="item" id="item-19">
-			<figure class="media-item large-image">
-				<img class="large-image" src="https://www.whobuiltamerica.org/media/p1_1_1.jpg" alt="The natural bounty of the New World was put on display in this seventeenth-century Flemish painting. On the left of the central panel, America is represented by Indigenous peoples who lounge alongside the favored object of European desire: a collection of gold weights."><svg class="view-expand-toggle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-					<rect class="area" width="100" height="100" />
-					<polygon class="handle" points="46.1 14.5 21.9 14.5 14.7 14.5 14.7 21.8 14.7 45.9 21.9 45.9 21.9 21.8 46.1 21.8 46.1 14.5" />
-					<polygon class="handle" points="85.3 45.9 85.3 21.8 85.3 14.5 78.1 14.5 53.9 14.5 53.9 21.8 78.1 21.8 78.1 45.9 85.3 45.9" />
-					<polygon class="handle" points="53.9 85.5 78.1 85.5 85.3 85.5 85.3 78.2 85.3 54.1 78.1 54.1 78.1 78.2 53.9 78.2 53.9 85.5" />
-					<polygon class="handle" points="14.7 54.1 14.7 78.2 14.7 85.5 21.9 85.5 46.1 85.5 46.1 78.2 21.9 78.2 21.9 54.1 14.7 54.1" />
-					<rect class="close" x="46.4" y="11.1" width="7.3" height="77.8" transform="translate(-20.7 50) rotate(-45)" />
-					<rect class="close" x="11.1" y="46.4" width="77.8" height="7.3" transform="translate(-20.7 50) rotate(-45)" />
-				</svg>
-				<figcaption class="media-item-caption">
-					<h5>America</h5>
-					<p>The natural bounty of the New World was put on display in this seventeenth-century Flemish painting. On the left of the central panel, America is represented by Indigenous peoples who lounge alongside the favored object of European desire: a collection of gold weights.</p>
-					<p class="source"><strong>Source:</strong> Jan van Kessel the Elder, <em>The Four Continents: North America</em>, oil on copper, 48.6 x 67.9 cm (center panel), 1666—bpk Bildagentur / Bayerische Staatsgemäldesammlungen - Alte Pinakothek München / Art Resource, NY.
-					</p>
-				</figcaption>
-			</figure>
-		</aside>
-		</p>
 		<p>In 1492, the Genoese-born sea captain Christopher Columbus and his Spanish crewmen landed on a small island in the Bahamas after a two-month Atlantic voyage, meeting the Taíno people, who called the island Guanahaní. Leaving a Spanish encampment on Ayti (Haiti), a large nearby island he had renamed “Hispaniola,” he captured six Indigenous men and brought them back with him to Spain. Columbus’s appropriation of these men and of the territories he encountered indicated the European intention to gain wealth and power from overseas exploration.</p>
 		<p>Columbus had sailed in the service of King Ferdinand and Queen Isabella of Spain, searching for a western route to the Indies, the Asian source of spices and other valuable goods. Thinking he had reached the Indies, Columbus and Europeans after him called the Native inhabitants&nbsp; “Indians.” Columbus made three subsequent voyages and apparently believed to his death, in 1506, that he had reached Asia. But other explorers had already questioned this belief. One of them, Amerigo Vespucci, calculated that these lands were part of a continent unknown to Europeans. In 1507, in Vespucci’s honor, a German mapmaker named this continent “America.”</p>
 		<p>Columbus and his crew were not, in fact, the first Europeans in America. In the eleventh century, Scandinavians had reached Labrador and Newfoundland, where they built a short-lived settlement. But other Europeans had no knowledge of that venture; to them, Columbus’s 1492 voyage marked the “discovery” of a “New World” that they would compete avidly with Native polities and with each other to possess. Seeking wealth or land, they commenced a process of conquest and settlement that would alter or destroy the lives of the peoples who already lived there. To Native Americans it marked the beginning of a long invasion during which many were colonized, enslaved, and in many places almost wiped out.</p>
