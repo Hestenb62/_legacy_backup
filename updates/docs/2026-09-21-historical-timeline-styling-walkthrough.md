@@ -28,7 +28,11 @@ Transformed the plain heading/paragraph timeline in `library/read/who-built-amer
   - Enclosed each bibliographic citation within an individual `<li>` element inside `<ul class="readings-list">`.
   - Added modern typography styling with custom theme-accent circular bullets (`::before`), accessible line-height, and high-contrast support in `read-editorial-reading-content-typo.css`.
 
-### 3. Dedicated Reader Timeline Stylesheet (`assets/css/reader/read-timeline.css`)
+### 3. Removal of "Take Quiz" Footer Button (`reader_template.php`)
+- Removed the `#chk-launch-btn` ("Take Quiz") and the end-of-chapter quiz overlay from the reader footer row.
+- The footer row now cleanly presents the bibliographic credits and primary source attributions without any unwanted quiz prompts.
+
+### 4. Dedicated Reader Timeline Stylesheet (`assets/css/reader/read-timeline.css`)
 - **Connecting Spine**: Continuous vertical track line with subtle theme-accent gradient (`var(--color-primary)`).
 - **Milestone Nodes**: Circular markers with inner accent dots, hover lift (`scale(1.15)`), and glowing shadow rings.
 - **Milestone Cards**: Glassmorphic/surface cards with subtle borders (`var(--reader-border)`), soft shadows, and smooth hover translations (`translateX(4px)`).

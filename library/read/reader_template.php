@@ -489,65 +489,8 @@ body.zen-mode {
                                         <span class="book-edition-meta"><i class="fas fa-book-reader mr-1" aria-hidden="true"></i> Hesten's Learning Library Edition</span>
                                     <?php endif; ?>
                                 </div>
-                                <?php if ($chapter !== 'intro' && !$isTeacherPage): ?>
-                                    <div class="chk-launch-wrap">
-                                        <button type="button" class="chk-launch-btn" id="chk-launch-btn" onclick="toggleChapterCheckpoint(true)" aria-label="Take Chapter Comprehension Quiz">
-                                            <i class="fas fa-clipboard-check" aria-hidden="true"></i> <span id="chk-launch-btn-text">Take Quiz</span> <span class="chk-launch-badge" id="chk-launch-badge"><i class="fas fa-question-circle" aria-hidden="true"></i> 2 Qs</span>
-                                        </button>
-                                    </div>
-                                <?php endif; ?>
                             </div>
                         </div>
-
-                        <!-- End-of-Chapter Reading Comprehension Checkpoint (Slide-Up Overlay Over Text) -->
-                        <?php if ($chapter !== 'intro' && !$isTeacherPage): ?>
-                            <section class="chapter-comprehension-checkpoint collapsed" id="chapter-checkpoint" aria-label="Chapter Comprehension Checkpoint" role="dialog" aria-modal="true" aria-labelledby="chk-modal-title">
-                                <!-- Sticky Header of the Checkpoint Overlay -->
-                                <div class="chk-overlay-header">
-                                    <div class="chk-overlay-header-left">
-                                        <div class="chk-icon-wrap" aria-hidden="true">
-                                            <i class="fas fa-clipboard-check"></i>
-                                        </div>
-                                        <div class="chk-toggle-info">
-                                            <div class="chk-title-row">
-                                                <h3 class="chk-title" id="chk-modal-title">Chapter <?php echo $chapterNum; ?> Checkpoint</h3>
-                                                <span class="chk-badge" id="chk-status-badge"><i class="fas fa-question-circle" aria-hidden="true"></i> 2 Questions</span>
-                                            </div>
-                                            <p class="chk-subtitle">Quick comprehension pulse check before advancing to the next chapter.</p>
-                                        </div>
-                                    </div>
-                                    <div class="chk-overlay-header-right">
-                                        <button type="button" class="chk-close-btn" onclick="toggleChapterCheckpoint(false)" aria-label="Close Quiz" title="Close Quiz (Esc)">
-                                            <i class="fas fa-times" aria-hidden="true"></i>
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <!-- Scrollable Quiz Body with Questions & Controls -->
-                                <div class="chk-overlay-body" id="chk-collapsible-body">
-                                    <div class="chk-body-inner">
-                                        <div class="chk-body-header">
-                                            <span class="chk-body-hint"><i class="fas fa-lightbulb" aria-hidden="true"></i> Answer both questions below, then submit to check comprehension.</span>
-                                        </div>
-                                        <div id="chk-questions-container" class="chk-questions-container">
-                                            <!-- Populated dynamically by reader checkpoint engine -->
-                                        </div>
-                                        <div id="chk-feedback-box" class="chk-feedback-box" style="display: none;"></div>
-                                        <div class="chk-actions">
-                                            <button type="button" id="chk-submit-btn" class="chk-submit-btn" onclick="submitChapterCheckpoint()">
-                                                <i class="fas fa-check-circle" aria-hidden="true"></i> Submit Answers
-                                            </button>
-                                            <button type="button" id="chk-reset-btn" class="chk-secondary-btn" onclick="resetChapterCheckpoint()" style="display: none;">
-                                                <i class="fas fa-redo" aria-hidden="true"></i> Retake Quiz
-                                            </button>
-                                            <button type="button" id="chk-done-close-btn" class="chk-done-btn" onclick="toggleChapterCheckpoint(false)" style="display: none;">
-                                                <i class="fas fa-check" aria-hidden="true"></i> Done &amp; Close
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-                        <?php endif; ?>
                     <?php endif; ?>
                 </article>
             </div>
