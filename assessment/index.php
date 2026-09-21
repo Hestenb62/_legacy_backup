@@ -479,6 +479,9 @@ include '../src/header.php';
                                 title="Toggle Low-Anxiety Exam Mode (Hides timers, counters, and progress bar)">
                                 <i class="fas fa-feather-alt"></i> <span id="untimed-mode-label">Low-Anxiety Mode</span>
                             </button>
+                            <span id="accommodated-untimed-badge" class="accommodated-badge" style="display: none; align-items: center; gap: 0.35rem; padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: rgba(16, 185, 129, 0.15); color: #059669; font-size: 0.75rem; font-weight: 800; border: 1px solid rgba(16, 185, 129, 0.3);" title="IEP & Section 504 Untimed Accommodation Active">
+                                <i class="fas fa-universal-access"></i> <span class="no-mobile">IEP/504</span> Untimed
+                            </span>
                             <button id="sound-toggle-btn"
                                 style="color: var(--color-text-muted); background: transparent; border: none; cursor: pointer; transition: color 0.2s;"
                                 title="Toggle Sound">

@@ -12,16 +12,17 @@
         math: [
             {
                 id: 'm-1',
-                name: 'Foundational Arithmetic & Place Value',
-                code: 'K.CC / 1.NBT',
+                name: 'Counting, Cardinality & Foundations',
+                code: 'K.CC.A.1',
                 discipline: 'Mathematics',
-                desc: 'Count to 100, understand place value of ones and tens, and master basic addition and subtraction concepts.',
+                desc: 'Count to 100 by ones and by tens. Understand the relationship between numbers and quantities.',
                 x: 150,
                 y: 450,
                 icon: 'fa-cubes',
                 prereqs: [],
                 bloomTier: 4,
-                practiceUrl: '/student/math-practice.php'
+                levelLabel: 'K (Kindergarten)',
+                practiceUrl: '/levels/k.php?k-math-m1-a-1'
             },
             {
                 id: 'm-2',
@@ -34,7 +35,8 @@
                 icon: 'fa-times',
                 prereqs: ['m-1'],
                 bloomTier: 3,
-                practiceUrl: '/student/math-practice.php'
+                levelLabel: 'C (Grade 3)',
+                practiceUrl: '/levels/c.php#math'
             },
             {
                 id: 'm-3',
@@ -47,7 +49,8 @@
                 icon: 'fa-pie-chart',
                 prereqs: ['m-1'],
                 bloomTier: 3,
-                practiceUrl: '/student/math-practice.php'
+                levelLabel: 'D (Grade 4)',
+                practiceUrl: '/levels/d.php#math'
             },
             {
                 id: 'm-4',
@@ -60,7 +63,8 @@
                 icon: 'fa-square-root-alt',
                 prereqs: ['m-2', 'm-3'],
                 bloomTier: 2,
-                practiceUrl: '/student/math-practice.php'
+                levelLabel: 'F (Grade 6)',
+                practiceUrl: '/levels/f.php#math'
             },
             {
                 id: 'm-5',
@@ -73,7 +77,8 @@
                 icon: 'fa-chart-line',
                 prereqs: ['m-4'],
                 bloomTier: 2,
-                practiceUrl: '/student/math-practice.php'
+                levelLabel: 'H (Grade 8)',
+                practiceUrl: '/levels/h.php#math'
             },
             {
                 id: 'm-6',
@@ -86,7 +91,8 @@
                 icon: 'fa-shapes',
                 prereqs: ['m-4'],
                 bloomTier: 1,
-                practiceUrl: '/student/math-practice.php'
+                levelLabel: 'H (Grade 8)',
+                practiceUrl: '/levels/h.php#math'
             },
             {
                 id: 'm-7',
@@ -99,7 +105,8 @@
                 icon: 'fa-project-diagram',
                 prereqs: ['m-5', 'm-6'],
                 bloomTier: 1,
-                practiceUrl: '/student/math-practice.php'
+                levelLabel: 'I (Grade 9)',
+                practiceUrl: '/levels/i.php#math'
             }
         ],
         ela: [
@@ -114,7 +121,8 @@
                 icon: 'fa-volume-up',
                 prereqs: [],
                 bloomTier: 4,
-                practiceUrl: '/library/index.php'
+                levelLabel: 'K (Kindergarten)',
+                practiceUrl: '/levels/k.php'
             },
             {
                 id: 'e-2',
@@ -127,7 +135,8 @@
                 icon: 'fa-book-open',
                 prereqs: ['e-1'],
                 bloomTier: 3,
-                practiceUrl: '/library/index.php'
+                levelLabel: 'C (Grade 3)',
+                practiceUrl: '/levels/c.php#language-arts'
             },
             {
                 id: 'e-3',
@@ -140,7 +149,8 @@
                 icon: 'fa-search-plus',
                 prereqs: ['e-1'],
                 bloomTier: 3,
-                practiceUrl: '/library/index.php'
+                levelLabel: 'D (Grade 4)',
+                practiceUrl: '/levels/d.php#language-arts'
             },
             {
                 id: 'e-4',
@@ -153,7 +163,8 @@
                 icon: 'fa-align-left',
                 prereqs: ['e-2', 'e-3'],
                 bloomTier: 2,
-                practiceUrl: '/library/index.php'
+                levelLabel: 'F (Grade 6)',
+                practiceUrl: '/levels/f.php#language-arts'
             },
             {
                 id: 'e-5',
@@ -166,7 +177,8 @@
                 icon: 'fa-feather-alt',
                 prereqs: ['e-4'],
                 bloomTier: 2,
-                practiceUrl: '/library/index.php'
+                levelLabel: 'H (Grade 8)',
+                practiceUrl: '/levels/h.php#language-arts'
             },
             {
                 id: 'e-6',
@@ -179,7 +191,8 @@
                 icon: 'fa-scroll',
                 prereqs: ['e-5'],
                 bloomTier: 1,
-                practiceUrl: '/library/index.php'
+                levelLabel: 'L (Grade 11)',
+                practiceUrl: '/levels/l.php#language-arts'
             }
         ],
         science: [
@@ -194,7 +207,8 @@
                 icon: 'fa-flask',
                 prereqs: [],
                 bloomTier: 4,
-                practiceUrl: '/student/science-articles.php'
+                levelLabel: 'F (Grade 6)',
+                practiceUrl: '/levels/f.php#science'
             },
             {
                 id: 's-2',
@@ -207,7 +221,8 @@
                 icon: 'fa-dna',
                 prereqs: ['s-1'],
                 bloomTier: 3,
-                practiceUrl: '/student/science-articles.php'
+                levelLabel: 'G (Grade 7)',
+                practiceUrl: '/levels/g.php#science'
             },
             {
                 id: 's-3',
@@ -220,7 +235,8 @@
                 icon: 'fa-globe-americas',
                 prereqs: ['s-1'],
                 bloomTier: 3,
-                practiceUrl: '/student/science-articles.php'
+                levelLabel: 'G (Grade 7)',
+                practiceUrl: '/levels/g.php#science'
             },
             {
                 id: 's-4',
@@ -233,7 +249,8 @@
                 icon: 'fa-bolt',
                 prereqs: ['s-2', 's-3'],
                 bloomTier: 2,
-                practiceUrl: '/student/science-articles.php'
+                levelLabel: 'H (Grade 8)',
+                practiceUrl: '/levels/h.php#science'
             },
             {
                 id: 's-5',
@@ -246,7 +263,8 @@
                 icon: 'fa-tree',
                 prereqs: ['s-4'],
                 bloomTier: 1,
-                practiceUrl: '/student/science-articles.php'
+                levelLabel: 'I (Grade 9)',
+                practiceUrl: '/levels/i.php#science'
             }
         ],
         social: [
@@ -261,7 +279,8 @@
                 icon: 'fa-map-marked-alt',
                 prereqs: [],
                 bloomTier: 4,
-                practiceUrl: '/student/social-history.php'
+                levelLabel: 'C (Grade 3)',
+                practiceUrl: '/levels/c.php#social-studies'
             },
             {
                 id: 'so-2',
@@ -274,7 +293,8 @@
                 icon: 'fa-landmark',
                 prereqs: ['so-1'],
                 bloomTier: 3,
-                practiceUrl: '/student/social-history.php'
+                levelLabel: 'F (Grade 6)',
+                practiceUrl: '/levels/f.php#social-studies'
             },
             {
                 id: 'so-3',
@@ -287,7 +307,8 @@
                 icon: 'fa-balance-scale',
                 prereqs: ['so-1'],
                 bloomTier: 3,
-                practiceUrl: '/student/social-civics.php'
+                levelLabel: 'H (Grade 8)',
+                practiceUrl: '/levels/h.php#social-studies'
             },
             {
                 id: 'so-4',
@@ -300,7 +321,8 @@
                 icon: 'fa-coins',
                 prereqs: ['so-2', 'so-3'],
                 bloomTier: 2,
-                practiceUrl: '/student/social-civics.php'
+                levelLabel: 'I (Grade 9)',
+                practiceUrl: '/levels/i.php#social-studies'
             },
             {
                 id: 'so-5',
@@ -313,7 +335,8 @@
                 icon: 'fa-university',
                 prereqs: ['so-4'],
                 bloomTier: 1,
-                practiceUrl: '/student/social-civics.php'
+                levelLabel: 'AP US History',
+                practiceUrl: '/levels/ap-us-history.php'
             }
         ]
     };
@@ -494,6 +517,10 @@
         // Action Buttons
         const practiceBtn = document.getElementById('btn-drawer-practice');
         if (practiceBtn) {
+            const btnSpan = practiceBtn.querySelector('span');
+            if (btnSpan) {
+                btnSpan.textContent = node.levelLabel ? `Open Level ${node.levelLabel}` : 'Launch Curriculum Lesson';
+            }
             practiceBtn.onclick = () => {
                 if (window.HL_Gamification) {
                     window.HL_Gamification.updateQuestProgress('skill-tree', 1);

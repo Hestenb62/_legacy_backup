@@ -254,6 +254,11 @@ body.zen-mode {
                     <i class="fas fa-font" aria-hidden="true"></i>
                 </button>
 
+                <!-- Guided Reading Mask Quick Trigger -->
+                <button type="button" id="reader-mask-btn" class="tool-btn" onclick="if(window.toggleReadingMask) window.toggleReadingMask(); else if(window.toggleGuidedReading) window.toggleGuidedReading();" title="Toggle Guided Reading Mask (Alt+R)" aria-label="Toggle Guided Reading Mask">
+                    <i class="fas fa-ruler-horizontal" aria-hidden="true"></i>
+                </button>
+
                 <!-- Zen Distraction-Free Mode Toggle -->
                 <button type="button" id="zen-mode-toggle" class="tool-btn" title="Toggle Distraction-Free Zen Mode (Esc or Z)" aria-label="Toggle Zen Mode">
                     <i class="fas fa-expand" aria-hidden="true"></i>
@@ -1340,6 +1345,93 @@ body.zen-mode {
 
         renderCheckpointQuestions();
     };
+</script>
+
+<!-- Floating In-Text Vocabulary Definition Tooltip -->
+<div id="reader-vocab-tooltip" class="reader-vocab-tooltip hidden" role="dialog" aria-label="Word Definition">
+    <div class="vocab-tooltip-header">
+        <span class="vocab-tooltip-word" id="vocab-tip-word">Word</span>
+        <button type="button" class="vocab-tooltip-close" onclick="closeVocabTooltip()" aria-label="Close definition">&times;</button>
+    </div>
+    <p class="vocab-tooltip-def" id="vocab-tip-def">Looking up definition...</p>
+    <div class="vocab-tooltip-actions">
+        <button type="button" class="vocab-tip-btn" id="vocab-tip-speak-btn" onclick="speakVocabWord()">
+            <i class="fas fa-volume-up" aria-hidden="true"></i> Pronounce
+        </button>
+        <button type="button" class="vocab-tip-btn" id="vocab-tip-card-btn" onclick="addVocabToCards()">
+            <i class="fas fa-plus-circle" aria-hidden="true"></i> Save Card
+        </button>
+    </div>
+</div>
+
+<script>
+(function initVocabLookup() {
+    const reader = document.querySelector('.prose-reader, .chapter-content, #chapter-content') || document.body;
+    const tooltip = document.getElementById('reader-vocab-tooltip');
+    if (!tooltip) return;
+
+    let selectedWord = '';
+
+    reader.addEventListener('dblclick', async (e) => {
+        const sel = window.getSelection().toString().trim();
+        if (!sel || sel.length > 35 || sel.includes(' ')) return;
+        
+        selectedWord = sel.replace(/[^a-zA-Z\-']/g, '').toLowerCase();
+        if (!selectedWord) return;
+
+        const x = Math.min(window.innerWidth - 280, Math.max(10, e.clientX - 100));
+        const y = Math.max(70, e.clientY - 140);
+
+        tooltip.style.left = `${x}px`;
+        tooltip.style.top = `${y}px`;
+        document.getElementById('vocab-tip-word').textContent = selectedWord;
+        document.getElementById('vocab-tip-def').textContent = 'Looking up definition...';
+        tooltip.classList.remove('hidden');
+
+        try {
+            const res = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${selectedWord}`);
+            if (res.ok) {
+                const data = await res.json();
+                const def = data[0]?.meanings[0]?.definitions[0]?.definition || 'Definition available in Study Guide.';
+                document.getElementById('vocab-tip-def').textContent = def;
+            } else {
+                document.getElementById('vocab-tip-def').textContent = 'Definition not found in quick dictionary. Press Pronounce to listen.';
+            }
+        } catch (err) {
+            document.getElementById('vocab-tip-def').textContent = 'Double-clicked word. Press Pronounce to hear it aloud.';
+        }
+    });
+
+    window.closeVocabTooltip = function() {
+        if (tooltip) tooltip.classList.add('hidden');
+    };
+
+    window.speakVocabWord = function() {
+        if ('speechSynthesis' in window && selectedWord) {
+            window.speechSynthesis.cancel();
+            window.speechSynthesis.speak(new SpeechSynthesisUtterance(selectedWord));
+        }
+    };
+
+    window.addVocabToCards = function() {
+        const def = document.getElementById('vocab-tip-def').textContent;
+        if (window.HLSound) window.HLSound.playToggle();
+        try {
+            const cards = JSON.parse(localStorage.getItem('hl_flashcards_custom') || '[]');
+            cards.push({ front: selectedWord, back: def, id: Date.now() });
+            localStorage.setItem('hl_flashcards_custom', JSON.stringify(cards));
+            const btn = document.getElementById('vocab-tip-card-btn');
+            if (btn) btn.innerHTML = '<i class="fas fa-check"></i> Saved!';
+            setTimeout(() => { if (btn) btn.innerHTML = '<i class="fas fa-plus-circle"></i> Save Card'; }, 2000);
+        } catch (e) {}
+    };
+
+    document.addEventListener('click', (e) => {
+        if (tooltip && !tooltip.contains(e.target) && !e.target.closest('.prose-reader, .chapter-content')) {
+            tooltip.classList.add('hidden');
+        }
+    });
+})();
 </script>
 
 <?php include ABSPATH . 'src/footer.php'; ?>

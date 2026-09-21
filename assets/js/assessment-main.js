@@ -1102,15 +1102,24 @@ document.addEventListener("DOMContentLoaded", () => {
   const timerWrap = document.getElementById("session-timer-wrap");
 
   try {
-    window.isLowAnxietyMode = localStorage.getItem("hl_low_anxiety_mode") === "true" || localStorage.getItem("hl_untimed_assessment") === "true";
+    const rawAccoms = localStorage.getItem("hesten_parent_accommodations");
+    const parsedAccoms = rawAccoms ? JSON.parse(rawAccoms) : [];
+    window.isAccommodatedUntimed = Array.isArray(parsedAccoms) && (parsedAccoms.includes("untimed-mode") || parsedAccoms.includes("untimed"));
+    window.isLowAnxietyMode = window.isAccommodatedUntimed || localStorage.getItem("hl_low_anxiety_mode") === "true" || localStorage.getItem("hl_untimed_assessment") === "true";
   } catch (e) {
     window.isLowAnxietyMode = false;
+    window.isAccommodatedUntimed = false;
   }
   window.isUntimedAssessment = window.isLowAnxietyMode;
 
   window.applyLowAnxietyUI = function() {
     const isCalm = !!window.isLowAnxietyMode;
     const quizContainer = document.getElementById("quiz-container");
+    const accomBadge = document.getElementById("accommodated-untimed-badge");
+
+    if (accomBadge) {
+      accomBadge.style.display = window.isAccommodatedUntimed ? "inline-flex" : "none";
+    }
 
     if (isCalm) {
       document.body.classList.add("low-anxiety-mode");
@@ -1181,6 +1190,17 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
   window.toggleUntimedAssessmentMode = window.toggleLowAnxietyExamMode;
+
+  // React to cross-tab or parent suite accommodation updates
+  window.addEventListener('hl:accommodations-updated', (e) => {
+    const accoms = Array.isArray(e.detail) ? e.detail : [];
+    window.isAccommodatedUntimed = accoms.includes('untimed-mode') || accoms.includes('untimed');
+    if (window.isAccommodatedUntimed && !window.isLowAnxietyMode) {
+      window.toggleLowAnxietyExamMode(true);
+    } else {
+      window.applyLowAnxietyUI();
+    }
+  });
 
   window.applyLowAnxietyUI();
 });
@@ -1394,6 +1414,51 @@ function saveStandardMasteryResults() {
   }
 }
 
+// 6b. Missed Problems Remediation Drill
+window.startMissedProblemsQuiz = function () {
+  if (!Array.isArray(window.quizResultsData)) return;
+  const missed = window.quizResultsData.filter(i => !i.isCorrect);
+  if (missed.length === 0) return;
+
+  if (typeof currentQuestions !== 'undefined') {
+    currentQuestions = missed.map(m => ({
+      grade: m.grade || (document.getElementById("header-grade-name")?.textContent || "Core Curriculum"),
+      subject: m.subject || window.currentAssessmentSubject || "General",
+      question: m.question,
+      options: m.options || [m.userAnswer || "Answer A", m.answer || m.correctAnswer || "Answer B", "Review Option C", "Review Option D"].sort(() => Math.random() - 0.5),
+      answer: m.answer || m.correctAnswer,
+      hint: m.hint || m.explanation || "Review the concept carefully.",
+      standard: m.standard || (m.standards && m.standards[0]) || ""
+    }));
+    currentQuestionIndex = 0;
+    score = 0;
+    streak = 0;
+    userAnswers = [];
+    window.currentQuestions = currentQuestions;
+  }
+  window.quizResultsData = [];
+
+  // Reset UI
+  document.getElementById('question-count')?.classList.remove('hidden');
+  const circleGauge = document.getElementById('question-circle-gauge');
+  if (circleGauge) circleGauge.classList.remove('hidden');
+  
+  const rev = document.getElementById("review-container");
+  if (rev) rev.style.display = "none";
+  const diag = document.getElementById("diagnostic-container");
+  if (diag) diag.style.display = "none";
+
+  if (typeof loadCurrentQuestion === 'function') {
+    loadCurrentQuestion();
+  }
+  if (window.announceA11y) {
+    window.announceA11y(`Started targeted review drill with ${missed.length} missed problems.`);
+  }
+  if (window.HLSound && typeof window.HLSound.playToggle === 'function') {
+    window.HLSound.playToggle();
+  }
+};
+
 // 7. Hook into finishQuiz to inject UI (Review, Download, Confetti, Standard Mastery Sync)
 if (typeof finishQuiz === "function") {
   const originalFinishQuiz = finishQuiz;
@@ -1496,6 +1561,16 @@ if (typeof finishQuiz === "function") {
         flashcardBtn.style.cssText = "padding: 0.85rem 1.75rem; border-radius: var(--radius-full); font-weight: 700; font-size: 0.95rem; cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem;";
         flashcardBtn.innerHTML = '<i class="fas fa-layer-group" style="color: var(--color-primary);"></i> Practice Targeted Flashcards';
         flashcardBtn.onclick = () => window.openAssessmentFlashcards();
+
+        const missedItems = window.quizResultsData ? window.quizResultsData.filter(i => !i.isCorrect) : [];
+        if (missedItems.length > 0) {
+          const practiceMissedBtn = document.createElement("button");
+          practiceMissedBtn.className = "hero-nav-btn hero-nav-btn-primary";
+          practiceMissedBtn.style.cssText = "padding: 0.85rem 1.75rem; border-radius: var(--radius-full); font-weight: 800; font-size: 0.95rem; cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem; border: none; background: #f59e0b; color: #1e293b; box-shadow: 0 4px 14px rgba(245,158,11,0.35);";
+          practiceMissedBtn.innerHTML = `<i class="fas fa-redo-alt"></i> Practice Missed Problems (${missedItems.length})`;
+          practiceMissedBtn.onclick = () => window.startMissedProblemsQuiz();
+          btnContainer.appendChild(practiceMissedBtn);
+        }
 
         btnContainer.appendChild(scorecardBtn);
         btnContainer.appendChild(flashcardBtn);

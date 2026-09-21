@@ -993,6 +993,7 @@
                         return `<span class="std-code-wrap" data-std-code="${cleanCode}">` +
                             `<button type="button" class="std-code-badge" data-code="${cleanCode}" title="Click to copy standard code"><i class="far fa-copy"></i> ${cleanCode}</button>` +
                             `<button type="button" class="std-info-btn" data-code="${cleanCode}" aria-label="View Standard Details for ${cleanCode}" title="View detailed standard mastery dossier"><i class="fas fa-info-circle"></i></button>` +
+                            `<a href="/levels/${currentLevelLetter}.php#standard=${encodeURIComponent(cleanCode)}" class="std-practice-link-btn" title="Practice standard in Level ${currentLevelLetter.toUpperCase()} curriculum" style="display: inline-flex; align-items: center; gap: 0.25rem; padding: 0.15rem 0.45rem; font-size: 0.72rem; font-weight: 700; border-radius: var(--radius-sm, 4px); background: color-mix(in srgb, var(--color-primary, #4f46e5) 12%, transparent); color: var(--color-primary, #4f46e5); text-decoration: none; border: 1px solid color-mix(in srgb, var(--color-primary, #4f46e5) 25%, transparent);"><i class="fas fa-play" style="font-size: 0.65rem;"></i> Practice</a>` +
                             `<span class="std-mastery-checkmark" data-code="${cleanCode}" style="display: none;"></span>` +
                             `<span class="std-progress-badge" data-code="${cleanCode}" style="display: none;"></span>` +
                         `</span>`;

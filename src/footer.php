@@ -29,6 +29,7 @@
                         <a href="https://blog.hestena62.com" target="_blank" rel="noopener noreferrer" aria-label="Blog" class="social-icon-btn blog"><i class="fas fa-blog"></i></a>
                         <a href="https://orcid.org/0009-0004-7981-9568" target="_blank" rel="noopener noreferrer" aria-label="ORCID" class="social-icon-btn orcid"><i class="fab fa-orcid"></i></a>
                         <a href="https://youtube.com/@hestena62" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="social-icon-btn youtube"><i class="fab fa-youtube"></i></a>
+                        <button type="button" class="social-icon-btn keyboard-shortcuts-btn" onclick="if(window.openShortcutsModal){window.openShortcutsModal();}else{const m=document.getElementById('shortcuts-modal');if(m)m.classList.remove('hidden');}" aria-label="Keyboard Shortcuts Guide (Press ?)" title="Keyboard Shortcuts Guide (Press ?)"><i class="fas fa-keyboard" aria-hidden="true"></i></button>
                     </div>
                 </div>
 

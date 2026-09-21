@@ -491,6 +491,10 @@ include '../src/header.php';
                         <button type="button" id="btn-reset-roster" class="builder-action-btn builder-btn-secondary" title="Reset to standard 5-student sample class">
                             <i class="fas fa-undo"></i> Reset Demo
                         </button>
+                        <button type="button" id="btn-import-roster-csv" class="builder-action-btn builder-btn-secondary" style="border-color: #059669; color: #059669; background: #ffffff;" title="Import student roster from CSV">
+                            <i class="fas fa-file-import"></i> Import CSV
+                        </button>
+                        <input type="file" id="roster-csv-file" accept=".csv,text/csv" style="display: none;">
                         <button type="button" id="btn-export-roster-csv" class="builder-action-btn builder-btn-primary" style="background:#059669; border-color:#059669;">
                             <i class="fas fa-file-csv"></i> Export CSV
                         </button>

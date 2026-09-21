@@ -1,4 +1,4 @@
-const CACHE_NAME = 'hestens-learning-v17';
+const CACHE_NAME = 'hestens-learning-v18';
 const ASSETS_TO_CACHE = [
 
   // Main Directory Pages & Manifest
@@ -38,6 +38,9 @@ const ASSETS_TO_CACHE = [
   '/assets/css/pages/interactive-labs.css',
   '/assets/css/pages/diagnostic.css',
   '/assets/css/pages/student.css',
+  '/assets/css/level-style.css',
+  '/assets/css/reader-main.css',
+  '/assets/css/components/sticky-reading-bar.css',
   '/assets/css/components/fixed-tools.css',
   '/assets/css/components/command-palette.css',
   '/assets/css/components/shortcuts-modal.css',
@@ -48,6 +51,7 @@ const ASSETS_TO_CACHE = [
   '/assets/css/layouts/print.css',
 
   // JavaScript Core & Data
+  '/assets/js/audio-feedback.js',
   '/assets/js/assessment-core.js',
   '/assets/js/assessment-questionGenerator.js',
   '/assets/js/assessment/adaptive-diagnostic.js',

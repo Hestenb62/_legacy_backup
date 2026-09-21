@@ -1574,6 +1574,8 @@
     const addBtn = document.getElementById('btn-add-roster-student');
     const resetBtn = document.getElementById('btn-reset-roster');
     const exportCsvBtn = document.getElementById('btn-export-roster-csv');
+    const importCsvBtn = document.getElementById('btn-import-roster-csv');
+    const csvFileInput = document.getElementById('roster-csv-file');
     const uploadBtn = document.getElementById('btn-upload-report-card');
     const fileInput = document.getElementById('roster-report-card-file');
 
@@ -2168,6 +2170,105 @@
         URL.revokeObjectURL(url);
 
         showToast('Exported classroom roster to CSV!');
+      });
+    }
+
+    // Import CSV
+    if (importCsvBtn && csvFileInput) {
+      importCsvBtn.addEventListener('click', () => {
+        csvFileInput.value = '';
+        csvFileInput.click();
+      });
+
+      csvFileInput.addEventListener('change', (e) => {
+        const file = e.target.files && e.target.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = (evt) => {
+          try {
+            const text = evt.target.result;
+            const lines = text.split(/\r\n|\n/).filter(line => line.trim().length > 0);
+            if (lines.length <= 1) {
+              alert('CSV file appears to be empty or contains only headers.');
+              return;
+            }
+
+            let roster = getRoster();
+            let importedCount = 0;
+
+            // Parse header line to determine column indices
+            const header = lines[0].split(',').map(h => h.replace(/^["']|["']$/g, '').trim().toLowerCase());
+            const nameIdx = header.findIndex(h => h.includes('name'));
+            const gradeIdx = header.findIndex(h => h.includes('grade'));
+            const mathIdx = header.findIndex(h => h.includes('math'));
+            const elaIdx = header.findIndex(h => h.includes('ela') || h.includes('read'));
+            const sciIdx = header.findIndex(h => h.includes('sci'));
+            const socIdx = header.findIndex(h => h.includes('soc') || h.includes('hist'));
+
+            for (let i = 1; i < lines.length; i++) {
+              const line = lines[i].trim();
+              if (!line) continue;
+
+              // Parse CSV line handling potential quotes
+              const cols = [];
+              let cur = '';
+              let inQuotes = false;
+              for (let c = 0; c < line.length; c++) {
+                const char = line[c];
+                if (char === '"' || char === "'") {
+                  inQuotes = !inQuotes;
+                } else if (char === ',' && !inQuotes) {
+                  cols.push(cur.trim());
+                  cur = '';
+                } else {
+                  cur += char;
+                }
+              }
+              cols.push(cur.trim());
+
+              const clean = val => (val || '').replace(/^["']|["']$/g, '').trim();
+              const sName = nameIdx >= 0 ? clean(cols[nameIdx]) : clean(cols[1] || cols[0]);
+              if (!sName || sName.toLowerCase() === 'student name') continue;
+
+              const sGrade = gradeIdx >= 0 ? clean(cols[gradeIdx]) : (clean(cols[2]) || 'Grade 5');
+              const sMath = mathIdx >= 0 ? parseInt(clean(cols[mathIdx]), 10) : (parseInt(clean(cols[3]), 10) || 75);
+              const sEla = elaIdx >= 0 ? parseInt(clean(cols[elaIdx]), 10) : (parseInt(clean(cols[4]), 10) || 75);
+              const sSci = sciIdx >= 0 ? parseInt(clean(cols[sciIdx]), 10) : (parseInt(clean(cols[5]), 10) || 75);
+              const sSoc = socIdx >= 0 ? parseInt(clean(cols[socIdx]), 10) : (parseInt(clean(cols[6]), 10) || 75);
+
+              const existingIdx = roster.findIndex(s => s.name.toLowerCase() === sName.toLowerCase());
+              const studentObj = {
+                id: existingIdx >= 0 ? roster[existingIdx].id : 's_' + Date.now() + '_' + i,
+                name: sName,
+                grade: sGrade.startsWith('Grade') ? sGrade : `Grade ${sGrade.replace(/\D+/g, '') || sGrade}`,
+                math: isNaN(sMath) ? 75 : Math.max(0, Math.min(100, sMath)),
+                ela: isNaN(sEla) ? 75 : Math.max(0, Math.min(100, sEla)),
+                science: isNaN(sSci) ? 75 : Math.max(0, Math.min(100, sSci)),
+                social: isNaN(sSoc) ? 75 : Math.max(0, Math.min(100, sSoc)),
+                standards: existingIdx >= 0 ? (roster[existingIdx].standards || {}) : {},
+                accommodations: existingIdx >= 0 ? (roster[existingIdx].accommodations || []) : [],
+                notes: existingIdx >= 0 ? roster[existingIdx].notes : 'Imported from class roster CSV.',
+                lastCheck: 'Imported CSV'
+              };
+
+              if (existingIdx >= 0) {
+                roster[existingIdx] = studentObj;
+              } else {
+                roster.push(studentObj);
+              }
+              importedCount++;
+            }
+
+            saveRoster(roster);
+            renderRoster();
+            showToast(`Imported ${importedCount} student records from CSV!`);
+          } catch (err) {
+            alert('Failed to parse CSV file: ' + err.message);
+          }
+        };
+        reader.onerror = () => alert('Could not read the uploaded CSV file.');
+        reader.readAsText(file);
       });
     }
 

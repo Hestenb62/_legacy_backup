@@ -84,3 +84,73 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+/**
+ * WAI-ARIA Focus Trap Helper for Accessible Modals
+ * @param {HTMLElement} modalEl The modal dialog container
+ * @param {HTMLElement|string} [initialFocusTarget] Optional element or selector to receive initial focus
+ * @returns {Function} cleanup function that releases the trap and restores focus
+ */
+window.HLFocusTrap = function (modalEl, initialFocusTarget) {
+    if (!modalEl) return () => {};
+
+    const previouslyFocused = document.activeElement;
+    const focusableSelectors = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+
+    function getFocusableElements() {
+        return Array.from(modalEl.querySelectorAll(focusableSelectors)).filter(
+            el => !el.disabled && el.offsetParent !== null && window.getComputedStyle(el).visibility !== 'hidden'
+        );
+    }
+
+    // Set initial focus
+    setTimeout(() => {
+        let target = null;
+        if (typeof initialFocusTarget === 'string') {
+            target = modalEl.querySelector(initialFocusTarget);
+        } else if (initialFocusTarget instanceof HTMLElement) {
+            target = initialFocusTarget;
+        }
+        if (!target) {
+            const elements = getFocusableElements();
+            target = elements[0];
+        }
+        if (target && typeof target.focus === 'function') {
+            target.focus();
+        }
+    }, 50);
+
+    function handleKeyDown(e) {
+        if (e.key !== 'Tab') return;
+
+        const focusables = getFocusableElements();
+        if (focusables.length === 0) {
+            e.preventDefault();
+            return;
+        }
+
+        const firstEl = focusables[0];
+        const lastEl = focusables[focusables.length - 1];
+
+        if (e.shiftKey) {
+            if (document.activeElement === firstEl || !modalEl.contains(document.activeElement)) {
+                e.preventDefault();
+                lastEl.focus();
+            }
+        } else {
+            if (document.activeElement === lastEl || !modalEl.contains(document.activeElement)) {
+                e.preventDefault();
+                firstEl.focus();
+            }
+        }
+    }
+
+    modalEl.addEventListener('keydown', handleKeyDown);
+
+    return function releaseFocusTrap() {
+        modalEl.removeEventListener('keydown', handleKeyDown);
+        if (previouslyFocused && typeof previouslyFocused.focus === 'function') {
+            previouslyFocused.focus();
+        }
+    };
+};

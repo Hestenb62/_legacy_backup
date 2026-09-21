@@ -201,6 +201,22 @@
     border-color: #FF0000;
   }
 
+  .social-icon-btn.keyboard-shortcuts-btn {
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  .social-icon-btn.keyboard-shortcuts-btn:hover {
+    background-color: var(--color-primary, #3b82f6);
+    border-color: var(--color-primary, #3b82f6);
+    color: #ffffff !important;
+  }
+
+  .social-icon-btn:focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+
   .footer-links {
     list-style: none;
     padding: 0;

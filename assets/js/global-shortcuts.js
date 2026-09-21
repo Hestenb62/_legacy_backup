@@ -20,15 +20,18 @@
         );
     }
 
+    let releaseShortcutsFocusTrap = null;
+
     function openShortcutsModal() {
         const modal = document.getElementById('shortcuts-modal');
         if (!modal) return;
         lastFocusedElement = document.activeElement;
         modal.classList.remove('hidden');
         
-        // Focus close or done button
         const closeBtn = document.getElementById('shortcuts-modal-close');
-        if (closeBtn) {
+        if (typeof window.HLFocusTrap === 'function') {
+            releaseShortcutsFocusTrap = window.HLFocusTrap(modal, closeBtn);
+        } else if (closeBtn) {
             setTimeout(() => closeBtn.focus(), 50);
         }
 
@@ -42,7 +45,10 @@
         if (!modal || modal.classList.contains('hidden')) return;
         modal.classList.add('hidden');
 
-        if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
+        if (typeof releaseShortcutsFocusTrap === 'function') {
+            releaseShortcutsFocusTrap();
+            releaseShortcutsFocusTrap = null;
+        } else if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
             try {
                 lastFocusedElement.focus();
             } catch (e) {}

@@ -814,3 +814,86 @@ body.zen-mode #reader-controls {
     border: 1px solid rgba(239, 68, 68, 0.35);
     color: #ef4444;
 }
+
+/* Floating In-Text Vocabulary Definition Tooltip */
+.reader-vocab-tooltip {
+    position: fixed;
+    z-index: 1000;
+    width: 280px;
+    max-width: 90vw;
+    background: var(--reader-bg, var(--color-bg-surface, #ffffff));
+    color: var(--reader-text, var(--color-text-main, #0f172a));
+    border: 1px solid var(--color-border, #cbd5e1);
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    animation: vocabFadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes vocabFadeIn {
+    from { opacity: 0; transform: translateY(6px) scale(0.97); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.vocab-tooltip-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid var(--color-border, rgba(0, 0, 0, 0.08));
+    padding-bottom: 0.35rem;
+}
+
+.vocab-tooltip-word {
+    font-size: 1.05rem;
+    font-weight: 800;
+    text-transform: capitalize;
+    color: var(--color-primary, #e11d48);
+}
+
+.vocab-tooltip-close {
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    line-height: 1;
+    color: var(--color-text-muted, #64748b);
+    cursor: pointer;
+    padding: 0.2rem;
+}
+
+.vocab-tooltip-def {
+    font-size: 0.85rem;
+    line-height: 1.45;
+    margin: 0 0 0.85rem 0;
+    color: var(--reader-text, #334155);
+}
+
+.vocab-tooltip-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.vocab-tip-btn {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.4rem 0.6rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--color-border, #cbd5e1);
+    background: var(--color-bg-subtle, rgba(0, 0, 0, 0.04));
+    color: var(--reader-text, #0f172a);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.vocab-tip-btn:hover {
+    background: var(--color-primary, #e11d48);
+    color: #ffffff;
+    border-color: var(--color-primary, #e11d48);
+}

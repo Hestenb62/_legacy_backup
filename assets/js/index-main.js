@@ -1118,6 +1118,7 @@ function toggleCompletion(id, btn) {
         completedLevels.push(id);
         triggerConfettiBtn(btn);
         markCardComplete(card, true);
+        if (window.HLSound) window.HLSound.playLevelUp();
     } else {
         completedLevels.splice(index, 1);
         markCardComplete(card, false);
@@ -1157,6 +1158,7 @@ function toggleBookmark(id, btn) {
     if (isBookmarked) {
         bookmarkedLevels.push(id);
         markBtnBookmarked(btn, true);
+        if (window.HLSound) window.HLSound.playToggle();
     } else {
         bookmarkedLevels.splice(index, 1);
         markBtnBookmarked(btn, false);

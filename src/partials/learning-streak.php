@@ -98,6 +98,10 @@
             if (progressPct >= 100) {
                 if (titleEl) titleEl.textContent = '🎉 Daily Goal Complete!';
                 if (subEl) subEl.textContent = 'Incredible job! You achieved your ' + dailyGoalMins + '-minute learning target today.';
+                if (window.HLSound && !window._goalCelebrated) {
+                    window._goalCelebrated = true;
+                    window.HLSound.playFanfare();
+                }
             } else if (streakData.streak > 3) {
                 if (titleEl) titleEl.textContent = '🔥 On Fire! ' + streakData.streak + '-Day Streak!';
                 if (subEl) subEl.textContent = 'Keep your daily rhythm going to build lifelong mastery.';
