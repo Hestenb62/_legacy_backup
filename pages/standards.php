@@ -536,7 +536,10 @@
 
             <!-- Modal Footer with Lesson & Test Buttons -->
             <div class="std-dossier-footer">
-                <div class="std-dossier-footer-left">
+                <div class="std-dossier-footer-left" style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
+                    <button type="button" id="dossier-tts-btn" class="std-dossier-btn-secondary" onclick="toggleDossierTTS()" aria-label="Listen to standard aloud" title="Read standard statement and competencies aloud">
+                        <i class="fas fa-volume-up"></i> <span id="dossier-tts-label">Listen</span>
+                    </button>
                     <button type="button" id="dossier-copy-btn" class="std-dossier-btn-secondary" onclick="copyCurrentDossierCode()">
                         <i class="far fa-copy"></i> Copy Code
                     </button>
@@ -2095,7 +2098,68 @@
         document.body.style.overflow = 'hidden';
     }
 
+    let isDossierSpeaking = false;
+
+    function resetDossierTTSBtn() {
+        isDossierSpeaking = false;
+        const btn = document.getElementById('dossier-tts-btn');
+        if (btn) {
+            btn.innerHTML = '<i class="fas fa-volume-up"></i> <span id="dossier-tts-label">Listen</span>';
+        }
+    }
+
+    function toggleDossierTTS() {
+        if (!('speechSynthesis' in window)) {
+            if (typeof window.showMessageBox === 'function') {
+                window.showMessageBox('Speech synthesis audio is not supported in this browser.');
+            } else {
+                alert('Speech synthesis audio is not supported in this browser.');
+            }
+            return;
+        }
+
+        if (window.speechSynthesis.speaking || isDossierSpeaking) {
+            window.speechSynthesis.cancel();
+            resetDossierTTSBtn();
+            return;
+        }
+
+        const code = document.getElementById('dossier-standard-code')?.innerText || '';
+        const subj = document.getElementById('dossier-subject-badge')?.innerText || '';
+        const grade = document.getElementById('dossier-grade-badge')?.innerText || '';
+        const stmt = document.getElementById('dossier-standard-statement')?.innerText || '';
+        const objs = Array.from(document.querySelectorAll('#dossier-objectives-list li')).map(li => li.innerText).join('. ');
+
+        const textToRead = `Standard ${code}. ${subj}, ${grade}. Standard description: ${stmt}. Key learning goals: ${objs}`;
+
+        const utterance = new SpeechSynthesisUtterance(textToRead);
+        utterance.rate = 0.9;
+        utterance.pitch = 1.0;
+
+        utterance.onstart = () => {
+            isDossierSpeaking = true;
+            const btn = document.getElementById('dossier-tts-btn');
+            if (btn) {
+                btn.innerHTML = '<i class="fas fa-stop" style="color: #ef4444;"></i> <span id="dossier-tts-label">Stop Audio</span>';
+            }
+        };
+
+        utterance.onend = () => {
+            resetDossierTTSBtn();
+        };
+
+        utterance.onerror = () => {
+            resetDossierTTSBtn();
+        };
+
+        window.speechSynthesis.speak(utterance);
+    }
+
     function closeStandardDossier() {
+        if ('speechSynthesis' in window && (window.speechSynthesis.speaking || isDossierSpeaking)) {
+            window.speechSynthesis.cancel();
+        }
+        resetDossierTTSBtn();
         const modal = document.getElementById('std-dossier-modal');
         if (modal) modal.style.display = 'none';
         document.body.style.overflow = '';

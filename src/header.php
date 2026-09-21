@@ -435,6 +435,16 @@ if (!function_exists('assetVersion')) {
                                                     </div>
                                                 </a>
                                             </li>
+
+                                            <li>
+                                                <a href="/pages/grammar.php" class="nav-mega-item" role="menuitem">
+                                                    <i class="fas fa-spell-check item-icon" style="color: #10b981;"></i>
+                                                    <div>
+                                                        <span class="item-title">English Grammar Codex</span>
+                                                        <span class="item-desc">A–Z Syntax, Rules, and Sentence Analysis</span>
+                                                    </div>
+                                                </a>
+                                            </li>
                                         </ul>
                                     </div>
 

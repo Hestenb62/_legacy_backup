@@ -89,6 +89,11 @@ include ABSPATH . '../src/header.php';
                 <h1 class="reader-main-title">My Profile</h1>
                 <p class="reader-main-author">Manage your identity and track your learning progress.</p>
             </div>
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center;">
+                <button type="button" id="open-transcript-modal-btn" onclick="window.openStudentReportCardModal && window.openStudentReportCardModal()" class="profile-btn-primary" style="display: inline-flex; align-items: center; gap: 0.5rem; width: auto; padding: 0.6rem 1.25rem; border-radius: 9999px; font-size: 0.85rem; font-weight: 800; cursor: pointer;">
+                    <i class="fas fa-file-invoice"></i> Homeschool Transcript (PDF)
+                </button>
+            </div>
         </header>
 
         <!-- Announcement Banner -->
@@ -170,6 +175,17 @@ include ABSPATH . '../src/header.php';
                 <section class="profile-card animate-reveal" style="animation-delay: 0.15s">
                     <h2 class="profile-card-title"><i class="fas fa-medal"></i> Achievements</h2>
                     <div class="badges-grid" id="badges-container">
+                        <!-- Populated by JS -->
+                    </div>
+                </section>
+
+                <!-- Quest Trophy Showcase -->
+                <section class="profile-card animate-reveal" style="animation-delay: 0.18s; margin-top: 1.5rem;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                        <h2 class="profile-card-title" style="margin: 0;"><i class="fas fa-trophy" style="color: #f59e0b;"></i> Quest Trophy Showcase</h2>
+                        <a href="/student/skill-tree.php" style="font-size: 0.8rem; font-weight: 700; color: var(--color-primary); text-decoration: none;">Skill Tree &rarr;</a>
+                    </div>
+                    <div class="trophy-showcase-grid" id="trophy-showcase-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 0.75rem; margin-top: 0.75rem;">
                         <!-- Populated by JS -->
                     </div>
                 </section>
@@ -314,6 +330,124 @@ include ABSPATH . '../src/header.php';
                 </div>
             </div>
         </section>
+
+        <!-- Official Homeschool Transcript & Portfolio Modal -->
+        <div id="student-report-card-modal" class="report-card-modal-overlay hidden" style="display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(4px); align-items: center; justify-content: center; padding: 1.5rem; overflow-y: auto;" role="dialog" aria-modal="true" aria-labelledby="report-doc-heading">
+            <div class="report-card-modal-card" style="background: #ffffff; color: #1e293b; max-width: 860px; width: 100%; border-radius: 1rem; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); overflow: hidden; display: flex; flex-direction: column; max-height: 90vh;">
+                <!-- Modal Toolbar (No Print) -->
+                <div class="report-modal-toolbar no-print" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem; background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+                    <div style="font-weight: 800; color: #0f172a; font-size: 0.95rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fas fa-graduation-cap" style="color: #4f46e5;"></i>
+                        <span>Official Academic Transcript & Portfolio</span>
+                    </div>
+                    <div style="display: flex; gap: 0.75rem; align-items: center;">
+                        <button type="button" onclick="window.printStudentTranscript && window.printStudentTranscript()" class="profile-btn-primary" style="padding: 0.45rem 1rem; border-radius: 9999px; font-size: 0.825rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.4rem;">
+                            <i class="fas fa-print"></i> Print / Save PDF
+                        </button>
+                        <button type="button" onclick="window.closeStudentReportCardModal && window.closeStudentReportCardModal()" class="profile-btn-secondary" style="padding: 0.45rem 0.85rem; border-radius: 9999px; font-size: 0.825rem; cursor: pointer;" aria-label="Close Modal">
+                            <i class="fas fa-times"></i> Close
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Printable Sheet Area -->
+                <div class="report-card-sheet" style="padding: 2.5rem; overflow-y: auto;">
+                    <div class="report-card-header" style="display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 2px solid #4f46e5; padding-bottom: 1.5rem; margin-bottom: 1.5rem;">
+                        <div class="report-institution-wrap" style="display: flex; align-items: center; gap: 1rem;">
+                            <i class="fas fa-university report-crest-icon" style="font-size: 2.75rem; color: #4f46e5;" aria-hidden="true"></i>
+                            <div>
+                                <h2 class="report-institution-name" style="font-size: 1.4rem; font-weight: 900; margin: 0; color: #0f172a; letter-spacing: 0.05em;">HESTEN'S LEARNING ACADEMY</h2>
+                                <p class="report-doc-title" id="report-doc-heading" style="margin: 0.25rem 0 0 0; font-size: 0.85rem; font-weight: 700; color: #64748b; text-transform: uppercase;">OFFICIAL HOMESCHOOL TRANSCRIPT & MASTERY RECORD</p>
+                            </div>
+                        </div>
+                        <div class="report-meta-box" style="font-size: 0.8125rem; line-height: 1.6; color: #334155; text-align: right;">
+                            <div><strong>Doc ID:</strong> <span id="report-doc-id">HL-TR-000000</span></div>
+                            <div><strong>Issue Date:</strong> <span id="report-issue-date">--</span></div>
+                            <div><strong>Verification:</strong> Authenticated</div>
+                        </div>
+                    </div>
+
+                    <div class="report-student-info-grid">
+                        <div>
+                            <div style="font-size: 0.75rem; font-weight: 700; color: #64748b; text-transform: uppercase;">Student Scholar</div>
+                            <strong id="report-student-name" style="font-size: 1.1rem; color: #0f172a;">Student Scholar</strong>
+                        </div>
+                        <div>
+                            <div style="font-size: 0.75rem; font-weight: 700; color: #64748b; text-transform: uppercase;">Curriculum Grade</div>
+                            <strong>K-12 Progressive Core</strong>
+                        </div>
+                        <div>
+                            <div style="font-size: 0.75rem; font-weight: 700; color: #64748b; text-transform: uppercase;">Academic Standing</div>
+                            <span id="report-overall-status" class="report-status-badge">Good Standing</span>
+                        </div>
+                    </div>
+
+                    <!-- Academic Metrics -->
+                    <div class="report-metrics-row">
+                        <div class="report-metric-card">
+                            <div class="report-metric-val" id="report-metric-mastered">0 / 0</div>
+                            <div class="report-metric-lbl">Standards Mastered</div>
+                        </div>
+                        <div class="report-metric-val" style="display:none;"></div>
+                        <div class="report-metric-card">
+                            <div class="report-metric-val" id="report-metric-accuracy">0%</div>
+                            <div class="report-metric-lbl">Cumulative Accuracy</div>
+                        </div>
+                        <div class="report-metric-card">
+                            <div class="report-metric-val" id="report-metric-reading">0 min</div>
+                            <div class="report-metric-lbl">Focus Study Time</div>
+                        </div>
+                        <div class="report-metric-card">
+                            <div class="report-metric-val" id="report-metric-streak">0 Days</div>
+                            <div class="report-metric-lbl">Daily Consistency</div>
+                        </div>
+                    </div>
+
+                    <!-- Accommodations Applied -->
+                    <div style="margin-bottom: 2rem;">
+                        <div class="report-section-heading">Universal Accommodations & Accessibility Supports</div>
+                        <div id="report-acc-list" style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem;">
+                            <!-- Populated by JS -->
+                        </div>
+                    </div>
+
+                    <!-- Course & Standards Table -->
+                    <div>
+                        <div class="report-section-heading">Official Standards Competency Itemization</div>
+                        <table class="report-table">
+                            <thead>
+                                <tr>
+                                    <th>Standard Code</th>
+                                    <th>Subject</th>
+                                    <th>Proficiency Score</th>
+                                    <th>Status</th>
+                                    <th>Assessment Date</th>
+                                </tr>
+                            </thead>
+                            <tbody id="report-table-body">
+                                <!-- Populated dynamically by JS -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Signatures -->
+                    <div class="report-signatures-wrap">
+                        <div class="report-sig-box">
+                            <div class="report-sig-line"></div>
+                            <div class="report-sig-title">Homeschool Educator / Parent Signature</div>
+                        </div>
+                        <div class="report-sig-box">
+                            <div class="report-sig-line"></div>
+                            <div class="report-sig-title">Registrar / Academic Coordinator</div>
+                        </div>
+                        <div class="report-sig-box">
+                            <div class="report-sig-line"></div>
+                            <div class="report-sig-title">Date Certified</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
 </main>

@@ -690,17 +690,82 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.classList.add('modal-open');
     }
 
-    function closeStudentReportCardModal() {
-        const modal = document.getElementById('student-report-card-modal');
-        if (modal) {
-            modal.classList.add('hidden');
-            modal.style.display = 'none';
-            document.body.classList.remove('modal-open');
+    function printStudentTranscript() {
+        document.body.classList.add('printing-transcript');
+        window.print();
+        setTimeout(() => {
+            document.body.classList.remove('printing-transcript');
+        }, 1000);
+    }
+
+    function renderBadgesAndTrophies() {
+        const badgesContainer = document.getElementById('badges-container');
+        const trophyContainer = document.getElementById('trophy-showcase-container');
+
+        let gamification = { unlockedBadges: ['first-steps'], xp: 150, level: 2, completedQuests: [] };
+        try {
+            const raw = localStorage.getItem('hl_gamification_profile');
+            if (raw) gamification = { ...gamification, ...JSON.parse(raw) };
+        } catch(e) {}
+
+        const unlockedList = gamification.unlockedBadges || ['first-steps'];
+
+        const badges = [
+            { id: 'first-steps', title: 'First Steps', icon: 'fa-shoe-prints', color: '#10b981' },
+            { id: 'spaced-sensation', title: 'Flashcards', icon: 'fa-layer-group', color: '#8b5cf6' },
+            { id: 'deep-reader', title: 'Deep Reader', icon: 'fa-highlighter', color: '#06b6d4' },
+            { id: 'polymath', title: 'Polymath', icon: 'fa-globe-americas', color: '#3b82f6' },
+            { id: 'week-of-fire', title: '7-Day Fire', icon: 'fa-fire', color: '#f59e0b' },
+            { id: 'quiz-sharpshooter', title: 'Sharpshooter', icon: 'fa-bullseye', color: '#ef4444' },
+            { id: 'diamond-mastery', title: 'Diamond', icon: 'fa-gem', color: '#22d3ee' },
+            { id: 'zen-scholar', title: 'Zen Focus', icon: 'fa-leaf', color: '#84cc16' }
+        ];
+
+        if (badgesContainer) {
+            badgesContainer.innerHTML = badges.map(b => {
+                const isUnlocked = unlockedList.includes(b.id);
+                const cls = isUnlocked ? 'badge-item unlocked' : 'badge-item';
+                const style = isUnlocked ? `style="border-color: ${b.color}; color: ${b.color};"` : '';
+                return `
+                    <div class="${cls}" title="${b.title} (${isUnlocked ? 'Unlocked' : 'Locked'})">
+                        <div class="badge-icon" ${style}>
+                            <i class="fas ${b.icon}"></i>
+                        </div>
+                        <span class="badge-title">${b.title}</span>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        if (trophyContainer) {
+            const trophies = [
+                { id: 'trophy-math', title: 'Euler Calculus', subject: 'Math', icon: 'fa-square-root-alt', minXp: 100, color: '#3b82f6' },
+                { id: 'trophy-ela', title: 'Shakespeare Laureate', subject: 'ELA', icon: 'fa-feather-alt', minXp: 200, color: '#ec4899' },
+                { id: 'trophy-science', title: 'Curie Laboratory', subject: 'Science', icon: 'fa-atom', minXp: 300, color: '#10b981' },
+                { id: 'trophy-social', title: 'Jeffersonian Archive', subject: 'Social Studies', icon: 'fa-landmark', minXp: 400, color: '#f59e0b' }
+            ];
+
+            const currentXp = gamification.xp || 0;
+            trophyContainer.innerHTML = trophies.map(t => {
+                const earned = currentXp >= t.minXp;
+                return `
+                    <div style="background: var(--color-bg-surface); border: 1px solid ${earned ? t.color : 'var(--color-border)'}; border-radius: 0.75rem; padding: 0.75rem; text-align: center; opacity: ${earned ? '1' : '0.45'}; transition: transform 0.2s;" title="${t.title} (${earned ? 'Earned' : 'Requires ' + t.minXp + ' XP'})">
+                        <div style="font-size: 1.5rem; color: ${earned ? t.color : 'var(--color-text-muted)'}; margin-bottom: 0.25rem;">
+                            <i class="fas ${t.icon}"></i>
+                        </div>
+                        <div style="font-size: 0.75rem; font-weight: 800; color: var(--color-text-main);">${t.title}</div>
+                        <div style="font-size: 0.68rem; color: var(--color-text-muted);">${earned ? '🏆 Certified' : t.minXp + ' XP'}</div>
+                    </div>
+                `;
+            }).join('');
         }
     }
 
+    renderBadgesAndTrophies();
+
     window.openStudentReportCardModal = openStudentReportCardModal;
     window.closeStudentReportCardModal = closeStudentReportCardModal;
+    window.printStudentTranscript = printStudentTranscript;
 });
 
 

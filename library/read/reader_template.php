@@ -339,6 +339,13 @@ body.zen-mode {
                         <button type="button" class="settings-row-btn settings-width" data-width="wide">Wide</button>
                         <button type="button" class="settings-row-btn settings-width" data-width="full">Full</button>
                     </div>
+
+                    <h4 class="settings-section-title">Cognitive Accessibility</h4>
+                    <div class="settings-btn-row">
+                        <button type="button" id="toggle-bionic-btn" class="settings-row-btn" onclick="window.toggleBionicReading && window.toggleBionicReading()" title="Bold the initial letters of each word to facilitate rapid visual fixations">
+                            <i class="fas fa-eye" aria-hidden="true"></i> Bionic Reading
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1415,21 +1422,125 @@ body.zen-mode {
 
     window.addVocabToCards = function() {
         const def = document.getElementById('vocab-tip-def').textContent;
-        if (window.HLSound) window.HLSound.playToggle();
+        if (window.HLSound && typeof window.HLSound.playToggle === 'function') window.HLSound.playToggle();
         try {
+            // 1. General custom flashcards
             const cards = JSON.parse(localStorage.getItem('hl_flashcards_custom') || '[]');
             cards.push({ front: selectedWord, back: def, id: Date.now() });
             localStorage.setItem('hl_flashcards_custom', JSON.stringify(cards));
+
+            // 2. Book-Specific Leitner Deck
+            const bId = '<?php echo addslashes($bookId); ?>';
+            const bTitle = '<?php echo addslashes($bookTitle); ?>';
+            const deckId = `book-vocab-${bId}`;
+            const decks = JSON.parse(localStorage.getItem('hl_leitner_decks') || '{}');
+            if (!decks[deckId]) {
+                decks[deckId] = { name: `${bTitle} Vocabulary`, cards: [] };
+            }
+            decks[deckId].cards.push({
+                id: 'card-' + Date.now(),
+                front: selectedWord,
+                back: def,
+                example: `Vocabulary concept from ${bTitle}`,
+                box: 1,
+                nextReview: Date.now()
+            });
+            localStorage.setItem('hl_leitner_decks', JSON.stringify(decks));
+            window.dispatchEvent(new CustomEvent('hl:data-sync', { detail: { key: 'hl_leitner_decks' } }));
+
             const btn = document.getElementById('vocab-tip-card-btn');
-            if (btn) btn.innerHTML = '<i class="fas fa-check"></i> Saved!';
+            if (btn) btn.innerHTML = '<i class="fas fa-check"></i> Saved to Deck!';
             setTimeout(() => { if (btn) btn.innerHTML = '<i class="fas fa-plus-circle"></i> Save Card'; }, 2000);
+            if (window.announceA11y) window.announceA11y(`Added ${selectedWord} to ${bTitle} Leitner Deck`);
         } catch (e) {}
     };
 
     document.addEventListener('click', (e) => {
-        if (tooltip && !tooltip.contains(e.target) && !e.target.closest('.prose-reader, .chapter-content')) {
+        if (tooltip && !tooltip.contains(e.target) && !e.target.closest('.prose-reader, .chapter-content, #book-content')) {
             tooltip.classList.add('hidden');
         }
+    });
+})();
+
+// Bionic Reading Engine
+(function initBionicReading() {
+    let bionicActive = false;
+    let originalHtml = null;
+
+    function applyBionic() {
+        const article = document.getElementById('book-content');
+        if (!article) return;
+        if (!originalHtml) {
+            originalHtml = article.innerHTML;
+        }
+
+        const targets = article.querySelectorAll('p, blockquote, li, h1, h2, h3, h4, h5, h6');
+        targets.forEach(el => {
+            if (el.closest('.book-running-header, .chapter-comprehension-checkpoint, .reader-chapter-end-row, .teacher-gate-card')) return;
+            
+            const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null, false);
+            const textNodes = [];
+            let node;
+            while ((node = walker.nextNode())) {
+                if (node.nodeValue.trim().length > 0) {
+                    textNodes.push(node);
+                }
+            }
+
+            textNodes.forEach(tn => {
+                const text = tn.nodeValue;
+                const converted = text.replace(/([a-zA-Z0-9]+)/g, (match) => {
+                    if (match.length <= 1) return `<strong>${match}</strong>`;
+                    const mid = Math.ceil(match.length * 0.45);
+                    return `<strong class="bionic-fixation">${match.slice(0, mid)}</strong><span class="bionic-tail">${match.slice(mid)}</span>`;
+                });
+                const span = document.createElement('span');
+                span.className = 'bionic-fragment';
+                span.innerHTML = converted;
+                tn.parentNode.replaceChild(span, tn);
+            });
+        });
+
+        document.body.classList.add('bionic-reading-active');
+        const btn = document.getElementById('toggle-bionic-btn');
+        if (btn) btn.classList.add('active');
+        localStorage.setItem('hl_bionic_reading_enabled', 'true');
+        if (window.HLSound && typeof window.HLSound.playToggle === 'function') window.HLSound.playToggle();
+        if (window.announceA11y) window.announceA11y('Bionic Reading mode enabled');
+    }
+
+    function removeBionic() {
+        const article = document.getElementById('book-content');
+        if (article && originalHtml) {
+            article.innerHTML = originalHtml;
+            originalHtml = null;
+        }
+        document.body.classList.remove('bionic-reading-active');
+        const btn = document.getElementById('toggle-bionic-btn');
+        if (btn) btn.classList.remove('active');
+        localStorage.setItem('hl_bionic_reading_enabled', 'false');
+        if (window.HLSound && typeof window.HLSound.playToggle === 'function') window.HLSound.playToggle();
+        if (window.announceA11y) window.announceA11y('Bionic Reading mode disabled');
+    }
+
+    window.toggleBionicReading = function() {
+        bionicActive = !bionicActive;
+        if (bionicActive) {
+            applyBionic();
+        } else {
+            removeBionic();
+        }
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+        try {
+            const saved = localStorage.getItem('hl_bionic_reading_enabled') === 'true';
+            const acc = JSON.parse(localStorage.getItem('hl_accommodations_profile') || '{}');
+            if (saved || acc.bionicEnabled) {
+                bionicActive = true;
+                applyBionic();
+            }
+        } catch(e) {}
     });
 })();
 </script>

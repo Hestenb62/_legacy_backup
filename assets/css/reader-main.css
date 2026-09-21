@@ -897,3 +897,15 @@ body.zen-mode #reader-controls {
     color: #ffffff;
     border-color: var(--color-primary, #e11d48);
 }
+
+/* Bionic Reading Fixations (Cognitive & Dyslexia Support) */
+body.bionic-reading-active .bionic-fixation {
+    font-weight: 800 !important;
+    opacity: 1 !important;
+    letter-spacing: -0.01em;
+}
+
+body.bionic-reading-active .bionic-tail {
+    font-weight: 400 !important;
+    opacity: 0.85;
+}

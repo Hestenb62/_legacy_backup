@@ -71,6 +71,62 @@ $alphabet = range('A', 'Z');
                 </button>
             </div>
         </div>
+
+        <!-- Interactive Formula Sandbox & Step-by-Step Solver -->
+        <div class="math-sandbox-container" id="math-formula-sandbox" style="margin-top: 1.5rem; max-width: 960px; margin-left: auto; margin-right: auto; text-align: left;">
+            <div class="glass-card" style="background: var(--color-bg-surface); border: 1px solid var(--color-border); border-radius: var(--radius-xl, 1rem); padding: 1.5rem; box-shadow: var(--shadow-md);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+                    <div style="display: flex; align-items: center; gap: 0.65rem;">
+                        <span style="width: 2.25rem; height: 2.25rem; border-radius: var(--radius-md); background: color-mix(in srgb, var(--color-primary) 15%, transparent); color: var(--color-primary); display: flex; align-items: center; justify-content: center; font-size: 1.1rem;">
+                            <i class="fas fa-calculator"></i>
+                        </span>
+                        <div>
+                            <h2 style="font-size: 1.15rem; font-weight: 800; color: var(--color-text-main); margin: 0;">Interactive Formula Sandbox &amp; Solver</h2>
+                            <p style="font-size: 0.8rem; color: var(--color-text-muted); margin: 0;">Substitute variables to generate step-by-step mathematical proofs.</p>
+                        </div>
+                    </div>
+                    <button type="button" id="sandbox-toggle-btn" class="math-pill-btn active" style="font-size: 0.8rem; padding: 0.35rem 0.85rem;">
+                        <i class="fas fa-sliders-h"></i> <span id="sandbox-toggle-label">Hide Sandbox</span>
+                    </button>
+                </div>
+
+                <div id="sandbox-body">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-bottom: 1.25rem;">
+                        <div>
+                            <label for="sandbox-formula-select" style="display: block; font-size: 0.825rem; font-weight: 700; color: var(--color-text-main); margin-bottom: 0.35rem;">
+                                Select Canonical Formula:
+                            </label>
+                            <select id="sandbox-formula-select" class="math-index-search-input" style="width: 100%; height: 42px; border-radius: var(--radius-md); padding: 0.4rem 0.75rem; font-size: 0.875rem; background: var(--color-bg-base); color: var(--color-text-main); border: 1px solid var(--color-border);">
+                                <option value="pythagorean" selected>Pythagorean Theorem (c = √(a² + b²))</option>
+                                <option value="quadratic">Quadratic Formula (ax² + bx + c = 0)</option>
+                                <option value="slope">Slope of a Line (m = (y₂ - y₁) / (x₂ - x₁))</option>
+                                <option value="distance">Distance Formula (d = √((x₂ - x₁)² + (y₂ - y₁)²))</option>
+                                <option value="circle">Circle Area &amp; Circumference (A = πr², C = 2πr)</option>
+                                <option value="interest">Compound Interest (A = P(1 + r/n)^(nt))</option>
+                            </select>
+                        </div>
+                        <div id="sandbox-inputs-container" style="display: flex; gap: 0.75rem; align-items: flex-end; flex-wrap: wrap;">
+                            <!-- Populated dynamically based on formula -->
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 0.75rem; align-items: center; margin-bottom: 1.25rem; flex-wrap: wrap;">
+                        <button type="button" id="sandbox-solve-btn" class="hero-nav-btn hero-nav-btn-primary" style="padding: 0.65rem 1.5rem; border-radius: var(--radius-full); font-weight: 800; font-size: 0.9rem; cursor: pointer; border: none; display: inline-flex; align-items: center; gap: 0.5rem; background: var(--color-primary); color: #fff; box-shadow: 0 4px 12px rgba(79,70,229,0.3);">
+                            <i class="fas fa-play"></i> Evaluate Step-by-Step
+                        </button>
+                        <button type="button" id="sandbox-random-btn" class="hero-nav-btn hero-nav-btn-outline" style="padding: 0.65rem 1.25rem; border-radius: var(--radius-full); font-weight: 700; font-size: 0.9rem; cursor: pointer; display: inline-flex; align-items: center; gap: 0.4rem;">
+                            <i class="fas fa-dice"></i> Example Values
+                        </button>
+                    </div>
+
+                    <div id="sandbox-result-card" style="background: var(--color-bg-base); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 1.25rem; border-left: 4px solid var(--color-primary);">
+                        <div id="sandbox-result-content">
+                            <!-- Populated dynamically by JS with MathJax rendered math -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
 
     <!-- Sticky A–Z Quick-Jump Ribbon -->

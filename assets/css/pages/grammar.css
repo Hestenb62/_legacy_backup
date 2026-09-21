@@ -1,0 +1,729 @@
+@layer components {
+    /* ==========================================================================
+       Universal English Grammar Codex & Index Styles (pages/grammar.php)
+       ========================================================================== */
+
+    /* Main Container Layout */
+    .grammar-index-page {
+        max-width: 86rem;
+        margin: 0 auto;
+        padding: 1.5rem 1.25rem 4rem;
+        min-height: 80vh;
+    }
+
+    /* Hero Banner */
+    .grammar-index-hero {
+        position: relative;
+        background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(79, 70, 229, 0.06) 50%, rgba(236, 72, 153, 0.08) 100%);
+        border: 1px solid color-mix(in srgb, var(--color-border) 80%, #10b981 20%);
+        border-radius: 1.5rem;
+        padding: 3rem 2rem 2.5rem;
+        text-align: center;
+        margin-bottom: 2rem;
+        overflow: hidden;
+        box-shadow: 0 10px 30px -10px rgba(16, 185, 129, 0.08);
+    }
+
+    .grammar-index-hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.4rem 1rem;
+        font-size: 0.8rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        border-radius: 9999px;
+        background: color-mix(in srgb, #10b981 15%, transparent);
+        color: #059669;
+        border: 1px solid color-mix(in srgb, #10b981 30%, transparent);
+        margin-bottom: 1rem;
+    }
+
+    .grammar-index-hero-title {
+        font-size: clamp(2rem, 4.5vw, 3rem);
+        font-weight: 900;
+        letter-spacing: -0.03em;
+        line-height: 1.15;
+        color: var(--color-text-main, #0f172a);
+        margin-bottom: 0.75rem;
+    }
+
+    .grammar-index-hero-desc {
+        font-size: clamp(1rem, 1.8vw, 1.15rem);
+        color: var(--color-text-muted, #475569);
+        max-width: 50rem;
+        margin: 0 auto 2rem;
+        line-height: 1.6;
+    }
+
+    /* Live Search Toolbar */
+    .grammar-index-search-wrap {
+        max-width: 44rem;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .grammar-index-search-bar {
+        display: flex;
+        align-items: center;
+        position: relative;
+        background: var(--color-bg-surface, #ffffff);
+        border: 2px solid color-mix(in srgb, var(--color-border, #cbd5e1) 85%, #10b981 15%);
+        border-radius: 9999px;
+        padding: 0.35rem 0.5rem 0.35rem 1.25rem;
+        box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.08);
+        transition: all 0.25s ease;
+    }
+
+    .grammar-index-search-bar:focus-within {
+        border-color: #10b981;
+        box-shadow: 0 0 0 4px color-mix(in srgb, #10b981 20%, transparent), 0 8px 24px -4px rgba(16, 185, 129, 0.15);
+    }
+
+    .grammar-index-search-icon {
+        color: var(--color-text-muted, #64748b);
+        font-size: 1.1rem;
+        margin-right: 0.75rem;
+    }
+
+    .grammar-index-search-input {
+        flex: 1;
+        background: transparent;
+        border: none;
+        outline: none;
+        font-size: 1.05rem;
+        font-weight: 600;
+        color: var(--color-text-main, #0f172a);
+        min-width: 0;
+    }
+
+    .grammar-index-search-input::placeholder {
+        color: var(--color-text-muted, #94a3b8);
+        font-weight: 500;
+    }
+
+    .grammar-index-clear-btn {
+        background: none;
+        border: none;
+        color: var(--color-text-muted, #94a3b8);
+        padding: 0.4rem 0.6rem;
+        cursor: pointer;
+        display: none;
+        font-size: 0.9rem;
+        border-radius: 50%;
+        transition: color 0.15s ease;
+    }
+
+    .grammar-index-clear-btn:hover {
+        color: var(--color-text-main, #0f172a);
+    }
+
+    /* Syntax Diagrammer Sandbox */
+    .grammar-sandbox-card {
+        background: var(--color-bg-surface, #ffffff);
+        border: 1px solid var(--color-border, #e2e8f0);
+        border-radius: 1.25rem;
+        padding: 1.5rem;
+        box-shadow: var(--shadow-md, 0 4px 6px -1px rgba(0,0,0,0.1));
+        text-align: left;
+    }
+
+    .syntax-token {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0.35rem 0.65rem;
+        margin: 0.25rem 0.2rem;
+        border-radius: 0.5rem;
+        font-weight: 700;
+        font-size: 0.95rem;
+        transition: transform 0.15s ease;
+        line-height: 1.2;
+    }
+
+    .syntax-token .token-role {
+        font-size: 0.65rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        font-weight: 800;
+        opacity: 0.85;
+        margin-top: 0.2rem;
+    }
+
+    .syntax-token-subj {
+        background: rgba(59, 130, 246, 0.12);
+        color: #2563eb;
+        border: 1px solid rgba(59, 130, 246, 0.3);
+    }
+
+    .syntax-token-verb {
+        background: rgba(239, 68, 68, 0.12);
+        color: #dc2626;
+        border: 1px solid rgba(239, 68, 68, 0.3);
+    }
+
+    .syntax-token-obj {
+        background: rgba(16, 185, 129, 0.12);
+        color: #059669;
+        border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .syntax-token-prep {
+        background: rgba(139, 92, 246, 0.12);
+        color: #7c3aed;
+        border: 1px solid rgba(139, 92, 246, 0.3);
+    }
+
+    .syntax-token-conj {
+        background: rgba(245, 158, 11, 0.12);
+        color: #d97706;
+        border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+
+    .syntax-token-mod {
+        background: rgba(236, 72, 153, 0.12);
+        color: #db2777;
+        border: 1px solid rgba(236, 72, 153, 0.3);
+    }
+
+    /* Sticky A–Z Quick-Jump Ribbon */
+    .grammar-az-ribbon-container {
+        position: sticky;
+        top: 4.25rem;
+        z-index: 30;
+        background: color-mix(in srgb, var(--color-bg-base, #ffffff) 90%, transparent);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-top: 1px solid var(--color-border, #e2e8f0);
+        border-bottom: 1px solid var(--color-border, #e2e8f0);
+        padding: 0.6rem 0;
+        margin: 0 -1.25rem 2rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    }
+
+    .grammar-az-ribbon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.25rem 0.35rem;
+        max-width: 86rem;
+        margin: 0 auto;
+        padding: 0 1.25rem;
+    }
+
+    .grammar-az-letter-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 2rem;
+        height: 2rem;
+        font-size: 0.85rem;
+        font-weight: 800;
+        border-radius: 0.5rem;
+        color: var(--color-text-main, #0f172a);
+        text-decoration: none;
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        border: 1px solid transparent;
+    }
+
+    .grammar-az-letter-btn:hover:not(.disabled) {
+        background: color-mix(in srgb, #10b981 15%, transparent);
+        color: #059669;
+        border-color: color-mix(in srgb, #10b981 30%, transparent);
+        transform: translateY(-1px);
+    }
+
+    .grammar-az-letter-btn.active {
+        background: #10b981;
+        color: #ffffff;
+        box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
+    }
+
+    .grammar-az-letter-btn.disabled {
+        opacity: 0.28;
+        pointer-events: none;
+        color: var(--color-text-muted, #94a3b8);
+    }
+
+    /* Filter Control Panel */
+    .grammar-filter-panel {
+        background: var(--color-bg-surface, #ffffff);
+        border: 1px solid var(--color-border, #e2e8f0);
+        border-radius: 1.25rem;
+        padding: 1.25rem 1.5rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.04);
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .grammar-filter-row {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .grammar-filter-label {
+        font-size: 0.8rem;
+        font-weight: 800;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: var(--color-text-muted, #64748b);
+        min-width: 8.5rem;
+        padding-top: 0.35rem;
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+    }
+
+    .grammar-pills-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        flex: 1;
+    }
+
+    .grammar-pill-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0.35rem 0.85rem;
+        font-size: 0.825rem;
+        font-weight: 700;
+        border-radius: 9999px;
+        background: var(--color-bg-base, #f8fafc);
+        color: var(--color-text-main, #334155);
+        border: 1px solid var(--color-border, #e2e8f0);
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    .grammar-pill-btn:hover {
+        border-color: #10b981;
+        color: #059669;
+        background: color-mix(in srgb, #10b981 8%, transparent);
+    }
+
+    .grammar-pill-btn.active {
+        background: #10b981;
+        color: #ffffff;
+        border-color: #10b981;
+        box-shadow: 0 4px 10px rgba(16, 185, 129, 0.25);
+    }
+
+    .grammar-pill-count {
+        font-size: 0.725rem;
+        padding: 0.1rem 0.45rem;
+        border-radius: 9999px;
+        background: rgba(0, 0, 0, 0.08);
+        color: inherit;
+    }
+
+    .grammar-pill-btn.active .grammar-pill-count {
+        background: rgba(255, 255, 255, 0.25);
+    }
+
+    /* Status Bar */
+    .grammar-status-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1.5rem;
+        padding: 0 0.5rem;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .grammar-match-count {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--color-text-muted, #64748b);
+    }
+
+    .grammar-match-count strong {
+        color: var(--color-text-main, #0f172a);
+    }
+
+    .grammar-view-toggle {
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    .grammar-index-export-btn,
+    .grammar-index-print-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0.45rem 1rem;
+        font-size: 0.825rem;
+        font-weight: 700;
+        border-radius: 9999px;
+        background: var(--color-bg-surface, #ffffff);
+        color: var(--color-text-main, #334155);
+        border: 1px solid var(--color-border, #e2e8f0);
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    .grammar-index-export-btn:hover,
+    .grammar-index-print-btn:hover {
+        border-color: #10b981;
+        color: #059669;
+    }
+
+    /* Alphabetical Letter Sections */
+    .grammar-az-letter-section {
+        margin-bottom: 3.5rem;
+        scroll-margin-top: 8rem;
+    }
+
+    .grammar-az-letter-header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        border-bottom: 2px solid color-mix(in srgb, var(--color-border, #e2e8f0) 80%, #10b981 20%);
+        padding-bottom: 0.75rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .grammar-az-letter-badge {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 0.85rem;
+        background: linear-gradient(135deg, #10b981, #059669);
+        color: #ffffff;
+        font-size: 1.5rem;
+        font-weight: 900;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 6px 16px -2px rgba(16, 185, 129, 0.35);
+    }
+
+    .grammar-az-letter-title {
+        font-size: 1.6rem;
+        font-weight: 900;
+        color: var(--color-text-main, #0f172a);
+        margin: 0;
+    }
+
+    .grammar-az-letter-count {
+        font-size: 0.825rem;
+        font-weight: 700;
+        color: var(--color-text-muted, #64748b);
+        margin-left: auto;
+        background: var(--color-bg-base, #f8fafc);
+        padding: 0.25rem 0.75rem;
+        border-radius: 9999px;
+        border: 1px solid var(--color-border, #e2e8f0);
+    }
+
+    /* Term Card Grid & Cards */
+    .grammar-lexicon-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+        gap: 1.5rem;
+    }
+
+    @media (max-width: 640px) {
+        .grammar-lexicon-list {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .grammar-term-card {
+        background: var(--color-bg-surface, #ffffff);
+        border: 1px solid var(--color-border, #e2e8f0);
+        border-radius: 1.25rem;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        box-shadow: 0 4px 14px -2px rgba(0, 0, 0, 0.05);
+        transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+        position: relative;
+    }
+
+    .grammar-term-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 24px -4px rgba(0, 0, 0, 0.09);
+        border-color: color-mix(in srgb, var(--color-border, #cbd5e1) 70%, #10b981 30%);
+    }
+
+    .grammar-term-card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .grammar-term-title-wrap {
+        flex: 1;
+    }
+
+    .grammar-term-title {
+        font-size: 1.3rem;
+        font-weight: 900;
+        color: var(--color-text-main, #0f172a);
+        margin: 0 0 0.35rem 0;
+        line-height: 1.25;
+    }
+
+    .grammar-term-etymology {
+        font-size: 0.8rem;
+        color: var(--color-text-muted, #64748b);
+        font-family: monospace;
+        display: block;
+        line-height: 1.4;
+    }
+
+    .grammar-term-badges {
+        display: flex;
+        gap: 0.4rem;
+        flex-wrap: wrap;
+        margin-top: 0.5rem;
+    }
+
+    .grammar-badge-grade,
+    .grammar-badge-branch {
+        font-size: 0.725rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        padding: 0.2rem 0.6rem;
+        border-radius: 9999px;
+    }
+
+    .grammar-badge-grade {
+        background: rgba(16, 185, 129, 0.12);
+        color: #059669;
+        border: 1px solid rgba(16, 185, 129, 0.25);
+    }
+
+    .grammar-badge-branch {
+        background: rgba(79, 70, 229, 0.1);
+        color: #4f46e5;
+        border: 1px solid rgba(79, 70, 229, 0.25);
+    }
+
+    .grammar-term-actions {
+        display: flex;
+        gap: 0.35rem;
+    }
+
+    .grammar-action-btn {
+        width: 2.1rem;
+        height: 2.1rem;
+        border-radius: 0.5rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--color-bg-base, #f8fafc);
+        color: var(--color-text-muted, #64748b);
+        border: 1px solid var(--color-border, #e2e8f0);
+        cursor: pointer;
+        transition: all 0.15s ease;
+        font-size: 0.85rem;
+    }
+
+    .grammar-action-btn:hover {
+        background: #10b981;
+        color: #ffffff;
+        border-color: #10b981;
+    }
+
+    .grammar-action-btn.active {
+        color: #f59e0b;
+        border-color: #f59e0b;
+        background: rgba(245, 158, 11, 0.1);
+    }
+
+    /* Pattern / Formula Banner */
+    .grammar-formula-display {
+        background: var(--color-bg-base, #f8fafc);
+        border: 1px solid var(--color-border, #e2e8f0);
+        border-left: 4px solid #10b981;
+        border-radius: 0.75rem;
+        padding: 0.75rem 1rem;
+        font-family: 'JetBrains Mono', 'Fira Code', monospace;
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: var(--color-text-main, #0f172a);
+        overflow-x: auto;
+    }
+
+    /* Sections inside card */
+    .grammar-card-section {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+
+    .grammar-section-subtitle {
+        font-size: 0.75rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--color-text-muted, #64748b);
+        display: flex;
+        align-items: center;
+        gap: 0.35rem;
+    }
+
+    .grammar-definition-text {
+        font-size: 0.925rem;
+        line-height: 1.6;
+        color: var(--color-text-main, #1e293b);
+        margin: 0;
+    }
+
+    .grammar-what-it-does {
+        font-size: 0.875rem;
+        line-height: 1.55;
+        color: var(--color-text-muted, #475569);
+        margin: 0;
+    }
+
+    .grammar-step-list {
+        margin: 0;
+        padding-left: 1.25rem;
+        font-size: 0.85rem;
+        color: var(--color-text-muted, #475569);
+        line-height: 1.5;
+    }
+
+    .grammar-step-list li {
+        margin-bottom: 0.35rem;
+    }
+
+    /* Exemplar Box */
+    .grammar-example-box {
+        background: color-mix(in srgb, #10b981 6%, var(--color-bg-surface, #ffffff));
+        border: 1px solid color-mix(in srgb, #10b981 22%, transparent);
+        border-radius: 0.85rem;
+        padding: 0.85rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .grammar-example-problem {
+        font-weight: 700;
+        color: var(--color-text-main, #0f172a);
+        margin-bottom: 0.35rem;
+    }
+
+    .grammar-example-solution {
+        color: var(--color-text-muted, #334155);
+        line-height: 1.5;
+    }
+
+    /* Card Footer */
+    .grammar-term-card-footer {
+        margin-top: auto;
+        padding-top: 0.75rem;
+        border-top: 1px dashed var(--color-border, #e2e8f0);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .grammar-codex-link {
+        font-size: 0.8rem;
+        font-weight: 800;
+        color: #059669;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+    }
+
+    .grammar-codex-link:hover {
+        text-decoration: underline;
+    }
+
+    /* Empty State */
+    .grammar-empty-state {
+        display: none;
+        text-align: center;
+        padding: 4rem 1.5rem;
+        background: var(--color-bg-surface, #ffffff);
+        border: 1px dashed var(--color-border, #cbd5e1);
+        border-radius: 1.5rem;
+        max-width: 38rem;
+        margin: 2rem auto;
+    }
+
+    .grammar-empty-state i {
+        font-size: 3rem;
+        color: var(--color-text-muted, #94a3b8);
+        margin-bottom: 1rem;
+    }
+
+    .grammar-empty-state h3 {
+        font-size: 1.25rem;
+        font-weight: 900;
+        color: var(--color-text-main, #0f172a);
+        margin-bottom: 0.5rem;
+    }
+
+    .grammar-empty-state p {
+        font-size: 0.9rem;
+        color: var(--color-text-muted, #64748b);
+        margin-bottom: 1.25rem;
+    }
+
+    /* Toast */
+    .grammar-toast {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        background: #0f172a;
+        color: #ffffff;
+        padding: 0.75rem 1.25rem;
+        border-radius: 9999px;
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.85rem;
+        font-weight: 700;
+        z-index: 100;
+        transform: translateY(100px);
+        opacity: 0;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        pointer-events: none;
+    }
+
+    .grammar-toast.show {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    /* Print Optimization */
+    @media print {
+        body {
+            background: #ffffff !important;
+            color: #000000 !important;
+        }
+
+        .grammar-index-hero,
+        .grammar-az-ribbon-container,
+        .grammar-filter-panel,
+        .grammar-status-bar,
+        .grammar-term-actions,
+        .grammar-codex-link,
+        .grammar-toast {
+            display: none !important;
+        }
+
+        .grammar-term-card {
+            break-inside: avoid;
+            box-shadow: none !important;
+            border: 1px solid #94a3b8 !important;
+            margin-bottom: 1rem;
+        }
+    }
+}

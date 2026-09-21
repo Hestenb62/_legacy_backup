@@ -31,6 +31,9 @@
     // Audio click synthesis for tactile feedback
     playClick(freq = 440, type = 'sine', duration = 0.06) {
       try {
+        if (window.HLSound && typeof window.HLSound.playClick === 'function') {
+          window.HLSound.playClick();
+        }
         if (!this.audioCtx) {
           const AudioContext = window.AudioContext || window.webkitAudioContext;
           if (AudioContext) this.audioCtx = new AudioContext();
@@ -55,6 +58,9 @@
     }
 
     playSuccess() {
+      if (window.HLSound && typeof window.HLSound.playCorrect === 'function') {
+        window.HLSound.playCorrect();
+      }
       this.playClick(523.25, 'triangle', 0.1);
       setTimeout(() => this.playClick(659.25, 'triangle', 0.1), 80);
       setTimeout(() => this.playClick(783.99, 'triangle', 0.18), 160);
@@ -143,20 +149,37 @@
       piece.className = 'active-fraction-piece';
       piece.style.flexGrow = val;
       piece.style.backgroundColor = color;
-      piece.innerHTML = `<span>${label}</span><button type="button" class="remove-strip-btn" title="Remove">&times;</button>`;
+      piece.setAttribute('tabindex', '0');
+      piece.setAttribute('role', 'listitem');
+      piece.setAttribute('aria-label', `${label} fraction strip. Press Delete or Backspace to remove.`);
+      piece.innerHTML = `<span>${label}</span><button type="button" class="remove-strip-btn" aria-label="Remove ${label} strip" title="Remove ${label}">&times;</button>`;
 
-      piece.querySelector('.remove-strip-btn').addEventListener('click', (e) => {
-        e.stopPropagation();
+      const removeHandler = (e) => {
+        if (e) e.stopPropagation();
         this.mathCurrentSum -= val;
         piece.remove();
         this.updateMathTotal();
         this.playClick(250, 'sine', 0.04);
+        if (typeof window.announceA11y === 'function') {
+          window.announceA11y(`Removed ${label}. Current total is ${(this.mathCurrentSum * 100).toFixed(0)}%.`);
+        }
+      };
+
+      piece.querySelector('.remove-strip-btn').addEventListener('click', removeHandler);
+      piece.addEventListener('keydown', (e) => {
+        if (e.key === 'Backspace' || e.key === 'Delete') {
+          e.preventDefault();
+          removeHandler(e);
+        }
       });
 
       dropZone.appendChild(piece);
       this.mathCurrentSum += val;
       this.updateMathTotal();
       this.playClick(440 + Math.round(val * 400), 'sine', 0.05);
+      if (typeof window.announceA11y === 'function') {
+        window.announceA11y(`Added ${label}. Current total is ${(this.mathCurrentSum * 100).toFixed(0)}%.`);
+      }
     }
 
     updateMathTotal() {
@@ -382,37 +405,61 @@
           card.className = 'timeline-sort-card';
           card.dataset.id = ev.id;
           card.dataset.index = idx;
+          card.setAttribute('tabindex', '0');
+          card.setAttribute('role', 'listitem');
+          card.setAttribute('aria-label', `Milestone ${idx + 1} of ${shuffled.length}: ${ev.title}. Use Left or Up arrow to shift earlier, Right or Down arrow to shift later.`);
           card.innerHTML = `
             <div class="timeline-slot-num">#${idx + 1}</div>
             <div class="timeline-card-content">
-              <i class="fas ${ev.icon}"></i>
+              <i class="fas ${ev.icon}" aria-hidden="true"></i>
               <div class="timeline-card-text">
                 <strong>${ev.title}</strong>
               </div>
             </div>
             <div class="timeline-shift-controls">
-              <button type="button" class="btn-shift-up" ${idx === 0 ? 'disabled' : ''} title="Move Left/Up"><i class="fas fa-chevron-left"></i></button>
-              <button type="button" class="btn-shift-down" ${idx === shuffled.length - 1 ? 'disabled' : ''} title="Move Right/Down"><i class="fas fa-chevron-right"></i></button>
+              <button type="button" class="btn-shift-up" ${idx === 0 ? 'disabled' : ''} aria-label="Shift ${ev.title} earlier" title="Move Left/Up"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+              <button type="button" class="btn-shift-down" ${idx === shuffled.length - 1 ? 'disabled' : ''} aria-label="Shift ${ev.title} later" title="Move Right/Down"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
             </div>
           `;
 
-          card.querySelector('.btn-shift-up').addEventListener('click', () => {
+          const shiftUp = () => {
             if (idx > 0) {
               const temp = shuffled[idx];
               shuffled[idx] = shuffled[idx - 1];
               shuffled[idx - 1] = temp;
               this.playClick(440, 'sine', 0.04);
               renderTimeline();
+              setTimeout(() => {
+                const targetCard = container.querySelector(`[data-id="${ev.id}"]`);
+                if (targetCard) targetCard.focus();
+              }, 50);
             }
-          });
+          };
 
-          card.querySelector('.btn-shift-down').addEventListener('click', () => {
+          const shiftDown = () => {
             if (idx < shuffled.length - 1) {
               const temp = shuffled[idx];
               shuffled[idx] = shuffled[idx + 1];
               shuffled[idx + 1] = temp;
               this.playClick(440, 'sine', 0.04);
               renderTimeline();
+              setTimeout(() => {
+                const targetCard = container.querySelector(`[data-id="${ev.id}"]`);
+                if (targetCard) targetCard.focus();
+              }, 50);
+            }
+          };
+
+          card.querySelector('.btn-shift-up').addEventListener('click', shiftUp);
+          card.querySelector('.btn-shift-down').addEventListener('click', shiftDown);
+
+          card.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+              e.preventDefault();
+              shiftUp();
+            } else if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+              e.preventDefault();
+              shiftDown();
             }
           });
 
