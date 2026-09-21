@@ -38,12 +38,13 @@ Built [`pages/grammar.php`](file:///c:/Users/Heste/OneDrive/Documents/_legacy_ba
   - **R**: Relative Clauses: Restrictive vs. Non-Restrictive
   - **S**: The Subjunctive Mood & Counterfactuals
   - **T**: Transitive vs. Intransitive Verb Complements
-  - **U**: Countable vs. Uncountable (Mass) Nouns
-  - **V**: Voice Transformations: Active vs. Passive
-  - **W**: Case Inflection: Who vs. Whom
+  - **U**: Countable vs. Uncountable (Mass) Nouns (`Countable: fewer / many / a ⟷ Uncountable: less / much / amount`)
+  - **V**: Voice Transformations: Active vs. Passive (`Active: Agent + Verb + Patient ⟷ Passive: Patient + be + Past Participle (+ by Agent)`)
+  - **W**: Case Inflection: Who vs. Whom (`Subjective: who = he / she / they ⟷ Objective: whom = him / her / them`)
   - **X**: Xenisms, Calques & Loanword Mechanics
   - **Y**: Subject-Auxiliary Inversion & Question Syntax
   - **Z**: Zeugma & Syntactic Ellipsis
+- **Clean Typographic Syntax Notation**: Formatted all syntax patterns and rules in clean, human-readable typographical notation with clean Unicode arrows (`⟷`, `➔`), brackets, and punctuation, completely eliminating raw LaTeX math escape commands (`\text{...}`, `\quad`, `\longleftrightarrow`).
 - **Standardized Schema**: Each entry includes `id`, `name`, `etymology`, `grade`, `gradeName`, `branch`, `branchLabel`, `formula`, `rawFormula`, `definition`, `whatItDoes`, `howToDoIt`, `exampleProblem`, `exampleSolution`, `codexChapter`, and `keywords`.
 
 ### 2. Interactive Sentence Diagrammer & Syntax Analyzer
@@ -91,4 +92,5 @@ Built [`pages/grammar.php`](file:///c:/Users/Heste/OneDrive/Documents/_legacy_ba
 | **Header Syntax** | `& "C:\xampp\php\php.exe" -l src/header.php` | **Pass (No syntax errors)** |
 | **JavaScript Syntax** | `node -c assets/js/pages/grammar-index.js` | **Pass (No syntax errors)** |
 | **JSON Data Integrity** | `node -e "JSON.parse(fs.readFileSync('assets/data/grammar-php.json'))"` | **Pass (26/26 valid entries)** |
+| **Rule Formula Display** | Human-readable Unicode typography (`⟷`, `➔`), 0 raw LaTeX tags | **Pass (Clean typography)** |
 | **Accessibility (A11y)** | Keyboard navigation, focus rings (`:focus-visible`), aria labels | **Pass (WCAG 2.2 AAA)** |

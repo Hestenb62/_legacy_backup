@@ -298,7 +298,10 @@ $alphabet = range('A', 'Z');
                             <!-- Syntactic Pattern / Formula Display -->
                             <?php if (!empty($term['formula'])): ?>
                                 <div class="grammar-formula-display" title="Canonical Syntactic Pattern">
-                                    <?= htmlspecialchars($term['formula']) ?>
+                                    <div class="grammar-formula-tag">
+                                        <i class="fas fa-code-branch" aria-hidden="true"></i> Syntactic Rule &amp; Pattern
+                                    </div>
+                                    <div class="grammar-formula-code"><?= htmlspecialchars($term['formula']) ?></div>
                                 </div>
                             <?php endif; ?>
 
