@@ -16,7 +16,8 @@
             "txt-link": "https://www.gutenberg.org/ebooks/5.txt.utf-8",
             "lexile": "1380L",
             "grade": "Grades 8-12",
-            "disclaimer-key": "gutenberg"
+            "disclaimer-key": "gutenberg",
+            "call_number": "KF4527 .C66 1787"
         },
         {
             "id": "declaration-of-independence",
@@ -33,7 +34,8 @@
             "read-online-link": "#",
             "lexile": "1400L",
             "grade": "Grades 8-12",
-            "disclaimer-key": "gutenberg"
+            "disclaimer-key": "gutenberg",
+            "call_number": "E221 .U55 1776"
         },
         {
             "id": "bill-of-rights",
@@ -50,7 +52,8 @@
             "read-online-link": "#",
             "lexile": "1350L",
             "grade": "Grades 8-12",
-            "disclaimer-key": "gutenberg"
+            "disclaimer-key": "gutenberg",
+            "call_number": "KF4744 .A3 1791"
         },
         {
             "id": "federalist-papers",
@@ -67,7 +70,8 @@
             "read-online-link": "/library/read/index.php?book=federalist-papers",
             "lexile": "1450L",
             "grade": "Grades 10-12",
-            "disclaimer-key": "gutenberg"
+            "disclaimer-key": "gutenberg",
+            "call_number": "JK154 1788"
         },
         {
             "id": "who-built-america",
@@ -84,7 +88,8 @@
             "read-online-link": "/library/read/index.php?book=who-built-america",
             "txt-link": "",
             "lexile": "1200L",
-            "grade": "Grades 10-12"
+            "grade": "Grades 10-12",
+            "call_number": "HD8066 .W46 2007"
         },
         {
             "id": "american-yawp",
@@ -102,7 +107,8 @@
             "txt-link": "",
             "lexile": "1150L",
             "grade": "Grades 11-12",
-            "disclaimer-key": "american-yawp"
+            "disclaimer-key": "american-yawp",
+            "call_number": "E178.1 .A44 2019"
         }
     ],
     "World History": [
@@ -121,7 +127,8 @@
             "read-online-link": "#",
             "lexile": "1140L",
             "grade": "Grades 9-12",
-            "disclaimer-key": "gutenberg"
+            "disclaimer-key": "gutenberg",
+            "call_number": "U101 .S95 2000"
         },
         {
             "id": "meditations",
@@ -138,7 +145,8 @@
             "read-online-link": "#",
             "lexile": "1200L",
             "grade": "Grades 10-12",
-            "disclaimer-key": "gutenberg"
+            "disclaimer-key": "gutenberg",
+            "call_number": "B580 .A4 2002"
         },
         {
             "id": "the-prince",
@@ -155,7 +163,8 @@
             "read-online-link": "#",
             "lexile": "1260L",
             "grade": "Grades 11-12",
-            "disclaimer-key": "gutenberg"
+            "disclaimer-key": "gutenberg",
+            "call_number": "JC143 .M38 1985"
         }
     ],
     "WW1": [
@@ -174,7 +183,8 @@
             "read-online-link": "#",
             "lexile": "1250L",
             "grade": "Grades 11-12",
-            "disclaimer-key": "gutenberg"
+            "disclaimer-key": "gutenberg",
+            "call_number": "D642 .K4 1919"
         },
         {
             "id": "over-the-top-ww1",
@@ -191,7 +201,8 @@
             "read-online-link": "#",
             "lexile": "1080L",
             "grade": "Grades 9-12",
-            "disclaimer-key": "gutenberg"
+            "disclaimer-key": "gutenberg",
+            "call_number": "D640 .E5 1917"
         }
     ],
     "WW2": [
@@ -210,7 +221,8 @@
             "read-online-link": "#",
             "lexile": "1150L",
             "grade": "Grades 10-12",
-            "disclaimer-text": "Provided under educational fair-use research parameters."
+            "disclaimer-text": "Provided under educational fair-use research parameters.",
+            "call_number": "D743 .U55 1945"
         },
         {
             "id": "churchill-blood-toil",
@@ -226,7 +238,8 @@
             "epub-link": "#",
             "read-online-link": "#",
             "lexile": "1180L",
-            "grade": "Grades 9-12"
+            "grade": "Grades 9-12",
+            "call_number": "D742.G7 C5 1941"
         }
     ],
     "Math": [
@@ -245,7 +258,8 @@
             "read-online-link": "#",
             "lexile": "1300L",
             "grade": "Grades 9-12",
-            "disclaimer-key": "gutenberg"
+            "disclaimer-key": "gutenberg",
+            "call_number": "QA31 .E8 2008"
         },
         {
             "id": "relativity",
@@ -262,7 +276,8 @@
             "read-online-link": "#",
             "lexile": "1300L",
             "grade": "Grades 11-12",
-            "disclaimer-key": "gutenberg"
+            "disclaimer-key": "gutenberg",
+            "call_number": "QC173.55 .E35 1920"
         }
     ],
     "ELA": [
@@ -281,7 +296,8 @@
             "read-online-link": "#",
             "lexile": "1000L",
             "grade": "Grades 9-12",
-            "disclaimer-key": "gutenberg"
+            "disclaimer-key": "gutenberg",
+            "call_number": "PE1408 .S77 1918"
         },
         {
             "id": "merriam-webster-dict",
@@ -298,7 +314,8 @@
             "read-online-link": "#",
             "lexile": "N/A",
             "grade": "All",
-            "disclaimer-key": "gutenberg"
+            "disclaimer-key": "gutenberg",
+            "call_number": "PE1625 .W4 1828"
         }
     ],
     "Science": [
@@ -317,7 +334,8 @@
             "read-online-link": "#",
             "lexile": "1310L",
             "grade": "Grades 10-12",
-            "disclaimer-key": "gutenberg"
+            "disclaimer-key": "gutenberg",
+            "call_number": "QH365 .O2 1859"
         },
         {
             "id": "sidereus-nuncius",
@@ -334,7 +352,8 @@
             "read-online-link": "#",
             "lexile": "1280L",
             "grade": "Grades 9-12",
-            "disclaimer-key": "gutenberg"
+            "disclaimer-key": "gutenberg",
+            "call_number": "QB41 .G15 1610"
         }
     ],
     "Civics": [
@@ -353,7 +372,8 @@
             "read-online-link": "#",
             "lexile": "1350L",
             "grade": "Grades 10-12",
-            "disclaimer-key": "gutenberg"
+            "disclaimer-key": "gutenberg",
+            "call_number": "JC153 .L85 1689"
         },
         {
             "id": "democracy-in-america",
@@ -370,7 +390,8 @@
             "read-online-link": "#",
             "lexile": "1320L",
             "grade": "Grades 11-12",
-            "disclaimer-key": "gutenberg"
+            "disclaimer-key": "gutenberg",
+            "call_number": "JK216 .T7 1835"
         }
     ],
     "General Resources": [

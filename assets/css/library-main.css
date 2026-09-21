@@ -8,6 +8,7 @@
 @import url('./library/lib-subject-research-workspace-pan.css');
 @import url('./library/lib-modals.css');
 @import url('./library/lib-responsive-breakpoints.css');
+@import url('./library/lib-portal-pages.css');
 /* Modern Cinematic Hero & Scholar Dashboard */
 .library-modern-hero {
     display: grid;
