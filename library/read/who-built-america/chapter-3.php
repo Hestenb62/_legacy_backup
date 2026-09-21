@@ -34,10 +34,10 @@
 			Columbus predicted that the Native peoples he encountered “should be good and intelligent servants.” The
 			history of the Americas would be shaped by the efforts of conquerors and settlers to use first Native
 			American, and then European and African labor to exploit the continent’s riches. In the process most of
-			these laborers had to endure poverty and untimely death, but they were the people who built America.</p><a
-			href="#slug-peoples_of_the_new_world">
-			<h2 id="slug-peoples_of_the_new_world">Peoples of the New World</h2>
-		</a>
+			these laborers had to endure poverty and untimely death, but they were the people who built America.</p>
+			<a href="#slug-peoples_of_the_new_world">
+				<h2 id="slug-peoples_of_the_new_world">Peoples of the New World</h2>
+			</a>
 		<div class="content-content">
 			<p>None of those involved in the encounter between Europe, the Americas, and Africa were a single people.
 				Most varied of all were the inhabitants of the Americas. Evidence about their origins is thin and
@@ -52,7 +52,8 @@
 				one-seventh of the world’s population. But their isolation from the rest of the world—particularly their
 				lack of immunity to European diseases—left them vulnerable as Europeans started coming to the Americas
 				in the late fifteenth century.</p>
-		</div><a href="#slug-centralized_empires_in_central_and_south_america">
+		</div>
+		<a href="#slug-centralized_empires_in_central_and_south_america">
 			<h3 id="slug-centralized_empires_in_central_and_south_america">Centralized Empires in Central and South
 				America</h3>
 		</a>
@@ -71,7 +72,8 @@
 				headed by a figure the Spanish would call an “emperor,” included priests, generals, and wealthy
 				merchants. But most Aztec people were craft-workers, farmers, laborers, soldiers, or enslaved persons.
 			</p>
-		</div><a href="#slug-dispersed_societies_to_the_north">
+		</div>
+		<a href="#slug-dispersed_societies_to_the_north">
 			<h3 id="slug-dispersed_societies_to_the_north">Dispersed Societies to the North</h3>
 		</a>
 		<div class="content-content">
@@ -118,15 +120,14 @@
 				paupers. . . . A whole village must be without corn before any individual can be obliged to endure
 				privation.” Sharing goods reinforced individuals’ sense of group belonging, and there were strong
 				sanctions against unacceptable behavior, from public disapproval or ridicule to expulsion and exile.</p>
-
-
 			<p>Many groups were matrilineal; identity and status descended from mothers to children. Eastern woodland
 				groups tended also to be matrilocal—after marriage men moved into their wives’ households. Here,
 				leadership was not restricted to men. Some women enjoyed a degree of personal independence and power.
 				Prominent Haudenosaunee&nbsp;women controlled their own homes and fields, could divorce at will, and had
 				the right to choose leaders from among their menfolk. They supervised their appointees and could remove
 				them for misdeeds or incompetence.</p>
-		</div><a href="#slug-america_s_peoples_at_contact">
+		</div>
+		<a href="#slug-america_s_peoples_at_contact">
 			<h3 id="slug-america_s_peoples_at_contact">America’s Peoples at Contact</h3>
 		</a>
 		<div class="content-content">
@@ -154,9 +155,9 @@
 				typhus, influenza, measles, and smallpox wiped out ninety percent of Native peoples by 1600. Such
 				devastation—by reducing Native populations and undermining their societies—would help conquerors and
 				settlers shape their colonies to serve their own purposes.</p>
-		</div><a href="#slug-the_background_to_overseas_expansion_europe_and_africa">
-			<h2 id="slug-the_background_to_overseas_expansion_europe_and_africa">The Background to Overseas Expansion:
-				Europe and Africa</h2>
+		</div>
+		<a href="#slug-the_background_to_overseas_expansion_europe_and_africa">
+			<h2 id="slug-the_background_to_overseas_expansion_europe_and_africa">The Background to Overseas Expansion: Europe and Africa</h2>
 		</a>
 		<div class="content-content">
 			<p>Led by Hernán Cortés, a Spanish expedition set out in 1518 to conquer Mexico. Successive waves of
@@ -166,9 +167,9 @@
 				in turn fostered overseas trade and conquest, which first led to closer links between Europe and West
 				Africa and to the colonization of Atlantic islands. As Europe’s interest in the Americas deepened, it
 				drew Africa more tightly into the process.</p>
-		</div><a href="#slug-politics_religion_and_commerce_in_western_europe">
-			<h3 id="slug-politics_religion_and_commerce_in_western_europe">Politics, Religion, and Commerce in Western
-				Europe</h3>
+		</div>
+		<a href="#slug-politics_religion_and_commerce_in_western_europe">
+			<h3 id="slug-politics_religion_and_commerce_in_western_europe">Politics, Religion, and Commerce in Western Europe</h3>
 		</a>
 		<div class="content-content">
 			<p>Early in the fourteenth century, European population growth peaked. Wars and changes in climate hampered
@@ -207,11 +208,11 @@
 				states such as Venice hampered their efforts. Accordingly, they sought alternative routes to the sources
 				of this trade and of the gold and silver that could purchase the goods. Monarchs wanting to pay for
 				their new governments and armies were also eager for new sources of wealth.</p>
-		</div><a href="#slug-society_and_trade_in_west_africa">
+		</div>
+		<a href="#slug-society_and_trade_in_west_africa">
 			<h3 id="slug-society_and_trade_in_west_africa">Society and Trade in West Africa</h3>
 		</a>
 		<div class="content-content">
-
 			<p>The search for wealth first drew Europeans into increasing contact with trading societies in Africa.
 				Africa’s total population may have exceeded eighty million, four-fifths of it located south of the
 				Sahara. From the Islamic traders of the Indian Ocean port of Mombasa, to the farmers of the fertile
@@ -246,7 +247,6 @@
 				tribute and taxes. The Mali empire, centered on the Niger river valley, was one of the world’s largest
 				in the early fifteenth century, but then was eclipsed first by the Songhai empire and later by smaller
 				but powerful kingdoms—Benin, Dahomey, and Kongo—that rose to prominence after 1600.</p>
-
 			<p>Such states encouraged West Africa’s important trading networks. Commercial towns exported gold, ivory,
 				cotton goods, leather, spices, and enslaved persons, to markets in North Africa, the Middle East, and
 				Europe. A European visitor to Benin city found a rich array of goods in its markets:</p>
@@ -256,6 +256,7 @@
 					glass beads and coral. . . . They have good store of soap . . . also many pretty fine mats and
 					baskets that they make, and spoons of elephant’s teeth very curiously wrought with divers
 					proportions of fowls and beasts made upon them.</p>
+				<p><i><b>Source:</b> Who Built America?</i></p>
 			</blockquote>
 			<p>Looking for the goods that West Africa’s trading networks had to offer, Portuguese sea captains ventured
 				down its coast. In 1470 they reached the Gold Coast (now mostly in Ghana), later establishing a trading
@@ -268,7 +269,8 @@
 				Consequently Europeans made little effort to establish extensive colonial settlements in West Africa.
 				But they did use African commerce and slavery as instruments in their encounters with the newly-found
 				Americas.</p>
-		</div><a href="#slug-the_invasion_of_the_americas_begins_portugal_spain_and_the_need_for_labor_">
+		</div>
+		<a href="#slug-the_invasion_of_the_americas_begins_portugal_spain_and_the_need_for_labor_">
 			<h2 id="slug-the_invasion_of_the_americas_begins_portugal_spain_and_the_need_for_labor_">The Invasion of the
 				Americas Begins: Portugal, Spain, and the Need for Labor </h2>
 		</a>
@@ -292,7 +294,8 @@
 				coast, the Portuguese took enslaved persons there too, and as settlers developed plantations for growing
 				sugar cane, they purchased enslaved Africans to work them, building a prototype for forced labor in the
 				growing Atlantic economy.</p>
-		</div><a href="#slug-overseas_expansion_and_conquest">
+		</div>
+		<a href="#slug-overseas_expansion_and_conquest">
 			<h3 id="slug-overseas_expansion_and_conquest">Overseas Expansion and Conquest</h3>
 		</a>
 		<div class="content-content">
@@ -341,7 +344,6 @@
 				which thousands of Native and Spanish combatants died. These incursions and the diseases they introduced
 				weakened the Native groups the Spaniards encountered. In central Arkansas, Coronado found thriving towns
 				that, by the time French explorers reached the region in the 1670s, had disappeared.</p>
-
 			<p>Spain then ignored the North until others took an interest in it. In 1562 some French Protestants settled
 				on the Florida coast, but they had withdrawn again by the time the Spanish, fearing attacks on their
 				treasure fleets, sent a force to remove them. In 1565 Spain founded the town of St. Augustine, now the
@@ -351,7 +353,6 @@
 				Mexico, building forts and missions to subdue and convert Pueblos, and, in 1608, founding the town of
 				Santa Fe.</p>
 		</div>
-
 		<a href="#slug-the_need_for_labor">
 			<h3 id="slug-the_need_for_labor">The Need for Labor</h3>
 		</a>
@@ -380,8 +381,6 @@
 				income. Church and government disputed over the right to put Native inhabitants to work. In the
 				Southwest, Pueblo peoples came into the missions in part to evade harassment by marauding Spanish
 				soldiers.</p>
-
-
 			<p>But Native labor frequently did not fulfill colonists’ hopes, even though distance from colonial
 				authority often enabled them to treat Indigenous populations mercilessly with little fear of restraint.
 				Disease and the harsh demands of forced labor killed large numbers of Native people in Spanish America
@@ -403,7 +402,8 @@
 				brought laborers from Africa and the islands to work for them. The Spanish had also begun substituting
 				Africans for Native American labor. So began a transatlantic trade in enslaved persons that would last
 				for almost four centuries.</p>
-		</div><a href="#slug-africa_and_the_american_slave_trade">
+		</div>
+		<a href="#slug-africa_and_the_american_slave_trade">
 			<h3 id="slug-africa_and_the_american_slave_trade">Africa and the American Slave Trade</h3>
 		</a>
 		<div class="content-content">
@@ -416,10 +416,6 @@
 				be used most in the plantation economies of Brazil and the Caribbean. By 1600 the Spanish and Portuguese
 				had forcibly removed over 250,000 Africans to the Americas, and the numbers grew rapidly as French,
 				English, and Dutch merchants also entered the slave trade.</p>
-
-
-
-
 			<p>Slave trading would prove extremely lucrative, becoming part of a larger commerce—referred to as the
 				triangular trade—that took European goods to Africa, enslaved persons to America, and New World produce
 				back to Europe. But the Europeans who were involved did not share the rich pickings equally. Many
@@ -435,8 +431,6 @@
 				and wealth as a result. Some African merchants also did well: Abee Coffu Jantie Seniees, the leading
 				trader of Cape Coast, and John Kabes, the main middleman between the Ashanti and the port of Komenda,
 				made fortunes selling enslaved persons in the seventeenth century.</p>
-
-
 			<p>European nations competed fiercely for a share in the slave trade, but strong local rulers prevented any
 				of them from monopolizing it. At Ouidah in the kingdom of Dahomey, the king’s powerful viceroy kept the
 				port open to all Europeans equally, setting rules by which they could do business. The Dahomian state
@@ -449,12 +443,10 @@
 				men in West Africa, altering family and marriage patterns and causing populations to fall. Meanwhile,
 				local demand for labor from enslaved women increased, so the Atlantic slave trade strengthened African,
 				as well as American, slavery.</p>
-
 		</div><a href="#slug-captivity_and_the_middle_passage">
 			<h3 id="slug-captivity_and_the_middle_passage">Captivity and the Middle Passage</h3>
 		</a>
 		<div class="content-content">
-
 			<p>Local traders seized most enslaved persons inland and marched them, enchained, for as long as a year to
 				the coastal forts. Hunger, sickness, or exhaustion killed many on the way. Survivors reaching the coast
 				were locked up to await shipment in prisons known as <em>barracoons</em>, slaveholds, or trunks. At the
@@ -475,14 +467,12 @@
 				. any resistance,” but “others . . . filled the air with heartrending cries which . . . cut me to the
 				quick.” Barbot recalled one man, a <em>marabou</em> or Muslim teacher, who spoke not one word on the
 				two-month Atlantic crossing, “so deep was his sorrow.” (He sold him in the Caribbean.)</p>
-
 			<p>Shipboard conditions were ghastly. Men, women, and children were crammed together among their own
 				excrement; it was said that a slave ship could be smelled downwind long before it came into sight.
 				Traders accepted that perhaps one in six enslaved persons would die from disease, malnutrition, or
 				suicide during the voyage. Occasionally they died in shipboard revolts that the European crews brutally
 				suppressed. Sailors lived barely more comfortably than the enslaved they carried, and their death rates
 				from disease could be even higher.</p>
-
 			<p>Enslaved persons began their journey to the Americas not as “Africans,” but as members of many different
 				societies and ethnic groups, speaking an array of languages and holding to a variety of customs and
 				beliefs. Even in the 1540s, Cortés’s enslaved persons came from many places, from Gambia to Mozambique.
@@ -492,7 +482,6 @@
 				languages. Aboard ship the things they had in common enabled them to begin to cooperate, despite the
 				differences among them. Forced across the ocean, they became “African,” and started a long, painful
 				transition to a distinctly African American culture that would help shape the New World.</p>
-
 		</div><a href="#slug-early_colonization_efforts_in_north_america">
 			<h2 id="slug-early_colonization_efforts_in_north_america">Early Colonization Efforts in North America</h2>
 		</a>
@@ -504,8 +493,6 @@
 				French, Dutch, and English explorers and traders pursued varied ambitions. During the seventeenth
 				century, however, they established settlements that transformed this part of the continent as surely as
 				the Spanish did further south.</p>
-
-
 		</div><a href="#slug-exploration">
 			<h3 id="slug-exploration">Exploration</h3>
 		</a>
@@ -726,7 +713,8 @@
 				proprietors had to modify their plans, offering land to own as well as rent, and permitting the
 				formation of a representative assembly of freemen. Migration to both Chesapeake colonies continued to
 				grow. By 1660, about 50,000 people had crossed the Atlantic to settle there.</p>
-		</div><a href="#slug-colonizing_new_england">
+		</div>
+		<a href="#slug-colonizing_new_england">
 			<h3 id="slug-colonizing_new_england">Colonizing New England</h3>
 		</a>
 		<div class="content-content">
@@ -851,7 +839,8 @@
 				their own societies. Even on North America’s eastern seaboard, where Native cultures were targeted early
 				on by the nineteenth century, over two hundred years of conflict and negotiation followed European
 				contact.</p>
-		</div><a href="#slug-adaptation_and_negotiation">
+		</div>
+		<a href="#slug-adaptation_and_negotiation">
 			<h3 id="slug-adaptation_and_negotiation">Adaptation and Negotiation</h3>
 		</a>
 		<div class="content-content">
