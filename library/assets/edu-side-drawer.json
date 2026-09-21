@@ -15,8 +15,6 @@
             "read-online-link": "/library/read/index.php?book=usa-constitution",
             "txt-link": "https://www.gutenberg.org/ebooks/5.txt.utf-8",
             "lexile": "1380L",
-            "dewey": "342.73",
-            "lc": "KF4527",
             "grade": "Grades 8-12",
             "disclaimer-key": "gutenberg"
         },
@@ -34,8 +32,6 @@
             "epub-link": "https://www.gutenberg.org/ebooks/1.epub.images",
             "read-online-link": "#",
             "lexile": "1400L",
-            "dewey": "973.313",
-            "lc": "E221",
             "grade": "Grades 8-12",
             "disclaimer-key": "gutenberg"
         },
@@ -53,7 +49,6 @@
             "epub-link": "https://www.gutenberg.org/ebooks/2.epub.images",
             "read-online-link": "#",
             "lexile": "1350L",
-            "dewey": "342.7308",
             "grade": "Grades 8-12",
             "disclaimer-key": "gutenberg"
         },
@@ -71,7 +66,6 @@
             "epub-link": "https://www.gutenberg.org/ebooks/18.epub.images",
             "read-online-link": "/library/read/index.php?book=federalist-papers",
             "lexile": "1450L",
-            "dewey": "342.7302",
             "grade": "Grades 10-12",
             "disclaimer-key": "gutenberg"
         },
@@ -85,13 +79,11 @@
             "img": "https://covers.openlibrary.org/b/isbn/9780393930320-L.jpg",
             "fallback-img": "https://placehold.co/300x450/2980b9/white?text=Who+Built+America",
             "description": "A comprehensive textbook exploring the history of the United States through the lives, struggles, and contributions of working people.",
-            "pdf-link": "https://cdn.hestena62.com/library/Who%20Built%20America%20-%20American%20Social%20History%20Project.pdf",
-            "epub-link": "https://cdn.hestena62.com/library/Who%20Built%20America%20-%20American%20Social%20History%20Project.epub",
+            "pdf-link": "",
+            "epub-link": "",
             "read-online-link": "/library/read/index.php?book=who-built-america",
-            "txt-link": "https://cdn.hestena62.com/library/Who%20Built%20America%20-%20American%20Social%20History%20Project.txt",
+            "txt-link": "",
             "lexile": "1200L",
-            "dewey": "973",
-            "lc": "E175",
             "grade": "Grades 10-12"
         },
         {
@@ -104,13 +96,11 @@
             "img": "https://covers.openlibrary.org/b/isbn/9781503606715-L.jpg",
             "fallback-img": "https://placehold.co/300x450/8e44ad/white?text=The+American+Yawp",
             "description": "A free, collaboratively built, open-source U.S. history textbook presenting a diverse and integrated narrative of the American past.",
-            "pdf-link": "https://cdn.hestena62.com/library/The%20American%20Yawp.pdf",
-            "epub-link": "https://cdn.hestena62.com/library/The%20American%20Yawp.epub",
+            "pdf-link": "",
+            "epub-link": "",
             "read-online-link": "/library/read/index.php?book=american-yawp",
-            "txt-link": "https://cdn.hestena62.com/library/The%20American%20Yawp.txt",
+            "txt-link": "",
             "lexile": "1150L",
-            "dewey": "973",
-            "lc": "E178.1",
             "grade": "Grades 11-12",
             "disclaimer-key": "american-yawp"
         }
@@ -130,8 +120,6 @@
             "epub-link": "https://www.gutenberg.org/ebooks/132",
             "read-online-link": "#",
             "lexile": "1140L",
-            "dewey": "355.02",
-            "lc": "U101 .S95",
             "grade": "Grades 9-12",
             "disclaimer-key": "gutenberg"
         },
@@ -149,8 +137,6 @@
             "epub-link": "https://www.gutenberg.org/ebooks/2680",
             "read-online-link": "#",
             "lexile": "1200L",
-            "dewey": "188",
-            "lc": "B580",
             "grade": "Grades 10-12",
             "disclaimer-key": "gutenberg"
         },
@@ -168,8 +154,6 @@
             "epub-link": "https://www.gutenberg.org/ebooks/1232",
             "read-online-link": "#",
             "lexile": "1260L",
-            "dewey": "320.1",
-            "lc": "JC143",
             "grade": "Grades 11-12",
             "disclaimer-key": "gutenberg"
         }
@@ -189,8 +173,6 @@
             "epub-link": "https://www.gutenberg.org/ebooks/37287.epub.images",
             "read-online-link": "#",
             "lexile": "1250L",
-            "dewey": "940.314",
-            "lc": "D648",
             "grade": "Grades 11-12",
             "disclaimer-key": "gutenberg"
         },
@@ -208,8 +190,6 @@
             "epub-link": "https://www.gutenberg.org/ebooks/3748.epub.images",
             "read-online-link": "#",
             "lexile": "1080L",
-            "dewey": "940.48",
-            "lc": "D640",
             "grade": "Grades 9-12",
             "disclaimer-key": "gutenberg"
         }
@@ -229,8 +209,6 @@
             "epub-link": "#",
             "read-online-link": "#",
             "lexile": "1150L",
-            "dewey": "940.54",
-            "lc": "D756",
             "grade": "Grades 10-12",
             "disclaimer-text": "Provided under educational fair-use research parameters."
         },
@@ -248,8 +226,6 @@
             "epub-link": "#",
             "read-online-link": "#",
             "lexile": "1180L",
-            "dewey": "940.5341",
-            "lc": "DA566.9.C5",
             "grade": "Grades 9-12"
         }
     ],
@@ -268,8 +244,6 @@
             "epub-link": "https://www.gutenberg.org/ebooks/21076",
             "read-online-link": "#",
             "lexile": "1300L",
-            "dewey": "516.2",
-            "lc": "QA451",
             "grade": "Grades 9-12",
             "disclaimer-key": "gutenberg"
         },
@@ -287,8 +261,6 @@
             "epub-link": "https://www.gutenberg.org/ebooks/5001",
             "read-online-link": "#",
             "lexile": "1300L",
-            "dewey": "530.11",
-            "lc": "QC173.55",
             "grade": "Grades 11-12",
             "disclaimer-key": "gutenberg"
         }
@@ -308,8 +280,6 @@
             "epub-link": "https://www.gutenberg.org/ebooks/37134.epub.images",
             "read-online-link": "#",
             "lexile": "1000L",
-            "dewey": "808.042",
-            "lc": "PE1408",
             "grade": "Grades 9-12",
             "disclaimer-key": "gutenberg"
         },
@@ -327,8 +297,6 @@
             "epub-link": "https://www.gutenberg.org/ebooks/673.epub.images",
             "read-online-link": "#",
             "lexile": "N/A",
-            "dewey": "423",
-            "lc": "PE1625",
             "grade": "All",
             "disclaimer-key": "gutenberg"
         }
@@ -348,8 +316,6 @@
             "epub-link": "https://www.gutenberg.org/ebooks/1228",
             "read-online-link": "#",
             "lexile": "1310L",
-            "dewey": "576.82",
-            "lc": "QH365",
             "grade": "Grades 10-12",
             "disclaimer-key": "gutenberg"
         },
@@ -367,8 +333,6 @@
             "epub-link": "https://www.gutenberg.org/ebooks/46241",
             "read-online-link": "#",
             "lexile": "1280L",
-            "dewey": "520",
-            "lc": "QB41",
             "grade": "Grades 9-12",
             "disclaimer-key": "gutenberg"
         }
@@ -388,8 +352,6 @@
             "epub-link": "https://www.gutenberg.org/ebooks/7370",
             "read-online-link": "#",
             "lexile": "1350L",
-            "dewey": "320.01",
-            "lc": "JC153",
             "grade": "Grades 10-12",
             "disclaimer-key": "gutenberg"
         },
@@ -407,8 +369,6 @@
             "epub-link": "https://www.gutenberg.org/ebooks/815",
             "read-online-link": "#",
             "lexile": "1320L",
-            "dewey": "973.56",
-            "lc": "JK216",
             "grade": "Grades 11-12",
             "disclaimer-key": "gutenberg"
         }
@@ -421,8 +381,6 @@
             "author": "Hesten's Learning Reference Series",
             "isbn": "HL-REF-MATH-001",
             "call_number": "QA107 .H47 2026",
-            "dewey": "510.71",
-            "lc": "QA107",
             "date": "2026-01-01",
             "img": "https://placehold.co/300x450/4f46e5/white?text=Math+Facts+%26+Formulas",
             "fallback-img": "https://placehold.co/300x450/4f46e5/white?text=Math+Facts+%26+Formulas",
@@ -446,8 +404,6 @@
             "author": "Hesten's Learning Reference Series",
             "isbn": "HL-REF-ELA-001",
             "call_number": "PE1112 .H47 2026",
-            "dewey": "425",
-            "lc": "PE1112",
             "date": "2026-01-01",
             "img": "https://placehold.co/300x450/0f766e/white?text=Language+%26+Grammar+Facts",
             "fallback-img": "https://placehold.co/300x450/0f766e/white?text=Language+%26+Grammar+Facts",
@@ -467,8 +423,6 @@
             "author": "Hesten's Learning Reference Series",
             "isbn": "HL-REF-SCI-001",
             "call_number": "Q162 .H47 2026",
-            "dewey": "500",
-            "lc": "Q162",
             "date": "2026-01-01",
             "img": "https://placehold.co/300x450/b45309/white?text=Science+Laws+%26+Constants",
             "fallback-img": "https://placehold.co/300x450/b45309/white?text=Science+Laws+%26+Constants",
