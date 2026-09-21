@@ -79,16 +79,13 @@ if (!function_exists('renderGutenbergLicenseHtml')) {
                 <div class="library-modal-cover-glow"></div>
                 <img id="modal-img" src="" alt="Book Cover" class="library-modal-cover-img" onerror="this.onerror=null; this.src='https://placehold.co/300x450/1e293b/ffffff?text=No+Cover';">
                 
-                <!-- Star (Bookmark), Cite, and Assign Buttons Under Cover Image -->
+                <!-- Star (Bookmark) and Cite Buttons Under Cover Image -->
                 <div class="library-modal-cover-actions">
                     <button id="modal-bookmark-btn" onclick="toggleModalBookmark()" class="modal-cover-btn bookmark-btn" title="Save to My Reading List" aria-label="Save to My Reading List">
                         <i class="far fa-star"></i> <span>Save to List</span>
                     </button>
                     <button type="button" id="modal-citation-btn" onclick="openBookCitationModal()" class="modal-cover-btn cite-btn" title="Generate Citations" aria-label="Generate Citation">
                         <i class="fas fa-quote-right"></i> <span>Cite Book</span>
-                    </button>
-                    <button type="button" id="modal-share-btn" onclick="openClassroomShareModal(window.currentBookId || (currentBookData?.id))" class="modal-cover-btn share-btn" title="Assign & Share Link" aria-label="Assign and Share Resource">
-                        <i class="fas fa-share-nodes"></i> <span>Assign / Share</span>
                     </button>
                 </div>
 
@@ -224,7 +221,7 @@ if (!function_exists('renderGutenbergLicenseHtml')) {
                 </div>
             </div>
 
-            <!-- Sourcing Text Box (Dynamic Volume Attribution) Under Book License & Source Tab -->
+            <!-- Sourcing Text Box (Dynamic Volume Attribution) -->
             <div class="disclaimer-text-card">
                 <h5 class="disclaimer-card-title"><i class="fas fa-info-circle"></i> License &amp; Attribution Statement</h5>
                 <p class="library-disclaimer-license-text" id="modal-license-text">

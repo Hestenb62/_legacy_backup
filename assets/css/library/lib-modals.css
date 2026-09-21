@@ -49,7 +49,8 @@
     }
 }
 
-.library-modal-close-btn {
+.library-modal-close-btn,
+.library-disclaimer-close-btn {
     position: absolute;
     top: 1.25rem;
     right: 1.25rem;
@@ -68,10 +69,17 @@
     transition: all 0.2s ease;
 }
 
-.library-modal-close-btn:hover {
+.library-modal-close-btn:hover,
+.library-disclaimer-close-btn:hover {
     color: #ef4444;
     border-color: #ef4444;
     transform: rotate(90deg);
+}
+
+.library-modal-close-btn:focus-visible,
+.library-disclaimer-close-btn:focus-visible {
+    outline: 2px solid var(--lib-primary);
+    outline-offset: 2px;
 }
 
 .library-modal-body-wrapper {
@@ -487,6 +495,7 @@
     align-items: center;
     gap: 1rem;
     margin-bottom: 1.25rem;
+    padding-right: 2.5rem;
 }
 
 .library-disclaimer-icon-box {
