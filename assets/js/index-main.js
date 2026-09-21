@@ -57,14 +57,24 @@ function renderLevels(data) {
     const grid = document.getElementById('level-grid');
     if (!grid) return;
 
-    grid.innerHTML = data.map((level, index) => {
+    // Show saved (bookmarked) cards first while maintaining curriculum order within groups
+    const sortedData = [...data].sort((a, b) => {
+        const aSaved = bookmarkedLevels.includes(a.id);
+        const bSaved = bookmarkedLevels.includes(b.id);
+        if (aSaved && !bSaved) return -1;
+        if (!aSaved && bSaved) return 1;
+        return 0;
+    });
+
+    grid.innerHTML = sortedData.map((level, index) => {
         const theme = THEME_MAP[level.category] || THEME_MAP.elem;
         const keywords = level.keywords ? level.keywords.toLowerCase() : '';
         const safeTitle = level.title.replace(/'/g, "\\'");
         const safeDesc = level.description.replace(/'/g, "\\'");
+        const isSaved = bookmarkedLevels.includes(level.id);
 
         return `
-        <article class="level-card group relative flex flex-col h-full animate-reveal"
+        <article class="level-card group relative flex flex-col h-full animate-reveal ${isSaved ? 'level-card-saved' : ''}"
             style="animation-delay: ${index * 50}ms"
             data-category="${level.category}"
             data-display-title="${level.title}"
@@ -84,7 +94,10 @@ function renderLevels(data) {
                             <i class="${level.icon}"></i>
                         </div>
                         <div>
-                            <h3 class="level-card-title">${level.title}</h3>
+                            <h3 class="level-card-title">
+                                ${level.title}
+                                ${isSaved ? '<span class="level-saved-pin"><i class="fas fa-star" aria-hidden="true"></i> Saved</span>' : ''}
+                            </h3>
                             <span class="level-card-category">${theme.label}</span>
                         </div>
                     </div>
@@ -1149,6 +1162,11 @@ function toggleBookmark(id, btn) {
         markBtnBookmarked(btn, false);
     }
     saveState();
+
+    // Re-render so saved cards immediately show first
+    if (typeof learningLevels !== 'undefined') {
+        renderLevels(learningLevels);
+    }
 }
 
 function markBtnBookmarked(btn, active) {
