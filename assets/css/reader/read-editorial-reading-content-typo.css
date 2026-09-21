@@ -251,3 +251,88 @@ mark,
     border-radius: 0.2rem;
     padding: 0 0.15rem;
 }
+
+/* ==========================================================================
+   Additional Readings & Bibliography Styling
+   ========================================================================== */
+.reader-main-content .content-additional_readings,
+.content-additional_readings {
+    margin: 3.5rem 0 2.5rem 0;
+    padding-top: 1.75rem;
+    border-top: 1px solid var(--reader-border, var(--color-border, rgba(0, 0, 0, 0.1)));
+}
+
+.content-additional_readings h3:first-child,
+.content-additional_readings .readings-title {
+    font-size: 1.75rem !important;
+    font-weight: 900 !important;
+    letter-spacing: -0.025em;
+    margin: 0 0 1.25rem 0 !important;
+    color: var(--reader-text, var(--color-text-default, #0f172a)) !important;
+}
+
+.content-additional_readings .readings-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.35rem 0.85rem;
+    border-radius: 9999px;
+    background: rgba(225, 29, 72, 0.1);
+    color: var(--color-primary, #e11d48);
+    border: 1px solid rgba(225, 29, 72, 0.22);
+    margin-bottom: 0.75rem;
+}
+
+.content-additional_readings h3:not(:first-child),
+.content-additional_readings h4,
+.content-additional_readings .reading-group-title {
+    font-size: 1.15rem !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.01em;
+    color: var(--color-primary, #e11d48) !important;
+    margin-top: 2rem !important;
+    margin-bottom: 0.75rem !important;
+}
+
+.content-additional_readings ul,
+.content-additional_readings .readings-list {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0.5rem 0 1.75rem 0 !important;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+}
+
+.content-additional_readings ul li,
+.content-additional_readings .readings-list li {
+    position: relative;
+    padding-left: 1.65rem !important;
+    font-size: 1.02rem !important;
+    line-height: 1.65 !important;
+    color: var(--reader-text, var(--color-text-default, #1e293b)) !important;
+    text-align: left !important;
+    margin-bottom: 0 !important;
+}
+
+.content-additional_readings ul li::before,
+.content-additional_readings .readings-list li::before {
+    content: "";
+    position: absolute;
+    left: 0.35rem;
+    top: 0.65em;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--color-primary, #e11d48);
+}
+
+body.high-contrast .content-additional_readings ul li::before,
+body.high-contrast .content-additional_readings .readings-list li::before {
+    background: currentColor;
+    border: 1px solid #000000;
+}

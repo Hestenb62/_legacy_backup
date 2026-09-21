@@ -16,13 +16,19 @@ Transformed the plain heading/paragraph timeline in `library/read/who-built-amer
 
 ### 1. Semantic Timeline Architecture (`chapter-3.php`)
 - Converted lines 1103–1201 from flat `<h3>` and `<p>` tags into a structured, accessible list:
-  - Container: `<div class="content-timeline" role="region" aria-label="Historical Timeline">`
-  - Header: `.timeline-header` featuring a `.timeline-kicker` badge (`<i class="fas fa-history"></i> Historical Chronology`), `.timeline-title`, and `.timeline-subtitle`.
-  - Semantic List: `<ol class="timeline-list">` with `<li class="timeline-item">`.
+  - Container: `<details class="content-timeline timeline-collapsible" open role="region" aria-label="Historical Timeline">`
+  - Interactive Summary Header: `<summary class="timeline-summary">` featuring a `.timeline-kicker` badge (`<i class="fas fa-history"></i> Historical Chronology`), `.timeline-title`, `.timeline-subtitle`, and an interactive `.timeline-collapse-toggle` pill badge with Chevron indicators.
+  - Collapsible Body: `<div class="timeline-collapsible-content">` containing `<ol class="timeline-list">` with `<li class="timeline-item">`.
   - Node Markers: `.timeline-marker` circular glowing nodes centered on the vertical connecting track.
   - Event Cards: `.timeline-card` containers with `.timeline-date-wrap`, styled `<time class="timeline-date">` badges, and `.timeline-body` descriptions.
+  - Collapsibility: Built with semantic HTML5 `<details>` and `<summary>` for native accessibility, keyboard navigation (`Space`/`Enter`), smooth expansion animations, and `localStorage` state persistence.
 
-### 2. Dedicated Reader Timeline Stylesheet (`assets/css/reader/read-timeline.css`)
+### 2. Additional Readings Bulleted List Architecture (`chapter-3.php`)
+- Restructured `.content-additional_readings` from unstructured paragraph blocks into organized category sections with semantic unordered lists:
+  - Enclosed each bibliographic citation within an individual `<li>` element inside `<ul class="readings-list">`.
+  - Added modern typography styling with custom theme-accent circular bullets (`::before`), accessible line-height, and high-contrast support in `read-editorial-reading-content-typo.css`.
+
+### 3. Dedicated Reader Timeline Stylesheet (`assets/css/reader/read-timeline.css`)
 - **Connecting Spine**: Continuous vertical track line with subtle theme-accent gradient (`var(--color-primary)`).
 - **Milestone Nodes**: Circular markers with inner accent dots, hover lift (`scale(1.15)`), and glowing shadow rings.
 - **Milestone Cards**: Glassmorphic/surface cards with subtle borders (`var(--reader-border)`), soft shadows, and smooth hover translations (`translateX(4px)`).

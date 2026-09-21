@@ -9,11 +9,108 @@
     box-sizing: border-box;
 }
 
-/* Timeline Section Header */
+/* Timeline Section Header & Collapsible Summary */
 .content-timeline .timeline-header {
     margin-bottom: 2.25rem;
     padding-bottom: 1.25rem;
     border-bottom: 1px solid var(--reader-border, var(--color-border, rgba(0, 0, 0, 0.1)));
+}
+
+/* Collapsible Details & Summary Controls */
+details.content-timeline {
+    border-radius: 1.25rem;
+    transition: all 0.3s ease;
+}
+
+details.content-timeline summary.timeline-summary {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1.5rem;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--reader-border, var(--color-border, rgba(0, 0, 0, 0.1)));
+    outline: none;
+    transition: border-color 0.2s ease, padding 0.2s ease;
+}
+
+details.content-timeline summary.timeline-summary::-webkit-details-marker,
+details.content-timeline summary.timeline-summary::marker {
+    display: none !important;
+}
+
+details.content-timeline summary.timeline-summary:focus-visible {
+    outline: 2px solid var(--color-primary, #e11d48);
+    outline-offset: 4px;
+    border-radius: 0.5rem;
+}
+
+details.content-timeline .timeline-header-content {
+    flex: 1;
+    min-width: 0;
+    text-align: left;
+}
+
+/* Collapse / Expand Toggle Pill Badge */
+details.content-timeline .timeline-collapse-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.45rem 1.15rem;
+    border-radius: 9999px;
+    background: var(--reader-surface, #ffffff);
+    border: 1px solid var(--reader-border, var(--color-border, rgba(0, 0, 0, 0.15)));
+    color: var(--color-primary, #e11d48);
+    font-size: 0.85rem;
+    font-weight: 800;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    white-space: nowrap;
+    margin-top: 0.25rem;
+    flex-shrink: 0;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+details.content-timeline summary.timeline-summary:hover .timeline-collapse-toggle,
+details.content-timeline summary.timeline-summary:focus-visible .timeline-collapse-toggle {
+    background: var(--color-primary, #e11d48);
+    color: #ffffff;
+    border-color: var(--color-primary, #e11d48);
+    box-shadow: 0 4px 14px rgba(225, 29, 72, 0.25);
+    transform: scale(1.03);
+}
+
+details.content-timeline .timeline-collapse-toggle .toggle-icon {
+    font-size: 0.8rem;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* When collapsed */
+details.content-timeline:not([open]) summary.timeline-summary {
+    border-bottom-color: transparent;
+    padding-bottom: 0.5rem;
+}
+
+details.content-timeline:not([open]) .timeline-collapse-toggle .toggle-icon {
+    transform: rotate(180deg);
+}
+
+/* Collapsible Content Container & Smooth Transition */
+details.content-timeline .timeline-collapsible-content {
+    margin-top: 1.5rem;
+    animation: timelineExpandAnim 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes timelineExpandAnim {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .content-timeline .timeline-kicker {

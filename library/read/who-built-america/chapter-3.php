@@ -284,7 +284,8 @@
 				<em>reconquista</em>, renewed around 1450, culminated in the Spanish monarchy’s defeat of the kingdom of
 				Granada in 1492, and the expulsion or forced conversion of its Muslim and Jewish population. From the
 				1470s to 1496, Spanish troops also fought to create a colony in the Canary Islands, exploiting
-				Indigenous labor and annihilating the inhabitants in the process.</p>
+				Indigenous labor and annihilating the inhabitants in the process.
+			</p>
 			<p>Both Spain and Portugal commenced practices that they would carry to the New World. As early as 1444,
 				Portuguese traders were purchasing enslaved persons in West Africa for transport to Portugal as lifelong
 				domestic servants. After they established settlements on Madeira and other islands off the African
@@ -340,7 +341,7 @@
 				which thousands of Native and Spanish combatants died. These incursions and the diseases they introduced
 				weakened the Native groups the Spaniards encountered. In central Arkansas, Coronado found thriving towns
 				that, by the time French explorers reached the region in the 1670s, had disappeared.</p>
-		
+
 			<p>Spain then ignored the North until others took an interest in it. In 1562 some French Protestants settled
 				on the Florida coast, but they had withdrawn again by the time the Spanish, fearing attacks on their
 				treasure fleets, sent a force to remove them. In 1565 Spain founded the town of St. Augustine, now the
@@ -538,7 +539,8 @@
 				Chesapeake Bay in Virginia. By 1640 tens of thousands more had come to both Massachusetts and the
 				Chesapeake. The English, French, and Dutch competed to secure their claims to parts of North America.
 			</p>
-		</div><a href="#slug-the_french_and_dutch">
+		</div>
+		<a href="#slug-the_french_and_dutch">
 			<h3 id="slug-the_french_and_dutch">The French and Dutch</h3>
 		</a>
 		<div class="content-content">
@@ -562,20 +564,21 @@
 				with the Haudenosaunees (Iroquois) and other Native nations. French fur traders and scouts (known as
 				<em>coureurs de bois</em> or “forest runners”) traveled far into the interior. The fur trade
 				overwhelmingly employed men, many of whom intermarried with Native people to create a substantial
-				mixed-race (<em>méti</em>) population.</p>
+				mixed-race (<em>méti</em>) population.
+			</p>
 			<p>French and Dutch colonization efforts significantly influenced North American development. Dutch
 				families, legal structures, place names, and expressions helped shape early New York. The French
 				presence in the Great Lakes region and the Mississippi Valley is still marked by hundreds of place
 				names, while the descendants of French settlers still retain their distinct identity in Quebec and other
 				parts of Canada. But the most lasting North American colonies would be English.</p>
-
 			<p>Though the English took part in fishing and the fur trade, they became more concerned than the French or
 				the Dutch with establishing settlements that occupied and cultivated the land. After the English
 				captured New Netherland and renamed it New York in 1664 during one of several wars against Holland’s
 				commercial empire, the Dutch relinquished their colony to secure more valuable territories elsewhere.
 				Similarly, when British forces seized New France a century later in the French and Indian War (see
 				Chapter 4), the French chose to give it up in return for keeping wealthier Caribbean sugar islands.</p>
-		</div><a href="#slug-the_english_colonial_experience">
+		</div>
+		<a href="#slug-the_english_colonial_experience">
 			<h2 id="slug-the_english_colonial_experience">The English Colonial Experience</h2>
 		</a>
 		<div class="content-content">
@@ -587,7 +590,8 @@
 				independence, or religious or political freedoms denied them at home. All were influenced by changes
 				that had been taking place in England over the previous two centuries. The conditions that impelled them
 				to leave for the New World shaped the character of English colonies, and the variations among them.</p>
-		</div><a href="#slug-the_roots_of_english_migration_to_america">
+		</div>
+		<a href="#slug-the_roots_of_english_migration_to_america">
 			<h3 id="slug-the_roots_of_english_migration_to_america">The Roots of English Migration to America</h3>
 		</a>
 		<div class="content-content">
@@ -606,7 +610,6 @@
 				of church land and granted it to his supporters among the aristocracy and gentry. Henry and—later—his
 				daughter Elizabeth I also enhanced the lawmaking powers of Parliament, in which many nobles and gentry
 				sat. Large landowners found their wealth and status increasing.</p>
-
 			<p>They also had opportunities to squeeze higher earnings from their lands. As the textile industry
 				expanded, wool-growing became more profitable, so many landlords evicted tenants to make room for sheep,
 				or—by a practice called “enclosure”—fenced off common land on which tenants had relied for part of their
@@ -648,7 +651,8 @@
 				and some women opted to travel to North America as “indentured servants” (bound to labor by contracts
 				called indentures). They took with them a legacy of hardship and injustice, a suspicion of landlords,
 				hope for some land of their own, and a determination to defend popular rights.</p>
-		</div><a href="#slug-colonizing_the_chesapeake">
+		</div>
+		<a href="#slug-colonizing_the_chesapeake">
 			<h3 id="slug-colonizing_the_chesapeake">Colonizing the Chesapeake</h3>
 		</a>
 		<div class="content-content">
@@ -661,7 +665,6 @@
 				“gentlemen,” who considered manual labor to be beneath them. Most of the rest were unskilled laborers,
 				military recruits, and servants. The few craftsmen included clockmakers, jewelers, and gentlemen’s
 				perfumers.</p>
-
 			<p>Instead of the paradise they had expected, they found a harsh, disease-ridden place. One of its leaders,
 				John Smith, remarked that early Jamestown was “a miserie, a ruine, a death, a hell.” Supplies dwindled
 				and fields remained uncultivated while starving gentlemen passed the time playing bowls. Far from being
@@ -678,7 +681,6 @@
 				child, the same night thereof miscarried.” Settlers could not return to England without permission, and
 				their often pitiful letters home were censored. Coercive methods maintained the colony in a bleak,
 				precarious existence, setting precedents for the later introduction of slavery.</p>
-
 			<p>Soon, however, the Virginia Company found that it could use its servants to make money. In 1611 the
 				company began to grow tobacco, which had become popular in England for its supposed medicinal
 				properties. Demand soared. Within a few years the company, and those who acquired land from it, turned
@@ -686,7 +688,6 @@
 				tobacco. Tidal rivers made the interior accessible to the vessels that would carry the crop across the
 				Atlantic. The colony boomed. Tobacco exports rose from 2,000 pounds in 1615 to 1.5 million pounds just
 				fifteen years later.</p>
-
 			<p>To entice more people to go to Virginia and grow tobacco, the Virginia Company offered land in return for
 				labor or other services. Skilled artisans would receive “a house and four acres as long as they plied
 				their trades.” A man willing to cultivate new land could receive fifty acres for himself and another
@@ -698,7 +699,6 @@
 				share government with company officers. Between 1619 and 1625 nearly 5,000 new settlers arrived. But
 				such numbers outgrew the Virginia Company’s military organization, and in 1624 King James I dissolved
 				the company, making Virginia a royal colony under his direct supervision.</p>
-
 			<p>Early Virginia was an armed camp where individualism, competition, and fear prevailed. Men scrambling for
 				wealth had little time for public spirit or civic cooperation. Rather than building towns or villages,
 				tobacco planters scattered along the navigable rivers. The most successful owned hundreds of acres, but
@@ -718,7 +718,6 @@
 				Virginia colony’s population at 8,000, settlers’ encroachments again caused hostilities. More than five
 				hundred colonists died in the struggle before Opechancanough was captured and killed in 1646, and the
 				Powhatans signed a treaty acknowledging English authority.</p>
-
 			<p>By this time, the colony of Maryland had been founded adjacent to Virginia in the upper part of
 				Chesapeake Bay, under a royal charter granted in the early 1630s to the Earl of Baltimore. Baltimore, a
 				Catholic convert, sought a refuge for fellow Catholics facing persecution in England. His family planned
@@ -731,7 +730,6 @@
 			<h3 id="slug-colonizing_new_england">Colonizing New England</h3>
 		</a>
 		<div class="content-content">
-
 			<p>The Virginia Company had hoped to attract members of the English gentry to America, and recruited
 				servants from among the poor, single, and young. But many among the “middling sort,” too, were
 				discontented in England. The Protestant reformers known as Puritans, especially, distrusted the policies
@@ -763,7 +761,6 @@
 				General Court a representative body. Over the next decade, more than twenty thousand English migrants,
 				mainly Puritan families with their children and servants, arrived to establish new farms and communities
 				on New England’s rocky soils, aiming to build for themselves a way of life that England denied them.</p>
-
 			<p>Winthrop and his followers began by establishing Boston and a ring of towns around it. They incorporated
 				ramshackle camps previously set up on the coast by English fishing crews, forming towns such as Salem,
 				Marblehead, and Gloucester. They also made connections with the Pilgrims’ Plymouth Colony, which would
@@ -784,7 +781,6 @@
 				their towns and farms in a land they saw as a “wilderness,” New Englanders created one of the important
 				templates for early American society in the northern colonies.</p>
 		</div>
-
 		<a href="#slug-the_english_revolution_and_its_effects_on_the_colonies">
 			<h3 id="slug-the_english_revolution_and_its_effects_on_the_colonies">The English Revolution and Its Effects
 				on the Colonies</h3>
@@ -799,7 +795,6 @@
 				Charles found it resistant and within two years had provoked open warfare by attempting to suppress it.
 				After two periods of bitter fighting, the king was arrested and, in early 1649, executed. England became
 				a republic, led by the Puritan Oliver Cromwell until his death in 1658.</p>
-
 			<p>The Civil War brought social upheaval and an upsurge of religious and political debate in England. As it
 				began Puritans stopped leaving for Massachusetts, and some returned home from the colony, since England
 				itself might now become (as one minister put it) “a land of saints and a pattern of holiness to all the
@@ -830,7 +825,8 @@
 				colonies would be an important source of commodities and raw materials for England’s development. Later
 				policies would also seek to expand colonial markets for English goods, again with the aim of assuring
 				profits for the mother country.</p>
-		</div><a href="#slug-native_americans_decline_resistance_exchange">
+		</div>
+		<a href="#slug-native_americans_decline_resistance_exchange">
 			<h2 id="slug-native_americans_decline_resistance_exchange">Native Americans: Decline, Resistance, Exchange
 			</h2>
 		</a>
@@ -855,7 +851,6 @@
 				their own societies. Even on North America’s eastern seaboard, where Native cultures were targeted early
 				on by the nineteenth century, over two hundred years of conflict and negotiation followed European
 				contact.</p>
-
 		</div><a href="#slug-adaptation_and_negotiation">
 			<h3 id="slug-adaptation_and_negotiation">Adaptation and Negotiation</h3>
 		</a>
@@ -886,7 +881,6 @@
 				traders at first obtained furs from local Mohicans<strong>&nbsp;</strong>(Mahicans). But as their beaver
 				dwindled, Mohicans were pushed aside by Kanien'kehá:kas (Mohawks), who set up a regular supply of furs
 				from the Haudenosaunee interior.</p>
-
 			<p>Wars among Native polities not only caused many deaths, but also reshaped Native polities’ territories
 				and alliances. Greater reliance on hunting and warfare widened the gap between male and female roles,
 				reducing the importance of agriculture, strengthening the power of men at the expense of women, and
@@ -901,11 +895,11 @@
 				only 22 of them remained.&nbsp; The Catawba of the Carolinas negotiated their survival by making
 				themselves useful to colonists, accepting in the process significant changes to their own culture and
 				forming alliances with the English against neighboring nations.</p>
-		</div><a href="#slug-resistance_and_warfare">
+		</div>
+		<a href="#slug-resistance_and_warfare">
 			<h3 id="slug-resistance_and_warfare">Resistance and Warfare</h3>
 		</a>
 		<div class="content-content">
-
 			<p>Few coastal peoples managed to resist colonial encroachment successfully. Their groups were small and
 				fragmented. On the southern New England coast, the Pequots were at first strengthened by European
 				contact. They traded furs from the interior to Dutch and English shippers and built up their military
@@ -916,7 +910,6 @@
 				four hundred men, women, and children, while their Native allies encircled the site to prevent any
 				Pequots from escaping. When the Pequot War ended, the English executed many captured warriors, sold
 				women and children into slavery, and dispersed the remaining Pequots to other Native nations.</p>
-
 			<p>The Narragansetts, who had helped the English destroy the Pequots, soon began to ponder their own
 				prospects for survival. One leader, Miantonomoh (Miantonomi), traveled across southern New England and
 				Long Island in the early 1640s to arrange a pact, warning of what would be lost if the English were not
@@ -938,7 +931,6 @@
 				Metacom’s alliance, too. Colonists suffered heavily in consequence. Of their ninety towns, twelve were
 				wiped out and forty more damaged. One-tenth of New England’s adult white male population was killed or
 				captured. It looked as if Metacom might succeed in turning back English settlement.</p>
-
 			<p>Yet the colonists proved too well-established to dislodge. New Englanders forged their own alliances and
 				took harsh measures. Distrusting even the “praying Indians” the Massachusetts government forcibly
 				interned them on an island in Boston Harbor. Kanien'kehá:kas (Mohawks) allied with the colonists
@@ -962,7 +954,8 @@
 				rather than farming. Pueblos, now weakened by population decline and by Ndé and Numunuu (Comanche) raids
 				from the north, worked out a way of coexisting with the Spanish that largely preserved their own
 				identity.</p>
-		</div><a href="#slug-coexistence_on_the_middle_ground">
+		</div>
+		<a href="#slug-coexistence_on_the_middle_ground">
 			<h3 id="slug-coexistence_on_the_middle_ground">Coexistence on the Middle Ground</h3>
 		</a>
 		<div class="content-content">
@@ -986,7 +979,8 @@
 				dealings with white people as equals or superiors, and demanded a measure of deference from them. Until
 				circumstances changed, many Native people would hold their ground.</p>
 
-		</div><a href="#slug-conclusion_the_remaking_of_three_worlds">
+		</div>
+		<a href="#slug-conclusion_the_remaking_of_three_worlds">
 			<h2 id="slug-conclusion_the_remaking_of_three_worlds">Conclusion: The Remaking of Three Worlds</h2>
 		</a>
 		<div class="content-content">
@@ -1040,508 +1034,589 @@
 				labor patterns that developed in the northern and southern colonies of British North America.</p>
 		</div>
 	</div>
-	<div class="content-supplementary_materials">
-		<h3>Supplementary Materials</h3>
-		<ul>
-			<li><a href="https://www.whobuiltamerica.org/item/historians-disagree-atlantic-world-history">Historians
-					Disagree: Atlantic World History</a></li>
-			<li><a href="https://www.whobuiltamerica.org/item/an-early-european-view-of-the-western-hemisphere">An Early
-					European View of the Western Hemisphere</a></li>
-			<li><a href="https://www.whobuiltamerica.org/item/queering-the-atlantic-world">Queering the Atlantic
-					World</a></li>
-			</ul>
-	</div>
-	<div class="content-timeline" role="region" aria-label="Historical Timeline">
-		<div class="timeline-header">
-			<span class="timeline-kicker"><i class="fas fa-history" aria-hidden="true"></i> Historical Chronology</span>
-			<h3 class="timeline-title">Key Events Timeline</h3>
-			<p class="timeline-subtitle">Major turning points and milestones from early migrations through 1680</p>
-		</div>
-		<ol class="timeline-list">
-			<li class="timeline-item">
-				<div class="timeline-marker" aria-hidden="true"></div>
-				<div class="timeline-card">
-					<div class="timeline-date-wrap">
-						<time class="timeline-date">c. 13,000 BCE</time>
-					</div>
-					<div class="timeline-body">
-						<p>Asian peoples, who are later called Indians, migrate to North America.</p>
-					</div>
-				</div>
-			</li>
-			<li class="timeline-item">
-				<div class="timeline-marker" aria-hidden="true"></div>
-				<div class="timeline-card">
-					<div class="timeline-date-wrap">
-						<time class="timeline-date">3000 BCE</time>
-					</div>
-					<div class="timeline-body">
-						<p>Settled agriculture begins among Native peoples of the Southwest.</p>
-					</div>
-				</div>
-			</li>
-			<li class="timeline-item">
-				<div class="timeline-marker" aria-hidden="true"></div>
-				<div class="timeline-card">
-					<div class="timeline-date-wrap">
-						<time class="timeline-date">1000 CE</time>
-					</div>
-					<div class="timeline-body">
-						<p>Norsemen led by Leif Ericsson “discover” the Western Hemisphere. They call it “Vinland” (Wineland) because of the grapes growing there.</p>
-					</div>
-				</div>
-			</li>
-			<li class="timeline-item">
-				<div class="timeline-marker" aria-hidden="true"></div>
-				<div class="timeline-card">
-					<div class="timeline-date-wrap">
-						<time class="timeline-date">1340</time>
-					</div>
-					<div class="timeline-body">
-						<p>Plague ravages Europe, which loses two-fifths of its population between 1300 and 1400.</p>
-					</div>
-				</div>
-			</li>
-			<li class="timeline-item">
-				<div class="timeline-marker" aria-hidden="true"></div>
-				<div class="timeline-card">
-					<div class="timeline-date-wrap">
-						<time class="timeline-date">1444</time>
-					</div>
-					<div class="timeline-body">
-						<p>Portuguese traders purchase and enslave West Africans to work as lifelong domestic servants in Portugal—beginnings of European slave trade.</p>
-					</div>
-				</div>
-			</li>
-			<li class="timeline-item">
-				<div class="timeline-marker" aria-hidden="true"></div>
-				<div class="timeline-card">
-					<div class="timeline-date-wrap">
-						<time class="timeline-date">1492</time>
-					</div>
-					<div class="timeline-body">
-						<p>Christopher Columbus sails in search of a westerly route to the East, to Asia, but instead lands in the Bahamas, “discovering” a “New World.” This leads to the European exploration of the Americas, home to 75 to 100 million people, perhaps one-seventh of the world’s population.</p>
-					</div>
-				</div>
-			</li>
-			<li class="timeline-item">
-				<div class="timeline-marker" aria-hidden="true"></div>
-				<div class="timeline-card">
-					<div class="timeline-date-wrap">
-						<time class="timeline-date">1493</time>
-					</div>
-					<div class="timeline-body">
-						<p>Europeans first taste pineapples, which have been brought back by Columbus; other foods and crops discovered by Columbus are maize, sweet potatoes, and tobacco.</p>
-					</div>
-				</div>
-			</li>
-			<li class="timeline-item">
-				<div class="timeline-marker" aria-hidden="true"></div>
-				<div class="timeline-card">
-					<div class="timeline-date-wrap">
-						<time class="timeline-date">1494</time>
-					</div>
-					<div class="timeline-body">
-						<p>Spain and Portugal sign the treaty of Tordesillas in which they agree to divide the entire world between them.</p>
-					</div>
-				</div>
-			</li>
-			<li class="timeline-item">
-				<div class="timeline-marker" aria-hidden="true"></div>
-				<div class="timeline-card">
-					<div class="timeline-date-wrap">
-						<time class="timeline-date">1497</time>
-					</div>
-					<div class="timeline-body">
-						<p>Vasco da Gama of Portugal rounds Africa and reaches India.</p>
-					</div>
-				</div>
-			</li>
-			<li class="timeline-item">
-				<div class="timeline-marker" aria-hidden="true"></div>
-				<div class="timeline-card">
-					<div class="timeline-date-wrap">
-						<time class="timeline-date">1502</time>
-					</div>
-					<div class="timeline-body">
-						<p>First Spanish families settle on the Caribbean island of Hispaniola.</p>
-					</div>
-				</div>
-			</li>
-			<li class="timeline-item">
-				<div class="timeline-marker" aria-hidden="true"></div>
-				<div class="timeline-card">
-					<div class="timeline-date-wrap">
-						<time class="timeline-date">1507</time>
-					</div>
-					<div class="timeline-body">
-						<p>German mapmaker names New World “America” in honor of explorer Amerigo Vespucci.</p>
-					</div>
-				</div>
-			</li>
-			<li class="timeline-item">
-				<div class="timeline-marker" aria-hidden="true"></div>
-				<div class="timeline-card">
-					<div class="timeline-date-wrap">
-						<time class="timeline-date">1513</time>
-					</div>
-					<div class="timeline-body">
-						<p>Spanish explorer Vasco Núñez de Balboa becomes first European to see the Pacific Ocean.</p>
-					</div>
-				</div>
-			</li>
-			<li class="timeline-item">
-				<div class="timeline-marker" aria-hidden="true"></div>
-				<div class="timeline-card">
-					<div class="timeline-date-wrap">
-						<time class="timeline-date">1517</time>
-					</div>
-					<div class="timeline-body">
-						<p>The Protestant Reformation begins in Germany.</p>
-					</div>
-				</div>
-			</li>
-			<li class="timeline-item">
-				<div class="timeline-marker" aria-hidden="true"></div>
-				<div class="timeline-card">
-					<div class="timeline-date-wrap">
-						<time class="timeline-date">1518</time>
-					</div>
-					<div class="timeline-body">
-						<p>Spanish ship carries the first full cargo of Africans across the Atlantic, initiating the highly lucrative slave trade and one of the largest forced migrations in history.</p>
-					</div>
-				</div>
-			</li>
-			<li class="timeline-item">
-				<div class="timeline-marker" aria-hidden="true"></div>
-				<div class="timeline-card">
-					<div class="timeline-date-wrap">
-						<time class="timeline-date">1524</time>
-					</div>
-					<div class="timeline-body">
-						<p>French expedition led by Giovanni da Verrazano explores east coast of North America; while willing to trade with the newcomers, Maine’s Abenakis exhibit what Verrazano describes as “signs of scorn,” such as “showing their buttocks and laughing.”..</p>
-					</div>
-				</div>
-			</li>
-			<li class="timeline-item">
-				<div class="timeline-marker" aria-hidden="true"></div>
-				<div class="timeline-card">
-					<div class="timeline-date-wrap">
-						<time class="timeline-date">1532–1533</time>
-					</div>
-					<div class="timeline-body">
-						<p>Spanish conquistador Francisco Pizarro, aided by horses and firearms and facing Indigenous people weakened by civil war, invades Peruvian Andes, defeats the Incas, and conquers Peru.</p>
-					</div>
-				</div>
-			</li>
-			<li class="timeline-item">
-				<div class="timeline-marker" aria-hidden="true"></div>
-				<div class="timeline-card">
-					<div class="timeline-date-wrap">
-						<time class="timeline-date">1534</time>
-					</div>
-					<div class="timeline-body">
-						<p>Jacques Cartier of France explores the St. Lawrence River.</p>
-					</div>
-				</div>
-			</li>
-			<li class="timeline-item">
-				<div class="timeline-marker" aria-hidden="true"></div>
-				<div class="timeline-card">
-					<div class="timeline-date-wrap">
-						<time class="timeline-date">1545</time>
-					</div>
-					<div class="timeline-body">
-						<p>Spanish discover silver in Andes; between 1500 and 1650, Spaniards (often using forced labor of indigenous peoples) extract 180 tons of gold and 16,000 tons of silver from Americas.</p>
-					</div>
-				</div>
-			</li>
-			<li class="timeline-item">
-				<div class="timeline-marker" aria-hidden="true"></div>
-				<div class="timeline-card">
-					<div class="timeline-date-wrap">
-						<time class="timeline-date">1565</time>
-					</div>
-					<div class="timeline-body">
-						<p>Spanish found St. Augustine (Florida), which has become the oldest continually occupied European settlement in North America.</p>
-					</div>
-				</div>
-			</li>
-			<li class="timeline-item">
-				<div class="timeline-marker" aria-hidden="true"></div>
-				<div class="timeline-card">
-					<div class="timeline-date-wrap">
-						<time class="timeline-date">1583</time>
-					</div>
-					<div class="timeline-body">
-						<p>Sir Humphrey Gilbert claims Newfoundland for England.</p>
-					</div>
-				</div>
-			</li>
-			<li class="timeline-item">
-				<div class="timeline-marker" aria-hidden="true"></div>
-				<div class="timeline-card">
-					<div class="timeline-date-wrap">
-						<time class="timeline-date">1587</time>
-					</div>
-					<div class="timeline-body">
-						<p>100 English settlers arrive in Roanoke Island, in North Carolina’s outer banks; by 1590, when a delayed supply ship finally arrives, the colonists have disappeared without a trace.</p>
-					</div>
-				</div>
-			</li>
-			<li class="timeline-item">
-				<div class="timeline-marker" aria-hidden="true"></div>
-				<div class="timeline-card">
-					<div class="timeline-date-wrap">
-						<time class="timeline-date">1607</time>
-					</div>
-					<div class="timeline-body">
-						<p>First permanent English settlement in the New World created at Jamestown (Virginia); fewer than half of new arrivals survive their first year.</p>
-					</div>
-				</div>
-			</li>
-			<li class="timeline-item">
-				<div class="timeline-marker" aria-hidden="true"></div>
-				<div class="timeline-card">
-					<div class="timeline-date-wrap">
-						<time class="timeline-date">1608</time>
-					</div>
-					<div class="timeline-body">
-						<p>French establish colony of Quebec.</p>
-					</div>
-				</div>
-			</li>
-			<li class="timeline-item">
-				<div class="timeline-marker" aria-hidden="true"></div>
-				<div class="timeline-card">
-					<div class="timeline-date-wrap">
-						<time class="timeline-date">1614</time>
-					</div>
-					<div class="timeline-body">
-						<p>Dutch establish Fort Orange (Albany) on the Hudson River.</p>
-					</div>
-				</div>
-			</li>
-			<li class="timeline-item">
-				<div class="timeline-marker" aria-hidden="true"></div>
-				<div class="timeline-card">
-					<div class="timeline-date-wrap">
-						<time class="timeline-date">1619</time>
-					</div>
-					<div class="timeline-body">
-						<p>Virginia House of Burgesses (first colonial legislature) meets for first time; colonists have discovered tobacco and the colony is booming; Native people teach them how to cultivate tobacco, which is popular in England as medicine.</p>
-					</div>
-				</div>
-			</li>
-			<li class="timeline-item">
-				<div class="timeline-marker" aria-hidden="true"></div>
-				<div class="timeline-card">
-					<div class="timeline-date-wrap">
-						<time class="timeline-date">1620</time>
-					</div>
-					<div class="timeline-body">
-						<p>Pilgrims (religious dissenters) establish a colony at Plymouth, Massachusetts.</p>
-					</div>
-				</div>
-			</li>
-			<li class="timeline-item">
-				<div class="timeline-marker" aria-hidden="true"></div>
-				<div class="timeline-card">
-					<div class="timeline-date-wrap">
-						<time class="timeline-date">1624</time>
-					</div>
-					<div class="timeline-body">
-						<p>James I dissolves the Virginia Company and establishes Virginia as a royal colony.</p>
-					</div>
-				</div>
-			</li>
-			<li class="timeline-item">
-				<div class="timeline-marker" aria-hidden="true"></div>
-				<div class="timeline-card">
-					<div class="timeline-date-wrap">
-						<time class="timeline-date">1626</time>
-					</div>
-					<div class="timeline-body">
-						<p>Dutch settlement of Nieuw Amsterdam established on Manhattan Island.</p>
-					</div>
-				</div>
-			</li>
-			<li class="timeline-item">
-				<div class="timeline-marker" aria-hidden="true"></div>
-				<div class="timeline-card">
-					<div class="timeline-date-wrap">
-						<time class="timeline-date">1630</time>
-					</div>
-					<div class="timeline-body">
-						<p>Massachusetts Bay Company establishes colony of English Puritans.</p>
-					</div>
-				</div>
-			</li>
-			<li class="timeline-item">
-				<div class="timeline-marker" aria-hidden="true"></div>
-				<div class="timeline-card">
-					<div class="timeline-date-wrap">
-						<time class="timeline-date">1635</time>
-					</div>
-					<div class="timeline-body">
-						<p>Roger Williams, expelled from Massachusetts, founds Providence, Rhode Island.</p>
-					</div>
-				</div>
-			</li>
-			<li class="timeline-item">
-				<div class="timeline-marker" aria-hidden="true"></div>
-				<div class="timeline-card">
-					<div class="timeline-date-wrap">
-						<time class="timeline-date">1637</time>
-					</div>
-					<div class="timeline-body">
-						<p>English and Native allies wage war against Pequots of Connecticut, leading to the Pequots’ virtual extermination.</p>
-					</div>
-				</div>
-			</li>
-			<li class="timeline-item">
-				<div class="timeline-marker" aria-hidden="true"></div>
-				<div class="timeline-card">
-					<div class="timeline-date-wrap">
-						<time class="timeline-date">1638</time>
-					</div>
-					<div class="timeline-body">
-						<p>Swedish settlers create a short-lived colony at Fort Christina (now Wilmington, Delaware).</p>
-					</div>
-				</div>
-			</li>
-			<li class="timeline-item">
-				<div class="timeline-marker" aria-hidden="true"></div>
-				<div class="timeline-card">
-					<div class="timeline-date-wrap">
-						<time class="timeline-date">1640</time>
-					</div>
-					<div class="timeline-body">
-						<p>First book published in New England: <i>The Whole Booke of Psalmes faithfully Translated Into English Metre</i> (commonly called <i>Bay Psalm Book</i>).</p>
-					</div>
-				</div>
-			</li>
-			<li class="timeline-item">
-				<div class="timeline-marker" aria-hidden="true"></div>
-				<div class="timeline-card">
-					<div class="timeline-date-wrap">
-						<time class="timeline-date">1642–46</time>
-					</div>
-					<div class="timeline-body">
-						<p>First English Civil War occurs.</p>
-					</div>
-				</div>
-			</li>
-			<li class="timeline-item">
-				<div class="timeline-marker" aria-hidden="true"></div>
-				<div class="timeline-card">
-					<div class="timeline-date-wrap">
-						<time class="timeline-date">1648</time>
-					</div>
-					<div class="timeline-body">
-						<p>Second English Civil War begins; King Charles I is beheaded in 1649 and Commonwealth with Cromwell as leader is created; Cromwell dies in 1658.</p>
-					</div>
-				</div>
-			</li>
-			<li class="timeline-item">
-				<div class="timeline-marker" aria-hidden="true"></div>
-				<div class="timeline-card">
-					<div class="timeline-date-wrap">
-						<time class="timeline-date">1660</time>
-					</div>
-					<div class="timeline-body">
-						<p>Charles II restored to monarchy.</p>
-					</div>
-				</div>
-			</li>
-			<li class="timeline-item">
-				<div class="timeline-marker" aria-hidden="true"></div>
-				<div class="timeline-card">
-					<div class="timeline-date-wrap">
-						<time class="timeline-date">1670</time>
-					</div>
-					<div class="timeline-body">
-						<p>Muslim inhabitants on Senegal River revolt in resistance to slave trade.</p>
-					</div>
-				</div>
-			</li>
-			<li class="timeline-item">
-				<div class="timeline-marker" aria-hidden="true"></div>
-				<div class="timeline-card">
-					<div class="timeline-date-wrap">
-						<time class="timeline-date">1680</time>
-					</div>
-					<div class="timeline-body">
-						<p>Pueblos led by El Popé drive the Spanish from New Mexico; Spanish do not reconquer Pueblos for a dozen years.</p>
-					</div>
-				</div>
-			</li>
-		</ol>
-	</div>
 
-	
-	<div class="content-additional_readings">
-		<h3>Additional Readings</h3>
+	<details class="content-timeline timeline-collapsible" open role="region" aria-label="Historical Timeline">
+		<summary class="timeline-summary">
+			<div class="timeline-header-content">
+				<span class="timeline-kicker"><i class="fas fa-history" aria-hidden="true"></i> Historical
+					Chronology</span>
+				<h3 class="timeline-title">Key Events Timeline</h3>
+				<p class="timeline-subtitle">Major turning points and milestones from early migrations through 1680</p>
+			</div>
+			<div class="timeline-collapse-toggle" aria-hidden="true">
+				<span class="toggle-text">Collapse Timeline</span>
+				<i class="fas fa-chevron-up toggle-icon" aria-hidden="true"></i>
+			</div>
+		</summary>
+		<div class="timeline-collapsible-content">
+			<ol class="timeline-list">
+				<li class="timeline-item">
+					<div class="timeline-marker" aria-hidden="true"></div>
+					<div class="timeline-card">
+						<div class="timeline-date-wrap">
+							<time class="timeline-date">c. 13,000 BCE</time>
+						</div>
+						<div class="timeline-body">
+							<p>Asian peoples, who are later called Indians, migrate to North America.</p>
+						</div>
+					</div>
+				</li>
+				<li class="timeline-item">
+					<div class="timeline-marker" aria-hidden="true"></div>
+					<div class="timeline-card">
+						<div class="timeline-date-wrap">
+							<time class="timeline-date">3000 BCE</time>
+						</div>
+						<div class="timeline-body">
+							<p>Settled agriculture begins among Native peoples of the Southwest.</p>
+						</div>
+					</div>
+				</li>
+				<li class="timeline-item">
+					<div class="timeline-marker" aria-hidden="true"></div>
+					<div class="timeline-card">
+						<div class="timeline-date-wrap">
+							<time class="timeline-date">1000 CE</time>
+						</div>
+						<div class="timeline-body">
+							<p>Norsemen led by Leif Ericsson “discover” the Western Hemisphere. They call it “Vinland”
+								(Wineland) because of the grapes growing there.</p>
+						</div>
+					</div>
+				</li>
+				<li class="timeline-item">
+					<div class="timeline-marker" aria-hidden="true"></div>
+					<div class="timeline-card">
+						<div class="timeline-date-wrap">
+							<time class="timeline-date">1340</time>
+						</div>
+						<div class="timeline-body">
+							<p>Plague ravages Europe, which loses two-fifths of its population between 1300 and 1400.
+							</p>
+						</div>
+					</div>
+				</li>
+				<li class="timeline-item">
+					<div class="timeline-marker" aria-hidden="true"></div>
+					<div class="timeline-card">
+						<div class="timeline-date-wrap">
+							<time class="timeline-date">1444</time>
+						</div>
+						<div class="timeline-body">
+							<p>Portuguese traders purchase and enslave West Africans to work as lifelong domestic
+								servants
+								in Portugal—beginnings of European slave trade.</p>
+						</div>
+					</div>
+				</li>
+				<li class="timeline-item">
+					<div class="timeline-marker" aria-hidden="true"></div>
+					<div class="timeline-card">
+						<div class="timeline-date-wrap">
+							<time class="timeline-date">1492</time>
+						</div>
+						<div class="timeline-body">
+							<p>Christopher Columbus sails in search of a westerly route to the East, to Asia, but
+								instead
+								lands in the Bahamas, “discovering” a “New World.” This leads to the European
+								exploration of
+								the Americas, home to 75 to 100 million people, perhaps one-seventh of the world’s
+								population.</p>
+						</div>
+					</div>
+				</li>
+				<li class="timeline-item">
+					<div class="timeline-marker" aria-hidden="true"></div>
+					<div class="timeline-card">
+						<div class="timeline-date-wrap">
+							<time class="timeline-date">1493</time>
+						</div>
+						<div class="timeline-body">
+							<p>Europeans first taste pineapples, which have been brought back by Columbus; other foods
+								and
+								crops discovered by Columbus are maize, sweet potatoes, and tobacco.</p>
+						</div>
+					</div>
+				</li>
+				<li class="timeline-item">
+					<div class="timeline-marker" aria-hidden="true"></div>
+					<div class="timeline-card">
+						<div class="timeline-date-wrap">
+							<time class="timeline-date">1494</time>
+						</div>
+						<div class="timeline-body">
+							<p>Spain and Portugal sign the treaty of Tordesillas in which they agree to divide the
+								entire
+								world between them.</p>
+						</div>
+					</div>
+				</li>
+				<li class="timeline-item">
+					<div class="timeline-marker" aria-hidden="true"></div>
+					<div class="timeline-card">
+						<div class="timeline-date-wrap">
+							<time class="timeline-date">1497</time>
+						</div>
+						<div class="timeline-body">
+							<p>Vasco da Gama of Portugal rounds Africa and reaches India.</p>
+						</div>
+					</div>
+				</li>
+				<li class="timeline-item">
+					<div class="timeline-marker" aria-hidden="true"></div>
+					<div class="timeline-card">
+						<div class="timeline-date-wrap">
+							<time class="timeline-date">1502</time>
+						</div>
+						<div class="timeline-body">
+							<p>First Spanish families settle on the Caribbean island of Hispaniola.</p>
+						</div>
+					</div>
+				</li>
+				<li class="timeline-item">
+					<div class="timeline-marker" aria-hidden="true"></div>
+					<div class="timeline-card">
+						<div class="timeline-date-wrap">
+							<time class="timeline-date">1507</time>
+						</div>
+						<div class="timeline-body">
+							<p>German mapmaker names New World “America” in honor of explorer Amerigo Vespucci.</p>
+						</div>
+					</div>
+				</li>
+				<li class="timeline-item">
+					<div class="timeline-marker" aria-hidden="true"></div>
+					<div class="timeline-card">
+						<div class="timeline-date-wrap">
+							<time class="timeline-date">1513</time>
+						</div>
+						<div class="timeline-body">
+							<p>Spanish explorer Vasco Núñez de Balboa becomes first European to see the Pacific Ocean.
+							</p>
+						</div>
+					</div>
+				</li>
+				<li class="timeline-item">
+					<div class="timeline-marker" aria-hidden="true"></div>
+					<div class="timeline-card">
+						<div class="timeline-date-wrap">
+							<time class="timeline-date">1517</time>
+						</div>
+						<div class="timeline-body">
+							<p>The Protestant Reformation begins in Germany.</p>
+						</div>
+					</div>
+				</li>
+				<li class="timeline-item">
+					<div class="timeline-marker" aria-hidden="true"></div>
+					<div class="timeline-card">
+						<div class="timeline-date-wrap">
+							<time class="timeline-date">1518</time>
+						</div>
+						<div class="timeline-body">
+							<p>Spanish ship carries the first full cargo of Africans across the Atlantic, initiating the
+								highly lucrative slave trade and one of the largest forced migrations in history.</p>
+						</div>
+					</div>
+				</li>
+				<li class="timeline-item">
+					<div class="timeline-marker" aria-hidden="true"></div>
+					<div class="timeline-card">
+						<div class="timeline-date-wrap">
+							<time class="timeline-date">1524</time>
+						</div>
+						<div class="timeline-body">
+							<p>French expedition led by Giovanni da Verrazano explores east coast of North America;
+								while
+								willing to trade with the newcomers, Maine’s Abenakis exhibit what Verrazano describes
+								as
+								“signs of scorn,” such as “showing their buttocks and laughing.”..</p>
+						</div>
+					</div>
+				</li>
+				<li class="timeline-item">
+					<div class="timeline-marker" aria-hidden="true"></div>
+					<div class="timeline-card">
+						<div class="timeline-date-wrap">
+							<time class="timeline-date">1532–1533</time>
+						</div>
+						<div class="timeline-body">
+							<p>Spanish conquistador Francisco Pizarro, aided by horses and firearms and facing
+								Indigenous
+								people weakened by civil war, invades Peruvian Andes, defeats the Incas, and conquers
+								Peru.
+							</p>
+						</div>
+					</div>
+				</li>
+				<li class="timeline-item">
+					<div class="timeline-marker" aria-hidden="true"></div>
+					<div class="timeline-card">
+						<div class="timeline-date-wrap">
+							<time class="timeline-date">1534</time>
+						</div>
+						<div class="timeline-body">
+							<p>Jacques Cartier of France explores the St. Lawrence River.</p>
+						</div>
+					</div>
+				</li>
+				<li class="timeline-item">
+					<div class="timeline-marker" aria-hidden="true"></div>
+					<div class="timeline-card">
+						<div class="timeline-date-wrap">
+							<time class="timeline-date">1545</time>
+						</div>
+						<div class="timeline-body">
+							<p>Spanish discover silver in Andes; between 1500 and 1650, Spaniards (often using forced
+								labor
+								of indigenous peoples) extract 180 tons of gold and 16,000 tons of silver from Americas.
+							</p>
+						</div>
+					</div>
+				</li>
+				<li class="timeline-item">
+					<div class="timeline-marker" aria-hidden="true"></div>
+					<div class="timeline-card">
+						<div class="timeline-date-wrap">
+							<time class="timeline-date">1565</time>
+						</div>
+						<div class="timeline-body">
+							<p>Spanish found St. Augustine (Florida), which has become the oldest continually occupied
+								European settlement in North America.</p>
+						</div>
+					</div>
+				</li>
+				<li class="timeline-item">
+					<div class="timeline-marker" aria-hidden="true"></div>
+					<div class="timeline-card">
+						<div class="timeline-date-wrap">
+							<time class="timeline-date">1583</time>
+						</div>
+						<div class="timeline-body">
+							<p>Sir Humphrey Gilbert claims Newfoundland for England.</p>
+						</div>
+					</div>
+				</li>
+				<li class="timeline-item">
+					<div class="timeline-marker" aria-hidden="true"></div>
+					<div class="timeline-card">
+						<div class="timeline-date-wrap">
+							<time class="timeline-date">1587</time>
+						</div>
+						<div class="timeline-body">
+							<p>100 English settlers arrive in Roanoke Island, in North Carolina’s outer banks; by 1590,
+								when
+								a delayed supply ship finally arrives, the colonists have disappeared without a trace.
+							</p>
+						</div>
+					</div>
+				</li>
+				<li class="timeline-item">
+					<div class="timeline-marker" aria-hidden="true"></div>
+					<div class="timeline-card">
+						<div class="timeline-date-wrap">
+							<time class="timeline-date">1607</time>
+						</div>
+						<div class="timeline-body">
+							<p>First permanent English settlement in the New World created at Jamestown (Virginia);
+								fewer
+								than half of new arrivals survive their first year.</p>
+						</div>
+					</div>
+				</li>
+				<li class="timeline-item">
+					<div class="timeline-marker" aria-hidden="true"></div>
+					<div class="timeline-card">
+						<div class="timeline-date-wrap">
+							<time class="timeline-date">1608</time>
+						</div>
+						<div class="timeline-body">
+							<p>French establish colony of Quebec.</p>
+						</div>
+					</div>
+				</li>
+				<li class="timeline-item">
+					<div class="timeline-marker" aria-hidden="true"></div>
+					<div class="timeline-card">
+						<div class="timeline-date-wrap">
+							<time class="timeline-date">1614</time>
+						</div>
+						<div class="timeline-body">
+							<p>Dutch establish Fort Orange (Albany) on the Hudson River.</p>
+						</div>
+					</div>
+				</li>
+				<li class="timeline-item">
+					<div class="timeline-marker" aria-hidden="true"></div>
+					<div class="timeline-card">
+						<div class="timeline-date-wrap">
+							<time class="timeline-date">1619</time>
+						</div>
+						<div class="timeline-body">
+							<p>Virginia House of Burgesses (first colonial legislature) meets for first time; colonists
+								have
+								discovered tobacco and the colony is booming; Native people teach them how to cultivate
+								tobacco, which is popular in England as medicine.</p>
+						</div>
+					</div>
+				</li>
+				<li class="timeline-item">
+					<div class="timeline-marker" aria-hidden="true"></div>
+					<div class="timeline-card">
+						<div class="timeline-date-wrap">
+							<time class="timeline-date">1620</time>
+						</div>
+						<div class="timeline-body">
+							<p>Pilgrims (religious dissenters) establish a colony at Plymouth, Massachusetts.</p>
+						</div>
+					</div>
+				</li>
+				<li class="timeline-item">
+					<div class="timeline-marker" aria-hidden="true"></div>
+					<div class="timeline-card">
+						<div class="timeline-date-wrap">
+							<time class="timeline-date">1624</time>
+						</div>
+						<div class="timeline-body">
+							<p>James I dissolves the Virginia Company and establishes Virginia as a royal colony.</p>
+						</div>
+					</div>
+				</li>
+				<li class="timeline-item">
+					<div class="timeline-marker" aria-hidden="true"></div>
+					<div class="timeline-card">
+						<div class="timeline-date-wrap">
+							<time class="timeline-date">1626</time>
+						</div>
+						<div class="timeline-body">
+							<p>Dutch settlement of Nieuw Amsterdam established on Manhattan Island.</p>
+						</div>
+					</div>
+				</li>
+				<li class="timeline-item">
+					<div class="timeline-marker" aria-hidden="true"></div>
+					<div class="timeline-card">
+						<div class="timeline-date-wrap">
+							<time class="timeline-date">1630</time>
+						</div>
+						<div class="timeline-body">
+							<p>Massachusetts Bay Company establishes colony of English Puritans.</p>
+						</div>
+					</div>
+				</li>
+				<li class="timeline-item">
+					<div class="timeline-marker" aria-hidden="true"></div>
+					<div class="timeline-card">
+						<div class="timeline-date-wrap">
+							<time class="timeline-date">1635</time>
+						</div>
+						<div class="timeline-body">
+							<p>Roger Williams, expelled from Massachusetts, founds Providence, Rhode Island.</p>
+						</div>
+					</div>
+				</li>
+				<li class="timeline-item">
+					<div class="timeline-marker" aria-hidden="true"></div>
+					<div class="timeline-card">
+						<div class="timeline-date-wrap">
+							<time class="timeline-date">1637</time>
+						</div>
+						<div class="timeline-body">
+							<p>English and Native allies wage war against Pequots of Connecticut, leading to the
+								Pequots’
+								virtual extermination.</p>
+						</div>
+					</div>
+				</li>
+				<li class="timeline-item">
+					<div class="timeline-marker" aria-hidden="true"></div>
+					<div class="timeline-card">
+						<div class="timeline-date-wrap">
+							<time class="timeline-date">1638</time>
+						</div>
+						<div class="timeline-body">
+							<p>Swedish settlers create a short-lived colony at Fort Christina (now Wilmington,
+								Delaware).
+							</p>
+						</div>
+					</div>
+				</li>
+				<li class="timeline-item">
+					<div class="timeline-marker" aria-hidden="true"></div>
+					<div class="timeline-card">
+						<div class="timeline-date-wrap">
+							<time class="timeline-date">1640</time>
+						</div>
+						<div class="timeline-body">
+							<p>First book published in New England: <i>The Whole Booke of Psalmes faithfully Translated
+									Into
+									English Metre</i> (commonly called <i>Bay Psalm Book</i>).</p>
+						</div>
+					</div>
+				</li>
+				<li class="timeline-item">
+					<div class="timeline-marker" aria-hidden="true"></div>
+					<div class="timeline-card">
+						<div class="timeline-date-wrap">
+							<time class="timeline-date">1642–46</time>
+						</div>
+						<div class="timeline-body">
+							<p>First English Civil War occurs.</p>
+						</div>
+					</div>
+				</li>
+				<li class="timeline-item">
+					<div class="timeline-marker" aria-hidden="true"></div>
+					<div class="timeline-card">
+						<div class="timeline-date-wrap">
+							<time class="timeline-date">1648</time>
+						</div>
+						<div class="timeline-body">
+							<p>Second English Civil War begins; King Charles I is beheaded in 1649 and Commonwealth with
+								Cromwell as leader is created; Cromwell dies in 1658.</p>
+						</div>
+					</div>
+				</li>
+				<li class="timeline-item">
+					<div class="timeline-marker" aria-hidden="true"></div>
+					<div class="timeline-card">
+						<div class="timeline-date-wrap">
+							<time class="timeline-date">1660</time>
+						</div>
+						<div class="timeline-body">
+							<p>Charles II restored to monarchy.</p>
+						</div>
+					</div>
+				</li>
+				<li class="timeline-item">
+					<div class="timeline-marker" aria-hidden="true"></div>
+					<div class="timeline-card">
+						<div class="timeline-date-wrap">
+							<time class="timeline-date">1670</time>
+						</div>
+						<div class="timeline-body">
+							<p>Muslim inhabitants on Senegal River revolt in resistance to slave trade.</p>
+						</div>
+					</div>
+				</li>
+				<li class="timeline-item">
+					<div class="timeline-marker" aria-hidden="true"></div>
+					<div class="timeline-card">
+						<div class="timeline-date-wrap">
+							<time class="timeline-date">1680</time>
+						</div>
+						<div class="timeline-body">
+							<p>Pueblos led by El Popé drive the Spanish from New Mexico; Spanish do not reconquer
+								Pueblos
+								for a dozen years.</p>
+						</div>
+					</div>
+				</li>
+			</ol>
+		</div>
+	</details>
+
+	<div class="content-additional_readings" role="region" aria-label="Additional Readings">
+		<div class="additional-readings-header">
+			<span class="readings-kicker"><i class="fas fa-book-reader" aria-hidden="true"></i> Bibliography</span>
+			<h3 class="readings-title">Additional Readings</h3>
+		</div>
 
 		<h3>For more on the peoples of the New World prior to contact with Europeans, see:</h3>
-		<p>Alvin F. Josephy, ed., <i>America in 1492: The World of the Indian Peoples before the Arrival of Columbus</i>
-			(1993); Roger G. Kennedy, <i>Hidden Cities: The Discovery and Loss of Ancient North American
-				Civilization</i> (1994); Shepard Krech, <i>The Ecological Indian: Myth and History</i> (1999); Timothy
-			R. Pauketat,<i> Cahokia: Ancient America's Great City on the Mississippi</i> (2009); and Daniel K. Richter,
-			<i>Facing East from Indian Country: A Native History of North America</i> (2001).</p>
+		<ul class="readings-list">
+			<li>Alvin F. Josephy, ed., <i>America in 1492: The World of the Indian Peoples before the Arrival of
+					Columbus</i> (1993)</li>
+			<li>Roger G. Kennedy, <i>Hidden Cities: The Discovery and Loss of Ancient North American Civilization</i>
+				(1994)</li>
+			<li>Shepard Krech, <i>The Ecological Indian: Myth and History</i> (1999)</li>
+			<li>Timothy R. Pauketat, <i>Cahokia: Ancient America's Great City on the Mississippi</i> (2009)</li>
+			<li>Daniel K. Richter, <i>Facing East from Indian Country: A Native History of North America</i> (2001)</li>
+		</ul>
 
 		<h3>For more on the European contexts for New World exploration and conquest, see:</h3>
-		<p>Nicholas P. Canny and Peter J. Marshall, eds., <i>The Oxford History of the British Empire, vol. I</i>
-			(1998); Norman Davies, <i>Europe: A History</i> (1996); Anthony Pagden, <i>European Encounters with the New
-				World: From Renaissance to Romanticism</i> (1993); Simon Schama, <i>The Embarrassment of Riches: An
-				Interpretation of Dutch Culture in the Golden Age</i> (1987); Stuart B. Schwartz, <i>All Can Be Saved:
-				Religious Tolerance and Salvation in the Iberian Atlantic World</i> (2009); David Underdown, <i>A
-				Freeborn People: Politics and the Nation in Seventeenth-Century England </i>(1996); and Keith Wrightson,
-			<i>Earthly Necessities: Economic Lives in Early Modern </i>(2001).</p>
+		<ul class="readings-list">
+			<li>Nicholas P. Canny and Peter J. Marshall, eds., <i>The Oxford History of the British Empire, vol. I</i>
+				(1998)</li>
+			<li>Norman Davies, <i>Europe: A History</i> (1996)</li>
+			<li>Anthony Pagden, <i>European Encounters with the New World: From Renaissance to Romanticism</i> (1993)
+			</li>
+			<li>Simon Schama, <i>The Embarrassment of Riches: An Interpretation of Dutch Culture in the Golden Age</i>
+				(1987)</li>
+			<li>Stuart B. Schwartz, <i>All Can Be Saved: Religious Tolerance and Salvation in the Iberian Atlantic
+					World</i> (2009)</li>
+			<li>David Underdown, <i>A Freeborn People: Politics and the Nation in Seventeenth-Century England</i> (1996)
+			</li>
+			<li>Keith Wrightson, <i>Earthly Necessities: Economic Lives in Early Modern</i> (2001)</li>
+		</ul>
 
 		<h3>For more on West African societies and the African slave trade, see:</h3>
-		<p>Bonbacar Barry, <i>Senegambia and the Atlantic Slave Trade</i> (1998); Robin Blackburn, <i>The Making of New
-				World Slavery: From the Baroque to the Modern, 1492–1800</i> (1997); Basil Davidson, <i>West Africa
-				before the Colonial Era: A History to 1850</i> (1998); David Brion Davis, <i>Challenging the Boundaries
-				of Slavery </i>(2003); David Eltis, <i>The Rise of African Slavery in the Americas</i> (2000); Herbert
-			S. Klein, <i>The Atlantic Slave Trade</i> (1999); Robin Law, <i>The Slave Coast of West Africa, 1550–1750:
-				The Impact of the Atlantic Slave Trade on an African Society</i> (1991); Patrick Manning, <i>Slavery and
-				African Life: Occidental, Oriental and African Slave Trades </i>(1990); Jennifer Morgan,<i> Laboring
-				Women: Reproduction and Gender in New World Slavery </i>(2011); Hugh Thomas, <i>The Slave Trade: The
-				History of the Atlantic Slave Trade, 1440–1870</i> (1997); and John Thornton, <i>Africa and Africans in
-				the Making of the Atlantic World, 1400–1680</i> (1992).</p>
+		<ul class="readings-list">
+			<li>Bonbacar Barry, <i>Senegambia and the Atlantic Slave Trade</i> (1998)</li>
+			<li>Robin Blackburn, <i>The Making of New World Slavery: From the Baroque to the Modern, 1492–1800</i>
+				(1997)</li>
+			<li>Basil Davidson, <i>West Africa before the Colonial Era: A History to 1850</i> (1998)</li>
+			<li>David Brion Davis, <i>Challenging the Boundaries of Slavery</i> (2003)</li>
+			<li>David Eltis, <i>The Rise of African Slavery in the Americas</i> (2000)</li>
+			<li>Herbert S. Klein, <i>The Atlantic Slave Trade</i> (1999)</li>
+			<li>Robin Law, <i>The Slave Coast of West Africa, 1550–1750: The Impact of the Atlantic Slave Trade on an
+					African Society</i> (1991)</li>
+			<li>Patrick Manning, <i>Slavery and African Life: Occidental, Oriental and African Slave Trades</i> (1990)
+			</li>
+			<li>Jennifer Morgan, <i>Laboring Women: Reproduction and Gender in New World Slavery</i> (2011)</li>
+			<li>Hugh Thomas, <i>The Slave Trade: The History of the Atlantic Slave Trade, 1440–1870</i> (1997)</li>
+			<li>John Thornton, <i>Africa and Africans in the Making of the Atlantic World, 1400–1680</i> (1992)</li>
+		</ul>
 
 		<h3>For more on the early conquest and colonization of the Americas, see:</h3>
-		<p>Joyce E. Chaplin, <i>Subject Matter: Technology, the Body, and Science on the Anglo-American Frontier,
-				1500–1676 </i>(2001), William Cronon, <i>Changes in the Land: Indians, Colonists, and the Ecology of New
-				England</i> (2003); Thomas D. Hall, <i>Social Change in the Southwest, 1350–1880</i> (1989); Karen
-			Ordahl Kupperman, <i>Roanoke: The Abandoned Colony</i> (1984); D. W. Meinig, <i>The Shaping of America: A
-				Geographical Perspective on 500 Years of History, Vol. 1, Atlantic America, 1492–1800</i> (1986); Marcy
-			Norton, <i>Sacred Gifts, Profane Pleasures: A History of Tobacco and Chocolate in the Atlantic World
-				(</i>2010); Patricia Seed, <i>Ceremonies of Possession in Europe’s Conquest of the New World, 1492–1640
-			</i>(1995); and David J. Weber, <i>The Spanish Frontier in North America</i> (1992).</p>
+		<ul class="readings-list">
+			<li>Joyce E. Chaplin, <i>Subject Matter: Technology, the Body, and Science on the Anglo-American Frontier,
+					1500–1676</i> (2001)</li>
+			<li>William Cronon, <i>Changes in the Land: Indians, Colonists, and the Ecology of New England</i> (2003)
+			</li>
+			<li>Thomas D. Hall, <i>Social Change in the Southwest, 1350–1880</i> (1989)</li>
+			<li>Karen Ordahl Kupperman, <i>Roanoke: The Abandoned Colony</i> (1984)</li>
+			<li>D. W. Meinig, <i>The Shaping of America: A Geographical Perspective on 500 Years of History, Vol. 1,
+					Atlantic America, 1492–1800</i> (1986)</li>
+			<li>Marcy Norton, <i>Sacred Gifts, Profane Pleasures: A History of Tobacco and Chocolate in the Atlantic
+					World</i> (2010)</li>
+			<li>Patricia Seed, <i>Ceremonies of Possession in Europe’s Conquest of the New World, 1492–1640</i> (1995)
+			</li>
+			<li>David J. Weber, <i>The Spanish Frontier in North America</i> (1992)</li>
+		</ul>
 
 		<h3>For more on the English colonial experience, see:</h3>
-		<p>Kathleen Brown, <i>Good Wives, Nasty Wenches, and Anxious Patriarchs: Gender, Race, and Power in Colonial
-				Virginia</i> (2012); David Cressy, <i>Coming Over: Migration and Communication between England and New
-				England in the Seventeenth Century</i> (1987); Philip D. Curtin, <i>The Rise and Fall of the Plantation
-				Complex: Essays in Atlantic History</i>, 2nd edition (1998); David Hackett Fischer, <i>Albion’s Seed:
-				Four British Folkways in America </i>(1989); James Horn, <i>A Land As God Made It: Jamestown and the
-				Birth of America </i>(2005); James Horn, <i>Adapting to a New World: English Society in the
-				Seventeenth-Century Chesapeake</i> (1994); Edmund S. Morgan, <i>American Slavery, American Freedom: The
-				Ordeal of Colonial Virginia </i>(1975).</p>
+		<ul class="readings-list">
+			<li>Kathleen Brown, <i>Good Wives, Nasty Wenches, and Anxious Patriarchs: Gender, Race, and Power in
+					Colonial Virginia</i> (2012)</li>
+			<li>David Cressy, <i>Coming Over: Migration and Communication between England and New England in the
+					Seventeenth Century</i> (1987)</li>
+			<li>Philip D. Curtin, <i>The Rise and Fall of the Plantation Complex: Essays in Atlantic History</i>, 2nd
+				edition (1998)</li>
+			<li>David Hackett Fischer, <i>Albion’s Seed: Four British Folkways in America</i> (1989)</li>
+			<li>James Horn, <i>A Land As God Made It: Jamestown and the Birth of America</i> (2005)</li>
+			<li>James Horn, <i>Adapting to a New World: English Society in the Seventeenth-Century Chesapeake</i> (1994)
+			</li>
+			<li>Edmund S. Morgan, <i>American Slavery, American Freedom: The Ordeal of Colonial Virginia</i> (1975)</li>
+		</ul>
 
 		<h3>For more on responses by Native Americans to European contact, see:</h3>
-		<p>Virginia DeJohn Anderson, <i>Creatures of Empire: How Domestic Animals Transformed Early America </i>(2004);
-			Lisa Brooks, <i>Our Beloved Kin: A New History of King Philip's War</i> (2018); Kristina Bross, <i>Dry Bones
-				and Indian Sermons: Praying Indians in Colonial America</i> (2004); Colin G. Calloway, <i>New Worlds for
-				All: Indians, Europeans, and the Remaking of Early America</i> (1997); Allan Greer, <i>Property and
-				Dispossession: Natives, Empires and Land in Early Modern North America</i> (2017); Paul Kelton,
-			<i>Epidemics and Enslavement: Biological Catastrophe in the Native Southeast, 1492-1715</i> (2008); Karen
-			Ordahl Kupperman, <i>Indians and English: Facing Off in Early America </i>(2000); Jill Lepore, <i>The Name
-				of War: King Philip's War and the Origins of American Identity</i> (1998); Neal Salisbury, <i>Manitou
-				and Providence: Indians, Europeans, and the Making of New England, 1500–1643</i> (1982); and Richard
-			White, <i>The Middle Ground: Indians, Empires, and Republics in the Great Lakes Region, 1650–1815
-			</i>(1991).</p>
+		<ul class="readings-list">
+			<li>Virginia DeJohn Anderson, <i>Creatures of Empire: How Domestic Animals Transformed Early America</i>
+				(2004)</li>
+			<li>Lisa Brooks, <i>Our Beloved Kin: A New History of King Philip's War</i> (2018)</li>
+			<li>Kristina Bross, <i>Dry Bones and Indian Sermons: Praying Indians in Colonial America</i> (2004)</li>
+			<li>Colin G. Calloway, <i>New Worlds for All: Indians, Europeans, and the Remaking of Early America</i>
+				(1997)</li>
+			<li>Allan Greer, <i>Property and Dispossession: Natives, Empires and Land in Early Modern North America</i>
+				(2017)</li>
+			<li>Paul Kelton, <i>Epidemics and Enslavement: Biological Catastrophe in the Native Southeast, 1492-1715</i>
+				(2008)</li>
+			<li>Karen Ordahl Kupperman, <i>Indians and English: Facing Off in Early America</i> (2000)</li>
+			<li>Jill Lepore, <i>The Name of War: King Philip's War and the Origins of American Identity</i> (1998)</li>
+			<li>Neal Salisbury, <i>Manitou and Providence: Indians, Europeans, and the Making of New England,
+					1500–1643</i> (1982)</li>
+			<li>Richard White, <i>The Middle Ground: Indians, Empires, and Republics in the Great Lakes Region,
+					1650–1815</i> (1991)</li>
+		</ul>
 	</div>
 </div>
