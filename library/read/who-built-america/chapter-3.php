@@ -1027,8 +1027,6 @@
 	<details class="content-timeline timeline-collapsible" open role="region" aria-label="Historical Timeline">
 		<summary class="timeline-summary">
 			<div class="timeline-header-content">
-				<span class="timeline-kicker"><i class="fas fa-history" aria-hidden="true"></i> Historical
-					Chronology</span>
 				<h3 class="timeline-title">Key Events Timeline</h3>
 				<p class="timeline-subtitle">Major turning points and milestones from early migrations through 1680</p>
 			</div>
@@ -1507,105 +1505,79 @@
 
 	<div class="content-additional_readings" role="region" aria-label="Additional Readings">
 		<div class="additional-readings-header">
-			<span class="readings-kicker"><i class="fas fa-book-reader" aria-hidden="true"></i> Bibliography</span>
 			<h3 class="readings-title">Additional Readings</h3>
 		</div>
 
 		<h3>For more on the peoples of the New World prior to contact with Europeans, see:</h3>
 		<ul class="readings-list">
-			<li>Alvin F. Josephy, ed., <i>America in 1492: The World of the Indian Peoples before the Arrival of
-					Columbus</i> (1993)</li>
-			<li>Roger G. Kennedy, <i>Hidden Cities: The Discovery and Loss of Ancient North American Civilization</i>
-				(1994)</li>
-			<li>Shepard Krech, <i>The Ecological Indian: Myth and History</i> (1999)</li>
-			<li>Timothy R. Pauketat, <i>Cahokia: Ancient America's Great City on the Mississippi</i> (2009)</li>
-			<li>Daniel K. Richter, <i>Facing East from Indian Country: A Native History of North America</i> (2001)</li>
+			<li>1) Alvin F. Josephy, ed., <i>America in 1492: The World of the Indian Peoples before the Arrival of Columbus</i> (1993)</li>
+			<li>2) Roger G. Kennedy, <i>Hidden Cities: The Discovery and Loss of Ancient North American Civilization</i> (1994)</li>
+			<li>3) Shepard Krech, <i>The Ecological Indian: Myth and History</i> (1999)</li>
+			<li>4) Timothy R. Pauketat, <i>Cahokia: Ancient America's Great City on the Mississippi</i> (2009)</li>
+			<li>5) Daniel K. Richter, <i>Facing East from Indian Country: A Native History of North America</i> (2001)</li>
 		</ul>
 
 		<h3>For more on the European contexts for New World exploration and conquest, see:</h3>
 		<ul class="readings-list">
-			<li>Nicholas P. Canny and Peter J. Marshall, eds., <i>The Oxford History of the British Empire, vol. I</i>
-				(1998)</li>
-			<li>Norman Davies, <i>Europe: A History</i> (1996)</li>
-			<li>Anthony Pagden, <i>European Encounters with the New World: From Renaissance to Romanticism</i> (1993)
-			</li>
-			<li>Simon Schama, <i>The Embarrassment of Riches: An Interpretation of Dutch Culture in the Golden Age</i>
-				(1987)</li>
-			<li>Stuart B. Schwartz, <i>All Can Be Saved: Religious Tolerance and Salvation in the Iberian Atlantic
-					World</i> (2009)</li>
-			<li>David Underdown, <i>A Freeborn People: Politics and the Nation in Seventeenth-Century England</i> (1996)
-			</li>
-			<li>Keith Wrightson, <i>Earthly Necessities: Economic Lives in Early Modern</i> (2001)</li>
+			<li>1) Nicholas P. Canny and Peter J. Marshall, eds., <i>The Oxford History of the British Empire, vol. I</i> (1998)</li>
+			<li>2) Norman Davies, <i>Europe: A History</i> (1996)</li>
+			<li>3) Anthony Pagden, <i>European Encounters with the New World: From Renaissance to Romanticism</i> (1993)</li>
+			<li>4) Simon Schama, <i>The Embarrassment of Riches: An Interpretation of Dutch Culture in the Golden Age</i> (1987)</li>
+			<li>5) Stuart B. Schwartz, <i>All Can Be Saved: Religious Tolerance and Salvation in the Iberian Atlantic World</i> (2009)</li>
+			<li>6) David Underdown, <i>A Freeborn People: Politics and the Nation in Seventeenth-Century England</i> (1996)</li>
+			<li>7) Keith Wrightson, <i>Earthly Necessities: Economic Lives in Early Modern</i> (2001)</li>
 		</ul>
 
 		<h3>For more on West African societies and the African slave trade, see:</h3>
 		<ul class="readings-list">
-			<li>Bonbacar Barry, <i>Senegambia and the Atlantic Slave Trade</i> (1998)</li>
-			<li>Robin Blackburn, <i>The Making of New World Slavery: From the Baroque to the Modern, 1492–1800</i>
-				(1997)</li>
-			<li>Basil Davidson, <i>West Africa before the Colonial Era: A History to 1850</i> (1998)</li>
-			<li>David Brion Davis, <i>Challenging the Boundaries of Slavery</i> (2003)</li>
-			<li>David Eltis, <i>The Rise of African Slavery in the Americas</i> (2000)</li>
-			<li>Herbert S. Klein, <i>The Atlantic Slave Trade</i> (1999)</li>
-			<li>Robin Law, <i>The Slave Coast of West Africa, 1550–1750: The Impact of the Atlantic Slave Trade on an
-					African Society</i> (1991)</li>
-			<li>Patrick Manning, <i>Slavery and African Life: Occidental, Oriental and African Slave Trades</i> (1990)
-			</li>
-			<li>Jennifer Morgan, <i>Laboring Women: Reproduction and Gender in New World Slavery</i> (2011)</li>
-			<li>Hugh Thomas, <i>The Slave Trade: The History of the Atlantic Slave Trade, 1440–1870</i> (1997)</li>
-			<li>John Thornton, <i>Africa and Africans in the Making of the Atlantic World, 1400–1680</i> (1992)</li>
+			<li>1) Bonbacar Barry, <i>Senegambia and the Atlantic Slave Trade</i> (1998)</li>
+			<li>2) Robin Blackburn, <i>The Making of New World Slavery: From the Baroque to the Modern, 1492–1800</i> (1997)</li>
+			<li>3) Basil Davidson, <i>West Africa before the Colonial Era: A History to 1850</i> (1998)</li>
+			<li>4) David Brion Davis, <i>Challenging the Boundaries of Slavery</i> (2003)</li>
+			<li>5) David Eltis, <i>The Rise of African Slavery in the Americas</i> (2000)</li>
+			<li>6) Herbert S. Klein, <i>The Atlantic Slave Trade</i> (1999)</li>
+			<li>7) Robin Law, <i>The Slave Coast of West Africa, 1550–1750: The Impact of the Atlantic Slave Trade on an African Society</i> (1991)</li>
+			<li>8) Patrick Manning, <i>Slavery and African Life: Occidental, Oriental and African Slave Trades</i> (1990) </li>
+			<li>9) Jennifer Morgan, <i>Laboring Women: Reproduction and Gender in New World Slavery</i> (2011)</li>
+			<li>10) Hugh Thomas, <i>The Slave Trade: The History of the Atlantic Slave Trade, 1440–1870</i> (1997)</li>
+			<li>11) John Thornton, <i>Africa and Africans in the Making of the Atlantic World, 1400–1680</i> (1992)</li>
 		</ul>
 
 		<h3>For more on the early conquest and colonization of the Americas, see:</h3>
 		<ul class="readings-list">
-			<li>Joyce E. Chaplin, <i>Subject Matter: Technology, the Body, and Science on the Anglo-American Frontier,
-					1500–1676</i> (2001)</li>
-			<li>William Cronon, <i>Changes in the Land: Indians, Colonists, and the Ecology of New England</i> (2003)
-			</li>
-			<li>Thomas D. Hall, <i>Social Change in the Southwest, 1350–1880</i> (1989)</li>
-			<li>Karen Ordahl Kupperman, <i>Roanoke: The Abandoned Colony</i> (1984)</li>
-			<li>D. W. Meinig, <i>The Shaping of America: A Geographical Perspective on 500 Years of History, Vol. 1,
-					Atlantic America, 1492–1800</i> (1986)</li>
-			<li>Marcy Norton, <i>Sacred Gifts, Profane Pleasures: A History of Tobacco and Chocolate in the Atlantic
-					World</i> (2010)</li>
-			<li>Patricia Seed, <i>Ceremonies of Possession in Europe’s Conquest of the New World, 1492–1640</i> (1995)
-			</li>
-			<li>David J. Weber, <i>The Spanish Frontier in North America</i> (1992)</li>
+			<li>1) Joyce E. Chaplin, <i>Subject Matter: Technology, the Body, and Science on the Anglo-American Frontier, 1500–1676</i> (2001)</li>
+			<li>2) William Cronon, <i>Changes in the Land: Indians, Colonists, and the Ecology of New England</i> (2003)</li>
+			<li>3) Thomas D. Hall, <i>Social Change in the Southwest, 1350–1880</i> (1989)</li>
+			<li>4) Karen Ordahl Kupperman, <i>Roanoke: The Abandoned Colony</i> (1984)</li>
+			<li>5) D. W. Meinig, <i>The Shaping of America: A Geographical Perspective on 500 Years of History, Vol. 1, Atlantic America, 1492–1800</i> (1986)</li>
+			<li>6) Marcy Norton, <i>Sacred Gifts, Profane Pleasures: A History of Tobacco and Chocolate in the Atlantic World</i> (2010)</li>
+			<li>7) Patricia Seed, <i>Ceremonies of Possession in Europe’s Conquest of the New World, 1492–1640</i> (1995)</li>
+			<li>8) David J. Weber, <i>The Spanish Frontier in North America</i> (1992)</li>
 		</ul>
 
 		<h3>For more on the English colonial experience, see:</h3>
 		<ul class="readings-list">
-			<li>Kathleen Brown, <i>Good Wives, Nasty Wenches, and Anxious Patriarchs: Gender, Race, and Power in
-					Colonial Virginia</i> (2012)</li>
-			<li>David Cressy, <i>Coming Over: Migration and Communication between England and New England in the
-					Seventeenth Century</i> (1987)</li>
-			<li>Philip D. Curtin, <i>The Rise and Fall of the Plantation Complex: Essays in Atlantic History</i>, 2nd
-				edition (1998)</li>
-			<li>David Hackett Fischer, <i>Albion’s Seed: Four British Folkways in America</i> (1989)</li>
-			<li>James Horn, <i>A Land As God Made It: Jamestown and the Birth of America</i> (2005)</li>
-			<li>James Horn, <i>Adapting to a New World: English Society in the Seventeenth-Century Chesapeake</i> (1994)
-			</li>
-			<li>Edmund S. Morgan, <i>American Slavery, American Freedom: The Ordeal of Colonial Virginia</i> (1975)</li>
+			<li>1) Kathleen Brown, <i>Good Wives, Nasty Wenches, and Anxious Patriarchs: Gender, Race, and Power in Colonial Virginia</i> (2012)</li>
+			<li>2) David Cressy, <i>Coming Over: Migration and Communication between England and New England in the Seventeenth Century</i> (1987)</li>
+			<li>3) Philip D. Curtin, <i>The Rise and Fall of the Plantation Complex: Essays in Atlantic History</i>, 2nd edition (1998)</li>
+			<li>4) David Hackett Fischer, <i>Albion’s Seed: Four British Folkways in America</i> (1989)</li>
+			<li>5) James Horn, <i>A Land As God Made It: Jamestown and the Birth of America</i> (2005)</li>
+			<li>6) James Horn, <i>Adapting to a New World: English Society in the Seventeenth-Century Chesapeake</i> (1994)</li>
+			<li>7) Edmund S. Morgan, <i>American Slavery, American Freedom: The Ordeal of Colonial Virginia</i> (1975)</li>
 		</ul>
 
 		<h3>For more on responses by Native Americans to European contact, see:</h3>
 		<ul class="readings-list">
-			<li>Virginia DeJohn Anderson, <i>Creatures of Empire: How Domestic Animals Transformed Early America</i>
-				(2004)</li>
-			<li>Lisa Brooks, <i>Our Beloved Kin: A New History of King Philip's War</i> (2018)</li>
-			<li>Kristina Bross, <i>Dry Bones and Indian Sermons: Praying Indians in Colonial America</i> (2004)</li>
-			<li>Colin G. Calloway, <i>New Worlds for All: Indians, Europeans, and the Remaking of Early America</i>
-				(1997)</li>
-			<li>Allan Greer, <i>Property and Dispossession: Natives, Empires and Land in Early Modern North America</i>
-				(2017)</li>
-			<li>Paul Kelton, <i>Epidemics and Enslavement: Biological Catastrophe in the Native Southeast, 1492-1715</i>
-				(2008)</li>
-			<li>Karen Ordahl Kupperman, <i>Indians and English: Facing Off in Early America</i> (2000)</li>
-			<li>Jill Lepore, <i>The Name of War: King Philip's War and the Origins of American Identity</i> (1998)</li>
-			<li>Neal Salisbury, <i>Manitou and Providence: Indians, Europeans, and the Making of New England,
-					1500–1643</i> (1982)</li>
-			<li>Richard White, <i>The Middle Ground: Indians, Empires, and Republics in the Great Lakes Region,
-					1650–1815</i> (1991)</li>
+			<li>1) Virginia DeJohn Anderson, <i>Creatures of Empire: How Domestic Animals Transformed Early America</i> (2004)</li>
+			<li>2) Lisa Brooks, <i>Our Beloved Kin: A New History of King Philip's War</i> (2018)</li>
+			<li>3) Kristina Bross, <i>Dry Bones and Indian Sermons: Praying Indians in Colonial America</i> (2004)</li>
+			<li>4) Colin G. Calloway, <i>New Worlds for All: Indians, Europeans, and the Remaking of Early America</i> (1997)</li>
+			<li>5) Allan Greer, <i>Property and Dispossession: Natives, Empires and Land in Early Modern North America</i> (2017)</li>
+			<li>6) Paul Kelton, <i>Epidemics and Enslavement: Biological Catastrophe in the Native Southeast, 1492-1715</i> (2008)</li>
+			<li>7) Karen Ordahl Kupperman, <i>Indians and English: Facing Off in Early America</i> (2000)</li>
+			<li>8) Jill Lepore, <i>The Name of War: King Philip's War and the Origins of American Identity</i> (1998)</li>
+			<li>9) Neal Salisbury, <i>Manitou and Providence: Indians, Europeans, and the Making of New England, 1500–1643</i> (1982)</li>
+			<li>10) Richard White, <i>The Middle Ground: Indians, Empires, and Republics in the Great Lakes Region, 1650–1815</i> (1991)</li>
 		</ul>
 	</div>
 </div>
