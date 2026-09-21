@@ -24,51 +24,5 @@
       "word": "Interment",
       "definition": "The burial of a corpse in a grave or tomb, typically with funeral rites."
     }
-  ],
-  "chapter-1": [
-    {
-      "question": "What country and city does Victor Frankenstein identify as his place of birth and ancestry?",
-      "options": [
-        "London, England",
-        "Geneva, Switzerland",
-        "Paris, France",
-        "Naples, Italy"
-      ],
-      "correctIndex": 1,
-      "explanation": "Victor begins his narrative stating: 'I am by birth a Genevese, and my family is one of the most distinguished of that republic.'"
-    },
-    {
-      "question": "How did Victor's father, Alphonse Frankenstein, treat his impoverished friend Beaufort?",
-      "options": [
-        "He ignored him after Beaufort lost his fortune.",
-        "He sought him out with genuine benevolence, assisted his burial, and took his orphaned daughter Caroline under protection.",
-        "He lent him money with strict interest terms.",
-        "He banished Beaufort from Geneva."
-      ],
-      "correctIndex": 1,
-      "explanation": "Alphonse Frankenstein was grieved by his friend Beaufort's sorrow, searched for his retreat, paid his debts after his death, and married his daughter Caroline Beaufort two years later."
-    },
-    {
-      "question": "How did Elizabeth Lavenza come to join the Frankenstein household?",
-      "options": [
-        "She was hired as a nursemaid for Victor.",
-        "She was Caroline Beaufort's younger sister.",
-        "Victor's mother Caroline discovered her living in poverty with an Italian peasant family and adopted her.",
-        "She fled Geneva during a war."
-      ],
-      "correctIndex": 2,
-      "explanation": "Caroline Frankenstein visited a poor cottage in Italy where Elizabeth, the daughter of a Milanese nobleman and a German mother, was living in destitute foster care, and chose to adopt her as a beloved child."
-    },
-    {
-      "question": "How did Victor perceive Elizabeth from their early childhood together?",
-      "options": [
-        "As a distant cousin he competed against in school.",
-        "As a sister, playmate, and a precious gift entrusted specifically to his care.",
-        "As an annoying interloper who took his parents' attention.",
-        "As a strictly scientific partner."
-      ],
-      "correctIndex": 1,
-      "explanation": "Victor looked upon Elizabeth as 'mine—mine to protect, love, and cherish', Regarding her as his dearest companion and sister."
-    }
   ]
 }
