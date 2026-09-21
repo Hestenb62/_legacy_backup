@@ -14,6 +14,7 @@
 @import url('./reader/read-responsive-breakpoints-for-rea.css');
 @import url('./reader/read-vocab-tooltip.css');
 @import url('./reader/read-math-reference.css');
+@import url('./reader/read-timeline.css');
 
 /* Inline Page Markers for Scroll Mode */
 .inline-page-marker {

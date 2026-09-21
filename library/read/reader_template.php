@@ -908,6 +908,7 @@ body.zen-mode {
 <script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/reader/read-tracker.js') : '../../assets/js/reader/read-tracker.js' ?>" defer></script>
 <script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/reader/read-vocab-tooltip.js') : '../../assets/js/reader/read-vocab-tooltip.js' ?>" defer></script>
 <script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/components/sticky-reading-bar.js') : '../../assets/js/components/sticky-reading-bar.js' ?>" defer></script>
+<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/reader/read-timeline.js') : '../../assets/js/reader/read-timeline.js' ?>" defer></script>
 <script>
     // =========================================================================
     // Universal Math Reference Codex: Synoptic Table Handlers
