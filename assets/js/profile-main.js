@@ -690,6 +690,33 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.classList.add('modal-open');
     }
 
+    function closeStudentReportCardModal() {
+        const modal = document.getElementById('student-report-card-modal');
+        if (!modal) return;
+        modal.classList.add('hidden');
+        modal.style.display = 'none';
+        document.body.classList.remove('modal-open');
+    }
+
+    // Modal dismiss on Escape key and backdrop click
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            const modal = document.getElementById('student-report-card-modal');
+            if (modal && !modal.classList.contains('hidden') && modal.style.display !== 'none') {
+                closeStudentReportCardModal();
+            }
+        }
+    });
+
+    const reportCardModalEl = document.getElementById('student-report-card-modal');
+    if (reportCardModalEl) {
+        reportCardModalEl.addEventListener('click', (e) => {
+            if (e.target === reportCardModalEl) {
+                closeStudentReportCardModal();
+            }
+        });
+    }
+
     function printStudentTranscript() {
         document.body.classList.add('printing-transcript');
         window.print();

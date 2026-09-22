@@ -281,12 +281,17 @@ include ABSPATH . '../src/header.php';
                     </p>
                 </div>
                 
-                <div class="standards-filter-pills" id="standards-subject-filters">
-                    <button type="button" class="std-filter-pill active" data-subject="All">All Subjects</button>
-                    <button type="button" class="std-filter-pill" data-subject="Math">Math</button>
-                    <button type="button" class="std-filter-pill" data-subject="Language Arts">ELA</button>
-                    <button type="button" class="std-filter-pill" data-subject="Science">Science</button>
-                    <button type="button" class="std-filter-pill" data-subject="Social Studies">Social Studies</button>
+                <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
+                    <div class="standards-filter-pills" id="standards-subject-filters">
+                        <button type="button" class="std-filter-pill active" data-subject="All">All Subjects</button>
+                        <button type="button" class="std-filter-pill" data-subject="Math">Math</button>
+                        <button type="button" class="std-filter-pill" data-subject="Language Arts">ELA</button>
+                        <button type="button" class="std-filter-pill" data-subject="Science">Science</button>
+                        <button type="button" class="std-filter-pill" data-subject="Social Studies">Social Studies</button>
+                    </div>
+                    <button type="button" onclick="window.openStudentReportCardModal && window.openStudentReportCardModal()" class="profile-btn-primary" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 1rem; border-radius: 9999px; font-size: 0.825rem; font-weight: 800; cursor: pointer;" aria-label="View and print official academic transcript">
+                        <i class="fas fa-file-invoice" aria-hidden="true"></i> View Transcript
+                    </button>
                 </div>
             </div>
 
