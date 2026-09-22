@@ -109,7 +109,7 @@
                 <div class="acc-feature-row">
                     <div class="acc-feature-info">
                         <h4><i class="fas fa-plus-minus" style="color: #10b981;"></i> Dyscalculia Math Operator Highlighting</h4>
-                        <p>Colorize arithmetic operations ($+$, $-$, $\times$, $\div$, $=$) to prevent symbol confusion.</p>
+                        <p>Colorize arithmetic operations (+, &minus;, &times;, &divide;, =) to prevent symbol confusion.</p>
                     </div>
                     <label class="acc-switch">
                         <input type="checkbox" id="acc-toggle-dyscalculia" onchange="window.accommodationEngine.profile.dyscalculiaEnabled = this.checked; window.accommodationEngine.saveProfile();">

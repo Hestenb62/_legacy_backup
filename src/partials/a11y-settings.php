@@ -20,8 +20,8 @@
             </div>
             
             <div class="settings-section">
-                <h3 class="settings-section-title">Font</h3>
-                <select id="panel-font" onchange="updateGlobalSetting('fontFamily', this.value)" class="settings-select">
+                <label for="panel-font" class="settings-section-title" style="display:block;">Font</label>
+                <select id="panel-font" name="panel-font" aria-label="Font family selection" onchange="updateGlobalSetting('fontFamily', this.value)" class="settings-select">
                     <option value="Outfit">Outfit (Modern)</option>
                     <option value="Inter">Inter (Standard)</option>
                     <option value="Open Dyslexic">Open Dyslexic</option>
@@ -33,33 +33,33 @@
             </div>
 
             <div class="settings-section">
-                <label class="settings-label">Text Size</label>
+                <label for="panel-size" class="settings-label">Text Size</label>
                 <div class="settings-size-actions">
-                    <button class="settings-action-btn" onclick="const s = document.getElementById('panel-size'); s.value = Math.max(0.8, parseFloat(s.value) - 0.1); updateGlobalSetting('fontSize', s.value)"><i class="fas fa-search-minus"></i> A-</button>
-                    <button class="settings-action-btn" onclick="const s = document.getElementById('panel-size'); s.value = Math.min(2.0, parseFloat(s.value) + 0.1); updateGlobalSetting('fontSize', s.value)"><i class="fas fa-search-plus"></i> A+</button>
+                    <button type="button" class="settings-action-btn" onclick="const s = document.getElementById('panel-size'); s.value = Math.max(0.8, parseFloat(s.value) - 0.1); updateGlobalSetting('fontSize', s.value)"><i class="fas fa-search-minus"></i> A-</button>
+                    <button type="button" class="settings-action-btn" onclick="const s = document.getElementById('panel-size'); s.value = Math.min(2.0, parseFloat(s.value) + 0.1); updateGlobalSetting('fontSize', s.value)"><i class="fas fa-search-plus"></i> A+</button>
                 </div>
-                <input type="range" id="panel-size" class="settings-range" min="0.8" max="2.0" step="0.1" oninput="updateGlobalSetting('fontSize', this.value)">
+                <input type="range" id="panel-size" name="panel-size" aria-label="Text Size" class="settings-range" min="0.8" max="2.0" step="0.1" oninput="updateGlobalSetting('fontSize', this.value)">
             </div>
 
             <div class="settings-section">
-                <label class="settings-label">Line Height</label>
-                <input type="range" id="panel-line" class="settings-range" min="1.0" max="2.5" step="0.1" oninput="updateGlobalSetting('lineHeight', this.value)">
+                <label for="panel-line" class="settings-label">Line Height</label>
+                <input type="range" id="panel-line" name="panel-line" aria-label="Line Height" class="settings-range" min="1.0" max="2.5" step="0.1" oninput="updateGlobalSetting('lineHeight', this.value)">
             </div>
             <div class="settings-section">
-                <label class="settings-label">Letter Spacing</label>
-                <input type="range" id="panel-letter-spacing" class="settings-range" min="-0.05" max="0.5" step="0.05" oninput="updateGlobalSetting('letterSpacing', this.value)">
+                <label for="panel-letter-spacing" class="settings-label">Letter Spacing</label>
+                <input type="range" id="panel-letter-spacing" name="panel-letter-spacing" aria-label="Letter Spacing" class="settings-range" min="-0.05" max="0.5" step="0.05" oninput="updateGlobalSetting('letterSpacing', this.value)">
             </div>
             <div class="settings-section">
-                <label class="settings-label">Word Spacing</label>
-                <input type="range" id="panel-word-spacing" class="settings-range" min="-0.1" max="1.0" step="0.1" oninput="updateGlobalSetting('wordSpacing', this.value)">
+                <label for="panel-word-spacing" class="settings-label">Word Spacing</label>
+                <input type="range" id="panel-word-spacing" name="panel-word-spacing" aria-label="Word Spacing" class="settings-range" min="-0.1" max="1.0" step="0.1" oninput="updateGlobalSetting('wordSpacing', this.value)">
             </div>
             <div class="settings-section">
-                <label class="settings-label">Saturation</label>
-                <input type="range" id="panel-saturation" class="settings-range" min="0" max="200" step="10" oninput="updateGlobalSetting('saturation', this.value)">
+                <label for="panel-saturation" class="settings-label">Saturation</label>
+                <input type="range" id="panel-saturation" name="panel-saturation" aria-label="Saturation" class="settings-range" min="0" max="200" step="10" oninput="updateGlobalSetting('saturation', this.value)">
             </div>
             <div class="settings-section">
-                <label class="settings-label">Reading Mask Opacity</label>
-                <input type="range" id="panel-mask-opacity" class="settings-range" min="0.1" max="0.95" step="0.05" oninput="updateGlobalSetting('maskOpacity', this.value)">
+                <label for="panel-mask-opacity" class="settings-label">Reading Mask Opacity</label>
+                <input type="range" id="panel-mask-opacity" name="panel-mask-opacity" aria-label="Reading Mask Opacity" class="settings-range" min="0.1" max="0.95" step="0.05" oninput="updateGlobalSetting('maskOpacity', this.value)">
             </div>
 
             <div class="settings-section" id="panel-ruler-controls">
@@ -69,13 +69,13 @@
                     <button type="button" class="settings-action-btn" onclick="updateGlobalSetting('rulerHeight', 65)" title="2 Lines Medium (65px)" aria-label="2 Lines Medium">2 Lines</button>
                     <button type="button" class="settings-action-btn" onclick="updateGlobalSetting('rulerHeight', 95)" title="3 Lines Broad (95px)" aria-label="3 Lines Broad">3 Lines</button>
                 </div>
-                <label class="settings-label">Ruler Backdrop Dimming</label>
-                <input type="range" id="panel-ruler-dim" class="settings-range" min="0.1" max="0.85" step="0.05" oninput="updateGlobalSetting('rulerDimOpacity', this.value)">
+                <label for="panel-ruler-dim" class="settings-label">Ruler Backdrop Dimming</label>
+                <input type="range" id="panel-ruler-dim" name="panel-ruler-dim" aria-label="Ruler Backdrop Dimming" class="settings-range" min="0.1" max="0.85" step="0.05" oninput="updateGlobalSetting('rulerDimOpacity', this.value)">
             </div>
             
             <div class="settings-section">
-                <h3 class="settings-section-title">Color Overlay</h3>
-                <select id="panel-color-overlay" onchange="updateGlobalSetting('colorOverlay', this.value)" class="settings-select">
+                <label for="panel-color-overlay" class="settings-section-title" style="display:block;">Color Overlay</label>
+                <select id="panel-color-overlay" name="panel-color-overlay" aria-label="Color overlay selection" onchange="updateGlobalSetting('colorOverlay', this.value)" class="settings-select">
                     <option value="none">None</option>
                     <option value="rgba(255, 255, 0, 0.15)">Pale Yellow</option>
                     <option value="rgba(173, 216, 230, 0.15)">Pale Blue</option>

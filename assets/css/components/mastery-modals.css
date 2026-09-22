@@ -29,18 +29,31 @@
   display: inline-flex;
   align-items: center;
   gap: 0.25rem;
-  font-size: 0.625rem;
-  font-weight: 700;
+  font-size: 0.6875rem;
+  font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--color-primary, #6366f1);
+  color: var(--color-primary-hover, #4338ca);
   margin-top: 0.375rem;
-  opacity: 0.85;
-  transition: opacity 0.2s, transform 0.2s;
+  opacity: 1;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.stat-action-hint-emerald {
+  color: #047857;
+}
+
+.dark .stat-action-hint,
+.midnight .stat-action-hint {
+  color: #a5b4fc;
+}
+
+.dark .stat-action-hint-emerald,
+.midnight .stat-action-hint-emerald {
+  color: #34d399;
 }
 
 .stats-card-clickable:hover .stat-action-hint {
-  opacity: 1;
   transform: translateX(2px);
 }
 

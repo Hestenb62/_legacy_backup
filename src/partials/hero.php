@@ -63,7 +63,7 @@
                     class="stats-card glass-panel stats-card-clickable" 
                     onclick="window.openCurriculumMasteryModal ? window.openCurriculumMasteryModal() : null" 
                     aria-haspopup="dialog"
-                    aria-label="View Curriculum Mastery details breakdown"
+                    aria-label="Curriculum Mastery, View Breakdown"
                     title="Click to view full grade-by-grade curriculum mastery breakdown">
                 <span class="stat-value text-primary" id="user-progress-stat">0%</span>
                 <span class="stat-label">Curriculum Mastery</span>
@@ -82,16 +82,16 @@
             <!-- 3. Skills Mastered Counter (Clickable Breakdown Modal) -->
             <button type="button" 
                     class="stats-card glass-panel stats-card-clickable" 
-                    onclick="window.openSkillsMasteredModal ? window.openSkillsMasteredModal() : null"
+                    onclick="window.openSkillsMasteredModal ? window.openSkillsMasteredModal() : null" 
                     aria-haspopup="dialog"
-                    aria-label="View Skills Mastered details breakdown"
+                    aria-label="Skills Mastered, View Skills"
                     title="Click to view all verified mastered skills and standard competencies">
                 <div class="hero-stat-streak">
-                    <i class="fas fa-award" style="color: #10b981;" aria-hidden="true"></i>
-                    <span class="stat-value" style="color: #10b981;" id="standards-mastered-stat">0</span>
+                    <i class="fas fa-award" style="color: #059669;" aria-hidden="true"></i>
+                    <span class="stat-value" style="color: #059669;" id="standards-mastered-stat">0</span>
                 </div>
                 <span class="stat-label">Skills Mastered</span>
-                <span class="stat-action-hint" style="color: #10b981;"><i class="fas fa-certificate" aria-hidden="true"></i> View Skills ↗</span>
+                <span class="stat-action-hint stat-action-hint-emerald"><i class="fas fa-certificate" aria-hidden="true"></i> View Skills ↗</span>
             </button>
 
             <!-- 4. Gamification Level & XP -->

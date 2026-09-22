@@ -250,8 +250,8 @@ if (!function_exists('assetVersion')) {
             });
         };
 
-        // Universal Math Notation Delimiter Pattern
-        const MATH_DELIM_PATTERN = /\$\$[\s\S]+?\$\$|\$[^$\n]+\$|\\\[[\s\S]+?\\\]|\\\([\s\S]+?\\\)|\begin\{[a-zA-Z*]+\}/;
+        // Universal Math Notation Delimiter Pattern (LaTeX, AMS environments, \(...\), or valid $math$ notation)
+        const MATH_DELIM_PATTERN = /\$\$[\s\S]+?\$\$|\\\[[\s\S]+?\\\]|\\\([\s\S]+?\\\)|\\[a-zA-Z]+\{[^}]*\}|\\begin\{[a-zA-Z*]+\}|(?:^|[^\$\w\\])\$(?!\s|\{)(?:[^$\n]*?[^\s$\\])?\$/;
 
         // Static Page Math Auto-Detection
         document.addEventListener('DOMContentLoaded', () => {
@@ -316,10 +316,14 @@ if (!function_exists('assetVersion')) {
     <link rel="stylesheet" href="<?= assetVersion('/assets/css/global-primitives.css') ?>">
     <link rel="stylesheet" href="<?= assetVersion('/assets/css/global-components.css') ?>">
     <link rel="stylesheet" href="<?= assetVersion('/assets/css/components/fixed-tools.css') ?>">
-    <link rel="stylesheet" href="<?= assetVersion('/assets/css/components/command-palette.css') ?>">
-    <link rel="stylesheet" href="<?= assetVersion('/assets/css/components/shortcuts-modal.css') ?>">
-    <link rel="stylesheet" href="<?= assetVersion('/assets/css/components/quest-badges.css') ?>">
-    <link rel="stylesheet" href="<?= assetVersion('/assets/css/components/accommodations.css') ?>">
+    <link rel="stylesheet" href="<?= assetVersion('/assets/css/components/command-palette.css') ?>" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="<?= assetVersion('/assets/css/components/command-palette.css') ?>"></noscript>
+    <link rel="stylesheet" href="<?= assetVersion('/assets/css/components/shortcuts-modal.css') ?>" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="<?= assetVersion('/assets/css/components/shortcuts-modal.css') ?>"></noscript>
+    <link rel="stylesheet" href="<?= assetVersion('/assets/css/components/quest-badges.css') ?>" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="<?= assetVersion('/assets/css/components/quest-badges.css') ?>"></noscript>
+    <link rel="stylesheet" href="<?= assetVersion('/assets/css/components/accommodations.css') ?>" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="<?= assetVersion('/assets/css/components/accommodations.css') ?>"></noscript>
     <link rel="stylesheet" href="<?= assetVersion('/assets/css/layouts/header.css') ?>">
     <link rel="stylesheet" href="<?= assetVersion('/assets/css/layouts/footer.css') ?>">
     <link rel="stylesheet" href="<?= assetVersion('/assets/css/layouts/print.css') ?>" media="print">
@@ -359,7 +363,7 @@ if (!function_exists('assetVersion')) {
         <div class="container">
             <nav class="header-nav">
                 <a class="header-brand" href="/">
-                    <img src="/assets/images/6791421e-7ca7-40bd-83d3-06a479bf7f36.png" alt="Logo" class="header-brand-icon" style="background: none; box-shadow: none; padding: 0;">
+                    <img src="/assets/images/6791421e-7ca7-40bd-83d3-06a479bf7f36.png" alt="Hesten's Learning Logo" width="38" height="38" class="header-brand-icon" style="background: none; box-shadow: none; padding: 0;">
                     <span class="header-brand-text">Hesten's Learning</span>
                 </a>
                 

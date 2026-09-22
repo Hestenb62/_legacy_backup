@@ -210,9 +210,9 @@ function renderLevels(data) {
                             onclick="speakCard(this, '${safeTitle}', '${safeDesc}')" aria-label="Listen to description">
                             <i class="fas fa-volume-up"></i>
                         </button>
-                        <a href="${level.link}" aria-label="Explore ${level.title}" class="level-open-btn">
+                        <a href="${level.link}" aria-label="Open ${level.title}" class="level-open-btn">
                             <span>Open</span>
-                            <i class="fas fa-arrow-right icon-sm"></i>
+                            <i class="fas fa-arrow-right icon-sm" aria-hidden="true"></i>
                         </a>
                     </div>
                 </div>

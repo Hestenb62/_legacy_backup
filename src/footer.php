@@ -13,7 +13,7 @@
                     </h4>
                     <div class="footer-about-brand">
                         <div class="footer-brand-logo">
-                            <img src="/assets/images/6791421e-7ca7-40bd-83d3-06a479bf7f36.png" alt="Logo" loading="lazy">
+                            <img src="/assets/images/6791421e-7ca7-40bd-83d3-06a479bf7f36.png" alt="Hesten's Learning Logo" width="40" height="40" loading="lazy">
                         </div>
                         <div class="footer-brand-text">
                             <span class="footer-brand-title">Hesten's Learning</span>
@@ -21,7 +21,7 @@
                         </div>
                     </div>
                     <p class="footer-about-desc">
-                        Empowering students with learning disabilities through personalized learning experiences. <a href="/pages/about.php">Learn more</a>
+                        Empowering students with learning disabilities through personalized learning experiences. <a href="/pages/about.php">Learn more about our mission</a>
                     </p>
                     
                     <div class="footer-social-icons">
@@ -85,10 +85,10 @@
                         <a href="/">Hesten's Learning</a> by  <a href="/pages/about-me.php" style="font-weight: 800; color: var(--footer-heading)">Hesten Allison</a> is licensed under 
                         <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" class="license-badge-link">
                             CC BY-NC-SA 4.0
-                            <img style="height:16px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt="">
-                            <img style="height:16px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt="">
-                            <img style="height:16px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt="">
-                            <img style="height:16px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt="">
+                            <img style="height:16px!important;width:16px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt="Creative Commons" width="16" height="16">
+                            <img style="height:16px!important;width:16px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt="Attribution" width="16" height="16">
+                            <img style="height:16px!important;width:16px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt="NonCommercial" width="16" height="16">
+                            <img style="height:16px!important;width:16px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt="ShareAlike" width="16" height="16">
                         </a>
                     </p>
                 </div>
@@ -96,7 +96,7 @@
                 <div class="footer-bottom-actions">
                     <div class="gtranslate_wrapper" style="position: relative; z-index: 50;"></div>
                     <a href="https://www.buymeacoffee.com/hestena62l" target="_blank" rel="noopener noreferrer" class="coffee-btn">
-                        <img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="" class="coffee-icon" loading="lazy">
+                        <img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy Me A Coffee" class="coffee-icon" width="20" height="28" loading="lazy">
                         <span>Buy me a coffee</span>
                     </a>
                 </div>
