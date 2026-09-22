@@ -58,11 +58,17 @@
 
         <!-- Dynamic Quick Stats (Glass Cards) -->
         <div class="hero-stats animate-reveal" role="region" aria-label="Student Learning Highlights">
-            <!-- 1. Mastery Progress % -->
-            <div class="stats-card glass-panel" title="Percentage of curriculum completed">
+            <!-- 1. Mastery Progress % (Clickable Breakdown Modal) -->
+            <button type="button" 
+                    class="stats-card glass-panel stats-card-clickable" 
+                    onclick="window.openCurriculumMasteryModal ? window.openCurriculumMasteryModal() : null" 
+                    aria-haspopup="dialog"
+                    aria-label="View Curriculum Mastery details breakdown"
+                    title="Click to view full grade-by-grade curriculum mastery breakdown">
                 <span class="stat-value text-primary" id="user-progress-stat">0%</span>
                 <span class="stat-label">Curriculum Mastery</span>
-            </div>
+                <span class="stat-action-hint"><i class="fas fa-list-check" aria-hidden="true"></i> View Breakdown ↗</span>
+            </button>
 
             <!-- 2. Active Daily Streak -->
             <div class="stats-card glass-panel" title="Consecutive daily study streak">
@@ -73,14 +79,20 @@
                 <span class="stat-label">Day Streak</span>
             </div>
 
-            <!-- 3. Skills Mastered Counter -->
-            <div class="stats-card glass-panel" title="Standards and key skills mastered">
+            <!-- 3. Skills Mastered Counter (Clickable Breakdown Modal) -->
+            <button type="button" 
+                    class="stats-card glass-panel stats-card-clickable" 
+                    onclick="window.openSkillsMasteredModal ? window.openSkillsMasteredModal() : null"
+                    aria-haspopup="dialog"
+                    aria-label="View Skills Mastered details breakdown"
+                    title="Click to view all verified mastered skills and standard competencies">
                 <div class="hero-stat-streak">
                     <i class="fas fa-award" style="color: #10b981;" aria-hidden="true"></i>
                     <span class="stat-value" style="color: #10b981;" id="standards-mastered-stat">0</span>
                 </div>
                 <span class="stat-label">Skills Mastered</span>
-            </div>
+                <span class="stat-action-hint" style="color: #10b981;"><i class="fas fa-certificate" aria-hidden="true"></i> View Skills ↗</span>
+            </button>
 
             <!-- 4. Gamification Level & XP -->
             <div class="stats-card glass-panel" title="Current gamification tier and experience points">

@@ -10,6 +10,7 @@ include 'src/header.php';
 <!-- STYLES -->
 <link rel="stylesheet" href="<?= assetVersion('/assets/css/components/learning-launchpad.css') ?>">
 <link rel="stylesheet" href="<?= assetVersion('/assets/css/components/welcome-guide.css') ?>">
+<link rel="stylesheet" href="<?= assetVersion('/assets/css/components/mastery-modals.css') ?>">
 
 <!-- DATA IMPORT -->
 <script src="<?= assetVersion('/assets/data/global-learningLevels.js') ?>"></script>
@@ -31,6 +32,7 @@ include 'src/header.php';
     <?php include __DIR__ . '/src/partials/no-results.php'; ?>
 
     <?php include __DIR__ . '/src/partials/doc-modal.php'; ?>
+    <?php include __DIR__ . '/src/partials/mastery-modals.php'; ?>
 
 </main>
 

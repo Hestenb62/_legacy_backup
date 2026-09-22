@@ -70,12 +70,29 @@ We completed a comprehensive modernization of the Hesten's Learning home landing
   - Can be re-opened anytime via `window.toggleWelcomeGuide()`.
 - **Created**: `assets/css/components/welcome-guide.css`
   - Glassmorphic card design with dark/midnight theme support, responsive mobile stacking, and accessible focus rings.
-- **Modified**: `src/partials/academic-path-header.php`
-  - Added a **"Platform Guide"** button in the header toolbar so users can review the guide whenever needed.
+### 5. Curriculum Mastery & Skills Mastered Popups
+- **Created**: `src/partials/mastery-modals.php`
+  - **Curriculum Mastery Modal (`#curriculum-mastery-modal`)**:
+    - Displays overall percentage score circle, level count (e.g., *3 of 14 grade levels completed*).
+    - Search input and category filter tabs (*All Paths*, *Completed*, *In Progress*).
+    - Lists grade levels with completion badges, in-progress standards count, direct "Open Level" links, and 1-click completion toggles.
+  - **Skills Mastered Modal (`#skills-mastered-modal`)**:
+    - Displays total verified competency skills circle.
+    - Search input and subject filter tabs (*All*, *Math*, *ELA*, *Other*).
+    - Lists all mastered standards from `hesten_standards_mastery` with code pills, score/mastery badges, and direct links to the Standards Explorer.
+    - Includes an empty-state screen directing unassessed learners to `/assessment`.
+- **Created**: `assets/css/components/mastery-modals.css`
+  - Interactive hover and focus styles for hero stat cards (`.stats-card-clickable`).
+  - Modal layout, summary score circles, search toolbar, item cards, badges, and responsive reflow.
+- **Modified**: `src/partials/hero.php`
+  - Transformed **Curriculum Mastery** and **Skills Mastered** stat boxes into accessible buttons with `role="button"`, `tabindex="0"`, `aria-haspopup="dialog"`, and visual action hints (*"View Breakdown ↗"*).
+- **Modified**: `index.php`
+  - Linked `mastery-modals.css` and included `mastery-modals.php`.
 
 ---
 
 ## Verification & Testing
 - **JS Syntax Validation**: Executed `node -c assets/js/index-main.js` with exit code `0`.
-- **Theme & Mode Compatibility**: Verified CSS custom properties across Light, Dark, and Midnight themes.
-- **Accessibility & Reduced Motion**: Verified that all animations obey `prefers-reduced-motion: reduce` and the Sensory Retreat accommodation.
+- **Theme & Mode Compatibility**: Verified custom properties and contrast across Light, Dark, and Midnight themes.
+- **Accessibility & Focus**: Verified `Escape` key close handlers, backdrop dismissal, keyboard `Tab` access, and high-contrast `:focus-visible` rings.
+
