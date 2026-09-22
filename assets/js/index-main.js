@@ -24,6 +24,25 @@ let completedLevels = [];
 let bookmarkedLevels = [];
 let currentCategory = 'all';
 
+// --- HELPERS ---
+function getActiveStudentProfile() {
+    try {
+        const raw = localStorage.getItem('hesten-user-profile') || localStorage.getItem('hesten_user_profile');
+        if (raw) return JSON.parse(raw);
+    } catch (e) {}
+    return null;
+}
+
+function normalizeGradeToLevelId(gradeStr) {
+    if (!gradeStr) return null;
+    const g = String(gradeStr).toLowerCase().trim();
+    if (g === 'k' || g.includes('kinder')) return 'kindergarten';
+    if (g === 'pre-k' || g === 'pk' || g.includes('pre')) return 'pre-k';
+    const match = g.match(/\d+/);
+    if (match) return 'grade-' + match[0];
+    return g;
+}
+
 // --- INIT ---
 document.addEventListener("DOMContentLoaded", () => {
     loadState();
@@ -33,6 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     checkStreak();
     updateHeroGreeting();
+    updateStats();
     renderFocusRecommendations(); // NEW: Diagnostic Recommendations Loop
 
     // Search & Filter Listeners
@@ -44,6 +64,30 @@ document.addEventListener("DOMContentLoaded", () => {
             debounce(applyFilters, 200)();
         });
     }
+
+    // Real-Time Cross-Tab & Multi-Role Synchronization
+    window.addEventListener('storage', (e) => {
+        if (['hesten-user-profile', 'hesten_user_profile', 'hl_gamification_profile', 'hesten_standards_mastery', 'hl_completed_levels', 'hesten_learning_streak'].includes(e.key)) {
+            loadState();
+            updateHeroGreeting();
+            updateStats();
+            if (typeof learningLevels !== 'undefined') renderLevels(learningLevels);
+        }
+    });
+
+    window.addEventListener('hl:profile-updated', () => {
+        loadState();
+        updateHeroGreeting();
+        updateStats();
+        if (typeof learningLevels !== 'undefined') renderLevels(learningLevels);
+    });
+
+    window.addEventListener('hl:data-sync', () => {
+        loadState();
+        updateHeroGreeting();
+        updateStats();
+        if (typeof learningLevels !== 'undefined') renderLevels(learningLevels);
+    });
 });
 
 const THEME_MAP = {
@@ -66,15 +110,54 @@ function renderLevels(data) {
         return 0;
     });
 
+    const activeProfile = getActiveStudentProfile();
+    const enrolledLevelId = activeProfile ? normalizeGradeToLevelId(activeProfile.grade) : null;
+
+    let masteryMap = {};
+    try {
+        const rawMastery = localStorage.getItem('hesten_standards_mastery');
+        if (rawMastery) masteryMap = JSON.parse(rawMastery);
+    } catch (e) {}
+
     grid.innerHTML = sortedData.map((level, index) => {
         const theme = THEME_MAP[level.category] || THEME_MAP.elem;
         const keywords = level.keywords ? level.keywords.toLowerCase() : '';
         const safeTitle = level.title.replace(/'/g, "\\'");
         const safeDesc = level.description.replace(/'/g, "\\'");
         const isSaved = bookmarkedLevels.includes(level.id);
+        const isEnrolled = enrolledLevelId && enrolledLevelId === level.id;
+
+        // Calculate standards mastery for this grade
+        let gradeMasteryHtml = '';
+        const prefix = level.id === 'kindergarten' ? 'K.' : (level.id.startsWith('grade-') ? level.id.replace('grade-', '') + '.' : null);
+        if (prefix) {
+            let gradeMastered = 0;
+            let gradeTotal = 0;
+            Object.entries(masteryMap).forEach(([k, v]) => {
+                if (k.startsWith(prefix) || k.includes('.' + prefix)) {
+                    gradeTotal++;
+                    if (v === true || v === 'mastered' || (typeof v === 'number' && v >= 80) || (typeof v === 'object' && (v.mastered || v.score >= 80))) {
+                        gradeMastered++;
+                    }
+                }
+            });
+            if (gradeTotal > 0) {
+                const gradePct = Math.round((gradeMastered / gradeTotal) * 100);
+                gradeMasteryHtml = `
+                    <div class="level-card-mastery-wrap" title="${gradeMastered} of ${gradeTotal} standards mastered (${gradePct}%)">
+                        <div class="level-card-mastery-meta">
+                            <span>Mastery: ${gradeMastered}/${gradeTotal} Standards</span>
+                            <span>${gradePct}%</span>
+                        </div>
+                        <div class="level-card-mastery-track">
+                            <div class="level-card-mastery-fill" style="width: ${gradePct}%;"></div>
+                        </div>
+                    </div>`;
+            }
+        }
 
         return `
-        <article class="level-card group relative flex flex-col h-full animate-reveal ${isSaved ? 'level-card-saved' : ''}"
+        <article class="level-card group relative flex flex-col h-full animate-reveal ${isSaved ? 'level-card-saved' : ''} ${isEnrolled ? 'level-card-enrolled' : ''}"
             style="animation-delay: ${index * 50}ms"
             data-category="${level.category}"
             data-display-title="${level.title}"
@@ -96,6 +179,7 @@ function renderLevels(data) {
                         <div>
                             <h3 class="level-card-title">
                                 ${level.title}
+                                ${isEnrolled ? '<span class="level-enrolled-pill"><i class="fas fa-graduation-cap" aria-hidden="true"></i> My Grade</span>' : ''}
                                 ${isSaved ? '<span class="level-saved-pin"><i class="fas fa-star" aria-hidden="true"></i> Saved</span>' : ''}
                             </h3>
                             <span class="level-card-category">${theme.label}</span>
@@ -114,6 +198,7 @@ function renderLevels(data) {
                 </div>
 
                 <p class="level-card-desc">${level.description}</p>
+                ${gradeMasteryHtml}
 
                 <div class="level-card-footer">
                     <button type="button" aria-haspopup="dialog" class="level-doc-btn"
@@ -1186,12 +1271,98 @@ function saveState() {
     localStorage.setItem('hl_bookmarked_levels', JSON.stringify(bookmarkedLevels));
 }
 
+function animateCounter(element, start, end, duration, suffix = '') {
+    if (!element) return;
+    if (start === end) {
+        element.textContent = end + suffix;
+        return;
+    }
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        element.textContent = end + suffix;
+        return;
+    }
+    const range = end - start;
+    const startTime = performance.now();
+
+    function step(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const easeProgress = 1 - Math.pow(1 - progress, 3); // Cubic ease out
+        const currentVal = Math.round(start + (range * easeProgress));
+        element.textContent = currentVal + suffix;
+        if (progress < 1) {
+            requestAnimationFrame(step);
+        } else {
+            element.textContent = end + suffix;
+        }
+    }
+    requestAnimationFrame(step);
+}
+
 function updateStats() {
+    // 1. Overall Curriculum Mastery %
     const total = typeof learningLevels !== 'undefined' ? learningLevels.length : 0;
     const count = completedLevels.length;
     const pct = total ? Math.round((count / total) * 100) : 0;
     const el = document.getElementById('user-progress-stat');
-    if (el) el.textContent = pct + '%';
+    if (el) {
+        const currentNum = parseInt(el.textContent) || 0;
+        animateCounter(el, currentNum, pct, 700, '%');
+    }
+
+    // 2. Active Daily Streak
+    const streakEl = document.getElementById('streak-stat');
+    if (streakEl) {
+        let streakNum = 0;
+        try {
+            const rawStreak = localStorage.getItem('hesten_learning_streak');
+            if (rawStreak) streakNum = JSON.parse(rawStreak).streak || 0;
+        } catch (e) {}
+        streakEl.textContent = streakNum;
+    }
+
+    // 3. Standards / Skills Mastered
+    const standardsEl = document.getElementById('standards-mastered-stat');
+    if (standardsEl) {
+        let masteredCount = 0;
+        try {
+            const rawMastery = localStorage.getItem('hesten_standards_mastery');
+            if (rawMastery) {
+                const map = JSON.parse(rawMastery);
+                Object.values(map).forEach(val => {
+                    if (val === true || val === 'mastered' || (typeof val === 'number' && val >= 80) || (typeof val === 'object' && (val.mastered || val.score >= 80))) {
+                        masteredCount++;
+                    }
+                });
+            }
+        } catch (e) {}
+        const currentStandards = parseInt(standardsEl.textContent) || 0;
+        animateCounter(standardsEl, currentStandards, masteredCount, 700, '');
+    }
+
+    // 4. Gamification Level & XP
+    const levelEl = document.getElementById('user-level-stat');
+    const xpLabelEl = document.getElementById('user-xp-label');
+    const activeProf = getActiveStudentProfile();
+    let userXp = 0;
+    let userLevel = 1;
+
+    if (activeProf) {
+        userXp = activeProf.xp || 0;
+        userLevel = activeProf.level || 1;
+    } else {
+        try {
+            const rawGamify = localStorage.getItem('hl_gamification_profile');
+            if (rawGamify) {
+                const parsed = JSON.parse(rawGamify);
+                if (parsed.xp) userXp = parsed.xp;
+                if (parsed.level) userLevel = parsed.level;
+            }
+        } catch (e) {}
+    }
+
+    if (levelEl) levelEl.textContent = `Lv. ${userLevel}`;
+    if (xpLabelEl) xpLabelEl.textContent = `${userXp.toLocaleString()} XP`;
 }
 
 
@@ -1373,16 +1544,96 @@ function checkResumeLearning() {
 
 function updateHeroGreeting() {
     const hour = new Date().getHours();
-    const el = document.getElementById('hero-dynamic-greeting');
-    if (!el) return;
+    const greetingEl = document.getElementById('hero-dynamic-greeting');
+    const avatarEl = document.getElementById('hero-pill-avatar');
+    const pingContainer = document.getElementById('hero-ping-container');
+    const gradeBadge = document.getElementById('hero-pill-grade');
+    const subtitleEl = document.getElementById('hero-dynamic-subtitle');
+    const jumpBtn = document.getElementById('hero-jump-grade-btn');
+    const jumpBtnText = document.getElementById('hero-jump-btn-text');
+    const primaryCta = document.getElementById('hero-primary-cta');
+    const primaryCtaText = document.getElementById('hero-primary-cta-text');
 
-    let greeting = "THE LEARNING ODYSSEY";
-    if (hour < 12) greeting = "Good Morning Odyssey";
-    else if (hour < 18) greeting = "Good Afternoon Journey";
-    else greeting = "Good Evening Odyssey";
+    const profile = getActiveStudentProfile();
+    const studentName = (profile && (profile.firstName || profile.name)) ? (profile.firstName || profile.name).trim() : null;
 
-    el.textContent = greeting.toUpperCase();
+    if (studentName) {
+        let timeSalutation = "Good Morning";
+        if (hour >= 12 && hour < 17) timeSalutation = "Good Afternoon";
+        else if (hour >= 17) timeSalutation = "Good Evening";
+
+        if (greetingEl) greetingEl.textContent = `${timeSalutation}, ${studentName.toUpperCase()}`;
+
+        if (avatarEl) {
+            avatarEl.textContent = studentName.charAt(0).toUpperCase();
+            avatarEl.classList.remove('hidden');
+        }
+        if (pingContainer) pingContainer.classList.add('hidden');
+
+        if (profile.grade && gradeBadge) {
+            const cleanGrade = String(profile.grade).replace('grade-', 'Grade ').replace(/^./, str => str.toUpperCase());
+            gradeBadge.textContent = cleanGrade;
+            gradeBadge.classList.remove('hidden');
+        }
+
+        if (subtitleEl) {
+            const levelNum = profile.level || 1;
+            subtitleEl.textContent = `Welcome back! You are on Level ${levelNum}. Continue your quest to master new skills and reach your potential.`;
+        }
+
+        // Setup "Jump to My Grade" button
+        if (profile.grade && jumpBtn) {
+            const targetId = normalizeGradeToLevelId(profile.grade);
+            const levelObj = typeof learningLevels !== 'undefined' ? learningLevels.find(l => l.id === targetId) : null;
+            const displayTitle = levelObj ? levelObj.title : profile.grade;
+            if (jumpBtnText) jumpBtnText.textContent = `Jump to ${displayTitle}`;
+            jumpBtn.classList.remove('hidden');
+        }
+
+        if (primaryCtaText) {
+            primaryCtaText.textContent = "Explore Dashboard";
+            if (primaryCta) primaryCta.href = "/student";
+        }
+    } else {
+        // Default Guest / First-time state
+        let greeting = "THE LEARNING ODYSSEY";
+        if (hour < 12) greeting = "Good Morning Odyssey";
+        else if (hour < 18) greeting = "Good Afternoon Journey";
+        else greeting = "Good Evening Odyssey";
+
+        if (greetingEl) greetingEl.textContent = greeting.toUpperCase();
+        if (avatarEl) avatarEl.classList.add('hidden');
+        if (pingContainer) pingContainer.classList.remove('hidden');
+        if (gradeBadge) gradeBadge.classList.add('hidden');
+        if (jumpBtn) jumpBtn.classList.add('hidden');
+        if (primaryCtaText) primaryCtaText.textContent = "Start Your Journey";
+        if (primaryCta) primaryCta.href = "/assessment";
+    }
 }
+
+window.jumpToEnrolledGrade = function() {
+    const profile = getActiveStudentProfile();
+    if (!profile || !profile.grade) return;
+    const targetId = normalizeGradeToLevelId(profile.grade);
+
+    // If currently filtered out by category, switch to 'all'
+    const targetCard = document.querySelector(`.level-card[data-id="${targetId}"]`);
+    if (!targetCard || targetCard.style.display === 'none') {
+        const allTab = document.querySelector('.path-tab[onclick*="\'all\'"]');
+        if (allTab) setCategory(allTab, 'all', false);
+    }
+
+    setTimeout(() => {
+        const card = document.querySelector(`.level-card[data-id="${targetId}"]`);
+        if (card) {
+            card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            card.classList.add('pulse-highlight');
+            setTimeout(() => {
+                card.classList.remove('pulse-highlight');
+            }, 4500);
+        }
+    }, 50);
+};
 
 function syncSearch(val) {
     const mainSearch = document.getElementById('level-search');

@@ -7,6 +7,10 @@ include 'src/header.php';
 // <script src="assets/js/curriculum-teks.js"></script>
 ?>
 
+<!-- STYLES -->
+<link rel="stylesheet" href="<?= assetVersion('/assets/css/components/learning-launchpad.css') ?>">
+<link rel="stylesheet" href="<?= assetVersion('/assets/css/components/welcome-guide.css') ?>">
+
 <!-- DATA IMPORT -->
 <script src="<?= assetVersion('/assets/data/global-learningLevels.js') ?>"></script>
 <script src="<?= assetVersion('/assets/js/standards-ccss-math-ela.js') ?>"></script>
@@ -16,8 +20,9 @@ include 'src/header.php';
 <!-- MAIN CONTENT -->
 <main class="main-content-container" id="main-content" tabindex="-1">
 
+    <?php include __DIR__ . '/src/partials/learning-launchpad.php'; ?>
     <?php include __DIR__ . '/src/partials/resume-banner.php'; ?>
-    <?php include __DIR__ . '/src/partials/learning-streak.php'; ?>
+    <?php include __DIR__ . '/src/partials/welcome-guide.php'; ?>
 
     <?php include __DIR__ . '/src/partials/academic-path-header.php'; ?>
 

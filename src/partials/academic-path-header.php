@@ -6,6 +6,14 @@
             <span class="path-counter-line"></span>
             <span class="path-counter-text" id="results-count">Analyzing levels...</span>
         </div>
+        <button type="button" 
+                class="path-guide-btn" 
+                onclick="window.toggleWelcomeGuide ? window.toggleWelcomeGuide() : null" 
+                title="View orientation and getting started guide" 
+                aria-label="Open Welcome and Platform Guide">
+            <i class="fas fa-circle-info" aria-hidden="true"></i>
+            <span>Platform Guide</span>
+        </button>
     </div>
 
     <!-- Segmented Control -->
