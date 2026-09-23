@@ -50,7 +50,6 @@ if (! function_exists('assetVersion')) {
 <html lang="en" data-theme="light">
 
     <head>
-
         <script>
             (function () {
                 try {

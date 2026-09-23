@@ -202,19 +202,19 @@
      ========================================================================== */
   @font-face {
     font-family: 'Open Dyslexic';
-    src: url('/assets/fonts/OpenDyslexic/OpenDyslexic-Regular.otf') format('opentype');
+    src: url('https://pub-cb62f43e6742477a8fb64d0d266792cf.r2.dev/font/OpenDyslexic/OpenDyslexic-Regular.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
   }
   @font-face {
     font-family: 'Open Dyslexic';
-    src: url('/assets/fonts/OpenDyslexic/OpenDyslexic-Bold.otf') format('opentype');
+    src: url('https://pub-cb62f43e6742477a8fb64d0d266792cf.r2.dev/font/OpenDyslexic/OpenDyslexic-Bold.otf') format('opentype');
     font-weight: bold;
     font-style: normal;
   }
   @font-face {
     font-family: 'Open Dyslexic';
-    src: url('/assets/fonts/OpenDyslexic/OpenDyslexic-Italic.otf') format('opentype');
+    src: url('https://pub-cb62f43e6742477a8fb64d0d266792cf.r2.dev/font/OpenDyslexic/OpenDyslexic-Italic.otf') format('opentype');
     font-weight: normal;
     font-style: italic;
   }
