@@ -152,4 +152,4 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         window.dispatchEvent(new CustomEvent('hl:data-sync', { detail: { topic, data } }));
     };
-})();
+})();
