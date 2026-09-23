@@ -116,18 +116,77 @@ function initTextToSpeech(bookContent) {
         }
     }
 
+    let activeSentenceEl = null;
+    let activeParagraph = null;
+
+    function escapeHtmlTTS(str) {
+        if (!str) return '';
+        return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+
+    function escapeRegexTTS(string) {
+        return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
+
+    function wrapSentenceWords(sentenceText) {
+        const regex = /(\S+)/g;
+        let match;
+        let result = '';
+        let lastIdx = 0;
+        while ((match = regex.exec(sentenceText)) !== null) {
+            result += escapeHtmlTTS(sentenceText.slice(lastIdx, match.index));
+            result += `<span class="tts-word" data-start="${match.index}" data-end="${match.index + match[0].length}">${escapeHtmlTTS(match[0])}</span>`;
+            lastIdx = match.index + match[0].length;
+        }
+        result += escapeHtmlTTS(sentenceText.slice(lastIdx));
+        return result;
+    }
+
+    function cleanupActiveSentence() {
+        if (activeParagraph && activeParagraph._originalHTML !== undefined) {
+            activeParagraph.innerHTML = activeParagraph._originalHTML;
+            delete activeParagraph._originalHTML;
+        }
+        document.querySelectorAll(".tts-current-sentence").forEach(el => el.classList.remove("tts-current-sentence"));
+        document.querySelectorAll(".tts-active-word").forEach(el => el.classList.remove("tts-active-word"));
+        document.querySelectorAll(".tts-active-sentence").forEach(el => el.classList.remove("tts-active-sentence"));
+        activeSentenceEl = null;
+        activeParagraph = null;
+    }
+
+    function activateSentenceKaraoke(targetP, sentenceText) {
+        cleanupActiveSentence();
+
+        activeParagraph = targetP;
+        if (targetP._originalHTML === undefined) {
+            targetP._originalHTML = targetP.innerHTML;
+        }
+
+        const wordsWrapped = wrapSentenceWords(sentenceText);
+        const escapedSentence = escapeRegexTTS(sentenceText);
+        const sentenceRegex = new RegExp(escapedSentence, 'i');
+
+        if (sentenceRegex.test(targetP.innerHTML)) {
+            targetP.innerHTML = targetP.innerHTML.replace(sentenceRegex, `<span class="tts-current-sentence">${wordsWrapped}</span>`);
+            activeSentenceEl = targetP.querySelector('.tts-current-sentence');
+        } else {
+            targetP.classList.add("tts-active-sentence");
+            activeSentenceEl = targetP;
+        }
+    }
+
     function speakCurrentSentence() {
         if (currentIdx >= sentences.length) {
             stopNarration();
             return;
         }
 
-        // Remove previous sentence highlight
-        document.querySelectorAll(".tts-active-sentence").forEach(el => el.classList.remove("tts-active-sentence"));
-
         const targetP = sentenceNodes[currentIdx];
+        const sentenceText = sentences[currentIdx];
+
         if (targetP) {
-            targetP.classList.add("tts-active-sentence");
+            activateSentenceKaraoke(targetP, sentenceText);
+
             if (document.body.classList.contains("mode-book")) {
                 const bookViewport = document.getElementById("book-page-viewport");
                 if (bookViewport) {
@@ -146,20 +205,46 @@ function initTextToSpeech(bookContent) {
             }
         }
 
-        const utterance = new SpeechSynthesisUtterance(sentences[currentIdx]);
+        const utterance = new SpeechSynthesisUtterance(sentenceText);
         utterance.rate = currentRate;
         if (preferredVoice) utterance.voice = preferredVoice;
 
         utterance.onboundary = (event) => {
-            if (event.name === 'word' && targetP) {
+            if (event.name === 'word' && activeSentenceEl) {
                 const charIdx = event.charIndex;
-                const sentenceText = sentences[currentIdx];
-                const wordsBefore = (sentenceText.slice(0, charIdx).match(/\S+/g) || []).length;
-                targetP.setAttribute('data-word-idx', wordsBefore);
+                const words = activeSentenceEl.querySelectorAll('.tts-word');
+                let matchedWord = null;
+
+                for (const w of words) {
+                    const start = parseInt(w.dataset.start, 10);
+                    const end = parseInt(w.dataset.end, 10);
+                    if (charIdx >= start && charIdx < end) {
+                        matchedWord = w;
+                        break;
+                    }
+                }
+
+                if (!matchedWord && words.length > 0) {
+                    let closestDist = Infinity;
+                    words.forEach(w => {
+                        const start = parseInt(w.dataset.start, 10);
+                        const dist = Math.abs(charIdx - start);
+                        if (dist < closestDist) {
+                            closestDist = dist;
+                            matchedWord = w;
+                        }
+                    });
+                }
+
+                if (matchedWord) {
+                    activeSentenceEl.querySelectorAll('.tts-active-word').forEach(w => w.classList.remove('tts-active-word'));
+                    matchedWord.classList.add('tts-active-word');
+                }
             }
         };
 
         utterance.onend = () => {
+            cleanupActiveSentence();
             if (isSpeaking && !isPaused) {
                 currentIdx++;
                 speakCurrentSentence();
@@ -167,6 +252,7 @@ function initTextToSpeech(bookContent) {
         };
 
         utterance.onerror = () => {
+            cleanupActiveSentence();
             if (isSpeaking && !isPaused) {
                 currentIdx++;
                 speakCurrentSentence();
@@ -210,7 +296,7 @@ function initTextToSpeech(bookContent) {
         isSpeaking = false;
         isPaused = false;
         window.speechSynthesis.cancel();
-        document.querySelectorAll(".tts-active-sentence").forEach(el => el.classList.remove("tts-active-sentence"));
+        cleanupActiveSentence();
         updateControlUI('idle');
     }
 

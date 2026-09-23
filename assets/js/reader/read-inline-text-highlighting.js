@@ -86,6 +86,7 @@
             if (note) {
                 span.setAttribute("data-note", note);
                 span.setAttribute("title", `Margin Note: ${note}`);
+                span.classList.add("has-margin-note");
             }
 
             try {
@@ -125,56 +126,60 @@
             });
         }
 
+        function createFlashcardFromQuote(text, note = '') {
+            if (!text) return;
+            const urlParams = new URLSearchParams(window.location.search);
+            const activeBookId = (window.BOOK_METADATA && window.BOOK_METADATA.id) || 
+                                 (window.HL_PAGE_CONTEXT && window.HL_PAGE_CONTEXT.bookId) ||
+                                 urlParams.get('book') ||
+                                 (window.location.pathname.includes('/frankenstein/') ? 'frankenstein' : '') ||
+                                 (window.location.pathname.includes('/1984/') ? '1984' : '') ||
+                                 'custom';
+            
+            const deckId = activeBookId !== 'custom' ? `${activeBookId}-deck` : 'custom';
+            const bookTitle = (window.BOOK_METADATA && window.BOOK_METADATA.title) || 
+                              (activeBookId !== 'custom' ? activeBookId.charAt(0).toUpperCase() + activeBookId.slice(1).replace(/-/g, ' ') : 'Reader');
+            const chapterInfo = window.CURRENT_READER_PAGE ? `Page ${window.CURRENT_READER_PAGE}` : (urlParams.get('chapter') || 'Chapter 1');
+            const backContent = note ? `Note: ${note}\n(Source: ${bookTitle}, ${chapterInfo})` : `Quotation from ${bookTitle} (${chapterInfo})`;
+
+            // Add card to Flashcard Studio
+            if (typeof window.addFlashcardToDeck === 'function') {
+                window.addFlashcardToDeck(deckId, text, backContent, chapterInfo);
+            } else {
+                try {
+                    const decks = JSON.parse(localStorage.getItem('hl_leitner_decks') || '{}');
+                    if (!decks[deckId]) {
+                        decks[deckId] = { name: `${bookTitle} Vocabulary & Quotes`, cards: [] };
+                    }
+                    decks[deckId].cards.push({
+                        id: 'card-' + Date.now() + '-' + Math.floor(Math.random() * 1000),
+                        front: text,
+                        back: backContent,
+                        example: chapterInfo,
+                        box: 1,
+                        nextReview: Date.now()
+                    });
+                    localStorage.setItem('hl_leitner_decks', JSON.stringify(decks));
+                    window.dispatchEvent(new CustomEvent('hl:data-sync', { detail: { key: 'hl_leitner_decks' } }));
+                } catch (err) {}
+            }
+
+            if (window.announceA11y) {
+                window.announceA11y(`Saved "${text.slice(0, 25)}" to ${bookTitle} Flashcard Deck`);
+            }
+
+            if (typeof window.toggleFlashcardStudio === 'function') {
+                window.toggleFlashcardStudio(true, deckId);
+            }
+        }
+
         if (hlFlashcard) {
             hlFlashcard.addEventListener("click", () => {
                 if (currentSelectedRange) {
                     const text = currentSelectedRange.toString().trim();
                     if (text) {
                         applyHighlight("hl-blue", "Saved to Leitner Flashcards");
-
-                        // Detect active book context
-                        const urlParams = new URLSearchParams(window.location.search);
-                        const activeBookId = (window.BOOK_METADATA && window.BOOK_METADATA.id) || 
-                                             (window.HL_PAGE_CONTEXT && window.HL_PAGE_CONTEXT.bookId) ||
-                                             urlParams.get('book') ||
-                                             (window.location.pathname.includes('/frankenstein/') ? 'frankenstein' : '') ||
-                                             (window.location.pathname.includes('/1984/') ? '1984' : '') ||
-                                             'custom';
-                        
-                        const deckId = activeBookId !== 'custom' ? `${activeBookId}-deck` : 'custom';
-                        const bookTitle = (window.BOOK_METADATA && window.BOOK_METADATA.title) || 
-                                          (activeBookId !== 'custom' ? activeBookId.charAt(0).toUpperCase() + activeBookId.slice(1).replace(/-/g, ' ') : 'Reader');
-                        const chapterInfo = window.CURRENT_READER_PAGE ? `Page ${window.CURRENT_READER_PAGE}` : (urlParams.get('chapter') || 'Chapter 1');
-
-                        // Add card to Flashcard Studio
-                        if (typeof window.addFlashcardToDeck === 'function') {
-                            window.addFlashcardToDeck(deckId, text, `Vocabulary concept from ${bookTitle}`, chapterInfo);
-                        } else {
-                            try {
-                                const decks = JSON.parse(localStorage.getItem('hl_leitner_decks') || '{}');
-                                if (!decks[deckId]) {
-                                    decks[deckId] = { name: `${bookTitle} Vocabulary`, cards: [] };
-                                }
-                                decks[deckId].cards.push({
-                                    id: 'card-' + Date.now(),
-                                    front: text,
-                                    back: `Concept saved from ${bookTitle}`,
-                                    example: chapterInfo,
-                                    box: 1,
-                                    nextReview: Date.now()
-                                });
-                                localStorage.setItem('hl_leitner_decks', JSON.stringify(decks));
-                                window.dispatchEvent(new CustomEvent('hl:data-sync', { detail: { key: 'hl_leitner_decks' } }));
-                            } catch (err) {}
-                        }
-
-                        if (window.announceA11y) {
-                            window.announceA11y(`Saved "${text.slice(0, 25)}" to ${bookTitle} Leitner Flashcard Deck`);
-                        }
-
-                        if (typeof window.toggleFlashcardStudio === 'function') {
-                            window.toggleFlashcardStudio(true, deckId);
-                        }
+                        createFlashcardFromQuote(text, "Saved to Leitner Flashcards");
                     }
                 }
             });
@@ -215,6 +220,136 @@
             });
         }
 
+        function escapeHtml(str) {
+            if (!str) return '';
+            return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+        }
+
+        function updateHighlightNoteInStorage(quoteText, newNote) {
+            try {
+                const list = JSON.parse(localStorage.getItem(highlightsKey) || '[]');
+                const item = list.find(h => h.text === quoteText || quoteText.includes(h.text) || h.text.includes(quoteText));
+                if (item) {
+                    item.note = newNote;
+                    localStorage.setItem(highlightsKey, JSON.stringify(list));
+                    renderSavedHighlightsList(highlightsKey);
+                }
+            } catch (e) {}
+        }
+
+        function showMarginNoteCard(mark, note, rect) {
+            let card = document.getElementById('margin-note-popover');
+            if (!card) {
+                card = document.createElement('div');
+                card.id = 'margin-note-popover';
+                card.className = 'margin-note-popover';
+                card.setAttribute('role', 'dialog');
+                card.setAttribute('aria-label', 'Margin Note');
+                document.body.appendChild(card);
+            }
+
+            const quoteText = mark.textContent.trim();
+            card.innerHTML = `
+                <div class="margin-note-card-header">
+                    <div class="margin-note-card-title">
+                        <i class="fas fa-sticky-note" style="color: #f59e0b;"></i>
+                        <span>Margin Note</span>
+                    </div>
+                    <button type="button" class="margin-note-close-btn" aria-label="Close margin note"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="margin-note-quote">"${escapeHtml(quoteText.slice(0, 140))}${quoteText.length > 140 ? '...' : ''}"</div>
+                <div class="margin-note-body" id="margin-note-view-body">
+                    <p class="margin-note-text" id="margin-note-display-text">${escapeHtml(note)}</p>
+                </div>
+                <div class="margin-note-edit-body" id="margin-note-edit-body" style="display: none;">
+                    <textarea id="margin-note-edit-textarea" class="margin-note-textarea" rows="3" placeholder="Enter personal reflection or study note...">${escapeHtml(note)}</textarea>
+                    <div class="margin-note-edit-actions">
+                        <button type="button" id="margin-note-cancel-edit-btn" class="margin-note-btn margin-note-btn-sec">Cancel</button>
+                        <button type="button" id="margin-note-save-edit-btn" class="margin-note-btn margin-note-btn-pri">Save Changes</button>
+                    </div>
+                </div>
+                <div class="margin-note-card-actions" id="margin-note-main-actions">
+                    <button type="button" id="margin-note-edit-btn" class="margin-note-btn margin-note-btn-sec" title="Edit Note">
+                        <i class="fas fa-pen"></i> Edit
+                    </button>
+                    <button type="button" id="margin-note-flashcard-btn" class="margin-note-btn margin-note-btn-sec" title="Create Flashcard from Quote & Note">
+                        <i class="fas fa-layer-group" style="color: #8b5cf6;"></i> +Flashcard
+                    </button>
+                    <button type="button" id="margin-note-del-btn" class="margin-note-btn margin-note-btn-danger" title="Delete Note">
+                        <i class="fas fa-trash-alt"></i> Delete
+                    </button>
+                </div>
+            `;
+
+            // Positioning
+            const cardWidth = 320;
+            let top = window.scrollY + rect.bottom + 8;
+            let left = window.scrollX + rect.left + (rect.width / 2) - (cardWidth / 2);
+            if (left < 16) left = 16;
+            if (left + cardWidth > window.innerWidth - 16) left = window.innerWidth - cardWidth - 16;
+            if (rect.bottom + 240 > window.innerHeight && rect.top - 240 > 10) {
+                top = window.scrollY + rect.top - 240;
+            }
+
+            card.style.top = `${top}px`;
+            card.style.left = `${left}px`;
+            card.style.display = 'block';
+            card.classList.remove('hidden');
+
+            card.querySelector('.margin-note-close-btn').onclick = () => {
+                card.style.display = 'none';
+            };
+
+            const viewBody = card.querySelector('#margin-note-view-body');
+            const editBody = card.querySelector('#margin-note-edit-body');
+            const mainActions = card.querySelector('#margin-note-main-actions');
+            const editTextarea = card.querySelector('#margin-note-edit-textarea');
+
+            card.querySelector('#margin-note-edit-btn').onclick = () => {
+                viewBody.style.display = 'none';
+                mainActions.style.display = 'none';
+                editBody.style.display = 'block';
+                editTextarea.focus();
+            };
+
+            card.querySelector('#margin-note-cancel-edit-btn').onclick = () => {
+                editBody.style.display = 'none';
+                viewBody.style.display = 'block';
+                mainActions.style.display = 'flex';
+            };
+
+            card.querySelector('#margin-note-save-edit-btn').onclick = () => {
+                const newNote = editTextarea.value.trim();
+                if (newNote) {
+                    mark.setAttribute('data-note', newNote);
+                    mark.setAttribute('title', `Margin Note: ${newNote}`);
+                    mark.classList.add('has-margin-note');
+                    updateHighlightNoteInStorage(quoteText, newNote);
+                    card.querySelector('#margin-note-display-text').textContent = newNote;
+                    if (window.announceA11y) window.announceA11y('Margin note updated');
+                }
+                editBody.style.display = 'none';
+                viewBody.style.display = 'block';
+                mainActions.style.display = 'flex';
+            };
+
+            card.querySelector('#margin-note-del-btn').onclick = () => {
+                if (confirm('Delete this margin note? (Highlight will be kept)')) {
+                    mark.removeAttribute('data-note');
+                    mark.removeAttribute('title');
+                    mark.classList.remove('has-margin-note');
+                    updateHighlightNoteInStorage(quoteText, '');
+                    card.style.display = 'none';
+                    if (window.announceA11y) window.announceA11y('Margin note removed');
+                }
+            };
+
+            card.querySelector('#margin-note-flashcard-btn').onclick = () => {
+                createFlashcardFromQuote(quoteText, note);
+                card.style.display = 'none';
+            };
+        }
+
         // Click handler on marks with notes to view/edit note
         if (bookContent) {
             bookContent.addEventListener("click", (e) => {
@@ -222,7 +357,8 @@
                 if (mark) {
                     const note = mark.getAttribute("data-note");
                     if (note) {
-                        alert(`📝 Margin Note:\n\n${note}`);
+                        const rect = mark.getBoundingClientRect();
+                        showMarginNoteCard(mark, note, rect);
                     }
                 }
             });

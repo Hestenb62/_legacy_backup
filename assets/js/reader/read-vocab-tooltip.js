@@ -573,7 +573,9 @@
         
         const sourceEl = tooltipEl.querySelector('#vtt-source');
         if (sourceEl) {
-            sourceEl.innerHTML = `<i class="fas fa-globe"></i> ${data.source || 'Online API'}`;
+            const isWiktionary = (data.source || '').toLowerCase().includes('wiktionary');
+            const icon = isWiktionary ? 'fab fa-wikipedia-w' : 'fas fa-globe';
+            sourceEl.innerHTML = `<i class="${icon}"></i> ${data.source || 'Online API'}`;
         }
 
         const defEl = tooltipEl.querySelector('#vtt-definition');
@@ -648,9 +650,99 @@
         tip.style.left = `${left}px`;
     }
 
+    function sanitizeWiktionaryHtml(html) {
+        if (!html) return '';
+        let clean = html.replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, '');
+        clean = clean.replace(/<[^>]+>/g, '');
+        clean = clean.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#39;/g, "'");
+        return clean.trim();
+    }
+
     // Multi-Tier Online API Query Orchestrator
     async function fetchOnlineDefinition(cleanWord) {
-        // TIER 1: Free Dictionary API (Primary English & Academic Lexicon)
+        const lowerWord = cleanWord.toLowerCase().trim();
+
+        // TIER 1: Wiktionary REST API (Primary World Knowledge & Educational Lexicon)
+        try {
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 4000);
+            const wRes = await fetch(`https://en.wiktionary.org/api/rest_v1/page/definition/${encodeURIComponent(lowerWord)}`, {
+                signal: controller.signal
+            });
+            clearTimeout(timeoutId);
+
+            if (wRes.ok) {
+                const wData = await wRes.json();
+                if (wData && wData.en && Array.isArray(wData.en) && wData.en.length > 0) {
+                    for (const section of wData.en) {
+                        if (section.definitions && Array.isArray(section.definitions) && section.definitions.length > 0) {
+                            for (const defObj of section.definitions) {
+                                const cleanDef = sanitizeWiktionaryHtml(defObj.definition);
+                                if (cleanDef && cleanDef.length > 3) {
+                                    let example = '';
+                                    if (defObj.examples) {
+                                        example = Array.isArray(defObj.examples) 
+                                            ? sanitizeWiktionaryHtml(defObj.examples[0]) 
+                                            : sanitizeWiktionaryHtml(defObj.examples);
+                                    } else if (defObj.parsedExamples && defObj.parsedExamples.length > 0) {
+                                        example = sanitizeWiktionaryHtml(defObj.parsedExamples[0].example || '');
+                                    }
+
+                                    return {
+                                        word: cleanWord,
+                                        phonetic: `/${lowerWord}/`,
+                                        syllables: computeSyllables(cleanWord),
+                                        pos: (section.partOfSpeech || 'vocabulary').toLowerCase(),
+                                        tier: 'Wiktionary Knowledge Base',
+                                        source: 'Wiktionary',
+                                        definition: cleanDef,
+                                        example: example,
+                                        audioUrl: null,
+                                        morphemes: null
+                                    };
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        } catch (e) {}
+
+        // TIER 1b: Wiktionary Stem / Lemma Candidates (plural, past tense, suffixes)
+        const stemList = getStemCandidates(cleanWord);
+        for (const stem of stemList) {
+            try {
+                const stemRes = await fetch(`https://en.wiktionary.org/api/rest_v1/page/definition/${encodeURIComponent(stem.toLowerCase())}`);
+                if (stemRes.ok) {
+                    const stemData = await stemRes.json();
+                    if (stemData && stemData.en && stemData.en.length > 0) {
+                        for (const sec of stemData.en) {
+                            if (sec.definitions && sec.definitions.length > 0) {
+                                for (const defObj of sec.definitions) {
+                                    const cleanDef = sanitizeWiktionaryHtml(defObj.definition);
+                                    if (cleanDef) {
+                                        return {
+                                            word: cleanWord,
+                                            phonetic: `/${cleanWord.toLowerCase()}/`,
+                                            syllables: computeSyllables(cleanWord),
+                                            pos: (sec.partOfSpeech || 'vocabulary').toLowerCase() + ` (form of ${stem})`,
+                                            tier: 'Wiktionary Knowledge Base',
+                                            source: `Wiktionary (${stem})`,
+                                            definition: `[Form of "${stem}"]: ` + cleanDef,
+                                            example: defObj.examples ? sanitizeWiktionaryHtml(Array.isArray(defObj.examples) ? defObj.examples[0] : defObj.examples) : '',
+                                            audioUrl: null,
+                                            morphemes: [{ part: stem, type: 'Base Lemma', meaning: `Root form of ${cleanWord}` }]
+                                        };
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            } catch (e) {}
+        }
+
+        // TIER 2: Free Dictionary API (Fallback with Audio Pronunciation)
         try {
             const controller = new AbortController();
             const timeoutId = setTimeout(() => controller.abort(), 3500);

@@ -244,9 +244,9 @@ body.zen-mode {
                     <i class="fas fa-graduation-cap" aria-hidden="true"></i>
                 </button>
 
-                <!-- Flashcard Studio Quick Trigger -->
-                <button type="button" id="open-reader-flashcards-btn" class="tool-btn" onclick="window.toggleFlashcardStudio && window.toggleFlashcardStudio(true)" title="Open Flashcard Studio (Alt+F)" aria-label="Open Flashcard Studio">
-                    <i class="fas fa-layer-group" aria-hidden="true"></i>
+                <!-- Two-Page Spread Mode Toggle -->
+                <button type="button" id="spread-mode-toggle" class="tool-btn" title="Toggle Two-Page Book Spread Mode" aria-label="Toggle Two-Page Spread Mode">
+                    <i class="fas fa-book-open" aria-hidden="true"></i>
                 </button>
 
                 <!-- Typography & Themes Panel Toggle -->
@@ -254,37 +254,50 @@ body.zen-mode {
                     <i class="fas fa-font" aria-hidden="true"></i>
                 </button>
 
-                <!-- Guided Reading Mask Quick Trigger -->
-                <button type="button" id="reader-mask-btn" class="tool-btn" onclick="if(window.toggleReadingMask) window.toggleReadingMask(); else if(window.toggleGuidedReading) window.toggleGuidedReading();" title="Toggle Guided Reading Mask (Alt+R)" aria-label="Toggle Guided Reading Mask">
-                    <i class="fas fa-ruler-horizontal" aria-hidden="true"></i>
-                </button>
-
-                <!-- Zen Distraction-Free Mode Toggle -->
-                <button type="button" id="zen-mode-toggle" class="tool-btn" title="Toggle Distraction-Free Zen Mode (Esc or Z)" aria-label="Toggle Zen Mode">
-                    <i class="fas fa-expand" aria-hidden="true"></i>
-                </button>
-
-                <!-- Offline Cache Button -->
-                <button type="button" id="reader-offline-cache-btn" class="tool-btn" onclick="cacheCurrentBookOffline()" title="Save Entire Book for Offline Reading" aria-label="Save Book Offline">
-                    <i class="fas fa-cloud-download-alt" id="reader-offline-icon" aria-hidden="true"></i>
-                </button>
-
-                <!-- Bookmark Button -->
-                <button type="button" id="reader-bookmark-btn" class="tool-btn" onclick="window.toggleBookBookmark && window.toggleBookBookmark()" title="Bookmark this Book" aria-label="Bookmark this Book">
-                    <i class="far fa-bookmark" id="reader-bookmark-icon" aria-hidden="true"></i>
-                </button>
-
-                <!-- Table of Contents Modal Trigger -->
-                <?php if ($totalChapters > 1): ?>
-                    <button type="button" id="open-toc-modal" class="tool-btn tool-btn-toc" title="Table of Contents" aria-label="Open Table of Contents">
-                        <i class="fas fa-list-ol" aria-hidden="true"></i> <span>TOC</span>
+                <!-- More Tools Menu Dropdown -->
+                <div class="reader-more-tools-container">
+                    <button type="button" id="reader-more-tools-btn" class="tool-btn" title="More Reader Tools" aria-label="More Reader Tools" aria-expanded="false" aria-haspopup="true">
+                        <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
                     </button>
-                <?php endif; ?>
+                    <div id="reader-more-tools-menu" class="reader-more-tools-menu hidden" role="menu" aria-label="More Reader Tools">
+                        <!-- Flashcard Studio Quick Trigger -->
+                        <button type="button" id="open-reader-flashcards-btn" class="more-tool-item" role="menuitem" onclick="window.toggleFlashcardStudio && window.toggleFlashcardStudio(true)">
+                            <i class="fas fa-layer-group" aria-hidden="true"></i> <span>Flashcard Studio</span>
+                        </button>
 
-                <!-- Book Info, License & Citation Modal -->
-                <button type="button" id="open-license-modal-btn" class="tool-btn" onclick="openLicenseModal()" title="View Book Info, License & Citation" aria-label="View Book Info & Citation">
-                    <i class="fas fa-info-circle" aria-hidden="true"></i>
-                </button>
+                        <!-- Guided Reading Mask Quick Trigger -->
+                        <button type="button" id="reader-mask-btn" class="more-tool-item" role="menuitem" onclick="if(window.toggleReadingMask) window.toggleReadingMask(); else if(window.toggleGuidedReading) window.toggleGuidedReading();">
+                            <i class="fas fa-ruler-horizontal" aria-hidden="true"></i> <span>Reading Mask</span>
+                        </button>
+
+                        <!-- Zen Distraction-Free Mode Toggle -->
+                        <button type="button" id="zen-mode-toggle" class="more-tool-item" role="menuitem" title="Toggle Distraction-Free Zen Mode (Esc or Z)" aria-label="Toggle Zen Mode">
+                            <i class="fas fa-expand" id="zen-mode-icon" aria-hidden="true"></i> <span id="zen-mode-text">Zen Mode</span>
+                        </button>
+
+                        <!-- Offline Cache Button -->
+                        <button type="button" id="reader-offline-cache-btn" class="more-tool-item" role="menuitem" onclick="cacheCurrentBookOffline()" title="Save Entire Book for Offline Reading" aria-label="Save Book Offline">
+                            <i class="fas fa-cloud-download-alt" id="reader-offline-icon" aria-hidden="true"></i> <span>Save Offline</span>
+                        </button>
+
+                        <!-- Bookmark Button -->
+                        <button type="button" id="reader-bookmark-btn" class="more-tool-item" role="menuitem" onclick="window.toggleBookBookmark && window.toggleBookBookmark()" title="Bookmark this Book" aria-label="Bookmark this Book">
+                            <i class="far fa-bookmark" id="reader-bookmark-icon" aria-hidden="true"></i> <span id="reader-bookmark-text">Bookmark Book</span>
+                        </button>
+
+                        <!-- Table of Contents Modal Trigger -->
+                        <?php if ($totalChapters > 1): ?>
+                            <button type="button" id="open-toc-modal" class="more-tool-item" role="menuitem" title="Table of Contents" aria-label="Open Table of Contents">
+                                <i class="fas fa-list-ol" aria-hidden="true"></i> <span>Table of Contents</span>
+                            </button>
+                        <?php endif; ?>
+
+                        <!-- Book Info, License & Citation Modal -->
+                        <button type="button" id="open-license-modal-btn" class="more-tool-item" role="menuitem" onclick="openLicenseModal()" title="View Book Info, License & Citation" aria-label="View Book Info & Citation">
+                            <i class="fas fa-info-circle" aria-hidden="true"></i> <span>Book Info & Citation</span>
+                        </button>
+                    </div>
+                </div>
 
                 <!-- Typography Dropdown Panel -->
                 <div id="settings-panel" class="settings-dropdown hidden" role="region" aria-label="Reader Customization Panel">
@@ -813,13 +826,23 @@ body.zen-mode {
 </script>
 
 <script>
-    // Zen Mode Handler
+    // Reader Sticky Controls: Zen Mode, More Tools Menu & Two-Page Spread Mode
     (function() {
+        // --- 1. Zen Mode Handler ---
         const zenBtn = document.getElementById('zen-mode-toggle');
+        const zenIcon = document.getElementById('zen-mode-icon');
+        const zenText = document.getElementById('zen-mode-text');
         if (zenBtn) {
             zenBtn.addEventListener('click', () => {
                 const isZen = document.body.classList.toggle('zen-mode');
-                zenBtn.innerHTML = isZen ? '<i class="fas fa-compress"></i>' : '<i class="fas fa-expand"></i>';
+                if (zenIcon) {
+                    zenIcon.className = isZen ? 'fas fa-compress' : 'fas fa-expand';
+                } else {
+                    zenBtn.innerHTML = isZen ? '<i class="fas fa-compress"></i>' : '<i class="fas fa-expand"></i>';
+                }
+                if (zenText) {
+                    zenText.textContent = isZen ? 'Exit Zen Mode' : 'Zen Mode';
+                }
                 zenBtn.title = isZen ? 'Exit Zen Mode (Esc or Z)' : 'Toggle Distraction-Free Zen Mode (Z)';
                 if (window.announceA11y) {
                     window.announceA11y(isZen ? 'Distraction-free zen mode activated' : 'Zen mode deactivated');
@@ -832,8 +855,86 @@ body.zen-mode {
                     zenBtn.click();
                 } else if (e.key === 'Escape' && document.body.classList.contains('zen-mode')) {
                     document.body.classList.remove('zen-mode');
-                    zenBtn.innerHTML = '<i class="fas fa-expand"></i>';
+                    if (zenIcon) zenIcon.className = 'fas fa-expand';
+                    if (zenText) zenText.textContent = 'Zen Mode';
                     zenBtn.title = 'Toggle Distraction-Free Zen Mode (Z)';
+                }
+            });
+        }
+
+        // --- 2. More Tools Dropdown Handler ---
+        const moreBtn = document.getElementById('reader-more-tools-btn');
+        const moreMenu = document.getElementById('reader-more-tools-menu');
+        if (moreBtn && moreMenu) {
+            moreBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const isOpen = !moreMenu.classList.contains('hidden');
+                moreMenu.classList.toggle('hidden');
+                moreBtn.setAttribute('aria-expanded', !isOpen ? 'true' : 'false');
+            });
+            document.addEventListener('click', (e) => {
+                if (!moreMenu.contains(e.target) && e.target !== moreBtn) {
+                    moreMenu.classList.add('hidden');
+                    moreBtn.setAttribute('aria-expanded', 'false');
+                }
+            });
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && !moreMenu.classList.contains('hidden')) {
+                    moreMenu.classList.add('hidden');
+                    moreBtn.setAttribute('aria-expanded', 'false');
+                    moreBtn.focus();
+                }
+            });
+            moreMenu.querySelectorAll('.more-tool-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    moreMenu.classList.add('hidden');
+                    moreBtn.setAttribute('aria-expanded', 'false');
+                });
+            });
+        }
+
+        // --- 3. Two-Page Spread Mode Handler ---
+        const spreadBtn = document.getElementById('spread-mode-toggle');
+        if (spreadBtn) {
+            const SPREAD_KEY = 'hesten_reader_spread_mode';
+            const savedSpread = localStorage.getItem(SPREAD_KEY) === 'true';
+
+            function setSpreadMode(active) {
+                if (active && window.innerWidth >= 900) {
+                    document.body.classList.add('mode-spread');
+                    spreadBtn.classList.add('active');
+                    spreadBtn.setAttribute('aria-pressed', 'true');
+                    spreadBtn.title = 'Switch to Single-Column Scroll Mode';
+                } else {
+                    document.body.classList.remove('mode-spread');
+                    spreadBtn.classList.remove('active');
+                    spreadBtn.setAttribute('aria-pressed', 'false');
+                    spreadBtn.title = 'Toggle Two-Page Book Spread Mode';
+                }
+            }
+
+            if (savedSpread && window.innerWidth >= 900) {
+                setSpreadMode(true);
+            }
+
+            spreadBtn.addEventListener('click', () => {
+                const willBeSpread = !document.body.classList.contains('mode-spread');
+                setSpreadMode(willBeSpread);
+                try {
+                    localStorage.setItem(SPREAD_KEY, willBeSpread ? 'true' : 'false');
+                } catch(e) {}
+                if (window.announceA11y) {
+                    window.announceA11y(willBeSpread ? 'Two-page book spread mode enabled' : 'Single-column scroll mode enabled');
+                }
+            });
+
+            window.addEventListener('resize', () => {
+                if (window.innerWidth < 900 && document.body.classList.contains('mode-spread')) {
+                    document.body.classList.remove('mode-spread');
+                    spreadBtn.classList.remove('active');
+                } else if (window.innerWidth >= 900 && localStorage.getItem(SPREAD_KEY) === 'true') {
+                    document.body.classList.add('mode-spread');
+                    spreadBtn.classList.add('active');
                 }
             });
         }
