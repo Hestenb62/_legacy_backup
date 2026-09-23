@@ -51,37 +51,6 @@ if (! function_exists('assetVersion')) {
 
     <head>
 
-        <!-- Matomo -->
-        <script>
-            var _paq = window._paq = window._paq || [];
-            /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-            _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
-            _paq.push(["setCookieDomain", "*.www.hestena62.com"]);
-            _paq.push(["setDomains", ["*.www.hestena62.com", "*.hestena62.com"]]);
-            _paq.push(["enableCrossDomainLinking"]);
-            _paq.push(['trackPageView']);
-            _paq.push(['enableLinkTracking']);
-            (function () {
-                var u = "//hestena62-motamo.is-great.org/";
-                _paq.push(['setTrackerUrl', u + 'matomo.php']);
-                _paq.push(['setSiteId', '2']);
-                var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
-                g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
-            })();
-        </script>
-        <noscript>
-            <p><img referrerpolicy="no-referrer-when-downgrade"
-                    src="//hestena62-motamo.is-great.org/matomo.php?idsite=2&amp;rec=1" style="border:0;" alt="" /></p>
-        </noscript>
-        <!-- End Matomo Code -->
-
-        <!-- Matomo Image Tracker-->
-        <img referrerpolicy="no-referrer-when-downgrade"
-            src="https://hestena62-motamo.is-great.org/matomo.php?idsite=2&amp;rec=1" style="border:0" alt="" />
-        <!-- End Matomo -->
-
-
-
         <script>
             (function () {
                 try {
@@ -375,6 +344,35 @@ if (! function_exists('assetVersion')) {
         <link rel="stylesheet" href="<?= assetVersion('/assets/css/layouts/header.css') ?>">
         <link rel="stylesheet" href="<?= assetVersion('/assets/css/layouts/footer.css') ?>">
         <link rel="stylesheet" href="<?= assetVersion('/assets/css/layouts/print.css') ?>" media="print">
+
+        <!-- Matomo -->
+        <script>
+            var _paq = window._paq = window._paq || [];
+            /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+            _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+            _paq.push(["setCookieDomain", "*.www.hestena62.com"]);
+            _paq.push(["setDomains", ["*.www.hestena62.com", "*.hestena62.com"]]);
+            _paq.push(["enableCrossDomainLinking"]);
+            _paq.push(['trackPageView']);
+            _paq.push(['enableLinkTracking']);
+            (function () {
+                var u = "//hestena62-motamo.is-great.org/";
+                _paq.push(['setTrackerUrl', u + 'matomo.php']);
+                _paq.push(['setSiteId', '2']);
+                var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+                g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
+            })();
+        </script>
+        <noscript>
+            <p><img referrerpolicy="no-referrer-when-downgrade"
+                    src="//hestena62-motamo.is-great.org/matomo.php?idsite=2&amp;rec=1" style="border:0;" alt="" /></p>
+        </noscript>
+        <!-- End Matomo Code -->
+
+        <!-- Matomo Image Tracker-->
+        <img referrerpolicy="no-referrer-when-downgrade"
+            src="https://hestena62-motamo.is-great.org/matomo.php?idsite=2&amp;rec=1" style="border:0" alt="" />
+        <!-- End Matomo -->
     </head>
 
     <body>
