@@ -498,6 +498,12 @@ include '../src/header.php';
                         </a>
                     </li>
                     <li>
+                        <a href="/pages/guides.php" class="help-resource-link">
+                            <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                            <span>Educational Guides Hub</span>
+                        </a>
+                    </li>
+                    <li>
                         <a href="/library/read/index.php?book=1984&chapter=teacher-resources" class="help-resource-link">
                             <i class="fas fa-book-reader" aria-hidden="true"></i>
                             <span>Digital Reader Educator Suite</span>
