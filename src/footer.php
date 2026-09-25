@@ -95,6 +95,30 @@
             </div>
         </div>
 
+        <!-- Version Status & Release Info Strip (WCAG Operable) -->
+        <?php
+        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.4.0';
+        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'September 2026 Release';
+        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Accessible UDL & Modern Design System';
+        ?>
+        <div class="footer-version-strip" role="region" aria-label="Platform Version Information">
+            <div class="footer-version-info">
+                <span class="footer-version-pill">
+                    <span class="footer-version-pulse-dot" aria-hidden="true"></span>
+                    <span>Version <?= htmlspecialchars($siteVersion) ?></span>
+                </span>
+                <span class="footer-version-meta">
+                    <span class="footer-version-highlight"><?= htmlspecialchars($siteVersionLabel) ?></span> &bull; <?= htmlspecialchars($siteVersionSummary) ?>
+                </span>
+            </div>
+            <div class="footer-version-actions">
+                <button type="button" class="footer-version-btn" id="footer-version-modal-trigger" aria-haspopup="dialog" aria-controls="footer-version-modal">
+                    <i class="fas fa-sparkles" aria-hidden="true"></i>
+                    <span>What's New in <?= htmlspecialchars($siteVersion) ?></span>
+                </button>
+            </div>
+        </div>
+
         <div class="footer-divider"></div>
 
         <div class="footer-bottom">
@@ -214,6 +238,117 @@
             }
         } catch (e) { }
     })();
+</script>
+
+<!-- Interactive What's New in Version Modal -->
+<div id="footer-version-modal" class="footer-vmodal" role="dialog" aria-modal="true" aria-labelledby="footer-version-modal-title" aria-hidden="true">
+    <div class="footer-vmodal-backdrop" id="footer-version-modal-backdrop"></div>
+    <div class="footer-vmodal-dialog">
+        <div class="footer-vmodal-header">
+            <div class="footer-vmodal-header-title">
+                <i class="fas fa-rocket" aria-hidden="true"></i>
+                <h3 id="footer-version-modal-title">What's in Version <?= htmlspecialchars($siteVersion) ?></h3>
+            </div>
+            <button type="button" class="footer-vmodal-close-btn" id="footer-version-modal-close-btn" aria-label="Close version details">
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="footer-vmodal-body">
+            <div class="footer-vmodal-badge-row">
+                <span class="footer-vmodal-badge">
+                    <i class="fas fa-code-branch" aria-hidden="true"></i> Platform <?= htmlspecialchars($siteVersion) ?>
+                </span>
+                <span class="footer-vmodal-badge success">
+                    <i class="fas fa-check-circle" aria-hidden="true"></i> Active <?= htmlspecialchars($siteVersionLabel) ?>
+                </span>
+            </div>
+            <p class="footer-vmodal-lead">
+                Version <?= htmlspecialchars($siteVersion) ?> expands universal learning accommodations, introduces high-contrast accessible design systems, and enhances multi-grade educational guides.
+            </p>
+            <ul class="footer-vmodal-features">
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true">
+                        <i class="fas fa-universal-access"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>WCAG AAA &amp; UDL Compliance:</strong> Multi-sensory accommodations including OpenDyslexic typography, dyscalculia colorizer, Irlen color overlays, and 100% keyboard accessibility.
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true">
+                        <i class="fas fa-book-reader"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Educational Guides &amp; Multi-Lexile Reader:</strong> Adapted reading levels, speech-to-text narration, and research-backed interactive comprehension checkpoints.
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Vanilla CSS Design Modernization:</strong> Fluid responsive layouts, dark theme precision, glassmorphic cards, and zero external framework lock-in.
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true">
+                        <i class="fas fa-cloud-arrow-up"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Tripartite Cloud Sync &amp; Offline PWA:</strong> Resilient Google Drive auto-sync connecting students, parents, and teachers with offline service-worker caching.
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-vmodal-footer">
+            <button type="button" class="footer-vmodal-btn-secondary" id="footer-version-modal-cancel-btn">Close</button>
+            <a href="/updates/" class="footer-vmodal-btn-primary">
+                <i class="fas fa-newspaper" aria-hidden="true"></i>
+                <span>Explore Full Engineering Logs</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<script>
+(function() {
+    const trigger = document.getElementById('footer-version-modal-trigger');
+    const modal = document.getElementById('footer-version-modal');
+    if (!trigger || !modal) return;
+
+    const backdrop = document.getElementById('footer-version-modal-backdrop');
+    const closeBtn = document.getElementById('footer-version-modal-close-btn');
+    const cancelBtn = document.getElementById('footer-version-modal-cancel-btn');
+    let previousFocus = null;
+
+    function openModal() {
+        previousFocus = document.activeElement;
+        modal.classList.add('active');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        setTimeout(() => { if (closeBtn) closeBtn.focus(); }, 60);
+    }
+
+    function closeModal() {
+        modal.classList.remove('active');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        if (previousFocus && typeof previousFocus.focus === 'function') {
+            previousFocus.focus();
+        }
+    }
+
+    trigger.addEventListener('click', openModal);
+    if (backdrop) backdrop.addEventListener('click', closeModal);
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (cancelBtn) cancelBtn.addEventListener('click', closeModal);
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeModal();
+        }
+    });
+})();
 </script>
 </body>
 

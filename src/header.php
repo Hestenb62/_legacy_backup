@@ -45,6 +45,20 @@ if (! function_exists('assetVersion')) {
         return '/'.$cleanPath.'?v=1.4';
         }
     }
+
+// Core Platform Version Definition
+if (! defined('HL_SITE_VERSION')) {
+    define('HL_SITE_VERSION', 'v2.4.0');
+}
+if (! defined('HL_SITE_VERSION_DATE')) {
+    define('HL_SITE_VERSION_DATE', 'September 2026');
+}
+if (! defined('HL_SITE_VERSION_LABEL')) {
+    define('HL_SITE_VERSION_LABEL', 'September 2026 Release');
+}
+if (! defined('HL_SITE_VERSION_SUMMARY')) {
+    define('HL_SITE_VERSION_SUMMARY', 'Accessible UDL & Modern Design System');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
