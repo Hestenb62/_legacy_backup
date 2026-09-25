@@ -2,10 +2,10 @@
 // ====================================================================
 // PHP SETUP: Define dynamic variables for use in header.php and footer.php
 // ====================================================================
-$pageTitle       = "About Us - Hesten's Learning";
+$pageTitle = "About Us - Hesten's Learning";
 $pageDescription = "Learn about our mission, team, and history in empowering students with learning disabilities through personalized education.";
-$pageKeywords    = "about us, mission, team, history, education, learning disabilities, personalized learning";
-$pageAuthor      = "Hesten Allison";
+$pageKeywords = "about us, mission, team, history, education, learning disabilities, personalized learning";
+$pageAuthor = "Hesten Allison";
 
 // Include the header file, which contains the <html>, <head>, and opening <body> tags,
 // the accessibility features, announcement bar, and the main navigation structure.
@@ -47,24 +47,22 @@ include '../src/header.php';
             <p class="section-paragraph">Our mission is to provide the best services to our customers and
                 ensure their satisfaction. We strive to innovate and continuously improve our offerings to meet the
                 evolving needs of our clients. Specifically, we focus on <strong>empowering students with learning
-                disabilities</strong> through personalized and research-backed educational experiences. <a href="/pages/mission.php"
-                    class="section-link">Read our full Mission & Vision &rsaquo;</a></p>
+                    disabilities</strong> through personalized and research-backed educational experiences. <a
+                    href="/pages/mission.php" class="section-link">Read our full Mission & Vision &rsaquo;</a></p>
         </section>
 
         <section class="content-section">
             <h2 class="section-heading">Our Team</h2>
             <p class="section-paragraph">We have a diverse team of professionals dedicated to achieving
-                our mission. Our team members come from various backgrounds and bring a wealth of experience and
-                expertise to the table, including educators, technologists, and learning specialists. We believe in
-                fostering a collaborative and inclusive work environment where everyone can thrive.</p>
+                our mission. Our team members come from various backgrounds, but we all share a common goal of
+                providing the best possible services to our customers. We believe in fostering a collaborative and inclusive
+                work environment where everyone can thrive.</p>
         </section>
 
         <section class="content-section">
             <h2 class="section-heading">Our History</h2>
-            <p class="section-paragraph">Founded in 2023, we have grown rapidly and continue to expand our
-                reach. Our journey began with a small group of passionate individuals who shared a common vision for
-                accessible education. Over the years, we have achieved numerous milestones and have built a strong
-                reputation in the field of inclusive learning.</p>
+            <p class="section-paragraph">Founded in 2025, we have grown rapidly and continue to expand our
+                reach. Our journey began with me, Hesten Allison, as a sole proprietor, and we have since grown into a thriving business with a dedicated team. Over the years, we have achieved numerous milestones and have built a strong reputation in the field of inclusive learning.</p>
         </section>
 
         <section class="content-section">
@@ -79,17 +77,10 @@ include '../src/header.php';
             <h2 class="section-heading">Contact Us</h2>
             <p class="section-paragraph">If you have any questions or would like to learn more about our
                 services, please do not hesitate to contact us. You can reach us via email at <a
-                    href="mailto:admin@hestena62.com"
-                    class="section-link">admin@hestena62.com</a>. We look forward to hearing
+                    href="mailto:admin@hestena62.com" class="section-link">admin@hestena62.com</a>. We look forward to
+                hearing
                 from you!</p>
         </section>
 
     </div>
 </main>
-
-<?php
-// Include the footer file, which contains the footer element, modals, 
-// and the closing </body> and </html> tags.
-// It also contains the comprehensive site-wide JavaScript logic.
-include '../src/footer.php';
-?>
