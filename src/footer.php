@@ -271,7 +271,7 @@
                         <i class="fas fa-universal-access"></i>
                     </div>
                     <div class="footer-vmodal-feature-text">
-                        <strong>WCAG AAA &amp; UDL Compliance:</strong> Multi-sensory accommodations including OpenDyslexic typography, dyscalculia colorizer, Irlen color overlays, and 100% keyboard accessibility.
+                        <strong>Universal Design for Learning (UDL):</strong> Multi-sensory accommodations including OpenDyslexic typography, audio-synced subtitles, 3-point dyscalculia colorizer, Irlen color overlays, and 100% keyboard accessibility.
                     </div>
                 </li>
                 <li class="footer-vmodal-feature-item">
@@ -279,7 +279,7 @@
                         <i class="fas fa-book-reader"></i>
                     </div>
                     <div class="footer-vmodal-feature-text">
-                        <strong>Educational Guides &amp; Multi-Lexile Reader:</strong> Adapted reading levels, speech-to-text narration, and research-backed interactive comprehension checkpoints.
+                        <strong>Educational Guides &amp; Multi-Lexile Readers:</strong> Adapted reading levels, text-to-speech narration, and research-backed interactive comprehension checkpoints.
                     </div>
                 </li>
                 <li class="footer-vmodal-feature-item">
@@ -295,7 +295,15 @@
                         <i class="fas fa-cloud-arrow-up"></i>
                     </div>
                     <div class="footer-vmodal-feature-text">
-                        <strong>Tripartite Cloud Sync &amp; Offline PWA:</strong> Resilient Google Drive auto-sync connecting students, parents, and teachers with offline service-worker caching.
+                        <strong>Offline Access:</strong> The site works completely offline without an internet connection. No browser login required. Progressive Web App (PWA) enables offline access.
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true">
+                        <i class="fas fa-cloud-arrow-up"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Tripartite Cloud Sync:</strong> Resilient Google Drive auto-sync connecting students, parents, and teachers. 
                     </div>
                 </li>
             </ul>
