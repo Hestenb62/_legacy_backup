@@ -1,0 +1,97 @@
+{
+    "grade": "Grade 1",
+    "subject": "science",
+    "name": "Science",
+    "course": "Light, Sound, Sky Patterns & Living Things",
+    "title": "Grade 1 Science: Light, Sound, Sky Patterns & Living Things",
+    "icon": "fas fa-leaf",
+    "color": "#4f46e5",
+    "overview": "Grade 1 Science engages students in the scientific method and engineering design process across physical, life, and Earth/space sciences aligned with Next Generation Science Standards (NGSS).",
+    "competencies": [
+        "Ask scientific questions, plan and conduct controlled investigations, and analyze experimental data.",
+        "Develop and use models to describe natural systems, energy flows, and physical interactions.",
+        "Construct explanations supported by empirical evidence and scientific reasoning.",
+        "Design, test, and optimize engineering solutions to real-world technological and environmental problems."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "Waves: Light and Sound Communication",
+            "description": "Investigating sound through vibrating materials, exploring how light travels and illuminates objects, and communicating with signals.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Sound Vibrations and Volume",
+                    "description": "Testing tuning forks, string instruments, and speakers to connect vibration to sound.",
+                    "standards": [
+                        "1-PS4-1"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Light Beams, Shadows & Transparent Materials",
+                    "description": "Observing how light passes through transparent, translucent, and opaque materials.",
+                    "standards": [
+                        "1-PS4-2",
+                        "1-PS4-3"
+                    ]
+                },
+                {
+                    "letter": "C",
+                    "title": "Communicating with Light and Sound Devices",
+                    "description": "Designing flashlights and percussion codes to transmit messages across distances.",
+                    "standards": [
+                        "1-PS4-4"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "Plant and Animal Structures & Biomimicry",
+            "description": "Discovering how external physical structures help plants and animals survive, grow, and protect their offspring.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Animal Parts for Defense and Mobility",
+                    "description": "Analyzing claws, shells, wings, and camouflage, and engineering bio-inspired tools.",
+                    "standards": [
+                        "1-LS1-1"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Parent-Offspring Behaviors and Traits",
+                    "description": "Observing how animal parents nurture their young and how young resemble parents.",
+                    "standards": [
+                        "1-LS1-2",
+                        "1-LS3-1"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 3,
+            "title": "Space Systems: Patterns in the Sky",
+            "description": "Tracking observable cyclical patterns of the Sun, Moon, and stars across daytime and nighttime skies.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Sunrise, Sunset & Seasonal Daylight",
+                    "description": "Measuring daylight changes from winter to summer and tracking the solar arc.",
+                    "standards": [
+                        "1-ESS1-2"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Moon Phases & Star Constellations",
+                    "description": "Observing how the Moon changes shape and how constellations appear in seasons.",
+                    "standards": [
+                        "1-ESS1-1"
+                    ]
+                }
+            ]
+        }
+    ]
+}

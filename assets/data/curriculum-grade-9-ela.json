@@ -1,0 +1,143 @@
+{
+    "grade": "9th Grade",
+    "subject": "ela",
+    "name": "English Language Arts",
+    "course": "English 9",
+    "title": "English 9: Literary Analysis, Rhetoric & Composition",
+    "icon": "fas fa-feather-alt",
+    "color": "#059669",
+    "overview": "English 9 fosters advanced critical reading, analytical writing, and rhetorical analysis. Students engage deeply with world literature, foundational historical documents, dramatic tragedy, and modern informational texts. Through recursive writing workshops, students craft evidence-based arguments, literary analyses, and inquiry-driven research synthesis papers.",
+    "competencies": [
+        "Cite strong and thorough textual evidence to support inferences and determine multiple complex themes in literary works.",
+        "Analyze how an author's choices regarding point of view, pacing, structure, and characterization produce dramatic irony or mystery.",
+        "Evaluate the credibility and rhetorical reasoning of seminal historical and philosophical arguments (logos, ethos, pathos).",
+        "Write cogent, well-substantiated argumentative and informational essays using sophisticated transitions, formal style, and standard conventions.",
+        "Conduct sustained research projects, gathering credible print and digital sources, synthesizing viewpoints, and adhering to ethical citation."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "Narrative Craft, Epic Traditions & Foundational Fiction",
+            "description": "Explores epic storytelling, universal hero archetypes, and character development across world literature. Students analyze how authors construct complex worlds, manipulate narrative pacing, and develop central themes of identity, belonging, and moral consequence.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "The Epic Journey & Heroic Archetypes",
+                    "description": "Studies the classic monomyth structure and hero's journey in classical and contemporary epics. Students analyze character motivations, cultural values reflected in epic conventions, and compare ancient archetypes with modern literary protagonists.",
+                    "standards": ["CCSS.ELA-LITERACY.RL.9-10.1", "CCSS.ELA-LITERACY.RL.9-10.2", "CCSS.ELA-LITERACY.RL.9-10.3"]
+                },
+                {
+                    "letter": "B",
+                    "title": "Character Psychology & Internal/External Conflict",
+                    "description": "Investigates characterization techniques including direct exposition, dialogue, internal monologue, and foil relationships. Students track dynamic character evolution under societal, interpersonal, and psychological strain.",
+                    "standards": ["CCSS.ELA-LITERACY.RL.9-10.3", "CCSS.ELA-LITERACY.RL.9-10.5", "CCSS.ELA-LITERACY.W.9-10.9"]
+                },
+                {
+                    "letter": "C",
+                    "title": "Symbolism, Allegory & Thematic Architecture",
+                    "description": "Examines how figurative language, recurring motifs, and allegorical layers reinforce nuanced themes. Students write close-reading textual analyses examining how diction and syntax establish atmospheric tone.",
+                    "standards": ["CCSS.ELA-LITERACY.RL.9-10.4", "CCSS.ELA-LITERACY.RL.9-10.2", "CCSS.ELA-LITERACY.L.9-10.5"]
+                },
+                {
+                    "letter": "D",
+                    "title": "Narrative Writing & Creative Voice Workshop",
+                    "description": "Engages students in original narrative writing. Students apply sensory imagery, non-linear chronological sequencing, authentic dialogue, and reflective conclusions in craft-focused personal essays or short stories.",
+                    "standards": ["CCSS.ELA-LITERACY.W.9-10.3", "CCSS.ELA-LITERACY.W.9-10.4", "CCSS.ELA-LITERACY.L.9-10.1"]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "Informational Rhetoric, Seminal Speeches & Argumentation",
+            "description": "Focuses on rhetorical analysis of foundational American documents and seminal international speeches. Students dissect how public speakers and essayists deploy ethos, pathos, logos, rhetorical devices, and logical structure to persuade audiences.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Rhetorical Triangle & Persuasive Appeals",
+                    "description": "Introduces Aristotle's rhetorical triangle (ethos, pathos, logos) and kairos. Students analyze how landmark speeches balance emotional urgency with factual evidence and speaker credibility.",
+                    "standards": ["CCSS.ELA-LITERACY.RI.9-10.1", "CCSS.ELA-LITERACY.RI.9-10.6", "CCSS.ELA-LITERACY.SL.9-10.3"]
+                },
+                {
+                    "letter": "B",
+                    "title": "Structural Logic & Delineating Arguments",
+                    "description": "Analyzes argumentative architectures, identifying claims, counterclaims, warrants, and evidence. Students detect logical fallacies (ad hominem, false equivalence, slippery slope) in persuasive texts.",
+                    "standards": ["CCSS.ELA-LITERACY.RI.9-10.5", "CCSS.ELA-LITERACY.RI.9-10.8"]
+                },
+                {
+                    "letter": "C",
+                    "title": "Foundational Historical Documents in Dialogue",
+                    "description": "Examines how seminal historical texts (such as the Declaration of Independence, Lincoln's Second Inaugural, and King's Letter from Birmingham Jail) address themes of human rights, liberty, and civic obligation.",
+                    "standards": ["CCSS.ELA-LITERACY.RI.9-10.9", "CCSS.ELA-LITERACY.RI.9-10.2"]
+                },
+                {
+                    "letter": "D",
+                    "title": "Crafting Evidence-Based Argumentative Essays",
+                    "description": "Guides students through writing rigorous multi-paragraph persuasive essays. Students formulate precise claims, anticipate and refute opposing viewpoints, and maintain formal academic voice and objective tone.",
+                    "standards": ["CCSS.ELA-LITERACY.W.9-10.1", "CCSS.ELA-LITERACY.W.9-10.4", "CCSS.ELA-LITERACY.W.9-10.5"]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 3,
+            "title": "Dramatic Literature, Poetic Forms & Theatrical Vision",
+            "description": "Explores the theatrical power of dramatic tragedy and classical poetry. Students analyze Shakespearean drama, iambic pentameter, poetic forms (sonnets, free verse, odes), dramatic irony, and modern performance adaptations.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Shakespearean Tragedy & Dramatic Conventions",
+                    "description": "Studies dramatic structure, tragic heroes, hubris, and stagecraft in Renaissance theater (e.g. Romeo and Juliet). Students analyze soliloquies, aside remarks, and the tension between destiny and personal agency.",
+                    "standards": ["CCSS.ELA-LITERACY.RL.9-10.3", "CCSS.ELA-LITERACY.RL.9-10.5", "CCSS.ELA-LITERACY.RL.9-10.9"]
+                },
+                {
+                    "letter": "B",
+                    "title": "Poetic Meter, Figurative Language & Sound Devices",
+                    "description": "Examines rhyme schemes, metrical rhythms, assonance, consonance, and enjambment. Students interpret how poets use sound and visual white space to evoke emotional resonance and compress complex meanings.",
+                    "standards": ["CCSS.ELA-LITERACY.RL.9-10.4", "CCSS.ELA-LITERACY.L.9-10.5"]
+                },
+                {
+                    "letter": "C",
+                    "title": "Dramatic Irony & Audience Perspective",
+                    "description": "Analyzes how differences between what a character knows and what the audience understands generate suspense, tension, and humor. Students critique how staging choices shape audience perception.",
+                    "standards": ["CCSS.ELA-LITERACY.RL.9-10.6", "CCSS.ELA-LITERACY.SL.9-10.1"]
+                },
+                {
+                    "letter": "D",
+                    "title": "Comparative Film & Theatrical Performance Analysis",
+                    "description": "Compares written dramatic scripts with theatrical stagings or film adaptations. Students evaluate how directors, actors, lighting, and score reinterpret classic texts for contemporary viewers.",
+                    "standards": ["CCSS.ELA-LITERACY.RL.9-10.7", "CCSS.ELA-LITERACY.W.9-10.9"]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 4,
+            "title": "Multi-Source Research, Synthesis & Contemporary Inquiries",
+            "description": "Synthesizes multi-source investigative research, critical media literacy, and public presentation. Students formulate inquiry questions, evaluate source authority, synthesize conflicting evidence, and deliver professional multimedia findings.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Inquiry Formulation & Source Credibility Evaluation",
+                    "description": "Teaches academic research protocols. Students formulate viable research questions, evaluate source bias, timeliness, and peer-reviewed authority, and master Boolean database search strategies.",
+                    "standards": ["CCSS.ELA-LITERACY.W.9-10.7", "CCSS.ELA-LITERACY.W.9-10.8"]
+                },
+                {
+                    "letter": "B",
+                    "title": "Synthesizing Complex Informational Perspectives",
+                    "description": "Guides students in weaving multiple author perspectives, statistical findings, and case studies into a cohesive synthesis matrix, avoiding plagiarism through ethical quotation, paraphrasing, and MLA citation.",
+                    "standards": ["CCSS.ELA-LITERACY.RI.9-10.7", "CCSS.ELA-LITERACY.W.9-10.8", "CCSS.ELA-LITERACY.W.9-10.2"]
+                },
+                {
+                    "letter": "C",
+                    "title": "Explanatory Research Paper Composition",
+                    "description": "Guides the drafting of an extensive research paper featuring clear thesis statements, logical topic sentence progressions, integrated textual citations, and comprehensive bibliographies.",
+                    "standards": ["CCSS.ELA-LITERACY.W.9-10.2", "CCSS.ELA-LITERACY.W.9-10.4", "CCSS.ELA-LITERACY.L.9-10.2"]
+                },
+                {
+                    "letter": "D",
+                    "title": "Multimedia Presentation & Rhetorical Delivery",
+                    "description": "Prepares students to present research findings orally using visual slide decks, audio clips, and data graphs. Students practice vocal modulation, audience engagement, and defend conclusions in Q&A sessions.",
+                    "standards": ["CCSS.ELA-LITERACY.SL.9-10.4", "CCSS.ELA-LITERACY.SL.9-10.5", "CCSS.ELA-LITERACY.SL.9-10.6"]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,128 @@
+{
+    "grade": "Grade 10",
+    "subject": "math",
+    "name": "Mathematics",
+    "course": "Geometry",
+    "title": "Grade 10 Mathematics: Geometry",
+    "icon": "fas fa-calculator",
+    "color": "#2563eb",
+    "overview": "Grade 10 Mathematics delivers advanced mathematical preparation, rigorous logical deduction, and complex modeling across algebraic, geometric, trigonometric, and analytical domains.",
+    "competencies": [
+        "Construct formal deductive arguments, proofs, and mathematical models to solve real-world problems.",
+        "Analyze functions, coordinate systems, and algebraic structures with computational accuracy.",
+        "Apply advanced formulas, theorems, and mathematical transformations.",
+        "Communicate mathematical reasoning fluently using precise symbolic notation and graphical representations."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "Congruence, Proof, and Geometric Constructions",
+            "description": "Formalizing geometric proof, parallel lines with transversals, triangle congruence criteria (SAS, ASA, SSS), and compass/straightedge constructions.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Geometric Definitions and Axiomatic Systems",
+                    "description": "Establishing formal undefined terms (point, line, plane), definitions of angles, rays, and perpendicular lines.",
+                    "standards": [
+                        "HSG-CO.A.1"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Rigid Motions and Triangle Congruence",
+                    "description": "Defining transformations as functions on the plane and proving triangle congruence criteria.",
+                    "standards": [
+                        "HSG-CO.B.6",
+                        "HSG-CO.B.7",
+                        "HSG-CO.B.8"
+                    ]
+                },
+                {
+                    "letter": "C",
+                    "title": "Proving Theorems About Lines and Angles",
+                    "description": "Writing deductive two-column and flow proofs for vertical angles, parallel lines cut by transversals, and triangle angle sums.",
+                    "standards": [
+                        "HSG-CO.C.9",
+                        "HSG-CO.C.10"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "Similarity, Right Triangles, and Trigonometry",
+            "description": "Investigating dilations, proving triangle similarity criteria (AA, SAS, SSS), and defining right triangle trigonometric ratios (sine, cosine, tangent).",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Dilations and Triangle Similarity Proofs",
+                    "description": "Verifying properties of dilations and proving that two triangles are similar when corresponding angles are equal.",
+                    "standards": [
+                        "HSG-SRT.A.1",
+                        "HSG-SRT.A.2",
+                        "HSG-SRT.B.5"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Right Triangle Trigonometric Ratios",
+                    "description": "Defining sine, cosine, and tangent as ratios of right triangle side lengths, solving for unknown heights.",
+                    "standards": [
+                        "HSG-SRT.C.6",
+                        "HSG-SRT.C.7",
+                        "HSG-SRT.C.8"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 3,
+            "title": "Extending to Three Dimensions: Surface Area and Volume",
+            "description": "Explaining and applying formulas for circumference, area of circles, volume of cylinders, pyramids, cones, and spheres using Cavalieri's principle.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Area of Sectors and Radians",
+                    "description": "Deriving the formula for arc length and radian measure, and calculating areas of circular sectors.",
+                    "standards": [
+                        "HSG-C.B.5"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Volume of Prisms, Cylinders, Pyramids, and Cones",
+                    "description": "Applying Cavalieri's principle and volume formulas to solve engineering and design problems.",
+                    "standards": [
+                        "HSG-GMD.A.1",
+                        "HSG-GMD.A.3",
+                        "HSG-MG.A.1"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 4,
+            "title": "Connecting Algebra and Geometry Through Coordinates",
+            "description": "Using coordinate geometry to prove geometric theorems algebraically, deriving the equation of a circle, and working with parallel/perpendicular slopes.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Coordinate Proofs and Distance Formula",
+                    "description": "Using distance and slope formulas to prove properties of quadrilaterals (parallelograms, rectangles, rhombi).",
+                    "standards": [
+                        "HSG-GPE.B.4",
+                        "HSG-GPE.B.5"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Equation of a Circle in the Coordinate Plane",
+                    "description": "Deriving (x - h)^2 + (y - k)^2 = r^2 using the Pythagorean Theorem and completing the square.",
+                    "standards": [
+                        "HSG-GPE.A.1"
+                    ]
+                }
+            ]
+        }
+    ]
+}

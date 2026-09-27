@@ -1,0 +1,90 @@
+{
+    "grade": "Grade 6",
+    "subject": "science",
+    "name": "Science",
+    "course": "Earth & Space Science: Geological Systems & Weather",
+    "title": "Grade 6 Science: Earth & Space Science: Geological Systems & Weather",
+    "icon": "fas fa-atom",
+    "color": "#4f46e5",
+    "overview": "Grade 6 Science explores the interconnected systems of the physical, life, and Earth/space sciences using inquiry-based labs, computational modeling, and engineering design aligned with NGSS.",
+    "competencies": [
+        "Formulate testable hypotheses, design empirical experiments, and interpret complex data graphs.",
+        "Construct and revise scientific models explaining matter, energy, and biological systems.",
+        "Apply mathematical relationships and physical laws to predict natural phenomena.",
+        "Evaluate technological solutions to ecological and societal challenges."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "Earth's Systems: Plate Tectonics & Rock Cycling",
+            "description": "Modeling Earth's interior layers, mantle convection, continental drift, plate boundaries, and the cycling of rock materials.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Plate Tectonics and Crustal Deformations",
+                    "description": "Analyzing convergent, divergent, and transform plate boundaries and seafloor spreading.",
+                    "standards": [
+                        "MS-ESS2-1",
+                        "MS-ESS2-2",
+                        "MS-ESS2-3"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "The Rock Cycle and Geoscience Processes",
+                    "description": "Tracing the transformations between igneous, sedimentary, and metamorphic rocks driven by heat and pressure.",
+                    "standards": [
+                        "MS-ESS2-1"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "Weather, Atmosphere & Ocean Currents",
+            "description": "Investigating solar atmospheric heating, atmospheric pressure, global wind belts, and ocean currents shaping regional climates.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Air Masses, Fronts and Weather Prediction",
+                    "description": "Modeling how air masses of different temperatures and moisture collide to produce storms.",
+                    "standards": [
+                        "MS-ESS2-5"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Ocean Circulation and Global Climate Systems",
+                    "description": "Analyzing how ocean currents redistribute thermal energy globally and influence regional weather patterns.",
+                    "standards": [
+                        "MS-ESS2-6"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 3,
+            "title": "Space Systems: Solar System Astronomy",
+            "description": "Modeling solar system gravity, planetary orbits, lunar phases, solar and lunar eclipses, and the scale of the universe.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Lunar Phases, Eclipses and Seasonal Tilt",
+                    "description": "Demonstrating how Earth's 23.5-degree axial tilt creates seasons and how orbits cause eclipses.",
+                    "standards": [
+                        "MS-ESS1-1"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Gravity and Solar System Scale Models",
+                    "description": "Constructing computational scale models of the planets and analyzing gravitational orbital mechanics.",
+                    "standards": [
+                        "MS-ESS1-2",
+                        "MS-ESS1-3"
+                    ]
+                }
+            ]
+        }
+    ]
+}

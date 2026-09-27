@@ -1,0 +1,89 @@
+{
+    "grade": "Grade 4",
+    "subject": "ela",
+    "name": "English Language Arts",
+    "course": "Complex Text Structures, Theme & Evidence-Based Essay Writing",
+    "title": "Grade 4 English Language Arts: Complex Text Structures, Theme & Evidence-Based Essay Writing",
+    "icon": "fas fa-feather-alt",
+    "color": "#059669",
+    "overview": "Grade 4 English Language Arts immerses students in literary and informational texts, developing close reading comprehension, evidence-based writing, academic vocabulary, and collaborative discourse.",
+    "competencies": [
+        "Read grade-level literary and informational texts with fluency, accuracy, and deep comprehension.",
+        "Cite specific textual evidence to substantiate answers, inferences, and central theme analyses.",
+        "Write clear, organized opinion, informative, and narrative compositions using standard grammar conventions.",
+        "Participate actively in collaborative discussions, expressing ideas clearly and building upon others' contributions."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "Deep Literary Analysis, Theme & Character Motivations",
+            "description": "Determining the theme of stories, dramas, and poems from details in the text, and analyzing character reactions to challenges.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Theme Development Across Literary Genres",
+                    "description": "Synthesizing character decisions and resolutions to deduce overarching themes.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RL.4.2"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Character Perspective & Structural Elements",
+                    "description": "Contrasting first-person and third-person narrations and analyzing structural elements of prose/poetry/drama.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RL.4.5",
+                        "CCSS.ELA-LITERACY.RL.4.6"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "Informational Synthesis & Historical Accounts",
+            "description": "Analyzing firsthand and secondhand accounts of the same event, integrating information from two texts on the same topic.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Firsthand vs. Secondhand Historical Accounts",
+                    "description": "Comparing primary diary entries with secondary textbook narratives for point of view and bias.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RI.4.6"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Multi-Text Synthesis on Science & History Topics",
+                    "description": "Integrating evidence from multiple informational passages to write a cohesive summary.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RI.4.9"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 3,
+            "title": "Structured Explanatory & Persuasive Essay Writing",
+            "description": "Writing multi-paragraph essays with clear central claims, topic sentences, concrete evidence, and academic vocabulary.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Opinion Essays with Evidence Citations",
+                    "description": "Writing persuasive compositions with reasons supported by facts, linking phrases, and concluding sections.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.W.4.1"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Explanatory and Informative Research Reports",
+                    "description": "Developing topics with facts, definitions, concrete details, quotations, and formatting features.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.W.4.2",
+                        "CCSS.ELA-LITERACY.W.4.7"
+                    ]
+                }
+            ]
+        }
+    ]
+}

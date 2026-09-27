@@ -1,0 +1,98 @@
+{
+    "grade": "Grade 10",
+    "subject": "science",
+    "name": "Science",
+    "course": "Chemistry",
+    "title": "Grade 10 Science: Chemistry",
+    "icon": "fas fa-atom",
+    "color": "#4f46e5",
+    "overview": "Grade 10 Science provides collegiate-level scientific inquiry across chemical, physical, and environmental systems aligned with Next Generation Science Standards (NGSS).",
+    "competencies": [
+        "Design empirical laboratory investigations, analyze complex data sets, and account for experimental error.",
+        "Model atomic, molecular, physical, and ecological systems using mathematical and conceptual tools.",
+        "Apply scientific principles to solve technological and ecological problems through engineering design.",
+        "Evaluate the ethical, societal, and environmental consequences of scientific discoveries."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "Atomic Structure, the Periodic Table & Chemical Bonding",
+            "description": "Investigating electron configurations, periodic trends, ionic and covalent bonding, and molecular geometry.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Subatomic Particles and Quantum Electron Orbitals",
+                    "description": "Modeling protons, neutrons, electrons, energy levels, and orbital configurations (s, p, d, f).",
+                    "standards": [
+                        "HS-PS1-1",
+                        "HS-PS1-2"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Periodic Trends: Electronegativity, Ionization Energy & Radius",
+                    "description": "Using the periodic table to predict relative atomic size, ionization energy, and chemical reactivity.",
+                    "standards": [
+                        "HS-PS1-1"
+                    ]
+                },
+                {
+                    "letter": "C",
+                    "title": "Chemical Bonding: Ionic, Covalent and Metallic Structures",
+                    "description": "Modeling Lewis dot structures, polar vs. nonpolar bonds, and VSEPR molecular geometry.",
+                    "standards": [
+                        "HS-PS1-3"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "Chemical Reactions, Stoichiometry & the Mole Concept",
+            "description": "Balancing chemical equations, applying Avogadro's number, calculating molar mass, stoichiometry, and limiting reactants.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Classifying and Balancing Chemical Reactions",
+                    "description": "Balancing synthesis, decomposition, single replacement, double replacement, and combustion reactions.",
+                    "standards": [
+                        "HS-PS1-2",
+                        "HS-PS1-7"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "The Mole Concept and Stoichiometric Calculations",
+                    "description": "Converting between grams, moles, and liters of gas at STP, and determining theoretical yield.",
+                    "standards": [
+                        "HS-PS1-7"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 3,
+            "title": "Thermochemistry, Kinetics & Chemical Equilibrium",
+            "description": "Measuring enthalpy changes (delta H), activation energy, reaction rates, catalysts, and Le Chatelier's principle in reversible reactions.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Endothermic vs. Exothermic Reactions and Calorimetry",
+                    "description": "Calculating heat transfer using q = mc(delta T) and interpreting potential energy diagrams.",
+                    "standards": [
+                        "HS-PS1-4"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Collision Theory, Reaction Rates and Chemical Equilibrium",
+                    "description": "Applying Le Chatelier's principle to predict shifts in dynamic equilibrium when temperature, pressure, or concentration change.",
+                    "standards": [
+                        "HS-PS1-5",
+                        "HS-PS1-6"
+                    ]
+                }
+            ]
+        }
+    ]
+}

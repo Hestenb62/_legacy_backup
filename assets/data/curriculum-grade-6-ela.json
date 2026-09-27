@@ -1,0 +1,92 @@
+{
+    "grade": "Grade 6",
+    "subject": "ela",
+    "name": "English Language Arts",
+    "course": "Literary Elements, Argument Writing & Informational Inquiry",
+    "title": "Grade 6 English Language Arts: Literary Elements, Argument Writing & Informational Inquiry",
+    "icon": "fas fa-feather-alt",
+    "color": "#059669",
+    "overview": "Grade 6 English Language Arts cultivates analytical reading of complex literature, rhetorical dissection of informational texts, evidence-based argument composition, and public academic discourse.",
+    "competencies": [
+        "Cite comprehensive textual evidence to analyze central ideas, themes, and author viewpoints.",
+        "Evaluate the credibility, reasoning, and rhetorical strategies of diverse informational texts.",
+        "Craft well-organized, defensible argument and informative essays with precise citations.",
+        "Communicate effectively in collaborative academic presentations and structured seminars."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "Textual Evidence, Character Dynamics & Plot Turning Points",
+            "description": "Citing textual evidence to support explicit analysis and inferences, tracing how plot unfolds through character decisions.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Citing Textual Evidence & Central Theme Analysis",
+                    "description": "Determining themes and writing objective summaries based strictly on explicit details.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RL.6.1",
+                        "CCSS.ELA-LITERACY.RL.6.2"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Plot Episode Progression & Character Development",
+                    "description": "Analyzing how specific scenes contribute to the development of the plot and character changes.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RL.6.3",
+                        "CCSS.ELA-LITERACY.RL.6.5"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "Informational Text Structures & Author's Argument Evaluation",
+            "description": "Analyzing how key individuals, events, or ideas are introduced and elaborated in informational texts.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Elaborating Ideas in Informational Texts",
+                    "description": "Analyzing how authors use examples, anecdotes, and technical definitions to explain concepts.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RI.6.3",
+                        "CCSS.ELA-LITERACY.RI.6.4"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Tracing Claims and Distinguishing Fact from Opinion",
+                    "description": "Evaluating whether an author's argument is supported by valid reasons and credible evidence.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RI.6.8"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 3,
+            "title": "Argumentative & Informative Essay Composition",
+            "description": "Writing organized argumentative essays introducing claims, supporting with evidence, and writing research reports.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Argumentative Essay Workshop",
+                    "description": "Developing clear claims, using credible sources, acknowledging opposing claims, and crafting conclusions.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.W.6.1"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Explanatory Research and Source Integration",
+                    "description": "Gathering relevant evidence from multiple print and digital sources, avoiding plagiarism.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.W.6.2",
+                        "CCSS.ELA-LITERACY.W.6.7",
+                        "CCSS.ELA-LITERACY.W.6.8"
+                    ]
+                }
+            ]
+        }
+    ]
+}

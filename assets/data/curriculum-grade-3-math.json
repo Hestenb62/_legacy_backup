@@ -1,0 +1,162 @@
+{
+    "grade": "Grade 3",
+    "subject": "math",
+    "name": "Mathematics",
+    "course": "Multiplication, Division, Fractions & Area",
+    "title": "Grade 3 Mathematics: Multiplication, Division, Fractions & Area",
+    "icon": "fas fa-calculator",
+    "color": "#2563eb",
+    "overview": "Grade 3 mathematics deepens students' conceptual understanding of place value, arithmetic operations, algebraic thinking, measurement, and geometry through rigorous problem-solving routines.",
+    "competencies": [
+        "Demonstrate computational fluency and conceptual flexibility across grade-level operations.",
+        "Apply visual models, tape diagrams, and equations to represent and solve multi-step contextual word problems.",
+        "Analyze geometric shapes, measurement units, and spatial relationships.",
+        "Construct viable mathematical arguments and critique the reasoning of peers."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "Properties of Multiplication and Division and Solving Problems with Units of 2–5 and 10",
+            "description": "Building deep conceptual understanding of multiplication as equal groups, arrays, and division as fair share/quotitive groups.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Multiplication as Equal Groups and Arrays",
+                    "description": "Relating repeated addition to multiplication equations and rectangular arrays.",
+                    "standards": [
+                        "3.OA.1",
+                        "3.OA.3"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Division as an Unknown Factor Problem",
+                    "description": "Understanding division as partitioning into equal sets or determining group size.",
+                    "standards": [
+                        "3.OA.2",
+                        "3.OA.4"
+                    ]
+                },
+                {
+                    "letter": "C",
+                    "title": "Commutative and Distributive Properties",
+                    "description": "Decomposing difficult multiplication facts into known smaller multiples (e.g. 7x4 = 5x4 + 2x4).",
+                    "standards": [
+                        "3.OA.5"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "Place Value and Problem Solving with Units of Measure",
+            "description": "Telling time to the nearest minute, solving elapsed time problems, and estimating and measuring liquid volume and mass.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Time to the Minute and Elapsed Time",
+                    "description": "Using number lines to calculate elapsed minutes forward and backward.",
+                    "standards": [
+                        "3.MD.1"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Liquid Volume and Mass Measurement",
+                    "description": "Using liters, grams, and kilograms with vertical scales and balance beams.",
+                    "standards": [
+                        "3.MD.2"
+                    ]
+                },
+                {
+                    "letter": "C",
+                    "title": "Rounding to the Nearest 10 and 100",
+                    "description": "Using vertical number lines to round two- and three-digit numbers.",
+                    "standards": [
+                        "3.NBT.1"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 3,
+            "title": "Multiplication and Division with Units of 0, 1, 6–9, and Multiples of 10",
+            "description": "Achieving fluency in all single-digit multiplication and division facts up to 100, and multiplying single-digit numbers by multiples of 10.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Multiplication and Division with 6, 7, 8, and 9",
+                    "description": "Using arrays, tape diagrams, and the distributive property for higher single-digit facts.",
+                    "standards": [
+                        "3.OA.3",
+                        "3.OA.7"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Multiplying by Multiples of 10",
+                    "description": "Using place value patterns to multiply single digits by 10, 20, 30... 90.",
+                    "standards": [
+                        "3.NBT.3"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 4,
+            "title": "Multiplication and Area",
+            "description": "Connecting multiplication to geometry by tiling rectangles with unit squares and discovering the area formula: Length x Width.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Foundations of Area and Tiling",
+                    "description": "Covering planar figures with unit squares without gaps or overlaps.",
+                    "standards": [
+                        "3.MD.5",
+                        "3.MD.6"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Area Formula and Decomposing Rectangles",
+                    "description": "Multiplying side lengths to find area and decomposing composite L-shaped figures.",
+                    "standards": [
+                        "3.MD.7"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 5,
+            "title": "Fractions as Numbers on the Number Line",
+            "description": "Defining unit fractions (1/b), building fractions as copies of unit fractions, and placing fractions on the number line.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Partitioning a Whole into Equal Parts",
+                    "description": "Understanding unit fractions (1/2, 1/3, 1/4, 1/6, 1/8) as equal shares of a unit whole.",
+                    "standards": [
+                        "3.NF.1",
+                        "3.G.2"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Fractions on the Number Line",
+                    "description": "Locating fractions between 0 and 1, and fractions greater than 1, on number lines.",
+                    "standards": [
+                        "3.NF.2"
+                    ]
+                },
+                {
+                    "letter": "C",
+                    "title": "Equivalent Fractions and Comparing Fractions",
+                    "description": "Recognizing equivalent fractions with visual fraction strips and same-size models.",
+                    "standards": [
+                        "3.NF.3"
+                    ]
+                }
+            ]
+        }
+    ]
+}

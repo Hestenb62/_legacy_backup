@@ -1,0 +1,93 @@
+{
+    "grade": "Grade 6",
+    "subject": "social",
+    "name": "Social Studies",
+    "course": "Ancient Civilizations of the Eastern Hemisphere",
+    "title": "Grade 6 Social Studies: Ancient Civilizations of the Eastern Hemisphere",
+    "icon": "fas fa-landmark",
+    "color": "#d97706",
+    "overview": "Grade 6 Social Studies engages students in historical inquiry, primary source analysis, geographic mapping, and civic deliberation aligned with the C3 Framework.",
+    "competencies": [
+        "Corroborate primary documents with historical context and point-of-view analysis.",
+        "Explain how geographical trade networks and physical barriers shaped civilizations.",
+        "Analyze economic developments, resource allocation, and market exchanges.",
+        "Assess the evolution of democratic values, civil liberties, and civic responsibilities."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "Early Civilizations of the Fertile Crescent & Nile Valley",
+            "description": "Examining the Agricultural Revolution, urban innovation, written legal codes in Mesopotamia, and dynastic Egypt.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Mesopotamia, Sumer and the Code of Hammurabi",
+                    "description": "Analyzing irrigation engineering, cuneiform writing, city-states, and ancient legal justice.",
+                    "standards": [
+                        "D2.His.1.6-8",
+                        "D2.Civ.1.6-8"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Ancient Egypt: Religion, Monuments and Nile Geography",
+                    "description": "Investigating pharaonic theocracy, pyramid engineering, hieroglyphic records, and trade corridors.",
+                    "standards": [
+                        "D2.Geo.1.6-8",
+                        "D2.His.2.6-8"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "Classical India, Ancient China & the Silk Road",
+            "description": "Exploring the Indus Valley civilization, Maurya and Gupta Empires, Chinese dynasties (Shang, Zhou, Han), and early Silk Road trade.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Indus Valley and Classical South Asia",
+                    "description": "Urban planning in Harappa/Mohenjo-Daro, development of Hinduism and Buddhism, and Ashoka's pillars.",
+                    "standards": [
+                        "D2.His.3.6-8",
+                        "D2.Geo.4.6-8"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Dynastic China and Confucian Philosophy",
+                    "description": "The Mandate of Heaven, Confucian and Daoist philosophy, the Great Wall, and Han technological innovations.",
+                    "standards": [
+                        "D2.His.4.6-8",
+                        "D2.Eco.1.6-8"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 3,
+            "title": "Classical Mediterranean: Greece and the Roman Republic/Empire",
+            "description": "Analyzing Athenian direct democracy, Spartan militarism, the Hellenistic age, and the rise and fall of Rome.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Ancient Greece: Democracy, Philosophy and Culture",
+                    "description": "Comparing Athens and Sparta, Greek philosophy (Socrates, Plato), drama, and the Olympic games.",
+                    "standards": [
+                        "D2.Civ.2.6-8",
+                        "D2.His.5.6-8"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "The Roman Republic and Imperial Expansion",
+                    "description": "The Twelve Tables, republican governance, the transition to empire under Augustus, and Pax Romana.",
+                    "standards": [
+                        "D2.Civ.3.6-8",
+                        "D2.His.14.6-8"
+                    ]
+                }
+            ]
+        }
+    ]
+}

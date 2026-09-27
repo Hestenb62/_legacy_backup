@@ -1,0 +1,136 @@
+{
+    "grade": "Grade 1",
+    "subject": "math",
+    "name": "Mathematics",
+    "course": "Operations, Place Value & Measurement",
+    "title": "Grade 1 Mathematics: Operations, Place Value & Measurement",
+    "icon": "fas fa-calculator",
+    "color": "#2563eb",
+    "overview": "Grade 1 mathematics deepens students' conceptual understanding of place value, arithmetic operations, algebraic thinking, measurement, and geometry through rigorous problem-solving routines.",
+    "competencies": [
+        "Demonstrate computational fluency and conceptual flexibility across grade-level operations.",
+        "Apply visual models, tape diagrams, and equations to represent and solve multi-step contextual word problems.",
+        "Analyze geometric shapes, measurement units, and spatial relationships.",
+        "Construct viable mathematical arguments and critique the reasoning of peers."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "Sums and Differences to 10",
+            "description": "Developing understanding of addition and subtraction strategies within 10, counting on, and the commutative property.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Embedded Numbers and Decompositions",
+                    "description": "Decomposing numbers into number bonds and part-whole pairs within 10.",
+                    "standards": [
+                        "1.OA.1",
+                        "1.OA.3",
+                        "1.OA.5"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Counting On from Embedded Numbers",
+                    "description": "Using counting on strategies with number paths and ten-frames to solve addition.",
+                    "standards": [
+                        "1.OA.5",
+                        "1.OA.6"
+                    ]
+                },
+                {
+                    "letter": "C",
+                    "title": "Subtraction as an Unknown Addend Problem",
+                    "description": "Connecting subtraction to addition using think-addition strategies.",
+                    "standards": [
+                        "1.OA.4",
+                        "1.OA.6"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "Introduction to Place Value Through Addition and Subtraction Within 20",
+            "description": "Solving word problems within 20, making a ten, and understanding the role of the ten bundle in teen numbers.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Counting On and Making Ten Strategies",
+                    "description": "Using 9 + n and 8 + n strategies to decompose addends and make ten.",
+                    "standards": [
+                        "1.OA.1",
+                        "1.OA.2",
+                        "1.OA.6"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Counting On or Taking from Ten to Subtract",
+                    "description": "Applying take from ten strategies to subtract within 20 efficiently.",
+                    "standards": [
+                        "1.OA.4",
+                        "1.OA.6"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 3,
+            "title": "Ordering and Comparing Length Measurements as Numbers",
+            "description": "Laying the foundation for length measurement, indirect comparison, and standard ruler measurement.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Indirect Comparison in Length",
+                    "description": "Comparing lengths of objects using a third reference object.",
+                    "standards": [
+                        "1.MD.1"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Standard Length Units and Iteration",
+                    "description": "Laying identical unit cubes end-to-end to measure total length without gaps.",
+                    "standards": [
+                        "1.MD.2"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 4,
+            "title": "Place Value, Comparison, Addition and Subtraction to 40 and 100",
+            "description": "Understanding tens and ones place value up to 100, comparing two-digit numbers, and adding two-digit numbers.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Tens and Ones Place Value",
+                    "description": "Representing numbers with dime/penny models, bundles of straws, and quick tens.",
+                    "standards": [
+                        "1.NBT.1",
+                        "1.NBT.2"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Comparing Two-Digit Numbers",
+                    "description": "Using symbols greater than, less than, and equal to compare two-digit values.",
+                    "standards": [
+                        "1.NBT.3"
+                    ]
+                },
+                {
+                    "letter": "C",
+                    "title": "Addition and Subtraction to 100",
+                    "description": "Adding a two-digit number and a multiple of 10 or a one-digit number.",
+                    "standards": [
+                        "1.NBT.4",
+                        "1.NBT.5",
+                        "1.NBT.6"
+                    ]
+                }
+            ]
+        }
+    ]
+}

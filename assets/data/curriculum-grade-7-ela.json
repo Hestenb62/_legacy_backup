@@ -1,0 +1,92 @@
+{
+    "grade": "Grade 7",
+    "subject": "ela",
+    "name": "English Language Arts",
+    "course": "Informational Analysis, Textual Evidence & Persuasive Writing",
+    "title": "Grade 7 English Language Arts: Informational Analysis, Textual Evidence & Persuasive Writing",
+    "icon": "fas fa-feather-alt",
+    "color": "#059669",
+    "overview": "Grade 7 English Language Arts cultivates analytical reading of complex literature, rhetorical dissection of informational texts, evidence-based argument composition, and public academic discourse.",
+    "competencies": [
+        "Cite comprehensive textual evidence to analyze central ideas, themes, and author viewpoints.",
+        "Evaluate the credibility, reasoning, and rhetorical strategies of diverse informational texts.",
+        "Craft well-organized, defensible argument and informative essays with precise citations.",
+        "Communicate effectively in collaborative academic presentations and structured seminars."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "Literary Craft, Conflict & Point of View",
+            "description": "Analyzing how an author develops point of view, examining multiple perspectives, and exploring structural drama and poetry.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Character Motivation & Complex Plot Conflicts",
+                    "description": "Analyzing how contrasting points of view create suspense, humor, or dramatic tension.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RL.7.3",
+                        "CCSS.ELA-LITERACY.RL.7.6"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Poetic Forms and Structural Sound Devices",
+                    "description": "Examining rhythm, alliteration, figurative imagery, and structural stanzas in modern and traditional poetry.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RL.7.4",
+                        "CCSS.ELA-LITERACY.RL.7.5"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "Informational Text Analysis & Evaluating Evidence Quality",
+            "description": "Delineating an author's argument, evaluating whether claims are supported by sufficient and sound evidence.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Tracing Central Claims and Supporting Details",
+                    "description": "Evaluating how an author structures an argument and distinguishes key claims from supporting tangents.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RI.7.2",
+                        "CCSS.ELA-LITERACY.RI.7.5"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Evaluating Author Reasoning & Potential Bias",
+                    "description": "Assessing whether reasoning is sound and identifying irrelevant evidence or biased framing.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RI.7.8",
+                        "CCSS.ELA-LITERACY.RI.7.6"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 3,
+            "title": "Persuasive Argument Writing & Multi-Source Research",
+            "description": "Crafting persuasive argumentative essays with formal counterclaims, clear warrants, and standard citations.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Drafting Counterclaims & Persuasive Essays",
+                    "description": "Writing essays acknowledging and refuting counterclaims using objective academic tone.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.W.7.1"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Synthesis Research Papers with In-Text Citations",
+                    "description": "Synthesizing evidence from multiple databases, evaluating source credibility, and quoting responsibly.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.W.7.7",
+                        "CCSS.ELA-LITERACY.W.7.8"
+                    ]
+                }
+            ]
+        }
+    ]
+}

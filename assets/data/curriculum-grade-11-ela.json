@@ -1,0 +1,92 @@
+{
+    "grade": "Grade 11",
+    "subject": "ela",
+    "name": "English Language Arts",
+    "course": "English 11",
+    "title": "Grade 11 English Language Arts: English 11",
+    "icon": "fas fa-feather-alt",
+    "color": "#059669",
+    "overview": "Grade 11 English Language Arts immerses students in collegiate literary analysis, rhetorical critique of historical documents, research synthesis, and sophisticated composition.",
+    "competencies": [
+        "Evaluate complex themes, character motivations, and literary craft in seminal literary works.",
+        "Analyze rhetorical devices, persuasive arguments, and philosophical premises in foundational texts.",
+        "Compose well-substantiated research papers and argumentative essays adhering to academic citations.",
+        "Engage in sophisticated scholarly seminar discourse, defending evidence-based conclusions."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "American Literary Voices & Foundational Historical Rhetoric",
+            "description": "Analyzing seminal American historical documents, early American literary movements (Transcendentalism, Realism), and the American Dream.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Foundational American Political Rhetoric",
+                    "description": "Critiquing constitutional debates, the Federalist Papers, Lincoln's speeches, and transcendentalist essays (Emerson, Thoreau).",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RI.11-12.8",
+                        "CCSS.ELA-LITERACY.RI.11-12.9"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "The American Dream: Modernism & Social Realism",
+                    "description": "Analyzing novels and plays depicting the disillusionment and promise of the 20th century (e.g. The Great Gatsby, Death of a Salesman).",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RL.11-12.1",
+                        "CCSS.ELA-LITERACY.RL.11-12.3"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "The Harlem Renaissance & Diverse American Perspectives",
+            "description": "Examining the artistic, poetic, and musical explosion of the Harlem Renaissance, Southern Gothic literature, and contemporary voices.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Poetic Voice and Cultural Identity in the Harlem Renaissance",
+                    "description": "Analyzing poetry by Langston Hughes, Claude McKay, and prose by Zora Neale Hurston examining race and justice.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RL.11-12.4",
+                        "CCSS.ELA-LITERACY.RL.11-12.5"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Southern Gothic and Contemporary Narrative Fiction",
+                    "description": "Analyzing flawed characters, atmospheric regional settings, and generational moral decay in 20th-century American prose.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RL.11-12.2",
+                        "CCSS.ELA-LITERACY.RL.11-12.3"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 3,
+            "title": "Advanced Research Inquiry & Critical Policy Synthesis",
+            "description": "Conducting in-depth research into pressing public policy questions, synthesizing complex arguments, and crafting collegiate essays.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Formulating Complex Arguments with Nuanced Counterclaims",
+                    "description": "Writing authoritative argumentative essays anticipating complex objections and maintaining formal academic voice.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.W.11-12.1"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Multi-Source Investigative Research Paper",
+                    "description": "Conducting extensive research utilizing peer-reviewed academic journals, synthesizing findings, and providing rigorous APA/MLA citation.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.W.11-12.7",
+                        "CCSS.ELA-LITERACY.W.11-12.8"
+                    ]
+                }
+            ]
+        }
+    ]
+}

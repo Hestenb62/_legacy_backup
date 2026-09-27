@@ -1,0 +1,109 @@
+{
+    "grade": "Grade 11",
+    "subject": "science",
+    "name": "Science",
+    "course": "Physics",
+    "title": "Grade 11 Science: Physics",
+    "icon": "fas fa-atom",
+    "color": "#4f46e5",
+    "overview": "Grade 11 Science provides collegiate-level scientific inquiry across chemical, physical, and environmental systems aligned with Next Generation Science Standards (NGSS).",
+    "competencies": [
+        "Design empirical laboratory investigations, analyze complex data sets, and account for experimental error.",
+        "Model atomic, molecular, physical, and ecological systems using mathematical and conceptual tools.",
+        "Apply scientific principles to solve technological and ecological problems through engineering design.",
+        "Evaluate the ethical, societal, and environmental consequences of scientific discoveries."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "Classical Mechanics: Kinematics, Forces & Momentum",
+            "description": "Quantifying 1D and 2D motion, projectile trajectories, Newton's laws of motion, conservation of momentum, and impulse.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Kinematics: Velocity, Acceleration and Projectile Motion",
+                    "description": "Applying kinematic equations to calculate position, velocity, and trajectory of falling and launched projectiles.",
+                    "standards": [
+                        "HS-PS2-1"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Newton's Laws, Friction and Free-Body Diagrams",
+                    "description": "Analyzing normal, gravitational, tension, and frictional forces using vector free-body diagrams.",
+                    "standards": [
+                        "HS-PS2-1",
+                        "HS-PS2-2"
+                    ]
+                },
+                {
+                    "letter": "C",
+                    "title": "Conservation of Linear Momentum and Impulse",
+                    "description": "Calculating impulse (J = F*delta t) and modeling elastic and inelastic collisions.",
+                    "standards": [
+                        "HS-PS2-2",
+                        "HS-PS2-3"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "Work, Energy, Gravitation & Orbital Mechanics",
+            "description": "Analyzing work-energy theorem, kinetic and potential energy, Newton's law of universal gravitation, and Kepler's planetary laws.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Conservation of Mechanical Energy",
+                    "description": "Calculating kinetic energy, gravitational potential energy, and elastic spring potential energy (Hooke's Law).",
+                    "standards": [
+                        "HS-PS3-1",
+                        "HS-PS3-2"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Universal Gravitation and Keplerian Planetary Orbits",
+                    "description": "Applying F_g = G(m1*m2)/r^2 to calculate gravitational attraction and satellite orbital velocities.",
+                    "standards": [
+                        "HS-PS2-4"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 3,
+            "title": "Electromagnetism, Wave Optics & Quantum Phenomena",
+            "description": "Investigating Coulomb's law, electric circuits, electromagnetic induction, wave interference, diffraction, and the photoelectric effect.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Electric Fields, Voltage, Current and Ohm's Law",
+                    "description": "Applying V = IR and calculating equivalent resistance and power in series and parallel circuits.",
+                    "standards": [
+                        "HS-PS3-5"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Electromagnetic Induction and Transformers",
+                    "description": "Modeling Faraday's law of induction in electrical generators, electric motors, and power grids.",
+                    "standards": [
+                        "HS-PS2-5",
+                        "HS-PS3-5"
+                    ]
+                },
+                {
+                    "letter": "C",
+                    "title": "Wave Optics and the Dual Nature of Light",
+                    "description": "Analyzing double-slit interference, diffraction gratings, photon energy (E = hf), and the photoelectric effect.",
+                    "standards": [
+                        "HS-PS4-1",
+                        "HS-PS4-3",
+                        "HS-PS4-5"
+                    ]
+                }
+            ]
+        }
+    ]
+}

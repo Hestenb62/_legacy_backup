@@ -13,10 +13,180 @@ function escapeHtml(str) {
 window.toggleModalModuleAccordion = function(headerEl) {
     const card = headerEl.closest('.doc-modal-module-card');
     if (card) {
+        const isCollapsed = card.classList.contains('collapsed');
         card.classList.toggle('collapsed');
         card.classList.toggle('expanded');
+        if (headerEl) {
+            headerEl.setAttribute('aria-expanded', isCollapsed ? 'true' : 'false');
+        }
     }
 };
+
+function renderUniversalCurriculumModal(docsContainer, cache, gradeTitle = '', standardsGradeKey = '') {
+    const subjectsOrder = [
+        { key: 'math', name: 'Mathematics', data: cache.math },
+        { key: 'ela', name: 'English Language Arts', data: cache.ela },
+        { key: 'science', name: 'Science', data: cache.science },
+        { key: 'social', name: 'Social Studies', data: cache.social }
+    ].filter(s => s.data !== null && typeof s.data === 'object');
+
+    if (subjectsOrder.length === 0) {
+        docsContainer.innerHTML = `<div class="doc-modal-empty-box"><p class="doc-modal-empty-text">Failed to load ${escapeHtml(gradeTitle || 'curriculum')} data.</p></div>`;
+        return;
+    }
+
+    let tabHeaders = '<div class="doc-modal-tab-container">';
+    tabHeaders += '<div id="modal-tab-slider" class="doc-modal-tab-slider"></div>';
+    let tabContents = '<div class="doc-modal-pane-container">';
+
+    subjectsOrder.forEach((subjItem, index) => {
+        const isActive = index === 0;
+        const activeClass = isActive ? 'active' : '';
+        const contentClass = isActive ? 'doc-modal-pane active' : 'doc-modal-pane';
+        const staggerDelay = isActive ? '0s' : `${index * 0.05}s`;
+        const subj = subjItem.data;
+        const stdGradeParam = encodeURIComponent(standardsGradeKey || gradeTitle || '9th Grade');
+
+        tabHeaders += `<button type="button" class="modal-tab-pill ${activeClass}" data-index="${index}" onclick="switchModalTab(this, ${index})">
+            ${escapeHtml(subjItem.name)}
+        </button>`;
+
+        let paneHTML = `
+            <div class="doc-modal-pane-inner">
+                <div class="doc-modal-pane-glow"></div>
+                <div class="doc-modal-subject-toolbar">
+                    <div class="doc-modal-subject-tag">
+                        <i class="${escapeHtml(subj.icon || 'fas fa-book-open')}"></i>
+                        <span>${escapeHtml(subjItem.name)}</span>
+                    </div>
+                    <button type="button" class="doc-modal-subject-print-btn" onclick="printCurriculumSubject(${index})" title="Print ${escapeHtml(subjItem.name)} Curriculum">
+                        <i class="fas fa-print"></i>
+                        <span>Print ${escapeHtml(subjItem.name)}</span>
+                    </button>
+                </div>
+                <div class="doc-modal-pane-content prose-content">
+                    <h5 class="text-lg font-bold text-primary mb-2">Overview</h5>
+                    <div class="mb-4">${subj.overview ? `<p>${escapeHtml(subj.overview)}</p>` : ''}</div>
+
+                    <div class="doc-modal-outline-wrap">
+                        <div class="doc-modal-course-card">
+                            <div class="doc-modal-course-badge">
+                                <i class="${escapeHtml(subj.icon || 'fas fa-graduation-cap')}"></i> ${escapeHtml(subj.course || subjItem.name)}
+                            </div>
+                            <h5 class="doc-modal-course-title">${escapeHtml(subj.title || (subjItem.name + ' Curriculum'))}</h5>
+                            ${subj.overview ? `<p class="doc-modal-course-overview">${escapeHtml(subj.overview)}</p>` : ''}
+                        </div>
+        `;
+
+        if (subj.competencies && subj.competencies.length > 0) {
+            paneHTML += `
+                <h5 class="text-lg font-bold text-primary mb-2 mt-4">Core Competencies</h5>
+                <ul class="list-disc pl-5 mb-4">
+                    ${subj.competencies.map(comp => `<li>${escapeHtml(comp)}</li>`).join('')}
+                </ul>
+            `;
+        }
+
+        paneHTML += `
+            <h5 class="text-lg font-bold text-primary mb-3 mt-6 flex items-center gap-2">
+                <i class="fas fa-layer-group"></i> Instructional Modules &amp; Topics
+            </h5>
+            <div class="doc-modal-modules-accordion">
+        `;
+
+        (subj.modules || []).forEach((mod, modIdx) => {
+            const isModExpanded = modIdx === 0;
+            const totalTopics = (mod.topics || []).length;
+
+            paneHTML += `
+                <div class="doc-modal-module-card ${isModExpanded ? 'expanded' : 'collapsed'}" data-module="${mod.moduleNumber}">
+                    <div class="doc-modal-module-header" onclick="toggleModalModuleAccordion(this)" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleModalModuleAccordion(this);}" aria-expanded="${isModExpanded}">
+                        <div class="doc-modal-module-title-wrap">
+                            <span class="doc-modal-module-pill">Module ${mod.moduleNumber}</span>
+                            <h6 class="doc-modal-module-title">${escapeHtml(mod.title)}</h6>
+                        </div>
+                        <div class="doc-modal-module-meta">
+                            <span class="doc-modal-module-lessons-count">${totalTopics} Topics</span>
+                            <i class="fas fa-chevron-down doc-modal-module-chevron"></i>
+                        </div>
+                    </div>
+                    <div class="doc-modal-module-body">
+                        ${mod.description ? `
+                            <div class="doc-modal-module-overview-box">
+                                <div class="doc-modal-module-overview-label"><i class="fas fa-info-circle"></i> Module Overview</div>
+                                <p class="doc-modal-module-desc">${escapeHtml(mod.description)}</p>
+                            </div>
+                        ` : ''}
+                        <div class="doc-modal-topics-list">
+            `;
+
+            (mod.topics || []).forEach(top => {
+                paneHTML += `
+                    <div class="doc-modal-topic-card">
+                        <div class="doc-modal-topic-header">
+                            <span class="doc-modal-topic-badge">Topic ${escapeHtml(top.letter)}</span>
+                            <h6 class="doc-modal-topic-name">${escapeHtml(top.title)}</h6>
+                        </div>
+                        ${top.description ? `<p class="doc-modal-topic-desc">${escapeHtml(top.description)}</p>` : ''}
+                        ${(top.standards && top.standards.length > 0) ? `
+                            <div class="doc-modal-topic-standards">
+                                <span class="doc-modal-topic-standards-label"><i class="fas fa-bookmark text-primary"></i> Focus Standards:</span>
+                                ${top.standards.map(st => `
+                                    <a href="/pages/standards.php?subject=${subjItem.key}&grade=${stdGradeParam}&code=${encodeURIComponent(st)}" 
+                                       class="doc-modal-std-chip" 
+                                       title="View standard ${escapeHtml(st)} on Standards page" 
+                                       target="_blank">
+                                        <i class="fas fa-bookmark doc-modal-chip-icon"></i>
+                                        <span>${escapeHtml(st)}</span>
+                                    </a>
+                                `).join('')}
+                            </div>
+                        ` : ''}
+                    </div>
+                `;
+            });
+
+            paneHTML += `
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+
+        paneHTML += `
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        tabContents += `<div class="${contentClass}" data-index="${index}" style="animation-delay: ${staggerDelay}">
+            ${paneHTML}
+        </div>`;
+    });
+
+    tabHeaders += '</div>';
+    tabContents += '</div>';
+
+    docsContainer.innerHTML = `<h4 class="doc-modal-curriculum-title">
+        <span class="doc-modal-curriculum-dot"></span> Core Subjects &amp; Standards
+    </h4>${tabHeaders}${tabContents}`;
+
+    // Initialize slider position & footer subject print label
+    setTimeout(() => {
+        const firstTab = docsContainer.querySelector('.modal-tab-pill');
+        if (firstTab) {
+            updateModalTabSlider(firstTab);
+            const printSubjLabel = document.getElementById('modal-print-subject-label');
+            if (printSubjLabel) printSubjLabel.textContent = `Print ${firstTab.textContent.trim()}`;
+        }
+    }, 50);
+}
+
+// Backward-compatibility alias
+function renderGrade9AllSubjectsModal(docsContainer, cache) {
+    return renderUniversalCurriculumModal(docsContainer, cache, 'Grade 9', '9th Grade');
+}
 // index-page.js - Logic for the main landing page
 
 // --- STATE ---
@@ -332,7 +502,81 @@ function openDocModal(btn) {
     };
     const curriculumGradeKey = GRADE_MAP[title] || title;
 
-    if (typeof window.curriculumData !== 'undefined') {
+    const GRADE_SLUG_MAP = {
+        'pre-k': 'pre-k',
+        'kindergarten': 'kindergarten',
+        'grade-1': 'grade-1',
+        'grade-2': 'grade-2',
+        'grade-3': 'grade-3',
+        'grade-4': 'grade-4',
+        'grade-5': 'grade-5',
+        'grade-6': 'grade-6',
+        'grade-7': 'grade-7',
+        'grade-8': 'grade-8',
+        'grade-9': 'grade-9',
+        'grade-10': 'grade-10',
+        'grade-11': 'grade-11',
+        'grade-12': 'grade-12',
+        'Pre-K': 'pre-k',
+        'Kindergarten': 'kindergarten',
+        'Grade 1': 'grade-1',
+        'Grade 2': 'grade-2',
+        'Grade 3': 'grade-3',
+        'Grade 4': 'grade-4',
+        'Grade 5': 'grade-5',
+        'Grade 6': 'grade-6',
+        'Grade 7': 'grade-7',
+        'Grade 8': 'grade-8',
+        'Grade 9': 'grade-9',
+        'Grade 10': 'grade-10',
+        'Grade 11': 'grade-11',
+        'Grade 12': 'grade-12'
+    };
+    const targetSlug = (card && card.dataset && card.dataset.id && GRADE_SLUG_MAP[card.dataset.id]) || GRADE_SLUG_MAP[title];
+
+    // On-demand load for Pre-K through Grade 12 dedicated JSON curriculum files
+    if (targetSlug) {
+        window._gradeCurriculumCache = window._gradeCurriculumCache || {};
+        if (targetSlug === 'grade-9' && window._grade9CurriculumCache && !window._gradeCurriculumCache['grade-9']) {
+            window._gradeCurriculumCache['grade-9'] = window._grade9CurriculumCache;
+        }
+
+        if (window._gradeCurriculumCache[targetSlug]) {
+            renderUniversalCurriculumModal(docsContainer, window._gradeCurriculumCache[targetSlug], title, curriculumGradeKey);
+        } else {
+            docsContainer.innerHTML = `
+                <div class="doc-modal-loading-box" style="padding: 3rem 1rem; text-align: center; color: var(--color-text-muted);">
+                    <i class="fas fa-circle-notch fa-spin" style="font-size: 2rem; margin-bottom: 0.85rem; color: var(--color-primary);"></i>
+                    <p style="font-weight: 600; font-size: 0.95rem;">Loading ${escapeHtml(title)} Curriculum...</p>
+                </div>
+            `;
+            const curriculumFiles = [
+                { key: 'math', file: `/assets/data/curriculum-${targetSlug}-math.json` },
+                { key: 'ela', file: `/assets/data/curriculum-${targetSlug}-ela.json` },
+                { key: 'science', file: `/assets/data/curriculum-${targetSlug}-science.json` },
+                { key: 'social', file: `/assets/data/curriculum-${targetSlug}-social.json` }
+            ];
+            Promise.all(curriculumFiles.map(item =>
+                fetch(item.file)
+                    .then(res => res.ok ? res.json() : null)
+                    .catch(err => {
+                        console.error('Failed to load ' + item.file, err);
+                        return null;
+                    })
+            )).then(results => {
+                window._gradeCurriculumCache[targetSlug] = {
+                    math: results[0],
+                    ela: results[1],
+                    science: results[2],
+                    social: results[3]
+                };
+                if (targetSlug === 'grade-9') {
+                    window._grade9CurriculumCache = window._gradeCurriculumCache[targetSlug];
+                }
+                renderUniversalCurriculumModal(docsContainer, window._gradeCurriculumCache[targetSlug], title, curriculumGradeKey);
+            });
+        }
+    } else if (typeof window.curriculumData !== 'undefined') {
         const subjects = ['math', 'ela', 'science', 'social'];
         const activeCurrKey = (activeCurr === 'engageny' || activeCurr === 'ccss') ? 'engageny' : activeCurr;
         subjects.forEach(subjectKey => {
@@ -374,143 +618,150 @@ function openDocModal(btn) {
             const contentClass = isActive ? 'doc-modal-pane active' : 'doc-modal-pane';
             const staggerDelay = isActive ? '0s' : `${index * 0.05}s`;
             
-            let paneHTML = `
-                <div class="doc-modal-pane-inner">
-                    <div class="doc-modal-pane-glow"></div>
-                    <div class="doc-modal-subject-toolbar">
-                        <div class="doc-modal-subject-tag">
-                            <i class="fas fa-book-open"></i>
-                            <span>${escapeHtml(subj.name)}</span>
-                        </div>
-                        <button type="button" class="doc-modal-subject-print-btn" onclick="printCurriculumSubject(${index})" title="Print ${escapeHtml(subj.name)} Curriculum">
-                            <i class="fas fa-print"></i>
-                            <span>Print ${escapeHtml(subj.name)}</span>
-                        </button>
-                    </div>
-                    <div class="doc-modal-pane-content prose-content">
-                        <h5 class="text-lg font-bold text-primary mb-2">Overview</h5>
-                        <div class="mb-4">${subj.data.overview}</div>
-            `;
-            
-            if (subj.data.competencies && subj.data.competencies.length > 0) {
-                paneHTML += `
-                        <h5 class="text-lg font-bold text-primary mb-2 mt-4">Core Competencies</h5>
-                        <ul class="list-disc pl-5 mb-4">
-                            ${subj.data.competencies.map(comp => `<li>${comp}</li>`).join('')}
-                        </ul>
-                `;
-            }
-            
-            if (subj.outline && subj.outline.modules && subj.outline.modules.length > 0) {
-                const outline = subj.outline;
-                paneHTML += `
-                    <div class="doc-modal-outline-wrap">
-                        <div class="doc-modal-course-card">
-                            <div class="doc-modal-course-badge">
-                                <i class="fas fa-graduation-cap"></i> ${escapeHtml(outline.course || 'Curriculum Path')}
+            let paneHTML = '';
+            const isGrade9Math = (curriculumGradeKey === '9th Grade' && subj.key === 'math');
+
+            if (isGrade9Math && subj.outline && subj.outline.modules && subj.outline.modules.length > 0) {
+                paneHTML = renderGrade9AlgebraPaneHTML(subj, index, curriculumGradeKey);
+            } else {
+                paneHTML = `
+                    <div class="doc-modal-pane-inner">
+                        <div class="doc-modal-pane-glow"></div>
+                        <div class="doc-modal-subject-toolbar">
+                            <div class="doc-modal-subject-tag">
+                                <i class="fas fa-book-open"></i>
+                                <span>${escapeHtml(subj.name)}</span>
                             </div>
-                            <h5 class="doc-modal-course-title">${escapeHtml(outline.title || (curriculumGradeKey + ' ' + subj.name))}</h5>
-                            ${outline.overview ? `<p class="doc-modal-course-overview">${escapeHtml(outline.overview)}</p>` : ''}
+                            <button type="button" class="doc-modal-subject-print-btn" onclick="printCurriculumSubject(${index})" title="Print ${escapeHtml(subj.name)} Curriculum">
+                                <i class="fas fa-print"></i>
+                                <span>Print ${escapeHtml(subj.name)}</span>
+                            </button>
                         </div>
-
-                        <h5 class="text-lg font-bold text-primary mb-3 mt-6 flex items-center gap-2">
-                            <i class="fas fa-layer-group"></i> Instructional Modules & Lessons
-                        </h5>
-
-                        <div class="doc-modal-modules-accordion">
+                        <div class="doc-modal-pane-content prose-content">
+                            <h5 class="text-lg font-bold text-primary mb-2">Overview</h5>
+                            <div class="mb-4">${subj.data.overview}</div>
                 `;
-
-                outline.modules.forEach((mod, modIdx) => {
-                    const isModExpanded = modIdx === 0;
-                    const totalLessons = (mod.topics || []).reduce((acc, t) => acc + (t.lessons ? t.lessons.length : 0), 0);
+                
+                if (subj.data.competencies && subj.data.competencies.length > 0) {
                     paneHTML += `
-                        <div class="doc-modal-module-card ${isModExpanded ? 'expanded' : 'collapsed'}" data-module="${mod.moduleNumber}">
-                            <div class="doc-modal-module-header" onclick="toggleModalModuleAccordion(this)">
-                                <div class="doc-modal-module-title-wrap">
-                                    <span class="doc-modal-module-pill">Module ${mod.moduleNumber}</span>
-                                    <h6 class="doc-modal-module-title">${escapeHtml(mod.title)}</h6>
+                            <h5 class="text-lg font-bold text-primary mb-2 mt-4">Core Competencies</h5>
+                            <ul class="list-disc pl-5 mb-4">
+                                ${subj.data.competencies.map(comp => `<li>${comp}</li>`).join('')}
+                            </ul>
+                    `;
+                }
+                
+                if (subj.outline && subj.outline.modules && subj.outline.modules.length > 0) {
+                    const outline = subj.outline;
+                    paneHTML += `
+                        <div class="doc-modal-outline-wrap">
+                            <div class="doc-modal-course-card">
+                                <div class="doc-modal-course-badge">
+                                    <i class="fas fa-graduation-cap"></i> ${escapeHtml(outline.course || 'Curriculum Path')}
                                 </div>
-                                <div class="doc-modal-module-meta">
-                                    <span class="doc-modal-module-lessons-count">${totalLessons} Lessons</span>
-                                    <i class="fas fa-chevron-down doc-modal-module-chevron"></i>
-                                </div>
+                                <h5 class="doc-modal-course-title">${escapeHtml(outline.title || (curriculumGradeKey + ' ' + subj.name))}</h5>
+                                ${outline.overview ? `<p class="doc-modal-course-overview">${escapeHtml(outline.overview)}</p>` : ''}
                             </div>
-                            <div class="doc-modal-module-body">
-                                ${mod.description ? `<p class="doc-modal-module-desc">${escapeHtml(mod.description)}</p>` : ''}
-                                <div class="doc-modal-topics-list">
+
+                            <h5 class="text-lg font-bold text-primary mb-3 mt-6 flex items-center gap-2">
+                                <i class="fas fa-layer-group"></i> Instructional Modules & Lessons
+                            </h5>
+
+                            <div class="doc-modal-modules-accordion">
                     `;
 
-                    (mod.topics || []).forEach(top => {
+                    outline.modules.forEach((mod, modIdx) => {
+                        const isModExpanded = modIdx === 0;
+                        const totalLessons = (mod.topics || []).reduce((acc, t) => acc + (t.lessons ? t.lessons.length : 0), 0);
                         paneHTML += `
-                            <div class="doc-modal-topic-block">
-                                <div class="doc-modal-topic-header">
-                                    <span class="doc-modal-topic-badge">Topic ${escapeHtml(top.letter)}</span>
-                                    <span class="doc-modal-topic-name">${escapeHtml(top.title)}</span>
+                            <div class="doc-modal-module-card ${isModExpanded ? 'expanded' : 'collapsed'}" data-module="${mod.moduleNumber}">
+                                <div class="doc-modal-module-header" onclick="toggleModalModuleAccordion(this)">
+                                    <div class="doc-modal-module-title-wrap">
+                                        <span class="doc-modal-module-pill">Module ${mod.moduleNumber}</span>
+                                        <h6 class="doc-modal-module-title">${escapeHtml(mod.title)}</h6>
+                                    </div>
+                                    <div class="doc-modal-module-meta">
+                                        <span class="doc-modal-module-lessons-count">${totalLessons} Lessons</span>
+                                        <i class="fas fa-chevron-down doc-modal-module-chevron"></i>
+                                    </div>
                                 </div>
-                                <ul class="doc-modal-lessons-list">
+                                <div class="doc-modal-module-body">
+                                    ${mod.description ? `<p class="doc-modal-module-desc">${escapeHtml(mod.description)}</p>` : ''}
+                                    <div class="doc-modal-topics-list">
                         `;
 
-                        (top.lessons || []).forEach(les => {
-                            const hasUrl = Boolean(les.url);
+                        (mod.topics || []).forEach(top => {
                             paneHTML += `
-                                <li class="doc-modal-lesson-item">
-                                    <div class="doc-modal-lesson-primary">
-                                        <span class="doc-modal-lesson-num">Lesson ${les.lessonNumber || ''}</span>
-                                        ${hasUrl ? `
-                                            <a href="${les.url}" class="doc-modal-lesson-link" title="Open Lesson: ${escapeHtml(les.title)}">
-                                                <span>${escapeHtml(les.title)}</span>
-                                                <i class="fas fa-external-link-alt doc-modal-link-icon"></i>
-                                            </a>
-                                        ` : `
-                                            <span class="doc-modal-lesson-name">${escapeHtml(les.title)}</span>
-                                        `}
+                                <div class="doc-modal-topic-block">
+                                    <div class="doc-modal-topic-header">
+                                        <span class="doc-modal-topic-badge">Topic ${escapeHtml(top.letter)}</span>
+                                        <span class="doc-modal-topic-name">${escapeHtml(top.title)}</span>
                                     </div>
-                                    ${(les.standards && les.standards.length > 0) ? `
-                                        <div class="doc-modal-std-badges">
-                                            ${les.standards.map(st => `
-                                                <a href="/pages/standards.php?subject=${subj.key}&grade=${encodeURIComponent(curriculumGradeKey)}&code=${encodeURIComponent(st)}" 
-                                                   class="doc-modal-std-chip" 
-                                                   title="View ${escapeHtml(st)} on Standards page" 
-                                                   target="_blank">
-                                                    <i class="fas fa-bookmark doc-modal-chip-icon"></i>
-                                                    <span>${escapeHtml(st)}</span>
+                                    <ul class="doc-modal-lessons-list">
+                            `;
+
+                            (top.lessons || []).forEach(les => {
+                                const hasUrl = Boolean(les.url);
+                                paneHTML += `
+                                    <li class="doc-modal-lesson-item">
+                                        <div class="doc-modal-lesson-primary">
+                                            <span class="doc-modal-lesson-num">Lesson ${les.lessonNumber || ''}</span>
+                                            ${hasUrl ? `
+                                                <a href="${les.url}" class="doc-modal-lesson-link" title="Open Lesson: ${escapeHtml(les.title)}">
+                                                    <span>${escapeHtml(les.title)}</span>
+                                                    <i class="fas fa-external-link-alt doc-modal-link-icon"></i>
                                                 </a>
-                                            `).join('')}
+                                            ` : `
+                                                <span class="doc-modal-lesson-name">${escapeHtml(les.title)}</span>
+                                            `}
                                         </div>
-                                    ` : ''}
-                                </li>
+                                        ${(les.standards && les.standards.length > 0) ? `
+                                            <div class="doc-modal-std-badges">
+                                                ${les.standards.map(st => `
+                                                    <a href="/pages/standards.php?subject=${subj.key}&grade=${encodeURIComponent(curriculumGradeKey)}&code=${encodeURIComponent(st)}" 
+                                                       class="doc-modal-std-chip" 
+                                                       title="View ${escapeHtml(st)} on Standards page" 
+                                                       target="_blank">
+                                                        <i class="fas fa-bookmark doc-modal-chip-icon"></i>
+                                                        <span>${escapeHtml(st)}</span>
+                                                    </a>
+                                                `).join('')}
+                                            </div>
+                                        ` : ''}
+                                    </li>
+                                `;
+                            });
+
+                            paneHTML += `
+                                    </ul>
+                                </div>
                             `;
                         });
 
                         paneHTML += `
-                                </ul>
+                                    </div>
+                                </div>
                             </div>
                         `;
                     });
 
                     paneHTML += `
-                                </div>
                             </div>
                         </div>
                     `;
-                });
-
+                } else if (subj.data.standards && (Array.isArray(subj.data.standards) ? subj.data.standards.length > 0 : subj.data.standards.trim() !== '')) {
+                    const stdsHtml = Array.isArray(subj.data.standards) ? subj.data.standards.join('\n') : subj.data.standards;
+                    paneHTML += `
+                            <h5 class="text-lg font-bold text-primary mb-2 mt-4">Curriculum Standards</h5>
+                            <div class="curr-standards-list">${stdsHtml}</div>
+                    `;
+                }
+                
                 paneHTML += `
                         </div>
                     </div>
                 `;
-            } else if (subj.data.standards && (Array.isArray(subj.data.standards) ? subj.data.standards.length > 0 : subj.data.standards.trim() !== '')) {
-                const stdsHtml = Array.isArray(subj.data.standards) ? subj.data.standards.join('\n') : subj.data.standards;
-                paneHTML += `
-                        <h5 class="text-lg font-bold text-primary mb-2 mt-4">Curriculum Standards</h5>
-                        <div class="curr-standards-list">${stdsHtml}</div>
-                `;
             }
-            
-            paneHTML += `
-                    </div>
-                </div>
-            `;
 
             tabContents += `<div class="${contentClass}" data-index="${index}" style="animation-delay: ${staggerDelay}">
                 ${paneHTML}
@@ -1104,6 +1355,423 @@ function printCurriculumSubject(subjectIndex) {
                 .doc-modal-module-chevron,
                 .doc-modal-link-icon {
                     display: none !important;
+                }
+                .doc-modal-module-overview-box {
+                    background: #f8fafc !important;
+                    border-left: 3px solid #2563eb !important;
+                    padding: 0.5rem 0.75rem !important;
+                    margin-bottom: 0.75rem !important;
+                }
+                .doc-modal-module-overview-label {
+                    font-size: 7.5pt !important;
+                    font-weight: 800 !important;
+                    color: #2563eb !important;
+                    text-transform: uppercase !important;
+                }
+                .doc-modal-topic-card {
+                    border: 1px solid #e2e8f0 !important;
+                    border-radius: 6px !important;
+                    padding: 0.6rem 0.8rem !important;
+                    margin-bottom: 0.6rem !important;
+                    background: #ffffff !important;
+                    page-break-inside: avoid;
+                }
+                .doc-modal-topic-badge {
+                    font-size: 7.5pt !important;
+                    font-weight: 700 !important;
+                    color: #4338ca !important;
+                    background: #e0e7ff !important;
+                    padding: 0.1rem 0.4rem !important;
+                    border-radius: 4px !important;
+                }
+                .doc-modal-topic-name {
+                    font-size: 9pt !important;
+                    font-weight: 700 !important;
+                    color: #0f172a !important;
+                    display: inline !important;
+                    margin: 0 !important;
+                }
+                .doc-modal-topic-desc {
+                    font-size: 8.5pt !important;
+                    color: #334155 !important;
+                    margin: 0.35rem 0 !important;
+                    line-height: 1.5 !important;
+                }
+                .doc-modal-topic-standards {
+                    display: flex !important;
+                    flex-wrap: wrap !important;
+                    gap: 0.25rem !important;
+                    border-top: 1px dashed #e2e8f0 !important;
+                    padding-top: 0.35rem !important;
+                }
+                .footer {
+                    margin-top: 2rem;
+                    padding-top: 1rem;
+                    border-top: 1px solid #e2e8f0;
+                    font-size: 8pt;
+                    color: #94a3b8;
+                    text-align: center;
+                }
+                @media print {
+                    body { padding: 0; }
+                }
+            </style>
+        </head>
+        <body>
+            <div class="header">
+                <h1 class="title">${modalTitle}</h1>
+                <p class="subtitle">${modalSubtitle} • Complete Curriculum Scope & Sequence</p>
+            </div>
+            ${modalDesc ? `<div class="desc-box">${modalDesc}</div>` : ''}
+            <div>
+                ${curriculumSectionsHtml}
+            </div>
+            <div class="footer">
+                <p>Hesten's Learning &copy; ${new Date().getFullYear()} • Printed Curriculum</p>
+            </div>
+            <script>
+                window.onload = function() {
+                    window.print();
+                    setTimeout(function() { window.close(); }, 500);
+                };
+            </script>
+        </body>
+        </html>
+    `;
+
+    printWin.document.write(printDoc);
+    printWin.document.close();
+}
+
+function printActiveCurriculumSubject() {
+    const docsContainer = document.getElementById('modal-docs');
+    if (!docsContainer) {
+        printCurriculum();
+        return;
+    }
+    const activePill = docsContainer.querySelector('.modal-tab-pill.active');
+    const activeIndex = activePill ? parseInt(activePill.dataset.index || '0', 10) : 0;
+    printCurriculumSubject(activeIndex);
+}
+
+function printCurriculumSubject(subjectIndex) {
+    const modalTitle = document.getElementById('modal-title')?.textContent.trim() || 'Curriculum';
+    const modalSubtitle = document.getElementById('modal-subtitle')?.textContent.trim() || '';
+    const docsContainer = document.getElementById('modal-docs');
+
+    if (!docsContainer) {
+        window.print();
+        return;
+    }
+
+    const pills = Array.from(docsContainer.querySelectorAll('.modal-tab-pill'));
+    const panes = Array.from(docsContainer.querySelectorAll('.doc-modal-pane'));
+
+    const targetPill = pills[subjectIndex] || pills[0];
+    const targetPane = panes[subjectIndex] || panes[0];
+
+    if (!targetPane) {
+        printCurriculum();
+        return;
+    }
+
+    const subjectName = targetPill ? targetPill.textContent.trim() : 'Subject Curriculum';
+    const contentEl = targetPane.querySelector('.doc-modal-pane-content, .prose-content') || targetPane;
+    
+    // Clone content and remove nested print buttons
+    const clonedContent = contentEl.cloneNode(true);
+    clonedContent.querySelectorAll('.doc-modal-subject-toolbar, .doc-modal-subject-print-btn, button').forEach(b => b.remove());
+
+    const printWin = window.open('', '_blank', 'width=900,height=750');
+    if (!printWin) {
+        window.print();
+        return;
+    }
+
+    const printDoc = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title>${subjectName} - ${modalTitle} Curriculum | Hesten's Learning</title>
+            <style>
+                @page {
+                    size: letter portrait;
+                    margin: 0.6in 0.7in;
+                }
+                *, *::before, *::after {
+                    box-sizing: border-box;
+                    -webkit-print-color-adjust: exact !important;
+                    print-color-adjust: exact !important;
+                }
+                body {
+                    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+                    margin: 0;
+                    padding: 0;
+                    color: #0f172a;
+                    background: #ffffff;
+                    font-size: 10pt;
+                    line-height: 1.55;
+                }
+                .header {
+                    margin-bottom: 1.5rem;
+                    padding-bottom: 1rem;
+                    border-bottom: 2px solid #0f172a;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    gap: 1rem;
+                }
+                .title-group h1 {
+                    font-size: 18pt;
+                    font-weight: 800;
+                    margin: 0 0 0.25rem 0;
+                    color: #0f172a;
+                }
+                .title-group h2 {
+                    font-size: 12pt;
+                    font-weight: 700;
+                    color: #2563eb;
+                    margin: 0 0 0.2rem 0;
+                }
+                .title-group p {
+                    font-size: 9pt;
+                    color: #64748b;
+                    margin: 0;
+                    font-weight: 600;
+                }
+                .header-badge {
+                    border: 1px solid #cbd5e1;
+                    border-radius: 6px;
+                    padding: 0.35rem 0.65rem;
+                    font-size: 8pt;
+                    font-weight: 700;
+                    color: #334155;
+                    text-transform: uppercase;
+                    background: #f8fafc;
+                    text-align: right;
+                    white-space: nowrap;
+                }
+                .prose-content {
+                    overflow: visible;
+                }
+                .prose-content h5 {
+                    font-size: 11pt;
+                    font-weight: 700;
+                    color: #1e3a8a;
+                    margin: 1.25rem 0 0.4rem 0;
+                    border-bottom: 1px solid #e2e8f0;
+                    padding-bottom: 0.25rem;
+                    page-break-after: avoid;
+                    break-after: avoid;
+                }
+                .prose-content p {
+                    margin: 0 0 0.65rem 0;
+                    line-height: 1.6;
+                    color: #334155;
+                }
+                .prose-content ul {
+                    margin: 0.35rem 0 1rem 1.25rem;
+                    padding: 0;
+                    color: #334155;
+                }
+                .prose-content li {
+                    margin-bottom: 0.35rem;
+                }
+                .doc-modal-course-card {
+                    background: #f8fafc !important;
+                    border: 1px solid #cbd5e1 !important;
+                    border-radius: 6px !important;
+                    padding: 0.85rem !important;
+                    margin-bottom: 1.25rem !important;
+                    page-break-inside: avoid;
+                    break-inside: avoid;
+                }
+                .doc-modal-course-badge {
+                    font-size: 8pt;
+                    font-weight: 700;
+                    color: #2563eb;
+                    text-transform: uppercase;
+                    margin-bottom: 0.25rem;
+                }
+                .doc-modal-course-title {
+                    font-size: 13pt;
+                    font-weight: 800;
+                    color: #0f172a;
+                    margin: 0 0 0.35rem 0;
+                }
+                .doc-modal-course-overview {
+                    font-size: 9pt;
+                    color: #475569;
+                    margin: 0;
+                }
+                .doc-modal-module-card {
+                    border: 1px solid #e2e8f0 !important;
+                    border-radius: 6px !important;
+                    margin-bottom: 0.85rem !important;
+                    page-break-inside: avoid;
+                    break-inside: avoid;
+                    background: #ffffff !important;
+                }
+                .doc-modal-module-header {
+                    padding: 0.5rem 0.75rem !important;
+                    background: #f1f5f9 !important;
+                    border-bottom: 1px solid #e2e8f0 !important;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                .doc-modal-module-pill {
+                    font-size: 7.5pt;
+                    font-weight: 800;
+                    background: #2563eb;
+                    color: #ffffff;
+                    padding: 0.15rem 0.45rem;
+                    border-radius: 4px;
+                    margin-right: 0.5rem;
+                }
+                .doc-modal-module-title {
+                    font-size: 9.5pt;
+                    font-weight: 700;
+                    color: #0f172a;
+                    display: inline;
+                    margin: 0;
+                }
+                .doc-modal-module-lessons-count {
+                    font-size: 8pt;
+                    font-weight: 600;
+                    color: #64748b;
+                }
+                .doc-modal-module-body {
+                    padding: 0.65rem 0.75rem !important;
+                    display: block !important;
+                }
+                .doc-modal-module-desc {
+                    font-size: 8.5pt;
+                    color: #475569;
+                    margin: 0 0 0.5rem 0;
+                }
+                .doc-modal-topic-block {
+                    margin-bottom: 0.5rem;
+                    padding-left: 0.5rem;
+                    border-left: 2px solid #e2e8f0;
+                }
+                .doc-modal-topic-badge {
+                    font-size: 7.5pt;
+                    font-weight: 700;
+                    color: #4338ca;
+                    margin-right: 0.35rem;
+                }
+                .doc-modal-topic-name {
+                    font-size: 8.5pt;
+                    font-weight: 700;
+                    color: #1e293b;
+                }
+                .doc-modal-lessons-list {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0.25rem 0 0 0;
+                }
+                .doc-modal-lesson-item {
+                    font-size: 8pt;
+                    padding: 0.2rem 0;
+                    color: #334155;
+                    display: flex;
+                    justify-content: space-between;
+                    border-bottom: 1px dashed #f1f5f9;
+                }
+                .doc-modal-lesson-num {
+                    font-weight: 700;
+                    color: #64748b;
+                    margin-right: 0.5rem;
+                    min-width: 60px;
+                }
+                .doc-modal-std-tag {
+                    font-size: 7pt;
+                    font-weight: 700;
+                    background: #e0e7ff;
+                    color: #3730a3;
+                    padding: 0.1rem 0.3rem;
+                    border-radius: 3px;
+                    margin-left: 0.25rem;
+                }
+                .doc-modal-module-chevron,
+                .doc-modal-link-icon {
+                    display: none !important;
+                }
+                .doc-modal-algebra-hero {
+                    background: #f8fafc !important;
+                    border: 1px solid #cbd5e1 !important;
+                    border-radius: 6px !important;
+                    padding: 0.85rem !important;
+                    margin-bottom: 1.25rem !important;
+                    page-break-inside: avoid;
+                    break-inside: avoid;
+                }
+                .doc-modal-algebra-hero-title {
+                    font-size: 13pt;
+                    font-weight: 800;
+                    color: #0f172a;
+                    margin: 0.35rem 0;
+                }
+                .doc-modal-algebra-hero-desc {
+                    font-size: 9pt;
+                    color: #475569;
+                    margin: 0;
+                }
+                .doc-modal-algebra-badges, .doc-modal-algebra-quickactions, .doc-modal-semester-nav {
+                    display: none !important;
+                }
+                .doc-modal-algebra-metrics {
+                    display: flex !important;
+                    gap: 0.75rem !important;
+                    margin-bottom: 1.25rem !important;
+                    page-break-inside: avoid;
+                }
+                .doc-modal-algebra-metric-card {
+                    flex: 1;
+                    border: 1px solid #e2e8f0 !important;
+                    border-radius: 6px !important;
+                    padding: 0.5rem !important;
+                    text-align: center;
+                    background: #ffffff !important;
+                }
+                .doc-modal-algebra-metric-num {
+                    font-size: 14pt;
+                    font-weight: 800;
+                    color: #1e3a8a;
+                }
+                .doc-modal-algebra-metric-label {
+                    font-size: 7.5pt;
+                    font-weight: 600;
+                    color: #64748b;
+                    text-transform: uppercase;
+                }
+                .doc-modal-strands-box {
+                    border: 1px solid #e2e8f0 !important;
+                    border-radius: 6px !important;
+                    padding: 0.75rem !important;
+                    margin-bottom: 1.25rem !important;
+                    page-break-inside: avoid;
+                }
+                .doc-modal-strands-title {
+                    font-size: 10pt;
+                    font-weight: 700;
+                    color: #0f172a;
+                    margin: 0 0 0.5rem 0;
+                }
+                .doc-modal-strands-grid {
+                    display: flex !important;
+                    flex-wrap: wrap !important;
+                    gap: 0.35rem !important;
+                }
+                .doc-modal-strand-pill {
+                    font-size: 7.5pt;
+                    border: 1px solid #cbd5e1 !important;
+                    padding: 0.2rem 0.4rem;
+                    border-radius: 4px;
+                    color: #334155 !important;
+                    text-decoration: none !important;
                 }
                 .footer {
                     margin-top: 2rem;

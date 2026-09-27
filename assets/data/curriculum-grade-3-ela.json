@@ -1,0 +1,90 @@
+{
+    "grade": "Grade 3",
+    "subject": "ela",
+    "name": "English Language Arts",
+    "course": "Informational Analysis, Textual Evidence & Opinion Writing",
+    "title": "Grade 3 English Language Arts: Informational Analysis, Textual Evidence & Opinion Writing",
+    "icon": "fas fa-feather-alt",
+    "color": "#059669",
+    "overview": "Grade 3 English Language Arts immerses students in literary and informational texts, developing close reading comprehension, evidence-based writing, academic vocabulary, and collaborative discourse.",
+    "competencies": [
+        "Read grade-level literary and informational texts with fluency, accuracy, and deep comprehension.",
+        "Cite specific textual evidence to substantiate answers, inferences, and central theme analyses.",
+        "Write clear, organized opinion, informative, and narrative compositions using standard grammar conventions.",
+        "Participate actively in collaborative discussions, expressing ideas clearly and building upon others' contributions."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "Close Reading, Central Message & Text Evidence",
+            "description": "Answering questions by citing direct textual evidence, identifying character motivations, and distinguishing literal from non-literal language.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Citing Text Evidence in Literature",
+                    "description": "Referring explicitly to the text when asking and answering comprehension questions.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RL.3.1"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Literal vs. Non-Literal Language & Idioms",
+                    "description": "Interpreting figurative idioms, metaphors, and sensory descriptions in context.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RL.3.4",
+                        "CCSS.ELA-LITERACY.L.3.5"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "Informational Text Structures & Author's Point of View",
+            "description": "Analyzing cause/effect, compare/contrast, and chronological text structures, and evaluating author perspective.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Informational Text Structures",
+                    "description": "Recognizing sequence, cause/effect, and problem/solution transition keywords.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RI.3.5",
+                        "CCSS.ELA-LITERACY.RI.3.8"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Author's Point of View vs. Reader's View",
+                    "description": "Distinguishing one's own point of view from that of the author or historical speaker.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RI.3.6"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 3,
+            "title": "Structured Multi-Paragraph Writing & Research Inquiry",
+            "description": "Drafting multi-paragraph opinion and informative essays with clear introductions, grouped reasons, and transition words.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Opinion Essay Workshop",
+                    "description": "Formulating thesis statements, providing logical supporting evidence, and concluding effectively.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.W.3.1"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Informational Explanatory Reports",
+                    "description": "Conducting guided research, grouping related ideas, and integrating diagrams/illustrations.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.W.3.2",
+                        "CCSS.ELA-LITERACY.W.3.7"
+                    ]
+                }
+            ]
+        }
+    ]
+}

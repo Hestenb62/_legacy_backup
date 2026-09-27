@@ -1,0 +1,143 @@
+{
+    "grade": "Grade 5",
+    "subject": "math",
+    "name": "Mathematics",
+    "course": "Decimals, Fraction Operations & Volume",
+    "title": "Grade 5 Mathematics: Decimals, Fraction Operations & Volume",
+    "icon": "fas fa-calculator",
+    "color": "#2563eb",
+    "overview": "Grade 5 mathematics deepens students' conceptual understanding of place value, arithmetic operations, algebraic thinking, measurement, and geometry through rigorous problem-solving routines.",
+    "competencies": [
+        "Demonstrate computational fluency and conceptual flexibility across grade-level operations.",
+        "Apply visual models, tape diagrams, and equations to represent and solve multi-step contextual word problems.",
+        "Analyze geometric shapes, measurement units, and spatial relationships.",
+        "Construct viable mathematical arguments and critique the reasoning of peers."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "Place Value and Decimal Operations",
+            "description": "Understanding decimal place value to thousandths, rounding decimals, and adding, subtracting, multiplying, and dividing decimals.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Multiplicative Patterns in the Decimal System",
+                    "description": "Reasoning about powers of 10 and shifting digits left/right when multiplying/dividing by 10.",
+                    "standards": [
+                        "5.NBT.1",
+                        "5.NBT.2"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Reading, Writing, and Comparing Decimals to Thousandths",
+                    "description": "Using base ten numerals, number names, and expanded form with decimals.",
+                    "standards": [
+                        "5.NBT.3",
+                        "5.NBT.4"
+                    ]
+                },
+                {
+                    "letter": "C",
+                    "title": "Decimal Operations (Addition, Subtraction, Multiplication, Division)",
+                    "description": "Computing with decimals using place value models, area models, and standard algorithms.",
+                    "standards": [
+                        "5.NBT.7"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "Multi-Digit Whole Number and Fraction Operations",
+            "description": "Fluency with multi-digit whole number multiplication (standard algorithm), dividing by two-digit divisors, and fraction operations.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Multi-Digit Whole Number Multiplication and Division",
+                    "description": "Multiplying large whole numbers and dividing up to 4-digit dividends by 2-digit divisors.",
+                    "standards": [
+                        "5.NBT.5",
+                        "5.NBT.6"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Adding and Subtracting Fractions with Unlike Denominators",
+                    "description": "Finding common denominators using equivalent fraction models to solve word problems.",
+                    "standards": [
+                        "5.NF.1",
+                        "5.NF.2"
+                    ]
+                },
+                {
+                    "letter": "C",
+                    "title": "Multiplying and Dividing Fractions",
+                    "description": "Interpreting fraction multiplication as scaling (area models) and dividing unit fractions by whole numbers.",
+                    "standards": [
+                        "5.NF.4",
+                        "5.NF.5",
+                        "5.NF.7"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 3,
+            "title": "Volume and Area of Solid Figures",
+            "description": "Defining volume as an attribute of 3D solid figures, packing with unit cubes, and applying the volume formula: V = l x w x h or V = b x h.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Concepts of Volume and Unit Cubes",
+                    "description": "Packing rectangular prisms with cubic units without gaps and counting layers.",
+                    "standards": [
+                        "5.MD.3",
+                        "5.MD.4"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Volume Formulas for Rectangular Prisms and Composite Solids",
+                    "description": "Applying V = lwh and finding volumes of composite rectangular figures.",
+                    "standards": [
+                        "5.MD.5"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 4,
+            "title": "The Coordinate Plane and Two-Dimensional Geometry",
+            "description": "Plotting coordinate pairs (x, y) on the first quadrant of the coordinate plane, analyzing numerical patterns, and classifying 2D figures.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Coordinate System Foundations and Graphing Points",
+                    "description": "Identifying x-axis, y-axis, origin, and plotting real-world points on coordinate grids.",
+                    "standards": [
+                        "5.G.1",
+                        "5.G.2"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Generating and Graphing Numerical Patterns",
+                    "description": "Comparing two mathematical rules using tables and lines on coordinate graphs.",
+                    "standards": [
+                        "5.OA.3"
+                    ]
+                },
+                {
+                    "letter": "C",
+                    "title": "Hierarchical Classification of 2D Shapes",
+                    "description": "Classifying polygons into hierarchies (quadrilaterals, parallelograms, rectangles, rhombi, squares).",
+                    "standards": [
+                        "5.G.3",
+                        "5.G.4"
+                    ]
+                }
+            ]
+        }
+    ]
+}

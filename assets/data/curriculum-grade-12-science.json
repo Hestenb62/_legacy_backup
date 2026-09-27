@@ -1,0 +1,93 @@
+{
+    "grade": "Grade 12",
+    "subject": "science",
+    "name": "Science",
+    "course": "Environmental Science",
+    "title": "Grade 12 Science: Environmental Science",
+    "icon": "fas fa-atom",
+    "color": "#4f46e5",
+    "overview": "Grade 12 Science provides collegiate-level scientific inquiry across chemical, physical, and environmental systems aligned with Next Generation Science Standards (NGSS).",
+    "competencies": [
+        "Design empirical laboratory investigations, analyze complex data sets, and account for experimental error.",
+        "Model atomic, molecular, physical, and ecological systems using mathematical and conceptual tools.",
+        "Apply scientific principles to solve technological and ecological problems through engineering design.",
+        "Evaluate the ethical, societal, and environmental consequences of scientific discoveries."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "Earth Systems, Atmospheric Chemistry & Biogeochemical Cycles",
+            "description": "Investigating atmospheric layers, greenhouse gas absorption, ocean acidification, and carbon/nitrogen geochemical balances.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Atmospheric Dynamics, Ozone and the Greenhouse Effect",
+                    "description": "Modeling solar radiation balance, stratospheric ozone depletion, and infrared thermal trapping.",
+                    "standards": [
+                        "HS-ESS2-4",
+                        "HS-ESS2-6"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Ocean Acidification and Marine Carbon Sinks",
+                    "description": "Investigating chemical equilibria of dissolved CO2, carbonic acid, and calcium carbonate coral decay.",
+                    "standards": [
+                        "HS-ESS2-6",
+                        "HS-PS1-6"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "Population Ecology, Biodiversity & Conservation Biology",
+            "description": "Analyzing carrying capacity models, habitat fragmentation, endangered species recovery plans, and biodiversity indices.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Demographic Modeling and Limiting Factors",
+                    "description": "Applying demographic transition models, age structure diagrams, and r-selected vs. K-selected species.",
+                    "standards": [
+                        "HS-LS2-1",
+                        "HS-LS2-2"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Conservation Strategies and Ecosystem Restoration",
+                    "description": "Designing wildlife corridors, marine protected areas, and evaluated captive breeding programs.",
+                    "standards": [
+                        "HS-LS2-7",
+                        "HS-LS4-6"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 3,
+            "title": "Energy Resources, Environmental Engineering & Sustainability",
+            "description": "Evaluating fossil fuels, nuclear fission, renewable solar/wind/geothermal systems, and water purification technologies.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Conventional vs. Renewable Energy Portfolios",
+                    "description": "Conducting life-cycle energy analyses comparing coal/natural gas emissions against solar/wind efficiency.",
+                    "standards": [
+                        "HS-ESS3-2",
+                        "HS-ESS3-4"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Sustainable Urban Planning and Circular Economy",
+                    "description": "Engineering green infrastructure, zero-waste composting, water treatment facilities, and smart grid systems.",
+                    "standards": [
+                        "HS-ESS3-3",
+                        "HS-ETS1-2"
+                    ]
+                }
+            ]
+        }
+    ]
+}

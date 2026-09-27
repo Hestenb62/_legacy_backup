@@ -1,0 +1,143 @@
+{
+    "grade": "9th Grade",
+    "subject": "science",
+    "name": "Science",
+    "course": "Biology",
+    "title": "Biology: Living Earth & Life Systems",
+    "icon": "fas fa-dna",
+    "color": "#4f46e5",
+    "overview": "High School Biology provides an in-depth scientific study of biological systems, cellular biochemistry, molecular genetics, evolutionary adaptations, and ecosystem ecology aligned with Next Generation Science Standards (NGSS). Students investigate life at microscopic and planetary scales, conducting empirical investigations, formulating testable hypotheses, and modeling complex biochemical feedback mechanisms.",
+    "competencies": [
+        "Construct explanations based on evidence for how feedback mechanisms maintain homeostasis in living organisms.",
+        "Model the cellular processes of photosynthesis, cellular respiration, and ATP synthesis in matter and energy transformations.",
+        "Analyze how DNA structures code for amino acid sequences and explain how mutations contribute to genetic variation.",
+        "Communicate scientific information supporting the theory of evolution by natural selection using anatomical, genetic, and fossil evidence.",
+        "Design and evaluate computational simulations of ecosystem carrying capacities and biogeochemical cycles under anthropogenic stress."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "Biomolecules, Cellular Architecture & Bioenergetics",
+            "description": "Investigates the fundamental molecular building blocks of life and cellular operations. Students explore the unique properties of water, the structure and function of carbohydrates, lipids, proteins, and nucleic acids, enzyme kinetics, and how cells convert chemical energy to power metabolic functions.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "The Chemistry of Life & Macromolecules",
+                    "description": "Studies covalent bonding, polarity, hydrogen bonding in water, and the four major biological macromolecules. Students relate monomer-polymer condensation reactions to cellular structure and enzymatic catalysts.",
+                    "standards": ["HS-LS1-1", "HS-LS1-6"]
+                },
+                {
+                    "letter": "B",
+                    "title": "Cellular Anatomy & Selective Membrane Transport",
+                    "description": "Contrasts prokaryotic and eukaryotic organelles, and models the fluid mosaic phospholipid bilayer. Students explore passive diffusion, facilitated transport, active ion pumps, and endo/exocytosis maintaining homeostasis.",
+                    "standards": ["HS-LS1-2", "HS-LS1-3"]
+                },
+                {
+                    "letter": "C",
+                    "title": "Cellular Respiration & ATP Metabolism",
+                    "description": "Details the biochemical pathways of aerobic and anaerobic respiration: glycolysis, the citric acid (Krebs) cycle, and the electron transport chain with ATP synthase. Students calculate net energy outputs and examine lactic acid fermentation.",
+                    "standards": ["HS-LS1-7", "HS-LS2-3"]
+                },
+                {
+                    "letter": "D",
+                    "title": "Photosynthesis & Solar Energy Capture",
+                    "description": "Investigates light-dependent thylakoid reactions and the light-independent Calvin cycle in chloroplasts. Students model how radiant photons excite chlorophyll electrons, split water, and synthesize glucose molecules.",
+                    "standards": ["HS-LS1-5", "HS-LS2-5"]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "Molecular Genetics, DNA Replication & Heredity",
+            "description": "Explores the molecular storage, duplication, and expression of genetic information. Students model DNA double helix structures, the central dogma of molecular biology (transcription and translation), chromosomal recombination in meiosis, and probabilistic Mendelian inheritance.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "DNA Architecture & Semiconservative Replication",
+                    "description": "Examines nucleotide pairing, antiparallel helical symmetry, and enzymatic replication forks (helicase, DNA polymerase, ligase). Students simulate how proofreading maintains fidelity during cellular interphase.",
+                    "standards": ["HS-LS1-1", "HS-LS3-1"]
+                },
+                {
+                    "letter": "B",
+                    "title": "Transcription, Translation & Protein Synthesis",
+                    "description": "Traces genetic information flow from nuclear DNA to messenger RNA (transcription) and ribosome-mediated polypeptide synthesis with tRNA anticodons (translation). Students predict phenotypic effects of point and frameshift mutations.",
+                    "standards": ["HS-LS1-1", "HS-LS3-2"]
+                },
+                {
+                    "letter": "C",
+                    "title": "Meiosis, Gametogenesis & Chromosomal Variation",
+                    "description": "Compares somatic mitosis with reductional meiosis. Students model homologous chromosome crossing-over, independent assortment, and random fertilization as foundational drivers of genetic diversity.",
+                    "standards": ["HS-LS3-2", "HS-LS1-4"]
+                },
+                {
+                    "letter": "D",
+                    "title": "Mendelian Genetics & Complex Inheritance Patterns",
+                    "description": "Utilizes Punnett squares, dihybrid crosses, and pedigree charts to calculate genetic probabilities. Students investigate incomplete dominance, codominance, polygenic traits, sex-linked conditions, and epigenetics.",
+                    "standards": ["HS-LS3-3"]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 3,
+            "title": "Evolution, Natural Selection & Biological Diversity",
+            "description": "Analyzes the unifying biological principle of evolutionary change through deep time. Students evaluate anatomical, embryological, genetic, and fossil evidence, model natural selection and allele frequency shifts, and trace phylogenetic trees.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Empirical Evidence for Evolutionary Theory",
+                    "description": "Evaluates Darwinian observations alongside modern paleontological fossil sequences, homologous and vestigial structures, biogeography, and molecular amino acid alignments demonstrating universal common ancestry.",
+                    "standards": ["HS-LS4-1", "HS-LS4-2"]
+                },
+                {
+                    "letter": "B",
+                    "title": "Mechanisms of Natural Selection & Genetic Drift",
+                    "description": "Models how differential survival and reproductive success alter population allele distributions. Students contrast directional, stabilizing, and disruptive selection against random bottleneck and founder events.",
+                    "standards": ["HS-LS4-2", "HS-LS4-3", "HS-LS4-4"]
+                },
+                {
+                    "letter": "C",
+                    "title": "Speciation, Isolation & Cladistics",
+                    "description": "Investigates reproductive isolating mechanisms (geographic, behavioral, temporal) leading to allopatric and sympatric speciation. Students construct and interpret cladograms and phylogenetic trees.",
+                    "standards": ["HS-LS4-4", "HS-LS4-5"]
+                },
+                {
+                    "letter": "D",
+                    "title": "Coevolution, Extinction & Modern Biodiversity",
+                    "description": "Analyzes predator-prey and pollinator mutualisms through coevolutionary arms races, explores historical mass extinction events, and evaluates contemporary threats to global biodiversity.",
+                    "standards": ["HS-LS4-5", "HS-LS4-6"]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 4,
+            "title": "Dynamic Ecosystems, Energy Pyramids & Earth's Biosphere",
+            "description": "Investigates interactions among abiotic factors and living organisms across ecological scales. Students analyze trophic energy transfers, carbon and nitrogen biogeochemical cycles, population carrying capacity models, and ecological resilience.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Trophic Energy Flows & Food Web Dynamics",
+                    "description": "Constructs quantitative food webs and biomass pyramids applying the 10% thermodynamic trophic efficiency rule. Students model apex predator trophic cascades and keystone species dependencies.",
+                    "standards": ["HS-LS2-3", "HS-LS2-4"]
+                },
+                {
+                    "letter": "B",
+                    "title": "Biogeochemical Cycles & Earth's Carbon Balance",
+                    "description": "Traces matter circulation through the water, carbon, nitrogen, and phosphorus cycles across the atmosphere, hydrosphere, lithosphere, and biosphere, analyzing oceanic carbon sinks and greenhouse gases.",
+                    "standards": ["HS-LS2-4", "HS-LS2-5"]
+                },
+                {
+                    "letter": "C",
+                    "title": "Population Dynamics, Carrying Capacity & Succession",
+                    "description": "Analyzes exponential and logistic growth curves ($K$), examining density-dependent and density-independent limiting factors. Students chart primary and secondary ecological succession toward climax communities.",
+                    "standards": ["HS-LS2-1", "HS-LS2-2", "HS-LS2-6"]
+                },
+                {
+                    "letter": "D",
+                    "title": "Human Ecological Impacts & Sustainable Solutions",
+                    "description": "Evaluates habitat fragmentation, invasive species, climate shifts, and agricultural runoff. Students engineer and evaluate mitigation strategies including renewable systems, bioremediation, and conservation corridors.",
+                    "standards": ["HS-LS2-7", "HS-LS4-6", "HS-ESS3-4"]
+                }
+            ]
+        }
+    ]
+}

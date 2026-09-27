@@ -1,0 +1,100 @@
+{
+    "grade": "Pre-K",
+    "subject": "math",
+    "name": "Mathematics",
+    "course": "Early Numeracy & Shapes",
+    "title": "Pre-K Mathematics: Early Numeracy & Shapes",
+    "icon": "fas fa-calculator",
+    "color": "#2563eb",
+    "overview": "Pre-K mathematics develops foundational number sense, geometric reasoning, and spatial awareness through manipulative investigations, problem-solving routines, and structured discussions.",
+    "competencies": [
+        "Demonstrate deep conceptual understanding of Pre-K number systems and operations.",
+        "Identify, describe, and analyze two-dimensional and three-dimensional geometric figures.",
+        "Apply measurement tools and strategies to quantify length, weight, and volume.",
+        "Solve real-world story problems using visual models, drawings, and mathematical notation."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "Counting, Quantities & Numbers to 5",
+            "description": "Introduces foundational counting, number recognition, and one-to-one correspondence for numbers 1 to 5 using concrete objects, fingers, and songs.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Matching and Sorting Objects",
+                    "description": "Matching identical objects, sorting by attributes such as color, size, and shape.",
+                    "standards": [
+                        "PK.CC.1",
+                        "PK.MD.2"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Counting 1, 2, and 3",
+                    "description": "Developing one-to-one correspondence and identifying quantities up to 3.",
+                    "standards": [
+                        "PK.CC.2",
+                        "PK.CC.3"
+                    ]
+                },
+                {
+                    "letter": "C",
+                    "title": "Counting 4 and 5",
+                    "description": "Counting objects in linear and scattered arrays up to 5 and writing numerals.",
+                    "standards": [
+                        "PK.CC.3",
+                        "PK.CC.4"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "Shapes, Space & Position",
+            "description": "Explores basic two-dimensional shapes (circles, squares, triangles, rectangles) and positional spatial vocabulary.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Two-Dimensional Shapes",
+                    "description": "Identifying, describing, and drawing circles, squares, rectangles, and triangles.",
+                    "standards": [
+                        "PK.G.1",
+                        "PK.G.2"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Positional Spatial Words",
+                    "description": "Using prepositions such as above, below, beside, in front of, and behind.",
+                    "standards": [
+                        "PK.G.1"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 3,
+            "title": "Comparing Quantities & Measurement",
+            "description": "Comparing groups of objects using more than, less than, and the same as, and measuring lengths directly.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Comparing Sets",
+                    "description": "Comparing groups of items up to 5 to determine greater than or fewer than.",
+                    "standards": [
+                        "PK.CC.5",
+                        "PK.MD.1"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Direct Measurement",
+                    "description": "Comparing lengths, weights, and capacities of real-world classroom items.",
+                    "standards": [
+                        "PK.MD.1"
+                    ]
+                }
+            ]
+        }
+    ]
+}

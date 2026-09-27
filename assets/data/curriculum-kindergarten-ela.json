@@ -1,0 +1,101 @@
+{
+    "grade": "Kindergarten",
+    "subject": "ela",
+    "name": "English Language Arts",
+    "course": "Phonics, Print Concepts & Early Reading",
+    "title": "Kindergarten English Language Arts: Phonics, Print Concepts & Early Reading",
+    "icon": "fas fa-feather-alt",
+    "color": "#059669",
+    "overview": "Kindergarten English Language Arts immerses young learners in rich literature, structured phonics routines, vocabulary enrichment, and expressive writing workshops.",
+    "competencies": [
+        "Demonstrate phonemic awareness and mastery of grade-appropriate decoding patterns.",
+        "Retell stories with key details, identifying central characters, settings, and sequence of events.",
+        "Extract and communicate central ideas from informational texts.",
+        "Compose well-structured sentences and narrative/opinion compositions using standard conventions."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "Phonemic Awareness & Alphabetic Principle",
+            "description": "Mastering letter names and sounds, blending consonant-vowel-consonant (CVC) words, and recognizing high-frequency sight words.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Letter-Sound Correspondences",
+                    "description": "Associating all 26 uppercase and lowercase letters with their primary phonemes.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RF.K.1",
+                        "CCSS.ELA-LITERACY.RF.K.3a"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Blending & Segmenting CVC Words",
+                    "description": "Blending onset and rime, isolating initial, medial, and final sounds in words like cat and sun.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RF.K.2",
+                        "CCSS.ELA-LITERACY.RF.K.3b"
+                    ]
+                },
+                {
+                    "letter": "C",
+                    "title": "High-Frequency Sight Words",
+                    "description": "Reading grade-level sight words (the, of, and, you, to) with automaticity.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RF.K.3c"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "Story Comprehension & Literary Retelling",
+            "description": "Identifying key details, characters, settings, and main events in narrative literature.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Characters, Setting & Major Events",
+                    "description": "Asking and answering who, what, and where questions about stories read aloud.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RL.K.1",
+                        "CCSS.ELA-LITERACY.RL.K.3"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Retelling with Beginning, Middle & End",
+                    "description": "Sequencing story events using temporal signal words (first, next, last).",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RL.K.2"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 3,
+            "title": "Informational Texts & Early Writing",
+            "description": "Extracting facts from informational books and composing simple opinion, informative, and narrative sentences.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Main Idea & Details in Nonfiction",
+                    "description": "Identifying the main topic and supporting facts with teacher scaffolding.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RI.K.1",
+                        "CCSS.ELA-LITERACY.RI.K.2"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Opinion & Informative Writing Workshop",
+                    "description": "Drawing, dictating, and writing sentences with spacing, capitals, and punctuation.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.W.K.1",
+                        "CCSS.ELA-LITERACY.W.K.2",
+                        "CCSS.ELA-LITERACY.L.K.1"
+                    ]
+                }
+            ]
+        }
+    ]
+}

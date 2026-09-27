@@ -1,0 +1,102 @@
+{
+    "grade": "Grade 12",
+    "subject": "social",
+    "name": "Social Studies",
+    "course": "US Government & Economics",
+    "title": "Grade 12 Social Studies: US Government & Economics",
+    "icon": "fas fa-landmark",
+    "color": "#d97706",
+    "overview": "Grade 12 Social Studies prepares young citizens for active democratic participation and global engagement through rigorous historical, political, geographic, and economic inquiry.",
+    "competencies": [
+        "Evaluate complex primary sources, detecting bias, corroborating claims, and synthesizing context.",
+        "Analyze constitutional principles, governmental structures, and civil liberties in a democratic republic.",
+        "Apply macroeconomic principles, market mechanics, and fiscal/monetary policies to public issues.",
+        "Deliberate contemporary global policy dilemmas using evidence-based civic discourse."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "Foundations of American Democracy & the Constitutional Framework",
+            "description": "Analyzing separation of powers, federalism, the Bill of Rights, landmark Supreme Court cases, and civil liberties.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Constitutional Architecture and Federalism",
+                    "description": "Analyzing enumerated vs. reserved powers, judicial review (Marbury v. Madison), and checks and balances.",
+                    "standards": [
+                        "D2.Civ.1.9-12",
+                        "D2.Civ.4.9-12"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Civil Liberties, Civil Rights and the Fourteenth Amendment",
+                    "description": "Critiquing Supreme Court precedent on free speech, religious establishment, due process, and equal protection.",
+                    "standards": [
+                        "D2.Civ.3.9-12",
+                        "D2.Civ.8.9-12"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "Political Participation, Campaigns & the Three Branches",
+            "description": "Examining congressional lawmaking, the executive presidency, judicial appointments, elections, and special interest groups.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Congress, the Presidency and the Federal Bureaucracy",
+                    "description": "Tracing how a bill becomes law, executive orders, presidential war powers, and bureaucratic regulations.",
+                    "standards": [
+                        "D2.Civ.5.9-12",
+                        "D2.Civ.6.9-12"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Elections, the Electoral College and Media Influence",
+                    "description": "Evaluating campaign finance laws, primary voting systems, media bias, and voter turnout trends.",
+                    "standards": [
+                        "D2.Civ.7.9-12",
+                        "D2.Civ.14.9-12"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 3,
+            "title": "Principles of Macroeconomics & Fiscal/Monetary Policy",
+            "description": "Investigating supply and demand, GDP, unemployment, inflation, the Federal Reserve Bank, and international trade.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Market Mechanics: Supply, Demand and Price Equilibrium",
+                    "description": "Graphing supply and demand curves, price elasticity, and analyzing market shortages and surpluses.",
+                    "standards": [
+                        "D2.Eco.3.9-12",
+                        "D2.Eco.4.9-12"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Macroeconomic Health: GDP, Inflation and Unemployment",
+                    "description": "Measuring real GDP, CPI inflation rates, structural/cyclical unemployment, and business cycles.",
+                    "standards": [
+                        "D2.Eco.10.9-12",
+                        "D2.Eco.11.9-12"
+                    ]
+                },
+                {
+                    "letter": "C",
+                    "title": "Fiscal Policy vs. Federal Reserve Monetary Policy",
+                    "description": "Analyzing government taxation and spending interventions alongside Federal Reserve interest rate decisions.",
+                    "standards": [
+                        "D2.Eco.12.9-12",
+                        "D2.Eco.13.9-12"
+                    ]
+                }
+            ]
+        }
+    ]
+}

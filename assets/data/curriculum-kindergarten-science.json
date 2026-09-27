@@ -1,0 +1,90 @@
+{
+    "grade": "Kindergarten",
+    "subject": "science",
+    "name": "Science",
+    "course": "Weather, Sunlight & Living Things",
+    "title": "Kindergarten Science: Weather, Sunlight & Living Things",
+    "icon": "fas fa-leaf",
+    "color": "#4f46e5",
+    "overview": "Kindergarten Science fosters curiosity and scientific inquiry through hands-on experiments, outdoor observations, and interactive investigations aligned with Next Generation Science Standards (NGSS).",
+    "competencies": [
+        "Ask testable questions and make systematic observations using sensory tools.",
+        "Investigate the interactions between physical forces, living organisms, and Earth's atmosphere.",
+        "Construct evidence-based explanations for everyday natural phenomena.",
+        "Design and evaluate simple solutions to environmental and everyday engineering challenges."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "Forces & Motion: Pushes and Pulls",
+            "description": "Investigating how pushes and pulls change the speed and direction of objects, and how collisions alter movement.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Investigating Pushes and Pulls",
+                    "description": "Testing how different strengths of pushes and pulls move toys across surfaces.",
+                    "standards": [
+                        "K-PS2-1"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Changing Direction & Collisions",
+                    "description": "Observing how two moving objects affect each other upon collision.",
+                    "standards": [
+                        "K-PS2-2"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "Sunlight, Warmth & Weather Patterns",
+            "description": "Exploring the warming effects of sunlight on Earth and tracking daily and seasonal weather changes.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Sunlight & Thermal Warmth",
+                    "description": "Measuring temperature differences in sunlight versus shade, and designing shade shelters.",
+                    "standards": [
+                        "K-PS3-1",
+                        "K-PS3-2"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Weather Observations & Forecasting",
+                    "description": "Recording local weather conditions (rain, snow, wind, sunshine) and preparing for severe weather.",
+                    "standards": [
+                        "K-ESS2-1",
+                        "K-ESS3-2"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 3,
+            "title": "Plants, Animals & Environmental Stewardship",
+            "description": "Discovering what plants and animals need to survive and how humans can reduce their environmental footprint.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Basic Needs of Living Things",
+                    "description": "Investigating plant needs (light, water) and animal needs (food, water, shelter).",
+                    "standards": [
+                        "K-LS1-1",
+                        "K-ESS3-1"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Protecting Our Earth",
+                    "description": "Exploring recycling, composting, saving water, and keeping local habitats clean.",
+                    "standards": [
+                        "K-ESS3-3"
+                    ]
+                }
+            ]
+        }
+    ]
+}

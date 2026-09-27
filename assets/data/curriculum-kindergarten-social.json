@@ -1,0 +1,89 @@
+{
+    "grade": "Kindergarten",
+    "subject": "social",
+    "name": "Social Studies",
+    "course": "Community, Rules & American Symbols",
+    "title": "Kindergarten Social Studies: Community, Rules & American Symbols",
+    "icon": "fas fa-globe-americas",
+    "color": "#d97706",
+    "overview": "Kindergarten Social Studies introduces young scholars to civic responsibilities, geographic mapping, economic needs versus wants, and the historic stories that shape our shared community.",
+    "competencies": [
+        "Explain the necessity of rules, laws, and collaborative citizenship in democratic communities.",
+        "Read and create simple maps to locate geographic features, cities, and landmarks.",
+        "Differentiate between producers, consumers, goods, and services in basic market exchanges.",
+        "Analyze primary artifacts and historical traditions celebrating American cultural diversity."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "Rules, Roles & Good Citizenship",
+            "description": "Understanding why communities have rules, the importance of honesty and fairness, and roles of leaders.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Why We Have Rules",
+                    "description": "Explaining how rules keep us safe and promote fairness in school and society.",
+                    "standards": [
+                        "D2.Civ.1.K-2",
+                        "D2.Civ.2.K-2"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Responsibilities of Good Citizens",
+                    "description": "Demonstrating respect, active listening, honesty, and collaborative teamwork.",
+                    "standards": [
+                        "D2.Civ.3.K-2"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "Geography: Maps, Globes & Neighborhoods",
+            "description": "Using simple maps to locate places, identifying basic land and water features on globes.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Maps and Directions",
+                    "description": "Using map symbols, cardinal directions, and simple floor plans to locate items.",
+                    "standards": [
+                        "D2.Geo.1.K-2",
+                        "D2.Geo.2.K-2"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Land, Water & Community Places",
+                    "description": "Distinguishing between continents, oceans, rivers, mountains, and towns.",
+                    "standards": [
+                        "D2.Geo.3.K-2"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 3,
+            "title": "American Symbols, Holidays & Traditions",
+            "description": "Exploring patriotic symbols of the United States and national holidays honoring historic leaders.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "National Symbols & Songs",
+                    "description": "Recognizing the American Flag, Bald Eagle, Statue of Liberty, and Liberty Bell.",
+                    "standards": [
+                        "D2.His.1.K-2"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Holidays & Cultural Celebrations",
+                    "description": "Understanding Thanksgiving, Presidents Day, Martin Luther King Jr. Day, and Memorial Day.",
+                    "standards": [
+                        "D2.His.2.K-2"
+                    ]
+                }
+            ]
+        }
+    ]
+}

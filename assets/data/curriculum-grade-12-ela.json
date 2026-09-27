@@ -1,0 +1,93 @@
+{
+    "grade": "Grade 12",
+    "subject": "ela",
+    "name": "English Language Arts",
+    "course": "English 12",
+    "title": "Grade 12 English Language Arts: English 12",
+    "icon": "fas fa-feather-alt",
+    "color": "#059669",
+    "overview": "Grade 12 English Language Arts immerses students in collegiate literary analysis, rhetorical critique of historical documents, research synthesis, and sophisticated composition.",
+    "competencies": [
+        "Evaluate complex themes, character motivations, and literary craft in seminal literary works.",
+        "Analyze rhetorical devices, persuasive arguments, and philosophical premises in foundational texts.",
+        "Compose well-substantiated research papers and argumentative essays adhering to academic citations.",
+        "Engage in sophisticated scholarly seminar discourse, defending evidence-based conclusions."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "British & World Literature: Epic Foundations & Tragic Drama",
+            "description": "Analyzing seminal British and world literature from Beowulf and Chaucer to Shakespearean tragedy and Victorian satire.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Anglo-Saxon Epics & Medieval Chivalry",
+                    "description": "Analyzing heroism, fate (wyrd), and cultural transitions in Old and Middle English literature.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RL.11-12.1",
+                        "CCSS.ELA-LITERACY.RL.11-12.3"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Philosophical Dilemmas in Shakespearean Tragedy",
+                    "description": "Analyzing existential dread, moral corruption, and dramatic soliloquies in Hamlet or Macbeth.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RL.11-12.2",
+                        "CCSS.ELA-LITERACY.RL.11-12.5"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "Post-Colonial Voices, Modernist Irony & Dystopian Fiction",
+            "description": "Examining the breakdown of traditional narratives, post-colonial critiques of empire, and 20th-century dystopian warnings.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Post-Colonial Literature and Subverting the Canon",
+                    "description": "Analyzing how global authors reclaim agency and challenge imperial historical narratives.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RL.11-12.6",
+                        "CCSS.ELA-LITERACY.RL.11-12.7"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Dystopian Fiction, Propaganda and Surveillance",
+                    "description": "Dissecting totalitarian language manipulation, doublethink, and authoritarian surveillance (e.g. 1984, Brave New World).",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RL.11-12.4",
+                        "CCSS.ELA-LITERACY.RI.11-12.5"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 3,
+            "title": "Senior Capstone Inquiry & Collegiate Thesis Writing",
+            "description": "Conducting sustained collegiate inquiry, drafting an extensive multi-source thesis paper, and defending it before peers.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Formulating Original Scholarship Theses",
+                    "description": "Designing deep academic research questions exploring intersections of literature, ethics, and technology.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.W.11-12.7",
+                        "CCSS.ELA-LITERACY.W.11-12.8"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Drafting and Defending the Capstone Paper",
+                    "description": "Writing polished academic prose with formal scholarly citations and presenting formal oral defenses.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.W.11-12.1",
+                        "CCSS.ELA-LITERACY.SL.11-12.4"
+                    ]
+                }
+            ]
+        }
+    ]
+}

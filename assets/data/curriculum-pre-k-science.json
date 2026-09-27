@@ -1,0 +1,87 @@
+{
+    "grade": "Pre-K",
+    "subject": "science",
+    "name": "Science",
+    "course": "Early Wonder & Nature Exploration",
+    "title": "Pre-K Science: Early Wonder & Nature Exploration",
+    "icon": "fas fa-leaf",
+    "color": "#4f46e5",
+    "overview": "Pre-K Science fosters curiosity and scientific inquiry through hands-on experiments, outdoor observations, and interactive investigations aligned with Next Generation Science Standards (NGSS).",
+    "competencies": [
+        "Ask testable questions and make systematic observations using sensory tools.",
+        "Investigate the interactions between physical forces, living organisms, and Earth's atmosphere.",
+        "Construct evidence-based explanations for everyday natural phenomena.",
+        "Design and evaluate simple solutions to environmental and everyday engineering challenges."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "The Five Senses & My Body",
+            "description": "Discovering how our eyes, ears, nose, tongue, and skin help us explore and understand the world.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Exploring Sight, Sound & Smell",
+                    "description": "Using sensory observation to classify sounds, scents, and colors in nature.",
+                    "standards": [
+                        "NGSS.PK.PS1"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Touch, Taste & Texture",
+                    "description": "Comparing smooth, rough, soft, sweet, and sour sensations safely.",
+                    "standards": [
+                        "NGSS.PK.PS1"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "Plants, Animals & Living Things",
+            "description": "Investigating living versus non-living things, plant growth, and animal care.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Seeds, Leaves & Plant Growth",
+                    "description": "Planting seeds and observing water, soil, and sunlight in plant life.",
+                    "standards": [
+                        "NGSS.PK.LS1"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Animal Friends & Habitats",
+                    "description": "Learning how animals move, eat, and find shelter in nests, dens, and burrows.",
+                    "standards": [
+                        "NGSS.PK.LS1"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 3,
+            "title": "Weather, Sky & the Seasons",
+            "description": "Observing sunshine, rain, wind, clouds, and seasonal changes in temperature and clothing.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Daily Weather & Clothing",
+                    "description": "Tracking daily weather charts and selecting appropriate seasonal clothing.",
+                    "standards": [
+                        "NGSS.PK.ESS2"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Sun, Shadows & Day/Night",
+                    "description": "Observing shadows created by the sun and differences between daytime and nighttime.",
+                    "standards": [
+                        "NGSS.PK.ESS1"
+                    ]
+                }
+            ]
+        }
+    ]
+}

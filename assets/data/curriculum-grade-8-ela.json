@@ -1,0 +1,98 @@
+{
+    "grade": "Grade 8",
+    "subject": "ela",
+    "name": "English Language Arts",
+    "course": "Thematic Critique, Rhetorical Analysis & Expository Composition",
+    "title": "Grade 8 English Language Arts: Thematic Critique, Rhetorical Analysis & Expository Composition",
+    "icon": "fas fa-feather-alt",
+    "color": "#059669",
+    "overview": "Grade 8 English Language Arts cultivates analytical reading of complex literature, rhetorical dissection of informational texts, evidence-based argument composition, and public academic discourse.",
+    "competencies": [
+        "Cite comprehensive textual evidence to analyze central ideas, themes, and author viewpoints.",
+        "Evaluate the credibility, reasoning, and rhetorical strategies of diverse informational texts.",
+        "Craft well-organized, defensible argument and informative essays with precise citations.",
+        "Communicate effectively in collaborative academic presentations and structured seminars."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "Literary Critique, Rhetorical Irony & Thematic Synthesis",
+            "description": "Analyzing how dialogue propels action, analyzing points of view, and critiquing how modern texts draw upon traditional myths.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Propelling Action Through Dialogue and Incidents",
+                    "description": "Analyzing how lines of dialogue or specific incidents in a story provoke a decision or reveal character traits.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RL.8.3"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Dramatic and Situational Irony",
+                    "description": "Analyzing the effects of differences in character and reader perspective creating suspense and irony.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RL.8.6"
+                    ]
+                },
+                {
+                    "letter": "C",
+                    "title": "Allusions and Mythological Archetypes in Modern Literature",
+                    "description": "Analyzing how contemporary authors transform material from mythology and classical literature.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RL.8.9"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "Rhetorical Analysis of Speeches & Conflicting Arguments",
+            "description": "Evaluating conflicting arguments on public policy topics, detecting rhetorical fallacies and emotional manipulation.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Delineating and Evaluating Argumentative Claims",
+                    "description": "Assessing whether an author's reasoning is sound and evaluating the relevance of supporting evidence.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RI.8.8"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Analyzing Two or More Texts with Conflicting Points of View",
+                    "description": "Analyzing how two authors writing on the same topic present conflicting interpretations of key facts.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RI.8.9",
+                        "CCSS.ELA-LITERACY.RI.8.6"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 3,
+            "title": "Formal Academic Arguments & Multi-Source Research",
+            "description": "Drafting sophisticated argumentative essays with precise claims, counterclaims, warrants, and MLA citations.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Argumentative Essays with Comprehensive Counterclaims",
+                    "description": "Writing well-reasoned essays acknowledging opposing viewpoints and defending claims with authoritative evidence.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.W.8.1"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Independent Research Synthesis and Presentation",
+                    "description": "Conducting self-directed research projects, compiling formal annotated bibliographies, and delivering digital presentations.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.W.8.7",
+                        "CCSS.ELA-LITERACY.W.8.8",
+                        "CCSS.ELA-LITERACY.SL.8.4"
+                    ]
+                }
+            ]
+        }
+    ]
+}

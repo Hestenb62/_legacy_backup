@@ -1,0 +1,97 @@
+{
+    "grade": "Grade 1",
+    "subject": "ela",
+    "name": "English Language Arts",
+    "course": "Word Reading, Fluency & Retelling",
+    "title": "Grade 1 English Language Arts: Word Reading, Fluency & Retelling",
+    "icon": "fas fa-feather-alt",
+    "color": "#059669",
+    "overview": "Grade 1 English Language Arts immerses students in literary and informational texts, developing close reading comprehension, evidence-based writing, academic vocabulary, and collaborative discourse.",
+    "competencies": [
+        "Read grade-level literary and informational texts with fluency, accuracy, and deep comprehension.",
+        "Cite specific textual evidence to substantiate answers, inferences, and central theme analyses.",
+        "Write clear, organized opinion, informative, and narrative compositions using standard grammar conventions.",
+        "Participate actively in collaborative discussions, expressing ideas clearly and building upon others' contributions."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "Phonics, Digraphs & Decoding Fluency",
+            "description": "Mastering consonant digraphs (sh, ch, th, wh), consonant blends, and short/long vowel sound patterns.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Consonant Digraphs & Word Families",
+                    "description": "Blending and spelling words with initial and final consonant digraphs.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RF.1.3a"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Silent E & Long Vowel Spelled with CVCe",
+                    "description": "Recognizing the change from short vowels to long vowels when final e is added.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RF.1.3c"
+                    ]
+                },
+                {
+                    "letter": "C",
+                    "title": "Oral Reading Fluency & Prosody",
+                    "description": "Reading grade-level texts with accuracy, appropriate rate, and expression.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RF.1.4"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "Story Structure, Central Message & Character Voice",
+            "description": "Analyzing narrative stories, identifying lessons/morals, and describing how illustrations enhance text meaning.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Key Details & Story Retelling",
+                    "description": "Retelling stories including characters, settings, and main plot milestones.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RL.1.2",
+                        "CCSS.ELA-LITERACY.RL.1.3"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Central Message & Moral of the Story",
+                    "description": "Identifying what characters learn through their mistakes and decisions.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RL.1.2"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 3,
+            "title": "Informational Text Features & Structured Paragraph Writing",
+            "description": "Using headings, glossaries, and diagrams to learn facts, and writing organized informative and opinion paragraphs.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Navigating Nonfiction Text Features",
+                    "description": "Using table of contents, bold words, and captions to locate key facts.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RI.1.5"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Writing Opinion & Informative Sentences",
+                    "description": "Stating a topic or opinion, providing reasons, and writing concluding thoughts.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.W.1.1",
+                        "CCSS.ELA-LITERACY.W.1.2"
+                    ]
+                }
+            ]
+        }
+    ]
+}

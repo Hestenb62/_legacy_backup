@@ -1,0 +1,151 @@
+{
+    "grade": "Grade 4",
+    "subject": "math",
+    "name": "Mathematics",
+    "course": "Multi-Digit Arithmetic, Fraction Equivalence & Geometric Angles",
+    "title": "Grade 4 Mathematics: Multi-Digit Arithmetic, Fraction Equivalence & Geometric Angles",
+    "icon": "fas fa-calculator",
+    "color": "#2563eb",
+    "overview": "Grade 4 mathematics deepens students' conceptual understanding of place value, arithmetic operations, algebraic thinking, measurement, and geometry through rigorous problem-solving routines.",
+    "competencies": [
+        "Demonstrate computational fluency and conceptual flexibility across grade-level operations.",
+        "Apply visual models, tape diagrams, and equations to represent and solve multi-step contextual word problems.",
+        "Analyze geometric shapes, measurement units, and spatial relationships.",
+        "Construct viable mathematical arguments and critique the reasoning of peers."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "Place Value, Rounding, and Algorithms for Addition and Subtraction to 1,000,000",
+            "description": "Extending place value understanding up to millions, rounding multi-digit numbers, and mastering standard addition/subtraction algorithms.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Place Value of Multi-Digit Whole Numbers",
+                    "description": "Comparing digit values where a digit in one place represents ten times what it represents in the place to its right.",
+                    "standards": [
+                        "4.NBT.1",
+                        "4.NBT.2"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Multi-Digit Whole Number Addition and Subtraction",
+                    "description": "Executing standard column algorithms fluently with regrouping across multiple places.",
+                    "standards": [
+                        "4.NBT.4"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "Multi-Digit Multiplication and Division with Whole Numbers",
+            "description": "Multiplying up to 4 digits by 1 digit and 2 digits by 2 digits using area models, partial products, and finding remainders in division.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Multiplication by 10, 100, and 1,000",
+                    "description": "Using arrays and place value understanding to multiply multiples of 10, 100, and 1000.",
+                    "standards": [
+                        "4.NBT.1",
+                        "4.OA.1"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Area Models and Partial Products for 2-Digit by 2-Digit Multiplication",
+                    "description": "Decomposing factors into tens and ones and calculating four partial products.",
+                    "standards": [
+                        "4.NBT.5"
+                    ]
+                },
+                {
+                    "letter": "C",
+                    "title": "Division with Remainders and Multi-Digit Quotients",
+                    "description": "Dividing up to 4-digit dividends by 1-digit divisors with area models and partial quotients.",
+                    "standards": [
+                        "4.NBT.6",
+                        "4.OA.3"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 3,
+            "title": "Fraction Equivalence, Ordering, and Operations",
+            "description": "Decomposing fractions into sums of unit fractions, multiplying fractions by whole numbers, and adding fractions with denominators 10 and 100.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Equivalent Fractions with Area Models and Tape Diagrams",
+                    "description": "Multiplying or dividing numerator and denominator by common factors to find equivalence.",
+                    "standards": [
+                        "4.NF.1",
+                        "4.NF.2"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Addition and Subtraction of Fractions with Like Denominators",
+                    "description": "Combining fractional parts and converting between improper fractions and mixed numbers.",
+                    "standards": [
+                        "4.NF.3"
+                    ]
+                },
+                {
+                    "letter": "C",
+                    "title": "Multiplying a Fraction by a Whole Number",
+                    "description": "Understanding n x (a/b) as n x a copies of 1/b.",
+                    "standards": [
+                        "4.NF.4"
+                    ]
+                },
+                {
+                    "letter": "D",
+                    "title": "Decimals as Fractions with Denominators 10 and 100",
+                    "description": "Converting tenths and hundredths into decimal notation and comparing decimals.",
+                    "standards": [
+                        "4.NF.5",
+                        "4.NF.6",
+                        "4.NF.7"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 4,
+            "title": "Angle Measurement and Plane Figures",
+            "description": "Measuring angles with protractors, classifying angles (acute, right, obtuse, straight), and identifying parallel and perpendicular lines.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Lines, Rays, Angles and Triangles",
+                    "description": "Classifying 2D figures based on presence or absence of parallel/perpendicular lines and angle types.",
+                    "standards": [
+                        "4.G.1",
+                        "4.G.2"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Angle Measurement and Protractors",
+                    "description": "Understanding an angle as a fraction of a 360-degree circle and measuring with protractors.",
+                    "standards": [
+                        "4.MD.5",
+                        "4.MD.6",
+                        "4.MD.7"
+                    ]
+                },
+                {
+                    "letter": "C",
+                    "title": "Lines of Symmetry",
+                    "description": "Identifying and drawing lines of symmetry in two-dimensional geometric figures.",
+                    "standards": [
+                        "4.G.3"
+                    ]
+                }
+            ]
+        }
+    ]
+}

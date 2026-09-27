@@ -1,0 +1,90 @@
+{
+    "grade": "Grade 5",
+    "subject": "ela",
+    "name": "English Language Arts",
+    "course": "Complex Textual Analysis, Synthesis & Research Reports",
+    "title": "Grade 5 English Language Arts: Complex Textual Analysis, Synthesis & Research Reports",
+    "icon": "fas fa-feather-alt",
+    "color": "#059669",
+    "overview": "Grade 5 English Language Arts immerses students in literary and informational texts, developing close reading comprehension, evidence-based writing, academic vocabulary, and collaborative discourse.",
+    "competencies": [
+        "Read grade-level literary and informational texts with fluency, accuracy, and deep comprehension.",
+        "Cite specific textual evidence to substantiate answers, inferences, and central theme analyses.",
+        "Write clear, organized opinion, informative, and narrative compositions using standard grammar conventions.",
+        "Participate actively in collaborative discussions, expressing ideas clearly and building upon others' contributions."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "Quoting Textual Evidence & Comparative Theme Analysis",
+            "description": "Quoting accurately from literary texts, comparing stories in the same genre, and analyzing structural choices across poetry, prose, and drama.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Quoting Text Directly to Defend Inferences",
+                    "description": "Integrating direct quotations to substantiate explicit details and subtle inferences.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RL.5.1"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Comparing and Contrasting Literary Themes",
+                    "description": "Analyzing how different authors approach similar themes and worldviews.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RL.5.2",
+                        "CCSS.ELA-LITERACY.RL.5.9"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "Critical Informational Reading & Evaluating Author Arguments",
+            "description": "Explaining relationships between individuals, scientific concepts, and historic events, and evaluating logical reasoning in arguments.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Complex Interactions in Informational Texts",
+                    "description": "Analyzing multi-step scientific procedures, historical causes, and technical explanations.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RI.5.3"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Evaluating Author Claims and Evidence",
+                    "description": "Differentiating between well-substantiated facts and subjective assertions in opinion articles.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RI.5.8"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 3,
+            "title": "Rigorous Research Reports & Persuasive Argument Essays",
+            "description": "Writing extensive research papers using multiple credible print and digital resources, organizing arguments, and citing bibliography entries.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Argumentative Persuasive Essays",
+                    "description": "Crafting logically organized claims, defending them with verified evidence, and using formal tone.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.W.5.1"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Multi-Source Synthesis Research Reports",
+                    "description": "Paraphrasing and quoting information from digital sources without plagiarizing, providing bibliographies.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.W.5.2",
+                        "CCSS.ELA-LITERACY.W.5.7",
+                        "CCSS.ELA-LITERACY.W.5.8"
+                    ]
+                }
+            ]
+        }
+    ]
+}

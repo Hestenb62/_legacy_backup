@@ -1,0 +1,152 @@
+{
+    "grade": "Kindergarten",
+    "subject": "math",
+    "name": "Mathematics",
+    "course": "Foundations of Counting & Geometry",
+    "title": "Kindergarten Mathematics: Foundations of Counting & Geometry",
+    "icon": "fas fa-calculator",
+    "color": "#2563eb",
+    "overview": "Kindergarten mathematics develops foundational number sense, geometric reasoning, and spatial awareness through manipulative investigations, problem-solving routines, and structured discussions.",
+    "competencies": [
+        "Demonstrate deep conceptual understanding of Kindergarten number systems and operations.",
+        "Identify, describe, and analyze two-dimensional and three-dimensional geometric figures.",
+        "Apply measurement tools and strategies to quantify length, weight, and volume.",
+        "Solve real-world story problems using visual models, drawings, and mathematical notation."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "Numbers to 10: Two-Dimensional and Three-Dimensional Shapes",
+            "description": "Classifying objects, counting quantities up to 10, connecting numerals to quantities, and identifying basic 2D and 3D geometric shapes.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Attributes of Two Related Objects",
+                    "description": "Classifying and categorizing objects by color, size, and function.",
+                    "standards": [
+                        "K.MD.3"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Classify to Find Two Groups and Count",
+                    "description": "Counting objects up to 5 and writing numerals.",
+                    "standards": [
+                        "K.CC.3",
+                        "K.CC.4"
+                    ]
+                },
+                {
+                    "letter": "C",
+                    "title": "Numerals to 5 in Different Configurations",
+                    "description": "Counting in rows, arrays, circles, and scattered sets.",
+                    "standards": [
+                        "K.CC.4",
+                        "K.CC.5"
+                    ]
+                },
+                {
+                    "letter": "D",
+                    "title": "The Concept of Zero and Numbers to 10",
+                    "description": "Understanding zero as none, counting forward and backward within 10.",
+                    "standards": [
+                        "K.CC.3",
+                        "K.OA.4"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "Comparison of Length, Weight, Capacity, and Numbers to 10",
+            "description": "Direct measurement comparisons (longer, shorter, heavier, lighter) and numerical comparisons (greater than, less than).",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Comparison of Length and Height",
+                    "description": "Comparing lengths directly with connecting cubes and classroom objects.",
+                    "standards": [
+                        "K.MD.1",
+                        "K.MD.2"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Comparison of Weight and Capacity",
+                    "description": "Balancing scales and measuring liquid volume using standard cups.",
+                    "standards": [
+                        "K.MD.1",
+                        "K.MD.2"
+                    ]
+                },
+                {
+                    "letter": "C",
+                    "title": "Comparing Numbers to 10",
+                    "description": "Using matching strategies to determine which group has more or fewer items.",
+                    "standards": [
+                        "K.CC.6",
+                        "K.CC.7"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 3,
+            "title": "Number Pairs, Addition and Subtraction to 10",
+            "description": "Decomposing numbers into pairs, introducing plus, minus, and equal signs, and solving word problems within 10.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Composing and Decomposing Numbers to 5",
+                    "description": "Using number bonds and counters to explore part-whole relationships.",
+                    "standards": [
+                        "K.OA.1",
+                        "K.OA.3"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Addition Stories and Facts to 10",
+                    "description": "Modeling joining scenarios with manipulatives and writing number sentences.",
+                    "standards": [
+                        "K.OA.1",
+                        "K.OA.2"
+                    ]
+                },
+                {
+                    "letter": "C",
+                    "title": "Subtraction Stories and Facts to 10",
+                    "description": "Modeling taking-away situations and writing subtraction equations.",
+                    "standards": [
+                        "K.OA.1",
+                        "K.OA.2"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 4,
+            "title": "Numbers 10 to 20 and Counting to 100",
+            "description": "Understanding teen numbers as a group of ten and some ones, and counting to 100 by ones and tens.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Teen Numbers as 10 and Some Ones",
+                    "description": "Building numbers 11 to 19 with ten-frames and place value blocks.",
+                    "standards": [
+                        "K.NBT.1"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Counting to 100 by Ones and Tens",
+                    "description": "Rote counting to 100, recognizing patterns on the hundred chart.",
+                    "standards": [
+                        "K.CC.1",
+                        "K.CC.2"
+                    ]
+                }
+            ]
+        }
+    ]
+}

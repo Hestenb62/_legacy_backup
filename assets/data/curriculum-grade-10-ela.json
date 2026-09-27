@@ -1,0 +1,92 @@
+{
+    "grade": "Grade 10",
+    "subject": "ela",
+    "name": "English Language Arts",
+    "course": "English 10",
+    "title": "Grade 10 English Language Arts: English 10",
+    "icon": "fas fa-feather-alt",
+    "color": "#059669",
+    "overview": "Grade 10 English Language Arts immerses students in collegiate literary analysis, rhetorical critique of historical documents, research synthesis, and sophisticated composition.",
+    "competencies": [
+        "Evaluate complex themes, character motivations, and literary craft in seminal literary works.",
+        "Analyze rhetorical devices, persuasive arguments, and philosophical premises in foundational texts.",
+        "Compose well-substantiated research papers and argumentative essays adhering to academic citations.",
+        "Engage in sophisticated scholarly seminar discourse, defending evidence-based conclusions."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "World Literature, Cultural Perspectives & Moral Dilemmas",
+            "description": "Analyzing seminal world literary works, contrasting cultural worldviews, and examining complex character choices under societal pressure.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Cultural Worldviews in World Literature",
+                    "description": "Analyzing literature from diverse global traditions, exploring universal themes of identity, honor, and colonial resistance.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RL.9-10.1",
+                        "CCSS.ELA-LITERACY.RL.9-10.6"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Complex Character Development & Moral Dilemmas",
+                    "description": "Tracing dynamic characters wrestling with internal ethical conflicts and conflicting familial duties.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RL.9-10.3"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "Rhetorical Critique & Seminal World Documents",
+            "description": "Evaluating rhetorical appeals, ethical arguments, and philosophical declarations on human rights and social justice.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Rhetoric in Philosophical Treatises and Speeches",
+                    "description": "Analyzing how global leaders and philosophers employ inductive and deductive reasoning to persuade.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RI.9-10.5",
+                        "CCSS.ELA-LITERACY.RI.9-10.6"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Delineating Competing Arguments and Fallacies",
+                    "description": "Identifying logical flaws, false dilemmas, and emotional appeals across contrasting persuasive essays.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RI.9-10.8"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 3,
+            "title": "Synthesis Essay Writing & Cross-Textual Research",
+            "description": "Writing rigorous synthesis papers integrating literary analysis with historical research, adhering to formal MLA citation.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Comparative Literary and Cultural Analysis",
+                    "description": "Composing analytical essays comparing how different authors treat the same subject matter or theme.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.W.9-10.2",
+                        "CCSS.ELA-LITERACY.RL.9-10.9"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Research Synthesis and Argumentative Defense",
+                    "description": "Synthesizing evidence from primary documents, scholarly journals, and digital archives in support of an original thesis.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.W.9-10.1",
+                        "CCSS.ELA-LITERACY.W.9-10.7",
+                        "CCSS.ELA-LITERACY.W.9-10.8"
+                    ]
+                }
+            ]
+        }
+    ]
+}

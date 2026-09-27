@@ -1,0 +1,156 @@
+{
+    "grade": "9th Grade",
+    "subject": "math",
+    "name": "Mathematics",
+    "course": "Algebra I",
+    "title": "Algebra I: Relationships, Equations & Functions",
+    "icon": "fas fa-calculator",
+    "color": "#2563eb",
+    "overview": "Algebra I formalizes and extends students' algebraic reasoning through deep investigations of linear, exponential, quadratic, and piecewise relationships. Students explore the grammar of algebraic expressions, develop deductive logic for solving complex equations and inequalities, model real-world contextual situations, and master descriptive statistics.",
+    "competencies": [
+        "Interpret the anatomical structure of algebraic expressions and transform expressions into equivalent factored or expanded forms.",
+        "Solve linear, quadratic, radical, and absolute value equations with rigorous deductive step justifications.",
+        "Differentiate between additive (linear) and multiplicative (exponential) rates of change across discrete sequences and continuous functions.",
+        "Model real-world physical and financial phenomena through quadratic functions using vertex, standard, and factored forms.",
+        "Summarize, represent, and interpret single-variable and bivariate data distributions, evaluating shape, center, variability, and regression fits."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "Relationships Between Quantities and Reasoning with Equations and Their Graphs",
+            "description": "Reasoning with equations and their graphs, setting the foundational habits for high school algebra. Students model authentic real-world relationships, analyze piecewise and quadratic functional behaviors, interpret algebraic structure, and systematically justify equations and inequalities.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Introduction to Functions Studied this Year",
+                    "description": "Introduces functions through authentic narrative graphs (elevation profiles, water consumption). Students explore piecewise linear, quadratic, and exponential functions, interpreting rates of change, domains, ranges, and graphical features.",
+                    "standards": ["HSN-Q.A.1", "HSN-Q.A.2", "HSF-IF.A.2", "HSF-IF.B.4", "HSA-CED.A.2"]
+                },
+                {
+                    "letter": "B",
+                    "title": "The Structure of Expressions",
+                    "description": "Examines the algebraic structure of expressions using commutative, associative, and distributive properties. Students master polynomial operations, analyze expressions for equivalent structures, and factor algebraic expressions.",
+                    "standards": ["HSA-SSE.A.1", "HSA-SSE.A.2", "HSA-APR.A.1"]
+                },
+                {
+                    "letter": "C",
+                    "title": "Solving Equations and Inequalities",
+                    "description": "Focuses on the logical reasoning underlying equation solving as a deductive process. Students solve linear, radical, and absolute value equations, solve and graph linear and compound inequalities, and solve systems of linear equations.",
+                    "standards": ["HSA-REI.A.1", "HSA-REI.B.3", "HSA-REI.C.5", "HSA-REI.C.6", "HSA-REI.D.10", "HSA-REI.D.12"]
+                },
+                {
+                    "letter": "D",
+                    "title": "Creating Equations to Solve Problems",
+                    "description": "Connects algebraic methods to real-world contexts and modeling constraints. Students formulate single-variable and multi-variable equations and inequalities, rearrange literal equations, and interpret algebraic solutions.",
+                    "standards": ["HSA-CED.A.1", "HSA-CED.A.2", "HSA-CED.A.3", "HSA-CED.A.4", "HSN-Q.A.3"]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "Descriptive Statistics",
+            "description": "Summarizing, representing, and interpreting data on single and bivariate variables. Students evaluate distribution shape, center, and spread, compare datasets using box plots and histograms, investigate associations in categorical two-way tables, and fit linear regression models.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Shapes and Centers of Distributions",
+                    "description": "Explores data visualizations and central tendency metrics. Students construct dot plots, histograms, and box plots, analyze symmetric versus skewed distributions, and evaluate whether mean or median best summarizes the data center.",
+                    "standards": ["HSS-ID.A.1", "HSS-ID.A.2"]
+                },
+                {
+                    "letter": "B",
+                    "title": "Describing Variability and Comparing Distributions",
+                    "description": "Quantifies spread and variability in data. Students compute standard deviation and interquartile range (IQR), recognize potential outliers, and make contextual comparative inferences across multiple data distributions.",
+                    "standards": ["HSS-ID.A.2", "HSS-ID.A.3"]
+                },
+                {
+                    "letter": "C",
+                    "title": "Categorical Data on Two Variables",
+                    "description": "Analyzes bivariate categorical data via two-way frequency tables. Students compute joint, marginal, and conditional relative frequencies to recognize patterns and assess possible independence or association between variables.",
+                    "standards": ["HSS-ID.B.5"]
+                },
+                {
+                    "letter": "D",
+                    "title": "Numerical Data on Two Variables",
+                    "description": "Investigates relationships between two quantitative variables. Students create scatter plots, calculate and interpret linear regression models (y = mx + b), assess goodness of fit through correlation coefficients and residual plots, and distinguish correlation from causation.",
+                    "standards": ["HSS-ID.B.6", "HSS-ID.C.7", "HSS-ID.C.8", "HSS-ID.C.9"]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 3,
+            "title": "Linear and Exponential Functions",
+            "description": "Exploring integer sequences, exponential growth and decay, graph transformations, and problem-solving with functions. Students formalize function notation, examine average rates of change, and contrast additive patterns against multiplicative growth.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Linear and Exponential Sequences",
+                    "description": "Connects patterns and sequences to functions defined on integers. Students write recursive and explicit rules for arithmetic sequences (linear) and geometric sequences (exponential), evaluating growth behaviors over time.",
+                    "standards": ["HSF-BF.A.1a", "HSF-BF.A.2", "HSF-IF.A.3", "HSF-LE.A.1", "HSF-LE.A.2"]
+                },
+                {
+                    "letter": "B",
+                    "title": "Functions and Their Graphs",
+                    "description": "Formalizes function notation f(x), domain, and range. Students evaluate functions algebraically and graphically, identify intercepts, extrema, and asymptotes, and compute average rates of change over specified intervals.",
+                    "standards": ["HSF-IF.A.1", "HSF-IF.A.2", "HSF-IF.B.4", "HSF-IF.B.5", "HSF-IF.B.6", "HSF-IF.C.7a", "HSF-IF.C.7b"]
+                },
+                {
+                    "letter": "C",
+                    "title": "Transformations of Functions",
+                    "description": "Investigates geometric transformations of parent function graphs. Students discover the effects of replacing f(x) with f(x) + k, k*f(x), f(kx), and f(x + k) using both vertical and horizontal transformations.",
+                    "standards": ["HSF-BF.B.3"]
+                },
+                {
+                    "letter": "D",
+                    "title": "Using Functions and Graphs to Solve Problems",
+                    "description": "Applies linear and exponential models to complex scenarios such as compound interest, population change, and depreciation. Students demonstrate that exponentially growing quantities eventually exceed linearly growing quantities.",
+                    "standards": ["HSF-LE.A.3", "HSF-LE.B.5", "HSA-CED.A.2"]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 4,
+            "title": "Polynomial and Quadratic Expressions, Equations, and Functions",
+            "description": "Factoring polynomials, solving quadratic equations, and graphing parabolas. Students bridge geometric area models to algebraic factoring, solve quadratic equations via multiple strategies (factoring, completing the square, quadratic formula), and analyze parabolic features.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Quadratic Expressions, Equations, Functions, and Their Connection to Rectangles",
+                    "description": "Uses geometric area models to multiply and factor polynomials. Students master factoring monic and non-monic trinomials, differences of squares, and apply the zero-product property to solve quadratic equations.",
+                    "standards": ["HSA-SSE.A.2", "HSA-SSE.B.3a", "HSA-APR.A.1", "HSA-REI.B.4b"]
+                },
+                {
+                    "letter": "B",
+                    "title": "Using Different Forms for Quadratic Functions",
+                    "description": "Transitions between standard form, vertex form, and factored form. Students complete the square to locate vertices and axes of symmetry, derive the quadratic formula, and solve complex quadratic equations over real numbers.",
+                    "standards": ["HSA-SSE.B.3b", "HSA-REI.B.4a", "HSA-REI.B.4b", "HSF-IF.C.8a"]
+                },
+                {
+                    "letter": "C",
+                    "title": "Function Transformations and Modeling",
+                    "description": "Models real-world scenarios involving parabolic arcs, projectile motion, and revenue optimization. Students interpret vertex, axis of symmetry, and intercepts in context, and analyze transformations of y = x^2.",
+                    "standards": ["HSF-IF.B.4", "HSF-IF.C.7a", "HSF-BF.B.3", "HSA-CED.A.1", "HSA-CED.A.2"]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 5,
+            "title": "A Synthesis of Modeling with Equations and Functions",
+            "description": "Synthesizing linear, quadratic, and exponential models to evaluate and interpret real-world behaviors. Students engage in full mathematical modeling cycles by identifying variables, selecting appropriate functional models, and assessing solution validity.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Elements of Modeling",
+                    "description": "Guides students through the formulation phase of mathematical modeling. Students formulate questions, define variables, make simplifying assumptions, and select among linear, quadratic, or exponential models for given datasets.",
+                    "standards": ["HSF-LE.A.1", "HSF-LE.A.2", "HSF-LE.A.3", "HSA-CED.A.1", "HSN-Q.A.1", "HSN-Q.A.2"]
+                },
+                {
+                    "letter": "B",
+                    "title": "Completing the Modeling Cycle",
+                    "description": "Completes the full modeling cycle through real-world projects. Students compute solutions, analyze model sensitivity and residual error, interpret parameters in context, and communicate justifications.",
+                    "standards": ["HSN-Q.A.3", "HSA-CED.A.2", "HSF-IF.B.4", "HSF-BF.A.1", "HS.MP.1", "HS.MP.4"]
+                }
+            ]
+        }
+    ]
+}

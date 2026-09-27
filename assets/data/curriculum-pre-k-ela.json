@@ -1,0 +1,89 @@
+{
+    "grade": "Pre-K",
+    "subject": "ela",
+    "name": "English Language Arts",
+    "course": "Early Literacy & Phonemic Awareness",
+    "title": "Pre-K English Language Arts: Early Literacy & Phonemic Awareness",
+    "icon": "fas fa-feather-alt",
+    "color": "#059669",
+    "overview": "Pre-K English Language Arts immerses young learners in rich literature, structured phonics routines, vocabulary enrichment, and expressive writing workshops.",
+    "competencies": [
+        "Demonstrate phonemic awareness and mastery of grade-appropriate decoding patterns.",
+        "Retell stories with key details, identifying central characters, settings, and sequence of events.",
+        "Extract and communicate central ideas from informational texts.",
+        "Compose well-structured sentences and narrative/opinion compositions using standard conventions."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "Print Concepts & Book Appreciation",
+            "description": "Fosters book handling skills, recognizing letters, and distinguishing between words and pictures.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Book Handling & Left-to-Right Tracking",
+                    "description": "Holding books right-side up, turning pages, and tracking text directionality.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RF.PK.1"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Environmental Print & Letter Recognition",
+                    "description": "Recognizing letters in their own names and high-frequency classroom labels.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RF.PK.1d"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "Phonological Awareness & Rhyme",
+            "description": "Developing auditory sensitivity to rhyme, rhythm, and spoken syllables through playful songs and poetry.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Rhyming Games & Nursery Rhymes",
+                    "description": "Identifying rhyming word pairs and completing predictable rhyming phrases.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RF.PK.2a"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Clapping Syllables & Sound Isolation",
+                    "description": "Segmenting spoken words into syllables and identifying common beginning sounds.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RF.PK.2b"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 3,
+            "title": "Oral Expression & Emergent Storytelling",
+            "description": "Encouraging expressive speech, retelling familiar stories using illustrations, and emergent drawing.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Listening Comprehension & Story Retelling",
+                    "description": "Asking and answering questions about characters and events in read-alouds.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RL.PK.1",
+                        "CCSS.ELA-LITERACY.RL.PK.2"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Drawing & Dictating Thoughts",
+                    "description": "Expressing ideas, preferences, and personal narratives through drawing and scribing.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.W.PK.1",
+                        "CCSS.ELA-LITERACY.W.PK.2"
+                    ]
+                }
+            ]
+        }
+    ]
+}

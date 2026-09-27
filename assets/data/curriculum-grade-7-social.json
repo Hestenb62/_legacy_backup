@@ -1,0 +1,91 @@
+{
+    "grade": "Grade 7",
+    "subject": "social",
+    "name": "Social Studies",
+    "course": "Medieval & Early Modern World History",
+    "title": "Grade 7 Social Studies: Medieval & Early Modern World History",
+    "icon": "fas fa-landmark",
+    "color": "#d97706",
+    "overview": "Grade 7 Social Studies engages students in historical inquiry, primary source analysis, geographic mapping, and civic deliberation aligned with the C3 Framework.",
+    "competencies": [
+        "Corroborate primary documents with historical context and point-of-view analysis.",
+        "Explain how geographical trade networks and physical barriers shaped civilizations.",
+        "Analyze economic developments, resource allocation, and market exchanges.",
+        "Assess the evolution of democratic values, civil liberties, and civic responsibilities."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "The Islamic World, Trans-Saharan Kingdoms & Eurasian Trade",
+            "description": "Examining the expansion of the Islamic Caliphates, the Golden Age of scholarship, West African kingdoms, and trade networks.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "The Islamic Golden Age and Cultural Diffusion",
+                    "description": "Tracing scientific, mathematical, and medical innovations from Baghdad and Cordoba across Afro-Eurasia.",
+                    "standards": [
+                        "D2.His.1.6-8",
+                        "D2.Geo.6.6-8"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Kingdoms of West Africa: Ghana, Mali and Songhai",
+                    "description": "Investigating trans-Saharan gold and salt trade, Mansa Musa's pilgrimage, and university scholarship in Timbuktu.",
+                    "standards": [
+                        "D2.His.3.6-8",
+                        "D2.Eco.1.6-8"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "Medieval Europe, the Mongol Empire & the Black Death",
+            "description": "Analyzing feudalism, the Catholic Church, the Crusades, the Pax Mongolica, and the devastating impact of the bubonic plague.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Feudalism, Manorialism and the Crusades",
+                    "description": "Examining medieval European social hierarchies, knights, serfdom, and religious wars in the Holy Land.",
+                    "standards": [
+                        "D2.His.2.6-8",
+                        "D2.Civ.1.6-8"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "The Mongol Empire and the Black Death Pandemic",
+                    "description": "Evaluating Genghis Khan's military strategies, trade along the Silk Road, and the social collapse caused by the Plague.",
+                    "standards": [
+                        "D2.His.4.6-8",
+                        "D2.Geo.7.6-8"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 3,
+            "title": "The Renaissance, Scientific Inquiry & the Reformation",
+            "description": "Investigating the rebirth of arts and humanism in Italy, the invention of the printing press, and religious reformations.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Italian and Northern Renaissance Humanism",
+                    "description": "Analyzing perspective in art (da Vinci, Michelangelo) and the literary rise of secular humanism.",
+                    "standards": [
+                        "D2.His.5.6-8"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "The Printing Press and the Protestant Reformation",
+                    "description": "Evaluating Gutenberg's movable type, Martin Luther's Ninety-Five Theses, and religious fragmentation in Europe.",
+                    "standards": [
+                        "D2.His.14.6-8"
+                    ]
+                }
+            ]
+        }
+    ]
+}

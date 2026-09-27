@@ -1,0 +1,89 @@
+{
+    "grade": "Grade 2",
+    "subject": "ela",
+    "name": "English Language Arts",
+    "course": "Reading Comprehension, Fluency & Informational Craft",
+    "title": "Grade 2 English Language Arts: Reading Comprehension, Fluency & Informational Craft",
+    "icon": "fas fa-feather-alt",
+    "color": "#059669",
+    "overview": "Grade 2 English Language Arts immerses students in literary and informational texts, developing close reading comprehension, evidence-based writing, academic vocabulary, and collaborative discourse.",
+    "competencies": [
+        "Read grade-level literary and informational texts with fluency, accuracy, and deep comprehension.",
+        "Cite specific textual evidence to substantiate answers, inferences, and central theme analyses.",
+        "Write clear, organized opinion, informative, and narrative compositions using standard grammar conventions.",
+        "Participate actively in collaborative discussions, expressing ideas clearly and building upon others' contributions."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "Decoding Multi-Syllable Words & Reading Fluency",
+            "description": "Decoding words with vowel teams, prefixes, suffixes, and reading with increased comprehension and expression.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Vowel Teams & Diphthongs",
+                    "description": "Mastering spelling patterns such as ai/ay, ee/ea, oa/ow, and ou/ow in complex words.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RF.2.3b"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Two-Syllable Words & Affixes",
+                    "description": "Dividing words into syllables and recognizing prefixes (un-, re-) and suffixes (-ful, -less).",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RF.2.3d"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "Fables, Folktales & Central Moral Themes",
+            "description": "Reading fables from around the world, understanding character challenges, and identifying central morals.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Fables and Cultural Folktales",
+                    "description": "Comparing traditional stories from different cultures and analyzing character traits.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RL.2.2",
+                        "CCSS.ELA-LITERACY.RL.2.3"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Point of View and Character Voice",
+                    "description": "Acknowledging differences in the points of view of characters in dialogue.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.RL.2.6"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 3,
+            "title": "Informative Research Writing & Opinion Persuasion",
+            "description": "Conducting shared research projects, recording facts in graphic organizers, and writing organized multi-sentence essays.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Informational Paragraph Structure",
+                    "description": "Writing clear topic sentences, grouped supporting facts, and concluding statements.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.W.2.2",
+                        "CCSS.ELA-LITERACY.W.2.7"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Opinion Writing with Reasons",
+                    "description": "Stating opinions on books or issues and linking reasons using words like because and also.",
+                    "standards": [
+                        "CCSS.ELA-LITERACY.W.2.1"
+                    ]
+                }
+            ]
+        }
+    ]
+}

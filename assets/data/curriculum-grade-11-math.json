@@ -1,0 +1,129 @@
+{
+    "grade": "Grade 11",
+    "subject": "math",
+    "name": "Mathematics",
+    "course": "Algebra II",
+    "title": "Grade 11 Mathematics: Algebra II",
+    "icon": "fas fa-calculator",
+    "color": "#2563eb",
+    "overview": "Grade 11 Mathematics delivers advanced mathematical preparation, rigorous logical deduction, and complex modeling across algebraic, geometric, trigonometric, and analytical domains.",
+    "competencies": [
+        "Construct formal deductive arguments, proofs, and mathematical models to solve real-world problems.",
+        "Analyze functions, coordinate systems, and algebraic structures with computational accuracy.",
+        "Apply advanced formulas, theorems, and mathematical transformations.",
+        "Communicate mathematical reasoning fluently using precise symbolic notation and graphical representations."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "Polynomial, Rational, and Radical Relationships",
+            "description": "Extending polynomial operations, polynomial division, factoring higher-degree polynomials, the complex number system, and solving rational equations.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Complex Numbers and the Fundamental Theorem of Algebra",
+                    "description": "Defining the imaginary unit i, performing operations with complex numbers, and proving polynomial root behaviors.",
+                    "standards": [
+                        "HSN-CN.A.1",
+                        "HSN-CN.A.2",
+                        "HSN-CN.C.7",
+                        "HSA-APR.B.3"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Polynomial Long Division and Remainder Theorem",
+                    "description": "Executing polynomial long division and synthetic division, evaluating zeros of higher-degree polynomials.",
+                    "standards": [
+                        "HSA-APR.B.2",
+                        "HSA-APR.D.6"
+                    ]
+                },
+                {
+                    "letter": "C",
+                    "title": "Rational and Radical Equations",
+                    "description": "Solving rational equations, identifying extraneous solutions, and graphing rational functions with asymptotes.",
+                    "standards": [
+                        "HSA-REI.A.2",
+                        "HSF-IF.C.7d"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "Trigonometric Functions and the Unit Circle",
+            "description": "Extending trigonometry to all real numbers using the unit circle, radian measure, graphing sine and cosine, and trigonometric identities.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "The Unit Circle and Radian Measure",
+                    "description": "Defining trigonometric values for angles in all four quadrants on the unit circle.",
+                    "standards": [
+                        "HSF-TF.A.1",
+                        "HSF-TF.A.2"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Graphing Periodic Functions (Sine and Cosine)",
+                    "description": "Analyzing amplitude, period, midline, phase shifts, and modeling periodic real-world phenomena (sound waves, tides).",
+                    "standards": [
+                        "HSF-TF.B.5",
+                        "HSF-IF.C.7e"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 3,
+            "title": "Exponential and Logarithmic Functions",
+            "description": "Defining logarithms as inverses of exponential functions, logarithmic properties, natural base e, and solving exponential equations.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Logarithmic Foundations and Properties",
+                    "description": "Translating between exponential and logarithmic form, applying product, quotient, and power rules of logarithms.",
+                    "standards": [
+                        "HSF-BF.B.4a",
+                        "HSF-LE.A.4"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Exponential Modeling and Compound Interest",
+                    "description": "Modeling continuous exponential growth and decay using y = ae^(rt) and calculating half-life and compound interest.",
+                    "standards": [
+                        "HSF-LE.A.1",
+                        "HSF-LE.A.2"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 4,
+            "title": "Inferences and Conclusions from Data",
+            "description": "Evaluating random sampling, normal probability distributions, confidence intervals, and hypothesis testing in statistical studies.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Normal Distributions and the Empirical Rule",
+                    "description": "Applying the 68-95-99.7 rule and z-score calculations to estimate population percentages.",
+                    "standards": [
+                        "HSS-ID.A.4"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Sample Surveys, Experiments, and Observational Studies",
+                    "description": "Distinguishing between correlation and causation and evaluating margin of error in sample statistics.",
+                    "standards": [
+                        "HSS-IC.B.3",
+                        "HSS-IC.B.4",
+                        "HSS-IC.B.6"
+                    ]
+                }
+            ]
+        }
+    ]
+}

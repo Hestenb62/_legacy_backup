@@ -1,0 +1,64 @@
+{
+    "grade": "Pre-K",
+    "subject": "social",
+    "name": "Social Studies",
+    "course": "Self, Family & Community",
+    "title": "Pre-K Social Studies: Self, Family & Community",
+    "icon": "fas fa-globe-americas",
+    "color": "#d97706",
+    "overview": "Pre-K Social Studies introduces young scholars to civic responsibilities, geographic mapping, economic needs versus wants, and the historic stories that shape our shared community.",
+    "competencies": [
+        "Explain the necessity of rules, laws, and collaborative citizenship in democratic communities.",
+        "Read and create simple maps to locate geographic features, cities, and landmarks.",
+        "Differentiate between producers, consumers, goods, and services in basic market exchanges.",
+        "Analyze primary artifacts and historical traditions celebrating American cultural diversity."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "All About Me & My Family",
+            "description": "Celebrating personal identity, feelings, family customs, and cultural heritage.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Who Am I? Feelings & Uniqueness",
+                    "description": "Expressing emotions, identifying personal strengths, and practicing empathy.",
+                    "standards": [
+                        "C3.PK.D2.Civ.1"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Families & Special Traditions",
+                    "description": "Sharing family traditions, roles, and diverse family structures.",
+                    "standards": [
+                        "C3.PK.D2.His.1"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "Classroom Friends & Community Helpers",
+            "description": "Learning cooperation, sharing, classroom rules, and neighborhood helpers.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Cooperation & Sharing Rules",
+                    "description": "Taking turns, resolving conflicts peacefully, and working together in groups.",
+                    "standards": [
+                        "C3.PK.D2.Civ.2"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Community Helpers at Work",
+                    "description": "Discovering the roles of firefighters, doctors, teachers, mail carriers, and sanitation workers.",
+                    "standards": [
+                        "C3.PK.D2.Civ.3"
+                    ]
+                }
+            ]
+        }
+    ]
+}

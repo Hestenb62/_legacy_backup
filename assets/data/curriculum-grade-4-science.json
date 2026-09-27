@@ -1,0 +1,114 @@
+{
+    "grade": "Grade 4",
+    "subject": "science",
+    "name": "Science",
+    "course": "Energy Transfers, Waves, Earth's Changing Surface & Organism Structures",
+    "title": "Grade 4 Science: Energy Transfers, Waves, Earth's Changing Surface & Organism Structures",
+    "icon": "fas fa-leaf",
+    "color": "#4f46e5",
+    "overview": "Grade 4 Science engages students in the scientific method and engineering design process across physical, life, and Earth/space sciences aligned with Next Generation Science Standards (NGSS).",
+    "competencies": [
+        "Ask scientific questions, plan and conduct controlled investigations, and analyze experimental data.",
+        "Develop and use models to describe natural systems, energy flows, and physical interactions.",
+        "Construct explanations supported by empirical evidence and scientific reasoning.",
+        "Design, test, and optimize engineering solutions to real-world technological and environmental problems."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "Energy: Collisions, Circuits & Renewable Power",
+            "description": "Investigating how speed relates to energy, how energy transfers in collisions, electrical circuits, and clean energy solutions.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Kinetic Energy and Collisions",
+                    "description": "Measuring how increasing speed increases the energy transferred during impact collisions.",
+                    "standards": [
+                        "4-PS3-1",
+                        "4-PS3-3"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Electrical Circuits and Energy Conversion",
+                    "description": "Constructing complete circuits and investigating how electricity converts to light, sound, heat, and motion.",
+                    "standards": [
+                        "4-PS3-2",
+                        "4-PS3-4"
+                    ]
+                },
+                {
+                    "letter": "C",
+                    "title": "Renewable and Non-Renewable Natural Resources",
+                    "description": "Evaluating solar, wind, hydroelectric, and fossil fuel energy impacts on the environment.",
+                    "standards": [
+                        "4-ESS3-1"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "Waves, Light Reflections & Information Transfer",
+            "description": "Modeling wavelength and amplitude in water waves, exploring how light enters the eye to allow sight, and binary signaling.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Wave Properties: Amplitude and Wavelength",
+                    "description": "Using models to demonstrate how waves transfer energy through matter without moving the matter itself.",
+                    "standards": [
+                        "4-PS4-1"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Light Reflection and Vision",
+                    "description": "Investigating how light reflecting off objects into the eye enables perception.",
+                    "standards": [
+                        "4-PS4-2"
+                    ]
+                },
+                {
+                    "letter": "C",
+                    "title": "Digitized Information and Morse Code",
+                    "description": "Designing binary and digitized pulse codes to transmit patterns of information reliably.",
+                    "standards": [
+                        "4-PS4-3"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 3,
+            "title": "Earth's Changing Surface, Rock Layers & Fossils",
+            "description": "Interpreting rock layers and fossils to deduce past environments, analyzing topographic maps, and reducing hazard damage.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Rock Formations and Fossil Records",
+                    "description": "Examining rock layer sequences to reconstruct changes in landscape over geological time.",
+                    "standards": [
+                        "4-ESS1-1"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Weathering, Erosion and Deposition",
+                    "description": "Investigating the effects of water, ice, wind, and vegetation on landscape erosion.",
+                    "standards": [
+                        "4-ESS2-1"
+                    ]
+                },
+                {
+                    "letter": "C",
+                    "title": "Plate Tectonics & Natural Hazard Engineering",
+                    "description": "Mapping earthquake zones, tsunamis, and volcanic belts, and designing seismic-resistant structures.",
+                    "standards": [
+                        "4-ESS2-2",
+                        "4-ESS3-2"
+                    ]
+                }
+            ]
+        }
+    ]
+}

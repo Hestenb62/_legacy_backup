@@ -1,0 +1,68 @@
+{
+    "grade": "Grade 3",
+    "subject": "social",
+    "name": "Social Studies",
+    "course": "World Communities, Global Geography & Indigenous Cultures",
+    "title": "Grade 3 Social Studies: World Communities, Global Geography & Indigenous Cultures",
+    "icon": "fas fa-globe-americas",
+    "color": "#d97706",
+    "overview": "Grade 3 Social Studies builds civic competence, geographical literacy, economic understanding, and historical inquiry aligned with the C3 Framework.",
+    "competencies": [
+        "Investigate historical questions using multiple primary and secondary sources.",
+        "Analyze human and physical geography to understand how location and resources shape human decisions.",
+        "Explain economic concepts including production, market exchange, trade specialization, and public finance.",
+        "Apply democratic principles and civic virtues to deliberate contemporary public issues."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "World Geography & Cultural Heritage",
+            "description": "Locating continents, oceans, hemispheres, and exploring diverse global cultures, traditions, and human-environment interactions.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Global Map Skills & Hemispheres",
+                    "description": "Using latitude, longitude, the equator, and prime meridian to locate world regions.",
+                    "standards": [
+                        "D2.Geo.1.3-5",
+                        "D2.Geo.2.3-5"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Cultural Traditions & Human Adaptation",
+                    "description": "Investigating how communities around the globe adapt shelter, food, and clothing to local geography.",
+                    "standards": [
+                        "D2.Geo.4.3-5",
+                        "D2.His.2.3-5"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "Civic Responsibility & Global Economic Interdependence",
+            "description": "Studying universal human rights, global trade, import/export networks, and community problem-solving.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Human Rights and Civic Leadership",
+                    "description": "Examining global leaders who championed civil rights, democracy, and equality.",
+                    "standards": [
+                        "D2.Civ.2.3-5",
+                        "D2.Civ.8.3-5"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Global Trade, Imports and Exports",
+                    "description": "Tracking the supply chains of everyday products across international trading partners.",
+                    "standards": [
+                        "D2.Eco.1.3-5",
+                        "D2.Eco.9.3-5"
+                    ]
+                }
+            ]
+        }
+    ]
+}

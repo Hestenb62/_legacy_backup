@@ -3,7 +3,6 @@
     <!-- Decoration -->
     <div class="footer-decor-top"></div>
     <div class="footer-decor-blob"></div>
-
     <div class="footer-container">
         <div class="footer-grid">
             <!-- Column 1: About -->
@@ -108,11 +107,13 @@
                     <span>Version <?= htmlspecialchars($siteVersion) ?></span>
                 </span>
                 <span class="footer-version-meta">
-                    <span class="footer-version-highlight"><?= htmlspecialchars($siteVersionLabel) ?></span> &bull; <?= htmlspecialchars($siteVersionSummary) ?>
+                    <span class="footer-version-highlight"><?= htmlspecialchars($siteVersionLabel) ?></span> &bull;
+                    <?= htmlspecialchars($siteVersionSummary) ?>
                 </span>
             </div>
             <div class="footer-version-actions">
-                <button type="button" class="footer-version-btn" id="footer-version-modal-trigger" aria-haspopup="dialog" aria-controls="footer-version-modal">
+                <button type="button" class="footer-version-btn" id="footer-version-modal-trigger"
+                    aria-haspopup="dialog" aria-controls="footer-version-modal">
                     <i class="fas fa-sparkles" aria-hidden="true"></i>
                     <span>What's New in <?= htmlspecialchars($siteVersion) ?></span>
                 </button>
@@ -241,7 +242,8 @@
 </script>
 
 <!-- Interactive What's New in Version Modal -->
-<div id="footer-version-modal" class="footer-vmodal" role="dialog" aria-modal="true" aria-labelledby="footer-version-modal-title" aria-hidden="true">
+<div id="footer-version-modal" class="footer-vmodal" role="dialog" aria-modal="true"
+    aria-labelledby="footer-version-modal-title" aria-hidden="true">
     <div class="footer-vmodal-backdrop" id="footer-version-modal-backdrop"></div>
     <div class="footer-vmodal-dialog">
         <div class="footer-vmodal-header">
@@ -249,7 +251,8 @@
                 <i class="fas fa-rocket" aria-hidden="true"></i>
                 <h3 id="footer-version-modal-title">What's in Version <?= htmlspecialchars($siteVersion) ?></h3>
             </div>
-            <button type="button" class="footer-vmodal-close-btn" id="footer-version-modal-close-btn" aria-label="Close version details">
+            <button type="button" class="footer-vmodal-close-btn" id="footer-version-modal-close-btn"
+                aria-label="Close version details">
                 <i class="fas fa-times" aria-hidden="true"></i>
             </button>
         </div>
@@ -259,11 +262,13 @@
                     <i class="fas fa-code-branch" aria-hidden="true"></i> Platform <?= htmlspecialchars($siteVersion) ?>
                 </span>
                 <span class="footer-vmodal-badge success">
-                    <i class="fas fa-check-circle" aria-hidden="true"></i> Active <?= htmlspecialchars($siteVersionLabel) ?>
+                    <i class="fas fa-check-circle" aria-hidden="true"></i> Active
+                    <?= htmlspecialchars($siteVersionLabel) ?>
                 </span>
             </div>
             <p class="footer-vmodal-lead">
-                Version <?= htmlspecialchars($siteVersion) ?> expands universal learning accommodations, introduces high-contrast accessible design systems, and enhances multi-grade educational guides.
+                Version <?= htmlspecialchars($siteVersion) ?> expands universal learning accommodations, introduces
+                high-contrast accessible design systems, and enhances multi-grade educational guides.
             </p>
             <ul class="footer-vmodal-features">
                 <li class="footer-vmodal-feature-item">
@@ -271,7 +276,9 @@
                         <i class="fas fa-universal-access"></i>
                     </div>
                     <div class="footer-vmodal-feature-text">
-                        <strong>Universal Design for Learning (UDL):</strong> Multi-sensory accommodations including OpenDyslexic typography, audio-synced subtitles, 3-point dyscalculia colorizer, Irlen color overlays, and 100% keyboard accessibility.
+                        <strong>Universal Design for Learning (UDL):</strong> Multi-sensory accommodations including
+                        OpenDyslexic typography, audio-synced subtitles, 3-point dyscalculia colorizer, Irlen color
+                        overlays, and 100% keyboard accessibility.
                     </div>
                 </li>
                 <li class="footer-vmodal-feature-item">
@@ -279,7 +286,8 @@
                         <i class="fas fa-book-reader"></i>
                     </div>
                     <div class="footer-vmodal-feature-text">
-                        <strong>Educational Guides &amp; Multi-Lexile Readers:</strong> Adapted reading levels, text-to-speech narration, and research-backed interactive comprehension checkpoints.
+                        <strong>Educational Guides &amp; Multi-Lexile Readers:</strong> Adapted reading levels,
+                        text-to-speech narration, and research-backed interactive comprehension checkpoints.
                     </div>
                 </li>
                 <li class="footer-vmodal-feature-item">
@@ -287,7 +295,8 @@
                         <i class="fas fa-palette"></i>
                     </div>
                     <div class="footer-vmodal-feature-text">
-                        <strong>Vanilla CSS Design Modernization:</strong> Fluid responsive layouts, dark theme precision, glassmorphic cards, and zero external framework lock-in.
+                        <strong>Vanilla CSS Design Modernization:</strong> Fluid responsive layouts, dark theme
+                        precision, glassmorphic cards, and zero external framework lock-in.
                     </div>
                 </li>
                 <li class="footer-vmodal-feature-item">
@@ -295,7 +304,8 @@
                         <i class="fas fa-cloud-arrow-up"></i>
                     </div>
                     <div class="footer-vmodal-feature-text">
-                        <strong>Offline Access:</strong> The site works completely offline without an internet connection. No browser login required. Progressive Web App (PWA) enables offline access.
+                        <strong>Offline Access:</strong> The site works completely offline without an internet
+                        connection. No browser login required. Progressive Web App (PWA) enables offline access.
                     </div>
                 </li>
                 <li class="footer-vmodal-feature-item">
@@ -303,13 +313,15 @@
                         <i class="fas fa-cloud-arrow-up"></i>
                     </div>
                     <div class="footer-vmodal-feature-text">
-                        <strong>Tripartite Cloud Sync:</strong> Resilient Google Drive auto-sync connecting students, parents, and teachers. 
+                        <strong>Tripartite Cloud Sync:</strong> Resilient Google Drive auto-sync connecting students,
+                        parents, and teachers.
                     </div>
                 </li>
             </ul>
         </div>
         <div class="footer-vmodal-footer">
-            <button type="button" class="footer-vmodal-btn-secondary" id="footer-version-modal-cancel-btn">Close</button>
+            <button type="button" class="footer-vmodal-btn-secondary"
+                id="footer-version-modal-cancel-btn">Close</button>
             <a href="/updates/" class="footer-vmodal-btn-primary">
                 <i class="fas fa-newspaper" aria-hidden="true"></i>
                 <span>Explore Full Engineering Logs</span>
@@ -319,44 +331,44 @@
 </div>
 
 <script>
-(function() {
-    const trigger = document.getElementById('footer-version-modal-trigger');
-    const modal = document.getElementById('footer-version-modal');
-    if (!trigger || !modal) return;
+    (function () {
+        const trigger = document.getElementById('footer-version-modal-trigger');
+        const modal = document.getElementById('footer-version-modal');
+        if (!trigger || !modal) return;
 
-    const backdrop = document.getElementById('footer-version-modal-backdrop');
-    const closeBtn = document.getElementById('footer-version-modal-close-btn');
-    const cancelBtn = document.getElementById('footer-version-modal-cancel-btn');
-    let previousFocus = null;
+        const backdrop = document.getElementById('footer-version-modal-backdrop');
+        const closeBtn = document.getElementById('footer-version-modal-close-btn');
+        const cancelBtn = document.getElementById('footer-version-modal-cancel-btn');
+        let previousFocus = null;
 
-    function openModal() {
-        previousFocus = document.activeElement;
-        modal.classList.add('active');
-        modal.setAttribute('aria-hidden', 'false');
-        document.body.style.overflow = 'hidden';
-        setTimeout(() => { if (closeBtn) closeBtn.focus(); }, 60);
-    }
-
-    function closeModal() {
-        modal.classList.remove('active');
-        modal.setAttribute('aria-hidden', 'true');
-        document.body.style.overflow = '';
-        if (previousFocus && typeof previousFocus.focus === 'function') {
-            previousFocus.focus();
+        function openModal() {
+            previousFocus = document.activeElement;
+            modal.classList.add('active');
+            modal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+            setTimeout(() => { if (closeBtn) closeBtn.focus(); }, 60);
         }
-    }
 
-    trigger.addEventListener('click', openModal);
-    if (backdrop) backdrop.addEventListener('click', closeModal);
-    if (closeBtn) closeBtn.addEventListener('click', closeModal);
-    if (cancelBtn) cancelBtn.addEventListener('click', closeModal);
-
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal.classList.contains('active')) {
-            closeModal();
+        function closeModal() {
+            modal.classList.remove('active');
+            modal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+            if (previousFocus && typeof previousFocus.focus === 'function') {
+                previousFocus.focus();
+            }
         }
-    });
-})();
+
+        trigger.addEventListener('click', openModal);
+        if (backdrop) backdrop.addEventListener('click', closeModal);
+        if (closeBtn) closeBtn.addEventListener('click', closeModal);
+        if (cancelBtn) cancelBtn.addEventListener('click', closeModal);
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+    })();
 </script>
 </body>
 

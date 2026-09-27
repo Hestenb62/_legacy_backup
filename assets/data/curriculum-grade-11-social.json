@@ -1,0 +1,93 @@
+{
+    "grade": "Grade 11",
+    "subject": "social",
+    "name": "Social Studies",
+    "course": "United States History",
+    "title": "Grade 11 Social Studies: United States History",
+    "icon": "fas fa-landmark",
+    "color": "#d97706",
+    "overview": "Grade 11 Social Studies prepares young citizens for active democratic participation and global engagement through rigorous historical, political, geographic, and economic inquiry.",
+    "competencies": [
+        "Evaluate complex primary sources, detecting bias, corroborating claims, and synthesizing context.",
+        "Analyze constitutional principles, governmental structures, and civil liberties in a democratic republic.",
+        "Apply macroeconomic principles, market mechanics, and fiscal/monetary policies to public issues.",
+        "Deliberate contemporary global policy dilemmas using evidence-based civic discourse."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "Industrialization, the Gilded Age & the Progressive Era (1877–1920)",
+            "description": "Analyzing the rise of corporate trusts, robber barons, labor union strikes, immigration, and progressive social/political reforms.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Industrial Capitalism, Monopolies and Urbanization",
+                    "description": "Investigating Carnegie, Rockefeller, immigration at Ellis Island, sweatshops, and early labor unions.",
+                    "standards": [
+                        "D2.His.1.9-12",
+                        "D2.Eco.1.9-12"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "The Progressive Era Reforms and Constitutional Amendments",
+                    "description": "Examining muckrakers (Tarbell, Sinclair), women's suffrage (19th Amendment), trust-busting, and conservation.",
+                    "standards": [
+                        "D2.Civ.5.9-12",
+                        "D2.His.3.9-12"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "The Great Depression, the New Deal & World War II (1929–1945)",
+            "description": "Analyzing the 1929 stock market crash, FDR's New Deal social safety net, and American industrial mobilization in WWII.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "The 1929 Crash, Dust Bowl and the New Deal",
+                    "description": "Analyzing banking collapse, the TVA, Social Security, the Wagner Act, and debates over executive power.",
+                    "standards": [
+                        "D2.Eco.10.9-12",
+                        "D2.His.4.9-12"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "World War II: The Homefront and the Global Theater",
+                    "description": "Japanese American internment, women in defense factories, the Manhattan Project, and the post-war superpower shift.",
+                    "standards": [
+                        "D2.His.14.9-12",
+                        "D2.Civ.14.9-12"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 3,
+            "title": "The Cold War, the Civil Rights Movement & Contemporary America (1945–Present)",
+            "description": "Examining containment, Vietnam, the Civil Rights movement, Watergate, Reaganomics, and contemporary challenges.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "The Cold War at Home and Abroad: Korea, Cuba and Vietnam",
+                    "description": "Analyzing the Truman Doctrine, McCarthyism, the Cuban Missile Crisis, and the anti-war movement.",
+                    "standards": [
+                        "D2.His.15.9-12",
+                        "D2.Civ.12.9-12"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "The African American Civil Rights Movement and Beyond",
+                    "description": "Examining Brown v. Board of Education, the Montgomery Bus Boycott, MLK Jr., Malcolm X, and the Civil Rights Act of 1964.",
+                    "standards": [
+                        "D2.Civ.10.9-12",
+                        "D2.His.16.9-12"
+                    ]
+                }
+            ]
+        }
+    ]
+}

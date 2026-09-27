@@ -1,0 +1,107 @@
+{
+    "grade": "Grade 8",
+    "subject": "science",
+    "name": "Science",
+    "course": "Physical Science: Classical Mechanics, Wave Energy & Matter Interactions",
+    "title": "Grade 8 Science: Physical Science: Classical Mechanics, Wave Energy & Matter Interactions",
+    "icon": "fas fa-atom",
+    "color": "#4f46e5",
+    "overview": "Grade 8 Science explores the interconnected systems of the physical, life, and Earth/space sciences using inquiry-based labs, computational modeling, and engineering design aligned with NGSS.",
+    "competencies": [
+        "Formulate testable hypotheses, design empirical experiments, and interpret complex data graphs.",
+        "Construct and revise scientific models explaining matter, energy, and biological systems.",
+        "Apply mathematical relationships and physical laws to predict natural phenomena.",
+        "Evaluate technological solutions to ecological and societal challenges."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "Matter and Energy: Atomic Structure & Chemical Reactions",
+            "description": "Investigating atoms, molecules, the periodic table, synthetic materials, and thermal energy changes in chemical reactions.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Atomic Theory and Molecular Models",
+                    "description": "Modeling how atoms combine to form simple and extended crystal structures (e.g. NaCl).",
+                    "standards": [
+                        "MS-PS1-1"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Chemical Reactions and Conservation of Matter",
+                    "description": "Analyzing how chemical bonds break and reform to create new substances with different properties while conserving mass.",
+                    "standards": [
+                        "MS-PS1-2",
+                        "MS-PS1-5"
+                    ]
+                },
+                {
+                    "letter": "C",
+                    "title": "Thermal Energy in Chemical Reactions: Exothermic vs. Endothermic",
+                    "description": "Measuring temperature changes during chemical reactions and engineering a temperature-control device.",
+                    "standards": [
+                        "MS-PS1-6"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "Motion, Forces and Newton's Laws",
+            "description": "Investigating Newton's Three Laws of Motion, momentum, gravitational interactions, and electromagnetic forces.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Newton's First and Second Laws: Inertia, Force and Acceleration",
+                    "description": "Applying F = ma to calculate acceleration and testing bumper collision crash carts.",
+                    "standards": [
+                        "MS-PS2-1",
+                        "MS-PS2-2"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Newton's Third Law and Gravitational/Electric Fields",
+                    "description": "Analyzing action-reaction forces and mapping gravitational, electric, and magnetic force fields.",
+                    "standards": [
+                        "MS-PS2-3",
+                        "MS-PS2-4",
+                        "MS-PS2-5"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 3,
+            "title": "Wave Energy: Mechanical and Electromagnetic Waves",
+            "description": "Modeling wave frequency, wavelength, transmission, reflection, refraction, and digitized vs. analog communication.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Wave Properties: Frequency, Wavelength and Energy",
+                    "description": "Modeling how wave energy is proportional to the square of its amplitude.",
+                    "standards": [
+                        "MS-PS4-1"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Light Waves, Reflection, Refraction and Colors",
+                    "description": "Investigating how light reflects off mirrors, bends through prisms, and absorbs into dark materials.",
+                    "standards": [
+                        "MS-PS4-2"
+                    ]
+                },
+                {
+                    "letter": "C",
+                    "title": "Digitized Waves vs. Analog Signals in Communication",
+                    "description": "Evaluating why digital signals (binary pulses) transmit information more reliably across long distances.",
+                    "standards": [
+                        "MS-PS4-3"
+                    ]
+                }
+            ]
+        }
+    ]
+}

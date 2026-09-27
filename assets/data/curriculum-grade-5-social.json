@@ -1,0 +1,93 @@
+{
+    "grade": "Grade 5",
+    "subject": "social",
+    "name": "Social Studies",
+    "course": "Early American Civilizations, European Exploration & the American Revolution",
+    "title": "Grade 5 Social Studies: Early American Civilizations, European Exploration & the American Revolution",
+    "icon": "fas fa-globe-americas",
+    "color": "#d97706",
+    "overview": "Grade 5 Social Studies builds civic competence, geographical literacy, economic understanding, and historical inquiry aligned with the C3 Framework.",
+    "competencies": [
+        "Investigate historical questions using multiple primary and secondary sources.",
+        "Analyze human and physical geography to understand how location and resources shape human decisions.",
+        "Explain economic concepts including production, market exchange, trade specialization, and public finance.",
+        "Apply democratic principles and civic virtues to deliberate contemporary public issues."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "Indigenous Civilizations of North America & European Exploration",
+            "description": "Studying diverse American Indian cultures (Pueblo, Haudenosaunee, Pacific Coast, Plains) and the impacts of transatlantic voyages.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Complex Indigenous Societies of North America",
+                    "description": "Analyzing governance, trade networks, architecture, and environmental adaptations before 1492.",
+                    "standards": [
+                        "D2.His.1.3-5",
+                        "D2.Geo.4.3-5"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "The Age of Exploration and the Columbian Exchange",
+                    "description": "Investigating Spanish, French, and English explorations and global exchanges of crops and diseases.",
+                    "standards": [
+                        "D2.His.3.3-5",
+                        "D2.Eco.3.3-5"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "Thirteen British Colonies, Slavery & Economic Systems",
+            "description": "Contrasting New England, Middle, and Southern colonial regions, and examining the transatlantic slave trade.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "New England, Middle, and Southern Colonial Life",
+                    "description": "Comparing religious dissent in Massachusetts, trade in Philadelphia, and plantation agriculture in Virginia.",
+                    "standards": [
+                        "D2.His.2.3-5",
+                        "D2.Eco.1.3-5"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "The Middle Passage and Enslaved Labor",
+                    "description": "Examining the brutality of the transatlantic slave trade and the cultural resilience of enslaved Africans.",
+                    "standards": [
+                        "D2.His.4.3-5",
+                        "D2.Civ.2.3-5"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 3,
+            "title": "The American Revolution & the United States Constitution",
+            "description": "Analyzing the causes of colonial revolt, the Declaration of Independence, the Revolutionary War, and constitutional democracy.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Causes of the Revolution: Taxation Without Representation",
+                    "description": "Exploring the Stamp Act, Boston Tea Party, Continental Congress, and Declaration of Independence.",
+                    "standards": [
+                        "D2.His.1.3-5",
+                        "D2.Civ.8.3-5"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Creating the Constitution and the Bill of Rights",
+                    "description": "Analyzing the Constitutional Convention, three branches of government, checks and balances, and rights.",
+                    "standards": [
+                        "D2.Civ.1.3-5",
+                        "D2.Civ.3.3-5"
+                    ]
+                }
+            ]
+        }
+    ]
+}

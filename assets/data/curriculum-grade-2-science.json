@@ -1,0 +1,98 @@
+{
+    "grade": "Grade 2",
+    "subject": "science",
+    "name": "Science",
+    "course": "Matter, Landforms, Plant Needs & Habitats",
+    "title": "Grade 2 Science: Matter, Landforms, Plant Needs & Habitats",
+    "icon": "fas fa-leaf",
+    "color": "#4f46e5",
+    "overview": "Grade 2 Science engages students in the scientific method and engineering design process across physical, life, and Earth/space sciences aligned with Next Generation Science Standards (NGSS).",
+    "competencies": [
+        "Ask scientific questions, plan and conduct controlled investigations, and analyze experimental data.",
+        "Develop and use models to describe natural systems, energy flows, and physical interactions.",
+        "Construct explanations supported by empirical evidence and scientific reasoning.",
+        "Design, test, and optimize engineering solutions to real-world technological and environmental problems."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "Structure and Properties of Matter",
+            "description": "Classifying different kinds of materials by their observable properties, testing reversible vs. irreversible changes.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Classifying Solids, Liquids and Gases",
+                    "description": "Testing flexibility, hardness, texture, and absorbency of common matter.",
+                    "standards": [
+                        "2-PS1-1",
+                        "2-PS1-2"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Heating, Cooling and Reversible Changes",
+                    "description": "Observing how melting and freezing can be reversed, while cooking changes matter permanently.",
+                    "standards": [
+                        "2-PS1-4"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "Earth Systems: Landforms, Water & Fast/Slow Changes",
+            "description": "Mapping where water is found on Earth, exploring volcanoes and earthquakes, and preventing soil erosion.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Slow and Rapid Changes to Earth's Surface",
+                    "description": "Contrasting slow weathering and erosion with sudden volcanic eruptions and earthquakes.",
+                    "standards": [
+                        "2-ESS1-1"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Mapping Earth's Water and Landforms",
+                    "description": "Locating oceans, lakes, rivers, glaciers, mountains, and valleys on physical maps.",
+                    "standards": [
+                        "2-ESS2-2",
+                        "2-ESS2-3"
+                    ]
+                },
+                {
+                    "letter": "C",
+                    "title": "Engineering Solutions for Wind and Water Erosion",
+                    "description": "Designing and testing dikes, seawalls, and plant cover to prevent wind and rain erosion.",
+                    "standards": [
+                        "2-ESS2-1"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 3,
+            "title": "Interdependent Relationships in Ecosystems",
+            "description": "Investigating what plants need to grow and the vital roles animals play in seed dispersal and pollination.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Plant Survival: Sunlight and Water Experiments",
+                    "description": "Conducting controlled trials with seeds in varying light and moisture conditions.",
+                    "standards": [
+                        "2-LS2-1"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Pollination, Seed Dispersal & Biodiversity",
+                    "description": "Modeling how bees, butterflies, and wind spread pollen and how animals bury seeds.",
+                    "standards": [
+                        "2-LS2-2",
+                        "2-LS4-1"
+                    ]
+                }
+            ]
+        }
+    ]
+}

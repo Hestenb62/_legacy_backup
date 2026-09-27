@@ -1,0 +1,93 @@
+{
+    "grade": "Grade 10",
+    "subject": "social",
+    "name": "Social Studies",
+    "course": "Modern World History",
+    "title": "Grade 10 Social Studies: Modern World History",
+    "icon": "fas fa-landmark",
+    "color": "#d97706",
+    "overview": "Grade 10 Social Studies prepares young citizens for active democratic participation and global engagement through rigorous historical, political, geographic, and economic inquiry.",
+    "competencies": [
+        "Evaluate complex primary sources, detecting bias, corroborating claims, and synthesizing context.",
+        "Analyze constitutional principles, governmental structures, and civil liberties in a democratic republic.",
+        "Apply macroeconomic principles, market mechanics, and fiscal/monetary policies to public issues.",
+        "Deliberate contemporary global policy dilemmas using evidence-based civic discourse."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "The Enlightenment, Political Revolutions & Nationalism (1750–1850)",
+            "description": "Analyzing Enlightenment political philosophy, the American, French, and Haitian Revolutions, and the rise of nationalism.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Enlightenment Thinkers and Social Contract Theory",
+                    "description": "Analyzing the ideas of Locke, Rousseau, Voltaire, and Montesquieu challenging absolute monarchy.",
+                    "standards": [
+                        "D2.His.1.9-12",
+                        "D2.Civ.2.9-12"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "The French and Haitian Revolutions",
+                    "description": "Comparing the storming of the Bastille and the Reign of Terror with Toussaint Louverture's slave revolution in Saint-Domingue.",
+                    "standards": [
+                        "D2.His.3.9-12",
+                        "D2.Civ.8.9-12"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "The Industrial Revolution & Global Imperialism (1750–1914)",
+            "description": "Examining factory industrialization, capitalism vs. socialism, the Scramble for Africa, and imperial expansion in Asia.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "The Industrial Revolution: Technology, Labor and Ideologies",
+                    "description": "Tracing the rise of steam power, urbanization, working-class movements, and Adam Smith vs. Karl Marx.",
+                    "standards": [
+                        "D2.Eco.4.9-12",
+                        "D2.His.2.9-12"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "The Age of Global Imperialism and Resistance",
+                    "description": "Analyzing the Berlin Conference, colonial exploitation in the Congo, the British Raj in India, and the Boxer Rebellion in China.",
+                    "standards": [
+                        "D2.Geo.11.9-12",
+                        "D2.His.14.9-12"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 3,
+            "title": "The World at War, Totalitarianism & the Cold War (1914–1991)",
+            "description": "Analyzing the causes of WWI, the Russian Revolution, fascism, WWII and the Holocaust, nuclear arms race, and decolonization.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "World War I, Trench Warfare and the Treaty of Versailles",
+                    "description": "Investigating imperialism, militarism, secret alliances, the collapse of empires, and the flawed League of Nations.",
+                    "standards": [
+                        "D2.His.15.9-12",
+                        "D2.Civ.12.9-12"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "World War II, the Holocaust and the Cold War Order",
+                    "description": "Analyzing fascist aggression, total war mobilization, the Nazi genocide, the atomic bomb, and the ideological US-Soviet standoff.",
+                    "standards": [
+                        "D2.His.16.9-12",
+                        "D2.Civ.14.9-12"
+                    ]
+                }
+            ]
+        }
+    ]
+}

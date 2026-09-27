@@ -1,0 +1,154 @@
+{
+    "grade": "Grade 6",
+    "subject": "math",
+    "name": "Mathematics",
+    "course": "Ratios, Rational Numbers & Expressions",
+    "title": "Grade 6 Mathematics: Ratios, Rational Numbers & Expressions",
+    "icon": "fas fa-calculator",
+    "color": "#2563eb",
+    "overview": "Grade 6 Mathematics advances algebraic reasoning, proportional problem solving, geometric modeling, and statistical inference preparing students for rigorous high school pathways.",
+    "competencies": [
+        "Analyze proportional relationships, rate models, and linear equations in real-world contexts.",
+        "Perform operations fluently with rational numbers, exponents, and algebraic expressions.",
+        "Apply geometric principles, coordinate transformations, and measurement formulas.",
+        "Collect, summarize, and evaluate statistical distributions and probability models."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "Ratios and Unit Rates",
+            "description": "Developing understanding of ratio relationships, unit rates, solving rate problems with tables, tape diagrams, and double number lines.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Representing and Reasoning About Ratios",
+                    "description": "Using tape diagrams and ratio tables to compare quantities and solve part-to-part and part-to-whole problems.",
+                    "standards": [
+                        "6.RP.1",
+                        "6.RP.3a"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Unit Rates and Rate Tables",
+                    "description": "Calculating unit rates (cost per item, miles per hour) and converting measurement units.",
+                    "standards": [
+                        "6.RP.2",
+                        "6.RP.3b",
+                        "6.RP.3d"
+                    ]
+                },
+                {
+                    "letter": "C",
+                    "title": "Percentages as Rates per 100",
+                    "description": "Finding the percent of a quantity and solving real-world percentage discount and tax problems.",
+                    "standards": [
+                        "6.RP.3c"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "Arithmetic Operations Including Division of Fractions",
+            "description": "Dividing fractions by fractions using visual models, fluently dividing multi-digit numbers, and operating on decimals.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Division of Fractions by Fractions",
+                    "description": "Interpreting division of fractions using strip diagrams and reciprocal multiplication algorithm.",
+                    "standards": [
+                        "6.NS.1"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Multi-Digit Division and Decimal Fluency",
+                    "description": "Mastering long division algorithm and executing all four operations with decimals fluently.",
+                    "standards": [
+                        "6.NS.2",
+                        "6.NS.3"
+                    ]
+                },
+                {
+                    "letter": "C",
+                    "title": "Greatest Common Factor and Least Common Multiple",
+                    "description": "Finding GCF and LCM using prime factorization and the distributive property.",
+                    "standards": [
+                        "6.NS.4"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 3,
+            "title": "Rational Numbers and the Coordinate Plane",
+            "description": "Extending the number line to negative integers, ordering rational numbers, absolute value, and all four quadrants of the coordinate plane.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Positive and Negative Numbers on the Number Line",
+                    "description": "Using signed numbers to represent real-world quantities (temperature, elevation, debits).",
+                    "standards": [
+                        "6.NS.5",
+                        "6.NS.6"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Absolute Value and Ordering Rational Numbers",
+                    "description": "Understanding absolute value as distance from zero and writing inequality statements.",
+                    "standards": [
+                        "6.NS.7"
+                    ]
+                },
+                {
+                    "letter": "C",
+                    "title": "The Four-Quadrant Coordinate Plane",
+                    "description": "Plotting coordinate pairs in all four quadrants, reflecting points, and calculating polygon perimeter/area.",
+                    "standards": [
+                        "6.NS.6b",
+                        "6.NS.8",
+                        "6.G.3"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 4,
+            "title": "Expressions and Equations",
+            "description": "Writing, reading, and evaluating algebraic expressions with exponents, solving one-variable one-step equations and inequalities.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Whole Number Exponents and Algebraic Expressions",
+                    "description": "Writing and evaluating numerical expressions with whole number exponents and variable terms.",
+                    "standards": [
+                        "6.EE.1",
+                        "6.EE.2"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Equivalent Expressions and the Distributive Property",
+                    "description": "Applying commutative, associative, and distributive properties to generate equivalent expressions.",
+                    "standards": [
+                        "6.EE.3",
+                        "6.EE.4"
+                    ]
+                },
+                {
+                    "letter": "C",
+                    "title": "Solving One-Step Equations and Graphing Inequalities",
+                    "description": "Using inverse operations to solve x + p = q and px = q, and graphing x > c on number lines.",
+                    "standards": [
+                        "6.EE.5",
+                        "6.EE.6",
+                        "6.EE.7",
+                        "6.EE.8"
+                    ]
+                }
+            ]
+        }
+    ]
+}

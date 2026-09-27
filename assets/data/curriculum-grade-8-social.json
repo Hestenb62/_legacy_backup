@@ -1,0 +1,102 @@
+{
+    "grade": "Grade 8",
+    "subject": "social",
+    "name": "Social Studies",
+    "course": "United States History: Revolution through Reconstruction (1754–1877)",
+    "title": "Grade 8 Social Studies: United States History: Revolution through Reconstruction (1754–1877)",
+    "icon": "fas fa-landmark",
+    "color": "#d97706",
+    "overview": "Grade 8 Social Studies engages students in historical inquiry, primary source analysis, geographic mapping, and civic deliberation aligned with the C3 Framework.",
+    "competencies": [
+        "Corroborate primary documents with historical context and point-of-view analysis.",
+        "Explain how geographical trade networks and physical barriers shaped civilizations.",
+        "Analyze economic developments, resource allocation, and market exchanges.",
+        "Assess the evolution of democratic values, civil liberties, and civic responsibilities."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "The Road to Revolution & the Birth of the Republic (1754–1789)",
+            "description": "Analyzing the French and Indian War, colonial protest, the Declaration of Independence, the Revolutionary War, and the Constitution.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Colonial Grievances and the War for Independence",
+                    "description": "Investigating taxation policies, the Boston Massacre, Common Sense, and military turning points at Saratoga and Yorktown.",
+                    "standards": [
+                        "D2.His.1.6-8",
+                        "D2.Civ.1.6-8"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "The Constitutional Convention and the Bill of Rights",
+                    "description": "Analyzing the Great Compromise, the Federalist vs. Anti-Federalist debates, separation of powers, and the Bill of Rights.",
+                    "standards": [
+                        "D2.Civ.3.6-8",
+                        "D2.His.2.6-8"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "Westward Expansion, Jacksonian Democracy & Sectionalism (1800–1860)",
+            "description": "Exploring the Louisiana Purchase, Indian Removal, Manifest Destiny, Northern industrialization, and the Southern cotton kingdom.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "The Louisiana Purchase and Manifest Destiny",
+                    "description": "Tracing the Lewis and Clark expedition, the Mexican-American War, and the California Gold Rush.",
+                    "standards": [
+                        "D2.Geo.2.6-8",
+                        "D2.His.3.6-8"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Jacksonian Politics and the Trail of Tears",
+                    "description": "Examining expanded suffrage for white males, bank wars, and the forced expulsion of Cherokee and Creek nations.",
+                    "standards": [
+                        "D2.Civ.8.6-8",
+                        "D2.His.4.6-8"
+                    ]
+                },
+                {
+                    "letter": "C",
+                    "title": "Sectionalism and the Moral Struggle Over Slavery",
+                    "description": "Contrasting the abolitionist movement (Douglass, Tubman), the Underground Railroad, and the Missouri Compromise.",
+                    "standards": [
+                        "D2.His.5.6-8",
+                        "D2.Eco.3.6-8"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 3,
+            "title": "The Civil War & the Reconstruction Era (1861–1877)",
+            "description": "Analyzing secession, turning point battles of the Civil War, the Emancipation Proclamation, and the Reconstruction Amendments.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "The American Civil War: Strategy, Battlefields and Emancipation",
+                    "description": "Analyzing Fort Sumter, Antietam, Gettysburg, Lincoln's Gettysburg Address, and the military collapse of the Confederacy.",
+                    "standards": [
+                        "D2.His.14.6-8",
+                        "D2.Civ.14.6-8"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Reconstruction: The 13th, 14th, and 15th Amendments and Backlash",
+                    "description": "Examining Black political leadership in the South, the rise of the Ku Klux Klan, sharecropping, and the Compromise of 1877.",
+                    "standards": [
+                        "D2.Civ.5.6-8",
+                        "D2.His.16.6-8"
+                    ]
+                }
+            ]
+        }
+    ]
+}

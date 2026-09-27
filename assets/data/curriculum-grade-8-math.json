@@ -1,0 +1,146 @@
+{
+    "grade": "Grade 8",
+    "subject": "math",
+    "name": "Mathematics",
+    "course": "Linear Equations, Functions & the Pythagorean Theorem",
+    "title": "Grade 8 Mathematics: Linear Equations, Functions & the Pythagorean Theorem",
+    "icon": "fas fa-calculator",
+    "color": "#2563eb",
+    "overview": "Grade 8 Mathematics advances algebraic reasoning, proportional problem solving, geometric modeling, and statistical inference preparing students for rigorous high school pathways.",
+    "competencies": [
+        "Analyze proportional relationships, rate models, and linear equations in real-world contexts.",
+        "Perform operations fluently with rational numbers, exponents, and algebraic expressions.",
+        "Apply geometric principles, coordinate transformations, and measurement formulas.",
+        "Collect, summarize, and evaluate statistical distributions and probability models."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "Integer Exponents and Scientific Notation",
+            "description": "Mastering laws of integer exponents, negative exponents, operations with scientific notation, and estimating large/small quantities.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Properties of Integer Exponents",
+                    "description": "Applying product, quotient, and power of a power exponent rules with positive and negative powers.",
+                    "standards": [
+                        "8.EE.1"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Scientific Notation and Order of Magnitude",
+                    "description": "Representing very large and microscopic quantities in scientific notation and calculating products/quotients.",
+                    "standards": [
+                        "8.EE.3",
+                        "8.EE.4"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "Linear Equations in One and Two Variables",
+            "description": "Solving multi-step linear equations with variables on both sides, identifying equations with one, infinite, or no solutions, and graphing linear equations.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Solving Multi-Step Linear Equations",
+                    "description": "Using the distributive property and combining like terms to solve equations with variables on both sides.",
+                    "standards": [
+                        "8.EE.7a",
+                        "8.EE.7b"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Slope and Graphing Linear Equations",
+                    "description": "Understanding slope as rate of change (m = rise/run), graphing y = mx + b, and interpreting intercepts.",
+                    "standards": [
+                        "8.EE.5",
+                        "8.EE.6"
+                    ]
+                },
+                {
+                    "letter": "C",
+                    "title": "Systems of Two Linear Equations",
+                    "description": "Solving systems of linear equations graphically and through algebraic substitution and elimination.",
+                    "standards": [
+                        "8.EE.8"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 3,
+            "title": "Functions: Definition, Comparison and Modeling",
+            "description": "Defining a function as a rule assigning exactly one output to each input, contrasting linear vs. nonlinear functions, and modeling bivariate data.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Defining and Evaluating Functions",
+                    "description": "Using function tables, graphs, and algebraic equations to determine if relationships represent functions.",
+                    "standards": [
+                        "8.F.1",
+                        "8.F.2"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Linear vs. Nonlinear Functions",
+                    "description": "Distinguishing between constant rate of change linear functions and curved nonlinear relationships.",
+                    "standards": [
+                        "8.F.3",
+                        "8.F.4"
+                    ]
+                },
+                {
+                    "letter": "C",
+                    "title": "Bivariate Data and Scatter Plots",
+                    "description": "Constructing scatter plots, fitting informal trend lines of best fit, and interpreting two-way frequency tables.",
+                    "standards": [
+                        "8.SP.1",
+                        "8.SP.2",
+                        "8.SP.3",
+                        "8.SP.4"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 4,
+            "title": "Geometry: Transformations, Congruence and the Pythagorean Theorem",
+            "description": "Investigating rigid transformations (translations, rotations, reflections), dilations/similarity, and proving the Pythagorean Theorem (a^2 + b^2 = c^2).",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Rigid Transformations and Congruence",
+                    "description": "Verifying properties of rotations, reflections, and translations, and proving geometric congruence.",
+                    "standards": [
+                        "8.G.1",
+                        "8.G.2"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Dilations, Scale Factor and Similarity",
+                    "description": "Enlarging and reducing figures from a center of dilation to prove geometric similarity.",
+                    "standards": [
+                        "8.G.3",
+                        "8.G.4"
+                    ]
+                },
+                {
+                    "letter": "C",
+                    "title": "The Pythagorean Theorem and Real-World Applications",
+                    "description": "Applying a^2 + b^2 = c^2 to find unknown side lengths in right triangles and distances on coordinate planes.",
+                    "standards": [
+                        "8.G.6",
+                        "8.G.7",
+                        "8.G.8"
+                    ]
+                }
+            ]
+        }
+    ]
+}

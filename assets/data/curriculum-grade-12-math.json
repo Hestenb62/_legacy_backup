@@ -1,0 +1,119 @@
+{
+    "grade": "Grade 12",
+    "subject": "math",
+    "name": "Mathematics",
+    "course": "Precalculus & Advanced Topics",
+    "title": "Grade 12 Mathematics: Precalculus & Advanced Topics",
+    "icon": "fas fa-calculator",
+    "color": "#2563eb",
+    "overview": "Grade 12 Mathematics delivers advanced mathematical preparation, rigorous logical deduction, and complex modeling across algebraic, geometric, trigonometric, and analytical domains.",
+    "competencies": [
+        "Construct formal deductive arguments, proofs, and mathematical models to solve real-world problems.",
+        "Analyze functions, coordinate systems, and algebraic structures with computational accuracy.",
+        "Apply advanced formulas, theorems, and mathematical transformations.",
+        "Communicate mathematical reasoning fluently using precise symbolic notation and graphical representations."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "Complex Numbers and Vectors in the Plane",
+            "description": "Representing complex numbers in polar form, De Moivre's theorem, vector operations (addition, scalar multiplication, dot product).",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Polar Coordinates and Complex Polar Form",
+                    "description": "Converting between rectangular and polar coordinates (r, theta) and computing products/powers using De Moivre's theorem.",
+                    "standards": [
+                        "HSN-CN.B.4",
+                        "HSN-CN.B.5"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Vectors: Magnitude, Direction and Dot Products",
+                    "description": "Performing vector addition, calculating magnitude, direction angles, and applying the dot product to find angle between vectors.",
+                    "standards": [
+                        "HSN-VM.A.1",
+                        "HSN-VM.A.2",
+                        "HSN-VM.B.4",
+                        "HSN-VM.C.7"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "Trigonometry: Advanced Identities and Analytical Modeling",
+            "description": "Verifying sum and difference formulas, double-angle and half-angle identities, and solving complex trigonometric equations.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Sum, Difference, and Double-Angle Identities",
+                    "description": "Proving and applying analytic trigonometric identities to simplify expressions and solve equations.",
+                    "standards": [
+                        "HSF-TF.C.8",
+                        "HSF-TF.C.9"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Inverse Trigonometric Functions",
+                    "description": "Restricting domains to define arcsin, arccos, and arctan, and evaluating composite expressions.",
+                    "standards": [
+                        "HSF-TF.B.6",
+                        "HSF-TF.B.7"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 3,
+            "title": "Parametric Equations, Polar Graphs & Conic Sections",
+            "description": "Graphing parametric curve trajectories, graphing polar curves (limacons, rose curves), and analyzing ellipses, parabolas, and hyperbolas.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Parametric Equations and Motion Over Time",
+                    "description": "Eliminating the parameter t to model projectile motion and simultaneous object paths.",
+                    "standards": [
+                        "HSF-IF.C.7",
+                        "HSG-GPE.A.3"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Conic Sections: Ellipses, Hyperbolas and Parabolas",
+                    "description": "Deriving standard equations of conics, identifying foci, vertices, and asymptotes.",
+                    "standards": [
+                        "HSG-GPE.A.2",
+                        "HSG-GPE.A.3"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 4,
+            "title": "Limits, Sequences, Series and Introduction to Calculus",
+            "description": "Evaluating limits algebraically and graphically, finding sums of infinite geometric series, and computing difference quotients.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Limits and Continuity",
+                    "description": "Evaluating one-sided and two-sided limits as x approaches a value or infinity, identifying points of discontinuity.",
+                    "standards": [
+                        "HSF-IF.A.1",
+                        "HSF-LE.A.1"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Difference Quotients and the Concept of the Derivative",
+                    "description": "Computing average rates of change and taking the limit of difference quotients to introduce instantaneous velocity.",
+                    "standards": [
+                        "HSF-IF.B.6"
+                    ]
+                }
+            ]
+        }
+    ]
+}

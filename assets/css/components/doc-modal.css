@@ -855,9 +855,101 @@
     transform: translateY(-1px);
   }
 
-  .doc-modal-chip-icon {
-    font-size: 0.65rem;
-    color: var(--color-primary);
+  /* ==========================================================================
+     Module Overview & Detailed Topic Cards (No Individual Lesson Links)
+     ========================================================================== */
+  .doc-modal-module-overview-box {
+    background: color-mix(in srgb, var(--color-primary) 7%, var(--color-bg-surface));
+    border-left: 3px solid var(--color-primary);
+    border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+    padding: 0.85rem 1rem;
+    margin-bottom: 1rem;
   }
 
+  .doc-modal-module-overview-label {
+    font-size: 0.725rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .doc-modal-topics-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .doc-modal-topic-card {
+    background: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: 0.95rem 1.15rem;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .doc-modal-topic-card:hover {
+    border-color: color-mix(in srgb, var(--color-primary) 35%, var(--color-border));
+    box-shadow: var(--shadow-sm);
+  }
+
+  .doc-modal-topic-header {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.45rem;
+  }
+
+  .doc-modal-topic-badge {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.725rem;
+    font-weight: 800;
+    padding: 0.2rem 0.55rem;
+    border-radius: var(--radius-full);
+    background: color-mix(in srgb, var(--color-primary) 14%, transparent);
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    flex-shrink: 0;
+  }
+
+  .doc-modal-topic-name {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+    margin: 0;
+  }
+
+  .doc-modal-topic-desc {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: var(--color-text-muted);
+    margin: 0 0 0.55rem 0;
+  }
+
+  .doc-modal-topic-standards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem;
+    padding-top: 0.5rem;
+    border-top: 1px dashed var(--color-border);
+  }
+
+  .doc-modal-topic-standards-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-text-muted);
+    margin-right: 0.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
 }

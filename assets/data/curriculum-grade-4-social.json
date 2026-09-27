@@ -1,0 +1,67 @@
+{
+    "grade": "Grade 4",
+    "subject": "social",
+    "name": "Social Studies",
+    "course": "State History, Geography & Regional Economics",
+    "title": "Grade 4 Social Studies: State History, Geography & Regional Economics",
+    "icon": "fas fa-globe-americas",
+    "color": "#d97706",
+    "overview": "Grade 4 Social Studies builds civic competence, geographical literacy, economic understanding, and historical inquiry aligned with the C3 Framework.",
+    "competencies": [
+        "Investigate historical questions using multiple primary and secondary sources.",
+        "Analyze human and physical geography to understand how location and resources shape human decisions.",
+        "Explain economic concepts including production, market exchange, trade specialization, and public finance.",
+        "Apply democratic principles and civic virtues to deliberate contemporary public issues."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "State History: Native Peoples, Colonization & Statehood",
+            "description": "Exploring the indigenous inhabitants of the state, colonial settlements, key state historic figures, and state constitution.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Indigenous Peoples of the Region",
+                    "description": "Investigating tribal nations, regional geography, governance, and traditional agriculture.",
+                    "standards": [
+                        "D2.His.1.3-5",
+                        "D2.Geo.4.3-5"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Colonial Encounters and Statehood History",
+                    "description": "Tracing the state's founding treaties, pivotal conflicts, and transition to statehood.",
+                    "standards": [
+                        "D2.His.3.3-5",
+                        "D2.Civ.1.3-5"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "State Geography & Economic Industries",
+            "description": "Analyzing state geographic regions, major natural resources, agricultural centers, and technological industries.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Physical Landscapes and Natural Resources",
+                    "description": "Mapping river watersheds, mountain chains, coastal zones, and mineral deposits.",
+                    "standards": [
+                        "D2.Geo.3.3-5"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "State Economic Sectors & Trade Markets",
+                    "description": "Investigating state agricultural output, manufacturing, tourism, and national trade networks.",
+                    "standards": [
+                        "D2.Eco.1.3-5",
+                        "D2.Eco.7.3-5"
+                    ]
+                }
+            ]
+        }
+    ]
+}

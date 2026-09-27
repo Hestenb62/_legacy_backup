@@ -1,0 +1,122 @@
+{
+    "grade": "Grade 5",
+    "subject": "science",
+    "name": "Science",
+    "course": "Matter Interactions, Ecosystem Energy, Earth's Spheres & Space Systems",
+    "title": "Grade 5 Science: Matter Interactions, Ecosystem Energy, Earth's Spheres & Space Systems",
+    "icon": "fas fa-leaf",
+    "color": "#4f46e5",
+    "overview": "Grade 5 Science engages students in the scientific method and engineering design process across physical, life, and Earth/space sciences aligned with Next Generation Science Standards (NGSS).",
+    "competencies": [
+        "Ask scientific questions, plan and conduct controlled investigations, and analyze experimental data.",
+        "Develop and use models to describe natural systems, energy flows, and physical interactions.",
+        "Construct explanations supported by empirical evidence and scientific reasoning.",
+        "Design, test, and optimize engineering solutions to real-world technological and environmental problems."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "Matter and Its Interactions: Particle Nature & Conservation of Mass",
+            "description": "Modeling matter as microscopic particles, proving conservation of mass in chemical and physical changes, and identifying mystery substances.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "The Particle Model of Matter",
+                    "description": "Using models to demonstrate that gases, liquids, and solids are made of particles too small to be seen.",
+                    "standards": [
+                        "5-PS1-1"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Conservation of Mass During Physical and Chemical Changes",
+                    "description": "Weighing substances before and after dissolving, melting, or chemical reactions to prove mass conservation.",
+                    "standards": [
+                        "5-PS1-2"
+                    ]
+                },
+                {
+                    "letter": "C",
+                    "title": "Identifying Materials by Chemical/Physical Properties",
+                    "description": "Testing conductivity, solubility, magnetism, and reactivity to identify unknown substances.",
+                    "standards": [
+                        "5-PS1-3",
+                        "5-PS1-4"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "Energy and Matter in Organisms and Ecosystems",
+            "description": "Tracing the flow of energy from the Sun to plants (photosynthesis) and through food webs, decomposing organisms, and matter recycling.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Plant Photosynthesis: Water and Air to Sugar",
+                    "description": "Showing that plant mass comes primarily from air and water rather than soil.",
+                    "standards": [
+                        "5-LS1-1"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Ecosystem Food Webs and Decomposers",
+                    "description": "Modeling how matter cycles between air, soil, producers, consumers, and decomposers.",
+                    "standards": [
+                        "5-LS2-1",
+                        "5-PS3-1"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 3,
+            "title": "Earth's Four Spheres & Water Distribution",
+            "description": "Investigating interactions among the geosphere, biosphere, hydrosphere, and atmosphere, and protecting Earth's freshwater.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "The Four Interacting Spheres of Earth",
+                    "description": "Modeling how rainfall (hydrosphere) shapes rock (geosphere) and supports forests (biosphere).",
+                    "standards": [
+                        "5-ESS2-1"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Global Water Distribution and Freshwater Conservation",
+                    "description": "Graphing the distribution of saltwater (97%) versus accessible freshwater (less than 1%).",
+                    "standards": [
+                        "5-ESS2-2",
+                        "5-ESS3-1"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 4,
+            "title": "Space Systems: Stars and the Solar System",
+            "description": "Exploring gravitational pull toward Earth's center, comparing star brightness by distance, and shadow/day-night patterns.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Earth's Gravitational Force",
+                    "description": "Proving that gravitational force directed down toward the center of Earth pulls all objects equally.",
+                    "standards": [
+                        "5-PS2-1"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Star Brightness, Solar Distance & Planetary Orbits",
+                    "description": "Explaining why the Sun appears larger and brighter than other stars due to relative distance.",
+                    "standards": [
+                        "5-ESS1-1",
+                        "5-ESS1-2"
+                    ]
+                }
+            ]
+        }
+    ]
+}

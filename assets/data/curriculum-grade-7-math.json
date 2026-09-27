@@ -1,0 +1,137 @@
+{
+    "grade": "Grade 7",
+    "subject": "math",
+    "name": "Mathematics",
+    "course": "Proportional Relationships & Rational Number Operations",
+    "title": "Grade 7 Mathematics: Proportional Relationships & Rational Number Operations",
+    "icon": "fas fa-calculator",
+    "color": "#2563eb",
+    "overview": "Grade 7 Mathematics advances algebraic reasoning, proportional problem solving, geometric modeling, and statistical inference preparing students for rigorous high school pathways.",
+    "competencies": [
+        "Analyze proportional relationships, rate models, and linear equations in real-world contexts.",
+        "Perform operations fluently with rational numbers, exponents, and algebraic expressions.",
+        "Apply geometric principles, coordinate transformations, and measurement formulas.",
+        "Collect, summarize, and evaluate statistical distributions and probability models."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "Ratios and Proportional Relationships",
+            "description": "Analyzing proportional relationships, finding the constant of proportionality (k = y/x), representing with equations (y = kx), and graphing.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Identifying Proportional Relationships in Tables and Graphs",
+                    "description": "Recognizing proportional relationships by testing equivalent ratios and checking for origin-crossing straight lines.",
+                    "standards": [
+                        "7.RP.1",
+                        "7.RP.2a"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "The Constant of Proportionality and Equation Modeling",
+                    "description": "Calculating unit rate k and writing equations in the form y = kx.",
+                    "standards": [
+                        "7.RP.2b",
+                        "7.RP.2c"
+                    ]
+                },
+                {
+                    "letter": "C",
+                    "title": "Real-World Percentage Problems",
+                    "description": "Solving multi-step ratio and percent problems including tax, tips, commissions, markups, and percent change.",
+                    "standards": [
+                        "7.RP.3"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "Rational Numbers: Operations on Signed Numbers",
+            "description": "Mastering addition, subtraction, multiplication, and division of all signed rational numbers (integers, fractions, decimals).",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Addition and Subtraction of Integers and Rational Numbers",
+                    "description": "Modeling directed movement on number lines and understanding subtraction as adding the additive inverse (p - q = p + (-q)).",
+                    "standards": [
+                        "7.NS.1"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Multiplication and Division of Signed Numbers",
+                    "description": "Understanding rules of signed multiplication and division, converting rational numbers to terminating or repeating decimals.",
+                    "standards": [
+                        "7.NS.2"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 3,
+            "title": "Expressions, Equations and Inequalities",
+            "description": "Generating equivalent expressions with rational coefficients, and solving two-step equations and inequalities (px + q = r, p(x + q) = r).",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Linear Expressions with Rational Coefficients",
+                    "description": "Expanding, factoring, and combining like terms in multi-step algebraic expressions.",
+                    "standards": [
+                        "7.EE.1",
+                        "7.EE.2"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Solving Two-Step Algebraic Equations",
+                    "description": "Constructing and solving two-step linear equations modeled after real-world scenarios.",
+                    "standards": [
+                        "7.EE.4a"
+                    ]
+                },
+                {
+                    "letter": "C",
+                    "title": "Solving and Graphing Linear Inequalities",
+                    "description": "Solving inequalities and remembering to reverse inequality signs when multiplying or dividing by negative numbers.",
+                    "standards": [
+                        "7.EE.4b"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 4,
+            "title": "Geometry: Scale Drawings, Area, Volume and Angles",
+            "description": "Computing actual lengths from scale drawings, circle formulas (Circumference and Area), angle relationships, and slice cross-sections.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Scale Drawings and Proportions",
+                    "description": "Computing dimensions of scaled figures and reproducing drawings at differing scales.",
+                    "standards": [
+                        "7.G.1"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Circles: Circumference and Area",
+                    "description": "Applying C = pi*d and A = pi*r^2 to solve complex composite plane figure problems.",
+                    "standards": [
+                        "7.G.4"
+                    ]
+                },
+                {
+                    "letter": "C",
+                    "title": "Angle Relationships: Complementary, Supplementary, Vertical and Adjacent",
+                    "description": "Writing and solving equations to find unknown angle measures in intersecting lines.",
+                    "standards": [
+                        "7.G.5"
+                    ]
+                }
+            ]
+        }
+    ]
+}

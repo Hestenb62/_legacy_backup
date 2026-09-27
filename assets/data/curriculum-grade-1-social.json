@@ -1,0 +1,66 @@
+{
+    "grade": "Grade 1",
+    "subject": "social",
+    "name": "Social Studies",
+    "course": "Families Through Time & Community Leaders",
+    "title": "Grade 1 Social Studies: Families Through Time & Community Leaders",
+    "icon": "fas fa-globe-americas",
+    "color": "#d97706",
+    "overview": "Grade 1 Social Studies builds civic competence, geographical literacy, economic understanding, and historical inquiry aligned with the C3 Framework.",
+    "competencies": [
+        "Investigate historical questions using multiple primary and secondary sources.",
+        "Analyze human and physical geography to understand how location and resources shape human decisions.",
+        "Explain economic concepts including production, market exchange, trade specialization, and public finance.",
+        "Apply democratic principles and civic virtues to deliberate contemporary public issues."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "Families and Communities Through Time",
+            "description": "Comparing everyday life in the past with life today, examining family structures, schools, transport, and technology.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Daily Life: Past vs. Present",
+                    "description": "Comparing communication, schoolhouses, chores, and games across generations.",
+                    "standards": [
+                        "D2.His.1.K-2",
+                        "D2.His.2.K-2"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Historical Timelines & Family Artifacts",
+                    "description": "Creating visual timelines and analyzing historical photographs and family heirlooms.",
+                    "standards": [
+                        "D2.His.3.K-2"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "Community Leadership & Democratic Voice",
+            "description": "Learning how local town councils, mayors, and voting work, and how citizens resolve disagreements fairly.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Leaders in Our Town, State & Nation",
+                    "description": "Identifying roles of principal, mayor, governor, and president in leadership.",
+                    "standards": [
+                        "D2.Civ.3.K-2",
+                        "D2.Civ.4.K-2"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Voting and Fair Decision Making",
+                    "description": "Conducting classroom elections and practicing consensus building.",
+                    "standards": [
+                        "D2.Civ.5.K-2"
+                    ]
+                }
+            ]
+        }
+    ]
+}

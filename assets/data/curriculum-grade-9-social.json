@@ -1,0 +1,143 @@
+{
+    "grade": "9th Grade",
+    "subject": "social",
+    "name": "Social Studies",
+    "course": "World History & Geography",
+    "title": "World History & Geography: Civilizations, Exchange & Global Transformations",
+    "icon": "fas fa-globe-americas",
+    "color": "#d97706",
+    "overview": "World History and Human Geography examines the trajectories of human societies from classical antiquity through modern globalization, aligned with the College, Career, and Civic Life (C3) Framework for Social Studies. Students analyze historical causation, interpret diverse primary documents, map geopolitical migrations and trade corridors, and critique systemic shifts in political power, economics, and culture.",
+    "competencies": [
+        "Analyze multiple perspectives and evaluate primary and secondary historical sources for corroboration, context, and point of view.",
+        "Examine how geographical features, climate zones, and trade routes shaped civilizational growth, economic specialization, and cultural diffusion.",
+        "Assess the philosophical foundations of governance from absolute monarchies and dynastic empires to constitutional democracies and republican models.",
+        "Investigate the socio-economic impacts of global economic transformations, including the Columbian Exchange, industrial capitalism, and technological revolutions.",
+        "Construct evidence-based historical arguments supporting reasoned civic conclusions regarding global human rights and international diplomacy."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "River Valley Civilizations, Classical Empires & Philosophical Foundations",
+            "description": "Explores the emergence of early agrarian civilizations and classical empires across Afro-Eurasia and the Americas. Students examine how legal codes, agricultural surpluses, urban planning, and core philosophical traditions established enduring world heritage.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Early Agrarian Societies & River Valley Innovations",
+                    "description": "Investigates Mesopotamia, the Nile Valley, the Indus River Basin, and the Yellow River (Huang He). Students evaluate early irrigation engineering, cuneiform/hieroglyphic writing, social stratification, and legal traditions such as the Code of Hammurabi.",
+                    "standards": ["D2.His.1.9-12", "D2.Geo.1.9-12", "D2.Civ.1.9-12"]
+                },
+                {
+                    "letter": "B",
+                    "title": "Classical Mediterranean: Athenian Democracy & the Roman Republic/Empire",
+                    "description": "Compares Greek city-state direct democracy and Roman republican legal institutions with imperial centralization. Students analyze civic duty, philosophical inquiry (Socrates, Plato, Aristotle), and the Pax Romana.",
+                    "standards": ["D2.Civ.3.9-12", "D2.His.3.9-12", "D2.His.5.9-12"]
+                },
+                {
+                    "letter": "C",
+                    "title": "Classical Asia: Dynastic China & Classical South Asia",
+                    "description": "Analyzes the Qin and Han Dynasties (the Mandate of Heaven, Confucian civil service, legalism) alongside the Maurya and Gupta Empires (Ashokan edicts, mathematics, artistic achievements) and the early Silk Road corridors.",
+                    "standards": ["D2.His.2.9-12", "D2.Geo.6.9-12"]
+                },
+                {
+                    "letter": "D",
+                    "title": "World Religions & Ethical Traditions",
+                    "description": "Examines the historical genesis, foundational doctrines, and geographical dissemination of Hinduism, Buddhism, Judaism, Christianity, Islam, Confucianism, and Daoism, evaluating their social and cultural legacies.",
+                    "standards": ["D2.His.4.9-12", "D2.Geo.4.9-12"]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "Medieval Crossroads, Trade Networks & Cultural Synthesis",
+            "description": "Focuses on the Afro-Eurasian exchange network during the post-classical era. Students explore the Islamic Golden Age, trans-continental trade systems, African kingdoms, feudal structures in Europe and Japan, and the unifying impact of the Mongol Empire.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "The Islamic Golden Age & Scientific/Cultural Renaissance",
+                    "description": "Traces the expansion of the Umayyad and Abbasid Caliphates, the House of Wisdom in Baghdad, and Islamic scholarship across algebra, medicine, optics, astronomy, and architectural innovation.",
+                    "standards": ["D2.His.3.9-12", "D2.Geo.5.9-12"]
+                },
+                {
+                    "letter": "B",
+                    "title": "Trans-Continental Corridors: Silk Roads, Indian Ocean & Trans-Saharan Trade",
+                    "description": "Maps maritime monsoon routes and overland caravan passages connecting Asia, the Middle East, and the Swahili coast. Students evaluate the exchange of silk, spices, porcelain, and the spread of technologies and epidemics.",
+                    "standards": ["D2.Geo.7.9-12", "D2.Eco.1.9-12"]
+                },
+                {
+                    "letter": "C",
+                    "title": "West African Kingdoms & Trans-Saharan Gold-Salt Trade",
+                    "description": "Examines the political centralization and wealth of the Ghana, Mali, and Songhai Empires. Students study Mansa Musa's pilgrimage, Timbuktu's university libraries, and urban scholarship in the Sahel.",
+                    "standards": ["D2.His.1.9-12", "D2.Geo.3.9-12"]
+                },
+                {
+                    "letter": "D",
+                    "title": "The Mongol Empire & Eurasian Interconnection",
+                    "description": "Evaluates pastoral nomadic warfare under Genghis Khan, the Pax Mongolica, postal relay routes (Yam), and the intensification of cross-cultural communication between Europe, Persia, and Yuan China.",
+                    "standards": ["D2.His.14.9-12", "D2.Geo.8.9-12"]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 3,
+            "title": "Global Encounters, Scientific Revolution & Political Transformations",
+            "description": "Investigates the early modern transition from maritime exploration and the Columbian Exchange to the Enlightenment and political revolutions that challenged autocratic governance.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "The European Renaissance & Maritime Exploration",
+                    "description": "Explores Italian and Northern humanism, secularism, the printing press, and Portuguese/Spanish navigational developments leading to global trans-oceanic voyages.",
+                    "standards": ["D2.His.1.9-12", "D2.Geo.2.9-12"]
+                },
+                {
+                    "letter": "B",
+                    "title": "The Columbian Exchange & Transatlantic Trade Systems",
+                    "description": "Analyzes the biological and cultural transfers of crops, livestock, and pathogens between the Old and New Worlds, the demographic collapse of Indigenous Americans, and the horrific Middle Passage and transatlantic trade.",
+                    "standards": ["D2.Geo.9.9-12", "D2.Eco.3.9-12", "D2.His.11.9-12"]
+                },
+                {
+                    "letter": "C",
+                    "title": "The Scientific Revolution & Enlightenment Thought",
+                    "description": "Traces the shift toward empirical observation (Copernicus, Galileo, Newton) and social contract philosophy (Locke, Montesquieu, Rousseau, Wollstonecraft) questioning royal divine right and championing natural rights.",
+                    "standards": ["D2.His.5.9-12", "D2.Civ.2.9-12"]
+                },
+                {
+                    "letter": "D",
+                    "title": "The Atlantic Revolutions: American, French & Haitian",
+                    "description": "Compares revolutionary movements inspired by Enlightenment ideals, analyzing the overthrow of monarchies, the Haitian Revolution's successful anti-slavery rebellion under Louverture, and the rise of constitutional governance.",
+                    "standards": ["D2.Civ.8.9-12", "D2.His.16.9-12"]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 4,
+            "title": "Industrialization, Imperialism & Modern Global Order",
+            "description": "Examines the transformative impact of the Industrial Revolution, 19th-century imperial expansion, anti-colonial resistance, world ideological conflicts, and contemporary global interconnectedness.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "The Industrial Revolution & Socioeconomic Transformations",
+                    "description": "Studies the transition to fossil fuel steam power, textile mechanization, factory labor systems, rapid urban growth, and the ideological debate between laissez-faire capitalism (Smith) and socialism/Marxism.",
+                    "standards": ["D2.Eco.4.9-12", "D2.His.2.9-12"]
+                },
+                {
+                    "letter": "B",
+                    "title": "The Age of Imperialism & Anti-Colonial Resistance",
+                    "description": "Critiques European and American imperial colonization in Africa (Scramble for Africa), India, and Southeast Asia driven by raw materials, examining Indigenous resistance movements and lasting post-colonial legacies.",
+                    "standards": ["D2.Geo.11.9-12", "D2.His.14.9-12"]
+                },
+                {
+                    "letter": "C",
+                    "title": "20th-Century Global Conflicts & Human Rights Declarations",
+                    "description": "Surveys the causes and global impacts of World War I, totalitarianism, World War II, the Holocaust, the founding of the United Nations, and the 1948 Universal Declaration of Human Rights.",
+                    "standards": ["D2.Civ.12.9-12", "D2.His.15.9-12"]
+                },
+                {
+                    "letter": "D",
+                    "title": "Contemporary Globalization & Civic Responsibility",
+                    "description": "Evaluates modern geopolitical alliances, international trade agreements, digital information networks, global environmental accords, and the duties of active global citizenship in the 21st century.",
+                    "standards": ["D2.Civ.14.9-12", "D2.Eco.15.9-12", "D2.Geo.12.9-12"]
+                }
+            ]
+        }
+    ]
+}

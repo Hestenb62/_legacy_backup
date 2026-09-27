@@ -1,0 +1,143 @@
+{
+    "grade": "Grade 2",
+    "subject": "math",
+    "name": "Mathematics",
+    "course": "Multi-Digit Addition, Subtraction & Foundations of Multiplication",
+    "title": "Grade 2 Mathematics: Multi-Digit Addition, Subtraction & Foundations of Multiplication",
+    "icon": "fas fa-calculator",
+    "color": "#2563eb",
+    "overview": "Grade 2 mathematics deepens students' conceptual understanding of place value, arithmetic operations, algebraic thinking, measurement, and geometry through rigorous problem-solving routines.",
+    "competencies": [
+        "Demonstrate computational fluency and conceptual flexibility across grade-level operations.",
+        "Apply visual models, tape diagrams, and equations to represent and solve multi-step contextual word problems.",
+        "Analyze geometric shapes, measurement units, and spatial relationships.",
+        "Construct viable mathematical arguments and critique the reasoning of peers."
+    ],
+    "modules": [
+        {
+            "moduleNumber": 1,
+            "title": "Sums and Differences to 100",
+            "description": "Building mental math fluency with tens and ones, using number lines and tape diagrams to solve word problems within 100.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Make a Ten Strategies Within 100",
+                    "description": "Using compensation and decompose-to-ten mental strategies to add and subtract.",
+                    "standards": [
+                        "2.OA.1",
+                        "2.OA.2",
+                        "2.NBT.5"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Tape Diagrams and Two-Step Word Problems",
+                    "description": "Representing comparison problems with visual tape diagrams and multiple steps.",
+                    "standards": [
+                        "2.OA.1"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 2,
+            "title": "Addition and Subtraction of Length Units",
+            "description": "Measuring lengths using standard metric (centimeters, meters) and customary (inches, feet) tools, and plotting line plots.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Measuring and Estimating with Centimeters and Meters",
+                    "description": "Using rulers, meter sticks, and tape measures to find lengths and estimate.",
+                    "standards": [
+                        "2.MD.1",
+                        "2.MD.3"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Comparing Lengths and Line Plots",
+                    "description": "Finding the difference in length between two objects and graphing measurement data.",
+                    "standards": [
+                        "2.MD.4",
+                        "2.MD.5",
+                        "2.MD.9"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 3,
+            "title": "Place Value, Counting, and Comparison of Numbers to 1,000",
+            "description": "Understanding hundreds, tens, and ones in base ten, reading and writing numbers in expanded and standard form to 1000.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Bundles of 100 and Base-Ten Structure",
+                    "description": "Representing three-digit values with place value disks, blocks, and expanded form.",
+                    "standards": [
+                        "2.NBT.1",
+                        "2.NBT.2",
+                        "2.NBT.3"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Comparing Numbers to 1,000",
+                    "description": "Comparing three-digit numbers based on meanings of hundreds, tens, and ones digits.",
+                    "standards": [
+                        "2.NBT.4"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 4,
+            "title": "Addition and Subtraction Within 1,000 with Word Problems",
+            "description": "Adding and subtracting three-digit numbers with regrouping across multiple places using vertical algorithm and place value charts.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Vertical Addition with Composing Tens and Hundreds",
+                    "description": "Carrying and bundling 10 ones for a ten, and 10 tens for a hundred.",
+                    "standards": [
+                        "2.NBT.7",
+                        "2.NBT.8"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Vertical Subtraction with Unbundling",
+                    "description": "Borrowing and decomposing a hundred into 10 tens, and a ten into 10 ones.",
+                    "standards": [
+                        "2.NBT.7",
+                        "2.NBT.9"
+                    ]
+                }
+            ]
+        },
+        {
+            "moduleNumber": 5,
+            "title": "Foundations of Multiplication: Equal Groups and Arrays",
+            "description": "Working with equal groups of objects, rectangular arrays, repeated addition, and introducing odd and even numbers.",
+            "topics": [
+                {
+                    "letter": "A",
+                    "title": "Odd and Even Numbers",
+                    "description": "Pairing objects and writing equations with two equal addends to determine parity.",
+                    "standards": [
+                        "2.OA.3"
+                    ]
+                },
+                {
+                    "letter": "B",
+                    "title": "Rectangular Arrays and Repeated Addition",
+                    "description": "Partitioning rectangles into rows and columns and finding total sums.",
+                    "standards": [
+                        "2.OA.4",
+                        "2.G.2"
+                    ]
+                }
+            ]
+        }
+    ]
+}
