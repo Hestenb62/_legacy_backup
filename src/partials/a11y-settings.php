@@ -20,6 +20,47 @@
             </div>
             
             <div class="settings-section">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 0.5rem;">
+                    <h3 class="settings-section-title" style="margin-bottom:0;">Color Palette</h3>
+                    <a href="/pages/settings.php#theme-colors" style="font-size:0.75rem; color:var(--color-primary); font-weight:600; text-decoration:none;">Custom &rarr;</a>
+                </div>
+                <div class="settings-theme-grid" style="grid-template-columns: repeat(4, 1fr); gap: 0.35rem;">
+                    <button type="button" class="settings-theme-btn" onclick="updateThemeColors('default')" title="Indigo Classic" aria-label="Indigo Classic palette" style="display:flex; align-items:center; justify-content:center; gap:3px; padding: 0.5rem 0.25rem;">
+                        <span style="width:10px; height:10px; border-radius:50%; background:#4f46e5; display:inline-block;"></span>
+                        <span style="width:10px; height:10px; border-radius:50%; background:#ec4899; display:inline-block;"></span>
+                    </button>
+                    <button type="button" class="settings-theme-btn" onclick="updateThemeColors('ocean')" title="Ocean Sapphire" aria-label="Ocean Sapphire palette" style="display:flex; align-items:center; justify-content:center; gap:3px; padding: 0.5rem 0.25rem;">
+                        <span style="width:10px; height:10px; border-radius:50%; background:#0284c7; display:inline-block;"></span>
+                        <span style="width:10px; height:10px; border-radius:50%; background:#0d9488; display:inline-block;"></span>
+                    </button>
+                    <button type="button" class="settings-theme-btn" onclick="updateThemeColors('emerald')" title="Emerald Forest" aria-label="Emerald Forest palette" style="display:flex; align-items:center; justify-content:center; gap:3px; padding: 0.5rem 0.25rem;">
+                        <span style="width:10px; height:10px; border-radius:50%; background:#059669; display:inline-block;"></span>
+                        <span style="width:10px; height:10px; border-radius:50%; background:#10b981; display:inline-block;"></span>
+                    </button>
+                    <button type="button" class="settings-theme-btn" onclick="updateThemeColors('sunset')" title="Sunset Amber" aria-label="Sunset Amber palette" style="display:flex; align-items:center; justify-content:center; gap:3px; padding: 0.5rem 0.25rem;">
+                        <span style="width:10px; height:10px; border-radius:50%; background:#ea580c; display:inline-block;"></span>
+                        <span style="width:10px; height:10px; border-radius:50%; background:#f59e0b; display:inline-block;"></span>
+                    </button>
+                    <button type="button" class="settings-theme-btn" onclick="updateThemeColors('amethyst')" title="Royal Amethyst" aria-label="Royal Amethyst palette" style="display:flex; align-items:center; justify-content:center; gap:3px; padding: 0.5rem 0.25rem;">
+                        <span style="width:10px; height:10px; border-radius:50%; background:#7c3aed; display:inline-block;"></span>
+                        <span style="width:10px; height:10px; border-radius:50%; background:#c084fc; display:inline-block;"></span>
+                    </button>
+                    <button type="button" class="settings-theme-btn" onclick="updateThemeColors('ruby')" title="Crimson Ruby" aria-label="Crimson Ruby palette" style="display:flex; align-items:center; justify-content:center; gap:3px; padding: 0.5rem 0.25rem;">
+                        <span style="width:10px; height:10px; border-radius:50%; background:#e11d48; display:inline-block;"></span>
+                        <span style="width:10px; height:10px; border-radius:50%; background:#fb7185; display:inline-block;"></span>
+                    </button>
+                    <button type="button" class="settings-theme-btn" onclick="updateThemeColors('teal')" title="Teal Wave" aria-label="Teal Wave palette" style="display:flex; align-items:center; justify-content:center; gap:3px; padding: 0.5rem 0.25rem;">
+                        <span style="width:10px; height:10px; border-radius:50%; background:#0d9488; display:inline-block;"></span>
+                        <span style="width:10px; height:10px; border-radius:50%; background:#14b8a6; display:inline-block;"></span>
+                    </button>
+                    <button type="button" class="settings-theme-btn" onclick="updateThemeColors('cyber')" title="Cyber Neon" aria-label="Cyber Neon palette" style="display:flex; align-items:center; justify-content:center; gap:3px; padding: 0.5rem 0.25rem;">
+                        <span style="width:10px; height:10px; border-radius:50%; background:#2563eb; display:inline-block;"></span>
+                        <span style="width:10px; height:10px; border-radius:50%; background:#f43f5e; display:inline-block;"></span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="settings-section">
                 <label for="panel-font" class="settings-section-title" style="display:block;">Font</label>
                 <select id="panel-font" name="panel-font" aria-label="Font family selection" onchange="updateGlobalSetting('fontFamily', this.value)" class="settings-select">
                     <option value="Outfit">Outfit (Modern)</option>

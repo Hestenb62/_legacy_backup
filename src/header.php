@@ -73,6 +73,35 @@ if (! defined('HL_SITE_VERSION_SUMMARY')) {
                         if (parsed.theme) {
                             document.documentElement.setAttribute('data-theme', parsed.theme);
                         }
+                        if (parsed.theme !== 'high-contrast' && parsed.primaryColor) {
+                            const p = parsed.primaryColor;
+                            const s = parsed.secondaryColor || '#ec4899';
+                            const a = parsed.accentColor || '#06b6d4';
+                            const pHover = parsed.primaryHover || p;
+                            const sHover = parsed.secondaryHover || s;
+                            const aHover = parsed.accentHover || a;
+
+                            document.documentElement.style.setProperty('--color-primary', p);
+                            document.documentElement.style.setProperty('--color-link', p);
+
+                            const st = document.createElement('style');
+                            st.id = 'hl-dynamic-theme-style';
+                            st.textContent = `
+                                :root, html, body, [data-theme], .dark, .midnight, .sepia, .light {
+                                    --color-primary: ${p} !important;
+                                    --color-primary-hover: ${pHover} !important;
+                                    --color-secondary: ${s} !important;
+                                    --color-secondary-hover: ${sHover} !important;
+                                    --color-accent: ${a} !important;
+                                    --color-accent-hover: ${aHover} !important;
+                                    --color-link: ${p} !important;
+                                }
+                                .text-primary { color: ${p} !important; }
+                                .bg-primary { background-color: ${p} !important; }
+                                .border-primary { border-color: ${p} !important; }
+                            `;
+                            (document.head || document.documentElement).appendChild(st);
+                        }
                     }
                 } catch (e) { }
             })();

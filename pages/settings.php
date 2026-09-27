@@ -3,16 +3,19 @@ $pageTitle       = "Accessibility Settings - Hesten's Learning";
 $pageDescription = "Customize your learning experience with advanced accessibility tools, fonts, and themes.";
 include '../src/header.php';
 ?>
-<link rel="stylesheet" href="/assets/css/pages/settings.css">
+<link rel="stylesheet" href="<?= assetVersion('/assets/css/pages/settings.css') ?>">
 
 <main id="main-content" class="page-content-wrapper settings-page py-12">
 
     <header class="settings-header">
+        <div class="settings-header-badge">
+            <i class="fas fa-sliders-h"></i> System Preferences & Accessibility
+        </div>
         <h1 class="page-title">
-            <i class="fas fa-sliders-h text-primary mr-3"></i> Accessibility & Preferences
+            <span class="page-title-icon"><i class="fas fa-palette"></i></span> Settings & Experience Studio
         </h1>
         <p class="page-subtitle">
-            Customize Hesten's Learning to match your unique needs. Your preferences are saved automatically.
+            Tailor Hesten's Learning platform to your visual preferences, reading ergonomics, and accessibility requirements. Changes save and synchronize in real-time across all devices.
         </p>
     </header>
 
@@ -21,10 +24,11 @@ include '../src/header.php';
         <!-- SETTINGS SIDEBAR (Navigation) -->
         <aside class="settings-sidebar" style="animation-delay: 0.1s;">
             <nav class="settings-nav-panel">
+                <div class="settings-nav-header"><i class="fas fa-compass mr-1"></i> Quick Navigation</div>
                 <ul class="settings-nav-list">
                     <li>
-                        <a href="#visuals" class="settings-nav-link">
-                            <div class="settings-nav-icon settings-nav-icon-blue">
+                        <a href="#visuals" class="settings-nav-link active">
+                            <div class="settings-nav-icon">
                                 <i class="fas fa-eye"></i>
                             </div>
                             Visuals & Themes
@@ -32,7 +36,7 @@ include '../src/header.php';
                     </li>
                     <li>
                         <a href="#academic" class="settings-nav-link">
-                            <div class="settings-nav-icon settings-nav-icon-emerald">
+                            <div class="settings-nav-icon">
                                 <i class="fas fa-graduation-cap"></i>
                             </div>
                             Curriculum & Path
@@ -40,7 +44,7 @@ include '../src/header.php';
                     </li>
                     <li>
                         <a href="#typography" class="settings-nav-link">
-                            <div class="settings-nav-icon settings-nav-icon-purple">
+                            <div class="settings-nav-icon">
                                 <i class="fas fa-font"></i>
                             </div>
                             Typography
@@ -48,7 +52,7 @@ include '../src/header.php';
                     </li>
                     <li>
                         <a href="#tools" class="settings-nav-link">
-                            <div class="settings-nav-icon settings-nav-icon-teal">
+                            <div class="settings-nav-icon">
                                 <i class="fas fa-toolbox"></i>
                             </div>
                             Cognitive Tools
@@ -56,10 +60,10 @@ include '../src/header.php';
                     </li>
                     <li>
                         <a href="#data" class="settings-nav-link">
-                            <div class="settings-nav-icon settings-nav-icon-rose">
+                            <div class="settings-nav-icon">
                                 <i class="fas fa-database"></i>
                             </div>
-                            Data & Offline Storage
+                            Data & Storage
                         </a>
                     </li>
                 </ul>
@@ -78,30 +82,203 @@ include '../src/header.php';
                 <div class="mb-8">
                     <label class="settings-label">Color Theme</label>
                     <div class="settings-grid-3">
-                        <button onclick="updateGlobalSetting('theme', 'light')" class="settings-card-btn theme-light-btn">
+                        <button type="button" onclick="updateGlobalSetting('theme', 'light')" class="settings-card-btn theme-light-btn" aria-selected="false">
                             <i class="fas fa-sun"></i>
                             <span>Light</span>
                         </button>
 
-                        <button onclick="updateGlobalSetting('theme', 'dark')" class="settings-card-btn theme-dark-btn">
+                        <button type="button" onclick="updateGlobalSetting('theme', 'dark')" class="settings-card-btn theme-dark-btn" aria-selected="false">
                             <i class="fas fa-moon"></i>
                             <span>Dark</span>
                         </button>
 
-                        <button onclick="updateGlobalSetting('theme', 'midnight')" class="settings-card-btn theme-midnight-btn">
+                        <button type="button" onclick="updateGlobalSetting('theme', 'midnight')" class="settings-card-btn theme-midnight-btn" aria-selected="false">
                             <i class="fas fa-star"></i>
                             <span>Midnight</span>
                         </button>
 
-                        <button onclick="updateGlobalSetting('theme', 'sepia')" class="settings-card-btn theme-sepia-btn">
+                        <button type="button" onclick="updateGlobalSetting('theme', 'sepia')" class="settings-card-btn theme-sepia-btn" aria-selected="false">
                             <i class="fas fa-coffee"></i>
                             <span>Sepia</span>
                         </button>
 
-                        <button onclick="updateGlobalSetting('theme', 'high-contrast')" class="settings-card-btn theme-contrast-btn">
+                        <button type="button" onclick="updateGlobalSetting('theme', 'high-contrast')" class="settings-card-btn theme-contrast-btn" aria-selected="false">
                             <i class="fas fa-adjust"></i>
                             <span>Contrast</span>
                         </button>
+                    </div>
+                </div>
+
+                <!-- THEME COLOR PALETTES -->
+                <div class="mb-8" id="theme-colors">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                        <label class="settings-label" style="margin-bottom: 0;">Theme Color Palette</label>
+                        <span class="settings-palette-badge"><i class="fas fa-magic"></i> Live Sync</span>
+                    </div>
+                    <p class="settings-sync-desc" style="margin-bottom: 1rem;">
+                        Select a curated accessible color palette or customize brand primary, secondary, and accent colors for the platform.
+                    </p>
+
+                    <div class="settings-palette-grid" role="radiogroup" aria-label="Theme Color Palettes">
+                        <button type="button" onclick="selectColorPreset('default')" id="palette-btn-default" class="settings-palette-card" role="radio" aria-checked="false" aria-selected="false" aria-label="Indigo Classic palette">
+                            <div class="settings-palette-ribbon" style="background: linear-gradient(90deg, #4f46e5, #ec4899, #06b6d4);"></div>
+                            <div class="settings-palette-swatches">
+                                <span class="settings-palette-dot" style="background-color: #4f46e5;" title="Primary: #4F46E5"></span>
+                                <span class="settings-palette-dot" style="background-color: #ec4899;" title="Secondary: #EC4899"></span>
+                                <span class="settings-palette-dot" style="background-color: #06b6d4;" title="Accent: #06B6D4"></span>
+                            </div>
+                            <span class="settings-palette-name">Indigo Classic</span>
+                            <span class="settings-palette-desc">Signature violet-indigo brand</span>
+                        </button>
+
+                        <button type="button" onclick="selectColorPreset('ocean')" id="palette-btn-ocean" class="settings-palette-card" role="radio" aria-checked="false" aria-selected="false" aria-label="Ocean Sapphire palette">
+                            <div class="settings-palette-ribbon" style="background: linear-gradient(90deg, #0284c7, #0d9488, #38bdf8);"></div>
+                            <div class="settings-palette-swatches">
+                                <span class="settings-palette-dot" style="background-color: #0284c7;" title="Primary: #0284C7"></span>
+                                <span class="settings-palette-dot" style="background-color: #0d9488;" title="Secondary: #0D9488"></span>
+                                <span class="settings-palette-dot" style="background-color: #38bdf8;" title="Accent: #38BDF8"></span>
+                            </div>
+                            <span class="settings-palette-name">Ocean Sapphire</span>
+                            <span class="settings-palette-desc">Deep azure and coastal cyan</span>
+                        </button>
+
+                        <button type="button" onclick="selectColorPreset('emerald')" id="palette-btn-emerald" class="settings-palette-card" role="radio" aria-checked="false" aria-selected="false" aria-label="Emerald Forest palette">
+                            <div class="settings-palette-ribbon" style="background: linear-gradient(90deg, #059669, #0284c7, #10b981);"></div>
+                            <div class="settings-palette-swatches">
+                                <span class="settings-palette-dot" style="background-color: #059669;" title="Primary: #059669"></span>
+                                <span class="settings-palette-dot" style="background-color: #0284c7;" title="Secondary: #0284C7"></span>
+                                <span class="settings-palette-dot" style="background-color: #10b981;" title="Accent: #10B981"></span>
+                            </div>
+                            <span class="settings-palette-name">Emerald Forest</span>
+                            <span class="settings-palette-desc">Calming green for focus</span>
+                        </button>
+
+                        <button type="button" onclick="selectColorPreset('sunset')" id="palette-btn-sunset" class="settings-palette-card" role="radio" aria-checked="false" aria-selected="false" aria-label="Sunset Amber palette">
+                            <div class="settings-palette-ribbon" style="background: linear-gradient(90deg, #ea580c, #db2777, #f59e0b);"></div>
+                            <div class="settings-palette-swatches">
+                                <span class="settings-palette-dot" style="background-color: #ea580c;" title="Primary: #EA580C"></span>
+                                <span class="settings-palette-dot" style="background-color: #db2777;" title="Secondary: #DB2777"></span>
+                                <span class="settings-palette-dot" style="background-color: #f59e0b;" title="Accent: #F59E0B"></span>
+                            </div>
+                            <span class="settings-palette-name">Sunset Amber</span>
+                            <span class="settings-palette-desc">Warm energetic citrus tones</span>
+                        </button>
+
+                        <button type="button" onclick="selectColorPreset('amethyst')" id="palette-btn-amethyst" class="settings-palette-card" role="radio" aria-checked="false" aria-selected="false" aria-label="Royal Amethyst palette">
+                            <div class="settings-palette-ribbon" style="background: linear-gradient(90deg, #7c3aed, #db2777, #c084fc);"></div>
+                            <div class="settings-palette-swatches">
+                                <span class="settings-palette-dot" style="background-color: #7c3aed;" title="Primary: #7C3AED"></span>
+                                <span class="settings-palette-dot" style="background-color: #db2777;" title="Secondary: #DB2777"></span>
+                                <span class="settings-palette-dot" style="background-color: #c084fc;" title="Accent: #C084FC"></span>
+                            </div>
+                            <span class="settings-palette-name">Royal Amethyst</span>
+                            <span class="settings-palette-desc">Regal violet and vivid magenta</span>
+                        </button>
+
+                        <button type="button" onclick="selectColorPreset('ruby')" id="palette-btn-ruby" class="settings-palette-card" role="radio" aria-checked="false" aria-selected="false" aria-label="Crimson Ruby palette">
+                            <div class="settings-palette-ribbon" style="background: linear-gradient(90deg, #e11d48, #7c3aed, #fb7185);"></div>
+                            <div class="settings-palette-swatches">
+                                <span class="settings-palette-dot" style="background-color: #e11d48;" title="Primary: #E11D48"></span>
+                                <span class="settings-palette-dot" style="background-color: #7c3aed;" title="Secondary: #7C3AED"></span>
+                                <span class="settings-palette-dot" style="background-color: #fb7185;" title="Accent: #FB7185"></span>
+                            </div>
+                            <span class="settings-palette-name">Crimson Ruby</span>
+                            <span class="settings-palette-desc">Bold expressive crimson-rose</span>
+                        </button>
+
+                        <button type="button" onclick="selectColorPreset('teal')" id="palette-btn-teal" class="settings-palette-card" role="radio" aria-checked="false" aria-selected="false" aria-label="Teal Wave palette">
+                            <div class="settings-palette-ribbon" style="background: linear-gradient(90deg, #0d9488, #4f46e5, #14b8a6);"></div>
+                            <div class="settings-palette-swatches">
+                                <span class="settings-palette-dot" style="background-color: #0d9488;" title="Primary: #0D9488"></span>
+                                <span class="settings-palette-dot" style="background-color: #4f46e5;" title="Secondary: #4F46E5"></span>
+                                <span class="settings-palette-dot" style="background-color: #14b8a6;" title="Accent: #14B8A6"></span>
+                            </div>
+                            <span class="settings-palette-name">Teal Wave</span>
+                            <span class="settings-palette-desc">Balanced aquamarine and indigo</span>
+                        </button>
+
+                        <button type="button" onclick="selectColorPreset('cyber')" id="palette-btn-cyber" class="settings-palette-card" role="radio" aria-checked="false" aria-selected="false" aria-label="Cyber Neon palette">
+                            <div class="settings-palette-ribbon" style="background: linear-gradient(90deg, #2563eb, #f43f5e, #06b6d4);"></div>
+                            <div class="settings-palette-swatches">
+                                <span class="settings-palette-dot" style="background-color: #2563eb;" title="Primary: #2563EB"></span>
+                                <span class="settings-palette-dot" style="background-color: #f43f5e;" title="Secondary: #F43F5E"></span>
+                                <span class="settings-palette-dot" style="background-color: #06b6d4;" title="Accent: #06B6D4"></span>
+                            </div>
+                            <span class="settings-palette-name">Cyber Neon</span>
+                            <span class="settings-palette-desc">High-voltage electric blue</span>
+                        </button>
+                    </div>
+
+                    <!-- CUSTOM COLOR PICKERS BOX -->
+                    <div class="settings-custom-colors-box">
+                        <div class="settings-custom-colors-header">
+                            <h3 class="settings-custom-colors-title">
+                                <i class="fas fa-eye-dropper text-primary"></i> Custom Color Studio
+                            </h3>
+                            <button type="button" onclick="resetThemeColorsUI()" class="settings-reset-colors-btn" title="Reset theme colors to default">
+                                <i class="fas fa-undo"></i> Reset to Default
+                            </button>
+                        </div>
+
+                        <!-- Live 3-Color Gradient Preview Bar -->
+                        <div id="custom-gradient-bar" class="settings-custom-gradient-bar" title="Live gradient preview of your theme colors"></div>
+
+                        <div class="settings-colors-grid">
+                            <!-- Primary Color Card -->
+                            <div class="settings-color-card">
+                                <div class="settings-color-card-title">
+                                    <span>Primary Brand</span>
+                                    <span id="primary-swatch-badge" class="settings-palette-badge">Main</span>
+                                </div>
+                                <div class="settings-color-input-group">
+                                    <input type="color" id="custom-picker-primary" aria-label="Primary Brand Color Picker" class="settings-native-color-picker" value="#4f46e5" oninput="onCustomColorInput('primary', this.value)">
+                                    <input type="text" id="custom-hex-primary" aria-label="Primary Brand Hex Code" class="settings-hex-input" value="#4F46E5" maxlength="7" onchange="onCustomHexChange('primary', this.value)">
+                                </div>
+                                <span class="settings-slider-ticks" style="margin: 0;">Buttons, primary links, active badges</span>
+                            </div>
+
+                            <!-- Secondary Color Card -->
+                            <div class="settings-color-card">
+                                <div class="settings-color-card-title">
+                                    <span>Secondary Brand</span>
+                                    <span id="secondary-swatch-badge" class="settings-palette-badge">Secondary</span>
+                                </div>
+                                <div class="settings-color-input-group">
+                                    <input type="color" id="custom-picker-secondary" aria-label="Secondary Color Picker" class="settings-native-color-picker" value="#ec4899" oninput="onCustomColorInput('secondary', this.value)">
+                                    <input type="text" id="custom-hex-secondary" aria-label="Secondary Hex Code" class="settings-hex-input" value="#EC4899" maxlength="7" onchange="onCustomHexChange('secondary', this.value)">
+                                </div>
+                                <span class="settings-slider-ticks" style="margin: 0;">Badges, secondary highlights, tags</span>
+                            </div>
+
+                            <!-- Accent Color Card -->
+                            <div class="settings-color-card">
+                                <div class="settings-color-card-title">
+                                    <span>Vibrant Accent</span>
+                                    <span id="accent-swatch-badge" class="settings-palette-badge">Accent</span>
+                                </div>
+                                <div class="settings-color-input-group">
+                                    <input type="color" id="custom-picker-accent" aria-label="Accent Color Picker" class="settings-native-color-picker" value="#06b6d4" oninput="onCustomColorInput('accent', this.value)">
+                                    <input type="text" id="custom-hex-accent" aria-label="Accent Hex Code" class="settings-hex-input" value="#06B6D4" maxlength="7" onchange="onCustomHexChange('accent', this.value)">
+                                </div>
+                                <span class="settings-slider-ticks" style="margin: 0;">Focus rings, subtle cues, special pills</span>
+                            </div>
+                        </div>
+
+                        <!-- Real-time WCAG Accessibility Contrast Indicator -->
+                        <div class="settings-contrast-indicator">
+                            <div>
+                                <span style="font-weight: 700; font-size: 0.85rem; color: var(--color-text-main); display: block;">
+                                    <i class="fas fa-universal-access text-primary mr-1"></i> WCAG Accessibility Contrast Meter
+                                </span>
+                                <span style="font-size: 0.75rem; color: var(--color-text-muted);">
+                                    Evaluates primary text and button contrast against your current background.
+                                </span>
+                            </div>
+                            <div id="theme-contrast-badge" class="contrast-badge-pass">
+                                <i class="fas fa-check-circle"></i>
+                                <span id="theme-contrast-ratio-text">AA Pass (5.2:1)</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -130,9 +307,9 @@ include '../src/header.php';
                 <div class="mb-8">
                     <label class="settings-label">Active Curriculum</label>
                     <div class="settings-grid-3">
-                        <button onclick="updateGlobalSetting('curriculum', 'engageny')" id="curriculum-engageny-btn" class="settings-curriculum-btn">
+                        <button type="button" onclick="updateGlobalSetting('curriculum', 'engageny')" id="curriculum-engageny-btn" class="settings-curriculum-btn">
                             <div class="settings-curriculum-header">
-                                <div class="settings-curriculum-icon curr-icon-indigo">
+                                <div class="settings-curriculum-icon">
                                     <i class="fas fa-calculator"></i>
                                 </div>
                                 <span class="settings-curriculum-title">EngageNY / CC</span>
@@ -140,9 +317,9 @@ include '../src/header.php';
                             <p class="settings-curriculum-desc">Standard Common Core learning path focused on number structures and models.</p>
                         </button>
 
-                        <button onclick="updateGlobalSetting('curriculum', 'teks')" id="curriculum-teks-btn" class="settings-curriculum-btn">
+                        <button type="button" onclick="updateGlobalSetting('curriculum', 'teks')" id="curriculum-teks-btn" class="settings-curriculum-btn">
                             <div class="settings-curriculum-header">
-                                <div class="settings-curriculum-icon curr-icon-rose">
+                                <div class="settings-curriculum-icon">
                                     <i class="fas fa-star"></i>
                                 </div>
                                 <span class="settings-curriculum-title">Texas TEKS</span>
@@ -150,9 +327,9 @@ include '../src/header.php';
                             <p class="settings-curriculum-desc">Texas Essential Knowledge and Skills (TEKS) alignment and progression.</p>
                         </button>
 
-                        <button onclick="updateGlobalSetting('curriculum', 'custom')" id="curriculum-custom-btn" class="settings-curriculum-btn">
+                        <button type="button" onclick="updateGlobalSetting('curriculum', 'custom')" id="curriculum-custom-btn" class="settings-curriculum-btn">
                             <div class="settings-curriculum-header">
-                                <div class="settings-curriculum-icon curr-icon-emerald">
+                                <div class="settings-curriculum-icon">
                                     <i class="fas fa-gamepad"></i>
                                 </div>
                                 <span class="settings-curriculum-title">Hesten's Custom</span>
@@ -172,27 +349,27 @@ include '../src/header.php';
                 <div class="mb-8">
                     <label class="settings-label">Typeface</label>
                     <div class="settings-grid-2">
-                        <button onclick="updateGlobalSetting('fontFamily', 'Outfit')" class="settings-font-btn">
+                        <button type="button" onclick="updateGlobalSetting('fontFamily', 'Outfit')" class="settings-font-btn">
                             <span class="settings-font-name">Outfit</span>
                             <span class="settings-font-desc">Modern, clean, and friendly.</span>
                         </button>
-                        <button onclick="updateGlobalSetting('fontFamily', 'Inter')" class="settings-font-btn" style="font-family: 'Inter', sans-serif">
+                        <button type="button" onclick="updateGlobalSetting('fontFamily', 'Inter')" class="settings-font-btn" style="font-family: 'Inter', sans-serif">
                             <span class="settings-font-name">Inter</span>
                             <span class="settings-font-desc">Standard geometric sans-serif.</span>
                         </button>
-                        <button onclick="updateGlobalSetting('fontFamily', 'Lexend')" class="settings-font-btn" style="font-family: 'Lexend', sans-serif">
+                        <button type="button" onclick="updateGlobalSetting('fontFamily', 'Lexend')" class="settings-font-btn" style="font-family: 'Lexend', sans-serif">
                             <span class="settings-font-name">Lexend</span>
                             <span class="settings-font-desc">Proven to improve reading speed.</span>
                         </button>
-                        <button onclick="updateGlobalSetting('fontFamily', 'Open Dyslexic')" class="settings-font-btn" style="font-family: 'Open Dyslexic', sans-serif">
+                        <button type="button" onclick="updateGlobalSetting('fontFamily', 'Open Dyslexic')" class="settings-font-btn" style="font-family: 'Open Dyslexic', sans-serif">
                             <span class="settings-font-name">Open Dyslexic</span>
                             <span class="settings-font-desc">Weighted bottoms for dyslexia.</span>
                         </button>
-                        <button onclick="updateGlobalSetting('fontFamily', 'Comic Neue')" class="settings-font-btn" style="font-family: 'Comic Neue', cursive">
+                        <button type="button" onclick="updateGlobalSetting('fontFamily', 'Comic Neue')" class="settings-font-btn" style="font-family: 'Comic Neue', cursive">
                             <span class="settings-font-name">Comic Neue</span>
                             <span class="settings-font-desc">Playful and easy to read.</span>
                         </button>
-                        <button onclick="updateGlobalSetting('fontFamily', 'Roboto Mono')" class="settings-font-btn" style="font-family: 'Roboto Mono', monospace">
+                        <button type="button" onclick="updateGlobalSetting('fontFamily', 'Roboto Mono')" class="settings-font-btn" style="font-family: 'Roboto Mono', monospace">
                             <span class="settings-font-name">Monospace</span>
                             <span class="settings-font-desc">Good for coding and differentiation.</span>
                         </button>
@@ -237,7 +414,7 @@ include '../src/header.php';
                     <!-- Reading Guide -->
                     <div class="settings-toggle-card">
                         <div class="settings-toggle-info">
-                            <div class="settings-toggle-icon icon-blue">
+                            <div class="settings-toggle-icon">
                                 <i class="fas fa-align-justify"></i>
                             </div>
                             <div>
@@ -255,7 +432,7 @@ include '../src/header.php';
                     <!-- Large Cursor -->
                     <div class="settings-toggle-card">
                         <div class="settings-toggle-info">
-                            <div class="settings-toggle-icon icon-purple">
+                            <div class="settings-toggle-icon">
                                 <i class="fas fa-mouse-pointer"></i>
                             </div>
                             <div>
@@ -273,7 +450,7 @@ include '../src/header.php';
                     <!-- Hide Images -->
                     <div class="settings-toggle-card">
                         <div class="settings-toggle-info">
-                            <div class="settings-toggle-icon icon-rose">
+                            <div class="settings-toggle-icon">
                                 <i class="fas fa-image"></i>
                             </div>
                             <div>
@@ -291,7 +468,7 @@ include '../src/header.php';
                     <!-- Highlight Links -->
                     <div class="settings-toggle-card">
                         <div class="settings-toggle-info">
-                            <div class="settings-toggle-icon icon-yellow">
+                            <div class="settings-toggle-icon">
                                 <i class="fas fa-link"></i>
                             </div>
                             <div>
@@ -309,7 +486,7 @@ include '../src/header.php';
                     <!-- Highlight Headings -->
                     <div class="settings-toggle-card">
                         <div class="settings-toggle-info">
-                            <div class="settings-toggle-icon icon-orange">
+                            <div class="settings-toggle-icon">
                                 <i class="fas fa-heading"></i>
                             </div>
                             <div>
@@ -327,7 +504,7 @@ include '../src/header.php';
                     <!-- Text to Speech -->
                     <div class="settings-toggle-card">
                         <div class="settings-toggle-info">
-                            <div class="settings-toggle-icon icon-green">
+                            <div class="settings-toggle-icon">
                                 <i class="fas fa-volume-up"></i>
                             </div>
                             <div>
@@ -345,7 +522,7 @@ include '../src/header.php';
                     <!-- Show Permalinks -->
                     <div class="settings-toggle-card">
                         <div class="settings-toggle-info">
-                            <div class="settings-toggle-icon icon-indigo">
+                            <div class="settings-toggle-icon">
                                 <i class="fas fa-link"></i>
                             </div>
                             <div>
@@ -548,22 +725,35 @@ include '../src/header.php';
         <aside class="settings-preview-sidebar" style="animation-delay: 0.6s;">
             <div class="settings-sticky-wrapper">
                 <div class="settings-preview-card">
-                    <h3 class="settings-preview-label">Live Preview</h3>
+                    <div class="settings-preview-label">
+                        <span><i class="fas fa-eye mr-1"></i> Live Preview</span>
+                        <span class="settings-palette-badge"><i class="fas fa-sync-alt"></i> Reactive</span>
+                    </div>
                     <div class="settings-preview-content">
-                        <h4 class="settings-preview-heading">Alligators and crocodiles are distinct.</h4>
+                        <h4 class="settings-preview-heading">Reading Typography & Themes</h4>
                         <p class="settings-preview-body">
-                            This text demonstrates your current typography settings. Notice how the spacing, font
-                            weight, and size change to help you read better.
+                            Customize text size, line height, letter spacing, and accessible color palettes to maximize reading stamina and cognitive focus.
                         </p>
                         <div class="settings-preview-link-box">
-                            <a href="#" class="settings-preview-link">
-                                <i class="fas fa-link"></i> Sample Link
+                            <a href="#" onclick="return false;" class="settings-preview-link">
+                                <i class="fas fa-arrow-circle-right"></i> Dynamic Hyperlink Sample
                             </a>
+                        </div>
+
+                        <!-- Theme Colors Live Showcase -->
+                        <div class="settings-preview-theme-showcase">
+                            <button type="button" class="settings-preview-btn-primary" onclick="alert('Primary theme action is active!')" title="Sample primary action button">
+                                <i class="fas fa-check-circle"></i> Primary Action
+                            </button>
+                            <div class="settings-preview-pills-row">
+                                <span class="settings-preview-pill-secondary"><i class="fas fa-tag"></i> Secondary</span>
+                                <span class="settings-preview-tag-accent"><i class="fas fa-magic"></i> Vibrant Accent</span>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="settings-preview-status">
-                    <i class="fas fa-check-circle"></i> Changes saved automatically
+                    <i class="fas fa-check-circle"></i> Changes saved & synchronized automatically
                 </div>
             </div>
         </aside>
@@ -573,8 +763,85 @@ include '../src/header.php';
 
 <script>    // --- SETTINGS PAGE SYNC LOGIC ---
 
+    function selectColorPreset(presetKey) {
+        if (typeof window.updateThemeColors === 'function') {
+            window.updateThemeColors(presetKey);
+            syncPageUI(window.currentSettings || (typeof loadSettings === 'function' ? loadSettings() : null));
+        }
+    }
+
+    function onCustomColorInput(which, value) {
+        const hexInput = document.getElementById(`custom-hex-${which}`);
+        if (hexInput) hexInput.value = value.toUpperCase();
+        applyCustomColorsFromInputs();
+    }
+
+    function onCustomHexChange(which, value) {
+        let clean = value.trim();
+        if (!clean.startsWith('#')) clean = '#' + clean;
+        if (/^#[0-9A-Fa-f]{6}$/.test(clean)) {
+            const picker = document.getElementById(`custom-picker-${which}`);
+            if (picker) picker.value = clean;
+            applyCustomColorsFromInputs();
+        } else {
+            const current = (window.currentSettings && window.currentSettings[`${which}Color`]) || '#4F46E5';
+            const hexInput = document.getElementById(`custom-hex-${which}`);
+            if (hexInput) hexInput.value = current.toUpperCase();
+        }
+    }
+
+    function applyCustomColorsFromInputs() {
+        const pPicker = document.getElementById('custom-picker-primary');
+        const sPicker = document.getElementById('custom-picker-secondary');
+        const aPicker = document.getElementById('custom-picker-accent');
+
+        const primary = pPicker ? pPicker.value : '#4f46e5';
+        const secondary = sPicker ? sPicker.value : '#ec4899';
+        const accent = aPicker ? aPicker.value : '#06b6d4';
+
+        if (typeof window.updateThemeColors === 'function') {
+            window.updateThemeColors(null, primary, secondary, accent);
+            syncPageUI(window.currentSettings || (typeof loadSettings === 'function' ? loadSettings() : null));
+        }
+    }
+
+    function resetThemeColorsUI() {
+        if (typeof window.resetThemeColors === 'function') {
+            window.resetThemeColors();
+            syncPageUI(window.currentSettings || (typeof loadSettings === 'function' ? loadSettings() : null));
+        }
+    }
+
+    function updateContrastDisplay(primaryHex, theme) {
+        const bgMap = {
+            'light': '#ffffff',
+            'dark': '#151c2c',
+            'midnight': '#0f1524',
+            'sepia': '#faf8f5',
+            'high-contrast': '#000000'
+        };
+        const bgHex = bgMap[theme] || '#ffffff';
+        const calcFn = window.calculateContrastRatio || function() { return '4.50'; };
+        const ratio = parseFloat(calcFn(primaryHex, bgHex));
+
+        const badge = document.getElementById('theme-contrast-badge');
+        const text = document.getElementById('theme-contrast-ratio-text');
+        if (badge && text) {
+            if (ratio >= 4.5) {
+                badge.className = 'contrast-badge-pass';
+                badge.innerHTML = `<i class="fas fa-check-circle"></i> <span>AA Pass (${ratio}:1)</span>`;
+            } else if (ratio >= 3.0) {
+                badge.className = 'contrast-badge-warn';
+                badge.innerHTML = `<i class="fas fa-exclamation-triangle"></i> <span>Large Text Only (${ratio}:1)</span>`;
+            } else {
+                badge.className = 'contrast-badge-warn';
+                badge.innerHTML = `<i class="fas fa-times-circle"></i> <span>Low Contrast (${ratio}:1)</span>`;
+            }
+        }
+    }
+
     function syncPageUI(s) {
-        if (!s) s = loadSettings(); // Default to global load if not provided
+        if (!s) s = window.currentSettings || (typeof loadSettings === 'function' ? loadSettings() : {});
 
         // Sliders
         if (document.getElementById('saturation-slider')) {
@@ -610,6 +877,53 @@ include '../src/header.php';
                 btn.setAttribute('aria-selected', themeKey === activeTheme ? 'true' : 'false');
             }
         });
+
+        // Theme Color Palette UI Sync
+        const activePreset = s.themeColorPreset || 'default';
+        const presetKeys = ['default', 'ocean', 'emerald', 'sunset', 'amethyst', 'ruby', 'teal', 'cyber'];
+        presetKeys.forEach(pkey => {
+            const pbtn = document.getElementById(`palette-btn-${pkey}`);
+            if (pbtn) {
+                const isSel = (pkey === activePreset);
+                pbtn.setAttribute('aria-selected', isSel ? 'true' : 'false');
+                pbtn.setAttribute('aria-checked', isSel ? 'true' : 'false');
+            }
+        });
+
+        // Theme Custom Color Pickers Sync
+        const primaryColorVal = s.primaryColor || (s.theme === 'high-contrast' ? '#FFFF00' : '#4F46E5');
+        const secondaryColorVal = s.secondaryColor || (s.theme === 'high-contrast' ? '#00FFFF' : '#EC4899');
+        const accentColorVal = s.accentColor || (s.theme === 'high-contrast' ? '#FF00FF' : '#06B6D4');
+
+        const pPicker = document.getElementById('custom-picker-primary');
+        const pHex = document.getElementById('custom-hex-primary');
+        if (pPicker && pHex) {
+            pPicker.value = primaryColorVal;
+            pHex.value = primaryColorVal.toUpperCase();
+        }
+
+        const sPicker = document.getElementById('custom-picker-secondary');
+        const sHex = document.getElementById('custom-hex-secondary');
+        if (sPicker && sHex) {
+            sPicker.value = secondaryColorVal;
+            sHex.value = secondaryColorVal.toUpperCase();
+        }
+
+        const aPicker = document.getElementById('custom-picker-accent');
+        const aHex = document.getElementById('custom-hex-accent');
+        if (aPicker && aHex) {
+            aPicker.value = accentColorVal;
+            aHex.value = accentColorVal.toUpperCase();
+        }
+
+        // Update Live Gradient Bar
+        const gradBar = document.getElementById('custom-gradient-bar');
+        if (gradBar) {
+            gradBar.style.background = `linear-gradient(90deg, ${primaryColorVal}, ${secondaryColorVal}, ${accentColorVal})`;
+        }
+
+        // Real-Time WCAG Contrast Score Evaluation
+        updateContrastDisplay(primaryColorVal, activeTheme);
 
         // Font Selection UI Sync
         const activeFont = s.fontFamily || 'Outfit';
@@ -1145,6 +1459,31 @@ include '../src/header.php';
         window.addEventListener('settings-changed', (e) => {
             syncPageUI(e.detail);
         });
+
+        // Setup sidebar active nav scroll observer
+        if ('IntersectionObserver' in window) {
+            const navLinks = document.querySelectorAll('.settings-nav-link');
+            const sections = document.querySelectorAll('.settings-section');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.getAttribute('id');
+                        navLinks.forEach(link => {
+                            if (link.getAttribute('href') === `#${id}`) {
+                                link.classList.add('active');
+                                link.setAttribute('aria-current', 'true');
+                            } else {
+                                link.classList.remove('active');
+                                link.removeAttribute('aria-current');
+                            }
+                        });
+                    }
+                });
+            }, { rootMargin: '-10% 0px -70% 0px' });
+
+            sections.forEach(sec => observer.observe(sec));
+        }
     });
 </script>
 

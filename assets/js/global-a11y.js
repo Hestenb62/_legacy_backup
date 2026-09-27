@@ -7,6 +7,13 @@ const STORAGE_KEY = 'hl_accessibility_settings';
 
 const defaultSettings = {
     theme: 'light',
+    themeColorPreset: 'default',
+    primaryColor: '',
+    secondaryColor: '',
+    accentColor: '',
+    primaryHover: '',
+    secondaryHover: '',
+    accentHover: '',
     fontSize: 1.0,
     lineHeight: 1.6,
     fontFamily: 'Outfit',
@@ -102,6 +109,222 @@ window.announceA11y = announceA11y;
     }
 })();
 
+// Curated Accessible Theme Color Palettes
+const THEME_COLOR_PRESETS = {
+    'default': {
+        name: 'Indigo Classic',
+        primary: '#4f46e5',
+        secondary: '#ec4899',
+        accent: '#06b6d4',
+        description: 'Signature vibrant violet-indigo palette'
+    },
+    'ocean': {
+        name: 'Ocean Sapphire',
+        primary: '#0284c7',
+        secondary: '#0d9488',
+        accent: '#38bdf8',
+        description: 'Deep marine azure with fresh coastal cyan'
+    },
+    'emerald': {
+        name: 'Emerald Forest',
+        primary: '#059669',
+        secondary: '#0284c7',
+        accent: '#10b981',
+        description: 'Calming natural greens for focused reading'
+    },
+    'sunset': {
+        name: 'Sunset Amber',
+        primary: '#ea580c',
+        secondary: '#db2777',
+        accent: '#f59e0b',
+        description: 'Warm energetic blend of citrus and sun'
+    },
+    'amethyst': {
+        name: 'Royal Amethyst',
+        primary: '#7c3aed',
+        secondary: '#db2777',
+        accent: '#c084fc',
+        description: 'Rich regal purple with vivid magenta'
+    },
+    'ruby': {
+        name: 'Crimson Ruby',
+        primary: '#e11d48',
+        secondary: '#7c3aed',
+        accent: '#fb7185',
+        description: 'Bold expressive crimson and rose tones'
+    },
+    'teal': {
+        name: 'Teal Wave',
+        primary: '#0d9488',
+        secondary: '#4f46e5',
+        accent: '#14b8a6',
+        description: 'Balanced aquamarine with modern indigo accents'
+    },
+    'cyber': {
+        name: 'Cyber Neon',
+        primary: '#2563eb',
+        secondary: '#f43f5e',
+        accent: '#06b6d4',
+        description: 'High-energy electric blue and neon glow'
+    }
+};
+window.THEME_COLOR_PRESETS = THEME_COLOR_PRESETS;
+
+function adjustColorBrightness(hex, percent) {
+    if (!hex || typeof hex !== 'string') return hex;
+    const cleanHex = hex.replace('#', '');
+    if (cleanHex.length !== 6) return hex;
+    const num = parseInt(cleanHex, 16);
+    if (isNaN(num)) return hex;
+    let r = (num >> 16) + Math.round(255 * (percent / 100));
+    let g = ((num >> 8) & 0x00FF) + Math.round(255 * (percent / 100));
+    let b = (num & 0x0000FF) + Math.round(255 * (percent / 100));
+    r = Math.min(255, Math.max(0, r));
+    g = Math.min(255, Math.max(0, g));
+    b = Math.min(255, Math.max(0, b));
+    return `#${((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1)}`;
+}
+window.adjustColorBrightness = adjustColorBrightness;
+
+function calculateLuminance(hex) {
+    if (!hex || typeof hex !== 'string') return 0;
+    const cleanHex = hex.replace('#', '');
+    if (cleanHex.length !== 6) return 0;
+    const r = parseInt(cleanHex.substring(0, 2), 16) / 255;
+    const g = parseInt(cleanHex.substring(2, 4), 16) / 255;
+    const b = parseInt(cleanHex.substring(4, 6), 16) / 255;
+    const a = [r, g, b].map(v => (v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4)));
+    return a[0] * 0.2126 + a[1] * 0.7152 + a[2] * 0.0722;
+}
+window.calculateLuminance = calculateLuminance;
+
+function calculateContrastRatio(hex1, hex2) {
+    const l1 = calculateLuminance(hex1);
+    const l2 = calculateLuminance(hex2);
+    const lighter = Math.max(l1, l2);
+    const darker = Math.min(l1, l2);
+    return ((lighter + 0.05) / (darker + 0.05)).toFixed(2);
+}
+window.calculateContrastRatio = calculateContrastRatio;
+
+function applyDynamicThemeColors(s) {
+    if (!s) s = currentSettings || defaultSettings;
+    const isHighContrast = s.theme === 'high-contrast';
+    const head = document.head || document.getElementsByTagName('head')[0] || document.documentElement;
+    let styleEl = document.getElementById('hl-dynamic-theme-style');
+
+    if (isHighContrast || (!s.primaryColor && !s.secondaryColor && !s.accentColor)) {
+        if (styleEl) styleEl.remove();
+        const root = document.documentElement;
+        const body = document.body;
+        ['--color-primary', '--color-primary-hover', '--color-secondary', '--color-secondary-hover', '--color-accent', '--color-accent-hover', '--color-link'].forEach(p => {
+            if (root) root.style.removeProperty(p);
+            if (body) body.style.removeProperty(p);
+        });
+        return;
+    }
+
+    const primary = s.primaryColor || '#4f46e5';
+    const secondary = s.secondaryColor || '#ec4899';
+    const accent = s.accentColor || '#06b6d4';
+    const isDark = s.theme === 'dark' || s.theme === 'midnight';
+    const pHover = s.primaryHover || adjustColorBrightness(primary, isDark ? 18 : -18);
+    const sHover = s.secondaryHover || adjustColorBrightness(secondary, isDark ? 18 : -18);
+    const aHover = s.accentHover || adjustColorBrightness(accent, isDark ? 18 : -18);
+
+    const root = document.documentElement;
+    const body = document.body;
+    [root, body].forEach(el => {
+        if (!el) return;
+        el.style.setProperty('--color-primary', primary, 'important');
+        el.style.setProperty('--color-primary-hover', pHover, 'important');
+        el.style.setProperty('--color-secondary', secondary, 'important');
+        el.style.setProperty('--color-secondary-hover', sHover, 'important');
+        el.style.setProperty('--color-accent', accent, 'important');
+        el.style.setProperty('--color-accent-hover', aHover, 'important');
+        el.style.setProperty('--color-link', primary, 'important');
+    });
+
+    if (!styleEl) {
+        styleEl = document.createElement('style');
+        styleEl.id = 'hl-dynamic-theme-style';
+        if (head) head.appendChild(styleEl);
+    }
+    styleEl.textContent = `
+        :root, html, body, [data-theme], .dark, .midnight, .sepia, .light {
+            --color-primary: ${primary} !important;
+            --color-primary-hover: ${pHover} !important;
+            --color-secondary: ${secondary} !important;
+            --color-secondary-hover: ${sHover} !important;
+            --color-accent: ${accent} !important;
+            --color-accent-hover: ${aHover} !important;
+            --color-link: ${primary} !important;
+        }
+        .text-primary { color: ${primary} !important; }
+        .bg-primary { background-color: ${primary} !important; }
+        .border-primary { border-color: ${primary} !important; }
+    `;
+}
+window.applyDynamicThemeColors = applyDynamicThemeColors;
+
+function updateThemeColors(presetKey, primary, secondary, accent) {
+    if (presetKey && THEME_COLOR_PRESETS[presetKey]) {
+        const p = THEME_COLOR_PRESETS[presetKey];
+        currentSettings.themeColorPreset = presetKey;
+        currentSettings.primaryColor = p.primary;
+        currentSettings.secondaryColor = p.secondary;
+        currentSettings.accentColor = p.accent;
+    } else {
+        currentSettings.themeColorPreset = 'custom';
+        if (primary) currentSettings.primaryColor = primary;
+        if (secondary) currentSettings.secondaryColor = secondary;
+        if (accent) currentSettings.accentColor = accent;
+    }
+
+    const isDark = currentSettings.theme === 'dark' || currentSettings.theme === 'midnight';
+    const percent = isDark ? 18 : -18;
+    if (currentSettings.primaryColor) {
+        currentSettings.primaryHover = adjustColorBrightness(currentSettings.primaryColor, percent);
+    }
+    if (currentSettings.secondaryColor) {
+        currentSettings.secondaryHover = adjustColorBrightness(currentSettings.secondaryColor, percent);
+    }
+    if (currentSettings.accentColor) {
+        currentSettings.accentHover = adjustColorBrightness(currentSettings.accentColor, percent);
+    }
+
+    window.currentSettings = currentSettings;
+    saveSettingsInternal();
+    applyDynamicThemeColors(currentSettings);
+    applySettings(currentSettings);
+
+    const name = (presetKey && THEME_COLOR_PRESETS[presetKey]) ? THEME_COLOR_PRESETS[presetKey].name : 'Custom';
+    announceA11y(`Theme colors updated to ${name} palette`);
+}
+window.updateThemeColors = updateThemeColors;
+
+function resetThemeColors() {
+    currentSettings.themeColorPreset = 'default';
+    currentSettings.primaryColor = '';
+    currentSettings.secondaryColor = '';
+    currentSettings.accentColor = '';
+    currentSettings.primaryHover = '';
+    currentSettings.secondaryHover = '';
+    currentSettings.accentHover = '';
+
+    window.currentSettings = currentSettings;
+    saveSettingsInternal();
+    applyDynamicThemeColors(currentSettings);
+    applySettings(currentSettings);
+    announceA11y('Theme colors reset to default');
+}
+window.resetThemeColors = resetThemeColors;
+
+function loadSettings() {
+    return currentSettings;
+}
+window.loadSettings = loadSettings;
+
 // Define functions globally
 function updateGlobalSetting(key, value) {
     currentSettings[key] = value;
@@ -156,7 +379,11 @@ function updateGlobalSetting(key, value) {
         fontSize: `Font size adjusted to ${value} rem`,
         lineHeight: `Line height adjusted to ${value}`,
         letterSpacing: `Letter spacing adjusted to ${value}`,
-        wordSpacing: `Word spacing adjusted to ${value}`
+        wordSpacing: `Word spacing adjusted to ${value}`,
+        themeColorPreset: `Theme palette set to ${value}`,
+        primaryColor: `Primary theme color changed to ${value}`,
+        secondaryColor: `Secondary theme color changed to ${value}`,
+        accentColor: `Accent theme color changed to ${value}`
     };
     if (friendlyAnnouncements[key]) {
         announceA11y(friendlyAnnouncements[key]);
@@ -219,6 +446,9 @@ function applySettings(s) {
     r.classList.add(s.theme);
     b.classList.add(s.theme);
     r.setAttribute('data-theme', s.theme);
+
+    // --- Custom Theme Colors & Palette Overrides ---
+    applyDynamicThemeColors(s);
 
     // --- Toggles ---
     const toggleClass = (el, cls, cond) => {

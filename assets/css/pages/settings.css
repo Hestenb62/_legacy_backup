@@ -1,56 +1,152 @@
-/* assets/css/pages/settings.css */
+/* assets/css/pages/settings.css
+   Modern, Ultra-Accessible, Dynamic Theme Settings Experience
+*/
 
 @layer components {
+  /* ==========================================================================
+     1. Page Container & Hero Header
+     ========================================================================== */
+  .settings-page {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+  }
+
   .settings-page .settings-header {
-    text-align: center;
-    margin-bottom: 2.5rem;
-    animation: rise-in 0.5s ease-out forwards;
+    margin-bottom: 2.25rem;
+    position: relative;
+    padding: 2rem 2.25rem;
+    border-radius: var(--radius-3xl);
+    background: linear-gradient(135deg, 
+      color-mix(in srgb, var(--color-primary) 10%, var(--color-bg-surface)), 
+      color-mix(in srgb, var(--color-secondary) 8%, var(--color-bg-surface))
+    );
+    border: 1px solid color-mix(in srgb, var(--color-primary) 20%, var(--color-border));
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+    animation: rise-in 0.4s ease-out forwards;
   }
 
-  @media(min-width: 768px) {
-    .settings-page .settings-header {
-      text-align: left;
-    }
+  .settings-page .settings-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 320px;
+    height: 320px;
+    background: radial-gradient(circle, color-mix(in srgb, var(--color-primary) 25%, transparent) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
   }
 
+  .settings-page .settings-header-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 0.85rem;
+    border-radius: var(--radius-full);
+    background: color-mix(in srgb, var(--color-primary) 15%, transparent);
+    color: var(--color-primary);
+    font-size: 0.775rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.85rem;
+    border: 1px solid color-mix(in srgb, var(--color-primary) 30%, transparent);
+    position: relative;
+    z-index: 1;
+  }
+
+  .settings-page .page-title {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: var(--color-text-main);
+    line-height: 1.2;
+    margin: 0 0 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .settings-page .page-title-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: var(--radius-xl);
+    background: var(--color-primary);
+    color: var(--color-text-inverse, #ffffff);
+    box-shadow: 0 4px 14px color-mix(in srgb, var(--color-primary) 40%, transparent);
+  }
+
+  .settings-page .page-subtitle {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--color-text-muted);
+    margin: 0;
+    max-width: 750px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ==========================================================================
+     2. Responsive 2-to-3 Column Layout
+     ========================================================================== */
   .settings-page .settings-layout {
     display: flex;
     flex-direction: column;
     gap: 2rem;
   }
 
-  @media(min-width: 1024px) {
+  @media (min-width: 1024px) {
     .settings-page .settings-layout {
       flex-direction: row;
+      align-items: flex-start;
     }
   }
 
+  /* Navigation Sidebar */
   .settings-page .settings-sidebar {
     width: 100%;
-    animation: rise-in 0.5s ease-out forwards;
-    animation-delay: 0.1s;
+    animation: rise-in 0.4s ease-out forwards;
+    animation-delay: 0.08s;
   }
 
-  @media(min-width: 1024px) {
+  @media (min-width: 1024px) {
     .settings-page .settings-sidebar {
-      width: 25%;
+      width: 260px;
+      flex-shrink: 0;
+      position: sticky;
+      top: 5rem;
     }
   }
 
   .settings-page .settings-nav-panel {
-    position: sticky;
-    top: 6rem;
     background-color: var(--color-bg-surface);
     border-radius: var(--radius-2xl);
-    box-shadow: var(--shadow-xl);
-    padding: 1.5rem;
+    box-shadow: var(--shadow-md);
+    padding: 1.25rem 1rem;
     border: 1px solid var(--color-border);
+  }
+
+  .settings-page .settings-nav-header {
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-muted);
+    padding: 0.5rem 0.75rem 0.75rem;
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: 0.5rem;
   }
 
   .settings-page .settings-nav-list {
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 0.35rem;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -59,447 +155,736 @@
   .settings-page .settings-nav-link {
     display: flex;
     align-items: center;
-    padding: 0.75rem;
+    padding: 0.75rem 0.85rem;
     border-radius: var(--radius-xl);
     color: var(--color-text-main);
     font-weight: 700;
+    font-size: 0.925rem;
     text-decoration: none;
     transition: all 0.2s ease-in-out;
+    border: 1px solid transparent;
   }
 
   .settings-page .settings-nav-link:hover {
     background-color: color-mix(in srgb, var(--color-primary) 10%, transparent);
-    transform: translateX(4px);
+    color: var(--color-primary);
+    transform: translateX(3px);
+  }
+
+  .settings-page .settings-nav-link[aria-current="true"],
+  .settings-page .settings-nav-link.active {
+    background-color: color-mix(in srgb, var(--color-primary) 14%, var(--color-bg-surface));
+    color: var(--color-primary);
+    border-color: color-mix(in srgb, var(--color-primary) 30%, transparent);
+    box-shadow: 0 2px 8px color-mix(in srgb, var(--color-primary) 15%, transparent);
   }
 
   .settings-page .settings-nav-icon {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2.25rem;
+    height: 2.25rem;
     border-radius: var(--radius-lg);
     display: flex;
     align-items: center;
     justify-content: center;
     margin-right: 0.75rem;
-    transition: transform 0.2s ease-in-out;
+    background-color: color-mix(in srgb, var(--color-primary) 12%, transparent);
+    color: var(--color-primary);
+    transition: all 0.2s ease-in-out;
+    flex-shrink: 0;
   }
 
-  .settings-page .settings-nav-link:hover .settings-nav-icon {
-    transform: scale(1.1);
+  .settings-page .settings-nav-link:hover .settings-nav-icon,
+  .settings-page .settings-nav-link.active .settings-nav-icon {
+    background-color: var(--color-primary);
+    color: var(--color-text-inverse, #ffffff);
+    transform: scale(1.08);
   }
 
-  /* Navigation theme-specific icons */
-  .settings-page .settings-nav-icon-blue {
-    background-color: #dbeafe;
-    color: #2563eb;
-  }
-  [data-theme="dark"] .settings-page .settings-nav-icon-blue,
-  [data-theme="midnight"] .settings-page .settings-nav-icon-blue {
-    background-color: rgba(37, 99, 235, 0.2);
-    color: #93c5fd;
-  }
-
-  .settings-page .settings-nav-icon-emerald {
-    background-color: #d1fae5;
-    color: #059669;
-  }
-  [data-theme="dark"] .settings-page .settings-nav-icon-emerald,
-  [data-theme="midnight"] .settings-page .settings-nav-icon-emerald {
-    background-color: rgba(5, 150, 105, 0.2);
-    color: #6ee7b7;
-  }
-
-  .settings-page .settings-nav-icon-purple {
-    background-color: #f3e8ff;
-    color: #7c3aed;
-  }
-  [data-theme="dark"] .settings-page .settings-nav-icon-purple,
-  [data-theme="midnight"] .settings-page .settings-nav-icon-purple {
-    background-color: rgba(124, 58, 237, 0.2);
-    color: #c084fc;
-  }
-
-  .settings-page .settings-nav-icon-teal {
-    background-color: #ccfbf1;
-    color: #0d9488;
-  }
-  [data-theme="dark"] .settings-page .settings-nav-icon-teal,
-  [data-theme="midnight"] .settings-page .settings-nav-icon-teal {
-    background-color: rgba(13, 148, 136, 0.2);
-    color: #5eead4;
-  }
-
-  .settings-page .settings-nav-icon-rose {
-    background-color: #ffe4e6;
-    color: #e11d48;
-  }
-  [data-theme="dark"] .settings-page .settings-nav-icon-rose,
-  [data-theme="midnight"] .settings-page .settings-nav-icon-rose {
-    background-color: rgba(225, 29, 72, 0.2);
-    color: #fda4af;
-  }
-
+  /* Main Settings Area */
   .settings-page .settings-main-area {
     width: 100%;
+    flex: 1;
+    min-width: 0;
     display: flex;
     flex-direction: column;
     gap: 2rem;
   }
 
-  @media(min-width: 1024px) {
-    .settings-page .settings-main-area {
-      width: 50%;
+  /* Live Preview Sidebar */
+  .settings-page .settings-preview-sidebar {
+    width: 100%;
+  }
+
+  @media (min-width: 1280px) {
+    .settings-page .settings-preview-sidebar {
+      width: 310px;
+      flex-shrink: 0;
+      position: sticky;
+      top: 5rem;
     }
   }
 
+  /* ==========================================================================
+     3. Section Containers & Section Titles
+     ========================================================================== */
   .settings-page .settings-section {
     background-color: var(--color-bg-surface);
     border-radius: var(--radius-2xl);
-    box-shadow: var(--shadow-xl);
+    box-shadow: var(--shadow-lg);
     padding: 2rem;
     border: 1px solid var(--color-border);
-    scroll-margin-top: 7rem;
-    animation: rise-in 0.5s ease-out forwards;
+    scroll-margin-top: 6rem;
+    position: relative;
+    overflow: hidden;
+    animation: rise-in 0.4s ease-out forwards;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .settings-page .settings-section:focus-within {
+    border-color: color-mix(in srgb, var(--color-primary) 40%, var(--color-border));
   }
 
   .settings-page .settings-section-title {
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-size: 1.45rem;
+    font-weight: 800;
     color: var(--color-text-main);
     margin-bottom: 1.5rem;
     display: flex;
     align-items: center;
+    gap: 0.75rem;
     border-bottom: 1px solid var(--color-border);
-    padding-bottom: 0.75rem;
+    padding-bottom: 0.85rem;
   }
 
-  .settings-page .settings-section-title i {
-    margin-right: 0.75rem;
+  .settings-page .settings-section-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: var(--radius-lg);
+    background: color-mix(in srgb, var(--color-primary) 12%, transparent);
+    color: var(--color-primary);
+    font-size: 1.15rem;
+    flex-shrink: 0;
   }
 
   .settings-page .settings-label {
     display: block;
-    font-size: 0.875rem;
-    font-weight: 700;
+    font-size: 0.8rem;
+    font-weight: 800;
     color: var(--color-text-muted);
-    margin-bottom: 1rem;
+    margin-bottom: 0.85rem;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.07em;
   }
 
-  /* Grid Layouts */
+  /* ==========================================================================
+     4. Theme Selection Buttons (Base Modes)
+     ========================================================================== */
   .settings-page .settings-grid-3 {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
+    gap: 0.85rem;
   }
 
-  @media(min-width: 640px) {
+  @media (min-width: 640px) {
     .settings-page .settings-grid-3 {
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
 
-  .settings-page .settings-grid-2 {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0.75rem;
-  }
-
-  @media(min-width: 640px) {
-    .settings-page .settings-grid-2 {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+  @media (min-width: 840px) {
+    .settings-page .settings-grid-3 {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
     }
   }
 
-  .settings-page .settings-grid-2-gap {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  @media(min-width: 768px) {
-    .settings-page .settings-grid-2-gap {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-  }
-
-  /* Card Buttons (Themes, Fonts, Curriculum) */
   .settings-page .settings-card-btn {
     position: relative;
-    padding: 1rem;
-    border-radius: var(--radius-2xl);
+    padding: 1.15rem 0.75rem;
+    border-radius: var(--radius-xl);
     border: 2px solid var(--color-border);
     background-color: var(--color-bg-base);
     color: var(--color-text-main);
     text-align: center;
     box-shadow: var(--shadow-sm);
-    transition: all 0.2s ease-in-out;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
     cursor: pointer;
     font-weight: 700;
+    font-size: 0.9rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 0.5rem;
   }
 
-  .settings-page .settings-card-btn:hover,
+  .settings-page .settings-card-btn:hover {
+    border-color: var(--color-primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+
   .settings-page .settings-card-btn[aria-selected="true"] {
     border-color: var(--color-primary);
-    box-shadow: var(--shadow-md);
+    background-color: color-mix(in srgb, var(--color-primary) 8%, var(--color-bg-surface));
+    box-shadow: 0 0 0 2px var(--color-primary), 0 4px 12px color-mix(in srgb, var(--color-primary) 25%, transparent);
+    color: var(--color-text-main);
   }
 
   .settings-page .settings-card-btn i {
-    font-size: 1.875rem;
-    margin-bottom: 0.75rem;
-    display: block;
+    font-size: 1.65rem;
+    transition: transform 0.2s ease;
   }
 
-  .settings-page .settings-card-btn::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 4px;
-    background-color: var(--color-primary);
-    transform: scaleX(0);
-    transition: transform 0.2s ease-in-out;
-    border-radius: 0 0 var(--radius-2xl) var(--radius-2xl);
+  .settings-page .settings-card-btn:hover i {
+    transform: scale(1.15);
   }
 
-  .settings-page .settings-card-btn:hover::after,
-  .settings-page .settings-card-btn[aria-selected="true"]::after {
-    transform: scaleX(1);
-  }
-
-  /* Specific Theme Buttons */
-  .settings-page .theme-light-btn {
-    border-color: #cbd5e1;
-    background-color: #f8fafc;
-    color: #0f172a;
-  }
-  .settings-page .theme-light-btn i { color: #eab308; }
-
-  .settings-page .theme-dark-btn {
-    border-color: #334155;
-    background-color: #0f172a;
-    color: #ffffff;
-  }
+  .settings-page .theme-light-btn i { color: #f59e0b; }
   .settings-page .theme-dark-btn i { color: #818cf8; }
-
-  .settings-page .theme-midnight-btn {
-    border-color: #1e3b8b;
-    background-color: #011627;
-    color: #d6deeb;
-  }
-  .settings-page .theme-midnight-btn i { color: #93c5fd; }
-  .settings-page .theme-midnight-btn::after {
-    background-color: #3b82f6;
-  }
-
-  .settings-page .theme-sepia-btn {
-    border-color: #fef3c7;
-    background-color: #f4ecd8;
-    color: #433422;
-  }
+  .settings-page .theme-midnight-btn i { color: #60a5fa; }
   .settings-page .theme-sepia-btn i { color: #b45309; }
-  .settings-page .theme-sepia-btn::after {
-    background-color: #b45309;
-  }
-
-  .settings-page .theme-contrast-btn {
-    border-color: #000000;
-    background-color: #000000;
-    color: #eab308;
-  }
   .settings-page .theme-contrast-btn i { color: #eab308; }
-  .settings-page .theme-contrast-btn::after {
-    background-color: #eab308;
+
+  /* ==========================================================================
+     5. Theme Color Palettes (Curated Presets)
+     ========================================================================== */
+  .settings-page .settings-palette-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.85rem;
+    margin-bottom: 1.5rem;
   }
 
-  /* Curriculum Cards */
-  .settings-page .settings-curriculum-btn {
+  @media (min-width: 640px) {
+    .settings-page .settings-palette-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+
+  .settings-page .settings-palette-card {
     position: relative;
-    padding: 1.25rem;
-    border-radius: var(--radius-2xl);
+    padding: 1rem 0.85rem;
+    border-radius: var(--radius-xl);
     border: 2px solid var(--color-border);
-    background-color: var(--color-bg-surface);
+    background-color: var(--color-bg-base);
     color: var(--color-text-main);
-    text-align: left;
+    text-align: center;
     box-shadow: var(--shadow-sm);
-    transition: all 0.2s ease-in-out;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.65rem;
+    overflow: hidden;
   }
 
-  .settings-page .settings-curriculum-btn:hover,
-  .settings-page .settings-curriculum-btn[aria-selected="true"] {
+  .settings-page .settings-palette-card:hover {
     border-color: var(--color-primary);
+    transform: translateY(-2px);
     box-shadow: var(--shadow-md);
   }
 
-  .settings-page .settings-curriculum-btn[aria-selected="true"] {
-    background-color: var(--color-bg-base);
+  .settings-page .settings-palette-card[aria-selected="true"] {
+    border-color: var(--color-primary);
+    background-color: color-mix(in srgb, var(--color-primary) 10%, var(--color-bg-surface));
+    box-shadow: 0 0 0 2px var(--color-primary), 0 6px 16px color-mix(in srgb, var(--color-primary) 20%, transparent);
   }
 
-  .settings-page .settings-curriculum-header {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .settings-page .settings-curriculum-icon {
-    width: 2rem;
-    height: 2rem;
+  .settings-page .settings-palette-ribbon {
+    width: 100%;
+    height: 6px;
     border-radius: var(--radius-full);
+    margin-bottom: 0.25rem;
+  }
+
+  .settings-page .settings-palette-swatches {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 0.35rem;
   }
 
-  .settings-page .curr-icon-indigo {
-    background-color: #e0e7ff;
-    color: #4f46e5;
-  }
-  [data-theme="dark"] .settings-page .curr-icon-indigo,
-  [data-theme="midnight"] .settings-page .curr-icon-indigo {
-    background-color: #1e1b4b;
-    color: #818cf8;
-  }
-
-  .settings-page .curr-icon-rose {
-    background-color: #ffe4e6;
-    color: #e11d48;
-  }
-  [data-theme="dark"] .settings-page .curr-icon-rose,
-  [data-theme="midnight"] .settings-page .curr-icon-rose {
-    background-color: #881337;
-    color: #fda4af;
+  .settings-page .settings-palette-dot {
+    width: 1.45rem;
+    height: 1.45rem;
+    border-radius: 9999px;
+    border: 2px solid #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    display: inline-block;
+    transition: transform 0.2s ease;
   }
 
-  .settings-page .curr-icon-emerald {
-    background-color: #d1fae5;
-    color: #059669;
-  }
-  [data-theme="dark"] .settings-page .curr-icon-emerald,
-  [data-theme="midnight"] .settings-page .curr-icon-emerald {
-    background-color: #064e3b;
-    color: #6ee7b7;
+  .settings-page .settings-palette-card:hover .settings-palette-dot {
+    transform: scale(1.15);
   }
 
-  .settings-page .settings-curriculum-title {
-    font-weight: 800;
+  .settings-page .settings-palette-name {
     font-size: 0.875rem;
+    font-weight: 800;
+    color: var(--color-text-main);
+    line-height: 1.2;
   }
 
-  .settings-page .settings-curriculum-desc {
-    font-size: 0.75rem;
+  .settings-page .settings-palette-desc {
+    font-size: 0.725rem;
     color: var(--color-text-muted);
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .settings-page .settings-palette-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    background: color-mix(in srgb, var(--color-primary) 15%, transparent);
+    padding: 0.2rem 0.55rem;
+    border-radius: var(--radius-full);
+  }
+
+  /* ==========================================================================
+     6. Custom Color Studio & Live Gradient Bar
+     ========================================================================== */
+  .settings-page .settings-custom-colors-box {
+    background-color: var(--color-bg-base);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-2xl);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .settings-page .settings-custom-colors-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 0.85rem;
+  }
+
+  .settings-page .settings-custom-colors-title {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--color-text-main);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     margin: 0;
-    line-height: 1.4;
   }
 
-  .settings-page .settings-curriculum-btn::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 4px;
-    background-color: var(--color-primary);
-    transform: scaleX(0);
-    transition: transform 0.2s ease-in-out;
-    border-radius: 0 0 var(--radius-2xl) var(--radius-2xl);
+  .settings-page .settings-custom-gradient-bar {
+    width: 100%;
+    height: 10px;
+    border-radius: var(--radius-full);
+    margin-bottom: 1.25rem;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary), var(--color-accent));
+    box-shadow: 0 2px 8px color-mix(in srgb, var(--color-primary) 30%, transparent);
+    transition: background 0.3s ease;
   }
 
-  .settings-page .settings-curriculum-btn:hover::after,
-  .settings-page .settings-curriculum-btn[aria-selected="true"]::after {
-    transform: scaleX(1);
+  .settings-page .settings-colors-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
-  /* Font buttons */
-  .settings-page .settings-font-btn {
-    padding: 1rem;
+  @media (min-width: 640px) {
+    .settings-page .settings-colors-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  .settings-page .settings-color-card {
+    background: var(--color-bg-surface);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-xl);
-    text-align: left;
-    background-color: var(--color-bg-surface);
-    color: var(--color-text-main);
-    box-shadow: var(--shadow-sm);
-    transition: all 0.2s ease-in-out;
-    cursor: pointer;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
   }
 
-  .settings-page .settings-font-btn:hover,
-  .settings-page .settings-font-btn[aria-selected="true"] {
-    background-color: var(--color-bg-base);
+  .settings-page .settings-color-card:focus-within {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--color-primary) 20%, transparent);
+  }
+
+  .settings-page .settings-color-card-title {
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: var(--color-text-main);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .settings-page .settings-color-input-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .settings-page .settings-native-color-picker {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 2.75rem;
+    height: 2.75rem;
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    overflow: hidden;
+    flex-shrink: 0;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+
+  .settings-page .settings-native-color-picker:hover {
+    transform: scale(1.05);
     border-color: var(--color-primary);
   }
 
-  .settings-page .settings-font-btn[aria-selected="true"] .settings-font-name {
-    color: var(--color-primary);
+  .settings-page .settings-native-color-picker::-webkit-color-swatch-wrapper {
+    padding: 0;
   }
 
-  .settings-page .settings-font-name {
+  .settings-page .settings-native-color-picker::-webkit-color-swatch {
+    border: none;
+    border-radius: calc(var(--radius-lg) - 2px);
+  }
+
+  .settings-page .settings-hex-input {
+    flex: 1;
+    font-family: monospace;
+    font-size: 0.9rem;
     font-weight: 700;
-    font-size: 1.125rem;
-    margin-bottom: 0.25rem;
-    display: block;
-    transition: color 0.2s;
+    color: var(--color-text-main);
+    background: var(--color-bg-base);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 0.55rem 0.75rem;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
   }
 
-  .settings-page .settings-font-btn:hover .settings-font-name {
+  .settings-page .settings-hex-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--color-primary) 30%, transparent);
+  }
+
+  /* Contrast Indicator Meter */
+  .settings-page .settings-contrast-indicator {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    background: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: 0.85rem 1.15rem;
+    margin-top: 1rem;
+  }
+
+  .settings-page .contrast-badge-pass {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    background: #d1fae5;
+    color: #065f46;
+    padding: 0.3rem 0.85rem;
+    border-radius: var(--radius-full);
+    font-weight: 800;
+    font-size: 0.825rem;
+  }
+
+  [data-theme="dark"] .settings-page .contrast-badge-pass,
+  [data-theme="midnight"] .settings-page .contrast-badge-pass {
+    background: rgba(5, 150, 105, 0.25);
+    color: #6ee7b7;
+  }
+
+  .settings-page .contrast-badge-warn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    background: #fef3c7;
+    color: #92400e;
+    padding: 0.3rem 0.85rem;
+    border-radius: var(--radius-full);
+    font-weight: 800;
+    font-size: 0.825rem;
+  }
+
+  [data-theme="dark"] .settings-page .contrast-badge-warn,
+  [data-theme="midnight"] .settings-page .contrast-badge-warn {
+    background: rgba(217, 119, 6, 0.25);
+    color: #fcd34d;
+  }
+
+  .settings-page .settings-reset-colors-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--color-bg-surface);
+    color: var(--color-text-main);
+    border: 1px solid var(--color-border);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-lg);
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .settings-page .settings-reset-colors-btn:hover {
+    border-color: var(--color-primary);
     color: var(--color-primary);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
   }
 
-  .settings-page .settings-font-desc {
+  /* ==========================================================================
+     7. Interactive Live Preview Card (Desktop & Mobile)
+     ========================================================================== */
+  .settings-page .settings-sticky-wrapper {
+    position: sticky;
+    top: 5rem;
+  }
+
+  .settings-page .settings-preview-card {
+    background-color: var(--color-bg-surface);
+    padding: 1.75rem;
+    border-radius: var(--radius-3xl);
+    box-shadow: var(--shadow-xl);
+    border: 1px solid color-mix(in srgb, var(--color-primary) 30%, var(--color-border));
+    position: relative;
+    overflow: hidden;
+    transition: all 0.25s ease;
+  }
+
+  .settings-page .settings-preview-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary), var(--color-accent));
+  }
+
+  .settings-page .settings-preview-label {
     font-size: 0.75rem;
-    color: var(--color-text-muted);
-    display: block;
+    font-weight: 800;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.25rem;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
-  /* Sliders & Panels */
+  .settings-page .settings-preview-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .settings-page .settings-preview-heading {
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: var(--color-text-main);
+    line-height: 1.3;
+    margin: 0;
+  }
+
+  .settings-page .settings-preview-body {
+    color: var(--color-text-muted);
+    line-height: var(--site-line-height, 1.6);
+    letter-spacing: var(--site-letter-spacing, 0);
+    word-spacing: var(--site-word-spacing, 0);
+    font-size: var(--site-font-size, 1rem);
+    margin: 0;
+  }
+
+  .settings-page .settings-preview-link-box {
+    padding: 0.85rem 1rem;
+    background-color: color-mix(in srgb, var(--color-primary) 8%, var(--color-bg-base));
+    border-radius: var(--radius-xl);
+    border: 1px solid color-mix(in srgb, var(--color-primary) 20%, transparent);
+  }
+
+  .settings-page .settings-preview-link {
+    color: var(--color-primary);
+    font-weight: 700;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+  }
+
+  .settings-page .settings-preview-link:hover {
+    text-decoration: underline;
+  }
+
+  .settings-page .settings-preview-theme-showcase {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .settings-page .settings-preview-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: var(--color-primary);
+    color: var(--color-text-inverse, #ffffff);
+    border: none;
+    padding: 0.75rem 1.25rem;
+    border-radius: var(--radius-xl);
+    font-weight: 800;
+    font-size: 0.925rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px color-mix(in srgb, var(--color-primary) 35%, transparent);
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .settings-page .settings-preview-btn-primary:hover {
+    background: var(--color-primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px color-mix(in srgb, var(--color-primary) 45%, transparent);
+  }
+
+  .settings-page .settings-preview-pills-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .settings-page .settings-preview-pill-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    background: var(--color-secondary);
+    color: #ffffff;
+    padding: 0.3rem 0.75rem;
+    border-radius: var(--radius-full);
+    font-size: 0.775rem;
+    font-weight: 800;
+    box-shadow: 0 2px 8px color-mix(in srgb, var(--color-secondary) 30%, transparent);
+  }
+
+  .settings-page .settings-preview-tag-accent {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    background: var(--color-accent);
+    color: #0f172a;
+    padding: 0.3rem 0.75rem;
+    border-radius: var(--radius-full);
+    font-size: 0.775rem;
+    font-weight: 800;
+    box-shadow: 0 2px 8px color-mix(in srgb, var(--color-accent) 30%, transparent);
+  }
+
+  .settings-page .settings-preview-status {
+    margin-top: 1.25rem;
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: 0.825rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+  }
+
+  .settings-page .settings-preview-status i {
+    color: var(--color-success, #10b981);
+  }
+
+  /* ==========================================================================
+     8. Sliders, Panels & Range Inputs
+     ========================================================================== */
   .settings-page .settings-slider-panel {
     background-color: var(--color-bg-base);
-    padding: 1.25rem;
-    border-radius: var(--radius-lg);
+    padding: 1.35rem;
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--color-border);
+    margin-bottom: 1.25rem;
   }
 
   .settings-page .settings-slider-label {
     display: flex;
     justify-content: space-between;
-    font-size: 0.875rem;
-    font-weight: 700;
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: 800;
     color: var(--color-text-main);
     margin-bottom: 1rem;
   }
 
   .settings-page .settings-slider-badge {
     background-color: var(--color-primary);
-    color: #ffffff;
-    padding: 0.125rem 0.5rem;
+    color: var(--color-text-inverse, #ffffff);
+    padding: 0.2rem 0.65rem;
     border-radius: var(--radius-md);
-    font-size: 0.75rem;
+    font-size: 0.775rem;
+    font-weight: 800;
+    box-shadow: 0 2px 6px color-mix(in srgb, var(--color-primary) 30%, transparent);
   }
 
   .settings-page .settings-slider-input {
     width: 100%;
-    height: 0.75rem;
-    background-color: #cbd5e1;
-    border-radius: var(--radius-lg);
+    height: 0.55rem;
+    background-color: var(--color-border);
+    border-radius: var(--radius-full);
     appearance: none;
+    -webkit-appearance: none;
     cursor: pointer;
     accent-color: var(--color-primary);
-    transition: accent-color 0.2s;
+    transition: all 0.2s;
   }
 
-  [data-theme="dark"] .settings-page .settings-slider-input,
-  [data-theme="midnight"] .settings-page .settings-slider-input {
-    background-color: #334155;
+  .settings-page .settings-slider-input::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 1.35rem;
+    height: 1.35rem;
+    border-radius: 50%;
+    background: var(--color-primary);
+    border: 2px solid #ffffff;
+    box-shadow: 0 2px 8px color-mix(in srgb, var(--color-primary) 50%, transparent);
+    cursor: pointer;
+    transition: transform 0.15s ease;
   }
 
-  .settings-page .settings-slider-input:hover {
-    accent-color: var(--color-secondary);
+  .settings-page .settings-slider-input::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
   }
 
   .settings-page .settings-slider-ticks {
@@ -507,80 +892,84 @@
     justify-content: space-between;
     font-size: 0.75rem;
     color: var(--color-text-muted);
-    margin-top: 0.5rem;
-    font-weight: 500;
+    margin-top: 0.65rem;
+    font-weight: 600;
   }
 
-  /* Toggles & Cards */
+  /* ==========================================================================
+     9. Interactive Toggle Cards & Switches
+     ========================================================================== */
+  .settings-page .settings-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+
+  @media (min-width: 640px) {
+    .settings-page .settings-grid-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
   .settings-page .settings-toggle-card {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.25rem;
+    padding: 1.15rem 1.25rem;
     background-color: var(--color-bg-base);
-    border-radius: var(--radius-lg);
-    transition: background-color 0.2s;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    transition: all 0.2s ease-in-out;
   }
 
   .settings-page .settings-toggle-card:hover {
     background-color: var(--color-bg-surface);
+    border-color: color-mix(in srgb, var(--color-primary) 30%, var(--color-border));
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
   }
 
   .settings-page .settings-toggle-info {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.85rem;
   }
 
   .settings-page .settings-toggle-icon {
-    width: 3rem;
-    height: 3rem;
-    border-radius: var(--radius-full);
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: var(--radius-xl);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
+    flex-shrink: 0;
+    background-color: color-mix(in srgb, var(--color-primary) 12%, transparent);
+    color: var(--color-primary);
   }
 
-  .settings-page .icon-blue { background-color: #dbeafe; color: #2563eb; }
-  [data-theme="dark"] .settings-page .icon-blue, [data-theme="midnight"] .settings-page .icon-blue { background-color: rgba(37, 99, 235, 0.2); color: #60a5fa; }
-
-  .settings-page .icon-purple { background-color: #f3e8ff; color: #7c3aed; }
-  [data-theme="dark"] .settings-page .icon-purple, [data-theme="midnight"] .settings-page .icon-purple { background-color: rgba(124, 58, 237, 0.2); color: #c084fc; }
-
-  .settings-page .icon-rose { background-color: #ffe4e6; color: #e11d48; }
-  [data-theme="dark"] .settings-page .icon-rose, [data-theme="midnight"] .settings-page .icon-rose { background-color: rgba(225, 29, 72, 0.2); color: #fda4af; }
-
-  .settings-page .icon-yellow { background-color: #fef9c3; color: #ca8a04; }
-  [data-theme="dark"] .settings-page .icon-yellow, [data-theme="midnight"] .settings-page .icon-yellow { background-color: rgba(202, 138, 4, 0.2); color: #fde047; }
-
-  .settings-page .icon-orange { background-color: #ffedd5; color: #ea580c; }
-  [data-theme="dark"] .settings-page .icon-orange, [data-theme="midnight"] .settings-page .icon-orange { background-color: rgba(234, 88, 12, 0.2); color: #fdba74; }
-
-  .settings-page .icon-green { background-color: #d1fae5; color: #059669; }
-  [data-theme="dark"] .settings-page .icon-green, [data-theme="midnight"] .settings-page .icon-green { background-color: rgba(5, 150, 105, 0.2); color: #6ee7b7; }
-
-  .settings-page .icon-indigo { background-color: #e0e7ff; color: #4f46e5; }
-  [data-theme="dark"] .settings-page .icon-indigo, [data-theme="midnight"] .settings-page .icon-indigo { background-color: rgba(79, 70, 229, 0.2); color: #818cf8; }
-
   .settings-page .settings-toggle-title {
-    font-weight: 700;
+    font-weight: 800;
     color: var(--color-text-main);
     display: block;
-    font-size: 1.125rem;
+    font-size: 0.95rem;
+    line-height: 1.2;
+    margin-bottom: 0.2rem;
   }
 
   .settings-page .settings-toggle-desc {
-    font-size: 0.875rem;
+    font-size: 0.8rem;
     color: var(--color-text-muted);
+    line-height: 1.35;
   }
 
-  /* Custom Switch Toggle */
+  /* Smooth Switch Toggle */
   .settings-page .settings-switch {
     position: relative;
     display: inline-flex;
     align-items: center;
     cursor: pointer;
+    flex-shrink: 0;
   }
 
   .settings-page .settings-switch-input {
@@ -596,12 +985,12 @@
   }
 
   .settings-page .settings-switch-slider {
-    width: 3.5rem;
-    height: 2rem;
+    width: 3.25rem;
+    height: 1.85rem;
     background-color: #cbd5e1;
     border-radius: var(--radius-full);
     position: relative;
-    transition: background-color 0.2s;
+    transition: background-color 0.25s ease;
   }
 
   [data-theme="dark"] .settings-page .settings-switch-slider,
@@ -612,14 +1001,14 @@
   .settings-page .settings-switch-slider::after {
     content: '';
     position: absolute;
-    top: 4px;
-    left: 4px;
-    width: 1.5rem;
-    height: 1.5rem;
+    top: 3px;
+    left: 3px;
+    width: 1.45rem;
+    height: 1.45rem;
     background-color: #ffffff;
     border-radius: var(--radius-full);
-    transition: transform 0.2s;
-    box-shadow: var(--shadow-sm);
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   }
 
   .settings-page .settings-switch-input:checked + .settings-page .settings-switch-slider {
@@ -627,44 +1016,136 @@
   }
 
   .settings-page .settings-switch-input:checked + .settings-page .settings-switch-slider::after {
-    transform: translateX(1.5rem);
+    transform: translateX(1.4rem);
   }
 
   .settings-page .settings-switch-input:focus-visible + .settings-page .settings-switch-slider {
-    outline: 2px solid var(--color-primary);
+    outline: 3px solid var(--color-primary);
     outline-offset: 2px;
   }
 
-  /* Action Buttons & Reset */
-  .settings-page .settings-actions-group {
+  /* ==========================================================================
+     10. Curriculum & Typography Cards
+     ========================================================================== */
+  .settings-page .settings-curriculum-btn {
+    position: relative;
+    padding: 1.35rem;
+    border-radius: var(--radius-2xl);
+    border: 2px solid var(--color-border);
+    background-color: var(--color-bg-base);
+    color: var(--color-text-main);
+    text-align: left;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
+  }
+
+  .settings-page .settings-curriculum-btn:hover {
+    border-color: var(--color-primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .settings-page .settings-curriculum-btn[aria-selected="true"] {
+    border-color: var(--color-primary);
+    background-color: color-mix(in srgb, var(--color-primary) 8%, var(--color-bg-surface));
+    box-shadow: 0 0 0 2px var(--color-primary);
+  }
+
+  .settings-page .settings-curriculum-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .settings-page .settings-curriculum-icon {
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: var(--radius-xl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    background: color-mix(in srgb, var(--color-primary) 15%, transparent);
+    color: var(--color-primary);
+    flex-shrink: 0;
+  }
+
+  .settings-page .settings-curriculum-title {
+    font-size: 1.1rem;
+    font-weight: 800;
+  }
+
+  .settings-page .settings-curriculum-desc {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  /* Font Family Buttons */
+  .settings-page .settings-font-btn {
+    position: relative;
+    padding: 1.25rem 1rem;
+    border-radius: var(--radius-xl);
+    border: 2px solid var(--color-border);
+    background-color: var(--color-bg-base);
+    color: var(--color-text-main);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    margin-bottom: 2rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
   }
 
-  @media (min-width: 640px) {
-    .settings-page .settings-actions-group {
-      flex-direction: row;
-    }
+  .settings-page .settings-font-btn:hover {
+    border-color: var(--color-primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
   }
 
+  .settings-page .settings-font-btn[aria-selected="true"] {
+    border-color: var(--color-primary);
+    background-color: color-mix(in srgb, var(--color-primary) 8%, var(--color-bg-surface));
+    box-shadow: 0 0 0 2px var(--color-primary);
+  }
+
+  .settings-page .settings-font-name {
+    font-size: 1.15rem;
+    font-weight: 800;
+  }
+
+  .settings-page .settings-font-preview {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+  }
+
+  /* ==========================================================================
+     11. Buttons & Utility Actions
+     ========================================================================== */
   .settings-page .settings-btn {
-    flex: 1;
-    font-weight: 700;
-    padding: 1rem 1.5rem;
-    border-radius: var(--radius-2xl);
+    font-weight: 800;
+    font-size: 0.95rem;
+    padding: 0.85rem 1.5rem;
+    border-radius: var(--radius-xl);
     border: 1px solid transparent;
-    transition: all 0.2s ease-in-out;
-    display: flex;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
     cursor: pointer;
     box-shadow: var(--shadow-sm);
+    text-decoration: none;
   }
 
-  .settings-page .settings-btn:hover {
+  .settings-page .settings-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
     box-shadow: var(--shadow-md);
   }
 
@@ -673,13 +1154,14 @@
     cursor: not-allowed;
   }
 
-  .settings-page .settings-btn-reset {
-    background-color: #fee2e2;
-    color: #b91c1c;
-    border-color: #fecaca;
+  .settings-page .settings-btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-text-inverse, #ffffff);
+    box-shadow: 0 4px 12px color-mix(in srgb, var(--color-primary) 35%, transparent);
   }
-  .settings-page .settings-btn-reset:hover:not(:disabled) {
-    background-color: #fca5a5;
+
+  .settings-page .settings-btn-primary:hover:not(:disabled) {
+    background-color: var(--color-primary-hover);
   }
 
   .settings-page .settings-btn-export {
@@ -687,8 +1169,11 @@
     color: var(--color-text-main);
     border-color: var(--color-border);
   }
+
   .settings-page .settings-btn-export:hover:not(:disabled) {
-    background-color: var(--color-border);
+    background-color: color-mix(in srgb, var(--color-primary) 10%, var(--color-bg-base));
+    border-color: var(--color-primary);
+    color: var(--color-primary);
   }
 
   .settings-page .settings-btn-backup {
@@ -701,8 +1186,8 @@
   }
   [data-theme="dark"] .settings-page .settings-btn-backup,
   [data-theme="midnight"] .settings-page .settings-btn-backup {
-    background-color: rgba(21, 128, 61, 0.15);
-    color: #4ade80;
+    background-color: rgba(21, 128, 61, 0.2);
+    color: #6ee7b7;
     border-color: #166534;
   }
 
@@ -716,280 +1201,41 @@
   }
   [data-theme="dark"] .settings-page .settings-btn-restore,
   [data-theme="midnight"] .settings-page .settings-btn-restore {
-    background-color: rgba(29, 78, 216, 0.15);
-    color: #60a5fa;
+    background-color: rgba(29, 78, 216, 0.2);
+    color: #93c5fd;
     border-color: #1e40af;
   }
 
-  /* Cloud Sync Box */
-  .settings-page .settings-sync-container {
-    border-top: 1px solid var(--color-border);
-    padding-top: 1.5rem;
+  .settings-page .settings-btn-reset {
+    background-color: #fee2e2;
+    color: #b91c1c;
+    border-color: #fecaca;
+  }
+  .settings-page .settings-btn-reset:hover:not(:disabled) {
+    background-color: #fca5a5;
   }
 
-  .settings-page .settings-sync-title {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--color-text-main);
-    margin-bottom: 0.75rem;
-    display: flex;
-    align-items: center;
-  }
-
-  .settings-page .settings-sync-desc {
-    color: var(--color-text-muted);
-    margin-bottom: 1rem;
-    font-size: 0.875rem;
-    font-weight: 500;
-  }
-
-  /* Live Preview Sidebar */
-  .settings-page .settings-preview-sidebar {
-    display: none;
-    width: 100%;
-    animation: rise-in 0.5s ease-out forwards;
-    animation-delay: 0.6s;
-  }
-
-  @media(min-width: 1024px) {
-    .settings-page .settings-preview-sidebar {
-      display: block;
-      width: 25%;
-    }
-  }
-
-  .settings-page .settings-sticky-wrapper {
-    position: sticky;
-    top: 6rem;
-  }
-
-  .settings-page .settings-preview-card {
-    background-color: var(--color-bg-surface);
-    padding: 2rem;
-    border-radius: var(--radius-3xl);
-    box-shadow: var(--shadow-xl);
-    border: 1px solid color-mix(in srgb, var(--color-primary) 20%, transparent);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .settings-page .settings-preview-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 8px;
-    background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
-  }
-
-  .settings-page .settings-preview-label {
-    font-size: 0.75rem;
-    font-weight: 700;
-    color: var(--color-primary);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin-bottom: 1.5rem;
-    border-bottom: 1px solid var(--color-border);
-    padding-bottom: 0.5rem;
-  }
-
-  .settings-page .settings-preview-content {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .settings-page .settings-preview-heading {
-    font-size: 1.875rem;
-    font-weight: 700;
-    color: var(--color-text-main);
-    line-height: 1.25;
-  }
-
-  .settings-page .settings-preview-body {
-    color: var(--color-text-muted);
-    line-height: 1.6;
-  }
-
-  .settings-page .settings-preview-link-box {
-    padding: 1rem;
-    background-color: color-mix(in srgb, var(--color-primary) 5%, transparent);
-    border-radius: var(--radius-xl);
-    border: 1px solid color-mix(in srgb, var(--color-primary) 10%, transparent);
-  }
-
-  .settings-page .settings-preview-link {
-    color: var(--color-primary);
-    font-weight: 700;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .settings-page .settings-preview-link:hover {
-    text-decoration: underline;
-  }
-
-  .settings-page .settings-preview-status {
-    margin-top: 1.5rem;
-    text-align: center;
-    color: var(--color-text-muted);
-    font-size: 0.875rem;
-  }
-
-  .settings-page .settings-preview-status i {
-    color: var(--color-success);
-    margin-right: 0.25rem;
-  }
-
-  /* Sync Status Badge */
-  .sync-status-badge {
-    font-size: 0.725rem;
-    font-weight: 700;
-    padding: 0.15rem 0.55rem;
-    border-radius: 9999px;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35rem;
-    line-height: 1.2;
-    transition: all 0.3s ease;
-  }
-  .sync-status-badge.synced {
-    background: rgba(16, 185, 129, 0.12);
-    color: #059669;
-    border: 1px solid rgba(16, 185, 129, 0.3);
-  }
-  .sync-status-badge.syncing,
-  .sync-status-badge.connecting {
-    background: rgba(59, 130, 246, 0.12);
-    color: #2563eb;
-    border: 1px solid rgba(59, 130, 246, 0.3);
-  }
-  .sync-status-badge.auth_required {
-    background: rgba(245, 158, 11, 0.12);
-    color: #d97706;
-    border: 1px solid rgba(245, 158, 11, 0.3);
-  }
-  .sync-status-badge.error {
-    background: rgba(239, 68, 68, 0.12);
-    color: #dc2626;
-    border: 1px solid rgba(239, 68, 68, 0.3);
-  }
-  .sync-status-badge.disabled {
-    background: rgba(100, 116, 139, 0.1);
-    color: var(--color-text-muted);
-    border: 1px solid var(--color-border);
-  }
-
-  /* Data Sovereignty & Offline PWA Storage Suite */
-  .settings-page .settings-sovereignty-card,
+  /* Storage Meter & Pre-Cache Elements */
   .settings-page .settings-storage-panel {
     background: var(--color-bg-base);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-2xl);
-    padding: 1.75rem;
-    box-shadow: var(--shadow-sm);
-  }
-
-  .settings-page .sovereignty-card-header {
-    display: flex;
-    align-items: flex-start;
-    gap: 1.25rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .settings-page .sovereignty-icon-wrap {
-    width: 3.25rem;
-    height: 3.25rem;
-    border-radius: var(--radius-xl);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.35rem;
-    flex-shrink: 0;
-  }
-
-  .settings-page .sovereignty-card-title {
-    font-size: 1.25rem;
-    font-weight: 800;
-    margin: 0 0 0.35rem;
-    color: var(--color-text-main);
-  }
-
-  .settings-page .sovereignty-card-desc {
-    font-size: 0.9rem;
-    line-height: 1.55;
-    color: var(--color-text-muted);
-    margin: 0;
-  }
-
-  .settings-page .portfolio-restore-preview {
-    background: color-mix(in srgb, var(--color-primary) 8%, var(--color-bg-surface));
-    border: 1px solid color-mix(in srgb, var(--color-primary) 30%, transparent);
-    border-radius: var(--radius-xl);
-    padding: 1.25rem;
-    margin-top: 1.25rem;
-  }
-
-  .settings-page .restore-preview-header {
-    display: flex;
-    align-items: center;
-    gap: 0.65rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .settings-page .restore-preview-header h4 {
-    margin: 0;
-    font-size: 1.05rem;
-    font-weight: 700;
-    color: var(--color-text-main);
-  }
-
-  .settings-page .restore-preview-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    font-size: 0.85rem;
-    color: var(--color-text-muted);
-    margin-bottom: 1rem;
-  }
-
-  .settings-page .restore-preview-meta span {
-    background: var(--color-bg-base);
-    padding: 0.35rem 0.75rem;
-    border-radius: var(--radius-full);
-    border: 1px solid var(--color-border);
-    font-weight: 600;
-  }
-
-  .settings-page .restore-preview-actions {
-    display: flex;
-    gap: 0.75rem;
-  }
-
-  /* Storage Grid & Meter */
-  .settings-page .settings-storage-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 1rem;
-    margin-top: 1.25rem;
+    padding: 1.5rem;
   }
 
   .settings-page .storage-stat-card {
     background: var(--color-bg-surface);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-xl);
-    padding: 1.15rem;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     gap: 0.35rem;
   }
 
   .settings-page .storage-stat-label {
-    font-size: 0.8rem;
-    font-weight: 700;
+    font-size: 0.775rem;
+    font-weight: 800;
     text-transform: uppercase;
     color: var(--color-text-muted);
     display: flex;
@@ -998,31 +1244,9 @@
   }
 
   .settings-page .storage-stat-value {
-    font-size: 1.4rem;
+    font-size: 1.35rem;
     font-weight: 800;
     color: var(--color-text-main);
-    letter-spacing: -0.02em;
-  }
-
-  .settings-page .storage-stat-sub {
-    font-size: 0.75rem;
-    color: var(--color-text-muted);
-  }
-
-  .settings-page .storage-meter-wrapper {
-    background: var(--color-bg-surface);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-xl);
-    padding: 1rem 1.25rem;
-  }
-
-  .settings-page .storage-meter-label-row {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: var(--color-text-muted);
-    margin-bottom: 0.5rem;
   }
 
   .settings-page .storage-meter-track {
@@ -1031,66 +1255,19 @@
     background: var(--color-border);
     border-radius: var(--radius-full);
     overflow: hidden;
+    margin: 0.85rem 0;
   }
 
   .settings-page .storage-meter-fill {
     height: 100%;
-    background: linear-gradient(90deg, #10b981, #3b82f6);
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
     border-radius: var(--radius-full);
-    transition: width 0.4s ease;
-  }
-
-  /* Pre-cache controls */
-  .settings-page .precache-suite-box {
-    background: var(--color-bg-surface);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-xl);
-    padding: 1.25rem;
-  }
-
-  .settings-page .precache-title {
-    font-size: 1.05rem;
-    font-weight: 700;
-    margin: 0 0 0.35rem;
-    color: var(--color-text-main);
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .settings-page .precache-desc {
-    font-size: 0.85rem;
-    line-height: 1.5;
-    color: var(--color-text-muted);
-    margin: 0 0 1rem;
-  }
-
-  .settings-page .precache-controls-row {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.75rem;
-  }
-
-  .settings-page .precache-progress-box {
-    background: var(--color-bg-base);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-lg);
-    padding: 0.85rem 1rem;
-  }
-
-  .settings-page .precache-progress-status {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: var(--color-text-main);
-    margin-bottom: 0.5rem;
+    transition: width 0.3s ease;
   }
 
   .settings-page .precache-progress-track {
     width: 100%;
-    height: 0.5rem;
+    height: 0.55rem;
     background: var(--color-border);
     border-radius: var(--radius-full);
     overflow: hidden;
@@ -1098,8 +1275,28 @@
 
   .settings-page .precache-progress-fill {
     height: 100%;
-    background: linear-gradient(90deg, #6366f1, #10b981);
+    background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
     border-radius: var(--radius-full);
     transition: width 0.2s ease;
+  }
+
+  .settings-page .sync-status-badge {
+    font-size: 0.725rem;
+    font-weight: 800;
+    padding: 0.2rem 0.65rem;
+    border-radius: 9999px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+  .sync-status-badge.synced {
+    background: rgba(16, 185, 129, 0.15);
+    color: #059669;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+  }
+  .sync-status-badge.disabled {
+    background: rgba(100, 116, 139, 0.15);
+    color: var(--color-text-muted);
+    border: 1px solid var(--color-border);
   }
 }
