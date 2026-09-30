@@ -1,0 +1,150 @@
+{
+    "id": "k-math-m4-c-2",
+    "code": "K.M4.C.2",
+    "standard": "HSF.IF.B.4",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "Translating Graphs of Functions",
+        "pageTitle": "Translating Graphs of Functions | Hesten's Learning",
+        "description": "In this lesson, students develop a deep conceptual and procedural understanding of Translating Graphs of Functions in Module 4: Polynomial and Quadratic Express...",
+        "pageDescription": "Master Translating Graphs of Functions in Module 4: Polynomial and Quadratic Expressions, Equations, and Functions. Comprehensive student outcomes, teacher insights, guided exercises, problem set worksheets, and exit ticket keys.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M4.C.2",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 19",
+        "pill": "Function Transformations and Modeling",
+        "text": "In this lesson, students develop a deep conceptual and procedural understanding of Translating Graphs of Functions in Module 4: Polynomial and Quadratic Expressions, Equations, and Functions.",
+        "outcomes": [
+            "Students recognize and use parent functions for linear, absolute value, quadratic, square root, and cube root functions to perform vertical and horizontal translations. They identify how the graph of y=f(x) relates to the graphs of y=f(x)+k and y=f(x+k) for any specific values of k, positive or negative, and find the constant value, k, given the parent functions and the translated graphs. Students write the function representing the translated graphs."
+        ],
+        "teacherInsight": "Emphasize precise mathematical definitions and multiple problem-solving representations. Encourage students to check the reasonableness of their numerical solutions."
+    },
+    "content": [],
+    "vocabulary": [
+        {
+            "term": "Translating Graphs of Functions",
+            "definition": "Core mathematical concept established in Module 4: Polynomial and Quadratic Expressions, Equations, and Functions, Function Transformations and Modeling."
+        },
+        {
+            "term": "Mathematical Modeling",
+            "definition": "The process of choosing and using appropriate mathematics and statistics to analyze empirical situations, to understand them better, and to improve decisions."
+        }
+    ],
+    "guidedExercises": [
+        {
+            "title": "Example 1: Core Mathematical Modeling for Translating Graphs of Functions",
+            "badge": "Eureka Math Guided Classwork",
+            "difficulty": "Core Application",
+            "problem": "In the Opening Exercise, students sketch the graphs of the equation y=f(x) for a parent function, f, and graph the equations, y=f(x)+k and y=f(x+k), representing transformations of f. The functions in this example are linear, absolute value, and quadratic. In Example 1, students identify the value of k by looking at the graphs of the parent function and the translated functions. Students also write the function representing the translated graph. Concepts in this lesson relate directly to those i",
+            "scaffolding": "Identify the key variables and properties. Apply the definitions and mathematical structures introduced in Translating Graphs of Functions.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Define Variables & Formulate Governing Relations",
+                    "math": "\\text{Identify key variables and parameters for } Translating Graphs of Functions",
+                    "explanation": "Establish the relationship between quantities and state any domain constraints."
+                },
+                {
+                    "step": 2,
+                    "label": "Execute Step-by-Step Algebraic Transformations",
+                    "math": "\\text{Transform and simplify equations: } \\dots",
+                    "explanation": "Part (a)—The graphs are parallel lines, but they have different x- and y-intercepts. Part (b)—The graphs look the same (because they are congruent), but they have different vertices, which in this case means different minimum values. They are related"
+                }
+            ],
+            "finalAnswer": "\\text{The evaluated solution verifies the properties of } Translating Graphs of Functions",
+            "commonPitfall": "Ensure units of measurement and domain constraints are checked in physical and statistical contexts."
+        },
+        {
+            "title": "Exercise 1: Independent Problem Formulation",
+            "badge": "Multi-Step Application",
+            "difficulty": "Advanced Reasoning",
+            "problem": "Apply the foundational principles of Translating Graphs of Functions to determine the exact value and interpret the contextual significance.",
+            "scaffolding": "Reference the worked steps from Example 1. Verify intermediate calculations and justify your steps.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Analyze Given Conditions & Structure",
+                    "math": "\\text{State domain constraints and initial conditions}",
+                    "explanation": "Verify that all assumptions conform to the problem context."
+                },
+                {
+                    "step": 2,
+                    "label": "Calculate the Final Mathematical Solution",
+                    "math": "\\text{Solve for the target unknown quantity}",
+                    "explanation": "State the solution with formal mathematical reasoning."
+                }
+            ],
+            "finalAnswer": "\\text{Verified algebraic or statistical solution}",
+            "commonPitfall": "Avoid rounding prematurely before the final step."
+        }
+    ],
+    "exitTicket": {
+        "title": "Lesson 19 Exit Ticket: Translating Graphs of Functions",
+        "prompt": "Students analyze the graph and critique the reasoning of others. Then, they provide a valid explanation about their argument.\n\nExit Ticket\n\nAna sketched the graphs of f(x)=x^{2} and g(x)=x^{2}-6 as shown below. Did she graph both of the functions correctly? Explain how you know.\n\ny=f(x)y=g(x)y=f(x)y=g(x)\n\nUse transformations of the graph of f(x)=\\sqrt{x} to sketch the graph of f(x)=\\sqrt{x-1}+3.",
+        "solution": "MP.3MP.3Ana sketched the graphs of f(x)=x^{2} and g(x)=x^{2}-6 as shown below. Did she graph both of the functions correctly? Explain how you know.\n\ny=f(x)y=g(x)y=f(x)y=g(x)\n\nThe function f was graphed correctly, but not g. The graph of g should have been translated 6 units below the graph of f.\n\nUse transformations of the graph of f(x)=\\sqrt{x} to sketch the graph of f(x)=\\sqrt{x-1}+3.\n\nThe graph should depict the graph of the square root function translated 1 unit right and 3 units up."
+    },
+    "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Master Translating Graphs of Functions through authentic curriculum practice problems. Check your work using the expandable teacher solution key below.",
+        "problems": [
+            {
+                "number": 1,
+                "prompt": "Graph the functions in the same coordinate plane. Do not use a graphing calculator.",
+                "solution": "y=f(x)y=p(x)y=q(x)y=f(x)y=p(x)y=q(x)f(x)=\\sqrt{x}"
+            },
+            {
+                "number": 2,
+                "prompt": "p(x)=10+\\sqrt{x}\n\nq(x)=\\sqrt{x+8}\n\nWrite a function that translates the graph of the parent function f(x)=x^{2} down 7.5 units and right 2.5 units.",
+                "solution": "f(x)=(x-2.5)^{2}-7.5"
+            },
+            {
+                "number": 3,
+                "prompt": "How would the graph of f(x)=|x| be affected if the function were transformed to f(x)=|x+6|+10?",
+                "solution": "The graph would be shifted 10 units up and 6 units to the left."
+            },
+            {
+                "number": 4,
+                "prompt": "Below is a graph of a piecewise function f whose domain is the interval -4≤x≤2. Sketch the graph of the given functions below. Label your graphs correctly.\n\ny=f(x)y=f(x)g(x)=f(x)-1 h(x)=g(x-2) [Be careful; this one might be a challenge.]",
+                "solution": "Point out that the graph of h is related to g rather than f. Make sure students recognize that they must find the graph of g first, and then translate it to find h.\n\ny=f(x)y=f(x)y=h(x)y=g(x)y=f(x)y=h(x)y=g(x)y=f(x)"
+            },
+            {
+                "number": 5,
+                "prompt": "Study the graphs below. Identify the parent function and the transformations of that function depicted by the second graph. Then, write the formula for the transformed function.",
+                "solution": "y=g(x)y=f(x)y=g(x)y=f(x)\n\nThe parent function is f(x)=x^{2}, in red. The graph of the transformed function, in black, is the graph of y=f(x) shifted 3 units to the right and 5 units up. The function defined by the translated graph is g(x)=(x-3)^{2}+5."
+            }
+        ]
+    },
+    "practiceQuestions": [
+        {
+            "question": "[Exit Ticket Challenge 1] Students analyze the graph and critique the reasoning of others. Then, they provide a valid explanation about their argument.",
+            "options": [
+                "MP.3MP.3Ana sketched the graphs of f(x)=x^{2} and g(x)=x^{2}-6 as shown below. Did she graph both of the functions correctly? Explain how you know.",
+                "The relationship cannot be evaluated without arbitrary numerical coordinates.",
+                "The values remain constant at zero regardless of the independent variable inputs.",
+                "The rate of change is undefined because domain restrictions were violated."
+            ],
+            "correct": 0,
+            "explanation": "From the official Eureka Math Exit Ticket Key for Lesson 19:\nMP.3MP.3Ana sketched the graphs of f(x)=x^{2} and g(x)=x^{2}-6 as shown below. Did she graph both of the functions correctly? Explain how you know.\n\ny=f(x)y=g(x)y=f(x)y=g(x)\n\nThe function f was graphed correctly, but not g. The graph of g should have been translated 6 units below the graph of f.\n\nUse transformations of the graph of f(x)=\\sqrt{x} to sketch the graph of f(x)=\\sqrt{x-1}+3.\n\nThe graph should depict the graph of the square root functi"
+        },
+        {
+            "question": "[Exit Ticket Challenge 2] Exit Ticket",
+            "options": [
+                "y=f(x)y=g(x)y=f(x)y=g(x)",
+                "Ignore boundary conditions and compute only approximate integer values.",
+                "Assume that all relationships are strictly constant without verifying rates of change.",
+                "Treat independent and dependent variables as interchangeable."
+            ],
+            "correct": 0,
+            "explanation": "Official Curriculum Key for Lesson 19:\nStudents recognize and use parent functions for linear, absolute value, quadratic, square root, and cube root functions to perform vertical and horizontal translations. They identify how the graph of y=f(x) relates to the graphs of y=f(x)+k and y=f(x+k) for any specific values of k, positive or negative, and find the constant value, k, given the parent functions and the translated graphs. Students write the function representing the translated graphs."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Translating Graphs of Functions.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Developed using authentic lesson materials from standard algebra curricula.",
+        "lessonId": "L-ID-K-MATH-M4-C-2"
+    }
+}

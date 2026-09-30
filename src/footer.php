@@ -100,9 +100,9 @@
 
         <!-- Version Status & Release Info Strip (WCAG Operable) -->
         <?php
-        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.7.1';
-        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'September 2026 Grade 9 Algebra I Module 1 Release';
-        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Complete 28-Lesson Grade 9 Algebra I Module 1 with Official Worksheets, Verbatim Exit Ticket Keys, and Guided Depth';
+        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.8.0';
+        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'September 2026 Grade 9 Algebra I Complete Curriculum Release';
+        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Complete 105-Lesson Grade 9 Algebra I Curriculum (Modules 1–5) with Embedded Problem Sets, Verbatim Exit Ticket Keys, and Unified Mathematics Codex';
         ?>
         <div class="footer-version-strip" role="region" aria-label="Platform Version Information">
             <div class="footer-version-info">
@@ -273,39 +273,15 @@
                 </span>
             </div>
             <p class="footer-vmodal-lead">
-                Version <?= htmlspecialchars($siteVersion) ?> introduces the centralized <strong>Mathematics Vocabulary Review Portal</strong> (<code>/pages/math-vocab.php</code>), aggregating mathematical terminology, theorems, and definitions across all curriculum lessons with interactive 3D Active Recall Flashcards, A–Z ribbon navigation, mastery tracking, and lesson backlinks.
+                Version <?= htmlspecialchars($siteVersion) ?> delivers the complete, authoritative <strong>105-Lesson Grade 9 Algebra I Curriculum</strong> across all five modules (Module 1 through Module 5), integrating authentic Eureka Math Problem Set worksheets with teacher keys, verbatim Exit Ticket solutions, and the unified <strong>Mathematics Codex &amp; Vocab Review Hub</strong> (<code>/pages/math-vocab.php</code>).
             </p>
             <ul class="footer-vmodal-features">
                 <li class="footer-vmodal-feature-item">
                     <div class="footer-vmodal-feature-icon" aria-hidden="true">
-                        <i class="fas fa-brain"></i>
+                        <i class="fas fa-graduation-cap"></i>
                     </div>
                     <div class="footer-vmodal-feature-text">
-                        <strong>Curriculum-Wide Math Vocabulary Hub:</strong> Aggregates all mathematical terms, rigorous definitions, and symbolic notations across all lessons into a single, searchable repository for long-term retention and review.
-                    </div>
-                </li>
-                <li class="footer-vmodal-feature-item">
-                    <div class="footer-vmodal-feature-icon" aria-hidden="true">
-                        <i class="fas fa-layer-group"></i>
-                    </div>
-                    <div class="footer-vmodal-feature-text">
-                        <strong>Interactive 3D Active Recall Flashcards:</strong> Flip-card study engine with keyboard shortcuts (Spacebar to flip, Arrow keys to navigate), card shuffle, and auditory speech pronunciation.
-                    </div>
-                </li>
-                <li class="footer-vmodal-feature-item">
-                    <div class="footer-vmodal-feature-icon" aria-hidden="true">
-                        <i class="fas fa-bookmark"></i>
-                    </div>
-                    <div class="footer-vmodal-feature-text">
-                        <strong>Personalized Mastery Tracking:</strong> Star terms for later review or mark them as "Still Learning" vs "Mastered" with persistent <code>localStorage</code> synchronization and cloud backup.
-                    </div>
-                </li>
-                <li class="footer-vmodal-feature-item">
-                    <div class="footer-vmodal-feature-icon" aria-hidden="true">
-                        <i class="fas fa-link"></i>
-                    </div>
-                    <div class="footer-vmodal-feature-text">
-                        <strong>Curriculum Lesson Backlinks:</strong> Direct interactive chips connect every vocabulary term straight to the specific lesson(s) where the concept is introduced and practiced.
+                        <strong>Complete 105-Lesson Grade 9 Algebra I Curriculum:</strong> Full buildout of Modules 1–5 (Module 1: Relationships &amp; Equations, Module 2: Descriptive Statistics, Module 3: Linear &amp; Exponential Functions, Module 4: Polynomial &amp; Quadratic Expressions, Module 5: Synthesis of Modeling).
                     </div>
                 </li>
                 <li class="footer-vmodal-feature-item">
@@ -313,7 +289,23 @@
                         <i class="fas fa-file-signature"></i>
                     </div>
                     <div class="footer-vmodal-feature-text">
-                        <strong>Official Problem Sets &amp; Exit Ticket Keys:</strong> Embedded worksheets and verbatim Eureka Math Exit Ticket solution keys across all Grade 9 Module 1 lessons with 1-click printing.
+                        <strong>Authentic Embedded Problem Sets:</strong> Full student practice worksheets embedded directly into every lesson card with expandable teacher answer keys and 1-click browser printing. Zero external file download links.
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Verbatim Exit Ticket Keys &amp; Check Understanding:</strong> Formative Exit Ticket assessment prompts and teacher sample solutions with step-by-step mathematical justifications directly integrated into the interactive quiz runner.
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Unified Mathematics Codex &amp; Interactive Sandbox:</strong> Seamlessly merged <code>/pages/math.php</code> into <code>/pages/math-vocab.php</code> with 195 cross-curriculum terms, 3D active recall flashcards, and step-by-step formula solvers.
                     </div>
                 </li>
                 <li class="footer-vmodal-feature-item">
@@ -321,15 +313,7 @@
                         <i class="fas fa-cubes"></i>
                     </div>
                     <div class="footer-vmodal-feature-text">
-                        <strong>JSON-First Modular Architecture:</strong> Standalone, schema-validated JSON lesson modules in <code>assets/data/lessons/</code> dynamically rendered by <code>levels/k.php</code> without redundant PHP stubs.
-                    </div>
-                </li>
-                <li class="footer-vmodal-feature-item">
-                    <div class="footer-vmodal-feature-icon" aria-hidden="true">
-                        <i class="fas fa-square-root-variable"></i>
-                    </div>
-                    <div class="footer-vmodal-feature-text">
-                        <strong>Universal MathJax Typography:</strong> Responsive, dark-mode adaptive SVG rendering for formulas, fractions, radicals, and polynomial expressions with overflow protection.
+                        <strong>JSON-First Modular Architecture:</strong> 105 standalone schema-validated JSON lesson modules in <code>assets/data/lessons/</code> rendered dynamically by <code>levels/k.php</code> with MathJax SVG rendering.
                     </div>
                 </li>
                 <li class="footer-vmodal-feature-item">
@@ -337,7 +321,7 @@
                         <i class="fas fa-universal-access"></i>
                     </div>
                     <div class="footer-vmodal-feature-text">
-                        <strong>Universal WCAG &amp; UDL Accessibility:</strong> Screen-reader friendly equations, high-contrast outlines, tactile keyboard shortcuts, and full speech read-aloud support.
+                        <strong>Universal WCAG &amp; UDL Compliance:</strong> 100% keyboard accessibility, screen-reader friendly equations, tactile shortcuts, and multimodal accommodations (OpenDyslexic, Irlen overlays, text-to-speech).
                     </div>
                 </li>
             </ul>

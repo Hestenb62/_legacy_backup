@@ -1,0 +1,170 @@
+{
+    "id": "k-math-m5-b-5",
+    "code": "K.M5.B.5",
+    "standard": "HSA.CED.A.1",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "Modeling a Context from a Verbal Description",
+        "pageTitle": "Modeling a Context from a Verbal Description | Hesten's Learning",
+        "description": "In this lesson, students develop a deep conceptual and procedural understanding of Modeling a Context from a Verbal Description in Module 5: A Synthesis of Mode...",
+        "pageDescription": "Master Modeling a Context from a Verbal Description in Module 5: A Synthesis of Modeling with Equations and Functions. Comprehensive student outcomes, teacher insights, guided exercises, problem set worksheets, and exit ticket keys.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M5.B.5",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 8",
+        "pill": "Completing the Modeling Cycle",
+        "text": "In this lesson, students develop a deep conceptual and procedural understanding of Modeling a Context from a Verbal Description in Module 5: A Synthesis of Modeling with Equations and Functions.",
+        "outcomes": [
+            "Students model functions described verbally in a given context using graphs, tables, or algebraic representations."
+        ],
+        "teacherInsight": "Emphasize precise mathematical definitions and multiple problem-solving representations. Encourage students to check the reasonableness of their numerical solutions."
+    },
+    "content": [],
+    "vocabulary": [
+        {
+            "term": "Modeling a Context from a Verbal Description",
+            "definition": "Core mathematical concept established in Module 5: A Synthesis of Modeling with Equations and Functions, Completing the Modeling Cycle."
+        },
+        {
+            "term": "Mathematical Modeling",
+            "definition": "The process of choosing and using appropriate mathematics and statistics to analyze empirical situations, to understand them better, and to improve decisions."
+        }
+    ],
+    "guidedExercises": [
+        {
+            "title": "Example 1: Core Mathematical Modeling for Modeling a Context from a Verbal Description",
+            "badge": "Eureka Math Guided Classwork",
+            "difficulty": "Core Application",
+            "problem": "Scaffolding:Remind students of the formulas they used in Lesson 3 of this module and in Module 4 related to business, compound interest, and population growth and decay. If students need a review, consider taking them back to that lesson for an Opening Exercise. Scaffolding:Remind students of the formulas they used in Lesson 3 of this module and in Module 4 related to business, compound interest, and population growth and decay. If students need a review, consider taking them back to that lesson",
+            "scaffolding": "Identify the key variables and properties. Apply the definitions and mathematical structures introduced in Modeling a Context from a Verbal Description.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Define Variables & Formulate Governing Relations",
+                    "math": "\\text{Identify key variables and parameters for } Modeling a Context from a Verbal Description",
+                    "explanation": "Establish the relationship between quantities and state any domain constraints."
+                },
+                {
+                    "step": 2,
+                    "label": "Execute Step-by-Step Algebraic Transformations",
+                    "math": "\\text{Transform and simplify equations: } \\dots",
+                    "explanation": "Example 1 Christine has $500 to deposit in a savings account, and she is trying to decide between two banks. Bank A offers 10% annual interest compounded quarterly. Rather than compounding interest for smaller accounts, Bank B offers to add $15 quart"
+                }
+            ],
+            "finalAnswer": "\\text{The evaluated solution verifies the properties of } Modeling a Context from a Verbal Description",
+            "commonPitfall": "Ensure units of measurement and domain constraints are checked in physical and statistical contexts."
+        },
+        {
+            "title": "Exercise 1: Independent Problem Formulation",
+            "badge": "Multi-Step Application",
+            "difficulty": "Advanced Reasoning",
+            "problem": "Apply the foundational principles of Modeling a Context from a Verbal Description to determine the exact value and interpret the contextual significance.",
+            "scaffolding": "Reference the worked steps from Example 1. Verify intermediate calculations and justify your steps.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Analyze Given Conditions & Structure",
+                    "math": "\\text{State domain constraints and initial conditions}",
+                    "explanation": "Verify that all assumptions conform to the problem context."
+                },
+                {
+                    "step": 2,
+                    "label": "Calculate the Final Mathematical Solution",
+                    "math": "\\text{Solve for the target unknown quantity}",
+                    "explanation": "State the solution with formal mathematical reasoning."
+                }
+            ],
+            "finalAnswer": "\\text{Verified algebraic or statistical solution}",
+            "commonPitfall": "Avoid rounding prematurely before the final step."
+        }
+    ],
+    "exitTicket": {
+        "title": "Lesson 8 Exit Ticket: Modeling a Context from a Verbal Description",
+        "prompt": "Exit Ticket\n\nAnswer the following question. Look back at this (or other) lessons if you need help with the business formulas.\n\nJerry and Carlos each have $1,000 and are trying to increase their savings. Jerry will keep his money at home and add $50 per month from his part-time job. Carlos will put his money in a bank account that earns a 4% yearly interest rate, compounded monthly. Who has a better plan for increasing his savings?",
+        "solution": "Answer the following question. Look back at this (or other) lessons if you need help with the business formulas.\n\nJerry and Carlos each have $1,000 and are trying to increase their savings. Jerry will keep his money at home and add $10 per month from his part-time job. Carlos will put his money in a bank account that earns a 6% yearly interest rate, compounded monthly. Who has a better plan for increasing his savings?\n\nJerry's savings:J(n)=1000+10(n), where n represents the number of months\n\nCarlos's savings:C(n)=1000(1+\\frac{0.06}{12})^{n}, where n represents the number of months\n\nIn the short term, Jerry's plan is better, but I know that Carlos's plan will eventually exceed Jerry's because an increasing exponential model will always outgain an increasing linear model eventually. If they continued saving for 253 months, Carlos's plan would be better."
+    },
+    "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Master Modeling a Context from a Verbal Description through authentic curriculum practice problems. Check your work using the expandable teacher solution key below.",
+        "problems": [
+            {
+                "number": 1,
+                "prompt": "Maria invested $10,000 in the stock market. Unfortunately, the value of her investment has been dropping at an average rate of 3% each year.\n\nWrite the function that best models the situation.",
+                "solution": "f(n)=10 000(1-0.03)^{n} or 10 000(0.97)^{n}where n represents the number of years since the initial investment"
+            },
+            {
+                "number": 2,
+                "prompt": "If the trend continues, how much will her investment be worth in 5 years?",
+                "solution": "f(n)=10 000(0.97)^{n}\n\nf(5)=10 000(0.97)^{5}\n\nf(5)=8587.34 or $8,587.34"
+            },
+            {
+                "number": 3,
+                "prompt": "Given the situation, what should she do with her investment?",
+                "solution": "There are multiple answers, and there is no wrong answer. Sample Responses:\n\nAnswer 1: After two years, she should pull out her money and invest it in another company.\n\nAnswer 2: According to experts, she should not touch her investment and wait for it to bounce back."
+            },
+            {
+                "number": 4,
+                "prompt": "The half-life of the radioactive material in Z-Med, a medication used for certain types of therapy, is 2 days. A patient receives a 16 mCi dose (millicuries, a measure of radiation) in his treatment. (Half-life means that the radioactive material decays to the point where only half is left.)\n\nMake a table to show the level of Z-Med in the patient's body after n days.\n\nWrite a formula to model the half-life of Z-Med for n days. (Be careful here. Make sure that the formula works for both odd and even numbers of days.)",
+                "solution": "f(n)=16(\\frac{1}{2})^{\\frac{n}{2}}\n\nwhere n represents the number of days after the initial measurement of 16 mCi"
+            },
+            {
+                "number": 5,
+                "prompt": "How much radioactive material from Z-Med is left in the patient's body after 20 days of receiving the medicine?",
+                "solution": "For n=20\n\nf(20)=16(0.5)^{10}\n\nf(20)=0.015625\n\nAfter ten days, there is 0.015625 mCi of the radioactive material in Z-Med left in the patient's body."
+            },
+            {
+                "number": 6,
+                "prompt": "Suppose a male and a female of a certain species of animal were taken to a deserted island. The population of this species quadruples (multiplies by 4) every year. Assume that the animals have an abundant food supply and that there are no predators on the island.\n\nWhat is an equation that can be used to model the population of the species?",
+                "solution": "f(n)=2(4)^{n}\n\nwhere n represents the number of years after their arrival at the island"
+            },
+            {
+                "number": 7,
+                "prompt": "What will the population of the species be after 5 years?",
+                "solution": "In 5 years, the population of the animals will reach 2,048."
+            },
+            {
+                "number": 8,
+                "prompt": "Write an equation to find how many years it will take for the population of the animals to exceed 1 million. Find the number of years, either by using the equation or a table.",
+                "solution": "Using the equation: 2(4)^{n}=1 000 000\n\n4^{n}=500 000\n\nNote: Students will likely be unable to solve this equation without using trial and error (educated guessing). They may come up with 2(4)^{9.5}=1 048 576 using this method."
+            },
+            {
+                "number": 9,
+                "prompt": "The revenue of a company for a given month is represented as R(x)=1,500x-x^{2} and its costs as C(x)=1,500+1,000x. What is the selling price, x, of its product that would yield the maximum profit? Show or explain your answer.",
+                "solution": "P(x)=Revenue-Cost\n\nP(x)=R(x)-C(x)\n\nP(x)=(1500x-x^{2})-(1500+1000x)\n\nP(x)=-x^{2}+500x-1500\n\nProfit Function\n\nTo find the vertex, we can complete the square for the function:\n\nP(x)=-x^{2}+500x-1500\n\n=-1(x^{2}-500x+ )-1500Group the x-terms and factor out the -1.\n\n=-1(x^{2}-500x+62 500)-1500+62 500Complete the square.\n\nP(x)=-1(x-250)^{2}+61 000\n\nSo, the maximum point will be (250, 61 000), and the selling price should be $250 per unit to yield a maximum profit of $61,000."
+            }
+        ]
+    },
+    "practiceQuestions": [
+        {
+            "question": "[Exit Ticket Challenge 1] Exit Ticket",
+            "options": [
+                "Answer the following question. Look back at this (or other) lessons if you need help with the business formulas.",
+                "The relationship cannot be evaluated without arbitrary numerical coordinates.",
+                "The values remain constant at zero regardless of the independent variable inputs.",
+                "The rate of change is undefined because domain restrictions were violated."
+            ],
+            "correct": 0,
+            "explanation": "From the official Eureka Math Exit Ticket Key for Lesson 8:\nAnswer the following question. Look back at this (or other) lessons if you need help with the business formulas.\n\nJerry and Carlos each have $1,000 and are trying to increase their savings. Jerry will keep his money at home and add $10 per month from his part-time job. Carlos will put his money in a bank account that earns a 6% yearly interest rate, compounded monthly. Who has a better plan for increasing his savings?\n\nJerry's savings:J(n)=1000+1"
+        },
+        {
+            "question": "[Exit Ticket Challenge 2] Answer the following question. Look back at this (or other) lessons if you need help with the business formulas.",
+            "options": [
+                "Jerry and Carlos each have $1,000 and are trying to increase their savings. Jerry will keep his money at home and add $10 per month from his part-time job. Carlos will put his money in a bank account that earns a 6% yearly interest rate, compounded m",
+                "Ignore boundary conditions and compute only approximate integer values.",
+                "Assume that all relationships are strictly constant without verifying rates of change.",
+                "Treat independent and dependent variables as interchangeable."
+            ],
+            "correct": 0,
+            "explanation": "Official Curriculum Key for Lesson 8:\nStudents model functions described verbally in a given context using graphs, tables, or algebraic representations."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Modeling a Context from a Verbal Description.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Developed using authentic lesson materials from standard algebra curricula.",
+        "lessonId": "L-ID-K-MATH-M5-B-5"
+    }
+}

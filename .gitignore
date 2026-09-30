@@ -18,6 +18,11 @@
 *.vscode
 *.php_tmp
 *assets/Module 1/
+*assets/Module 2/
+*assets/Module 3/
+*assets/Module 4/
+*assets/Module 5/
+
 *scratch
 
 # User-specific files (MonoDevelop/Xamarin Studio)

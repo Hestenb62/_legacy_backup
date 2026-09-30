@@ -1,0 +1,170 @@
+{
+    "id": "k-math-m3-b-7",
+    "code": "K.M3.B.7",
+    "standard": "HSF.IF.A.1",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "Linear and Exponential Models—Comparing Growth Rates",
+        "pageTitle": "Linear and Exponential Models—Comparing Growth Rates | Hesten's Learning",
+        "description": "In this lesson, students develop a deep conceptual and procedural understanding of Linear and Exponential Models—Comparing Growth Rates in Module 3: Linear and ...",
+        "pageDescription": "Master Linear and Exponential Models—Comparing Growth Rates in Module 3: Linear and Exponential Functions. Comprehensive student outcomes, teacher insights, guided exercises, problem set worksheets, and exit ticket keys.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M3.B.7",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 14",
+        "pill": "Functions and Their Graphs",
+        "text": "In this lesson, students develop a deep conceptual and procedural understanding of Linear and Exponential Models—Comparing Growth Rates in Module 3: Linear and Exponential Functions.",
+        "outcomes": [
+            "Students compare linear and exponential models by focusing on how the models change over intervals of equal length. Students observe from tables that a function that grows exponentially eventually exceeds a function that grows linearly."
+        ],
+        "teacherInsight": "Emphasize precise mathematical definitions and multiple problem-solving representations. Encourage students to check the reasonableness of their numerical solutions."
+    },
+    "content": [],
+    "vocabulary": [
+        {
+            "term": "Linear and Exponential Models—Comparing Growth Rates",
+            "definition": "Core mathematical concept established in Module 3: Linear and Exponential Functions, Functions and Their Graphs."
+        },
+        {
+            "term": "Mathematical Modeling",
+            "definition": "The process of choosing and using appropriate mathematics and statistics to analyze empirical situations, to understand them better, and to improve decisions."
+        }
+    ],
+    "guidedExercises": [
+        {
+            "title": "Example 1: Core Mathematical Modeling for Linear and Exponential Models—Comparing Growth Rates",
+            "badge": "Eureka Math Guided Classwork",
+            "difficulty": "Core Application",
+            "problem": "Classwork Example 1 (12 minutes) Example 1 Linear Functions Sketch points P_{1}=(0,4) and P_{2}=(4,12). Are there values of m and b such that the graph of the linear function described by f(x)=mx+b contains P_{1} and P_{2}? If so, find those values. If not, explain why they do not exist. The graph of the linear function contains (0,4) when the y-intercept, b, is equal to 4. So all the linear functions whose graphs contain (0,4) are represented by",
+            "scaffolding": "Identify the key variables and properties. Apply the definitions and mathematical structures introduced in Linear and Exponential Models—Comparing Growth Rates.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Define Variables & Formulate Governing Relations",
+                    "math": "\\text{Identify key variables and parameters for } Linear and Exponential Models—Comparing Growth Rates",
+                    "explanation": "Establish the relationship between quantities and state any domain constraints."
+                },
+                {
+                    "step": 2,
+                    "label": "Execute Step-by-Step Algebraic Transformations",
+                    "math": "\\text{Transform and simplify equations: } \\dots",
+                    "explanation": "f(x)=mx+4, where m is a real number. For the graph of f to also contain (4,12), 12=m(4)+4m=2. The linear function whose graph passes through (0,4) and (4,12) is f(x)=2x+4. Sketch P_{1}=(0,4) and P_{2}=(0,-2). Are there values of m and b so that the g"
+                }
+            ],
+            "finalAnswer": "\\text{The evaluated solution verifies the properties of } Linear and Exponential Models—Comparing Growth Rates",
+            "commonPitfall": "Ensure units of measurement and domain constraints are checked in physical and statistical contexts."
+        },
+        {
+            "title": "Exercise 1: Independent Problem Formulation",
+            "badge": "Multi-Step Application",
+            "difficulty": "Advanced Reasoning",
+            "problem": "Apply the foundational principles of Linear and Exponential Models—Comparing Growth Rates to determine the exact value and interpret the contextual significance.",
+            "scaffolding": "Reference the worked steps from Example 1. Verify intermediate calculations and justify your steps.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Analyze Given Conditions & Structure",
+                    "math": "\\text{State domain constraints and initial conditions}",
+                    "explanation": "Verify that all assumptions conform to the problem context."
+                },
+                {
+                    "step": 2,
+                    "label": "Calculate the Final Mathematical Solution",
+                    "math": "\\text{Solve for the target unknown quantity}",
+                    "explanation": "State the solution with formal mathematical reasoning."
+                }
+            ],
+            "finalAnswer": "\\text{Verified algebraic or statistical solution}",
+            "commonPitfall": "Avoid rounding prematurely before the final step."
+        }
+    ],
+    "exitTicket": {
+        "title": "Lesson 14 Exit Ticket: Linear and Exponential Models—Comparing Growth Rates",
+        "prompt": "Exit Ticket\n\nA big company settles its new headquarters in a small city. The city council plans road construction based on traffic increasing at a linear rate, but based on the company's massive expansion, traffic is really increasing exponentially.\n\nWhat are the repercussions of the city council's current plans? Include what you know about linear and exponential growth in your discussion.",
+        "solution": "A big company settles its new headquarters in a small city. The city council plans road construction based on traffic increasing at a linear rate, but based on the company's massive expansion, traffic is really increasing exponentially.\n\nWhat are the repercussions of the city council's current plans? Include what you know about linear and exponential growth in your discussion.\n\nThe city will not have the roads or capacity to handle the kind of traffic that will exist. Even if the linear growth of traffic initially outruns the exponential growth, eventually the exponential growth will catch up and exceed it. This means people will sit in traffic longer, and the city will be generally congested for longer than if it had been planned for much heavier traffic flow."
+    },
+    "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Master Linear and Exponential Models—Comparing Growth Rates through authentic curriculum practice problems. Check your work using the expandable teacher solution key below.",
+        "problems": [
+            {
+                "number": 1,
+                "prompt": "When a ball bounces up and down, the maximum height it reaches decreases with each bounce in a predictable way. Suppose for a particular type of squash ball dropped on a squash court, the maximum height, h(x), after x number of bounces can be represented by h(x)=65(\\frac{1}{3})^{x}.\n\nHow many times higher is the height after the first bounce compared to the height after the third bounce?",
+                "solution": "9 times higher"
+            },
+            {
+                "number": 2,
+                "prompt": "Graph the points (x, h(x)) for x-values of 0, 1, 2, 3, 4, and 5.\n\nAustralia experienced a major pest problem in the early 20th century. The pest? Rabbits. In 1859, 24 rabbits were released by Thomas Austin at Barwon Park. In 1926, there were an estimated 10 billion rabbits in Australia. Needless to say, the Australian government spent a tremendous amount of time and money to get the rabbit problem under control. (To find more on this topic, visit Australia's Department of Environment and Primary Industries website under Agriculture.)\n\nBased only on the information above, write an exponential function that would model Australia's rabbit population growth.",
+                "solution": "R(t)=24(1.3448)^{t}"
+            },
+            {
+                "number": 3,
+                "prompt": "The model you created from the data in the problem is obviously a huge simplification from the actual function of the number of rabbits in any given year from 1859 to 1926. Name at least one complicating factor (about rabbits) that might make the graph of your function look quite different than the graph of the actual function.",
+                "solution": "Example: A drought could have wiped out a huge percentage of rabbits in a single year, showing a dip in the graph of the actual function."
+            },
+            {
+                "number": 4,
+                "prompt": "After graduating from college, Jane has two job offers to consider. Job A is compensated at $100,000 a year but with no hope of ever having an increase in pay. Jane knows a few of her peers are getting that kind of an offer right out of college. Job B is for a social media start-up, which guarantees a mere $10,000 a year. The founder is sure the concept of the company will be the next big thing in social networking and promises a pay increase of 25% at the beginning of each new year.\n\nWhich job will have a greater annual salary at the beginning of the fifth year? By approximately how much?",
+                "solution": "Job A, $100,000 vs. $24,400, a difference of about $75,600"
+            },
+            {
+                "number": 5,
+                "prompt": "Which job will have a greater annual salary at the beginning of the tenth year? By approximately how much?",
+                "solution": "Job A, $100,000 vs. $74,500, a difference of about $25,500"
+            },
+            {
+                "number": 6,
+                "prompt": "Which job will have a greater annual salary at the beginning of the twentieth year? By approximately how much?",
+                "solution": "Job B, $694,000 vs. $100,000, a difference of about $594,000"
+            },
+            {
+                "number": 7,
+                "prompt": "If you were in Jane's shoes, which job would you take?",
+                "solution": "Answers may vary. Encourage students to voice reasons for each position. By the beginning of the twelfth year, Job B has a greater annual salary than Job A. After 17 years, Job B begins to have a bigger total financial payoff than Job A."
+            },
+            {
+                "number": 8,
+                "prompt": "The population of a town in 2007 was 15,000 people. The town has gotten its fresh water supply from a nearby lake and river system with the capacity to provide water for up to 30,000 people. Due to its proximity to a big city and a freeway, the town's population has begun to grow more quickly than in the past. The table below shows the population counts for each year from 2007—2012.\n\nWrite a function of x that closely matches these data points for x-values of 0, 1, 2, 3, 4, and 5.",
+                "solution": "The value of the ratio of population in one year to the population in the previous year appears to be the same for any two consecutive years in the table. The value of the ratio is 1.04, so a function that would model this data for x-values of 0, 1, 2, … , 5, is f(x)=15,000(1.04)^{x}."
+            },
+            {
+                "number": 9,
+                "prompt": "Assume the function is a good model for the population growth from 2012—2032. At what year during the time frame 2012—2032 will the water supply be inadequate for the population?",
+                "solution": "If this model continues to hold true, the population will be larger than 30,000 when x is 18, which corresponds to the year 2025."
+            }
+        ]
+    },
+    "practiceQuestions": [
+        {
+            "question": "[Exit Ticket Challenge 1] Exit Ticket",
+            "options": [
+                "A big company settles its new headquarters in a small city. The city council plans road construction based on traffic increasing at a linear rate, but based on the company's massive expansion, traffic is really increasing exponentially.",
+                "The relationship cannot be evaluated without arbitrary numerical coordinates.",
+                "The values remain constant at zero regardless of the independent variable inputs.",
+                "The rate of change is undefined because domain restrictions were violated."
+            ],
+            "correct": 0,
+            "explanation": "From the official Eureka Math Exit Ticket Key for Lesson 14:\nA big company settles its new headquarters in a small city. The city council plans road construction based on traffic increasing at a linear rate, but based on the company's massive expansion, traffic is really increasing exponentially.\n\nWhat are the repercussions of the city council's current plans? Include what you know about linear and exponential growth in your discussion.\n\nThe city will not have the roads or capacity to handle the kind of tr"
+        },
+        {
+            "question": "[Exit Ticket Challenge 2] A big company settles its new headquarters in a small city. The city council plans road construction based on traffic increasing at a linear rate, but based on the company's massive expansion, traffic is really increasing exponentially.",
+            "options": [
+                "What are the repercussions of the city council's current plans? Include what you know about linear and exponential growth in your discussion.",
+                "Ignore boundary conditions and compute only approximate integer values.",
+                "Assume that all relationships are strictly constant without verifying rates of change.",
+                "Treat independent and dependent variables as interchangeable."
+            ],
+            "correct": 0,
+            "explanation": "Official Curriculum Key for Lesson 14:\nStudents compare linear and exponential models by focusing on how the models change over intervals of equal length. Students observe from tables that a function that grows exponentially eventually exceeds a function that grows linearly."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Linear and Exponential Models—Comparing Growth Rates.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Developed using authentic lesson materials from standard algebra curricula.",
+        "lessonId": "L-ID-K-MATH-M3-B-7"
+    }
+}

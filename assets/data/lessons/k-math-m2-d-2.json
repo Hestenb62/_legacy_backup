@@ -1,0 +1,142 @@
+{
+    "id": "k-math-m2-d-2",
+    "code": "K.M2.D.2",
+    "standard": "HSS.ID.B.6",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "Relationships Between Two Numerical Variables",
+        "pageTitle": "Relationships Between Two Numerical Variables | Hesten's Learning",
+        "description": "The work in this lesson builds on students' work with bivariate data and its relationships. The models addressed in this lesson also build on the scatter plots ...",
+        "pageDescription": "Master Relationships Between Two Numerical Variables in Module 2: Descriptive Statistics. Comprehensive student outcomes, teacher insights, guided exercises, problem set worksheets, and exit ticket keys.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M2.D.2",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 13",
+        "pill": "Numerical Data on Two Variables",
+        "text": "The work in this lesson builds on students' work with bivariate data and its relationships. The models addressed in this lesson also build on the scatter plots presented in Lesson 12. Lesson 12 asked students to think about whether or not there was a relationship between variables. If there was, students identified that relationship as linear or nonlinear. Previous relationship studies focused primarily on linear models. In this lesson, students begin to analyze nonlinear relationships, specifically exponential and quadratic models.",
+        "outcomes": [
+            "Students distinguish between scatter plots that display a relationship that can be reasonably modeled by a linear equation and those that should be modeled by a nonlinear equation.",
+            "Students use an equation given as a model for a nonlinear relationship to answer questions based on an understanding of the specific equation and the context of the data."
+        ],
+        "teacherInsight": "Emphasize precise mathematical definitions and multiple problem-solving representations. Encourage students to check the reasonableness of their numerical solutions."
+    },
+    "content": [],
+    "vocabulary": [
+        {
+            "term": "Ask students",
+            "definition": "How can a graph be used to make a prediction? Estimate the value from the line or curve."
+        }
+    ],
+    "guidedExercises": [
+        {
+            "title": "Example 1: Core Mathematical Modeling for Relationships Between Two Numerical Variables",
+            "badge": "Eureka Math Guided Classwork",
+            "difficulty": "Core Application",
+            "problem": "Classwork Not all relationships between two numerical variables are linear. There are many situations where the pattern in the scatter plot would best be described by a curve. Two types of functions often used in modeling nonlinear relationships are quadratic and exponential functions. Example 1 (7 minutes): Modeling Relationships As a group, discuss the functions presented in this example and their graphs. Students' previous work in algebra and functions used these functions. Ask students to de",
+            "scaffolding": "Identify the key variables and properties. Apply the definitions and mathematical structures introduced in Relationships Between Two Numerical Variables.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Define Variables & Formulate Governing Relations",
+                    "math": "\\text{Identify key variables and parameters for } Relationships Between Two Numerical Variables",
+                    "explanation": "Establish the relationship between quantities and state any domain constraints."
+                },
+                {
+                    "step": 2,
+                    "label": "Execute Step-by-Step Algebraic Transformations",
+                    "math": "\\text{Transform and simplify equations: } \\dots",
+                    "explanation": "In other situations, the pattern in the scatter plot might look like the graphs of exponential functions that either are upward sloping (Graph 1) or downward sloping (Graph 2). Exercises 1—6 (12 minutes) Provide students time to work individually or "
+                }
+            ],
+            "finalAnswer": "\\text{The evaluated solution verifies the properties of } Relationships Between Two Numerical Variables",
+            "commonPitfall": "Ensure units of measurement and domain constraints are checked in physical and statistical contexts."
+        },
+        {
+            "title": "Exercise 1: Independent Problem Formulation",
+            "badge": "Multi-Step Application",
+            "difficulty": "Advanced Reasoning",
+            "problem": "Apply the foundational principles of Relationships Between Two Numerical Variables to determine the exact value and interpret the contextual significance.",
+            "scaffolding": "Reference the worked steps from Example 1. Verify intermediate calculations and justify your steps.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Analyze Given Conditions & Structure",
+                    "math": "\\text{State domain constraints and initial conditions}",
+                    "explanation": "Verify that all assumptions conform to the problem context."
+                },
+                {
+                    "step": 2,
+                    "label": "Calculate the Final Mathematical Solution",
+                    "math": "\\text{Solve for the target unknown quantity}",
+                    "explanation": "State the solution with formal mathematical reasoning."
+                }
+            ],
+            "finalAnswer": "\\text{Verified algebraic or statistical solution}",
+            "commonPitfall": "Avoid rounding prematurely before the final step."
+        }
+    ],
+    "exitTicket": {
+        "title": "Lesson 13 Exit Ticket: Relationships Between Two Numerical Variables",
+        "prompt": "Exit Ticket\n\nHere is the scatter plot of age (in years) and finish time (in minutes) of the NY City Marathon that you first saw in an example. What type of model (linear, quadratic, or exponential) would best describe the relationship between age and finish time? Explain your reasoning.\n\nHere is the scatter plot of frying time (in seconds) and moisture content (as a percentage) you first saw in Lesson 12. What type of model (linear, quadratic, or exponential) would best describe the relationship between frying time and moisture content? Explain your reasoning.",
+        "solution": "Here is the scatter plot of age (in years) and finish time (in minutes) of the NY City Marathon that you first saw in an example. What type of model (linear, quadratic, or exponential) would best describe the relationship between age and finish time? Explain your reasoning.\n\nThe relationship between age and finish time is best described by a quadratic model. As age increases, finish times decrease until they reach a minimum value and then begin to increase.\n\nHere is the scatter plot of frying time (in seconds) and moisture content (as a percentage) you first saw in Lesson 12. What type of model (linear, quadratic, or exponential) would best describe the relationship between frying time and moisture content? Explain your reasoning.\n\nThe relationship between frying time and moisture content is exponential. As the frying time increases, the moisture content decreases. The amount of decrease is slowing as the frying time increases; therefore, it is an exponential decrease."
+    },
+    "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Master Relationships Between Two Numerical Variables through authentic curriculum practice problems. Check your work using the expandable teacher solution key below.",
+        "problems": [
+            {
+                "number": 1,
+                "prompt": "Biologists conducted a study of the nesting behavior of a type of bird called a flycatcher. They examined a large number of nests and recorded the latitude for the location of the nest and the number of chicks in the nest.\n\nData Source: Juan José Sanz, \"Geographic variation in breeding parameters of the pied flycatcher Ficedula hypoleuca\" Ibis, 139 (1997): 107.\n\nWhat type of model (linear, quadratic, or exponential) would best describe the relationship between latitude and mean number of chicks?",
+                "solution": "The relationship between latitude in degrees and mean number of chicks is best described by a quadratic model.\n\nOne model that could be used to describe the relationship between mean number of chicks and latitude is y=0.175+0.21x-0.002x^{2}, where x represents the latitude of the location of the nest and y represents the number of chicks in the nest. Use the quadratic model to complete the following table. Then sketch a graph of the quadratic curve on the scatter plot at the beginning of the Problem Set."
+            },
+            {
+                "number": 2,
+                "prompt": "Based on this quadratic model, what is the best latitude for hatching the most flycatcher chicks? Justify your choice.",
+                "solution": "The best latitude is the highest point, which is 55 degrees latitude."
+            },
+            {
+                "number": 3,
+                "prompt": "Suppose that social scientists conducted a study of senior citizens to see how the time (in minutes) required to solve a word puzzle changes with age. The scatter plot below displays data from this study.\n\nLet x equal the age of the citizen and y equal the time (in minutes) required to solve a word puzzle for the seven study participants.\n\nWhat type of model (linear, quadratic, or exponential) would you use to describe the relationship between age and time required to complete the word puzzle?\n\nOne model that could describe the relationship between age and time to complete the word puzzle is y=10^{-1.01 + 0.017x}. This exponential curve is shown on the scatter plot below. Does this model do a good job of describing the relationship between age and time to complete the word puzzle? Explain why or why not.",
+                "solution": "One model that could describe the relationship between age and time to complete the word puzzle is y=10^{-1.01 + 0.017x}. This exponential curve is shown on the scatter plot below. Does this model do a good job of describing the relationship between age and time to complete the word puzzle? Explain why or why not.\n\nEvaluation is subjective; the data points are close to the model; therefore, it does a good job of describing the relationship between age and time to complete the word puzzle."
+            },
+            {
+                "number": 4,
+                "prompt": "Based on this exponential model, what time would you predict for a person who is 78 years old?",
+                "solution": "Based on the graph, an estimate of about 2 min. would be reasonable. Using the model equation, y=10^{-1.01 + 0.017(78)}, or approximately 2 min."
+            }
+        ]
+    },
+    "practiceQuestions": [
+        {
+            "question": "[Exit Ticket Challenge 1] Exit Ticket",
+            "options": [
+                "Here is the scatter plot of age (in years) and finish time (in minutes) of the NY City Marathon that you first saw in an example. What type of model (linear, quadratic, or exponential) would best describe the relationship between age and finish time?",
+                "The relationship cannot be evaluated without arbitrary numerical coordinates.",
+                "The values remain constant at zero regardless of the independent variable inputs.",
+                "The rate of change is undefined because domain restrictions were violated."
+            ],
+            "correct": 0,
+            "explanation": "From the official Eureka Math Exit Ticket Key for Lesson 13:\nHere is the scatter plot of age (in years) and finish time (in minutes) of the NY City Marathon that you first saw in an example. What type of model (linear, quadratic, or exponential) would best describe the relationship between age and finish time? Explain your reasoning.\n\nThe relationship between age and finish time is best described by a quadratic model. As age increases, finish times decrease until they reach a minimum value and then begin t"
+        },
+        {
+            "question": "[Exit Ticket Challenge 2] Here is the scatter plot of age (in years) and finish time (in minutes) of the NY City Marathon that you first saw in an example. What type of model (linear, quadratic, or exponential) would best describe the relationship between age and finish time? Explain your reasoning.",
+            "options": [
+                "The relationship between age and finish time is best described by a quadratic model. As age increases, finish times decrease until they reach a minimum value and then begin to increase.",
+                "Ignore boundary conditions and compute only approximate integer values.",
+                "Assume that all relationships are strictly constant without verifying rates of change.",
+                "Treat independent and dependent variables as interchangeable."
+            ],
+            "correct": 0,
+            "explanation": "Official Curriculum Key for Lesson 13:\nStudents distinguish between scatter plots that display a relationship that can be reasonably modeled by a linear equation and those that should be modeled by a nonlinear equation."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Relationships Between Two Numerical Variables.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Developed using authentic lesson materials from standard algebra curricula.",
+        "lessonId": "L-ID-K-MATH-M2-D-2"
+    }
+}

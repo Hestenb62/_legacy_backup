@@ -1,0 +1,181 @@
+{
+    "id": "k-math-m4-a-4",
+    "code": "K.M4.A.4",
+    "standard": "HSA.SSE.A.1",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "Advanced Factoring Strategies for Quadratic Expressions",
+        "pageTitle": "Advanced Factoring Strategies for Quadratic Expressions | Hesten's Learning",
+        "description": "Scaffolding: Provide students with a graphic organizer that includes the steps below on one side and space for their work toward the solution on the other.Proce...",
+        "pageDescription": "Master Advanced Factoring Strategies for Quadratic Expressions in Module 4: Polynomial and Quadratic Expressions, Equations, and Functions. Comprehensive student outcomes, teacher insights, guided exercises, problem set worksheets, and exit ticket keys.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M4.A.4",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 4",
+        "pill": "Quadratic Expressions, Equations, and Functions",
+        "text": "Scaffolding: Provide students with a graphic organizer that includes the steps below on one side and space for their work toward the solution on the other.Process SolutionMultiply a and c. List all possible factor pairs of ac.Find the pair that satisfies the requirements of the product-sum method.Rewrite the expression with the same first and last term but with an expanded b term using that pair of factors as coefficients.We now have four terms and can enter them into a rectangle or factor by pairs.The common binomial factor presents itself. Rewrite by combining the coefficients of said common binomial factors and multiplying by the common binomial factor.Scaffolding: Provide students with a graphic organizer that includes the steps below on one side and space for their work toward the solution on the other.Process SolutionMultiply a and c. List all possible factor pairs of ac.Find the pair that satisfies the requirements of the product-sum method.Rewrite the expression with the same first and last term but with an expanded b term using that pair of factors as coefficients.We now have four terms and can enter them into a rectangle or factor by pairs.The common binomial factor presents itself. Rewrite by combining the coefficients of said common binomial factors and multiplying by the common binomial factor.This lesson is a continuation of Lesson 3, offering tools and techniques for more efficient factoring of quadratic expressions that are difficult to factor. These tools are of assistance when perseverance is required in solving more complicated equations in future lessons. We continue to focus on the structure of quadratic expressions (A-SSE.A.2) as we explore quadratic expressions that are difficult to factor. They have leading coefficients other than 1 and factors that are rational but may be tricky.",
+        "outcomes": [
+            "Students factor quadratic expressions that cannot be easily factored and develop additional strategies for factorization, including splitting the linear term, using graphing calculators, and using geometric or tabular models.",
+            "MP.7MP.7In this lesson, students look to discern a pattern or structure in order to rewrite a quadratic trinomial in an equivalent form."
+        ],
+        "teacherInsight": "Emphasize precise mathematical definitions and multiple problem-solving representations. Encourage students to check the reasonableness of their numerical solutions."
+    },
+    "content": [],
+    "vocabulary": [
+        {
+            "term": "Advanced Factoring Strategies for Quadratic Expressions",
+            "definition": "Core mathematical concept established in Module 4: Polynomial and Quadratic Expressions, Equations, and Functions, Quadratic Expressions, Equations, and Functions."
+        },
+        {
+            "term": "Mathematical Modeling",
+            "definition": "The process of choosing and using appropriate mathematics and statistics to analyze empirical situations, to understand them better, and to improve decisions."
+        }
+    ],
+    "guidedExercises": [
+        {
+            "title": "Example 1: Core Mathematical Modeling for Advanced Factoring Strategies for Quadratic Expressions",
+            "badge": "Eureka Math Guided Classwork",
+            "difficulty": "Core Application",
+            "problem": "Classwork Opening Exercise (5 minutes) Have students work in pairs or small groups to factor the following two quadratic expressions using the product-sum method and discuss their similarities and differences. Opening Exercise Factor the following quadratic expressions. 2x^{2}+10x+12",
+            "scaffolding": "Identify the key variables and properties. Apply the definitions and mathematical structures introduced in Advanced Factoring Strategies for Quadratic Expressions.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Define Variables & Formulate Governing Relations",
+                    "math": "\\text{Identify key variables and parameters for } Advanced Factoring Strategies for Quadratic Expressions",
+                    "explanation": "Establish the relationship between quantities and state any domain constraints."
+                },
+                {
+                    "step": 2,
+                    "label": "Execute Step-by-Step Algebraic Transformations",
+                    "math": "\\text{Transform and simplify equations: } \\dots",
+                    "explanation": "2(x^{2}+5x+6)=2(x+2)(x+3) 6x^{2}+ 5x-6 (3x-2)(2x+3) In what ways do these expressions differ? The first is easily factorable after factoring out a common factor of 2, making it possible to rewrite the expression with a leading coefficient 1. In Exerc"
+                }
+            ],
+            "finalAnswer": "\\text{The evaluated solution verifies the properties of } Advanced Factoring Strategies for Quadratic Expressions",
+            "commonPitfall": "Ensure units of measurement and domain constraints are checked in physical and statistical contexts."
+        },
+        {
+            "title": "Exercise 1: Independent Problem Formulation",
+            "badge": "Multi-Step Application",
+            "difficulty": "Advanced Reasoning",
+            "problem": "Apply the foundational principles of Advanced Factoring Strategies for Quadratic Expressions to determine the exact value and interpret the contextual significance.",
+            "scaffolding": "Reference the worked steps from Example 1. Verify intermediate calculations and justify your steps.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Analyze Given Conditions & Structure",
+                    "math": "\\text{State domain constraints and initial conditions}",
+                    "explanation": "Verify that all assumptions conform to the problem context."
+                },
+                {
+                    "step": 2,
+                    "label": "Calculate the Final Mathematical Solution",
+                    "math": "\\text{Solve for the target unknown quantity}",
+                    "explanation": "State the solution with formal mathematical reasoning."
+                }
+            ],
+            "finalAnswer": "\\text{Verified algebraic or statistical solution}",
+            "commonPitfall": "Avoid rounding prematurely before the final step."
+        }
+    ],
+    "exitTicket": {
+        "title": "Lesson 4 Exit Ticket: Advanced Factoring Strategies for Quadratic Expressions",
+        "prompt": "Exit Ticket\n\nExplain the importance of recognizing common factors when factoring complicated quadratic expressions.\n\nFactor: 8x^{2}+6x+1.",
+        "solution": "Explain the importance of recognizing common factors when factoring complicated quadratic expressions.\n\nStudents should see the importance of factoring out a GCF before attempting to apply the reverse tabular model or splitting the linear term. In every case, the quadratic expressions are much easier to handle if the common factors are out of the way.\n\nFactor: 8x^{2}+6x+1.\n\n(4x+1)(2x+1)"
+    },
+    "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Master Advanced Factoring Strategies for Quadratic Expressions through authentic curriculum practice problems. Check your work using the expandable teacher solution key below.",
+        "problems": [
+            {
+                "number": 1,
+                "prompt": "Factor completely.\n\n9x^{2}-25x",
+                "solution": "x(9x-25)"
+            },
+            {
+                "number": 2,
+                "prompt": "9x^{2}-25",
+                "solution": "(3x+5)(3x-5)"
+            },
+            {
+                "number": 3,
+                "prompt": "9x^{2}-30x+25",
+                "solution": "(3x-5)(3x-5) or (3x-5)^{2}"
+            },
+            {
+                "number": 4,
+                "prompt": "2x^{2}+7x+6",
+                "solution": "(2x+3)(x+2)"
+            },
+            {
+                "number": 5,
+                "prompt": "6x^{2}+7x+2",
+                "solution": "(3x+2)(2x+1)"
+            },
+            {
+                "number": 6,
+                "prompt": "8x^{2}+20x+8",
+                "solution": "GCF is 4: 4(2x^{2}+5x+2)=4(2x+1)(x+2)"
+            },
+            {
+                "number": 7,
+                "prompt": "3x^{2}+10x+7",
+                "solution": "(3x+7)(x+1)"
+            },
+            {
+                "number": 8,
+                "prompt": "x^{2}+\\frac{11}{2}x+\\frac{5}{2}",
+                "solution": "\\frac{1}{2}(2x^{2}+11x+5)=\\frac{1}{2}(2x+1)(x+5"
+            },
+            {
+                "number": 9,
+                "prompt": "6x^{3}-2x^{2}-4x [Hint: Look for a GCF first.]",
+                "solution": "2x(3x^{2}-1x-2)=2x(3x+2)(x-1)"
+            },
+            {
+                "number": 10,
+                "prompt": "The area of the rectangle below is represented by the expression 18x^{2}+12x+2 square units. Write two expressions to represent the dimensions, if the length is known to be twice the width.\n\n18x^{2}+12x+218x^{2}+12x+2",
+                "solution": "If we factor out the 2 first (GCF), we can use that to double one of the dimensions after we finish factoring to give us2(9x^{2}+6x+1)=2(3x+1)(3x+1)=(6x+2)(3x+1). So, the length is (6x+2), and the width is (3x+1).\n\nMP.1MP.1In the following task, students must solve a problem related to finding dimensions of a geometric figure when area is represented as an expression that is not easily factorable. This question is open-ended with multiple correct answers. Students may question how to begin and should persevere in solving."
+            },
+            {
+                "number": 11,
+                "prompt": "Two mathematicians are neighbors. Each owns a separate rectangular plot of land that shares a boundary and has the same dimensions. They agree that each has an area of 2x^{2}+3x+1 square units. One mathematician sells his plot to the other. The other wants to put a fence around the perimeter of his new combined plot of land. How many linear units of fencing does he need? Write your answer as an expression in x.\n\nNote: This question has two correct approaches and two different correct solutions. Can you find them both?",
+                "solution": "The dimensions of each original plot can be found by factoring the expression for area given in the prompt, 2x^{2}+3x+1, which gives us (2x+1)(x+1) as the dimensions. Selecting which boundary is common affects the solution because the length of the common side is not included when finding the perimeter of the combined plot. Those measures could be either (2x+1) or (x+1).\n\nIf the first: P=2(2x+1)+4(x+1)=4x+2+4x+4=8x+6.\n\nIf the second: P=2(x+1)+4(2x+1)=2x+2+8x+4=10x+6."
+            }
+        ]
+    },
+    "practiceQuestions": [
+        {
+            "question": "[Exit Ticket Challenge 1] Exit Ticket",
+            "options": [
+                "Explain the importance of recognizing common factors when factoring complicated quadratic expressions.",
+                "The relationship cannot be evaluated without arbitrary numerical coordinates.",
+                "The values remain constant at zero regardless of the independent variable inputs.",
+                "The rate of change is undefined because domain restrictions were violated."
+            ],
+            "correct": 0,
+            "explanation": "From the official Eureka Math Exit Ticket Key for Lesson 4:\nExplain the importance of recognizing common factors when factoring complicated quadratic expressions.\n\nStudents should see the importance of factoring out a GCF before attempting to apply the reverse tabular model or splitting the linear term. In every case, the quadratic expressions are much easier to handle if the common factors are out of the way.\n\nFactor: 8x^{2}+6x+1.\n\n(4x+1)(2x+1)"
+        },
+        {
+            "question": "[Exit Ticket Challenge 2] Explain the importance of recognizing common factors when factoring complicated quadratic expressions.",
+            "options": [
+                "Students should see the importance of factoring out a GCF before attempting to apply the reverse tabular model or splitting the linear term. In every case, the quadratic expressions are much easier to handle if the common factors are out of the way.",
+                "Ignore boundary conditions and compute only approximate integer values.",
+                "Assume that all relationships are strictly constant without verifying rates of change.",
+                "Treat independent and dependent variables as interchangeable."
+            ],
+            "correct": 0,
+            "explanation": "Official Curriculum Key for Lesson 4:\nStudents factor quadratic expressions that cannot be easily factored and develop additional strategies for factorization, including splitting the linear term, using graphing calculators, and using geometric or tabular models."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Advanced Factoring Strategies for Quadratic Expressions.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Developed using authentic lesson materials from standard algebra curricula.",
+        "lessonId": "L-ID-K-MATH-M4-A-4"
+    }
+}

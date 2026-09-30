@@ -1,11 +1,41 @@
 {
     "meta": {
-        "title": "Hesten's Learning Complete Math Lessons Vocabulary Codex",
-        "total_terms": 86,
+        "title": "Hesten's Learning Unified Mathematics Codex & Vocabulary Repository",
+        "total_terms": 195,
         "generated_at": "2026-09-30",
-        "version": "1.0.0"
+        "version": "2.0.0"
     },
     "terms": [
+        {
+            "id": "absolute-value-the-integer-domain",
+            "term": "Absolute Value & The Integer Domain",
+            "definition": "The non-negative magnitude of a real number on the continuous number line, representing its geometric distance from origin zero ($0$) irrespective of direction.",
+            "example": "$$|x| = \\begin{cases} x & \\text{if } x \\ge 0 \\ -x & \\text{if } x < 0 \\end{cases}$$",
+            "category": "Number Systems & Arithmetic",
+            "modules": [
+                "Reference Codex (Grade 6)"
+            ],
+            "grades": [
+                "Grade 6"
+            ],
+            "lessons": [
+                {
+                    "id": "codex-grade-6",
+                    "title": "Reference Codex Vol. 6",
+                    "url": "/library/read/index.php?book=math-facts-repo&chapter=chapter-6"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "It quantifies pure magnitude where direction or sign is irrelevant, such as deviations, financial deficits, depth below sea level, or physical distance.",
+            "howToDoIt": [
+                "Locate the coordinate $x$ on the real number line.",
+                "Measure the spatial distance between $x$ and $0$.",
+                "Drop any negative sign: distance is always non-negative ($|-7| = 7$, $|+7| = 7$)."
+            ],
+            "exampleProblem": "Evaluate $|-18| + |12| - |-5|$.",
+            "exampleSolution": "$|-18| = 18$, $|12| = 12$, and $|-5| = 5$. Compute: $18 + 12 - 5 = 30 - 5 = 25$.",
+            "etymology": "/ˈæbsəluːt ˈvæljuː/ • Latin: \"absolutus\" (freed, unbound by direction)"
+        },
         {
             "id": "addition-property-of-equality",
             "term": "Addition Property of Equality",
@@ -25,7 +55,73 @@
                     "url": "/levels/k.php?k-math-m1-c-3"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "addition-regrouping-decomposition-carrying",
+            "term": "Addition Regrouping & Decomposition (Carrying)",
+            "definition": "The algorithmic process of composing a single higher base-ten unit whenever the sum of digits in an existing column equals or exceeds the base value ($10$).",
+            "example": "$$\\text{If } O_1 + O_2 \\ge 10 \\implies \\text{Bundle 10 Ones into 1 Ten}$$",
+            "category": "Number Systems & Arithmetic",
+            "modules": [
+                "Reference Codex (Grade 2)"
+            ],
+            "grades": [
+                "Grade 2"
+            ],
+            "lessons": [
+                {
+                    "id": "codex-grade-2",
+                    "title": "Reference Codex Vol. 2",
+                    "url": "/library/read/index.php?book=math-facts-repo&chapter=chapter-2"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "It preserves place value integrity by ensuring no single digit slot ever exceeds $9$, allowing infinite multi-digit addition.",
+            "howToDoIt": [
+                "Align addends vertically by column (Hundreds, Tens, Ones).",
+                "Add the Ones column. If the sum is 10 or greater, record the ones digit below and carry the tens bundle above the next column.",
+                "Add the Tens column, remembering to include any carried bundle."
+            ],
+            "exampleProblem": "Compute $48 + 37$ with vertical regrouping.",
+            "exampleSolution": "Ones: $8 + 7 = 15$. Record 5 in ones, carry 1 ten. Tens: $1 \\text{ (carried)} + 4 + 3 = 8$. Final sum: $85$.",
+            "etymology": "/riːˈɡruːpɪŋ/ • Old French: \"groupe\" (cluster or bundle)"
+        },
+        {
+            "id": "advanced-factoring-strategies-for-quadratic-expressions",
+            "term": "Advanced Factoring Strategies for Quadratic Expressions",
+            "definition": "Core mathematical concept established in Module 4: Polynomial and Quadratic Expressions, Equations, and Functions, Quadratic Expressions, Equations, and Functions.",
+            "example": "",
+            "category": "Quadratic Functions & Equations",
+            "modules": [
+                "Module 4: Polynomial and Quadratic Expressions"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m4-a-3",
+                    "title": "Advanced Factoring Strategies for Quadratic Expressions",
+                    "url": "/levels/k.php?k-math-m4-a-3"
+                },
+                {
+                    "id": "k-math-m4-a-4",
+                    "title": "Advanced Factoring Strategies for Quadratic Expressions",
+                    "url": "/levels/k.php?k-math-m4-a-4"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "algebraic-identity",
@@ -46,7 +142,12 @@
                     "url": "/levels/k.php?k-math-m1-b-2"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "algebraic-model",
@@ -67,7 +168,183 @@
                     "url": "/levels/k.php?k-math-m1-d-1"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "analyzing-a-graph",
+            "term": "Analyzing a Graph",
+            "definition": "Core mathematical concept established in Module 5: A Synthesis of Modeling with Equations and Functions, Elements of Modeling.",
+            "example": "",
+            "category": "Descriptive Statistics",
+            "modules": [
+                "Module 5: Synthesis of Modeling"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m5-a-1",
+                    "title": "Analyzing a Graph",
+                    "url": "/levels/k.php?k-math-m5-a-1"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "analyzing-a-verbal-description",
+            "term": "Analyzing a Verbal Description",
+            "definition": "Core mathematical concept established in Module 5: A Synthesis of Modeling with Equations and Functions, Elements of Modeling.",
+            "example": "",
+            "category": "Descriptive Statistics",
+            "modules": [
+                "Module 5: Synthesis of Modeling"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m5-a-3",
+                    "title": "Analyzing a Verbal Description",
+                    "url": "/levels/k.php?k-math-m5-a-3"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "analyzing-data-collected-on-two-variables",
+            "term": "Analyzing Data Collected on Two Variables",
+            "definition": "Core mathematical concept established in Module 2: Descriptive Statistics, Numerical Data on Two Variables.",
+            "example": "",
+            "category": "Descriptive Statistics",
+            "modules": [
+                "Module 2: Descriptive Statistics"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m2-d-9",
+                    "title": "Analyzing Data Collected on Two Variables",
+                    "url": "/levels/k.php?k-math-m2-d-9"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "area-of-rectangles-polygons",
+            "term": "Area of Rectangles & Polygons",
+            "definition": "The total two-dimensional surface enclosed within a closed boundary, quantified as the aggregate count of square unit tiles ($1 \\times 1$) that tile the planar region without overlaps.",
+            "example": "$$A = l \\times w = b \\times h$$",
+            "category": "Geometry & Measurement",
+            "modules": [
+                "Reference Codex (Grade 3)"
+            ],
+            "grades": [
+                "Grade 3"
+            ],
+            "lessons": [
+                {
+                    "id": "codex-grade-3",
+                    "title": "Reference Codex Vol. 3",
+                    "url": "/library/read/index.php?book=math-facts-repo&chapter=chapter-3"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "It measures planar coverage: flooring, carpeting, painting walls, solar panel arrays, and farming plots.",
+            "howToDoIt": [
+                "Measure the perpendicular linear length ($l$) and linear width ($w$) in matching units.",
+                "Multiply length by width: $A = l \\times w$.",
+                "Attach square units to the product ($\\text{in}^2, \\text{cm}^2, \\text{m}^2$)."
+            ],
+            "exampleProblem": "A classroom rug measures $8\\text{ ft}$ long and $6\\text{ ft}$ wide. Calculate the total floor area covered.",
+            "exampleSolution": "$A = l \\times w = 8 \\times 6 = 48\\text{ sq ft}$.",
+            "etymology": "/ˈeəriə/ • Latin: \"area\" (open space, vacant threshing floor)"
+        },
+        {
+            "id": "arithmetic-sequence",
+            "term": "Arithmetic sequence",
+            "definition": "A sequence is called arithmetic if there is a real number d such that each term in the sequence is the sum of the previous term and d.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 3: Linear and Exponential Functions",
+                "Module 5: Synthesis of Modeling"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m3-a-3",
+                    "title": "Arithmetic and Geometric Sequences",
+                    "url": "/levels/k.php?k-math-m3-a-3"
+                },
+                {
+                    "id": "k-math-m5-b-2",
+                    "title": "Modeling from a Sequence",
+                    "url": "/levels/k.php?k-math-m5-b-2"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "ask-students",
+            "term": "Ask students",
+            "definition": "How can a graph be used to make a prediction? Estimate the value from the line or curve.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 2: Descriptive Statistics"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m2-d-2",
+                    "title": "Relationships Between Two Numerical Variables",
+                    "url": "/levels/k.php?k-math-m2-d-2"
+                },
+                {
+                    "id": "k-math-m2-d-6",
+                    "title": "Analyzing Residuals",
+                    "url": "/levels/k.php?k-math-m2-d-6"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "associative-property",
@@ -88,7 +365,12 @@
                     "url": "/levels/k.php?k-math-m1-b-2"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "average-rate-of-change",
@@ -114,7 +396,42 @@
                     "url": "/levels/k.php?k-math-m1-a-4"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "axiomatic-triangle-congruence-sss-sas-asa-aas-hl",
+            "term": "Axiomatic Triangle Congruence (SSS, SAS, ASA, AAS, HL)",
+            "definition": "Geometric postulates establishing that two triangles possess identical size and shape if a specific subset of corresponding sides and angles are proven equal.",
+            "example": "$$\\Delta ABC \\cong \\Delta DEF \\iff \\text{Rigid Motion Maps } \\Delta ABC \\to \\Delta DEF$$",
+            "category": "Geometry & Measurement",
+            "modules": [
+                "Reference Codex (Grade 10)"
+            ],
+            "grades": [
+                "Grade 10"
+            ],
+            "lessons": [
+                {
+                    "id": "codex-grade-10",
+                    "title": "Reference Codex Vol. 10",
+                    "url": "/library/read/index.php?book=math-facts-repo&chapter=chapter-10"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "It allows rigorous mathematical proof: once two triangles are proven congruent by 3 pieces of criteria, all 6 corresponding parts are guaranteed congruent (CPCTC).",
+            "howToDoIt": [
+                "Identify given information and mark congruent side and angle pairs on the diagram.",
+                "Look for shared sides (Reflexive Property) or vertical angles.",
+                "Match to a valid congruence criteria (SSS, SAS, ASA, AAS, or Hypotenuse-Leg for right triangles). Never use unproven configurations like SSA or AAA."
+            ],
+            "exampleProblem": "Two triangles share side $AC$. Side $AB \\cong AD$ and $\\angle BAC \\cong \\angle DAC$. Prove $\\Delta ABC \\cong \\Delta ADC$.",
+            "exampleSolution": "$AB \\cong AD$ (Side), $\\angle BAC \\cong \\angle DAC$ (Angle), and $AC \\cong AC$ (Side via Reflexive Property). Triangles are congruent by $\\text{SAS Congruence Postulate}$.",
+            "etymology": "/ˈkɒŋɡruəns/ • Latin: \"congruere\" (to agree together, correspond exactly)"
         },
         {
             "id": "base-multiplier-b",
@@ -135,19 +452,55 @@
                     "url": "/levels/k.php?k-math-m1-a-3"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "base-ten-place-value-tens-ones",
+            "term": "Base-Ten Place Value (Tens & Ones)",
+            "definition": "The value of a digit determined strictly by its position within a number, where each unit in the tens column equals an aggregate group of ten individual single units.",
+            "example": "$$\\text{Two-Digit Number} = (T \\times 10) + (O \\times 1)$$",
+            "category": "Number Systems & Arithmetic",
+            "modules": [
+                "Reference Codex (Grade 1)"
+            ],
+            "grades": [
+                "Grade 1"
+            ],
+            "lessons": [
+                {
+                    "id": "codex-grade-1",
+                    "title": "Reference Codex Vol. 1",
+                    "url": "/library/read/index.php?book=math-facts-repo&chapter=chapter-1"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "It allows humans to express any quantity using only ten symbols ($0$ through $9$) by bundling groups into bundles of ten, avoiding the need for infinite distinct numeral marks.",
+            "howToDoIt": [
+                "Count out the total single units into complete bundles of ten.",
+                "Write the count of complete 10-bundles in the left column (Tens).",
+                "Write any remaining loose single units in the right column (Ones)."
+            ],
+            "exampleProblem": "Decompose the quantity $47$ into its foundational base-ten components.",
+            "exampleSolution": "47 contains 4 bundles of ten and 7 loose units: $47 = (4 \\times 10) + (7 \\times 1) = 40 + 7$.",
+            "etymology": "/beɪs tɛn pleɪs ˈvæljuː/ • Latin: \"decimalis\" (of tenths)"
         },
         {
             "id": "binomial",
             "term": "Binomial",
             "definition": "A polynomial with exactly two terms, such as x + 4 or 3x² - 2.",
-            "example": "",
+            "example": "$$(a + b)^n = \\sum_{k=0}^{n} \\binom{n}{k} a^{n-k} b^k \\quad \\left(\\binom{n}{k} = \\frac{n!}{k!(n-k)!}\\right)$$",
             "category": "Polynomials & Algebraic Expressions",
             "modules": [
                 "Module 1: Relationships Between Quantities & Reasoning with Equations"
             ],
             "grades": [
-                "Grade 9"
+                "Grade 9",
+                "Grade 11"
             ],
             "lessons": [
                 {
@@ -156,7 +509,17 @@
                     "url": "/levels/k.php?k-math-m1-b-4"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "It bypasses manual, error-prone repeated polynomial multiplications (like multiplying $(a+b)$ five times), expanding higher-degree powers in a single structured sweep.",
+            "howToDoIt": [
+                "Identify row $n$ in Pascal's Triangle to obtain coefficients $\\binom{n}{k}$.",
+                "Write descending powers of $a$ from $a^n$ down to $a^0$.",
+                "Write ascending powers of $b$ from $b^0$ up to $b^n$.",
+                "Multiply coefficients and variable powers together for each term."
+            ],
+            "exampleProblem": "Expand $(x + 2)^3$ using the Binomial Theorem.",
+            "exampleSolution": "Row 3 coefficients: $1, 3, 3, 1$. Expand: $1(x^3)(2^0) + 3(x^2)(2^1) + 3(x^1)(2^2) + 1(x^0)(2^3) = x^3 + 6x^2 + 12x + 8$.",
+            "etymology": "/baɪˈnoʊmiəl/ • Latin: \"bi\" (two) + \"nomen\" (name/term)"
         },
         {
             "id": "boundary-line",
@@ -177,7 +540,12 @@
                     "url": "/levels/k.php?k-math-m1-c-12"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "bounded-interval",
@@ -198,7 +566,120 @@
                     "url": "/levels/k.php?k-math-m1-c-7"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "box-plots",
+            "term": "Box plots",
+            "definition": "A graph that provides a picture of the data ordered and divided into four intervals that each contains approximately 25% of the data.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 2: Descriptive Statistics"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m2-a-1",
+                    "title": "Distributions and Their Shapes",
+                    "url": "/levels/k.php?k-math-m2-a-1"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "circle-geometry-circumference-area",
+            "term": "Circle Geometry: Circumference & Area",
+            "definition": "Geometric relationships for any Euclidean circle, where Circumference ($C$) is the boundary perimeter and Area ($A$) is the internal planar surface, both governed by the transcendental constant $\\pi \\approx 3.14159$.",
+            "example": "$$C = 2\\pi r = \\pi d, \\quad A = \\pi r^2$$",
+            "category": "Geometry & Measurement",
+            "modules": [
+                "Reference Codex (Grade 7)"
+            ],
+            "grades": [
+                "Grade 7"
+            ],
+            "lessons": [
+                {
+                    "id": "codex-grade-7",
+                    "title": "Reference Codex Vol. 7",
+                    "url": "/library/read/index.php?book=math-facts-repo&chapter=chapter-7"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "It allows precise calculation of round perimeters (wheels, tracks) and circular surface areas (pipes, pizza slices, fields) from a single radial measurement.",
+            "howToDoIt": [
+                "Identify radius ($r$). If given diameter ($d$), divide by $2$ ($r = d/2$).",
+                "For perimeter/circumference, compute $C = 2 \\times \\pi \\times r$.",
+                "For interior surface area, square the radius first ($r^2$), then multiply by $\\pi$: $A = \\pi \\times r^2$."
+            ],
+            "exampleProblem": "A circular trampoline has a radius of $7\\text{ ft}$. Calculate its exact circumference and area in terms of $\\pi$.",
+            "exampleSolution": "Circumference: $C = 2\\pi(7) = 14\\pi\\text{ ft}$. Area: $A = \\pi(7^2) = 49\\pi\\text{ sq ft}$.",
+            "etymology": "/səˈkʌmfərəns/ • Greek: \"π\" (perimetros, circumference)"
+        },
+        {
+            "id": "classwork-scaffolding",
+            "term": "Classwork Scaffolding",
+            "definition": "When grouping students, consider their reading skill.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 3: Linear and Exponential Functions",
+                "Module 4: Polynomial and Quadratic Expressions"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m3-d-2",
+                    "title": "Modeling an Invasive Species Population",
+                    "url": "/levels/k.php?k-math-m3-d-2"
+                },
+                {
+                    "id": "k-math-m4-a-5",
+                    "title": "The Zero Product Property",
+                    "url": "/levels/k.php?k-math-m4-a-5"
+                },
+                {
+                    "id": "k-math-m4-b-2",
+                    "title": "Completing the Square",
+                    "url": "/levels/k.php?k-math-m4-b-2"
+                },
+                {
+                    "id": "k-math-m4-b-3",
+                    "title": "Solving Quadratic Equations by Completing the Square",
+                    "url": "/levels/k.php?k-math-m4-b-3"
+                },
+                {
+                    "id": "k-math-m4-b-6",
+                    "title": "Graphing Quadratic Equations from the Vertex Form, y=a(x-h)^{2}+k",
+                    "url": "/levels/k.php?k-math-m4-b-6"
+                },
+                {
+                    "id": "k-math-m4-c-7",
+                    "title": "Modeling with Quadratic Functions",
+                    "url": "/levels/k.php?k-math-m4-c-7"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "closed-circle",
@@ -219,7 +700,12 @@
                     "url": "/levels/k.php?k-math-m1-c-2"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "closure",
@@ -240,7 +726,38 @@
                     "url": "/levels/k.php?k-math-m1-b-3"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "cody",
+            "term": "Cody",
+            "definition": "I am thinking of a plus 2 pattern, so it continues 10, 12, 14, 16, ….",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 3: Linear and Exponential Functions"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m3-a-1",
+                    "title": "Integer Sequences—Should You Believe in Patterns?",
+                    "url": "/levels/k.php?k-math-m3-a-1"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "coefficient",
@@ -261,7 +778,12 @@
                     "url": "/levels/k.php?k-math-m1-b-1"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "combined-rate",
@@ -282,19 +804,51 @@
                     "url": "/levels/k.php?k-math-m1-d-1"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "common-error",
+            "term": "Common error",
+            "definition": "Students may subtract 16 outside of the parentheses to balance the +16 inside in Opening Exercise 2.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 4: Polynomial and Quadratic Expressions"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m4-b-3",
+                    "title": "Solving Quadratic Equations by Completing the Square",
+                    "url": "/levels/k.php?k-math-m4-b-3"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "commutative-property",
             "term": "Commutative Property",
             "definition": "The property stating that the order in which two real numbers are added or multiplied does not change the result: a + b = b + a and ab = ba.",
-            "example": "",
+            "example": "$$a + b = b + a$$",
             "category": "Polynomials & Algebraic Expressions",
             "modules": [
                 "Module 1: Relationships Between Quantities & Reasoning with Equations"
             ],
             "grades": [
-                "Grade 9"
+                "Grade 9",
+                "Grade 1"
             ],
             "lessons": [
                 {
@@ -303,7 +857,124 @@
                     "url": "/levels/k.php?k-math-m1-b-2"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "It halves the memory required for mental math fact fluency: if you know $3 + 8 = 11$, you automatically know $8 + 3 = 11$.",
+            "howToDoIt": [
+                "Identify the two addends being combined.",
+                "Start with the larger number first to minimize manual counting efforts (Count-On Strategy).",
+                "Add the smaller addend: the resulting sum is invariant."
+            ],
+            "exampleProblem": "Calculate $2 + 9$ using the Commutative Property.",
+            "exampleSolution": "Swap addends: $2 + 9 = 9 + 2$. Count on 2 units from 9: $9 \\to 10 \\to 11$. Sum is $11$.",
+            "etymology": "/kəˈmjuːtətɪv/ • Latin: \"commutare\" (to interchange or swap)"
+        },
+        {
+            "id": "comparing-distributions",
+            "term": "Comparing Distributions",
+            "definition": "Core mathematical concept established in Module 2: Descriptive Statistics, Calculating and Interpreting Measures of Center and Variability.",
+            "example": "",
+            "category": "Descriptive Statistics",
+            "modules": [
+                "Module 2: Descriptive Statistics"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m2-b-5",
+                    "title": "Comparing Distributions",
+                    "url": "/levels/k.php?k-math-m2-b-5"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "comparing-quadratic-square-root-and-cube-root-functions-represented-in-different-ways",
+            "term": "Comparing Quadratic, Square Root, and Cube Root Functions Represented in Different Ways",
+            "definition": "Core mathematical concept established in Module 4: Polynomial and Quadratic Expressions, Equations, and Functions, Function Transformations and Modeling.",
+            "example": "",
+            "category": "Quadratic Functions & Equations",
+            "modules": [
+                "Module 4: Polynomial and Quadratic Expressions"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m4-c-5",
+                    "title": "Comparing Quadratic, Square Root, and Cube Root Functions Represented in Different Ways",
+                    "url": "/levels/k.php?k-math-m4-c-5"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "completing-the-square",
+            "term": "Completing the Square",
+            "definition": "Core mathematical concept established in Module 4: Polynomial and Quadratic Expressions, Equations, and Functions, Using Different Forms for Quadratic Functions.",
+            "example": "",
+            "category": "Quadratic Functions & Equations",
+            "modules": [
+                "Module 4: Polynomial and Quadratic Expressions"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m4-b-1",
+                    "title": "Completing the Square",
+                    "url": "/levels/k.php?k-math-m4-b-1"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "complex-numbers-the-imaginary-unit",
+            "term": "Complex Numbers & The Imaginary Unit",
+            "definition": "An extension of the one-dimensional real number system into a two-dimensional complex plane ($\\mathbb{C}$), defined by the imaginary unit $i$ whose square equals $-1$.",
+            "example": "$$z = a + bi \\quad (i = \\sqrt{-1}, \\; i^2 = -1, \\; a, b \\in \\mathbb{R})$$",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Reference Codex (Grade 11)"
+            ],
+            "grades": [
+                "Grade 11"
+            ],
+            "lessons": [
+                {
+                    "id": "codex-grade-11",
+                    "title": "Reference Codex Vol. 11",
+                    "url": "/library/read/index.php?book=math-facts-repo&chapter=chapter-11"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "It eliminates the barrier of negative square roots, guaranteeing that every $n$-th degree polynomial has exactly $n$ complex roots (Fundamental Theorem of Algebra). Powers electrical engineering and quantum physics.",
+            "howToDoIt": [
+                "Treat $i$ algebraically like a variable, combining real parts with real parts and imaginary parts with imaginary parts: $(a + bi) + (c + di) = (a+c) + (b+d)i$.",
+                "When multiplying, expand via FOIL and replace any occurrence of $i^2$ with $-1$.",
+                "To divide, multiply numerator and denominator by the complex conjugate $a - bi$."
+            ],
+            "exampleProblem": "Multiply $(3 + 2i)(1 - 4i)$.",
+            "exampleSolution": "FOIL: $3(1) + 3(-4i) + 2i(1) + 2i(-4i) = 3 - 12i + 2i - 8i^2$. Replace $i^2 = -1$: $3 - 10i - 8(-1) = 3 - 10i + 8 = 11 - 10i$.",
+            "etymology": "/ˈkɒm.plɛks/ • Latin: \"complexus\" (interwoven, composite of real and imaginary)"
         },
         {
             "id": "compound-inequality",
@@ -324,7 +995,38 @@
                     "url": "/levels/k.php?k-math-m1-c-7"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "conditional-relative-frequencies-and-association",
+            "term": "Conditional Relative Frequencies and Association",
+            "definition": "Core mathematical concept established in Module 2: Descriptive Statistics, Categorical Data on Two Variables.",
+            "example": "",
+            "category": "Descriptive Statistics",
+            "modules": [
+                "Module 2: Descriptive Statistics"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m2-c-3",
+                    "title": "Conditional Relative Frequencies and Association",
+                    "url": "/levels/k.php?k-math-m2-c-3"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "conjunction-and",
@@ -345,7 +1047,12 @@
                     "url": "/levels/k.php?k-math-m1-c-6"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "constraint",
@@ -366,7 +1073,38 @@
                     "url": "/levels/k.php?k-math-m1-c-15"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "creating-and-solving-quadratic-equations-in-one-variable",
+            "term": "Creating and Solving Quadratic Equations in One Variable",
+            "definition": "Core mathematical concept established in Module 4: Polynomial and Quadratic Expressions, Equations, and Functions, Quadratic Expressions, Equations, and Functions.",
+            "example": "",
+            "category": "Quadratic Functions & Equations",
+            "modules": [
+                "Module 4: Polynomial and Quadratic Expressions"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m4-a-7",
+                    "title": "Creating and Solving Quadratic Equations in One Variable",
+                    "url": "/levels/k.php?k-math-m4-a-7"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "cumulative-volume",
@@ -387,7 +1125,38 @@
                     "url": "/levels/k.php?k-math-m1-a-4"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "data-source",
+            "term": "Data Source",
+            "definition": "Core Math Tools, http://nctm.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 2: Descriptive Statistics"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m2-d-4",
+                    "title": "Interpreting Residuals from a Line",
+                    "url": "/levels/k.php?k-math-m2-d-4"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "deductive-reasoning",
@@ -408,7 +1177,12 @@
                     "url": "/levels/k.php?k-math-m1-c-3"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "degree-of-a-polynomial",
@@ -429,7 +1203,12 @@
                     "url": "/levels/k.php?k-math-m1-b-3"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "degree-sum-theorem",
@@ -450,7 +1229,12 @@
                     "url": "/levels/k.php?k-math-m1-b-4"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "dependent-variable",
@@ -471,7 +1255,95 @@
                     "url": "/levels/k.php?k-math-m1-a-1"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "derivative-via-difference-quotient",
+            "term": "Derivative via Difference Quotient",
+            "definition": "The instantaneous rate of change of a differentiable continuous function with respect to its independent variable, geometrically representing the exact slope of the tangent line at any point $x$.",
+            "example": "$$f'(x) = \\lim_{h \\to 0} \\frac{f(x + h) - f(x)}{h}$$",
+            "category": "Calculus & Analysis",
+            "modules": [
+                "Reference Codex (Grade 12)"
+            ],
+            "grades": [
+                "Grade 12"
+            ],
+            "lessons": [
+                {
+                    "id": "codex-grade-12",
+                    "title": "Reference Codex Vol. 12",
+                    "url": "/library/read/index.php?book=math-facts-repo&chapter=chapter-12"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "It freezes continuous motion at a single infinitesimal point in time, revealing exact velocities, rates of biological growth, and market volatility.",
+            "howToDoIt": [
+                "Substitute $x + h$ into the function $f(x)$ to evaluate $f(x + h)$.",
+                "Formulate the difference quotient: $\\frac{f(x + h) - f(x)}{h}$.",
+                "Algebraically cancel the factor of $h$ from the denominator.",
+                "Evaluate the limit by taking $h \\to 0$."
+            ],
+            "exampleProblem": "Find the derivative of $f(x) = x^2$ using the limit definition.",
+            "exampleSolution": "$\\lim_{h \\to 0} \\frac{(x+h)^2 - x^2}{h} = \\lim_{h \\to 0} \\frac{x^2 + 2xh + h^2 - x^2}{h} = \\lim_{h \\to 0} \\frac{2xh + h^2}{h} = \\lim_{h \\to 0} (2x + h) = 2x$.",
+            "etymology": "/dɪˈrɪvətɪv/ • Latin: \"derivare\" (to draw off from a source stream)"
+        },
+        {
+            "id": "deriving-the-quadratic-formula",
+            "term": "Deriving the Quadratic Formula",
+            "definition": "Core mathematical concept established in Module 4: Polynomial and Quadratic Expressions, Equations, and Functions, Using Different Forms for Quadratic Functions.",
+            "example": "",
+            "category": "Quadratic Functions & Equations",
+            "modules": [
+                "Module 4: Polynomial and Quadratic Expressions"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m4-b-4",
+                    "title": "Deriving the Quadratic Formula",
+                    "url": "/levels/k.php?k-math-m4-b-4"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "describing-the-center-of-a-distribution",
+            "term": "Describing the Center of a Distribution",
+            "definition": "Core mathematical concept established in Module 2: Descriptive Statistics, Shapes and Centers of Distributions.",
+            "example": "",
+            "category": "Descriptive Statistics",
+            "modules": [
+                "Module 2: Descriptive Statistics"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m2-a-2",
+                    "title": "Describing the Center of a Distribution",
+                    "url": "/levels/k.php?k-math-m2-a-2"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "disjoint-sets",
@@ -492,7 +1364,12 @@
                     "url": "/levels/k.php?k-math-m1-c-7"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "disjunction-or",
@@ -513,7 +1390,12 @@
                     "url": "/levels/k.php?k-math-m1-c-6"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "distributive-property",
@@ -525,7 +1407,8 @@
                 "Module 1: Relationships Between Quantities & Reasoning with Equations"
             ],
             "grades": [
-                "Grade 9"
+                "Grade 9",
+                "Grade 3"
             ],
             "lessons": [
                 {
@@ -534,7 +1417,43 @@
                     "url": "/levels/k.php?k-math-m1-b-1"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "It allows complex mental arithmetic by breaking intimidating numbers (like $7 \\times 14$) into two effortless friendly facts ($7 \\times 10 + 7 \\times 4$).",
+            "howToDoIt": [
+                "Break one tough factor into two easier additive parts (e.g., $14 = 10 + 4$).",
+                "Multiply the outside multiplier by the first decomposed part.",
+                "Multiply the outside multiplier by the second decomposed part.",
+                "Add the two partial products together."
+            ],
+            "exampleProblem": "Evaluate $8 \\times 13$ using the Distributive Property.",
+            "exampleSolution": "Decompose $13 = 10 + 3$: $8 \\times (10 + 3) = (8 \\times 10) + (8 \\times 3) = 80 + 24 = 104$.",
+            "etymology": "/dɪˈstrɪbjʊtɪv/ • Latin: \"distribuere\" (to apportion or divide up)"
+        },
+        {
+            "id": "dot-plots",
+            "term": "Dot plots",
+            "definition": "A plot of each data value on a scale or number line.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 2: Descriptive Statistics"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m2-a-1",
+                    "title": "Distributions and Their Shapes",
+                    "url": "/levels/k.php?k-math-m2-a-1"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "effective-tax-rate",
@@ -555,7 +1474,12 @@
                     "url": "/levels/k.php?k-math-m1-d-4"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "elevation-time-graph",
@@ -576,7 +1500,12 @@
                     "url": "/levels/k.php?k-math-m1-a-5"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "elimination-method",
@@ -597,19 +1526,77 @@
                     "url": "/levels/k.php?k-math-m1-c-14"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "end-behavior",
+            "term": "End behavior",
+            "definition": "This graph of a quadratic function opens up.",
+            "example": "",
+            "category": "Quadratic Functions & Equations",
+            "modules": [
+                "Module 4: Polynomial and Quadratic Expressions"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m4-a-8",
+                    "title": "Exploring the Symmetry in Graphs of Quadratic Functions",
+                    "url": "/levels/k.php?k-math-m4-a-8"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "end-behavior-of-a-graph",
+            "term": "End behavior of a graph",
+            "definition": "Given a quadratic function in the form f(x)=ax^{2}+bx+c (or f(x)=a(x-h)^{2}+k), the quadratic function is said to open up if a>0 and open down if a<0.",
+            "example": "",
+            "category": "Quadratic Functions & Equations",
+            "modules": [
+                "Module 4: Polynomial and Quadratic Expressions"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m4-a-8",
+                    "title": "Exploring the Symmetry in Graphs of Quadratic Functions",
+                    "url": "/levels/k.php?k-math-m4-a-8"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "equation",
             "term": "Equation",
             "definition": "A mathematical statement asserting that two algebraic expressions are equal in value.",
-            "example": "",
+            "example": "$$\\begin{cases} a_1 x + b_1 y = c_1 \\ a_2 x + b_2 y = c_2 \\end{cases} \\implies \\text{Intersection Point } (x, y)$$",
             "category": "Equations & Inequalities",
             "modules": [
                 "Module 1: Relationships Between Quantities & Reasoning with Equations"
             ],
             "grades": [
-                "Grade 9"
+                "Grade 9",
+                "Grade 8"
             ],
             "lessons": [
                 {
@@ -618,7 +1605,17 @@
                     "url": "/levels/k.php?k-math-m1-c-1"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "It models break-even points in economics, mixing chemical solutions, flight intersection paths, and dual-variable constraints.",
+            "howToDoIt": [
+                "Multiply one or both equations by a constant so that coefficients of one variable are exact opposites.",
+                "Add the two equations vertically to eliminate that variable.",
+                "Solve the resulting single-variable equation.",
+                "Back-substitute into either original equation to find the other variable."
+            ],
+            "exampleProblem": "Solve the linear system: $2x + y = 7$ and $x - y = 2$.",
+            "exampleSolution": "Add equations: $(2x + y) + (x - y) = 7 + 2 \\implies 3x = 9 \\implies x = 3$. Substitute: $3 - y = 2 \\implies y = 1$. Solution: $(3, 1)$.",
+            "etymology": "/ˈsɪstəmz/ • Greek: \"systema\" (organized whole composition)"
         },
         {
             "id": "equivalent-expressions",
@@ -639,7 +1636,12 @@
                     "url": "/levels/k.php?k-math-m1-b-1"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "equivalent-systems",
@@ -660,7 +1662,69 @@
                     "url": "/levels/k.php?k-math-m1-c-14"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "estimating-centers-and-interpreting-the-mean-as-a-balance-point",
+            "term": "Estimating Centers and Interpreting the Mean as a Balance Point",
+            "definition": "Core mathematical concept established in Module 2: Descriptive Statistics, Shapes and Centers of Distributions.",
+            "example": "",
+            "category": "Descriptive Statistics",
+            "modules": [
+                "Module 2: Descriptive Statistics"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m2-a-3",
+                    "title": "Estimating Centers and Interpreting the Mean as a Balance Point",
+                    "url": "/levels/k.php?k-math-m2-a-3"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "euclidean-division-algorithm-long-division",
+            "term": "Euclidean Division Algorithm (Long Division)",
+            "definition": "An iterative place-value algorithm that determines how many times a positive integer divisor ($b$) partitions into a dividend ($a$), yielding an integer quotient ($q$) and an exact remainder ($r$).",
+            "example": "$$a = bq + r \\quad (0 \\le r < b)$$",
+            "category": "Number Systems & Arithmetic",
+            "modules": [
+                "Reference Codex (Grade 4)"
+            ],
+            "grades": [
+                "Grade 4"
+            ],
+            "lessons": [
+                {
+                    "id": "codex-grade-4",
+                    "title": "Reference Codex Vol. 4",
+                    "url": "/library/read/index.php?book=math-facts-repo&chapter=chapter-4"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "It enables the exact and step-by-step division of arbitrarily large multi-digit numbers by breaking the computation down column-by-column.",
+            "howToDoIt": [
+                "Divide: Determine how many times the divisor fits into the current active place-value digit(s).",
+                "Multiply: Multiply the resulting quotient digit by the divisor.",
+                "Subtract: Subtract that product from the active digits to find the local remainder.",
+                "Bring Down: Bring down the next digit of the dividend and repeat."
+            ],
+            "exampleProblem": "Divide $496 \\div 4$ using the standard long division algorithm.",
+            "exampleSolution": "$4 \\div 4 = 1$ (rem 0). Bring down 9: $9 \\div 4 = 2$ ($2 \\times 4 = 8$, rem 1). Bring down 6: $16 \\div 4 = 4$ ($4 \\times 4 = 16$, rem 0). Quotient is $124$.",
+            "etymology": "/lɔːŋ dɪˈvɪʒən/ • Latin: \"divisio\" (distribution among shares)"
         },
         {
             "id": "explicit-closed-form-formula",
@@ -681,7 +1745,64 @@
                     "url": "/levels/k.php?k-math-m1-d-3"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "explore-the-following-question",
+            "term": "Explore the following question",
+            "definition": "How would the relative frequencies look if males and females had the same opinions about their favorite superpowers? This question is a prelude to Lesson 11.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 2: Descriptive Statistics"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m2-c-2",
+                    "title": "Summarizing Bivariate Categorical Data with Relative Frequencies",
+                    "url": "/levels/k.php?k-math-m2-c-2"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "exponential-decay",
+            "term": "Exponential Decay",
+            "definition": "Core mathematical concept established in Module 3: Linear and Exponential Functions, Linear and Exponential Sequences.",
+            "example": "",
+            "category": "Exponential Functions",
+            "modules": [
+                "Module 3: Linear and Exponential Functions"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m3-a-7",
+                    "title": "Exponential Decay",
+                    "url": "/levels/k.php?k-math-m3-a-7"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "exponential-function",
@@ -702,7 +1823,42 @@
                     "url": "/levels/k.php?k-math-m1-a-3"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "exponential-growth-decay-models",
+            "term": "Exponential Growth & Decay Models",
+            "definition": "A non-linear mathematical model where the rate of change is proportional to the current amount, resulting in geometric compounding over continuous or discrete time intervals $t$.",
+            "example": "$$y = a(1 \\pm r)^t \\quad \\left(\\text{Growth: } +r, \\; \\text{Decay: } -r\\right)$$",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Reference Codex (Grade 9)"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "codex-grade-9",
+                    "title": "Reference Codex Vol. 9",
+                    "url": "/library/read/index.php?book=math-facts-repo&chapter=chapter-9"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "It accurately models viral contagion, compound investment interest, population explosions, and radioactive carbon decay.",
+            "howToDoIt": [
+                "Identify initial amount ($a$) and decimal rate of change ($r$).",
+                "Construct the growth factor ($1 + r$) or decay factor ($1 - r$).",
+                "Substitute elapsed time periods ($t$) into the exponent and evaluate."
+            ],
+            "exampleProblem": "A colony of $500$ bacteria doubles ($r = 1.0$) every hour. How many bacteria exist after $4\\text{ hours}$?",
+            "exampleSolution": "$y = a(1 + r)^t = 500(1 + 1)^4 = 500(2^4) = 500(16) = 8,000\\text{ bacteria}$.",
+            "etymology": "/ˌɛkspəˈnɛnʃəl/ • Latin: \"exponere\" (to exhibit, put forth into powers)"
         },
         {
             "id": "extraneous-solution",
@@ -723,7 +1879,12 @@
                     "url": "/levels/k.php?k-math-m1-c-4"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "factored-form",
@@ -744,7 +1905,12 @@
                     "url": "/levels/k.php?k-math-m1-c-8"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "feasible-region",
@@ -765,13 +1931,18 @@
                     "url": "/levels/k.php?k-math-m1-c-15"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "formula",
             "term": "Formula",
             "definition": "A mathematical relationship or rule expressed with algebraic symbols (e.g., V = lwh).",
-            "example": "",
+            "example": "$$x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a} \\quad (\\Delta = b^2 - 4ac)$$",
             "category": "Algebraic Foundations & Modeling",
             "modules": [
                 "Module 1: Relationships Between Quantities & Reasoning with Equations"
@@ -786,7 +1957,338 @@
                     "url": "/levels/k.php?k-math-m1-c-10"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "It solves any parabolic or quadratic equation, even when factoring fails. It models trajectories, projectiles, revenue optimization, and physics mechanics.",
+            "howToDoIt": [
+                "Set equation into standard form: $ax^2 + bx + c = 0$.",
+                "Identify coefficients $a, b, c$ with their respective signs.",
+                "Evaluate the discriminant: $\\Delta = b^2 - 4ac$ ($\\Delta > 0 \\implies 2\\text{ real roots}$; $\\Delta = 0 \\implies 1\\text{ root}$; $\\Delta < 0 \\implies \\text{complex roots}$).",
+                "Compute the two roots via $\\pm$ in the numerator."
+            ],
+            "exampleProblem": "Solve $x^2 - 5x + 6 = 0$ using the Quadratic Formula.",
+            "exampleSolution": "$a=1, b=-5, c=6$. $\\Delta = (-5)^2 - 4(1)(6) = 25 - 24 = 1$. $x = \\frac{-(-5) \\pm \\sqrt{1}}{2(1)} = \\frac{5 \\pm 1}{2} \\implies x = 3 \\text{ or } x = 2$.",
+            "etymology": "/kwɒˈdrætɪk/ • Latin: \"quadratus\" (squared, four-sided square)"
+        },
+        {
+            "id": "formulate-and-compute",
+            "term": "FORMULATE AND COMPUTE",
+            "definition": "During this phase of the lesson, students should work in small groups.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 3: Linear and Exponential Functions"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m3-b-6",
+                    "title": "Interpreting the Graph of a Function",
+                    "url": "/levels/k.php?k-math-m3-b-6"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "for-the-equation",
+            "term": "For the equation",
+            "definition": "I first looked for the function type, which narrowed my search considerably.",
+            "example": "",
+            "category": "Equations & Inequalities",
+            "modules": [
+                "Module 5: Synthesis of Modeling"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m5-b-1",
+                    "title": "Modeling a Context from a Graph",
+                    "url": "/levels/k.php?k-math-m5-b-1"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "for-the-graph",
+            "term": "For the graph",
+            "definition": "I looked at the overall shape first to identify what type of graph it was (quadratic, linear, exponential, piecewise, square root, or cube root).",
+            "example": "",
+            "category": "Quadratic Functions & Equations",
+            "modules": [
+                "Module 5: Synthesis of Modeling"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m5-b-1",
+                    "title": "Modeling a Context from a Graph",
+                    "url": "/levels/k.php?k-math-m5-b-1"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "four-interesting-transformations-of-functions",
+            "term": "Four Interesting Transformations of Functions",
+            "definition": "Core mathematical concept established in Module 3: Linear and Exponential Functions, Transformations of Functions.",
+            "example": "",
+            "category": "Exponential Functions",
+            "modules": [
+                "Module 3: Linear and Exponential Functions"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m3-c-3",
+                    "title": "Four Interesting Transformations of Functions",
+                    "url": "/levels/k.php?k-math-m3-c-3"
+                },
+                {
+                    "id": "k-math-m3-c-4",
+                    "title": "Four Interesting Transformations of Functions",
+                    "url": "/levels/k.php?k-math-m3-c-4"
+                },
+                {
+                    "id": "k-math-m3-c-5",
+                    "title": "Four Interesting Transformations of Functions",
+                    "url": "/levels/k.php?k-math-m3-c-5"
+                },
+                {
+                    "id": "k-math-m3-c-6",
+                    "title": "Four Interesting Transformations of Functions",
+                    "url": "/levels/k.php?k-math-m3-c-6"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "fraction-addition-with-unlike-denominators",
+            "term": "Fraction Addition with Unlike Denominators",
+            "definition": "The method of renaming fractions into equivalent representations sharing a common unit measure (the Least Common Denominator) prior to combining numerators.",
+            "example": "$$\\frac{a}{b} + \\frac{c}{d} = \\frac{ad + bc}{bd}$$",
+            "category": "Fractions & Rational Numbers",
+            "modules": [
+                "Reference Codex (Grade 5)"
+            ],
+            "grades": [
+                "Grade 5"
+            ],
+            "lessons": [
+                {
+                    "id": "codex-grade-5",
+                    "title": "Reference Codex Vol. 5",
+                    "url": "/library/read/index.php?book=math-facts-repo&chapter=chapter-5"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "Fractions cannot be added directly if their pieces are different sizes (e.g. halves and thirds); finding the LCD cuts all pieces into identical units so they can be summed.",
+            "howToDoIt": [
+                "Find the Least Common Multiple (LCM) of denominators $b$ and $d$.",
+                "Multiply numerator and denominator of each fraction by the factor needed to attain the LCD.",
+                "Add the newly aligned numerators while keeping the common denominator constant.",
+                "Simplify to lowest terms if possible."
+            ],
+            "exampleProblem": "Compute $\\frac{2}{3} + \\frac{1}{4}$.",
+            "exampleSolution": "$\\text{LCM}(3, 4) = 12$. Scale fractions: $\\frac{2 \\times 4}{3 \\times 4} = \\frac{8}{12}$, $\\frac{1 \\times 3}{4 \\times 3} = \\frac{3}{12}$. Add: $\\frac{8 + 3}{12} = \\frac{11}{12}$.",
+            "etymology": "/ʌnˈlaɪk dɪˈnɒmɪneɪtərz/ • Latin: \"denominare\" (to name or specify)"
+        },
+        {
+            "id": "fraction-division-via-reciprocal-keep-change-flip",
+            "term": "Fraction Division via Reciprocal (Keep-Change-Flip)",
+            "definition": "An algebraic law establishing that dividing by a rational fraction is mathematically equivalent to multiplying by its multiplicative inverse (reciprocal).",
+            "example": "$$\\frac{a}{b} \\div \\frac{c}{d} = \\frac{a}{b} \\times \\frac{d}{c} = \\frac{ad}{bc}$$",
+            "category": "Fractions & Rational Numbers",
+            "modules": [
+                "Reference Codex (Grade 6)"
+            ],
+            "grades": [
+                "Grade 6"
+            ],
+            "lessons": [
+                {
+                    "id": "codex-grade-6",
+                    "title": "Reference Codex Vol. 6",
+                    "url": "/library/read/index.php?book=math-facts-repo&chapter=chapter-6"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "Division answers \"how many groups fit inside.\" Multiplying by the flipped reciprocal counts how many sub-units fit without laborious manual partitioning.",
+            "howToDoIt": [
+                "Keep: Leave the dividend (first fraction) unchanged.",
+                "Change: Invert the division operator ($\\div$) into multiplication ($\\times$).",
+                "Flip: Invert the divisor (second fraction) into its reciprocal ($\\frac{c}{d} \\to \\frac{d}{c}$).",
+                "Multiply straight across and reduce."
+            ],
+            "exampleProblem": "Compute $\\frac{3}{4} \\div \\frac{2}{5}$.",
+            "exampleSolution": "Keep $\\frac{3}{4}$, Change $\\div$ to $\\times$, Flip $\\frac{2}{5} \\to \\frac{5}{2}$: $\\frac{3}{4} \\times \\frac{5}{2} = \\frac{3 \\times 5}{4 \\times 2} = \\frac{15}{8} = 1\\frac{7}{8}$.",
+            "etymology": "/rɪˈsɪprəkəl/ • Latin: \"reciprocus\" (moving back and forth, alternating)"
+        },
+        {
+            "id": "function",
+            "term": "Function",
+            "definition": "A function is a correspondence between two sets, X and Y, in which each element of X is matched to one and only one element of Y.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 3: Linear and Exponential Functions"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m3-b-2",
+                    "title": "Representing, Naming, and Evaluating Functions",
+                    "url": "/levels/k.php?k-math-m3-b-2"
+                },
+                {
+                    "id": "k-math-m3-b-3",
+                    "title": "Representing, Naming, and Evaluating Functions",
+                    "url": "/levels/k.php?k-math-m3-b-3"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "fundamental-theorem-of-calculus-ftc",
+            "term": "Fundamental Theorem of Calculus (FTC)",
+            "definition": "The unifying theorem of mathematical analysis demonstrating that differentiation and integration are inverse operations: the definite integral (net accumulated area) can be calculated via anti-derivatives.",
+            "example": "$$\\int_{a}^{b} f(x) \\, dx = F(b) - F(a) \\quad \\left(\\text{where } F'(x) = f(x)\\right)$$",
+            "category": "Calculus & Analysis",
+            "modules": [
+                "Reference Codex (Grade 12)"
+            ],
+            "grades": [
+                "Grade 12"
+            ],
+            "lessons": [
+                {
+                    "id": "codex-grade-12",
+                    "title": "Reference Codex Vol. 12",
+                    "url": "/library/read/index.php?book=math-facts-repo&chapter=chapter-12"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "It bridges geometry (accumulating area under curves) with algebra (reversing derivatives), enabling exact calculation of areas, volumes of revolution, and total physical work.",
+            "howToDoIt": [
+                "Find the antiderivative function $F(x)$ such that $F'(x) = f(x)$.",
+                "Evaluate the antiderivative at the upper integration limit ($F(b)$).",
+                "Evaluate the antiderivative at the lower integration limit ($F(a)$).",
+                "Subtract: $\\text{Net Area} = F(b) - F(a)$."
+            ],
+            "exampleProblem": "Evaluate the definite integral $\\int_{0}^{3} 2x \\, dx$.",
+            "exampleSolution": "Antiderivative of $2x$ is $F(x) = x^2$. Evaluate: $F(3) - F(0) = 3^2 - 0^2 = 9 - 0 = 9$.",
+            "etymology": "/ˌfʌndəˈmɛntl ˈθɪərəm/ • Latin: \"fundamentum\" (groundwork, base cornerstone)"
+        },
+        {
+            "id": "geometric-sequence",
+            "term": "Geometric Sequence",
+            "definition": "A geometric sequence goes from one term to the next by multiplying (or dividing) by the same value.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 5: Synthesis of Modeling"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m5-b-2",
+                    "title": "Modeling from a Sequence",
+                    "url": "/levels/k.php?k-math-m5-b-2"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "graphing-cubic-square-root-and-cube-root-functions",
+            "term": "Graphing Cubic, Square Root, and Cube Root Functions",
+            "definition": "Core mathematical concept established in Module 4: Polynomial and Quadratic Expressions, Equations, and Functions, Function Transformations and Modeling.",
+            "example": "",
+            "category": "Quadratic Functions & Equations",
+            "modules": [
+                "Module 4: Polynomial and Quadratic Expressions"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m4-c-1",
+                    "title": "Graphing Cubic, Square Root, and Cube Root Functions",
+                    "url": "/levels/k.php?k-math-m4-c-1"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "graphing-quadratic-functions-from-factored-form-f-x-a-x-m-x-n",
+            "term": "Graphing Quadratic Functions from Factored Form, f(x)=a(x-m)(x-n)",
+            "definition": "Core mathematical concept established in Module 4: Polynomial and Quadratic Expressions, Equations, and Functions, Quadratic Expressions, Equations, and Functions.",
+            "example": "",
+            "category": "Quadratic Functions & Equations",
+            "modules": [
+                "Module 4: Polynomial and Quadratic Expressions"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m4-a-9",
+                    "title": "Graphing Quadratic Functions from Factored Form, f(x)=a(x-m)(x-n)",
+                    "url": "/levels/k.php?k-math-m4-a-9"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "graph-of-an-equation",
@@ -807,7 +2309,94 @@
                     "url": "/levels/k.php?k-math-m1-c-11"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "graphs-can-solve-equations-too",
+            "term": "Graphs Can Solve Equations Too",
+            "definition": "Core mathematical concept established in Module 3: Linear and Exponential Functions, Transformations of Functions.",
+            "example": "",
+            "category": "Exponential Functions",
+            "modules": [
+                "Module 3: Linear and Exponential Functions"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m3-c-2",
+                    "title": "Graphs Can Solve Equations Too",
+                    "url": "/levels/k.php?k-math-m3-c-2"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "graphs-example",
+            "term": "Graphs Example",
+            "definition": "Graphs Data are often summarized by graphs; the graphs are the first indicator of variability in the data.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 2: Descriptive Statistics"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m2-a-1",
+                    "title": "Distributions and Their Shapes",
+                    "url": "/levels/k.php?k-math-m2-a-1"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "greatest-common-factor-gcf-euclidean-algorithm",
+            "term": "Greatest Common Factor (GCF) & Euclidean Algorithm",
+            "definition": "The largest natural number that evenly divides two or more integers without leaving a remainder, forming the basis of simplifying fractions.",
+            "example": "$$\\gcd(a, b) = \\gcd(b, a \\bmod b) \\quad (\\gcd(a, 0) = a)$$",
+            "category": "Number Systems & Arithmetic",
+            "modules": [
+                "Reference Codex (Grade 6)"
+            ],
+            "grades": [
+                "Grade 6"
+            ],
+            "lessons": [
+                {
+                    "id": "codex-grade-6",
+                    "title": "Reference Codex Vol. 6",
+                    "url": "/library/read/index.php?book=math-facts-repo&chapter=chapter-6"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "It finds the maximum bundle size when grouping disparate collections into identical subsets, and reduces fractions to their simplest indivisible terms.",
+            "howToDoIt": [
+                "Find the prime factorizations of both numbers.",
+                "Identify all common prime factors shared by both sets.",
+                "Multiply the shared common prime factors together to obtain the GCF."
+            ],
+            "exampleProblem": "Find the Greatest Common Factor of $24$ and $36$.",
+            "exampleSolution": "Prime factorization: $24 = 2^3 \\times 3$, $36 = 2^2 \\times 3^2$. Common prime factors: $2^2 \\times 3 = 4 \\times 3 = 12$. $\\text{GCF} = 12$.",
+            "etymology": "/ˈɡreɪtɪst ˈkɒmən ˈfæktər/ • Greek: \"arithmos\" (prime numbers)"
         },
         {
             "id": "half-plane",
@@ -828,7 +2417,38 @@
                     "url": "/levels/k.php?k-math-m1-c-12"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "histograms",
+            "term": "Histograms",
+            "definition": "A graph of data that groups the data based on intervals and represents the data in each interval by a bar.",
+            "example": "",
+            "category": "Descriptive Statistics",
+            "modules": [
+                "Module 2: Descriptive Statistics"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m2-a-1",
+                    "title": "Distributions and Their Shapes",
+                    "url": "/levels/k.php?k-math-m2-a-1"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "horizontal-asymptote",
@@ -849,7 +2469,12 @@
                     "url": "/levels/k.php?k-math-m1-a-3"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "horizontal-plateau",
@@ -870,7 +2495,12 @@
                     "url": "/levels/k.php?k-math-m1-a-4"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "identity",
@@ -891,7 +2521,127 @@
                     "url": "/levels/k.php?k-math-m1-c-1"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "if-f",
+            "term": "If f",
+            "definition": "R→R is the function such that x↦x^{2}, then the range of f is the set of all nonnegative real numbers.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 3: Linear and Exponential Functions"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m3-b-2",
+                    "title": "Representing, Naming, and Evaluating Functions",
+                    "url": "/levels/k.php?k-math-m3-b-2"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "if-not",
+            "term": "If not",
+            "definition": "Notice that in the next table in your packet (Brand A), the second row says \"Deviation from the Mean.",
+            "example": "",
+            "category": "Descriptive Statistics",
+            "modules": [
+                "Module 2: Descriptive Statistics"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m2-b-1",
+                    "title": "Summarizing Deviations from the Mean",
+                    "url": "/levels/k.php?k-math-m2-b-1"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "important",
+            "term": "Important",
+            "definition": "Sequences can be indexed by starting with any integer.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 3: Linear and Exponential Functions",
+                "Module 4: Polynomial and Quadratic Expressions"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m3-a-1",
+                    "title": "Integer Sequences—Should You Believe in Patterns?",
+                    "url": "/levels/k.php?k-math-m3-a-1"
+                },
+                {
+                    "id": "k-math-m4-a-8",
+                    "title": "Exploring the Symmetry in Graphs of Quadratic Functions",
+                    "url": "/levels/k.php?k-math-m4-a-8"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "indefinite-integrals-antidifferentiation",
+            "term": "Indefinite Integrals & Antidifferentiation",
+            "definition": "The complete family of antiderivative functions whose instantaneous derivative equals the integrand $f(x)$, unified by the arbitrary constant of integration $C$.",
+            "example": "$$\\int x^n \\, dx = \\frac{x^{n+1}}{n+1} + C \\quad (n \\ne -1)$$",
+            "category": "Calculus & Analysis",
+            "modules": [
+                "Reference Codex (Grade 12)"
+            ],
+            "grades": [
+                "Grade 12"
+            ],
+            "lessons": [
+                {
+                    "id": "codex-grade-12",
+                    "title": "Reference Codex Vol. 12",
+                    "url": "/library/read/index.php?book=math-facts-repo&chapter=chapter-12"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "It reconstructs total distance from velocity data, or total accumulated charge from electric current, reversing the derivative process.",
+            "howToDoIt": [
+                "Identify each power term $x^n$.",
+                "Add $1$ to the exponent ($n \\to n + 1$).",
+                "Divide by the new exponent ($n + 1$).",
+                "Append the arbitrary integration constant $+ C$."
+            ],
+            "exampleProblem": "Find the indefinite integral $\\int (3x^2 + 4x - 5) \\, dx$.",
+            "exampleSolution": "$\\int 3x^2 dx = x^3$; $\\int 4x dx = 2x^2$; $\\int -5 dx = -5x$. Combine: $x^3 + 2x^2 - 5x + C$.",
+            "etymology": "/ˈɪndɛfɪnɪt ˈɪntɪɡrəl/ • Latin: \"integrare\" (to make whole, aggregate)"
         },
         {
             "id": "independent-variable",
@@ -912,7 +2662,12 @@
                     "url": "/levels/k.php?k-math-m1-a-1"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "inequality",
@@ -933,7 +2688,12 @@
                     "url": "/levels/k.php?k-math-m1-c-2"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "inequality-reversal-property",
@@ -954,7 +2714,12 @@
                     "url": "/levels/k.php?k-math-m1-c-5"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "initial-term",
@@ -975,7 +2740,12 @@
                     "url": "/levels/k.php?k-math-m1-d-2"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "initial-value-a",
@@ -996,7 +2766,90 @@
                     "url": "/levels/k.php?k-math-m1-a-3"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "interpreting-correlation",
+            "term": "Interpreting Correlation",
+            "definition": "Core mathematical concept established in Module 2: Descriptive Statistics, Numerical Data on Two Variables.",
+            "example": "",
+            "category": "Descriptive Statistics",
+            "modules": [
+                "Module 2: Descriptive Statistics"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m2-d-8",
+                    "title": "Interpreting Correlation",
+                    "url": "/levels/k.php?k-math-m2-d-8"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "interpreting-quadratic-functions-from-graphs-and-tables",
+            "term": "Interpreting Quadratic Functions from Graphs and Tables",
+            "definition": "Core mathematical concept established in Module 4: Polynomial and Quadratic Expressions, Equations, and Functions, Quadratic Expressions, Equations, and Functions.",
+            "example": "",
+            "category": "Quadratic Functions & Equations",
+            "modules": [
+                "Module 4: Polynomial and Quadratic Expressions"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m4-a-10",
+                    "title": "Interpreting Quadratic Functions from Graphs and Tables",
+                    "url": "/levels/k.php?k-math-m4-a-10"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "interpreting-the-standard-deviation",
+            "term": "Interpreting the Standard Deviation",
+            "definition": "Core mathematical concept established in Module 2: Descriptive Statistics, Calculating and Interpreting Measures of Center and Variability.",
+            "example": "",
+            "category": "Descriptive Statistics",
+            "modules": [
+                "Module 2: Descriptive Statistics"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m2-b-3",
+                    "title": "Interpreting the Standard Deviation",
+                    "url": "/levels/k.php?k-math-m2-b-3"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "intersection",
@@ -1017,7 +2870,12 @@
                     "url": "/levels/k.php?k-math-m1-c-6"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "least-common-denominator-lcd",
@@ -1038,7 +2896,90 @@
                     "url": "/levels/k.php?k-math-m1-c-9"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "let-f",
+            "term": "Let f",
+            "definition": "R→R be the function such that x↦x^{2}.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 3: Linear and Exponential Functions"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m3-b-2",
+                    "title": "Representing, Naming, and Evaluating Functions",
+                    "url": "/levels/k.php?k-math-m3-b-2"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "linear-and-exponential-models-comparing-growth-rates",
+            "term": "Linear and Exponential Models—Comparing Growth Rates",
+            "definition": "Core mathematical concept established in Module 3: Linear and Exponential Functions, Functions and Their Graphs.",
+            "example": "",
+            "category": "Exponential Functions",
+            "modules": [
+                "Module 3: Linear and Exponential Functions"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m3-b-7",
+                    "title": "Linear and Exponential Models—Comparing Growth Rates",
+                    "url": "/levels/k.php?k-math-m3-b-7"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "linearb",
+            "term": "LinearB",
+            "definition": "ExponentialC: Quadratic I looked at the difference in each output.",
+            "example": "",
+            "category": "Quadratic Functions & Equations",
+            "modules": [
+                "Module 5: Synthesis of Modeling"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m5-b-3",
+                    "title": "Modeling a Context from Data",
+                    "url": "/levels/k.php?k-math-m5-b-3"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "linear-combination",
@@ -1059,7 +3000,42 @@
                     "url": "/levels/k.php?k-math-m1-c-14"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "linear-slope-intercept-form",
+            "term": "Linear Slope-Intercept Form",
+            "definition": "The canonical algebraic representation of a two-dimensional straight line, where $m$ signifies the constant rate of change (slope) and $b$ represents the coordinate value where the line intercepts the vertical y-axis ($(0, b)$).",
+            "example": "$$y = mx + b \\quad \\left(m = \\frac{\\Delta y}{\\Delta x} = \\frac{y_2 - y_1}{x_2 - x_1}\\right)$$",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Reference Codex (Grade 8)"
+            ],
+            "grades": [
+                "Grade 8"
+            ],
+            "lessons": [
+                {
+                    "id": "codex-grade-8",
+                    "title": "Reference Codex Vol. 8",
+                    "url": "/library/read/index.php?book=math-facts-repo&chapter=chapter-8"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "It enables instant graphing and prediction of linear behaviors, allowing you to project future outcomes with a known starting point ($b$) and velocity ($m$).",
+            "howToDoIt": [
+                "Calculate the slope $m$ by finding vertical change over horizontal change: $m = \\frac{y_2 - y_1}{x_2 - x_1}$.",
+                "Plot the starting y-intercept $(0, b)$ directly on the vertical axis.",
+                "Use slope $m = \\frac{\\text{rise}}{\\text{run}}$ to navigate from the intercept to subsequent points, and connect with a line."
+            ],
+            "exampleProblem": "Find the slope-intercept equation of the line passing through $(2, 5)$ and $(4, 11)$.",
+            "exampleSolution": "Slope: $m = \\frac{11 - 5}{4 - 2} = \\frac{6}{2} = 3$. Find $b$: $5 = 3(2) + b \\implies 5 = 6 + b \\implies b = -1$. Equation: $y = 3x - 1$.",
+            "etymology": "/sloʊp ˈɪntərsɛpt/ • Latin: \"intercipere\" (to catch or cross between)"
         },
         {
             "id": "literal-equation",
@@ -1080,7 +3056,68 @@
                     "url": "/levels/k.php?k-math-m1-c-10"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "logarithms-power-laws",
+            "term": "Logarithms & Power Laws",
+            "definition": "The inverse mathematical function of exponentiation, answering the question: \"To what exponent must the base $b$ be raised to produce the value $x$?\"",
+            "example": "$$\\log_b(x) = y \\iff b^y = x \\quad (\\log(xy) = \\log x + \\log y)$$",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Reference Codex (Grade 11)"
+            ],
+            "grades": [
+                "Grade 11"
+            ],
+            "lessons": [
+                {
+                    "id": "codex-grade-11",
+                    "title": "Reference Codex Vol. 11",
+                    "url": "/library/read/index.php?book=math-facts-repo&chapter=chapter-11"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "It compresses astronomical multiplicative scales into manageable linear steps (Richter scale earthquakes, pH acidity, decibels of sound, compound interest).",
+            "howToDoIt": [
+                "Product Rule: Sum of logs equals log of product: $\\log(A) + \\log(B) = \\log(AB)$.",
+                "Quotient Rule: Difference of logs equals log of quotient: $\\log(A) - \\log(B) = \\log(A/B)$.",
+                "Power Rule: Pull exponents out front as multipliers: $\\log(A^k) = k \\log(A)$."
+            ],
+            "exampleProblem": "Condense into a single logarithm: $2\\log_3(x) + \\log_3(5)$.",
+            "exampleSolution": "Apply Power Rule: $\\log_3(x^2) + \\log_3(5)$. Apply Product Rule: $\\log_3(5x^2)$.",
+            "etymology": "/ˈlɒɡərɪðəm/ • Greek: \"logos\" (ratio) + \"arithmos\" (number)"
+        },
+        {
+            "id": "look-at-these-three-tables",
+            "term": "Look at these three tables",
+            "definition": "What do you notice about the three sets of data? Can you identify the type of function they represent? Students may observe some of the examples listed below.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 5: Synthesis of Modeling"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m5-a-2",
+                    "title": "Analyzing a Data Set",
+                    "url": "/levels/k.php?k-math-m5-a-2"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "lost-solution",
@@ -1101,7 +3138,12 @@
                     "url": "/levels/k.php?k-math-m1-c-4"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "marginal-tax-rate",
@@ -1122,7 +3164,457 @@
                     "url": "/levels/k.php?k-math-m1-d-4"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "mathematical-modeling",
+            "term": "Mathematical Modeling",
+            "definition": "The process of choosing and using appropriate mathematics and statistics to analyze empirical situations, to understand them better, and to improve decisions.",
+            "example": "",
+            "category": "Descriptive Statistics",
+            "modules": [
+                "Module 2: Descriptive Statistics",
+                "Module 3: Linear and Exponential Functions",
+                "Module 4: Polynomial and Quadratic Expressions",
+                "Module 5: Synthesis of Modeling"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m2-a-2",
+                    "title": "Describing the Center of a Distribution",
+                    "url": "/levels/k.php?k-math-m2-a-2"
+                },
+                {
+                    "id": "k-math-m2-a-3",
+                    "title": "Estimating Centers and Interpreting the Mean as a Balance Point",
+                    "url": "/levels/k.php?k-math-m2-a-3"
+                },
+                {
+                    "id": "k-math-m2-b-2",
+                    "title": "Measuring Variability for Symmetrical Distributions",
+                    "url": "/levels/k.php?k-math-m2-b-2"
+                },
+                {
+                    "id": "k-math-m2-b-3",
+                    "title": "Interpreting the Standard Deviation",
+                    "url": "/levels/k.php?k-math-m2-b-3"
+                },
+                {
+                    "id": "k-math-m2-b-4",
+                    "title": "Measuring Variability for Skewed Distributions (Interquartile Range)",
+                    "url": "/levels/k.php?k-math-m2-b-4"
+                },
+                {
+                    "id": "k-math-m2-b-5",
+                    "title": "Comparing Distributions",
+                    "url": "/levels/k.php?k-math-m2-b-5"
+                },
+                {
+                    "id": "k-math-m2-c-1",
+                    "title": "Summarizing Bivariate Categorical Data",
+                    "url": "/levels/k.php?k-math-m2-c-1"
+                },
+                {
+                    "id": "k-math-m2-c-3",
+                    "title": "Conditional Relative Frequencies and Association",
+                    "url": "/levels/k.php?k-math-m2-c-3"
+                },
+                {
+                    "id": "k-math-m2-d-1",
+                    "title": "Relationships Between Two Numerical Variables",
+                    "url": "/levels/k.php?k-math-m2-d-1"
+                },
+                {
+                    "id": "k-math-m2-d-3",
+                    "title": "Modeling Relationships with a Line",
+                    "url": "/levels/k.php?k-math-m2-d-3"
+                },
+                {
+                    "id": "k-math-m2-d-5",
+                    "title": "More on Modeling Relationships with a Line",
+                    "url": "/levels/k.php?k-math-m2-d-5"
+                },
+                {
+                    "id": "k-math-m3-a-2",
+                    "title": "Recursive Formulas for Sequences",
+                    "url": "/levels/k.php?k-math-m3-a-2"
+                },
+                {
+                    "id": "k-math-m3-a-4",
+                    "title": "Why Do Banks Pay YOU to Provide Their Services?",
+                    "url": "/levels/k.php?k-math-m3-a-4"
+                },
+                {
+                    "id": "k-math-m3-a-5",
+                    "title": "The Power of Exponential Growth",
+                    "url": "/levels/k.php?k-math-m3-a-5"
+                },
+                {
+                    "id": "k-math-m3-a-7",
+                    "title": "Exponential Decay",
+                    "url": "/levels/k.php?k-math-m3-a-7"
+                },
+                {
+                    "id": "k-math-m3-b-1",
+                    "title": "Why Stay with Whole Numbers?",
+                    "url": "/levels/k.php?k-math-m3-b-1"
+                },
+                {
+                    "id": "k-math-m3-c-1",
+                    "title": "Piecewise Functions",
+                    "url": "/levels/k.php?k-math-m3-c-1"
+                },
+                {
+                    "id": "k-math-m3-c-2",
+                    "title": "Graphs Can Solve Equations Too",
+                    "url": "/levels/k.php?k-math-m3-c-2"
+                },
+                {
+                    "id": "k-math-m3-c-3",
+                    "title": "Four Interesting Transformations of Functions",
+                    "url": "/levels/k.php?k-math-m3-c-3"
+                },
+                {
+                    "id": "k-math-m3-c-4",
+                    "title": "Four Interesting Transformations of Functions",
+                    "url": "/levels/k.php?k-math-m3-c-4"
+                },
+                {
+                    "id": "k-math-m3-c-5",
+                    "title": "Four Interesting Transformations of Functions",
+                    "url": "/levels/k.php?k-math-m3-c-5"
+                },
+                {
+                    "id": "k-math-m3-d-3",
+                    "title": "Newton's Law of Cooling",
+                    "url": "/levels/k.php?k-math-m3-d-3"
+                },
+                {
+                    "id": "k-math-m3-d-4",
+                    "title": "Piecewise and Step Functions in Context",
+                    "url": "/levels/k.php?k-math-m3-d-4"
+                },
+                {
+                    "id": "k-math-m4-a-1",
+                    "title": "Multiplying and Factoring Polynomial Expressions",
+                    "url": "/levels/k.php?k-math-m4-a-1"
+                },
+                {
+                    "id": "k-math-m4-a-2",
+                    "title": "Multiplying and Factoring Polynomial Expressions",
+                    "url": "/levels/k.php?k-math-m4-a-2"
+                },
+                {
+                    "id": "k-math-m4-a-3",
+                    "title": "Advanced Factoring Strategies for Quadratic Expressions",
+                    "url": "/levels/k.php?k-math-m4-a-3"
+                },
+                {
+                    "id": "k-math-m4-a-4",
+                    "title": "Advanced Factoring Strategies for Quadratic Expressions",
+                    "url": "/levels/k.php?k-math-m4-a-4"
+                },
+                {
+                    "id": "k-math-m4-a-6",
+                    "title": "Solving Basic One-Variable Quadratic Equations",
+                    "url": "/levels/k.php?k-math-m4-a-6"
+                },
+                {
+                    "id": "k-math-m4-a-7",
+                    "title": "Creating and Solving Quadratic Equations in One Variable",
+                    "url": "/levels/k.php?k-math-m4-a-7"
+                },
+                {
+                    "id": "k-math-m4-b-1",
+                    "title": "Completing the Square",
+                    "url": "/levels/k.php?k-math-m4-b-1"
+                },
+                {
+                    "id": "k-math-m4-b-4",
+                    "title": "Deriving the Quadratic Formula",
+                    "url": "/levels/k.php?k-math-m4-b-4"
+                },
+                {
+                    "id": "k-math-m4-b-5",
+                    "title": "Using the Quadratic Formula",
+                    "url": "/levels/k.php?k-math-m4-b-5"
+                },
+                {
+                    "id": "k-math-m4-c-1",
+                    "title": "Graphing Cubic, Square Root, and Cube Root Functions",
+                    "url": "/levels/k.php?k-math-m4-c-1"
+                },
+                {
+                    "id": "k-math-m4-c-2",
+                    "title": "Translating Graphs of Functions",
+                    "url": "/levels/k.php?k-math-m4-c-2"
+                },
+                {
+                    "id": "k-math-m4-c-3",
+                    "title": "Stretching and Shrinking Graphs of Functions",
+                    "url": "/levels/k.php?k-math-m4-c-3"
+                },
+                {
+                    "id": "k-math-m4-c-4",
+                    "title": "Transformations of the Quadratic Parent Function, f(x)=x^{2}",
+                    "url": "/levels/k.php?k-math-m4-c-4"
+                },
+                {
+                    "id": "k-math-m4-c-5",
+                    "title": "Comparing Quadratic, Square Root, and Cube Root Functions Represented in Different Ways",
+                    "url": "/levels/k.php?k-math-m4-c-5"
+                },
+                {
+                    "id": "k-math-m5-a-1",
+                    "title": "Analyzing a Graph",
+                    "url": "/levels/k.php?k-math-m5-a-1"
+                },
+                {
+                    "id": "k-math-m5-a-3",
+                    "title": "Analyzing a Verbal Description",
+                    "url": "/levels/k.php?k-math-m5-a-3"
+                },
+                {
+                    "id": "k-math-m5-b-4",
+                    "title": "Modeling a Context from Data",
+                    "url": "/levels/k.php?k-math-m5-b-4"
+                },
+                {
+                    "id": "k-math-m2-d-8",
+                    "title": "Interpreting Correlation",
+                    "url": "/levels/k.php?k-math-m2-d-8"
+                },
+                {
+                    "id": "k-math-m2-d-9",
+                    "title": "Analyzing Data Collected on Two Variables",
+                    "url": "/levels/k.php?k-math-m2-d-9"
+                },
+                {
+                    "id": "k-math-m3-b-7",
+                    "title": "Linear and Exponential Models—Comparing Growth Rates",
+                    "url": "/levels/k.php?k-math-m3-b-7"
+                },
+                {
+                    "id": "k-math-m3-c-6",
+                    "title": "Four Interesting Transformations of Functions",
+                    "url": "/levels/k.php?k-math-m3-c-6"
+                },
+                {
+                    "id": "k-math-m4-a-9",
+                    "title": "Graphing Quadratic Functions from Factored Form, f(x)=a(x-m)(x-n)",
+                    "url": "/levels/k.php?k-math-m4-a-9"
+                },
+                {
+                    "id": "k-math-m4-a-10",
+                    "title": "Interpreting Quadratic Functions from Graphs and Tables",
+                    "url": "/levels/k.php?k-math-m4-a-10"
+                },
+                {
+                    "id": "k-math-m5-b-5",
+                    "title": "Modeling a Context from a Verbal Description",
+                    "url": "/levels/k.php?k-math-m5-b-5"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "measures-of-center-mean-median-mode",
+            "term": "Measures of Center: Mean, Median & Mode",
+            "definition": "Statistical metrics summarizing an entire data distribution into a single representative central value: the arithmetic average (Mean), the 50th percentile midpoint (Median), and the most frequent value (Mode).",
+            "example": "$$\\bar{x} = \\frac{\\sum_{i=1}^n x_i}{n}, \\quad \\text{Range} = \\text{Max} - \\text{Min}$$",
+            "category": "Number Systems & Arithmetic",
+            "modules": [
+                "Reference Codex (Grade 6)"
+            ],
+            "grades": [
+                "Grade 6"
+            ],
+            "lessons": [
+                {
+                    "id": "codex-grade-6",
+                    "title": "Reference Codex Vol. 6",
+                    "url": "/library/read/index.php?book=math-facts-repo&chapter=chapter-6"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "It distills large, noisy empirical datasets into actionable benchmark summaries for test scores, scientific experiments, climate averages, and economic indicators.",
+            "howToDoIt": [
+                "Mean: Sum all values together, then divide by the total count $n$.",
+                "Median: Arrange data in ascending numerical order and pick the exact middle value (or average the two middle values if $n$ is even).",
+                "Mode: Identify the number that appears with highest frequency."
+            ],
+            "exampleProblem": "Calculate the mean and median for the test score dataset: $\\{80, 85, 90, 90, 100\\}$.",
+            "exampleSolution": "Mean: $\\frac{80+85+90+90+100}{5} = \\frac{445}{5} = 89$. Median: Ordered middle value is $90$. Mode is $90$.",
+            "etymology": "/miːn ˈmiːdiən moʊd/ • Latin: \"medianus\" (of the middle)"
+        },
+        {
+            "id": "measuring-variability-for-skewed-distributions-interquartile-range",
+            "term": "Measuring Variability for Skewed Distributions (Interquartile Range)",
+            "definition": "Core mathematical concept established in Module 2: Descriptive Statistics, Calculating and Interpreting Measures of Center and Variability.",
+            "example": "",
+            "category": "Linear & Piecewise Functions",
+            "modules": [
+                "Module 2: Descriptive Statistics"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m2-b-4",
+                    "title": "Measuring Variability for Skewed Distributions (Interquartile Range)",
+                    "url": "/levels/k.php?k-math-m2-b-4"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "measuring-variability-for-symmetrical-distributions",
+            "term": "Measuring Variability for Symmetrical Distributions",
+            "definition": "Core mathematical concept established in Module 2: Descriptive Statistics, Calculating and Interpreting Measures of Center and Variability.",
+            "example": "",
+            "category": "Descriptive Statistics",
+            "modules": [
+                "Module 2: Descriptive Statistics"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m2-b-2",
+                    "title": "Measuring Variability for Symmetrical Distributions",
+                    "url": "/levels/k.php?k-math-m2-b-2"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "modeling-a-context-from-a-verbal-description",
+            "term": "Modeling a Context from a Verbal Description",
+            "definition": "Core mathematical concept established in Module 5: A Synthesis of Modeling with Equations and Functions, Completing the Modeling Cycle.",
+            "example": "",
+            "category": "Descriptive Statistics",
+            "modules": [
+                "Module 5: Synthesis of Modeling"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m5-b-5",
+                    "title": "Modeling a Context from a Verbal Description",
+                    "url": "/levels/k.php?k-math-m5-b-5"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "modeling-a-context-from-data",
+            "term": "Modeling a Context from Data",
+            "definition": "Core mathematical concept established in Module 5: A Synthesis of Modeling with Equations and Functions, Completing the Modeling Cycle.",
+            "example": "",
+            "category": "Descriptive Statistics",
+            "modules": [
+                "Module 5: Synthesis of Modeling"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m5-b-4",
+                    "title": "Modeling a Context from Data",
+                    "url": "/levels/k.php?k-math-m5-b-4"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "modeling-relationships-with-a-line",
+            "term": "Modeling Relationships with a Line",
+            "definition": "Core mathematical concept established in Module 2: Descriptive Statistics, Numerical Data on Two Variables.",
+            "example": "",
+            "category": "Descriptive Statistics",
+            "modules": [
+                "Module 2: Descriptive Statistics"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m2-d-3",
+                    "title": "Modeling Relationships with a Line",
+                    "url": "/levels/k.php?k-math-m2-d-3"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "more-on-modeling-relationships-with-a-line",
+            "term": "More on Modeling Relationships with a Line",
+            "definition": "Core mathematical concept established in Module 2: Descriptive Statistics, Numerical Data on Two Variables.",
+            "example": "",
+            "category": "Descriptive Statistics",
+            "modules": [
+                "Module 2: Descriptive Statistics"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m2-d-5",
+                    "title": "More on Modeling Relationships with a Line",
+                    "url": "/levels/k.php?k-math-m2-d-5"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "multiplication-property-of-equality",
@@ -1143,7 +3635,69 @@
                     "url": "/levels/k.php?k-math-m1-c-3"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "multiplying-and-factoring-polynomial-expressions",
+            "term": "Multiplying and Factoring Polynomial Expressions",
+            "definition": "Core mathematical concept established in Module 4: Polynomial and Quadratic Expressions, Equations, and Functions, Quadratic Expressions, Equations, and Functions.",
+            "example": "",
+            "category": "Quadratic Functions & Equations",
+            "modules": [
+                "Module 4: Polynomial and Quadratic Expressions"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m4-a-1",
+                    "title": "Multiplying and Factoring Polynomial Expressions",
+                    "url": "/levels/k.php?k-math-m4-a-1"
+                },
+                {
+                    "id": "k-math-m4-a-2",
+                    "title": "Multiplying and Factoring Polynomial Expressions",
+                    "url": "/levels/k.php?k-math-m4-a-2"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "newton-s-law-of-cooling",
+            "term": "Newton's Law of Cooling",
+            "definition": "Core mathematical concept established in Module 3: Linear and Exponential Functions, Using Functions and Graphs to Solve Problems.",
+            "example": "",
+            "category": "Exponential Functions",
+            "modules": [
+                "Module 3: Linear and Exponential Functions"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m3-d-3",
+                    "title": "Newton's Law of Cooling",
+                    "url": "/levels/k.php?k-math-m3-d-3"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "non-permissible-value",
@@ -1164,7 +3718,116 @@
                     "url": "/levels/k.php?k-math-m1-c-9"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "note-about-lesson-pace",
+            "term": "Note about lesson pace",
+            "definition": "Just like the last lesson, use the fact that the examples are very similar to reduce the amount of writing on the board.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 3: Linear and Exponential Functions"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m3-b-5",
+                    "title": "The Graph of the Equation y=f(x)",
+                    "url": "/levels/k.php?k-math-m3-b-5"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "note-about-the-lesson-pace",
+            "term": "Note about the lesson pace",
+            "definition": "Every new example or exercise in this lesson usually inserts just one more line of pseudocode into the previous exercise or example.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 3: Linear and Exponential Functions"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m3-b-4",
+                    "title": "The Graph of a Function",
+                    "url": "/levels/k.php?k-math-m3-b-4"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "now-show-a-data-plot-for-each",
+            "term": "Now show a data plot for each",
+            "definition": "Now can you see the trends more clearly? Yes, it is obvious that the first is linear.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 5: Synthesis of Modeling"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m5-a-2",
+                    "title": "Analyzing a Data Set",
+                    "url": "/levels/k.php?k-math-m5-a-2"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "objects-in-motion",
+            "term": "Objects in Motion",
+            "definition": "Any object that is free falling or projected into the air without a power source is under the influence of gravity.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 4: Polynomial and Quadratic Expressions"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m4-c-6",
+                    "title": "Modeling with Quadratic Functions",
+                    "url": "/levels/k.php?k-math-m4-c-6"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "open-circle",
@@ -1185,7 +3848,44 @@
                     "url": "/levels/k.php?k-math-m1-c-2"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "opening-exercise-scaffolding",
+            "term": "Opening Exercise Scaffolding",
+            "definition": "If students are struggling with the type of function, have them plot the points.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 3: Linear and Exponential Functions",
+                "Module 4: Polynomial and Quadratic Expressions"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m3-d-1",
+                    "title": "Comparing Linear and Exponential Models Again",
+                    "url": "/levels/k.php?k-math-m3-d-1"
+                },
+                {
+                    "id": "k-math-m4-b-7",
+                    "title": "Graphing Quadratic Functions from the Standard Form, f(x)=ax^{2}+bx+c",
+                    "url": "/levels/k.php?k-math-m4-b-7"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "ordered-pair",
@@ -1206,7 +3906,95 @@
                     "url": "/levels/k.php?k-math-m1-c-11"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "order-of-operations-pemdas-gems",
+            "term": "Order of Operations (PEMDAS / GEMS)",
+            "definition": "The universal algebraic precedence convention dictating the precise sequence in which arithmetic operations must be evaluated to ensure unambiguous solutions.",
+            "example": "$$\\text{Hierarchy: } \\text{Groupings} \\succ \\text{Exponents} \\succ \\{\\times, \\div\\} \\succ \\{+, -\\}$$",
+            "category": "Number Systems & Arithmetic",
+            "modules": [
+                "Reference Codex (Grade 6)"
+            ],
+            "grades": [
+                "Grade 6"
+            ],
+            "lessons": [
+                {
+                    "id": "codex-grade-6",
+                    "title": "Reference Codex Vol. 6",
+                    "url": "/library/read/index.php?book=math-facts-repo&chapter=chapter-6"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "It eliminates mathematical chaos: without strict order of operations, an expression like $2 + 3 \\times 4$ could be interpreted as either $20$ or $14$.",
+            "howToDoIt": [
+                "Evaluate inside innermost Parentheses/Groupings first.",
+                "Evaluate all Exponents and radical roots next.",
+                "Compute all Multiplications and Divisions from Left to Right.",
+                "Compute all Additions and Subtractions from Left to Right."
+            ],
+            "exampleProblem": "Evaluate $6 + 4 \\times (5 - 2)^2 \\div 3$.",
+            "exampleSolution": "Groupings: $(5-2) = 3$. Exponents: $3^2 = 9$. Multiply/Divide Left-to-Right: $4 \\times 9 = 36$, then $36 \\div 3 = 12$. Addition: $6 + 12 = 18$.",
+            "etymology": "/ˈɔːrdər əv ˌɒpəˈreɪʃənz/ • Acronym: Parentheses, Exponents, Multiply/Divide, Add/Subtract"
+        },
+        {
+            "id": "piecewise-and-step-functions-in-context",
+            "term": "Piecewise and Step Functions in Context",
+            "definition": "Core mathematical concept established in Module 3: Linear and Exponential Functions, Using Functions and Graphs to Solve Problems.",
+            "example": "",
+            "category": "Exponential Functions",
+            "modules": [
+                "Module 3: Linear and Exponential Functions"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m3-d-4",
+                    "title": "Piecewise and Step Functions in Context",
+                    "url": "/levels/k.php?k-math-m3-d-4"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "piecewise-functions",
+            "term": "Piecewise Functions",
+            "definition": "Core mathematical concept established in Module 3: Linear and Exponential Functions, Transformations of Functions.",
+            "example": "",
+            "category": "Exponential Functions",
+            "modules": [
+                "Module 3: Linear and Exponential Functions"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m3-c-1",
+                    "title": "Piecewise Functions",
+                    "url": "/levels/k.php?k-math-m3-c-1"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "piecewise-linear-function",
@@ -1227,7 +4015,12 @@
                     "url": "/levels/k.php?k-math-m1-a-1"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "point-of-intersection",
@@ -1248,7 +4041,12 @@
                     "url": "/levels/k.php?k-math-m1-c-13"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "polynomial",
@@ -1269,7 +4067,154 @@
                     "url": "/levels/k.php?k-math-m1-b-3"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "pose-these-questions",
+            "term": "Pose these questions",
+            "definition": "Why does the first scatter plot result in an arch shape in the residual plot? The points in the scatter plot are not in a straight line.",
+            "example": "",
+            "category": "Descriptive Statistics",
+            "modules": [
+                "Module 2: Descriptive Statistics"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m2-d-7",
+                    "title": "Analyzing Residuals",
+                    "url": "/levels/k.php?k-math-m2-d-7"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "power-rule-of-differentiation",
+            "term": "Power Rule of Differentiation",
+            "definition": "An operational shortcut derived from the binomial theorem and difference quotient that computes the instantaneous rate of change of any monomial power function in a single algebraic step.",
+            "example": "$$\\frac{d}{dx}\\left[x^n\\right] = n x^{n - 1} \\quad (n \\in \\mathbb{R})$$",
+            "category": "Calculus & Analysis",
+            "modules": [
+                "Reference Codex (Grade 12)"
+            ],
+            "grades": [
+                "Grade 12"
+            ],
+            "lessons": [
+                {
+                    "id": "codex-grade-12",
+                    "title": "Reference Codex Vol. 12",
+                    "url": "/library/read/index.php?book=math-facts-repo&chapter=chapter-12"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "It bypasses lengthy limit difference quotient algebra, reducing derivative computation on polynomials to elementary mental arithmetic.",
+            "howToDoIt": [
+                "Bring the existing exponent $n$ down in front to multiply the term.",
+                "Subtract exactly $1$ from the power exponent ($n \\to n - 1$).",
+                "If the term has a leading constant $c$, multiply: $\\frac{d}{dx}[c x^n] = c \\cdot n x^{n-1}$."
+            ],
+            "exampleProblem": "Differentiate $f(x) = 4x^3 - 5x^2 + 7x - 9$.",
+            "exampleSolution": "$f'(x) = 4(3)x^{3-1} - 5(2)x^{2-1} + 7(1)x^{1-1} - 0 = 12x^2 - 10x + 7$.",
+            "etymology": "/ˈpaʊər ruːl/ • Latin: \"potentia\" (power, exponent degree)"
+        },
+        {
+            "id": "prime-vs-composite-numbers",
+            "term": "Prime vs. Composite Numbers",
+            "definition": "A natural number greater than $1$ is Prime if its only positive divisors are $1$ and itself. A number with more than two distinct positive factors is Composite.",
+            "example": "$$\\text{Prime: } \\{n \\in \\mathbb{Z}^+ \\mid \\text{Factors}(n) = \\{1, n\\}\\}$$",
+            "category": "Number Systems & Arithmetic",
+            "modules": [
+                "Reference Codex (Grade 4)"
+            ],
+            "grades": [
+                "Grade 4"
+            ],
+            "lessons": [
+                {
+                    "id": "codex-grade-4",
+                    "title": "Reference Codex Vol. 4",
+                    "url": "/library/read/index.php?book=math-facts-repo&chapter=chapter-4"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "Primes act as the multiplicative \"atoms\" of all mathematics: by the Fundamental Theorem of Arithmetic, every integer has a unique prime factorization.",
+            "howToDoIt": [
+                "Check if $n \\le 1$: $0$ and $1$ are neither prime nor composite.",
+                "Test trial division by primes up to $\\sqrt{n}$ ($2, 3, 5, 7 \\dots$).",
+                "If any divisor divides $n$ without remainder, $n$ is Composite; otherwise, it is Prime."
+            ],
+            "exampleProblem": "Determine whether $29$ and $35$ are prime or composite.",
+            "exampleSolution": "Factors of $29$: $\\{1, 29\\} \\implies$ Prime. Factors of $35$: $\\{1, 5, 7, 35\\} \\implies$ Composite ($5 \\times 7 = 35$).",
+            "etymology": "/praɪm/ • Latin: \"primus\" (first, primordial, indivisible)"
+        },
+        {
+            "id": "pseudocode",
+            "term": "Pseudocode",
+            "definition": "Specifies the domain of the variable of x to be the set of integers.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 3: Linear and Exponential Functions"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m3-b-4",
+                    "title": "The Graph of a Function",
+                    "url": "/levels/k.php?k-math-m3-b-4"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "pythagorean-theorem",
+            "term": "Pythagorean Theorem",
+            "definition": "A fundamental theorem of Euclidean geometry stating that in any right triangle, the area of the square erected upon the hypotenuse ($c$) equals the combined sum of the areas of the squares erected upon legs $a$ and $b$.",
+            "example": "$$a^2 + b^2 = c^2 \\iff c = \\sqrt{a^2 + b^2}$$",
+            "category": "Geometry & Measurement",
+            "modules": [
+                "Reference Codex (Grade 8)"
+            ],
+            "grades": [
+                "Grade 8"
+            ],
+            "lessons": [
+                {
+                    "id": "codex-grade-8",
+                    "title": "Reference Codex Vol. 8",
+                    "url": "/library/read/index.php?book=math-facts-repo&chapter=chapter-8"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "It unlocks straight-line distance calculations across two dimensions, forming the basis of navigation, construction, computer graphics, and coordinate geometry.",
+            "howToDoIt": [
+                "Verify the triangle contains an exact $90^\\circ$ right angle.",
+                "Identify the hypotenuse ($c$), which is strictly opposite the right angle.",
+                "Square the two known sides. To solve for hypotenuse: $c = \\sqrt{a^2 + b^2}$. To solve for a leg: $a = \\sqrt{c^2 - b^2}$."
+            ],
+            "exampleProblem": "A right triangle has legs of length $6\\text{ cm}$ and $8\\text{ cm}$. Find the length of hypotenuse $c$.",
+            "exampleSolution": "$a^2 + b^2 = c^2 \\implies 6^2 + 8^2 = c^2 \\implies 36 + 64 = 100 \\implies c = \\sqrt{100} = 10\\text{ cm}$.",
+            "etymology": "/pɪˌθæɡəˈriːən/ • Named after Pythagoras of Samos (c. 570–495 BC)"
         },
         {
             "id": "quadratic-function",
@@ -1290,7 +4235,12 @@
                     "url": "/levels/k.php?k-math-m1-a-2"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "rational-equation",
@@ -1311,7 +4261,12 @@
                     "url": "/levels/k.php?k-math-m1-c-9"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "ray",
@@ -1332,7 +4287,68 @@
                     "url": "/levels/k.php?k-math-m1-c-2"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "recall",
+            "term": "Recall",
+            "definition": "What does the graph of a quadratic equation look like?Remind students that when calculating squares in their calculator, they need to watch out for a common error: (-1)^{2}≠-1^{2}.",
+            "example": "",
+            "category": "Quadratic Functions & Equations",
+            "modules": [
+                "Module 4: Polynomial and Quadratic Expressions"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m4-b-6",
+                    "title": "Graphing Quadratic Equations from the Vertex Form, y=a(x-h)^{2}+k",
+                    "url": "/levels/k.php?k-math-m4-b-6"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "rectangular-arrays-repeated-addition",
+            "term": "Rectangular Arrays & Repeated Addition",
+            "definition": "A geometric configuration of discrete objects aligned into identical horizontal rows and vertical columns, serving as the concrete foundation of multiplication.",
+            "example": "$$\\text{Total Items} = \\sum_{i=1}^{r} c = r \\times c$$",
+            "category": "Number Systems & Arithmetic",
+            "modules": [
+                "Reference Codex (Grade 2)"
+            ],
+            "grades": [
+                "Grade 2"
+            ],
+            "lessons": [
+                {
+                    "id": "codex-grade-2",
+                    "title": "Reference Codex Vol. 2",
+                    "url": "/library/read/index.php?book=math-facts-repo&chapter=chapter-2"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "It bridges counting single items to spatial two-dimensional grouping, proving that multiplication is rapid repeated addition.",
+            "howToDoIt": [
+                "Count the number of horizontal lines (Rows, $r$).",
+                "Count how many objects are situated in each single row (Columns, $c$).",
+                "Add the row count $r$ times, or skip-count by $c$."
+            ],
+            "exampleProblem": "Find the total items in an array containing $4$ rows with $5$ stars in each row.",
+            "exampleSolution": "Repeated addition of rows: $5 + 5 + 5 + 5 = 20$. The array contains exactly $20$ stars.",
+            "etymology": "/əˈreɪ/ • Anglo-Norman: \"arrai\" (orderly systematic arrangement)"
         },
         {
             "id": "recurrence-relation",
@@ -1353,7 +4369,38 @@
                     "url": "/levels/k.php?k-math-m1-d-2"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "recursive-formulas-for-sequences",
+            "term": "Recursive Formulas for Sequences",
+            "definition": "Core mathematical concept established in Module 3: Linear and Exponential Functions, Linear and Exponential Sequences.",
+            "example": "",
+            "category": "Exponential Functions",
+            "modules": [
+                "Module 3: Linear and Exponential Functions"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m3-a-2",
+                    "title": "Recursive Formulas for Sequences",
+                    "url": "/levels/k.php?k-math-m3-a-2"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "recursive-sequence",
@@ -1374,7 +4421,38 @@
                     "url": "/levels/k.php?k-math-m1-d-2"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "relationships-between-two-numerical-variables",
+            "term": "Relationships Between Two Numerical Variables",
+            "definition": "Core mathematical concept established in Module 2: Descriptive Statistics, Numerical Data on Two Variables.",
+            "example": "",
+            "category": "Descriptive Statistics",
+            "modules": [
+                "Module 2: Descriptive Statistics"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m2-d-1",
+                    "title": "Relationships Between Two Numerical Variables",
+                    "url": "/levels/k.php?k-math-m2-d-1"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "reversible-step",
@@ -1395,7 +4473,42 @@
                     "url": "/levels/k.php?k-math-m1-c-4"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "right-triangle-trigonometry-soh-cah-toa",
+            "term": "Right Triangle Trigonometry (SOH-CAH-TOA)",
+            "definition": "Fundamental trigonometric ratios relating the acute reference angle ($\\theta$) of a right triangle to dimensionless quotients of its side lengths.",
+            "example": "$$\\sin\\theta = \\frac{\\text{Opp}}{\\text{Hyp}}, \\quad \\cos\\theta = \\frac{\\text{Adj}}{\\text{Hyp}}, \\quad \\tan\\theta = \\frac{\\text{Opp}}{\\text{Adj}}$$",
+            "category": "Trigonometric Functions",
+            "modules": [
+                "Reference Codex (Grade 10)"
+            ],
+            "grades": [
+                "Grade 10"
+            ],
+            "lessons": [
+                {
+                    "id": "codex-grade-10",
+                    "title": "Reference Codex Vol. 10",
+                    "url": "/library/read/index.php?book=math-facts-repo&chapter=chapter-10"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "It enables the measurement of inaccessible heights and distances (surveying mountains, celestial navigation, architectural load angles) from a single angle and distance.",
+            "howToDoIt": [
+                "Anchor your perspective at the acute reference angle $\\theta$.",
+                "Label the three sides: Hypotenuse (longest side opposite $90^\\circ$), Opposite (across from $\\theta$), and Adjacent (next to $\\theta$).",
+                "Select the matching ratio from SOH-CAH-TOA based on your known and unknown sides, then solve."
+            ],
+            "exampleProblem": "In a right triangle, angle $\\theta$ has an opposite side of $5\\text{ cm}$ and hypotenuse of $13\\text{ cm}$. Find $\\sin\\theta$ and $\\tan\\theta$.",
+            "exampleSolution": "$\\sin\\theta = \\frac{\\text{Opp}}{\\text{Hyp}} = \\frac{5}{13}$. Adjacent side: $\\sqrt{13^2 - 5^2} = \\sqrt{144} = 12$. Therefore, $\\tan\\theta = \\frac{\\text{Opp}}{\\text{Adj}} = \\frac{5}{12}$.",
+            "etymology": "/ˌtrɪɡəˈnɒmətri/ • Greek: \"trigonon\" (triangle) + \"metron\" (measure)"
         },
         {
             "id": "roots-zeros",
@@ -1416,7 +4529,38 @@
                     "url": "/levels/k.php?k-math-m1-c-8"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "sample-response",
+            "term": "Sample Response",
+            "definition": "We can tell that this problem involves a geometric sequence because we are multiplying each term by either 1.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 5: Synthesis of Modeling"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m5-b-6",
+                    "title": "Modeling a Context from a Verbal Description",
+                    "url": "/levels/k.php?k-math-m5-b-6"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "second-differences",
@@ -1437,7 +4581,38 @@
                     "url": "/levels/k.php?k-math-m1-a-2"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "sequence",
+            "term": "SEQUENCE",
+            "definition": "Let a_{n+1}=2a_{n},a_{0}=1 for 0≤n≤4 where n is an integer.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 3: Linear and Exponential Functions"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m3-b-3",
+                    "title": "Representing, Naming, and Evaluating Functions",
+                    "url": "/levels/k.php?k-math-m3-b-3"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "set-builder-notation",
@@ -1458,7 +4633,12 @@
                     "url": "/levels/k.php?k-math-m1-c-5"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "solution-set",
@@ -1479,7 +4659,38 @@
                     "url": "/levels/k.php?k-math-m1-c-1"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "solving-basic-one-variable-quadratic-equations",
+            "term": "Solving Basic One-Variable Quadratic Equations",
+            "definition": "Core mathematical concept established in Module 4: Polynomial and Quadratic Expressions, Equations, and Functions, Quadratic Expressions, Equations, and Functions.",
+            "example": "",
+            "category": "Quadratic Functions & Equations",
+            "modules": [
+                "Module 4: Polynomial and Quadratic Expressions"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m4-a-6",
+                    "title": "Solving Basic One-Variable Quadratic Equations",
+                    "url": "/levels/k.php?k-math-m4-a-6"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "speed-time-graph",
@@ -1500,7 +4711,12 @@
                     "url": "/levels/k.php?k-math-m1-a-5"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "standard-form-of-a-polynomial",
@@ -1521,7 +4737,38 @@
                     "url": "/levels/k.php?k-math-m1-b-3"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "stretching-and-shrinking-graphs-of-functions",
+            "term": "Stretching and Shrinking Graphs of Functions",
+            "definition": "Core mathematical concept established in Module 4: Polynomial and Quadratic Expressions, Equations, and Functions, Function Transformations and Modeling.",
+            "example": "",
+            "category": "Quadratic Functions & Equations",
+            "modules": [
+                "Module 4: Polynomial and Quadratic Expressions"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m4-c-3",
+                    "title": "Stretching and Shrinking Graphs of Functions",
+                    "url": "/levels/k.php?k-math-m4-c-3"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "subject-of-a-formula",
@@ -1542,7 +4789,12 @@
                     "url": "/levels/k.php?k-math-m1-c-10"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "substitution-method",
@@ -1563,7 +4815,64 @@
                     "url": "/levels/k.php?k-math-m1-c-13"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "summarizing-bivariate-categorical-data",
+            "term": "Summarizing Bivariate Categorical Data",
+            "definition": "Core mathematical concept established in Module 2: Descriptive Statistics, Categorical Data on Two Variables.",
+            "example": "",
+            "category": "Descriptive Statistics",
+            "modules": [
+                "Module 2: Descriptive Statistics"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m2-c-1",
+                    "title": "Summarizing Bivariate Categorical Data",
+                    "url": "/levels/k.php?k-math-m2-c-1"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "suri",
+            "term": "Suri",
+            "definition": "I am thinking of the units digits in the multiples of two, so it continues 2, 4, 6, 8, 0, 2, 4, 6, 8, ….",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 3: Linear and Exponential Functions"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m3-a-1",
+                    "title": "Integer Sequences—Should You Believe in Patterns?",
+                    "url": "/levels/k.php?k-math-m3-a-1"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "system-of-linear-equations",
@@ -1584,7 +4893,12 @@
                     "url": "/levels/k.php?k-math-m1-c-13"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "tabular-multiplication-box-method",
@@ -1605,7 +4919,12 @@
                     "url": "/levels/k.php?k-math-m1-b-4"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "target-inversion",
@@ -1626,7 +4945,12 @@
                     "url": "/levels/k.php?k-math-m1-d-3"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "taxable-income",
@@ -1647,7 +4971,12 @@
                     "url": "/levels/k.php?k-math-m1-d-4"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "term",
@@ -1668,7 +4997,12 @@
                     "url": "/levels/k.php?k-math-m1-b-1"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "test-point",
@@ -1689,13 +5023,148 @@
                     "url": "/levels/k.php?k-math-m1-c-12"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "their-comments-are-as-follows",
+            "term": "Their comments are as follows",
+            "definition": "Callie: It looks like the U.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 3: Linear and Exponential Functions"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m3-a-6",
+                    "title": "Exponential Growth—U.S. Population and World Population",
+                    "url": "/levels/k.php?k-math-m3-a-6"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "the-notation-f",
+            "term": "The notation f",
+            "definition": "X→Y is used to name the function and describes both X and Y.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 3: Linear and Exponential Functions"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m3-b-2",
+                    "title": "Representing, Naming, and Evaluating Functions",
+                    "url": "/levels/k.php?k-math-m3-b-2"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "the-power-of-exponential-growth",
+            "term": "The Power of Exponential Growth",
+            "definition": "Core mathematical concept established in Module 3: Linear and Exponential Functions, Linear and Exponential Sequences.",
+            "example": "",
+            "category": "Exponential Functions",
+            "modules": [
+                "Module 3: Linear and Exponential Functions"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m3-a-5",
+                    "title": "The Power of Exponential Growth",
+                    "url": "/levels/k.php?k-math-m3-a-5"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "transformations-of-the-quadratic-parent-function-f-x-x2",
+            "term": "Transformations of the Quadratic Parent Function, f(x)=x^{2}",
+            "definition": "Core mathematical concept established in Module 4: Polynomial and Quadratic Expressions, Equations, and Functions, Function Transformations and Modeling.",
+            "example": "",
+            "category": "Quadratic Functions & Equations",
+            "modules": [
+                "Module 4: Polynomial and Quadratic Expressions"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m4-c-4",
+                    "title": "Transformations of the Quadratic Parent Function, f(x)=x^{2}",
+                    "url": "/levels/k.php?k-math-m4-c-4"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "translating-graphs-of-functions",
+            "term": "Translating Graphs of Functions",
+            "definition": "Core mathematical concept established in Module 4: Polynomial and Quadratic Expressions, Equations, and Functions, Function Transformations and Modeling.",
+            "example": "",
+            "category": "Quadratic Functions & Equations",
+            "modules": [
+                "Module 4: Polynomial and Quadratic Expressions"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m4-c-2",
+                    "title": "Translating Graphs of Functions",
+                    "url": "/levels/k.php?k-math-m4-c-2"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "trinomial",
             "term": "Trinomial",
             "definition": "A polynomial with exactly three terms, such as ax² + bx + c.",
-            "example": "",
+            "example": "$$x^2 + (p + q)x + pq = (x + p)(x + q)$$",
             "category": "Polynomials & Algebraic Expressions",
             "modules": [
                 "Module 1: Relationships Between Quantities & Reasoning with Equations"
@@ -1710,7 +5179,16 @@
                     "url": "/levels/k.php?k-math-m1-b-4"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "By applying the Zero Product Property ($AB = 0 \\implies A=0 \\text{ or } B=0$), factoring converts complex polynomial expressions into simple solvable linear equations.",
+            "howToDoIt": [
+                "Look for two integers $p$ and $q$ that multiply to constant $c$ ($p \\times q = c$) and add to middle coefficient $b$ ($p + q = b$).",
+                "Construct the binomials: $(x + p)(x + q)$.",
+                "Check work by expanding via FOIL (First, Outside, Inside, Last)."
+            ],
+            "exampleProblem": "Factor the polynomial $x^2 + 7x + 12$.",
+            "exampleSolution": "Find two numbers that multiply to $12$ and add to $7$: $3 \\times 4 = 12$ and $3 + 4 = 7$. Factored form: $(x + 3)(x + 4)$.",
+            "etymology": "/ˈfæk.tər.ɪŋ/ • Latin: \"factor\" (a maker, doer, or constituent part)"
         },
         {
             "id": "truth-value",
@@ -1731,7 +5209,38 @@
                     "url": "/levels/k.php?k-math-m1-c-1"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "two-way-frequency-table",
+            "term": "Two-Way Frequency Table",
+            "definition": "The relative frequency table would be found by dividing each of the above cell values by 450.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 2: Descriptive Statistics"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m2-c-2",
+                    "title": "Summarizing Bivariate Categorical Data with Relative Frequencies",
+                    "url": "/levels/k.php?k-math-m2-c-2"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "union",
@@ -1752,19 +5261,55 @@
                     "url": "/levels/k.php?k-math-m1-c-6"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "unit-fractions-rational-partitioning",
+            "term": "Unit Fractions & Rational Partitioning",
+            "definition": "A rational quantity formed by partitioning a single whole into $b$ congruent, equal-sized pieces, where the fraction represents exactly one of those partitioned segments.",
+            "example": "$$\\text{Unit Fraction} = \\frac{1}{b} \\quad (b \\in \\mathbb{Z}^+)$$",
+            "category": "Fractions & Rational Numbers",
+            "modules": [
+                "Reference Codex (Grade 3)"
+            ],
+            "grades": [
+                "Grade 3"
+            ],
+            "lessons": [
+                {
+                    "id": "codex-grade-3",
+                    "title": "Reference Codex Vol. 3",
+                    "url": "/library/read/index.php?book=math-facts-repo&chapter=chapter-3"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "It establishes the fundamental atomic building block of all rational numbers: any non-unit fraction $\\frac{a}{b}$ is simply $a$ copies of the unit fraction $\\frac{1}{b}$.",
+            "howToDoIt": [
+                "Verify the whole unit is divided into segments of strictly equal size/length.",
+                "Count the total number of segments to determine the denominator ($b$).",
+                "Isolate or shade exactly 1 segment to represent $\\frac{1}{b}$."
+            ],
+            "exampleProblem": "Express the fraction $\\frac{5}{8}$ as an iteration of its underlying unit fraction.",
+            "exampleSolution": "The unit fraction is $\\frac{1}{8}$. Thus: $\\frac{5}{8} = \\frac{1}{8} + \\frac{1}{8} + \\frac{1}{8} + \\frac{1}{8} + \\frac{1}{8} = 5 \\times \\frac{1}{8}$.",
+            "etymology": "/ˈjuːnɪt ˈfrækʃən/ • Latin: \"fractio\" (a breaking into fragments)"
         },
         {
             "id": "unit-rate",
             "term": "Unit Rate",
             "definition": "A rate in which the second quantity in the comparison is one unit (e.g., 25 pages per minute).",
-            "example": "",
+            "example": "$$y = kx \\implies k = \\frac{y}{x}$$",
             "category": "Algebraic Foundations & Modeling",
             "modules": [
                 "Module 1: Relationships Between Quantities & Reasoning with Equations"
             ],
             "grades": [
-                "Grade 9"
+                "Grade 9",
+                "Grade 7"
             ],
             "lessons": [
                 {
@@ -1773,7 +5318,42 @@
                     "url": "/levels/k.php?k-math-m1-d-1"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "It describes uniform rate behaviors: speed ($d = rt$), wage rates ($\\text{Pay} = r \\times \\text{Hours}$), scaling recipes, and currency conversion.",
+            "howToDoIt": [
+                "Pick any non-zero ordered coordinate pair $(x, y)$ from a proportional table or graph.",
+                "Divide the dependent variable $y$ by independent variable $x$: $k = \\frac{y}{x}$.",
+                "Verify that all other pairs $(x_i, y_i)$ yield the identical quotient $k$."
+            ],
+            "exampleProblem": "A car travels $165\\text{ miles}$ in $3\\text{ hours}$ at constant speed. Find the constant of proportionality and the equation relating distance ($y$) and hours ($x$).",
+            "exampleSolution": "$k = \\frac{y}{x} = \\frac{165}{3} = 55\\text{ mph}$. Direct proportional equation: $y = 55x$.",
+            "etymology": "/prəˌpɔːʃəˈnæləti/ • Latin: \"pro portione\" (according to the share)"
+        },
+        {
+            "id": "using-the-quadratic-formula",
+            "term": "Using the Quadratic Formula",
+            "definition": "Core mathematical concept established in Module 4: Polynomial and Quadratic Expressions, Equations, and Functions, Using Different Forms for Quadratic Functions.",
+            "example": "",
+            "category": "Quadratic Functions & Equations",
+            "modules": [
+                "Module 4: Polynomial and Quadratic Expressions"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m4-b-5",
+                    "title": "Using the Quadratic Formula",
+                    "url": "/levels/k.php?k-math-m4-b-5"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "velocity",
@@ -1794,7 +5374,146 @@
                     "url": "/levels/k.php?k-math-m1-a-5"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "vertex",
+            "term": "Vertex",
+            "definition": "The point where the graph of a quadratic function and its axis of symmetry intersect is called the vertex.",
+            "example": "",
+            "category": "Quadratic Functions & Equations",
+            "modules": [
+                "Module 4: Polynomial and Quadratic Expressions"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m4-a-8",
+                    "title": "Exploring the Symmetry in Graphs of Quadratic Functions",
+                    "url": "/levels/k.php?k-math-m4-a-8"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "volume-of-rectangular-prisms",
+            "term": "Volume of Rectangular Prisms",
+            "definition": "The total measure of three-dimensional space enclosed within a solid boundary, quantified as the aggregate number of unit cubes ($1 \\times 1 \\times 1$) that pack the interior without gaps.",
+            "example": "$$V = l \\times w \\times h = B \\times h$$",
+            "category": "Geometry & Measurement",
+            "modules": [
+                "Reference Codex (Grade 5)"
+            ],
+            "grades": [
+                "Grade 5"
+            ],
+            "lessons": [
+                {
+                    "id": "codex-grade-5",
+                    "title": "Reference Codex Vol. 5",
+                    "url": "/library/read/index.php?book=math-facts-repo&chapter=chapter-5"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "It measures the physical capacity of solid 3D structures (such as storage containers, shipping boxes, or liquid tanks).",
+            "howToDoIt": [
+                "Measure the length ($l$) and width ($w$) of the rectangular base to find base area ($B = l \\times w$).",
+                "Measure the perpendicular vertical height ($h$) of the prism.",
+                "Multiply base area by height: $V = B \\times h$. Units are always cubic ($\\text{cm}^3, \\text{in}^3, \\text{m}^3$)."
+            ],
+            "exampleProblem": "Find the volume of a rectangular prism with length $6\\text{ cm}$, width $4\\text{ cm}$, and height $5\\text{ cm}$.",
+            "exampleSolution": "$V = l \\times w \\times h = 6 \\times 4 \\times 5 = 24 \\times 5 = 120\\text{ cm}^3$.",
+            "etymology": "/ˈvɒljuːm/ • Latin: \"volumen\" (roll, scroll, 3D cubic capacity)"
+        },
+        {
+            "id": "why-do-banks-pay-you-to-provide-their-services",
+            "term": "Why Do Banks Pay YOU to Provide Their Services?",
+            "definition": "Core mathematical concept established in Module 3: Linear and Exponential Functions, Linear and Exponential Sequences.",
+            "example": "",
+            "category": "Exponential Functions",
+            "modules": [
+                "Module 3: Linear and Exponential Functions"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m3-a-4",
+                    "title": "Why Do Banks Pay YOU to Provide Their Services?",
+                    "url": "/levels/k.php?k-math-m3-a-4"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "why-stay-with-whole-numbers",
+            "term": "Why Stay with Whole Numbers?",
+            "definition": "Core mathematical concept established in Module 3: Linear and Exponential Functions, Functions and Their Graphs.",
+            "example": "",
+            "category": "Exponential Functions",
+            "modules": [
+                "Module 3: Linear and Exponential Functions"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m3-b-1",
+                    "title": "Why Stay with Whole Numbers?",
+                    "url": "/levels/k.php?k-math-m3-b-1"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "x-of-a-function-f",
+            "term": "X of a function f",
+            "definition": "X→Y, then x is matched to an element of Y called f(x).",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 3: Linear and Exponential Functions"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m3-b-2",
+                    "title": "Representing, Naming, and Evaluating Functions",
+                    "url": "/levels/k.php?k-math-m3-b-2"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         },
         {
             "id": "zero-product-property",
@@ -1815,7 +5534,12 @@
                     "url": "/levels/k.php?k-math-m1-c-8"
                 }
             ],
-            "standards": []
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
         }
     ]
 }

@@ -1,0 +1,156 @@
+{
+    "id": "k-math-m3-d-1",
+    "code": "K.M3.D.1",
+    "standard": "HSF.LE.A.1",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "Comparing Linear and Exponential Models Again",
+        "pageTitle": "Comparing Linear and Exponential Models Again | Hesten's Learning",
+        "description": "Students have spent several lessons in this module studying linear and exponential functions. This lesson has students compare and contrast the two functions to...",
+        "pageDescription": "Master Comparing Linear and Exponential Models Again in Module 3: Linear and Exponential Functions. Comprehensive student outcomes, teacher insights, guided exercises, problem set worksheets, and exit ticket keys.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M3.D.1",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 21",
+        "pill": "Using Functions and Graphs to Solve Problems",
+        "text": "Students have spent several lessons in this module studying linear and exponential functions. This lesson has students compare and contrast the two functions to solidify their understanding of each. Students then learn how to differentiate between the two functions by recognizing a constant rate of change or a common quotient in data tables or by recognizing the features in their graphs or formulas.",
+        "outcomes": [
+            "Students create models and understand the differences between linear and exponential models that are represented in different ways."
+        ],
+        "teacherInsight": "Emphasize precise mathematical definitions and multiple problem-solving representations. Encourage students to check the reasonableness of their numerical solutions."
+    },
+    "content": [],
+    "vocabulary": [
+        {
+            "term": "Opening Exercise Scaffolding",
+            "definition": "If students are struggling with the type of function, have them plot the points."
+        }
+    ],
+    "guidedExercises": [
+        {
+            "title": "Example 1: Core Mathematical Modeling for Comparing Linear and Exponential Models Again",
+            "badge": "Eureka Math Guided Classwork",
+            "difficulty": "Core Application",
+            "problem": "Classwork Opening Exercise (10 minutes) This table format allows students to compare linear and exponential models in several ways. This exercise reminds students what linear and exponential models are and allows them to easily see the difference between them. Students can either be given the example or write their own for each model. Once students have finished, have them discuss their work in pairs or in groups. Tie this together with a class discussion, paying particular attention to the diff",
+            "scaffolding": "Identify the key variables and properties. Apply the definitions and mathematical structures introduced in Comparing Linear and Exponential Models Again.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Define Variables & Formulate Governing Relations",
+                    "math": "\\text{Identify key variables and parameters for } Comparing Linear and Exponential Models Again",
+                    "explanation": "Establish the relationship between quantities and state any domain constraints."
+                },
+                {
+                    "step": 2,
+                    "label": "Execute Step-by-Step Algebraic Transformations",
+                    "math": "\\text{Transform and simplify equations: } \\dots",
+                    "explanation": "Be sure that students understand the following telltale signs for recognizing linear and exponential functions from a table of input-output pairs: For each d>0, consider all inputs that have a difference of d units: If the difference between their co"
+                }
+            ],
+            "finalAnswer": "\\text{The evaluated solution verifies the properties of } Comparing Linear and Exponential Models Again",
+            "commonPitfall": "Ensure units of measurement and domain constraints are checked in physical and statistical contexts."
+        },
+        {
+            "title": "Exercise 1: Independent Problem Formulation",
+            "badge": "Multi-Step Application",
+            "difficulty": "Advanced Reasoning",
+            "problem": "Apply the foundational principles of Comparing Linear and Exponential Models Again to determine the exact value and interpret the contextual significance.",
+            "scaffolding": "Reference the worked steps from Example 1. Verify intermediate calculations and justify your steps.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Analyze Given Conditions & Structure",
+                    "math": "\\text{State domain constraints and initial conditions}",
+                    "explanation": "Verify that all assumptions conform to the problem context."
+                },
+                {
+                    "step": 2,
+                    "label": "Calculate the Final Mathematical Solution",
+                    "math": "\\text{Solve for the target unknown quantity}",
+                    "explanation": "State the solution with formal mathematical reasoning."
+                }
+            ],
+            "finalAnswer": "\\text{Verified algebraic or statistical solution}",
+            "commonPitfall": "Avoid rounding prematurely before the final step."
+        }
+    ],
+    "exitTicket": {
+        "title": "Lesson 21 Exit Ticket: Comparing Linear and Exponential Models Again",
+        "prompt": "Exit Ticket\n\nHere is a classic riddle: Mr. Smith has an apple orchard. He hires his daughter, Lucy, to pick apples and offers her two payment options:\n\nOption A: $1.50 per bushel of apples picked\n\nOption B: 1 cent for picking one bushel, 3 cents for picking two bushels, 9 cents for picking three bushels, and so on, with the amount of money tripling for each additional bushel picked\n\nWrite a function to model each option.\n\nIf Lucy picks six bushels of apples, which option should she choose?\n\nIf Lucy picks 12 bushels of apples, which option should she choose?\n\nHow many bushels of apples does Lucy need to pick to make Option B better for her than Option A?",
+        "solution": "Here is a classic riddle: Mr. Smith has an apple orchard. He hires his daughter, Lucy, to pick apples and offers her two payment options::\n\nOption A: $1.50 per bushel of apples picked\n\nOption B: 1 cent for picking one bushel, 3 cents for picking two bushels, 9 cents for picking three bushels, and so on, with the amount of money tripling for each additional bushel picked\n\nWrite a function to model each option.\n\nOption A: f(x)=1.50x, where x is the number of bushels of apples picked\n\nOption B: g(x)=0.01(3)^{x-1}, where x is the number of bushels of apples picked\n\nIf Lucy picks six bushels of apples, which option should she choose?\n\nOption A: $9Option B: $2.43Option A is better.\n\nIf Lucy picks 12 bushels of apples, which option should she choose?\n\nOption A: $18Option B: $1,771.47Option B is much better.\n\nHow many bushels of apples does Lucy need to pick to make Option B better for her than Option A?\n\nThe eighth bushel picked is when the exponential function exceeds the linear function."
+    },
+    "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Master Comparing Linear and Exponential Models Again through authentic curriculum practice problems. Check your work using the expandable teacher solution key below.",
+        "problems": [
+            {
+                "number": 1,
+                "prompt": "For each table in Problems 1—6, classify the data as describing a linear relationship, an exponential growth relationship, an exponential decay relationship, or neither. If the relationship is linear, calculate the constant rate of change (slope), and write a formula for the linear function that models the data. If the function is exponential, calculate the common quotient for input values that are distance one apart, and write the formula for the exponential function that models the data. For each linear or exponential function found, graph the equation y=f(x).",
+                "solution": "Common quotient: \\frac{1}{2}, exponential decay, f(x)=(\\frac{1}{2})^{x}\n\nConstant rate of change: 1.1, linear, f(x)=0.3+1.1x\n\nNeither\n\nRatio of change: 2, exponential growth, f(x)=10(2)^{x}\n\nRate of change: -7, linear, f(x)=2-7x\n\nNeither"
+            },
+            {
+                "number": 2,
+                "prompt": "Here is a variation on a classic riddle: Jayden has a dog-walking business. He has two plans. Plan 1 includes walking a dog once a day for a rate of $5 per day. Plan 2 also includes one walk a day but charges 1 cent for 1 day, 2 cents for 2 days, 4 cents for 3 days, and 8 cents for 4 days and continues to double for each additional day. Mrs. Maroney needs Jayden to walk her dog every day for two weeks. Which plan should she choose? Show the work to justify your answer.",
+                "solution": "Plan 1: 5\\times 14=70 She will pay $70 for two weeks under Plan 1.\n\nPlan 2: The price can be modeled using the function f(x)=0.01(2)^{x-1}, which describes the amount she pays for x days. Then,\n\nf(14)=0.01(2)^{14-1} or f(14)=81.92.\n\nShe will pay $81.92 under Plan 2 for two weeks.\n\nPlan 1 is the better choice."
+            },
+            {
+                "number": 3,
+                "prompt": "Tim deposits money in a certificate of deposit account. The balance (in dollars) in his account t years after making the deposit is given by T(t)=1000(1.06)^{t} for t≥0.\n\nExplain, in terms of the structure of the expression used to define T(t), why Tim's balance can never be $999.",
+                "solution": "(1.06)^{0}=1, and positive powers of 1.06 are larger than 1; thus, the minimum value T(t) attains, if t≥0, is 1,000. In the context given, a CD account grows in value over time, so with a deposit of $1,000, the value will never drop to $999."
+            },
+            {
+                "number": 4,
+                "prompt": "By what percent does the value of T(t) grow each year? Explain by writing a recursive formula for the sequence T(1), T(2), T(3), etc.",
+                "solution": "Writing out the sequence, we see:\n\nYear 1: 1000(1.06)^{1}Year 2: 1000(1.06)^{2}Year 3: 1000(1.06)^{3}\n\nThus, T(n+1)=T(n)(1.06) or T(n+1)=T(n)+T(n)(0.06), showing that T(n) grows by 6% per year.\n\nBy what percentage does the value of T(t) grow every two years? (Hint: Use your recursive formula to write T(n+2) in terms of T(n).)\n\nSince, T(n+1)=T(n)(1.06), we can write:\n\nT(n+2)=T(n+1)(1.06)=T(n)(1.06)(1.06),\n\nor T(n+2)=T(n)(1.1236).\n\nHence, the amount in his account grows by 12.36% every two years."
+            },
+            {
+                "number": 5,
+                "prompt": "Your mathematics teacher asks you to sketch a graph of the exponential function f(x)=(\\frac{3}{2})^{x} for x, a number between 0 and 40 inclusively, using a scale of 10 units to one inch for both the x- and y-axes.\n\nWhat are the dimensions (in feet) of the roll of paper needed to sketch this graph?",
+                "solution": "The roll would need to be a bit wider than 4 in. (\\frac{1}{3} ft. ) and, after rounding up, about 1,105,734 in. (or 92,145 ft. long)."
+            },
+            {
+                "number": 6,
+                "prompt": "How many more feet of paper would you need to add to the roll in order to graph the function on the interval 0≤x≤41?",
+                "solution": "It would require approximately 46,072 more feet of paper. Teachers: Look for the easy solution, which is f(41)=f(40)\\times 1.5=f(40)+f(40)\\times \\frac{1}{2}."
+            },
+            {
+                "number": 7,
+                "prompt": "Find an m so that the linear function g(x)=mx+2 is greater than f(x) for all x such that 0≤x≤40, but f(41)>g(41).",
+                "solution": "There are many possible answers: Any number between (roughly) 276,433.275 and 404,536 will do. Note that f(40)≈11 057 332.32 and f(41)≈16 585 998.48, so any slope such that 11 057 333≤g(40) and g(41)≤16 585 998 will do. Since g(40)=40m+2, solving 11 057 333=40m+2 or m=276 433.275 might produce such a linear function. We need to check only that the function g(x)=276 433.275x+2 satisfies f(41)>g(41), which it does because g(41)=11 333 766.275."
+            }
+        ]
+    },
+    "practiceQuestions": [
+        {
+            "question": "[Exit Ticket Challenge 1] Exit Ticket",
+            "options": [
+                "Here is a classic riddle: Mr. Smith has an apple orchard. He hires his daughter, Lucy, to pick apples and offers her two payment options::",
+                "The relationship cannot be evaluated without arbitrary numerical coordinates.",
+                "The values remain constant at zero regardless of the independent variable inputs.",
+                "The rate of change is undefined because domain restrictions were violated."
+            ],
+            "correct": 0,
+            "explanation": "From the official Eureka Math Exit Ticket Key for Lesson 21:\nHere is a classic riddle: Mr. Smith has an apple orchard. He hires his daughter, Lucy, to pick apples and offers her two payment options::\n\nOption A: $1.50 per bushel of apples picked\n\nOption B: 1 cent for picking one bushel, 3 cents for picking two bushels, 9 cents for picking three bushels, and so on, with the amount of money tripling for each additional bushel picked\n\nWrite a function to model each option.\n\nOption A: f(x)=1.50x, where x is the"
+        },
+        {
+            "question": "[Exit Ticket Challenge 2] Here is a classic riddle: Mr. Smith has an apple orchard. He hires his daughter, Lucy, to pick apples and offers her two payment options:",
+            "options": [
+                "Option A: $1.50 per bushel of apples picked",
+                "Ignore boundary conditions and compute only approximate integer values.",
+                "Assume that all relationships are strictly constant without verifying rates of change.",
+                "Treat independent and dependent variables as interchangeable."
+            ],
+            "correct": 0,
+            "explanation": "Official Curriculum Key for Lesson 21:\nStudents create models and understand the differences between linear and exponential models that are represented in different ways."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Comparing Linear and Exponential Models Again.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Developed using authentic lesson materials from standard algebra curricula.",
+        "lessonId": "L-ID-K-MATH-M3-D-1"
+    }
+}

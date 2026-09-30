@@ -1,0 +1,151 @@
+{
+    "id": "k-math-m2-c-1",
+    "code": "K.M2.C.1",
+    "standard": "HSS.ID.B.5",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "Summarizing Bivariate Categorical Data",
+        "pageTitle": "Summarizing Bivariate Categorical Data | Hesten's Learning",
+        "description": "Categorical data are often summarized in the media, research studies, or general discussions. However, categorical data are summarized differently than numerica...",
+        "pageDescription": "Master Summarizing Bivariate Categorical Data in Module 2: Descriptive Statistics. Comprehensive student outcomes, teacher insights, guided exercises, problem set worksheets, and exit ticket keys.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M2.C.1",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 9",
+        "pill": "Categorical Data on Two Variables",
+        "text": "Categorical data are often summarized in the media, research studies, or general discussions. However, categorical data are summarized differently than numerical data. There is no mean or median that answers the question, \"What is your favorite soft drink?\" Methods for analyzing categorical data are developed in this lesson. Categorical data were introduced to students in Grades 6 and 8. This lesson, along with Lessons 10 and 11, revisits and extends work students did in Grade 8 where data on two categorical variables were organized in a two-way table. Students also work with a random sample in this lesson and build on their understanding of a random sample developed in Grade 7. The data used in this lesson were obtained from the Census at School project. Census at School is further explained at the American Statistical Association website (www.amstat.org/censusatschool) and can be a source for data that might interest teenagers.",
+        "outcomes": [
+            "Students distinguish between categorical data and numerical data.",
+            "Students summarize data on two categorical variables collected from a sample using a two-way frequency table."
+        ],
+        "teacherInsight": "Emphasize precise mathematical definitions and multiple problem-solving representations. Encourage students to check the reasonableness of their numerical solutions."
+    },
+    "content": [],
+    "vocabulary": [
+        {
+            "term": "Summarizing Bivariate Categorical Data",
+            "definition": "Core mathematical concept established in Module 2: Descriptive Statistics, Categorical Data on Two Variables."
+        },
+        {
+            "term": "Mathematical Modeling",
+            "definition": "The process of choosing and using appropriate mathematics and statistics to analyze empirical situations, to understand them better, and to improve decisions."
+        }
+    ],
+    "guidedExercises": [
+        {
+            "title": "Example 1: Core Mathematical Modeling for Summarizing Bivariate Categorical Data",
+            "badge": "Eureka Math Guided Classwork",
+            "difficulty": "Core Application",
+            "problem": "Classwork Recall from your work in Grade 6 and Grade 8 that categorical data are data that are not numbers. Bivariate categorical data results from collecting data on two categorical variables. In this lesson, you will see examples involving categorical data collected from two survey questions. Exploratory Challenge 1 (9 minutes): Superhero Powers Exploratory Challenge 1: Superhero Powers Superheroes have been popular characters in movies, television, books, and comics for many generations. Supe",
+            "scaffolding": "Identify the key variables and properties. Apply the definitions and mathematical structures introduced in Summarizing Bivariate Categorical Data.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Define Variables & Formulate Governing Relations",
+                    "math": "\\text{Identify key variables and parameters for } Summarizing Bivariate Categorical Data",
+                    "explanation": "Establish the relationship between quantities and state any domain constraints."
+                },
+                {
+                    "step": 2,
+                    "label": "Execute Step-by-Step Algebraic Transformations",
+                    "math": "\\text{Transform and simplify equations: } \\dots",
+                    "explanation": "100 students indicated their favorite power was to fly. 49 of those students were females. 131 students selected the power to freeze time as their favorite power. 71 of those students were males. 75 students selected invisibility as their favorite po"
+                }
+            ],
+            "finalAnswer": "\\text{The evaluated solution verifies the properties of } Summarizing Bivariate Categorical Data",
+            "commonPitfall": "Ensure units of measurement and domain constraints are checked in physical and statistical contexts."
+        },
+        {
+            "title": "Exercise 1: Independent Problem Formulation",
+            "badge": "Multi-Step Application",
+            "difficulty": "Advanced Reasoning",
+            "problem": "Apply the foundational principles of Summarizing Bivariate Categorical Data to determine the exact value and interpret the contextual significance.",
+            "scaffolding": "Reference the worked steps from Example 1. Verify intermediate calculations and justify your steps.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Analyze Given Conditions & Structure",
+                    "math": "\\text{State domain constraints and initial conditions}",
+                    "explanation": "Verify that all assumptions conform to the problem context."
+                },
+                {
+                    "step": 2,
+                    "label": "Calculate the Final Mathematical Solution",
+                    "math": "\\text{Solve for the target unknown quantity}",
+                    "explanation": "State the solution with formal mathematical reasoning."
+                }
+            ],
+            "finalAnswer": "\\text{Verified algebraic or statistical solution}",
+            "commonPitfall": "Avoid rounding prematurely before the final step."
+        }
+    ],
+    "exitTicket": {
+        "title": "Lesson 9 Exit Ticket: Summarizing Bivariate Categorical Data",
+        "prompt": "Exit Ticket\n\nA survey asked the question, \"How tall are you to the nearest inch?\" A second question on this survey asked, \"What sports do you play?\" Indicate what type of data, numerical or categorical, would be collected from the first question? What type of data would be collected from the second question?\n\nAnother random sample of 100 surveys was selected. Jill had a copy of the frequency table that summarized these 100 surveys. Unfortunately, she spilled part of her lunch on the copy. The following summaries were still readable:\n\nHelp Jill recreate the table by determining the frequencies for cells (c), (e), (j), and (q).\n\nOf the cells (c), (e), (j), and (q), which cells represent joint frequencies?\n\nOf the cells (c), (e), (j), and (q), which cells represent marginal frequencies?",
+        "solution": "A survey asked the question, \"How tall are you to the nearest inch?\" A second question on this survey asked, \"What sports do you play?\" Indicate what type of data, numerical or categorical, would be collected from the first question? What type of data would be collected from the second question?\n\nThe first question would result in numerical data; the second question would result in categorical data.\n\nAnother random sample of 100 surveys was selected. Jill had a copy of the frequency table that summarized these 100 surveys. Unfortunately, she spilled part of her lunch on the copy. The following summaries were still readable:\n\nHelp Jill recreate the table by determining the frequencies for cells (c), (e), (j), and (q).\n\nCell (c) has 15 students, (e) has 8 students, (j) has 4 students, and (q) has 11 students.\n\nOf the cells (c), (e), (j), and (q), which cells represent joint frequencies?\n\nThe cells (c), (e), and (j) are joint frequencies.\n\nOf the cells (c), (e), (j), and (q), which cells represent marginal frequencies?\n\nCell (q) is a marginal frequency."
+    },
+    "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Master Summarizing Bivariate Categorical Data through authentic curriculum practice problems. Check your work using the expandable teacher solution key below.",
+        "problems": [
+            {
+                "number": 1,
+                "prompt": "Several students at Rufus King High School were debating whether males or females were more involved in after-school activities. There are three organized activities in the after-school program—intramural basketball, chess club, and jazz band. Due to budget constraints, a student can only select one of these activities. The students were not able to ask every student in the school whether they participated in the after-school program or what activity they selected if they were involved.\n\nWrite questions that could be included in the survey to investigate the question the students are debating. Questions that could be used for this study include the following:",
+                "solution": "What is your gender? (Circle one) FemaleMale\n\nIndicate if you participate in an after-school activity: (Circle one)\n\nIntramural basketballChess club Jazz band I do not participate in after-school activities."
+            },
+            {
+                "number": 2,
+                "prompt": "Rufus King High School has approximately 1,500 students. Sam suggested that the first 100 students entering the cafeteria for lunch would provide a random sample to analyze. Janet suggested that they pick 100 students based on a school identification number. Who has a better strategy for selecting a random sample? How do you think 100 students could be randomly selected to complete the survey?",
+                "solution": "Sam's suggestion is the least likely to generate a random sample because it will be primarily a convenience sample based on factors that influence who has lunch first (for example, certain grade levels, certain classes). Selections that involve ID numbers from the entire school are more likely to result in a more random selection. Contacting the 100 students selected by their IDs and asking them to complete the survey is not necessarily an easy or even workable process. I think I would ask students to take the survey just as they are leaving school. Nearly everyone in school gathers outside for a few minutes. I would try to get a completed survey from one out of every 50 students so that I would not get surveys just from one group."
+            },
+            {
+                "number": 3,
+                "prompt": "Consider the following results from 100 randomly selected students:\n\nOf the 60 female students selected, 20 of them played intramural basketball, 10 played chess, and 10 were in the jazz bland. The rest of them did not participate in the after-school program.\n\nOf the male students, 10 did not participate in the after-school program, 20 played intramural basketball, 8 played in the jazz band, and the rest played chess.\n\nA two-way frequency table to summarize the survey data was started. Indicate what label is needed in the table cell identified with a ???.",
+                "solution": "The ??? could be labeled, \"Do not participate in after-school program.\""
+            },
+            {
+                "number": 4,
+                "prompt": "Complete the above table for the 100 students who were surveyed.",
+                "solution": "Answers are provided in the table."
+            },
+            {
+                "number": 5,
+                "prompt": "The table shows the responses to the after-school activity question for males and females. Do you think there is a difference in the responses of males and females? Explain your answer.",
+                "solution": "Yes, I think that there are differences in the responses for males and females. Quite a few more females selected chess club. However, more females were surveyed than males. Also, half of the males selected basketball, while only a third of the females selected basketball. (Allow students to indicate that they are not sure how to compare the frequencies. For students forming an answer, the frequencies in the table are compared to the number of males or the number of females. Use this question to point out that more needs to be considered before we can really answer the question of whether or not there is a difference in the responses for males or females. Also, point out that a strategy for answering this type of question is developed in the next two lessons.)"
+            }
+        ]
+    },
+    "practiceQuestions": [
+        {
+            "question": "[Exit Ticket Challenge 1] Exit Ticket",
+            "options": [
+                "A survey asked the question, \"How tall are you to the nearest inch?\" A second question on this survey asked, \"What sports do you play?\" Indicate what type of data, numerical or categorical, would be collected from the first question? What type of dat",
+                "The relationship cannot be evaluated without arbitrary numerical coordinates.",
+                "The values remain constant at zero regardless of the independent variable inputs.",
+                "The rate of change is undefined because domain restrictions were violated."
+            ],
+            "correct": 0,
+            "explanation": "From the official Eureka Math Exit Ticket Key for Lesson 9:\nA survey asked the question, \"How tall are you to the nearest inch?\" A second question on this survey asked, \"What sports do you play?\" Indicate what type of data, numerical or categorical, would be collected from the first question? What type of data would be collected from the second question?\n\nThe first question would result in numerical data; the second question would result in categorical data.\n\nAnother random sample of 100 surveys was selec"
+        },
+        {
+            "question": "[Exit Ticket Challenge 2] A survey asked the question, \"How tall are you to the nearest inch?\" A second question on this survey asked, \"What sports do you play?\" Indicate what type of data, numerical or categorical, would be collected from the first question? What type of data would be collected from the second question?",
+            "options": [
+                "The first question would result in numerical data; the second question would result in categorical data.",
+                "Ignore boundary conditions and compute only approximate integer values.",
+                "Assume that all relationships are strictly constant without verifying rates of change.",
+                "Treat independent and dependent variables as interchangeable."
+            ],
+            "correct": 0,
+            "explanation": "Official Curriculum Key for Lesson 9:\nStudents distinguish between categorical data and numerical data."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Summarizing Bivariate Categorical Data.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Developed using authentic lesson materials from standard algebra curricula.",
+        "lessonId": "L-ID-K-MATH-M2-C-1"
+    }
+}

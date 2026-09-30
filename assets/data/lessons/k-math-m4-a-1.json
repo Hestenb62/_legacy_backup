@@ -1,0 +1,197 @@
+{
+    "id": "k-math-m4-a-1",
+    "code": "K.M4.A.1",
+    "standard": "HSA.SSE.A.1",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "Multiplying and Factoring Polynomial Expressions",
+        "pageTitle": "Multiplying and Factoring Polynomial Expressions | Hesten's Learning",
+        "description": "MP.4MP.4Central to the concepts in this lesson is A-APR.A.1 and understanding the system and operations of polynomial expressions, specifically multiplication a...",
+        "pageDescription": "Master Multiplying and Factoring Polynomial Expressions in Module 4: Polynomial and Quadratic Expressions, Equations, and Functions. Comprehensive student outcomes, teacher insights, guided exercises, problem set worksheets, and exit ticket keys.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M4.A.1",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 1",
+        "pill": "Quadratic Expressions, Equations, and Functions",
+        "text": "MP.4MP.4Central to the concepts in this lesson is A-APR.A.1 and understanding the system and operations of polynomial expressions, specifically multiplication and factoring of polynomials. Lengths of time suggested for the examples and exercises in this lesson assume that students remember some of what is presented in the examples from work in earlier modules and earlier grades. Students may need more or less time with this lesson than is suggested. The teacher should make decisions about how much time is needed for these concepts based on students' needs. This lesson asks students to use geometric models to demonstrate their understanding of multiplication of polynomials.",
+        "outcomes": [
+            "Students use the distributive property to multiply a monomial by a polynomial and understand that factoring reverses the multiplication process.",
+            "Students use polynomial expressions as side lengths of polygons and find area by multiplying.",
+            "Students recognize patterns and formulate shortcuts for writing the expanded form of binomials whose expanded form is a perfect square or the difference of perfect squares."
+        ],
+        "teacherInsight": "Emphasize precise mathematical definitions and multiple problem-solving representations. Encourage students to check the reasonableness of their numerical solutions."
+    },
+    "content": [],
+    "vocabulary": [
+        {
+            "term": "Multiplying and Factoring Polynomial Expressions",
+            "definition": "Core mathematical concept established in Module 4: Polynomial and Quadratic Expressions, Equations, and Functions, Quadratic Expressions, Equations, and Functions."
+        },
+        {
+            "term": "Mathematical Modeling",
+            "definition": "The process of choosing and using appropriate mathematics and statistics to analyze empirical situations, to understand them better, and to improve decisions."
+        }
+    ],
+    "guidedExercises": [
+        {
+            "title": "Example 1: Core Mathematical Modeling for Multiplying and Factoring Polynomial Expressions",
+            "badge": "Eureka Math Guided Classwork",
+            "difficulty": "Core Application",
+            "problem": "Classwork Opening Exercise (4 minutes) Opening Exercise z2z2z8z2z2z8Write expressions for the areas of the two rectangles in the figures given below. Blue: 2z(z)=2z^{2}; Orange: 2z(8)=16z z2z8z2z8Now write an expression for the area of this rectangle:",
+            "scaffolding": "Identify the key variables and properties. Apply the definitions and mathematical structures introduced in Multiplying and Factoring Polynomial Expressions.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Define Variables & Formulate Governing Relations",
+                    "math": "\\text{Identify key variables and parameters for } Multiplying and Factoring Polynomial Expressions",
+                    "explanation": "Establish the relationship between quantities and state any domain constraints."
+                },
+                {
+                    "step": 2,
+                    "label": "Execute Step-by-Step Algebraic Transformations",
+                    "math": "\\text{Transform and simplify equations: } \\dots",
+                    "explanation": "2z^{2}+16z How did you find your answer for the second rectangle? Add the two areas in part (a), or multiply the length of the rectangle by the width 2z(z+8)=2z^{2}+16z. Both give the same final result. If you find the area by multiplying the total l"
+                }
+            ],
+            "finalAnswer": "\\text{The evaluated solution verifies the properties of } Multiplying and Factoring Polynomial Expressions",
+            "commonPitfall": "Ensure units of measurement and domain constraints are checked in physical and statistical contexts."
+        },
+        {
+            "title": "Exercise 1: Independent Problem Formulation",
+            "badge": "Multi-Step Application",
+            "difficulty": "Advanced Reasoning",
+            "problem": "Apply the foundational principles of Multiplying and Factoring Polynomial Expressions to determine the exact value and interpret the contextual significance.",
+            "scaffolding": "Reference the worked steps from Example 1. Verify intermediate calculations and justify your steps.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Analyze Given Conditions & Structure",
+                    "math": "\\text{State domain constraints and initial conditions}",
+                    "explanation": "Verify that all assumptions conform to the problem context."
+                },
+                {
+                    "step": 2,
+                    "label": "Calculate the Final Mathematical Solution",
+                    "math": "\\text{Solve for the target unknown quantity}",
+                    "explanation": "State the solution with formal mathematical reasoning."
+                }
+            ],
+            "finalAnswer": "\\text{Verified algebraic or statistical solution}",
+            "commonPitfall": "Avoid rounding prematurely before the final step."
+        }
+    ],
+    "exitTicket": {
+        "title": "Lesson 1 Exit Ticket: Multiplying and Factoring Polynomial Expressions",
+        "prompt": "Exit Ticket\n\nWhen you multiply two terms by two terms, you should get four terms. Why is the final result when you multiply two binomials sometimes only three terms? Give an example of how your final result can end up with only two terms.",
+        "solution": "When you multiply two terms by two terms, you should get four terms. Why is the final result when you multiply two binomials sometimes only three terms? Give an example of how your final result can end up with only two terms.\n\nOften when you multiply two binomials, each has a term with the same variable, say x, and two of the terms combine to make one single x-term. If the two terms combine to make zero, there will be only two of the four terms left. For example, (x+3)(x-3)=x^{2}-9."
+    },
+    "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Master Multiplying and Factoring Polynomial Expressions through authentic curriculum practice problems. Check your work using the expandable teacher solution key below.",
+        "problems": [
+            {
+                "number": 1,
+                "prompt": "For each of the following, factor out the greatest common factor:\n\n6y^{2}+18",
+                "solution": "6(y^{2}+3)"
+            },
+            {
+                "number": 2,
+                "prompt": "27y^{2}+18y",
+                "solution": "9y(3y+2)"
+            },
+            {
+                "number": 3,
+                "prompt": "21b-15a",
+                "solution": "3(7b-5a)"
+            },
+            {
+                "number": 4,
+                "prompt": "14c^{2}+2c",
+                "solution": "2c(7c+1)"
+            },
+            {
+                "number": 5,
+                "prompt": "3x^{2}-27",
+                "solution": "3(x^{2}-9)"
+            },
+            {
+                "number": 6,
+                "prompt": "Multiply.\n\n(n-5)(n+5)",
+                "solution": "n^{2}-25"
+            },
+            {
+                "number": 7,
+                "prompt": "(4-y)(4+y)",
+                "solution": "16-y^{2}"
+            },
+            {
+                "number": 8,
+                "prompt": "(k+10)^{2}",
+                "solution": "k^{2}+20k+100"
+            },
+            {
+                "number": 9,
+                "prompt": "(4+b)^{2}",
+                "solution": "16+8b+b^{2}"
+            },
+            {
+                "number": 10,
+                "prompt": "The measure of a side of a square is x units. A new square is formed with each side 6 units longer than the original square's side. Write an expression to represent the area of the new square. (Hint: Draw the new square and count the squares and rectangles.)",
+                "solution": "New square:(x+6)^{2} or x^{2}+12x+36New square:(x+6)^{2} or x^{2}+12x+36Original squarex"
+            },
+            {
+                "number": 11,
+                "prompt": "In the accompanying diagram, the width of the inner rectangle is represented by x-3 and the length by x+3. The width of the outer rectangle is represented by 3x-4 and the length by 3x+4.",
+                "solution": "3x + 43x + 4"
+            },
+            {
+                "number": 12,
+                "prompt": "Write an expression to represent the area of the larger rectangle.",
+                "solution": "Find the area of the larger (outer) rectangle by multiplying the binomials:\n\n(3x-4)(3x+4)=9x^{2}-16."
+            },
+            {
+                "number": 13,
+                "prompt": "Write an expression to represent the area of the smaller rectangle.",
+                "solution": "Find the area of the smaller (inner) rectangle by multiplying the binomials:\n\n(x-3)(x+3)=x^{2}-9."
+            },
+            {
+                "number": 14,
+                "prompt": "Express the area of the region inside the larger rectangle but outside the smaller rectangle as a polynomial in terms of x. (Hint: You will have to add or subtract polynomials to get your final answer.)",
+                "solution": "Subtract the area of the smaller rectangle from the area of the larger rectangle:\n\n(9x^{2}-16)-(x^{2}-9)=9x^{2}-16-x^{2}+9=8x^{2}-7."
+            }
+        ]
+    },
+    "practiceQuestions": [
+        {
+            "question": "[Exit Ticket Challenge 1] Exit Ticket",
+            "options": [
+                "When you multiply two terms by two terms, you should get four terms. Why is the final result when you multiply two binomials sometimes only three terms? Give an example of how your final result can end up with only two terms.",
+                "The relationship cannot be evaluated without arbitrary numerical coordinates.",
+                "The values remain constant at zero regardless of the independent variable inputs.",
+                "The rate of change is undefined because domain restrictions were violated."
+            ],
+            "correct": 0,
+            "explanation": "From the official Eureka Math Exit Ticket Key for Lesson 1:\nWhen you multiply two terms by two terms, you should get four terms. Why is the final result when you multiply two binomials sometimes only three terms? Give an example of how your final result can end up with only two terms.\n\nOften when you multiply two binomials, each has a term with the same variable, say x, and two of the terms combine to make one single x-term. If the two terms combine to make zero, there will be only two of the four terms l"
+        },
+        {
+            "question": "[Exit Ticket Challenge 2] When you multiply two terms by two terms, you should get four terms. Why is the final result when you multiply two binomials sometimes only three terms? Give an example of how your final result can end up with only two terms.",
+            "options": [
+                "Often when you multiply two binomials, each has a term with the same variable, say x, and two of the terms combine to make one single x-term. If the two terms combine to make zero, there will be only two of the four terms left. For example, (x+3)(x-3",
+                "Ignore boundary conditions and compute only approximate integer values.",
+                "Assume that all relationships are strictly constant without verifying rates of change.",
+                "Treat independent and dependent variables as interchangeable."
+            ],
+            "correct": 0,
+            "explanation": "Official Curriculum Key for Lesson 1:\nStudents use the distributive property to multiply a monomial by a polynomial and understand that factoring reverses the multiplication process."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Multiplying and Factoring Polynomial Expressions.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Developed using authentic lesson materials from standard algebra curricula.",
+        "lessonId": "L-ID-K-MATH-M4-A-1"
+    }
+}

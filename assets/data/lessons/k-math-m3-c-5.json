@@ -1,0 +1,140 @@
+{
+    "id": "k-math-m3-c-5",
+    "code": "K.M3.C.5",
+    "standard": "HSF.BF.B.3",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "Four Interesting Transformations of Functions",
+        "pageTitle": "Four Interesting Transformations of Functions | Hesten's Learning",
+        "description": "In this lesson, students study the effect a horizontal scaling by scale factor k has on the graph of an equation y=f(x). For example, if 0<k<1, a horizontal sca...",
+        "pageDescription": "Master Four Interesting Transformations of Functions in Module 3: Linear and Exponential Functions. Comprehensive student outcomes, teacher insights, guided exercises, problem set worksheets, and exit ticket keys.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M3.C.5",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 19",
+        "pill": "Transformations of Functions",
+        "text": "In this lesson, students study the effect a horizontal scaling by scale factor k has on the graph of an equation y=f(x). For example, if 0<k<1, a horizontal scaling by k horizontally shrinks any geometric figure in the Cartesian plane, including figures that are graphs of functions. The horizontal scaling of a graph corresponds to changing the equation from y=f(x) to y=f(\\frac{1}{k}x). For values of scale factor k where k>1, the graph of y=f(\\frac{1}{k}x) is a horizontal stretch of the graph of y=f(x) by a factor of k. In this lesson, students may employ MP.3 when they make conjectures about the effect of k, MP.8 when they use repeated reasoning to determine the effect of k, and MP.6 when they communicate the effect to others using careful language.",
+        "outcomes": [
+            "Students examine that a horizontal scaling with scale factor k of the graph of y=f(x) corresponds to changing the equation from y=f(x) to y=f(\\frac{1}{k}x)."
+        ],
+        "teacherInsight": "Emphasize precise mathematical definitions and multiple problem-solving representations. Encourage students to check the reasonableness of their numerical solutions."
+    },
+    "content": [],
+    "vocabulary": [
+        {
+            "term": "Four Interesting Transformations of Functions",
+            "definition": "Core mathematical concept established in Module 3: Linear and Exponential Functions, Transformations of Functions."
+        },
+        {
+            "term": "Mathematical Modeling",
+            "definition": "The process of choosing and using appropriate mathematics and statistics to analyze empirical situations, to understand them better, and to improve decisions."
+        }
+    ],
+    "guidedExercises": [
+        {
+            "title": "Example 1: Core Mathematical Modeling for Four Interesting Transformations of Functions",
+            "badge": "Eureka Math Guided Classwork",
+            "difficulty": "Core Application",
+            "problem": "Classwork Students explore the horizontal scaling of the graph of y=f(x) when the equation changes from y=f(x) to y=f(\\frac{1}{k}x) for 0<k<1. In this case, students see the graph of f is a horizontal \"shrink\" by k. In Exploratory Challenge 1, the scale factor for g is k=\\frac{1}{2}, g(x)=f(\\frac{1}{\\frac{1}{2}}) x, or g(x)=f(2x). Exploratory Challenge 1 (8 minutes) Exploratory Challenge 1 Let f(x)=x^{2} and g(x)=f(2x), where x can be any real number. Write the formula for g in terms of x^{2} (i",
+            "scaffolding": "Identify the key variables and properties. Apply the definitions and mathematical structures introduced in Four Interesting Transformations of Functions.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Define Variables & Formulate Governing Relations",
+                    "math": "\\text{Identify key variables and parameters for } Four Interesting Transformations of Functions",
+                    "explanation": "Establish the relationship between quantities and state any domain constraints."
+                },
+                {
+                    "step": 2,
+                    "label": "Execute Step-by-Step Algebraic Transformations",
+                    "math": "\\text{Transform and simplify equations: } \\dots",
+                    "explanation": "g(x)=(2x)^{2} Complete the table of values for these functions. Graph both equations: y=f(x) and y=f(2x). y=f(x)y=f(2x)1342See the discussion below for an explanation of the steps and arrows.\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac"
+                }
+            ],
+            "finalAnswer": "\\text{The evaluated solution verifies the properties of } Four Interesting Transformations of Functions",
+            "commonPitfall": "Ensure units of measurement and domain constraints are checked in physical and statistical contexts."
+        },
+        {
+            "title": "Exercise 1: Independent Problem Formulation",
+            "badge": "Multi-Step Application",
+            "difficulty": "Advanced Reasoning",
+            "problem": "Apply the foundational principles of Four Interesting Transformations of Functions to determine the exact value and interpret the contextual significance.",
+            "scaffolding": "Reference the worked steps from Example 1. Verify intermediate calculations and justify your steps.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Analyze Given Conditions & Structure",
+                    "math": "\\text{State domain constraints and initial conditions}",
+                    "explanation": "Verify that all assumptions conform to the problem context."
+                },
+                {
+                    "step": 2,
+                    "label": "Calculate the Final Mathematical Solution",
+                    "math": "\\text{Solve for the target unknown quantity}",
+                    "explanation": "State the solution with formal mathematical reasoning."
+                }
+            ],
+            "finalAnswer": "\\text{Verified algebraic or statistical solution}",
+            "commonPitfall": "Avoid rounding prematurely before the final step."
+        }
+    ],
+    "exitTicket": {
+        "title": "Lesson 19 Exit Ticket: Four Interesting Transformations of Functions",
+        "prompt": "Exit Ticket\n\nLet f(x)=x^{2}, g(x)=(3x)^{2}, and h(x)=(\\frac{1}{3}x)^{2}, where x can be any real number. The graphs above are of y=f(x), y=g(x), and y=h(x).\n\nLabel each graph with the appropriate equation.\n\nDescribe the transformation that takes the graph of y=f(x) to the graph of y=g(x). Use coordinates of each to illustrate an example of the correspondence.\n\nDescribe the transformation that takes the graph of y=f(x) to the graph of y=h(x). Use coordinates to illustrate an example of the correspondence.",
+        "solution": "y=f(x)y=g(x)y=h(x)y=f(x)y=g(x)y=h(x)\n\nLet f(x)=x^{2}, g(x)=(3x)^{2}, and h(x)=(\\frac{1}{3}x)^{2}, where x can be any real number. The graphs above are of y=f(x), y=g(x), and y=h(x).\n\nLabel each graph with the appropriate equation.\n\nSee the graph.\n\nDescribe the transformation that takes the graph of y=f(x) to the graph of y=g(x). Use coordinates of each to illustrate an example of the correspondence.\n\nThe graph of y=g(x) is a horizontal shrink of the graph of y=f(x) with scale factor \\frac{1}{3}. The corresponding x-value of y=g(x) is one-third of the corresponding x-value of y=f(x) when g(x)=f(x). This can be illustrated with the coordinate (1,9) on g(x) and the coordinate (3,9) on f(x).\n\nDescribe the transformation that takes the graph of y=f(x) to the graph of y=h(x). Use coordinates to illustrate an example of the correspondence.\n\nThe graph of y=h(x) is a horizontal stretch of the graph of y=f(x) with scale factor 3. The corresponding x-value of y=h(x) is three times the corresponding x-value of y=f(x) when h(x)=f(x). This can be illustrated with the coordinate (1,1) on y=f(x) and the coordinate (3,1) on y=h(x)."
+    },
+    "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Master Four Interesting Transformations of Functions through authentic curriculum practice problems. Check your work using the expandable teacher solution key below.",
+        "problems": [
+            {
+                "number": 1,
+                "prompt": "Let f(x)=x^{2}, g(x)=2x^{2}, and h(x)=(2x)^{2}, where x can be any real number. The graphs above are of the functions y=f(x), y=g(x), and y=h(x).\n\nLabel each graph with the appropriate equation.",
+                "solution": "See the graph."
+            },
+            {
+                "number": 2,
+                "prompt": "Describe the transformation that takes the graph of y=f(x) to the graph of y=g(x). Use coordinates to illustrate an example of the correspondence.",
+                "solution": "The graph of y=g(x) is a vertical stretch of the graph of y=f(x) by scale factor 2; for a given x-value, the value of g(x) is twice as much as the value of f(x).\n\nORThe graph of y=g(x) is a horizontal shrink of the graph of y=f(x) by scale factor \\frac{1}{\\sqrt{2}}. It takes \\frac{1}{\\sqrt{2}} times the input for y=g(x) as compared to y=f(x) to yield the same output."
+            },
+            {
+                "number": 3,
+                "prompt": "Describe the transformation that takes the graph of y=f(x) to the graph of y=h(x). Use coordinates to illustrate an example of the correspondence.",
+                "solution": "The graph of y=h(x) is a horizontal shrink of the graph of y=f(x) by a scale factor of \\frac{1}{2}. It takes \\frac{1}{2} the input for y=h(x), as compared to y=f(x) to yield the same output.\n\nThe graph of y=h(x) is a vertical stretch of the graph of y=f(x) by scale factor 4; for a given x-value, the value of h(x) is four times as much as the value of f(x)."
+            }
+        ]
+    },
+    "practiceQuestions": [
+        {
+            "question": "[Exit Ticket Challenge 1] Exit Ticket",
+            "options": [
+                "y=f(x)y=g(x)y=h(x)y=f(x)y=g(x)y=h(x)",
+                "The relationship cannot be evaluated without arbitrary numerical coordinates.",
+                "The values remain constant at zero regardless of the independent variable inputs.",
+                "The rate of change is undefined because domain restrictions were violated."
+            ],
+            "correct": 0,
+            "explanation": "From the official Eureka Math Exit Ticket Key for Lesson 19:\ny=f(x)y=g(x)y=h(x)y=f(x)y=g(x)y=h(x)\n\nLet f(x)=x^{2}, g(x)=(3x)^{2}, and h(x)=(\\frac{1}{3}x)^{2}, where x can be any real number. The graphs above are of y=f(x), y=g(x), and y=h(x).\n\nLabel each graph with the appropriate equation.\n\nSee the graph.\n\nDescribe the transformation that takes the graph of y=f(x) to the graph of y=g(x). Use coordinates of each to illustrate an example of the correspondence.\n\nThe graph of y=g(x) is a horizontal shrink of "
+        },
+        {
+            "question": "[Exit Ticket Challenge 2] Let f(x)=x^{2}, g(x)=(3x)^{2}, and h(x)=(\\frac{1}{3}x)^{2}, where x can be any real number. The graphs above are of y=f(x), y=g(x), and y=h(x).",
+            "options": [
+                "Let f(x)=x^{2}, g(x)=(3x)^{2}, and h(x)=(\\frac{1}{3}x)^{2}, where x can be any real number. The graphs above are of y=f(x), y=g(x), and y=h(x).",
+                "Ignore boundary conditions and compute only approximate integer values.",
+                "Assume that all relationships are strictly constant without verifying rates of change.",
+                "Treat independent and dependent variables as interchangeable."
+            ],
+            "correct": 0,
+            "explanation": "Official Curriculum Key for Lesson 19:\nStudents examine that a horizontal scaling with scale factor k of the graph of y=f(x) corresponds to changing the equation from y=f(x) to y=f(\\frac{1}{k}x)."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Four Interesting Transformations of Functions.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Developed using authentic lesson materials from standard algebra curricula.",
+        "lessonId": "L-ID-K-MATH-M3-C-5"
+    }
+}

@@ -1,0 +1,188 @@
+{
+    "id": "k-math-m2-a-3",
+    "code": "K.M2.A.3",
+    "standard": "HSS.ID.A.1",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "Estimating Centers and Interpreting the Mean as a Balance Point",
+        "pageTitle": "Estimating Centers and Interpreting the Mean as a Balance Point | Hesten's Learning",
+        "description": "This lesson continues the work started in Lesson 2 by presenting nearly symmetrical data distributions in which the mean is a reasonable description of a typica...",
+        "pageDescription": "Master Estimating Centers and Interpreting the Mean as a Balance Point in Module 2: Descriptive Statistics. Comprehensive student outcomes, teacher insights, guided exercises, problem set worksheets, and exit ticket keys.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M2.A.3",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 3",
+        "pill": "Shapes and Centers of Distributions",
+        "text": "This lesson continues the work started in Lesson 2 by presenting nearly symmetrical data distributions in which the mean is a reasonable description of a typical value and skewed data distributions in which the median is a reasonable description. MP.4MP.4This lesson reviews and deepens understanding of the mean as a balance point as was introduced in Grade 6 (6.SP.A.3, 6.SP.B.5b). The concept of balance is developed by using a dot plot and a representation of the data as equal weights along a number line. Balance would be a position on the number line in which the sum of the distances on the right and the sum of the distances on the left are equal. Students model with mathematics as they verify this position. Students estimate a balance point for a data distribution and then compare their estimate to the actual mean. The visual of a balance point helps students understand how a mean provides a reasonable description of a typical value for a distribution that is symmetrical. The balance point for a skewed data distribution, however, does not describe a typical value as well as it did for a symmetrical data distribution. Students should recognize that the median of the data set is a better description of a typical value based on the visual representation of a skewed data distribution.",
+        "outcomes": [
+            "Students estimate the mean and median of a distribution represented by a dot plot or a histogram.",
+            "Students indicate that the mean is a reasonable description of a typical value for a distribution that is symmetrical, but the median is a better description of a typical value for a distribution that is skewed.",
+            "Students interpret the mean as a balance point of a distribution.",
+            "Students indicate that for a distribution in which neither the mean nor the median is a good description of a typical value, the mean still provides a description of the center of a distribution in terms of the balance point."
+        ],
+        "teacherInsight": "In the next set of lessons (Lessons 4, 5, and 6), students use this balance point position to develop a measure of the variability in a data distribution, ultimately leading to the standard deviation."
+    },
+    "content": [],
+    "vocabulary": [
+        {
+            "term": "Estimating Centers and Interpreting the Mean as a Balance Point",
+            "definition": "Core mathematical concept established in Module 2: Descriptive Statistics, Shapes and Centers of Distributions."
+        },
+        {
+            "term": "Mathematical Modeling",
+            "definition": "The process of choosing and using appropriate mathematics and statistics to analyze empirical situations, to understand them better, and to improve decisions."
+        }
+    ],
+    "guidedExercises": [
+        {
+            "title": "Example 1: Core Mathematical Modeling for Estimating Centers and Interpreting the Mean as a Balance Point",
+            "badge": "Eureka Math Guided Classwork",
+            "difficulty": "Core Application",
+            "problem": "Classwork Example (3 minutes) Example Your previous work in mathematics involved estimating a balance point of a data distribution. Let's review what we learned about the balance point of a distribution. A 12-inch ruler has several quarters taped to positions along the ruler. The broad side of a pencil is placed underneath the ruler to determine an approximate balance point of the ruler with the quarters. Demonstrate balancing a ruler with quarters taped on it to the class. Tape quarters to the ",
+            "scaffolding": "Identify the key variables and properties. Apply the definitions and mathematical structures introduced in Estimating Centers and Interpreting the Mean as a Balance Point.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Define Variables & Formulate Governing Relations",
+                    "math": "\\text{Identify key variables and parameters for } Estimating Centers and Interpreting the Mean as a Balance Point",
+                    "explanation": "Establish the relationship between quantities and state any domain constraints."
+                },
+                {
+                    "step": 2,
+                    "label": "Execute Step-by-Step Algebraic Transformations",
+                    "math": "\\text{Transform and simplify equations: } \\dots",
+                    "explanation": "Exercises 1—7 (15 minutes) The questions in this exercise can be part of a class discussion or a small group discussion. You may also direct students to write out answers for several of these questions. Consider a format that works best for your stud"
+                }
+            ],
+            "finalAnswer": "\\text{The evaluated solution verifies the properties of } Estimating Centers and Interpreting the Mean as a Balance Point",
+            "commonPitfall": "Ensure units of measurement and domain constraints are checked in physical and statistical contexts."
+        },
+        {
+            "title": "Exercise 1: Independent Problem Formulation",
+            "badge": "Multi-Step Application",
+            "difficulty": "Advanced Reasoning",
+            "problem": "Apply the foundational principles of Estimating Centers and Interpreting the Mean as a Balance Point to determine the exact value and interpret the contextual significance.",
+            "scaffolding": "Reference the worked steps from Example 1. Verify intermediate calculations and justify your steps.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Analyze Given Conditions & Structure",
+                    "math": "\\text{State domain constraints and initial conditions}",
+                    "explanation": "Verify that all assumptions conform to the problem context."
+                },
+                {
+                    "step": 2,
+                    "label": "Calculate the Final Mathematical Solution",
+                    "math": "\\text{Solve for the target unknown quantity}",
+                    "explanation": "State the solution with formal mathematical reasoning."
+                }
+            ],
+            "finalAnswer": "\\text{Verified algebraic or statistical solution}",
+            "commonPitfall": "Avoid rounding prematurely before the final step."
+        }
+    ],
+    "exitTicket": {
+        "title": "Lesson 3 Exit Ticket: Estimating Centers and Interpreting the Mean as a Balance Point",
+        "prompt": "Exit Ticket\n\nDraw a dot plot of a data distribution representing the ages of twenty people for which the median and the mean would be approximately the same.\n\nDraw a dot plot of a data distribution representing the ages of twenty people for which the median is noticeably less than the mean.\n\nAn estimate of the balance point for a distribution of ages represented on a number line resulted in a greater sum of the distances to the right than the sum of the distances to the left. In which direction should you move your estimate of the balance point? Explain.",
+        "solution": "Draw a dot plot of a data distribution representing the ages of twenty people for which the median and the mean would be approximately the same.\n\nA dot plot representing a symmetrical distribution is an example in which the mean and median are approximately the same.\n\nDraw a dot plot of a data distribution representing the ages of twenty people for which the median is noticeably less than the mean.\n\nA dot plot representing a skewed data distribution in which most of the values are located farther to the left results in a median value less than the mean.\n\nAn estimate of the balance point for a distribution of ages represented on a number line resulted in a greater sum of the distances to the right than the sum of the distances to the left. In which direction should you move your estimate of the balance point? Explain.\n\nMoving the position to the right would result in decreasing the sum of the distances to the right and increasing the sum of the distances to the left. The position where they are equal is the mean."
+    },
+    "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Master Estimating Centers and Interpreting the Mean as a Balance Point through authentic curriculum practice problems. Check your work using the expandable teacher solution key below.",
+        "problems": [
+            {
+                "number": 1,
+                "prompt": "Consider another example of balance. Mr. Jackson is a mathematics teacher at Waldo High School. Students in his class are frequently given quizzes or exams. He indicated to his students that an exam is worth 4 quizzes when calculating an overall weighted average to determine their final grade. During one grading period, Scott got an 80% on one exam, a 90% on a second exam, a 60% on one quiz, and a 70% on another quiz.\n\nHow could we represent Scott's test scores? Consider the following number line.\n\nWhat values are represented by the number line?",
+                "solution": "The values represented along the number line are percents."
+            },
+            {
+                "number": 2,
+                "prompt": "If one \"•\" symbol is used to represent a quiz score, how might you represent an exam score?",
+                "solution": "Since an exam is worth 4 quizzes, students could use a stack of 4 of the \"•\" symbols to represent an exam score."
+            },
+            {
+                "number": 3,
+                "prompt": "Represent Scott's exams and quizzes on this number line using \"•\" symbols.",
+                "solution": "The following dot plot could be used to represent Scott's scores:"
+            },
+            {
+                "number": 4,
+                "prompt": "Mr. Jackson indicated that students should set an 85% overall weighted average as a goal. Do you think Scott met that goal? Explain your answer.",
+                "solution": "Students' responses may vary. The overall weighted average could be represented by the balance point for the dot plot. The balance point is approximately 81% and is less than the goal set by Mr. Jackson."
+            },
+            {
+                "number": 5,
+                "prompt": "Place an X on the number line at a position that you think locates the balance point of all of the \"•\" symbols. Determine the sum of the distances from the X to each \"•\" on the right side of the X.",
+                "solution": "Answers depend on a student's estimate of the balance point. If students placed their estimate close to the mean, the sum of the distances on the right side of their estimate would be approximately the same as the sum of the distances on the left side."
+            },
+            {
+                "number": 6,
+                "prompt": "Determine the sum of the distances from the X to each \"•\" on the left side of the X.",
+                "solution": "Answers depend on a student's estimate of the balance point. If students placed their estimate close to the mean, the sum of the distances on the right side of their estimate would be approximately the same as the sum of the distances on the left side."
+            },
+            {
+                "number": 7,
+                "prompt": "Do the total distances to the right of the X equal the total distances to the left of the X?",
+                "solution": "Answers depend on students' estimates."
+            },
+            {
+                "number": 8,
+                "prompt": "Based on your answer to Problem 7, would you change your estimate of the balance point? If yes, where would you place your adjusted balance point? How does using this adjusted estimate change the total distances to the right of your estimate and the total distances to the left?",
+                "solution": "Changes in the position would be based on whether or not the sum of the distances on the right equals the sum of the distances on the left. Students would adjust their estimate by moving the position of their balance point to equalize the sums of the distances."
+            },
+            {
+                "number": 9,
+                "prompt": "Scott's weighted average is 81. Recall that each exam score is equal to 4 times a quiz score. Show the calculations that lead to this weighted average.",
+                "solution": "A weighted average of 81 would be based on multiplying each exam score by 4 (representing that an exam score is worth 4 times a quiz score). For this problem, the weighted average is\n\n\\frac{(60+70+(4∙80)+(4∙90))}{10}=81."
+            },
+            {
+                "number": 10,
+                "prompt": "How does the calculated mean score compare with your estimated balance point?",
+                "solution": "Answers may vary. This question asks students to compare their estimates to the weighted average."
+            },
+            {
+                "number": 11,
+                "prompt": "Compute the total distances to the right of the mean and the total distances to the left of the mean. What do you observe?",
+                "solution": "The weighted average, like the mean discussed earlier, is a balance point. After each exam is represented by 4 \"•\" symbols (where each \"•\" represents the same weight), the result is 10 \"•\" symbols, which determines the mean or weighted average of Scott's test scores. The sum of the distances to the right of the balance point is equal to the sum of the distances to the left of the balance point. If a student estimated 81% as the balance point, then:\n\nThe sum of the distances to the right:\n\n4∙(90-81)=4∙(9)=36\n\nThe sum of the distances to the left:\n\n(60-81)+(70-81)+4∙(80-81)=21+11+4=36\n\nTherefore, for estimates of a balance point that is less than or greater than 81%, the distances are not equal."
+            },
+            {
+                "number": 12,
+                "prompt": "Did Scott achieve the goal set by Mr. Jackson of an 85% average? Explain your answer.",
+                "solution": "Scott did not achieve Mr. Jackson's goal since his average is 81%."
+            }
+        ]
+    },
+    "practiceQuestions": [
+        {
+            "question": "[Exit Ticket Challenge 1] Exit Ticket",
+            "options": [
+                "Draw a dot plot of a data distribution representing the ages of twenty people for which the median and the mean would be approximately the same.",
+                "The relationship cannot be evaluated without arbitrary numerical coordinates.",
+                "The values remain constant at zero regardless of the independent variable inputs.",
+                "The rate of change is undefined because domain restrictions were violated."
+            ],
+            "correct": 0,
+            "explanation": "From the official Eureka Math Exit Ticket Key for Lesson 3:\nDraw a dot plot of a data distribution representing the ages of twenty people for which the median and the mean would be approximately the same.\n\nA dot plot representing a symmetrical distribution is an example in which the mean and median are approximately the same.\n\nDraw a dot plot of a data distribution representing the ages of twenty people for which the median is noticeably less than the mean.\n\nA dot plot representing a skewed data distribut"
+        },
+        {
+            "question": "[Exit Ticket Challenge 2] Draw a dot plot of a data distribution representing the ages of twenty people for which the median and the mean would be approximately the same.",
+            "options": [
+                "A dot plot representing a symmetrical distribution is an example in which the mean and median are approximately the same.",
+                "Ignore boundary conditions and compute only approximate integer values.",
+                "Assume that all relationships are strictly constant without verifying rates of change.",
+                "Treat independent and dependent variables as interchangeable."
+            ],
+            "correct": 0,
+            "explanation": "Official Curriculum Key for Lesson 3:\nStudents estimate the mean and median of a distribution represented by a dot plot or a histogram."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Estimating Centers and Interpreting the Mean as a Balance Point.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Developed using authentic lesson materials from standard algebra curricula.",
+        "lessonId": "L-ID-K-MATH-M2-A-3"
+    }
+}

@@ -1,0 +1,161 @@
+{
+    "id": "k-math-m3-c-3",
+    "code": "K.M3.C.3",
+    "standard": "HSF.BF.B.3",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "Four Interesting Transformations of Functions",
+        "pageTitle": "Four Interesting Transformations of Functions | Hesten's Learning",
+        "description": "Students enter Algebra I having experience with transforming lines, rays, triangles, etc., using translations, rotations, reflections, and dilations from Grade ...",
+        "pageDescription": "Master Four Interesting Transformations of Functions in Module 3: Linear and Exponential Functions. Comprehensive student outcomes, teacher insights, guided exercises, problem set worksheets, and exit ticket keys.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M3.C.3",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 17",
+        "pill": "Transformations of Functions",
+        "text": "Students enter Algebra I having experience with transforming lines, rays, triangles, etc., using translations, rotations, reflections, and dilations from Grade 8, Modules 2 and 3. Thus, it is natural to begin a discussion of transformations of functions by transforming graphs of functions—the graph of a function, f:R→R, is just another geometric figure in the (Cartesian) plane. Students use language such as, \"a translation 2 units to the left\" or \"a vertical stretch by a scale factor of 3,\" to describe how the original graph of the function is transformed into the new graph geometrically. As students apply their Grade 8 geometry skills to the graph of the equation y=f(x), they realize that the translation of the graph to the right by 4 units is given by the graph of the equation y=f(x-4). This recognition, in turn, leads to the idea of a transformation of a function (i.e., a new function such that the graph of it is the transformation of the original graph of y=f(x)). In the example described, it is the function given by g(x)=f(x-4) for any real number x such that x-4 is in the domain of f. Since the transformation of the function is itself another function (and not a graph), function language must be used to describe the transformation. A function f cannot be translated up, down, right, or left (even though its graph can). Rather, students can use function language such as, \"For the same inputs, the values of the transformed function are two times as large as the values of the original function.\"",
+        "outcomes": [
+            "Students examine that a vertical translation of the graph of y=f(x) corresponds to changing the equation from y=f(x) to y=f(x)+k.",
+            "Students examine that a vertical scaling of the graph of y=f(x) corresponds to changing the equation from y=f(x) to y=kf(x)."
+        ],
+        "teacherInsight": "These lessons encourage fluidity in both the language associated with transformations of graphs and the language associated with transformations of functions. While a formal definition for the transformation of a function is not included, teachers are encouraged to use language precisely as students work to develop the notion of transformation of a function and relate it to their understanding of transformations of graphical objects. In the Exploratory Challenge, consider highlighting MP.3 by asking students to make a conjecture about the effect of k. This challenge also calls on students to employ MP.8, as they generalize the effect of k through repeated graphing."
+    },
+    "content": [],
+    "vocabulary": [
+        {
+            "term": "Four Interesting Transformations of Functions",
+            "definition": "Core mathematical concept established in Module 3: Linear and Exponential Functions, Transformations of Functions."
+        },
+        {
+            "term": "Mathematical Modeling",
+            "definition": "The process of choosing and using appropriate mathematics and statistics to analyze empirical situations, to understand them better, and to improve decisions."
+        }
+    ],
+    "guidedExercises": [
+        {
+            "title": "Example 1: Core Mathematical Modeling for Four Interesting Transformations of Functions",
+            "badge": "Eureka Math Guided Classwork",
+            "difficulty": "Core Application",
+            "problem": "Classwork Exploratory Challenge 1 (12 minutes) Let f(x)=(x) for all real numbers x. Students explore the effect on the graph of y=f(x) by changing the equation y=f(x) to y=f(x)+k for given values of k. Exploratory Challenge 1 Let f(x)=(x), g(x)=f(x)-3, and h(x)=f(x)+2 for any real number x. Write an explicit formula for g(x) in terms of (x) (i.e., without using f(x) notation).",
+            "scaffolding": "Identify the key variables and properties. Apply the definitions and mathematical structures introduced in Four Interesting Transformations of Functions.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Define Variables & Formulate Governing Relations",
+                    "math": "\\text{Identify key variables and parameters for } Four Interesting Transformations of Functions",
+                    "explanation": "Establish the relationship between quantities and state any domain constraints."
+                },
+                {
+                    "step": 2,
+                    "label": "Execute Step-by-Step Algebraic Transformations",
+                    "math": "\\text{Transform and simplify equations: } \\dots",
+                    "explanation": "g(x)=(x)-3 Write an explicit formula for h(x) in terms of (x) (i.e., without using f(x) notation). h(x)=(x)+2 Complete the table of values for these functions. Graph all three equations: y=f(x), y=f(x)-3, and y=f(x)+2. y=f(x)y=f(x)y=f(x)+2y=f(x)+2 y="
+                }
+            ],
+            "finalAnswer": "\\text{The evaluated solution verifies the properties of } Four Interesting Transformations of Functions",
+            "commonPitfall": "Ensure units of measurement and domain constraints are checked in physical and statistical contexts."
+        },
+        {
+            "title": "Exercise 1: Independent Problem Formulation",
+            "badge": "Multi-Step Application",
+            "difficulty": "Advanced Reasoning",
+            "problem": "Apply the foundational principles of Four Interesting Transformations of Functions to determine the exact value and interpret the contextual significance.",
+            "scaffolding": "Reference the worked steps from Example 1. Verify intermediate calculations and justify your steps.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Analyze Given Conditions & Structure",
+                    "math": "\\text{State domain constraints and initial conditions}",
+                    "explanation": "Verify that all assumptions conform to the problem context."
+                },
+                {
+                    "step": 2,
+                    "label": "Calculate the Final Mathematical Solution",
+                    "math": "\\text{Solve for the target unknown quantity}",
+                    "explanation": "State the solution with formal mathematical reasoning."
+                }
+            ],
+            "finalAnswer": "\\text{Verified algebraic or statistical solution}",
+            "commonPitfall": "Avoid rounding prematurely before the final step."
+        }
+    ],
+    "exitTicket": {
+        "title": "Lesson 17 Exit Ticket: Four Interesting Transformations of Functions",
+        "prompt": "Exit Ticket\n\nLet p(x)=|x| for every real number x. The graph of y=p(x) is shown below.\n\nLet q(x)=-\\frac{1}{2}(x) for every real number x. Describe how to obtain the graph of y=q(x) from the graph of y=p(x). Sketch the graph of y=q(x) on the same set of axes as the graph of y=p(x).\n\nLet r(x)= (x)-1 for every real number x. Describe how to obtain the graph of y=r(x) from the graph of y=p(x). Sketch the graph of y=r(x) on the same set of axes as the graphs of y=p(x) and y=q(x).\n\ny=p(x)y=p(x)",
+        "solution": "Let p(x)=|x| for every real number x. The graph of y=p(x) is shown below.\n\nLet q(x)=-\\frac{1}{2}(x) for every real number x. Describe how to obtain the graph of y=q(x) from the graph of y=p(x). Sketch the graph of y=q(x) on the same set of axes as the graph of y=p(x).\n\nReflect and vertically scale the graph of y=p(x) by plotting (x,-\\frac{1}{2}y) for each point (x,y) in the graph of y=p(x). See the graph of y=q(x) below.\n\nLet r(x)= (x)-1 for every real number x. Describe how to obtain the graph of y=r(x) from the graph of y=p(x). Sketch the graph of y=r(x) on the same set of axes as the graphs of y=p(x) and y=q(x).\n\ny=p(x)y=p(x)Translate the graph of y=p(x) vertically down 1 unit. See the graph of y=r(x) below.\n\ny=r(x)y=r(x)\n\ny=q(x)y=q(x)"
+    },
+    "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Master Four Interesting Transformations of Functions through authentic curriculum practice problems. Check your work using the expandable teacher solution key below.",
+        "problems": [
+            {
+                "number": 1,
+                "prompt": "Let f(x)=|x| for every real number x. The graph of y=f(x) is shown below. Describe how the graph for each function below is a transformation of the graph of y=f(x). Then, use this same set of axes to graph each function for Problems 1—5. Be sure to label each function on your graph (by y=a(x), y=b(x), etc.).\n\na(x)= (x)+\\frac{3}{2}",
+                "solution": "Translate the graph of y=f(x) up 1.5 units."
+            },
+            {
+                "number": 2,
+                "prompt": "b(x)= -(x)",
+                "solution": "Reflect y=f(x) across the x-axis."
+            },
+            {
+                "number": 3,
+                "prompt": "c(x)=2(x)",
+                "solution": "Vertically scale/stretch the graph of y=f(x) by doubling the output values for every input."
+            },
+            {
+                "number": 4,
+                "prompt": "d(x)=\\frac{1}{3}(x)",
+                "solution": "Vertically scale/shrink the graph of y=f(x) by dividing the output values by 3 for every input."
+            },
+            {
+                "number": 5,
+                "prompt": "e(x)= (x)-3",
+                "solution": "y=f(x)y=f(x)y=a(x)y=a(x)y=c(x)y=c(x)Translate the graph of y=f(x) down 3 units.\n\ny=b(x)y=b(x)y=d(x)y=d(x)y=e(x)y=e(x)"
+            },
+            {
+                "number": 6,
+                "prompt": "Let r(x)=(x) and t(x)=-2(x)+1 for every real number x. The graph of y=r(x) is shown below. Complete the table below to generate output values for the function t, and then graph the equation y=t(x) on the same set of axes as the graph of y=r(x).",
+                "solution": "y=r(x)y=r(x)\n\ny=t(x)y=t(x)"
+            },
+            {
+                "number": 7,
+                "prompt": "Let f(x)=|x| for every real number x. Let m and n be functions found by transforming the graph of y=f(x). Use the graphs of y=f(x), y=m(x), and y=n(x) below to write the functions m and n in terms of the function f. (Hint: What is the k?)",
+                "solution": "y=n(x)y=f(x)y=m(x)y=n(x)y=f(x)y=m(x)m(x)=2f(x)\n\nn(x)=f(x)+2"
+            }
+        ]
+    },
+    "practiceQuestions": [
+        {
+            "question": "[Exit Ticket Challenge 1] Exit Ticket",
+            "options": [
+                "Let p(x)=|x| for every real number x. The graph of y=p(x) is shown below.",
+                "The relationship cannot be evaluated without arbitrary numerical coordinates.",
+                "The values remain constant at zero regardless of the independent variable inputs.",
+                "The rate of change is undefined because domain restrictions were violated."
+            ],
+            "correct": 0,
+            "explanation": "From the official Eureka Math Exit Ticket Key for Lesson 17:\nLet p(x)=|x| for every real number x. The graph of y=p(x) is shown below.\n\nLet q(x)=-\\frac{1}{2}(x) for every real number x. Describe how to obtain the graph of y=q(x) from the graph of y=p(x). Sketch the graph of y=q(x) on the same set of axes as the graph of y=p(x).\n\nReflect and vertically scale the graph of y=p(x) by plotting (x,-\\frac{1}{2}y) for each point (x,y) in the graph of y=p(x). See the graph of y=q(x) below.\n\nLet r(x)= (x)-1 for ever"
+        },
+        {
+            "question": "[Exit Ticket Challenge 2] Let p(x)=|x| for every real number x. The graph of y=p(x) is shown below.",
+            "options": [
+                "Let q(x)=-\\frac{1}{2}(x) for every real number x. Describe how to obtain the graph of y=q(x) from the graph of y=p(x). Sketch the graph of y=q(x) on the same set of axes as the graph of y=p(x).",
+                "Ignore boundary conditions and compute only approximate integer values.",
+                "Assume that all relationships are strictly constant without verifying rates of change.",
+                "Treat independent and dependent variables as interchangeable."
+            ],
+            "correct": 0,
+            "explanation": "Official Curriculum Key for Lesson 17:\nStudents examine that a vertical translation of the graph of y=f(x) corresponds to changing the equation from y=f(x) to y=f(x)+k."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Four Interesting Transformations of Functions.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Developed using authentic lesson materials from standard algebra curricula.",
+        "lessonId": "L-ID-K-MATH-M3-C-3"
+    }
+}

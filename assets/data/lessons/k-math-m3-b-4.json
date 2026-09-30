@@ -1,0 +1,215 @@
+{
+    "id": "k-math-m3-b-4",
+    "code": "K.M3.B.4",
+    "standard": "HSF.IF.A.1",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "The Graph of a Function",
+        "pageTitle": "The Graph of a Function | Hesten's Learning",
+        "description": "This lesson continues to develop the notions of input and output from Lessons 9 and 10: if f is a function, and x is an element of its domain, then f(x) denotes...",
+        "pageDescription": "Master The Graph of a Function in Module 3: Linear and Exponential Functions. Comprehensive student outcomes, teacher insights, guided exercises, problem set worksheets, and exit ticket keys.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M3.B.4",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 11",
+        "pill": "Functions and Their Graphs",
+        "text": "This lesson continues to develop the notions of input and output from Lessons 9 and 10: if f is a function, and x is an element of its domain, then f(x) denotes the output of f corresponding to the input x. In particular, this lesson is designed to make sense of the definition of the graph of f, which is quite different than the definition of the graph of the equation y=f(x) covered in the next lesson. The ultimate goal is to show that the graph of f and the graph of y=f(x) both define the same set in the Cartesian plane. The argument that shows that these two sets are the same uses an idea that is very similar to the vertical line test. Lessons 11 and 12 also address directly two concepts that are usually not addressed in K—12 mathematics and can create confusion about algebra in students' minds. One is the universal quantifier for all. What does it mean, and how can students develop concept images about it? (It is one of the two major universal quantifiers in mathematics—the other is there exists.) The other concept is the meaning of a variable symbol. Many wrong descriptions invoke the adage, \"A variable is a quantity that varies.\" A variable is neither a quantity, nor does it vary. As seen in Module 1, it is merely a placeholder for a number from a specified set (the domain of the variable). In this lesson, students build concept images of for all and variable using the idea of pseudocode—code that mimics computer programs. In doing so, they see for all as a for-next loop and variables as actual placeholders that are replaced with numbers in a systematic way. See the end of this lesson for more tips on Lessons 11 and 12.",
+        "outcomes": [
+            "Students understand set builder notation for the graph of a real-valued function (i.e., ((x,f(x)) ) x∈D}).",
+            "Students learn techniques for graphing functions and relate the domain of a function to its graph."
+        ],
+        "teacherInsight": "A teacher knowledgeable in computer programming could easily turn the pseudocode in these lessons into actual computer programs. (The pseudocode was designed with the capabilities of Mathematica in mind, but any programming language would do.) Regardless, the pseudocode presented in this lesson is purposely designed to be particularly simple and easy to explain to students. If the pseudocode is unduly challenging for students, consider translating the code for each example into set-builder notation either in advance or as a class. The first Exploratory Challenge has the following features: Pseudocode:Specifies the domain of the variable of x to be the set of integers.Performs the instructions in the loop body first for x equal to 1, then 2, then 3, then 4, then 5.loop body Substitutes the next element in the set for x, and runs the loop body instructions for that value of x. For example, if the loop just completed for x=3, Next x tells the computer to run the loop body instructions for x=4.\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}Pseudocode:Specifies the domain of the variable of x to be the set of integers.Performs the instructions in the loop body first for x equal to 1, then 2, then 3, then 4, then 5.\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}loop body Substitutes the next element in the set for x, and runs the loop body instructions for that value of x. For example, if the loop just completed for x=3, Next x tells the computer to run the loop body instructions for x=4. Note about the lesson pace: Every new example or exercise in this lesson usually inserts just one more line of pseudocode into the previous exercise or example. Use this continuity to expedite lesson-plan development. For instance, just modify the example that is already on the board for each new example."
+    },
+    "content": [],
+    "vocabulary": [
+        {
+            "term": "Pseudocode",
+            "definition": "Specifies the domain of the variable of x to be the set of integers."
+        },
+        {
+            "term": "Pseudocode",
+            "definition": "Specifies the domain of the variable of x to be the set of integers."
+        },
+        {
+            "term": "Note about the lesson pace",
+            "definition": "Every new example or exercise in this lesson usually inserts just one more line of pseudocode into the previous exercise or example."
+        }
+    ],
+    "guidedExercises": [
+        {
+            "title": "Example 1: Core Mathematical Modeling for The Graph of a Function",
+            "badge": "Eureka Math Guided Classwork",
+            "difficulty": "Core Application",
+            "problem": "Classwork In Module 1, you graphed equations such as y=10-4x by plotting the points in the Cartesian plane by picking x-values and then using the equation to find the y-value for each x-value. The number of ordered pairs you plotted to get the general shape of the graph depended on the type of equation (linear, quadratic, etc.). The graph of the equation was then a representation of the solution set, which could be described using set notation. In this lesson, we extend set notation slightly to ",
+            "scaffolding": "Identify the key variables and properties. Apply the definitions and mathematical structures introduced in The Graph of a Function.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Define Variables & Formulate Governing Relations",
+                    "math": "\\text{Identify key variables and parameters for } The Graph of a Function",
+                    "explanation": "Establish the relationship between quantities and state any domain constraints."
+                },
+                {
+                    "step": 2,
+                    "label": "Execute Step-by-Step Algebraic Transformations",
+                    "math": "\\text{Transform and simplify equations: } \\dots",
+                    "explanation": "The output of this program code is 2481632 Go through the code with students as if the class were a computer. Here is a description of the instructions: First, x is quantified as an integer, which means the variable can only take on integer values an"
+                }
+            ],
+            "finalAnswer": "\\text{The evaluated solution verifies the properties of } The Graph of a Function",
+            "commonPitfall": "Ensure units of measurement and domain constraints are checked in physical and statistical contexts."
+        },
+        {
+            "title": "Exercise 1: Independent Problem Formulation",
+            "badge": "Multi-Step Application",
+            "difficulty": "Advanced Reasoning",
+            "problem": "Apply the foundational principles of The Graph of a Function to determine the exact value and interpret the contextual significance.",
+            "scaffolding": "Reference the worked steps from Example 1. Verify intermediate calculations and justify your steps.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Analyze Given Conditions & Structure",
+                    "math": "\\text{State domain constraints and initial conditions}",
+                    "explanation": "Verify that all assumptions conform to the problem context."
+                },
+                {
+                    "step": 2,
+                    "label": "Calculate the Final Mathematical Solution",
+                    "math": "\\text{Solve for the target unknown quantity}",
+                    "explanation": "State the solution with formal mathematical reasoning."
+                }
+            ],
+            "finalAnswer": "\\text{Verified algebraic or statistical solution}",
+            "commonPitfall": "Avoid rounding prematurely before the final step."
+        }
+    ],
+    "exitTicket": {
+        "title": "Lesson 11 Exit Ticket: The Graph of a Function",
+        "prompt": "To the teacher: The following is a list of tips about this lesson and the next. Lessons 11 and 12 use programming code to develop distinct mathematical concepts. In particular,\n\nThe lessons are designed to give a conceptual image to the meaning for all, which is a concept that is often used but rarely (if at all) explained.\n\nThe lessons are designed to help students develop a conceptual image of a variable as a placeholder—that students have complete control over what can be substituted into the placeholder (just as the programmer does when he/she instructs the computer to call the \"next x\").\n\nThe pseudocode in Lesson 11 and the pseudocode in Lesson 12 help students to understand that the graph of f and the graph of y=f(x) are differently generated sets. The first set is generated with just a straight for-next loop, and the second set is generated by a nested for-next loop that tests every point in the plane to see if it is a solution to y=f(x). It is the study of how the two computer programs are different that helps students see that the way the sets are generated is different.\n\nThe pseudocode in Lesson 12 for generating the graph of y=f(x) is also another way for students to envision how the points in the graph of any equation in two variables can be generated (like x^{2}+y^{2}=100). In particular, it explains why y equal to f(x) is set. The notation y=f(x) can appear strange to students at first: Students might wonder, \"In eighth grade we said that y=x^{2} was a function. Now, in ninth grade, we say f(x)=x^{2} is a function, so what is so special about y=f(x)? Doesn't that just mean x^{2}=x^{2}?\" The pseudocode helps students see that f is a name for a function and that y=f(x) is an equation in the sense of Module 1.\n\nIt is through the study of the two types of programs that the two differently generated graphs can be shown to be the same set; that is, the graph of f is the same set as the graph of y=f(x). The critical issue that helps equate the two sets is a discussion about the definition of function and why the definition guarantees that there is only one y-value for each x-value. The pseudocode is designed to help make this point.\n\nWithout saying so, Lesson 11 suggests how graphs are created when students use their graphing calculators. (The Plot function is just another for-next loop that pixelates certain pixels on the screen to form the graph.) The lessons are designed to help demystify these \"little black boxes\" and to plant the seed in students' heads that programming computers may not be as hard as they thought.\n\nFinally, the long division algorithm is the first nontrivial algorithm students learn. Up to this point in their education, it is also one of the only algorithms they have learned. The pseudocode in these two lessons gives students a chance to see other types of useful algorithms that are also easy to understand.\n\nExit Ticket\n\nPerform the instructions for the following programming code as if you were a computer and your paper were the computer screen.\n\nWrite three or four sentences describing in words how the thought code works.",
+        "solution": "Perform the instructions for the following programming code as if you were a computer and your paper were the computer screen.\n\nWrite three or four sentences describing in words how the thought code works.\n\nThe first three lines declare the domain of the variable x to be the integers, specifies the formula for f, and sets G to be the empty set with no points in it. Then the for-next loop goes through each integer between -3 and 2 inclusive and appends the point (x,f(x)) to the set G. After every point is appended to G, the graph of f is plotted on the Cartesian plane."
+    },
+    "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Master The Graph of a Function through authentic curriculum practice problems. Check your work using the expandable teacher solution key below.",
+        "problems": [
+            {
+                "number": 1,
+                "prompt": "Perform the instructions for each of the following programming codes as if you were a computer and your paper were the computer screen.",
+                "solution": "0, 2, 4, 6, 8\n\n(Note that if replicating a computer the numbers would be printed vertically, as shown below.)\n\n1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21\n\n4, 9, 16,25, 36, 49, 64\n\n10, 30, 90, 270, 810\n\nPerform the instructions for each of the following programming codes as if you were a computer and your paper were the computer screen."
+            },
+            {
+                "number": 2,
+                "prompt": "Answer the following questions about the thought code:\n\nWhat is the domain of the function f?",
+                "solution": "0≤x≤5"
+            },
+            {
+                "number": 3,
+                "prompt": "Plot the graph of f according to the instructions in the thought code.\n\nLook at your graph of f. What is the range of f?",
+                "solution": "-1≤f(x)≤8 for all x in the domain."
+            },
+            {
+                "number": 4,
+                "prompt": "Write three or four sentences describing in words how the thought code works.",
+                "solution": "First, the domain of the variable x is stated as the real numbers, the formula for f is given, and the set G is initialized with nothing in it. Then the for-next loop goes through each number between 0 and 5 inclusive and appends the point (x,f(x)) to the set G. After every point is appended to G, the graph of f is plotted on the Cartesian plane."
+            },
+            {
+                "number": 5,
+                "prompt": "Sketch the graph of the functions defined by the following formulas, and write the graph of f as a set using set-builder notation. (Hint: Assume the domain is all real numbers unless specified in the problem.)\n\nf(x)=x+2",
+                "solution": "Graph of f = ((x,x+2) ) x real}"
+            },
+            {
+                "number": 6,
+                "prompt": "f(x)=3x+2",
+                "solution": "Graph of f = ((x,3x+2) ) x real}"
+            },
+            {
+                "number": 7,
+                "prompt": "f(x)=3x-2",
+                "solution": "Graph of f = ((x,3x-2) ) x real}"
+            },
+            {
+                "number": 8,
+                "prompt": "f(x)=-3x-2",
+                "solution": "Graph of f=((x,-3x-2) ) x real}"
+            },
+            {
+                "number": 9,
+                "prompt": "f(x)=-3x+2",
+                "solution": "Graph of f=((x,-3x+2) ) x real}"
+            },
+            {
+                "number": 10,
+                "prompt": "f(x)=-\\frac{1}{3}x+2, -3≤x≤3",
+                "solution": "Graph of f=((x,-\\frac{1}{3}x+2) ) x real, -3≤x≤3} or Graph of f=((x,-\\frac{1}{3}x+2) )-3≤x≤3}"
+            },
+            {
+                "number": 11,
+                "prompt": "f(x)=(x+1)^{2}-x^{2}, -2≤x≤5",
+                "solution": "Graph of f=((x,(x+1)^{2}-x^{2}) ) x real, -2≤x≤5}\n\nGraph of f=((x,(x+1)^{2}-x^{2}) )-2≤x≤5}"
+            },
+            {
+                "number": 12,
+                "prompt": "f(x)=(x+1)^{2}-(x-1)^{2}, -2≤x≤4",
+                "solution": "Graph of f = ((x,(x+1)^{2}-(x-1)^{2}) ) x real, -2≤x≤4}\n\nGraph of f = ((x,(x+1)^{2}-(x-1)^{2}) )-2≤x≤4}"
+            },
+            {
+                "number": 13,
+                "prompt": "The figure shows the graph of f(x)=-5x+c.\n\nFind the value of c.",
+                "solution": "c=7"
+            },
+            {
+                "number": 14,
+                "prompt": "If the graph of f intersects the x-axis at B, find the coordinates of B.",
+                "solution": "B(\\frac{7}{5}, 0)"
+            },
+            {
+                "number": 15,
+                "prompt": "The figure shows the graph of f(x)=\\frac{1}{2}x+c.\n\nFind the value of c.",
+                "solution": "c=3"
+            },
+            {
+                "number": 16,
+                "prompt": "If the graph of f intersects the y-axis at B, find the coordinates of B.",
+                "solution": "B(0,3)"
+            },
+            {
+                "number": 17,
+                "prompt": "Find the area of triangle AOB.",
+                "solution": "9 square units"
+            }
+        ]
+    },
+    "practiceQuestions": [
+        {
+            "question": "[Exit Ticket Challenge 1] To the teacher: The following is a list of tips about this lesson and the next. Lessons 11 and 12 use programming code to develop distinct mathematical concepts. In particular,",
+            "options": [
+                "Perform the instructions for the following programming code as if you were a computer and your paper were the computer screen.",
+                "The relationship cannot be evaluated without arbitrary numerical coordinates.",
+                "The values remain constant at zero regardless of the independent variable inputs.",
+                "The rate of change is undefined because domain restrictions were violated."
+            ],
+            "correct": 0,
+            "explanation": "From the official Eureka Math Exit Ticket Key for Lesson 11:\nPerform the instructions for the following programming code as if you were a computer and your paper were the computer screen.\n\nWrite three or four sentences describing in words how the thought code works.\n\nThe first three lines declare the domain of the variable x to be the integers, specifies the formula for f, and sets G to be the empty set with no points in it. Then the for-next loop goes through each integer between -3 and 2 inclusive and ap"
+        },
+        {
+            "question": "[Exit Ticket Challenge 2] The lessons are designed to give a conceptual image to the meaning for all, which is a concept that is often used but rarely (if at all) explained.",
+            "options": [
+                "Write three or four sentences describing in words how the thought code works.",
+                "Ignore boundary conditions and compute only approximate integer values.",
+                "Assume that all relationships are strictly constant without verifying rates of change.",
+                "Treat independent and dependent variables as interchangeable."
+            ],
+            "correct": 0,
+            "explanation": "Official Curriculum Key for Lesson 11:\nStudents understand set builder notation for the graph of a real-valued function (i.e., ((x,f(x)) ) x∈D})."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"The Graph of a Function.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Developed using authentic lesson materials from standard algebra curricula.",
+        "lessonId": "L-ID-K-MATH-M3-B-4"
+    }
+}

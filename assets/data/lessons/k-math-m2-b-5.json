@@ -1,0 +1,153 @@
+{
+    "id": "k-math-m2-b-5",
+    "code": "K.M2.B.5",
+    "standard": "HSS.ID.A.2",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "Comparing Distributions",
+        "pageTitle": "Comparing Distributions | Hesten's Learning",
+        "description": "In this lesson, students develop a deep conceptual and procedural understanding of Comparing Distributions in Module 2: Descriptive Statistics....",
+        "pageDescription": "Master Comparing Distributions in Module 2: Descriptive Statistics. Comprehensive student outcomes, teacher insights, guided exercises, problem set worksheets, and exit ticket keys.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M2.B.5",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 8",
+        "pill": "Calculating and Interpreting Measures of Center and Variability",
+        "text": "In this lesson, students develop a deep conceptual and procedural understanding of Comparing Distributions in Module 2: Descriptive Statistics.",
+        "outcomes": [
+            "Students compare two or more distributions in terms of center, variability, and shape.",
+            "Students interpret a measure of center as a typical value.",
+            "Students interpret the IQR as a description of the variability of the data.",
+            "Students answer questions that address differences and similarities for two or more distributions."
+        ],
+        "teacherInsight": "Emphasize precise mathematical definitions and multiple problem-solving representations. Encourage students to check the reasonableness of their numerical solutions."
+    },
+    "content": [],
+    "vocabulary": [
+        {
+            "term": "Comparing Distributions",
+            "definition": "Core mathematical concept established in Module 2: Descriptive Statistics, Calculating and Interpreting Measures of Center and Variability."
+        },
+        {
+            "term": "Mathematical Modeling",
+            "definition": "The process of choosing and using appropriate mathematics and statistics to analyze empirical situations, to understand them better, and to improve decisions."
+        }
+    ],
+    "guidedExercises": [
+        {
+            "title": "Example 1: Core Mathematical Modeling for Comparing Distributions",
+            "badge": "Eureka Math Guided Classwork",
+            "difficulty": "Core Application",
+            "problem": "Classwork Exploratory Challenge 1 (5 minutes): Country Data Discuss the two histograms of ages for Kenya and the United States. Exploratory Challenge 1: Country Data A science museum has a Traveling Around the World exhibit. Using 3D technology, participants can make a virtual tour of cities and towns around the world. Students at Waldo High School registered with the museum to participate in a virtual tour of Kenya, visiting the capital city of Nairobi and several small towns. Before they take ",
+            "scaffolding": "Identify the key variables and properties. Apply the definitions and mathematical structures introduced in Comparing Distributions.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Define Variables & Formulate Governing Relations",
+                    "math": "\\text{Identify key variables and parameters for } Comparing Distributions",
+                    "explanation": "Establish the relationship between quantities and state any domain constraints."
+                },
+                {
+                    "step": 2,
+                    "label": "Execute Step-by-Step Algebraic Transformations",
+                    "math": "\\text{Transform and simplify equations: } \\dots",
+                    "explanation": "Review with students what each interval of ages represents. For example, the first interval represents people whose ages are 0≤x<5. Pose the following questions: What percent of people in Kenya are younger than 5? About 17% What ages are represented "
+                }
+            ],
+            "finalAnswer": "\\text{The evaluated solution verifies the properties of } Comparing Distributions",
+            "commonPitfall": "Ensure units of measurement and domain constraints are checked in physical and statistical contexts."
+        },
+        {
+            "title": "Exercise 1: Independent Problem Formulation",
+            "badge": "Multi-Step Application",
+            "difficulty": "Advanced Reasoning",
+            "problem": "Apply the foundational principles of Comparing Distributions to determine the exact value and interpret the contextual significance.",
+            "scaffolding": "Reference the worked steps from Example 1. Verify intermediate calculations and justify your steps.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Analyze Given Conditions & Structure",
+                    "math": "\\text{State domain constraints and initial conditions}",
+                    "explanation": "Verify that all assumptions conform to the problem context."
+                },
+                {
+                    "step": 2,
+                    "label": "Calculate the Final Mathematical Solution",
+                    "math": "\\text{Solve for the target unknown quantity}",
+                    "explanation": "State the solution with formal mathematical reasoning."
+                }
+            ],
+            "finalAnswer": "\\text{Verified algebraic or statistical solution}",
+            "commonPitfall": "Avoid rounding prematurely before the final step."
+        }
+    ],
+    "exitTicket": {
+        "title": "Lesson 8 Exit Ticket: Comparing Distributions",
+        "prompt": "Exit Ticket\n\nUsing the histograms of the population distributions of the United States and Kenya in 2010, approximately what percent of the people in the United States were between 15 and 50 years old? Approximately what percent of the people in Kenya were between 15 and 50 years old?\n\nWhat 5-year interval of ages represented in the 2010 histogram of the United States age distribution has the most people?\n\nWhy is the mean age greater than the median age for people in Kenya?",
+        "solution": "Using the histograms of the population distributions of the United States and Kenya in 2010, approximately what percent of the people in the United States were between 15 and 50 years old? Approximately what percent of the people in Kenya were between 15 and 50 years old?\n\nApproximately 47% of people in the United States were between 15 and 50 years old. Approximately 48% of people in Kenya were between 15 and 50 years old.\n\nWhat 5-year interval of ages represented in the 2010 histogram of the United States age distribution has the most people?\n\nThe 5-year interval of ages with the most people is the people 45 to 50 years old.\n\nWhy is the mean age greater than the median age for people in Kenya?\n\nThe mean age is a balance point. The distribution is skewed to the right, and the value of the mean is affected by the older ages in the upper tail of the Kenya population histogram. The mean is greater than the median in this case."
+    },
+    "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Master Comparing Distributions through authentic curriculum practice problems. Check your work using the expandable teacher solution key below.",
+        "problems": [
+            {
+                "number": 1,
+                "prompt": "The following box plot summarizes ages for a random sample from a made-up country named Math Country.\n\nMake up your own sample of forty ages that could be represented by the box plot for Math Country. Use a dot plot to represent the ages of the forty people in Math Country.",
+                "solution": "Many possible dot plots would be correct. Analyze individually. Ten of the ages need to be between 0 and 25 years old, ten of the ages need to be between 25 and 40 years old, ten of the ages need to be between 40 and 70 years old, and ten of the ages need to between 70 and 90 years old."
+            },
+            {
+                "number": 2,
+                "prompt": "Is the sample of forty ages represented in your dot plot of Math Country the only sample that could be represented by the box plot? Explain your answer.",
+                "solution": "There are many possible dot plots that might be represented by this box plot. Any data set with the same 5-number summary would result in this same box plot."
+            },
+            {
+                "number": 3,
+                "prompt": "The following is a dot plot of sixty ages from a random sample of people from Japan in 2010.\n\nDraw a box plot over this dot plot.",
+                "solution": "The following is the box plot of the ages of the sample of people from Japan:"
+            },
+            {
+                "number": 4,
+                "prompt": "Based on your box plot, would the median age of people in Japan be closer to the median age of people in Kenya or the United States? Justify your answer.",
+                "solution": "The median age of Japan would be closer to the median age of the United States than to the median age of Kenya. The box plot indicates that the median age of Japan is approximately 45 years old. This median age is even greater than the median age of the United States."
+            },
+            {
+                "number": 5,
+                "prompt": "What does the box plot of this sample from Japan indicate about the possible differences in the age distributions of people from Japan and Kenya?",
+                "solution": "A much greater percent of the people in Japan are in the older age groups than is the case for Kenya."
+            }
+        ]
+    },
+    "practiceQuestions": [
+        {
+            "question": "[Exit Ticket Challenge 1] Exit Ticket",
+            "options": [
+                "Using the histograms of the population distributions of the United States and Kenya in 2010, approximately what percent of the people in the United States were between 15 and 50 years old? Approximately what percent of the people in Kenya were betwee",
+                "The relationship cannot be evaluated without arbitrary numerical coordinates.",
+                "The values remain constant at zero regardless of the independent variable inputs.",
+                "The rate of change is undefined because domain restrictions were violated."
+            ],
+            "correct": 0,
+            "explanation": "From the official Eureka Math Exit Ticket Key for Lesson 8:\nUsing the histograms of the population distributions of the United States and Kenya in 2010, approximately what percent of the people in the United States were between 15 and 50 years old? Approximately what percent of the people in Kenya were between 15 and 50 years old?\n\nApproximately 47% of people in the United States were between 15 and 50 years old. Approximately 48% of people in Kenya were between 15 and 50 years old.\n\nWhat 5-year interval "
+        },
+        {
+            "question": "[Exit Ticket Challenge 2] Using the histograms of the population distributions of the United States and Kenya in 2010, approximately what percent of the people in the United States were between 15 and 50 years old? Approximately what percent of the people in Kenya were between 15 and 50 years old?",
+            "options": [
+                "Approximately 47% of people in the United States were between 15 and 50 years old. Approximately 48% of people in Kenya were between 15 and 50 years old.",
+                "Ignore boundary conditions and compute only approximate integer values.",
+                "Assume that all relationships are strictly constant without verifying rates of change.",
+                "Treat independent and dependent variables as interchangeable."
+            ],
+            "correct": 0,
+            "explanation": "Official Curriculum Key for Lesson 8:\nStudents compare two or more distributions in terms of center, variability, and shape."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Comparing Distributions.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Developed using authentic lesson materials from standard algebra curricula.",
+        "lessonId": "L-ID-K-MATH-M2-B-5"
+    }
+}

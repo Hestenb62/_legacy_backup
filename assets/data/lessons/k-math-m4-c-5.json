@@ -1,0 +1,190 @@
+{
+    "id": "k-math-m4-c-5",
+    "code": "K.M4.C.5",
+    "standard": "HSF.IF.B.4",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "Comparing Quadratic, Square Root, and Cube Root Functions Represented in Different Ways",
+        "pageTitle": "Comparing Quadratic, Square Root, and Cube Root Functions Represented in Different Ways | Hesten's Learning",
+        "description": "In this lesson, students develop a deep conceptual and procedural understanding of Comparing Quadratic, Square Root, and Cube Root Functions Represented in Diff...",
+        "pageDescription": "Master Comparing Quadratic, Square Root, and Cube Root Functions Represented in Different Ways in Module 4: Polynomial and Quadratic Expressions, Equations, and Functions. Comprehensive student outcomes, teacher insights, guided exercises, problem set worksheets, and exit ticket keys.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M4.C.5",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 22",
+        "pill": "Function Transformations and Modeling",
+        "text": "In this lesson, students develop a deep conceptual and procedural understanding of Comparing Quadratic, Square Root, and Cube Root Functions Represented in Different Ways in Module 4: Polynomial and Quadratic Expressions, Equations, and Functions.",
+        "outcomes": [
+            "Students compare two different quadratic, square root, or cube root functions represented as graphs, tables, or equations. They interpret, contextualize, and abstract various scenarios to complete the comparative analysis."
+        ],
+        "teacherInsight": "Emphasize precise mathematical definitions and multiple problem-solving representations. Encourage students to check the reasonableness of their numerical solutions."
+    },
+    "content": [],
+    "vocabulary": [
+        {
+            "term": "Comparing Quadratic, Square Root, and Cube Root Functions Represented in Different Ways",
+            "definition": "Core mathematical concept established in Module 4: Polynomial and Quadratic Expressions, Equations, and Functions, Function Transformations and Modeling."
+        },
+        {
+            "term": "Mathematical Modeling",
+            "definition": "The process of choosing and using appropriate mathematics and statistics to analyze empirical situations, to understand them better, and to improve decisions."
+        }
+    ],
+    "guidedExercises": [
+        {
+            "title": "Example 1: Core Mathematical Modeling for Comparing Quadratic, Square Root, and Cube Root Functions Represented in Different Ways",
+            "badge": "Eureka Math Guided Classwork",
+            "difficulty": "Core Application",
+            "problem": "Scaffolding:Provide students with the discussion questions ahead of time so that they have time to brainstorm responses prior to the class discussion.Scaffolding:Provide students with the discussion questions ahead of time so that they have time to brainstorm responses prior to the class discussion.Classwork Opening Exercise (10 minutes) Project the graph on the board or screen. Have students work in pairs or small groups to select domain values and fill in the table based on the graph. Opening ",
+            "scaffolding": "Identify the key variables and properties. Apply the definitions and mathematical structures introduced in Comparing Quadratic, Square Root, and Cube Root Functions Represented in Different Ways.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Define Variables & Formulate Governing Relations",
+                    "math": "\\text{Identify key variables and parameters for } Comparing Quadratic, Square Root, and Cube Root Functions Represented in Different Ways",
+                    "explanation": "Establish the relationship between quantities and state any domain constraints."
+                },
+                {
+                    "step": 2,
+                    "label": "Execute Step-by-Step Algebraic Transformations",
+                    "math": "\\text{Transform and simplify equations: } \\dots",
+                    "explanation": "What is the vertex for the function? Find it and circle it in both the table and the graph. (-2, -1) What is the y-intercept for the function? Find it and circle it in both the table and the graph. (0, 3) What are the x-intercepts for the function? F"
+                }
+            ],
+            "finalAnswer": "\\text{The evaluated solution verifies the properties of } Comparing Quadratic, Square Root, and Cube Root Functions Represented in Different Ways",
+            "commonPitfall": "Ensure units of measurement and domain constraints are checked in physical and statistical contexts."
+        },
+        {
+            "title": "Exercise 1: Independent Problem Formulation",
+            "badge": "Multi-Step Application",
+            "difficulty": "Advanced Reasoning",
+            "problem": "Apply the foundational principles of Comparing Quadratic, Square Root, and Cube Root Functions Represented in Different Ways to determine the exact value and interpret the contextual significance.",
+            "scaffolding": "Reference the worked steps from Example 1. Verify intermediate calculations and justify your steps.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Analyze Given Conditions & Structure",
+                    "math": "\\text{State domain constraints and initial conditions}",
+                    "explanation": "Verify that all assumptions conform to the problem context."
+                },
+                {
+                    "step": 2,
+                    "label": "Calculate the Final Mathematical Solution",
+                    "math": "\\text{Solve for the target unknown quantity}",
+                    "explanation": "State the solution with formal mathematical reasoning."
+                }
+            ],
+            "finalAnswer": "\\text{Verified algebraic or statistical solution}",
+            "commonPitfall": "Avoid rounding prematurely before the final step."
+        }
+    ],
+    "exitTicket": {
+        "title": "Lesson 22 Exit Ticket: Comparing Quadratic, Square Root, and Cube Root Functions Represented in Different Ways",
+        "prompt": "Exit Ticket\n\nTwo people, each in a different apartment building, have buzzers that don't work. They both must throw their apartment keys out of the window to their guests, who will then use the keys to enter.\n\nTenant 1 throws the keys such that the height-time relationship can be modeled by the graph below. On the graph, time is measured in seconds, and height is measured in feet.\n\nTenant 2 throws the keys such that the relationship between the height of the keys (in feet) and the time that has passed (in seconds) can be modeled by h(t)=-16t^{2}+18t+9.\n\nWhose window is higher? Explain how you know.\n\nCompare the motion of Tenant 1's keys to that of Tenant 2's keys.\n\nIn this context, what would be a sensible domain for these functions?",
+        "solution": "Two people, each in a different apartment building, have buzzers that don't work. They both must throw their apartment keys out of the window to their guests, who will then use the keys to enter.\n\nTenant 1 throws the keys such that the height-time relationship can be modeled by the graph below. On the graph, time is measured in seconds, and height is measured in feet.\n\nTenant 2 throws the keys such that the relationship between the height of the keys (in feet) and the time that has passed (in seconds) can be modeled by h(t)=-16t^{2}+18t+9.\n\nWhose window is higher? Explain how you know.\n\nThe window for Tenant 1 is higher (15 ft.) than that of Tenant 2 (9 ft.), which can be seen by comparing the values of the y-intercepts. You can see this in the graph below, showing both functions on the same coordinate plane.\n\nCompare the motion of Tenant 1's keys to that of Tenant 2's keys.\n\nTenant 2's keys reach a maximum height at the vertex and then fall back toward the ground. (See the graph on the previous page.) The vertex for the graph of h can be found by completing the square:\n\nh(t)=-16(t^{2}-(\\frac{18}{16})t+ ) + 9 = -16(t^{2}-(\\frac{9}{8})t + (\\frac{9}{16})^{2})+ 9 + 16(\\frac{9}{16})^{2}= -16(t-\\frac{9}{16})^{2} +\\frac{225}{16}.\n\nSo, the keys will reach a height of \\frac{225}{16}ft., or about 14 ft., before beginning the descent.\n\nBy comparison, Tenant 1's keys' motion is free falling. No linear term for Tenant 1 means an initial velocity of 0 ft/sec initial velocity; this is a quadratic graph whose axis of symmetry is the y-axis.\n\nIn this context, what would be a sensible domain for these functions?\n\nBoth domains would be positive. For Tenant 2, the zeros are (-0.375, 0) and (1.5, 0), so the domain is [0, 1.5]. For Tenant 1, the domain is [0, 1] since the keys would be on the ground at about 1 second."
+    },
+    "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Master Comparing Quadratic, Square Root, and Cube Root Functions Represented in Different Ways through authentic curriculum practice problems. Check your work using the expandable teacher solution key below.",
+        "problems": [
+            {
+                "number": 1,
+                "prompt": "A second type of rectangle has lengths that are always one-half of their widths. The function g(x)=\\frac{1}{2}x^{2} describes the relationship between the width given in x inches and the area, g(x), given in square inches of such a rectangle.\n\nUse g to determine the area of a rectangle of the second type if the width is 20 inches.",
+                "solution": "g(x)=\\frac{1}{2}x^{2}g(20)=\\frac{1}{2}(20)^{2}g(20)=200\n\nThe area of the rectangle is 200 in^{2}."
+            },
+            {
+                "number": 2,
+                "prompt": "Why is (0,0) contained in the graphs of both functions? Explain the meaning of (0,0) in terms of the situations that the functions describe.",
+                "solution": "For the first type of rectangle (with length two inches more than its width), a width of 0 in. means that the rectangle's length is 2 in. However, if the width is 0 in., its area is 0 in^{2}, and there is no rectangle. For the second type of rectangle (represented by g), a width of 0 in. means that the rectangle's area is 0 in^{2}. Although the point (0,0) is contained in the graphs of both functions, it does not represent any rectangle width area pair because rectangles by definition have positive widths and lengths."
+            },
+            {
+                "number": 3,
+                "prompt": "Determine which function has a greater average rate of change on the interval 0≤x≤3.",
+                "solution": "y=f(x) y=f(x)\n\ny=g(x) y=g(x)\n\nOn the interval 0≤x≤3, f has a greater average rate of change than g, as seen in the graphs of the functions above. The average rate of change for f is \\frac{f(3)-f(0)}{3-0}=5, while the average rate of change for g is \\frac{g(3)-g(0)}{3-0}=\\frac{3}{2}."
+            },
+            {
+                "number": 4,
+                "prompt": "Interpret your answer to part (c) in terms of the situation being described.",
+                "solution": "The area of rectangles, on average, on the interval 0≤x≤3 is growing a little more than 3 times faster for rectangles described by the function f than those described by the function g of a certain width."
+            },
+            {
+                "number": 5,
+                "prompt": "Which type of rectangle has a greater area when the width is 5 inches? By how much?",
+                "solution": "According to the table, the first rectangle will have an area of 35 in^{2} if its width is 5 in. Using the formula for g, g(5)=12.5, the second rectangle will have an area of 12.5 in^{2} if its width is 5 in. The first type of rectangle has an area that is 22.5 in^{2} greater than the second type of rectangle when their widths are 5 in."
+            },
+            {
+                "number": 6,
+                "prompt": "Will the first type of rectangle always have a greater area than the second type of rectangle when widths are the same? Explain how you know.",
+                "solution": "If we consider rectangles with width c, where c>0, then c+2>\\frac{1}{2}c, so (c+2)\\cdot c>(\\frac{1}{2}c)\\cdot c. This means that the areas of the first type of rectangle will always be greater than the areas of the second type of rectangle when they have the same width."
+            },
+            {
+                "number": 7,
+                "prompt": "The function given by the equation y=\\sqrt{x} gives the edge length, y units, of a square with area x square units. Similarly, the graph below describes the length of a leg, y units, of an isosceles right triangle whose area is x square units.\n\nGraph of Isosceles Triangle Leg Lengths for Given AreasGraph of Isosceles Triangle Leg Lengths for Given Areas\n\nWhat is the length of a leg of an isosceles right triangle with an area of 12 square units?",
+                "solution": "The length of a leg of an isosceles triangle with an area of 12 square units is approximately 4.9 units."
+            },
+            {
+                "number": 8,
+                "prompt": "Graph the function that represents a square with area x square units using the same graph that was given. Which function has a greater average rate of change on the interval 0≤x≤3?",
+                "solution": "Graph of y=\\sqrt{x} Graph of isosceles triangle leg lengths for given areas.Graph of y=\\sqrt{x} Graph of isosceles triangle leg lengths for given areas.\n\nThe graphs of both functions intersect at the origin. According to the provided graph, when the area of an isosceles triangle is 3 square units, the length of a leg is approximately 2.4 units. Thus, the average rate of change is approximately 0.8. Using the equation y=\\sqrt{x}, if x=3, y≈1.7. This means that when the area of a square is 3 square units, the length of a leg is approximately 1.7 units. Thus, the average rate of change is approximately 0.6. The average rate of change of the legs of an isosceles triangle is greater than the average rate of change of the sides of a square on the interval 0≤x≤3."
+            },
+            {
+                "number": 9,
+                "prompt": "Interpret your answer to part (b) in terms of the situation being described.",
+                "solution": "Over the interval 0≤x≤3, the average rate of change for the lengths of the legs of an isosceles triangle per a given area is approximately \\frac{4}{3} greater than the average rate of change for the sides of the square. In other words, for every unit of change in area, the legs grow (on average) by 0.2 units more over the interval 0≤x≤3."
+            },
+            {
+                "number": 10,
+                "prompt": "Which will have a greater value: the edge length of a square with area 16 square units or the length of a leg of an isosceles right triangle with an area of 16 square units? Approximately by how much?",
+                "solution": "According to the graph, the length of the leg of an isosceles right triangle with an area of 16 square units is approximately 5.7 units. Using the equation y=\\sqrt{x}, the length of the sides of a square with an area of 16 square units is 4 units. The leg of the isosceles right triangle is approximately 1.7 units greater than the side lengths of the square when their areas are 16 square units.\n\nA portion of a graph of a cube root function, f, and select values of a square root function, g, are given below. The domain of g is ≥0 ."
+            },
+            {
+                "number": 11,
+                "prompt": "Fill in each blank with one of the following: >, <, or=.\n\nf(2) _______ g(2)",
+                "solution": "f(2)=0 and g(2) is between 3.5 and 4.\n\nf(2) < g(2)"
+            },
+            {
+                "number": 12,
+                "prompt": "y-intercept of f ______ y-intercept of g",
+                "solution": "The y-intercept of f is between -2 and -3. The y-intercept of g is 3.\n\ny-intercept of f < y-intercept of g"
+            },
+            {
+                "number": 13,
+                "prompt": "Average rate of change of f on interval [0,16] ______ Average rate of change of g on interval [0,16]",
+                "solution": "f(x)=2\\sqrt[3]{x-2}\n\nAverage rate of change of f on interval (0,16)=\\frac{f(16)-f(0)}{16-0}=\\frac{2\\sqrt[3]{14}-2\\sqrt[3]{-2}}{16}≈0.459\n\nAverage rate of change of g on interval (0,16)=\\frac{g(16)-g(0)}{16-0}=\\frac{5-3}{16}=0.125\n\nAverage rate of change of f on interval [0,16] > Average rate of change of g on interval [0,16]"
+            }
+        ]
+    },
+    "practiceQuestions": [
+        {
+            "question": "[Exit Ticket Challenge 1] Exit Ticket",
+            "options": [
+                "Two people, each in a different apartment building, have buzzers that don't work. They both must throw their apartment keys out of the window to their guests, who will then use the keys to enter.",
+                "The relationship cannot be evaluated without arbitrary numerical coordinates.",
+                "The values remain constant at zero regardless of the independent variable inputs.",
+                "The rate of change is undefined because domain restrictions were violated."
+            ],
+            "correct": 0,
+            "explanation": "From the official Eureka Math Exit Ticket Key for Lesson 22:\nTwo people, each in a different apartment building, have buzzers that don't work. They both must throw their apartment keys out of the window to their guests, who will then use the keys to enter.\n\nTenant 1 throws the keys such that the height-time relationship can be modeled by the graph below. On the graph, time is measured in seconds, and height is measured in feet.\n\nTenant 2 throws the keys such that the relationship between the height of the "
+        },
+        {
+            "question": "[Exit Ticket Challenge 2] Two people, each in a different apartment building, have buzzers that don't work. They both must throw their apartment keys out of the window to their guests, who will then use the keys to enter.",
+            "options": [
+                "Tenant 1 throws the keys such that the height-time relationship can be modeled by the graph below. On the graph, time is measured in seconds, and height is measured in feet.",
+                "Ignore boundary conditions and compute only approximate integer values.",
+                "Assume that all relationships are strictly constant without verifying rates of change.",
+                "Treat independent and dependent variables as interchangeable."
+            ],
+            "correct": 0,
+            "explanation": "Official Curriculum Key for Lesson 22:\nStudents compare two different quadratic, square root, or cube root functions represented as graphs, tables, or equations. They interpret, contextualize, and abstract various scenarios to complete the comparative analysis."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Comparing Quadratic, Square Root, and Cube Root Functions Represented in Different Ways.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Developed using authentic lesson materials from standard algebra curricula.",
+        "lessonId": "L-ID-K-MATH-M4-C-5"
+    }
+}

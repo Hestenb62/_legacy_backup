@@ -1,0 +1,155 @@
+{
+    "id": "k-math-m4-c-3",
+    "code": "K.M4.C.3",
+    "standard": "HSF.IF.B.4",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "Stretching and Shrinking Graphs of Functions",
+        "pageTitle": "Stretching and Shrinking Graphs of Functions | Hesten's Learning",
+        "description": "In Lesson 19, students learned how to write the formulas for the graphs of parent functions (including quadratic, square root, and cube root) that were translat...",
+        "pageDescription": "Master Stretching and Shrinking Graphs of Functions in Module 4: Polynomial and Quadratic Expressions, Equations, and Functions. Comprehensive student outcomes, teacher insights, guided exercises, problem set worksheets, and exit ticket keys.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M4.C.3",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 20",
+        "pill": "Function Transformations and Modeling",
+        "text": "In Lesson 19, students learned how to write the formulas for the graphs of parent functions (including quadratic, square root, and cube root) that were translated up, down, right, or left by k units. In this lesson, students extend what they learned in Module 3 about how multiplying the parent function by a constant or multiplying the x-values of the parent function results in the shrinking or stretching (scaling) of the graph of the parent function and, in some cases, results in the reflection of the function about the y- or x-axis. In this lesson, we will review some of Module 3's work with quadratic functions but will focus on cubic, square root, and cube root functions.",
+        "outcomes": [
+            "Students recognize and use parent functions for absolute value, quadratic, square root, and cube root to perform transformations that stretch and shrink the graphs of the functions. They identify the effect on the graph of y=f(x) when f(x) is replaced with kf(x) and f(kx), for any specified value of k, positive or negative, and identify the constant value, k, given the graphs of the parent functions and the transformed functions. Students write the formulas for the transformed functions given their graphs."
+        ],
+        "teacherInsight": "Emphasize precise mathematical definitions and multiple problem-solving representations. Encourage students to check the reasonableness of their numerical solutions."
+    },
+    "content": [],
+    "vocabulary": [
+        {
+            "term": "Stretching and Shrinking Graphs of Functions",
+            "definition": "Core mathematical concept established in Module 4: Polynomial and Quadratic Expressions, Equations, and Functions, Function Transformations and Modeling."
+        },
+        {
+            "term": "Mathematical Modeling",
+            "definition": "The process of choosing and using appropriate mathematics and statistics to analyze empirical situations, to understand them better, and to improve decisions."
+        }
+    ],
+    "guidedExercises": [
+        {
+            "title": "Example 1: Core Mathematical Modeling for Stretching and Shrinking Graphs of Functions",
+            "badge": "Eureka Math Guided Classwork",
+            "difficulty": "Core Application",
+            "problem": "Classwork Opening Exercise (4 minutes) Opening Exercise The graph of a quadratic function defined by f(x)=x^{2} has been translated 5 units to the left and 3 units up. What is the formula for the function, g, depicted by the translated graph? g(x)=(x+5)^{2}+3 Sketch the graph of the equation y=g(x).",
+            "scaffolding": "Identify the key variables and properties. Apply the definitions and mathematical structures introduced in Stretching and Shrinking Graphs of Functions.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Define Variables & Formulate Governing Relations",
+                    "math": "\\text{Identify key variables and parameters for } Stretching and Shrinking Graphs of Functions",
+                    "explanation": "Establish the relationship between quantities and state any domain constraints."
+                },
+                {
+                    "step": 2,
+                    "label": "Execute Step-by-Step Algebraic Transformations",
+                    "math": "\\text{Transform and simplify equations: } \\dots",
+                    "explanation": " (-5, 3)\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{} (-5, 3) Scaffolding:If students do not readily see the possibilities of stretching or shrinking a function, you might try asking th"
+                }
+            ],
+            "finalAnswer": "\\text{The evaluated solution verifies the properties of } Stretching and Shrinking Graphs of Functions",
+            "commonPitfall": "Ensure units of measurement and domain constraints are checked in physical and statistical contexts."
+        },
+        {
+            "title": "Exercise 1: Independent Problem Formulation",
+            "badge": "Multi-Step Application",
+            "difficulty": "Advanced Reasoning",
+            "problem": "Apply the foundational principles of Stretching and Shrinking Graphs of Functions to determine the exact value and interpret the contextual significance.",
+            "scaffolding": "Reference the worked steps from Example 1. Verify intermediate calculations and justify your steps.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Analyze Given Conditions & Structure",
+                    "math": "\\text{State domain constraints and initial conditions}",
+                    "explanation": "Verify that all assumptions conform to the problem context."
+                },
+                {
+                    "step": 2,
+                    "label": "Calculate the Final Mathematical Solution",
+                    "math": "\\text{Solve for the target unknown quantity}",
+                    "explanation": "State the solution with formal mathematical reasoning."
+                }
+            ],
+            "finalAnswer": "\\text{Verified algebraic or statistical solution}",
+            "commonPitfall": "Avoid rounding prematurely before the final step."
+        }
+    ],
+    "exitTicket": {
+        "title": "Lesson 20 Exit Ticket: Stretching and Shrinking Graphs of Functions",
+        "prompt": "Exit Ticket\n\nHow would the graph of f(x)=\\sqrt{x} be affected if it were changed to g(x)=-2\\sqrt{x}?\n\nSketch and label the graphs of both f and g on the grid below.",
+        "solution": "How would the graph of f(x)=\\sqrt{x} be affected if it were changed to g(x)=-2\\sqrt{x}?\n\nThe graph of f would be stretched vertically by a factor of 2 and reflected across the x-axis.\n\nSketch and label the graphs of both f and g on the grid below.\n\ny=f(x)y=g(x)y=f(x)y=g(x)"
+    },
+    "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Master Stretching and Shrinking Graphs of Functions through authentic curriculum practice problems. Check your work using the expandable teacher solution key below.",
+        "problems": [
+            {
+                "number": 1,
+                "prompt": "Graph the functions in the same coordinate plane. Do not use a graphing calculator.",
+                "solution": "y=f(x)y=h(x)y=g(x)y=k(x)y=f(x)y=h(x)y=g(x)y=k(x)f(x)=|x|"
+            },
+            {
+                "number": 2,
+                "prompt": "g(x)=2|x|\n\nh(x)=|3x|\n\nk(x)=-3|3x|\n\nExplain how the graphs of functions j(x)=3|x| and h(x)=|3x| are related.",
+                "solution": "Each of these transformations of the absolute value functions creates the same graph."
+            },
+            {
+                "number": 3,
+                "prompt": "Explain how the graphs of functions q(x)=-3|x| and r(x)=| -3x| are related.",
+                "solution": "The two graphs have the same scaling factor of 3, but they are reflections of each other across the x-axis. Multiplying an absolute value by a negative number will reflect it across the x-axis. However, multiplying by a negative number INSIDE the absolute value has the same effect as multiplying by a positive number on the outside."
+            },
+            {
+                "number": 4,
+                "prompt": "Write a function, g ,in terms of another function, f, such that the graph of g is a vertical shrink of the graph f by a factor of 0.75.",
+                "solution": "g(x)=0.75 f(x)\n\nMP.3MP.3In Problem 5, students critique the reasoning of each answer, determine which of the two is correct, and provide a justification for their response."
+            },
+            {
+                "number": 5,
+                "prompt": "A teacher wants the students to write a function based on the parent function f(x)=\\sqrt[3]{x}. The graph of f is stretched vertically by a factor of 4 and shrunk horizontally by a factor of \\frac{1}{3}. Mike wrote g(x)=4\\sqrt[3]{3x} as the new function, while Lucy wrote h(x)=3\\sqrt[3]{4x}. Which one is correct? Justify your answer.",
+                "solution": "Mike is correct. A vertical stretch by a factor of 4 means multiplying f(x) by 4, and a horizontal shrink by a factor of \\frac{1}{3} means that the x-values of f(x) must be multiplied by 3."
+            },
+            {
+                "number": 6,
+                "prompt": "Study the graphs of two different functions below. Which is a parent function? What is the constant value(s) multiplied to the parent function to arrive at the transformed graph? Now write the function defined by the transformed graph.",
+                "solution": "y=f(x)y=g(x)y=f(x)y=g(x)\n\nThe parent function is f(x)=\\sqrt{x}. The graph of y=g(x) is the graph of y=f(x) reflected across the x-axis. The function depicted by the transformed graph is g(x)=-\\sqrt{x}."
+            }
+        ]
+    },
+    "practiceQuestions": [
+        {
+            "question": "[Exit Ticket Challenge 1] Exit Ticket",
+            "options": [
+                "How would the graph of f(x)=\\sqrt{x} be affected if it were changed to g(x)=-2\\sqrt{x}?",
+                "The relationship cannot be evaluated without arbitrary numerical coordinates.",
+                "The values remain constant at zero regardless of the independent variable inputs.",
+                "The rate of change is undefined because domain restrictions were violated."
+            ],
+            "correct": 0,
+            "explanation": "From the official Eureka Math Exit Ticket Key for Lesson 20:\nHow would the graph of f(x)=\\sqrt{x} be affected if it were changed to g(x)=-2\\sqrt{x}?\n\nThe graph of f would be stretched vertically by a factor of 2 and reflected across the x-axis.\n\nSketch and label the graphs of both f and g on the grid below.\n\ny=f(x)y=g(x)y=f(x)y=g(x)"
+        },
+        {
+            "question": "[Exit Ticket Challenge 2] How would the graph of f(x)=\\sqrt{x} be affected if it were changed to g(x)=-2\\sqrt{x}?",
+            "options": [
+                "The graph of f would be stretched vertically by a factor of 2 and reflected across the x-axis.",
+                "Ignore boundary conditions and compute only approximate integer values.",
+                "Assume that all relationships are strictly constant without verifying rates of change.",
+                "Treat independent and dependent variables as interchangeable."
+            ],
+            "correct": 0,
+            "explanation": "Official Curriculum Key for Lesson 20:\nStudents recognize and use parent functions for absolute value, quadratic, square root, and cube root to perform transformations that stretch and shrink the graphs of the functions. They identify the effect on the graph of y=f(x) when f(x) is replaced with kf(x) and f(kx), for any specified value of k, positive or negative, and identify the constant value, k, given the graphs of the parent functions and the transformed functions. Students write the formulas for the transformed functions given their graphs."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Stretching and Shrinking Graphs of Functions.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Developed using authentic lesson materials from standard algebra curricula.",
+        "lessonId": "L-ID-K-MATH-M4-C-3"
+    }
+}

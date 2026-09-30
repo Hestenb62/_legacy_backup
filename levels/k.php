@@ -132,42 +132,44 @@ $modules = [
                 'letter' => 'A',
                 'name' => 'Shapes and Centers of Distributions',
                 'skills' => [
-                    ['id' => 'k-math-m2-a-1', 'code' => 'K.M2.A.1', 'name' => 'Distributions and Their Shapes'],
-                    ['id' => 'k-math-m2-a-2', 'code' => 'K.M2.A.2', 'name' => 'Describing the Center of a Distribution'],
-                    ['id' => 'k-math-m2-a-3', 'code' => 'K.M2.A.3', 'name' => 'Estimating Centers and Interpreting the Mean as a Balance Point']
+                    ['id' => 'k-math-m2-a-1', 'code' => 'K.M2.A.1', 'name' => 'Distributions and Their Shapes', 'url' => 'k.php?k-math-m2-a-1'],
+                    ['id' => 'k-math-m2-a-2', 'code' => 'K.M2.A.2', 'name' => 'Describing the Center of a Distribution', 'url' => 'k.php?k-math-m2-a-2'],
+                    ['id' => 'k-math-m2-a-3', 'code' => 'K.M2.A.3', 'name' => 'Estimating Centers and Interpreting the Mean as a Balance Point', 'url' => 'k.php?k-math-m2-a-3']
                 ]
             ],
             [
                 'letter' => 'B',
-                'name' => 'Describing Variability and Comparing Distributions',
+                'name' => 'Calculating and Interpreting Measures of Center and Variability',
                 'skills' => [
-                    ['id' => 'k-math-m2-b-1', 'code' => 'K.M2.B.1', 'name' => 'Summarizing Deviations from the Mean'],
-                    ['id' => 'k-math-m2-b-2', 'code' => 'K.M2.B.2', 'name' => 'Measuring Variability for Symmetrical Distributions'],
-                    ['id' => 'k-math-m2-b-3', 'code' => 'K.M2.B.3', 'name' => 'Interpreting the Standard Deviation'],
-                    ['id' => 'k-math-m2-b-4', 'code' => 'K.M2.B.4', 'name' => 'Measuring Variability for Skewed Distributions Interquartile Range'],
-                    ['id' => 'k-math-m2-b-5', 'code' => 'K.M2.B.5', 'name' => 'Comparing Distributions']
+                    ['id' => 'k-math-m2-b-1', 'code' => 'K.M2.B.1', 'name' => 'Summarizing Deviations from the Mean', 'url' => 'k.php?k-math-m2-b-1'],
+                    ['id' => 'k-math-m2-b-2', 'code' => 'K.M2.B.2', 'name' => 'Measuring Variability for Symmetrical Distributions', 'url' => 'k.php?k-math-m2-b-2'],
+                    ['id' => 'k-math-m2-b-3', 'code' => 'K.M2.B.3', 'name' => 'Interpreting the Standard Deviation', 'url' => 'k.php?k-math-m2-b-3'],
+                    ['id' => 'k-math-m2-b-4', 'code' => 'K.M2.B.4', 'name' => 'Measuring Variability for Skewed Distributions (Interquartile Range)', 'url' => 'k.php?k-math-m2-b-4'],
+                    ['id' => 'k-math-m2-b-5', 'code' => 'K.M2.B.5', 'name' => 'Comparing Distributions', 'url' => 'k.php?k-math-m2-b-5']
                 ]
             ],
             [
                 'letter' => 'C',
                 'name' => 'Categorical Data on Two Variables',
                 'skills' => [
-                    ['id' => 'k-math-m2-c-1', 'code' => 'K.M2.C.1', 'name' => 'Summarizing Bivariate Categorical Data'],
-                    ['id' => 'k-math-m2-c-2', 'code' => 'K.M2.C.2', 'name' => 'Summarizing Bivariate Categorical Data with Relative Frequencies'],
-                    ['id' => 'k-math-m2-c-3', 'code' => 'K.M2.C.3', 'name' => 'Conditional Relative Frequencies and Association']
+                    ['id' => 'k-math-m2-c-1', 'code' => 'K.M2.C.1', 'name' => 'Summarizing Bivariate Categorical Data', 'url' => 'k.php?k-math-m2-c-1'],
+                    ['id' => 'k-math-m2-c-2', 'code' => 'K.M2.C.2', 'name' => 'Summarizing Bivariate Categorical Data with Relative Frequencies', 'url' => 'k.php?k-math-m2-c-2'],
+                    ['id' => 'k-math-m2-c-3', 'code' => 'K.M2.C.3', 'name' => 'Conditional Relative Frequencies and Association', 'url' => 'k.php?k-math-m2-c-3']
                 ]
             ],
             [
                 'letter' => 'D',
                 'name' => 'Numerical Data on Two Variables',
                 'skills' => [
-                    ['id' => 'k-math-m2-d-1', 'code' => 'K.M2.D.1', 'name' => 'Relationships Between Two Numerical Variables'],
-                    ['id' => 'k-math-m2-d-2', 'code' => 'K.M2.D.2', 'name' => 'Modeling Relationships with a Line'],
-                    ['id' => 'k-math-m2-d-3', 'code' => 'K.M2.D.3', 'name' => 'Interpreting Residuals from a Line'],
-                    ['id' => 'k-math-m2-d-4', 'code' => 'K.M2.D.4', 'name' => 'More on Modeling Relationships with a Line'],
-                    ['id' => 'k-math-m2-d-5', 'code' => 'K.M2.D.5', 'name' => 'Analyzing Residuals'],
-                    ['id' => 'k-math-m2-d-6', 'code' => 'K.M2.D.6', 'name' => 'Interpreting Correlation'],
-                    ['id' => 'k-math-m2-d-7', 'code' => 'K.M2.D.7', 'name' => 'Analyzing Data Collected on Two Variables']
+                    ['id' => 'k-math-m2-d-1', 'code' => 'K.M2.D.1', 'name' => 'Relationships Between Two Numerical Variables', 'url' => 'k.php?k-math-m2-d-1'],
+                    ['id' => 'k-math-m2-d-2', 'code' => 'K.M2.D.2', 'name' => 'Relationships Between Two Numerical Variables', 'url' => 'k.php?k-math-m2-d-2'],
+                    ['id' => 'k-math-m2-d-3', 'code' => 'K.M2.D.3', 'name' => 'Modeling Relationships with a Line', 'url' => 'k.php?k-math-m2-d-3'],
+                    ['id' => 'k-math-m2-d-4', 'code' => 'K.M2.D.4', 'name' => 'Interpreting Residuals from a Line', 'url' => 'k.php?k-math-m2-d-4'],
+                    ['id' => 'k-math-m2-d-5', 'code' => 'K.M2.D.5', 'name' => 'More on Modeling Relationships with a Line', 'url' => 'k.php?k-math-m2-d-5'],
+                    ['id' => 'k-math-m2-d-6', 'code' => 'K.M2.D.6', 'name' => 'Analyzing Residuals', 'url' => 'k.php?k-math-m2-d-6'],
+                    ['id' => 'k-math-m2-d-7', 'code' => 'K.M2.D.7', 'name' => 'Analyzing Residuals', 'url' => 'k.php?k-math-m2-d-7'],
+                    ['id' => 'k-math-m2-d-8', 'code' => 'K.M2.D.8', 'name' => 'Interpreting Correlation', 'url' => 'k.php?k-math-m2-d-8'],
+                    ['id' => 'k-math-m2-d-9', 'code' => 'K.M2.D.9', 'name' => 'Analyzing Data Collected on Two Variables', 'url' => 'k.php?k-math-m2-d-9']
                 ]
             ]
         ]
@@ -181,47 +183,48 @@ $modules = [
                 'letter' => 'A',
                 'name' => 'Linear and Exponential Sequences',
                 'skills' => [
-                    ['id' => 'k-math-m3-a-1', 'code' => 'K.M3.A.1', 'name' => 'Integer Sequences Should You Believe in Patterns?'],
-                    ['id' => 'k-math-m3-a-2', 'code' => 'K.M3.A.2', 'name' => 'Recursive Formulas for Sequences'],
-                    ['id' => 'k-math-m3-a-3', 'code' => 'K.M3.A.3', 'name' => 'Arithmetic and Geometric Sequences'],
-                    ['id' => 'k-math-m3-a-4', 'code' => 'K.M3.A.4', 'name' => 'Why Do Banks Pay YOU to Provide Their Services?'],
-                    ['id' => 'k-math-m3-a-5', 'code' => 'K.M3.A.5', 'name' => 'The Power of Exponential Growth'],
-                    ['id' => 'k-math-m3-a-6', 'code' => 'K.M3.A.6', 'name' => 'Exponential Growth U.S. Population and World Population'],
-                    ['id' => 'k-math-m3-a-7', 'code' => 'K.M3.A.7', 'name' => 'Exponential Decay'],
-                    ['id' => 'k-math-m3-a-8', 'code' => 'K.M3.A.8', 'name' => 'Reflections on Exponential Functions']
+                    ['id' => 'k-math-m3-a-1', 'code' => 'K.M3.A.1', 'name' => 'Integer Sequences—Should You Believe in Patterns?', 'url' => 'k.php?k-math-m3-a-1'],
+                    ['id' => 'k-math-m3-a-2', 'code' => 'K.M3.A.2', 'name' => 'Recursive Formulas for Sequences', 'url' => 'k.php?k-math-m3-a-2'],
+                    ['id' => 'k-math-m3-a-3', 'code' => 'K.M3.A.3', 'name' => 'Arithmetic and Geometric Sequences', 'url' => 'k.php?k-math-m3-a-3'],
+                    ['id' => 'k-math-m3-a-4', 'code' => 'K.M3.A.4', 'name' => 'Why Do Banks Pay YOU to Provide Their Services?', 'url' => 'k.php?k-math-m3-a-4'],
+                    ['id' => 'k-math-m3-a-5', 'code' => 'K.M3.A.5', 'name' => 'The Power of Exponential Growth', 'url' => 'k.php?k-math-m3-a-5'],
+                    ['id' => 'k-math-m3-a-6', 'code' => 'K.M3.A.6', 'name' => 'Exponential Growth—U.S. Population and World Population', 'url' => 'k.php?k-math-m3-a-6'],
+                    ['id' => 'k-math-m3-a-7', 'code' => 'K.M3.A.7', 'name' => 'Exponential Decay', 'url' => 'k.php?k-math-m3-a-7']
                 ]
             ],
             [
                 'letter' => 'B',
                 'name' => 'Functions and Their Graphs',
                 'skills' => [
-                    ['id' => 'k-math-m3-b-1', 'code' => 'K.M3.B.1', 'name' => 'Why Stay with Whole Numbers?'],
-                    ['id' => 'k-math-m3-b-2', 'code' => 'K.M3.B.2', 'name' => 'Representing, Naming, and Evaluating Functions'],
-                    ['id' => 'k-math-m3-b-3', 'code' => 'K.M3.B.3', 'name' => 'The Graph of a Function'],
-                    ['id' => 'k-math-m3-b-4', 'code' => 'K.M3.B.4', 'name' => 'The Graph of the Equation y=f(x)'],
-                    ['id' => 'k-math-m3-b-5', 'code' => 'K.M3.B.5', 'name' => 'Interpreting the Graph of a Function'],
-                    ['id' => 'k-math-m3-b-6', 'code' => 'K.M3.B.6', 'name' => 'Linear and Exponential Models Comparing Growth Rates']
+                    ['id' => 'k-math-m3-b-1', 'code' => 'K.M3.B.1', 'name' => 'Why Stay with Whole Numbers?', 'url' => 'k.php?k-math-m3-b-1'],
+                    ['id' => 'k-math-m3-b-2', 'code' => 'K.M3.B.2', 'name' => 'Representing, Naming, and Evaluating Functions', 'url' => 'k.php?k-math-m3-b-2'],
+                    ['id' => 'k-math-m3-b-3', 'code' => 'K.M3.B.3', 'name' => 'Representing, Naming, and Evaluating Functions', 'url' => 'k.php?k-math-m3-b-3'],
+                    ['id' => 'k-math-m3-b-4', 'code' => 'K.M3.B.4', 'name' => 'The Graph of a Function', 'url' => 'k.php?k-math-m3-b-4'],
+                    ['id' => 'k-math-m3-b-5', 'code' => 'K.M3.B.5', 'name' => 'The Graph of the Equation y=f(x)', 'url' => 'k.php?k-math-m3-b-5'],
+                    ['id' => 'k-math-m3-b-6', 'code' => 'K.M3.B.6', 'name' => 'Interpreting the Graph of a Function', 'url' => 'k.php?k-math-m3-b-6'],
+                    ['id' => 'k-math-m3-b-7', 'code' => 'K.M3.B.7', 'name' => 'Linear and Exponential Models—Comparing Growth Rates', 'url' => 'k.php?k-math-m3-b-7']
                 ]
             ],
             [
                 'letter' => 'C',
                 'name' => 'Transformations of Functions',
                 'skills' => [
-                    ['id' => 'k-math-m3-c-1', 'code' => 'K.M3.C.1', 'name' => 'Piecewise Functions'],
-                    ['id' => 'k-math-m3-c-2', 'code' => 'K.M3.C.2', 'name' => 'Graphs Can Solve Equations Too'],
-                    ['id' => 'k-math-m3-c-3', 'code' => 'K.M3.C.3', 'name' => 'Four Interesting Transformations of Functions'],
-                    ['id' => 'k-math-m3-c-4', 'code' => 'K.M3.C.4', 'name' => 'Stretching and Shrinking Graphs of Functions'],
-                    ['id' => 'k-math-m3-c-5', 'code' => 'K.M3.C.5', 'name' => 'Comparing Linear and Exponential Models']
+                    ['id' => 'k-math-m3-c-1', 'code' => 'K.M3.C.1', 'name' => 'Piecewise Functions', 'url' => 'k.php?k-math-m3-c-1'],
+                    ['id' => 'k-math-m3-c-2', 'code' => 'K.M3.C.2', 'name' => 'Graphs Can Solve Equations Too', 'url' => 'k.php?k-math-m3-c-2'],
+                    ['id' => 'k-math-m3-c-3', 'code' => 'K.M3.C.3', 'name' => 'Four Interesting Transformations of Functions', 'url' => 'k.php?k-math-m3-c-3'],
+                    ['id' => 'k-math-m3-c-4', 'code' => 'K.M3.C.4', 'name' => 'Four Interesting Transformations of Functions', 'url' => 'k.php?k-math-m3-c-4'],
+                    ['id' => 'k-math-m3-c-5', 'code' => 'K.M3.C.5', 'name' => 'Four Interesting Transformations of Functions', 'url' => 'k.php?k-math-m3-c-5'],
+                    ['id' => 'k-math-m3-c-6', 'code' => 'K.M3.C.6', 'name' => 'Four Interesting Transformations of Functions', 'url' => 'k.php?k-math-m3-c-6']
                 ]
             ],
             [
                 'letter' => 'D',
                 'name' => 'Using Functions and Graphs to Solve Problems',
                 'skills' => [
-                    ['id' => 'k-math-m3-d-1', 'code' => 'K.M3.D.1', 'name' => 'Comparing Linear and Exponential Models Again'],
-                    ['id' => 'k-math-m3-d-2', 'code' => 'K.M3.D.2', 'name' => 'Modeling an Invasive Species Population'],
-                    ['id' => 'k-math-m3-d-3', 'code' => 'K.M3.D.3', 'name' => 'Newtons Law of Cooling'],
-                    ['id' => 'k-math-m3-d-4', 'code' => 'K.M3.D.4', 'name' => 'Piecewise and Step Functions in Context']
+                    ['id' => 'k-math-m3-d-1', 'code' => 'K.M3.D.1', 'name' => 'Comparing Linear and Exponential Models Again', 'url' => 'k.php?k-math-m3-d-1'],
+                    ['id' => 'k-math-m3-d-2', 'code' => 'K.M3.D.2', 'name' => 'Modeling an Invasive Species Population', 'url' => 'k.php?k-math-m3-d-2'],
+                    ['id' => 'k-math-m3-d-3', 'code' => 'K.M3.D.3', 'name' => 'Newton\'s Law of Cooling', 'url' => 'k.php?k-math-m3-d-3'],
+                    ['id' => 'k-math-m3-d-4', 'code' => 'K.M3.D.4', 'name' => 'Piecewise and Step Functions in Context', 'url' => 'k.php?k-math-m3-d-4']
                 ]
             ]
         ]
@@ -233,42 +236,44 @@ $modules = [
         'topics' => [
             [
                 'letter' => 'A',
-                'name' => 'Quadratic Expressions, Equations, Functions, and Their Connection to Rectangles',
+                'name' => 'Quadratic Expressions, Equations, and Functions',
                 'skills' => [
-                    ['id' => 'k-math-m4-a-1', 'code' => 'K.M4.A.1', 'name' => 'Multiplying and Factoring Polynomial Expressions'],
-                    ['id' => 'k-math-m4-a-2', 'code' => 'K.M4.A.2', 'name' => 'Advanced Factoring Strategies for Quadratic Expressions'],
-                    ['id' => 'k-math-m4-a-3', 'code' => 'K.M4.A.3', 'name' => 'The Zero Product Property'],
-                    ['id' => 'k-math-m4-a-4', 'code' => 'K.M4.A.4', 'name' => 'Solving Basic One-Variable Quadratic Equations'],
-                    ['id' => 'k-math-m4-a-5', 'code' => 'K.M4.A.5', 'name' => 'Creating and Solving Quadratic Equations in One Variable'],
-                    ['id' => 'k-math-m4-a-6', 'code' => 'K.M4.A.6', 'name' => 'Exploring the Symmetry in Graphs of Quadratic Functions'],
-                    ['id' => 'k-math-m4-a-7', 'code' => 'K.M4.A.7', 'name' => 'Graphing Quadratic Functions from Factored Form'],
-                    ['id' => 'k-math-m4-a-8', 'code' => 'K.M4.A.8', 'name' => 'Interpreting Quadratic Functions from Graphs and Tables']
+                    ['id' => 'k-math-m4-a-1', 'code' => 'K.M4.A.1', 'name' => 'Multiplying and Factoring Polynomial Expressions', 'url' => 'k.php?k-math-m4-a-1'],
+                    ['id' => 'k-math-m4-a-2', 'code' => 'K.M4.A.2', 'name' => 'Multiplying and Factoring Polynomial Expressions', 'url' => 'k.php?k-math-m4-a-2'],
+                    ['id' => 'k-math-m4-a-3', 'code' => 'K.M4.A.3', 'name' => 'Advanced Factoring Strategies for Quadratic Expressions', 'url' => 'k.php?k-math-m4-a-3'],
+                    ['id' => 'k-math-m4-a-4', 'code' => 'K.M4.A.4', 'name' => 'Advanced Factoring Strategies for Quadratic Expressions', 'url' => 'k.php?k-math-m4-a-4'],
+                    ['id' => 'k-math-m4-a-5', 'code' => 'K.M4.A.5', 'name' => 'The Zero Product Property', 'url' => 'k.php?k-math-m4-a-5'],
+                    ['id' => 'k-math-m4-a-6', 'code' => 'K.M4.A.6', 'name' => 'Solving Basic One-Variable Quadratic Equations', 'url' => 'k.php?k-math-m4-a-6'],
+                    ['id' => 'k-math-m4-a-7', 'code' => 'K.M4.A.7', 'name' => 'Creating and Solving Quadratic Equations in One Variable', 'url' => 'k.php?k-math-m4-a-7'],
+                    ['id' => 'k-math-m4-a-8', 'code' => 'K.M4.A.8', 'name' => 'Exploring the Symmetry in Graphs of Quadratic Functions', 'url' => 'k.php?k-math-m4-a-8'],
+                    ['id' => 'k-math-m4-a-9', 'code' => 'K.M4.A.9', 'name' => 'Graphing Quadratic Functions from Factored Form, f(x)=a(x-m)(x-n)', 'url' => 'k.php?k-math-m4-a-9'],
+                    ['id' => 'k-math-m4-a-10', 'code' => 'K.M4.A.10', 'name' => 'Interpreting Quadratic Functions from Graphs and Tables', 'url' => 'k.php?k-math-m4-a-10']
                 ]
             ],
             [
                 'letter' => 'B',
                 'name' => 'Using Different Forms for Quadratic Functions',
                 'skills' => [
-                    ['id' => 'k-math-m4-b-1', 'code' => 'K.M4.B.1', 'name' => 'Completing the Square'],
-                    ['id' => 'k-math-m4-b-2', 'code' => 'K.M4.B.2', 'name' => 'Solving Quadratic Equations by Completing the Square'],
-                    ['id' => 'k-math-m4-b-3', 'code' => 'K.M4.B.3', 'name' => 'Deriving the Quadratic Formula'],
-                    ['id' => 'k-math-m4-b-4', 'code' => 'K.M4.B.4', 'name' => 'Using the Quadratic Formula'],
-                    ['id' => 'k-math-m4-b-5', 'code' => 'K.M4.B.5', 'name' => 'Graphing Quadratic Equations from the Vertex Form'],
-                    ['id' => 'k-math-m4-b-6', 'code' => 'K.M4.B.6', 'name' => 'Graphing Quadratic Functions from the Standard Form'],
-                    ['id' => 'k-math-m4-b-7', 'code' => 'K.M4.B.7', 'name' => 'Applying the Quadratic Formula']
+                    ['id' => 'k-math-m4-b-1', 'code' => 'K.M4.B.1', 'name' => 'Completing the Square', 'url' => 'k.php?k-math-m4-b-1'],
+                    ['id' => 'k-math-m4-b-2', 'code' => 'K.M4.B.2', 'name' => 'Completing the Square', 'url' => 'k.php?k-math-m4-b-2'],
+                    ['id' => 'k-math-m4-b-3', 'code' => 'K.M4.B.3', 'name' => 'Solving Quadratic Equations by Completing the Square', 'url' => 'k.php?k-math-m4-b-3'],
+                    ['id' => 'k-math-m4-b-4', 'code' => 'K.M4.B.4', 'name' => 'Deriving the Quadratic Formula', 'url' => 'k.php?k-math-m4-b-4'],
+                    ['id' => 'k-math-m4-b-5', 'code' => 'K.M4.B.5', 'name' => 'Using the Quadratic Formula', 'url' => 'k.php?k-math-m4-b-5'],
+                    ['id' => 'k-math-m4-b-6', 'code' => 'K.M4.B.6', 'name' => 'Graphing Quadratic Equations from the Vertex Form, y=a(x-h)^{2}+k', 'url' => 'k.php?k-math-m4-b-6'],
+                    ['id' => 'k-math-m4-b-7', 'code' => 'K.M4.B.7', 'name' => 'Graphing Quadratic Functions from the Standard Form, f(x)=ax^{2}+bx+c', 'url' => 'k.php?k-math-m4-b-7']
                 ]
             ],
             [
                 'letter' => 'C',
                 'name' => 'Function Transformations and Modeling',
                 'skills' => [
-                    ['id' => 'k-math-m4-c-1', 'code' => 'K.M4.C.1', 'name' => 'Graphing Cubic, Square Root, and Cube Root Functions'],
-                    ['id' => 'k-math-m4-c-2', 'code' => 'K.M4.C.2', 'name' => 'Translating Graphs of Functions'],
-                    ['id' => 'k-math-m4-c-3', 'code' => 'K.M4.C.3', 'name' => 'Stretching and Shrinking Graphs of Functions'],
-                    ['id' => 'k-math-m4-c-4', 'code' => 'K.M4.C.4', 'name' => 'Transformations of the Quadratic Parent Function'],
-                    ['id' => 'k-math-m4-c-5', 'code' => 'K.M4.C.5', 'name' => 'Comparing Quadratic, Square Root, and Cube Root Functions Represented in Different Ways'],
-                    ['id' => 'k-math-m4-c-6', 'code' => 'K.M4.C.6', 'name' => 'Modeling with Quadratic Functions'],
-                    ['id' => 'k-math-m4-c-7', 'code' => 'K.M4.C.7', 'name' => 'Modeling with Polynomials']
+                    ['id' => 'k-math-m4-c-1', 'code' => 'K.M4.C.1', 'name' => 'Graphing Cubic, Square Root, and Cube Root Functions', 'url' => 'k.php?k-math-m4-c-1'],
+                    ['id' => 'k-math-m4-c-2', 'code' => 'K.M4.C.2', 'name' => 'Translating Graphs of Functions', 'url' => 'k.php?k-math-m4-c-2'],
+                    ['id' => 'k-math-m4-c-3', 'code' => 'K.M4.C.3', 'name' => 'Stretching and Shrinking Graphs of Functions', 'url' => 'k.php?k-math-m4-c-3'],
+                    ['id' => 'k-math-m4-c-4', 'code' => 'K.M4.C.4', 'name' => 'Transformations of the Quadratic Parent Function, f(x)=x^{2}', 'url' => 'k.php?k-math-m4-c-4'],
+                    ['id' => 'k-math-m4-c-5', 'code' => 'K.M4.C.5', 'name' => 'Comparing Quadratic, Square Root, and Cube Root Functions Represented in Different Ways', 'url' => 'k.php?k-math-m4-c-5'],
+                    ['id' => 'k-math-m4-c-6', 'code' => 'K.M4.C.6', 'name' => 'Modeling with Quadratic Functions', 'url' => 'k.php?k-math-m4-c-6'],
+                    ['id' => 'k-math-m4-c-7', 'code' => 'K.M4.C.7', 'name' => 'Modeling with Quadratic Functions', 'url' => 'k.php?k-math-m4-c-7']
                 ]
             ]
         ]
@@ -282,19 +287,21 @@ $modules = [
                 'letter' => 'A',
                 'name' => 'Elements of Modeling',
                 'skills' => [
-                    ['id' => 'k-math-m5-a-1', 'code' => 'K.M5.A.1', 'name' => 'Analyzing a Graph'],
-                    ['id' => 'k-math-m5-a-2', 'code' => 'K.M5.A.2', 'name' => 'Analyzing a Data Set'],
-                    ['id' => 'k-math-m5-a-3', 'code' => 'K.M5.A.3', 'name' => 'Analyzing a Verbal Description']
+                    ['id' => 'k-math-m5-a-1', 'code' => 'K.M5.A.1', 'name' => 'Analyzing a Graph', 'url' => 'k.php?k-math-m5-a-1'],
+                    ['id' => 'k-math-m5-a-2', 'code' => 'K.M5.A.2', 'name' => 'Analyzing a Data Set', 'url' => 'k.php?k-math-m5-a-2'],
+                    ['id' => 'k-math-m5-a-3', 'code' => 'K.M5.A.3', 'name' => 'Analyzing a Verbal Description', 'url' => 'k.php?k-math-m5-a-3']
                 ]
             ],
             [
                 'letter' => 'B',
                 'name' => 'Completing the Modeling Cycle',
                 'skills' => [
-                    ['id' => 'k-math-m5-b-1', 'code' => 'K.M5.B.1', 'name' => 'Modeling a Context from a Graph'],
-                    ['id' => 'k-math-m5-b-2', 'code' => 'K.M5.B.2', 'name' => 'Modeling from a Sequence'],
-                    ['id' => 'k-math-m5-b-3', 'code' => 'K.M5.B.3', 'name' => 'Modeling a Context from Data'],
-                    ['id' => 'k-math-m5-b-4', 'code' => 'K.M5.B.4', 'name' => 'Modeling a Context from a Verbal Description']
+                    ['id' => 'k-math-m5-b-1', 'code' => 'K.M5.B.1', 'name' => 'Modeling a Context from a Graph', 'url' => 'k.php?k-math-m5-b-1'],
+                    ['id' => 'k-math-m5-b-2', 'code' => 'K.M5.B.2', 'name' => 'Modeling from a Sequence', 'url' => 'k.php?k-math-m5-b-2'],
+                    ['id' => 'k-math-m5-b-3', 'code' => 'K.M5.B.3', 'name' => 'Modeling a Context from Data', 'url' => 'k.php?k-math-m5-b-3'],
+                    ['id' => 'k-math-m5-b-4', 'code' => 'K.M5.B.4', 'name' => 'Modeling a Context from Data', 'url' => 'k.php?k-math-m5-b-4'],
+                    ['id' => 'k-math-m5-b-5', 'code' => 'K.M5.B.5', 'name' => 'Modeling a Context from a Verbal Description', 'url' => 'k.php?k-math-m5-b-5'],
+                    ['id' => 'k-math-m5-b-6', 'code' => 'K.M5.B.6', 'name' => 'Modeling a Context from a Verbal Description', 'url' => 'k.php?k-math-m5-b-6']
                 ]
             ]
         ]

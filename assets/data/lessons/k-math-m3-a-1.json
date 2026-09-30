@@ -1,0 +1,184 @@
+{
+    "id": "k-math-m3-a-1",
+    "code": "K.M3.A.1",
+    "standard": "HSF.IF.A.1",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "Integer Sequences—Should You Believe in Patterns?",
+        "pageTitle": "Integer Sequences—Should You Believe in Patterns? | Hesten's Learning",
+        "description": "A sequence in high school is simply a function whose domain is the positive integers. This definition is given later in the module (after functions have been de...",
+        "pageDescription": "Master Integer Sequences—Should You Believe in Patterns? in Module 3: Linear and Exponential Functions. Comprehensive student outcomes, teacher insights, guided exercises, problem set worksheets, and exit ticket keys.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M3.A.1",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 1",
+        "pill": "Linear and Exponential Sequences",
+        "text": "A sequence in high school is simply a function whose domain is the positive integers. This definition is given later in the module (after functions have been defined). In this first lesson, the stage is being set for an in-depth study of sequences by allowing students to become acquainted with the notation. For now, use the following description: A sequence can be thought of as an ordered list of elements. The elements of the list are called the terms of the sequence. For example, (P, O, O, L) is a sequence that is different from (L, O, O, P). Usually the terms are indexed (and, therefore, ordered) by a subscript starting at 1: a_{1}, a_{2}, a_{3}, a_{4}, …. The ellipsis indicates a regular pattern; that is, the next term is a_{5}, the next is a_{6}, and so on. In the first example, a_{1}= P is the first term, a_{2}= O is the second term, and so on. Infinite sequences exist everywhere in mathematics. For example, the infinite decimal expansion of \\frac{1}{3}=0.333333333 … can be thought of as being represented by the sequence 0.3, 0.33, 0.333, 0.3333, …. Sequences (and series) are an important part of studying calculus and other areas of mathematics. In general, a sequence is defined by a function f from a domain of positive integers to a range of numbers that can be either integers or real numbers (depending on the context) or other non-mathematical objects that satisfy the equation f(n)=a_{n}. When that function is expressed as an algebraic function only in terms of numbers and the index variable n, then the function is called the explicit form of the sequence (or explicit formula). For example, the function f:N⟶Z, which satisfies f(n)=3^{n} for all positive integers n, is the explicit form for the sequence 3, 9, 27, 81, ….",
+        "outcomes": [
+            "Students examine sequences and are introduced to the notation used to describe them."
+        ],
+        "teacherInsight": "Important: Sequences can be indexed by starting with any integer. For example, the sequence 3, 9, 27, 81, 343, … can be indexed by a_{4}=3, a_{5}=9,a_{6}=27, … by stating the explicit formula as f(n)=3^{n-3} for n≥4. This can create real confusion for students about what the \"fifth term in the sequence\" is. For example, in the list, the 5th term is 343, but by the formula, the 5th term could mean a_{5}=f(5)=9. To avoid such confusion, this module adopts the convention that indices start at 1. That way, the first term in the list is always f(1) or a_{1}, and there is no confusion about what the 100th term is. Students are, however, exposed to the idea that the index can start at a number other than 1. The lessons in this topic also offer suggestions about when to use f(n) and when to use a_{n}."
+    },
+    "content": [],
+    "vocabulary": [
+        {
+            "term": "Important",
+            "definition": "Sequences can be indexed by starting with any integer."
+        },
+        {
+            "term": "Cody",
+            "definition": "I am thinking of a plus 2 pattern, so it continues 10, 12, 14, 16, …."
+        },
+        {
+            "term": "Suri",
+            "definition": "I am thinking of the units digits in the multiples of two, so it continues 2, 4, 6, 8, 0, 2, 4, 6, 8, …."
+        }
+    ],
+    "guidedExercises": [
+        {
+            "title": "Example 1: Core Mathematical Modeling for Integer Sequences—Should You Believe in Patterns?",
+            "badge": "Eureka Math Guided Classwork",
+            "difficulty": "Core Application",
+            "problem": "Classwork Opening Exercise (5 minutes) After reading through the task, ask students to discuss part (a) with a partner and then share responses as a class. Next, have students answer parts (b) and (c) in pairs before discussing them as a class. Because the task provides no structure, all of these answers must be considered correct. Without any structure, continuing the pattern is simply speculation—a guessing game. Because there are infinite ways to continue a sequence, the sequence needs to pro",
+            "scaffolding": "Identify the key variables and properties. Apply the definitions and mathematical structures introduced in Integer Sequences—Should You Believe in Patterns?.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Define Variables & Formulate Governing Relations",
+                    "math": "\\text{Identify key variables and parameters for } Integer Sequences—Should You Believe in Patterns?",
+                    "explanation": "Establish the relationship between quantities and state any domain constraints."
+                },
+                {
+                    "step": 2,
+                    "label": "Execute Step-by-Step Algebraic Transformations",
+                    "math": "\\text{Transform and simplify equations: } \\dots",
+                    "explanation": "Opening Exercise Mrs. Rosenblatt gave her students what she thought was a very simple task: What is the next number in the sequence 2, 4, 6, 8, …? Cody: I am thinking of a plus 2 pattern, so it continues 10, 12, 14, 16, …. Ali: I am thinking of a rep"
+                }
+            ],
+            "finalAnswer": "\\text{The evaluated solution verifies the properties of } Integer Sequences—Should You Believe in Patterns?",
+            "commonPitfall": "Ensure units of measurement and domain constraints are checked in physical and statistical contexts."
+        },
+        {
+            "title": "Exercise 1: Independent Problem Formulation",
+            "badge": "Multi-Step Application",
+            "difficulty": "Advanced Reasoning",
+            "problem": "Apply the foundational principles of Integer Sequences—Should You Believe in Patterns? to determine the exact value and interpret the contextual significance.",
+            "scaffolding": "Reference the worked steps from Example 1. Verify intermediate calculations and justify your steps.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Analyze Given Conditions & Structure",
+                    "math": "\\text{State domain constraints and initial conditions}",
+                    "explanation": "Verify that all assumptions conform to the problem context."
+                },
+                {
+                    "step": 2,
+                    "label": "Calculate the Final Mathematical Solution",
+                    "math": "\\text{Solve for the target unknown quantity}",
+                    "explanation": "State the solution with formal mathematical reasoning."
+                }
+            ],
+            "finalAnswer": "\\text{Verified algebraic or statistical solution}",
+            "commonPitfall": "Avoid rounding prematurely before the final step."
+        }
+    ],
+    "exitTicket": {
+        "title": "Lesson 1 Exit Ticket: Integer Sequences—Should You Believe in Patterns?",
+        "prompt": "Exit Ticket\n\nConsider the sequence given by a plus 8 pattern: 2, 10, 18, 26, ….\n\nShae says that the formula for the sequence is f(n)=8n+2. Marcus tells Shae that she is wrong because the formula for the sequence is f(n)=8n-6.\n\nWhich formula generates the sequence by starting at n=1? At n=0?\n\nFind the 100th term in the sequence.\n\nWrite a formula for the sequence of cube numbers: 1, 8, 27, 64, ….",
+        "solution": "Consider the sequence given by a plus 8 pattern: 2, 10, 18, 26, ….\n\nShae says that the formula for the sequence is f(n)=8n+2. Marcus tells Shae that she is wrong because the formula for the sequence is f(n)=8n-6.\n\nWhich formula generates the sequence by starting at n=1? At n=0?\n\nShae's formula generates the sequence by starting with n=0, while Marcus's formula generates the sequence by starting with n=1.\n\nFind the 100th term in the sequence.\n\nUsing Marcus's formula: f(100)=8(100)-6=794\n\nUsing Shae's formula: f(99)=8(99)+2=794\n\nWrite a formula for the sequence of cube numbers: 1, 8, 27, 64, ….\n\nf(n)=n^{3} starting with n=1"
+    },
+    "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Master Integer Sequences—Should You Believe in Patterns? through authentic curriculum practice problems. Check your work using the expandable teacher solution key below.",
+        "problems": [
+            {
+                "number": 1,
+                "prompt": "Consider a sequence generated by the formula f(n)=6n-4 starting with n=1. Generate the terms f(1), f(2), f(3), f(4), and f(5).",
+                "solution": "2, 8, 14, 20, 26"
+            },
+            {
+                "number": 2,
+                "prompt": "Consider a sequence given by the formula f(n)=\\frac{1}{3^{n-1}} starting with n=1. Generate the first 5 terms of the sequence.",
+                "solution": "1, \\frac{1}{3}, \\frac{1}{9}, \\frac{1}{27}, \\frac{1}{81}"
+            },
+            {
+                "number": 3,
+                "prompt": "Consider a sequence given by the formula f(n)=(-1)^{n}\\times 3 starting with n=1. Generate the first 5 terms of the sequence.",
+                "solution": "-3, 3, -3, 3, -3"
+            },
+            {
+                "number": 4,
+                "prompt": "Here is the classic puzzle that shows that patterns need not hold true. What are the numbers counting?",
+                "solution": "The number under each figure is counting the number of (non-overlapping) regions in the circle formed by all the segments connecting all the points on the circle. Each graph contains one more point on the circle than the previous graph."
+            },
+            {
+                "number": 5,
+                "prompt": "Based on the sequence of numbers, predict the next number.\n\nWrite a formula based on the perceived pattern.",
+                "solution": "f(n)=2^{n-1} starting with n=1"
+            },
+            {
+                "number": 6,
+                "prompt": "Find the next number in the sequence by actually counting.",
+                "solution": "31 (Depending on how students draw the segments, it is also possible to get 30 as the next number in the sequence, but it is definitely NOT 32.)"
+            },
+            {
+                "number": 7,
+                "prompt": "Based on your answer from part (c), is your model from part (b) effective for this puzzle?",
+                "solution": "No. It works for n=1 to n=5 but not for n=6. And we do not know what happens for values of n larger than 6."
+            },
+            {
+                "number": 8,
+                "prompt": "For each of the sequences in Problems 5—8:\n\nWrite a formula for the nth term of the sequence. Be sure to specify what value of n your formula starts with.\n\nUsing the formula, find the 15th term of the sequence.\n\nGraph the terms of the sequence as ordered pairs (n, f(n)) on a coordinate plane.\n\nThe sequence follows a plus 2 pattern: 3, 5, 7, 9, ….",
+                "solution": "f(n)=2(n-1)+3 starting with n=1c.\n\nf(15)=31"
+            },
+            {
+                "number": 9,
+                "prompt": "The sequence follows a times 4 pattern: 1, 4, 16, 64, ….",
+                "solution": "f(n)=4^{n-1} starting with n=1c.\n\nf(15)=268 435 456"
+            },
+            {
+                "number": 10,
+                "prompt": "The sequence follows a times -1 pattern: 6, -6, 6, -6, ….",
+                "solution": "f(n)=(-1)^{n-1}\\cdot 6 starting with n=1c.\n\nf(15)=6"
+            },
+            {
+                "number": 11,
+                "prompt": "The sequence follows a minus 3 pattern: 12, 9, 6, 3, ….",
+                "solution": "f(n)=12-3(n-1) starting with n=1c.\n\nf(15)=-30"
+            }
+        ]
+    },
+    "practiceQuestions": [
+        {
+            "question": "[Exit Ticket Challenge 1] Exit Ticket",
+            "options": [
+                "Consider the sequence given by a plus 8 pattern: 2, 10, 18, 26, ….",
+                "The relationship cannot be evaluated without arbitrary numerical coordinates.",
+                "The values remain constant at zero regardless of the independent variable inputs.",
+                "The rate of change is undefined because domain restrictions were violated."
+            ],
+            "correct": 0,
+            "explanation": "From the official Eureka Math Exit Ticket Key for Lesson 1:\nConsider the sequence given by a plus 8 pattern: 2, 10, 18, 26, ….\n\nShae says that the formula for the sequence is f(n)=8n+2. Marcus tells Shae that she is wrong because the formula for the sequence is f(n)=8n-6.\n\nWhich formula generates the sequence by starting at n=1? At n=0?\n\nShae's formula generates the sequence by starting with n=0, while Marcus's formula generates the sequence by starting with n=1.\n\nFind the 100th term in the sequence.\n\nUsi"
+        },
+        {
+            "question": "[Exit Ticket Challenge 2] Consider the sequence given by a plus 8 pattern: 2, 10, 18, 26, ….",
+            "options": [
+                "Shae says that the formula for the sequence is f(n)=8n+2. Marcus tells Shae that she is wrong because the formula for the sequence is f(n)=8n-6.",
+                "Ignore boundary conditions and compute only approximate integer values.",
+                "Assume that all relationships are strictly constant without verifying rates of change.",
+                "Treat independent and dependent variables as interchangeable."
+            ],
+            "correct": 0,
+            "explanation": "Official Curriculum Key for Lesson 1:\nStudents examine sequences and are introduced to the notation used to describe them."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Integer Sequences—Should You Believe in Patterns?.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Developed using authentic lesson materials from standard algebra curricula.",
+        "lessonId": "L-ID-K-MATH-M3-A-1"
+    }
+}

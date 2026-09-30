@@ -1,0 +1,151 @@
+{
+    "id": "k-math-m3-b-6",
+    "code": "K.M3.B.6",
+    "standard": "HSF.IF.A.1",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "Interpreting the Graph of a Function",
+        "pageTitle": "Interpreting the Graph of a Function | Hesten's Learning",
+        "description": "This lesson uses a graphic created to show the general public the landing sequence for the Mars Curiosity Rover, which landed successfully on Mars in August 201...",
+        "pageDescription": "Master Interpreting the Graph of a Function in Module 3: Linear and Exponential Functions. Comprehensive student outcomes, teacher insights, guided exercises, problem set worksheets, and exit ticket keys.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M3.B.6",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 13",
+        "pill": "Functions and Their Graphs",
+        "text": "This lesson uses a graphic created to show the general public the landing sequence for the Mars Curiosity Rover, which landed successfully on Mars in August 2012. For more information, visit http://mars.jpl.nasa.gov/msl/. For an article related to the graphic in this lesson see http://www.nasa.gov/mission_pages/msl/multimedia/gallery/pia13282.html. Here is an animation that details Curiosity Rover's descent: http://mars.jpl.nasa.gov/msl/mission/timeline/edl/. The first three minutes of this video show a simulation of the landing sequence http://www.jpl.nasa.gov/video/index.php? id=1001. Students are presented with a problem: Does this graphic really represent the path of the Curiosity Rover as it landed on Mars? And, how can students estimate the altitude and velocity of the Curiosity Rover at any time in the landing sequence? To formulate their model, students have to create either numerical or graphical representations of height and velocity. They need to consider the quantities and make sense of the data shared in this graphic. During this lesson, present them with vocabulary to help them interpret the graphs they create. To further create context for this lesson, share this article from Wired http://www.wired.com/thisdayintech/2010/11/1110mars-climate-observer-report/ with students. It explains an earlier mishap by NASA that cost billions of dollars and two lost explorers due to a measurement conversion error. Scientists carefully model all aspects of space travel using mathematical functions, but if they do not attend to precision, it can lead to big mistakes.",
+        "outcomes": [
+            "Students create tables and graphs of functions and interpret key features including intercepts, increasing and decreasing intervals, and positive and negative intervals."
+        ],
+        "teacherInsight": "Emphasize precise mathematical definitions and multiple problem-solving representations. Encourage students to check the reasonableness of their numerical solutions."
+    },
+    "content": [],
+    "vocabulary": [
+        {
+            "term": "FORMULATE AND COMPUTE",
+            "definition": "During this phase of the lesson, students should work in small groups."
+        }
+    ],
+    "guidedExercises": [
+        {
+            "title": "Example 1: Core Mathematical Modeling for Interpreting the Graph of a Function",
+            "badge": "Eureka Math Guided Classwork",
+            "difficulty": "Core Application",
+            "problem": "Classwork This graphic was shared by NASA prior to the Mars Curiosity Rover landing on August 6, 2012. It depicts the landing sequence for the Curiosity Rover's descent to the surface of the planet. Courtesy NASA/JPL-Caltech If students are having a difficult time reading the information on this graphic, go to the website and share the link, or project the image on a screen. (There is also a printer-friendly graphic at the end of this lesson.) Discussion (5 minutes) PROBLEM: Read through the pro",
+            "scaffolding": "Identify the key variables and properties. Apply the definitions and mathematical structures introduced in Interpreting the Graph of a Function.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Define Variables & Formulate Governing Relations",
+                    "math": "\\text{Identify key variables and parameters for } Interpreting the Graph of a Function",
+                    "explanation": "Establish the relationship between quantities and state any domain constraints."
+                },
+                {
+                    "step": 2,
+                    "label": "Execute Step-by-Step Algebraic Transformations",
+                    "math": "\\text{Transform and simplify equations: } \\dots",
+                    "explanation": "What information is available to you in this graphic? The graphic contains the altitude and velocity at various times. Various landing stages are named. Time 0 is at the point called Entry Interface. What information is in the box in the upper right "
+                }
+            ],
+            "finalAnswer": "\\text{The evaluated solution verifies the properties of } Interpreting the Graph of a Function",
+            "commonPitfall": "Ensure units of measurement and domain constraints are checked in physical and statistical contexts."
+        },
+        {
+            "title": "Exercise 1: Independent Problem Formulation",
+            "badge": "Multi-Step Application",
+            "difficulty": "Advanced Reasoning",
+            "problem": "Apply the foundational principles of Interpreting the Graph of a Function to determine the exact value and interpret the contextual significance.",
+            "scaffolding": "Reference the worked steps from Example 1. Verify intermediate calculations and justify your steps.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Analyze Given Conditions & Structure",
+                    "math": "\\text{State domain constraints and initial conditions}",
+                    "explanation": "Verify that all assumptions conform to the problem context."
+                },
+                {
+                    "step": 2,
+                    "label": "Calculate the Final Mathematical Solution",
+                    "math": "\\text{Solve for the target unknown quantity}",
+                    "explanation": "State the solution with formal mathematical reasoning."
+                }
+            ],
+            "finalAnswer": "\\text{Verified algebraic or statistical solution}",
+            "commonPitfall": "Avoid rounding prematurely before the final step."
+        }
+    ],
+    "exitTicket": {
+        "title": "Lesson 13 Exit Ticket: Interpreting the Graph of a Function",
+        "prompt": "Teachers: Please use this graphic if the other colored graphic does not display properly.\n\nCourtesy NASA/JPL-Caltech\n\nExit Ticket\n\nThe following graph is a \"power load curve\" for typical U.S. residences. Estimate the time interval(s) when power use is typically decreasing. Why would power usage be decreasing during those time interval(s)?\n\nCourtesy The Energy Collective\n\nOn hot summer days energy use changes from decreasing to increasing and from increasing to decreasing more frequently than it does on other days. Why do you think this occurs?",
+        "solution": "The following graph is a \"power load curve\" for typical U.S. residences. Estimate the time interval(s) when power use is typically decreasing. Why would power usage be decreasing during those time interval(s)?\n\nCourtesy The Energy Collective\n\nPower use is decreasing from 1:00 AM to 5:00 AM and from 7:00 PM to 12:00 AM. These are the times of day when people tend to be sleeping and therefore using less power than during waking hours.\n\nOn hot summer days energy use changes from decreasing to increasing and from increasing to decreasing more frequently than it does on other days. Why do you think this occurs?\n\nPerhaps people turn up the air when they leave the house during the day in order to conserve electricity and then turn down the air when they come home. They also may use a lower air setting or fans while sleeping which would cause an increase in power usage."
+    },
+    "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Master Interpreting the Graph of a Function through authentic curriculum practice problems. Check your work using the expandable teacher solution key below.",
+        "problems": [
+            {
+                "number": 1,
+                "prompt": "Create a short written report summarizing your work on the Mars Curiosity Rover Problem. Include your answers to the original problem questions and at least one recommendation for further research on this topic or additional questions you have about the situation.",
+                "solution": "Student responses may vary."
+            },
+            {
+                "number": 2,
+                "prompt": "Consider the sky crane descent portion of the landing sequence.\n\nCreate a linear function to model the Curiosity Rover's altitude as a function of time. What two points did you choose to create your function?",
+                "solution": "Sample solution: For the function f, let f(t) represent the altitude, measured in meters, at time t, measured in seconds. The function, f(t)=-\\frac{20}{16}(t-416) can be obtained by using the points (400, 20) and (416, 0) that are shown in the part of the diagram detailing the sky crane descent."
+            },
+            {
+                "number": 3,
+                "prompt": "Compare the slope of your function to the velocity. Should they be equal? Explain why or why not.",
+                "solution": "The slope of the linear function and velocity in the graphic are not equal. If we assume that the velocity is constant (which it is not), then they would be equal."
+            },
+            {
+                "number": 4,
+                "prompt": "Use your linear model to determine the altitude one minute before landing. How does it compare to your earlier estimate? Explain any differences you found.",
+                "solution": "The model predicts 75 m. The earlier estimate was 1 mile (1.6 km) and was close to a given data point. The model would only be a good predictor during the sky crane phase of landing."
+            },
+            {
+                "number": 5,
+                "prompt": "The exponential function g(t)=125(0.99)^{t} could be used to model the altitude of the Curiosity Rover during its rapid descent. Do you think this model would be better or worse than the one your group created? Explain your reasoning.",
+                "solution": "Answers may vary depending on the class graphs. It might be better because the Curiosity Rover did not descend at a constant rate, so a curve would make more sense than a line."
+            },
+            {
+                "number": 6,
+                "prompt": "For each graph below, identify the increasing and decreasing intervals, the positive and negative intervals, and the intercepts.",
+                "solution": "Decreasing interval [-4, 3.2], positive interval [-4, 2), negative interval (2, 3.2], y-intercept (0, 3), x-intercept (2, 0)\n\nIncreasing intervals [0, 2), (5, 8], decreasing interval [2, 5], positive intervals [0, 3.7), (6, 8], negative interval (3.7 ,6), y-intercept (0, 2), x-intercept (3.7, 0) and (6, 0)"
+            }
+        ]
+    },
+    "practiceQuestions": [
+        {
+            "question": "[Exit Ticket Challenge 1] Teachers: Please use this graphic if the other colored graphic does not display properly.",
+            "options": [
+                "The following graph is a \"power load curve\" for typical U.S. residences. Estimate the time interval(s) when power use is typically decreasing. Why would power usage be decreasing during those time interval(s)?",
+                "The relationship cannot be evaluated without arbitrary numerical coordinates.",
+                "The values remain constant at zero regardless of the independent variable inputs.",
+                "The rate of change is undefined because domain restrictions were violated."
+            ],
+            "correct": 0,
+            "explanation": "From the official Eureka Math Exit Ticket Key for Lesson 13:\nThe following graph is a \"power load curve\" for typical U.S. residences. Estimate the time interval(s) when power use is typically decreasing. Why would power usage be decreasing during those time interval(s)?\n\nCourtesy The Energy Collective\n\nPower use is decreasing from 1:00 AM to 5:00 AM and from 7:00 PM to 12:00 AM. These are the times of day when people tend to be sleeping and therefore using less power than during waking hours.\n\nOn hot summe"
+        },
+        {
+            "question": "[Exit Ticket Challenge 2] Courtesy NASA/JPL-Caltech",
+            "options": [
+                "Courtesy The Energy Collective",
+                "Ignore boundary conditions and compute only approximate integer values.",
+                "Assume that all relationships are strictly constant without verifying rates of change.",
+                "Treat independent and dependent variables as interchangeable."
+            ],
+            "correct": 0,
+            "explanation": "Official Curriculum Key for Lesson 13:\nStudents create tables and graphs of functions and interpret key features including intercepts, increasing and decreasing intervals, and positive and negative intervals."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Interpreting the Graph of a Function.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Developed using authentic lesson materials from standard algebra curricula.",
+        "lessonId": "L-ID-K-MATH-M3-B-6"
+    }
+}

@@ -1,0 +1,177 @@
+{
+    "id": "k-math-m4-a-8",
+    "code": "K.M4.A.8",
+    "standard": "HSA.SSE.A.1",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "Exploring the Symmetry in Graphs of Quadratic Functions",
+        "pageTitle": "Exploring the Symmetry in Graphs of Quadratic Functions | Hesten's Learning",
+        "description": "F-IF.B.4 and F-IF.B.7a are central to the concepts in this lesson as students recognize the symmetry of the graph of a quadratic equation and sketch their graph...",
+        "pageDescription": "Master Exploring the Symmetry in Graphs of Quadratic Functions in Module 4: Polynomial and Quadratic Expressions, Equations, and Functions. Comprehensive student outcomes, teacher insights, guided exercises, problem set worksheets, and exit ticket keys.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M4.A.8",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 8",
+        "pill": "Quadratic Expressions, Equations, and Functions",
+        "text": "F-IF.B.4 and F-IF.B.7a are central to the concepts in this lesson as students recognize the symmetry of the graph of a quadratic equation and sketch their graphs as a symmetric curve with a highest or lowest point corresponding to its vertex (a maximum or minimum value of the function) and the axis of symmetry passing through the vertex. This lesson is an exploration focusing on the symmetric nature of quadratic functions and their graphs and the interpretation of the key features.",
+        "outcomes": [
+            "Students examine quadratic equations in two variables represented graphically on a coordinate plane and recognize the symmetry of the graph. They explore key features of graphs of quadratic functions: y-intercept and x-intercept, the vertex, the axis of symmetry, increasing and decreasing intervals, negative and positive intervals, and end behavior. They sketch graphs of quadratic functions as a symmetric curve with a highest or lowest point corresponding to its vertex and an axis of symmetry passing through the vertex."
+        ],
+        "teacherInsight": "Emphasize precise mathematical definitions and multiple problem-solving representations. Encourage students to check the reasonableness of their numerical solutions."
+    },
+    "content": [],
+    "vocabulary": [
+        {
+            "term": "Vertex",
+            "definition": "The point where the graph of a quadratic function and its axis of symmetry intersect is called the vertex."
+        },
+        {
+            "term": "End behavior of a graph",
+            "definition": "Given a quadratic function in the form f(x)=ax^{2}+bx+c (or f(x)=a(x-h)^{2}+k), the quadratic function is said to open up if a>0 and open down if a<0."
+        },
+        {
+            "term": "End behavior",
+            "definition": "This graph of a quadratic function opens up."
+        },
+        {
+            "term": "End behavior",
+            "definition": "This graph of a quadratic function opens up."
+        },
+        {
+            "term": "IMPORTANT",
+            "definition": "In the interest of full disclosure, many of the photographs in Exploratory Challenge 1 cannot actually be modeled with a quadratic function but rather are catenary curves."
+        }
+    ],
+    "guidedExercises": [
+        {
+            "title": "Example 1: Core Mathematical Modeling for Exploring the Symmetry in Graphs of Quadratic Functions",
+            "badge": "Eureka Math Guided Classwork",
+            "difficulty": "Core Application",
+            "problem": "Classwork Opening (4 minutes): Graph Vocabulary Introduce the following terms, and discuss their meanings. Demonstrate these features on a projection of one of the photographs or on a graph that is either sketched or projected onto the screen. If students keep a journal, have them put these terms in their vocabulary section. Graph Vocabulary Axis of symmetry: Given a quadratic function in standard form, f(x)=ax^{2}+bx+c, the vertical line given by the graph of the equation x=-\\frac{b}{2a} is cal",
+            "scaffolding": "Identify the key variables and properties. Apply the definitions and mathematical structures introduced in Exploring the Symmetry in Graphs of Quadratic Functions.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Define Variables & Formulate Governing Relations",
+                    "math": "\\text{Identify key variables and parameters for } Exploring the Symmetry in Graphs of Quadratic Functions",
+                    "explanation": "Establish the relationship between quantities and state any domain constraints."
+                },
+                {
+                    "step": 2,
+                    "label": "Execute Step-by-Step Algebraic Transformations",
+                    "math": "\\text{Transform and simplify equations: } \\dots",
+                    "explanation": "End behavior of a graph: Given a quadratic function in the form f(x)=ax^{2}+bx+c (or f(x)=a(x-h)^{2}+k), the quadratic function is said to open up if a>0 and open down if a<0. If a>0, then f has a minimum at the x-coordinate of the vertex; that is, f"
+                }
+            ],
+            "finalAnswer": "\\text{The evaluated solution verifies the properties of } Exploring the Symmetry in Graphs of Quadratic Functions",
+            "commonPitfall": "Ensure units of measurement and domain constraints are checked in physical and statistical contexts."
+        },
+        {
+            "title": "Exercise 1: Independent Problem Formulation",
+            "badge": "Multi-Step Application",
+            "difficulty": "Advanced Reasoning",
+            "problem": "Apply the foundational principles of Exploring the Symmetry in Graphs of Quadratic Functions to determine the exact value and interpret the contextual significance.",
+            "scaffolding": "Reference the worked steps from Example 1. Verify intermediate calculations and justify your steps.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Analyze Given Conditions & Structure",
+                    "math": "\\text{State domain constraints and initial conditions}",
+                    "explanation": "Verify that all assumptions conform to the problem context."
+                },
+                {
+                    "step": 2,
+                    "label": "Calculate the Final Mathematical Solution",
+                    "math": "\\text{Solve for the target unknown quantity}",
+                    "explanation": "State the solution with formal mathematical reasoning."
+                }
+            ],
+            "finalAnswer": "\\text{Verified algebraic or statistical solution}",
+            "commonPitfall": "Avoid rounding prematurely before the final step."
+        }
+    ],
+    "exitTicket": {
+        "title": "Lesson 8 Exit Ticket: Exploring the Symmetry in Graphs of Quadratic Functions",
+        "prompt": "Exit Ticket\n\nIf possible, find the equation for the axis of symmetry for the graph of a quadratic function with the given pair of coordinates. If not possible, explain why.\n\n(3, 10) (15, 10)\n\n(-2, 6) (6,4)\n\n(4, -2)(2, 0)(8, 6)\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}(4, -2)(2, 0)(8, 6)The point (4, -2) is the vertex of the graph of a quadratic function. The points (8, 6) and (2, 0) also fall on the graph of the function. Complete the graph of this quadratic function by first finding two additional points on the graph. (If needed, make a table of values on your own paper.) Then, answer the questions on the right.\n\nFind the y-intercept. Find the x-intercept(s). Find the interval on which the rate of change is always positive. What is the sign of the leading coefficient for this quadratic function? Explain how you know. Find the y-intercept. Find the x-intercept(s). Find the interval on which the rate of change is always positive. What is the sign of the leading coefficient for this quadratic function? Explain how you know.",
+        "solution": "If possible, find the equation for the axis of symmetry for the graph of a quadratic function with the given pair of coordinates. If not possible, explain why.\n\n(3, 10) (15, 10)\n\nEven though the coordinate values are not x-intercepts, students can use the symmetric nature of the function to find that the equation of the axis of symmetry goes through the midpoint joining the two x-coordinates of the symmetric points, or the average of the values of the two coordinates:\n\nx=\\frac{3 + 15}{2}=\\frac{18}{2}=9. So, x=9 is the equation for the axis of symmetry.\n\n(-2, 6) (6, 4)\n\nThe given coordinates are not symmetric values; therefore, we cannot find the equation of the axis of symmetry.\n\nThe point (4, -2) is the vertex of the graph of a quadratic function. The points (8, 6) and (2, 0) also fall on the graph of the function. Complete the graph of this quadratic function by first finding two additional points on the graph. (If needed, make a table of values on your own paper.) Then, answer the questions on the right.\n\nFind the y-intercept. (0, 6)Find the x-intercept(s). (2, 0) (6, 0)Find the interval on which the rate of change is always positive. (4, ∞) or x>4 What is the sign of the leading coefficient for this quadratic function? Explain how you know. Positive. Since the vertex is the minimum value of the graph (opens upward), the leading coefficient is positive.Find the y-intercept. (0, 6)Find the x-intercept(s). (2, 0) (6, 0)Find the interval on which the rate of change is always positive. (4, ∞) or x>4 What is the sign of the leading coefficient for this quadratic function? Explain how you know. Positive. Since the vertex is the minimum value of the graph (opens upward), the leading coefficient is positive.\n\n(8, 6)(4, —2)(2, 0)(8, 6)(4, —2)(2, 0)"
+    },
+    "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Master Exploring the Symmetry in Graphs of Quadratic Functions through authentic curriculum practice problems. Check your work using the expandable teacher solution key below.",
+        "problems": [
+            {
+                "number": 1,
+                "prompt": "Khaya stated that every y-value of the graph of a quadratic function has two different x-values. Do you agree or disagree with Khaya? Explain your answer.",
+                "solution": "The graph of a quadratic function has two different x-values for each y-value except at the vertex where there is only one."
+            },
+            {
+                "number": 2,
+                "prompt": "Is it possible for the graphs of two different quadratic functions to each have x=-3 as its line of symmetry and both have a maximum at y=5? Explain and support your answer with a sketch of the graphs.",
+                "solution": "Students should sketch two graphs with vertex at (-3, 5) and different x-intercepts."
+            },
+            {
+                "number": 3,
+                "prompt": "Graph AGraph BGraph CGraph D\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}Graph AGraph BGraph CGraph DConsider the following key features discussed in this lesson for the four graphs of quadratic functions below: x-intercepts, y-intercept, line of symmetry, vertex, and end behavior.",
+                "solution": "Graph AGraph BGraph CGraph DGraph AGraph BGraph CGraph D"
+            },
+            {
+                "number": 4,
+                "prompt": "Which key features of a quadratic function do graphs A and B have in common? Which features are not shared?",
+                "solution": "Same—line of symmetry.\n\nDifferent—vertex, y-intercept, x-intercepts, and end behavior."
+            },
+            {
+                "number": 5,
+                "prompt": "Compare graphs A and C, and explain the differences and similarities between their key features.",
+                "solution": "Same—line of symmetry, vertex, x-intercepts, y-intercept, and end behavior.\n\nDifferent—none, Graphs A and C are the same. The images of the graphs are cropped differently, so it may appear that the two are different."
+            },
+            {
+                "number": 6,
+                "prompt": "Compare graphs A and D, and explain the differences and similarities between their key features.",
+                "solution": "Same—line of symmetry and vertex\n\nDifferent—x-intercepts (point out that Graph D does not have x-intercepts), y-intercept, and end behavior."
+            },
+            {
+                "number": 7,
+                "prompt": " (0, 5) (2,- 3) (1, 3) (0, 5) (2,- 3) (1, 3)What do all four of the graphs have in common?",
+                "solution": "All four graphs have the same line of symmetry."
+            },
+            {
+                "number": 8,
+                "prompt": "Use the symmetric properties of quadratic functions to sketch the graph of the function below, given these points and given that the vertex of the graph is the point (0, 5).",
+                "solution": "Solution: Solution:\n\n (0, 5) (2,—3) (1, 3) (0, 5) (2,—3) (1, 3)"
+            }
+        ]
+    },
+    "practiceQuestions": [
+        {
+            "question": "[Exit Ticket Challenge 1] Exit Ticket",
+            "options": [
+                "If possible, find the equation for the axis of symmetry for the graph of a quadratic function with the given pair of coordinates. If not possible, explain why.",
+                "The relationship cannot be evaluated without arbitrary numerical coordinates.",
+                "The values remain constant at zero regardless of the independent variable inputs.",
+                "The rate of change is undefined because domain restrictions were violated."
+            ],
+            "correct": 0,
+            "explanation": "From the official Eureka Math Exit Ticket Key for Lesson 8:\nIf possible, find the equation for the axis of symmetry for the graph of a quadratic function with the given pair of coordinates. If not possible, explain why.\n\n(3, 10) (15, 10)\n\nEven though the coordinate values are not x-intercepts, students can use the symmetric nature of the function to find that the equation of the axis of symmetry goes through the midpoint joining the two x-coordinates of the symmetric points, or the average of the values o"
+        },
+        {
+            "question": "[Exit Ticket Challenge 2] If possible, find the equation for the axis of symmetry for the graph of a quadratic function with the given pair of coordinates. If not possible, explain why.",
+            "options": [
+                "(3, 10) (15, 10)",
+                "Ignore boundary conditions and compute only approximate integer values.",
+                "Assume that all relationships are strictly constant without verifying rates of change.",
+                "Treat independent and dependent variables as interchangeable."
+            ],
+            "correct": 0,
+            "explanation": "Official Curriculum Key for Lesson 8:\nStudents examine quadratic equations in two variables represented graphically on a coordinate plane and recognize the symmetry of the graph. They explore key features of graphs of quadratic functions: y-intercept and x-intercept, the vertex, the axis of symmetry, increasing and decreasing intervals, negative and positive intervals, and end behavior. They sketch graphs of quadratic functions as a symmetric curve with a highest or lowest point corresponding to its vertex and an axis of symmetry passing through the vertex."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Exploring the Symmetry in Graphs of Quadratic Functions.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Developed using authentic lesson materials from standard algebra curricula.",
+        "lessonId": "L-ID-K-MATH-M4-A-8"
+    }
+}

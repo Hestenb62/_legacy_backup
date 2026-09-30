@@ -1,0 +1,172 @@
+{
+    "id": "k-math-m2-c-3",
+    "code": "K.M2.C.3",
+    "standard": "HSS.ID.B.5",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "Conditional Relative Frequencies and Association",
+        "pageTitle": "Conditional Relative Frequencies and Association | Hesten's Learning",
+        "description": "Students continue the analysis of the bivariate categorical data that they began in Lessons 9 and 10. Lesson 9 summarized the data in a two-way frequency table....",
+        "pageDescription": "Master Conditional Relative Frequencies and Association in Module 2: Descriptive Statistics. Comprehensive student outcomes, teacher insights, guided exercises, problem set worksheets, and exit ticket keys.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M2.C.3",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 11",
+        "pill": "Categorical Data on Two Variables",
+        "text": "Students continue the analysis of the bivariate categorical data that they began in Lessons 9 and 10. Lesson 9 summarized the data in a two-way frequency table. Relative frequencies were then introduced in Lesson 10. In each case, however, the question posed about whether there is a difference in the favorite superpower responses of males and females remains unclear. This lesson develops and interprets conditional relative frequencies to answer the statistical question posed in the previous lessons. Students familiar with two-way tables from Grade 8 move through these questions within the suggested time frame. Students not as familiar with this work may need more time to complete these exercises. The focus of this lesson is conditional relative frequencies and how they indicate a possible association. Definitions of conditional relative frequencies and association are provided in this lesson. Differences in conditional relative frequencies are used as evidence of possible association. Instructors should challenge students to think critically about the meaning of an association between two categorical variables and to be careful not to draw unwarranted conclusions about possible cause-and-effect relationships between two categorical variables. The last example and exercise discuss the issue of cause-and-effect.",
+        "outcomes": [
+            "Students calculate and interpret conditional relative frequencies from two-way frequency tables.",
+            "Students evaluate conditional relative frequencies as an indication of possible association between two variables.",
+            "Students explain why association does not imply causation."
+        ],
+        "teacherInsight": "Emphasize precise mathematical definitions and multiple problem-solving representations. Encourage students to check the reasonableness of their numerical solutions."
+    },
+    "content": [],
+    "vocabulary": [
+        {
+            "term": "Conditional Relative Frequencies and Association",
+            "definition": "Core mathematical concept established in Module 2: Descriptive Statistics, Categorical Data on Two Variables."
+        },
+        {
+            "term": "Mathematical Modeling",
+            "definition": "The process of choosing and using appropriate mathematics and statistics to analyze empirical situations, to understand them better, and to improve decisions."
+        }
+    ],
+    "guidedExercises": [
+        {
+            "title": "Example 1: Core Mathematical Modeling for Conditional Relative Frequencies and Association",
+            "badge": "Eureka Math Guided Classwork",
+            "difficulty": "Core Application",
+            "problem": "Classwork After further discussion, the students involved in designing the superhero comic strip decided that before any decision is made, a more careful look at the data on the special powers a superhero character could possess was needed. There is an association between gender and superpower response if the superpower responses of males are not the same as the superpower responses of females. Examining each row of the table can help determine whether or not there is an association. Exploratory",
+            "scaffolding": "Identify the key variables and properties. Apply the definitions and mathematical structures introduced in Conditional Relative Frequencies and Association.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Define Variables & Formulate Governing Relations",
+                    "math": "\\text{Identify key variables and parameters for } Conditional Relative Frequencies and Association",
+                    "explanation": "Establish the relationship between quantities and state any domain constraints."
+                },
+                {
+                    "step": 2,
+                    "label": "Execute Step-by-Step Algebraic Transformations",
+                    "math": "\\text{Transform and simplify equations: } \\dots",
+                    "explanation": "Let students read through the introductory paragraph and Example 1. Then, discuss the following: How is relative frequency calculated? It is calculated by dividing the frequency by the total observations. How could we determine a relative frequency f"
+                }
+            ],
+            "finalAnswer": "\\text{The evaluated solution verifies the properties of } Conditional Relative Frequencies and Association",
+            "commonPitfall": "Ensure units of measurement and domain constraints are checked in physical and statistical contexts."
+        },
+        {
+            "title": "Exercise 1: Independent Problem Formulation",
+            "badge": "Multi-Step Application",
+            "difficulty": "Advanced Reasoning",
+            "problem": "Apply the foundational principles of Conditional Relative Frequencies and Association to determine the exact value and interpret the contextual significance.",
+            "scaffolding": "Reference the worked steps from Example 1. Verify intermediate calculations and justify your steps.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Analyze Given Conditions & Structure",
+                    "math": "\\text{State domain constraints and initial conditions}",
+                    "explanation": "Verify that all assumptions conform to the problem context."
+                },
+                {
+                    "step": 2,
+                    "label": "Calculate the Final Mathematical Solution",
+                    "math": "\\text{Solve for the target unknown quantity}",
+                    "explanation": "State the solution with formal mathematical reasoning."
+                }
+            ],
+            "finalAnswer": "\\text{Verified algebraic or statistical solution}",
+            "commonPitfall": "Avoid rounding prematurely before the final step."
+        }
+    ],
+    "exitTicket": {
+        "title": "Lesson 11 Exit Ticket: Conditional Relative Frequencies and Association",
+        "prompt": "Exit Ticket\n\nJuniors and seniors were asked if they plan to attend college immediately after graduation, seek full-time employment, or choose some other option. A random sample of 100 students was selected from those who completed the survey. Scott started to calculate the row conditional relative frequencies to the nearest thousandth.\n\nComplete the calculations of the row conditional relative frequencies. Round your answers to the nearest thousandth.\n\nAre the row conditional relative frequencies for juniors and seniors similar, or are they very different?\n\nDo you think there is a possible association between grade level (junior or senior) and after high school plans? Explain your answer.",
+        "solution": "Juniors and seniors were asked if they plan to attend college immediately after graduation, seek full-time employment, or choose some other option. A random sample of 100 students was selected from those who completed the survey. Scott started to calculate the row conditional relative frequencies to the nearest thousandth.\n\nComplete the calculations of the row conditional relative frequencies. Round your answers to the nearest thousandth.\n\nAre the row conditional relative frequencies for juniors and seniors similar, or are they very different?\n\nThe conditional relative frequencies are noticeably different for juniors and seniors.\n\nDo you think there is a possible association between grade level (junior or senior) and after high school plans? Explain your answer.\n\nThe differences in the conditional relative frequencies suggest that there is an association."
+    },
+    "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Master Conditional Relative Frequencies and Association through authentic curriculum practice problems. Check your work using the expandable teacher solution key below.",
+        "problems": [
+            {
+                "number": 1,
+                "prompt": "Consider again the summary of data from the 100 randomly selected students in the Rufus King High School investigation of after-school activities and gender.\n\nConstruct a row conditional relative frequency table for this data. Decimal values are given to the nearest thousandth.\n\nFor what after-school activities do you think the row conditional relative frequencies for females and males are very different? What might explain why males or females select different activities?",
+                "solution": "There are noticeable differences in several of the after-school activity conditional relative frequencies for the two genders, suggesting that there is an association. (The most noticeable differences are in intramural basketball and chess club.) They could be different based on a student's interest in being with friends, having a specific coach, following a popular leader, or participating in a more popular tradition established at the school."
+            },
+            {
+                "number": 2,
+                "prompt": "If John, a male student at Rufus King High School, completed the after-school survey, what would you predict was his response? Explain your answer.",
+                "solution": "50%, or half, of the males indicated they participated in intramural basketball. Since this was the greatest conditional relative frequency for males, you would anticipate that John, a male student, would select this response."
+            },
+            {
+                "number": 3,
+                "prompt": "If Beth, a female student at Rufus King High School, completed the after-school survey, what would you predict was her response? Explain your answer.",
+                "solution": "Females selected intramural basketball or not involved equally often. You would anticipate that Beth, a female student, would select one of these two responses."
+            },
+            {
+                "number": 4,
+                "prompt": "Notice that 20 female students participate in intramural basketball and that 20 male students participate in intramural basketball. Is it accurate to say that females and males are equally involved in intramural basketball? Explain your answer.",
+                "solution": "It is not accurate to say they are equally involved because there are more females in the sample. Thus, the 20 female students who participate in intramural basketball represent one-third of the females, while the 20 male students represent one-half of the males."
+            },
+            {
+                "number": 5,
+                "prompt": "Do you think there is an association between gender and choice of after-school program? Explain.",
+                "solution": "There is a difference in the conditional relative frequencies, but the differences are not as obvious as in the other examples. (This is a problem in which students would be expected to justify how they would indicate association between gender and the after-school selections.)"
+            },
+            {
+                "number": 6,
+                "prompt": "Column conditional relative frequencies can also be computed by dividing each frequency in a frequency table by the corresponding column total to create a column conditional relative frequency table. Column conditional relative frequencies indicate the proportions, or relative frequencies, based on the column totals.\n\nIf you wanted to know the relative frequency of females surveyed who participated in chess club, would you use a row conditional relative frequency or a column conditional relative frequency?",
+                "solution": "You would use a row conditional relative frequency. Of the 60 females surveyed, 10 participated in the chess club. (The given condition is that the student is female.) The relative frequency of \\frac{10}{60} would be the conditional relative frequency of females who participated in chess club."
+            },
+            {
+                "number": 7,
+                "prompt": "If you wanted to know the relative frequency of band members surveyed who were female, would you use a row conditional relative frequency or a column conditional relative frequency?",
+                "solution": "You would use a column conditional relative frequency. Of the 18 band members, 10 were females. (The given condition is that the student is in band.) The conditional relative frequency of \\frac{10}{18} would be the conditional relative frequency of band members who were females."
+            },
+            {
+                "number": 8,
+                "prompt": "For the superpower survey data, write a question that would be answered using a row conditional relative frequency.",
+                "solution": "An example of a row conditional relative frequency question would be \"What proportion of females selected telepathy as their favorite superpower?\""
+            },
+            {
+                "number": 9,
+                "prompt": "For the superpower survey data, write a question that would be answered using a column conditional relative frequency.",
+                "solution": "An example of a column conditional relative frequency would be \"What proportion of those who selected telepathy are female?\""
+            }
+        ]
+    },
+    "practiceQuestions": [
+        {
+            "question": "[Exit Ticket Challenge 1] Exit Ticket",
+            "options": [
+                "Juniors and seniors were asked if they plan to attend college immediately after graduation, seek full-time employment, or choose some other option. A random sample of 100 students was selected from those who completed the survey. Scott started to cal",
+                "The relationship cannot be evaluated without arbitrary numerical coordinates.",
+                "The values remain constant at zero regardless of the independent variable inputs.",
+                "The rate of change is undefined because domain restrictions were violated."
+            ],
+            "correct": 0,
+            "explanation": "From the official Eureka Math Exit Ticket Key for Lesson 11:\nJuniors and seniors were asked if they plan to attend college immediately after graduation, seek full-time employment, or choose some other option. A random sample of 100 students was selected from those who completed the survey. Scott started to calculate the row conditional relative frequencies to the nearest thousandth.\n\nComplete the calculations of the row conditional relative frequencies. Round your answers to the nearest thousandth.\n\nAre th"
+        },
+        {
+            "question": "[Exit Ticket Challenge 2] Juniors and seniors were asked if they plan to attend college immediately after graduation, seek full-time employment, or choose some other option. A random sample of 100 students was selected from those who completed the survey. Scott started to calculate the row conditional relative frequencies to the nearest thousandth.",
+            "options": [
+                "Complete the calculations of the row conditional relative frequencies. Round your answers to the nearest thousandth.",
+                "Ignore boundary conditions and compute only approximate integer values.",
+                "Assume that all relationships are strictly constant without verifying rates of change.",
+                "Treat independent and dependent variables as interchangeable."
+            ],
+            "correct": 0,
+            "explanation": "Official Curriculum Key for Lesson 11:\nStudents calculate and interpret conditional relative frequencies from two-way frequency tables."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Conditional Relative Frequencies and Association.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Developed using authentic lesson materials from standard algebra curricula.",
+        "lessonId": "L-ID-K-MATH-M2-C-3"
+    }
+}

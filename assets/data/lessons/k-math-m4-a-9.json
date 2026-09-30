@@ -1,0 +1,196 @@
+{
+    "id": "k-math-m4-a-9",
+    "code": "K.M4.A.9",
+    "standard": "HSA.SSE.A.1",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "Graphing Quadratic Functions from Factored Form, f(x)=a(x-m)(x-n)",
+        "pageTitle": "Graphing Quadratic Functions from Factored Form, f(x)=a(x-m)(x-n) | Hesten's Learning",
+        "description": "MP.4MP.4Throughout this lesson, students apply mathematics to solve problems that arise in the physical world, specifically for objects in motion. They identify...",
+        "pageDescription": "Master Graphing Quadratic Functions from Factored Form, f(x)=a(x-m)(x-n) in Module 4: Polynomial and Quadratic Expressions, Equations, and Functions. Comprehensive student outcomes, teacher insights, guided exercises, problem set worksheets, and exit ticket keys.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M4.A.9",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 9",
+        "pill": "Quadratic Expressions, Equations, and Functions",
+        "text": "MP.4MP.4Throughout this lesson, students apply mathematics to solve problems that arise in the physical world, specifically for objects in motion. They identify the important quantities of the situation and map the relationships between those quantities using graphs. In this lesson, students relate the solutions of a quadratic equation in one variable to the zeros of the function it defines. They sketch graphs of quadratic functions from tables, expressions, and verbal descriptions of relationships in real-world contexts, identifying key features of the quadratic functions from their graphs (A-APR.B.3). Also central to the lesson is F-IF.C.7a, requiring students to graph and show the intercepts and minimum or maximum point. If students do not have time in class to complete Exercise 4, consider adding it to the problem set.",
+        "outcomes": [
+            "Students use the factored form of a quadratic equation to construct a rough graph, use the graph of a quadratic equation to construct a quadratic equation in factored form, and relate the solutions of a quadratic equation in one variable to the zeros of the function it defines.",
+            "Students understand that the number of zeros in a polynomial function corresponds to the number of linear factors of the related expression and that different functions may have the same zeros but different maxima or minima."
+        ],
+        "teacherInsight": "Emphasize precise mathematical definitions and multiple problem-solving representations. Encourage students to check the reasonableness of their numerical solutions."
+    },
+    "content": [],
+    "vocabulary": [
+        {
+            "term": "Graphing Quadratic Functions from Factored Form, f(x)=a(x-m)(x-n)",
+            "definition": "Core mathematical concept established in Module 4: Polynomial and Quadratic Expressions, Equations, and Functions, Quadratic Expressions, Equations, and Functions."
+        },
+        {
+            "term": "Mathematical Modeling",
+            "definition": "The process of choosing and using appropriate mathematics and statistics to analyze empirical situations, to understand them better, and to improve decisions."
+        }
+    ],
+    "guidedExercises": [
+        {
+            "title": "Example 1: Core Mathematical Modeling for Graphing Quadratic Functions from Factored Form, f(x)=a(x-m)(x-n)",
+            "badge": "Eureka Math Guided Classwork",
+            "difficulty": "Core Application",
+            "problem": "Classwork Opening Exercise (3 minutes) Scaffolding: Remind students of the product-sum rule for factoring quadratic expressions when the leading coefficient is 1: What two factors of the constant term can be added to give the coefficient of the linear term?Or remind them that they can use the method of splitting the linear term.Scaffolding: Remind students of the product-sum rule for factoring quadratic expressions when the leading coefficient is 1: What two factors of the constant term can be a",
+            "scaffolding": "Identify the key variables and properties. Apply the definitions and mathematical structures introduced in Graphing Quadratic Functions from Factored Form, f(x)=a(x-m)(x-n).",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Define Variables & Formulate Governing Relations",
+                    "math": "\\text{Identify key variables and parameters for } Graphing Quadratic Functions from Factored Form, f(x)=a(x-m)(x-n)",
+                    "explanation": "Establish the relationship between quantities and state any domain constraints."
+                },
+                {
+                    "step": 2,
+                    "label": "Execute Step-by-Step Algebraic Transformations",
+                    "math": "\\text{Transform and simplify equations: } \\dots",
+                    "explanation": "The factored form is (x+10)(x-4)=0, so x=-10 or 4. Example 1 (7 minutes) Display the equation y=x^{2}+6x-40 on the board or screen. Make sure students have graph paper before the lesson begins. Have students work with a partner or in small groups to "
+                }
+            ],
+            "finalAnswer": "\\text{The evaluated solution verifies the properties of } Graphing Quadratic Functions from Factored Form, f(x)=a(x-m)(x-n)",
+            "commonPitfall": "Ensure units of measurement and domain constraints are checked in physical and statistical contexts."
+        },
+        {
+            "title": "Exercise 1: Independent Problem Formulation",
+            "badge": "Multi-Step Application",
+            "difficulty": "Advanced Reasoning",
+            "problem": "Apply the foundational principles of Graphing Quadratic Functions from Factored Form, f(x)=a(x-m)(x-n) to determine the exact value and interpret the contextual significance.",
+            "scaffolding": "Reference the worked steps from Example 1. Verify intermediate calculations and justify your steps.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Analyze Given Conditions & Structure",
+                    "math": "\\text{State domain constraints and initial conditions}",
+                    "explanation": "Verify that all assumptions conform to the problem context."
+                },
+                {
+                    "step": 2,
+                    "label": "Calculate the Final Mathematical Solution",
+                    "math": "\\text{Solve for the target unknown quantity}",
+                    "explanation": "State the solution with formal mathematical reasoning."
+                }
+            ],
+            "finalAnswer": "\\text{Verified algebraic or statistical solution}",
+            "commonPitfall": "Avoid rounding prematurely before the final step."
+        }
+    ],
+    "exitTicket": {
+        "title": "Lesson 9 Exit Ticket: Graphing Quadratic Functions from Factored Form, f(x)=a(x-m)(x-n)",
+        "prompt": "Exit Ticket\n\nGraph the following function, and identify the key features of the graph: t(x)=x^{2}+8x-20.",
+        "solution": "Graph the following function, and identify the key features of the graph: t(x)=x^{2}+8x-20.\n\nFactored form: t(x)=(x+10)(x-2), so the x-intercepts are (-10, 0) and (2, 0); the y-intercept is (0, -20); and the vertex is where x=-4: (-4, -36); end behavior: this graph opens up (as x approaches ±∞, the y-value approaches ∞)."
+    },
+    "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Master Graphing Quadratic Functions from Factored Form, f(x)=a(x-m)(x-n) through authentic curriculum practice problems. Check your work using the expandable teacher solution key below.",
+        "problems": [
+            {
+                "number": 1,
+                "prompt": "Graph the following on your own graph paper, and identify the key features of the graph.\n\nf(x)=(x-2)(x+7)",
+                "solution": "Key features: x-intercepts (2, 0) and (-7, 0); y-intercept (0, -14); vertex at x=-2.5 (-2.5, -20.25)."
+            },
+            {
+                "number": 2,
+                "prompt": "h(x)=-3(x-2)(x+2)",
+                "solution": "Key features: vertex (0,12); axis of symmetry at x=0; y-intercept (0,12); x-intercepts (-2,0) and (2,0)."
+            },
+            {
+                "number": 3,
+                "prompt": "g(x)=-2(x-2)(x+7)",
+                "solution": "Key features: x-intercepts (2, 0) and (-7, 0); vertex is where x=-2.5 (-2.5, 40.5); y-intercept is (0, 28)."
+            },
+            {
+                "number": 4,
+                "prompt": "h(x)=x^{2}-16",
+                "solution": "Key features: x-intercepts (4, 0) and (-4, 0); y-intercept and vertex are both (0, -16)."
+            },
+            {
+                "number": 5,
+                "prompt": "p(x)=x^{2}-2x+1",
+                "solution": "Key features: x-intercept is a double root and is also the vertex (1, 0); the y-intercept is (0, 1)."
+            },
+            {
+                "number": 6,
+                "prompt": "q(x)=4x^{2}+20x+24",
+                "solution": "Factored form: q(x)=4(x^{2}+5x+6)=4(x+2)(x+3); x-intercepts (-2, 0) and (-3, 0); y-intercept (0, 24); vertex is where x=-2.5 at the point (-2.5, -1)."
+            },
+            {
+                "number": 7,
+                "prompt": "A rocket is launched from a cliff. The relationship between the height of the rocket, h, in feet, and the time since its launch, t, in seconds, can be represented by the following function:\n\nh(t)=-16t^{2}+80t+384.\n\nSketch the graph of the motion of the rocket.",
+                "solution": "Key features: factored form is h(t)=-16(t^{2}-5t-24)=-16(t-8)(t+3); t-intercepts (8, 0) and (-3, 0); y-intercept (0, 384); vertex at t=2.5 (2.5, 484)."
+            },
+            {
+                "number": 8,
+                "prompt": "When does the rocket hit the ground?",
+                "solution": "The rocket will hit the ground after 8 seconds. The zeros of the function are at t=-3 and 8. Since the rocket was in the air from t=0, it would be airborne for 8 seconds."
+            },
+            {
+                "number": 9,
+                "prompt": "When does the rocket reach its maximum height?",
+                "solution": "The rocket will reach its maximum height after 2.5 seconds. The t-coordinate of the vertex, the highest point on the graph, is at t=2.5."
+            },
+            {
+                "number": 10,
+                "prompt": "What is the maximum height the rocket reaches?",
+                "solution": "The maximum height is 484 ft. The vertex, which is the maximum point, is at (2.5, 484)."
+            },
+            {
+                "number": 11,
+                "prompt": "At what height was the rocket launched?",
+                "solution": "The rocket was launched from a height of 384 ft. This is the height of the rocket at time t=0."
+            },
+            {
+                "number": 12,
+                "prompt": "Given the x-intercepts for the graph of a quadratic function, write a possible formula for the quadratic function, in factored form.\n\nx-intercepts: -1 and -6b. x-intercepts: -2 and \\frac{2}{3}",
+                "solution": "f(x)=a(x+1)(x+6) f(x)=a(x+2)(x-\\frac{2}{3})"
+            },
+            {
+                "number": 13,
+                "prompt": "x-intercepts: -3 and 0d. x-intercept: 7",
+                "solution": "f(x)=ax(x+3) f(x)=a(x-7)(x-7) or f(x)=a(x-7)^{2}"
+            },
+            {
+                "number": 14,
+                "prompt": "Suppose a quadratic function is such that its graph has x-intercepts of -3 and 2 and a y-intercept of 6.\n\nWrite a formula for the quadratic function.",
+                "solution": "f(x)=-(x+3)(x-2)"
+            }
+        ]
+    },
+    "practiceQuestions": [
+        {
+            "question": "[Exit Ticket Challenge 1] Exit Ticket",
+            "options": [
+                "Graph the following function, and identify the key features of the graph: t(x)=x^{2}+8x-20.",
+                "The relationship cannot be evaluated without arbitrary numerical coordinates.",
+                "The values remain constant at zero regardless of the independent variable inputs.",
+                "The rate of change is undefined because domain restrictions were violated."
+            ],
+            "correct": 0,
+            "explanation": "From the official Eureka Math Exit Ticket Key for Lesson 9:\nGraph the following function, and identify the key features of the graph: t(x)=x^{2}+8x-20.\n\nFactored form: t(x)=(x+10)(x-2), so the x-intercepts are (-10, 0) and (2, 0); the y-intercept is (0, -20); and the vertex is where x=-4: (-4, -36); end behavior: this graph opens up (as x approaches ±∞, the y-value approaches ∞)."
+        },
+        {
+            "question": "[Exit Ticket Challenge 2] Graph the following function, and identify the key features of the graph: t(x)=x^{2}+8x-20.",
+            "options": [
+                "Factored form: t(x)=(x+10)(x-2), so the x-intercepts are (-10, 0) and (2, 0); the y-intercept is (0, -20); and the vertex is where x=-4: (-4, -36); end behavior: this graph opens up (as x approaches ±∞, the y-value approaches ∞).",
+                "Ignore boundary conditions and compute only approximate integer values.",
+                "Assume that all relationships are strictly constant without verifying rates of change.",
+                "Treat independent and dependent variables as interchangeable."
+            ],
+            "correct": 0,
+            "explanation": "Official Curriculum Key for Lesson 9:\nStudents use the factored form of a quadratic equation to construct a rough graph, use the graph of a quadratic equation to construct a quadratic equation in factored form, and relate the solutions of a quadratic equation in one variable to the zeros of the function it defines."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Graphing Quadratic Functions from Factored Form, f(x)=a(x-m)(x-n).\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Developed using authentic lesson materials from standard algebra curricula.",
+        "lessonId": "L-ID-K-MATH-M4-A-9"
+    }
+}

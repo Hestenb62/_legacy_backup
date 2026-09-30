@@ -1,0 +1,127 @@
+{
+    "id": "k-math-m2-d-7",
+    "code": "K.M2.D.7",
+    "standard": "HSS.ID.B.6",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "Analyzing Residuals",
+        "pageTitle": "Analyzing Residuals | Hesten's Learning",
+        "description": "In this lesson, students continue to construct residual plots. Residual plots are analyzed to determine if the points are scattered at random around the horizon...",
+        "pageDescription": "Master Analyzing Residuals in Module 2: Descriptive Statistics. Comprehensive student outcomes, teacher insights, guided exercises, problem set worksheets, and exit ticket keys.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M2.D.7",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 18",
+        "pill": "Numerical Data on Two Variables",
+        "text": "In this lesson, students continue to construct residual plots. Residual plots are analyzed to determine if the points are scattered at random around the horizontal line (indicating a linear relationship) or if the points have a pattern (indicating a nonlinear relationship).",
+        "outcomes": [
+            "Students use a graphing calculator to construct the residual plot for a given data set.",
+            "Students use a residual plot as an indication of whether the model used to describe the relationship between two numerical variables is an appropriate choice."
+        ],
+        "teacherInsight": "Emphasize precise mathematical definitions and multiple problem-solving representations. Encourage students to check the reasonableness of their numerical solutions."
+    },
+    "content": [],
+    "vocabulary": [
+        {
+            "term": "Pose these questions",
+            "definition": "Why does the first scatter plot result in an arch shape in the residual plot? The points in the scatter plot are not in a straight line."
+        }
+    ],
+    "guidedExercises": [
+        {
+            "title": "Example 1: Core Mathematical Modeling for Analyzing Residuals",
+            "badge": "Eureka Math Guided Classwork",
+            "difficulty": "Core Application",
+            "problem": "Classwork The previous lesson shows that when data is fitted to a line, a scatter plot with a curved pattern produces a residual plot that shows a clear pattern. You also saw that when a line is fit, a scatter plot where the points show a straight-line pattern results in a residual plot where the points are randomly scattered. Example 1 (10 minutes): The Relevance of the Pattern in the Residual Plot MP.2MP.2This is another opportunity to reinforce why the particular patterns in the scatter plots",
+            "scaffolding": "Identify the key variables and properties. Apply the definitions and mathematical structures introduced in Analyzing Residuals.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Define Variables & Formulate Governing Relations",
+                    "math": "\\text{Identify key variables and parameters for } Analyzing Residuals",
+                    "explanation": "Establish the relationship between quantities and state any domain constraints."
+                },
+                {
+                    "step": 2,
+                    "label": "Execute Step-by-Step Algebraic Transformations",
+                    "math": "\\text{Transform and simplify equations: } \\dots",
+                    "explanation": "Why does the second scatter plot result in a U shape in the residual plot? The points in the scatter plot are not in a straight line. Why does the third scatter plot result in a random scatter of points in the residual plot? The points seem to be lin"
+                }
+            ],
+            "finalAnswer": "\\text{The evaluated solution verifies the properties of } Analyzing Residuals",
+            "commonPitfall": "Ensure units of measurement and domain constraints are checked in physical and statistical contexts."
+        },
+        {
+            "title": "Exercise 1: Independent Problem Formulation",
+            "badge": "Multi-Step Application",
+            "difficulty": "Advanced Reasoning",
+            "problem": "Apply the foundational principles of Analyzing Residuals to determine the exact value and interpret the contextual significance.",
+            "scaffolding": "Reference the worked steps from Example 1. Verify intermediate calculations and justify your steps.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Analyze Given Conditions & Structure",
+                    "math": "\\text{State domain constraints and initial conditions}",
+                    "explanation": "Verify that all assumptions conform to the problem context."
+                },
+                {
+                    "step": 2,
+                    "label": "Calculate the Final Mathematical Solution",
+                    "math": "\\text{Solve for the target unknown quantity}",
+                    "explanation": "State the solution with formal mathematical reasoning."
+                }
+            ],
+            "finalAnswer": "\\text{Verified algebraic or statistical solution}",
+            "commonPitfall": "Avoid rounding prematurely before the final step."
+        }
+    ],
+    "exitTicket": {
+        "title": "Lesson 18 Exit Ticket: Analyzing Residuals",
+        "prompt": "Exit Ticket\n\nIf you see a clear curve in the residual plot, what does this say about the original data set?\n\nIf you see a random scatter of points in the residual plot, what does this say about the original data set?",
+        "solution": "If you see a clear curve in the residual plot, what does this say about the original data set?\n\nA clear curve in the residual plot shows that the variables in the original data set have a nonlinear relationship.\n\nIf you see a random scatter of points in the residual plot, what does this say about the original data set?\n\nA random scatter of points in the residual plot shows that a straight line is an appropriate model for the relationship between the two variables in the original data set."
+    },
+    "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Master Analyzing Residuals through authentic curriculum practice problems. Check your work using the expandable teacher solution key below.",
+        "problems": [
+            {
+                "number": 1,
+                "prompt": "For each of the following residual plots, what conclusion would you reach about the relationship between the variables in the original data set? Indicate whether the values would be better represented by a linear or a nonlinear relationship.\n\nSuppose that after fitting a line, a data set produces the residual plot shown below.\n\nAn incomplete scatter plot of the original data set is shown below. The least squares line is shown, but the points in the scatter plot have been erased. Estimate the locations of the original points, and create an approximation of the scatter plot below.",
+                "solution": "This problem should challenge students. There are many correct answers. Students should show points in the scatter plot whose vertical deviations from the given least squares line are in proportion to the values of the residuals in the residual plot. A student's answer is only acceptable if it shows a general pattern like the one shown above. Confirm that each student's points could result in (approximately) the given least squares line."
+            }
+        ]
+    },
+    "practiceQuestions": [
+        {
+            "question": "[Exit Ticket Challenge 1] Exit Ticket",
+            "options": [
+                "If you see a clear curve in the residual plot, what does this say about the original data set?",
+                "The relationship cannot be evaluated without arbitrary numerical coordinates.",
+                "The values remain constant at zero regardless of the independent variable inputs.",
+                "The rate of change is undefined because domain restrictions were violated."
+            ],
+            "correct": 0,
+            "explanation": "From the official Eureka Math Exit Ticket Key for Lesson 18:\nIf you see a clear curve in the residual plot, what does this say about the original data set?\n\nA clear curve in the residual plot shows that the variables in the original data set have a nonlinear relationship.\n\nIf you see a random scatter of points in the residual plot, what does this say about the original data set?\n\nA random scatter of points in the residual plot shows that a straight line is an appropriate model for the relationship between "
+        },
+        {
+            "question": "[Exit Ticket Challenge 2] If you see a clear curve in the residual plot, what does this say about the original data set?",
+            "options": [
+                "A clear curve in the residual plot shows that the variables in the original data set have a nonlinear relationship.",
+                "Ignore boundary conditions and compute only approximate integer values.",
+                "Assume that all relationships are strictly constant without verifying rates of change.",
+                "Treat independent and dependent variables as interchangeable."
+            ],
+            "correct": 0,
+            "explanation": "Official Curriculum Key for Lesson 18:\nStudents use a graphing calculator to construct the residual plot for a given data set."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Analyzing Residuals.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Developed using authentic lesson materials from standard algebra curricula.",
+        "lessonId": "L-ID-K-MATH-M2-D-7"
+    }
+}

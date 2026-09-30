@@ -1,0 +1,161 @@
+{
+    "id": "k-math-m4-a-6",
+    "code": "K.M4.A.6",
+    "standard": "HSA.SSE.A.1",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "Solving Basic One-Variable Quadratic Equations",
+        "pageTitle": "Solving Basic One-Variable Quadratic Equations | Hesten's Learning",
+        "description": "Up to this point, students have practiced factoring and using the zero product property to solve basic quadratic equations using area models. In this lesson, we...",
+        "pageDescription": "Master Solving Basic One-Variable Quadratic Equations in Module 4: Polynomial and Quadratic Expressions, Equations, and Functions. Comprehensive student outcomes, teacher insights, guided exercises, problem set worksheets, and exit ticket keys.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M4.A.6",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 6",
+        "pill": "Quadratic Expressions, Equations, and Functions",
+        "text": "Up to this point, students have practiced factoring and using the zero product property to solve basic quadratic equations using area models. In this lesson, we expand our contextual applications to include problems involving objects in motion. We continue to explore efficient and elegant ways to solve quadratic equations by factoring, this time for those involving expressions of the form: ax^{2} and a(x-b)^{2} (A-REI.B.4). MP.2MP.2The next two examples use a series of questions to help students decontextualize a verbal description of a problem situation to solve basic one-variable quadratic equations. Students then contextualize their solutions to fully answer the questions posed.",
+        "outcomes": [
+            "Students use appropriate and efficient strategies to find solutions to basic quadratic equations.",
+            "Students interpret the verbal description of a problem and its solutions in context and then justify the solutions using algebraic reasoning."
+        ],
+        "teacherInsight": "Emphasize precise mathematical definitions and multiple problem-solving representations. Encourage students to check the reasonableness of their numerical solutions."
+    },
+    "content": [],
+    "vocabulary": [
+        {
+            "term": "Solving Basic One-Variable Quadratic Equations",
+            "definition": "Core mathematical concept established in Module 4: Polynomial and Quadratic Expressions, Equations, and Functions, Quadratic Expressions, Equations, and Functions."
+        },
+        {
+            "term": "Mathematical Modeling",
+            "definition": "The process of choosing and using appropriate mathematics and statistics to analyze empirical situations, to understand them better, and to improve decisions."
+        }
+    ],
+    "guidedExercises": [
+        {
+            "title": "Example 1: Core Mathematical Modeling for Solving Basic One-Variable Quadratic Equations",
+            "badge": "Eureka Math Guided Classwork",
+            "difficulty": "Core Application",
+            "problem": "Classwork Example 1 (10 minutes) Ask students to read the prompt in their student materials and to take notes individually while the teacher reads the questions below. Example 1 A physics teacher put a ball at the top of a ramp and let it roll down toward the floor. The class determined that the height of the ball could be represented by the equation h=-16t^{2}+4, where the height, h, is measured in feet from the ground and time, t, is measured in seconds. What do you notice about the structure ",
+            "scaffolding": "Identify the key variables and properties. Apply the definitions and mathematical structures introduced in Solving Basic One-Variable Quadratic Equations.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Define Variables & Formulate Governing Relations",
+                    "math": "\\text{Identify key variables and parameters for } Solving Basic One-Variable Quadratic Equations",
+                    "explanation": "Establish the relationship between quantities and state any domain constraints."
+                },
+                {
+                    "step": 2,
+                    "label": "Execute Step-by-Step Algebraic Transformations",
+                    "math": "\\text{Transform and simplify equations: } \\dots",
+                    "explanation": "There is no linear term, just a square and constant. In the equation, explain what the 4 represents. The height when the time is 0 (i.e., the initial height of the top of the ramp is 4 feet). Explain how you would use the equation to determine the ti"
+                }
+            ],
+            "finalAnswer": "\\text{The evaluated solution verifies the properties of } Solving Basic One-Variable Quadratic Equations",
+            "commonPitfall": "Ensure units of measurement and domain constraints are checked in physical and statistical contexts."
+        },
+        {
+            "title": "Exercise 1: Independent Problem Formulation",
+            "badge": "Multi-Step Application",
+            "difficulty": "Advanced Reasoning",
+            "problem": "Apply the foundational principles of Solving Basic One-Variable Quadratic Equations to determine the exact value and interpret the contextual significance.",
+            "scaffolding": "Reference the worked steps from Example 1. Verify intermediate calculations and justify your steps.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Analyze Given Conditions & Structure",
+                    "math": "\\text{State domain constraints and initial conditions}",
+                    "explanation": "Verify that all assumptions conform to the problem context."
+                },
+                {
+                    "step": 2,
+                    "label": "Calculate the Final Mathematical Solution",
+                    "math": "\\text{Solve for the target unknown quantity}",
+                    "explanation": "State the solution with formal mathematical reasoning."
+                }
+            ],
+            "finalAnswer": "\\text{Verified algebraic or statistical solution}",
+            "commonPitfall": "Avoid rounding prematurely before the final step."
+        }
+    ],
+    "exitTicket": {
+        "title": "Lesson 6 Exit Ticket: Solving Basic One-Variable Quadratic Equations",
+        "prompt": "Exit Ticket\n\nSolve the equations.\n\n4a^{2}=16\n\n5b^{2}-25=0\n\n8-c^{2}=5\n\nSolve the equations.\n\n(x-2)^{2}=9\n\n3(x-2)^{2}=9\n\n6=24(x+1)^{2}",
+        "solution": "Solve the equations.\n\n4a^{2}=16\n\na^{2}=4a=2 or -2\n\n5b^{2}-25=0\n\n5b^{2}=25b^{2}=5b=±\\sqrt{5}\n\n8-c^{2}=5\n\n-c^{2}=-3c^{2}=3c=±\\sqrt{3}\n\nSolve the equations.\n\n(x-2)^{2}=9\n\n(x-2)=± 3x=2±3=-1 or 5\n\n3(x-2)^{2}=9\n\n(x-2)^{2}= 3x-2= ±\\sqrt{3}x=2±\\sqrt{3}\n\n6=24(x+1)^{2}\n\n(x+1)^{2}=\\frac{6}{24}=\\frac{1}{4}x+1= ±\\sqrt{\\frac{1}{4}} =±\\frac{1}{2}x=-1±\\frac{1}{2}x=-\\frac{1}{2} or -\\frac{3}{2}"
+    },
+    "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Master Solving Basic One-Variable Quadratic Equations through authentic curriculum practice problems. Check your work using the expandable teacher solution key below.",
+        "problems": [
+            {
+                "number": 1,
+                "prompt": "Factor completely: 15x^{2}-40x-15.",
+                "solution": "GCF is 5: 5(3x^{2}-8x-3)=5(3x+1)(x-3)."
+            },
+            {
+                "number": 2,
+                "prompt": "Solve each equation.\n\n4x^{2}=9",
+                "solution": "x^{2}=\\frac{9}{4} → x=±\\frac{3}{2}"
+            },
+            {
+                "number": 3,
+                "prompt": "3y^{2}-8=13",
+                "solution": "3y^{2}=21 → y^{2}=7 → y=±\\sqrt{7}"
+            },
+            {
+                "number": 4,
+                "prompt": "(d+4)^{2}=5",
+                "solution": "d+4=±\\sqrt{5} → d=- 4±\\sqrt{5}"
+            },
+            {
+                "number": 5,
+                "prompt": "4(g-1)^{2}+6=13",
+                "solution": "4(g-1)^{2}=7 → (g-1)^{2}=\\frac{7}{4} → g-1=±\\frac{\\sqrt{7}}{2} → g=1±\\frac{\\sqrt{7}}{2}"
+            },
+            {
+                "number": 6,
+                "prompt": "12=-2(5-k)^{2}+20",
+                "solution": "-8=-2(5-k)^{2} → 4=(5-k)^{2} → (5-k)=± 2 → -k=-5±2=-3 or -7, so k=3 or 7"
+            },
+            {
+                "number": 7,
+                "prompt": "Mischief is a toy poodle that competes with her trainer in the agility course. Within the course, Mischief must leap through a hoop. Mischief's jump can be modeled by the equation h=-16t^{2}+12t, where h is the height of the leap in feet and t is the time since the leap, in seconds. At what values of t does Mischief start and end the jump?",
+                "solution": "To find the start and end of the jump, we need to find where height, h, is zero and solve the resulting equation.\n\n-16t^{2}+12t=0-4t(4t-3)=0t=0 or \\frac{3}{4} seconds\n\nThe leap starts at 0 seconds and ends at \\frac{3}{4} seconds.\n\n(Students may decide to factor the GCF, -16t, for the factoring step and obtain -16t(t-\\frac{3}{4})=0. They should still arrive at the same conclusion.)"
+            }
+        ]
+    },
+    "practiceQuestions": [
+        {
+            "question": "[Exit Ticket Challenge 1] Exit Ticket",
+            "options": [
+                "Solve the equations.",
+                "The relationship cannot be evaluated without arbitrary numerical coordinates.",
+                "The values remain constant at zero regardless of the independent variable inputs.",
+                "The rate of change is undefined because domain restrictions were violated."
+            ],
+            "correct": 0,
+            "explanation": "From the official Eureka Math Exit Ticket Key for Lesson 6:\nSolve the equations.\n\n4a^{2}=16\n\na^{2}=4a=2 or -2\n\n5b^{2}-25=0\n\n5b^{2}=25b^{2}=5b=±\\sqrt{5}\n\n8-c^{2}=5\n\n-c^{2}=-3c^{2}=3c=±\\sqrt{3}\n\nSolve the equations.\n\n(x-2)^{2}=9\n\n(x-2)=± 3x=2±3=-1 or 5\n\n3(x-2)^{2}=9\n\n(x-2)^{2}= 3x-2= ±\\sqrt{3}x=2±\\sqrt{3}\n\n6=24(x+1)^{2}\n\n(x+1)^{2}=\\frac{6}{24}=\\frac{1}{4}x+1= ±\\sqrt{\\frac{1}{4}} =±\\frac{1}{2}x=-1±\\frac{1}{2}x=-\\frac{1}{2} or -\\frac{3}{2}"
+        },
+        {
+            "question": "[Exit Ticket Challenge 2] Solve the equations.",
+            "options": [
+                "4a^{2}=16",
+                "Ignore boundary conditions and compute only approximate integer values.",
+                "Assume that all relationships are strictly constant without verifying rates of change.",
+                "Treat independent and dependent variables as interchangeable."
+            ],
+            "correct": 0,
+            "explanation": "Official Curriculum Key for Lesson 6:\nStudents use appropriate and efficient strategies to find solutions to basic quadratic equations."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Solving Basic One-Variable Quadratic Equations.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Developed using authentic lesson materials from standard algebra curricula.",
+        "lessonId": "L-ID-K-MATH-M4-A-6"
+    }
+}

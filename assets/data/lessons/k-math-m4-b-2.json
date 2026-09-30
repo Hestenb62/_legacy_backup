@@ -1,0 +1,146 @@
+{
+    "id": "k-math-m4-b-2",
+    "code": "K.M4.B.2",
+    "standard": "HSA.SSE.B.3",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "Completing the Square",
+        "pageTitle": "Completing the Square | Hesten's Learning",
+        "description": "In this lesson, students develop a deep conceptual and procedural understanding of Completing the Square in Module 4: Polynomial and Quadratic Expressions, Equa...",
+        "pageDescription": "Master Completing the Square in Module 4: Polynomial and Quadratic Expressions, Equations, and Functions. Comprehensive student outcomes, teacher insights, guided exercises, problem set worksheets, and exit ticket keys.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M4.B.2",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 12",
+        "pill": "Using Different Forms for Quadratic Functions",
+        "text": "In this lesson, students develop a deep conceptual and procedural understanding of Completing the Square in Module 4: Polynomial and Quadratic Expressions, Equations, and Functions.",
+        "outcomes": [
+            "Students rewrite quadratic expressions given in standard form, ax^{2}+bx+c (with a≠1), as equivalent expressions in completed-square form, a(x-h)^{2}+k. They build quadratic expressions in basic business application contexts and rewrite them in equivalent forms."
+        ],
+        "teacherInsight": "Emphasize precise mathematical definitions and multiple problem-solving representations. Encourage students to check the reasonableness of their numerical solutions."
+    },
+    "content": [],
+    "vocabulary": [
+        {
+            "term": "Classwork Scaffolding",
+            "definition": "Students who have difficulty seeing the structure of these expressions may benefit from a written procedure or list of steps they can follow for completing the square."
+        }
+    ],
+    "guidedExercises": [
+        {
+            "title": "Example 1: Core Mathematical Modeling for Completing the Square",
+            "badge": "Eureka Math Guided Classwork",
+            "difficulty": "Core Application",
+            "problem": "Classwork Scaffolding:Students who have difficulty seeing the structure of these expressions may benefit from a written procedure or list of steps they can follow for completing the square.Scaffolding:Students who have difficulty seeing the structure of these expressions may benefit from a written procedure or list of steps they can follow for completing the square.Opening Exercise (5 minutes) Opening Exercise Rewrite each expression by completing the square. z^{2}-5z+8 (z-\\frac{5}{2})^{2}+\\frac",
+            "scaffolding": "Identify the key variables and properties. Apply the definitions and mathematical structures introduced in Completing the Square.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Define Variables & Formulate Governing Relations",
+                    "math": "\\text{Identify key variables and parameters for } Completing the Square",
+                    "explanation": "Establish the relationship between quantities and state any domain constraints."
+                },
+                {
+                    "step": 2,
+                    "label": "Execute Step-by-Step Algebraic Transformations",
+                    "math": "\\text{Transform and simplify equations: } \\dots",
+                    "explanation": "x^{2}+0.6x+1 (x+0.3)^{2}+0.91 Example 1 (5 minutes) Example 1 Now complete the square for 2x^{2}+16x+3. Now that students are comfortable with rewriting expressions by completing the square, we can introduce expressions with leading coefficients othe"
+                }
+            ],
+            "finalAnswer": "\\text{The evaluated solution verifies the properties of } Completing the Square",
+            "commonPitfall": "Ensure units of measurement and domain constraints are checked in physical and statistical contexts."
+        },
+        {
+            "title": "Exercise 1: Independent Problem Formulation",
+            "badge": "Multi-Step Application",
+            "difficulty": "Advanced Reasoning",
+            "problem": "Apply the foundational principles of Completing the Square to determine the exact value and interpret the contextual significance.",
+            "scaffolding": "Reference the worked steps from Example 1. Verify intermediate calculations and justify your steps.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Analyze Given Conditions & Structure",
+                    "math": "\\text{State domain constraints and initial conditions}",
+                    "explanation": "Verify that all assumptions conform to the problem context."
+                },
+                {
+                    "step": 2,
+                    "label": "Calculate the Final Mathematical Solution",
+                    "math": "\\text{Solve for the target unknown quantity}",
+                    "explanation": "State the solution with formal mathematical reasoning."
+                }
+            ],
+            "finalAnswer": "\\text{Verified algebraic or statistical solution}",
+            "commonPitfall": "Avoid rounding prematurely before the final step."
+        }
+    ],
+    "exitTicket": {
+        "title": "Lesson 12 Exit Ticket: Completing the Square",
+        "prompt": "Exit Ticket\n\nComplete the square: ax^{2}+x+3.\n\nWrite the expression for the profit, P, in terms of q, the quantity sold, and s, the selling price, based on the data collected below on sales and prices. Use the examples and your notes from class to then determine the function that represents yearly profit, P, in terms of the sales, s, given the production cost per item is $30.",
+        "solution": "Complete the square: ax^{2}+x+3.\n\na(x^{2}+\\frac{1}{a}x)+3→a(x+\\frac{1}{2a})^{2}+3-\\frac{1}{4a}\n\nWrite the expression for the profit, P, in terms of q, the quantity sold, and s, the selling price, based on the data collected below on sales and prices. Use the examples and your notes from class to then determine the function that represents yearly profit, P, in terms of the sales, s, given the production cost per item is $30.\n\nThe revenue (total income from sales) is the price per item times number of items, (s)(q), and the cost is 30q, so the profit is P=(s)(q)-30q.\n\nThe graph showing the relationship between s and q is a line with slope -10 and q-intercept 8,000, so q=-10s+8000.\n\nThis means the profit function is P(s)=s(-10s+8000)-30(-10s+8000).\n\nFactoring the common factors out gives us P(s)=(-10s+8000)(s-30)=-10(s-800)(s-30).\n\nOr, multiplying and combining like terms gives us P(s)=-10s^{2}+8300s-240 000.\n\nSolution Notes:\n\nSome students may give the answer as q=-10s+8000, which is an important part of finding the profit but is not complete. The revenue (total income from sales) is the product (s)(q), and the cost is 30q, so the profit is P=(s)(q)-30q. Using the equation for q: P=s(-10s+8000)-30(-10s+8000). Multiplying and combining like terms gives P=-10s^{2}+8300s-240 000.\n\nStudents may also come up with P=(s)(q)-30q. While it is true that P=(s)(q)-30q, this expression has two variables. q needs to be substituted for its equivalent in terms of s so that the function P is written in terms of s.\n\nThe graph showing the relationship between q and s is a line with slope -10 and q-intercept 8,000, so q=-10s+8000. This means P(s)=s(-10s+8000)-30(-10s+8000). Multiplying and simplifying gives P(s)=-10s^{2}+8300s-240 000."
+    },
+    "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Master Completing the Square through authentic curriculum practice problems. Check your work using the expandable teacher solution key below.",
+        "problems": [
+            {
+                "number": 1,
+                "prompt": "Rewrite each expression by completing the square.\n\n-2x^{2}+8x+5",
+                "solution": "-2(x^{2}-4x+4)+5+8→-2(x-2)^{2}+13"
+            },
+            {
+                "number": 2,
+                "prompt": "2.5k^{2}-7.5k+1.25",
+                "solution": "2.5(k^{2}-3k+2.25)+1.25-5.625→2.5(k-1.5)^{2}-4.375"
+            },
+            {
+                "number": 3,
+                "prompt": "\\frac{4}{3}b^{2}+6b-5",
+                "solution": "\\frac{4}{3}(b^{2}+\\frac{9}{2}b+\\frac{81}{16})-5-\\frac{27}{4}→\\frac{4}{3}(b+\\frac{9}{4})^{2}-\\frac{47}{4}"
+            },
+            {
+                "number": 4,
+                "prompt": "1000c^{2}-1250c+695",
+                "solution": "1000(c^{2}-1.25c+0.625^{2})+695-390.625→1000(c-0.625)^{2}+304.375"
+            },
+            {
+                "number": 5,
+                "prompt": "8n^{2}+2n+5",
+                "solution": "8(n^{2}+\\frac{1}{4}n+\\frac{1}{64})+5-\\frac{1}{8}→8(n+\\frac{1}{8})^{2}+4\\frac{7}{8}"
+            }
+        ]
+    },
+    "practiceQuestions": [
+        {
+            "question": "[Exit Ticket Challenge 1] Exit Ticket",
+            "options": [
+                "Complete the square: ax^{2}+x+3.",
+                "The relationship cannot be evaluated without arbitrary numerical coordinates.",
+                "The values remain constant at zero regardless of the independent variable inputs.",
+                "The rate of change is undefined because domain restrictions were violated."
+            ],
+            "correct": 0,
+            "explanation": "From the official Eureka Math Exit Ticket Key for Lesson 12:\nComplete the square: ax^{2}+x+3.\n\na(x^{2}+\\frac{1}{a}x)+3→a(x+\\frac{1}{2a})^{2}+3-\\frac{1}{4a}\n\nWrite the expression for the profit, P, in terms of q, the quantity sold, and s, the selling price, based on the data collected below on sales and prices. Use the examples and your notes from class to then determine the function that represents yearly profit, P, in terms of the sales, s, given the production cost per item is $30.\n\nThe revenue (total in"
+        },
+        {
+            "question": "[Exit Ticket Challenge 2] Complete the square: ax^{2}+x+3.",
+            "options": [
+                "a(x^{2}+\\frac{1}{a}x)+3→a(x+\\frac{1}{2a})^{2}+3-\\frac{1}{4a}",
+                "Ignore boundary conditions and compute only approximate integer values.",
+                "Assume that all relationships are strictly constant without verifying rates of change.",
+                "Treat independent and dependent variables as interchangeable."
+            ],
+            "correct": 0,
+            "explanation": "Official Curriculum Key for Lesson 12:\nStudents rewrite quadratic expressions given in standard form, ax^{2}+bx+c (with a≠1), as equivalent expressions in completed-square form, a(x-h)^{2}+k. They build quadratic expressions in basic business application contexts and rewrite them in equivalent forms."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Completing the Square.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Developed using authentic lesson materials from standard algebra curricula.",
+        "lessonId": "L-ID-K-MATH-M4-B-2"
+    }
+}

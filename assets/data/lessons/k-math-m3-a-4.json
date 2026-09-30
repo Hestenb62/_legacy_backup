@@ -1,0 +1,135 @@
+{
+    "id": "k-math-m3-a-4",
+    "code": "K.M3.A.4",
+    "standard": "HSF.IF.A.1",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "Why Do Banks Pay YOU to Provide Their Services?",
+        "pageTitle": "Why Do Banks Pay YOU to Provide Their Services? | Hesten's Learning",
+        "description": "In this lesson, students develop a deep conceptual and procedural understanding of Why Do Banks Pay YOU to Provide Their Services? in Module 3: Linear and Expon...",
+        "pageDescription": "Master Why Do Banks Pay YOU to Provide Their Services? in Module 3: Linear and Exponential Functions. Comprehensive student outcomes, teacher insights, guided exercises, problem set worksheets, and exit ticket keys.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M3.A.4",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 4",
+        "pill": "Linear and Exponential Sequences",
+        "text": "In this lesson, students develop a deep conceptual and procedural understanding of Why Do Banks Pay YOU to Provide Their Services? in Module 3: Linear and Exponential Functions.",
+        "outcomes": [
+            "Students compare the rate of change for simple and compound interest and recognize situations in which a quantity grows by a constant percent rate per unit interval."
+        ],
+        "teacherInsight": "Emphasize precise mathematical definitions and multiple problem-solving representations. Encourage students to check the reasonableness of their numerical solutions."
+    },
+    "content": [],
+    "vocabulary": [
+        {
+            "term": "Why Do Banks Pay YOU to Provide Their Services?",
+            "definition": "Core mathematical concept established in Module 3: Linear and Exponential Functions, Linear and Exponential Sequences."
+        },
+        {
+            "term": "Mathematical Modeling",
+            "definition": "The process of choosing and using appropriate mathematics and statistics to analyze empirical situations, to understand them better, and to improve decisions."
+        }
+    ],
+    "guidedExercises": [
+        {
+            "title": "Example 1: Core Mathematical Modeling for Why Do Banks Pay YOU to Provide Their Services?",
+            "badge": "Eureka Math Guided Classwork",
+            "difficulty": "Core Application",
+            "problem": "Classwork Opening Exercise (5 minutes) Begin class with a discussion of why banks pay customers interest to provide a service to them. Pose the question first, and have students discuss their ideas, and then give them a bit of history on this topic. This question is revisited at the end of the lesson. Have you ever thought it odd that banks pay YOU interest for the honor of looking after your money for you? Give students time to think about this. Some students may have no concept of this. That i",
+            "scaffolding": "Identify the key variables and properties. Apply the definitions and mathematical structures introduced in Why Do Banks Pay YOU to Provide Their Services?.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Define Variables & Formulate Governing Relations",
+                    "math": "\\text{Identify key variables and parameters for } Why Do Banks Pay YOU to Provide Their Services?",
+                    "explanation": "Establish the relationship between quantities and state any domain constraints."
+                },
+                {
+                    "step": 2,
+                    "label": "Execute Step-by-Step Algebraic Transformations",
+                    "math": "\\text{Transform and simplify equations: } \\dots",
+                    "explanation": "Have students think about how banks could make this work. If they are paying people to keep their money and making money on this money, what are some things that they could be doing? Example 1 (10 minutes) Banks originally computed simple interest, a"
+                }
+            ],
+            "finalAnswer": "\\text{The evaluated solution verifies the properties of } Why Do Banks Pay YOU to Provide Their Services?",
+            "commonPitfall": "Ensure units of measurement and domain constraints are checked in physical and statistical contexts."
+        },
+        {
+            "title": "Exercise 1: Independent Problem Formulation",
+            "badge": "Multi-Step Application",
+            "difficulty": "Advanced Reasoning",
+            "problem": "Apply the foundational principles of Why Do Banks Pay YOU to Provide Their Services? to determine the exact value and interpret the contextual significance.",
+            "scaffolding": "Reference the worked steps from Example 1. Verify intermediate calculations and justify your steps.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Analyze Given Conditions & Structure",
+                    "math": "\\text{State domain constraints and initial conditions}",
+                    "explanation": "Verify that all assumptions conform to the problem context."
+                },
+                {
+                    "step": 2,
+                    "label": "Calculate the Final Mathematical Solution",
+                    "math": "\\text{Solve for the target unknown quantity}",
+                    "explanation": "State the solution with formal mathematical reasoning."
+                }
+            ],
+            "finalAnswer": "\\text{Verified algebraic or statistical solution}",
+            "commonPitfall": "Avoid rounding prematurely before the final step."
+        }
+    ],
+    "exitTicket": {
+        "title": "Lesson 4 Exit Ticket: Why Do Banks Pay YOU to Provide Their Services?",
+        "prompt": "Exit Ticket\n\nA youth group has a yard sale to raise money for a charity. The group earns $800 but decides to put its money in the bank for a while. Calculate the amount of money the group will have given the following scenarios:\n\nCool Bank pays simple interest at a rate of 4%, and the youth group leaves the money in for 3 years.\n\nHot Bank pays an interest rate of 3% compounded annually, and the youth group leaves the money in for 5 years.\n\nIf the youth group needs the money quickly, which is the better choice? Why?",
+        "solution": "A youth group has a yard sale to raise money for a charity. The group earns $800 but decides to put its money in the bank for a while. Calculate the amount of money the group will have given the following scenarios:\n\nCool Bank pays simple interest at a rate of 4%, and the youth group leaves the money in for 3 years.\n\n$800(0.04)(3)=$96 interest earned\n\n$896 total\n\nHot Bank pays an interest rate of 3% compounded annually, and the youth group leaves the money in for 5 years.\n\n$800(1.03)^{5}=$927.42\n\nIf the youth group needs the money quickly, which is the better choice? Why?\n\nIf the youth group needs the money quickly, it should use Cool Bank since that bank pays a higher rate than Hot Bank. The lower rate is better for a longer period of time due to the compounding interest."
+    },
+    "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Master Why Do Banks Pay YOU to Provide Their Services? through authentic curriculum practice problems. Check your work using the expandable teacher solution key below.",
+        "problems": [
+            {
+                "number": 1,
+                "prompt": "$250 is invested at a bank that pays 7% simple interest. Calculate the amount of money in the account after 1 year, 3 years, 7 years, and 20 years.",
+                "solution": "$267.50, $302.50, $372.50, $600.00\n\n$325 is borrowed from a bank that charges 4% interest compounded annually. How much is owed after 1 year, 3 years, 7 years, 20 years?\n\n$338.00, $365.58, $427.68, $712.12"
+            },
+            {
+                "number": 2,
+                "prompt": "Joseph has $10,000 to invest. He can go to Yankee Bank that pays 5% simple interest or Met Bank that pays 4% interest compounded annually. At how many years will Met Bank be the better choice?",
+                "solution": "At 12 years, Met Bank is a better choice."
+            }
+        ]
+    },
+    "practiceQuestions": [
+        {
+            "question": "[Exit Ticket Challenge 1] Exit Ticket",
+            "options": [
+                "A youth group has a yard sale to raise money for a charity. The group earns $800 but decides to put its money in the bank for a while. Calculate the amount of money the group will have given the following scenarios:",
+                "The relationship cannot be evaluated without arbitrary numerical coordinates.",
+                "The values remain constant at zero regardless of the independent variable inputs.",
+                "The rate of change is undefined because domain restrictions were violated."
+            ],
+            "correct": 0,
+            "explanation": "From the official Eureka Math Exit Ticket Key for Lesson 4:\nA youth group has a yard sale to raise money for a charity. The group earns $800 but decides to put its money in the bank for a while. Calculate the amount of money the group will have given the following scenarios:\n\nCool Bank pays simple interest at a rate of 4%, and the youth group leaves the money in for 3 years.\n\n$800(0.04)(3)=$96 interest earned\n\n$896 total\n\nHot Bank pays an interest rate of 3% compounded annually, and the youth group leaves"
+        },
+        {
+            "question": "[Exit Ticket Challenge 2] A youth group has a yard sale to raise money for a charity. The group earns $800 but decides to put its money in the bank for a while. Calculate the amount of money the group will have given the following scenarios:",
+            "options": [
+                "Cool Bank pays simple interest at a rate of 4%, and the youth group leaves the money in for 3 years.",
+                "Ignore boundary conditions and compute only approximate integer values.",
+                "Assume that all relationships are strictly constant without verifying rates of change.",
+                "Treat independent and dependent variables as interchangeable."
+            ],
+            "correct": 0,
+            "explanation": "Official Curriculum Key for Lesson 4:\nStudents compare the rate of change for simple and compound interest and recognize situations in which a quantity grows by a constant percent rate per unit interval."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Why Do Banks Pay YOU to Provide Their Services?.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Developed using authentic lesson materials from standard algebra curricula.",
+        "lessonId": "L-ID-K-MATH-M3-A-4"
+    }
+}

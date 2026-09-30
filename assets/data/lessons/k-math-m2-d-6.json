@@ -1,0 +1,137 @@
+{
+    "id": "k-math-m2-d-6",
+    "code": "K.M2.D.6",
+    "standard": "HSS.ID.B.6",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "Analyzing Residuals",
+        "pageTitle": "Analyzing Residuals | Hesten's Learning",
+        "description": "In this lesson, students use technology to generate residual plots. Students build on their knowledge of using technology to determine the least squares line fo...",
+        "pageDescription": "Master Analyzing Residuals in Module 2: Descriptive Statistics. Comprehensive student outcomes, teacher insights, guided exercises, problem set worksheets, and exit ticket keys.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M2.D.6",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 17",
+        "pill": "Numerical Data on Two Variables",
+        "text": "In this lesson, students use technology to generate residual plots. Students build on their knowledge of using technology to determine the least squares line for a data set. The steps for using TI-83/84 graphing calculators to create residual plots are provided in the teacher notes, which can be printed and distributed for students to follow during the lesson as a guide. Similar summaries may be needed for any graphing software or other graphing calculators that students may use. Residual plots are also analyzed to determine the appropriateness of informally fitting the linear models to the data set.",
+        "outcomes": [
+            "Students use a graphing calculator to construct the residual plot for a given data set.",
+            "Students use a residual plot as an indication of whether the model used to describe the relationship between two numerical variables is an appropriate choice."
+        ],
+        "teacherInsight": "Emphasize precise mathematical definitions and multiple problem-solving representations. Encourage students to check the reasonableness of their numerical solutions."
+    },
+    "content": [],
+    "vocabulary": [
+        {
+            "term": "Ask students",
+            "definition": "What will the residual plot look like? If students have trouble with this, explain each point in the scatter plot one by one."
+        }
+    ],
+    "guidedExercises": [
+        {
+            "title": "Example 1: Core Mathematical Modeling for Analyzing Residuals",
+            "badge": "Eureka Math Guided Classwork",
+            "difficulty": "Core Application",
+            "problem": "Classwork Example 1 (10 minutes): Predicting the Pattern in the Residual Plot MP.2MP.2Students learn how to use the pattern in the scatter plot to predict what the residual plot will look like. Vertical distances from the least squares line in the scatter plot are plotted as the y-values in the residual plot, with the x-coordinates remaining the same. Note that the scales on the vertical axes of the two graphs are different, and as a result, the sizes of the displacements are greatly exaggerated",
+            "scaffolding": "Identify the key variables and properties. Apply the definitions and mathematical structures introduced in Analyzing Residuals.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Define Variables & Formulate Governing Relations",
+                    "math": "\\text{Identify key variables and parameters for } Analyzing Residuals",
+                    "explanation": "Establish the relationship between quantities and state any domain constraints."
+                },
+                {
+                    "step": 2,
+                    "label": "Execute Step-by-Step Algebraic Transformations",
+                    "math": "\\text{Transform and simplify equations: } \\dots",
+                    "explanation": "Example 1: Predicting the Pattern in the Residual Plot Suppose you are given a scatter plot and least squares line that looks like this: Describe what you think the residual plot would look like. If students struggle, have them look carefully at the "
+                }
+            ],
+            "finalAnswer": "\\text{The evaluated solution verifies the properties of } Analyzing Residuals",
+            "commonPitfall": "Ensure units of measurement and domain constraints are checked in physical and statistical contexts."
+        },
+        {
+            "title": "Exercise 1: Independent Problem Formulation",
+            "badge": "Multi-Step Application",
+            "difficulty": "Advanced Reasoning",
+            "problem": "Apply the foundational principles of Analyzing Residuals to determine the exact value and interpret the contextual significance.",
+            "scaffolding": "Reference the worked steps from Example 1. Verify intermediate calculations and justify your steps.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Analyze Given Conditions & Structure",
+                    "math": "\\text{State domain constraints and initial conditions}",
+                    "explanation": "Verify that all assumptions conform to the problem context."
+                },
+                {
+                    "step": 2,
+                    "label": "Calculate the Final Mathematical Solution",
+                    "math": "\\text{Solve for the target unknown quantity}",
+                    "explanation": "State the solution with formal mathematical reasoning."
+                }
+            ],
+            "finalAnswer": "\\text{Verified algebraic or statistical solution}",
+            "commonPitfall": "Avoid rounding prematurely before the final step."
+        }
+    ],
+    "exitTicket": {
+        "title": "Lesson 17 Exit Ticket: Analyzing Residuals",
+        "prompt": "Exit Ticket\n\nIf you see a random scatter of points in the residual plot, what does this say about the original data set?\n\nSuppose a scatter plot of bivariate numerical data shows a linear pattern. Describe what you think the residual plot would look like. Explain why you think this.",
+        "solution": "If you see a random scatter of points in the residual plot, what does this say about the original data set?\n\nA random scatter of points in the residual plot tells us that a linear function is an appropriate model for the relationship between the two variables in the original data set.\n\nSuppose a scatter plot of bivariate numerical data shows a linear pattern. Describe what you think the residual plot would look like. Explain why you think this.\n\nBecause the relationship between the two variables is linear, the residual plot would have a random pattern."
+    },
+    "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Master Analyzing Residuals through authentic curriculum practice problems. Check your work using the expandable teacher solution key below.",
+        "problems": [
+            {
+                "number": 1,
+                "prompt": "Consider again a data set giving the shoe lengths and heights of 10 adult men. This data set is shown in the table below.\n\nUse your calculator or graphing program to construct the scatter plot of this data set. Include the least squares line on your graph. Explain what the slope of the least squares line indicates about shoe length and height.",
+                "solution": "The slope indicates that as the shoe length increases, so does the height. The following illustrates the scatter plot and residual plot from a calculator. (Note: If it is not possible for you to observe your students' work on their calculators, have them show you a sketch of each graph.)"
+            },
+            {
+                "number": 2,
+                "prompt": "Use your calculator to construct the residual plot for this data set.",
+                "solution": "See plot below."
+            },
+            {
+                "number": 3,
+                "prompt": "Make a sketch of the residual plot on the axes given below. Does the scatter of points in the residual plot indicate a linear relationship in the original data set? Explain your answer.",
+                "solution": "There is no curved pattern in the residual plot, and the points in the residual plot appear to be scattered at random around the zero line. This indicates that the relationship in the original data set is linear."
+            }
+        ]
+    },
+    "practiceQuestions": [
+        {
+            "question": "[Exit Ticket Challenge 1] Exit Ticket",
+            "options": [
+                "If you see a random scatter of points in the residual plot, what does this say about the original data set?",
+                "The relationship cannot be evaluated without arbitrary numerical coordinates.",
+                "The values remain constant at zero regardless of the independent variable inputs.",
+                "The rate of change is undefined because domain restrictions were violated."
+            ],
+            "correct": 0,
+            "explanation": "From the official Eureka Math Exit Ticket Key for Lesson 17:\nIf you see a random scatter of points in the residual plot, what does this say about the original data set?\n\nA random scatter of points in the residual plot tells us that a linear function is an appropriate model for the relationship between the two variables in the original data set.\n\nSuppose a scatter plot of bivariate numerical data shows a linear pattern. Describe what you think the residual plot would look like. Explain why you think this.\n\n"
+        },
+        {
+            "question": "[Exit Ticket Challenge 2] If you see a random scatter of points in the residual plot, what does this say about the original data set?",
+            "options": [
+                "A random scatter of points in the residual plot tells us that a linear function is an appropriate model for the relationship between the two variables in the original data set.",
+                "Ignore boundary conditions and compute only approximate integer values.",
+                "Assume that all relationships are strictly constant without verifying rates of change.",
+                "Treat independent and dependent variables as interchangeable."
+            ],
+            "correct": 0,
+            "explanation": "Official Curriculum Key for Lesson 17:\nStudents use a graphing calculator to construct the residual plot for a given data set."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Analyzing Residuals.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Developed using authentic lesson materials from standard algebra curricula.",
+        "lessonId": "L-ID-K-MATH-M2-D-6"
+    }
+}

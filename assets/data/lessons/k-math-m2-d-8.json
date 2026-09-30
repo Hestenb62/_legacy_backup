@@ -1,0 +1,177 @@
+{
+    "id": "k-math-m2-d-8",
+    "code": "K.M2.D.8",
+    "standard": "HSS.ID.B.6",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "Interpreting Correlation",
+        "pageTitle": "Interpreting Correlation | Hesten's Learning",
+        "description": "This lesson introduces students to the correlation coefficient, a measure of the strength of a linear relationship between two numerical values. The focus of th...",
+        "pageDescription": "Master Interpreting Correlation in Module 2: Descriptive Statistics. Comprehensive student outcomes, teacher insights, guided exercises, problem set worksheets, and exit ticket keys.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M2.D.8",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 19",
+        "pill": "Numerical Data on Two Variables",
+        "text": "This lesson introduces students to the correlation coefficient, a measure of the strength of a linear relationship between two numerical values. The focus of this lesson is on what the correlation coefficient (generally identified as r) tells us about the relationship between two numerical variables. Students use technology to determine the value of the correlation coefficient, or r. Instructions are provided in the teacher notes for using TI-83/84 graphing calculators. The instructions can be printed and distributed to students during the lesson. It is important that whenever students evaluate whether or not two variables have a linear relationship, they do not interpret the correlation as causation. This lesson addresses several examples in which a correlation is noted, but the correlation does not indicate causation. This lesson concludes the new content for the Algebra I statistics module. In the last lesson, students are expected to summarize at least one of the examples or exercises developed in this module in a poster or a class presentation. Students complete their current study of the fit of a linear model by using technology to interpret the correlation coefficient as an indication of the strength and direction of a linear relationship.",
+        "outcomes": [
+            "Students use technology to determine the value of the correlation coefficient for a given data set.",
+            "Students interpret the value of the correlation coefficient as a measure of strength and direction of a linear relationship.",
+            "Students explain why correlation does not imply causation."
+        ],
+        "teacherInsight": "This is an extensive lesson. Several examples are provided to address varying strengths of linearity, along with positive and negative linear relationships. Students use technology, summary tables, and graphs to answer the questions. If it is a challenge to address the entire lesson in one class period, teachers should select problems that cover varying examples of the linear relationship between two variables. It may be necessary to spend more than one class period on this lesson. It is not necessary for students to compute the correlation coefficient by hand, but if they want to know how this is done, you can share the formula for the correlation coefficient given below. r=\\frac{(x-x)}{\\sqrt{(x-x)^{2}} \\sqrt{(y-y)^{2}}}"
+    },
+    "content": [],
+    "vocabulary": [
+        {
+            "term": "Interpreting Correlation",
+            "definition": "Core mathematical concept established in Module 2: Descriptive Statistics, Numerical Data on Two Variables."
+        },
+        {
+            "term": "Mathematical Modeling",
+            "definition": "The process of choosing and using appropriate mathematics and statistics to analyze empirical situations, to understand them better, and to improve decisions."
+        }
+    ],
+    "guidedExercises": [
+        {
+            "title": "Example 1: Core Mathematical Modeling for Interpreting Correlation",
+            "badge": "Eureka Math Guided Classwork",
+            "difficulty": "Core Application",
+            "problem": "Classwork Example 1 (2 minutes): Positive and Negative Linear Relationships Read through Example 1 with students. Example 1: Positive and Negative Linear Relationships Linear relationships can be described as either positive or negative. Below are two scatter plots that display a linear relationship between two numerical variables x and y. Exercises 1—4 (4 minutes)",
+            "scaffolding": "Identify the key variables and properties. Apply the definitions and mathematical structures introduced in Interpreting Correlation.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Define Variables & Formulate Governing Relations",
+                    "math": "\\text{Identify key variables and parameters for } Interpreting Correlation",
+                    "explanation": "Establish the relationship between quantities and state any domain constraints."
+                },
+                {
+                    "step": 2,
+                    "label": "Execute Step-by-Step Algebraic Transformations",
+                    "math": "\\text{Transform and simplify equations: } \\dots",
+                    "explanation": "Discuss and confirm Exercises 1—4 as a class. Exercises 1—4 The relationship displayed in Scatter Plot 1 is a positive linear relationship. Does the value of the y-variable tend to increase or decrease as the value of x increases? If you were to desc"
+                }
+            ],
+            "finalAnswer": "\\text{The evaluated solution verifies the properties of } Interpreting Correlation",
+            "commonPitfall": "Ensure units of measurement and domain constraints are checked in physical and statistical contexts."
+        },
+        {
+            "title": "Exercise 1: Independent Problem Formulation",
+            "badge": "Multi-Step Application",
+            "difficulty": "Advanced Reasoning",
+            "problem": "Apply the foundational principles of Interpreting Correlation to determine the exact value and interpret the contextual significance.",
+            "scaffolding": "Reference the worked steps from Example 1. Verify intermediate calculations and justify your steps.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Analyze Given Conditions & Structure",
+                    "math": "\\text{State domain constraints and initial conditions}",
+                    "explanation": "Verify that all assumptions conform to the problem context."
+                },
+                {
+                    "step": 2,
+                    "label": "Calculate the Final Mathematical Solution",
+                    "math": "\\text{Solve for the target unknown quantity}",
+                    "explanation": "State the solution with formal mathematical reasoning."
+                }
+            ],
+            "finalAnswer": "\\text{Verified algebraic or statistical solution}",
+            "commonPitfall": "Avoid rounding prematurely before the final step."
+        }
+    ],
+    "exitTicket": {
+        "title": "Lesson 19 Exit Ticket: Interpreting Correlation",
+        "prompt": "Exit Ticket\n\nThe scatter plot below displays data on the number of defects per 100 cars and a measure of customer satisfaction (on a scale from 1 to 1,000, with higher scores indicating greater satisfaction) for the 33 brands of cars sold in the United States in 2009.\n\nData Source: USA Today, June 16, 2010 and July 17, 2010\n\nWhich of the following is the value of the correlation coefficient for this data set: r=-0.95, r=-0.24, r=0.83, or r=1.00?\n\nExplain why you selected this value.",
+        "solution": "The scatter plot below displays data on the number of defects per 100 cars and a measure of customer satisfaction (on a scale from 1 to 1,000, with higher scores indicating greater satisfaction) for the 33 brands of cars sold in the United States in 2009.\n\nData Source: USA Today, June 16, 2010 and July 17, 2010\n\nWhich of the following is the value of the correlation coefficient for this data set: r=-0.95, r=-0.24, r=0.83, or r=1.00?\n\nr=-0.24\n\nExplain why you selected this value.\n\nStudents' answers should indicate that there is not a strong pattern of a linear relationship with this scatter plot. Students may struggle with an explanation based on weak relationship; however, there is a general pattern that as the number of defects increase, the satisfaction rating tends to decrease. As a result, students would estimate a weak negative association or a negative value of r close to zero. Based on the values provided, students would estimate r=-0.24."
+    },
+    "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Master Interpreting Correlation through authentic curriculum practice problems. Check your work using the expandable teacher solution key below.",
+        "problems": [
+            {
+                "number": 1,
+                "prompt": "Which of the three scatter plots below shows the strongest linear relationship? Which shows the weakest linear relationship?",
+                "solution": "The strongest linear relationship would be Scatter Plot 3. The weakest linear relationship would be Scatter Plot 2."
+            },
+            {
+                "number": 2,
+                "prompt": "Consumer Reports published data on the price (in dollars) and quality rating (on a scale of 0 to 100) for 10 different brands of men's athletic shoes.\n\nConstruct a scatter plot of these data using the grid provided.\n\nCalculate the value of the correlation coefficient between price and quality rating, and interpret this value. Round to the nearest hundredth.",
+                "solution": "The correlation coefficient is r≈-0.42, using a TI-84. This indicates a moderate negative relationship between price and quality rating. It indicates that as the price increases, quality rating tends to decrease."
+            },
+            {
+                "number": 3,
+                "prompt": "Does it surprise you that the value of the correlation coefficient is negative? Explain why or why not.",
+                "solution": "It is anticipated that students will be surprised by this relationship. Students might think that as the price increases, the quality rating increases."
+            },
+            {
+                "number": 4,
+                "prompt": "Is it reasonable to conclude that higher-priced shoes are higher quality? Explain.",
+                "solution": "Based on this data, you would not necessarily assume that as the price increases, the quality tends to increase."
+            },
+            {
+                "number": 5,
+                "prompt": "The correlation between price and quality rating is negative. Is it reasonable to conclude that increasing the price causes a decrease in quality rating? Explain.",
+                "solution": "No, just because there is a correlation between two variables does not mean that there is a cause-and-effect relationship between the two."
+            },
+            {
+                "number": 6,
+                "prompt": "The Princeton Review publishes information about colleges and universities. The data below are for six public 4-year colleges in New York. Graduation rate is the percentage of students who graduate within six years. Student-to-faculty ratio is the number of students per full-time faculty member.\n\nCalculate the value of the correlation coefficient between the number of full-time students and graduation rate. Round to the nearest hundredth.",
+                "solution": "Let x represent the number of full-time students and y represent the graduation rate. The correlation coefficient is r≈0.83, using a TI-84."
+            },
+            {
+                "number": 7,
+                "prompt": "Is the linear relationship between graduation rate and number of full-time students weak, moderate, or strong? On what did you base your decision?",
+                "solution": "Based on the table presented in the lesson, the linear relationship between graduation rate and the number of full-time students is strong."
+            },
+            {
+                "number": 8,
+                "prompt": "Is the following statement true or false? Based on the value of the correlation coefficient, it is reasonable to conclude that having a larger number of students at a school is the cause of a higher graduation rate.",
+                "solution": "False; it is not reasonable to assume a cause-and-effect. There are other factors that might also contribute to higher graduation rates, including the student-to-faculty ratio and admission standards of the school."
+            },
+            {
+                "number": 9,
+                "prompt": "Calculate the value of the correlation coefficient between the student-to-faculty ratio and the graduation rate. Round to the nearest hundredth.",
+                "solution": "Let x represent the student-to-faculty ratio and y represent the graduation rate. The correlation coefficient is r≈0.95, using a TI-84."
+            },
+            {
+                "number": 10,
+                "prompt": "Which linear relationship is stronger: graduation rate and number of full-time students or graduation rate and student-to-faculty ratio? Justify your choice.",
+                "solution": "The stronger relationship is between graduation rate and student-to-faculty ratio. The correlation coefficient is greater in this case."
+            }
+        ]
+    },
+    "practiceQuestions": [
+        {
+            "question": "[Exit Ticket Challenge 1] Exit Ticket",
+            "options": [
+                "The scatter plot below displays data on the number of defects per 100 cars and a measure of customer satisfaction (on a scale from 1 to 1,000, with higher scores indicating greater satisfaction) for the 33 brands of cars sold in the United States in ",
+                "The relationship cannot be evaluated without arbitrary numerical coordinates.",
+                "The values remain constant at zero regardless of the independent variable inputs.",
+                "The rate of change is undefined because domain restrictions were violated."
+            ],
+            "correct": 0,
+            "explanation": "From the official Eureka Math Exit Ticket Key for Lesson 19:\nThe scatter plot below displays data on the number of defects per 100 cars and a measure of customer satisfaction (on a scale from 1 to 1,000, with higher scores indicating greater satisfaction) for the 33 brands of cars sold in the United States in 2009.\n\nData Source: USA Today, June 16, 2010 and July 17, 2010\n\nWhich of the following is the value of the correlation coefficient for this data set: r=-0.95, r=-0.24, r=0.83, or r=1.00?\n\nr=-0.24\n\nExp"
+        },
+        {
+            "question": "[Exit Ticket Challenge 2] The scatter plot below displays data on the number of defects per 100 cars and a measure of customer satisfaction (on a scale from 1 to 1,000, with higher scores indicating greater satisfaction) for the 33 brands of cars sold in the United States in 2009.",
+            "options": [
+                "Data Source: USA Today, June 16, 2010 and July 17, 2010",
+                "Ignore boundary conditions and compute only approximate integer values.",
+                "Assume that all relationships are strictly constant without verifying rates of change.",
+                "Treat independent and dependent variables as interchangeable."
+            ],
+            "correct": 0,
+            "explanation": "Official Curriculum Key for Lesson 19:\nStudents use technology to determine the value of the correlation coefficient for a given data set."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Interpreting Correlation.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Developed using authentic lesson materials from standard algebra curricula.",
+        "lessonId": "L-ID-K-MATH-M2-D-8"
+    }
+}

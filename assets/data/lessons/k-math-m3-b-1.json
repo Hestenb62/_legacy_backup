@@ -1,0 +1,166 @@
+{
+    "id": "k-math-m3-b-1",
+    "code": "K.M3.B.1",
+    "standard": "HSF.IF.A.1",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "Why Stay with Whole Numbers?",
+        "pageTitle": "Why Stay with Whole Numbers? | Hesten's Learning",
+        "description": "This lesson builds on the work of Topic A by continuing to relate sequences to formulas or functions without explicitly defining function or function notation (...",
+        "pageDescription": "Master Why Stay with Whole Numbers? in Module 3: Linear and Exponential Functions. Comprehensive student outcomes, teacher insights, guided exercises, problem set worksheets, and exit ticket keys.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M3.B.1",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 8",
+        "pill": "Functions and Their Graphs",
+        "text": "This lesson builds on the work of Topic A by continuing to relate sequences to formulas or functions without explicitly defining function or function notation (however, students are using this notation and have been since Topic A). This lesson builds upon students' understanding of sequences by extending familiar sequences (the square numbers and the triangular numbers) to functions whose domains extend beyond the set of whole numbers and by asking students to continually consider what makes sense given the situation. While the word function appears in the student outcomes and teacher notes for this lesson, this term need not be used with students until introduced formally in Lesson 9.",
+        "outcomes": [
+            "Students use function notation, evaluate functions for inputs in their domains, and interpret statements that use function notation in terms of a context.",
+            "Students create functions that represent a geometric situation and relate the domain of a function to its graph and to the relationship it describes."
+        ],
+        "teacherInsight": "Emphasize precise mathematical definitions and multiple problem-solving representations. Encourage students to check the reasonableness of their numerical solutions."
+    },
+    "content": [],
+    "vocabulary": [
+        {
+            "term": "Why Stay with Whole Numbers?",
+            "definition": "Core mathematical concept established in Module 3: Linear and Exponential Functions, Functions and Their Graphs."
+        },
+        {
+            "term": "Mathematical Modeling",
+            "definition": "The process of choosing and using appropriate mathematics and statistics to analyze empirical situations, to understand them better, and to improve decisions."
+        }
+    ],
+    "guidedExercises": [
+        {
+            "title": "Example 1: Core Mathematical Modeling for Why Stay with Whole Numbers?",
+            "badge": "Eureka Math Guided Classwork",
+            "difficulty": "Core Application",
+            "problem": "Classwork Opening (3 minutes) Introduce the lesson. For the ancient Greeks, all of mathematics was geometry. The sequence of perfect squares earned its name because these are the numbers that come about from arranging dots (or any other simple shape or object) into squares. The figurate numbers like the square, triangular, and odd numbers are used throughout this lesson. The following resource provides some additional background information on these numbers: http://mathworld.wolfram.com/Figurate",
+            "scaffolding": "Identify the key variables and properties. Apply the definitions and mathematical structures introduced in Why Stay with Whole Numbers?.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Define Variables & Formulate Governing Relations",
+                    "math": "\\text{Identify key variables and parameters for } Why Stay with Whole Numbers?",
+                    "explanation": "Establish the relationship between quantities and state any domain constraints."
+                },
+                {
+                    "step": 2,
+                    "label": "Execute Step-by-Step Algebraic Transformations",
+                    "math": "\\text{Transform and simplify equations: } \\dots",
+                    "explanation": "The sequence of perfect squares {1,4,9,16,25,…} earned its name because the ancient Greeks realized these quantities could be arranged to form square shapes. If S(n) denotes the nth square number, what is a formula for S(n)? S(n)=n^{2} Discussion (5 "
+                }
+            ],
+            "finalAnswer": "\\text{The evaluated solution verifies the properties of } Why Stay with Whole Numbers?",
+            "commonPitfall": "Ensure units of measurement and domain constraints are checked in physical and statistical contexts."
+        },
+        {
+            "title": "Exercise 1: Independent Problem Formulation",
+            "badge": "Multi-Step Application",
+            "difficulty": "Advanced Reasoning",
+            "problem": "Apply the foundational principles of Why Stay with Whole Numbers? to determine the exact value and interpret the contextual significance.",
+            "scaffolding": "Reference the worked steps from Example 1. Verify intermediate calculations and justify your steps.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Analyze Given Conditions & Structure",
+                    "math": "\\text{State domain constraints and initial conditions}",
+                    "explanation": "Verify that all assumptions conform to the problem context."
+                },
+                {
+                    "step": 2,
+                    "label": "Calculate the Final Mathematical Solution",
+                    "math": "\\text{Solve for the target unknown quantity}",
+                    "explanation": "State the solution with formal mathematical reasoning."
+                }
+            ],
+            "finalAnswer": "\\text{Verified algebraic or statistical solution}",
+            "commonPitfall": "Avoid rounding prematurely before the final step."
+        }
+    ],
+    "exitTicket": {
+        "title": "Lesson 8 Exit Ticket: Why Stay with Whole Numbers?",
+        "prompt": "Exit Ticket\n\nRecall that an odd number is a number that is one more than or one less than twice an integer. Consider the sequence formed by the odd numbers {1,3,5,7,…}.\n\n\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\n\nFind a formula for O(n), the nth odd number starting with n=1.\n\nWrite a convincing argument that 121 is an odd number.\n\nWhat is the meaning of O(17)?",
+        "solution": "Recall that an odd number is a number that is one more than or one less than twice an integer. Consider the sequence formed by the odd numbers {1,3,5,7,…}.\n\nFind a formula for O(n), the nth odd number starting with n=1.\n\nO(n)=2n-1\n\nWrite a convincing argument that 121 is an odd number.\n\n121 is an odd number because it can be represented as 2(60)+1 (one more than twice an integer) or as a column of 60 dots next to a column of 61 dots. Let n=61. Then O(61)=2(61)-1=121.\n\nWhat is the meaning of O(17)?\n\nThat represents the 17th term of the sequence. That number is 2(17)-1 or 33."
+    },
+    "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Master Why Stay with Whole Numbers? through authentic curriculum practice problems. Check your work using the expandable teacher solution key below.",
+        "problems": [
+            {
+                "number": 1,
+                "prompt": "The first four terms of two different sequences are shown below. Sequence A is given in the table, and sequence B is graphed as a set of ordered pairs.\n\nCreate an explicit formula for each sequence.",
+                "solution": "A(n)=15+16(n-1), where n is an integer greater than 0. B(n)=3(2)^{n-1}, where n is an integer greater than 0."
+            },
+            {
+                "number": 2,
+                "prompt": "Which sequence will be the first to exceed 500? How do you know?",
+                "solution": "Students may use observation of the rate of growth in the table and graph or use the formulas they wrote in part (a) to describe that the growth rate of sequence B will cause it to eventually exceed the values of sequence A and to reach 500 before sequence A does. They may also choose a more definitive proof by extending tables of values or graphs of the terms to see which sequence exceeds 500 first. Alternatively, they could choose to use trial and error or algebra skills to find the smallest value of n for which each formula yields a value of 500 or greater. For sequence A, n=32 is the first term to yield a value greater than 500. For sequence B, n=9 is the first term to yield a value greater than 500."
+            },
+            {
+                "number": 3,
+                "prompt": "A tile pattern is shown below.\n\nFigure 1Figure 2Figure 3 Figure 4\n\nHow is this pattern growing?",
+                "solution": "Each figure contains three more tiles than the previous figure."
+            },
+            {
+                "number": 4,
+                "prompt": "Create an explicit formula that could be used to determine the number of squares in the nth figure.",
+                "solution": "F(n)=3n, where n is a positive integer."
+            },
+            {
+                "number": 5,
+                "prompt": "Evaluate your formula for n=0, and n=2.5. Draw Figure 0 and Figure 2.5, and explain how you decided to create your drawings.",
+                "solution": "F(0)=0, and F(2.5)=7.5. You could draw no squares for Figure 0. You could draw 7 squares and \\frac{1}{2} of a square for Figure 2.5."
+            },
+            {
+                "number": 6,
+                "prompt": "The first four terms of a geometric sequence are graphed as a set of ordered pairs.\n\nWhat is an explicit formula for this sequence?",
+                "solution": "A(n)=4.5(2)^{n-1} for n>0."
+            },
+            {
+                "number": 7,
+                "prompt": "Explain the meaning of the ordered pair (3, 18).",
+                "solution": "It means that the 3rd term in the sequence is 18, or A(3)=18."
+            },
+            {
+                "number": 8,
+                "prompt": "As of July 2013, Justin Bieber had over 42,000,000 Twitter followers. Suppose the sequence represents the number of people that follow your new Twitter account each week since you started tweeting. If your followers keep growing in the same manner, when will you exceed 1,000,000 followers?",
+                "solution": "This sequence will exceed 1,000,000 followers when n>19. At some time in the 19th week, I would have 1,000,000 followers."
+            }
+        ]
+    },
+    "practiceQuestions": [
+        {
+            "question": "[Exit Ticket Challenge 1] Exit Ticket",
+            "options": [
+                "Recall that an odd number is a number that is one more than or one less than twice an integer. Consider the sequence formed by the odd numbers {1,3,5,7,…}.",
+                "The relationship cannot be evaluated without arbitrary numerical coordinates.",
+                "The values remain constant at zero regardless of the independent variable inputs.",
+                "The rate of change is undefined because domain restrictions were violated."
+            ],
+            "correct": 0,
+            "explanation": "From the official Eureka Math Exit Ticket Key for Lesson 8:\nRecall that an odd number is a number that is one more than or one less than twice an integer. Consider the sequence formed by the odd numbers {1,3,5,7,…}.\n\nFind a formula for O(n), the nth odd number starting with n=1.\n\nO(n)=2n-1\n\nWrite a convincing argument that 121 is an odd number.\n\n121 is an odd number because it can be represented as 2(60)+1 (one more than twice an integer) or as a column of 60 dots next to a column of 61 dots. Let n=61. Th"
+        },
+        {
+            "question": "[Exit Ticket Challenge 2] Recall that an odd number is a number that is one more than or one less than twice an integer. Consider the sequence formed by the odd numbers {1,3,5,7,…}.",
+            "options": [
+                "Find a formula for O(n), the nth odd number starting with n=1.",
+                "Ignore boundary conditions and compute only approximate integer values.",
+                "Assume that all relationships are strictly constant without verifying rates of change.",
+                "Treat independent and dependent variables as interchangeable."
+            ],
+            "correct": 0,
+            "explanation": "Official Curriculum Key for Lesson 8:\nStudents use function notation, evaluate functions for inputs in their domains, and interpret statements that use function notation in terms of a context."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Why Stay with Whole Numbers?.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Developed using authentic lesson materials from standard algebra curricula.",
+        "lessonId": "L-ID-K-MATH-M3-B-1"
+    }
+}

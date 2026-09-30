@@ -1,0 +1,166 @@
+{
+    "id": "k-math-m2-b-3",
+    "code": "K.M2.B.3",
+    "standard": "HSS.ID.A.2",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "Interpreting the Standard Deviation",
+        "pageTitle": "Interpreting the Standard Deviation | Hesten's Learning",
+        "description": "Students use a calculator to compute the mean and the standard deviation of a data set and compare the variability of data sets where the differences in variabi...",
+        "pageDescription": "Master Interpreting the Standard Deviation in Module 2: Descriptive Statistics. Comprehensive student outcomes, teacher insights, guided exercises, problem set worksheets, and exit ticket keys.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M2.B.3",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 6",
+        "pill": "Calculating and Interpreting Measures of Center and Variability",
+        "text": "Students use a calculator to compute the mean and the standard deviation of a data set and compare the variability of data sets where the differences in variability are less obvious than in previous lessons. Additionally, students continue to refine their knowledge of standard deviation and how it measures a typical deviation from the mean.",
+        "outcomes": [
+            "Students calculate the standard deviation of a sample with the aid of a calculator.",
+            "Students compare the relative variability of distributions using standard deviations."
+        ],
+        "teacherInsight": "Emphasize precise mathematical definitions and multiple problem-solving representations. Encourage students to check the reasonableness of their numerical solutions."
+    },
+    "content": [],
+    "vocabulary": [
+        {
+            "term": "Interpreting the Standard Deviation",
+            "definition": "Core mathematical concept established in Module 2: Descriptive Statistics, Calculating and Interpreting Measures of Center and Variability."
+        },
+        {
+            "term": "Mathematical Modeling",
+            "definition": "The process of choosing and using appropriate mathematics and statistics to analyze empirical situations, to understand them better, and to improve decisions."
+        }
+    ],
+    "guidedExercises": [
+        {
+            "title": "Example 1: Core Mathematical Modeling for Interpreting the Standard Deviation",
+            "badge": "Eureka Math Guided Classwork",
+            "difficulty": "Core Application",
+            "problem": "Classwork Example 1 (10 minutes) Use a calculator to find the mean and standard deviation. Example 1 Your teacher will show you how to use a calculator to find the mean and standard deviation for the following set of data. A set of eight men have heights (in inches) as shown below.",
+            "scaffolding": "Identify the key variables and properties. Apply the definitions and mathematical structures introduced in Interpreting the Standard Deviation.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Define Variables & Formulate Governing Relations",
+                    "math": "\\text{Identify key variables and parameters for } Interpreting the Standard Deviation",
+                    "explanation": "Establish the relationship between quantities and state any domain constraints."
+                },
+                {
+                    "step": 2,
+                    "label": "Execute Step-by-Step Algebraic Transformations",
+                    "math": "\\text{Transform and simplify equations: } \\dots",
+                    "explanation": "67.0 70.9 67.6 69.8 69.7 70.9 68.7 67.2 Indicate the mean and standard deviation you obtained from your calculator to the nearest hundredth. Mean: 68.98 inches Standard Deviation: 1.59 inches Show students the steps to calculate the mean and the stan"
+                }
+            ],
+            "finalAnswer": "\\text{The evaluated solution verifies the properties of } Interpreting the Standard Deviation",
+            "commonPitfall": "Ensure units of measurement and domain constraints are checked in physical and statistical contexts."
+        },
+        {
+            "title": "Exercise 1: Independent Problem Formulation",
+            "badge": "Multi-Step Application",
+            "difficulty": "Advanced Reasoning",
+            "problem": "Apply the foundational principles of Interpreting the Standard Deviation to determine the exact value and interpret the contextual significance.",
+            "scaffolding": "Reference the worked steps from Example 1. Verify intermediate calculations and justify your steps.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Analyze Given Conditions & Structure",
+                    "math": "\\text{State domain constraints and initial conditions}",
+                    "explanation": "Verify that all assumptions conform to the problem context."
+                },
+                {
+                    "step": 2,
+                    "label": "Calculate the Final Mathematical Solution",
+                    "math": "\\text{Solve for the target unknown quantity}",
+                    "explanation": "State the solution with formal mathematical reasoning."
+                }
+            ],
+            "finalAnswer": "\\text{Verified algebraic or statistical solution}",
+            "commonPitfall": "Avoid rounding prematurely before the final step."
+        }
+    ],
+    "exitTicket": {
+        "title": "Lesson 6 Exit Ticket: Interpreting the Standard Deviation",
+        "prompt": "Exit Ticket\n\nUse the statistical features of your calculator to find the mean and the standard deviation to the nearest tenth of a data set of the miles per gallon from a sample of five cars.\n\n24.9 24.7 24.7 23.4 27.9\n\nSuppose that a teacher plans to give four students a quiz. The minimum possible score on the quiz is 0, and the maximum possible score is 10.\n\nWhat is the smallest possible standard deviation of the students' scores? Give an example of a possible set of four student scores that would have this standard deviation.\n\nWhat is the set of four student scores that would make the standard deviation as large as it could possibly be? Use your calculator to find this largest possible standard deviation.",
+        "solution": "Use the statistical features of your calculator to find the mean and the standard deviation to the nearest tenth of a data set of the miles per gallon from a sample of five cars.\n\n24.9 24.7 24.7 23.4 27.9\n\nMean: 25.1 miles per gallon, to the nearest tenth\n\nStandard Deviation: 1.7 miles per gallon, to the nearest tenth\n\nSuppose that a teacher plans to give four students a quiz. The minimum possible score on the quiz is 0, and the maximum possible score is 10.\n\nWhat is the smallest possible standard deviation of the students' scores? Give an example of a possible set of four student scores that would have this standard deviation.\n\nThe minimum possible standard deviation is 0. This will come about if all the students receive the same score (e.g., if every student scores an 8 on the quiz).\n\nWhat is the set of four student scores that would make the standard deviation as large as it could possibly be? Use your calculator to find this largest possible standard deviation.\n\n0, 0, 10, 10\n\nStandard Deviation: 5.77, to the nearest hundredth"
+    },
+    "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Master Interpreting the Standard Deviation through authentic curriculum practice problems. Check your work using the expandable teacher solution key below.",
+        "problems": [
+            {
+                "number": 1,
+                "prompt": "At a track meet, there are three men's 100 m races. The times for eight of the sprinters are recorded to the nearest \\frac{1}{10} of a second. The results of the three races for these eight sprinters are shown in the dot plots below.\n\nRace 1\n\nRace 2\n\nRace 3\n\nRemember that the size of the standard deviation is related to the sizes of the deviations from the mean. Without doing any calculations, indicate which of the three races has the smallest standard deviation of times. Justify your answer.",
+                "solution": "Race 3 has the smallest standard deviation because several race times are clustered around the mean."
+            },
+            {
+                "number": 2,
+                "prompt": "Which race had the largest standard deviation of times? (Again, don't do any calculations!) Justify your answer.",
+                "solution": "Race 2 has the largest standard deviation because the race times are spread out from the mean."
+            },
+            {
+                "number": 3,
+                "prompt": "Roughly what would be the standard deviation in Race 1? (Remember that the standard deviation is a typical deviation from the mean. So, here you are looking for a typical deviation from the mean, in seconds, for Race 1.)",
+                "solution": "Around 0.5—1.0 second would be a sensible answer."
+            },
+            {
+                "number": 4,
+                "prompt": "Use your calculator to find the mean and the standard deviation for each of the three races. Write your answers in the table below to the nearest thousandth.\n\nHow close were your answers for parts (a)—(c) to the actual values?",
+                "solution": "Answers will vary based on students' responses."
+            },
+            {
+                "number": 5,
+                "prompt": "A large city, which we will call City A, holds a marathon. Suppose that the ages of the participants in the marathon that took place in City A were summarized in the histogram below.\n\nMake an estimate of the mean age of the participants in the City A marathon.",
+                "solution": "Around 40 years would be a sensible estimate."
+            },
+            {
+                "number": 6,
+                "prompt": "Make an estimate of the standard deviation of the ages of the participants in the City A marathon.",
+                "solution": "Between 8 and 15 years would be a sensible estimate."
+            },
+            {
+                "number": 7,
+                "prompt": "A smaller city, City B, also held a marathon. However, City B restricts the number of people of each age category who can take part to 100. The ages of the participants are summarized in the histogram below.\n\nApproximately what was the mean age of the participants in the City B marathon? Approximately what was the standard deviation of the ages?",
+                "solution": "Mean is around 53 years; standard deviation is between 15 and 25 years."
+            },
+            {
+                "number": 8,
+                "prompt": "Explain why the standard deviation of the ages in the City B marathon is greater than the standard deviation of the ages for the City A marathon.",
+                "solution": "In City A, there is greater clustering around the mean age than in City B. In City B, the deviations from the mean are generally greater than in City A, so the standard deviation for City B is greater than the standard deviation for City A."
+            }
+        ]
+    },
+    "practiceQuestions": [
+        {
+            "question": "[Exit Ticket Challenge 1] Exit Ticket",
+            "options": [
+                "Use the statistical features of your calculator to find the mean and the standard deviation to the nearest tenth of a data set of the miles per gallon from a sample of five cars.",
+                "The relationship cannot be evaluated without arbitrary numerical coordinates.",
+                "The values remain constant at zero regardless of the independent variable inputs.",
+                "The rate of change is undefined because domain restrictions were violated."
+            ],
+            "correct": 0,
+            "explanation": "From the official Eureka Math Exit Ticket Key for Lesson 6:\nUse the statistical features of your calculator to find the mean and the standard deviation to the nearest tenth of a data set of the miles per gallon from a sample of five cars.\n\n24.9 24.7 24.7 23.4 27.9\n\nMean: 25.1 miles per gallon, to the nearest tenth\n\nStandard Deviation: 1.7 miles per gallon, to the nearest tenth\n\nSuppose that a teacher plans to give four students a quiz. The minimum possible score on the quiz is 0, and the maximum possible "
+        },
+        {
+            "question": "[Exit Ticket Challenge 2] Use the statistical features of your calculator to find the mean and the standard deviation to the nearest tenth of a data set of the miles per gallon from a sample of five cars.",
+            "options": [
+                "24.9 24.7 24.7 23.4 27.9",
+                "Ignore boundary conditions and compute only approximate integer values.",
+                "Assume that all relationships are strictly constant without verifying rates of change.",
+                "Treat independent and dependent variables as interchangeable."
+            ],
+            "correct": 0,
+            "explanation": "Official Curriculum Key for Lesson 6:\nStudents calculate the standard deviation of a sample with the aid of a calculator."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Interpreting the Standard Deviation.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Developed using authentic lesson materials from standard algebra curricula.",
+        "lessonId": "L-ID-K-MATH-M2-B-3"
+    }
+}

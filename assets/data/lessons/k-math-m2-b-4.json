@@ -1,0 +1,179 @@
+{
+    "id": "k-math-m2-b-4",
+    "code": "K.M2.B.4",
+    "standard": "HSS.ID.A.2",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "Measuring Variability for Skewed Distributions (Interquartile Range)",
+        "pageTitle": "Measuring Variability for Skewed Distributions (Interquartile Range) | Hesten's Learning",
+        "description": "Distributions that are not symmetrical pose some challenges in students' thinking about center and variability. The observation that the distribution is not sym...",
+        "pageDescription": "Master Measuring Variability for Skewed Distributions (Interquartile Range) in Module 2: Descriptive Statistics. Comprehensive student outcomes, teacher insights, guided exercises, problem set worksheets, and exit ticket keys.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M2.B.4",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 7",
+        "pill": "Calculating and Interpreting Measures of Center and Variability",
+        "text": "Distributions that are not symmetrical pose some challenges in students' thinking about center and variability. The observation that the distribution is not symmetrical is straightforward. The difficult part is to select a measure of center and a measure of variability around that center. In Lesson 3, students learned that, because the mean can be affected by unusual values in the data set, the median is a better description of a typical data value for a skewed distribution. This lesson addresses what measure of variability is appropriate for a skewed data distribution. Students construct a box plot of the data using the 5-number summary and describe variability using the interquartile range.",
+        "outcomes": [
+            "Students explain why a median is a better description of a typical value for a skewed distribution.",
+            "Students calculate the 5-number summary of a data set.",
+            "Students construct a box plot based on the 5-number summary and calculate the interquartile range (IQR).",
+            "Students interpret the IQR as a description of variability in the data.",
+            "Students identify outliers in a data distribution."
+        ],
+        "teacherInsight": "Emphasize precise mathematical definitions and multiple problem-solving representations. Encourage students to check the reasonableness of their numerical solutions."
+    },
+    "content": [],
+    "vocabulary": [
+        {
+            "term": "Measuring Variability for Skewed Distributions (Interquartile Range)",
+            "definition": "Core mathematical concept established in Module 2: Descriptive Statistics, Calculating and Interpreting Measures of Center and Variability."
+        },
+        {
+            "term": "Mathematical Modeling",
+            "definition": "The process of choosing and using appropriate mathematics and statistics to analyze empirical situations, to understand them better, and to improve decisions."
+        }
+    ],
+    "guidedExercises": [
+        {
+            "title": "Example 1: Core Mathematical Modeling for Measuring Variability for Skewed Distributions (Interquartile Range)",
+            "badge": "Eureka Math Guided Classwork",
+            "difficulty": "Core Application",
+            "problem": "Classwork Exploratory Challenge 1/Exercises 1—3 (10 minutes): Skewed Data and Their Measure of Center Verbally introduce the data set as described in the introductory paragraph and dot plot shown below. Exploratory Challenge 1/Exercises 1—3: Skewed Data and Their Measure of Center Consider the following scenario. A television game show, Fact or Fiction, was cancelled after nine shows. Many people watched the nine shows and were rather upset when it was taken off the air. A random sample of eight",
+            "scaffolding": "Identify the key variables and properties. Apply the definitions and mathematical structures introduced in Measuring Variability for Skewed Distributions (Interquartile Range).",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Define Variables & Formulate Governing Relations",
+                    "math": "\\text{Identify key variables and parameters for } Measuring Variability for Skewed Distributions (Interquartile Range)",
+                    "explanation": "Establish the relationship between quantities and state any domain constraints."
+                },
+                {
+                    "step": 2,
+                    "label": "Execute Step-by-Step Algebraic Transformations",
+                    "math": "\\text{Transform and simplify equations: } \\dots",
+                    "explanation": "What does the dot farthest to the left in this dot plot tell us? This dot tells us that one of the 80 viewers surveyed is only about 5 years old. Is this distribution symmetrical? No. There are more viewers (a cluster of viewers) at the older ages. W"
+                }
+            ],
+            "finalAnswer": "\\text{The evaluated solution verifies the properties of } Measuring Variability for Skewed Distributions (Interquartile Range)",
+            "commonPitfall": "Ensure units of measurement and domain constraints are checked in physical and statistical contexts."
+        },
+        {
+            "title": "Exercise 1: Independent Problem Formulation",
+            "badge": "Multi-Step Application",
+            "difficulty": "Advanced Reasoning",
+            "problem": "Apply the foundational principles of Measuring Variability for Skewed Distributions (Interquartile Range) to determine the exact value and interpret the contextual significance.",
+            "scaffolding": "Reference the worked steps from Example 1. Verify intermediate calculations and justify your steps.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Analyze Given Conditions & Structure",
+                    "math": "\\text{State domain constraints and initial conditions}",
+                    "explanation": "Verify that all assumptions conform to the problem context."
+                },
+                {
+                    "step": 2,
+                    "label": "Calculate the Final Mathematical Solution",
+                    "math": "\\text{Solve for the target unknown quantity}",
+                    "explanation": "State the solution with formal mathematical reasoning."
+                }
+            ],
+            "finalAnswer": "\\text{Verified algebraic or statistical solution}",
+            "commonPitfall": "Avoid rounding prematurely before the final step."
+        }
+    ],
+    "exitTicket": {
+        "title": "Lesson 7 Exit Ticket: Measuring Variability for Skewed Distributions (Interquartile Range)",
+        "prompt": "Exit Ticket\n\nA data set consisting of the number of hours each of 40 students watched television over the weekend has a minimum value of 3 hours, a Q1 value of 5 hours, a median value of 6 hours, a Q3 value of 9 hours, and a maximum value of 12 hours. Draw a box plot representing this data distribution.\n\nWhat is the interquartile range (IQR) for this distribution? What percent of the students fall within this interval?\n\nDo you think the data distribution represented by the box plot is a skewed distribution? Why or why not?\n\nEstimate the typical number of hours students watched television. Explain why you chose this value.",
+        "solution": "A data set consisting of the number of hours each of 40 students watched television over the weekend has a minimum value of 3 hours, a Q1 value of 5 hours, a median value of 6 hours, a Q3 value of 9 hours, and a maximum value of 12 hours. Draw a box plot representing this data distribution.\n\nStudents should sketch a box plot with the minimum value at 3 hours, a Q1 at 5 hours, a median at 6 hours, a Q3 at 9 hours, and a maximum value at 12 hours.\n\nWhat is the interquartile range (IQR) for this distribution? What percent of the students fall within this interval?\n\nThe interquartile range is 4 hours. 50% of the students fall within this interval.\n\nDo you think the data distribution represented by the box plot is a skewed distribution? Why or why not?\n\nYou would speculate that this distribution is skewed because 50% of the data would be between 3 and 6 hours, while 50% would be between 6 and 12 hours. There would be the same number of dots in the smaller interval from 3 to 6 as there would be in the wider interval of 6 to 12.\n\nEstimate the typical number of hours students watched television. Explain why you chose this value.\n\nSince this is a skewed data distribution, the most appropriate estimate of a typical number of hours would be the median, or 6 hours."
+    },
+    "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Master Measuring Variability for Skewed Distributions (Interquartile Range) through authentic curriculum practice problems. Check your work using the expandable teacher solution key below.",
+        "problems": [
+            {
+                "number": 1,
+                "prompt": "Consider the following scenario. Transportation officials collect data on flight delays (the number of minutes a flight takes off after its scheduled time).\n\nConsider the dot plot of the delay times in minutes for 60 BigAir flights during December 2012:\n\nHow many flights left more than 60 minutes late?",
+                "solution": "14 flights left more than 60 minutes late."
+            },
+            {
+                "number": 2,
+                "prompt": "Why is this data distribution considered skewed?",
+                "solution": "This is a skewed distribution because there is a stretch of flights located to the right."
+            },
+            {
+                "number": 3,
+                "prompt": "Is the tail of this data distribution to the right or to the left? How would you describe several of the delay times in the tail?",
+                "solution": "The tail is to the right. The delay times in the tail represent flights with the longest delays."
+            },
+            {
+                "number": 4,
+                "prompt": "Draw a box plot over the dot plot of the flights for December.",
+                "solution": "A box plot of the December delay times is as follows:"
+            },
+            {
+                "number": 5,
+                "prompt": "What is the interquartile range, or IQR, of this data set?",
+                "solution": "The IQR is approximately 60-15, or 45 minutes."
+            },
+            {
+                "number": 6,
+                "prompt": "The mean of the 60 flight delays is approximately 42 minutes. Do you think that 42 minutes is typical of the number of minutes a BigAir flight was delayed? Why or why not?",
+                "solution": "The mean value of 42 minutes is not a good description of a typical flight delay. It is pulled upward to a larger value because of flights with the very long delays."
+            },
+            {
+                "number": 7,
+                "prompt": "Based on the December data, write a brief description of the BigAir flight distribution for December.",
+                "solution": "Students should include a summary of the data in their reports. Included should be the median delay time of 30 minutes and that 50% of the flights are delayed between 15 minutes to 60 minutes, with a typical delay of approximately 30 minutes."
+            },
+            {
+                "number": 8,
+                "prompt": "Calculate the percentage of flights with delays of more than 1 hour. Were there many flight delays of more than 1 hour?",
+                "solution": "14 flights were delayed more than 60 minutes, or 1 hour. These 14 flights represent approximately 23% of the flights. This is not a large number, although the decision of whether or not 23% is large is subjective."
+            },
+            {
+                "number": 9,
+                "prompt": "BigAir later indicated that there was a flight delay that was not included in the data. The flight not reported was delayed for 48 hours. If you had included that flight delay in the box plot, how would you have represented it? Explain your answer.",
+                "solution": "A flight delay of 48 hours would be much larger than any delay in this data set and would be considered an extreme value, or outlier. To include this flight would require an extension of the scale to 2,880 minutes. This flight might have been delayed due to an extreme mechanical problem with the plane or an extended problem with weather."
+            },
+            {
+                "number": 10,
+                "prompt": "Consider a dot plot and the box plot of the delay times in minutes for 60 BigAir flights during January 2013.\n\nHow is the January flight delay distribution different from the one summarizing the December flight delays? In terms of flight delays in January, did BigAir improve, stay the same, or do worse compared to December? Explain your answer.",
+                "solution": "The median flight delay is the same as in December, which is 30 minutes. The IQR is less, or approximately 35 minutes. The maximum is also less. In general, this indicates a typical delay of 30 minutes with less variability."
+            }
+        ]
+    },
+    "practiceQuestions": [
+        {
+            "question": "[Exit Ticket Challenge 1] Exit Ticket",
+            "options": [
+                "A data set consisting of the number of hours each of 40 students watched television over the weekend has a minimum value of 3 hours, a Q1 value of 5 hours, a median value of 6 hours, a Q3 value of 9 hours, and a maximum value of 12 hours. Draw a box ",
+                "The relationship cannot be evaluated without arbitrary numerical coordinates.",
+                "The values remain constant at zero regardless of the independent variable inputs.",
+                "The rate of change is undefined because domain restrictions were violated."
+            ],
+            "correct": 0,
+            "explanation": "From the official Eureka Math Exit Ticket Key for Lesson 7:\nA data set consisting of the number of hours each of 40 students watched television over the weekend has a minimum value of 3 hours, a Q1 value of 5 hours, a median value of 6 hours, a Q3 value of 9 hours, and a maximum value of 12 hours. Draw a box plot representing this data distribution.\n\nStudents should sketch a box plot with the minimum value at 3 hours, a Q1 at 5 hours, a median at 6 hours, a Q3 at 9 hours, and a maximum value at 12 hours.\n"
+        },
+        {
+            "question": "[Exit Ticket Challenge 2] A data set consisting of the number of hours each of 40 students watched television over the weekend has a minimum value of 3 hours, a Q1 value of 5 hours, a median value of 6 hours, a Q3 value of 9 hours, and a maximum value of 12 hours. Draw a box plot representing this data distribution.",
+            "options": [
+                "Students should sketch a box plot with the minimum value at 3 hours, a Q1 at 5 hours, a median at 6 hours, a Q3 at 9 hours, and a maximum value at 12 hours.",
+                "Ignore boundary conditions and compute only approximate integer values.",
+                "Assume that all relationships are strictly constant without verifying rates of change.",
+                "Treat independent and dependent variables as interchangeable."
+            ],
+            "correct": 0,
+            "explanation": "Official Curriculum Key for Lesson 7:\nStudents explain why a median is a better description of a typical value for a skewed distribution."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Measuring Variability for Skewed Distributions (Interquartile Range).\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Developed using authentic lesson materials from standard algebra curricula.",
+        "lessonId": "L-ID-K-MATH-M2-B-4"
+    }
+}

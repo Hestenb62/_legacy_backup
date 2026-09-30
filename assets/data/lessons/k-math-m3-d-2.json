@@ -1,0 +1,126 @@
+{
+    "id": "k-math-m3-d-2",
+    "code": "K.M3.D.2",
+    "standard": "HSF.LE.A.1",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "Modeling an Invasive Species Population",
+        "pageTitle": "Modeling an Invasive Species Population | Hesten's Learning",
+        "description": "The lionfish is an invasive species that began appearing in the western Atlantic Ocean in 1985 and now has large populations throughout the Caribbean as well as...",
+        "pageDescription": "Master Modeling an Invasive Species Population in Module 3: Linear and Exponential Functions. Comprehensive student outcomes, teacher insights, guided exercises, problem set worksheets, and exit ticket keys.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M3.D.2",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 22",
+        "pill": "Using Functions and Graphs to Solve Problems",
+        "text": "The lionfish is an invasive species that began appearing in the western Atlantic Ocean in 1985 and now has large populations throughout the Caribbean as well as along the eastern coastline of the United States. Lionfish have recently been spotted as far north as New York and Rhode Island. More information can be found at the site http://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=963. To maximize class time, create groups ahead of time, and place students in groups as they come into the classroom. The focus of this lesson is on MP.4, modeling with mathematics. Additionally, students need to employ MP.2 as they move back and forth between a real-world context and an algebraic model.",
+        "outcomes": [
+            "Students apply knowledge of exponential functions and transformations of functions to a contextual situation."
+        ],
+        "teacherInsight": "Emphasize precise mathematical definitions and multiple problem-solving representations. Encourage students to check the reasonableness of their numerical solutions."
+    },
+    "content": [],
+    "vocabulary": [
+        {
+            "term": "Classwork Scaffolding",
+            "definition": "When grouping students, consider their reading skill."
+        }
+    ],
+    "guidedExercises": [
+        {
+            "title": "Example 1: Core Mathematical Modeling for Modeling an Invasive Species Population",
+            "badge": "Eureka Math Guided Classwork",
+            "difficulty": "Core Application",
+            "problem": "Classwork Scaffolding:When grouping students, consider their reading skill. Create groups ahead of time with varying ability levels so that they can assist students who may struggle with the reading comprehension aspect of this exercise. Scaffolding:When grouping students, consider their reading skill. Create groups ahead of time with varying ability levels so that they can assist students who may struggle with the reading comprehension aspect of this exercise. Opening (4 minutes) Ask students t",
+            "scaffolding": "Identify the key variables and properties. Apply the definitions and mathematical structures introduced in Modeling an Invasive Species Population.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Define Variables & Formulate Governing Relations",
+                    "math": "\\text{Identify key variables and parameters for } Modeling an Invasive Species Population",
+                    "explanation": "Establish the relationship between quantities and state any domain constraints."
+                },
+                {
+                    "step": 2,
+                    "label": "Execute Step-by-Step Algebraic Transformations",
+                    "math": "\\text{Transform and simplify equations: } \\dots",
+                    "explanation": "Lionfish reproduce quickly and eat large amounts of fish around the reef or area they inhabit. Mathematical Modeling Exercise (25 minutes) Have students work in groups. Circulate throughout the room asking students about the problem. Make sure studen"
+                }
+            ],
+            "finalAnswer": "\\text{The evaluated solution verifies the properties of } Modeling an Invasive Species Population",
+            "commonPitfall": "Ensure units of measurement and domain constraints are checked in physical and statistical contexts."
+        },
+        {
+            "title": "Exercise 1: Independent Problem Formulation",
+            "badge": "Multi-Step Application",
+            "difficulty": "Advanced Reasoning",
+            "problem": "Apply the foundational principles of Modeling an Invasive Species Population to determine the exact value and interpret the contextual significance.",
+            "scaffolding": "Reference the worked steps from Example 1. Verify intermediate calculations and justify your steps.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Analyze Given Conditions & Structure",
+                    "math": "\\text{State domain constraints and initial conditions}",
+                    "explanation": "Verify that all assumptions conform to the problem context."
+                },
+                {
+                    "step": 2,
+                    "label": "Calculate the Final Mathematical Solution",
+                    "math": "\\text{Solve for the target unknown quantity}",
+                    "explanation": "State the solution with formal mathematical reasoning."
+                }
+            ],
+            "finalAnswer": "\\text{Verified algebraic or statistical solution}",
+            "commonPitfall": "Avoid rounding prematurely before the final step."
+        }
+    ],
+    "exitTicket": {
+        "title": "Lesson 22 Exit Ticket: Modeling an Invasive Species Population",
+        "prompt": "Exit Ticket\n\nFor the equation found in Exercise 8, explain the parameters of the equation within the context of the problem.\n\nGiven each of the following, describe what features in the data or graph make it apparent that an exponential model would be more suitable than a linear model.\n\nThe table of data\n\nThe scatter plot\n\nThe average rates of change found in Exercise 6\n\nUse your equation from Exercise 8 to predict the number of lionfish sightings by year 2020. Is this prediction accurate? Explain.",
+        "solution": "For the equation found in Exercise 8, explain the parameters of the equation within the context of the problem.\n\na=4.602\\times 10^{-292}, at x=0; there were virtually no lionfish in the Atlantic Ocean.\n\nb=1.401; the population of lionfish grew by this constant quotient of change every year.\n\nGiven each of the following, describe what features in the data or graph make it apparent that an exponential model would be more suitable than a linear model.\n\nThe table of data\n\nThe values of the lionfish sightings grow by a quotient of change rather than a constant rate of change.\n\nThe scatter plot\n\nThe shape of the scatter plot looks more like an exponential curve than a line.\n\nThe average rates of change found in Exercise 6\n\nThe three sets of average rates of change would have been the same, or close to the same, had the situation been more suited to a linear model.\n\nUse your equation from Exercise 8 to predict the number of lionfish sightings by year 2020. Is this prediction accurate? Explain.\n\n29,375 This answer assumes that the conditions that allowed for a constant quotient of change remain the same until 2020. This is probably not a realistic scenario; change in ocean temperature, food availability, and other needs for continued exponential growth would have to remain the same to yield this projected population."
+    },
+    "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Master Modeling an Invasive Species Population through authentic curriculum practice problems. Check your work using the expandable teacher solution key below.",
+        "problems": [
+            {
+                "number": 1,
+                "prompt": "Another Invasive Species Problem: Kudzu\n\nKudzu, a perennial vine native to Southeast Asia, now covers a large area of the southern United States. Kudzu was promoted as a forage crop and an ornamental plant when it was introduced to the U.S. at the Philadelphia Centennial Exposition in 1876. Many southern farmers were encouraged to plant kudzu for erosion control from the mid-1930s to the mid-1950s. In 1953, kudzu was removed from the U.S. Department of Agriculture's list of permissible cover plants due to its recognition as an invasive species.\n\nLook up information about kudzu in the U.S. on Wikipedia, and write a short (1- to 2-page) report on the growth of kudzu since its introduction. In your report, choose a function (linear or exponential) to model and graph the growth of kudzu (in hectares) in the U.S. per year over the past half century or so. Remember to cite your sources!",
+                "solution": "To the teacher: Point out that the report is not about getting a correct answer but how they explain and manipulate the data that they find. Hence, it is important for them to cite their sources. (Note: A rough estimate of how kudzu spreads, 50,000 hectares per year, is on the Wikipedia page—challenge them to find out more than that.)"
+            }
+        ]
+    },
+    "practiceQuestions": [
+        {
+            "question": "[Exit Ticket Challenge 1] Exit Ticket",
+            "options": [
+                "For the equation found in Exercise 8, explain the parameters of the equation within the context of the problem.",
+                "The relationship cannot be evaluated without arbitrary numerical coordinates.",
+                "The values remain constant at zero regardless of the independent variable inputs.",
+                "The rate of change is undefined because domain restrictions were violated."
+            ],
+            "correct": 0,
+            "explanation": "From the official Eureka Math Exit Ticket Key for Lesson 22:\nFor the equation found in Exercise 8, explain the parameters of the equation within the context of the problem.\n\na=4.602\\times 10^{-292}, at x=0; there were virtually no lionfish in the Atlantic Ocean.\n\nb=1.401; the population of lionfish grew by this constant quotient of change every year.\n\nGiven each of the following, describe what features in the data or graph make it apparent that an exponential model would be more suitable than a linear mode"
+        },
+        {
+            "question": "[Exit Ticket Challenge 2] For the equation found in Exercise 8, explain the parameters of the equation within the context of the problem.",
+            "options": [
+                "a=4.602\\times 10^{-292}, at x=0; there were virtually no lionfish in the Atlantic Ocean.",
+                "Ignore boundary conditions and compute only approximate integer values.",
+                "Assume that all relationships are strictly constant without verifying rates of change.",
+                "Treat independent and dependent variables as interchangeable."
+            ],
+            "correct": 0,
+            "explanation": "Official Curriculum Key for Lesson 22:\nStudents apply knowledge of exponential functions and transformations of functions to a contextual situation."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Modeling an Invasive Species Population.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Developed using authentic lesson materials from standard algebra curricula.",
+        "lessonId": "L-ID-K-MATH-M3-D-2"
+    }
+}

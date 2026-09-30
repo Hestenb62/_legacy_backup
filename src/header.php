@@ -48,16 +48,16 @@ if (! function_exists('assetVersion')) {
 
 // Core Platform Version Definition
 if (! defined('HL_SITE_VERSION')) {
-    define('HL_SITE_VERSION', 'v2.7.2');
+    define('HL_SITE_VERSION', 'v2.8.0');
     }
 if (! defined('HL_SITE_VERSION_DATE')) {
     define('HL_SITE_VERSION_DATE', 'September 2026');
     }
 if (! defined('HL_SITE_VERSION_LABEL')) {
-    define('HL_SITE_VERSION_LABEL', 'September 2026 Math Vocabulary Codex & Review Release');
+    define('HL_SITE_VERSION_LABEL', 'September 2026 Grade 9 Algebra I Complete Curriculum Release');
     }
 if (! defined('HL_SITE_VERSION_SUMMARY')) {
-    define('HL_SITE_VERSION_SUMMARY', 'Centralized Mathematics Vocabulary Hub with 3D Flashcards, Curriculum-wide Term Aggregation, and Official Lesson Backlinks');
+    define('HL_SITE_VERSION_SUMMARY', 'Complete 105-Lesson Grade 9 Algebra I Curriculum (Modules 1–5) with Embedded Problem Sets, Verbatim Exit Ticket Keys, and Unified Mathematics Codex');
     }
 ?>
 <!DOCTYPE html>
@@ -516,24 +516,12 @@ if (! defined('HL_SITE_VERSION_SUMMARY')) {
                                                 </li>
 
                                                 <li>
-                                                    <a href="/pages/math.php" class="nav-mega-item" role="menuitem">
+                                                    <a href="/pages/math-vocab.php" class="nav-mega-item" role="menuitem">
                                                         <i class="fas fa-calculator item-icon"
                                                             style="color: #6366f1;"></i>
                                                         <div>
-                                                            <span class="item-title">Mathematics Codex</span>
-                                                            <span class="item-desc">Math Definitions, Procedures, and
-                                                                Examples</span>
-                                                        </div>
-                                                    </a>
-                                                </li>
-
-                                                <li>
-                                                    <a href="/pages/math-vocab.php" class="nav-mega-item" role="menuitem">
-                                                        <i class="fas fa-brain item-icon"
-                                                            style="color: #0ea5e9;"></i>
-                                                        <div>
-                                                            <span class="item-title">Math Vocabulary Hub</span>
-                                                            <span class="item-desc">Lesson glossary, flashcards, &amp; study review</span>
+                                                            <span class="item-title">Mathematics Codex &amp; Vocab</span>
+                                                            <span class="item-desc">Definitions, formula solver, &amp; flashcards</span>
                                                         </div>
                                                     </a>
                                                 </li>

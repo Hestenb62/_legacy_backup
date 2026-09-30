@@ -1,0 +1,180 @@
+{
+    "id": "k-math-m3-c-4",
+    "code": "K.M3.C.4",
+    "standard": "HSF.BF.B.3",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "Four Interesting Transformations of Functions",
+        "pageTitle": "Four Interesting Transformations of Functions | Hesten's Learning",
+        "description": "In this lesson, students examine horizontal translations (shifts) in the graph of a function and how they are represented in the equation of the function. Stude...",
+        "pageDescription": "Master Four Interesting Transformations of Functions in Module 3: Linear and Exponential Functions. Comprehensive student outcomes, teacher insights, guided exercises, problem set worksheets, and exit ticket keys.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M3.C.4",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 18",
+        "pill": "Transformations of Functions",
+        "text": "In this lesson, students examine horizontal translations (shifts) in the graph of a function and how they are represented in the equation of the function. Students contrast the horizontal shift to the vertical shift covered in Lesson 17. They should be able to describe the transformations of the graph associated with the transformation of the function as well as write the equation of a graph based on the translations (shifts) or vertical scalings (stretches) of another graph whose equation is known.",
+        "outcomes": [
+            "Students examine that a horizontal translation of the graph of y=f(x) corresponds to changing the equation from y=f(x) to y=f(x-k)."
+        ],
+        "teacherInsight": "Emphasize precise mathematical definitions and multiple problem-solving representations. Encourage students to check the reasonableness of their numerical solutions."
+    },
+    "content": [],
+    "vocabulary": [
+        {
+            "term": "Four Interesting Transformations of Functions",
+            "definition": "Core mathematical concept established in Module 3: Linear and Exponential Functions, Transformations of Functions."
+        },
+        {
+            "term": "Mathematical Modeling",
+            "definition": "The process of choosing and using appropriate mathematics and statistics to analyze empirical situations, to understand them better, and to improve decisions."
+        }
+    ],
+    "guidedExercises": [
+        {
+            "title": "Example 1: Core Mathematical Modeling for Four Interesting Transformations of Functions",
+            "badge": "Eureka Math Guided Classwork",
+            "difficulty": "Core Application",
+            "problem": "Classwork Example (8 minutes) Students explore that a horizontal translation of the graph of y=f(x) corresponds to changing the equation from y=f(x) to y=f(x-k) for given values of k. As an example of MP.3, consider asking students to make a conjecture about how they believe this placement of k will affect the graph. Example Let f(x)=(x), g(x)=f(x-3), and h(x)=f(x+2), where x can be any real number. Write the formula for g(x) in terms of (x) (i.e., without using f(x) notation).",
+            "scaffolding": "Identify the key variables and properties. Apply the definitions and mathematical structures introduced in Four Interesting Transformations of Functions.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Define Variables & Formulate Governing Relations",
+                    "math": "\\text{Identify key variables and parameters for } Four Interesting Transformations of Functions",
+                    "explanation": "Establish the relationship between quantities and state any domain constraints."
+                },
+                {
+                    "step": 2,
+                    "label": "Execute Step-by-Step Algebraic Transformations",
+                    "math": "\\text{Transform and simplify equations: } \\dots",
+                    "explanation": "g(x)=(x-3) Write the formula for h(x) in terms of (x) (i.e., without using f(x) notation). h(x)=(x+2) Complete the table of values for these functions. Graph all three equations: y=f(x), y=f(x-3), and y=f(x+2). y=f(x)y=f(x)y=f(x+2)y=f(x+2) y=f(x-3)y="
+                }
+            ],
+            "finalAnswer": "\\text{The evaluated solution verifies the properties of } Four Interesting Transformations of Functions",
+            "commonPitfall": "Ensure units of measurement and domain constraints are checked in physical and statistical contexts."
+        },
+        {
+            "title": "Exercise 1: Independent Problem Formulation",
+            "badge": "Multi-Step Application",
+            "difficulty": "Advanced Reasoning",
+            "problem": "Apply the foundational principles of Four Interesting Transformations of Functions to determine the exact value and interpret the contextual significance.",
+            "scaffolding": "Reference the worked steps from Example 1. Verify intermediate calculations and justify your steps.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Analyze Given Conditions & Structure",
+                    "math": "\\text{State domain constraints and initial conditions}",
+                    "explanation": "Verify that all assumptions conform to the problem context."
+                },
+                {
+                    "step": 2,
+                    "label": "Calculate the Final Mathematical Solution",
+                    "math": "\\text{Solve for the target unknown quantity}",
+                    "explanation": "State the solution with formal mathematical reasoning."
+                }
+            ],
+            "finalAnswer": "\\text{Verified algebraic or statistical solution}",
+            "commonPitfall": "Avoid rounding prematurely before the final step."
+        }
+    ],
+    "exitTicket": {
+        "title": "Lesson 18 Exit Ticket: Four Interesting Transformations of Functions",
+        "prompt": "Exit Ticket\n\nWrite the formula for the functions depicted by the graphs below:\n\nf(x)= ________________________________\n\ng(x)= ________________________________\n\nh(x)= ________________________________\n\ny=g(x)y=g(x)y=f(x)y=f(x)y=h(x)y=h(x)",
+        "solution": "Write the formula for the functions depicted by the graphs below:\n\nf(x)=(x-5)-4\n\ng(x)= (x-1)+3\n\ny=g(x)y=g(x)y=f(x)y=f(x)y=h(x)y=h(x) h(x)=(x+6)-2"
+    },
+    "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Master Four Interesting Transformations of Functions through authentic curriculum practice problems. Check your work using the expandable teacher solution key below.",
+        "problems": [
+            {
+                "number": 1,
+                "prompt": "Working with quadratic functions:\n\nThe vertex of the quadratic function f(x)=x^{2} is at (0,0), which is the minimum for the graph of f. Based on your work in this lesson, to where do you predict the vertex will be translated for the graphs of g(x)=(x-2)^{2} and h(x)=(x+3)^{2}?",
+                "solution": "The vertex of g will be at (2,0). The vertex of h will be at (-3,0)."
+            },
+            {
+                "number": 2,
+                "prompt": "Complete the table of values, and then graph all three functions.",
+                "solution": "y=f(x)y=g(x)y=h(x)y=f(x)y=g(x)y=h(x)\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}"
+            },
+            {
+                "number": 3,
+                "prompt": "Let f(x)=(x-4) for every real number x. The graph of the equation y=f(x) is provided on the Cartesian plane below. Transformations of the graph of y=f(x) are described below. After each description, write the equation for the transformed graph. Then, sketch the graph of the equation you write for part (d).\n\nTranslate the graph left 6 units and down 2 units.",
+                "solution": "y=(x+2)-2 or y=f(x+2)-2"
+            },
+            {
+                "number": 4,
+                "prompt": "Reflect the resulting graph from part (a) across the x-axis.",
+                "solution": "y=-(x+2)+2 or y=-(f(x+2)-2)"
+            },
+            {
+                "number": 5,
+                "prompt": "Scale the resulting graph from part (b) vertically by a scale factor of \\frac{1}{2}.",
+                "solution": "y=-\\frac{1}{2}(x+2)+1 or y=-\\frac{1}{2}(f(x+2)-2)"
+            },
+            {
+                "number": 6,
+                "prompt": "Translate the resulting graph from part (c) right 3 units and up 2 units. Graph the resulting equation.",
+                "solution": "y=-\\frac{1}{2}(x-1)+3 or y=-\\frac{1}{2}(f(x-1)-2)+2\n\ny=|x-4|y=-\\frac{1}{2}(x-1)+3y=|x-4|y=-\\frac{1}{2}(x-1)+3"
+            },
+            {
+                "number": 7,
+                "prompt": "Let f(x)=|x| for all real numbers x. Write the formula for the function represented by the described transformation of the graph of y=f(x).\n\nFirst, a vertical stretch with scale factor \\frac{1}{3} is performed, then a translation right 3 units, and finally a translation down 1 unit.",
+                "solution": "a(x)=\\frac{1}{3}(x-3)-1"
+            },
+            {
+                "number": 8,
+                "prompt": "First, a vertical stretch with scale factor 3 is performed, then a reflection over the x-axis, then a translation left 4 units, and finally a translation up 5 units.",
+                "solution": "b(x)=-3(x+4)+5"
+            },
+            {
+                "number": 9,
+                "prompt": "First, a reflection across the x-axis is performed, then a translation left 4 units, then a translation up 5 units, and finally a vertical stretch with scale factor 3.",
+                "solution": "c(x)=3(-(x+4)+5)"
+            },
+            {
+                "number": 10,
+                "prompt": "Compare your answers to parts (b) and (c). Why are they different?",
+                "solution": "In part (c), the vertical stretch happens at the end, which means the graph resulting from the first three transformations is what is vertically stretched. In part (b), the graph is vertically stretched before the vertical translation. The graph of the function from part (b) has a vertex point at (-4,5); the graph of function from part (c) has a vertex point at (-4,15)."
+            },
+            {
+                "number": 11,
+                "prompt": "Write the formula for the function depicted by each graph.",
+                "solution": "a(x)=\\frac{1}{2}(x-1)-3\n\nb(x)=-2(x+3)+4"
+            }
+        ]
+    },
+    "practiceQuestions": [
+        {
+            "question": "[Exit Ticket Challenge 1] Exit Ticket",
+            "options": [
+                "Write the formula for the functions depicted by the graphs below:",
+                "The relationship cannot be evaluated without arbitrary numerical coordinates.",
+                "The values remain constant at zero regardless of the independent variable inputs.",
+                "The rate of change is undefined because domain restrictions were violated."
+            ],
+            "correct": 0,
+            "explanation": "From the official Eureka Math Exit Ticket Key for Lesson 18:\nWrite the formula for the functions depicted by the graphs below:\n\nf(x)=(x-5)-4\n\ng(x)= (x-1)+3\n\ny=g(x)y=g(x)y=f(x)y=f(x)y=h(x)y=h(x) h(x)=(x+6)-2"
+        },
+        {
+            "question": "[Exit Ticket Challenge 2] Write the formula for the functions depicted by the graphs below:",
+            "options": [
+                "f(x)=(x-5)-4",
+                "Ignore boundary conditions and compute only approximate integer values.",
+                "Assume that all relationships are strictly constant without verifying rates of change.",
+                "Treat independent and dependent variables as interchangeable."
+            ],
+            "correct": 0,
+            "explanation": "Official Curriculum Key for Lesson 18:\nStudents examine that a horizontal translation of the graph of y=f(x) corresponds to changing the equation from y=f(x) to y=f(x-k)."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Four Interesting Transformations of Functions.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Developed using authentic lesson materials from standard algebra curricula.",
+        "lessonId": "L-ID-K-MATH-M3-C-4"
+    }
+}

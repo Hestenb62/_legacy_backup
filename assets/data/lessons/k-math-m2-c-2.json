@@ -1,0 +1,156 @@
+{
+    "id": "k-math-m2-c-2",
+    "code": "K.M2.C.2",
+    "standard": "HSS.ID.B.5",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "Summarizing Bivariate Categorical Data with Relative Frequencies",
+        "pageTitle": "Summarizing Bivariate Categorical Data with Relative Frequencies | Hesten's Learning",
+        "description": "Students continue the work with bivariate data from Lesson 9. Similar to Lesson 9, this lesson uses the superpower data to address the statistical question, \"Do...",
+        "pageDescription": "Master Summarizing Bivariate Categorical Data with Relative Frequencies in Module 2: Descriptive Statistics. Comprehensive student outcomes, teacher insights, guided exercises, problem set worksheets, and exit ticket keys.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M2.C.2",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 10",
+        "pill": "Categorical Data on Two Variables",
+        "text": "Students continue the work with bivariate data from Lesson 9. Similar to Lesson 9, this lesson uses the superpower data to address the statistical question, \"Do high school males have different preferences for superhero powers than high school females?\" The two-way frequency table from Lesson 9 is used to develop a relative frequency table that allows students to compare the responses of males and females. However, the statistical question is still not clearly answered. As students complete the exercises in this lesson, they begin to see the need for conditional relative frequencies, which are introduced in Lesson 11. Students also begin to understand how conditional summaries are used to answer the statistical question. This lesson revisits several topics that were developed in Grade 8. Students familiar with two-way tables move through these questions within the suggested time frame. Students not as familiar with this work may need more time to complete the exercises.",
+        "outcomes": [
+            "Students summarize data on two categorical variables collected from a sample using a two-way frequency table.",
+            "Given a two-way frequency table, students construct a relative frequency table and interpret relative frequencies."
+        ],
+        "teacherInsight": "Emphasize precise mathematical definitions and multiple problem-solving representations. Encourage students to check the reasonableness of their numerical solutions."
+    },
+    "content": [],
+    "vocabulary": [
+        {
+            "term": "Two-Way Frequency Table",
+            "definition": "The relative frequency table would be found by dividing each of the above cell values by 450."
+        },
+        {
+            "term": "Explore the following question",
+            "definition": "How would the relative frequencies look if males and females had the same opinions about their favorite superpowers? This question is a prelude to Lesson 11."
+        }
+    ],
+    "guidedExercises": [
+        {
+            "title": "Example 1: Core Mathematical Modeling for Summarizing Bivariate Categorical Data with Relative Frequencies",
+            "badge": "Eureka Math Guided Classwork",
+            "difficulty": "Core Application",
+            "problem": "Classwork This lesson expands on your work with two-way tables from Lesson 9. Exploratory Challenge 1 (5 minutes): Extending the Frequency Table to a Relative Frequency Table Exploratory Challenge 1: Extending the Frequency Table to a Relative Frequency Table Determining the number of students in each cell presents the first step in organizing bivariate categorical data. Another way of analyzing the data in the table is to calculate the relative frequency for each cell. Relative frequencies rela",
+            "scaffolding": "Identify the key variables and properties. Apply the definitions and mathematical structures introduced in Summarizing Bivariate Categorical Data with Relative Frequencies.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Define Variables & Formulate Governing Relations",
+                    "math": "\\text{Identify key variables and parameters for } Summarizing Bivariate Categorical Data with Relative Frequencies",
+                    "explanation": "Establish the relationship between quantities and state any domain constraints."
+                },
+                {
+                    "step": 2,
+                    "label": "Execute Step-by-Step Algebraic Transformations",
+                    "math": "\\text{Transform and simplify equations: } \\dots",
+                    "explanation": "Two-Way Frequency Table: The relative frequency table would be found by dividing each of the above cell values by 450. For example, the relative frequency of females selecting to fly is \\frac{49}{450}, or approximately 0.109, to the nearest thousandt"
+                }
+            ],
+            "finalAnswer": "\\text{The evaluated solution verifies the properties of } Summarizing Bivariate Categorical Data with Relative Frequencies",
+            "commonPitfall": "Ensure units of measurement and domain constraints are checked in physical and statistical contexts."
+        },
+        {
+            "title": "Exercise 1: Independent Problem Formulation",
+            "badge": "Multi-Step Application",
+            "difficulty": "Advanced Reasoning",
+            "problem": "Apply the foundational principles of Summarizing Bivariate Categorical Data with Relative Frequencies to determine the exact value and interpret the contextual significance.",
+            "scaffolding": "Reference the worked steps from Example 1. Verify intermediate calculations and justify your steps.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Analyze Given Conditions & Structure",
+                    "math": "\\text{State domain constraints and initial conditions}",
+                    "explanation": "Verify that all assumptions conform to the problem context."
+                },
+                {
+                    "step": 2,
+                    "label": "Calculate the Final Mathematical Solution",
+                    "math": "\\text{Solve for the target unknown quantity}",
+                    "explanation": "State the solution with formal mathematical reasoning."
+                }
+            ],
+            "finalAnswer": "\\text{Verified algebraic or statistical solution}",
+            "commonPitfall": "Avoid rounding prematurely before the final step."
+        }
+    ],
+    "exitTicket": {
+        "title": "Lesson 10 Exit Ticket: Summarizing Bivariate Categorical Data with Relative Frequencies",
+        "prompt": "Exit Ticket\n\nJuniors and seniors were asked if they plan to attend college immediately after graduation, seek full-time employment, or choose some other option. A random sample of 100 students was selected from those who completed the survey. Scott started to calculate the relative frequencies to the nearest thousandth.\n\nComplete the calculations of the relative frequencies for each of the blank cells. Round your answers to the nearest thousandth.\n\nA school website article indicated that \"A Vast Majority of Students from our School Plan to Attend College.\" Do you agree or disagree with that article? Explain why you agree or disagree.\n\nDo you think juniors and seniors differ regarding after-graduation options? Explain.",
+        "solution": "Juniors and seniors were asked if they plan to attend college immediately after graduation, seek full-time employment, or choose some other option. A random sample of 100 students was selected from those who completed the survey. Scott started to calculate the relative frequencies to the nearest thousandth.\n\nComplete the calculations of the relative frequencies for each of the blank cells. Round your answers to the nearest thousandth.\n\nThe following is a completed chart:\n\nA school website article indicated that \"A Vast Majority of Students from our School Plan to Attend College.\" Do you agree or disagree with that article? Explain why you agree or disagree.\n\nMost of the students in the school plan to attend college after graduation (60% of sample). That is a clear majority. It is interesting, however, that a larger number of junior students plan to attend college, yet there were fewer juniors in the sample.\n\nDo you think juniors and seniors differ regarding after-graduation options? Explain.\n\nThere are some interesting differences. One difference is noted above concerning college. Another is the selection of other options. A very small percentage of the students selecting that option were juniors."
+    },
+    "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Master Summarizing Bivariate Categorical Data with Relative Frequencies through authentic curriculum practice problems. Check your work using the expandable teacher solution key below.",
+        "problems": [
+            {
+                "number": 1,
+                "prompt": "Consider the Rufus King High School data from the previous lesson regarding after-school activities:\n\nCalculate the relative frequencies for each of the cells to the nearest thousandth. Place the relative frequencies in the cells of the following table. (The first cell has been completed as an example.)\n\nBased on your relative frequency table, what is the relative frequency of students who indicated they play basketball?",
+                "solution": "0.40, or 40%"
+            },
+            {
+                "number": 2,
+                "prompt": "Based on your table, what is the relative frequency of males who play basketball?",
+                "solution": "0.20, or 20%"
+            },
+            {
+                "number": 3,
+                "prompt": "If a student were randomly selected from the students at the school, do you think the student selected would be a male or a female?",
+                "solution": "The selection could be a female because 0.60, or 60%, of the students in the sample were females."
+            },
+            {
+                "number": 4,
+                "prompt": "If a student were selected at random from school, do you think this student would be involved in an after-school program? Explain your answer.",
+                "solution": "Yes, 70% of the students participate in an after-school program."
+            },
+            {
+                "number": 5,
+                "prompt": "Why might someone question whether or not the students who completed the survey were randomly selected? If the students completing the survey were randomly selected, what do the marginal relative frequencies possibly tell you about the school? Explain your answer.",
+                "solution": "A person may question the sample based on the assumption that you would anticipate 50% of the students would be female and 50% would be male. The marginal relative frequencies indicate that the sample was 60% female and 40% male. Possibly, the school has more females than males."
+            },
+            {
+                "number": 6,
+                "prompt": "Why might females think they are more involved in after-school activities than males? Explain your answer.",
+                "solution": "More females were involved in the after-school activities. 40 females were involved in the after-school activities, while 30 males were involved. (Note: Indicate to students that this will be explored in the next lesson.)"
+            }
+        ]
+    },
+    "practiceQuestions": [
+        {
+            "question": "[Exit Ticket Challenge 1] Exit Ticket",
+            "options": [
+                "Juniors and seniors were asked if they plan to attend college immediately after graduation, seek full-time employment, or choose some other option. A random sample of 100 students was selected from those who completed the survey. Scott started to cal",
+                "The relationship cannot be evaluated without arbitrary numerical coordinates.",
+                "The values remain constant at zero regardless of the independent variable inputs.",
+                "The rate of change is undefined because domain restrictions were violated."
+            ],
+            "correct": 0,
+            "explanation": "From the official Eureka Math Exit Ticket Key for Lesson 10:\nJuniors and seniors were asked if they plan to attend college immediately after graduation, seek full-time employment, or choose some other option. A random sample of 100 students was selected from those who completed the survey. Scott started to calculate the relative frequencies to the nearest thousandth.\n\nComplete the calculations of the relative frequencies for each of the blank cells. Round your answers to the nearest thousandth.\n\nThe follow"
+        },
+        {
+            "question": "[Exit Ticket Challenge 2] Juniors and seniors were asked if they plan to attend college immediately after graduation, seek full-time employment, or choose some other option. A random sample of 100 students was selected from those who completed the survey. Scott started to calculate the relative frequencies to the nearest thousandth.",
+            "options": [
+                "Complete the calculations of the relative frequencies for each of the blank cells. Round your answers to the nearest thousandth.",
+                "Ignore boundary conditions and compute only approximate integer values.",
+                "Assume that all relationships are strictly constant without verifying rates of change.",
+                "Treat independent and dependent variables as interchangeable."
+            ],
+            "correct": 0,
+            "explanation": "Official Curriculum Key for Lesson 10:\nStudents summarize data on two categorical variables collected from a sample using a two-way frequency table."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Summarizing Bivariate Categorical Data with Relative Frequencies.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Developed using authentic lesson materials from standard algebra curricula.",
+        "lessonId": "L-ID-K-MATH-M2-C-2"
+    }
+}
