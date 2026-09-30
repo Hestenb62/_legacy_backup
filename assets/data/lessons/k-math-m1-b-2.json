@@ -145,16 +145,25 @@
             "commonPitfall": "Dropping parentheses when removing a minus sign. Remember $-(b - c) = -b + c$."
         }
     ],
-    "resources": {
-        "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-b-lesson-7-student.pdf",
-        "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-b-lesson-7-student.docx",
-        "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-b-lesson-7-teacher.pdf",
-        "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-b-lesson-7-teacher.docx",
-        "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
-    },
     "exitTicket": {
         "title": "Lesson 7 Exit Ticket: Algebraic Expressions—The Commutative and Associative Properties",
         "prompt": "Write a mathematical proof of the algebraic equivalence of pqr and qrp.",
         "solution": "Proof:\npqr = (pq)r        [By definition of sequential multiplication]\n    = (qp)r        [By commutative property of multiplication]\n    = q(pr)        [By associative property of multiplication]\n    = q(rp)        [By commutative property of multiplication]\n    = qrp          [By definition of sequential multiplication]"
+    },
+    "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Master formal proofs of algebraic equivalence using the commutative and associative properties.",
+        "problems": [
+            {
+                "number": 1,
+                "prompt": "Show that the algebraic expression ab + cd is equivalent to dc + ba using commutative properties of addition and multiplication. Justify every step.",
+                "solution": "Step 1: ab + cd = ba + cd [Commutative property of multiplication applied to ab]\nStep 2: ba + cd = ba + dc [Commutative property of multiplication applied to cd]\nStep 3: ba + dc = dc + ba [Commutative property of addition applied to the two terms]\nTherefore, ab + cd = dc + ba."
+            },
+            {
+                "number": 2,
+                "prompt": "Is subtraction commutative? Provide a counterexample with specific numbers to prove your claim.",
+                "solution": "No, subtraction is not commutative. Counterexample: 5 - 3 = 2, but 3 - 5 = -2. Since 2 \\ne -2, a - b \\ne b - a in general. Subtraction can be rewritten as addition of the opposite: a - b = a + (-b) = (-b) + a."
+            }
+        ]
     }
 }

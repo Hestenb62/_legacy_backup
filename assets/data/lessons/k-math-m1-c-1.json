@@ -79,13 +79,6 @@
         "lessonId": "L-ID-ALG-K-M1-C-1"
     },
     "scripts": "\n        function updateEqSim() {\n            const x = parseInt(document.getElementById('input-eq-x').value, 10);\n            document.getElementById('badge-eq-x').innerText = 'x = ' + x;\n\n            const lhs = 2 * x + 5;\n            const rhs = 17 - x;\n\n            document.getElementById('lhs-val').innerText = lhs;\n            document.getElementById('rhs-val').innerText = rhs;\n            document.getElementById('lhs-calc').innerText = `2(${x}) + 5 = ${lhs}`;\n            document.getElementById('rhs-calc').innerText = `17 - ${x} = ${rhs}`;\n\n            const banner = document.getElementById('truth-banner');\n            const icon = document.getElementById('truth-icon');\n            const status = document.getElementById('truth-status');\n            const desc = document.getElementById('truth-desc');\n\n            if (lhs === rhs) {\n                banner.style.background = 'rgba(16, 185, 129, 0.15)';\n                banner.style.border = '2px solid #10b981';\n                icon.innerHTML = '<i class=\"fas fa-check-circle\" style=\"color:#10b981;\"></i>';\n                status.innerText = 'TRUE STATEMENT!';\n                status.style.color = '#10b981';\n                desc.innerText = `${lhs} = ${rhs} ➡ x = ${x} IS in the solution set: {${x}}`;\n            } else {\n                banner.style.background = 'rgba(225, 29, 72, 0.15)';\n                banner.style.border = '2px solid #f43f5e';\n                icon.innerHTML = '<i class=\"fas fa-times-circle\" style=\"color:#f43f5e;\"></i>';\n                status.innerText = 'FALSE STATEMENT';\n                status.style.color = '#f43f5e';\n                desc.innerText = `${lhs} ≠ ${rhs} ➡ x = ${x} is NOT in the solution set`;\n            }\n        }\n\n        function setEqX(val) {\n            document.getElementById('input-eq-x').value = val;\n            updateEqSim();\n        }\n\n        document.addEventListener('DOMContentLoaded', () => {\n            updateEqSim();\n        });\n        ",
-    "resources": {
-        "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-10-student.pdf",
-        "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-10-student.docx",
-        "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-10-teacher.pdf",
-        "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-10-teacher.docx",
-        "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
-    },
     "exitTicket": {
         "title": "Lesson 10 Exit Ticket: True and False Number Sentences",
         "prompt": "Consider the following equation, where a represents a real number: \\sqrt{a+1} = \\sqrt{a} + 1. Is this statement a number sentence? If so, is the sentence true or false? If not, find a value for a that makes the statement true, and another that makes it false.",
@@ -156,5 +149,21 @@
             "finalAnswer": "\\text{Solution Set} = \\{-2, 3\\}",
             "commonPitfall": "Confusing the sign in factored form $(x - a)$ with the solution value. The factor $(x - 3) = 0$ yields root $x = +3$, not $-3$."
         }
-    ]
+    ],
+    "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Evaluate truth values of equations, determine solution sets, and distinguish identities from conditional equations.",
+        "problems": [
+            {
+                "number": 1,
+                "prompt": "Let x = -3 and y = 2/3. Determine whether each statement is true, false, or not a number sentence:\n(a) 2x + 6 = 0\n(b) 3y - 2 = 1\n(c) x^2 = 9\n(d) 4x + y = 10",
+                "solution": "(a) 2(-3) + 6 = -6 + 6 = 0 (TRUE number sentence).\n(b) 3(2/3) - 2 = 2 - 2 = 0 \\ne 1 (FALSE number sentence).\n(c) (-3)^2 = 9 (TRUE number sentence).\n(d) 4(-3) + (2/3) = -12 + 2/3 = -34/3 \\ne 10 (FALSE number sentence)."
+            },
+            {
+                "number": 2,
+                "prompt": "Why is the algebraic equation (x + 1)^2 = x^2 + 2x + 1 an identity, whereas (x + 1)^2 = x^2 + 1 is not?",
+                "solution": "(x + 1)^2 expands by the distributive property to (x + 1)(x + 1) = x^2 + x + x + 1 = x^2 + 2x + 1. Because this equivalence holds for all real numbers x, it is an identity. In contrast, (x + 1)^2 = x^2 + 1 simplifies to 2x = 0 \\implies x = 0, which is only true for the single value x = 0."
+            }
+        ]
+    }
 }

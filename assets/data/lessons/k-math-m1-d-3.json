@@ -71,13 +71,6 @@
         "lessonId": "L-ID-ALG-K-M1-D-3"
     },
     "scripts": "",
-    "resources": {
-        "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-d-lesson-27-student.pdf",
-        "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-d-lesson-27-student.docx",
-        "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-d-lesson-27-teacher.pdf",
-        "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-d-lesson-27-teacher.docx",
-        "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
-    },
     "exitTicket": {
         "title": "Lesson 27 Exit Ticket: Recursive Challenge—The Double and Add 5 Game Continued",
         "prompt": "Using the explicit formula a_n = 2^n(a_0 + 5) - 5, find the smallest starting whole number a_0 for the double and add 5 game that produces a result of 100 or greater in 3 rounds or fewer.",
@@ -113,5 +106,21 @@
             "finalAnswer": "a_n = 2^n(a_0 + 5) - 5; \\quad a_4 = 123 \\text{ confirmed}.",
             "commonPitfall": "Assuming all sequences require computing every intermediate step. Transforming recursive relations into closed-form formulas allows computing term $a_{100}$ in a single step!"
         }
-    ]
+    ],
+    "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Model exponential recurrence with the explicit formula a_n = 2^n(a_0 + 5) - 5 and find threshold bounds.",
+        "problems": [
+            {
+                "number": 1,
+                "prompt": "In the double and add 5 game, the nth term is given by a_n = 2^n(a_0 + 5) - 5.\n(a) Find the smallest whole number a_0 to reach 1,000 or greater in 3 rounds (n = 3).\n(b) What result does this starting number produce in round 3?",
+                "solution": "(a) For n = 3: a_3 = 2^3(a_0 + 5) - 5 = 8(a_0 + 5) - 5 = 8a_0 + 35.\nSet 8a_0 + 35 \\ge 1,000 \\implies 8a_0 \\ge 965 \\implies a_0 \\ge 120.625.\nThe smallest starting whole number is a_0 = 121.\n(b) Round 3 result: 8(121) + 35 = 968 + 35 = 1,003."
+            },
+            {
+                "number": 2,
+                "prompt": "Prove that if the game rules changed to 'double and add 0' (pure doubling), the explicit formula simplifies to a_n = 2^n a_0.",
+                "solution": "Substitute add-value c = 0 into a_n = 2^n(a_0 + c) - c: a_n = 2^n(a_0 + 0) - 0 = 2^n a_0, which is the classical geometric progression formula for repeated doubling."
+            }
+        ]
+    }
 }

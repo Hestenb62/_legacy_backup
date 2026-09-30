@@ -158,6 +158,15 @@
       tags: ["math", "codex", "a-z", "dictionary", "definitions", "procedures", "formulas"]
     },
     {
+      title: "Math Vocabulary Review Hub (A–Z & Flashcards)",
+      desc: "Comprehensive glossary of all lesson vocabulary with 3D active recall flashcards.",
+      category: "Curriculum",
+      icon: "fa-brain",
+      iconClass: "math-icon",
+      url: "/pages/math-vocab.php",
+      tags: ["math", "vocab", "vocabulary", "flashcards", "study", "review", "terms", "definitions", "glossary"]
+    },
+    {
       title: "Universal English Grammar Codex (A–Z)",
       desc: "A-Z English grammar definitions, parts of speech, syntax rules, and clause mechanics.",
       category: "Curriculum",

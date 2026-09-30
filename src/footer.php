@@ -54,6 +54,8 @@
                                 class="fas fa-cubes-stacked footer-link-icon"></i> Manipulatives</a></li>
                     <li class="footer-link-item"><a href="/pages/standards.php"><i
                                 class="fas fa-book footer-link-icon"></i> Standards</a></li>
+                    <li class="footer-link-item"><a href="/pages/math-vocab.php"><i
+                                class="fas fa-brain footer-link-icon"></i> Math Vocab Hub</a></li>
                     <li class="footer-link-item"><a href="/updates/"><i class="fas fa-newspaper footer-link-icon"></i>
                             Updates</a></li>
                     <li class="footer-link-item"><a href="/pages/help-center.php"><i
@@ -271,23 +273,15 @@
                 </span>
             </div>
             <p class="footer-vmodal-lead">
-                Version <?= htmlspecialchars($siteVersion) ?> delivers the complete, fully enriched 28-lesson Grade 9 Algebra I Module 1 curriculum (Topics A–D), featuring official downloadable/printable worksheets, verbatim Eureka Math Exit Ticket keys, multi-step Guided Exercises with worked solutions, and interactive STEM workbenches.
+                Version <?= htmlspecialchars($siteVersion) ?> introduces the centralized <strong>Mathematics Vocabulary Review Portal</strong> (<code>/pages/math-vocab.php</code>), aggregating mathematical terminology, theorems, and definitions across all curriculum lessons with interactive 3D Active Recall Flashcards, A–Z ribbon navigation, mastery tracking, and lesson backlinks.
             </p>
             <ul class="footer-vmodal-features">
                 <li class="footer-vmodal-feature-item">
                     <div class="footer-vmodal-feature-icon" aria-hidden="true">
-                        <i class="fas fa-file-invoice"></i>
+                        <i class="fas fa-brain"></i>
                     </div>
                     <div class="footer-vmodal-feature-text">
-                        <strong>Official Curriculum Worksheets &amp; Printables:</strong> Direct access to authentic Student Classwork &amp; Problem Sets (PDF, Word .docx, 1-click print) and Teacher Editions with complete keys across all 28 lessons.
-                    </div>
-                </li>
-                <li class="footer-vmodal-feature-item">
-                    <div class="footer-vmodal-feature-icon" aria-hidden="true">
-                        <i class="fas fa-key"></i>
-                    </div>
-                    <div class="footer-vmodal-feature-text">
-                        <strong>Verbatim Exit Ticket Keys &amp; Check Understanding:</strong> Check Understanding quizzes and review panels faithfully reproduce authentic Eureka Math / EngageNY Exit Ticket prompts, answers, and teacher sample solution work.
+                        <strong>Curriculum-Wide Math Vocabulary Hub:</strong> Aggregates all mathematical terms, rigorous definitions, and symbolic notations across all lessons into a single, searchable repository for long-term retention and review.
                     </div>
                 </li>
                 <li class="footer-vmodal-feature-item">
@@ -295,7 +289,31 @@
                         <i class="fas fa-layer-group"></i>
                     </div>
                     <div class="footer-vmodal-feature-text">
-                        <strong>Guided Exercises with Multi-Step Solutions:</strong> Expandable worked solutions, scaffolding hints, final answers, and Common Pitfall alerts for all 28 lessons across Topics A, B, C, and D.
+                        <strong>Interactive 3D Active Recall Flashcards:</strong> Flip-card study engine with keyboard shortcuts (Spacebar to flip, Arrow keys to navigate), card shuffle, and auditory speech pronunciation.
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true">
+                        <i class="fas fa-bookmark"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Personalized Mastery Tracking:</strong> Star terms for later review or mark them as "Still Learning" vs "Mastered" with persistent <code>localStorage</code> synchronization and cloud backup.
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true">
+                        <i class="fas fa-link"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Curriculum Lesson Backlinks:</strong> Direct interactive chips connect every vocabulary term straight to the specific lesson(s) where the concept is introduced and practiced.
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true">
+                        <i class="fas fa-file-signature"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Official Problem Sets &amp; Exit Ticket Keys:</strong> Embedded worksheets and verbatim Eureka Math Exit Ticket solution keys across all Grade 9 Module 1 lessons with 1-click printing.
                     </div>
                 </li>
                 <li class="footer-vmodal-feature-item">

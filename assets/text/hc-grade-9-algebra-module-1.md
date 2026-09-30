@@ -32,10 +32,11 @@ The Grade 9 (Level K) Algebra I Module 1 curriculum provides a comprehensive, ri
 
 ### Core Interactive Features & Study Tools
 
-- **Official Curriculum Worksheets & Downloads:**
-  - Every lesson features a dedicated Worksheets & Downloads panel directly beneath the overview.
-  - **Student Materials:** Immediate access to Student Classwork and Problem Sets with openable PDF, downloadable editable Word (`.docx`), and 1-click print buttons.
-  - **Teacher Edition & Keys:** Access to full teacher notes, problem set answer keys, and pedagogical scaffolding guides in both PDF and DOCX formats.
+- **Official Embedded Worksheets & Problem Sets:**
+  - Every lesson features an on-page **Official Curriculum Worksheet: Problem Set & Practice** section directly beneath the overview.
+  - **Authentic Practice Problems:** Students can solve the authentic Eureka Math / EngageNY Problem Set exercises directly in the lesson interface without downloading external files.
+  - **Teacher Solution Keys:** Each problem includes a keyboard-accessible disclosure accordion with step-by-step mathematical reasoning and final answers.
+  - **1-Click Printing:** A clean browser print button enables printing the worksheet on demand.
 - **Verbatim Exit Ticket Keys & Check Understanding:**
   - **On-Page Key Review:** Expandable "Official Exit Ticket & Teacher Key" disclosure accordion directly presents the authentic Eureka Math / EngageNY problem statements alongside verbatim teacher sample solutions and mathematical justifications.
   - **Interactive Check Understanding Modal:** Scored practice checks faithfully replicate the curriculum Exit Ticket questions, allowing students to verify their mastery with immediate feedback and complete worked steps.

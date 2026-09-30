@@ -147,16 +147,25 @@
             "commonPitfall": "Forgetting the $+1$ placeholder for the final term: $\\frac{6x^2y^2}{6x^2y^2} = 1$, not $0$! If omitted, multiplying back will only yield two terms instead of three."
         }
     ],
-    "resources": {
-        "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-b-lesson-6-student.pdf",
-        "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-b-lesson-6-student.docx",
-        "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-b-lesson-6-teacher.pdf",
-        "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-b-lesson-6-teacher.docx",
-        "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
-    },
     "exitTicket": {
         "title": "Lesson 6 Exit Ticket: Algebraic Expressions—The Distributive Property",
         "prompt": "Consider the expression: (x + y + 3)(y + 1). Draw a picture to represent the expression. Write an equivalent expression by applying the distributive property.",
         "solution": "Applying the distributive property:\n(x + y + 3)(y + 1) = (x + y + 3)y + (x + y + 3)(1) = xy + y^2 + 3y + x + y + 3 = xy + x + y^2 + 4y + 3.\nIn a geometric area model, a rectangle of width (y + 1) and length (x + y + 3) is divided into 6 sub-rectangles with areas xy, x, y^2, y, 3y, and 3."
+    },
+    "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Apply the distributive property, geometric area models, and parenthetical grouping rules.",
+        "problems": [
+            {
+                "number": 1,
+                "prompt": "Insert parentheses to make each statement true:\n(a) 2 + 3 \\times 4^2 + 1 = 81\n(b) 2 + 3 \\times 4^2 + 1 = 85\n(c) 2 + 3 \\times 4^2 + 1 = 51",
+                "solution": "(a) (2 + 3) \\times 4^2 + 1 = 5 \\times 16 + 1 = 80 + 1 = 81.\n(b) (2 + 3) \\times (4^2 + 1) = 5 \\times (16 + 1) = 5 \\times 17 = 85.\n(c) 2 + 3 \\times 4^2 + 1 = 2 + 3(16) + 1 = 2 + 48 + 1 = 51 (no parentheses needed, standard order of operations)."
+            },
+            {
+                "number": 2,
+                "prompt": "Use the distributive property to expand the expression (2a + 3b)(4a - b + 5).",
+                "solution": "Distribute each term of (2a + 3b) across (4a - b + 5):\n2a(4a - b + 5) + 3b(4a - b + 5)\n= (8a^2 - 2ab + 10a) + (12ab - 3b^2 + 15b)\nCombine like terms (-2ab + 12ab = 10ab):\n= 8a^2 + 10ab - 3b^2 + 10a + 15b."
+            }
+        ]
     }
 }

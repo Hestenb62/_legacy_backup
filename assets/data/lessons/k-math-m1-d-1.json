@@ -75,13 +75,6 @@
         "lessonId": "L-ID-ALG-K-M1-D-1"
     },
     "scripts": "",
-    "resources": {
-        "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-d-lesson-25-student.pdf",
-        "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-d-lesson-25-student.docx",
-        "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-d-lesson-25-teacher.pdf",
-        "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-d-lesson-25-teacher.docx",
-        "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
-    },
     "exitTicket": {
         "title": "Lesson 25 Exit Ticket: Solving Problems in Two Ways—Rates and Quantities",
         "prompt": "Suppose a print shop has 8 printing presses and each runs at 5,000 pages per hour for 6 hours a day. Compute total pages printed for a cookbook job and novel job where 8 presses run for 2 days on novels while 1 press runs for 2 days on cookbooks. Ratio of pages is 2:1.",
@@ -117,5 +110,21 @@
             "finalAnswer": "\\text{Distance } d = 30\\text{ miles (Both methods confirm 30 miles)}",
             "commonPitfall": "Averaging the two speeds as $\\frac{15 + 10}{2} = 12.5\\text{ mph}$. Average speed over a round trip is total distance divided by total time: $\\frac{60\\text{ miles}}{5\\text{ hours}} = 12\\text{ mph}$, NOT $12.5\\text{ mph}$!"
         }
-    ]
+    ],
+    "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Solve age and rate problems using arithmetic tape diagrams and formal algebraic equations.",
+        "problems": [
+            {
+                "number": 1,
+                "prompt": "In 16 years, Pia's age will be twice her age 12 years ago. Find Pia's present age using both a tape diagram and an algebraic equation.",
+                "solution": "Let p = Pia's present age.\nIn 16 years: p + 16.\n12 years ago: p - 12.\nEquation: p + 16 = 2(p - 12)\np + 16 = 2p - 24\n40 = p.\nPia's present age is 40 years old. Verification: In 16 years she will be 56; 12 years ago she was 28; 56 is twice 28."
+            },
+            {
+                "number": 2,
+                "prompt": "A printing shop has 8 presses printing 5,000 pages/hr for 6 hrs/day. If 2 presses are taken offline for maintenance, how many total pages can the remaining presses produce in 3 days?",
+                "solution": "Remaining presses = 8 - 2 = 6 presses.\nDaily output per press: 5,000 \\times 6 = 30,000 pages.\nTotal for 6 presses in 1 day: 6 \\times 30,000 = 180,000 pages.\nTotal in 3 days: 3 \\times 180,000 = 540,000 pages."
+            }
+        ]
+    }
 }

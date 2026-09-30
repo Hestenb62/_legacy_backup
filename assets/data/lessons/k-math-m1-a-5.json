@@ -135,16 +135,25 @@
             "commonPitfall": "Assuming constant volume inflow produces a constant height rise rate. Remember: $\\text{Rate of height increase} = \\frac{\\text{Flow Rate}}{\\text{Cross-Sectional Area}}$."
         }
     ],
-    "resources": {
-        "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-a-lesson-5-student.pdf",
-        "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-a-lesson-5-student.docx",
-        "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-a-lesson-5-teacher.pdf",
-        "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-a-lesson-5-teacher.docx",
-        "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
-    },
     "exitTicket": {
         "title": "Lesson 5 Exit Ticket: Two Graphing Stories",
         "prompt": "Maya and Earl live at opposite ends of the hallway in their apartment building. Their doors are 50 ft. apart. Each person starts at his or her own door and walks at a steady pace toward the other. They stop walking when they meet. Suppose Maya walks at a constant speed of 3 ft/sec and Earl walks at 2 ft/sec. Write equations and find when and where they meet.",
         "solution": "Let t be time in seconds. Combined speed: 3 + 2 = 5 ft/sec. Meeting time: 5t = 50 => t = 10 sec. Location: Maya has walked 3(10) = 30 ft from her door; Earl has walked 2(10) = 20 ft from his door. On an elevation/distance graph measured from Maya's door, Maya's graph starts at (0, 0) and ends at (10, 30); Earl's graph starts at (0, 50) and ends at (10, 30)."
+    },
+    "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Model multi-agent motion, opposite-direction walking problems, and simultaneous linear distance functions.",
+        "problems": [
+            {
+                "number": 1,
+                "prompt": "Maya walks at a constant rate of 3 ft/sec, and Earl walks at 4 ft/sec starting 50 ft away from Maya's door walking toward each other.\n\n(a) Write equations for each person's distance from Maya's door as a function of time t.\n(b) Determine exactly when and where they meet.",
+                "solution": "(a) Maya starts at 0 ft: y_M = 3t. Earl starts at 50 ft moving closer: y_E = 50 - 4t.\n(b) Set y_M = y_E: 3t = 50 - 4t \\implies 7t = 50 \\implies t = \\frac{50}{7} \\approx 7.14\\text{ seconds}.\nDistance from Maya's door: y = 3\\left(\\frac{50}{7}\\right) = \\frac{150}{7} \\approx 21.43\\text{ ft}."
+            },
+            {
+                "number": 2,
+                "prompt": "How would the meeting time change if Earl walked away from Maya at 2 ft/sec while Maya pursued him at 3 ft/sec starting 50 ft behind?",
+                "solution": "Maya's equation: y_M = 3t. Earl's equation: y_E = 50 + 2t. Setting 3t = 50 + 2t gives t = 50 seconds. Maya catches Earl after 50 seconds at distance y = 3(50) = 150 ft from her door."
+            }
+        ]
     }
 }

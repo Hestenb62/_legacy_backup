@@ -75,13 +75,6 @@
         "lessonId": "L-ID-ALG-K-M1-C-7"
     },
     "scripts": "",
-    "resources": {
-        "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-16-student.pdf",
-        "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-16-student.docx",
-        "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-16-teacher.pdf",
-        "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-16-teacher.docx",
-        "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
-    },
     "exitTicket": {
         "title": "Lesson 16 Exit Ticket: Solving and Graphing Inequalities Joined by 'And' or 'Or'",
         "prompt": "Solve each compound inequality for x, and graph the solution on a number line: (a) 9 + 2x < 17 or 7 - 4x < -9; (b) 6 <= x/2 <= 11. Give an example of a compound inequality separated by 'or' that has a solution of all real numbers.",
@@ -117,5 +110,21 @@
             "finalAnswer": "2 \\le x < 5 \\quad (\\text{Interval: } [2, 5))",
             "commonPitfall": "Forgetting that 'and' requires both conditions to hold. If you take the union instead of intersection, you would incorrectly include numbers outside $[2, 5)$."
         }
-    ]
+    ],
+    "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Solve multi-step compound inequalities and graph disconnected intervals on the number line.",
+        "problems": [
+            {
+                "number": 1,
+                "prompt": "Solve each compound inequality for x:\n(a) -4 \\le 3x - 1 < 11\n(b) 5 - 2x \\ge 9 or 3x - 4 > 8",
+                "solution": "(a) Add 1 to all three parts: -3 \\le 3x < 12. Divide by 3: -1 \\le x < 4. Solution set: [-1, 4).\n(b) For 5 - 2x \\ge 9: -2x \\ge 4 \\implies x \\le -2. For 3x - 4 > 8: 3x > 12 \\implies x > 4. Combined: x \\le -2 or x > 4. Solution set: (-\\infty, -2] \\cup (4, \\infty)."
+            },
+            {
+                "number": 2,
+                "prompt": "Give an example of a compound inequality joined by 'and' that has no solution (the empty set). Explain why.",
+                "solution": "Example: x > 5 and x < 2. There is no real number that is simultaneously greater than 5 and less than 2. Because the intersection of (5, \\infty) and (-\\infty, 2) shares no common elements, the solution set is the empty set \\emptyset."
+            }
+        ]
+    }
 }

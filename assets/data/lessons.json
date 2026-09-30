@@ -363,17 +363,31 @@
                     "commonPitfall": "Beware of overlapping endpoints or resetting the time clock to zero at each phase. Time is cumulative along the horizontal axis."
                 }
             ],
-            "resources": {
-                "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-a-lesson-1-student.pdf",
-                "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-a-lesson-1-student.docx",
-                "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-a-lesson-1-teacher.pdf",
-                "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-a-lesson-1-teacher.docx",
-                "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
-            },
             "exitTicket": {
                 "title": "Lesson 1 Exit Ticket: Graphs of Piecewise Linear Functions",
                 "prompt": "The graph in the Exploratory Challenge is made by combining pieces of nine linear functions (it is a piecewise linear function). Each linear function is defined over an interval of time, represented on the horizontal axis. List those nine time intervals.",
                 "solution": "Between 0 and 3 sec.; between 3 and 5.5 sec.; between 5.5 and 7 sec.; between 7 and 8.5 sec.; between 8.5 and 9 sec.; between 9 and 11 sec.; between 11 and 12.7 sec.; between 12.7 and 13 sec.; and 13 sec. onward."
+            },
+            "problemSet": {
+                "title": "Official Worksheet: Problem Set & Practice",
+                "description": "Analyze piecewise linear graphs of physical situations. Work through these exercises to master rates of change and coordinate interpretation. Expand the teacher key for step-by-step solutions.",
+                "problems": [
+                    {
+                        "number": 1,
+                        "prompt": "Watch the video story 'Elevation vs. Time #3' of a man descending a 10 ft ladder. At time 0 sec, his shoes are at 10 ft above the floor, and at 6 sec, his shoes are at 3 ft. From 6 to 8.5 sec, he pauses on the 3 ft step to drink water. He then takes 1.5 sec to descend to the ground, and walks into the kitchen. The video ends at 15 sec.\n\n(a) List the distinct time intervals for this piecewise linear function.\n(b) What does a horizontal line segment represent in this graphing story?\n(c) What is his average rate of descent between time 0 sec and time 6 sec?",
+                        "solution": "(a) The four time intervals are [0, 6], (6, 8.5], (8.5, 10], and (10, 15] seconds.\n(b) A horizontal line segment represents a period of time when his elevation does not change (rate of change = 0 ft/sec), meaning he is standing still on the ladder drinking water.\n(c) Average rate of descent: \\frac{\\Delta h}{\\Delta t} = \\frac{3 - 10}{6 - 0} = \\frac{-7}{6} \\approx -1.17\\text{ ft/sec} (or a descent speed of 1.17 ft/sec)."
+                    },
+                    {
+                        "number": 2,
+                        "prompt": "If you measured elevation from the top of the man's head instead of his shoes (assume he is 6.2 ft tall), how would the elevation-versus-time graph change?",
+                        "solution": "The entire piecewise graph would undergo a rigid vertical shift upward by 6.2 ft. The slopes (rates of change) over every interval would remain identical because \\frac{\\Delta (h + 6.2)}{\\Delta t} = \\frac{\\Delta h}{\\Delta t}."
+                    },
+                    {
+                        "number": 3,
+                        "prompt": "Over which interval does he descend faster: between 0 and 6 sec, or between 8.5 and 10 sec? Explain how your graph reveals this.",
+                        "solution": "From 0 to 6 sec, his descent rate is \\frac{7}{6} \\approx 1.17\\text{ ft/sec}. From 8.5 to 10 sec (a duration of 1.5 sec), he descends from 3 ft to 0 ft: \\frac{3}{1.5} = 2.0\\text{ ft/sec}. He descends faster between 8.5 and 10 sec. On the graph, this is shown by a steeper downward slope."
+                    }
+                ]
             }
         },
         "k-math-m1-a-2": {
@@ -507,17 +521,26 @@
                     "commonPitfall": "Forgetting units of dimension. Linear measurements (perimeter, side length) scale as $k^1$, two-dimensional measurements (area) scale as $k^2$, and three-dimensional measurements (volume) scale as $k^3$."
                 }
             ],
-            "resources": {
-                "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-a-lesson-2-student.pdf",
-                "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-a-lesson-2-student.docx",
-                "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-a-lesson-2-teacher.pdf",
-                "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-a-lesson-2-teacher.docx",
-                "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
-            },
             "exitTicket": {
                 "title": "Lesson 2 Exit Ticket: Graphs of Quadratic Functions",
                 "prompt": "If you jumped in the air three times, what might the elevation versus time graph of that story look like? Label the axes appropriately.",
                 "solution": "Student answers will vary. A typical response: The graph shows three distinct curved parabolic arcs rising from elevation 0, peaking at approximately 1 ft, and returning to 0 every other second (e.g. at t = 1, 3, and 5 seconds). Gravitational deceleration on ascent and acceleration on descent create quadratic curves rather than straight lines."
+            },
+            "problemSet": {
+                "title": "Official Worksheet: Problem Set & Practice",
+                "description": "Practice analyzing quadratic curves and non-linear elevation stories resulting from acceleration and gravity.",
+                "problems": [
+                    {
+                        "number": 1,
+                        "prompt": "Here is an elevation-versus-time graph of a ball rolling down a curved ramp. The first section from 0 to 1.7 sec is curved downward. From 1.7 sec onward, the graph is a flat horizontal line at elevation 0 in.\n\n(a) If Ken puts his foot on the ball at time 2 sec to stop it from rolling, how will the elevation-versus-time graph change?\n(b) Estimate the change in elevation between 0 and 0.5 sec, and between 1.0 and 1.5 sec. Where is the ball moving fastest?",
+                        "solution": "(a) Even when the ball is stopped by Ken's foot, its elevation remains 0 in. and does not change. Therefore, the elevation-versus-time graph does not change at all.\n(b) Between 0 and 0.5 sec, the ball drops about 2 in. Between 1.0 and 1.5 sec, the ball drops about 5.5 in. The ball is moving fastest near the bottom of the ramp because the steeper slope reflects a greater rate of descent per unit time."
+                    },
+                    {
+                        "number": 2,
+                        "prompt": "A man hops up and down five medium hops and then two large hops. Describe the shape of the elevation-versus-time curve for each hop, and explain why the curve is not a straight V-shape.",
+                        "solution": "Each hop forms a smooth parabolic curve opening downward. Because gravity exerts a constant downward acceleration (-32 ft/sec^2), the upward velocity continuously decreases to zero at the peak and increases downward on the descent, creating a quadratic curve h(t) = -16t^2 + v_0 t rather than linear segments with instantaneous direction changes."
+                    }
+                ]
             }
         },
         "k-math-m1-a-3": {
@@ -665,17 +688,26 @@
                     "commonPitfall": "Underestimating exponential growth early on. In early phases, linear growth often seems superior, but an exponential function with base $> 1$ will always eventually exceed any linear function."
                 }
             ],
-            "resources": {
-                "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-a-lesson-3-student.pdf",
-                "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-a-lesson-3-student.docx",
-                "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-a-lesson-3-teacher.pdf",
-                "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-a-lesson-3-teacher.docx",
-                "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
-            },
             "exitTicket": {
                 "title": "Lesson 3 Exit Ticket: Graphs of Exponential Functions",
                 "prompt": "Assume that a bacteria population doubles every hour. Which of the following three tables of data, with x representing time in hours and y the count of bacteria, could represent the bacteria population with respect to time? Table (a): (1, 4), (2, 8), (3, 12), (4, 16); Table (b): (1, 2), (2, 4), (3, 8), (4, 16); Table (c): (1, 3), (2, 6), (3, 9), (4, 12). For the chosen table, describe the graph.",
                 "solution": "The answer is (b). Table (b) has count values 2, 4, 8, 16, doubling each hour ($y = 2^x$). The graph is a smooth curve that curves upward with an increasing rate of change (exponential growth), passing through (0, 1), (1, 2), (2, 4), (3, 8), (4, 16)."
+            },
+            "problemSet": {
+                "title": "Official Worksheet: Problem Set & Practice",
+                "description": "Analyze exponential growth patterns, doubling relationships, and multi-story population models.",
+                "problems": [
+                    {
+                        "number": 1,
+                        "prompt": "A city's population starts at 10,000 residents and doubles every decade. Write a table of values for t = 0, 10, 20, 30, 40 years, identify whether this is linear or exponential growth, and write an algebraic formula P(t).",
+                        "solution": "Table of values:\nt = 0: P = 10,000\nt = 10: P = 20,000\nt = 20: P = 40,000\nt = 30: P = 80,000\nt = 40: P = 160,000\nThis is exponential growth because the quantity multiplies by a constant factor of 2 over equal time intervals. Formula: P(t) = 10,000 \\cdot 2^{t/10}."
+                    },
+                    {
+                        "number": 2,
+                        "prompt": "Contrast the graph of a population growing at a constant rate of 1,000 people per year versus one growing at 5% per year. Which graph will eventually exceed the other, and why?",
+                        "solution": "The constant rate of 1,000 people/year produces a straight linear graph with slope m = 1,000. The 5% growth produces an exponential curve P(t) = P_0(1.05)^t. Regardless of initial population, the exponential curve will always eventually surpass the linear graph because its rate of growth increases proportional to the accumulated total."
+                    }
+                ]
             }
         },
         "k-math-m1-a-4": {
@@ -803,17 +835,26 @@
                     "commonPitfall": "Mismatched units. When calculating rates, always specify the time unit (gallons per hour vs. gallons per minute). 40 gpm is equivalent to 2,400 gph."
                 }
             ],
-            "resources": {
-                "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-a-lesson-4-student.pdf",
-                "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-a-lesson-4-student.docx",
-                "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-a-lesson-4-teacher.pdf",
-                "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-a-lesson-4-teacher.docx",
-                "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
-            },
             "exitTicket": {
                 "title": "Lesson 4 Exit Ticket: Analyzing Graphs—Water Usage During a Typical Day",
                 "prompt": "Suppose the researchers collecting data for water consumption during a typical school day collected data through the night too. For the period between the time the last person leaves the building for the evening and the time of the arrival of the first person the next morning, how should the graph of water consumption appear? If the researchers also tracked rate of water consumption in gallons per hour, how would that graph look during the unoccupied night hours?",
                 "solution": "The graph of cumulative water consumption should appear as a flat horizontal line because no water is being consumed while the building is empty. The rate of water consumption graph should sit on the horizontal axis at 0 gallons per hour."
+            },
+            "problemSet": {
+                "title": "Official Worksheet: Problem Set & Practice",
+                "description": "Examine daily cyclical graphs, rate-of-change transitions, and temperature fluctuations.",
+                "problems": [
+                    {
+                        "number": 1,
+                        "prompt": "A temperature graph for La Honda, CA recorded hourly temperatures across August and September. The graph exhibits repeated peaks and valleys.\n\n(a) Explain why the graph alternates regularly between peaks and valleys.\n(b) At approximately what time of day do the peaks typically occur? What about the valleys?",
+                        "solution": "(a) The graph alternates between peaks and valleys due to the Earth's diurnal day-night cycle: solar radiation warms the air during daytime hours, and heat radiates back into space at night.\n(b) Peaks typically occur in the mid-to-late afternoon (around 2:00 PM - 4:00 PM) when thermal energy accumulation peaks, and valleys occur just before sunrise (around 5:00 AM - 6:00 AM) after continuous nocturnal cooling."
+                    },
+                    {
+                        "number": 2,
+                        "prompt": "If a graph shows the rate of water consumption in gallons per hour, how do you find the total water consumed over an interval where the rate is constant at 150 gal/hr for 4 hours?",
+                        "solution": "\\text{Total Volume} = \\text{Rate} \\times \\text{Time} = 150\\text{ gal/hr} \\times 4\\text{ hrs} = 600\\text{ gallons}. On a rate-versus-time graph, this total corresponds to the rectangular area under the curve: 150 \\times 4 = 600."
+                    }
+                ]
             }
         },
         "k-math-m1-a-5": {
@@ -953,17 +994,26 @@
                     "commonPitfall": "Assuming constant volume inflow produces a constant height rise rate. Remember: $\\text{Rate of height increase} = \\frac{\\text{Flow Rate}}{\\text{Cross-Sectional Area}}$."
                 }
             ],
-            "resources": {
-                "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-a-lesson-5-student.pdf",
-                "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-a-lesson-5-student.docx",
-                "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-a-lesson-5-teacher.pdf",
-                "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-a-lesson-5-teacher.docx",
-                "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
-            },
             "exitTicket": {
                 "title": "Lesson 5 Exit Ticket: Two Graphing Stories",
                 "prompt": "Maya and Earl live at opposite ends of the hallway in their apartment building. Their doors are 50 ft. apart. Each person starts at his or her own door and walks at a steady pace toward the other. They stop walking when they meet. Suppose Maya walks at a constant speed of 3 ft/sec and Earl walks at 2 ft/sec. Write equations and find when and where they meet.",
                 "solution": "Let t be time in seconds. Combined speed: 3 + 2 = 5 ft/sec. Meeting time: 5t = 50 => t = 10 sec. Location: Maya has walked 3(10) = 30 ft from her door; Earl has walked 2(10) = 20 ft from his door. On an elevation/distance graph measured from Maya's door, Maya's graph starts at (0, 0) and ends at (10, 30); Earl's graph starts at (0, 50) and ends at (10, 30)."
+            },
+            "problemSet": {
+                "title": "Official Worksheet: Problem Set & Practice",
+                "description": "Model multi-agent motion, opposite-direction walking problems, and simultaneous linear distance functions.",
+                "problems": [
+                    {
+                        "number": 1,
+                        "prompt": "Maya walks at a constant rate of 3 ft/sec, and Earl walks at 4 ft/sec starting 50 ft away from Maya's door walking toward each other.\n\n(a) Write equations for each person's distance from Maya's door as a function of time t.\n(b) Determine exactly when and where they meet.",
+                        "solution": "(a) Maya starts at 0 ft: y_M = 3t. Earl starts at 50 ft moving closer: y_E = 50 - 4t.\n(b) Set y_M = y_E: 3t = 50 - 4t \\implies 7t = 50 \\implies t = \\frac{50}{7} \\approx 7.14\\text{ seconds}.\nDistance from Maya's door: y = 3\\left(\\frac{50}{7}\\right) = \\frac{150}{7} \\approx 21.43\\text{ ft}."
+                    },
+                    {
+                        "number": 2,
+                        "prompt": "How would the meeting time change if Earl walked away from Maya at 2 ft/sec while Maya pursued him at 3 ft/sec starting 50 ft behind?",
+                        "solution": "Maya's equation: y_M = 3t. Earl's equation: y_E = 50 + 2t. Setting 3t = 50 + 2t gives t = 50 seconds. Maya catches Earl after 50 seconds at distance y = 3(50) = 150 ft from her door."
+                    }
+                ]
             }
         },
         "k-math-m1-b-1": {
@@ -1115,17 +1165,26 @@
                     "commonPitfall": "Forgetting the $+1$ placeholder for the final term: $\\frac{6x^2y^2}{6x^2y^2} = 1$, not $0$! If omitted, multiplying back will only yield two terms instead of three."
                 }
             ],
-            "resources": {
-                "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-b-lesson-6-student.pdf",
-                "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-b-lesson-6-student.docx",
-                "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-b-lesson-6-teacher.pdf",
-                "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-b-lesson-6-teacher.docx",
-                "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
-            },
             "exitTicket": {
                 "title": "Lesson 6 Exit Ticket: Algebraic Expressions—The Distributive Property",
                 "prompt": "Consider the expression: (x + y + 3)(y + 1). Draw a picture to represent the expression. Write an equivalent expression by applying the distributive property.",
                 "solution": "Applying the distributive property:\n(x + y + 3)(y + 1) = (x + y + 3)y + (x + y + 3)(1) = xy + y^2 + 3y + x + y + 3 = xy + x + y^2 + 4y + 3.\nIn a geometric area model, a rectangle of width (y + 1) and length (x + y + 3) is divided into 6 sub-rectangles with areas xy, x, y^2, y, 3y, and 3."
+            },
+            "problemSet": {
+                "title": "Official Worksheet: Problem Set & Practice",
+                "description": "Apply the distributive property, geometric area models, and parenthetical grouping rules.",
+                "problems": [
+                    {
+                        "number": 1,
+                        "prompt": "Insert parentheses to make each statement true:\n(a) 2 + 3 \\times 4^2 + 1 = 81\n(b) 2 + 3 \\times 4^2 + 1 = 85\n(c) 2 + 3 \\times 4^2 + 1 = 51",
+                        "solution": "(a) (2 + 3) \\times 4^2 + 1 = 5 \\times 16 + 1 = 80 + 1 = 81.\n(b) (2 + 3) \\times (4^2 + 1) = 5 \\times (16 + 1) = 5 \\times 17 = 85.\n(c) 2 + 3 \\times 4^2 + 1 = 2 + 3(16) + 1 = 2 + 48 + 1 = 51 (no parentheses needed, standard order of operations)."
+                    },
+                    {
+                        "number": 2,
+                        "prompt": "Use the distributive property to expand the expression (2a + 3b)(4a - b + 5).",
+                        "solution": "Distribute each term of (2a + 3b) across (4a - b + 5):\n2a(4a - b + 5) + 3b(4a - b + 5)\n= (8a^2 - 2ab + 10a) + (12ab - 3b^2 + 15b)\nCombine like terms (-2ab + 12ab = 10ab):\n= 8a^2 + 10ab - 3b^2 + 10a + 15b."
+                    }
+                ]
             }
         },
         "k-math-m1-b-2": {
@@ -1275,17 +1334,26 @@
                     "commonPitfall": "Dropping parentheses when removing a minus sign. Remember $-(b - c) = -b + c$."
                 }
             ],
-            "resources": {
-                "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-b-lesson-7-student.pdf",
-                "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-b-lesson-7-student.docx",
-                "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-b-lesson-7-teacher.pdf",
-                "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-b-lesson-7-teacher.docx",
-                "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
-            },
             "exitTicket": {
                 "title": "Lesson 7 Exit Ticket: Algebraic Expressions—The Commutative and Associative Properties",
                 "prompt": "Write a mathematical proof of the algebraic equivalence of pqr and qrp.",
                 "solution": "Proof:\npqr = (pq)r        [By definition of sequential multiplication]\n    = (qp)r        [By commutative property of multiplication]\n    = q(pr)        [By associative property of multiplication]\n    = q(rp)        [By commutative property of multiplication]\n    = qrp          [By definition of sequential multiplication]"
+            },
+            "problemSet": {
+                "title": "Official Worksheet: Problem Set & Practice",
+                "description": "Master formal proofs of algebraic equivalence using the commutative and associative properties.",
+                "problems": [
+                    {
+                        "number": 1,
+                        "prompt": "Show that the algebraic expression ab + cd is equivalent to dc + ba using commutative properties of addition and multiplication. Justify every step.",
+                        "solution": "Step 1: ab + cd = ba + cd [Commutative property of multiplication applied to ab]\nStep 2: ba + cd = ba + dc [Commutative property of multiplication applied to cd]\nStep 3: ba + dc = dc + ba [Commutative property of addition applied to the two terms]\nTherefore, ab + cd = dc + ba."
+                    },
+                    {
+                        "number": 2,
+                        "prompt": "Is subtraction commutative? Provide a counterexample with specific numbers to prove your claim.",
+                        "solution": "No, subtraction is not commutative. Counterexample: 5 - 3 = 2, but 3 - 5 = -2. Since 2 \\ne -2, a - b \\ne b - a in general. Subtraction can be rewritten as addition of the opposite: a - b = a + (-b) = (-b) + a."
+                    }
+                ]
             }
         },
         "k-math-m1-b-3": {
@@ -1435,17 +1503,26 @@
                     "commonPitfall": "Changing exponents when adding like terms. $3x^2 + x^2 + 2x^2 = 6x^2$, NOT $6x^6$! Exponents only add during multiplication."
                 }
             ],
-            "resources": {
-                "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-b-lesson-8-student.pdf",
-                "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-b-lesson-8-student.docx",
-                "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-b-lesson-8-teacher.pdf",
-                "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-b-lesson-8-teacher.docx",
-                "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
-            },
             "exitTicket": {
                 "title": "Lesson 8 Exit Ticket: Adding and Subtracting Polynomials",
                 "prompt": "Must the sum of three polynomials again be a polynomial? Combine like terms for: (3x^2 - 4x + 8) + (2x^2 + 5x - 3) - (x^2 - 2x + 4).",
                 "solution": "Yes. Polynomials are closed under addition. The sum of any two polynomials is a polynomial, and adding a third polynomial produces another polynomial.\nCombining like terms: (3 + 2 - 1)x^2 + (-4 + 5 + 2)x + (8 - 3 - 4) = 4x^2 + 3x + 1."
+            },
+            "problemSet": {
+                "title": "Official Worksheet: Problem Set & Practice",
+                "description": "Combine like terms, classify polynomial degrees, and prove closure under addition and subtraction.",
+                "problems": [
+                    {
+                        "number": 1,
+                        "prompt": "Simplify each polynomial expression and state the degree and leading coefficient of the result in standard form:\n(a) (5x^3 - 2x^2 + 7) + (3x^3 + 4x^2 - 5x - 2)\n(b) (4x^2 - 6x + 9) - (2x^2 - 6x - 3)",
+                        "solution": "(a) Combine like terms: (5 + 3)x^3 + (-2 + 4)x^2 - 5x + (7 - 2) = 8x^3 + 2x^2 - 5x + 5. Degree: 3 (cubic), Leading coefficient: 8.\n(b) Distribute negative: 4x^2 - 6x + 9 - 2x^2 + 6x + 3 = (4 - 2)x^2 + (-6 + 6)x + (9 + 3) = 2x^2 + 12. Degree: 2 (quadratic), Leading coefficient: 2."
+                    },
+                    {
+                        "number": 2,
+                        "prompt": "Celina claims that 5abc - 2a^2 + 6abc is actually a binomial in disguise. Is she correct? Explain.",
+                        "solution": "Yes, Celina is correct. The terms 5abc and 6abc are like terms because they share the exact same variable factors abc. Combining them yields 11abc - 2a^2, which has exactly two non-zero terms, making it a binomial."
+                    }
+                ]
             }
         },
         "k-math-m1-b-4": {
@@ -1583,17 +1660,26 @@
                     "commonPitfall": "Assuming $(3x)^2 = 3x^2$. When squaring a monomial with a coefficient, square both the coefficient and the variable: $(3x)^2 = 3^2 x^2 = 9x^2$."
                 }
             ],
-            "resources": {
-                "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-b-lesson-9-student.pdf",
-                "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-b-lesson-9-student.docx",
-                "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials.pdf",
-                "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-b-lesson-9-teacher.docx",
-                "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
-            },
             "exitTicket": {
                 "title": "Lesson 9 Exit Ticket: Multiplying Polynomials",
                 "prompt": "Must the product of three polynomials again be a polynomial? Multiply: (x - 2)(x + 3)(2x - 1).",
                 "solution": "Yes. Polynomials are closed under multiplication. Multiplying two polynomials yields a polynomial, and multiplying that result by a third polynomial again yields a polynomial.\nMultiplying: (x - 2)(x + 3) = x^2 + x - 6.\nThen (x^2 + x - 6)(2x - 1) = 2x^3 - x^2 + 2x^2 - x - 12x + 6 = 2x^3 + x^2 - 13x + 6."
+            },
+            "problemSet": {
+                "title": "Official Worksheet: Problem Set & Practice",
+                "description": "Expand products of polynomials using tabular grid models and algebraic distribution.",
+                "problems": [
+                    {
+                        "number": 1,
+                        "prompt": "Multiply and write in standard form:\n(a) (2x - 5)(3x + 4)\n(b) (x + 2)(x^2 - 3x + 7)",
+                        "solution": "(a) FOIL / Distribute: 2x(3x) + 2x(4) - 5(3x) - 5(4) = 6x^2 + 8x - 15x - 20 = 6x^2 - 7x - 20.\n(b) Distribute x and 2: x(x^2 - 3x + 7) + 2(x^2 - 3x + 7) = (x^3 - 3x^2 + 7x) + (2x^2 - 6x + 14) = x^3 - x^2 + x + 14."
+                    },
+                    {
+                        "number": 2,
+                        "prompt": "Explain why the degree of the product of a polynomial of degree m and a polynomial of degree n is always m + n.",
+                        "solution": "When multiplying polynomials, the leading term of the product is formed by multiplying the leading terms of each factor: (a x^m)(b x^n) = (ab) x^{m+n}. By the exponent product rule x^m \\cdot x^n = x^{m+n}, the highest power of the variable in the resulting polynomial is strictly m + n."
+                    }
+                ]
             }
         },
         "k-math-m1-c-1": {
@@ -1677,13 +1763,6 @@
                 "lessonId": "L-ID-ALG-K-M1-C-1"
             },
             "scripts": "\n        function updateEqSim() {\n            const x = parseInt(document.getElementById('input-eq-x').value, 10);\n            document.getElementById('badge-eq-x').innerText = 'x = ' + x;\n\n            const lhs = 2 * x + 5;\n            const rhs = 17 - x;\n\n            document.getElementById('lhs-val').innerText = lhs;\n            document.getElementById('rhs-val').innerText = rhs;\n            document.getElementById('lhs-calc').innerText = `2(${x}) + 5 = ${lhs}`;\n            document.getElementById('rhs-calc').innerText = `17 - ${x} = ${rhs}`;\n\n            const banner = document.getElementById('truth-banner');\n            const icon = document.getElementById('truth-icon');\n            const status = document.getElementById('truth-status');\n            const desc = document.getElementById('truth-desc');\n\n            if (lhs === rhs) {\n                banner.style.background = 'rgba(16, 185, 129, 0.15)';\n                banner.style.border = '2px solid #10b981';\n                icon.innerHTML = '<i class=\"fas fa-check-circle\" style=\"color:#10b981;\"></i>';\n                status.innerText = 'TRUE STATEMENT!';\n                status.style.color = '#10b981';\n                desc.innerText = `${lhs} = ${rhs} ➡ x = ${x} IS in the solution set: {${x}}`;\n            } else {\n                banner.style.background = 'rgba(225, 29, 72, 0.15)';\n                banner.style.border = '2px solid #f43f5e';\n                icon.innerHTML = '<i class=\"fas fa-times-circle\" style=\"color:#f43f5e;\"></i>';\n                status.innerText = 'FALSE STATEMENT';\n                status.style.color = '#f43f5e';\n                desc.innerText = `${lhs} ≠ ${rhs} ➡ x = ${x} is NOT in the solution set`;\n            }\n        }\n\n        function setEqX(val) {\n            document.getElementById('input-eq-x').value = val;\n            updateEqSim();\n        }\n\n        document.addEventListener('DOMContentLoaded', () => {\n            updateEqSim();\n        });\n        ",
-            "resources": {
-                "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-10-student.pdf",
-                "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-10-student.docx",
-                "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-10-teacher.pdf",
-                "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-10-teacher.docx",
-                "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
-            },
             "exitTicket": {
                 "title": "Lesson 10 Exit Ticket: True and False Number Sentences",
                 "prompt": "Consider the following equation, where a represents a real number: \\sqrt{a+1} = \\sqrt{a} + 1. Is this statement a number sentence? If so, is the sentence true or false? If not, find a value for a that makes the statement true, and another that makes it false.",
@@ -1754,7 +1833,23 @@
                     "finalAnswer": "\\text{Solution Set} = \\{-2, 3\\}",
                     "commonPitfall": "Confusing the sign in factored form $(x - a)$ with the solution value. The factor $(x - 3) = 0$ yields root $x = +3$, not $-3$."
                 }
-            ]
+            ],
+            "problemSet": {
+                "title": "Official Worksheet: Problem Set & Practice",
+                "description": "Evaluate truth values of equations, determine solution sets, and distinguish identities from conditional equations.",
+                "problems": [
+                    {
+                        "number": 1,
+                        "prompt": "Let x = -3 and y = 2/3. Determine whether each statement is true, false, or not a number sentence:\n(a) 2x + 6 = 0\n(b) 3y - 2 = 1\n(c) x^2 = 9\n(d) 4x + y = 10",
+                        "solution": "(a) 2(-3) + 6 = -6 + 6 = 0 (TRUE number sentence).\n(b) 3(2/3) - 2 = 2 - 2 = 0 \\ne 1 (FALSE number sentence).\n(c) (-3)^2 = 9 (TRUE number sentence).\n(d) 4(-3) + (2/3) = -12 + 2/3 = -34/3 \\ne 10 (FALSE number sentence)."
+                    },
+                    {
+                        "number": 2,
+                        "prompt": "Why is the algebraic equation (x + 1)^2 = x^2 + 2x + 1 an identity, whereas (x + 1)^2 = x^2 + 1 is not?",
+                        "solution": "(x + 1)^2 expands by the distributive property to (x + 1)(x + 1) = x^2 + x + x + 1 = x^2 + 2x + 1. Because this equivalence holds for all real numbers x, it is an identity. In contrast, (x + 1)^2 = x^2 + 1 simplifies to 2x = 0 \\implies x = 0, which is only true for the single value x = 0."
+                    }
+                ]
+            }
         },
         "k-math-m1-c-10": {
             "id": "k-math-m1-c-10",
@@ -1833,13 +1928,6 @@
                 "lessonId": "L-ID-ALG-K-M1-C-10"
             },
             "scripts": "",
-            "resources": {
-                "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-19-student.pdf",
-                "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-19-student.docx",
-                "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-19-teacher.pdf",
-                "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-19-teacher.docx",
-                "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
-            },
             "exitTicket": {
                 "title": "Lesson 19 Exit Ticket: Rearranging Formulas",
                 "prompt": "Given the formula x = (1 + a)/(1 - a): (1) Solve for a when x = 12; (2) Rearrange the formula to solve for a in terms of x.",
@@ -1869,7 +1957,23 @@
                     "finalAnswer": "C = \\frac{5}{9}(F - 32); \\quad h = \\frac{V}{\\pi r^2}",
                     "commonPitfall": "Distributing denominators across additions incorrectly. For $C = \\frac{5(F - 32)}{9}$, do not forget the parentheses around $(F - 32)$."
                 }
-            ]
+            ],
+            "problemSet": {
+                "title": "Official Worksheet: Problem Set & Practice",
+                "description": "Rearrange multi-variable scientific and geometric formulas to isolate specified target variables.",
+                "problems": [
+                    {
+                        "number": 1,
+                        "prompt": "The physics formula for velocity is v = \\frac{d}{t}.\n(a) Solve for distance d.\n(b) Solve for time t.\n(c) If a vehicle travels at v = 65 mph for d = 195 miles, use the rearranged formula to find the elapsed time.",
+                        "solution": "(a) Multiply both sides by t: d = vt.\n(b) Divide both sides by v: t = \\frac{d}{v}.\n(c) Using t = \\frac{d}{v}: t = \\frac{195}{65} = 3\\text{ hours}."
+                    },
+                    {
+                        "number": 2,
+                        "prompt": "The formula for the volume of a cylinder is V = \\pi r^2 h. Solve for the radius r in terms of V and h.",
+                        "solution": "Divide both sides by \\pi h: \\frac{V}{\\pi h} = r^2. Take the principal (positive) square root because radius must be positive: r = \\sqrt{\\frac{V}{\\pi h}}."
+                    }
+                ]
+            }
         },
         "k-math-m1-c-11": {
             "id": "k-math-m1-c-11",
@@ -1944,13 +2048,6 @@
                 "lessonId": "L-ID-ALG-K-M1-C-11"
             },
             "scripts": "\n        function updateLine2DSim() {\n            const x = parseInt(document.getElementById('input-coord-x').value, 10);\n            const y = parseInt(document.getElementById('input-coord-y').value, 10);\n\n            document.getElementById('badge-coord-x').innerText = 'x = ' + x;\n            document.getElementById('badge-coord-y').innerText = 'y = ' + y;\n\n            const sum = 2 * x + y;\n            document.getElementById('eval-val-2d').innerText = sum;\n            document.getElementById('eval-calc-2d').innerText = `2(${x}) + (${y}) = ${sum}`;\n\n            const box = document.getElementById('solution-2d-box');\n            const title = document.getElementById('sol-2d-title');\n            const desc = document.getElementById('sol-2d-desc');\n\n            if (sum === 6) {\n                box.style.background = 'rgba(16, 185, 129, 0.15)';\n                box.style.borderColor = '#10b981';\n                title.style.color = '#10b981';\n                title.innerHTML = '<i class=\"fas fa-check-circle\"></i> ON THE LINE!';\n                desc.innerText = `(${x}, ${y}) satisfies 2x + y = 6. It is an ordered pair solution!`;\n            } else {\n                box.style.background = 'rgba(225, 29, 72, 0.15)';\n                box.style.borderColor = '#f43f5e';\n                title.style.color = '#f43f5e';\n                title.innerHTML = '<i class=\"fas fa-times-circle\"></i> NOT ON THE LINE';\n                desc.innerText = `2(${x}) + (${y}) = ${sum} ≠ 6. Point does not satisfy equation.`;\n            }\n        }\n\n        document.addEventListener('DOMContentLoaded', () => {\n            updateLine2DSim();\n        });\n        ",
-            "resources": {
-                "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-20-student.pdf",
-                "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-20-student.docx",
-                "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-20-teacher.pdf",
-                "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-20-teacher.docx",
-                "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
-            },
             "exitTicket": {
                 "title": "Lesson 20 Exit Ticket: Solution Sets to Equations with Two Variables",
                 "prompt": "The Math Club sells hot dogs at a school fundraiser. The club earns $108.00 and has a combination of five-dollar and one-dollar bills in its cash box. Write an equation and identify valid whole-number combinations of ones and fives that total $108.00.",
@@ -1986,7 +2083,23 @@
                     "finalAnswer": "\\text{Solutions: } (0, -2), (3, 0), (6, 2); \\quad \\text{Non-solution: } (1, 1). \\quad \\text{The graph is the line through these points.}",
                     "commonPitfall": "Thinking a solution to a two-variable equation is just $x=3$ or $y=-2$. A solution is always an ordered pair $(x, y)$."
                 }
-            ]
+            ],
+            "problemSet": {
+                "title": "Official Worksheet: Problem Set & Practice",
+                "description": "Find and verify coordinate solution pairs for two-variable linear equations Ax + By = C.",
+                "problems": [
+                    {
+                        "number": 1,
+                        "prompt": "Consider the linear equation 2x + y = 4.\n(a) Determine whether the following coordinate pairs are solutions: (0, 4), (2, 0), (3, -2), (1, 1).\n(b) Convert the equation to slope-intercept form and state its slope and y-intercept.",
+                        "solution": "(a) Testing points:\n- (0, 4): 2(0) + 4 = 4 (YES)\n- (2, 0): 2(2) + 0 = 4 (YES)\n- (3, -2): 2(3) + (-2) = 6 - 2 = 4 (YES)\n- (1, 1): 2(1) + 1 = 3 \\ne 4 (NO)\n(b) Subtract 2x: y = -2x + 4. Slope m = -2, y-intercept (0, 4)."
+                    },
+                    {
+                        "number": 2,
+                        "prompt": "A student says that the equation x + y = 10 has exactly 11 solutions. Critique this claim.",
+                        "solution": "The claim is incorrect if real numbers are considered. While there are 11 non-negative integer solutions (0 to 10), over the real numbers there are infinitely many solutions (e.g. (1.5, 8.5), (-100, 110)), which form a continuous straight line in the coordinate plane."
+                    }
+                ]
+            }
         },
         "k-math-m1-c-12": {
             "id": "k-math-m1-c-12",
@@ -2065,13 +2178,6 @@
                 "lessonId": "L-ID-ALG-K-M1-C-12"
             },
             "scripts": "",
-            "resources": {
-                "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-21-student.pdf",
-                "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-21-student.docx",
-                "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-21-teacher.pdf",
-                "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-21-teacher.docx",
-                "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
-            },
             "exitTicket": {
                 "title": "Lesson 21 Exit Ticket: Two-Variable Linear Inequalities and Their Half-Planes",
                 "prompt": "What pairs of numbers satisfy the statement: The sum of two numbers is less than 10? Create an inequality with two variables to represent this situation, and describe the graph of its solution set.",
@@ -2101,7 +2207,23 @@
                     "finalAnswer": "\\text{Dashed line } y = -2x + 4 \\text{ with the region below/left (containing origin) shaded.}",
                     "commonPitfall": "Drawing a solid boundary line instead of a dashed line for strict inequalities ($<$ or $>$). Solid lines are only used for $\\le$ or $\\ge$."
                 }
-            ]
+            ],
+            "problemSet": {
+                "title": "Official Worksheet: Problem Set & Practice",
+                "description": "Graph two-variable linear inequalities, identify boundary line styles, and determine shaded half-planes.",
+                "problems": [
+                    {
+                        "number": 1,
+                        "prompt": "Match each inequality with its graphical features (boundary line style and shaded region):\n(a) y > 2x - 3\n(b) 3x + 2y \\le 6\n(c) y \\ge -x + 4",
+                        "solution": "(a) Boundary line y = 2x - 3 is dashed; shade the half-plane above the line (testing (0, 0): 0 > -3 is true).\n(b) In slope-intercept form y \\le -1.5x + 3; boundary line is solid; shade the half-plane below the line (testing (0, 0): 0 \\le 6 is true).\n(c) Boundary line y = -x + 4 is solid; shade the half-plane above the line."
+                    },
+                    {
+                        "number": 2,
+                        "prompt": "Why is the test point (0, 0) convenient for determining which half-plane to shade, and when can (0, 0) NOT be used?",
+                        "solution": "(0, 0) is convenient because substituting 0 for x and y reduces calculations to comparing 0 to a constant. However, (0, 0) cannot be used if the boundary line passes directly through the origin (e.g. y < 2x), in which case an off-line test point such as (0, 1) or (1, 0) must be chosen."
+                    }
+                ]
+            }
         },
         "k-math-m1-c-13": {
             "id": "k-math-m1-c-13",
@@ -2180,13 +2302,6 @@
                 "lessonId": "L-ID-ALG-K-M1-C-13"
             },
             "scripts": "",
-            "resources": {
-                "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-22-student.pdf",
-                "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-22-student.docx",
-                "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-22-teacher.pdf",
-                "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-22-teacher.docx",
-                "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
-            },
             "exitTicket": {
                 "title": "Lesson 22 Exit Ticket: Solution Sets to Simultaneous Equations",
                 "prompt": "Estimate the solution to the system of equations from the graph shown (lines intersect in quadrant I near (5.2, 0.9)). Write the two equations: line 1 passes through (0, 6) and (6, 0); line 2 has y-intercept (0, -3) and slope 3/4. Find the exact solution algebraically.",
@@ -2222,7 +2337,23 @@
                     "finalAnswer": "(x, y) = (4, 7) \\quad (\\text{Solution Set: } \\{(4, 7)\\})",
                     "commonPitfall": "Substituting the expression back into the SAME equation it was isolated from, which results in a circular identity $0 = 0$ without finding the variable value."
                 }
-            ]
+            ],
+            "problemSet": {
+                "title": "Official Worksheet: Problem Set & Practice",
+                "description": "Estimate and calculate simultaneous solutions to systems of two linear equations.",
+                "problems": [
+                    {
+                        "number": 1,
+                        "prompt": "Solve the system of equations by graphing and verify algebraically:\nEquation 1: 4x + y = -5\nEquation 2: x + 4y = 12",
+                        "solution": "Express in slope-intercept form:\nEq 1: y = -4x - 5\nEq 2: y = -\\frac{1}{4}x + 3\nEquate: -4x - 5 = -\\frac{1}{4}x + 3 \\implies -8 = \\frac{15}{4}x \\implies x = -\\frac{32}{15} \\approx -2.133.\nSubstitute into Eq 1: y = -4(-32/15) - 5 = 128/15 - 75/15 = 53/15 \\approx 3.533.\nExact intersection point: (-32/15, 53/15)."
+                    },
+                    {
+                        "number": 2,
+                        "prompt": "What does it mean geometrically when a system of two linear equations has no solution? What about infinitely many solutions?",
+                        "solution": "No solution means the two lines are parallel and distinct (identical slopes, different y-intercepts), so they never intersect. Infinitely many solutions means the two equations represent the exact same line (identical slopes and identical y-intercepts), intersecting at every point along the line."
+                    }
+                ]
+            }
         },
         "k-math-m1-c-14": {
             "id": "k-math-m1-c-14",
@@ -2301,13 +2432,6 @@
                 "lessonId": "L-ID-ALG-K-M1-C-14"
             },
             "scripts": "",
-            "resources": {
-                "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-23-student.pdf",
-                "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-23-student.docx",
-                "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-23-teacher.pdf",
-                "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-23-teacher.docx",
-                "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
-            },
             "exitTicket": {
                 "title": "Lesson 23 Exit Ticket: Reasoning with Systems of Equations and Inequalities",
                 "prompt": "The sum of two numbers is 10 and the difference is 6. What are the numbers? Create a system of two linear equations, solve it, and verify using linear combinations.",
@@ -2343,7 +2467,23 @@
                     "finalAnswer": "(x, y) = (6, -2)",
                     "commonPitfall": "Forgetting to multiply the constant on the right-hand side of the equation when scaling equations. Every single term must be multiplied."
                 }
-            ]
+            ],
+            "problemSet": {
+                "title": "Official Worksheet: Problem Set & Practice",
+                "description": "Solve linear systems using substitution and elimination with linear combinations.",
+                "problems": [
+                    {
+                        "number": 1,
+                        "prompt": "Solve the system using linear combinations (elimination):\n3x + 2y = 6\nx + y = 4",
+                        "solution": "Multiply the second equation by -2: -2x - 2y = -8.\nAdd to the first equation: (3x - 2x) + (2y - 2y) = 6 - 8 \\implies x = -2.\nSubstitute x = -2 into x + y = 4: -2 + y = 4 \\implies y = 6.\nSolution: (-2, 6). Check: 3(-2) + 2(6) = -6 + 12 = 6."
+                    },
+                    {
+                        "number": 2,
+                        "prompt": "Without solving for x and y individually, evaluate the value of 4x + 3y if 3x + 2y = 6 and x + y = 4.",
+                        "solution": "Add the two equations directly: (3x + 2y) + (x + y) = 6 + 4 \\implies 4x + 3y = 10. By recognizing linear combinations, the sum is obtained in a single step without solving for coordinates."
+                    }
+                ]
+            }
         },
         "k-math-m1-c-2": {
             "id": "k-math-m1-c-2",
@@ -2426,13 +2566,6 @@
                 "lessonId": "L-ID-ALG-K-M1-C-2"
             },
             "scripts": "\n        let currentOp = 'gt';\n\n        function setOp(op) {\n            currentOp = op;\n            ['gt', 'gte', 'lt', 'lte'].forEach(o => {\n                const btn = document.getElementById('op-' + o);\n                if (btn) btn.classList.toggle('active', o === op);\n            });\n            updateLineSim();\n        }\n\n        function updateLineSim() {\n            const c = parseInt(document.getElementById('input-bound-c').value, 10);\n            document.getElementById('badge-bound-c').innerText = c;\n\n            // Coordinate mapping: 0 is at x=170, step is 30px per unit\n            const cx = 170 + c * 30;\n\n            const circle = document.getElementById('bound-circle');\n            const ray = document.getElementById('ray-line');\n            const pill = document.getElementById('line-readout-pill');\n\n            circle.setAttribute('cx', cx);\n\n            let rayX2 = 330;\n            if (currentOp === 'lt' || currentOp === 'lte') {\n                ray.setAttribute('x1', 15);\n                ray.setAttribute('x2', cx);\n            } else {\n                ray.setAttribute('x1', cx);\n                ray.setAttribute('x2', 330);\n            }\n\n            // Fill circle\n            const isInclusive = (currentOp === 'gte' || currentOp === 'lte');\n            circle.setAttribute('fill', isInclusive ? '#e11d48' : '#1e293b');\n\n            const opSymbols = { 'gt': '>', 'gte': '≥', 'lt': '<', 'lte': '≤' };\n            const dotType = isInclusive ? 'solid closed dot' : 'hollow open circle';\n            const dir = (currentOp === 'gt' || currentOp === 'gte') ? 'right' : 'left';\n\n            pill.innerHTML = `<i class=\"fas fa-info-circle\" style=\"color:#60a5fa;\"></i> Solution Set: $\\{x \\in \\mathbb{R} \\mid x ${opSymbols[currentOp]} ${c}\\}$ (${dotType} at ${c}, ray pointing ${dir})`;\n\n            if (window.MathJax && window.MathJax.typesetPromise) {\n                window.MathJax.typesetPromise([pill]);\n            }\n        }\n\n        document.addEventListener('DOMContentLoaded', () => {\n            updateLineSim();\n        });\n        ",
-            "resources": {
-                "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-11-student.pdf",
-                "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-11-student.docx",
-                "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-11-teacher.pdf",
-                "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-11-teacher.docx",
-                "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
-            },
             "exitTicket": {
                 "title": "Lesson 11 Exit Ticket: Solution Sets for Equations and Inequalities",
                 "prompt": "Here is the graphical representation of a set of real numbers: A solid ray extending to the left from 2 on the number line. Describe this set in words, set notation, and write an inequality that has this solution set. Indicate whether 3x + 1 = 3x + 1 and x + 2 = 2 + x have a solution set of all real numbers.",
@@ -2468,7 +2601,23 @@
                     "finalAnswer": "x \\le 5; \\quad \\{x \\in \\mathbb{R} \\mid x \\le 5\\}; \\quad (-\\infty, 5] \\quad \\text{(Closed circle at 5, arrow extending left)}",
                     "commonPitfall": "Using an open circle at $5$. Remember: $\\le$ and $\\ge$ include the boundary point and require a solid filled circle and square bracket '[' or ']'. $<$ and $>$ exclude the boundary and require an open circle and parenthesis '(' or ')'."
                 }
-            ]
+            ],
+            "problemSet": {
+                "title": "Official Worksheet: Problem Set & Practice",
+                "description": "Express solution sets of inequalities using words, formal set notation, and number-line graphs.",
+                "problems": [
+                    {
+                        "number": 1,
+                        "prompt": "For each solution set graphed below, describe the set in words, write it in formal set notation, and provide an inequality:\n(a) Open circle at -4, shaded to the right.\n(b) Solid circle at 7, shaded to the left.",
+                        "solution": "(a) Words: All real numbers strictly greater than -4. Set notation: {x \\text{ real} \\mid x > -4}. Inequality: x > -4.\n(b) Words: All real numbers less than or equal to 7. Set notation: {x \\text{ real} \\mid x \\le 7}. Inequality: x \\le 7."
+                    },
+                    {
+                        "number": 2,
+                        "prompt": "Explain the difference in meaning between an open circle and a closed circle on a number line graph.",
+                        "solution": "An open circle indicates a strict boundary value that is excluded from the solution set (< or >), whereas a closed (solid) circle indicates that the boundary endpoint itself satisfies the inequality and is included (\\le or \\ge)."
+                    }
+                ]
+            }
         },
         "k-math-m1-c-3": {
             "id": "k-math-m1-c-3",
@@ -2547,13 +2696,6 @@
                 "lessonId": "L-ID-ALG-K-M1-C-3"
             },
             "scripts": "\n        let scaleStep = 0;\n\n        function applyScaleOp(op) {\n            const eq = document.getElementById('scale-eq-display');\n            const exp = document.getElementById('scale-step-explanation');\n            const pl = document.getElementById('pan-left-val');\n            const pr = document.getElementById('pan-right-val');\n            const pill = document.getElementById('scale-pill');\n\n            if (op === 'sub6') {\n                scaleStep = 1;\n                eq.innerText = '2x = 10';\n                exp.innerText = 'Subtraction Property of Equality: Subtracted 6 from both pans. The equation simplified to 2x = 10.';\n                pl.innerText = '2x';\n                pr.innerText = '10';\n                pill.innerHTML = '<i class=\"fas fa-check\" style=\"color:#10b981;\"></i> Step 1 Complete: 2x = 10';\n            } else if (op === 'div2') {\n                if (scaleStep === 0) applyScaleOp('sub6');\n                scaleStep = 2;\n                eq.innerText = 'x = 5';\n                exp.innerText = 'Multiplication Property of Equality: Multiplied both sides by 1/2 (divided by 2). Variable isolated: x = 5.';\n                pl.innerText = 'x';\n                pr.innerText = '5';\n                pill.innerHTML = '<i class=\"fas fa-star\" style=\"color:#f59e0b;\"></i> Solved! Solution Set: {5}';\n            }\n        }\n\n        function resetScale() {\n            scaleStep = 0;\n            document.getElementById('scale-eq-display').innerText = '2x + 6 = 16';\n            document.getElementById('scale-step-explanation').innerText = 'Initial state: The left pan holds 2x + 6 and the right pan holds 16.';\n            document.getElementById('pan-left-val').innerText = '2x + 6';\n            document.getElementById('pan-right-val').innerText = '16';\n            document.getElementById('scale-pill').innerHTML = '<i class=\"fas fa-balance-scale\" style=\"color:#10b981;\"></i> Balanced: Both sides are equivalent';\n        }\n        ",
-            "resources": {
-                "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-12-student.pdf",
-                "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-12-student.docx",
-                "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-12-teacher.pdf",
-                "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-12-teacher.docx",
-                "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
-            },
             "exitTicket": {
                 "title": "Lesson 12 Exit Ticket: Solving Equations",
                 "prompt": "Determine which of the following equations have the same solution set by recognizing properties rather than solving: (a) 2x + 3 = 13, (b) 2x = 10, (c) 3x - 1 = 8, (d) x + 1.5 = 6.5, (e) 3x = 9, (f) 4x + 6 = 26, (g) x = 3, (h) 6x - 2 = 16.",
@@ -2595,7 +2737,23 @@
                     "finalAnswer": "x = 5 \\quad (\\text{Solution Set: } \\{5\\})",
                     "commonPitfall": "Casual phrases like 'cross-multiplied' or 'moved over the equal sign' disguise the deductive logic. In algebra, every legitimate step is an operation applied equally to both sides of the relation."
                 }
-            ]
+            ],
+            "problemSet": {
+                "title": "Official Worksheet: Problem Set & Practice",
+                "description": "Identify equivalent equations by inspecting properties of equality without calculating full solutions.",
+                "problems": [
+                    {
+                        "number": 1,
+                        "prompt": "Determine which of the following equations have the same solution set by recognizing algebraic properties:\n(I) x - 5 = 3x + 7\n(II) 3x - 6 = 7x + 8\n(III) 9x + 21 = 3x - 15\n(IV) -0.05 + x/100 = 3x/100 + 0.07",
+                        "solution": "Equations (I), (III), and (IV) share the same solution set {-6}:\n- Multiply (I) by 3: 3(x - 5) = 3(3x + 7) \\implies 3x - 15 = 9x + 21 (matches III by symmetric property).\n- Multiply (IV) by 100: -5 + x = 3x + 7 \\implies x - 5 = 3x + 7 (matches I).\nTherefore, I, III, and IV are algebraically equivalent."
+                    },
+                    {
+                        "number": 2,
+                        "prompt": "State the Addition Property of Equality and explain why it preserves the exact solution set of an equation.",
+                        "solution": "The Addition Property of Equality states that if A = B, then A + C = B + C for any real number or expression C. It preserves the solution set because adding C is fully reversible by subtracting C, ensuring no solutions are created or lost."
+                    }
+                ]
+            }
         },
         "k-math-m1-c-4": {
             "id": "k-math-m1-c-4",
@@ -2674,13 +2832,6 @@
                 "lessonId": "L-ID-ALG-K-M1-C-4"
             },
             "scripts": "\n        function showTrap(n) {\n            [1, 2, 3].forEach(i => {\n                const b = document.getElementById('btn-trap-' + i);\n                if (b) b.classList.toggle('active', i === n);\n            });\n\n            const title = document.getElementById('trap-title');\n            const math = document.getElementById('trap-math');\n            const expl = document.getElementById('trap-expl');\n\n            if (n === 1) {\n                title.innerText = 'Danger 1: Multiplying Both Sides by 0';\n                math.innerHTML = 'Start: x = 5 &bull; Multiply by 0: 0 &bull; x = 0 &bull; 5 &rArr; 0 = 0';\n                expl.innerText = 'Multiplying by 0 collapses all information and artificially expands the solution set from {5} to ALL REAL NUMBERS.';\n            } else if (n === 2) {\n                title.innerText = 'Danger 2: Dividing by a Variable Expression';\n                math.innerHTML = 'Start: x² = 3x &bull; Divide by x: x = 3 (Lost x = 0!)';\n                expl.innerText = 'Dividing by x assumes x ≠ 0. If x = 0 was a valid solution (and it is, since 0² = 3(0)), dividing by x destroys that solution!';\n            } else if (n === 3) {\n                title.innerText = 'Danger 3: Squaring Both Sides (Extraneous Roots)';\n                math.innerHTML = 'Start: x = -4 &bull; Square both sides: x² = 16 &rArr; x = ±4';\n                expl.innerText = 'Squaring both sides makes negative numbers positive, creating false positive mirror solutions like x = 4 that did not exist initially.';\n            }\n        }\n        ",
-            "resources": {
-                "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-13-student.pdf",
-                "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-13-student.docx",
-                "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-13-teacher.pdf",
-                "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-13-teacher.docx",
-                "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
-            },
             "exitTicket": {
                 "title": "Lesson 13 Exit Ticket: Some Potential Dangers when Solving Equations",
                 "prompt": "Solve the equation for x. For each step, describe the operation and/or properties used: 5(2x - 4) - 11 = 4 + 3x. Consider the equation x + 4 = 3x + 2: show that multiplying both sides by (x + 2) introduces an extraneous solution x = -2.",
@@ -2722,7 +2873,23 @@
                     "finalAnswer": "\\text{No Solution (Solution Set: } \\emptyset\\text{)}",
                     "commonPitfall": "Blindly accepting algebraic output without checking domain restrictions. Multiplying both sides by an expression that equals zero introduces false solutions."
                 }
-            ]
+            ],
+            "problemSet": {
+                "title": "Official Worksheet: Problem Set & Practice",
+                "description": "Solve linear equations systematically and guard against extraneous roots when multiplying by variable expressions.",
+                "problems": [
+                    {
+                        "number": 1,
+                        "prompt": "Solve the linear equation for x and justify each step with an algebraic property:\n3(4x - 2) + 5 = 2(x + 7) - 1",
+                        "solution": "12x - 6 + 5 = 2x + 14 - 1 [Distributive property]\n12x - 1 = 2x + 13 [Combine like terms]\n10x - 1 = 13 [Subtract 2x from both sides]\n10x = 14 [Add 1 to both sides]\nx = 14/10 = 7/5 = 1.4 [Divide both sides by 10]\nSolution set: {1.4}."
+                    },
+                    {
+                        "number": 2,
+                        "prompt": "Consider the equation x - 3 = 5 with unique solution x = 8. If both sides are multiplied by (x - 2), what happens to the solution set? Explain why.",
+                        "solution": "Multiplying by (x - 2) yields (x - 2)(x - 3) = 5(x - 2). By the zero product property, (x - 2)(x - 3) - 5(x - 2) = 0 \\implies (x - 2)(x - 8) = 0, giving solutions x = 2 and x = 8. The root x = 2 is an extraneous solution introduced because multiplying by zero (when x = 2) is not a reversible operation."
+                    }
+                ]
+            }
         },
         "k-math-m1-c-5": {
             "id": "k-math-m1-c-5",
@@ -2797,13 +2964,6 @@
                 "lessonId": "L-ID-ALG-K-M1-C-5"
             },
             "scripts": "\n        function updateFlipSim() {\n            const k = parseInt(document.getElementById('input-mult-k').value, 10);\n            document.getElementById('badge-mult-k').innerText = 'k = ' + k;\n\n            const a = 2 * k;\n            const b = 5 * k;\n\n            let sym = '<';\n            if (a > b) sym = '>';\n            else if (a === b) sym = '=';\n\n            document.getElementById('scaled-ineq-readout').innerText = `${a} ${sym} ${b}`;\n\n            const box = document.getElementById('flip-alert-box');\n            const msg = document.getElementById('flip-status-msg');\n\n            if (k < 0) {\n                box.style.background = 'rgba(225, 29, 72, 0.15)';\n                box.style.borderColor = '#f43f5e';\n                msg.style.color = '#f43f5e';\n                msg.innerHTML = '<i class=\"fas fa-sync-alt\"></i> REVERSED: Symbol flipped from < to >';\n            } else if (k === 0) {\n                box.style.background = 'rgba(245, 158, 11, 0.15)';\n                box.style.borderColor = '#f59e0b';\n                msg.style.color = '#f59e0b';\n                msg.innerHTML = '<i class=\"fas fa-equals\"></i> EQUAL: Multiplying by 0 gives 0 = 0';\n            } else {\n                box.style.background = 'rgba(16, 185, 129, 0.15)';\n                box.style.borderColor = '#10b981';\n                msg.style.color = '#10b981';\n                msg.innerHTML = '<i class=\"fas fa-arrow-right\"></i> PRESERVED: Direction remained <';\n            }\n        }\n\n        document.addEventListener('DOMContentLoaded', () => {\n            updateFlipSim();\n        });\n        ",
-            "resources": {
-                "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-14-student.pdf",
-                "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-14-student.docx",
-                "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-14-teacher.pdf",
-                "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-14-teacher.docx",
-                "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
-            },
             "exitTicket": {
                 "title": "Lesson 14 Exit Ticket: Solving Inequalities into Single Variable Systems",
                 "prompt": "Find the solution set to each inequality. Express the solution in set notation and graphically on the number line: (1) 6x - 5 < 7x + 4, (2) x^2 + 3x - 1 >= x^2 + 5. Fergus asks why the inequality direction reverses when multiplying by a negative number; provide an explanation using the addition property.",
@@ -2833,7 +2993,23 @@
                     "finalAnswer": "x > -6 \\quad (\\text{Interval: } (-6, \\infty); \\text{ Open circle at } -6\\text{ with ray right})",
                     "commonPitfall": "Reversing the inequality symbol when adding or subtracting negative numbers. The symbol ONLY reverses when MULTIPLYING or DIVIDING by a negative number."
                 }
-            ]
+            ],
+            "problemSet": {
+                "title": "Official Worksheet: Problem Set & Practice",
+                "description": "Solve linear inequalities and understand the mathematical foundation of reversing inequality signs.",
+                "problems": [
+                    {
+                        "number": 1,
+                        "prompt": "Find the solution set for each inequality and express in set notation:\n(a) 2x < 10\n(b) -15x \\ge -45\n(c) -5(x - 1) \\ge 10\n(d) 13x < 9(1 - x)",
+                        "solution": "(a) x < 5 \\implies {x \\text{ real} \\mid x < 5}\n(b) Divide by -15 and reverse sign: x \\le 3 \\implies {x \\text{ real} \\mid x \\le 3}\n(c) -5x + 5 \\ge 10 \\implies -5x \\ge 5 \\implies x \\le -1 \\implies {x \\text{ real} \\mid x \\le -1}\n(d) 13x < 9 - 9x \\implies 22x < 9 \\implies x < 9/22 \\implies {x \\text{ real} \\mid x < 9/22}"
+                    },
+                    {
+                        "number": 2,
+                        "prompt": "Prove why multiplying both sides of -2 < 5 by -1 requires reversing the inequality sign to produce a true statement.",
+                        "solution": "On a number line, -2 lies to the left of 5. Multiplying by -1 reflects both numbers across 0 to their opposites: -2 becomes +2, and 5 becomes -5. Since +2 lies to the right of -5, the relationship becomes 2 > -5. The direction of relative position reverses under reflection across the origin."
+                    }
+                ]
+            }
         },
         "k-math-m1-c-6": {
             "id": "k-math-m1-c-6",
@@ -2916,13 +3092,6 @@
                 "lessonId": "L-ID-ALG-K-M1-C-6"
             },
             "scripts": "\n        function setConnective(type) {\n            document.getElementById('btn-conn-or').classList.toggle('active', type === 'or');\n            document.getElementById('btn-conn-and').classList.toggle('active', type === 'and');\n\n            const setEl = document.getElementById('conn-solution-set');\n            const desc = document.getElementById('conn-desc');\n\n            if (type === 'or') {\n                setEl.innerText = '{-2, 20}';\n                desc.innerText = 'Under OR: Any value that makes EITHER equation true is a solution (Union: {-2} ∪ {20}).';\n            } else {\n                setEl.innerText = '∅ (Empty Set)';\n                desc.innerText = 'Under AND: A value must satisfy BOTH equations simultaneously. Since no number equals both 20 and -2, the intersection is empty.';\n            }\n        }\n        ",
-            "resources": {
-                "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-15-student.pdf",
-                "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-15-student.docx",
-                "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-15-teacher.pdf",
-                "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-15-teacher.docx",
-                "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
-            },
             "exitTicket": {
                 "title": "Lesson 15 Exit Ticket: Solution Sets of Two or More Equations Joined by 'And' or 'Or'",
                 "prompt": "Solve the system, and graph the solution set on a number line: x - 15 = 5 or 2x + 5 = 1. Write a compound inequality for acceptable swimming pool chlorine levels between 1 ppm and 3 ppm inclusive. Explain how changing 'and' to 'or' in x < 1 and x > -1 alters the solution set.",
@@ -2958,7 +3127,23 @@
                     "finalAnswer": "\\text{1) } (-3, 4]; \\quad \\text{2) } (-\\infty, -2) \\cup [3, \\infty); \\quad \\text{3) } \\emptyset",
                     "commonPitfall": "Writing $5 < x < 1$ or combining disjunctions into a single chain. Chains like $a < x < b$ strictly represent 'and' conjunctions where $a < b$."
                 }
-            ]
+            ],
+            "problemSet": {
+                "title": "Official Worksheet: Problem Set & Practice",
+                "description": "Analyze compound statements joined by 'And' (intersection) and 'Or' (union).",
+                "problems": [
+                    {
+                        "number": 1,
+                        "prompt": "Consider the compound inequality 0 < x < 3.\n(a) Rewrite the inequality as a compound sentence using 'and' or 'or'.\n(b) Graph the solution set on a number line.\n(c) What happens if the connective word is changed to 'or'?",
+                        "solution": "(a) x > 0 and x < 3.\n(b) An open interval between 0 and 3 with open circles at 0 and 3 and shading in between.\n(c) The sentence 'x > 0 or x < 3' is satisfied by every real number because every number is either greater than 0 or less than 3 (or both). The solution set becomes all real numbers."
+                    },
+                    {
+                        "number": 2,
+                        "prompt": "Solve the compound sentence: 2x - 4 > 6 or 3x + 1 < -8. Express the solution set in interval and set notation.",
+                        "solution": "First inequality: 2x > 10 \\implies x > 5.\nSecond inequality: 3x < -9 \\implies x < -3.\nUnion: x < -3 or x > 5.\nSet notation: {x \\text{ real} \\mid x < -3 \\text{ or } x > 5}. Interval notation: (-\\infty, -3) \\cup (5, \\infty)."
+                    }
+                ]
+            }
         },
         "k-math-m1-c-7": {
             "id": "k-math-m1-c-7",
@@ -3037,13 +3222,6 @@
                 "lessonId": "L-ID-ALG-K-M1-C-7"
             },
             "scripts": "",
-            "resources": {
-                "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-16-student.pdf",
-                "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-16-student.docx",
-                "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-16-teacher.pdf",
-                "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-16-teacher.docx",
-                "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
-            },
             "exitTicket": {
                 "title": "Lesson 16 Exit Ticket: Solving and Graphing Inequalities Joined by 'And' or 'Or'",
                 "prompt": "Solve each compound inequality for x, and graph the solution on a number line: (a) 9 + 2x < 17 or 7 - 4x < -9; (b) 6 <= x/2 <= 11. Give an example of a compound inequality separated by 'or' that has a solution of all real numbers.",
@@ -3079,7 +3257,23 @@
                     "finalAnswer": "2 \\le x < 5 \\quad (\\text{Interval: } [2, 5))",
                     "commonPitfall": "Forgetting that 'and' requires both conditions to hold. If you take the union instead of intersection, you would incorrectly include numbers outside $[2, 5)$."
                 }
-            ]
+            ],
+            "problemSet": {
+                "title": "Official Worksheet: Problem Set & Practice",
+                "description": "Solve multi-step compound inequalities and graph disconnected intervals on the number line.",
+                "problems": [
+                    {
+                        "number": 1,
+                        "prompt": "Solve each compound inequality for x:\n(a) -4 \\le 3x - 1 < 11\n(b) 5 - 2x \\ge 9 or 3x - 4 > 8",
+                        "solution": "(a) Add 1 to all three parts: -3 \\le 3x < 12. Divide by 3: -1 \\le x < 4. Solution set: [-1, 4).\n(b) For 5 - 2x \\ge 9: -2x \\ge 4 \\implies x \\le -2. For 3x - 4 > 8: 3x > 12 \\implies x > 4. Combined: x \\le -2 or x > 4. Solution set: (-\\infty, -2] \\cup (4, \\infty)."
+                    },
+                    {
+                        "number": 2,
+                        "prompt": "Give an example of a compound inequality joined by 'and' that has no solution (the empty set). Explain why.",
+                        "solution": "Example: x > 5 and x < 2. There is no real number that is simultaneously greater than 5 and less than 2. Because the intersection of (5, \\infty) and (-\\infty, 2) shares no common elements, the solution set is the empty set \\emptyset."
+                    }
+                ]
+            }
         },
         "k-math-m1-c-8": {
             "id": "k-math-m1-c-8",
@@ -3158,13 +3352,6 @@
                 "lessonId": "L-ID-ALG-K-M1-C-8"
             },
             "scripts": "\n        function updateZeroProdSim() {\n            const p = parseInt(document.getElementById('input-root-p').value, 10);\n            const q = parseInt(document.getElementById('input-root-q').value, 10);\n\n            document.getElementById('badge-root-p').innerText = 'p = ' + p;\n            document.getElementById('badge-root-q').innerText = 'q = ' + q;\n\n            const pSign = (p >= 0) ? `- ${p}` : `+ ${Math.abs(p)}`;\n            const qSign = (q >= 0) ? `- ${q}` : `+ ${Math.abs(q)}`;\n\n            document.getElementById('zero-prod-eq').innerText = `(x ${pSign})(x ${qSign}) = 0`;\n            document.getElementById('fac-1-eq').innerText = `x ${pSign} = 0`;\n            document.getElementById('fac-2-eq').innerText = `x ${qSign} = 0`;\n            document.getElementById('root-1-res').innerText = `x = ${p}`;\n            document.getElementById('root-2-res').innerText = `x = ${q}`;\n\n            const roots = Array.from(new Set([p, q])).sort((a,b) => a - b);\n            document.getElementById('zero-prod-pill').innerText = `Solution Set: {${roots.join(', ')}}`;\n        }\n\n        document.addEventListener('DOMContentLoaded', () => {\n            updateZeroProdSim();\n        });\n        ",
-            "resources": {
-                "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-17-student.pdf",
-                "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-17-student.docx",
-                "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-17-teacher.pdf",
-                "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-17-teacher.docx",
-                "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
-            },
             "exitTicket": {
                 "title": "Lesson 17 Exit Ticket: Equations Involving Factored Expressions",
                 "prompt": "Find the solution set to the equation 3x^2 + 27x = 0. Determine if each statement is true or false: (1) If a = 5, then ac = 5c; (2) If ac = 5c, then a = 5.",
@@ -3200,7 +3387,23 @@
                     "finalAnswer": "\\text{Equation 1: } x = \\frac{7}{2}, \\; -\\frac{4}{3}; \\quad \\text{Equation 2: } x = 4, \\; 5",
                     "commonPitfall": "Applying the Zero Product Property when the right side is NOT zero (e.g. $(x-1)(x-2) = 6$). You CANNOT set $x - 1 = 6$! You must expand, subtract 6 to get zero on one side, and re-factor."
                 }
-            ]
+            ],
+            "problemSet": {
+                "title": "Official Worksheet: Problem Set & Practice",
+                "description": "Factor polynomial expressions to solve non-linear equations using the Zero Product Property.",
+                "problems": [
+                    {
+                        "number": 1,
+                        "prompt": "Find the complete solution set for each factored equation:\n(a) (x - 1)(x - 2)(x - 3) = 0\n(b) x(2x + 7)(x - 5) = 0\n(c) 4x^2 - 16x = 0",
+                        "solution": "(a) x - 1 = 0 or x - 2 = 0 or x - 3 = 0 \\implies Solution set: {1, 2, 3}.\n(b) x = 0 or 2x + 7 = 0 (x = -7/2) or x - 5 = 0 (x = 5) \\implies Solution set: {-3.5, 0, 5}.\n(c) Factor 4x(x - 4) = 0 \\implies 4x = 0 (x = 0) or x - 4 = 0 (x = 4) \\implies Solution set: {0, 4}."
+                    },
+                    {
+                        "number": 2,
+                        "prompt": "A student attempts to solve x^2 = 5x by dividing both sides by x to get x = 5. What error was made, and what is the true solution set?",
+                        "solution": "Dividing by x assumes x \\ne 0 and illegally eliminates the solution x = 0. The correct method is to rewrite in standard form: x^2 - 5x = 0 \\implies x(x - 5) = 0, which yields both x = 0 and x = 5. Solution set: {0, 5}."
+                    }
+                ]
+            }
         },
         "k-math-m1-c-9": {
             "id": "k-math-m1-c-9",
@@ -3279,13 +3482,6 @@
                 "lessonId": "L-ID-ALG-K-M1-C-9"
             },
             "scripts": "\n        function updateRatSim() {\n            const x = parseInt(document.getElementById('input-rat-x').value, 10);\n            document.getElementById('badge-rat-x').innerText = 'x = ' + x;\n\n            const denom = x - 9;\n            const num = x - 2;\n\n            const dEl = document.getElementById('denom-val');\n            const fEl = document.getElementById('frac-val');\n            const box = document.getElementById('rat-status-box');\n            const title = document.getElementById('rat-title');\n            const desc = document.getElementById('rat-desc');\n\n            if (denom === 0) {\n                dEl.innerText = '0 (UNDEFINED!)';\n                fEl.innerText = 'Undefined';\n                box.style.background = 'rgba(225, 29, 72, 0.15)';\n                box.style.borderColor = '#f43f5e';\n                title.style.color = '#f43f5e';\n                title.innerHTML = '<i class=\"fas fa-ban\"></i> NON-PERMISSIBLE VALUE!';\n                desc.innerText = 'At x = 9, the denominator is 9 - 9 = 0. Division by zero is undefined!';\n            } else {\n                const val = num / denom;\n                dEl.innerText = denom;\n                fEl.innerText = `${num} / ${denom} = ${val.toFixed(2)}`;\n\n                if (x === 16) {\n                    box.style.background = 'rgba(16, 185, 129, 0.15)';\n                    box.style.borderColor = '#10b981';\n                    title.style.color = '#10b981';\n                    title.innerHTML = '<i class=\"fas fa-check-circle\"></i> EXACT SOLUTION FOUND!';\n                    desc.innerText = `At x = 16: (16 - 2) / (16 - 9) = 14 / 7 = 2. Exactly matches RHS!`;\n                } else {\n                    box.style.background = 'rgba(0, 0, 0, 0.2)';\n                    box.style.borderColor = 'var(--color-border)';\n                    title.style.color = 'var(--color-text-default)';\n                    title.innerHTML = '<i class=\"fas fa-calculator\"></i> Valid Domain Point';\n                    desc.innerText = `Value is defined (${val.toFixed(2)}), but does not equal 2.`;\n                }\n            }\n        }\n\n        document.addEventListener('DOMContentLoaded', () => {\n            updateRatSim();\n        });\n        ",
-            "resources": {
-                "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-18-student.pdf",
-                "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-18-student.docx",
-                "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-18-teacher.pdf",
-                "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-18-teacher.docx",
-                "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
-            },
             "exitTicket": {
                 "title": "Lesson 18 Exit Ticket: Equations Involving a Variable in the Denominator",
                 "prompt": "Rewrite the equation (x - 2)/(x - 9) = 2 as a system of equations. Then, solve for x. Write an equation that would have the restriction x != -3.",
@@ -3327,7 +3523,23 @@
                     "finalAnswer": "x = -9 \\quad (\\text{Valid, no extraneous roots})",
                     "commonPitfall": "Forgetting to multiply the right-hand constant $1$ by the LCD. Every single term on both sides of the equation must be multiplied by the LCD."
                 }
-            ]
+            ],
+            "problemSet": {
+                "title": "Official Worksheet: Problem Set & Practice",
+                "description": "Identify domain restrictions in rational expressions and solve equations with variables in denominators.",
+                "problems": [
+                    {
+                        "number": 1,
+                        "prompt": "Consider the equation \\frac{10x^2 - 49}{3x(x^2 - 4)(x + 1)} = 0.\n(a) Which values of x are excluded from the domain?\n(b) Is x = 7 permissible? Solve for all valid solutions.",
+                        "solution": "(a) Denominator 3x(x - 2)(x + 2)(x + 1) = 0 yields excluded values x = 0, 2, -2, -1.\n(b) x = 7 is permissible because it does not make the denominator zero. Setting numerator 10x^2 - 49 = 0 gives 10x^2 = 49 \\implies x^2 = 4.9 \\implies x = \\pm \\sqrt{4.9} \\approx \\pm 2.214. Neither root is excluded, so both are valid solutions."
+                    },
+                    {
+                        "number": 2,
+                        "prompt": "Solve the rational equation \\frac{2x}{x - 3} - \\frac{6}{x - 3} = 4. Check for extraneous solutions.",
+                        "solution": "Restriction: x \\ne 3. Combine numerators: \\frac{2x - 6}{x - 3} = 4. Notice 2x - 6 = 2(x - 3), so \\frac{2(x - 3)}{x - 3} = 4 \\implies 2 = 4, which is a contradiction. The equation has no solution (\\emptyset)."
+                    }
+                ]
+            }
         },
         "k-math-m1-d-1": {
             "id": "k-math-m1-d-1",
@@ -3406,13 +3618,6 @@
                 "lessonId": "L-ID-ALG-K-M1-D-1"
             },
             "scripts": "",
-            "resources": {
-                "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-d-lesson-25-student.pdf",
-                "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-d-lesson-25-student.docx",
-                "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-d-lesson-25-teacher.pdf",
-                "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-d-lesson-25-teacher.docx",
-                "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
-            },
             "exitTicket": {
                 "title": "Lesson 25 Exit Ticket: Solving Problems in Two Ways—Rates and Quantities",
                 "prompt": "Suppose a print shop has 8 printing presses and each runs at 5,000 pages per hour for 6 hours a day. Compute total pages printed for a cookbook job and novel job where 8 presses run for 2 days on novels while 1 press runs for 2 days on cookbooks. Ratio of pages is 2:1.",
@@ -3448,7 +3653,23 @@
                     "finalAnswer": "\\text{Distance } d = 30\\text{ miles (Both methods confirm 30 miles)}",
                     "commonPitfall": "Averaging the two speeds as $\\frac{15 + 10}{2} = 12.5\\text{ mph}$. Average speed over a round trip is total distance divided by total time: $\\frac{60\\text{ miles}}{5\\text{ hours}} = 12\\text{ mph}$, NOT $12.5\\text{ mph}$!"
                 }
-            ]
+            ],
+            "problemSet": {
+                "title": "Official Worksheet: Problem Set & Practice",
+                "description": "Solve age and rate problems using arithmetic tape diagrams and formal algebraic equations.",
+                "problems": [
+                    {
+                        "number": 1,
+                        "prompt": "In 16 years, Pia's age will be twice her age 12 years ago. Find Pia's present age using both a tape diagram and an algebraic equation.",
+                        "solution": "Let p = Pia's present age.\nIn 16 years: p + 16.\n12 years ago: p - 12.\nEquation: p + 16 = 2(p - 12)\np + 16 = 2p - 24\n40 = p.\nPia's present age is 40 years old. Verification: In 16 years she will be 56; 12 years ago she was 28; 56 is twice 28."
+                    },
+                    {
+                        "number": 2,
+                        "prompt": "A printing shop has 8 presses printing 5,000 pages/hr for 6 hrs/day. If 2 presses are taken offline for maintenance, how many total pages can the remaining presses produce in 3 days?",
+                        "solution": "Remaining presses = 8 - 2 = 6 presses.\nDaily output per press: 5,000 \\times 6 = 30,000 pages.\nTotal for 6 presses in 1 day: 6 \\times 30,000 = 180,000 pages.\nTotal in 3 days: 3 \\times 180,000 = 540,000 pages."
+                    }
+                ]
+            }
         },
         "k-math-m1-d-2": {
             "id": "k-math-m1-d-2",
@@ -3527,13 +3748,6 @@
                 "lessonId": "L-ID-ALG-K-M1-D-2"
             },
             "scripts": "\n        function updateRecSim() {\n            const a0 = parseInt(document.getElementById('input-rec-start').value, 10);\n            document.getElementById('badge-rec-start').innerText = 'a₀ = ' + a0;\n\n            const a1 = 2 * a0 + 5;\n            const a2 = 2 * a1 + 5;\n            const a3 = 2 * a2 + 5;\n            const a4 = 2 * a3 + 5;\n\n            document.getElementById('round-1-val').innerText = a1;\n            document.getElementById('round-2-val').innerText = a2;\n            document.getElementById('round-3-val').innerText = a3;\n            document.getElementById('round-4-val').innerText = a4;\n\n            const pill = document.getElementById('rec-summary-pill');\n            if (a3 >= 100) {\n                pill.innerHTML = `<i class=\"fas fa-trophy\" style=\"color:#10b981;\"></i> SUCCESS: Round 3 result is ${a3} (≥ 100)! Target achieved.`;\n            } else {\n                pill.innerHTML = `<i class=\"fas fa-info-circle\" style=\"color:#60a5fa;\"></i> Round 3 result: ${a3} (< 100). Try a larger starting number!`;\n            }\n        }\n\n        function setRecStart(val) {\n            document.getElementById('input-rec-start').value = val;\n            updateRecSim();\n        }\n\n        document.addEventListener('DOMContentLoaded', () => {\n            updateRecSim();\n        });\n        ",
-            "resources": {
-                "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-d-lesson-26-student.pdf",
-                "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-d-lesson-26-student.docx",
-                "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-d-lesson-26-teacher.pdf",
-                "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-d-lesson-26-teacher.docx",
-                "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
-            },
             "exitTicket": {
                 "title": "Lesson 26 Exit Ticket: Recursive Challenge—The Double and Add 5 Game",
                 "prompt": "A sequence was generated by an initial value a_0 and recurrence relation a_{i+1} = 2a_i + 5, for i >= 0. Fill in the blanks: (___, 29, ___, ___, ___, 539, 1083). What is a_0? What is a_5?",
@@ -3569,7 +3783,23 @@
                     "finalAnswer": "a_1=11, a_2=27, a_3=59, a_4=123; \\quad \\text{Initial seed for } a_3=107 \\text{ is } a_0 = 9.",
                     "commonPitfall": "Adding 5 before doubling ($2(a + 5)$). Order of operations matters: $2a + 5 \\neq 2(a + 5) = 2a + 10$."
                 }
-            ]
+            ],
+            "problemSet": {
+                "title": "Official Worksheet: Problem Set & Practice",
+                "description": "Analyze recursive sequences, find terms from recurrence relations, and examine inductive patterns.",
+                "problems": [
+                    {
+                        "number": 1,
+                        "prompt": "A sequence follows the recurrence relation a_{i+1} = 3a_i - 2 with initial term a_0 = 4.\n(a) Compute terms a_1, a_2, a_3, and a_4.\n(b) If term a_k = 730, find the preceding term a_{k-1}.",
+                        "solution": "(a) a_1 = 3(4) - 2 = 10\na_2 = 3(10) - 2 = 28\na_3 = 3(28) - 2 = 82\na_4 = 3(82) - 2 = 244.\n(b) 730 = 3(a_{k-1}) - 2 \\implies 732 = 3(a_{k-1}) \\implies a_{k-1} = 244."
+                    },
+                    {
+                        "number": 2,
+                        "prompt": "How does a recursive sequence formula differ from an explicit formula for generating terms?",
+                        "solution": "A recursive formula computes each term using the value of the immediately preceding term (e.g. a_{n} = 2a_{n-1} + 5), requiring sequential calculation from the start. An explicit formula computes the nth term directly from the index n (e.g. a_n = 2^n(a_0 + 5) - 5) without needing prior terms."
+                    }
+                ]
+            }
         },
         "k-math-m1-d-3": {
             "id": "k-math-m1-d-3",
@@ -3644,13 +3874,6 @@
                 "lessonId": "L-ID-ALG-K-M1-D-3"
             },
             "scripts": "",
-            "resources": {
-                "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-d-lesson-27-student.pdf",
-                "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-d-lesson-27-student.docx",
-                "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-d-lesson-27-teacher.pdf",
-                "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-d-lesson-27-teacher.docx",
-                "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
-            },
             "exitTicket": {
                 "title": "Lesson 27 Exit Ticket: Recursive Challenge—The Double and Add 5 Game Continued",
                 "prompt": "Using the explicit formula a_n = 2^n(a_0 + 5) - 5, find the smallest starting whole number a_0 for the double and add 5 game that produces a result of 100 or greater in 3 rounds or fewer.",
@@ -3686,7 +3909,23 @@
                     "finalAnswer": "a_n = 2^n(a_0 + 5) - 5; \\quad a_4 = 123 \\text{ confirmed}.",
                     "commonPitfall": "Assuming all sequences require computing every intermediate step. Transforming recursive relations into closed-form formulas allows computing term $a_{100}$ in a single step!"
                 }
-            ]
+            ],
+            "problemSet": {
+                "title": "Official Worksheet: Problem Set & Practice",
+                "description": "Model exponential recurrence with the explicit formula a_n = 2^n(a_0 + 5) - 5 and find threshold bounds.",
+                "problems": [
+                    {
+                        "number": 1,
+                        "prompt": "In the double and add 5 game, the nth term is given by a_n = 2^n(a_0 + 5) - 5.\n(a) Find the smallest whole number a_0 to reach 1,000 or greater in 3 rounds (n = 3).\n(b) What result does this starting number produce in round 3?",
+                        "solution": "(a) For n = 3: a_3 = 2^3(a_0 + 5) - 5 = 8(a_0 + 5) - 5 = 8a_0 + 35.\nSet 8a_0 + 35 \\ge 1,000 \\implies 8a_0 \\ge 965 \\implies a_0 \\ge 120.625.\nThe smallest starting whole number is a_0 = 121.\n(b) Round 3 result: 8(121) + 35 = 968 + 35 = 1,003."
+                    },
+                    {
+                        "number": 2,
+                        "prompt": "Prove that if the game rules changed to 'double and add 0' (pure doubling), the explicit formula simplifies to a_n = 2^n a_0.",
+                        "solution": "Substitute add-value c = 0 into a_n = 2^n(a_0 + c) - c: a_n = 2^n(a_0 + 0) - 0 = 2^n a_0, which is the classical geometric progression formula for repeated doubling."
+                    }
+                ]
+            }
         },
         "k-math-m2-a-1": {
             "meta": {
@@ -5749,13 +5988,6 @@
                 "lessonId": "L-ID-ALG-K-M1-C-15"
             },
             "scripts": "",
-            "resources": {
-                "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-24-student.pdf",
-                "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-24-student.docx",
-                "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-24-teacher.pdf",
-                "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-24-teacher.docx",
-                "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
-            },
             "exitTicket": {
                 "title": "Lesson 24 Exit Ticket: Applications of Systems of Equations and Inequalities",
                 "prompt": "Andy's Cab Service charges a $6 fee plus $0.50 per mile. His twin brother Randy starts a rival business where he charges $0.80 per mile but does not charge a fee. Write cost equations, find the break-even distance, and determine which cab service is cheaper for various distances.",
@@ -5797,7 +6029,23 @@
                     "finalAnswer": "150\\text{ Adult Tickets and } 250\\text{ Student Tickets}",
                     "commonPitfall": "Mixing up the units between equations (e.g. adding ticket count to ticket price). Ensure quantity equations sum to counts and monetary equations sum to dollars."
                 }
-            ]
+            ],
+            "problemSet": {
+                "title": "Official Worksheet: Problem Set & Practice",
+                "description": "Formulate and solve real-world systems involving mixture problems, cab rates, and break-even points.",
+                "problems": [
+                    {
+                        "number": 1,
+                        "prompt": "Find two numbers such that the sum of the first and three times the second is 5, and the sum of the second and two times the first is 8.",
+                        "solution": "Let x = first number, y = second number.\nEquation 1: x + 3y = 5\nEquation 2: 2x + y = 8\nMultiply Eq 1 by -2: -2x - 6y = -10.\nAdd to Eq 2: -5y = -2 \\implies y = 2/5.\nSubstitute into Eq 1: x + 3(2/5) = 5 \\implies x = 5 - 6/5 = 19/5.\nThe two numbers are 19/5 (3.8) and 2/5 (0.4)."
+                    },
+                    {
+                        "number": 2,
+                        "prompt": "A chemist has a 50% solution and an 80% solution. She needs 100 mL of a 70% solution. How many mL of each should she mix?",
+                        "solution": "Let x = mL of 50% solution, y = mL of 80% solution.\nVolume equation: x + y = 100 \\implies y = 100 - x.\nSolute equation: 0.50x + 0.80y = 0.70(100) = 70.\nSubstitute: 0.50x + 0.80(100 - x) = 70 \\implies 0.50x + 80 - 0.80x = 70 \\implies -0.30x = -10 \\implies x = 33.33\\text{ mL}.\ny = 100 - 33.33 = 66.67\\text{ mL}.\nMix 33 1/3 mL of 50% solution with 66 2/3 mL of 80% solution."
+                    }
+                ]
+            }
         },
         "k-math-m1-d-4": {
             "id": "k-math-m1-d-4",
@@ -5876,13 +6124,6 @@
                 "lessonId": "L-ID-ALG-K-M1-D-4"
             },
             "scripts": "\n        function updateTaxSim() {\n            const inc = parseInt(document.getElementById('input-tax-inc').value, 10);\n            document.getElementById('badge-tax-inc').innerText = '$' + inc.toLocaleString();\n\n            const b1Cap = 9075;\n            const b2Cap = 36900;\n\n            let b1Tax = 0;\n            let b2Tax = 0;\n            let b3Tax = 0;\n\n            if (inc <= b1Cap) {\n                b1Tax = inc * 0.10;\n            } else if (inc <= b2Cap) {\n                b1Tax = b1Cap * 0.10;\n                b2Tax = (inc - b1Cap) * 0.15;\n            } else {\n                b1Tax = b1Cap * 0.10;\n                b2Tax = (b2Cap - b1Cap) * 0.15;\n                b3Tax = (inc - b2Cap) * 0.25;\n            }\n\n            const totalTax = b1Tax + b2Tax + b3Tax;\n            const effRate = inc > 0 ? ((totalTax / inc) * 100).toFixed(1) : 0;\n\n            document.getElementById('tax-owed-val').innerText = '$' + Math.round(totalTax).toLocaleString();\n            document.getElementById('tax-rate-val').innerText = effRate + '%';\n\n            document.getElementById('bracket-1-line').innerText = `• 10% on first $9,075: $${Math.round(b1Tax).toLocaleString()}`;\n            document.getElementById('bracket-2-line').innerText = `• 15% on $9,075 - $36,900: $${Math.round(b2Tax).toLocaleString()}`;\n            document.getElementById('bracket-3-line').innerText = `• 25% on amount over $36,900: $${Math.round(b3Tax).toLocaleString()}`;\n        }\n\n        function setTaxIncome(val) {\n            document.getElementById('input-tax-inc').value = val;\n            updateTaxSim();\n        }\n\n        document.addEventListener('DOMContentLoaded', () => {\n            updateTaxSim();\n        });\n        ",
-            "resources": {
-                "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-d-lesson-28-student.pdf",
-                "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-d-lesson-28-student.docx",
-                "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-d-lesson-28-teacher.pdf",
-                "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-d-lesson-28-teacher.docx",
-                "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
-            },
             "exitTicket": {
                 "title": "Lesson 28 Exit Ticket: Federal Income Tax",
                 "prompt": "A famous movie actress made $10 million last year. She is married with no children, and her husband earns no income. Compute her taxable income using: (taxable income) = (income) - (exemptions) - (standard deductions), with $7,800 exemptions and $12,200 deductions. Calculate her federal income tax using the 39.6% top bracket over $450,000, and find her effective tax rate.",
@@ -5924,7 +6165,23 @@
                     "finalAnswer": "\\text{Total Tax: } \\$9,250; \\quad \\text{Effective Rate: } 16.82\\% \\quad (\\text{Marginal Rate: } 25\\%)",
                     "commonPitfall": "The widespread misconception that earning $\\$55,000$ causes your entire salary to be taxed at 25% ($0.25 \\times 55,000 = \\$13,750$). Marginal tax rates only apply to the dollars inside that specific bracket!"
                 }
-            ]
+            ],
+            "problemSet": {
+                "title": "Official Worksheet: Problem Set & Practice",
+                "description": "Calculate personal taxable income, apply marginal tax bracket formulas, and compute effective tax rates.",
+                "problems": [
+                    {
+                        "number": 1,
+                        "prompt": "A married couple filing jointly has a combined gross income of $75,000 with standard deductions of $12,200 and two personal exemptions totaling $7,800.\n(a) Calculate their taxable income.\n(b) If the tax on the first $18,150 is 10% and income between $18,150 and $73,800 is taxed at 15%, calculate their total federal income tax.\n(c) Compute their effective tax rate.",
+                        "solution": "(a) Taxable Income = $75,000 - ($12,200 + $7,800) = $75,000 - $20,000 = $55,000.\n(b) Bracket 1 (10% of $18,150): $1,815.00.\nBracket 2 (15% of excess: $55,000 - $18,150 = $36,850): 0.15 \\times $36,850 = $5,527.50.\nTotal Federal Tax = $1,815.00 + $5,527.50 = $7,342.50.\n(c) Effective Tax Rate = \\frac{7,342.50}{75,000} \\times 100\\% \\approx 9.79\\%."
+                    },
+                    {
+                        "number": 2,
+                        "prompt": "Explain the difference between a taxpayer's marginal tax rate and their effective tax rate.",
+                        "solution": "The marginal tax rate is the percentage of tax applied to the very last dollar earned (the highest tax bracket reached by the taxpayer's taxable income). The effective tax rate is the total tax paid divided by total gross income, representing the average percentage paid across all graduated brackets. The effective rate is always lower than the marginal rate in progressive tax systems."
+                    }
+                ]
+            }
         }
     }
 }

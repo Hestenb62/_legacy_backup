@@ -75,13 +75,6 @@
         "lessonId": "L-ID-ALG-K-M1-C-9"
     },
     "scripts": "\n        function updateRatSim() {\n            const x = parseInt(document.getElementById('input-rat-x').value, 10);\n            document.getElementById('badge-rat-x').innerText = 'x = ' + x;\n\n            const denom = x - 9;\n            const num = x - 2;\n\n            const dEl = document.getElementById('denom-val');\n            const fEl = document.getElementById('frac-val');\n            const box = document.getElementById('rat-status-box');\n            const title = document.getElementById('rat-title');\n            const desc = document.getElementById('rat-desc');\n\n            if (denom === 0) {\n                dEl.innerText = '0 (UNDEFINED!)';\n                fEl.innerText = 'Undefined';\n                box.style.background = 'rgba(225, 29, 72, 0.15)';\n                box.style.borderColor = '#f43f5e';\n                title.style.color = '#f43f5e';\n                title.innerHTML = '<i class=\"fas fa-ban\"></i> NON-PERMISSIBLE VALUE!';\n                desc.innerText = 'At x = 9, the denominator is 9 - 9 = 0. Division by zero is undefined!';\n            } else {\n                const val = num / denom;\n                dEl.innerText = denom;\n                fEl.innerText = `${num} / ${denom} = ${val.toFixed(2)}`;\n\n                if (x === 16) {\n                    box.style.background = 'rgba(16, 185, 129, 0.15)';\n                    box.style.borderColor = '#10b981';\n                    title.style.color = '#10b981';\n                    title.innerHTML = '<i class=\"fas fa-check-circle\"></i> EXACT SOLUTION FOUND!';\n                    desc.innerText = `At x = 16: (16 - 2) / (16 - 9) = 14 / 7 = 2. Exactly matches RHS!`;\n                } else {\n                    box.style.background = 'rgba(0, 0, 0, 0.2)';\n                    box.style.borderColor = 'var(--color-border)';\n                    title.style.color = 'var(--color-text-default)';\n                    title.innerHTML = '<i class=\"fas fa-calculator\"></i> Valid Domain Point';\n                    desc.innerText = `Value is defined (${val.toFixed(2)}), but does not equal 2.`;\n                }\n            }\n        }\n\n        document.addEventListener('DOMContentLoaded', () => {\n            updateRatSim();\n        });\n        ",
-    "resources": {
-        "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-18-student.pdf",
-        "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-18-student.docx",
-        "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-18-teacher.pdf",
-        "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-18-teacher.docx",
-        "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
-    },
     "exitTicket": {
         "title": "Lesson 18 Exit Ticket: Equations Involving a Variable in the Denominator",
         "prompt": "Rewrite the equation (x - 2)/(x - 9) = 2 as a system of equations. Then, solve for x. Write an equation that would have the restriction x != -3.",
@@ -123,5 +116,21 @@
             "finalAnswer": "x = -9 \\quad (\\text{Valid, no extraneous roots})",
             "commonPitfall": "Forgetting to multiply the right-hand constant $1$ by the LCD. Every single term on both sides of the equation must be multiplied by the LCD."
         }
-    ]
+    ],
+    "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Identify domain restrictions in rational expressions and solve equations with variables in denominators.",
+        "problems": [
+            {
+                "number": 1,
+                "prompt": "Consider the equation \\frac{10x^2 - 49}{3x(x^2 - 4)(x + 1)} = 0.\n(a) Which values of x are excluded from the domain?\n(b) Is x = 7 permissible? Solve for all valid solutions.",
+                "solution": "(a) Denominator 3x(x - 2)(x + 2)(x + 1) = 0 yields excluded values x = 0, 2, -2, -1.\n(b) x = 7 is permissible because it does not make the denominator zero. Setting numerator 10x^2 - 49 = 0 gives 10x^2 = 49 \\implies x^2 = 4.9 \\implies x = \\pm \\sqrt{4.9} \\approx \\pm 2.214. Neither root is excluded, so both are valid solutions."
+            },
+            {
+                "number": 2,
+                "prompt": "Solve the rational equation \\frac{2x}{x - 3} - \\frac{6}{x - 3} = 4. Check for extraneous solutions.",
+                "solution": "Restriction: x \\ne 3. Combine numerators: \\frac{2x - 6}{x - 3} = 4. Notice 2x - 6 = 2(x - 3), so \\frac{2(x - 3)}{x - 3} = 4 \\implies 2 = 4, which is a contradiction. The equation has no solution (\\emptyset)."
+            }
+        ]
+    }
 }

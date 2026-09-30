@@ -75,13 +75,6 @@
         "lessonId": "L-ID-ALG-K-M1-C-8"
     },
     "scripts": "\n        function updateZeroProdSim() {\n            const p = parseInt(document.getElementById('input-root-p').value, 10);\n            const q = parseInt(document.getElementById('input-root-q').value, 10);\n\n            document.getElementById('badge-root-p').innerText = 'p = ' + p;\n            document.getElementById('badge-root-q').innerText = 'q = ' + q;\n\n            const pSign = (p >= 0) ? `- ${p}` : `+ ${Math.abs(p)}`;\n            const qSign = (q >= 0) ? `- ${q}` : `+ ${Math.abs(q)}`;\n\n            document.getElementById('zero-prod-eq').innerText = `(x ${pSign})(x ${qSign}) = 0`;\n            document.getElementById('fac-1-eq').innerText = `x ${pSign} = 0`;\n            document.getElementById('fac-2-eq').innerText = `x ${qSign} = 0`;\n            document.getElementById('root-1-res').innerText = `x = ${p}`;\n            document.getElementById('root-2-res').innerText = `x = ${q}`;\n\n            const roots = Array.from(new Set([p, q])).sort((a,b) => a - b);\n            document.getElementById('zero-prod-pill').innerText = `Solution Set: {${roots.join(', ')}}`;\n        }\n\n        document.addEventListener('DOMContentLoaded', () => {\n            updateZeroProdSim();\n        });\n        ",
-    "resources": {
-        "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-17-student.pdf",
-        "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-17-student.docx",
-        "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-17-teacher.pdf",
-        "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-17-teacher.docx",
-        "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
-    },
     "exitTicket": {
         "title": "Lesson 17 Exit Ticket: Equations Involving Factored Expressions",
         "prompt": "Find the solution set to the equation 3x^2 + 27x = 0. Determine if each statement is true or false: (1) If a = 5, then ac = 5c; (2) If ac = 5c, then a = 5.",
@@ -117,5 +110,21 @@
             "finalAnswer": "\\text{Equation 1: } x = \\frac{7}{2}, \\; -\\frac{4}{3}; \\quad \\text{Equation 2: } x = 4, \\; 5",
             "commonPitfall": "Applying the Zero Product Property when the right side is NOT zero (e.g. $(x-1)(x-2) = 6$). You CANNOT set $x - 1 = 6$! You must expand, subtract 6 to get zero on one side, and re-factor."
         }
-    ]
+    ],
+    "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Factor polynomial expressions to solve non-linear equations using the Zero Product Property.",
+        "problems": [
+            {
+                "number": 1,
+                "prompt": "Find the complete solution set for each factored equation:\n(a) (x - 1)(x - 2)(x - 3) = 0\n(b) x(2x + 7)(x - 5) = 0\n(c) 4x^2 - 16x = 0",
+                "solution": "(a) x - 1 = 0 or x - 2 = 0 or x - 3 = 0 \\implies Solution set: {1, 2, 3}.\n(b) x = 0 or 2x + 7 = 0 (x = -7/2) or x - 5 = 0 (x = 5) \\implies Solution set: {-3.5, 0, 5}.\n(c) Factor 4x(x - 4) = 0 \\implies 4x = 0 (x = 0) or x - 4 = 0 (x = 4) \\implies Solution set: {0, 4}."
+            },
+            {
+                "number": 2,
+                "prompt": "A student attempts to solve x^2 = 5x by dividing both sides by x to get x = 5. What error was made, and what is the true solution set?",
+                "solution": "Dividing by x assumes x \\ne 0 and illegally eliminates the solution x = 0. The correct method is to rewrite in standard form: x^2 - 5x = 0 \\implies x(x - 5) = 0, which yields both x = 0 and x = 5. Solution set: {0, 5}."
+            }
+        ]
+    }
 }

@@ -1,0 +1,1821 @@
+{
+    "meta": {
+        "title": "Hesten's Learning Complete Math Lessons Vocabulary Codex",
+        "total_terms": 86,
+        "generated_at": "2026-09-30",
+        "version": "1.0.0"
+    },
+    "terms": [
+        {
+            "id": "addition-property-of-equality",
+            "term": "Addition Property of Equality",
+            "definition": "If a = b, then a + c = b + c for any real number c.",
+            "example": "$$\\text{If } a = b, \\text{ then } a + c = b + c$$",
+            "category": "Equations & Inequalities",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-c-3",
+                    "title": "Solving Equations",
+                    "url": "/levels/k.php?k-math-m1-c-3"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "algebraic-identity",
+            "term": "Algebraic Identity",
+            "definition": "An equality relation A = B such that A and B evaluate to the same value for all possible values of their variables.",
+            "example": "",
+            "category": "Equations & Inequalities",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-b-2",
+                    "title": "Algebraic Expressions — Commutative & Associative Properties",
+                    "url": "/levels/k.php?k-math-m1-b-2"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "algebraic-model",
+            "term": "Algebraic Model",
+            "definition": "A mathematical representation using variables and operations to simulate real-world behaviors and make predictions.",
+            "example": "",
+            "category": "Descriptive Statistics",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-d-1",
+                    "title": "Solving Problems in Two Ways — Rates and Algebra",
+                    "url": "/levels/k.php?k-math-m1-d-1"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "associative-property",
+            "term": "Associative Property",
+            "definition": "The property stating that the grouping of numbers being added or multiplied does not change the result: (a + b) + c = a + (b + c) and (ab)c = a(bc).",
+            "example": "",
+            "category": "Polynomials & Algebraic Expressions",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-b-2",
+                    "title": "Algebraic Expressions — Commutative & Associative Properties",
+                    "url": "/levels/k.php?k-math-m1-b-2"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "average-rate-of-change",
+            "term": "Average Rate of Change",
+            "definition": "The change in the dependent variable (elevation) divided by the change in the independent variable (time) over a given interval. Graphically, this is the slope of the line segment.",
+            "example": "$$\\text{Average Rate of Change} = \\frac{f(b) - f(a)}{b - a} = \\frac{\\Delta y}{\\Delta x}$$",
+            "category": "Linear & Piecewise Functions",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-a-1",
+                    "title": "Graphs of Piecewise Linear Functions",
+                    "url": "/levels/k.php?k-math-m1-a-1"
+                },
+                {
+                    "id": "k-math-m1-a-4",
+                    "title": "Analyzing Graphs — Water Usage During a Typical School Day",
+                    "url": "/levels/k.php?k-math-m1-a-4"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "base-multiplier-b",
+            "term": "Base Multiplier (b)",
+            "definition": "The constant factor by which the function value is multiplied each time $x$ increases by 1 unit. When $b > 1$, the function models growth; when $0 < b < 1$, it models exponential decay.",
+            "example": "$$b = \\frac{f(x+1)}{f(x)}$$",
+            "category": "Exponential Functions",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-a-3",
+                    "title": "Graphs of Exponential Functions",
+                    "url": "/levels/k.php?k-math-m1-a-3"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "binomial",
+            "term": "Binomial",
+            "definition": "A polynomial with exactly two terms, such as x + 4 or 3x² - 2.",
+            "example": "",
+            "category": "Polynomials & Algebraic Expressions",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-b-4",
+                    "title": "Multiplying Polynomials",
+                    "url": "/levels/k.php?k-math-m1-b-4"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "boundary-line",
+            "term": "Boundary Line",
+            "definition": "The line dividing the coordinate plane into two half-planes in an inequality graph.",
+            "example": "",
+            "category": "Equations & Inequalities",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-c-12",
+                    "title": "Solution Sets to Inequalities with Two Variables",
+                    "url": "/levels/k.php?k-math-m1-c-12"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "bounded-interval",
+            "term": "Bounded Interval",
+            "definition": "A continuous interval of real numbers with finite endpoints on both sides, e.g., (a, b] or [a, b].",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-c-7",
+                    "title": "Solving and Graphing Inequalities Joined by 'And' or 'Or'",
+                    "url": "/levels/k.php?k-math-m1-c-7"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "closed-circle",
+            "term": "Closed Circle",
+            "definition": "A solid filled dot on a number line representing an inclusive boundary that is included in the solution set (≤ or ≥).",
+            "example": "",
+            "category": "Equations & Inequalities",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-c-2",
+                    "title": "Solution Sets for Equations and Inequalities",
+                    "url": "/levels/k.php?k-math-m1-c-2"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "closure",
+            "term": "Closure",
+            "definition": "A set has closure under an operation if performing that operation on members of the set always produces a member of the same set. Polynomials are closed under addition and subtraction.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-b-3",
+                    "title": "Adding and Subtracting Polynomials",
+                    "url": "/levels/k.php?k-math-m1-b-3"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "coefficient",
+            "term": "Coefficient",
+            "definition": "The numerical multiplicative factor preceding a variable in an algebraic term (e.g., 5 in 5x²).",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-b-1",
+                    "title": "Algebraic Expressions — The Distributive Property",
+                    "url": "/levels/k.php?k-math-m1-b-1"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "combined-rate",
+            "term": "Combined Rate",
+            "definition": "The total operational output rate achieved when multiple independent agents or machines work concurrently.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-d-1",
+                    "title": "Solving Problems in Two Ways — Rates and Algebra",
+                    "url": "/levels/k.php?k-math-m1-d-1"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "commutative-property",
+            "term": "Commutative Property",
+            "definition": "The property stating that the order in which two real numbers are added or multiplied does not change the result: a + b = b + a and ab = ba.",
+            "example": "",
+            "category": "Polynomials & Algebraic Expressions",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-b-2",
+                    "title": "Algebraic Expressions — Commutative & Associative Properties",
+                    "url": "/levels/k.php?k-math-m1-b-2"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "compound-inequality",
+            "term": "Compound Inequality",
+            "definition": "An inequality formed by joining two individual inequalities with the connective word 'and' or 'or'.",
+            "example": "",
+            "category": "Equations & Inequalities",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-c-7",
+                    "title": "Solving and Graphing Inequalities Joined by 'And' or 'Or'",
+                    "url": "/levels/k.php?k-math-m1-c-7"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "conjunction-and",
+            "term": "Conjunction ('And')",
+            "definition": "A compound sentence that is true only if both of its component statements are simultaneously true. Corresponding to set intersection (∩).",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-c-6",
+                    "title": "Solution Sets of Two or More Equations Joined by 'And' or 'Or'",
+                    "url": "/levels/k.php?k-math-m1-c-6"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "constraint",
+            "term": "Constraint",
+            "definition": "A condition or restriction that must be satisfied by the solutions of a mathematical model.",
+            "example": "",
+            "category": "Descriptive Statistics",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-c-15",
+                    "title": "Applications of Systems of Equations & Inequalities",
+                    "url": "/levels/k.php?k-math-m1-c-15"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "cumulative-volume",
+            "term": "Cumulative Volume",
+            "definition": "The total aggregated quantity of water used up to a specified point in time.",
+            "example": "",
+            "category": "Descriptive Statistics",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-a-4",
+                    "title": "Analyzing Graphs — Water Usage During a Typical School Day",
+                    "url": "/levels/k.php?k-math-m1-a-4"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "deductive-reasoning",
+            "term": "Deductive Reasoning",
+            "definition": "A logical process in which a conclusion is based on the concordance of multiple premises that are assumed or proven to be true.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-c-3",
+                    "title": "Solving Equations",
+                    "url": "/levels/k.php?k-math-m1-c-3"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "degree-of-a-polynomial",
+            "term": "Degree of a Polynomial",
+            "definition": "The highest exponent of the variable in any term of the polynomial (when in one variable).",
+            "example": "",
+            "category": "Polynomials & Algebraic Expressions",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-b-3",
+                    "title": "Adding and Subtracting Polynomials",
+                    "url": "/levels/k.php?k-math-m1-b-3"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "degree-sum-theorem",
+            "term": "Degree Sum Theorem",
+            "definition": "For non-zero polynomials P and Q, deg(P · Q) = deg(P) + deg(Q).",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-b-4",
+                    "title": "Multiplying Polynomials",
+                    "url": "/levels/k.php?k-math-m1-b-4"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "dependent-variable",
+            "term": "Dependent Variable",
+            "definition": "The output value of a function, which depends on the input value (usually elevation/height, graphed on the vertical axis).",
+            "example": "",
+            "category": "Linear & Piecewise Functions",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-a-1",
+                    "title": "Graphs of Piecewise Linear Functions",
+                    "url": "/levels/k.php?k-math-m1-a-1"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "disjoint-sets",
+            "term": "Disjoint Sets",
+            "definition": "Two sets that have no elements in common (their intersection is empty).",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-c-7",
+                    "title": "Solving and Graphing Inequalities Joined by 'And' or 'Or'",
+                    "url": "/levels/k.php?k-math-m1-c-7"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "disjunction-or",
+            "term": "Disjunction ('Or')",
+            "definition": "A compound sentence that is true if at least one of its component statements is true. Corresponding to set union (∪).",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-c-6",
+                    "title": "Solution Sets of Two or More Equations Joined by 'And' or 'Or'",
+                    "url": "/levels/k.php?k-math-m1-c-6"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "distributive-property",
+            "term": "Distributive Property",
+            "definition": "The mathematical axiom asserting that multiplying a sum by a number gives the same result as multiplying each addend separately and adding the products: a(b + c) = ab + ac.",
+            "example": "$$a(b + c) = ab + ac \\quad \\text{and} \\quad (b + c)a = ba + ca$$",
+            "category": "Polynomials & Algebraic Expressions",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-b-1",
+                    "title": "Algebraic Expressions — The Distributive Property",
+                    "url": "/levels/k.php?k-math-m1-b-1"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "effective-tax-rate",
+            "term": "Effective Tax Rate",
+            "definition": "The actual percentage of total income paid in taxes: (Total Tax Paid / Total Income) * 100%.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-d-4",
+                    "title": "Federal Income Tax — Piecewise Linear Modeling",
+                    "url": "/levels/k.php?k-math-m1-d-4"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "elevation-time-graph",
+            "term": "Elevation-Time Graph",
+            "definition": "A graph where vertical position represents physical altitude or height above ground.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-a-5",
+                    "title": "Two Graphing Stories — Modeling Physical Motion",
+                    "url": "/levels/k.php?k-math-m1-a-5"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "elimination-method",
+            "term": "Elimination Method",
+            "definition": "An algebraic technique where equations are added or subtracted to cancel out one of the variables.",
+            "example": "",
+            "category": "Equations & Inequalities",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-c-14",
+                    "title": "Solution Sets to Simultaneous Equations (Part 2)",
+                    "url": "/levels/k.php?k-math-m1-c-14"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "equation",
+            "term": "Equation",
+            "definition": "A mathematical statement asserting that two algebraic expressions are equal in value.",
+            "example": "",
+            "category": "Equations & Inequalities",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-c-1",
+                    "title": "True and False Equations",
+                    "url": "/levels/k.php?k-math-m1-c-1"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "equivalent-expressions",
+            "term": "Equivalent Expressions",
+            "definition": "Two algebraic expressions that yield the exact same numerical result whenever the same values are substituted for their variables.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-b-1",
+                    "title": "Algebraic Expressions — The Distributive Property",
+                    "url": "/levels/k.php?k-math-m1-b-1"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "equivalent-systems",
+            "term": "Equivalent Systems",
+            "definition": "Two systems of equations that have the exact same solution set.",
+            "example": "",
+            "category": "Equations & Inequalities",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-c-14",
+                    "title": "Solution Sets to Simultaneous Equations (Part 2)",
+                    "url": "/levels/k.php?k-math-m1-c-14"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "explicit-closed-form-formula",
+            "term": "Explicit (Closed-Form) Formula",
+            "definition": "A formula allowing direct calculation of the nth term of a sequence using only the index n, without computing any preceding terms.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-d-3",
+                    "title": "Recursive Challenge: The Double and Add 5 Game (Part 2)",
+                    "url": "/levels/k.php?k-math-m1-d-3"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "exponential-function",
+            "term": "Exponential Function",
+            "definition": "A function in which an independent variable appears as an exponent: $f(x) = a \\cdot b^x$. The rate of change increases directly in proportion to the magnitude of the function value itself.",
+            "example": "$$f(x) = a \\cdot b^x \\quad (a \\ne 0, \\, b > 0, \\, b \\ne 1)$$",
+            "category": "Exponential Functions",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-a-3",
+                    "title": "Graphs of Exponential Functions",
+                    "url": "/levels/k.php?k-math-m1-a-3"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "extraneous-solution",
+            "term": "Extraneous Solution",
+            "definition": "A solution that emerges from the process of solving an equation but is not a valid solution to the original equation.",
+            "example": "",
+            "category": "Equations & Inequalities",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-c-4",
+                    "title": "Potential Dangers When Solving Equations",
+                    "url": "/levels/k.php?k-math-m1-c-4"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "factored-form",
+            "term": "Factored Form",
+            "definition": "An expression expressed as a product of irreducible linear or polynomial factors.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-c-8",
+                    "title": "Equations Involving Factored Expressions",
+                    "url": "/levels/k.php?k-math-m1-c-8"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "feasible-region",
+            "term": "Feasible Region",
+            "definition": "The intersection of all half-planes defined by a system of inequalities representing all viable solutions.",
+            "example": "",
+            "category": "Equations & Inequalities",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-c-15",
+                    "title": "Applications of Systems of Equations & Inequalities",
+                    "url": "/levels/k.php?k-math-m1-c-15"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "formula",
+            "term": "Formula",
+            "definition": "A mathematical relationship or rule expressed with algebraic symbols (e.g., V = lwh).",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-c-10",
+                    "title": "Rearranging Formulas",
+                    "url": "/levels/k.php?k-math-m1-c-10"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "graph-of-an-equation",
+            "term": "Graph of an Equation",
+            "definition": "The set of all points on the coordinate plane whose coordinates (x, y) satisfy the equation.",
+            "example": "",
+            "category": "Equations & Inequalities",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-c-11",
+                    "title": "Solution Sets to Equations with Two Variables",
+                    "url": "/levels/k.php?k-math-m1-c-11"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "half-plane",
+            "term": "Half-Plane",
+            "definition": "The region of a coordinate plane on one side of an infinite boundary line.",
+            "example": "",
+            "category": "Equations & Inequalities",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-c-12",
+                    "title": "Solution Sets to Inequalities with Two Variables",
+                    "url": "/levels/k.php?k-math-m1-c-12"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "horizontal-asymptote",
+            "term": "Horizontal Asymptote",
+            "definition": "A horizontal line ($y = 0$ for basic exponential curves) that the curve approaches closer and closer as $x \\to -\\infty$, but never intersects or passes.",
+            "example": "$$y = 0 \\quad \\text{as } x \\to -\\infty \\text{ for } f(x) = 2^x$$",
+            "category": "Exponential Functions",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-a-3",
+                    "title": "Graphs of Exponential Functions",
+                    "url": "/levels/k.php?k-math-m1-a-3"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "horizontal-plateau",
+            "term": "Horizontal Plateau",
+            "definition": "A segment where slope m = 0, indicating zero flow rate or usage.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-a-4",
+                    "title": "Analyzing Graphs — Water Usage During a Typical School Day",
+                    "url": "/levels/k.php?k-math-m1-a-4"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "identity",
+            "term": "Identity",
+            "definition": "An equation that evaluates to True for all possible values of its variables (e.g., 2(x + 1) = 2x + 2).",
+            "example": "",
+            "category": "Equations & Inequalities",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-c-1",
+                    "title": "True and False Equations",
+                    "url": "/levels/k.php?k-math-m1-c-1"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "independent-variable",
+            "term": "Independent Variable",
+            "definition": "The input value of a function, which changes independently (usually time, graphed on the horizontal axis).",
+            "example": "",
+            "category": "Linear & Piecewise Functions",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-a-1",
+                    "title": "Graphs of Piecewise Linear Functions",
+                    "url": "/levels/k.php?k-math-m1-a-1"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "inequality",
+            "term": "Inequality",
+            "definition": "A mathematical statement comparing two expressions using relation symbols <, ≤, >, or ≥.",
+            "example": "",
+            "category": "Equations & Inequalities",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-c-2",
+                    "title": "Solution Sets for Equations and Inequalities",
+                    "url": "/levels/k.php?k-math-m1-c-2"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "inequality-reversal-property",
+            "term": "Inequality Reversal Property",
+            "definition": "If a < b and c < 0, then ac > bc. Multiplying or dividing both sides of an inequality by a negative number reverses the direction of the inequality symbol.",
+            "example": "",
+            "category": "Equations & Inequalities",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-c-5",
+                    "title": "Solving Inequalities",
+                    "url": "/levels/k.php?k-math-m1-c-5"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "initial-term",
+            "term": "Initial Term",
+            "definition": "The starting value a_0 (or a_1) required to initiate the evaluation of a recursive process.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-d-2",
+                    "title": "Recursive Challenge: The Double and Add 5 Game (Part 1)",
+                    "url": "/levels/k.php?k-math-m1-d-2"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "initial-value-a",
+            "term": "Initial Value (a)",
+            "definition": "The value of the function when $x = 0$, representing the $y$-intercept. Because any nonzero base raised to the power of 0 equals 1 ($b^0 = 1$), $f(0) = a \\cdot 1 = a$.",
+            "example": "$$f(0) = a \\cdot b^0 = a$$",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-a-3",
+                    "title": "Graphs of Exponential Functions",
+                    "url": "/levels/k.php?k-math-m1-a-3"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "intersection",
+            "term": "Intersection",
+            "definition": "The set of elements belonging to both sets A and B (A ∩ B).",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-c-6",
+                    "title": "Solution Sets of Two or More Equations Joined by 'And' or 'Or'",
+                    "url": "/levels/k.php?k-math-m1-c-6"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "least-common-denominator-lcd",
+            "term": "Least Common Denominator (LCD)",
+            "definition": "The least common multiple of the denominators of a set of fractions.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-c-9",
+                    "title": "Equations Involving a Variable in the Denominator",
+                    "url": "/levels/k.php?k-math-m1-c-9"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "linear-combination",
+            "term": "Linear Combination",
+            "definition": "An expression constructed from a set of terms by multiplying each term by a constant and adding the results.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-c-14",
+                    "title": "Solution Sets to Simultaneous Equations (Part 2)",
+                    "url": "/levels/k.php?k-math-m1-c-14"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "literal-equation",
+            "term": "Literal Equation",
+            "definition": "An equation consisting predominantly of letters and variables representing known or unknown quantities.",
+            "example": "",
+            "category": "Equations & Inequalities",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-c-10",
+                    "title": "Rearranging Formulas",
+                    "url": "/levels/k.php?k-math-m1-c-10"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "lost-solution",
+            "term": "Lost Solution",
+            "definition": "A valid solution that is accidentally eliminated by an invalid operation (such as dividing both sides by a variable expression that equals zero).",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-c-4",
+                    "title": "Potential Dangers When Solving Equations",
+                    "url": "/levels/k.php?k-math-m1-c-4"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "marginal-tax-rate",
+            "term": "Marginal Tax Rate",
+            "definition": "The tax rate applied to the last dollar of income earned within a specific bracket.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-d-4",
+                    "title": "Federal Income Tax — Piecewise Linear Modeling",
+                    "url": "/levels/k.php?k-math-m1-d-4"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "multiplication-property-of-equality",
+            "term": "Multiplication Property of Equality",
+            "definition": "If a = b, then ac = bc for any real number c.",
+            "example": "$$\\text{If } a = b, \\text{ then } a \\cdot c = b \\cdot c$$",
+            "category": "Equations & Inequalities",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-c-3",
+                    "title": "Solving Equations",
+                    "url": "/levels/k.php?k-math-m1-c-3"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "non-permissible-value",
+            "term": "Non-Permissible Value",
+            "definition": "Any real number that causes a denominator in an expression to equal zero, making the expression undefined.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-c-9",
+                    "title": "Equations Involving a Variable in the Denominator",
+                    "url": "/levels/k.php?k-math-m1-c-9"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "open-circle",
+            "term": "Open Circle",
+            "definition": "A hollow dot on a number line representing an exclusive boundary that is not included in the solution set (< or >).",
+            "example": "",
+            "category": "Equations & Inequalities",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-c-2",
+                    "title": "Solution Sets for Equations and Inequalities",
+                    "url": "/levels/k.php?k-math-m1-c-2"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "ordered-pair",
+            "term": "Ordered Pair",
+            "definition": "A pair of numbers (x, y) written in a specific order representing a unique point on a coordinate plane.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-c-11",
+                    "title": "Solution Sets to Equations with Two Variables",
+                    "url": "/levels/k.php?k-math-m1-c-11"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "piecewise-linear-function",
+            "term": "Piecewise Linear Function",
+            "definition": "A function defined by multiple linear segments, each covering a specific interval of time or domain. The overall graph looks like joined straight lines with corners.",
+            "example": "$$f(x) = \\begin{cases} -2x + 4 & \\text{if } x < 1 \\\\ 3x - 1 & \\text{if } x \\ge 1 \\end{cases}$$",
+            "category": "Linear & Piecewise Functions",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-a-1",
+                    "title": "Graphs of Piecewise Linear Functions",
+                    "url": "/levels/k.php?k-math-m1-a-1"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "point-of-intersection",
+            "term": "Point of Intersection",
+            "definition": "A single point on the coordinate plane where two lines cross, representing the simultaneous solution.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-c-13",
+                    "title": "Solution Sets to Simultaneous Equations (Part 1)",
+                    "url": "/levels/k.php?k-math-m1-c-13"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "polynomial",
+            "term": "Polynomial",
+            "definition": "An expression consisting of variables and coefficients, constructed using only addition, subtraction, multiplication, and non-negative integer exponentiation.",
+            "example": "",
+            "category": "Polynomials & Algebraic Expressions",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-b-3",
+                    "title": "Adding and Subtracting Polynomials",
+                    "url": "/levels/k.php?k-math-m1-b-3"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "quadratic-function",
+            "term": "Quadratic Function",
+            "definition": "A polynomial function of degree 2 ($f(x) = ax^2 + bx + c$, with $a \\neq 0$). Its graph forms a U-shaped parabola.",
+            "example": "$$f(x) = ax^2 + bx + c \\quad (a \\ne 0)$$",
+            "category": "Quadratic Functions & Equations",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-a-2",
+                    "title": "Growth of Square Areas and Functions",
+                    "url": "/levels/k.php?k-math-m1-a-2"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "rational-equation",
+            "term": "Rational Equation",
+            "definition": "An equation containing at least one fraction whose denominator contains a variable expression.",
+            "example": "",
+            "category": "Equations & Inequalities",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-c-9",
+                    "title": "Equations Involving a Variable in the Denominator",
+                    "url": "/levels/k.php?k-math-m1-c-9"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "ray",
+            "term": "Ray",
+            "definition": "A continuous portion of the coordinate line extending indefinitely in one direction from an endpoint.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-c-2",
+                    "title": "Solution Sets for Equations and Inequalities",
+                    "url": "/levels/k.php?k-math-m1-c-2"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "recurrence-relation",
+            "term": "Recurrence Relation",
+            "definition": "An equation that expresses each element of a sequence as a function of the preceding elements (e.g., a_n = 2a_{n-1} + 5).",
+            "example": "",
+            "category": "Equations & Inequalities",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-d-2",
+                    "title": "Recursive Challenge: The Double and Add 5 Game (Part 1)",
+                    "url": "/levels/k.php?k-math-m1-d-2"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "recursive-sequence",
+            "term": "Recursive Sequence",
+            "definition": "A sequence of numbers where each term after the first is defined as a function of the preceding term(s).",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-d-2",
+                    "title": "Recursive Challenge: The Double and Add 5 Game (Part 1)",
+                    "url": "/levels/k.php?k-math-m1-d-2"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "reversible-step",
+            "term": "Reversible Step",
+            "definition": "An algebraic operation that preserves the exact solution set, such that applying its inverse returns the original equation.",
+            "example": "",
+            "category": "Equations & Inequalities",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-c-4",
+                    "title": "Potential Dangers When Solving Equations",
+                    "url": "/levels/k.php?k-math-m1-c-4"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "roots-zeros",
+            "term": "Roots / Zeros",
+            "definition": "The input values that cause an expression or function to evaluate to zero.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-c-8",
+                    "title": "Equations Involving Factored Expressions",
+                    "url": "/levels/k.php?k-math-m1-c-8"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "second-differences",
+            "term": "Second Differences",
+            "definition": "The differences between consecutive first differences. In any quadratic sequence with equal intervals, the second differences are constant!",
+            "example": "",
+            "category": "Quadratic Functions & Equations",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-a-2",
+                    "title": "Growth of Square Areas and Functions",
+                    "url": "/levels/k.php?k-math-m1-a-2"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "set-builder-notation",
+            "term": "Set-Builder Notation",
+            "definition": "A mathematical shorthand notation describing a set by stating the properties that its members must satisfy, e.g., {x | x > -9}.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-c-5",
+                    "title": "Solving Inequalities",
+                    "url": "/levels/k.php?k-math-m1-c-5"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "solution-set",
+            "term": "Solution Set",
+            "definition": "The set of all values from the domain that make an open sentence or equation true.",
+            "example": "$$S = \\{x \\in \\mathbb{R} \\mid 2x + 5 = 11\\} = \\{3\\}$$",
+            "category": "Equations & Inequalities",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-c-1",
+                    "title": "True and False Equations",
+                    "url": "/levels/k.php?k-math-m1-c-1"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "speed-time-graph",
+            "term": "Speed-Time Graph",
+            "definition": "A graph where vertical position represents instantaneous rate of motion.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-a-5",
+                    "title": "Two Graphing Stories — Modeling Physical Motion",
+                    "url": "/levels/k.php?k-math-m1-a-5"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "standard-form-of-a-polynomial",
+            "term": "Standard Form of a Polynomial",
+            "definition": "A polynomial written such that its terms are placed in descending order of degree from left to right.",
+            "example": "$$P(x) = a_n x^n + a_{n-1} x^{n-1} + \\dots + a_1 x + a_0$$",
+            "category": "Polynomials & Algebraic Expressions",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-b-3",
+                    "title": "Adding and Subtracting Polynomials",
+                    "url": "/levels/k.php?k-math-m1-b-3"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "subject-of-a-formula",
+            "term": "Subject of a Formula",
+            "definition": "The variable that is isolated by itself on one side of an equation with a coefficient of 1.",
+            "example": "",
+            "category": "Equations & Inequalities",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-c-10",
+                    "title": "Rearranging Formulas",
+                    "url": "/levels/k.php?k-math-m1-c-10"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "substitution-method",
+            "term": "Substitution Method",
+            "definition": "An algebraic technique where one variable is isolated and substituted into the other equation.",
+            "example": "",
+            "category": "Equations & Inequalities",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-c-13",
+                    "title": "Solution Sets to Simultaneous Equations (Part 1)",
+                    "url": "/levels/k.php?k-math-m1-c-13"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "system-of-linear-equations",
+            "term": "System of Linear Equations",
+            "definition": "A collection of two or more linear equations involving the same set of variables.",
+            "example": "",
+            "category": "Equations & Inequalities",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-c-13",
+                    "title": "Solution Sets to Simultaneous Equations (Part 1)",
+                    "url": "/levels/k.php?k-math-m1-c-13"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "tabular-multiplication-box-method",
+            "term": "Tabular Multiplication (Box Method)",
+            "definition": "A geometric organizer where terms of one polynomial form rows and terms of the other form columns, computing all partial products systematically.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-b-4",
+                    "title": "Multiplying Polynomials",
+                    "url": "/levels/k.php?k-math-m1-b-4"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "target-inversion",
+            "term": "Target Inversion",
+            "definition": "Setting an explicit sequence formula equal or unequal to a desired threshold target and solving backwards for the initial term.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-d-3",
+                    "title": "Recursive Challenge: The Double and Add 5 Game (Part 2)",
+                    "url": "/levels/k.php?k-math-m1-d-3"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "taxable-income",
+            "term": "Taxable Income",
+            "definition": "The amount of gross income used to calculate tax liability, after subtracting allowable exemptions and deductions.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-d-4",
+                    "title": "Federal Income Tax — Piecewise Linear Modeling",
+                    "url": "/levels/k.php?k-math-m1-d-4"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "term",
+            "term": "Term",
+            "definition": "A single mathematical number, variable, or product of numbers and variables separated by addition or subtraction operators.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-b-1",
+                    "title": "Algebraic Expressions — The Distributive Property",
+                    "url": "/levels/k.php?k-math-m1-b-1"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "test-point",
+            "term": "Test Point",
+            "definition": "A coordinate pair (not on the boundary line) substituted into an inequality to determine which half-plane contains solutions.",
+            "example": "",
+            "category": "Equations & Inequalities",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-c-12",
+                    "title": "Solution Sets to Inequalities with Two Variables",
+                    "url": "/levels/k.php?k-math-m1-c-12"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "trinomial",
+            "term": "Trinomial",
+            "definition": "A polynomial with exactly three terms, such as ax² + bx + c.",
+            "example": "",
+            "category": "Polynomials & Algebraic Expressions",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-b-4",
+                    "title": "Multiplying Polynomials",
+                    "url": "/levels/k.php?k-math-m1-b-4"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "truth-value",
+            "term": "Truth Value",
+            "definition": "The property of a mathematical sentence indicating whether it is True or False under a specific substitution.",
+            "example": "",
+            "category": "Equations & Inequalities",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-c-1",
+                    "title": "True and False Equations",
+                    "url": "/levels/k.php?k-math-m1-c-1"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "union",
+            "term": "Union",
+            "definition": "The set of elements belonging to set A, set B, or both (A ∪ B).",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-c-6",
+                    "title": "Solution Sets of Two or More Equations Joined by 'And' or 'Or'",
+                    "url": "/levels/k.php?k-math-m1-c-6"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "unit-rate",
+            "term": "Unit Rate",
+            "definition": "A rate in which the second quantity in the comparison is one unit (e.g., 25 pages per minute).",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-d-1",
+                    "title": "Solving Problems in Two Ways — Rates and Algebra",
+                    "url": "/levels/k.php?k-math-m1-d-1"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "velocity",
+            "term": "Velocity",
+            "definition": "The speed of an object in a given direction, corresponding to signed slope on a displacement graph.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-a-5",
+                    "title": "Two Graphing Stories — Modeling Physical Motion",
+                    "url": "/levels/k.php?k-math-m1-a-5"
+                }
+            ],
+            "standards": []
+        },
+        {
+            "id": "zero-product-property",
+            "term": "Zero-Product Property",
+            "definition": "If the product of two real numbers is zero, then at least one of the numbers must be zero: ab = 0 implies a = 0 or b = 0.",
+            "example": "$$\\text{If } A \\cdot B = 0, \\text{ then } A = 0 \\text{ or } B = 0$$",
+            "category": "Equations & Inequalities",
+            "modules": [
+                "Module 1: Relationships Between Quantities & Reasoning with Equations"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "k-math-m1-c-8",
+                    "title": "Equations Involving Factored Expressions",
+                    "url": "/levels/k.php?k-math-m1-c-8"
+                }
+            ],
+            "standards": []
+        }
+    ]
+}

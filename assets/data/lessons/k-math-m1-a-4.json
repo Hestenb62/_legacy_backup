@@ -123,16 +123,25 @@
             "commonPitfall": "Mismatched units. When calculating rates, always specify the time unit (gallons per hour vs. gallons per minute). 40 gpm is equivalent to 2,400 gph."
         }
     ],
-    "resources": {
-        "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-a-lesson-4-student.pdf",
-        "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-a-lesson-4-student.docx",
-        "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-a-lesson-4-teacher.pdf",
-        "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-a-lesson-4-teacher.docx",
-        "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
-    },
     "exitTicket": {
         "title": "Lesson 4 Exit Ticket: Analyzing Graphs—Water Usage During a Typical Day",
         "prompt": "Suppose the researchers collecting data for water consumption during a typical school day collected data through the night too. For the period between the time the last person leaves the building for the evening and the time of the arrival of the first person the next morning, how should the graph of water consumption appear? If the researchers also tracked rate of water consumption in gallons per hour, how would that graph look during the unoccupied night hours?",
         "solution": "The graph of cumulative water consumption should appear as a flat horizontal line because no water is being consumed while the building is empty. The rate of water consumption graph should sit on the horizontal axis at 0 gallons per hour."
+    },
+    "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Examine daily cyclical graphs, rate-of-change transitions, and temperature fluctuations.",
+        "problems": [
+            {
+                "number": 1,
+                "prompt": "A temperature graph for La Honda, CA recorded hourly temperatures across August and September. The graph exhibits repeated peaks and valleys.\n\n(a) Explain why the graph alternates regularly between peaks and valleys.\n(b) At approximately what time of day do the peaks typically occur? What about the valleys?",
+                "solution": "(a) The graph alternates between peaks and valleys due to the Earth's diurnal day-night cycle: solar radiation warms the air during daytime hours, and heat radiates back into space at night.\n(b) Peaks typically occur in the mid-to-late afternoon (around 2:00 PM - 4:00 PM) when thermal energy accumulation peaks, and valleys occur just before sunrise (around 5:00 AM - 6:00 AM) after continuous nocturnal cooling."
+            },
+            {
+                "number": 2,
+                "prompt": "If a graph shows the rate of water consumption in gallons per hour, how do you find the total water consumed over an interval where the rate is constant at 150 gal/hr for 4 hours?",
+                "solution": "\\text{Total Volume} = \\text{Rate} \\times \\text{Time} = 150\\text{ gal/hr} \\times 4\\text{ hrs} = 600\\text{ gallons}. On a rate-versus-time graph, this total corresponds to the rectangular area under the curve: 150 \\times 4 = 600."
+            }
+        ]
     }
 }

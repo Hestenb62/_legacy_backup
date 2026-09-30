@@ -71,13 +71,6 @@
         "lessonId": "L-ID-ALG-K-M1-C-5"
     },
     "scripts": "\n        function updateFlipSim() {\n            const k = parseInt(document.getElementById('input-mult-k').value, 10);\n            document.getElementById('badge-mult-k').innerText = 'k = ' + k;\n\n            const a = 2 * k;\n            const b = 5 * k;\n\n            let sym = '<';\n            if (a > b) sym = '>';\n            else if (a === b) sym = '=';\n\n            document.getElementById('scaled-ineq-readout').innerText = `${a} ${sym} ${b}`;\n\n            const box = document.getElementById('flip-alert-box');\n            const msg = document.getElementById('flip-status-msg');\n\n            if (k < 0) {\n                box.style.background = 'rgba(225, 29, 72, 0.15)';\n                box.style.borderColor = '#f43f5e';\n                msg.style.color = '#f43f5e';\n                msg.innerHTML = '<i class=\"fas fa-sync-alt\"></i> REVERSED: Symbol flipped from < to >';\n            } else if (k === 0) {\n                box.style.background = 'rgba(245, 158, 11, 0.15)';\n                box.style.borderColor = '#f59e0b';\n                msg.style.color = '#f59e0b';\n                msg.innerHTML = '<i class=\"fas fa-equals\"></i> EQUAL: Multiplying by 0 gives 0 = 0';\n            } else {\n                box.style.background = 'rgba(16, 185, 129, 0.15)';\n                box.style.borderColor = '#10b981';\n                msg.style.color = '#10b981';\n                msg.innerHTML = '<i class=\"fas fa-arrow-right\"></i> PRESERVED: Direction remained <';\n            }\n        }\n\n        document.addEventListener('DOMContentLoaded', () => {\n            updateFlipSim();\n        });\n        ",
-    "resources": {
-        "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-14-student.pdf",
-        "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-14-student.docx",
-        "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-14-teacher.pdf",
-        "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-14-teacher.docx",
-        "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
-    },
     "exitTicket": {
         "title": "Lesson 14 Exit Ticket: Solving Inequalities into Single Variable Systems",
         "prompt": "Find the solution set to each inequality. Express the solution in set notation and graphically on the number line: (1) 6x - 5 < 7x + 4, (2) x^2 + 3x - 1 >= x^2 + 5. Fergus asks why the inequality direction reverses when multiplying by a negative number; provide an explanation using the addition property.",
@@ -107,5 +100,21 @@
             "finalAnswer": "x > -6 \\quad (\\text{Interval: } (-6, \\infty); \\text{ Open circle at } -6\\text{ with ray right})",
             "commonPitfall": "Reversing the inequality symbol when adding or subtracting negative numbers. The symbol ONLY reverses when MULTIPLYING or DIVIDING by a negative number."
         }
-    ]
+    ],
+    "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Solve linear inequalities and understand the mathematical foundation of reversing inequality signs.",
+        "problems": [
+            {
+                "number": 1,
+                "prompt": "Find the solution set for each inequality and express in set notation:\n(a) 2x < 10\n(b) -15x \\ge -45\n(c) -5(x - 1) \\ge 10\n(d) 13x < 9(1 - x)",
+                "solution": "(a) x < 5 \\implies {x \\text{ real} \\mid x < 5}\n(b) Divide by -15 and reverse sign: x \\le 3 \\implies {x \\text{ real} \\mid x \\le 3}\n(c) -5x + 5 \\ge 10 \\implies -5x \\ge 5 \\implies x \\le -1 \\implies {x \\text{ real} \\mid x \\le -1}\n(d) 13x < 9 - 9x \\implies 22x < 9 \\implies x < 9/22 \\implies {x \\text{ real} \\mid x < 9/22}"
+            },
+            {
+                "number": 2,
+                "prompt": "Prove why multiplying both sides of -2 < 5 by -1 requires reversing the inequality sign to produce a true statement.",
+                "solution": "On a number line, -2 lies to the left of 5. Multiplying by -1 reflects both numbers across 0 to their opposites: -2 becomes +2, and 5 becomes -5. Since +2 lies to the right of -5, the relationship becomes 2 > -5. The direction of relative position reverses under reflection across the origin."
+            }
+        ]
+    }
 }

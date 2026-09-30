@@ -75,13 +75,6 @@
         "lessonId": "L-ID-ALG-K-M1-C-4"
     },
     "scripts": "\n        function showTrap(n) {\n            [1, 2, 3].forEach(i => {\n                const b = document.getElementById('btn-trap-' + i);\n                if (b) b.classList.toggle('active', i === n);\n            });\n\n            const title = document.getElementById('trap-title');\n            const math = document.getElementById('trap-math');\n            const expl = document.getElementById('trap-expl');\n\n            if (n === 1) {\n                title.innerText = 'Danger 1: Multiplying Both Sides by 0';\n                math.innerHTML = 'Start: x = 5 &bull; Multiply by 0: 0 &bull; x = 0 &bull; 5 &rArr; 0 = 0';\n                expl.innerText = 'Multiplying by 0 collapses all information and artificially expands the solution set from {5} to ALL REAL NUMBERS.';\n            } else if (n === 2) {\n                title.innerText = 'Danger 2: Dividing by a Variable Expression';\n                math.innerHTML = 'Start: x² = 3x &bull; Divide by x: x = 3 (Lost x = 0!)';\n                expl.innerText = 'Dividing by x assumes x ≠ 0. If x = 0 was a valid solution (and it is, since 0² = 3(0)), dividing by x destroys that solution!';\n            } else if (n === 3) {\n                title.innerText = 'Danger 3: Squaring Both Sides (Extraneous Roots)';\n                math.innerHTML = 'Start: x = -4 &bull; Square both sides: x² = 16 &rArr; x = ±4';\n                expl.innerText = 'Squaring both sides makes negative numbers positive, creating false positive mirror solutions like x = 4 that did not exist initially.';\n            }\n        }\n        ",
-    "resources": {
-        "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-13-student.pdf",
-        "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-13-student.docx",
-        "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-13-teacher.pdf",
-        "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-13-teacher.docx",
-        "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
-    },
     "exitTicket": {
         "title": "Lesson 13 Exit Ticket: Some Potential Dangers when Solving Equations",
         "prompt": "Solve the equation for x. For each step, describe the operation and/or properties used: 5(2x - 4) - 11 = 4 + 3x. Consider the equation x + 4 = 3x + 2: show that multiplying both sides by (x + 2) introduces an extraneous solution x = -2.",
@@ -123,5 +116,21 @@
             "finalAnswer": "\\text{No Solution (Solution Set: } \\emptyset\\text{)}",
             "commonPitfall": "Blindly accepting algebraic output without checking domain restrictions. Multiplying both sides by an expression that equals zero introduces false solutions."
         }
-    ]
+    ],
+    "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Solve linear equations systematically and guard against extraneous roots when multiplying by variable expressions.",
+        "problems": [
+            {
+                "number": 1,
+                "prompt": "Solve the linear equation for x and justify each step with an algebraic property:\n3(4x - 2) + 5 = 2(x + 7) - 1",
+                "solution": "12x - 6 + 5 = 2x + 14 - 1 [Distributive property]\n12x - 1 = 2x + 13 [Combine like terms]\n10x - 1 = 13 [Subtract 2x from both sides]\n10x = 14 [Add 1 to both sides]\nx = 14/10 = 7/5 = 1.4 [Divide both sides by 10]\nSolution set: {1.4}."
+            },
+            {
+                "number": 2,
+                "prompt": "Consider the equation x - 3 = 5 with unique solution x = 8. If both sides are multiplied by (x - 2), what happens to the solution set? Explain why.",
+                "solution": "Multiplying by (x - 2) yields (x - 2)(x - 3) = 5(x - 2). By the zero product property, (x - 2)(x - 3) - 5(x - 2) = 0 \\implies (x - 2)(x - 8) = 0, giving solutions x = 2 and x = 8. The root x = 2 is an extraneous solution introduced because multiplying by zero (when x = 2) is not a reversible operation."
+            }
+        ]
+    }
 }

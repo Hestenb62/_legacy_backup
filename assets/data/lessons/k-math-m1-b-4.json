@@ -133,16 +133,25 @@
             "commonPitfall": "Assuming $(3x)^2 = 3x^2$. When squaring a monomial with a coefficient, square both the coefficient and the variable: $(3x)^2 = 3^2 x^2 = 9x^2$."
         }
     ],
-    "resources": {
-        "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-b-lesson-9-student.pdf",
-        "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-b-lesson-9-student.docx",
-        "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials.pdf",
-        "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-b-lesson-9-teacher.docx",
-        "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
-    },
     "exitTicket": {
         "title": "Lesson 9 Exit Ticket: Multiplying Polynomials",
         "prompt": "Must the product of three polynomials again be a polynomial? Multiply: (x - 2)(x + 3)(2x - 1).",
         "solution": "Yes. Polynomials are closed under multiplication. Multiplying two polynomials yields a polynomial, and multiplying that result by a third polynomial again yields a polynomial.\nMultiplying: (x - 2)(x + 3) = x^2 + x - 6.\nThen (x^2 + x - 6)(2x - 1) = 2x^3 - x^2 + 2x^2 - x - 12x + 6 = 2x^3 + x^2 - 13x + 6."
+    },
+    "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Expand products of polynomials using tabular grid models and algebraic distribution.",
+        "problems": [
+            {
+                "number": 1,
+                "prompt": "Multiply and write in standard form:\n(a) (2x - 5)(3x + 4)\n(b) (x + 2)(x^2 - 3x + 7)",
+                "solution": "(a) FOIL / Distribute: 2x(3x) + 2x(4) - 5(3x) - 5(4) = 6x^2 + 8x - 15x - 20 = 6x^2 - 7x - 20.\n(b) Distribute x and 2: x(x^2 - 3x + 7) + 2(x^2 - 3x + 7) = (x^3 - 3x^2 + 7x) + (2x^2 - 6x + 14) = x^3 - x^2 + x + 14."
+            },
+            {
+                "number": 2,
+                "prompt": "Explain why the degree of the product of a polynomial of degree m and a polynomial of degree n is always m + n.",
+                "solution": "When multiplying polynomials, the leading term of the product is formed by multiplying the leading terms of each factor: (a x^m)(b x^n) = (ab) x^{m+n}. By the exponent product rule x^m \\cdot x^n = x^{m+n}, the highest power of the variable in the resulting polynomial is strictly m + n."
+            }
+        ]
     }
 }

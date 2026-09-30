@@ -181,68 +181,58 @@ include_once ABSPATH . 'src/partials/sticky-reading-bar.php';
             </div>
         </section>
 
-        <!-- Official Curriculum Worksheets & Downloads Panel -->
-        <?php if (!empty($lesson['resources']) && is_array($lesson['resources'])): ?>
-        <section class="lesson-resources-section" aria-labelledby="resources-heading">
-            <div class="lesson-resources-header">
-                <h3 id="resources-heading" class="lesson-resources-title">
-                    <i class="fas fa-file-invoice" aria-hidden="true"></i> Official Curriculum Worksheets &amp; Printables
-                </h3>
-                <span class="lesson-resources-tag">Eureka Math / EngageNY Aligned</span>
+        <!-- Official Curriculum Worksheet: Problem Set & Practice Exercises -->
+        <?php if (!empty($lesson['problemSet']) && !empty($lesson['problemSet']['problems'])): ?>
+        <section class="lesson-problem-set-section" id="problem-set" aria-labelledby="problem-set-heading">
+            <div class="lesson-problem-set-header">
+                <div>
+                    <span class="lesson-problem-set-badge">
+                        <i class="fas fa-file-signature" aria-hidden="true"></i> Official Curriculum Worksheet
+                    </span>
+                    <h3 id="problem-set-heading" class="lesson-problem-set-title">
+                        <?php echo htmlspecialchars($lesson['problemSet']['title'] ?? 'Problem Set & Practice Exercises'); ?>
+                    </h3>
+                    <p class="lesson-problem-set-desc">
+                        <?php echo htmlspecialchars($lesson['problemSet']['description'] ?? 'Work through these curriculum problems to master the lesson standards. Check your work using the expandable teacher solution keys.'); ?>
+                    </p>
+                </div>
+                <div class="lesson-problem-set-actions">
+                    <button type="button" onclick="window.print()" class="lesson-btn-print-worksheet" aria-label="Print this problem set worksheet">
+                        <i class="fas fa-print" aria-hidden="true"></i> Print Worksheet
+                    </button>
+                </div>
             </div>
-            <div class="lesson-resources-grid">
-                <!-- Student Worksheet Card -->
-                <div class="lesson-resource-card">
-                    <div class="lesson-resource-info">
-                        <div class="lesson-resource-icon-wrap student" aria-hidden="true">
-                            <i class="fas fa-file-alt"></i>
-                        </div>
-                        <div class="lesson-resource-text">
-                            <h4>Student Classwork &amp; Problem Set</h4>
-                            <p>Complete student materials including exploratory prompts, classwork exercises, and problem sets.</p>
-                        </div>
-                    </div>
-                    <div class="lesson-resource-actions">
-                        <?php if (!empty($lesson['resources']['studentPdf'])): ?>
-                            <a href="<?php echo htmlspecialchars($lesson['resources']['studentPdf']); ?>" target="_blank" rel="noopener noreferrer" class="lesson-resource-btn pdf" aria-label="Open Student Worksheet PDF">
-                                <i class="fas fa-file-pdf" aria-hidden="true"></i> Open PDF
-                            </a>
-                        <?php endif; ?>
-                        <?php if (!empty($lesson['resources']['studentDocx'])): ?>
-                            <a href="<?php echo htmlspecialchars($lesson['resources']['studentDocx']); ?>" download class="lesson-resource-btn docx" aria-label="Download Student Worksheet in Word format">
-                                <i class="fas fa-file-word" aria-hidden="true"></i> Word (.docx)
-                            </a>
-                        <?php endif; ?>
-                        <button type="button" onclick="window.print()" class="lesson-resource-btn print" aria-label="Print this lesson worksheet">
-                            <i class="fas fa-print" aria-hidden="true"></i> Print
-                        </button>
-                    </div>
-                </div>
 
-                <!-- Teacher Edition & Key Card -->
-                <div class="lesson-resource-card teacher">
-                    <div class="lesson-resource-info">
-                        <div class="lesson-resource-icon-wrap teacher" aria-hidden="true">
-                            <i class="fas fa-chalkboard-teacher"></i>
+            <div class="lesson-problem-set-list">
+                <?php foreach ($lesson['problemSet']['problems'] as $idx => $prob): ?>
+                    <div class="lesson-problem-card">
+                        <div class="lesson-problem-card-header">
+                            <span class="lesson-problem-badge">Problem <?php echo htmlspecialchars($prob['number'] ?? ($idx + 1)); ?></span>
                         </div>
-                        <div class="lesson-resource-text">
-                            <h4>Teacher Edition &amp; Solutions Key</h4>
-                            <p>Full lesson plan, pedagogical scaffolding notes, exit ticket keys, and problem set sample solutions.</p>
+                        <div class="lesson-problem-prompt">
+                            <?php echo nl2br(htmlspecialchars($prob['prompt'] ?? '')); ?>
                         </div>
-                    </div>
-                    <div class="lesson-resource-actions">
-                        <?php if (!empty($lesson['resources']['teacherPdf'])): ?>
-                            <a href="<?php echo htmlspecialchars($lesson['resources']['teacherPdf']); ?>" target="_blank" rel="noopener noreferrer" class="lesson-resource-btn pdf" aria-label="Open Teacher Guide PDF">
-                                <i class="fas fa-file-pdf" aria-hidden="true"></i> Teacher PDF
-                            </a>
+                        <?php if (!empty($prob['solution'])): ?>
+                            <details class="lesson-solution-accordion" ontoggle="if(this.open && typeof window.ensureMathJax==='function') window.ensureMathJax(this);">
+                                <summary>
+                                    <span style="display: inline-flex; align-items: center; gap: 0.5rem;">
+                                        <i class="fas fa-key" aria-hidden="true"></i>
+                                        <span>Show Teacher Solution &amp; Answer Key</span>
+                                    </span>
+                                    <span class="lesson-accordion-badge">Teacher Key</span>
+                                </summary>
+                                <div class="lesson-problem-solution-content">
+                                    <div class="lesson-solution-callout">
+                                        <h5 class="lesson-solution-title"><i class="fas fa-check-circle" aria-hidden="true"></i> Step-by-Step Worked Key</h5>
+                                        <div class="lesson-solution-text">
+                                            <?php echo nl2br(htmlspecialchars($prob['solution'] ?? '')); ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </details>
                         <?php endif; ?>
-                        <?php if (!empty($lesson['resources']['teacherDocx'])): ?>
-                            <a href="<?php echo htmlspecialchars($lesson['resources']['teacherDocx']); ?>" download class="lesson-resource-btn docx" aria-label="Download Teacher Guide in Word format">
-                                <i class="fas fa-file-word" aria-hidden="true"></i> Teacher DOCX
-                            </a>
-                        <?php endif; ?>
                     </div>
-                </div>
+                <?php endforeach; ?>
             </div>
         </section>
         <?php endif; ?>

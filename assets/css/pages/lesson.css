@@ -2030,5 +2030,161 @@ main.container {
     border-color: var(--color-primary);
 }
 
+/* ==========================================================================
+   OFFICIAL EMBEDDED WORKSHEET: PROBLEM SET & PRACTICE
+   ========================================================================== */
+
+.lesson-problem-set-section {
+    margin: 2.75rem 0 2rem 0;
+    padding: 2rem 2.25rem;
+    background: color-mix(in srgb, var(--color-surface) 95%, var(--color-primary) 5%);
+    border: 1.5px solid color-mix(in srgb, var(--color-primary, #e11d48) 22%, transparent);
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.lesson-problem-set-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid color-mix(in srgb, var(--color-primary, #e11d48) 15%, transparent);
+}
+
+.lesson-problem-set-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-primary);
+    background: color-mix(in srgb, var(--color-primary) 12%, transparent);
+    padding: 0.3rem 0.75rem;
+    border-radius: 9999px;
+    margin-bottom: 0.5rem;
+}
+
+.lesson-problem-set-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--color-text-default);
+    margin: 0 0 0.4rem 0;
+    letter-spacing: -0.01em;
+}
+
+.lesson-problem-set-desc {
+    font-size: 0.95rem;
+    color: var(--color-text-secondary);
+    margin: 0;
+    max-width: 750px;
+    line-height: 1.6;
+}
+
+.lesson-btn-print-worksheet {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.75rem 1.35rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 800;
+    background: var(--color-surface);
+    color: var(--color-primary);
+    border: 1.5px solid var(--color-primary);
+    cursor: pointer;
+    box-shadow: 0 2px 8px color-mix(in srgb, var(--color-primary) 15%, transparent);
+    transition: all 0.2s ease;
+}
+
+.lesson-btn-print-worksheet:hover,
+.lesson-btn-print-worksheet:focus-visible {
+    background: var(--color-primary);
+    color: #ffffff;
+    box-shadow: 0 4px 14px color-mix(in srgb, var(--color-primary) 30%, transparent);
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+.lesson-problem-set-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.lesson-problem-card {
+    background: var(--color-surface);
+    border: 1px solid color-mix(in srgb, var(--color-text-default) 10%, transparent);
+    border-radius: 1.15rem;
+    padding: 1.5rem 1.75rem;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.lesson-problem-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    border-color: color-mix(in srgb, var(--color-primary) 30%, transparent);
+}
+
+.lesson-problem-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.85rem;
+}
+
+.lesson-problem-badge {
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-primary);
+    background: color-mix(in srgb, var(--color-primary) 10%, transparent);
+    padding: 0.25rem 0.65rem;
+    border-radius: 6px;
+}
+
+.lesson-problem-prompt {
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--color-text-default);
+    margin-bottom: 1.25rem;
+}
+
+.lesson-problem-solution-content {
+    margin-top: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: color-mix(in srgb, #16a34a 6%, var(--color-surface));
+    border: 1px solid color-mix(in srgb, #16a34a 25%, transparent);
+    border-left: 4px solid #16a34a;
+    border-radius: 0.85rem;
+}
+
+@media print {
+    .lesson-resources-section,
+    .lesson-btn-print-worksheet,
+    .lesson-runner-dock,
+    .site-header,
+    .site-footer,
+    .lesson-top-bar {
+        display: none !important;
+    }
+    .lesson-problem-set-section {
+        background: none !important;
+        border: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    .lesson-problem-card {
+        border: 1px solid #ccc !important;
+        page-break-inside: avoid;
+        margin-bottom: 1.5rem;
+    }
+}
+
 
 

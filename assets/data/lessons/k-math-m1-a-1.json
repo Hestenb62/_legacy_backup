@@ -177,16 +177,30 @@
             "commonPitfall": "Beware of overlapping endpoints or resetting the time clock to zero at each phase. Time is cumulative along the horizontal axis."
         }
     ],
-    "resources": {
-        "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-a-lesson-1-student.pdf",
-        "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-a-lesson-1-student.docx",
-        "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-a-lesson-1-teacher.pdf",
-        "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-a-lesson-1-teacher.docx",
-        "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
-    },
     "exitTicket": {
         "title": "Lesson 1 Exit Ticket: Graphs of Piecewise Linear Functions",
         "prompt": "The graph in the Exploratory Challenge is made by combining pieces of nine linear functions (it is a piecewise linear function). Each linear function is defined over an interval of time, represented on the horizontal axis. List those nine time intervals.",
         "solution": "Between 0 and 3 sec.; between 3 and 5.5 sec.; between 5.5 and 7 sec.; between 7 and 8.5 sec.; between 8.5 and 9 sec.; between 9 and 11 sec.; between 11 and 12.7 sec.; between 12.7 and 13 sec.; and 13 sec. onward."
+    },
+    "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Analyze piecewise linear graphs of physical situations. Work through these exercises to master rates of change and coordinate interpretation. Expand the teacher key for step-by-step solutions.",
+        "problems": [
+            {
+                "number": 1,
+                "prompt": "Watch the video story 'Elevation vs. Time #3' of a man descending a 10 ft ladder. At time 0 sec, his shoes are at 10 ft above the floor, and at 6 sec, his shoes are at 3 ft. From 6 to 8.5 sec, he pauses on the 3 ft step to drink water. He then takes 1.5 sec to descend to the ground, and walks into the kitchen. The video ends at 15 sec.\n\n(a) List the distinct time intervals for this piecewise linear function.\n(b) What does a horizontal line segment represent in this graphing story?\n(c) What is his average rate of descent between time 0 sec and time 6 sec?",
+                "solution": "(a) The four time intervals are [0, 6], (6, 8.5], (8.5, 10], and (10, 15] seconds.\n(b) A horizontal line segment represents a period of time when his elevation does not change (rate of change = 0 ft/sec), meaning he is standing still on the ladder drinking water.\n(c) Average rate of descent: \\frac{\\Delta h}{\\Delta t} = \\frac{3 - 10}{6 - 0} = \\frac{-7}{6} \\approx -1.17\\text{ ft/sec} (or a descent speed of 1.17 ft/sec)."
+            },
+            {
+                "number": 2,
+                "prompt": "If you measured elevation from the top of the man's head instead of his shoes (assume he is 6.2 ft tall), how would the elevation-versus-time graph change?",
+                "solution": "The entire piecewise graph would undergo a rigid vertical shift upward by 6.2 ft. The slopes (rates of change) over every interval would remain identical because \\frac{\\Delta (h + 6.2)}{\\Delta t} = \\frac{\\Delta h}{\\Delta t}."
+            },
+            {
+                "number": 3,
+                "prompt": "Over which interval does he descend faster: between 0 and 6 sec, or between 8.5 and 10 sec? Explain how your graph reveals this.",
+                "solution": "From 0 to 6 sec, his descent rate is \\frac{7}{6} \\approx 1.17\\text{ ft/sec}. From 8.5 to 10 sec (a duration of 1.5 sec), he descends from 3 ft to 0 ft: \\frac{3}{1.5} = 2.0\\text{ ft/sec}. He descends faster between 8.5 and 10 sec. On the graph, this is shown by a steeper downward slope."
+            }
+        ]
     }
 }

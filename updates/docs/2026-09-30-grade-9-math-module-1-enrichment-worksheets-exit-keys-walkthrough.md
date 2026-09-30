@@ -20,16 +20,17 @@ Following user direction, all 28 lessons in the Grade 9 (Level K) Algebra I Modu
 
 ## 1. What Was Changed & Implemented
 
-### A. Official Curriculum Worksheets & Printables Panel
-- **Student Classwork & Problem Set Card:**
-  - **Open PDF:** Links directly to the authentic Eureka Math Student Material PDF (`/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-{topic}-lesson-{num}-student.pdf`).
-  - **Word (`.docx`):** Downloadable editable DOCX file for classroom differentiation or offline customization.
-  - **Print Button:** 1-click native print button triggering browser print styles configured specifically for clean worksheets.
-- **Teacher Edition & Solutions Key Card:**
-  - **Teacher PDF:** Direct link to the official Teacher Edition PDF (including full module teacher fallback for Lesson 9).
-  - **Teacher DOCX:** Downloadable editable Word version of the teacher lesson guide and problem set solutions.
-  - Made visible to teachers, parents, and students alike with distinct styling and icon badges.
-- **Data Architecture:** Populated `resources` object across all 28 individual JSON files in `assets/data/lessons/` and synchronized with `assets/data/lessons.json`.
+### A. Official Embedded Worksheets & Problem Sets (Zero File Downloads)
+- **Removal of File Download Links:**
+  - In direct alignment with user guidance, all external file download links (PDF and DOCX download buttons) were removed from the lesson templates and data structures.
+  - The legacy file download panel was completely replaced with an on-page embedded **Official Curriculum Worksheet: Problem Set & Practice** section.
+- **On-Page Problem Set Exercises:**
+  - Directly extracted and structured the authentic Eureka Math / EngageNY Problem Set exercises into `problemSet` across all 28 lessons.
+  - Students can read and work through the exercises directly inside the web interface without saving or opening external files.
+- **Expandable Teacher Solution Keys:**
+  - Each Problem Set problem includes an expandable `<details>` disclosure accordion revealing the full step-by-step teacher sample solution and mathematical justification.
+- **1-Click Clean Printing:**
+  - Includes a dedicated `Print Worksheet` button that triggers print styles designed specifically for printing out a clean problem set worksheet without header/footer or runner dock clutter.
 
 ### B. Verbatim Exit Ticket Keys & Check Understanding
 - **Extraction & High-Fidelity Conversion:**

@@ -71,13 +71,6 @@
         "lessonId": "L-ID-ALG-K-M1-C-11"
     },
     "scripts": "\n        function updateLine2DSim() {\n            const x = parseInt(document.getElementById('input-coord-x').value, 10);\n            const y = parseInt(document.getElementById('input-coord-y').value, 10);\n\n            document.getElementById('badge-coord-x').innerText = 'x = ' + x;\n            document.getElementById('badge-coord-y').innerText = 'y = ' + y;\n\n            const sum = 2 * x + y;\n            document.getElementById('eval-val-2d').innerText = sum;\n            document.getElementById('eval-calc-2d').innerText = `2(${x}) + (${y}) = ${sum}`;\n\n            const box = document.getElementById('solution-2d-box');\n            const title = document.getElementById('sol-2d-title');\n            const desc = document.getElementById('sol-2d-desc');\n\n            if (sum === 6) {\n                box.style.background = 'rgba(16, 185, 129, 0.15)';\n                box.style.borderColor = '#10b981';\n                title.style.color = '#10b981';\n                title.innerHTML = '<i class=\"fas fa-check-circle\"></i> ON THE LINE!';\n                desc.innerText = `(${x}, ${y}) satisfies 2x + y = 6. It is an ordered pair solution!`;\n            } else {\n                box.style.background = 'rgba(225, 29, 72, 0.15)';\n                box.style.borderColor = '#f43f5e';\n                title.style.color = '#f43f5e';\n                title.innerHTML = '<i class=\"fas fa-times-circle\"></i> NOT ON THE LINE';\n                desc.innerText = `2(${x}) + (${y}) = ${sum} ≠ 6. Point does not satisfy equation.`;\n            }\n        }\n\n        document.addEventListener('DOMContentLoaded', () => {\n            updateLine2DSim();\n        });\n        ",
-    "resources": {
-        "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-20-student.pdf",
-        "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-20-student.docx",
-        "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-20-teacher.pdf",
-        "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-20-teacher.docx",
-        "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
-    },
     "exitTicket": {
         "title": "Lesson 20 Exit Ticket: Solution Sets to Equations with Two Variables",
         "prompt": "The Math Club sells hot dogs at a school fundraiser. The club earns $108.00 and has a combination of five-dollar and one-dollar bills in its cash box. Write an equation and identify valid whole-number combinations of ones and fives that total $108.00.",
@@ -113,5 +106,21 @@
             "finalAnswer": "\\text{Solutions: } (0, -2), (3, 0), (6, 2); \\quad \\text{Non-solution: } (1, 1). \\quad \\text{The graph is the line through these points.}",
             "commonPitfall": "Thinking a solution to a two-variable equation is just $x=3$ or $y=-2$. A solution is always an ordered pair $(x, y)$."
         }
-    ]
+    ],
+    "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Find and verify coordinate solution pairs for two-variable linear equations Ax + By = C.",
+        "problems": [
+            {
+                "number": 1,
+                "prompt": "Consider the linear equation 2x + y = 4.\n(a) Determine whether the following coordinate pairs are solutions: (0, 4), (2, 0), (3, -2), (1, 1).\n(b) Convert the equation to slope-intercept form and state its slope and y-intercept.",
+                "solution": "(a) Testing points:\n- (0, 4): 2(0) + 4 = 4 (YES)\n- (2, 0): 2(2) + 0 = 4 (YES)\n- (3, -2): 2(3) + (-2) = 6 - 2 = 4 (YES)\n- (1, 1): 2(1) + 1 = 3 \\ne 4 (NO)\n(b) Subtract 2x: y = -2x + 4. Slope m = -2, y-intercept (0, 4)."
+            },
+            {
+                "number": 2,
+                "prompt": "A student says that the equation x + y = 10 has exactly 11 solutions. Critique this claim.",
+                "solution": "The claim is incorrect if real numbers are considered. While there are 11 non-negative integer solutions (0 to 10), over the real numbers there are infinitely many solutions (e.g. (1.5, 8.5), (-100, 110)), which form a continuous straight line in the coordinate plane."
+            }
+        ]
+    }
 }

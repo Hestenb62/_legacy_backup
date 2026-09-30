@@ -129,16 +129,25 @@
             "commonPitfall": "Forgetting units of dimension. Linear measurements (perimeter, side length) scale as $k^1$, two-dimensional measurements (area) scale as $k^2$, and three-dimensional measurements (volume) scale as $k^3$."
         }
     ],
-    "resources": {
-        "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-a-lesson-2-student.pdf",
-        "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-a-lesson-2-student.docx",
-        "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-a-lesson-2-teacher.pdf",
-        "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-a-lesson-2-teacher.docx",
-        "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
-    },
     "exitTicket": {
         "title": "Lesson 2 Exit Ticket: Graphs of Quadratic Functions",
         "prompt": "If you jumped in the air three times, what might the elevation versus time graph of that story look like? Label the axes appropriately.",
         "solution": "Student answers will vary. A typical response: The graph shows three distinct curved parabolic arcs rising from elevation 0, peaking at approximately 1 ft, and returning to 0 every other second (e.g. at t = 1, 3, and 5 seconds). Gravitational deceleration on ascent and acceleration on descent create quadratic curves rather than straight lines."
+    },
+    "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice analyzing quadratic curves and non-linear elevation stories resulting from acceleration and gravity.",
+        "problems": [
+            {
+                "number": 1,
+                "prompt": "Here is an elevation-versus-time graph of a ball rolling down a curved ramp. The first section from 0 to 1.7 sec is curved downward. From 1.7 sec onward, the graph is a flat horizontal line at elevation 0 in.\n\n(a) If Ken puts his foot on the ball at time 2 sec to stop it from rolling, how will the elevation-versus-time graph change?\n(b) Estimate the change in elevation between 0 and 0.5 sec, and between 1.0 and 1.5 sec. Where is the ball moving fastest?",
+                "solution": "(a) Even when the ball is stopped by Ken's foot, its elevation remains 0 in. and does not change. Therefore, the elevation-versus-time graph does not change at all.\n(b) Between 0 and 0.5 sec, the ball drops about 2 in. Between 1.0 and 1.5 sec, the ball drops about 5.5 in. The ball is moving fastest near the bottom of the ramp because the steeper slope reflects a greater rate of descent per unit time."
+            },
+            {
+                "number": 2,
+                "prompt": "A man hops up and down five medium hops and then two large hops. Describe the shape of the elevation-versus-time curve for each hop, and explain why the curve is not a straight V-shape.",
+                "solution": "Each hop forms a smooth parabolic curve opening downward. Because gravity exerts a constant downward acceleration (-32 ft/sec^2), the upward velocity continuously decreases to zero at the peak and increases downward on the descent, creating a quadratic curve h(t) = -16t^2 + v_0 t rather than linear segments with instantaneous direction changes."
+            }
+        ]
     }
 }

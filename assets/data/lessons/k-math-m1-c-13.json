@@ -75,13 +75,6 @@
         "lessonId": "L-ID-ALG-K-M1-C-13"
     },
     "scripts": "",
-    "resources": {
-        "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-22-student.pdf",
-        "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-22-student.docx",
-        "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-22-teacher.pdf",
-        "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-22-teacher.docx",
-        "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
-    },
     "exitTicket": {
         "title": "Lesson 22 Exit Ticket: Solution Sets to Simultaneous Equations",
         "prompt": "Estimate the solution to the system of equations from the graph shown (lines intersect in quadrant I near (5.2, 0.9)). Write the two equations: line 1 passes through (0, 6) and (6, 0); line 2 has y-intercept (0, -3) and slope 3/4. Find the exact solution algebraically.",
@@ -117,5 +110,21 @@
             "finalAnswer": "(x, y) = (4, 7) \\quad (\\text{Solution Set: } \\{(4, 7)\\})",
             "commonPitfall": "Substituting the expression back into the SAME equation it was isolated from, which results in a circular identity $0 = 0$ without finding the variable value."
         }
-    ]
+    ],
+    "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Estimate and calculate simultaneous solutions to systems of two linear equations.",
+        "problems": [
+            {
+                "number": 1,
+                "prompt": "Solve the system of equations by graphing and verify algebraically:\nEquation 1: 4x + y = -5\nEquation 2: x + 4y = 12",
+                "solution": "Express in slope-intercept form:\nEq 1: y = -4x - 5\nEq 2: y = -\\frac{1}{4}x + 3\nEquate: -4x - 5 = -\\frac{1}{4}x + 3 \\implies -8 = \\frac{15}{4}x \\implies x = -\\frac{32}{15} \\approx -2.133.\nSubstitute into Eq 1: y = -4(-32/15) - 5 = 128/15 - 75/15 = 53/15 \\approx 3.533.\nExact intersection point: (-32/15, 53/15)."
+            },
+            {
+                "number": 2,
+                "prompt": "What does it mean geometrically when a system of two linear equations has no solution? What about infinitely many solutions?",
+                "solution": "No solution means the two lines are parallel and distinct (identical slopes, different y-intercepts), so they never intersect. Infinitely many solutions means the two equations represent the exact same line (identical slopes and identical y-intercepts), intersecting at every point along the line."
+            }
+        ]
+    }
 }

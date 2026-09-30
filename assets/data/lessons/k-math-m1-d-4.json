@@ -75,13 +75,6 @@
         "lessonId": "L-ID-ALG-K-M1-D-4"
     },
     "scripts": "\n        function updateTaxSim() {\n            const inc = parseInt(document.getElementById('input-tax-inc').value, 10);\n            document.getElementById('badge-tax-inc').innerText = '$' + inc.toLocaleString();\n\n            const b1Cap = 9075;\n            const b2Cap = 36900;\n\n            let b1Tax = 0;\n            let b2Tax = 0;\n            let b3Tax = 0;\n\n            if (inc <= b1Cap) {\n                b1Tax = inc * 0.10;\n            } else if (inc <= b2Cap) {\n                b1Tax = b1Cap * 0.10;\n                b2Tax = (inc - b1Cap) * 0.15;\n            } else {\n                b1Tax = b1Cap * 0.10;\n                b2Tax = (b2Cap - b1Cap) * 0.15;\n                b3Tax = (inc - b2Cap) * 0.25;\n            }\n\n            const totalTax = b1Tax + b2Tax + b3Tax;\n            const effRate = inc > 0 ? ((totalTax / inc) * 100).toFixed(1) : 0;\n\n            document.getElementById('tax-owed-val').innerText = '$' + Math.round(totalTax).toLocaleString();\n            document.getElementById('tax-rate-val').innerText = effRate + '%';\n\n            document.getElementById('bracket-1-line').innerText = `• 10% on first $9,075: $${Math.round(b1Tax).toLocaleString()}`;\n            document.getElementById('bracket-2-line').innerText = `• 15% on $9,075 - $36,900: $${Math.round(b2Tax).toLocaleString()}`;\n            document.getElementById('bracket-3-line').innerText = `• 25% on amount over $36,900: $${Math.round(b3Tax).toLocaleString()}`;\n        }\n\n        function setTaxIncome(val) {\n            document.getElementById('input-tax-inc').value = val;\n            updateTaxSim();\n        }\n\n        document.addEventListener('DOMContentLoaded', () => {\n            updateTaxSim();\n        });\n        ",
-    "resources": {
-        "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-d-lesson-28-student.pdf",
-        "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-d-lesson-28-student.docx",
-        "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-d-lesson-28-teacher.pdf",
-        "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-d-lesson-28-teacher.docx",
-        "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
-    },
     "exitTicket": {
         "title": "Lesson 28 Exit Ticket: Federal Income Tax",
         "prompt": "A famous movie actress made $10 million last year. She is married with no children, and her husband earns no income. Compute her taxable income using: (taxable income) = (income) - (exemptions) - (standard deductions), with $7,800 exemptions and $12,200 deductions. Calculate her federal income tax using the 39.6% top bracket over $450,000, and find her effective tax rate.",
@@ -123,5 +116,21 @@
             "finalAnswer": "\\text{Total Tax: } \\$9,250; \\quad \\text{Effective Rate: } 16.82\\% \\quad (\\text{Marginal Rate: } 25\\%)",
             "commonPitfall": "The widespread misconception that earning $\\$55,000$ causes your entire salary to be taxed at 25% ($0.25 \\times 55,000 = \\$13,750$). Marginal tax rates only apply to the dollars inside that specific bracket!"
         }
-    ]
+    ],
+    "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Calculate personal taxable income, apply marginal tax bracket formulas, and compute effective tax rates.",
+        "problems": [
+            {
+                "number": 1,
+                "prompt": "A married couple filing jointly has a combined gross income of $75,000 with standard deductions of $12,200 and two personal exemptions totaling $7,800.\n(a) Calculate their taxable income.\n(b) If the tax on the first $18,150 is 10% and income between $18,150 and $73,800 is taxed at 15%, calculate their total federal income tax.\n(c) Compute their effective tax rate.",
+                "solution": "(a) Taxable Income = $75,000 - ($12,200 + $7,800) = $75,000 - $20,000 = $55,000.\n(b) Bracket 1 (10% of $18,150): $1,815.00.\nBracket 2 (15% of excess: $55,000 - $18,150 = $36,850): 0.15 \\times $36,850 = $5,527.50.\nTotal Federal Tax = $1,815.00 + $5,527.50 = $7,342.50.\n(c) Effective Tax Rate = \\frac{7,342.50}{75,000} \\times 100\\% \\approx 9.79\\%."
+            },
+            {
+                "number": 2,
+                "prompt": "Explain the difference between a taxpayer's marginal tax rate and their effective tax rate.",
+                "solution": "The marginal tax rate is the percentage of tax applied to the very last dollar earned (the highest tax bracket reached by the taxpayer's taxable income). The effective tax rate is the total tax paid divided by total gross income, representing the average percentage paid across all graduated brackets. The effective rate is always lower than the marginal rate in progressive tax systems."
+            }
+        ]
+    }
 }

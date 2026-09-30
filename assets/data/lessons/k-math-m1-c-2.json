@@ -79,13 +79,6 @@
         "lessonId": "L-ID-ALG-K-M1-C-2"
     },
     "scripts": "\n        let currentOp = 'gt';\n\n        function setOp(op) {\n            currentOp = op;\n            ['gt', 'gte', 'lt', 'lte'].forEach(o => {\n                const btn = document.getElementById('op-' + o);\n                if (btn) btn.classList.toggle('active', o === op);\n            });\n            updateLineSim();\n        }\n\n        function updateLineSim() {\n            const c = parseInt(document.getElementById('input-bound-c').value, 10);\n            document.getElementById('badge-bound-c').innerText = c;\n\n            // Coordinate mapping: 0 is at x=170, step is 30px per unit\n            const cx = 170 + c * 30;\n\n            const circle = document.getElementById('bound-circle');\n            const ray = document.getElementById('ray-line');\n            const pill = document.getElementById('line-readout-pill');\n\n            circle.setAttribute('cx', cx);\n\n            let rayX2 = 330;\n            if (currentOp === 'lt' || currentOp === 'lte') {\n                ray.setAttribute('x1', 15);\n                ray.setAttribute('x2', cx);\n            } else {\n                ray.setAttribute('x1', cx);\n                ray.setAttribute('x2', 330);\n            }\n\n            // Fill circle\n            const isInclusive = (currentOp === 'gte' || currentOp === 'lte');\n            circle.setAttribute('fill', isInclusive ? '#e11d48' : '#1e293b');\n\n            const opSymbols = { 'gt': '>', 'gte': '≥', 'lt': '<', 'lte': '≤' };\n            const dotType = isInclusive ? 'solid closed dot' : 'hollow open circle';\n            const dir = (currentOp === 'gt' || currentOp === 'gte') ? 'right' : 'left';\n\n            pill.innerHTML = `<i class=\"fas fa-info-circle\" style=\"color:#60a5fa;\"></i> Solution Set: $\\{x \\in \\mathbb{R} \\mid x ${opSymbols[currentOp]} ${c}\\}$ (${dotType} at ${c}, ray pointing ${dir})`;\n\n            if (window.MathJax && window.MathJax.typesetPromise) {\n                window.MathJax.typesetPromise([pill]);\n            }\n        }\n\n        document.addEventListener('DOMContentLoaded', () => {\n            updateLineSim();\n        });\n        ",
-    "resources": {
-        "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-11-student.pdf",
-        "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-11-student.docx",
-        "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-11-teacher.pdf",
-        "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-11-teacher.docx",
-        "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
-    },
     "exitTicket": {
         "title": "Lesson 11 Exit Ticket: Solution Sets for Equations and Inequalities",
         "prompt": "Here is the graphical representation of a set of real numbers: A solid ray extending to the left from 2 on the number line. Describe this set in words, set notation, and write an inequality that has this solution set. Indicate whether 3x + 1 = 3x + 1 and x + 2 = 2 + x have a solution set of all real numbers.",
@@ -121,5 +114,21 @@
             "finalAnswer": "x \\le 5; \\quad \\{x \\in \\mathbb{R} \\mid x \\le 5\\}; \\quad (-\\infty, 5] \\quad \\text{(Closed circle at 5, arrow extending left)}",
             "commonPitfall": "Using an open circle at $5$. Remember: $\\le$ and $\\ge$ include the boundary point and require a solid filled circle and square bracket '[' or ']'. $<$ and $>$ exclude the boundary and require an open circle and parenthesis '(' or ')'."
         }
-    ]
+    ],
+    "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Express solution sets of inequalities using words, formal set notation, and number-line graphs.",
+        "problems": [
+            {
+                "number": 1,
+                "prompt": "For each solution set graphed below, describe the set in words, write it in formal set notation, and provide an inequality:\n(a) Open circle at -4, shaded to the right.\n(b) Solid circle at 7, shaded to the left.",
+                "solution": "(a) Words: All real numbers strictly greater than -4. Set notation: {x \\text{ real} \\mid x > -4}. Inequality: x > -4.\n(b) Words: All real numbers less than or equal to 7. Set notation: {x \\text{ real} \\mid x \\le 7}. Inequality: x \\le 7."
+            },
+            {
+                "number": 2,
+                "prompt": "Explain the difference in meaning between an open circle and a closed circle on a number line graph.",
+                "solution": "An open circle indicates a strict boundary value that is excluded from the solution set (< or >), whereas a closed (solid) circle indicates that the boundary endpoint itself satisfies the inequality and is included (\\le or \\ge)."
+            }
+        ]
+    }
 }

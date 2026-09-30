@@ -75,13 +75,6 @@
         "lessonId": "L-ID-ALG-K-M1-C-3"
     },
     "scripts": "\n        let scaleStep = 0;\n\n        function applyScaleOp(op) {\n            const eq = document.getElementById('scale-eq-display');\n            const exp = document.getElementById('scale-step-explanation');\n            const pl = document.getElementById('pan-left-val');\n            const pr = document.getElementById('pan-right-val');\n            const pill = document.getElementById('scale-pill');\n\n            if (op === 'sub6') {\n                scaleStep = 1;\n                eq.innerText = '2x = 10';\n                exp.innerText = 'Subtraction Property of Equality: Subtracted 6 from both pans. The equation simplified to 2x = 10.';\n                pl.innerText = '2x';\n                pr.innerText = '10';\n                pill.innerHTML = '<i class=\"fas fa-check\" style=\"color:#10b981;\"></i> Step 1 Complete: 2x = 10';\n            } else if (op === 'div2') {\n                if (scaleStep === 0) applyScaleOp('sub6');\n                scaleStep = 2;\n                eq.innerText = 'x = 5';\n                exp.innerText = 'Multiplication Property of Equality: Multiplied both sides by 1/2 (divided by 2). Variable isolated: x = 5.';\n                pl.innerText = 'x';\n                pr.innerText = '5';\n                pill.innerHTML = '<i class=\"fas fa-star\" style=\"color:#f59e0b;\"></i> Solved! Solution Set: {5}';\n            }\n        }\n\n        function resetScale() {\n            scaleStep = 0;\n            document.getElementById('scale-eq-display').innerText = '2x + 6 = 16';\n            document.getElementById('scale-step-explanation').innerText = 'Initial state: The left pan holds 2x + 6 and the right pan holds 16.';\n            document.getElementById('pan-left-val').innerText = '2x + 6';\n            document.getElementById('pan-right-val').innerText = '16';\n            document.getElementById('scale-pill').innerHTML = '<i class=\"fas fa-balance-scale\" style=\"color:#10b981;\"></i> Balanced: Both sides are equivalent';\n        }\n        ",
-    "resources": {
-        "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-12-student.pdf",
-        "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-12-student.docx",
-        "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-12-teacher.pdf",
-        "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-12-teacher.docx",
-        "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
-    },
     "exitTicket": {
         "title": "Lesson 12 Exit Ticket: Solving Equations",
         "prompt": "Determine which of the following equations have the same solution set by recognizing properties rather than solving: (a) 2x + 3 = 13, (b) 2x = 10, (c) 3x - 1 = 8, (d) x + 1.5 = 6.5, (e) 3x = 9, (f) 4x + 6 = 26, (g) x = 3, (h) 6x - 2 = 16.",
@@ -123,5 +116,21 @@
             "finalAnswer": "x = 5 \\quad (\\text{Solution Set: } \\{5\\})",
             "commonPitfall": "Casual phrases like 'cross-multiplied' or 'moved over the equal sign' disguise the deductive logic. In algebra, every legitimate step is an operation applied equally to both sides of the relation."
         }
-    ]
+    ],
+    "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Identify equivalent equations by inspecting properties of equality without calculating full solutions.",
+        "problems": [
+            {
+                "number": 1,
+                "prompt": "Determine which of the following equations have the same solution set by recognizing algebraic properties:\n(I) x - 5 = 3x + 7\n(II) 3x - 6 = 7x + 8\n(III) 9x + 21 = 3x - 15\n(IV) -0.05 + x/100 = 3x/100 + 0.07",
+                "solution": "Equations (I), (III), and (IV) share the same solution set {-6}:\n- Multiply (I) by 3: 3(x - 5) = 3(3x + 7) \\implies 3x - 15 = 9x + 21 (matches III by symmetric property).\n- Multiply (IV) by 100: -5 + x = 3x + 7 \\implies x - 5 = 3x + 7 (matches I).\nTherefore, I, III, and IV are algebraically equivalent."
+            },
+            {
+                "number": 2,
+                "prompt": "State the Addition Property of Equality and explain why it preserves the exact solution set of an equation.",
+                "solution": "The Addition Property of Equality states that if A = B, then A + C = B + C for any real number or expression C. It preserves the solution set because adding C is fully reversible by subtracting C, ensuring no solutions are created or lost."
+            }
+        ]
+    }
 }
