@@ -8,6 +8,165 @@
 
   // Comprehensive Indexed Search Database
   const SEARCH_DATABASE = [
+    // --- SKILLS & PROGRESS ---
+    {
+      title: "Cosmic Skill Tree & Mastery Passport",
+      desc: "Interactive visual constellation mapping CCSS mastery across Math, ELA, and Science.",
+      category: "Skills",
+      icon: "fa-project-diagram",
+      iconClass: "tool-icon",
+      url: "/pages/skills.php",
+      tags: ["skills", "tree", "constellation", "mastery", "standards", "passport", "quests", "badges", "levels"]
+    },
+    {
+      title: "Daily Learning Quests",
+      desc: "Complete 3 daily educational challenges to earn bonus XP and maintain your streak.",
+      category: "Skills",
+      icon: "fa-tasks",
+      iconClass: "tool-icon",
+      url: "/pages/skills.php#quests",
+      tags: ["daily", "quests", "challenges", "xp", "streak", "goals", "skills"]
+    },
+    {
+      title: "Mastery Badges & Achievement Crests",
+      desc: "Unlockable heraldic crests celebrating academic milestones across all 12 grades.",
+      category: "Skills",
+      icon: "fa-medal",
+      iconClass: "parent-icon",
+      url: "/pages/skills.php#badges",
+      tags: ["badges", "crests", "medals", "achievements", "trophy", "skills"]
+    },
+
+    // --- MANIPULATIVES & LABS ---
+    {
+      title: "Interactive Math & Science Manipulatives Lab",
+      desc: "Tactile fraction bars, place value base-10 blocks, and dynamic function grapher.",
+      category: "Tools",
+      icon: "fa-cubes-stacked",
+      iconClass: "math-icon",
+      url: "/pages/manipulatives.php",
+      tags: ["manipulatives", "fraction bars", "base 10", "grapher", "math lab", "place value", "cartesian"]
+    },
+    {
+      title: "Visual Fraction Bars & Slices",
+      desc: "Explore equivalent fractions and visual fraction addition with dynamic strips.",
+      category: "Tools",
+      icon: "fa-chart-pie",
+      iconClass: "math-icon",
+      url: "/pages/manipulatives.php#fractions",
+      tags: ["fraction", "bars", "slices", "equivalent", "denominator", "numerator"]
+    },
+    {
+      title: "Place Value & Base-10 Blocks",
+      desc: "Units, tens, hundreds, and thousands with interactive compose and decompose.",
+      category: "Tools",
+      icon: "fa-cubes",
+      iconClass: "math-icon",
+      url: "/pages/manipulatives.php#base10",
+      tags: ["place value", "base 10", "blocks", "units", "tens", "hundreds", "thousands"]
+    },
+    {
+      title: "Dynamic Cartesian Function Grapher",
+      desc: "Interactive coordinate plane with real-time slider controls and MathJax equations.",
+      category: "Tools",
+      icon: "fa-chart-line",
+      iconClass: "math-icon",
+      url: "/pages/manipulatives.php#grapher",
+      tags: ["grapher", "functions", "cartesian", "slope", "linear", "quadratic", "algebra"]
+    },
+
+    // --- ACTIONS & INSTANT TOOLS ---
+    {
+      title: "> Open Scratchpad & Notebooks",
+      desc: "Launch tabbed notes with Cornell, MLA, and study templates.",
+      category: "Tools",
+      icon: "fa-pen-nib",
+      iconClass: "tool-icon",
+      action: "openScratchpad",
+      tags: [">", "action", "scratchpad", "notes", "draft", "notebook"]
+    },
+    {
+      title: "> Open Whiteboard & Drawing Canvas",
+      desc: "Launch high-DPI math drawing canvas with shapes, undo/redo, and coordinate grids.",
+      category: "Tools",
+      icon: "fa-pencil-ruler",
+      iconClass: "tool-icon",
+      action: "openWhiteboard",
+      tags: [">", "action", "whiteboard", "canvas", "draw", "grid", "shapes"]
+    },
+    {
+      title: "> Open Focus & Study Timer",
+      desc: "Launch Pomodoro focus sessions and daily study time goals.",
+      category: "Tools",
+      icon: "fa-stopwatch",
+      iconClass: "tool-icon",
+      action: "openTimer",
+      tags: [">", "action", "timer", "pomodoro", "focus", "clock"]
+    },
+    {
+      title: "> Open Sensory Calm Chamber",
+      desc: "Enter low-stimulation retreat room with soothing ambient audio.",
+      category: "Tools",
+      icon: "fa-spa",
+      iconClass: "tool-icon",
+      action: "openSensory",
+      tags: [">", "action", "sensory", "calm", "relax", "audio", "chamber"]
+    },
+    {
+      title: "> Toggle High Contrast (AAA)",
+      desc: "Toggle high contrast mode with 7:1 minimum contrast compliance.",
+      category: "Tools",
+      icon: "fa-circle-half-stroke",
+      iconClass: "tool-icon",
+      action: "toggleContrast",
+      tags: [">", "action", "contrast", "high contrast", "aaa", "accessibility"]
+    },
+    {
+      title: "> Start Voice Dictation",
+      desc: "Transcribe spoken thoughts into notes using speech-to-text.",
+      category: "Tools",
+      icon: "fa-microphone",
+      iconClass: "tool-icon",
+      action: "startDictation",
+      tags: [">", "action", "dictate", "speech", "voice", "transcribe"]
+    },
+    {
+      title: "Universal Help Center & User Guides",
+      desc: "Comprehensive feature guides, keyboard shortcuts, and accessibility documentation.",
+      category: "System",
+      icon: "fa-question-circle",
+      iconClass: "tool-icon",
+      url: "/pages/help-center.php",
+      tags: ["help", "guide", "support", "faq", "shortcuts", "manual"]
+    },
+    {
+      title: "Accessible Games Hub",
+      desc: "Play stress-free educational games: Word Scramble, Grammar Detective, and Math Master.",
+      category: "Assessment",
+      icon: "fa-gamepad",
+      iconClass: "tool-icon",
+      url: "/pages/games.php",
+      tags: ["games", "word scramble", "grammar detective", "memory", "sprint", "play"]
+    },
+    {
+      title: "Universal Mathematics Codex (A–Z)",
+      desc: "A-Z mathematical definitions, conceptual mechanisms, procedures, and exemplars.",
+      category: "Curriculum",
+      icon: "fa-calculator",
+      iconClass: "math-icon",
+      url: "/pages/math.php",
+      tags: ["math", "codex", "a-z", "dictionary", "definitions", "procedures", "formulas"]
+    },
+    {
+      title: "Universal English Grammar Codex (A–Z)",
+      desc: "A-Z English grammar definitions, parts of speech, syntax rules, and clause mechanics.",
+      category: "Curriculum",
+      icon: "fa-spell-check",
+      iconClass: "ela-icon",
+      url: "/pages/grammar.php",
+      tags: ["grammar", "syntax", "codex", "a-z", "clauses", "punctuation", "parts of speech"]
+    },
+
     // --- PORTALS & HUBS ---
     {
       title: "Teacher & Homeschool Suite",
@@ -335,7 +494,7 @@
           `;
 
           li.addEventListener('click', () => {
-            navigateTo(item.url);
+            navigateTo(item);
           });
 
           li.addEventListener('mouseenter', () => {
@@ -345,6 +504,42 @@
           resultsContainer.appendChild(li);
           renderIdx++;
         });
+      }
+    }
+
+    function executeAction(act) {
+      closePalette();
+      if (act === 'openScratchpad') {
+        if (window.HLScratchpad && window.HLScratchpad.open) {
+          window.HLScratchpad.open('notes');
+        } else {
+          const btn = document.getElementById('scratchpad-toggle');
+          if (btn) btn.click();
+        }
+      } else if (act === 'openWhiteboard') {
+        if (window.HLScratchpad && window.HLScratchpad.open) {
+          window.HLScratchpad.open('whiteboard');
+        } else {
+          const btn = document.getElementById('scratchpad-toggle');
+          if (btn) btn.click();
+        }
+      } else if (act === 'openTimer') {
+        if (window.toggleStudyTimer) window.toggleStudyTimer();
+      } else if (act === 'openFlashcards') {
+        if (window.toggleFlashcardStudio) window.toggleFlashcardStudio();
+      } else if (act === 'openSensory') {
+        if (window.SensoryChamber && window.SensoryChamber.open) window.SensoryChamber.open();
+      } else if (act === 'toggleContrast') {
+        const btn = document.getElementById('contrast-toggle') || document.querySelector('.btn-contrast-toggle');
+        if (btn) btn.click();
+      } else if (act === 'startDictation') {
+        if (window.HLScratchpad && window.HLScratchpad.open) {
+          window.HLScratchpad.open('notes');
+          setTimeout(() => {
+            const dBtn = document.getElementById('scratchpad-dictate-btn');
+            if (dBtn) dBtn.click();
+          }, 250);
+        }
       }
     }
 
@@ -366,9 +561,21 @@
       });
     }
 
-    function navigateTo(url) {
+    function navigateTo(target) {
       closePalette();
-      window.location.href = url;
+      if (!target) return;
+      if (typeof target === 'object') {
+        if (target.action) {
+          executeAction(target.action);
+          return;
+        }
+        if (target.url) {
+          window.location.href = target.url;
+          return;
+        }
+      } else if (typeof target === 'string') {
+        window.location.href = target;
+      }
     }
 
     function performSearch() {
@@ -378,22 +585,63 @@
       if (currentFilter !== 'all') {
         filtered = filtered.filter(item => {
           const cat = item.category.toLowerCase();
-          return cat === currentFilter || item.tags.some(t => t.includes(currentFilter));
+          return cat === currentFilter || (item.tags && item.tags.some(t => t.toLowerCase().includes(currentFilter)));
         });
       }
 
       if (query.length > 0) {
         filtered = filtered.filter(item => {
           const title = item.title.toLowerCase();
-          const desc = item.desc.toLowerCase();
+          const desc = item.desc ? item.desc.toLowerCase() : '';
           const cat = item.category.toLowerCase();
-          const tags = item.tags.join(' ').toLowerCase();
+          const tags = item.tags ? item.tags.join(' ').toLowerCase() : '';
 
           return title.includes(query) || desc.includes(query) || cat.includes(query) || tags.includes(query);
         });
       }
 
       renderResults(filtered);
+    }
+
+    // Voice Search Assistant
+    const voiceBtn = document.getElementById('cmd-voice-btn');
+    if (voiceBtn) {
+      const SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (!SpeechRec) {
+        voiceBtn.style.display = 'none';
+      } else {
+        const recognition = new SpeechRec();
+        recognition.continuous = false;
+        recognition.interimResults = false;
+        recognition.lang = 'en-US';
+
+        recognition.onstart = () => {
+          voiceBtn.classList.add('listening');
+          voiceBtn.setAttribute('aria-label', 'Listening...');
+        };
+        recognition.onresult = (evt) => {
+          if (evt.results && evt.results[0] && evt.results[0][0]) {
+            input.value = evt.results[0][0].transcript;
+            performSearch();
+          }
+        };
+        recognition.onerror = () => {
+          voiceBtn.classList.remove('listening');
+          voiceBtn.setAttribute('aria-label', 'Voice Search');
+        };
+        recognition.onend = () => {
+          voiceBtn.classList.remove('listening');
+          voiceBtn.setAttribute('aria-label', 'Voice Search');
+        };
+
+        voiceBtn.addEventListener('click', () => {
+          try {
+            recognition.start();
+          } catch (err) {
+            recognition.stop();
+          }
+        });
+      }
     }
 
     // Input Search Listener
@@ -404,7 +652,7 @@
       pill.addEventListener('click', () => {
         filterPills.forEach(p => p.classList.remove('active'));
         pill.classList.add('active');
-        currentFilter = pill.getAttribute('data-filter') || 'all';
+        currentFilter = (pill.getAttribute('data-filter') || 'all').toLowerCase();
         performSearch();
       });
     });
@@ -421,7 +669,7 @@
       } else if (e.key === 'Enter') {
         e.preventDefault();
         if (currentResults[activeIndex]) {
-          navigateTo(currentResults[activeIndex].url);
+          navigateTo(currentResults[activeIndex]);
         }
       } else if (e.key === 'Escape') {
         closePalette();

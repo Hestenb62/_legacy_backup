@@ -48,10 +48,12 @@
                     <i class="fas fa-link" style="color: var(--color-teal)"></i> Quick Links
                 </h4>
                 <ul class="footer-links">
+                    <li class="footer-link-item"><a href="/pages/skills.php"><i
+                                class="fas fa-project-diagram footer-link-icon"></i> Skills Tree</a></li>
+                    <li class="footer-link-item"><a href="/pages/manipulatives.php"><i
+                                class="fas fa-cubes-stacked footer-link-icon"></i> Manipulatives</a></li>
                     <li class="footer-link-item"><a href="/pages/standards.php"><i
                                 class="fas fa-book footer-link-icon"></i> Standards</a></li>
-                    <li class="footer-link-item"><a href="/research/"><i class="fas fa-flask footer-link-icon"></i>
-                            Research</a></li>
                     <li class="footer-link-item"><a href="/updates/"><i class="fas fa-newspaper footer-link-icon"></i>
                             Updates</a></li>
                     <li class="footer-link-item"><a href="/pages/help-center.php"><i
@@ -96,9 +98,9 @@
 
         <!-- Version Status & Release Info Strip (WCAG Operable) -->
         <?php
-        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.5.0';
-        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'September 2026 Release';
-        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Unified Scratchpad Studio, Accessible UDL & Modern Design';
+        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.6.0';
+        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'September 2026 Platform Elevation Release';
+        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Global Command Palette, Interactive Manipulatives Lab, Cosmic Skill Tree, & Expanded Games Hub';
         ?>
         <div class="footer-version-strip" role="region" aria-label="Platform Version Information">
             <div class="footer-version-info">
@@ -269,25 +271,31 @@
                 </span>
             </div>
             <p class="footer-vmodal-lead">
-                Version <?= htmlspecialchars($siteVersion) ?> introduces the Unified Multi-Note Scratchpad &amp; Whiteboard Studio, expands universal learning accommodations, and enhances STEM math equation tools.
+                Version <?= htmlspecialchars($siteVersion) ?> delivers six major platform elevation milestones: the Global Command Palette, Interactive Manipulatives Lab, Cosmic Skill Tree &amp; Passport, Gutenberg Reader upgrades, Printable IEP Summaries, and an Expanded Accessible Games Hub.
             </p>
             <ul class="footer-vmodal-features">
                 <li class="footer-vmodal-feature-item">
                     <div class="footer-vmodal-feature-icon" aria-hidden="true">
-                        <i class="fas fa-pencil-ruler"></i>
+                        <i class="fas fa-terminal"></i>
                     </div>
                     <div class="footer-vmodal-feature-text">
-                        <strong>Unified Scratchpad &amp; Whiteboard Studio:</strong> Multi-page tabbed notebooks, HTML5 digital drawing whiteboard with undo/redo and geometric shapes, LaTeX formula quick-insert palette with real-time MathJax rendering, and side-by-side docked split-view.
+                        <strong>Global Command Palette (Ctrl+K):</strong> Lightning-fast search, Web Speech voice navigation, quick jump across all standards, and instant shortcut triggers for scratchpads, whiteboard, and timers.
                     </div>
                 </li>
                 <li class="footer-vmodal-feature-item">
                     <div class="footer-vmodal-feature-icon" aria-hidden="true">
-                        <i class="fas fa-universal-access"></i>
+                        <i class="fas fa-shapes"></i>
                     </div>
                     <div class="footer-vmodal-feature-text">
-                        <strong>Universal Design for Learning (UDL):</strong> Multi-sensory accommodations including
-                        OpenDyslexic typography, audio-synced subtitles, 3-point dyscalculia colorizer, Irlen color
-                        overlays, and 100% keyboard accessibility.
+                        <strong>Interactive Manipulatives Lab:</strong> High-precision virtual STEM tools including Fraction Strips &amp; Slices with LCM comparisons, Base-10 Blocks with compose/decompose animations, and Dynamic Cartesian Function Grapher.
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true">
+                        <i class="fas fa-satellite"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Cosmic Skill Tree &amp; Passport (/pages/skills.php):</strong> Constellation-themed mastery visualization mapped to Common Core standards, live Daily Learning Quests, and Heraldic Achievement Crests.
                     </div>
                 </li>
                 <li class="footer-vmodal-feature-item">
@@ -295,35 +303,23 @@
                         <i class="fas fa-book-reader"></i>
                     </div>
                     <div class="footer-vmodal-feature-text">
-                        <strong>Educational Guides &amp; Multi-Lexile Readers:</strong> Adapted reading levels,
-                        text-to-speech narration, and research-backed interactive comprehension checkpoints.
+                        <strong>Gutenberg Reader Upgrades:</strong> Sticky reading progress line, offline phonetics &amp; dictionary popovers, and end-of-chapter comprehension checkpoints connected directly to student XP.
                     </div>
                 </li>
                 <li class="footer-vmodal-feature-item">
                     <div class="footer-vmodal-feature-icon" aria-hidden="true">
-                        <i class="fas fa-palette"></i>
+                        <i class="fas fa-print"></i>
                     </div>
                     <div class="footer-vmodal-feature-text">
-                        <strong>Vanilla CSS Design Modernization:</strong> Fluid responsive layouts, dark theme
-                        precision, glassmorphic cards, and zero external framework lock-in.
+                        <strong>Official Progress &amp; IEP Summaries:</strong> Clean, high-fidelity printable portfolios branded for hestena62.com with competency grids and parent/teacher signature sign-offs.
                     </div>
                 </li>
                 <li class="footer-vmodal-feature-item">
                     <div class="footer-vmodal-feature-icon" aria-hidden="true">
-                        <i class="fas fa-cloud-arrow-up"></i>
+                        <i class="fas fa-gamepad"></i>
                     </div>
                     <div class="footer-vmodal-feature-text">
-                        <strong>Offline Access:</strong> The site works completely offline without an internet
-                        connection. No browser login required. Progressive Web App (PWA) enables offline access.
-                    </div>
-                </li>
-                <li class="footer-vmodal-feature-item">
-                    <div class="footer-vmodal-feature-icon" aria-hidden="true">
-                        <i class="fas fa-cloud-arrow-up"></i>
-                    </div>
-                    <div class="footer-vmodal-feature-text">
-                        <strong>Tripartite Cloud Sync:</strong> Resilient Google Drive auto-sync connecting students,
-                        parents, and teachers.
+                        <strong>Expanded Accessible Games Hub:</strong> Word Scramble Studio with speech audio and definition clues, alongside Grammar Detective mystery error cases with full pedagogical explanations.
                     </div>
                 </li>
             </ul>

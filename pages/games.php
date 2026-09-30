@@ -74,6 +74,14 @@ include '../src/header.php';
                     <span class="chip-label"><i class="fas fa-bolt" style="color: #f59e0b;"></i> Sprint Best</span>
                     <span class="chip-value highlight-amber" id="stat-sprint-best">0 pts ⚡</span>
                 </div>
+                <div class="banner-stat-chip">
+                    <span class="chip-label"><i class="fas fa-spell-check" style="color: #8b5cf6;"></i> Scramble Solved</span>
+                    <span class="chip-value" style="color: #8b5cf6;" id="stat-scramble-solved">0</span>
+                </div>
+                <div class="banner-stat-chip">
+                    <span class="chip-label"><i class="fas fa-user-secret" style="color: #0d9488;"></i> Cases Solved</span>
+                    <span class="chip-value" style="color: #0d9488;" id="stat-grammar-solved">0</span>
+                </div>
             </div>
         </div>
 
@@ -116,9 +124,39 @@ include '../src/header.php';
                     <i class="fas fa-bolt"></i>
                 </div>
                 <div class="games-card-content">
-                    <span class="games-tag tag-amber">Speed & Agility</span>
+                    <span class="games-tag tag-amber">Speed &amp; Agility</span>
                     <h3 class="games-card-title">60-Second Speed Sprint</h3>
                     <p class="games-card-desc">Race against the clock! Solve rapid mental math equations, build high streaks, and multiply your score.</p>
+                    <span class="games-play-link">
+                        Play Now <i class="fas fa-arrow-right icon-arrow"></i>
+                    </span>
+                </div>
+            </button>
+
+            <!-- Game Card 4: Word Scramble Studio -->
+            <button onclick="loadGame('scramble')" class="games-card card-scramble" id="card-scramble" aria-label="Play Word Scramble Studio">
+                <div class="games-card-bg-icon">
+                    <i class="fas fa-spell-check"></i>
+                </div>
+                <div class="games-card-content">
+                    <span class="games-tag tag-purple">ELA &amp; Vocabulary</span>
+                    <h3 class="games-card-title">Word Scramble Studio</h3>
+                    <p class="games-card-desc">Unscramble vocabulary words with phonetics, definitions, and hint reveal. Perfect for spelling mastery.</p>
+                    <span class="games-play-link">
+                        Play Now <i class="fas fa-arrow-right icon-arrow"></i>
+                    </span>
+                </div>
+            </button>
+
+            <!-- Game Card 5: Grammar Detective -->
+            <button onclick="loadGame('grammar')" class="games-card card-grammar" id="card-grammar" aria-label="Play Grammar Detective">
+                <div class="games-card-bg-icon">
+                    <i class="fas fa-user-secret"></i>
+                </div>
+                <div class="games-card-content">
+                    <span class="games-tag tag-teal">Language Mechanics</span>
+                    <h3 class="games-card-title">Grammar Detective</h3>
+                    <p class="games-card-desc">Crack the case by spotting and correcting syntax, punctuation, homophone, and capitalization errors.</p>
                     <span class="games-play-link">
                         Play Now <i class="fas fa-arrow-right icon-arrow"></i>
                     </span>
@@ -226,6 +264,14 @@ include '../src/header.php';
                 bestStreak: 0,
                 totalRounds: 0,
                 totalSolved: 0
+            },
+            scramble: {
+                bestStreak: 0,
+                totalSolved: 0
+            },
+            grammar: {
+                bestStreak: 0,
+                casesSolved: 0
             }
         };
         try {
@@ -235,6 +281,8 @@ include '../src/header.php';
                 if (parsed.memory) scores.memory = { ...scores.memory, ...parsed.memory };
                 if (parsed.math) scores.math = { ...scores.math, ...parsed.math };
                 if (parsed.sprint) scores.sprint = { ...scores.sprint, ...parsed.sprint };
+                if (parsed.scramble) scores.scramble = { ...scores.scramble, ...parsed.scramble };
+                if (parsed.grammar) scores.grammar = { ...scores.grammar, ...parsed.grammar };
             }
         } catch (e) {}
         return scores;
@@ -402,6 +450,11 @@ include '../src/header.php';
         if (sprintEl) {
             sprintEl.textContent = `${(scores.sprint && scores.sprint.highScore) || 0} pts ⚡`;
         }
+
+        const scrEl = document.getElementById('stat-scramble-solved');
+        const grmEl = document.getElementById('stat-grammar-solved');
+        if (scrEl) scrEl.textContent = `${(scores.scramble && scores.scramble.totalSolved) || 0}`;
+        if (grmEl) grmEl.textContent = `${(scores.grammar && scores.grammar.casesSolved) || 0}`;
     }
 
     function updateHUDXP() {
@@ -440,6 +493,19 @@ include '../src/header.php';
     let sprintCurrentProblem = null;
     let sprintKeyHandler = null;
 
+    // Word Scramble State
+    let scrambleDifficulty = 'medium'; // easy, medium, hard
+    let scrambleAutoSpeak = true;
+    let scrambleKeyHandler = null;
+    let scrambleStreak = 0;
+    let scrambleCurrentWordObj = null;
+    let scramblePlacedIndices = [];
+
+    // Grammar Detective State
+    let grammarCategory = 'all';
+    let grammarStreak = 0;
+    let grammarCurrentCase = null;
+
     function loadGame(gameType) {
         lastFocusedElement = document.activeElement;
         
@@ -449,6 +515,8 @@ include '../src/header.php';
         if (gameType === 'memory') showMemorySetup();
         if (gameType === 'math') showMathSetup();
         if (gameType === 'sprint') showSprintSetup();
+        if (gameType === 'scramble') showScrambleSetup();
+        if (gameType === 'grammar') showGrammarSetup();
     }
 
     function closeGame() {
@@ -463,6 +531,13 @@ include '../src/header.php';
         if (sprintKeyHandler) {
             document.removeEventListener('keydown', sprintKeyHandler);
             sprintKeyHandler = null;
+        }
+        if (scrambleKeyHandler) {
+            document.removeEventListener('keydown', scrambleKeyHandler);
+            scrambleKeyHandler = null;
+        }
+        if (window.speechSynthesis) {
+            window.speechSynthesis.cancel();
         }
         arena.classList.add('hidden');
         if (arenaHud) arenaHud.classList.add('hidden');
@@ -1524,6 +1599,726 @@ include '../src/header.php';
         setTimeout(() => {
             const btn = arenaContent.querySelector('.sprint-play-again-btn');
             if (btn) btn.focus();
+        }, 100);
+    }
+
+    // ==========================================
+    // --- GAME 4: WORD SCRAMBLE STUDIO ---
+    // ==========================================
+    const SCRAMBLE_WORDS = {
+        easy: [
+            { word: "SOLAR", definition: "Relating to or determined by the sun.", phonetics: "SOH-ler" },
+            { word: "PLANT", definition: "A living organism that absorbs water and makes nutrients via photosynthesis.", phonetics: "PLANT" },
+            { word: "EARTH", definition: "The planet on which we live; the third planet from the sun.", phonetics: "URTH" },
+            { word: "WATER", definition: "A transparent, odorless liquid forming oceans, lakes, and rivers.", phonetics: "WAH-ter" },
+            { word: "CLOUD", definition: "A visible mass of condensed water vapor floating in the atmosphere.", phonetics: "KLOUD" },
+            { word: "LIGHT", definition: "The natural agent that stimulates sight and makes things visible.", phonetics: "LYT" },
+            { word: "HEART", definition: "A hollow muscular organ that pumps blood through the body.", phonetics: "HART" },
+            { word: "SPACE", definition: "The physical universe beyond the earth's atmosphere.", phonetics: "SPAYS" }
+        ],
+        medium: [
+            { word: "ECLIPSE", definition: "An obscuring of light from one celestial body by another.", phonetics: "ih-KLIPS" },
+            { word: "GRAVITY", definition: "The universal force of attraction acting between all matter.", phonetics: "GRAV-ih-tee" },
+            { word: "PYRAMID", definition: "A monumental structure with a polygon base and triangular sloping sides.", phonetics: "PEER-uh-mid" },
+            { word: "HORIZON", definition: "The line at which the earth's surface and the sky appear to meet.", phonetics: "huh-RY-zun" },
+            { word: "VOLCANO", definition: "A rupture in the crust of a planet allowing hot lava and gas to escape.", phonetics: "vahl-KAY-noh" },
+            { word: "HABITAT", definition: "The natural environment of an animal, plant, or organism.", phonetics: "HAB-ih-tat" },
+            { word: "GLACIER", definition: "A slowly moving mass or river of ice formed by snow accumulation.", phonetics: "GLAY-sher" },
+            { word: "FOSSIL", definition: "The preserved remains or traces of an ancient living organism.", phonetics: "FAH-sil" }
+        ],
+        hard: [
+            { word: "ECOSYSTEM", definition: "A biological community of interacting organisms and their physical environment.", phonetics: "EE-koh-sis-tem" },
+            { word: "METAPHOR", definition: "A figure of speech comparing two unlike things without 'like' or 'as'.", phonetics: "MET-uh-for" },
+            { word: "SYMPHONY", definition: "An elaborate musical composition for full orchestra.", phonetics: "SIM-fuh-nee" },
+            { word: "VELOCITY", definition: "The speed of something moving in a given direction.", phonetics: "vuh-LAHS-ih-tee" },
+            { word: "CATALYST", definition: "A substance that increases the rate of a chemical reaction.", phonetics: "KAT-uh-list" },
+            { word: "NARRATIVE", definition: "A spoken or written account of connected events; a story.", phonetics: "NAIR-uh-tiv" },
+            { word: "PARADOX", definition: "A seemingly self-contradictory statement that may prove to be true.", phonetics: "PAIR-uh-doks" },
+            { word: "HYPOTHESIS", definition: "A proposed explanation made as a starting point for scientific testing.", phonetics: "hy-PAHTH-uh-sis" }
+        ]
+    };
+
+    function showScrambleSetup() {
+        if (scrambleKeyHandler) {
+            document.removeEventListener('keydown', scrambleKeyHandler);
+            scrambleKeyHandler = null;
+        }
+        if (arenaHud) arenaHud.classList.add('hidden');
+        arenaTitle.textContent = "Word Scramble Studio - Options";
+        arenaDialog.classList.remove('wide');
+
+        const scores = getGameScores();
+        const bestStreak = (scores.scramble && scores.scramble.bestStreak) || 0;
+        const totalSolved = (scores.scramble && scores.scramble.totalSolved) || 0;
+
+        arenaContent.innerHTML = `
+            <div class="game-setup-content">
+                <p class="setup-desc">
+                    Unscramble vocabulary words letter-by-letter! Learn word origins, definitions, and phonetics with keyboard-friendly controls and audio feedback.
+                </p>
+
+                <div class="setup-group">
+                    <label class="setup-label">Difficulty / Vocabulary Tier:</label>
+                    <div class="setup-options-row">
+                        <button onclick="setScrambleDifficulty('easy', this)" class="setup-opt-btn ${scrambleDifficulty === 'easy' ? 'active' : ''}">
+                            <i class="fas fa-seedling"></i> Elementary (4-5 Letters)
+                        </button>
+                        <button onclick="setScrambleDifficulty('medium', this)" class="setup-opt-btn ${scrambleDifficulty === 'medium' ? 'active' : ''}">
+                            <i class="fas fa-tree"></i> Middle School (6-7 Letters)
+                        </button>
+                        <button onclick="setScrambleDifficulty('hard', this)" class="setup-opt-btn ${scrambleDifficulty === 'hard' ? 'active' : ''}">
+                            <i class="fas fa-mountain"></i> High School (8-10 Letters)
+                        </button>
+                    </div>
+                </div>
+
+                <div class="setup-group">
+                    <label class="setup-label">Audio Pronunciation:</label>
+                    <div class="setup-options-row">
+                        <button onclick="setScrambleAutoSpeak(true, this)" class="setup-opt-btn ${scrambleAutoSpeak ? 'active' : ''}">
+                            <i class="fas fa-volume-up"></i> Auto-Speak Words
+                        </button>
+                        <button onclick="setScrambleAutoSpeak(false, this)" class="setup-opt-btn ${!scrambleAutoSpeak ? 'active' : ''}">
+                            <i class="fas fa-volume-mute"></i> Silent Mode
+                        </button>
+                    </div>
+                </div>
+
+                <div class="setup-stats-preview">
+                    <span><i class="fas fa-fire" style="color:#f59e0b;"></i> Best Streak: <strong>${bestStreak}</strong></span>
+                    <span><i class="fas fa-spell-check" style="color:#8b5cf6;"></i> Total Words Solved: <strong>${totalSolved}</strong></span>
+                </div>
+
+                <div style="display:flex; justify-content:flex-end; margin-top:1.5rem;">
+                    <button onclick="startScrambleGame()" class="setup-start-btn" id="start-scramble-btn">
+                        <i class="fas fa-play"></i> Start Scramble
+                    </button>
+                </div>
+            </div>
+        `;
+
+        setTimeout(() => {
+            const btn = document.getElementById('start-scramble-btn');
+            if (btn) btn.focus();
+        }, 100);
+    }
+
+    function setScrambleDifficulty(diff, btn) {
+        scrambleDifficulty = diff;
+        btn.parentElement.querySelectorAll('.setup-opt-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        sounds.click();
+    }
+
+    function setScrambleAutoSpeak(val, btn) {
+        scrambleAutoSpeak = val;
+        btn.parentElement.querySelectorAll('.setup-opt-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        sounds.click();
+    }
+
+    function startScrambleGame() {
+        arenaTitle.textContent = "Word Scramble Studio";
+        arenaDialog.classList.remove('wide');
+        scrambleStreak = 0;
+
+        if (arenaHud && hudStatsGroup) {
+            hudStatsGroup.innerHTML = `
+                <span class="hud-badge streak-badge" id="hud-scramble-streak"><i class="fas fa-fire"></i> <span id="scramble-streak-num">0</span> Streak</span>
+                <span class="hud-badge"><i class="fas fa-spell-check" style="color:#8b5cf6;"></i> Tier: <strong style="text-transform:capitalize;">${scrambleDifficulty}</strong></span>
+            `;
+            arenaHud.classList.remove('hidden');
+        }
+        updateHUDXP();
+
+        // Keyboard handler for typing letters, backspace, and enter
+        if (scrambleKeyHandler) document.removeEventListener('keydown', scrambleKeyHandler);
+        scrambleKeyHandler = function(e) {
+            if (arena.classList.contains('hidden')) return;
+            if (document.activeElement && (document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA')) return;
+
+            const key = e.key.toUpperCase();
+            if (key >= 'A' && key <= 'Z' && key.length === 1) {
+                // Find first unplaced matching tile
+                if (!scrambleCurrentWordObj) return;
+                const pool = scrambleCurrentWordObj.scrambled;
+                for (let i = 0; i < pool.length; i++) {
+                    if (pool[i] === key && !scramblePlacedIndices.includes(i)) {
+                        handleScrambleLetterClick(i);
+                        break;
+                    }
+                }
+            } else if (e.key === 'Backspace') {
+                handleScrambleBackspace();
+            } else if (e.key === 'Enter') {
+                handleScrambleCheck();
+            }
+        };
+        document.addEventListener('keydown', scrambleKeyHandler);
+
+        generateScrambleWord();
+    }
+
+    function generateScrambleWord() {
+        const words = SCRAMBLE_WORDS[scrambleDifficulty] || SCRAMBLE_WORDS.medium;
+        const chosen = words[Math.floor(Math.random() * words.length)];
+
+        // Scramble letters ensuring it's not identical to the target
+        let letters = chosen.word.split('');
+        let scrambled = [...letters];
+        let attempts = 0;
+        while (attempts < 10 && scrambled.join('') === chosen.word) {
+            scrambled.sort(() => Math.random() - 0.5);
+            attempts++;
+        }
+
+        scrambleCurrentWordObj = {
+            target: chosen.word,
+            definition: chosen.definition,
+            phonetics: chosen.phonetics,
+            scrambled: scrambled
+        };
+        scramblePlacedIndices = [];
+
+        renderScrambleUI();
+
+        if (scrambleAutoSpeak) {
+            speakCurrentWord();
+        }
+        announce(`New word loaded. ${chosen.word.length} letters. Definition: ${chosen.definition}`);
+    }
+
+    function renderScrambleUI() {
+        if (!scrambleCurrentWordObj) return;
+        const target = scrambleCurrentWordObj.target;
+        const scrambled = scrambleCurrentWordObj.scrambled;
+
+        // Build slots
+        let slotsHtml = '';
+        for (let i = 0; i < target.length; i++) {
+            if (i < scramblePlacedIndices.length) {
+                const placedIdx = scramblePlacedIndices[i];
+                const letter = scrambled[placedIdx];
+                slotsHtml += `<div class="scramble-slot" aria-label="Position ${i+1}: ${letter}">${letter}</div>`;
+            } else {
+                slotsHtml += `<div class="scramble-slot" aria-label="Position ${i+1}: empty"></div>`;
+            }
+        }
+
+        // Build letter buttons pool
+        let tilesHtml = '';
+        for (let i = 0; i < scrambled.length; i++) {
+            const isUsed = scramblePlacedIndices.includes(i);
+            tilesHtml += `
+                <button onclick="handleScrambleLetterClick(${i})" 
+                        class="scramble-letter-btn" 
+                        ${isUsed ? 'disabled aria-disabled="true"' : ''}
+                        aria-label="Letter ${scrambled[i]}">
+                    ${scrambled[i]}
+                </button>
+            `;
+        }
+
+        arenaContent.innerHTML = `
+            <div class="scramble-container">
+                <div class="scramble-hint-box">
+                    <div class="scramble-hint-label"><i class="fas fa-book-open"></i> Clue &amp; Definition</div>
+                    <div class="scramble-hint-text">${scrambleCurrentWordObj.definition}</div>
+                    <div style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--color-text-muted);">
+                        <i class="fas fa-volume-up"></i> Phonetics: <em>${scrambleCurrentWordObj.phonetics}</em>
+                    </div>
+                </div>
+
+                <div class="scramble-slots-row" role="region" aria-label="Word slots">
+                    ${slotsHtml}
+                </div>
+
+                <div class="scramble-tiles-pool" role="region" aria-label="Scrambled letter choices">
+                    ${tilesHtml}
+                </div>
+
+                <div class="scramble-actions">
+                    <button onclick="speakCurrentWord()" class="win-btn" style="background:var(--color-bg-base); color:var(--color-text-main); border:1px solid var(--color-border);" aria-label="Pronounce word aloud">
+                        <i class="fas fa-volume-up"></i> Pronounce
+                    </button>
+                    <button onclick="handleScrambleHint()" class="win-btn" style="background:var(--color-bg-base); color:var(--color-text-main); border:1px solid var(--color-border);" aria-label="Reveal hint letter">
+                        <i class="fas fa-lightbulb" style="color:#f59e0b;"></i> Hint
+                    </button>
+                    <button onclick="handleScrambleBackspace()" class="win-btn" style="background:var(--color-bg-base); color:var(--color-text-main); border:1px solid var(--color-border);" aria-label="Remove last letter">
+                        <i class="fas fa-backspace"></i> Backspace
+                    </button>
+                    <button onclick="handleScrambleReset()" class="win-btn" style="background:var(--color-bg-base); color:var(--color-text-main); border:1px solid var(--color-border);" aria-label="Clear all placed letters">
+                        <i class="fas fa-undo"></i> Reset
+                    </button>
+                    <button onclick="handleScrambleCheck()" class="win-btn" style="background:linear-gradient(135deg, #7c3aed, #6d28d9); color:white;" aria-label="Check your answer">
+                        <i class="fas fa-check"></i> Check Answer
+                    </button>
+                </div>
+            </div>
+        `;
+    }
+
+    function handleScrambleLetterClick(index) {
+        if (!scrambleCurrentWordObj) return;
+        if (scramblePlacedIndices.includes(index)) return;
+        if (scramblePlacedIndices.length >= scrambleCurrentWordObj.target.length) return;
+
+        scramblePlacedIndices.push(index);
+        sounds.click();
+        renderScrambleUI();
+
+        if (scramblePlacedIndices.length === scrambleCurrentWordObj.target.length) {
+            setTimeout(handleScrambleCheck, 250);
+        }
+    }
+
+    function handleScrambleBackspace() {
+        if (scramblePlacedIndices.length > 0) {
+            scramblePlacedIndices.pop();
+            sounds.click();
+            renderScrambleUI();
+        }
+    }
+
+    function handleScrambleReset() {
+        if (scramblePlacedIndices.length > 0) {
+            scramblePlacedIndices = [];
+            sounds.click();
+            renderScrambleUI();
+        }
+    }
+
+    function handleScrambleHint() {
+        if (!scrambleCurrentWordObj) return;
+        const target = scrambleCurrentWordObj.target;
+        const nextPos = scramblePlacedIndices.length;
+        if (nextPos >= target.length) return;
+
+        const neededLetter = target[nextPos];
+        const pool = scrambleCurrentWordObj.scrambled;
+
+        for (let i = 0; i < pool.length; i++) {
+            if (pool[i] === neededLetter && !scramblePlacedIndices.includes(i)) {
+                scramblePlacedIndices.push(i);
+                sounds.streak();
+                renderScrambleUI();
+                announce(`Hint placed letter ${neededLetter}`);
+                break;
+            }
+        }
+    }
+
+    function speakCurrentWord() {
+        if (!scrambleCurrentWordObj || !('speechSynthesis' in window)) return;
+        window.speechSynthesis.cancel();
+        const utter = new SpeechSynthesisUtterance(scrambleCurrentWordObj.target.toLowerCase());
+        utter.rate = 0.85;
+        window.speechSynthesis.speak(utter);
+    }
+
+    function handleScrambleCheck() {
+        if (!scrambleCurrentWordObj) return;
+        const target = scrambleCurrentWordObj.target;
+        const scrambled = scrambleCurrentWordObj.scrambled;
+        const formed = scramblePlacedIndices.map(i => scrambled[i]).join('');
+
+        if (formed.length < target.length) {
+            announce("Please place all letters before checking.");
+            return;
+        }
+
+        if (formed === target) {
+            sounds.match();
+            scrambleStreak++;
+            if (scrambleStreak >= 3) sounds.streak();
+
+            const scores = getGameScores();
+            scores.scramble = scores.scramble || { bestStreak: 0, totalSolved: 0 };
+            scores.scramble.totalSolved = (scores.scramble.totalSolved || 0) + 1;
+            if (scrambleStreak > (scores.scramble.bestStreak || 0)) {
+                scores.scramble.bestStreak = scrambleStreak;
+            }
+            saveGameScores(scores);
+            recordGamePlayed();
+
+            let xpEarned = 25;
+            if (scrambleStreak >= 3) xpEarned += 10;
+            awardXP(xpEarned, "Word Unscrambled");
+
+            try {
+                let dq = JSON.parse(localStorage.getItem('hl_daily_quests') || '{}');
+                dq.ela = (dq.ela || 0) + 1;
+                localStorage.setItem('hl_daily_quests', JSON.stringify(dq));
+                window.dispatchEvent(new CustomEvent('hl:data-sync', { detail: { key: 'hl_daily_quests' } }));
+            } catch (e) {}
+
+            announce(`Brilliant! You correctly unscrambled ${target}! +${xpEarned} XP!`);
+
+            arenaContent.innerHTML = `
+                <div class="sprint-summary-overlay" style="padding:2rem;">
+                    <div class="win-stars">⭐⭐⭐</div>
+                    <h3 class="win-title" style="color:#8b5cf6;">Splendid! Word Solved!</h3>
+                    <div style="font-size: 2.2rem; font-weight: 900; letter-spacing: 0.1em; color: #a78bfa; margin-bottom: 0.5rem;">
+                        ${target}
+                    </div>
+                    <p style="font-size: 1rem; color: var(--color-text-main); margin-bottom: 1.25rem;">
+                        ${scrambleCurrentWordObj.definition}
+                    </p>
+                    <div class="win-record-badge" style="background:rgba(139, 92, 246, 0.2); color:#c4b5fd; margin-bottom: 1.5rem;">
+                        <i class="fas fa-fire"></i> Streak: ${scrambleStreak} 🔥 • +${xpEarned} XP Earned
+                    </div>
+                    <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+                        <button onclick="showScrambleSetup()" class="win-btn" style="background:var(--color-bg-base); color:var(--color-text-main); border:1px solid var(--color-border);">Change Tier</button>
+                        <button onclick="generateScrambleWord()" class="win-btn" id="scramble-next-btn" style="background:linear-gradient(135deg, #7c3aed, #6d28d9); color:white;">
+                            Next Word <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            `;
+
+            setTimeout(() => {
+                const btn = document.getElementById('scramble-next-btn');
+                if (btn) btn.focus();
+            }, 100);
+
+            const streakNum = document.getElementById('scramble-streak-num');
+            if (streakNum) streakNum.textContent = scrambleStreak;
+        } else {
+            sounds.wrong();
+            scrambleStreak = 0;
+            const streakNum = document.getElementById('scramble-streak-num');
+            if (streakNum) streakNum.textContent = '0';
+            announce(`Not quite yet. Let's rearrange the letters and try again!`);
+            handleScrambleReset();
+        }
+    }
+
+
+    // ==========================================
+    // --- GAME 5: GRAMMAR DETECTIVE ---
+    // ==========================================
+    const GRAMMAR_CASES = [
+        {
+            caseNum: "CASE #101",
+            category: "agreement",
+            categoryLabel: "Subject-Verb Agreement",
+            title: "The Soloist Conundrum",
+            scenario: "Examine the witness statement below. Identify the verb that agrees with the singular compound subject.",
+            sentence: "Neither the conductor nor the soloist [ ______ ] ready to begin the overture.",
+            options: [
+                "were",
+                "was",
+                "are",
+                "have been"
+            ],
+            correctIndex: 1,
+            explanation: "When subjects are joined by 'neither... nor', the verb agrees with the subject closest to it ('the soloist', which is singular). Hence, 'was' is grammatically correct."
+        },
+        {
+            caseNum: "CASE #102",
+            category: "homophones",
+            categoryLabel: "Homophones & Word Choice",
+            title: "The Locker Room Mystery",
+            scenario: "A clue was left on the locker room bulletin board. Which word denotes belonging and possession?",
+            sentence: "The students remembered that [ ______ ] science projects were due before noon.",
+            options: [
+                "there",
+                "their",
+                "they're",
+                "thier"
+            ],
+            correctIndex: 1,
+            explanation: "'Their' is the possessive pronoun indicating ownership. 'There' refers to a location, and 'they're' is the contraction for 'they are'."
+        },
+        {
+            caseNum: "CASE #103",
+            category: "punctuation",
+            categoryLabel: "Comma Splice & Run-On",
+            title: "The Midnight Train Alibi",
+            scenario: "Two independent clauses were glued together with only a comma. Choose the properly connected revision.",
+            sentence: "The thunderstorm knocked down telephone poles, the express train was delayed.",
+            options: [
+                "The thunderstorm knocked down telephone poles, so the express train was delayed.",
+                "The thunderstorm knocked down telephone poles the express train was delayed.",
+                "The thunderstorm knocked down telephone poles; and the express train was delayed.",
+                "The thunderstorm knocked down telephone poles, however the express train was delayed."
+            ],
+            correctIndex: 0,
+            explanation: "A comma alone cannot join two complete independent clauses without a coordinating conjunction (FANBOYS: for, and, nor, but, or, yet, so). Adding 'so' fixes the comma splice."
+        },
+        {
+            caseNum: "CASE #104",
+            category: "verbs",
+            categoryLabel: "Irregular Verbs & Tenses",
+            title: "The Stolen Symphony",
+            scenario: "Examine the timeline of events. Which past participle follows the auxiliary verb 'had'?",
+            sentence: "Before the curtain fell, the soprano had [ ______ ] the final aria with perfection.",
+            options: [
+                "sang",
+                "sung",
+                "singed",
+                "sing"
+            ],
+            correctIndex: 1,
+            explanation: "With auxiliary verbs like 'had' or 'have' (past perfect), English requires the past participle form: sing (present), sang (simple past), sung (past participle)."
+        },
+        {
+            caseNum: "CASE #105",
+            category: "punctuation",
+            categoryLabel: "Apostrophes & Possessives",
+            title: "The Secret Garden Key",
+            scenario: "Whose footprints lead toward the conservatory? Choose the correct plural possessive form.",
+            sentence: "The three [ ______ ] footprints were clearly visible in the morning dew.",
+            options: [
+                "detective's",
+                "detectives'",
+                "detectives",
+                "detectives's"
+            ],
+            correctIndex: 1,
+            explanation: "For a regular plural noun ending in 's' ('detectives'), make it possessive by adding an apostrophe at the end: 'detectives''."
+        },
+        {
+            caseNum: "CASE #106",
+            category: "capitalization",
+            categoryLabel: "Capitalization & Proper Nouns",
+            title: "The Diplomatic Dispatch",
+            scenario: "Inspect the dispatch for capitalization integrity. Which statement is punctuated with 100% precision?",
+            sentence: "Select the sentence with accurate capitalization of geographic features and formal titles.",
+            options: [
+                "Last Summer, mayor Adams crossed the mississippi river.",
+                "Last summer, Mayor Adams crossed the Mississippi River.",
+                "Last summer, mayor Adams crossed the Mississippi river.",
+                "Last Summer, Mayor adams crossed the Mississippi River."
+            ],
+            correctIndex: 1,
+            explanation: "Formal titles preceding a personal name ('Mayor Adams') and specific geographic names ('Mississippi River') are capitalized. Seasons ('summer') are lowercase unless in a title."
+        },
+        {
+            caseNum: "CASE #107",
+            category: "agreement",
+            categoryLabel: "Pronoun Case & Function",
+            title: "The Museum Heist",
+            scenario: "The security report must use the correct objective pronoun case following a preposition.",
+            sentence: "The curator handed the restored artifacts to Officer Jackson and [ ______ ].",
+            options: [
+                "I",
+                "me",
+                "myself",
+                "he"
+            ],
+            correctIndex: 1,
+            explanation: "The pronoun serves as an object of the preposition 'to'. If you isolate the pronoun: 'handed the artifacts to me' (not 'to I')."
+        }
+    ];
+
+    function showGrammarSetup() {
+        if (arenaHud) arenaHud.classList.add('hidden');
+        arenaTitle.textContent = "Grammar Detective - Case File Setup";
+        arenaDialog.classList.remove('wide');
+
+        const scores = getGameScores();
+        const casesSolved = (scores.grammar && scores.grammar.casesSolved) || 0;
+        const bestStreak = (scores.grammar && scores.grammar.bestStreak) || 0;
+
+        arenaContent.innerHTML = `
+            <div class="game-setup-content">
+                <p class="setup-desc">
+                    Step into the shoes of an investigative editor! Crack grammatical mysteries by solving subject-verb agreement, homophones, comma splices, and punctuation cases.
+                </p>
+
+                <div class="setup-group">
+                    <label class="setup-label">Case Investigation Category:</label>
+                    <div class="setup-options-row">
+                        <button onclick="setGrammarCategory('all', this)" class="setup-opt-btn ${grammarCategory === 'all' ? 'active' : ''}">
+                            <i class="fas fa-folder-open"></i> All Case Files
+                        </button>
+                        <button onclick="setGrammarCategory('agreement', this)" class="setup-opt-btn ${grammarCategory === 'agreement' ? 'active' : ''}">
+                            <i class="fas fa-check-double"></i> Subject-Verb Agreement
+                        </button>
+                        <button onclick="setGrammarCategory('homophones', this)" class="setup-opt-btn ${grammarCategory === 'homophones' ? 'active' : ''}">
+                            <i class="fas fa-pen-fancy"></i> Homophones &amp; Words
+                        </button>
+                        <button onclick="setGrammarCategory('punctuation', this)" class="setup-opt-btn ${grammarCategory === 'punctuation' ? 'active' : ''}">
+                            <i class="fas fa-quote-right"></i> Punctuation &amp; Run-Ons
+                        </button>
+                    </div>
+                </div>
+
+                <div class="setup-stats-preview">
+                    <span><i class="fas fa-shield-alt" style="color:#0d9488;"></i> Cases Solved: <strong>${casesSolved}</strong></span>
+                    <span><i class="fas fa-fire" style="color:#f59e0b;"></i> Detective Streak: <strong>${bestStreak}</strong></span>
+                </div>
+
+                <div style="display:flex; justify-content:flex-end; margin-top:1.5rem;">
+                    <button onclick="startGrammarGame()" class="setup-start-btn" id="start-grammar-btn" style="background:linear-gradient(135deg, #0d9488, #0f766e);">
+                        <i class="fas fa-search"></i> Open Case File
+                    </button>
+                </div>
+            </div>
+        `;
+
+        setTimeout(() => {
+            const btn = document.getElementById('start-grammar-btn');
+            if (btn) btn.focus();
+        }, 100);
+    }
+
+    function setGrammarCategory(cat, btn) {
+        grammarCategory = cat;
+        btn.parentElement.querySelectorAll('.setup-opt-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        sounds.click();
+    }
+
+    function startGrammarGame() {
+        arenaTitle.textContent = "Grammar Detective";
+        arenaDialog.classList.add('wide');
+        grammarStreak = 0;
+
+        if (arenaHud && hudStatsGroup) {
+            hudStatsGroup.innerHTML = `
+                <span class="hud-badge streak-badge" id="hud-grammar-streak"><i class="fas fa-fire"></i> <span id="grammar-streak-num">0</span> Streak</span>
+                <span class="hud-badge"><i class="fas fa-user-secret" style="color:#0d9488;"></i> Investigator Rank: <strong>Inspector</strong></span>
+            `;
+            arenaHud.classList.remove('hidden');
+        }
+        updateHUDXP();
+
+        loadNextGrammarCase();
+    }
+
+    function loadNextGrammarCase() {
+        let pool = GRAMMAR_CASES;
+        if (grammarCategory !== 'all') {
+            pool = GRAMMAR_CASES.filter(c => c.category === grammarCategory);
+            if (pool.length === 0) pool = GRAMMAR_CASES;
+        }
+
+        grammarCurrentCase = pool[Math.floor(Math.random() * pool.length)];
+
+        let optionsHtml = '';
+        grammarCurrentCase.options.forEach((opt, idx) => {
+            optionsHtml += `
+                <button onclick="handleGrammarAnswer(${idx})" class="grammar-opt-btn" aria-label="Option ${idx + 1}: ${opt}">
+                    <span style="display:inline-flex; align-items:center; justify-content:center; width:2rem; height:2rem; border-radius:50%; background:var(--color-bg-elevated); font-weight:800; font-size:0.85rem; border:1px solid var(--color-border);">${String.fromCharCode(65 + idx)}</span>
+                    <span>${opt}</span>
+                </button>
+            `;
+        });
+
+        arenaContent.innerHTML = `
+            <div class="grammar-case-container">
+                <div class="grammar-case-header">
+                    <span class="grammar-case-badge">
+                        <i class="fas fa-fingerprint"></i> ${grammarCurrentCase.caseNum}: ${grammarCurrentCase.title}
+                    </span>
+                    <span class="games-tag tag-teal" style="margin-bottom:0;">
+                        ${grammarCurrentCase.categoryLabel}
+                    </span>
+                </div>
+
+                <p style="font-size:0.95rem; color:var(--color-text-muted); margin:0;">
+                    <i class="fas fa-info-circle"></i> ${grammarCurrentCase.scenario}
+                </p>
+
+                <div class="grammar-sentence-card" role="region" aria-label="Mystery Sentence">
+                    "${grammarCurrentCase.sentence}"
+                </div>
+
+                <div class="grammar-options-grid" role="group" aria-label="Available solutions">
+                    ${optionsHtml}
+                </div>
+
+                <div id="grammar-result-area" class="hidden"></div>
+            </div>
+        `;
+
+        announce(`Case loaded: ${grammarCurrentCase.title}. ${grammarCurrentCase.scenario}`);
+    }
+
+    function handleGrammarAnswer(selectedIndex) {
+        if (!grammarCurrentCase) return;
+        const isCorrect = selectedIndex === grammarCurrentCase.correctIndex;
+        const resultArea = document.getElementById('grammar-result-area');
+        if (!resultArea) return;
+
+        arenaContent.querySelectorAll('.grammar-opt-btn').forEach((btn, idx) => {
+            btn.disabled = true;
+            if (idx === grammarCurrentCase.correctIndex) {
+                btn.style.borderColor = '#10b981';
+                btn.style.background = 'rgba(16, 185, 129, 0.15)';
+            } else if (idx === selectedIndex && !isCorrect) {
+                btn.style.borderColor = '#ef4444';
+                btn.style.background = 'rgba(239, 68, 68, 0.15)';
+            }
+        });
+
+        if (isCorrect) {
+            sounds.match();
+            grammarStreak++;
+            if (grammarStreak >= 3) sounds.streak();
+
+            const scores = getGameScores();
+            scores.grammar = scores.grammar || { bestStreak: 0, casesSolved: 0 };
+            scores.grammar.casesSolved = (scores.grammar.casesSolved || 0) + 1;
+            if (grammarStreak > (scores.grammar.bestStreak || 0)) {
+                scores.grammar.bestStreak = grammarStreak;
+            }
+            saveGameScores(scores);
+            recordGamePlayed();
+
+            let xpEarned = 30;
+            if (grammarStreak >= 3) xpEarned += 15;
+            awardXP(xpEarned, "Case Solved");
+
+            try {
+                let dq = JSON.parse(localStorage.getItem('hl_daily_quests') || '{}');
+                dq.ela = (dq.ela || 0) + 1;
+                localStorage.setItem('hl_daily_quests', JSON.stringify(dq));
+                window.dispatchEvent(new CustomEvent('hl:data-sync', { detail: { key: 'hl_daily_quests' } }));
+            } catch (e) {}
+
+            resultArea.className = 'grammar-explanation-box';
+            resultArea.innerHTML = `
+                <div style="display:flex; align-items:center; gap:0.5rem; color:#10b981; font-weight:800; font-size:1.1rem; margin-bottom:0.4rem;">
+                    <i class="fas fa-check-circle"></i> Case Solved! +${xpEarned} XP
+                </div>
+                <p style="margin-bottom:0.75rem;">${grammarCurrentCase.explanation}</p>
+                <div style="display:flex; justify-content:flex-end;">
+                    <button onclick="loadNextGrammarCase()" class="win-btn" id="grammar-next-btn" style="background:linear-gradient(135deg, #0d9488, #0f766e); color:white;">
+                        Next Case <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            `;
+            announce(`Case Solved! ${grammarCurrentCase.explanation}`);
+        } else {
+            sounds.wrong();
+            grammarStreak = 0;
+
+            resultArea.className = 'grammar-explanation-box';
+            resultArea.style.borderColor = 'rgba(239, 68, 68, 0.4)';
+            resultArea.style.background = 'rgba(239, 68, 68, 0.08)';
+            resultArea.innerHTML = `
+                <div style="display:flex; align-items:center; gap:0.5rem; color:#ef4444; font-weight:800; font-size:1.1rem; margin-bottom:0.4rem;">
+                    <i class="fas fa-times-circle"></i> Clue Missed!
+                </div>
+                <p style="margin-bottom:0.75rem;">${grammarCurrentCase.explanation}</p>
+                <div style="display:flex; justify-content:flex-end;">
+                    <button onclick="loadNextGrammarCase()" class="win-btn" id="grammar-next-btn" style="background:var(--color-bg-base); color:var(--color-text-main); border:1px solid var(--color-border);">
+                        Next Case <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            `;
+            announce(`Clue Missed! Correct answer was option ${String.fromCharCode(65 + grammarCurrentCase.correctIndex)}. ${grammarCurrentCase.explanation}`);
+        }
+
+        const streakNum = document.getElementById('grammar-streak-num');
+        if (streakNum) streakNum.textContent = grammarStreak;
+
+        setTimeout(() => {
+            const nextBtn = document.getElementById('grammar-next-btn');
+            if (nextBtn) nextBtn.focus();
         }, 100);
     }
 

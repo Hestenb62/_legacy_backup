@@ -1,4 +1,4 @@
-const CACHE_NAME = 'hestens-learning-v18';
+const CACHE_NAME = 'hestens-learning-v19';
 const ASSETS_TO_CACHE = [
 
   // Main Directory Pages & Manifest
@@ -23,6 +23,9 @@ const ASSETS_TO_CACHE = [
   '/pages/settings.php',
   '/pages/standards.php',
   '/pages/teachers.php',
+  '/pages/games.php',
+  '/pages/skills.php',
+  '/pages/manipulatives.php',
 
   // Images & Icons
   '/assets/images/6791421e-7ca7-40bd-83d3-06a479bf7f36.png',
@@ -38,6 +41,9 @@ const ASSETS_TO_CACHE = [
   '/assets/css/pages/interactive-labs.css',
   '/assets/css/pages/diagnostic.css',
   '/assets/css/pages/student.css',
+  '/assets/css/pages/games.css',
+  '/assets/css/pages/skills.css',
+  '/assets/css/pages/manipulatives.css',
   '/assets/css/level-style.css',
   '/assets/css/reader-main.css',
   '/assets/css/components/sticky-reading-bar.css',
@@ -77,6 +83,10 @@ const ASSETS_TO_CACHE = [
   '/assets/js/global-announcements.js',
   '/assets/js/global-core-ui.js',
   '/assets/js/gdrive-sync.js',
+  '/assets/js/command-palette.js',
+  '/assets/js/manipulatives-lab.js',
+  '/assets/js/skills-passport.js',
+  '/assets/js/dictionary-lookup.js',
   '/assets/data/global-learningLevels.js',
   '/assets/js/standards-ccss-math-ela.js'
 ];

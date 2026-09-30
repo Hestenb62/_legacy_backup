@@ -1,0 +1,726 @@
+/**
+ * assets/css/pages/manipulatives.css
+ * Styles for Interactive Digital Math & Science Manipulatives Lab
+ * WCAG AAA & UDL compliant, high contrast ready, theme responsive.
+ */
+
+.manipulatives-main {
+    min-height: 85vh;
+    padding-bottom: 4rem;
+}
+
+/* Hero */
+.manip-hero {
+    background: radial-gradient(circle at top right, color-mix(in srgb, #6366f1 18%, transparent), transparent 70%),
+                linear-gradient(180deg, var(--color-bg, #0f172a) 0%, var(--color-surface, #1e293b) 100%);
+    padding: 3.5rem 1.5rem 2.5rem 1.5rem;
+    border-bottom: 1px solid var(--color-border, rgba(255, 255, 255, 0.1));
+    text-align: center;
+}
+
+.manip-hero-container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.manip-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 0.95rem;
+    background: color-mix(in srgb, #6366f1 20%, transparent);
+    border: 1px solid color-mix(in srgb, #6366f1 40%, transparent);
+    color: #818cf8;
+    border-radius: 9999px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: 0.03em;
+}
+
+.manip-hero-title {
+    font-size: clamp(2rem, 4vw, 2.85rem);
+    font-weight: 800;
+    color: var(--color-text, #f8fafc);
+    margin: 0 0 1rem 0;
+    line-height: 1.15;
+}
+
+.manip-hero-desc {
+    font-size: 1.05rem;
+    color: var(--color-text-muted, #94a3b8);
+    max-width: 720px;
+    margin: 0 auto 2rem auto;
+    line-height: 1.6;
+}
+
+/* Tab Navigation Ribbon */
+.manip-nav-ribbon {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    background: var(--color-surface, rgba(30, 41, 59, 0.7));
+    padding: 0.4rem;
+    border-radius: 1rem;
+    border: 1px solid var(--color-border, rgba(255, 255, 255, 0.1));
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
+}
+
+.manip-tab-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: transparent;
+    border: 1px solid transparent;
+    color: var(--color-text-muted, #94a3b8);
+    padding: 0.65rem 1.25rem;
+    border-radius: 0.75rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.manip-tab-btn:hover {
+    color: var(--color-text, #f8fafc);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.manip-tab-btn:focus-visible {
+    outline: 3px solid #6366f1;
+    outline-offset: 2px;
+}
+
+.manip-tab-btn.active {
+    background: #4f46e5;
+    color: #ffffff;
+    border-color: #6366f1;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.35);
+}
+
+/* Content Container */
+.manip-content-container {
+    max-width: 1140px;
+    margin: 2.5rem auto 0 auto;
+    padding: 0 1.25rem;
+}
+
+/* Lab Panes */
+.manip-lab-pane {
+    display: none;
+    animation: paneFadeIn 0.25s ease-out;
+}
+
+.manip-lab-pane.active {
+    display: block;
+}
+
+@keyframes paneFadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Panel Header */
+.manip-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+    background: var(--color-surface, #1e293b);
+    border: 1px solid var(--color-border, rgba(255, 255, 255, 0.1));
+    border-radius: 1.25rem;
+    padding: 1.35rem 1.75rem;
+    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.15);
+}
+
+.manip-panel-title-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.manip-panel-icon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.85rem;
+    background: color-mix(in srgb, #6366f1 20%, transparent);
+    color: #818cf8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.35rem;
+    flex-shrink: 0;
+}
+
+.manip-panel-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--color-text, #f8fafc);
+    margin: 0 0 0.25rem 0;
+}
+
+.manip-panel-desc {
+    font-size: 0.9rem;
+    color: var(--color-text-muted, #94a3b8);
+    margin: 0;
+    max-width: 620px;
+    line-height: 1.5;
+}
+
+.manip-panel-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    flex-wrap: wrap;
+}
+
+/* Buttons & Controls */
+.manip-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.55rem 1.1rem;
+    border-radius: 0.65rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    border: 1px solid transparent;
+}
+
+.manip-btn:focus-visible {
+    outline: 3px solid #6366f1;
+    outline-offset: 2px;
+}
+
+.manip-btn-primary {
+    background: #4f46e5;
+    color: #ffffff;
+    border-color: #6366f1;
+}
+
+.manip-btn-primary:hover {
+    background: #4338ca;
+}
+
+.manip-btn-secondary {
+    background: var(--color-bg, #0f172a);
+    color: var(--color-text, #f8fafc);
+    border-color: var(--color-border, rgba(255, 255, 255, 0.15));
+}
+
+.manip-btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.manip-select {
+    background: var(--color-bg, #0f172a);
+    color: var(--color-text, #f8fafc);
+    border: 1px solid var(--color-border, rgba(255, 255, 255, 0.2));
+    padding: 0.45rem 0.85rem;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    outline: none;
+    cursor: pointer;
+}
+
+.manip-select:focus-visible {
+    border-color: #6366f1;
+    outline: 2px solid #6366f1;
+}
+
+/* ================================================= */
+/* LAB 1: FRACTIONS STYLES                           */
+/* ================================================= */
+.frac-workspace-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.frac-card {
+    background: var(--color-surface, #1e293b);
+    border: 1px solid var(--color-border, rgba(255, 255, 255, 0.1));
+    border-radius: 1.25rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.frac-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.25rem;
+}
+
+.frac-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.badge-a {
+    background: rgba(59, 130, 246, 0.2);
+    color: #60a5fa;
+    border: 1px solid rgba(59, 130, 246, 0.4);
+}
+
+.badge-b {
+    background: rgba(245, 158, 11, 0.2);
+    color: #fbbf24;
+    border: 1px solid rgba(245, 158, 11, 0.4);
+}
+
+.frac-control-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.frac-select-label {
+    font-size: 0.85rem;
+    color: var(--color-text-muted, #94a3b8);
+    font-weight: 500;
+}
+
+/* Fraction Strips */
+.frac-strip-track {
+    display: flex;
+    height: 3.5rem;
+    background: rgba(0, 0, 0, 0.25);
+    border: 2px solid var(--color-border, rgba(255, 255, 255, 0.2));
+    border-radius: 0.75rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.frac-segment {
+    flex: 1;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+    user-select: none;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    padding: 0;
+}
+
+.frac-segment:last-child {
+    border-right: none;
+}
+
+.frac-segment:focus-visible {
+    outline: 2px solid #ffffff;
+    z-index: 2;
+}
+
+.frac-segment.shaded-a {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: #ffffff;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.frac-segment.shaded-b {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    color: #ffffff;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.frac-value-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95rem;
+    color: var(--color-text, #f8fafc);
+}
+
+.frac-decimal {
+    font-weight: 700;
+    color: #818cf8;
+}
+
+/* Synthesis Box */
+.frac-synthesis-card {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 1.5rem;
+    align-items: center;
+    background: var(--color-surface, #1e293b);
+    border: 1px solid var(--color-border, rgba(255, 255, 255, 0.1));
+    border-radius: 1.25rem;
+    padding: 1.75rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.frac-synthesis-divider {
+    width: 1px;
+    height: 100%;
+    background: var(--color-border, rgba(255, 255, 255, 0.1));
+}
+
+.synthesis-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-text-muted, #94a3b8);
+    margin: 0 0 0.85rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.synthesis-math-box {
+    background: var(--color-bg, #0f172a);
+    border: 1px solid var(--color-border, rgba(255, 255, 255, 0.1));
+    border-radius: 0.85rem;
+    padding: 1rem 1.25rem;
+    font-size: 1.25rem;
+    text-align: center;
+    min-height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ================================================= */
+/* LAB 2: BASE-10 BLOCKS STYLES                      */
+/* ================================================= */
+.base10-hud-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    background: var(--color-surface, #1e293b);
+    border: 1px solid var(--color-border, rgba(255, 255, 255, 0.1));
+    border-radius: 1.25rem;
+    padding: 1.25rem 1.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.base10-total-display {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+}
+
+.base10-total-label {
+    font-size: 1rem;
+    color: var(--color-text-muted, #94a3b8);
+    font-weight: 600;
+}
+
+.base10-total-number {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: #10b981;
+    font-family: inherit;
+    line-height: 1;
+}
+
+.base10-expanded-form {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--color-text, #f8fafc);
+    background: var(--color-bg, #0f172a);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--color-border, rgba(255, 255, 255, 0.1));
+}
+
+.base10-columns-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.base10-col {
+    background: var(--color-surface, #1e293b);
+    border: 1px solid var(--color-border, rgba(255, 255, 255, 0.1));
+    border-radius: 1.25rem;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.base10-col-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.col-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--color-text, #f8fafc);
+}
+
+.col-count-badge {
+    background: #4f46e5;
+    color: #ffffff;
+    padding: 0.2rem 0.6rem;
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.base10-controls-row {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.btn-step {
+    flex: 1;
+    background: var(--color-bg, #0f172a);
+    border: 1px solid var(--color-border, rgba(255, 255, 255, 0.15));
+    color: var(--color-text, #f8fafc);
+    padding: 0.4rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.btn-step:hover {
+    background: #6366f1;
+    color: #ffffff;
+    border-color: #6366f1;
+}
+
+.base10-stage {
+    min-height: 220px;
+    background: var(--color-bg, #0f172a);
+    border: 1px dashed var(--color-border, rgba(255, 255, 255, 0.15));
+    border-radius: 0.75rem;
+    padding: 0.85rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-content: flex-start;
+    overflow-y: auto;
+    max-height: 320px;
+}
+
+/* Manipulative Block SVGs/Shapes */
+.block-unit {
+    width: 20px;
+    height: 20px;
+    background: #3b82f6;
+    border: 1px solid #1d4ed8;
+    border-radius: 2px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.block-rod {
+    width: 20px;
+    height: 90px;
+    background: #10b981;
+    border: 1px solid #047857;
+    border-radius: 2px;
+    background-image: repeating-linear-gradient(180deg, transparent, transparent 8px, rgba(0, 0, 0, 0.2) 8px, rgba(0, 0, 0, 0.2) 9px);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.block-flat {
+    width: 75px;
+    height: 75px;
+    background: #f59e0b;
+    border: 1px solid #b45309;
+    border-radius: 3px;
+    background-size: 15px 15px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.15) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(0, 0, 0, 0.15) 1px, transparent 1px);
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.block-cube {
+    width: 90px;
+    height: 90px;
+    background: linear-gradient(135deg, #ec4899, #be185d);
+    border: 2px solid #9d174d;
+    border-radius: 4px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 0.8rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* ================================================= */
+/* LAB 3: GRAPHER STYLES                             */
+/* ================================================= */
+.grapher-layout-grid {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 1.5rem;
+}
+
+.grapher-controls-sidebar {
+    background: var(--color-surface, #1e293b);
+    border: 1px solid var(--color-border, rgba(255, 255, 255, 0.1));
+    border-radius: 1.25rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.graph-type-selector {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.graph-label {
+    font-size: 0.85rem;
+    color: var(--color-text-muted, #94a3b8);
+    font-weight: 600;
+}
+
+.graph-slider-row {
+    margin-bottom: 0.85rem;
+}
+
+.graph-slider-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    margin-bottom: 0.25rem;
+    color: var(--color-text, #f8fafc);
+}
+
+.graph-slider-val {
+    font-weight: 700;
+    color: #818cf8;
+}
+
+.graph-range-input {
+    width: 100%;
+    accent-color: #6366f1;
+    cursor: pointer;
+}
+
+.graph-formula-box {
+    background: var(--color-bg, #0f172a);
+    border: 1px solid var(--color-border, rgba(255, 255, 255, 0.1));
+    border-radius: 0.75rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.formula-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted, #94a3b8);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.active-formula-math {
+    font-size: 1.25rem;
+    color: var(--color-text, #f8fafc);
+    min-height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.graph-features-list {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+    padding: 0.85rem;
+    font-size: 0.85rem;
+    color: var(--color-text-muted, #94a3b8);
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.feature-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.feature-val {
+    color: var(--color-text, #f8fafc);
+    font-weight: 600;
+}
+
+/* Canvas Container */
+.grapher-canvas-container {
+    background: var(--color-surface, #1e293b);
+    border: 1px solid var(--color-border, rgba(255, 255, 255, 0.1));
+    border-radius: 1.25rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.coordinate-plane {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    background: #090d16;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 0.75rem;
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.graph-zoom-indicator {
+    font-size: 0.75rem;
+    color: var(--color-text-muted, #94a3b8);
+    margin-top: 0.75rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .base10-columns-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grapher-layout-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .frac-synthesis-card {
+        grid-template-columns: 1fr;
+    }
+
+    .frac-synthesis-divider {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .base10-columns-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .manip-panel-header {
+        flex-direction: column;
+    }
+}

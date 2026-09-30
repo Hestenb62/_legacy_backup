@@ -365,8 +365,8 @@ body.zen-mode {
     </div>
 
     <!-- Micro-Progress Line (The only scroll indicator on page) -->
-    <div class="sticky-progress-line" aria-hidden="true">
-        <div id="sticky-progress-fill" class="sticky-progress-fill"></div>
+    <div class="sticky-progress-line" style="position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: rgba(0,0,0,0.1); overflow: hidden;" aria-hidden="true">
+        <div id="sticky-progress-fill" class="sticky-progress-fill" style="height: 100%; width: 0%; background: linear-gradient(90deg, #6366f1, #38bdf8); transition: width 0.1s ease;"></div>
     </div>
 </header>
 
@@ -1337,6 +1337,18 @@ body.zen-mode {
                 feedback.className = 'chk-feedback-box success';
                 feedback.innerHTML = `<i class="fas fa-award"></i> Excellent comprehension! You scored ${pct}% (${correctCount}/${activeCheckpointQuestions.length}). +25 XP awarded!`;
                 if (window.questManager) window.questManager.addXP(25, 'Reading Checkpoint Master');
+                try {
+                    const today = new Date().toISOString().slice(0, 10);
+                    const dQuests = JSON.parse(localStorage.getItem('hl_daily_quests') || '{}');
+                    if (dQuests.date === today) {
+                        dQuests.ela = Math.max(1, (dQuests.ela || 0) + 1);
+                        localStorage.setItem('hl_daily_quests', JSON.stringify(dQuests));
+                    }
+                    const gProf = JSON.parse(localStorage.getItem('hl_gamification_profile') || '{}');
+                    gProf.xp = (gProf.xp || 0) + 25;
+                    localStorage.setItem('hl_gamification_profile', JSON.stringify(gProf));
+                    window.dispatchEvent(new CustomEvent('hl:data-sync', { detail: { key: 'hl_daily_quests' } }));
+                } catch(e) {}
                 if (pct === 100 && typeof confetti === 'function') {
                     confetti({ particleCount: 80, spread: 60, origin: { y: 0.7 } });
                 }
@@ -1440,17 +1452,55 @@ body.zen-mode {
         document.getElementById('vocab-tip-def').textContent = 'Looking up definition...';
         tooltip.classList.remove('hidden');
 
-        try {
-            const res = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${selectedWord}`);
-            if (res.ok) {
-                const data = await res.json();
-                const def = data[0]?.meanings[0]?.definitions[0]?.definition || 'Definition available in Study Guide.';
-                document.getElementById('vocab-tip-def').textContent = def;
-            } else {
-                document.getElementById('vocab-tip-def').textContent = 'Definition not found in quick dictionary. Press Pronounce to listen.';
+        // Local offline lexicon fallback table for instant offline definitions
+        const OFFLINE_LEXICON = {
+            "paradox": "A seemingly self-contradictory statement that on investigation proves to be well-founded or true.",
+            "melancholy": "A feeling of pensive sadness, typically with no obvious cause; thoughtful gloom.",
+            "solemn": "Formal and dignified; serious and sober.",
+            "solitude": "The state or situation of being alone, especially in a peaceful, reflective way.",
+            "benevolent": "Well meaning and kindly; serving a charitable purpose.",
+            "malevolent": "Having or showing a wish to do evil to others.",
+            "sublime": "Of such excellence, grandeur, or beauty as to inspire great admiration or awe.",
+            "arduous": "Involving or requiring strenuous effort; difficult and tiring.",
+            "labyrinth": "A complicated irregular network of passages or paths; a maze.",
+            "ethereal": "Extremely delicate and light in a way that seems too perfect for this world.",
+            "epoch": "A period of time in history or a person's life marked by notable events.",
+            "visage": "A person's facial expression or countenance.",
+            "fathom": "Understand a difficult problem after much thought; measure water depth.",
+            "superfluous": "Unnecessary, especially through being more than enough; excessive.",
+            "ubiquitous": "Present, appearing, or found everywhere simultaneously.",
+            "ephemeral": "Lasting for a very short time; fleeting or transient.",
+            "aesthetic": "Concerned with beauty or the appreciation of beauty in art and nature.",
+            "lucid": "Expressed clearly; easy to understand; bright or luminous.",
+            "eloquent": "Fluent or persuasive in speaking or writing.",
+            "desolate": "Deserted of people and in a state of bleak and dismal emptiness.",
+            "tempest": "A violent windy storm, often accompanied by rain, hail, or snow.",
+            "insidious": "Proceeding in a gradual, subtle way, but with harmful effects.",
+            "ominous": "Giving the impression that something bad or unpleasant is going to happen.",
+            "tenacity": "The quality or fact of being able to grip something firmly; determination.",
+            "poignant": "Evoking a keen sense of sadness or regret; deeply touching.",
+            "resilience": "The capacity to recover quickly from difficulties; toughness.",
+            "candid": "Truthful and straightforward; frank and unreserved.",
+            "fervent": "Having or displaying a passionate intensity.",
+            "allegory": "A story, poem, or picture that can be interpreted to reveal a hidden moral meaning.",
+            "metaphor": "A figure of speech in which a word or phrase is applied to an object or action symbolically."
+        };
+
+        if (OFFLINE_LEXICON[selectedWord]) {
+            document.getElementById('vocab-tip-def').textContent = OFFLINE_LEXICON[selectedWord];
+        } else {
+            try {
+                const res = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${selectedWord}`);
+                if (res.ok) {
+                    const data = await res.json();
+                    const def = data[0]?.meanings[0]?.definitions[0]?.definition || 'Definition available in Study Guide.';
+                    document.getElementById('vocab-tip-def').textContent = def;
+                } else {
+                    document.getElementById('vocab-tip-def').textContent = `Vocabulary term: "${selectedWord}". Press Pronounce to listen aloud, or Add to Cards to save to your personal study deck.`;
+                }
+            } catch (err) {
+                document.getElementById('vocab-tip-def').textContent = `Vocabulary term: "${selectedWord}". Press Pronounce to listen aloud, or Add to Cards to save to your personal study deck.`;
             }
-        } catch (err) {
-            document.getElementById('vocab-tip-def').textContent = 'Double-clicked word. Press Pronounce to hear it aloud.';
         }
     });
 

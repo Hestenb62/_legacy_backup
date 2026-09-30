@@ -1762,13 +1762,25 @@
       loadNotebook();
       loadActiveNote();
     },
+    insertAtCursor: (text) => {
+      if (!dom.textarea) return;
+      const cur = getActiveNote();
+      const start = typeof dom.textarea.selectionStart === 'number' ? dom.textarea.selectionStart : dom.textarea.value.length;
+      const end = typeof dom.textarea.selectionEnd === 'number' ? dom.textarea.selectionEnd : dom.textarea.value.length;
+      const val = dom.textarea.value;
+      dom.textarea.value = val.substring(0, start) + text + val.substring(end);
+      dom.textarea.selectionStart = dom.textarea.selectionEnd = start + text.length;
+      dom.textarea.dispatchEvent(new Event('input'));
+      openScratchpad('notes');
+      announceStatus(`Inserted content into "${cur ? cur.title : 'active note'}"`);
+    },
     appendContent: (text) => {
       if (!dom.textarea) return;
       const cur = getActiveNote();
       const needsNewline = dom.textarea.value.length > 0 && !dom.textarea.value.endsWith('\n\n');
       dom.textarea.value += (needsNewline ? '\n\n' : '') + text;
       dom.textarea.dispatchEvent(new Event('input'));
-      openScratchpad();
+      openScratchpad('notes');
       announceStatus(`Appended content to "${cur.title}"`);
     }
   };

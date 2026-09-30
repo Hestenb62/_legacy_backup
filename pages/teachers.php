@@ -14,7 +14,7 @@ include '../src/header.php';
     <!-- Print-Only Header (Appears only when printing pacing guides for physical binders/portfolios) -->
     <div class="print-header-banner" style="display: none;">
         <h1>Hesten's Learning • 36-Week Curriculum Pacing Syllabus</h1>
-        <p>Standards-Aligned Academic Scope & Sequence (CCSS & NGSS Aligned) • hestenslearning.com</p>
+        <p>Standards-Aligned Academic Scope & Sequence (CCSS & NGSS Aligned) • hestena62.com</p>
     </div>
 
     <!-- Page Hero Banner -->

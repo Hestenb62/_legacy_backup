@@ -262,6 +262,9 @@ include '../src/header.php';
                             <button type="button" class="parents-tool-btn parents-tool-btn-gold" onclick="window.openCertificateModal && window.openCertificateModal()">
                                 <i class="fas fa-award"></i> Print Official Diploma
                             </button>
+                            <button type="button" class="parents-tool-btn parents-tool-btn-primary" style="background: linear-gradient(135deg, #4f46e5, #6366f1); border: none;" onclick="window.openIepBriefModal && window.openIepBriefModal()">
+                                <i class="fas fa-file-pdf"></i> Official Progress &amp; IEP Report
+                            </button>
                         </div>
                     </div>
 
@@ -1567,8 +1570,8 @@ include '../src/header.php';
                     <p class="iep-sheet-subtitle">Official Student Portfolio Document for IEP, 504 Plan, and Committee Reviews</p>
                 </div>
                 <div style="text-align: right; font-size: 0.75rem; color: #64748b;">
-                    <strong>Hesten's Learning Platform</strong><br>
-                    Standards-Aligned Portfolio
+                    <strong style="color: #0f172a;">Hesten's Learning • hestena62.com</strong><br>
+                    Standards-Aligned Portfolio &amp; IEP Brief
                 </div>
             </div>
 

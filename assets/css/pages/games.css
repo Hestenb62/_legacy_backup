@@ -141,6 +141,10 @@
   .card-math .games-card-bg-icon { color: var(--color-secondary); }
   .card-sprint .games-card-bg-icon { color: #f59e0b; }
   .card-sprint:hover { border-color: #f59e0b; }
+  .card-scramble .games-card-bg-icon { color: #8b5cf6; }
+  .card-scramble:hover { border-color: #8b5cf6; }
+  .card-grammar .games-card-bg-icon { color: #0d9488; }
+  .card-grammar:hover { border-color: #0d9488; }
 
   .games-card-content {
     position: relative;
@@ -159,11 +163,25 @@
   .tag-green { background-color: rgba(220, 252, 231, 1); color: rgba(22, 101, 52, 1); }
   .tag-blue { background-color: rgba(219, 234, 254, 1); color: rgba(30, 64, 175, 1); }
   .tag-amber { background-color: rgba(254, 243, 199, 1); color: rgba(180, 83, 9, 1); }
+  .tag-purple { background-color: rgba(243, 232, 255, 1); color: rgba(107, 33, 168, 1); }
+  .tag-teal { background-color: rgba(204, 251, 241, 1); color: rgba(15, 118, 110, 1); }
 
   [data-theme="dark"] .tag-amber,
   .dark .tag-amber {
     background-color: rgba(120, 53, 15, 0.4);
     color: #fbbf24;
+  }
+
+  [data-theme="dark"] .tag-purple,
+  .dark .tag-purple {
+    background-color: rgba(88, 28, 135, 0.4);
+    color: #d8b4fe;
+  }
+
+  [data-theme="dark"] .tag-teal,
+  .dark .tag-teal {
+    background-color: rgba(19, 78, 74, 0.4);
+    color: #5eead4;
   }
 
   .games-card-title {
@@ -1090,5 +1108,230 @@
 
   .sprint-play-again-btn {
     background: linear-gradient(135deg, #f59e0b, #ea580c) !important;
+  }
+
+  /* Word Scramble Studio Styles */
+  .scramble-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .scramble-hint-box {
+    background: var(--color-bg-base);
+    border: 1px dashed var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 1rem 1.25rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .scramble-hint-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-primary);
+    margin-bottom: 0.35rem;
+  }
+
+  .scramble-hint-text {
+    font-size: 1rem;
+    color: var(--color-text-main);
+    line-height: 1.5;
+  }
+
+  .scramble-slots-row {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    min-height: 3.5rem;
+    padding: 0.5rem;
+    width: 100%;
+  }
+
+  .scramble-slot {
+    width: 3.25rem;
+    height: 3.5rem;
+    border-bottom: 3px solid var(--color-primary);
+    background: var(--color-bg-base);
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--color-text-main);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.2s;
+  }
+
+  .scramble-tiles-pool {
+    display: flex;
+    justify-content: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  .scramble-letter-btn {
+    width: 3.25rem;
+    height: 3.5rem;
+    border-radius: var(--radius-md);
+    background: linear-gradient(135deg, #7c3aed, #6d28d9);
+    color: #ffffff;
+    font-size: 1.75rem;
+    font-weight: 800;
+    border: 2px solid transparent;
+    cursor: pointer;
+    box-shadow: 0 4px 6px -1px rgba(109, 40, 217, 0.3);
+    transition: all 0.15s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .scramble-letter-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 12px -2px rgba(109, 40, 217, 0.4);
+    filter: brightness(1.1);
+  }
+
+  .scramble-letter-btn:focus-visible {
+    outline: 3px solid #f59e0b;
+    outline-offset: 2px;
+  }
+
+  .scramble-letter-btn:disabled {
+    opacity: 0.25;
+    cursor: not-allowed;
+    transform: none;
+    background: var(--color-bg-base);
+    color: var(--color-text-muted);
+    border: 1px solid var(--color-border);
+    box-shadow: none;
+  }
+
+  .scramble-actions {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  /* Grammar Detective Styles */
+  .grammar-case-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+
+  .grammar-case-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--color-bg-base);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 0.75rem 1.25rem;
+  }
+
+  .grammar-case-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: #0d9488;
+  }
+
+  .grammar-sentence-card {
+    background: var(--color-bg-base);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: 1.5rem;
+    font-size: 1.25rem;
+    line-height: 1.7;
+    color: var(--color-text-main);
+    box-shadow: var(--shadow-md);
+  }
+
+  .grammar-word-token {
+    display: inline-block;
+    padding: 0.2rem 0.4rem;
+    margin: 0.15rem;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all 0.15s;
+    font-weight: 600;
+  }
+
+  .grammar-word-token:hover {
+    background: rgba(13, 148, 136, 0.15);
+    border-color: #0d9488;
+  }
+
+  .grammar-word-token:focus-visible {
+    outline: 3px solid #0d9488;
+    background: rgba(13, 148, 136, 0.2);
+  }
+
+  .grammar-options-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  @media (min-width: 640px) {
+    .grammar-options-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .grammar-opt-btn {
+    background: var(--color-bg-base);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 1rem 1.25rem;
+    text-align: left;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-text-main);
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .grammar-opt-btn:hover {
+    border-color: #0d9488;
+    background: rgba(13, 148, 136, 0.05);
+    transform: translateY(-1px);
+  }
+
+  .grammar-opt-btn:focus-visible {
+    outline: 3px solid #0d9488;
+  }
+
+  .grammar-explanation-box {
+    background: rgba(13, 148, 136, 0.08);
+    border: 1px solid rgba(13, 148, 136, 0.3);
+    border-radius: var(--radius-lg);
+    padding: 1rem 1.25rem;
+    color: var(--color-text-main);
+    font-size: 0.95rem;
+    line-height: 1.5;
   }
 }

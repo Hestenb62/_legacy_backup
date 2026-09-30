@@ -48,16 +48,16 @@ if (! function_exists('assetVersion')) {
 
 // Core Platform Version Definition
 if (! defined('HL_SITE_VERSION')) {
-    define('HL_SITE_VERSION', 'v2.5.0');
+    define('HL_SITE_VERSION', 'v2.6.0');
     }
 if (! defined('HL_SITE_VERSION_DATE')) {
     define('HL_SITE_VERSION_DATE', 'September 2026');
     }
 if (! defined('HL_SITE_VERSION_LABEL')) {
-    define('HL_SITE_VERSION_LABEL', 'September 2026 Release');
+    define('HL_SITE_VERSION_LABEL', 'September 2026 Platform Elevation Release');
     }
 if (! defined('HL_SITE_VERSION_SUMMARY')) {
-    define('HL_SITE_VERSION_SUMMARY', 'Unified Scratchpad Studio, Accessible UDL & Modern Design');
+    define('HL_SITE_VERSION_SUMMARY', 'Global Command Palette, Interactive Manipulatives Lab, Cosmic Skill Tree, & Expanded Games Hub');
     }
 ?>
 <!DOCTYPE html>
@@ -445,6 +445,8 @@ if (! defined('HL_SITE_VERSION_SUMMARY')) {
                         <div class="header-nav-links">
                             <a href="/" class="nav-link"><i class="fas fa-home"
                                     style="margin-right: 0.25rem; opacity: 0.7;"></i> Home</a>
+                            <a href="/pages/skills.php" class="nav-link"><i class="fas fa-project-diagram"
+                                    style="margin-right: 0.25rem; opacity: 0.7;"></i> Skills</a>
                             <a href="/assessment" class="nav-link"><i class="fas fa-tasks"
                                     style="margin-right: 0.25rem; opacity: 0.7;"></i> Assessment</a>
                             <a href="/library/" class="nav-link"><i class="fas fa-book"
@@ -674,6 +676,12 @@ if (! defined('HL_SITE_VERSION_SUMMARY')) {
                                     <div class="nav-mega-footer">
                                         <a href="/pages/standards.php" class="nav-mega-footer-link">
                                             <i class="fas fa-book"></i> Standards Explorer
+                                        </a>
+                                        <a href="/pages/skills.php" class="nav-mega-footer-link">
+                                            <i class="fas fa-project-diagram"></i> Skills Tree
+                                        </a>
+                                        <a href="/pages/manipulatives.php" class="nav-mega-footer-link">
+                                            <i class="fas fa-cubes-stacked"></i> Manipulatives Lab
                                         </a>
                                         <a href="/student/interactive-labs.php" class="nav-mega-footer-link">
                                             <i class="fas fa-flask"></i> Interactive Labs
@@ -912,23 +920,28 @@ if (! defined('HL_SITE_VERSION_SUMMARY')) {
             aria-label="Command Palette">
             <div class="cmd-palette-modal">
                 <div class="cmd-search-header">
-                    <i class="fas fa-search cmd-search-icon"></i>
+                    <i class="fas fa-search cmd-search-icon" aria-hidden="true"></i>
                     <input type="text" id="cmd-search-input" class="cmd-search-input"
-                        placeholder="Search lessons, standards, tools, books, or portals..." autocomplete="off"
-                        spellcheck="false">
+                        placeholder="Search lessons, standards, tools, books, or type '>' for actions..." autocomplete="off"
+                        spellcheck="false" aria-label="Search resources or type command">
+                    <button type="button" id="cmd-voice-btn" class="cmd-voice-btn" aria-label="Voice Search" title="Search with voice">
+                        <i class="fas fa-microphone" aria-hidden="true"></i>
+                    </button>
                     <button type="button" id="cmd-close-btn" class="cmd-close-btn" aria-label="Close Command Palette">
-                        <i class="fas fa-times"></i>
+                        <i class="fas fa-times" aria-hidden="true"></i>
                     </button>
                 </div>
-                <div class="cmd-filters-bar">
+                <div class="cmd-filters-bar" role="tablist" aria-label="Filter search categories">
                     <button type="button" class="cmd-filter-pill active" data-filter="all">All</button>
+                    <button type="button" class="cmd-filter-pill" data-filter="skills">Skills</button>
+                    <button type="button" class="cmd-filter-pill" data-filter="tools">Tools & Actions</button>
                     <button type="button" class="cmd-filter-pill" data-filter="curriculum">Curriculum</button>
                     <button type="button" class="cmd-filter-pill" data-filter="teacher">Teacher</button>
                     <button type="button" class="cmd-filter-pill" data-filter="parent">Parent</button>
                     <button type="button" class="cmd-filter-pill" data-filter="assessment">Assessment</button>
                     <button type="button" class="cmd-filter-pill" data-filter="library">Library</button>
                 </div>
-                <ul id="cmd-results-list" class="cmd-results-list" role="listbox">
+                <ul id="cmd-results-list" class="cmd-results-list" role="listbox" aria-label="Search suggestions">
                     <!-- Injected dynamically via JS -->
                 </ul>
                 <div class="cmd-footer">
@@ -937,10 +950,7 @@ if (! defined('HL_SITE_VERSION_SUMMARY')) {
                         <span class="cmd-key-hint"><kbd>↵</kbd> Select</span>
                         <span class="cmd-key-hint"><kbd>ESC</kbd> Close</span>
                     </div>
-                    <span>Hesten's Learning Quick-Launcher</span>
+                    <span>Hesten's Learning • hestena62.com</span>
                 </div>
             </div>
         </div>
-
-        <!-- Command Palette Engine -->
-        <script src="<?= assetVersion('/assets/js/command-palette.js') ?>"></script>

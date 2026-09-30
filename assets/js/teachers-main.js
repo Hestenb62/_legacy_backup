@@ -1562,11 +1562,166 @@
   }
 
   function printStudentDossier() {
-    document.body.classList.add('printing-dossier');
-    window.print();
+    const student = activeDossierStudent || (getRoster() && getRoster()[0]);
+    if (!student) {
+      window.print();
+      return;
+    }
+
+    const mathScore = student.math !== undefined ? student.math : 85;
+    const elaScore = student.ela !== undefined ? student.ela : 80;
+    const sciScore = student.science !== undefined ? student.science : 75;
+    const socScore = student.social !== undefined ? student.social : 75;
+    const avg = Math.round((mathScore + elaScore + sciScore + socScore) / 4);
+    const standards = student.standards || {};
+    const accoms = student.accommodations || [];
+    const notes = document.getElementById('dossier-teacher-notes') ? document.getElementById('dossier-teacher-notes').value : (student.notes || 'No qualitative observations recorded.');
+
+    const printFrame = document.createElement('iframe');
+    printFrame.style.position = 'fixed';
+    printFrame.style.right = '0';
+    printFrame.style.bottom = '0';
+    printFrame.style.width = '0';
+    printFrame.style.height = '0';
+    printFrame.style.border = '0';
+    document.body.appendChild(printFrame);
+
+    const doc = printFrame.contentWindow.document;
+    doc.open();
+    doc.write(`<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Progress & IEP Dossier - ${escapeHtml(student.name)}</title>
+  <style>
+    @page { size: letter portrait; margin: 15mm 15mm; }
+    * { box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #0f172a; margin: 0; padding: 1.5rem; line-height: 1.5; font-size: 11pt; }
+    .header { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 2px solid #0f172a; padding-bottom: 0.85rem; margin-bottom: 1.25rem; }
+    .header-brand { font-size: 16pt; font-weight: 800; color: #0f172a; margin: 0 0 2px 0; }
+    .header-sub { font-size: 9pt; color: #475569; margin: 0; }
+    .header-right { text-align: right; font-size: 8.5pt; color: #475569; }
+    .meta-table { width: 100%; border-collapse: collapse; margin-bottom: 1.25rem; font-size: 10pt; }
+    .meta-table td { padding: 6px 10px; border: 1px solid #cbd5e1; }
+    .meta-label { background: #f8fafc; font-weight: 700; width: 22%; color: #334155; }
+    .section-heading { font-size: 10.5pt; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: #1e293b; border-bottom: 1px solid #94a3b8; padding-bottom: 3px; margin: 1.25rem 0 0.65rem 0; }
+    .score-table { width: 100%; border-collapse: collapse; margin-bottom: 1.25rem; font-size: 10pt; }
+    .score-table th, .score-table td { border: 1px solid #cbd5e1; padding: 6px 10px; text-align: left; }
+    .score-table th { background: #f1f5f9; font-weight: 700; }
+    .tag-grid { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 1rem; }
+    .tag { font-size: 8.5pt; font-weight: 700; padding: 3px 8px; border-radius: 4px; border: 1px solid #cbd5e1; background: #f8fafc; }
+    .tag-mastered { background: #ecfdf5; border-color: #a7f3d0; color: #047857; }
+    .tag-weak { background: #fff1f2; border-color: #fecdd3; color: #be123c; }
+    .notes-box { background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 6px; padding: 10px; font-size: 9.5pt; min-height: 50px; white-space: pre-wrap; margin-bottom: 1.5rem; }
+    .sig-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem; font-size: 9pt; }
+    .sig-line { border-top: 1px solid #0f172a; padding-top: 4px; display: flex; justify-content: space-between; }
+    .footer { text-align: center; font-size: 8pt; color: #64748b; margin-top: 2rem; border-top: 1px solid #e2e8f0; padding-top: 8px; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div>
+      <h1 class="header-brand">Hesten's Learning</h1>
+      <p class="header-sub">Official Student Competency & IEP Progress Dossier • hestena62.com</p>
+    </div>
+    <div class="header-right">
+      <strong>Institutional Verification</strong><br>
+      Generated: ${new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}<br>
+      Reference ID: HL-DOS-${String(student.id || 'STU1').toUpperCase()}
+    </div>
+  </div>
+
+  <table class="meta-table">
+    <tr>
+      <td class="meta-label">Student Name:</td>
+      <td><strong>${escapeHtml(student.name)}</strong></td>
+      <td class="meta-label">Grade Band:</td>
+      <td><strong>${escapeHtml(student.grade)}</strong></td>
+    </tr>
+    <tr>
+      <td class="meta-label">Evaluation Date:</td>
+      <td>${escapeHtml(student.lastCheck || 'Current Session')}</td>
+      <td class="meta-label">Overall Status:</td>
+      <td><strong>${avg >= 85 ? 'Honors Proficient' : avg >= 70 ? 'On Track' : 'Targeted Support'} (${avg}%)</strong></td>
+    </tr>
+  </table>
+
+  <div class="section-heading">Subject Competency & Performance Breakdown</div>
+  <table class="score-table">
+    <thead>
+      <tr>
+        <th>Academic Domain</th>
+        <th>Demonstrated Mastery</th>
+        <th>Proficiency Standing</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Mathematics (CCSS)</strong></td>
+        <td>${mathScore}%</td>
+        <td>${mathScore >= 80 ? 'Mastered' : mathScore >= 70 ? 'Approaching' : 'Intervention Needed'}</td>
+      </tr>
+      <tr>
+        <td><strong>English Language Arts (CCSS)</strong></td>
+        <td>${elaScore}%</td>
+        <td>${elaScore >= 80 ? 'Mastered' : elaScore >= 70 ? 'Approaching' : 'Intervention Needed'}</td>
+      </tr>
+      <tr>
+        <td><strong>Science & Engineering (NGSS)</strong></td>
+        <td>${sciScore}%</td>
+        <td>${sciScore >= 80 ? 'Mastered' : sciScore >= 70 ? 'Approaching' : 'Intervention Needed'}</td>
+      </tr>
+      <tr>
+        <td><strong>Social Studies & Civics (C3)</strong></td>
+        <td>${socScore}%</td>
+        <td>${socScore >= 80 ? 'Mastered' : socScore >= 70 ? 'Approaching' : 'Intervention Needed'}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="section-heading">Demonstrated Competencies (≥80%)</div>
+  <div class="tag-grid">
+    ${Object.keys(standards).filter(k => (Number(standards[k]) || 0) >= 80).map(k => `<span class="tag tag-mastered">${escapeHtml(k)} (${standards[k]}%)</span>`).join('') || '<span style="font-size:9pt; color:#64748b; font-style:italic;">No evaluated standards at ≥80% yet.</span>'}
+  </div>
+
+  <div class="section-heading">Priority Targeted Remediation (<70%)</div>
+  <div class="tag-grid">
+    ${Object.keys(standards).filter(k => (Number(standards[k]) || 0) < 70).map(k => `<span class="tag tag-weak">${escapeHtml(k)} (${standards[k]}%)</span>`).join('') || '<span style="font-size:9pt; color:#047857; font-weight:600;">All evaluated standards performing at or above 70%.</span>'}
+  </div>
+
+  <div class="section-heading">Active IEP & Section 504 Instructional Accommodations</div>
+  <div class="tag-grid">
+    ${accoms.length > 0 ? accoms.map(a => `<span class="tag">${escapeHtml(a)}</span>`).join('') : '<span style="font-size:9pt; color:#64748b; font-style:italic;">Standard general education environment.</span>'}
+  </div>
+
+  <div class="section-heading">Educator Qualitative Observations & Diagnostic Notes</div>
+  <div class="notes-box">${escapeHtml(notes)}</div>
+
+  <div class="sig-grid">
+    <div class="sig-line">
+      <span>Classroom Educator / Case Manager Signature</span>
+      <span>Date</span>
+    </div>
+    <div class="sig-line">
+      <span>Parent / Guardian Signature</span>
+      <span>Date</span>
+    </div>
+  </div>
+
+  <div class="footer">
+    Official Academic Record • Hesten's Learning (hestena62.com) • 100% Free Open Educational Platform
+  </div>
+</body>
+</html>`);
+    doc.close();
+
     setTimeout(() => {
-      document.body.classList.remove('printing-dossier');
-    }, 1000);
+      printFrame.contentWindow.focus();
+      printFrame.contentWindow.print();
+      setTimeout(() => {
+        if (printFrame.parentNode) printFrame.parentNode.removeChild(printFrame);
+      }, 2000);
+    }, 300);
   }
 
   function initClassRosterTracker() {

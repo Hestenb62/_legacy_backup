@@ -114,6 +114,39 @@
     font-weight: 500;
 }
 
+.cmd-voice-btn {
+    background: var(--color-bg, #f1f5f9);
+    border: 1px solid var(--color-border, #cbd5e1);
+    border-radius: 0.5rem;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6366f1;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+}
+
+.cmd-voice-btn:hover {
+    background: color-mix(in srgb, #6366f1 15%, transparent);
+    border-color: #6366f1;
+    color: #4f46e5;
+}
+
+.cmd-voice-btn.listening {
+    background: #ef4444 !important;
+    border-color: #dc2626 !important;
+    color: #ffffff !important;
+    animation: voicePulse 1s infinite alternate;
+}
+
+@keyframes voicePulse {
+    from { transform: scale(1); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }
+    to { transform: scale(1.08); box-shadow: 0 0 0 6px rgba(239, 68, 68, 0); }
+}
+
 .cmd-close-btn {
     background: var(--color-bg, #f1f5f9);
     border: 1px solid var(--color-border, #cbd5e1);
