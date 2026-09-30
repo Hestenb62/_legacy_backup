@@ -181,6 +181,72 @@ include_once ABSPATH . 'src/partials/sticky-reading-bar.php';
             </div>
         </section>
 
+        <!-- Official Curriculum Worksheets & Downloads Panel -->
+        <?php if (!empty($lesson['resources']) && is_array($lesson['resources'])): ?>
+        <section class="lesson-resources-section" aria-labelledby="resources-heading">
+            <div class="lesson-resources-header">
+                <h3 id="resources-heading" class="lesson-resources-title">
+                    <i class="fas fa-file-invoice" aria-hidden="true"></i> Official Curriculum Worksheets &amp; Printables
+                </h3>
+                <span class="lesson-resources-tag">Eureka Math / EngageNY Aligned</span>
+            </div>
+            <div class="lesson-resources-grid">
+                <!-- Student Worksheet Card -->
+                <div class="lesson-resource-card">
+                    <div class="lesson-resource-info">
+                        <div class="lesson-resource-icon-wrap student" aria-hidden="true">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div class="lesson-resource-text">
+                            <h4>Student Classwork &amp; Problem Set</h4>
+                            <p>Complete student materials including exploratory prompts, classwork exercises, and problem sets.</p>
+                        </div>
+                    </div>
+                    <div class="lesson-resource-actions">
+                        <?php if (!empty($lesson['resources']['studentPdf'])): ?>
+                            <a href="<?php echo htmlspecialchars($lesson['resources']['studentPdf']); ?>" target="_blank" rel="noopener noreferrer" class="lesson-resource-btn pdf" aria-label="Open Student Worksheet PDF">
+                                <i class="fas fa-file-pdf" aria-hidden="true"></i> Open PDF
+                            </a>
+                        <?php endif; ?>
+                        <?php if (!empty($lesson['resources']['studentDocx'])): ?>
+                            <a href="<?php echo htmlspecialchars($lesson['resources']['studentDocx']); ?>" download class="lesson-resource-btn docx" aria-label="Download Student Worksheet in Word format">
+                                <i class="fas fa-file-word" aria-hidden="true"></i> Word (.docx)
+                            </a>
+                        <?php endif; ?>
+                        <button type="button" onclick="window.print()" class="lesson-resource-btn print" aria-label="Print this lesson worksheet">
+                            <i class="fas fa-print" aria-hidden="true"></i> Print
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Teacher Edition & Key Card -->
+                <div class="lesson-resource-card teacher">
+                    <div class="lesson-resource-info">
+                        <div class="lesson-resource-icon-wrap teacher" aria-hidden="true">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <div class="lesson-resource-text">
+                            <h4>Teacher Edition &amp; Solutions Key</h4>
+                            <p>Full lesson plan, pedagogical scaffolding notes, exit ticket keys, and problem set sample solutions.</p>
+                        </div>
+                    </div>
+                    <div class="lesson-resource-actions">
+                        <?php if (!empty($lesson['resources']['teacherPdf'])): ?>
+                            <a href="<?php echo htmlspecialchars($lesson['resources']['teacherPdf']); ?>" target="_blank" rel="noopener noreferrer" class="lesson-resource-btn pdf" aria-label="Open Teacher Guide PDF">
+                                <i class="fas fa-file-pdf" aria-hidden="true"></i> Teacher PDF
+                            </a>
+                        <?php endif; ?>
+                        <?php if (!empty($lesson['resources']['teacherDocx'])): ?>
+                            <a href="<?php echo htmlspecialchars($lesson['resources']['teacherDocx']); ?>" download class="lesson-resource-btn docx" aria-label="Download Teacher Guide in Word format">
+                                <i class="fas fa-file-word" aria-hidden="true"></i> Teacher DOCX
+                            </a>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <?php endif; ?>
+
         <!-- Dynamic Content -->
         <?php foreach (($lesson['content'] ?? []) as $block): ?>
             <?php 
@@ -446,6 +512,41 @@ include_once ABSPATH . 'src/partials/sticky-reading-bar.php';
             ];
         }
         ?>
+
+        <?php if (!empty($lesson['exitTicket']) && is_array($lesson['exitTicket'])): ?>
+        <!-- Official Exit Ticket & Solutions Key (Eureka Math / EngageNY) -->
+        <section class="lesson-exit-ticket-section" aria-labelledby="exit-ticket-heading" style="margin-top: 2.5rem; margin-bottom: 1.5rem;">
+            <details class="lesson-solution-accordion" ontoggle="if(this.open && typeof window.ensureMathJax==='function') window.ensureMathJax(this);" style="background: var(--color-surface); border: 1.5px solid color-mix(in srgb, var(--color-primary, #e11d48) 25%, transparent); border-radius: 1.25rem; overflow: hidden; box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);">
+                <summary style="padding: 1.25rem 1.75rem; font-weight: 800; font-size: 1.05rem; cursor: pointer; display: flex; align-items: center; justify-content: space-between; color: var(--color-text-default); list-style: none; user-select: none;">
+                    <span style="display: inline-flex; align-items: center; gap: 0.75rem;">
+                        <i class="fas fa-clipboard-list" style="color: var(--color-primary); font-size: 1.15rem;" aria-hidden="true"></i>
+                        <span id="exit-ticket-heading"><?php echo htmlspecialchars($lesson['exitTicket']['title'] ?? 'Official Exit Ticket & Teacher Key (EngageNY / Eureka Math)'); ?></span>
+                    </span>
+                    <span class="lesson-accordion-badge" style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; padding: 0.35rem 0.85rem; border-radius: 9999px; background: color-mix(in srgb, var(--color-primary) 12%, transparent); color: var(--color-primary); display: inline-flex; align-items: center; gap: 0.4rem;">
+                        <i class="fas fa-key"></i> Teacher Key Included
+                    </span>
+                </summary>
+                <div style="padding: 1.5rem 1.75rem 2rem; border-top: 1px solid color-mix(in srgb, var(--color-primary) 15%, transparent); background: color-mix(in srgb, var(--color-surface) 97%, var(--color-primary) 3%);">
+                    <div style="margin-bottom: 1.5rem;">
+                        <h4 style="font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-primary); margin: 0 0 0.5rem 0; display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="fas fa-question-circle"></i> Official Exit Ticket Question Prompt
+                        </h4>
+                        <div style="font-size: 0.95rem; line-height: 1.65; color: var(--color-text-default); background: var(--color-surface); padding: 1.15rem 1.35rem; border-radius: 0.85rem; border: 1px solid color-mix(in srgb, var(--color-primary) 20%, transparent); border-left: 4px solid var(--color-primary);">
+                            <?php echo nl2br(htmlspecialchars($lesson['exitTicket']['prompt'] ?? '')); ?>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: #16a34a; margin: 0 0 0.5rem 0; display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="fas fa-check-double"></i> Verbatim Teacher Sample Solution &amp; Answer Key Work
+                        </h4>
+                        <div style="font-size: 0.95rem; line-height: 1.65; color: var(--color-text-default); background: var(--color-surface); padding: 1.15rem 1.35rem; border-radius: 0.85rem; border: 1px solid color-mix(in srgb, #16a34a 25%, transparent); border-left: 4px solid #16a34a;">
+                            <?php echo nl2br(htmlspecialchars($lesson['exitTicket']['solution'] ?? '')); ?>
+                        </div>
+                    </div>
+                </div>
+            </details>
+        </section>
+        <?php endif; ?>
 
         <!-- Interactive Check Understanding Trigger Card -->
         <section class="lesson-check-understanding-card" style="margin-top: 2.5rem; margin-bottom: 2rem; padding: 1.75rem 2rem; background: color-mix(in srgb, var(--color-primary, #e11d48) 5%, var(--color-surface)); border: 1px solid color-mix(in srgb, var(--color-primary, #e11d48) 20%, transparent); border-radius: 1.25rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1.5rem;">

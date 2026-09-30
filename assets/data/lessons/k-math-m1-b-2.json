@@ -50,26 +50,26 @@
     ],
     "practiceQuestions": [
         {
-            "question": "Which sequence of properties formally justifies that $(pq)r$ is equivalent to $(qr)p$?",
+            "question": "Which sequence of properties rigorously proves the algebraic equivalence of $pqr$ and $qrp$?",
             "options": [
-                "Associative property: $(pq)r = p(qr)$, followed by commutative property: $p(qr) = (qr)p$.",
-                "Distributive property followed by division property.",
-                "Commutative property only.",
-                "Zero product property followed by transitive property."
+                "$pqr = (pq)r = (qp)r = q(pr) = q(rp) = qrp$ using commutativity and associativity of multiplication",
+                "$pqr = p(q + r) = pq + pr = qrp$ using the distributive property",
+                "$pqr = pqr + 0 = qrp$ using the additive identity property",
+                "$pqr = (pqr)^1 = qrp$ using the power of a product rule"
             ],
             "correct": 0,
-            "explanation": "First apply associativity to regroup: $(pq)r = p(qr)$. Then apply commutativity to swap the two factors: $p(qr) = (qr)p$."
+            "explanation": "From the official Eureka Math Exit Ticket Key: Group $pqr$ as $(pq)r$, apply commutativity to get $(qp)r$, apply associativity to get $q(pr)$, apply commutativity to $pr$ to get $q(rp)$, and rewrite as $qrp$."
         },
         {
-            "question": "Why is subtraction NOT associative? Consider $(8 - 4) - 2$ versus $8 - (4 - 2)$.",
+            "question": "Why is the associative property necessary when reordering three or more multiplied terms like $(a \\cdot b) \\cdot c$?",
             "options": [
-                "$(8 - 4) - 2 = 2$, but $8 - (4 - 2) = 6$. Since the results differ, subtraction is not associative.",
-                "Because subtraction cannot be performed with parentheses.",
-                "Because subtraction only works for negative numbers.",
-                "Both expressions actually evaluate to 2, so it is associative."
+                "Because multiplication is formally defined as a binary operation between two elements at a time, so regrouping requires $(ab)c = a(bc)$.",
+                "Because numbers cannot be multiplied without converting to fractions first.",
+                "Because without associativity, multiplying three numbers always produces zero.",
+                "Because variables do not follow standard arithmetic rules unless parenthesized."
             ],
             "correct": 0,
-            "explanation": "Evaluating $(8 - 4) - 2 = 4 - 2 = 2$. However $8 - (4 - 2) = 8 - 2 = 6$. Because $2 \\neq 6$, grouping alters subtraction results."
+            "explanation": "Multiplication is strictly a binary operation. The associative property $(ab)c = a(bc)$ allows us to evaluate combinations regardless of parenthetical grouping."
         }
     ],
     "citation": {
@@ -144,5 +144,17 @@
             "finalAnswer": "(12 - 7) - 3 = 2 \\neq 8 = 12 - (7 - 3). \\quad \\text{Subtraction is NOT associative.}",
             "commonPitfall": "Dropping parentheses when removing a minus sign. Remember $-(b - c) = -b + c$."
         }
-    ]
+    ],
+    "resources": {
+        "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-b-lesson-7-student.pdf",
+        "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-b-lesson-7-student.docx",
+        "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-b-lesson-7-teacher.pdf",
+        "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-b-lesson-7-teacher.docx",
+        "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
+    },
+    "exitTicket": {
+        "title": "Lesson 7 Exit Ticket: Algebraic Expressions—The Commutative and Associative Properties",
+        "prompt": "Write a mathematical proof of the algebraic equivalence of pqr and qrp.",
+        "solution": "Proof:\npqr = (pq)r        [By definition of sequential multiplication]\n    = (qp)r        [By commutative property of multiplication]\n    = q(pr)        [By associative property of multiplication]\n    = q(rp)        [By commutative property of multiplication]\n    = qrp          [By definition of sequential multiplication]"
+    }
 }

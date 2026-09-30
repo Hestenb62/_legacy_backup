@@ -46,33 +46,82 @@
     ],
     "practiceQuestions": [
         {
-            "question": "A student solves $x^2 = 4x$ by dividing both sides by $x$, getting $x = 4$. What error was committed?",
+            "question": "Solve the equation $5(2x - 4) - 11 = 4 + 3x$ for $x$ and identify the valid solution set:",
             "options": [
-                "The student lost the valid solution $x = 0$ by dividing by a variable that could be zero.",
-                "The student should have divided by 4 instead.",
-                "The student should have squared both sides.",
-                "There was no error; $x = 4$ is the only solution."
+                "$\\{5\\}$",
+                "$\\{7\\}$",
+                "$\\{-5\\}$",
+                "$\\{5, -2\\}$"
             ],
             "correct": 0,
-            "explanation": "If $x = 0$, dividing by $x$ divides by zero. Factoring $x^2 - 4x = 0 \\implies x(x - 4) = 0$ reveals TWO solutions: $x = 0$ and $x = 4$."
+            "explanation": "From the official Eureka Math Exit Ticket Key:\n$5(2x - 4) - 11 = 4 + 3x \\implies 10x - 20 - 11 = 4 + 3x \\implies 10x - 31 = 4 + 3x \\implies 7x = 35 \\implies x = 5$."
         },
         {
-            "question": "Why does squaring both sides of $\\sqrt{x} = -3$ introduce an extraneous solution?",
+            "question": "Why does multiplying both sides of an equation $A = B$ by an algebraic expression like $(x + 2)$ create a potential mathematical danger?",
             "options": [
-                "Because squaring $(-3)$ gives $+9$, but $\\sqrt{9} = +3 \\neq -3$.",
-                "Because negative numbers cannot be squared.",
-                "Because square roots cannot be used in algebra.",
-                "Because 9 is not a real number."
+                "Because if $x = -2$, $(x + 2) = 0$, and multiplying by zero introduces an extraneous solution ($x = -2$) not present in the original equation.",
+                "Because algebraic expressions can never be multiplied across equal signs.",
+                "Because it changes the degree of the equation without altering any solutions.",
+                "Because dividing by zero is equivalent to multiplying by zero."
             ],
             "correct": 0,
-            "explanation": "The principal square root is non-negative, so $\\sqrt{x} = -3$ has NO real solution. Squaring gives $x = 9$, which does not satisfy the original equation."
+            "explanation": "Multiplying both sides of an equation by an expression containing the variable can produce an extraneous root whenever that multiplier equals zero (here, $x + 2 = 0 \\implies x = -2$)."
         }
     ],
     "citation": {
         "title": "Source Citation (MLA)",
         "text": "Great Minds. \"Some Potential Dangers When Solving Equations.\" Eureka Math, New York State Common Core Mathematics Curriculum, Algebra I, Module 1, Topic C, Lesson 13.",
-        "subtext": "Aligned with CCSS.MATH.CONTENT.HSA.REI.A.1 \u2022 Explain each step in solving a simple equation as following from the equality of numbers.",
+        "subtext": "Aligned with CCSS.MATH.CONTENT.HSA.REI.A.1 • Explain each step in solving a simple equation as following from the equality of numbers.",
         "lessonId": "L-ID-ALG-K-M1-C-4"
     },
-    "scripts": "\n        function showTrap(n) {\n            [1, 2, 3].forEach(i => {\n                const b = document.getElementById('btn-trap-' + i);\n                if (b) b.classList.toggle('active', i === n);\n            });\n\n            const title = document.getElementById('trap-title');\n            const math = document.getElementById('trap-math');\n            const expl = document.getElementById('trap-expl');\n\n            if (n === 1) {\n                title.innerText = 'Danger 1: Multiplying Both Sides by 0';\n                math.innerHTML = 'Start: x = 5 &bull; Multiply by 0: 0 &bull; x = 0 &bull; 5 &rArr; 0 = 0';\n                expl.innerText = 'Multiplying by 0 collapses all information and artificially expands the solution set from {5} to ALL REAL NUMBERS.';\n            } else if (n === 2) {\n                title.innerText = 'Danger 2: Dividing by a Variable Expression';\n                math.innerHTML = 'Start: x\u00b2 = 3x &bull; Divide by x: x = 3 (Lost x = 0!)';\n                expl.innerText = 'Dividing by x assumes x \u2260 0. If x = 0 was a valid solution (and it is, since 0\u00b2 = 3(0)), dividing by x destroys that solution!';\n            } else if (n === 3) {\n                title.innerText = 'Danger 3: Squaring Both Sides (Extraneous Roots)';\n                math.innerHTML = 'Start: x = -4 &bull; Square both sides: x\u00b2 = 16 &rArr; x = \u00b14';\n                expl.innerText = 'Squaring both sides makes negative numbers positive, creating false positive mirror solutions like x = 4 that did not exist initially.';\n            }\n        }\n        "
+    "scripts": "\n        function showTrap(n) {\n            [1, 2, 3].forEach(i => {\n                const b = document.getElementById('btn-trap-' + i);\n                if (b) b.classList.toggle('active', i === n);\n            });\n\n            const title = document.getElementById('trap-title');\n            const math = document.getElementById('trap-math');\n            const expl = document.getElementById('trap-expl');\n\n            if (n === 1) {\n                title.innerText = 'Danger 1: Multiplying Both Sides by 0';\n                math.innerHTML = 'Start: x = 5 &bull; Multiply by 0: 0 &bull; x = 0 &bull; 5 &rArr; 0 = 0';\n                expl.innerText = 'Multiplying by 0 collapses all information and artificially expands the solution set from {5} to ALL REAL NUMBERS.';\n            } else if (n === 2) {\n                title.innerText = 'Danger 2: Dividing by a Variable Expression';\n                math.innerHTML = 'Start: x² = 3x &bull; Divide by x: x = 3 (Lost x = 0!)';\n                expl.innerText = 'Dividing by x assumes x ≠ 0. If x = 0 was a valid solution (and it is, since 0² = 3(0)), dividing by x destroys that solution!';\n            } else if (n === 3) {\n                title.innerText = 'Danger 3: Squaring Both Sides (Extraneous Roots)';\n                math.innerHTML = 'Start: x = -4 &bull; Square both sides: x² = 16 &rArr; x = ±4';\n                expl.innerText = 'Squaring both sides makes negative numbers positive, creating false positive mirror solutions like x = 4 that did not exist initially.';\n            }\n        }\n        ",
+    "resources": {
+        "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-13-student.pdf",
+        "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-13-student.docx",
+        "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-13-teacher.pdf",
+        "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-13-teacher.docx",
+        "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
+    },
+    "exitTicket": {
+        "title": "Lesson 13 Exit Ticket: Some Potential Dangers when Solving Equations",
+        "prompt": "Solve the equation for x. For each step, describe the operation and/or properties used: 5(2x - 4) - 11 = 4 + 3x. Consider the equation x + 4 = 3x + 2: show that multiplying both sides by (x + 2) introduces an extraneous solution x = -2.",
+        "solution": "Solving 5(2x - 4) - 11 = 4 + 3x:\n10x - 20 - 11 = 4 + 3x [Distributive property]\n10x - 31 = 4 + 3x [Combine like terms]\n7x - 31 = 4 [Subtract 3x from both sides]\n7x = 35 [Add 31 to both sides]\nx = 5 [Divide both sides by 7]\nSolution set: {5}.\nMultiplying (x + 4) = (3x + 2) by (x + 2) yields (x + 2)(x + 4) = (x + 2)(3x + 2). Substituting x = -2 gives 0 = 0, creating the extraneous solution x = -2."
+    },
+    "guidedExercises": [
+        {
+            "title": "Example 1: Identifying Extraneous Roots from Variable Multiplication",
+            "badge": "Eureka Math Guided Classwork",
+            "difficulty": "Critical Thinking",
+            "problem": "Solve the rational equation $\\frac{x^2 - 4}{x - 2} = 4$. Identify any potential dangers and determine if the algebraic solution is valid.",
+            "scaffolding": "State domain restrictions before clearing denominators. A denominator can never equal zero.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Establish domain restriction",
+                    "math": "x - 2 \\neq 0 \\implies x \\neq 2",
+                    "explanation": "Division by zero is undefined. The domain of the equation is all real numbers except $x = 2$."
+                },
+                {
+                    "step": 2,
+                    "label": "Multiply both sides by $(x - 2)$ or factor numerator",
+                    "math": "\\frac{(x - 2)(x + 2)}{x - 2} = 4 \\implies x + 2 = 4 \\quad (\\text{for } x \\neq 2)",
+                    "explanation": "Simplify the left-hand fraction for $x \\neq 2$."
+                },
+                {
+                    "step": 3,
+                    "label": "Solve resulting linear equation",
+                    "math": "x = 4 - 2 = 2",
+                    "explanation": "The algebraic procedure yields $x = 2$."
+                },
+                {
+                    "step": 4,
+                    "label": "Check against domain restriction",
+                    "math": "x = 2 \\text{ violates } x \\neq 2 \\implies \\frac{2^2 - 4}{2 - 2} = \\frac{0}{0} \\text{ (Undefined)}",
+                    "explanation": "$x = 2$ is an extraneous root produced by multiplying by zero."
+                }
+            ],
+            "finalAnswer": "\\text{No Solution (Solution Set: } \\emptyset\\text{)}",
+            "commonPitfall": "Blindly accepting algebraic output without checking domain restrictions. Multiplying both sides by an expression that equals zero introduces false solutions."
+        }
+    ]
 }

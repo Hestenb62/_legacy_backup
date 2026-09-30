@@ -5,7 +5,7 @@
     "levelId": "k",
     "requiresMathJax": true,
     "meta": {
-        "title": "Federal Income Tax \u2014 Piecewise Linear Modeling",
+        "title": "Federal Income Tax — Piecewise Linear Modeling",
         "pageTitle": "Federal Income Tax & Piecewise Functions | Hesten's Learning",
         "description": "Model authentic federal income tax brackets as piecewise linear continuous functions.",
         "pageDescription": "Signature modeling lesson: compute progressive marginal taxation, deductions, exemptions, and piecewise tax functions.",
@@ -46,33 +46,82 @@
     ],
     "practiceQuestions": [
         {
-            "question": "If single tax brackets are 10% on the first $10,000 and 20% on any amount above $10,000, how much tax is owed on $15,000 of taxable income?",
+            "question": "An actress earns $\\$10,000,000$ in gross income with married standard deductions of $\\$12,200$ and exemptions of $\\$7,800$. What is her taxable income?",
             "options": [
-                "$2,000 ($1,000 + $1,000)",
-                "$3,000 (20% of $15,000)",
-                "$1,500 (10% of $15,000)",
-                "$2,500"
+                "$\\$9,980,000$",
+                "$\\$9,987,800$",
+                "$\\$10,000,000$",
+                "$\\$9,900,000$"
             ],
             "correct": 0,
-            "explanation": "Bracket 1: 10% of $10,000 = $1,000. Bracket 2: 20% on the excess ($15,000 - $10,000 = $5,000) = $1,000. Total tax = $1,000 + $1,000 = $2,000."
+            "explanation": "From the official Eureka Math Exit Ticket Key:\n$\\text{Taxable Income} = \\$10,000,000 - (\\$7,800 + \\$12,200) = \\$10,000,000 - \\$20,000 = \\$9,980,000$."
         },
         {
-            "question": "Why does earning more money and moving into a higher tax bracket NEVER result in less take-home pay?",
+            "question": "If her total federal income tax is $\\$3,899,726$ on a gross income of $\\$10,000,000$, what is her effective federal tax rate?",
             "options": [
-                "Because only the dollars above the bracket threshold are taxed at the higher marginal rate.",
-                "Because higher tax brackets have lower percentages.",
-                "Because tax brackets only apply to corporate profits.",
-                "Because all income below $100,000 is tax-free."
+                "Approximately $39.0\\%$",
+                "$39.6\\%$",
+                "$35.0\\%$",
+                "$28.5\\%$"
             ],
             "correct": 0,
-            "explanation": "Progressive tax brackets are marginal. Dollars within lower brackets remain taxed at lower rates; only the additional earnings are taxed at the higher rate."
+            "explanation": "Effective tax rate is total tax paid divided by total gross income: $\\frac{3,899,726}{10,000,000} \\times 100\\% \\approx 38.997\\% \\approx 39.0\\%$. Notice the effective rate is slightly lower than the top marginal tax bracket of $39.6\\%$ due to graduated lower brackets."
         }
     ],
     "citation": {
         "title": "Source Citation (MLA)",
         "text": "Great Minds. \"Federal Income Tax.\" Eureka Math, New York State Common Core Mathematics Curriculum, Algebra I, Module 1, Topic D, Lesson 28.",
-        "subtext": "Aligned with CCSS.MATH.CONTENT.HSN.Q.A.1 \u2022 Use units as a way to understand problems and to guide the solution of multi-step problems.",
+        "subtext": "Aligned with CCSS.MATH.CONTENT.HSN.Q.A.1 • Use units as a way to understand problems and to guide the solution of multi-step problems.",
         "lessonId": "L-ID-ALG-K-M1-D-4"
     },
-    "scripts": "\n        function updateTaxSim() {\n            const inc = parseInt(document.getElementById('input-tax-inc').value, 10);\n            document.getElementById('badge-tax-inc').innerText = '$' + inc.toLocaleString();\n\n            const b1Cap = 9075;\n            const b2Cap = 36900;\n\n            let b1Tax = 0;\n            let b2Tax = 0;\n            let b3Tax = 0;\n\n            if (inc <= b1Cap) {\n                b1Tax = inc * 0.10;\n            } else if (inc <= b2Cap) {\n                b1Tax = b1Cap * 0.10;\n                b2Tax = (inc - b1Cap) * 0.15;\n            } else {\n                b1Tax = b1Cap * 0.10;\n                b2Tax = (b2Cap - b1Cap) * 0.15;\n                b3Tax = (inc - b2Cap) * 0.25;\n            }\n\n            const totalTax = b1Tax + b2Tax + b3Tax;\n            const effRate = inc > 0 ? ((totalTax / inc) * 100).toFixed(1) : 0;\n\n            document.getElementById('tax-owed-val').innerText = '$' + Math.round(totalTax).toLocaleString();\n            document.getElementById('tax-rate-val').innerText = effRate + '%';\n\n            document.getElementById('bracket-1-line').innerText = `\u2022 10% on first $9,075: $${Math.round(b1Tax).toLocaleString()}`;\n            document.getElementById('bracket-2-line').innerText = `\u2022 15% on $9,075 - $36,900: $${Math.round(b2Tax).toLocaleString()}`;\n            document.getElementById('bracket-3-line').innerText = `\u2022 25% on amount over $36,900: $${Math.round(b3Tax).toLocaleString()}`;\n        }\n\n        function setTaxIncome(val) {\n            document.getElementById('input-tax-inc').value = val;\n            updateTaxSim();\n        }\n\n        document.addEventListener('DOMContentLoaded', () => {\n            updateTaxSim();\n        });\n        "
+    "scripts": "\n        function updateTaxSim() {\n            const inc = parseInt(document.getElementById('input-tax-inc').value, 10);\n            document.getElementById('badge-tax-inc').innerText = '$' + inc.toLocaleString();\n\n            const b1Cap = 9075;\n            const b2Cap = 36900;\n\n            let b1Tax = 0;\n            let b2Tax = 0;\n            let b3Tax = 0;\n\n            if (inc <= b1Cap) {\n                b1Tax = inc * 0.10;\n            } else if (inc <= b2Cap) {\n                b1Tax = b1Cap * 0.10;\n                b2Tax = (inc - b1Cap) * 0.15;\n            } else {\n                b1Tax = b1Cap * 0.10;\n                b2Tax = (b2Cap - b1Cap) * 0.15;\n                b3Tax = (inc - b2Cap) * 0.25;\n            }\n\n            const totalTax = b1Tax + b2Tax + b3Tax;\n            const effRate = inc > 0 ? ((totalTax / inc) * 100).toFixed(1) : 0;\n\n            document.getElementById('tax-owed-val').innerText = '$' + Math.round(totalTax).toLocaleString();\n            document.getElementById('tax-rate-val').innerText = effRate + '%';\n\n            document.getElementById('bracket-1-line').innerText = `• 10% on first $9,075: $${Math.round(b1Tax).toLocaleString()}`;\n            document.getElementById('bracket-2-line').innerText = `• 15% on $9,075 - $36,900: $${Math.round(b2Tax).toLocaleString()}`;\n            document.getElementById('bracket-3-line').innerText = `• 25% on amount over $36,900: $${Math.round(b3Tax).toLocaleString()}`;\n        }\n\n        function setTaxIncome(val) {\n            document.getElementById('input-tax-inc').value = val;\n            updateTaxSim();\n        }\n\n        document.addEventListener('DOMContentLoaded', () => {\n            updateTaxSim();\n        });\n        ",
+    "resources": {
+        "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-d-lesson-28-student.pdf",
+        "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-d-lesson-28-student.docx",
+        "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-d-lesson-28-teacher.pdf",
+        "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-d-lesson-28-teacher.docx",
+        "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
+    },
+    "exitTicket": {
+        "title": "Lesson 28 Exit Ticket: Federal Income Tax",
+        "prompt": "A famous movie actress made $10 million last year. She is married with no children, and her husband earns no income. Compute her taxable income using: (taxable income) = (income) - (exemptions) - (standard deductions), with $7,800 exemptions and $12,200 deductions. Calculate her federal income tax using the 39.6% top bracket over $450,000, and find her effective tax rate.",
+        "solution": "Taxable Income: $10,000,000 - $7,800 - $12,200 = $9,980,000.\nFederal Income Tax:\nBase tax on first $450,000 is $125,846.\nAmount over $450,000: $9,980,000 - $450,000 = $9,530,000.\nTax on excess: 0.396 * $9,530,000 = $3,773,880.\nTotal tax: $125,846 + $3,773,880 = $3,899,726.\nEffective Tax Rate: ($3,899,726 / $10,000,000) * 100 \\approx 39.0%."
+    },
+    "guidedExercises": [
+        {
+            "title": "Example 1: Modeling Progressive Federal Income Tax Brackets",
+            "badge": "Eureka Math Guided Classwork",
+            "difficulty": "Real-World Modeling",
+            "problem": "Consider a simplified federal progressive tax bracket for single filers:\n- 10% on taxable income from $\\$0$ to $\\$10,000$\n- 15% on taxable income from $\\$10,000$ to $\\$40,000$\n- 25% on taxable income over $\\$40,000$\nCalculate the federal tax owed on a taxable income of $\\$55,000$, and compute the effective tax rate.",
+            "scaffolding": "Each tax rate applies ONLY to the income within its specific bracket range, not the total income.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Tax on Bracket 1 ($0 to $10,000)",
+                    "math": "0.10 \\times 10,000 = \\$1,000",
+                    "explanation": "First $\\$10,000$ taxed at 10%."
+                },
+                {
+                    "step": 2,
+                    "label": "Tax on Bracket 2 ($10,000 to $40,000)",
+                    "math": "0.15 \\times (40,000 - 10,000) = 0.15 \\times 30,000 = \\$4,500",
+                    "explanation": "Next $\\$30,000$ taxed at 15%."
+                },
+                {
+                    "step": 3,
+                    "label": "Tax on Bracket 3 (Above $40,000)",
+                    "math": "0.25 \\times (55,000 - 40,000) = 0.25 \\times 15,000 = \\$3,750",
+                    "explanation": "Remaining $\\$15,000$ taxed at 25%."
+                },
+                {
+                    "step": 4,
+                    "label": "Compute total tax and effective tax rate",
+                    "math": "\\text{Total Tax} = 1,000 + 4,500 + 3,750 = \\$9,250; \\quad \\text{Effective Rate} = \\frac{9,250}{55,000} \\approx 16.8\\%",
+                    "explanation": "Effective tax rate is overall percentage paid."
+                }
+            ],
+            "finalAnswer": "\\text{Total Tax: } \\$9,250; \\quad \\text{Effective Rate: } 16.82\\% \\quad (\\text{Marginal Rate: } 25\\%)",
+            "commonPitfall": "The widespread misconception that earning $\\$55,000$ causes your entire salary to be taxed at 25% ($0.25 \\times 55,000 = \\$13,750$). Marginal tax rates only apply to the dollars inside that specific bracket!"
+        }
+    ]
 }

@@ -46,33 +46,76 @@
     ],
     "practiceQuestions": [
         {
-            "question": "What is the solution set to $3x^2 + 27x = 0$?",
+            "question": "Find the complete solution set to the quadratic equation $3x^2 + 27x = 0$:",
             "options": [
-                "$\\{0, -9\\}$",
-                "$\\{0, 9\\}$",
-                "$\\{-9\\}$",
+                "$\\{-9, 0\\}$",
+                "$\\{9, 0\\}$",
+                "$\\{-9\\}$ only",
                 "$\\{3, -9\\}$"
             ],
             "correct": 0,
-            "explanation": "Factor out greatest common factor $3x$: $3x(x + 9) = 0$. By Zero-Product Property, $3x = 0 \\implies x = 0$ or $x + 9 = 0 \\implies x = -9$. Solution set is $\\{0, -9\\}$."
+            "explanation": "From the official Eureka Math Exit Ticket Key:\nFactor out the greatest common factor $3x$: $3x(x + 9) = 0$. By the zero product property, $3x = 0 \\implies x = 0$, or $x + 9 = 0 \\implies x = -9$. Solution set: $\\{-9, 0\\}$."
         },
         {
-            "question": "Why can the Zero-Product Property NOT be applied directly to $(x - 1)(x - 2) = 12$?",
+            "question": "Why is the algebraic statement 'If $ac = 5c$, then $a = 5$' FALSE?",
             "options": [
-                "Because the right-hand side is 12, not 0. Factors can multiply to 12 in infinite real combinations without either factor being 12.",
-                "Because the equation has negative numbers.",
-                "Because quadratic equations can never equal 12.",
-                "The property can be applied directly, yielding $x = 13$."
+                "Because if $c = 0$, then $0 = 0$ is true for ANY real value of $a$, meaning $a$ does not have to equal 5.",
+                "Because 5 cannot be multiplied by a variable.",
+                "Because dividing by $c$ is always illegal under all conditions.",
+                "Because $a$ must equal 0 whenever $c$ is present."
             ],
             "correct": 0,
-            "explanation": "The Zero-Product Property is unique to 0. If $ab = 12$, $a$ and $b$ could be 3 and 4, 2 and 6, etc. You must expand to $x^2 - 3x - 10 = 0$ and refactor to $(x - 5)(x + 2) = 0$."
+            "explanation": "Rearranging $ac - 5c = 0 \\implies c(a - 5) = 0$. By the zero-product property, either $c = 0$ or $a = 5$. If $c = 0$, the equation holds true regardless of what $a$ is (e.g. $7 \\times 0 = 5 \\times 0$)."
         }
     ],
     "citation": {
         "title": "Source Citation (MLA)",
         "text": "Great Minds. \"Equations Involving Factored Expressions.\" Eureka Math, New York State Common Core Mathematics Curriculum, Algebra I, Module 1, Topic C, Lesson 17.",
-        "subtext": "Aligned with CCSS.MATH.CONTENT.HSA.SSE.A.2 \u2022 Use the structure of an expression to identify ways to rewrite it.",
+        "subtext": "Aligned with CCSS.MATH.CONTENT.HSA.SSE.A.2 • Use the structure of an expression to identify ways to rewrite it.",
         "lessonId": "L-ID-ALG-K-M1-C-8"
     },
-    "scripts": "\n        function updateZeroProdSim() {\n            const p = parseInt(document.getElementById('input-root-p').value, 10);\n            const q = parseInt(document.getElementById('input-root-q').value, 10);\n\n            document.getElementById('badge-root-p').innerText = 'p = ' + p;\n            document.getElementById('badge-root-q').innerText = 'q = ' + q;\n\n            const pSign = (p >= 0) ? `- ${p}` : `+ ${Math.abs(p)}`;\n            const qSign = (q >= 0) ? `- ${q}` : `+ ${Math.abs(q)}`;\n\n            document.getElementById('zero-prod-eq').innerText = `(x ${pSign})(x ${qSign}) = 0`;\n            document.getElementById('fac-1-eq').innerText = `x ${pSign} = 0`;\n            document.getElementById('fac-2-eq').innerText = `x ${qSign} = 0`;\n            document.getElementById('root-1-res').innerText = `x = ${p}`;\n            document.getElementById('root-2-res').innerText = `x = ${q}`;\n\n            const roots = Array.from(new Set([p, q])).sort((a,b) => a - b);\n            document.getElementById('zero-prod-pill').innerText = `Solution Set: {${roots.join(', ')}}`;\n        }\n\n        document.addEventListener('DOMContentLoaded', () => {\n            updateZeroProdSim();\n        });\n        "
+    "scripts": "\n        function updateZeroProdSim() {\n            const p = parseInt(document.getElementById('input-root-p').value, 10);\n            const q = parseInt(document.getElementById('input-root-q').value, 10);\n\n            document.getElementById('badge-root-p').innerText = 'p = ' + p;\n            document.getElementById('badge-root-q').innerText = 'q = ' + q;\n\n            const pSign = (p >= 0) ? `- ${p}` : `+ ${Math.abs(p)}`;\n            const qSign = (q >= 0) ? `- ${q}` : `+ ${Math.abs(q)}`;\n\n            document.getElementById('zero-prod-eq').innerText = `(x ${pSign})(x ${qSign}) = 0`;\n            document.getElementById('fac-1-eq').innerText = `x ${pSign} = 0`;\n            document.getElementById('fac-2-eq').innerText = `x ${qSign} = 0`;\n            document.getElementById('root-1-res').innerText = `x = ${p}`;\n            document.getElementById('root-2-res').innerText = `x = ${q}`;\n\n            const roots = Array.from(new Set([p, q])).sort((a,b) => a - b);\n            document.getElementById('zero-prod-pill').innerText = `Solution Set: {${roots.join(', ')}}`;\n        }\n\n        document.addEventListener('DOMContentLoaded', () => {\n            updateZeroProdSim();\n        });\n        ",
+    "resources": {
+        "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-17-student.pdf",
+        "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-17-student.docx",
+        "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-17-teacher.pdf",
+        "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-17-teacher.docx",
+        "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
+    },
+    "exitTicket": {
+        "title": "Lesson 17 Exit Ticket: Equations Involving Factored Expressions",
+        "prompt": "Find the solution set to the equation 3x^2 + 27x = 0. Determine if each statement is true or false: (1) If a = 5, then ac = 5c; (2) If ac = 5c, then a = 5.",
+        "solution": "Equation: 3x^2 + 27x = 0 => 3x(x + 9) = 0 => 3x = 0 or x + 9 = 0 => x = 0 or x = -9. Solution set: {-9, 0}.\nStatement 1: If a = 5, then ac = 5c is TRUE (multiplication property of equality).\nStatement 2: If ac = 5c, then a = 5 is FALSE. If c = 0, ac = 5c becomes 0 = 0, which is true for ANY value of a, not just a = 5. (ac - 5c = 0 => c(a - 5) = 0 => c = 0 or a = 5)."
+    },
+    "guidedExercises": [
+        {
+            "title": "Example 1: Applying the Zero Product Property",
+            "badge": "Eureka Math Guided Classwork",
+            "difficulty": "Core Application",
+            "problem": "Solve $(2x - 7)(3x + 4) = 0$ and $x^2 - 9x + 20 = 0$.",
+            "scaffolding": "The Zero Product Property asserts: $ab = 0 \\iff a = 0 \\text{ or } b = 0$. Factor the quadratic before applying the property.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Apply Zero Product Property to $(2x - 7)(3x + 4) = 0$",
+                    "math": "2x - 7 = 0 \\implies x = \\frac{7}{2}; \\quad 3x + 4 = 0 \\implies x = -\\frac{4}{3}",
+                    "explanation": "Set each factor equal to zero."
+                },
+                {
+                    "step": 2,
+                    "label": "Factor $x^2 - 9x + 20 = 0$",
+                    "math": "(x - 4)(x - 5) = 0",
+                    "explanation": "Find two numbers multiplying to 20 and adding to $-9$ ($-4$ and $-5$)."
+                },
+                {
+                    "step": 3,
+                    "label": "Solve factored quadratic",
+                    "math": "x - 4 = 0 \\implies x = 4; \\quad x - 5 = 0 \\implies x = 5",
+                    "explanation": "Both $x = 4$ and $x = 5$ make the expression zero."
+                }
+            ],
+            "finalAnswer": "\\text{Equation 1: } x = \\frac{7}{2}, \\; -\\frac{4}{3}; \\quad \\text{Equation 2: } x = 4, \\; 5",
+            "commonPitfall": "Applying the Zero Product Property when the right side is NOT zero (e.g. $(x-1)(x-2) = 6$). You CANNOT set $x - 1 = 6$! You must expand, subtract 6 to get zero on one side, and re-factor."
+        }
+    ]
 }

@@ -46,26 +46,26 @@
     ],
     "practiceQuestions": [
         {
-            "question": "How does the perimeter of a square change when its side length increases from 3 to 4 units?",
+            "question": "If you jump straight up into the air three times in succession, what does the elevation versus time graph of your motion look like, and why?",
             "options": [
-                "Increases by 4 units",
-                "Increases by 7 units",
-                "Increases by 12 units",
-                "Increases by 16 units"
+                "Three consecutive curved parabolic arches that rise to a peak and return to zero elevation, because gravity causes constant downward acceleration.",
+                "Three sharp triangular V-shapes with straight line segments, because speed is strictly constant throughout each jump.",
+                "A single horizontal line at 1 ft elevation, because jumping occurs instantaneously.",
+                "Three vertical line segments with undefined slope, because jumping requires no elapsed time."
             ],
             "correct": 0,
-            "explanation": "Perimeter is linear: P(s) = 4s. For s=3, P=12. For s=4, P=16. The increase is exactly 16 - 12 = 4 units."
+            "explanation": "From the official Eureka Math Exit Ticket Key: Jumping into the air produces quadratic elevation curves because gravity constantly decelerates the jumper on the way up and accelerates them on the way down, creating parabolic arcs of the form $h(t) = -16t^2 + v_0 t$."
         },
         {
-            "question": "Why does area growth represent a quadratic function rather than a linear function?",
+            "question": "When an object is at rest on the floor at elevation $0\\text{ ft}$, how does the elevation-versus-time graph appear?",
             "options": [
-                "The perimeter always remains constant",
-                "The rate of change increases at every step because the variable is squared (A = s²)",
-                "The area can never exceed the perimeter",
-                "Quadratic functions only apply to non-geometric shapes"
+                "As a flat horizontal line along the time axis ($h = 0$).",
+                "As a downward sloping line with negative rate of change.",
+                "As an upward sloping line with positive acceleration.",
+                "As a discontinuous broken curve."
             ],
-            "correct": 1,
-            "explanation": "In A(s) = s², the rate of change is not constant. Each successive unit increase in side length yields a larger increase in area than the previous one."
+            "correct": 0,
+            "explanation": "When an object remains at rest on the floor, its elevation does not change ($\\Delta h = 0$), so the graph is a flat horizontal line at $h = 0$."
         }
     ],
     "citation": {
@@ -128,5 +128,17 @@
             "finalAnswer": "A_{new} = k^2 A_{orig}; \\quad \\text{For } k = 3, \\text{ fertilizer increases by a factor of } 9.",
             "commonPitfall": "Forgetting units of dimension. Linear measurements (perimeter, side length) scale as $k^1$, two-dimensional measurements (area) scale as $k^2$, and three-dimensional measurements (volume) scale as $k^3$."
         }
-    ]
+    ],
+    "resources": {
+        "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-a-lesson-2-student.pdf",
+        "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-a-lesson-2-student.docx",
+        "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-a-lesson-2-teacher.pdf",
+        "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-a-lesson-2-teacher.docx",
+        "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
+    },
+    "exitTicket": {
+        "title": "Lesson 2 Exit Ticket: Graphs of Quadratic Functions",
+        "prompt": "If you jumped in the air three times, what might the elevation versus time graph of that story look like? Label the axes appropriately.",
+        "solution": "Student answers will vary. A typical response: The graph shows three distinct curved parabolic arcs rising from elevation 0, peaking at approximately 1 ft, and returning to 0 every other second (e.g. at t = 1, 3, and 5 seconds). Gravitational deceleration on ascent and acceleration on descent create quadratic curves rather than straight lines."
+    }
 }

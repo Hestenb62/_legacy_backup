@@ -16,7 +16,7 @@
     "overview": {
         "title": "Student & Teacher Overview: Lesson 19",
         "pill": "Literal Equations & Formulas",
-        "text": "In this lesson, you will solve literal equations\u2014equations containing multiple variables representing physical quantities. You will treat the specified variable as the unknown while applying standard properties of equality to isolate it.",
+        "text": "In this lesson, you will solve literal equations—equations containing multiple variables representing physical quantities. You will treat the specified variable as the unknown while applying standard properties of equality to isolate it.",
         "outcomes": [
             "Rearrange formulas to highlight a quantity of interest, using the same reasoning as in solving equations.",
             "Isolate variables in physical formulas: $d = rt \\to r = \\frac{d}{t}$, $A = \\frac{1}{2}bh \\to h = \\frac{2A}{b}$, and $F = \\frac{9}{5}C + 32 \\to C = \\frac{5}{9}(F - 32)$.",
@@ -46,33 +46,70 @@
     ],
     "practiceQuestions": [
         {
-            "question": "Solve the area formula of a triangle $A = \\frac{1}{2}bh$ for height $h$.",
+            "question": "Given the formula $x = \\frac{1 + a}{1 - a}$, solve for $a$ when $x = 12$:",
             "options": [
-                "$h = \\frac{2A}{b}$",
-                "$h = \\frac{A}{2b}$",
-                "$h = 2Ab$",
-                "$h = A - \\frac{1}{2}b$"
+                "$a = \\frac{11}{13}$",
+                "$a = \\frac{13}{11}$",
+                "$a = \\frac{12}{13}$",
+                "$a = 1$"
             ],
             "correct": 0,
-            "explanation": "Multiply both sides by 2 to clear the fraction ($2A = bh$), then divide both sides by base $b$: $h = \\frac{2A}{b}$."
+            "explanation": "From the official Eureka Math Exit Ticket Key:\n$12 = \\frac{1 + a}{1 - a} \\implies 12(1 - a) = 1 + a \\implies 12 - 12a = 1 + a \\implies 11 = 13a \\implies a = \\frac{11}{13}$."
         },
         {
-            "question": "Solve the standard form linear equation $Ax + By = C$ for $y$ in terms of $x$ (assuming $B \\neq 0$).",
+            "question": "Rearrange the formula $x = \\frac{1 + a}{1 - a}$ to solve completely for $a$ in terms of $x$:",
             "options": [
-                "$y = -\\frac{A}{B}x + \\frac{C}{B}$",
-                "$y = \\frac{A}{B}x - \\frac{C}{B}$",
-                "$y = C - Ax - B$",
-                "$y = -\\frac{B}{A}x + \\frac{C}{A}$"
+                "$a = \\frac{x - 1}{x + 1}$",
+                "$a = \\frac{x + 1}{x - 1}$",
+                "$a = 1 - x$",
+                "$a = \\frac{1 - x}{1 + x}$"
             ],
             "correct": 0,
-            "explanation": "Subtract $Ax$ from both sides ($By = -Ax + C$), then divide every term by $B$: $y = -\\frac{A}{B}x + \\frac{C}{B}$."
+            "explanation": "Multiply by $(1 - a)$: $x(1 - a) = 1 + a \\implies x - ax = 1 + a$. Collect terms with $a$: $x - 1 = a + ax \\implies x - 1 = a(1 + x) \\implies a = \\frac{x - 1}{x + 1}$."
         }
     ],
     "citation": {
         "title": "Source Citation (MLA)",
         "text": "Great Minds. \"Rearranging Formulas.\" Eureka Math, New York State Common Core Mathematics Curriculum, Algebra I, Module 1, Topic C, Lesson 19.",
-        "subtext": "Aligned with CCSS.MATH.CONTENT.HSA.CED.A.4 \u2022 Rearrange formulas to highlight a quantity of interest.",
+        "subtext": "Aligned with CCSS.MATH.CONTENT.HSA.CED.A.4 • Rearrange formulas to highlight a quantity of interest.",
         "lessonId": "L-ID-ALG-K-M1-C-10"
     },
-    "scripts": ""
+    "scripts": "",
+    "resources": {
+        "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-19-student.pdf",
+        "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-19-student.docx",
+        "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-19-teacher.pdf",
+        "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-19-teacher.docx",
+        "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
+    },
+    "exitTicket": {
+        "title": "Lesson 19 Exit Ticket: Rearranging Formulas",
+        "prompt": "Given the formula x = (1 + a)/(1 - a): (1) Solve for a when x = 12; (2) Rearrange the formula to solve for a in terms of x.",
+        "solution": "1) When x = 12: 12 = (1 + a)/(1 - a) => 12(1 - a) = 1 + a => 12 - 12a = 1 + a => 11 = 13a => a = 11/13.\n2) Solving for a in general:\nx = (1 + a)/(1 - a)\nx(1 - a) = 1 + a\nx - xa = 1 + a\nx - 1 = a + xa\nx - 1 = a(1 + x)\na = (x - 1)/(1 + x) for x != -1."
+    },
+    "guidedExercises": [
+        {
+            "title": "Example 1: Isolating Specified Variables in Literal Formulas",
+            "badge": "Eureka Math Guided Classwork",
+            "difficulty": "Core Application",
+            "problem": "1) Rearrange the Fahrenheit formula $F = \\frac{9}{5}C + 32$ to solve for Celsius $C$.\n2) Solve for $h$ in the cylinder volume formula $V = \\pi r^2 h$.",
+            "scaffolding": "Treat all other variables as constants. Apply standard inverse operations step by step.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Isolate $C$ in temperature formula",
+                    "math": "F - 32 = \\frac{9}{5}C \\implies \\frac{5}{9}(F - 32) = C",
+                    "explanation": "Subtract 32, then multiply both sides by the reciprocal $5/9$."
+                },
+                {
+                    "step": 2,
+                    "label": "Isolate $h$ in volume formula",
+                    "math": "V = (\\pi r^2)h \\implies h = \\frac{V}{\\pi r^2}",
+                    "explanation": "Divide both sides by the coefficient expression $\\pi r^2$."
+                }
+            ],
+            "finalAnswer": "C = \\frac{5}{9}(F - 32); \\quad h = \\frac{V}{\\pi r^2}",
+            "commonPitfall": "Distributing denominators across additions incorrectly. For $C = \\frac{5(F - 32)}{9}$, do not forget the parentheses around $(F - 32)$."
+        }
+    ]
 }

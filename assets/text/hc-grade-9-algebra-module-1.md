@@ -30,8 +30,18 @@ The Grade 9 (Level K) Algebra I Module 1 curriculum provides a comprehensive, ri
   - **Lessons 26–27 (`K.M1.D.2`–`D.3`):** Recursive Challenge Problem — The Double and Add 5 Game (Parts 1 & 2).
   - **Lesson 28 (`K.M1.D.4`):** Modeling Real-World Constraints — Progressive Federal Income Tax Brackets.
 
-### Core Interactive Features & Workbenches
+### Core Interactive Features & Study Tools
 
+- **Official Curriculum Worksheets & Downloads:**
+  - Every lesson features a dedicated Worksheets & Downloads panel directly beneath the overview.
+  - **Student Materials:** Immediate access to Student Classwork and Problem Sets with openable PDF, downloadable editable Word (`.docx`), and 1-click print buttons.
+  - **Teacher Edition & Keys:** Access to full teacher notes, problem set answer keys, and pedagogical scaffolding guides in both PDF and DOCX formats.
+- **Verbatim Exit Ticket Keys & Check Understanding:**
+  - **On-Page Key Review:** Expandable "Official Exit Ticket & Teacher Key" disclosure accordion directly presents the authentic Eureka Math / EngageNY problem statements alongside verbatim teacher sample solutions and mathematical justifications.
+  - **Interactive Check Understanding Modal:** Scored practice checks faithfully replicate the curriculum Exit Ticket questions, allowing students to verify their mastery with immediate feedback and complete worked steps.
+- **Guided Exercises & Step-by-Step Worked Solutions:**
+  - Every lesson across Topics A, B, C, and D features in-depth Guided Exercises.
+  - Interactive disclosure accordions reveal step-by-step mathematical reasoning, intermediate formulas, final answers, and Common Pitfall alerts.
 - **Dedicated JSON-First Architecture:**
   - Each lesson is defined in an isolated JSON module (`assets/data/lessons/k-math-m1-*.json`), loaded dynamically by the central renderer (`/levels/k.php?k-math-m1-...`).
   - Seamless navigation between lessons without page reloading or legacy static PHP stubs.
@@ -39,8 +49,6 @@ The Grade 9 (Level K) Algebra I Module 1 curriculum provides a comprehensive, ri
   - Interactive sliders, coordinate plotters, algebra tile simulators, and balance scales allow students to visualize abstract operations.
 - **Universal MathJax Typography:**
   - Mathematical formulas ($\LaTeX$) adapt automatically to light, dark, and high-contrast themes using SVG vector rendering with horizontal overflow containment.
-- **Formative Exit Tickets & Scored Drills:**
-  - Interactive multi-question assessments with immediate solution breakdowns, step-by-step hints, and automatic synchronization to student Common Core standard mastery (`hesten_standards_mastery`).
 
 ### Universal Accessibility (UDL) & Accommodations
 

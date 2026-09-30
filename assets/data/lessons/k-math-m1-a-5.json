@@ -46,26 +46,26 @@
     ],
     "practiceQuestions": [
         {
-            "question": "On an Elevation vs. Time graph, what does a negative slope depict?",
+            "question": "Maya and Earl's apartment doors are 50 ft apart. Maya walks toward Earl at $3\\text{ ft/sec}$, and Earl walks toward Maya at $2\\text{ ft/sec}$. At what time and distance from Maya's door do they meet?",
             "options": [
-                "The object is physically descending in altitude",
-                "The object is speeding up",
-                "The object is standing still",
-                "The object is traveling backwards in time"
+                "They meet at $t = 10\\text{ seconds}$, at a distance of $30\\text{ ft}$ from Maya's door.",
+                "They meet at $t = 25\\text{ seconds}$, at a distance of $25\\text{ ft}$ from Maya's door.",
+                "They meet at $t = 5\\text{ seconds}$, at a distance of $15\\text{ ft}$ from Maya's door.",
+                "They meet at $t = 15\\text{ seconds}$, at a distance of $45\\text{ ft}$ from Maya's door."
             ],
             "correct": 0,
-            "explanation": "A negative slope means elevation is decreasing as time progresses, representing a descent."
+            "explanation": "From the official Eureka Math Exit Ticket Key: Combined speed is $3 + 2 = 5\\text{ ft/sec}$. The meeting time is $t = \\frac{50}{5} = 10\\text{ seconds}$. Maya's distance from her door is $d = 3\\text{ ft/sec} \\times 10\\text{ sec} = 30\\text{ ft}$."
         },
         {
-            "question": "On a Speed vs. Time graph, what does a horizontal segment above the axis represent?",
+            "question": "If position is measured as distance from Maya's door, what are the linear equations representing Maya's position $y_M$ and Earl's position $y_E$ over time $t$?",
             "options": [
-                "Motion at a steady, constant speed",
-                "The object is stationary at rest",
-                "The object is accelerating at maximum power",
-                "The object is at elevation zero"
+                "$y_M = 3t$ and $y_E = 50 - 2t$",
+                "$y_M = 3t + 50$ and $y_E = 2t$",
+                "$y_M = 50 - 3t$ and $y_E = 50 - 2t$",
+                "$y_M = 2t$ and $y_E = 3t$"
             ],
             "correct": 0,
-            "explanation": "On a speed graph, y represents speed. A horizontal segment means speed is constant over that time interval."
+            "explanation": "Maya starts at distance 0 and moves forward at $+3\\text{ ft/sec}$ ($y_M = 3t$). Earl starts at distance 50 ft and moves toward Maya at $-2\\text{ ft/sec}$ ($y_E = 50 - 2t$). Setting $3t = 50 - 2t$ gives $5t = 50 \\implies t = 10$."
         }
     ],
     "citation": {
@@ -134,5 +134,17 @@
             "finalAnswer": "\\text{The graph is S-shaped (inflection at sphere equator), terminating with a steep straight linear segment for the neck.}",
             "commonPitfall": "Assuming constant volume inflow produces a constant height rise rate. Remember: $\\text{Rate of height increase} = \\frac{\\text{Flow Rate}}{\\text{Cross-Sectional Area}}$."
         }
-    ]
+    ],
+    "resources": {
+        "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-a-lesson-5-student.pdf",
+        "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-a-lesson-5-student.docx",
+        "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-a-lesson-5-teacher.pdf",
+        "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-a-lesson-5-teacher.docx",
+        "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
+    },
+    "exitTicket": {
+        "title": "Lesson 5 Exit Ticket: Two Graphing Stories",
+        "prompt": "Maya and Earl live at opposite ends of the hallway in their apartment building. Their doors are 50 ft. apart. Each person starts at his or her own door and walks at a steady pace toward the other. They stop walking when they meet. Suppose Maya walks at a constant speed of 3 ft/sec and Earl walks at 2 ft/sec. Write equations and find when and where they meet.",
+        "solution": "Let t be time in seconds. Combined speed: 3 + 2 = 5 ft/sec. Meeting time: 5t = 50 => t = 10 sec. Location: Maya has walked 3(10) = 30 ft from her door; Earl has walked 2(10) = 20 ft from his door. On an elevation/distance graph measured from Maya's door, Maya's graph starts at (0, 0) and ends at (10, 30); Earl's graph starts at (0, 50) and ends at (10, 30)."
+    }
 }

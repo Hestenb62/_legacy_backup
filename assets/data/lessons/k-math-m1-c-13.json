@@ -27,7 +27,7 @@
     "content": [
         {
             "type": "html",
-            "html": "\n                <section class=\"lesson-overview-section\">\n                    <h3 class=\"lesson-section-title\">Three Geometric Possibilities for 2\u00d72 Linear Systems</h3>\n                    <div style=\"display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:1rem; margin-top:1rem;\">\n                        <div style=\"padding:1rem; background:rgba(59,130,246,0.1); border:1px solid #3b82f6; border-radius:0.75rem;\">\n                            <h4 style=\"color:#60a5fa; margin:0 0 0.25rem 0;\">1. Unique Solution</h4>\n                            <p style=\"font-size:0.85rem; color:var(--color-text-secondary); margin:0;\">Lines have different slopes and intersect at exactly <strong>one point $(x, y)$</strong>.</p>\n                        </div>\n                        <div style=\"padding:1rem; background:rgba(225,29,72,0.1); border:1px solid #f43f5e; border-radius:0.75rem;\">\n                            <h4 style=\"color:#f43f5e; margin:0 0 0.25rem 0;\">2. No Solution (Inconsistent)</h4>\n                            <p style=\"font-size:0.85rem; color:var(--color-text-secondary); margin:0;\">Lines have identical slopes but different y-intercepts (<strong>parallel lines</strong>). No intersection.</p>\n                        </div>\n                        <div style=\"padding:1rem; background:rgba(16,185,129,0.1); border:1px solid #10b981; border-radius:0.75rem;\">\n                            <h4 style=\"color:#10b981; margin:0 0 0.25rem 0;\">3. Infinitely Many Solutions</h4>\n                            <p style=\"font-size:0.85rem; color:var(--color-text-secondary); margin:0;\">Equations are equivalent multiples. Lines are <strong>coincident</strong> (share every point).</p>\n                        </div>\n                    </div>\n                </section>\n                "
+            "html": "\n                <section class=\"lesson-overview-section\">\n                    <h3 class=\"lesson-section-title\">Three Geometric Possibilities for 2×2 Linear Systems</h3>\n                    <div style=\"display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:1rem; margin-top:1rem;\">\n                        <div style=\"padding:1rem; background:rgba(59,130,246,0.1); border:1px solid #3b82f6; border-radius:0.75rem;\">\n                            <h4 style=\"color:#60a5fa; margin:0 0 0.25rem 0;\">1. Unique Solution</h4>\n                            <p style=\"font-size:0.85rem; color:var(--color-text-secondary); margin:0;\">Lines have different slopes and intersect at exactly <strong>one point $(x, y)$</strong>.</p>\n                        </div>\n                        <div style=\"padding:1rem; background:rgba(225,29,72,0.1); border:1px solid #f43f5e; border-radius:0.75rem;\">\n                            <h4 style=\"color:#f43f5e; margin:0 0 0.25rem 0;\">2. No Solution (Inconsistent)</h4>\n                            <p style=\"font-size:0.85rem; color:var(--color-text-secondary); margin:0;\">Lines have identical slopes but different y-intercepts (<strong>parallel lines</strong>). No intersection.</p>\n                        </div>\n                        <div style=\"padding:1rem; background:rgba(16,185,129,0.1); border:1px solid #10b981; border-radius:0.75rem;\">\n                            <h4 style=\"color:#10b981; margin:0 0 0.25rem 0;\">3. Infinitely Many Solutions</h4>\n                            <p style=\"font-size:0.85rem; color:var(--color-text-secondary); margin:0;\">Equations are equivalent multiples. Lines are <strong>coincident</strong> (share every point).</p>\n                        </div>\n                    </div>\n                </section>\n                "
         }
     ],
     "vocabulary": [
@@ -46,33 +46,76 @@
     ],
     "practiceQuestions": [
         {
-            "question": "Solve the system using substitution: $y = 2x - 1$ and $3x + y = 9$.",
+            "question": "Find the exact algebraic solution $(x, y)$ to the system of linear equations $y = -x + 6$ and $y = \\frac{3}{4}x - 3$:",
             "options": [
-                "$(2, 3)$",
-                "$(3, 5)$",
-                "$(1, 1)$",
-                "$(4, 7)$"
+                "$\\left(\\frac{36}{7}, \\frac{6}{7}\\right)$",
+                "$(5, 1)$",
+                "$\\left(\\frac{24}{7}, \\frac{12}{7}\\right)$",
+                "$(6, -3)$"
             ],
             "correct": 0,
-            "explanation": "Substitute $2x - 1$ for $y$ in second equation: $3x + (2x - 1) = 9 \\implies 5x - 1 = 9 \\implies 5x = 10 \\implies x = 2$. Then $y = 2(2) - 1 = 3$. The solution is $(2, 3)$."
+            "explanation": "From the official Eureka Math Exit Ticket Key:\nSet equations equal: $-x + 6 = \\frac{3}{4}x - 3 \\implies 9 = \\frac{7}{4}x \\implies x = 9 \\times \\frac{4}{7} = \\frac{36}{7}$.\nSubstitute into $y = -x + 6$: $y = -\\frac{36}{7} + \\frac{42}{7} = \\frac{6}{7}$.\nExact solution: $\\left(\\frac{36}{7}, \\frac{6}{7}\\right)$."
         },
         {
-            "question": "What is the graphical relationship between $2x + y = 4$ and $4x + 2y = 12$?",
+            "question": "If the region above both lines is shaded, which system of inequalities represents that shaded region?",
             "options": [
-                "They are parallel lines with no solution.",
-                "They intersect at a single point $(2, 0)$.",
-                "They are identical coincident lines with infinite solutions.",
-                "They are perpendicular lines."
+                "$y \\ge -x + 6$ and $y \\ge \\frac{3}{4}x - 3$",
+                "$y \\le -x + 6$ and $y \\le \\frac{3}{4}x - 3$",
+                "$y > -x + 6$ and $y < \\frac{3}{4}x - 3$",
+                "$y < -x + 6$ and $y \\ge \\frac{3}{4}x - 3$"
             ],
             "correct": 0,
-            "explanation": "Rewrite in slope-intercept form: $y = -2x + 4$ and $y = -2x + 6$. Both have slope $m = -2$ but different y-intercepts (4 vs 6), so they are parallel lines with no intersection."
+            "explanation": "The region lying above solid lines requires greater-than-or-equal-to inequalities for both boundary equations: $y \\ge -x + 6$ and $y \\ge \\frac{3}{4}x - 3$."
         }
     ],
     "citation": {
         "title": "Source Citation (MLA)",
         "text": "Great Minds. \"Solution Sets to Simultaneous Equations.\" Eureka Math, New York State Common Core Mathematics Curriculum, Algebra I, Module 1, Topic C, Lesson 22.",
-        "subtext": "Aligned with CCSS.MATH.CONTENT.HSA.REI.C.6 \u2022 Solve systems of linear equations exactly and approximately.",
+        "subtext": "Aligned with CCSS.MATH.CONTENT.HSA.REI.C.6 • Solve systems of linear equations exactly and approximately.",
         "lessonId": "L-ID-ALG-K-M1-C-13"
     },
-    "scripts": ""
+    "scripts": "",
+    "resources": {
+        "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-22-student.pdf",
+        "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-22-student.docx",
+        "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-22-teacher.pdf",
+        "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-22-teacher.docx",
+        "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
+    },
+    "exitTicket": {
+        "title": "Lesson 22 Exit Ticket: Solution Sets to Simultaneous Equations",
+        "prompt": "Estimate the solution to the system of equations from the graph shown (lines intersect in quadrant I near (5.2, 0.9)). Write the two equations: line 1 passes through (0, 6) and (6, 0); line 2 has y-intercept (0, -3) and slope 3/4. Find the exact solution algebraically.",
+        "solution": "Equations: y = -x + 6 and y = (3/4)x - 3.\nAlgebraic solution:\n-x + 6 = (3/4)x - 3\n6 + 3 = (3/4)x + x\n9 = (7/4)x\nx = 36/7 \\approx 5.14\ny = -(36/7) + 6 = 6/7 \\approx 0.86.\nExact intersection point: (36/7, 6/7) or approximately (5.14, 0.86)."
+    },
+    "guidedExercises": [
+        {
+            "title": "Example 1: Solving Simultaneous Equations by Substitution",
+            "badge": "Eureka Math Guided Classwork",
+            "difficulty": "Core Application",
+            "problem": "Solve the system of equations by substitution:\n$$\\begin{cases} y = 3x - 5 \\\\ 2x + 3y = 29 \\end{cases}$$",
+            "scaffolding": "Substitute the expression $(3x - 5)$ in place of $y$ in the second equation.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Substitute $y$ into the second equation",
+                    "math": "2x + 3(3x - 5) = 29",
+                    "explanation": "Replaces $y$ with an equivalent expression in terms of $x$."
+                },
+                {
+                    "step": 2,
+                    "label": "Solve for $x$",
+                    "math": "2x + 9x - 15 = 29 \\implies 11x = 44 \\implies x = 4",
+                    "explanation": "Distribute and combine like terms."
+                },
+                {
+                    "step": 3,
+                    "label": "Back-substitute to find $y$",
+                    "math": "y = 3(4) - 5 = 12 - 5 = 7",
+                    "explanation": "Substitute $x = 4$ back into the first equation."
+                }
+            ],
+            "finalAnswer": "(x, y) = (4, 7) \\quad (\\text{Solution Set: } \\{(4, 7)\\})",
+            "commonPitfall": "Substituting the expression back into the SAME equation it was isolated from, which results in a circular identity $0 = 0$ without finding the variable value."
+        }
+    ]
 }

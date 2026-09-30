@@ -46,33 +46,70 @@
     ],
     "practiceQuestions": [
         {
-            "question": "Which boundary line style and shading represents $y > 2x + 1$?",
+            "question": "Which inequality and graphical representation accurately models the statement: 'The sum of two numbers is less than 10'?",
             "options": [
-                "A dashed boundary line, shaded ABOVE the line",
-                "A solid boundary line, shaded ABOVE the line",
-                "A dashed boundary line, shaded BELOW the line",
-                "A solid boundary line, shaded BELOW the line"
+                "$x + y < 10$; graphed with a dashed boundary line $y = -x + 10$ and shading below the line",
+                "$x + y \\le 10$; graphed with a solid boundary line $y = -x + 10$ and shading above the line",
+                "$xy < 10$; graphed as a hyperbola with shading in the first quadrant",
+                "$x - y < 10$; graphed with a vertical dashed line at $x = 10$"
             ],
             "correct": 0,
-            "explanation": "Because $>$ is strict, the boundary is dashed. Testing $(0, 0)$: $0 > 2(0) + 1 \\implies 0 > 1$ (False). The region not containing $(0, 0)$\u2014above the line\u2014is shaded."
+            "explanation": "From the official Eureka Math Exit Ticket Key: 'The sum of two numbers is less than 10' translates to $x + y < 10 \\implies y < -x + 10$. The strict inequality requires a dashed line (points on the line are not included), and 'less than' shades the half-plane below."
         },
         {
-            "question": "Is the point $(2, 3)$ in the solution set of $3x - y \\ge 3$?",
+            "question": "Is the coordinate point $(5, 5)$ included in the solution set of $x + y < 10$, and why?",
             "options": [
-                "Yes, because $3(2) - 3 = 3 \\ge 3$ is a true statement.",
-                "No, because $3$ is not strictly greater than 3.",
-                "No, because $(2, 3)$ is in the first quadrant.",
-                "Yes, but only if the line is dashed."
+                "No, because $5 + 5 = 10$, which is not strictly less than 10.",
+                "Yes, because 10 is equal to 10.",
+                "Yes, because both numbers are positive.",
+                "No, because coordinates must be negative."
             ],
             "correct": 0,
-            "explanation": "Substitute $(2, 3)$: $3(2) - 3 = 6 - 3 = 3$. Since $3 \\ge 3$ is True (equality is permitted), $(2, 3)$ is on the boundary and is a valid solution."
+            "explanation": "Substitute $(5, 5)$: $5 + 5 = 10 < 10$ is a false statement. Points lying directly on the dashed boundary line are excluded from strict inequalities."
         }
     ],
     "citation": {
         "title": "Source Citation (MLA)",
         "text": "Great Minds. \"Solution Sets to Inequalities with Two Variables.\" Eureka Math, New York State Common Core Mathematics Curriculum, Algebra I, Module 1, Topic C, Lesson 21.",
-        "subtext": "Aligned with CCSS.MATH.CONTENT.HSA.REI.D.12 \u2022 Graph the solutions to a linear inequality in two variables as a half-plane.",
+        "subtext": "Aligned with CCSS.MATH.CONTENT.HSA.REI.D.12 • Graph the solutions to a linear inequality in two variables as a half-plane.",
         "lessonId": "L-ID-ALG-K-M1-C-12"
     },
-    "scripts": ""
+    "scripts": "",
+    "resources": {
+        "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-21-student.pdf",
+        "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-21-student.docx",
+        "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-21-teacher.pdf",
+        "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-21-teacher.docx",
+        "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
+    },
+    "exitTicket": {
+        "title": "Lesson 21 Exit Ticket: Two-Variable Linear Inequalities and Their Half-Planes",
+        "prompt": "What pairs of numbers satisfy the statement: The sum of two numbers is less than 10? Create an inequality with two variables to represent this situation, and describe the graph of its solution set.",
+        "solution": "Let x = one number, and let y = second number.\nInequality: x + y < 10 (or y < -x + 10).\nGraph: A dashed boundary line along y = -x + 10 (dashed because the inequality is strictly less than, not <=), with the entire half-plane shaded below the line."
+    },
+    "guidedExercises": [
+        {
+            "title": "Example 1: Graphing Two-Variable Inequalities and Half-Planes",
+            "badge": "Eureka Math Guided Classwork",
+            "difficulty": "Core Application",
+            "problem": "Graph the solution set of $2x + y < 4$ on the Cartesian coordinate plane.",
+            "scaffolding": "Step 1: Graph the boundary line $2x + y = 4$ as dashed (because strict inequality $<$ excludes the line). Step 2: Test a test point (such as $(0, 0)$) to decide which half-plane to shade.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Determine the boundary line",
+                    "math": "y = -2x + 4 \\quad (\\text{Dashed boundary line})",
+                    "explanation": "Slope $m = -2$, $y$-intercept $(0, 4)$."
+                },
+                {
+                    "step": 2,
+                    "label": "Test the origin $(0, 0)$",
+                    "math": "2(0) + 0 < 4 \\implies 0 < 4 \\text{ (True)}",
+                    "explanation": "Since $(0, 0)$ makes the statement true, shade the half-plane containing the origin."
+                }
+            ],
+            "finalAnswer": "\\text{Dashed line } y = -2x + 4 \\text{ with the region below/left (containing origin) shaded.}",
+            "commonPitfall": "Drawing a solid boundary line instead of a dashed line for strict inequalities ($<$ or $>$). Solid lines are only used for $\\le$ or $\\ge$."
+        }
+    ]
 }

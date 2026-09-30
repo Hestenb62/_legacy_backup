@@ -98,9 +98,9 @@
 
         <!-- Version Status & Release Info Strip (WCAG Operable) -->
         <?php
-        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.7.0';
+        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.7.1';
         $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'September 2026 Grade 9 Algebra I Module 1 Release';
-        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Complete 28-Lesson Grade 9 Algebra I Module 1 Curriculum, Interactive Workbenches, and JSON-First Lesson Architecture';
+        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Complete 28-Lesson Grade 9 Algebra I Module 1 with Official Worksheets, Verbatim Exit Ticket Keys, and Guided Depth';
         ?>
         <div class="footer-version-strip" role="region" aria-label="Platform Version Information">
             <div class="footer-version-info">
@@ -271,15 +271,31 @@
                 </span>
             </div>
             <p class="footer-vmodal-lead">
-                Version <?= htmlspecialchars($siteVersion) ?> introduces the complete 28-lesson Grade 9 Algebra I Module 1 curriculum (Topics A–D), featuring interactive STEM workbenches, MathJax typography, JSON-first lesson architecture, and real-time Common Core standards tracking.
+                Version <?= htmlspecialchars($siteVersion) ?> delivers the complete, fully enriched 28-lesson Grade 9 Algebra I Module 1 curriculum (Topics A–D), featuring official downloadable/printable worksheets, verbatim Eureka Math Exit Ticket keys, multi-step Guided Exercises with worked solutions, and interactive STEM workbenches.
             </p>
             <ul class="footer-vmodal-features">
                 <li class="footer-vmodal-feature-item">
                     <div class="footer-vmodal-feature-icon" aria-hidden="true">
-                        <i class="fas fa-calculator"></i>
+                        <i class="fas fa-file-invoice"></i>
                     </div>
                     <div class="footer-vmodal-feature-text">
-                        <strong>Complete 28-Lesson Algebra I Module 1:</strong> Full Eureka Math / EngageNY Algebra I coverage across Topics A, B, C, and D (<code>K.M1.A.1</code> through <code>K.M1.D.4</code>) with teacher notes and student outcomes.
+                        <strong>Official Curriculum Worksheets &amp; Printables:</strong> Direct access to authentic Student Classwork &amp; Problem Sets (PDF, Word .docx, 1-click print) and Teacher Editions with complete keys across all 28 lessons.
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Verbatim Exit Ticket Keys &amp; Check Understanding:</strong> Check Understanding quizzes and review panels faithfully reproduce authentic Eureka Math / EngageNY Exit Ticket prompts, answers, and teacher sample solution work.
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Guided Exercises with Multi-Step Solutions:</strong> Expandable worked solutions, scaffolding hints, final answers, and Common Pitfall alerts for all 28 lessons across Topics A, B, C, and D.
                     </div>
                 </li>
                 <li class="footer-vmodal-feature-item">
@@ -292,26 +308,10 @@
                 </li>
                 <li class="footer-vmodal-feature-item">
                     <div class="footer-vmodal-feature-icon" aria-hidden="true">
-                        <i class="fas fa-shapes"></i>
-                    </div>
-                    <div class="footer-vmodal-feature-text">
-                        <strong>Interactive STEM Workbenches:</strong> Embedded piecewise graph visualizers, polynomial algebra tiles, linear equation balance scales, and algebraic substitution runners.
-                    </div>
-                </li>
-                <li class="footer-vmodal-feature-item">
-                    <div class="footer-vmodal-feature-icon" aria-hidden="true">
                         <i class="fas fa-square-root-variable"></i>
                     </div>
                     <div class="footer-vmodal-feature-text">
                         <strong>Universal MathJax Typography:</strong> Responsive, dark-mode adaptive SVG rendering for formulas, fractions, radicals, and polynomial expressions with overflow protection.
-                    </div>
-                </li>
-                <li class="footer-vmodal-feature-item">
-                    <div class="footer-vmodal-feature-icon" aria-hidden="true">
-                        <i class="fas fa-clipboard-check"></i>
-                    </div>
-                    <div class="footer-vmodal-feature-text">
-                        <strong>Formative Exit Tickets &amp; Scored Drills:</strong> Multi-question practice sets with instant step-by-step solutions, hints, and automated <code>hesten_standards_mastery</code> synchronization.
                     </div>
                 </li>
                 <li class="footer-vmodal-feature-item">

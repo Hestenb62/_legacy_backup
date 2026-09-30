@@ -46,26 +46,26 @@
     ],
     "practiceQuestions": [
         {
-            "question": "On a cumulative water usage graph, what does a horizontal line segment indicate?",
+            "question": "Suppose researchers collect school water consumption data through the night. For the period between when the last person leaves in the evening and the arrival of the first person the next morning, how should the graph of total cumulative water consumption appear?",
             "options": [
-                "Water usage is zero during that interval",
-                "Water usage is at maximum peak",
-                "Water is flowing backwards",
-                "The pipes are leaking continuously"
+                "As a flat horizontal line ($m = 0$), because no additional water is being consumed while the school is unoccupied.",
+                "As a steeply declining line dropping to zero, because the school is empty.",
+                "As a vertical line segment representing instantaneous drainage.",
+                "As an exponential curve increasing toward infinity."
             ],
             "correct": 0,
-            "explanation": "A horizontal line has zero slope: \\Delta V = 0, meaning no additional volume was used during that time."
+            "explanation": "From the official Eureka Math Exit Ticket Key: Cumulative water consumption remains constant when no water is drawn, resulting in a horizontal line with slope $m = 0$."
         },
         {
-            "question": "Why can a cumulative volume graph never have a negative slope in a closed water distribution system?",
+            "question": "During those same unoccupied night hours, how should a graph of the rate of water consumption (in gallons per hour) appear?",
             "options": [
-                "Because total water consumed cannot decrease over time",
-                "Because time runs backwards",
-                "Because pumps only rotate clockwise",
-                "Water pipes cannot be graphed"
+                "A horizontal line resting directly on the horizontal axis at $y = 0\\text{ gal/hr}$.",
+                "A diagonal line with slope $m = 1$.",
+                "A curved parabola peaking at midnight.",
+                "A vertical line at 12:00 AM."
             ],
             "correct": 0,
-            "explanation": "Cumulative quantities are monotonically non-decreasing. Each gallon consumed adds to the running total."
+            "explanation": "Because no water is being consumed, the instantaneous rate of consumption is zero, so the rate curve sits flat at $y = 0$."
         }
     ],
     "citation": {
@@ -122,5 +122,17 @@
             "finalAnswer": "40\\text{ gallons per minute (gpm)} = 2,400\\text{ gallons per hour}.",
             "commonPitfall": "Mismatched units. When calculating rates, always specify the time unit (gallons per hour vs. gallons per minute). 40 gpm is equivalent to 2,400 gph."
         }
-    ]
+    ],
+    "resources": {
+        "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-a-lesson-4-student.pdf",
+        "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-a-lesson-4-student.docx",
+        "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-a-lesson-4-teacher.pdf",
+        "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-a-lesson-4-teacher.docx",
+        "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
+    },
+    "exitTicket": {
+        "title": "Lesson 4 Exit Ticket: Analyzing Graphs—Water Usage During a Typical Day",
+        "prompt": "Suppose the researchers collecting data for water consumption during a typical school day collected data through the night too. For the period between the time the last person leaves the building for the evening and the time of the arrival of the first person the next morning, how should the graph of water consumption appear? If the researchers also tracked rate of water consumption in gallons per hour, how would that graph look during the unoccupied night hours?",
+        "solution": "The graph of cumulative water consumption should appear as a flat horizontal line because no water is being consumed while the building is empty. The rate of water consumption graph should sit on the horizontal axis at 0 gallons per hour."
+    }
 }

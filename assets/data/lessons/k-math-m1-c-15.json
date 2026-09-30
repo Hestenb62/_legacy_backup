@@ -20,7 +20,7 @@
         "outcomes": [
             "Represent constraints by systems of equations and inequalities.",
             "Interpret solutions as viable or non-viable options in modeling contexts (e.g., non-negative quantities, whole people/items).",
-            "Solve classic mixture, investment, and rate applications using 2\u00d72 linear systems."
+            "Solve classic mixture, investment, and rate applications using 2×2 linear systems."
         ],
         "teacherInsight": "Remind students that real-world problems include implicit physical constraints like $x \\ge 0$ and $y \\ge 0$ (you cannot sell negative tickets or have negative volume)."
     },
@@ -42,33 +42,82 @@
     ],
     "practiceQuestions": [
         {
-            "question": "A chemist mixes a 10% acid solution ($x$) with a 40% acid solution ($y$) to obtain 100 liters of a 22% acid solution. Which system models this situation?",
+            "question": "Andy's Cab charges a $\\$6$ fee plus $\\$0.50$ per mile ($C = 0.50x + 6$). Randy's Cab charges $\\$0.80$ per mile with no fee ($C = 0.80x$). At what trip distance do both services cost the exact same amount?",
             "options": [
-                "$\\begin{cases} x + y = 100 \\\\ 0.10x + 0.40y = 22 \\end{cases}$",
-                "$\\begin{cases} x + y = 22 \\\\ 0.10x + 0.40y = 100 \\end{cases}$",
-                "$\\begin{cases} 10x + 40y = 100 \\\\ x + y = 100 \\end{cases}$",
-                "$\\begin{cases} x + y = 100 \\\\ 0.10x + 0.40y = 0.22 \\end{cases}$"
+                "20 miles, costing $\\$16.00$",
+                "15 miles, costing $\\$12.00$",
+                "25 miles, costing $\\$20.00$",
+                "30 miles, costing $\\$21.00$"
             ],
             "correct": 0,
-            "explanation": "Total volume constraint is $x + y = 100$. Pure acid constraint is $0.10x + 0.40y = 0.22(100) = 22$."
+            "explanation": "From the official Eureka Math Exit Ticket Key:\nSet costs equal: $0.50x + 6 = 0.80x \\implies 6 = 0.30x \\implies x = \\frac{6}{0.30} = 20\\text{ miles}$. Both cost $0.80(20) = \\$16.00$."
         },
         {
-            "question": "In a physical problem modeling whole items produced, why must solutions like $(x, y) = (4.5, -2)$ be rejected?",
+            "question": "For a customer taking a long 35-mile trip to the airport, which cab service is more economical, and by how much?",
             "options": [
-                "Because quantities of manufactured physical items must be non-negative integers ($x, y \\in \\{0, 1, 2, \\dots\\}$).",
-                "Because decimal numbers do not exist in algebra.",
-                "Because negative numbers can never be plotted on a graph.",
-                "The solution is actually viable."
+                "Andy's Cab Service is cheaper by $\\$4.50$ (Andy: $\\$23.50$ vs. Randy: $\\$28.00$).",
+                "Randy's Cab Service is cheaper by $\\$2.00$.",
+                "Both services charge identical rates for any trip over 20 miles.",
+                "Randy's Cab Service is cheaper because he has no upfront fee."
             ],
             "correct": 0,
-            "explanation": "Mathematical models require domain viability: physical items cannot be negative, and discrete units cannot be fractional."
+            "explanation": "For $x = 35$ miles:\nAndy: $C = 0.50(35) + 6 = 17.50 + 6 = \\$23.50$.\nRandy: $C = 0.80(35) = \\$28.00$.\nAndy is cheaper by $28.00 - 23.50 = \\$4.50$."
         }
     ],
     "citation": {
         "title": "Source Citation (MLA)",
         "text": "Great Minds. \"Applications of Systems of Equations and Inequalities.\" Eureka Math, New York State Common Core Mathematics Curriculum, Algebra I, Module 1, Topic C, Lesson 24.",
-        "subtext": "Aligned with CCSS.MATH.CONTENT.HSA.CED.A.3 \u2022 Represent constraints by equations or inequalities.",
+        "subtext": "Aligned with CCSS.MATH.CONTENT.HSA.CED.A.3 • Represent constraints by equations or inequalities.",
         "lessonId": "L-ID-ALG-K-M1-C-15"
     },
-    "scripts": ""
+    "scripts": "",
+    "resources": {
+        "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-24-student.pdf",
+        "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-24-student.docx",
+        "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-24-teacher.pdf",
+        "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-24-teacher.docx",
+        "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
+    },
+    "exitTicket": {
+        "title": "Lesson 24 Exit Ticket: Applications of Systems of Equations and Inequalities",
+        "prompt": "Andy's Cab Service charges a $6 fee plus $0.50 per mile. His twin brother Randy starts a rival business where he charges $0.80 per mile but does not charge a fee. Write cost equations, find the break-even distance, and determine which cab service is cheaper for various distances.",
+        "solution": "Cost equations: Andy's: C = 0.50x + 6; Randy's: C = 0.80x.\nBreak-even:\n0.50x + 6 = 0.80x\n6 = 0.30x\nx = 20 miles.\nIf trip < 20 miles: Randy's is cheaper (e.g. at 10 mi: Randy = $8, Andy = $11).\nIf trip > 20 miles: Andy's is cheaper (e.g. at 30 mi: Randy = $24, Andy = $21).\nIf trip = 20 miles: Both cost exactly $16.00."
+    },
+    "guidedExercises": [
+        {
+            "title": "Example 1: Real-World Systems Modeling and Feasible Regions",
+            "badge": "Eureka Math Guided Classwork",
+            "difficulty": "Multi-Step Modeling",
+            "problem": "A community theater sells adult tickets for $\\$12$ and student tickets for $\\$7$. A total of $400$ tickets were sold, generating $\\$3,550$ in revenue. Write and solve a system of linear equations to find how many adult and student tickets were sold.",
+            "scaffolding": "Define variables: let $a$ = number of adult tickets, $s$ = number of student tickets. Set up one equation for total tickets and one for total revenue.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Formulate system of equations",
+                    "math": "\\begin{cases} a + s = 400 \\\\ 12a + 7s = 3,550 \\end{cases}",
+                    "explanation": "Quantity equation and revenue equation."
+                },
+                {
+                    "step": 2,
+                    "label": "Multiply quantity equation by $-7$",
+                    "math": "-7a - 7s = -2,800",
+                    "explanation": "Align coefficients for elimination."
+                },
+                {
+                    "step": 3,
+                    "label": "Add to revenue equation",
+                    "math": "(12a - 7a) + (7s - 7s) = 3,550 - 2,800 \\implies 5a = 750 \\implies a = 150",
+                    "explanation": "Solve for adult tickets."
+                },
+                {
+                    "step": 4,
+                    "label": "Solve for student tickets $s$",
+                    "math": "150 + s = 400 \\implies s = 250",
+                    "explanation": "Subtract 150 from 400."
+                }
+            ],
+            "finalAnswer": "150\\text{ Adult Tickets and } 250\\text{ Student Tickets}",
+            "commonPitfall": "Mixing up the units between equations (e.g. adding ticket count to ticket price). Ensure quantity equations sum to counts and monetary equations sum to dollars."
+        }
+    ]
 }

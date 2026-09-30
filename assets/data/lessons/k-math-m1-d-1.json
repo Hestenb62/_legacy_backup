@@ -5,7 +5,7 @@
     "levelId": "k",
     "requiresMathJax": true,
     "meta": {
-        "title": "Solving Problems in Two Ways \u2014 Rates and Algebra",
+        "title": "Solving Problems in Two Ways — Rates and Algebra",
         "pageTitle": "Rates vs. Algebra: Dual Modeling | Hesten's Learning",
         "description": "Compare intuitive arithmetic unit-rate solutions with formal algebraic modeling.",
         "pageDescription": "Investigate print shop rate problems, contrast tabular unit rates with linear equations.",
@@ -46,33 +46,76 @@
     ],
     "practiceQuestions": [
         {
-            "question": "A print shop has 8 printing presses each printing 25 pages/min. If 2 presses break down, how long will a 120,000-page job take?",
+            "question": "A print shop operates 8 printing presses, each printing 5,000 pages per hour for 6 hours per day. How many total pages do all 8 presses produce in 2 full operating days?",
             "options": [
-                "13 hours and 20 minutes (800 minutes)",
-                "10 hours",
-                "12 hours",
-                "15 hours"
+                "480,000 pages",
+                "240,000 pages",
+                "60,000 pages",
+                "540,000 pages"
             ],
             "correct": 0,
-            "explanation": "Remaining presses = 6. Combined rate = $6 \\times 25 = 150\\text{ pages/min}$. Time $t = \\frac{120,000}{150} = 800\\text{ minutes} = 13\\text{ hours and } 20\\text{ minutes}$."
+            "explanation": "From the official Eureka Math Exit Ticket Key:\n1 press prints: $5,000\\text{ pages/hr} \\times 6\\text{ hrs/day} = 30,000\\text{ pages/day}$.\n8 presses print: $8 \\times 30,000 = 240,000\\text{ pages/day}$.\nIn 2 days: $2 \\times 240,000 = 480,000\\text{ pages}$."
         },
         {
-            "question": "What is the primary advantage of formulating an algebraic equation over calculating a purely numerical answer?",
+            "question": "If 1 individual press runs for 2 days on cookbooks while 8 presses run on other jobs, how many pages does that single press produce?",
             "options": [
-                "The algebraic equation creates a generalized formula that can instantly evaluate any future changes in quantities.",
-                "Equations never require multiplication or division.",
-                "Arithmetic is not permitted in high school mathematics.",
-                "Algebraic equations always produce smaller numbers."
+                "60,000 pages",
+                "30,000 pages",
+                "120,000 pages",
+                "15,000 pages"
             ],
             "correct": 0,
-            "explanation": "Algebra parametrizes relationships (e.g., $P = r \\cdot n \\cdot t$), making it trivial to re-evaluate for different quantities, broken machines, or new deadlines."
+            "explanation": "1 press in 2 days prints $30,000\\text{ pages/day} \\times 2\\text{ days} = 60,000\\text{ pages}$."
         }
     ],
     "citation": {
         "title": "Source Citation (MLA)",
-        "text": "Great Minds. \"Solving Problems in Two Ways\u2014Rates and Algebra.\" Eureka Math, New York State Common Core Mathematics Curriculum, Algebra I, Module 1, Topic D, Lesson 25.",
-        "subtext": "Aligned with CCSS.MATH.CONTENT.HSN.Q.A.1 \u2022 Use units as a way to understand problems and to guide the solution of multi-step problems.",
+        "text": "Great Minds. \"Solving Problems in Two Ways—Rates and Algebra.\" Eureka Math, New York State Common Core Mathematics Curriculum, Algebra I, Module 1, Topic D, Lesson 25.",
+        "subtext": "Aligned with CCSS.MATH.CONTENT.HSN.Q.A.1 • Use units as a way to understand problems and to guide the solution of multi-step problems.",
         "lessonId": "L-ID-ALG-K-M1-D-1"
     },
-    "scripts": ""
+    "scripts": "",
+    "resources": {
+        "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-d-lesson-25-student.pdf",
+        "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-d-lesson-25-student.docx",
+        "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-d-lesson-25-teacher.pdf",
+        "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-d-lesson-25-teacher.docx",
+        "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
+    },
+    "exitTicket": {
+        "title": "Lesson 25 Exit Ticket: Solving Problems in Two Ways—Rates and Quantities",
+        "prompt": "Suppose a print shop has 8 printing presses and each runs at 5,000 pages per hour for 6 hours a day. Compute total pages printed for a cookbook job and novel job where 8 presses run for 2 days on novels while 1 press runs for 2 days on cookbooks. Ratio of pages is 2:1.",
+        "solution": "1 press in 1 day prints: 5,000 * 6 = 30,000 pages.\n8 presses in 1 day: 8 * 30,000 = 240,000 pages.\nIn 2 days, 8 presses print: 480,000 pages for novels.\n1 press in 2 days prints: 60,000 pages for cookbooks.\nTotal printed: 480,000 + 60,000 = 540,000 pages.\nRatio 2:1 gives 360,000 novel pages and 180,000 cookbook pages."
+    },
+    "guidedExercises": [
+        {
+            "title": "Example 1: Solving Rates Problems in Two Ways — Arithmetic vs. Algebra",
+            "badge": "Eureka Math Guided Classwork",
+            "difficulty": "Dual-Method Reasoning",
+            "problem": "A cyclist rides from Town A to Town B at an average speed of $15\\text{ mph}$ and returns along the same route at $10\\text{ mph}$. The round trip takes 5 hours total. Solve for the distance $d$ between the towns in two ways: 1) using algebraic equations, and 2) using rate-ratio unit reasoning.",
+            "scaffolding": "Method 1: Total time is $t_1 + t_2 = 5$, where $t = \\frac{d}{r}$. Method 2: The ratio of speeds is $15:10 = 3:2$, so the ratio of times spent must be inverse ($2:3$).",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Method 1: Algebraic equation",
+                    "math": "\\frac{d}{15} + \\frac{d}{10} = 5",
+                    "explanation": "Sum of outward time and return time is 5 hours."
+                },
+                {
+                    "step": 2,
+                    "label": "Clear denominators with LCD (30)",
+                    "math": "2d + 3d = 150 \\implies 5d = 150 \\implies d = 30\\text{ miles}",
+                    "explanation": "Algebraic solution."
+                },
+                {
+                    "step": 3,
+                    "label": "Method 2: Ratio unit reasoning",
+                    "math": "\\text{Speed ratio } 3:2 \\implies \\text{Time ratio } 2:3 \\implies \\text{Outward: } 2\\text{ hrs}, \\text{ Return: } 3\\text{ hrs} \\implies d = 15(2) = 30\\text{ miles}",
+                    "explanation": "Arithmetic unit reasoning."
+                }
+            ],
+            "finalAnswer": "\\text{Distance } d = 30\\text{ miles (Both methods confirm 30 miles)}",
+            "commonPitfall": "Averaging the two speeds as $\\frac{15 + 10}{2} = 12.5\\text{ mph}$. Average speed over a round trip is total distance divided by total time: $\\frac{60\\text{ miles}}{5\\text{ hours}} = 12\\text{ mph}$, NOT $12.5\\text{ mph}$!"
+        }
+    ]
 }

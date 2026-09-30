@@ -94,26 +94,26 @@
     ],
     "practiceQuestions": [
         {
-            "question": "A climber ascends 4 feet in 2 seconds, pauses for 3 seconds, then descends 2 feet in 1 second. What is the slope of the graph during the 3-second pause?",
+            "question": "The elevation-versus-time graph in the Exploratory Challenge is a piecewise linear function composed of nine distinct linear segments. Over which nine consecutive time intervals is each linear function defined?",
             "options": [
-                "2 feet per second",
-                "0 feet per second",
-                "-2 feet per second",
-                "4 feet per second"
+                "0 to 3 sec, 3 to 5.5 sec, 5.5 to 7 sec, 7 to 8.5 sec, 8.5 to 9 sec, 9 to 11 sec, 11 to 12.7 sec, 12.7 to 13 sec, and 13 sec onward",
+                "0 to 2 sec, 2 to 4 sec, 4 to 6 sec, 6 to 8 sec, 8 to 10 sec, 10 to 12 sec, 12 to 14 sec, 14 to 16 sec, and 16 sec onward",
+                "0 to 5 sec, 5 to 10 sec, 10 to 15 sec, and 15 to 20 sec only",
+                "A single continuous interval from 0 to 15 seconds without discrete piecewise intervals"
             ],
-            "correct": 1,
-            "explanation": "During a pause, elevation remains unchanged while time advances. Rate of change (Δy / Δt) = 0 / 3 = 0."
+            "correct": 0,
+            "explanation": "From the official Eureka Math Exit Ticket Key: The nine distinct time intervals identified from the video story are: between 0 and 3 sec; between 3 and 5.5 sec; between 5.5 and 7 sec; between 7 and 8.5 sec; between 8.5 and 9 sec; between 9 and 11 sec; between 11 and 12.7 sec; between 12.7 and 13 sec; and 13 sec onward."
         },
         {
-            "question": "On an elevation-versus-time graph, what physical action does a segment with a negative slope depict?",
+            "question": "In a piecewise linear graph of elevation vs. time for a ladder descent, what does a horizontal segment ($m = 0$) indicate?",
             "options": [
-                "The climber is stationary at rest",
-                "The climber is ascending to higher rungs",
-                "The climber is descending towards the ground",
-                "The climber has completed the entire climb"
+                "The climber is stopped at a constant elevation (e.g., pausing to drink water or rest).",
+                "The climber is descending at an infinite speed.",
+                "The ladder has collapsed to zero elevation.",
+                "Time has temporarily stopped moving forward."
             ],
-            "correct": 2,
-            "explanation": "A negative slope means the elevation quantity is decreasing over time, representing a physical descent."
+            "correct": 0,
+            "explanation": "A horizontal segment represents a rate of change of 0 ft/sec ($\frac{\\Delta h}{\\Delta t} = 0$), meaning elevation remains constant while time continues to advance."
         }
     ],
     "citation": {
@@ -176,5 +176,17 @@
             "finalAnswer": "\\text{Total Time } = 13\\text{ seconds; Intervals: } [0, 6], (6, 10], (10, 13]",
             "commonPitfall": "Beware of overlapping endpoints or resetting the time clock to zero at each phase. Time is cumulative along the horizontal axis."
         }
-    ]
+    ],
+    "resources": {
+        "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-a-lesson-1-student.pdf",
+        "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-a-lesson-1-student.docx",
+        "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-a-lesson-1-teacher.pdf",
+        "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-a-lesson-1-teacher.docx",
+        "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
+    },
+    "exitTicket": {
+        "title": "Lesson 1 Exit Ticket: Graphs of Piecewise Linear Functions",
+        "prompt": "The graph in the Exploratory Challenge is made by combining pieces of nine linear functions (it is a piecewise linear function). Each linear function is defined over an interval of time, represented on the horizontal axis. List those nine time intervals.",
+        "solution": "Between 0 and 3 sec.; between 3 and 5.5 sec.; between 5.5 and 7 sec.; between 7 and 8.5 sec.; between 8.5 and 9 sec.; between 9 and 11 sec.; between 11 and 12.7 sec.; between 12.7 and 13 sec.; and 13 sec. onward."
+    }
 }

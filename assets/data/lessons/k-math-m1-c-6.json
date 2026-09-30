@@ -33,50 +33,93 @@
     "vocabulary": [
         {
             "term": "Conjunction ('And')",
-            "definition": "A compound sentence that is true only if both of its component statements are simultaneously true. Corresponding to set intersection (\u2229)."
+            "definition": "A compound sentence that is true only if both of its component statements are simultaneously true. Corresponding to set intersection (∩)."
         },
         {
             "term": "Disjunction ('Or')",
-            "definition": "A compound sentence that is true if at least one of its component statements is true. Corresponding to set union (\u222a)."
+            "definition": "A compound sentence that is true if at least one of its component statements is true. Corresponding to set union (∪)."
         },
         {
             "term": "Intersection",
-            "definition": "The set of elements belonging to both sets A and B (A \u2229 B)."
+            "definition": "The set of elements belonging to both sets A and B (A ∩ B)."
         },
         {
             "term": "Union",
-            "definition": "The set of elements belonging to set A, set B, or both (A \u222a B)."
+            "definition": "The set of elements belonging to set A, set B, or both (A ∪ B)."
         }
     ],
     "practiceQuestions": [
         {
-            "question": "What is the solution set to the compound sentence: $x - 15 = 5$ or $2x + 5 = 1$?",
+            "question": "Solve the compound sentence $x - 15 = 5 \\text{ or } 2x + 5 = 1$ and identify the complete solution set:",
             "options": [
                 "$\\{-2, 20\\}$",
-                "$\\{20\\}$",
-                "$\\{-2\\}$",
-                "The empty set $\\emptyset$"
+                "$\\{20\\}$ only",
+                "$\\{-2\\}$ only",
+                "No real solutions ($\\{\\emptyset\\}$)"
             ],
             "correct": 0,
-            "explanation": "Solving $x - 15 = 5 \\implies x = 20$. Solving $2x + 5 = 1 \\implies 2x = -4 \\implies x = -2$. Joined by 'or', the solution set is the union: $\\{-2, 20\\}$."
+            "explanation": "From the official Eureka Math Exit Ticket Key:\n$x - 15 = 5 \\implies x = 20$\n$2x + 5 = 1 \\implies 2x = -4 \\implies x = -2$\nBecause the statements are joined by 'or', the solution set contains the union of both solutions: $\\{-2, 20\\}$."
         },
         {
-            "question": "What is the solution set to the compound sentence: $x > 5$ AND $x < 2$?",
+            "question": "How does the solution set of $x < 1 \\text{ and } x > -1$ compare to the solution set of $x < 1 \\text{ or } x > -1$?",
             "options": [
-                "The empty set $\\emptyset$ (no real number can be both greater than 5 and less than 2)",
-                "All real numbers",
-                "$2 < x < 5$",
-                "$\\{2, 5\\}$"
+                "The 'and' condition restricts solutions to $-1 < x < 1$, while the 'or' condition includes all real numbers $(-\\infty, \\infty)$.",
+                "Both compound sentences have the exact same solution set.",
+                "The 'and' condition includes all real numbers, while the 'or' condition has no solution.",
+                "The 'and' condition is strictly empty ($\\{\\emptyset\\}$)."
             ],
             "correct": 0,
-            "explanation": "Joined by 'and', a value must satisfy both conditions simultaneously. Since no number is both $> 5$ and $< 2$, the intersection is empty ($\\{ \\}$ or $\\emptyset$)."
+            "explanation": "An 'and' compound statement represents the intersection (numbers between -1 and 1). An 'or' compound statement represents the union; every real number is either greater than -1 or less than 1, covering the entire real number line."
         }
     ],
     "citation": {
         "title": "Source Citation (MLA)",
         "text": "Great Minds. \"Solution Sets of Two or More Equations Joined by 'And' or 'Or'.\" Eureka Math, New York State Common Core Mathematics Curriculum, Algebra I, Module 1, Topic C, Lesson 15.",
-        "subtext": "Aligned with CCSS.MATH.CONTENT.HSA.CED.A.1 \u2022 Create equations and inequalities in one variable.",
+        "subtext": "Aligned with CCSS.MATH.CONTENT.HSA.CED.A.1 • Create equations and inequalities in one variable.",
         "lessonId": "L-ID-ALG-K-M1-C-6"
     },
-    "scripts": "\n        function setConnective(type) {\n            document.getElementById('btn-conn-or').classList.toggle('active', type === 'or');\n            document.getElementById('btn-conn-and').classList.toggle('active', type === 'and');\n\n            const setEl = document.getElementById('conn-solution-set');\n            const desc = document.getElementById('conn-desc');\n\n            if (type === 'or') {\n                setEl.innerText = '{-2, 20}';\n                desc.innerText = 'Under OR: Any value that makes EITHER equation true is a solution (Union: {-2} \u222a {20}).';\n            } else {\n                setEl.innerText = '\u2205 (Empty Set)';\n                desc.innerText = 'Under AND: A value must satisfy BOTH equations simultaneously. Since no number equals both 20 and -2, the intersection is empty.';\n            }\n        }\n        "
+    "scripts": "\n        function setConnective(type) {\n            document.getElementById('btn-conn-or').classList.toggle('active', type === 'or');\n            document.getElementById('btn-conn-and').classList.toggle('active', type === 'and');\n\n            const setEl = document.getElementById('conn-solution-set');\n            const desc = document.getElementById('conn-desc');\n\n            if (type === 'or') {\n                setEl.innerText = '{-2, 20}';\n                desc.innerText = 'Under OR: Any value that makes EITHER equation true is a solution (Union: {-2} ∪ {20}).';\n            } else {\n                setEl.innerText = '∅ (Empty Set)';\n                desc.innerText = 'Under AND: A value must satisfy BOTH equations simultaneously. Since no number equals both 20 and -2, the intersection is empty.';\n            }\n        }\n        ",
+    "resources": {
+        "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-15-student.pdf",
+        "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-15-student.docx",
+        "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-15-teacher.pdf",
+        "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-15-teacher.docx",
+        "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
+    },
+    "exitTicket": {
+        "title": "Lesson 15 Exit Ticket: Solution Sets of Two or More Equations Joined by 'And' or 'Or'",
+        "prompt": "Solve the system, and graph the solution set on a number line: x - 15 = 5 or 2x + 5 = 1. Write a compound inequality for acceptable swimming pool chlorine levels between 1 ppm and 3 ppm inclusive. Explain how changing 'and' to 'or' in x < 1 and x > -1 alters the solution set.",
+        "solution": "1) x - 15 = 5 => x = 20. 2x + 5 = 1 => 2x = -4 => x = -2. Solution set: {-2, 20}.\n2) Chlorine compound inequality: 1 <= x <= 3.\n3) 'x < 1 and x > -1' requires both statements to be true, yielding the interval (-1, 1). Changing to 'x < 1 or x > -1' requires either statement to be true; since every real number is either < 1 or > -1, the solution set is all real numbers."
+    },
+    "guidedExercises": [
+        {
+            "title": "Example 1: Compound Inequalities with 'And' (Intersection) vs. 'Or' (Union)",
+            "badge": "Eureka Math Guided Classwork",
+            "difficulty": "Core Concept",
+            "problem": "Graph and state the solution set for:\n1) $x > -3$ and $x \\le 4$\n2) $x < -2$ or $x \\ge 3$\n3) $x < 1$ and $x > 5$",
+            "scaffolding": "'And' means intersection $\\cap$ (elements satisfying BOTH inequalities simultaneously). 'Or' means union $\\cup$ (elements satisfying AT LEAST ONE inequality).",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Analyze Conjunction: $x > -3$ and $x \\le 4$",
+                    "math": "(-3, 4] = \\{x \\in \\mathbb{R} \\mid -3 < x \\le 4\\}",
+                    "explanation": "The overlap between the two rays forms a single bounded segment."
+                },
+                {
+                    "step": 2,
+                    "label": "Analyze Disjunction: $x < -2$ or $x \\ge 3$",
+                    "math": "(-\\infty, -2) \\cup [3, \\infty)",
+                    "explanation": "Two separate rays pointing in opposite directions."
+                },
+                {
+                    "step": 3,
+                    "label": "Analyze Impossible Conjunction: $x < 1$ and $x > 5$",
+                    "math": "\\emptyset \\text{ (Empty set)}",
+                    "explanation": "No number on the real line is simultaneously less than 1 and greater than 5."
+                }
+            ],
+            "finalAnswer": "\\text{1) } (-3, 4]; \\quad \\text{2) } (-\\infty, -2) \\cup [3, \\infty); \\quad \\text{3) } \\emptyset",
+            "commonPitfall": "Writing $5 < x < 1$ or combining disjunctions into a single chain. Chains like $a < x < b$ strictly represent 'and' conjunctions where $a < b$."
+        }
+    ]
 }

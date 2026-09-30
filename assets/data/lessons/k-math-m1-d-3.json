@@ -42,33 +42,76 @@
     ],
     "practiceQuestions": [
         {
-            "question": "Using the explicit formula $a_n = 2^n(a_0 + 5) - 5$, what is $a_3$ if $a_0 = 10$?",
+            "question": "Using the explicit formula $a_n = 2^n(a_0 + 5) - 5$, what is the smallest whole number starting value $a_0$ that reaches 100 or greater in 3 rounds ($n = 3$)?",
             "options": [
-                "115",
-                "120",
-                "95",
-                "105"
+                "$a_0 = 9$ (yielding $a_3 = 107$)",
+                "$a_0 = 8$ (yielding $a_3 = 99$)",
+                "$a_0 = 10$ (yielding $a_3 = 115$)",
+                "$a_0 = 7$ (yielding $a_3 = 91$)"
             ],
             "correct": 0,
-            "explanation": "Substitute $n = 3$ and $a_0 = 10$: $a_3 = 2^3(10 + 5) - 5 = 8(15) - 5 = 120 - 5 = 115$."
+            "explanation": "From the official Eureka Math Exit Ticket Key:\n$a_3 = 2^3(a_0 + 5) - 5 = 8(a_0 + 5) - 5 = 8a_0 + 35 \\ge 100 \\implies 8a_0 \\ge 65 \\implies a_0 \\ge 8.125$. The smallest whole number is $a_0 = 9$, which produces $8(9) + 35 = 107$."
         },
         {
-            "question": "What is the smallest whole number starting value $a_0$ that produces a number $\\ge 1,000$ in 3 rounds?",
+            "question": "Why does a starting value of $a_0 = 8$ fail to reach 100 in 3 rounds?",
             "options": [
-                "121",
-                "120",
-                "125",
-                "119"
+                "Because $a_3 = 2^3(8 + 5) - 5 = 8(13) - 5 = 104 - 5 = 99$, falling 1 unit short of 100.",
+                "Because 8 is an even number.",
+                "Because $a_3$ evaluates to 95.",
+                "Because the formula only works for odd integers."
             ],
             "correct": 0,
-            "explanation": "$8a_0 + 35 \\ge 1000 \\implies 8a_0 \\ge 965 \\implies a_0 \\ge 120.625$. The smallest whole number is 121."
+            "explanation": "Round 1: $2(8)+5 = 21$. Round 2: $2(21)+5 = 47$. Round 3: $2(47)+5 = 99$. Since $99 < 100$, 8 requires a 4th round to exceed 100."
         }
     ],
     "citation": {
         "title": "Source Citation (MLA)",
-        "text": "Great Minds. \"Recursive Challenge Problem\u2014The Double and Add 5 Game.\" Eureka Math, New York State Common Core Mathematics Curriculum, Algebra I, Module 1, Topic D, Lesson 27.",
-        "subtext": "Aligned with CCSS.MATH.CONTENT.HSA.CED.A.3 \u2022 Represent constraints by equations or inequalities.",
+        "text": "Great Minds. \"Recursive Challenge Problem—The Double and Add 5 Game.\" Eureka Math, New York State Common Core Mathematics Curriculum, Algebra I, Module 1, Topic D, Lesson 27.",
+        "subtext": "Aligned with CCSS.MATH.CONTENT.HSA.CED.A.3 • Represent constraints by equations or inequalities.",
         "lessonId": "L-ID-ALG-K-M1-D-3"
     },
-    "scripts": ""
+    "scripts": "",
+    "resources": {
+        "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-d-lesson-27-student.pdf",
+        "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-d-lesson-27-student.docx",
+        "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-d-lesson-27-teacher.pdf",
+        "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-d-lesson-27-teacher.docx",
+        "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
+    },
+    "exitTicket": {
+        "title": "Lesson 27 Exit Ticket: Recursive Challenge—The Double and Add 5 Game Continued",
+        "prompt": "Using the explicit formula a_n = 2^n(a_0 + 5) - 5, find the smallest starting whole number a_0 for the double and add 5 game that produces a result of 100 or greater in 3 rounds or fewer.",
+        "solution": "For 3 rounds (n = 3):\na_3 = 2^3(a_0 + 5) - 5 = 8(a_0 + 5) - 5 = 8a_0 + 40 - 5 = 8a_0 + 35.\nWe want a_3 >= 100:\n8a_0 + 35 >= 100\n8a_0 >= 65\na_0 >= 65/8 = 8.125.\nSince a_0 must be a whole number, the smallest starting number is 9.\nVerification: 8(9) + 35 = 72 + 35 = 107 >= 100. If a_0 = 8, 8(8) + 35 = 64 + 35 = 99 < 100."
+    },
+    "guidedExercises": [
+        {
+            "title": "Example 1: Deriving the Closed-Form Explicit Formula",
+            "badge": "Eureka Math Guided Classwork",
+            "difficulty": "Algebraic Synthesis",
+            "problem": "For the recurrence relation $a_n = 2a_{n-1} + 5$ with initial value $a_0$, show that the closed-form explicit formula is $a_n = 2^n(a_0 + 5) - 5$. Verify this formula for $a_0 = 3$ and $n = 4$.",
+            "scaffolding": "Notice that $a_1 = 2a_0 + 5$, $a_2 = 2(2a_0 + 5) + 5 = 4a_0 + 10 + 5 = 4a_0 + 15$. Add 5 to both sides to uncover powers of 2.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Analyze the pattern by adding 5",
+                    "math": "a_n + 5 = 2a_{n-1} + 10 = 2(a_{n-1} + 5)",
+                    "explanation": "Letting $b_n = a_n + 5$, the sequence becomes purely geometric with ratio $2$!"
+                },
+                {
+                    "step": 2,
+                    "label": "Express geometric relation",
+                    "math": "b_n = 2^n b_0 \\implies a_n + 5 = 2^n(a_0 + 5) \\implies a_n = 2^n(a_0 + 5) - 5",
+                    "explanation": "Subtract 5 to isolate $a_n$."
+                },
+                {
+                    "step": 3,
+                    "label": "Verify for $a_0 = 3, n = 4$",
+                    "math": "a_4 = 2^4(3 + 5) - 5 = 16(8) - 5 = 128 - 5 = 123",
+                    "explanation": "Matches the recursive value $123$ exactly!"
+                }
+            ],
+            "finalAnswer": "a_n = 2^n(a_0 + 5) - 5; \\quad a_4 = 123 \\text{ confirmed}.",
+            "commonPitfall": "Assuming all sequences require computing every intermediate step. Transforming recursive relations into closed-form formulas allows computing term $a_{100}$ in a single step!"
+        }
+    ]
 }

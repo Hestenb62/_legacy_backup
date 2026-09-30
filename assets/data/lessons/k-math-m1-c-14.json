@@ -20,7 +20,7 @@
         "outcomes": [
             "Understand that adding a multiple of one equation to another produces a new equation satisfied by the same coordinates.",
             "Prove that replacing an equation with a linear combination generates an equivalent system of equations.",
-            "Strategically choose multipliers to eliminate a variable and solve 2\u00d72 linear systems."
+            "Strategically choose multipliers to eliminate a variable and solve 2×2 linear systems."
         ],
         "teacherInsight": "Demonstrate that if $A = B$ and $C = D$, then $A + kC = B + kD$. Because the point $(x,y)$ makes both statements true, it must make any combination of them true as well."
     },
@@ -46,33 +46,76 @@
     ],
     "practiceQuestions": [
         {
-            "question": "Solve the system using elimination: $\\begin{cases} 2x + 3y = 12 \\\\ 5x - 3y = 9 \\end{cases}$",
+            "question": "The sum of two numbers is 10 and their difference is 6. What is the system of equations and its unique solution?",
             "options": [
-                "$(3, 2)$",
-                "$(2, 3)$",
-                "$(3, 3)$",
-                "$(4, 1)$"
+                "System: $x + y = 10$ and $x - y = 6$; Solution: $x = 8, y = 2$",
+                "System: $x + y = 10$ and $x - y = 6$; Solution: $x = 7, y = 3$",
+                "System: $x - y = 10$ and $x + y = 6$; Solution: $x = 8, y = -2$",
+                "System: $2x + y = 10$ and $x - 2y = 6$; Solution: $x = 6, y = 4$"
             ],
             "correct": 0,
-            "explanation": "Add both equations to eliminate $y$: $(2x + 5x) + (3y - 3y) = 12 + 9 \\implies 7x = 21 \\implies x = 3$. Substitute into first equation: $2(3) + 3y = 12 \\implies 6 + 3y = 12 \\implies 3y = 6 \\implies y = 2$. Solution is $(3, 2)$."
+            "explanation": "From the official Eureka Math Exit Ticket Key:\nAdd the two equations: $(x + y) + (x - y) = 10 + 6 \\implies 2x = 16 \\implies x = 8$.\nSubstitute $x = 8$ into $x + y = 10 \\implies 8 + y = 10 \\implies y = 2$."
         },
         {
-            "question": "Why does multiplying an equation by a non-zero constant $k$ NOT change its solution set?",
+            "question": "If you multiply the first equation $x + y = 10$ by 4 and add it to $x - y = 6$, what new linear equation is created, and does $(8, 2)$ satisfy it?",
             "options": [
-                "Because multiplication is reversible by multiplying by $\\frac{1}{k}$, preserving the exact truth value.",
-                "Because multiplying by a constant changes the graph into a circle.",
-                "Because constants cancel out automatically in algebra.",
-                "It actually does change the solution set."
+                "$5x + 3y = 46$, and $(8, 2)$ satisfies it because $5(8) + 3(2) = 40 + 6 = 46$",
+                "$4x + 3y = 40$, and $(8, 2)$ does not satisfy it",
+                "$5x - 3y = 46$, and $(8, 2)$ satisfies it",
+                "$3x + 5y = 34$, and $(8, 2)$ satisfies it"
             ],
             "correct": 0,
-            "explanation": "By the Multiplication Property of Equality, $A = B \\iff kA = kB$ for any non-zero real number $k$. The step is completely reversible."
+            "explanation": "$4(x + y = 10) \\implies 4x + 4y = 40$. Adding $(x - y = 6)$ yields $(4x + x) + (4y - y) = 40 + 6 \\implies 5x + 3y = 46$. Testing $(8, 2)$: $5(8) + 3(2) = 40 + 6 = 46$."
         }
     ],
     "citation": {
         "title": "Source Citation (MLA)",
         "text": "Great Minds. \"Solution Sets to Simultaneous Equations.\" Eureka Math, New York State Common Core Mathematics Curriculum, Algebra I, Module 1, Topic C, Lesson 23.",
-        "subtext": "Aligned with CCSS.MATH.CONTENT.HSA.REI.C.5 \u2022 Prove that, given a system of two equations, replacing one equation by the sum of that equation and a multiple of the other produces a system with the same solutions.",
+        "subtext": "Aligned with CCSS.MATH.CONTENT.HSA.REI.C.5 • Prove that, given a system of two equations, replacing one equation by the sum of that equation and a multiple of the other produces a system with the same solutions.",
         "lessonId": "L-ID-ALG-K-M1-C-14"
     },
-    "scripts": ""
+    "scripts": "",
+    "resources": {
+        "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-23-student.pdf",
+        "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-23-student.docx",
+        "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-23-teacher.pdf",
+        "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-23-teacher.docx",
+        "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
+    },
+    "exitTicket": {
+        "title": "Lesson 23 Exit Ticket: Reasoning with Systems of Equations and Inequalities",
+        "prompt": "The sum of two numbers is 10 and the difference is 6. What are the numbers? Create a system of two linear equations, solve it, and verify using linear combinations.",
+        "solution": "System: x + y = 10 and x - y = 6.\nSolving by elimination:\n(x + y) + (x - y) = 10 + 6\n2x = 16 => x = 8.\nSubstitute into x + y = 10: 8 + y = 10 => y = 2.\nThe two numbers are 8 and 2. Verification: 8 + 2 = 10 and 8 - 2 = 6."
+    },
+    "guidedExercises": [
+        {
+            "title": "Example 1: Solving Linear Systems by Elimination",
+            "badge": "Eureka Math Guided Classwork",
+            "difficulty": "Core Application",
+            "problem": "Solve the system by linear combination / elimination:\n$$\\begin{cases} 3x + 4y = 10 \\\\ 2x - 3y = 18 \\end{cases}$$",
+            "scaffolding": "Multiply Equation 1 by 3 and Equation 2 by 4 to create additive inverse coefficients for $y$ ($+12y$ and $-12y$).",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Multiply equations to align coefficients",
+                    "math": "3(3x + 4y) = 3(10) \\implies 9x + 12y = 30; \\quad 4(2x - 3y) = 4(18) \\implies 8x - 12y = 72",
+                    "explanation": "Coefficients of $y$ are now $+12$ and $-12$."
+                },
+                {
+                    "step": 2,
+                    "label": "Add the equations to eliminate $y$",
+                    "math": "(9x + 8x) + (12y - 12y) = 30 + 72 \\implies 17x = 102 \\implies x = 6",
+                    "explanation": "Summing eliminates the $y$ variable."
+                },
+                {
+                    "step": 3,
+                    "label": "Substitute $x = 6$ into original equation to find $y$",
+                    "math": "3(6) + 4y = 10 \\implies 18 + 4y = 10 \\implies 4y = -8 \\implies y = -2",
+                    "explanation": "Find $y$."
+                }
+            ],
+            "finalAnswer": "(x, y) = (6, -2)",
+            "commonPitfall": "Forgetting to multiply the constant on the right-hand side of the equation when scaling equations. Every single term must be multiplied."
+        }
+    ]
 }

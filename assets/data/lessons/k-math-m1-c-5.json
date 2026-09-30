@@ -42,33 +42,70 @@
     ],
     "practiceQuestions": [
         {
-            "question": "Solve the inequality: $6x - 5 < 7x + 4$.",
+            "question": "Solve the inequality $6x - 5 < 7x + 4$ and express the solution in set notation:",
             "options": [
-                "$x > -9$",
-                "$x < -9$",
-                "$x > 9$",
-                "$x < 1$"
+                "$\\{x \\text{ real} \\mid x > -9\\}$",
+                "$\\{x \\text{ real} \\mid x < -9\\}$",
+                "$\\{x \\text{ real} \\mid x > 9\\}$",
+                "$\\{x \\text{ real} \\mid x \\ge -1\\}$"
             ],
             "correct": 0,
-            "explanation": "Subtract $6x$ from both sides: $-5 < x + 4$. Subtract 4 from both sides: $-9 < x$, which is equivalent to $x > -9$."
+            "explanation": "From the official Eureka Math Exit Ticket Key:\n$6x - 5 < 7x + 4 \\implies -5 < x + 4 \\implies -9 < x \\implies x > -9$. In set notation: $\\{x \\text{ real} \\mid x > -9\\}$."
         },
         {
-            "question": "Solve the inequality: $-3x \\ge 15$.",
+            "question": "What is the rigorous mathematical explanation for why the direction of an inequality reverses when multiplying or dividing both sides by a negative number?",
             "options": [
-                "$x \\le -5$",
-                "$x \\ge -5$",
-                "$x \\le 5$",
-                "$x \\ge 5$"
+                "It is a shortcut for the addition property of inequality: adding terms to the opposite side of zero reflects their positions across the origin.",
+                "Negative numbers have no defined order on the real number line.",
+                "Flipping the inequality is an arbitrary convention with no algebraic proof.",
+                "Because negative numbers are always larger in magnitude than positive numbers."
             ],
             "correct": 0,
-            "explanation": "Divide both sides by $-3$. Because we divide by a negative number, the inequality symbol must reverse: $x \\le -5$."
+            "explanation": "Consider $-5x > 30$. Adding $5x$ to both sides gives $0 > 5x + 30$. Subtracting 30 gives $-30 > 5x$, and dividing by $+5$ gives $-6 > x$ (or $x < -6$). Flipping the inequality sign shortcuts this exact sequence."
         }
     ],
     "citation": {
         "title": "Source Citation (MLA)",
         "text": "Great Minds. \"Solving Inequalities.\" Eureka Math, New York State Common Core Mathematics Curriculum, Algebra I, Module 1, Topic C, Lesson 14.",
-        "subtext": "Aligned with CCSS.MATH.CONTENT.HSA.REI.B.3 \u2022 Solve linear equations and inequalities in one variable.",
+        "subtext": "Aligned with CCSS.MATH.CONTENT.HSA.REI.B.3 • Solve linear equations and inequalities in one variable.",
         "lessonId": "L-ID-ALG-K-M1-C-5"
     },
-    "scripts": "\n        function updateFlipSim() {\n            const k = parseInt(document.getElementById('input-mult-k').value, 10);\n            document.getElementById('badge-mult-k').innerText = 'k = ' + k;\n\n            const a = 2 * k;\n            const b = 5 * k;\n\n            let sym = '<';\n            if (a > b) sym = '>';\n            else if (a === b) sym = '=';\n\n            document.getElementById('scaled-ineq-readout').innerText = `${a} ${sym} ${b}`;\n\n            const box = document.getElementById('flip-alert-box');\n            const msg = document.getElementById('flip-status-msg');\n\n            if (k < 0) {\n                box.style.background = 'rgba(225, 29, 72, 0.15)';\n                box.style.borderColor = '#f43f5e';\n                msg.style.color = '#f43f5e';\n                msg.innerHTML = '<i class=\"fas fa-sync-alt\"></i> REVERSED: Symbol flipped from < to >';\n            } else if (k === 0) {\n                box.style.background = 'rgba(245, 158, 11, 0.15)';\n                box.style.borderColor = '#f59e0b';\n                msg.style.color = '#f59e0b';\n                msg.innerHTML = '<i class=\"fas fa-equals\"></i> EQUAL: Multiplying by 0 gives 0 = 0';\n            } else {\n                box.style.background = 'rgba(16, 185, 129, 0.15)';\n                box.style.borderColor = '#10b981';\n                msg.style.color = '#10b981';\n                msg.innerHTML = '<i class=\"fas fa-arrow-right\"></i> PRESERVED: Direction remained <';\n            }\n        }\n\n        document.addEventListener('DOMContentLoaded', () => {\n            updateFlipSim();\n        });\n        "
+    "scripts": "\n        function updateFlipSim() {\n            const k = parseInt(document.getElementById('input-mult-k').value, 10);\n            document.getElementById('badge-mult-k').innerText = 'k = ' + k;\n\n            const a = 2 * k;\n            const b = 5 * k;\n\n            let sym = '<';\n            if (a > b) sym = '>';\n            else if (a === b) sym = '=';\n\n            document.getElementById('scaled-ineq-readout').innerText = `${a} ${sym} ${b}`;\n\n            const box = document.getElementById('flip-alert-box');\n            const msg = document.getElementById('flip-status-msg');\n\n            if (k < 0) {\n                box.style.background = 'rgba(225, 29, 72, 0.15)';\n                box.style.borderColor = '#f43f5e';\n                msg.style.color = '#f43f5e';\n                msg.innerHTML = '<i class=\"fas fa-sync-alt\"></i> REVERSED: Symbol flipped from < to >';\n            } else if (k === 0) {\n                box.style.background = 'rgba(245, 158, 11, 0.15)';\n                box.style.borderColor = '#f59e0b';\n                msg.style.color = '#f59e0b';\n                msg.innerHTML = '<i class=\"fas fa-equals\"></i> EQUAL: Multiplying by 0 gives 0 = 0';\n            } else {\n                box.style.background = 'rgba(16, 185, 129, 0.15)';\n                box.style.borderColor = '#10b981';\n                msg.style.color = '#10b981';\n                msg.innerHTML = '<i class=\"fas fa-arrow-right\"></i> PRESERVED: Direction remained <';\n            }\n        }\n\n        document.addEventListener('DOMContentLoaded', () => {\n            updateFlipSim();\n        });\n        ",
+    "resources": {
+        "studentPdf": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-14-student.pdf",
+        "studentDocx": "/assets/Module%201/algebra-i-m1-student-materials/algebra-i-m1-topic-c-lesson-14-student.docx",
+        "teacherPdf": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-14-teacher.pdf",
+        "teacherDocx": "/assets/Module%201/algebra-i-m1-teacher-materials/algebra-i-m1-topic-c-lesson-14-teacher.docx",
+        "modulePdf": "/assets/Module%201/algebra-i-m1-student-materials.pdf"
+    },
+    "exitTicket": {
+        "title": "Lesson 14 Exit Ticket: Solving Inequalities into Single Variable Systems",
+        "prompt": "Find the solution set to each inequality. Express the solution in set notation and graphically on the number line: (1) 6x - 5 < 7x + 4, (2) x^2 + 3x - 1 >= x^2 + 5. Fergus asks why the inequality direction reverses when multiplying by a negative number; provide an explanation using the addition property.",
+        "solution": "1) 6x - 5 < 7x + 4 => -5 < x + 4 => -9 < x => x > -9. Solution set: {x real | x > -9}.\n2) x^2 + 3x - 1 >= x^2 + 5 => 3x - 1 >= 5 => 3x >= 6 => x >= 2. Solution set: {x real | x >= 2}.\nFergus explanation: If -5x > 30, adding 5x and subtracting 30 gives -30 > 5x => -6 > x, or x < -6. Flipping the inequality is simply a shortcut for applying the addition property of inequality."
+    },
+    "guidedExercises": [
+        {
+            "title": "Example 1: Inequality Direction Reversal Under Negative Operations",
+            "badge": "Eureka Math Guided Classwork",
+            "difficulty": "Core Application",
+            "problem": "Solve $-4x + 7 < 31$ and graph the solution set. Explain why the inequality symbol reverses when multiplying or dividing by a negative number.",
+            "scaffolding": "Subtract 7 from both sides, then divide by $-4$. Remember the reflection property across zero on the number line.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Subtract 7 from both sides",
+                    "math": "-4x < 31 - 7 \\implies -4x < 24",
+                    "explanation": "Subtraction preserves the inequality direction."
+                },
+                {
+                    "step": 2,
+                    "label": "Divide both sides by $-4$ (Reverse inequality)",
+                    "math": "\\frac{-4x}{-4} > \\frac{24}{-4} \\implies x > -6",
+                    "explanation": "Dividing by a negative reflects positions across zero, reversing relative order."
+                }
+            ],
+            "finalAnswer": "x > -6 \\quad (\\text{Interval: } (-6, \\infty); \\text{ Open circle at } -6\\text{ with ray right})",
+            "commonPitfall": "Reversing the inequality symbol when adding or subtracting negative numbers. The symbol ONLY reverses when MULTIPLYING or DIVIDING by a negative number."
+        }
+    ]
 }
