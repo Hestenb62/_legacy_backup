@@ -5,7 +5,7 @@
     "levelId": "k",
     "requiresMathJax": true,
     "meta": {
-        "title": "Algebraic Expressions \u2014 Commutative & Associative Properties",
+        "title": "Algebraic Expressions — Commutative & Associative Properties",
         "pageTitle": "Commutative & Associative Properties | Hesten's Learning",
         "description": "Prove expression equivalencies and justify term regrouping using commutative and associative identities.",
         "pageDescription": "Formal mathematical proofs of algebraic equivalence, structural reordering, and parentheses regrouping.",
@@ -74,9 +74,75 @@
     ],
     "citation": {
         "title": "Source Citation (MLA)",
-        "text": "Great Minds. \"Algebraic Expressions\u2014The Commutative and Associative Properties.\" Eureka Math, New York State Common Core Mathematics Curriculum, Algebra I, Module 1, Topic B, Lesson 7.",
-        "subtext": "Aligned with CCSS.MATH.CONTENT.HSA.SSE.A.2 \u2022 Use the structure of an expression to identify ways to rewrite it.",
+        "text": "Great Minds. \"Algebraic Expressions—The Commutative and Associative Properties.\" Eureka Math, New York State Common Core Mathematics Curriculum, Algebra I, Module 1, Topic B, Lesson 7.",
+        "subtext": "Aligned with CCSS.MATH.CONTENT.HSA.SSE.A.2 • Use the structure of an expression to identify ways to rewrite it.",
         "lessonId": "L-ID-ALG-K-M1-B-2"
     },
-    "scripts": "\n        function updatePropSim() {\n            const a = parseFloat(document.getElementById('input-val-a').value);\n            const b = parseFloat(document.getElementById('input-val-b').value);\n            const c = parseFloat(document.getElementById('input-val-c').value);\n\n            document.getElementById('badge-val-a').innerText = a;\n            document.getElementById('badge-val-b').innerText = b;\n            document.getElementById('badge-val-c').innerText = c;\n\n            const add1 = (a + b) + c;\n            const add2 = a + (b + c);\n            const mult1 = (a * b) * c;\n            const mult2 = (c * a) * b;\n\n            document.getElementById('add-val-1').innerText = add1;\n            document.getElementById('add-val-2').innerText = add2;\n            document.getElementById('add-sub-1').innerText = `(${a} + ${b}) + ${c} = ${add1}`;\n            document.getElementById('add-sub-2').innerText = `${a} + (${b} + ${c}) = ${add2}`;\n\n            document.getElementById('mult-res-1').innerText = mult1;\n            document.getElementById('mult-res-2').innerText = mult2;\n        }\n\n        function setPropValues(a, b, c) {\n            document.getElementById('input-val-a').value = a;\n            document.getElementById('input-val-b').value = b;\n            document.getElementById('input-val-c').value = c;\n            updatePropSim();\n        }\n\n        document.addEventListener('DOMContentLoaded', () => {\n            updatePropSim();\n        });\n        "
+    "scripts": "\n        function updatePropSim() {\n            const a = parseFloat(document.getElementById('input-val-a').value);\n            const b = parseFloat(document.getElementById('input-val-b').value);\n            const c = parseFloat(document.getElementById('input-val-c').value);\n\n            document.getElementById('badge-val-a').innerText = a;\n            document.getElementById('badge-val-b').innerText = b;\n            document.getElementById('badge-val-c').innerText = c;\n\n            const add1 = (a + b) + c;\n            const add2 = a + (b + c);\n            const mult1 = (a * b) * c;\n            const mult2 = (c * a) * b;\n\n            document.getElementById('add-val-1').innerText = add1;\n            document.getElementById('add-val-2').innerText = add2;\n            document.getElementById('add-sub-1').innerText = `(${a} + ${b}) + ${c} = ${add1}`;\n            document.getElementById('add-sub-2').innerText = `${a} + (${b} + ${c}) = ${add2}`;\n\n            document.getElementById('mult-res-1').innerText = mult1;\n            document.getElementById('mult-res-2').innerText = mult2;\n        }\n\n        function setPropValues(a, b, c) {\n            document.getElementById('input-val-a').value = a;\n            document.getElementById('input-val-b').value = b;\n            document.getElementById('input-val-c').value = c;\n            updatePropSim();\n        }\n\n        document.addEventListener('DOMContentLoaded', () => {\n            updatePropSim();\n        });\n        ",
+    "guidedExercises": [
+        {
+            "title": "Example 1: Mental Arithmetic Regrouping via Commutative & Associative Laws",
+            "badge": "Eureka Math Guided Classwork",
+            "difficulty": "Core Application",
+            "problem": "Evaluate $(28 \\times 25) \\times 4$ using mental arithmetic, explicitly justifying each step. Then simplify the algebraic expression $5(2x - 3) + 4(7 - x)$.",
+            "scaffolding": "Look for compatible factor pairs that multiply to powers of 10 ($25 \\times 4 = 100$). For the polynomial, distribute first, then use commutativity to group like terms.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Apply the Associative Property of Multiplication",
+                    "math": "(28 \\times 25) \\times 4 = 28 \\times (25 \\times 4)",
+                    "explanation": "Regroup the factors to multiply $25 \\times 4$ first."
+                },
+                {
+                    "step": 2,
+                    "label": "Compute the mental product",
+                    "math": "28 \\times 100 = 2,800",
+                    "explanation": "Multiplying by 100 is computed instantly in mental arithmetic."
+                },
+                {
+                    "step": 3,
+                    "label": "Expand $5(2x - 3) + 4(7 - x)$",
+                    "math": "= 10x - 15 + 28 - 4x",
+                    "explanation": "Distribute $5$ and $4$ across both expressions."
+                },
+                {
+                    "step": 4,
+                    "label": "Commute and associate like terms",
+                    "math": "= (10x - 4x) + (-15 + 28) = 6x + 13",
+                    "explanation": "Use commutativity to place variable terms together and constants together."
+                }
+            ],
+            "finalAnswer": "\\text{Mental Math: } 2,800; \\quad \\text{Simplified Polynomial: } 6x + 13.",
+            "commonPitfall": "Applying commutativity or associativity to subtraction. While $a + b = b + a$, $a - b \\neq b - a$. To rearrange terms with subtraction, convert to addition of the opposite: $a - b = a + (-b) = (-b) + a$."
+        },
+        {
+            "title": "Exercise 1: Proving Non-Equivalence in Subtraction Chains",
+            "badge": "Structural Logic",
+            "difficulty": "Deductive Proof",
+            "problem": "Demonstrate that $(a - b) - c \\neq a - (b - c)$ by substituting numerical values $a = 12, b = 7, c = 3$. Explain algebraically why associativity fails for subtraction.",
+            "scaffolding": "Evaluate both parenthetical expressions independently following the order of operations.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Evaluate Left-Hand Side $(a - b) - c$",
+                    "math": "(12 - 7) - 3 = 5 - 3 = 2",
+                    "explanation": "Perform subtraction inside the parentheses first."
+                },
+                {
+                    "step": 2,
+                    "label": "Evaluate Right-Hand Side $a - (b - c)$",
+                    "math": "12 - (7 - 3) = 12 - 4 = 8",
+                    "explanation": "Since $2 \\neq 8$, the expressions are not equivalent."
+                },
+                {
+                    "step": 3,
+                    "label": "Algebraic explanation",
+                    "math": "a - (b - c) = a - b + c \\neq a - b - c",
+                    "explanation": "Subtracting a difference distributes the negative sign: $-(b - c) = -b + c$."
+                }
+            ],
+            "finalAnswer": "(12 - 7) - 3 = 2 \\neq 8 = 12 - (7 - 3). \\quad \\text{Subtraction is NOT associative.}",
+            "commonPitfall": "Dropping parentheses when removing a minus sign. Remember $-(b - c) = -b + c$."
+        }
+    ]
 }

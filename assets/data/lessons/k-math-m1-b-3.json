@@ -27,7 +27,7 @@
     "content": [
         {
             "type": "html",
-            "html": "\n                <section class=\"lesson-sim-workbench\" aria-labelledby=\"sim-title-l8\">\n                    <div class=\"lesson-sim-header\">\n                        <div class=\"lesson-sim-title-wrap\">\n                            <h3 id=\"sim-title-l8\" class=\"lesson-sim-title\">\n                                <i class=\"fas fa-cubes\" aria-hidden=\"true\"></i> Polynomial Degree & Like-Term Combiner\n                            </h3>\n                            <p class=\"lesson-sim-subtitle\">\n                                Adjust coefficients for Polynomial $P(x) = ax^2 + bx + c$ and $Q(x) = dx^2 + ex + f$. View real-time sum and difference in standard form.\n                            </p>\n                        </div>\n                    </div>\n                    <div class=\"lesson-sim-grid\">\n                        <div class=\"lesson-sim-controls\">\n                            <div style=\"font-weight:700; font-size:0.85rem; color:#60a5fa; margin-bottom:0.25rem;\">Polynomial $P(x)$ Coefficients:</div>\n                            <div style=\"display:grid; grid-template-columns:1fr 1fr 1fr; gap:0.5rem;\">\n                                <div><label style=\"font-size:0.75rem;\">$x^2$:</label><input type=\"number\" id=\"p-c2\" value=\"3\" class=\"lesson-sim-slider\" oninput=\"updatePolySim()\"></div>\n                                <div><label style=\"font-size:0.75rem;\">$x$:</label><input type=\"number\" id=\"p-c1\" value=\"-2\" class=\"lesson-sim-slider\" oninput=\"updatePolySim()\"></div>\n                                <div><label style=\"font-size:0.75rem;\">Const:</label><input type=\"number\" id=\"p-c0\" value=\"5\" class=\"lesson-sim-slider\" oninput=\"updatePolySim()\"></div>\n                            </div>\n                            <div style=\"font-weight:700; font-size:0.85rem; color:#f43f5e; margin:0.75rem 0 0.25rem 0;\">Polynomial $Q(x)$ Coefficients:</div>\n                            <div style=\"display:grid; grid-template-columns:1fr 1fr 1fr; gap:0.5rem;\">\n                                <div><label style=\"font-size:0.75rem;\">$x^2$:</label><input type=\"number\" id=\"q-c2\" value=\"1\" class=\"lesson-sim-slider\" oninput=\"updatePolySim()\"></div>\n                                <div><label style=\"font-size:0.75rem;\">$x$:</label><input type=\"number\" id=\"q-c1\" value=\"4\" class=\"lesson-sim-slider\" oninput=\"updatePolySim()\"></div>\n                                <div><label style=\"font-size:0.75rem;\">Const:</label><input type=\"number\" id=\"q-c0\" value=\"-3\" class=\"lesson-sim-slider\" oninput=\"updatePolySim()\"></div>\n                            </div>\n                        </div>\n                        <div class=\"lesson-sim-visualizer\" style=\"display:flex; flex-direction:column; justify-content:center; gap:0.75rem;\">\n                            <div style=\"padding:1rem; background:rgba(0,0,0,0.2); border-radius:0.75rem; border:1px solid var(--color-border);\">\n                                <span style=\"font-size:0.8rem; font-weight:700; color:#3b82f6;\">Sum: $P(x) + Q(x)$</span>\n                                <div id=\"poly-sum-res\" style=\"font-size:1.15rem; font-weight:800; color:#ffffff; font-family:'Outfit',sans-serif; margin-top:0.25rem;\">\n                                    4x\u00b2 + 2x + 2\n                                </div>\n                            </div>\n                            <div style=\"padding:1rem; background:rgba(0,0,0,0.2); border-radius:0.75rem; border:1px solid var(--color-border);\">\n                                <span style=\"font-size:0.8rem; font-weight:700; color:#e11d48;\">Difference: $P(x) - Q(x)$</span>\n                                <div id=\"poly-diff-res\" style=\"font-size:1.15rem; font-weight:800; color:#ffffff; font-family:'Outfit',sans-serif; margin-top:0.25rem;\">\n                                    2x\u00b2 - 6x + 8\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </section>\n                "
+            "html": "\n                <section class=\"lesson-sim-workbench\" aria-labelledby=\"sim-title-l8\">\n                    <div class=\"lesson-sim-header\">\n                        <div class=\"lesson-sim-title-wrap\">\n                            <h3 id=\"sim-title-l8\" class=\"lesson-sim-title\">\n                                <i class=\"fas fa-cubes\" aria-hidden=\"true\"></i> Polynomial Degree & Like-Term Combiner\n                            </h3>\n                            <p class=\"lesson-sim-subtitle\">\n                                Adjust coefficients for Polynomial $P(x) = ax^2 + bx + c$ and $Q(x) = dx^2 + ex + f$. View real-time sum and difference in standard form.\n                            </p>\n                        </div>\n                    </div>\n                    <div class=\"lesson-sim-grid\">\n                        <div class=\"lesson-sim-controls\">\n                            <div style=\"font-weight:700; font-size:0.85rem; color:#60a5fa; margin-bottom:0.25rem;\">Polynomial $P(x)$ Coefficients:</div>\n                            <div style=\"display:grid; grid-template-columns:1fr 1fr 1fr; gap:0.5rem;\">\n                                <div><label style=\"font-size:0.75rem;\">$x^2$:</label><input type=\"number\" id=\"p-c2\" value=\"3\" class=\"lesson-sim-slider\" oninput=\"updatePolySim()\"></div>\n                                <div><label style=\"font-size:0.75rem;\">$x$:</label><input type=\"number\" id=\"p-c1\" value=\"-2\" class=\"lesson-sim-slider\" oninput=\"updatePolySim()\"></div>\n                                <div><label style=\"font-size:0.75rem;\">Const:</label><input type=\"number\" id=\"p-c0\" value=\"5\" class=\"lesson-sim-slider\" oninput=\"updatePolySim()\"></div>\n                            </div>\n                            <div style=\"font-weight:700; font-size:0.85rem; color:#f43f5e; margin:0.75rem 0 0.25rem 0;\">Polynomial $Q(x)$ Coefficients:</div>\n                            <div style=\"display:grid; grid-template-columns:1fr 1fr 1fr; gap:0.5rem;\">\n                                <div><label style=\"font-size:0.75rem;\">$x^2$:</label><input type=\"number\" id=\"q-c2\" value=\"1\" class=\"lesson-sim-slider\" oninput=\"updatePolySim()\"></div>\n                                <div><label style=\"font-size:0.75rem;\">$x$:</label><input type=\"number\" id=\"q-c1\" value=\"4\" class=\"lesson-sim-slider\" oninput=\"updatePolySim()\"></div>\n                                <div><label style=\"font-size:0.75rem;\">Const:</label><input type=\"number\" id=\"q-c0\" value=\"-3\" class=\"lesson-sim-slider\" oninput=\"updatePolySim()\"></div>\n                            </div>\n                        </div>\n                        <div class=\"lesson-sim-visualizer\" style=\"display:flex; flex-direction:column; justify-content:center; gap:0.75rem;\">\n                            <div style=\"padding:1rem; background:rgba(0,0,0,0.2); border-radius:0.75rem; border:1px solid var(--color-border);\">\n                                <span style=\"font-size:0.8rem; font-weight:700; color:#3b82f6;\">Sum: $P(x) + Q(x)$</span>\n                                <div id=\"poly-sum-res\" style=\"font-size:1.15rem; font-weight:800; color:#ffffff; font-family:'Outfit',sans-serif; margin-top:0.25rem;\">\n                                    4x² + 2x + 2\n                                </div>\n                            </div>\n                            <div style=\"padding:1rem; background:rgba(0,0,0,0.2); border-radius:0.75rem; border:1px solid var(--color-border);\">\n                                <span style=\"font-size:0.8rem; font-weight:700; color:#e11d48;\">Difference: $P(x) - Q(x)$</span>\n                                <div id=\"poly-diff-res\" style=\"font-size:1.15rem; font-weight:800; color:#ffffff; font-family:'Outfit',sans-serif; margin-top:0.25rem;\">\n                                    2x² - 6x + 8\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </section>\n                "
         }
     ],
     "vocabulary": [
@@ -75,8 +75,74 @@
     "citation": {
         "title": "Source Citation (MLA)",
         "text": "Great Minds. \"Adding and Subtracting Polynomials.\" Eureka Math, New York State Common Core Mathematics Curriculum, Algebra I, Module 1, Topic B, Lesson 8.",
-        "subtext": "Aligned with CCSS.MATH.CONTENT.HSA.APR.A.1 \u2022 Understand that polynomials form a system analogous to the integers.",
+        "subtext": "Aligned with CCSS.MATH.CONTENT.HSA.APR.A.1 • Understand that polynomials form a system analogous to the integers.",
         "lessonId": "L-ID-ALG-K-M1-B-3"
     },
-    "scripts": "\n        function updatePolySim() {\n            const p2 = parseFloat(document.getElementById('p-c2').value) || 0;\n            const p1 = parseFloat(document.getElementById('p-c1').value) || 0;\n            const p0 = parseFloat(document.getElementById('p-c0').value) || 0;\n\n            const q2 = parseFloat(document.getElementById('q-c2').value) || 0;\n            const q1 = parseFloat(document.getElementById('q-c1').value) || 0;\n            const q0 = parseFloat(document.getElementById('q-c0').value) || 0;\n\n            // Sum\n            const s2 = p2 + q2;\n            const s1 = p1 + q1;\n            const s0 = p0 + q0;\n\n            // Diff\n            const d2 = p2 - q2;\n            const d1 = p1 - q1;\n            const d0 = p0 - q0;\n\n            function formatPoly(c2, c1, c0) {\n                let parts = [];\n                if (c2 !== 0) parts.push(`${c2}x\u00b2`);\n                if (c1 > 0) parts.push(`+ ${c1}x`);\n                else if (c1 < 0) parts.push(`- ${Math.abs(c1)}x`);\n                if (c0 > 0) parts.push(`+ ${c0}`);\n                else if (c0 < 0) parts.push(`- ${Math.abs(c0)}`);\n                return parts.length > 0 ? parts.join(' ') : '0';\n            }\n\n            document.getElementById('poly-sum-res').innerText = formatPoly(s2, s1, s0);\n            document.getElementById('poly-diff-res').innerText = formatPoly(d2, d1, d0);\n        }\n\n        document.addEventListener('DOMContentLoaded', () => {\n            updatePolySim();\n        });\n        "
+    "scripts": "\n        function updatePolySim() {\n            const p2 = parseFloat(document.getElementById('p-c2').value) || 0;\n            const p1 = parseFloat(document.getElementById('p-c1').value) || 0;\n            const p0 = parseFloat(document.getElementById('p-c0').value) || 0;\n\n            const q2 = parseFloat(document.getElementById('q-c2').value) || 0;\n            const q1 = parseFloat(document.getElementById('q-c1').value) || 0;\n            const q0 = parseFloat(document.getElementById('q-c0').value) || 0;\n\n            // Sum\n            const s2 = p2 + q2;\n            const s1 = p1 + q1;\n            const s0 = p0 + q0;\n\n            // Diff\n            const d2 = p2 - q2;\n            const d1 = p1 - q1;\n            const d0 = p0 - q0;\n\n            function formatPoly(c2, c1, c0) {\n                let parts = [];\n                if (c2 !== 0) parts.push(`${c2}x²`);\n                if (c1 > 0) parts.push(`+ ${c1}x`);\n                else if (c1 < 0) parts.push(`- ${Math.abs(c1)}x`);\n                if (c0 > 0) parts.push(`+ ${c0}`);\n                else if (c0 < 0) parts.push(`- ${Math.abs(c0)}`);\n                return parts.length > 0 ? parts.join(' ') : '0';\n            }\n\n            document.getElementById('poly-sum-res').innerText = formatPoly(s2, s1, s0);\n            document.getElementById('poly-diff-res').innerText = formatPoly(d2, d1, d0);\n        }\n\n        document.addEventListener('DOMContentLoaded', () => {\n            updatePolySim();\n        });\n        ",
+    "guidedExercises": [
+        {
+            "title": "Example 1: Subtracting Multi-Term Polynomials in Standard Form",
+            "badge": "Eureka Math Guided Classwork",
+            "difficulty": "Core Application",
+            "problem": "Subtract $(2x^3 - 5x^2 + 3x - 8)$ from $(5x^3 + 2x^2 - 7x + 4)$. Express the resulting polynomial in standard form, and identify its degree, leading term, and leading coefficient.",
+            "scaffolding": "\"Subtract $A$ from $B$\" means $B - A$. Distribute $-1$ across every term in $A$ before combining like terms.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Set up subtraction sentence",
+                    "math": "(5x^3 + 2x^2 - 7x + 4) - (2x^3 - 5x^2 + 3x - 8)",
+                    "explanation": "The polynomial following 'from' is written first."
+                },
+                {
+                    "step": 2,
+                    "label": "Distribute the negative sign (multiplication by $-1$)",
+                    "math": "= 5x^3 + 2x^2 - 7x + 4 - 2x^3 + 5x^2 - 3x + 8",
+                    "explanation": "Every sign inside the second parentheses reverses."
+                },
+                {
+                    "step": 3,
+                    "label": "Group and combine like terms",
+                    "math": "= (5 - 2)x^3 + (2 + 5)x^2 + (-7 - 3)x + (4 + 8) = 3x^3 + 7x^2 - 10x + 12",
+                    "explanation": "Group cubic, quadratic, linear, and constant terms."
+                },
+                {
+                    "step": 4,
+                    "label": "Identify polynomial attributes",
+                    "math": "\\text{Degree} = 3, \\quad \\text{Leading Term} = 3x^3, \\quad \\text{Leading Coefficient} = 3",
+                    "explanation": "Standard form is ordered from highest power to lowest power."
+                }
+            ],
+            "finalAnswer": "3x^3 + 7x^2 - 10x + 12 \\quad (\\text{Degree: } 3, \\; \\text{Leading Term: } 3x^3, \\; \\text{Leading Coefficient: } 3)",
+            "commonPitfall": "Only distributing the negative sign to the first term $2x^3$ and leaving $-5x^2$ unchanged. The negative applies to EVERY term: $-(-5x^2) = +5x^2$ and $-(-8) = +8$."
+        },
+        {
+            "title": "Exercise 1: Perimeter of a Compound Geometric Figure",
+            "badge": "Polynomial Application",
+            "difficulty": "Geometric Modeling",
+            "problem": "A triangle has side lengths $a = 3x^2 - 2x + 1$, $b = x^2 + 5x - 4$, and $c = 2x^2 - x + 7$. Write a simplified expression in standard form for the perimeter $P(x)$. If $x = 3\\text{ cm}$, calculate the numerical perimeter.",
+            "scaffolding": "Perimeter is the sum of all sides: $P = a + b + c$. Sum like terms by combining their coefficients.",
+            "steps": [
+                {
+                    "step": 1,
+                    "label": "Sum side expressions",
+                    "math": "P(x) = (3x^2 - 2x + 1) + (x^2 + 5x - 4) + (2x^2 - x + 7)",
+                    "explanation": "Combine all three polynomial sides."
+                },
+                {
+                    "step": 2,
+                    "label": "Group like quadratic, linear, and constant terms",
+                    "math": "= (3 + 1 + 2)x^2 + (-2 + 5 - 1)x + (1 - 4 + 7) = 6x^2 + 2x + 4",
+                    "explanation": "Standard form polynomial for the perimeter."
+                },
+                {
+                    "step": 3,
+                    "label": "Evaluate for $x = 3$",
+                    "math": "P(3) = 6(3)^2 + 2(3) + 4 = 6(9) + 6 + 4 = 54 + 10 = 64\\text{ cm}",
+                    "explanation": "Substitute $x = 3$ and compute."
+                }
+            ],
+            "finalAnswer": "P(x) = 6x^2 + 2x + 4; \\quad P(3) = 64\\text{ cm}.",
+            "commonPitfall": "Changing exponents when adding like terms. $3x^2 + x^2 + 2x^2 = 6x^2$, NOT $6x^6$! Exponents only add during multiplication."
+        }
+    ]
 }

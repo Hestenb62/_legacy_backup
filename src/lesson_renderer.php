@@ -201,6 +201,110 @@ include_once ABSPATH . 'src/partials/sticky-reading-bar.php';
             ?>
         <?php endforeach; ?>
 
+        <!-- Guided Exercises & Step-by-Step Worked Solutions (Eureka Math / EngageNY) -->
+        <?php if (!empty($lesson['guidedExercises']) && is_array($lesson['guidedExercises'])): ?>
+        <section class="lesson-guided-section" aria-labelledby="guided-exercises-heading">
+            <div class="lesson-guided-header">
+                <div>
+                    <h2 id="guided-exercises-heading" class="lesson-guided-title">
+                        <i class="fas fa-layer-group" aria-hidden="true"></i> Guided Exercises &amp; Worked Solutions
+                    </h2>
+                    <p class="lesson-guided-subtitle">
+                        Work through these core curriculum examples. Attempt each problem independently, then expand to inspect the step-by-step reasoning and common pitfalls.
+                    </p>
+                </div>
+            </div>
+
+            <div class="lesson-exercise-list" style="display:flex; flex-direction:column; gap:1.5rem;">
+                <?php foreach ($lesson['guidedExercises'] as $exIndex => $ex): ?>
+                    <article class="lesson-exercise-card" aria-labelledby="ex-title-<?php echo $exIndex; ?>">
+                        <div class="lesson-exercise-top">
+                            <h3 id="ex-title-<?php echo $exIndex; ?>" class="lesson-exercise-heading">
+                                <i class="fas fa-pen-fancy text-primary" aria-hidden="true" style="color:var(--color-primary);"></i>
+                                <?php echo htmlspecialchars($ex['title'] ?? ('Exercise ' . ($exIndex + 1))); ?>
+                            </h3>
+                            <div class="lesson-exercise-badges">
+                                <?php if (!empty($ex['badge'])): ?>
+                                    <span class="lesson-exercise-badge guided"><?php echo htmlspecialchars($ex['badge']); ?></span>
+                                <?php endif; ?>
+                                <?php if (!empty($ex['difficulty'])): ?>
+                                    <span class="lesson-exercise-badge difficulty"><?php echo htmlspecialchars($ex['difficulty']); ?></span>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+
+                        <?php if (!empty($ex['problem'])): ?>
+                            <div class="lesson-exercise-problem">
+                                <?php echo $ex['problem']; ?>
+                            </div>
+                        <?php endif; ?>
+
+                        <?php if (!empty($ex['scaffolding'])): ?>
+                            <div class="lesson-scaffold-box">
+                                <i class="fas fa-lightbulb lesson-scaffold-icon" aria-hidden="true"></i>
+                                <div>
+                                    <strong>Guiding Hint: </strong>
+                                    <span><?php echo $ex['scaffolding']; ?></span>
+                                </div>
+                            </div>
+                        <?php endif; ?>
+
+                        <details class="lesson-solution-accordion">
+                            <summary class="lesson-solution-summary">
+                                <span class="lesson-solution-summary-text">
+                                    <i class="fas fa-eye" aria-hidden="true"></i> View Step-by-Step Solution
+                                </span>
+                                <i class="fas fa-chevron-down lesson-solution-chevron" aria-hidden="true"></i>
+                            </summary>
+                            <div class="lesson-solution-body">
+                                <?php if (!empty($ex['steps']) && is_array($ex['steps'])): ?>
+                                    <div class="lesson-step-list">
+                                        <?php foreach ($ex['steps'] as $sIndex => $s): ?>
+                                            <div class="lesson-step-item">
+                                                <div class="lesson-step-num"><?php echo htmlspecialchars($s['step'] ?? ($sIndex + 1)); ?></div>
+                                                <div class="lesson-step-content">
+                                                    <?php if (!empty($s['label'])): ?>
+                                                        <span class="lesson-step-label"><?php echo htmlspecialchars($s['label']); ?></span>
+                                                    <?php endif; ?>
+                                                    <?php if (!empty($s['math'])): ?>
+                                                        <div class="lesson-step-math">$$<?php echo $s['math']; ?>$$</div>
+                                                    <?php endif; ?>
+                                                    <?php if (!empty($s['explanation'])): ?>
+                                                        <div class="lesson-step-desc" style="font-size:0.875rem; color:var(--color-text-secondary);"><?php echo $s['explanation']; ?></div>
+                                                    <?php endif; ?>
+                                                </div>
+                                            </div>
+                                        <?php endforeach; ?>
+                                    </div>
+                                <?php endif; ?>
+
+                                <?php if (!empty($ex['finalAnswer'])): ?>
+                                    <div class="lesson-final-answer-box">
+                                        <i class="fas fa-check-circle" aria-hidden="true"></i>
+                                        <div>
+                                            <strong>Final Solution: </strong>
+                                            <span>$$<?php echo $ex['finalAnswer']; ?>$$</span>
+                                        </div>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                        </details>
+
+                        <?php if (!empty($ex['commonPitfall'])): ?>
+                            <div class="lesson-pitfall-box">
+                                <i class="fas fa-exclamation-triangle lesson-pitfall-icon" aria-hidden="true"></i>
+                                <div class="lesson-pitfall-body">
+                                    <strong>Watch Out For Common Pitfalls:</strong>
+                                    <span><?php echo $ex['commonPitfall']; ?></span>
+                                </div>
+                            </div>
+                        <?php endif; ?>
+                    </article>
+                <?php endforeach; ?>
+            </div>
+        </section>
+        <?php endif; ?>
+
         <!-- Vocabulary -->
         <?php if (!empty($lesson['vocabulary'])): ?>
         <section class="lesson-vocab-section lesson-vocab-section-full">
