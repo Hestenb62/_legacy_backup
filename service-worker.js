@@ -68,6 +68,7 @@ const ASSETS_TO_CACHE = [
   '/assets/text/library-gutenburg.md',
   '/assets/js/global-error-handler.js',
   '/assets/js/global-standard.js',
+  '/assets/js/scratchpad-studio.js',
   '/assets/js/global-study-tools.js',
   '/assets/js/flashcard-studio.js',
   '/assets/js/gamification/quest-manager.js',

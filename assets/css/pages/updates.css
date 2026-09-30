@@ -427,6 +427,46 @@
     border: 1px solid transparent;
 }
 
+/* Platform Release Version Badge */
+.upd-badge-version {
+    font-size: 0.6875rem;
+    font-weight: 800;
+    padding: 0.18rem 0.5rem;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    background: rgba(59, 130, 246, 0.12);
+    color: #2563eb;
+    border: 1px solid rgba(59, 130, 246, 0.25);
+    letter-spacing: 0.02em;
+}
+
+[data-theme="dark"] .upd-badge-version, .dark .upd-badge-version {
+    background: rgba(96, 165, 250, 0.2);
+    color: #93c5fd;
+    border-color: rgba(96, 165, 250, 0.35);
+}
+
+[data-theme="midnight"] .upd-badge-version, .midnight .upd-badge-version {
+    background: rgba(56, 189, 248, 0.2);
+    color: #7dd3fc;
+    border-color: rgba(56, 189, 248, 0.35);
+}
+
+[data-theme="sepia"] .upd-badge-version, .sepia .upd-badge-version {
+    background: rgba(180, 83, 9, 0.15);
+    color: #b45309;
+    border-color: rgba(180, 83, 9, 0.3);
+}
+
+[data-theme="high-contrast"] .upd-badge-version, .high-contrast .upd-badge-version {
+    background: #000000 !important;
+    color: #00ffff !important;
+    border: 1px solid #00ffff !important;
+    font-weight: 800;
+}
+
 .cat-walkthrough { background: rgba(16, 185, 129, 0.15); color: #059669; }
 .cat-plan { background: rgba(79, 70, 229, 0.15); color: #4f46e5; }
 .cat-bugfix { background: rgba(244, 63, 94, 0.15); color: #e11d48; }

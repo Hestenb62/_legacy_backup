@@ -96,9 +96,9 @@
 
         <!-- Version Status & Release Info Strip (WCAG Operable) -->
         <?php
-        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.4.0';
+        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.5.0';
         $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'September 2026 Release';
-        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Accessible UDL & Modern Design System';
+        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Unified Scratchpad Studio, Accessible UDL & Modern Design';
         ?>
         <div class="footer-version-strip" role="region" aria-label="Platform Version Information">
             <div class="footer-version-info">
@@ -194,6 +194,8 @@
 <script
     src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/gamification/daily-quests.js') : '/assets/js/gamification/daily-quests.js' ?>"></script>
 <script
+    src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/scratchpad-studio.js') : '/assets/js/scratchpad-studio.js' ?>"></script>
+<script
     src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/global-study-tools.js') : '/assets/js/global-study-tools.js' ?>"></script>
 <script
     src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/flashcard-studio.js') : '/assets/js/flashcard-studio.js' ?>"></script>
@@ -267,10 +269,17 @@
                 </span>
             </div>
             <p class="footer-vmodal-lead">
-                Version <?= htmlspecialchars($siteVersion) ?> expands universal learning accommodations, introduces
-                high-contrast accessible design systems, and enhances multi-grade educational guides.
+                Version <?= htmlspecialchars($siteVersion) ?> introduces the Unified Multi-Note Scratchpad &amp; Whiteboard Studio, expands universal learning accommodations, and enhances STEM math equation tools.
             </p>
             <ul class="footer-vmodal-features">
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true">
+                        <i class="fas fa-pencil-ruler"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Unified Scratchpad &amp; Whiteboard Studio:</strong> Multi-page tabbed notebooks, HTML5 digital drawing whiteboard with undo/redo and geometric shapes, LaTeX formula quick-insert palette with real-time MathJax rendering, and side-by-side docked split-view.
+                    </div>
+                </li>
                 <li class="footer-vmodal-feature-item">
                     <div class="footer-vmodal-feature-icon" aria-hidden="true">
                         <i class="fas fa-universal-access"></i>

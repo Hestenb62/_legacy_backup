@@ -26,6 +26,7 @@ function parseFeedDoc(string $filePath): ?array {
         'filename' => $filename,
         'title' => '',
         'date' => '',
+        'version' => '',
         'category' => 'Update',
         'tags' => [],
         'summary' => '',
@@ -82,6 +83,24 @@ function parseFeedDoc(string $filePath): ?array {
             $meta['date'] = $dMatch[1];
         } else {
             $meta['date'] = date('Y-m-d', filemtime($filePath));
+        }
+    }
+
+    // Fallback version
+    if (empty($meta['version'])) {
+        $docDate = $meta['date'];
+        if ($docDate >= '2026-09-29') {
+            $meta['version'] = 'v2.5.0';
+        } elseif ($docDate >= '2026-09-25') {
+            $meta['version'] = 'v2.4.0';
+        } elseif ($docDate >= '2026-09-20') {
+            $meta['version'] = 'v2.3.0';
+        } elseif ($docDate >= '2026-09-11') {
+            $meta['version'] = 'v2.2.0';
+        } elseif ($docDate >= '2026-09-09') {
+            $meta['version'] = 'v2.1.0';
+        } else {
+            $meta['version'] = 'v2.0.0';
         }
     }
 
@@ -166,6 +185,9 @@ if ($format === 'rss' || $format === 'xml') {
       <pubDate><?= $pubDate ?></pubDate>
       <author><?= htmlspecialchars($d['author']) ?></author>
       <category><?= htmlspecialchars($d['category']) ?></category>
+      <?php if (!empty($d['version'])): ?>
+      <category domain="version"><?= htmlspecialchars($d['version']) ?></category>
+      <?php endif; ?>
       <description><![CDATA[<?= $d['summary'] ?>]]></description>
     </item>
     <?php endforeach; ?>
@@ -185,6 +207,7 @@ $items = array_map(function($d) use ($baseUrl) {
         'title' => $d['title'],
         'summary' => $d['summary'],
         'date_published' => $d['date'],
+        'version' => $d['version'] ?? 'v2.5.0',
         'category' => $d['category'],
         'tags' => $d['tags'],
         'author' => [

@@ -54,11 +54,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // A11y Focus
-    setupPanelFocus(
-        "scratchpad-toggle",
-        "scratchpad-panel",
-        "scratchpad-close"
-    );
+    if (!window.HLScratchpad) {
+        setupPanelFocus(
+            "scratchpad-toggle",
+            "scratchpad-panel",
+            "scratchpad-close"
+        );
+    }
     setupPanelFocus(
         "a11y-toggle-button",
         "a11y-settings-panel",
@@ -75,21 +77,23 @@ document.addEventListener("DOMContentLoaded", () => {
         "citation-close"
     );
 
-    // Quick Notes Auto-save (Global Feature)
-    const notesArea = document.getElementById("quick-notes-area");
-    if (notesArea) {
-        const saveNotes = debounce((val) => {
-            localStorage.setItem("hl_scratchpad", val);
-            const status = document.getElementById("scratchpad-status");
-            if (status) {
-                status.textContent = "Saving...";
-                setTimeout(() => (status.textContent = "Saved"), 1000);
-            }
-        }, 500);
+    // Quick Notes Auto-save (Fallback if HLScratchpad is not present)
+    if (!window.HLScratchpad) {
+        const notesArea = document.getElementById("quick-notes-area");
+        if (notesArea) {
+            const saveNotes = debounce((val) => {
+                localStorage.setItem("hl_scratchpad", val);
+                const status = document.getElementById("scratchpad-status");
+                if (status) {
+                    status.textContent = "Saving...";
+                    setTimeout(() => (status.textContent = "Saved"), 1000);
+                }
+            }, 500);
 
-        notesArea.addEventListener("input", (e) => {
-            saveNotes(e.target.value);
-        });
+            notesArea.addEventListener("input", (e) => {
+                saveNotes(e.target.value);
+            });
+        }
     }
 });
 

@@ -219,135 +219,334 @@
     }
   }
 
-  /* Scratchpad Panel Overlay */
+  /* ==========================================================================
+     Unified Super Scratchpad & Whiteboard Studio Styles
+     ========================================================================== */
   .scratchpad-panel-overlay {
     position: fixed;
     inset: 0;
-    z-index: 100;
+    z-index: 9999;
     display: none;
     align-items: center;
     justify-content: center;
     padding: 1rem;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .scratchpad-panel-overlay.active {
     display: flex;
   }
 
+  /* Centered Modal Backdrop */
   .scratchpad-backdrop {
     position: absolute;
     inset: 0;
-    background-color: rgba(17, 24, 39, 0.4);
-    backdrop-filter: blur(4px);
+    background-color: rgba(15, 23, 42, 0.55);
+    backdrop-filter: blur(6px);
     cursor: pointer;
+    transition: opacity 0.25s ease;
   }
 
   .dark .scratchpad-backdrop, .midnight .scratchpad-backdrop {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.75);
   }
 
+  /* Modal Content Window */
   .scratchpad-content {
     background-color: var(--color-bg-base);
     border-radius: var(--radius-2xl);
     position: relative;
     width: 100%;
-    max-width: 64rem;
-    height: 85vh;
+    max-width: 68rem;
+    height: 88vh;
+    max-height: 900px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
     border: 1px solid var(--color-border);
-    box-shadow: var(--shadow-2xl);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(0,0,0,0.05);
     pointer-events: auto;
     z-index: 10;
+    transition: width 0.3s ease, height 0.3s ease, border-radius 0.3s ease;
   }
 
   .scratchpad-panel-overlay.active .scratchpad-content {
-    animation: scale-up 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation: sp-scale-up 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  @keyframes sp-scale-up {
+    0% { opacity: 0; transform: scale(0.96) translateY(10px); }
+    100% { opacity: 1; transform: scale(1) translateY(0); }
+  }
+
+  /* Docked Split View (Side-by-Side Reading & Note Taking) */
+  .scratchpad-panel-overlay.is-docked {
+    inset: 0 0 0 auto;
+    width: 520px;
+    max-width: 96vw;
+    height: 100vh;
+    padding: 0;
+    align-items: stretch;
+    justify-content: flex-end;
+    pointer-events: none;
+  }
+
+  .scratchpad-panel-overlay.is-docked .scratchpad-backdrop {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .scratchpad-panel-overlay.is-docked .scratchpad-content {
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+    border-radius: 0;
+    border-left: 2px solid var(--color-border);
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    box-shadow: -8px 0 32px rgba(0, 0, 0, 0.2);
+    pointer-events: auto;
+  }
+
+  /* Fullscreen Mode */
+  .scratchpad-panel-overlay.is-fullscreen {
+    padding: 0;
+  }
+
+  .scratchpad-panel-overlay.is-fullscreen .scratchpad-content {
+    width: 100vw;
+    max-width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+    border-radius: 0;
+    border: none;
   }
 
   /* Header */
   .scratchpad-header {
-    padding: 1.25rem 1.5rem;
+    padding: 0.875rem 1.25rem;
     border-bottom: 1px solid var(--color-border);
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     background-color: var(--color-bg-surface);
+    gap: 0.75rem;
+    flex-shrink: 0;
   }
 
   .scratchpad-title-group {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.75rem;
   }
 
   .scratchpad-icon-box {
-    width: 3rem;
-    height: 3rem;
+    width: 2.5rem;
+    height: 2.5rem;
     border-radius: var(--radius-lg);
-    background-color: color-mix(in srgb, var(--color-primary) 10%, transparent);
+    background-color: color-mix(in srgb, var(--color-primary) 12%, transparent);
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--color-primary);
-    font-size: 1.25rem;
+    font-size: 1.15rem;
+    flex-shrink: 0;
   }
 
   .scratchpad-title {
-    font-size: 1.25rem;
-    font-weight: 900;
+    font-size: 1.1rem;
+    font-weight: 800;
     color: var(--color-text-main);
     line-height: 1.2;
+    margin: 0;
   }
 
   .scratchpad-subtitle {
     font-size: 0.75rem;
     color: var(--color-text-muted);
+    margin: 0;
   }
 
-  .scratchpad-close-btn {
-    width: 2.5rem;
-    height: 2.5rem;
+  /* Notebook Controls Bar */
+  .scratchpad-notebook-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    background-color: var(--color-bg-base);
+    padding: 0.25rem 0.4rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+  }
+
+  .scratchpad-note-select {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+    background-color: transparent;
+    border: none;
     border-radius: var(--radius-sm);
+    outline: none;
+    max-width: 140px;
+    cursor: pointer;
+  }
+
+  .scratchpad-note-select:focus-visible {
+    box-shadow: 0 0 0 2px var(--color-primary);
+  }
+
+  .scratchpad-btn-sm {
+    padding: 0.3rem 0.55rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+    background-color: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    transition: all 0.15s ease;
+  }
+
+  .scratchpad-btn-sm:hover {
+    background-color: color-mix(in srgb, var(--color-primary) 10%, transparent);
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+
+  .scratchpad-btn-sm.scratchpad-btn-danger:hover {
+    background-color: color-mix(in srgb, var(--color-error) 15%, transparent);
+    color: var(--color-error);
+    border-color: var(--color-error);
+  }
+
+  /* Window State Controls */
+  .scratchpad-window-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .scratchpad-header-btn, .scratchpad-close-btn {
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: var(--radius-md);
     background-color: var(--color-bg-base);
     color: var(--color-text-muted);
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.2s;
-    border: none;
+    border: 1px solid var(--color-border);
     cursor: pointer;
+    font-size: 0.9rem;
+  }
+
+  .scratchpad-header-btn:hover {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+    background-color: color-mix(in srgb, var(--color-primary) 8%, transparent);
+  }
+
+  .scratchpad-header-btn.active {
+    background-color: var(--color-primary);
+    color: var(--color-text-inverse);
+    border-color: var(--color-primary);
   }
 
   .scratchpad-close-btn:hover {
     color: var(--color-error);
+    border-color: var(--color-error);
     background-color: color-mix(in srgb, var(--color-error) 10%, transparent);
   }
 
-  /* Body */
+  /* Mode Navigation Tabs */
+  .scratchpad-nav-tabs {
+    display: flex;
+    background-color: var(--color-bg-surface);
+    border-bottom: 1px solid var(--color-border);
+    padding: 0 1rem;
+    gap: 0.5rem;
+    flex-shrink: 0;
+    overflow-x: auto;
+  }
+
+  .scratchpad-tab {
+    padding: 0.65rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--color-text-muted);
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+    transition: all 0.2s;
+  }
+
+  .scratchpad-tab:hover {
+    color: var(--color-primary);
+  }
+
+  .scratchpad-tab.active {
+    color: var(--color-primary);
+    border-bottom-color: var(--color-primary);
+  }
+
+  .scratchpad-tab:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: -2px;
+  }
+
+  /* Body & Panes */
   .scratchpad-body {
     display: flex;
-    flex-direction: column;
     flex-grow: 1;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--color-bg-base);
+  }
+
+  .scratchpad-pane {
+    display: none;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
   }
 
+  .scratchpad-pane.active {
+    display: flex;
+  }
+
+  /* Pane 1: Notes & Drafting */
+  #scratchpad-pane-notes {
+    flex-direction: column;
+  }
+
   @media (min-width: 768px) {
-    .scratchpad-body {
+    #scratchpad-pane-notes {
       flex-direction: row;
     }
   }
 
-  /* Sidebar */
   .scratchpad-sidebar {
     width: 100%;
     background-color: var(--color-bg-surface);
     border-bottom: 1px solid var(--color-border);
-    padding: 1.25rem;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 1rem;
+    flex-shrink: 0;
+    overflow-y: auto;
   }
 
   @media (min-width: 768px) {
@@ -355,57 +554,44 @@
       width: 16rem;
       border-bottom: none;
       border-right: 1px solid var(--color-border);
-      flex-shrink: 0;
-      overflow-y: auto;
     }
   }
 
   .sidebar-section-title {
-    font-size: 0.75rem;
-    font-weight: 700;
+    font-size: 0.72rem;
+    font-weight: 800;
     color: var(--color-text-muted);
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin-bottom: 0.5rem;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.4rem;
   }
 
   .scratchpad-templates-list {
     display: flex;
-    gap: 0.5rem;
-    overflow-x: auto;
-    padding-bottom: 0.5rem;
-  }
-
-  @media (min-width: 768px) {
-    .scratchpad-templates-list {
-      flex-direction: column;
-      overflow-x: visible;
-      gap: 0.5rem;
-      padding-bottom: 0;
-    }
+    flex-direction: column;
+    gap: 0.35rem;
   }
 
   .template-btn {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
-    padding: 0.75rem 1rem;
+    gap: 0.6rem;
+    padding: 0.5rem 0.75rem;
     border-radius: var(--radius-md);
     background-color: var(--color-bg-base);
     color: var(--color-text-muted);
     font-weight: 700;
-    font-size: 0.875rem;
+    font-size: 0.8rem;
     transition: all 0.2s;
     border: 1px solid var(--color-border);
     cursor: pointer;
-    white-space: nowrap;
     text-align: left;
   }
 
   .template-btn:hover {
     color: var(--color-primary);
     border-color: var(--color-primary);
-    background-color: color-mix(in srgb, var(--color-primary) 5%, transparent);
+    background-color: color-mix(in srgb, var(--color-primary) 6%, transparent);
   }
 
   .template-btn.active {
@@ -415,11 +601,148 @@
     box-shadow: var(--shadow-sm);
   }
 
-  /* Editor */
-  .scratchpad-editor {
-    flex-grow: 1;
-    position: relative;
+  /* A11y & Typography Controls */
+  .scratchpad-a11y-tools {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .scratchpad-font-select-group {
+    display: flex;
     background-color: var(--color-bg-base);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+  }
+
+  .font-pref-btn {
+    flex: 1;
+    padding: 0.35rem 0.4rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    border: none;
+    background: transparent;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.15s ease;
+  }
+
+  .font-pref-btn.active {
+    background-color: var(--color-primary);
+    color: var(--color-text-inverse);
+  }
+
+  .scratchpad-fontsize-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-bg-base);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 0.25rem 0.5rem;
+  }
+
+  .scratchpad-icon-btn {
+    background: transparent;
+    border: none;
+    color: var(--color-text-main);
+    font-weight: 800;
+    cursor: pointer;
+    padding: 0.2rem 0.4rem;
+    border-radius: var(--radius-sm);
+  }
+
+  .scratchpad-icon-btn:hover {
+    background-color: color-mix(in srgb, var(--color-primary) 10%, transparent);
+    color: var(--color-primary);
+  }
+
+  .font-size-indicator {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--color-text-muted);
+  }
+
+  /* Editor Column */
+  .scratchpad-editor-column {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow: hidden;
+    background-color: var(--color-bg-base);
+  }
+
+  .scratchpad-format-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    background-color: var(--color-bg-surface);
+    border-bottom: 1px solid var(--color-border);
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+  }
+
+  .format-btn-group {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .format-btn {
+    width: 2rem;
+    height: 2rem;
+    border-radius: var(--radius-sm);
+    background-color: var(--color-bg-base);
+    color: var(--color-text-muted);
+    border: 1px solid var(--color-border);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    transition: all 0.15s ease;
+  }
+
+  .format-btn:hover {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+
+  .scratchpad-search-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    background-color: var(--color-bg-base);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 0.2rem 0.5rem;
+    color: var(--color-text-muted);
+    font-size: 0.8rem;
+  }
+
+  .scratchpad-search-input {
+    border: none;
+    background: transparent;
+    color: var(--color-text-main);
+    font-size: 0.8rem;
+    outline: none;
+    width: 110px;
+  }
+
+  .search-match-badge {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--color-primary);
+  }
+
+  .scratchpad-textarea-wrap {
+    flex-grow: 1;
+    overflow: hidden;
+    position: relative;
   }
 
   .scratchpad-textarea {
@@ -427,59 +750,332 @@
     height: 100%;
     border: none;
     resize: none;
-    padding: 1.5rem;
+    padding: 1.25rem 1.5rem;
     font-size: 1rem;
-    line-height: 1.6;
+    line-height: 1.65;
     color: var(--color-text-main);
     background-color: transparent;
     font-family: inherit;
+    box-sizing: border-box;
   }
 
   .scratchpad-textarea:focus {
     outline: none;
   }
 
-  /* Footer */
-  .scratchpad-footer {
-    padding: 1rem 1.5rem;
-    border-top: 1px solid var(--color-border);
-    background-color: var(--color-bg-surface);
+  .scratchpad-textarea.font-dyslexic {
+    font-family: 'OpenDyslexic', 'Lexend', sans-serif !important;
+    letter-spacing: 0.05em;
+    line-height: 1.85;
+  }
+
+  .scratchpad-textarea.font-mono {
+    font-family: 'Fira Code', 'Courier New', monospace !important;
+    font-size: 0.95rem;
+  }
+
+  /* Pane 2: Whiteboard & Canvas */
+  #scratchpad-pane-whiteboard {
+    flex-direction: column;
+  }
+
+  .scratchpad-canvas-toolbar {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1rem;
+    background-color: var(--color-bg-surface);
+    border-bottom: 1px solid var(--color-border);
     flex-shrink: 0;
   }
 
-  .scratchpad-status {
+  .canvas-tool-group {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0 0.25rem;
+    border-right: 1px solid var(--color-border);
+  }
+
+  .canvas-tool-group:last-child {
+    border-right: none;
+  }
+
+  .canvas-tool-btn, .canvas-action-btn {
+    padding: 0.35rem 0.6rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--color-text-muted);
+    background-color: var(--color-bg-base);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    transition: all 0.15s ease;
+  }
+
+  .canvas-tool-btn:hover, .canvas-action-btn:hover {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+
+  .canvas-tool-btn.active {
+    background-color: var(--color-primary);
+    color: var(--color-text-inverse);
+    border-color: var(--color-primary);
+  }
+
+  .canvas-color-btn {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: transform 0.15s ease;
+  }
+
+  .canvas-color-btn:hover {
+    transform: scale(1.15);
+  }
+
+  .canvas-color-btn.active {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+
+  .canvas-select-control {
+    padding: 0.3rem 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+    background-color: var(--color-bg-base);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+  }
+
+  .canvas-action-btn.btn-danger-soft:hover {
+    color: var(--color-error);
+    border-color: var(--color-error);
+    background-color: color-mix(in srgb, var(--color-error) 10%, transparent);
+  }
+
+  .scratchpad-canvas-wrap {
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden;
+    background-color: #ffffff;
+    cursor: crosshair;
+  }
+
+  .dark .scratchpad-canvas-wrap, .midnight .scratchpad-canvas-wrap {
+    background-color: #0f172a;
+  }
+
+  /* Grid Backdrops for Canvas */
+  .scratchpad-canvas-wrap.grid-dots {
+    background-image: radial-gradient(rgba(100, 116, 139, 0.35) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  .scratchpad-canvas-wrap.grid-math {
+    background-image: linear-gradient(to right, rgba(100, 116, 139, 0.15) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(100, 116, 139, 0.15) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  .scratchpad-canvas-wrap.grid-iso {
+    background-image: linear-gradient(30deg, rgba(100, 116, 139, 0.15) 12%, transparent 12.5%, transparent 87%, rgba(100, 116, 139, 0.15) 87.5%, rgba(100, 116, 139, 0.15)),
+                      linear-gradient(150deg, rgba(100, 116, 139, 0.15) 12%, transparent 12.5%, transparent 87%, rgba(100, 116, 139, 0.15) 87.5%, rgba(100, 116, 139, 0.15));
+    background-size: 40px 70px;
+  }
+
+  #scratchpad-studio-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+    touch-action: none;
+  }
+
+  /* Pane 3: Formulas & MathJax Preview */
+  #scratchpad-pane-math {
+    overflow-y: auto;
+    padding: 1.25rem;
+    display: none;
+  }
+
+  #scratchpad-pane-math.active {
+    display: block;
+  }
+
+  .scratchpad-math-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    max-width: 100%;
+  }
+
+  @media (min-width: 860px) {
+    .scratchpad-math-container {
+      grid-template-columns: 1.1fr 0.9fr;
+    }
+  }
+
+  .math-palette-panel, .math-preview-panel {
+    background-color: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: 1.25rem;
+  }
+
+  .math-section-title {
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: var(--color-text-main);
+    margin: 0 0 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .math-category-card {
+    margin-bottom: 1rem;
+    background-color: var(--color-bg-base);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 0.85rem;
+  }
+
+  .math-cat-name {
     font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .math-chips-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .math-chip-btn {
+    padding: 0.4rem 0.65rem;
+    font-size: 0.85rem;
+    background-color: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    color: var(--color-text-main);
+    cursor: pointer;
+    transition: all 0.15s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .math-chip-btn:hover {
+    background-color: color-mix(in srgb, var(--color-primary) 12%, transparent);
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+    transform: translateY(-1px);
+  }
+
+  .math-preview-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .mathjax-live-box {
+    min-height: 200px;
+    max-height: 500px;
+    overflow-y: auto;
+    background-color: var(--color-bg-base);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 1.25rem;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--color-text-main);
+  }
+
+  /* Footer */
+  .scratchpad-footer {
+    padding: 0.75rem 1.25rem;
+    border-top: 1px solid var(--color-border);
+    background-color: var(--color-bg-surface);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    flex-shrink: 0;
+  }
+
+  .scratchpad-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.75rem;
+  }
+
+  .scratchpad-status {
     color: var(--color-success);
     display: flex;
     align-items: center;
     gap: 0.35rem;
+    font-weight: 700;
+  }
+
+  .scratchpad-stats {
+    color: var(--color-text-muted);
   }
 
   .scratchpad-actions {
     display: flex;
-    gap: 0.75rem;
-  }
-
-  .scratchpad-dictate-btn {
-    font-size: 0.875rem;
-    font-weight: 700;
-    color: var(--color-primary);
-    transition: all 0.2s;
-    background: color-mix(in srgb, var(--color-primary) 10%, transparent);
-    border: 1px solid color-mix(in srgb, var(--color-primary) 25%, transparent);
-    border-radius: var(--radius-md);
-    padding: 0.35rem 0.75rem;
-    cursor: pointer;
-    display: inline-flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 0.4rem;
   }
 
+  .scratchpad-footer-btn, .scratchpad-download-btn, .scratchpad-dictate-btn {
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.4rem 0.75rem;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    transition: all 0.2s;
+  }
+
+  .scratchpad-footer-btn, .scratchpad-download-btn {
+    background-color: var(--color-bg-base);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-main);
+  }
+
+  .scratchpad-footer-btn:hover, .scratchpad-download-btn:hover {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+    background-color: color-mix(in srgb, var(--color-primary) 8%, transparent);
+  }
+
+  .scratchpad-dictate-btn {
+    color: var(--color-primary);
+    background: color-mix(in srgb, var(--color-primary) 12%, transparent);
+    border: 1px solid color-mix(in srgb, var(--color-primary) 28%, transparent);
+  }
+
   .scratchpad-dictate-btn:hover {
-    background: color-mix(in srgb, var(--color-primary) 20%, transparent);
+    background: color-mix(in srgb, var(--color-primary) 22%, transparent);
     transform: translateY(-1px);
   }
 
@@ -497,7 +1093,7 @@
   }
 
   .scratchpad-clear-btn {
-    font-size: 0.875rem;
+    font-size: 0.8rem;
     font-weight: 700;
     color: var(--color-text-muted);
     transition: color 0.2s;
@@ -507,28 +1103,20 @@
     display: inline-flex;
     align-items: center;
     gap: 0.35rem;
+    padding: 0.4rem 0.5rem;
   }
 
   .scratchpad-clear-btn:hover {
     color: var(--color-error);
   }
 
-  .scratchpad-download-btn {
-    font-size: 0.875rem;
-    font-weight: 700;
-    color: var(--color-primary);
-    transition: all 0.2s;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35rem;
-  }
-
-  .scratchpad-download-btn:hover {
-    color: var(--color-primary-hover);
-    text-decoration: underline;
+  @media (max-width: 640px) {
+    .hide-mobile {
+      display: none !important;
+    }
+    .scratchpad-panel-overlay.is-docked {
+      width: 100vw;
+    }
   }
 
   /* Citation Panel Overlay */

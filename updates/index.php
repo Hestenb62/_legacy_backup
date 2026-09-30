@@ -27,6 +27,7 @@ function parseUpdateDoc(string $filePath): ?array {
         'filename' => $filename,
         'title' => '',
         'date' => '',
+        'version' => '',
         'category' => 'Update',
         'tags' => [],
         'summary' => '',
@@ -88,6 +89,24 @@ function parseUpdateDoc(string $filePath): ?array {
             $meta['date'] = $dMatch[1];
         } else {
             $meta['date'] = date('Y-m-d', filemtime($filePath));
+        }
+    }
+
+    // Fallback version: infer from frontmatter, date or current platform release
+    if (empty($meta['version'])) {
+        $docDate = $meta['date'];
+        if ($docDate >= '2026-09-29') {
+            $meta['version'] = 'v2.5.0';
+        } elseif ($docDate >= '2026-09-25') {
+            $meta['version'] = 'v2.4.0';
+        } elseif ($docDate >= '2026-09-20') {
+            $meta['version'] = 'v2.3.0';
+        } elseif ($docDate >= '2026-09-11') {
+            $meta['version'] = 'v2.2.0';
+        } elseif ($docDate >= '2026-09-09') {
+            $meta['version'] = 'v2.1.0';
+        } else {
+            $meta['version'] = 'v2.0.0';
         }
     }
 
@@ -165,7 +184,7 @@ $firstDoc = $docs[0] ?? null;
 <header class="upd-hero" role="banner">
     <div class="upd-hero-inner">
         <span class="upd-hero-badge">
-            <i class="fas fa-code-branch"></i> Engineering & Release Documentation
+            <i class="fas fa-code-branch"></i> Platform <?= htmlspecialchars(defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.5.0') ?> &bull; Engineering Documentation
         </span>
         <h1 class="upd-hero-title">Platform Updates & Planning Docs</h1>
         <p class="upd-hero-subtitle">
@@ -173,6 +192,13 @@ $firstDoc = $docs[0] ?? null;
         </p>
 
         <div class="upd-hero-stats">
+            <div class="upd-stat-item">
+                <div class="upd-stat-icon"><i class="fas fa-code-branch"></i></div>
+                <div>
+                    <div class="upd-stat-label">Platform Version</div>
+                    <div class="upd-stat-val" style="color: var(--color-primary, #3b82f6);"><?= htmlspecialchars(defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.5.0') ?></div>
+                </div>
+            </div>
             <div class="upd-stat-item">
                 <div class="upd-stat-icon"><i class="fas fa-file-alt"></i></div>
                 <div>
@@ -252,13 +278,21 @@ $firstDoc = $docs[0] ?? null;
                     <article class="upd-card-item <?= $idx === 0 ? 'active' : '' ?>" 
                              data-id="<?= htmlspecialchars($doc['id']) ?>"
                              data-category="<?= htmlspecialchars($doc['category']) ?>"
+                             data-version="<?= htmlspecialchars($doc['version']) ?>"
                              role="button"
                              tabindex="0"
                              aria-label="<?= htmlspecialchars($doc['title']) ?>">
                         <div class="upd-card-meta">
-                            <span class="upd-badge-category <?= $catClass ?>">
-                                <i class="fas fa-tag"></i> <?= htmlspecialchars($doc['category']) ?>
-                            </span>
+                            <div style="display:flex; align-items:center; gap:0.35rem; flex-wrap:wrap;">
+                                <span class="upd-badge-category <?= $catClass ?>">
+                                    <i class="fas fa-tag"></i> <?= htmlspecialchars($doc['category']) ?>
+                                </span>
+                                <?php if (!empty($doc['version'])): ?>
+                                    <span class="upd-badge-version">
+                                        <i class="fas fa-code-branch"></i> <?= htmlspecialchars($doc['version']) ?>
+                                    </span>
+                                <?php endif; ?>
+                            </div>
                             <span class="upd-card-date">
                                 <?= htmlspecialchars($doc['date']) ?>
                             </span>
@@ -285,6 +319,7 @@ $firstDoc = $docs[0] ?? null;
             <div class="upd-viewer-topbar">
                 <div class="upd-viewer-meta">
                     <span id="viewer-badge" class="upd-badge-category cat-walkthrough">Walkthrough</span>
+                    <span id="viewer-version" class="upd-badge-version"><i class="fas fa-code-branch"></i> v2.5.0</span>
                     <span>&bull;</span>
                     <span id="viewer-date"><i class="far fa-calendar-alt"></i> 2026-09-08</span>
                     <span>&bull;</span>
@@ -558,6 +593,13 @@ $firstDoc = $docs[0] ?? null;
         if (badgeEl) {
             badgeEl.className = `upd-badge-category ${catClass}`;
             badgeEl.innerHTML = `<i class="fas fa-tag"></i> ${doc.category}`;
+        }
+
+        const versionEl = document.getElementById('viewer-version');
+        if (versionEl) {
+            const ver = doc.version || 'v2.5.0';
+            versionEl.innerHTML = `<i class="fas fa-code-branch"></i> ${ver}`;
+            versionEl.style.display = 'inline-flex';
         }
 
         const dateEl = document.getElementById('viewer-date');

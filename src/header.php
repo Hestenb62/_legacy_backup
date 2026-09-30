@@ -48,7 +48,7 @@ if (! function_exists('assetVersion')) {
 
 // Core Platform Version Definition
 if (! defined('HL_SITE_VERSION')) {
-    define('HL_SITE_VERSION', 'v2.4.0');
+    define('HL_SITE_VERSION', 'v2.5.0');
     }
 if (! defined('HL_SITE_VERSION_DATE')) {
     define('HL_SITE_VERSION_DATE', 'September 2026');
@@ -57,7 +57,7 @@ if (! defined('HL_SITE_VERSION_LABEL')) {
     define('HL_SITE_VERSION_LABEL', 'September 2026 Release');
     }
 if (! defined('HL_SITE_VERSION_SUMMARY')) {
-    define('HL_SITE_VERSION_SUMMARY', 'Accessible UDL & Modern Design System');
+    define('HL_SITE_VERSION_SUMMARY', 'Unified Scratchpad Studio, Accessible UDL & Modern Design');
     }
 ?>
 <!DOCTYPE html>

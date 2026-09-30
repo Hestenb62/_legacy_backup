@@ -1006,6 +1006,7 @@
 .help-article-icon.accessibility { background: rgba(79, 70, 229, 0.12); color: #4f46e5; }
 .help-article-icon.progress      { background: rgba(16, 185, 129, 0.12); color: #10b981; }
 .help-article-icon.updating      { background: rgba(14, 165, 233, 0.12); color: #0ea5e9; }
+.help-article-icon.tools         { background: rgba(245, 158, 11, 0.12); color: #f59e0b; }
 .help-article-icon.general       { background: rgba(168, 85, 247, 0.12); color: #a855f7; }
 
 .help-article-badges {

@@ -79,6 +79,10 @@ function getHelpArticles() {
             $topic = 'Accessibility';
             $icon = 'fas fa-universal-access';
             $iconClass = 'accessibility';
+        } elseif (stripos($filename, 'scratch') !== false || stripos($filename, 'whiteboard') !== false || stripos($filename, 'tool') !== false || stripos($filename, 'timer') !== false) {
+            $topic = 'Study Tools';
+            $icon = 'fas fa-pencil-ruler';
+            $iconClass = 'tools';
         } elseif (stripos($filename, 'progress') !== false) {
             $topic = 'Features';
             $icon = 'fas fa-chart-line';

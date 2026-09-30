@@ -143,7 +143,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setup('a11y-toggle-button', 'a11y-settings-panel', 'a11y-close-button');
     setup('timer-toggle', 'timer-panel', 'timer-close');
-    setup('scratchpad-toggle', 'scratchpad-panel', 'scratchpad-close');
+    if (!window.HLScratchpad) {
+        setup('scratchpad-toggle', 'scratchpad-panel', 'scratchpad-close');
+    }
     setup('citation-toggle', 'citation-panel', 'citation-close');
     setup('recent-toggle', 'recent-pages-panel', 'recent-close');
 
@@ -648,8 +650,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (timerBackdrop) timerBackdrop.onclick = closeTimerPanel;
     if (timerCloseFooter) timerCloseFooter.onclick = closeTimerPanel;
 
-    // Notes (Scratchpad with Educational Templates)
-    const n = document.getElementById('quick-notes-area');
+    // Notes (Scratchpad with Educational Templates - Fallback if HLScratchpad is not present)
+    if (!window.HLScratchpad) {
+        const n = document.getElementById('quick-notes-area');
     const scratchpadStatus = document.getElementById('scratchpad-status');
     const clearNotesBtn = document.getElementById('clear-notes-btn');
     const scratchpadBackdrop = document.getElementById('scratchpad-backdrop-close');
@@ -844,6 +847,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             };
         });
+    }
     }
 
     // Academic Citation Generator (Dynamic Page Metadata Extraction)

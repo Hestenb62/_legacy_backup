@@ -11,6 +11,7 @@
     ---
     title: "Descriptive Human-Readable Title"
     date: "YYYY-MM-DD"
+    version: "v2.5.0" # Active semantic version of the platform release (e.g. v2.5.0)
     category: "Walkthrough" # Walkthrough | Implementation Plan | Bugfix | Architecture
     tags: ["Tag1", "Tag2"]
     summary: "1-2 sentence executive summary of the changes."
@@ -19,6 +20,8 @@
     ```
   - All documents in `updates/docs/` are automatically indexed, searchable, and viewable on the Updates Portal at `/updates.php` and `/updates/`.
   - Never leave planning or walkthrough details solely in ephemeral chat context.
+- **Footer Version & Release Notes Sync**: Whenever platform features, major fixes, or updates are made, bump the platform version constants (`HL_SITE_VERSION`, `HL_SITE_VERSION_LABEL`, `HL_SITE_VERSION_SUMMARY`) in `src/header.php` and `src/footer.php`, and update the "What's New in Version [X]" modal feature list in `src/footer.php`.
+- **Help Center Articles Sync**: Whenever introducing or updating platform features or study tools, create or update a companion Help Center article in `assets/text/hc-<feature-slug>.md` so that the user-facing Help Center at `pages/help-center.php` remains complete and accurate.
 
 ## 2. Core Architectural Principles
 - **Offline Resiliency**: `offline.php` is the sole offline shell and service worker fallback. Never generate `offline.html`.
