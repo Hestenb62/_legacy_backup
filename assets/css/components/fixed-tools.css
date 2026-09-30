@@ -985,6 +985,17 @@
     transform: translateY(-1px);
   }
 
+  .math-chip-btn mjx-container {
+    margin: 0 !important;
+    vertical-align: middle !important;
+  }
+
+  .math-chip-btn mjx-container svg {
+    max-height: 1.45em;
+    width: auto;
+    vertical-align: middle;
+  }
+
   .math-preview-header {
     display: flex;
     justify-content: space-between;
@@ -1116,6 +1127,60 @@
     }
     .scratchpad-panel-overlay.is-docked {
       width: 100vw;
+    }
+  }
+
+  /* ==========================================================================
+     Scratchpad Isolated Print Layout Standard (@media print)
+     ========================================================================== */
+  @media print {
+    body.printing-scratchpad > *:not(#scratchpad-panel) {
+      display: none !important;
+    }
+    body.printing-scratchpad #scratchpad-panel {
+      position: static !important;
+      display: block !important;
+      background: transparent !important;
+      box-shadow: none !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      height: auto !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      z-index: 1 !important;
+    }
+    body.printing-scratchpad .scratchpad-backdrop,
+    body.printing-scratchpad .scratchpad-notebook-bar,
+    body.printing-scratchpad .scratchpad-header-actions,
+    body.printing-scratchpad .scratchpad-tabs-bar,
+    body.printing-scratchpad .scratchpad-format-bar,
+    body.printing-scratchpad .scratchpad-search-wrap,
+    body.printing-scratchpad .scratchpad-typography-bar,
+    body.printing-scratchpad .scratchpad-templates-bar,
+    body.printing-scratchpad .scratchpad-canvas-ribbon,
+    body.printing-scratchpad .scratchpad-math-palette,
+    body.printing-scratchpad .scratchpad-footer {
+      display: none !important;
+    }
+    body.printing-scratchpad .scratchpad-content {
+      box-shadow: none !important;
+      border: none !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      height: auto !important;
+      padding: 0 !important;
+      background: #ffffff !important;
+      color: #000000 !important;
+    }
+    body.printing-scratchpad .scratchpad-notes-area {
+      border: none !important;
+      box-shadow: none !important;
+      font-size: 11pt !important;
+      color: #000000 !important;
+      height: auto !important;
+      resize: none !important;
+      overflow: visible !important;
+      background: transparent !important;
     }
   }
 

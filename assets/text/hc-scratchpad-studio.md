@@ -17,7 +17,7 @@ You can launch the studio from anywhere on Hesten's Learning without losing your
 - **5. Formula Quick-Insert & Live MathJax:** Click chips in the math palette to insert algebraic fractions, exponents, square roots, integrals, summations, and Greek symbols ($E=mc^2$). The live preview renders beautiful, responsive MathJax SVG equations automatically.
 - **6. Side-by-Side Docked Split-View:** Click the column dock icon (`#scratchpad-dock-btn`) in the header to pin the scratchpad to the right margin of your screen. Read lessons, stories, or complete quizzes on the left while simultaneously taking notes on the right!
 - **7. Assistive Voice Dictation:** Click "Dictate" (`Alt + D`) to transcribe spoken notes with real-time Speech-to-Text.
-- **8. Rich Exporting:** One-click "Copy", download as Plain Text (`.txt`), formatted Markdown (`.md`), or export canvas sketches as high-resolution PNG snapshots.
+- **8. Rich Exporting & Scratchpad-Only Printing:** One-click "Copy" (`#scratchpad-copy-btn`), download as Plain Text (`.txt`), formatted Markdown (`.md`), export canvas sketches as high-resolution PNG snapshots, or click "Print" (`#scratchpad-print-btn`) to generate an ink-friendly study sheet of *only* your note text, formatted vector MathJax equations, and whiteboard drawings with official `hestena62.com` attribution, without printing any surrounding web page elements.
 
 ### Universal Accessibility (UDL)
 The studio includes custom font family toggles (OpenDyslexic, Lexend, Monospace), font size scaling (A- / A+), full screen reader ARIA live region support, and works 100% offline via local Progressive Web App caching.

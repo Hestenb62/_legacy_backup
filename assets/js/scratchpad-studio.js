@@ -35,6 +35,7 @@
   // State Management
   let notebook = [];
   let activeNoteId = null;
+  let currentTab = 'notes'; // 'notes', 'whiteboard', 'math'
   let saveDebounceTimer = null;
   let mathjaxDebounceTimer = null;
 
@@ -601,7 +602,10 @@
 
     dom.mathjaxPreview.innerHTML = previewHtml;
 
-    // Trigger universal MathJax rendering standard
+    // Trigger universal MathJax rendering standard with clean re-typeset cache
+    if (window.MathJax && window.MathJax.typesetClear && dom.mathjaxPreview) {
+      try { window.MathJax.typesetClear([dom.mathjaxPreview]); } catch (e) {}
+    }
     if (window.ensureMathJax) {
       window.ensureMathJax(dom.mathjaxPreview);
     } else if (window.MathJax && window.MathJax.typesetPromise) {
@@ -624,6 +628,7 @@
   // Tab Navigation & Window Modes
   // =========================================================================
   function switchTab(mode) {
+    currentTab = mode;
     const tabs = [
       { id: 'notes', tab: dom.tabNotes, pane: dom.paneNotes },
       { id: 'whiteboard', tab: dom.tabWhiteboard, pane: dom.paneWhiteboard },
@@ -648,6 +653,9 @@
     if (mode === 'whiteboard') {
       setTimeout(resizeCanvas, 100);
     } else if (mode === 'math') {
+      if (window.ensureMathJax && dom.paneMath) {
+        window.ensureMathJax(dom.paneMath);
+      }
       renderMathJaxPreview();
     }
 
@@ -699,6 +707,10 @@
       resizeCanvas();
       if (dom.textarea) dom.textarea.focus();
     }, 150);
+
+    if (window.ensureMathJax) {
+      window.ensureMathJax();
+    }
 
     if (window.HLSound && window.HLSound.playToggle) window.HLSound.playToggle();
     announceStatus('Scratchpad opened.');
@@ -937,6 +949,540 @@
   }
 
   // =========================================================================
+  // Scratchpad-Only Formatted Printing Engine
+  // =========================================================================
+  function hasCanvasDrawing() {
+    if (!canvas || !ctx) return false;
+    try {
+      const d = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+      for (let i = 3; i < d.length; i += 40) {
+        if (d[i] > 0) return true;
+      }
+    } catch (e) {}
+    return false;
+  }
+
+  function formatInlineForPrint(str) {
+    return str
+      .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+      .replace(/(?<!\*)\*(?!\*)(.+?)(?<!\*)\*(?!\*)/g, '<em>$1</em>')
+      .replace(/`([^`]+)`/g, '<code class="print-code-inline">$1</code>');
+  }
+
+  function formatMarkdownForPrint(md) {
+    if (!md || !md.trim()) {
+      return '<p style="color: #64748b; font-style: italic;">No written notes recorded for this notebook page.</p>';
+    }
+
+    let safe = md
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;');
+
+    // Fenced Code Blocks
+    safe = safe.replace(/```([\s\S]*?)```/g, (match, code) => {
+      return `<pre class="print-code-block"><code>${code.trim()}</code></pre>`;
+    });
+
+    const lines = safe.split('\n');
+    let inList = false;
+    let inNumberedList = false;
+    let html = '';
+
+    const closeLists = () => {
+      if (inList) { html += '</ul>\n'; inList = false; }
+      if (inNumberedList) { html += '</ol>\n'; inNumberedList = false; }
+    };
+
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i].trim();
+
+      if (!line) {
+        closeLists();
+        continue;
+      }
+
+      if (line.startsWith('<pre class="print-code-block">')) {
+        closeLists();
+        html += line + '\n';
+        continue;
+      }
+
+      if (/^###\s+(.+)$/.test(line)) {
+        closeLists();
+        html += `<h3>${formatInlineForPrint(line.replace(/^###\s+/, ''))}</h3>\n`;
+        continue;
+      }
+      if (/^##\s+(.+)$/.test(line)) {
+        closeLists();
+        html += `<h2>${formatInlineForPrint(line.replace(/^##\s+/, ''))}</h2>\n`;
+        continue;
+      }
+      if (/^#\s+(.+)$/.test(line)) {
+        closeLists();
+        html += `<h1>${formatInlineForPrint(line.replace(/^#\s+/, ''))}</h1>\n`;
+        continue;
+      }
+
+      if (/^(\-{3,}|\*{3,}|_{3,})$/.test(line)) {
+        closeLists();
+        html += '<hr class="print-divider">\n';
+        continue;
+      }
+
+      if (/^[\*\-\+]\s+(.+)$/.test(line)) {
+        if (inNumberedList) { html += '</ol>\n'; inNumberedList = false; }
+        if (!inList) { html += '<ul class="print-list">\n'; inList = true; }
+        const item = line.replace(/^[\*\-\+]\s+/, '');
+        html += `<li>${formatInlineForPrint(item)}</li>\n`;
+        continue;
+      }
+
+      if (/^\d+\.\s+(.+)$/.test(line)) {
+        if (inList) { html += '</ul>\n'; inList = false; }
+        if (!inNumberedList) { html += '<ol class="print-list">\n'; inNumberedList = true; }
+        const item = line.replace(/^\d+\.\s+/, '');
+        html += `<li>${formatInlineForPrint(item)}</li>\n`;
+        continue;
+      }
+
+      if (/^(&gt;|>)\s*(.+)$/.test(line)) {
+        closeLists();
+        const quoteText = line.replace(/^(&gt;|>)\s*/, '');
+        html += `<blockquote class="print-quote">${formatInlineForPrint(quoteText)}</blockquote>\n`;
+        continue;
+      }
+
+      closeLists();
+      html += `<p>${formatInlineForPrint(line)}</p>\n`;
+    }
+
+    closeLists();
+    return html;
+  }
+
+  function printScratchpad() {
+    const cur = getActiveNote();
+    const noteTitle = (cur && cur.title) ? cur.title : 'Study Notes';
+    const rawContent = dom.textarea ? dom.textarea.value : '';
+    const templateKey = (cur && cur.template) ? cur.template : '';
+    const templateLabel = templateKey ? templateKey.toUpperCase() : '';
+    
+    const wordCount = rawContent.trim() ? rawContent.trim().split(/\s+/).length : 0;
+    const charCount = rawContent.length;
+    
+    const dateStr = new Date().toLocaleDateString('en-US', {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+    const timeStr = new Date().toLocaleTimeString('en-US', {
+      hour: '2-digit',
+      minute: '2-digit'
+    });
+
+    const activeTab = (typeof currentTab !== 'undefined' && currentTab) ? currentTab : (dom.tabWhiteboard && dom.tabWhiteboard.classList.contains('active') ? 'whiteboard' : (dom.tabMath && dom.tabMath.classList.contains('active') ? 'math' : 'notes'));
+    const isWhiteboardTab = activeTab === 'whiteboard';
+    const isMathTab = activeTab === 'math';
+    
+    // Check canvas drawing
+    let canvasDataUrl = null;
+    if (hasCanvasDrawing()) {
+      try {
+        canvasDataUrl = canvas.toDataURL('image/png');
+      } catch (e) {}
+    } else if (cur && cur.canvasData) {
+      canvasDataUrl = cur.canvasData;
+    }
+
+    const formattedNotesHtml = formatMarkdownForPrint(rawContent);
+
+    // MathJax rendered block if math tab or if math equations detected
+    let mathHtml = '';
+    if (dom.mathjaxPreview && (isMathTab || /(\$\$[\s\S]+?\$\$|\$[^\$\n]+?\$|\\\[[\s\S]+?\\\]|\\\([^\n]+?\\\))/.test(rawContent))) {
+      const renderTargets = dom.mathjaxPreview.querySelectorAll('.mathjax-render-target');
+      if (renderTargets.length > 0) {
+        mathHtml = `
+          <div class="print-math-section">
+            <h3 class="print-section-title"><span class="print-icon">∑</span> Mathematical Equations &amp; Formulas</h3>
+            <div class="print-math-grid">
+        `;
+        renderTargets.forEach((target, idx) => {
+          mathHtml += `
+            <div class="print-math-card">
+              <div class="print-math-label">Equation #${idx + 1}</div>
+              <div class="print-math-content">${target.innerHTML}</div>
+            </div>
+          `;
+        });
+        mathHtml += `
+            </div>
+          </div>
+        `;
+      }
+    }
+
+    // Drawing canvas section
+    let canvasHtml = '';
+    if (canvasDataUrl) {
+      canvasHtml = `
+        <div class="print-canvas-section">
+          <h3 class="print-section-title"><span class="print-icon">✎</span> Whiteboard Sketch &amp; Diagram</h3>
+          <div class="print-canvas-frame">
+            <img src="${canvasDataUrl}" class="print-canvas-img" alt="Scratchpad Whiteboard Drawing">
+          </div>
+        </div>
+      `;
+    }
+
+    let mainBodyContent = '';
+    if (isWhiteboardTab && canvasDataUrl) {
+      mainBodyContent = canvasHtml + (rawContent.trim() ? `<div class="print-notes-section"><h3 class="print-section-title"><span class="print-icon">📝</span> Accompanying Notes</h3><div class="print-body">${formattedNotesHtml}</div></div>` : '');
+    } else if (isMathTab && mathHtml) {
+      mainBodyContent = `<div class="print-notes-section"><div class="print-body">${formattedNotesHtml}</div></div>` + mathHtml + (canvasDataUrl ? canvasHtml : '');
+    } else {
+      mainBodyContent = `<div class="print-notes-section"><div class="print-body">${formattedNotesHtml}</div></div>` + (canvasDataUrl ? canvasHtml : '') + (mathHtml ? mathHtml : '');
+    }
+
+    let customFontCss = '';
+    if (dom.textarea && dom.textarea.classList.contains('font-dyslexic')) {
+      customFontCss = `
+        @font-face {
+          font-family: 'OpenDyslexic';
+          src: url('/assets/fonts/OpenDyslexic-Regular.woff2') format('woff2');
+          font-weight: normal;
+          font-style: normal;
+        }
+        body, .print-body, .print-note-title {
+          font-family: 'OpenDyslexic', sans-serif !important;
+        }
+      `;
+    }
+
+    const printHtml = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>${escapeHtml(noteTitle)} - Hesten's Learning Scratchpad</title>
+  <style>
+    @page {
+      size: letter portrait;
+      margin: 0.6in 0.75in;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #0f172a;
+      background: #ffffff;
+      font-size: 11pt;
+      line-height: 1.6;
+    }
+    ${customFontCss}
+    .print-header {
+      border-bottom: 2.5px solid #2563eb;
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    .print-brand-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+    .print-brand-title {
+      font-size: 8.5pt;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #2563eb;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .print-badge {
+      font-size: 7.5pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 0.2rem 0.55rem;
+      background: #eff6ff;
+      color: #1d4ed8;
+      border: 1px solid #bfdbfe;
+      border-radius: 4px;
+    }
+    .print-note-title {
+      font-size: 20pt;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 0 0 0.4rem 0;
+      line-height: 1.25;
+    }
+    .print-meta-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 8.5pt;
+      color: #64748b;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+    .print-section-title {
+      font-size: 11.5pt;
+      font-weight: 800;
+      color: #1e3a8a;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 0.35rem;
+      margin: 1.5rem 0 0.85rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+    .print-body {
+      font-size: 10.5pt;
+      color: #1e293b;
+    }
+    .print-body p {
+      margin: 0 0 0.85rem 0;
+    }
+    .print-body h1 {
+      font-size: 15pt;
+      font-weight: 800;
+      color: #1e3a8a;
+      margin: 1.25rem 0 0.5rem 0;
+    }
+    .print-body h2 {
+      font-size: 13pt;
+      font-weight: 700;
+      color: #1d4ed8;
+      margin: 1rem 0 0.4rem 0;
+    }
+    .print-body h3 {
+      font-size: 11.5pt;
+      font-weight: 700;
+      color: #2563eb;
+      margin: 0.85rem 0 0.35rem 0;
+    }
+    .print-list {
+      margin: 0 0 0.85rem 1.4rem;
+      padding: 0;
+    }
+    .print-list li {
+      margin-bottom: 0.35rem;
+    }
+    .print-quote {
+      border-left: 3.5px solid #3b82f6;
+      background: #f8fafc;
+      padding: 0.6rem 1rem;
+      margin: 0.85rem 0;
+      font-style: italic;
+      color: #334155;
+    }
+    .print-code-inline {
+      font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      padding: 0.1rem 0.35rem;
+      border-radius: 3px;
+      font-size: 9.5pt;
+    }
+    .print-code-block {
+      font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 0.75rem 1rem;
+      font-size: 9.5pt;
+      line-height: 1.45;
+      overflow-x: auto;
+      margin: 0.85rem 0;
+    }
+    .print-divider {
+      border: none;
+      border-top: 1px solid #cbd5e1;
+      margin: 1.25rem 0;
+    }
+    .print-canvas-section {
+      margin-top: 1.5rem;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .print-canvas-frame {
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      padding: 0.75rem;
+      background: #ffffff;
+      text-align: center;
+    }
+    .print-canvas-img {
+      max-width: 100%;
+      height: auto;
+      max-height: 480px;
+      display: block;
+      margin: 0 auto;
+    }
+    .print-math-section {
+      margin-top: 1.5rem;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .print-math-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+    }
+    .print-math-card {
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 0.65rem 0.85rem;
+      background: #f8fafc;
+    }
+    .print-math-label {
+      font-size: 7.5pt;
+      font-weight: 700;
+      color: #64748b;
+      margin-bottom: 0.25rem;
+      text-transform: uppercase;
+    }
+    .print-math-content {
+      font-size: 11pt;
+      color: #0f172a;
+    }
+    .print-math-content mjx-container {
+      margin: 0.25rem 0;
+    }
+    .print-footer {
+      margin-top: 2.5rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid #e2e8f0;
+      display: flex;
+      justify-content: space-between;
+      font-size: 8pt;
+      color: #94a3b8;
+    }
+    /* Universal MathJax SVG Typography in Print Sheet */
+    mjx-container[jax="SVG"] {
+      outline: none;
+      font-family: inherit;
+    }
+    mjx-container[jax="SVG"]:not([display="true"]) {
+      display: inline-block;
+      vertical-align: -0.22ex;
+      margin: 0 0.15em;
+      font-size: inherit;
+      line-height: 0;
+    }
+    mjx-container[jax="SVG"][display="true"] {
+      display: block;
+      text-align: center;
+      margin: 0.85rem auto;
+      max-width: 100%;
+      overflow-x: auto;
+      padding: 0.25rem 0;
+    }
+    mjx-container[jax="SVG"] > svg {
+      fill: currentColor;
+      stroke: currentColor;
+      max-width: 100%;
+      height: auto;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+  <header class="print-header">
+    <div class="print-brand-row">
+      <div class="print-brand-title">
+        <span>✎</span> Hesten's Learning Unified Scratchpad Studio
+      </div>
+      ${templateLabel ? `<span class="print-badge">${templateLabel} TEMPLATE</span>` : ''}
+    </div>
+    <h1 class="print-note-title">${escapeHtml(noteTitle)}</h1>
+    <div class="print-meta-row">
+      <span><strong>Date:</strong> ${dateStr} • ${timeStr}</span>
+      <span><strong>Statistics:</strong> ${wordCount} words • ${charCount} characters</span>
+    </div>
+  </header>
+
+  <main>
+    ${mainBodyContent}
+  </main>
+
+  <footer class="print-footer">
+    <span>Printed from Hesten's Learning Unified Scratchpad Studio</span>
+    <span>hestena62.com • 100% Free Open Educational Platform</span>
+  </footer>
+</body>
+</html>`;
+
+    let iframe = document.getElementById('scratchpad-print-iframe');
+    if (!iframe) {
+      iframe = document.createElement('iframe');
+      iframe.id = 'scratchpad-print-iframe';
+      iframe.setAttribute('aria-hidden', 'true');
+      iframe.style.position = 'fixed';
+      iframe.style.right = '0';
+      iframe.style.bottom = '0';
+      iframe.style.width = '0';
+      iframe.style.height = '0';
+      iframe.style.border = '0';
+      iframe.style.visibility = 'hidden';
+      document.body.appendChild(iframe);
+    }
+
+    const doc = iframe.contentWindow.document;
+    doc.open();
+    doc.write(printHtml);
+    doc.close();
+
+    announceStatus('Preparing formatted print preview for note...');
+    if (window.HLSound && window.HLSound.playClick) window.HLSound.playClick();
+
+    const triggerPrint = () => {
+      try {
+        iframe.contentWindow.focus();
+        iframe.contentWindow.print();
+        announceStatus('Print dialog opened.');
+      } catch (err) {
+        console.warn('[Scratchpad] iframe print blocked, falling back to window print', err);
+        document.body.classList.add('printing-scratchpad');
+        window.print();
+        setTimeout(() => {
+          document.body.classList.remove('printing-scratchpad');
+        }, 1000);
+      }
+    };
+
+    // Typeset any LaTeX formulas in the print frame before opening print dialog
+    const hasMathInDoc = /(\$\$[\s\S]+?\$\$|\$[^\$\n]+?\$|\\\[[\s\S]+?\\\]|\\\([^\n]+?\\\))/.test(doc.body.innerHTML);
+    if (hasMathInDoc && window.ensureMathJax) {
+      window.ensureMathJax(doc.body).then(() => {
+        setTimeout(triggerPrint, 150);
+      }).catch(() => {
+        setTimeout(triggerPrint, 250);
+      });
+    } else {
+      setTimeout(triggerPrint, 250);
+    }
+  }
+
+  // Synchronize browser native Ctrl+P with Scratchpad-only printing when panel is open
+  window.addEventListener('beforeprint', () => {
+    if (dom.panel && dom.panel.classList.contains('active')) {
+      document.body.classList.add('printing-scratchpad');
+    }
+  });
+
+  window.addEventListener('afterprint', () => {
+    document.body.classList.remove('printing-scratchpad');
+  });
+
+  // =========================================================================
   // Event Binding
   // =========================================================================
   function bindEvents() {
@@ -1150,10 +1696,10 @@
       };
     }
 
-    // Print Note
-    if (dom.printBtn && dom.textarea) {
+    // Print Note (Scratchpad-only isolated print)
+    if (dom.printBtn) {
       dom.printBtn.onclick = () => {
-        window.print();
+        printScratchpad();
       };
     }
 
@@ -1161,7 +1707,8 @@
     if (dom.downloadTxtBtn && dom.textarea) {
       dom.downloadTxtBtn.onclick = () => {
         const cur = getActiveNote();
-        const blob = new Blob([dom.textarea.value], { type: 'text/plain;charset=utf-8' });
+        const header = `${cur ? cur.title : 'Study Notes'}\nExported from Hesten's Learning Unified Scratchpad (hestena62.com)\nDate: ${new Date().toLocaleDateString()}\n----------------------------------------\n\n`;
+        const blob = new Blob([header + dom.textarea.value], { type: 'text/plain;charset=utf-8' });
         const a = document.createElement('a');
         a.href = URL.createObjectURL(blob);
         a.download = `${(cur ? cur.title : 'study_notes').toLowerCase().replace(/\s+/g, '_')}.txt`;
@@ -1173,7 +1720,7 @@
     if (dom.downloadMdBtn && dom.textarea) {
       dom.downloadMdBtn.onclick = () => {
         const cur = getActiveNote();
-        const header = `# ${cur ? cur.title : 'Study Notes'}\n*Exported from Hesten's Learning Unified Scratchpad*\n*Date: ${new Date().toLocaleDateString()}*\n\n---\n\n`;
+        const header = `# ${cur ? cur.title : 'Study Notes'}\n*Exported from Hesten's Learning Unified Scratchpad (hestena62.com)*\n*Date: ${new Date().toLocaleDateString()}*\n\n---\n\n`;
         const blob = new Blob([header + dom.textarea.value], { type: 'text/markdown;charset=utf-8' });
         const a = document.createElement('a');
         a.href = URL.createObjectURL(blob);

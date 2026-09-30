@@ -173,7 +173,7 @@ if (! defined('HL_SITE_VERSION_SUMMARY')) {
                     enableComplexity: false,    // Disables Complexity analysis
                     enableEnrichment: false     // Disables a11y semantic enrichment
                 },
-                svg: { fontCache: 'global' }
+                svg: { fontCache: 'local' }     // Self-contained SVGs that render reliably in iframes, PDFs, and components
             };
 
             // Site-wide safety remover for any MathJax dialog or Expression Explorer elements
@@ -221,6 +221,12 @@ if (! defined('HL_SITE_VERSION_SUMMARY')) {
                             if (mj && mj.typesetPromise) {
                                 const targets = elements ? (Array.isArray(elements) ? elements : [elements]) : null;
                                 mathJaxTypesetQueue = mathJaxTypesetQueue.then(() => {
+                                    if (mj.typesetClear) {
+                                        try {
+                                            if (targets) mj.typesetClear(targets);
+                                            else mj.typesetClear();
+                                        } catch (e) {}
+                                    }
                                     return mj.typesetPromise(targets);
                                 }).catch(err => {
                                     console.debug('MathJax sequential typeset note:', err);
@@ -302,7 +308,7 @@ if (! defined('HL_SITE_VERSION_SUMMARY')) {
 
             // Static Page Math Auto-Detection
             document.addEventListener('DOMContentLoaded', () => {
-                const bodyText = document.body ? (document.body.innerText || '') : '';
+                const bodyText = document.body ? (document.body.textContent || '') : '';
                 if (MATH_DELIM_PATTERN.test(bodyText)) {
                     window.ensureMathJax();
                 }

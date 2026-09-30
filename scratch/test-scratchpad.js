@@ -113,4 +113,22 @@ if (!updatesIndexPhp.includes("upd-badge-version") || !updatesIndexPhp.includes(
 }
 console.log('PASS: Updates Portal version badge logic verified.');
 
+// 6. Verify Scratchpad-Only Print Engine and Isolated CSS
+const studioJs = fs.readFileSync(path.join(__dirname, '..', 'assets/js/scratchpad-studio.js'), 'utf8');
+if (!studioJs.includes('printScratchpad()') || !studioJs.includes('scratchpad-print-iframe')) {
+  console.error('FAIL: scratchpad-studio.js missing printScratchpad or scratchpad-print-iframe');
+  process.exit(1);
+}
+if (!studioJs.includes('formatMarkdownForPrint') || !studioJs.includes('hasCanvasDrawing')) {
+  console.error('FAIL: scratchpad-studio.js missing markdown formatter or canvas drawing detector');
+  process.exit(1);
+}
+console.log('PASS: scratchpad-studio.js printScratchpad engine verified.');
+
+if (!cssContent.includes('body.printing-scratchpad') || !cssContent.includes('body.printing-scratchpad > *:not(#scratchpad-panel)')) {
+  console.error('FAIL: fixed-tools.css missing body.printing-scratchpad scoped rules');
+  process.exit(1);
+}
+console.log('PASS: fixed-tools.css body.printing-scratchpad scoped print styles verified.');
+
 console.log('\nALL VERIFICATION CHECKS PASSED SUCCESSFULLY!');

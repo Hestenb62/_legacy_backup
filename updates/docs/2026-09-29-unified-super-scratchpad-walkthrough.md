@@ -51,7 +51,15 @@ We have completely overhauled the Hesten's Learning platform Scratchpad into a *
   - Export to Plain Text (`.txt`).
   - Export to Markdown (`.md`) with formatted header and timestamp.
   - Download Whiteboard Drawing as PNG (`.png`).
-  - Print-friendly formatted paper export (`#scratchpad-print-btn`).
+  - **Scratchpad-Only Isolated Printing (`#scratchpad-print-btn`)**: Renders a dedicated printable study sheet containing *only* the active note title, formatted Markdown typography (headings, lists, quotes, inline code), MathJax formulas, and whiteboard drawing snapshots inside a hidden print iframe, completely excluding surrounding web page content, navbars, and buttons. Also integrates scoped `body.printing-scratchpad` `@media print` rules for browser `Ctrl + P`.
+  - **Platform Branding & Domain Sync**: All exported plain text (`.txt`), formatted Markdown (`.md`), and printed study notes include official header and footer attribution to `hestena62.com` (100% Free Open Educational Platform).
+
+### E. Universal MathJax Typography & Vector Rendering Resolution
+- **Self-Contained Local Vector Glyphs**: Changed MathJax SVG configuration in [`src/header.php`](file:///c:/Users/Heste/OneDrive/Documents/_legacy_backup/src/header.php) from `fontCache: 'global'` to `fontCache: 'local'`. Previously, with global caching, MathJax rendered SVG `<use href="#MJX-...">` glyph references pointing to parent window `<defs>`, which caused equations in isolated print iframes and dialogs to render completely blank. With local caching, all equations are self-contained vector SVGs that render flawlessly on screen and in printed study note PDFs.
+- **Dynamic DOM Typeset Clearing**: Updated `mathJaxTypesetQueue` in [`src/header.php`](file:///c:/Users/Heste/OneDrive/Documents/_legacy_backup/src/header.php) and `renderMathJaxPreview` in [`assets/js/scratchpad-studio.js`](file:///c:/Users/Heste/OneDrive/Documents/_legacy_backup/assets/js/scratchpad-studio.js) to invoke `MathJax.typesetClear(targets)` prior to re-typesetting. MathJax v3/v4 skips re-rendering DOM nodes whose content changed unless its internal cache is cleared.
+- **Formula Chip Auto-Typesetting**: When switching to the Formulas & Symbols tab, `window.ensureMathJax(dom.paneMath)` is immediately dispatched, transforming all 30 formula buttons (algebraic fractions, radicals, quadratic formula, integrals) into rendered SVG typography rather than raw TeX markup.
+- **Background MathJax Warm-Up**: Opening the scratchpad triggers an early `window.ensureMathJax()` warm-up call so the math engine is preloaded before the student begins typing.
+- **Print Pre-Typesetting**: Before the print dialog opens, `window.ensureMathJax(doc.body)` is executed inside the print iframe, ensuring every inline (`$...$`) and block (`$$...$$`) formula is converted to vector SVGs prior to PDF generation.
 
 ---
 
@@ -60,32 +68,34 @@ We have completely overhauled the Hesten's Learning platform Scratchpad into a *
 | File | Change | Description |
 |---|---|---|
 | [`src/partials/scratchpad.php`](file:///c:/Users/Heste/OneDrive/Documents/_legacy_backup/src/partials/scratchpad.php) | **Overhaul** | Multi-note header bar, 3-tab switcher, whiteboard tools ribbon, formula palette, and live MathJax preview box. |
-| [`assets/css/components/fixed-tools.css`](file:///c:/Users/Heste/OneDrive/Documents/_legacy_backup/assets/css/components/fixed-tools.css) | **Enhancement** | Docked sidebar styles (`.is-docked`), canvas grid backdrops, formula chips, toolbar buttons, and responsive breakpoints. |
-| [`assets/js/scratchpad-studio.js`](file:///c:/Users/Heste/OneDrive/Documents/_legacy_backup/assets/js/scratchpad-studio.js) | **New Core Engine** | High-performance notebook manager, canvas drawing engine with undo/redo, MathJax previewer, STT dictation, and global `window.HLScratchpad` API. |
+| [`assets/css/components/fixed-tools.css`](file:///c:/Users/Heste/OneDrive/Documents/_legacy_backup/assets/css/components/fixed-tools.css) | **Enhancement** | Docked sidebar styles (`.is-docked`), canvas grid backdrops, formula chips, toolbar buttons, responsive breakpoints, and MathJax chip SVG scaling. |
+| [`assets/js/scratchpad-studio.js`](file:///c:/Users/Heste/OneDrive/Documents/_legacy_backup/assets/js/scratchpad-studio.js) | **New Core Engine** | High-performance notebook manager, canvas drawing engine with undo/redo, MathJax previewer, STT dictation, `hestena62.com` export branding, print pre-typesetting, and global `window.HLScratchpad` API. |
 | [`assets/js/global-study-tools.js`](file:///c:/Users/Heste/OneDrive/Documents/_legacy_backup/assets/js/global-study-tools.js) | **Refactor** | Guarded legacy single-note handlers with `if (!window.HLScratchpad)` to delegate to the new studio without event collisions. |
 | [`assets/js/global-site-layout.js`](file:///c:/Users/Heste/OneDrive/Documents/_legacy_backup/assets/js/global-site-layout.js) | **Refactor** | Guarded duplicate scratchpad listeners with `if (!window.HLScratchpad)`. |
-| [`src/header.php`](file:///c:/Users/Heste/OneDrive/Documents/_legacy_backup/src/header.php) | **Version Bump** | Bumped `HL_SITE_VERSION` to `v2.5.0` and updated release summary. |
+| [`src/header.php`](file:///c:/Users/Heste/OneDrive/Documents/_legacy_backup/src/header.php) | **Version Bump & MathJax Fix** | Bumped `HL_SITE_VERSION` to `v2.5.0`, updated MathJax configuration to `fontCache: 'local'`, integrated `typesetClear`, and enhanced detection to `textContent`. |
 | [`src/footer.php`](file:///c:/Users/Heste/OneDrive/Documents/_legacy_backup/src/footer.php) | **Update** | Included `scratchpad-studio.js`, bumped default version to `v2.5.0`, and added Unified Scratchpad Studio card to What's New modal. |
 | [`service-worker.js`](file:///c:/Users/Heste/OneDrive/Documents/_legacy_backup/service-worker.js) | **Update** | Added `/assets/js/scratchpad-studio.js` to `ASSETS_TO_CACHE` for 100% offline resilience. |
 | [`updates/index.php`](file:///c:/Users/Heste/OneDrive/Documents/_legacy_backup/updates/index.php) | **Enhancement** | Added frontmatter version parsing, hero platform version counter, doc card version badges (`.upd-badge-version`), and modal viewer version tag. |
 | [`updates/feed.php`](file:///c:/Users/Heste/OneDrive/Documents/_legacy_backup/updates/feed.php) | **Enhancement** | Added version metadata to RSS (`<category domain="version">`) and JSON feeds. |
 | [`assets/css/pages/updates.css`](file:///c:/Users/Heste/OneDrive/Documents/_legacy_backup/assets/css/pages/updates.css) | **Enhancement** | Added styled `.upd-badge-version` tags with theme-aware borders and colors. |
-| [`assets/text/hc-scratchpad-studio.md`](file:///c:/Users/Heste/OneDrive/Documents/_legacy_backup/assets/text/hc-scratchpad-studio.md) | **New Help Guide** | Complete user guide and walkthrough covering shortcuts, templates, drawing canvas, MathJax palettes, and split docking. |
+| [`assets/text/hc-scratchpad-studio.md`](file:///c:/Users/Heste/OneDrive/Documents/_legacy_backup/assets/text/hc-scratchpad-studio.md) | **New Help Guide** | Complete user guide and walkthrough covering shortcuts, templates, drawing canvas, MathJax palettes, `hestena62.com` study note downloads, and split docking. |
 | [`pages/help-center.php`](file:///c:/Users/Heste/OneDrive/Documents/_legacy_backup/pages/help-center.php) | **Enhancement** | Added "Study Tools" auto-categorization with `fas fa-pencil-ruler` icon for scratchpad, whiteboard, and learning tool guides. |
 | [`assets/css/pages/help-center.css`](file:///c:/Users/Heste/OneDrive/Documents/_legacy_backup/assets/css/pages/help-center.css) | **Enhancement** | Added `.help-article-icon.tools` amber accent badge styling. |
 | [`.agents/rules/planning-updates.md`](file:///c:/Users/Heste/OneDrive/Documents/_legacy_backup/.agents/rules/planning-updates.md) & [`AGENTS.md`](file:///c:/Users/Heste/OneDrive/Documents/_legacy_backup/AGENTS.md) | **Rule Update** | Added mandatory rules for footer version synchronization, Updates Portal version frontmatter, and companion Help Center articles (`assets/text/hc-<slug>.md`). |
 | [`scratch/test-scratchpad.js`](file:///c:/Users/Heste/OneDrive/Documents/_legacy_backup/scratch/test-scratchpad.js) | **Verification** | Automated Node.js test script verifying file integrity, LaTeX matching, accessibility IDs, and CSS rules. |
+| [`scratch/verify_print_architecture.js`](file:///c:/Users/Heste/OneDrive/Documents/_legacy_backup/scratch/verify_print_architecture.js) | **Verification** | Architecture validator verifying print iframe isolation, scoped CSS rules, and syntax safety. |
 
 ---
 
 ## 3. Verification & Compliance Results
 
 - **Syntax Validation**: `node -c assets/js/scratchpad-studio.js assets/js/global-study-tools.js assets/js/global-site-layout.js service-worker.js` passed with zero errors (Code 0).
-- **Automated Tests**: `node scratch/test-scratchpad.js` passed all 5 assertion suites:
+- **Automated Tests**: `node scratch/test-scratchpad.js` passed all test suites:
   - 5/5 core files verified and non-empty.
   - 18/18 critical accessibility and UI element IDs present in markup.
   - LaTeX regex verified matching both inline (`$...$`) and display (`$$...$$`) math blocks.
   - Docked mode (`.is-docked`) and canvas math grids confirmed in stylesheet.
+- **Print Architecture Verification**: `node scratch/verify_print_architecture.js` passed with 0 errors, validating no destructive unscoped `@media print` rules, correct `hestena62.com` download headers, and MathJax fontCache isolation.
 - **A11y / UDL Mandate**:
   - Full keyboard accessibility (`Alt+S` toggle, `Alt+N` new note, `Alt+D` dictation, `Esc` close, `Ctrl+Z` / `Ctrl+Y` canvas undo/redo).
   - ARIA tablist / tabpanel roles with `aria-selected` and `aria-controls`.
