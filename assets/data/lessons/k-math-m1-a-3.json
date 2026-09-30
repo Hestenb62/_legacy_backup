@@ -1,0 +1,97 @@
+{
+    "id": "k-math-m1-a-3",
+    "code": "K.M1.A.3",
+    "standard": "HSF.LE.A.1",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "Graphs of Exponential Functions",
+        "pageTitle": "Graphs of Exponential Functions | Hesten's Learning",
+        "description": "What happens when a quantity doubles at every step? Explore the fundamental mathematical differences between linear addition (constant differences) and exponential multiplication (constant factors).",
+        "pageDescription": "Examine how quantities grow by constant factors rather than constant differences with interactive exponential simulations.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M1.A.3",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 3",
+        "pill": "Exponential Modeling",
+        "text": "In this lesson, you will contrast situations that can be modeled with linear functions to those modeled with exponential functions. Move the interactive doubling slider below to discover why exponential growth rapidly explodes and inevitably surpasses any linear growth.",
+        "outcomes": [
+            "Distinguish between situations that grow by equal differences over equal intervals (linear) vs. equal factors over equal intervals (exponential).",
+            "Construct linear and exponential mathematical models using tables, coordinate graphs, and algebraic expressions.",
+            "Observe and prove that a quantity increasing exponentially ($b > 1$) will always eventually exceed any quantity increasing linearly."
+        ],
+        "teacherInsight": "Connect this directly to the classic \"Ruler vs. Rice Grain\" or \"Penny Doubled Daily\" puzzle. Have students physically calculate values for $x = 0, 1, 2, 3, 4, 5$ on their scratchpads (Alt+S) before testing the simulator to solidify understanding of repeated multiplication."
+    },
+    "content": [
+        {
+            "type": "html",
+            "html": "<section class=\"lesson-sim-workbench\" aria-labelledby=\"sim-title\">\n            <div class=\"lesson-sim-header\">\n                <div class=\"lesson-sim-title-wrap\">\n                    <h3 id=\"sim-title\" class=\"lesson-sim-title\">\n                        <i class=\"fas fa-chart-line\" aria-hidden=\"true\"></i> Exponential Doubling Simulator ($y = 2^x$)\n                    </h3>\n                    <p class=\"lesson-sim-subtitle\">\n                        Adjust the step slider from $x = 0$ to $x = 8$. Observe how linear growth increases by adding $2$ at each step, while exponential growth explodes by multiplying by $2$ at each step!\n                    </p>\n                </div>\n                <div class=\"lesson-sim-presets\">\n                    <span style=\"font-size: 0.75rem; font-weight: 700; color: var(--color-text-secondary); margin-right: 0.25rem;\">Jump to:</span>\n                    <button type=\"button\" class=\"lesson-sim-preset-btn\" onclick=\"setStep(0)\">x = 0 (Start)</button>\n                    <button type=\"button\" class=\"lesson-sim-preset-btn\" onclick=\"setStep(2)\">x = 2 (Tied at 4)</button>\n                    <button type=\"button\" class=\"lesson-sim-preset-btn\" onclick=\"setStep(4)\">x = 4 (Exp Leads)</button>\n                    <button type=\"button\" class=\"lesson-sim-preset-btn\" onclick=\"setStep(8)\">x = 8 (Explosion: 256!)</button>\n                </div>\n            </div>\n\n            <div class=\"lesson-sim-grid\">\n                <!-- Controls Column -->\n                <div class=\"lesson-sim-controls\">\n                    <div class=\"lesson-sim-slider-box\">\n                        <div class=\"lesson-sim-slider-label\">\n                            <span>Step Position (<strong style=\"color: #e11d48;\">x</strong>):</span>\n                            <span id=\"step-badge\" class=\"lesson-sim-step-badge\">x = 3</span>\n                        </div>\n                        <input type=\"range\" id=\"exp-step-slider\" min=\"0\" max=\"8\" value=\"3\" step=\"1\" oninput=\"updateExponentialSim(this.value)\" class=\"lesson-sim-slider\" aria-label=\"Step slider from 0 to 8\">\n                        <div class=\"lesson-sim-ticks\">\n                            <span>0</span>\n                            <span>1</span>\n                            <span>2</span>\n                            <span>3</span>\n                            <span>4</span>\n                            <span>5</span>\n                            <span>6</span>\n                            <span>7</span>\n                            <span>8</span>\n                        </div>\n                    </div>\n\n                    <div class=\"lesson-sim-stat-grid\">\n                        <div class=\"lesson-sim-stat-card card-linear\">\n                            <span class=\"lesson-sim-stat-tag\"><i class=\"fas fa-arrows-alt-h mr-1\" aria-hidden=\"true\"></i> Linear ($2x$)</span>\n                            <span id=\"stat-linear-val\" class=\"lesson-sim-stat-val stat-linear-color\">6</span>\n                            <span id=\"stat-linear-calc\" class=\"lesson-sim-stat-calc\">2 &times; 3 = 6</span>\n                        </div>\n                        <div class=\"lesson-sim-stat-card card-exp\">\n                            <span class=\"lesson-sim-stat-tag\"><i class=\"fas fa-rocket mr-1\" aria-hidden=\"true\"></i> Exponential ($2^x$)</span>\n                            <span id=\"stat-exp-val\" class=\"lesson-sim-stat-val stat-exp-color\">8</span>\n                            <span id=\"stat-exp-calc\" class=\"lesson-sim-stat-calc\">2\u00b3 = 8</span>\n                        </div>\n                    </div>\n                </div>\n\n                <!-- Visualizer Column -->\n                <div class=\"lesson-sim-visualizer\">\n                    <div class=\"lesson-sim-bar-item\">\n                        <div class=\"lesson-sim-bar-label-row\">\n                            <span style=\"color: #60a5fa;\"><i class=\"fas fa-arrows-alt-h mr-1\"></i> Linear ($2x$):</span>\n                            <span id=\"bar-linear-label\" style=\"color: var(--color-text-default);\">6 units</span>\n                        </div>\n                        <div class=\"lesson-sim-bar-track\">\n                            <div id=\"bar-linear-fill\" class=\"lesson-sim-bar-fill fill-linear\" style=\"width: 2.34%;\"></div>\n                        </div>\n                    </div>\n\n                    <div class=\"lesson-sim-bar-item\">\n                        <div class=\"lesson-sim-bar-label-row\">\n                            <span style=\"color: #fb7185;\"><i class=\"fas fa-rocket mr-1\"></i> Exponential ($2^x$):</span>\n                            <span id=\"bar-exp-label\" style=\"color: var(--color-text-default);\">8 units</span>\n                        </div>\n                        <div class=\"lesson-sim-bar-track\">\n                            <div id=\"bar-exp-fill\" class=\"lesson-sim-bar-fill fill-exp\" style=\"width: 3.12%;\"></div>\n                        </div>\n                    </div>\n\n                    <div class=\"lesson-sim-ratio-box\">\n                        <div class=\"lesson-sim-ratio-pill\" id=\"sim-ratio-pill\">\n                            <i class=\"fas fa-bolt\"></i> Exponential is <span id=\"sim-ratio-text\">1.33&times;</span> larger\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </section>"
+        },
+        {
+            "type": "html",
+            "html": "<section class=\"lesson-overview-section\">\n            <h3 class=\"lesson-section-title\">Constant Differences vs. Constant Factors</h3>\n            <p class=\"lesson-overview-text\">\n                Understanding whether an observed phenomenon behaves linearly or exponentially comes down to how quantities transition between consecutive intervals:\n            </p>\n\n            <div class=\"lesson-formula-grid\">\n                <div class=\"lesson-formula-card card-linear-formula\">\n                    <h4 class=\"lesson-formula-title\"><i class=\"fas fa-plus-circle mr-2\" style=\"color: #3b82f6;\"></i> Linear Functions</h4>\n                    <div class=\"lesson-formula-math\">f(x) = mx + b</div>\n                    <p class=\"lesson-formula-desc\">\n                        <strong>Operation:</strong> Repeated Addition.<br>\n                        Grows by equal differences over equal intervals: each unit step adds a constant slope rate $m$.\n                    </p>\n                </div>\n                <div class=\"lesson-formula-card card-exp-formula\">\n                    <h4 class=\"lesson-formula-title\"><i class=\"fas fa-times-circle mr-2\" style=\"color: #e11d48;\"></i> Exponential Functions</h4>\n                    <div class=\"lesson-formula-math\">f(x) = a &middot; b<sup>x</sup></div>\n                    <p class=\"lesson-formula-desc\">\n                        <strong>Operation:</strong> Repeated Multiplication.<br>\n                        Grows by equal factors over equal intervals: each unit step multiplies the existing total by the constant base $b$.\n                    </p>\n                </div>\n            </div>\n        </section>"
+        }
+    ],
+    "vocabulary": [
+        {
+            "term": "Exponential Function",
+            "definition": "A function in which an independent variable appears as an exponent: $f(x) = a \\cdot b^x$. The rate of change increases directly in proportion to the magnitude of the function value itself."
+        },
+        {
+            "term": "Base Multiplier (b)",
+            "definition": "The constant factor by which the function value is multiplied each time $x$ increases by 1 unit. When $b > 1$, the function models growth; when $0 < b < 1$, it models exponential decay."
+        },
+        {
+            "term": "Initial Value (a)",
+            "definition": "The value of the function when $x = 0$, representing the $y$-intercept. Because any nonzero base raised to the power of 0 equals 1 ($b^0 = 1$), $f(0) = a \\cdot 1 = a$."
+        },
+        {
+            "term": "Horizontal Asymptote",
+            "definition": "A horizontal line ($y = 0$ for basic exponential curves) that the curve approaches closer and closer as $x \\to -\\infty$, but never intersects or passes."
+        }
+    ],
+    "practiceQuestions": [
+        {
+            "question": "A bacterial population starts with 5 cells and triples every hour. Which expression models the population after t hours?",
+            "options": [
+                "P(t) = 5 + 3t",
+                "P(t) = 5 \u00b7 3\u1d57",
+                "P(t) = 3 \u00b7 5\u1d57",
+                "P(t) = (5 \u00b7 3) + t"
+            ],
+            "correct": 1,
+            "explanation": "In exponential form P(t) = a \u00b7 b\u1d57, initial amount a = 5 and growth multiplier base b = 3. Therefore P(t) = 5 \u00b7 3\u1d57."
+        },
+        {
+            "question": "As x becomes very large, what is always true when comparing an exponential function with base b > 1 to any linear function?",
+            "options": [
+                "The linear function will eventually exceed the exponential function",
+                "The exponential function will eventually grow much faster and exceed any linear function",
+                "Both functions will remain parallel forever",
+                "The exponential function will decay to zero"
+            ],
+            "correct": 1,
+            "explanation": "Because exponential functions multiply by a constant factor greater than 1 at each step, an exponential quantity will always eventually outpace any linear function."
+        },
+        {
+            "question": "Which of the following data tables represents an exponential function rather than a linear function?",
+            "options": [
+                "x: (1, 2, 3, 4); y: (5, 9, 13, 17)",
+                "x: (1, 2, 3, 4); y: (3, 6, 12, 24)",
+                "x: (1, 2, 3, 4); y: (10, 8, 6, 4)",
+                "x: (1, 2, 3, 4); y: (0, 7, 14, 21)"
+            ],
+            "correct": 1,
+            "explanation": "In table (3, 6, 12, 24), consecutive outputs have a constant factor of 2 (6/3 = 12/6 = 24/12 = 2), indicating exponential multiplication by 2. The other tables add or subtract constant differences."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Eureka Math. \"Graphs of Exponential Functions.\" New York State Common Core Mathematics Curriculum, Algebra I, Module 1, Topic A, Lesson 3.",
+        "subtext": "Aligned with standard HSF.LE.A.1 &bull; Construct and compare linear, quadratic, and exponential models.",
+        "lessonId": "L-ID-EXP-K-M1-A-3"
+    },
+    "scripts": "function updateExponentialSim(step) {\n        const x = parseInt(step, 10);\n        const linear = 2 * x;\n        const exp = Math.pow(2, x);\n\n        // Update Slider Badge\n        const badge = document.getElementById('step-badge');\n        if (badge) badge.innerText = `x = ${x}`;\n\n        // Update Stat Cards\n        const linearValEl = document.getElementById('stat-linear-val');\n        const expValEl = document.getElementById('stat-exp-val');\n        const linearCalcEl = document.getElementById('stat-linear-calc');\n        const expCalcEl = document.getElementById('stat-exp-calc');\n\n        if (linearValEl) linearValEl.innerText = linear;\n        if (expValEl) expValEl.innerText = exp;\n        if (linearCalcEl) linearCalcEl.innerText = `2 \\u00D7 ${x} = ${linear}`;\n        if (expCalcEl) expCalcEl.innerText = x === 0 ? '2\u2070 = 1' : (x === 1 ? '2\u00b9 = 2' : `2^${x} = ${exp}`);\n\n        // Update Bars (Max 256 for x=8)\n        const linearPct = Math.min(100, Math.max(3, (linear / 256) * 100));\n        const expPct = Math.min(100, Math.max(3, (exp / 256) * 100));\n\n        const barLinear = document.getElementById('bar-linear-fill');\n        const barExp = document.getElementById('bar-exp-fill');\n        const barLinearLabel = document.getElementById('bar-linear-label');\n        const barExpLabel = document.getElementById('bar-exp-label');\n\n        if (barLinear) barLinear.style.width = linearPct + '%';\n        if (barExp) barExp.style.width = expPct + '%';\n        if (barLinearLabel) barLinearLabel.innerText = `${linear} units`;\n        if (barExpLabel) barExpLabel.innerText = `${exp} units`;\n\n        // Ratio Text\n        const ratioPill = document.getElementById('sim-ratio-pill');\n        if (ratioPill) {\n            if (linear === 0) {\n                ratioPill.innerHTML = '<i class=\"fas fa-star\" style=\"color: #fbbf24;\"></i> At x = 0, Exponential starts at 1, Linear is 0';\n            } else if (linear === exp) {\n                ratioPill.innerHTML = '<i class=\"fas fa-balance-scale\" style=\"color: #60a5fa;\"></i> At x = ' + x + ', Linear and Exponential are equal (' + exp + ')';\n            } else if (exp > linear) {\n                const ratio = (exp / linear).toFixed(2);\n                ratioPill.innerHTML = '<i class=\"fas fa-bolt\" style=\"color: #f43f5e;\"></i> Exponential is <strong>' + ratio + '&times;</strong> larger than Linear';\n            } else {\n                const diff = linear - exp;\n                ratioPill.innerHTML = '<i class=\"fas fa-info-circle\"></i> Linear leads by ' + diff + ' unit';\n            }\n        }\n\n        // Highlight row in table\n        for (let i = 0; i <= 8; i++) {\n            const row = document.getElementById(`row-step-${i}`);\n            if (row) {\n                if (i === x) {\n                    row.classList.add('highlight-row');\n                } else {\n                    row.classList.remove('highlight-row');\n                }\n            }\n        }\n    }\n\n    function setStep(val) {\n        const slider = document.getElementById('exp-step-slider');\n        if (slider) {\n            slider.value = val;\n            updateExponentialSim(val);\n        }\n    }\n\n    function toggleVocabCard(id) {\n        const body = document.getElementById(`${id}-body`);\n        const icon = document.getElementById(`${id}-icon`);\n        if (!body) return;\n\n        if (body.style.maxHeight && body.style.maxHeight !== '0px') {\n            body.style.maxHeight = '0px';\n            if (icon) icon.innerHTML = '<i class=\"fas fa-chevron-down\"></i>';\n        } else {\n            const allBodies = document.querySelectorAll('[id$=\"-body\"]');\n            const allIcons = document.querySelectorAll('[id$=\"-icon\"]');\n            allBodies.forEach(b => {\n                if (b.id.startsWith('vocab-')) b.style.maxHeight = '0px';\n            });\n            allIcons.forEach(i => {\n                if (i.id.startsWith('vocab-')) i.innerHTML = '<i class=\"fas fa-chevron-down\"></i>';\n            });\n\n            body.style.maxHeight = body.scrollHeight + 'px';\n            if (icon) icon.innerHTML = '<i class=\"fas fa-chevron-up\"></i>';\n        }\n    }\n\n    document.addEventListener('DOMContentLoaded', () => {\n        updateExponentialSim(3);\n    });"
+}

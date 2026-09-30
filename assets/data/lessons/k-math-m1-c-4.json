@@ -1,0 +1,78 @@
+{
+    "id": "k-math-m1-c-4",
+    "code": "K.M1.C.4",
+    "standard": "HSA.REI.A.1",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "Potential Dangers When Solving Equations",
+        "pageTitle": "Potential Dangers in Equation Solving | Hesten's Learning",
+        "description": "Learn which algebraic operations are non-reversible and introduce extraneous solutions or lose valid roots.",
+        "pageDescription": "Analyze the dangers of multiplying by zero, dividing by variable expressions, and squaring both sides.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M1.C.4",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 13",
+        "pill": "Reversible Moves & Extraneous Roots",
+        "text": "In this lesson, you will analyze why not all algebraic moves preserve the solution set. Multiplying by zero expands the solution set to all real numbers, squaring both sides can introduce false (extraneous) solutions, and dividing by a variable expression can inadvertently delete valid solutions.",
+        "outcomes": [
+            "Distinguish between reversible algebraic steps that preserve the solution set and non-reversible operations that alter it.",
+            "Identify how multiplying both sides by zero makes every real number appear as a solution.",
+            "Understand why dividing by a variable expression like $(x - 3)$ is dangerous when that expression can equal zero."
+        ],
+        "teacherInsight": "Present the famous fallacy $1 = 2$ derived from dividing by $(a - b)$ where $a = b$. This permanently cements for students that dividing by a variable expression without checking for zero can corrupt the entire logical chain."
+    },
+    "content": [
+        {
+            "type": "html",
+            "html": "\n                <section class=\"lesson-sim-workbench\" aria-labelledby=\"sim-title-l13\">\n                    <div class=\"lesson-sim-header\">\n                        <div class=\"lesson-sim-title-wrap\">\n                            <h3 id=\"sim-title-l13\" class=\"lesson-sim-title\">\n                                <i class=\"fas fa-exclamation-triangle\" aria-hidden=\"true\"></i> The Algebraic Fallacy & Danger Trap Inspector\n                            </h3>\n                            <p class=\"lesson-sim-subtitle\">\n                                Inspect how non-reversible steps corrupt solution sets. Select an operation to see why it fails.\n                            </p>\n                        </div>\n                    </div>\n                    <div class=\"lesson-sim-grid\">\n                        <div class=\"lesson-sim-controls\">\n                            <div style=\"display:flex; flex-direction:column; gap:0.5rem;\">\n                                <button type=\"button\" class=\"lesson-sim-preset-btn active\" id=\"btn-trap-1\" onclick=\"showTrap(1)\">Danger 1: Multiplying by Zero</button>\n                                <button type=\"button\" class=\"lesson-sim-preset-btn\" id=\"btn-trap-2\" onclick=\"showTrap(2)\">Danger 2: Dividing by a Variable</button>\n                                <button type=\"button\" class=\"lesson-sim-preset-btn\" id=\"btn-trap-3\" onclick=\"showTrap(3)\">Danger 3: Squaring Both Sides</button>\n                            </div>\n                        </div>\n                        <div class=\"lesson-sim-visualizer\" style=\"display:flex; flex-direction:column; justify-content:center;\">\n                            <div id=\"trap-display\" style=\"padding:1.25rem; background:rgba(0,0,0,0.25); border:1px solid var(--color-border); border-radius:0.75rem;\">\n                                <h4 id=\"trap-title\" style=\"color:#f43f5e; font-size:1.1rem; font-weight:800; margin:0 0 0.5rem 0;\">Danger 1: Multiplying Both Sides by 0</h4>\n                                <div id=\"trap-math\" style=\"font-family:monospace; font-size:1rem; margin-bottom:0.5rem; color:#ffffff;\">\n                                    Start: x = 5 &bull; Multiply both sides by 0: 0 &bull; x = 0 &bull; 5 &rArr; 0 = 0\n                                </div>\n                                <p id=\"trap-expl\" style=\"font-size:0.875rem; color:var(--color-text-secondary); margin:0;\">\n                                    Because 0 = 0 is true for ANY value of x, multiplying by 0 artificially expands the solution set from {5} to ALL REAL NUMBERS. You cannot divide by 0 to reverse the step!\n                                </p>\n                            </div>\n                        </div>\n                    </div>\n                </section>\n                "
+        }
+    ],
+    "vocabulary": [
+        {
+            "term": "Reversible Step",
+            "definition": "An algebraic operation that preserves the exact solution set, such that applying its inverse returns the original equation."
+        },
+        {
+            "term": "Extraneous Solution",
+            "definition": "A solution that emerges from the process of solving an equation but is not a valid solution to the original equation."
+        },
+        {
+            "term": "Lost Solution",
+            "definition": "A valid solution that is accidentally eliminated by an invalid operation (such as dividing both sides by a variable expression that equals zero)."
+        }
+    ],
+    "practiceQuestions": [
+        {
+            "question": "A student solves $x^2 = 4x$ by dividing both sides by $x$, getting $x = 4$. What error was committed?",
+            "options": [
+                "The student lost the valid solution $x = 0$ by dividing by a variable that could be zero.",
+                "The student should have divided by 4 instead.",
+                "The student should have squared both sides.",
+                "There was no error; $x = 4$ is the only solution."
+            ],
+            "correct": 0,
+            "explanation": "If $x = 0$, dividing by $x$ divides by zero. Factoring $x^2 - 4x = 0 \\implies x(x - 4) = 0$ reveals TWO solutions: $x = 0$ and $x = 4$."
+        },
+        {
+            "question": "Why does squaring both sides of $\\sqrt{x} = -3$ introduce an extraneous solution?",
+            "options": [
+                "Because squaring $(-3)$ gives $+9$, but $\\sqrt{9} = +3 \\neq -3$.",
+                "Because negative numbers cannot be squared.",
+                "Because square roots cannot be used in algebra.",
+                "Because 9 is not a real number."
+            ],
+            "correct": 0,
+            "explanation": "The principal square root is non-negative, so $\\sqrt{x} = -3$ has NO real solution. Squaring gives $x = 9$, which does not satisfy the original equation."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Some Potential Dangers When Solving Equations.\" Eureka Math, New York State Common Core Mathematics Curriculum, Algebra I, Module 1, Topic C, Lesson 13.",
+        "subtext": "Aligned with CCSS.MATH.CONTENT.HSA.REI.A.1 \u2022 Explain each step in solving a simple equation as following from the equality of numbers.",
+        "lessonId": "L-ID-ALG-K-M1-C-4"
+    },
+    "scripts": "\n        function showTrap(n) {\n            [1, 2, 3].forEach(i => {\n                const b = document.getElementById('btn-trap-' + i);\n                if (b) b.classList.toggle('active', i === n);\n            });\n\n            const title = document.getElementById('trap-title');\n            const math = document.getElementById('trap-math');\n            const expl = document.getElementById('trap-expl');\n\n            if (n === 1) {\n                title.innerText = 'Danger 1: Multiplying Both Sides by 0';\n                math.innerHTML = 'Start: x = 5 &bull; Multiply by 0: 0 &bull; x = 0 &bull; 5 &rArr; 0 = 0';\n                expl.innerText = 'Multiplying by 0 collapses all information and artificially expands the solution set from {5} to ALL REAL NUMBERS.';\n            } else if (n === 2) {\n                title.innerText = 'Danger 2: Dividing by a Variable Expression';\n                math.innerHTML = 'Start: x\u00b2 = 3x &bull; Divide by x: x = 3 (Lost x = 0!)';\n                expl.innerText = 'Dividing by x assumes x \u2260 0. If x = 0 was a valid solution (and it is, since 0\u00b2 = 3(0)), dividing by x destroys that solution!';\n            } else if (n === 3) {\n                title.innerText = 'Danger 3: Squaring Both Sides (Extraneous Roots)';\n                math.innerHTML = 'Start: x = -4 &bull; Square both sides: x\u00b2 = 16 &rArr; x = \u00b14';\n                expl.innerText = 'Squaring both sides makes negative numbers positive, creating false positive mirror solutions like x = 4 that did not exist initially.';\n            }\n        }\n        "
+}

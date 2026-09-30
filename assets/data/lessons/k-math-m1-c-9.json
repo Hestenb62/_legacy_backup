@@ -1,0 +1,78 @@
+{
+    "id": "k-math-m1-c-9",
+    "code": "K.M1.C.9",
+    "standard": "HSA.REI.A.2",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "Equations Involving a Variable in the Denominator",
+        "pageTitle": "Rational Equations & Domain Restrictions | Hesten's Learning",
+        "description": "Identify domain restrictions, avoid division by zero, and solve rational equations with extraneous root detection.",
+        "pageDescription": "Solve rational equations, state non-permissible values, and eliminate denominators.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M1.C.9",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 18",
+        "pill": "Rational Equations & Restrictions",
+        "text": "In this lesson, you will solve rational equations containing variable expressions in denominators. Because division by zero is undefined, any candidate solution that makes a denominator zero must be excluded as an extraneous root.",
+        "outcomes": [
+            "Identify non-permissible values where the denominator equals zero before clearing fractions.",
+            "Solve rational equations by multiplying both sides by the least common denominator.",
+            "Check all solutions against original domain restrictions to discard extraneous solutions."
+        ],
+        "teacherInsight": "Make identifying domain restrictions the mandatory Step 0: before multiplying by any denominator, write out 'x != c'. This habit prevents accepting undefined values as valid roots."
+    },
+    "content": [
+        {
+            "type": "html",
+            "html": "\n                <section class=\"lesson-sim-workbench\" aria-labelledby=\"sim-title-l18\">\n                    <div class=\"lesson-sim-header\">\n                        <div class=\"lesson-sim-title-wrap\">\n                            <h3 id=\"sim-title-l18\" class=\"lesson-sim-title\">\n                                <i class=\"fas fa-divide\" aria-hidden=\"true\"></i> Rational Equation Domain Restriction Checker\n                            </h3>\n                            <p class=\"lesson-sim-subtitle\">\n                                Solve $\\frac{x - 2}{x - 9} = 2$. Test candidate values of $x$ to identify the non-permissible value ($x = 9$) and true solution ($x = 16$).\n                            </p>\n                        </div>\n                    </div>\n                    <div class=\"lesson-sim-grid\">\n                        <div class=\"lesson-sim-controls\">\n                            <div class=\"lesson-sim-slider-box\">\n                                <div class=\"lesson-sim-slider-label\"><span>Candidate Value ($x$):</span><span id=\"badge-rat-x\" class=\"lesson-sim-step-badge\">x = 9</span></div>\n                                <input type=\"range\" id=\"input-rat-x\" min=\"5\" max=\"20\" value=\"9\" oninput=\"updateRatSim()\" class=\"lesson-sim-slider\">\n                            </div>\n                            <div class=\"lesson-sim-stat-grid\">\n                                <div class=\"lesson-sim-stat-card card-linear\">\n                                    <span class=\"lesson-sim-stat-tag\">Denominator: $x - 9$</span>\n                                    <span id=\"denom-val\" class=\"lesson-sim-stat-val stat-linear-color\">0 (UNDEFINED!)</span>\n                                </div>\n                                <div class=\"lesson-sim-stat-card card-exp\">\n                                    <span class=\"lesson-sim-stat-tag\">Fraction Value: $\\frac{x - 2}{x - 9}$</span>\n                                    <span id=\"frac-val\" class=\"lesson-sim-stat-val stat-exp-color\">Undefined</span>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"lesson-sim-visualizer\" style=\"display:flex; flex-direction:column; justify-content:center; align-items:center;\">\n                            <div id=\"rat-status-box\" style=\"padding:1.25rem 1.5rem; background:rgba(225,29,72,0.15); border:2px solid #f43f5e; border-radius:0.75rem; text-align:center;\">\n                                <div id=\"rat-title\" style=\"font-size:1.25rem; font-weight:800; color:#f43f5e;\"><i class=\"fas fa-ban\"></i> NON-PERMISSIBLE VALUE!</div>\n                                <div id=\"rat-desc\" style=\"font-size:0.875rem; color:var(--color-text-secondary); margin-top:0.25rem;\">\n                                    At x = 9, the denominator is 9 - 9 = 0. Division by zero is undefined!\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </section>\n                "
+        }
+    ],
+    "vocabulary": [
+        {
+            "term": "Rational Equation",
+            "definition": "An equation containing at least one fraction whose denominator contains a variable expression."
+        },
+        {
+            "term": "Non-Permissible Value",
+            "definition": "Any real number that causes a denominator in an expression to equal zero, making the expression undefined."
+        },
+        {
+            "term": "Least Common Denominator (LCD)",
+            "definition": "The least common multiple of the denominators of a set of fractions."
+        }
+    ],
+    "practiceQuestions": [
+        {
+            "question": "What is the solution set to $\\frac{x - 2}{x - 9} = 2$?",
+            "options": [
+                "$\\{16\\}$",
+                "$\\{9, 16\\}$",
+                "$\\{9\\}$",
+                "No real solution"
+            ],
+            "correct": 0,
+            "explanation": "Restriction is $x \\neq 9$. Multiply both sides by $(x - 9)$: $x - 2 = 2(x - 9) \\implies x - 2 = 2x - 18 \\implies x = 16$. Since $16 \\neq 9$, the solution set is $\\{16\\}$."
+        },
+        {
+            "question": "Why is $x = 3$ NOT in the solution set of $\\frac{x^2 - 9}{x - 3} = 6$?",
+            "options": [
+                "At $x = 3$, the denominator is $3 - 3 = 0$, which makes the expression undefined.",
+                "Because $3^2 - 9 = 0$, and numerators cannot be zero.",
+                "Because $3 + 3 \\neq 6$.",
+                "It is in the solution set."
+            ],
+            "correct": 0,
+            "explanation": "Although $\\frac{(x-3)(x+3)}{x-3} = x + 3$ simplifies to 6 when $x = 3$, $x = 3$ causes division by zero in the original equation and is therefore excluded."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Equations Involving a Variable Expression in the Denominator.\" Eureka Math, New York State Common Core Mathematics Curriculum, Algebra I, Module 1, Topic C, Lesson 18.",
+        "subtext": "Aligned with CCSS.MATH.CONTENT.HSA.REI.A.2 \u2022 Solve simple rational and radical equations in one variable.",
+        "lessonId": "L-ID-ALG-K-M1-C-9"
+    },
+    "scripts": "\n        function updateRatSim() {\n            const x = parseInt(document.getElementById('input-rat-x').value, 10);\n            document.getElementById('badge-rat-x').innerText = 'x = ' + x;\n\n            const denom = x - 9;\n            const num = x - 2;\n\n            const dEl = document.getElementById('denom-val');\n            const fEl = document.getElementById('frac-val');\n            const box = document.getElementById('rat-status-box');\n            const title = document.getElementById('rat-title');\n            const desc = document.getElementById('rat-desc');\n\n            if (denom === 0) {\n                dEl.innerText = '0 (UNDEFINED!)';\n                fEl.innerText = 'Undefined';\n                box.style.background = 'rgba(225, 29, 72, 0.15)';\n                box.style.borderColor = '#f43f5e';\n                title.style.color = '#f43f5e';\n                title.innerHTML = '<i class=\"fas fa-ban\"></i> NON-PERMISSIBLE VALUE!';\n                desc.innerText = 'At x = 9, the denominator is 9 - 9 = 0. Division by zero is undefined!';\n            } else {\n                const val = num / denom;\n                dEl.innerText = denom;\n                fEl.innerText = `${num} / ${denom} = ${val.toFixed(2)}`;\n\n                if (x === 16) {\n                    box.style.background = 'rgba(16, 185, 129, 0.15)';\n                    box.style.borderColor = '#10b981';\n                    title.style.color = '#10b981';\n                    title.innerHTML = '<i class=\"fas fa-check-circle\"></i> EXACT SOLUTION FOUND!';\n                    desc.innerText = `At x = 16: (16 - 2) / (16 - 9) = 14 / 7 = 2. Exactly matches RHS!`;\n                } else {\n                    box.style.background = 'rgba(0, 0, 0, 0.2)';\n                    box.style.borderColor = 'var(--color-border)';\n                    title.style.color = 'var(--color-text-default)';\n                    title.innerHTML = '<i class=\"fas fa-calculator\"></i> Valid Domain Point';\n                    desc.innerText = `Value is defined (${val.toFixed(2)}), but does not equal 2.`;\n                }\n            }\n        }\n\n        document.addEventListener('DOMContentLoaded', () => {\n            updateRatSim();\n        });\n        "
+}

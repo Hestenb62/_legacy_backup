@@ -1,0 +1,78 @@
+{
+    "id": "k-math-m1-c-14",
+    "code": "K.M1.C.14",
+    "standard": "HSA.REI.C.5",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "Solution Sets to Simultaneous Equations (Part 2)",
+        "pageTitle": "Elimination & Linear Combinations | Hesten's Learning",
+        "description": "Prove why the elimination method works through linear combinations that preserve solution sets.",
+        "pageDescription": "Rigorous justification of the elimination method: multiplying equations and adding linear combinations.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M1.C.14",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 23",
+        "pill": "Elimination & Linear Combinations",
+        "text": "In this lesson, you will investigate standard HSA.REI.C.5 in depth: proving why adding a multiple of one equation to another creates a new system with the exact same solution set. This property provides rigorous justification for the elimination method.",
+        "outcomes": [
+            "Understand that adding a multiple of one equation to another produces a new equation satisfied by the same coordinates.",
+            "Prove that replacing an equation with a linear combination generates an equivalent system of equations.",
+            "Strategically choose multipliers to eliminate a variable and solve 2\u00d72 linear systems."
+        ],
+        "teacherInsight": "Demonstrate that if $A = B$ and $C = D$, then $A + kC = B + kD$. Because the point $(x,y)$ makes both statements true, it must make any combination of them true as well."
+    },
+    "content": [
+        {
+            "type": "html",
+            "html": "\n                <section class=\"lesson-overview-section\">\n                    <h3 class=\"lesson-section-title\">The Mathematical Theorem of Linear Combinations</h3>\n                    <div style=\"background:var(--color-surface); border:1px solid var(--color-border); border-radius:1rem; padding:1.25rem 1.5rem;\">\n                        <h4 style=\"font-size:1.05rem; font-weight:800; color:var(--color-primary); margin:0 0 0.5rem 0;\">Theorem (HSA.REI.C.5):</h4>\n                        <p style=\"font-size:0.95rem; color:var(--color-text-secondary); line-height:1.6; margin:0;\">\n                            Given a system of two equations $\\begin{cases} E_1 = 0 \\\\ E_2 = 0 \\end{cases}$, any new system formed by $\\begin{cases} E_1 = 0 \\\\ cE_1 + dE_2 = 0 \\end{cases}$ (with $d \\neq 0$) has the <strong>exact same solution set</strong> as the original system.\n                        </p>\n                    </div>\n                </section>\n                "
+        }
+    ],
+    "vocabulary": [
+        {
+            "term": "Elimination Method",
+            "definition": "An algebraic technique where equations are added or subtracted to cancel out one of the variables."
+        },
+        {
+            "term": "Linear Combination",
+            "definition": "An expression constructed from a set of terms by multiplying each term by a constant and adding the results."
+        },
+        {
+            "term": "Equivalent Systems",
+            "definition": "Two systems of equations that have the exact same solution set."
+        }
+    ],
+    "practiceQuestions": [
+        {
+            "question": "Solve the system using elimination: $\\begin{cases} 2x + 3y = 12 \\\\ 5x - 3y = 9 \\end{cases}$",
+            "options": [
+                "$(3, 2)$",
+                "$(2, 3)$",
+                "$(3, 3)$",
+                "$(4, 1)$"
+            ],
+            "correct": 0,
+            "explanation": "Add both equations to eliminate $y$: $(2x + 5x) + (3y - 3y) = 12 + 9 \\implies 7x = 21 \\implies x = 3$. Substitute into first equation: $2(3) + 3y = 12 \\implies 6 + 3y = 12 \\implies 3y = 6 \\implies y = 2$. Solution is $(3, 2)$."
+        },
+        {
+            "question": "Why does multiplying an equation by a non-zero constant $k$ NOT change its solution set?",
+            "options": [
+                "Because multiplication is reversible by multiplying by $\\frac{1}{k}$, preserving the exact truth value.",
+                "Because multiplying by a constant changes the graph into a circle.",
+                "Because constants cancel out automatically in algebra.",
+                "It actually does change the solution set."
+            ],
+            "correct": 0,
+            "explanation": "By the Multiplication Property of Equality, $A = B \\iff kA = kB$ for any non-zero real number $k$. The step is completely reversible."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Solution Sets to Simultaneous Equations.\" Eureka Math, New York State Common Core Mathematics Curriculum, Algebra I, Module 1, Topic C, Lesson 23.",
+        "subtext": "Aligned with CCSS.MATH.CONTENT.HSA.REI.C.5 \u2022 Prove that, given a system of two equations, replacing one equation by the sum of that equation and a multiple of the other produces a system with the same solutions.",
+        "lessonId": "L-ID-ALG-K-M1-C-14"
+    },
+    "scripts": ""
+}

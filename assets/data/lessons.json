@@ -185,753 +185,264 @@
             "vocabulary": []
         },
         "k-math-m1-a-1": {
-            "meta": {
-                "title": "Graphs of Piecewise Linear Functions",
-                "pageTitle": "Graphs of Piecewise Linear Functions | Hesten's Learning",
-                "description": "Define appropriate quantities from physical situations, choose logical scales, and translate actions into piecewise graphs.",
-                "pageDescription": "Learn how to define quantities, choose scales, and translate physical actions into piecewise graphs with interactive stories.",
-                "author": "Hesten's Learning Team",
-                "badge": "Math Lesson K.M1.A.1",
-                "badgeIcon": "fa-calculator",
-                "requiresMathJax": true,
-                "standard": "HSF.IF.B.4",
-                "code": "K.M1.A.1"
-            },
-            "overview": {
-                "title": "Student & Teacher Overview: Lesson 1",
-                "pill": "Piecewise Linear Functions",
-                "text": "In this lesson, you will learn to define appropriate quantities from physical situations, choose logical scales, and translate actions into piecewise graphs. Explore the interactive ladder simulation below, and read the classroom discussion blocks to master these concepts.",
-                "outcomes": [
-                    "Define appropriate variables to represent a physical situation.",
-                    "Choose and interpret the scale and origin for a coordinate plane.",
-                    "Understand that the slope of each line segment represents the average rate of change."
-                ],
-                "teacherInsight": "If students struggle, physically act out the story. Place tape on the floor and have them walk forward (positive slope), stand still (zero slope), and walk backward (negative slope) while drawing the graph together."
-            },
-            "content": [
-                {
-                    "type": "interactive-ladder",
-                    "title": "Animated Ladder Descent",
-                    "desc": "Observe the physical elevation of the climber as he descends and pauses.",
-                    "graphTitle": "Graph: Elevation vs. Time #3",
-                    "graphDesc": "Watch the live synchronized marker trace the slope changes on the piecewise graph."
-                },
-                {
-                    "type": "teacher-concepts",
-                    "title": "Teacher Guide Concepts: Deepen Your Understanding",
-                    "concepts": [
-                        {
-                            "title": "Concept 1: Is a 2.5 ft/min Descent Speed Realistic on a Ladder?",
-                            "text": "In Example 1 of the teacher materials, students analyze a graph with a slope representing $2.5\\text{ ft/min}$. While mathematically sound, a rate of $2.5\\text{ ft/min}$ is incredibly slow for a person physically moving down a standard ladder (about $0.5\\text{ inches per second}$). If we shift the horizontal unit of time from minutes to seconds, a speed of $2.5\\text{ ft/sec}$ becomes perfectly realistic for a steady descent."
-                        },
-                        {
-                            "title": "Concept 2: Calculating Average Rate of Change",
-                            "text": "To compute the average rate of change over any interval, use the change in elevation divided by the change in time:",
-                            "formula": "Average Rate of Change = \\frac{\\Delta \\text{Elevation}}{\\Delta \\text{Time}} = \\frac{h(t_2) - h(t_1)}{t_2 - t_1}",
-                            "example": "For instance, between $t = 0$ and $t = 6$ seconds on our ladder descent: $\\frac{3 - 10}{6 - 0} = \\frac{-7}{6} \\approx -1.17\\text{ ft/sec}$. This negative rate represents a descent. When discussing descent speed, we refer to its absolute value: $1.17\\text{ ft/sec}$."
-                        },
-                        {
-                            "title": "Concept 3: The 9 Distinct Time Intervals of the Video Story",
-                            "text": "In the lesson Exit Ticket, teachers analyze the full video of a man traversing stairs and platforms, which features nine distinct linear segments. Segmenting graphs into non-overlapping time intervals is a vital skill. Here are the exact nine time intervals identified in the curriculum guide:",
-                            "intervals": [
-                                "1. Between 0 and 3 sec",
-                                "2. Between 3 and 5.5 sec",
-                                "3. Between 5.5 and 7 sec",
-                                "4. Between 7 and 8.5 sec",
-                                "5. Between 8.5 and 9 sec",
-                                "6. Between 9 and 11 sec",
-                                "7. Between 11 and 12.7 sec",
-                                "8. Between 12.7 and 13 sec",
-                                "9. From 13 sec onward"
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "type": "story-builder",
-                    "title": "Design Your Own Piecewise Graphing Story",
-                    "desc": "Modify each step of the journey and watch the custom graph below transform accordingly."
-                },
-                {
-                    "type": "study-guides",
-                    "title": "Visual Study Guides",
-                    "desc": "Toggle tabs below to explore interactive visual explainers of core concepts."
-                }
-            ],
-            "vocabulary": [
-                {
-                    "term": "Piecewise Linear Function",
-                    "definition": "A function defined by multiple linear segments, each covering a specific interval of time or domain. The overall graph looks like joined straight lines with corners."
-                },
-                {
-                    "term": "Average Rate of Change",
-                    "definition": "The change in the dependent variable (elevation) divided by the change in the independent variable (time) over a given interval. Graphically, this is the slope of the line segment."
-                },
-                {
-                    "term": "Independent Variable",
-                    "definition": "The input value of a function, which changes independently (usually time, graphed on the horizontal axis)."
-                },
-                {
-                    "term": "Dependent Variable",
-                    "definition": "The output value of a function, which depends on the input value (usually elevation/height, graphed on the vertical axis)."
-                }
-            ],
-            "practiceQuestions": [
-                {
-                    "question": "A climber ascends 4 feet in 2 seconds, pauses for 3 seconds, then descends 2 feet in 1 second. What is the slope of the graph during the 3-second pause?",
-                    "options": [
-                        "2 feet per second",
-                        "0 feet per second",
-                        "-2 feet per second",
-                        "4 feet per second"
-                    ],
-                    "correct": 1,
-                    "explanation": "During a pause, elevation remains unchanged while time advances. Rate of change (\u0394y / \u0394t) = 0 / 3 = 0."
-                },
-                {
-                    "question": "On an elevation-versus-time graph, what physical action does a segment with a negative slope depict?",
-                    "options": [
-                        "The climber is stationary at rest",
-                        "The climber is ascending to higher rungs",
-                        "The climber is descending towards the ground",
-                        "The climber has completed the entire climb"
-                    ],
-                    "correct": 2,
-                    "explanation": "A negative slope means the elevation quantity is decreasing over time, representing a physical descent."
-                }
-            ],
-            "citation": {
-                "title": "Source Citation (MLA)",
-                "text": "Great Minds. \"Graphs of Piecewise Linear Functions.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
-                "subtext": "Developed using lesson materials from standard algebra curricula.",
-                "lessonId": "L-ID-PIECEWISE-L1"
-            },
-            "scripts": "\n    // ==================== LESSON 1: LADDER DESCENT ANIMATION ENGINE ====================\n    let ladderAnimationTimer = null;\n    let ladderTime = 0;\n    const totalLadderDuration = 15; // seconds\n    const ladderClimber = document.getElementById('ladder-climber');\n    const trackerDot = document.getElementById('tracker-dot');\n    const displayTimeL1 = document.getElementById('display-time-l1');\n    const displayStatusL1 = document.getElementById('display-status-l1');\n    const btnPlayL1 = document.getElementById('btn-play-l1');\n\n    function toggleLadderAnimation() {\n        if (ladderAnimationTimer) {\n            // Pause animation\n            clearInterval(ladderAnimationTimer);\n            ladderAnimationTimer = null;\n            if (btnPlayL1) btnPlayL1.innerText = 'Resume Journey';\n            if (displayStatusL1) displayStatusL1.innerText = 'Paused';\n        } else {\n            // Start animation loop\n            if (btnPlayL1) btnPlayL1.innerText = 'Pause Journey';\n            if (displayStatusL1) displayStatusL1.innerText = 'Climbing';\n            if (trackerDot) trackerDot.style.display = 'block';\n\n            ladderAnimationTimer = setInterval(() => {\n                ladderTime += 0.05;\n                if (ladderTime >= totalLadderDuration) {\n                    ladderTime = totalLadderDuration;\n                    clearInterval(ladderAnimationTimer);\n                    ladderAnimationTimer = null;\n                    if (btnPlayL1) btnPlayL1.innerText = 'Restart Journey';\n                    if (displayStatusL1) displayStatusL1.innerText = 'Completed';\n                }\n                updateLadderState(ladderTime);\n            }, 50);\n        }\n    }\n\n    function resetLadderAnimation() {\n        if (ladderAnimationTimer) {\n            clearInterval(ladderAnimationTimer);\n            ladderAnimationTimer = null;\n        }\n        ladderTime = 0;\n        updateLadderState(0);\n        if (btnPlayL1) btnPlayL1.innerText = 'Start Journey';\n        if (displayStatusL1) displayStatusL1.innerText = 'Ready';\n        if (trackerDot) trackerDot.style.display = 'none';\n    }\n\n    // Calculate and update the physical and graphed position coordinates\n    function updateLadderState(time) {\n        let height = 10;\n        let statusText = 'Descending';\n\n        // Reset segment highlight stylings\n        for (let i = 1; i <= 4; i++) {\n            const segEl = document.getElementById(`segment-info-${i}`);\n            if (segEl) {\n                segEl.className = 'lesson-segment-item';\n            }\n        }\n\n        if (time <= 6) {\n            // Interval 1: 0 to 6 seconds. Linear descent from 10ft down to 3ft.\n            height = 10 - (7 / 6) * time;\n            const s1 = document.getElementById('segment-info-1');\n            if (s1) s1.className = 'lesson-segment-item font-bold text-rose-500';\n        } else if (time <= 8.5) {\n            // Interval 2: 6 to 8.5 seconds. Drinking water (stays flat at 3ft)\n            height = 3;\n            statusText = 'Drinking Water';\n            const s2 = document.getElementById('segment-info-2');\n            if (s2) s2.className = 'lesson-segment-item font-bold text-rose-500';\n        } else if (time <= 10) {\n            // Interval 3: 8.5 to 10 seconds. Descent to ground (3ft to 0ft)\n            height = 3 - (3 / 1.5) * (time - 8.5);\n            const s3 = document.getElementById('segment-info-3');\n            if (s3) s3.className = 'lesson-segment-item font-bold text-rose-500';\n        } else {\n            // Interval 4: 10 to 15 seconds. Walk in the kitchen (0ft elevation)\n            height = 0;\n            statusText = 'Walking into kitchen';\n            const s4 = document.getElementById('segment-info-4');\n            if (s4) s4.className = 'lesson-segment-item font-bold text-rose-500';\n        }\n\n        // Limit bounds safely\n        height = Math.max(0, Math.min(10, height));\n\n        // Update physical climber height on page layout\n        const bottomPercent = 24 + (height * 22.8);\n        if (ladderClimber) ladderClimber.style.bottom = `${bottomPercent}px`;\n        const bubble = document.getElementById('elevation-bubble');\n        if (bubble) bubble.innerText = `Height: ${height.toFixed(1)} ft`;\n        if (displayTimeL1) displayTimeL1.innerText = time.toFixed(1);\n        if (displayStatusL1) displayStatusL1.innerText = statusText;\n\n        // Map graph tracking node position\n        const trackerX = 40 + (time / 15) * 340;\n        const trackerY = 260 - (height / 10) * 240;\n\n        if (trackerDot) {\n            trackerDot.setAttribute('cx', trackerX);\n            trackerDot.setAttribute('cy', trackerY);\n        }\n    }\n\n    // ==================== USER CUSTOM STORY PLOTTER ====================\n    function updateCustomGraph() {\n        const valAEl = document.getElementById('custom-val-a');\n        const valBEl = document.getElementById('custom-val-b');\n        const valCEl = document.getElementById('custom-val-c');\n        if (!valAEl || !valBEl || !valCEl) return;\n\n        const valA = parseFloat(valAEl.value);\n        const valB = parseFloat(valBEl.value);\n        const valC = parseFloat(valCEl.value);\n\n        // Update text labels\n        const lblA = document.getElementById('custom-lbl-a');\n        const lblB = document.getElementById('custom-lbl-b');\n        const lblC = document.getElementById('custom-lbl-c');\n        if (lblA) lblA.innerText = valA;\n        if (lblB) lblB.innerText = valB;\n        if (lblC) lblC.innerText = valC;\n\n        // Update SVG nodes\n        const yA = 170 - (valA / 15) * 150;\n        const yB = 170 - (valB / 15) * 150;\n        const yC = 170 - (valC / 15) * 150;\n\n        const nodeA = document.getElementById('user-node-a');\n        const nodeB = document.getElementById('user-node-b');\n        const nodeC = document.getElementById('user-node-c');\n        if (nodeA) nodeA.setAttribute('cy', yA);\n        if (nodeB) nodeB.setAttribute('cy', yB);\n        if (nodeC) nodeC.setAttribute('cy', yC);\n\n        // Reconstruct path string\n        const pathD = `M 30,170 L 130,${yA} L 205,${yB} L 280,${yC}`;\n        const pathEl = document.getElementById('user-graph-path');\n        if (pathEl) pathEl.setAttribute('d', pathD);\n\n        // Generate verbal descriptions\n        const storyList = document.getElementById('custom-story-output');\n        if (!storyList) return;\n        storyList.innerHTML = '';\n\n        let segment1Text = `0 to 4s: Climber `;\n        if (valA > 0) {\n            segment1Text += `climbs from ground level to ${valA} feet.`;\n        } else {\n            segment1Text += `remains flat at ground level.`;\n        }\n\n        let segment2Text = `4 to 7s: Climber `;\n        if (valB > valA) {\n            segment2Text += `continues climbing up from ${valA} feet to ${valB} feet.`;\n        } else if (valB < valA) {\n            segment2Text += `descends down from ${valA} feet to ${valB} feet.`;\n        } else {\n            segment2Text += `remains completely stationary at ${valA} feet.`;\n        }\n\n        let segment3Text = `7 to 10s: Climber `;\n        if (valC > valB) {\n            segment3Text += `ascends up to ${valC} feet.`;\n        } else if (valC < valB) {\n            segment3Text += `descends down to ${valC} feet.`;\n        } else {\n            segment3Text += `holds position constant at ${valB} feet.`;\n        }\n\n        storyList.innerHTML += `<li>${segment1Text}</li>`;\n        storyList.innerHTML += `<li>${segment2Text}</li>`;\n        storyList.innerHTML += `<li>${segment3Text}</li>`;\n    }\n\n    // ==================== LESSON VOCAB & NOTES FUNCTIONALITY ====================\n    function toggleVocabCard(id) {\n        const body = document.getElementById(`${id}-body`);\n        const icon = document.getElementById(`${id}-icon`);\n        if (!body) return;\n\n        if (body.style.maxHeight && body.style.maxHeight !== '0px') {\n            body.style.maxHeight = '0px';\n            if (icon) icon.innerHTML = '<i class=\"fas fa-chevron-down\"></i>';\n        } else {\n            // Close other open cards\n            const allBodies = document.querySelectorAll('[id$=\"-body\"]');\n            const allIcons = document.querySelectorAll('[id$=\"-icon\"]');\n            allBodies.forEach(b => {\n                if (b.id.startsWith('vocab-')) b.style.maxHeight = '0px';\n            });\n            allIcons.forEach(i => {\n                if (i.id.startsWith('vocab-')) i.innerHTML = '<i class=\"fas fa-chevron-down\"></i>';\n            });\n\n            body.style.maxHeight = body.scrollHeight + 'px';\n            if (icon) icon.innerHTML = '<i class=\"fas fa-chevron-up\"></i>';\n        }\n    }\n\n    function switchExplainerTab(tabId) {\n        const tabs = ['tab-slope', 'tab-intervals', 'tab-speed'];\n\n        tabs.forEach(t => {\n            const btn = document.getElementById(`btn-${t}`);\n            const content = document.getElementById(`content-${t}`);\n\n            if (t === tabId) {\n                if (btn) btn.classList.add('active');\n                if (content) content.classList.add('active');\n            } else {\n                if (btn) btn.classList.remove('active');\n                if (content) content.classList.remove('active');\n            }\n        });\n    }\n\n    document.addEventListener('DOMContentLoaded', () => {\n        updateCustomGraph();\n    });\n    if (document.readyState === 'complete' || document.readyState === 'interactive') {\n        setTimeout(updateCustomGraph, 100);\n    }\n"
+            "id": "k-math-m1-a-1",
+            "code": "K.M1.A.1",
+            "standard": "HSF.IF.B.4",
+            "levelId": "k",
+            "title": "Graphs of Piecewise Linear Functions",
+            "description": "Define appropriate quantities from physical situations, choose logical scales, and translate actions into piecewise graphs.",
+            "file": "assets/data/lessons/k-math-m1-a-1.json",
+            "url": "/levels/k.php?k-math-m1-a-1"
         },
         "k-math-m1-a-2": {
-            "meta": {
-                "title": "Growth of Square Areas and Functions | Hesten",
-                "description": "Examine how the area of a square grows compared to its side length, laying foundations for quadratic functions.",
-                "author": "Hesten",
-                "badge": "Lesson",
-                "badgeIcon": "fa-book"
-            },
-            "overview": {
-                "title": "Lesson Overview",
-                "pill": "",
-                "text": "",
-                "outcomes": [
-                    "Growing from $s=1$ to $s=2$ adds 3 units of area ($4 - 1$).",
-                    "Growing from $s=2$ to $s=3$ adds 5 units of area ($9 - 4$).",
-                    "Growing from $s=9$ to $s=10$ adds 19 units of area ($100 - 81$)."
-                ],
-                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
-            },
-            "content": [
-                {
-                    "type": "manual_migration_required",
-                    "note": "Interactive content must be migrated to components manually."
-                }
-            ],
-            "vocabulary": []
+            "id": "k-math-m1-a-2",
+            "code": "K.M1.A.2",
+            "standard": "HSA.CED.A.2",
+            "levelId": "k",
+            "title": "Growth of Square Areas and Functions",
+            "description": "How do geometric figures grow? Contrast linear perimeter growth with quadratic area expansion using an interactive geometric workbench.",
+            "file": "assets/data/lessons/k-math-m1-a-2.json",
+            "url": "/levels/k.php?k-math-m1-a-2"
         },
         "k-math-m1-a-3": {
-            "meta": {
-                "title": "Untitled Lesson",
-                "description": "",
-                "author": "Hesten's Learning Team",
-                "badge": "Lesson",
-                "badgeIcon": "fa-book"
-            },
-            "overview": {
-                "title": "Lesson Overview",
-                "pill": "",
-                "text": "",
-                "outcomes": [],
-                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
-            },
-            "content": [
-                {
-                    "type": "manual_migration_required",
-                    "note": "Interactive content must be migrated to components manually."
-                }
-            ],
-            "vocabulary": []
+            "id": "k-math-m1-a-3",
+            "code": "K.M1.A.3",
+            "standard": "HSF.LE.A.1",
+            "levelId": "k",
+            "title": "Graphs of Exponential Functions",
+            "description": "What happens when a quantity doubles at every step? Explore the fundamental mathematical differences between linear addition (constant differences) and exponential multiplication (constant factors).",
+            "file": "assets/data/lessons/k-math-m1-a-3.json",
+            "url": "/levels/k.php?k-math-m1-a-3"
         },
         "k-math-m1-a-4": {
-            "meta": {
-                "title": "Untitled Lesson",
-                "description": "",
-                "author": "Hesten's Learning Team",
-                "badge": "Lesson",
-                "badgeIcon": "fa-book"
-            },
-            "overview": {
-                "title": "Lesson Overview",
-                "pill": "",
-                "text": "",
-                "outcomes": [],
-                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
-            },
-            "content": [
-                {
-                    "type": "manual_migration_required",
-                    "note": "Interactive content must be migrated to components manually."
-                }
-            ],
-            "vocabulary": []
+            "id": "k-math-m1-a-4",
+            "code": "K.M1.A.4",
+            "standard": "HSF.IF.B.4",
+            "levelId": "k",
+            "title": "Analyzing Graphs — Water Usage During a Typical School Day",
+            "description": "How does a physical building communicate through data? Examine cumulative volume graphs, interpret piecewise slopes, and calculate average rates of change across the rhythm of a high school day.",
+            "file": "assets/data/lessons/k-math-m1-a-4.json",
+            "url": "/levels/k.php?k-math-m1-a-4"
         },
         "k-math-m1-a-5": {
-            "meta": {
-                "title": "Untitled Lesson",
-                "description": "",
-                "author": "Hesten's Learning Team",
-                "badge": "Lesson",
-                "badgeIcon": "fa-book"
-            },
-            "overview": {
-                "title": "Lesson Overview",
-                "pill": "",
-                "text": "",
-                "outcomes": [],
-                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
-            },
-            "content": [
-                {
-                    "type": "manual_migration_required",
-                    "note": "Interactive content must be migrated to components manually."
-                }
-            ],
-            "vocabulary": []
+            "id": "k-math-m1-a-5",
+            "code": "K.M1.A.5",
+            "standard": "HSF.IF.B.4",
+            "levelId": "k",
+            "title": "Two Graphing Stories — Modeling Physical Motion",
+            "description": "Can a picture tell two different stories? Translate physical events into piecewise mathematical graphs and discover how slope reveals velocity, rest intervals, and elevation changes.",
+            "file": "assets/data/lessons/k-math-m1-a-5.json",
+            "url": "/levels/k.php?k-math-m1-a-5"
         },
         "k-math-m1-b-1": {
-            "meta": {
-                "title": "Untitled Lesson",
-                "description": "",
-                "author": "Hesten's Learning Team",
-                "badge": "Lesson",
-                "badgeIcon": "fa-book"
-            },
-            "overview": {
-                "title": "Lesson Overview",
-                "pill": "",
-                "text": "",
-                "outcomes": [],
-                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
-            },
-            "content": [
-                {
-                    "type": "manual_migration_required",
-                    "note": "Interactive content must be migrated to components manually."
-                }
-            ],
-            "vocabulary": []
+            "id": "k-math-m1-b-1",
+            "code": "K.M1.B.1",
+            "standard": "HSA.SSE.A.1",
+            "levelId": "k",
+            "title": "Algebraic Expressions — The Distributive Property",
+            "description": "Master how the distributive property underpins algebraic equivalence and visual area models.",
+            "file": "assets/data/lessons/k-math-m1-b-1.json",
+            "url": "/levels/k.php?k-math-m1-b-1"
         },
         "k-math-m1-b-2": {
-            "meta": {
-                "title": "Untitled Lesson",
-                "description": "",
-                "author": "Hesten's Learning Team",
-                "badge": "Lesson",
-                "badgeIcon": "fa-book"
-            },
-            "overview": {
-                "title": "Lesson Overview",
-                "pill": "",
-                "text": "",
-                "outcomes": [],
-                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
-            },
-            "content": [
-                {
-                    "type": "manual_migration_required",
-                    "note": "Interactive content must be migrated to components manually."
-                }
-            ],
-            "vocabulary": []
+            "id": "k-math-m1-b-2",
+            "code": "K.M1.B.2",
+            "standard": "HSA.SSE.A.2",
+            "levelId": "k",
+            "title": "Algebraic Expressions — Commutative & Associative Properties",
+            "description": "Prove expression equivalencies and justify term regrouping using commutative and associative identities.",
+            "file": "assets/data/lessons/k-math-m1-b-2.json",
+            "url": "/levels/k.php?k-math-m1-b-2"
         },
         "k-math-m1-b-3": {
-            "meta": {
-                "title": "Untitled Lesson",
-                "description": "",
-                "author": "Hesten's Learning Team",
-                "badge": "Lesson",
-                "badgeIcon": "fa-book"
-            },
-            "overview": {
-                "title": "Lesson Overview",
-                "pill": "",
-                "text": "",
-                "outcomes": [],
-                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
-            },
-            "content": [
-                {
-                    "type": "manual_migration_required",
-                    "note": "Interactive content must be migrated to components manually."
-                }
-            ],
-            "vocabulary": []
+            "id": "k-math-m1-b-3",
+            "code": "K.M1.B.3",
+            "standard": "HSA.APR.A.1",
+            "levelId": "k",
+            "title": "Adding and Subtracting Polynomials",
+            "description": "Understand polynomial structure, standard form, degree, and prove closure under addition and subtraction.",
+            "file": "assets/data/lessons/k-math-m1-b-3.json",
+            "url": "/levels/k.php?k-math-m1-b-3"
         },
         "k-math-m1-b-4": {
-            "meta": {
-                "title": "Untitled Lesson",
-                "description": "",
-                "author": "Hesten's Learning Team",
-                "badge": "Lesson",
-                "badgeIcon": "fa-book"
-            },
-            "overview": {
-                "title": "Lesson Overview",
-                "pill": "",
-                "text": "",
-                "outcomes": [],
-                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
-            },
-            "content": [
-                {
-                    "type": "manual_migration_required",
-                    "note": "Interactive content must be migrated to components manually."
-                }
-            ],
-            "vocabulary": []
-        },
-        "k-math-m1-b-5": {
-            "meta": {
-                "title": "Untitled Lesson",
-                "description": "",
-                "author": "Hesten's Learning Team",
-                "badge": "Lesson",
-                "badgeIcon": "fa-book"
-            },
-            "overview": {
-                "title": "Lesson Overview",
-                "pill": "",
-                "text": "",
-                "outcomes": [],
-                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
-            },
-            "content": [
-                {
-                    "type": "manual_migration_required",
-                    "note": "Interactive content must be migrated to components manually."
-                }
-            ],
-            "vocabulary": []
-        },
-        "k-math-m1-b-6": {
-            "meta": {
-                "title": "Untitled Lesson",
-                "description": "",
-                "author": "Hesten's Learning Team",
-                "badge": "Lesson",
-                "badgeIcon": "fa-book"
-            },
-            "overview": {
-                "title": "Lesson Overview",
-                "pill": "",
-                "text": "",
-                "outcomes": [],
-                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
-            },
-            "content": [
-                {
-                    "type": "manual_migration_required",
-                    "note": "Interactive content must be migrated to components manually."
-                }
-            ],
-            "vocabulary": []
+            "id": "k-math-m1-b-4",
+            "code": "K.M1.B.4",
+            "standard": "HSA.APR.A.1",
+            "levelId": "k",
+            "title": "Multiplying Polynomials",
+            "description": "Master tabular area multiplication (box method) and prove closure under polynomial multiplication.",
+            "file": "assets/data/lessons/k-math-m1-b-4.json",
+            "url": "/levels/k.php?k-math-m1-b-4"
         },
         "k-math-m1-c-1": {
-            "meta": {
-                "title": "Untitled Lesson",
-                "description": "",
-                "author": "Hesten's Learning Team",
-                "badge": "Lesson",
-                "badgeIcon": "fa-book"
-            },
-            "overview": {
-                "title": "Lesson Overview",
-                "pill": "",
-                "text": "",
-                "outcomes": [],
-                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
-            },
-            "content": [
-                {
-                    "type": "manual_migration_required",
-                    "note": "Interactive content must be migrated to components manually."
-                }
-            ],
-            "vocabulary": []
+            "id": "k-math-m1-c-1",
+            "code": "K.M1.C.1",
+            "standard": "HSA.CED.A.1",
+            "levelId": "k",
+            "title": "True and False Equations",
+            "description": "Understand equations as statements of equality with truth values, and identify solution sets.",
+            "file": "assets/data/lessons/k-math-m1-c-1.json",
+            "url": "/levels/k.php?k-math-m1-c-1"
         },
         "k-math-m1-c-10": {
-            "meta": {
-                "title": "Untitled Lesson",
-                "description": "",
-                "author": "Hesten's Learning Team",
-                "badge": "Lesson",
-                "badgeIcon": "fa-book"
-            },
-            "overview": {
-                "title": "Lesson Overview",
-                "pill": "",
-                "text": "",
-                "outcomes": [],
-                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
-            },
-            "content": [
-                {
-                    "type": "manual_migration_required",
-                    "note": "Interactive content must be migrated to components manually."
-                }
-            ],
-            "vocabulary": []
+            "id": "k-math-m1-c-10",
+            "code": "K.M1.C.10",
+            "standard": "HSA.CED.A.4",
+            "levelId": "k",
+            "title": "Rearranging Formulas",
+            "description": "Isolate specified variables in geometric, financial, and scientific literal equations.",
+            "file": "assets/data/lessons/k-math-m1-c-10.json",
+            "url": "/levels/k.php?k-math-m1-c-10"
         },
         "k-math-m1-c-11": {
-            "meta": {
-                "title": "Untitled Lesson",
-                "description": "",
-                "author": "Hesten's Learning Team",
-                "badge": "Lesson",
-                "badgeIcon": "fa-book"
-            },
-            "overview": {
-                "title": "Lesson Overview",
-                "pill": "",
-                "text": "",
-                "outcomes": [],
-                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
-            },
-            "content": [
-                {
-                    "type": "manual_migration_required",
-                    "note": "Interactive content must be migrated to components manually."
-                }
-            ],
-            "vocabulary": []
+            "id": "k-math-m1-c-11",
+            "code": "K.M1.C.11",
+            "standard": "HSA.REI.D.10",
+            "levelId": "k",
+            "title": "Solution Sets to Equations with Two Variables",
+            "description": "Understand that the graph of an equation in two variables is the set of all ordered pairs that satisfy it.",
+            "file": "assets/data/lessons/k-math-m1-c-11.json",
+            "url": "/levels/k.php?k-math-m1-c-11"
         },
         "k-math-m1-c-12": {
-            "meta": {
-                "title": "Untitled Lesson",
-                "description": "",
-                "author": "Hesten's Learning Team",
-                "badge": "Lesson",
-                "badgeIcon": "fa-book"
-            },
-            "overview": {
-                "title": "Lesson Overview",
-                "pill": "",
-                "text": "",
-                "outcomes": [],
-                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
-            },
-            "content": [
-                {
-                    "type": "manual_migration_required",
-                    "note": "Interactive content must be migrated to components manually."
-                }
-            ],
-            "vocabulary": []
+            "id": "k-math-m1-c-12",
+            "code": "K.M1.C.12",
+            "standard": "HSA.REI.D.12",
+            "levelId": "k",
+            "title": "Solution Sets to Inequalities with Two Variables",
+            "description": "Graph linear inequalities in two variables as shaded half-planes with solid or dashed boundary lines.",
+            "file": "assets/data/lessons/k-math-m1-c-12.json",
+            "url": "/levels/k.php?k-math-m1-c-12"
         },
         "k-math-m1-c-13": {
-            "meta": {
-                "title": "Untitled Lesson",
-                "description": "",
-                "author": "Hesten's Learning Team",
-                "badge": "Lesson",
-                "badgeIcon": "fa-book"
-            },
-            "overview": {
-                "title": "Lesson Overview",
-                "pill": "",
-                "text": "",
-                "outcomes": [],
-                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
-            },
-            "content": [
-                {
-                    "type": "manual_migration_required",
-                    "note": "Interactive content must be migrated to components manually."
-                }
-            ],
-            "vocabulary": []
+            "id": "k-math-m1-c-13",
+            "code": "K.M1.C.13",
+            "standard": "HSA.REI.C.6",
+            "levelId": "k",
+            "title": "Solution Sets to Simultaneous Equations (Part 1)",
+            "description": "Solve systems of linear equations graphically and algebraically using the substitution method.",
+            "file": "assets/data/lessons/k-math-m1-c-13.json",
+            "url": "/levels/k.php?k-math-m1-c-13"
         },
         "k-math-m1-c-14": {
-            "meta": {
-                "title": "Untitled Lesson",
-                "description": "",
-                "author": "Hesten's Learning Team",
-                "badge": "Lesson",
-                "badgeIcon": "fa-book"
-            },
-            "overview": {
-                "title": "Lesson Overview",
-                "pill": "",
-                "text": "",
-                "outcomes": [],
-                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
-            },
-            "content": [
-                {
-                    "type": "manual_migration_required",
-                    "note": "Interactive content must be migrated to components manually."
-                }
-            ],
-            "vocabulary": []
+            "id": "k-math-m1-c-14",
+            "code": "K.M1.C.14",
+            "standard": "HSA.REI.C.5",
+            "levelId": "k",
+            "title": "Solution Sets to Simultaneous Equations (Part 2)",
+            "description": "Prove why the elimination method works through linear combinations that preserve solution sets.",
+            "file": "assets/data/lessons/k-math-m1-c-14.json",
+            "url": "/levels/k.php?k-math-m1-c-14"
         },
         "k-math-m1-c-2": {
-            "meta": {
-                "title": "Untitled Lesson",
-                "description": "",
-                "author": "Hesten's Learning Team",
-                "badge": "Lesson",
-                "badgeIcon": "fa-book"
-            },
-            "overview": {
-                "title": "Lesson Overview",
-                "pill": "",
-                "text": "",
-                "outcomes": [],
-                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
-            },
-            "content": [
-                {
-                    "type": "manual_migration_required",
-                    "note": "Interactive content must be migrated to components manually."
-                }
-            ],
-            "vocabulary": []
+            "id": "k-math-m1-c-2",
+            "code": "K.M1.C.2",
+            "standard": "HSA.REI.B.3",
+            "levelId": "k",
+            "title": "Solution Sets for Equations and Inequalities",
+            "description": "Graph solution sets on the real number line using open/closed circles and directed rays.",
+            "file": "assets/data/lessons/k-math-m1-c-2.json",
+            "url": "/levels/k.php?k-math-m1-c-2"
         },
         "k-math-m1-c-3": {
-            "meta": {
-                "title": "Untitled Lesson",
-                "description": "",
-                "author": "Hesten's Learning Team",
-                "badge": "Lesson",
-                "badgeIcon": "fa-book"
-            },
-            "overview": {
-                "title": "Lesson Overview",
-                "pill": "",
-                "text": "",
-                "outcomes": [],
-                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
-            },
-            "content": [
-                {
-                    "type": "manual_migration_required",
-                    "note": "Interactive content must be migrated to components manually."
-                }
-            ],
-            "vocabulary": []
+            "id": "k-math-m1-c-3",
+            "code": "K.M1.C.3",
+            "standard": "HSA.REI.A.1",
+            "levelId": "k",
+            "title": "Solving Equations",
+            "description": "Understand equation solving as a deductive if-then process supported by properties of equality.",
+            "file": "assets/data/lessons/k-math-m1-c-3.json",
+            "url": "/levels/k.php?k-math-m1-c-3"
         },
         "k-math-m1-c-4": {
-            "meta": {
-                "title": "Untitled Lesson",
-                "description": "",
-                "author": "Hesten's Learning Team",
-                "badge": "Lesson",
-                "badgeIcon": "fa-book"
-            },
-            "overview": {
-                "title": "Lesson Overview",
-                "pill": "",
-                "text": "",
-                "outcomes": [],
-                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
-            },
-            "content": [
-                {
-                    "type": "manual_migration_required",
-                    "note": "Interactive content must be migrated to components manually."
-                }
-            ],
-            "vocabulary": []
+            "id": "k-math-m1-c-4",
+            "code": "K.M1.C.4",
+            "standard": "HSA.REI.A.1",
+            "levelId": "k",
+            "title": "Potential Dangers When Solving Equations",
+            "description": "Learn which algebraic operations are non-reversible and introduce extraneous solutions or lose valid roots.",
+            "file": "assets/data/lessons/k-math-m1-c-4.json",
+            "url": "/levels/k.php?k-math-m1-c-4"
         },
         "k-math-m1-c-5": {
-            "meta": {
-                "title": "Untitled Lesson",
-                "description": "",
-                "author": "Hesten's Learning Team",
-                "badge": "Lesson",
-                "badgeIcon": "fa-book"
-            },
-            "overview": {
-                "title": "Lesson Overview",
-                "pill": "",
-                "text": "",
-                "outcomes": [],
-                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
-            },
-            "content": [
-                {
-                    "type": "manual_migration_required",
-                    "note": "Interactive content must be migrated to components manually."
-                }
-            ],
-            "vocabulary": []
+            "id": "k-math-m1-c-5",
+            "code": "K.M1.C.5",
+            "standard": "HSA.REI.B.3",
+            "levelId": "k",
+            "title": "Solving Inequalities",
+            "description": "Master solving linear inequalities and prove why multiplying by negative numbers flips the relation.",
+            "file": "assets/data/lessons/k-math-m1-c-5.json",
+            "url": "/levels/k.php?k-math-m1-c-5"
         },
         "k-math-m1-c-6": {
-            "meta": {
-                "title": "Untitled Lesson",
-                "description": "",
-                "author": "Hesten's Learning Team",
-                "badge": "Lesson",
-                "badgeIcon": "fa-book"
-            },
-            "overview": {
-                "title": "Lesson Overview",
-                "pill": "",
-                "text": "",
-                "outcomes": [],
-                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
-            },
-            "content": [
-                {
-                    "type": "manual_migration_required",
-                    "note": "Interactive content must be migrated to components manually."
-                }
-            ],
-            "vocabulary": []
+            "id": "k-math-m1-c-6",
+            "code": "K.M1.C.6",
+            "standard": "HSA.CED.A.1",
+            "levelId": "k",
+            "title": "Solution Sets of Two or More Equations Joined by 'And' or 'Or'",
+            "description": "Understand conjunctions (And / Intersection) and disjunctions (Or / Union) in algebraic equations.",
+            "file": "assets/data/lessons/k-math-m1-c-6.json",
+            "url": "/levels/k.php?k-math-m1-c-6"
         },
         "k-math-m1-c-7": {
-            "meta": {
-                "title": "Untitled Lesson",
-                "description": "",
-                "author": "Hesten's Learning Team",
-                "badge": "Lesson",
-                "badgeIcon": "fa-book"
-            },
-            "overview": {
-                "title": "Lesson Overview",
-                "pill": "",
-                "text": "",
-                "outcomes": [],
-                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
-            },
-            "content": [
-                {
-                    "type": "manual_migration_required",
-                    "note": "Interactive content must be migrated to components manually."
-                }
-            ],
-            "vocabulary": []
+            "id": "k-math-m1-c-7",
+            "code": "K.M1.C.7",
+            "standard": "HSA.REI.B.3",
+            "levelId": "k",
+            "title": "Solving and Graphing Inequalities Joined by 'And' or 'Or'",
+            "description": "Solve compound inequalities and graph bounded intervals and disjoint rays on coordinate lines.",
+            "file": "assets/data/lessons/k-math-m1-c-7.json",
+            "url": "/levels/k.php?k-math-m1-c-7"
         },
         "k-math-m1-c-8": {
-            "meta": {
-                "title": "Untitled Lesson",
-                "description": "",
-                "author": "Hesten's Learning Team",
-                "badge": "Lesson",
-                "badgeIcon": "fa-book"
-            },
-            "overview": {
-                "title": "Lesson Overview",
-                "pill": "",
-                "text": "",
-                "outcomes": [],
-                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
-            },
-            "content": [
-                {
-                    "type": "manual_migration_required",
-                    "note": "Interactive content must be migrated to components manually."
-                }
-            ],
-            "vocabulary": []
+            "id": "k-math-m1-c-8",
+            "code": "K.M1.C.8",
+            "standard": "HSA.SSE.A.2",
+            "levelId": "k",
+            "title": "Equations Involving Factored Expressions",
+            "description": "Solve quadratic and polynomial equations in factored form using the Zero-Product Property.",
+            "file": "assets/data/lessons/k-math-m1-c-8.json",
+            "url": "/levels/k.php?k-math-m1-c-8"
         },
         "k-math-m1-c-9": {
-            "meta": {
-                "title": "Untitled Lesson",
-                "description": "",
-                "author": "Hesten's Learning Team",
-                "badge": "Lesson",
-                "badgeIcon": "fa-book"
-            },
-            "overview": {
-                "title": "Lesson Overview",
-                "pill": "",
-                "text": "",
-                "outcomes": [],
-                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
-            },
-            "content": [
-                {
-                    "type": "manual_migration_required",
-                    "note": "Interactive content must be migrated to components manually."
-                }
-            ],
-            "vocabulary": []
+            "id": "k-math-m1-c-9",
+            "code": "K.M1.C.9",
+            "standard": "HSA.REI.A.2",
+            "levelId": "k",
+            "title": "Equations Involving a Variable in the Denominator",
+            "description": "Identify domain restrictions, avoid division by zero, and solve rational equations with extraneous root detection.",
+            "file": "assets/data/lessons/k-math-m1-c-9.json",
+            "url": "/levels/k.php?k-math-m1-c-9"
         },
         "k-math-m1-d-1": {
-            "meta": {
-                "title": "Untitled Lesson",
-                "description": "",
-                "author": "Hesten's Learning Team",
-                "badge": "Lesson",
-                "badgeIcon": "fa-book"
-            },
-            "overview": {
-                "title": "Lesson Overview",
-                "pill": "",
-                "text": "",
-                "outcomes": [],
-                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
-            },
-            "content": [
-                {
-                    "type": "manual_migration_required",
-                    "note": "Interactive content must be migrated to components manually."
-                }
-            ],
-            "vocabulary": []
+            "id": "k-math-m1-d-1",
+            "code": "K.M1.D.1",
+            "standard": "HSN.Q.A.1",
+            "levelId": "k",
+            "title": "Solving Problems in Two Ways — Rates and Algebra",
+            "description": "Compare intuitive arithmetic unit-rate solutions with formal algebraic modeling.",
+            "file": "assets/data/lessons/k-math-m1-d-1.json",
+            "url": "/levels/k.php?k-math-m1-d-1"
         },
         "k-math-m1-d-2": {
-            "meta": {
-                "title": "Untitled Lesson",
-                "description": "",
-                "author": "Hesten's Learning Team",
-                "badge": "Lesson",
-                "badgeIcon": "fa-book"
-            },
-            "overview": {
-                "title": "Lesson Overview",
-                "pill": "",
-                "text": "",
-                "outcomes": [],
-                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
-            },
-            "content": [
-                {
-                    "type": "manual_migration_required",
-                    "note": "Interactive content must be migrated to components manually."
-                }
-            ],
-            "vocabulary": []
+            "id": "k-math-m1-d-2",
+            "code": "K.M1.D.2",
+            "standard": "HSA.CED.A.1",
+            "levelId": "k",
+            "title": "Recursive Challenge: The Double and Add 5 Game (Part 1)",
+            "description": "Explore recurrence relations and recursive sequence modeling with the Double and Add 5 Game.",
+            "file": "assets/data/lessons/k-math-m1-d-2.json",
+            "url": "/levels/k.php?k-math-m1-d-2"
         },
         "k-math-m1-d-3": {
-            "meta": {
-                "title": "Untitled Lesson",
-                "description": "",
-                "author": "Hesten's Learning Team",
-                "badge": "Lesson",
-                "badgeIcon": "fa-book"
-            },
-            "overview": {
-                "title": "Lesson Overview",
-                "pill": "",
-                "text": "",
-                "outcomes": [],
-                "teacherInsight": "Migration: Please manually extract teacher insight from PHP file."
-            },
-            "content": [
-                {
-                    "type": "manual_migration_required",
-                    "note": "Interactive content must be migrated to components manually."
-                }
-            ],
-            "vocabulary": []
+            "id": "k-math-m1-d-3",
+            "code": "K.M1.D.3",
+            "standard": "HSA.CED.A.3",
+            "levelId": "k",
+            "title": "Recursive Challenge: The Double and Add 5 Game (Part 2)",
+            "description": "Derive explicit closed-form formulas for recursive relations and solve target-seeking inequalities.",
+            "file": "assets/data/lessons/k-math-m1-d-3.json",
+            "url": "/levels/k.php?k-math-m1-d-3"
         },
         "k-math-m2-a-1": {
             "meta": {
@@ -2916,112 +2427,30 @@
             "code": "GED.M.1.1",
             "standard": "GED.M.Q.1.a",
             "levelId": "practice-ged",
-            "requiresMathJax": true,
-            "meta": {
-                "title": "Order of Operations & Absolute Value with Rational Numbers",
-                "pageTitle": "Order of Operations & Absolute Value | GED Math | Hesten's Learning",
-                "description": "Master the hierarchy of arithmetic operations (PEMDAS / GEMDAS), absolute value distance properties, and operations with signed rational numbers for the GED Quantitative Reasoning test.",
-                "pageDescription": "Comprehensive GED Math prep on Order of Operations, absolute value distance properties, nested grouping, and signed rational numbers without a calculator.",
-                "author": "Hesten's Learning GED Team",
-                "badge": "GED Math GED.M.1.1",
-                "badgeIcon": "fa-calculator"
-            },
-            "overview": {
-                "title": "Student & Educator Overview: Quantitative Arithmetic",
-                "pill": "GED Mathematical Reasoning \u2022 Part 1 (No Calculator)",
-                "text": "On the official GED Mathematical Reasoning exam, the first 5 questions are administered in Part 1 without the TI-30XS calculator. A fluent command of the Order of Operations (PEMDAS/GEMDAS), absolute value distance logic, and signed rational arithmetic is essential to securing early high-value points toward passing (145+) and college readiness (165+).",
-                "outcomes": [
-                    "Apply the universal hierarchy of operations (PEMDAS/GEMDAS) with grouping symbols, nested parentheses, and fraction bars.",
-                    "Interpret absolute value |x| as non-negative distance on the real number line, simplifying expressions like 4 - 2|3 - 8| + 3\u00b2.",
-                    "Eliminate sign and exponent pitfalls, accurately distinguishing between -x\u00b2 and (-x)\u00b2 when working with negative rational numbers."
-                ],
-                "teacherInsight": "Remind students that absolute value bars act as grouping symbols: evaluate the interior expression completely before taking the absolute value. Emphasize that -4\u00b2 = -(4 \u00b7 4) = -16, whereas (-4)\u00b2 = (-4)(-4) = +16."
-            },
-            "content": [
-                {
-                    "type": "html",
-                    "html": "<section class=\"ged-concept-section\" style=\"margin-top: 1.5rem; margin-bottom: 2rem;\"><div style=\"background: var(--color-surface, #ffffff); border: 1px solid var(--color-border, #e2e8f0); border-radius: 1rem; padding: 1.75rem; box-shadow: var(--shadow-sm, 0 1px 3px rgba(0,0,0,0.05));\"><div style=\"display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem;\"><div style=\"width: 40px; height: 40px; border-radius: 10px; background: color-mix(in srgb, #7c3aed 15%, transparent); color: #7c3aed; display: flex; align-items: center; justify-content: center; font-size: 1.25rem;\"><i class=\"fas fa-layer-group\"></i></div><div><h2 style=\"margin: 0; font-size: 1.3rem; font-weight: 800; color: var(--color-text-default);\">Interactive GEMDAS Hierarchy Explorer</h2><p style=\"margin: 0; font-size: 0.85rem; color: var(--color-text-secondary);\">Step through the official GED evaluation sequence for nested arithmetic expressions.</p></div></div><div style=\"display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;\"><div style=\"border: 1px solid var(--color-border); border-radius: 0.75rem; padding: 1rem; background: var(--color-base-bg, #f8fafc);\"><strong style=\"color: #7c3aed; display: block; font-size: 0.95rem; margin-bottom: 0.25rem;\">1. Grouping Symbols (G)</strong><span style=\"font-size: 0.85rem; color: var(--color-text-secondary); line-height: 1.4; display: block;\">Parentheses $( )$, brackets $[ ]$, absolute value $| \\dots |$, and radical signs $\\sqrt{\\dots}$. Also includes implied numerator/denominator groups in fraction bars $\\frac{A}{B}$.</span></div><div style=\"border: 1px solid var(--color-border); border-radius: 0.75rem; padding: 1rem; background: var(--color-base-bg, #f8fafc);\"><strong style=\"color: #3b82f6; display: block; font-size: 0.95rem; margin-bottom: 0.25rem;\">2. Exponents & Radicals (E)</strong><span style=\"font-size: 0.85rem; color: var(--color-text-secondary); line-height: 1.4; display: block;\">Powers like $3^2 = 9$ or $(-2)^3 = -8$. Note that $-5^2 = -(5^2) = -25$, while $(-5)^2 = +25$.</span></div><div style=\"border: 1px solid var(--color-border); border-radius: 0.75rem; padding: 1rem; background: var(--color-base-bg, #f8fafc);\"><strong style=\"color: #10b981; display: block; font-size: 0.95rem; margin-bottom: 0.25rem;\">3. Multiplication & Division (M / D)</strong><span style=\"font-size: 0.85rem; color: var(--color-text-secondary); line-height: 1.4; display: block;\">Equal rank! Computed strictly <strong>left-to-right</strong> as they appear: $12 \\div 3 \\cdot 2 = 4 \\cdot 2 = 8$.</span></div><div style=\"border: 1px solid var(--color-border); border-radius: 0.75rem; padding: 1rem; background: var(--color-base-bg, #f8fafc);\"><strong style=\"color: #f59e0b; display: block; font-size: 0.95rem; margin-bottom: 0.25rem;\">4. Addition & Subtraction (A / S)</strong><span style=\"font-size: 0.85rem; color: var(--color-text-secondary); line-height: 1.4; display: block;\">Equal rank! Computed strictly <strong>left-to-right</strong>: $7 - 10 + 4 = -3 + 4 = 1$.</span></div></div><div style=\"background: color-mix(in srgb, #7c3aed 5%, var(--color-surface)); border-left: 4px solid #7c3aed; border-radius: 0.5rem; padding: 1rem 1.25rem;\"><div style=\"font-weight: 700; color: #7c3aed; margin-bottom: 0.4rem; font-size: 0.9rem;\"><i class=\"fas fa-graduation-cap\"></i> Worked GED Benchmark Example:</div><div style=\"font-size: 0.92rem; color: var(--color-text-default); line-height: 1.6;\">Evaluate: $$E = 4 - 2 \\cdot |3 - 8| + 3^2$$<ol style=\"margin: 0.5rem 0 0 1.25rem; padding: 0;\"><li><strong>Inside Absolute Value:</strong> $3 - 8 = -5 \\implies 4 - 2 \\cdot |-5| + 3^2$</li><li><strong>Absolute Value Evaluation:</strong> $|-5| = 5 \\implies 4 - 2 \\cdot (5) + 3^2$</li><li><strong>Exponents:</strong> $3^2 = 9 \\implies 4 - 2 \\cdot 5 + 9$</li><li><strong>Multiplication:</strong> $2 \\cdot 5 = 10 \\implies 4 - 10 + 9$</li><li><strong>Left-to-Right Add / Subtract:</strong> $4 - 10 = -6$, then $-6 + 9 = \\mathbf{3}$.</li></ol></div></div></div></section>"
-                },
-                {
-                    "type": "teacher-concepts",
-                    "title": "Core GED Test Principles & Common Traps",
-                    "concepts": [
-                        {
-                            "title": "Concept 1: Absolute Value as Geometric Distance",
-                            "text": "In geometry and real analysis, the absolute value $|a - b|$ represents the distance between points $a$ and $b$ on the coordinate line. Because distance is scalar and non-negative, $|x| \\ge 0$ for every real number $x$. When subtracting integers under absolute value bars, $|3 - 8| = |-5| = 5$, and $|8 - 3| = |5| = 5$. Notice the order inside does not change the physical distance between 3 and 8."
-                        },
-                        {
-                            "title": "Concept 2: The Fraction Bar as an Implied Grouping Barrier",
-                            "text": "When an algebraic or rational expression has operations in the numerator and denominator, such as $\\frac{-18 + 6}{-2^2 + 1}$, the fraction bar creates an invisible set of parentheses around both parts: $[ -18 + 6 ] \\div [ -2^2 + 1 ]$. Never divide prematurely before completely simplifying both the top and bottom terms independently.",
-                            "formula": "\\frac{A + B}{C + D} = \\frac{(A + B)}{(C + D)}"
-                        },
-                        {
-                            "title": "Concept 3: The $-x^2$ vs $(-x)^2$ Sign Trap",
-                            "text": "This is one of the most frequently missed question types on Part 1 of the GED Math test. In $-3^2$, the base of the exponent is only $3$. The exponent takes precedence before multiplication by $-1$: $-3^2 = -(3 \\cdot 3) = -9$. Conversely, in $(-3)^2$, the parentheses declare that the entire quantity $-3$ is the base: $(-3)^2 = (-3) \\cdot (-3) = +9$."
-                        }
-                    ]
-                }
-            ],
-            "vocabulary": [
-                {
-                    "term": "Order of Operations (PEMDAS / GEMDAS)",
-                    "definition": "The universal convention for evaluating mathematical expressions: Grouping symbols \u2192 Exponents \u2192 Multiplication & Division (left to right) \u2192 Addition & Subtraction (left to right)."
-                },
-                {
-                    "term": "Absolute Value",
-                    "definition": "The non-negative distance between a number and zero on the real number line, written as |x|. For any real number, |-a| = |a| = a (where a \u2265 0)."
-                },
-                {
-                    "term": "Rational Number",
-                    "definition": "Any number that can be expressed as a quotient or fraction a/b of two integers, with non-zero denominator b. Includes integers, fractions, terminating decimals, and repeating decimals."
-                },
-                {
-                    "term": "Base & Exponent",
-                    "definition": "In b^n, b is the base and n is the exponent. Note that -a^n = -(a^n) retains the negative sign, whereas (-a)^n with an even exponent yields a positive result."
-                }
-            ],
-            "practiceQuestions": [
-                {
-                    "question": "What is the value of the arithmetic expression: $$4 - 2 \\cdot |3 - 8| + 3^2$$",
-                    "options": [
-                        "3",
-                        "-15",
-                        "17",
-                        "-1"
-                    ],
-                    "correct": 0,
-                    "explanation": "Step 1: Simplify inside the absolute value bars: $3 - 8 = -5$. Step 2: Evaluate the absolute value: $|-5| = 5$. Step 3: Evaluate the exponent: $3^2 = 9$. Step 4: Multiply: $2 \\cdot 5 = 10$. Step 5: Add and subtract from left to right: $4 - 10 + 9 = -6 + 9 = 3$."
-                },
-                {
-                    "question": "Simplify the rational algebraic fraction: $$\\frac{-18 + 6}{-2^2 + 1}$$",
-                    "options": [
-                        "4",
-                        "-4",
-                        "-2",
-                        "6"
-                    ],
-                    "correct": 0,
-                    "explanation": "Simplify the numerator: $-18 + 6 = -12$. In the denominator, evaluate the exponent first: $-2^2 = -(2^2) = -4$. Then $-4 + 1 = -3$. Finally, divide the numerator by denominator: $\\frac{-12}{-3} = +4$."
-                },
-                {
-                    "question": "A marine research vessel records a submarine at an initial depth of $-42\\text{ meters}$. The vessel ascends $18\\text{ meters}$, then descends $25\\text{ meters}$. What is the submarine's final depth, and what was its total vertical distance traveled?",
-                    "options": [
-                        "Final depth: $-49\\text{ m}$; Total distance: $43\\text{ m}$",
-                        "Final depth: $-49\\text{ m}$; Total distance: $85\\text{ m}$",
-                        "Final depth: $-35\\text{ m}$; Total distance: $43\\text{ m}$",
-                        "Final depth: $-49\\text{ m}$; Total distance: $49\\text{ m}$"
-                    ],
-                    "correct": 0,
-                    "explanation": "Final depth combines signed values: $-42 + 18 - 25 = -24 - 25 = -49\\text{ m}$. Total vertical distance traveled is the sum of the absolute value of each leg of travel: $|+18| + |-25| = 18 + 25 = 43\\text{ m}$."
-                }
-            ],
-            "citation": {
-                "publisher": "GED Testing Service / American Council on Education",
-                "curriculum": "Official GED Assessment Guide for Educators - Mathematical Reasoning (GED.M.Q.1.a)",
-                "year": "2026 Edition",
-                "license": "Standard Alignment Framework",
-                "lessonId": "ged-m-1-1"
-            }
+            "title": "Order of Operations & Absolute Value with Rational Numbers",
+            "description": "Master the hierarchy of arithmetic operations (PEMDAS / GEMDAS), absolute value distance properties, and operations with signed rational numbers for the GED Quantitative Reasoning test.",
+            "file": "assets/data/lessons/ged-m-1-1.json",
+            "url": "/levels/practice-ged.php?ged-m-1-1"
+        },
+        "k-math-m1-c-15": {
+            "id": "k-math-m1-c-15",
+            "code": "K.M1.C.15",
+            "standard": "HSA.CED.A.3",
+            "levelId": "k",
+            "title": "Applications of Systems of Equations & Inequalities",
+            "description": "Model multi-constraint authentic problems with systems of equations and linear inequalities.",
+            "file": "assets/data/lessons/k-math-m1-c-15.json",
+            "url": "/levels/k.php?k-math-m1-c-15"
+        },
+        "k-math-m1-d-4": {
+            "id": "k-math-m1-d-4",
+            "code": "K.M1.D.4",
+            "standard": "HSN.Q.A.1",
+            "levelId": "k",
+            "title": "Federal Income Tax — Piecewise Linear Modeling",
+            "description": "Model authentic federal income tax brackets as piecewise linear continuous functions.",
+            "file": "assets/data/lessons/k-math-m1-d-4.json",
+            "url": "/levels/k.php?k-math-m1-d-4"
         }
     }
 }

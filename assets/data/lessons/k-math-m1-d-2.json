@@ -1,0 +1,78 @@
+{
+    "id": "k-math-m1-d-2",
+    "code": "K.M1.D.2",
+    "standard": "HSA.CED.A.1",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "Recursive Challenge: The Double and Add 5 Game (Part 1)",
+        "pageTitle": "Recursive Sequences: Double & Add 5 | Hesten's Learning",
+        "description": "Explore recurrence relations and recursive sequence modeling with the Double and Add 5 Game.",
+        "pageDescription": "Investigate recursive sequences, iteration rounds, and recurrence relations a_n = 2a_{n-1} + 5.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M1.D.2",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 26",
+        "pill": "Recurrence Relations & Sequences",
+        "text": "In this lesson, you will explore recursive sequences through a mathematical modeling game loosely inspired by the famous Collatz conjecture. In each round of the 'Double and Add 5 Game', the output of one round becomes the input for the next: $a_n = 2a_{n-1} + 5$.",
+        "outcomes": [
+            "Understand the meaning and formal mathematical notation of recursive sequences: $a_0, a_1, a_2, \\dots, a_n$.",
+            "Apply the recurrence relation $a_n = 2a_{n-1} + 5$ across multiple rounds of iteration.",
+            "Find the smallest whole number initial term $a_0$ that produces a value $\\ge 100$ in 3 rounds or fewer."
+        ],
+        "teacherInsight": "Connect this game to computer science loops: $a_0$ is the initialized variable, and each loop cycle executes `a = 2 * a + 5`. Trace values round by round to make the recursive mechanism concrete."
+    },
+    "content": [
+        {
+            "type": "html",
+            "html": "\n                <section class=\"lesson-sim-workbench\" aria-labelledby=\"sim-title-l26\">\n                    <div class=\"lesson-sim-header\">\n                        <div class=\"lesson-sim-title-wrap\">\n                            <h3 id=\"sim-title-l26\" class=\"lesson-sim-title\">\n                                <i class=\"fas fa-redo\" aria-hidden=\"true\"></i> Interactive Double & Add 5 Game Simulator\n                            </h3>\n                            <p class=\"lesson-sim-subtitle\">\n                                Enter starting integer $a_0$. Watch the game double the previous result and add 5 across 4 rounds: $a_n = 2a_{n-1} + 5$.\n                            </p>\n                        </div>\n                        <div class=\"lesson-sim-presets\">\n                            <button type=\"button\" class=\"lesson-sim-preset-btn\" onclick=\"setRecStart(1)\">Start a\u2080 = 1</button>\n                            <button type=\"button\" class=\"lesson-sim-preset-btn\" onclick=\"setRecStart(5)\">Start a\u2080 = 5</button>\n                            <button type=\"button\" class=\"lesson-sim-preset-btn\" onclick=\"setRecStart(9)\">Start a\u2080 = 9 (Target: \u2265 100 in R3!)</button>\n                        </div>\n                    </div>\n                    <div class=\"lesson-sim-grid\">\n                        <div class=\"lesson-sim-controls\">\n                            <div class=\"lesson-sim-slider-box\">\n                                <div class=\"lesson-sim-slider-label\"><span>Starting Number ($a_0$):</span><span id=\"badge-rec-start\" class=\"lesson-sim-step-badge\">a\u2080 = 5</span></div>\n                                <input type=\"range\" id=\"input-rec-start\" min=\"0\" max=\"15\" value=\"5\" oninput=\"updateRecSim()\" class=\"lesson-sim-slider\">\n                            </div>\n                        </div>\n                        <div class=\"lesson-sim-visualizer\" style=\"display:flex; flex-direction:column; justify-content:center;\">\n                            <div style=\"display:grid; grid-template-columns:repeat(4, 1fr); gap:0.5rem; text-align:center;\">\n                                <div style=\"padding:0.75rem; background:rgba(59,130,246,0.15); border:1px solid #3b82f6; border-radius:0.5rem;\">\n                                    <div style=\"font-size:0.75rem; color:#60a5fa; font-weight:700;\">Round 1 ($a_1$)</div>\n                                    <div id=\"round-1-val\" style=\"font-size:1.25rem; font-weight:900; margin-top:0.25rem;\">15</div>\n                                </div>\n                                <div style=\"padding:0.75rem; background:rgba(59,130,246,0.15); border:1px solid #3b82f6; border-radius:0.5rem;\">\n                                    <div style=\"font-size:0.75rem; color:#60a5fa; font-weight:700;\">Round 2 ($a_2$)</div>\n                                    <div id=\"round-2-val\" style=\"font-size:1.25rem; font-weight:900; margin-top:0.25rem;\">35</div>\n                                </div>\n                                <div style=\"padding:0.75rem; background:rgba(225,29,72,0.15); border:1px solid #f43f5e; border-radius:0.5rem;\">\n                                    <div style=\"font-size:0.75rem; color:#f43f5e; font-weight:700;\">Round 3 ($a_3$)</div>\n                                    <div id=\"round-3-val\" style=\"font-size:1.25rem; font-weight:900; margin-top:0.25rem;\">75</div>\n                                </div>\n                                <div style=\"padding:0.75rem; background:rgba(16,185,129,0.15); border:1px solid #10b981; border-radius:0.5rem;\">\n                                    <div style=\"font-size:0.75rem; color:#10b981; font-weight:700;\">Round 4 ($a_4$)</div>\n                                    <div id=\"round-4-val\" style=\"font-size:1.25rem; font-weight:900; margin-top:0.25rem;\">155</div>\n                                </div>\n                            </div>\n                            <div class=\"lesson-sim-ratio-pill\" id=\"rec-summary-pill\" style=\"margin-top:1rem;\">\n                                Round 3 result: 75 (< 100). Try a larger starting number!\n                            </div>\n                        </div>\n                    </div>\n                </section>\n                "
+        }
+    ],
+    "vocabulary": [
+        {
+            "term": "Recursive Sequence",
+            "definition": "A sequence of numbers where each term after the first is defined as a function of the preceding term(s)."
+        },
+        {
+            "term": "Recurrence Relation",
+            "definition": "An equation that expresses each element of a sequence as a function of the preceding elements (e.g., a_n = 2a_{n-1} + 5)."
+        },
+        {
+            "term": "Initial Term",
+            "definition": "The starting value a_0 (or a_1) required to initiate the evaluation of a recursive process."
+        }
+    ],
+    "practiceQuestions": [
+        {
+            "question": "If $a_0 = 3$ in the Double and Add 5 Game, what is the value of $a_2$?",
+            "options": [
+                "27",
+                "11",
+                "59",
+                "16"
+            ],
+            "correct": 0,
+            "explanation": "Round 1: $a_1 = 2(3) + 5 = 6 + 5 = 11$. Round 2: $a_2 = 2(11) + 5 = 22 + 5 = 27$."
+        },
+        {
+            "question": "What is the smallest positive integer $a_0$ that produces a number $\\ge 100$ in 3 rounds or fewer?",
+            "options": [
+                "9",
+                "8",
+                "10",
+                "7"
+            ],
+            "correct": 0,
+            "explanation": "Testing $a_0 = 8$: $a_1 = 21, a_2 = 47, a_3 = 99 < 100$. Testing $a_0 = 9$: $a_1 = 23, a_2 = 51, a_3 = 107 \\ge 100$. Thus 9 is the smallest whole number."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Recursive Challenge Problem\u2014The Double and Add 5 Game.\" Eureka Math, New York State Common Core Mathematics Curriculum, Algebra I, Module 1, Topic D, Lesson 26.",
+        "subtext": "Aligned with CCSS.MATH.CONTENT.HSA.CED.A.1 \u2022 Create equations and inequalities in one variable.",
+        "lessonId": "L-ID-ALG-K-M1-D-2"
+    },
+    "scripts": "\n        function updateRecSim() {\n            const a0 = parseInt(document.getElementById('input-rec-start').value, 10);\n            document.getElementById('badge-rec-start').innerText = 'a\u2080 = ' + a0;\n\n            const a1 = 2 * a0 + 5;\n            const a2 = 2 * a1 + 5;\n            const a3 = 2 * a2 + 5;\n            const a4 = 2 * a3 + 5;\n\n            document.getElementById('round-1-val').innerText = a1;\n            document.getElementById('round-2-val').innerText = a2;\n            document.getElementById('round-3-val').innerText = a3;\n            document.getElementById('round-4-val').innerText = a4;\n\n            const pill = document.getElementById('rec-summary-pill');\n            if (a3 >= 100) {\n                pill.innerHTML = `<i class=\"fas fa-trophy\" style=\"color:#10b981;\"></i> SUCCESS: Round 3 result is ${a3} (\u2265 100)! Target achieved.`;\n            } else {\n                pill.innerHTML = `<i class=\"fas fa-info-circle\" style=\"color:#60a5fa;\"></i> Round 3 result: ${a3} (< 100). Try a larger starting number!`;\n            }\n        }\n\n        function setRecStart(val) {\n            document.getElementById('input-rec-start').value = val;\n            updateRecSim();\n        }\n\n        document.addEventListener('DOMContentLoaded', () => {\n            updateRecSim();\n        });\n        "
+}

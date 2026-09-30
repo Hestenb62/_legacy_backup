@@ -1,0 +1,74 @@
+{
+    "id": "k-math-m1-c-5",
+    "code": "K.M1.C.5",
+    "standard": "HSA.REI.B.3",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "Solving Inequalities",
+        "pageTitle": "Solving Inequalities & Direction Reversal | Hesten's Learning",
+        "description": "Master solving linear inequalities and prove why multiplying by negative numbers flips the relation.",
+        "pageDescription": "Solve multi-step linear inequalities, justify inverse operations, and understand inequality direction reversal.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M1.C.5",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 14",
+        "pill": "Inequality Operations & Direction Flip",
+        "text": "In this lesson, you will solve multi-step linear inequalities. While adding or subtracting real numbers preserves the order of inequality, multiplying or dividing by a negative number reverses the direction of the inequality symbol on the coordinate line.",
+        "outcomes": [
+            "Solve multi-step linear inequalities using the addition and multiplication properties of inequality.",
+            "Demonstrate and justify why multiplying or dividing by a negative number reverses the inequality symbol.",
+            "Express solution sets using set-builder notation and graph them on a real number line."
+        ],
+        "teacherInsight": "Illustrate inequality reversal on a real number line with positive numbers: $2 < 5$. Multiplying by $-1$ reflects both numbers across 0 to $-2$ and $-5$. Because $-2$ lies to the right of $-5$, $-2 > -5$."
+    },
+    "content": [
+        {
+            "type": "html",
+            "html": "\n                <section class=\"lesson-sim-workbench\" aria-labelledby=\"sim-title-l14\">\n                    <div class=\"lesson-sim-header\">\n                        <div class=\"lesson-sim-title-wrap\">\n                            <h3 id=\"sim-title-l14\" class=\"lesson-sim-title\">\n                                <i class=\"fas fa-arrows-alt-h\" aria-hidden=\"true\"></i> The Negative Multiplier Inequality Direction Flipper\n                            </h3>\n                            <p class=\"lesson-sim-subtitle\">\n                                Compare $A < B$. Multiply both numbers by scalar $k$ and observe how multiplying by a negative reverses order.\n                            </p>\n                        </div>\n                    </div>\n                    <div class=\"lesson-sim-grid\">\n                        <div class=\"lesson-sim-controls\">\n                            <div class=\"lesson-sim-slider-box\">\n                                <div class=\"lesson-sim-slider-label\"><span>Multiplier ($k$):</span><span id=\"badge-mult-k\" class=\"lesson-sim-step-badge\">k = -1</span></div>\n                                <input type=\"range\" id=\"input-mult-k\" min=\"-3\" max=\"3\" value=\"-1\" step=\"1\" oninput=\"updateFlipSim()\" class=\"lesson-sim-slider\">\n                            </div>\n                            <div class=\"lesson-sim-stat-grid\">\n                                <div class=\"lesson-sim-stat-card card-linear\">\n                                    <span class=\"lesson-sim-stat-tag\">Initial State ($A = 2, B = 5$)</span>\n                                    <span class=\"lesson-sim-stat-val stat-linear-color\">2 < 5</span>\n                                    <span class=\"lesson-sim-stat-calc\">2 is to the left of 5</span>\n                                </div>\n                                <div class=\"lesson-sim-stat-card card-exp\">\n                                    <span class=\"lesson-sim-stat-tag\">Scaled State ($kA$ vs $kB$)</span>\n                                    <span id=\"scaled-ineq-readout\" class=\"lesson-sim-stat-val stat-exp-color\">-2 > -5</span>\n                                    <span id=\"scaled-ineq-calc\" class=\"lesson-sim-stat-calc\">Symbol reversed!</span>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"lesson-sim-visualizer\" style=\"display:flex; flex-direction:column; align-items:center; justify-content:center;\">\n                            <div id=\"flip-alert-box\" style=\"padding:1rem 1.5rem; background:rgba(225,29,72,0.15); border:2px solid #f43f5e; border-radius:0.75rem; text-align:center;\">\n                                <div style=\"font-weight:800; font-size:1.15rem; color:#f43f5e;\" id=\"flip-status-msg\">\n                                    <i class=\"fas fa-sync-alt\"></i> REVERSED: Symbol flipped from < to >\n                                </div>\n                                <div style=\"font-size:0.85rem; color:var(--color-text-secondary); margin-top:0.25rem;\">\n                                    Multiplying by negative reflects positions across the origin.\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </section>\n                "
+        }
+    ],
+    "vocabulary": [
+        {
+            "term": "Inequality Reversal Property",
+            "definition": "If a < b and c < 0, then ac > bc. Multiplying or dividing both sides of an inequality by a negative number reverses the direction of the inequality symbol."
+        },
+        {
+            "term": "Set-Builder Notation",
+            "definition": "A mathematical shorthand notation describing a set by stating the properties that its members must satisfy, e.g., {x | x > -9}."
+        }
+    ],
+    "practiceQuestions": [
+        {
+            "question": "Solve the inequality: $6x - 5 < 7x + 4$.",
+            "options": [
+                "$x > -9$",
+                "$x < -9$",
+                "$x > 9$",
+                "$x < 1$"
+            ],
+            "correct": 0,
+            "explanation": "Subtract $6x$ from both sides: $-5 < x + 4$. Subtract 4 from both sides: $-9 < x$, which is equivalent to $x > -9$."
+        },
+        {
+            "question": "Solve the inequality: $-3x \\ge 15$.",
+            "options": [
+                "$x \\le -5$",
+                "$x \\ge -5$",
+                "$x \\le 5$",
+                "$x \\ge 5$"
+            ],
+            "correct": 0,
+            "explanation": "Divide both sides by $-3$. Because we divide by a negative number, the inequality symbol must reverse: $x \\le -5$."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Solving Inequalities.\" Eureka Math, New York State Common Core Mathematics Curriculum, Algebra I, Module 1, Topic C, Lesson 14.",
+        "subtext": "Aligned with CCSS.MATH.CONTENT.HSA.REI.B.3 \u2022 Solve linear equations and inequalities in one variable.",
+        "lessonId": "L-ID-ALG-K-M1-C-5"
+    },
+    "scripts": "\n        function updateFlipSim() {\n            const k = parseInt(document.getElementById('input-mult-k').value, 10);\n            document.getElementById('badge-mult-k').innerText = 'k = ' + k;\n\n            const a = 2 * k;\n            const b = 5 * k;\n\n            let sym = '<';\n            if (a > b) sym = '>';\n            else if (a === b) sym = '=';\n\n            document.getElementById('scaled-ineq-readout').innerText = `${a} ${sym} ${b}`;\n\n            const box = document.getElementById('flip-alert-box');\n            const msg = document.getElementById('flip-status-msg');\n\n            if (k < 0) {\n                box.style.background = 'rgba(225, 29, 72, 0.15)';\n                box.style.borderColor = '#f43f5e';\n                msg.style.color = '#f43f5e';\n                msg.innerHTML = '<i class=\"fas fa-sync-alt\"></i> REVERSED: Symbol flipped from < to >';\n            } else if (k === 0) {\n                box.style.background = 'rgba(245, 158, 11, 0.15)';\n                box.style.borderColor = '#f59e0b';\n                msg.style.color = '#f59e0b';\n                msg.innerHTML = '<i class=\"fas fa-equals\"></i> EQUAL: Multiplying by 0 gives 0 = 0';\n            } else {\n                box.style.background = 'rgba(16, 185, 129, 0.15)';\n                box.style.borderColor = '#10b981';\n                msg.style.color = '#10b981';\n                msg.innerHTML = '<i class=\"fas fa-arrow-right\"></i> PRESERVED: Direction remained <';\n            }\n        }\n\n        document.addEventListener('DOMContentLoaded', () => {\n            updateFlipSim();\n        });\n        "
+}

@@ -1,0 +1,82 @@
+{
+    "id": "k-math-m1-c-6",
+    "code": "K.M1.C.6",
+    "standard": "HSA.CED.A.1",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "Solution Sets of Two or More Equations Joined by 'And' or 'Or'",
+        "pageTitle": "Compound Sentences: And / Or | Hesten's Learning",
+        "description": "Understand conjunctions (And / Intersection) and disjunctions (Or / Union) in algebraic equations.",
+        "pageDescription": "Formalize the logic of compound mathematical sentences joined by conjunction (And) and disjunction (Or).",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M1.C.6",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 15",
+        "pill": "Conjunction & Disjunction Logic",
+        "text": "In this lesson, you will investigate compound sentences. A compound sentence joined by 'and' is true only when both constituent sentences are true (intersection), while a compound sentence joined by 'or' is true when at least one constituent sentence is true (union).",
+        "outcomes": [
+            "Describe the solution set of two equations or inequalities joined by the connective 'and' as the intersection of their individual solution sets.",
+            "Describe the solution set of two equations or inequalities joined by the connective 'or' as the union of their individual solution sets.",
+            "Graph compound sentences on the real number line."
+        ],
+        "teacherInsight": "Connect 'and' to simultaneous conditions (both must hold) and 'or' to alternative choices (at least one must hold). In logic, mathematical 'or' is always inclusive unless stated otherwise."
+    },
+    "content": [
+        {
+            "type": "html",
+            "html": "\n                <section class=\"lesson-sim-workbench\" aria-labelledby=\"sim-title-l15\">\n                    <div class=\"lesson-sim-header\">\n                        <div class=\"lesson-sim-title-wrap\">\n                            <h3 id=\"sim-title-l15\" class=\"lesson-sim-title\">\n                                <i class=\"fas fa-layer-group\" aria-hidden=\"true\"></i> Compound Sentence Intersection & Union Visualizer\n                            </h3>\n                            <p class=\"lesson-sim-subtitle\">\n                                Toggle between <strong>AND</strong> (Intersection $\\cap$) and <strong>OR</strong> (Union $\\cup$) for the sentence: $x - 15 = 5$ [connective] $2x + 5 = 1$.\n                            </p>\n                        </div>\n                    </div>\n                    <div class=\"lesson-sim-grid\">\n                        <div class=\"lesson-sim-controls\">\n                            <div style=\"display:flex; gap:0.5rem; margin-bottom:1rem;\">\n                                <button type=\"button\" class=\"lesson-sim-preset-btn active\" id=\"btn-conn-or\" onclick=\"setConnective('or')\">Connective: OR (Union)</button>\n                                <button type=\"button\" class=\"lesson-sim-preset-btn\" id=\"btn-conn-and\" onclick=\"setConnective('and')\">Connective: AND (Intersection)</button>\n                            </div>\n                            <div class=\"lesson-sim-stat-card card-linear\">\n                                <span class=\"lesson-sim-stat-tag\">Sentence 1: $x - 15 = 5$</span>\n                                <span class=\"lesson-sim-stat-val stat-linear-color\">x = 20</span>\n                            </div>\n                            <div class=\"lesson-sim-stat-card card-exp\" style=\"margin-top:0.5rem;\">\n                                <span class=\"lesson-sim-stat-tag\">Sentence 2: $2x + 5 = 1$</span>\n                                <span class=\"lesson-sim-stat-val stat-exp-color\">x = -2</span>\n                            </div>\n                        </div>\n                        <div class=\"lesson-sim-visualizer\" style=\"display:flex; flex-direction:column; justify-content:center; align-items:center;\">\n                            <div id=\"conn-result-box\" style=\"padding:1.25rem 1.5rem; background:rgba(0,0,0,0.2); border:2px solid #f59e0b; border-radius:0.75rem; text-align:center;\">\n                                <div style=\"font-size:0.8rem; font-weight:700; color:#f59e0b; text-transform:uppercase;\">Compound Solution Set:</div>\n                                <div id=\"conn-solution-set\" style=\"font-size:1.4rem; font-weight:900; color:#ffffff; font-family:'Outfit',sans-serif; margin:0.35rem 0;\">\n                                    {-2, 20}\n                                </div>\n                                <div id=\"conn-desc\" style=\"font-size:0.85rem; color:var(--color-text-secondary);\">\n                                    Under OR: Any value that makes EITHER equation true is a solution.\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </section>\n                "
+        }
+    ],
+    "vocabulary": [
+        {
+            "term": "Conjunction ('And')",
+            "definition": "A compound sentence that is true only if both of its component statements are simultaneously true. Corresponding to set intersection (\u2229)."
+        },
+        {
+            "term": "Disjunction ('Or')",
+            "definition": "A compound sentence that is true if at least one of its component statements is true. Corresponding to set union (\u222a)."
+        },
+        {
+            "term": "Intersection",
+            "definition": "The set of elements belonging to both sets A and B (A \u2229 B)."
+        },
+        {
+            "term": "Union",
+            "definition": "The set of elements belonging to set A, set B, or both (A \u222a B)."
+        }
+    ],
+    "practiceQuestions": [
+        {
+            "question": "What is the solution set to the compound sentence: $x - 15 = 5$ or $2x + 5 = 1$?",
+            "options": [
+                "$\\{-2, 20\\}$",
+                "$\\{20\\}$",
+                "$\\{-2\\}$",
+                "The empty set $\\emptyset$"
+            ],
+            "correct": 0,
+            "explanation": "Solving $x - 15 = 5 \\implies x = 20$. Solving $2x + 5 = 1 \\implies 2x = -4 \\implies x = -2$. Joined by 'or', the solution set is the union: $\\{-2, 20\\}$."
+        },
+        {
+            "question": "What is the solution set to the compound sentence: $x > 5$ AND $x < 2$?",
+            "options": [
+                "The empty set $\\emptyset$ (no real number can be both greater than 5 and less than 2)",
+                "All real numbers",
+                "$2 < x < 5$",
+                "$\\{2, 5\\}$"
+            ],
+            "correct": 0,
+            "explanation": "Joined by 'and', a value must satisfy both conditions simultaneously. Since no number is both $> 5$ and $< 2$, the intersection is empty ($\\{ \\}$ or $\\emptyset$)."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Solution Sets of Two or More Equations Joined by 'And' or 'Or'.\" Eureka Math, New York State Common Core Mathematics Curriculum, Algebra I, Module 1, Topic C, Lesson 15.",
+        "subtext": "Aligned with CCSS.MATH.CONTENT.HSA.CED.A.1 \u2022 Create equations and inequalities in one variable.",
+        "lessonId": "L-ID-ALG-K-M1-C-6"
+    },
+    "scripts": "\n        function setConnective(type) {\n            document.getElementById('btn-conn-or').classList.toggle('active', type === 'or');\n            document.getElementById('btn-conn-and').classList.toggle('active', type === 'and');\n\n            const setEl = document.getElementById('conn-solution-set');\n            const desc = document.getElementById('conn-desc');\n\n            if (type === 'or') {\n                setEl.innerText = '{-2, 20}';\n                desc.innerText = 'Under OR: Any value that makes EITHER equation true is a solution (Union: {-2} \u222a {20}).';\n            } else {\n                setEl.innerText = '\u2205 (Empty Set)';\n                desc.innerText = 'Under AND: A value must satisfy BOTH equations simultaneously. Since no number equals both 20 and -2, the intersection is empty.';\n            }\n        }\n        "
+}

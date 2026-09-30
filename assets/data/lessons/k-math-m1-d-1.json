@@ -1,0 +1,78 @@
+{
+    "id": "k-math-m1-d-1",
+    "code": "K.M1.D.1",
+    "standard": "HSN.Q.A.1",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "Solving Problems in Two Ways \u2014 Rates and Algebra",
+        "pageTitle": "Rates vs. Algebra: Dual Modeling | Hesten's Learning",
+        "description": "Compare intuitive arithmetic unit-rate solutions with formal algebraic modeling.",
+        "pageDescription": "Investigate print shop rate problems, contrast tabular unit rates with linear equations.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M1.D.1",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 25",
+        "pill": "Rates & Algebraic Modeling",
+        "text": "In this lesson, you will solve complex quantitative problems using two distinct approaches: intuitive unit-rate arithmetic and formal algebraic equations. You will discover why algebra provides a powerful, generalized framework when situations become too complex for simple mental math.",
+        "outcomes": [
+            "Investigate a complex quantitative problem by reasoning with rates and numerical tables.",
+            "Formulate and solve a linear equation representing the same physical rate situation.",
+            "Compare the efficiency, generality, and cognitive load of arithmetic versus algebraic approaches."
+        ],
+        "teacherInsight": "Allow students to initially struggle with the arithmetic unit-rate table. When they construct the algebraic equation $d = vt$, help them realize that algebra is not an extra chore, but a powerful labor-saving tool."
+    },
+    "content": [
+        {
+            "type": "html",
+            "html": "\n                <section class=\"lesson-overview-section\">\n                    <h3 class=\"lesson-section-title\">The Print Shop Job: Rates vs. Equations</h3>\n                    <div style=\"background:var(--color-surface); border:1px solid var(--color-border); border-radius:1rem; padding:1.25rem 1.5rem;\">\n                        <p style=\"font-size:0.95rem; color:var(--color-text-secondary); line-height:1.6; margin:0 0 1rem 0;\">\n                            A commercial print shop has 8 printing presses, each printing at a rate of 25 pages per minute. A cookbook printing run requires 120,000 total pages. How long will the job take?\n                        </p>\n                        <div style=\"display:grid; grid-template-columns:1fr 1fr; gap:1rem;\">\n                            <div style=\"background:rgba(59,130,246,0.1); border:1px solid #3b82f6; border-radius:0.75rem; padding:1rem;\">\n                                <strong style=\"color:#60a5fa;\">Method 1: Unit Rate Arithmetic</strong>\n                                <ul style=\"margin:0.5rem 0 0 1rem; padding:0; font-size:0.875rem; color:var(--color-text-secondary); line-height:1.6;\">\n                                    <li>Combined rate = $8 \\times 25 = 200\\text{ pages/min}$.</li>\n                                    <li>Pages per hour = $200 \\times 60 = 12,000\\text{ pages/hr}$.</li>\n                                    <li>Time = $\\frac{120,000}{12,000} = 10\\text{ hours}$.</li>\n                                </ul>\n                            </div>\n                            <div style=\"background:rgba(16,185,129,0.1); border:1px solid #10b981; border-radius:0.75rem; padding:1rem;\">\n                                <strong style=\"color:#10b981;\">Method 2: Algebraic Formula</strong>\n                                <ul style=\"margin:0.5rem 0 0 1rem; padding:0; font-size:0.875rem; color:var(--color-text-secondary); line-height:1.6;\">\n                                    <li>Let $t$ = time in minutes.</li>\n                                    <li>$8 \\times 25 \\times t = 120,000$</li>\n                                    <li>$200t = 120,000 \\implies t = 600\\text{ min} = 10\\text{ hr}$.</li>\n                                </ul>\n                            </div>\n                        </div>\n                    </div>\n                </section>\n                "
+        }
+    ],
+    "vocabulary": [
+        {
+            "term": "Unit Rate",
+            "definition": "A rate in which the second quantity in the comparison is one unit (e.g., 25 pages per minute)."
+        },
+        {
+            "term": "Combined Rate",
+            "definition": "The total operational output rate achieved when multiple independent agents or machines work concurrently."
+        },
+        {
+            "term": "Algebraic Model",
+            "definition": "A mathematical representation using variables and operations to simulate real-world behaviors and make predictions."
+        }
+    ],
+    "practiceQuestions": [
+        {
+            "question": "A print shop has 8 printing presses each printing 25 pages/min. If 2 presses break down, how long will a 120,000-page job take?",
+            "options": [
+                "13 hours and 20 minutes (800 minutes)",
+                "10 hours",
+                "12 hours",
+                "15 hours"
+            ],
+            "correct": 0,
+            "explanation": "Remaining presses = 6. Combined rate = $6 \\times 25 = 150\\text{ pages/min}$. Time $t = \\frac{120,000}{150} = 800\\text{ minutes} = 13\\text{ hours and } 20\\text{ minutes}$."
+        },
+        {
+            "question": "What is the primary advantage of formulating an algebraic equation over calculating a purely numerical answer?",
+            "options": [
+                "The algebraic equation creates a generalized formula that can instantly evaluate any future changes in quantities.",
+                "Equations never require multiplication or division.",
+                "Arithmetic is not permitted in high school mathematics.",
+                "Algebraic equations always produce smaller numbers."
+            ],
+            "correct": 0,
+            "explanation": "Algebra parametrizes relationships (e.g., $P = r \\cdot n \\cdot t$), making it trivial to re-evaluate for different quantities, broken machines, or new deadlines."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Solving Problems in Two Ways\u2014Rates and Algebra.\" Eureka Math, New York State Common Core Mathematics Curriculum, Algebra I, Module 1, Topic D, Lesson 25.",
+        "subtext": "Aligned with CCSS.MATH.CONTENT.HSN.Q.A.1 \u2022 Use units as a way to understand problems and to guide the solution of multi-step problems.",
+        "lessonId": "L-ID-ALG-K-M1-D-1"
+    },
+    "scripts": ""
+}

@@ -81,7 +81,12 @@ if (file_exists($individualFile)) {
     $lesson = json_decode(file_get_contents($individualFile), true);
     $meta = $lesson['meta'] ?? [];
 } elseif (isset($lessonsData['lessons'][$lessonId])) {
-    $lesson = $lessonsData['lessons'][$lessonId];
+    $entry = $lessonsData['lessons'][$lessonId];
+    if (!empty($entry['file']) && file_exists(ABSPATH . $entry['file'])) {
+        $lesson = json_decode(file_get_contents(ABSPATH . $entry['file']), true);
+    } else {
+        $lesson = $entry;
+    }
     $meta = $lesson['meta'] ?? [];
 } else {
     // Intelligent Curriculum Scaffolder for all standards

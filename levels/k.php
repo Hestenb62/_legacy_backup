@@ -16,15 +16,7 @@ if (!empty($_GET['lesson'])) {
 }
 
 if (!empty($requestedLesson)) {
-    $lessonFile = dirname(__DIR__) . '/lessons/' . $requestedLesson . '.php';
-    if (file_exists($lessonFile)) {
-        $levelUrl = 'k.php';
-        $levelTitle = 'Level K';
-        include $lessonFile;
-        exit;
-    }
-
-    // Dynamic JSON Lesson Router: If static PHP file does not exist, render from JSON
+    // Dynamic JSON Lesson Router: Prioritize dedicated JSON file in assets/data/lessons/
     $jsonLessonFile = dirname(__DIR__) . '/assets/data/lessons/' . $requestedLesson . '.json';
     $mainLessonsFile = dirname(__DIR__) . '/assets/data/lessons.json';
     $hasJson = file_exists($jsonLessonFile);
@@ -40,6 +32,14 @@ if (!empty($requestedLesson)) {
         $levelUrl = 'k.php';
         $levelTitle = 'Level K';
         include dirname(__DIR__) . '/src/lesson_renderer.php';
+        exit;
+    }
+
+    $lessonFile = dirname(__DIR__) . '/lessons/' . $requestedLesson . '.php';
+    if (file_exists($lessonFile)) {
+        $levelUrl = 'k.php';
+        $levelTitle = 'Level K';
+        include $lessonFile;
         exit;
     }
 }
@@ -69,7 +69,7 @@ $modules = [
                 'letter' => 'A',
                 'name' => 'Introduction to Functions Studied this Year',
                 'skills' => [
-                    //Lessons 1-5
+                    // Lessons 1-5
                     ['id' => 'k-math-m1-a-1', 'code' => 'K.M1.A.1', 'name' => 'Graphs of Piecewise Linear Functions', 'url' => 'k.php?k-math-m1-a-1'],
                     ['id' => 'k-math-m1-a-2', 'code' => 'K.M1.A.2', 'name' => 'Growth of Square Areas and Functions', 'url' => 'k.php?k-math-m1-a-2'],
                     ['id' => 'k-math-m1-a-3', 'code' => 'K.M1.A.3', 'name' => 'Graphs of Exponential Functions', 'url' => 'k.php?k-math-m1-a-3'],
@@ -81,7 +81,7 @@ $modules = [
                 'letter' => 'B',
                 'name' => 'The Structure of Expressions',
                 'skills' => [
-                    //Lessons 6-9
+                    // Lessons 6-9
                     ['id' => 'k-math-m1-b-1', 'code' => 'K.M1.B.1', 'name' => 'Algebraic Expressions - The Distributive Property', 'url' => 'k.php?k-math-m1-b-1'],
                     ['id' => 'k-math-m1-b-2', 'code' => 'K.M1.B.2', 'name' => 'Algebraic Expressions - The Commutative and Associative Properties', 'url' => 'k.php?k-math-m1-b-2'],
                     ['id' => 'k-math-m1-b-3', 'code' => 'K.M1.B.3', 'name' => 'Adding and Subtracting Polynomials', 'url' => 'k.php?k-math-m1-b-3'],
@@ -92,31 +92,33 @@ $modules = [
                 'letter' => 'C',
                 'name' => 'Solving Equations and Inequalities',
                 'skills' => [
-                    //Lessons 10-24
-                    ['id' => 'k-math-m1-c-1', 'code' => 'K.M1.C.1', 'name' => 'True and False Equations'],
-                    ['id' => 'k-math-m1-c-2', 'code' => 'K.M1.C.2', 'name' => 'Solution Sets for Equations and Inequalities'],
-                    ['id' => 'k-math-m1-c-3', 'code' => 'K.M1.C.3', 'name' => 'Solving Equations'],
-                    ['id' => 'k-math-m1-c-4', 'code' => 'K.M1.C.4', 'name' => 'Some Potential Dangers when Solving Equations'],
-                    ['id' => 'k-math-m1-c-5', 'code' => 'K.M1.C.5', 'name' => 'Solving Inequalities'],
-                    ['id' => 'k-math-m1-c-6', 'code' => 'K.M1.C.6', 'name' => 'Solution Sets of Two or More Equations or Inequalities Joined by And or Or'],
-                    ['id' => 'k-math-m1-c-7', 'code' => 'K.M1.C.7', 'name' => 'Solving and Graphing Inequalities Joined by "And" or "Or"'],
-                    ['id' => 'k-math-m1-c-8', 'code' => 'K.M1.C.8', 'name' => 'Equations Involving Factored Expressions'],
-                    ['id' => 'k-math-m1-c-9', 'code' => 'K.M1.C.9', 'name' => 'Equations Involving a Variable Expression in the Denominator'],
-                    ['id' => 'k-math-m1-c-10', 'code' => 'K.M1.C.10', 'name' => 'Rearranging Formulas'],
-                    ['id' => 'k-math-m1-c-11', 'code' => 'K.M1.C.11', 'name' => 'Solution Sets to Equations with Two Variables'],
-                    ['id' => 'k-math-m1-c-12', 'code' => 'K.M1.C.12', 'name' => 'Solution Sets to Inequalities with Two Variables'],
-                    ['id' => 'k-math-m1-c-13', 'code' => 'K.M1.C.13', 'name' => 'Solution Sets to Simultaneous Equations'],
-                    ['id' => 'k-math-m1-c-14', 'code' => 'K.M1.C.14', 'name' => 'Applications of Systems of Equations and Inequalities']
+                    // Lessons 10-24
+                    ['id' => 'k-math-m1-c-1', 'code' => 'K.M1.C.1', 'name' => 'True and False Equations', 'url' => 'k.php?k-math-m1-c-1'],
+                    ['id' => 'k-math-m1-c-2', 'code' => 'K.M1.C.2', 'name' => 'Solution Sets for Equations and Inequalities', 'url' => 'k.php?k-math-m1-c-2'],
+                    ['id' => 'k-math-m1-c-3', 'code' => 'K.M1.C.3', 'name' => 'Solving Equations', 'url' => 'k.php?k-math-m1-c-3'],
+                    ['id' => 'k-math-m1-c-4', 'code' => 'K.M1.C.4', 'name' => 'Some Potential Dangers when Solving Equations', 'url' => 'k.php?k-math-m1-c-4'],
+                    ['id' => 'k-math-m1-c-5', 'code' => 'K.M1.C.5', 'name' => 'Solving Inequalities', 'url' => 'k.php?k-math-m1-c-5'],
+                    ['id' => 'k-math-m1-c-6', 'code' => 'K.M1.C.6', 'name' => 'Solution Sets of Two or More Equations or Inequalities Joined by And or Or', 'url' => 'k.php?k-math-m1-c-6'],
+                    ['id' => 'k-math-m1-c-7', 'code' => 'K.M1.C.7', 'name' => 'Solving and Graphing Inequalities Joined by "And" or "Or"', 'url' => 'k.php?k-math-m1-c-7'],
+                    ['id' => 'k-math-m1-c-8', 'code' => 'K.M1.C.8', 'name' => 'Equations Involving Factored Expressions', 'url' => 'k.php?k-math-m1-c-8'],
+                    ['id' => 'k-math-m1-c-9', 'code' => 'K.M1.C.9', 'name' => 'Equations Involving a Variable Expression in the Denominator', 'url' => 'k.php?k-math-m1-c-9'],
+                    ['id' => 'k-math-m1-c-10', 'code' => 'K.M1.C.10', 'name' => 'Rearranging Formulas', 'url' => 'k.php?k-math-m1-c-10'],
+                    ['id' => 'k-math-m1-c-11', 'code' => 'K.M1.C.11', 'name' => 'Solution Sets to Equations with Two Variables', 'url' => 'k.php?k-math-m1-c-11'],
+                    ['id' => 'k-math-m1-c-12', 'code' => 'K.M1.C.12', 'name' => 'Solution Sets to Inequalities with Two Variables', 'url' => 'k.php?k-math-m1-c-12'],
+                    ['id' => 'k-math-m1-c-13', 'code' => 'K.M1.C.13', 'name' => 'Solution Sets to Simultaneous Equations (Part 1)', 'url' => 'k.php?k-math-m1-c-13'],
+                    ['id' => 'k-math-m1-c-14', 'code' => 'K.M1.C.14', 'name' => 'Solution Sets to Simultaneous Equations (Part 2)', 'url' => 'k.php?k-math-m1-c-14'],
+                    ['id' => 'k-math-m1-c-15', 'code' => 'K.M1.C.15', 'name' => 'Applications of Systems of Equations and Inequalities', 'url' => 'k.php?k-math-m1-c-15']
                 ]
             ],
             [
                 'letter' => 'D',
                 'name' => 'Creating Equations to Solve Problems',
                 'skills' => [
-                    //Lessons 25-28
-                    ['id' => 'k-math-m1-d-1', 'code' => 'K.M1.D.1', 'name' => 'Solving Problems in Two Ways - Rates and Algebra'],
-                    ['id' => 'k-math-m1-d-2', 'code' => 'K.M1.D.2', 'name' => 'Recursive Challenge Problem - The Double and Add 5 Game'],
-                    ['id' => 'k-math-m1-d-3', 'code' => 'K.M1.D.3', 'name' => 'Federal Income Tax']
+                    // Lessons 25-28
+                    ['id' => 'k-math-m1-d-1', 'code' => 'K.M1.D.1', 'name' => 'Solving Problems in Two Ways - Rates and Algebra', 'url' => 'k.php?k-math-m1-d-1'],
+                    ['id' => 'k-math-m1-d-2', 'code' => 'K.M1.D.2', 'name' => 'Recursive Challenge Problem - The Double and Add 5 Game (Part 1)', 'url' => 'k.php?k-math-m1-d-2'],
+                    ['id' => 'k-math-m1-d-3', 'code' => 'K.M1.D.3', 'name' => 'Recursive Challenge Problem - The Double and Add 5 Game (Part 2)', 'url' => 'k.php?k-math-m1-d-3'],
+                    ['id' => 'k-math-m1-d-4', 'code' => 'K.M1.D.4', 'name' => 'Federal Income Tax', 'url' => 'k.php?k-math-m1-d-4']
                 ]
             ]
         ]

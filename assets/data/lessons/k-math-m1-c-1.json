@@ -1,0 +1,82 @@
+{
+    "id": "k-math-m1-c-1",
+    "code": "K.M1.C.1",
+    "standard": "HSA.CED.A.1",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "True and False Equations",
+        "pageTitle": "True & False Equations | Hesten's Learning",
+        "description": "Understand equations as statements of equality with truth values, and identify solution sets.",
+        "pageDescription": "Learn how equations behave as declarative sentences with truth values (True, False) depending on variable substitutions.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M1.C.1",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 10",
+        "pill": "Equations & Truth Values",
+        "text": "In this lesson, you will conceptualize an equation not as a command to calculate, but as a declarative statement between two expressions. Depending on the values substituted for variables, an equation evaluates to either True or False. The solution set consists of all values making the statement True.",
+        "outcomes": [
+            "Understand that an equation is a statement of equality between two expressions that is either true or false.",
+            "Differentiate between conditional equations, algebraic identities (always true), and contradictions (always false).",
+            "Find the solution set of an equation by testing values from the domain of real numbers."
+        ],
+        "teacherInsight": "Help students shift away from thinking '=' means 'here is the answer'. In algebra, '=' states that the left expression and right expression have equal numerical values. For example, $x^2 + 1 = 0$ is a valid equation whose solution set over the real numbers is empty ($\\emptyset$)."
+    },
+    "content": [
+        {
+            "type": "html",
+            "html": "\n                <section class=\"lesson-sim-workbench\" aria-labelledby=\"sim-title-l10\">\n                    <div class=\"lesson-sim-header\">\n                        <div class=\"lesson-sim-title-wrap\">\n                            <h3 id=\"sim-title-l10\" class=\"lesson-sim-title\">\n                                <i class=\"fas fa-check-double\" aria-hidden=\"true\"></i> Dynamic Equation Truth-Value Tester\n                            </h3>\n                            <p class=\"lesson-sim-subtitle\">\n                                Test values of $x$ in the equation $2x + 5 = 17 - x$ to determine if the equality sentence evaluates to <strong>TRUE</strong> or <strong>FALSE</strong>.\n                            </p>\n                        </div>\n                        <div class=\"lesson-sim-presets\">\n                            <button type=\"button\" class=\"lesson-sim-preset-btn\" onclick=\"setEqX(2)\">Test x = 2</button>\n                            <button type=\"button\" class=\"lesson-sim-preset-btn\" onclick=\"setEqX(4)\">Test x = 4 (Solution!)</button>\n                            <button type=\"button\" class=\"lesson-sim-preset-btn\" onclick=\"setEqX(6)\">Test x = 6</button>\n                        </div>\n                    </div>\n                    <div class=\"lesson-sim-grid\">\n                        <div class=\"lesson-sim-controls\">\n                            <div class=\"lesson-sim-slider-box\">\n                                <div class=\"lesson-sim-slider-label\"><span>Candidate Value ($x$):</span><span id=\"badge-eq-x\" class=\"lesson-sim-step-badge\">x = 3</span></div>\n                                <input type=\"range\" id=\"input-eq-x\" min=\"0\" max=\"8\" value=\"3\" oninput=\"updateEqSim()\" class=\"lesson-sim-slider\">\n                            </div>\n                            <div class=\"lesson-sim-stat-grid\">\n                                <div class=\"lesson-sim-stat-card card-linear\">\n                                    <span class=\"lesson-sim-stat-tag\">Left Expression: $2x + 5$</span>\n                                    <span id=\"lhs-val\" class=\"lesson-sim-stat-val stat-linear-color\">11</span>\n                                    <span id=\"lhs-calc\" class=\"lesson-sim-stat-calc\">2(3) + 5 = 11</span>\n                                </div>\n                                <div class=\"lesson-sim-stat-card card-exp\">\n                                    <span class=\"lesson-sim-stat-tag\">Right Expression: $17 - x$</span>\n                                    <span id=\"rhs-val\" class=\"lesson-sim-stat-val stat-exp-color\">14</span>\n                                    <span id=\"rhs-calc\" class=\"lesson-sim-stat-calc\">17 - 3 = 14</span>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"lesson-sim-visualizer\" style=\"display:flex; flex-direction:column; align-items:center; justify-content:center;\">\n                            <div id=\"truth-banner\" style=\"padding:1.5rem 2rem; border-radius:1rem; text-align:center; font-family:'Outfit',sans-serif; transition:all 0.2s ease;\">\n                                <div id=\"truth-icon\" style=\"font-size:2.5rem; margin-bottom:0.5rem;\"><i class=\"fas fa-times-circle\" style=\"color:#f43f5e;\"></i></div>\n                                <div id=\"truth-status\" style=\"font-size:1.5rem; font-weight:900; color:#f43f5e;\">FALSE STATEMENT</div>\n                                <div id=\"truth-desc\" style=\"font-size:0.9rem; color:var(--color-text-secondary); margin-top:0.25rem;\">11 \\u2260 14 (x = 3 is NOT in the solution set)</div>\n                            </div>\n                        </div>\n                    </div>\n                </section>\n                "
+        }
+    ],
+    "vocabulary": [
+        {
+            "term": "Equation",
+            "definition": "A mathematical statement asserting that two algebraic expressions are equal in value."
+        },
+        {
+            "term": "Truth Value",
+            "definition": "The property of a mathematical sentence indicating whether it is True or False under a specific substitution."
+        },
+        {
+            "term": "Solution Set",
+            "definition": "The set of all values from the domain that make an open sentence or equation true."
+        },
+        {
+            "term": "Identity",
+            "definition": "An equation that evaluates to True for all possible values of its variables (e.g., 2(x + 1) = 2x + 2)."
+        }
+    ],
+    "practiceQuestions": [
+        {
+            "question": "For which value of $a$ is the equation $\\sqrt{a + 1} = 5$ a TRUE number sentence?",
+            "options": [
+                "$a = 24$",
+                "$a = 4$",
+                "$a = 25$",
+                "$a = 26$"
+            ],
+            "correct": 0,
+            "explanation": "Substitute $a = 24$: $\\sqrt{24 + 1} = \\sqrt{25} = 5$. Since $5 = 5$, $a = 24$ makes the equation a true statement."
+        },
+        {
+            "question": "Which of the following equations represents an identity that is true for ALL real numbers?",
+            "options": [
+                "$3(x - 2) + 6 = 3x$",
+                "$2x + 4 = 10$",
+                "$x^2 = 9$",
+                "$x + 1 = x + 2$"
+            ],
+            "correct": 0,
+            "explanation": "Distribute on the left: $3x - 6 + 6 = 3x$. Since $3x = 3x$ for every real number $x$, it is an algebraic identity."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"True and False Equations.\" Eureka Math, New York State Common Core Mathematics Curriculum, Algebra I, Module 1, Topic C, Lesson 10.",
+        "subtext": "Aligned with CCSS.MATH.CONTENT.HSA.CED.A.1 \u2022 Create equations and inequalities in one variable.",
+        "lessonId": "L-ID-ALG-K-M1-C-1"
+    },
+    "scripts": "\n        function updateEqSim() {\n            const x = parseInt(document.getElementById('input-eq-x').value, 10);\n            document.getElementById('badge-eq-x').innerText = 'x = ' + x;\n\n            const lhs = 2 * x + 5;\n            const rhs = 17 - x;\n\n            document.getElementById('lhs-val').innerText = lhs;\n            document.getElementById('rhs-val').innerText = rhs;\n            document.getElementById('lhs-calc').innerText = `2(${x}) + 5 = ${lhs}`;\n            document.getElementById('rhs-calc').innerText = `17 - ${x} = ${rhs}`;\n\n            const banner = document.getElementById('truth-banner');\n            const icon = document.getElementById('truth-icon');\n            const status = document.getElementById('truth-status');\n            const desc = document.getElementById('truth-desc');\n\n            if (lhs === rhs) {\n                banner.style.background = 'rgba(16, 185, 129, 0.15)';\n                banner.style.border = '2px solid #10b981';\n                icon.innerHTML = '<i class=\"fas fa-check-circle\" style=\"color:#10b981;\"></i>';\n                status.innerText = 'TRUE STATEMENT!';\n                status.style.color = '#10b981';\n                desc.innerText = `${lhs} = ${rhs} \u27a1 x = ${x} IS in the solution set: {${x}}`;\n            } else {\n                banner.style.background = 'rgba(225, 29, 72, 0.15)';\n                banner.style.border = '2px solid #f43f5e';\n                icon.innerHTML = '<i class=\"fas fa-times-circle\" style=\"color:#f43f5e;\"></i>';\n                status.innerText = 'FALSE STATEMENT';\n                status.style.color = '#f43f5e';\n                desc.innerText = `${lhs} \u2260 ${rhs} \u27a1 x = ${x} is NOT in the solution set`;\n            }\n        }\n\n        function setEqX(val) {\n            document.getElementById('input-eq-x').value = val;\n            updateEqSim();\n        }\n\n        document.addEventListener('DOMContentLoaded', () => {\n            updateEqSim();\n        });\n        "
+}

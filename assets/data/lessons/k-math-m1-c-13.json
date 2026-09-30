@@ -1,0 +1,78 @@
+{
+    "id": "k-math-m1-c-13",
+    "code": "K.M1.C.13",
+    "standard": "HSA.REI.C.6",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "Solution Sets to Simultaneous Equations (Part 1)",
+        "pageTitle": "Simultaneous Equations: Graphing & Substitution | Hesten's Learning",
+        "description": "Solve systems of linear equations graphically and algebraically using the substitution method.",
+        "pageDescription": "Solve 2x2 systems of equations, classify unique, parallel, and dependent lines, and use substitution.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M1.C.13",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 22",
+        "pill": "Linear Systems & Intersection",
+        "text": "In this lesson, you will solve systems of two linear equations in two variables. A solution to a system is an ordered pair $(x, y)$ that satisfies both equations simultaneously. Graphically, this corresponds to the unique point of intersection between two lines.",
+        "outcomes": [
+            "Identify solutions to simultaneous linear equations graphically as intersection points.",
+            "Solve systems of linear equations algebraically using the substitution method.",
+            "Classify systems as consistent-independent (one solution), inconsistent (parallel, no solution), or consistent-dependent (coincident, infinitely many solutions)."
+        ],
+        "teacherInsight": "Connect systems of equations to compound sentences: a system of two equations is simply Equation 1 AND Equation 2. Both conditions must hold."
+    },
+    "content": [
+        {
+            "type": "html",
+            "html": "\n                <section class=\"lesson-overview-section\">\n                    <h3 class=\"lesson-section-title\">Three Geometric Possibilities for 2\u00d72 Linear Systems</h3>\n                    <div style=\"display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:1rem; margin-top:1rem;\">\n                        <div style=\"padding:1rem; background:rgba(59,130,246,0.1); border:1px solid #3b82f6; border-radius:0.75rem;\">\n                            <h4 style=\"color:#60a5fa; margin:0 0 0.25rem 0;\">1. Unique Solution</h4>\n                            <p style=\"font-size:0.85rem; color:var(--color-text-secondary); margin:0;\">Lines have different slopes and intersect at exactly <strong>one point $(x, y)$</strong>.</p>\n                        </div>\n                        <div style=\"padding:1rem; background:rgba(225,29,72,0.1); border:1px solid #f43f5e; border-radius:0.75rem;\">\n                            <h4 style=\"color:#f43f5e; margin:0 0 0.25rem 0;\">2. No Solution (Inconsistent)</h4>\n                            <p style=\"font-size:0.85rem; color:var(--color-text-secondary); margin:0;\">Lines have identical slopes but different y-intercepts (<strong>parallel lines</strong>). No intersection.</p>\n                        </div>\n                        <div style=\"padding:1rem; background:rgba(16,185,129,0.1); border:1px solid #10b981; border-radius:0.75rem;\">\n                            <h4 style=\"color:#10b981; margin:0 0 0.25rem 0;\">3. Infinitely Many Solutions</h4>\n                            <p style=\"font-size:0.85rem; color:var(--color-text-secondary); margin:0;\">Equations are equivalent multiples. Lines are <strong>coincident</strong> (share every point).</p>\n                        </div>\n                    </div>\n                </section>\n                "
+        }
+    ],
+    "vocabulary": [
+        {
+            "term": "System of Linear Equations",
+            "definition": "A collection of two or more linear equations involving the same set of variables."
+        },
+        {
+            "term": "Point of Intersection",
+            "definition": "A single point on the coordinate plane where two lines cross, representing the simultaneous solution."
+        },
+        {
+            "term": "Substitution Method",
+            "definition": "An algebraic technique where one variable is isolated and substituted into the other equation."
+        }
+    ],
+    "practiceQuestions": [
+        {
+            "question": "Solve the system using substitution: $y = 2x - 1$ and $3x + y = 9$.",
+            "options": [
+                "$(2, 3)$",
+                "$(3, 5)$",
+                "$(1, 1)$",
+                "$(4, 7)$"
+            ],
+            "correct": 0,
+            "explanation": "Substitute $2x - 1$ for $y$ in second equation: $3x + (2x - 1) = 9 \\implies 5x - 1 = 9 \\implies 5x = 10 \\implies x = 2$. Then $y = 2(2) - 1 = 3$. The solution is $(2, 3)$."
+        },
+        {
+            "question": "What is the graphical relationship between $2x + y = 4$ and $4x + 2y = 12$?",
+            "options": [
+                "They are parallel lines with no solution.",
+                "They intersect at a single point $(2, 0)$.",
+                "They are identical coincident lines with infinite solutions.",
+                "They are perpendicular lines."
+            ],
+            "correct": 0,
+            "explanation": "Rewrite in slope-intercept form: $y = -2x + 4$ and $y = -2x + 6$. Both have slope $m = -2$ but different y-intercepts (4 vs 6), so they are parallel lines with no intersection."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Solution Sets to Simultaneous Equations.\" Eureka Math, New York State Common Core Mathematics Curriculum, Algebra I, Module 1, Topic C, Lesson 22.",
+        "subtext": "Aligned with CCSS.MATH.CONTENT.HSA.REI.C.6 \u2022 Solve systems of linear equations exactly and approximately.",
+        "lessonId": "L-ID-ALG-K-M1-C-13"
+    },
+    "scripts": ""
+}

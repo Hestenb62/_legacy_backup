@@ -98,9 +98,9 @@
 
         <!-- Version Status & Release Info Strip (WCAG Operable) -->
         <?php
-        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.6.0';
-        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'September 2026 Platform Elevation Release';
-        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Global Command Palette, Interactive Manipulatives Lab, Cosmic Skill Tree, & Expanded Games Hub';
+        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.7.0';
+        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'September 2026 Grade 9 Algebra I Module 1 Release';
+        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Complete 28-Lesson Grade 9 Algebra I Module 1 Curriculum, Interactive Workbenches, and JSON-First Lesson Architecture';
         ?>
         <div class="footer-version-strip" role="region" aria-label="Platform Version Information">
             <div class="footer-version-info">
@@ -271,15 +271,23 @@
                 </span>
             </div>
             <p class="footer-vmodal-lead">
-                Version <?= htmlspecialchars($siteVersion) ?> delivers six major platform elevation milestones: the Global Command Palette, Interactive Manipulatives Lab, Cosmic Skill Tree &amp; Passport, Gutenberg Reader upgrades, Printable IEP Summaries, and an Expanded Accessible Games Hub.
+                Version <?= htmlspecialchars($siteVersion) ?> introduces the complete 28-lesson Grade 9 Algebra I Module 1 curriculum (Topics A–D), featuring interactive STEM workbenches, MathJax typography, JSON-first lesson architecture, and real-time Common Core standards tracking.
             </p>
             <ul class="footer-vmodal-features">
                 <li class="footer-vmodal-feature-item">
                     <div class="footer-vmodal-feature-icon" aria-hidden="true">
-                        <i class="fas fa-terminal"></i>
+                        <i class="fas fa-calculator"></i>
                     </div>
                     <div class="footer-vmodal-feature-text">
-                        <strong>Global Command Palette (Ctrl+K):</strong> Lightning-fast search, Web Speech voice navigation, quick jump across all standards, and instant shortcut triggers for scratchpads, whiteboard, and timers.
+                        <strong>Complete 28-Lesson Algebra I Module 1:</strong> Full Eureka Math / EngageNY Algebra I coverage across Topics A, B, C, and D (<code>K.M1.A.1</code> through <code>K.M1.D.4</code>) with teacher notes and student outcomes.
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true">
+                        <i class="fas fa-cubes"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>JSON-First Modular Architecture:</strong> Standalone, schema-validated JSON lesson modules in <code>assets/data/lessons/</code> dynamically rendered by <code>levels/k.php</code> without redundant PHP stubs.
                     </div>
                 </li>
                 <li class="footer-vmodal-feature-item">
@@ -287,39 +295,31 @@
                         <i class="fas fa-shapes"></i>
                     </div>
                     <div class="footer-vmodal-feature-text">
-                        <strong>Interactive Manipulatives Lab:</strong> High-precision virtual STEM tools including Fraction Strips &amp; Slices with LCM comparisons, Base-10 Blocks with compose/decompose animations, and Dynamic Cartesian Function Grapher.
+                        <strong>Interactive STEM Workbenches:</strong> Embedded piecewise graph visualizers, polynomial algebra tiles, linear equation balance scales, and algebraic substitution runners.
                     </div>
                 </li>
                 <li class="footer-vmodal-feature-item">
                     <div class="footer-vmodal-feature-icon" aria-hidden="true">
-                        <i class="fas fa-satellite"></i>
+                        <i class="fas fa-square-root-variable"></i>
                     </div>
                     <div class="footer-vmodal-feature-text">
-                        <strong>Cosmic Skill Tree &amp; Passport (/pages/skills.php):</strong> Constellation-themed mastery visualization mapped to Common Core standards, live Daily Learning Quests, and Heraldic Achievement Crests.
+                        <strong>Universal MathJax Typography:</strong> Responsive, dark-mode adaptive SVG rendering for formulas, fractions, radicals, and polynomial expressions with overflow protection.
                     </div>
                 </li>
                 <li class="footer-vmodal-feature-item">
                     <div class="footer-vmodal-feature-icon" aria-hidden="true">
-                        <i class="fas fa-book-reader"></i>
+                        <i class="fas fa-clipboard-check"></i>
                     </div>
                     <div class="footer-vmodal-feature-text">
-                        <strong>Gutenberg Reader Upgrades:</strong> Sticky reading progress line, offline phonetics &amp; dictionary popovers, and end-of-chapter comprehension checkpoints connected directly to student XP.
+                        <strong>Formative Exit Tickets &amp; Scored Drills:</strong> Multi-question practice sets with instant step-by-step solutions, hints, and automated <code>hesten_standards_mastery</code> synchronization.
                     </div>
                 </li>
                 <li class="footer-vmodal-feature-item">
                     <div class="footer-vmodal-feature-icon" aria-hidden="true">
-                        <i class="fas fa-print"></i>
+                        <i class="fas fa-universal-access"></i>
                     </div>
                     <div class="footer-vmodal-feature-text">
-                        <strong>Official Progress &amp; IEP Summaries:</strong> Clean, high-fidelity printable portfolios branded for hestena62.com with competency grids and parent/teacher signature sign-offs.
-                    </div>
-                </li>
-                <li class="footer-vmodal-feature-item">
-                    <div class="footer-vmodal-feature-icon" aria-hidden="true">
-                        <i class="fas fa-gamepad"></i>
-                    </div>
-                    <div class="footer-vmodal-feature-text">
-                        <strong>Expanded Accessible Games Hub:</strong> Word Scramble Studio with speech audio and definition clues, alongside Grammar Detective mystery error cases with full pedagogical explanations.
+                        <strong>Universal WCAG &amp; UDL Accessibility:</strong> Screen-reader friendly equations, high-contrast outlines, tactile keyboard shortcuts, and full speech read-aloud support.
                     </div>
                 </li>
             </ul>

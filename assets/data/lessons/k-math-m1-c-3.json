@@ -1,0 +1,78 @@
+{
+    "id": "k-math-m1-c-3",
+    "code": "K.M1.C.3",
+    "standard": "HSA.REI.A.1",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "Solving Equations",
+        "pageTitle": "Solving Equations & Deductive Justification | Hesten's Learning",
+        "description": "Understand equation solving as a deductive if-then process supported by properties of equality.",
+        "pageDescription": "Formal proofs and step-by-step deductive logic for solving linear equations using balance properties.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M1.C.3",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 12",
+        "pill": "Properties of Equality & Proof",
+        "text": "In this lesson, you will reframe solving an equation as a deductive proof: starting from the hypothesis that an unknown value makes the equation true, you apply properties of equality to logically deduce what the value must be.",
+        "outcomes": [
+            "Understand equation solving as an if-then logical sequence based on properties of equality.",
+            "Use the addition, subtraction, multiplication, and division properties of equality to create equivalent equations.",
+            "Recognize when two equations share identical solution sets through reversible algebraic moves."
+        ],
+        "teacherInsight": "Emphasize writing justifications for each step (e.g., 'Addition Property of Equality', 'Distributive Property'). This demystifies 'canceling' terms and builds foundational proof skills."
+    },
+    "content": [
+        {
+            "type": "html",
+            "html": "\n                <section class=\"lesson-sim-workbench\" aria-labelledby=\"sim-title-l12\">\n                    <div class=\"lesson-sim-header\">\n                        <div class=\"lesson-sim-title-wrap\">\n                            <h3 id=\"sim-title-l12\" class=\"lesson-sim-title\">\n                                <i class=\"fas fa-balance-scale\" aria-hidden=\"true\"></i> Interactive Algebraic Balance Scale Simulator\n                            </h3>\n                            <p class=\"lesson-sim-subtitle\">\n                                Solve $2x + 6 = 16$. Apply balanced operations to both pans and watch the scale remain level as you isolate $x$.\n                            </p>\n                        </div>\n                        <div class=\"lesson-sim-presets\">\n                            <button type=\"button\" class=\"lesson-sim-preset-btn\" onclick=\"resetScale()\">Reset: 2x + 6 = 16</button>\n                            <button type=\"button\" class=\"lesson-sim-preset-btn\" onclick=\"applyScaleOp('sub6')\">Step 1: Subtract 6</button>\n                            <button type=\"button\" class=\"lesson-sim-preset-btn\" onclick=\"applyScaleOp('div2')\">Step 2: Divide by 2</button>\n                        </div>\n                    </div>\n                    <div class=\"lesson-sim-grid\">\n                        <div class=\"lesson-sim-controls\">\n                            <div style=\"font-size:0.95rem; font-weight:700; margin-bottom:0.5rem; color:var(--color-primary);\">Current Equation State:</div>\n                            <div id=\"scale-eq-display\" style=\"font-size:1.4rem; font-weight:900; font-family:'Outfit',sans-serif; color:#ffffff; margin-bottom:1rem; padding:0.75rem 1rem; background:rgba(0,0,0,0.2); border-radius:0.75rem;\">\n                                2x + 6 = 16\n                            </div>\n                            <div style=\"font-size:0.85rem; color:var(--color-text-secondary); line-height:1.5;\" id=\"scale-step-explanation\">\n                                Initial state: The left pan holds $2x + 6$ and the right pan holds $16$. The scale is in perfect balance.\n                            </div>\n                        </div>\n                        <div class=\"lesson-sim-visualizer\" style=\"display:flex; flex-direction:column; align-items:center; justify-content:center;\">\n                            <div style=\"display:flex; justify-content:space-between; align-items:flex-end; width:280px; height:130px; position:relative; border-bottom:4px solid var(--color-border);\">\n                                <div id=\"pan-left\" style=\"width:110px; background:rgba(59,130,246,0.25); border:2px solid #3b82f6; border-radius:0.5rem; padding:0.75rem 0.5rem; text-align:center; font-weight:800; color:#60a5fa; transition:all 0.3s ease;\">\n                                    <div style=\"font-size:0.75rem;\">Left Pan</div>\n                                    <div id=\"pan-left-val\" style=\"font-size:1.1rem; margin-top:0.25rem;\">2x + 6</div>\n                                </div>\n                                <div style=\"width:10px; height:70px; background:var(--color-border); position:absolute; left:135px; bottom:0;\"></div>\n                                <div id=\"pan-right\" style=\"width:110px; background:rgba(225,29,72,0.25); border:2px solid #f43f5e; border-radius:0.5rem; padding:0.75rem 0.5rem; text-align:center; font-weight:800; color:#f43f5e; transition:all 0.3s ease;\">\n                                    <div style=\"font-size:0.75rem;\">Right Pan</div>\n                                    <div id=\"pan-right-val\" style=\"font-size:1.1rem; margin-top:0.25rem;\">16</div>\n                                </div>\n                            </div>\n                            <div class=\"lesson-sim-ratio-pill\" id=\"scale-pill\" style=\"margin-top:1.25rem;\">\n                                <i class=\"fas fa-balance-scale\" style=\"color:#10b981;\"></i> Balanced: Both sides are equivalent\n                            </div>\n                        </div>\n                    </div>\n                </section>\n                "
+        }
+    ],
+    "vocabulary": [
+        {
+            "term": "Addition Property of Equality",
+            "definition": "If a = b, then a + c = b + c for any real number c."
+        },
+        {
+            "term": "Multiplication Property of Equality",
+            "definition": "If a = b, then ac = bc for any real number c."
+        },
+        {
+            "term": "Deductive Reasoning",
+            "definition": "A logical process in which a conclusion is based on the concordance of multiple premises that are assumed or proven to be true."
+        }
+    ],
+    "practiceQuestions": [
+        {
+            "question": "Which equation is guaranteed to have the exact same solution set as $2x + 3 = 13 - 5x$?",
+            "options": [
+                "$7x = 10$",
+                "$7x = 16$",
+                "$-3x = 10$",
+                "$2x = 16 - 5x$"
+            ],
+            "correct": 0,
+            "explanation": "Add $5x$ to both sides ($7x + 3 = 13$), then subtract 3 from both sides ($7x = 10$). The moves are reversible and preserve the solution set."
+        },
+        {
+            "question": "What property of equality justifies moving from $4x = 28$ to $x = 7$?",
+            "options": [
+                "Multiplication Property of Equality (multiplying both sides by $\\frac{1}{4}$)",
+                "Distributive property",
+                "Associative property of addition",
+                "Zero product property"
+            ],
+            "correct": 0,
+            "explanation": "Dividing both sides by 4 is multiplying both sides by $\\frac{1}{4}$, which is justified by the Multiplication Property of Equality."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Solving Equations.\" Eureka Math, New York State Common Core Mathematics Curriculum, Algebra I, Module 1, Topic C, Lesson 12.",
+        "subtext": "Aligned with CCSS.MATH.CONTENT.HSA.REI.A.1 \u2022 Explain each step in solving a simple equation.",
+        "lessonId": "L-ID-ALG-K-M1-C-3"
+    },
+    "scripts": "\n        let scaleStep = 0;\n\n        function applyScaleOp(op) {\n            const eq = document.getElementById('scale-eq-display');\n            const exp = document.getElementById('scale-step-explanation');\n            const pl = document.getElementById('pan-left-val');\n            const pr = document.getElementById('pan-right-val');\n            const pill = document.getElementById('scale-pill');\n\n            if (op === 'sub6') {\n                scaleStep = 1;\n                eq.innerText = '2x = 10';\n                exp.innerText = 'Subtraction Property of Equality: Subtracted 6 from both pans. The equation simplified to 2x = 10.';\n                pl.innerText = '2x';\n                pr.innerText = '10';\n                pill.innerHTML = '<i class=\"fas fa-check\" style=\"color:#10b981;\"></i> Step 1 Complete: 2x = 10';\n            } else if (op === 'div2') {\n                if (scaleStep === 0) applyScaleOp('sub6');\n                scaleStep = 2;\n                eq.innerText = 'x = 5';\n                exp.innerText = 'Multiplication Property of Equality: Multiplied both sides by 1/2 (divided by 2). Variable isolated: x = 5.';\n                pl.innerText = 'x';\n                pr.innerText = '5';\n                pill.innerHTML = '<i class=\"fas fa-star\" style=\"color:#f59e0b;\"></i> Solved! Solution Set: {5}';\n            }\n        }\n\n        function resetScale() {\n            scaleStep = 0;\n            document.getElementById('scale-eq-display').innerText = '2x + 6 = 16';\n            document.getElementById('scale-step-explanation').innerText = 'Initial state: The left pan holds 2x + 6 and the right pan holds 16.';\n            document.getElementById('pan-left-val').innerText = '2x + 6';\n            document.getElementById('pan-right-val').innerText = '16';\n            document.getElementById('scale-pill').innerHTML = '<i class=\"fas fa-balance-scale\" style=\"color:#10b981;\"></i> Balanced: Both sides are equivalent';\n        }\n        "
+}

@@ -1,0 +1,78 @@
+{
+    "id": "k-math-m1-c-12",
+    "code": "K.M1.C.12",
+    "standard": "HSA.REI.D.12",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "Solution Sets to Inequalities with Two Variables",
+        "pageTitle": "Two-Variable Inequalities & Half-Planes | Hesten's Learning",
+        "description": "Graph linear inequalities in two variables as shaded half-planes with solid or dashed boundary lines.",
+        "pageDescription": "Graph linear inequalities in two variables, use test points, and shade feasible half-planes.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M1.C.12",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 21",
+        "pill": "Half-Planes & Boundary Lines",
+        "text": "In this lesson, you will graph linear inequalities in two variables (such as $y < 2x - 1$ or $Ax + By \\ge C$). A linear boundary divides the Cartesian plane into two half-planes. You will master using a test point (such as $(0, 0)$) to decide which half-plane contains the solutions.",
+        "outcomes": [
+            "Graph the solution set to a linear inequality in two variables as a half-plane.",
+            "Differentiate between solid boundary lines (inclusive $\\le, \\ge$) and dashed boundary lines (strict $<, >$).",
+            "Select and evaluate a test point (e.g., $(0, 0)$) to identify which side of the boundary to shade."
+        ],
+        "teacherInsight": "Highlight that if the boundary line passes through the origin $(0, 0)$, students must select an alternate test point like $(0, 1)$ or $(1, 0)$ to test which half-plane to shade."
+    },
+    "content": [
+        {
+            "type": "html",
+            "html": "\n                <section class=\"lesson-overview-section\">\n                    <h3 class=\"lesson-section-title\">Rules for Graphing Two-Variable Inequalities</h3>\n                    <div class=\"lesson-formula-grid\">\n                        <div class=\"lesson-formula-card card-linear-formula\">\n                            <h4 class=\"lesson-formula-title\"><i class=\"fas fa-grip-lines mr-2\" style=\"color:#3b82f6;\"></i> Boundary Line Style</h4>\n                            <div class=\"lesson-formula-math\">$$\\text{Strict } (<, >): \\text{Dashed} \\quad | \\quad \\text{Inclusive } (\\le, \\ge): \\text{Solid}$$</div>\n                            <p class=\"lesson-formula-desc\">Solid lines include points on the boundary; dashed lines indicate the boundary itself is excluded from solutions.</p>\n                        </div>\n                        <div class=\"lesson-formula-card card-exp-formula\">\n                            <h4 class=\"lesson-formula-title\"><i class=\"fas fa-bullseye mr-2\" style=\"color:#e11d48;\"></i> Test-Point Verification</h4>\n                            <div class=\"lesson-formula-math\">$$\\text{Test } (0, 0) \\to \\text{If True: Shade Origin Side}$$</div>\n                            <p class=\"lesson-formula-desc\">If $(0,0)$ evaluates to True, shade the side containing $(0,0)$. If False, shade the opposite side.</p>\n                        </div>\n                    </div>\n                </section>\n                "
+        }
+    ],
+    "vocabulary": [
+        {
+            "term": "Half-Plane",
+            "definition": "The region of a coordinate plane on one side of an infinite boundary line."
+        },
+        {
+            "term": "Boundary Line",
+            "definition": "The line dividing the coordinate plane into two half-planes in an inequality graph."
+        },
+        {
+            "term": "Test Point",
+            "definition": "A coordinate pair (not on the boundary line) substituted into an inequality to determine which half-plane contains solutions."
+        }
+    ],
+    "practiceQuestions": [
+        {
+            "question": "Which boundary line style and shading represents $y > 2x + 1$?",
+            "options": [
+                "A dashed boundary line, shaded ABOVE the line",
+                "A solid boundary line, shaded ABOVE the line",
+                "A dashed boundary line, shaded BELOW the line",
+                "A solid boundary line, shaded BELOW the line"
+            ],
+            "correct": 0,
+            "explanation": "Because $>$ is strict, the boundary is dashed. Testing $(0, 0)$: $0 > 2(0) + 1 \\implies 0 > 1$ (False). The region not containing $(0, 0)$\u2014above the line\u2014is shaded."
+        },
+        {
+            "question": "Is the point $(2, 3)$ in the solution set of $3x - y \\ge 3$?",
+            "options": [
+                "Yes, because $3(2) - 3 = 3 \\ge 3$ is a true statement.",
+                "No, because $3$ is not strictly greater than 3.",
+                "No, because $(2, 3)$ is in the first quadrant.",
+                "Yes, but only if the line is dashed."
+            ],
+            "correct": 0,
+            "explanation": "Substitute $(2, 3)$: $3(2) - 3 = 6 - 3 = 3$. Since $3 \\ge 3$ is True (equality is permitted), $(2, 3)$ is on the boundary and is a valid solution."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Solution Sets to Inequalities with Two Variables.\" Eureka Math, New York State Common Core Mathematics Curriculum, Algebra I, Module 1, Topic C, Lesson 21.",
+        "subtext": "Aligned with CCSS.MATH.CONTENT.HSA.REI.D.12 \u2022 Graph the solutions to a linear inequality in two variables as a half-plane.",
+        "lessonId": "L-ID-ALG-K-M1-C-12"
+    },
+    "scripts": ""
+}

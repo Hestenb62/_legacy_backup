@@ -1,0 +1,82 @@
+{
+    "id": "k-math-m1-c-2",
+    "code": "K.M1.C.2",
+    "standard": "HSA.REI.B.3",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "Solution Sets for Equations and Inequalities",
+        "pageTitle": "Solution Sets: Equations & Inequalities | Hesten's Learning",
+        "description": "Graph solution sets on the real number line using open/closed circles and directed rays.",
+        "pageDescription": "Learn how solution sets of inequalities span continuous intervals and represent them on 1D number lines.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M1.C.2",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 11",
+        "pill": "Number Line Inequalities",
+        "text": "In this lesson, you will contrast the solution sets of equations (typically discrete points) with inequalities (continuous rays or segments). You will learn standard conventions for number line graphing: open circles for strict inequalities ($<, >$) and closed solid dots for inclusive inequalities ($\\le, \\ge$).",
+        "outcomes": [
+            "Understand that the solution set of an inequality often contains infinitely many real numbers.",
+            "Accurately graph solution sets on a real coordinate line using rays and boundary points.",
+            "Use open circles for non-included boundary values ($<, >$) and solid closed dots for included values ($\\le, \\ge$)."
+        ],
+        "teacherInsight": "Make sure students test points on either side of the boundary to verify their shaded direction. For example, to check $x > 3$, test $x = 0$ (False, not shaded) and $x = 5$ (True, shaded)."
+    },
+    "content": [
+        {
+            "type": "html",
+            "html": "\n                <section class=\"lesson-sim-workbench\" aria-labelledby=\"sim-title-l11\">\n                    <div class=\"lesson-sim-header\">\n                        <div class=\"lesson-sim-title-wrap\">\n                            <h3 id=\"sim-title-l11\" class=\"lesson-sim-title\">\n                                <i class=\"fas fa-ruler-horizontal\" aria-hidden=\"true\"></i> Interactive 1D Real Number Line Grapher\n                            </h3>\n                            <p class=\"lesson-sim-subtitle\">\n                                Select inequality relation and boundary point. Observe the open/closed boundary dot and ray shading in real-time.\n                            </p>\n                        </div>\n                    </div>\n                    <div class=\"lesson-sim-grid\">\n                        <div class=\"lesson-sim-controls\">\n                            <div style=\"margin-bottom:1rem;\">\n                                <label style=\"font-size:0.85rem; font-weight:700; display:block; margin-bottom:0.35rem;\">Inequality Operator:</label>\n                                <div style=\"display:flex; gap:0.5rem;\">\n                                    <button type=\"button\" class=\"lesson-sim-preset-btn active\" id=\"op-gt\" onclick=\"setOp('gt')\">$x > c$</button>\n                                    <button type=\"button\" class=\"lesson-sim-preset-btn\" id=\"op-gte\" onclick=\"setOp('gte')\">$x \\ge c$</button>\n                                    <button type=\"button\" class=\"lesson-sim-preset-btn\" id=\"op-lt\" onclick=\"setOp('lt')\">$x < c$</button>\n                                    <button type=\"button\" class=\"lesson-sim-preset-btn\" id=\"op-lte\" onclick=\"setOp('lte')\">$x \\le c$</button>\n                                </div>\n                            </div>\n                            <div class=\"lesson-sim-slider-box\">\n                                <div class=\"lesson-sim-slider-label\"><span>Boundary Point ($c$):</span><span id=\"badge-bound-c\" class=\"lesson-sim-step-badge\">2</span></div>\n                                <input type=\"range\" id=\"input-bound-c\" min=\"-4\" max=\"4\" value=\"2\" oninput=\"updateLineSim()\" class=\"lesson-sim-slider\">\n                            </div>\n                        </div>\n                        <div class=\"lesson-sim-visualizer\" style=\"display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:200px;\">\n                            <svg id=\"numline-svg\" width=\"340\" height=\"90\" viewBox=\"0 0 340 90\" style=\"overflow:visible;\">\n                                <!-- Axis line -->\n                                <line x1=\"20\" y1=\"45\" x2=\"320\" y2=\"45\" stroke=\"var(--color-border)\" stroke-width=\"3\" stroke-linecap=\"round\"/>\n                                <!-- Ticks & Labels: -4 to 4 (step 30px, center x=170 is 0) -->\n                                <g id=\"numline-ticks\" font-size=\"10\" fill=\"var(--color-text-secondary)\" text-anchor=\"middle\">\n                                    <line x1=\"50\" y1=\"40\" x2=\"50\" y2=\"50\" stroke=\"var(--color-border)\" stroke-width=\"2\"/><text x=\"50\" y=\"65\">-4</text>\n                                    <line x1=\"80\" y1=\"40\" x2=\"80\" y2=\"50\" stroke=\"var(--color-border)\" stroke-width=\"2\"/><text x=\"80\" y=\"65\">-3</text>\n                                    <line x1=\"110\" y1=\"40\" x2=\"110\" y2=\"50\" stroke=\"var(--color-border)\" stroke-width=\"2\"/><text x=\"110\" y=\"65\">-2</text>\n                                    <line x1=\"140\" y1=\"40\" x2=\"140\" y2=\"50\" stroke=\"var(--color-border)\" stroke-width=\"2\"/><text x=\"140\" y=\"65\">-1</text>\n                                    <line x1=\"170\" y1=\"36\" x2=\"170\" y2=\"54\" stroke=\"#60a5fa\" stroke-width=\"2.5\"/><text x=\"170\" y=\"65\" fill=\"#60a5fa\" font-weight=\"700\">0</text>\n                                    <line x1=\"200\" y1=\"40\" x2=\"200\" y2=\"50\" stroke=\"var(--color-border)\" stroke-width=\"2\"/><text x=\"200\" y=\"65\">1</text>\n                                    <line x1=\"230\" y1=\"40\" x2=\"230\" y2=\"50\" stroke=\"var(--color-border)\" stroke-width=\"2\"/><text x=\"230\" y=\"65\">2</text>\n                                    <line x1=\"260\" y1=\"40\" x2=\"260\" y2=\"50\" stroke=\"var(--color-border)\" stroke-width=\"2\"/><text x=\"260\" y=\"65\">3</text>\n                                    <line x1=\"290\" y1=\"40\" x2=\"290\" y2=\"50\" stroke=\"var(--color-border)\" stroke-width=\"2\"/><text x=\"290\" y=\"65\">4</text>\n                                </g>\n                                <!-- Shaded ray -->\n                                <line id=\"ray-line\" x1=\"230\" y1=\"45\" x2=\"330\" y2=\"45\" stroke=\"#e11d48\" stroke-width=\"6\" stroke-linecap=\"round\"/>\n                                <!-- Boundary Circle -->\n                                <circle id=\"bound-circle\" cx=\"230\" cy=\"45\" r=\"7\" fill=\"#1e293b\" stroke=\"#e11d48\" stroke-width=\"3\"/>\n                            </svg>\n                            <div class=\"lesson-sim-ratio-pill\" id=\"line-readout-pill\" style=\"margin-top:1rem;\">\n                                Solution Set: $\\{x \\in \\mathbb{R} \\mid x > 2\\}$ (Ray pointing right, open circle at 2)\n                            </div>\n                        </div>\n                    </div>\n                </section>\n                "
+        }
+    ],
+    "vocabulary": [
+        {
+            "term": "Inequality",
+            "definition": "A mathematical statement comparing two expressions using relation symbols <, \u2264, >, or \u2265."
+        },
+        {
+            "term": "Open Circle",
+            "definition": "A hollow dot on a number line representing an exclusive boundary that is not included in the solution set (< or >)."
+        },
+        {
+            "term": "Closed Circle",
+            "definition": "A solid filled dot on a number line representing an inclusive boundary that is included in the solution set (\u2264 or \u2265)."
+        },
+        {
+            "term": "Ray",
+            "definition": "A continuous portion of the coordinate line extending indefinitely in one direction from an endpoint."
+        }
+    ],
+    "practiceQuestions": [
+        {
+            "question": "Which inequality represents a number line graph with an OPEN circle at 3 and a shaded ray pointing to the LEFT?",
+            "options": [
+                "$x < 3$",
+                "$x \\le 3$",
+                "$x > 3$",
+                "$x \\ge 3$"
+            ],
+            "correct": 0,
+            "explanation": "An open circle indicates a strict inequality ($<$ or $>$), and pointing left means all values less than 3 ($x < 3$)."
+        },
+        {
+            "question": "What is the difference between the solution sets of $x = 5$ and $x \\ge 5$?",
+            "options": [
+                "$x = 5$ has exactly one discrete solution, whereas $x \\ge 5$ has infinitely many real solutions spanning from 5 to $\\infty$.",
+                "There is no difference; both contain only the number 5.",
+                "$x = 5$ cannot be graphed on a number line.",
+                "$x \\ge 5$ does not include the number 5."
+            ],
+            "correct": 0,
+            "explanation": "Equations typically have isolated discrete solutions (just $\\{5\\}$), while inequalities define continuous intervals extending indefinitely."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Solution Sets for Equations and Inequalities.\" Eureka Math, New York State Common Core Mathematics Curriculum, Algebra I, Module 1, Topic C, Lesson 11.",
+        "subtext": "Aligned with CCSS.MATH.CONTENT.HSA.REI.B.3 \u2022 Solve linear equations and inequalities in one variable.",
+        "lessonId": "L-ID-ALG-K-M1-C-2"
+    },
+    "scripts": "\n        let currentOp = 'gt';\n\n        function setOp(op) {\n            currentOp = op;\n            ['gt', 'gte', 'lt', 'lte'].forEach(o => {\n                const btn = document.getElementById('op-' + o);\n                if (btn) btn.classList.toggle('active', o === op);\n            });\n            updateLineSim();\n        }\n\n        function updateLineSim() {\n            const c = parseInt(document.getElementById('input-bound-c').value, 10);\n            document.getElementById('badge-bound-c').innerText = c;\n\n            // Coordinate mapping: 0 is at x=170, step is 30px per unit\n            const cx = 170 + c * 30;\n\n            const circle = document.getElementById('bound-circle');\n            const ray = document.getElementById('ray-line');\n            const pill = document.getElementById('line-readout-pill');\n\n            circle.setAttribute('cx', cx);\n\n            let rayX2 = 330;\n            if (currentOp === 'lt' || currentOp === 'lte') {\n                ray.setAttribute('x1', 15);\n                ray.setAttribute('x2', cx);\n            } else {\n                ray.setAttribute('x1', cx);\n                ray.setAttribute('x2', 330);\n            }\n\n            // Fill circle\n            const isInclusive = (currentOp === 'gte' || currentOp === 'lte');\n            circle.setAttribute('fill', isInclusive ? '#e11d48' : '#1e293b');\n\n            const opSymbols = { 'gt': '>', 'gte': '\u2265', 'lt': '<', 'lte': '\u2264' };\n            const dotType = isInclusive ? 'solid closed dot' : 'hollow open circle';\n            const dir = (currentOp === 'gt' || currentOp === 'gte') ? 'right' : 'left';\n\n            pill.innerHTML = `<i class=\"fas fa-info-circle\" style=\"color:#60a5fa;\"></i> Solution Set: $\\{x \\in \\mathbb{R} \\mid x ${opSymbols[currentOp]} ${c}\\}$ (${dotType} at ${c}, ray pointing ${dir})`;\n\n            if (window.MathJax && window.MathJax.typesetPromise) {\n                window.MathJax.typesetPromise([pill]);\n            }\n        }\n\n        document.addEventListener('DOMContentLoaded', () => {\n            updateLineSim();\n        });\n        "
+}

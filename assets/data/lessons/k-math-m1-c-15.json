@@ -1,0 +1,74 @@
+{
+    "id": "k-math-m1-c-15",
+    "code": "K.M1.C.15",
+    "standard": "HSA.CED.A.3",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "Applications of Systems of Equations & Inequalities",
+        "pageTitle": "Systems Modeling & Applications | Hesten's Learning",
+        "description": "Model multi-constraint authentic problems with systems of equations and linear inequalities.",
+        "pageDescription": "Solve real-world applications of systems: mixture problems, ticket sales, budget constraints, and feasible regions.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M1.C.15",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 24",
+        "pill": "Applied Systems Modeling",
+        "text": "In this culminating lesson for Topic C, you will apply systems of equations and inequalities to solve authentic multi-constraint real-world problems. You will define meaningful variables, formulate algebraic constraints, solve systems, and interpret solutions in physical context.",
+        "outcomes": [
+            "Represent constraints by systems of equations and inequalities.",
+            "Interpret solutions as viable or non-viable options in modeling contexts (e.g., non-negative quantities, whole people/items).",
+            "Solve classic mixture, investment, and rate applications using 2\u00d72 linear systems."
+        ],
+        "teacherInsight": "Remind students that real-world problems include implicit physical constraints like $x \\ge 0$ and $y \\ge 0$ (you cannot sell negative tickets or have negative volume)."
+    },
+    "content": [
+        {
+            "type": "html",
+            "html": "\n                <section class=\"lesson-overview-section\">\n                    <h3 class=\"lesson-section-title\">Classic Application: Theater Ticket Sales</h3>\n                    <div style=\"background:var(--color-surface); border:1px solid var(--color-border); border-radius:1rem; padding:1.25rem 1.5rem;\">\n                        <p style=\"font-size:0.95rem; color:var(--color-text-secondary); line-height:1.6; margin:0 0 0.75rem 0;\">\n                            A school drama production sold 200 total tickets for $1,400. Student tickets cost $5 each and adult tickets cost $10 each. How many of each were sold?\n                        </p>\n                        <div style=\"background:rgba(0,0,0,0.1); border-left:3px solid #10b981; padding:0.75rem 1rem; border-radius:0.5rem; font-size:0.9rem; line-height:1.6;\">\n                            <strong>Model:</strong><br>\n                            Let $s$ = student tickets, $a$ = adult tickets.<br>\n                            $$\\begin{cases} s + a = 200 & \\text{(Total Tickets)} \\\\ 5s + 10a = 1400 & \\text{(Total Revenue)} \\end{cases}$$\n                            Multiply first equation by -5: $-5s - 5a = -1000$. Add equations: $5a = 400 \\implies a = 80$ adult tickets. Then $s = 200 - 80 = 120$ student tickets.\n                        </div>\n                    </div>\n                </section>\n                "
+        }
+    ],
+    "vocabulary": [
+        {
+            "term": "Constraint",
+            "definition": "A condition or restriction that must be satisfied by the solutions of a mathematical model."
+        },
+        {
+            "term": "Feasible Region",
+            "definition": "The intersection of all half-planes defined by a system of inequalities representing all viable solutions."
+        }
+    ],
+    "practiceQuestions": [
+        {
+            "question": "A chemist mixes a 10% acid solution ($x$) with a 40% acid solution ($y$) to obtain 100 liters of a 22% acid solution. Which system models this situation?",
+            "options": [
+                "$\\begin{cases} x + y = 100 \\\\ 0.10x + 0.40y = 22 \\end{cases}$",
+                "$\\begin{cases} x + y = 22 \\\\ 0.10x + 0.40y = 100 \\end{cases}$",
+                "$\\begin{cases} 10x + 40y = 100 \\\\ x + y = 100 \\end{cases}$",
+                "$\\begin{cases} x + y = 100 \\\\ 0.10x + 0.40y = 0.22 \\end{cases}$"
+            ],
+            "correct": 0,
+            "explanation": "Total volume constraint is $x + y = 100$. Pure acid constraint is $0.10x + 0.40y = 0.22(100) = 22$."
+        },
+        {
+            "question": "In a physical problem modeling whole items produced, why must solutions like $(x, y) = (4.5, -2)$ be rejected?",
+            "options": [
+                "Because quantities of manufactured physical items must be non-negative integers ($x, y \\in \\{0, 1, 2, \\dots\\}$).",
+                "Because decimal numbers do not exist in algebra.",
+                "Because negative numbers can never be plotted on a graph.",
+                "The solution is actually viable."
+            ],
+            "correct": 0,
+            "explanation": "Mathematical models require domain viability: physical items cannot be negative, and discrete units cannot be fractional."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Applications of Systems of Equations and Inequalities.\" Eureka Math, New York State Common Core Mathematics Curriculum, Algebra I, Module 1, Topic C, Lesson 24.",
+        "subtext": "Aligned with CCSS.MATH.CONTENT.HSA.CED.A.3 \u2022 Represent constraints by equations or inequalities.",
+        "lessonId": "L-ID-ALG-K-M1-C-15"
+    },
+    "scripts": ""
+}

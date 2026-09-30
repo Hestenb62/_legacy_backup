@@ -1,0 +1,78 @@
+{
+    "id": "k-math-m1-c-7",
+    "code": "K.M1.C.7",
+    "standard": "HSA.REI.B.3",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "Solving and Graphing Inequalities Joined by 'And' or 'Or'",
+        "pageTitle": "Compound Inequalities: And / Or | Hesten's Learning",
+        "description": "Solve compound inequalities and graph bounded intervals and disjoint rays on coordinate lines.",
+        "pageDescription": "Solve compound linear inequalities, graph bounded intervals (and) and disjoint rays (or).",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M1.C.7",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 16",
+        "pill": "Compound Inequality Graphs",
+        "text": "In this lesson, you will solve compound inequalities algebraically and graph their solution sets on a real number line. You will observe that 'and' inequalities typically yield bounded segments ($a < x < b$), while 'or' inequalities often produce disjoint rays pointing in opposite directions.",
+        "outcomes": [
+            "Solve compound linear inequalities joined by 'and' or 'or'.",
+            "Graph bounded intervals (conjunctions) and disjoint rays (disjunctions) accurately on a number line.",
+            "Translate compound inequalities into interval notation."
+        ],
+        "teacherInsight": "Make sure students recognize shorthand compound notation: $-3 < 2x + 1 \\le 7$ is shorthand for '$-3 < 2x + 1$ AND $2x + 1 \\le 7$'. Never write disjoint 'or' statements in chained notation like $x < 2 \\text{ or } x > 5$."
+    },
+    "content": [
+        {
+            "type": "html",
+            "html": "\n                <section class=\"lesson-overview-section\">\n                    <h3 class=\"lesson-section-title\">Anatomy of Compound Inequality Graphs</h3>\n                    <div class=\"lesson-formula-grid\">\n                        <div class=\"lesson-formula-card card-linear-formula\">\n                            <h4 class=\"lesson-formula-title\"><i class=\"fas fa-arrows-alt-h mr-2\" style=\"color:#3b82f6;\"></i> Bounded Interval (\"And\")</h4>\n                            <div class=\"lesson-formula-math\">$$-2 < x \\le 4$$</div>\n                            <p class=\"lesson-formula-desc\">\n                                Represents the <strong>intersection</strong> of $x > -2$ and $x \\le 4$. The graph is a line segment between -2 (open circle) and 4 (closed dot).\n                            </p>\n                        </div>\n                        <div class=\"lesson-formula-card card-exp-formula\">\n                            <h4 class=\"lesson-formula-title\"><i class=\"fas fa-external-link-alt mr-2\" style=\"color:#e11d48;\"></i> Disjoint Rays (\"Or\")</h4>\n                            <div class=\"lesson-formula-math\">$$x \\le -1 \\quad \\text{or} \\quad x > 3$$</div>\n                            <p class=\"lesson-formula-desc\">\n                                Represents the <strong>union</strong> of two separate rays pointing outward in opposite directions.\n                            </p>\n                        </div>\n                    </div>\n                </section>\n                "
+        }
+    ],
+    "vocabulary": [
+        {
+            "term": "Compound Inequality",
+            "definition": "An inequality formed by joining two individual inequalities with the connective word 'and' or 'or'."
+        },
+        {
+            "term": "Bounded Interval",
+            "definition": "A continuous interval of real numbers with finite endpoints on both sides, e.g., (a, b] or [a, b]."
+        },
+        {
+            "term": "Disjoint Sets",
+            "definition": "Two sets that have no elements in common (their intersection is empty)."
+        }
+    ],
+    "practiceQuestions": [
+        {
+            "question": "Solve the compound inequality: $9 + 2x < 17$ or $7 - 4x < -9$.",
+            "options": [
+                "$x < 4$ or $x > 4$",
+                "$x < 4$ and $x > 4$",
+                "$-4 < x < 4$",
+                "All real numbers"
+            ],
+            "correct": 0,
+            "explanation": "Solve first inequality: $2x < 8 \\implies x < 4$. Solve second inequality: $-4x < -16 \\implies x > 4$ (remembering to flip the symbol). Joined by 'or', the solution is $x < 4$ or $x > 4$ (every real number except 4)."
+        },
+        {
+            "question": "Solve the double inequality: $-3 \\le 2x - 1 < 5$.",
+            "options": [
+                "$-1 \\le x < 3$",
+                "$-2 \\le x < 3$",
+                "$x \\ge -1$ or $x < 3$",
+                "$-1 < x \\le 3$"
+            ],
+            "correct": 0,
+            "explanation": "Add 1 to all three parts: $-2 \\le 2x < 6$. Divide all parts by 2: $-1 \\le x < 3$."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Solving and Graphing Inequalities Joined by 'And' or 'Or'.\" Eureka Math, New York State Common Core Mathematics Curriculum, Algebra I, Module 1, Topic C, Lesson 16.",
+        "subtext": "Aligned with CCSS.MATH.CONTENT.HSA.REI.B.3 \u2022 Solve linear equations and inequalities in one variable.",
+        "lessonId": "L-ID-ALG-K-M1-C-7"
+    },
+    "scripts": ""
+}

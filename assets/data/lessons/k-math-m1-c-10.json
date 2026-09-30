@@ -1,0 +1,78 @@
+{
+    "id": "k-math-m1-c-10",
+    "code": "K.M1.C.10",
+    "standard": "HSA.CED.A.4",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "Rearranging Formulas",
+        "pageTitle": "Rearranging Formulas & Literal Equations | Hesten's Learning",
+        "description": "Isolate specified variables in geometric, financial, and scientific literal equations.",
+        "pageDescription": "Solve multi-variable literal equations and rearrange formulas using inverse operations.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M1.C.10",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 19",
+        "pill": "Literal Equations & Formulas",
+        "text": "In this lesson, you will solve literal equations\u2014equations containing multiple variables representing physical quantities. You will treat the specified variable as the unknown while applying standard properties of equality to isolate it.",
+        "outcomes": [
+            "Rearrange formulas to highlight a quantity of interest, using the same reasoning as in solving equations.",
+            "Isolate variables in physical formulas: $d = rt \\to r = \\frac{d}{t}$, $A = \\frac{1}{2}bh \\to h = \\frac{2A}{b}$, and $F = \\frac{9}{5}C + 32 \\to C = \\frac{5}{9}(F - 32)$.",
+            "Explain the practical utility of rearranging formulas before numerical computation."
+        ],
+        "teacherInsight": "Encourage students to highlight or box the target variable in colored pencil. If they get stuck, replace all other letters with simple constants (like 2, 3) to recognize which operation must be undone first."
+    },
+    "content": [
+        {
+            "type": "html",
+            "html": "\n                <section class=\"lesson-overview-section\">\n                    <h3 class=\"lesson-section-title\">Common Scientific & Geometric Formula Transformations</h3>\n                    <div class=\"lesson-formula-grid\">\n                        <div class=\"lesson-formula-card card-linear-formula\">\n                            <h4 class=\"lesson-formula-title\"><i class=\"fas fa-tachometer-alt mr-2\" style=\"color:#3b82f6;\"></i> Distance Formula: $d = rt$</h4>\n                            <div class=\"lesson-formula-math\">$$r = \\frac{d}{t} \\quad \\text{and} \\quad t = \\frac{d}{r}$$</div>\n                            <p class=\"lesson-formula-desc\">Divide both sides by time $t$ to isolate rate, or divide by rate $r$ to isolate elapsed time.</p>\n                        </div>\n                        <div class=\"lesson-formula-card card-exp-formula\">\n                            <h4 class=\"lesson-formula-title\"><i class=\"fas fa-thermometer-half mr-2\" style=\"color:#e11d48;\"></i> Temperature Conversion: $F = \\frac{9}{5}C + 32$</h4>\n                            <div class=\"lesson-formula-math\">$$C = \\frac{5}{9}(F - 32)$$</div>\n                            <p class=\"lesson-formula-desc\">Subtract 32, then multiply both sides by the reciprocal fraction $\\frac{5}{9}$.</p>\n                        </div>\n                    </div>\n                </section>\n                "
+        }
+    ],
+    "vocabulary": [
+        {
+            "term": "Literal Equation",
+            "definition": "An equation consisting predominantly of letters and variables representing known or unknown quantities."
+        },
+        {
+            "term": "Formula",
+            "definition": "A mathematical relationship or rule expressed with algebraic symbols (e.g., V = lwh)."
+        },
+        {
+            "term": "Subject of a Formula",
+            "definition": "The variable that is isolated by itself on one side of an equation with a coefficient of 1."
+        }
+    ],
+    "practiceQuestions": [
+        {
+            "question": "Solve the area formula of a triangle $A = \\frac{1}{2}bh$ for height $h$.",
+            "options": [
+                "$h = \\frac{2A}{b}$",
+                "$h = \\frac{A}{2b}$",
+                "$h = 2Ab$",
+                "$h = A - \\frac{1}{2}b$"
+            ],
+            "correct": 0,
+            "explanation": "Multiply both sides by 2 to clear the fraction ($2A = bh$), then divide both sides by base $b$: $h = \\frac{2A}{b}$."
+        },
+        {
+            "question": "Solve the standard form linear equation $Ax + By = C$ for $y$ in terms of $x$ (assuming $B \\neq 0$).",
+            "options": [
+                "$y = -\\frac{A}{B}x + \\frac{C}{B}$",
+                "$y = \\frac{A}{B}x - \\frac{C}{B}$",
+                "$y = C - Ax - B$",
+                "$y = -\\frac{B}{A}x + \\frac{C}{A}$"
+            ],
+            "correct": 0,
+            "explanation": "Subtract $Ax$ from both sides ($By = -Ax + C$), then divide every term by $B$: $y = -\\frac{A}{B}x + \\frac{C}{B}$."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Rearranging Formulas.\" Eureka Math, New York State Common Core Mathematics Curriculum, Algebra I, Module 1, Topic C, Lesson 19.",
+        "subtext": "Aligned with CCSS.MATH.CONTENT.HSA.CED.A.4 \u2022 Rearrange formulas to highlight a quantity of interest.",
+        "lessonId": "L-ID-ALG-K-M1-C-10"
+    },
+    "scripts": ""
+}

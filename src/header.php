@@ -48,16 +48,16 @@ if (! function_exists('assetVersion')) {
 
 // Core Platform Version Definition
 if (! defined('HL_SITE_VERSION')) {
-    define('HL_SITE_VERSION', 'v2.6.0');
+    define('HL_SITE_VERSION', 'v2.7.0');
     }
 if (! defined('HL_SITE_VERSION_DATE')) {
     define('HL_SITE_VERSION_DATE', 'September 2026');
     }
 if (! defined('HL_SITE_VERSION_LABEL')) {
-    define('HL_SITE_VERSION_LABEL', 'September 2026 Platform Elevation Release');
+    define('HL_SITE_VERSION_LABEL', 'September 2026 Grade 9 Algebra I Module 1 Release');
     }
 if (! defined('HL_SITE_VERSION_SUMMARY')) {
-    define('HL_SITE_VERSION_SUMMARY', 'Global Command Palette, Interactive Manipulatives Lab, Cosmic Skill Tree, & Expanded Games Hub');
+    define('HL_SITE_VERSION_SUMMARY', 'Complete 28-Lesson Grade 9 Algebra I Module 1 Curriculum, Interactive Workbenches, and JSON-First Lesson Architecture');
     }
 ?>
 <!DOCTYPE html>

@@ -1,0 +1,74 @@
+{
+    "id": "k-math-m1-d-3",
+    "code": "K.M1.D.3",
+    "standard": "HSA.CED.A.3",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "Recursive Challenge: The Double and Add 5 Game (Part 2)",
+        "pageTitle": "Closed-Form Equations & Target Inversion | Hesten's Learning",
+        "description": "Derive explicit closed-form formulas for recursive relations and solve target-seeking inequalities.",
+        "pageDescription": "Derive the explicit formula a_n = 2^n(a_0 + 5) - 5 and solve inverse target inequality constraints.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M1.D.3",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 27",
+        "pill": "Explicit Closed Formulas",
+        "text": "In this lesson, you will transition from term-by-term recursive calculation to an explicit closed-form equation. By expanding $a_1, a_2, a_3$ algebraically, you will discover the closed-form rule $a_n = 2^n(a_0 + 5) - 5$ and use it to solve inverse target problems algebraically.",
+        "outcomes": [
+            "Unroll recursive calculations algebraically to derive the explicit closed formula $a_n = 2^n(a_0 + 5) - 5$.",
+            "Formulate and solve inequalities like $a_3 \\ge 1000$ without calculating intermediate rounds.",
+            "Understand the relationship between geometric series sums and recurrence constants."
+        ],
+        "teacherInsight": "Notice the algebraic pattern when unrolling: $a_1 = 2a_0 + 5$, $a_2 = 2(2a_0 + 5) + 5 = 4a_0 + 15$, $a_3 = 2(4a_0 + 15) + 5 = 8a_0 + 35$. The coefficient of $a_0$ is $2^n$ and the constant is $5(2^n - 1) = 2^n(5) - 5$."
+    },
+    "content": [
+        {
+            "type": "html",
+            "html": "\n                <section class=\"lesson-overview-section\">\n                    <h3 class=\"lesson-section-title\">Algebraic Derivation of the Closed-Form Formula</h3>\n                    <div style=\"background:var(--color-surface); border:1px solid var(--color-border); border-radius:1rem; padding:1.25rem 1.5rem;\">\n                        <div class=\"lesson-formula-math\">$$a_n = 2^n(a_0 + 5) - 5$$</div>\n                        <p style=\"font-size:0.95rem; color:var(--color-text-secondary); line-height:1.6; margin-top:0.75rem;\">\n                            To find the smallest starting integer $a_0$ that yields $\\ge 1,000$ in 3 rounds:\n                            $$a_3 = 2^3(a_0 + 5) - 5 \\ge 1000$$\n                            $$8(a_0 + 5) - 5 \\ge 1000 \\implies 8a_0 + 35 \\ge 1000 \\implies 8a_0 \\ge 965 \\implies a_0 \\ge 120.625$$\n                            Since $a_0$ must be a whole number, the smallest starting number is <strong>121</strong>!\n                        </p>\n                    </div>\n                </section>\n                "
+        }
+    ],
+    "vocabulary": [
+        {
+            "term": "Explicit (Closed-Form) Formula",
+            "definition": "A formula allowing direct calculation of the nth term of a sequence using only the index n, without computing any preceding terms."
+        },
+        {
+            "term": "Target Inversion",
+            "definition": "Setting an explicit sequence formula equal or unequal to a desired threshold target and solving backwards for the initial term."
+        }
+    ],
+    "practiceQuestions": [
+        {
+            "question": "Using the explicit formula $a_n = 2^n(a_0 + 5) - 5$, what is $a_3$ if $a_0 = 10$?",
+            "options": [
+                "115",
+                "120",
+                "95",
+                "105"
+            ],
+            "correct": 0,
+            "explanation": "Substitute $n = 3$ and $a_0 = 10$: $a_3 = 2^3(10 + 5) - 5 = 8(15) - 5 = 120 - 5 = 115$."
+        },
+        {
+            "question": "What is the smallest whole number starting value $a_0$ that produces a number $\\ge 1,000$ in 3 rounds?",
+            "options": [
+                "121",
+                "120",
+                "125",
+                "119"
+            ],
+            "correct": 0,
+            "explanation": "$8a_0 + 35 \\ge 1000 \\implies 8a_0 \\ge 965 \\implies a_0 \\ge 120.625$. The smallest whole number is 121."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Recursive Challenge Problem\u2014The Double and Add 5 Game.\" Eureka Math, New York State Common Core Mathematics Curriculum, Algebra I, Module 1, Topic D, Lesson 27.",
+        "subtext": "Aligned with CCSS.MATH.CONTENT.HSA.CED.A.3 \u2022 Represent constraints by equations or inequalities.",
+        "lessonId": "L-ID-ALG-K-M1-D-3"
+    },
+    "scripts": ""
+}

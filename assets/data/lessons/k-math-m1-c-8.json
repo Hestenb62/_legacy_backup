@@ -1,0 +1,78 @@
+{
+    "id": "k-math-m1-c-8",
+    "code": "K.M1.C.8",
+    "standard": "HSA.SSE.A.2",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "Equations Involving Factored Expressions",
+        "pageTitle": "Factored Equations & Zero-Product Property | Hesten's Learning",
+        "description": "Solve quadratic and polynomial equations in factored form using the Zero-Product Property.",
+        "pageDescription": "Master the Zero-Product Property: (x - a)(x - b) = 0 implies x = a or x = b.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M1.C.8",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 17",
+        "pill": "Zero-Product Property",
+        "text": "In this lesson, you will discover the power of factoring to solve higher-degree equations. The Zero-Product Property guarantees that if the product of multiple factors equals zero, at least one of the factors must be zero. This converts a quadratic equation into two simple linear equations.",
+        "outcomes": [
+            "Understand and apply the Zero-Product Property: $ab = 0 \\iff a = 0 \\text{ or } b = 0$.",
+            "Solve quadratic equations written in factored form $(x - p)(x - q) = 0$.",
+            "Factor out common monomial factors to solve equations like $3x^2 + 27x = 0$."
+        ],
+        "teacherInsight": "Caution students that the Zero-Product Property ONLY works when the expression is set equal to ZERO. If $(x - 2)(x - 3) = 6$, you CANNOT conclude $x - 2 = 6$ or $x - 3 = 1$; you must first expand, subtract 6 to get standard form $x^2 - 5x = 0$, and refactor."
+    },
+    "content": [
+        {
+            "type": "html",
+            "html": "\n                <section class=\"lesson-sim-workbench\" aria-labelledby=\"sim-title-l17\">\n                    <div class=\"lesson-sim-header\">\n                        <div class=\"lesson-sim-title-wrap\">\n                            <h3 id=\"sim-title-l17\" class=\"lesson-sim-title\">\n                                <i class=\"fas fa-project-diagram\" aria-hidden=\"true\"></i> Interactive Zero-Product Property Solver\n                            </h3>\n                            <p class=\"lesson-sim-subtitle\">\n                                Adjust roots $p$ and $q$ for $(x - p)(x - q) = 0$. Observe how each factor produces an independent linear equation.\n                            </p>\n                        </div>\n                    </div>\n                    <div class=\"lesson-sim-grid\">\n                        <div class=\"lesson-sim-controls\">\n                            <div class=\"lesson-sim-slider-box\">\n                                <div class=\"lesson-sim-slider-label\"><span>Root 1 ($p$):</span><span id=\"badge-root-p\" class=\"lesson-sim-step-badge\">p = 3</span></div>\n                                <input type=\"range\" id=\"input-root-p\" min=\"-5\" max=\"5\" value=\"3\" oninput=\"updateZeroProdSim()\" class=\"lesson-sim-slider\">\n                            </div>\n                            <div class=\"lesson-sim-slider-box\">\n                                <div class=\"lesson-sim-slider-label\"><span>Root 2 ($q$):</span><span id=\"badge-root-q\" class=\"lesson-sim-step-badge\">q = -2</span></div>\n                                <input type=\"range\" id=\"input-root-q\" min=\"-5\" max=\"5\" value=\"-2\" oninput=\"updateZeroProdSim()\" class=\"lesson-sim-slider\">\n                            </div>\n                        </div>\n                        <div class=\"lesson-sim-visualizer\" style=\"display:flex; flex-direction:column; justify-content:center; align-items:center;\">\n                            <div style=\"background:rgba(0,0,0,0.25); border:1px solid var(--color-border); border-radius:0.75rem; padding:1.25rem; width:100%; text-align:center;\">\n                                <div id=\"zero-prod-eq\" style=\"font-size:1.3rem; font-weight:900; font-family:'Outfit',sans-serif; color:#60a5fa; margin-bottom:0.75rem;\">\n                                    (x - 3)(x + 2) = 0\n                                </div>\n                                <div style=\"display:grid; grid-template-columns:1fr 1fr; gap:0.75rem; font-size:0.9rem;\">\n                                    <div style=\"background:rgba(59,130,246,0.15); border:1px solid #3b82f6; border-radius:0.5rem; padding:0.5rem;\">\n                                        Factor 1: <strong id=\"fac-1-eq\">x - 3 = 0</strong> &rArr; <span id=\"root-1-res\" style=\"color:#60a5fa; font-weight:800;\">x = 3</span>\n                                    </div>\n                                    <div style=\"background:rgba(225,29,72,0.15); border:1px solid #f43f5e; border-radius:0.5rem; padding:0.5rem;\">\n                                        Factor 2: <strong id=\"fac-2-eq\">x + 2 = 0</strong> &rArr; <span id=\"root-2-res\" style=\"color:#f43f5e; font-weight:800;\">x = -2</span>\n                                    </div>\n                                </div>\n                                <div class=\"lesson-sim-ratio-pill\" id=\"zero-prod-pill\" style=\"margin-top:1rem;\">\n                                    Solution Set: {-2, 3}\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </section>\n                "
+        }
+    ],
+    "vocabulary": [
+        {
+            "term": "Zero-Product Property",
+            "definition": "If the product of two real numbers is zero, then at least one of the numbers must be zero: ab = 0 implies a = 0 or b = 0."
+        },
+        {
+            "term": "Factored Form",
+            "definition": "An expression expressed as a product of irreducible linear or polynomial factors."
+        },
+        {
+            "term": "Roots / Zeros",
+            "definition": "The input values that cause an expression or function to evaluate to zero."
+        }
+    ],
+    "practiceQuestions": [
+        {
+            "question": "What is the solution set to $3x^2 + 27x = 0$?",
+            "options": [
+                "$\\{0, -9\\}$",
+                "$\\{0, 9\\}$",
+                "$\\{-9\\}$",
+                "$\\{3, -9\\}$"
+            ],
+            "correct": 0,
+            "explanation": "Factor out greatest common factor $3x$: $3x(x + 9) = 0$. By Zero-Product Property, $3x = 0 \\implies x = 0$ or $x + 9 = 0 \\implies x = -9$. Solution set is $\\{0, -9\\}$."
+        },
+        {
+            "question": "Why can the Zero-Product Property NOT be applied directly to $(x - 1)(x - 2) = 12$?",
+            "options": [
+                "Because the right-hand side is 12, not 0. Factors can multiply to 12 in infinite real combinations without either factor being 12.",
+                "Because the equation has negative numbers.",
+                "Because quadratic equations can never equal 12.",
+                "The property can be applied directly, yielding $x = 13$."
+            ],
+            "correct": 0,
+            "explanation": "The Zero-Product Property is unique to 0. If $ab = 12$, $a$ and $b$ could be 3 and 4, 2 and 6, etc. You must expand to $x^2 - 3x - 10 = 0$ and refactor to $(x - 5)(x + 2) = 0$."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Equations Involving Factored Expressions.\" Eureka Math, New York State Common Core Mathematics Curriculum, Algebra I, Module 1, Topic C, Lesson 17.",
+        "subtext": "Aligned with CCSS.MATH.CONTENT.HSA.SSE.A.2 \u2022 Use the structure of an expression to identify ways to rewrite it.",
+        "lessonId": "L-ID-ALG-K-M1-C-8"
+    },
+    "scripts": "\n        function updateZeroProdSim() {\n            const p = parseInt(document.getElementById('input-root-p').value, 10);\n            const q = parseInt(document.getElementById('input-root-q').value, 10);\n\n            document.getElementById('badge-root-p').innerText = 'p = ' + p;\n            document.getElementById('badge-root-q').innerText = 'q = ' + q;\n\n            const pSign = (p >= 0) ? `- ${p}` : `+ ${Math.abs(p)}`;\n            const qSign = (q >= 0) ? `- ${q}` : `+ ${Math.abs(q)}`;\n\n            document.getElementById('zero-prod-eq').innerText = `(x ${pSign})(x ${qSign}) = 0`;\n            document.getElementById('fac-1-eq').innerText = `x ${pSign} = 0`;\n            document.getElementById('fac-2-eq').innerText = `x ${qSign} = 0`;\n            document.getElementById('root-1-res').innerText = `x = ${p}`;\n            document.getElementById('root-2-res').innerText = `x = ${q}`;\n\n            const roots = Array.from(new Set([p, q])).sort((a,b) => a - b);\n            document.getElementById('zero-prod-pill').innerText = `Solution Set: {${roots.join(', ')}}`;\n        }\n\n        document.addEventListener('DOMContentLoaded', () => {\n            updateZeroProdSim();\n        });\n        "
+}

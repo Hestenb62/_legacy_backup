@@ -1,0 +1,82 @@
+{
+    "id": "k-math-m1-b-3",
+    "code": "K.M1.B.3",
+    "standard": "HSA.APR.A.1",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "Adding and Subtracting Polynomials",
+        "pageTitle": "Adding & Subtracting Polynomials | Hesten's Learning",
+        "description": "Understand polynomial structure, standard form, degree, and prove closure under addition and subtraction.",
+        "pageDescription": "Learn polynomial degrees, term classification, like-term collection, and algebraic closure.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M1.B.3",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 8",
+        "pill": "Polynomial Operations & Closure",
+        "text": "In this lesson, you will formalize the definition of polynomials. You will classify polynomials by degree and number of terms, arrange them into descending standard form, and demonstrate that the set of polynomials is closed under addition and subtraction.",
+        "outcomes": [
+            "Understand that a polynomial is a sum of monomials and classify polynomials by degree (linear, quadratic, cubic).",
+            "Write polynomials in standard form by ordering terms in descending order of exponent degrees.",
+            "Understand and apply the concept of closure: adding or subtracting any polynomials always produces another polynomial."
+        ],
+        "teacherInsight": "Draw analogies between the set of integers and the set of polynomials: integers are closed under addition and subtraction, and so are polynomials. Be sure students attend to distributing the negative sign when subtracting polynomials: $-(a - b) = -a + b$."
+    },
+    "content": [
+        {
+            "type": "html",
+            "html": "\n                <section class=\"lesson-sim-workbench\" aria-labelledby=\"sim-title-l8\">\n                    <div class=\"lesson-sim-header\">\n                        <div class=\"lesson-sim-title-wrap\">\n                            <h3 id=\"sim-title-l8\" class=\"lesson-sim-title\">\n                                <i class=\"fas fa-cubes\" aria-hidden=\"true\"></i> Polynomial Degree & Like-Term Combiner\n                            </h3>\n                            <p class=\"lesson-sim-subtitle\">\n                                Adjust coefficients for Polynomial $P(x) = ax^2 + bx + c$ and $Q(x) = dx^2 + ex + f$. View real-time sum and difference in standard form.\n                            </p>\n                        </div>\n                    </div>\n                    <div class=\"lesson-sim-grid\">\n                        <div class=\"lesson-sim-controls\">\n                            <div style=\"font-weight:700; font-size:0.85rem; color:#60a5fa; margin-bottom:0.25rem;\">Polynomial $P(x)$ Coefficients:</div>\n                            <div style=\"display:grid; grid-template-columns:1fr 1fr 1fr; gap:0.5rem;\">\n                                <div><label style=\"font-size:0.75rem;\">$x^2$:</label><input type=\"number\" id=\"p-c2\" value=\"3\" class=\"lesson-sim-slider\" oninput=\"updatePolySim()\"></div>\n                                <div><label style=\"font-size:0.75rem;\">$x$:</label><input type=\"number\" id=\"p-c1\" value=\"-2\" class=\"lesson-sim-slider\" oninput=\"updatePolySim()\"></div>\n                                <div><label style=\"font-size:0.75rem;\">Const:</label><input type=\"number\" id=\"p-c0\" value=\"5\" class=\"lesson-sim-slider\" oninput=\"updatePolySim()\"></div>\n                            </div>\n                            <div style=\"font-weight:700; font-size:0.85rem; color:#f43f5e; margin:0.75rem 0 0.25rem 0;\">Polynomial $Q(x)$ Coefficients:</div>\n                            <div style=\"display:grid; grid-template-columns:1fr 1fr 1fr; gap:0.5rem;\">\n                                <div><label style=\"font-size:0.75rem;\">$x^2$:</label><input type=\"number\" id=\"q-c2\" value=\"1\" class=\"lesson-sim-slider\" oninput=\"updatePolySim()\"></div>\n                                <div><label style=\"font-size:0.75rem;\">$x$:</label><input type=\"number\" id=\"q-c1\" value=\"4\" class=\"lesson-sim-slider\" oninput=\"updatePolySim()\"></div>\n                                <div><label style=\"font-size:0.75rem;\">Const:</label><input type=\"number\" id=\"q-c0\" value=\"-3\" class=\"lesson-sim-slider\" oninput=\"updatePolySim()\"></div>\n                            </div>\n                        </div>\n                        <div class=\"lesson-sim-visualizer\" style=\"display:flex; flex-direction:column; justify-content:center; gap:0.75rem;\">\n                            <div style=\"padding:1rem; background:rgba(0,0,0,0.2); border-radius:0.75rem; border:1px solid var(--color-border);\">\n                                <span style=\"font-size:0.8rem; font-weight:700; color:#3b82f6;\">Sum: $P(x) + Q(x)$</span>\n                                <div id=\"poly-sum-res\" style=\"font-size:1.15rem; font-weight:800; color:#ffffff; font-family:'Outfit',sans-serif; margin-top:0.25rem;\">\n                                    4x\u00b2 + 2x + 2\n                                </div>\n                            </div>\n                            <div style=\"padding:1rem; background:rgba(0,0,0,0.2); border-radius:0.75rem; border:1px solid var(--color-border);\">\n                                <span style=\"font-size:0.8rem; font-weight:700; color:#e11d48;\">Difference: $P(x) - Q(x)$</span>\n                                <div id=\"poly-diff-res\" style=\"font-size:1.15rem; font-weight:800; color:#ffffff; font-family:'Outfit',sans-serif; margin-top:0.25rem;\">\n                                    2x\u00b2 - 6x + 8\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </section>\n                "
+        }
+    ],
+    "vocabulary": [
+        {
+            "term": "Polynomial",
+            "definition": "An expression consisting of variables and coefficients, constructed using only addition, subtraction, multiplication, and non-negative integer exponentiation."
+        },
+        {
+            "term": "Degree of a Polynomial",
+            "definition": "The highest exponent of the variable in any term of the polynomial (when in one variable)."
+        },
+        {
+            "term": "Standard Form of a Polynomial",
+            "definition": "A polynomial written such that its terms are placed in descending order of degree from left to right."
+        },
+        {
+            "term": "Closure",
+            "definition": "A set has closure under an operation if performing that operation on members of the set always produces a member of the same set. Polynomials are closed under addition and subtraction."
+        }
+    ],
+    "practiceQuestions": [
+        {
+            "question": "What is the result of $(w^2 - w + 1) + (w^3 - 2w^2 + 99)$ in standard form?",
+            "options": [
+                "$w^3 - w^2 - w + 100$",
+                "$w^3 + w^2 - w + 100$",
+                "$w^3 - 3w^2 - w + 98$",
+                "$2w^3 - w^2 + 100$"
+            ],
+            "correct": 0,
+            "explanation": "Group like terms by degree: $w^3 + (w^2 - 2w^2) - w + (1 + 99) = w^3 - w^2 - w + 100$."
+        },
+        {
+            "question": "Subtract $(4x^2 - 3x + 7)$ from $(6x^2 + 2x - 1)$.",
+            "options": [
+                "$2x^2 + 5x - 8$",
+                "$2x^2 - x + 6$",
+                "$10x^2 - x + 6$",
+                "$2x^2 + 5x + 8$"
+            ],
+            "correct": 0,
+            "explanation": "Set up subtraction: $(6x^2 + 2x - 1) - (4x^2 - 3x + 7) = 6x^2 + 2x - 1 - 4x^2 + 3x - 7 = 2x^2 + 5x - 8$."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Adding and Subtracting Polynomials.\" Eureka Math, New York State Common Core Mathematics Curriculum, Algebra I, Module 1, Topic B, Lesson 8.",
+        "subtext": "Aligned with CCSS.MATH.CONTENT.HSA.APR.A.1 \u2022 Understand that polynomials form a system analogous to the integers.",
+        "lessonId": "L-ID-ALG-K-M1-B-3"
+    },
+    "scripts": "\n        function updatePolySim() {\n            const p2 = parseFloat(document.getElementById('p-c2').value) || 0;\n            const p1 = parseFloat(document.getElementById('p-c1').value) || 0;\n            const p0 = parseFloat(document.getElementById('p-c0').value) || 0;\n\n            const q2 = parseFloat(document.getElementById('q-c2').value) || 0;\n            const q1 = parseFloat(document.getElementById('q-c1').value) || 0;\n            const q0 = parseFloat(document.getElementById('q-c0').value) || 0;\n\n            // Sum\n            const s2 = p2 + q2;\n            const s1 = p1 + q1;\n            const s0 = p0 + q0;\n\n            // Diff\n            const d2 = p2 - q2;\n            const d1 = p1 - q1;\n            const d0 = p0 - q0;\n\n            function formatPoly(c2, c1, c0) {\n                let parts = [];\n                if (c2 !== 0) parts.push(`${c2}x\u00b2`);\n                if (c1 > 0) parts.push(`+ ${c1}x`);\n                else if (c1 < 0) parts.push(`- ${Math.abs(c1)}x`);\n                if (c0 > 0) parts.push(`+ ${c0}`);\n                else if (c0 < 0) parts.push(`- ${Math.abs(c0)}`);\n                return parts.length > 0 ? parts.join(' ') : '0';\n            }\n\n            document.getElementById('poly-sum-res').innerText = formatPoly(s2, s1, s0);\n            document.getElementById('poly-diff-res').innerText = formatPoly(d2, d1, d0);\n        }\n\n        document.addEventListener('DOMContentLoaded', () => {\n            updatePolySim();\n        });\n        "
+}

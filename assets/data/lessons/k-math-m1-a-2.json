@@ -1,0 +1,78 @@
+{
+    "id": "k-math-m1-a-2",
+    "code": "K.M1.A.2",
+    "standard": "HSA.CED.A.2",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "Growth of Square Areas and Functions",
+        "pageTitle": "Growth of Square Areas and Functions | Hesten's Learning",
+        "description": "How do geometric figures grow? Contrast linear perimeter growth with quadratic area expansion using an interactive geometric workbench.",
+        "pageDescription": "Examine how the area of a square grows compared to its side length, laying foundations for quadratic functions.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M1.A.2",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 2",
+        "pill": "Linear vs. Quadratic",
+        "text": "In this lesson, you will analyze how perimeter and area change as a square's side length varies. While perimeter grows linearly by constant increments of 4, area expands quadratically at an accelerating rate.",
+        "outcomes": [
+            "Represent perimeter growth with linear functions ($P(s) = 4s$) and area growth with quadratic functions ($A(s) = s^2$).",
+            "Recognize that quadratic functions feature a variable raised to the second power and possess a non-constant rate of change.",
+            "Analyze tabular and graphical representations showing how area quickly surpasses perimeter for $s > 4$."
+        ],
+        "teacherInsight": "Highlight the special transition points: at $s = 4$, the numerical value of the perimeter ($4 \\times 4 = 16$) equals the area ($4^2 = 16$). For any side length greater than 4, area dominates."
+    },
+    "content": [
+        {
+            "type": "html",
+            "html": "<section class=\"lesson-sim-workbench\" aria-labelledby=\"sim-title\">\n            <div class=\"lesson-sim-header\">\n                <div class=\"lesson-sim-title-wrap\">\n                    <h3 id=\"sim-title\" class=\"lesson-sim-title\">\n                        <i class=\"fas fa-shapes\" aria-hidden=\"true\"></i> Geometric Side Length Simulator ($s \\to 4s \\text{ vs. } s^2$)\n                    </h3>\n                    <p class=\"lesson-sim-subtitle\">\n                        Adjust the slider below to change the square's side length ($s$). Watch the perimeter increase steadily while the area expands quadratically!\n                    </p>\n                </div>\n                <div class=\"lesson-sim-presets\">\n                    <span style=\"font-size: 0.75rem; font-weight: 700; color: var(--color-text-secondary); margin-right: 0.25rem;\">Presets:</span>\n                    <button type=\"button\" class=\"lesson-sim-preset-btn\" onclick=\"setSide(1)\">s = 1 (Small)</button>\n                    <button type=\"button\" class=\"lesson-sim-preset-btn\" onclick=\"setSide(4)\">s = 4 (Perimeter = Area = 16)</button>\n                    <button type=\"button\" class=\"lesson-sim-preset-btn\" onclick=\"setSide(7)\">s = 7 (Area Dominates)</button>\n                    <button type=\"button\" class=\"lesson-sim-preset-btn\" onclick=\"setSide(10)\">s = 10 (Area = 100!)</button>\n                </div>\n            </div>\n\n            <div class=\"lesson-sim-grid\">\n                <!-- Controls Column -->\n                <div class=\"lesson-sim-controls\">\n                    <div class=\"lesson-sim-slider-box\">\n                        <div class=\"lesson-sim-slider-label\">\n                            <span>Side Length (<strong style=\"color: #e11d48;\">s</strong>):</span>\n                            <span id=\"side-badge\" class=\"lesson-sim-step-badge\">s = 5</span>\n                        </div>\n                        <input type=\"range\" id=\"side-slider\" min=\"1\" max=\"10\" value=\"5\" step=\"1\" oninput=\"updateSquareSim(this.value)\" class=\"lesson-sim-slider\" aria-label=\"Side length slider from 1 to 10\">\n                        <div class=\"lesson-sim-ticks\">\n                            <span>1</span>\n                            <span>2</span>\n                            <span>3</span>\n                            <span>4</span>\n                            <span>5</span>\n                            <span>6</span>\n                            <span>7</span>\n                            <span>8</span>\n                            <span>9</span>\n                            <span>10</span>\n                        </div>\n                    </div>\n\n                    <div class=\"lesson-sim-stat-grid\">\n                        <div class=\"lesson-sim-stat-card card-linear\">\n                            <span class=\"lesson-sim-stat-tag\"><i class=\"fas fa-vector-square mr-1\" aria-hidden=\"true\"></i> Perimeter ($4s$)</span>\n                            <span id=\"perimeter-val\" class=\"lesson-sim-stat-val stat-linear-color\">20</span>\n                            <span id=\"perimeter-calc\" class=\"lesson-sim-stat-calc\">4 &times; 5 = 20 units</span>\n                        </div>\n                        <div class=\"lesson-sim-stat-card card-exp\">\n                            <span class=\"lesson-sim-stat-tag\"><i class=\"fas fa-th mr-1\" aria-hidden=\"true\"></i> Area ($s^2$)</span>\n                            <span id=\"area-val\" class=\"lesson-sim-stat-val stat-exp-color\">25</span>\n                            <span id=\"area-calc\" class=\"lesson-sim-stat-calc\">5\u00b2 = 25 sq units</span>\n                        </div>\n                    </div>\n                </div>\n\n                <!-- Visualizer Column: Dynamic Scaled Square Graphic -->\n                <div class=\"lesson-sim-visualizer\" style=\"display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 280px;\">\n                    <div style=\"position: relative; width: 220px; height: 220px; display: flex; align-items: center; justify-content: center; background: rgba(0, 0, 0, 0.2); border-radius: 1rem; border: 1px dashed var(--color-border, #334155);\">\n                        <div id=\"visual-square\" style=\"width: 100px; height: 100px; background: rgba(225, 29, 72, 0.2); border: 3px solid #e11d48; border-radius: 0.5rem; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #ffffff; font-weight: 800; font-family: 'Outfit', sans-serif; transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1); box-shadow: 0 0 15px rgba(225, 29, 72, 0.3);\">\n                            <span id=\"visual-square-label\" style=\"font-size: 1rem;\">s = 5</span>\n                            <span id=\"visual-square-sub\" style=\"font-size: 0.75rem; opacity: 0.85;\">25 sq units</span>\n                        </div>\n                    </div>\n                    <div class=\"lesson-sim-ratio-box\" style=\"width: 100%; margin-top: 1rem;\">\n                        <div class=\"lesson-sim-ratio-pill\" id=\"square-ratio-pill\">\n                            <i class=\"fas fa-balance-scale\" style=\"color: #f43f5e;\"></i> Area exceeds perimeter by <strong>5 units</strong>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </section>"
+        },
+        {
+            "type": "html",
+            "html": "<section class=\"lesson-overview-section\">\n            <h3 class=\"lesson-section-title\">Linear vs. Quadratic Growth Dynamics</h3>\n            <p class=\"lesson-overview-text\">\n                Compare the fundamental mathematical structures governing linear and quadratic relationships:\n            </p>\n\n            <div class=\"lesson-formula-grid\">\n                <div class=\"lesson-formula-card card-linear-formula\">\n                    <h4 class=\"lesson-formula-title\"><i class=\"fas fa-ruler mr-2\" style=\"color: #3b82f6;\"></i> Linear (Perimeter)</h4>\n                    <div class=\"lesson-formula-math\">P(s) = 4s</div>\n                    <p class=\"lesson-formula-desc\">\n                        <strong>Constant Rate of Change:</strong> Adding 1 unit of side length always increases the perimeter by exactly 4 units.\n                    </p>\n                </div>\n                <div class=\"lesson-formula-card card-exp-formula\">\n                    <h4 class=\"lesson-formula-title\"><i class=\"fas fa-expand mr-2\" style=\"color: #e11d48;\"></i> Quadratic (Area)</h4>\n                    <div class=\"lesson-formula-math\">A(s) = s<sup>2</sup></div>\n                    <p class=\"lesson-formula-desc\">\n                        <strong>Accelerating Rate of Change:</strong> Each 1-unit increase in side length yields a larger increase in area than the last step.\n                    </p>\n                </div>\n            </div>\n        </section>"
+        }
+    ],
+    "vocabulary": [
+        {
+            "term": "Quadratic Function",
+            "definition": "A polynomial function of degree 2 ($f(x) = ax^2 + bx + c$, with $a \\neq 0$). Its graph forms a U-shaped parabola."
+        },
+        {
+            "term": "Second Differences",
+            "definition": "The differences between consecutive first differences. In any quadratic sequence with equal intervals, the second differences are constant!"
+        }
+    ],
+    "practiceQuestions": [
+        {
+            "question": "How does the perimeter of a square change when its side length increases from 3 to 4 units?",
+            "options": [
+                "Increases by 4 units",
+                "Increases by 7 units",
+                "Increases by 12 units",
+                "Increases by 16 units"
+            ],
+            "correct": 0,
+            "explanation": "Perimeter is linear: P(s) = 4s. For s=3, P=12. For s=4, P=16. The increase is exactly 16 - 12 = 4 units."
+        },
+        {
+            "question": "Why does area growth represent a quadratic function rather than a linear function?",
+            "options": [
+                "The perimeter always remains constant",
+                "The rate of change increases at every step because the variable is squared (A = s\u00b2)",
+                "The area can never exceed the perimeter",
+                "Quadratic functions only apply to non-geometric shapes"
+            ],
+            "correct": 1,
+            "explanation": "In A(s) = s\u00b2, the rate of change is not constant. Each successive unit increase in side length yields a larger increase in area than the previous one."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Eureka Math. \"Growth of Square Areas and Functions.\" New York State Common Core Mathematics Curriculum, Algebra I, Module 1, Topic A, Lesson 2.",
+        "subtext": "Aligned with standard HSA.CED.A.2 &bull; Create equations in two or more variables to represent relationships between quantities.",
+        "lessonId": "L-ID-SQR-K-M1-A-2"
+    },
+    "scripts": "function updateSquareSim(side) {\n        const s = parseInt(side, 10);\n        const perim = 4 * s;\n        const area = s * s;\n\n        // Update Slider Badge\n        const badge = document.getElementById('side-badge');\n        if (badge) badge.innerText = `s = ${s}`;\n\n        // Update Stat Readouts\n        const perimVal = document.getElementById('perimeter-val');\n        const areaVal = document.getElementById('area-val');\n        const perimCalc = document.getElementById('perimeter-calc');\n        const areaCalc = document.getElementById('area-calc');\n\n        if (perimVal) perimVal.innerText = perim;\n        if (areaVal) areaVal.innerText = area;\n        if (perimCalc) perimCalc.innerText = `4 \\u00D7 ${s} = ${perim} units`;\n        if (areaCalc) areaCalc.innerText = `${s}\u00b2 = ${area} sq units`;\n\n        // Update Visual Square representation\n        const visual = document.getElementById('visual-square');\n        const label = document.getElementById('visual-square-label');\n        const sub = document.getElementById('visual-square-sub');\n\n        if (visual) {\n            // Clamp size between 30px and 200px\n            const pxSize = 30 + (s - 1) * 18;\n            visual.style.width = pxSize + 'px';\n            visual.style.height = pxSize + 'px';\n        }\n        if (label) label.innerText = `s = ${s}`;\n        if (sub) sub.innerText = `${area} sq units`;\n\n        // Ratio / Comparison Pill\n        const pill = document.getElementById('square-ratio-pill');\n        if (pill) {\n            if (perim === area) {\n                pill.innerHTML = '<i class=\"fas fa-balance-scale\" style=\"color: #60a5fa;\"></i> At s = 4, Perimeter equals Area numerically (16)';\n            } else if (area > perim) {\n                const diff = area - perim;\n                pill.innerHTML = '<i class=\"fas fa-chart-line\" style=\"color: #f43f5e;\"></i> Area exceeds perimeter by <strong>' + diff + ' units</strong>';\n            } else {\n                const diff = perim - area;\n                pill.innerHTML = '<i class=\"fas fa-info-circle\" style=\"color: #3b82f6;\"></i> Perimeter exceeds area by <strong>' + diff + ' units</strong>';\n            }\n        }\n    }\n\n    function setSide(val) {\n        const slider = document.getElementById('side-slider');\n        if (slider) {\n            slider.value = val;\n            updateSquareSim(val);\n        }\n    }\n\n    function toggleVocabCard(id) {\n        const body = document.getElementById(`${id}-body`);\n        const icon = document.getElementById(`${id}-icon`);\n        if (!body) return;\n\n        if (body.style.maxHeight && body.style.maxHeight !== '0px') {\n            body.style.maxHeight = '0px';\n            if (icon) icon.innerHTML = '<i class=\"fas fa-chevron-down\"></i>';\n        } else {\n            body.style.maxHeight = body.scrollHeight + 'px';\n            if (icon) icon.innerHTML = '<i class=\"fas fa-chevron-up\"></i>';\n        }\n    }\n\n    document.addEventListener('DOMContentLoaded', () => {\n        updateSquareSim(5);\n    });"
+}

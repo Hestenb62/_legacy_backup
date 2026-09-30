@@ -1,0 +1,74 @@
+{
+    "id": "k-math-m1-c-11",
+    "code": "K.M1.C.11",
+    "standard": "HSA.REI.D.10",
+    "levelId": "k",
+    "requiresMathJax": true,
+    "meta": {
+        "title": "Solution Sets to Equations with Two Variables",
+        "pageTitle": "Two-Variable Equations & Coordinate Graphs | Hesten's Learning",
+        "description": "Understand that the graph of an equation in two variables is the set of all ordered pairs that satisfy it.",
+        "pageDescription": "Explore ordered pair solutions, linear equations in two variables, and graphical representations on the Cartesian plane.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson K.M1.C.11",
+        "badgeIcon": "fa-calculator"
+    },
+    "overview": {
+        "title": "Student & Teacher Overview: Lesson 20",
+        "pill": "Cartesian Graphs & Solutions",
+        "text": "In this lesson, you will connect algebraic equations in two variables to geometric curves. A solution to an equation with two variables is an ordered pair $(x, y)$ that produces a true numerical statement. The graph of the equation is the visual plotting of its infinite solution set.",
+        "outcomes": [
+            "Recognize and identify ordered pair solutions $(x, y)$ to two-variable linear equations $Ax + By = C$.",
+            "Understand that the graph of a line is a visual representation of all infinite solutions to the equation.",
+            "Verify whether any given point $(x_0, y_0)$ lies on the line by testing if it satisfies the equation."
+        ],
+        "teacherInsight": "Stress that a line on a coordinate plane is not just a geometric line segment: it is literally a cloud of infinite points packed together, each of which is an exact solution $(x,y)$ to the equation."
+    },
+    "content": [
+        {
+            "type": "html",
+            "html": "\n                <section class=\"lesson-sim-workbench\" aria-labelledby=\"sim-title-l20\">\n                    <div class=\"lesson-sim-header\">\n                        <div class=\"lesson-sim-title-wrap\">\n                            <h3 id=\"sim-title-l20\" class=\"lesson-sim-title\">\n                                <i class=\"fas fa-crosshairs\" aria-hidden=\"true\"></i> 2D Coordinate Solution Tester: $2x + y = 6$\n                            </h3>\n                            <p class=\"lesson-sim-subtitle\">\n                                Adjust test coordinates $(x, y)$. The interactive tester evaluates whether $(x, y)$ satisfies $2x + y = 6$ and lies on the line.\n                            </p>\n                        </div>\n                    </div>\n                    <div class=\"lesson-sim-grid\">\n                        <div class=\"lesson-sim-controls\">\n                            <div class=\"lesson-sim-slider-box\">\n                                <div class=\"lesson-sim-slider-label\"><span>Coordinate $x$:</span><span id=\"badge-coord-x\" class=\"lesson-sim-step-badge\">x = 2</span></div>\n                                <input type=\"range\" id=\"input-coord-x\" min=\"-2\" max=\"6\" value=\"2\" oninput=\"updateLine2DSim()\" class=\"lesson-sim-slider\">\n                            </div>\n                            <div class=\"lesson-sim-slider-box\">\n                                <div class=\"lesson-sim-slider-label\"><span>Coordinate $y$:</span><span id=\"badge-coord-y\" class=\"lesson-sim-step-badge\">y = 2</span></div>\n                                <input type=\"range\" id=\"input-coord-y\" min=\"-4\" max=\"8\" value=\"2\" oninput=\"updateLine2DSim()\" class=\"lesson-sim-slider\">\n                            </div>\n                            <div class=\"lesson-sim-stat-card card-linear\" style=\"margin-top:1rem;\">\n                                <span class=\"lesson-sim-stat-tag\">Evaluation: $2x + y$</span>\n                                <span id=\"eval-val-2d\" class=\"lesson-sim-stat-val stat-linear-color\">6</span>\n                                <span id=\"eval-calc-2d\" class=\"lesson-sim-stat-calc\">2(2) + 2 = 6</span>\n                            </div>\n                        </div>\n                        <div class=\"lesson-sim-visualizer\" style=\"display:flex; flex-direction:column; align-items:center; justify-content:center;\">\n                            <div id=\"solution-2d-box\" style=\"padding:1.25rem 1.5rem; background:rgba(16,185,129,0.15); border:2px solid #10b981; border-radius:0.75rem; text-align:center;\">\n                                <div id=\"sol-2d-title\" style=\"font-size:1.25rem; font-weight:800; color:#10b981;\"><i class=\"fas fa-check-circle\"></i> ON THE LINE!</div>\n                                <div id=\"sol-2d-desc\" style=\"font-size:0.875rem; color:var(--color-text-secondary); margin-top:0.25rem;\">\n                                    (2, 2) is a valid solution to 2x + y = 6.\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </section>\n                "
+        }
+    ],
+    "vocabulary": [
+        {
+            "term": "Ordered Pair",
+            "definition": "A pair of numbers (x, y) written in a specific order representing a unique point on a coordinate plane."
+        },
+        {
+            "term": "Graph of an Equation",
+            "definition": "The set of all points on the coordinate plane whose coordinates (x, y) satisfy the equation."
+        }
+    ],
+    "practiceQuestions": [
+        {
+            "question": "Which of the following points lies on the graph of $3x - 2y = 12$?",
+            "options": [
+                "$(4, 0)$",
+                "$(2, -2)$",
+                "$(0, 6)$",
+                "$(2, 3)$"
+            ],
+            "correct": 0,
+            "explanation": "Test $(4, 0)$: $3(4) - 2(0) = 12 - 0 = 12$. Since $12 = 12$, $(4, 0)$ is a solution and lies on the graph."
+        },
+        {
+            "question": "How many ordered pair solutions exist for the equation $y = 3x - 5$?",
+            "options": [
+                "Infinitely many",
+                "Exactly 1",
+                "Exactly 2 (the x-intercept and y-intercept)",
+                "None"
+            ],
+            "correct": 0,
+            "explanation": "For every real number chosen for $x$, there is a corresponding real number $y$. Thus, there are infinitely many points along the continuous line."
+        }
+    ],
+    "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Solution Sets to Equations with Two Variables.\" Eureka Math, New York State Common Core Mathematics Curriculum, Algebra I, Module 1, Topic C, Lesson 20.",
+        "subtext": "Aligned with CCSS.MATH.CONTENT.HSA.REI.D.10 \u2022 Understand that the graph of an equation in two variables is the set of all its solutions plotted in the coordinate plane.",
+        "lessonId": "L-ID-ALG-K-M1-C-11"
+    },
+    "scripts": "\n        function updateLine2DSim() {\n            const x = parseInt(document.getElementById('input-coord-x').value, 10);\n            const y = parseInt(document.getElementById('input-coord-y').value, 10);\n\n            document.getElementById('badge-coord-x').innerText = 'x = ' + x;\n            document.getElementById('badge-coord-y').innerText = 'y = ' + y;\n\n            const sum = 2 * x + y;\n            document.getElementById('eval-val-2d').innerText = sum;\n            document.getElementById('eval-calc-2d').innerText = `2(${x}) + (${y}) = ${sum}`;\n\n            const box = document.getElementById('solution-2d-box');\n            const title = document.getElementById('sol-2d-title');\n            const desc = document.getElementById('sol-2d-desc');\n\n            if (sum === 6) {\n                box.style.background = 'rgba(16, 185, 129, 0.15)';\n                box.style.borderColor = '#10b981';\n                title.style.color = '#10b981';\n                title.innerHTML = '<i class=\"fas fa-check-circle\"></i> ON THE LINE!';\n                desc.innerText = `(${x}, ${y}) satisfies 2x + y = 6. It is an ordered pair solution!`;\n            } else {\n                box.style.background = 'rgba(225, 29, 72, 0.15)';\n                box.style.borderColor = '#f43f5e';\n                title.style.color = '#f43f5e';\n                title.innerHTML = '<i class=\"fas fa-times-circle\"></i> NOT ON THE LINE';\n                desc.innerText = `2(${x}) + (${y}) = ${sum} \u2260 6. Point does not satisfy equation.`;\n            }\n        }\n\n        document.addEventListener('DOMContentLoaded', () => {\n            updateLine2DSim();\n        });\n        "
+}
