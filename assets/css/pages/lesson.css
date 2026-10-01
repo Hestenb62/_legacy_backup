@@ -2086,11 +2086,86 @@ main.container {
     line-height: 1.6;
 }
 
+.lesson-pedagogy-badge-row {
+    margin-top: 1.25rem;
+    padding-top: 0.85rem;
+    border-top: 1px dashed color-mix(in srgb, var(--color-text-default) 12%, transparent);
+}
+
+.lesson-pedagogy-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: #0284c7;
+    background: color-mix(in srgb, #0284c7 10%, transparent);
+    border: 1px solid color-mix(in srgb, #0284c7 25%, transparent);
+    padding: 0.4rem 0.85rem;
+    border-radius: 9999px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.lesson-pedagogy-link:hover,
+.lesson-pedagogy-link:focus-visible {
+    background: color-mix(in srgb, #0284c7 18%, transparent);
+    transform: translateY(-1px);
+    outline: 2px solid #0284c7;
+    outline-offset: 2px;
+}
+
+.lesson-practice-progress-container {
+    margin-top: 1.25rem;
+    max-width: 600px;
+}
+
+.lesson-practice-progress-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.45rem;
+    font-size: 0.8125rem;
+    font-weight: 800;
+}
+
+.lesson-practice-progress-label {
+    color: var(--color-text-secondary);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.lesson-practice-progress-text {
+    color: var(--color-primary, #e11d48);
+    font-family: 'Outfit', sans-serif;
+}
+
+.lesson-practice-bar-track {
+    width: 100%;
+    height: 10px;
+    background: color-mix(in srgb, var(--color-text-default) 10%, transparent);
+    border-radius: 9999px;
+    overflow: hidden;
+    position: relative;
+}
+
+.lesson-practice-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #10b981 0%, #059669 100%);
+    border-radius: 9999px;
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.all-solved .lesson-practice-bar-fill {
+    background: linear-gradient(90deg, #10b981 0%, #3b82f6 100%);
+}
+
 .lesson-btn-print-worksheet {
     display: inline-flex;
     align-items: center;
     gap: 0.55rem;
-    padding: 0.75rem 1.35rem;
+    padding: 0.75rem 1.25rem;
     border-radius: 9999px;
     font-size: 0.875rem;
     font-weight: 800;
@@ -2111,6 +2186,54 @@ main.container {
     outline-offset: 2px;
 }
 
+.lesson-btn-print-solved {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.75rem 1.35rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 800;
+    background: var(--color-primary);
+    color: #ffffff;
+    border: 1.5px solid var(--color-primary);
+    cursor: pointer;
+    box-shadow: 0 4px 14px color-mix(in srgb, var(--color-primary) 30%, transparent);
+    transition: all 0.2s ease;
+}
+
+.lesson-btn-print-solved:hover,
+.lesson-btn-print-solved:focus-visible {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px color-mix(in srgb, var(--color-primary) 40%, transparent);
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+.lesson-btn-clear-work {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.75rem 1.15rem;
+    border-radius: 9999px;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    background: transparent;
+    color: var(--color-text-muted, #64748b);
+    border: 1px solid color-mix(in srgb, var(--color-text-default) 15%, transparent);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.lesson-btn-clear-work:hover,
+.lesson-btn-clear-work:focus-visible {
+    background: color-mix(in srgb, #ef4444 10%, transparent);
+    color: #ef4444;
+    border-color: #ef4444;
+    outline: 2px solid #ef4444;
+    outline-offset: 2px;
+}
+
 .lesson-problem-set-list {
     display: flex;
     flex-direction: column;
@@ -2122,7 +2245,7 @@ main.container {
     border: 1px solid color-mix(in srgb, var(--color-text-default) 10%, transparent);
     border-radius: 1.15rem;
     padding: 1.5rem 1.75rem;
-    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
 }
 
 .lesson-problem-card:hover {
@@ -2130,11 +2253,18 @@ main.container {
     border-color: color-mix(in srgb, var(--color-primary) 30%, transparent);
 }
 
+.lesson-problem-card.is-solved {
+    border-color: color-mix(in srgb, #10b981 50%, transparent);
+    background: color-mix(in srgb, #10b981 3%, var(--color-surface));
+}
+
 .lesson-problem-card-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 0.85rem;
+    flex-wrap: wrap;
+    gap: 0.75rem;
 }
 
 .lesson-problem-badge {
@@ -2148,11 +2278,120 @@ main.container {
     border-radius: 6px;
 }
 
+.lesson-problem-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    flex-wrap: wrap;
+}
+
+.lesson-save-indicator {
+    font-size: 0.75rem;
+    font-weight: 700;
+    font-style: italic;
+    color: var(--color-text-muted);
+}
+.lesson-save-indicator.saving {
+    color: #f59e0b;
+}
+.lesson-save-indicator.saved {
+    color: #10b981;
+}
+
+.lesson-open-scratchpad-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    background: color-mix(in srgb, var(--color-text-default) 6%, transparent);
+    color: var(--color-text-secondary);
+    border: 1px solid color-mix(in srgb, var(--color-text-default) 14%, transparent);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.lesson-open-scratchpad-btn:hover,
+.lesson-open-scratchpad-btn:focus-visible {
+    background: color-mix(in srgb, var(--color-primary) 10%, transparent);
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+.lesson-problem-status-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.35rem 0.85rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    background: var(--color-surface);
+    color: var(--color-text-secondary);
+    border: 1.5px solid color-mix(in srgb, var(--color-text-default) 20%, transparent);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lesson-problem-status-btn:hover,
+.lesson-problem-status-btn:focus-visible {
+    border-color: #10b981;
+    color: #10b981;
+    outline: 2px solid #10b981;
+    outline-offset: 2px;
+}
+
+.lesson-problem-status-btn.solved {
+    background: #10b981;
+    color: #ffffff;
+    border-color: #10b981;
+    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+}
+
 .lesson-problem-prompt {
     font-size: 1rem;
     line-height: 1.65;
     color: var(--color-text-default);
     margin-bottom: 1.25rem;
+}
+
+.lesson-student-workspace-wrapper {
+    margin: 1.25rem 0;
+}
+
+.lesson-workspace-label {
+    display: block;
+    font-size: 0.8125rem;
+    font-weight: 800;
+    color: var(--color-text-secondary);
+    margin-bottom: 0.45rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.lesson-student-workspace {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.85rem 1.15rem;
+    font-family: inherit;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-text-default);
+    background: var(--color-base-bg, #f8fafc);
+    border: 1.5px solid color-mix(in srgb, var(--color-text-default) 15%, transparent);
+    border-radius: 0.85rem;
+    resize: vertical;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.lesson-student-workspace:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary) 20%, transparent);
 }
 
 .lesson-problem-solution-content {
@@ -2167,22 +2406,54 @@ main.container {
 @media print {
     .lesson-resources-section,
     .lesson-btn-print-worksheet,
+    .lesson-btn-print-solved,
+    .lesson-btn-clear-work,
+    .lesson-open-scratchpad-btn,
+    .lesson-problem-status-btn,
+    .lesson-save-indicator,
+    .lesson-pedagogy-badge-row,
     .lesson-runner-dock,
     .site-header,
     .site-footer,
-    .lesson-top-bar {
+    .lesson-top-bar,
+    .lesson-check-understanding-card {
         display: none !important;
     }
+
     .lesson-problem-set-section {
         background: none !important;
         border: none !important;
         padding: 0 !important;
         margin: 0 !important;
     }
+
     .lesson-problem-card {
-        border: 1px solid #ccc !important;
+        border: 1px solid #999 !important;
         page-break-inside: avoid;
         margin-bottom: 1.5rem;
+        background: none !important;
+        padding: 1rem !important;
+    }
+
+    /* Solved Student Homework Mode */
+    body.print-student-work-mode .lesson-solution-accordion {
+        display: none !important;
+    }
+
+    body.print-student-work-mode .lesson-student-workspace {
+        border: 1px dashed #666 !important;
+        background: #fafafa !important;
+        color: #000000 !important;
+        font-weight: 600;
+        box-shadow: none !important;
+    }
+
+    /* Blank Worksheet Mode (leave handwriting lines) */
+    body:not(.print-student-work-mode) .lesson-student-workspace {
+        min-height: 100px;
+        border: 1px dashed #bbb !important;
+        background: #fff !important;
+        color: transparent !important;
     }
 }
 

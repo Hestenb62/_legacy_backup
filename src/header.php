@@ -48,16 +48,16 @@ if (! function_exists('assetVersion')) {
 
 // Core Platform Version Definition
 if (! defined('HL_SITE_VERSION')) {
-    define('HL_SITE_VERSION', 'v2.9.1');
+    define('HL_SITE_VERSION', 'v2.10.0');
     }
 if (! defined('HL_SITE_VERSION_DATE')) {
     define('HL_SITE_VERSION_DATE', 'September 2026');
     }
 if (! defined('HL_SITE_VERSION_LABEL')) {
-    define('HL_SITE_VERSION_LABEL', 'September 2026 Router Streamlining Release');
+    define('HL_SITE_VERSION_LABEL', 'September 2026 Research Elevation & Practice Notebook Release');
     }
 if (! defined('HL_SITE_VERSION_SUMMARY')) {
-    define('HL_SITE_VERSION_SUMMARY', 'Retired 95 Obsolete Lesson PHP Stubs and Streamlined Dynamic Routing Direct to Universal Lesson Renderer');
+    define('HL_SITE_VERSION_SUMMARY', 'Elevated Research Portal into Offline PWA & Command Palette Search, Integrated Interactive Student Practice Notebook with Local Storage & Cloud Auto-Sync');
     }
 ?>
 <!DOCTYPE html>
@@ -937,6 +937,7 @@ if (! defined('HL_SITE_VERSION_SUMMARY')) {
                     <button type="button" class="cmd-filter-pill" data-filter="parent">Parent</button>
                     <button type="button" class="cmd-filter-pill" data-filter="assessment">Assessment</button>
                     <button type="button" class="cmd-filter-pill" data-filter="library">Library</button>
+                    <button type="button" class="cmd-filter-pill" data-filter="research">Research</button>
                 </div>
                 <ul id="cmd-results-list" class="cmd-results-list" role="listbox" aria-label="Search suggestions">
                     <!-- Injected dynamically via JS -->

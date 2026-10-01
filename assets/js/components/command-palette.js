@@ -315,6 +315,62 @@
       tags: ["updates", "changelog", "news", "release", "docs", "plans"]
     },
 
+    // --- RESEARCH & SCHOLARLY JOURNALS ---
+    {
+      title: "Research Hub & Scholarly Journals",
+      desc: "Peer-reviewed scientific journals on dyslexia, dysgraphia, phonological processing, and motor skills.",
+      category: "Research",
+      icon: "fa-microscope",
+      iconClass: "research-icon",
+      url: "/research/index.php",
+      tags: ["research", "journals", "peer-reviewed", "science", "studies", "papers", "academics"]
+    },
+    {
+      title: "Dyslexia & Learning Disabilities Research (DLDR)",
+      desc: "Peer-reviewed journal exploring phonological processing, neurobiological foundations, and evidence-based interventions.",
+      category: "Research",
+      icon: "fa-brain",
+      iconClass: "research-icon",
+      url: "/research/DLDR/index.php",
+      tags: ["dldr", "dyslexia", "phonology", "neurobiology", "reading", "intervention", "research"]
+    },
+    {
+      title: "DLDR: Phonological Awareness & Rhyming Impact",
+      desc: "Empirical study on phonological awareness interventions and phoneme segmentation in early learners.",
+      category: "Research",
+      icon: "fa-file-alt",
+      iconClass: "research-icon",
+      url: "/research/DLDR/index.php#articles",
+      tags: ["phonological", "awareness", "rhyming", "dldr", "paper", "phonemes", "reading"]
+    },
+    {
+      title: "Dysgraphia Studies & Motor Skills (DSMS)",
+      desc: "Studies on graphomotor impairments, fine motor kinematics, neural pathways, and occupational therapy adaptations.",
+      category: "Research",
+      icon: "fa-pen-fancy",
+      iconClass: "research-icon",
+      url: "/research/DSMS/index.php",
+      tags: ["dsms", "dysgraphia", "motor skills", "kinematics", "handwriting", "fine motor", "research"]
+    },
+    {
+      title: "DSMS: Classroom Accommodations for Dysgraphia",
+      desc: "Evidence-based environmental, technological, and instructional modifications for written expression.",
+      category: "Research",
+      icon: "fa-universal-access",
+      iconClass: "research-icon",
+      url: "/research/DSMS/index.php#articles",
+      tags: ["dysgraphia", "accommodations", "classroom", "typing", "speech-to-text", "dsms"]
+    },
+    {
+      title: "DSMS: Fine Motor Kinematics in Dysgraphic Writers",
+      desc: "Quantitative kinematic velocity, pen pressure, and grip trajectory analysis in developmental dysgraphia.",
+      category: "Research",
+      icon: "fa-chart-line",
+      iconClass: "research-icon",
+      url: "/research/DSMS/index.php#articles",
+      tags: ["kinematics", "fine motor", "velocity", "pressure", "grip", "dysgraphia", "dsms"]
+    },
+
     // --- CURRICULUM LEVELS (PRE-K to HIGH SCHOOL) ---
     {
       title: "Pre-K Early Foundations (Level A)",

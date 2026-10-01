@@ -27,7 +27,11 @@
         { title: 'Scratchpad Notes', category: 'Tool', action: 'scratchpad', icon: 'fa-pen' },
         { title: 'Citation Helper', category: 'Tool', action: 'citation', icon: 'fa-quote-right' },
         { title: 'Accessibility Settings', category: 'Tool', action: 'a11y', icon: 'fa-universal-access' },
-        { title: 'Accessibility & Accommodations Hub', category: 'Support & A11y', url: '/pages/accessibility.php', icon: 'fa-universal-access' }
+        { title: 'Accessibility & Accommodations Hub', category: 'Support & A11y', url: '/pages/accessibility.php', icon: 'fa-universal-access' },
+        { title: 'Research Hub & Scientific Journals', category: 'Research', url: '/research/index.php', icon: 'fa-microscope' },
+        { title: 'Dyslexia & Learning Disabilities (DLDR)', category: 'Research', url: '/research/DLDR/index.php', icon: 'fa-brain' },
+        { title: 'Dysgraphia Studies & Motor Skills (DSMS)', category: 'Research', url: '/research/DSMS/index.php', icon: 'fa-pen-fancy' },
+        { title: 'Math Vocabulary Review Hub (A–Z)', category: 'Curriculum', url: '/pages/math-vocab.php', icon: 'fa-spell-check' }
     ];
 
     function initAutocomplete() {

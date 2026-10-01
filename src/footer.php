@@ -96,9 +96,9 @@
 
         <!-- Version Status & Release Info Strip (WCAG Operable) -->
         <?php
-        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.9.1';
-        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'September 2026 Router Streamlining Release';
-        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Retired 95 Obsolete Lesson PHP Stubs and Streamlined Dynamic Routing Direct to Universal Lesson Renderer';
+        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.10.0';
+        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'September 2026 Research Elevation & Practice Notebook Release';
+        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Elevated Research Portal into Offline PWA & Command Palette Search, Integrated Interactive Student Practice Notebook with Local Storage & Cloud Auto-Sync';
         ?>
         <div class="footer-version-strip" role="region" aria-label="Platform Version Information">
             <div class="footer-version-info">
@@ -209,6 +209,8 @@
     src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/components/command-palette.js') : '/assets/js/components/command-palette.js' ?>"></script>
 <script
     src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/core/global-standard.js') : '/assets/js/core/global-standard.js' ?>"></script>
+<script
+    src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/components/practice-notebook.js') : '/assets/js/components/practice-notebook.js' ?>"></script>
 
 <!-- Google API Scripts for Global Auto-Sync (Loaded when sync is active or on settings/profile) -->
 <script>
@@ -269,9 +271,41 @@
                 </span>
             </div>
             <p class="footer-vmodal-lead">
-                Version <?= htmlspecialchars($siteVersion) ?> restructures the platform client architecture by organizing all JavaScript assets into <strong>seven clean, domain-aligned modular directories</strong> (<code>pages/</code>, <code>assessment/</code>, <code>standards/</code>, <code>labs/</code>, <code>accessibility/</code>, <code>components/</code>, <code>core/</code>), eliminating root script clutter while maintaining zero-downtime path synchronization and instant on-demand performance.
+                Version <?= htmlspecialchars($siteVersion) ?> elevates the platform's academic research and independent learning architecture with the <strong>complete offline and search integration of the Research Portal</strong> (DLDR &amp; DSMS journals) and an <strong>Interactive Student Practice Notebook</strong> that turns all curriculum Problem Sets into persistent, cloud-synced digital workbooks.
             </p>
             <ul class="footer-vmodal-features">
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Research Portal Elevation:</strong> Fully integrated peer-reviewed journals (<em>Dyslexia &amp; Learning Disabilities Research</em> and <em>Dysgraphia Studies &amp; Motor Skills</em>) into the PWA service worker offline cache, Command Palette (<code>Ctrl+K</code>), header instant search, and lesson pedagogical connections.
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Interactive Student Practice Notebook:</strong> Embedded interactive workspaces across all curriculum Problem Sets with debounced local storage auto-save (<code>hl_practice_notebook_${lessonId}</code>), real-time progress meters, solved status toggles, and Google Drive auto-sync.
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true">
+                        <i class="fas fa-pen-nib"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>1-Click Super Scratchpad Problem Stamping:</strong> Students can launch the digital scratchpad or whiteboard canvas directly from any problem card with pre-formatted problem prompts for handwritten mathematical calculations.
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true">
+                        <i class="fas fa-print"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Dual-Mode Homework Printing:</strong> Print clean blank worksheets with handwriting guidelines for pencil-and-paper assignments, or print solved work sheets containing student typed reasoning for homework submission.
+                    </div>
+                </li>
                 <li class="footer-vmodal-feature-item">
                     <div class="footer-vmodal-feature-icon" aria-hidden="true">
                         <i class="fas fa-broom"></i>

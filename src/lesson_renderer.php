@@ -195,39 +195,92 @@ include_once ABSPATH . 'src/partials/sticky-reading-bar.php';
                     <p class="lesson-insights-text"><?php echo htmlspecialchars($lesson['overview']['teacherInsight'] ?? ''); ?></p>
                 </div>
             </div>
+            <div class="lesson-pedagogy-badge-row">
+                <a href="/research/index.php" class="lesson-pedagogy-link" title="Explore peer-reviewed learning science &amp; cognitive research underlying this instructional sequence">
+                    <i class="fas fa-microscope" aria-hidden="true"></i>
+                    <span>Evidence-Based Pedagogy &bull; Learning Disability Research Links</span>
+                    <i class="fas fa-arrow-right" aria-hidden="true" style="font-size: 0.75rem; margin-left: 0.25rem;"></i>
+                </a>
+            </div>
         </section>
 
-        <!-- Official Curriculum Worksheet: Problem Set & Practice Exercises -->
+        <!-- Official Curriculum Worksheet: Interactive Student Practice Notebook -->
         <?php if (!empty($lesson['problemSet']) && !empty($lesson['problemSet']['problems'])): ?>
-        <section class="lesson-problem-set-section" id="problem-set" aria-labelledby="problem-set-heading">
+        <section class="lesson-problem-set-section" id="problem-set" aria-labelledby="problem-set-heading" data-lesson-id="<?php echo htmlspecialchars($lessonId ?? ''); ?>">
             <div class="lesson-problem-set-header">
                 <div>
                     <span class="lesson-problem-set-badge">
-                        <i class="fas fa-file-signature" aria-hidden="true"></i> Official Curriculum Worksheet
+                        <i class="fas fa-laptop-code" aria-hidden="true"></i> Interactive Problem Set &amp; Practice Notebook
                     </span>
                     <h3 id="problem-set-heading" class="lesson-problem-set-title">
                         <?php echo htmlspecialchars($lesson['problemSet']['title'] ?? 'Problem Set & Practice Exercises'); ?>
                     </h3>
                     <p class="lesson-problem-set-desc">
-                        <?php echo htmlspecialchars($lesson['problemSet']['description'] ?? 'Work through these curriculum problems to master the lesson standards. Check your work using the expandable teacher solution keys.'); ?>
+                        <?php echo htmlspecialchars($lesson['problemSet']['description'] ?? 'Work through these curriculum problems to master the lesson standards. Type your working in the digital workspace, launch the scratchpad for handwriting, track solved checkmarks, and auto-save locally.'); ?>
                     </p>
+                    
+                    <!-- Progress Bar & Solved Tracker -->
+                    <div class="lesson-practice-progress-container" role="region" aria-label="Problem Set Progress">
+                        <div class="lesson-practice-progress-info">
+                            <span class="lesson-practice-progress-label">
+                                <i class="fas fa-tasks" aria-hidden="true"></i> Practice Progress:
+                            </span>
+                            <span id="lesson-practice-progress-text" class="lesson-practice-progress-text" aria-live="polite">
+                                0 of <?php echo count($lesson['problemSet']['problems']); ?> Solved (0%)
+                            </span>
+                        </div>
+                        <div class="lesson-practice-bar-track" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Problem Set completion percentage">
+                            <div class="lesson-practice-bar-fill" id="lesson-practice-bar-fill" style="width: 0%;"></div>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="lesson-problem-set-actions">
-                    <button type="button" onclick="window.print()" class="lesson-btn-print-worksheet" aria-label="Print this problem set worksheet">
-                        <i class="fas fa-print" aria-hidden="true"></i> Print Worksheet
+                    <button type="button" onclick="window.print()" class="lesson-btn-print-worksheet" aria-label="Print blank problem set worksheet">
+                        <i class="fas fa-print" aria-hidden="true"></i> Print Blank
+                    </button>
+                    <button type="button" id="lesson-btn-print-solved" class="lesson-btn-print-solved" aria-label="Print solved worksheet with your typed work">
+                        <i class="fas fa-file-signature" aria-hidden="true"></i> Print Solved Work
+                    </button>
+                    <button type="button" id="lesson-btn-clear-work" class="lesson-btn-clear-work" aria-label="Reset and clear all your typed work for this lesson">
+                        <i class="fas fa-undo" aria-hidden="true"></i> Reset
                     </button>
                 </div>
             </div>
 
             <div class="lesson-problem-set-list">
-                <?php foreach ($lesson['problemSet']['problems'] as $idx => $prob): ?>
-                    <div class="lesson-problem-card">
+                <?php foreach ($lesson['problemSet']['problems'] as $idx => $prob): 
+                    $probNum = $prob['number'] ?? ($idx + 1);
+                ?>
+                    <div class="lesson-problem-card" data-problem-number="<?php echo htmlspecialchars($probNum); ?>">
                         <div class="lesson-problem-card-header">
-                            <span class="lesson-problem-badge">Problem <?php echo htmlspecialchars($prob['number'] ?? ($idx + 1)); ?></span>
+                            <span class="lesson-problem-badge">Problem <?php echo htmlspecialchars($probNum); ?></span>
+                            
+                            <div class="lesson-problem-controls">
+                                <span class="lesson-save-indicator" aria-live="polite"></span>
+                                <button type="button" class="lesson-open-scratchpad-btn" title="Open Problem <?php echo htmlspecialchars($probNum); ?> in Super Scratchpad Studio">
+                                    <i class="fas fa-pen-nib" aria-hidden="true"></i>
+                                    <span>Scratchpad</span>
+                                </button>
+                                <button type="button" class="lesson-problem-status-btn" aria-pressed="false" title="Click to mark problem as solved">
+                                    <i class="far fa-circle" aria-hidden="true"></i>
+                                    <span>Mark Solved</span>
+                                </button>
+                            </div>
                         </div>
+
                         <div class="lesson-problem-prompt">
                             <?php echo nl2br(htmlspecialchars($prob['prompt'] ?? '')); ?>
                         </div>
+
+                        <!-- Interactive Student Workspace -->
+                        <div class="lesson-student-workspace-wrapper">
+                            <label for="student-work-<?php echo $idx; ?>" class="lesson-workspace-label">
+                                <i class="fas fa-pencil-alt" aria-hidden="true"></i> Your Working &amp; Mathematical Reasoning:
+                            </label>
+                            <textarea id="student-work-<?php echo $idx; ?>" class="lesson-student-workspace" placeholder="Type your step-by-step calculations, equations, and final answers here... (auto-saves locally and syncs to cloud)" rows="4" spellcheck="true"></textarea>
+                        </div>
+
                         <?php if (!empty($prob['solution'])): ?>
                             <details class="lesson-solution-accordion" ontoggle="if(this.open && typeof window.ensureMathJax==='function') window.ensureMathJax(this);">
                                 <summary>
@@ -600,6 +653,9 @@ include_once ABSPATH . 'src/partials/sticky-reading-bar.php';
                 <?php echo $lesson['scripts']; ?>
             </script>
         <?php endif; ?>
+
+        <!-- Universal Interactive Practice Notebook Engine -->
+        <script src="<?php echo function_exists('assetVersion') ? assetVersion('/assets/js/components/practice-notebook.js') : '/assets/js/components/practice-notebook.js'; ?>"></script>
     </div>
 </main>
 

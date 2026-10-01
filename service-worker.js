@@ -1,4 +1,4 @@
-const CACHE_NAME = 'hestens-learning-v20';
+const CACHE_NAME = 'hestens-learning-v21';
 const ASSETS_TO_CACHE = [
 
   // Main Directory Pages & Manifest
@@ -13,6 +13,9 @@ const ASSETS_TO_CACHE = [
   '/student/index.php',
   '/student/skill-tree.php',
   '/student/interactive-labs.php',
+  '/research/index.php',
+  '/research/DLDR/index.php',
+  '/research/DSMS/index.php',
 
   // Pages Directory
   '/pages/accessibility.php',
@@ -87,7 +90,11 @@ const ASSETS_TO_CACHE = [
   '/assets/js/labs/manipulatives-lab.js',
   '/assets/js/pages/skills-passport.js',
   '/assets/data/global-learningLevels.js',
-  '/assets/js/standards/standards-ccss-math-ela.js'
+  '/assets/js/standards/standards-ccss-math-ela.js',
+  '/assets/js/components/practice-notebook.js',
+  '/assets/data/research/journals.json',
+  '/assets/css/research-main.css',
+  '/assets/js/research/journal-engine.js'
 ];
 
 // Install Event: Caches critical assets safely with individual fallback
