@@ -445,8 +445,6 @@ if (! defined('HL_SITE_VERSION_SUMMARY')) {
                         <div class="header-nav-links">
                             <a href="/" class="nav-link"><i class="fas fa-home"
                                     style="margin-right: 0.25rem; opacity: 0.7;"></i> Home</a>
-                            <a href="/pages/skills.php" class="nav-link"><i class="fas fa-project-diagram"
-                                    style="margin-right: 0.25rem; opacity: 0.7;"></i> Skills</a>
                             <a href="/assessment" class="nav-link"><i class="fas fa-tasks"
                                     style="margin-right: 0.25rem; opacity: 0.7;"></i> Assessment</a>
                             <a href="/library/" class="nav-link"><i class="fas fa-book"

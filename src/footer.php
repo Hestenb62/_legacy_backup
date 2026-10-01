@@ -48,14 +48,10 @@
                     <i class="fas fa-link" style="color: var(--color-teal)"></i> Quick Links
                 </h4>
                 <ul class="footer-links">
-                    <li class="footer-link-item"><a href="/pages/skills.php"><i
-                                class="fas fa-project-diagram footer-link-icon"></i> Skills Tree</a></li>
-                    <li class="footer-link-item"><a href="/pages/manipulatives.php"><i
-                                class="fas fa-cubes-stacked footer-link-icon"></i> Manipulatives</a></li>
+                    <li class="footer-link-item"><a href="/research/index.php"><i
+                                class="fas fa-graduation-cap footer-link-icon"></i> Research</a></li>
                     <li class="footer-link-item"><a href="/pages/standards.php"><i
                                 class="fas fa-book footer-link-icon"></i> Standards</a></li>
-                    <li class="footer-link-item"><a href="/pages/math-vocab.php"><i
-                                class="fas fa-brain footer-link-icon"></i> Math Vocab Hub</a></li>
                     <li class="footer-link-item"><a href="/updates/"><i class="fas fa-newspaper footer-link-icon"></i>
                             Updates</a></li>
                     <li class="footer-link-item"><a href="/pages/help-center.php"><i
