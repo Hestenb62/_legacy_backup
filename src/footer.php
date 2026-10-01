@@ -100,9 +100,9 @@
 
         <!-- Version Status & Release Info Strip (WCAG Operable) -->
         <?php
-        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.8.1';
-        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'September 2026 Module-Level JSON Architecture Release';
-        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Consolidated Grade 9 Algebra I Lessons into 5 Module-Level JSON Datasets with Tiered Router Resolution and Centralized Mathematics Codex';
+        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.8.2';
+        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'September 2026 Curriculum Pop-Ups Organization Release';
+        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Reorganized All Pre-K Through Grade 12 Curriculum Scope Datasets into Dedicated Directory assets/data/curr pop-ups/ with Resilient Path Resolution';
         ?>
         <div class="footer-version-strip" role="region" aria-label="Platform Version Information">
             <div class="footer-version-info">
@@ -273,9 +273,17 @@
                 </span>
             </div>
             <p class="footer-vmodal-lead">
-                Version <?= htmlspecialchars($siteVersion) ?> advances the platform architecture by consolidating all 105 Grade 9 Algebra I lessons into <strong>five modular, high-performance module JSON datasets</strong> (<code>k-math-m1.json</code> through <code>k-math-m5.json</code>) in <code>assets/data/lessons/</code>, backed by a resilient tiered router resolution engine, embedded Eureka Math Problem Sets, and the unified <strong>Mathematics Codex &amp; Vocab Review Hub</strong> (<code>/pages/math-vocab.php</code>).
+                Version <?= htmlspecialchars($siteVersion) ?> advances the platform architecture by consolidating all 105 Grade 9 Algebra I lessons into <strong>five modular, high-performance module JSON datasets</strong> (<code>k-math-m1.json</code> through <code>k-math-m5.json</code>) in <code>assets/data/lessons/</code>, organizing all 56 Pre-K to Grade 12 curriculum pop-up datasets into <code>assets/data/curr pop-ups/</code>, and integrating embedded Eureka Math Problem Sets with the unified <strong>Mathematics Codex &amp; Vocab Review Hub</strong> (<code>/pages/math-vocab.php</code>).
             </p>
             <ul class="footer-vmodal-features">
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true">
+                        <i class="fas fa-folder-open"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Curriculum Pop-Ups Reorganization:</strong> Relocated all 56 dedicated Pre-K through Grade 12 scope &amp; sequence datasets into <code>assets/data/curr pop-ups/</code> with robust URL path resolution, decluttering the root data directory while maintaining instant on-demand modal loading.
+                    </div>
+                </li>
                 <li class="footer-vmodal-feature-item">
                     <div class="footer-vmodal-feature-icon" aria-hidden="true">
                         <i class="fas fa-boxes"></i>

@@ -48,16 +48,16 @@ if (! function_exists('assetVersion')) {
 
 // Core Platform Version Definition
 if (! defined('HL_SITE_VERSION')) {
-    define('HL_SITE_VERSION', 'v2.8.1');
+    define('HL_SITE_VERSION', 'v2.8.2');
     }
 if (! defined('HL_SITE_VERSION_DATE')) {
     define('HL_SITE_VERSION_DATE', 'September 2026');
     }
 if (! defined('HL_SITE_VERSION_LABEL')) {
-    define('HL_SITE_VERSION_LABEL', 'September 2026 Module-Level JSON Architecture Release');
+    define('HL_SITE_VERSION_LABEL', 'September 2026 Curriculum Pop-Ups Organization Release');
     }
 if (! defined('HL_SITE_VERSION_SUMMARY')) {
-    define('HL_SITE_VERSION_SUMMARY', 'Consolidated Grade 9 Algebra I Lessons into 5 Module-Level JSON Datasets with Tiered Router Resolution and Centralized Mathematics Codex');
+    define('HL_SITE_VERSION_SUMMARY', 'Reorganized All Pre-K Through Grade 12 Curriculum Scope Datasets into Dedicated Directory assets/data/curr pop-ups/ with Resilient Path Resolution');
     }
 ?>
 <!DOCTYPE html>

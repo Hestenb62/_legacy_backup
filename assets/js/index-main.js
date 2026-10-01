@@ -551,10 +551,10 @@ function openDocModal(btn) {
                 </div>
             `;
             const curriculumFiles = [
-                { key: 'math', file: `/assets/data/curriculum-${targetSlug}-math.json` },
-                { key: 'ela', file: `/assets/data/curriculum-${targetSlug}-ela.json` },
-                { key: 'science', file: `/assets/data/curriculum-${targetSlug}-science.json` },
-                { key: 'social', file: `/assets/data/curriculum-${targetSlug}-social.json` }
+                { key: 'math', file: `/assets/data/curr%20pop-ups/curriculum-${targetSlug}-math.json` },
+                { key: 'ela', file: `/assets/data/curr%20pop-ups/curriculum-${targetSlug}-ela.json` },
+                { key: 'science', file: `/assets/data/curr%20pop-ups/curriculum-${targetSlug}-science.json` },
+                { key: 'social', file: `/assets/data/curr%20pop-ups/curriculum-${targetSlug}-social.json` }
             ];
             Promise.all(curriculumFiles.map(item =>
                 fetch(item.file)
