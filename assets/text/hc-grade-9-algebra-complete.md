@@ -46,8 +46,8 @@ The complete Grade 9 (Level K) Algebra I curriculum on Hesten's Learning deliver
 - **Unified Mathematics Codex & Vocabulary Hub (`/pages/math-vocab.php`):**
   - Aggregates **195 mathematical terms** across all 12 grade bands and 5 high school modules.
   - Features 3D Active Recall Flashcards, A–Z ribbon navigation, audio pronunciation, and the interactive Formula Sandbox & Solver.
-- **JSON-First Modular Architecture:**
-  - Standalone, schema-validated JSON files in `assets/data/lessons/` dynamically loaded by `levels/k.php` without redundant PHP boilerplate.
+- **Modular Module-Level JSON Architecture:**
+  - Lessons are consolidated into 5 high-performance, cohesive module datasets (`assets/data/lessons/k-math-m1.json` through `k-math-m5.json`). The dynamic router in `levels/k.php` resolves lessons via a fast tiered pipeline (Module JSON &rarr; Standalone JSON &rarr; Master Registry).
 - **Universal MathJax SVG Typography:**
   - Automatically typesets all inline and display LaTeX equations with responsive overflow containment, baseline alignment, and theme-adaptive coloring.
 

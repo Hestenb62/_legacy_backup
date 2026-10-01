@@ -100,9 +100,9 @@
 
         <!-- Version Status & Release Info Strip (WCAG Operable) -->
         <?php
-        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.8.0';
-        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'September 2026 Grade 9 Algebra I Complete Curriculum Release';
-        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Complete 105-Lesson Grade 9 Algebra I Curriculum (Modules 1–5) with Embedded Problem Sets, Verbatim Exit Ticket Keys, and Unified Mathematics Codex';
+        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.8.1';
+        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'September 2026 Module-Level JSON Architecture Release';
+        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Consolidated Grade 9 Algebra I Lessons into 5 Module-Level JSON Datasets with Tiered Router Resolution and Centralized Mathematics Codex';
         ?>
         <div class="footer-version-strip" role="region" aria-label="Platform Version Information">
             <div class="footer-version-info">
@@ -273,15 +273,31 @@
                 </span>
             </div>
             <p class="footer-vmodal-lead">
-                Version <?= htmlspecialchars($siteVersion) ?> delivers the complete, authoritative <strong>105-Lesson Grade 9 Algebra I Curriculum</strong> across all five modules (Module 1 through Module 5), integrating authentic Eureka Math Problem Set worksheets with teacher keys, verbatim Exit Ticket solutions, and the unified <strong>Mathematics Codex &amp; Vocab Review Hub</strong> (<code>/pages/math-vocab.php</code>).
+                Version <?= htmlspecialchars($siteVersion) ?> advances the platform architecture by consolidating all 105 Grade 9 Algebra I lessons into <strong>five modular, high-performance module JSON datasets</strong> (<code>k-math-m1.json</code> through <code>k-math-m5.json</code>) in <code>assets/data/lessons/</code>, backed by a resilient tiered router resolution engine, embedded Eureka Math Problem Sets, and the unified <strong>Mathematics Codex &amp; Vocab Review Hub</strong> (<code>/pages/math-vocab.php</code>).
             </p>
             <ul class="footer-vmodal-features">
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true">
+                        <i class="fas fa-boxes"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Module-Level JSON Architecture:</strong> Replaced 105 fragmented individual lesson files with 5 clean, cohesive module datasets (<code>k-math-m1.json</code> to <code>k-math-m5.json</code>), reducing directory clutter and optimizing filesystem indexing.
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Tiered Dynamic Router Resolution:</strong> <code>levels/k.php</code> and <code>src/lesson_renderer.php</code> dynamically resolve lessons using a fast tiered pipeline: Module JSON &rarr; Standalone JSON &rarr; Master Registry &rarr; Intelligent Scaffolder.
+                    </div>
+                </li>
                 <li class="footer-vmodal-feature-item">
                     <div class="footer-vmodal-feature-icon" aria-hidden="true">
                         <i class="fas fa-graduation-cap"></i>
                     </div>
                     <div class="footer-vmodal-feature-text">
-                        <strong>Complete 105-Lesson Grade 9 Algebra I Curriculum:</strong> Full buildout of Modules 1–5 (Module 1: Relationships &amp; Equations, Module 2: Descriptive Statistics, Module 3: Linear &amp; Exponential Functions, Module 4: Polynomial &amp; Quadratic Expressions, Module 5: Synthesis of Modeling).
+                        <strong>Complete 105-Lesson Grade 9 Curriculum:</strong> Full coverage across Modules 1–5 with authentic Eureka Math student outcomes, teacher insights, and guided multi-step exercises.
                     </div>
                 </li>
                 <li class="footer-vmodal-feature-item">
@@ -289,7 +305,7 @@
                         <i class="fas fa-file-signature"></i>
                     </div>
                     <div class="footer-vmodal-feature-text">
-                        <strong>Authentic Embedded Problem Sets:</strong> Full student practice worksheets embedded directly into every lesson card with expandable teacher answer keys and 1-click browser printing. Zero external file download links.
+                        <strong>Authentic Embedded Problem Sets:</strong> Full student practice worksheets embedded directly on-page with expandable teacher answer keys and 1-click browser printing. Zero external file download links.
                     </div>
                 </li>
                 <li class="footer-vmodal-feature-item">
@@ -297,7 +313,7 @@
                         <i class="fas fa-clipboard-check"></i>
                     </div>
                     <div class="footer-vmodal-feature-text">
-                        <strong>Verbatim Exit Ticket Keys &amp; Check Understanding:</strong> Formative Exit Ticket assessment prompts and teacher sample solutions with step-by-step mathematical justifications directly integrated into the interactive quiz runner.
+                        <strong>Verbatim Exit Ticket Keys &amp; Check Understanding:</strong> Formative Exit Ticket prompts and worked teacher keys directly integrated into the interactive modal assessment runner.
                     </div>
                 </li>
                 <li class="footer-vmodal-feature-item">
@@ -305,23 +321,7 @@
                         <i class="fas fa-calculator"></i>
                     </div>
                     <div class="footer-vmodal-feature-text">
-                        <strong>Unified Mathematics Codex &amp; Interactive Sandbox:</strong> Seamlessly merged <code>/pages/math.php</code> into <code>/pages/math-vocab.php</code> with 195 cross-curriculum terms, 3D active recall flashcards, and step-by-step formula solvers.
-                    </div>
-                </li>
-                <li class="footer-vmodal-feature-item">
-                    <div class="footer-vmodal-feature-icon" aria-hidden="true">
-                        <i class="fas fa-cubes"></i>
-                    </div>
-                    <div class="footer-vmodal-feature-text">
-                        <strong>JSON-First Modular Architecture:</strong> 105 standalone schema-validated JSON lesson modules in <code>assets/data/lessons/</code> rendered dynamically by <code>levels/k.php</code> with MathJax SVG rendering.
-                    </div>
-                </li>
-                <li class="footer-vmodal-feature-item">
-                    <div class="footer-vmodal-feature-icon" aria-hidden="true">
-                        <i class="fas fa-universal-access"></i>
-                    </div>
-                    <div class="footer-vmodal-feature-text">
-                        <strong>Universal WCAG &amp; UDL Compliance:</strong> 100% keyboard accessibility, screen-reader friendly equations, tactile shortcuts, and multimodal accommodations (OpenDyslexic, Irlen overlays, text-to-speech).
+                        <strong>Unified Mathematics Codex &amp; Interactive Sandbox:</strong> 195 mathematical terms, 3D active recall flashcards, and step-by-step formula solvers accessible on <code>/pages/math-vocab.php</code>.
                     </div>
                 </li>
             </ul>

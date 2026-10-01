@@ -1,0 +1,1422 @@
+{
+    "id": "k-math-m5",
+    "module": 5,
+    "subject": "math",
+    "grade": "9",
+    "level": "k",
+    "title": "Module 5: A Synthesis of Modeling with Equations and Functions",
+    "description": "Using linear, quadratic, and exponential models to evaluate and interpret real-world behaviors.",
+    "lessonsCount": 9,
+    "lessons": {
+        "k-math-m5-a-1": {
+            "id": "k-math-m5-a-1",
+            "code": "K.M5.A.1",
+            "standard": "HSA.CED.A.1",
+            "levelId": "k",
+            "requiresMathJax": true,
+            "meta": {
+                "title": "Analyzing a Graph",
+                "pageTitle": "Analyzing a Graph | Hesten's Learning",
+                "description": "This lesson asks students to recognize a function type from a graph, from the function library studied this year (i.e., linear, exponential, quadratic, cubic, s...",
+                "pageDescription": "Master Analyzing a Graph in Module 5: A Synthesis of Modeling with Equations and Functions. Comprehensive student outcomes, teacher insights, guided exercises, problem set worksheets, and exit ticket keys.",
+                "author": "Hesten's Learning Team",
+                "badge": "Math Lesson K.M5.A.1",
+                "badgeIcon": "fa-calculator"
+            },
+            "overview": {
+                "title": "Student & Teacher Overview: Lesson 1",
+                "pill": "Elements of Modeling",
+                "text": "This lesson asks students to recognize a function type from a graph, from the function library studied this year (i.e., linear, exponential, quadratic, cubic, square root, cube root, absolute value, and other piecewise functions), and to formulate an analytical, symbolic model. For this lesson, students do not go beyond the second step in the modeling cycle, focusing instead on recognition and formulation only. Unlike in previous modules, no curriculum clues are provided (e.g., lesson or module title) to guide students toward the type of function represented by the graph. There is a mix of function types, and students learn to recognize the clues that are in the graph itself. They analyze the relationship between the variables and key features of the graph and/or the context to identify the function type. Key features include the overall shape of the graph (to identify the function type), x- and y-intercepts (to identify zeros and initial conditions of the function), symmetry, vertices (to identify minimum or maximum values of the function), end behavior, slopes of line segments between two points (to identify average rates of change over intervals), sharp corners or cusps (to identify potential piecewise functions), and gaps or indicated endpoints (to identify domain and range restrictions). Throughout this module, teachers should refer to the modeling cycle below (found on page 61 of the CCLS and page 72 of the CCSS): MP.1&MP.4MP.1&MP.4Note: Writing in a math journal or notebook is suggested for this lesson and all of Module 5. Encourage students to keep and use their journal as a reference throughout the module.",
+                "outcomes": [
+                    "From a graphic representation, students recognize the function type, interpret key features of the graph, and create an equation or table to use as a model of the context for functions addressed in previous modules (i.e., linear, exponential, quadratic, cubic, square root, cube root, absolute value, and other piecewise functions)."
+                ],
+                "teacherInsight": "Emphasize precise mathematical definitions and multiple problem-solving representations. Encourage students to check the reasonableness of their numerical solutions."
+            },
+            "content": [],
+            "vocabulary": [
+                {
+                    "term": "Analyzing a Graph",
+                    "definition": "Core mathematical concept established in Module 5: A Synthesis of Modeling with Equations and Functions, Elements of Modeling."
+                },
+                {
+                    "term": "Mathematical Modeling",
+                    "definition": "The process of choosing and using appropriate mathematics and statistics to analyze empirical situations, to understand them better, and to improve decisions."
+                }
+            ],
+            "guidedExercises": [
+                {
+                    "title": "Example 1: Core Mathematical Modeling for Analyzing a Graph",
+                    "badge": "Eureka Math Guided Classwork",
+                    "difficulty": "Core Application",
+                    "problem": "The Opening Exercise and Discussion for this lesson involve students learning skills important to the modeling cycle. When presented with a problem, they make sense of the given information, analyze the presentation, define the variables involved, look for entry points to a solution, and create an equation to be used as an analytical model. Classwork Opening Exercise (8 minutes) The discussion following the Opening Exercise assumes students have already filled out the Function Summary Chart. Unl",
+                    "scaffolding": "Identify the key variables and properties. Apply the definitions and mathematical structures introduced in Analyzing a Graph.",
+                    "steps": [
+                        {
+                            "step": 1,
+                            "label": "Define Variables & Formulate Governing Relations",
+                            "math": "\\text{Identify key variables and parameters for } Analyzing a Graph",
+                            "explanation": "Establish the relationship between quantities and state any domain constraints."
+                        },
+                        {
+                            "step": 2,
+                            "label": "Execute Step-by-Step Algebraic Transformations",
+                            "math": "\\text{Transform and simplify equations: } \\dots",
+                            "explanation": "Opening Exercise The graphs below give examples for each parent function we have studied this year. For each graph, identify the function type and the general form of the parent function's equation; then offer general observations on the key features"
+                        }
+                    ],
+                    "finalAnswer": "\\text{The evaluated solution verifies the properties of } Analyzing a Graph",
+                    "commonPitfall": "Ensure units of measurement and domain constraints are checked in physical and statistical contexts."
+                },
+                {
+                    "title": "Exercise 1: Independent Problem Formulation",
+                    "badge": "Multi-Step Application",
+                    "difficulty": "Advanced Reasoning",
+                    "problem": "Apply the foundational principles of Analyzing a Graph to determine the exact value and interpret the contextual significance.",
+                    "scaffolding": "Reference the worked steps from Example 1. Verify intermediate calculations and justify your steps.",
+                    "steps": [
+                        {
+                            "step": 1,
+                            "label": "Analyze Given Conditions & Structure",
+                            "math": "\\text{State domain constraints and initial conditions}",
+                            "explanation": "Verify that all assumptions conform to the problem context."
+                        },
+                        {
+                            "step": 2,
+                            "label": "Calculate the Final Mathematical Solution",
+                            "math": "\\text{Solve for the target unknown quantity}",
+                            "explanation": "State the solution with formal mathematical reasoning."
+                        }
+                    ],
+                    "finalAnswer": "\\text{Verified algebraic or statistical solution}",
+                    "commonPitfall": "Avoid rounding prematurely before the final step."
+                }
+            ],
+            "exitTicket": {
+                "title": "Lesson 1 Exit Ticket: Analyzing a Graph",
+                "prompt": "Enlarging and displaying the graph for this Exit Ticket problem on the board or screen may be helpful and would be important for students with visual impairments.\n\nExit Ticket\n\nRead the problem description, and answer the questions below. Use a separate piece of paper if needed.\n\nA library posted a graph in its display case to illustrate the relationship between the fee for any given late day for a borrowed book and the total number of days the book is overdue. The graph, shown below, includes a few data points for reference. Rikki has forgotten this policy and wants to know what her fine would be for a given number of late days. The ordered pairs on the graph are (1, 0.1), (10, 1), (11, 1.5), and (14, 3).\n\nWhat type of function is this?\n\nWhat is the general form of the parent function(s) of this graph?\n\nWhat equations would you expect to use to model this context?\n\nDescribe verbally what this graph is telling you about the library fees.\n\nCompare the advantages and disadvantages of the graph versus the equation as a model for this relationship. What would be the advantage of using a verbal description in this context? How might you use a table of values?\n\nWhat suggestions would you make to the library about how it could better share this information with its customers? Comment on the accuracy and helpfulness of this graph.",
+                "solution": "Read the problem description, and answer the questions below. Use a separate piece of paper if needed.\n\nA library posted a graph in its display case to illustrate the relationship between the fee for any given late day for a borrowed book and the total number of days the book is overdue. The graph, shown below, includes a few data points for reference. Rikki has forgotten this policy and wants to know what her fine would be for a given number of late days. The ordered pairs on the graph are (1, 0.1), (10, 1), (11, 1.5), and (14, 3).\n\nWhat type of function is this?\n\nPiecewise linear\n\nWhat is the general form of the parent function(s) of this graph?\n\nf(x)=(m_{1}x+b_{1}, x≤a m_{2}x+b_{2}, x>a)\n\nWhat equations would you expect to use to model this context?\n\nf(x)=(0.1x, if x≤100.5(x-10)+1, if x>10)\n\nStudents may be more informal in their descriptions of the function equation and might choose to make the domain restriction of the second piece inclusive rather than the first piece since both pieces are joined at the same point.\n\nDescribe verbally what this graph is telling you about the library fees.\n\nThe overdue fee is a flat rate of $0.10 per day for the first 10 days and then increases to $0.50 per day after 10 days. The fee for each of the first 10 days is $0.10, so the fee for 10 full days is $0.10(10)=$1.00. Then, the fee for 11 full days of late fees is $1.00+$0.50=$1.50, etc. (From then on, the fee increases to $0.50 for each additional day.)\n\nCompare the advantages and disadvantages of the graph versus the equation as a model for this relationship. What is the advantage of using a verbal description in this context? How might you use a table of values?\n\nGraphs are visual and allow us to see the general shape and direction of the function. However, equations allow us to determine more exact values since graphs only allow for estimates for any non-integer values. The late-fee scenario depends on integer number of days only; other scenarios may involve independent variables of non-integer values (e.g., gallons of gasoline purchased). In this case, a table could be used to show the fee for each day but could also show the accumulated fees for the total number of days. For example, for 15 days, the fees would be $1.00 for the first 10 plus $2.50 for the next 5, for a total of $3.50.\n\nWhat suggestions would you make to the library about how it could better share this information with its customers? Comment on the accuracy and helpfulness of this graph.\n\nRather than displaying the late fee system in a graph, a table showing the total fine for the number of days late would be clearer. If a graph is preferred, it might be better to use a discrete graph, or even a step graph, since the fees are not figured by the hour or minute but only by the full day. While the given graph shows the rate for each day, most customers would rather know, at a glance, what they owe, in total, for their overdue books."
+            },
+            "problemSet": {
+                "title": "Official Worksheet: Problem Set & Practice",
+                "description": "Master Analyzing a Graph through authentic curriculum practice problems. Check your work using the expandable teacher solution key below.",
+                "problems": [
+                    {
+                        "number": 1,
+                        "prompt": "During tryouts for the track team, Bob is running 90-foot wind sprints by running from a starting line to the far wall of the gym and back. At time t=0, he is at the starting line and ready to accelerate toward the opposite wall. As t approaches 6 seconds, he must slow down, stop for just an instant to touch the wall, turn around, and sprint back to the starting line. His distance, in feet, from the starting line with respect to the number of seconds that has passed for one repetition is modeled by the graph below.\n\nWhat are the key features of this graph?",
+                        "solution": "The graph appears to represent a quadratic function. The maximum point is at (6, 90). The zeros are at (0, 0) and (12, 0)."
+                    },
+                    {
+                        "number": 2,
+                        "prompt": "What are the units involved?",
+                        "solution": "Distance is measured in feet and time in seconds."
+                    },
+                    {
+                        "number": 3,
+                        "prompt": "What is the parent function of this graph?",
+                        "solution": "We will attempt to model the graph with a quadratic function. The parent function could be f(t)=t^{2}."
+                    },
+                    {
+                        "number": 4,
+                        "prompt": "Were any transformations made to the parent function to get this graph?",
+                        "solution": "It has a negative leading coefficient, and it appears to shift up 90 units and to the right 6 units."
+                    },
+                    {
+                        "number": 5,
+                        "prompt": "What general analytical representation would you expect to model this context?",
+                        "solution": "f(t)=a(t- h)^{2}+k"
+                    },
+                    {
+                        "number": 6,
+                        "prompt": "What do you already know about the parameters of the equation?",
+                        "solution": "a<0, h=6, k=90"
+                    },
+                    {
+                        "number": 7,
+                        "prompt": "Use the ordered pairs you know to replace the parameters in the general form of your equation with constants so that the equation will model this context. Check your answer using the graph.",
+                        "solution": "To find a, substitute (0, 0) for (x, y) and (6, 90) for (h, k):\n\n0=a(0-6)^{2}+90 -90=a(36)a=-\\frac{90}{36}=-2.5\n\nf(t)=-2.5(t-6)^{2}+90\n\nNow check it with (12, 0):\n\n0=-2.5(12-6)^{2}+90-90=-2.5(36)-90=-90 Yes"
+                    },
+                    {
+                        "number": 8,
+                        "prompt": "Spencer and McKenna are on a long-distance bicycle ride. Spencer leaves one hour before McKenna. The graph below shows each rider's distance in miles from his or her house as a function of time since McKenna left on her bicycle to catch up with Spencer. (Note: Parts (e), (f), and (g) are challenge problems.)\n\nWhich function represents Spencer's distance? Which function represents McKenna's distance? Explain your reasoning.",
+                        "solution": "The function that starts at (0,20) represents Spencer's distance since he had a 1-hour head start. The function that starts at (0,0) represents McKenna's distance since the graph is described as showing distance since she started riding. That means at the time she started riding (t=0 hours), her distance would need to be 0 miles."
+                    },
+                    {
+                        "number": 9,
+                        "prompt": "Estimate when McKenna catches up to Spencer. How far have they traveled at that point in time?",
+                        "solution": "McKenna will catch up with Spencer after about 3.25 hours. They will have traveled approximately 41 miles at that point."
+                    },
+                    {
+                        "number": 10,
+                        "prompt": "One rider is speeding up as time passes and the other one is slowing down. Which one is which, and how can you tell from the graphs?",
+                        "solution": "I know that Spencer is slowing down because his graph is getting less steep as time passes. I know that McKenna is speeding up because her graph is getting steeper as time passes."
+                    },
+                    {
+                        "number": 11,
+                        "prompt": "According to the graphs, what type of function would best model each rider's distance?",
+                        "solution": "Spencer's graph appears to be modeled by a square root function. McKenna's graph appears to be quadratic."
+                    },
+                    {
+                        "number": 12,
+                        "prompt": "Create a function to model each rider's distance as a function of the time since McKenna started riding her bicycle. Use the data points labeled on the graph to create a precise model for each rider's distance.",
+                        "solution": "If Spencer started 1 hour before McKenna, then (-1,0) would be a point on his graph. Using a square root function in the form f(x)=k\\sqrt{x+1} would be appropriate. To find k, substitute (0,20) into the function.\n\n20=k\\sqrt{0+1}\n\n20=k\n\nSo, f(x)=20\\sqrt{x+1}. Check with the other point (3,40):\n\nf(3)=20\\sqrt{3+1}\n\nf(3)=20\\sqrt{4}=40\n\nFor McKenna, using a quadratic model would mean the vertex must be at (0,0). A quadratic function in the form g(x)=kx^{2} would be appropriate. To find k, substitute (1,4) into the function.\n\n4=k(1)^{2}\n\n4=k\n\nSo, g(x)=4x^{2}. Check with the other point (3,36): g(3)=4(3)^{2}=36."
+                    },
+                    {
+                        "number": 13,
+                        "prompt": "What is the meaning of the x- and y-intercepts of each rider in the context of this problem?",
+                        "solution": "Spencer's x-intercept (-1,0) shows that he starts riding one hour before McKenna. McKenna's x-intercept shows that at time 0, her distance from home is 0, which makes sense in this problem. Spencer's y-intercept (0,20) means that when McKenna starts riding one hour after he begins, he has already traveled 20 miles."
+                    },
+                    {
+                        "number": 14,
+                        "prompt": "Estimate which rider is traveling faster 30 minutes after McKenna started riding. Show work to support your answer.",
+                        "solution": "Spencer:\n\n\\frac{f(0.5)-f(0.4)}{0.5-0.4}≈8.3\n\nMcKenna:\n\n\\frac{g(0.5)-g(0.4)}{0.5-0.4}=3.6\n\nOn the time interval from [0.4,0.5], Spencer's average rate of change was approximately 8.3 mph, and McKenna's average rate of change was 3.6 mph. Therefore, Spencer is traveling faster than McKenna30 minutes after McKenna begins riding because his average rate of change is greater than McKenna's average rate of change."
+                    }
+                ]
+            },
+            "practiceQuestions": [
+                {
+                    "question": "[Exit Ticket Challenge 1] Enlarging and displaying the graph for this Exit Ticket problem on the board or screen may be helpful and would be important for students with visual impairments.",
+                    "options": [
+                        "Read the problem description, and answer the questions below. Use a separate piece of paper if needed.",
+                        "The relationship cannot be evaluated without arbitrary numerical coordinates.",
+                        "The values remain constant at zero regardless of the independent variable inputs.",
+                        "The rate of change is undefined because domain restrictions were violated."
+                    ],
+                    "correct": 0,
+                    "explanation": "From the official Eureka Math Exit Ticket Key for Lesson 1:\nRead the problem description, and answer the questions below. Use a separate piece of paper if needed.\n\nA library posted a graph in its display case to illustrate the relationship between the fee for any given late day for a borrowed book and the total number of days the book is overdue. The graph, shown below, includes a few data points for reference. Rikki has forgotten this policy and wants to know what her fine would be for a given number of "
+                },
+                {
+                    "question": "[Exit Ticket Challenge 2] Exit Ticket",
+                    "options": [
+                        "A library posted a graph in its display case to illustrate the relationship between the fee for any given late day for a borrowed book and the total number of days the book is overdue. The graph, shown below, includes a few data points for reference.",
+                        "Ignore boundary conditions and compute only approximate integer values.",
+                        "Assume that all relationships are strictly constant without verifying rates of change.",
+                        "Treat independent and dependent variables as interchangeable."
+                    ],
+                    "correct": 0,
+                    "explanation": "Official Curriculum Key for Lesson 1:\nFrom a graphic representation, students recognize the function type, interpret key features of the graph, and create an equation or table to use as a model of the context for functions addressed in previous modules (i.e., linear, exponential, quadratic, cubic, square root, cube root, absolute value, and other piecewise functions)."
+                }
+            ],
+            "citation": {
+                "title": "Source Citation (MLA)",
+                "text": "Great Minds. \"Analyzing a Graph.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+                "subtext": "Developed using authentic lesson materials from standard algebra curricula.",
+                "lessonId": "L-ID-K-MATH-M5-A-1"
+            }
+        },
+        "k-math-m5-a-2": {
+            "id": "k-math-m5-a-2",
+            "code": "K.M5.A.2",
+            "standard": "HSA.CED.A.1",
+            "levelId": "k",
+            "requiresMathJax": true,
+            "meta": {
+                "title": "Analyzing a Data Set",
+                "pageTitle": "Analyzing a Data Set | Hesten's Learning",
+                "description": "This lesson asks students to use the first steps in the modeling cycle when a mathematical relationship is represented as a table of values. They look for trend...",
+                "pageDescription": "Master Analyzing a Data Set in Module 5: A Synthesis of Modeling with Equations and Functions. Comprehensive student outcomes, teacher insights, guided exercises, problem set worksheets, and exit ticket keys.",
+                "author": "Hesten's Learning Team",
+                "badge": "Math Lesson K.M5.A.2",
+                "badgeIcon": "fa-calculator"
+            },
+            "overview": {
+                "title": "Student & Teacher Overview: Lesson 2",
+                "pill": "Elements of Modeling",
+                "text": "This lesson asks students to use the first steps in the modeling cycle when a mathematical relationship is represented as a table of values. They look for trends and patterns in the data and formulate a model. First, they look for common differences between the function values of regular intervals (i.e., the first differences for linear and the second differences for quadratic). For exponential functions, they look for a common ratio and/or a constant percent change. For this lesson, all data is based on functions' inputs and outputs, and the numbers are friendly. Throughout this module, refer to the modeling cycle below (found on page 61 of the CCLS and page 72 of the CCSSM):",
+                "outcomes": [
+                    "Students recognize linear, quadratic, and exponential functions when presented as a data set or sequence and formulate a model based on the data."
+                ],
+                "teacherInsight": "Emphasize precise mathematical definitions and multiple problem-solving representations. Encourage students to check the reasonableness of their numerical solutions."
+            },
+            "content": [],
+            "vocabulary": [
+                {
+                    "term": "Look at these three tables",
+                    "definition": "What do you notice about the three sets of data? Can you identify the type of function they represent? Students may observe some of the examples listed below."
+                },
+                {
+                    "term": "Now show a data plot for each",
+                    "definition": "Now can you see the trends more clearly? Yes, it is obvious that the first is linear."
+                }
+            ],
+            "guidedExercises": [
+                {
+                    "title": "Example 1: Core Mathematical Modeling for Analyzing a Data Set",
+                    "badge": "Eureka Math Guided Classwork",
+                    "difficulty": "Core Application",
+                    "problem": "MP.1&MP.4MP.1&MP.4The Opening Exercise and Discussion for this lesson involve students learning to use the first steps in the modeling cycle. When presented with a problem, they make sense of the given information, analyze the presentation, define the variables involved, look for entry points to a solution, and create an equation or graph to model the context. Students represent the data with appropriate symbolic representation, interpret their mathematical results in the context, and validate t",
+                    "scaffolding": "Identify the key variables and properties. Apply the definitions and mathematical structures introduced in Analyzing a Data Set.",
+                    "steps": [
+                        {
+                            "step": 1,
+                            "label": "Define Variables & Formulate Governing Relations",
+                            "math": "\\text{Identify key variables and parameters for } Analyzing a Data Set",
+                            "explanation": "Establish the relationship between quantities and state any domain constraints."
+                        },
+                        {
+                            "step": 2,
+                            "label": "Execute Step-by-Step Algebraic Transformations",
+                            "math": "\\text{Transform and simplify equations: } \\dots",
+                            "explanation": "xf(x)06112218324430536xg(x)00114224330432530xh(x)0113293274815243xf(x)06112218324430536xg(x)00114224330432530xh(x)0113293274815243When tables are used to model functions, we typically have just a few sample values of the function and therefore have t"
+                        }
+                    ],
+                    "finalAnswer": "\\text{The evaluated solution verifies the properties of } Analyzing a Data Set",
+                    "commonPitfall": "Ensure units of measurement and domain constraints are checked in physical and statistical contexts."
+                },
+                {
+                    "title": "Exercise 1: Independent Problem Formulation",
+                    "badge": "Multi-Step Application",
+                    "difficulty": "Advanced Reasoning",
+                    "problem": "Apply the foundational principles of Analyzing a Data Set to determine the exact value and interpret the contextual significance.",
+                    "scaffolding": "Reference the worked steps from Example 1. Verify intermediate calculations and justify your steps.",
+                    "steps": [
+                        {
+                            "step": 1,
+                            "label": "Analyze Given Conditions & Structure",
+                            "math": "\\text{State domain constraints and initial conditions}",
+                            "explanation": "Verify that all assumptions conform to the problem context."
+                        },
+                        {
+                            "step": 2,
+                            "label": "Calculate the Final Mathematical Solution",
+                            "math": "\\text{Solve for the target unknown quantity}",
+                            "explanation": "State the solution with formal mathematical reasoning."
+                        }
+                    ],
+                    "finalAnswer": "\\text{Verified algebraic or statistical solution}",
+                    "commonPitfall": "Avoid rounding prematurely before the final step."
+                }
+            ],
+            "exitTicket": {
+                "title": "Lesson 2 Exit Ticket: Analyzing a Data Set",
+                "prompt": "Exit Ticket\n\nAnalyze these data sets, recognizing the unique pattern and key feature(s) for each relationship. Then use your findings to fill in the missing data, match to the correct function from the list on the right, and describe the key feature(s) that helped you choose the function.\n\nTable Dxy-10618263045-24Table Bxy0611521831545Table Axy0611021434225Table Cxy-1\\frac{1}{6}011236341296Table Dxy-10618263045-24\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}Table Bxy0611521831545Table Axy0611021434225Table Cxy-1\\frac{1}{6}011236341296\n\nEquations:f(x)=6^{x}h(x)=-3(x-2)^{2}+18g(x)=-2(x+1)(x-3)r(x)=4x+6Equations:f(x)=6^{x}h(x)=-3(x-2)^{2}+18g(x)=-2(x+1)(x-3)r(x)=4x+6\n\nTable A: __________________ Key Feature(s): ________________________________________________________\n\nTable B: __________________ Key Feature(s): ________________________________________________________\n\nTable C: __________________ Key Feature(s): ________________________________________________________\n\nTable D: __________________ Key Feature(s): ________________________________________________________",
+                "solution": "Equations:f(x)=6^{x}h(x)=-3(x-2)^{2}+18g(x)=-2(x+1)(x-3)r(x)=4x+6Table Bxy06115218315465-9Table Dxy-10061826304-105-24Table Axy06110214318422526Table Cxy-1\\frac{1}{6}0116236321641296Equations:f(x)=6^{x}h(x)=-3(x-2)^{2}+18g(x)=-2(x+1)(x-3)r(x)=4x+6Table Bxy06115218315465-9Table Dxy-10061826304-105-24Table Axy06110214318422526Table Cxy-1\\frac{1}{6}0116236321641296Analyze these data sets, recognizing the unique pattern and key feature(s) for each relationship. Then use your findings to fill in the missing data, match to the correct function from the list on the right, and describe the key feature(s) that helped you choose the function.\n\nTable A: r(x)=4x+6 Key Feature(s): Constant slope (first difference) is 4\n\nTable B: h(x)=-3(x-2)^{2}+18 Key Feature(s): (2, 18) is the maximum point; Second difference is —6\n\nTable C: f(x)=6^{x} Key Feature(s): Exponential growth; Common ratio is 6\n\nTable D: g(x)=-2(x+1)(x-3) Key Feature(s): x-intercepts (-1,0) and (3, 0); Second difference is —4"
+            },
+            "problemSet": {
+                "title": "Official Worksheet: Problem Set & Practice",
+                "description": "Master Analyzing a Data Set through authentic curriculum practice problems. Check your work using the expandable teacher solution key below.",
+                "problems": [
+                    {
+                        "number": 1,
+                        "prompt": "Determine the function type that could be used to model the data set at the right and explain why.",
+                        "solution": "Quadratic—the second difference is 4.\n\nComplete the data set using the special pattern of the function you described in part (a).\n\nSee the completed table for answers."
+                    },
+                    {
+                        "number": 2,
+                        "prompt": "If it exists, find the minimum or maximum value for the function model. If there is no minimum or maximum, explain why.",
+                        "solution": "Minimum value occurs at (4, -8)."
+                    },
+                    {
+                        "number": 3,
+                        "prompt": "Determine the function type that could be used to model the data set and explain why.",
+                        "solution": "Exponential—y-value is being multiplied by constant value 4.\n\nComplete the data set using the special pattern of the function you described in part (a).\n\nSee responses in the completed table."
+                    },
+                    {
+                        "number": 4,
+                        "prompt": "If it exists, find the minimum or maximum value for the function model. If there is no minimum or maximum, explain why.",
+                        "solution": "Since this is an exponential function, the y-values increase as x-values increase, and there is no maximum value. As x gets smaller and smaller (i.e., moves further to the left on the number line), the y-values approach 0 but never reach 0 and never become negative. Therefore, there is no minimum value of this function.\n\nxy-16012118224330436542xy-16012118224330436542"
+                    },
+                    {
+                        "number": 5,
+                        "prompt": "Determine the function type that could be used to model the data set and explain why.",
+                        "solution": "Linear—the first difference is 6.\n\nComplete the data set using the special pattern of the function you described in part (a).\n\nSee responses in the completed table."
+                    },
+                    {
+                        "number": 6,
+                        "prompt": "If it exists, find the minimum or maximum value for the function model. If there is no minimum or maximum, explain why.",
+                        "solution": "There is no minimum or maximum value for a linear function (except for a horizontal line). For this function, the y-values decrease as the x-values decrease, and the y-values increase as the x-values increase."
+                    }
+                ]
+            },
+            "practiceQuestions": [
+                {
+                    "question": "[Exit Ticket Challenge 1] Exit Ticket",
+                    "options": [
+                        "Equations:f(x)=6^{x}h(x)=-3(x-2)^{2}+18g(x)=-2(x+1)(x-3)r(x)=4x+6Table Bxy06115218315465-9Table Dxy-10061826304-105-24Table Axy06110214318422526Table Cxy-1\\frac{1}{6}0116236321641296Equations:f(x)=6^{x}h(x)=-3(x-2)^{2}+18g(x)=-2(x+1)(x-3)r(x)=4x+6Tab",
+                        "The relationship cannot be evaluated without arbitrary numerical coordinates.",
+                        "The values remain constant at zero regardless of the independent variable inputs.",
+                        "The rate of change is undefined because domain restrictions were violated."
+                    ],
+                    "correct": 0,
+                    "explanation": "From the official Eureka Math Exit Ticket Key for Lesson 2:\nEquations:f(x)=6^{x}h(x)=-3(x-2)^{2}+18g(x)=-2(x+1)(x-3)r(x)=4x+6Table Bxy06115218315465-9Table Dxy-10061826304-105-24Table Axy06110214318422526Table Cxy-1\\frac{1}{6}0116236321641296Equations:f(x)=6^{x}h(x)=-3(x-2)^{2}+18g(x)=-2(x+1)(x-3)r(x)=4x+6Table Bxy06115218315465-9Table Dxy-10061826304-105-24Table Axy06110214318422526Table Cxy-1\\frac{1}{6}0116236321641296Analyze these data sets, recognizing the unique pattern and key feature(s) for each re"
+                },
+                {
+                    "question": "[Exit Ticket Challenge 2] Analyze these data sets, recognizing the unique pattern and key feature(s) for each relationship. Then use your findings to fill in the missing data, match to the correct function from the list on the right, and describe the key feature(s) that helped you choose the function.",
+                    "options": [
+                        "Table A: r(x)=4x+6 Key Feature(s): Constant slope (first difference) is 4",
+                        "Ignore boundary conditions and compute only approximate integer values.",
+                        "Assume that all relationships are strictly constant without verifying rates of change.",
+                        "Treat independent and dependent variables as interchangeable."
+                    ],
+                    "correct": 0,
+                    "explanation": "Official Curriculum Key for Lesson 2:\nStudents recognize linear, quadratic, and exponential functions when presented as a data set or sequence and formulate a model based on the data."
+                }
+            ],
+            "citation": {
+                "title": "Source Citation (MLA)",
+                "text": "Great Minds. \"Analyzing a Data Set.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+                "subtext": "Developed using authentic lesson materials from standard algebra curricula.",
+                "lessonId": "L-ID-K-MATH-M5-A-2"
+            }
+        },
+        "k-math-m5-a-3": {
+            "id": "k-math-m5-a-3",
+            "code": "K.M5.A.3",
+            "standard": "HSA.CED.A.1",
+            "levelId": "k",
+            "requiresMathJax": true,
+            "meta": {
+                "title": "Analyzing a Verbal Description",
+                "pageTitle": "Analyzing a Verbal Description | Hesten's Learning",
+                "description": "This lesson asks students to recognize a function type from a verbal description of a context, using linear, quadratic, and exponential functions and linear ine...",
+                "pageDescription": "Master Analyzing a Verbal Description in Module 5: A Synthesis of Modeling with Equations and Functions. Comprehensive student outcomes, teacher insights, guided exercises, problem set worksheets, and exit ticket keys.",
+                "author": "Hesten's Learning Team",
+                "badge": "Math Lesson K.M5.A.3",
+                "badgeIcon": "fa-calculator"
+            },
+            "overview": {
+                "title": "Student & Teacher Overview: Lesson 3",
+                "pill": "Elements of Modeling",
+                "text": "This lesson asks students to recognize a function type from a verbal description of a context, using linear, quadratic, and exponential functions and linear inequalities. They formulate a model that can be used to analyze the function in its context. For this lesson, they do not go beyond the second step in the modeling cycle but focus on recognition and formulation only. Unlike in previous modules, no curriculum clues are provided (e.g., lesson or module title) to guide students toward the type of function represented by the situation. There is a mix of function types, and students learn to recognize the clues that are in the description itself. They analyze the relationship between the variables and/or the contextual situation to identify the function type. MP.1&MP.4MP.1&MP.4Throughout this module, refer to the modeling cycle below (found on page 61 of the CCLS and page 72 of the CCSSM): Throughout this lesson, students use the first steps in the modeling cycle. When presented with a problem, they make sense of the given information, define the variables involved, look for entry points to a solution, and create an equation to be used as a model for the context.",
+                "outcomes": [
+                    "Students make sense of a contextual situation that can be modeled with a linear, quadratic, or exponential function when presented as a word problem. They analyze a verbal description and create a model using an equation, graph, or table."
+                ],
+                "teacherInsight": "Emphasize precise mathematical definitions and multiple problem-solving representations. Encourage students to check the reasonableness of their numerical solutions."
+            },
+            "content": [],
+            "vocabulary": [
+                {
+                    "term": "Analyzing a Verbal Description",
+                    "definition": "Core mathematical concept established in Module 5: A Synthesis of Modeling with Equations and Functions, Elements of Modeling."
+                },
+                {
+                    "term": "Mathematical Modeling",
+                    "definition": "The process of choosing and using appropriate mathematics and statistics to analyze empirical situations, to understand them better, and to improve decisions."
+                }
+            ],
+            "guidedExercises": [
+                {
+                    "title": "Example 1: Core Mathematical Modeling for Analyzing a Verbal Description",
+                    "badge": "Eureka Math Guided Classwork",
+                    "difficulty": "Core Application",
+                    "problem": "Classwork Opening (15 minutes) Scaffolding:Consider skipping this Opening if students do not need this review. Scaffolding:Consider skipping this Opening if students do not need this review. There are a number of everyday problems that are used for mathematical modeling. It may be helpful to review them quickly before beginning this lesson. Present these on the board or screen, and invite students to take notes in their math journals or notebooks. This Opening is meant to offer suggestions for d",
+                    "scaffolding": "Identify the key variables and properties. Apply the definitions and mathematical structures introduced in Analyzing a Verbal Description.",
+                    "steps": [
+                        {
+                            "step": 1,
+                            "label": "Define Variables & Formulate Governing Relations",
+                            "math": "\\text{Identify key variables and parameters for } Analyzing a Verbal Description",
+                            "explanation": "Establish the relationship between quantities and state any domain constraints."
+                        },
+                        {
+                            "step": 2,
+                            "label": "Execute Step-by-Step Algebraic Transformations",
+                            "math": "\\text{Transform and simplify equations: } \\dots",
+                            "explanation": "The familiar formula (Rate)(Time)=Distance can be adjusted to accommodate any (or all) of the uniform rate problem situations mentioned above. These use the equation of the form f(x)=mx (or d=rt). Sometimes the rate is combined with a constant part ("
+                        }
+                    ],
+                    "finalAnswer": "\\text{The evaluated solution verifies the properties of } Analyzing a Verbal Description",
+                    "commonPitfall": "Ensure units of measurement and domain constraints are checked in physical and statistical contexts."
+                },
+                {
+                    "title": "Exercise 1: Independent Problem Formulation",
+                    "badge": "Multi-Step Application",
+                    "difficulty": "Advanced Reasoning",
+                    "problem": "Apply the foundational principles of Analyzing a Verbal Description to determine the exact value and interpret the contextual significance.",
+                    "scaffolding": "Reference the worked steps from Example 1. Verify intermediate calculations and justify your steps.",
+                    "steps": [
+                        {
+                            "step": 1,
+                            "label": "Analyze Given Conditions & Structure",
+                            "math": "\\text{State domain constraints and initial conditions}",
+                            "explanation": "Verify that all assumptions conform to the problem context."
+                        },
+                        {
+                            "step": 2,
+                            "label": "Calculate the Final Mathematical Solution",
+                            "math": "\\text{Solve for the target unknown quantity}",
+                            "explanation": "State the solution with formal mathematical reasoning."
+                        }
+                    ],
+                    "finalAnswer": "\\text{Verified algebraic or statistical solution}",
+                    "commonPitfall": "Avoid rounding prematurely before the final step."
+                }
+            ],
+            "exitTicket": {
+                "title": "Lesson 3 Exit Ticket: Analyzing a Verbal Description",
+                "prompt": "Exit Ticket\n\nCreate a model to compare these two texting plans:\n\nPlan A costs $15 a month, including 200 free texts. After 200, they cost $0.15 each.\n\nPlan B costs $20 a month, including 250 free texts. After 250, they cost $0.10 each.",
+                "solution": "Create a model to compare these two texting plans:\n\nPlan A costs $15 a month, including 200 free texts. After 200, they cost $0.15 each.\n\nPlan B costs $20 a month, including 250 free texts. After 250, they cost $0.10 each.\n\nMonthly cost of Plan A: A(t)=(15, if t≤20015+0.15(t-200), if t>200) where t represents the number of texts per month\n\nMonthly cost of Plan B: B(t)=(20, if t≤25020+0.10(t-250), if t>250) where t represents the number of texts per month"
+            },
+            "problemSet": {
+                "title": "Official Worksheet: Problem Set & Practice",
+                "description": "Master Analyzing a Verbal Description through authentic curriculum practice problems. Check your work using the expandable teacher solution key below.",
+                "problems": [
+                    {
+                        "number": 1,
+                        "prompt": "The costs to purchase school spirit posters are as follows: two posters for $5, four posters for $9, six posters for $13, eight posters for $17, and so on.\n\nWhat type of function would best represent the cost of the total number of posters purchased?",
+                        "solution": "Linear function"
+                    },
+                    {
+                        "number": 2,
+                        "prompt": "What function represents the cost of the total number of posters purchased? How did you know? Justify your reasoning.",
+                        "solution": "Let x represent the number of school spirit posters. The four ordered pairs indicate a constant rate of change, (m=2), so the equation is y=2x+b. To find b, we need to substitute any ordered pair, say (2, 5): 5=2(2)+b, so b=1. The final equation for the function is f(x)=2x+1."
+                    },
+                    {
+                        "number": 3,
+                        "prompt": "If you have $40 to spend, write an inequality to find the maximum number of posters you could buy.",
+                        "solution": "2x+1≤40"
+                    },
+                    {
+                        "number": 4,
+                        "prompt": "NYC Sports Gym had 425 members in 2011. Based on statistics, the total number of memberships increases by 2% annually.\n\nWhat type of function models the total number of memberships in this situation?",
+                        "solution": "Exponential function"
+                    },
+                    {
+                        "number": 5,
+                        "prompt": "If the trend continues, what function represents the total number of memberships in n years? How did you know? Justify your reasoning.",
+                        "solution": "f(n)=425(1+0.02)^{n}\n\nThe initial number of members is 425. The yearly growth rate of 2% means I have to multiply by 1.02 for each year. So, 1.02 will be the common ratio for this exponential function."
+                    },
+                    {
+                        "number": 6,
+                        "prompt": "Derek throws a baseball upward from an initial height of 3 ft. The baseball hits the ground after 2 seconds.\n\nWhat was the initial velocity of the baseball?",
+                        "solution": "h(t)=-16t^{2}+v_{0}t+3\n\nh(2)=-16(2)^{2}+2v_{0}+3=0\n\nv_{0}=30.5\n\nThe initial velocity of the baseball was 0.5 ft/sec."
+                    },
+                    {
+                        "number": 7,
+                        "prompt": "What is the function that models the height, h (in feet), of the baseball over a period of time t (in seconds)?",
+                        "solution": "h(t)=-16t^{2}+30.5t+3"
+                    },
+                    {
+                        "number": 8,
+                        "prompt": "At what time did the baseball reach its maximum height? What was the maximum height of the baseball?",
+                        "solution": "The baseball reached its maximum height after 0.953125 seconds. The maximum height of the baseball was approximately 17.535 feet."
+                    }
+                ]
+            },
+            "practiceQuestions": [
+                {
+                    "question": "[Exit Ticket Challenge 1] Exit Ticket",
+                    "options": [
+                        "Create a model to compare these two texting plans:",
+                        "The relationship cannot be evaluated without arbitrary numerical coordinates.",
+                        "The values remain constant at zero regardless of the independent variable inputs.",
+                        "The rate of change is undefined because domain restrictions were violated."
+                    ],
+                    "correct": 0,
+                    "explanation": "From the official Eureka Math Exit Ticket Key for Lesson 3:\nCreate a model to compare these two texting plans:\n\nPlan A costs $15 a month, including 200 free texts. After 200, they cost $0.15 each.\n\nPlan B costs $20 a month, including 250 free texts. After 250, they cost $0.10 each.\n\nMonthly cost of Plan A: A(t)=(15, if t≤20015+0.15(t-200), if t>200) where t represents the number of texts per month\n\nMonthly cost of Plan B: B(t)=(20, if t≤25020+0.10(t-250), if t>250) where t represents the number of texts p"
+                },
+                {
+                    "question": "[Exit Ticket Challenge 2] Create a model to compare these two texting plans:",
+                    "options": [
+                        "Plan A costs $15 a month, including 200 free texts. After 200, they cost $0.15 each.",
+                        "Ignore boundary conditions and compute only approximate integer values.",
+                        "Assume that all relationships are strictly constant without verifying rates of change.",
+                        "Treat independent and dependent variables as interchangeable."
+                    ],
+                    "correct": 0,
+                    "explanation": "Official Curriculum Key for Lesson 3:\nStudents make sense of a contextual situation that can be modeled with a linear, quadratic, or exponential function when presented as a word problem. They analyze a verbal description and create a model using an equation, graph, or table."
+                }
+            ],
+            "citation": {
+                "title": "Source Citation (MLA)",
+                "text": "Great Minds. \"Analyzing a Verbal Description.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+                "subtext": "Developed using authentic lesson materials from standard algebra curricula.",
+                "lessonId": "L-ID-K-MATH-M5-A-3"
+            }
+        },
+        "k-math-m5-b-1": {
+            "id": "k-math-m5-b-1",
+            "code": "K.M5.B.1",
+            "standard": "HSA.CED.A.1",
+            "levelId": "k",
+            "requiresMathJax": true,
+            "meta": {
+                "title": "Modeling a Context from a Graph",
+                "pageTitle": "Modeling a Context from a Graph | Hesten's Learning",
+                "description": "In Lesson 1 of this module, students practiced formulating a function from a graph, making it through the first two steps in the modeling cycle: interpreting a ...",
+                "pageDescription": "Master Modeling a Context from a Graph in Module 5: A Synthesis of Modeling with Equations and Functions. Comprehensive student outcomes, teacher insights, guided exercises, problem set worksheets, and exit ticket keys.",
+                "author": "Hesten's Learning Team",
+                "badge": "Math Lesson K.M5.B.1",
+                "badgeIcon": "fa-calculator"
+            },
+            "overview": {
+                "title": "Student & Teacher Overview: Lesson 4",
+                "pill": "Completing the Modeling Cycle",
+                "text": "In Lesson 1 of this module, students practiced formulating a function from a graph, making it through the first two steps in the modeling cycle: interpreting a problem situation and formulating a model. This lesson continues the modeling cycle by having students compute, interpret, and validate. This is an exploratory lesson, allowing students to practice modeling through prompts and then to discuss the process with the class. The lesson ends with a difficult modeling exercise dealing with a square root function. Refer to the modeling cycle below when abstracting and contextualizing. (See page 61 of the CCLS and page 72 of the CCSSM.) MP.1&MP.4MP.1&MP.4Throughout this lesson, students work through the steps in the full modeling cycle. When presented with a problem, they make sense of the given information, analyze the presentation, define the variables involved, look for entry points to a solution, and create an equation to be used as a model. After formulating a model, they perform computations, interpret the model, validate their results, make adjustments to the model when needed, and report results.",
+                "outcomes": [
+                    "Students create a two-variable equation that models the graph from a context. Function types include linear, quadratic, exponential, square root, cube root, and absolute value. They interpret the graph, function, and answer questions related to the model, choosing an appropriate level of precision in reporting their results."
+                ],
+                "teacherInsight": "Emphasize precise mathematical definitions and multiple problem-solving representations. Encourage students to check the reasonableness of their numerical solutions."
+            },
+            "content": [],
+            "vocabulary": [
+                {
+                    "term": "For the graph",
+                    "definition": "I looked at the overall shape first to identify what type of graph it was (quadratic, linear, exponential, piecewise, square root, or cube root)."
+                },
+                {
+                    "term": "For the equation",
+                    "definition": "I first looked for the function type, which narrowed my search considerably."
+                }
+            ],
+            "guidedExercises": [
+                {
+                    "title": "Example 1: Core Mathematical Modeling for Modeling a Context from a Graph",
+                    "badge": "Eureka Math Guided Classwork",
+                    "difficulty": "Core Application",
+                    "problem": "Classwork Exploratory Challenge (10 minutes) Print and cut out the cards at the end of the lesson before class begins. A card should have either a graph or a function, not both. Once students are seated, hand out only one card to each student. Make sure to shuffle the cards so that the matches are not sitting right together. There are 34 cards all together: 17 with graphs and 17 with functions in equation form. Be sure to count ahead of time so that every function card has a matching graph. If t",
+                    "scaffolding": "Identify the key variables and properties. Apply the definitions and mathematical structures introduced in Modeling a Context from a Graph.",
+                    "steps": [
+                        {
+                            "step": 1,
+                            "label": "Define Variables & Formulate Governing Relations",
+                            "math": "\\text{Identify key variables and parameters for } Modeling a Context from a Graph",
+                            "explanation": "Establish the relationship between quantities and state any domain constraints."
+                        },
+                        {
+                            "step": 2,
+                            "label": "Execute Step-by-Step Algebraic Transformations",
+                            "math": "\\text{Transform and simplify equations: } \\dots",
+                            "explanation": "For the equation: I first looked for the function type, which narrowed my search considerably. Then, I looked for key features that are evident from the equation like transformations, x- and/or y-intercepts, end behavior, slope, etc. Then, I looked f"
+                        }
+                    ],
+                    "finalAnswer": "\\text{The evaluated solution verifies the properties of } Modeling a Context from a Graph",
+                    "commonPitfall": "Ensure units of measurement and domain constraints are checked in physical and statistical contexts."
+                },
+                {
+                    "title": "Exercise 1: Independent Problem Formulation",
+                    "badge": "Multi-Step Application",
+                    "difficulty": "Advanced Reasoning",
+                    "problem": "Apply the foundational principles of Modeling a Context from a Graph to determine the exact value and interpret the contextual significance.",
+                    "scaffolding": "Reference the worked steps from Example 1. Verify intermediate calculations and justify your steps.",
+                    "steps": [
+                        {
+                            "step": 1,
+                            "label": "Analyze Given Conditions & Structure",
+                            "math": "\\text{State domain constraints and initial conditions}",
+                            "explanation": "Verify that all assumptions conform to the problem context."
+                        },
+                        {
+                            "step": 2,
+                            "label": "Calculate the Final Mathematical Solution",
+                            "math": "\\text{Solve for the target unknown quantity}",
+                            "explanation": "State the solution with formal mathematical reasoning."
+                        }
+                    ],
+                    "finalAnswer": "\\text{Verified algebraic or statistical solution}",
+                    "commonPitfall": "Avoid rounding prematurely before the final step."
+                }
+            ],
+            "exitTicket": {
+                "title": "Lesson 4 Exit Ticket: Modeling a Context from a Graph",
+                "prompt": "Exit Ticket\n\nWhy might we want to represent a graph of a function in analytical form?\n\nWhy might we want to represent a graph as a table of values?",
+                "solution": "Why might we want to represent a graph of a function in analytical form?\n\nGraphs require estimation for many values, and for most we can calculate exact values using the function equation. Some key features that may not be visible or clear on a graph can be seen in the symbolic representation.\n\nWhy might we want to represent a graph as a table of values?\n\nIn a table of values, we can sometimes better see patterns in the relationship between the x- and y-values."
+            },
+            "problemSet": {
+                "title": "Official Worksheet: Problem Set & Practice",
+                "description": "Master Modeling a Context from a Graph through authentic curriculum practice problems. Check your work using the expandable teacher solution key below.",
+                "problems": [
+                    {
+                        "number": 1,
+                        "prompt": "During tryouts for the track team, Bob is running 90-foot wind sprints by running from a starting line to the far wall of the gym and back. At time t=0, he is at the starting line and ready to accelerate toward the opposite wall. As t approaches 6 seconds, he must slow down, stop for just an instant to touch the wall, then turn around, and sprint back to the starting line. His distance, in feet, from the starting line with respect to the number of seconds that has passed for one repetition is modeled by the graph below.\n\n(Note: You may refer to Lesson 1, Problem Set #1 to help answer this question.)\n\nHow far was Bob from the starting line at 2 seconds? 6.5 seconds? (Distances, in feet, should be represented to the nearest tenth.)",
+                        "solution": "So far we know: f(t)=a(t-6)^{2}+90 (Now we need to find a.)\n\nSubstitute (0, 0):\n\na(0-6)^{2}+90=0a(-6)^{2}+90=036a=-90a=\\frac{-90}{36}=\\frac{-5}{2}\n\nThe final function is f(t)= \\frac{-5}{2}(t-6)^{2}+90.\n\nf(2)=\\frac{-5}{2}(2-6)^{2}+90 = 50\n\nf(6.5)=\\frac{-5}{2}(6.5-6)^{2}+90 = 89.4\n\nBob was 50 ft and 89.4 ft from the starting line at 2 seconds and 6.5 seconds, respectively."
+                    },
+                    {
+                        "number": 2,
+                        "prompt": "Kyle and Abed each threw a baseball across a field. The height of the balls (in feet) is described by functions A and K, where t is the number of seconds the baseball is in the air. K models the height of Kyle's baseball (equation below), and A models the height of Abed's baseball (graph below).\n\nK(t)=-16t^{2}+66t+6.\n\nWhich ball was in the air for a longer period of time?",
+                        "solution": "We need to find the time when the ball is back on the ground (i.e., when the height function equals 0).\n\nFirst Abed's:\n\nWe can see from the graph that the ball is in the air from t=0 to somewhere between 4 and 6. So, just by reading the graph, we might estimate the time in the air to be a little more than 5 seconds. We can get a more accurate number by formulating a model and then doing some calculations.\n\nUsing the vertex form: A(t)=a(t-2.75)^{2}+126\n\nIf we substitute (1, 77):\n\na(1-2.75)^{2}+126=773.0625a=-49a=-\\frac{49}{3}.0625=-16\n\nSo, A(t)= -16(t-2.75)^{2}+126=0.\n\n-16(t-2.75)^{2}=-126(t-2.75)^{2}=-\\frac{126}{-16}(t-2.75)^{2}=7.875t-2.75=±\\sqrt{7.875}t=2.75±\\sqrt{7.875}t≈ -0.06 or 5.6\n\nOnly the positive value makes sense in this context, so Abed's ball was in the air for 5.6 seconds.\n\nNow Kyle's:K(t)=-16t^{2}+66t+6=0\n\nUsing the quadratic formula to find the zeros:\n\nt=\\frac{-66±\\sqrt{66^{2}-4(-16)(6)}}{2(-16)}=\\frac{-66±\\sqrt{4740}}{-32}≈-0.09 or 4.2\n\nOnly the positive value makes sense in this context. So Kyle's ball was in the air for 4.2 seconds.\n\nAbed's ball was in the air longer."
+                    },
+                    {
+                        "number": 3,
+                        "prompt": "Whose ball goes higher?",
+                        "solution": "We see in the graph of y=A(t) that the highest point for Abed's ball is 126 ft. Now we need to find the maximum value for K. One way to find the maximum is to put the equation in vertex form:\n\nK(t)=-16(t^{2}-4.125t+ )+6=-16(t-2.0625)^{2}+6+16(2.0625)^{2}=-16(t-2.0625)^{2}+6+68.0625=-16(t-2.0625)^{2}+74.0625\n\nSo, the vertex for K is (2.0625, 74.0625), and Kyle's ball went about 74 ft into the air. Abed's ball went higher."
+                    },
+                    {
+                        "number": 4,
+                        "prompt": "How high was Abed's ball when he threw it?",
+                        "solution": "Now we are looking for the y-intercept for y=A(t) (i.e., the height when time is 0). We can either use the vertex form of the equation, or we can rewrite the equation in standard form.\n\nA(t)=-16(t-2.75)^{2}+126=-16(t^{2}-5.5t+7.5625)+126=-16t^{2}+88t-121+126=-16t^{2}+88t+5\n\nThat means (0, 5) is the vertical-intercept, and the ball was at 5 ft when thrown by Abed.\n\nOr we can substitute t=0 into the vertex form:\n\nA(t)=-16(t-2.75)^{2}+126=-16(0-2.75)^{2}+126=-16(7.5625)+126=-121+126=5\n\nSo, the ball left Abed's hand at a height of 5 ft."
+                    }
+                ]
+            },
+            "practiceQuestions": [
+                {
+                    "question": "[Exit Ticket Challenge 1] Exit Ticket",
+                    "options": [
+                        "Why might we want to represent a graph of a function in analytical form?",
+                        "The relationship cannot be evaluated without arbitrary numerical coordinates.",
+                        "The values remain constant at zero regardless of the independent variable inputs.",
+                        "The rate of change is undefined because domain restrictions were violated."
+                    ],
+                    "correct": 0,
+                    "explanation": "From the official Eureka Math Exit Ticket Key for Lesson 4:\nWhy might we want to represent a graph of a function in analytical form?\n\nGraphs require estimation for many values, and for most we can calculate exact values using the function equation. Some key features that may not be visible or clear on a graph can be seen in the symbolic representation.\n\nWhy might we want to represent a graph as a table of values?\n\nIn a table of values, we can sometimes better see patterns in the relationship between the x"
+                },
+                {
+                    "question": "[Exit Ticket Challenge 2] Why might we want to represent a graph of a function in analytical form?",
+                    "options": [
+                        "Graphs require estimation for many values, and for most we can calculate exact values using the function equation. Some key features that may not be visible or clear on a graph can be seen in the symbolic representation.",
+                        "Ignore boundary conditions and compute only approximate integer values.",
+                        "Assume that all relationships are strictly constant without verifying rates of change.",
+                        "Treat independent and dependent variables as interchangeable."
+                    ],
+                    "correct": 0,
+                    "explanation": "Official Curriculum Key for Lesson 4:\nStudents create a two-variable equation that models the graph from a context. Function types include linear, quadratic, exponential, square root, cube root, and absolute value. They interpret the graph, function, and answer questions related to the model, choosing an appropriate level of precision in reporting their results."
+                }
+            ],
+            "citation": {
+                "title": "Source Citation (MLA)",
+                "text": "Great Minds. \"Modeling a Context from a Graph.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+                "subtext": "Developed using authentic lesson materials from standard algebra curricula.",
+                "lessonId": "L-ID-K-MATH-M5-B-1"
+            }
+        },
+        "k-math-m5-b-2": {
+            "id": "k-math-m5-b-2",
+            "code": "K.M5.B.2",
+            "standard": "HSA.CED.A.1",
+            "levelId": "k",
+            "requiresMathJax": true,
+            "meta": {
+                "title": "Modeling from a Sequence",
+                "pageTitle": "Modeling from a Sequence | Hesten's Learning",
+                "description": "This lesson takes students through the first steps of the modeling cycle, using functions that emerge from sequences. Refer to the modeling cycle below when abs...",
+                "pageDescription": "Master Modeling from a Sequence in Module 5: A Synthesis of Modeling with Equations and Functions. Comprehensive student outcomes, teacher insights, guided exercises, problem set worksheets, and exit ticket keys.",
+                "author": "Hesten's Learning Team",
+                "badge": "Math Lesson K.M5.B.2",
+                "badgeIcon": "fa-calculator"
+            },
+            "overview": {
+                "title": "Student & Teacher Overview: Lesson 5",
+                "pill": "Completing the Modeling Cycle",
+                "text": "This lesson takes students through the first steps of the modeling cycle, using functions that emerge from sequences. Refer to the modeling cycle below when abstracting and contextualizing. (See page 61 of the CCLS or page 72 of the CCSSM.) MP.7&MP.4MP.7&MP.4Throughout the lesson, students look for and make use of structure. Students look closely to discern a pattern or structure of a sequence of numbers and be able to determine if a sequence is arithmetic, geometric, or neither. Students also use the modeling cycle to solve problems that occur in everyday life.",
+                "outcomes": [
+                    "Students recognize when a table of values represents an arithmetic or geometric sequence. Patterns are present in tables of values. They choose and define the parameter values for a function that represents a sequence."
+                ],
+                "teacherInsight": "Emphasize precise mathematical definitions and multiple problem-solving representations. Encourage students to check the reasonableness of their numerical solutions."
+            },
+            "content": [],
+            "vocabulary": [
+                {
+                    "term": "Arithmetic Sequence",
+                    "definition": "An arithmetic sequence goes from one term to the next by adding (or subtracting) the same value."
+                },
+                {
+                    "term": "Geometric Sequence",
+                    "definition": "A geometric sequence goes from one term to the next by multiplying (or dividing) by the same value."
+                }
+            ],
+            "guidedExercises": [
+                {
+                    "title": "Example 1: Core Mathematical Modeling for Modeling from a Sequence",
+                    "badge": "Eureka Math Guided Classwork",
+                    "difficulty": "Core Application",
+                    "problem": "Classwork Remind students that in Module 3 Lessons 1, 2, and 3, they learned about the linear relationship in arithmetic sequences and the exponential relationship in geometric sequences. If students could benefit from a review of sequences, use the review that follows. If they are ready to begin, then skip to the Opening Exercise. Consider using the subscript notation for the expressions/equations when dealing with sequences. Scaffolding:A sequence is a list of numbers or objects in a special o",
+                    "scaffolding": "Identify the key variables and properties. Apply the definitions and mathematical structures introduced in Modeling from a Sequence.",
+                    "steps": [
+                        {
+                            "step": 1,
+                            "label": "Define Variables & Formulate Governing Relations",
+                            "math": "\\text{Identify key variables and parameters for } Modeling from a Sequence",
+                            "explanation": "Establish the relationship between quantities and state any domain constraints."
+                        },
+                        {
+                            "step": 2,
+                            "label": "Execute Step-by-Step Algebraic Transformations",
+                            "math": "\\text{Transform and simplify equations: } \\dots",
+                            "explanation": "A soccer coach is getting her students ready for the season by introducing them to High Intensity Interval Training (HIIT). She presents the table below with a list of exercises for a HIIT training circuit and the length of time that must be spent on"
+                        }
+                    ],
+                    "finalAnswer": "\\text{The evaluated solution verifies the properties of } Modeling from a Sequence",
+                    "commonPitfall": "Ensure units of measurement and domain constraints are checked in physical and statistical contexts."
+                },
+                {
+                    "title": "Exercise 1: Independent Problem Formulation",
+                    "badge": "Multi-Step Application",
+                    "difficulty": "Advanced Reasoning",
+                    "problem": "Apply the foundational principles of Modeling from a Sequence to determine the exact value and interpret the contextual significance.",
+                    "scaffolding": "Reference the worked steps from Example 1. Verify intermediate calculations and justify your steps.",
+                    "steps": [
+                        {
+                            "step": 1,
+                            "label": "Analyze Given Conditions & Structure",
+                            "math": "\\text{State domain constraints and initial conditions}",
+                            "explanation": "Verify that all assumptions conform to the problem context."
+                        },
+                        {
+                            "step": 2,
+                            "label": "Calculate the Final Mathematical Solution",
+                            "math": "\\text{Solve for the target unknown quantity}",
+                            "explanation": "State the solution with formal mathematical reasoning."
+                        }
+                    ],
+                    "finalAnswer": "\\text{Verified algebraic or statistical solution}",
+                    "commonPitfall": "Avoid rounding prematurely before the final step."
+                }
+            ],
+            "exitTicket": {
+                "title": "Lesson 5 Exit Ticket: Modeling from a Sequence",
+                "prompt": "Exit Ticket\n\nA culture of bacteria doubles every 2 hours.\n\nExplain how this situation can be modeled with a sequence.\n\nIf there are 500 bacteria at the beginning, how many bacteria will there be after 24 hours?",
+                "solution": "A culture of bacteria doubles every 2 hours.\n\nExplain how this situation can be modeled with a sequence.\n\nTo find the next number of bacteria, multiply the previous number by 2. This situation can be represented by a geometric sequence. There will be a common ratio between each term of the sequence.\n\nIf there are 500 bacteria at the beginning, how many bacteria will there be after 24 hours?\n\nUsing the exponential function f(n)=a∙b^{n}, where n represents the number of times the bacteria culture doubles, a represents the amount when n=0, so a=500. b is the growth rate, so b=2.\n\nf(n)=500∙2^{n}\n\nf(n)=500∙2^{12}=2 048 000\n\nAfter 24 hours, there will be 2,048,000 bacteria."
+            },
+            "problemSet": {
+                "title": "Official Worksheet: Problem Set & Practice",
+                "description": "Master Modeling from a Sequence through authentic curriculum practice problems. Check your work using the expandable teacher solution key below.",
+                "problems": [
+                    {
+                        "number": 1,
+                        "prompt": "Week #Daily Jog Time110210312412514614Week #Daily Jog Time110210312412514614Solve the following problems by finding the function/formula that represents the nth term of the sequence.\n\nAfter a knee injury, a jogger is told he can jog 10 minutes every day and that he can increase his jogging time by 2 minutes every two weeks. How long will it take for him to be able to jog one hour a day?",
+                        "solution": "Week #Daily Jog Time110210312412514614Week #Daily Jog Time110210312412514614This is an arithmetic sequence where the minutes increase by 2 every two weeks. (Note: We can either let 2n represent the number of weeks or let n represent a two-week period. Either way, we will end up having to compensate after we solve.) Let's try it with n representing a two-week period:\n\nf(n)=initial time+(n-1)(common difference)\n\n60=10+(n-1)(2)→ 60=10+2n-2 → 60=2n+82n+8=60 → 2n=52 → n=26\n\nAt the beginning of the 26th 2-week period, the jogger will be able to jog for 60 minutes. This will occur after 25 weeks \\cdot 2, or 50 weeks, or at the beginning of the 51st week."
+                    },
+                    {
+                        "number": 2,
+                        "prompt": "A ball is dropped from a height of 10 feet. The ball then bounces to 80% of its previous height with each subsequent bounce.\n\nExplain how this situation can be modeled with a sequence.",
+                        "solution": "According to the problem, to find the next height, multiply the current height by 0.8. This means the sequence is geometric."
+                    },
+                    {
+                        "number": 3,
+                        "prompt": "How high (to the nearest tenth of a foot) does the ball bounce on the fifth bounce?",
+                        "solution": "f(n)=(initial height)(common ratio)^{n} for n bounces.\n\nf(5)=10(0.8)^{5}=3.2768\n\nThe ball bounces approximately 3.3 feet on the fifth bounce."
+                    },
+                    {
+                        "number": 4,
+                        "prompt": "Consider the following sequence:\n\n8, 17, 32, 53, 80, 113, …\n\nWhat pattern do you see, and what does that pattern mean for the analytical representation of the function?",
+                        "solution": "Difference of the differences is 6. Since the second difference is a nonzero constant, then the pattern must be quadratic."
+                    },
+                    {
+                        "number": 5,
+                        "prompt": "What is the symbolic representation of the sequence?",
+                        "solution": "Sample response: 3n^{2} does not work by itself. (If n=1, then 3n^{2} would be 3, but we have an 8 for the first term.) So, there must be a constant that is being added to it. Let's test that theory:\n\nf(n)=&3n^{2}&+&bf(1)=&3(1)^{2}&+&b&=8&3&+&b&=8&&&b&=5\n\nSo, the terms of the sequence can be found using the number of the term, as follows:\n\nf(n)=3n^{2}+5\n\nWe can easily check to see if this function generates the sequence, and it does."
+                    },
+                    {
+                        "number": 6,
+                        "prompt": "Arnold wants to be able to complete 100 military-style pull-ups. His trainer puts him on a workout regimen designed to improve his pull-up strength. The following chart shows how many pull-ups Arnold can complete after each month of training. How many months will it take Arnold to achieve his goal if this pattern continues?",
+                        "solution": "MonthPull-Up Count1225310417526637…10≥100MonthPull-Up Count1225310417526637…10≥100This pattern does not have a common difference or a common ratio. When we look at the first differences (3, 5, 7, 9, 11, …), we see that the second differences would be constant (2, 2, 2, …). That means this is a quadratic sequence with n^{2} in the nth term formula. For n=1 we have 1^{2}=1, so we need to add 1 to get the first term to be 2. So, in general, we have the function f(n)=n^{2}+1. Let's test that on the other terms: 2^{2}+1=5, 3^{2}+1=10, …. Yes, it works.\n\nNow we need to find out which month (n) will produce 100 as the resulting number of pull-ups:\n\nn^{2}+1=100→n=\\sqrt{99}≈9.9\n\nSo, if this trend continues, at 10 months, Arnold will be able to complete 100 pull-ups."
+                    }
+                ]
+            },
+            "practiceQuestions": [
+                {
+                    "question": "[Exit Ticket Challenge 1] Exit Ticket",
+                    "options": [
+                        "A culture of bacteria doubles every 2 hours.",
+                        "The relationship cannot be evaluated without arbitrary numerical coordinates.",
+                        "The values remain constant at zero regardless of the independent variable inputs.",
+                        "The rate of change is undefined because domain restrictions were violated."
+                    ],
+                    "correct": 0,
+                    "explanation": "From the official Eureka Math Exit Ticket Key for Lesson 5:\nA culture of bacteria doubles every 2 hours.\n\nExplain how this situation can be modeled with a sequence.\n\nTo find the next number of bacteria, multiply the previous number by 2. This situation can be represented by a geometric sequence. There will be a common ratio between each term of the sequence.\n\nIf there are 500 bacteria at the beginning, how many bacteria will there be after 24 hours?\n\nUsing the exponential function f(n)=a∙b^{n}, where n re"
+                },
+                {
+                    "question": "[Exit Ticket Challenge 2] A culture of bacteria doubles every 2 hours.",
+                    "options": [
+                        "Explain how this situation can be modeled with a sequence.",
+                        "Ignore boundary conditions and compute only approximate integer values.",
+                        "Assume that all relationships are strictly constant without verifying rates of change.",
+                        "Treat independent and dependent variables as interchangeable."
+                    ],
+                    "correct": 0,
+                    "explanation": "Official Curriculum Key for Lesson 5:\nStudents recognize when a table of values represents an arithmetic or geometric sequence. Patterns are present in tables of values. They choose and define the parameter values for a function that represents a sequence."
+                }
+            ],
+            "citation": {
+                "title": "Source Citation (MLA)",
+                "text": "Great Minds. \"Modeling from a Sequence.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+                "subtext": "Developed using authentic lesson materials from standard algebra curricula.",
+                "lessonId": "L-ID-K-MATH-M5-B-2"
+            }
+        },
+        "k-math-m5-b-3": {
+            "id": "k-math-m5-b-3",
+            "code": "K.M5.B.3",
+            "standard": "HSA.CED.A.1",
+            "levelId": "k",
+            "requiresMathJax": true,
+            "meta": {
+                "title": "Modeling a Context from Data",
+                "pageTitle": "Modeling a Context from Data | Hesten's Learning",
+                "description": "This real-life descriptive modeling lesson is about creating different types of functions based on data, including linear, quadratic, and exponential. This less...",
+                "pageDescription": "Master Modeling a Context from Data in Module 5: A Synthesis of Modeling with Equations and Functions. Comprehensive student outcomes, teacher insights, guided exercises, problem set worksheets, and exit ticket keys.",
+                "author": "Hesten's Learning Team",
+                "badge": "Math Lesson K.M5.B.3",
+                "badgeIcon": "fa-calculator"
+            },
+            "overview": {
+                "title": "Student & Teacher Overview: Lesson 6",
+                "pill": "Completing the Modeling Cycle",
+                "text": "This real-life descriptive modeling lesson is about creating different types of functions based on data, including linear, quadratic, and exponential. This lesson uses the full modeling cycle as explained on page 61 of the CCLS or page 72 of the CCSSM. (Note that this lesson will likely require a calculator and graph paper.)",
+                "outcomes": [
+                    "Students write equations to model data from tables, which can be represented with linear, quadratic, or exponential functions, including several from Lessons 4 and 5. They recognize when a set of data can be modeled with a linear, exponential, or quadratic function and create the equation that models the data.",
+                    "Students interpret the function in terms of the context in which it is presented, make predictions based on the model, and use an appropriate level of precision for reporting results and solutions."
+                ],
+                "teacherInsight": "Emphasize precise mathematical definitions and multiple problem-solving representations. Encourage students to check the reasonableness of their numerical solutions."
+            },
+            "content": [],
+            "vocabulary": [
+                {
+                    "term": "LinearB",
+                    "definition": "ExponentialC: Quadratic I looked at the difference in each output."
+                }
+            ],
+            "guidedExercises": [
+                {
+                    "title": "Example 1: Core Mathematical Modeling for Modeling a Context from Data",
+                    "badge": "Eureka Math Guided Classwork",
+                    "difficulty": "Core Application",
+                    "problem": "Classwork Opening Exercise (5 minutes) Display the three sets of data below on the board or screen. Divide the class up into three sections. Each section has to analyze one table. Students must complete the following: Opening Exercise Axy152739411513Bxy1629313.5420.25530.375Cxy13212327448575Axy152739411513Bxy1629313.5420.25530.375Cxy13212327448575Identify the type of function that each table appears to represent (e.g., quadratic, linear, exponential, square root). Explain how you were able to id",
+                    "scaffolding": "Identify the key variables and properties. Apply the definitions and mathematical structures introduced in Modeling a Context from Data.",
+                    "steps": [
+                        {
+                            "step": 1,
+                            "label": "Define Variables & Formulate Governing Relations",
+                            "math": "\\text{Identify key variables and parameters for } Modeling a Context from Data",
+                            "explanation": "Establish the relationship between quantities and state any domain constraints."
+                        },
+                        {
+                            "step": 2,
+                            "label": "Execute Step-by-Step Algebraic Transformations",
+                            "math": "\\text{Transform and simplify equations: } \\dots",
+                            "explanation": "Find the symbolic representation of the function. Plot the graphs of your data. Scaffolding:Have students create a \"crib sheet\" for the three different functions (i.e., linear, exponential, and quadratic), with information for how to identify them an"
+                        }
+                    ],
+                    "finalAnswer": "\\text{The evaluated solution verifies the properties of } Modeling a Context from Data",
+                    "commonPitfall": "Ensure units of measurement and domain constraints are checked in physical and statistical contexts."
+                },
+                {
+                    "title": "Exercise 1: Independent Problem Formulation",
+                    "badge": "Multi-Step Application",
+                    "difficulty": "Advanced Reasoning",
+                    "problem": "Apply the foundational principles of Modeling a Context from Data to determine the exact value and interpret the contextual significance.",
+                    "scaffolding": "Reference the worked steps from Example 1. Verify intermediate calculations and justify your steps.",
+                    "steps": [
+                        {
+                            "step": 1,
+                            "label": "Analyze Given Conditions & Structure",
+                            "math": "\\text{State domain constraints and initial conditions}",
+                            "explanation": "Verify that all assumptions conform to the problem context."
+                        },
+                        {
+                            "step": 2,
+                            "label": "Calculate the Final Mathematical Solution",
+                            "math": "\\text{Solve for the target unknown quantity}",
+                            "explanation": "State the solution with formal mathematical reasoning."
+                        }
+                    ],
+                    "finalAnswer": "\\text{Verified algebraic or statistical solution}",
+                    "commonPitfall": "Avoid rounding prematurely before the final step."
+                }
+            ],
+            "exitTicket": {
+                "title": "Lesson 6 Exit Ticket: Modeling a Context from Data",
+                "prompt": "Exit Ticket\n\nLewis's dad put $1,000 in a money market fund with a fixed interest rate when he was 16. Lewis cannot touch the money until he is 26, but he gets updates on the balance of his account.\n\nDevelop a model for this situation.\n\nUse your model to determine how much Lewis will have when he turns 26 years old.\n\nComment on the limitations/validity of your model.",
+                "solution": "Lewis's dad put $1,000 in a money market fund with a fixed interest rate when he was 16. Lewis cannot touch the money until he is 26, but he gets updates on the balance of his account.\n\nDevelop a model for this situation.\n\nWe might try graphing this data. However, in the viewing window that shows our data points (see graph below), it appears that the function might be linear. Let's try zooming out to see more of the key features of this graph. (See graph below.)\n\nx: [0, 5] y: [975, 1500]\n\nThis viewing window gives us a close-up of the data points and their relation to each other. However, we cannot really see the features of the graph that represent the data.\n\nx: (-25, 25) y: [0, 9700]\n\n`\n\nIn this version of the graph, you can see how the data from our table is grouped on a very short section of the graph. From this view, we can see the exponential nature of the graph.\n\nUsing the data table to find a function model: The first and second differences have no commonalities; therefore, this is not linear or quadratic. Checking to see if there is a common ratio, we see that this is an exponential relationship (or a geometric sequence) where the common ratio is 1.1, and the initial value is 1000. Check: Since on this table time starts at t=0, using t as the exponent will yield $1,000 for the initial balance.\n\nTherefore, we can represent this sequence symbolically by A(t)=1000(1.1)^{t}\n\nUse your model to determine how much Lewis will have when he turns 26 years old.\n\nUsing the function: Since Lewis will be 26 ten years after he turns 16, we will need to evaluate A(10):\n\nA(10)=1000(1.1)^{10}→A(10)=2593.74 or $2,593.74.\n\nWe might also try extending our data table to verify this result. There are a couple of precision decisions to make: Shall we use 1.1 as the common ratio? How soon should we begin rounding numbers off? For this table, we decided to use 1.1 as the common ratio and rounded to the nearest cent.We might also try extending our data table to verify this result. There are a couple of precision decisions to make: Shall we use 1.1 as the common ratio? How soon should we begin rounding numbers off? For this table, we decided to use 1.1 as the common ratio and rounded to the nearest cent.We might also try to answer this question using our graph. Below is another view of the graph. Can you estimate the balance at t=10?We might also try to answer this question using our graph. Below is another view of the graph. Can you estimate the balance at t=10?\n\n\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\n\nLewis's AgeYears After Lewis Turns 16Account Balance in Dollars16010001711100182121019313312041464.102151610.512261771.562371948.722482143.592592357.9526102593.74Lewis's AgeYears After Lewis Turns 16Account Balance in Dollars16010001711100182121019313312041464.102151610.512261771.562371948.722482143.592592357.9526102593.74\n\nComment on the limitations/validity of your model.\n\nAs we saw in the first and second versions of the graph, there are limitations to the graphic model because we cannot always see the key features of the graph in a window that lets us see all the data points clearly. Being able to see the graph using both windows was more helpful. Then, in part (b), we saw how difficult it was to estimate the value of A(10). We were also able to extend the table without too much difficulty, after deciding what level of precision we needed to use.\n\nThe equation was most helpful but requires interpretation of the data (noticing that the common ratio was very close but not absolutely perfect, and making sure we started with t=0).\n\nRegardless of whether we use a graphical, numerical, or algebraic model, one limitation is that we are assuming the growth rate will remain constant until he is 26."
+            },
+            "problemSet": {
+                "title": "Official Worksheet: Problem Set & Practice",
+                "description": "Master Modeling a Context from Data through authentic curriculum practice problems. Check your work using the expandable teacher solution key below.",
+                "problems": [
+                    {
+                        "number": 1,
+                        "prompt": "Research linear, quadratic, and exponential functions using the Internet. For each of the three types of functions, provide an example of a problem/situation you found on the Internet where that function was used to model the situation or answer the problem. Include the actual function used in the example and web page where you found the example.",
+                        "solution": "Answers will vary."
+                    }
+                ]
+            },
+            "practiceQuestions": [
+                {
+                    "question": "[Exit Ticket Challenge 1] Exit Ticket",
+                    "options": [
+                        "Lewis's dad put $1,000 in a money market fund with a fixed interest rate when he was 16. Lewis cannot touch the money until he is 26, but he gets updates on the balance of his account.",
+                        "The relationship cannot be evaluated without arbitrary numerical coordinates.",
+                        "The values remain constant at zero regardless of the independent variable inputs.",
+                        "The rate of change is undefined because domain restrictions were violated."
+                    ],
+                    "correct": 0,
+                    "explanation": "From the official Eureka Math Exit Ticket Key for Lesson 6:\nLewis's dad put $1,000 in a money market fund with a fixed interest rate when he was 16. Lewis cannot touch the money until he is 26, but he gets updates on the balance of his account.\n\nDevelop a model for this situation.\n\nWe might try graphing this data. However, in the viewing window that shows our data points (see graph below), it appears that the function might be linear. Let's try zooming out to see more of the key features of this graph. (S"
+                },
+                {
+                    "question": "[Exit Ticket Challenge 2] Lewis's dad put $1,000 in a money market fund with a fixed interest rate when he was 16. Lewis cannot touch the money until he is 26, but he gets updates on the balance of his account.",
+                    "options": [
+                        "Develop a model for this situation.",
+                        "Ignore boundary conditions and compute only approximate integer values.",
+                        "Assume that all relationships are strictly constant without verifying rates of change.",
+                        "Treat independent and dependent variables as interchangeable."
+                    ],
+                    "correct": 0,
+                    "explanation": "Official Curriculum Key for Lesson 6:\nStudents write equations to model data from tables, which can be represented with linear, quadratic, or exponential functions, including several from Lessons 4 and 5. They recognize when a set of data can be modeled with a linear, exponential, or quadratic function and create the equation that models the data."
+                }
+            ],
+            "citation": {
+                "title": "Source Citation (MLA)",
+                "text": "Great Minds. \"Modeling a Context from Data.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+                "subtext": "Developed using authentic lesson materials from standard algebra curricula.",
+                "lessonId": "L-ID-K-MATH-M5-B-3"
+            }
+        },
+        "k-math-m5-b-4": {
+            "id": "k-math-m5-b-4",
+            "code": "K.M5.B.4",
+            "standard": "HSA.CED.A.1",
+            "levelId": "k",
+            "requiresMathJax": true,
+            "meta": {
+                "title": "Modeling a Context from Data",
+                "pageTitle": "Modeling a Context from Data | Hesten's Learning",
+                "description": "Scaffolding:Students are more engaged when working with relevant and real data that interests them. Websites that provide data sets are a good resource for clas...",
+                "pageDescription": "Master Modeling a Context from Data in Module 5: A Synthesis of Modeling with Equations and Functions. Comprehensive student outcomes, teacher insights, guided exercises, problem set worksheets, and exit ticket keys.",
+                "author": "Hesten's Learning Team",
+                "badge": "Math Lesson K.M5.B.4",
+                "badgeIcon": "fa-calculator"
+            },
+            "overview": {
+                "title": "Student & Teacher Overview: Lesson 7",
+                "pill": "Completing the Modeling Cycle",
+                "text": "Scaffolding:Students are more engaged when working with relevant and real data that interests them. Websites that provide data sets are a good resource for classroom investigations.This lesson might need to be divided into two days if students need more time to master the technology.Scaffolding:Students are more engaged when working with relevant and real data that interests them. Websites that provide data sets are a good resource for classroom investigations.This lesson might need to be divided into two days if students need more time to master the technology.Lesson 7 focuses on data sets that cannot be modeled accurately, and students are asked to articulate why. Students use skills learned in Lesson 14 of Module 2 (where they used calculators to write linear regressions) and apply similar techniques for data sets that are better suited to modeling with quadratic or exponential regressions. Students use that same technique to find linear regressions and use their graphing calculators to examine the correlation coefficient and to find quadratic and exponential regressions. They compare correlation coefficients to determine which model is best for the data. Ultimately, students choose the regression model (linear, quadratic, or exponential) most appropriate to a given data set and then write, verify, and interpret these models in context. Students need a graphing calculator to complete this lesson. Graphing calculator instructions are provided, but steps may vary slightly depending on the model of the graphing calculator. Refer to the following full modeling cycle during this lesson (Found on page 61 of the CCLS and page 72 of the CCSSM).",
+                "outcomes": [
+                    "Students use linear, quadratic, and exponential functions to model data from tables and choose the regression most appropriate to a given context. They use the correlation coefficient to determine the accuracy of a regression model and then interpret the function in context. They then make predictions based on their model and use an appropriate level of precision for reporting results and solutions."
+                ],
+                "teacherInsight": "Emphasize precise mathematical definitions and multiple problem-solving representations. Encourage students to check the reasonableness of their numerical solutions."
+            },
+            "content": [],
+            "vocabulary": [
+                {
+                    "term": "Modeling a Context from Data",
+                    "definition": "Core mathematical concept established in Module 5: A Synthesis of Modeling with Equations and Functions, Completing the Modeling Cycle."
+                },
+                {
+                    "term": "Mathematical Modeling",
+                    "definition": "The process of choosing and using appropriate mathematics and statistics to analyze empirical situations, to understand them better, and to improve decisions."
+                }
+            ],
+            "guidedExercises": [
+                {
+                    "title": "Example 1: Core Mathematical Modeling for Modeling a Context from Data",
+                    "badge": "Eureka Math Guided Classwork",
+                    "difficulty": "Core Application",
+                    "problem": "Classwork Opening Exercise (5 minutes) Display the following data set, which cannot be modeled precisely. Ask the first question to start a class discussion. Opening Exercise What is this data table telling us? The relationship between the age of runners in the NYC Marathon and their running time.",
+                    "scaffolding": "Identify the key variables and properties. Apply the definitions and mathematical structures introduced in Modeling a Context from Data.",
+                    "steps": [
+                        {
+                            "step": 1,
+                            "label": "Define Variables & Formulate Governing Relations",
+                            "math": "\\text{Identify key variables and parameters for } Modeling a Context from Data",
+                            "explanation": "Establish the relationship between quantities and state any domain constraints."
+                        },
+                        {
+                            "step": 2,
+                            "label": "Execute Step-by-Step Algebraic Transformations",
+                            "math": "\\text{Transform and simplify equations: } \\dots",
+                            "explanation": "In answering the question above, students may give more detail about the structure of the data and the relationships between the numbers. Let them brainstorm, but guide them to use the titles of the columns to inform them and not to read between the "
+                        }
+                    ],
+                    "finalAnswer": "\\text{The evaluated solution verifies the properties of } Modeling a Context from Data",
+                    "commonPitfall": "Ensure units of measurement and domain constraints are checked in physical and statistical contexts."
+                },
+                {
+                    "title": "Exercise 1: Independent Problem Formulation",
+                    "badge": "Multi-Step Application",
+                    "difficulty": "Advanced Reasoning",
+                    "problem": "Apply the foundational principles of Modeling a Context from Data to determine the exact value and interpret the contextual significance.",
+                    "scaffolding": "Reference the worked steps from Example 1. Verify intermediate calculations and justify your steps.",
+                    "steps": [
+                        {
+                            "step": 1,
+                            "label": "Analyze Given Conditions & Structure",
+                            "math": "\\text{State domain constraints and initial conditions}",
+                            "explanation": "Verify that all assumptions conform to the problem context."
+                        },
+                        {
+                            "step": 2,
+                            "label": "Calculate the Final Mathematical Solution",
+                            "math": "\\text{Solve for the target unknown quantity}",
+                            "explanation": "State the solution with formal mathematical reasoning."
+                        }
+                    ],
+                    "finalAnswer": "\\text{Verified algebraic or statistical solution}",
+                    "commonPitfall": "Avoid rounding prematurely before the final step."
+                }
+            ],
+            "exitTicket": {
+                "title": "Lesson 7 Exit Ticket: Modeling a Context from Data",
+                "prompt": "Exit Ticket\n\nUse the following data table to construct a regression model, and then answer the questions.\n\nWhat is the best regression model for the data?\n\nBased on your regression model, what height would you expect a person with a shoe length of 13.4 inches to be?\n\nInterpret the value of your correlation coefficient in the context of the problem.",
+                "solution": "Use the following data table to construct a regression model, and then answer the questions:\n\nWhat is the best regression model for the data?\n\nThe best model for regression here is linear, modeled using the calculator as f(x)=3.657x+25.277 with a correlation coefficient of 0.6547.\n\nBased on your regression model, what height would you expect a person with a shoe length of 13.4 inches to be?\n\nf(13.4)=74→ a person with shoes 13.4 inches long might be 74 inches tall.\n\nInterpret the value of your correlation coefficient in the context of the problem.\n\nBased on the correlation coefficient, there is a moderate positive linear relationship between shoe length and height."
+            },
+            "problemSet": {
+                "title": "Official Worksheet: Problem Set & Practice",
+                "description": "Master Modeling a Context from Data through authentic curriculum practice problems. Check your work using the expandable teacher solution key below.",
+                "problems": [
+                    {
+                        "number": 1,
+                        "prompt": "Use the following data tables to write a regression model, and then answer the questions:\n\nPrescription Drug Sales in the United States Since 1995\n\nWhat is the best model for this data?",
+                        "solution": "The best model for this data would be an exponential regression, given by the function f(t)=65.736(1.161)^{t} with a correlation coefficient of 0.987 and a correlation of determination of 0.975."
+                    },
+                    {
+                        "number": 2,
+                        "prompt": "Based on your model, what were prescription drug sales in 2002? 2005?",
+                        "solution": "2002: f(7)=186.9, and 2005: f(10)=292.5"
+                    },
+                    {
+                        "number": 3,
+                        "prompt": "For this model, would it make sense to input negative values for t into your regression? Why or why not?",
+                        "solution": "Because there were prescription drug sales in the years prior to 1995, it would make sense to use negative numbers with this model (unless some drastic change in drug sales in 1995 makes this model inaccurate for preceding years)."
+                    },
+                    {
+                        "number": 4,
+                        "prompt": "Use the data below to answer the questions that follow:\n\nPer Capita Ready-to-Eat Cereal Consumption in the United States per Year Since 1980\n\nWhat is the best model for this data?",
+                        "solution": "The best regression fit here is the quadratic f(t)=-0.018t^{2}+0.637t+10.797 with correlation coefficient of 0.92 and a coefficient of determination (r^{2}) of 0.85.\n\nBased on your model, what would you expect per capita cereal consumption to be in 2002? 2005?\n\nAccording to the model, f(22)=16.1, and f(25)=15.5.\n\nBased on the model, the expected per capita cereal consumption in 2002 would be 16.1 lb. In 2005, it would be 15.5 lb.\n\n(Note: Because this model has a little lower coefficient of determination (0.85), these predictions may not seem to fit well with the given data table.)"
+                    },
+                    {
+                        "number": 5,
+                        "prompt": "For this model, will it make sense to input t-values that return negative output values? Why or why not?",
+                        "solution": "No. Negative output values for this model would correspond to negative pounds of cereal consumed, which is impossible. Therefore, this model would only be useful over the domain where f is positive."
+                    }
+                ]
+            },
+            "practiceQuestions": [
+                {
+                    "question": "[Exit Ticket Challenge 1] Exit Ticket",
+                    "options": [
+                        "Use the following data table to construct a regression model, and then answer the questions:",
+                        "The relationship cannot be evaluated without arbitrary numerical coordinates.",
+                        "The values remain constant at zero regardless of the independent variable inputs.",
+                        "The rate of change is undefined because domain restrictions were violated."
+                    ],
+                    "correct": 0,
+                    "explanation": "From the official Eureka Math Exit Ticket Key for Lesson 7:\nUse the following data table to construct a regression model, and then answer the questions:\n\nWhat is the best regression model for the data?\n\nThe best model for regression here is linear, modeled using the calculator as f(x)=3.657x+25.277 with a correlation coefficient of 0.6547.\n\nBased on your regression model, what height would you expect a person with a shoe length of 13.4 inches to be?\n\nf(13.4)=74→ a person with shoes 13.4 inches long might "
+                },
+                {
+                    "question": "[Exit Ticket Challenge 2] Use the following data table to construct a regression model, and then answer the questions.",
+                    "options": [
+                        "What is the best regression model for the data?",
+                        "Ignore boundary conditions and compute only approximate integer values.",
+                        "Assume that all relationships are strictly constant without verifying rates of change.",
+                        "Treat independent and dependent variables as interchangeable."
+                    ],
+                    "correct": 0,
+                    "explanation": "Official Curriculum Key for Lesson 7:\nStudents use linear, quadratic, and exponential functions to model data from tables and choose the regression most appropriate to a given context. They use the correlation coefficient to determine the accuracy of a regression model and then interpret the function in context. They then make predictions based on their model and use an appropriate level of precision for reporting results and solutions."
+                }
+            ],
+            "citation": {
+                "title": "Source Citation (MLA)",
+                "text": "Great Minds. \"Modeling a Context from Data.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+                "subtext": "Developed using authentic lesson materials from standard algebra curricula.",
+                "lessonId": "L-ID-K-MATH-M5-B-4"
+            }
+        },
+        "k-math-m5-b-5": {
+            "id": "k-math-m5-b-5",
+            "code": "K.M5.B.5",
+            "standard": "HSA.CED.A.1",
+            "levelId": "k",
+            "requiresMathJax": true,
+            "meta": {
+                "title": "Modeling a Context from a Verbal Description",
+                "pageTitle": "Modeling a Context from a Verbal Description | Hesten's Learning",
+                "description": "In this lesson, students develop a deep conceptual and procedural understanding of Modeling a Context from a Verbal Description in Module 5: A Synthesis of Mode...",
+                "pageDescription": "Master Modeling a Context from a Verbal Description in Module 5: A Synthesis of Modeling with Equations and Functions. Comprehensive student outcomes, teacher insights, guided exercises, problem set worksheets, and exit ticket keys.",
+                "author": "Hesten's Learning Team",
+                "badge": "Math Lesson K.M5.B.5",
+                "badgeIcon": "fa-calculator"
+            },
+            "overview": {
+                "title": "Student & Teacher Overview: Lesson 8",
+                "pill": "Completing the Modeling Cycle",
+                "text": "In this lesson, students develop a deep conceptual and procedural understanding of Modeling a Context from a Verbal Description in Module 5: A Synthesis of Modeling with Equations and Functions.",
+                "outcomes": [
+                    "Students model functions described verbally in a given context using graphs, tables, or algebraic representations."
+                ],
+                "teacherInsight": "Emphasize precise mathematical definitions and multiple problem-solving representations. Encourage students to check the reasonableness of their numerical solutions."
+            },
+            "content": [],
+            "vocabulary": [
+                {
+                    "term": "Modeling a Context from a Verbal Description",
+                    "definition": "Core mathematical concept established in Module 5: A Synthesis of Modeling with Equations and Functions, Completing the Modeling Cycle."
+                },
+                {
+                    "term": "Mathematical Modeling",
+                    "definition": "The process of choosing and using appropriate mathematics and statistics to analyze empirical situations, to understand them better, and to improve decisions."
+                }
+            ],
+            "guidedExercises": [
+                {
+                    "title": "Example 1: Core Mathematical Modeling for Modeling a Context from a Verbal Description",
+                    "badge": "Eureka Math Guided Classwork",
+                    "difficulty": "Core Application",
+                    "problem": "Scaffolding:Remind students of the formulas they used in Lesson 3 of this module and in Module 4 related to business, compound interest, and population growth and decay. If students need a review, consider taking them back to that lesson for an Opening Exercise. Scaffolding:Remind students of the formulas they used in Lesson 3 of this module and in Module 4 related to business, compound interest, and population growth and decay. If students need a review, consider taking them back to that lesson",
+                    "scaffolding": "Identify the key variables and properties. Apply the definitions and mathematical structures introduced in Modeling a Context from a Verbal Description.",
+                    "steps": [
+                        {
+                            "step": 1,
+                            "label": "Define Variables & Formulate Governing Relations",
+                            "math": "\\text{Identify key variables and parameters for } Modeling a Context from a Verbal Description",
+                            "explanation": "Establish the relationship between quantities and state any domain constraints."
+                        },
+                        {
+                            "step": 2,
+                            "label": "Execute Step-by-Step Algebraic Transformations",
+                            "math": "\\text{Transform and simplify equations: } \\dots",
+                            "explanation": "Example 1 Christine has $500 to deposit in a savings account, and she is trying to decide between two banks. Bank A offers 10% annual interest compounded quarterly. Rather than compounding interest for smaller accounts, Bank B offers to add $15 quart"
+                        }
+                    ],
+                    "finalAnswer": "\\text{The evaluated solution verifies the properties of } Modeling a Context from a Verbal Description",
+                    "commonPitfall": "Ensure units of measurement and domain constraints are checked in physical and statistical contexts."
+                },
+                {
+                    "title": "Exercise 1: Independent Problem Formulation",
+                    "badge": "Multi-Step Application",
+                    "difficulty": "Advanced Reasoning",
+                    "problem": "Apply the foundational principles of Modeling a Context from a Verbal Description to determine the exact value and interpret the contextual significance.",
+                    "scaffolding": "Reference the worked steps from Example 1. Verify intermediate calculations and justify your steps.",
+                    "steps": [
+                        {
+                            "step": 1,
+                            "label": "Analyze Given Conditions & Structure",
+                            "math": "\\text{State domain constraints and initial conditions}",
+                            "explanation": "Verify that all assumptions conform to the problem context."
+                        },
+                        {
+                            "step": 2,
+                            "label": "Calculate the Final Mathematical Solution",
+                            "math": "\\text{Solve for the target unknown quantity}",
+                            "explanation": "State the solution with formal mathematical reasoning."
+                        }
+                    ],
+                    "finalAnswer": "\\text{Verified algebraic or statistical solution}",
+                    "commonPitfall": "Avoid rounding prematurely before the final step."
+                }
+            ],
+            "exitTicket": {
+                "title": "Lesson 8 Exit Ticket: Modeling a Context from a Verbal Description",
+                "prompt": "Exit Ticket\n\nAnswer the following question. Look back at this (or other) lessons if you need help with the business formulas.\n\nJerry and Carlos each have $1,000 and are trying to increase their savings. Jerry will keep his money at home and add $50 per month from his part-time job. Carlos will put his money in a bank account that earns a 4% yearly interest rate, compounded monthly. Who has a better plan for increasing his savings?",
+                "solution": "Answer the following question. Look back at this (or other) lessons if you need help with the business formulas.\n\nJerry and Carlos each have $1,000 and are trying to increase their savings. Jerry will keep his money at home and add $10 per month from his part-time job. Carlos will put his money in a bank account that earns a 6% yearly interest rate, compounded monthly. Who has a better plan for increasing his savings?\n\nJerry's savings:J(n)=1000+10(n), where n represents the number of months\n\nCarlos's savings:C(n)=1000(1+\\frac{0.06}{12})^{n}, where n represents the number of months\n\nIn the short term, Jerry's plan is better, but I know that Carlos's plan will eventually exceed Jerry's because an increasing exponential model will always outgain an increasing linear model eventually. If they continued saving for 253 months, Carlos's plan would be better."
+            },
+            "problemSet": {
+                "title": "Official Worksheet: Problem Set & Practice",
+                "description": "Master Modeling a Context from a Verbal Description through authentic curriculum practice problems. Check your work using the expandable teacher solution key below.",
+                "problems": [
+                    {
+                        "number": 1,
+                        "prompt": "Maria invested $10,000 in the stock market. Unfortunately, the value of her investment has been dropping at an average rate of 3% each year.\n\nWrite the function that best models the situation.",
+                        "solution": "f(n)=10 000(1-0.03)^{n} or 10 000(0.97)^{n}where n represents the number of years since the initial investment"
+                    },
+                    {
+                        "number": 2,
+                        "prompt": "If the trend continues, how much will her investment be worth in 5 years?",
+                        "solution": "f(n)=10 000(0.97)^{n}\n\nf(5)=10 000(0.97)^{5}\n\nf(5)=8587.34 or $8,587.34"
+                    },
+                    {
+                        "number": 3,
+                        "prompt": "Given the situation, what should she do with her investment?",
+                        "solution": "There are multiple answers, and there is no wrong answer. Sample Responses:\n\nAnswer 1: After two years, she should pull out her money and invest it in another company.\n\nAnswer 2: According to experts, she should not touch her investment and wait for it to bounce back."
+                    },
+                    {
+                        "number": 4,
+                        "prompt": "The half-life of the radioactive material in Z-Med, a medication used for certain types of therapy, is 2 days. A patient receives a 16 mCi dose (millicuries, a measure of radiation) in his treatment. (Half-life means that the radioactive material decays to the point where only half is left.)\n\nMake a table to show the level of Z-Med in the patient's body after n days.\n\nWrite a formula to model the half-life of Z-Med for n days. (Be careful here. Make sure that the formula works for both odd and even numbers of days.)",
+                        "solution": "f(n)=16(\\frac{1}{2})^{\\frac{n}{2}}\n\nwhere n represents the number of days after the initial measurement of 16 mCi"
+                    },
+                    {
+                        "number": 5,
+                        "prompt": "How much radioactive material from Z-Med is left in the patient's body after 20 days of receiving the medicine?",
+                        "solution": "For n=20\n\nf(20)=16(0.5)^{10}\n\nf(20)=0.015625\n\nAfter ten days, there is 0.015625 mCi of the radioactive material in Z-Med left in the patient's body."
+                    },
+                    {
+                        "number": 6,
+                        "prompt": "Suppose a male and a female of a certain species of animal were taken to a deserted island. The population of this species quadruples (multiplies by 4) every year. Assume that the animals have an abundant food supply and that there are no predators on the island.\n\nWhat is an equation that can be used to model the population of the species?",
+                        "solution": "f(n)=2(4)^{n}\n\nwhere n represents the number of years after their arrival at the island"
+                    },
+                    {
+                        "number": 7,
+                        "prompt": "What will the population of the species be after 5 years?",
+                        "solution": "In 5 years, the population of the animals will reach 2,048."
+                    },
+                    {
+                        "number": 8,
+                        "prompt": "Write an equation to find how many years it will take for the population of the animals to exceed 1 million. Find the number of years, either by using the equation or a table.",
+                        "solution": "Using the equation: 2(4)^{n}=1 000 000\n\n4^{n}=500 000\n\nNote: Students will likely be unable to solve this equation without using trial and error (educated guessing). They may come up with 2(4)^{9.5}=1 048 576 using this method."
+                    },
+                    {
+                        "number": 9,
+                        "prompt": "The revenue of a company for a given month is represented as R(x)=1,500x-x^{2} and its costs as C(x)=1,500+1,000x. What is the selling price, x, of its product that would yield the maximum profit? Show or explain your answer.",
+                        "solution": "P(x)=Revenue-Cost\n\nP(x)=R(x)-C(x)\n\nP(x)=(1500x-x^{2})-(1500+1000x)\n\nP(x)=-x^{2}+500x-1500\n\nProfit Function\n\nTo find the vertex, we can complete the square for the function:\n\nP(x)=-x^{2}+500x-1500\n\n=-1(x^{2}-500x+ )-1500Group the x-terms and factor out the -1.\n\n=-1(x^{2}-500x+62 500)-1500+62 500Complete the square.\n\nP(x)=-1(x-250)^{2}+61 000\n\nSo, the maximum point will be (250, 61 000), and the selling price should be $250 per unit to yield a maximum profit of $61,000."
+                    }
+                ]
+            },
+            "practiceQuestions": [
+                {
+                    "question": "[Exit Ticket Challenge 1] Exit Ticket",
+                    "options": [
+                        "Answer the following question. Look back at this (or other) lessons if you need help with the business formulas.",
+                        "The relationship cannot be evaluated without arbitrary numerical coordinates.",
+                        "The values remain constant at zero regardless of the independent variable inputs.",
+                        "The rate of change is undefined because domain restrictions were violated."
+                    ],
+                    "correct": 0,
+                    "explanation": "From the official Eureka Math Exit Ticket Key for Lesson 8:\nAnswer the following question. Look back at this (or other) lessons if you need help with the business formulas.\n\nJerry and Carlos each have $1,000 and are trying to increase their savings. Jerry will keep his money at home and add $10 per month from his part-time job. Carlos will put his money in a bank account that earns a 6% yearly interest rate, compounded monthly. Who has a better plan for increasing his savings?\n\nJerry's savings:J(n)=1000+1"
+                },
+                {
+                    "question": "[Exit Ticket Challenge 2] Answer the following question. Look back at this (or other) lessons if you need help with the business formulas.",
+                    "options": [
+                        "Jerry and Carlos each have $1,000 and are trying to increase their savings. Jerry will keep his money at home and add $10 per month from his part-time job. Carlos will put his money in a bank account that earns a 6% yearly interest rate, compounded m",
+                        "Ignore boundary conditions and compute only approximate integer values.",
+                        "Assume that all relationships are strictly constant without verifying rates of change.",
+                        "Treat independent and dependent variables as interchangeable."
+                    ],
+                    "correct": 0,
+                    "explanation": "Official Curriculum Key for Lesson 8:\nStudents model functions described verbally in a given context using graphs, tables, or algebraic representations."
+                }
+            ],
+            "citation": {
+                "title": "Source Citation (MLA)",
+                "text": "Great Minds. \"Modeling a Context from a Verbal Description.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+                "subtext": "Developed using authentic lesson materials from standard algebra curricula.",
+                "lessonId": "L-ID-K-MATH-M5-B-5"
+            }
+        },
+        "k-math-m5-b-6": {
+            "id": "k-math-m5-b-6",
+            "code": "K.M5.B.6",
+            "standard": "HSA.CED.A.1",
+            "levelId": "k",
+            "requiresMathJax": true,
+            "meta": {
+                "title": "Modeling a Context from a Verbal Description",
+                "pageTitle": "Modeling a Context from a Verbal Description | Hesten's Learning",
+                "description": "In this lesson, students develop a deep conceptual and procedural understanding of Modeling a Context from a Verbal Description in Module 5: A Synthesis of Mode...",
+                "pageDescription": "Master Modeling a Context from a Verbal Description in Module 5: A Synthesis of Modeling with Equations and Functions. Comprehensive student outcomes, teacher insights, guided exercises, problem set worksheets, and exit ticket keys.",
+                "author": "Hesten's Learning Team",
+                "badge": "Math Lesson K.M5.B.6",
+                "badgeIcon": "fa-calculator"
+            },
+            "overview": {
+                "title": "Student & Teacher Overview: Lesson 9",
+                "pill": "Completing the Modeling Cycle",
+                "text": "In this lesson, students develop a deep conceptual and procedural understanding of Modeling a Context from a Verbal Description in Module 5: A Synthesis of Modeling with Equations and Functions.",
+                "outcomes": [
+                    "Students interpret the function and its graph and use them to answer questions related to the model, including calculating the rate of change over an interval and always using an appropriate level of precision when reporting results.",
+                    "Students use graphs to interpret the function represented by the equation in terms of the context and answer questions about the model using the appropriate level of precision in reporting results.",
+                    "MP.4&MP.6MP.4&MP.6",
+                    "This lesson addresses attending to precision when modeling in mathematics. The lesson begins with an explanation of what precision is, and students practice attending to precision with math model practice sets."
+                ],
+                "teacherInsight": "Emphasize precise mathematical definitions and multiple problem-solving representations. Encourage students to check the reasonableness of their numerical solutions."
+            },
+            "content": [],
+            "vocabulary": [
+                {
+                    "term": "Sample Response",
+                    "definition": "We can tell that this problem involves a geometric sequence because we are multiplying each term by either 1."
+                },
+                {
+                    "term": "Sample Response",
+                    "definition": "For 1990 to 2000 we know the final population from our answer to part (a), so we can use that to find the initial population in 1990."
+                }
+            ],
+            "guidedExercises": [
+                {
+                    "title": "Example 1: Core Mathematical Modeling for Modeling a Context from a Verbal Description",
+                    "badge": "Eureka Math Guided Classwork",
+                    "difficulty": "Core Application",
+                    "problem": "In this lesson, students use the full modeling cycle to model functions described verbally in a context. Since this is the final lesson of the year, consider using the examples and exercises of this lesson for independent work by students. Perhaps have groups work on the same problem, assign different problems for each group, or offer them a choice. Then, consider having them display their results or make a short presentation for the class. Discussion of the work could focus on the most efficien",
+                    "scaffolding": "Identify the key variables and properties. Apply the definitions and mathematical structures introduced in Modeling a Context from a Verbal Description.",
+                    "steps": [
+                        {
+                            "step": 1,
+                            "label": "Define Variables & Formulate Governing Relations",
+                            "math": "\\text{Identify key variables and parameters for } Modeling a Context from a Verbal Description",
+                            "explanation": "Establish the relationship between quantities and state any domain constraints."
+                        },
+                        {
+                            "step": 2,
+                            "label": "Execute Step-by-Step Algebraic Transformations",
+                            "math": "\\text{Transform and simplify equations: } \\dots",
+                            "explanation": "Using clear and accurate language when interpreting the meaning and discussing the results of the mathematical model; labeling axes on a graph; specifying the meaning of a variable in a particular function; including units of measure when appropriate"
+                        }
+                    ],
+                    "finalAnswer": "\\text{The evaluated solution verifies the properties of } Modeling a Context from a Verbal Description",
+                    "commonPitfall": "Ensure units of measurement and domain constraints are checked in physical and statistical contexts."
+                },
+                {
+                    "title": "Exercise 1: Independent Problem Formulation",
+                    "badge": "Multi-Step Application",
+                    "difficulty": "Advanced Reasoning",
+                    "problem": "Apply the foundational principles of Modeling a Context from a Verbal Description to determine the exact value and interpret the contextual significance.",
+                    "scaffolding": "Reference the worked steps from Example 1. Verify intermediate calculations and justify your steps.",
+                    "steps": [
+                        {
+                            "step": 1,
+                            "label": "Analyze Given Conditions & Structure",
+                            "math": "\\text{State domain constraints and initial conditions}",
+                            "explanation": "Verify that all assumptions conform to the problem context."
+                        },
+                        {
+                            "step": 2,
+                            "label": "Calculate the Final Mathematical Solution",
+                            "math": "\\text{Solve for the target unknown quantity}",
+                            "explanation": "State the solution with formal mathematical reasoning."
+                        }
+                    ],
+                    "finalAnswer": "\\text{Verified algebraic or statistical solution}",
+                    "commonPitfall": "Avoid rounding prematurely before the final step."
+                }
+            ],
+            "exitTicket": {
+                "title": "Lesson 9 Exit Ticket: Modeling a Context from a Verbal Description",
+                "prompt": "Exit Ticket\n\nThe distance a car travels before coming to a stop once a driver hits the brakes is related to the speed of the car when the brakes were applied. The graph of f (shown) is a model of the stopping distance (in feet) of a car traveling at different speeds (in miles per hour).\n\nOne data point on the graph of f appears to be (80, 1000). What do you think this point represents in the context of this problem? Explain your reasoning.\n\nEstimate the stopping distance of the car if the driver is traveling at 65 mph when she hits the brakes. Explain how you got your answer.\n\nEstimate the average rate of change of f between x=50 and x=60. What is the meaning of the rate of change in the context of this problem?\n\nWhat information would help you make a better prediction about stopping distance and average rate of change for this situation?",
+                "solution": "The distance a car travels before coming to a stop once a driver hits the brakes is related to the speed of the car when the brakes were applied. The graph of f (shown) is a model of the stopping distance (in feet) of a car traveling at different speeds (in miles per hour).\n\nOne data point on the graph of f appears to be (80,1000). What do you think this point represents in the context of this problem? Explain your reasoning.\n\nIn this problem, 80 would represent the speed in miles per hour and 1,000 would represent the stopping distance in feet. It does not make sense for a car to be traveling at 1,000 mph, much less only take 80 ft. to come to a stop.\n\nEstimate the stopping distance of the car if the driver is traveling at 65 mph when she hits the brakes. Explain how you got your answer.\n\nI can estimate the stopping distance by sketching a curve to connect the data points and locating the y-coordinate of a point on this curve when its x-coordinate is 65. My estimate is approximately 670 ft.\n\nAlternately, assume this is a quadratic function in the form f(x)=kx^{2}, where f is the stopping distance, in feet, and x is the speed, in miles per hour. Using the point (80,1000), k=\\frac{1000}{80^{2}}=0.15625, so f(x)=0.15625x^{2}. Using this model, f(65)=660.15625. My estimate is approximately 660 ft.\n\nEstimate the average rate of change of f between x=50 and x=60. What is the meaning of the rate of change in the context of this problem?\n\nf(50)≈400 and f(60)≈580. \\frac{580-400}{10}=18. The average rate of change between x=50 and x=60 is approximately 18 ft/mph. This means that between 50 and 60 mph, the stopping distance is increasing by approximately 18 ft. for each additional mph increase in speed.\n\nWhat information would help you make a better prediction about stopping distance and average rate of change for this situation?\n\nA table of data or an algebraic function would help in making better predictions."
+            },
+            "problemSet": {
+                "title": "Official Worksheet: Problem Set & Practice",
+                "description": "Master Modeling a Context from a Verbal Description through authentic curriculum practice problems. Check your work using the expandable teacher solution key below.",
+                "problems": [
+                    {
+                        "number": 1,
+                        "prompt": "According to the Center for Disease Control and Prevention, the breast cancer rate for women has decreased at 0.9% per year between 2000 and 2009.\n\nIf 192,370 women were diagnosed with invasive breast cancer in 2009, how many were diagnosed in 2005? For this problem, assume that there is no change in population from 2005 and 2009.",
+                        "solution": "Geometric sequence: Common ratio is (1-0.009)=0.991.\n\na_{n}=a_{1}(common ratio)^{n-1}192 370=a_{1}(0.991)^{4}\\frac{192 370}{(0.991)^{4}}=a_{1}a_{1}=199 453.98…a_{1}=199,454"
+                    },
+                    {
+                        "number": 2,
+                        "prompt": "According to the American Cancer Society, in 2005 there were 211,240 people diagnosed with breast cancer. In a written response, communicate how precise and accurate your solution in part (a) is, and explain why.",
+                        "solution": "My solution is precise because my classmates and I followed the same protocols and our values were similar to each other. Since the model we used did not take into account the population increase, our values were off by 11,786 people, which is 5.6%. I believe that being off by only 5.6% is still pretty close to the actual value. My solution was precise and accurate; it could have been more accurate if the population growth was taken into account in the exponential model."
+                    },
+                    {
+                        "number": 3,
+                        "prompt": "The functions f and g represent the population of two different kinds of bacteria, where x is the time (in hours) and f and g are the number of bacteria (in thousands). f(x)=2x^{2}+7 and g(x)=2^{x}.\n\nBetween the third and sixth hour, which bacteria had a faster rate of growth?",
+                        "solution": "f(x)g(x)\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}f(x)g(x)Looking at the graphs of the two functions, the graph of y=g(x) is steeper over the interval [3,6] than the graph of y=f(x). Therefore, the bacteria population represented by y=g(x) has a faster rate of growth on this interval.\n\nUsing the functions to find the average rate of change over the interval [3, 6], \\frac{f(6)- f(3)}{6-3}= \\frac{79-25}{3}=18\\frac{g(6)-g(3)}{6-3}=\\frac{64-8}{3}≈18.7g has a slightly higher average rate of change on this interval.Using the functions to find the average rate of change over the interval [3, 6], \\frac{f(6)- f(3)}{6-3}= \\frac{79-25}{3}=18\\frac{g(6)-g(3)}{6-3}=\\frac{64-8}{3}≈18.7g has a slightly higher average rate of change on this interval.\n\nf(x)g(x)f(x)g(x)"
+                    },
+                    {
+                        "number": 4,
+                        "prompt": "Will the population of g ever exceed the population of f? If so, at what hour?",
+                        "solution": "Since the question asks for the hour (not the exact time), I made a table starting at the 6th hour and compared the two functions. Once g exceeded f, I stopped. So, sometime in the 7 th hour, the population of g exceeds the population of f."
+                    }
+                ]
+            },
+            "practiceQuestions": [
+                {
+                    "question": "[Exit Ticket Challenge 1] Exit Ticket",
+                    "options": [
+                        "The distance a car travels before coming to a stop once a driver hits the brakes is related to the speed of the car when the brakes were applied. The graph of f (shown) is a model of the stopping distance (in feet) of a car traveling at different spe",
+                        "The relationship cannot be evaluated without arbitrary numerical coordinates.",
+                        "The values remain constant at zero regardless of the independent variable inputs.",
+                        "The rate of change is undefined because domain restrictions were violated."
+                    ],
+                    "correct": 0,
+                    "explanation": "From the official Eureka Math Exit Ticket Key for Lesson 9:\nThe distance a car travels before coming to a stop once a driver hits the brakes is related to the speed of the car when the brakes were applied. The graph of f (shown) is a model of the stopping distance (in feet) of a car traveling at different speeds (in miles per hour).\n\nOne data point on the graph of f appears to be (80,1000). What do you think this point represents in the context of this problem? Explain your reasoning.\n\nIn this problem, 80"
+                },
+                {
+                    "question": "[Exit Ticket Challenge 2] The distance a car travels before coming to a stop once a driver hits the brakes is related to the speed of the car when the brakes were applied. The graph of f (shown) is a model of the stopping distance (in feet) of a car traveling at different speeds (in miles per hour).",
+                    "options": [
+                        "One data point on the graph of f appears to be (80,1000). What do you think this point represents in the context of this problem? Explain your reasoning.",
+                        "Ignore boundary conditions and compute only approximate integer values.",
+                        "Assume that all relationships are strictly constant without verifying rates of change.",
+                        "Treat independent and dependent variables as interchangeable."
+                    ],
+                    "correct": 0,
+                    "explanation": "Official Curriculum Key for Lesson 9:\nStudents interpret the function and its graph and use them to answer questions related to the model, including calculating the rate of change over an interval and always using an appropriate level of precision when reporting results."
+                }
+            ],
+            "citation": {
+                "title": "Source Citation (MLA)",
+                "text": "Great Minds. \"Modeling a Context from a Verbal Description.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+                "subtext": "Developed using authentic lesson materials from standard algebra curricula.",
+                "lessonId": "L-ID-K-MATH-M5-B-6"
+            }
+        }
+    }
+}

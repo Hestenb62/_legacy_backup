@@ -21,17 +21,18 @@ if (empty($lessonId)) {
     }
 }
 
-// 2. Load Lesson Data (Individual JSON file or central lessons.json)
-$individualFile = ABSPATH . 'assets/data/lessons/' . $lessonId . '.json';
-$lessonsFile = ABSPATH . 'assets/data/lessons.json';
-$lessonsData = file_exists($lessonsFile) ? json_decode(file_get_contents($lessonsFile), true) : ['lessons' => []];
-
 $parts = explode('-', $lessonId);
 $rawLevel = strtolower($parts[0] ?? 'k');
 $rawSubj = strtolower($parts[1] ?? 'math');
 $rawMod = strtoupper($parts[2] ?? 'M1');
 $rawTopic = strtoupper($parts[3] ?? 'A');
 $rawLesson = $parts[4] ?? '1';
+
+// 2. Load Lesson Data (Tiered: Module JSON -> Individual JSON -> Central lessons.json)
+$moduleKey = (count($parts) >= 3) ? strtolower($parts[0] . '-' . $parts[1] . '-' . $parts[2]) : '';
+$moduleFile = !empty($moduleKey) ? ABSPATH . 'assets/data/lessons/' . $moduleKey . '.json' : '';
+$individualFile = ABSPATH . 'assets/data/lessons/' . $lessonId . '.json';
+$lessonsFile = ABSPATH . 'assets/data/lessons.json';
 
 // GED Subject & Level Normalization
 if ($rawLevel === 'ged') {
@@ -77,16 +78,31 @@ $levelDisplay = $gradeNames[$rawLevel] ?? ('Level ' . strtoupper($rawLevel));
 $subjData = $subjConfig[$rawSubj] ?? ['name' => ucfirst($rawSubj), 'icon' => 'fa-book', 'color' => '#6366f1'];
 $codeStr = strtoupper(str_replace('-', '.', $lessonId));
 
-if (file_exists($individualFile)) {
-    $lesson = json_decode(file_get_contents($individualFile), true);
-    $meta = $lesson['meta'] ?? [];
-} elseif (isset($lessonsData['lessons'][$lessonId])) {
-    $entry = $lessonsData['lessons'][$lessonId];
-    if (!empty($entry['file']) && file_exists(ABSPATH . $entry['file'])) {
-        $lesson = json_decode(file_get_contents(ABSPATH . $entry['file']), true);
-    } else {
-        $lesson = $entry;
+$lesson = null;
+if (!empty($moduleFile) && file_exists($moduleFile)) {
+    $modJson = json_decode(file_get_contents($moduleFile), true);
+    if (!empty($modJson['lessons'][$lessonId])) {
+        $lesson = $modJson['lessons'][$lessonId];
     }
+}
+
+if (!$lesson && file_exists($individualFile)) {
+    $lesson = json_decode(file_get_contents($individualFile), true);
+}
+
+if (!$lesson && file_exists($lessonsFile)) {
+    $lessonsData = json_decode(file_get_contents($lessonsFile), true) ?: ['lessons' => []];
+    if (isset($lessonsData['lessons'][$lessonId])) {
+        $entry = $lessonsData['lessons'][$lessonId];
+        if (!empty($entry['file']) && file_exists(ABSPATH . $entry['file'])) {
+            $lesson = json_decode(file_get_contents(ABSPATH . $entry['file']), true);
+        } else {
+            $lesson = $entry;
+        }
+    }
+}
+
+if ($lesson) {
     $meta = $lesson['meta'] ?? [];
 } else {
     // Intelligent Curriculum Scaffolder for all standards

@@ -48,16 +48,16 @@ if (! function_exists('assetVersion')) {
 
 // Core Platform Version Definition
 if (! defined('HL_SITE_VERSION')) {
-    define('HL_SITE_VERSION', 'v2.8.0');
+    define('HL_SITE_VERSION', 'v2.8.1');
     }
 if (! defined('HL_SITE_VERSION_DATE')) {
     define('HL_SITE_VERSION_DATE', 'September 2026');
     }
 if (! defined('HL_SITE_VERSION_LABEL')) {
-    define('HL_SITE_VERSION_LABEL', 'September 2026 Grade 9 Algebra I Complete Curriculum Release');
+    define('HL_SITE_VERSION_LABEL', 'September 2026 Module-Level JSON Architecture Release');
     }
 if (! defined('HL_SITE_VERSION_SUMMARY')) {
-    define('HL_SITE_VERSION_SUMMARY', 'Complete 105-Lesson Grade 9 Algebra I Curriculum (Modules 1–5) with Embedded Problem Sets, Verbatim Exit Ticket Keys, and Unified Mathematics Codex');
+    define('HL_SITE_VERSION_SUMMARY', 'Consolidated Grade 9 Algebra I Lessons into 5 Module-Level JSON Datasets with Tiered Router Resolution and Centralized Mathematics Codex');
     }
 ?>
 <!DOCTYPE html>

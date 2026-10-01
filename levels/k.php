@@ -16,10 +16,26 @@ if (!empty($_GET['lesson'])) {
 }
 
 if (!empty($requestedLesson)) {
-    // Dynamic JSON Lesson Router: Prioritize dedicated JSON file in assets/data/lessons/
-    $jsonLessonFile = dirname(__DIR__) . '/assets/data/lessons/' . $requestedLesson . '.json';
+    // Dynamic JSON Lesson Router: Tiered Resolution (Module JSON -> Individual JSON -> Master Registry)
+    $hasJson = false;
+    $parts = explode('-', $requestedLesson);
+    if (count($parts) >= 3) {
+        $moduleKey = strtolower($parts[0] . '-' . $parts[1] . '-' . $parts[2]);
+        $modLessonFile = dirname(__DIR__) . '/assets/data/lessons/' . $moduleKey . '.json';
+        if (file_exists($modLessonFile)) {
+            $modData = json_decode(file_get_contents($modLessonFile), true);
+            if (isset($modData['lessons'][$requestedLesson])) {
+                $hasJson = true;
+            }
+        }
+    }
+
+    if (!$hasJson) {
+        $jsonLessonFile = dirname(__DIR__) . '/assets/data/lessons/' . $requestedLesson . '.json';
+        $hasJson = file_exists($jsonLessonFile);
+    }
+
     $mainLessonsFile = dirname(__DIR__) . '/assets/data/lessons.json';
-    $hasJson = file_exists($jsonLessonFile);
     if (!$hasJson && file_exists($mainLessonsFile)) {
         $data = json_decode(file_get_contents($mainLessonsFile), true);
         if (isset($data['lessons'][$requestedLesson])) {
