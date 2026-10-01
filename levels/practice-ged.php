@@ -17,14 +17,8 @@ if (!empty($_GET['lesson'])) {
 }
 
 if (!empty($requestedLesson)) {
-    $lessonFile = dirname(__DIR__) . '/lessons/' . $requestedLesson . '.php';
     $levelUrl = !empty($levelUrl) ? $levelUrl : 'practice-ged.php';
     $levelTitle = !empty($levelTitle) ? $levelTitle : 'Practice GED';
-
-    if (file_exists($lessonFile)) {
-        include $lessonFile;
-        exit;
-    }
 
     // Dynamic JSON Lesson Router: If static PHP file does not exist, render from JSON or scaffolding
     $jsonLessonFile = dirname(__DIR__) . '/assets/data/lessons/' . $requestedLesson . '.json';
@@ -866,7 +860,7 @@ ob_start();
     </div>
 </div>
 
-<script src="/assets/js/ged-prep.js"></script>
+<script src="/assets/js/pages/ged-prep.js"></script>
 <?php
 $customLevelFooter = ob_get_clean();
 

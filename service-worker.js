@@ -1,4 +1,4 @@
-const CACHE_NAME = 'hestens-learning-v19';
+const CACHE_NAME = 'hestens-learning-v20';
 const ASSETS_TO_CACHE = [
 
   // Main Directory Pages & Manifest
@@ -56,39 +56,38 @@ const ASSETS_TO_CACHE = [
   '/assets/css/layouts/footer.css',
   '/assets/css/layouts/print.css',
 
-  // JavaScript Core & Data
-  '/assets/js/audio-feedback.js',
-  '/assets/js/assessment-core.js',
-  '/assets/js/assessment-questionGenerator.js',
+  // JavaScript Core & Modular Suites
+  '/assets/js/accessibility/audio-feedback.js',
+  '/assets/js/assessment/assessment-core.js',
+  '/assets/js/assessment/assessment-questionGenerator.js',
   '/assets/js/assessment/adaptive-diagnostic.js',
-  '/assets/js/global-a11y.js',
+  '/assets/js/accessibility/global-a11y.js',
   '/assets/js/accessibility/accommodation-engine.js',
   '/assets/js/labs/interactive-labs.js',
-  '/assets/js/offline-status.js',
-  '/assets/js/offline-storage-manager.js',
+  '/assets/js/core/offline-status.js',
+  '/assets/js/components/offline-storage-manager.js',
   // Statutory & Standards Research Documents
   '/assets/text/accessability-wcag-2-1-aa.md',
   '/assets/text/accessability-wcag-aaa.md',
   '/assets/text/accessability-section-508.md',
   '/assets/text/accessability-udl.md',
   '/assets/text/library-gutenburg.md',
-  '/assets/js/global-error-handler.js',
-  '/assets/js/global-standard.js',
-  '/assets/js/scratchpad-studio.js',
-  '/assets/js/global-study-tools.js',
-  '/assets/js/flashcard-studio.js',
+  '/assets/js/core/global-error-handler.js',
+  '/assets/js/core/global-standard.js',
+  '/assets/js/components/scratchpad-studio.js',
+  '/assets/js/components/global-study-tools.js',
+  '/assets/js/components/flashcard-studio.js',
   '/assets/js/gamification/quest-manager.js',
   '/assets/js/gamification/skill-tree.js',
-  '/assets/js/index-main.js',
-  '/assets/js/global-announcements.js',
-  '/assets/js/global-core-ui.js',
-  '/assets/js/gdrive-sync.js',
-  '/assets/js/command-palette.js',
-  '/assets/js/manipulatives-lab.js',
-  '/assets/js/skills-passport.js',
-  '/assets/js/dictionary-lookup.js',
+  '/assets/js/pages/index-main.js',
+  '/assets/js/components/global-announcements.js',
+  '/assets/js/core/global-core-ui.js',
+  '/assets/js/core/gdrive-sync.js',
+  '/assets/js/components/command-palette.js',
+  '/assets/js/labs/manipulatives-lab.js',
+  '/assets/js/pages/skills-passport.js',
   '/assets/data/global-learningLevels.js',
-  '/assets/js/standards-ccss-math-ela.js'
+  '/assets/js/standards/standards-ccss-math-ela.js'
 ];
 
 // Install Event: Caches critical assets safely with individual fallback

@@ -273,7 +273,7 @@ include '../src/header.php';
 </main>
 
 <!-- Load CCSS Standards Dataset -->
-<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/standards-ccss-math-ela.js') : '/assets/js/standards-ccss-math-ela.js' ?>"></script>
-<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/skills-passport.js') : '/assets/js/skills-passport.js' ?>"></script>
+<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/standards/standards-ccss-math-ela.js') : '/assets/js/standards/standards-ccss-math-ela.js' ?>"></script>
+<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/pages/skills-passport.js') : '/assets/js/pages/skills-passport.js' ?>"></script>
 
 <?php include '../src/footer.php'; ?>

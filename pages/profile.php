@@ -457,6 +457,6 @@ include ABSPATH . '../src/header.php';
     </div>
 </main>
 
-<script src="../assets/js/profile-main.js?v=1.2" defer></script>
+<script src="../assets/js/pages/profile-main.js?v=1.2" defer></script>
 
 <?php include ABSPATH . '../src/footer.php'; ?>

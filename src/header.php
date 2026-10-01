@@ -48,16 +48,16 @@ if (! function_exists('assetVersion')) {
 
 // Core Platform Version Definition
 if (! defined('HL_SITE_VERSION')) {
-    define('HL_SITE_VERSION', 'v2.8.2');
+    define('HL_SITE_VERSION', 'v2.9.1');
     }
 if (! defined('HL_SITE_VERSION_DATE')) {
     define('HL_SITE_VERSION_DATE', 'September 2026');
     }
 if (! defined('HL_SITE_VERSION_LABEL')) {
-    define('HL_SITE_VERSION_LABEL', 'September 2026 Curriculum Pop-Ups Organization Release');
+    define('HL_SITE_VERSION_LABEL', 'September 2026 Router Streamlining Release');
     }
 if (! defined('HL_SITE_VERSION_SUMMARY')) {
-    define('HL_SITE_VERSION_SUMMARY', 'Reorganized All Pre-K Through Grade 12 Curriculum Scope Datasets into Dedicated Directory assets/data/curr pop-ups/ with Resilient Path Resolution');
+    define('HL_SITE_VERSION_SUMMARY', 'Retired 95 Obsolete Lesson PHP Stubs and Streamlined Dynamic Routing Direct to Universal Lesson Renderer');
     }
 ?>
 <!DOCTYPE html>
@@ -765,13 +765,13 @@ if (! defined('HL_SITE_VERSION_SUMMARY')) {
             </div>
         </header>
 
-        <script src="<?= assetVersion('/assets/js/global-a11y.js') ?>"></script>
-        <script src="<?= assetVersion('/assets/js/global-core-ui.js') ?>"></script>
-        <script src="<?= assetVersion('/assets/js/universal-bookmarks.js') ?>"></script>
-        <script src="<?= assetVersion('/assets/js/command-palette.js') ?>"></script>
-        <script src="<?= assetVersion('/assets/js/global-shortcuts.js') ?>"></script>
-        <script src="<?= assetVersion('/assets/js/header-search-autocomplete.js') ?>"></script>
-        <script src="<?= assetVersion('/assets/js/offline-status.js') ?>"></script>
+        <script src="<?= assetVersion('/assets/js/accessibility/global-a11y.js') ?>"></script>
+        <script src="<?= assetVersion('/assets/js/core/global-core-ui.js') ?>"></script>
+        <script src="<?= assetVersion('/assets/js/components/universal-bookmarks.js') ?>"></script>
+        <script src="<?= assetVersion('/assets/js/components/command-palette.js') ?>"></script>
+        <script src="<?= assetVersion('/assets/js/components/global-shortcuts.js') ?>"></script>
+        <script src="<?= assetVersion('/assets/js/components/header-search-autocomplete.js') ?>"></script>
+        <script src="<?= assetVersion('/assets/js/core/offline-status.js') ?>"></script>
         <script>
             const navToggle = document.getElementById('nav-toggle');
             if (navToggle) {

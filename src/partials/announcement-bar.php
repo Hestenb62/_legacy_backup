@@ -55,4 +55,4 @@
         </div>
     </div>
 
-    <script src="/assets/js/global-announcements.js"></script>
+    <script src="/assets/js/components/global-announcements.js"></script>

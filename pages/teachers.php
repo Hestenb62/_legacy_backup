@@ -668,9 +668,9 @@ include '../src/header.php';
 </div>
 
 <!-- Load Curriculum Standards Data Loader -->
-<script src="<?= assetVersion('/assets/js/standards-ccss-math-ela.js') ?>"></script>
+<script src="<?= assetVersion('/assets/js/standards/standards-ccss-math-ela.js') ?>"></script>
 <!-- Load Teacher Hub Script -->
-<script src="<?= assetVersion('/assets/js/teachers-main.js') ?>"></script>
+<script src="<?= assetVersion('/assets/js/pages/teachers-main.js') ?>"></script>
 <script src="<?= assetVersion('/assets/js/teacher/mastery-heatmap.js') ?>"></script>
 
 <?php include '../src/footer.php'; ?>

@@ -321,6 +321,6 @@ include '../src/header.php';
     </div>
 </main>
 
-<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/manipulatives-lab.js') : '/assets/js/manipulatives-lab.js' ?>"></script>
+<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/labs/manipulatives-lab.js') : '/assets/js/labs/manipulatives-lab.js' ?>"></script>
 
 <?php include '../src/footer.php'; ?>

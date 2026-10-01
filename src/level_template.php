@@ -22,22 +22,16 @@ if (!empty($_GET['lesson'])) {
 }
 
 if (!empty($requestedLesson)) {
-    $lessonFile = rtrim(ABSPATH, '/\\') . '/lessons/' . $requestedLesson . '.php';
     $levelUrl = basename($_SERVER['PHP_SELF']);
     $levelTitle = $levelTitle ?? ('Level ' . strtoupper($levelId ?? ''));
     if (str_contains($requestedLesson, 'math')) {
         $requiresMathJax = true;
     }
-    if (file_exists($lessonFile)) {
-        include $lessonFile;
+    $lessonRenderer = rtrim(ABSPATH, '/\\') . '/src/lesson_renderer.php';
+    if (file_exists($lessonRenderer)) {
+        $lessonId = $requestedLesson;
+        include $lessonRenderer;
         exit;
-    } else {
-        $lessonRenderer = rtrim(ABSPATH, '/\\') . '/src/lesson_renderer.php';
-        if (file_exists($lessonRenderer)) {
-            $lessonId = $requestedLesson;
-            include $lessonRenderer;
-            exit;
-        }
     }
 }
 

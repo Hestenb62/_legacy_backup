@@ -43,21 +43,11 @@ if (!empty($requestedLesson)) {
         }
     }
 
-    if ($hasJson) {
-        $lessonId = $requestedLesson;
-        $levelUrl = 'k.php';
-        $levelTitle = 'Level K';
-        include dirname(__DIR__) . '/src/lesson_renderer.php';
-        exit;
-    }
-
-    $lessonFile = dirname(__DIR__) . '/lessons/' . $requestedLesson . '.php';
-    if (file_exists($lessonFile)) {
-        $levelUrl = 'k.php';
-        $levelTitle = 'Level K';
-        include $lessonFile;
-        exit;
-    }
+    $lessonId = $requestedLesson;
+    $levelUrl = 'k.php';
+    $levelTitle = 'Level K';
+    include dirname(__DIR__) . '/src/lesson_renderer.php';
+    exit;
 }
 
 // Page-Specific Metadata

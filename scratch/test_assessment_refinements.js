@@ -31,16 +31,16 @@ assert.ok(expCardIdx < qStandardTagIdx, "FAIL: answer-explanation-card must be p
 assert.ok(expCardIdx < questionHeadingIdx, "FAIL: answer-explanation-card must be placed above question heading");
 console.log("  [PASS] Feedback card situated on top of the question area");
 
-// 2. Verify assets/js/assessment-main.js
-const mainJsPath = path.join(__dirname, '../assets/js/assessment-main.js');
+// 2. Verify assets/js/assessment/assessment-main.js
+const mainJsPath = path.join(__dirname, '../assets/js/assessment/assessment-main.js');
 const mainJsContent = fs.readFileSync(mainJsPath, 'utf8');
 
 // Check 4: untimedBtn duplicate addEventListener removed
 assert.ok(!mainJsContent.includes('untimedBtn.addEventListener("click"'), "FAIL: duplicate untimedBtn addEventListener must be removed to avoid double-toggle");
 console.log("  [PASS] Duplicate click listener removed from assessment-main.js (no double-toggle)");
 
-// 3. Verify assets/js/assessment-p-12.js
-const p12JsPath = path.join(__dirname, '../assets/js/assessment-p-12.js');
+// 3. Verify assets/js/assessment/assessment-p-12.js
+const p12JsPath = path.join(__dirname, '../assets/js/assessment/assessment-p-12.js');
 const p12JsContent = fs.readFileSync(p12JsPath, 'utf8');
 
 // Check 5: 5-second auto-dismiss and hover logic

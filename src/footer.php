@@ -100,9 +100,9 @@
 
         <!-- Version Status & Release Info Strip (WCAG Operable) -->
         <?php
-        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.8.2';
-        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'September 2026 Curriculum Pop-Ups Organization Release';
-        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Reorganized All Pre-K Through Grade 12 Curriculum Scope Datasets into Dedicated Directory assets/data/curr pop-ups/ with Resilient Path Resolution';
+        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.9.1';
+        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'September 2026 Router Streamlining Release';
+        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Retired 95 Obsolete Lesson PHP Stubs and Streamlined Dynamic Routing Direct to Universal Lesson Renderer';
         ?>
         <div class="footer-version-strip" role="region" aria-label="Platform Version Information">
             <div class="footer-version-info">
@@ -190,29 +190,29 @@
 
 <!-- Footer Scripts -->
 <script
-    src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/global-error-handler.js') : '/assets/js/global-error-handler.js' ?>"></script>
+    src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/core/global-error-handler.js') : '/assets/js/core/global-error-handler.js' ?>"></script>
 <script
-    src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/audio-feedback.js') : '/assets/js/audio-feedback.js' ?>"></script>
+    src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/accessibility/audio-feedback.js') : '/assets/js/accessibility/audio-feedback.js' ?>"></script>
 <script
-    src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/sensory-chamber.js') : '/assets/js/sensory-chamber.js' ?>"></script>
+    src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/accessibility/sensory-chamber.js') : '/assets/js/accessibility/sensory-chamber.js' ?>"></script>
 <script
     src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/gamification/daily-quests.js') : '/assets/js/gamification/daily-quests.js' ?>"></script>
 <script
-    src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/scratchpad-studio.js') : '/assets/js/scratchpad-studio.js' ?>"></script>
+    src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/components/scratchpad-studio.js') : '/assets/js/components/scratchpad-studio.js' ?>"></script>
 <script
-    src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/global-study-tools.js') : '/assets/js/global-study-tools.js' ?>"></script>
+    src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/components/global-study-tools.js') : '/assets/js/components/global-study-tools.js' ?>"></script>
 <script
-    src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/flashcard-studio.js') : '/assets/js/flashcard-studio.js' ?>"></script>
+    src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/components/flashcard-studio.js') : '/assets/js/components/flashcard-studio.js' ?>"></script>
 <script
     src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/gamification/quest-manager.js') : '/assets/js/gamification/quest-manager.js' ?>"></script>
 <script
     src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/accessibility/accommodation-engine.js') : '/assets/js/accessibility/accommodation-engine.js' ?>"></script>
 <script
-    src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/certificate-generator.js') : '/assets/js/certificate-generator.js' ?>"></script>
+    src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/components/certificate-generator.js') : '/assets/js/components/certificate-generator.js' ?>"></script>
 <script
-    src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/command-palette.js') : '/assets/js/command-palette.js' ?>"></script>
+    src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/components/command-palette.js') : '/assets/js/components/command-palette.js' ?>"></script>
 <script
-    src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/global-standard.js') : '/assets/js/global-standard.js' ?>"></script>
+    src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/core/global-standard.js') : '/assets/js/core/global-standard.js' ?>"></script>
 
 <!-- Google API Scripts for Global Auto-Sync (Loaded when sync is active or on settings/profile) -->
 <script>
@@ -228,7 +228,7 @@
                 window.hlNeedsDriveSync;
             if (needsSync) {
                 const s1 = document.createElement('script');
-                s1.src = '<?= function_exists('assetVersion') ? assetVersion('/assets/js/gdrive-sync.js') : '/assets/js/gdrive-sync.js' ?>';
+                s1.src = '<?= function_exists('assetVersion') ? assetVersion('/assets/js/core/gdrive-sync.js') : '/assets/js/core/gdrive-sync.js' ?>';
                 document.body.appendChild(s1);
 
                 const s2 = document.createElement('script');
@@ -273,9 +273,25 @@
                 </span>
             </div>
             <p class="footer-vmodal-lead">
-                Version <?= htmlspecialchars($siteVersion) ?> advances the platform architecture by consolidating all 105 Grade 9 Algebra I lessons into <strong>five modular, high-performance module JSON datasets</strong> (<code>k-math-m1.json</code> through <code>k-math-m5.json</code>) in <code>assets/data/lessons/</code>, organizing all 56 Pre-K to Grade 12 curriculum pop-up datasets into <code>assets/data/curr pop-ups/</code>, and integrating embedded Eureka Math Problem Sets with the unified <strong>Mathematics Codex &amp; Vocab Review Hub</strong> (<code>/pages/math-vocab.php</code>).
+                Version <?= htmlspecialchars($siteVersion) ?> restructures the platform client architecture by organizing all JavaScript assets into <strong>seven clean, domain-aligned modular directories</strong> (<code>pages/</code>, <code>assessment/</code>, <code>standards/</code>, <code>labs/</code>, <code>accessibility/</code>, <code>components/</code>, <code>core/</code>), eliminating root script clutter while maintaining zero-downtime path synchronization and instant on-demand performance.
             </p>
             <ul class="footer-vmodal-features">
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true">
+                        <i class="fas fa-broom"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Legacy Lesson Stub Retirement:</strong> Cleaned up 95 obsolete PHP stub files from the root directory, streamlining the Level K and Level Template routers to dispatch directly to the Universal Lesson Renderer and module JSON datasets.
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true">
+                        <i class="fas fa-sitemap"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Modular JavaScript Architecture:</strong> Relocated all 34 loose scripts into domain-specific subdirectories (<code>pages/</code>, <code>assessment/</code>, <code>standards/</code>, <code>labs/</code>, <code>accessibility/</code>, <code>components/</code>, <code>core/</code>) with synchronized references across all templates and partials.
+                    </div>
+                </li>
                 <li class="footer-vmodal-feature-item">
                     <div class="footer-vmodal-feature-icon" aria-hidden="true">
                         <i class="fas fa-folder-open"></i>

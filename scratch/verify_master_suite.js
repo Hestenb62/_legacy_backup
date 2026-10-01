@@ -3,8 +3,8 @@ const vm = require('vm');
 const path = require('path');
 
 const jsFiles = [
-  'assets/js/audio-feedback.js',
-  'assets/js/sensory-chamber.js',
+  'assets/js/accessibility/audio-feedback.js',
+  'assets/js/accessibility/sensory-chamber.js',
   'assets/js/reader/read-comparative-view.js',
   'assets/js/assessment/assessment-scratchpad.js',
   'assets/js/assessment/diagnostic-prescription.js',

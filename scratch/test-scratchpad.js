@@ -7,7 +7,7 @@ console.log('Testing Scratchpad Studio files and logic integrity...');
 // 1. Check file existence
 const files = [
   'src/partials/scratchpad.php',
-  'assets/js/scratchpad-studio.js',
+  'assets/js/components/scratchpad-studio.js',
   'assets/css/components/fixed-tools.css',
   'src/footer.php',
   'service-worker.js'
@@ -114,7 +114,7 @@ if (!updatesIndexPhp.includes("upd-badge-version") || !updatesIndexPhp.includes(
 console.log('PASS: Updates Portal version badge logic verified.');
 
 // 6. Verify Scratchpad-Only Print Engine and Isolated CSS
-const studioJs = fs.readFileSync(path.join(__dirname, '..', 'assets/js/scratchpad-studio.js'), 'utf8');
+const studioJs = fs.readFileSync(path.join(__dirname, '..', 'assets/js/components/scratchpad-studio.js'), 'utf8');
 if (!studioJs.includes('printScratchpad()') || !studioJs.includes('scratchpad-print-iframe')) {
   console.error('FAIL: scratchpad-studio.js missing printScratchpad or scratchpad-print-iframe');
   process.exit(1);

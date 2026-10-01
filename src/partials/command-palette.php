@@ -22,7 +22,7 @@
         </div>
 
         <div class="cmd-palette-body" id="cmd-palette-results" role="listbox" aria-label="Search results">
-            <!-- Dynamically populated by assets/js/command-palette.js -->
+            <!-- Dynamically populated by assets/js/components/command-palette.js -->
         </div>
 
         <div class="cmd-palette-footer">

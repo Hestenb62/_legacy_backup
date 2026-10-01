@@ -5,7 +5,7 @@ const assert = require('assert');
 console.log("Testing Assessment End-of-Test Overview & Mid-Test Feedback Removal...\n");
 
 // 1. Check assessment-p-12.js
-const p12Path = path.join(__dirname, '../assets/js/assessment-p-12.js');
+const p12Path = path.join(__dirname, '../assets/js/assessment/assessment-p-12.js');
 const p12Content = fs.readFileSync(p12Path, 'utf8');
 
 // Mid-test checkAnswer must not reveal answers
@@ -23,7 +23,7 @@ assert.ok(p12Content.includes("Try Again"), "FAIL: finishQuiz must include Try A
 console.log("  [PASS] finishQuiz displays comprehensive score overview chips and Try Again button");
 
 // 2. Check assessment-main.js
-const mainJsPath = path.join(__dirname, '../assets/js/assessment-main.js');
+const mainJsPath = path.join(__dirname, '../assets/js/assessment/assessment-main.js');
 const mainJsContent = fs.readFileSync(mainJsPath, 'utf8');
 
 // Audio feedback removed mid-test (checkAnswer must not call playIncorrectSound())

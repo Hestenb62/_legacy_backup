@@ -11,7 +11,7 @@ console.log('=== RUNNING COMPREHENSIVE PLATFORM ENHANCEMENTS VERIFICATION ===\n'
 
 // 1. Verify Command Palette Assets & Database
 console.log('1. Verifying Global Ctrl+K Command Palette...');
-const cmdJs = fs.readFileSync(path.join(__dirname, '../assets/js/command-palette.js'), 'utf8');
+const cmdJs = fs.readFileSync(path.join(__dirname, '../assets/js/components/command-palette.js'), 'utf8');
 const cmdCss = fs.readFileSync(path.join(__dirname, '../assets/css/components/command-palette.css'), 'utf8');
 const headerPhp = fs.readFileSync(path.join(__dirname, '../src/header.php'), 'utf8');
 const footerPhp = fs.readFileSync(path.join(__dirname, '../src/footer.php'), 'utf8');
@@ -26,7 +26,7 @@ console.log('✔ Command Palette component, markup, CSS, and footer script integ
 
 // 2. Verify Teacher Suite: Worksheet Generator & Intervention Clusters
 console.log('\n2. Verifying Teacher Suite (Worksheets & Clusters)...');
-const teachersJs = fs.readFileSync(path.join(__dirname, '../assets/js/teachers-main.js'), 'utf8');
+const teachersJs = fs.readFileSync(path.join(__dirname, '../assets/js/pages/teachers-main.js'), 'utf8');
 const teachersPhp = fs.readFileSync(path.join(__dirname, '../pages/teachers.php'), 'utf8');
 const teachersCss = fs.readFileSync(path.join(__dirname, '../assets/css/pages/teachers.css'), 'utf8');
 
@@ -80,7 +80,7 @@ console.log(`✔ Verified worksheet generation for all 11 grades x 4 subjects ($
 console.log('\n3. Verifying Parent Hub (Schedule Matrix & Milestone Diplomas)...');
 const parentsPhp = fs.readFileSync(path.join(__dirname, '../pages/parents.php'), 'utf8');
 const parentsCss = fs.readFileSync(path.join(__dirname, '../assets/css/pages/parents.css'), 'utf8');
-const certGenJs = fs.readFileSync(path.join(__dirname, '../assets/js/certificate-generator.js'), 'utf8');
+const certGenJs = fs.readFileSync(path.join(__dirname, '../assets/js/components/certificate-generator.js'), 'utf8');
 
 assert(parentsPhp.includes('id="btn-tab-sched-weekly"'), 'parents.php must have weekly tab');
 assert(parentsPhp.includes('id="schedule-weekly-view"'), 'parents.php must have schedule-weekly-view');

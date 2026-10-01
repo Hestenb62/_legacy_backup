@@ -51,5 +51,5 @@ $barBackUrl = $backUrl ?? (isset($bookId) ? "/library/read/index.php?book=" . ur
     </div>
 </aside>
 
-<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/offline-storage-manager.js') : '/assets/js/offline-storage-manager.js' ?>"></script>
+<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/components/offline-storage-manager.js') : '/assets/js/components/offline-storage-manager.js' ?>"></script>
 <script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/components/sticky-reading-bar.js') : '/assets/js/components/sticky-reading-bar.js' ?>" defer></script>

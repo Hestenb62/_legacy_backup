@@ -4,7 +4,7 @@ include 'src/header.php';
 
 // --- DATA: Client-Side Loading Migration ---
 // Data is now loaded via <script src="assets/data/global-learningLevels.js"></script> below
-// <script src="assets/js/curriculum-teks.js"></script>
+// <script src="assets/js/standards/curriculum-teks.js"></script>
 ?>
 
 <!-- STYLES -->
@@ -14,7 +14,7 @@ include 'src/header.php';
 
 <!-- DATA IMPORT -->
 <script src="<?= assetVersion('/assets/data/global-learningLevels.js') ?>"></script>
-<script src="<?= assetVersion('/assets/js/standards-ccss-math-ela.js') ?>"></script>
+<script src="<?= assetVersion('/assets/js/standards/standards-ccss-math-ela.js') ?>"></script>
 
 <?php include __DIR__ . '/src/partials/hero.php'; ?>
 
@@ -37,6 +37,6 @@ include 'src/header.php';
 </main>
 
 <!-- PAGE SCRIPT -->
-<script src="<?= assetVersion('/assets/js/index-main.js') ?>"></script>
+<script src="<?= assetVersion('/assets/js/pages/index-main.js') ?>"></script>
 
 <?php include 'src/footer.php'; ?>

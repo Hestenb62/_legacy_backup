@@ -1990,7 +1990,7 @@ include '../src/header.php';
                 '/updates/index.php',
                 '/offline.php',
                 '/assets/css/global-components.css',
-                '/assets/js/index-main.js',
+                '/assets/js/pages/index-main.js',
                 '/assets/texts/accessability-wcag-2-1-aa.md',
                 '/assets/texts/accessability-section-508.md'
             ];

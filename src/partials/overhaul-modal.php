@@ -86,4 +86,4 @@
     </div>
 </div>
 
-<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/global-overhaul-notice.js') : '/assets/js/global-overhaul-notice.js' ?>"></script>
+<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/components/global-overhaul-notice.js') : '/assets/js/components/global-overhaul-notice.js' ?>"></script>

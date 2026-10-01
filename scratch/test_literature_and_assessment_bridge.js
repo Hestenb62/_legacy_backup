@@ -55,7 +55,7 @@ console.log("  [PASS] Reader sticky bar & modal Flashcard triggers verified.");
 
 // 5. Check assessment-main.js remediation flashcards
 console.log("\n[Test 5] Validating Assessment-Standards Flashcard bridge in assessment-main.js...");
-const asmtJsPath = path.join(__dirname, '../assets/js/assessment-main.js');
+const asmtJsPath = path.join(__dirname, '../assets/js/assessment/assessment-main.js');
 const asmtJsContent = fs.readFileSync(asmtJsPath, 'utf8');
 assert(asmtJsContent.includes('window.openRemediationFlashcards'), "Must define window.openRemediationFlashcards");
 assert(asmtJsContent.includes('window.openAssessmentFlashcards'), "Must define window.openAssessmentFlashcards");

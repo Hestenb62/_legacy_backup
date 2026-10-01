@@ -8,8 +8,8 @@
   ?>
   <link rel="stylesheet" href="<?= function_exists('assetVersion') ? assetVersion('/assets/css/pages/standards.css') : '/assets/css/pages/standards.css' ?>">
   <?php
-  // include 'assets/js/standards-ccss-math-ela.js';
-  // include 'assets/js/curriculum-teks.js';
+  // include 'assets/js/standards/standards-ccss-math-ela.js';
+  // include 'assets/js/standards/curriculum-teks.js';
 
   // Define the grades and their corresponding levels
   $grades = [
@@ -562,8 +562,8 @@
     </div>
 </main>
 
-<script src="/assets/js/standards-ccss-math-ela.js"></script>
-<script src="/assets/js/curriculum-teks.js"></script>
+<script src="/assets/js/standards/standards-ccss-math-ela.js"></script>
+<script src="/assets/js/standards/curriculum-teks.js"></script>
 
 <script>
     let currentSubject = 'math';
