@@ -315,20 +315,82 @@
   }
 
   /**
-   * Bind top-level problem set actions (print solved, clear work)
+   * Sync typed text from textareas to printable containers for crystal-clear print quality
+   */
+  function syncPrintAnswers() {
+    const cards = document.querySelectorAll('.lesson-problem-card');
+    cards.forEach(card => {
+      const textarea = card.querySelector('.lesson-student-workspace');
+      let printBox = card.querySelector('.lesson-print-student-answer');
+      if (!printBox) {
+        printBox = document.createElement('div');
+        printBox.className = 'lesson-print-student-answer';
+        printBox.setAttribute('aria-hidden', 'true');
+        const wrapper = card.querySelector('.lesson-student-workspace-wrapper') || card;
+        wrapper.appendChild(printBox);
+      }
+      const text = textarea ? textarea.value.trim() : '';
+      printBox.textContent = text ? text : '(No written work entered)';
+    });
+  }
+
+  /**
+   * Scoped print runner that isolates ONLY the worksheet section
+   */
+  function printWorksheet(isSolvedMode) {
+    syncPrintAnswers();
+    document.body.classList.add('printing-lesson-worksheet');
+    if (isSolvedMode) {
+      document.body.classList.add('print-student-work-mode');
+    } else {
+      document.body.classList.remove('print-student-work-mode');
+    }
+
+    const cleanup = () => {
+      document.body.classList.remove('printing-lesson-worksheet', 'print-student-work-mode');
+      window.removeEventListener('afterprint', cleanup);
+    };
+    window.addEventListener('afterprint', cleanup);
+
+    window.print();
+
+    // Fallback timer if afterprint doesn't fire
+    setTimeout(cleanup, 2000);
+  }
+
+  /**
+   * Bind top-level problem set actions (print blank, print solved, clear work)
    */
   function bindHeaderActions() {
+    // Print Blank Worksheet button
+    const printBlankBtn = document.getElementById('lesson-btn-print-blank');
+    if (printBlankBtn) {
+      printBlankBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        printWorksheet(false);
+      });
+    }
+
     // Print Solved Work button
     const printSolvedBtn = document.getElementById('lesson-btn-print-solved');
     if (printSolvedBtn) {
-      printSolvedBtn.addEventListener('click', () => {
-        document.body.classList.add('print-student-work-mode');
-        window.print();
-        setTimeout(() => {
-          document.body.classList.remove('print-student-work-mode');
-        }, 1000);
+      printSolvedBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        printWorksheet(true);
       });
     }
+
+    // Intercept native browser print (Ctrl+P) on pages with #problem-set to isolate worksheet
+    window.addEventListener('beforeprint', () => {
+      if (document.getElementById('problem-set')) {
+        syncPrintAnswers();
+        document.body.classList.add('printing-lesson-worksheet');
+      }
+    });
+
+    window.addEventListener('afterprint', () => {
+      document.body.classList.remove('printing-lesson-worksheet', 'print-student-work-mode');
+    });
 
     // Reset / Clear work button
     const clearBtn = document.getElementById('lesson-btn-clear-work');

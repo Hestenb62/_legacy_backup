@@ -49,18 +49,22 @@ In release **v2.10.0**, Hesten's Learning completed two major platform advanceme
   - Calculates and renders live progress percentage and completion bar.
   - Bridges with `window.exportWorkToScratchpad` / `window.HLScratchpad` to stamp problem prompts into the scratchpad for handwriting.
   - Supports multi-tab reactivity via `window.addEventListener('storage')`.
+  - Implements scoped worksheet printing (`printWorksheet(isSolved)` & `syncPrintAnswers`) that automatically hides all non-worksheet page content and synchronizes typed text into printable blocks.
 - **`src/lesson_renderer.php`**:
   - Upgraded `#problem-set` section with:
+    - Dedicated printable classroom worksheet header (`.lesson-worksheet-print-header`) with title, level, subject, standard code, and fill-in lines for Name, Date, Period, and Score.
     - Live progress meter: `0 of N Solved (0%)` with progress bar track and fill.
     - Header actions: **Print Blank**, **Print Solved Work**, and **Reset**.
     - Problem cards with `data-problem-number`, status toggle button (**Mark Solved** / **Solved**), scratchpad launcher button, and auto-save feedback pill.
     - Dedicated student workspace `<textarea>` with accessible label and placeholder.
+    - Print-only blank ruled handwriting box (`.lesson-print-blank-box`) and solved response container (`.lesson-print-student-answer`).
     - Preserved expandable teacher solution keys.
     - Research link badge in the Overview section: *Evidence-Based Pedagogy &bull; Learning Disability Research Links*.
     - Script inclusion for `practice-notebook.js`.
-- **`assets/css/pages/lesson.css`**:
+- **`assets/css/pages/lesson.css` & `assets/css/layouts/print.css`**:
   - Added styles for `.lesson-pedagogy-badge-row`, `.lesson-pedagogy-link`, `.lesson-practice-progress-container`, `.lesson-practice-bar-track`, `.lesson-practice-bar-fill`, `.lesson-btn-print-solved`, `.lesson-btn-clear-work`, `.lesson-problem-controls`, `.lesson-open-scratchpad-btn`, `.lesson-problem-status-btn`, `.lesson-save-indicator`, and `.lesson-student-workspace`.
-  - Added dedicated `@media print` rules distinguishing between blank worksheet printing and solved homework submission mode (`.print-student-work-mode`).
+  - Added complete scoped `@media print` rules: completely excludes site header, navigation bar, footer, lesson overview, student outcomes, teacher insights, exercises, and citation boxes.
+  - Formats blank mode with ruled lined handwriting boxes (`repeating-linear-gradient`) and solved mode with full student response blocks.
 
 ### C. Platform Version & Documentation
 - **`src/header.php` & `src/footer.php`**:

@@ -207,6 +207,34 @@ include_once ABSPATH . 'src/partials/sticky-reading-bar.php';
         <!-- Official Curriculum Worksheet: Interactive Student Practice Notebook -->
         <?php if (!empty($lesson['problemSet']) && !empty($lesson['problemSet']['problems'])): ?>
         <section class="lesson-problem-set-section" id="problem-set" aria-labelledby="problem-set-heading" data-lesson-id="<?php echo htmlspecialchars($lessonId ?? ''); ?>">
+            <!-- Scoped Print-Only Official Worksheet Header -->
+            <div class="lesson-worksheet-print-header" aria-hidden="true">
+                <div class="worksheet-print-top">
+                    <div class="worksheet-print-meta-left">
+                        <h2 class="worksheet-print-title"><?php echo htmlspecialchars($meta['title'] ?? 'Curriculum Lesson Problem Set'); ?></h2>
+                        <div class="worksheet-print-submeta">
+                            <span><strong>Level:</strong> <?php echo htmlspecialchars(strtoupper($rawLevel ?? 'K')); ?></span> &bull;
+                            <span><strong>Subject:</strong> <?php echo htmlspecialchars(ucfirst($rawSubj ?? 'Math')); ?></span>
+                            <?php if (!empty($lesson['code'])): ?>
+                                &bull; <span><strong>Code:</strong> <?php echo htmlspecialchars($lesson['code']); ?></span>
+                            <?php endif; ?>
+                            <?php if (!empty($lessonStandard)): ?>
+                                &bull; <span><strong>Standard:</strong> <?php echo htmlspecialchars($lessonStandard); ?></span>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                    <div class="worksheet-print-branding">
+                        <span>Hesten's Learning Curriculum</span>
+                    </div>
+                </div>
+                <div class="worksheet-print-fields">
+                    <div class="worksheet-print-field"><span>Student Name:</span> <span class="worksheet-print-line"></span></div>
+                    <div class="worksheet-print-field"><span>Date:</span> <span class="worksheet-print-line short"></span></div>
+                    <div class="worksheet-print-field"><span>Period:</span> <span class="worksheet-print-line mini"></span></div>
+                    <div class="worksheet-print-field"><span>Score:</span> <span class="worksheet-print-line mini"></span></div>
+                </div>
+            </div>
+
             <div class="lesson-problem-set-header">
                 <div>
                     <span class="lesson-problem-set-badge">
@@ -236,7 +264,7 @@ include_once ABSPATH . 'src/partials/sticky-reading-bar.php';
                 </div>
 
                 <div class="lesson-problem-set-actions">
-                    <button type="button" onclick="window.print()" class="lesson-btn-print-worksheet" aria-label="Print blank problem set worksheet">
+                    <button type="button" id="lesson-btn-print-blank" class="lesson-btn-print-worksheet" aria-label="Print blank problem set worksheet">
                         <i class="fas fa-print" aria-hidden="true"></i> Print Blank
                     </button>
                     <button type="button" id="lesson-btn-print-solved" class="lesson-btn-print-solved" aria-label="Print solved worksheet with your typed work">
@@ -279,6 +307,14 @@ include_once ABSPATH . 'src/partials/sticky-reading-bar.php';
                                 <i class="fas fa-pencil-alt" aria-hidden="true"></i> Your Working &amp; Mathematical Reasoning:
                             </label>
                             <textarea id="student-work-<?php echo $idx; ?>" class="lesson-student-workspace" placeholder="Type your step-by-step calculations, equations, and final answers here... (auto-saves locally and syncs to cloud)" rows="4" spellcheck="true"></textarea>
+                            
+                            <!-- Print-Only Blank Ruled Handwriting Box (Shown in blank worksheet print mode) -->
+                            <div class="lesson-print-blank-box" aria-hidden="true">
+                                <span class="lesson-print-blank-label">Student Working &amp; Calculations:</span>
+                            </div>
+
+                            <!-- Print-Only Student Solved Answer (Shown in solved homework print mode) -->
+                            <div class="lesson-print-student-answer" aria-hidden="true"></div>
                         </div>
 
                         <?php if (!empty($prob['solution'])): ?>

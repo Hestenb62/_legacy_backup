@@ -345,6 +345,23 @@
         padding: 0 !important;
     }
 
+    /* Case F: Scoped Curriculum Lesson Problem Set Section */
+    body.printing-lesson-worksheet header.header-main,
+    body.printing-lesson-worksheet footer.footer-main,
+    body.printing-lesson-worksheet .lesson-top-bar,
+    body.printing-lesson-worksheet .lesson-runner-dock,
+    body.printing-lesson-worksheet .lesson-header,
+    body.printing-lesson-worksheet .lesson-overview-section,
+    body.printing-lesson-worksheet .lesson-pedagogy-badge-row,
+    body.printing-lesson-worksheet .lesson-resources-section,
+    body.printing-lesson-worksheet .lesson-check-understanding-card,
+    body.printing-lesson-worksheet .lesson-footer,
+    body.printing-lesson-worksheet .lesson-citation-box,
+    body.printing-lesson-worksheet .lesson-footer-meta,
+    body.printing-lesson-worksheet main.lesson-container > *:not(#problem-set) {
+        display: none !important;
+    }
+
     /* Hide unused modals during regular page printing */
     body:not(.printing-certificate) #hl-certificate-modal,
     body:not(.printing-worksheet):not(:has(#quiz-worksheet-modal:not([style*="display: none"]))) #quiz-worksheet-modal,

@@ -48,16 +48,16 @@ if (! function_exists('assetVersion')) {
 
 // Core Platform Version Definition
 if (! defined('HL_SITE_VERSION')) {
-    define('HL_SITE_VERSION', 'v2.10.0');
+    define('HL_SITE_VERSION', 'v2.10.1');
     }
 if (! defined('HL_SITE_VERSION_DATE')) {
     define('HL_SITE_VERSION_DATE', 'September 2026');
     }
 if (! defined('HL_SITE_VERSION_LABEL')) {
-    define('HL_SITE_VERSION_LABEL', 'September 2026 Research Elevation & Practice Notebook Release');
+    define('HL_SITE_VERSION_LABEL', 'September 2026 Unified Library Catalog & Practice Notebook Release');
     }
 if (! defined('HL_SITE_VERSION_SUMMARY')) {
-    define('HL_SITE_VERSION_SUMMARY', 'Elevated Research Portal into Offline PWA & Command Palette Search, Integrated Interactive Student Practice Notebook with Local Storage & Cloud Auto-Sync');
+    define('HL_SITE_VERSION_SUMMARY', 'Unified Digital Library Catalog across Landing and Master Index (30 Volumes), Elevated Research Portal into Offline PWA, Integrated Interactive Student Practice Notebook');
     }
 ?>
 <!DOCTYPE html>

@@ -21,13 +21,69 @@ $pageDescription = 'Browse your digital collection of classic literature, histor
 $pageKeywords = 'library, books, reading, digital archive, primary sources, textbooks, history, literature, study guides';
 $pageAuthor = 'Hesten\'s Learning';
 
-// --- Load Book Data ---
+// --- Load Book Data from both Repositories ---
 $bookdJsonPath = __DIR__.'/assets/bookd.json';
-$categories = is_file($bookdJsonPath) ? (json_decode(file_get_contents($bookdJsonPath), true) ?: []) : [];
-
-// --- Load Drawer Academic Data ---
 $drawerJsonPath = __DIR__.'/assets/edu-side-drawer.json';
+
+$bookdCategories = is_file($bookdJsonPath) ? (json_decode(file_get_contents($bookdJsonPath), true) ?: []) : [];
 $drawerCategories = is_file($drawerJsonPath) ? (json_decode(file_get_contents($drawerJsonPath), true) ?: []) : [];
+
+// Merge and deduplicate all books across primary archive and academic subject collections
+$preferredCategoryOrder = [
+    'Classic Fiction',
+    'Fantasy & Sci-Fi',
+    'US History',
+    'World History',
+    'WW1',
+    'WW2',
+    'Math',
+    'ELA',
+    'Science',
+    'Civics',
+    'General Resources'
+];
+
+$categories = [];
+foreach ($preferredCategoryOrder as $catName) {
+    $categories[$catName] = [];
+}
+
+$seenBookIds = [];
+
+// 1. Ingest books from primary reading collection (bookd.json)
+foreach ($bookdCategories as $catName => $books) {
+    if (!is_array($books)) continue;
+    if (!isset($categories[$catName])) {
+        $categories[$catName] = [];
+    }
+    foreach ($books as $b) {
+        $id = $b['id'] ?? '';
+        if ($id && !isset($seenBookIds[$id])) {
+            $b['category'] = $catName;
+            $categories[$catName][] = $b;
+            $seenBookIds[$id] = true;
+        }
+    }
+}
+
+// 2. Ingest books from academic drawer repository (edu-side-drawer.json)
+foreach ($drawerCategories as $catName => $books) {
+    if (!is_array($books)) continue;
+    if (!isset($categories[$catName])) {
+        $categories[$catName] = [];
+    }
+    foreach ($books as $b) {
+        $id = $b['id'] ?? '';
+        if ($id && !isset($seenBookIds[$id])) {
+            $b['category'] = $catName;
+            $categories[$catName][] = $b;
+            $seenBookIds[$id] = true;
+        }
+    }
+}
+
+// Filter out any empty categories
+$categories = array_filter($categories, fn($catBooks) => !empty($catBooks));
 
 // --- Load Desk External Links ---
 $linksJsonPath = __DIR__.'/assets/desk_links.json';
@@ -42,8 +98,8 @@ $totalCatalogBooks = 0;
 foreach ($categories as $catBooks) {
     if (is_array($catBooks)) {
         $totalCatalogBooks += count($catBooks);
-        }
     }
+}
 
 if (! defined('ABSPATH')) {
     define('ABSPATH', dirname(__DIR__).'/');
@@ -143,9 +199,10 @@ include __DIR__ . '/library_header_nav.php';
                             </div>
                         </div>
                         <div class="dash-stat-card"
-                            onclick="document.querySelector('.library-chip-btn[data-chip=saved]')?.click()"
+                            onclick="const cf = document.getElementById('category-filter'); if(cf){cf.value='saved'; cf.dispatchEvent(new Event('change')); document.getElementById('library-catalog-container')?.scrollIntoView({behavior:'smooth'});}"
                             style="cursor: pointer;" title="Filter by saved books" tabindex="0" role="button"
-                            onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();document.querySelector('.library-chip-btn[data-chip=saved]')?.click();}">
+                            aria-label="Filter by saved books in reading list"
+                            onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault(); const cf = document.getElementById('category-filter'); if(cf){cf.value='saved'; cf.dispatchEvent(new Event('change')); document.getElementById('library-catalog-container')?.scrollIntoView({behavior:'smooth'});}}">
                             <i class="fas fa-bookmark stat-icon" style="color: var(--color-primary);"></i>
                             <div class="stat-info">
                                 <span class="stat-value" id="dash-saved-count">0</span>

@@ -96,9 +96,9 @@
 
         <!-- Version Status & Release Info Strip (WCAG Operable) -->
         <?php
-        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.10.0';
-        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'September 2026 Research Elevation & Practice Notebook Release';
-        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Elevated Research Portal into Offline PWA & Command Palette Search, Integrated Interactive Student Practice Notebook with Local Storage & Cloud Auto-Sync';
+        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.10.1';
+        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'September 2026 Unified Library Catalog & Practice Notebook Release';
+        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Unified Digital Library Catalog across Landing and Master Index (30 Volumes), Elevated Research Portal into Offline PWA, Integrated Interactive Student Practice Notebook';
         ?>
         <div class="footer-version-strip" role="region" aria-label="Platform Version Information">
             <div class="footer-version-info">
@@ -274,6 +274,14 @@
                 Version <?= htmlspecialchars($siteVersion) ?> elevates the platform's academic research and independent learning architecture with the <strong>complete offline and search integration of the Research Portal</strong> (DLDR &amp; DSMS journals) and an <strong>Interactive Student Practice Notebook</strong> that turns all curriculum Problem Sets into persistent, cloud-synced digital workbooks.
             </p>
             <ul class="footer-vmodal-features">
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true">
+                        <i class="fas fa-books"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Unified Digital Library Catalog (30 Volumes):</strong> Synchronized the complete 30-volume master academic collection across both <code>/library/index.php</code> and <code>/library/cataloge.php</code>. All 11 literature, history, STEM, and civics categories now render directly on the main library landing page with real-time multi-facet filtering and seamless subject research desk integration.
+                    </div>
+                </li>
                 <li class="footer-vmodal-feature-item">
                     <div class="footer-vmodal-feature-icon" aria-hidden="true">
                         <i class="fas fa-microscope"></i>

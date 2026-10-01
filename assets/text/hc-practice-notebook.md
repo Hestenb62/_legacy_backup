@@ -29,9 +29,11 @@ Transform static curriculum Problem Sets into an interactive, accessible digital
    - Need to sketch a geometry diagram, write math fractions by hand, or plot on coordinate grids?
    - Click the **Scratchpad** button on any problem card to instantly launch the Super Scratchpad Studio pre-loaded with the problem prompt.
 
-6. **Dual-Mode Homework Printing:**
-   - **Print Blank Worksheet:** Click **Print Blank** to generate clean physical worksheets with dedicated handwriting lines for pencil-and-paper assignments.
-   - **Print Solved Work:** Click **Print Solved Work** to generate official homework submission sheets featuring your typed reasoning and calculations while keeping teacher answer keys hidden.
+6. **Scoped Worksheet-Only Printing (Zero Page Clutter):**
+   - **Exclusive Section Scoping:** Printing from the worksheet section (via **Print Blank**, **Print Solved Work**, or browser `Ctrl + P`) completely isolates `#problem-set`, hiding all non-worksheet parts of the lesson—including the site header, navigation bar, footer, lesson overview, student outcomes, teacher insights, exercises, discussion cards, and citation boxes.
+   - **Authentic Classroom Heading:** Every printed worksheet includes an official header featuring the lesson title, grade/subject, standard code, and fill-in lines for **Student Name**, **Date**, **Period**, and **Score**.
+   - **Print Blank Mode:** Automatically swaps textareas for clean, ruled handwriting boxes with light guidelines (`repeating-linear-gradient`) beneath each problem prompt for pencil-and-paper assignments with teacher keys securely hidden.
+   - **Print Solved Work Mode:** Formats your typed calculations and reasoning into crisp, full-width response blocks with zero text clipping, ready for physical homework submission or homeschool grading portfolios.
    - **Reset / Clear Work:** Reset your typed answers with a single click after confirming the action dialog.
 
 ### Accessibility & UDL Features

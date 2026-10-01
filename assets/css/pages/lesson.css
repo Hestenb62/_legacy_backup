@@ -2403,21 +2403,70 @@ main.container {
     border-radius: 0.85rem;
 }
 
+/* Screen display: Hide print-only worksheet elements */
+.lesson-worksheet-print-header,
+.lesson-print-blank-box,
+.lesson-print-student-answer {
+    display: none;
+}
+
 @media print {
-    .lesson-resources-section,
-    .lesson-btn-print-worksheet,
-    .lesson-btn-print-solved,
-    .lesson-btn-clear-work,
-    .lesson-open-scratchpad-btn,
-    .lesson-problem-status-btn,
-    .lesson-save-indicator,
-    .lesson-pedagogy-badge-row,
-    .lesson-runner-dock,
-    .site-header,
-    .site-footer,
-    .lesson-top-bar,
-    .lesson-check-understanding-card {
+    /* 1. Complete Scoped Worksheet Printing: Hide all non-worksheet page elements */
+    body.printing-lesson-worksheet header,
+    body.printing-lesson-worksheet footer,
+    body.printing-lesson-worksheet nav,
+    body.printing-lesson-worksheet aside,
+    body.printing-lesson-worksheet .site-header,
+    body.printing-lesson-worksheet .site-footer,
+    body.printing-lesson-worksheet .lesson-top-bar,
+    body.printing-lesson-worksheet .lesson-runner-dock,
+    body.printing-lesson-worksheet .lesson-header,
+    body.printing-lesson-worksheet .lesson-overview-section,
+    body.printing-lesson-worksheet .lesson-pedagogy-badge-row,
+    body.printing-lesson-worksheet .lesson-resources-section,
+    body.printing-lesson-worksheet .lesson-check-understanding-card,
+    body.printing-lesson-worksheet .lesson-footer,
+    body.printing-lesson-worksheet .lesson-citation-box,
+    body.printing-lesson-worksheet .lesson-footer-meta,
+    body.printing-lesson-worksheet .fixed-tools-wrapper,
+    body.printing-lesson-worksheet .fab-container,
+    body.printing-lesson-worksheet main.lesson-container > *:not(#problem-set),
+    body:has(#problem-set) header,
+    body:has(#problem-set) footer,
+    body:has(#problem-set) nav,
+    body:has(#problem-set) aside,
+    body:has(#problem-set) .site-header,
+    body:has(#problem-set) .site-footer,
+    body:has(#problem-set) .lesson-top-bar,
+    body:has(#problem-set) .lesson-runner-dock,
+    body:has(#problem-set) .lesson-header,
+    body:has(#problem-set) .lesson-overview-section,
+    body:has(#problem-set) .lesson-pedagogy-badge-row,
+    body:has(#problem-set) .lesson-resources-section,
+    body:has(#problem-set) .lesson-check-understanding-card,
+    body:has(#problem-set) .lesson-footer,
+    body:has(#problem-set) .lesson-citation-box,
+    body:has(#problem-set) .lesson-footer-meta,
+    body:has(#problem-set) .fixed-tools-wrapper,
+    body:has(#problem-set) .fab-container,
+    body:has(#problem-set) main.lesson-container > *:not(#problem-set) {
         display: none !important;
+    }
+
+    /* 2. Container Unwrapping & Margins */
+    body.printing-lesson-worksheet,
+    body:has(#problem-set) {
+        padding: 0 !important;
+        margin: 0 !important;
+        background: #ffffff !important;
+    }
+
+    body.printing-lesson-worksheet main.lesson-container,
+    body:has(#problem-set) main.lesson-container {
+        padding: 0 !important;
+        margin: 0 !important;
+        max-width: 100% !important;
+        width: 100% !important;
     }
 
     .lesson-problem-set-section {
@@ -2425,35 +2474,179 @@ main.container {
         border: none !important;
         padding: 0 !important;
         margin: 0 !important;
+        box-shadow: none !important;
+        width: 100% !important;
     }
 
-    .lesson-problem-card {
-        border: 1px solid #999 !important;
-        page-break-inside: avoid;
-        margin-bottom: 1.5rem;
-        background: none !important;
-        padding: 1rem !important;
-    }
-
-    /* Solved Student Homework Mode */
-    body.print-student-work-mode .lesson-solution-accordion {
+    /* 3. Hide interactive digital UI controls in print */
+    .lesson-problem-set-header,
+    .lesson-problem-set-badge,
+    .lesson-practice-progress-container,
+    .lesson-problem-set-actions,
+    .lesson-btn-print-worksheet,
+    .lesson-btn-print-solved,
+    .lesson-btn-clear-work,
+    .lesson-problem-controls,
+    .lesson-open-scratchpad-btn,
+    .lesson-problem-status-btn,
+    .lesson-save-indicator,
+    .lesson-workspace-label,
+    .lesson-solution-accordion {
         display: none !important;
     }
 
-    body.print-student-work-mode .lesson-student-workspace {
-        border: 1px dashed #666 !important;
-        background: #fafafa !important;
-        color: #000000 !important;
-        font-weight: 600;
+    /* 4. Official Worksheet Print Header */
+    .lesson-worksheet-print-header {
+        display: block !important;
+        margin-bottom: 1.5rem !important;
+        padding-bottom: 0.85rem !important;
+        border-bottom: 2px solid #0f172a !important;
+    }
+
+    .worksheet-print-top {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: flex-start !important;
+        margin-bottom: 0.75rem !important;
+    }
+
+    .worksheet-print-title {
+        font-size: 15pt !important;
+        font-weight: 800 !important;
+        color: #0f172a !important;
+        margin: 0 0 0.25rem 0 !important;
+        font-family: inherit !important;
+    }
+
+    .worksheet-print-submeta {
+        font-size: 9pt !important;
+        color: #334155 !important;
+        font-weight: 600 !important;
+    }
+
+    .worksheet-print-branding {
+        font-size: 8.5pt !important;
+        font-weight: 700 !important;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: #475569 !important;
+        border: 1px solid #94a3b8 !important;
+        padding: 4px 8px !important;
+        border-radius: 4px !important;
+        white-space: nowrap !important;
+    }
+
+    .worksheet-print-fields {
+        display: flex !important;
+        justify-content: space-between !important;
+        gap: 1.25rem !important;
+        font-size: 9.5pt !important;
+        font-weight: 700 !important;
+        color: #0f172a !important;
+        margin-top: 0.5rem !important;
+    }
+
+    .worksheet-print-field {
+        display: flex !important;
+        align-items: flex-end !important;
+        gap: 0.35rem !important;
+        flex: 1;
+    }
+
+    .worksheet-print-field span:first-child {
+        white-space: nowrap !important;
+    }
+
+    .worksheet-print-line {
+        flex: 1;
+        border-bottom: 1px solid #0f172a !important;
+        height: 1.1em;
+        display: inline-block;
+    }
+
+    .worksheet-print-line.short {
+        max-width: 90px;
+    }
+
+    .worksheet-print-line.mini {
+        max-width: 60px;
+    }
+
+    /* 5. Problem Card Formatting */
+    .lesson-problem-card {
+        border: 1px solid #cbd5e1 !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+        margin-bottom: 1.25rem !important;
+        background: #ffffff !important;
+        padding: 0.85rem 1.15rem !important;
+        border-radius: 8px !important;
         box-shadow: none !important;
     }
 
-    /* Blank Worksheet Mode (leave handwriting lines) */
+    .lesson-problem-card-header {
+        margin-bottom: 0.5rem !important;
+    }
+
+    .lesson-problem-badge {
+        font-size: 9pt !important;
+        font-weight: 800 !important;
+        color: #0f172a !important;
+        border: 1px solid #0f172a !important;
+        background: #f1f5f9 !important;
+        padding: 2px 8px !important;
+        border-radius: 4px !important;
+    }
+
+    .lesson-problem-prompt {
+        font-size: 10.5pt !important;
+        line-height: 1.5 !important;
+        color: #0f172a !important;
+        margin: 0.5rem 0 0.75rem 0 !important;
+    }
+
+    /* 6. Mode A: Blank Worksheet Printing (with ruled handwriting lines) */
     body:not(.print-student-work-mode) .lesson-student-workspace {
-        min-height: 100px;
-        border: 1px dashed #bbb !important;
-        background: #fff !important;
-        color: transparent !important;
+        display: none !important;
+    }
+
+    body:not(.print-student-work-mode) .lesson-print-blank-box {
+        display: block !important;
+        min-height: 130px !important;
+        border: 1px solid #94a3b8 !important;
+        border-radius: 6px !important;
+        margin-top: 0.5rem !important;
+        padding: 0.4rem 0.65rem !important;
+        background-color: #ffffff !important;
+        background-image: repeating-linear-gradient(transparent, transparent 27px, #e2e8f0 28px) !important;
+    }
+
+    .lesson-print-blank-label {
+        font-size: 7.5pt !important;
+        font-weight: 700 !important;
+        text-transform: uppercase;
+        color: #64748b !important;
+        letter-spacing: 0.05em;
+    }
+
+    /* 7. Mode B: Solved Student Homework Printing */
+    body.print-student-work-mode .lesson-student-workspace {
+        display: none !important;
+    }
+
+    body.print-student-work-mode .lesson-print-student-answer {
+        display: block !important;
+        border: 1px solid #64748b !important;
+        border-left: 4px solid #0284c7 !important;
+        border-radius: 6px !important;
+        padding: 0.65rem 0.95rem !important;
+        margin-top: 0.5rem !important;
+        font-family: inherit !important;
+        font-size: 10pt !important;
+        line-height: 1.55 !important;
+        white-space: pre-wrap !important;
+        background: #f8fafc !important;
+        color: #0f172a !important;
     }
 }
 
