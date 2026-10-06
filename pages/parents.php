@@ -87,6 +87,22 @@ include '../src/header.php';
                             </a>
                         </li>
                         <li class="parents-nav-item">
+                            <a href="/pages/word-search.php" class="parents-nav-link" style="color: #e11d48;">
+                                <span class="parents-nav-icon" style="background: rgba(225, 29, 72, 0.15); color: #e11d48;">
+                                    <i class="fas fa-th"></i>
+                                </span>
+                                Word Search Studio
+                            </a>
+                        </li>
+                        <li class="parents-nav-item">
+                            <a href="/pages/crossword.php" class="parents-nav-link" style="color: #4f46e5;">
+                                <span class="parents-nav-icon" style="background: rgba(79, 70, 229, 0.15); color: #4f46e5;">
+                                    <i class="fas fa-pen-nib"></i>
+                                </span>
+                                Crossword Studio
+                            </a>
+                        </li>
+                        <li class="parents-nav-item">
                             <a href="#laws" class="parents-nav-link nav-link-teal">
                                 <span class="parents-nav-icon nav-icon-teal">
                                     <i class="fas fa-map-marked-alt"></i>
@@ -307,6 +323,34 @@ include '../src/header.php';
                         </div>
                         <span class="parents-tool-action action-amber">
                             Generate Worksheets <i class="fas fa-arrow-right"></i>
+                        </span>
+                    </a>
+
+                    <!-- Companion Tool 4: Word Search & Vocabulary Studio -->
+                    <a href="/pages/word-search.php" class="parents-tool-card hover-lift">
+                        <div class="parents-tool-card-content">
+                            <div class="parents-tool-icon icon-rose">
+                                <i class="fas fa-th"></i>
+                            </div>
+                            <h3 class="parents-tool-title">Word Search &amp; Spelling Studio</h3>
+                            <p class="parents-tool-desc">Create custom spelling word searches, academic vocabulary puzzles, and printable 8.5" &times; 11" worksheets with answer keys.</p>
+                        </div>
+                        <span class="parents-tool-action action-rose">
+                            Create Puzzles <i class="fas fa-arrow-right"></i>
+                        </span>
+                    </a>
+
+                    <!-- Companion Tool 5: Crossword Puzzle Studio -->
+                    <a href="/pages/crossword.php" class="parents-tool-card hover-lift">
+                        <div class="parents-tool-card-content">
+                            <div class="parents-tool-icon" style="background: rgba(79, 70, 229, 0.12); color: #4f46e5;">
+                                <i class="fas fa-pen-nib"></i>
+                            </div>
+                            <h3 class="parents-tool-title">Crossword Puzzle Studio</h3>
+                            <p class="parents-tool-desc">Generate intersecting vocabulary crosswords from lesson definitions. Solve interactively or print PDF worksheets with answer keys.</p>
+                        </div>
+                        <span class="parents-tool-action" style="color: #4f46e5;">
+                            Create Crosswords <i class="fas fa-arrow-right"></i>
                         </span>
                     </a>
                 </div>

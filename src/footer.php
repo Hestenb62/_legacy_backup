@@ -73,6 +73,10 @@
                                 class="fas fa-users footer-link-icon"></i> For Parents</a></li>
                     <li class="footer-link-item"><a href="/pages/teachers.php"><i
                                 class="fas fa-chalkboard-teacher footer-link-icon"></i> For Teachers</a></li>
+                    <li class="footer-link-item"><a href="/pages/word-search.php"><i
+                                class="fas fa-th footer-link-icon"></i> Word Search Studio</a></li>
+                    <li class="footer-link-item"><a href="/pages/crossword.php"><i
+                                class="fas fa-pen-nib footer-link-icon"></i> Crossword Studio</a></li>
                 </ul>
             </div>
 
@@ -96,9 +100,9 @@
 
         <!-- Version Status & Release Info Strip (WCAG Operable) -->
         <?php
-        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.10.1';
-        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'September 2026 Unified Library Catalog & Practice Notebook Release';
-        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Unified Digital Library Catalog across Landing and Master Index (30 Volumes), Elevated Research Portal into Offline PWA, Integrated Interactive Student Practice Notebook';
+        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.12.0';
+        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'October 2026 Word Search & Crossword Puzzle Studio Suite Release';
+        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Parent & Teacher Word Search and Crossword Puzzle Studios, 8.5"x11" PDF Print Generator, Dyslexia-Friendly Layout, Interactive Game Zone Integration';
         ?>
         <div class="footer-version-strip" role="region" aria-label="Platform Version Information">
             <div class="footer-version-info">
@@ -271,9 +275,41 @@
                 </span>
             </div>
             <p class="footer-vmodal-lead">
-                Version <?= htmlspecialchars($siteVersion) ?> elevates the platform's academic research and independent learning architecture with the <strong>complete offline and search integration of the Research Portal</strong> (DLDR &amp; DSMS journals) and an <strong>Interactive Student Practice Notebook</strong> that turns all curriculum Problem Sets into persistent, cloud-synced digital workbooks.
+                Version <?= htmlspecialchars($siteVersion) ?> introduces the <strong>Word Search &amp; Crossword Puzzle Studio Suite</strong>—a comprehensive, dyslexia-friendly, and print-ready suite for parents, homeschool educators, and classroom teachers to turn academic vocabulary and spelling lists into engaging interactive and printable learning materials.
             </p>
             <ul class="footer-vmodal-features">
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(99, 102, 241, 0.15); color: #6366f1;">
+                        <i class="fas fa-pen-nib"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Parent &amp; Teacher Crossword Puzzle Studio:</strong> Interlocking crossword puzzle generator with automatic Across and Down numbering, custom and curriculum vocabulary presets (Math, ELA, Science, Civics, Phonics), auto-advancing keyboard input, clue highlighting, check letter validation, and Web Audio synthesizers.
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(225, 29, 72, 0.15); color: #e11d48;">
+                        <i class="fas fa-th"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Parent &amp; Teacher Word Search Studio:</strong> Interactive generator with 8-directional placement, custom word lists, and curated academic vocabulary presets across Math, ELA, Science, Civics, and Phonics. Features hint assistance, solution revealing, and Web Audio synthesizers.
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(16, 185, 129, 0.15); color: #059669;">
+                        <i class="fas fa-print"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Dual-Mode 8.5" &times; 11" PDF Worksheet Printing:</strong> 1-click printable student practice sheets with Student Name, Date, and Score lines, alongside dedicated Educator Answer Keys with coordinate indexing matrices.
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(79, 70, 229, 0.15); color: #4f46e5;">
+                        <i class="fas fa-universal-access"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Universal Design for Learning (UDL):</strong> Built-in OpenDyslexic font switcher, lowercase letter mode for early elementary learners, untimed low-anxiety mode, screen reader live regions, and 100% keyboard grid navigation.
+                    </div>
+                </li>
                 <li class="footer-vmodal-feature-item">
                     <div class="footer-vmodal-feature-icon" aria-hidden="true">
                         <i class="fas fa-books"></i>

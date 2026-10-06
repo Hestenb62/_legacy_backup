@@ -1,0 +1,793 @@
+/* ==========================================================================
+   Word Search & Vocabulary Puzzle Studio Stylesheet
+   File: assets/css/pages/word-search.css
+   Modern, accessible, responsive, and print-ready puzzle styling.
+   ========================================================================== */
+
+/* --- Studio Wrapper & Container Layout --- */
+.ws-studio-wrapper {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  font-family: var(--font-body, 'Inter', system-ui, sans-serif);
+  color: var(--color-text-main, #0f172a);
+}
+
+.ws-studio-layout {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .ws-studio-layout {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* --- Sidebar Configuration Panels --- */
+.ws-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.ws-panel {
+  background: var(--color-bg-surface, #ffffff);
+  border: 1px solid var(--color-border, #e2e8f0);
+  border-radius: var(--radius-2xl, 1rem);
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dark .ws-panel,
+[data-theme="dark"] .ws-panel {
+  background: var(--color-bg-surface, #151c2c);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.ws-panel-header {
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid var(--color-border, #e2e8f0);
+  padding-bottom: 0.75rem;
+}
+
+.ws-panel-title {
+  margin: 0;
+  font-family: var(--font-display, 'Outfit', sans-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-text-main, #0f172a);
+}
+
+.ws-panel-desc {
+  font-size: 0.85rem;
+  color: var(--color-text-muted, #64748b);
+  margin-top: 0;
+  margin-bottom: 1rem;
+  line-height: 1.45;
+}
+
+/* --- Form Fields & Controls --- */
+.ws-form-group {
+  margin-bottom: 1.1rem;
+}
+
+.ws-form-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.ws-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.35rem;
+}
+
+.ws-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-main, #1e293b);
+  margin-bottom: 0.35rem;
+}
+
+.ws-input,
+.ws-select,
+.ws-textarea {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  font-size: 0.9rem;
+  font-family: inherit;
+  color: var(--color-text-main, #0f172a);
+  background-color: var(--color-bg-base, #f8fafc);
+  border: 1px solid var(--color-border, #cbd5e1);
+  border-radius: var(--radius-lg, 0.5rem);
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+.dark .ws-input,
+.dark .ws-select,
+.dark .ws-textarea,
+[data-theme="dark"] .ws-input,
+[data-theme="dark"] .ws-select,
+[data-theme="dark"] .ws-textarea {
+  background-color: var(--color-bg-elevated, #1e293b);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #f8fafc;
+}
+
+.ws-input:focus,
+.ws-select:focus,
+.ws-textarea:focus {
+  outline: none;
+  border-color: var(--color-primary, #4f46e5);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+  background-color: var(--color-bg-surface, #ffffff);
+}
+
+.ws-textarea {
+  resize: vertical;
+  min-height: 84px;
+  line-height: 1.5;
+}
+
+.ws-hint {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--color-text-muted, #64748b);
+  margin-top: 0.35rem;
+  line-height: 1.35;
+}
+
+.ws-badge-count {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-full, 9999px);
+  background: rgba(79, 70, 229, 0.12);
+  color: var(--color-primary, #4f46e5);
+}
+
+/* --- Buttons --- */
+.ws-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: inherit;
+  border-radius: var(--radius-lg, 0.5rem);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.ws-btn-primary {
+  background: linear-gradient(135deg, var(--color-primary, #4f46e5), #6366f1);
+  color: #ffffff;
+  box-shadow: 0 2px 4px rgba(79, 70, 229, 0.25);
+}
+
+.ws-btn-primary:hover {
+  background: linear-gradient(135deg, #4338ca, #4f46e5);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(79, 70, 229, 0.35);
+}
+
+.ws-btn-outline {
+  background: transparent;
+  border-color: var(--color-border, #cbd5e1);
+  color: var(--color-text-main, #1e293b);
+}
+
+.ws-btn-outline:hover {
+  background: var(--color-bg-base, #f1f5f9);
+  border-color: var(--color-primary, #4f46e5);
+  color: var(--color-primary, #4f46e5);
+}
+
+.ws-btn-subtle {
+  background: var(--color-bg-base, #f1f5f9);
+  border-color: transparent;
+  color: var(--color-text-main, #334155);
+}
+
+.dark .ws-btn-subtle,
+[data-theme="dark"] .ws-btn-subtle {
+  background: rgba(255, 255, 255, 0.08);
+  color: #f1f5f9;
+}
+
+.ws-btn-subtle:hover {
+  background: rgba(79, 70, 229, 0.15);
+  color: var(--color-primary, #4f46e5);
+}
+
+.ws-btn-warning {
+  background: #f59e0b;
+  color: #ffffff;
+}
+
+.ws-btn-warning:hover {
+  background: #d97706;
+}
+
+.ws-btn-sm {
+  padding: 0.4rem 0.75rem;
+  font-size: 0.8rem;
+  border-radius: var(--radius-md, 0.375rem);
+}
+
+.ws-btn-icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+  border-radius: var(--radius-full, 9999px);
+  background: var(--color-bg-base, #f1f5f9);
+  border: 1px solid var(--color-border, #e2e8f0);
+  color: var(--color-text-main, #334155);
+}
+
+.ws-btn-block {
+  width: 100%;
+}
+
+.ws-btn-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+/* --- Content Area & Toolbar --- */
+.ws-content-area {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.ws-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  background: var(--color-bg-surface, #ffffff);
+  border: 1px solid var(--color-border, #e2e8f0);
+  border-radius: var(--radius-xl, 0.75rem);
+  padding: 0.75rem 1.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.dark .ws-toolbar,
+[data-theme="dark"] .ws-toolbar {
+  background: var(--color-bg-surface, #151c2c);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.ws-toolbar-left,
+.ws-toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.ws-stat-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.75rem;
+  background: var(--color-bg-base, #f8fafc);
+  border: 1px solid var(--color-border, #e2e8f0);
+  border-radius: var(--radius-full, 9999px);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-main, #1e293b);
+}
+
+.dark .ws-stat-chip,
+[data-theme="dark"] .ws-stat-chip {
+  background: var(--color-bg-elevated, #1e293b);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #f8fafc;
+}
+
+/* --- Alerts & Victory Banners --- */
+.ws-alert {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-lg, 0.5rem);
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.ws-alert-warning {
+  background: #fef3c7;
+  border: 1px solid #fde68a;
+  color: #92400e;
+}
+
+.dark .ws-alert-warning,
+[data-theme="dark"] .ws-alert-warning {
+  background: rgba(245, 158, 11, 0.2);
+  border-color: rgba(245, 158, 11, 0.4);
+  color: #fde68a;
+}
+
+.ws-victory-banner {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: #ffffff;
+  border-radius: var(--radius-xl, 0.75rem);
+  padding: 1.25rem 1.75rem;
+  box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.3);
+  animation: ws-bounce-in 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes ws-bounce-in {
+  0% { transform: scale(0.95); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.ws-victory-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.ws-victory-icon {
+  font-size: 2.25rem;
+  color: #fef08a;
+}
+
+.ws-victory-title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 800;
+  font-family: var(--font-display, sans-serif);
+}
+
+.ws-victory-desc {
+  margin: 0.25rem 0 0 0;
+  font-size: 0.95rem;
+  opacity: 0.95;
+}
+
+/* --- Interactive Board Layout --- */
+.ws-board-layout {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .ws-board-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ws-grid-container {
+  background: var(--color-bg-surface, #ffffff);
+  border: 1px solid var(--color-border, #e2e8f0);
+  border-radius: var(--radius-2xl, 1rem);
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dark .ws-grid-container,
+[data-theme="dark"] .ws-grid-container {
+  background: var(--color-bg-surface, #151c2c);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* The Letter Grid */
+.ws-grid-table {
+  display: grid;
+  gap: 4px;
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 1 / 1;
+  user-select: none;
+  touch-action: none;
+}
+
+.ws-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg-base, #f8fafc);
+  border: 1px solid var(--color-border, #e2e8f0);
+  border-radius: var(--radius-md, 0.375rem);
+  font-family: var(--font-display, 'Outfit', sans-serif);
+  font-weight: 800;
+  font-size: clamp(0.75rem, 2.2vw, 1.25rem);
+  color: var(--color-text-main, #0f172a);
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease, border-color 0.15s ease;
+  position: relative;
+}
+
+.dark .ws-cell,
+[data-theme="dark"] .ws-cell {
+  background: var(--color-bg-elevated, #1e293b);
+  border-color: rgba(255, 255, 255, 0.08);
+  color: #f1f5f9;
+}
+
+.ws-cell:hover {
+  background: #e0e7ff;
+  border-color: #a5b4fc;
+}
+
+.dark .ws-cell:hover,
+[data-theme="dark"] .ws-cell:hover {
+  background: rgba(99, 102, 241, 0.25);
+  border-color: rgba(99, 102, 241, 0.5);
+}
+
+.ws-cell:focus-visible {
+  outline: 3px solid var(--color-primary, #4f46e5);
+  outline-offset: 2px;
+  z-index: 10;
+}
+
+/* Cell Selection & Drag State */
+.ws-cell.is-selecting {
+  background: #6366f1 !important;
+  color: #ffffff !important;
+  border-color: #4f46e5 !important;
+  transform: scale(1.04);
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.4);
+  z-index: 5;
+}
+
+/* Cell Found State */
+.ws-cell.is-found {
+  background: var(--found-bg, rgba(16, 185, 129, 0.25)) !important;
+  border-color: var(--found-border, #059669) !important;
+  color: var(--found-color, #064e3b) !important;
+  font-weight: 900;
+}
+
+.dark .ws-cell.is-found,
+[data-theme="dark"] .ws-cell.is-found {
+  color: #ffffff !important;
+}
+
+/* Cell Solution Revealed State */
+.ws-cell.is-solution-revealed {
+  background: var(--sol-bg, rgba(59, 130, 246, 0.2)) !important;
+  border: 2px dashed var(--sol-border, #2563eb) !important;
+  font-weight: 900;
+}
+
+/* Hint Pulse Animation */
+.ws-cell.is-hint-pulse {
+  animation: ws-pulse 1.2s infinite ease-in-out;
+}
+
+@keyframes ws-pulse {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7); }
+  50% { transform: scale(1.15); box-shadow: 0 0 0 8px rgba(245, 158, 11, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); }
+}
+
+.ws-keyboard-help {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: var(--color-text-muted, #64748b);
+  text-align: center;
+  max-width: 580px;
+}
+
+/* Case & Font Modifiers */
+.case-lower .ws-cell,
+.case-lower .ws-bank-word-text {
+  text-transform: lowercase !important;
+}
+
+.case-upper .ws-cell,
+.case-upper .ws-bank-word-text {
+  text-transform: uppercase !important;
+}
+
+.font-dyslexic {
+  font-family: 'OpenDyslexic', 'Comic Sans MS', sans-serif !important;
+  letter-spacing: 0.08em;
+}
+
+.font-mono {
+  font-family: 'Courier New', Courier, monospace !important;
+  letter-spacing: 0.05em;
+}
+
+/* --- Word Bank Panel --- */
+.ws-word-bank-container {
+  background: var(--color-bg-surface, #ffffff);
+  border: 1px solid var(--color-border, #e2e8f0);
+  border-radius: var(--radius-2xl, 1rem);
+  padding: 1.25rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.dark .ws-word-bank-container,
+[data-theme="dark"] .ws-word-bank-container {
+  background: var(--color-bg-surface, #151c2c);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.ws-word-bank-header {
+  border-bottom: 1px solid var(--color-border, #e2e8f0);
+  padding-bottom: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.ws-word-bank-title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  font-family: var(--font-display, sans-serif);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ws-word-bank-status {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--color-text-muted, #64748b);
+  margin-top: 0.25rem;
+}
+
+.ws-word-bank-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  max-height: 520px;
+  overflow-y: auto;
+}
+
+.ws-bank-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.45rem 0.65rem;
+  background: var(--color-bg-base, #f8fafc);
+  border: 1px solid var(--color-border, #e2e8f0);
+  border-radius: var(--radius-md, 0.375rem);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-text-main, #1e293b);
+  transition: all 0.2s ease;
+}
+
+.dark .ws-bank-item,
+[data-theme="dark"] .ws-bank-item {
+  background: var(--color-bg-elevated, #1e293b);
+  border-color: rgba(255, 255, 255, 0.06);
+  color: #f1f5f9;
+}
+
+.ws-bank-checkbox {
+  color: var(--color-text-muted, #94a3b8);
+  font-size: 0.9rem;
+}
+
+.ws-bank-item.is-found {
+  background: rgba(16, 185, 129, 0.12);
+  border-color: var(--found-color, #10b981);
+  color: var(--color-text-muted, #64748b);
+  text-decoration: line-through;
+}
+
+.ws-bank-item.is-found .ws-bank-checkbox {
+  color: var(--found-color, #10b981);
+}
+
+/* ==========================================================================
+   PRINT STYLESHEET (Clean 8.5" x 11" Paper Layout)
+   ========================================================================== */
+.ws-print-header {
+  display: none;
+}
+
+@media print {
+  /* Hide all platform navigation, footers, toolbars, and web chrome */
+  header,
+  footer,
+  .no-print,
+  .ws-sidebar,
+  .ws-toolbar,
+  .ws-keyboard-help,
+  .ws-victory-banner,
+  .header-main,
+  .fixed-tools,
+  .skip-link,
+  #btn-header-breathe {
+    display: none !important;
+  }
+
+  /* Page Setup */
+  @page {
+    size: letter portrait;
+    margin: 0.5in 0.5in 0.5in 0.5in;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 11pt;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .ws-studio-wrapper {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .ws-studio-layout {
+    display: block !important;
+  }
+
+  .ws-content-area {
+    gap: 0.5rem !important;
+  }
+
+  /* Show Printable Sheet Header */
+  .ws-print-header {
+    display: block !important;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #000000;
+  }
+
+  .ws-print-top-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 10pt;
+  }
+
+  .ws-print-title {
+    margin: 0.25rem 0;
+    font-size: 18pt;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .ws-print-instructions {
+    margin: 0;
+    font-size: 10pt;
+    text-align: center;
+    font-style: italic;
+  }
+
+  /* Layout for Board and Word Bank in Print */
+  .ws-board-layout {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 1rem !important;
+  }
+
+  .ws-grid-container {
+    background: #ffffff !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+
+  .ws-grid-table {
+    width: 480px !important;
+    max-width: 480px !important;
+    aspect-ratio: 1 / 1 !important;
+    gap: 0 !important;
+    border: 2px solid #000000 !important;
+    margin: 0 auto !important;
+  }
+
+  .ws-cell {
+    background: #ffffff !important;
+    border: 1px solid #999999 !important;
+    color: #000000 !important;
+    font-size: 12pt !important;
+    font-weight: 700 !important;
+    border-radius: 0 !important;
+  }
+
+  /* Word Bank in Print: Multi-column clean grid */
+  .ws-word-bank-container {
+    width: 100% !important;
+    background: #ffffff !important;
+    border: 1px solid #000000 !important;
+    box-shadow: none !important;
+    padding: 0.75rem 1rem !important;
+    page-break-inside: avoid;
+  }
+
+  .ws-word-bank-header {
+    border-bottom: 1px solid #000000 !important;
+    margin-bottom: 0.5rem !important;
+    padding-bottom: 0.25rem !important;
+  }
+
+  .ws-word-bank-title {
+    font-size: 11pt !important;
+  }
+
+  .ws-word-bank-list {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 0.4rem 1rem !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  .ws-bank-item {
+    background: #ffffff !important;
+    border: none !important;
+    padding: 0 !important;
+    font-size: 9.5pt !important;
+    color: #000000 !important;
+  }
+
+  .ws-bank-checkbox i::before {
+    content: "\f0c8" !important; /* fa-square */
+  }
+
+  /* Educator Answer Key Print Overrides */
+  .print-mode-answer-key .ws-cell.is-solution-revealed {
+    background: #e2e8f0 !important;
+    border: 2px solid #000000 !important;
+    font-weight: 900 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .ws-print-key-index {
+    width: 100% !important;
+    margin-top: 1rem !important;
+    page-break-before: auto !important;
+    page-break-inside: avoid !important;
+  }
+
+  .ws-print-key-index h3 {
+    margin: 0 0 0.5rem 0 !important;
+    font-size: 11pt !important;
+    border-bottom: 1px solid #000000 !important;
+  }
+
+  .ws-print-key-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 0.35rem 0.75rem !important;
+    font-size: 8.5pt !important;
+  }
+}

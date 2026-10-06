@@ -48,16 +48,16 @@ if (! function_exists('assetVersion')) {
 
 // Core Platform Version Definition
 if (! defined('HL_SITE_VERSION')) {
-    define('HL_SITE_VERSION', 'v2.10.1');
+    define('HL_SITE_VERSION', 'v2.12.0');
     }
 if (! defined('HL_SITE_VERSION_DATE')) {
-    define('HL_SITE_VERSION_DATE', 'September 2026');
+    define('HL_SITE_VERSION_DATE', 'October 2026');
     }
 if (! defined('HL_SITE_VERSION_LABEL')) {
-    define('HL_SITE_VERSION_LABEL', 'September 2026 Unified Library Catalog & Practice Notebook Release');
+    define('HL_SITE_VERSION_LABEL', 'October 2026 Word Search & Crossword Puzzle Studio Suite Release');
     }
 if (! defined('HL_SITE_VERSION_SUMMARY')) {
-    define('HL_SITE_VERSION_SUMMARY', 'Unified Digital Library Catalog across Landing and Master Index (30 Volumes), Elevated Research Portal into Offline PWA, Integrated Interactive Student Practice Notebook');
+    define('HL_SITE_VERSION_SUMMARY', 'Parent & Teacher Word Search and Crossword Puzzle Studios, 8.5"x11" PDF Print Generator, Dyslexia-Friendly Layout, Interactive Game Zone Integration');
     }
 ?>
 <!DOCTYPE html>
@@ -532,6 +532,28 @@ if (! defined('HL_SITE_VERSION_SUMMARY')) {
                                                             <span class="item-title">English Grammar Codex</span>
                                                             <span class="item-desc">A–Z Syntax, Rules, and Sentence
                                                                 Analysis</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="/pages/word-search.php" class="nav-mega-item" role="menuitem">
+                                                        <i class="fas fa-th item-icon"
+                                                            style="color: #ec4899;"></i>
+                                                        <div>
+                                                            <span class="item-title">Word Search &amp; Spelling Studio</span>
+                                                            <span class="item-desc">Printable worksheets &amp; vocab puzzles</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="/pages/crossword.php" class="nav-mega-item" role="menuitem">
+                                                        <i class="fas fa-pen-nib item-icon"
+                                                            style="color: #6366f1;"></i>
+                                                        <div>
+                                                            <span class="item-title">Crossword Puzzle Studio</span>
+                                                            <span class="item-desc">Intersecting vocabulary &amp; definition puzzles</span>
                                                         </div>
                                                     </a>
                                                 </li>

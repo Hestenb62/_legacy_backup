@@ -1,4 +1,4 @@
-const CACHE_NAME = 'hestens-learning-v21';
+const CACHE_NAME = 'hestens-learning-v23';
 const ASSETS_TO_CACHE = [
 
   // Main Directory Pages & Manifest
@@ -29,6 +29,8 @@ const ASSETS_TO_CACHE = [
   '/pages/games.php',
   '/pages/skills.php',
   '/pages/manipulatives.php',
+  '/pages/word-search.php',
+  '/pages/crossword.php',
 
   // Images & Icons
   '/assets/images/6791421e-7ca7-40bd-83d3-06a479bf7f36.png',
@@ -47,6 +49,8 @@ const ASSETS_TO_CACHE = [
   '/assets/css/pages/games.css',
   '/assets/css/pages/skills.css',
   '/assets/css/pages/manipulatives.css',
+  '/assets/css/pages/word-search.css',
+  '/assets/css/pages/crossword.css',
   '/assets/css/level-style.css',
   '/assets/css/reader-main.css',
   '/assets/css/components/sticky-reading-bar.css',
@@ -94,7 +98,9 @@ const ASSETS_TO_CACHE = [
   '/assets/js/components/practice-notebook.js',
   '/assets/data/research/journals.json',
   '/assets/css/research-main.css',
-  '/assets/js/research/journal-engine.js'
+  '/assets/js/research/journal-engine.js',
+  '/assets/js/components/word-search-generator.js',
+  '/assets/js/components/crossword-generator.js'
 ];
 
 // Install Event: Caches critical assets safely with individual fallback

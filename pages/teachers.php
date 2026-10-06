@@ -8,6 +8,8 @@ include '../src/header.php';
 <!-- Teacher Suite Page Stylesheet -->
 <link rel="stylesheet" href="<?= assetVersion('/assets/css/pages/teachers.css') ?>">
 <link rel="stylesheet" href="<?= assetVersion('/assets/css/teacher/mastery-heatmap.css') ?>">
+<link rel="stylesheet" href="<?= assetVersion('/assets/css/pages/word-search.css') ?>">
+<link rel="stylesheet" href="<?= assetVersion('/assets/css/pages/crossword.css') ?>">
 
 <main class="flex-grow" id="main-content">
 
@@ -68,6 +70,12 @@ include '../src/header.php';
             </button>
             <button type="button" class="teacher-tab-btn" data-tab="tab-roster" role="tab" aria-selected="false">
                 <i class="fas fa-users"></i> Class Roster & Progress
+            </button>
+            <button type="button" class="teacher-tab-btn" data-tab="tab-word-search" role="tab" aria-selected="false">
+                <i class="fas fa-th"></i> Word Search Studio
+            </button>
+            <button type="button" class="teacher-tab-btn" data-tab="tab-crossword" role="tab" aria-selected="false">
+                <i class="fas fa-pen-nib"></i> Crossword Studio
             </button>
             <button type="button" class="teacher-tab-btn" data-tab="tab-resources" role="tab" aria-selected="false">
                 <i class="fas fa-toolbox"></i> Educator Resources & Keys
@@ -327,6 +335,86 @@ include '../src/header.php';
                         <span>Generate Student Diploma</span> <i class="fas fa-arrow-right"></i>
                     </button>
                 </div>
+
+                <!-- Card 7: Word Search & Vocabulary Studio -->
+                <div class="resource-feature-card">
+                    <div>
+                        <div class="resource-icon-wrapper" style="background: rgba(225, 29, 72, 0.15); color: #e11d48;">
+                            <i class="fas fa-th"></i>
+                        </div>
+                        <h3 class="resource-card-title">Word Search &amp; Spelling Studio</h3>
+                        <p class="resource-card-desc">
+                            Create custom standards-aligned vocabulary word searches and print clean 8.5" &times; 11" student worksheets with educator answer keys.
+                        </p>
+                    </div>
+                    <button type="button" class="resource-action-link" style="background: none; border: none; cursor: pointer; padding: 0; font-weight: 800; font-size: 0.9rem; color: #e11d48; display: inline-flex; align-items: center; gap: 0.4rem;" onclick="window.switchTeacherTab && window.switchTeacherTab('tab-word-search')">
+                        <span>Open Word Search Studio</span> <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Card 8: Crossword Puzzle Studio -->
+                <div class="resource-feature-card">
+                    <div>
+                        <div class="resource-icon-wrapper" style="background: rgba(79, 70, 229, 0.15); color: #4f46e5;">
+                            <i class="fas fa-pen-nib"></i>
+                        </div>
+                        <h3 class="resource-card-title">Crossword Puzzle Studio</h3>
+                        <p class="resource-card-desc">
+                            Generate intersecting crossword puzzles from academic terms and definitions. Print clean student worksheets and educator answer keys.
+                        </p>
+                    </div>
+                    <button type="button" class="resource-action-link" style="background: none; border: none; cursor: pointer; padding: 0; font-weight: 800; font-size: 0.9rem; color: #4f46e5; display: inline-flex; align-items: center; gap: 0.4rem;" onclick="window.switchTeacherTab && window.switchTeacherTab('tab-crossword')">
+                        <span>Open Crossword Studio</span> <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================= -->
+        <!-- TAB: WORD SEARCH & VOCABULARY STUDIO                              -->
+        <!-- ================================================================= -->
+        <section id="tab-word-search" class="teacher-tab-panel" role="tabpanel" aria-label="Word Search Studio">
+            <div class="teacher-card" style="padding: 1.5rem; margin-bottom: 2rem;">
+                <div class="teacher-card-header" style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
+                    <div>
+                        <h2 class="teacher-card-title">
+                            <i class="fas fa-th text-indigo-600"></i> Word Search &amp; Vocabulary Puzzle Studio
+                        </h2>
+                        <p class="teacher-card-subtitle">
+                            Generate custom academic vocabulary puzzles, spelling reviews, and 8.5" &times; 11" printable worksheets with educator answer keys.
+                        </p>
+                    </div>
+                    <a href="/pages/word-search.php" target="_blank" class="builder-action-btn builder-btn-secondary" style="text-decoration: none;">
+                        <i class="fas fa-external-link-alt"></i> Open Fullscreen Studio
+                    </a>
+                </div>
+
+                <!-- Embedded Studio Root -->
+                <div id="teacher-word-search-root"></div>
+            </div>
+        </section>
+
+        <!-- ================================================================= -->
+        <!-- TAB: CROSSWORD PUZZLE STUDIO                                      -->
+        <!-- ================================================================= -->
+        <section id="tab-crossword" class="teacher-tab-panel" role="tabpanel" aria-label="Crossword Studio">
+            <div class="teacher-card" style="padding: 1.5rem; margin-bottom: 2rem;">
+                <div class="teacher-card-header" style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
+                    <div>
+                        <h2 class="teacher-card-title">
+                            <i class="fas fa-pen-nib text-indigo-600"></i> Crossword Puzzle Studio
+                        </h2>
+                        <p class="teacher-card-subtitle">
+                            Generate custom academic crossword puzzles, vocabulary reviews, and 8.5" &times; 11" printable worksheets with educator answer keys.
+                        </p>
+                    </div>
+                    <a href="/pages/crossword.php" target="_blank" class="builder-action-btn builder-btn-secondary" style="text-decoration: none;">
+                        <i class="fas fa-external-link-alt"></i> Open Fullscreen Studio
+                    </a>
+                </div>
+
+                <!-- Embedded Studio Root -->
+                <div id="teacher-crossword-root"></div>
             </div>
         </section>
 
@@ -670,6 +758,8 @@ include '../src/header.php';
 <!-- Load Curriculum Standards Data Loader -->
 <script src="<?= assetVersion('/assets/js/standards/standards-ccss-math-ela.js') ?>"></script>
 <!-- Load Teacher Hub Script -->
+<script src="<?= assetVersion('/assets/js/components/word-search-generator.js') ?>"></script>
+<script src="<?= assetVersion('/assets/js/components/crossword-generator.js') ?>"></script>
 <script src="<?= assetVersion('/assets/js/pages/teachers-main.js') ?>"></script>
 <script src="<?= assetVersion('/assets/js/teacher/mastery-heatmap.js') ?>"></script>
 

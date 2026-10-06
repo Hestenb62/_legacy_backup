@@ -162,6 +162,36 @@ include '../src/header.php';
                     </span>
                 </div>
             </button>
+
+            <!-- Game Card 6: Word Search Studio -->
+            <a href="/pages/word-search.php" class="games-card" id="card-wordsearch" style="text-decoration: none;" aria-label="Play Word Search Studio">
+                <div class="games-card-bg-icon">
+                    <i class="fas fa-th"></i>
+                </div>
+                <div class="games-card-content">
+                    <span class="games-tag" style="background: rgba(225, 29, 72, 0.15); color: #e11d48;">Spelling &amp; Vocab</span>
+                    <h3 class="games-card-title">Word Search Studio</h3>
+                    <p class="games-card-desc">Search and circle academic vocabulary in interactive grids with dyslexia fonts, audio chimes, and printable worksheets.</p>
+                    <span class="games-play-link" style="color: #e11d48;">
+                        Play &amp; Print <i class="fas fa-arrow-right icon-arrow"></i>
+                    </span>
+                </div>
+            </a>
+
+            <!-- Game Card 7: Crossword Puzzle Studio -->
+            <a href="/pages/crossword.php" class="games-card" id="card-crossword" style="text-decoration: none;" aria-label="Play Crossword Puzzle Studio">
+                <div class="games-card-bg-icon">
+                    <i class="fas fa-pen-nib"></i>
+                </div>
+                <div class="games-card-content">
+                    <span class="games-tag" style="background: rgba(79, 70, 229, 0.15); color: #4f46e5;">Vocabulary &amp; Trivia</span>
+                    <h3 class="games-card-title">Crossword Puzzle Studio</h3>
+                    <p class="games-card-desc">Solve intersecting crossword puzzles with clue highlighters, check letter validation, and printable answer keys.</p>
+                    <span class="games-play-link" style="color: #4f46e5;">
+                        Play &amp; Print <i class="fas fa-arrow-right icon-arrow"></i>
+                    </span>
+                </div>
+            </a>
         </div>
 
         <!-- Active Game Container (Accessible Popup Modal) -->

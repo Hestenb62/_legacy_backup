@@ -259,6 +259,24 @@
       tags: ["certificate", "milestone", "award", "achievement", "honors", "print"]
     },
     {
+      title: "Word Search & Vocabulary Puzzle Studio",
+      desc: "Generate custom spelling and vocabulary word searches with 8.5\" x 11\" printable worksheets and educator answer keys.",
+      category: "Tools",
+      icon: "fa-th",
+      iconClass: "tool-icon",
+      url: "/pages/word-search.php",
+      tags: ["word search", "puzzle", "spelling", "vocabulary", "worksheet", "print", "generator", "teacher", "parent"]
+    },
+    {
+      title: "Crossword Puzzle Studio",
+      desc: "Generate custom academic crossword puzzles from vocabulary definitions with printable worksheets and answer keys.",
+      category: "Tools",
+      icon: "fa-pen-nib",
+      iconClass: "tool-icon",
+      url: "/pages/crossword.php",
+      tags: ["crossword", "puzzle", "vocabulary", "clues", "worksheet", "print", "generator", "teacher", "parent", "spelling"]
+    },
+    {
       title: "Standards Explorer (CCSS & NGSS)",
       desc: "Granular standard domain browser with concise grade codes.",
       category: "Standards",
