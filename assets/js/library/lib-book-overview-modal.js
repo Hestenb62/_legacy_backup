@@ -64,30 +64,65 @@
 
         // Read Online / Continue Reading Button
         const readBtn = document.getElementById('modal-read-online-link');
-        if (readBtn) {
-            let lastChapter = null;
-            let lastChapterSlug = null;
-            let lastPct = null;
-            try {
-                lastChapter = localStorage.getItem(`hesten_progress_${d.id}_lastChapter`);
-                lastChapterSlug = localStorage.getItem(`hesten_progress_${d.id}_lastChapterSlug`);
-                lastPct = localStorage.getItem(`hesten_scroll_pct_${d.id}_chapter_${lastChapter}`);
-            } catch(e) {}
+        const dualVolContainer = document.getElementById('modal-dual-volume-actions');
+        const vol1Btn = document.getElementById('modal-read-vol1-link');
+        const vol2Btn = document.getElementById('modal-read-vol2-link');
 
-            if (lastChapter !== null && lastChapter !== undefined && lastChapter !== '') {
-                const chNum = parseInt(lastChapter, 10);
-                const chSlug = lastChapterSlug || (chNum === 0 ? 'intro' : `chapter-${chNum}`);
-                const pctVal = Math.round(parseFloat(lastPct || '0'));
-                const chLabel = (chSlug === 'intro' || chNum === 0) ? 'Intro' : `Ch. ${chNum}`;
+        const isDualVolume = (d.id === 'american-yawp') || Boolean(d.readOnlineVol1Link && d.readOnlineVol2Link);
 
-                readBtn.href = `read/index.php?book=${encodeURIComponent(d.id)}&chapter=${encodeURIComponent(chSlug)}&pct=${pctVal}&resume=true`;
-                readBtn.innerHTML = `<i class="fas fa-bookmark mr-1"></i> <span>Continue Reading (${chLabel} &bull; ${pctVal}%)</span>`;
-                readBtn.setAttribute('title', `Continue reading at ${chLabel} (${pctVal}%)`);
-            } else {
-                const hasReadLink = d.readOnlineLink && d.readOnlineLink !== '#' && d.readOnlineLink !== '';
-                readBtn.href = hasReadLink ? d.readOnlineLink : `read/index.php?book=${encodeURIComponent(d.id)}`;
-                readBtn.innerHTML = `<i class="fas fa-book-open mr-1"></i> <span>Read Online</span>`;
-                readBtn.removeAttribute('title');
+        if (isDualVolume) {
+            if (readBtn) {
+                readBtn.classList.add('hidden');
+                readBtn.style.display = 'none';
+            }
+            if (dualVolContainer) {
+                dualVolContainer.classList.remove('hidden');
+                dualVolContainer.style.display = 'inline-flex';
+            }
+            if (vol1Btn) {
+                const vol1Url = d.readOnlineVol1Link || 'read/index.php?book=american-yawp&chapter=chapter-1';
+                vol1Btn.href = vol1Url;
+                vol1Btn.setAttribute('title', 'Read The American Yawp Volume 1: Before 1877 Online');
+                vol1Btn.setAttribute('aria-label', 'Read Volume 1 (Before 1877) Online');
+            }
+            if (vol2Btn) {
+                const vol2Url = d.readOnlineVol2Link || 'read/index.php?book=american-yawp&chapter=chapter-15';
+                vol2Btn.href = vol2Url;
+                vol2Btn.setAttribute('title', 'Read The American Yawp Volume 2: After 1877 Online');
+                vol2Btn.setAttribute('aria-label', 'Read Volume 2 (After 1877) Online');
+            }
+        } else {
+            if (dualVolContainer) {
+                dualVolContainer.classList.add('hidden');
+                dualVolContainer.style.display = 'none';
+            }
+            if (readBtn) {
+                readBtn.classList.remove('hidden');
+                readBtn.style.display = 'inline-flex';
+                let lastChapter = null;
+                let lastChapterSlug = null;
+                let lastPct = null;
+                try {
+                    lastChapter = localStorage.getItem(`hesten_progress_${d.id}_lastChapter`);
+                    lastChapterSlug = localStorage.getItem(`hesten_progress_${d.id}_lastChapterSlug`);
+                    lastPct = localStorage.getItem(`hesten_scroll_pct_${d.id}_chapter_${lastChapter}`);
+                } catch(e) {}
+
+                if (lastChapter !== null && lastChapter !== undefined && lastChapter !== '') {
+                    const chNum = parseInt(lastChapter, 10);
+                    const chSlug = lastChapterSlug || (chNum === 0 ? 'intro' : `chapter-${chNum}`);
+                    const pctVal = Math.round(parseFloat(lastPct || '0'));
+                    const chLabel = (chSlug === 'intro' || chNum === 0) ? 'Intro' : `Ch. ${chNum}`;
+
+                    readBtn.href = `read/index.php?book=${encodeURIComponent(d.id)}&chapter=${encodeURIComponent(chSlug)}&pct=${pctVal}&resume=true`;
+                    readBtn.innerHTML = `<i class="fas fa-bookmark mr-1"></i> <span>Continue Reading (${chLabel} &bull; ${pctVal}%)</span>`;
+                    readBtn.setAttribute('title', `Continue reading at ${chLabel} (${pctVal}%)`);
+                } else {
+                    const hasReadLink = d.readOnlineLink && d.readOnlineLink !== '#' && d.readOnlineLink !== '';
+                    readBtn.href = hasReadLink ? d.readOnlineLink : `read/index.php?book=${encodeURIComponent(d.id)}`;
+                    readBtn.innerHTML = `<i class="fas fa-book-open mr-1"></i> <span>Read Online</span>`;
+                    readBtn.removeAttribute('title');
+                }
             }
         }
 
@@ -101,9 +136,26 @@
 
         // Download Links
         const pdfLink = document.getElementById('modal-pdf-link');
+        const pdfText = document.getElementById('modal-pdf-text');
+        const pdfVol2Link = document.getElementById('modal-pdf-vol2-link');
+
         if (pdfLink) {
             pdfLink.href = d.pdfLink || '#';
             pdfLink.style.display = (d.pdfLink && d.pdfLink !== '#') ? 'inline-flex' : 'none';
+            if (pdfText) {
+                pdfText.textContent = (d.pdfVol2Link && d.pdfVol2Link !== '#') ? 'Vol 1 PDF' : 'PDF';
+            }
+            if (d.pdfVol2Link && d.pdfVol2Link !== '#') {
+                pdfLink.setAttribute('title', 'Download Volume 1 PDF');
+                pdfLink.setAttribute('aria-label', 'Download Volume 1 PDF');
+            } else {
+                pdfLink.setAttribute('title', 'Download PDF');
+                pdfLink.setAttribute('aria-label', 'Download PDF');
+            }
+        }
+        if (pdfVol2Link) {
+            pdfVol2Link.href = d.pdfVol2Link || '#';
+            pdfVol2Link.style.display = (d.pdfVol2Link && d.pdfVol2Link !== '#') ? 'inline-flex' : 'none';
         }
         const epubLink = document.getElementById('modal-epub-link');
         if (epubLink) {

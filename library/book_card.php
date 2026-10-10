@@ -48,6 +48,7 @@ if (empty($bookCallNumber)) {
      data-fallback-img="<?php echo htmlspecialchars($fallbackImg); ?>"
      data-description="<?php echo htmlspecialchars($book['description'] ?? ''); ?>"
      data-pdf-link="<?php echo htmlspecialchars($book['pdf-link'] ?? '#'); ?>"
+     data-pdf-vol2-link="<?php echo htmlspecialchars($book['pdf-vol2-link'] ?? ''); ?>"
      data-epub-link="<?php echo htmlspecialchars($book['epub-link'] ?? '#'); ?>"
      data-read-online-link="<?php 
          $rawReadLink = $book['read-online-link'] ?? '#';
@@ -55,6 +56,20 @@ if (empty($bookCallNumber)) {
              $rawReadLink = substr($rawReadLink, 9);
          }
          echo htmlspecialchars($rawReadLink); 
+     ?>"
+     data-read-online-vol1-link="<?php 
+         $rawVol1 = $book['read-online-vol1-link'] ?? '';
+         if (strpos($rawVol1, '/library/') === 0) {
+             $rawVol1 = substr($rawVol1, 9);
+         }
+         echo htmlspecialchars($rawVol1); 
+     ?>"
+     data-read-online-vol2-link="<?php 
+         $rawVol2 = $book['read-online-vol2-link'] ?? '';
+         if (strpos($rawVol2, '/library/') === 0) {
+             $rawVol2 = substr($rawVol2, 9);
+         }
+         echo htmlspecialchars($rawVol2); 
      ?>"
      data-txt-link="<?php echo htmlspecialchars($book['txt-link'] ?? '#'); ?>"
      data-mobi-link="<?php echo htmlspecialchars($book['mobi-link'] ?? '#'); ?>"

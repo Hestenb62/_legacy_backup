@@ -48,16 +48,16 @@ if (! function_exists('assetVersion')) {
 
 // Core Platform Version Definition
 if (! defined('HL_SITE_VERSION')) {
-    define('HL_SITE_VERSION', 'v2.12.1');
+    define('HL_SITE_VERSION', 'v2.12.2');
     }
 if (! defined('HL_SITE_VERSION_DATE')) {
     define('HL_SITE_VERSION_DATE', 'October 2026');
     }
 if (! defined('HL_SITE_VERSION_LABEL')) {
-    define('HL_SITE_VERSION_LABEL', 'October 2026 Library Viewport Precision & Responsive Reflow Release');
+    define('HL_SITE_VERSION_LABEL', 'October 2026 American Yawp Multi-Volume Digital Reader Suite Release');
     }
 if (! defined('HL_SITE_VERSION_SUMMARY')) {
-    define('HL_SITE_VERSION_SUMMARY', 'Digital Library Index Layout Overflow Resolution, Subnav Ribbon Viewport Clamping, Carousel Flex Containment, WCAG 320px Reflow Compliance');
+    define('HL_SITE_VERSION_SUMMARY', 'Dual-Volume Online Reader Buttons (Vol 1 & Vol 2) for The American Yawp, Multi-Volume Modal Architecture, Table Ledger Dual Launcher, UDL Compliant History Portal');
     }
 ?>
 <!DOCTYPE html>

@@ -146,7 +146,7 @@ body.zen-mode {
     <div class="sticky-bar-inner">
         <!-- Left: Back to Catalog & Session Timer -->
         <div class="sticky-bar-left">
-            <a href="../index.php" class="sticky-bar-back-btn" title="Return to Digital Library Catalog" aria-label="Back to Catalog">
+            <a href="/library/index.php" class="sticky-bar-back-btn" title="Return to Digital Library Catalog" aria-label="Back to Catalog">
                 <i class="fas fa-arrow-left" aria-hidden="true"></i>
             </a>
             <div id="reader-session-timer-pill" class="reader-session-timer-pill" title="Daily Reading Tracker">
@@ -450,6 +450,15 @@ body.zen-mode {
                             <span class="book-header-title">
                                 <i class="fas fa-book-open"></i> <?php echo htmlspecialchars($bookTitle); ?>
                             </span>
+                            <?php 
+                                $currentVol = (!empty($bookToc) && isset($bookToc[(string)$chapterNum]['volume'])) ? $bookToc[(string)$chapterNum]['volume'] : '';
+                                if (!empty($currentVol)):
+                            ?>
+                                <span class="book-header-dot" aria-hidden="true">&bull;</span>
+                                <span class="book-header-vol-badge" style="font-size: 0.78rem; font-weight: 800; color: var(--color-primary); background: rgba(79, 70, 229, 0.1); padding: 0.15rem 0.55rem; border-radius: 9999px;">
+                                    <?php echo htmlspecialchars($currentVol); ?>
+                                </span>
+                            <?php endif; ?>
                             <span class="book-header-dot" aria-hidden="true">&bull;</span>
                             <span class="book-header-chapter">
                                 <?php echo htmlspecialchars($currentChapterTitle); ?>
@@ -672,12 +681,26 @@ body.zen-mode {
             <?php endif; ?>
 
             <div class="toc-grid">
-                <?php for ($i = 1; $i <= $totalChapters; $i++): 
+                <?php 
+                $activeVolumeHeading = null;
+                for ($i = 1; $i <= $totalChapters; $i++): 
                     $chapterLabel = 'Chapter ' . $i;
-                    if (!empty($bookToc) && isset($bookToc[(string)$i]['title'])) {
-                        $chapterLabel = $bookToc[(string)$i]['title'];
+                    $chapterVolume = '';
+                    if (!empty($bookToc) && isset($bookToc[(string)$i])) {
+                        if (isset($bookToc[(string)$i]['title'])) {
+                            $chapterLabel = $bookToc[(string)$i]['title'];
+                        }
+                        $chapterVolume = $bookToc[(string)$i]['volume'] ?? $bookToc[(string)$i]['part'] ?? '';
                     }
+
+                    if (!empty($chapterVolume) && $chapterVolume !== $activeVolumeHeading):
+                        $activeVolumeHeading = $chapterVolume;
                 ?>
+                    <div class="toc-volume-divider" style="margin: 0.75rem 0 0.25rem 0; font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-primary); padding: 0.35rem 0.65rem; background: rgba(79, 70, 229, 0.08); border-radius: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fas fa-layer-group" aria-hidden="true"></i>
+                        <span><?php echo htmlspecialchars($activeVolumeHeading); ?></span>
+                    </div>
+                <?php endif; ?>
                     <a href="index.php?book=<?php echo urlencode($bookId); ?>&chapter=chapter-<?php echo $i; ?>" 
                        class="toc-link <?php echo (!$isTeacherPage && $i === $chapterNum) ? 'active' : ''; ?>">
                         <span class="toc-num">CH <?php echo $i; ?></span>

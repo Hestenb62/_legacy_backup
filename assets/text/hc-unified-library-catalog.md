@@ -28,7 +28,12 @@ Both portals now share a synchronized dual-repository data architecture that con
    - **Grid View**: Responsive multi-column grid with cover art, spine call numbers, and grade badges.
    - **List View**: Dense academic bibliography view optimized for quick reference.
 
-4. **Subject Research Desks & Deep Linking**:
+4. **Multi-Volume Titles & The American Yawp Suite**:
+   - **Dual Online Readers**: Multi-volume titles like *The American Yawp* feature distinct **"Read Online: Vol 1"** (Before 1877) and **"Read Online: Vol 2"** (After 1877) buttons in the Book Overview modal, the Academic Ledger table, and the dedicated reader portal.
+   - **Independent Volume Downloads**: Download Volume 1 or Volume 2 PDF editions directly with dedicated 1-click action buttons.
+   - **Dedicated Chapter Directory**: Access all 28 chapters, primary source reader documents, Stanford University Press citations, and AP U.S. History study flashcard decks at `/library/read/american-yawp/`.
+
+5. **Subject Research Desks & Deep Linking**:
    - Clicking **"More Resources"** on any category header immediately transitions to the dedicated Subject Research Desk workspace with expanded holdings and vetted external research links.
    - Cryptographic shareable URLs (`#e27d1c34`, `#cd90fec6`, etc.) enable teachers and students to deeplink directly to specific subject desks.
 

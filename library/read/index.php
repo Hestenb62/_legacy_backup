@@ -87,6 +87,16 @@ $rawBookParam = trim($bookId);
 $normalizedSlug = strtolower(trim(preg_replace('/[^a-zA-Z0-9]+/', '-', $rawBookParam), '-'));
 $bookId = $normalizedSlug;
 
+if ($bookId === 'the-american-yawp') {
+    $bookId = 'american-yawp';
+}
+
+// Handle volume parameter for multi-volume titles (e.g. The American Yawp)
+if (isset($_GET['vol']) && (!isset($_GET['chapter']) || $_GET['chapter'] === '')) {
+    $volParam = (int)$_GET['vol'];
+    $_GET['chapter'] = ($volParam === 2) ? 'chapter-15' : 'chapter-1';
+}
+
 // Load book data from both main catalog and educational drawer resources
 $allBooksList = [];
 
@@ -419,7 +429,7 @@ if ($error !== '') {
             }
         </script>
         <div class="reader-back-nav" style="margin-bottom: 2rem;">
-            <a href="../index.php" class="reader-back-btn" style="text-decoration: none; padding: 0.65rem 1.5rem; background: var(--color-content-bg); border-radius: 9999px; border: 1px solid var(--color-border); font-weight: 700; color: var(--color-text-default); display: inline-flex; align-items: center; gap: 0.5rem;">
+            <a href="/library/index.php" class="reader-back-btn" style="text-decoration: none; padding: 0.65rem 1.5rem; background: var(--color-content-bg); border-radius: 9999px; border: 1px solid var(--color-border); font-weight: 700; color: var(--color-text-default); display: inline-flex; align-items: center; gap: 0.5rem;">
                 <i class="fas fa-arrow-left"></i> Return to Catalog
             </a>
         </div>

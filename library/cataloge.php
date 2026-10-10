@@ -310,7 +310,14 @@ include ABSPATH . 'src/header.php';
                                 </td>
                                 <td style="text-align: right;">
                                     <div class="table-action-btns" style="justify-content: flex-end;">
-                                        <?php if ($hasOnlineReader): ?>
+                                        <?php if (!empty($book['read-online-vol1-link']) && !empty($book['read-online-vol2-link'])): ?>
+                                            <a href="<?= htmlspecialchars($book['read-online-vol1-link']) ?>" class="btn-table-action btn-table-read" title="Read The American Yawp Volume 1 Online" aria-label="Read Volume 1 Online">
+                                                <i class="fas fa-book-open"></i> <span>Vol 1</span>
+                                            </a>
+                                            <a href="<?= htmlspecialchars($book['read-online-vol2-link']) ?>" class="btn-table-action btn-table-read" style="background: rgba(16, 185, 129, 0.15); color: #059669; border-color: rgba(16, 185, 129, 0.3);" title="Read The American Yawp Volume 2 Online" aria-label="Read Volume 2 Online">
+                                                <i class="fas fa-book-open"></i> <span>Vol 2</span>
+                                            </a>
+                                        <?php elseif ($hasOnlineReader): ?>
                                             <a href="<?= htmlspecialchars($readLink) ?>" class="btn-table-action btn-table-read" title="Read Online">
                                                 <i class="fas fa-book-open"></i> <span>Read</span>
                                             </a>

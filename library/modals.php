@@ -227,11 +227,32 @@ if (! function_exists('renderGutenbergLicenseHtml')) {
                             <i class="fas fa-book-open"></i> <span>Read Online</span>
                         </a>
 
+                        <!-- Dual Volume Online Readers (e.g. The American Yawp Vol 1 & Vol 2) -->
+                        <div id="modal-dual-volume-actions" class="library-modal-vol-group hidden">
+                            <a id="modal-read-vol1-link" href="#"
+                                class="library-modal-read-btn library-modal-vol1-btn"
+                                title="Read The American Yawp Volume 1: Before 1877 Online"
+                                aria-label="Read Volume 1 (Before 1877) Online">
+                                <i class="fas fa-book-open"></i> <span>Read Online: Vol 1</span>
+                            </a>
+                            <a id="modal-read-vol2-link" href="#"
+                                class="library-modal-read-btn library-modal-vol2-btn"
+                                title="Read The American Yawp Volume 2: After 1877 Online"
+                                aria-label="Read Volume 2 (After 1877) Online">
+                                <i class="fas fa-book-open"></i> <span>Read Online: Vol 2</span>
+                            </a>
+                        </div>
+
                         <div class="library-modal-downloads-row">
                             <a id="modal-pdf-link" href="#" target="_blank" rel="noopener noreferrer"
                                 class="library-download-icon-btn pdf-btn" title="Download PDF"
                                 aria-label="Download PDF">
-                                <i class="fas fa-file-pdf"></i> <span>PDF</span>
+                                <i class="fas fa-file-pdf"></i> <span id="modal-pdf-text">PDF</span>
+                            </a>
+                            <a id="modal-pdf-vol2-link" href="#" target="_blank" rel="noopener noreferrer"
+                                class="library-download-icon-btn pdf-btn hidden" title="Download Volume 2 PDF"
+                                aria-label="Download Volume 2 PDF">
+                                <i class="fas fa-file-pdf"></i> <span>Vol 2 PDF</span>
                             </a>
                             <a id="modal-epub-link" href="#" target="_blank" rel="noopener noreferrer"
                                 class="library-download-icon-btn epub-btn" title="Download ePUB"

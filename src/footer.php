@@ -275,9 +275,33 @@
                 </span>
             </div>
             <p class="footer-vmodal-lead">
-                Version <?= htmlspecialchars($siteVersion) ?> delivers <strong>Library Viewport Precision &amp; Responsive Reflow</strong>—resolving horizontal layout overflow on the Digital Library index portal across all device viewports, enhancing container clamping, subnav navigation flex behavior, and ensuring 100% WCAG 2.1/2.2 AA/AAA 320px reflow compliance.
+                Version <?= htmlspecialchars($siteVersion) ?> delivers the <strong>American Yawp Multi-Volume Digital Reading Suite</strong>—introducing dedicated dual "Read Online" launchers for Volume 1 (Before 1877) and Volume 2 (After 1877), multi-volume modal action architecture, table ledger dual volume launchers, and a dedicated accessible textbook portal.
             </p>
             <ul class="footer-vmodal-features">
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(79, 70, 229, 0.15); color: #4f46e5;">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>American Yawp Dual-Volume Online Readers:</strong> Added distinct "Read Online: Vol 1" (Before 1877, Chapters 1–14) and "Read Online: Vol 2" (After 1877, Chapters 15–28) buttons to the Book Overview modal, the Academic Ledger table, and the dedicated reader portal with 1-click access to official open-access texts.
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(16, 185, 129, 0.15); color: #059669;">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Multi-Volume Modal &amp; Download Architecture:</strong> Upgraded <code>lib-book-overview-modal.js</code> and <code>modals.php</code> to detect multi-volume titles automatically, dynamically rendering dual reading actions, individual Volume 1 and Volume 2 PDF download buttons, and maintaining smart resume tracking for single titles.
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(245, 158, 11, 0.15); color: #d97706;">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Unified American Yawp Reader &amp; Chapter Directory:</strong> Launched a dedicated, fully responsive reading hub at <code>/library/read/american-yawp/</code> featuring complete chapter directories for both volumes, primary source documents, flashcard study decks, and Stanford University Press citations.
+                    </div>
+                </li>
                 <li class="footer-vmodal-feature-item">
                     <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(79, 70, 229, 0.15); color: #4f46e5;">
                         <i class="fas fa-arrows-left-right-to-line"></i>
