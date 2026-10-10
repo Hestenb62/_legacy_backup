@@ -30,9 +30,10 @@ Previously, the library catalog only featured a single generic "Read Online" but
   - Toggles between the single smart-resume "Read Online" button and the dual volume launcher buttons.
   - Automatically updates download button labels (`Vol 1 PDF` vs `PDF`, and displays `Vol 2 PDF`).
 
-### B. Complete Local Chapter Hosting & Catalog Data Synchronization
+### B. Complete Local Chapter Hosting & Clean Reading Experience
 - **Zero External Linking & 100% Local Textbook Hosting**:
   - All 28 chapters of *The American Yawp* were downloaded, stripped of external scripts, cleaned, and locally hosted directly inside `library/read/american-yawp/` (`chapter-1.php` through `chapter-28.php`).
+  - **Complete Removal of Images and Image Descriptions**: Per pedagogical and distraction-free reading requirements, all figures, illustrations, images (`<img>`), alt-text image descriptions, and `<figcaption>` elements were completely removed across all 28 chapters, ensuring a pure text editorial reading experience.
   - Created complete 28-chapter Table of Contents metadata in `library/assets/american-yawp-toc.json` partitioning chapters 1–14 (Volume 1) and 15–28 (Volume 2).
   - Configured `library/assets/edu-side-drawer.json` with internal reading routes:
     - `"read-online-link": "/library/read/index.php?book=american-yawp"`
