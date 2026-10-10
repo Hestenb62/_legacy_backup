@@ -98,12 +98,16 @@
     max-width: 1000px;
     width: 100%;
     margin: 0 auto;
+    box-sizing: border-box;
+    min-width: 0;
 }
 
 .library-search-input-container {
     position: relative;
     flex: 1 1 320px;
-    min-width: 260px;
+    min-width: 240px;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .library-search-input {
@@ -194,7 +198,9 @@ body.high-contrast .library-search-icon {
 .library-filter-select-container {
     position: relative;
     flex: 0 1 200px;
-    min-width: 170px;
+    min-width: 160px;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .library-category-select {

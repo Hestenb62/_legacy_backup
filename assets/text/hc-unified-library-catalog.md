@@ -48,3 +48,7 @@ Both portals now share a synchronized dual-repository data architecture that con
   - **Representation**: Multimodal display (ePub, PDF, plain text, web reader, audio narration).
   - **Expression**: Interactive note-taking, highlighting, and flashcard generation via the integrated Study Notebook.
   - **Engagement**: Low-anxiety reading modes, adjustable typography, dyslexia-friendly fonts, and persistent local bookmarks.
+- **Responsive Viewport Reflow & Overflow Containment**:
+  - Full compliance with WCAG 1.4.10 Reflow (down to 320px width without horizontal document scrollbars).
+  - Horizontal book carousels contain internal touch and trackpad scrolling, isolated from the window scroll container.
+  - Subnav ribbons, search bars, and filter dropdowns reflow seamlessly across all desktop, tablet, and mobile displays.

@@ -10,6 +10,16 @@
     border-radius: var(--lib-radius-xl);
     box-shadow: var(--lib-shadow-md);
     text-align: left;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+@media (max-width: 640px) {
+    .continue-reading-section {
+        padding: 1.25rem 1rem;
+    }
 }
 
 .continue-reading-header {
@@ -56,6 +66,16 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 1.25rem;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+@media (max-width: 480px) {
+    .continue-reading-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .continue-reading-card {

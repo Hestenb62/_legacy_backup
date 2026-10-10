@@ -4,8 +4,9 @@
 
 @media (max-width: 1024px) {
     .library-main {
-        flex-direction: column;
         padding-top: 1.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 
     .library-sidebar {
@@ -41,13 +42,18 @@
 
     .library-search-wrapper {
         flex-direction: column;
+        width: 100%;
+        max-width: 100%;
     }
 
     .library-search-input-container,
     .library-filter-select-container,
     .library-view-switcher {
         width: 100%;
+        max-width: 100%;
+        min-width: 0;
         flex: 1 1 100%;
+        box-sizing: border-box;
     }
 
     .library-modal-body-wrapper {
@@ -69,5 +75,12 @@
 
     .library-modal-spec-full {
         grid-column: span 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .library-main {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
     }
 }

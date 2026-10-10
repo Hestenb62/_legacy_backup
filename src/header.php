@@ -48,16 +48,16 @@ if (! function_exists('assetVersion')) {
 
 // Core Platform Version Definition
 if (! defined('HL_SITE_VERSION')) {
-    define('HL_SITE_VERSION', 'v2.12.0');
+    define('HL_SITE_VERSION', 'v2.12.1');
     }
 if (! defined('HL_SITE_VERSION_DATE')) {
     define('HL_SITE_VERSION_DATE', 'October 2026');
     }
 if (! defined('HL_SITE_VERSION_LABEL')) {
-    define('HL_SITE_VERSION_LABEL', 'October 2026 Word Search & Crossword Puzzle Studio Suite Release');
+    define('HL_SITE_VERSION_LABEL', 'October 2026 Library Viewport Precision & Responsive Reflow Release');
     }
 if (! defined('HL_SITE_VERSION_SUMMARY')) {
-    define('HL_SITE_VERSION_SUMMARY', 'Parent & Teacher Word Search and Crossword Puzzle Studios, 8.5"x11" PDF Print Generator, Dyslexia-Friendly Layout, Interactive Game Zone Integration');
+    define('HL_SITE_VERSION_SUMMARY', 'Digital Library Index Layout Overflow Resolution, Subnav Ribbon Viewport Clamping, Carousel Flex Containment, WCAG 320px Reflow Compliance');
     }
 ?>
 <!DOCTYPE html>

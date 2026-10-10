@@ -23,6 +23,9 @@
     scrollbar-width: thin;
     scrollbar-color: var(--lib-border) transparent;
     -webkit-overflow-scrolling: touch;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .desk-switcher-bar::-webkit-scrollbar {
@@ -389,6 +392,10 @@ body.high-contrast .desk-switcher-tab.active {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
     gap: 2rem 1.5rem;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
 }
 
 /* External Links Section in Subject Workspace */
@@ -397,6 +404,10 @@ body.high-contrast .desk-switcher-tab.active {
     border-top: 1px dashed var(--lib-border);
     padding-top: 2rem;
     text-align: left;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
 }
 
 .drawer-external-links-title {
@@ -417,6 +428,17 @@ body.high-contrast .desk-switcher-tab.active {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 1.25rem;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+@media (max-width: 640px) {
+    .drawer-section-grid,
+    .drawer-external-links-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .external-resource-card {

@@ -275,9 +275,17 @@
                 </span>
             </div>
             <p class="footer-vmodal-lead">
-                Version <?= htmlspecialchars($siteVersion) ?> introduces the <strong>Word Search &amp; Crossword Puzzle Studio Suite</strong>—a comprehensive, dyslexia-friendly, and print-ready suite for parents, homeschool educators, and classroom teachers to turn academic vocabulary and spelling lists into engaging interactive and printable learning materials.
+                Version <?= htmlspecialchars($siteVersion) ?> delivers <strong>Library Viewport Precision &amp; Responsive Reflow</strong>—resolving horizontal layout overflow on the Digital Library index portal across all device viewports, enhancing container clamping, subnav navigation flex behavior, and ensuring 100% WCAG 2.1/2.2 AA/AAA 320px reflow compliance.
             </p>
             <ul class="footer-vmodal-features">
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(79, 70, 229, 0.15); color: #4f46e5;">
+                        <i class="fas fa-arrows-left-right-to-line"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Library Index Layout Overflow Resolution:</strong> Eliminated horizontal document overflow on <code>/library/index.php</code>. Clamped <code>.library-main</code>, <code>.library-workspace</code>, and <code>.library-content-container</code> with <code>min-width: 0</code> and <code>overflow-x: clip</code>, preventing flex child blowouts caused by unconstrained book carousel rows, subnav ribbons, and desktop grid columns.
+                    </div>
+                </li>
                 <li class="footer-vmodal-feature-item">
                     <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(99, 102, 241, 0.15); color: #6366f1;">
                         <i class="fas fa-pen-nib"></i>

@@ -8,8 +8,8 @@
   "fiveServer.injectBody": true,
   "fiveServer.navigate": true,
   "fiveServer.openTerminal": true,
-  "fiveServer.php.executable": "C:\\xampp\\php\\php.exe",
-  "fiveServer.php.ini": "C:\\xampp\\php\\php.ini",
+  "fiveServer.php.executable": "C:\\xampp1\\php\\php.exe",
+  "fiveServer.php.ini": "C:\\xampp1\\php\\php.ini",
   "codeQL.createQuery.qlPackLocation": "c:\\Users\\Heste\\OneDrive\\Documents\\_legacy_backup"
 }
 
