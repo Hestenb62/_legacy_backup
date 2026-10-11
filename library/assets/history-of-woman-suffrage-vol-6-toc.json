@@ -1,0 +1,408 @@
+{
+  "1": {
+    "title": "INTRODUCTION: Woman Suffrage in the States of the Union",
+    "chapter": 1,
+    "file": "chapter-1.php",
+    "word_count": 925,
+    "read_time": 5
+  },
+  "2": {
+    "title": "Table of Contents",
+    "chapter": 2,
+    "file": "chapter-2.php",
+    "word_count": 1039,
+    "read_time": 5
+  },
+  "3": {
+    "title": "Chapter I: ALABAMA",
+    "chapter": 3,
+    "file": "chapter-3.php",
+    "word_count": 3328,
+    "read_time": 17
+  },
+  "4": {
+    "title": "Chapter II: ARIZONA",
+    "chapter": 4,
+    "file": "chapter-4.php",
+    "word_count": 2047,
+    "read_time": 10
+  },
+  "5": {
+    "title": "Chapter III: ARKANSAS",
+    "chapter": 5,
+    "file": "chapter-5.php",
+    "word_count": 3955,
+    "read_time": 20
+  },
+  "6": {
+    "title": "Chapter IV: CALIFORNIA",
+    "chapter": 6,
+    "file": "chapter-6.php",
+    "word_count": 12592,
+    "read_time": 63
+  },
+  "7": {
+    "title": "Chapter V: COLORADO",
+    "chapter": 7,
+    "file": "chapter-7.php",
+    "word_count": 3326,
+    "read_time": 17
+  },
+  "8": {
+    "title": "Chapter VI: CONNECTICUT",
+    "chapter": 8,
+    "file": "chapter-8.php",
+    "word_count": 7136,
+    "read_time": 36
+  },
+  "9": {
+    "title": "Chapter VII: DELAWARE",
+    "chapter": 9,
+    "file": "chapter-9.php",
+    "word_count": 6618,
+    "read_time": 33
+  },
+  "10": {
+    "title": "Chapter VIII: District of Columbia",
+    "chapter": 10,
+    "file": "chapter-10.php",
+    "word_count": 3436,
+    "read_time": 17
+  },
+  "11": {
+    "title": "Chapter IX: FLORIDA",
+    "chapter": 11,
+    "file": "chapter-11.php",
+    "word_count": 2752,
+    "read_time": 14
+  },
+  "12": {
+    "title": "Chapter X: GEORGIA",
+    "chapter": 12,
+    "file": "chapter-12.php",
+    "word_count": 8524,
+    "read_time": 43
+  },
+  "13": {
+    "title": "Chapter XI: IDAHO",
+    "chapter": 13,
+    "file": "chapter-13.php",
+    "word_count": 541,
+    "read_time": 3
+  },
+  "14": {
+    "title": "Chapter XII: ILLINOIS",
+    "chapter": 14,
+    "file": "chapter-14.php",
+    "word_count": 7944,
+    "read_time": 40
+  },
+  "15": {
+    "title": "Chapter XIII: Indiana. Part I",
+    "chapter": 15,
+    "file": "chapter-15.php",
+    "word_count": 5736,
+    "read_time": 29
+  },
+  "16": {
+    "title": "Chapter XIV: IOWA",
+    "chapter": 16,
+    "file": "chapter-16.php",
+    "word_count": 4738,
+    "read_time": 24
+  },
+  "17": {
+    "title": "Chapter XV: KANSAS",
+    "chapter": 17,
+    "file": "chapter-17.php",
+    "word_count": 5303,
+    "read_time": 27
+  },
+  "18": {
+    "title": "Chapter XVI: KENTUCKY",
+    "chapter": 18,
+    "file": "chapter-18.php",
+    "word_count": 3439,
+    "read_time": 17
+  },
+  "19": {
+    "title": "Chapter XVII: Louisiana. Part I",
+    "chapter": 19,
+    "file": "chapter-19.php",
+    "word_count": 7749,
+    "read_time": 39
+  },
+  "20": {
+    "title": "Chapter XVIII: MAINE",
+    "chapter": 20,
+    "file": "chapter-20.php",
+    "word_count": 4483,
+    "read_time": 22
+  },
+  "21": {
+    "title": "Chapter XIX: Maryland. Part I",
+    "chapter": 21,
+    "file": "chapter-21.php",
+    "word_count": 6961,
+    "read_time": 35
+  },
+  "22": {
+    "title": "Chapter XX: MASSACHUSETTS",
+    "chapter": 22,
+    "file": "chapter-22.php",
+    "word_count": 13601,
+    "read_time": 68
+  },
+  "23": {
+    "title": "Chapter XXI: MICHIGAN",
+    "chapter": 23,
+    "file": "chapter-23.php",
+    "word_count": 5210,
+    "read_time": 26
+  },
+  "24": {
+    "title": "Chapter XXII: MINNESOTA",
+    "chapter": 24,
+    "file": "chapter-24.php",
+    "word_count": 3463,
+    "read_time": 17
+  },
+  "25": {
+    "title": "Chapter XXIII: MISSISSIPPI",
+    "chapter": 25,
+    "file": "chapter-25.php",
+    "word_count": 5937,
+    "read_time": 30
+  },
+  "26": {
+    "title": "Chapter XXIV: MISSOURI",
+    "chapter": 26,
+    "file": "chapter-26.php",
+    "word_count": 6701,
+    "read_time": 34
+  },
+  "27": {
+    "title": "Chapter XXV: MONTANA",
+    "chapter": 27,
+    "file": "chapter-27.php",
+    "word_count": 2997,
+    "read_time": 15
+  },
+  "28": {
+    "title": "Chapter XXVI: NEBRASKA",
+    "chapter": 28,
+    "file": "chapter-28.php",
+    "word_count": 6548,
+    "read_time": 33
+  },
+  "29": {
+    "title": "Chapter XXVII: NEVADA",
+    "chapter": 29,
+    "file": "chapter-29.php",
+    "word_count": 5795,
+    "read_time": 29
+  },
+  "30": {
+    "title": "Chapter XXVIII: New Hampshire",
+    "chapter": 30,
+    "file": "chapter-30.php",
+    "word_count": 4394,
+    "read_time": 22
+  },
+  "31": {
+    "title": "Chapter XXIX: New Jersey. Part I",
+    "chapter": 31,
+    "file": "chapter-31.php",
+    "word_count": 8155,
+    "read_time": 41
+  },
+  "32": {
+    "title": "Chapter XXX: New Mexico",
+    "chapter": 32,
+    "file": "chapter-32.php",
+    "word_count": 2171,
+    "read_time": 11
+  },
+  "33": {
+    "title": "Chapter XXXI: New York",
+    "chapter": 33,
+    "file": "chapter-33.php",
+    "word_count": 19007,
+    "read_time": 95
+  },
+  "34": {
+    "title": "Chapter XXXII: North Carolina",
+    "chapter": 34,
+    "file": "chapter-34.php",
+    "word_count": 3965,
+    "read_time": 20
+  },
+  "35": {
+    "title": "Chapter XXXIII: North Dakota",
+    "chapter": 35,
+    "file": "chapter-35.php",
+    "word_count": 2478,
+    "read_time": 12
+  },
+  "36": {
+    "title": "Chapter XXXIV: OHIO",
+    "chapter": 36,
+    "file": "chapter-36.php",
+    "word_count": 4757,
+    "read_time": 24
+  },
+  "37": {
+    "title": "Chapter XXXV: OKLAHOMA",
+    "chapter": 37,
+    "file": "chapter-37.php",
+    "word_count": 6856,
+    "read_time": 34
+  },
+  "38": {
+    "title": "Chapter XXXVI: OREGON",
+    "chapter": 38,
+    "file": "chapter-38.php",
+    "word_count": 4646,
+    "read_time": 23
+  },
+  "39": {
+    "title": "Chapter XXXVII: PENNSYLVANIA",
+    "chapter": 39,
+    "file": "chapter-39.php",
+    "word_count": 5491,
+    "read_time": 27
+  },
+  "40": {
+    "title": "Chapter XXXVIII: Rhode Island",
+    "chapter": 40,
+    "file": "chapter-40.php",
+    "word_count": 5224,
+    "read_time": 26
+  },
+  "41": {
+    "title": "Chapter XXXIX: South Carolina",
+    "chapter": 41,
+    "file": "chapter-41.php",
+    "word_count": 2106,
+    "read_time": 11
+  },
+  "42": {
+    "title": "Chapter XL: South Dakota",
+    "chapter": 42,
+    "file": "chapter-42.php",
+    "word_count": 4239,
+    "read_time": 21
+  },
+  "43": {
+    "title": "Chapter XLI: Tennessee. Part I",
+    "chapter": 43,
+    "file": "chapter-43.php",
+    "word_count": 11751,
+    "read_time": 59
+  },
+  "44": {
+    "title": "Chapter XLII: TEXAS",
+    "chapter": 44,
+    "file": "chapter-44.php",
+    "word_count": 5497,
+    "read_time": 27
+  },
+  "45": {
+    "title": "Chapter XLIII: UTAH",
+    "chapter": 45,
+    "file": "chapter-45.php",
+    "word_count": 2615,
+    "read_time": 13
+  },
+  "46": {
+    "title": "Chapter XLIV: VERMONT",
+    "chapter": 46,
+    "file": "chapter-46.php",
+    "word_count": 5467,
+    "read_time": 27
+  },
+  "47": {
+    "title": "Chapter XLV: VIRGINIA",
+    "chapter": 47,
+    "file": "chapter-47.php",
+    "word_count": 3035,
+    "read_time": 15
+  },
+  "48": {
+    "title": "Chapter XLVI: WASHINGTON",
+    "chapter": 48,
+    "file": "chapter-48.php",
+    "word_count": 5498,
+    "read_time": 27
+  },
+  "49": {
+    "title": "Chapter XLVII: West Virginia",
+    "chapter": 49,
+    "file": "chapter-49.php",
+    "word_count": 4493,
+    "read_time": 22
+  },
+  "50": {
+    "title": "Chapter XLVIII: WISCONSIN",
+    "chapter": 50,
+    "file": "chapter-50.php",
+    "word_count": 3801,
+    "read_time": 19
+  },
+  "51": {
+    "title": "Chapter XLIX: WYOMING",
+    "chapter": 51,
+    "file": "chapter-51.php",
+    "word_count": 1421,
+    "read_time": 7
+  },
+  "52": {
+    "title": "Chapter L: Woman Suffrage in the Territories of the United States and the Philippines",
+    "chapter": 52,
+    "file": "chapter-52.php",
+    "word_count": 4688,
+    "read_time": 23
+  },
+  "53": {
+    "title": "Chapter LI: Progress of the Women's Movement in the United Kingdom",
+    "chapter": 53,
+    "file": "chapter-53.php",
+    "word_count": 10303,
+    "read_time": 52
+  },
+  "54": {
+    "title": "Chapter LII: Woman Suffrage in British Colonies",
+    "chapter": 54,
+    "file": "chapter-54.php",
+    "word_count": 7282,
+    "read_time": 36
+  },
+  "55": {
+    "title": "Chapter LIII: Woman Suffrage in Many Countries",
+    "chapter": 55,
+    "file": "chapter-55.php",
+    "word_count": 12762,
+    "read_time": 64
+  },
+  "56": {
+    "title": "Chapter LIV: The International Woman Suffrage Alliance",
+    "chapter": 56,
+    "file": "chapter-56.php",
+    "word_count": 26194,
+    "read_time": 131
+  },
+  "57": {
+    "title": "Appendix & Historical Documents",
+    "chapter": 57,
+    "file": "chapter-57.php",
+    "word_count": 1583,
+    "read_time": 8
+  },
+  "58": {
+    "title": "Comprehensive Index",
+    "chapter": 58,
+    "file": "chapter-58.php",
+    "word_count": 17410,
+    "read_time": 87
+  }
+}

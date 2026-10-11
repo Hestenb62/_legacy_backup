@@ -1,0 +1,226 @@
+{
+  "1": {
+    "title": "Volume Frontmatter & Annual Table of Contents",
+    "chapter": 1,
+    "file": "chapter-1.php",
+    "word_count": 236,
+    "read_time": 1
+  },
+  "2": {
+    "title": "Slave Society on the Southern Plantation",
+    "chapter": 2,
+    "file": "chapter-2.php",
+    "word_count": 3370,
+    "read_time": 17
+  },
+  "3": {
+    "title": "The Evolution of the Negro Baptist Church",
+    "chapter": 3,
+    "file": "chapter-3.php",
+    "word_count": 3977,
+    "read_time": 20
+  },
+  "4": {
+    "title": "Early Negro Education in West Virginia",
+    "chapter": 4,
+    "file": "chapter-4.php",
+    "word_count": 14549,
+    "read_time": 73
+  },
+  "5": {
+    "title": "The First Negro Churches in the District of Columbia",
+    "chapter": 5,
+    "file": "chapter-5.php",
+    "word_count": 16252,
+    "read_time": 81
+  },
+  "6": {
+    "title": "Historical Documents & Primary Sources (January)",
+    "chapter": 6,
+    "file": "chapter-6.php",
+    "word_count": 1986,
+    "read_time": 10
+  },
+  "7": {
+    "title": "Historical Communications & Correspondence (January)",
+    "chapter": 7,
+    "file": "chapter-7.php",
+    "word_count": 881,
+    "read_time": 4
+  },
+  "8": {
+    "title": "Book Reviews & Scholarly Literature (January)",
+    "chapter": 8,
+    "file": "chapter-8.php",
+    "word_count": 2471,
+    "read_time": 12
+  },
+  "9": {
+    "title": "Historical Notes & News (January)",
+    "chapter": 9,
+    "file": "chapter-9.php",
+    "word_count": 367,
+    "read_time": 2
+  },
+  "10": {
+    "title": "Proceedings of the Annual Meeting of the Association for the Study of Negro Life and History, Held at Lynchburg, November 14 and 15, 1921",
+    "chapter": 10,
+    "file": "chapter-10.php",
+    "word_count": 2447,
+    "read_time": 12
+  },
+  "11": {
+    "title": "Negro Congressmen a Generation After",
+    "chapter": 11,
+    "file": "chapter-11.php",
+    "word_count": 16450,
+    "read_time": 82
+  },
+  "12": {
+    "title": "The Priority of the Silver Bluff Church and Its Promoters",
+    "chapter": 12,
+    "file": "chapter-12.php",
+    "word_count": 9183,
+    "read_time": 46
+  },
+  "13": {
+    "title": "The Negroes in Mauritius",
+    "chapter": 13,
+    "file": "chapter-13.php",
+    "word_count": 3096,
+    "read_time": 15
+  },
+  "14": {
+    "title": "Historical Documents & Primary Sources (April)",
+    "chapter": 14,
+    "file": "chapter-14.php",
+    "word_count": 6490,
+    "read_time": 32
+  },
+  "15": {
+    "title": "Book Reviews & Scholarly Literature (April)",
+    "chapter": 15,
+    "file": "chapter-15.php",
+    "word_count": 2576,
+    "read_time": 13
+  },
+  "16": {
+    "title": "NOTES.",
+    "chapter": 16,
+    "file": "chapter-16.php",
+    "word_count": 1045,
+    "read_time": 5
+  },
+  "17": {
+    "title": "The Anderson Fugitive Case",
+    "chapter": 17,
+    "file": "chapter-17.php",
+    "word_count": 3494,
+    "read_time": 17
+  },
+  "18": {
+    "title": "A Negro Senator",
+    "chapter": 18,
+    "file": "chapter-18.php",
+    "word_count": 4865,
+    "read_time": 24
+  },
+  "19": {
+    "title": "Lincoln'S Emancipation Plan",
+    "chapter": 19,
+    "file": "chapter-19.php",
+    "word_count": 6984,
+    "read_time": 35
+  },
+  "20": {
+    "title": "The Journal of Isaaco",
+    "chapter": 20,
+    "file": "chapter-20.php",
+    "word_count": 6341,
+    "read_time": 32
+  },
+  "21": {
+    "title": "Historical Communications & Correspondence (July)",
+    "chapter": 21,
+    "file": "chapter-21.php",
+    "word_count": 1056,
+    "read_time": 5
+  },
+  "22": {
+    "title": "Historical Documents & Primary Sources (July)",
+    "chapter": 22,
+    "file": "chapter-22.php",
+    "word_count": 16660,
+    "read_time": 83
+  },
+  "23": {
+    "title": "Book Reviews & Scholarly Literature (July)",
+    "chapter": 23,
+    "file": "chapter-23.php",
+    "word_count": 1800,
+    "read_time": 9
+  },
+  "24": {
+    "title": "Historical Notes & News (July)",
+    "chapter": 24,
+    "file": "chapter-24.php",
+    "word_count": 667,
+    "read_time": 3
+  },
+  "25": {
+    "title": "Brazilian and United States Slavery Compared",
+    "chapter": 25,
+    "file": "chapter-25.php",
+    "word_count": 5318,
+    "read_time": 27
+  },
+  "26": {
+    "title": "The Origins of Abolition in Santo Domingo",
+    "chapter": 26,
+    "file": "chapter-26.php",
+    "word_count": 3938,
+    "read_time": 20
+  },
+  "27": {
+    "title": "Canadian Negroes and the Rebellion of 1837",
+    "chapter": 27,
+    "file": "chapter-27.php",
+    "word_count": 1110,
+    "read_time": 6
+  },
+  "28": {
+    "title": "Lott Cary, the Colonizing Missionary",
+    "chapter": 28,
+    "file": "chapter-28.php",
+    "word_count": 14538,
+    "read_time": 73
+  },
+  "29": {
+    "title": "Historical Communications & Correspondence (October)",
+    "chapter": 29,
+    "file": "chapter-29.php",
+    "word_count": 2351,
+    "read_time": 12
+  },
+  "30": {
+    "title": "Historical Documents & Primary Sources (October)",
+    "chapter": 30,
+    "file": "chapter-30.php",
+    "word_count": 8947,
+    "read_time": 45
+  },
+  "31": {
+    "title": "Book Reviews & Scholarly Literature (October)",
+    "chapter": 31,
+    "file": "chapter-31.php",
+    "word_count": 1931,
+    "read_time": 10
+  },
+  "32": {
+    "title": "Historical Notes & News (October)",
+    "chapter": 32,
+    "file": "chapter-32.php",
+    "word_count": 574,
+    "read_time": 3
+  }
+}

@@ -1,0 +1,226 @@
+{
+  "1": {
+    "title": "Volume Frontmatter & Annual Table of Contents",
+    "chapter": 1,
+    "file": "chapter-1.php",
+    "word_count": 252,
+    "read_time": 1
+  },
+  "2": {
+    "title": "The Story of Josiah Henson",
+    "chapter": 2,
+    "file": "chapter-2.php",
+    "word_count": 7804,
+    "read_time": 39
+  },
+  "3": {
+    "title": "Elizabeth Barrett Browning and the Negro",
+    "chapter": 3,
+    "file": "chapter-3.php",
+    "word_count": 2306,
+    "read_time": 12
+  },
+  "4": {
+    "title": "Palmares: the Negro Numantia",
+    "chapter": 4,
+    "file": "chapter-4.php",
+    "word_count": 1165,
+    "read_time": 6
+  },
+  "5": {
+    "title": "Slavery in California",
+    "chapter": 5,
+    "file": "chapter-5.php",
+    "word_count": 4678,
+    "read_time": 23
+  },
+  "6": {
+    "title": "Historical Documents & Primary Sources (January)",
+    "chapter": 6,
+    "file": "chapter-6.php",
+    "word_count": 17677,
+    "read_time": 88
+  },
+  "7": {
+    "title": "Biographical Sketches of Undistinguished Negroes (January)",
+    "chapter": 7,
+    "file": "chapter-7.php",
+    "word_count": 676,
+    "read_time": 3
+  },
+  "8": {
+    "title": "Book Reviews & Scholarly Literature (January)",
+    "chapter": 8,
+    "file": "chapter-8.php",
+    "word_count": 2310,
+    "read_time": 12
+  },
+  "9": {
+    "title": "Historical Notes & News (January)",
+    "chapter": 9,
+    "file": "chapter-9.php",
+    "word_count": 274,
+    "read_time": 1
+  },
+  "10": {
+    "title": "Benjamin Banneker, the Negro Mathematician and Astronomer",
+    "chapter": 10,
+    "file": "chapter-10.php",
+    "word_count": 7195,
+    "read_time": 36
+  },
+  "11": {
+    "title": "George Liele and Andrew Bryan, Pioneer Negro Baptist Preachers",
+    "chapter": 11,
+    "file": "chapter-11.php",
+    "word_count": 3228,
+    "read_time": 16
+  },
+  "12": {
+    "title": "Fifty Years of Howard University",
+    "chapter": 12,
+    "file": "chapter-12.php",
+    "word_count": 4155,
+    "read_time": 21
+  },
+  "13": {
+    "title": "More About the Historical Errors of James Ford Rhodes",
+    "chapter": 13,
+    "file": "chapter-13.php",
+    "word_count": 7010,
+    "read_time": 35
+  },
+  "14": {
+    "title": "DOCUMENTS.",
+    "chapter": 14,
+    "file": "chapter-14.php",
+    "word_count": 15575,
+    "read_time": 78
+  },
+  "15": {
+    "title": "Biographical Sketches of Undistinguished Negroes (April)",
+    "chapter": 15,
+    "file": "chapter-15.php",
+    "word_count": 731,
+    "read_time": 4
+  },
+  "16": {
+    "title": "Book Reviews & Scholarly Literature (April)",
+    "chapter": 16,
+    "file": "chapter-16.php",
+    "word_count": 3299,
+    "read_time": 16
+  },
+  "17": {
+    "title": "Historical Notes & News (April)",
+    "chapter": 17,
+    "file": "chapter-17.php",
+    "word_count": 1838,
+    "read_time": 9
+  },
+  "18": {
+    "title": "Slavery in Kentucky",
+    "chapter": 18,
+    "file": "chapter-18.php",
+    "word_count": 726,
+    "read_time": 4
+  },
+  "19": {
+    "title": "Chapter Ii (July)",
+    "chapter": 19,
+    "file": "chapter-19.php",
+    "word_count": 8893,
+    "read_time": 44
+  },
+  "20": {
+    "title": "Chapter Iii (July)",
+    "chapter": 20,
+    "file": "chapter-20.php",
+    "word_count": 15380,
+    "read_time": 77
+  },
+  "21": {
+    "title": "Chapter Iv (July)",
+    "chapter": 21,
+    "file": "chapter-21.php",
+    "word_count": 8438,
+    "read_time": 42
+  },
+  "22": {
+    "title": "Chapter V (July)",
+    "chapter": 22,
+    "file": "chapter-22.php",
+    "word_count": 10005,
+    "read_time": 50
+  },
+  "23": {
+    "title": "Book Reviews & Scholarly Literature (July)",
+    "chapter": 23,
+    "file": "chapter-23.php",
+    "word_count": 1711,
+    "read_time": 9
+  },
+  "24": {
+    "title": "Historical Notes & News (July)",
+    "chapter": 24,
+    "file": "chapter-24.php",
+    "word_count": 575,
+    "read_time": 3
+  },
+  "25": {
+    "title": "The Beginnings of the Miscegenation of the Whites and Blacks",
+    "chapter": 25,
+    "file": "chapter-25.php",
+    "word_count": 6840,
+    "read_time": 34
+  },
+  "26": {
+    "title": "Gerrit Smith'S Effort in Behalf of the Negroes in New York",
+    "chapter": 26,
+    "file": "chapter-26.php",
+    "word_count": 1918,
+    "read_time": 10
+  },
+  "27": {
+    "title": "The Buxton Settlement in Canada",
+    "chapter": 27,
+    "file": "chapter-27.php",
+    "word_count": 3100,
+    "read_time": 16
+  },
+  "28": {
+    "title": "Fifty Years of Howard University",
+    "chapter": 28,
+    "file": "chapter-28.php",
+    "word_count": 4764,
+    "read_time": 24
+  },
+  "29": {
+    "title": "Historical Documents & Primary Sources (October)",
+    "chapter": 29,
+    "file": "chapter-29.php",
+    "word_count": 21862,
+    "read_time": 109
+  },
+  "30": {
+    "title": "Biographical Sketches of Undistinguished Negroes (October)",
+    "chapter": 30,
+    "file": "chapter-30.php",
+    "word_count": 2933,
+    "read_time": 15
+  },
+  "31": {
+    "title": "Book Reviews & Scholarly Literature (October)",
+    "chapter": 31,
+    "file": "chapter-31.php",
+    "word_count": 3789,
+    "read_time": 19
+  },
+  "32": {
+    "title": "Historical Notes & News (October)",
+    "chapter": 32,
+    "file": "chapter-32.php",
+    "word_count": 2139,
+    "read_time": 11
+  }
+}

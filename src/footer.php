@@ -96,9 +96,9 @@
 
         <!-- Version Status & Release Info Strip (WCAG Operable) -->
         <?php
-        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.15.0';
-        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'October 2026 Classic Literature, Vermont Geological & Civil War History Collection';
-        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Full Ingestion of 11 Major Classical, Geological & Historical Works: Wuthering Heights, 6 Vermont State Park & Forest Geology Guides, The Green Mountain Boys, Vermont: A Study of Independence, Vermont Riflemen in the Union War, and The 66-Book Canonical King James Bible';
+        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.17.0';
+        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'October 2026 History of Woman Suffrage Complete Archive Release';
+        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Full Ingestion of The History of Woman Suffrage (Volumes I through VI, 1881–1922) by Elizabeth Cady Stanton, Susan B. Anthony, Matilda Joslyn Gage, and Ida Husted Harper, Providing 270+ Chapters of Primary 19th Amendment History in Universal Single-Column Reader';
         ?>
         <div class="footer-version-strip" role="region" aria-label="Platform Version Information">
             <div class="footer-version-info">
@@ -271,9 +271,25 @@
                 </span>
             </div>
             <p class="footer-vmodal-lead">
-                Version <?= htmlspecialchars($siteVersion) ?> introduces 11 major literary, geological, and historical works from Project Gutenberg—featuring <em>Wuthering Heights</em>, the complete 66-Book <em>King James Bible</em>, 6 Vermont State Park &amp; Forest geological guides, and essential Vermont Revolutionary &amp; Civil War historical texts, all rendered in the distraction-free single-column universal digital reader with full TOC navigation and UDL accessibility.
+                Version <?= htmlspecialchars($siteVersion) ?> completes the definitive 6-volume archive of <strong>The History of Woman Suffrage (1881–1922)</strong> by Elizabeth Cady Stanton, Susan B. Anthony, Matilda Joslyn Gage, and Ida Husted Harper, alongside the 7-volume <em>Journal of Negro History</em> collection—providing over 500 primary source chapters and scholarly monographs within our accessible single-column digital reader.
             </p>
             <ul class="footer-vmodal-features">
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(168, 85, 247, 0.15); color: #9333ea;">
+                        <i class="fas fa-venus"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>History of Woman Suffrage (Complete Volumes I–VI, 1881–1922):</strong> Complete historical primary source archive of the American women's voting rights movement. Spanning all six massive volumes (eBooks #28020, #28039, #28556, #29870, #29878, #30051) with 271 chapterized proceedings: the 1848 Seneca Falls Convention, the Civil War loyal leagues, NWSA and AWSA conventions, Congressional hearings, western campaigns, and the state-by-state ratification of the 19th Amendment.
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(16, 185, 129, 0.15); color: #059669;">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>The Journal of Negro History (Volumes 1–7, 1916–1922):</strong> Complete academic archive founded by Dr. Carter G. Woodson and the Association for the Study of Negro Life and History. Features 232 chapterized monographs and primary records spanning Volumes 1 through 7 (eBooks #13642, #20752, #20906, #21093, #23200, #22149, #24484), exploring early Black churches, Revolutionary and Civil War soldiers, Josiah Henson, Benjamin Banneker, Reconstruction legislators, Supreme Court citizenship jurisprudence, and the Great Migration.
+                    </div>
+                </li>
                 <li class="footer-vmodal-feature-item">
                     <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(147, 51, 234, 0.15); color: #9333ea;">
                         <i class="fas fa-book-sparkles"></i>

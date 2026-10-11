@@ -1,0 +1,142 @@
+{
+  "1": {
+    "title": "Preface",
+    "chapter": 1,
+    "file": "chapter-1.php",
+    "word_count": 817,
+    "read_time": 4
+  },
+  "2": {
+    "title": "Table of Contents",
+    "chapter": 2,
+    "file": "chapter-2.php",
+    "word_count": 1200,
+    "read_time": 6
+  },
+  "3": {
+    "title": "Illustrations & Engravings",
+    "chapter": 3,
+    "file": "chapter-3.php",
+    "word_count": 52,
+    "read_time": 1
+  },
+  "4": {
+    "title": "Introduction",
+    "chapter": 4,
+    "file": "chapter-4.php",
+    "word_count": 4862,
+    "read_time": 24
+  },
+  "5": {
+    "title": "Chapter I: Preceding Causes",
+    "chapter": 5,
+    "file": "chapter-5.php",
+    "word_count": 7782,
+    "read_time": 39
+  },
+  "6": {
+    "title": "Chapter II: Woman in Newspapers",
+    "chapter": 6,
+    "file": "chapter-6.php",
+    "word_count": 2827,
+    "read_time": 14
+  },
+  "7": {
+    "title": "Chapter III: The World's Anti-Slavery Convention, London, June 12, 1840",
+    "chapter": 7,
+    "file": "chapter-7.php",
+    "word_count": 6148,
+    "read_time": 31
+  },
+  "8": {
+    "title": "Chapter IV: New York",
+    "chapter": 8,
+    "file": "chapter-8.php",
+    "word_count": 10841,
+    "read_time": 54
+  },
+  "9": {
+    "title": "Chapter V: REMINISCENCES",
+    "chapter": 9,
+    "file": "chapter-9.php",
+    "word_count": 6047,
+    "read_time": 30
+  },
+  "10": {
+    "title": "Chapter VI: OHIO",
+    "chapter": 10,
+    "file": "chapter-10.php",
+    "word_count": 39016,
+    "read_time": 195
+  },
+  "11": {
+    "title": "Chapter VII: Reminiscences by Clarina I. Howard Nichols",
+    "chapter": 11,
+    "file": "chapter-11.php",
+    "word_count": 13531,
+    "read_time": 68
+  },
+  "12": {
+    "title": "Chapter VIII: MASSACHUSETTS",
+    "chapter": 12,
+    "file": "chapter-12.php",
+    "word_count": 45917,
+    "read_time": 230
+  },
+  "13": {
+    "title": "Chapter IX: Indiana and Wisconsin",
+    "chapter": 13,
+    "file": "chapter-13.php",
+    "word_count": 14534,
+    "read_time": 73
+  },
+  "14": {
+    "title": "Chapter X: PENNSYLVANIA",
+    "chapter": 14,
+    "file": "chapter-14.php",
+    "word_count": 45987,
+    "read_time": 230
+  },
+  "15": {
+    "title": "Chapter XI: Lucretia Mott",
+    "chapter": 15,
+    "file": "chapter-15.php",
+    "word_count": 16664,
+    "read_time": 83
+  },
+  "16": {
+    "title": "Chapter XII: New Jersey",
+    "chapter": 16,
+    "file": "chapter-16.php",
+    "word_count": 7108,
+    "read_time": 36
+  },
+  "17": {
+    "title": "Chapter XIII: Reminiscences. by E. C. S",
+    "chapter": 17,
+    "file": "chapter-17.php",
+    "word_count": 7797,
+    "read_time": 39
+  },
+  "18": {
+    "title": "Chapter XIV: New York",
+    "chapter": 18,
+    "file": "chapter-18.php",
+    "word_count": 161027,
+    "read_time": 805
+  },
+  "19": {
+    "title": "Chapter XV: Woman, Church, and State. by Matilda Joslyn Gage",
+    "chapter": 19,
+    "file": "chapter-19.php",
+    "word_count": 22994,
+    "read_time": 115
+  },
+  "20": {
+    "title": "Appendix & Historical Documents",
+    "chapter": 20,
+    "file": "chapter-20.php",
+    "word_count": 58526,
+    "read_time": 293
+  }
+}

@@ -48,16 +48,16 @@ if (! function_exists('assetVersion')) {
 
 // Core Platform Version Definition
 if (! defined('HL_SITE_VERSION')) {
-    define('HL_SITE_VERSION', 'v2.15.0');
+    define('HL_SITE_VERSION', 'v2.17.0');
     }
 if (! defined('HL_SITE_VERSION_DATE')) {
     define('HL_SITE_VERSION_DATE', 'October 2026');
     }
 if (! defined('HL_SITE_VERSION_LABEL')) {
-    define('HL_SITE_VERSION_LABEL', 'October 2026 Classic Literature, Vermont Geological & Civil War History Collection');
+    define('HL_SITE_VERSION_LABEL', 'October 2026 History of Woman Suffrage Complete Archive Release');
     }
 if (! defined('HL_SITE_VERSION_SUMMARY')) {
-    define('HL_SITE_VERSION_SUMMARY', 'Full Ingestion of 11 Major Classical, Geological & Historical Works: Wuthering Heights, 6 Vermont State Park & Forest Geology Guides, The Green Mountain Boys, Vermont: A Study of Independence, Vermont Riflemen in the Union War, and The 66-Book Canonical King James Bible');
+    define('HL_SITE_VERSION_SUMMARY', 'Full Ingestion of The History of Woman Suffrage (Volumes I through VI, 1881–1922) by Elizabeth Cady Stanton, Susan B. Anthony, Matilda Joslyn Gage, and Ida Husted Harper, Providing 270+ Chapters of Primary 19th Amendment History in Universal Single-Column Reader');
     }
 ?>
 <!DOCTYPE html>

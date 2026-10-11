@@ -1,0 +1,107 @@
+{
+  "1": {
+    "title": "Preface",
+    "chapter": 1,
+    "file": "chapter-1.php",
+    "word_count": 863,
+    "read_time": 4
+  },
+  "2": {
+    "title": "Table of Contents",
+    "chapter": 2,
+    "file": "chapter-2.php",
+    "word_count": 946,
+    "read_time": 5
+  },
+  "3": {
+    "title": "Illustrations & Engravings",
+    "chapter": 3,
+    "file": "chapter-3.php",
+    "word_count": 54,
+    "read_time": 1
+  },
+  "4": {
+    "title": "Chapter XVI: Woman's Patriotism in the War",
+    "chapter": 4,
+    "file": "chapter-4.php",
+    "word_count": 46790,
+    "read_time": 234
+  },
+  "5": {
+    "title": "Chapter XVII: Congressional Action",
+    "chapter": 5,
+    "file": "chapter-5.php",
+    "word_count": 38826,
+    "read_time": 194
+  },
+  "6": {
+    "title": "Chapter XVIII: National Conventions in 1866-67",
+    "chapter": 6,
+    "file": "chapter-6.php",
+    "word_count": 46767,
+    "read_time": 234
+  },
+  "7": {
+    "title": "Chapter XIX: The Kansas Campaign\u20141867",
+    "chapter": 7,
+    "file": "chapter-7.php",
+    "word_count": 22312,
+    "read_time": 112
+  },
+  "8": {
+    "title": "Chapter XX: New York Constitutional Convention",
+    "chapter": 8,
+    "file": "chapter-8.php",
+    "word_count": 25955,
+    "read_time": 130
+  },
+  "9": {
+    "title": "Chapter XXI: RECONSTRUCTION",
+    "chapter": 9,
+    "file": "chapter-9.php",
+    "word_count": 17572,
+    "read_time": 88
+  },
+  "10": {
+    "title": "Chapter XXII: National Conventions\u20141869",
+    "chapter": 10,
+    "file": "chapter-10.php",
+    "word_count": 36239,
+    "read_time": 181
+  },
+  "11": {
+    "title": "Chapter XXIII: The New Departure",
+    "chapter": 11,
+    "file": "chapter-11.php",
+    "word_count": 69299,
+    "read_time": 346
+  },
+  "12": {
+    "title": "Chapter XXIV: National Conventions 1873, '74, '75",
+    "chapter": 12,
+    "file": "chapter-12.php",
+    "word_count": 39577,
+    "read_time": 198
+  },
+  "13": {
+    "title": "Chapter XXV: Trials and Decisions",
+    "chapter": 13,
+    "file": "chapter-13.php",
+    "word_count": 104213,
+    "read_time": 521
+  },
+  "14": {
+    "title": "Chapter XXVI: American Woman Suffrage Association",
+    "chapter": 14,
+    "file": "chapter-14.php",
+    "word_count": 66806,
+    "read_time": 334
+  },
+  "15": {
+    "title": "Appendix & Historical Documents",
+    "chapter": 15,
+    "file": "chapter-15.php",
+    "word_count": 68594,
+    "read_time": 343
+  }
+}

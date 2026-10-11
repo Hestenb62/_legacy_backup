@@ -1,0 +1,212 @@
+{
+  "1": {
+    "title": "Preface",
+    "chapter": 1,
+    "file": "chapter-1.php",
+    "word_count": 1720,
+    "read_time": 9
+  },
+  "2": {
+    "title": "Table of Contents",
+    "chapter": 2,
+    "file": "chapter-2.php",
+    "word_count": 2460,
+    "read_time": 12
+  },
+  "3": {
+    "title": "Introduction",
+    "chapter": 3,
+    "file": "chapter-3.php",
+    "word_count": 3562,
+    "read_time": 18
+  },
+  "4": {
+    "title": "The National American Woman Suffrage Association: FOREWORD",
+    "chapter": 4,
+    "file": "chapter-4.php",
+    "word_count": 678,
+    "read_time": 3
+  },
+  "5": {
+    "title": "Chapter I: The National American Convention of 1901",
+    "chapter": 5,
+    "file": "chapter-5.php",
+    "word_count": 8684,
+    "read_time": 43
+  },
+  "6": {
+    "title": "Chapter II: The National American Convention of 1902",
+    "chapter": 6,
+    "file": "chapter-6.php",
+    "word_count": 14135,
+    "read_time": 71
+  },
+  "7": {
+    "title": "Chapter III: The National American Convention of 1903",
+    "chapter": 7,
+    "file": "chapter-7.php",
+    "word_count": 13205,
+    "read_time": 66
+  },
+  "8": {
+    "title": "Chapter IV: The National American Convention of 1904",
+    "chapter": 8,
+    "file": "chapter-8.php",
+    "word_count": 13148,
+    "read_time": 66
+  },
+  "9": {
+    "title": "Chapter V: National American Convention of 1905",
+    "chapter": 9,
+    "file": "chapter-9.php",
+    "word_count": 13944,
+    "read_time": 70
+  },
+  "10": {
+    "title": "Chapter VI: National American Convention of 1906",
+    "chapter": 10,
+    "file": "chapter-10.php",
+    "word_count": 17899,
+    "read_time": 89
+  },
+  "11": {
+    "title": "Chapter VII: National American Convention of 1907",
+    "chapter": 11,
+    "file": "chapter-11.php",
+    "word_count": 8947,
+    "read_time": 45
+  },
+  "12": {
+    "title": "Chapter VIII: National American Convention of 1908",
+    "chapter": 12,
+    "file": "chapter-12.php",
+    "word_count": 12685,
+    "read_time": 63
+  },
+  "13": {
+    "title": "Chapter IX: National American Convention of 1909",
+    "chapter": 13,
+    "file": "chapter-13.php",
+    "word_count": 9257,
+    "read_time": 46
+  },
+  "14": {
+    "title": "Chapter X: National American Convention of 1910",
+    "chapter": 14,
+    "file": "chapter-14.php",
+    "word_count": 19466,
+    "read_time": 97
+  },
+  "15": {
+    "title": "Chapter XI: National American Convention of 1911",
+    "chapter": 15,
+    "file": "chapter-15.php",
+    "word_count": 9367,
+    "read_time": 47
+  },
+  "16": {
+    "title": "Chapter XII: National American Convention of 1912",
+    "chapter": 16,
+    "file": "chapter-16.php",
+    "word_count": 14058,
+    "read_time": 70
+  },
+  "17": {
+    "title": "Chapter XIII: National American Convention of 1913",
+    "chapter": 17,
+    "file": "chapter-17.php",
+    "word_count": 14798,
+    "read_time": 74
+  },
+  "18": {
+    "title": "Chapter XIV: National American Convention of 1914",
+    "chapter": 18,
+    "file": "chapter-18.php",
+    "word_count": 18322,
+    "read_time": 92
+  },
+  "19": {
+    "title": "Chapter XV: National American Convention of 1915",
+    "chapter": 19,
+    "file": "chapter-19.php",
+    "word_count": 17406,
+    "read_time": 87
+  },
+  "20": {
+    "title": "Chapter XVI: National American Convention of 1916",
+    "chapter": 20,
+    "file": "chapter-20.php",
+    "word_count": 14654,
+    "read_time": 73
+  },
+  "21": {
+    "title": "Chapter XVII: National American Convention of 1917",
+    "chapter": 21,
+    "file": "chapter-21.php",
+    "word_count": 15331,
+    "read_time": 77
+  },
+  "22": {
+    "title": "Chapter XVIII: National American Convention of 1918-1919",
+    "chapter": 22,
+    "file": "chapter-22.php",
+    "word_count": 17828,
+    "read_time": 89
+  },
+  "23": {
+    "title": "Chapter XIX: National American Convention of 1920",
+    "chapter": 23,
+    "file": "chapter-23.php",
+    "word_count": 10393,
+    "read_time": 52
+  },
+  "24": {
+    "title": "Chapter XX: The Federal Amendment for Woman Suffrage",
+    "chapter": 24,
+    "file": "chapter-24.php",
+    "word_count": 14376,
+    "read_time": 72
+  },
+  "25": {
+    "title": "Chapter XXI: Various Woman Suffrage Associations in the United States",
+    "chapter": 25,
+    "file": "chapter-25.php",
+    "word_count": 9935,
+    "read_time": 50
+  },
+  "26": {
+    "title": "Chapter XXII: The League of Woman Voters",
+    "chapter": 26,
+    "file": "chapter-26.php",
+    "word_count": 6993,
+    "read_time": 35
+  },
+  "27": {
+    "title": "Chapter XXIII: Woman Suffrage in National Presidential Conventions",
+    "chapter": 27,
+    "file": "chapter-27.php",
+    "word_count": 6812,
+    "read_time": 34
+  },
+  "28": {
+    "title": "Chapter XXIV: War Service of Organized Suffragists",
+    "chapter": 28,
+    "file": "chapter-28.php",
+    "word_count": 7906,
+    "read_time": 40
+  },
+  "29": {
+    "title": "Appendix & Historical Documents",
+    "chapter": 29,
+    "file": "chapter-29.php",
+    "word_count": 14281,
+    "read_time": 71
+  },
+  "30": {
+    "title": "Comprehensive Index",
+    "chapter": 30,
+    "file": "chapter-30.php",
+    "word_count": 37916,
+    "read_time": 190
+  }
+}

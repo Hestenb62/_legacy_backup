@@ -132,12 +132,56 @@ if ($bookId === '35088' || $bookId === 'vermont-riflemen') {
 if ($bookId === '10' || $bookId === 'bible' || $bookId === 'the-bible' || $bookId === 'kjv' || $bookId === 'king-james-bible') {
     $bookId = 'the-king-james-bible';
 }
+if ($bookId === '13642' || $bookId === 'journal-of-negro-history' || $bookId === 'journal-of-negro-history-1' || $bookId === 'jnh-1' || $bookId === 'jnh-vol-1') {
+    $bookId = 'journal-of-negro-history-vol-1';
+}
+if ($bookId === '20752' || $bookId === 'journal-of-negro-history-2' || $bookId === 'jnh-2' || $bookId === 'jnh-vol-2') {
+    $bookId = 'journal-of-negro-history-vol-2';
+}
+if ($bookId === '20906' || $bookId === 'journal-of-negro-history-3' || $bookId === 'jnh-3' || $bookId === 'jnh-vol-3') {
+    $bookId = 'journal-of-negro-history-vol-3';
+}
+if ($bookId === '21093' || $bookId === 'journal-of-negro-history-4' || $bookId === 'jnh-4' || $bookId === 'jnh-vol-4') {
+    $bookId = 'journal-of-negro-history-vol-4';
+}
+if ($bookId === '23200' || $bookId === 'journal-of-negro-history-5' || $bookId === 'jnh-5' || $bookId === 'jnh-vol-5') {
+    $bookId = 'journal-of-negro-history-vol-5';
+}
+if ($bookId === '22149' || $bookId === 'journal-of-negro-history-6' || $bookId === 'jnh-6' || $bookId === 'jnh-vol-6') {
+    $bookId = 'journal-of-negro-history-vol-6';
+}
+if ($bookId === '24484' || $bookId === 'journal-of-negro-history-7' || $bookId === 'jnh-7' || $bookId === 'jnh-vol-7') {
+    $bookId = 'journal-of-negro-history-vol-7';
+}
+if ($bookId === '28020' || $bookId === 'history-of-woman-suffrage' || $bookId === 'history-of-woman-suffrage-1' || $bookId === 'suffrage-1' || $bookId === 'suffrage-vol-1') {
+    $bookId = 'history-of-woman-suffrage-vol-1';
+}
+if ($bookId === '28039' || $bookId === 'history-of-woman-suffrage-2' || $bookId === 'suffrage-2' || $bookId === 'suffrage-vol-2') {
+    $bookId = 'history-of-woman-suffrage-vol-2';
+}
+if ($bookId === '28556' || $bookId === 'history-of-woman-suffrage-3' || $bookId === 'suffrage-3' || $bookId === 'suffrage-vol-3') {
+    $bookId = 'history-of-woman-suffrage-vol-3';
+}
+if ($bookId === '29870' || $bookId === 'history-of-woman-suffrage-4' || $bookId === 'suffrage-4' || $bookId === 'suffrage-vol-4') {
+    $bookId = 'history-of-woman-suffrage-vol-4';
+}
+if ($bookId === '29878' || $bookId === 'history-of-woman-suffrage-5' || $bookId === 'suffrage-5' || $bookId === 'suffrage-vol-5') {
+    $bookId = 'history-of-woman-suffrage-vol-5';
+}
+if ($bookId === '30051' || $bookId === 'history-of-woman-suffrage-6' || $bookId === 'suffrage-6' || $bookId === 'suffrage-vol-6') {
+    $bookId = 'history-of-woman-suffrage-vol-6';
+}
 
-
-// Handle volume parameter for multi-volume titles (e.g. The American Yawp)
+// Handle volume parameter for multi-volume titles (The American Yawp, Journal of Negro History, History of Woman Suffrage)
 if (isset($_GET['vol']) && (!isset($_GET['chapter']) || $_GET['chapter'] === '')) {
     $volParam = (int)$_GET['vol'];
-    $_GET['chapter'] = ($volParam === 2) ? 'chapter-15' : 'chapter-1';
+    if (strpos($bookId, 'journal-of-negro-history') === 0 && $volParam >= 1 && $volParam <= 7) {
+        $bookId = 'journal-of-negro-history-vol-' . $volParam;
+    } elseif (strpos($bookId, 'history-of-woman-suffrage') === 0 && $volParam >= 1 && $volParam <= 6) {
+        $bookId = 'history-of-woman-suffrage-vol-' . $volParam;
+    } elseif ($bookId === 'american-yawp') {
+        $_GET['chapter'] = ($volParam === 2) ? 'chapter-15' : 'chapter-1';
+    }
 }
 
 // Load book data from both main catalog and educational drawer resources
