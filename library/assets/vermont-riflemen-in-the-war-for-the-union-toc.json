@@ -1,0 +1,58 @@
+{
+  "1": {
+    "title": "Chapter I: Organization",
+    "chapter": 1,
+    "file": "chapter-1.php",
+    "word_count": 3743,
+    "read_time": 19
+  },
+  "2": {
+    "title": "Chapter II: The Peninsular Campaign",
+    "chapter": 2,
+    "file": "chapter-2.php",
+    "word_count": 11647,
+    "read_time": 58
+  },
+  "3": {
+    "title": "Chapter III: Second Bull Run, Antietam, Fredericksburgh",
+    "chapter": 3,
+    "file": "chapter-3.php",
+    "word_count": 5958,
+    "read_time": 30
+  },
+  "4": {
+    "title": "Chapter IV: Chancellorsville",
+    "chapter": 4,
+    "file": "chapter-4.php",
+    "word_count": 6347,
+    "read_time": 32
+  },
+  "5": {
+    "title": "Chapter V: Gettysburgh to the Wilderness",
+    "chapter": 5,
+    "file": "chapter-5.php",
+    "word_count": 9219,
+    "read_time": 46
+  },
+  "6": {
+    "title": "Chapter VI: The Wilderness, Spotsylvania and Cold Harbor",
+    "chapter": 6,
+    "file": "chapter-6.php",
+    "word_count": 10839,
+    "read_time": 54
+  },
+  "7": {
+    "title": "Chapter VII: Siege of Petersburgh, Muster Out",
+    "chapter": 7,
+    "file": "chapter-7.php",
+    "word_count": 5603,
+    "read_time": 28
+  },
+  "8": {
+    "title": "Chapter VIII: Conclusion & Roster",
+    "chapter": 8,
+    "file": "chapter-8.php",
+    "word_count": 601,
+    "read_time": 3
+  }
+}

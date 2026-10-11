@@ -1,0 +1,240 @@
+{
+  "1": {
+    "title": "Chapter I",
+    "chapter": 1,
+    "file": "chapter-1.php",
+    "word_count": 1920,
+    "read_time": 10
+  },
+  "2": {
+    "title": "Chapter II",
+    "chapter": 2,
+    "file": "chapter-2.php",
+    "word_count": 3336,
+    "read_time": 17
+  },
+  "3": {
+    "title": "Chapter III",
+    "chapter": 3,
+    "file": "chapter-3.php",
+    "word_count": 4818,
+    "read_time": 24
+  },
+  "4": {
+    "title": "Chapter IV",
+    "chapter": 4,
+    "file": "chapter-4.php",
+    "word_count": 2693,
+    "read_time": 13
+  },
+  "5": {
+    "title": "Chapter V",
+    "chapter": 5,
+    "file": "chapter-5.php",
+    "word_count": 1404,
+    "read_time": 7
+  },
+  "6": {
+    "title": "Chapter VI",
+    "chapter": 6,
+    "file": "chapter-6.php",
+    "word_count": 2568,
+    "read_time": 13
+  },
+  "7": {
+    "title": "Chapter VII",
+    "chapter": 7,
+    "file": "chapter-7.php",
+    "word_count": 4006,
+    "read_time": 20
+  },
+  "8": {
+    "title": "Chapter VIII",
+    "chapter": 8,
+    "file": "chapter-8.php",
+    "word_count": 3394,
+    "read_time": 17
+  },
+  "9": {
+    "title": "Chapter IX",
+    "chapter": 9,
+    "file": "chapter-9.php",
+    "word_count": 6073,
+    "read_time": 30
+  },
+  "10": {
+    "title": "Chapter X",
+    "chapter": 10,
+    "file": "chapter-10.php",
+    "word_count": 6312,
+    "read_time": 32
+  },
+  "11": {
+    "title": "Chapter XI",
+    "chapter": 11,
+    "file": "chapter-11.php",
+    "word_count": 4072,
+    "read_time": 20
+  },
+  "12": {
+    "title": "Chapter XII",
+    "chapter": 12,
+    "file": "chapter-12.php",
+    "word_count": 4931,
+    "read_time": 25
+  },
+  "13": {
+    "title": "Chapter XIII",
+    "chapter": 13,
+    "file": "chapter-13.php",
+    "word_count": 4262,
+    "read_time": 21
+  },
+  "14": {
+    "title": "Chapter XIV",
+    "chapter": 14,
+    "file": "chapter-14.php",
+    "word_count": 3366,
+    "read_time": 17
+  },
+  "15": {
+    "title": "Chapter XV",
+    "chapter": 15,
+    "file": "chapter-15.php",
+    "word_count": 3148,
+    "read_time": 16
+  },
+  "16": {
+    "title": "Chapter XVI",
+    "chapter": 16,
+    "file": "chapter-16.php",
+    "word_count": 1755,
+    "read_time": 9
+  },
+  "17": {
+    "title": "Chapter XVII",
+    "chapter": 17,
+    "file": "chapter-17.php",
+    "word_count": 6811,
+    "read_time": 34
+  },
+  "18": {
+    "title": "Chapter XVIII",
+    "chapter": 18,
+    "file": "chapter-18.php",
+    "word_count": 3583,
+    "read_time": 18
+  },
+  "19": {
+    "title": "Chapter XIX",
+    "chapter": 19,
+    "file": "chapter-19.php",
+    "word_count": 1595,
+    "read_time": 8
+  },
+  "20": {
+    "title": "Chapter XX",
+    "chapter": 20,
+    "file": "chapter-20.php",
+    "word_count": 2163,
+    "read_time": 11
+  },
+  "21": {
+    "title": "Chapter XXI",
+    "chapter": 21,
+    "file": "chapter-21.php",
+    "word_count": 6351,
+    "read_time": 32
+  },
+  "22": {
+    "title": "Chapter XXII",
+    "chapter": 22,
+    "file": "chapter-22.php",
+    "word_count": 2338,
+    "read_time": 12
+  },
+  "23": {
+    "title": "Chapter XXIII",
+    "chapter": 23,
+    "file": "chapter-23.php",
+    "word_count": 2885,
+    "read_time": 14
+  },
+  "24": {
+    "title": "Chapter XXIV",
+    "chapter": 24,
+    "file": "chapter-24.php",
+    "word_count": 3892,
+    "read_time": 19
+  },
+  "25": {
+    "title": "Chapter XXV",
+    "chapter": 25,
+    "file": "chapter-25.php",
+    "word_count": 1421,
+    "read_time": 7
+  },
+  "26": {
+    "title": "Chapter XXVI",
+    "chapter": 26,
+    "file": "chapter-26.php",
+    "word_count": 1475,
+    "read_time": 7
+  },
+  "27": {
+    "title": "Chapter XXVII",
+    "chapter": 27,
+    "file": "chapter-27.php",
+    "word_count": 4515,
+    "read_time": 23
+  },
+  "28": {
+    "title": "Chapter XXVIII",
+    "chapter": 28,
+    "file": "chapter-28.php",
+    "word_count": 2621,
+    "read_time": 13
+  },
+  "29": {
+    "title": "Chapter XXIX",
+    "chapter": 29,
+    "file": "chapter-29.php",
+    "word_count": 2277,
+    "read_time": 11
+  },
+  "30": {
+    "title": "Chapter XXX",
+    "chapter": 30,
+    "file": "chapter-30.php",
+    "word_count": 2386,
+    "read_time": 12
+  },
+  "31": {
+    "title": "Chapter XXXI",
+    "chapter": 31,
+    "file": "chapter-31.php",
+    "word_count": 2089,
+    "read_time": 10
+  },
+  "32": {
+    "title": "Chapter XXXII",
+    "chapter": 32,
+    "file": "chapter-32.php",
+    "word_count": 4070,
+    "read_time": 20
+  },
+  "33": {
+    "title": "Chapter XXXIII",
+    "chapter": 33,
+    "file": "chapter-33.php",
+    "word_count": 3138,
+    "read_time": 16
+  },
+  "34": {
+    "title": "Chapter XXXIV",
+    "chapter": 34,
+    "file": "chapter-34.php",
+    "word_count": 4378,
+    "read_time": 22
+  }
+}

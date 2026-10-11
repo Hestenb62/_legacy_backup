@@ -1,0 +1,464 @@
+{
+  "1": {
+    "title": "The First Book of Moses: Called Genesis",
+    "chapter": 1,
+    "file": "chapter-1.php",
+    "word_count": 40188,
+    "read_time": 201
+  },
+  "2": {
+    "title": "The Second Book of Moses: Called Exodus",
+    "chapter": 2,
+    "file": "chapter-2.php",
+    "word_count": 33904,
+    "read_time": 170
+  },
+  "3": {
+    "title": "The Third Book of Moses: Called Leviticus",
+    "chapter": 3,
+    "file": "chapter-3.php",
+    "word_count": 25407,
+    "read_time": 127
+  },
+  "4": {
+    "title": "The Fourth Book of Moses: Called Numbers",
+    "chapter": 4,
+    "file": "chapter-4.php",
+    "word_count": 34188,
+    "read_time": 171
+  },
+  "5": {
+    "title": "The Fifth Book of Moses: Called Deuteronomy",
+    "chapter": 5,
+    "file": "chapter-5.php",
+    "word_count": 29317,
+    "read_time": 147
+  },
+  "6": {
+    "title": "The Book of Joshua",
+    "chapter": 6,
+    "file": "chapter-6.php",
+    "word_count": 19514,
+    "read_time": 98
+  },
+  "7": {
+    "title": "The Book of Judges",
+    "chapter": 7,
+    "file": "chapter-7.php",
+    "word_count": 19588,
+    "read_time": 98
+  },
+  "8": {
+    "title": "The Book of Ruth",
+    "chapter": 8,
+    "file": "chapter-8.php",
+    "word_count": 2663,
+    "read_time": 13
+  },
+  "9": {
+    "title": "The First Book of Samuel",
+    "chapter": 9,
+    "file": "chapter-9.php",
+    "word_count": 25870,
+    "read_time": 129
+  },
+  "10": {
+    "title": "The Second Book of Samuel",
+    "chapter": 10,
+    "file": "chapter-10.php",
+    "word_count": 21307,
+    "read_time": 107
+  },
+  "11": {
+    "title": "The First Book of the Kings",
+    "chapter": 11,
+    "file": "chapter-11.php",
+    "word_count": 25342,
+    "read_time": 127
+  },
+  "12": {
+    "title": "The Second Book of the Kings",
+    "chapter": 12,
+    "file": "chapter-12.php",
+    "word_count": 24251,
+    "read_time": 121
+  },
+  "13": {
+    "title": "The First Book of the Chronicles",
+    "chapter": 13,
+    "file": "chapter-13.php",
+    "word_count": 21313,
+    "read_time": 107
+  },
+  "14": {
+    "title": "The Second Book of the Chronicles",
+    "chapter": 14,
+    "file": "chapter-14.php",
+    "word_count": 26897,
+    "read_time": 134
+  },
+  "15": {
+    "title": "Ezra",
+    "chapter": 15,
+    "file": "chapter-15.php",
+    "word_count": 7721,
+    "read_time": 39
+  },
+  "16": {
+    "title": "The Book of Nehemiah",
+    "chapter": 16,
+    "file": "chapter-16.php",
+    "word_count": 10890,
+    "read_time": 54
+  },
+  "17": {
+    "title": "The Book of Esther",
+    "chapter": 17,
+    "file": "chapter-17.php",
+    "word_count": 5803,
+    "read_time": 29
+  },
+  "18": {
+    "title": "The Book of Job",
+    "chapter": 18,
+    "file": "chapter-18.php",
+    "word_count": 19172,
+    "read_time": 96
+  },
+  "19": {
+    "title": "The Book of Psalms",
+    "chapter": 19,
+    "file": "chapter-19.php",
+    "word_count": 45149,
+    "read_time": 226
+  },
+  "20": {
+    "title": "The Proverbs",
+    "chapter": 20,
+    "file": "chapter-20.php",
+    "word_count": 15955,
+    "read_time": 80
+  },
+  "21": {
+    "title": "Ecclesiastes",
+    "chapter": 21,
+    "file": "chapter-21.php",
+    "word_count": 5805,
+    "read_time": 29
+  },
+  "22": {
+    "title": "The Song of Solomon",
+    "chapter": 22,
+    "file": "chapter-22.php",
+    "word_count": 2779,
+    "read_time": 14
+  },
+  "23": {
+    "title": "The Book of the Prophet Isaiah",
+    "chapter": 23,
+    "file": "chapter-23.php",
+    "word_count": 38336,
+    "read_time": 192
+  },
+  "24": {
+    "title": "The Book of the Prophet Jeremiah",
+    "chapter": 24,
+    "file": "chapter-24.php",
+    "word_count": 44024,
+    "read_time": 220
+  },
+  "25": {
+    "title": "The Lamentations of Jeremiah",
+    "chapter": 25,
+    "file": "chapter-25.php",
+    "word_count": 3569,
+    "read_time": 18
+  },
+  "26": {
+    "title": "The Book of the Prophet Ezekiel",
+    "chapter": 26,
+    "file": "chapter-26.php",
+    "word_count": 40680,
+    "read_time": 203
+  },
+  "27": {
+    "title": "The Book of Daniel",
+    "chapter": 27,
+    "file": "chapter-27.php",
+    "word_count": 11964,
+    "read_time": 60
+  },
+  "28": {
+    "title": "Hosea",
+    "chapter": 28,
+    "file": "chapter-28.php",
+    "word_count": 5372,
+    "read_time": 27
+  },
+  "29": {
+    "title": "Joel",
+    "chapter": 29,
+    "file": "chapter-29.php",
+    "word_count": 2107,
+    "read_time": 11
+  },
+  "30": {
+    "title": "Amos",
+    "chapter": 30,
+    "file": "chapter-30.php",
+    "word_count": 4363,
+    "read_time": 22
+  },
+  "31": {
+    "title": "Obadiah",
+    "chapter": 31,
+    "file": "chapter-31.php",
+    "word_count": 691,
+    "read_time": 3
+  },
+  "32": {
+    "title": "Jonah",
+    "chapter": 32,
+    "file": "chapter-32.php",
+    "word_count": 1369,
+    "read_time": 7
+  },
+  "33": {
+    "title": "Micah",
+    "chapter": 33,
+    "file": "chapter-33.php",
+    "word_count": 3258,
+    "read_time": 16
+  },
+  "34": {
+    "title": "Nahum",
+    "chapter": 34,
+    "file": "chapter-34.php",
+    "word_count": 1332,
+    "read_time": 7
+  },
+  "35": {
+    "title": "Habakkuk",
+    "chapter": 35,
+    "file": "chapter-35.php",
+    "word_count": 1532,
+    "read_time": 8
+  },
+  "36": {
+    "title": "Zephaniah",
+    "chapter": 36,
+    "file": "chapter-36.php",
+    "word_count": 1670,
+    "read_time": 8
+  },
+  "37": {
+    "title": "Haggai",
+    "chapter": 37,
+    "file": "chapter-37.php",
+    "word_count": 1169,
+    "read_time": 6
+  },
+  "38": {
+    "title": "Zechariah",
+    "chapter": 38,
+    "file": "chapter-38.php",
+    "word_count": 6655,
+    "read_time": 33
+  },
+  "39": {
+    "title": "Malachi",
+    "chapter": 39,
+    "file": "chapter-39.php",
+    "word_count": 1837,
+    "read_time": 9
+  },
+  "40": {
+    "title": "The Gospel According to Saint Matthew",
+    "chapter": 40,
+    "file": "chapter-40.php",
+    "word_count": 24769,
+    "read_time": 124
+  },
+  "41": {
+    "title": "The Gospel According to Saint Mark",
+    "chapter": 41,
+    "file": "chapter-41.php",
+    "word_count": 15850,
+    "read_time": 79
+  },
+  "42": {
+    "title": "The Gospel According to Saint Luke",
+    "chapter": 42,
+    "file": "chapter-42.php",
+    "word_count": 27096,
+    "read_time": 135
+  },
+  "43": {
+    "title": "The Gospel According to Saint John",
+    "chapter": 43,
+    "file": "chapter-43.php",
+    "word_count": 19980,
+    "read_time": 100
+  },
+  "44": {
+    "title": "The Acts of the Apostles",
+    "chapter": 44,
+    "file": "chapter-44.php",
+    "word_count": 25258,
+    "read_time": 126
+  },
+  "45": {
+    "title": "The Epistle of Paul the Apostle to the Romans",
+    "chapter": 45,
+    "file": "chapter-45.php",
+    "word_count": 9864,
+    "read_time": 49
+  },
+  "46": {
+    "title": "The First Epistle of Paul the Apostle to the Corinthians",
+    "chapter": 46,
+    "file": "chapter-46.php",
+    "word_count": 9909,
+    "read_time": 50
+  },
+  "47": {
+    "title": "The Second Epistle of Paul the Apostle to the Corinthians",
+    "chapter": 47,
+    "file": "chapter-47.php",
+    "word_count": 6332,
+    "read_time": 32
+  },
+  "48": {
+    "title": "The Epistle of Paul the Apostle to the Galatians",
+    "chapter": 48,
+    "file": "chapter-48.php",
+    "word_count": 3242,
+    "read_time": 16
+  },
+  "49": {
+    "title": "The Epistle of Paul the Apostle to the Ephesians",
+    "chapter": 49,
+    "file": "chapter-49.php",
+    "word_count": 3186,
+    "read_time": 16
+  },
+  "50": {
+    "title": "The Epistle of Paul the Apostle to the Philippians",
+    "chapter": 50,
+    "file": "chapter-50.php",
+    "word_count": 2296,
+    "read_time": 11
+  },
+  "51": {
+    "title": "The Epistle of Paul the Apostle to the Colossians",
+    "chapter": 51,
+    "file": "chapter-51.php",
+    "word_count": 2083,
+    "read_time": 10
+  },
+  "52": {
+    "title": "The First Epistle of Paul the Apostle to the Thessalonians",
+    "chapter": 52,
+    "file": "chapter-52.php",
+    "word_count": 1936,
+    "read_time": 10
+  },
+  "53": {
+    "title": "The Second Epistle of Paul the Apostle to the Thessalonians",
+    "chapter": 53,
+    "file": "chapter-53.php",
+    "word_count": 1079,
+    "read_time": 5
+  },
+  "54": {
+    "title": "The First Epistle of Paul the Apostle to Timothy",
+    "chapter": 54,
+    "file": "chapter-54.php",
+    "word_count": 2366,
+    "read_time": 12
+  },
+  "55": {
+    "title": "The Second Epistle of Paul the Apostle to Timothy",
+    "chapter": 55,
+    "file": "chapter-55.php",
+    "word_count": 1758,
+    "read_time": 9
+  },
+  "56": {
+    "title": "The Epistle of Paul the Apostle to Titus",
+    "chapter": 56,
+    "file": "chapter-56.php",
+    "word_count": 950,
+    "read_time": 5
+  },
+  "57": {
+    "title": "The Epistle of Paul the Apostle to Philemon",
+    "chapter": 57,
+    "file": "chapter-57.php",
+    "word_count": 463,
+    "read_time": 2
+  },
+  "58": {
+    "title": "The Epistle of Paul the Apostle to the Hebrews",
+    "chapter": 58,
+    "file": "chapter-58.php",
+    "word_count": 7209,
+    "read_time": 36
+  },
+  "59": {
+    "title": "The General Epistle of James",
+    "chapter": 59,
+    "file": "chapter-59.php",
+    "word_count": 2417,
+    "read_time": 12
+  },
+  "60": {
+    "title": "The First Epistle General of Peter",
+    "chapter": 60,
+    "file": "chapter-60.php",
+    "word_count": 2586,
+    "read_time": 13
+  },
+  "61": {
+    "title": "The Second General Epistle of Peter",
+    "chapter": 61,
+    "file": "chapter-61.php",
+    "word_count": 1620,
+    "read_time": 8
+  },
+  "62": {
+    "title": "The First Epistle General of John",
+    "chapter": 62,
+    "file": "chapter-62.php",
+    "word_count": 2627,
+    "read_time": 13
+  },
+  "63": {
+    "title": "The Second Epistle General of John",
+    "chapter": 63,
+    "file": "chapter-63.php",
+    "word_count": 317,
+    "read_time": 2
+  },
+  "64": {
+    "title": "The Third Epistle General of John",
+    "chapter": 64,
+    "file": "chapter-64.php",
+    "word_count": 314,
+    "read_time": 2
+  },
+  "65": {
+    "title": "The General Epistle of Jude",
+    "chapter": 65,
+    "file": "chapter-65.php",
+    "word_count": 638,
+    "read_time": 3
+  },
+  "66": {
+    "title": "The Revelation of Saint John the Divine",
+    "chapter": 66,
+    "file": "chapter-66.php",
+    "word_count": 12406,
+    "read_time": 62
+  }
+}

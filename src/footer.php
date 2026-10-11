@@ -73,10 +73,6 @@
                                 class="fas fa-users footer-link-icon"></i> For Parents</a></li>
                     <li class="footer-link-item"><a href="/pages/teachers.php"><i
                                 class="fas fa-chalkboard-teacher footer-link-icon"></i> For Teachers</a></li>
-                    <li class="footer-link-item"><a href="/pages/word-search.php"><i
-                                class="fas fa-th footer-link-icon"></i> Word Search Studio</a></li>
-                    <li class="footer-link-item"><a href="/pages/crossword.php"><i
-                                class="fas fa-pen-nib footer-link-icon"></i> Crossword Studio</a></li>
                 </ul>
             </div>
 
@@ -100,9 +96,9 @@
 
         <!-- Version Status & Release Info Strip (WCAG Operable) -->
         <?php
-        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.14.0';
-        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'October 2026 American Civics & Historic Freedom Classics Release';
-        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Full Ingestion of Core American Civics & Freedom Classics: Declaration of Independence, Bill of Rights, US Constitution, and Patrick Henry Speech with Spoken Audio Narration';
+        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.15.0';
+        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'October 2026 Classic Literature, Vermont Geological & Civil War History Collection';
+        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Full Ingestion of 11 Major Classical, Geological & Historical Works: Wuthering Heights, 6 Vermont State Park & Forest Geology Guides, The Green Mountain Boys, Vermont: A Study of Independence, Vermont Riflemen in the Union War, and The 66-Book Canonical King James Bible';
         ?>
         <div class="footer-version-strip" role="region" aria-label="Platform Version Information">
             <div class="footer-version-info">
@@ -275,15 +271,39 @@
                 </span>
             </div>
             <p class="footer-vmodal-lead">
-                Version <?= htmlspecialchars($siteVersion) ?> introduces foundational <strong>American Civics &amp; Historic Freedom Classics</strong> alongside the Project Gutenberg Top Downloaded Literature Collection—providing full multi-chapter reader navigation, primary source transcriptions, spoken word audio narration, and universal UDL accessibility.
+                Version <?= htmlspecialchars($siteVersion) ?> introduces 11 major literary, geological, and historical works from Project Gutenberg—featuring <em>Wuthering Heights</em>, the complete 66-Book <em>King James Bible</em>, 6 Vermont State Park &amp; Forest geological guides, and essential Vermont Revolutionary &amp; Civil War historical texts, all rendered in the distraction-free single-column universal digital reader with full TOC navigation and UDL accessibility.
             </p>
             <ul class="footer-vmodal-features">
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(147, 51, 234, 0.15); color: #9333ea;">
+                        <i class="fas fa-book-sparkles"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Classic Literature &amp; Canonical Scripture:</strong> Complete chapterized digital reader editions of Emily Brontë's Gothic masterpiece <em>Wuthering Heights</em> (34 chapters, eBook #768) and the Authorized <em>King James Version of the Bible</em> (complete 66-book canonical editions across Old and New Testaments, eBook #10).
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(14, 165, 233, 0.15); color: #0284c7;">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Vermont Geological State Parks &amp; Forests Collection:</strong> Six illustrated geological field guides by Harry W. Dodge and Robert A. Christman covering <em>The Geology of Button Bay State Park</em> (eBook #61230), <em>Calvin Coolidge State Forest</em> (eBook #61400), <em>Darling State Park &amp; Burke Mountain</em> (eBook #60730), <em>D.A.R., Mt. Philo, and Sand Bar State Parks</em> (eBook #60989), <em>Groton State Forest</em> (eBook #60710), and <em>Mount Mansfield State Forest</em> (eBook #62053) with responsive maps and geological cross-sections.
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(234, 88, 12, 0.15); color: #c2410c;">
+                        <i class="fas fa-flag-usa"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Vermont Early Republic &amp; Civil War Histories:</strong> Authoritative historical works including Philip H. Smith's <em>The Green Mountain Boys: or, Vermont and the New York land jobbers</em> (13 chapters, eBook #74334), Rowland E. Robinson's comprehensive <em>Vermont: A Study of Independence</em> (25 chapters, eBook #35573), and Lt. Col. William Y. W. Ripley's firsthand regimental account <em>Vermont riflemen in the war for the union, 1861 to 1865: A history of Company F, First United States sharp shooters</em> (8 chapters, eBook #35088).
+                    </div>
+                </li>
                 <li class="footer-vmodal-feature-item">
                     <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(225, 29, 72, 0.15); color: #e11d48;">
                         <i class="fas fa-landmark"></i>
                     </div>
                     <div class="footer-vmodal-feature-text">
-                        <strong>American Civics &amp; Historic Freedom Classics:</strong> Complete digital library ingestion of foundational American historical texts from Project Gutenberg: <em>The Declaration of Independence</em> (Thomas Jefferson, eBook #1), <em>The United States Bill of Rights</em> (Amendments I–X, eBook #2), <em>The United States Constitution</em> (Articles I–VII, eBook #5), and Patrick Henry's immortal <em>"Give Me Liberty or Give Me Death"</em> oration (eBook #6) with integrated LibriVox public domain spoken word audio narration (eBook #20046).
+                        <strong>American Civics &amp; Historic Freedom Classics:</strong> Complete digital library ingestion of foundational American historical texts: <em>The Declaration of Independence</em> (eBook #1), <em>The United States Bill of Rights</em> (eBook #2), <em>The United States Constitution</em> (eBook #5), and Patrick Henry's <em>"Give Me Liberty or Give Me Death"</em> oration (eBook #6 &amp; #20046).
                     </div>
                 </li>
                 <li class="footer-vmodal-feature-item">

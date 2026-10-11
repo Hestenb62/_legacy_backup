@@ -1,0 +1,37 @@
+{
+  "1": {
+    "title": "Introduction & Geological Panorama",
+    "chapter": 1,
+    "file": "chapter-1.php",
+    "word_count": 502,
+    "read_time": 3
+  },
+  "2": {
+    "title": "Granite and Related Rocks",
+    "chapter": 2,
+    "file": "chapter-2.php",
+    "word_count": 2759,
+    "read_time": 14
+  },
+  "3": {
+    "title": "Glaciation & Roche Moutonn\u00e9es",
+    "chapter": 3,
+    "file": "chapter-3.php",
+    "word_count": 877,
+    "read_time": 4
+  },
+  "4": {
+    "title": "Geology of Nearby Areas (Ricker Mills & Jerry Lund Mtn)",
+    "chapter": 4,
+    "file": "chapter-4.php",
+    "word_count": 646,
+    "read_time": 3
+  },
+  "5": {
+    "title": "Trips to Take, Footnotes & Guide Notes",
+    "chapter": 5,
+    "file": "chapter-5.php",
+    "word_count": 663,
+    "read_time": 3
+  }
+}

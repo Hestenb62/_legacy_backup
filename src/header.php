@@ -48,16 +48,16 @@ if (! function_exists('assetVersion')) {
 
 // Core Platform Version Definition
 if (! defined('HL_SITE_VERSION')) {
-    define('HL_SITE_VERSION', 'v2.14.0');
+    define('HL_SITE_VERSION', 'v2.15.0');
     }
 if (! defined('HL_SITE_VERSION_DATE')) {
     define('HL_SITE_VERSION_DATE', 'October 2026');
     }
 if (! defined('HL_SITE_VERSION_LABEL')) {
-    define('HL_SITE_VERSION_LABEL', 'October 2026 American Civics & Historic Freedom Classics Release');
+    define('HL_SITE_VERSION_LABEL', 'October 2026 Classic Literature, Vermont Geological & Civil War History Collection');
     }
 if (! defined('HL_SITE_VERSION_SUMMARY')) {
-    define('HL_SITE_VERSION_SUMMARY', 'Full Ingestion of Core American Civics & Freedom Classics: Declaration of Independence, Bill of Rights, US Constitution, and Patrick Henry Speech with Spoken Audio Narration');
+    define('HL_SITE_VERSION_SUMMARY', 'Full Ingestion of 11 Major Classical, Geological & Historical Works: Wuthering Heights, 6 Vermont State Park & Forest Geology Guides, The Green Mountain Boys, Vermont: A Study of Independence, Vermont Riflemen in the Union War, and The 66-Book Canonical King James Bible');
     }
 ?>
 <!DOCTYPE html>

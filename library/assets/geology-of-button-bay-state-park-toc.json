@@ -1,0 +1,37 @@
+{
+  "1": {
+    "title": "Introduction & Geological Setting",
+    "chapter": 1,
+    "file": "chapter-1.php",
+    "word_count": 486,
+    "read_time": 2
+  },
+  "2": {
+    "title": "The Geology of Button Bay State Park",
+    "chapter": 2,
+    "file": "chapter-2.php",
+    "word_count": 1179,
+    "read_time": 6
+  },
+  "3": {
+    "title": "The Clays of Button Bay State Park",
+    "chapter": 3,
+    "file": "chapter-3.php",
+    "word_count": 1500,
+    "read_time": 8
+  },
+  "4": {
+    "title": "The Older Rocks & Stratigraphy",
+    "chapter": 4,
+    "file": "chapter-4.php",
+    "word_count": 835,
+    "read_time": 4
+  },
+  "5": {
+    "title": "Suggested Reading, Footnotes & Guide Notes",
+    "chapter": 5,
+    "file": "chapter-5.php",
+    "word_count": 1416,
+    "read_time": 7
+  }
+}

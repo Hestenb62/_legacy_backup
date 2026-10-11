@@ -1,0 +1,30 @@
+{
+  "1": {
+    "title": "The Geology of D.A.R. State Park & Ancient Fossils",
+    "chapter": 1,
+    "file": "chapter-1.php",
+    "word_count": 3123,
+    "read_time": 16
+  },
+  "2": {
+    "title": "The Geology of Mt. Philo State Forest Park & Champlain Thrust",
+    "chapter": 2,
+    "file": "chapter-2.php",
+    "word_count": 2222,
+    "read_time": 11
+  },
+  "3": {
+    "title": "The Geology of Sand Bar State Park & River Deltas",
+    "chapter": 3,
+    "file": "chapter-3.php",
+    "word_count": 639,
+    "read_time": 3
+  },
+  "4": {
+    "title": "Suggested Reading, Footnotes & Transcriber's Notes",
+    "chapter": 4,
+    "file": "chapter-4.php",
+    "word_count": 1041,
+    "read_time": 5
+  }
+}

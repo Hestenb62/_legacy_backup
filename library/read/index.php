@@ -99,6 +99,40 @@ if ($bookId === 'united-states-constitution' || $bookId === 'constitution') {
 if ($bookId === 'bill-of-rights' || $bookId === 'united-states-bill-of-rights') {
     $bookId = 'the-united-states-bill-of-rights';
 }
+if ($bookId === '768') {
+    $bookId = 'wuthering-heights';
+}
+if ($bookId === '61230' || $bookId === 'button-bay') {
+    $bookId = 'geology-of-button-bay-state-park';
+}
+if ($bookId === '61400' || $bookId === 'calvin-coolidge') {
+    $bookId = 'geology-of-calvin-coolidge-state-forest';
+}
+if ($bookId === '60730' || $bookId === 'darling-state-park') {
+    $bookId = 'geology-of-darling-state-park';
+}
+if ($bookId === '60989' || $bookId === 'dar-state-park' || $bookId === 'mt-philo') {
+    $bookId = 'geology-of-dar-mt-philo-sand-bar-state-parks';
+}
+if ($bookId === '60710' || $bookId === 'groton-state-forest') {
+    $bookId = 'geology-of-groton-state-forest';
+}
+if ($bookId === '62053' || $bookId === 'mt-mansfield') {
+    $bookId = 'geology-of-mt-mansfield-state-forest';
+}
+if ($bookId === '74334' || $bookId === 'green-mountain-boys') {
+    $bookId = 'the-green-mountain-boys';
+}
+if ($bookId === '35573' || $bookId === 'vermont-independence') {
+    $bookId = 'vermont-a-study-of-independence';
+}
+if ($bookId === '35088' || $bookId === 'vermont-riflemen') {
+    $bookId = 'vermont-riflemen-in-the-war-for-the-union';
+}
+if ($bookId === '10' || $bookId === 'bible' || $bookId === 'the-bible' || $bookId === 'kjv' || $bookId === 'king-james-bible') {
+    $bookId = 'the-king-james-bible';
+}
+
 
 // Handle volume parameter for multi-volume titles (e.g. The American Yawp)
 if (isset($_GET['vol']) && (!isset($_GET['chapter']) || $_GET['chapter'] === '')) {
