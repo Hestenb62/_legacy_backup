@@ -246,11 +246,6 @@ body.zen-mode {
                     <i class="fas fa-graduation-cap" aria-hidden="true"></i>
                 </button>
 
-                <!-- Two-Page Spread Mode Toggle -->
-                <button type="button" id="spread-mode-toggle" class="tool-btn" title="Toggle Two-Page Book Spread Mode" aria-label="Toggle Two-Page Spread Mode">
-                    <i class="fas fa-book-open" aria-hidden="true"></i>
-                </button>
-
                 <!-- Typography & Themes Panel Toggle -->
                 <button type="button" id="open-settings-btn" class="tool-btn tool-btn-settings" title="Typography, Font & Theme Settings" aria-label="Open Reader Settings">
                     <i class="fas fa-font" aria-hidden="true"></i>
@@ -918,51 +913,11 @@ body.zen-mode {
             });
         }
 
-        // --- 3. Two-Page Spread Mode Handler ---
-        const spreadBtn = document.getElementById('spread-mode-toggle');
-        if (spreadBtn) {
-            const SPREAD_KEY = 'hesten_reader_spread_mode';
-            const savedSpread = localStorage.getItem(SPREAD_KEY) === 'true';
-
-            function setSpreadMode(active) {
-                if (active && window.innerWidth >= 900) {
-                    document.body.classList.add('mode-spread');
-                    spreadBtn.classList.add('active');
-                    spreadBtn.setAttribute('aria-pressed', 'true');
-                    spreadBtn.title = 'Switch to Single-Column Scroll Mode';
-                } else {
-                    document.body.classList.remove('mode-spread');
-                    spreadBtn.classList.remove('active');
-                    spreadBtn.setAttribute('aria-pressed', 'false');
-                    spreadBtn.title = 'Toggle Two-Page Book Spread Mode';
-                }
-            }
-
-            if (savedSpread && window.innerWidth >= 900) {
-                setSpreadMode(true);
-            }
-
-            spreadBtn.addEventListener('click', () => {
-                const willBeSpread = !document.body.classList.contains('mode-spread');
-                setSpreadMode(willBeSpread);
-                try {
-                    localStorage.setItem(SPREAD_KEY, willBeSpread ? 'true' : 'false');
-                } catch(e) {}
-                if (window.announceA11y) {
-                    window.announceA11y(willBeSpread ? 'Two-page book spread mode enabled' : 'Single-column scroll mode enabled');
-                }
-            });
-
-            window.addEventListener('resize', () => {
-                if (window.innerWidth < 900 && document.body.classList.contains('mode-spread')) {
-                    document.body.classList.remove('mode-spread');
-                    spreadBtn.classList.remove('active');
-                } else if (window.innerWidth >= 900 && localStorage.getItem(SPREAD_KEY) === 'true') {
-                    document.body.classList.add('mode-spread');
-                    spreadBtn.classList.add('active');
-                }
-            });
-        }
+        // --- 3. Enforce Normal Single-Column Page Layout & Clean Up Legacy Spread Setting ---
+        try {
+            localStorage.removeItem('hesten_reader_spread_mode');
+            document.body.classList.remove('mode-spread');
+        } catch(e) {}
     })();
 </script>
 

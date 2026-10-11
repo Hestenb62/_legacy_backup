@@ -15,7 +15,7 @@ Explore the world's most downloaded public-domain literary and historical master
 - **Reading Themes:** Choose between Light, Sepia, Dark, and Midnight high-contrast themes.
 - **Bionic Reading Fixations:** Toggle cognitive bionic reading mode to bold the initial letters of each word, guiding eye fixations and accelerating reading comprehension.
 - **Distraction-Free Zen Mode:** Press `Z` or `Esc` to enter full-screen Zen mode, hiding all outer navigation bars and focusing purely on the text.
-- **Dual-Page Spread Mode:** Toggle two-column book spread view on large desktop monitors for a classic hardcover reading experience.
+- **Single-Column Normal Page Flow:** Standard, distraction-free vertical scroll flow with adaptive responsive reading widths (Compact, Adaptive, Wide, Full) and zero column interruptions.
 - **Persistent Reading Progress:** The platform automatically records your chapter progress and scroll depth in local storage, providing a 1-click **Continue Reading** button when reopening any book.
 
 ### Complete 31-Volume Collection Inventory

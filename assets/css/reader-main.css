@@ -1097,43 +1097,35 @@ body.theme-midnight .tts-active-word {
 /* ==========================================================================
    Dual-Column / Two-Page Book Spread Mode
    ========================================================================== */
-@media (min-width: 900px) {
-    body.mode-spread .reader-main-layout {
-        max-width: 1440px !important;
-        width: 95% !important;
-    }
+/* ==========================================================================
+   Normal Single-Column Page Reading Flow (No Multi-Column Splitting)
+   ========================================================================== */
+.reader-main-content,
+body.mode-scroll .reader-main-content,
+body.mode-spread .reader-main-content,
+body .reader-main-content {
+    column-count: 1 !important;
+    columns: auto !important;
+    column-gap: normal !important;
+    column-rule: none !important;
+    column-width: auto !important;
+    column-fill: auto !important;
+}
 
-    body.mode-spread.mode-scroll .single-book-stage,
-    body.mode-spread .single-book-stage {
-        max-width: 100% !important;
-    }
+.reader-main-content p,
+body.mode-spread .reader-main-content p {
+    break-inside: auto !important;
+}
 
-    body.mode-spread.mode-scroll .reader-main-content,
-    body.mode-spread .reader-main-content {
-        column-count: 2 !important;
-        column-gap: 3.5rem !important;
-        column-rule: none !important;
-        max-width: 1400px !important;
-        width: 100% !important;
-        text-align: justify;
-        text-justify: inter-word;
-        padding: 3rem 3.5rem !important;
-    }
+.reader-main-content h1,
+.reader-main-content h2,
+.reader-main-content h3,
+.book-running-header,
+.reader-chapter-end-row {
+    column-span: none !important;
+}
 
-    body.mode-spread .reader-main-content h1,
-    body.mode-spread .reader-main-content h2,
-    body.mode-spread .reader-main-content h3,
-    body.mode-spread .book-running-header,
-    body.mode-spread .reader-chapter-end-row {
-        column-span: all !important;
-        text-align: center;
-        margin-top: 1.5rem;
-        margin-bottom: 1.5rem;
-    }
-
-    body.mode-spread .reader-main-content p {
-        break-inside: avoid-column;
-        margin-bottom: 1.25em;
-    }
+#spread-mode-toggle {
+    display: none !important;
 }
 
