@@ -1112,7 +1112,7 @@ body.theme-midnight .tts-active-word {
     body.mode-spread .reader-main-content {
         column-count: 2 !important;
         column-gap: 3.5rem !important;
-        column-rule: 1px solid var(--color-border, rgba(0, 0, 0, 0.12)) !important;
+        column-rule: none !important;
         max-width: 1400px !important;
         width: 100% !important;
         text-align: justify;
