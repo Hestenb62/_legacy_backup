@@ -100,9 +100,9 @@
 
         <!-- Version Status & Release Info Strip (WCAG Operable) -->
         <?php
-        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.12.4';
-        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'October 2026 Home Page Streamlining & Reading Suite Release';
-        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Streamlined Home Page Experience without Platform Guide Popup, American Yawp Multi-Volume Digital Reading Suite, UDL Accessibility Compliance';
+        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.14.0';
+        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'October 2026 American Civics & Historic Freedom Classics Release';
+        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Full Ingestion of Core American Civics & Freedom Classics: Declaration of Independence, Bill of Rights, US Constitution, and Patrick Henry Speech with Spoken Audio Narration';
         ?>
         <div class="footer-version-strip" role="region" aria-label="Platform Version Information">
             <div class="footer-version-info">
@@ -275,9 +275,17 @@
                 </span>
             </div>
             <p class="footer-vmodal-lead">
-                Version <?= htmlspecialchars($siteVersion) ?> delivers the <strong>Project Gutenberg Top 31 Downloaded Classics Collection</strong>—expanding the digital library with 31 timeless literary masterpieces, full multi-chapter reader navigation, high-speed precomputed TOC indexation, and universal UDL accessibility tools.
+                Version <?= htmlspecialchars($siteVersion) ?> introduces foundational <strong>American Civics &amp; Historic Freedom Classics</strong> alongside the Project Gutenberg Top Downloaded Literature Collection—providing full multi-chapter reader navigation, primary source transcriptions, spoken word audio narration, and universal UDL accessibility.
             </p>
             <ul class="footer-vmodal-features">
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(225, 29, 72, 0.15); color: #e11d48;">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>American Civics &amp; Historic Freedom Classics:</strong> Complete digital library ingestion of foundational American historical texts from Project Gutenberg: <em>The Declaration of Independence</em> (Thomas Jefferson, eBook #1), <em>The United States Bill of Rights</em> (Amendments I–X, eBook #2), <em>The United States Constitution</em> (Articles I–VII, eBook #5), and Patrick Henry's immortal <em>"Give Me Liberty or Give Me Death"</em> oration (eBook #6) with integrated LibriVox public domain spoken word audio narration (eBook #20046).
+                    </div>
+                </li>
                 <li class="footer-vmodal-feature-item">
                     <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(16, 185, 129, 0.15); color: #059669;">
                         <i class="fas fa-books"></i>

@@ -1,0 +1,44 @@
+{
+  "1": {
+    "title": "Preamble & Article I: The Legislative Branch",
+    "file": "chapter-1.php",
+    "word_count": 2328,
+    "read_time": 13
+  },
+  "2": {
+    "title": "Article II: The Executive Branch",
+    "file": "chapter-2.php",
+    "word_count": 1028,
+    "read_time": 6
+  },
+  "3": {
+    "title": "Article III: The Judicial Branch",
+    "file": "chapter-3.php",
+    "word_count": 374,
+    "read_time": 2
+  },
+  "4": {
+    "title": "Article IV: States and Federal Relations",
+    "file": "chapter-4.php",
+    "word_count": 334,
+    "read_time": 2
+  },
+  "5": {
+    "title": "Article V: The Amendment Process",
+    "file": "chapter-5.php",
+    "word_count": 145,
+    "read_time": 1
+  },
+  "6": {
+    "title": "Article VI: Debts, Supremacy & Oaths",
+    "file": "chapter-6.php",
+    "word_count": 156,
+    "read_time": 1
+  },
+  "7": {
+    "title": "Article VII & Signers of the Constitution",
+    "file": "chapter-7.php",
+    "word_count": 188,
+    "read_time": 1
+  }
+}

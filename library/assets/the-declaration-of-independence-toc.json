@@ -1,0 +1,20 @@
+{
+  "1": {
+    "title": "Introduction & Historical Context",
+    "file": "chapter-1.php",
+    "word_count": 481,
+    "read_time": 3
+  },
+  "2": {
+    "title": "The Unanimous Declaration of Independence",
+    "file": "chapter-2.php",
+    "word_count": 1368,
+    "read_time": 8
+  },
+  "3": {
+    "title": "Thomas Jefferson's Handwritten Drafts & Notes",
+    "file": "chapter-3.php",
+    "word_count": 94,
+    "read_time": 1
+  }
+}

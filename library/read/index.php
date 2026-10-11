@@ -90,6 +90,15 @@ $bookId = $normalizedSlug;
 if ($bookId === 'the-american-yawp') {
     $bookId = 'american-yawp';
 }
+if ($bookId === 'declaration-of-independence') {
+    $bookId = 'the-declaration-of-independence';
+}
+if ($bookId === 'united-states-constitution' || $bookId === 'constitution') {
+    $bookId = 'the-united-states-constitution';
+}
+if ($bookId === 'bill-of-rights' || $bookId === 'united-states-bill-of-rights') {
+    $bookId = 'the-united-states-bill-of-rights';
+}
 
 // Handle volume parameter for multi-volume titles (e.g. The American Yawp)
 if (isset($_GET['vol']) && (!isset($_GET['chapter']) || $_GET['chapter'] === '')) {

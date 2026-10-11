@@ -48,16 +48,16 @@ if (! function_exists('assetVersion')) {
 
 // Core Platform Version Definition
 if (! defined('HL_SITE_VERSION')) {
-    define('HL_SITE_VERSION', 'v2.13.0');
+    define('HL_SITE_VERSION', 'v2.14.0');
     }
 if (! defined('HL_SITE_VERSION_DATE')) {
     define('HL_SITE_VERSION_DATE', 'October 2026');
     }
 if (! defined('HL_SITE_VERSION_LABEL')) {
-    define('HL_SITE_VERSION_LABEL', 'October 2026 Project Gutenberg Top Classics Digital Library Release');
+    define('HL_SITE_VERSION_LABEL', 'October 2026 American Civics & Historic Freedom Classics Release');
     }
 if (! defined('HL_SITE_VERSION_SUMMARY')) {
-    define('HL_SITE_VERSION_SUMMARY', 'Full Ingestion of 31 Top Downloaded Project Gutenberg Classics, Unified Multi-Chapter Reader Architecture, High-Speed Precomputed TOC Indexing, and UDL Accessibility Suite');
+    define('HL_SITE_VERSION_SUMMARY', 'Full Ingestion of Core American Civics & Freedom Classics: Declaration of Independence, Bill of Rights, US Constitution, and Patrick Henry Speech with Spoken Audio Narration');
     }
 ?>
 <!DOCTYPE html>
