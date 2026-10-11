@@ -8,8 +8,6 @@ include 'src/header.php';
 ?>
 
 <!-- STYLES -->
-<link rel="stylesheet" href="<?= assetVersion('/assets/css/components/learning-launchpad.css') ?>">
-<link rel="stylesheet" href="<?= assetVersion('/assets/css/components/welcome-guide.css') ?>">
 <link rel="stylesheet" href="<?= assetVersion('/assets/css/components/mastery-modals.css') ?>">
 
 <!-- DATA IMPORT -->
@@ -21,9 +19,7 @@ include 'src/header.php';
 <!-- MAIN CONTENT -->
 <main class="main-content-container" id="main-content" tabindex="-1">
 
-    <?php include __DIR__ . '/src/partials/learning-launchpad.php'; ?>
     <?php include __DIR__ . '/src/partials/resume-banner.php'; ?>
-    <?php include __DIR__ . '/src/partials/welcome-guide.php'; ?>
 
     <?php include __DIR__ . '/src/partials/academic-path-header.php'; ?>
 

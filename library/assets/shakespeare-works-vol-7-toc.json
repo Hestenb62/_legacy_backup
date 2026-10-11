@@ -1,0 +1,238 @@
+{
+  "1": {
+    "title": "THE WORKS OF WILLIAM SHAKESPEARE",
+    "chapter": 1,
+    "word_count": 88,
+    "read_time": 1
+  },
+  "2": {
+    "title": "CONTENTS.",
+    "chapter": 2,
+    "word_count": 52,
+    "read_time": 1
+  },
+  "3": {
+    "title": "PREFACE.",
+    "chapter": 3,
+    "word_count": 2090,
+    "read_time": 12
+  },
+  "4": {
+    "title": "ADDENDA.",
+    "chapter": 4,
+    "word_count": 251,
+    "read_time": 2
+  },
+  "5": {
+    "title": "DRAMATIS PERSON\u00c6 [1] .",
+    "chapter": 5,
+    "word_count": 147,
+    "read_time": 1
+  },
+  "6": {
+    "title": "PROLOGUE.",
+    "chapter": 6,
+    "word_count": 185,
+    "read_time": 2
+  },
+  "7": {
+    "title": "ACT I.",
+    "chapter": 7,
+    "volume": "Act I",
+    "word_count": 12447,
+    "read_time": 70
+  },
+  "8": {
+    "title": "ACT II.",
+    "chapter": 8,
+    "volume": "Act Ii",
+    "word_count": 11666,
+    "read_time": 65
+  },
+  "9": {
+    "title": "ACT III.",
+    "chapter": 9,
+    "volume": "Act Iii",
+    "word_count": 14013,
+    "read_time": 78
+  },
+  "10": {
+    "title": "ACT IV.",
+    "chapter": 10,
+    "volume": "Act Iv",
+    "word_count": 7192,
+    "read_time": 40
+  },
+  "11": {
+    "title": "ACT V.",
+    "chapter": 11,
+    "volume": "Act V",
+    "word_count": 6775,
+    "read_time": 38
+  },
+  "12": {
+    "title": "NOTES.",
+    "chapter": 12,
+    "word_count": 2072,
+    "read_time": 12
+  },
+  "13": {
+    "title": "The Prologue.",
+    "chapter": 13,
+    "word_count": 96,
+    "read_time": 1
+  },
+  "14": {
+    "title": "The most excellent Tragedie of Romeo and Iuliet.",
+    "chapter": 14,
+    "word_count": 19280,
+    "read_time": 108
+  },
+  "15": {
+    "title": "DRAMATIS PERSON\u00c6 [1596] .",
+    "chapter": 15,
+    "word_count": 126,
+    "read_time": 1
+  },
+  "16": {
+    "title": "ACT I.",
+    "chapter": 16,
+    "volume": "Act I",
+    "word_count": 9973,
+    "read_time": 56
+  },
+  "17": {
+    "title": "ACT II.",
+    "chapter": 17,
+    "volume": "Act Ii",
+    "word_count": 4016,
+    "read_time": 23
+  },
+  "18": {
+    "title": "ACT III.",
+    "chapter": 18,
+    "volume": "Act Iii",
+    "word_count": 9230,
+    "read_time": 52
+  },
+  "19": {
+    "title": "ACT IV.",
+    "chapter": 19,
+    "volume": "Act Iv",
+    "word_count": 10015,
+    "read_time": 56
+  },
+  "20": {
+    "title": "ACT V.",
+    "chapter": 20,
+    "volume": "Act V",
+    "word_count": 5525,
+    "read_time": 31
+  },
+  "21": {
+    "title": "NOTES.",
+    "chapter": 21,
+    "word_count": 2774,
+    "read_time": 16
+  },
+  "22": {
+    "title": "DRAMATIS PERSON\u00c6 [2802] .",
+    "chapter": 22,
+    "word_count": 138,
+    "read_time": 1
+  },
+  "23": {
+    "title": "ACT I.",
+    "chapter": 23,
+    "volume": "Act I",
+    "word_count": 7213,
+    "read_time": 41
+  },
+  "24": {
+    "title": "ACT II.",
+    "chapter": 24,
+    "volume": "Act Ii",
+    "word_count": 6421,
+    "read_time": 36
+  },
+  "25": {
+    "title": "ACT III.",
+    "chapter": 25,
+    "volume": "Act Iii",
+    "word_count": 7907,
+    "read_time": 44
+  },
+  "26": {
+    "title": "ACT IV.",
+    "chapter": 26,
+    "volume": "Act Iv",
+    "word_count": 5513,
+    "read_time": 31
+  },
+  "27": {
+    "title": "ACT V.",
+    "chapter": 27,
+    "volume": "Act V",
+    "word_count": 4850,
+    "read_time": 27
+  },
+  "28": {
+    "title": "NOTES.",
+    "chapter": 28,
+    "word_count": 1030,
+    "read_time": 6
+  },
+  "29": {
+    "title": "DRAMATIS PERSON\u00c6 [3666] .",
+    "chapter": 29,
+    "word_count": 112,
+    "read_time": 1
+  },
+  "30": {
+    "title": "ACT I.",
+    "chapter": 30,
+    "volume": "Act I",
+    "word_count": 7963,
+    "read_time": 45
+  },
+  "31": {
+    "title": "ACT II.",
+    "chapter": 31,
+    "volume": "Act Ii",
+    "word_count": 5494,
+    "read_time": 31
+  },
+  "32": {
+    "title": "ACT III.",
+    "chapter": 32,
+    "volume": "Act Iii",
+    "word_count": 7501,
+    "read_time": 42
+  },
+  "33": {
+    "title": "ACT IV.",
+    "chapter": 33,
+    "volume": "Act Iv",
+    "word_count": 6968,
+    "read_time": 39
+  },
+  "34": {
+    "title": "ACT V.",
+    "chapter": 34,
+    "volume": "Act V",
+    "word_count": 5321,
+    "read_time": 30
+  },
+  "35": {
+    "title": "NOTES.",
+    "chapter": 35,
+    "word_count": 880,
+    "read_time": 5
+  },
+  "36": {
+    "title": "Transcriber's Notes:",
+    "chapter": 36,
+    "word_count": 81,
+    "read_time": 1
+  }
+}

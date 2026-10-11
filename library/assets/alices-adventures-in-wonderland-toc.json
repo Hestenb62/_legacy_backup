@@ -1,0 +1,80 @@
+{
+  "1": {
+    "title": "Alice\u2019s Adventures in Wonderland",
+    "chapter": 1,
+    "word_count": 92,
+    "read_time": 1
+  },
+  "2": {
+    "title": "CHAPTER I. Down the Rabbit-Hole",
+    "chapter": 2,
+    "word_count": 2195,
+    "read_time": 13
+  },
+  "3": {
+    "title": "CHAPTER II. The Pool of Tears",
+    "chapter": 3,
+    "word_count": 2188,
+    "read_time": 13
+  },
+  "4": {
+    "title": "CHAPTER III. A Caucus-Race and a Long Tale",
+    "chapter": 4,
+    "word_count": 1741,
+    "read_time": 10
+  },
+  "5": {
+    "title": "CHAPTER IV. The Rabbit Sends in a Little Bill",
+    "chapter": 5,
+    "word_count": 2740,
+    "read_time": 16
+  },
+  "6": {
+    "title": "CHAPTER V. Advice from a Caterpillar",
+    "chapter": 6,
+    "word_count": 2245,
+    "read_time": 13
+  },
+  "7": {
+    "title": "CHAPTER VI. Pig and Pepper",
+    "chapter": 7,
+    "word_count": 2672,
+    "read_time": 15
+  },
+  "8": {
+    "title": "CHAPTER VII. A Mad Tea-Party",
+    "chapter": 8,
+    "word_count": 2387,
+    "read_time": 14
+  },
+  "9": {
+    "title": "CHAPTER VIII. The Queen\u2019s Croquet-Ground",
+    "chapter": 9,
+    "word_count": 2561,
+    "read_time": 15
+  },
+  "10": {
+    "title": "CHAPTER IX. The Mock Turtle\u2019s Story",
+    "chapter": 10,
+    "word_count": 2366,
+    "read_time": 14
+  },
+  "11": {
+    "title": "CHAPTER X. The Lobster Quadrille",
+    "chapter": 11,
+    "word_count": 2103,
+    "read_time": 12
+  },
+  "12": {
+    "title": "CHAPTER XI. Who Stole the Tarts?",
+    "chapter": 12,
+    "word_count": 1947,
+    "read_time": 11
+  },
+  "13": {
+    "title": "CHAPTER XII. Alice\u2019s Evidence",
+    "chapter": 13,
+    "word_count": 2191,
+    "read_time": 13
+  }
+}

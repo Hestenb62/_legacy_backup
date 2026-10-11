@@ -1,0 +1,590 @@
+{
+  "1": {
+    "title": "The Brothers Karamazov",
+    "chapter": 1,
+    "word_count": 685,
+    "read_time": 4
+  },
+  "2": {
+    "title": "Chapter I. Fyodor Pavlovitch Karamazov",
+    "chapter": 2,
+    "word_count": 1359,
+    "read_time": 8
+  },
+  "3": {
+    "title": "Chapter II. He Gets Rid Of His Eldest Son",
+    "chapter": 3,
+    "word_count": 1325,
+    "read_time": 8
+  },
+  "4": {
+    "title": "Chapter III. The Second Marriage And The Second Family",
+    "chapter": 4,
+    "word_count": 2622,
+    "read_time": 15
+  },
+  "5": {
+    "title": "Chapter IV. The Third Son, Alyosha",
+    "chapter": 5,
+    "word_count": 3595,
+    "read_time": 20
+  },
+  "6": {
+    "title": "Chapter V. Elders",
+    "chapter": 6,
+    "word_count": 3676,
+    "read_time": 21
+  },
+  "7": {
+    "title": "Chapter I. They Arrive At The Monastery",
+    "chapter": 7,
+    "word_count": 1854,
+    "read_time": 11
+  },
+  "8": {
+    "title": "Chapter II. The Old Buffoon",
+    "chapter": 8,
+    "word_count": 3640,
+    "read_time": 21
+  },
+  "9": {
+    "title": "Chapter III. Peasant Women Who Have Faith",
+    "chapter": 9,
+    "word_count": 3302,
+    "read_time": 19
+  },
+  "10": {
+    "title": "Chapter IV. A Lady Of Little Faith",
+    "chapter": 10,
+    "word_count": 3108,
+    "read_time": 18
+  },
+  "11": {
+    "title": "Chapter V. So Be It! So Be It!",
+    "chapter": 11,
+    "word_count": 3719,
+    "read_time": 21
+  },
+  "12": {
+    "title": "Chapter VI. Why Is Such A Man Alive?",
+    "chapter": 12,
+    "word_count": 4009,
+    "read_time": 23
+  },
+  "13": {
+    "title": "Chapter VII. A Young Man Bent On A Career",
+    "chapter": 13,
+    "word_count": 3655,
+    "read_time": 21
+  },
+  "14": {
+    "title": "Chapter VIII. The Scandalous Scene",
+    "chapter": 14,
+    "word_count": 3579,
+    "read_time": 20
+  },
+  "15": {
+    "title": "Chapter I. In The Servants\u2019 Quarters",
+    "chapter": 15,
+    "word_count": 2287,
+    "read_time": 13
+  },
+  "16": {
+    "title": "Chapter II. Lizaveta",
+    "chapter": 16,
+    "word_count": 1672,
+    "read_time": 10
+  },
+  "17": {
+    "title": "Chapter III. The Confession Of A Passionate Heart\u2014In Verse",
+    "chapter": 17,
+    "word_count": 3466,
+    "read_time": 20
+  },
+  "18": {
+    "title": "Chapter IV. The Confession Of A Passionate Heart\u2014In Anecdote",
+    "chapter": 18,
+    "word_count": 3510,
+    "read_time": 20
+  },
+  "19": {
+    "title": "Chapter V. The Confession Of A Passionate Heart\u2014\u201cHeels Up\u201d",
+    "chapter": 19,
+    "word_count": 3557,
+    "read_time": 20
+  },
+  "20": {
+    "title": "Chapter VI. Smerdyakov",
+    "chapter": 20,
+    "word_count": 2207,
+    "read_time": 13
+  },
+  "21": {
+    "title": "Chapter VII. The Controversy",
+    "chapter": 21,
+    "word_count": 2253,
+    "read_time": 13
+  },
+  "22": {
+    "title": "Chapter VIII. Over The Brandy",
+    "chapter": 22,
+    "word_count": 3047,
+    "read_time": 17
+  },
+  "23": {
+    "title": "Chapter IX. The Sensualists",
+    "chapter": 23,
+    "word_count": 2167,
+    "read_time": 13
+  },
+  "24": {
+    "title": "Chapter X. Both Together",
+    "chapter": 24,
+    "word_count": 4590,
+    "read_time": 26
+  },
+  "25": {
+    "title": "Chapter XI. Another Reputation Ruined",
+    "chapter": 25,
+    "word_count": 3261,
+    "read_time": 19
+  },
+  "26": {
+    "title": "Chapter I. Father Ferapont",
+    "chapter": 26,
+    "word_count": 4180,
+    "read_time": 24
+  },
+  "27": {
+    "title": "Chapter II. At His Father\u2019s",
+    "chapter": 27,
+    "word_count": 2049,
+    "read_time": 12
+  },
+  "28": {
+    "title": "Chapter III. A Meeting With The Schoolboys",
+    "chapter": 28,
+    "word_count": 1876,
+    "read_time": 11
+  },
+  "29": {
+    "title": "Chapter IV. At The Hohlakovs\u2019",
+    "chapter": 29,
+    "word_count": 2444,
+    "read_time": 14
+  },
+  "30": {
+    "title": "Chapter V. A Laceration In The Drawing-Room",
+    "chapter": 30,
+    "word_count": 4654,
+    "read_time": 26
+  },
+  "31": {
+    "title": "Chapter VI. A Laceration In The Cottage",
+    "chapter": 31,
+    "word_count": 3398,
+    "read_time": 19
+  },
+  "32": {
+    "title": "Chapter VII. And In The Open Air",
+    "chapter": 32,
+    "word_count": 4516,
+    "read_time": 26
+  },
+  "33": {
+    "title": "Chapter I. The Engagement",
+    "chapter": 33,
+    "word_count": 4577,
+    "read_time": 26
+  },
+  "34": {
+    "title": "Chapter II. Smerdyakov With A Guitar",
+    "chapter": 34,
+    "word_count": 2640,
+    "read_time": 15
+  },
+  "35": {
+    "title": "Chapter III. The Brothers Make Friends",
+    "chapter": 35,
+    "word_count": 3994,
+    "read_time": 23
+  },
+  "36": {
+    "title": "Chapter IV. Rebellion",
+    "chapter": 36,
+    "word_count": 5068,
+    "read_time": 29
+  },
+  "37": {
+    "title": "Chapter V. The Grand Inquisitor",
+    "chapter": 37,
+    "word_count": 9396,
+    "read_time": 53
+  },
+  "38": {
+    "title": "Chapter VI. For Awhile A Very Obscure One",
+    "chapter": 38,
+    "word_count": 4459,
+    "read_time": 25
+  },
+  "39": {
+    "title": "Chapter VII. \u201cIt\u2019s Always Worth While Speaking To A Clever Man\u201d",
+    "chapter": 39,
+    "word_count": 3523,
+    "read_time": 20
+  },
+  "40": {
+    "title": "Chapter I. Father Zossima And His Visitors",
+    "chapter": 40,
+    "word_count": 6458,
+    "read_time": 36
+  },
+  "41": {
+    "title": "Chapter II. The Duel",
+    "chapter": 41,
+    "word_count": 9264,
+    "read_time": 52
+  },
+  "42": {
+    "title": "Chapter III. Conversations And Exhortations Of Father Zossima",
+    "chapter": 42,
+    "word_count": 6309,
+    "read_time": 36
+  },
+  "43": {
+    "title": "Chapter I. The Breath Of Corruption",
+    "chapter": 43,
+    "word_count": 5232,
+    "read_time": 30
+  },
+  "44": {
+    "title": "Chapter II. A Critical Moment",
+    "chapter": 44,
+    "word_count": 2470,
+    "read_time": 14
+  },
+  "45": {
+    "title": "Chapter III. An Onion",
+    "chapter": 45,
+    "word_count": 8086,
+    "read_time": 45
+  },
+  "46": {
+    "title": "Chapter IV. Cana Of Galilee",
+    "chapter": 46,
+    "word_count": 2065,
+    "read_time": 12
+  },
+  "47": {
+    "title": "Chapter I. Kuzma Samsonov",
+    "chapter": 47,
+    "word_count": 4870,
+    "read_time": 28
+  },
+  "48": {
+    "title": "Chapter II. Lyagavy",
+    "chapter": 48,
+    "word_count": 3047,
+    "read_time": 17
+  },
+  "49": {
+    "title": "Chapter III. Gold-Mines",
+    "chapter": 49,
+    "word_count": 4854,
+    "read_time": 27
+  },
+  "50": {
+    "title": "Chapter IV. In The Dark",
+    "chapter": 50,
+    "word_count": 2456,
+    "read_time": 14
+  },
+  "51": {
+    "title": "Chapter V. A Sudden Resolution",
+    "chapter": 51,
+    "word_count": 6571,
+    "read_time": 37
+  },
+  "52": {
+    "title": "Chapter VI. \u201cI Am Coming, Too!\u201d",
+    "chapter": 52,
+    "word_count": 3204,
+    "read_time": 18
+  },
+  "53": {
+    "title": "Chapter VII. The First And Rightful Lover",
+    "chapter": 53,
+    "word_count": 6564,
+    "read_time": 37
+  },
+  "54": {
+    "title": "Chapter VIII. Delirium",
+    "chapter": 54,
+    "word_count": 5748,
+    "read_time": 32
+  },
+  "55": {
+    "title": "Chapter I. The Beginning Of Perhotin\u2019s Official Career",
+    "chapter": 55,
+    "word_count": 2872,
+    "read_time": 16
+  },
+  "56": {
+    "title": "Chapter II. The Alarm",
+    "chapter": 56,
+    "word_count": 2746,
+    "read_time": 16
+  },
+  "57": {
+    "title": "Chapter III. The Sufferings Of A Soul, The First Ordeal",
+    "chapter": 57,
+    "word_count": 3683,
+    "read_time": 21
+  },
+  "58": {
+    "title": "Chapter IV. The Second Ordeal",
+    "chapter": 58,
+    "word_count": 3111,
+    "read_time": 18
+  },
+  "59": {
+    "title": "Chapter V. The Third Ordeal",
+    "chapter": 59,
+    "word_count": 4589,
+    "read_time": 26
+  },
+  "60": {
+    "title": "Chapter VI. The Prosecutor Catches Mitya",
+    "chapter": 60,
+    "word_count": 3263,
+    "read_time": 19
+  },
+  "61": {
+    "title": "Chapter VII. Mitya\u2019s Great Secret. Received With Hisses",
+    "chapter": 61,
+    "word_count": 4920,
+    "read_time": 28
+  },
+  "62": {
+    "title": "Chapter VIII. The Evidence Of The Witnesses. The Babe",
+    "chapter": 62,
+    "word_count": 4002,
+    "read_time": 23
+  },
+  "63": {
+    "title": "Chapter IX. They Carry Mitya Away",
+    "chapter": 63,
+    "word_count": 1581,
+    "read_time": 9
+  },
+  "64": {
+    "title": "Chapter I. Kolya Krassotkin",
+    "chapter": 64,
+    "word_count": 2281,
+    "read_time": 13
+  },
+  "65": {
+    "title": "Chapter II. Children",
+    "chapter": 65,
+    "word_count": 2330,
+    "read_time": 13
+  },
+  "66": {
+    "title": "Chapter III. The Schoolboy",
+    "chapter": 66,
+    "word_count": 3065,
+    "read_time": 18
+  },
+  "67": {
+    "title": "Chapter IV. The Lost Dog",
+    "chapter": 67,
+    "word_count": 3389,
+    "read_time": 19
+  },
+  "68": {
+    "title": "Chapter V. By Ilusha\u2019s Bedside",
+    "chapter": 68,
+    "word_count": 6839,
+    "read_time": 38
+  },
+  "69": {
+    "title": "Chapter VI. Precocity",
+    "chapter": 69,
+    "word_count": 2722,
+    "read_time": 16
+  },
+  "70": {
+    "title": "Chapter VII. Ilusha",
+    "chapter": 70,
+    "word_count": 1414,
+    "read_time": 8
+  },
+  "71": {
+    "title": "Chapter I. At Grushenka\u2019s",
+    "chapter": 71,
+    "word_count": 4104,
+    "read_time": 23
+  },
+  "72": {
+    "title": "Chapter II. The Injured Foot",
+    "chapter": 72,
+    "word_count": 4535,
+    "read_time": 26
+  },
+  "73": {
+    "title": "Chapter III. A Little Demon",
+    "chapter": 73,
+    "word_count": 2655,
+    "read_time": 15
+  },
+  "74": {
+    "title": "Chapter IV. A Hymn And A Secret",
+    "chapter": 74,
+    "word_count": 6081,
+    "read_time": 34
+  },
+  "75": {
+    "title": "Chapter V. Not You, Not You!",
+    "chapter": 75,
+    "word_count": 2323,
+    "read_time": 13
+  },
+  "76": {
+    "title": "Chapter VI. The First Interview With Smerdyakov",
+    "chapter": 76,
+    "word_count": 4084,
+    "read_time": 23
+  },
+  "77": {
+    "title": "Chapter VII. The Second Visit To Smerdyakov",
+    "chapter": 77,
+    "word_count": 3969,
+    "read_time": 23
+  },
+  "78": {
+    "title": "Chapter VIII. The Third And Last Interview With Smerdyakov",
+    "chapter": 78,
+    "word_count": 6619,
+    "read_time": 37
+  },
+  "79": {
+    "title": "Chapter IX. The Devil. Ivan\u2019s Nightmare",
+    "chapter": 79,
+    "word_count": 8193,
+    "read_time": 46
+  },
+  "80": {
+    "title": "Chapter X. \u201cIt Was He Who Said That\u201d",
+    "chapter": 80,
+    "word_count": 2334,
+    "read_time": 13
+  },
+  "81": {
+    "title": "Chapter I. The Fatal Day",
+    "chapter": 81,
+    "word_count": 2864,
+    "read_time": 16
+  },
+  "82": {
+    "title": "Chapter II. Dangerous Witnesses",
+    "chapter": 82,
+    "word_count": 3868,
+    "read_time": 22
+  },
+  "83": {
+    "title": "Chapter III. The Medical Experts And A Pound Of Nuts",
+    "chapter": 83,
+    "word_count": 2321,
+    "read_time": 13
+  },
+  "84": {
+    "title": "Chapter IV. Fortune Smiles On Mitya",
+    "chapter": 84,
+    "word_count": 4051,
+    "read_time": 23
+  },
+  "85": {
+    "title": "Chapter V. A Sudden Catastrophe",
+    "chapter": 85,
+    "word_count": 4206,
+    "read_time": 24
+  },
+  "86": {
+    "title": "Chapter VI. The Prosecutor\u2019s Speech. Sketches Of Character",
+    "chapter": 86,
+    "word_count": 4111,
+    "read_time": 23
+  },
+  "87": {
+    "title": "Chapter VII. An Historical Survey",
+    "chapter": 87,
+    "word_count": 2098,
+    "read_time": 12
+  },
+  "88": {
+    "title": "Chapter VIII. A Treatise On Smerdyakov",
+    "chapter": 88,
+    "word_count": 4172,
+    "read_time": 24
+  },
+  "89": {
+    "title": "Chapter IX. The Galloping Troika. The End Of The Prosecutor\u2019s Speech.",
+    "chapter": 89,
+    "word_count": 4676,
+    "read_time": 26
+  },
+  "90": {
+    "title": "Chapter X. The Speech For The Defense. An Argument That Cuts Both Ways",
+    "chapter": 90,
+    "word_count": 1740,
+    "read_time": 10
+  },
+  "91": {
+    "title": "Chapter XI. There Was No Money. There Was No Robbery",
+    "chapter": 91,
+    "word_count": 2878,
+    "read_time": 16
+  },
+  "92": {
+    "title": "Chapter XII. And There Was No Murder Either",
+    "chapter": 92,
+    "word_count": 3490,
+    "read_time": 20
+  },
+  "93": {
+    "title": "Chapter XIII. A Corrupter Of Thought",
+    "chapter": 93,
+    "word_count": 3490,
+    "read_time": 20
+  },
+  "94": {
+    "title": "Chapter XIV. The Peasants Stand Firm",
+    "chapter": 94,
+    "word_count": 2630,
+    "read_time": 15
+  },
+  "95": {
+    "title": "Chapter I. Plans For Mitya\u2019s Escape",
+    "chapter": 95,
+    "word_count": 2265,
+    "read_time": 13
+  },
+  "96": {
+    "title": "Chapter II. For A Moment The Lie Becomes Truth",
+    "chapter": 96,
+    "word_count": 3179,
+    "read_time": 18
+  },
+  "97": {
+    "title": "Chapter III. Ilusha\u2019s Funeral. The Speech At The Stone",
+    "chapter": 97,
+    "word_count": 4124,
+    "read_time": 23
+  },
+  "98": {
+    "title": "FOOTNOTES",
+    "chapter": 98,
+    "word_count": 146,
+    "read_time": 1
+  }
+}

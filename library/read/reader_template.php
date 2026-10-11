@@ -91,6 +91,8 @@ if ($totalChapters > 1 && is_dir($bookFolder)) {
     for ($ci = 1; $ci <= $totalChapters; $ci++) {
         if ($ci === $chapterNum && !empty($estMinutes)) {
             $chapterReadTimes[$ci] = $estMinutes;
+        } elseif (!empty($bookToc[(string)$ci]['read_time'])) {
+            $chapterReadTimes[$ci] = (int)$bookToc[(string)$ci]['read_time'];
         } else {
             $cf = $bookFolder . '/chapter-' . $ci . '.php';
             if (is_file($cf)) {

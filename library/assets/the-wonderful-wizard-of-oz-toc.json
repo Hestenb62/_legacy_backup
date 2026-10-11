@@ -1,0 +1,158 @@
+{
+  "1": {
+    "title": "The Wonderful Wizard of Oz",
+    "chapter": 1,
+    "word_count": 190,
+    "read_time": 2
+  },
+  "2": {
+    "title": "Introduction",
+    "chapter": 2,
+    "word_count": 186,
+    "read_time": 2
+  },
+  "3": {
+    "title": "Chapter I The Cyclone",
+    "chapter": 3,
+    "word_count": 1152,
+    "read_time": 7
+  },
+  "4": {
+    "title": "Chapter II The Council with the Munchkins",
+    "chapter": 4,
+    "word_count": 2016,
+    "read_time": 12
+  },
+  "5": {
+    "title": "Chapter III How Dorothy Saved the Scarecrow",
+    "chapter": 5,
+    "word_count": 1981,
+    "read_time": 12
+  },
+  "6": {
+    "title": "Chapter IV The Road Through the Forest",
+    "chapter": 6,
+    "word_count": 1447,
+    "read_time": 9
+  },
+  "7": {
+    "title": "Chapter V The Rescue of the Tin Woodman",
+    "chapter": 7,
+    "word_count": 2075,
+    "read_time": 12
+  },
+  "8": {
+    "title": "Chapter VI The Cowardly Lion",
+    "chapter": 8,
+    "word_count": 1535,
+    "read_time": 9
+  },
+  "9": {
+    "title": "Chapter VII The Journey to the Great Oz",
+    "chapter": 9,
+    "word_count": 1820,
+    "read_time": 11
+  },
+  "10": {
+    "title": "Chapter VIII The Deadly Poppy Field",
+    "chapter": 10,
+    "word_count": 1950,
+    "read_time": 11
+  },
+  "11": {
+    "title": "Chapter IX The Queen of the Field Mice",
+    "chapter": 11,
+    "word_count": 1397,
+    "read_time": 8
+  },
+  "12": {
+    "title": "Chapter X The Guardian of the Gate",
+    "chapter": 12,
+    "word_count": 1964,
+    "read_time": 11
+  },
+  "13": {
+    "title": "Chapter XI The Wonderful City of Oz",
+    "chapter": 13,
+    "word_count": 3625,
+    "read_time": 21
+  },
+  "14": {
+    "title": "Chapter XII The Search for the Wicked Witch",
+    "chapter": 14,
+    "word_count": 3697,
+    "read_time": 21
+  },
+  "15": {
+    "title": "Chapter XIII The Rescue",
+    "chapter": 15,
+    "word_count": 1205,
+    "read_time": 7
+  },
+  "16": {
+    "title": "Chapter XIV The Winged Monkeys",
+    "chapter": 16,
+    "word_count": 1906,
+    "read_time": 11
+  },
+  "17": {
+    "title": "Chapter XV The Discovery of Oz, the Terrible",
+    "chapter": 17,
+    "word_count": 2799,
+    "read_time": 16
+  },
+  "18": {
+    "title": "Chapter XVI The Magic Art of the Great Humbug",
+    "chapter": 18,
+    "word_count": 947,
+    "read_time": 6
+  },
+  "19": {
+    "title": "Chapter XVII How the Balloon Was Launched",
+    "chapter": 19,
+    "word_count": 1169,
+    "read_time": 7
+  },
+  "20": {
+    "title": "Chapter XVIII Away to the South",
+    "chapter": 20,
+    "word_count": 1179,
+    "read_time": 7
+  },
+  "21": {
+    "title": "Chapter XIX Attacked by the Fighting Trees",
+    "chapter": 21,
+    "word_count": 1024,
+    "read_time": 6
+  },
+  "22": {
+    "title": "Chapter XX The Dainty China Country",
+    "chapter": 22,
+    "word_count": 1529,
+    "read_time": 9
+  },
+  "23": {
+    "title": "Chapter XXI The Lion Becomes the King of Beasts",
+    "chapter": 23,
+    "word_count": 905,
+    "read_time": 6
+  },
+  "24": {
+    "title": "Chapter XXII The Country of the Quadlings",
+    "chapter": 24,
+    "word_count": 952,
+    "read_time": 6
+  },
+  "25": {
+    "title": "Chapter XXIII Glinda The Good Witch Grants Dorothy\u2019s Wish",
+    "chapter": 25,
+    "word_count": 1267,
+    "read_time": 8
+  },
+  "26": {
+    "title": "Chapter XXIV Home Again",
+    "chapter": 26,
+    "word_count": 79,
+    "read_time": 1
+  }
+}

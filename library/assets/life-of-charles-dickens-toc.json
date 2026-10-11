@@ -1,0 +1,440 @@
+{
+  "1": {
+    "title": "THE LIFE",
+    "chapter": 1,
+    "word_count": 57,
+    "read_time": 1
+  },
+  "2": {
+    "title": "NOTE TO THE PRESENT EDITION.",
+    "chapter": 2,
+    "word_count": 269,
+    "read_time": 2
+  },
+  "3": {
+    "title": "CHAPTER I.",
+    "chapter": 3,
+    "word_count": 7402,
+    "read_time": 42
+  },
+  "4": {
+    "title": "CHAPTER II.",
+    "chapter": 4,
+    "word_count": 7327,
+    "read_time": 41
+  },
+  "5": {
+    "title": "CHAPTER III.",
+    "chapter": 5,
+    "word_count": 6122,
+    "read_time": 35
+  },
+  "6": {
+    "title": "CHAPTER IV.",
+    "chapter": 6,
+    "word_count": 3228,
+    "read_time": 18
+  },
+  "7": {
+    "title": "CHAPTER V.",
+    "chapter": 7,
+    "word_count": 2336,
+    "read_time": 13
+  },
+  "8": {
+    "title": "CHAPTER VI.",
+    "chapter": 8,
+    "word_count": 7064,
+    "read_time": 40
+  },
+  "9": {
+    "title": "CHAPTER VII.",
+    "chapter": 9,
+    "word_count": 2874,
+    "read_time": 16
+  },
+  "10": {
+    "title": "CHAPTER VIII.",
+    "chapter": 10,
+    "word_count": 3292,
+    "read_time": 19
+  },
+  "11": {
+    "title": "CHAPTER IX.",
+    "chapter": 11,
+    "word_count": 4016,
+    "read_time": 23
+  },
+  "12": {
+    "title": "CHAPTER X.",
+    "chapter": 12,
+    "word_count": 2754,
+    "read_time": 16
+  },
+  "13": {
+    "title": "CHAPTER XI.",
+    "chapter": 13,
+    "word_count": 2590,
+    "read_time": 15
+  },
+  "14": {
+    "title": "CHAPTER XII.",
+    "chapter": 14,
+    "word_count": 4850,
+    "read_time": 27
+  },
+  "15": {
+    "title": "CHAPTER XIII.",
+    "chapter": 15,
+    "word_count": 3921,
+    "read_time": 22
+  },
+  "16": {
+    "title": "CHAPTER XIV.",
+    "chapter": 16,
+    "word_count": 4348,
+    "read_time": 25
+  },
+  "17": {
+    "title": "CHAPTER XV.",
+    "chapter": 17,
+    "word_count": 3790,
+    "read_time": 22
+  },
+  "18": {
+    "title": "CHAPTER XVI.",
+    "chapter": 18,
+    "word_count": 4070,
+    "read_time": 23
+  },
+  "19": {
+    "title": "CHAPTER XVII.",
+    "chapter": 19,
+    "word_count": 2093,
+    "read_time": 12
+  },
+  "20": {
+    "title": "CHAPTER XVIII.",
+    "chapter": 20,
+    "word_count": 2218,
+    "read_time": 13
+  },
+  "21": {
+    "title": "CHAPTER XIX.",
+    "chapter": 21,
+    "word_count": 5335,
+    "read_time": 30
+  },
+  "22": {
+    "title": "CHAPTER XX.",
+    "chapter": 22,
+    "word_count": 7310,
+    "read_time": 41
+  },
+  "23": {
+    "title": "CHAPTER XXI.",
+    "chapter": 23,
+    "word_count": 6463,
+    "read_time": 36
+  },
+  "24": {
+    "title": "CHAPTER XXII.",
+    "chapter": 24,
+    "word_count": 6730,
+    "read_time": 38
+  },
+  "25": {
+    "title": "CHAPTER XXIII.",
+    "chapter": 25,
+    "word_count": 7325,
+    "read_time": 41
+  },
+  "26": {
+    "title": "CHAPTER XXIV.",
+    "chapter": 26,
+    "word_count": 2735,
+    "read_time": 16
+  },
+  "27": {
+    "title": "CORRECTIONS MADE IN THE LATER EDITIONS OF THE FIRST VOLUME.",
+    "chapter": 27,
+    "word_count": 1509,
+    "read_time": 9
+  },
+  "28": {
+    "title": "ILLUSTRATIONS.",
+    "chapter": 28,
+    "word_count": 163,
+    "read_time": 1
+  },
+  "29": {
+    "title": "CHAPTER I.",
+    "chapter": 29,
+    "word_count": 5027,
+    "read_time": 28
+  },
+  "30": {
+    "title": "CHAPTER II.",
+    "chapter": 30,
+    "word_count": 6001,
+    "read_time": 34
+  },
+  "31": {
+    "title": "CHAPTER III.",
+    "chapter": 31,
+    "word_count": 8318,
+    "read_time": 47
+  },
+  "32": {
+    "title": "CHAPTER IV.",
+    "chapter": 32,
+    "word_count": 4597,
+    "read_time": 26
+  },
+  "33": {
+    "title": "CHAPTER V.",
+    "chapter": 33,
+    "word_count": 7312,
+    "read_time": 41
+  },
+  "34": {
+    "title": "CHAPTER VI.",
+    "chapter": 34,
+    "word_count": 7174,
+    "read_time": 40
+  },
+  "35": {
+    "title": "CHAPTER VII.",
+    "chapter": 35,
+    "word_count": 4246,
+    "read_time": 24
+  },
+  "36": {
+    "title": "CHAPTER VIII.",
+    "chapter": 36,
+    "word_count": 5011,
+    "read_time": 28
+  },
+  "37": {
+    "title": "CHAPTER IX.",
+    "chapter": 37,
+    "word_count": 5877,
+    "read_time": 33
+  },
+  "38": {
+    "title": "CHAPTER X.",
+    "chapter": 38,
+    "word_count": 5617,
+    "read_time": 32
+  },
+  "39": {
+    "title": "CHAPTER XI.",
+    "chapter": 39,
+    "word_count": 4742,
+    "read_time": 27
+  },
+  "40": {
+    "title": "CHAPTER XII.",
+    "chapter": 40,
+    "word_count": 4447,
+    "read_time": 25
+  },
+  "41": {
+    "title": "CHAPTER XIII.",
+    "chapter": 41,
+    "word_count": 5425,
+    "read_time": 31
+  },
+  "42": {
+    "title": "CHAPTER XIV.",
+    "chapter": 42,
+    "word_count": 6267,
+    "read_time": 35
+  },
+  "43": {
+    "title": "CHAPTER XV.",
+    "chapter": 43,
+    "word_count": 5418,
+    "read_time": 31
+  },
+  "44": {
+    "title": "CHAPTER XVI.",
+    "chapter": 44,
+    "word_count": 7443,
+    "read_time": 42
+  },
+  "45": {
+    "title": "CHAPTER XVII.",
+    "chapter": 45,
+    "word_count": 9193,
+    "read_time": 52
+  },
+  "46": {
+    "title": "CHAPTER XVIII.",
+    "chapter": 46,
+    "word_count": 11317,
+    "read_time": 63
+  },
+  "47": {
+    "title": "CHAPTER XIX.",
+    "chapter": 47,
+    "word_count": 3886,
+    "read_time": 22
+  },
+  "48": {
+    "title": "CHAPTER XX.",
+    "chapter": 48,
+    "word_count": 10792,
+    "read_time": 60
+  },
+  "49": {
+    "title": "ILLUSTRATIONS.",
+    "chapter": 49,
+    "word_count": 136,
+    "read_time": 1
+  },
+  "50": {
+    "title": "CHAPTER I.",
+    "chapter": 50,
+    "word_count": 8119,
+    "read_time": 46
+  },
+  "51": {
+    "title": "CHAPTER II.",
+    "chapter": 51,
+    "word_count": 5486,
+    "read_time": 31
+  },
+  "52": {
+    "title": "CHAPTER III.",
+    "chapter": 52,
+    "word_count": 5894,
+    "read_time": 33
+  },
+  "53": {
+    "title": "CHAPTER IV.",
+    "chapter": 53,
+    "word_count": 6495,
+    "read_time": 37
+  },
+  "54": {
+    "title": "CHAPTER V.",
+    "chapter": 54,
+    "word_count": 8540,
+    "read_time": 48
+  },
+  "55": {
+    "title": "CHAPTER VI.",
+    "chapter": 55,
+    "word_count": 5494,
+    "read_time": 31
+  },
+  "56": {
+    "title": "CHAPTER VII.",
+    "chapter": 56,
+    "word_count": 6701,
+    "read_time": 38
+  },
+  "57": {
+    "title": "CHAPTER VIII.",
+    "chapter": 57,
+    "word_count": 4415,
+    "read_time": 25
+  },
+  "58": {
+    "title": "CHAPTER IX.",
+    "chapter": 58,
+    "word_count": 3677,
+    "read_time": 21
+  },
+  "59": {
+    "title": "CHAPTER X.",
+    "chapter": 59,
+    "word_count": 4156,
+    "read_time": 24
+  },
+  "60": {
+    "title": "CHAPTER XI.",
+    "chapter": 60,
+    "word_count": 4965,
+    "read_time": 28
+  },
+  "61": {
+    "title": "CHAPTER XII.",
+    "chapter": 61,
+    "word_count": 5543,
+    "read_time": 31
+  },
+  "62": {
+    "title": "CHAPTER XIII.",
+    "chapter": 62,
+    "word_count": 6721,
+    "read_time": 38
+  },
+  "63": {
+    "title": "CHAPTER XIV.",
+    "chapter": 63,
+    "word_count": 16509,
+    "read_time": 92
+  },
+  "64": {
+    "title": "CHAPTER XV.",
+    "chapter": 64,
+    "word_count": 5633,
+    "read_time": 32
+  },
+  "65": {
+    "title": "CHAPTER XVI.",
+    "chapter": 65,
+    "word_count": 10850,
+    "read_time": 61
+  },
+  "66": {
+    "title": "CHAPTER XVII.",
+    "chapter": 66,
+    "word_count": 4478,
+    "read_time": 25
+  },
+  "67": {
+    "title": "CHAPTER XVIII.",
+    "chapter": 67,
+    "word_count": 3560,
+    "read_time": 20
+  },
+  "68": {
+    "title": "CHAPTER XIX.",
+    "chapter": 68,
+    "word_count": 13408,
+    "read_time": 75
+  },
+  "69": {
+    "title": "CHAPTER XX.",
+    "chapter": 69,
+    "word_count": 5074,
+    "read_time": 29
+  },
+  "70": {
+    "title": "Chapter 70",
+    "chapter": 70,
+    "word_count": 3875,
+    "read_time": 22
+  },
+  "71": {
+    "title": "II.",
+    "chapter": 71,
+    "word_count": 1824,
+    "read_time": 11
+  },
+  "72": {
+    "title": "III.",
+    "chapter": 72,
+    "word_count": 1287,
+    "read_time": 8
+  },
+  "73": {
+    "title": "INDEX.",
+    "chapter": 73,
+    "word_count": 57391,
+    "read_time": 319
+  }
+}

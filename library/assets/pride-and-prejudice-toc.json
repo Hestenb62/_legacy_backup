@@ -1,0 +1,386 @@
+{
+  "1": {
+    "title": "PRIDE. and PREJUDICE",
+    "chapter": 1,
+    "word_count": 106,
+    "read_time": 1
+  },
+  "2": {
+    "title": "{ix}",
+    "chapter": 2,
+    "word_count": 4395,
+    "read_time": 25
+  },
+  "3": {
+    "title": "{xxv}",
+    "chapter": 3,
+    "word_count": 572,
+    "read_time": 4
+  },
+  "4": {
+    "title": "Chapter I.",
+    "chapter": 4,
+    "word_count": 884,
+    "read_time": 5
+  },
+  "5": {
+    "title": "I hope Mr. Bingley will like it. CHAPTER II.",
+    "chapter": 5,
+    "word_count": 821,
+    "read_time": 5
+  },
+  "6": {
+    "title": "He rode a black horse. CHAPTER III.",
+    "chapter": 6,
+    "word_count": 1742,
+    "read_time": 10
+  },
+  "7": {
+    "title": "CHAPTER IV.",
+    "chapter": 7,
+    "word_count": 1074,
+    "read_time": 6
+  },
+  "8": {
+    "title": "CHAPTER V.",
+    "chapter": 8,
+    "word_count": 986,
+    "read_time": 6
+  },
+  "9": {
+    "title": "CHAPTER VI.",
+    "chapter": 9,
+    "word_count": 2382,
+    "read_time": 14
+  },
+  "10": {
+    "title": "A note for Miss Bennet. CHAPTER VII.",
+    "chapter": 10,
+    "word_count": 2032,
+    "read_time": 12
+  },
+  "11": {
+    "title": "Covering a screen. CHAPTER VIII.",
+    "chapter": 11,
+    "word_count": 1954,
+    "read_time": 11
+  },
+  "12": {
+    "title": "Mrs Bennet and her two youngest girls. CHAPTER IX.",
+    "chapter": 12,
+    "word_count": 1764,
+    "read_time": 10
+  },
+  "13": {
+    "title": "CHAPTER X.",
+    "chapter": 13,
+    "word_count": 2244,
+    "read_time": 13
+  },
+  "14": {
+    "title": "Piling up the fire. CHAPTER XI.",
+    "chapter": 14,
+    "word_count": 1624,
+    "read_time": 10
+  },
+  "15": {
+    "title": "CHAPTER XII.",
+    "chapter": 15,
+    "word_count": 685,
+    "read_time": 4
+  },
+  "16": {
+    "title": "CHAPTER XIII",
+    "chapter": 16,
+    "word_count": 1718,
+    "read_time": 10
+  },
+  "17": {
+    "title": "CHAPTER XIV",
+    "chapter": 17,
+    "word_count": 1143,
+    "read_time": 7
+  },
+  "18": {
+    "title": "CHAPTER XV.",
+    "chapter": 18,
+    "word_count": 1725,
+    "read_time": 10
+  },
+  "19": {
+    "title": "CHAPTER XVI.",
+    "chapter": 19,
+    "word_count": 3430,
+    "read_time": 20
+  },
+  "20": {
+    "title": "delighted to see their dear friend again. CHAPTER XVII.",
+    "chapter": 20,
+    "word_count": 1304,
+    "read_time": 8
+  },
+  "21": {
+    "title": "CHAPTER XVIII.",
+    "chapter": 21,
+    "word_count": 5252,
+    "read_time": 30
+  },
+  "22": {
+    "title": "\u201cto assure you in the most animated language.\u201d CHAPTER XIX.",
+    "chapter": 22,
+    "word_count": 1941,
+    "read_time": 11
+  },
+  "23": {
+    "title": "CHAPTER XX.",
+    "chapter": 23,
+    "word_count": 1667,
+    "read_time": 10
+  },
+  "24": {
+    "title": "CHAPTER XXI.",
+    "chapter": 24,
+    "word_count": 2036,
+    "read_time": 12
+  },
+  "25": {
+    "title": "CHAPTER XXII.",
+    "chapter": 25,
+    "word_count": 1768,
+    "read_time": 10
+  },
+  "26": {
+    "title": "\u201cProtested he must be entirely mistaken.\u201d CHAPTER XXIII.",
+    "chapter": 26,
+    "word_count": 1651,
+    "read_time": 10
+  },
+  "27": {
+    "title": "CHAPTER XXIV.",
+    "chapter": 27,
+    "word_count": 1963,
+    "read_time": 11
+  },
+  "28": {
+    "title": "CHAPTER XXV.",
+    "chapter": 28,
+    "word_count": 1553,
+    "read_time": 9
+  },
+  "29": {
+    "title": "\u201cWill you come and see me.\u201d CHAPTER XXVI.",
+    "chapter": 29,
+    "word_count": 2368,
+    "read_time": 14
+  },
+  "30": {
+    "title": "\u201cOn the Stairs.\u201d CHAPTERXXVII.",
+    "chapter": 30,
+    "word_count": 1282,
+    "read_time": 8
+  },
+  "31": {
+    "title": "\u201cAt the door.\u201d CHAPTERXXVIII.",
+    "chapter": 31,
+    "word_count": 1480,
+    "read_time": 9
+  },
+  "32": {
+    "title": "\u201cLady Catherine, said she, you have given me a treasure.\u201d CHAPTER XXIX.",
+    "chapter": 32,
+    "word_count": 2435,
+    "read_time": 14
+  },
+  "33": {
+    "title": "CHAPTER XXX.",
+    "chapter": 33,
+    "word_count": 1261,
+    "read_time": 8
+  },
+  "34": {
+    "title": "CHAPTER XXXI.",
+    "chapter": 34,
+    "word_count": 1586,
+    "read_time": 9
+  },
+  "35": {
+    "title": "CHAPTER XXXII.",
+    "chapter": 35,
+    "word_count": 1523,
+    "read_time": 9
+  },
+  "36": {
+    "title": "\u201cOn looking up.\u201d CHAPTER XXXIII.",
+    "chapter": 36,
+    "word_count": 1889,
+    "read_time": 11
+  },
+  "37": {
+    "title": "CHAPTER XXXIV.",
+    "chapter": 37,
+    "word_count": 2124,
+    "read_time": 12
+  },
+  "38": {
+    "title": "\u201cHearing herself called.\u201d CHAPTER XXXV.",
+    "chapter": 38,
+    "word_count": 3035,
+    "read_time": 17
+  },
+  "39": {
+    "title": "CHAPTER XXXVI.",
+    "chapter": 39,
+    "word_count": 2046,
+    "read_time": 12
+  },
+  "40": {
+    "title": "\u201cHis parting obeisance.\u201d CHAPTER XXXVII.",
+    "chapter": 40,
+    "word_count": 1400,
+    "read_time": 8
+  },
+  "41": {
+    "title": "\u201cThe elevation of his feelings.\u201d CHAPTER XXXVIII.",
+    "chapter": 41,
+    "word_count": 1061,
+    "read_time": 6
+  },
+  "42": {
+    "title": "\u201cHow nicely we are crammed in.\u201d CHAPTER XXXIX.",
+    "chapter": 42,
+    "word_count": 1667,
+    "read_time": 10
+  },
+  "43": {
+    "title": "CHAPTER XL.",
+    "chapter": 43,
+    "word_count": 1709,
+    "read_time": 10
+  },
+  "44": {
+    "title": "\u201cWhen Colonel Miller\u2019s regiment went away.\u201d CHAPTER XLI.",
+    "chapter": 44,
+    "word_count": 2322,
+    "read_time": 13
+  },
+  "45": {
+    "title": "\u201cThe arrival of the Gardiners.\u201d CHAPTER XLII.",
+    "chapter": 45,
+    "word_count": 1855,
+    "read_time": 11
+  },
+  "46": {
+    "title": "\u201cConjecturing as to the date.\u201d CHAPTER XLIII.",
+    "chapter": 46,
+    "word_count": 4927,
+    "read_time": 28
+  },
+  "47": {
+    "title": "CHAPTER XLIV.",
+    "chapter": 47,
+    "word_count": 2372,
+    "read_time": 14
+  },
+  "48": {
+    "title": "\u201cEngaged by the river.\u201d CHAPTER XLV.",
+    "chapter": 48,
+    "word_count": 1764,
+    "read_time": 10
+  },
+  "49": {
+    "title": "Chapter XLVI.",
+    "chapter": 49,
+    "word_count": 3061,
+    "read_time": 18
+  },
+  "50": {
+    "title": "\u201cThe first pleasing earnest of their welcome.\u201d CHAPTER XLVII.",
+    "chapter": 50,
+    "word_count": 4134,
+    "read_time": 23
+  },
+  "51": {
+    "title": "\u201cThe Post.\u201d CHAPTER XLVIII.",
+    "chapter": 51,
+    "word_count": 2293,
+    "read_time": 13
+  },
+  "52": {
+    "title": "CHAPTER XLIX.",
+    "chapter": 52,
+    "word_count": 2284,
+    "read_time": 13
+  },
+  "53": {
+    "title": "\u201cThe spiteful old ladies.\u201d CHAPTER L.",
+    "chapter": 53,
+    "word_count": 2235,
+    "read_time": 13
+  },
+  "54": {
+    "title": "\u201cWith an affectionate smile.\u201d CHAPTER LI.",
+    "chapter": 54,
+    "word_count": 2103,
+    "read_time": 12
+  },
+  "55": {
+    "title": "\u201cI am sure she did not listen.\u201d CHAPTER LII.",
+    "chapter": 55,
+    "word_count": 3065,
+    "read_time": 18
+  },
+  "56": {
+    "title": "\u201cMr. Darcy with him.\u201d CHAPTER LIII.",
+    "chapter": 56,
+    "word_count": 2986,
+    "read_time": 17
+  },
+  "57": {
+    "title": "\u201cJane happened to look round.\u201d CHAPTER LIV.",
+    "chapter": 57,
+    "word_count": 1629,
+    "read_time": 10
+  },
+  "58": {
+    "title": "\u201cLizzy, my dear, I want to speak to you.\u201d CHAPTER LV.",
+    "chapter": 58,
+    "word_count": 2367,
+    "read_time": 14
+  },
+  "59": {
+    "title": "CHAPTER LVI.",
+    "chapter": 59,
+    "word_count": 2780,
+    "read_time": 16
+  },
+  "60": {
+    "title": "\u201cBut now it comes out.\u201d CHAPTER LVII.",
+    "chapter": 60,
+    "word_count": 1679,
+    "read_time": 10
+  },
+  "61": {
+    "title": "\u201cThe efforts of his aunt.\u201d CHAPTER LVIII.",
+    "chapter": 61,
+    "word_count": 2456,
+    "read_time": 14
+  },
+  "62": {
+    "title": "\u201cUnable to utter a syllable.\u201d CHAPTER LIX.",
+    "chapter": 62,
+    "word_count": 2517,
+    "read_time": 14
+  },
+  "63": {
+    "title": "\u201cThe obsequious civility.\u201d CHAPTER LX.",
+    "chapter": 63,
+    "word_count": 1610,
+    "read_time": 9
+  },
+  "64": {
+    "title": "CHAPTER LXI.",
+    "chapter": 64,
+    "word_count": 1264,
+    "read_time": 8
+  }
+}

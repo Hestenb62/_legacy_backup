@@ -1,0 +1,56 @@
+{
+  "1": {
+    "title": "On Liberty. By John Stuart Mill.",
+    "chapter": 1,
+    "word_count": 202,
+    "read_time": 2
+  },
+  "2": {
+    "title": "INTRODUCTION. I.",
+    "chapter": 2,
+    "word_count": 809,
+    "read_time": 5
+  },
+  "3": {
+    "title": "II.",
+    "chapter": 3,
+    "word_count": 2223,
+    "read_time": 13
+  },
+  "4": {
+    "title": "III.",
+    "chapter": 4,
+    "word_count": 1149,
+    "read_time": 7
+  },
+  "5": {
+    "title": "CHAPTER I. INTRODUCTORY.",
+    "chapter": 5,
+    "word_count": 5690,
+    "read_time": 32
+  },
+  "6": {
+    "title": "CHAPTER II. OF THE LIBERTY OF THOUGHT AND DISCUSSION.",
+    "chapter": 6,
+    "word_count": 16928,
+    "read_time": 95
+  },
+  "7": {
+    "title": "CHAPTER III. OF INDIVIDUALITY, AS ONE OF THE ELEMENTS OF WELL-BEING.",
+    "chapter": 7,
+    "word_count": 8270,
+    "read_time": 46
+  },
+  "8": {
+    "title": "CHAPTER IV. OF THE LIMITS TO THE AUTHORITY OF SOCIETY OVER THE INDIVIDUAL.",
+    "chapter": 8,
+    "word_count": 8148,
+    "read_time": 46
+  },
+  "9": {
+    "title": "CHAPTER V. APPLICATIONS.",
+    "chapter": 9,
+    "word_count": 9470,
+    "read_time": 53
+  }
+}

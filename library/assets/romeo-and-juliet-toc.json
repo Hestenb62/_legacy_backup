@@ -1,0 +1,49 @@
+{
+  "1": {
+    "title": "Contents",
+    "chapter": 1,
+    "word_count": 334,
+    "read_time": 2
+  },
+  "2": {
+    "title": "THE PROLOGUE",
+    "chapter": 2,
+    "word_count": 118,
+    "read_time": 1
+  },
+  "3": {
+    "title": "ACT I",
+    "chapter": 3,
+    "volume": "Act I",
+    "word_count": 6186,
+    "read_time": 35
+  },
+  "4": {
+    "title": "ACT II",
+    "chapter": 4,
+    "volume": "Act Ii",
+    "word_count": 5846,
+    "read_time": 33
+  },
+  "5": {
+    "title": "ACT III",
+    "chapter": 5,
+    "volume": "Act Iii",
+    "word_count": 6987,
+    "read_time": 39
+  },
+  "6": {
+    "title": "ACT IV",
+    "chapter": 6,
+    "volume": "Act Iv",
+    "word_count": 3575,
+    "read_time": 20
+  },
+  "7": {
+    "title": "ACT V",
+    "chapter": 7,
+    "volume": "Act V",
+    "word_count": 3826,
+    "read_time": 22
+  }
+}

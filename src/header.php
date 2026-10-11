@@ -48,16 +48,16 @@ if (! function_exists('assetVersion')) {
 
 // Core Platform Version Definition
 if (! defined('HL_SITE_VERSION')) {
-    define('HL_SITE_VERSION', 'v2.12.2');
+    define('HL_SITE_VERSION', 'v2.13.0');
     }
 if (! defined('HL_SITE_VERSION_DATE')) {
     define('HL_SITE_VERSION_DATE', 'October 2026');
     }
 if (! defined('HL_SITE_VERSION_LABEL')) {
-    define('HL_SITE_VERSION_LABEL', 'October 2026 American Yawp Multi-Volume Digital Reader Suite Release');
+    define('HL_SITE_VERSION_LABEL', 'October 2026 Project Gutenberg Top Classics Digital Library Release');
     }
 if (! defined('HL_SITE_VERSION_SUMMARY')) {
-    define('HL_SITE_VERSION_SUMMARY', 'Dual-Volume Online Reader Buttons (Vol 1 & Vol 2) for The American Yawp, Multi-Volume Modal Architecture, Table Ledger Dual Launcher, UDL Compliant History Portal');
+    define('HL_SITE_VERSION_SUMMARY', 'Full Ingestion of 31 Top Downloaded Project Gutenberg Classics, Unified Multi-Chapter Reader Architecture, High-Speed Precomputed TOC Indexing, and UDL Accessibility Suite');
     }
 ?>
 <!DOCTYPE html>

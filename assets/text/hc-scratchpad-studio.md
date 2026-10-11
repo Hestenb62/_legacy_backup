@@ -6,7 +6,7 @@ Empower your study sessions with the Unified Scratchpad & Math Whiteboard Studio
 You can launch the studio from anywhere on Hesten's Learning without losing your place:
 - **Keyboard Shortcut:** Press `Alt + S` on any page to open or close the scratchpad.
 - **Floating Action Button (FAB):** Click the pencil icon located in the bottom-right action launcher.
-- **Learning Launchpad:** Click the "Scratchpad" quick-action card on the home page.
+- **Tools & Action Menu:** Select Scratchpad from the global navigation or quick action launcher.
 
 ### Core Superpowers & Tabs
 

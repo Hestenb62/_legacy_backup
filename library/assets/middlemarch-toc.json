@@ -1,0 +1,536 @@
+{
+  "1": {
+    "title": "Middlemarch",
+    "chapter": 1,
+    "word_count": 242,
+    "read_time": 2
+  },
+  "2": {
+    "title": "PRELUDE.",
+    "chapter": 2,
+    "word_count": 504,
+    "read_time": 3
+  },
+  "3": {
+    "title": "CHAPTER I.",
+    "chapter": 3,
+    "word_count": 3363,
+    "read_time": 19
+  },
+  "4": {
+    "title": "CHAPTER II.",
+    "chapter": 4,
+    "word_count": 2976,
+    "read_time": 17
+  },
+  "5": {
+    "title": "CHAPTER III.",
+    "chapter": 5,
+    "word_count": 4390,
+    "read_time": 25
+  },
+  "6": {
+    "title": "CHAPTER IV.",
+    "chapter": 6,
+    "word_count": 2927,
+    "read_time": 17
+  },
+  "7": {
+    "title": "CHAPTER V.",
+    "chapter": 7,
+    "word_count": 3534,
+    "read_time": 20
+  },
+  "8": {
+    "title": "CHAPTER VI.",
+    "chapter": 8,
+    "word_count": 4418,
+    "read_time": 25
+  },
+  "9": {
+    "title": "CHAPTER VII.",
+    "chapter": 9,
+    "word_count": 1628,
+    "read_time": 10
+  },
+  "10": {
+    "title": "CHAPTER VIII.",
+    "chapter": 10,
+    "word_count": 2158,
+    "read_time": 12
+  },
+  "11": {
+    "title": "CHAPTER IX.",
+    "chapter": 11,
+    "word_count": 4028,
+    "read_time": 23
+  },
+  "12": {
+    "title": "CHAPTER X.",
+    "chapter": 12,
+    "word_count": 4429,
+    "read_time": 25
+  },
+  "13": {
+    "title": "CHAPTER XI.",
+    "chapter": 13,
+    "word_count": 3680,
+    "read_time": 21
+  },
+  "14": {
+    "title": "CHAPTER XII.",
+    "chapter": 14,
+    "word_count": 6750,
+    "read_time": 38
+  },
+  "15": {
+    "title": "CHAPTER XIII.",
+    "chapter": 15,
+    "word_count": 3822,
+    "read_time": 22
+  },
+  "16": {
+    "title": "CHAPTER XIV.",
+    "chapter": 16,
+    "word_count": 3597,
+    "read_time": 20
+  },
+  "17": {
+    "title": "CHAPTER XV.",
+    "chapter": 17,
+    "word_count": 5563,
+    "read_time": 31
+  },
+  "18": {
+    "title": "CHAPTER XVI.",
+    "chapter": 18,
+    "word_count": 5298,
+    "read_time": 30
+  },
+  "19": {
+    "title": "CHAPTER XVII.",
+    "chapter": 19,
+    "word_count": 3518,
+    "read_time": 20
+  },
+  "20": {
+    "title": "CHAPTER XVIII.",
+    "chapter": 20,
+    "word_count": 4532,
+    "read_time": 26
+  },
+  "21": {
+    "title": "CHAPTER XIX.",
+    "chapter": 21,
+    "word_count": 1528,
+    "read_time": 9
+  },
+  "22": {
+    "title": "CHAPTER XX.",
+    "chapter": 22,
+    "word_count": 4630,
+    "read_time": 26
+  },
+  "23": {
+    "title": "CHAPTER XXI.",
+    "chapter": 23,
+    "word_count": 3166,
+    "read_time": 18
+  },
+  "24": {
+    "title": "CHAPTER XXII.",
+    "chapter": 24,
+    "word_count": 5694,
+    "read_time": 32
+  },
+  "25": {
+    "title": "CHAPTER XXIII.",
+    "chapter": 25,
+    "word_count": 4982,
+    "read_time": 28
+  },
+  "26": {
+    "title": "CHAPTER XXIV.",
+    "chapter": 26,
+    "word_count": 4684,
+    "read_time": 27
+  },
+  "27": {
+    "title": "CHAPTER XXV.",
+    "chapter": 27,
+    "word_count": 2730,
+    "read_time": 16
+  },
+  "28": {
+    "title": "CHAPTER XXVI.",
+    "chapter": 28,
+    "word_count": 1906,
+    "read_time": 11
+  },
+  "29": {
+    "title": "CHAPTER XXVII.",
+    "chapter": 29,
+    "word_count": 3504,
+    "read_time": 20
+  },
+  "30": {
+    "title": "CHAPTER XXVIII.",
+    "chapter": 30,
+    "word_count": 1963,
+    "read_time": 11
+  },
+  "31": {
+    "title": "CHAPTER XXIX.",
+    "chapter": 31,
+    "word_count": 3101,
+    "read_time": 18
+  },
+  "32": {
+    "title": "CHAPTER XXX.",
+    "chapter": 32,
+    "word_count": 2624,
+    "read_time": 15
+  },
+  "33": {
+    "title": "CHAPTER XXXI.",
+    "chapter": 33,
+    "word_count": 3853,
+    "read_time": 22
+  },
+  "34": {
+    "title": "CHAPTER XXXII.",
+    "chapter": 34,
+    "word_count": 4510,
+    "read_time": 26
+  },
+  "35": {
+    "title": "CHAPTER XXXIII.",
+    "chapter": 35,
+    "word_count": 2189,
+    "read_time": 13
+  },
+  "36": {
+    "title": "CHAPTER XXXIV.",
+    "chapter": 36,
+    "word_count": 3075,
+    "read_time": 18
+  },
+  "37": {
+    "title": "CHAPTER XXXV.",
+    "chapter": 37,
+    "word_count": 4437,
+    "read_time": 25
+  },
+  "38": {
+    "title": "CHAPTER XXXVI.",
+    "chapter": 38,
+    "word_count": 6042,
+    "read_time": 34
+  },
+  "39": {
+    "title": "CHAPTER XXXVII.",
+    "chapter": 39,
+    "word_count": 8358,
+    "read_time": 47
+  },
+  "40": {
+    "title": "CHAPTER XXXVIII.",
+    "chapter": 40,
+    "word_count": 3379,
+    "read_time": 19
+  },
+  "41": {
+    "title": "CHAPTER XXXIX.",
+    "chapter": 41,
+    "word_count": 4749,
+    "read_time": 27
+  },
+  "42": {
+    "title": "CHAPTER XL.",
+    "chapter": 42,
+    "word_count": 5516,
+    "read_time": 31
+  },
+  "43": {
+    "title": "CHAPTER XLI.",
+    "chapter": 43,
+    "word_count": 2048,
+    "read_time": 12
+  },
+  "44": {
+    "title": "CHAPTER XLII.",
+    "chapter": 44,
+    "word_count": 4670,
+    "read_time": 26
+  },
+  "45": {
+    "title": "CHAPTER XLIII.",
+    "chapter": 45,
+    "word_count": 2718,
+    "read_time": 16
+  },
+  "46": {
+    "title": "CHAPTER XLIV.",
+    "chapter": 46,
+    "word_count": 1248,
+    "read_time": 7
+  },
+  "47": {
+    "title": "CHAPTER XLV.",
+    "chapter": 47,
+    "word_count": 7019,
+    "read_time": 39
+  },
+  "48": {
+    "title": "CHAPTER XLVI.",
+    "chapter": 48,
+    "word_count": 3619,
+    "read_time": 21
+  },
+  "49": {
+    "title": "CHAPTER XLVII.",
+    "chapter": 49,
+    "word_count": 2235,
+    "read_time": 13
+  },
+  "50": {
+    "title": "CHAPTER XLVIII.",
+    "chapter": 50,
+    "word_count": 3648,
+    "read_time": 21
+  },
+  "51": {
+    "title": "CHAPTER XLIX.",
+    "chapter": 51,
+    "word_count": 1548,
+    "read_time": 9
+  },
+  "52": {
+    "title": "CHAPTER L.",
+    "chapter": 52,
+    "word_count": 4163,
+    "read_time": 24
+  },
+  "53": {
+    "title": "CHAPTER LI.",
+    "chapter": 53,
+    "word_count": 5001,
+    "read_time": 28
+  },
+  "54": {
+    "title": "CHAPTER LII.",
+    "chapter": 54,
+    "word_count": 3774,
+    "read_time": 21
+  },
+  "55": {
+    "title": "CHAPTER LIII.",
+    "chapter": 55,
+    "word_count": 5267,
+    "read_time": 30
+  },
+  "56": {
+    "title": "CHAPTER LIV.",
+    "chapter": 56,
+    "word_count": 4664,
+    "read_time": 26
+  },
+  "57": {
+    "title": "CHAPTER LV.",
+    "chapter": 57,
+    "word_count": 1801,
+    "read_time": 11
+  },
+  "58": {
+    "title": "CHAPTER LVI.",
+    "chapter": 58,
+    "word_count": 7967,
+    "read_time": 45
+  },
+  "59": {
+    "title": "CHAPTER LVII.",
+    "chapter": 59,
+    "word_count": 3844,
+    "read_time": 22
+  },
+  "60": {
+    "title": "CHAPTER LVIII.",
+    "chapter": 60,
+    "word_count": 7466,
+    "read_time": 42
+  },
+  "61": {
+    "title": "CHAPTER LIX.",
+    "chapter": 61,
+    "word_count": 1137,
+    "read_time": 7
+  },
+  "62": {
+    "title": "CHAPTER LX.",
+    "chapter": 62,
+    "word_count": 4276,
+    "read_time": 24
+  },
+  "63": {
+    "title": "CHAPTER LXI.",
+    "chapter": 63,
+    "word_count": 5494,
+    "read_time": 31
+  },
+  "64": {
+    "title": "CHAPTER LXII.",
+    "chapter": 64,
+    "word_count": 4533,
+    "read_time": 26
+  },
+  "65": {
+    "title": "CHAPTER LXIII.",
+    "chapter": 65,
+    "word_count": 3025,
+    "read_time": 17
+  },
+  "66": {
+    "title": "CHAPTER LXIV.",
+    "chapter": 66,
+    "word_count": 6697,
+    "read_time": 38
+  },
+  "67": {
+    "title": "CHAPTER LXV.",
+    "chapter": 67,
+    "word_count": 2045,
+    "read_time": 12
+  },
+  "68": {
+    "title": "CHAPTER LXVI.",
+    "chapter": 68,
+    "word_count": 3840,
+    "read_time": 22
+  },
+  "69": {
+    "title": "CHAPTER LXVII.",
+    "chapter": 69,
+    "word_count": 3000,
+    "read_time": 17
+  },
+  "70": {
+    "title": "CHAPTER LXVIII.",
+    "chapter": 70,
+    "word_count": 3118,
+    "read_time": 18
+  },
+  "71": {
+    "title": "CHAPTER LXIX.",
+    "chapter": 71,
+    "word_count": 4004,
+    "read_time": 23
+  },
+  "72": {
+    "title": "CHAPTER LXX.",
+    "chapter": 72,
+    "word_count": 4944,
+    "read_time": 28
+  },
+  "73": {
+    "title": "CHAPTER LXXI.",
+    "chapter": 73,
+    "word_count": 6648,
+    "read_time": 37
+  },
+  "74": {
+    "title": "CHAPTER LXXII.",
+    "chapter": 74,
+    "word_count": 1486,
+    "read_time": 9
+  },
+  "75": {
+    "title": "CHAPTER LXXIII.",
+    "chapter": 75,
+    "word_count": 1663,
+    "read_time": 10
+  },
+  "76": {
+    "title": "CHAPTER LXXIV.",
+    "chapter": 76,
+    "word_count": 4211,
+    "read_time": 24
+  },
+  "77": {
+    "title": "CHAPTER LXXV.",
+    "chapter": 77,
+    "word_count": 2971,
+    "read_time": 17
+  },
+  "78": {
+    "title": "CHAPTER LXXVI.",
+    "chapter": 78,
+    "word_count": 4039,
+    "read_time": 23
+  },
+  "79": {
+    "title": "CHAPTER LXXVII.",
+    "chapter": 79,
+    "word_count": 2798,
+    "read_time": 16
+  },
+  "80": {
+    "title": "CHAPTER LXXVIII.",
+    "chapter": 80,
+    "word_count": 1701,
+    "read_time": 10
+  },
+  "81": {
+    "title": "CHAPTER LXXIX.",
+    "chapter": 81,
+    "word_count": 877,
+    "read_time": 5
+  },
+  "82": {
+    "title": "CHAPTER LXXX.",
+    "chapter": 82,
+    "word_count": 2498,
+    "read_time": 14
+  },
+  "83": {
+    "title": "CHAPTER LXXXI.",
+    "chapter": 83,
+    "word_count": 3950,
+    "read_time": 22
+  },
+  "84": {
+    "title": "CHAPTER LXXXII.",
+    "chapter": 84,
+    "word_count": 1553,
+    "read_time": 9
+  },
+  "85": {
+    "title": "CHAPTER LXXXIII.",
+    "chapter": 85,
+    "word_count": 3093,
+    "read_time": 18
+  },
+  "86": {
+    "title": "CHAPTER LXXXIV.",
+    "chapter": 86,
+    "word_count": 3750,
+    "read_time": 21
+  },
+  "87": {
+    "title": "CHAPTER LXXXV.",
+    "chapter": 87,
+    "word_count": 1312,
+    "read_time": 8
+  },
+  "88": {
+    "title": "CHAPTER LXXXVI.",
+    "chapter": 88,
+    "word_count": 1617,
+    "read_time": 9
+  },
+  "89": {
+    "title": "FINALE.",
+    "chapter": 89,
+    "word_count": 2847,
+    "read_time": 16
+  }
+}

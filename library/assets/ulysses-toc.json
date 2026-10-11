@@ -1,0 +1,110 @@
+{
+  "1": {
+    "title": "[ 1 ]",
+    "chapter": 1,
+    "word_count": 7343,
+    "read_time": 41
+  },
+  "2": {
+    "title": "[ 2 ]",
+    "chapter": 2,
+    "word_count": 4463,
+    "read_time": 25
+  },
+  "3": {
+    "title": "[ 3 ]",
+    "chapter": 3,
+    "word_count": 5782,
+    "read_time": 33
+  },
+  "4": {
+    "title": "[ 4 ]",
+    "chapter": 4,
+    "word_count": 5979,
+    "read_time": 34
+  },
+  "5": {
+    "title": "[ 5 ]",
+    "chapter": 5,
+    "word_count": 6539,
+    "read_time": 37
+  },
+  "6": {
+    "title": "[ 6 ]",
+    "chapter": 6,
+    "word_count": 11135,
+    "read_time": 62
+  },
+  "7": {
+    "title": "[ 7 ]",
+    "chapter": 7,
+    "word_count": 10165,
+    "read_time": 57
+  },
+  "8": {
+    "title": "[ 8 ]",
+    "chapter": 8,
+    "word_count": 12908,
+    "read_time": 72
+  },
+  "9": {
+    "title": "[ 9 ]",
+    "chapter": 9,
+    "word_count": 11950,
+    "read_time": 67
+  },
+  "10": {
+    "title": "[ 10 ]",
+    "chapter": 10,
+    "word_count": 12795,
+    "read_time": 72
+  },
+  "11": {
+    "title": "[ 11 ]",
+    "chapter": 11,
+    "word_count": 12410,
+    "read_time": 69
+  },
+  "12": {
+    "title": "[ 12 ]",
+    "chapter": 12,
+    "word_count": 21652,
+    "read_time": 121
+  },
+  "13": {
+    "title": "[ 13 ]",
+    "chapter": 13,
+    "word_count": 17028,
+    "read_time": 95
+  },
+  "14": {
+    "title": "[ 14 ]",
+    "chapter": 14,
+    "word_count": 20556,
+    "read_time": 115
+  },
+  "15": {
+    "title": "[ 15 ]",
+    "chapter": 15,
+    "word_count": 38844,
+    "read_time": 216
+  },
+  "16": {
+    "title": "[ 16 ]",
+    "chapter": 16,
+    "word_count": 23041,
+    "read_time": 129
+  },
+  "17": {
+    "title": "[ 17 ]",
+    "chapter": 17,
+    "word_count": 22747,
+    "read_time": 127
+  },
+  "18": {
+    "title": "[ 18 ]",
+    "chapter": 18,
+    "word_count": 24198,
+    "read_time": 135
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "1": {
+    "title": "Chapter 1",
+    "chapter": 1,
+    "word_count": 6098,
+    "read_time": 34
+  },
+  "2": {
+    "title": "Chapter 2",
+    "chapter": 2,
+    "word_count": 4421,
+    "read_time": 25
+  },
+  "3": {
+    "title": "III",
+    "chapter": 3,
+    "word_count": 5918,
+    "read_time": 33
+  },
+  "4": {
+    "title": "Chapter 4",
+    "chapter": 4,
+    "word_count": 5647,
+    "read_time": 32
+  },
+  "5": {
+    "title": "Chapter 5",
+    "chapter": 5,
+    "word_count": 4415,
+    "read_time": 25
+  },
+  "6": {
+    "title": "Chapter 6",
+    "chapter": 6,
+    "word_count": 4188,
+    "read_time": 24
+  },
+  "7": {
+    "title": "VII",
+    "chapter": 7,
+    "word_count": 9160,
+    "read_time": 51
+  },
+  "8": {
+    "title": "VIII",
+    "chapter": 8,
+    "word_count": 4693,
+    "read_time": 27
+  },
+  "9": {
+    "title": "Chapter 9",
+    "chapter": 9,
+    "word_count": 5413,
+    "read_time": 31
+  }
+}

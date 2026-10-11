@@ -100,9 +100,9 @@
 
         <!-- Version Status & Release Info Strip (WCAG Operable) -->
         <?php
-        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.12.0';
-        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'October 2026 Word Search & Crossword Puzzle Studio Suite Release';
-        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Parent & Teacher Word Search and Crossword Puzzle Studios, 8.5"x11" PDF Print Generator, Dyslexia-Friendly Layout, Interactive Game Zone Integration';
+        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.12.4';
+        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'October 2026 Home Page Streamlining & Reading Suite Release';
+        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Streamlined Home Page Experience without Platform Guide Popup, American Yawp Multi-Volume Digital Reading Suite, UDL Accessibility Compliance';
         ?>
         <div class="footer-version-strip" role="region" aria-label="Platform Version Information">
             <div class="footer-version-info">
@@ -275,9 +275,41 @@
                 </span>
             </div>
             <p class="footer-vmodal-lead">
-                Version <?= htmlspecialchars($siteVersion) ?> delivers the <strong>American Yawp Multi-Volume Digital Reading Suite</strong>—introducing dedicated dual "Read Online" launchers for Volume 1 (Before 1877) and Volume 2 (After 1877), multi-volume modal action architecture, table ledger dual volume launchers, and a dedicated accessible textbook portal.
+                Version <?= htmlspecialchars($siteVersion) ?> delivers the <strong>Project Gutenberg Top 31 Downloaded Classics Collection</strong>—expanding the digital library with 31 timeless literary masterpieces, full multi-chapter reader navigation, high-speed precomputed TOC indexation, and universal UDL accessibility tools.
             </p>
             <ul class="footer-vmodal-features">
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(16, 185, 129, 0.15); color: #059669;">
+                        <i class="fas fa-books"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>31 Top Downloaded Project Gutenberg Classics:</strong> Complete digital library integration of the top 31 works from the Project Gutenberg archive, including <em>Pride and Prejudice</em>, <em>Frankenstein</em>, <em>Moby Dick</em>, <em>Alice's Adventures in Wonderland</em>, <em>Dracula</em>, <em>The Complete Works of William Shakespeare</em>, <em>The Great Gatsby</em>, <em>War and Peace</em>, <em>The Odyssey</em>, and <em>The Republic</em>.
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(79, 70, 229, 0.15); color: #4f46e5;">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Unified Chapter Reader &amp; High-Speed TOC:</strong> Full in-browser digital reading with multi-chapter pagination, precomputed chapter word counts and reading minutes, and an interactive Table of Contents drawer modal.
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(245, 158, 11, 0.15); color: #d97706;">
+                        <i class="fas fa-universal-access"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Universal Design for Learning (UDL) Accessibility:</strong> Every newly added classic includes Text-to-Speech audio narration, OpenDyslexic and Atkinson Hyperlegible font scalers, Bionic reading fixations, and distraction-free Zen mode.
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(16, 185, 129, 0.15); color: #059669;">
+                        <i class="fas fa-sparkles"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Streamlined Home Page Landing Experience:</strong> Removed the legacy Platform Guide popup banner and header trigger button from the index page, decluttering the initial viewport and directing immediate learner focus toward the Academic Path curriculum modules and quick study tools.
+                    </div>
+                </li>
                 <li class="footer-vmodal-feature-item">
                     <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(79, 70, 229, 0.15); color: #4f46e5;">
                         <i class="fas fa-book-open"></i>

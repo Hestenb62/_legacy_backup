@@ -1,0 +1,1472 @@
+{
+  "1": {
+    "title": "Spoon River Anthology",
+    "chapter": 1,
+    "word_count": 572,
+    "read_time": 4
+  },
+  "2": {
+    "title": "The Hill",
+    "chapter": 2,
+    "word_count": 287,
+    "read_time": 2
+  },
+  "3": {
+    "title": "Hod Putt",
+    "chapter": 3,
+    "word_count": 97,
+    "read_time": 1
+  },
+  "4": {
+    "title": "Ollie McGee",
+    "chapter": 4,
+    "word_count": 96,
+    "read_time": 1
+  },
+  "5": {
+    "title": "Fletcher McGee",
+    "chapter": 5,
+    "word_count": 150,
+    "read_time": 1
+  },
+  "6": {
+    "title": "Robert Fulton Tanner",
+    "chapter": 6,
+    "word_count": 168,
+    "read_time": 1
+  },
+  "7": {
+    "title": "Cassius Hueffer",
+    "chapter": 7,
+    "word_count": 102,
+    "read_time": 1
+  },
+  "8": {
+    "title": "Serepta Mason",
+    "chapter": 8,
+    "word_count": 74,
+    "read_time": 1
+  },
+  "9": {
+    "title": "Amanda Barker",
+    "chapter": 9,
+    "word_count": 62,
+    "read_time": 1
+  },
+  "10": {
+    "title": "Constance Hately",
+    "chapter": 10,
+    "word_count": 61,
+    "read_time": 1
+  },
+  "11": {
+    "title": "Chase Henry",
+    "chapter": 11,
+    "word_count": 74,
+    "read_time": 1
+  },
+  "12": {
+    "title": "Harry Carey Goodhue",
+    "chapter": 12,
+    "word_count": 174,
+    "read_time": 1
+  },
+  "13": {
+    "title": "Judge Somers",
+    "chapter": 13,
+    "word_count": 82,
+    "read_time": 1
+  },
+  "14": {
+    "title": "Kinsey Keene",
+    "chapter": 14,
+    "word_count": 160,
+    "read_time": 1
+  },
+  "15": {
+    "title": "Benjamin Pantier",
+    "chapter": 15,
+    "word_count": 120,
+    "read_time": 1
+  },
+  "16": {
+    "title": "Mrs. Benjamin Pantier",
+    "chapter": 16,
+    "word_count": 160,
+    "read_time": 1
+  },
+  "17": {
+    "title": "Reuben Pantier",
+    "chapter": 17,
+    "word_count": 203,
+    "read_time": 2
+  },
+  "18": {
+    "title": "Emily Sparks",
+    "chapter": 18,
+    "word_count": 134,
+    "read_time": 1
+  },
+  "19": {
+    "title": "Trainor, the Druggist",
+    "chapter": 19,
+    "word_count": 78,
+    "read_time": 1
+  },
+  "20": {
+    "title": "Daisy Fraser",
+    "chapter": 20,
+    "word_count": 148,
+    "read_time": 1
+  },
+  "21": {
+    "title": "Benjamin Fraser",
+    "chapter": 21,
+    "word_count": 165,
+    "read_time": 1
+  },
+  "22": {
+    "title": "Minerva Jones",
+    "chapter": 22,
+    "word_count": 98,
+    "read_time": 1
+  },
+  "23": {
+    "title": "\u201cIndignation\u201d Jones",
+    "chapter": 23,
+    "word_count": 179,
+    "read_time": 1
+  },
+  "24": {
+    "title": "\u201cButch\u201d Weldy",
+    "chapter": 24,
+    "word_count": 164,
+    "read_time": 1
+  },
+  "25": {
+    "title": "Doctor Meyers",
+    "chapter": 25,
+    "word_count": 105,
+    "read_time": 1
+  },
+  "26": {
+    "title": "Mrs. Meyers",
+    "chapter": 26,
+    "word_count": 84,
+    "read_time": 1
+  },
+  "27": {
+    "title": "Knowlt Hoheimer",
+    "chapter": 27,
+    "word_count": 77,
+    "read_time": 1
+  },
+  "28": {
+    "title": "Lydia Puckett",
+    "chapter": 28,
+    "word_count": 70,
+    "read_time": 1
+  },
+  "29": {
+    "title": "Frank Drummer",
+    "chapter": 29,
+    "word_count": 58,
+    "read_time": 1
+  },
+  "30": {
+    "title": "Hare Drummer",
+    "chapter": 30,
+    "word_count": 134,
+    "read_time": 1
+  },
+  "31": {
+    "title": "Conrad Siever",
+    "chapter": 31,
+    "word_count": 101,
+    "read_time": 1
+  },
+  "32": {
+    "title": "Doc Hill",
+    "chapter": 32,
+    "word_count": 115,
+    "read_time": 1
+  },
+  "33": {
+    "title": "Andy The Night-Watch",
+    "chapter": 33,
+    "word_count": 114,
+    "read_time": 1
+  },
+  "34": {
+    "title": "Sarah Brown",
+    "chapter": 34,
+    "word_count": 101,
+    "read_time": 1
+  },
+  "35": {
+    "title": "Percy Bysshe Shelley",
+    "chapter": 35,
+    "word_count": 103,
+    "read_time": 1
+  },
+  "36": {
+    "title": "Flossie Cabanis",
+    "chapter": 36,
+    "word_count": 102,
+    "read_time": 1
+  },
+  "37": {
+    "title": "Julia Miller",
+    "chapter": 37,
+    "word_count": 99,
+    "read_time": 1
+  },
+  "38": {
+    "title": "Johnnie Sayre",
+    "chapter": 38,
+    "word_count": 107,
+    "read_time": 1
+  },
+  "39": {
+    "title": "Charlie French",
+    "chapter": 39,
+    "word_count": 108,
+    "read_time": 1
+  },
+  "40": {
+    "title": "Zenas Witt",
+    "chapter": 40,
+    "word_count": 138,
+    "read_time": 1
+  },
+  "41": {
+    "title": "Theodore the Poet",
+    "chapter": 41,
+    "word_count": 135,
+    "read_time": 1
+  },
+  "42": {
+    "title": "The Town Marshal",
+    "chapter": 42,
+    "word_count": 123,
+    "read_time": 1
+  },
+  "43": {
+    "title": "Jack McGuire",
+    "chapter": 43,
+    "word_count": 129,
+    "read_time": 1
+  },
+  "44": {
+    "title": "Jacob Goodpasture",
+    "chapter": 44,
+    "word_count": 150,
+    "read_time": 1
+  },
+  "45": {
+    "title": "Dorcas Gustine",
+    "chapter": 45,
+    "word_count": 98,
+    "read_time": 1
+  },
+  "46": {
+    "title": "Nicholas Bindle",
+    "chapter": 46,
+    "word_count": 87,
+    "read_time": 1
+  },
+  "47": {
+    "title": "Harold Arnett",
+    "chapter": 47,
+    "word_count": 126,
+    "read_time": 1
+  },
+  "48": {
+    "title": "Margaret Fuller Slack",
+    "chapter": 48,
+    "word_count": 126,
+    "read_time": 1
+  },
+  "49": {
+    "title": "George Trimble",
+    "chapter": 49,
+    "word_count": 98,
+    "read_time": 1
+  },
+  "50": {
+    "title": "Dr. Siegfried Iseman",
+    "chapter": 50,
+    "word_count": 150,
+    "read_time": 1
+  },
+  "51": {
+    "title": "Lois Spears",
+    "chapter": 51,
+    "word_count": 96,
+    "read_time": 1
+  },
+  "52": {
+    "title": "Justice Arnett",
+    "chapter": 52,
+    "word_count": 176,
+    "read_time": 1
+  },
+  "53": {
+    "title": "Willard Fluke",
+    "chapter": 53,
+    "word_count": 136,
+    "read_time": 1
+  },
+  "54": {
+    "title": "Aner Clute",
+    "chapter": 54,
+    "word_count": 151,
+    "read_time": 1
+  },
+  "55": {
+    "title": "Lucius Atherton",
+    "chapter": 55,
+    "word_count": 135,
+    "read_time": 1
+  },
+  "56": {
+    "title": "Homer Clapp",
+    "chapter": 56,
+    "word_count": 147,
+    "read_time": 1
+  },
+  "57": {
+    "title": "Deacon Taylor",
+    "chapter": 57,
+    "word_count": 58,
+    "read_time": 1
+  },
+  "58": {
+    "title": "Sam Hookey",
+    "chapter": 58,
+    "word_count": 72,
+    "read_time": 1
+  },
+  "59": {
+    "title": "Cooney Potter",
+    "chapter": 59,
+    "word_count": 93,
+    "read_time": 1
+  },
+  "60": {
+    "title": "Fiddler Jones",
+    "chapter": 60,
+    "word_count": 200,
+    "read_time": 2
+  },
+  "61": {
+    "title": "Nellie Clark",
+    "chapter": 61,
+    "word_count": 114,
+    "read_time": 1
+  },
+  "62": {
+    "title": "Louise Smith",
+    "chapter": 62,
+    "word_count": 99,
+    "read_time": 1
+  },
+  "63": {
+    "title": "Herbert Marshall",
+    "chapter": 63,
+    "word_count": 109,
+    "read_time": 1
+  },
+  "64": {
+    "title": "George Gray",
+    "chapter": 64,
+    "word_count": 130,
+    "read_time": 1
+  },
+  "65": {
+    "title": "Hon. Henry Bennett",
+    "chapter": 65,
+    "word_count": 118,
+    "read_time": 1
+  },
+  "66": {
+    "title": "Griffy the Cooper",
+    "chapter": 66,
+    "word_count": 106,
+    "read_time": 1
+  },
+  "67": {
+    "title": "Sersmith the Dentist",
+    "chapter": 67,
+    "word_count": 178,
+    "read_time": 1
+  },
+  "68": {
+    "title": "A. D. Blood",
+    "chapter": 68,
+    "word_count": 67,
+    "read_time": 1
+  },
+  "69": {
+    "title": "Robert Southey Burke",
+    "chapter": 69,
+    "word_count": 146,
+    "read_time": 1
+  },
+  "70": {
+    "title": "Dora Williams",
+    "chapter": 70,
+    "word_count": 189,
+    "read_time": 2
+  },
+  "71": {
+    "title": "Mrs. Williams",
+    "chapter": 71,
+    "word_count": 138,
+    "read_time": 1
+  },
+  "72": {
+    "title": "William and Emily",
+    "chapter": 72,
+    "word_count": 72,
+    "read_time": 1
+  },
+  "73": {
+    "title": "The Circuit Judge",
+    "chapter": 73,
+    "word_count": 116,
+    "read_time": 1
+  },
+  "74": {
+    "title": "Blind Jack",
+    "chapter": 74,
+    "word_count": 110,
+    "read_time": 1
+  },
+  "75": {
+    "title": "John Horace Burleson",
+    "chapter": 75,
+    "word_count": 127,
+    "read_time": 1
+  },
+  "76": {
+    "title": "Nancy Knapp",
+    "chapter": 76,
+    "word_count": 179,
+    "read_time": 1
+  },
+  "77": {
+    "title": "Barry Holden",
+    "chapter": 77,
+    "word_count": 147,
+    "read_time": 1
+  },
+  "78": {
+    "title": "State\u2019s Attorney Fallas",
+    "chapter": 78,
+    "word_count": 130,
+    "read_time": 1
+  },
+  "79": {
+    "title": "Wendell P. Bloyd",
+    "chapter": 79,
+    "word_count": 201,
+    "read_time": 2
+  },
+  "80": {
+    "title": "Francis Turner",
+    "chapter": 80,
+    "word_count": 74,
+    "read_time": 1
+  },
+  "81": {
+    "title": "Franklin Jones",
+    "chapter": 81,
+    "word_count": 77,
+    "read_time": 1
+  },
+  "82": {
+    "title": "John M. Church",
+    "chapter": 82,
+    "word_count": 80,
+    "read_time": 1
+  },
+  "83": {
+    "title": "Russian Sonia",
+    "chapter": 83,
+    "word_count": 145,
+    "read_time": 1
+  },
+  "84": {
+    "title": "Isa Nutter",
+    "chapter": 84,
+    "word_count": 157,
+    "read_time": 1
+  },
+  "85": {
+    "title": "Barney Hainsfeather",
+    "chapter": 85,
+    "word_count": 74,
+    "read_time": 1
+  },
+  "86": {
+    "title": "Petit, the Poet",
+    "chapter": 86,
+    "word_count": 130,
+    "read_time": 1
+  },
+  "87": {
+    "title": "Pauline Barrett",
+    "chapter": 87,
+    "word_count": 197,
+    "read_time": 2
+  },
+  "88": {
+    "title": "Mrs. Charles Bliss",
+    "chapter": 88,
+    "word_count": 158,
+    "read_time": 1
+  },
+  "89": {
+    "title": "Mrs. George Reece",
+    "chapter": 89,
+    "word_count": 110,
+    "read_time": 1
+  },
+  "90": {
+    "title": "Rev. Lemuel Wiley",
+    "chapter": 90,
+    "word_count": 67,
+    "read_time": 1
+  },
+  "91": {
+    "title": "Thomas Ross, Jr.",
+    "chapter": 91,
+    "word_count": 119,
+    "read_time": 1
+  },
+  "92": {
+    "title": "Rev. Abner Peet",
+    "chapter": 92,
+    "word_count": 69,
+    "read_time": 1
+  },
+  "93": {
+    "title": "Jefferson Howard",
+    "chapter": 93,
+    "word_count": 167,
+    "read_time": 1
+  },
+  "94": {
+    "title": "Judge Selah Lively",
+    "chapter": 94,
+    "word_count": 130,
+    "read_time": 1
+  },
+  "95": {
+    "title": "Albert Schirding",
+    "chapter": 95,
+    "word_count": 128,
+    "read_time": 1
+  },
+  "96": {
+    "title": "Jonas Keene",
+    "chapter": 96,
+    "word_count": 76,
+    "read_time": 1
+  },
+  "97": {
+    "title": "Eugenia Todd",
+    "chapter": 97,
+    "word_count": 116,
+    "read_time": 1
+  },
+  "98": {
+    "title": "Yee Bow",
+    "chapter": 98,
+    "word_count": 92,
+    "read_time": 1
+  },
+  "99": {
+    "title": "Washington McNeely",
+    "chapter": 99,
+    "word_count": 207,
+    "read_time": 2
+  },
+  "100": {
+    "title": "Paul McNeely",
+    "chapter": 100,
+    "word_count": 161,
+    "read_time": 1
+  },
+  "101": {
+    "title": "Mary McNeely",
+    "chapter": 101,
+    "word_count": 118,
+    "read_time": 1
+  },
+  "102": {
+    "title": "Daniel M\u2019Cumber",
+    "chapter": 102,
+    "word_count": 143,
+    "read_time": 1
+  },
+  "103": {
+    "title": "Georgine Sand Miner",
+    "chapter": 103,
+    "word_count": 220,
+    "read_time": 2
+  },
+  "104": {
+    "title": "Thomas Rhodes",
+    "chapter": 104,
+    "word_count": 78,
+    "read_time": 1
+  },
+  "105": {
+    "title": "Ida Chicken",
+    "chapter": 105,
+    "word_count": 122,
+    "read_time": 1
+  },
+  "106": {
+    "title": "Penniwit, the Artist",
+    "chapter": 106,
+    "word_count": 86,
+    "read_time": 1
+  },
+  "107": {
+    "title": "Jim Brown",
+    "chapter": 107,
+    "word_count": 157,
+    "read_time": 1
+  },
+  "108": {
+    "title": "Robert Davidson",
+    "chapter": 108,
+    "word_count": 131,
+    "read_time": 1
+  },
+  "109": {
+    "title": "Elsa Wertman",
+    "chapter": 109,
+    "word_count": 190,
+    "read_time": 2
+  },
+  "110": {
+    "title": "Hamilton Greene",
+    "chapter": 110,
+    "word_count": 65,
+    "read_time": 1
+  },
+  "111": {
+    "title": "Ernest Hyde",
+    "chapter": 111,
+    "word_count": 109,
+    "read_time": 1
+  },
+  "112": {
+    "title": "Roger Heston",
+    "chapter": 112,
+    "word_count": 95,
+    "read_time": 1
+  },
+  "113": {
+    "title": "Amos Sibley",
+    "chapter": 113,
+    "word_count": 112,
+    "read_time": 1
+  },
+  "114": {
+    "title": "Mrs. Sibley",
+    "chapter": 114,
+    "word_count": 53,
+    "read_time": 1
+  },
+  "115": {
+    "title": "Adam Weirauch",
+    "chapter": 115,
+    "word_count": 153,
+    "read_time": 1
+  },
+  "116": {
+    "title": "Ezra Bartlett",
+    "chapter": 116,
+    "word_count": 96,
+    "read_time": 1
+  },
+  "117": {
+    "title": "Amelia Garrick",
+    "chapter": 117,
+    "word_count": 124,
+    "read_time": 1
+  },
+  "118": {
+    "title": "John Hancock Otis",
+    "chapter": 118,
+    "word_count": 125,
+    "read_time": 1
+  },
+  "119": {
+    "title": "Anthony Findlay",
+    "chapter": 119,
+    "word_count": 135,
+    "read_time": 1
+  },
+  "120": {
+    "title": "John Cabanis",
+    "chapter": 120,
+    "word_count": 131,
+    "read_time": 1
+  },
+  "121": {
+    "title": "The Unknown",
+    "chapter": 121,
+    "word_count": 113,
+    "read_time": 1
+  },
+  "122": {
+    "title": "Jonathan Swift Somers (Author of the Spooniad )",
+    "chapter": 122,
+    "word_count": 110,
+    "read_time": 1
+  },
+  "123": {
+    "title": "Widow McFarlane",
+    "chapter": 123,
+    "word_count": 150,
+    "read_time": 1
+  },
+  "124": {
+    "title": "Carl Hamblin",
+    "chapter": 124,
+    "word_count": 184,
+    "read_time": 2
+  },
+  "125": {
+    "title": "Editor Whedon",
+    "chapter": 125,
+    "word_count": 189,
+    "read_time": 2
+  },
+  "126": {
+    "title": "Eugene Carman",
+    "chapter": 126,
+    "word_count": 189,
+    "read_time": 2
+  },
+  "127": {
+    "title": "Clarence Fawcett",
+    "chapter": 127,
+    "word_count": 162,
+    "read_time": 1
+  },
+  "128": {
+    "title": "W. Lloyd Garrison Standard",
+    "chapter": 128,
+    "word_count": 168,
+    "read_time": 1
+  },
+  "129": {
+    "title": "Professor Newcomer",
+    "chapter": 129,
+    "word_count": 119,
+    "read_time": 1
+  },
+  "130": {
+    "title": "Ralph Rhodes",
+    "chapter": 130,
+    "word_count": 183,
+    "read_time": 2
+  },
+  "131": {
+    "title": "Mickey M\u2019Grew",
+    "chapter": 131,
+    "word_count": 126,
+    "read_time": 1
+  },
+  "132": {
+    "title": "Rosie Roberts",
+    "chapter": 132,
+    "word_count": 125,
+    "read_time": 1
+  },
+  "133": {
+    "title": "Oscar Hummel",
+    "chapter": 133,
+    "word_count": 140,
+    "read_time": 1
+  },
+  "134": {
+    "title": "Josiah Tompkins",
+    "chapter": 134,
+    "word_count": 146,
+    "read_time": 1
+  },
+  "135": {
+    "title": "Roscoe Purkapile",
+    "chapter": 135,
+    "word_count": 147,
+    "read_time": 1
+  },
+  "136": {
+    "title": "Mrs. Purkapile",
+    "chapter": 136,
+    "word_count": 119,
+    "read_time": 1
+  },
+  "137": {
+    "title": "Mrs. Kessler",
+    "chapter": 137,
+    "word_count": 159,
+    "read_time": 1
+  },
+  "138": {
+    "title": "Harmon Whitney",
+    "chapter": 138,
+    "word_count": 222,
+    "read_time": 2
+  },
+  "139": {
+    "title": "Bert Kessler",
+    "chapter": 139,
+    "word_count": 164,
+    "read_time": 1
+  },
+  "140": {
+    "title": "Lambert Hutchins",
+    "chapter": 140,
+    "word_count": 202,
+    "read_time": 2
+  },
+  "141": {
+    "title": "Lillian Stewart",
+    "chapter": 141,
+    "word_count": 168,
+    "read_time": 1
+  },
+  "142": {
+    "title": "Hortense Robbins",
+    "chapter": 142,
+    "word_count": 82,
+    "read_time": 1
+  },
+  "143": {
+    "title": "Batterton Dobyns",
+    "chapter": 143,
+    "word_count": 148,
+    "read_time": 1
+  },
+  "144": {
+    "title": "Jacob Godbey",
+    "chapter": 144,
+    "word_count": 142,
+    "read_time": 1
+  },
+  "145": {
+    "title": "Walter Simmons",
+    "chapter": 145,
+    "word_count": 153,
+    "read_time": 1
+  },
+  "146": {
+    "title": "Tom Beatty",
+    "chapter": 146,
+    "word_count": 157,
+    "read_time": 1
+  },
+  "147": {
+    "title": "Roy Butler",
+    "chapter": 147,
+    "word_count": 182,
+    "read_time": 2
+  },
+  "148": {
+    "title": "Searcy Foote",
+    "chapter": 148,
+    "word_count": 210,
+    "read_time": 2
+  },
+  "149": {
+    "title": "Edmund Pollard",
+    "chapter": 149,
+    "word_count": 165,
+    "read_time": 1
+  },
+  "150": {
+    "title": "Thomas Trevelyan",
+    "chapter": 150,
+    "word_count": 158,
+    "read_time": 1
+  },
+  "151": {
+    "title": "Percival Sharp",
+    "chapter": 151,
+    "word_count": 200,
+    "read_time": 2
+  },
+  "152": {
+    "title": "Hiram Scates",
+    "chapter": 152,
+    "word_count": 175,
+    "read_time": 1
+  },
+  "153": {
+    "title": "Peleg Poague",
+    "chapter": 153,
+    "word_count": 125,
+    "read_time": 1
+  },
+  "154": {
+    "title": "Jeduthan Hawley",
+    "chapter": 154,
+    "word_count": 134,
+    "read_time": 1
+  },
+  "155": {
+    "title": "Abel Melveny",
+    "chapter": 155,
+    "word_count": 131,
+    "read_time": 1
+  },
+  "156": {
+    "title": "Oaks Tutt",
+    "chapter": 156,
+    "word_count": 200,
+    "read_time": 2
+  },
+  "157": {
+    "title": "Elliott Hawkins",
+    "chapter": 157,
+    "word_count": 207,
+    "read_time": 2
+  },
+  "158": {
+    "title": "Voltaire Johnson",
+    "chapter": 158,
+    "word_count": 137,
+    "read_time": 1
+  },
+  "159": {
+    "title": "English Thornton",
+    "chapter": 159,
+    "word_count": 148,
+    "read_time": 1
+  },
+  "160": {
+    "title": "Enoch Dunlap",
+    "chapter": 160,
+    "word_count": 138,
+    "read_time": 1
+  },
+  "161": {
+    "title": "Ida Frickey",
+    "chapter": 161,
+    "word_count": 185,
+    "read_time": 2
+  },
+  "162": {
+    "title": "Seth Compton",
+    "chapter": 162,
+    "word_count": 143,
+    "read_time": 1
+  },
+  "163": {
+    "title": "Felix Schmidt",
+    "chapter": 163,
+    "word_count": 166,
+    "read_time": 1
+  },
+  "164": {
+    "title": "Schr\u0153der The Fisherman",
+    "chapter": 164,
+    "word_count": 132,
+    "read_time": 1
+  },
+  "165": {
+    "title": "Richard Bone",
+    "chapter": 165,
+    "word_count": 137,
+    "read_time": 1
+  },
+  "166": {
+    "title": "Silas Dement",
+    "chapter": 166,
+    "word_count": 185,
+    "read_time": 2
+  },
+  "167": {
+    "title": "Dillard Sissman",
+    "chapter": 167,
+    "word_count": 141,
+    "read_time": 1
+  },
+  "168": {
+    "title": "Jonathan Houghton",
+    "chapter": 168,
+    "word_count": 162,
+    "read_time": 1
+  },
+  "169": {
+    "title": "E. C. Culbertson",
+    "chapter": 169,
+    "word_count": 159,
+    "read_time": 1
+  },
+  "170": {
+    "title": "Shack Dye",
+    "chapter": 170,
+    "word_count": 157,
+    "read_time": 1
+  },
+  "171": {
+    "title": "Hildrup Tubbs",
+    "chapter": 171,
+    "word_count": 115,
+    "read_time": 1
+  },
+  "172": {
+    "title": "Henry Tripp",
+    "chapter": 172,
+    "word_count": 190,
+    "read_time": 2
+  },
+  "173": {
+    "title": "Granville Calhoun",
+    "chapter": 173,
+    "word_count": 124,
+    "read_time": 1
+  },
+  "174": {
+    "title": "Henry C. Calhoun",
+    "chapter": 174,
+    "word_count": 165,
+    "read_time": 1
+  },
+  "175": {
+    "title": "Alfred Moir",
+    "chapter": 175,
+    "word_count": 151,
+    "read_time": 1
+  },
+  "176": {
+    "title": "Perry Zoll",
+    "chapter": 176,
+    "word_count": 83,
+    "read_time": 1
+  },
+  "177": {
+    "title": "Dippold the Optician",
+    "chapter": 177,
+    "word_count": 148,
+    "read_time": 1
+  },
+  "178": {
+    "title": "Magrady Graham",
+    "chapter": 178,
+    "word_count": 127,
+    "read_time": 1
+  },
+  "179": {
+    "title": "Archibald Higbie",
+    "chapter": 179,
+    "word_count": 163,
+    "read_time": 1
+  },
+  "180": {
+    "title": "Tom Merritt",
+    "chapter": 180,
+    "word_count": 102,
+    "read_time": 1
+  },
+  "181": {
+    "title": "Mrs. Merritt",
+    "chapter": 181,
+    "word_count": 130,
+    "read_time": 1
+  },
+  "182": {
+    "title": "Elmer Karr",
+    "chapter": 182,
+    "word_count": 80,
+    "read_time": 1
+  },
+  "183": {
+    "title": "Elizabeth Childers",
+    "chapter": 183,
+    "word_count": 195,
+    "read_time": 2
+  },
+  "184": {
+    "title": "Edith Conant",
+    "chapter": 184,
+    "word_count": 175,
+    "read_time": 1
+  },
+  "185": {
+    "title": "Charles Webster",
+    "chapter": 185,
+    "word_count": 175,
+    "read_time": 1
+  },
+  "186": {
+    "title": "Father Malloy",
+    "chapter": 186,
+    "word_count": 169,
+    "read_time": 1
+  },
+  "187": {
+    "title": "Ami Green",
+    "chapter": 187,
+    "word_count": 104,
+    "read_time": 1
+  },
+  "188": {
+    "title": "Calvin Campbell",
+    "chapter": 188,
+    "word_count": 112,
+    "read_time": 1
+  },
+  "189": {
+    "title": "Henry Layton",
+    "chapter": 189,
+    "word_count": 79,
+    "read_time": 1
+  },
+  "190": {
+    "title": "Harlan Sewall",
+    "chapter": 190,
+    "word_count": 144,
+    "read_time": 1
+  },
+  "191": {
+    "title": "Ippolit Konovaloff",
+    "chapter": 191,
+    "word_count": 163,
+    "read_time": 1
+  },
+  "192": {
+    "title": "Henry Phipps",
+    "chapter": 192,
+    "word_count": 225,
+    "read_time": 2
+  },
+  "193": {
+    "title": "Harry Wilmans",
+    "chapter": 193,
+    "word_count": 210,
+    "read_time": 2
+  },
+  "194": {
+    "title": "John Wasson",
+    "chapter": 194,
+    "word_count": 138,
+    "read_time": 1
+  },
+  "195": {
+    "title": "Many Soldiers",
+    "chapter": 195,
+    "word_count": 157,
+    "read_time": 1
+  },
+  "196": {
+    "title": "Godwin James",
+    "chapter": 196,
+    "word_count": 190,
+    "read_time": 2
+  },
+  "197": {
+    "title": "Lyman King",
+    "chapter": 197,
+    "word_count": 111,
+    "read_time": 1
+  },
+  "198": {
+    "title": "Caroline Branson",
+    "chapter": 198,
+    "word_count": 322,
+    "read_time": 2
+  },
+  "199": {
+    "title": "Anne Rutledge",
+    "chapter": 199,
+    "word_count": 76,
+    "read_time": 1
+  },
+  "200": {
+    "title": "Hamlet Micure",
+    "chapter": 200,
+    "word_count": 184,
+    "read_time": 2
+  },
+  "201": {
+    "title": "Mabel Osborne",
+    "chapter": 201,
+    "word_count": 113,
+    "read_time": 1
+  },
+  "202": {
+    "title": "William H. Herndon",
+    "chapter": 202,
+    "word_count": 209,
+    "read_time": 2
+  },
+  "203": {
+    "title": "Rebecca Wasson",
+    "chapter": 203,
+    "word_count": 261,
+    "read_time": 2
+  },
+  "204": {
+    "title": "Rutherford McDowell",
+    "chapter": 204,
+    "word_count": 170,
+    "read_time": 1
+  },
+  "205": {
+    "title": "Hannah Armstrong",
+    "chapter": 205,
+    "word_count": 190,
+    "read_time": 2
+  },
+  "206": {
+    "title": "Lucinda Matlock",
+    "chapter": 206,
+    "word_count": 159,
+    "read_time": 1
+  },
+  "207": {
+    "title": "Davis Matlock",
+    "chapter": 207,
+    "word_count": 156,
+    "read_time": 1
+  },
+  "208": {
+    "title": "Herman Altman",
+    "chapter": 208,
+    "word_count": 157,
+    "read_time": 1
+  },
+  "209": {
+    "title": "Jennie M\u2019Grew",
+    "chapter": 209,
+    "word_count": 114,
+    "read_time": 1
+  },
+  "210": {
+    "title": "Columbus Cheney",
+    "chapter": 210,
+    "word_count": 72,
+    "read_time": 1
+  },
+  "211": {
+    "title": "Wallace Ferguson",
+    "chapter": 211,
+    "word_count": 178,
+    "read_time": 1
+  },
+  "212": {
+    "title": "Marie Bateson",
+    "chapter": 212,
+    "word_count": 83,
+    "read_time": 1
+  },
+  "213": {
+    "title": "Tennessee Claflin Shope",
+    "chapter": 213,
+    "word_count": 120,
+    "read_time": 1
+  },
+  "214": {
+    "title": "Plymouth Rock Joe",
+    "chapter": 214,
+    "word_count": 223,
+    "read_time": 2
+  },
+  "215": {
+    "title": "Imanuel Ehrenhardt",
+    "chapter": 215,
+    "word_count": 103,
+    "read_time": 1
+  },
+  "216": {
+    "title": "Samuel Gardner",
+    "chapter": 216,
+    "word_count": 146,
+    "read_time": 1
+  },
+  "217": {
+    "title": "Dow Kritt",
+    "chapter": 217,
+    "word_count": 97,
+    "read_time": 1
+  },
+  "218": {
+    "title": "William Jones",
+    "chapter": 218,
+    "word_count": 128,
+    "read_time": 1
+  },
+  "219": {
+    "title": "William Goode",
+    "chapter": 219,
+    "word_count": 105,
+    "read_time": 1
+  },
+  "220": {
+    "title": "J. Milton Miles",
+    "chapter": 220,
+    "word_count": 85,
+    "read_time": 1
+  },
+  "221": {
+    "title": "Faith Matheny",
+    "chapter": 221,
+    "word_count": 138,
+    "read_time": 1
+  },
+  "222": {
+    "title": "Scholfield Hurley",
+    "chapter": 222,
+    "word_count": 158,
+    "read_time": 1
+  },
+  "223": {
+    "title": "Willie Metcalf",
+    "chapter": 223,
+    "word_count": 188,
+    "read_time": 2
+  },
+  "224": {
+    "title": "Willie Pennington",
+    "chapter": 224,
+    "word_count": 118,
+    "read_time": 1
+  },
+  "225": {
+    "title": "The Village Atheist",
+    "chapter": 225,
+    "word_count": 107,
+    "read_time": 1
+  },
+  "226": {
+    "title": "John Ballard",
+    "chapter": 226,
+    "word_count": 167,
+    "read_time": 1
+  },
+  "227": {
+    "title": "Julian Scott",
+    "chapter": 227,
+    "word_count": 108,
+    "read_time": 1
+  },
+  "228": {
+    "title": "Alfonso Churchill",
+    "chapter": 228,
+    "word_count": 129,
+    "read_time": 1
+  },
+  "229": {
+    "title": "Zilpha Marsh",
+    "chapter": 229,
+    "word_count": 176,
+    "read_time": 1
+  },
+  "230": {
+    "title": "James Garber",
+    "chapter": 230,
+    "word_count": 173,
+    "read_time": 1
+  },
+  "231": {
+    "title": "Lydia Humphrey",
+    "chapter": 231,
+    "word_count": 103,
+    "read_time": 1
+  },
+  "232": {
+    "title": "Le Roy Goldman",
+    "chapter": 232,
+    "word_count": 139,
+    "read_time": 1
+  },
+  "233": {
+    "title": "Gustav Richter",
+    "chapter": 233,
+    "word_count": 172,
+    "read_time": 1
+  },
+  "234": {
+    "title": "Arlo Will",
+    "chapter": 234,
+    "word_count": 139,
+    "read_time": 1
+  },
+  "235": {
+    "title": "Captain Orlando Killion",
+    "chapter": 235,
+    "word_count": 144,
+    "read_time": 1
+  },
+  "236": {
+    "title": "Jeremy Carlisle",
+    "chapter": 236,
+    "word_count": 134,
+    "read_time": 1
+  },
+  "237": {
+    "title": "Joseph Dixon",
+    "chapter": 237,
+    "word_count": 164,
+    "read_time": 1
+  },
+  "238": {
+    "title": "Judson Stoddard",
+    "chapter": 238,
+    "word_count": 102,
+    "read_time": 1
+  },
+  "239": {
+    "title": "Russell Kincaid",
+    "chapter": 239,
+    "word_count": 147,
+    "read_time": 1
+  },
+  "240": {
+    "title": "Aaron Hatfield",
+    "chapter": 240,
+    "word_count": 176,
+    "read_time": 1
+  },
+  "241": {
+    "title": "Isaiah Beethoven",
+    "chapter": 241,
+    "word_count": 204,
+    "read_time": 2
+  },
+  "242": {
+    "title": "Elijah Browning",
+    "chapter": 242,
+    "word_count": 277,
+    "read_time": 2
+  },
+  "243": {
+    "title": "Webster Ford",
+    "chapter": 243,
+    "word_count": 299,
+    "read_time": 2
+  },
+  "244": {
+    "title": "The Spooniad",
+    "chapter": 244,
+    "word_count": 2239,
+    "read_time": 13
+  },
+  "245": {
+    "title": "Epilogue",
+    "chapter": 245,
+    "word_count": 3050,
+    "read_time": 17
+  }
+}

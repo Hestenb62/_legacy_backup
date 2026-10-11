@@ -1,0 +1,110 @@
+{
+  "1": {
+    "title": "The Time Machine",
+    "chapter": 1,
+    "word_count": 78,
+    "read_time": 1
+  },
+  "2": {
+    "title": "I. Introduction",
+    "chapter": 2,
+    "word_count": 1709,
+    "read_time": 10
+  },
+  "3": {
+    "title": "II. The Machine",
+    "chapter": 3,
+    "word_count": 1359,
+    "read_time": 8
+  },
+  "4": {
+    "title": "III. The Time Traveller Returns",
+    "chapter": 4,
+    "word_count": 2062,
+    "read_time": 12
+  },
+  "5": {
+    "title": "IV. Time Travelling",
+    "chapter": 5,
+    "word_count": 2115,
+    "read_time": 12
+  },
+  "6": {
+    "title": "V. In the Golden Age",
+    "chapter": 6,
+    "word_count": 1673,
+    "read_time": 10
+  },
+  "7": {
+    "title": "VI. The Sunset of Mankind",
+    "chapter": 7,
+    "word_count": 2216,
+    "read_time": 13
+  },
+  "8": {
+    "title": "VII. A Sudden Shock",
+    "chapter": 8,
+    "word_count": 2347,
+    "read_time": 14
+  },
+  "9": {
+    "title": "VIII. Explanation",
+    "chapter": 9,
+    "word_count": 4232,
+    "read_time": 24
+  },
+  "10": {
+    "title": "IX. The Morlocks",
+    "chapter": 10,
+    "word_count": 2182,
+    "read_time": 13
+  },
+  "11": {
+    "title": "X. When Night Came",
+    "chapter": 11,
+    "word_count": 2546,
+    "read_time": 15
+  },
+  "12": {
+    "title": "XI. The Palace of Green Porcelain",
+    "chapter": 12,
+    "word_count": 2503,
+    "read_time": 14
+  },
+  "13": {
+    "title": "XII. In the Darkness",
+    "chapter": 13,
+    "word_count": 2654,
+    "read_time": 15
+  },
+  "14": {
+    "title": "XIII. The Trap of the White Sphinx",
+    "chapter": 14,
+    "word_count": 1079,
+    "read_time": 6
+  },
+  "15": {
+    "title": "XIV. The Further Vision",
+    "chapter": 15,
+    "word_count": 1928,
+    "read_time": 11
+  },
+  "16": {
+    "title": "XV. The Time Traveller\u2019s Return",
+    "chapter": 16,
+    "word_count": 491,
+    "read_time": 3
+  },
+  "17": {
+    "title": "XVI. After the Story",
+    "chapter": 17,
+    "word_count": 1426,
+    "read_time": 8
+  },
+  "18": {
+    "title": "Epilogue",
+    "chapter": 18,
+    "word_count": 288,
+    "read_time": 2
+  }
+}

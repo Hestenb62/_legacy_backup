@@ -166,7 +166,21 @@ if (!$book && $rawBookParam !== '') {
     }
 }
 
-// 4. On-disk directory fallback
+// 4. Gutenberg numeric ID match (e.g. ?book=11 or ?book=pg345)
+if (!$book && $rawBookParam !== '') {
+    $numericId = preg_replace('/[^0-9]/', '', $rawBookParam);
+    if (!empty($numericId)) {
+        foreach ($allBooksList as $candidate) {
+            if ((string)($candidate['gutenberg-id'] ?? '') === $numericId) {
+                $book = $candidate;
+                $bookId = $candidate['id'];
+                break;
+            }
+        }
+    }
+}
+
+// 5. On-disk directory fallback
 if (!$book && is_dir(__DIR__ . '/' . $normalizedSlug)) {
     $folderName = $normalizedSlug;
     $prettyTitle = ucwords(str_replace(['-', '_'], ' ', $folderName));

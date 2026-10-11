@@ -135,9 +135,9 @@
             <div class="welcome-highlights-grid">
                 <div class="welcome-highlight-item">
                     <span class="welcome-highlight-icon" aria-hidden="true">🚀</span>
-                    <h3 class="welcome-highlight-title">The Learning Launchpad</h3>
+                    <h3 class="welcome-highlight-title">Interactive Study Tools</h3>
                     <p class="welcome-highlight-text">
-                        Use the 5 quick-action cards above to practice flashcards (<code>Alt+F</code>), launch the study timer (<code>Alt+T</code>), or sketch on the scratchpad (<code>Alt+S</code>).
+                        Use quick keyboard shortcuts anytime to practice flashcards (<code>Alt+F</code>), launch the study timer (<code>Alt+T</code>), or sketch on the scratchpad (<code>Alt+S</code>).
                     </p>
                 </div>
 
