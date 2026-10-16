@@ -309,74 +309,7 @@ include __DIR__ . '/library_header_nav.php';
                 });
             </script>
 
-            <!-- SLiMS OPAC Catalog Toolbar: Real-time Count, View Switcher & Facet Filters -->
-            <section class="slims-catalog-toolbar library-animate-reveal" aria-label="Catalog View and Filter Options">
-                <div class="slims-toolbar-container">
-                    <!-- Left: Real-time Record Count -->
-                    <div class="slims-toolbar-summary">
-                        <i class="fas fa-book-bookmark text-primary" aria-hidden="true"></i>
-                        <span>Showing <strong id="slims-record-count"><?php echo $totalCatalogBooks; ?></strong> bibliographic records</span>
-                    </div>
 
-                    <!-- Center: View Mode Switcher -->
-                    <div class="slims-view-switcher" role="group" aria-label="Catalog Display Mode">
-                        <button type="button" class="slims-view-btn view-switch-btn active" id="view-mode-grid"
-                            onclick="switchLibraryView('grid')" title="Card View (Grid OPAC)" aria-label="Card View">
-                            <i class="fas fa-th-large" aria-hidden="true"></i> <span>Cards</span>
-                        </button>
-                        <button type="button" class="slims-view-btn view-switch-btn" id="view-mode-list"
-                            onclick="switchLibraryView('list')" title="Detailed Bibliographic List (SLiMS OPAC)" aria-label="Detailed List View">
-                            <i class="fas fa-table-list" aria-hidden="true"></i> <span>Bibliographic List</span>
-                        </button>
-                        <button type="button" class="slims-view-btn view-switch-btn" id="view-mode-carousel"
-                            onclick="switchLibraryView('carousel')" title="Horizontal Carousel Shelf" aria-label="Horizontal Shelf View">
-                            <i class="fas fa-layer-group" aria-hidden="true"></i> <span>Carousel</span>
-                        </button>
-                    </div>
-
-                    <!-- Right: Multi-Facet Filters -->
-                    <div class="slims-toolbar-filters">
-                        <!-- Category Filter -->
-                        <div class="library-filter-select-container slims-select-wrap">
-                            <select id="category-filter" aria-label="Filter by Category"
-                                class="library-category-select slims-filter-select">
-                                <option value="all">All Categories</option>
-                                <option value="saved">⭐ My Reading List</option>
-                                <?php foreach (array_keys($categories) as $cat) : ?>
-                                    <option value="<?php echo htmlspecialchars($cat); ?>"><?php echo htmlspecialchars($cat); ?></option>
-                                <?php endforeach; ?>
-                            </select>
-                            <i class="fas fa-filter library-filter-icon" aria-hidden="true"></i>
-                        </div>
-
-                        <!-- Lexile Reading Level Filter -->
-                        <div class="library-filter-select-container slims-select-wrap">
-                            <select id="lexile-filter" aria-label="Filter by Reading Level"
-                                class="library-category-select slims-filter-select">
-                                <option value="all">All Reading Levels</option>
-                                <option value="easy">Elementary (&lt; 500L)</option>
-                                <option value="medium">Middle School (500L - 900L)</option>
-                                <option value="hard">High School (&gt; 900L)</option>
-                            </select>
-                            <i class="fas fa-graduation-cap library-filter-icon" aria-hidden="true"></i>
-                        </div>
-
-                        <!-- Multi-Facet Sort Dropdown -->
-                        <div class="library-filter-select-container slims-select-wrap">
-                            <select id="catalog-sort" aria-label="Sort Catalog"
-                                class="library-category-select slims-filter-select">
-                                <option value="default">Sort: Default</option>
-                                <option value="title-asc">Title: A to Z</option>
-                                <option value="title-desc">Title: Z to A</option>
-                                <option value="callno-asc">Call Number: Ascending</option>
-                                <option value="lexile-asc">Lexile: Low to High</option>
-                                <option value="lexile-desc">Lexile: High to Low</option>
-                            </select>
-                            <i class="fas fa-sort-amount-down library-filter-icon" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             <!-- Continue Reading Shelf (Populated dynamically from localStorage) -->
             <section id="continue-reading-shelf" class="continue-reading-section hidden library-animate-reveal">

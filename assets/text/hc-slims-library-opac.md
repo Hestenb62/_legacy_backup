@@ -27,11 +27,10 @@ The Hesten's Learning **Digital Library** (`/library/index.php`) features an ins
    - **Clean Dismissal**: Closing the record page via `< Back to Catalog`, the `✕` button, or `Esc` clears the URL hash and returns focus smoothly.
    - **One-Click Share Link**: Copy the direct deep-linked URL to clipboard with live confirmation toast.
 
-4. **Academic Bibliographic Tabs (4-Tab Workspace)**:
+4. **Academic Bibliographic Tabs (3-Tab Workspace)**:
    - **Tab 1: Bibliographic Information**: Essential catalog metadata including Call Number, Standard Number (ISBN), Publication / Release Date, and Digital Sourcing & Repository.
    - **Tab 2: Abstract / Notes**: Complete literary abstract, pedagogical overview, and curriculum alignment links.
-   - **Tab 3: Electronic Formats**: Dedicated cards for DRM-free digital downloads including PDF, Volume 2 PDF, ePUB 3.0, Kindle MOBI, and accessible Plain Text (TXT).
-   - **Tab 4: Barcode / Inventory**: Authentic SLiMS Code-128 vector barcode visual, item barcode identifier (`HL-[ID]-01`), call number, repository location, one-click code copy, and label print actions staged for upcoming revisions.
+   - **Tab 3: Barcode / Inventory**: Authentic SLiMS Code-128 vector barcode visual, item barcode identifier (`HL-[ID]-01`), call number, repository location, one-click code copy, and isolated single-page barcode label printing.
 
 5. **Multi-Format Electronic Resources & Citations**:
    - Direct launch to in-browser single-column chapter reader.

@@ -230,9 +230,6 @@ if (! function_exists('renderGutenbergLicenseHtml')) {
                     <button type="button" id="tab-btn-synopsis" class="slims-tab-btn" role="tab" aria-selected="false" aria-controls="slims-tab-content-synopsis" onclick="switchSlimsModalTab('synopsis')">
                         <i class="fas fa-align-left"></i> <span>Abstract / Notes</span>
                     </button>
-                    <button type="button" id="tab-btn-formats" class="slims-tab-btn" role="tab" aria-selected="false" aria-controls="slims-tab-content-formats" onclick="switchSlimsModalTab('formats')">
-                        <i class="fas fa-cloud-arrow-down"></i> <span>Electronic Formats</span>
-                    </button>
                     <button type="button" id="tab-btn-barcode" class="slims-tab-btn" role="tab" aria-selected="false" aria-controls="slims-tab-content-barcode" onclick="switchSlimsModalTab('barcode')">
                         <i class="fas fa-barcode"></i> <span>Barcode</span>
                     </button>
@@ -278,125 +275,7 @@ if (! function_exists('renderGutenbergLicenseHtml')) {
                     </div>
                 </div>
 
-                <!-- Tab 3: Electronic Formats -->
-                <div id="slims-tab-content-formats" class="slims-tab-panel hidden" role="tabpanel" aria-labelledby="tab-btn-formats">
-                    <div class="slims-formats-intro-card">
-                        <div class="slims-formats-intro-icon">
-                            <i class="fas fa-file-arrow-down"></i>
-                        </div>
-                        <div class="slims-formats-intro-text">
-                            <h3 class="slims-section-subtitle" style="margin-bottom: 0.25rem;">
-                                Available Digital Editions &amp; Offline Downloads
-                            </h3>
-                            <p class="slims-formats-intro-desc">
-                                DRM-free electronic editions optimized for tablets, e-readers, smartphones, and assistive text-to-speech tools. All files are hosted on public domain and open-access repositories.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="slims-formats-grid">
-                        <!-- PDF Format Card -->
-                        <div id="modal-format-card-pdf" class="slims-format-card">
-                            <div class="slims-format-header-row">
-                                <div class="slims-format-badge format-pdf">
-                                    <i class="fas fa-file-pdf"></i>
-                                    <span>PDF</span>
-                                </div>
-                                <span class="slims-format-status-tag"><i class="fas fa-check-circle"></i> Digital Edition</span>
-                            </div>
-                            <div class="slims-format-details">
-                                <h4 class="slims-format-name">Portable Document Format</h4>
-                                <p class="slims-format-info">Page-faithful layout preserving original illustrations, margins, and typography. Recommended for desktop study and printing.</p>
-                            </div>
-                            <div class="slims-format-actions">
-                                <a id="modal-pdf-link" href="#" target="_blank" rel="noopener noreferrer"
-                                    class="slims-btn-format-download pdf-btn" title="Download PDF"
-                                    aria-label="Download PDF">
-                                    <i class="fas fa-download"></i> <span id="modal-pdf-text">Download PDF</span>
-                                </a>
-                                <a id="modal-pdf-vol2-link" href="#" target="_blank" rel="noopener noreferrer"
-                                    class="slims-btn-format-download pdf-btn hidden" title="Download Volume 2 PDF"
-                                    aria-label="Download Volume 2 PDF">
-                                    <i class="fas fa-download"></i> <span>Download Vol 2 PDF</span>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- ePUB Format Card -->
-                        <div id="modal-format-card-epub" class="slims-format-card">
-                            <div class="slims-format-header-row">
-                                <div class="slims-format-badge format-epub">
-                                    <i class="fas fa-book"></i>
-                                    <span>ePUB</span>
-                                </div>
-                                <span class="slims-format-status-tag"><i class="fas fa-check-circle"></i> Reflowable</span>
-                            </div>
-                            <div class="slims-format-details">
-                                <h4 class="slims-format-name">Standard ePUB 3.0</h4>
-                                <p class="slims-format-info">Adaptive reflowable text with adjustable font sizes and dark mode. Ideal for Apple Books, Kobo, and Android e-readers.</p>
-                            </div>
-                            <div class="slims-format-actions">
-                                <a id="modal-epub-link" href="#" target="_blank" rel="noopener noreferrer"
-                                    class="slims-btn-format-download epub-btn" title="Download ePUB"
-                                    aria-label="Download ePUB">
-                                    <i class="fas fa-download"></i> <span>Download ePUB</span>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- MOBI / Kindle Format Card -->
-                        <div id="modal-format-card-mobi" class="slims-format-card">
-                            <div class="slims-format-header-row">
-                                <div class="slims-format-badge format-mobi">
-                                    <i class="fas fa-tablet-alt"></i>
-                                    <span>MOBI</span>
-                                </div>
-                                <span class="slims-format-status-tag"><i class="fas fa-check-circle"></i> Kindle</span>
-                            </div>
-                            <div class="slims-format-details">
-                                <h4 class="slims-format-name">Kindle / Mobipocket</h4>
-                                <p class="slims-format-info">Formatted specifically for Amazon Kindle hardware e-readers, Paperwhite, and Kindle mobile reading applications.</p>
-                            </div>
-                            <div class="slims-format-actions">
-                                <a id="modal-mobi-link" href="#" target="_blank" rel="noopener noreferrer"
-                                    class="slims-btn-format-download mobi-btn" title="Download MOBI"
-                                    aria-label="Download MOBI">
-                                    <i class="fas fa-download"></i> <span>Download MOBI</span>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- TXT Format Card -->
-                        <div id="modal-format-card-txt" class="slims-format-card">
-                            <div class="slims-format-header-row">
-                                <div class="slims-format-badge format-txt">
-                                    <i class="fas fa-file-lines"></i>
-                                    <span>TXT</span>
-                                </div>
-                                <span class="slims-format-status-tag"><i class="fas fa-check-circle"></i> Accessible</span>
-                            </div>
-                            <div class="slims-format-details">
-                                <h4 class="slims-format-name">Plain Text (UTF-8)</h4>
-                                <p class="slims-format-info">Raw unformatted text with zero proprietary dependencies. Fully compatible with refreshable braille displays and screen readers.</p>
-                            </div>
-                            <div class="slims-format-actions">
-                                <a id="modal-txt-link" href="#" target="_blank" rel="noopener noreferrer"
-                                    class="slims-btn-format-download txt-btn" title="Download Plain Text"
-                                    aria-label="Download Plain Text">
-                                    <i class="fas fa-download"></i> <span>Download TXT</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Repository Guarantee Notice -->
-                    <div class="slims-formats-footer-notice">
-                        <i class="fas fa-shield-halved text-emerald-500"></i>
-                        <span>All electronic editions provided via Hesten's Learning Open Archive are preserved under public domain and open-access educational guidelines.</span>
-                    </div>
-                </div>
-
-                <!-- Tab 4: Barcode / Inventory (Prepared for Upcoming Revisions) -->
+                <!-- Tab 3: Barcode / Inventory (Prepared for Upcoming Revisions) -->
                 <div id="slims-tab-content-barcode" class="slims-tab-panel hidden" role="tabpanel" aria-labelledby="tab-btn-barcode">
                     <div class="slims-barcode-wrapper">
                         <!-- SLiMS Physical & Digital Item Barcode Label -->
@@ -477,10 +356,10 @@ if (! function_exists('renderGutenbergLicenseHtml')) {
 
                         <!-- Barcode Actions Row -->
                         <div class="slims-barcode-actions-row">
-                            <button type="button" class="slims-barcode-btn-secondary" onclick="printBarcodeLabel()">
-                                <i class="fas fa-print"></i> <span>Print Barcode Label</span>
+                            <button type="button" class="slims-barcode-btn-secondary" onclick="printBarcodeLabel()" title="Print single-page barcode and bibliographic record slip">
+                                <i class="fas fa-print"></i> <span>Print Barcode &amp; Record Slip</span>
                             </button>
-                            <button type="button" class="slims-barcode-btn-secondary" onclick="copyBarcodeToClipboard()">
+                            <button type="button" class="slims-barcode-btn-secondary" onclick="copyBarcodeToClipboard()" title="Copy item barcode identifier">
                                 <i class="fas fa-clipboard-check"></i> <span>Copy Item Identifier</span>
                             </button>
                         </div>

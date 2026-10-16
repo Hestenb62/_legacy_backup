@@ -288,55 +288,7 @@ if (typeof currentBookData === 'undefined') {
             modalBmkBtn.classList.toggle('active', isSaved);
         }
 
-        // 11. Digital Format Downloads (Tab 3)
-        const pdfLink = document.getElementById('modal-pdf-link');
-        const pdfText = document.getElementById('modal-pdf-text');
-        const pdfVol2Link = document.getElementById('modal-pdf-vol2-link');
-        const epubLink = document.getElementById('modal-epub-link');
-        const mobiLink = document.getElementById('modal-mobi-link');
-        const txtLink = document.getElementById('modal-txt-link');
-
-        const cardPdf = document.getElementById('modal-format-card-pdf');
-        const cardEpub = document.getElementById('modal-format-card-epub');
-        const cardMobi = document.getElementById('modal-format-card-mobi');
-        const cardTxt = document.getElementById('modal-format-card-txt');
-
-        const hasPdf = Boolean(d.pdfLink && d.pdfLink !== '#' && d.pdfLink !== '');
-        const hasVol2 = Boolean(d.pdfVol2Link && d.pdfVol2Link !== '#' && d.pdfVol2Link !== '');
-        const hasEpub = Boolean(d.epubLink && d.epubLink !== '#' && d.epubLink !== '');
-        const hasMobi = Boolean(d.mobiLink && d.mobiLink !== '#' && d.mobiLink !== '');
-        const hasTxt = Boolean(d.txtLink && d.txtLink !== '#' && d.txtLink !== '');
-
-        if (pdfLink) {
-            pdfLink.href = d.pdfLink || '#';
-            pdfLink.style.display = hasPdf ? 'inline-flex' : 'none';
-            if (pdfText) {
-                pdfText.textContent = hasVol2 ? 'Download Vol 1 PDF' : 'Download PDF';
-            }
-        }
-        if (pdfVol2Link) {
-            pdfVol2Link.href = d.pdfVol2Link || '#';
-            pdfVol2Link.style.display = hasVol2 ? 'inline-flex' : 'none';
-        }
-        if (epubLink) {
-            epubLink.href = d.epubLink || '#';
-            epubLink.style.display = hasEpub ? 'inline-flex' : 'none';
-        }
-        if (mobiLink) {
-            mobiLink.href = d.mobiLink || '#';
-            mobiLink.style.display = hasMobi ? 'inline-flex' : 'none';
-        }
-        if (txtLink) {
-            txtLink.href = d.txtLink || '#';
-            txtLink.style.display = hasTxt ? 'inline-flex' : 'none';
-        }
-
-        if (cardPdf) cardPdf.style.display = (hasPdf || (!hasEpub && !hasMobi && !hasTxt)) ? 'flex' : 'none';
-        if (cardEpub) cardEpub.style.display = hasEpub ? 'flex' : 'none';
-        if (cardMobi) cardMobi.style.display = hasMobi ? 'flex' : 'none';
-        if (cardTxt) cardTxt.style.display = hasTxt ? 'flex' : 'none';
-
-        // 12. SLiMS Barcode & Item Inventory (Tab 4)
+        // 11. SLiMS Barcode & Item Inventory (Tab 3)
         const cleanId = (d.id || 'ITEM').toUpperCase().replace(/[^A-Z0-9]/g, '');
         const itemBarcode = `HL-${cleanId.slice(0, 8).padEnd(6, '0')}-01`;
         const callNumberText = d.callNumber || 'GEN-COLL';
@@ -493,16 +445,32 @@ if (typeof currentBookData === 'undefined') {
     }
 
     /**
-     * Print Barcode Label (Isolated Single-Page Label Print)
-     * Prints strictly the barcode label with book information, eliminating multi-page website duplicate prints.
+     * Print Barcode Label (Isolated Single-Page Bibliographic Record & Barcode Slip)
+     * Prints a comprehensive, single-page SLiMS circulation slip containing the
+     * Barcode graphic, full Bibliographic Information, and Abstract / Content Notes.
      */
     window.printBarcodeLabel = function () {
-        const title = window.currentBookTitle || (document.getElementById('modal-barcode-book-title') ? document.getElementById('modal-barcode-book-title').textContent : 'Library Monograph');
-        const author = window.currentBookAuthor || (document.getElementById('modal-barcode-book-author') ? document.getElementById('modal-barcode-book-author').textContent.replace(/^Author:\s*/i, '') : '');
-        const barcodeCode = document.getElementById('modal-barcode-val') ? document.getElementById('modal-barcode-val').textContent : 'HL-000000-01';
-        const callNo = document.getElementById('modal-barcode-callno') ? document.getElementById('modal-barcode-callno').textContent : '--';
+        const d = window.currentBookData || {};
+
+        const title = window.currentBookTitle || d.title || (document.getElementById('modal-title') ? document.getElementById('modal-title').textContent : '') || (document.getElementById('modal-barcode-book-title') ? document.getElementById('modal-barcode-book-title').textContent : 'Library Monograph');
+        const author = window.currentBookAuthor || d.author || (document.getElementById('modal-barcode-book-author') ? document.getElementById('modal-barcode-book-author').textContent.replace(/^Author:\s*/i, '') : '') || '';
+        const barcodeCode = (document.getElementById('modal-barcode-val') ? document.getElementById('modal-barcode-val').textContent : '') || (d.id ? `HL-${(d.id.toUpperCase().replace(/[^A-Z0-9]/g, '')).slice(0, 8).padEnd(6, '0')}-01` : 'HL-000000-01');
+        const callNo = (document.getElementById('modal-barcode-callno') ? document.getElementById('modal-barcode-callno').textContent : '') || (document.getElementById('modal-td-callno') ? document.getElementById('modal-td-callno').textContent : '') || d.callNumber || '--';
+
+        const isbn = (document.getElementById('modal-td-isbn') ? document.getElementById('modal-td-isbn').textContent : '') || d.isbn || 'N/A (Open Access / Public Domain)';
+        const pubDate = (document.getElementById('modal-td-date') ? document.getElementById('modal-td-date').textContent : '') || d.date || 'Historical Monograph';
+        const source = (document.getElementById('modal-td-source') ? document.getElementById('modal-td-source').textContent : '') || d.fileSource || d.infoSource || "Hesten's Learning Open Archive";
+        const category = (document.getElementById('modal-category-tag') ? document.getElementById('modal-category-tag').textContent : '') || d.category || 'General Collection';
+
+        const gradeVal = (document.getElementById('modal-grade-text') ? document.getElementById('modal-grade-text').textContent : '') || (d.grade && d.grade !== '#' ? d.grade : '');
+        const lexileVal = (document.getElementById('modal-lexile') ? document.getElementById('modal-lexile').textContent : '') || (d.lexile && d.lexile !== '#' && d.lexile.toLowerCase() !== 'unrated' ? d.lexile : '');
+        const curriculumVal = (d.curriculum && d.curriculum !== '#' ? d.curriculum : '');
+
+        const description = (document.getElementById('modal-description') ? document.getElementById('modal-description').textContent : '') || d.description || 'No detailed abstract available for this bibliographic record.';
+
         const svgEl = document.getElementById('modal-barcode-svg');
         const svgHtml = svgEl ? svgEl.outerHTML : '';
+        const printDate = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
 
         // Clean up any existing print frame
         let iframe = document.getElementById('slims-barcode-print-frame');
@@ -513,7 +481,7 @@ if (typeof currentBookData === 'undefined') {
         // Create an isolated hidden print iframe
         iframe = document.createElement('iframe');
         iframe.id = 'slims-barcode-print-frame';
-        iframe.setAttribute('title', 'Print Barcode Label');
+        iframe.setAttribute('title', 'Print Barcode and Bibliographic Slip');
         iframe.style.position = 'fixed';
         iframe.style.right = '0';
         iframe.style.bottom = '0';
@@ -530,11 +498,11 @@ if (typeof currentBookData === 'undefined') {
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>SLiMS Barcode - ${escapeHtml(title)}</title>
+    <title>SLiMS Slip - ${escapeHtml(title)}</title>
     <style>
         @page {
             size: auto;
-            margin: 8mm;
+            margin: 7mm 9mm;
         }
         * {
             box-sizing: border-box;
@@ -549,144 +517,325 @@ if (typeof currentBookData === 'undefined') {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
         body {
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-            padding: 10mm;
-            min-height: 100vh;
+            padding: 1mm;
         }
-        .slims-print-label {
-            width: 88mm;
-            max-width: 100%;
+        .slims-print-sheet {
+            width: 100%;
+            max-width: 195mm;
+            margin: 0 auto;
             border: 2px solid #0f172a;
             border-radius: 6px;
             padding: 5mm 6mm;
-            text-align: center;
             background: #ffffff;
             page-break-inside: avoid;
             break-inside: avoid;
         }
-        .label-header {
+        .sheet-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px dashed #64748b;
-            padding-bottom: 3mm;
+            border-bottom: 2px solid #0f172a;
+            padding-bottom: 2.5mm;
             margin-bottom: 3mm;
-            text-align: left;
         }
-        .lib-name {
-            font-size: 8pt;
+        .sheet-brand-title {
+            font-size: 10pt;
             font-weight: 900;
             letter-spacing: 0.06em;
             color: #0f172a;
+            text-transform: uppercase;
         }
-        .lib-type {
-            font-size: 7pt;
-            font-weight: 700;
+        .sheet-brand-sub {
+            font-size: 7.5pt;
+            font-weight: 600;
             color: #475569;
+            margin-top: 1px;
         }
-        .rev-tag {
+        .sheet-header-meta {
+            text-align: right;
+        }
+        .sheet-badge {
+            display: inline-block;
             font-size: 6.5pt;
             font-weight: 800;
-            border: 1px solid #4f46e5;
-            color: #4f46e5;
-            padding: 1px 4px;
+            background: #0f172a;
+            color: #ffffff;
+            padding: 2px 6px;
             border-radius: 3px;
+            letter-spacing: 0.05em;
         }
-        .book-section {
-            text-align: left;
+        .sheet-date {
+            font-size: 6.5pt;
+            font-weight: 600;
+            color: #64748b;
+            margin-top: 1.5px;
+        }
+        .sheet-book-header {
+            border-bottom: 1px dashed #94a3b8;
+            padding-bottom: 2.5mm;
             margin-bottom: 3mm;
         }
-        .book-title {
-            font-size: 10.5pt;
+        .sheet-book-title {
+            font-size: 12pt;
             font-weight: 800;
             line-height: 1.25;
             margin: 0 0 1mm 0;
             color: #0f172a;
         }
-        .book-author {
+        .sheet-book-author {
             font-size: 8.5pt;
             font-weight: 600;
             color: #334155;
             margin: 0;
         }
-        .barcode-section {
-            margin: 3mm 0 2mm 0;
+        .sheet-grid {
+            display: flex;
+            gap: 4mm;
+            align-items: stretch;
+            margin-bottom: 3mm;
+        }
+        .barcode-card {
+            flex: 0 0 42%;
+            border: 1.5px solid #0f172a;
+            border-radius: 5px;
+            padding: 2.5mm 3mm;
+            background: #f8fafc;
             display: flex;
             flex-direction: column;
-            align-items: center;
+            justify-content: space-between;
+            text-align: center;
+        }
+        .barcode-tag-head {
+            font-size: 6.5pt;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            color: #475569;
+            text-transform: uppercase;
+            margin-bottom: 1mm;
         }
         .barcode-svg-wrap {
             width: 100%;
             display: flex;
             justify-content: center;
+            margin: 1mm 0;
         }
         .barcode-svg-wrap svg {
             width: 100%;
-            max-width: 72mm;
-            height: 16mm;
+            max-width: 60mm;
+            height: 15mm;
             color: #000000 !important;
             fill: #000000 !important;
         }
         .barcode-code {
             font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-            font-size: 11pt;
+            font-size: 10.5pt;
             font-weight: 800;
-            letter-spacing: 0.22em;
-            margin-top: 1.5mm;
+            letter-spacing: 0.16em;
+            margin: 1mm 0 1.5mm 0;
             color: #000000;
         }
-        .label-footer {
+        .barcode-meta-line {
             display: flex;
             justify-content: space-between;
-            align-items: flex-end;
-            border-top: 1px dashed #64748b;
-            padding-top: 2.5mm;
-            margin-top: 2.5mm;
-            font-size: 7.5pt;
+            font-size: 6.8pt;
+            border-top: 1px dashed #cbd5e1;
+            padding-top: 1.2mm;
+            margin-top: 1.2mm;
             text-align: left;
         }
-        .meta-group div:first-child {
-            font-size: 6pt;
-            font-weight: 700;
+        .barcode-meta-label {
             color: #64748b;
-            text-transform: uppercase;
+            font-weight: 600;
         }
-        .meta-val {
-            font-family: monospace;
-            font-weight: 800;
-            font-size: 8.5pt;
+        .barcode-meta-val {
+            font-weight: 700;
             color: #0f172a;
+            font-family: ui-monospace, monospace;
+        }
+        .biblio-specs-col {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .specs-table-title {
+            font-size: 6.8pt;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #475569;
+            margin-bottom: 1.2mm;
+        }
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 7.2pt;
+        }
+        .specs-table th {
+            width: 36%;
+            text-align: left;
+            padding: 1.4mm 1.8mm;
+            background: #f1f5f9;
+            border: 1px solid #cbd5e1;
+            font-weight: 700;
+            color: #334155;
+        }
+        .specs-table td {
+            padding: 1.4mm 1.8mm;
+            border: 1px solid #cbd5e1;
+            color: #0f172a;
+            font-weight: 500;
+        }
+        .specs-mono {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-weight: 700;
+        }
+        .sheet-abstract-section {
+            border-top: 1px dashed #94a3b8;
+            padding-top: 2.5mm;
+            margin-top: 1mm;
+        }
+        .abstract-heading {
+            font-size: 6.8pt;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #475569;
+            margin: 0 0 1.2mm 0;
+        }
+        .abstract-body {
+            border: 1px solid #cbd5e1;
+            border-radius: 4px;
+            background: #f8fafc;
+            padding: 2.5mm 3.2mm;
+            font-size: 7.8pt;
+            line-height: 1.35;
+            color: #1e293b;
+            max-height: 52mm;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 9;
+            -webkit-box-orient: vertical;
+        }
+        .curric-note {
+            margin-top: 1.5mm;
+            padding-top: 1.2mm;
+            border-top: 1px dashed #cbd5e1;
+            font-size: 6.8pt;
+            font-weight: 700;
+            color: #047857;
+        }
+        .sheet-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1.5px solid #0f172a;
+            padding-top: 2mm;
+            margin-top: 3mm;
+            font-size: 6.5pt;
+            color: #475569;
         }
     </style>
 </head>
 <body>
-    <div class="slims-print-label">
-        <div class="label-header">
+    <div class="slims-print-sheet">
+        <!-- Institutional Header -->
+        <div class="sheet-header">
             <div>
-                <div class="lib-name">HESTEN'S LEARNING</div>
-                <div class="lib-type">Digital Repository &bull; SLiMS OPAC</div>
+                <div class="sheet-brand-title">Hesten's Learning &bull; Digital Repository</div>
+                <div class="sheet-brand-sub">SLiMS 9 Bulian OPAC &bull; Monograph &amp; Barcode Circulation Slip</div>
             </div>
-            <div class="rev-tag">REVISION STAGING</div>
-        </div>
-        <div class="book-section">
-            <h2 class="book-title">${escapeHtml(title)}</h2>
-            ${author ? `<p class="book-author">Author: ${escapeHtml(author)}</p>` : ''}
-        </div>
-        <div class="barcode-section">
-            <div class="barcode-svg-wrap">${svgHtml}</div>
-            <div class="barcode-code">${escapeHtml(barcodeCode)}</div>
-        </div>
-        <div class="label-footer">
-            <div class="meta-group">
-                <div>CALL NUMBER</div>
-                <span class="meta-val">${escapeHtml(callNo)}</span>
+            <div class="sheet-header-meta">
+                <span class="sheet-badge">OFFICIAL CIRCULATION RECORD</span>
+                <div class="sheet-date">Date Printed: ${printDate}</div>
             </div>
-            <div class="meta-group" style="text-align: right;">
-                <div>COLLECTION LOCATION</div>
-                <span class="meta-val">Main Digital Stacks</span>
+        </div>
+
+        <!-- Book Title & Authorship -->
+        <div class="sheet-book-header">
+            <h1 class="sheet-book-title">${escapeHtml(title)}</h1>
+            <p class="sheet-book-author">Personal Name / Creator: <strong>${escapeHtml(author || 'Unknown Author')}</strong></p>
+        </div>
+
+        <!-- 2-Column Section: Barcode on Left, Bibliographic Table on Right -->
+        <div class="sheet-grid">
+            <!-- Left: Barcode Identification Unit -->
+            <div class="barcode-card">
+                <div class="barcode-tag-head">SLiMS Item Barcode (Code-128)</div>
+                <div class="barcode-svg-wrap">${svgHtml}</div>
+                <div class="barcode-code">${escapeHtml(barcodeCode)}</div>
+                <div>
+                    <div class="barcode-meta-line">
+                        <span class="barcode-meta-label">CALL NUMBER:</span>
+                        <span class="barcode-meta-val">${escapeHtml(callNo)}</span>
+                    </div>
+                    <div class="barcode-meta-line">
+                        <span class="barcode-meta-label">LOCATION:</span>
+                        <span class="barcode-meta-val">Main Digital Stacks</span>
+                    </div>
+                    <div class="barcode-meta-line">
+                        <span class="barcode-meta-label">HOLDING FORMAT:</span>
+                        <span class="barcode-meta-val">Electronic Resource</span>
+                    </div>
+                    <div class="barcode-meta-line">
+                        <span class="barcode-meta-label">CIRCULATION STATUS:</span>
+                        <span class="barcode-meta-val">Available (Open Access)</span>
+                    </div>
+                </div>
             </div>
+
+            <!-- Right: Bibliographic Specifications Table -->
+            <div class="biblio-specs-col">
+                <div class="specs-table-title">Bibliographic Record Specifications</div>
+                <table class="specs-table" aria-label="Bibliographic Specifications">
+                    <tbody>
+                        <tr>
+                            <th scope="row">Call Number</th>
+                            <td class="specs-mono">${escapeHtml(callNo)}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Standard No. (ISBN)</th>
+                            <td class="specs-mono">${escapeHtml(isbn)}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Publication Date</th>
+                            <td>${escapeHtml(pubDate)}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Subject / Category</th>
+                            <td>${escapeHtml(category)}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Target Grade Level</th>
+                            <td>${escapeHtml(gradeVal || 'All Levels / General')}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Lexile Measure</th>
+                            <td>${escapeHtml(lexileVal || 'Catalog Reference')}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Source Repository</th>
+                            <td>${escapeHtml(source)}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Abstract & Content Notes Section -->
+        <div class="sheet-abstract-section">
+            <div class="abstract-heading">Abstract &amp; Content Notes (SLiMS Synopsis)</div>
+            <div class="abstract-body">
+                <div>${escapeHtml(description)}</div>
+                ${curriculumVal ? `<div class="curric-note"><strong>Curriculum Standards Alignment:</strong> ${escapeHtml(curriculumVal)}</div>` : ''}
+            </div>
+        </div>
+
+        <!-- Footer Verification & Compatibility -->
+        <div class="sheet-footer">
+            <div>SLiMS 9 Bulian Standard Compliant &bull; Senayan Library Management System</div>
+            <div><strong>Item Identifier:</strong> ${escapeHtml(barcodeCode)}</div>
+            <div>Single-Sheet Record &bull; Page 1 of 1</div>
         </div>
     </div>
 </body>
