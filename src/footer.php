@@ -96,9 +96,9 @@
 
         <!-- Version Status & Release Info Strip (WCAG Operable) -->
         <?php
-        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.17.0';
-        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'October 2026 History of Woman Suffrage Complete Archive Release';
-        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Full Ingestion of The History of Woman Suffrage (Volumes I through VI, 1881–1922) by Elizabeth Cady Stanton, Susan B. Anthony, Matilda Joslyn Gage, and Ida Husted Harper, Providing 270+ Chapters of Primary 19th Amendment History in Universal Single-Column Reader';
+        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.18.0';
+        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'October 2026 Senayan Library Management System (SLiMS OPAC) & Deep-Linked Bibliographic Pages Release';
+        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Comprehensive Redesign of Library Catalog into Senayan Library Management System (SLiMS) OPAC with Field Scopes, Full-Page Bibliographic Record Detail Overlays, and URL Hash Deep-Linking (#book-id)';
         ?>
         <div class="footer-version-strip" role="region" aria-label="Platform Version Information">
             <div class="footer-version-info">
@@ -271,9 +271,33 @@
                 </span>
             </div>
             <p class="footer-vmodal-lead">
-                Version <?= htmlspecialchars($siteVersion) ?> completes the definitive 6-volume archive of <strong>The History of Woman Suffrage (1881–1922)</strong> by Elizabeth Cady Stanton, Susan B. Anthony, Matilda Joslyn Gage, and Ida Husted Harper, alongside the 7-volume <em>Journal of Negro History</em> collection—providing over 500 primary source chapters and scholarly monographs within our accessible single-column digital reader.
+                Version <?= htmlspecialchars($siteVersion) ?> introduces a comprehensive redesign of the <strong>Library Catalog Portal</strong> inspired by the <strong>Senayan Library Management System (SLiMS) OPAC</strong>. Book detail dialogs now operate as responsive full-page overlays with dedicated URL hash deep links (<code>#book-{id}</code>), browser history navigation, live digital stacks holdings, MARC bibliographic classification tables, and scoped catalog searches.
             </p>
             <ul class="footer-vmodal-features">
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(2, 132, 199, 0.15); color: #0284c7;">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Senayan Library Management System (SLiMS) OPAC Redesign:</strong> Reimagined academic library interface featuring an institutional OPAC search console with targeted scope filtering (All Fields, Title, Author, Subject, Call Number, ISBN), real-time bibliographic record counters, trending topic pills, and General Material Designation (GMD) tags (<code>[Text]</code>, <code>[E-Book]</code>, <code>[Collection]</code>).
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(16, 185, 129, 0.15); color: #059669;">
+                        <i class="fas fa-link"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Deep-Linked Full-Page Bibliographic Record Overlays:</strong> Every library record functions as its own dedicated page overlay powered by URL hash routing (e.g. <code>#book-dracula</code>). Supports browser back and forward button navigation, direct URL deep-linking on initial load, one-click shareable link copying, and instant hash clearing upon closing.
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(245, 158, 11, 0.15); color: #d97706;">
+                        <i class="fas fa-table-list"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Academic MARC Metadata &amp; Digital Holdings Stacks:</strong> Full-page detail views provide interactive tabbed navigation between Bibliographic Information (GMD, Publisher, Dewey Decimal, LC, ISBN, Language, Lexile measure), Abstract / Notes, Item Copies &amp; Holdings table with barcode IDs (<code>HL-ID-01</code>) and availability badges, and Author Biography &amp; Context.
+                    </div>
+                </li>
                 <li class="footer-vmodal-feature-item">
                     <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(168, 85, 247, 0.15); color: #9333ea;">
                         <i class="fas fa-venus"></i>

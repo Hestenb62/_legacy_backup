@@ -132,99 +132,151 @@ include __DIR__ . '/library_header_nav.php';
         <!-- Panel 1: General Library Landing Page -->
         <div id="main-desk-landing" class="workspace-panel active">
 
-            <!-- Modern Cinematic Welcome Hero & Academic Dashboard -->
-            <section class="library-modern-hero library-animate-reveal">
-                <div class="hero-featured-book hero-welcome-card">
-                    <div class="featured-content">
-                        <!-- Radar Pulse Pill Badge -->
-                        <div class="hero-pill">
-                            <span class="hero-ping-dot">
-                                <span class="ping-anim"></span>
-                                <span class="ping-core"></span>
+            <!-- Senayan Library Management System (SLiMS) OPAC Institutional Hero & Dashboard -->
+            <section class="slims-opac-hero library-animate-reveal" aria-label="Library OPAC Search and Dashboard">
+                <div class="slims-hero-grid">
+                    <!-- Main SLiMS OPAC Search Console -->
+                    <div class="slims-opac-banner">
+                        <div class="slims-banner-top-meta">
+                            <span class="slims-brand-pill">
+                                <i class="fas fa-building-columns"></i>
+                                <span>Senayan Library Management System (SLiMS OPAC)</span>
                             </span>
-                            <span>Digital Archive &amp; Research Portal</span>
+                            <span class="slims-status-indicator">
+                                <span class="slims-pulse-dot" aria-hidden="true"></span>
+                                <span>Digital Stacks Online</span>
+                            </span>
                         </div>
-                        <h1 class="featured-title">Explore Hesten's <span class="hero-title-highlight">Digital
-                                Library</span></h1>
-                        <p class="featured-desc">Browse our curated collection of classic literature, foundational
-                            textbooks, and historical primary sources. Search, research, annotate, and navigate across
-                            all academic levels.</p>
-                        <div class="featured-actions" style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
-                            <a href="/library/cataloge.php" class="btn-premium btn-primary">
-                                <i class="fas fa-barcode"></i> <span>Master Catalog</span>
-                            </a>
-                            <a href="/library/how-to.php" class="btn-premium btn-secondary" aria-label="Open library user guide documentation">
-                                <i class="fas fa-circle-question"></i> <span>How-To &amp; Docs</span>
-                            </a>
-                            <a href="/library/about.php" class="btn-premium btn-secondary" aria-label="About the library">
-                                <i class="fas fa-landmark"></i> <span>About</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Academic Dashboard Stats & Goals -->
-                <div class="hero-academic-dashboard">
-                    <div class="dashboard-greeting">
-                        <div class="greeting-header-row">
-                            <div>
-                                <h2>Scholar Dashboard</h2>
-                                <p>Your archive holds <span
-                                        class="highlight-stat"><?php echo $totalCatalogBooks; ?></span> volumes</p>
+                        <h1 class="slims-opac-title">
+                            Online Public Access <span class="hero-title-highlight">Catalog (OPAC)</span>
+                        </h1>
+                        <p class="slims-opac-desc">
+                            Search our digital academic repository of classic literature, historical primary sources, and comprehensive textbooks cataloged with Library of Congress and Dewey Decimal classifications.
+                        </p>
+
+                        <!-- SLiMS Unified Search Console -->
+                        <div class="slims-search-console" role="search" aria-label="Catalog Search">
+                            <div class="slims-search-box-wrap">
+                                <!-- Field Scope Selector -->
+                                <div class="slims-scope-selector-wrap">
+                                    <label for="slims-search-scope" class="sr-only">Search Field</label>
+                                    <select id="slims-search-scope" class="slims-scope-select" aria-label="Search Scope">
+                                        <option value="all">All Fields</option>
+                                        <option value="title">Title</option>
+                                        <option value="author">Author</option>
+                                        <option value="subject">Subject</option>
+                                        <option value="callnumber">Call Number</option>
+                                        <option value="isbn">ISBN</option>
+                                    </select>
+                                    <i class="fas fa-chevron-down slims-scope-arrow" aria-hidden="true"></i>
+                                </div>
+
+                                <!-- Input Box -->
+                                <div class="slims-input-group">
+                                    <input type="text" id="library-search" aria-label="Search Library Catalog"
+                                        placeholder="Type keywords (title, author, subject, call number, ISBN)..."
+                                        class="slims-main-search-input" autocomplete="off">
+                                    <button type="button" id="library-search-clear" class="library-search-clear-btn hidden"
+                                        aria-label="Clear search input">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </div>
+
+                                <!-- Search Action Button -->
+                                <button type="button" id="slims-search-action-btn" class="slims-search-btn"
+                                    onclick="applyCatalogFilters()" aria-label="Execute OPAC Search">
+                                    <i class="fas fa-search" aria-hidden="true"></i>
+                                    <span>Search OPAC</span>
+                                </button>
                             </div>
-                            <div class="dashboard-streak-badge" title="Consecutive days reading">
-                                <i class="fas fa-fire text-amber-500"></i> <span id="dash-streak-count">1</span> Day
-                                Streak
+
+                            <!-- SLiMS Quick Topic / Discipline Chips (Trending Searches) -->
+                            <div class="slims-trending-chips" role="region" aria-label="Quick Topic Searches">
+                                <span class="slims-trending-label"><i class="fas fa-tags text-primary"></i> Popular Topics:</span>
+                                <button type="button" class="library-chip-btn slims-chip active" data-chip="all" aria-selected="true">All</button>
+                                <button type="button" class="library-chip-btn slims-chip" data-chip="fiction">Fiction</button>
+                                <button type="button" class="library-chip-btn slims-chip" data-chip="us-history">US History</button>
+                                <button type="button" class="library-chip-btn slims-chip" data-chip="world-history">World History</button>
+                                <button type="button" class="library-chip-btn slims-chip" data-chip="stem">STEM &amp; Math</button>
+                                <button type="button" class="library-chip-btn slims-chip" data-chip="science">Science</button>
+                                <button type="button" class="library-chip-btn slims-chip" data-chip="civics">Civics</button>
+                                <button type="button" class="library-chip-btn slims-chip" data-chip="saved">⭐ My Reading List</button>
                             </div>
+                        </div>
+
+                        <!-- Institutional Links Row -->
+                        <div class="slims-portal-links-row">
+                            <a href="/library/cataloge.php" class="slims-link-pill">
+                                <i class="fas fa-barcode"></i> <span>Master Call # Index</span>
+                            </a>
+                            <a href="/library/how-to.php" class="slims-link-pill">
+                                <i class="fas fa-circle-question"></i> <span>OPAC User Guide</span>
+                            </a>
+                            <a href="/library/about.php" class="slims-link-pill">
+                                <i class="fas fa-landmark"></i> <span>About Archive</span>
+                            </a>
                         </div>
                     </div>
-                    <div class="dashboard-stats-grid">
-                        <div class="dash-stat-card goal-card" onclick="openGoalModal()" style="cursor: pointer;"
-                            title="Set or adjust your daily reading goal" tabindex="0" role="button"
-                            onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openGoalModal();}">
-                            <div class="goal-ring-wrap">
-                                <svg class="goal-ring-svg" viewBox="0 0 40 40">
-                                    <circle class="goal-ring-bg" cx="20" cy="20" r="18" fill="none" stroke-width="3">
-                                    </circle>
-                                    <circle id="dash-goal-ring-fill" class="goal-ring-fill" cx="20" cy="20" r="18"
-                                        fill="none" stroke-width="3" stroke-dasharray="113.1" stroke-dashoffset="75">
-                                    </circle>
-                                </svg>
-                                <i class="fas fa-bullseye stat-icon-center"></i>
-                            </div>
-                            <div class="stat-info">
-                                <span class="stat-value" id="dash-goal-progress">5/15m</span>
-                                <span class="stat-label">Daily Goal <i class="fas fa-pencil-alt opacity-60"
-                                        style="font-size: 0.65rem;"></i></span>
+
+                    <!-- Academic Dashboard Stats & Member Circulation Card -->
+                    <div class="hero-academic-dashboard slims-dashboard-card">
+                        <div class="dashboard-greeting">
+                            <div class="greeting-header-row">
+                                <div>
+                                    <h2 class="slims-dash-h2"><i class="fas fa-id-card-clip text-primary"></i> Scholar Circulation</h2>
+                                    <p>Repository holds <span class="highlight-stat"><?php echo $totalCatalogBooks; ?></span> cataloged titles</p>
+                                </div>
+                                <div class="dashboard-streak-badge" title="Consecutive days reading">
+                                    <i class="fas fa-fire text-amber-500"></i> <span id="dash-streak-count">1</span> Day
+                                </div>
                             </div>
                         </div>
-                        <div class="dash-stat-card"
-                            onclick="const cf = document.getElementById('category-filter'); if(cf){cf.value='saved'; cf.dispatchEvent(new Event('change')); document.getElementById('library-catalog-container')?.scrollIntoView({behavior:'smooth'});}"
-                            style="cursor: pointer;" title="Filter by saved books" tabindex="0" role="button"
-                            aria-label="Filter by saved books in reading list"
-                            onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault(); const cf = document.getElementById('category-filter'); if(cf){cf.value='saved'; cf.dispatchEvent(new Event('change')); document.getElementById('library-catalog-container')?.scrollIntoView({behavior:'smooth'});}}">
-                            <i class="fas fa-bookmark stat-icon" style="color: var(--color-primary);"></i>
-                            <div class="stat-info">
-                                <span class="stat-value" id="dash-saved-count">0</span>
-                                <span class="stat-label">Saved</span>
+                        <div class="dashboard-stats-grid">
+                            <div class="dash-stat-card goal-card" onclick="openGoalModal()" style="cursor: pointer;"
+                                title="Set or adjust your daily reading goal" tabindex="0" role="button"
+                                onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openGoalModal();}">
+                                <div class="goal-ring-wrap">
+                                    <svg class="goal-ring-svg" viewBox="0 0 40 40">
+                                        <circle class="goal-ring-bg" cx="20" cy="20" r="18" fill="none" stroke-width="3"></circle>
+                                        <circle id="dash-goal-ring-fill" class="goal-ring-fill" cx="20" cy="20" r="18"
+                                            fill="none" stroke-width="3" stroke-dasharray="113.1" stroke-dashoffset="75"></circle>
+                                    </svg>
+                                    <i class="fas fa-bullseye stat-icon-center"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <span class="stat-value" id="dash-goal-progress">5/15m</span>
+                                    <span class="stat-label">Daily Goal <i class="fas fa-pencil-alt opacity-60" style="font-size: 0.65rem;"></i></span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="dash-stat-card" onclick="openStudyNotebookModal()" style="cursor: pointer;"
-                            title="Open Study Notebook with all highlights" tabindex="0" role="button"
-                            onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openStudyNotebookModal();}">
-                            <i class="fas fa-highlighter stat-icon" style="color: var(--color-secondary);"></i>
-                            <div class="stat-info">
-                                <span class="stat-value" id="dash-highlights-count">0</span>
-                                <span class="stat-label">Highlights</span>
+                            <div class="dash-stat-card"
+                                onclick="const cf = document.getElementById('category-filter'); if(cf){cf.value='saved'; cf.dispatchEvent(new Event('change')); document.getElementById('library-catalog-container')?.scrollIntoView({behavior:'smooth'});}"
+                                style="cursor: pointer;" title="Filter by saved books" tabindex="0" role="button"
+                                aria-label="Filter by saved books in reading list"
+                                onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault(); const cf = document.getElementById('category-filter'); if(cf){cf.value='saved'; cf.dispatchEvent(new Event('change')); document.getElementById('library-catalog-container')?.scrollIntoView({behavior:'smooth'});}}">
+                                <i class="fas fa-bookmark stat-icon" style="color: var(--color-primary);"></i>
+                                <div class="stat-info">
+                                    <span class="stat-value" id="dash-saved-count">0</span>
+                                    <span class="stat-label">Saved</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="dash-stat-card" onclick="openStudyNotebookModal()" style="cursor: pointer;"
-                            title="Open Study Notebook with notes & flashcards" tabindex="0" role="button"
-                            onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openStudyNotebookModal();}">
-                            <i class="fas fa-sticky-note stat-icon" style="color: var(--color-warning);"></i>
-                            <div class="stat-info">
-                                <span class="stat-value" id="dash-notes-count">0</span>
-                                <span class="stat-label">Study Notes</span>
+                            <div class="dash-stat-card" onclick="openStudyNotebookModal()" style="cursor: pointer;"
+                                title="Open Study Notebook with all highlights" tabindex="0" role="button"
+                                onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openStudyNotebookModal();}">
+                                <i class="fas fa-highlighter stat-icon" style="color: var(--color-secondary);"></i>
+                                <div class="stat-info">
+                                    <span class="stat-value" id="dash-highlights-count">0</span>
+                                    <span class="stat-label">Highlights</span>
+                                </div>
+                            </div>
+                            <div class="dash-stat-card" onclick="openStudyNotebookModal()" style="cursor: pointer;"
+                                title="Open Study Notebook with notes & flashcards" tabindex="0" role="button"
+                                onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openStudyNotebookModal();}">
+                                <i class="fas fa-sticky-note stat-icon" style="color: var(--color-warning);"></i>
+                                <div class="stat-info">
+                                    <span class="stat-value" id="dash-notes-count">0</span>
+                                    <span class="stat-label">Study Notes</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -257,58 +309,72 @@ include __DIR__ . '/library_header_nav.php';
                 });
             </script>
 
+            <!-- SLiMS OPAC Catalog Toolbar: Real-time Count, View Switcher & Facet Filters -->
+            <section class="slims-catalog-toolbar library-animate-reveal" aria-label="Catalog View and Filter Options">
+                <div class="slims-toolbar-container">
+                    <!-- Left: Real-time Record Count -->
+                    <div class="slims-toolbar-summary">
+                        <i class="fas fa-book-bookmark text-primary" aria-hidden="true"></i>
+                        <span>Showing <strong id="slims-record-count"><?php echo $totalCatalogBooks; ?></strong> bibliographic records</span>
+                    </div>
 
-            <!-- Real-time Search and Multi-Facet Filters (Moved below hero) -->
-            <section class="library-search-wrapper library-animate-reveal" style="margin-top: 2rem;">
-                <!-- Search bar -->
-                <div class="library-search-input-container">
-                    <input type="text" id="library-search" aria-label="Search Library Catalog"
-                        placeholder="Search title, author, grade, or curriculum..."
-                        class="library-search-input library-glass-shine" autocomplete="off">
-                    <i class="fas fa-search library-search-icon"></i>
-                    <button type="button" id="library-search-clear" class="library-search-clear-btn hidden"
-                        aria-label="Clear search input">
-                        <i class="fas fa-times"></i>
-                    </button>
-                </div>
+                    <!-- Center: View Mode Switcher -->
+                    <div class="slims-view-switcher" role="group" aria-label="Catalog Display Mode">
+                        <button type="button" class="slims-view-btn view-switch-btn active" id="view-mode-grid"
+                            onclick="switchLibraryView('grid')" title="Card View (Grid OPAC)" aria-label="Card View">
+                            <i class="fas fa-th-large" aria-hidden="true"></i> <span>Cards</span>
+                        </button>
+                        <button type="button" class="slims-view-btn view-switch-btn" id="view-mode-list"
+                            onclick="switchLibraryView('list')" title="Detailed Bibliographic List (SLiMS OPAC)" aria-label="Detailed List View">
+                            <i class="fas fa-table-list" aria-hidden="true"></i> <span>Bibliographic List</span>
+                        </button>
+                        <button type="button" class="slims-view-btn view-switch-btn" id="view-mode-carousel"
+                            onclick="switchLibraryView('carousel')" title="Horizontal Carousel Shelf" aria-label="Horizontal Shelf View">
+                            <i class="fas fa-layer-group" aria-hidden="true"></i> <span>Carousel</span>
+                        </button>
+                    </div>
 
-                <!-- Category Filter -->
-                <div class="library-filter-select-container">
-                    <select id="category-filter" aria-label="Select Category"
-                        class="library-category-select library-glass-shine">
-                        <option value="all">All Categories</option>
-                        <option value="saved">⭐ My Reading List</option>
-                        <?php foreach (array_keys($categories) as $cat) : ?>
-                            <option value="<?php echo htmlspecialchars($cat); ?>"><?php echo htmlspecialchars($cat); ?>
-                            </option>
-                        <?php endforeach; ?>
-                    </select>
-                    <i class="fas fa-filter library-filter-icon"></i>
-                </div>
+                    <!-- Right: Multi-Facet Filters -->
+                    <div class="slims-toolbar-filters">
+                        <!-- Category Filter -->
+                        <div class="library-filter-select-container slims-select-wrap">
+                            <select id="category-filter" aria-label="Filter by Category"
+                                class="library-category-select slims-filter-select">
+                                <option value="all">All Categories</option>
+                                <option value="saved">⭐ My Reading List</option>
+                                <?php foreach (array_keys($categories) as $cat) : ?>
+                                    <option value="<?php echo htmlspecialchars($cat); ?>"><?php echo htmlspecialchars($cat); ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                            <i class="fas fa-filter library-filter-icon" aria-hidden="true"></i>
+                        </div>
 
-                <!-- Lexile Reading Level Filter -->
-                <div class="library-filter-select-container">
-                    <select id="lexile-filter" aria-label="Select Reading Level"
-                        class="library-category-select library-glass-shine">
-                        <option value="all">All Reading Levels</option>
-                        <option value="easy">Elementary (Under 500L)</option>
-                        <option value="medium">Middle School (500L - 900L)</option>
-                        <option value="hard">High School (Above 900L)</option>
-                    </select>
-                    <i class="fas fa-graduation-cap library-filter-icon"></i>
-                </div>
+                        <!-- Lexile Reading Level Filter -->
+                        <div class="library-filter-select-container slims-select-wrap">
+                            <select id="lexile-filter" aria-label="Filter by Reading Level"
+                                class="library-category-select slims-filter-select">
+                                <option value="all">All Reading Levels</option>
+                                <option value="easy">Elementary (&lt; 500L)</option>
+                                <option value="medium">Middle School (500L - 900L)</option>
+                                <option value="hard">High School (&gt; 900L)</option>
+                            </select>
+                            <i class="fas fa-graduation-cap library-filter-icon" aria-hidden="true"></i>
+                        </div>
 
-                <!-- Multi-Facet Sort Dropdown -->
-                <div class="library-filter-select-container">
-                    <select id="catalog-sort" aria-label="Sort Catalog"
-                        class="library-category-select library-glass-shine">
-                        <option value="default">Sort: Default</option>
-                        <option value="title-asc">Title: A to Z</option>
-                        <option value="title-desc">Title: Z to A</option>
-                        <option value="lexile-asc">Lexile: Low to High</option>
-                        <option value="lexile-desc">Lexile: High to Low</option>
-                    </select>
-                    <i class="fas fa-sort-amount-down library-filter-icon"></i>
+                        <!-- Multi-Facet Sort Dropdown -->
+                        <div class="library-filter-select-container slims-select-wrap">
+                            <select id="catalog-sort" aria-label="Sort Catalog"
+                                class="library-category-select slims-filter-select">
+                                <option value="default">Sort: Default</option>
+                                <option value="title-asc">Title: A to Z</option>
+                                <option value="title-desc">Title: Z to A</option>
+                                <option value="callno-asc">Call Number: Ascending</option>
+                                <option value="lexile-asc">Lexile: Low to High</option>
+                                <option value="lexile-desc">Lexile: High to Low</option>
+                            </select>
+                            <i class="fas fa-sort-amount-down library-filter-icon" aria-hidden="true"></i>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -525,6 +591,18 @@ include __DIR__ . '/library_header_nav.php';
 <script>
     window.DESK_EXTERNAL_LINKS = <?php echo json_encode($deskLinks, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT); ?>;
     window.DISCLAIMERS_DATA = <?php echo json_encode($disclaimersData, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT); ?>;
+    window.ALL_LIBRARY_BOOKS = <?php 
+        $allBooksCatalogMap = [];
+        foreach ($categories as $catName => $bList) {
+            foreach ($bList as $bk) {
+                $bk['category'] = $catName;
+                if (!empty($bk['id'])) {
+                    $allBooksCatalogMap[$bk['id']] = $bk;
+                }
+            }
+        }
+        echo json_encode($allBooksCatalogMap, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT);
+    ?>;
 
     // Interactive Aurora Parallax
     document.addEventListener('mousemove', (e) => {

@@ -48,16 +48,16 @@ if (! function_exists('assetVersion')) {
 
 // Core Platform Version Definition
 if (! defined('HL_SITE_VERSION')) {
-    define('HL_SITE_VERSION', 'v2.17.0');
+    define('HL_SITE_VERSION', 'v2.18.0');
     }
 if (! defined('HL_SITE_VERSION_DATE')) {
     define('HL_SITE_VERSION_DATE', 'October 2026');
     }
 if (! defined('HL_SITE_VERSION_LABEL')) {
-    define('HL_SITE_VERSION_LABEL', 'October 2026 History of Woman Suffrage Complete Archive Release');
+    define('HL_SITE_VERSION_LABEL', 'October 2026 Senayan Library Management System (SLiMS OPAC) & Deep-Linked Bibliographic Pages Release');
     }
 if (! defined('HL_SITE_VERSION_SUMMARY')) {
-    define('HL_SITE_VERSION_SUMMARY', 'Full Ingestion of The History of Woman Suffrage (Volumes I through VI, 1881–1922) by Elizabeth Cady Stanton, Susan B. Anthony, Matilda Joslyn Gage, and Ida Husted Harper, Providing 270+ Chapters of Primary 19th Amendment History in Universal Single-Column Reader');
+    define('HL_SITE_VERSION_SUMMARY', 'Comprehensive Redesign of Library Catalog into Senayan Library Management System (SLiMS) OPAC with Field Scopes, Full-Page Bibliographic Record Detail Overlays, and URL Hash Deep-Linking (#book-id)');
     }
 ?>
 <!DOCTYPE html>

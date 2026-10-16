@@ -1,7 +1,7 @@
 <?php
 /**
- * library/book_card.php - Modular Book Card Component
- * Renders consistent book cards across Carousel, Grid, and Academic List views.
+ * library/book_card.php - SLiMS-Enhanced Modular Book Card Component
+ * Renders consistent book cards across Carousel, Grid, and Academic SLiMS OPAC views.
  */
 $bookId = $book['id'] ?? '';
 $bookTitle = $book['title'] ?? 'Untitled';
@@ -14,6 +14,7 @@ $bookDate = $book['date'] ?? '';
 $isCollection = !empty($book['isCollection']);
 $hasTeacherResources = !empty($book['hasTeacherResources']);
 $curriculum = $book['curriculum'] ?? ($book['grade'] ?? '');
+$gmd = $isCollection ? 'Collection' : (stripos($bookTitle, 'audio') !== false ? 'Audiobook' : 'Text / E-Book');
 
 // Resolve or synthesize authentic Library Call Number
 $bookCallNumber = $book['call_number'] ?? $book['callNumber'] ?? $book['call-number'] ?? '';
@@ -33,10 +34,10 @@ if (empty($bookCallNumber)) {
     }
 }
 ?>
-<div class="library-book-card"
+<div class="library-book-card slims-book-card"
      role="button"
      tabindex="0"
-     aria-label="View details for <?php echo htmlspecialchars($bookTitle); ?>"
+     aria-label="View bibliographic details for <?php echo htmlspecialchars($bookTitle); ?>"
      onclick="openModal(this)"
      onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(this);}"
      data-id="<?php echo htmlspecialchars($bookId); ?>"
@@ -86,31 +87,18 @@ if (empty($bookCallNumber)) {
      data-info-source="<?php echo htmlspecialchars($book['info-source'] ?? ''); ?>"
      data-category="<?php echo htmlspecialchars($book['category'] ?? ''); ?>"
      data-section="<?php echo htmlspecialchars($book['section'] ?? ''); ?>"
+     data-gmd="<?php echo htmlspecialchars($gmd); ?>"
+     data-author-bio="<?php echo htmlspecialchars($book['authorBio'] ?? ''); ?>"
+     data-intro-why="<?php echo htmlspecialchars($book['introWhy'] ?? ''); ?>"
+     data-intro-how="<?php echo htmlspecialchars($book['introHow'] ?? ''); ?>"
+     data-intro-what="<?php echo htmlspecialchars($book['introWhat'] ?? ''); ?>"
+     data-gutenberg-id="<?php echo htmlspecialchars($book['gutenberg-id'] ?? ''); ?>"
      data-is-collection="<?php echo $isCollection ? 'true' : 'false'; ?>"
      data-has-teacher="<?php echo $hasTeacherResources ? 'true' : 'false'; ?>"
      data-books="<?php echo isset($book['books']) ? htmlspecialchars(json_encode($book['books']), ENT_QUOTES, 'UTF-8') : ''; ?>">
 
-    <!-- Cover Image Wrapper with hover lifting action -->
+    <!-- Cover Image Wrapper with star bookmark button and on-hover detail button -->
     <div class="library-book-cover-wrap">
-        <?php if ($bookGrade !== '' && $bookGrade !== '#'): ?>
-            <div class="library-book-badge-grade">
-                <i class="fas fa-graduation-cap"></i> <span><?php echo htmlspecialchars($bookGrade); ?></span>
-            </div>
-        <?php endif; ?>
-
-        <?php if ($isCollection): ?>
-            <div class="library-book-badge-collection">
-                <i class="fas fa-layer-group"></i> <span>Collection</span>
-            </div>
-        <?php endif; ?>
-
-        <!-- Library Spine Call Number Badge -->
-        <?php if (!empty($bookCallNumber)): ?>
-            <div class="library-book-badge-call" title="Library Call Number: <?php echo htmlspecialchars($bookCallNumber); ?>">
-                <i class="fas fa-barcode"></i> <span><?php echo htmlspecialchars($bookCallNumber); ?></span>
-            </div>
-        <?php endif; ?>
-
         <!-- Bookmark / Favorite Quick Button -->
         <button type="button"
                 class="library-book-bookmark-btn" 
@@ -131,50 +119,12 @@ if (empty($bookCallNumber)) {
             <div class="book-progress-fill"></div>
         </div>
 
-        <!-- Hover Overlay Info -->
+        <!-- On-Hover Detail Button -->
         <div class="library-book-cover-overlay">
             <span class="library-book-overlay-text">
-                <i class="fas fa-book-open"></i> <span>View Details</span>
+                <i class="fas fa-circle-info"></i> <span>Detail</span>
             </span>
         </div>
     </div>
-
-    <!-- Info (Below Card / In List View) -->
-    <div class="library-book-info">
-        <h3 class="library-book-title">
-            <?php echo htmlspecialchars($bookTitle); ?>
-        </h3>
-        <p class="library-book-author">
-            <?php echo htmlspecialchars($bookAuthor); ?>
-        </p>
-
-        <!-- List View Extended Metadata (Visible in Academic List / Table View) -->
-        <div class="library-book-list-meta">
-            <?php if (!empty($bookCallNumber)): ?>
-                <span class="meta-tag callno-tag" title="Library Catalog Call Number">
-                    <i class="fas fa-barcode"></i> CALL # <?php echo htmlspecialchars($bookCallNumber); ?>
-                </span>
-            <?php endif; ?>
-            <?php if (!empty($bookLexile) && $bookLexile !== '#'): ?>
-                <span class="meta-tag lexile-tag" title="Lexile Reading Measure">
-                    <i class="fas fa-brain"></i> <?php echo htmlspecialchars($bookLexile); ?>
-                </span>
-            <?php endif; ?>
-            <?php if (!empty($bookDate) && $bookDate !== '#'): ?>
-                <span class="meta-tag date-tag" title="Publication Date">
-                    <i class="far fa-calendar-alt"></i> <?php echo htmlspecialchars($bookDate); ?>
-                </span>
-            <?php endif; ?>
-            <?php if (!empty($bookGrade) && $bookGrade !== '#'): ?>
-                <span class="meta-tag grade-tag" title="Target Grade Level">
-                    <i class="fas fa-graduation-cap"></i> <?php echo htmlspecialchars($bookGrade); ?>
-                </span>
-            <?php endif; ?>
-            <?php if (!empty($book['dewey'])): ?>
-                <span class="meta-tag ddc-tag" title="Dewey Decimal Classification">
-                    <i class="fas fa-sitemap"></i> DDC <?php echo htmlspecialchars($book['dewey']); ?>
-                </span>
-            <?php endif; ?>
-        </div>
-    </div>
 </div>
+

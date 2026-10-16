@@ -112,172 +112,387 @@ if (! function_exists('renderGutenbergLicenseHtml')) {
         }
     }
 ?>
-<!-- Book Knowledge Modal -->
-<div id="bookModal" class="library-modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+<<!-- SLiMS Bibliographic Record Detail Page / Closable Overlay -->
+<div id="bookModal" class="library-modal slims-page-modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
     <!-- Backdrop -->
     <div class="library-modal-backdrop" onclick="closeModal()"></div>
 
-    <!-- Modal Content Window -->
-    <div class="library-modal-content" onclick="event.stopPropagation()">
+    <!-- Modal Content Window: Styled as full-view bibliographic record page -->
+    <div class="library-modal-content slims-record-container" onclick="event.stopPropagation()">
 
-        <!-- Close Button -->
-        <button onclick="closeModal()" id="book-modal-close" class="library-modal-close-btn"
-            aria-label="Close overview modal">
-            <i class="fas fa-times"></i>
-        </button>
-
-        <div class="library-modal-body-wrapper">
-            <!-- Book Cover Pane -->
-            <div class="library-modal-cover-pane">
-                <div class="library-modal-cover-glow"></div>
-                <img id="modal-img" src="" alt="Book Cover" class="library-modal-cover-img"
-                    onerror="this.onerror=null; this.src='https://placehold.co/300x450/1e293b/ffffff?text=No+Cover';">
-
-                <!-- Star (Bookmark) and Cite Buttons Under Cover Image -->
-                <div class="library-modal-cover-actions">
-                    <button id="modal-bookmark-btn" onclick="toggleModalBookmark()" class="modal-cover-btn bookmark-btn"
-                        title="Save to My Reading List" aria-label="Save to My Reading List">
-                        <i class="far fa-star"></i> <span>Save to List</span>
-                    </button>
-                    <button type="button" id="modal-citation-btn" onclick="openBookCitationModal()"
-                        class="modal-cover-btn cite-btn" title="Generate Citations" aria-label="Generate Citation">
-                        <i class="fas fa-quote-right"></i> <span>Cite Book</span>
-                    </button>
-                </div>
-
-                <!-- Sourcing & Disclaimer Button Under Cite and Save Buttons -->
-                <div class="library-modal-disclaimer-row">
-                    <button type="button" onclick="openDisclaimerModal()" class="library-disclaimer-trigger-btn"
-                        aria-label="View sourcing and content disclaimer">
-                        <i class="fas fa-exclamation-circle"></i> <span>Sourcing Disclaimer</span>
-                    </button>
+        <!-- Sticky Header Navigation Bar (Page Header) -->
+        <header class="slims-record-nav-header">
+            <div class="slims-record-nav-left">
+                <button type="button" onclick="closeModal()" id="slims-back-catalog-btn" class="slims-back-btn" aria-label="Back to Library Catalog">
+                    <i class="fas fa-arrow-left" aria-hidden="true"></i>
+                    <span>Back to Catalog</span>
+                    <kbd class="slims-kbd-hint">Esc</kbd>
+                </button>
+                <div class="slims-breadcrumb-trail" aria-label="Breadcrumb">
+                    <span id="modal-breadcrumb-category" class="slims-crumb-cat">Catalog</span>
+                    <span class="slims-crumb-sep">/</span>
+                    <span id="modal-breadcrumb-title" class="slims-crumb-active">Book Title</span>
                 </div>
             </div>
 
-            <!-- Details Pane -->
-            <div class="library-modal-info-pane">
-                <!-- Titles -->
-                <div class="library-modal-title-section">
-                    <h2 id="modal-title" class="library-modal-title"></h2>
-                    <p id="modal-author" class="library-modal-author"></p>
+            <div class="slims-record-nav-right">
+                <!-- Copy Direct Link Button (# id) -->
+                <button type="button" id="slims-share-link-btn" onclick="copyBookShareLink()" class="slims-nav-tool-btn" title="Copy direct link to this book" aria-label="Copy direct link to this book">
+                    <i class="fas fa-link"></i> <span id="slims-share-link-text">Share Link</span>
+                </button>
+
+                <!-- Bookmark Button in Header -->
+                <button type="button" id="modal-bookmark-btn" onclick="toggleModalBookmark()" class="slims-nav-tool-btn bookmark-btn" title="Save to My Reading List" aria-label="Save to My Reading List">
+                    <i class="far fa-star"></i> <span>Save to List</span>
+                </button>
+
+                <!-- Close Button -->
+                <button type="button" onclick="closeModal()" id="book-modal-close" class="slims-record-close-btn" aria-label="Close bibliographic record">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Scrollable Bibliographic Body -->
+        <div class="library-modal-body-wrapper slims-record-body">
+
+            <!-- Left Media & Circulation Column -->
+            <aside class="library-modal-cover-pane slims-media-column">
+                <div class="slims-cover-display-box">
+                    <div class="slims-cover-3d-wrap">
+                        <img id="modal-img" src="" alt="Book Cover" class="library-modal-cover-img slims-book-cover-img"
+                            onerror="this.onerror=null; this.src='https://placehold.co/300x450/1e293b/ffffff?text=No+Cover';">
+                        <div id="modal-spine-call-tag" class="slims-cover-call-spine" title="Item Call Number"></div>
+                    </div>
                 </div>
 
-                <!-- Specs Grid -->
-                <div class="library-modal-specs-grid">
-                    <div id="modal-date-container">
-                        <span class="spec-label">Published</span>
-                        <span id="modal-date" class="spec-value spec-val-mono"></span>
-                    </div>
-                    <div id="modal-isbn-container">
-                        <span class="spec-label">ISBN</span>
-                        <span id="modal-isbn" class="spec-value spec-val-mono spec-val-break"></span>
-                    </div>
-                    <div id="modal-lexile-container" class="library-modal-spec-half hidden">
-                        <span class="spec-label">Lexile Measure <button type="button" class="spec-info-btn"
-                                onclick="openLexileInfoModal()" title="What is Lexile?"><i
-                                    class="fas fa-info-circle"></i></button></span>
-                        <div class="spec-value-flex">
-                            <span id="modal-lexile" class="spec-value spec-val-highlight-emerald"></span>
+                <!-- Primary Reading Action -->
+                <div class="slims-media-actions-block">
+                    <a id="modal-read-online-link" href="#" class="btn-slims-read-primary" title="Launch online reader">
+                        <i class="fas fa-book-open"></i> <span>Read Online</span>
+                    </a>
 
-                            <div id="modal-lexile-edit-container" class="hidden" style="display: none;">
-                                <input type="text" id="modal-lexile-input" class="spec-edit-input"
-                                    placeholder="e.g. 1050L" aria-label="Edit Lexile">
-                                <button type="button" id="save-lexile-btn" class="spec-action-icon-btn save-btn"
-                                    title="Save Lexile"><i class="fas fa-check"></i></button>
-                                <button type="button" id="cancel-lexile-btn" class="spec-action-icon-btn cancel-btn"
-                                    title="Cancel"><i class="fas fa-times"></i></button>
-                            </div>
+                    <!-- Dual Volume Online Readers (e.g. The American Yawp Vol 1 & Vol 2) -->
+                    <div id="modal-dual-volume-actions" class="library-modal-vol-group hidden">
+                        <a id="modal-read-vol1-link" href="#"
+                            class="library-modal-read-btn library-modal-vol1-btn"
+                            title="Read Volume 1 Online"
+                            aria-label="Read Volume 1 Online">
+                            <i class="fas fa-book-open"></i> <span>Read: Vol 1</span>
+                        </a>
+                        <a id="modal-read-vol2-link" href="#"
+                            class="library-modal-read-btn library-modal-vol2-btn"
+                            title="Read Volume 2 Online"
+                            aria-label="Read Volume 2 Online">
+                            <i class="fas fa-book-open"></i> <span>Read: Vol 2</span>
+                        </a>
+                    </div>
+                </div>
 
-                            <button type="button" id="edit-lexile-btn" class="spec-action-icon-btn edit-btn"
-                                title="Edit Reading Level"><i class="fas fa-edit"></i></button>
-                        </div>
+                <!-- Tools & Sourcing Row -->
+                <div class="slims-media-tools-row">
+                    <button type="button" id="modal-citation-btn" onclick="openBookCitationModal()"
+                        class="modal-cover-btn cite-btn" title="Generate Citation" aria-label="Generate Citation">
+                        <i class="fas fa-quote-right"></i> <span>Cite Record</span>
+                    </button>
+                    <button type="button" onclick="openDisclaimerModal()" class="library-disclaimer-trigger-btn"
+                        aria-label="View sourcing and content disclaimer">
+                        <i class="fas fa-shield-halved"></i> <span>Sourcing / License</span>
+                    </button>
+                </div>
+            </aside>
+
+            <!-- Right Bibliographic Record Information Column -->
+            <main class="library-modal-info-pane slims-record-info-column">
+
+                <!-- Title & Authorship Section -->
+                <div class="slims-record-title-banner">
+                    <div class="slims-meta-top-tags">
+                        <span id="modal-category-tag" class="slims-tag-category">Catalog</span>
+                        <span id="modal-grade-tag" class="slims-tag-grade hidden"><i class="fas fa-graduation-cap"></i> <span id="modal-grade-text"></span></span>
+                        <span id="modal-lexile-tag" class="slims-tag-lexile hidden">
+                            <i class="fas fa-brain" aria-hidden="true"></i>
+                            <span id="modal-lexile"></span>
+                            <button type="button" class="slims-lexile-info-trigger" onclick="openLexileInfoModal()" title="What is Lexile?" aria-label="What is Lexile?">
+                                <i class="fas fa-info-circle"></i>
+                            </button>
+                        </span>
                     </div>
-                    <div id="modal-callno-container" class="library-modal-spec-half hidden">
-                        <span class="spec-label"><i class="fas fa-barcode text-primary"></i> Call Number</span>
-                        <span id="modal-callno" class="spec-value spec-val-highlight-amber"
-                            style="font-family: monospace; font-weight: 700;"></span>
+                    <h1 id="modal-title" class="slims-record-h1"></h1>
+                    <p id="modal-author" class="slims-record-author-line"></p>
+                </div>
+
+                <!-- SLiMS Tabbed Record Sections -->
+                <div class="slims-record-tabs-bar" role="tablist" aria-label="Bibliographic Record Views">
+                    <button type="button" id="tab-btn-biblio" class="slims-tab-btn active" role="tab" aria-selected="true" aria-controls="slims-tab-content-biblio" onclick="switchSlimsModalTab('biblio')">
+                        <i class="fas fa-table-list"></i> <span>Bibliographic Information</span>
+                    </button>
+                    <button type="button" id="tab-btn-synopsis" class="slims-tab-btn" role="tab" aria-selected="false" aria-controls="slims-tab-content-synopsis" onclick="switchSlimsModalTab('synopsis')">
+                        <i class="fas fa-align-left"></i> <span>Abstract / Notes</span>
+                    </button>
+                    <button type="button" id="tab-btn-formats" class="slims-tab-btn" role="tab" aria-selected="false" aria-controls="slims-tab-content-formats" onclick="switchSlimsModalTab('formats')">
+                        <i class="fas fa-cloud-arrow-down"></i> <span>Electronic Formats</span>
+                    </button>
+                    <button type="button" id="tab-btn-barcode" class="slims-tab-btn" role="tab" aria-selected="false" aria-controls="slims-tab-content-barcode" onclick="switchSlimsModalTab('barcode')">
+                        <i class="fas fa-barcode"></i> <span>Barcode</span>
+                    </button>
+                </div>
+
+                <!-- Tab 1: Bibliographic Information (SLiMS Detail Bibliografi) -->
+                <div id="slims-tab-content-biblio" class="slims-tab-panel active" role="tabpanel" aria-labelledby="tab-btn-biblio">
+                    <div class="slims-metadata-table-wrapper">
+                        <table class="slims-table-biblio" aria-label="Bibliographic Details">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Call Number</th>
+                                    <td id="modal-td-callno" class="slims-val-highlight-amber slims-val-mono"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Standard Number (ISBN)</th>
+                                    <td id="modal-td-isbn" class="slims-val-mono"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Publication / Release Date</th>
+                                    <td id="modal-td-date"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Digital Sourcing &amp; Repository</th>
+                                    <td id="modal-td-source">Hesten's Learning Archive &bull; Project Gutenberg</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <div id="modal-dewey-container" class="library-modal-spec-half hidden">
-                        <span class="spec-label">Dewey Decimal <button type="button" class="spec-info-btn"
-                                onclick="openDdcInfoModal()" title="What is DDC?"><i
-                                    class="fas fa-info-circle"></i></button></span>
-                        <span id="modal-dewey" class="spec-value spec-val-highlight-purple"></span>
+                </div>
+
+                <!-- Tab 2: Synopsis / Abstract -->
+                <div id="slims-tab-content-synopsis" class="slims-tab-panel hidden" role="tabpanel" aria-labelledby="tab-btn-synopsis">
+                    <div class="slims-abstract-card">
+                        <h3 class="slims-section-subtitle"><i class="fas fa-book-bookmark text-primary"></i> Abstract &amp; Content Overview</h3>
+                        <p id="modal-description" class="slims-abstract-text"></p>
                     </div>
-                    <div id="modal-lc-container" class="library-modal-spec-half hidden">
-                        <span class="spec-label">Library of Congress</span>
-                        <span id="modal-lc" class="spec-value spec-val-highlight-blue"></span>
-                    </div>
-                    <div id="modal-curriculum-container" class="library-modal-spec-full hidden">
-                        <span class="spec-label"><i class="fas fa-graduation-cap text-primary"></i> Aligned Curriculum
-                            Tracks</span>
+
+                    <!-- Curriculum Alignment Links (if available) -->
+                    <div id="modal-curriculum-container" class="slims-curriculum-box hidden">
+                        <h4 class="slims-curriculum-title"><i class="fas fa-graduation-cap"></i> Aligned Curriculum Tracks</h4>
                         <div id="modal-curriculum-content" class="spec-val-curriculum-links"></div>
                     </div>
                 </div>
 
-                <!-- Description -->
-                <div class="library-modal-desc-section">
-                    <p id="modal-description" class="library-modal-description"></p>
-                </div>
-
-                <!-- Action Buttons Area -->
-                <div class="library-modal-footer-section">
-                    <!-- Single Book Actions -->
-                    <div id="modal-single-actions" class="library-modal-actions-row">
-                        <a id="modal-read-online-link" href="#" class="library-modal-read-btn">
-                            <i class="fas fa-book-open"></i> <span>Read Online</span>
-                        </a>
-
-                        <!-- Dual Volume Online Readers (e.g. The American Yawp Vol 1 & Vol 2) -->
-                        <div id="modal-dual-volume-actions" class="library-modal-vol-group hidden">
-                            <a id="modal-read-vol1-link" href="#"
-                                class="library-modal-read-btn library-modal-vol1-btn"
-                                title="Read The American Yawp Volume 1: Before 1877 Online"
-                                aria-label="Read Volume 1 (Before 1877) Online">
-                                <i class="fas fa-book-open"></i> <span>Read Online: Vol 1</span>
-                            </a>
-                            <a id="modal-read-vol2-link" href="#"
-                                class="library-modal-read-btn library-modal-vol2-btn"
-                                title="Read The American Yawp Volume 2: After 1877 Online"
-                                aria-label="Read Volume 2 (After 1877) Online">
-                                <i class="fas fa-book-open"></i> <span>Read Online: Vol 2</span>
-                            </a>
+                <!-- Tab 3: Electronic Formats -->
+                <div id="slims-tab-content-formats" class="slims-tab-panel hidden" role="tabpanel" aria-labelledby="tab-btn-formats">
+                    <div class="slims-formats-intro-card">
+                        <div class="slims-formats-intro-icon">
+                            <i class="fas fa-file-arrow-down"></i>
                         </div>
-
-                        <div class="library-modal-downloads-row">
-                            <a id="modal-pdf-link" href="#" target="_blank" rel="noopener noreferrer"
-                                class="library-download-icon-btn pdf-btn" title="Download PDF"
-                                aria-label="Download PDF">
-                                <i class="fas fa-file-pdf"></i> <span id="modal-pdf-text">PDF</span>
-                            </a>
-                            <a id="modal-pdf-vol2-link" href="#" target="_blank" rel="noopener noreferrer"
-                                class="library-download-icon-btn pdf-btn hidden" title="Download Volume 2 PDF"
-                                aria-label="Download Volume 2 PDF">
-                                <i class="fas fa-file-pdf"></i> <span>Vol 2 PDF</span>
-                            </a>
-                            <a id="modal-epub-link" href="#" target="_blank" rel="noopener noreferrer"
-                                class="library-download-icon-btn epub-btn" title="Download ePUB"
-                                aria-label="Download ePUB">
-                                <i class="fas fa-book"></i> <span>ePUB</span>
-                            </a>
-                            <a id="modal-mobi-link" href="#" target="_blank" rel="noopener noreferrer"
-                                class="library-download-icon-btn mobi-btn" title="Download MOBI"
-                                aria-label="Download MOBI">
-                                <i class="fas fa-tablet-alt"></i> <span>MOBI</span>
-                            </a>
-                            <a id="modal-txt-link" href="#" target="_blank" rel="noopener noreferrer"
-                                class="library-download-icon-btn txt-btn" title="Download Plain Text"
-                                aria-label="Download Plain Text">
-                                <i class="fas fa-file-alt"></i> <span>TXT</span>
-                            </a>
+                        <div class="slims-formats-intro-text">
+                            <h3 class="slims-section-subtitle" style="margin-bottom: 0.25rem;">
+                                Available Digital Editions &amp; Offline Downloads
+                            </h3>
+                            <p class="slims-formats-intro-desc">
+                                DRM-free electronic editions optimized for tablets, e-readers, smartphones, and assistive text-to-speech tools. All files are hosted on public domain and open-access repositories.
+                            </p>
                         </div>
                     </div>
 
-                    <!-- Collection List Container -->
-                    <div id="modal-collection-actions" class="library-modal-collection-list hidden">
-                        <!-- Dynamically populated in library.js -->
+                    <div class="slims-formats-grid">
+                        <!-- PDF Format Card -->
+                        <div id="modal-format-card-pdf" class="slims-format-card">
+                            <div class="slims-format-header-row">
+                                <div class="slims-format-badge format-pdf">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>PDF</span>
+                                </div>
+                                <span class="slims-format-status-tag"><i class="fas fa-check-circle"></i> Digital Edition</span>
+                            </div>
+                            <div class="slims-format-details">
+                                <h4 class="slims-format-name">Portable Document Format</h4>
+                                <p class="slims-format-info">Page-faithful layout preserving original illustrations, margins, and typography. Recommended for desktop study and printing.</p>
+                            </div>
+                            <div class="slims-format-actions">
+                                <a id="modal-pdf-link" href="#" target="_blank" rel="noopener noreferrer"
+                                    class="slims-btn-format-download pdf-btn" title="Download PDF"
+                                    aria-label="Download PDF">
+                                    <i class="fas fa-download"></i> <span id="modal-pdf-text">Download PDF</span>
+                                </a>
+                                <a id="modal-pdf-vol2-link" href="#" target="_blank" rel="noopener noreferrer"
+                                    class="slims-btn-format-download pdf-btn hidden" title="Download Volume 2 PDF"
+                                    aria-label="Download Volume 2 PDF">
+                                    <i class="fas fa-download"></i> <span>Download Vol 2 PDF</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- ePUB Format Card -->
+                        <div id="modal-format-card-epub" class="slims-format-card">
+                            <div class="slims-format-header-row">
+                                <div class="slims-format-badge format-epub">
+                                    <i class="fas fa-book"></i>
+                                    <span>ePUB</span>
+                                </div>
+                                <span class="slims-format-status-tag"><i class="fas fa-check-circle"></i> Reflowable</span>
+                            </div>
+                            <div class="slims-format-details">
+                                <h4 class="slims-format-name">Standard ePUB 3.0</h4>
+                                <p class="slims-format-info">Adaptive reflowable text with adjustable font sizes and dark mode. Ideal for Apple Books, Kobo, and Android e-readers.</p>
+                            </div>
+                            <div class="slims-format-actions">
+                                <a id="modal-epub-link" href="#" target="_blank" rel="noopener noreferrer"
+                                    class="slims-btn-format-download epub-btn" title="Download ePUB"
+                                    aria-label="Download ePUB">
+                                    <i class="fas fa-download"></i> <span>Download ePUB</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- MOBI / Kindle Format Card -->
+                        <div id="modal-format-card-mobi" class="slims-format-card">
+                            <div class="slims-format-header-row">
+                                <div class="slims-format-badge format-mobi">
+                                    <i class="fas fa-tablet-alt"></i>
+                                    <span>MOBI</span>
+                                </div>
+                                <span class="slims-format-status-tag"><i class="fas fa-check-circle"></i> Kindle</span>
+                            </div>
+                            <div class="slims-format-details">
+                                <h4 class="slims-format-name">Kindle / Mobipocket</h4>
+                                <p class="slims-format-info">Formatted specifically for Amazon Kindle hardware e-readers, Paperwhite, and Kindle mobile reading applications.</p>
+                            </div>
+                            <div class="slims-format-actions">
+                                <a id="modal-mobi-link" href="#" target="_blank" rel="noopener noreferrer"
+                                    class="slims-btn-format-download mobi-btn" title="Download MOBI"
+                                    aria-label="Download MOBI">
+                                    <i class="fas fa-download"></i> <span>Download MOBI</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- TXT Format Card -->
+                        <div id="modal-format-card-txt" class="slims-format-card">
+                            <div class="slims-format-header-row">
+                                <div class="slims-format-badge format-txt">
+                                    <i class="fas fa-file-lines"></i>
+                                    <span>TXT</span>
+                                </div>
+                                <span class="slims-format-status-tag"><i class="fas fa-check-circle"></i> Accessible</span>
+                            </div>
+                            <div class="slims-format-details">
+                                <h4 class="slims-format-name">Plain Text (UTF-8)</h4>
+                                <p class="slims-format-info">Raw unformatted text with zero proprietary dependencies. Fully compatible with refreshable braille displays and screen readers.</p>
+                            </div>
+                            <div class="slims-format-actions">
+                                <a id="modal-txt-link" href="#" target="_blank" rel="noopener noreferrer"
+                                    class="slims-btn-format-download txt-btn" title="Download Plain Text"
+                                    aria-label="Download Plain Text">
+                                    <i class="fas fa-download"></i> <span>Download TXT</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Repository Guarantee Notice -->
+                    <div class="slims-formats-footer-notice">
+                        <i class="fas fa-shield-halved text-emerald-500"></i>
+                        <span>All electronic editions provided via Hesten's Learning Open Archive are preserved under public domain and open-access educational guidelines.</span>
                     </div>
                 </div>
-            </div>
+
+                <!-- Tab 4: Barcode / Inventory (Prepared for Upcoming Revisions) -->
+                <div id="slims-tab-content-barcode" class="slims-tab-panel hidden" role="tabpanel" aria-labelledby="tab-btn-barcode">
+                    <div class="slims-barcode-wrapper">
+                        <!-- SLiMS Physical & Digital Item Barcode Label -->
+                        <div class="slims-barcode-card">
+                            <div class="slims-barcode-header">
+                                <div class="slims-barcode-header-left">
+                                    <span class="slims-barcode-lib-name">HESTEN'S LEARNING &bull; OPEN REPOSITORY</span>
+                                    <span class="slims-barcode-subhead">Item Circulation &amp; Shelf Label</span>
+                                </div>
+                                <span class="slims-barcode-rev-badge"><i class="fas fa-clock-rotate-left"></i> Revision Staging</span>
+                            </div>
+
+                            <!-- Book Information on Label -->
+                            <div class="slims-barcode-book-info">
+                                <h4 id="modal-barcode-book-title" class="slims-barcode-book-title">Selected Title</h4>
+                                <p id="modal-barcode-book-author" class="slims-barcode-book-author"></p>
+                            </div>
+
+                            <!-- Crisp SVG Barcode Graphic -->
+                            <div class="slims-barcode-display" id="modal-barcode-display" aria-label="Item Barcode Visual">
+                                <svg id="modal-barcode-svg" class="slims-barcode-svg" viewBox="0 0 320 80" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Code 128 Barcode">
+                                    <!-- Rendered dynamically via lib-book-overview-modal.js -->
+                                </svg>
+                                <div class="slims-barcode-human-code" id="modal-barcode-val">HL-000000-01</div>
+                            </div>
+
+                            <!-- Barcode Metadata Footer -->
+                            <div class="slims-barcode-card-footer">
+                                <div class="slims-barcode-item-meta">
+                                    <span class="meta-label">Call Number:</span>
+                                    <strong id="modal-barcode-callno" class="meta-val">--</strong>
+                                </div>
+                                <div class="slims-barcode-item-meta">
+                                    <span class="meta-label">Collection Location:</span>
+                                    <span class="meta-val">Main Digital Stacks &bull; Unit 1</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Barcode Inventory & System Details Table -->
+                        <div class="slims-metadata-table-wrapper">
+                            <table class="slims-table-biblio" aria-label="Barcode and Inventory Details">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Item Barcode Code</th>
+                                        <td>
+                                            <div class="slims-copyable-code-row">
+                                                <code id="modal-barcode-table-code" class="slims-val-mono slims-val-highlight-amber">HL-000000-01</code>
+                                                <button type="button" class="slims-copy-barcode-btn" onclick="copyBarcodeToClipboard()" title="Copy Barcode Value" aria-label="Copy Barcode Value">
+                                                    <i class="fas fa-copy"></i> <span id="barcode-copy-text">Copy Code</span>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Inventory Call Number</th>
+                                        <td id="modal-barcode-table-callno" class="slims-val-mono">--</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Symbology Standard</th>
+                                        <td>Code-128 / GS1-128 High Density Barcode Standard (SLiMS 9 Compatible)</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Repository Location</th>
+                                        <td>Hesten's Learning Open Archive &bull; Digital Repository Unit 1</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Circulation Status</th>
+                                        <td><span class="slims-holdings-avail-badge"><i class="fas fa-check-circle"></i> Available (Electronic Access)</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Revision Feature Readiness</th>
+                                        <td>Automated Circulation Scanner, Batch Label Printing &amp; Shelf Audit</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Barcode Actions Row -->
+                        <div class="slims-barcode-actions-row">
+                            <button type="button" class="slims-barcode-btn-secondary" onclick="printBarcodeLabel()">
+                                <i class="fas fa-print"></i> <span>Print Barcode Label</span>
+                            </button>
+                            <button type="button" class="slims-barcode-btn-secondary" onclick="copyBarcodeToClipboard()">
+                                <i class="fas fa-clipboard-check"></i> <span>Copy Item Identifier</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Collection List Container (for multi-book anthologies) -->
+                <div id="modal-collection-actions" class="library-modal-collection-list hidden">
+                    <!-- Dynamically populated in library.js -->
+                </div>
+
+            </main>
         </div>
     </div>
 </div>
