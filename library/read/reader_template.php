@@ -125,6 +125,56 @@ if (!isset($requiresMathJax)) {
     }
 }
 
+// Resolve source attribution for reader footer ("Hesten's Learning Library Edition - Adopted from Gutenberg" or other source)
+$rawSource = '';
+if (!empty($book['file-source'])) {
+    $rawSource = $book['file-source'];
+} elseif (!empty($book['fileSource'])) {
+    $rawSource = $book['fileSource'];
+} elseif (!empty($book['source'])) {
+    $rawSource = $book['source'];
+} elseif (!empty($book['info-source'])) {
+    $rawSource = $book['info-source'];
+} elseif (!empty($book['infoSource'])) {
+    $rawSource = $book['infoSource'];
+} elseif (!empty($book['gutenberg-id']) || !empty($book['gutenbergId'])) {
+    $rawSource = 'Gutenberg';
+}
+
+// Fallback search across catalog data files if source is still empty
+if (empty($rawSource) && !empty($bookId)) {
+    $bookdPath = dirname(__DIR__) . '/assets/bookd.json';
+    if (is_file($bookdPath)) {
+        $allBookdData = json_decode(file_get_contents($bookdPath), true) ?: [];
+        foreach ($allBookdData as $catBooks) {
+            if (is_array($catBooks)) {
+                foreach ($catBooks as $b) {
+                    if (isset($b['id']) && $b['id'] === $bookId) {
+                        $rawSource = $b['file-source'] ?? $b['info-source'] ?? (!empty($b['gutenberg-id']) ? 'Gutenberg' : '');
+                        break 2;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Specific known source overrides
+if ($bookId === 'who-built-america') {
+    $bookAdoptedSource = 'American Social History Project';
+} elseif ($bookId === 'american-yawp') {
+    $bookAdoptedSource = 'The American Yawp (Stanford University Press)';
+} elseif (!empty($rawSource)) {
+    if (stripos($rawSource, 'gutenberg') !== false) {
+        $bookAdoptedSource = 'Gutenberg';
+    } else {
+        $bookAdoptedSource = trim($rawSource);
+    }
+} else {
+    // Default fallback for public domain monographs
+    $bookAdoptedSource = 'Gutenberg';
+}
+
 include ABSPATH . 'src/header.php';
 ?>
 
@@ -502,10 +552,11 @@ body.zen-mode {
                         <div class="reader-chapter-end-row">
                             <div class="book-credits-container">
                                 <div class="book-credits-text-wrap">
+                                    <span class="book-edition-meta"><i class="fas fa-book-reader mr-1" aria-hidden="true"></i> Hesten's Learning Library Edition - Adopted from <?php echo htmlspecialchars($bookAdoptedSource); ?></span>
                                     <?php if (!empty($bookCreditsText)): ?>
-                                        <strong>Credits &amp; Primary Sources:</strong> <span class="book-credits-text"><?php echo $bookCreditsText; ?></span>
-                                    <?php else: ?>
-                                        <span class="book-edition-meta"><i class="fas fa-book-reader mr-1" aria-hidden="true"></i> Hesten's Learning Library Edition</span>
+                                        <div class="book-credits-detail mt-1">
+                                            <strong>Credits &amp; Primary Sources:</strong> <span class="book-credits-text"><?php echo $bookCreditsText; ?></span>
+                                        </div>
                                     <?php endif; ?>
                                 </div>
                             </div>
