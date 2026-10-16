@@ -1,19 +1,19 @@
 ---
-title: "Senayan Library Management System (SLiMS OPAC) Redesign & Deep-Linked Bibliographic Pages Walkthrough"
+title: "Hesten's Learning Library Redesign & Deep-Linked Bibliographic Pages Walkthrough"
 date: "2026-10-16"
 version: "v2.18.0"
 category: "Walkthrough"
-tags: ["Library", "SLiMS", "OPAC", "Bibliographic Record", "URL Hash Routing", "Accessibility", "A11y", "UDL"]
-summary: "Complete redesign of the digital library portal into an academic Senayan Library Management System (SLiMS) OPAC with field-scoped catalog search, real-time collection record counters, General Material Designation badges, and responsive full-page bibliographic record overlays with dedicated #book-{id} URL hash deep linking and browser history navigation."
+tags: ["Library", "Hesten's Learning", "Catalog", "Bibliographic Record", "URL Hash Routing", "Accessibility", "A11y", "UDL"]
+summary: "Comprehensive redesign of the digital library portal into Hesten's Learning Library with field-scoped catalog search, real-time collection record counters, clean book cover cards, and responsive full-page bibliographic record overlays with dedicated #book-{id} URL hash deep linking and browser history navigation."
 author: "Antigravity & Hesten"
 ---
 
-# Senayan Library Management System (SLiMS OPAC) Redesign & Deep-Linked Bibliographic Pages
+# Hesten's Learning Library Redesign & Deep-Linked Bibliographic Pages
 
 ## 1. Overview & Objectives
 
 The goal of this platform enhancement was twofold:
-1. **SLiMS OPAC Redesign**: Transform the visual design, search experience, and catalog categorization of the main library portal (`/library/index.php`) to reflect the academic aesthetics and utility of the **Senayan Library Management System (SLiMS)** Online Public Access Catalog (OPAC).
+1. **Hesten's Learning Library Redesign**: Transform the visual design, search experience, and catalog categorization of the main library portal (`/library/index.php`) into a modern, clean, student- and scholar-focused academic catalog.
 2. **Dedicated "Own Page" Bibliographic Overlays with `#book-{id}` Hash Routing**: Convert the book overview modal into an expansive, dedicated bibliographic record view that operates like an independent page while maintaining quick closability. Each book record receives its own distinct URL hash (e.g., `#book-dracula` or `#dracula`), synchronizes with browser history (back/forward button operability), supports direct deep-linking on initial page load, and provides 1-click shareable URLs.
 
 ---
@@ -30,7 +30,7 @@ The goal of this platform enhancement was twofold:
 | [`assets/css/library/lib-modals.css`](file:///c:/Users/Heste/OneDrive/Documents/_legacy_backup/assets/css/library/lib-modals.css) | **Dedicated Full-Page Bibliographic Overlay & Print Styles**: Styled `.slims-page-modal` as a 100vw/100vh full-page view covering the catalog, full-width sticky navigation bar (`< Back to Catalog`, breadcrumbs, SLiMS status badge, share link), centered 1400px academic page layout, `.slims-formats-grid` with dedicated cards for PDF, ePUB, MOBI, and TXT, `.slims-barcode-card` with crisp Code-128 barcode rendering and metadata table, and `@media print` rules suppressing catalog background elements. |
 | [`assets/css/library/lib-hero-section.css`](file:///c:/Users/Heste/OneDrive/Documents/_legacy_backup/assets/css/library/lib-hero-section.css) | **SLiMS OPAC Hero & Toolbar Styles**: Created styles for `.slims-opac-hero`, `.slims-search-console`, field scope dropdown, `.slims-trending-chips`, and catalog control bar. |
 | [`assets/css/library/lib-book-card-styling.css`](file:///c:/Users/Heste/OneDrive/Documents/_legacy_backup/assets/css/library/lib-book-card-styling.css) | **SLiMS Book Card Badges**: Styled `.slims-badge-gmd`, `.slims-call-tag`, `.slims-availability-strip`, `.slims-avail-pill`, `.slims-avail-dot`, and `.slims-lexile-pill` across light, dark, and AAA high-contrast themes. |
-| [`src/header.php`](file:///c:/Users/Heste/OneDrive/Documents/_legacy_backup/src/header.php) & [`src/footer.php`](file:///c:/Users/Heste/OneDrive/Documents/_legacy_backup/src/footer.php) | **Platform Version Bump**: Bumped version to `v2.18.0` (`October 2026 Senayan Library Management System (SLiMS OPAC) & Deep-Linked Bibliographic Pages Release`) and added detailed release notes in `#footer-version-modal`. |
+| [`src/header.php`](file:///c:/Users/Heste/OneDrive/Documents/_legacy_backup/src/header.php) & [`src/footer.php`](file:///c:/Users/Heste/OneDrive/Documents/_legacy_backup/src/footer.php) | **Platform Version Bump**: Bumped version to `v2.18.0` (`October 2026 Hesten's Learning Library & Deep-Linked Bibliographic Pages Release`) and added detailed release notes in `#footer-version-modal`. |
 | [`assets/text/hc-slims-library-opac.md`](file:///c:/Users/Heste/OneDrive/Documents/_legacy_backup/assets/text/hc-slims-library-opac.md) | **Companion Help Center User Guide**: Documented SLiMS OPAC capabilities, search scopes, URL hash format (`#book-{id}`), keyboard shortcuts, and UDL accommodations. |
 
 ---

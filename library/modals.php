@@ -336,7 +336,7 @@ if (! function_exists('renderGutenbergLicenseHtml')) {
                                     </tr>
                                     <tr>
                                         <th scope="row">Symbology Standard</th>
-                                        <td>Code-128 / GS1-128 High Density Barcode Standard (SLiMS 9 Compatible)</td>
+                                        <td>Code-128 / GS1-128 High Density Barcode Standard (Hesten's Learning Library Standard)</td>
                                     </tr>
                                     <tr>
                                         <th scope="row">Repository Location</th>

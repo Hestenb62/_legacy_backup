@@ -1,17 +1,17 @@
 ---
-title: "Senayan Library Management System (SLiMS) OPAC Redesign and Deep-Linked Hash Book Detail Page Popup"
+title: "Hesten's Learning Library Redesign and Deep-Linked Hash Book Detail Page Popup"
 date: "2026-10-16"
 version: "v2.18.0"
 category: "Implementation Plan"
-tags: ["Library", "SLiMS", "OPAC", "Hash Routing", "Deep Linking", "WCAG", "UDL"]
-summary: "Comprehensive redesign of the main library portal to reflect the Senayan Library Management System (SLiMS) OPAC interface, coupled with an expansive page-like book detail popup featuring URL hash deep-linking (#book-id), browser history synchronization, and bibliographic MARC-style holdings tables."
+tags: ["Library", "Hesten's Learning", "Catalog", "Hash Routing", "Deep Linking", "WCAG", "UDL"]
+summary: "Comprehensive redesign of the main library portal into Hesten's Learning Library, coupled with an expansive page-like book detail popup featuring URL hash deep-linking (#book-id), browser history synchronization, and bibliographic holdings tables."
 author: "Antigravity & Hesten"
 ---
 
-# Senayan Library Management System (SLiMS) OPAC Redesign and Deep-Linked Hash Book Detail Page Popup
+# Hesten's Learning Library Redesign and Deep-Linked Hash Book Detail Page Popup
 
 ## 1. Executive Overview
-The objective is to transform the main library portal (`/library/index.php`) into an authentic, state-of-the-art **Senayan Library Management System (SLiMS) Online Public Access Catalog (OPAC)**, and re-engineer the book overview modal so that it functions as a **dedicated bibliographic detail page** presented in an accessible, closable overlay with **first-class URL hash routing (`#book-{id}`)** and browser navigation synchronization.
+The objective is to transform the main library portal (`/library/index.php`) into **Hesten's Learning Library**, and re-engineer the book overview modal so that it functions as a **dedicated bibliographic detail page** presented in an accessible, closable overlay with **first-class URL hash routing (`#book-{id}`)** and browser navigation synchronization.
 
 ## 2. Key Objectives & Architecture
 

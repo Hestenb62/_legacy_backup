@@ -54,10 +54,10 @@ if (! defined('HL_SITE_VERSION_DATE')) {
     define('HL_SITE_VERSION_DATE', 'October 2026');
     }
 if (! defined('HL_SITE_VERSION_LABEL')) {
-    define('HL_SITE_VERSION_LABEL', 'October 2026 Senayan Library Management System (SLiMS OPAC) & Deep-Linked Bibliographic Pages Release');
+    define('HL_SITE_VERSION_LABEL', 'October 2026 Hesten\'s Learning Library & Deep-Linked Bibliographic Pages Release');
     }
 if (! defined('HL_SITE_VERSION_SUMMARY')) {
-    define('HL_SITE_VERSION_SUMMARY', 'Comprehensive Redesign of Library Catalog into Senayan Library Management System (SLiMS) OPAC with Field Scopes, Full-Page Bibliographic Record Detail Overlays, and URL Hash Deep-Linking (#book-id)');
+    define('HL_SITE_VERSION_SUMMARY', 'Comprehensive Redesign of Hesten\'s Learning Library with Field Scopes, Full-Page Bibliographic Record Detail Overlays, and URL Hash Deep-Linking (#book-id)');
     }
 ?>
 <!DOCTYPE html>

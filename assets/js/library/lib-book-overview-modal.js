@@ -498,7 +498,7 @@ if (typeof currentBookData === 'undefined') {
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>SLiMS Slip - ${escapeHtml(title)}</title>
+    <title>Hesten's Learning Slip - ${escapeHtml(title)}</title>
     <style>
         @page {
             size: auto;
@@ -743,7 +743,7 @@ if (typeof currentBookData === 'undefined') {
         <div class="sheet-header">
             <div>
                 <div class="sheet-brand-title">Hesten's Learning &bull; Digital Repository</div>
-                <div class="sheet-brand-sub">SLiMS 9 Bulian OPAC &bull; Monograph &amp; Barcode Circulation Slip</div>
+                <div class="sheet-brand-sub">Hesten's Learning Library &bull; Official Circulation &amp; Barcode Slip</div>
             </div>
             <div class="sheet-header-meta">
                 <span class="sheet-badge">OFFICIAL CIRCULATION RECORD</span>
@@ -761,7 +761,7 @@ if (typeof currentBookData === 'undefined') {
         <div class="sheet-grid">
             <!-- Left: Barcode Identification Unit -->
             <div class="barcode-card">
-                <div class="barcode-tag-head">SLiMS Item Barcode (Code-128)</div>
+                <div class="barcode-tag-head">Library Item Barcode (Code-128)</div>
                 <div class="barcode-svg-wrap">${svgHtml}</div>
                 <div class="barcode-code">${escapeHtml(barcodeCode)}</div>
                 <div>
@@ -824,7 +824,7 @@ if (typeof currentBookData === 'undefined') {
 
         <!-- Abstract & Content Notes Section -->
         <div class="sheet-abstract-section">
-            <div class="abstract-heading">Abstract &amp; Content Notes (SLiMS Synopsis)</div>
+            <div class="abstract-heading">Abstract &amp; Content Notes</div>
             <div class="abstract-body">
                 <div>${escapeHtml(description)}</div>
                 ${curriculumVal ? `<div class="curric-note"><strong>Curriculum Standards Alignment:</strong> ${escapeHtml(curriculumVal)}</div>` : ''}
@@ -833,7 +833,7 @@ if (typeof currentBookData === 'undefined') {
 
         <!-- Footer Verification & Compatibility -->
         <div class="sheet-footer">
-            <div>SLiMS 9 Bulian Standard Compliant &bull; Senayan Library Management System</div>
+            <div>Hesten's Learning Library Standard &bull; Digital Repository Archive</div>
             <div><strong>Item Identifier:</strong> ${escapeHtml(barcodeCode)}</div>
             <div>Single-Sheet Record &bull; Page 1 of 1</div>
         </div>

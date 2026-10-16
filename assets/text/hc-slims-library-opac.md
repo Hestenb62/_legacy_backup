@@ -1,24 +1,24 @@
-# Senayan Library Management System (SLiMS) OPAC & Deep-Linked Bibliographic Pages
+# Hesten's Learning Library & Deep-Linked Bibliographic Pages
 
-## Senayan Library Management System (SLiMS) OPAC Portal & Deep-Linked Bibliographic Pages
+## Hesten's Learning Library Portal & Deep-Linked Bibliographic Pages
 
 ### Executive Overview
-The Hesten's Learning **Digital Library** (`/library/index.php`) features an institutional Online Public Access Catalog (OPAC) interface inspired by the open-source **Senayan Library Management System (SLiMS)**. Designed for K-12 students, academic researchers, and educators, the SLiMS OPAC provides professional bibliographic categorization, multi-field catalog searching, real-time collection counts, and full-page bibliographic record overlays with dedicated `#book-{id}` URL deep-linking.
+The **Hesten's Learning Library** (`/library/index.php`) features an institutional Online Public Access Catalog (OPAC) interface. Designed for K-12 students, academic researchers, and educators, Hesten's Learning Library provides professional bibliographic categorization, multi-field catalog searching, real-time collection counts, and full-page bibliographic record overlays with dedicated `#book-{id}` URL deep-linking.
 
 ---
 
-### Core Capabilities & SLiMS Features
+### Core Capabilities & Library Features
 
-1. **SLiMS OPAC Search Console & Field Scoping**:
+1. **Catalog Search Console & Field Scoping**:
    - **Targeted Field Scopes**: Search across **All Fields**, **Title**, **Author**, **Subject**, **Call Number**, or **ISBN**.
-   - **Keyboard Shortcut**: Press `/` from anywhere on the catalog page to instantly focus the OPAC search bar. Press `Esc` to clear search or dismiss focus.
+   - **Keyboard Shortcut**: Press `/` from anywhere on the catalog page to instantly focus the search bar. Press `Esc` to clear search or dismiss focus.
    - **Trending Topic Chips**: One-click quick filters for popular academic categories: *Fiction*, *US History*, *World History*, *STEM*, *Science*, *Civics*, and *⭐ Saved Items*.
-   - **Live Bibliographic Counter**: Real-time counter badge indicating `Showing N bibliographic records` matching active query filters.
+   - **Live Collection Counter**: Real-time counter badge indicating `Showing N records` matching active query filters.
 
-2. **SLiMS General Material Designation (GMD) & Spine Call Numbers**:
-   - Every book card displays a SLiMS GMD tag (e.g., `[Text]`, `[E-Book]`, `[Collection]`).
-   - SLiMS spine call number tags (e.g., `PR6029.R8 N5`, `BD581 .H4`, `E178.1 .A44`) provide immediate academic classification.
-   - Live availability status indicator pill (`Available` with pulsating green stack status dot).
+2. **Clean Book Covers & Fast Stacks Browsing**:
+   - Every book card displays crisp cover art with a bookmark star button and centered on-hover "Detail" button.
+   - Spine call number tags (e.g., `PR6029.R8 N5`, `BD581 .H4`, `E178.1 .A44`) provide immediate academic classification.
+   - Live availability status indicator.
 
 3. **Full-Page Bibliographic Record Overlays ("Own Page" Experience)**:
    - **Dedicated URL Deep Links**: Opening any book updates the browser URL hash to `#book-{id}` (e.g. `https://yoursite.com/library/#book-dracula`).
@@ -30,7 +30,7 @@ The Hesten's Learning **Digital Library** (`/library/index.php`) features an ins
 4. **Academic Bibliographic Tabs (3-Tab Workspace)**:
    - **Tab 1: Bibliographic Information**: Essential catalog metadata including Call Number, Standard Number (ISBN), Publication / Release Date, and Digital Sourcing & Repository.
    - **Tab 2: Abstract / Notes**: Complete literary abstract, pedagogical overview, and curriculum alignment links.
-   - **Tab 3: Barcode / Inventory**: Authentic SLiMS Code-128 vector barcode visual, item barcode identifier (`HL-[ID]-01`), call number, repository location, one-click code copy, and isolated single-page barcode label printing.
+   - **Tab 3: Barcode / Inventory**: Code-128 vector barcode visual, item barcode identifier (`HL-[ID]-01`), call number, repository location, one-click code copy, and isolated single-page barcode label and circulation slip printing.
 
 5. **Multi-Format Electronic Resources & Citations**:
    - Direct launch to in-browser single-column chapter reader.

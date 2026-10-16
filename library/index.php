@@ -132,24 +132,14 @@ include __DIR__ . '/library_header_nav.php';
         <!-- Panel 1: General Library Landing Page -->
         <div id="main-desk-landing" class="workspace-panel active">
 
-            <!-- Senayan Library Management System (SLiMS) OPAC Institutional Hero & Dashboard -->
-            <section class="slims-opac-hero library-animate-reveal" aria-label="Library OPAC Search and Dashboard">
+            <!-- Hesten's Learning Library Hero & Dashboard -->
+            <section class="slims-opac-hero library-animate-reveal" aria-label="Hesten's Learning Library Search and Dashboard">
                 <div class="slims-hero-grid">
                     <!-- Main SLiMS OPAC Search Console -->
                     <div class="slims-opac-banner">
-                        <div class="slims-banner-top-meta">
-                            <span class="slims-brand-pill">
-                                <i class="fas fa-building-columns"></i>
-                                <span>Senayan Library Management System (SLiMS OPAC)</span>
-                            </span>
-                            <span class="slims-status-indicator">
-                                <span class="slims-pulse-dot" aria-hidden="true"></span>
-                                <span>Digital Stacks Online</span>
-                            </span>
-                        </div>
 
                         <h1 class="slims-opac-title">
-                            Online Public Access <span class="hero-title-highlight">Catalog (OPAC)</span>
+                            Online Public Access <span class="hero-title-highlight">Catalog </span>
                         </h1>
                         <p class="slims-opac-desc">
                             Search our digital academic repository of classic literature, historical primary sources, and comprehensive textbooks cataloged with Library of Congress and Dewey Decimal classifications.
@@ -205,18 +195,6 @@ include __DIR__ . '/library_header_nav.php';
                             </div>
                         </div>
 
-                        <!-- Institutional Links Row -->
-                        <div class="slims-portal-links-row">
-                            <a href="/library/cataloge.php" class="slims-link-pill">
-                                <i class="fas fa-barcode"></i> <span>Master Call # Index</span>
-                            </a>
-                            <a href="/library/how-to.php" class="slims-link-pill">
-                                <i class="fas fa-circle-question"></i> <span>OPAC User Guide</span>
-                            </a>
-                            <a href="/library/about.php" class="slims-link-pill">
-                                <i class="fas fa-landmark"></i> <span>About Archive</span>
-                            </a>
-                        </div>
                     </div>
 
                     <!-- Academic Dashboard Stats & Member Circulation Card -->

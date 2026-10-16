@@ -97,8 +97,8 @@
         <!-- Version Status & Release Info Strip (WCAG Operable) -->
         <?php
         $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.18.0';
-        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'October 2026 Senayan Library Management System (SLiMS OPAC) & Deep-Linked Bibliographic Pages Release';
-        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Comprehensive Redesign of Library Catalog into Senayan Library Management System (SLiMS) OPAC with Field Scopes, Full-Page Bibliographic Record Detail Overlays, and URL Hash Deep-Linking (#book-id)';
+        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'October 2026 Hesten\'s Learning Library & Deep-Linked Bibliographic Pages Release';
+        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Comprehensive Redesign of Hesten\'s Learning Library with Field Scopes, Full-Page Bibliographic Record Detail Overlays, and URL Hash Deep-Linking (#book-id)';
         ?>
         <div class="footer-version-strip" role="region" aria-label="Platform Version Information">
             <div class="footer-version-info">
@@ -271,7 +271,7 @@
                 </span>
             </div>
             <p class="footer-vmodal-lead">
-                Version <?= htmlspecialchars($siteVersion) ?> introduces a comprehensive redesign of the <strong>Library Catalog Portal</strong> inspired by the <strong>Senayan Library Management System (SLiMS) OPAC</strong>. Book detail dialogs now operate as responsive full-page overlays with dedicated URL hash deep links (<code>#book-{id}</code>), browser history navigation, live digital stacks holdings, MARC bibliographic classification tables, and scoped catalog searches.
+                Version <?= htmlspecialchars($siteVersion) ?> introduces a comprehensive redesign of <strong>Hesten's Learning Library</strong>. Book detail dialogs now operate as responsive full-page overlays with dedicated URL hash deep links (<code>#book-{id}</code>), browser history navigation, live digital stacks holdings, bibliographic classification tables, and scoped catalog searches.
             </p>
             <ul class="footer-vmodal-features">
                 <li class="footer-vmodal-feature-item">
@@ -279,7 +279,7 @@
                         <i class="fas fa-landmark"></i>
                     </div>
                     <div class="footer-vmodal-feature-text">
-                        <strong>Senayan Library Management System (SLiMS) OPAC Redesign:</strong> Reimagined academic library interface featuring an institutional OPAC search console with targeted scope filtering (All Fields, Title, Author, Subject, Call Number, ISBN), real-time bibliographic record counters, trending topic pills, and General Material Designation (GMD) tags (<code>[Text]</code>, <code>[E-Book]</code>, <code>[Collection]</code>).
+                        <strong>Hesten's Learning Library Catalog Redesign:</strong> Reimagined academic library interface featuring an institutional catalog search console with targeted scope filtering (All Fields, Title, Author, Subject, Call Number, ISBN), real-time collection record counters, trending topic pills, and reading level tags.
                     </div>
                 </li>
                 <li class="footer-vmodal-feature-item">
