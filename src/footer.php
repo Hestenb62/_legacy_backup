@@ -96,9 +96,9 @@
 
         <!-- Version Status & Release Info Strip (WCAG Operable) -->
         <?php
-        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.18.0';
-        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'October 2026 Hesten\'s Learning Library & Deep-Linked Bibliographic Pages Release';
-        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Comprehensive Redesign of Hesten\'s Learning Library with Field Scopes, Full-Page Bibliographic Record Detail Overlays, and URL Hash Deep-Linking (#book-id)';
+        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.20.0';
+        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'October 2026 Mathematics Practice & Academic Hub Release';
+        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Universal Mathematics Practice with 24 Interactive Dynamic Popups, MathJax SVG typesetting, Dual-Lexile Instruction, and Domain Filters';
         ?>
         <div class="footer-version-strip" role="region" aria-label="Platform Version Information">
             <div class="footer-version-info">
@@ -271,15 +271,54 @@
                 </span>
             </div>
             <p class="footer-vmodal-lead">
-                Version <?= htmlspecialchars($siteVersion) ?> introduces a comprehensive redesign of <strong>Hesten's Learning Library</strong>. Book detail dialogs now operate as responsive full-page overlays with dedicated URL hash deep links (<code>#book-{id}</code>), browser history navigation, live digital stacks holdings, bibliographic classification tables, and scoped catalog searches.
+                Version <?= htmlspecialchars($siteVersion) ?> introduces <strong>Universal Mathematics Practice Interactive Popups</strong> across all 24 mathematics disciplines on <code>/student/math-practice.php</code>, featuring responsive MathJax equation typesetting, dual-Lexile instructional modes, interactive practice check quizzes, and comprehensive domain category filtering.
             </p>
             <ul class="footer-vmodal-features">
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(14, 165, 233, 0.15); color: #0284c7;">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Comprehensive Mathematics Practice Popups:</strong> All 24 mathematics disciplines on <code>/student/math-practice.php</code> now launch comprehensive study modals featuring:
+                        <ul style="margin: 0.35rem 0 0 1rem; padding: 0; font-size: 0.85rem; color: var(--color-text-secondary, #475569); line-height: 1.5;">
+                            <li><strong>Master Equation &amp; Formula Vaults:</strong> Canonical mathematical formulas, general forms, and identities rendered in high-contrast MathJax SVG typography.</li>
+                            <li><strong>Mathematical Visualizations &amp; Graphs:</strong> Handcrafted vector coordinate graphs, balance models, parabolas, and Riemann sum geometric figures.</li>
+                            <li><strong>Dual-Lexile Instruction:</strong> Seamless toggling between rigorous Academic English and Simplified Basic English.</li>
+                            <li><strong>Curated Academic References:</strong> Verified deep links to Common Core Standards, GeoGebra simulations, Desmos graphing tools, and Hesten's Learning Library.</li>
+                            <li><strong>Formative Practice Checks:</strong> Dynamic self-assessment quizzes with real-time feedback and step-by-step explanatory breakdowns.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(99, 102, 241, 0.15); color: #4f46e5;">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Student Academic Hub &amp; Scholar Command Console:</strong> Rebuilt <code>/student/index.php</code> with personalized scholar avatar badges, dynamic first-name greeting, daily study minutes counter, 4-gateway Academic Quick Bar (Digital Library, Adaptive Diagnostic, State Standards, Learning Arcade), and an upgraded "Jump Back In" recent reading shelf.
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(16, 185, 129, 0.15); color: #059669;">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Dynamic Standards Mastery Competency Widget:</strong> Real-time display of earned competency badges from <code>hesten_standards_mastery</code>, formatting concise standard codes (<code>HSF.IF.B.4</code>, <code>K.CC.1</code>), score percentages, color-coded mastery rings, and direct shortcuts to the Standards Explorer.
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(245, 158, 11, 0.15); color: #d97706;">
+                        <i class="fas fa-book-reader"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Glassmorphic Subject Gateways &amp; MathJax Drawers:</strong> Four modern academic discipline cards (Mathematics, ELA, Science, Social Studies) with domain badges, tactile action buttons, and accessible accordion drawers that automatically typeset LaTeX formulas ($A = \pi r^2$) upon expansion.
+                    </div>
+                </li>
                 <li class="footer-vmodal-feature-item">
                     <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(2, 132, 199, 0.15); color: #0284c7;">
                         <i class="fas fa-landmark"></i>
                     </div>
                     <div class="footer-vmodal-feature-text">
-                        <strong>Hesten's Learning Library Catalog Redesign:</strong> Reimagined academic library interface featuring an institutional catalog search console with targeted scope filtering (All Fields, Title, Author, Subject, Call Number, ISBN), real-time collection record counters, trending topic pills, and reading level tags.
+                        <strong>Hesten's Learning Library Catalog Redesign:</strong> Institutional catalog search console with targeted scope filtering (All Fields, Title, Author, Subject, Call Number, ISBN), real-time collection record counters, trending topic pills, and reading level tags.
                     </div>
                 </li>
                 <li class="footer-vmodal-feature-item">

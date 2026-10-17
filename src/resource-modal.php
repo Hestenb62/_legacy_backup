@@ -50,13 +50,29 @@
                 </div>
             </div>
             
-            <!-- 2. Example Section -->
+            <!-- 2. Master Equations & Formula Vault -->
+            <div class="lecture-card" id="dynamic-modal-equations-wrap" style="display: none; border-left: 4px solid #0284c7; margin-bottom: 1.25rem;">
+                <h4 class="lecture-card-title"><i class="fas fa-square-root-variable" style="color: #0284c7;"></i> Key Equations &amp; Canonical Formulas</h4>
+                <div id="dynamic-modal-equations" class="equations-vault-grid">
+                    <!-- Populated dynamically with MathJax formulas -->
+                </div>
+            </div>
+
+            <!-- 3. Mathematical Visualization & Graph -->
+            <div class="lecture-card" id="dynamic-modal-graph-wrap" style="display: none; border-left: 4px solid #10b981; margin-bottom: 1.25rem;">
+                <h4 class="lecture-card-title"><i class="fas fa-chart-line" style="color: #10b981;"></i> Geometric / Mathematical Diagram</h4>
+                <div id="dynamic-modal-graph" class="math-diagram-container">
+                    <!-- Populated dynamically with SVG coordinate graphs or geometric diagrams -->
+                </div>
+            </div>
+
+            <!-- 4. Example Section -->
             <div class="lecture-card example-block" style="border-left: 4px solid var(--color-secondary, #6366f1); margin-bottom: 1.25rem;">
                 <h4 class="lecture-card-title"><i class="fas fa-lightbulb" style="color: #f59e0b;"></i> Real-World Examples &amp; Breakdown</h4>
                 <div id="dynamic-modal-example" class="lesson-example-text">Example goes here...</div>
             </div>
 
-            <!-- 3. Rule & Common Pitfall Callout -->
+            <!-- 5. Rule & Common Pitfall Callout -->
             <div id="dynamic-modal-protip-wrap" class="lecture-callout-protip" style="display: none;">
                 <i class="fas fa-exclamation-circle lecture-protip-icon"></i>
                 <div>
@@ -64,8 +80,16 @@
                     <p id="dynamic-modal-protip" class="lecture-protip-text"></p>
                 </div>
             </div>
+
+            <!-- 6. Academic References & Interactive Tools -->
+            <div class="lecture-card" id="dynamic-modal-links-wrap" style="display: none; border-left: 4px solid #8b5cf6; margin-bottom: 1.25rem;">
+                <h4 class="lecture-card-title"><i class="fas fa-compass" style="color: #8b5cf6;"></i> Curated References &amp; Interactive Calculators</h4>
+                <div id="dynamic-modal-links" class="references-links-grid">
+                    <!-- Populated dynamically -->
+                </div>
+            </div>
             
-            <!-- 4. Mini-Quiz Section -->
+            <!-- 7. Mini-Quiz Section -->
             <div class="lesson-section quiz-block">
                 <h4 class="lesson-section-title"><i class="fas fa-question-circle"></i> Quick Practice Check</h4>
                 <p id="dynamic-modal-quiz-question" class="quiz-question-text">Quiz question goes here?</p>
@@ -1245,6 +1269,12 @@ function renderModalTopic(topicName, mode) {
     const exEl = document.getElementById('dynamic-modal-example');
     const protipWrap = document.getElementById('dynamic-modal-protip-wrap');
     const protipEl = document.getElementById('dynamic-modal-protip');
+    const eqWrap = document.getElementById('dynamic-modal-equations-wrap');
+    const eqEl = document.getElementById('dynamic-modal-equations');
+    const graphWrap = document.getElementById('dynamic-modal-graph-wrap');
+    const graphEl = document.getElementById('dynamic-modal-graph');
+    const linksWrap = document.getElementById('dynamic-modal-links-wrap');
+    const linksEl = document.getElementById('dynamic-modal-links');
     const questionEl = document.getElementById('dynamic-modal-quiz-question');
     const choicesEl = document.getElementById('dynamic-modal-quiz-choices');
     const feedbackEl = document.getElementById('dynamic-modal-quiz-feedback');
@@ -1259,7 +1289,9 @@ function renderModalTopic(topicName, mode) {
         }
     }
     
-    const lesson = grammarLessons[topicName];
+    const lesson = (typeof mathLessons !== 'undefined' && mathLessons[topicName])
+        || (typeof grammarLessons !== 'undefined' && grammarLessons[topicName])
+        || (typeof literatureLessons !== 'undefined' && literatureLessons[topicName]);
     
     if (lesson) {
         categoryEl.textContent = lesson.category;
@@ -1267,9 +1299,9 @@ function renderModalTopic(topicName, mode) {
         
         // Handle Standard vs Basic English definitions
         if (mode === 'basic' && lesson.basicDefinition) {
-            defEl.textContent = lesson.basicDefinition;
+            defEl.innerHTML = lesson.basicDefinition;
         } else {
-            defEl.textContent = lesson.definition;
+            defEl.innerHTML = lesson.definition;
         }
         
         // Handle breakdown cards
@@ -1287,6 +1319,39 @@ function renderModalTopic(topicName, mode) {
                 breakdownEl.innerHTML = '';
             }
         }
+
+        // Handle Master Equations & Formula Vault
+        if (eqWrap && eqEl) {
+            if (lesson.equations && lesson.equations.length > 0) {
+                eqWrap.style.display = 'block';
+                eqEl.innerHTML = lesson.equations.map(eq => `
+                    <div class="equation-vault-card">
+                        <span class="equation-vault-title">${eq.title}</span>
+                        <div class="equation-vault-latex">${eq.latex}</div>
+                        ${eq.note ? `<p class="equation-vault-note">${eq.note}</p>` : ''}
+                    </div>
+                `).join('');
+            } else {
+                eqWrap.style.display = 'none';
+                eqEl.innerHTML = '';
+            }
+        }
+
+        // Handle Mathematical Visualization & Graphs
+        if (graphWrap && graphEl) {
+            if (lesson.diagramSvg) {
+                graphWrap.style.display = 'block';
+                graphEl.innerHTML = `
+                    <div class="math-diagram-figure" role="img" aria-label="${lesson.diagramLabel || topicName + ' mathematical diagram'}">
+                        ${lesson.diagramSvg}
+                    </div>
+                    ${lesson.diagramCaption ? `<p class="math-diagram-caption">${lesson.diagramCaption}</p>` : ''}
+                `;
+            } else {
+                graphWrap.style.display = 'none';
+                graphEl.innerHTML = '';
+            }
+        }
         
         // Handle example
         if (mode === 'basic' && lesson.basicExample) {
@@ -1299,14 +1364,33 @@ function renderModalTopic(topicName, mode) {
         if (protipWrap && protipEl) {
             if (lesson.proTip) {
                 protipWrap.style.display = 'flex';
-                protipEl.textContent = lesson.proTip;
+                protipEl.innerHTML = lesson.proTip;
             } else {
                 protipWrap.style.display = 'none';
             }
         }
+
+        // Handle Academic References & Tools Links
+        if (linksWrap && linksEl) {
+            if (lesson.references && lesson.references.length > 0) {
+                linksWrap.style.display = 'block';
+                linksEl.innerHTML = lesson.references.map(link => `
+                    <a href="${link.url}" target="_blank" rel="noopener noreferrer" class="reference-link-card">
+                        <div class="ref-link-icon"><i class="${link.icon || 'fas fa-external-link-alt'}"></i></div>
+                        <div class="ref-link-content">
+                            <span class="ref-link-title">${link.title}</span>
+                            <span class="ref-link-desc">${link.desc}</span>
+                        </div>
+                    </a>
+                `).join('');
+            } else {
+                linksWrap.style.display = 'none';
+                linksEl.innerHTML = '';
+            }
+        }
         
         // Quiz
-        questionEl.textContent = lesson.question;
+        questionEl.innerHTML = lesson.question;
         choicesEl.innerHTML = '';
         lesson.choices.forEach((choice, index) => {
             const btn = document.createElement('button');
@@ -1315,6 +1399,14 @@ function renderModalTopic(topicName, mode) {
             btn.onclick = () => checkModalAnswer(btn, index, lesson.correctIndex, lesson.explanation);
             choicesEl.appendChild(btn);
         });
+
+        // Trigger dynamic MathJax typesetting if math expressions are present
+        if (typeof window.ensureMathJax === 'function') {
+            const modalCard = document.getElementById('dynamic-modal-card');
+            if (modalCard) {
+                window.ensureMathJax(modalCard);
+            }
+        }
     } else {
         // Fallback for other pages
         categoryEl.textContent = "Study Resource";
@@ -1415,6 +1507,7 @@ function findTopicByHash(rawHash) {
     }
     
     const allLessonKeys = [
+        ...(typeof mathLessons !== 'undefined' ? Object.keys(mathLessons) : []),
         ...(typeof grammarLessons !== 'undefined' ? Object.keys(grammarLessons) : []),
         ...(typeof literatureLessons !== 'undefined' ? Object.keys(literatureLessons) : [])
     ];
@@ -1598,6 +1691,9 @@ function checkModalAnswer(clickedBtn, selectedIndex, correctIndex, explanation) 
     }
     
     feedbackEl.style.display = 'flex';
+    if (typeof window.ensureMathJax === 'function') {
+        window.ensureMathJax(feedbackEl);
+    }
 }
 
 function speakModalContent() {

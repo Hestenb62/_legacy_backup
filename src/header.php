@@ -48,16 +48,16 @@ if (! function_exists('assetVersion')) {
 
 // Core Platform Version Definition
 if (! defined('HL_SITE_VERSION')) {
-    define('HL_SITE_VERSION', 'v2.18.0');
+    define('HL_SITE_VERSION', 'v2.20.0');
     }
 if (! defined('HL_SITE_VERSION_DATE')) {
     define('HL_SITE_VERSION_DATE', 'October 2026');
     }
 if (! defined('HL_SITE_VERSION_LABEL')) {
-    define('HL_SITE_VERSION_LABEL', 'October 2026 Hesten\'s Learning Library & Deep-Linked Bibliographic Pages Release');
+    define('HL_SITE_VERSION_LABEL', 'October 2026 Mathematics Practice & Academic Hub Release');
     }
 if (! defined('HL_SITE_VERSION_SUMMARY')) {
-    define('HL_SITE_VERSION_SUMMARY', 'Comprehensive Redesign of Hesten\'s Learning Library with Field Scopes, Full-Page Bibliographic Record Detail Overlays, and URL Hash Deep-Linking (#book-id)');
+    define('HL_SITE_VERSION_SUMMARY', 'Universal Mathematics Practice with 24 Interactive Dynamic Popups, MathJax SVG typesetting, Dual-Lexile Instruction, and Domain Filters');
     }
 ?>
 <!DOCTYPE html>
