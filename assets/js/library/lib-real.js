@@ -11,26 +11,87 @@
         const lexileFilter = document.getElementById('lexile-filter');
         const sortFilter = document.getElementById('catalog-sort');
 
+        const searchDropdown = document.getElementById('library-search-preview-dropdown');
+
         if (searchInput) {
             searchInput.addEventListener('input', () => {
                 if (clearBtn) {
                     clearBtn.classList.toggle('hidden', searchInput.value.trim() === '');
                 }
                 applyCatalogFilters();
+                updateSearchPreviewDropdown();
             });
+
             searchInput.addEventListener('keydown', (e) => {
                 if (e.key === 'Enter') {
                     e.preventDefault();
+                    if (searchDropdown) searchDropdown.classList.add('hidden');
                     applyCatalogFilters();
+                } else if (e.key === 'ArrowDown') {
+                    if (searchDropdown && !searchDropdown.classList.contains('hidden')) {
+                        const firstItem = searchDropdown.querySelector('.search-preview-item');
+                        if (firstItem) {
+                            e.preventDefault();
+                            firstItem.focus();
+                        }
+                    }
+                } else if (e.key === 'Escape') {
+                    if (searchDropdown && !searchDropdown.classList.contains('hidden')) {
+                        searchDropdown.classList.add('hidden');
+                        e.stopPropagation();
+                    }
+                }
+            });
+
+            searchInput.addEventListener('focus', () => {
+                if (searchInput.value.trim().length >= 2) {
+                    updateSearchPreviewDropdown();
                 }
             });
         }
+
+        if (searchDropdown) {
+            searchDropdown.addEventListener('keydown', (e) => {
+                const active = document.activeElement;
+                if (!active || !active.classList.contains('search-preview-item')) return;
+                if (e.key === 'ArrowDown') {
+                    const next = active.nextElementSibling;
+                    if (next && next.classList.contains('search-preview-item')) {
+                        e.preventDefault();
+                        next.focus();
+                    }
+                } else if (e.key === 'ArrowUp') {
+                    const prev = active.previousElementSibling;
+                    if (prev && prev.classList.contains('search-preview-item')) {
+                        e.preventDefault();
+                        prev.focus();
+                    } else if (searchInput) {
+                        e.preventDefault();
+                        searchInput.focus();
+                    }
+                } else if (e.key === 'Escape') {
+                    searchDropdown.classList.add('hidden');
+                    if (searchInput) searchInput.focus();
+                }
+            });
+        }
+
+        // Close search preview dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (searchDropdown && !searchDropdown.contains(e.target) && e.target !== searchInput) {
+                searchDropdown.classList.add('hidden');
+            }
+        });
 
         if (clearBtn) {
             clearBtn.addEventListener('click', () => {
                 if (searchInput) {
                     searchInput.value = '';
                     clearBtn.classList.add('hidden');
+                    if (searchDropdown) {
+                        searchDropdown.classList.add('hidden');
+                        searchDropdown.innerHTML = '';
+                    }
                     searchInput.focus();
                     applyCatalogFilters();
                 }
@@ -54,9 +115,10 @@
         }
 
         // SLiMS Quick Topic / Discipline Chips
-        document.querySelectorAll('.library-chip-btn').forEach(btn => {
+        const chipButtons = Array.from(document.querySelectorAll('.library-chip-btn'));
+        chipButtons.forEach((btn, index) => {
             btn.addEventListener('click', () => {
-                document.querySelectorAll('.library-chip-btn').forEach(b => {
+                chipButtons.forEach(b => {
                     b.classList.remove('active');
                     b.setAttribute('aria-selected', 'false');
                 });
@@ -64,6 +126,24 @@
                 btn.setAttribute('aria-selected', 'true');
                 activeQuickChip = btn.dataset.chip || 'all';
                 applyCatalogFilters();
+            });
+
+            btn.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowRight') {
+                    e.preventDefault();
+                    const next = chipButtons[(index + 1) % chipButtons.length];
+                    if (next) {
+                        next.focus();
+                        next.click();
+                    }
+                } else if (e.key === 'ArrowLeft') {
+                    e.preventDefault();
+                    const prev = chipButtons[(index - 1 + chipButtons.length) % chipButtons.length];
+                    if (prev) {
+                        prev.focus();
+                        prev.click();
+                    }
+                }
             });
         });
     }
@@ -255,3 +335,100 @@
 
         applyCatalogFilters();
     };
+
+    function escapeHtml(str) {
+        if (!str) return '';
+        return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+    }
+
+    function updateSearchPreviewDropdown() {
+        const searchInput = document.getElementById('library-search');
+        const dropdown = document.getElementById('library-search-preview-dropdown');
+        if (!searchInput || !dropdown) return;
+
+        const query = searchInput.value.trim().toLowerCase();
+        if (query.length < 2) {
+            dropdown.classList.add('hidden');
+            dropdown.innerHTML = '';
+            return;
+        }
+
+        const cards = Array.from(document.querySelectorAll('#library-catalog-container .library-book-card'));
+        const matches = [];
+
+        cards.forEach(card => {
+            const id = card.dataset.id || '';
+            const title = card.dataset.title || '';
+            const author = card.dataset.author || '';
+            const callNumber = card.dataset.callNumber || '';
+            const category = card.dataset.category || '';
+            const img = card.dataset.img || card.dataset.fallbackImg || 'https://placehold.co/38x54/1e293b/ffffff?text=Book';
+            const readLink = card.dataset.readOnlineLink || `read/index.php?book=${encodeURIComponent(id)}`;
+
+            const titleLower = title.toLowerCase();
+            const authorLower = author.toLowerCase();
+            const callLower = callNumber.toLowerCase();
+            const isbnLower = (card.dataset.isbn || '').toLowerCase();
+            const catLower = category.toLowerCase();
+
+            let score = 0;
+            if (titleLower.startsWith(query)) score += 10;
+            else if (titleLower.includes(query)) score += 5;
+            if (authorLower.includes(query)) score += 4;
+            if (callLower.includes(query)) score += 3;
+            if (isbnLower.includes(query)) score += 3;
+            if (catLower.includes(query)) score += 2;
+
+            if (score > 0) {
+                matches.push({ id, title, author, callNumber, category, img, readLink, score });
+            }
+        });
+
+        matches.sort((a, b) => b.score - a.score);
+        const topMatches = matches.slice(0, 5);
+
+        if (topMatches.length === 0) {
+            dropdown.innerHTML = `<div class="search-preview-empty">No books found matching "<strong>${escapeHtml(query)}</strong>"</div>`;
+            dropdown.classList.remove('hidden');
+            return;
+        }
+
+        dropdown.innerHTML = topMatches.map(m => `
+            <div class="search-preview-item" data-id="${escapeHtml(m.id)}" role="option" tabindex="0">
+                <img src="${escapeHtml(m.img)}" alt="" class="search-preview-thumb" onerror="this.src='https://placehold.co/38x54/1e293b/ffffff?text=Book'">
+                <div class="search-preview-info">
+                    <div class="search-preview-title">${escapeHtml(m.title)}</div>
+                    <div class="search-preview-author">${escapeHtml(m.author)}</div>
+                    <div class="search-preview-tags">
+                        ${m.category ? `<span class="search-preview-tag">${escapeHtml(m.category)}</span>` : ''}
+                        ${m.callNumber ? `<span class="search-preview-callno">${escapeHtml(m.callNumber)}</span>` : ''}
+                    </div>
+                </div>
+                <div class="search-preview-actions">
+                    <button type="button" class="search-preview-detail-btn" onclick="event.stopPropagation(); if(window.openModal) window.openModal('${escapeHtml(m.id)}');" title="View Bibliographic Details">
+                        <i class="fas fa-circle-info"></i> <span>Detail</span>
+                    </button>
+                    <a href="${escapeHtml(m.readLink)}" class="search-preview-read-btn" title="Read Online" onclick="event.stopPropagation();">
+                        <i class="fas fa-book-open"></i> <span>Read</span>
+                    </a>
+                </div>
+            </div>
+        `).join('');
+
+        dropdown.classList.remove('hidden');
+
+        dropdown.querySelectorAll('.search-preview-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const id = item.dataset.id;
+                dropdown.classList.add('hidden');
+                if (window.openModal) window.openModal(id);
+            });
+            item.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    item.click();
+                }
+            });
+        });
+    }
+

@@ -11,7 +11,8 @@ The **Hesten's Learning Library** (`/library/index.php`) features an institution
 
 1. **Catalog Search Console & Field Scoping**:
    - **Targeted Field Scopes**: Search across **All Fields**, **Title**, **Author**, **Subject**, **Call Number**, or **ISBN**.
-   - **Keyboard Shortcut**: Press `/` from anywhere on the catalog page to instantly focus the search bar. Press `Esc` to clear search or dismiss focus.
+   - **Live Autocomplete Preview Dropdown**: Typing 2+ characters instantly opens a live preview showing top 5 matching book covers, titles, authors, Call numbers, category chips, and direct "Read" and "Detail" action buttons.
+   - **Keyboard Shortcut**: Press `/` from anywhere on the catalog page to instantly focus the search bar. Use `ArrowDown` / `ArrowUp` to navigate preview suggestions, `Enter` to select, and `Esc` to dismiss preview or clear search.
    - **Trending Topic Chips**: One-click quick filters for popular academic categories: *Fiction*, *US History*, *World History*, *STEM*, *Science*, *Civics*, and *⭐ Saved Items*.
    - **Live Collection Counter**: Real-time counter badge indicating `Showing N records` matching active query filters.
 

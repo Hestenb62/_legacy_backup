@@ -112,7 +112,7 @@ if (! function_exists('renderGutenbergLicenseHtml')) {
         }
     }
 ?>
-<<!-- SLiMS Bibliographic Record Detail Page / Closable Overlay -->
+<!-- SLiMS Bibliographic Record Detail Page / Closable Overlay -->
 <div id="bookModal" class="library-modal slims-page-modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
     <!-- Backdrop -->
     <div class="library-modal-backdrop" onclick="closeModal()"></div>
@@ -356,11 +356,11 @@ if (! function_exists('renderGutenbergLicenseHtml')) {
 
                         <!-- Barcode Actions Row -->
                         <div class="slims-barcode-actions-row">
-                            <button type="button" class="slims-barcode-btn-secondary" onclick="printBarcodeLabel()" title="Print single-page barcode and bibliographic record slip">
-                                <i class="fas fa-print"></i> <span>Print Barcode &amp; Record Slip</span>
+                            <button type="button" class="slims-barcode-btn-secondary" onclick="printBarcodeLabel()" title="Print single-page barcode and bibliographic record slip" aria-label="Print single-page barcode and bibliographic record slip">
+                                <i class="fas fa-print" aria-hidden="true"></i> <span>Print Barcode &amp; Record Slip</span>
                             </button>
-                            <button type="button" class="slims-barcode-btn-secondary" onclick="copyBarcodeToClipboard()" title="Copy item barcode identifier">
-                                <i class="fas fa-clipboard-check"></i> <span>Copy Item Identifier</span>
+                            <button type="button" class="slims-barcode-btn-secondary" onclick="copyBarcodeToClipboard()" title="Copy item barcode identifier" aria-label="Copy item barcode identifier">
+                                <i class="fas fa-clipboard-check" aria-hidden="true"></i> <span>Copy Item Identifier</span>
                             </button>
                         </div>
                     </div>

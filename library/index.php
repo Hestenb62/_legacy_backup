@@ -139,7 +139,7 @@ include __DIR__ . '/library_header_nav.php';
                     <div class="slims-opac-banner">
 
                         <h1 class="slims-opac-title">
-                            Online Public Access <span class="hero-title-highlight">Catalog </span>
+                            Hesten's Learning <span class="hero-title-highlight">Library</span>
                         </h1>
                         <p class="slims-opac-desc">
                             Search our digital academic repository of classic literature, historical primary sources, and comprehensive textbooks cataloged with Library of Congress and Dewey Decimal classifications.
@@ -171,60 +171,78 @@ include __DIR__ . '/library_header_nav.php';
                                         aria-label="Clear search input">
                                         <i class="fas fa-times"></i>
                                     </button>
+                                    <!-- Instant Search Preview Dropdown Container -->
+                                    <div id="library-search-preview-dropdown" class="library-search-preview-dropdown hidden" role="listbox" aria-label="Live Search Suggestions"></div>
                                 </div>
 
                                 <!-- Search Action Button -->
                                 <button type="button" id="slims-search-action-btn" class="slims-search-btn"
-                                    onclick="applyCatalogFilters()" aria-label="Execute OPAC Search">
+                                    onclick="applyCatalogFilters()" aria-label="Execute Catalog Search">
                                     <i class="fas fa-search" aria-hidden="true"></i>
-                                    <span>Search OPAC</span>
+                                    <span>Search Catalog</span>
                                 </button>
                             </div>
 
-                            <!-- SLiMS Quick Topic / Discipline Chips (Trending Searches) -->
+                            <!-- Quick Topic / Discipline Chips (Trending Searches) & Live Holdings Count -->
                             <div class="slims-trending-chips" role="region" aria-label="Quick Topic Searches">
-                                <span class="slims-trending-label"><i class="fas fa-tags text-primary"></i> Popular Topics:</span>
-                                <button type="button" class="library-chip-btn slims-chip active" data-chip="all" aria-selected="true">All</button>
-                                <button type="button" class="library-chip-btn slims-chip" data-chip="fiction">Fiction</button>
-                                <button type="button" class="library-chip-btn slims-chip" data-chip="us-history">US History</button>
-                                <button type="button" class="library-chip-btn slims-chip" data-chip="world-history">World History</button>
-                                <button type="button" class="library-chip-btn slims-chip" data-chip="stem">STEM &amp; Math</button>
-                                <button type="button" class="library-chip-btn slims-chip" data-chip="science">Science</button>
-                                <button type="button" class="library-chip-btn slims-chip" data-chip="civics">Civics</button>
-                                <button type="button" class="library-chip-btn slims-chip" data-chip="saved">⭐ My Reading List</button>
+                                <div class="trending-chips-wrap" role="tablist" aria-label="Popular Catalog Topics">
+                                    <span class="slims-trending-label"><i class="fas fa-tags text-primary" aria-hidden="true"></i> Popular Topics:</span>
+                                    <button type="button" class="library-chip-btn slims-chip active" data-chip="all" role="tab" aria-selected="true">All</button>
+                                    <button type="button" class="library-chip-btn slims-chip" data-chip="fiction" role="tab" aria-selected="false">Fiction</button>
+                                    <button type="button" class="library-chip-btn slims-chip" data-chip="us-history" role="tab" aria-selected="false">US History</button>
+                                    <button type="button" class="library-chip-btn slims-chip" data-chip="world-history" role="tab" aria-selected="false">World History</button>
+                                    <button type="button" class="library-chip-btn slims-chip" data-chip="stem" role="tab" aria-selected="false">STEM &amp; Math</button>
+                                    <button type="button" class="library-chip-btn slims-chip" data-chip="science" role="tab" aria-selected="false">Science</button>
+                                    <button type="button" class="library-chip-btn slims-chip" data-chip="civics" role="tab" aria-selected="false">Civics</button>
+                                    <button type="button" class="library-chip-btn slims-chip" data-chip="saved" role="tab" aria-selected="false">⭐ My Reading List</button>
+                                </div>
+                                <div class="trending-chips-status" aria-live="polite">
+                                    <span class="catalog-live-count-badge" title="Number of books currently displayed">
+                                        <i class="fas fa-book-bookmark text-primary" aria-hidden="true"></i>
+                                        <span>Showing <strong id="slims-record-count"><?php echo $totalCatalogBooks; ?></strong> titles</span>
+                                    </span>
+                                </div>
                             </div>
                         </div>
 
                     </div>
 
                     <!-- Academic Dashboard Stats & Member Circulation Card -->
-                    <div class="hero-academic-dashboard slims-dashboard-card">
-                        <div class="dashboard-greeting">
-                            <div class="greeting-header-row">
-                                <div>
-                                    <h2 class="slims-dash-h2"><i class="fas fa-id-card-clip text-primary"></i> Scholar Circulation</h2>
-                                    <p>Repository holds <span class="highlight-stat"><?php echo $totalCatalogBooks; ?></span> cataloged titles</p>
+                    <div class="hero-academic-dashboard slims-dashboard-card" aria-label="Scholar Circulation Hub">
+                        <div class="scholar-circulation-header">
+                            <div class="scholar-patron-badge">
+                                <div class="scholar-avatar-circle" id="dash-scholar-avatar" aria-hidden="true">
+                                    <i class="fas fa-user-graduate"></i>
                                 </div>
-                                <div class="dashboard-streak-badge" title="Consecutive days reading">
-                                    <i class="fas fa-fire text-amber-500"></i> <span id="dash-streak-count">1</span> Day
+                                <div class="scholar-patron-info">
+                                    <div class="scholar-patron-name-row">
+                                        <h2 class="slims-dash-h2" id="dash-scholar-name">Scholar Circulation</h2>
+                                        <span class="scholar-grade-badge" id="dash-scholar-grade">Active Patron</span>
+                                    </div>
+                                    <div class="scholar-id-row">
+                                        <span class="scholar-barcode-id" id="dash-scholar-id" title="Library Patron Circulation ID"><i class="fas fa-barcode" aria-hidden="true"></i> HL-SCHOLAR</span>
+                                        <span class="scholar-catalog-holdings">Holdings: <span class="highlight-stat"><?php echo $totalCatalogBooks; ?></span> titles</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
                         <div class="dashboard-stats-grid">
                             <div class="dash-stat-card goal-card" onclick="openGoalModal()" style="cursor: pointer;"
                                 title="Set or adjust your daily reading goal" tabindex="0" role="button"
+                                aria-label="Daily Reading Goal. Click to adjust target."
                                 onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openGoalModal();}">
                                 <div class="goal-ring-wrap">
-                                    <svg class="goal-ring-svg" viewBox="0 0 40 40">
+                                    <svg class="goal-ring-svg" viewBox="0 0 40 40" aria-hidden="true">
                                         <circle class="goal-ring-bg" cx="20" cy="20" r="18" fill="none" stroke-width="3"></circle>
                                         <circle id="dash-goal-ring-fill" class="goal-ring-fill" cx="20" cy="20" r="18"
                                             fill="none" stroke-width="3" stroke-dasharray="113.1" stroke-dashoffset="75"></circle>
                                     </svg>
-                                    <i class="fas fa-bullseye stat-icon-center"></i>
+                                    <i class="fas fa-bullseye stat-icon-center" aria-hidden="true"></i>
                                 </div>
                                 <div class="stat-info">
                                     <span class="stat-value" id="dash-goal-progress">5/15m</span>
-                                    <span class="stat-label">Daily Goal <i class="fas fa-pencil-alt opacity-60" style="font-size: 0.65rem;"></i></span>
+                                    <span class="stat-label">Daily Goal <i class="fas fa-pencil-alt opacity-60" style="font-size: 0.65rem;" aria-hidden="true"></i></span>
                                 </div>
                             </div>
                             <div class="dash-stat-card"
@@ -232,7 +250,7 @@ include __DIR__ . '/library_header_nav.php';
                                 style="cursor: pointer;" title="Filter by saved books" tabindex="0" role="button"
                                 aria-label="Filter by saved books in reading list"
                                 onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault(); const cf = document.getElementById('category-filter'); if(cf){cf.value='saved'; cf.dispatchEvent(new Event('change')); document.getElementById('library-catalog-container')?.scrollIntoView({behavior:'smooth'});}}">
-                                <i class="fas fa-bookmark stat-icon" style="color: var(--color-primary);"></i>
+                                <i class="fas fa-bookmark stat-icon" style="color: var(--color-primary);" aria-hidden="true"></i>
                                 <div class="stat-info">
                                     <span class="stat-value" id="dash-saved-count">0</span>
                                     <span class="stat-label">Saved</span>
@@ -240,8 +258,9 @@ include __DIR__ . '/library_header_nav.php';
                             </div>
                             <div class="dash-stat-card" onclick="openStudyNotebookModal()" style="cursor: pointer;"
                                 title="Open Study Notebook with all highlights" tabindex="0" role="button"
+                                aria-label="Open Study Notebook with highlights"
                                 onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openStudyNotebookModal();}">
-                                <i class="fas fa-highlighter stat-icon" style="color: var(--color-secondary);"></i>
+                                <i class="fas fa-highlighter stat-icon" style="color: var(--color-secondary);" aria-hidden="true"></i>
                                 <div class="stat-info">
                                     <span class="stat-value" id="dash-highlights-count">0</span>
                                     <span class="stat-label">Highlights</span>
@@ -249,8 +268,9 @@ include __DIR__ . '/library_header_nav.php';
                             </div>
                             <div class="dash-stat-card" onclick="openStudyNotebookModal()" style="cursor: pointer;"
                                 title="Open Study Notebook with notes & flashcards" tabindex="0" role="button"
+                                aria-label="Open Study Notebook with notes and flashcards"
                                 onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openStudyNotebookModal();}">
-                                <i class="fas fa-sticky-note stat-icon" style="color: var(--color-warning);"></i>
+                                <i class="fas fa-sticky-note stat-icon" style="color: var(--color-warning);" aria-hidden="true"></i>
                                 <div class="stat-info">
                                     <span class="stat-value" id="dash-notes-count">0</span>
                                     <span class="stat-label">Study Notes</span>
@@ -262,28 +282,65 @@ include __DIR__ . '/library_header_nav.php';
             </section>
 
             <script>
-                document.addEventListener("DOMContentLoaded", () => {
-                    // Populate Dashboard Stats
-                    const bookmarks = JSON.parse(localStorage.getItem('hesten_library_bookmarks')) || [];
-                    const savedEl = document.getElementById('dash-saved-count');
-                    if (savedEl) savedEl.textContent = bookmarks.length;
+                function updateScholarCardData() {
+                    try {
+                        const uProfile = JSON.parse(localStorage.getItem('hesten-user-profile')) || {};
+                        const nameEl = document.getElementById('dash-scholar-name');
+                        const gradeEl = document.getElementById('dash-scholar-grade');
+                        const idEl = document.getElementById('dash-scholar-id');
+                        const avatarEl = document.getElementById('dash-scholar-avatar');
 
-                    let allHighlights = 0;
-                    let allNotes = 0;
-                    for (let i = 0; i < localStorage.length; i++) {
-                        const key = localStorage.key(i);
-                        if (key && key.startsWith('hesten_highlights_')) {
-                            try {
-                                const hls = JSON.parse(localStorage.getItem(key)) || [];
-                                allHighlights += hls.length;
-                                hls.forEach(hl => { if (hl.note) allNotes++; });
-                            } catch (e) { }
+                        if (nameEl) {
+                            nameEl.textContent = uProfile.firstName ? `${uProfile.firstName}'s Circulation` : 'Scholar Circulation';
                         }
+                        if (gradeEl) {
+                            gradeEl.textContent = uProfile.grade ? (uProfile.grade === 'K' ? 'Kindergarten' : `Grade ${uProfile.grade}`) : 'Active Patron';
+                        }
+                        if (idEl) {
+                            const rawId = (uProfile.id || uProfile.firstName || '2026').toString().toUpperCase().replace(/[^A-Z0-9]/g, '');
+                            const idPart = rawId.slice(-4) || '2026';
+                            idEl.innerHTML = `<i class="fas fa-barcode" aria-hidden="true"></i> HL-${idPart}`;
+                        }
+                        if (avatarEl && uProfile.avatarData) {
+                            avatarEl.innerHTML = `<img src="${uProfile.avatarData}" alt="" class="scholar-avatar-img">`;
+                        }
+                    } catch (e) {}
+
+                    // Bookmarks / Saved
+                    try {
+                        const bookmarks = JSON.parse(localStorage.getItem('hesten_library_bookmarks')) || [];
+                        const savedEl = document.getElementById('dash-saved-count');
+                        if (savedEl) savedEl.textContent = bookmarks.length;
+                    } catch (e) {}
+
+                    // Highlights & Study Notes
+                    try {
+                        let allHighlights = 0;
+                        let allNotes = 0;
+                        for (let i = 0; i < localStorage.length; i++) {
+                            const key = localStorage.key(i);
+                            if (key && key.startsWith('hesten_highlights_')) {
+                                try {
+                                    const hls = JSON.parse(localStorage.getItem(key)) || [];
+                                    allHighlights += hls.length;
+                                    hls.forEach(hl => { if (hl.note) allNotes++; });
+                                } catch (e) {}
+                            }
+                        }
+                        const hlsEl = document.getElementById('dash-highlights-count');
+                        const notesEl = document.getElementById('dash-notes-count');
+                        if (hlsEl) hlsEl.textContent = allHighlights;
+                        if (notesEl) notesEl.textContent = allNotes;
+                    } catch (e) {}
+                }
+
+                document.addEventListener("DOMContentLoaded", updateScholarCardData);
+                window.addEventListener('hl:profile-updated', updateScholarCardData);
+                window.addEventListener('hl:data-sync', updateScholarCardData);
+                window.addEventListener('storage', (e) => {
+                    if (!e.key || e.key === 'hesten-user-profile' || e.key === 'hesten_library_bookmarks' || e.key.startsWith('hesten_highlights_')) {
+                        updateScholarCardData();
                     }
-                    const hlsEl = document.getElementById('dash-highlights-count');
-                    const notesEl = document.getElementById('dash-notes-count');
-                    if (hlsEl) hlsEl.textContent = allHighlights;
-                    if (notesEl) notesEl.textContent = allNotes;
                 });
             </script>
 
