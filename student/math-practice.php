@@ -234,7 +234,7 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 </main>
 
-<script src="/assets/js/pages/math-lessons.js"></script>
+<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/pages/math-lessons.js') : '/assets/js/pages/math-lessons.js?v=2.23.0' ?>"></script>
 <script src="/assets/js/labs/math-manipulatives.js" defer></script>
 <script src="/assets/js/assessment/assessment-scratchpad.js" defer></script>
 

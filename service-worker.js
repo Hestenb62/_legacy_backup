@@ -1,4 +1,4 @@
-const CACHE_NAME = 'hestens-learning-v23';
+const CACHE_NAME = 'hestens-learning-v25';
 const ASSETS_TO_CACHE = [
 
   // Main Directory Pages & Manifest
@@ -100,7 +100,10 @@ const ASSETS_TO_CACHE = [
   '/assets/css/research-main.css',
   '/assets/js/research/journal-engine.js',
   '/assets/js/components/word-search-generator.js',
-  '/assets/js/components/crossword-generator.js'
+  '/assets/js/components/crossword-generator.js',
+  '/assets/js/pages/math-lessons.js',
+  '/assets/js/pages/science-lessons.js',
+  '/assets/js/pages/social-studies-lessons.js'
 ];
 
 // Install Event: Caches critical assets safely with individual fallback

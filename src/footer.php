@@ -96,9 +96,9 @@
 
         <!-- Version Status & Release Info Strip (WCAG Operable) -->
         <?php
-        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.20.0';
-        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'October 2026 Mathematics Practice & Academic Hub Release';
-        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Universal Mathematics Practice with 24 Interactive Dynamic Popups, MathJax SVG typesetting, Dual-Lexile Instruction, and Domain Filters';
+        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.23.0';
+        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'October 2026 Science Resources & Interactive STEM Popups Release';
+        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'All 24 Mathematics, 30 ELA Grammar, 24 ELA Literature, & 24 Science Resource Popups fully upgraded with Master Equation Vaults, Handcrafted SVG Vector Diagrams, and Curated Academic References';
         ?>
         <div class="footer-version-strip" role="region" aria-label="Platform Version Information">
             <div class="footer-version-info">
@@ -271,9 +271,54 @@
                 </span>
             </div>
             <p class="footer-vmodal-lead">
-                Version <?= htmlspecialchars($siteVersion) ?> introduces <strong>Universal Mathematics Practice Interactive Popups</strong> across all 24 mathematics disciplines on <code>/student/math-practice.php</code>, featuring responsive MathJax equation typesetting, dual-Lexile instructional modes, interactive practice check quizzes, and comprehensive domain category filtering.
+                Version <?= htmlspecialchars($siteVersion) ?> introduces <strong>Comprehensive ELA Literature Interactive Popups</strong> across all 24 literature disciplines, alongside all 30 ELA Grammar and 24 Mathematics topics, featuring responsive MathJax equation typesetting, custom SVG graphic organizers, dual-Lexile instructional modes, interactive practice check quizzes, and authoritative academic references.
             </p>
             <ul class="footer-vmodal-features">
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(16, 185, 129, 0.15); color: #059669;">
+                        <i class="fas fa-atom"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Comprehensive Science Resource Popups (v2.23.0):</strong> All 24 Science topics across 6 major domains (Biology Resources, Chemistry Resources, Physics Resources, Earth Science Resources, Science Experiments, and Science Articles &amp; News) now launch comprehensive study modals featuring:
+                        <ul style="margin: 0.35rem 0 0 1rem; padding: 0; font-size: 0.85rem; color: var(--color-text-secondary, #475569); line-height: 1.5;">
+                            <li><strong>Scientific Laws &amp; Mathematical Principles:</strong> Canonical formulas including cellular respiration/photosynthesis, Hardy-Weinberg equilibrium, Ideal Gas Law, Nernst equation, Newton's Laws, Maxwell equations, Kepler's orbital laws, and radiative forcing rendered in high-contrast MathJax SVG typography.</li>
+                            <li><strong>Scientific Models &amp; Systemic Diagrams:</strong> Handcrafted accessible vector diagrams including eukaryotic cell architecture, Bohr electron orbitals, Snell's law refraction, the geological rock cycle, global atmospheric circulation cells, and mRNA immunological pathways.</li>
+                            <li><strong>Dual-Lexile Readability:</strong> Seamless toggling between standard academic Lexile descriptions and simplified Basic English explanations.</li>
+                            <li><strong>Curated Academic References:</strong> Verified deep links to Next Generation Science Standards (NGSS), NASA JPL, NOAA, USGS, NCBI PubMed, and PhET Interactive Simulations.</li>
+                            <li><strong>Formative Practice Checks:</strong> Dynamic self-assessment quizzes with instant validation and explanatory breakdowns.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(168, 85, 247, 0.15); color: #7e22ce;">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Comprehensive ELA Literature Resource Popups (v2.22.0):</strong> All 24 English Language Arts &amp; Literature topics across 6 major domains (Literary Devices, Character Analysis, Theme Exploration, Genre Studies, Plot &amp; Structure, and Author's Craft) now launch comprehensive study modals featuring:
+                        <ul style="margin: 0.35rem 0 0 1rem; padding: 0; font-size: 0.85rem; color: var(--color-text-secondary, #475569); line-height: 1.5;">
+                            <li><strong>Master Syntax Rules &amp; Structural Formulations:</strong> Canonical narratological formulas, tenor-vehicle mappings, Freytag tension equations, Genette pacing ratios, and Campbellian monomyth vectors rendered in high-contrast MathJax SVG typography.</li>
+                            <li><strong>Visual Maps &amp; Structural Diagrams:</strong> Handcrafted vector diagrams including Freytag's Pyramid, Monomyth Archetypal Wheel, Conflict Matrix, Symbolic Iceberg, Point of View Vantage Points, and Sensory Immersion Wheel.</li>
+                            <li><strong>Dual-Lexile Instruction:</strong> Seamless toggling between rigorous analytical definitions and simplified accessible explanations.</li>
+                            <li><strong>Curated Academic References:</strong> Verified deep links to Common Core Standards, Folger Shakespeare Library, Poetry Foundation, Joseph Campbell Foundation, and Purdue OWL.</li>
+                            <li><strong>Formative Practice Checks:</strong> Dynamic self-assessment quizzes with instant validation and explanatory breakdowns.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(99, 102, 241, 0.15); color: #4f46e5;">
+                        <i class="fas fa-spell-check"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Comprehensive ELA Grammar Resource Popups (v2.21.0):</strong> All 30 English Language Arts &amp; Grammar topics across 6 major domains (Parts of Speech, Punctuation Rules, Vocabulary Building, Common Errors Guide, Sentence Structure, and Figurative Language) now launch comprehensive study modals featuring:
+                        <ul style="margin: 0.35rem 0 0 1rem; padding: 0; font-size: 0.85rem; color: var(--color-text-secondary, #475569); line-height: 1.5;">
+                            <li><strong>Master Syntax Rules &amp; Structural Formulations:</strong> Canonical grammatical formulas, phonetic selection rules, and morphological expansion laws rendered in high-contrast MathJax SVG typography.</li>
+                            <li><strong>Visual Maps &amp; Structural Diagrams:</strong> Handcrafted vector flowcharts, pronoun agreement trees, adjective hierarchy ladders, comma quadrant cards, morpheme assembly conveyors, and clause architecture blueprints.</li>
+                            <li><strong>Dual-Lexile Instruction:</strong> Seamless toggling between standard analytical definitions and simplified accessible explanations.</li>
+                            <li><strong>Curated Academic References:</strong> Verified deep links to Common Core Standards, Purdue OWL, Oxford Dictionaries, Cambridge Grammar, and Hesten's Learning Library.</li>
+                            <li><strong>Formative Practice Checks:</strong> Dynamic self-assessment quizzes with instant validation and step-by-step explanatory breakdowns.</li>
+                        </ul>
+                    </div>
+                </li>
                 <li class="footer-vmodal-feature-item">
                     <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(14, 165, 233, 0.15); color: #0284c7;">
                         <i class="fas fa-calculator"></i>

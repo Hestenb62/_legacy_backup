@@ -48,16 +48,16 @@ if (! function_exists('assetVersion')) {
 
 // Core Platform Version Definition
 if (! defined('HL_SITE_VERSION')) {
-    define('HL_SITE_VERSION', 'v2.20.0');
+    define('HL_SITE_VERSION', 'v2.23.0');
     }
 if (! defined('HL_SITE_VERSION_DATE')) {
     define('HL_SITE_VERSION_DATE', 'October 2026');
     }
 if (! defined('HL_SITE_VERSION_LABEL')) {
-    define('HL_SITE_VERSION_LABEL', 'October 2026 Mathematics Practice & Academic Hub Release');
+    define('HL_SITE_VERSION_LABEL', 'October 2026 Science Resources & Interactive STEM Popups Release');
     }
 if (! defined('HL_SITE_VERSION_SUMMARY')) {
-    define('HL_SITE_VERSION_SUMMARY', 'Universal Mathematics Practice with 24 Interactive Dynamic Popups, MathJax SVG typesetting, Dual-Lexile Instruction, and Domain Filters');
+    define('HL_SITE_VERSION_SUMMARY', 'All 24 Mathematics, 30 ELA Grammar, 24 ELA Literature, & 24 Science Resource Popups fully upgraded with Master Equation Vaults, Handcrafted SVG Vector Diagrams, and Curated Academic References');
     }
 ?>
 <!DOCTYPE html>

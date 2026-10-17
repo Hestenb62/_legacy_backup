@@ -191,8 +191,8 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 </main>
 
+<script src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/pages/science-lessons.js') : '/assets/js/pages/science-lessons.js?v=2.23.0' ?>"></script>
 <?php
-// Include the footer file
 include '../src/resource-modal.php';
 // Include the footer file
 include '../src/footer.php';
