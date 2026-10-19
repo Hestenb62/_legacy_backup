@@ -15,10 +15,41 @@ if (basename($requestPath) === 'library' && substr($requestPath, -1) !== '/') {
     exit;
     }
 
+// --- Check for Dynamic Repository Pages (?pages=slug or ?page=slug) ---
+$requestedPage = $_GET['pages'] ?? ($_GET['page'] ?? '');
+$pageSlug = strtolower(trim(preg_replace('/[^a-zA-Z0-9_-]/', '', (string)$requestedPage)));
+
+$pageData = null;
+$isPageMode = false;
+
+if (!empty($pageSlug)) {
+    $candidatePaths = [
+        __DIR__ . '/assets/pages/' . $pageSlug . '.json',
+        __DIR__ . '/assets/' . $pageSlug . '.json'
+    ];
+    foreach ($candidatePaths as $cPath) {
+        if (is_file($cPath)) {
+            $jsonRaw = file_get_contents($cPath);
+            $parsed = json_decode($jsonRaw, true);
+            if (is_array($parsed)) {
+                $pageData = $parsed;
+                $isPageMode = true;
+                break;
+            }
+        }
+    }
+}
+
 // --- Page-Specific SEO & Meta Variables ---
-$pageTitle = 'Digital Library & Research Desks - Hesten\'s Learning';
-$pageDescription = 'Browse your digital collection of classic literature, historical primary sources, and comprehensive academic textbooks.';
-$pageKeywords = 'library, books, reading, digital archive, primary sources, textbooks, history, literature, study guides';
+if ($isPageMode && $pageData) {
+    $pageTitle = ($pageData['title'] ?? 'Repository') . ' - Hesten\'s Learning Digital Library';
+    $pageDescription = ($pageData['subtitle'] ?? 'Comprehensive educational repository and interactive reference guide.') . ' - Standards-aligned reference with canonical rules, contrasting exemplars, and mastery diagnostics.';
+    $pageKeywords = 'punctuation, grammar, syntax, mechanics, comma, semicolon, colon, dashes, apostrophe, quotes, CCSS, English conventions';
+} else {
+    $pageTitle = 'Digital Library & Research Desks - Hesten\'s Learning';
+    $pageDescription = 'Browse your digital collection of classic literature, historical primary sources, and comprehensive academic textbooks.';
+    $pageKeywords = 'library, books, reading, digital archive, primary sources, textbooks, history, literature, study guides';
+}
 $pageAuthor = 'Hesten\'s Learning';
 
 // --- Load Book Data from both Repositories ---
@@ -127,6 +158,21 @@ include __DIR__ . '/library_header_nav.php';
 
 <main id="main-content" class="library-main" style="padding-top: 0.5rem;">
 
+<?php if ($isPageMode && $pageData): ?>
+    <?php include __DIR__ . '/repository_page.php'; ?>
+<?php elseif (!empty($pageSlug)): ?>
+    <div class="repo-page-container">
+        <header class="repo-hero-card">
+            <a href="/library/" class="repo-back-catalog-btn"><i class="fas fa-arrow-left"></i> Return to Library Catalog</a>
+            <h1 class="repo-hero-title">Topic Repository In Development</h1>
+            <p class="repo-hero-subtitle">The subject repository for "<strong><?= htmlspecialchars($pageSlug) ?></strong>" is currently being curated by the Hesten's Learning academic council.</p>
+            <div style="margin-top: 1.5rem; display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                <a href="/library/index.php?pages=punctuation" class="repo-action-btn primary"><i class="fas fa-book"></i> Explore Master Punctuation Guide</a>
+                <a href="/library/" class="repo-action-btn"><i class="fas fa-arrow-left"></i> Browse Digital Library Catalog</a>
+            </div>
+        </header>
+    </div>
+<?php else: ?>
     <div class="library-workspace">
 
         <!-- Panel 1: General Library Landing Page -->
@@ -551,11 +597,13 @@ include __DIR__ . '/library_header_nav.php';
         </div> <!-- Close Panel 2 subject-desk-workspace -->
 
     </div> <!-- Close library-workspace -->
+<?php endif; ?>
 
 </main>
 
 <?php include __DIR__.'/modals.php'; ?>
 
+<?php if (!$isPageMode): ?>
 <script>
     window.DESK_EXTERNAL_LINKS = <?php echo json_encode($deskLinks, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT); ?>;
     window.DISCLAIMERS_DATA = <?php echo json_encode($disclaimersData, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT); ?>;
@@ -626,5 +674,6 @@ include __DIR__ . '/library_header_nav.php';
 <script
     src="<?= function_exists('assetVersion') ? assetVersion('/assets/js/library/lib-keyboard-shortcuts.js') : '/assets/js/library/lib-keyboard-shortcuts.js' ?>"
     defer></script>
+<?php endif; ?>
 
 <?php include ABSPATH.'src/footer.php'; ?>

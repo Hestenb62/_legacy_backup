@@ -12,7 +12,7 @@ The **English Language Arts & Grammar Resource Terminal** provides students and 
 ### Core Features & Capabilities
 
 - **Interactive Comprehensive Study Modals**: Clicking any grammar topic card or pill launches a dedicated learning module:
-  - **Syntax Rules & Structural Formulations Vault**: Labeled syntactic formulas, morphological expansion laws, and concord rules typeset via crisp MathJax SVG notation.
+  - **Syntax Rules & Structural Formulations Vault**: Labeled syntactic formulas, morphological expansion laws, and concord rules displayed in clean, high-contrast native text with intuitive directional arrows (➔, ⟹, ⟺, ≠).
   - **Visual Maps & Structural Diagrams**: Handcrafted vector diagrams (phonetic decision trees, pronoun agreement flowcharts, adjective hierarchy ladders, comma quadrant cards, morpheme assembly conveyors, and clause architecture blueprints).
   - **Curated Educational References & Academic Guides**: Direct links to Common Core Standards, Purdue OWL, Oxford Dictionaries, Cambridge Grammar, and Hesten's Learning Library.
   - **Concept Lecture & Subject Breakdown**: Rigorous academic definitions broken down into 3 structural pillars.
@@ -20,7 +20,7 @@ The **English Language Arts & Grammar Resource Terminal** provides students and 
   - **Real-World Examples & Sentence Breakdowns**: Color-coded grammatical tags highlighting sentence constituents.
   - **Pro-Tips & Common Pitfalls**: Expert callouts addressing pervasive mistakes (such as the RAVEN rule for affect/effect and the Zombie test for passive voice).
   - **Formative Practice Checks**: Immediate self-assessment questions with instant validation and step-by-step explanatory breakdowns.
-- **Universal MathJax SVG Typography**: All syntax rules and mathematical grammar formulations render with high contrast, crisp vector fidelity, and theme inheritance across light and dark modes.
+- **Native Normal-Text Typography**: All syntax rules and grammar formulations render directly as standard, accessible system text with instant loading and zero MathJax rendering overhead.
 - **Real-Time Topic Search & Domain Filters**: Filter grammar topics dynamically by typing keywords or clicking domain filter badges.
 
 ### Accessibility & Universal Design for Learning (UDL)

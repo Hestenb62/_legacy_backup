@@ -364,17 +364,17 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "Pronoun-Antecedent Concord Rule",
-                "latex": "\\text{Antecedent}(N_{\\text{gender}, \\text{number}}) \\iff \\text{Pronoun}(P_{\\text{gender}, \\text{number}})",
+                "latex": "Antecedent(N (gender number)) ⟺ Pronoun(P (gender number))",
                 "note": "A pronoun must strictly agree with its antecedent in person (1st, 2nd, 3rd), number (singular, plural), and gender."
             },
             {
                 "title": "Case System Inflection",
-                "latex": "\\text{Subjective (Nominative)} \\xrightarrow{\\text{action}} \\text{Objective (Accusative)} \\xrightarrow{\\text{possession}} \\text{Possessive (Genitive)}",
+                "latex": "Subjective (Nominative) ➔ [action] ➔ Objective (Accusative) ➔ [possession] ➔ Possessive (Genitive)",
                 "note": "Example: He / She (subject) → Him / Her (direct/indirect object) → His / Hers (possessive marker)."
             },
             {
                 "title": "Noun Phrase Architecture",
-                "latex": "\\text{NP} = (\\text{Determiner}) + (\\text{Adjective Phrase}) + \\text{Noun (Head)} + (\\text{Prepositional / Relative Clause})",
+                "latex": "NP = (Determiner) + (Adjective Phrase) + Noun (Head) + (Prepositional / Relative Clause)",
                 "note": "Constituent syntax structure showing how complex nominal phrases are assembled."
             }
         ],
@@ -419,17 +419,17 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "English Verb Tense Matrix",
-                "latex": "\\text{Verb Formulation} = \\text{Tense (Past / Present / Future)} \\times \\text{Aspect (Simple / Continuous / Perfect / Perfect-Cont)}",
+                "latex": "Verb Formulation = Tense (Past / Present / Future) × Aspect (Simple / Continuous / Perfect / Perfect-Cont)",
                 "note": "Produces the 12 canonical English tense-aspect combinations."
             },
             {
                 "title": "Perfect Aspect Architecture",
-                "latex": "\\text{Present Perfect} = [\\text{have / has}] + V_3 \\quad \\text{and} \\quad \\text{Past Perfect} = [\\text{had}] + V_3",
-                "note": "Connects prior completed actions ($V_3$ past participle) to a subsequent point in time."
+                "latex": "Present Perfect = [have / has] + V (3) and Past Perfect = [had] + V (3)",
+                "note": "Connects prior completed actions (V_3 past participle) to a subsequent point in time."
             },
             {
                 "title": "Passive Voice Transformation",
-                "latex": "\\text{Subject}_{\\text{agent}} + V_{\\text{transitive}} + \\text{Object} \\implies \\text{Object} + [\\text{be}] + V_3 + (\\text{by } \\text{Subject}_{\\text{agent}})",
+                "latex": "Subject (agent) + V (transitive) + Object ⟹ Object + [be] + V (3) + (by Subject (agent))",
                 "note": "Syntactic passive transformation focusing on the recipient of the action."
             }
         ],
@@ -474,17 +474,17 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "Degrees of Comparison Inflection",
-                "latex": "\\text{Positive} \\xrightarrow{+ \\text{-er / more}} \\text{Comparative} \\xrightarrow{+ \\text{-est / most}} \\text{Superlative}",
+                "latex": "Positive ➔ [+ -er / more] ➔ Comparative ➔ [+ -est / most] ➔ Superlative",
                 "note": "Monosyllabic uses suffixes (-er/-est); polysyllabic modifiers use 'more' and 'most'."
             },
             {
                 "title": "Royal Order of Cumulative Adjectives",
-                "latex": "\\text{Determiner} \\to \\text{Opinion} \\to \\text{Size} \\to \\text{Physical Quality} \\to \\text{Shape} \\to \\text{Age} \\to \\text{Color} \\to \\text{Origin} \\to \\text{Material} \\to \\text{Purpose} \\to \\text{Noun}",
+                "latex": "Determiner to Opinion to Size to Physical Quality to Shape to Age to Color to Origin to Material to Purpose to Noun",
                 "note": "Example: 'A lovely (opinion) small (size) antique (age) French (origin) silver (material) pocket (purpose) watch.'"
             },
             {
                 "title": "Adverbial Modification Scope",
-                "latex": "\\text{Adverb} \\to \\begin{cases} \\text{Verb} & (\\text{He spoke \\textbf{eloquently}}) \\ \\text{Adjective} & (\\text{An \\textbf{exceptionally} gifted artist}) \\ \\text{Another Adverb} & (\\text{She climbed \\textbf{quite} slowly}) \\end{cases}",
+                "latex": "Adverb to Verb ➔ (He spoke eloquently) Adjective ➔ (An exceptionally gifted artist) Another Adverb ➔ (She climbed quite slowly)",
                 "note": "Adverbs specify manner, time, frequency, location, and degree."
             }
         ],
@@ -529,17 +529,17 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "Prepositional Phrase Syntax",
-                "latex": "\\text{PP} = \\text{Preposition} + (\\text{Determiner / Modifiers}) + \\text{Object of Preposition} (\\text{Noun / Pronoun in Objective Case})",
+                "latex": "PP = Preposition + (Determiner / Modifiers) + Object of Preposition (Noun / Pronoun in Objective Case)",
                 "note": "Example: '[Under] the heavy [bridge]' or '[Between] you and [me]' (not 'you and I')."
             },
             {
                 "title": "Compound Sentence Joining Formula",
-                "latex": "\\text{Independent Clause}_1 + \\text{Comma (,)} + \\text{FANBOYS Conjunction} + \\text{Independent Clause}_2",
+                "latex": "Independent Clause (1) + Comma () + FANBOYS Conjunction + Independent Clause (2)",
                 "note": "For, And, Nor, But, Or, Yet, So — coordinates two complete independent propositions."
             },
             {
                 "title": "Subordinate Conditional Clause Order",
-                "latex": "\\begin{cases} \\text{Subordinating Conjunction} + \\text{Clause} + \\text{Comma (,)} + \\text{Independent Clause} \\ \\text{Independent Clause} + \\text{Subordinating Conjunction} + \\text{Clause} \; (\\text{No comma}) \\end{cases}",
+                "latex": "Subordinating Conjunction + Clause + Comma () + Independent Clause Independent Clause + Subordinating Conjunction + Clause (No comma)",
                 "note": "'Because it rained, we stayed inside' vs. 'We stayed inside because it rained.'"
             }
         ],
@@ -584,17 +584,17 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "Phonetic Selection Rule for Articles",
-                "latex": "\\text{Article} = \\begin{cases} \\text{'a'} & \\text{before initial consonant SOUND: } /p, b, t, d, k, g, j, w\\dots/ \\ \\text{'an'} & \\text{before initial vowel SOUND: } /\\ae, \\varepsilon, \\iota, \\alpha, \\Lambda\\dots/ \\end{cases}",
+                "latex": "Article = 'a' ➔ before initial consonant SOUND: /p b t d k g j w. . . / 'an' ➔ before initial vowel SOUND: /æ ε ι α Λ. . . /",
                 "note": "Governed by phonetics, not typography: 'a European' (/j/ sound) vs. 'an hour' (silent 'h')."
             },
             {
                 "title": "Definiteness & Context Reference",
-                "latex": "\\text{Definite ('the')} \\implies \\text{Specific / Discourse-Active} \\quad \\text{vs.} \\quad \\text{Indefinite ('a / an')} \\implies \\text{Non-Specific / New Entity}",
+                "latex": "Definite ('the') ⟹ Specific / Discourse-Active vs. Indefinite ('a / an') ⟹ Non-Specific / New Entity",
                 "note": "'The' refers to known/shared context; 'a/an' introduces an unspecific member of a class."
             },
             {
                 "title": "Interjection Punctuation Syntax",
-                "latex": "\\text{Strong Emotion} \\implies [\\text{Interjection}!] + \\text{Clause.} \\quad \\text{vs.} \\quad \\text{Mild Reaction} \\implies [\\text{Interjection},] + \\text{Clause.}",
+                "latex": "Strong Emotion ⟹ [Interjection] + Clause. vs. Mild Reaction ⟹ [Interjection] + Clause.",
                 "note": "'Ouch! That hurt.' (exclamation point) vs. 'Well, let us see what happens.' (comma)."
             }
         ],
@@ -639,17 +639,17 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "Serial / Oxford Comma Formula",
-                "latex": "\\text{List} = X, \\; Y, \\; \\text{and } Z \\quad (\\text{Oxford Comma precedes coordinating conjunction})",
+                "latex": "List = X Y and Z (Oxford Comma precedes coordinating conjunction)",
                 "note": "Prevents semantic ambiguity, e.g., 'To my parents, Ayn Rand and God' vs. 'To my parents, Ayn Rand, and God'."
             },
             {
                 "title": "Introductory Dependent Clause Order",
-                "latex": "\\text{Introductory Clause / Participial Phrase} + \\text{Comma (,)} + \\text{Independent Clause}",
+                "latex": "Introductory Clause / Participial Phrase + Comma () + Independent Clause",
                 "note": "Example: 'Although the storm was severe, the crew docked safely.' Isolates dependent modifiers before the main subject."
             },
             {
                 "title": "Non-Restrictive Appositive Cladding",
-                "latex": "\\text{Main Subject} + \\text{Comma (,)} + \\text{Non-Essential Appositive} + \\text{Comma (,)} + \\text{Predicate}",
+                "latex": "Main Subject + Comma () + Non-Essential Appositive + Comma () + Predicate",
                 "note": "'Saturn, the ringed planet, has over eighty moons.' Information can be excised without altering clause validity."
             }
         ],
@@ -659,7 +659,7 @@ const grammarLessons = {
         "references": [
             {"title": "Common Core Standard CCSS.ELA-LITERACY.L.8.2.A", "desc": "Use punctuation (comma, ellipsis, dash) to indicate a pause or break in standard English.", "url": "/pages/standards.php?domain=ELA-L", "icon": "fas fa-award"},
             {"title": "Purdue OWL: Comprehensive Rules for Using Commas", "desc": "Detailed rules on comma splices, non-restrictive clauses, coordinate adjectives, and introductory phrases.", "url": "https://owl.purdue.edu/owl/general_writing/grammar/commas/extended_rules_for_commas.html", "icon": "fas fa-university"},
-            {"title": "Hesten's Learning Library: Master Punctuation Guide", "desc": "Interactive exercises on Oxford commas, appositives, and compound sentence rhythm.", "url": "/library/index.php?q=punctuation", "icon": "fas fa-book"}
+            {"title": "Hesten's Learning Library: Master Punctuation Guide", "desc": "Interactive exercises on Oxford commas, appositives, and compound sentence rhythm.", "url": "/library/index.php?pages=punctuation", "icon": "fas fa-book"}
         ],
 },
     "Semicolons & Colons": {
@@ -694,17 +694,17 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "Semicolon Independent Balance",
-                "latex": "\\text{Independent Clause}_1 \\;\\mathbf{;}\\; \\text{Independent Clause}_2 \\quad (\\text{Equal syntactic weight, no conjunction})",
+                "latex": "Independent Clause (1) Independent Clause (2) (Equal syntactic weight no conjunction)",
                 "note": "Connects two intimate independent propositions without a conjunction, eliminating comma splices."
             },
             {
                 "title": "Conjunctive Adverb Transition Formula",
-                "latex": "\\text{Clause}_1 \\;\\mathbf{;}\\; \\text{Conjunctive Adverb (however, therefore, consequently)} + \\text{Comma (,)} + \\text{Clause}_2",
+                "latex": "Clause (1) Conjunctive Adverb (however therefore consequently) + Comma () + Clause (2)",
                 "note": "Example: 'The hypothesis was sound; however, the laboratory apparatus malfunctioned.'"
             },
             {
                 "title": "Colon Formal Gatekeeper Rule",
-                "latex": "\\text{Complete Independent Clause} \\;\\mathbf{:}\\; \\begin{cases} \\text{Itemized List / Series} \\ \\text{Explanatory Elaboration} \\ \\text{Formal Quotation} \\end{cases}",
+                "latex": "Complete Independent Clause: Itemized List / Series Explanatory Elaboration Formal Quotation",
                 "note": "A colon must be preceded by a grammatically complete clause; never place a colon after a bare verb or preposition."
             }
         ],
@@ -713,8 +713,8 @@ const grammarLessons = {
         "diagramCaption": "Semicolon balance vs. colon gatekeeper: The semicolon balances two equal complete propositions; the colon follows a complete thought to open an elaboration.",
         "references": [
             {"title": "Common Core Standard CCSS.ELA-LITERACY.L.9-10.2.A", "desc": "Use a semicolon with an adverbial connector to link closely related independent clauses.", "url": "/pages/standards.php?domain=ELA-L", "icon": "fas fa-award"},
-            {"title": "Purdue OWL: Semicolons, Colons, and Quotations", "desc": "Authoritative guide on avoiding colon errors and capitalizing post-colon independent clauses.", "url": "https://owl.purdue.edu/owl/general_writing/grammar/punctuation/colons.html", "icon": "fas fa-university"},
-            {"title": "Grammarly Academic: Semicolon vs. Colon Nuances", "desc": "Clear diagnostic distinctions and interactive series examples.", "url": "https://www.grammarly.com/blog/semicolon-vs-colon/", "icon": "fas fa-pen-nib"}
+            {"title": "Hesten's Learning Library: Master Punctuation Guide", "desc": "Explore semicolon equilibrium, conjunctive adverbs, and colon gatekeeper rules.", "url": "/library/index.php?pages=punctuation#semicolon", "icon": "fas fa-book"},
+            {"title": "Purdue OWL: Semicolons, Colons, and Quotations", "desc": "Authoritative guide on avoiding colon errors and capitalizing post-colon independent clauses.", "url": "https://owl.purdue.edu/owl/general_writing/grammar/punctuation/colons.html", "icon": "fas fa-university"}
         ],
 },
     "Apostrophes & Quotation Marks": {
@@ -749,17 +749,17 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "Genitive Possession Inflection Formula",
-                "latex": "\\text{Possessive} = \\begin{cases} \\text{Noun}_{\\text{singular}} + \\text{'s} & (\\text{the student's locker}) \\ \\text{Noun}_{\\text{plural in -s}} + \\text{'} & (\\text{the students' lockers}) \\ \\text{Noun}_{\\text{irregular plural}} + \\text{'s} & (\\text{the children's museum}) \\end{cases}",
+                "latex": "Possessive = Noun (singular) + 's ➔ (the student's locker) Noun (plural in -s) + ' ➔ (the students' lockers) Noun (irregular plural) + 's ➔ (the children's museum)",
                 "note": "Regular plurals ending in -s receive only an apostrophe; irregular plurals lacking -s append 's."
             },
             {
                 "title": "Contraction vs. Possessive Invariance",
-                "latex": "\\text{It's} = [\\text{It is / It has}] \\quad \\not\\equiv \\quad \\text{Its} = \\text{Possessive pronoun (Zero apostrophe)}",
+                "latex": "It's = [It is / It has] ≢ Its = Possessive pronoun (Zero apostrophe)",
                 "note": "Possessive pronouns (its, hers, his, theirs, ours, whose) never take apostrophes."
             },
             {
                 "title": "American Dialogue Punctuation Syntax",
-                "latex": "\\text{\"Quoted Speech}\\mathbf{,}\\text{\"} + \\text{Attribution Verb} \\quad \\text{and} \\quad \\text{\"Quoted Sentence}\\mathbf{.}\\text{\"}",
+                "latex": "'Quoted Speech,' + Attribution Verb and 'Quoted Sentence.'",
                 "note": "In standard American typography, periods and commas strictly nest inside quotation marks."
             }
         ],
@@ -768,8 +768,8 @@ const grammarLessons = {
         "diagramCaption": "Apostrophe and quotation placement: Distinguish singular ('s) vs. plural (') possession; nest commas and periods inside quotation marks.",
         "references": [
             {"title": "Common Core Standard CCSS.ELA-LITERACY.L.8.2", "desc": "Demonstrate command of the conventions of standard English punctuation and capitalization.", "url": "/pages/standards.php?domain=ELA-L", "icon": "fas fa-award"},
-            {"title": "MLA Style Center: Formatting Direct Quotes & Dialogue", "desc": "Official guidelines on block quotations, dialogue tags, and nested quotation marks.", "url": "https://style.mla.org/how-to-quote/", "icon": "fas fa-book-reader"},
-            {"title": "Purdue OWL: The Apostrophe in English Grammar", "desc": "Rules on singular possessives ending in -s, joint possession, and contractions.", "url": "https://owl.purdue.edu/owl/general_writing/grammar/punctuation/apostrophe_rules.html", "icon": "fas fa-pen-fancy"}
+            {"title": "Hesten's Learning Library: Master Punctuation Guide", "desc": "Singular vs. plural apostrophes, contraction invariants, and American quotation placement.", "url": "/library/index.php?pages=punctuation#apostrophe", "icon": "fas fa-book"},
+            {"title": "MLA Style Center: Formatting Direct Quotes & Dialogue", "desc": "Official guidelines on block quotations, dialogue tags, and nested quotation marks.", "url": "https://style.mla.org/how-to-quote/", "icon": "fas fa-book-reader"}
         ],
 },
     "Hyphens & Dashes": {
@@ -804,17 +804,17 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "Compound Adjective Hyphenation Rule",
-                "latex": "\\begin{cases} [\\text{Modifier}_1 \\text{ - } \\text{Modifier}_2] + \\text{Noun} & \\implies \\text{Hyphenate: 'a well-known author'} \\ \\text{Noun} + [\\text{is}] + [\\text{Modifier}_1 + \\text{Modifier}_2] & \\implies \\text{No Hyphen: 'the author is well known'} \\end{cases}",
+                "latex": "[Modifier (1) - Modifier (2)] + Noun ➔  ⟹ Hyphenate: 'a well-known author' Noun + [is] + [Modifier (1) + Modifier (2)] ➔  ⟹ No Hyphen: 'the author is well known'",
                 "note": "Hyphenate compound modifiers that precede the noun they modify to prevent misreading."
             },
             {
                 "title": "Adverb (-ly) Exclusion Principle",
-                "latex": "\\text{Adverb}_{(-ly)} + \\text{Adjective} + \\text{Noun} \\implies \\text{Never Hyphenate } (\\text{'an internationally recognized scholar'})",
+                "latex": "Adverb ((-ly)) + Adjective + Noun ⟹ Never Hyphenate ('an internationally recognized scholar')",
                 "note": "The -ly morpheme already signals adverbial modification, rendering a hyphen redundant."
             },
             {
                 "title": "Typographical Mark Hierarchy",
-                "latex": "\\text{Hyphen (-)} \\; [\\text{Width } 1x] \\;<\\; \\text{En Dash (–)} \\; [\\text{Width } 2x] \\;<\\; \\text{Em Dash (—)} \\; [\\text{Width } 3x]",
+                "latex": "Hyphen (-) [Width 1x] < En Dash (–) [Width 2x] < Em Dash (—) [Width 3x]",
                 "note": "Hyphen links words; En dash spans numerical ranges (pp. 14–28); Em dash creates dramatic pauses or parenthetical bursts."
             }
         ],
@@ -823,8 +823,8 @@ const grammarLessons = {
         "diagramCaption": "The Three Horizontal Marks: Hyphen (compound words), En dash (number and date spans), and Em dash (dramatic parenthetical breaks).",
         "references": [
             {"title": "Common Core Standard CCSS.ELA-LITERACY.L.8.2.A", "desc": "Use punctuation (dash, hyphen, parentheses) to indicate pauses and emphasis.", "url": "/pages/standards.php?domain=ELA-L", "icon": "fas fa-award"},
-            {"title": "Chicago Manual of Style: Hyphens, En Dashes, and Em Dashes", "desc": "Definitive typographical standards for dash lengths and spacing conventions.", "url": "https://www.chicagomanualofstyle.org/qanda/data/faq/topics/HyphensEnDashesEmDashes.html", "icon": "fas fa-university"},
-            {"title": "Purdue OWL: Hyphens and Dashes", "desc": "Compound adjectives, prefixes, suspensive hyphenation, and emphatic prose pauses.", "url": "https://owl.purdue.edu/owl/general_writing/grammar/punctuation/hyphen.html", "icon": "fas fa-pen-alt"}
+            {"title": "Hesten's Learning Library: Master Punctuation Guide", "desc": "Typographical hierarchy: Hyphen compound modifiers, En dash spans, and Em dash dramatic pauses.", "url": "/library/index.php?pages=punctuation#hyphen", "icon": "fas fa-book"},
+            {"title": "Chicago Manual of Style: Hyphens, En Dashes, and Em Dashes", "desc": "Definitive typographical standards for dash lengths and spacing conventions.", "url": "https://www.chicagomanualofstyle.org/qanda/data/faq/topics/HyphensEnDashesEmDashes.html", "icon": "fas fa-university"}
         ],
 },
     "Parentheses & Ellipses": {
@@ -859,17 +859,17 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "Parenthetical Excision Invariant",
-                "latex": "\\text{Clause}_A + (\\text{Parenthetical Content}) + \\text{Clause}_B \\implies \\text{Clause}_A + \\text{Clause}_B \\quad (\\text{Must remain grammatically complete})",
+                "latex": "Clause (A) + (Parenthetical Content) + Clause (B) ⟹ Clause (A) + Clause (B) (Must remain grammatically complete)",
                 "note": "A parenthetical comment is supplementary; excising it must leave the core sentence intact."
             },
             {
                 "title": "Terminal Punctuation Placement with Parentheses",
-                "latex": "\\begin{cases} \\text{Clause } (\\text{subordinate phrase})\\mathbf{.} & (\\text{Period outside when part of larger sentence}) \\ (\\text{Complete standalone sentence}\\mathbf{.}) & (\\text{Period inside when whole sentence is parenthetical}) \\end{cases}",
+                "latex": "Clause (subordinate phrase). ➔ (Period outside when part of larger sentence) (Complete standalone sentence.) ➔ (Period inside when whole sentence is parenthetical)",
                 "note": "Determined strictly by whether the parenthesis encloses an internal modifier or a complete independent thought."
             },
             {
                 "title": "Ellipsis Quoted Omission Architecture",
-                "latex": "\\text{Quotation} = \\text{Source Fragment}_1 + [\\; \\dots \\;] + \\text{Source Fragment}_2 \\quad (\\text{Omission must preserve author's intent})",
+                "latex": "Quotation = Source Fragment (1) + [. . .] + Source Fragment (2) (Omission must preserve author's intent)",
                 "note": "An ellipsis indicates intentional omission from quoted text without distorting original meaning."
             }
         ],
@@ -878,7 +878,7 @@ const grammarLessons = {
         "diagramCaption": "Parentheses and ellipses: Parenthetical phrases pass the excision test (sentence remains complete); ellipses cleanly bridge omitted text.",
         "references": [
             {"title": "Common Core Standard CCSS.ELA-LITERACY.L.8.2.B", "desc": "Use an ellipsis to indicate an omission from quoted text in analytical writing.", "url": "/pages/standards.php?domain=ELA-L", "icon": "fas fa-award"},
-            {"title": "APA Style Guide: Ellipses and Parenthetical Citations", "desc": "Accurate scholarly citation guidelines, spacing conventions, and four-dot terminal rules.", "url": "https://apastyle.apa.org/style-grammar-guidelines/citations/quotations/ellipses", "icon": "fas fa-university"},
+            {"title": "Hesten's Learning Library: Master Punctuation Guide", "desc": "Scholarly three-dot and four-dot omission rules and non-essential parenthetical enclosures.", "url": "/library/index.php?pages=punctuation#parentheses", "icon": "fas fa-book"},
             {"title": "Purdue OWL: Quoting and Omitting Words with Ellipses", "desc": "How to handle grammatical omissions while maintaining source integrity.", "url": "https://owl.purdue.edu/owl/general_writing/academic_writing/essay_writing/quotations.html", "icon": "fas fa-quote-right"}
         ],
 },
@@ -914,17 +914,17 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "Lexical Tier Stratification Hierarchy",
-                "latex": "\\text{Vocabulary} = \\text{Tier 1 (Conversational)} \\oplus \\text{Tier 2 (General Academic / AWL)} \\oplus \\text{Tier 3 (Domain STEM/Field)}",
+                "latex": "Vocabulary = Tier 1 (Conversational) oplus Tier 2 (General Academic / AWL) oplus Tier 3 (Domain STEM/Field)",
                 "note": "Tier 2 academic words (analyze, synthesize, substantiate) bridge cross-disciplinary discourse."
             },
             {
                 "title": "Scholarly Synthesis Formula",
-                "latex": "\\text{Synthesis} = \\sum_{i=1}^{n} \\text{Evidence}_i + \\text{Critical Analysis} \\implies \\text{Unified Academic Thesis}",
+                "latex": "Synthesis = Sum of Evidence (i) + Critical Analysis ⟹ Unified Academic Thesis",
                 "note": "The core cognitive formula for combining diverse empirical findings into a cohesive claim."
             },
             {
                 "title": "Morphological Family Expansion Matrix",
-                "latex": "\\text{Base Verb} \\xrightarrow{\\text{Nominalization}} \\text{Noun} \\xrightarrow{\\text{Adjectival}} \\text{Adj} \\xrightarrow{\\text{Manner}} \\text{Adv} \\quad (\\text{analyze} \\to \\text{analysis} \\to \\text{analytical} \\to \\text{analytically})",
+                "latex": "Base Verb ➔ [Nominalization] ➔ Noun ➔ [Adjectival] ➔ Adj ➔ [Manner] ➔ Adv (analyze to analysis to analytical to analytically)",
                 "note": "Mastering one AWL base unlocks four distinct grammatical functions across scholarly prose."
             }
         ],
@@ -969,17 +969,17 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "Morphological Token Assembly Rule",
-                "latex": "\\text{Complex Lexeme} = (\\text{Prefix}) + \\text{Root Base} + (\\text{Derivational Suffix}) + (\\text{Inflectional Suffix})",
+                "latex": "Complex Lexeme = (Prefix) + Root Base + (Derivational Suffix) + (Inflectional Suffix)",
                 "note": "Example: un- (prefix) + comfort (root) + -able (derivational adj suffix) + -s (inflectional plural)."
             },
             {
                 "title": "Syntactic Category Shifting via Suffixation",
-                "latex": "\\begin{cases} \\text{Verb} + \\text{'-tion' / '-ment'} \\implies \\text{Noun} & (\\text{inform} \\to \\text{information}) \\ \\text{Noun} + \\text{'-able' / '-ous'} \\implies \\text{Adjective} & (\\text{courage} \\to \\text{courageous}) \\ \\text{Adjective} + \\text{'-ly'} \\implies \\text{Adverb} & (\\text{rapid} \\to \\text{rapidly}) \\end{cases}",
+                "latex": "Verb + '-tion' / '-ment' ⟹ Noun ➔ (inform to information) Noun + '-able' / '-ous' ⟹ Adjective ➔ (courage to courageous) Adjective + '-ly' ⟹ Adverb ➔ (rapid to rapidly)",
                 "note": "Derivational suffixes fundamentally govern and transform the grammatical part of speech of the root."
             },
             {
                 "title": "Silent 'e' Deletion Orthographic Law",
-                "latex": "\\text{Root}_{(\\dots C + \\mathbf{e})} + \\text{Suffix}_{(\\text{initial vowel})} \\implies \\text{Drop 'e': } (\\text{create} + \\text{-ing} \\to \\text{creating})",
+                "latex": "Root ((. . . C + e)) + Suffix ((initial vowel)) ⟹ Drop 'e': (create + -ing to creating)",
                 "note": "Retain the 'e' when appending a consonant-initial suffix (hope + -ful = hopeful)."
             }
         ],
@@ -1024,17 +1024,17 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "The IDEAS Context Clues Heuristic",
-                "latex": "\\text{Context Deduction} = \\mathbf{I}\\text{nference} + \\mathbf{D}\\text{efinition} + \\mathbf{E}\\text{xample} + \\mathbf{A}\\text{ntonym} + \\mathbf{S}\\text{ynonym}",
+                "latex": "Context Deduction = Inference + Definition + Example + Antonym + Synonym",
                 "note": "The canonical 5-point investigative framework for deducing the meaning of unfamiliar vocabulary."
             },
             {
                 "title": "Antonym / Contrast Deduction Calculus",
-                "latex": "\\text{Subject} + \\text{Contrast Marker (unlike, whereas, conversely)} + \\text{Quality}_A \\implies \\text{Meaning}(W) \\equiv \\neg(\\text{Quality}_A)",
+                "latex": "Subject + Contrast Marker (unlike whereas conversely) + Quality (A) ⟹ Meaning(W) ≡ neg(Quality (A))",
                 "note": "'Unlike her garrulous brother, Maya was taciturn' implies taciturn means not garrulous (concise/quiet)."
             },
             {
                 "title": "Lexical Substitution Verification Invariant",
-                "latex": "\\text{Sentence}(W_{\\text{unknown}}) \\xrightarrow{\\text{Substitute } W_{\\text{guess}}} \\text{Syntactic & Semantic Coherence} \\equiv \\text{True}",
+                "latex": "Sentence(W (unknown)) ➔ [Substitute W (guess] ➔) Syntactic & Semantic Coherence ≡ True",
                 "note": "Substitute your hypothesized synonym; the surrounding syntactic and logical sense must be preserved."
             }
         ],
@@ -1079,17 +1079,17 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "Connotation vs. Denotation Formula",
-                "latex": "\\text{Word Meaning} = \\text{Denotation (Literal Definition)} \\oplus \\text{Connotation (Affective Tone)}",
+                "latex": "Word Meaning = Denotation (Literal Definition) oplus Connotation (Affective Tone)",
                 "note": "Example: 'thrifty' (+ positive prudence) vs. 'stingy' (- negative greed) sharing base meaning 'conserving money'."
             },
             {
                 "title": "Antonym Taxonomy Classification",
-                "latex": "\\text{Antonyms} = \\begin{cases} \\text{Gradable (Continuous Scale)} & (\\text{freezing} \\leftrightarrow \\text{boiling}) \\ \\text{Complementary (Binary / Mutually Exclusive)} & (\\text{mortal} \\leftrightarrow \\text{immortal}) \\ \\text{Relational (Reciprocal Roles)} & (\\text{employer} \\leftrightarrow \\text{employee}) \\end{cases}",
+                "latex": "Antonyms = Gradable (Continuous Scale) ➔ (freezing left ➔ boiling) Complementary (Binary / Mutually Exclusive) ➔ (mortal left ➔ immortal) Relational (Reciprocal Roles) ➔ (employer left ➔ employee)",
                 "note": "Complementary antonyms have no middle ground; gradable antonyms span a continuous spectrum."
             },
             {
                 "title": "Synonymic Substitution Equivalence",
-                "latex": "\\text{Synonyms } (S_1, S_2) \\implies \\text{Denotation}(S_1) \\approx \\text{Denotation}(S_2) \\quad \\text{while } \\text{Connotation}(S_1) \\neq \\text{Connotation}(S_2)",
+                "latex": "Synonyms (S (1) S (2)) ⟹ Denotation(S (1)) ≈ Denotation(S (2)) while Connotation(S (1)) ≠ Connotation(S (2))",
                 "note": "Synonyms share essential core definition while differing in emotional intensity and formal register."
             }
         ],
@@ -1134,17 +1134,17 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "Classical Morphemic Decoding Formula",
-                "latex": "\\text{Academic / STEM Term} = \\sum_{j=1}^{k} \\text{Classical Morpheme}_j \\quad (\\text{Greek / Latin Ancestral Roots})",
+                "latex": "Academic / STEM Term = Sum of Classical Morpheme (j) (Greek / Latin Ancestral Roots)",
                 "note": "Over 90% of scientific and technical English vocabulary derives from classical morphemes."
             },
             {
                 "title": "Greek vs. Latin Functional Dichotomy",
-                "latex": "\\begin{cases} \\text{Greek Roots (Abstract Sciences & Disciplines)} & (\\text{geo- (earth), bio- (life), psych- (mind), chron- (time)}) \\ \\text{Latin Roots (Action, Law & Concrete Systems)} & (\\text{dict- (speak), struct- (build), port- (carry), scrib- (write)}) \\end{cases}",
+                "latex": "Greek Roots (Abstract Sciences ➔ Disciplines) ➔ (geo- (earth) bio- (life) psych- (mind) chron- (time)) Latin Roots (Action Law ➔ Concrete Systems) ➔ (dict- (speak) struct- (build) port- (carry) scrib- (write))",
                 "note": "Greek morphemes frequently label fields of science; Latin roots describe concrete human actions and legal systems."
             },
             {
                 "title": "Morphological Root Tree Expansion",
-                "latex": "\\text{Root } (\\mathbf{\\text{spect}} = \\text{to look}) \\implies \\begin{cases} \\text{in-spect (look into)} \\ \\text{spect-ator (one who watches)} \\ \\text{retro-spect (look backward)} \\ \\text{circum-spect (look around cautiously)} \\end{cases}",
+                "latex": "Root (spect = to look) ⟹ in-spect (look into) spect-ator (one who watches) retro-spect (look backward) circum-spect (look around cautiously)",
                 "note": "A single root morpheme branches into dozens of interconnected disciplinary words."
             }
         ],
@@ -1189,17 +1189,17 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "The There / Their / They're Triad Axiom",
-                "latex": "\\begin{cases} \\text{They're} = [\\text{They are}] & (\\text{Subject pronoun + auxiliary verb contraction}) \\ \\text{Their} = P_{\\text{possessive}} & (\\text{Belonging to them: 'their research'}) \\ \\text{There} = \\text{Adverb}_{\\text{place}} \\lor \\text{Expletive} & (\\text{'over there'} \\lor \\text{'there are three trials'}) \\end{cases}",
+                "latex": "They're = [They are] ➔ (Subject pronoun + auxiliary verb contraction) Their = P (possessive) ➔ (Belonging to them: 'their research') There = Adverb (place) lor Expletive ➔ ('over there' lor 'there are three trials')",
                 "note": "Acoustically identical homophones governed by distinct grammatical syntax."
             },
             {
                 "title": "The RAVEN Affect vs. Effect Mnemonic",
-                "latex": "\\mathbf{R}\\text{emember: } \\mathbf{A}\\text{ffect is a } \\mathbf{V}\\text{erb } [\\text{action: 'affects data'}], \\quad \\mathbf{E}\\text{ffect is a } \\mathbf{N}\\text{oun } [\\text{result: 'the greenhouse effect'}]",
+                "latex": "Remember: Affect is a Verb [action: 'affects data'] Effect is a Noun [result: 'the greenhouse effect']",
                 "note": "Use the RAVEN rule to eliminate the most pervasive vocabulary confusion in academic writing."
             },
             {
                 "title": "Contraction Expansion Test Invariant",
-                "latex": "\\text{It's} \\iff [\\text{It is} \\lor \\text{It has}] \\quad \\text{vs.} \\quad \\text{Its} \\iff \\text{Possessive pronoun (Zero apostrophe)}",
+                "latex": "It's ⟺ [It is lor It has] vs. Its ⟺ Possessive pronoun (Zero apostrophe)",
                 "note": "Test: Expand into 'it is'. If the sentence collapses into nonsense, you must use 'its'."
             }
         ],
@@ -1244,18 +1244,18 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "Complete Sentence Syntactic Axiom",
-                "latex": "\\text{Complete Sentence} = \\text{Subject} + \\text{Finite Predicate Verb} + \\text{Complete Independent Proposition}",
+                "latex": "Complete Sentence = Subject + Finite Predicate Verb + Complete Independent Proposition",
                 "note": "A fragment fails this test by omitting the subject, verb, or leaving a subordinating clause unattached."
             },
             {
                 "title": "Comma Splice Rectification Surgery",
-                "latex": "\\text{Clause}_1 \\mathbf{,}\\text{ Clause}_2 \\; [\\text{FAULT}] \\implies \\begin{cases} \\text{Clause}_1 \\mathbf{.}\\text{ Clause}_2 & (\\text{Period Stop}) \\ \\text{Clause}_1 \\mathbf{;}\\text{ Clause}_2 & (\\text{Semicolon Joint}) \\ \\text{Clause}_1 \\mathbf{,} \\text{ FANBOYS Clause}_2 & (\\text{Coordination}) \\end{cases}",
+                "latex": "Clause (1) Clause (2) [FAULT] ⟹ Clause (1). Clause (2) ➔ (Period Stop) Clause (1) Clause (2) ➔ (Semicolon Joint) Clause (1) FANBOYS Clause (2) ➔ (Coordination)",
                 "note": "Never join two independent clauses with only a comma; choose one of the three canonical fixes."
             },
             {
                 "title": "Subordinate Fragment Attachment Law",
-                "latex": "\\text{Subordinator} + \\text{Clause}_{\\text{dep}} \\; [\\text{Fragment}] \\xrightarrow{\\text{Attach}} \\text{Subordinator} + \\text{Clause}_{\\text{dep}} + \\mathbf{,} + \\text{Clause}_{\\text{indep}}",
-                "note": "'Because it rained.' [Fragment] $\\to$ 'Because it rained, the tennis match was postponed.' [Complete]."
+                "latex": "Subordinator + Clause (dep) [Fragment] ➔ [Attach] ➔ Subordinator + Clause (dep) +  + Clause (indep)",
+                "note": "'Because it rained.' [Fragment] to 'Because it rained, the tennis match was postponed.' [Complete]."
             }
         ],
         "diagramSvg": "<svg viewBox=\"0 0 460 200\" width=\"100%\" height=\"200\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Comma Splice Crash and Three Repair Bridges Diagram\"><rect width=\"100%\" height=\"100%\" fill=\"#f8fafc\" rx=\"8\"/><rect x=\"25\" y=\"25\" width=\"410\" height=\"50\" rx=\"6\" fill=\"#fee2e2\" stroke=\"#ef4444\" stroke-width=\"2\"/><text x=\"230\" y=\"45\" fill=\"#991b1b\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\">ERROR: Comma Splice (Two Full Sentences with Just a Comma)</text><text x=\"230\" y=\"63\" fill=\"#b91c1c\" font-size=\"11\" text-anchor=\"middle\">The telescope calibrated <tspan fill=\"#ef4444\" font-weight=\"bold\">, </tspan> the astronomer took notes. ✗</text><rect x=\"25\" y=\"85\" width=\"130\" height=\"95\" rx=\"6\" fill=\"#ffffff\" stroke=\"#0284c7\" stroke-width=\"1.5\"/><text x=\"90\" y=\"105\" fill=\"#0284c7\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">Fix 1: Period</text><text x=\"90\" y=\"128\" fill=\"#0f172a\" font-size=\"10\" text-anchor=\"middle\">calibrated<tspan fill=\"#0284c7\" font-weight=\"bold\">.</tspan> The</text><text x=\"90\" y=\"145\" fill=\"#0f172a\" font-size=\"10\" text-anchor=\"middle\">astronomer took</text><text x=\"90\" y=\"168\" fill=\"#10b981\" font-size=\"10\" font-weight=\"bold\" text-anchor=\"middle\">Two Sentences ✓</text><rect x=\"165\" y=\"85\" width=\"130\" height=\"95\" rx=\"6\" fill=\"#ffffff\" stroke=\"#10b981\" stroke-width=\"1.5\"/><text x=\"230\" y=\"105\" fill=\"#10b981\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">Fix 2: Semicolon</text><text x=\"230\" y=\"128\" fill=\"#0f172a\" font-size=\"10\" text-anchor=\"middle\">calibrated<tspan fill=\"#10b981\" font-weight=\"bold\">;</tspan> the</text><text x=\"230\" y=\"145\" fill=\"#0f172a\" font-size=\"10\" text-anchor=\"middle\">astronomer took</text><text x=\"230\" y=\"168\" fill=\"#10b981\" font-size=\"10\" font-weight=\"bold\" text-anchor=\"middle\">Balanced Joint ✓</text><rect x=\"305\" y=\"85\" width=\"130\" height=\"95\" rx=\"6\" fill=\"#ffffff\" stroke=\"#6b21a8\" stroke-width=\"1.5\"/><text x=\"370\" y=\"105\" fill=\"#6b21a8\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">Fix 3: , + FANBOYS</text><text x=\"370\" y=\"128\" fill=\"#0f172a\" font-size=\"10\" text-anchor=\"middle\">calibrated<tspan fill=\"#6b21a8\" font-weight=\"bold\">, and</tspan></text><text x=\"370\" y=\"145\" fill=\"#0f172a\" font-size=\"10\" text-anchor=\"middle\">the astronomer took</text><text x=\"370\" y=\"168\" fill=\"#10b981\" font-size=\"10\" font-weight=\"bold\" text-anchor=\"middle\">Coordination ✓</text></svg>",
@@ -1299,17 +1299,17 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "Head Noun Isolation Principle",
-                "latex": "\\text{Subject}_{\\text{head}} + [\\text{Prepositional / Modifying Intervening Phrase}] + \\text{Verb} \\implies \\text{Number}(\\text{Verb}) \\equiv \\text{Number}(\\text{Subject}_{\\text{head}})",
+                "latex": "Subject (head) + [Prepositional / Modifying Intervening Phrase] + Verb ⟹ Number(Verb) ≡ Number(Subject (head))",
                 "note": "Example: 'The box [of antique records] is heavy.' Intervening plural nouns do not alter singular agreement."
             },
             {
                 "title": "Correlative Proximity Concord Law",
-                "latex": "\\text{Either } A \\text{ or } \\mathbf{B} + \\text{Verb} \\implies \\text{Number}(\\text{Verb}) \\equiv \\text{Number}(\\mathbf{B}) \\quad (\\text{Agreement with Closest Subject})",
+                "latex": "Either A or B + Verb ⟹ Number(Verb) ≡ Number(B) (Agreement with Closest Subject)",
                 "note": "'Neither the teacher nor the students were ready' vs. 'Neither the students nor the teacher was ready'."
             },
             {
                 "title": "Indefinite Pronoun Singular Invariance",
-                "latex": "\\{\\text{Each}, \\text{Every}, \\text{Everyone}, \\text{Nobody}, \\text{Neither}\\} \\implies \\text{Singular Grammatical Unit} \\implies \\text{Verb}_{(s)}",
+                "latex": "{Each Every Everyone Nobody Neither} ⟹ Singular Grammatical Unit ⟹ Verb ((s))",
                 "note": "Indefinite pronouns addressing individuals within a group mandate singular verbs ('Everyone is ready')."
             }
         ],
@@ -1354,18 +1354,18 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "Participial Modifier Proximity Law",
-                "latex": "[\\text{Introductory Participial Phrase}] \\mathbf{,} \\; \\mathbf{S}_{\\text{actor}} + \\text{Predicate} \\quad (\\mathbf{S}_{\\text{actor}} \\text{ must logically perform action})",
+                "latex": "[Introductory Participial Phrase] S (actor) + Predicate (S (actor) must logically perform action)",
                 "note": "The noun immediately following the comma MUST be the agent physically or cognitively doing the introductory action."
             },
             {
                 "title": "The Dangling Modifier Pathology",
-                "latex": "[\\text{Walking to the bus}] \\mathbf{,} \\; \\text{the rain soaked my backpack.} \\implies \\text{FAULT: The rain cannot walk to the bus!}",
+                "latex": "[Walking to the bus] the rain soaked my backpack. ⟹ FAULT: The rain cannot walk to the bus",
                 "note": "Unanchored modifiers create unintentional absurdity or syntactic distortion."
             },
             {
                 "title": "Agent Reinsertion Transformation",
-                "latex": "\\text{Dangling: } [\\text{Phrase}] \\mathbf{,} \\text{ Object} \\implies \\text{Revised: } [\\text{Phrase}] \\mathbf{,} \\text{ Agent} + V + \\text{Object}",
-                "note": "'Having completed the trial, the results were analyzed' $\\to$ 'Having completed the trial, the chemist analyzed the results'."
+                "latex": "Dangling: [Phrase] Object ⟹ Revised: [Phrase] Agent + V + Object",
+                "note": "'Having completed the trial, the results were analyzed' to 'Having completed the trial, the chemist analyzed the results'."
             }
         ],
         "diagramSvg": "<svg viewBox=\"0 0 460 200\" width=\"100%\" height=\"200\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Dangling Modifier Actor Placement Diagram\"><rect width=\"100%\" height=\"100%\" fill=\"#f8fafc\" rx=\"8\"/><rect x=\"25\" y=\"25\" width=\"410\" height=\"60\" rx=\"6\" fill=\"#fee2e2\" stroke=\"#ef4444\" stroke-width=\"2\"/><text x=\"40\" y=\"50\" fill=\"#991b1b\" font-size=\"11\" font-weight=\"bold\">DANGLING ERROR:</text><text x=\"165\" y=\"50\" fill=\"#7f1d1d\" font-size=\"11\">\"Walking to school, <tspan fill=\"#ef4444\" font-weight=\"bold\">the rain</tspan> soaked my shoes.\"</text><text x=\"230\" y=\"72\" fill=\"#ef4444\" font-size=\"10\" text-anchor=\"middle\">Absurd: This literally states that 'the rain' was walking to school! ✗</text><rect x=\"25\" y=\"100\" width=\"410\" height=\"75\" rx=\"6\" fill=\"#dcfce7\" stroke=\"#166534\" stroke-width=\"2\"/><text x=\"40\" y=\"125\" fill=\"#166534\" font-size=\"11\" font-weight=\"bold\">CORRECTED:</text><text x=\"135\" y=\"125\" fill=\"#14532d\" font-size=\"11\">\"Walking to school, <tspan fill=\"#166534\" font-weight=\"bold\">I</tspan> got my shoes soaked by the rain.\"</text><rect x=\"40\" y=\"140\" width=\"380\" height=\"25\" rx=\"4\" fill=\"#ffffff\" stroke=\"#166534\" stroke-width=\"1\"/><text x=\"230\" y=\"157\" fill=\"#166534\" font-size=\"10\" font-weight=\"bold\" text-anchor=\"middle\">Rule: The actor performing the action ('I') must immediately follow the comma ✓</text></svg>",
@@ -1409,17 +1409,17 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "Tripartite Antecedent Concord Invariant",
-                "latex": "\\text{Pronoun}(P) \\equiv \\text{Antecedent}(A) \\iff \\begin{cases} \\text{Person}(P) = \\text{Person}(A) \\ \\text{Number}(P) = \\text{Number}(A) \\ \\text{Gender}(P) = \\text{Gender}(A) \\end{cases}",
+                "latex": "Pronoun(P) ≡ Antecedent(A) ⟺ Person(P) = Person(A) Number(P) = Number(A) Gender(P) = Gender(A)",
                 "note": "Total grammatical harmony across grammatical person (1st/2nd/3rd), number, and gender."
             },
             {
                 "title": "Indefinite Pronoun Concord Law",
-                "latex": "\\text{Antecedent} \\in \\{\\text{Each}, \\text{Every}, \\text{Anyone}, \\text{Neither}\\} \\implies \\text{Singular Pronoun: } [\\text{'his or her'} \\lor \\text{singular 'they'}]",
+                "latex": "Antecedent in {Each Every Anyone Neither} ⟹ Singular Pronoun: ['his or her' lor singular 'they']",
                 "note": "'Each of the scholars submitted his or her manuscript.' Maintain singular agreement in formal prose."
             },
             {
                 "title": "Collective Noun Reference Dichotomy",
-                "latex": "\\text{Collective Entity} \\implies \\begin{cases} \\text{'its'} & (\\text{Single Unit: 'The committee published its report'}) \\ \\text{'their'} & (\\text{Individual Members: 'The committee debated their differences'}) \\end{cases}",
+                "latex": "Collective Entity ⟹ 'its' ➔ (Single Unit: 'The committee published its report') 'their' ➔ (Individual Members: 'The committee debated their differences')",
                 "note": "Governed by whether the group operates as a unified singular body or distinct individuals."
             }
         ],
@@ -1464,17 +1464,17 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "The Four Canonical Clause Formulations",
-                "latex": "\\begin{cases} \\text{Simple} & = 1 \\times \\text{Clause}_{\\text{indep}} \\ \\text{Compound} & = \\text{Clause}_{\\text{indep1}} + [\\text{Comma + FANBOYS } \\lor \\text{ Semicolon}] + \\text{Clause}_{\\text{indep2}} \\ \\text{Complex} & = \\text{Clause}_{\\text{indep}} + \\text{Clause}_{\\text{dep}} \\quad (\\text{Subordinating Conjunction}) \\ \\text{Compound-Complex} & \\ge 2 \\times \\text{Clause}_{\\text{indep}} + \\ge 1 \\times \\text{Clause}_{\\text{dep}} \\end{cases}",
+                "latex": "Simple ➔ = 1 × Clause (indep) Compound ➔ = Clause (indep1) + [Comma + FANBOYS lor Semicolon] + Clause (indep2) Complex ➔ = Clause (indep) + Clause (dep) (Subordinating Conjunction) Compound-Complex ➔ ge 2 × Clause (indep) + ge 1 × Clause (dep)",
                 "note": "The complete mathematical taxonomy of English coordination and subordination patterns."
             },
             {
                 "title": "Subordinate Clause Dependency Law",
-                "latex": "\\text{Clause}_{\\text{dep}} = \\text{Subordinating Conjunction} + \\text{Subject} + \\text{Predicate} \\implies \\text{Incomplete Proposition}",
+                "latex": "Clause (dep) = Subordinating Conjunction + Subject + Predicate ⟹ Incomplete Proposition",
                 "note": "A dependent clause functions syntactically as an adverbial or adjectival modifier of the independent host."
             },
             {
                 "title": "Comma Rule for Dependent Clause Placement",
-                "latex": "\\begin{cases} \\text{Clause}_{\\text{dep}} + \\mathbf{,} + \\text{Clause}_{\\text{indep}} & (\\text{Introductory dependent clause: Comma mandatory}) \\ \\text{Clause}_{\\text{indep}} + \\text{Clause}_{\\text{dep}} & (\\text{Final dependent clause: Zero comma}) \\end{cases}",
+                "latex": "Clause (dep) +  + Clause (indep) ➔ (Introductory dependent clause: Comma mandatory) Clause (indep) + Clause (dep) ➔ (Final dependent clause: Zero comma)",
                 "note": "'Because it rained, we stayed inside' vs. 'We stayed inside because it rained'."
             }
         ],
@@ -1519,18 +1519,18 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "Active Voice Syntactic Formula",
-                "latex": "\\text{Active Voice} = \\mathbf{S}_{\\text{agent}} + \\mathbf{V}_{\\text{transitive}} + \\mathbf{O}_{\\text{recipient}} \\quad (\\mathbf{S}_{\\text{agent}} \\text{ performs the kinetic action})",
+                "latex": "Active Voice = S (agent) + V (transitive) + O (recipient) (S (agent) performs the kinetic action)",
                 "note": "Direct, energetic, and concise: 'The earthquake (agent) demolished (verb) the bridge (recipient).'"
             },
             {
                 "title": "Passive Voice Transformation Algorithm",
-                "latex": "\\mathbf{S}_{\\text{agent}} + \\mathbf{V} + \\mathbf{O}_{\\text{recipient}} \\implies \\mathbf{O}_{\\text{recipient}} + [\\text{be}] + \\mathbf{V}_3 (\\text{past participle}) + (\\text{by } \\mathbf{S}_{\\text{agent}})",
+                "latex": "S (agent) + V + O (recipient) ⟹ O (recipient) + [be] + V (3) (past participle) + (by S (agent))",
                 "note": "Relegates the agent to an optional prepositional phrase ('by zombies') or omits it for objective scientific neutrality."
             },
             {
                 "title": "The Zombie Test Verification Invariant",
-                "latex": "\\text{Passive Voice} \\iff \\text{Verb Phrase} + [\\text{'by zombies'}] \\text{ is syntactically grammatical}",
-                "note": "'The experiment was performed [by zombies]' (Grammatical $\\implies$ Passive). 'Zombies performed the experiment' (Active)."
+                "latex": "Passive Voice ⟺ Verb Phrase + ['by zombies'] is syntactically grammatical",
+                "note": "'The experiment was performed [by zombies]' (Grammatical implies Passive). 'Zombies performed the experiment' (Active)."
             }
         ],
         "diagramSvg": "<svg viewBox=\"0 0 460 200\" width=\"100%\" height=\"200\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Active vs Passive Voice Kinetic Direction Diagram\"><rect width=\"100%\" height=\"100%\" fill=\"#f8fafc\" rx=\"8\"/><rect x=\"25\" y=\"25\" width=\"410\" height=\"65\" rx=\"6\" fill=\"#dcfce7\" stroke=\"#166534\" stroke-width=\"2\"/><text x=\"40\" y=\"50\" fill=\"#166534\" font-size=\"12\" font-weight=\"bold\">ACTIVE VOICE:</text><text x=\"155\" y=\"50\" fill=\"#14532d\" font-size=\"11\">The chef <tspan font-weight=\"bold\">[Actor]</tspan> prepared <tspan font-weight=\"bold\">[Verb]</tspan> the meal <tspan font-weight=\"bold\">[Object]</tspan>.</text><text x=\"230\" y=\"75\" fill=\"#166534\" font-size=\"10\" text-anchor=\"middle\">Actor leads the sentence → Action flows forward → Punchy and clear ✓</text><rect x=\"25\" y=\"105\" width=\"410\" height=\"75\" rx=\"6\" fill=\"#e0e7ff\" stroke=\"#3730a3\" stroke-width=\"2\"/><text x=\"40\" y=\"130\" fill=\"#3730a3\" font-size=\"12\" font-weight=\"bold\">PASSIVE VOICE:</text><text x=\"165\" y=\"130\" fill=\"#312e81\" font-size=\"11\">The meal <tspan font-weight=\"bold\">[Object]</tspan> was prepared by the chef <tspan font-weight=\"bold\">[Actor]</tspan>.</text><rect x=\"40\" y=\"145\" width=\"380\" height=\"25\" rx=\"4\" fill=\"#ffffff\" stroke=\"#3730a3\" stroke-width=\"1\"/><text x=\"230\" y=\"162\" fill=\"#3730a3\" font-size=\"10\" font-weight=\"bold\" text-anchor=\"middle\">The Zombie Test: \"The meal was prepared [by zombies]\" = PASSIVE!</text></svg>",
@@ -1574,17 +1574,17 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "Parallel Coordination Homogeneity Law",
-                "latex": "\\text{Series} = \\alpha_1 + \\mathbf{,} + \\alpha_2 + \\mathbf{,} + \\text{and } \\alpha_3 \\iff \\text{GrammarType}(\\alpha_1) = \\text{GrammarType}(\\alpha_2) = \\text{GrammarType}(\\alpha_3)",
+                "latex": "Series = α (1) +  + α (2) +  + and α (3) ⟺ GrammarType(α (1)) = GrammarType(α (2)) = GrammarType(α (3))",
                 "note": "All coordinated list elements must share identical grammatical morphology (all gerunds, all infinitives, all clauses)."
             },
             {
                 "title": "Correlative Conjunction Symmetry",
-                "latex": "\\text{Either } [\\mathbf{A}] \\text{ or } [\\mathbf{B}] \\quad \\text{and} \\quad \\text{Not only } [\\mathbf{A}] \\text{ but also } [\\mathbf{B}] \\implies \\text{Syntax}(\\mathbf{A}) \\equiv \\text{Syntax}(\\mathbf{B})",
+                "latex": "Either [A] or [B] and Not only [A] but also [B] ⟹ Syntax(A) ≡ Syntax(B)",
                 "note": "What immediately follows the first correlative marker must syntactically mirror what follows the second."
             },
             {
                 "title": "Faulty Parallelism Repair Formula",
-                "latex": "\\text{Fault: } V_{\\text{-ing}} + V_{\\text{-ing}} + \\text{to-}V \\implies \\text{Repaired: } V_{\\text{-ing}} + V_{\\text{-ing}} + V_{\\text{-ing}} \\quad (\\text{'running, jumping, and swimming'})",
+                "latex": "Fault: V (-ing) + V (-ing) + to-V ⟹ Repaired: V (-ing) + V (-ing) + V (-ing) ('running jumping and swimming')",
                 "note": "Maintains rhythmic cadence and reduces cognitive processing friction for the reader."
             }
         ],
@@ -1629,18 +1629,18 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "Subordination & Concession Integration Formula",
-                "latex": "\\text{Fact}_A + \\text{Fact}_B \\xrightarrow{\\text{Subordination}} \\text{Although } \\text{Fact}_A \\mathbf{,} \\; \\text{Fact}_B \\quad (\\text{Elevates causal logic over choppy prose})",
-                "note": "'It was late. We continued.' $\\to$ 'Although it was late, we continued our investigation.'"
+                "latex": "Fact (A) + Fact (B) ➔ [Subordination] ➔ Although Fact (A) Fact (B) (Elevates causal logic over choppy prose)",
+                "note": "'It was late. We continued.' to 'Although it was late, we continued our investigation.'"
             },
             {
                 "title": "Participial Phrase Condensation Law",
-                "latex": "\\text{Sentence}_1 (\\mathbf{S}_{\\text{actor}} + V) + \\text{Sentence}_2 \\implies [V_{\\text{-ing / -ed}} + \\text{Phrase}] \\mathbf{,} \\; \\mathbf{S}_{\\text{actor}} + \\text{Predicate}_2",
-                "note": "'The chemist discovered a compound. She published a report.' $\\to$ 'Having discovered a compound, the chemist published a report.'"
+                "latex": "Sentence (1) (S (actor) + V) + Sentence (2) ⟹ [V (-ing / -ed) + Phrase] S (actor) + Predicate (2)",
+                "note": "'The chemist discovered a compound. She published a report.' to 'Having discovered a compound, the chemist published a report.'"
             },
             {
                 "title": "Appositive Renaming Reduction",
-                "latex": "\\mathbf{S} + [\\text{is } \\mathbf{N}_{\\text{desc}}] + \\text{Sentence}_2 \\implies \\mathbf{S} \\mathbf{,} \\; \\mathbf{N}_{\\text{desc}} \\mathbf{,} \\; \\text{Predicate}_2",
-                "note": "'Curie was a physicist. She won two Nobels.' $\\to$ 'Marie Curie, a famous physicist, won two Nobel Prizes.'"
+                "latex": "S + [is N (desc)] + Sentence (2) ⟹ S N (desc) Predicate (2)",
+                "note": "'Curie was a physicist. She won two Nobels.' to 'Marie Curie, a famous physicist, won two Nobel Prizes.'"
             }
         ],
         "diagramSvg": "<svg viewBox=\"0 0 460 200\" width=\"100%\" height=\"200\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Sentence Combining Transformer Process Diagram\"><rect width=\"100%\" height=\"100%\" fill=\"#f8fafc\" rx=\"8\"/><rect x=\"20\" y=\"25\" width=\"130\" height=\"140\" rx=\"6\" fill=\"#fee2e2\" stroke=\"#ef4444\" stroke-width=\"1.5\"/><text x=\"85\" y=\"48\" fill=\"#991b1b\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">CHOPPY INPUT</text><text x=\"85\" y=\"75\" fill=\"#7f1d1d\" font-size=\"10\" text-anchor=\"middle\">• The dog is big.</text><text x=\"85\" y=\"95\" fill=\"#7f1d1d\" font-size=\"10\" text-anchor=\"middle\">• The dog is brown.</text><text x=\"85\" y=\"115\" fill=\"#7f1d1d\" font-size=\"10\" text-anchor=\"middle\">• The dog barked.</text><text x=\"85\" y=\"145\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"bold\" text-anchor=\"middle\">Repetitive &amp; Slow ✗</text><path d=\"M 160 95 L 210 95\" stroke=\"#64748b\" stroke-width=\"3\" marker-end=\"url(#arrow)\"/><circle cx=\"235\" cy=\"95\" r=\"22\" fill=\"#0284c7\"/><text x=\"235\" y=\"99\" fill=\"#ffffff\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">COMBINE</text><path d=\"M 260 95 L 295 95\" stroke=\"#64748b\" stroke-width=\"3\" marker-end=\"url(#arrow)\"/><rect x=\"305\" y=\"25\" width=\"135\" height=\"140\" rx=\"6\" fill=\"#dcfce7\" stroke=\"#166534\" stroke-width=\"1.5\"/><text x=\"372\" y=\"48\" fill=\"#166534\" font-size=\"11\" font-weight=\"bold\" text-anchor=\"middle\">ELEGANT OUTPUT</text><rect x=\"315\" y=\"70\" width=\"115\" height=\"55\" rx=\"4\" fill=\"#ffffff\" stroke=\"#166534\" stroke-width=\"1\"/><text x=\"372\" y=\"92\" fill=\"#14532d\" font-size=\"10\" font-weight=\"bold\" text-anchor=\"middle\">\"The big brown dog</text><text x=\"372\" y=\"110\" fill=\"#14532d\" font-size=\"10\" font-weight=\"bold\" text-anchor=\"middle\">barked loudly.\"</text><text x=\"372\" y=\"145\" fill=\"#10b981\" font-size=\"10\" font-weight=\"bold\" text-anchor=\"middle\">Concise &amp; Fluid ✓</text></svg>",
@@ -1684,17 +1684,17 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "Compound-Complex Architecture Specification",
-                "latex": "\\text{Compound-Complex} = \\underbrace{\\text{Clause}_{\\text{dep}}}_{\\ge 1} + \\underbrace{\\text{Clause}_{\\text{indep1}} + [\\text{Coordination}] + \\text{Clause}_{\\text{indep2}}}_{\\ge 2}",
+                "latex": "Compound-Complex = underbrace{Clause (dep)} (ge 1) + underbrace{Clause (indep1) + [Coordination] + Clause (indep2)} (ge 2)",
                 "note": "Merges at least one subordinate dependent clause with at least two coordinated independent propositions."
             },
             {
                 "title": "Academic Multi-Layered Narrative Model",
-                "latex": "[\\text{Context / Condition}]_{Dep} \\mathbf{,} \\; [\\text{Core Event}]_{Indep1} \\mathbf{,} \\text{ and } [\\text{Subsequent Outcome}]_{Indep2}",
+                "latex": "[Context / Condition] (Dep) [Core Event] (Indep1) and [Subsequent Outcome] (Indep2)",
                 "note": "'Although the optics were distorted, engineers aligned the lasers, and the trial succeeded.'"
             },
             {
                 "title": "Dual Boundary Punctuation Invariant",
-                "latex": "\\text{Punctuation} = \\begin{cases} \\text{Introductory dependent clause} \\implies \\text{Followed by comma (,)} \\ \\text{Two independent clauses} \\implies \\text{Separated by comma + FANBOYS (or semicolon)} \\end{cases}",
+                "latex": "Punctuation = Introductory dependent clause ⟹ Followed by comma () Two independent clauses ⟹ Separated by comma + FANBOYS (or semicolon)",
                 "note": "Preserves rhythmic pacing and prevents run-on errors across multi-tiered complex sentences."
             }
         ],
@@ -1739,17 +1739,17 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "Tenor and Vehicle Dual Mapping Axiom",
-                "latex": "\\text{Metaphor} = \\mathbf{T}\\text{enor (Subject)} \\xrightarrow{\\text{Ground (Shared Quality)}} \\mathbf{V}\\text{ehicle (Imaginative Figure)}",
+                "latex": "Metaphor = Tenor (Subject) ➔ [Ground (Shared Quality)] ➔ Vehicle (Imaginative Figure)",
                 "note": "Example: 'Time (tenor) is a thief (vehicle)' grounded in stealthy deprivation."
             },
             {
                 "title": "Simile vs. Metaphor Equivalence Transform",
-                "latex": "\\begin{cases} \\text{Simile: } \\mathbf{T} \\sim \\mathbf{V} & (\\mathbf{T} \\text{ is } [\\text{like / as}] \\; \\mathbf{V} \\implies \\text{Explicit Comparison}) \\ \\text{Metaphor: } \\mathbf{T} \\equiv \\mathbf{V} & (\\mathbf{T} \\text{ is } \\mathbf{V} \\implies \\text{Direct Identity Equivalence}) \\end{cases}",
+                "latex": "Simile: T sim V ➔ (T is [like / as] V ⟹ Explicit Comparison) Metaphor: T ≡ V ➔ (T is V ⟹ Direct Identity Equivalence)",
                 "note": "Similes emphasize likeness across differences; metaphors assert direct conceptual identity."
             },
             {
                 "title": "Extended Metaphor Conceit Law",
-                "latex": "\\text{Extended Conceit} = \\mathbf{T} \\equiv \\mathbf{V} \\implies \\sum_{k=1}^{m} \\text{Attributes}(\\mathbf{V})_k \\text{ map to } \\mathbf{T}",
+                "latex": "Extended Conceit = T ≡ V ⟹ Sum of Attributes(V) (k) map to T",
                 "note": "A sustained figurative comparison carried systematically across an entire narrative or poem."
             }
         ],
@@ -1794,17 +1794,17 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "Anthropomorphic Personification Mapping",
-                "latex": "\\text{Inanimate Entity} \\oplus \\text{Human Volition / Affect} \\implies \\text{Personified Literary Persona}",
+                "latex": "Inanimate Entity oplus Human Volition / Affect ⟹ Personified Literary Persona",
                 "note": "'The tempest groaned' or 'Opportunity knocked' maps human psychology onto non-human agents."
             },
             {
                 "title": "Hyperbolic Amplification Vector",
-                "latex": "\\text{Subjective Reality} \\times \\lambda \\; (\\lambda \\gg 1) \\implies \\text{Rhetorical Hyperbole (Intentional Exaggeration)}",
+                "latex": "Subjective Reality × λ (λ gg 1) ⟹ Rhetorical Hyperbole (Intentional Exaggeration)",
                 "note": "Calculated scalar amplification not intended for literal interpretation: 'I have waited an eternity.'"
             },
             {
                 "title": "Literal vs. Figurative Discrepancy",
-                "latex": "\\text{Hyperbolic Claim} \\not\\equiv \\text{Empirical Fact} \\quad \\text{while } \\text{Emotional Impact} \\equiv \\text{Maximized}",
+                "latex": "Hyperbolic Claim ≢ Empirical Fact while Emotional Impact ≡ Maximized",
                 "note": "Hyperbole trades literal accuracy to communicate authentic emotional intensity."
             }
         ],
@@ -1849,17 +1849,17 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "Idiomatic Non-Compositionality Law",
-                "latex": "\\text{Meaning}(\\text{Idiom}) \\neq \\sum_{i=1}^{n} \\text{LiteralDefinition}(\\text{Word}_i)",
+                "latex": "Meaning(Idiom) ≠ Sum of LiteralDefinition(Word (i))",
                 "note": "'Bite the bullet' (endure hardship) cannot be calculated from literal teeth and bullets."
             },
             {
                 "title": "Allusive Intertextual Reference Mapping",
-                "latex": "\\text{Current Prose} \\xrightarrow{\\text{Allusion}} \\text{Mythological / Historical Canon} \\implies \\text{Instant Context Evocation}",
-                "note": "Calling a weakness an 'Achilles\' heel' instantly summons the entire Trojan War archetype."
+                "latex": "Current Prose ➔ [Allusion] ➔ Mythological / Historical Canon ⟹ Instant Context Evocation",
+                "note": "Calling a weakness an 'Achilles' heel' instantly summons the entire Trojan War archetype."
             },
             {
                 "title": "Cultural Idiom Decoding Invariant",
-                "latex": "\\text{Idiom}(\\text{Surface Words}) \\xrightarrow{\\text{Cultural Heritage Base}} \\text{Intended Pragmatic Message}",
+                "latex": "Idiom(Surface Words) ➔ [Cultural Heritage Base] ➔ Intended Pragmatic Message",
                 "note": "Idiomatic comprehension relies on shared cultural transmission rather than literal syntax."
             }
         ],
@@ -1904,17 +1904,17 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "The 5-Sense Sensory Imagery Vector",
-                "latex": "\\text{Imagery} = \\mathbf{V}\\text{isual} \\oplus \\mathbf{A}\\text{uditory} \\oplus \\mathbf{O}\\text{lfactory} \\oplus \\mathbf{G}\\text{ustatory} \\oplus \\mathbf{T}\\text{actile / Kinesthetic}",
+                "latex": "Imagery = Visual oplus Auditory oplus Olfactory oplus Gustatory oplus Tactile / Kinesthetic",
                 "note": "Multi-sensory perceptual encoding that reconstructs vivid tactile experiences in reader cognition."
             },
             {
                 "title": "Symbolic Concrete-to-Abstract Elevation",
-                "latex": "\\text{Concrete Physical Artifact} \\xrightarrow{\\text{Context & Repetition}} \\text{Universal Abstract Concept}",
+                "latex": "Concrete Physical Artifact ➔ [Context & Repetition] ➔ Universal Abstract Concept",
                 "note": "A physical green light transcends illumination to signify unreachable future aspirations."
             },
             {
                 "title": "The Thematic Leitmotif Equation",
-                "latex": "\\text{Motif} = \\sum_{t=1}^{T} \\text{Symbol}_t \\implies \\text{Core Thematic Synthesis}",
+                "latex": "Motif = Sum of Symbol (t) ⟹ Core Thematic Synthesis",
                 "note": "Systematic recurrence of a symbol across narrative milestones anchors the central message."
             }
         ],
@@ -1959,17 +1959,17 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "Acoustic Phoneme Repetition Law",
-                "latex": "\\text{Alliteration} \\iff \\text{InitialPhoneme}(W_1) = \\text{InitialPhoneme}(W_2) = \\text{InitialPhoneme}(W_3) \\quad (\\text{Phonetic Sound, not Typography})",
+                "latex": "Alliteration ⟺ InitialPhoneme(W (1)) = InitialPhoneme(W (2)) = InitialPhoneme(W (3)) (Phonetic Sound not Typography)",
                 "note": "'Photo' and 'fire' alliterate (/f/), whereas 'cat' and 'city' do not (/k/ vs. /s/)."
             },
             {
                 "title": "Onomatopoeic Echoic Mimesis",
-                "latex": "\\text{Pronunciation}(W) \\approx \\text{Acoustic Sound of Referent} \\quad (\\text{'buzz', 'clatter', 'murmur', 'hiss'})",
+                "latex": "Pronunciation(W) ≈ Acoustic Sound of Referent ('buzz' 'clatter' 'murmur' 'hiss')",
                 "note": "Phonological mimesis where spoken articulation echoes the physical natural event."
             },
             {
                 "title": "Euphony vs. Cacophony Phonetic Resonance",
-                "latex": "\\begin{cases} \\text{Euphony (Melodic Flow)} & \\implies \\text{Liquids & Nasals: } /l, m, n, r, v, w/ \\ \\text{Cacophony (Harsh Tension)} & \\implies \\text{Plosives: } /p, b, t, d, k, g/ \\end{cases}",
+                "latex": "Euphony (Melodic Flow) ➔  ⟹ Liquids ➔ Nasals: /l m n r v w/ Cacophony (Harsh Tension) ➔  ⟹ Plosives: /p b t d k g/",
                 "note": "Acoustic texture shapes atmospheric tone from pastoral tranquility to violent upheaval."
             }
         ],
@@ -2015,17 +2015,17 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "Tenor and Vehicle Dual Mapping Axiom",
-                "latex": "\\text{Metaphor} = \\mathbf{T}\\text{enor} \\xrightarrow{\\text{Ground (Shared Attribute)}} \\mathbf{V}\\text{ehicle} \\quad (\\mathbf{T} \\equiv \\mathbf{V})",
+                "latex": "Metaphor = Tenor ➔ [Ground (Shared Attribute)] ➔ Vehicle (T ≡ V)",
                 "note": "The Tenor is the primary subject; the Vehicle is the figurative image; the Ground is the shared property."
             },
             {
                 "title": "Simile Comparison Calculus",
-                "latex": "\\text{Simile} = \\mathbf{T} \\sim \\mathbf{V} \\iff \\mathbf{T} \\text{ possesses qualities } [\\text{'like' } \\lor \\text{ 'as'}] \\; \\mathbf{V}",
+                "latex": "Simile = T sim V ⟺ T possesses qualities ['like' lor 'as'] V",
                 "note": "Preserves ontological distinction between subjects while mapping vivid sensory likeness."
             },
             {
                 "title": "Extended Conceit Propagation Law",
-                "latex": "\\text{Extended Conceit} = \\sum_{k=1}^{n} \\text{Attribute}(\\mathbf{V})_k \\to \\text{Attribute}(\\mathbf{T})_k",
+                "latex": "Extended Conceit = Sum of Attribute(V) (k) to Attribute(T) (k)",
                 "note": "A sustained metaphor developed across an entire poem, dramatic scene, or novel chapter."
             }
         ],
@@ -2070,17 +2070,17 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "Multi-Sensory Imagery Integration Vector",
-                "latex": "\\vec{I} = \\langle \\text{Visual}, \\text{Auditory}, \\text{Olfactory}, \\text{Gustatory}, \\text{Tactile / Kinesthetic} \\rangle",
+                "latex": "I = langle Visual Auditory Olfactory Gustatory Tactile / Kinesthetic rangle",
                 "note": "Multi-modal cognitive transduction transporting the reader directly into the tactile scene."
             },
             {
                 "title": "Symbolic Elevation Functional Mapping",
-                "latex": "f: \\text{Concrete Physical Artifact} \\xrightarrow{\\text{Narrative Context}} \\text{Universal Abstract Concept}",
+                "latex": "f: Concrete Physical Artifact ➔ [Narrative Context] ➔ Universal Abstract Concept",
                 "note": "A physical object (green light, mockingbird, scarlet letter) represents an enduring moral truth."
             },
             {
                 "title": "Leitmotif Thematic Recurrence Formula",
-                "latex": "\\text{Core Theme} \\propto \\sum_{t=1}^{T} \\text{Symbol Occurrence}_t \\quad (\\text{Systematic Motif Recurrence})",
+                "latex": "Core Theme propto Sum of Symbol Occurrence (t) (Systematic Motif Recurrence)",
                 "note": "Systematic recurrence of a symbol across dramatic turning points cements the author's primary theme."
             }
         ],
@@ -2125,17 +2125,17 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "Narrative Chronological Deviation Vector",
-                "latex": "T_{\\text{narrative}} = \\begin{cases} t_{\\text{present}} + \\Delta t & (\\text{Foreshadowing / Prolepsis: Clue pointing forward}) \\ t_{\\text{present}} - \\Delta t & (\\text{Flashback / Analepsis: Retrospective memory}) \\end{cases}",
+                "latex": "T (narrative) = t (present) + Delta t ➔ (Foreshadowing / Prolepsis: Clue pointing forward) t (present) - Delta t ➔ (Flashback / Analepsis: Retrospective memory)",
                 "note": "Disrupts linear chronological progression to build dramatic tension and reveal character motivation."
             },
             {
                 "title": "Chekhov's Gun Dramatic Invariant",
-                "latex": "\\text{Element Introduced in Act } 1 \\implies \\text{Discharged in Act } 3 \\quad (\\text{Zero Superfluous Artifacts})",
+                "latex": "Element Introduced in Act 1 ⟹ Discharged in Act 3 (Zero Superfluous Artifacts)",
                 "note": "Anton Chekhov's dramatic law: Every foreshadowed token must possess narrative consequence."
             },
             {
                 "title": "Dramatic Suspense Delta Equation",
-                "latex": "\\Delta_{\\text{suspense}} = \\text{Knowledge}_{\\text{reader}} - \\text{Knowledge}_{\\text{character}}",
+                "latex": "Delta (suspense) = Knowledge (reader) - Knowledge (character)",
                 "note": "Foreshadowing grants the reader predictive insight, creating suspense as characters approach danger."
             }
         ],
@@ -2180,17 +2180,17 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "The Tripartite Irony Matrix",
-                "latex": "\\text{Irony} = \\begin{cases} \\text{Verbal} & \\iff \\text{Expression} \\neq \\text{Intended Meaning (Sarcasm)} \\ \\text{Situational} & \\iff \\text{Actual Outcome} \\equiv \\neg(\\text{Expected Outcome}) \\ \\text{Dramatic} & \\iff \\text{Audience Insight} > \\text{Character Insight} \\end{cases}",
+                "latex": "Irony = Verbal ➔  ⟺ Expression ≠ Intended Meaning (Sarcasm) Situational ➔  ⟺ Actual Outcome ≡ neg(Expected Outcome) Dramatic ➔  ⟺ Audience Insight > Character Insight",
                 "note": "The fundamental taxonomy of ironic dissonance between expectation and reality."
             },
             {
                 "title": "Satirical Moral Critique Formulation",
-                "latex": "\\text{Satire} = \\text{Ridicule / Exaggeration} \\times \\text{Ethical Reform Purpose} \\implies \\text{Societal Correction}",
+                "latex": "Satire = Ridicule / Exaggeration × Ethical Reform Purpose ⟹ Societal Correction",
                 "note": "Satire differs from gratuitous mockery by possessing a constructive moral purpose."
             },
             {
                 "title": "Horatian vs. Juvenalian Satire Spectrum",
-                "latex": "\\text{Satirical Register} = \\begin{cases} \\text{Horatian} & (\\text{Playful, gentle, amused ridicule of human foibles}) \\ \\text{Juvenalian} & (\\text{Biting, indignant, harsh condemnation of corruption}) \\end{cases}",
+                "latex": "Satirical Register = Horatian ➔ (Playful gentle amused ridicule of human foibles) Juvenalian ➔ (Biting indignant harsh condemnation of corruption)",
                 "note": "Example: Pope's 'Rape of the Lock' (Horatian) vs. Swift's 'A Modest Proposal' (Juvenalian)."
             }
         ],
@@ -2235,17 +2235,17 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "Narrative Agency and Kinetic Desire Model",
-                "latex": "\\text{Protagonist} = \\mathbf{C}_{\\text{core}} \\implies \\text{Goal}(G) + \\text{Motive}(M) \\quad (\\text{Primary Kinetic Driver})",
+                "latex": "Protagonist = C (core) ⟹ Goal(G) + Motive(M) (Primary Kinetic Driver)",
                 "note": "The protagonist is defined by having the primary desire and agency driving the narrative trajectory."
             },
             {
                 "title": "Dramatic Conflict Vector Collision",
-                "latex": "\\text{Dramatic Tension} = \\vec{V}(\\text{Protagonist Goal}) \\cdot \\vec{V}(\\text{Antagonist Resistance}) < 0",
+                "latex": "Dramatic Tension = V(Protagonist Goal) cdot V(Antagonist Resistance) < 0",
                 "note": "Dramatic conflict occurs when the vectors of protagonist desire and antagonist opposition directly collide."
             },
             {
                 "title": "Antagonist Ontological Spectrum",
-                "latex": "\\text{Antagonist} = \\begin{cases} \\text{Personal Adversary} & (\\text{Iago, Voldemort}) \\ \\text{Environmental Force} & (\\text{The Sea in 'The Old Man and the Sea'}) \\ \\text{Institutional System} & (\\text{The Capitol in 'The Hunger Games'}) \\ \\text{Internal Demon} & (\\text{Guilt in 'Macbeth'}) \\end{cases}",
+                "latex": "Antagonist = Personal Adversary ➔ (Iago Voldemort) Environmental Force ➔ (The Sea in 'The Old Man and the Sea') Institutional System ➔ (The Capitol in 'The Hunger Games') Internal Demon ➔ (Guilt in 'Macbeth')",
                 "note": "An antagonist spans interpersonal, environmental, systemic, and psychological dimensions."
             }
         ],
@@ -2290,17 +2290,17 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "Jungian Collective Unconscious Archetype Mapping",
-                "latex": "\\text{Archetype} = f(\\text{Collective Unconscious}) \\implies \\text{Universal Cross-Cultural Resonance}",
+                "latex": "Archetype = f(Collective Unconscious) ⟹ Universal Cross-Cultural Resonance",
                 "note": "Carl Jung's analytical model: Archetypes draw upon universal human psychological templates."
             },
             {
                 "title": "The Campbellian Monomyth Distribution",
-                "latex": "\\text{Character Cast} = \\{\\text{Hero}, \\text{Mentor}, \\text{Shadow}, \\text{Guardian}, \\text{Herald}, \\text{Trickster}, \\text{Shapeshifter}\\}",
+                "latex": "Character Cast = {Hero Mentor Shadow Guardian Herald Trickster Shapeshifter}",
                 "note": "Joseph Campbell's classic dramatis personae distribution in 'The Hero with a Thousand Faces'."
             },
             {
                 "title": "Modern Subversion Equation",
-                "latex": "\\text{Complex Character} = \\text{Base Archetype} \\oplus \\text{Psychological Idiosyncrasy} \\quad (\\text{Subverts Trope Cliché})",
+                "latex": "Complex Character = Base Archetype oplus Psychological Idiosyncrasy (Subverts Trope Cliché)",
                 "note": "Elevates characters beyond flat tropes by adding internal conflict and unexpected vulnerabilities."
             }
         ],
@@ -2345,17 +2345,17 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "Dynamic Character Arc Differential",
-                "latex": "\\Delta \\text{Character} = \\text{State}_{\\text{climax}} - \\text{State}_{\\text{exposition}} \\neq 0 \\implies \\text{Dynamic Growth / Fall}",
+                "latex": "Delta Character = State (climax) - State (exposition) ≠ 0 ⟹ Dynamic Growth / Fall",
                 "note": "Dynamic characters demonstrate internal transformation; static characters maintain invariant internal equilibrium."
             },
             {
                 "title": "The Lie vs. Truth Transformation Equilibrium",
-                "latex": "\\text{Transformation Arc} = \\text{The Lie Believed} \\xrightarrow{\\text{Narrative Crisis Ordeal}} \\text{The Truth Realized}",
+                "latex": "Transformation Arc = The Lie Believed ➔ [Narrative Crisis Ordeal] ➔ The Truth Realized",
                 "note": "The protagonist begins governed by a flawed belief, which the narrative ordeal shatters and reconfigures."
             },
             {
                 "title": "Forster Dimensionality Invariant",
-                "latex": "\\text{Character Depth} = \\begin{cases} \\text{Flat} & \\iff \\text{Defined by a single recurring trait / easily summarized} \\ \\text{Round} & \\iff \\text{Multi-dimensional, capable of surprising the reader convincingly} \\end{cases}",
+                "latex": "Character Depth = Flat ➔  ⟺ Defined by a single recurring trait / easily summarized Round ➔  ⟺ Multi-dimensional capable of surprising the reader convincingly",
                 "note": "E.M. Forster's classic distinction in 'Aspects of the Novel'."
             }
         ],
@@ -2400,17 +2400,17 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "Total Narrative Conflict Partition Formula",
-                "latex": "\\text{Total Conflict} = \\underbrace{\\text{Internal}(\\text{Self})}_{\\text{Psychological / Moral}} \\oplus \\underbrace{\\text{External}(\\text{Person} \\lor \\text{Nature} \\lor \\text{Society} \\lor \\text{Fate})}_{\\text{Physical / Institutional System}}",
+                "latex": "Total Conflict = underbrace{Internal(Self)} (Psychological / Moral) oplus underbrace{External(Person lor Nature lor Society lor Fate)} (Physical / Institutional System)",
                 "note": "The complete structural taxonomy of literary dramatic friction."
             },
             {
                 "title": "Character vs. Self Internal Moral Dilemma Equation",
-                "latex": "\\text{Internal Agony} = \\text{Duty / Loyalty} \\oplus \\neg(\\text{Personal Desire}) \\implies \\text{Ethical Crisis}",
+                "latex": "Internal Agony = Duty / Loyalty oplus neg(Personal Desire) ⟹ Ethical Crisis",
                 "note": "Example: Hamlet torn between sacred filial duty and existential moral revulsion."
             },
             {
                 "title": "Character vs. Society Hegemony Dynamic",
-                "latex": "\\text{Societal Conflict} = \\text{Individual Human Autonomy} \\leftrightarrow \\text{Systemic Institutional Oppression}",
+                "latex": "Societal Conflict = Individual Human Autonomy left ➔ Systemic Institutional Oppression",
                 "note": "Example: Winston Smith vs. The Party in 1984; Katniss Everdeen vs. The Capitol in The Hunger Games."
             }
         ],
@@ -2455,17 +2455,17 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "Thematic Propositional Formulation Axiom",
-                "latex": "\\text{Theme} = \\mathbf{Proposition}(\\text{Topic}, \\text{Universal Human Truth}) \\quad (\\text{Complete Sentence})",
+                "latex": "Theme = Proposition(Topic Universal Human Truth) (Complete Sentence)",
                 "note": "A theme transcends the plot topic to assert an arguable truth about the human condition."
             },
             {
                 "title": "Thematic Induction via Conflict Resolution",
-                "latex": "\\text{Subject} \\xrightarrow{\\Delta \\text{Protagonist} + \\text{Climax Resolution}} \\text{Thematic Proposition}",
+                "latex": "Subject ➔ [Delta Protagonist + Climax Resolution] ➔ Thematic Proposition",
                 "note": "Readers deduce theme by tracking character growth through the story's ultimate crisis."
             },
             {
                 "title": "Semantic Distillation Invariant",
-                "latex": "\\text{Theme} \\neq \\text{Plot Summary} \\land \\text{Theme} \\neq \\text{Topical Motif} \\implies \\text{Arguable Life Insight}",
+                "latex": "Theme ≠ Plot Summary land Theme ≠ Topical Motif ⟹ Arguable Life Insight",
                 "note": "Theme is distinct from the events that occurred (plot) and the general subject matter (topic)."
             }
         ],
@@ -2510,17 +2510,17 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "Universal Invariance Invariant",
-                "latex": "\\forall \\, \\text{Culture } c, \\, \\forall \\, \\text{Era } t: \\quad \\text{Resonance}(\\mathbf{U}, c, t) > 0 \\quad (\\mathbf{U} \\in \\text{Universal Themes})",
+                "latex": "forall Culture c forall Era t: Resonance(U c t) > 0 (U in Universal Themes)",
                 "note": "A universal theme maintains positive thematic resonance regardless of historical or cultural parameters."
             },
             {
                 "title": "Universal Archetype Canonical Set",
-                "latex": "\\mathbf{U}_{\\text{canon}} = \\{\\text{Coming of Age}, \\text{Good vs. Evil}, \\text{Hubris vs. Nemesis}, \\text{Sacrifice}, \\text{Justice}\\}",
+                "latex": "U (canon) = {Coming of Age Good vs. Evil Hubris vs. Nemesis Sacrifice Justice}",
                 "note": "The core thematic archetypes that recur across world literature and oral storytelling."
             },
             {
                 "title": "Cross-Cultural Setting Transformation",
-                "latex": "\\text{Narrative}(c, t) = \\mathbf{U} \\otimes \\text{Setting Specifics}(c, t) \\implies \\text{Shared Universal Core}",
+                "latex": "Narrative(c t) = U o × Setting Specifics(c t) ⟹ Shared Universal Core",
                 "note": "Different cultures dress universal themes in distinct settings and mythologies while retaining the same underlying human truth."
             }
         ],
@@ -2565,17 +2565,17 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "Semiotic Thematic Transduction Formula",
-                "latex": "\\mathbf{S}_{\\text{physical}} \\xrightarrow{\\text{Textual Semiotics}} \\mathbf{I}_{\\text{abstract}} \\implies \\text{Thematic Reinforcement}",
+                "latex": "S (physical) ➔ [Textual Semiotics] ➔ I (abstract) ⟹ Thematic Reinforcement",
                 "note": "A tangible physical object channels and reinforces an intangible thematic argument."
             },
             {
                 "title": "Symbol Mutation Thematic Delta",
-                "latex": "\\Delta \\mathbf{S} = \\mathbf{S}_{\\text{resolution}} - \\mathbf{S}_{\\text{exposition}} \\iff \\Delta \\text{Theme Status}",
+                "latex": "Delta S = S (resolution) - S (exposition) ⟺ Delta Theme Status",
                 "note": "When a symbol is broken, transformed, or renewed, it signals the definitive thematic resolution."
             },
             {
                 "title": "Motif Recurrence Weight Model",
-                "latex": "\\text{Thematic Resonance} \\propto \\sum_{k=1}^{n} \\text{Symbol Occurrence}_k \\times \\text{Emotional Salience}_k",
+                "latex": "Thematic Resonance propto Sum of Symbol Occurrence (k) × Emotional Salience (k)",
                 "note": "The more frequent and emotionally charged a symbol appears, the more central it is to the theme."
             }
         ],
@@ -2620,17 +2620,17 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "Authorial Evaluative Stance Model",
-                "latex": "\\text{Author's Message} = f(\\text{Character Fates}, \\text{Conflict Climax}, \\text{Narrative Tone})",
+                "latex": "Author's Message = f(Character Fates Conflict Climax Narrative Tone)",
                 "note": "The message is decoded by analyzing the synthesis of narrative consequences and rhetorical tone."
             },
             {
                 "title": "Normative Value Vector Collator",
-                "latex": "\\vec{M}_{\\text{author}} = \\sum \\mathbf{V}(\\text{Virtues Rewarded}) - \\sum \\mathbf{V}(\\text{Vices Punished})",
+                "latex": "M (author) = Sum of V(Virtues Rewarded) - Sum of V(Vices Punished)",
                 "note": "The author's moral position is revealed by the ethical alignment of narrative outcomes."
             },
             {
                 "title": "Hermeneutic Reader Inference Axiom",
-                "latex": "\\text{Reader Inference} \\approx \\lim_{t \\to \\text{Resolution}} \\left( \\text{Plot Outcomes}(t) \\right) \\implies \\text{Authorial Moral Imperative}",
+                "latex": "Reader Inference ≈ lim (t to Resolution) (Plot Outcomes(t)) ⟹ Authorial Moral Imperative",
                 "note": "As the plot concludes, the trajectory of character consequences crystallizes the author's message."
             }
         ],
@@ -2675,17 +2675,17 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "Fiction Ontological Classification Model",
-                "latex": "\\text{Genre} = \\mathbf{G}(\\text{World Laws}, \\text{Technological Plausibility}, \\text{Thematic Tropes})",
+                "latex": "Genre = G(World Laws Technological Plausibility Thematic Tropes)",
                 "note": "A genre is classified by the physical laws of its setting and the plausibility of its premises."
             },
             {
                 "title": "Speculative Novum Divergence Equation",
-                "latex": "\\text{Speculative Fiction} = \\text{Primary Reality} \\oplus \\mathbf{Novum}(\\text{Magic} \\lor \\text{Advanced Tech})",
+                "latex": "Speculative Fiction = Primary Reality oplus Novum(Magic lor Advanced Tech)",
                 "note": "Darko Suvin's cognitive estrangement: Science fiction pivots on a rationalized novum."
             },
             {
                 "title": "Genre Hybridization Calculus",
-                "latex": "\\text{Genre}_{\\text{hybrid}} = \\text{Genre}_A \\cap \\text{Genre}_B \\quad (\\text{e.g., Sci-Fi Noir, Historical Fantasy})",
+                "latex": "Genre (hybrid) = Genre (A) cap Genre (B) (e. g. Sci-Fi Noir Historical Fantasy)",
                 "note": "Modern literary craft frequently blends conventions from disparate genre traditions."
             }
         ],
@@ -2730,17 +2730,17 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "Non-Fiction Veracity Invariant",
-                "latex": "\\forall \\, \\text{Fact Claim } c \\in \\text{Non-Fiction}: \\quad \\text{Verifiable}(c, \\mathbf{Primary Sources}) \\equiv \\mathbf{True}",
+                "latex": "forall Fact Claim c in Non-Fiction: Verifiable(c Primary Sources) ≡ True",
                 "note": "Non-fiction demands empirical veracity grounded in archival and primary source evidence."
             },
             {
                 "title": "Biographical Perspective Vector",
-                "latex": "\\text{Perspective} = \\begin{cases} \\text{Autobiography / Memoir} & \\implies \\mathbf{Author} \\equiv \\mathbf{Subject} \\quad (1^{\\text{st}} \\text{ Person}) \\ \\text{Biography} & \\implies \\mathbf{Author} \\neq \\mathbf{Subject} \\quad (3^{\\text{rd}} \\text{ Person}) \\end{cases}",
+                "latex": "Perspective = Autobiography / Memoir ➔  ⟹ Author ≡ Subject (1^(st) Person) Biography ➔  ⟹ Author ≠ Subject (3^(rd) Person)",
                 "note": "Perspective divides along authorial identity and internal vs. external narrative point of view."
             },
             {
                 "title": "Memoir Temporal Partition Calculus",
-                "latex": "\\text{Memoir} = \\text{Life History} \\cap [t_{\\text{start}}, t_{\\text{end}}] \\quad (\\text{Focused Thematic Sub-Epoch})",
+                "latex": "Memoir = Life History cap [t (start) t (end)] (Focused Thematic Sub-Epoch)",
                 "note": "A memoir focuses on a bounded thematic epoch rather than an exhaustive cradle-to-grave chronology."
             }
         ],
@@ -2785,17 +2785,17 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "Shakespearean Sonnet Rhyme Architecture",
-                "latex": "\\text{Sonnet}_{14} = 3 \\times \\text{Quatrain}(\\text{ABAB}, \\text{CDCD}, \\text{EFEF}) + 1 \\times \\text{Couplet}(\\text{GG})",
+                "latex": "Sonnet (14) = 3 × Quatrain(ABAB CDCD EFEF) + 1 × Couplet(GG)",
                 "note": "Three interlocking alternating quatrains followed by a climactic closing rhyming couplet."
             },
             {
                 "title": "Iambic Pentameter Metric Cadence",
-                "latex": "\\text{Line Meter} = 5 \\times [\\breve{u} \\, \\acute{-}] \\implies 10 \\text{ Syllables per Verse} \\quad (\\text{Unstressed} + \\text{Stressed})",
+                "latex": "Line Meter = 5 × [breve{u} acute{-}] ⟹ 10 Syllables per Verse (Unstressed + Stressed)",
                 "note": "Mimics the natural rhythm of the human heartbeat and natural English speech cadence."
             },
             {
                 "title": "Haiku Syllabic Tercet Invariant",
-                "latex": "\\mathbf{H} = [5, 7, 5] \\implies \\sum_{i=1}^{3} \\text{Syllables}_i = 17 \\quad (\\text{Captures a seasonal Kigo})",
+                "latex": "H = [5 7 5] ⟹ Sum of Syllables (i) = 17 (Captures a seasonal Kigo)",
                 "note": "A disciplined Japanese nature tercet capturing an instant of heightened sensory awareness."
             }
         ],
@@ -2840,17 +2840,17 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "Dramatic Enactment Function",
-                "latex": "\\text{Drama} = \\mathbf{Script}(\\text{Dialogue}, \\text{Stage Directions}) \\xrightarrow{\\text{Theatrical Performance}} \\text{Embodied Reality}",
+                "latex": "Drama = Script(Dialogue Stage Directions) ➔ [Theatrical Performance] ➔ Embodied Reality",
                 "note": "Drama is designed for live physical interpretation rather than passive text consumption."
             },
             {
                 "title": "Soliloquy Epistemic Truth Invariant",
-                "latex": "\\text{Soliloquy}(c) \\implies \\text{Psychological Truth}(c) \\quad (\\text{Unfiltered by Interpersonal Deception})",
+                "latex": "Soliloquy(c) ⟹ Psychological Truth(c) (Unfiltered by Interpersonal Deception)",
                 "note": "Characters may lie in dialogue, but dramatic conventions hold that soliloquies reveal honest internal truth."
             },
             {
                 "title": "Stage Proxemic Spatial Coordinate Vector",
-                "latex": "\\vec{P}_{\\text{stage}} = [\\text{Upstage}, \\text{Downstage}, \\text{Stage Left}, \\text{Stage Right}] \\otimes \\text{Actor Proxemics}",
+                "latex": "P (stage) = [Upstage Downstage Stage Left Stage Right] o × Actor Proxemics",
                 "note": "Classical theatrical coordinate system governing movement from the performer's perspective."
             }
         ],
@@ -2895,17 +2895,17 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "Freytag Dramatic Tension Function",
-                "latex": "T(t) = \\begin{cases} T_0 + \\alpha t & \\text{Exposition } (0 \\le t < t_1) \\ T(t_1) + k(t - t_1)^2 & \\text{Rising Action } (t_1 \\le t < t_{\\text{climax}}) \\ T_{\\max} & \\text{Climax Peak } (t = t_{\\text{climax}}) \\ T_{\\max} - \\beta(t - t_{\\text{climax}}) & \\text{Falling Action } (t_{\\text{climax}} < t \\le t_{\\text{res}}) \\end{cases}",
+                "latex": "T(t) = T (0) + α t ➔ Exposition (0 le t < t (1)) T(t (1)) + k(t - t (1))^2 ➔ Rising Action (t (1) le t < t (climax)) T (max) ➔ Climax Peak (t = t (climax)) T (max) - β(t - t (climax)) ➔ Falling Action (t (climax) < t le t (res))",
                 "note": "Mathematical curve tracking dramatic tension from initial exposition through peak climax to resolution."
             },
             {
                 "title": "Peripeteia Climax Turning Point Invariant",
-                "latex": "\\frac{dT}{dt} \\Big|_{t_{\\text{climax}}} = 0 \\quad (\\text{Peak Tension / Irreversible Pivot})",
+                "latex": "(dT / dt) Big (t_{climax)} = 0 (Peak Tension / Irreversible Pivot)",
                 "note": "At the climax, tension reaches its local maximum, forcing an irreversible transition into consequences."
             },
             {
                 "title": "Denouement Equilibrium Law",
-                "latex": "\\lim_{t \\to t_{\\text{final}}} T(t) = T_{\\text{new equilibrium}} \\quad (\\text{Catharsis / Restored Order})",
+                "latex": "lim (t to t_{final)} T(t) = T (new equilibrium) (Catharsis / Restored Order)",
                 "note": "Aristotelian catharsis and narrative closure restore emotional and societal balance."
             }
         ],
@@ -2950,17 +2950,17 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "Total Narrative Conflict Partition Matrix",
-                "latex": "\\mathbf{C}_{\\text{total}} = \\mathbf{C}_{\\text{internal}}(\\text{Self}) \\oplus \\sum_{k} \\mathbf{C}_{\\text{external}}(\\text{Person}_k, \\text{Society}, \\text{Nature}, \\text{Tech})",
+                "latex": "C (total) = C (internal)(Self) oplus sum (k) C (external)(Person (k) Society Nature Tech)",
                 "note": "Total story friction is the direct sum of internal psychological and external situational conflicts."
             },
             {
                 "title": "Dramatic Resistance Vector Dynamic",
-                "latex": "\\vec{F}_{\\text{friction}} = \\vec{V}(\\text{Protagonist Agency}) \\times \\vec{R}(\\text{Antagonist Force}) \\neq 0",
+                "latex": "F (friction) = V(Protagonist Agency) × R(Antagonist Force) ≠ 0",
                 "note": "Narrative momentum requires continuous non-zero resistance against the protagonist's goals."
             },
             {
                 "title": "Climactic Resolution Invariant",
-                "latex": "\\lim_{t \\to t_{\\text{resolution}}} \\mathbf{C}_{\\text{total}}(t) \\to 0 \\implies \\text{Narrative Closure Established}",
+                "latex": "lim (t to t_{resolution)} C (total)(t) to 0 ⟹ Narrative Closure Established",
                 "note": "The exhaustion or decisive resolution of the core conflict brings narrative closure."
             }
         ],
@@ -3005,17 +3005,17 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "Genette Narrative Pacing Ratio",
-                "latex": "\\text{Pacing} = \\frac{\\Delta \\text{Story Time } (\\text{Diegesis})}{\\Delta \\text{Discourse Time } (\\text{Text Words})} \\implies \\begin{cases} \\to \\infty & \\text{Ellipsis (Instant Skip)} \\ \\approx 1 & \\text{Dialogue / Scene (Real Time)} \\ \\to 0 & \\text{Descriptive Pause (Dilated Time)} \\end{cases}",
+                "latex": "Pacing = (Delta Story Time (Diegesis) / Delta Discourse Time (Text Words)) ⟹ to ∞ ➔ Ellipsis (Instant Skip) ≈ 1 ➔ Dialogue / Scene (Real Time) to 0 ➔ Descriptive Pause (Dilated Time)",
                 "note": "Gérard Genette's foundational narratological formula for temporal pacing."
             },
             {
                 "title": "Dramatic Irony Suspense Gradient",
-                "latex": "\\text{Suspense} \\propto I_{\\text{reader}}(\\text{Impending Hazard}) - I_{\\text{character}}(\\text{Impending Hazard})",
+                "latex": "Suspense propto I (reader)(Impending Hazard) - I (character)(Impending Hazard)",
                 "note": "Suspense reaches peak intensity when the reader knows the imminent danger while the character remains oblivious."
             },
             {
                 "title": "Syntactic Velocity Index",
-                "latex": "v_{\\text{tempo}} \\propto \\frac{1}{\\overline{\\text{Words per Sentence}}} \\times \\text{Active Kinetic Verb Frequency}",
+                "latex": "v (tempo) propto (1 / overline{Words per Sentence)} × Active Kinetic Verb Frequency",
                 "note": "Shorter sentence length directly correlates with higher perceived reading tempo and urgency."
             }
         ],
@@ -3060,17 +3060,17 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "Campbellian Monomyth Cyclic Vector",
-                "latex": "\\vec{\\mathbf{A}}_{\\text{Quest}} = \\text{Departure} \\to \\text{Initiation} \\to \\text{Apotheosis} \\to \\text{Return With Boon}",
+                "latex": "A (Quest) = Departure to Initiation to Apotheosis to Return With Boon",
                 "note": "Joseph Campbell's cyclical heroic journey across the threshold of adventure and return."
             },
             {
                 "title": "Tragic Downfall Degeneration Curvature",
-                "latex": "\\mathbf{A}_{\\text{Tragedy}}(t) = -a(t - t_0)^2 + h_{\\max} \\quad (\\text{Catastrophic Demise via Hamartia})",
+                "latex": "A (Tragedy)(t) = -a(t - t (0))^2 + h (max) (Catastrophic Demise via Hamartia)",
                 "note": "The tragic trajectory peaks in fortune before descending irreversibly into catastrophe."
             },
             {
                 "title": "Frame Narrative Nested Topology",
-                "latex": "\\text{Narrative}_{\\text{nested}} = \\text{Frame}_{\\text{outer}} \\circ \\left( \\bigcup_{i=1}^{k} \\text{Story}_{\\text{inner}, i} \\right)",
+                "latex": "Narrative (nested) = Frame (outer) ∘ (Union of Story (inner i))",
                 "note": "A framing narrator introduces and contains one or more embedded internal narratives."
             }
         ],
@@ -3115,17 +3115,17 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "Literary Voice Stylistic Formulation Law",
-                "latex": "\\text{Style} = \\mathbf{Diction}(\\text{Register}, \\text{Connotation}) \\otimes \\mathbf{Syntax}(\\text{Clause Architecture}, \\text{Cadence})",
+                "latex": "Style = Diction(Register Connotation) o × Syntax(Clause Architecture Cadence)",
                 "note": "Authorial voice emerges from the synergistic combination of vocabulary and sentence construction."
             },
             {
                 "title": "Connotative Semantic Mapping Vector",
-                "latex": "\\mathbf{Word} = \\mathbf{Denotation}(\\text{Literal}) + \\vec{\\mathbf{C}}(\\text{Emotional / Cultural Connotations})",
+                "latex": "Word = Denotation(Literal) + C(Emotional / Cultural Connotations)",
                 "note": "Authors choose words whose connotative vectors trigger specific affective responses in the reader."
             },
             {
                 "title": "Periodic Suspense Delay Function",
-                "latex": "\\text{Periodic Sentence} = \\left[ \\sum_{i=1}^{n} \\text{Subordinate Clause}_i \\right] \\to \\mathbf{Main Clause}_{\\text{resolution}} \\quad (\\text{Delayed Closure})",
+                "latex": "Periodic Sentence = [Sum of Subordinate Clause (i)] to Main Clause (resolution) (Delayed Closure)",
                 "note": "Withholding the main independent clause until the terminal period creates cumulative suspense."
             }
         ],
@@ -3170,17 +3170,17 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "Atmospheric Resonance Dual Model",
-                "latex": "\\begin{cases} \\text{Tone} & = \\mathbf{Attitude}_{\\text{author}} \\implies f(\\text{Diction}, \\text{Irony}, \\text{Perspective}) \\ \\text{Mood} & = \\mathbf{Affect}_{\\text{reader}} \\implies g(\\text{Setting}, \\text{Sensory Imagery}, \\text{Pacing}) \\end{cases}",
+                "latex": "Tone ➔ = Attitude (author) ⟹ f(Diction Irony Perspective) Mood ➔ = Affect (reader) ⟹ g(Setting Sensory Imagery Pacing)",
                 "note": "Tone originates from authorial stance; mood is synthesized through reader cognitive reception."
             },
             {
                 "title": "Ironic Tone Inversion Operator",
-                "latex": "\\text{Tone}_{\\text{ironic}} = \\mathbf{Literal Semantic Meaning} \\times (-1) \\implies \\text{Satirical Stance}",
+                "latex": "Tone (ironic) = Literal Semantic Meaning × (-1) ⟹ Satirical Stance",
                 "note": "In satire and irony, the author's true attitude directly inverts the literal textual statement."
             },
             {
                 "title": "Affective Atmosphere Synthesis",
-                "latex": "\\vec{\\mathbf{M}}_{\\text{mood}} = \\vec{\\mathbf{S}}_{\\text{setting}} + \\vec{\\mathbf{D}}_{\\text{diction}} + \\vec{\\mathbf{T}}_{\\text{tempo}}",
+                "latex": "M (mood) = S (setting) + D (diction) + T (tempo)",
                 "note": "The total atmospheric mood is the vector sum of sensory setting, word choice, and narrative speed."
             }
         ],
@@ -3225,17 +3225,17 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "Genette Narrative Focalization Model",
-                "latex": "\\mathbf{POV} = \\begin{cases} \\text{Zero Focalization (Omniscient)} & \\implies \\text{Narrator knows } > \\text{Character} \\ \\text{Internal Focalization (Limited / 1st)} & \\implies \\text{Narrator knows } = \\text{Character} \\ \\text{External Focalization (Objective)} & \\implies \\text{Narrator knows } < \\text{Character} \\end{cases}",
+                "latex": "POV = Zero Focalization (Omniscient) ➔  ⟹ Narrator knows > Character Internal Focalization (Limited / 1st) ➔  ⟹ Narrator knows = Character External Focalization (Objective) ➔  ⟹ Narrator knows < Character",
                 "note": "Gérard Genette's epistemic taxonomy of narrative information filtering."
             },
             {
                 "title": "Unreliable Narrator Divergence Vector",
-                "latex": "\\Delta \\mathbf{Truth} = \\|\\mathbf{Diegetic Fact} - \\mathbf{Narrator Retelling}\\| > 0 \\implies \\text{Unreliable Focalizer}",
+                "latex": "Delta Truth = Diegetic Fact - Narrator Retelling > 0 ⟹ Unreliable Focalizer",
                 "note": "Occurs when subjective narrative account diverges from authentic objective diegetic reality."
             },
             {
                 "title": "Epistemic Interiority Radius Invariant",
-                "latex": "R_{\\text{epistemic}} = \\begin{cases} 1 & \\text{First Person / Limited (Single Consciousness)} \\ \\infty & \\text{Omniscient (Universal Interiority)} \\ 0 & \\text{Objective Dramatic (Zero Internal Access)} \\end{cases}",
+                "latex": "R (epistemic) = 1 ➔ First Person / Limited (Single Consciousness) ∞ ➔ Omniscient (Universal Interiority) 0 ➔ Objective Dramatic (Zero Internal Access)",
                 "note": "Defines the boundary of psychological access granted to the reader."
             }
         ],
@@ -3280,17 +3280,17 @@ const grammarLessons = {
         "equations": [
             {
                 "title": "Embodied Sensory Immersion Vector",
-                "latex": "\\vec{\\mathbf{I}}_{\\text{sensory}} = [\\mathbf{Vis}, \\mathbf{Aud}, \\mathbf{Olf}, \\mathbf{Gust}, \\mathbf{Tact}, \\mathbf{Kin}, \\mathbf{Org}] \\implies \\text{Maximum Diegetic Presence}",
+                "latex": "I (sensory) = [Vis Aud Olf Gust Tact Kin Org] ⟹ Maximum Diegetic Presence",
                 "note": "Total immersion requires engaging multiple sensory channels across visual, acoustic, and visceral modalities."
             },
             {
                 "title": "'Show, Don't Tell' Concrete Transduction Invariant",
-                "latex": "\\text{Abstract Emotion}(\\mathbf{E}) \\xrightarrow{\\text{Sensory Details}} \\left\\{ \\text{Somatic Responses}, \\text{Sensory Actions}, \\text{Environmental Shifts} \\right\\}",
+                "latex": "Abstract Emotion(E) ➔ [Sensory Details] ➔ { Somatic Responses Sensory Actions Environmental Shifts }",
                 "note": "Transforms ungrounded abstract nouns into visceral bodily and environmental reality."
             },
             {
                 "title": "Synesthetic Cross-Modal Transfer Formula",
-                "latex": "\\mathbf{Synesthesia} = \\mathbf{Modality}_A \\otimes \\mathbf{Modality}_B \\quad (\\text{e.g., 'A loud, screaming yellow', 'A velvety smooth voice'})",
+                "latex": "Synesthesia = Modality (A) o × Modality (B) (e. g. 'A loud screaming yellow' 'A velvety smooth voice')",
                 "note": "Cross-wiring two sensory faculties enhances lyrical poetry and memorable prose."
             }
         ],
@@ -3313,8 +3313,16 @@ if (typeof window !== 'undefined' && !window.scienceLessons && typeof scienceLes
 }
 if (typeof window !== 'undefined' && !window.socialStudiesLessons && typeof socialStudiesLessons === 'undefined') {
     const sc2 = document.createElement('script');
-    sc2.src = '/assets/js/pages/social-studies-lessons.js?v=2.23.0';
+    sc2.src = '/assets/js/pages/social-studies-lessons.js?v=2.23.1';
     if (document.head) document.head.appendChild(sc2);
+}
+
+// Pre-prime MathJax engine in background for STEM (Math/Science) study modals only
+if (typeof window !== 'undefined' && typeof window.ensureMathJax === 'function') {
+    const isElaPage = window.location && window.location.pathname && (window.location.pathname.includes('ela-') || window.location.pathname.includes('grammar') || window.location.pathname.includes('literature'));
+    if (!isElaPage) {
+        window.ensureMathJax();
+    }
 }
 
 let modalUtterance = null;
@@ -3429,6 +3437,7 @@ function renderModalTopic(topicName, mode) {
         const isSocial = Boolean(socialData && socialData[canonicalTopic]);
         const isGrammar = Boolean(grammarData && grammarData[canonicalTopic]);
         const isLiterature = Boolean(litData && litData[canonicalTopic]);
+        const isELA = isGrammar || isLiterature || (!isMath && !isScience && !isSocial);
         
         // Handle Standard vs Basic English definitions
         if (mode === 'basic' && lesson.basicDefinition) {
@@ -3453,7 +3462,18 @@ function renderModalTopic(topicName, mode) {
             }
         }
 
-        // Handle Master Equations & Formula Vault
+        // Helper to format equations with LaTeX display delimiters ($$...$$) for STEM modals
+        const formatEquationLatex = (latex) => {
+            if (!latex) return '';
+            const trimmed = String(latex).trim();
+            if (trimmed.startsWith('$$') && trimmed.endsWith('$$')) return trimmed;
+            if (trimmed.startsWith('\\[') && trimmed.endsWith('\\]')) return trimmed;
+            if (trimmed.startsWith('\\(') && trimmed.endsWith('\\)')) return trimmed;
+            if (trimmed.startsWith('$') && trimmed.endsWith('$')) return trimmed;
+            return `$$${trimmed}$$`;
+        };
+
+        // Handle Master Equations & Formula Vault / ELA Syntax Rules
         if (eqWrap && eqEl) {
             if (lesson.equations && lesson.equations.length > 0) {
                 eqWrap.style.display = 'block';
@@ -3469,13 +3489,26 @@ function renderModalTopic(topicName, mode) {
                         eqTitle.innerHTML = '<i class="fas fa-spell-check" style="color: #0284c7;"></i> Syntax Rules &amp; Structural Formulations';
                     }
                 }
-                eqEl.innerHTML = lesson.equations.map(eq => `
-                    <div class="equation-vault-card">
-                        <span class="equation-vault-title">${eq.title}</span>
-                        <div class="equation-vault-latex">${eq.latex}</div>
-                        ${eq.note ? `<p class="equation-vault-note">${eq.note}</p>` : ''}
-                    </div>
-                `).join('');
+                
+                if (isELA) {
+                    // For ELA (Grammar & Literature): render as clean, normal styled text without MathJax
+                    eqEl.innerHTML = lesson.equations.map(eq => `
+                        <div class="equation-vault-card syntax-rule-card">
+                            <span class="equation-vault-title">${eq.title}</span>
+                            <div class="syntax-rule-text">${eq.latex || eq.rule || ''}</div>
+                            ${eq.note ? `<p class="equation-vault-note">${eq.note}</p>` : ''}
+                        </div>
+                    `).join('');
+                } else {
+                    // For STEM (Math, Science, Social Studies): render formulas for MathJax
+                    eqEl.innerHTML = lesson.equations.map(eq => `
+                        <div class="equation-vault-card">
+                            <span class="equation-vault-title">${eq.title}</span>
+                            <div class="equation-vault-latex">${formatEquationLatex(eq.latex)}</div>
+                            ${eq.note ? `<p class="equation-vault-note">${eq.note}</p>` : ''}
+                        </div>
+                    `).join('');
+                }
             } else {
                 eqWrap.style.display = 'none';
                 eqEl.innerHTML = '';
@@ -3557,11 +3590,15 @@ function renderModalTopic(topicName, mode) {
             choicesEl.appendChild(btn);
         });
 
-        // Trigger dynamic MathJax typesetting if math expressions are present
-        if (typeof window.ensureMathJax === 'function') {
+        // Trigger dynamic MathJax typesetting only for non-ELA (STEM) topics
+        if (!isELA && typeof window.ensureMathJax === 'function') {
             const modalCard = document.getElementById('dynamic-modal-card');
             if (modalCard) {
-                window.ensureMathJax(modalCard);
+                window.ensureMathJax(modalCard).then(mj => {
+                    if (mj && mj.typesetPromise) {
+                        mj.typesetPromise([modalCard]).catch(e => console.debug('MathJax modal typeset note:', e));
+                    }
+                }).catch(e => console.debug('ensureMathJax modal note:', e));
             }
         }
     } else {
@@ -3792,6 +3829,25 @@ window.openDynamicModal = function(topicName, updateUrlHash = true) {
         modal.classList.add('active');
         const closeIcon = modal.querySelector('.dynamic-modal-close-icon');
         if (closeIcon && typeof closeIcon.focus === 'function') closeIcon.focus();
+
+        // Ensure MathJax renders once modal layout is established (STEM only)
+        const gLessons = (typeof window !== 'undefined' && window.grammarLessons) || (typeof grammarLessons !== 'undefined' ? grammarLessons : null);
+        const lLessons = (typeof window !== 'undefined' && window.literatureLessons) || (typeof literatureLessons !== 'undefined' ? literatureLessons : null);
+        const isELAModal = Boolean(
+            (gLessons && gLessons[currentModalTopic]) ||
+            (lLessons && lLessons[currentModalTopic]) ||
+            (window.location && window.location.pathname && (window.location.pathname.includes('ela-') || window.location.pathname.includes('grammar') || window.location.pathname.includes('literature')))
+        );
+        if (!isELAModal && typeof window.ensureMathJax === 'function') {
+            const eqWrap = document.getElementById('dynamic-modal-equations-wrap');
+            if (eqWrap && eqWrap.style.display !== 'none') {
+                window.ensureMathJax(eqWrap).then(mj => {
+                    if (mj && mj.typesetPromise) {
+                        mj.typesetPromise([eqWrap]).catch(e => console.debug('MathJax active modal typeset note:', e));
+                    }
+                }).catch(e => console.debug('ensureMathJax active modal note:', e));
+            }
+        }
     }, 10);
     
     document.addEventListener('keydown', handleDynamicModalKeydown);

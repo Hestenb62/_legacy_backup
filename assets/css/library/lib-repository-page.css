@@ -1,0 +1,1050 @@
+/* ==========================================================================
+   Library Repository Page Styles (Punctuation & Syntactic Guides)
+   WCAG 2.1/2.2 AA & AAA Compliant, Dark/Midnight/Sepia Compatible
+   ========================================================================== */
+
+/* Main Container Layout */
+.repo-page-container {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 1rem 1.25rem 4rem 1.25rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* Breadcrumbs Navigation */
+.repo-breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--lib-text-muted);
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.repo-breadcrumbs a {
+    color: var(--lib-text-muted);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.repo-breadcrumbs a:hover,
+.repo-breadcrumbs a:focus-visible {
+    color: var(--lib-primary);
+    text-decoration: underline;
+}
+
+.repo-breadcrumbs .sep {
+    opacity: 0.5;
+    font-size: 0.75rem;
+}
+
+.repo-breadcrumbs .current {
+    color: var(--lib-text-main);
+    font-weight: 600;
+}
+
+/* Repository Hero Banner */
+.repo-hero-card {
+    background: var(--lib-glass-bg);
+    border: 1px solid var(--lib-glass-border);
+    backdrop-filter: blur(var(--lib-glass-blur));
+    -webkit-backdrop-filter: blur(var(--lib-glass-blur));
+    border-radius: var(--lib-radius-2xl);
+    padding: 2.25rem 2rem;
+    box-shadow: var(--lib-shadow-xl);
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.repo-hero-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.25rem;
+}
+
+.repo-back-catalog-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: var(--lib-radius-full);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--lib-text-main);
+    background: var(--lib-bg-surface);
+    border: 1px solid var(--lib-border);
+    text-decoration: none;
+    box-shadow: var(--lib-shadow-sm);
+    transition: all 0.2s ease;
+}
+
+.repo-back-catalog-btn:hover {
+    background: var(--lib-primary);
+    color: #ffffff;
+    border-color: var(--lib-primary);
+    transform: translateX(-2px);
+}
+
+.repo-back-catalog-btn:focus-visible {
+    outline: 3px solid var(--lib-primary);
+    outline-offset: 2px;
+}
+
+.repo-badges-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.repo-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.3rem 0.75rem;
+    border-radius: var(--lib-radius-full);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.repo-badge-level {
+    background: rgba(79, 70, 229, 0.12);
+    color: var(--lib-primary);
+    border: 1px solid rgba(79, 70, 229, 0.25);
+}
+
+.repo-badge-standards {
+    background: rgba(16, 185, 129, 0.12);
+    color: #059669;
+    border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+[data-theme="dark"] .repo-badge-standards {
+    color: #34d399;
+}
+
+.repo-hero-title {
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--lib-text-main);
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.02em;
+}
+
+.repo-hero-subtitle {
+    font-size: clamp(1rem, 1.75vw, 1.15rem);
+    color: var(--lib-text-muted);
+    line-height: 1.6;
+    max-width: 950px;
+    margin-bottom: 1.5rem;
+}
+
+/* Hero Action Toolbar */
+.repo-hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    padding-top: 1rem;
+    border-top: 1px solid var(--lib-border);
+}
+
+.repo-action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.55rem 1.1rem;
+    border-radius: var(--lib-radius-lg);
+    font-size: 0.875rem;
+    font-weight: 600;
+    background: var(--lib-bg-surface);
+    color: var(--lib-text-main);
+    border: 1px solid var(--lib-border);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.repo-action-btn:hover {
+    border-color: var(--lib-primary);
+    color: var(--lib-primary);
+    transform: translateY(-1px);
+    box-shadow: var(--lib-shadow-sm);
+}
+
+.repo-action-btn.primary {
+    background: var(--lib-primary);
+    color: #ffffff;
+    border-color: var(--lib-primary);
+}
+
+.repo-action-btn.primary:hover {
+    background: var(--lib-primary-hover);
+    color: #ffffff;
+}
+
+.repo-action-btn:focus-visible {
+    outline: 3px solid var(--lib-primary);
+    outline-offset: 2px;
+}
+
+/* Quick Navigator Bar (Sticky Search, Categories & Jump Pills) */
+.repo-nav-bar {
+    position: sticky;
+    top: 4.5rem;
+    z-index: 30;
+    background: var(--lib-glass-bg);
+    border: 1px solid var(--lib-glass-border);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: var(--lib-radius-xl);
+    padding: 1rem;
+    margin-bottom: 2.5rem;
+    box-shadow: var(--lib-shadow-lg);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.repo-filter-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.repo-search-wrap {
+    position: relative;
+    flex: 1;
+    min-width: 260px;
+    max-width: 420px;
+}
+
+.repo-search-icon {
+    position: absolute;
+    left: 0.9rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--lib-text-muted);
+    font-size: 0.9rem;
+    pointer-events: none;
+}
+
+.repo-search-input {
+    width: 100%;
+    padding: 0.6rem 2.2rem 0.6rem 2.5rem;
+    font-size: 0.9rem;
+    border-radius: var(--lib-radius-full);
+    border: 1px solid var(--lib-border);
+    background: var(--lib-bg-surface);
+    color: var(--lib-text-main);
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.repo-search-input:focus {
+    border-color: var(--lib-primary);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+}
+
+.repo-search-clear {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--lib-text-muted);
+    cursor: pointer;
+    font-size: 0.85rem;
+    padding: 0.2rem;
+    display: none;
+}
+
+.repo-search-clear.visible {
+    display: block;
+}
+
+.repo-category-tabs {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    overflow-x: auto;
+    padding-bottom: 0.25rem;
+    -webkit-overflow-scrolling: touch;
+}
+
+.repo-cat-tab {
+    padding: 0.45rem 0.85rem;
+    border-radius: var(--lib-radius-full);
+    font-size: 0.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+    border: 1px solid var(--lib-border);
+    background: var(--lib-bg-surface);
+    color: var(--lib-text-muted);
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.repo-cat-tab:hover {
+    color: var(--lib-text-main);
+    border-color: var(--lib-text-muted);
+}
+
+.repo-cat-tab.active {
+    background: var(--lib-primary);
+    color: #ffffff;
+    border-color: var(--lib-primary);
+}
+
+.repo-cat-tab:focus-visible {
+    outline: 3px solid var(--lib-primary);
+    outline-offset: 2px;
+}
+
+/* Quick Jump Glyph Ribbon */
+.repo-glyph-ribbon {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    overflow-x: auto;
+    padding: 0.35rem 0.25rem;
+    border-top: 1px dashed var(--lib-border);
+    -webkit-overflow-scrolling: touch;
+}
+
+.repo-glyph-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--lib-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-right: 0.25rem;
+    white-space: nowrap;
+}
+
+.repo-glyph-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.35rem 0.65rem;
+    border-radius: var(--lib-radius-md);
+    background: var(--lib-bg-surface);
+    border: 1px solid var(--lib-border);
+    color: var(--lib-text-main);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 700;
+    transition: all 0.15s ease;
+    white-space: nowrap;
+}
+
+.repo-glyph-pill .glyph {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 1.1rem;
+    color: var(--lib-primary);
+    line-height: 1;
+}
+
+.repo-glyph-pill:hover,
+.repo-glyph-pill:focus-visible {
+    background: rgba(79, 70, 229, 0.1);
+    border-color: var(--lib-primary);
+    transform: translateY(-2px);
+    outline: none;
+}
+
+.repo-glyph-pill:focus-visible {
+    outline: 3px solid var(--lib-primary);
+    outline-offset: 2px;
+}
+
+/* Punctuation Mark Cards Grid / Feed */
+.repo-marks-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin-bottom: 4rem;
+}
+
+.repo-mark-card {
+    background: var(--lib-bg-surface);
+    border: 1px solid var(--lib-border);
+    border-radius: var(--lib-radius-2xl);
+    padding: 2.25rem;
+    box-shadow: var(--lib-shadow-md);
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    scroll-margin-top: 14rem;
+}
+
+.repo-mark-card:hover {
+    border-color: rgba(79, 70, 229, 0.35);
+    box-shadow: var(--lib-shadow-xl);
+}
+
+.repo-mark-card.highlighted {
+    border-color: var(--lib-primary);
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.2), var(--lib-shadow-xl);
+    animation: repoPulse 2s ease-out;
+}
+
+@keyframes repoPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.01); }
+    100% { transform: scale(1); }
+}
+
+/* Mark Card Header */
+.repo-mark-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--lib-border);
+    flex-wrap: wrap;
+}
+
+.repo-mark-header-left {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.repo-mark-glyph-box {
+    width: 68px;
+    height: 68px;
+    border-radius: var(--lib-radius-xl);
+    background: linear-gradient(135deg, rgba(79, 70, 229, 0.12), rgba(236, 72, 153, 0.12));
+    border: 2px solid rgba(79, 70, 229, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.4rem;
+    font-weight: 800;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    color: var(--lib-primary);
+    user-select: all;
+    flex-shrink: 0;
+}
+
+.repo-mark-title-wrap h2 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--lib-text-main);
+    margin: 0 0 0.35rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.repo-mark-role {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--lib-text-muted);
+}
+
+.repo-mark-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.repo-copy-glyph-btn,
+.repo-speak-mark-btn {
+    padding: 0.45rem 0.85rem;
+    border-radius: var(--lib-radius-md);
+    background: var(--lib-bg-base);
+    border: 1px solid var(--lib-border);
+    color: var(--lib-text-main);
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: all 0.2s ease;
+}
+
+.repo-copy-glyph-btn:hover,
+.repo-speak-mark-btn:hover {
+    border-color: var(--lib-primary);
+    color: var(--lib-primary);
+}
+
+.repo-copy-glyph-btn:focus-visible,
+.repo-speak-mark-btn:focus-visible {
+    outline: 3px solid var(--lib-primary);
+    outline-offset: 2px;
+}
+
+/* Overview & Etymology Blocks */
+.repo-overview-text {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--lib-text-main);
+    margin-bottom: 1.5rem;
+}
+
+.repo-etymology-box {
+    background: var(--lib-bg-base);
+    border-left: 4px solid var(--lib-primary);
+    border-radius: 0 var(--lib-radius-lg) var(--lib-radius-lg) 0;
+    padding: 1rem 1.25rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--lib-text-muted);
+    margin-bottom: 2rem;
+}
+
+.repo-etymology-box strong {
+    color: var(--lib-text-main);
+}
+
+/* Canonical Rules Feed */
+.repo-rules-section {
+    margin-bottom: 2.25rem;
+}
+
+.repo-rules-heading {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--lib-text-main);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.repo-rules-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.repo-rule-item {
+    background: var(--lib-bg-base);
+    border: 1px solid var(--lib-border);
+    border-radius: var(--lib-radius-lg);
+    padding: 1rem 1.25rem;
+}
+
+.repo-rule-item-top {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    margin-bottom: 0.4rem;
+}
+
+.repo-rule-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: var(--lib-radius-full);
+    background: var(--lib-primary);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.repo-rule-title {
+    font-weight: 700;
+    color: var(--lib-text-main);
+    font-size: 1rem;
+}
+
+.repo-rule-statement {
+    font-size: 0.925rem;
+    line-height: 1.6;
+    color: var(--lib-text-main);
+    margin-bottom: 0.4rem;
+}
+
+.repo-rule-rationale {
+    font-size: 0.85rem;
+    color: var(--lib-text-muted);
+    line-height: 1.5;
+}
+
+.repo-rule-standard-tag {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--lib-primary);
+    background: rgba(79, 70, 229, 0.08);
+    padding: 0.2rem 0.5rem;
+    border-radius: var(--lib-radius-sm);
+}
+
+/* Contrasting Examples Comparison Grid */
+.repo-examples-section {
+    margin-bottom: 2rem;
+}
+
+.repo-examples-heading {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--lib-text-main);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.repo-examples-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .repo-examples-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.repo-example-card {
+    border-radius: var(--lib-radius-xl);
+    padding: 1.25rem;
+    border: 1px solid var(--lib-border);
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.repo-example-card.correct {
+    background: rgba(16, 185, 129, 0.05);
+    border-color: rgba(16, 185, 129, 0.35);
+}
+
+.repo-example-card.incorrect {
+    background: rgba(239, 68, 68, 0.05);
+    border-color: rgba(239, 68, 68, 0.35);
+}
+
+.repo-example-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 0.25rem 0.6rem;
+    border-radius: var(--lib-radius-full);
+    width: fit-content;
+}
+
+.repo-example-card.correct .repo-example-badge {
+    background: rgba(16, 185, 129, 0.15);
+    color: #059669;
+}
+
+[data-theme="dark"] .repo-example-card.correct .repo-example-badge {
+    color: #34d399;
+}
+
+.repo-example-card.incorrect .repo-example-badge {
+    background: rgba(239, 68, 68, 0.15);
+    color: #dc2626;
+}
+
+[data-theme="dark"] .repo-example-card.incorrect .repo-example-badge {
+    color: #f87171;
+}
+
+.repo-example-text {
+    font-size: 0.975rem;
+    font-weight: 600;
+    line-height: 1.6;
+    color: var(--lib-text-main);
+    padding: 0.75rem;
+    background: var(--lib-bg-surface);
+    border-radius: var(--lib-radius-md);
+    border: 1px dashed var(--lib-border);
+}
+
+.repo-example-card.correct .repo-example-text {
+    border-left: 3px solid #10b981;
+}
+
+.repo-example-card.incorrect .repo-example-text {
+    border-left: 3px solid #ef4444;
+}
+
+.repo-example-explanation {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: var(--lib-text-muted);
+}
+
+/* Pro Tips & Common Traps Callout */
+.repo-protip-box {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.08), rgba(245, 158, 11, 0.03));
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    border-radius: var(--lib-radius-xl);
+    padding: 1.25rem;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.repo-protip-icon {
+    color: #d97706;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+}
+
+[data-theme="dark"] .repo-protip-icon {
+    color: #fbbf24;
+}
+
+.repo-protip-content h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--lib-text-main);
+    margin: 0 0 0.4rem 0;
+}
+
+.repo-protip-content ul {
+    margin: 0;
+    padding-left: 1.25rem;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: var(--lib-text-muted);
+}
+
+.repo-protip-content li {
+    margin-bottom: 0.35rem;
+}
+
+/* ==========================================================================
+   Interactive Punctuation Mastery Lab (Quiz)
+   ========================================================================== */
+.repo-section-card {
+    background: var(--lib-glass-bg);
+    border: 1px solid var(--lib-glass-border);
+    backdrop-filter: blur(var(--lib-glass-blur));
+    border-radius: var(--lib-radius-2xl);
+    padding: 2.25rem 2rem;
+    box-shadow: var(--lib-shadow-lg);
+    margin-bottom: 3rem;
+}
+
+.repo-section-header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.repo-section-header h2 {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-weight: 800;
+    color: var(--lib-text-main);
+    margin-bottom: 0.5rem;
+}
+
+.repo-section-header p {
+    font-size: 1rem;
+    color: var(--lib-text-muted);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.repo-quiz-score-tracker {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--lib-radius-full);
+    background: var(--lib-bg-surface);
+    border: 1px solid var(--lib-border);
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.repo-quiz-score-badge {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--lib-primary);
+}
+
+.repo-quiz-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.repo-quiz-item {
+    background: var(--lib-bg-surface);
+    border: 1px solid var(--lib-border);
+    border-radius: var(--lib-radius-xl);
+    padding: 1.5rem;
+    box-shadow: var(--lib-shadow-sm);
+}
+
+.repo-quiz-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.repo-quiz-category-tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--lib-primary);
+    background: rgba(79, 70, 229, 0.1);
+    padding: 0.25rem 0.6rem;
+    border-radius: var(--lib-radius-full);
+}
+
+.repo-quiz-question {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--lib-text-main);
+    margin-bottom: 1.25rem;
+    line-height: 1.5;
+}
+
+.repo-quiz-choices {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.repo-quiz-choice-btn {
+    text-align: left;
+    padding: 0.85rem 1rem;
+    border-radius: var(--lib-radius-lg);
+    background: var(--lib-bg-base);
+    border: 1.5px solid var(--lib-border);
+    color: var(--lib-text-main);
+    font-size: 0.925rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+}
+
+.repo-quiz-choice-btn:hover:not(:disabled) {
+    border-color: var(--lib-primary);
+    background: rgba(79, 70, 229, 0.05);
+}
+
+.repo-quiz-choice-btn:focus-visible {
+    outline: 3px solid var(--lib-primary);
+    outline-offset: 2px;
+}
+
+.repo-quiz-choice-btn.selected-correct {
+    background: rgba(16, 185, 129, 0.15);
+    border-color: #10b981;
+    color: #065f46;
+    font-weight: 700;
+}
+
+[data-theme="dark"] .repo-quiz-choice-btn.selected-correct {
+    color: #34d399;
+}
+
+.repo-quiz-choice-btn.selected-incorrect {
+    background: rgba(239, 68, 68, 0.15);
+    border-color: #ef4444;
+    color: #991b1b;
+    font-weight: 700;
+}
+
+[data-theme="dark"] .repo-quiz-choice-btn.selected-incorrect {
+    color: #f87171;
+}
+
+.repo-quiz-feedback {
+    display: none;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: var(--lib-radius-lg);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.repo-quiz-feedback.show {
+    display: block;
+}
+
+.repo-quiz-feedback.correct {
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    color: var(--lib-text-main);
+}
+
+.repo-quiz-feedback.incorrect {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    color: var(--lib-text-main);
+}
+
+/* ==========================================================================
+   Style Guide Matrix & Cheat Sheet Tables
+   ========================================================================== */
+.repo-table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: var(--lib-radius-xl);
+    border: 1px solid var(--lib-border);
+}
+
+.repo-data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.9rem;
+    background: var(--lib-bg-surface);
+}
+
+.repo-data-table th,
+.repo-data-table td {
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid var(--lib-border);
+    vertical-align: middle;
+}
+
+.repo-data-table th {
+    background: var(--lib-bg-base);
+    color: var(--lib-text-main);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    position: sticky;
+    top: 0;
+}
+
+.repo-data-table tbody tr:hover {
+    background: rgba(79, 70, 229, 0.04);
+}
+
+.repo-glyph-cell {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--lib-primary);
+    text-align: center;
+    width: 70px;
+}
+
+.repo-table-tag {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border-radius: var(--lib-radius-sm);
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.repo-table-tag.chicago { background: rgba(79, 70, 229, 0.12); color: var(--lib-primary); }
+.repo-table-tag.mla { background: rgba(236, 72, 153, 0.12); color: var(--lib-secondary); }
+.repo-table-tag.apa { background: rgba(6, 182, 212, 0.12); color: #0891b2; }
+.repo-table-tag.ap { background: rgba(245, 158, 11, 0.12); color: #d97706; }
+
+/* Historical Timeline Grid */
+.repo-timeline-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: relative;
+    padding-left: 2rem;
+    border-left: 2px solid var(--lib-primary);
+    margin: 1.5rem 0 0 1rem;
+}
+
+.repo-timeline-item {
+    position: relative;
+}
+
+.repo-timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -2.45rem;
+    top: 0.25rem;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--lib-primary);
+    border: 3px solid var(--lib-bg-surface);
+}
+
+.repo-timeline-era {
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: var(--lib-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.2rem;
+}
+
+.repo-timeline-scholar {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--lib-text-main);
+    margin-bottom: 0.35rem;
+}
+
+.repo-timeline-desc {
+    font-size: 0.9rem;
+    color: var(--lib-text-muted);
+    line-height: 1.6;
+}
+
+/* Print Optimization */
+@media print {
+    .library-aurora-bg,
+    .repo-back-catalog-btn,
+    .repo-hero-actions,
+    .repo-nav-bar,
+    .repo-quiz-feed,
+    .repo-copy-glyph-btn,
+    .repo-speak-mark-btn {
+        display: none !important;
+    }
+    
+    .repo-page-container {
+        padding: 0 !important;
+        max-width: 100% !important;
+    }
+    
+    .repo-mark-card,
+    .repo-section-card {
+        box-shadow: none !important;
+        border: 1px solid #ccc !important;
+        page-break-inside: avoid;
+    }
+}

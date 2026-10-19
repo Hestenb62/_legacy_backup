@@ -96,9 +96,9 @@
 
         <!-- Version Status & Release Info Strip (WCAG Operable) -->
         <?php
-        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.23.0';
-        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'October 2026 Science Resources & Interactive STEM Popups Release';
-        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'All 24 Mathematics, 30 ELA Grammar, 24 ELA Literature, & 24 Science Resource Popups fully upgraded with Master Equation Vaults, Handcrafted SVG Vector Diagrams, and Curated Academic References';
+        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.24.0';
+        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'October 2026 Digital Library Punctuation Repository Release';
+        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Master Punctuation Guide & Extensible Library Repository Pages Architecture (?pages=punctuation)';
         ?>
         <div class="footer-version-strip" role="region" aria-label="Platform Version Information">
             <div class="footer-version-info">
@@ -271,9 +271,50 @@
                 </span>
             </div>
             <p class="footer-vmodal-lead">
-                Version <?= htmlspecialchars($siteVersion) ?> introduces <strong>Comprehensive ELA Literature Interactive Popups</strong> across all 24 literature disciplines, alongside all 30 ELA Grammar and 24 Mathematics topics, featuring responsive MathJax equation typesetting, custom SVG graphic organizers, dual-Lexile instructional modes, interactive practice check quizzes, and authoritative academic references.
+                Version <?= htmlspecialchars($siteVersion) ?> introduces the <strong>Digital Library Master Punctuation Repository &amp; Extensible Research Page Architecture</strong> (<code>/library/index.php?pages=punctuation</code>), complete with 16 punctuation marks, canonical rules, contrasting exemplars, interactive mastery diagnostics, style guide matrix, and curated bridges from study modals.
             </p>
             <ul class="footer-vmodal-features">
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(79, 70, 229, 0.15); color: #4f46e5;">
+                        <i class="fas fa-book-bookmark"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Digital Library Master Punctuation Repository &amp; Extensible Pages (v2.24.0):</strong> Built out a dedicated subject repository architecture powered by external JSON datasets:
+                        <ul style="margin: 0.35rem 0 0 1rem; padding: 0; font-size: 0.85rem; color: var(--color-text-secondary, #475569); line-height: 1.5;">
+                            <li><strong>Extensible Page Routing:</strong> Accessible via <code>/library/index.php?pages=punctuation</code>, dynamically loading modular page content from <code>library/assets/pages/punctuation.json</code>.</li>
+                            <li><strong>Comprehensive 16-Mark Punctuation Directory:</strong> Canonical rules, linguistic rationales, Unicode codepoints, contrasting exemplars (correct vs. incorrect with explanations), pro-tips, and historical etymologies from 200 BCE to modern Unicode.</li>
+                            <li><strong>Interactive Mastery Lab &amp; Diagnostic Quiz:</strong> 8-question interactive challenge with live score tracking, instantaneous feedback, and deep-dive scholarly explanations.</li>
+                            <li><strong>Academic Style Guide Divergence Matrix:</strong> Side-by-side comparative table for Chicago (CMOS), MLA 9th, APA 7th, and AP Style conventions.</li>
+                            <li><strong>Curated Study Modal Bridges:</strong> Updated curated reference links across Comma Usage, Semicolons &amp; Colons, Apostrophes &amp; Quotation Marks, Hyphens &amp; Dashes, and Parentheses &amp; Ellipses popups.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(2, 132, 199, 0.15); color: #0284c7;">
+                        <i class="fas fa-spell-check"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Native Normal-Text ELA Syntax Rules &amp; Structural Formulations (v2.23.2):</strong> Decoupled MathJax from all English Language Arts &amp; Literature study modals:
+                        <ul style="margin: 0.35rem 0 0 1rem; padding: 0; font-size: 0.85rem; color: var(--color-text-secondary, #475569); line-height: 1.5;">
+                            <li><strong>Clean Native Typography:</strong> All 162 grammar formulations, concord rules, and narratological mappings now render directly as clean, human-readable normal text with Unicode directional arrows (➔, ⟹, ⟺, ≠).</li>
+                            <li><strong>Zero MathJax on ELA:</strong> MathJax execution and background scripts are completely disabled on ELA pages and modals, eliminating syntax artifacts and script compilation lag.</li>
+                            <li><strong>High Contrast &amp; Responsive Layout:</strong> Rules are styled in accessible, high-contrast cards that seamlessly adapt across light and dark themes.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(2, 132, 199, 0.15); color: #0284c7;">
+                        <i class="fas fa-square-root-variable"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Universal MathJax Delimiter Wrapping &amp; Automated Typesetting (v2.23.1):</strong> Resolved raw LaTeX formatting across all study popup modals:
+                        <ul style="margin: 0.35rem 0 0 1rem; padding: 0; font-size: 0.85rem; color: var(--color-text-secondary, #475569); line-height: 1.5;">
+                            <li><strong>Automated TeX Delimiter Enclosure:</strong> Equation renderer in <code>src/resource-modal.php</code> now dynamically encloses raw formula strings in display math delimiters (<code>$$...$$</code>) so MathJax immediately recognizes and typesets them.</li>
+                            <li><strong>Proactive Background Priming:</strong> MathJax bundle is pre-primed on page initialization, guaranteeing zero latency when students open modals.</li>
+                            <li><strong>Active Modal Sequential Typesetting:</strong> Typesetting promises execute seamlessly when the modal enters the active DOM layout, producing high-contrast, scalable SVG typography.</li>
+                        </ul>
+                    </div>
+                </li>
                 <li class="footer-vmodal-feature-item">
                     <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(16, 185, 129, 0.15); color: #059669;">
                         <i class="fas fa-atom"></i>

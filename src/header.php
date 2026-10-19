@@ -48,16 +48,16 @@ if (! function_exists('assetVersion')) {
 
 // Core Platform Version Definition
 if (! defined('HL_SITE_VERSION')) {
-    define('HL_SITE_VERSION', 'v2.23.0');
+    define('HL_SITE_VERSION', 'v2.24.0');
     }
 if (! defined('HL_SITE_VERSION_DATE')) {
     define('HL_SITE_VERSION_DATE', 'October 2026');
     }
 if (! defined('HL_SITE_VERSION_LABEL')) {
-    define('HL_SITE_VERSION_LABEL', 'October 2026 Science Resources & Interactive STEM Popups Release');
+    define('HL_SITE_VERSION_LABEL', 'October 2026 Digital Library Punctuation Repository Release');
     }
 if (! defined('HL_SITE_VERSION_SUMMARY')) {
-    define('HL_SITE_VERSION_SUMMARY', 'All 24 Mathematics, 30 ELA Grammar, 24 ELA Literature, & 24 Science Resource Popups fully upgraded with Master Equation Vaults, Handcrafted SVG Vector Diagrams, and Curated Academic References');
+    define('HL_SITE_VERSION_SUMMARY', 'Master Punctuation Guide & Extensible Library Repository Pages Architecture (?pages=punctuation)');
     }
 ?>
 <!DOCTYPE html>

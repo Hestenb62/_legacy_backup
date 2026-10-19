@@ -1,0 +1,1328 @@
+{
+  "slug": "punctuation",
+  "title": "Master Repository of English Punctuation & Syntactic Mechanics",
+  "subtitle": "Authoritative guide to canonical rules, historical etymologies, contrasting exemplars, and style guide conventions for standard written English.",
+  "academicLevel": "Secondary (Grades 6–12), Advanced Placement & Collegiate",
+  "version": "1.0.0",
+  "lastUpdated": "October 2026",
+  "curator": "Hesten's Learning Academic Research Council",
+  "standards": [
+    {
+      "code": "CCSS.ELA-LITERACY.L.8.2",
+      "title": "Conventions of Standard English: Punctuation & Capitalization",
+      "desc": "Demonstrate command of standard English capitalization, punctuation, and spelling when writing."
+    },
+    {
+      "code": "CCSS.ELA-LITERACY.L.8.2.A",
+      "title": "Pausing & Punctuation Mechanics",
+      "desc": "Use punctuation (comma, ellipsis, dash) to indicate a pause or break."
+    },
+    {
+      "code": "CCSS.ELA-LITERACY.L.9-10.2.A",
+      "title": "Semicolons & Conjunctive Adverbs",
+      "desc": "Use a semicolon (and conjunctive adverb) to link two or more closely related independent clauses."
+    },
+    {
+      "code": "CCSS.ELA-LITERACY.L.11-12.2",
+      "title": "Advanced Syntactic Sophistication",
+      "desc": "Demonstrate command of hyphenation conventions, colon gating, and stylistic nuance in scholarly discourse."
+    }
+  ],
+  "categories": [
+    {
+      "id": "terminal",
+      "name": "Terminal Punctuation",
+      "badge": "End Marks",
+      "icon": "fas fa-circle-dot",
+      "desc": "Punctuation marks that conclude autonomous clauses and govern clausal tone, assertion, inquiry, and vocal force.",
+      "count": 3
+    },
+    {
+      "id": "pausing",
+      "name": "Pausing & Joining",
+      "badge": "Syntactic Rhythm",
+      "icon": "fas fa-code-commit",
+      "desc": "Marks establishing syntactic boundaries, clausal equilibrium, and serial enumeration.",
+      "count": 4
+    },
+    {
+      "id": "dashes",
+      "name": "Dashes & Spans",
+      "badge": "Typographical Spans",
+      "icon": "fas fa-minus",
+      "desc": "Horizontal typographic marks separating spans, ranges, and dramatic clausal interruptions.",
+      "count": 2
+    },
+    {
+      "id": "enclosing",
+      "name": "Enclosing & Framing",
+      "badge": "Parenthetical & Voice",
+      "icon": "fas fa-brackets-round",
+      "desc": "Paired marks that frame supplementary information, quotations, editorial glosses, and possessive relationships.",
+      "count": 4
+    },
+    {
+      "id": "specialized",
+      "name": "Omission & Modern Marks",
+      "badge": "Academic & Experimental",
+      "icon": "fas fa-ellipsis",
+      "desc": "Scholarly marks indicating textual omissions, alternatives, ratios, and expressive typographical hybrids.",
+      "count": 3
+    }
+  ],
+  "marks": [
+    {
+      "id": "comma",
+      "name": "Comma",
+      "symbol": ",",
+      "unicode": "U+002C",
+      "category": "pausing",
+      "categoryLabel": "Pausing & Joining",
+      "role": "Precision Syntactic Boundary & Pacing Marker",
+      "overview": "The comma is the most versatile and frequently misused punctuation mark in the English language. Commas do not merely denote arbitrary respiratory pauses; they reflect syntactic clause structures, isolating introductory modifiers, binding compound sentences with coordinating conjunctions, and establishing parenthetical boundaries.",
+      "historicalOrigin": "Derived from the Greek 'komma' (literally 'a piece cut off'). In early Alexandrian scholarship, Aristophanes of Byzantium used a low dot (hypostigme) to signal a short pause. Around 1500, Venetian humanist printer Aldus Manutius reshaped the slash (virgule) into the curved comma we use today.",
+      "rules": [
+        {
+          "number": 1,
+          "title": "The Oxford (Serial) Comma Mandate",
+          "rule": "In a series of three or more items, place a comma immediately before the coordinating conjunction (and, or).",
+          "rationale": "Omitting the serial comma creates grotesque semantic ambiguities by erroneously conflating the final two elements as an appositive.",
+          "academicStandard": "Mandated by Chicago Manual of Style, APA, and MLA; optional in Associated Press (AP) style unless ambiguity threatens."
+        },
+        {
+          "number": 2,
+          "title": "Introductory Clause & Modifier Isolation",
+          "rule": "Place a comma after an introductory dependent clause, participial phrase, or prepositional phrase of four or more words preceding the main subject.",
+          "rationale": "Informs the reader that the sentence's grammatical core (subject + verb) has not yet commenced.",
+          "academicStandard": "Universal across all academic style guides."
+        },
+        {
+          "number": 3,
+          "title": "Compound Sentence Coordination (FANBOYS)",
+          "rule": "Use a comma before a coordinating conjunction (For, And, Nor, But, Or, Yet, So) when connecting two independent clauses.",
+          "rationale": "Signals the closure of the first proposition and the introduction of a complete second assertion.",
+          "academicStandard": "Universal. If the second clause lacks a subject (compound predicate), do NOT use a comma."
+        },
+        {
+          "number": 4,
+          "title": "Non-Restrictive (Appositive) Cladding",
+          "rule": "Enclose non-essential clauses and appositives with a balanced pair of commas.",
+          "rationale": "Non-restrictive information can be excised without altering the essential truth or grammatical integrity of the core proposition.",
+          "academicStandard": "Always use 'which' for non-restrictive clausal modifiers; reserve 'that' for restrictive clauses with zero commas."
+        },
+        {
+          "number": 5,
+          "title": "Coordinate Adjectives (The Reversibility Test)",
+          "rule": "Separate two or more adjectives modifying the same noun with a comma if they can be reversed or connected with 'and' without sounding awkward.",
+          "rationale": "Cumulative adjectives (e.g., 'three dark brown horses') build upon one another and must never take commas.",
+          "academicStandard": "Universal."
+        }
+      ],
+      "examples": [
+        {
+          "type": "correct",
+          "title": "Oxford Comma Resolving Ambiguity",
+          "text": "The diplomat honored her benefactors, the Prime Minister, and the Secretary-General.",
+          "explanation": "Three distinct parties are recognized. Without the serial comma, the Prime Minister and Secretary-General would be misread as appositives identifying who the benefactors were."
+        },
+        {
+          "type": "incorrect",
+          "title": "The Classic Comma Splice Trap",
+          "text": "The experiment failed, the sensors were improperly calibrated.",
+          "explanation": "Comma Splice Error: Two independent clauses cannot be glued together with only a comma. Correct with a semicolon, period, or comma + 'because' / 'for'."
+        },
+        {
+          "type": "correct",
+          "title": "Introductory Participial Isolation",
+          "text": "Having reviewed the empirical dataset for six consecutive weeks, the lead epidemiologist submitted her peer-reviewed report.",
+          "explanation": "The introductory participial phrase is cleanly isolated from the main subject ('the lead epidemiologist')."
+        },
+        {
+          "type": "incorrect",
+          "title": "Erroneous Compound Predicate Comma",
+          "text": "The astrophysicist calibrated the optical array, and observed the stellar occultation.",
+          "explanation": "Error: 'observed the stellar occultation' is not an independent clause; it shares the initial subject. A comma must not separate verbs in a compound predicate."
+        }
+      ],
+      "proTips": [
+        "Never place a comma directly between a subject and its finite verb (e.g., avoid: 'The committee that drafted the bill, deliberated yesterday').",
+        "Which vs. That: Use 'which' with commas for optional bonus details ('The telescope, which was built in 1990, orbited Earth'). Use 'that' without commas for vital identifiers ('The telescope that broke yesterday is being repaired')."
+      ]
+    },
+    {
+      "id": "semicolon",
+      "name": "Semicolon",
+      "symbol": ";",
+      "unicode": "U+003B",
+      "category": "pausing",
+      "categoryLabel": "Pausing & Joining",
+      "role": "Syntactic Equilibrium & Independent Clausal Balance",
+      "overview": "The semicolon provides a sophisticated middle ground between the abrupt terminal stop of a period and the soft linking role of a comma. It links independent propositions possessing balanced semantic weight, signaling that two thoughts are too intimate to be severed by a period, yet too complete to be joined with a bare comma.",
+      "historicalOrigin": "Invented in 1494 by Italian printer Aldus Manutius to print Pietro Bembo's dialogue 'De Aetna'. Manutius designed the mark as a combination of a colon and comma to signal a pause shorter than a period but longer than a comma.",
+      "rules": [
+        {
+          "number": 1,
+          "title": "Independent Clause Equilibrium",
+          "rule": "Join two grammatically independent clauses without a coordinating conjunction when the thoughts are closely parallel or logically antithetical.",
+          "rationale": "Creates prose cadence and emphasizes intellectual symmetry without the clunky addition of 'and' or 'but'.",
+          "academicStandard": "Both clauses must be fully capable of standing alone as complete sentences."
+        },
+        {
+          "number": 2,
+          "title": "Conjunctive Adverb Coordination",
+          "rule": "When connecting two independent clauses with a conjunctive adverb (however, therefore, furthermore, nevertheless, consequently), place a semicolon before the adverb and a comma immediately after.",
+          "rationale": "Conjunctive adverbs lack coordinating power; without the semicolon, a comma splice results.",
+          "academicStandard": "Universal across all scholarly publications."
+        },
+        {
+          "number": 3,
+          "title": "The Super-Comma for Complex Lists",
+          "rule": "Use semicolons to separate items in an itemized series when any of the individual items contain internal commas.",
+          "rationale": "Prevents reader disorientation by establishing a higher-tier hierarchical boundary above the internal commas.",
+          "academicStandard": "Universal in legal, academic, and business prose."
+        }
+      ],
+      "examples": [
+        {
+          "type": "correct",
+          "title": "Conjunctive Adverb Connection",
+          "text": "The monetary policy was designed to suppress runaway inflation; however, prolonged interest rate hikes induced a contraction in housing starts.",
+          "explanation": "Independent clause + semicolon + 'however,' + second independent clause. Syntax is impeccably balanced."
+        },
+        {
+          "type": "incorrect",
+          "title": "Dependent Fragment Mismatch",
+          "text": "Although the team completed the preliminary trials on schedule; the steering committee withheld secondary funding.",
+          "explanation": "Error: 'Although the team completed the preliminary trials on schedule' is a dependent adverbial clause. Semicolons can never isolate dependent fragments."
+        },
+        {
+          "type": "correct",
+          "title": "Complex Series Super-Comma",
+          "text": "The summit hosted delegations from Kyoto, Japan; Geneva, Switzerland; and Reykjavik, Iceland.",
+          "explanation": "Semicolons cleanly segregate the three city/country pairings, ensuring internal commas do not create confusion."
+        }
+      ],
+      "proTips": [
+        "Use semicolons judiciously; more than two or three per printed page can make prose appear overly mannered or pedantic.",
+        "A semicolon cannot be followed by coordinating conjunctions (FANBOYS) unless the clauses are massive and contain heavy internal punctuation."
+      ]
+    },
+    {
+      "id": "colon",
+      "name": "Colon",
+      "symbol": ":",
+      "unicode": "U+003A",
+      "category": "pausing",
+      "categoryLabel": "Pausing & Joining",
+      "role": "The Formal Syntactic Herald & Gatekeeper",
+      "overview": "The colon acts as a herald or spotlight, announcing: 'Pay attention to what follows: here is the explanation, the proof, or the itemized delivery.' It directs the reader forward toward an elucidation, illustration, or formal quotation.",
+      "historicalOrigin": "From Greek 'kolon' (meaning 'limb, leg, or section of a clause'). In classical rhetoric, a colon marked a major clausal unit. Over centuries of printing, the twin stacked dots evolved into the formal introductory gateway.",
+      "rules": [
+        {
+          "number": 1,
+          "title": "The Independent Gatekeeper Principle",
+          "rule": "A colon must ALWAYS be preceded by a grammatically complete independent clause that can stand alone as a sentence.",
+          "rationale": "A colon acts as a gatekeeper; it cannot swing open if the fence behind it is incomplete.",
+          "academicStandard": "Never place a colon directly after a bare finite verb (e.g., 'The ingredients are:') or bare preposition (e.g., 'He traveled to:')."
+        },
+        {
+          "number": 2,
+          "title": "Explanatory & Amplifying Elaboration",
+          "rule": "Use a colon between two independent clauses when the second clause directly explains, magnifies, or restates the first clause.",
+          "rationale": "Signifies that clause B is the direct payoff or explanation of clause A.",
+          "academicStandard": "In Chicago and APA, capitalize the first word after the colon if it introduces a complete sentence; in MLA, keep it lowercase unless a proper noun."
+        },
+        {
+          "number": 3,
+          "title": "Formal Quotation & Block Quote Gateway",
+          "rule": "Introduce formal direct quotations, particularly those extending beyond three lines (block quotes), with a colon.",
+          "rationale": "Commands serious academic attention for the cited authority.",
+          "academicStandard": "Standard in MLA, APA, and Chicago research styles."
+        }
+      ],
+      "examples": [
+        {
+          "type": "correct",
+          "title": "Valid Gatekeeper Independent Clause",
+          "text": "The research team identified three fundamental variables: atmospheric humidity, soil salinity, and ambient light intensity.",
+          "explanation": "'The research team identified three fundamental variables' is a grammatically complete clausal unit, permitting colon deployment."
+        },
+        {
+          "type": "incorrect",
+          "title": "Premature Colon After Linking Verb",
+          "text": "The three components essential for photosynthesis are: chlorophyll, sunlight, and carbon dioxide.",
+          "explanation": "Error: 'The three components essential for photosynthesis are' is an incomplete clausal predicate. Remove the colon entirely or write: '...are the following:'."
+        },
+        {
+          "type": "correct",
+          "title": "Direct Explanatory Amplification",
+          "text": "The architect maintained a singular design doctrine: Form must unyieldingly serve structural utility.",
+          "explanation": "Clause B directly explains the singular doctrine declared in Clause A."
+        }
+      ],
+      "proTips": [
+        "If you can substitute the phrase 'namely' or 'that is to say', a colon is often the ideal typographical choice.",
+        "Avoid using more than one colon in a single sentence."
+      ]
+    },
+    {
+      "id": "period",
+      "name": "Period (Full Stop)",
+      "symbol": ".",
+      "unicode": "U+002E",
+      "category": "terminal",
+      "categoryLabel": "Terminal Punctuation",
+      "role": "Definitive Clausal Closure & Semantic Finality",
+      "overview": "The period (known as the full stop in British English) marks the definitive termination of declarative and imperative assertions. It signals the complete delivery of an autonomous proposition and resets the syntactic slate.",
+      "historicalOrigin": "Aristophanes of Byzantium introduced the high dot (stigme teleia) in the 3rd century BCE to indicate the completion of a full rhetorical breath (periodos). In Medieval Latin manuscripts, the dot was lowered to the baseline for visual stability.",
+      "rules": [
+        {
+          "number": 1,
+          "title": "Declarative & Imperative Termination",
+          "rule": "Conclude every complete declarative statement and imperative command with a single period.",
+          "rationale": "Establishes terminal boundaries between independent propositions.",
+          "academicStandard": "Single space after terminal periods is mandated in modern digital typography (double spacing is an obsolete typewriter relic)."
+        },
+        {
+          "number": 2,
+          "title": "Standard Abbreviations & Metric Exceptions",
+          "rule": "Use periods in traditional Latin abbreviations (e.g., etc., i.e., e.g., vs., et al.).",
+          "rationale": "Signals truncated morphological units.",
+          "academicStandard": "Do NOT use periods in metric SI units (write '50 kg', '100 m', not '50 kg.'). Acronyms (NASA, NATO, UNESCO) omit periods in modern style."
+        },
+        {
+          "number": 3,
+          "title": "American Quotation Nesting Doctrine",
+          "rule": "In American English typographical convention, periods are ALWAYS placed inside closing quotation marks, regardless of source logic.",
+          "rationale": "Typographical aesthetics established by 19th-century metal typesetting to prevent fragile period glyphs from breaking off at line ends.",
+          "academicStandard": "Strictly required in Chicago, MLA, and APA. British style places the period outside unless part of the original quote."
+        },
+        {
+          "number": 4,
+          "title": "Parenthetical Sentence Placement",
+          "rule": "If a parenthetical remark is an independent sentence standing alone, place its period inside the closing parenthesis; if the parenthetical is embedded in a larger sentence, place the period outside.",
+          "rationale": "Preserves hierarchical clausal containment.",
+          "academicStandard": "Universal."
+        }
+      ],
+      "examples": [
+        {
+          "type": "correct",
+          "title": "American Quotation Nesting",
+          "text": "The archivist noted that the parchment was \"remarkably well preserved for its age.\"",
+          "explanation": "In standard American English, the period sits snugly inside the quotation marks."
+        },
+        {
+          "type": "incorrect",
+          "title": "Redundant Double Period at Sentence End",
+          "text": "The guest lecturer holds an M.D. and a Ph.D..",
+          "explanation": "Error: When a sentence terminates with an abbreviation that ends in a period, do not add a second period."
+        },
+        {
+          "type": "correct",
+          "title": "Independent Parenthetical Sentence",
+          "text": "The symposium adjourned until morning. (All registered attendees were provided lodging vouchers.)",
+          "explanation": "Because the parenthetical remark constitutes a complete independent sentence, its period resides inside."
+        }
+      ],
+      "proTips": [
+        "In modern academic publishing, use only ONE space after a period. Two spaces originated on manual typewriters to compensate for monospaced font gaps.",
+        "Polite requests phrased as inquiries in formal business writing sometimes take periods rather than question marks (e.g., 'Would you please submit the form by Friday.')."
+      ]
+    },
+    {
+      "id": "question-mark",
+      "name": "Question Mark",
+      "symbol": "?",
+      "unicode": "U+003F",
+      "category": "terminal",
+      "categoryLabel": "Terminal Punctuation",
+      "role": "Direct Interrogative Inversion & Epistemic Inquiry",
+      "overview": "The question mark terminates direct queries, signaling an epistemic expectation of an answer or acknowledging uncertainty. Its syntactic deployment hinges upon distinguishing direct interrogation from indirect reported questions.",
+      "historicalOrigin": "Derived from the Latin word 'quaestio' ('question'). Carolingian scribes in the 8th century abbreviated the word as 'Qo' stacked vertically; over centuries of cursive handwriting, the 'Q' mutated into a curling flourish and the 'o' contracted into a dot, creating the modern '?' glyph (punctus interrogativus).",
+      "rules": [
+        {
+          "number": 1,
+          "title": "Direct Interrogative Closure",
+          "rule": "Conclude every direct question with a question mark.",
+          "rationale": "Signals grammatical inversion (verb before subject) or rising vocal inflection.",
+          "academicStandard": "Universal."
+        },
+        {
+          "number": 2,
+          "title": "The Indirect Question Prohibition",
+          "rule": "Never place a question mark after an indirect question or reported query.",
+          "rationale": "Indirect questions are syntactically embedded declarative statements reporting on an inquiry, not formulating one.",
+          "academicStandard": "Strict across all editorial standards."
+        },
+        {
+          "number": 3,
+          "title": "Nested Quotation Interrogative Logic",
+          "rule": "Place the question mark inside quotation marks ONLY if the quoted text itself is a question; place it outside if the overarching sentence is the question.",
+          "rationale": "Reflects true syntactic provenance of the inquiry.",
+          "academicStandard": "Universal in all styles."
+        }
+      ],
+      "examples": [
+        {
+          "type": "correct",
+          "title": "Direct Interrogative with Tag",
+          "text": "The peer reviewers accepted the revision without objection, didn't they?",
+          "explanation": "Tag questions invert clausal polarity and require an interrogative terminal mark."
+        },
+        {
+          "type": "incorrect",
+          "title": "Question Mark on Indirect Question",
+          "text": "The dean asked whether the faculty had reached a quorum?",
+          "explanation": "Error: 'The dean asked whether...' is a declarative statement reporting a question. It must terminate with a period, not a question mark."
+        },
+        {
+          "type": "correct",
+          "title": "Overarching Question Framing Statement Quote",
+          "text": "Did the witness truly declare, \"I was never at the laboratory\"?",
+          "explanation": "The quoted speech is declarative, but the framing sentence is a direct question; therefore, the question mark sits outside the closing quote."
+        }
+      ],
+      "proTips": [
+        "In scholarly writing, avoid rhetorical questions; formulate assertions directly rather than probing the reader artificially.",
+        "Never combine a question mark with an exclamation point in formal academic prose (e.g., avoid '?!!')."
+      ]
+    },
+    {
+      "id": "exclamation-mark",
+      "name": "Exclamation Mark",
+      "symbol": "!",
+      "unicode": "U+0021",
+      "category": "terminal",
+      "categoryLabel": "Terminal Punctuation",
+      "role": "Emphatic Force, Vehement Emotion & Interjection",
+      "overview": "The exclamation mark (traditionally called the punctus admirativus or note of admiration) imparts forceful emotion, emphatic warning, sudden surprise, or imperative urgency to an utterance.",
+      "historicalOrigin": "Introduced by humanists in 14th-century Italy. Popularly attributed to the Latin exclamation of joy 'io', written with the 'I' placed over the 'o', which condensed over time into the vertical bar and base dot.",
+      "rules": [
+        {
+          "number": 1,
+          "title": "Autonomous Interjection Isolation",
+          "rule": "Conclude sudden, passionate interjections or urgent imperative commands with an exclamation mark.",
+          "rationale": "Conveys intense vocal volume and affective urgency.",
+          "academicStandard": "Appropriate in creative literature, theatrical scripts, and narrative dialogue."
+        },
+        {
+          "number": 2,
+          "title": "The Academic Prose Ban",
+          "rule": "Virtually never use exclamation marks in scholarly research papers, legal briefs, scientific treatises, or analytical essays.",
+          "rationale": "Scholarly ethos relies upon rigorous empirical evidence, logical deduction, and objective rhetoric; artificial typographical cheerleading undermines academic credibility.",
+          "academicStandard": "Permissible only within verbatim direct quotations from historical sources."
+        },
+        {
+          "number": 3,
+          "title": "Quotation Boundary Logic",
+          "rule": "Place inside quotation marks only when the quoted speech itself contains the exclamatory energy.",
+          "rationale": "Prevents attributing emotional force to words that were spoken mildly.",
+          "academicStandard": "Universal."
+        }
+      ],
+      "examples": [
+        {
+          "type": "correct",
+          "title": "Direct Dialogue Interjection",
+          "text": "\"Look out!\" shouted the excavator as the trench wall buckled.",
+          "explanation": "Reflects genuine immediate mortal peril in creative narrative."
+        },
+        {
+          "type": "incorrect",
+          "title": "Gratuitous Academic Exclamation",
+          "text": "The correlation coefficient reached a remarkable 0.98, demonstrating an unprecedented statistical relationship!",
+          "explanation": "Unprofessional academic tone: Exclamation marks in research articles come across as hyperbolic. The empirical data must speak for itself."
+        }
+      ],
+      "proTips": [
+        "F. Scott Fitzgerald famously advised: 'Cut out all these exclamation points. An exclamation point is like laughing at your own joke.'",
+        "Never use repeated exclamation marks (e.g., '!!!') in any professional communication."
+      ]
+    },
+    {
+      "id": "hyphen",
+      "name": "Hyphen",
+      "symbol": "-",
+      "unicode": "U+002D",
+      "category": "pausing",
+      "categoryLabel": "Pausing & Joining",
+      "role": "Morphological Binder & Compound Adjective Synthesizer",
+      "overview": "The hyphen is the shortest of the horizontal typographical marks. Its primary role is morphological rather than clausal: it binds compound adjectives, clarifies ambiguous prefixes, spells out compound numbers, and indicates word division across line breaks.",
+      "historicalOrigin": "Derived from ancient Greek 'hyphen' (meaning 'together, under one'). Early scribes used a curved tie-mark under two words to indicate they should be read as a single unit. In Gutenberg's movable type, it became a double slanted stroke and later a single short horizontal stroke.",
+      "rules": [
+        {
+          "number": 1,
+          "title": "Pre-Nominal Compound Adjective Synthesis",
+          "rule": "Hyphenate two or more words acting as a unified modifier when they precede the noun they modify.",
+          "rationale": "Prevents misreading by signaling that the words function as a single semantic unit before reaching the noun.",
+          "academicStandard": "Compare: 'a small-state senator' (senator from a small state) vs. 'a small state senator' (a diminutive senator)."
+        },
+        {
+          "number": 2,
+          "title": "Post-Nominal De-Hyphenation (Predicate Adjectives)",
+          "rule": "Do NOT hyphenate compound modifiers when they follow the noun as predicate adjectives.",
+          "rationale": "Syntactic ambiguity dissolves once the noun has already been introduced.",
+          "academicStandard": "Compare: 'a well-known author' (hyphenated) vs. 'the author is well known' (no hyphen)."
+        },
+        {
+          "number": 3,
+          "title": "The -ly Adverb Exclusion Doctrine",
+          "rule": "Never place a hyphen between an adverb ending in '-ly' and the participle or adjective it modifies.",
+          "rationale": "The '-ly' suffix already unambiguously declares that the word is an adverb modifying an adjective, rendering a hyphen redundant.",
+          "academicStandard": "Strict rule across Chicago, APA, MLA, and AP: write 'a highly regarded scholar', NEVER 'a highly-regarded scholar'."
+        },
+        {
+          "number": 4,
+          "title": "Suspensive Hyphenation",
+          "rule": "When two or more compound modifiers share a common base element, retain the hyphen on each initial modifier followed by a space.",
+          "rationale": "Provides elegant economy without sacrificing morphological clarity.",
+          "academicStandard": "Example: 'first- and second-grade cohorts', 'four- to six-week trials'."
+        }
+      ],
+      "examples": [
+        {
+          "type": "correct",
+          "title": "Compound Modifier Before Noun",
+          "text": "The university inaugurated a state-of-the-art computational biology laboratory.",
+          "explanation": "'State-of-the-art' functions as a unified compound modifier preceding the noun 'laboratory'."
+        },
+        {
+          "type": "incorrect",
+          "title": "Erroneous Hyphen on -ly Adverb",
+          "text": "The committee reviewed an internationally-recognized protocol.",
+          "explanation": "Error: 'internationally' ends in '-ly', making its adverbial role self-evident. No hyphen is permitted."
+        },
+        {
+          "type": "correct",
+          "title": "Suspensive Hyphenation in Scientific Study",
+          "text": "Patients received low- and high-dose concentrations during phase-one clinical trials.",
+          "explanation": "'Low-' and 'high-dose' correctly share the trailing noun 'dose' via suspensive hyphenation."
+        }
+      ],
+      "proTips": [
+        "Use a hyphen with prefixes like 'self-', 'ex-', 'all-', and with proper nouns (e.g., 'un-American', 'pre-Columbian').",
+        "Prefixes like 're-' require a hyphen when necessary to prevent confusion with an existing word (e.g., 're-cover the sofa' vs. 'recover from an illness'; 're-sign the contract' vs. 'resign from office')."
+      ]
+    },
+    {
+      "id": "en-dash",
+      "name": "En Dash",
+      "symbol": "–",
+      "unicode": "U+2013",
+      "category": "dashes",
+      "categoryLabel": "Dashes & Spans",
+      "role": "Numerical Spans, Directional Vectors & Open Compounds",
+      "overview": "The en dash is approximately the width of a capital letter 'N'—longer than a hyphen, but shorter than an em dash. It primarily denotes inclusive ranges of numbers, dates, or pages, meaning 'up to and including'. It also links complex open compounds.",
+      "historicalOrigin": "Typographical standard born in the age of hot-metal printing, where the 'en' was half the width of the traditional typographic 'em' square.",
+      "rules": [
+        {
+          "number": 1,
+          "title": "Inclusive Number & Date Ranges",
+          "rule": "Use an unspaced en dash to connect inclusive numbers, dates, or pagination ranges.",
+          "rationale": "Signifies continuous progression from the starting point through the terminal point.",
+          "academicStandard": "Write: '1914–1918', 'pages 112–145', 'Chapters 4–6'. Never use a hyphen for numerical ranges in formal publishing."
+        },
+        {
+          "number": 2,
+          "title": "The 'From/Between' Preposition Conflict",
+          "rule": "Never combine an en dash with the prepositions 'from' or 'between'.",
+          "rationale": "The construction 'from...to' and 'between...and' requires words, not typographical symbols.",
+          "academicStandard": "Write: 'from 1939 to 1945' (NOT 'from 1939–1945'); write 'between 10 and 20' (NOT 'between 10–20')."
+        },
+        {
+          "number": 3,
+          "title": "Open Compound Adjective Coupling",
+          "rule": "Use an en dash instead of a hyphen when joining a compound modifier where at least one of the components consists of multiple words (an open compound).",
+          "rationale": "A standard hyphen would visually bind only to the nearest single word, breaking the semantic unit.",
+          "academicStandard": "Write: 'post–Cold War diplomacy' (en dash), 'New York–London air route' (en dash), 'Nobel Prize–winning chemist'."
+        }
+      ],
+      "examples": [
+        {
+          "type": "correct",
+          "title": "Chronological En Dash Span",
+          "text": "The American Civil War (1861–1865) fundamentally reshaped federal constitutional authority.",
+          "explanation": "The unspaced en dash cleanly links the continuous span of years."
+        },
+        {
+          "type": "incorrect",
+          "title": "Prepositional Mixing Trap",
+          "text": "The symposium will run from October 12–15 at the convention pavilion.",
+          "explanation": "Error: 'from' requires the matching preposition 'to'. Write 'from October 12 to 15' or simply 'October 12–15'."
+        },
+        {
+          "type": "correct",
+          "title": "Open Compound Linking",
+          "text": "The researchers explored the pre–World War II economic indicators across Europe.",
+          "explanation": "Because 'World War II' is a multi-word open compound, an en dash is used after 'pre' rather than a standard hyphen."
+        }
+      ],
+      "proTips": [
+        "Keyboard shortcut: On Mac, press Option + Hyphen; on Windows, hold Alt and type 0150 on the numeric keypad.",
+        "In Chicago style, en dashes are strictly unspaced (no space on either side)."
+      ]
+    },
+    {
+      "id": "em-dash",
+      "name": "Em Dash",
+      "symbol": "—",
+      "unicode": "U+2014",
+      "category": "dashes",
+      "categoryLabel": "Dashes & Spans",
+      "role": "Dramatic Syntactic Interruption, Clausal Pivot & Appositive Focus",
+      "overview": "The em dash is the longest horizontal mark, matching the width of the capital letter 'M'. It represents the boldest, most dramatic clausal disruption in English typography, creating an abrupt break in sentence rhythm, introducing striking parenthetical commentary, or executing an unexpected rhetorical pivot.",
+      "historicalOrigin": "Derived from 18th-century English printing as an 'em quad'. 19th-century American poets like Emily Dickinson famously transformed the em dash into a signature stylistic vehicle for fractured consciousness and poetic hesitation.",
+      "rules": [
+        {
+          "number": 1,
+          "title": "Emphatic Parenthetical Insertion",
+          "rule": "Use a pair of em dashes to enclose parenthetical remarks that demand greater visual and psychological emphasis than commas or parentheses.",
+          "rationale": "Commas are subtle; parentheses de-emphasize; em dashes shout for attention.",
+          "academicStandard": "Particularly valuable when the parenthetical material itself contains internal commas."
+        },
+        {
+          "number": 2,
+          "title": "Abrupt Thematic Pivot & Clausal Payoff",
+          "rule": "Use a single em dash to execute a dramatic pivot or introduce an unexpected explanatory conclusion at the sentence finale.",
+          "rationale": "Acts like a rhetorical drumroll leading to the punchline or discovery.",
+          "academicStandard": "Provides a less formal, more kinetic alternative to a colon."
+        },
+        {
+          "number": 3,
+          "title": "Interrupted Dialogue & Trailing Speech",
+          "rule": "Use an em dash in narrative dialogue to indicate that a speaker's voice has been abruptly cut off mid-word by an external interruption.",
+          "rationale": "Distinguishes abrupt truncation (em dash) from gradual trailing off into silence (ellipsis).",
+          "academicStandard": "Standard in creative and theatrical writing."
+        },
+        {
+          "number": 4,
+          "title": "Spacing Conventions (Style Divergence)",
+          "rule": "In Chicago and APA style, em dashes are NEVER spaced (word—word). In AP (journalism) style, place a space on both sides of the em dash (word — word).",
+          "rationale": "Newspaper column narrowness traditionally required space to prevent awkward word wraps.",
+          "academicStandard": "Know your target style guide and apply consistently."
+        }
+      ],
+      "examples": [
+        {
+          "type": "correct",
+          "title": "Dramatic Parenthetical Isolation",
+          "text": "The rare manuscript—discovered in a forgotten monastery cellar after three centuries—was authenticated yesterday.",
+          "explanation": "Encloses vivid supplementary details with dramatic visual presence."
+        },
+        {
+          "type": "correct",
+          "title": "Rhetorical Clausal Pivot",
+          "text": "The expedition endured blizzards, scurvy, and mutiny—all for an uncharted cartographic myth.",
+          "explanation": "The em dash gathers the preceding list into an emphatic final payoff."
+        },
+        {
+          "type": "incorrect",
+          "title": "Overuse in Academic Prose",
+          "text": "The data—which was gathered carefully—shows—beyond all doubt—that the theory—first stated in 1990—is sound.",
+          "explanation": "Typographical fatigue: Overusing em dashes creates breathless, fragmented prose. Reserve for moments of genuine rhetorical impact."
+        }
+      ],
+      "proTips": [
+        "Keyboard shortcut: On Mac, press Option + Shift + Hyphen; on Windows, hold Alt and type 0151 on the numeric keypad.",
+        "Never use double hyphens (--) in published digital writing; replace them with true Unicode em dashes (—)."
+      ]
+    },
+    {
+      "id": "apostrophe",
+      "name": "Apostrophe",
+      "symbol": "'",
+      "unicode": "U+0027",
+      "category": "enclosing",
+      "categoryLabel": "Enclosing & Framing",
+      "role": "Genitive Possession & Phonological Contraction",
+      "overview": "The apostrophe serves two strictly defined duties: signaling grammatical possession (the genitive case) and marking omitted letters in phonological contractions. It is never used to form standard plural nouns.",
+      "historicalOrigin": "Borrowed from French in the 16th century, derived from the Greek 'apostrophe' (meaning 'turning away' or elision). English adopted it to represent the elision of the Old/Middle English genitive inflection '-es' (e.g., 'the kinges crown' became 'the king's crown').",
+      "rules": [
+        {
+          "number": 1,
+          "title": "Singular Noun Possession",
+          "rule": "Add ''s' to singular nouns, including those ending in 's' or 'z' sounds in standard modern publishing.",
+          "rationale": "Reflects standard spoken English pronunciation.",
+          "academicStandard": "Chicago and APA style mandate: 'James's thesis', 'the boss's directive', 'the actress's role'. (AP style allows just an apostrophe for proper names ending in s: 'James'')."
+        },
+        {
+          "number": 2,
+          "title": "Plural Noun Possession (-s vs. Irregular)",
+          "rule": "For regular plural nouns ending in 's', add only the apostrophe ('). For irregular plural nouns not ending in 's', add ''s'.",
+          "rationale": "Avoids awkward and unpronounceable 's' stacking.",
+          "academicStandard": "Regular plural: 'the teachers' lounge', 'the students' grades'. Irregular plural: 'the children's hospital', 'the women's caucus'."
+        },
+        {
+          "number": 3,
+          "title": "The Sacred Invariance: Contractions vs. Possessive Pronouns",
+          "rule": "Never place an apostrophe in a possessive pronoun (its, whose, hers, his, ours, theirs, yours). Always reserve apostrophes for contractions (it's = it is / it has; who's = who is / who has).",
+          "rationale": "Possessive pronouns are inherently possessive in their base lexical form.",
+          "academicStandard": "The single most tested grammar convention on standardized examinations (SAT, ACT, GRE)."
+        },
+        {
+          "number": 4,
+          "title": "The Greengrocer's Apostrophe Prohibition",
+          "rule": "Never use an apostrophe to form standard plural nouns.",
+          "rationale": "Apostrophes signal possession or omission, never simple quantity.",
+          "academicStandard": "Plural of decade: write 'the 1990s', NOT 'the 1990's'. Plural of acronym: write 'CDs', 'CPUs', NOT 'CD's'."
+        }
+      ],
+      "examples": [
+        {
+          "type": "correct",
+          "title": "Contraction vs. Possessive Distinction",
+          "text": "It's evident that the predator stalked its prey through the dense thicket.",
+          "explanation": "'It's' = It is (contraction); 'its' = belonging to it (possessive pronoun). Both are applied with mathematical precision."
+        },
+        {
+          "type": "incorrect",
+          "title": "The Infamous Greengrocer's Plural Error",
+          "text": "Fresh organic banana's and apple's are on discount today.",
+          "explanation": "Error: Plural nouns never take apostrophes unless forming rare single-letter plurals for clarity (e.g., 'Mind your p's and q's')."
+        },
+        {
+          "type": "correct",
+          "title": "Singular vs. Plural Possessive Contrast",
+          "text": "The scientist inspected the monkey's cage (one monkey) before entering the monkeys' sanctuary (multiple monkeys).",
+          "explanation": "Illustrates the vital syntactic shift between singular possession ('s) and plural possession (s')."
+        }
+      ],
+      "proTips": [
+        "Memory trick for 'its' vs. 'it's': If you cannot replace the word with 'it is' or 'it has', never write 'it's'.",
+        "Joint vs. Separate Possession: If two people share ownership, add ''s' only to the second person: 'William and Mary's reign'. If they own separate things, add ''s' to both: 'Bach's and Mozart's scores'."
+      ]
+    },
+    {
+      "id": "quotation-marks",
+      "name": "Quotation Marks",
+      "symbol": "\" \"",
+      "unicode": "U+201C / U+201D",
+      "category": "enclosing",
+      "categoryLabel": "Enclosing & Framing",
+      "role": "Verbatim Dialogue, Citation Framing & Short Work Titles",
+      "overview": "Quotation marks (also called quotes, speech marks, or inverted commas) delineate verbatim spoken dialogue, academic source citations, titles of short works (poems, articles, short stories), and words used as words.",
+      "historicalOrigin": "Early Greek scribes used the diple (>) in margins to highlight notable passages. In 16th-century printed books, double commas were placed in the margin, eventually moving into the text stream as opening and closing quotation marks.",
+      "rules": [
+        {
+          "number": 1,
+          "title": "The American Typography Placement Rule",
+          "rule": "In American English, commas and periods are ALWAYS placed inside the closing quotation marks, regardless of whether they belong to the quoted material.",
+          "rationale": "Historical aesthetic convention created by early American compositors to protect delicate period and comma metal types from damage at line edges.",
+          "academicStandard": "Mandated by Chicago, MLA, APA, and AP. (British 'logical punctuation' places them outside unless they belong to the quote)."
+        },
+        {
+          "number": 2,
+          "title": "Colons & Semicolons Outside Rule",
+          "rule": "Colons and semicolons are ALWAYS placed outside closing quotation marks across all English-speaking countries.",
+          "rationale": "Colons and semicolons govern the syntax of the larger containing sentence, not the quoted speech.",
+          "academicStandard": "Universal across all global style guides."
+        },
+        {
+          "number": 3,
+          "title": "Single Quotes for Nested Quotations",
+          "rule": "Use single quotation marks (' ') for a quote within a quote in American English.",
+          "rationale": "Establishes clear hierarchical nesting.",
+          "academicStandard": "Example: \"Professor Evans asked, 'Have you read Orwell's essay?' before assigning the prompt.\""
+        },
+        {
+          "number": 4,
+          "title": "Titles: Minor Works (Quotes) vs. Major Works (Italics)",
+          "rule": "Place quotation marks around titles of short works (articles, poems, song titles, book chapters, podcast episodes). Italicize standalone major works (novels, books, films, academic journals).",
+          "rationale": "Visually conveys containment within a larger corpus.",
+          "academicStandard": "Universal in MLA, APA, and Chicago."
+        }
+      ],
+      "examples": [
+        {
+          "type": "correct",
+          "title": "American Punctuation Nesting",
+          "text": "\"The cornerstone of democracy is an educated populace,\" declared Jefferson, \"and without it, tyranny flourishes.\"",
+          "explanation": "Both the internal comma and the introductory comma sit cleanly inside the quotation boundaries."
+        },
+        {
+          "type": "incorrect",
+          "title": "British Punctuation Creep into American Style",
+          "text": "The reviewer dismissed the novel as \"derivative and banal\", recommending instead the author's debut.",
+          "explanation": "Error in American English: The comma must reside inside the quotation marks: '...derivative and banal,' recommending...'"
+        },
+        {
+          "type": "correct",
+          "title": "Semicolon Outside Closing Quotation",
+          "text": "The general hailed the tactical maneuver as a \"flawless victory\"; military historians, however, documented heavy casualties.",
+          "explanation": "Semicolons strictly remain outside closing quotation marks."
+        }
+      ],
+      "proTips": [
+        "Avoid 'scare quotes' around words unless signaling genuine ironic distance or questioning a dubious term. Gratuitous scare quotes make prose sound passive-aggressive.",
+        "Block Quotations: Direct prose quotes exceeding four lines (MLA) or forty words (APA) should be indented as a freestanding block without quotation marks."
+      ]
+    },
+    {
+      "id": "parentheses",
+      "name": "Parentheses",
+      "symbol": "( )",
+      "unicode": "U+0028 / U+0029",
+      "category": "enclosing",
+      "categoryLabel": "Enclosing & Framing",
+      "role": "De-Emphasized Digression, Scholarly Citations & Clarifications",
+      "overview": "Parentheses (singular: parenthesis) enclose non-essential, explanatory, or digressive material that clarifies context without altering the primary sentence's grammatical integrity. Parentheses whisper extra context, while em dashes shout it.",
+      "historicalOrigin": "Derived from the Greek 'parenthesis' (literally 'putting in beside'). First used in Renaissance humanistic manuscripts by Erasmus and other scholars around 1500 to insert authorial commentary.",
+      "rules": [
+        {
+          "number": 1,
+          "title": "The Grammatical Excusion Test",
+          "rule": "The surrounding sentence must remain completely grammatical and logically sound if the entire parenthetical remark is deleted.",
+          "rationale": "Parentheses contain pure supplementary context, not essential clausal elements.",
+          "academicStandard": "Universal."
+        },
+        {
+          "number": 2,
+          "title": "Punctuation Placement Logic",
+          "rule": "Do not place a comma immediately before an opening parenthesis. If a comma is required by the main sentence, place it after the closing parenthesis.",
+          "rationale": "Preserves the forward momentum of the containing clause.",
+          "academicStandard": "Universal."
+        },
+        {
+          "number": 3,
+          "title": "Terminal Period Placement",
+          "rule": "If the parenthetical material is embedded inside an existing sentence, the terminal period sits outside. If the entire parenthetical is an independent sentence standing alone, the period sits inside.",
+          "rationale": "Maintains hierarchical sentence ownership.",
+          "academicStandard": "Universal."
+        }
+      ],
+      "examples": [
+        {
+          "type": "correct",
+          "title": "Embedded Clarification with Trailing Comma",
+          "text": "When the treaty was ratified in Versailles (June 1919), European borders were dramatically redrawn.",
+          "explanation": "The introductory clause comma belongs after the closing parenthesis, not before."
+        },
+        {
+          "type": "incorrect",
+          "title": "Premature Comma Before Parenthesis",
+          "text": "Although the methodology was sound, (as confirmed by peer reviewers), the sample size was too small.",
+          "explanation": "Error: A comma must never precede an opening parenthesis in standard English."
+        },
+        {
+          "type": "correct",
+          "title": "Standalone Parenthetical Sentence",
+          "text": "The archival logs were digitized in 2024. (High-resolution scans are available in the public catalog.)",
+          "explanation": "Because the parenthetical remark constitutes a complete independent sentence, its period resides inside."
+        }
+      ],
+      "proTips": [
+        "Use parentheses to introduce acronyms on first mention: 'The National Aeronautics and Space Administration (NASA) launched the probe.'",
+        "Avoid nesting parentheses inside parentheses ((like this)); use square brackets inside parentheses instead (like [this])."
+      ]
+    },
+    {
+      "id": "brackets",
+      "name": "Square Brackets",
+      "symbol": "[ ]",
+      "unicode": "U+005B / U+005D",
+      "category": "enclosing",
+      "categoryLabel": "Enclosing & Framing",
+      "role": "Editorial Intervention, Quotation Modification & Nested Enclosure",
+      "overview": "Square brackets are strictly an authorial or editorial tool. When quoting an external source, brackets signal to the reader: 'These are the editor's explanatory words, pronoun adjustments, or verb alterations, inserted to maintain grammatical coherence with the host sentence.'",
+      "historicalOrigin": "Invented by early printing compositors to distinguish translator commentary and manuscript interpolations from the original author's authentic text.",
+      "rules": [
+        {
+          "number": 1,
+          "title": "Editorial Clarification in Direct Quotes",
+          "rule": "Enclose any explanatory words added to or modified within a direct quotation in square brackets.",
+          "rationale": "Maintains academic honesty, ensuring the reader knows the bracketed words were not uttered by the original speaker.",
+          "academicStandard": "Example: 'She declared that \"[the governor] had betrayed the public trust.\"' (original text said 'he')."
+        },
+        {
+          "number": 2,
+          "title": "The Scholarly [sic] Notation",
+          "rule": "Use the italicized Latin word '[sic]' (meaning 'thus, so it was') in square brackets to indicate that an error or oddity in quoted text appeared in the original source.",
+          "rationale": "Shields the researcher from being blamed for the original author's typographical or grammatical error.",
+          "academicStandard": "Example: 'The flyer advertised \"all-you-can-eat dessert's [sic] for five dollars.\"' Use sparingly to avoid appearing smug."
+        },
+        {
+          "number": 3,
+          "title": "Nested Parenthetical Framing",
+          "rule": "In standard typography, use square brackets to enclose parenthetical material that resides inside an existing set of parentheses.",
+          "rationale": "Prevents reader confusion from adjacent curved parentheses.",
+          "academicStandard": "Example: '(see detailed chronology in Miller [2022], pp. 45–50)'."
+        }
+      ],
+      "examples": [
+        {
+          "type": "correct",
+          "title": "Pronoun Adjustment for Grammatical Fit",
+          "text": "Lincoln urged the nation to strive on \"to bind up the nation's wounds, to care for him who shall have borne the battle and for [the soldier's] widow and his orphan.\"",
+          "explanation": "Brackets show the editor clarified 'his' to '[the soldier's]' for standalone comprehension."
+        },
+        {
+          "type": "correct",
+          "title": "Nested Parentheses Replacement",
+          "text": "The international convention (including representatives from the United Nations [UN]) drafted the resolution.",
+          "explanation": "Square brackets cleanly manage the nested acronym inside the parenthetical clause."
+        }
+      ],
+      "proTips": [
+        "Do not over-bracket; if a quote requires half a dozen bracketed adjustments to fit your sentence, paraphrase the passage instead.",
+        "Square brackets in mathematical equations denote grouping intervals or matrix dimensions."
+      ]
+    },
+    {
+      "id": "ellipsis",
+      "name": "Ellipsis",
+      "symbol": "...",
+      "unicode": "U+2026",
+      "category": "specialized",
+      "categoryLabel": "Omission & Modern Marks",
+      "role": "Scholarly Quoted Omission & Dramatic Hesitation",
+      "overview": "The ellipsis (plural: ellipses) consists of three spaced periods indicating the intentional omission of words, phrases, or whole sentences from a quoted passage without altering the original author's intended meaning. In narrative fiction, it conveys hesitation, stammering, or a thought trailing off.",
+      "historicalOrigin": "From the ancient Greek 'elleipsis' (meaning 'falling short, leaving out'). 16th-century printers used asterisks or hyphens; the modern three-dot convention solidified during the 19th century in academic editions.",
+      "rules": [
+        {
+          "number": 1,
+          "title": "The Three-Dot Academic Omission Standard",
+          "rule": "Always use exactly three periods (with spaces between dots in Chicago/MLA style) to represent an omission within a sentence.",
+          "rationale": "Maintains fidelity to the original source while condensing quoted prose.",
+          "academicStandard": "The omitted material must not reverse or misrepresent the source author's argument."
+        },
+        {
+          "number": 2,
+          "title": "The Four-Dot Terminal Omission Rule",
+          "rule": "When an omission occurs at the end of a quoted sentence, or spans across multiple sentences, retain the terminal period of the first sentence and append the three-dot ellipsis (creating four dots).",
+          "rationale": "The first dot acts as the grammatical period terminating sentence A; the subsequent three dots indicate the gap before sentence B.",
+          "academicStandard": "Mandated by Chicago Manual of Style and APA."
+        },
+        {
+          "number": 3,
+          "title": "Prohibition on Beginning and Ending Quotes",
+          "rule": "Do NOT place ellipses at the beginning or end of a direct quotation unless the original sentence was truncated by the speaker.",
+          "rationale": "The quotation marks themselves already inform the reader that a selection has been excised from a larger work.",
+          "academicStandard": "Standard in Chicago and modern MLA."
+        }
+      ],
+      "examples": [
+        {
+          "type": "correct",
+          "title": "Scholarly Condensation with Ellipsis",
+          "text": "Jefferson wrote that \"all men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty and the pursuit of Happiness . . . with a firm reliance on the protection of divine Providence.\"",
+          "explanation": "The three-dot ellipsis condenses the declaration while preserving the integrity of the founding document."
+        },
+        {
+          "type": "incorrect",
+          "title": "Ellipsis Distorting Author Intent",
+          "text": "The movie critic wrote: \"The film is . . . an extraordinary achievement!\" (Original: 'The film is not, by any conceivable metric, an extraordinary achievement!')",
+          "explanation": "Academic & Ethical Violation: An ellipsis must never be deployed to invert or distort the source author's original meaning."
+        },
+        {
+          "type": "correct",
+          "title": "Dramatic Trailing Voice in Fiction",
+          "text": "\"I was going to tell you the truth, but then . . .\" his voice drifted away into the autumn fog.",
+          "explanation": "Represents gradual speech dissolution in creative literature."
+        }
+      ],
+      "proTips": [
+        "In Microsoft Word, typing three periods automatically converts them into a single typographic character (U+2026). Chicago style prefers manual spaced periods (. . .).",
+        "Never use more than three dots for a mid-sentence omission."
+      ]
+    },
+    {
+      "id": "slash",
+      "name": "Slash (Virgule)",
+      "symbol": "/",
+      "unicode": "U+002F",
+      "category": "specialized",
+      "categoryLabel": "Omission & Modern Marks",
+      "role": "Alternatives, Ratios & Quoting Poetry in Continuous Prose",
+      "overview": "The slash (also called the forward slash, stroke, solidus, or virgule) indicates alternatives, mathematical division, unit rates, and stanza/line divisions when quoting poetry in running prose.",
+      "historicalOrigin": "The virgule (from Latin 'virgula', meaning 'little twig') was used in Medieval and Renaissance manuscripts as a slash serving the function of our modern comma.",
+      "rules": [
+        {
+          "number": 1,
+          "title": "Quoting Poetic Line Breaks in Running Prose",
+          "rule": "When quoting lines of poetry inside continuous running prose, separate each verse line with a slash surrounded by spaces ( / ). Separate stanzas with a double slash ( // ).",
+          "rationale": "Preserves the poet's meter and lineation without disrupting paragraph layout.",
+          "academicStandard": "Mandated by MLA and Chicago style."
+        },
+        {
+          "number": 2,
+          "title": "Alternatives & Mutually Exclusive Choices",
+          "rule": "Use an unspaced slash to indicate mutually exclusive choices (e.g., 'pass/fail', 'either/or').",
+          "rationale": "Signifies dual possibilities.",
+          "academicStandard": "Avoid 'and/or' in formal scholarly and legal discourse; choose one or write 'or both'."
+        },
+        {
+          "number": 3,
+          "title": "Fractional & Unit Rates",
+          "rule": "Use an unspaced slash to represent fractions or rates (e.g., 'km/h', 'miles/gallon').",
+          "rationale": "Standard scientific metric notation.",
+          "academicStandard": "Universal."
+        }
+      ],
+      "examples": [
+        {
+          "type": "correct",
+          "title": "Quoting Robert Frost in MLA Style",
+          "text": "Frost famously contemplates divergence: \"Two roads diverged in a yellow wood, / And sorry I could not travel both / And be one traveler, long I stood.\"",
+          "explanation": "The spaced slashes accurately represent the poetic line endings."
+        },
+        {
+          "type": "incorrect",
+          "title": "Lazy Slashing in Formal Writing",
+          "text": "Every student must submit his/her essay before the deadline/midday.",
+          "explanation": "Style Defect: Slashes make academic prose look hurried. Replace with: 'Every student must submit their essay before the midday deadline.'"
+        }
+      ],
+      "proTips": [
+        "In URL addresses and file paths on Unix-based systems, forward slashes separate directories (e.g., 'library/assets/pages/').",
+        "Always put spaces around the slash when quoting poetry; never put spaces when denoting fractions or alternatives like 'pass/fail'."
+      ]
+    },
+    {
+      "id": "interrobang",
+      "name": "Interrobang",
+      "symbol": "‽",
+      "unicode": "U+203D",
+      "category": "specialized",
+      "categoryLabel": "Omission & Modern Marks",
+      "role": "Rhetorical Incredulity, Stunned Query & Modern Typographical Hybrid",
+      "overview": "The interrobang combines the glyph and semantic energy of the question mark ('interrogatio') and the exclamation mark ('bang'). It encapsulates stunned disbelief, rhetorical outrage, or ecstatic bewilderment in a single keystroke.",
+      "historicalOrigin": "Invented in 1962 by American advertising executive Martin K. Speckter, who wanted a typographic mark for magazine ads expressing simultaneous surprise and inquiry. The word combines 'interrogatio' (Latin for question) and 'bang' (printers' slang for exclamation mark).",
+      "rules": [
+        {
+          "number": 1,
+          "title": "Expressive Incredulity in Creative Prose",
+          "rule": "Use the interrobang in informal writing, advertising copy, or expressive fiction when an utterance is simultaneously a direct question and an exclamatory outburst.",
+          "rationale": "Eliminates the clumsy and informal stacking of '?!' or '!?' in text.",
+          "academicStandard": "Informal & Creative only."
+        },
+        {
+          "number": 2,
+          "title": "The Academic Non-Standard Status",
+          "rule": "Never use the interrobang in peer-reviewed scholarship, legal documentation, or formal academic essays.",
+          "rationale": "It remains outside the canonical orthography of standard formal English.",
+          "academicStandard": "Substitute precise diction: 'The diplomat expressed profound astonishment that...'"
+        }
+      ],
+      "examples": [
+        {
+          "type": "correct",
+          "title": "Creative Dialogue Deployment",
+          "text": "\"You surrendered the primary encryption key to the operative‽\" gasped the chief director.",
+          "explanation": "Expresses utter disbelief merged with an urgent demand for confirmation."
+        },
+        {
+          "type": "incorrect",
+          "title": "Inappropriate Scholarly Use",
+          "text": "Could the fossil specimen truly date to the Precambrian era‽",
+          "explanation": "Error: Formal scientific inquiry must use standard terminal punctuation: 'Could the fossil specimen truly date to the Precambrian era?'"
+        }
+      ],
+      "proTips": [
+        "Unicode character: U+203D. On modern operating systems, type via emoji/symbol pickers or HTML entity '&#8253;'.",
+        "In informal digital communication, '?!' serves as the ASCII fallback for the interrobang."
+      ]
+    }
+  ],
+  "masteryQuiz": [
+    {
+      "id": "q1",
+      "category": "Comma Usage",
+      "question": "Which of the following sentences correctly punctuates an introductory clause and an itemized series in standard academic English?",
+      "choices": [
+        "Before commencing the laboratory trial students gathered pipettes, checked calibrations and sanitized glassware.",
+        "Before commencing the laboratory trial, students gathered pipettes, checked calibrations, and sanitized glassware.",
+        "Before commencing the laboratory trial students gathered pipettes, checked calibrations, and sanitized glassware.",
+        "Before commencing the laboratory trial, students gathered pipettes checked calibrations and sanitized glassware."
+      ],
+      "correctIndex": 1,
+      "explanation": "Option 2 contains both the required comma after the introductory dependent clausal phrase ('Before commencing the laboratory trial,') and the serial (Oxford) comma separating all three parallel verb phrases."
+    },
+    {
+      "id": "q2",
+      "category": "Semicolon vs. Comma Splice",
+      "question": "Identify the grammatically correct sentence that eliminates the comma splice error:",
+      "choices": [
+        "The economic indicators were alarming, the central bank decided to hold interest rates steady.",
+        "The economic indicators were alarming; however, the central bank decided to hold interest rates steady.",
+        "The economic indicators were alarming, however, the central bank decided to hold interest rates steady.",
+        "Although the economic indicators were alarming; the central bank decided to hold interest rates steady."
+      ],
+      "correctIndex": 1,
+      "explanation": "Conjunctive adverbs like 'however' cannot join independent clauses with a bare comma. A semicolon must precede 'however', followed by a comma. Option 4 erroneously places a semicolon after a dependent fragment."
+    },
+    {
+      "id": "q3",
+      "category": "Colon Gatekeeper Rule",
+      "question": "Select the sentence that adheres strictly to the Colon Gatekeeper Principle:",
+      "choices": [
+        "The three primary requirements for the research fellowship are: an accredited degree, two letters of recommendation, and an original proposal.",
+        "The selection panel established three mandatory requirements: an accredited degree, two letters of recommendation, and an original proposal.",
+        "The applicant must provide: an accredited degree, two letters of recommendation, and an original proposal.",
+        "The necessary criteria for selection include: an accredited degree, two letters of recommendation, and an original proposal."
+      ],
+      "correctIndex": 1,
+      "explanation": "A colon must be preceded by a grammatically complete independent clause. In Option 2, 'The selection panel established three mandatory requirements' is a full sentence. Options 1, 3, and 4 erroneously drop the colon directly after verbs ('are', 'provide', 'include')."
+    },
+    {
+      "id": "q4",
+      "category": "Hyphen vs. Dash",
+      "question": "Which sentence demonstrates proper hyphenation and dash usage?",
+      "choices": [
+        "She is an internationally-recognized researcher who studied World War II (1939-1945).",
+        "She is an internationally recognized researcher who studied World War II (1939–1945).",
+        "She is an internationally recognized-researcher who studied World War II (1939—1945).",
+        "She is an internationally-recognized researcher who studied World War II (1939—1945)."
+      ],
+      "correctIndex": 1,
+      "explanation": "Adverbs ending in '-ly' must NEVER be hyphenated with adjectives ('internationally recognized'). Furthermore, numerical spans require an en dash ('1939–1945'), not a hyphen or em dash."
+    },
+    {
+      "id": "q5",
+      "category": "Apostrophe Possession",
+      "question": "Which sentence correctly distinguishes singular vs. plural possession and possessive pronouns?",
+      "choices": [
+        "The committee inspected the children's books and examined it's leather bindings.",
+        "The committee inspected the childrens' books and examined its' leather bindings.",
+        "The committee inspected the children's books and examined its leather bindings.",
+        "The committee inspected the childrens' books and examined it's leather bindings."
+      ],
+      "correctIndex": 2,
+      "explanation": "'Children' is an irregular plural, so its possessive is formed with ''s' ('children's'). The possessive pronoun 'its' never takes an apostrophe ('its leather bindings')."
+    },
+    {
+      "id": "q6",
+      "category": "American Quotation Punctuation",
+      "question": "Under standard American typographical conventions (Chicago, MLA, APA), which sentence is punctuated correctly?",
+      "choices": [
+        "\"The empirical data is conclusive\", announced Dr. Vance, \"and we anticipate publication soon\".",
+        "\"The empirical data is conclusive,\" announced Dr. Vance; \"and we anticipate publication soon.\"",
+        "\"The empirical data is conclusive,\" announced Dr. Vance, \"and we anticipate publication soon.\"",
+        "\"The empirical data is conclusive\", announced Dr. Vance; \"and we anticipate publication soon\"."
+      ],
+      "correctIndex": 2,
+      "explanation": "In standard American English, both commas and periods strictly nest inside the quotation marks."
+    },
+    {
+      "id": "q7",
+      "category": "Parentheses & Terminal Punctuation",
+      "question": "Which sentence places the terminal period in the correct position relative to the parentheses?",
+      "choices": [
+        "The archival committee completed the preservation audit (on Friday.)",
+        "The archival committee completed the preservation audit (on Friday).",
+        "The archival committee completed the preservation audit. (on Friday)",
+        "The archival committee completed the preservation audit, (on Friday)."
+      ],
+      "correctIndex": 1,
+      "explanation": "Because the parenthetical phrase is embedded inside the larger sentence, the sentence-ending period must sit outside the closing parenthesis."
+    },
+    {
+      "id": "q8",
+      "category": "Indirect Question Traps",
+      "question": "Choose the correctly punctuated sentence regarding interrogative syntax:",
+      "choices": [
+        "The inspector wondered whether the security protocols had been breached?",
+        "The inspector wondered whether the security protocols had been breached.",
+        "\"Did the security protocols fail,\" asked the inspector?",
+        "The inspector asked: \"whether the protocols had been breached.\""
+      ],
+      "correctIndex": 1,
+      "explanation": "'The inspector wondered whether...' is an indirect reported question, not a direct query; it must terminate with a period, not a question mark."
+    }
+  ],
+  "styleGuideMatrix": [
+    {
+      "convention": "Oxford (Serial) Comma",
+      "chicago": "Strictly Required",
+      "mla": "Strictly Required",
+      "apa": "Strictly Required",
+      "ap": "Omit unless needed to prevent ambiguity"
+    },
+    {
+      "convention": "Em Dash Spacing",
+      "chicago": "Unspaced (word—word)",
+      "mla": "Unspaced (word—word)",
+      "apa": "Unspaced (word—word)",
+      "ap": "Space on both sides (word — word)"
+    },
+    {
+      "convention": "Capitalization After Colon",
+      "chicago": "Capitalize if introducing a full sentence",
+      "mla": "Lowercase unless a proper noun",
+      "apa": "Capitalize if introducing a full sentence",
+      "ap": "Capitalize if introducing a full sentence"
+    },
+    {
+      "convention": "Quotation Marks & Periods/Commas",
+      "chicago": "Strictly Inside",
+      "mla": "Strictly Inside",
+      "apa": "Strictly Inside",
+      "ap": "Strictly Inside"
+    },
+    {
+      "convention": "Singular Proper Nouns Ending in -s (Possessive)",
+      "chicago": "Add 's (James's book)",
+      "mla": "Add 's (James's book)",
+      "apa": "Add 's (James's book)",
+      "ap": "Add only apostrophe (James' book)"
+    },
+    {
+      "convention": "Ellipsis Spacing & Form",
+      "chicago": "Three spaced periods (. . .)",
+      "mla": "Three spaced periods or brackets",
+      "apa": "Three spaced periods (. . .)",
+      "ap": "Precomposed ellipsis character (…)"
+    }
+  ],
+  "cheatSheet": [
+    {
+      "symbol": ".",
+      "name": "Period",
+      "function": "Terminal declarative / imperative stop; standard abbreviations.",
+      "do": "Use single space after period; nest inside American quotes.",
+      "dont": "Never use double periods at end of sentence ending with an abbreviation."
+    },
+    {
+      "symbol": ",",
+      "name": "Comma",
+      "function": "Syntactic boundaries, Oxford lists, introductory clauses, compound sentences.",
+      "do": "Place before FANBOYS joining independent clauses; isolate non-restrictive clauses.",
+      "dont": "Never glue two complete sentences with only a comma (comma splice)."
+    },
+    {
+      "symbol": ";",
+      "name": "Semicolon",
+      "function": "Equilibrium between independent clauses; complex lists with internal commas.",
+      "do": "Ensure both sides can stand as autonomous sentences; use before 'however,'.",
+      "dont": "Never use after a dependent fragment or before a bare conjunction."
+    },
+    {
+      "symbol": ":",
+      "name": "Colon",
+      "function": "Gatekeeper introducing lists, explanations, amplifying clauses, or block quotes.",
+      "do": "Ensure the words preceding the colon form a complete sentence.",
+      "dont": "Never drop a colon directly after a verb ('are:') or preposition ('to:')."
+    },
+    {
+      "symbol": "—",
+      "name": "Em Dash",
+      "function": "Dramatic clausal interruption, emphatic parenthetical, or rhetorical pivot.",
+      "do": "Use for vivid emphasis or to replace colons for dynamic cadence.",
+      "dont": "Don't overuse (limits prose rhythm); don't type as double hyphens (--)."
+    },
+    {
+      "symbol": "–",
+      "name": "En Dash",
+      "function": "Spans inclusive number and date ranges; links open compound modifiers.",
+      "do": "Use for page and year ranges (1914–1918, pp. 20–35).",
+      "dont": "Never combine with prepositions 'from' or 'between' ('from 1914 to 1918')."
+    },
+    {
+      "symbol": "-",
+      "name": "Hyphen",
+      "function": "Compound adjectives preceding nouns; prefixes with proper nouns; suspensive terms.",
+      "do": "Hyphenate compound modifiers before nouns ('well-known author').",
+      "dont": "Never hyphenate '-ly' adverbs with adjectives ('carefully planned')."
+    },
+    {
+      "symbol": "'",
+      "name": "Apostrophe",
+      "function": "Genitive possession and omitted letters in contractions.",
+      "do": "Use 's for singular nouns and irregular plurals; remember 'it's' = 'it is'.",
+      "dont": "Never use on possessive pronouns ('its', 'whose') or standard plural nouns."
+    },
+    {
+      "symbol": "\" \"",
+      "name": "Quotation Marks",
+      "function": "Verbatim speech, cited text, and titles of minor/short works.",
+      "do": "In American English, keep commas and periods strictly inside quotes.",
+      "dont": "Never place semicolons or colons inside quotation marks."
+    },
+    {
+      "symbol": "( )",
+      "name": "Parentheses",
+      "function": "De-emphasized background clarification, citations, and acronym expansions.",
+      "do": "Ensure host sentence remains grammatical if the parenthetical is excised.",
+      "dont": "Never put a comma directly before an opening parenthesis."
+    },
+    {
+      "symbol": "[ ]",
+      "name": "Square Brackets",
+      "function": "Editorial interpolations, altered pronouns in quotes, and nested parentheses.",
+      "do": "Use to clarify ambiguous pronouns in quotations without distorting meaning.",
+      "dont": "Never alter original quote meaning when inserting bracketed clarifications."
+    },
+    {
+      "symbol": "...",
+      "name": "Ellipsis",
+      "function": "Omission of words from quoted sources; trailing thoughts in creative dialogue.",
+      "do": "Use exactly three periods for internal omissions; four dots across sentence boundaries.",
+      "dont": "Never use ellipses to twist or reverse an author's actual argument."
+    },
+    {
+      "symbol": "?",
+      "name": "Question Mark",
+      "function": "Direct interrogative closure and tag questions.",
+      "do": "Use on direct inverted questions ('Will you attend?').",
+      "dont": "Never place after an indirect reported question ('He asked if I would attend.')."
+    },
+    {
+      "symbol": "!",
+      "name": "Exclamation Mark",
+      "function": "Sudden vehement emotion, urgent warnings, and interjections.",
+      "do": "Use in dramatic narrative dialogue and urgent safety warnings.",
+      "dont": "Avoid completely in objective scholarly, empirical, and legal writing."
+    },
+    {
+      "symbol": "/",
+      "name": "Slash",
+      "function": "Poetic line breaks in continuous prose, unit rates, and mutually exclusive options.",
+      "do": "Add spaces around slash when quoting poetry lines in running prose.",
+      "dont": "Avoid casual 'and/or' slashing in formal academic prose."
+    },
+    {
+      "symbol": "‽",
+      "name": "Interrobang",
+      "function": "Expressive hybrid of question and exclamation for stunned disbelief.",
+      "do": "Use in creative prose or marketing copy for dramatic rhetorical surprise.",
+      "dont": "Never use in formal academic research or peer-reviewed literature."
+    }
+  ],
+  "historicalTimeline": [
+    {
+      "era": "c. 200 BCE",
+      "scholar": "Aristophanes of Byzantium (Library of Alexandria)",
+      "innovation": "Invented the three-dot system of punctuation (hypostigme, mese stigme, stigme teleia) to guide dramatic actors on where to breathe in Greek scripts."
+    },
+    {
+      "era": "c. 780 CE",
+      "scholar": "Alcuin of York & Carolingian Scribes",
+      "innovation": "Standardized lowercase Carolingian miniscule, regular word spacing, and the punctus interrogativus (precursor to the question mark)."
+    },
+    {
+      "era": "1494–1502 CE",
+      "scholar": "Aldus Manutius (Venice)",
+      "innovation": "Systematized the modern comma (transforming the medieval virgule slash), the semicolon, and italics in his revolutionary pocket octavo editions."
+    },
+    {
+      "era": "1755 CE",
+      "scholar": "Samuel Johnson (A Dictionary of the English Language)",
+      "innovation": "Synthesized English orthography and standardized the semantic role of the apostrophe in distinguishing possession from simple plurality."
+    },
+    {
+      "era": "1906 CE",
+      "scholar": "The Chicago Manual of Style (1st Edition)",
+      "innovation": "Established formal American typographical rules, including the unspaced em dash, the Oxford serial comma, and quotation mark nesting."
+    },
+    {
+      "era": "1962 CE",
+      "scholar": "Martin K. Speckter",
+      "innovation": "Invented the Interrobang (‽), creating the first major punctuation glyph conceived specifically for modern print advertising and expressive typography."
+    },
+    {
+      "era": "1991–Present",
+      "scholar": "The Unicode Consortium",
+      "innovation": "Codified universal digital typography, defining distinct Unicode codepoints for hyphens (U+002D), en dashes (U+2013), em dashes (U+2014), and curved typographic quotation marks."
+    }
+  ]
+}
