@@ -14,7 +14,6 @@ if (!isset($pageData) || !is_array($pageData)) {
 
 $marks = $pageData['marks'] ?? [];
 $categories = $pageData['categories'] ?? [];
-$quiz = $pageData['masteryQuiz'] ?? [];
 $matrix = $pageData['styleGuideMatrix'] ?? [];
 $cheatSheet = $pageData['cheatSheet'] ?? [];
 $timeline = $pageData['historicalTimeline'] ?? [];
@@ -61,11 +60,7 @@ $standards = $pageData['standards'] ?? [];
 
         <!-- Quick Action Toolbar -->
         <div class="repo-hero-actions" role="toolbar" aria-label="Study & Export Tools">
-            <a href="#repo-quiz-section" class="repo-action-btn primary">
-                <i class="fas fa-vial" aria-hidden="true"></i>
-                <span>Mastery Quiz Lab</span>
-            </a>
-            <a href="#repo-matrix-section" class="repo-action-btn">
+            <a href="#repo-matrix-section" class="repo-action-btn primary">
                 <i class="fas fa-table-columns" aria-hidden="true"></i>
                 <span>Style Guide Matrix</span>
             </a>
@@ -252,41 +247,6 @@ $standards = $pageData['standards'] ?? [];
         <?php endforeach; ?>
 
     </section>
-
-    <!-- Interactive Punctuation Mastery Lab (Quiz) -->
-    <?php if (!empty($quiz)): ?>
-        <section class="repo-section-card" id="repo-quiz-section" role="region" aria-label="Interactive Mastery Quiz">
-            <div class="repo-section-header">
-                <h2><i class="fas fa-spell-check" style="color: var(--lib-primary);" aria-hidden="true"></i> Interactive Punctuation Mastery Lab</h2>
-                <p>Test your syntactic mastery across comma splices, colon gating, hyphenation rules, and apostrophe invariants with instant scholarly feedback.</p>
-            </div>
-
-            <div class="repo-quiz-score-tracker">
-                <i class="fas fa-trophy" style="color: #f59e0b; font-size: 1.25rem;" aria-hidden="true"></i>
-                <span class="repo-quiz-score-badge">Score: <strong id="repo-quiz-score-val">0</strong> / <span id="repo-quiz-total-val"><?= count($quiz) ?></span></span>
-            </div>
-
-            <div class="repo-quiz-feed">
-                <?php foreach ($quiz as $idx => $q): ?>
-                    <div class="repo-quiz-item" data-qid="<?= htmlspecialchars($q['id']) ?>" data-correct-index="<?= (int)$q['correctIndex'] ?>" data-explanation="<?= htmlspecialchars($q['explanation']) ?>">
-                        <div class="repo-quiz-item-header">
-                            <span class="repo-quiz-category-tag"><?= htmlspecialchars($q['category']) ?></span>
-                            <span style="font-size: 0.8rem; font-weight: 700; color: var(--lib-text-muted);">Question <?= $idx + 1 ?> of <?= count($quiz) ?></span>
-                        </div>
-                        <div class="repo-quiz-question"><?= htmlspecialchars($q['question']) ?></div>
-                        <div class="repo-quiz-choices" role="radiogroup" aria-label="Question choices">
-                            <?php foreach ($q['choices'] as $cIdx => $choice): ?>
-                                <button type="button" class="repo-quiz-choice-btn" data-choice-index="<?= $cIdx ?>" role="radio" aria-checked="false">
-                                    <span><?= htmlspecialchars($choice) ?></span>
-                                </button>
-                            <?php endforeach; ?>
-                        </div>
-                        <div class="repo-quiz-feedback" aria-live="polite"></div>
-                    </div>
-                <?php endforeach; ?>
-            </div>
-        </section>
-    <?php endif; ?>
 
     <!-- Style Guide Divergence Matrix -->
     <?php if (!empty($matrix)): ?>

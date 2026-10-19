@@ -14,14 +14,11 @@
     'use strict';
 
     let activeCategory = 'all';
-    let quizScore = 0;
-    let answeredQuestions = new Set();
     let repoUtterance = null;
 
     document.addEventListener('DOMContentLoaded', () => {
         initCategoryFilter();
         initSearchFilter();
-        initQuizEngine();
         initCopyGlyphButtons();
         initDeepHashNavigation();
         initTextToSpeech();
@@ -134,54 +131,6 @@
         setTimeout(checkHash, 150);
     }
 
-    // 4. Interactive Mastery Quiz Engine
-    function initQuizEngine() {
-        const quizItems = document.querySelectorAll('.repo-quiz-item');
-        const totalCount = quizItems.length;
-        const scoreEl = document.getElementById('repo-quiz-score-val');
-        const totalEl = document.getElementById('repo-quiz-total-val');
-
-        if (totalEl) totalEl.textContent = totalCount;
-
-        quizItems.forEach(item => {
-            const qId = item.dataset.qid;
-            const correctIndex = parseInt(item.dataset.correctIndex, 10);
-            const buttons = item.querySelectorAll('.repo-quiz-choice-btn');
-            const feedbackEl = item.querySelector('.repo-quiz-feedback');
-
-            buttons.forEach((btn, index) => {
-                btn.addEventListener('click', () => {
-                    if (answeredQuestions.has(qId)) return;
-                    answeredQuestions.add(qId);
-
-                    buttons.forEach(b => b.disabled = true);
-
-                    if (index === correctIndex) {
-                        btn.classList.add('selected-correct');
-                        btn.innerHTML += ' <i class="fas fa-check-circle" style="color: #10b981; margin-left: auto;"></i>';
-                        quizScore++;
-                        if (feedbackEl) {
-                            feedbackEl.classList.add('show', 'correct');
-                            feedbackEl.innerHTML = `<strong><i class="fas fa-check-circle"></i> Outstanding! Correct.</strong> ${item.dataset.explanation || ''}`;
-                        }
-                    } else {
-                        btn.classList.add('selected-incorrect');
-                        btn.innerHTML += ' <i class="fas fa-times-circle" style="color: #ef4444; margin-left: auto;"></i>';
-                        // Also show the correct choice
-                        if (buttons[correctIndex]) {
-                            buttons[correctIndex].classList.add('selected-correct');
-                        }
-                        if (feedbackEl) {
-                            feedbackEl.classList.add('show', 'incorrect');
-                            feedbackEl.innerHTML = `<strong><i class="fas fa-times-circle"></i> Not quite.</strong> ${item.dataset.explanation || ''}`;
-                        }
-                    }
-
-                    if (scoreEl) scoreEl.textContent = quizScore;
-                });
-            });
-        });
-    }
 
     // 5. Copy Glyph to Clipboard with Feedback Toast
     function initCopyGlyphButtons() {

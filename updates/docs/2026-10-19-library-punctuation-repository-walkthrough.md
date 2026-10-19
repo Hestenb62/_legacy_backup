@@ -4,7 +4,7 @@ date: "2026-10-19"
 version: "v2.24.0"
 category: "Walkthrough"
 tags: ["Library", "Punctuation", "ELA", "Extensibility", "Architecture", "Accessibility", "WCAG"]
-summary: "Updated Comma Usage study popup to link directly to /library/index.php?pages=punctuation and engineered an extensible repository architecture powered by external JSON datasets, featuring 16 punctuation marks, canonical rules, contrasting exemplars, and an interactive mastery lab."
+summary: "Updated Comma Usage study popup to link directly to /library/index.php?pages=punctuation and engineered an extensible repository architecture powered by external JSON datasets, featuring 16 punctuation marks, canonical rules, contrasting exemplars, and academic style matrices."
 author: "Antigravity & Hesten"
 ---
 
@@ -96,10 +96,7 @@ Stored in [`library/assets/pages/punctuation.json`](file:///c:/Users/Heste/OneDr
 
 ## 4. Interactive Learning & Scholar Tools
 
-1. **Interactive Punctuation Mastery Lab (Quiz)**:
-   - 8 multi-choice diagnostic challenges addressing subtle grammatical edge cases.
-   - Live score tracking and instant explanatory feedback for correct and incorrect answers.
-2. **Academic Style Guide Divergence Matrix**:
+1. **Academic Style Guide Divergence Matrix**:
    - Side-by-side comparison across Chicago (CMOS), MLA 9th, APA 7th, and AP Style for:
      - Oxford (Serial) Comma
      - Em Dash Spacing

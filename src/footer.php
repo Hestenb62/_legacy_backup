@@ -271,7 +271,7 @@
                 </span>
             </div>
             <p class="footer-vmodal-lead">
-                Version <?= htmlspecialchars($siteVersion) ?> introduces the <strong>Digital Library Master Punctuation Repository &amp; Extensible Research Page Architecture</strong> (<code>/library/index.php?pages=punctuation</code>), complete with 16 punctuation marks, canonical rules, contrasting exemplars, interactive mastery diagnostics, style guide matrix, and curated bridges from study modals.
+                Version <?= htmlspecialchars($siteVersion) ?> introduces the <strong>Digital Library Master Punctuation Repository &amp; Extensible Research Page Architecture</strong> (<code>/library/index.php?pages=punctuation</code>), complete with 16 punctuation marks, canonical rules, contrasting exemplars, style guide matrix, quick cheat sheet, and curated bridges from study modals.
             </p>
             <ul class="footer-vmodal-features">
                 <li class="footer-vmodal-feature-item">
@@ -283,8 +283,7 @@
                         <ul style="margin: 0.35rem 0 0 1rem; padding: 0; font-size: 0.85rem; color: var(--color-text-secondary, #475569); line-height: 1.5;">
                             <li><strong>Extensible Page Routing:</strong> Accessible via <code>/library/index.php?pages=punctuation</code>, dynamically loading modular page content from <code>library/assets/pages/punctuation.json</code>.</li>
                             <li><strong>Comprehensive 16-Mark Punctuation Directory:</strong> Canonical rules, linguistic rationales, Unicode codepoints, contrasting exemplars (correct vs. incorrect with explanations), pro-tips, and historical etymologies from 200 BCE to modern Unicode.</li>
-                            <li><strong>Interactive Mastery Lab &amp; Diagnostic Quiz:</strong> 8-question interactive challenge with live score tracking, instantaneous feedback, and deep-dive scholarly explanations.</li>
-                            <li><strong>Academic Style Guide Divergence Matrix:</strong> Side-by-side comparative table for Chicago (CMOS), MLA 9th, APA 7th, and AP Style conventions.</li>
+                            <li><strong>Academic Style Guide Divergence Matrix &amp; Cheat Sheet:</strong> Side-by-side comparative table for Chicago (CMOS), MLA 9th, APA 7th, and AP Style conventions, plus high-density quick reference cheat sheet.</li>
                             <li><strong>Curated Study Modal Bridges:</strong> Updated curated reference links across Comma Usage, Semicolons &amp; Colons, Apostrophes &amp; Quotation Marks, Hyphens &amp; Dashes, and Parentheses &amp; Ellipses popups.</li>
                         </ul>
                     </div>
