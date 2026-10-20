@@ -2,20 +2,8 @@
 <?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://hestena62.com/AGENTS.md</loc>
-    <lastmod>2026-09-29</lastmod>
-  </url>
-  <url>
     <loc>https://hestena62.com/</loc>
     <lastmod>2026-10-10</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/README.md</loc>
-    <lastmod>2026-09-02</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/SECURITY.md</loc>
-    <lastmod>2026-08-16</lastmod>
   </url>
   <url>
     <loc>https://hestena62.com/assessment/diagnostic.php</loc>
@@ -36,162 +24,6 @@
   <url>
     <loc>https://hestena62.com/assets/verify.php</loc>
     <lastmod>2026-09-07</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/assets/canvas-confetti-1.9.4/README.md</loc>
-    <lastmod>1985-10-26</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/assets/guides/american-school-system.md</loc>
-    <lastmod>2026-09-25</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/assets/guides/demystifying-common-core.md</loc>
-    <lastmod>2026-09-25</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/assets/guides/school-options-public-charter-private-homeschool.md</loc>
-    <lastmod>2026-09-25</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/assets/guides/special-education-ieps-504.md</loc>
-    <lastmod>2026-09-25</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/assets/guides/standardized-testing-assessments.md</loc>
-    <lastmod>2026-09-25</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/assets/js/mathjax-4.1.3/CONTRIBUTING.md</loc>
-    <lastmod>1985-10-26</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/assets/js/mathjax-4.1.3/README.md</loc>
-    <lastmod>1985-10-26</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/assets/text/accessability-section-508.md</loc>
-    <lastmod>2026-09-08</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/assets/text/accessability-udl.md</loc>
-    <lastmod>2026-09-08</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/assets/text/accessability-wcag-2-1-aa.md</loc>
-    <lastmod>2026-09-08</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/assets/text/accessability-wcag-aaa.md</loc>
-    <lastmod>2026-09-08</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/assets/text/accessibility.md</loc>
-    <lastmod>2026-08-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/assets/text/hc-american-civics-classics.md</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/assets/text/hc-classic-vermont-library-additions.md</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/assets/text/hc-command-palette.md</loc>
-    <lastmod>2026-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/assets/text/hc-crossword-generator.md</loc>
-    <lastmod>2026-10-06</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/assets/text/hc-curriculum-popups.md</loc>
-    <lastmod>2026-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/assets/text/hc-grade-9-algebra-complete.md</loc>
-    <lastmod>2026-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/assets/text/hc-grade-9-algebra-module-1.md</loc>
-    <lastmod>2026-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/assets/text/hc-gutenberg-classics.md</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/assets/text/hc-history-of-woman-suffrage.md</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/assets/text/hc-journal-of-negro-history.md</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/assets/text/hc-js-architecture.md</loc>
-    <lastmod>2026-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/assets/text/hc-manipulatives.md</loc>
-    <lastmod>2026-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/assets/text/hc-math-vocab.md</loc>
-    <lastmod>2026-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/assets/text/hc-practice-notebook.md</loc>
-    <lastmod>2026-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/assets/text/hc-progress-dossier.md</loc>
-    <lastmod>2026-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/assets/text/hc-progress.md</loc>
-    <lastmod>2026-08-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/assets/text/hc-research-hub.md</loc>
-    <lastmod>2026-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/assets/text/hc-scratchpad-studio.md</loc>
-    <lastmod>2026-10-10</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/assets/text/hc-skills-passport.md</loc>
-    <lastmod>2026-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/assets/text/hc-unified-library-catalog.md</loc>
-    <lastmod>2026-10-10</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/assets/text/hc-updating.md</loc>
-    <lastmod>2026-08-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/assets/text/hc-word-search-generator.md</loc>
-    <lastmod>2026-10-06</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/assets/text/library-gutenberg.md</loc>
-    <lastmod>2026-09-10</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/assets/text/library-gutenburg.md</loc>
-    <lastmod>2026-09-10</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/assets/text/progress.md</loc>
-    <lastmod>2026-08-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/assets/text/updating.md</loc>
-    <lastmod>2026-08-11</lastmod>
   </url>
   <url>
     <loc>https://hestena62.com/levels/a.php</loc>
@@ -279,7 +111,7 @@
   </url>
   <url>
     <loc>https://hestena62.com/library/book_card.php</loc>
-    <lastmod>2026-10-10</lastmod>
+    <lastmod>2026-10-16</lastmod>
   </url>
   <url>
     <loc>https://hestena62.com/library/browse.php</loc>
@@ -295,7 +127,7 @@
   </url>
   <url>
     <loc>https://hestena62.com/library/index.php</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-19</lastmod>
   </url>
   <url>
     <loc>https://hestena62.com/library/library_header_nav.php</loc>
@@ -303,7 +135,11 @@
   </url>
   <url>
     <loc>https://hestena62.com/library/modals.php</loc>
-    <lastmod>2026-10-10</lastmod>
+    <lastmod>2026-10-16</lastmod>
+  </url>
+  <url>
+    <loc>https://hestena62.com/library/repository_page.php</loc>
+    <lastmod>2026-10-19</lastmod>
   </url>
   <url>
     <loc>https://hestena62.com/library/read/index.php</loc>
@@ -311,7 +147,7 @@
   </url>
   <url>
     <loc>https://hestena62.com/library/read/reader_template.php</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-16</lastmod>
   </url>
   <url>
     <loc>https://hestena62.com/library/read/1984/chapter-1.php</loc>
@@ -422,10 +258,6 @@
     <lastmod>2026-09-06</lastmod>
   </url>
   <url>
-    <loc>https://hestena62.com/library/read/a-room-with-a-view/book.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
     <loc>https://hestena62.com/library/read/a-room-with-a-view/chapter-1.php</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
@@ -511,10 +343,6 @@
   </url>
   <url>
     <loc>https://hestena62.com/library/read/a-room-with-a-view/index.php</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/library/read/a-tale-of-two-cities/book.html</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
@@ -706,10 +534,6 @@
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
-    <loc>https://hestena62.com/library/read/adventures-of-huckleberry-finn/book.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
     <loc>https://hestena62.com/library/read/adventures-of-huckleberry-finn/chapter-1.php</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
@@ -898,10 +722,6 @@
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
-    <loc>https://hestena62.com/library/read/alices-adventures-in-wonderland/book.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
     <loc>https://hestena62.com/library/read/alices-adventures-in-wonderland/chapter-1.php</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
@@ -1074,10 +894,6 @@
     <lastmod>2026-10-10</lastmod>
   </url>
   <url>
-    <loc>https://hestena62.com/library/read/anne-of-green-gables/book.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
     <loc>https://hestena62.com/library/read/anne-of-green-gables/chapter-1.php</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
@@ -1238,10 +1054,6 @@
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
-    <loc>https://hestena62.com/library/read/best-short-stories-1917/book.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
     <loc>https://hestena62.com/library/read/best-short-stories-1917/chapter-1.php</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
@@ -1370,10 +1182,6 @@
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
-    <loc>https://hestena62.com/library/read/chambers-dictionary-part-1/book.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
     <loc>https://hestena62.com/library/read/chambers-dictionary-part-1/chapter-1.php</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
@@ -1395,10 +1203,6 @@
   </url>
   <url>
     <loc>https://hestena62.com/library/read/chambers-dictionary-part-1/index.php</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/library/read/complete-works-of-william-shakespeare/book.html</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
@@ -2506,10 +2310,6 @@
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
-    <loc>https://hestena62.com/library/read/dracula/book.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
     <loc>https://hestena62.com/library/read/dracula/chapter-1.php</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
@@ -2978,14 +2778,6 @@
     <lastmod>2026-08-22</lastmod>
   </url>
   <url>
-    <loc>https://hestena62.com/library/read/federalist-papers/pg18-images.html</loc>
-    <lastmod>2026-08-19</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/library/read/frankenstein/book.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
     <loc>https://hestena62.com/library/read/frankenstein/chapter-1.php</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
@@ -3106,10 +2898,6 @@
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
-    <loc>https://hestena62.com/library/read/geology-of-button-bay-state-park/book.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
     <loc>https://hestena62.com/library/read/geology-of-button-bay-state-park/chapter-1.php</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
@@ -3131,10 +2919,6 @@
   </url>
   <url>
     <loc>https://hestena62.com/library/read/geology-of-button-bay-state-park/index.php</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/library/read/geology-of-calvin-coolidge-state-forest/book.html</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
@@ -3162,10 +2946,6 @@
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
-    <loc>https://hestena62.com/library/read/geology-of-dar-mt-philo-sand-bar-state-parks/book.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
     <loc>https://hestena62.com/library/read/geology-of-dar-mt-philo-sand-bar-state-parks/chapter-1.php</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
@@ -3183,10 +2963,6 @@
   </url>
   <url>
     <loc>https://hestena62.com/library/read/geology-of-dar-mt-philo-sand-bar-state-parks/index.php</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/library/read/geology-of-darling-state-park/book.html</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
@@ -3214,10 +2990,6 @@
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
-    <loc>https://hestena62.com/library/read/geology-of-groton-state-forest/book.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
     <loc>https://hestena62.com/library/read/geology-of-groton-state-forest/chapter-1.php</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
@@ -3239,10 +3011,6 @@
   </url>
   <url>
     <loc>https://hestena62.com/library/read/geology-of-groton-state-forest/index.php</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/library/read/geology-of-mt-mansfield-state-forest/book.html</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
@@ -3270,10 +3038,6 @@
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
-    <loc>https://hestena62.com/library/read/give-me-liberty-or-give-me-death/book.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
     <loc>https://hestena62.com/library/read/give-me-liberty-or-give-me-death/chapter-1.php</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
@@ -3283,10 +3047,6 @@
   </url>
   <url>
     <loc>https://hestena62.com/library/read/give-me-liberty-or-give-me-death/index.php</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/library/read/history-of-woman-suffrage-vol-1/book.html</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
@@ -3374,10 +3134,6 @@
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
-    <loc>https://hestena62.com/library/read/history-of-woman-suffrage-vol-2/book.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
     <loc>https://hestena62.com/library/read/history-of-woman-suffrage-vol-2/chapter-1.php</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
@@ -3439,10 +3195,6 @@
   </url>
   <url>
     <loc>https://hestena62.com/library/read/history-of-woman-suffrage-vol-2/index.php</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/library/read/history-of-woman-suffrage-vol-3/book.html</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
@@ -3711,10 +3463,6 @@
   </url>
   <url>
     <loc>https://hestena62.com/library/read/history-of-woman-suffrage-vol-3/index.php</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/library/read/history-of-woman-suffrage-vol-4/book.html</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
@@ -4050,10 +3798,6 @@
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
-    <loc>https://hestena62.com/library/read/history-of-woman-suffrage-vol-5/book.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
     <loc>https://hestena62.com/library/read/history-of-woman-suffrage-vol-5/chapter-1.php</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
@@ -4175,10 +3919,6 @@
   </url>
   <url>
     <loc>https://hestena62.com/library/read/history-of-woman-suffrage-vol-5/index.php</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/library/read/history-of-woman-suffrage-vol-6/book.html</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
@@ -4418,10 +4158,6 @@
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
-    <loc>https://hestena62.com/library/read/journal-of-negro-history-vol-1/book.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
     <loc>https://hestena62.com/library/read/journal-of-negro-history-vol-1/chapter-1.php</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
@@ -4570,10 +4306,6 @@
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
-    <loc>https://hestena62.com/library/read/journal-of-negro-history-vol-2/book.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
     <loc>https://hestena62.com/library/read/journal-of-negro-history-vol-2/chapter-1.php</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
@@ -4710,10 +4442,6 @@
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
-    <loc>https://hestena62.com/library/read/journal-of-negro-history-vol-3/book.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
     <loc>https://hestena62.com/library/read/journal-of-negro-history-vol-3/chapter-1.php</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
@@ -4846,10 +4574,6 @@
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
-    <loc>https://hestena62.com/library/read/journal-of-negro-history-vol-4/book.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
     <loc>https://hestena62.com/library/read/journal-of-negro-history-vol-4/chapter-1.php</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
@@ -4959,10 +4683,6 @@
   </url>
   <url>
     <loc>https://hestena62.com/library/read/journal-of-negro-history-vol-4/index.php</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/library/read/journal-of-negro-history-vol-5/book.html</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
@@ -5118,10 +4838,6 @@
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
-    <loc>https://hestena62.com/library/read/journal-of-negro-history-vol-6/book.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
     <loc>https://hestena62.com/library/read/journal-of-negro-history-vol-6/chapter-1.php</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
@@ -5263,10 +4979,6 @@
   </url>
   <url>
     <loc>https://hestena62.com/library/read/journal-of-negro-history-vol-6/index.php</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/library/read/journal-of-negro-history-vol-7/book.html</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
@@ -5422,10 +5134,6 @@
     <lastmod>2026-09-10</lastmod>
   </url>
   <url>
-    <loc>https://hestena62.com/library/read/letters-of-queen-victoria-vol-2/book.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
     <loc>https://hestena62.com/library/read/letters-of-queen-victoria-vol-2/chapter-1.php</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
@@ -5475,10 +5183,6 @@
   </url>
   <url>
     <loc>https://hestena62.com/library/read/letters-of-queen-victoria-vol-2/index.php</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/library/read/life-of-charles-dickens/book.html</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
@@ -5828,10 +5532,6 @@
   <url>
     <loc>https://hestena62.com/library/read/math-facts-repo/index.php</loc>
     <lastmod>2026-09-10</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/library/read/middlemarch/book.html</loc>
-    <lastmod>2026-10-11</lastmod>
   </url>
   <url>
     <loc>https://hestena62.com/library/read/middlemarch/chapter-1.php</loc>
@@ -6191,10 +5891,6 @@
   </url>
   <url>
     <loc>https://hestena62.com/library/read/middlemarch/index.php</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/library/read/moby-dick/book.html</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
@@ -6758,10 +6454,6 @@
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
-    <loc>https://hestena62.com/library/read/on-liberty/book.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
     <loc>https://hestena62.com/library/read/on-liberty/chapter-1.php</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
@@ -6799,10 +6491,6 @@
   </url>
   <url>
     <loc>https://hestena62.com/library/read/on-liberty/index.php</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/library/read/pride-and-prejudice/book.html</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
@@ -7066,10 +6754,6 @@
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
-    <loc>https://hestena62.com/library/read/romeo-and-juliet/book.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
     <loc>https://hestena62.com/library/read/romeo-and-juliet/chapter-1.php</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
@@ -7120,10 +6804,6 @@
   <url>
     <loc>https://hestena62.com/library/read/science-facts-repo/index.php</loc>
     <lastmod>2026-09-10</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/library/read/second-treatise-of-government/book.html</loc>
-    <lastmod>2026-10-11</lastmod>
   </url>
   <url>
     <loc>https://hestena62.com/library/read/second-treatise-of-government/chapter-1.php</loc>
@@ -7214,10 +6894,6 @@
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
-    <loc>https://hestena62.com/library/read/shakespeare-works-vol-5/book.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
     <loc>https://hestena62.com/library/read/shakespeare-works-vol-5/chapter-1.php</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
@@ -7287,10 +6963,6 @@
   </url>
   <url>
     <loc>https://hestena62.com/library/read/shakespeare-works-vol-5/index.php</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/library/read/shakespeare-works-vol-7/book.html</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
@@ -7439,10 +7111,6 @@
   </url>
   <url>
     <loc>https://hestena62.com/library/read/shakespeare-works-vol-7/index.php</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/library/read/spoon-river-anthology/book.html</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
@@ -8430,10 +8098,6 @@
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
-    <loc>https://hestena62.com/library/read/the-brothers-karamazov/book.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
     <loc>https://hestena62.com/library/read/the-brothers-karamazov/chapter-1.php</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
@@ -8830,10 +8494,6 @@
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
-    <loc>https://hestena62.com/library/read/the-declaration-of-independence/book.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
     <loc>https://hestena62.com/library/read/the-declaration-of-independence/chapter-1.php</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
@@ -8847,10 +8507,6 @@
   </url>
   <url>
     <loc>https://hestena62.com/library/read/the-declaration-of-independence/index.php</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/library/read/the-great-gatsby/book.html</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
@@ -8891,10 +8547,6 @@
   </url>
   <url>
     <loc>https://hestena62.com/library/read/the-great-gatsby/index.php</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/library/read/the-green-mountain-boys/book.html</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
@@ -8951,10 +8603,6 @@
   </url>
   <url>
     <loc>https://hestena62.com/library/read/the-green-mountain-boys/index.php</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/library/read/the-king-james-bible/book.html</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
@@ -9226,10 +8874,6 @@
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
-    <loc>https://hestena62.com/library/read/the-odyssey/book.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
     <loc>https://hestena62.com/library/read/the-odyssey/chapter-1.php</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
@@ -9346,10 +8990,6 @@
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
-    <loc>https://hestena62.com/library/read/the-republic-plato/book.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
     <loc>https://hestena62.com/library/read/the-republic-plato/chapter-1.php</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
@@ -9399,10 +9039,6 @@
   </url>
   <url>
     <loc>https://hestena62.com/library/read/the-republic-plato/index.php</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/library/read/the-scarlet-letter/book.html</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
@@ -9522,10 +9158,6 @@
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
-    <loc>https://hestena62.com/library/read/the-time-machine/book.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
     <loc>https://hestena62.com/library/read/the-time-machine/chapter-1.php</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
@@ -9602,10 +9234,6 @@
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
-    <loc>https://hestena62.com/library/read/the-united-states-bill-of-rights/book.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
     <loc>https://hestena62.com/library/read/the-united-states-bill-of-rights/chapter-1.php</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
@@ -9615,10 +9243,6 @@
   </url>
   <url>
     <loc>https://hestena62.com/library/read/the-united-states-bill-of-rights/index.php</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/library/read/the-united-states-constitution/book.html</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
@@ -9651,10 +9275,6 @@
   </url>
   <url>
     <loc>https://hestena62.com/library/read/the-united-states-constitution/index.php</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/library/read/the-wonderful-wizard-of-oz/book.html</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
@@ -9766,10 +9386,6 @@
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
-    <loc>https://hestena62.com/library/read/ulysses/book.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
     <loc>https://hestena62.com/library/read/ulysses/chapter-1.php</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
@@ -9848,10 +9464,6 @@
   <url>
     <loc>https://hestena62.com/library/read/usa-constitution/index.php</loc>
     <lastmod>2026-08-22</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/library/read/vermont-a-study-of-independence/book.html</loc>
-    <lastmod>2026-10-11</lastmod>
   </url>
   <url>
     <loc>https://hestena62.com/library/read/vermont-a-study-of-independence/chapter-1.php</loc>
@@ -9958,10 +9570,6 @@
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
-    <loc>https://hestena62.com/library/read/vermont-riflemen-in-the-war-for-the-union/book.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
     <loc>https://hestena62.com/library/read/vermont-riflemen-in-the-war-for-the-union/chapter-1.php</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
@@ -9995,10 +9603,6 @@
   </url>
   <url>
     <loc>https://hestena62.com/library/read/vermont-riflemen-in-the-war-for-the-union/index.php</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/library/read/war-and-peace/book.html</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
@@ -11626,10 +11230,6 @@
     <lastmod>2026-08-22</lastmod>
   </url>
   <url>
-    <loc>https://hestena62.com/library/read/wuthering-heights/book.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
     <loc>https://hestena62.com/library/read/wuthering-heights/chapter-1.php</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
@@ -11882,28 +11482,8 @@
     <lastmod>2026-09-11</lastmod>
   </url>
   <url>
-    <loc>https://hestena62.com/research/DLDR/texts/journal-scope.md</loc>
-    <lastmod>2026-08-25</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/research/DLDR/texts/PA-Rhyming-Impact.md</loc>
-    <lastmod>2026-08-25</lastmod>
-  </url>
-  <url>
     <loc>https://hestena62.com/research/DSMS/index.php</loc>
     <lastmod>2026-09-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/research/DSMS/texts/classroom-accommodations.md</loc>
-    <lastmod>2026-09-06</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/research/DSMS/texts/journal-scope.md</loc>
-    <lastmod>2026-09-06</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/research/DSMS/texts/kinematics-fine-motor.md</loc>
-    <lastmod>2026-09-06</lastmod>
   </url>
   <url>
     <loc>https://hestena62.com/scratch/find_download.php</loc>
@@ -11934,124 +11514,12 @@
     <lastmod>2026-09-30</lastmod>
   </url>
   <url>
-    <loc>https://hestena62.com/scratch/civics_raw/1.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/scratch/civics_raw/2.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/scratch/civics_raw/20046.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/scratch/civics_raw/5.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/scratch/civics_raw/6.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/scratch/jnh_raw/13642.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/scratch/jnh_raw/20752.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/scratch/jnh_raw/20906.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/scratch/jnh_raw/21093.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/scratch/jnh_raw/22149.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/scratch/jnh_raw/23200.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/scratch/jnh_raw/24484.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/scratch/new_books_raw/10.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/scratch/new_books_raw/35088.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/scratch/new_books_raw/35573.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/scratch/new_books_raw/60710.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/scratch/new_books_raw/60730.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/scratch/new_books_raw/60989.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/scratch/new_books_raw/61230.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/scratch/new_books_raw/61400.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/scratch/new_books_raw/62053.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/scratch/new_books_raw/74334.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/scratch/new_books_raw/768.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/scratch/suffrage_raw/28020.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/scratch/suffrage_raw/28039.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/scratch/suffrage_raw/29870.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/scratch/suffrage_raw/29878.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/scratch/suffrage_raw/30051.html</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
     <loc>https://hestena62.com/src/footer.php</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-19</lastmod>
   </url>
   <url>
     <loc>https://hestena62.com/src/header.php</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-19</lastmod>
   </url>
   <url>
     <loc>https://hestena62.com/src/lesson_renderer.php</loc>
@@ -12067,7 +11535,7 @@
   </url>
   <url>
     <loc>https://hestena62.com/src/resource-modal.php</loc>
-    <lastmod>2026-09-15</lastmod>
+    <lastmod>2026-10-19</lastmod>
   </url>
   <url>
     <loc>https://hestena62.com/src/components/interactive-ladder.php</loc>
@@ -12195,7 +11663,7 @@
   </url>
   <url>
     <loc>https://hestena62.com/student/ela-grammar.php</loc>
-    <lastmod>2026-09-15</lastmod>
+    <lastmod>2026-10-18</lastmod>
   </url>
   <url>
     <loc>https://hestena62.com/student/ela-literature.php</loc>
@@ -12215,7 +11683,7 @@
   </url>
   <url>
     <loc>https://hestena62.com/student/index.php</loc>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-10-16</lastmod>
   </url>
   <url>
     <loc>https://hestena62.com/student/math-games.php</loc>
@@ -12223,7 +11691,7 @@
   </url>
   <url>
     <loc>https://hestena62.com/student/math-practice.php</loc>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-10-17</lastmod>
   </url>
   <url>
     <loc>https://hestena62.com/student/math-resources.php</loc>
@@ -12255,7 +11723,7 @@
   </url>
   <url>
     <loc>https://hestena62.com/student/science-resources.php</loc>
-    <lastmod>2026-09-08</lastmod>
+    <lastmod>2026-10-18</lastmod>
   </url>
   <url>
     <loc>https://hestena62.com/student/social-civics.php</loc>
@@ -12275,7 +11743,7 @@
   </url>
   <url>
     <loc>https://hestena62.com/student/social-studies-resources.php</loc>
-    <lastmod>2026-09-08</lastmod>
+    <lastmod>2026-10-17</lastmod>
   </url>
   <url>
     <loc>https://hestena62.com/updates/feed.php</loc>
@@ -12284,845 +11752,5 @@
   <url>
     <loc>https://hestena62.com/updates/index.php</loc>
     <lastmod>2026-09-29</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-08-a11y-standards-research-popups-plan.md</loc>
-    <lastmod>2026-09-08</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-08-a11y-standards-research-popups-walkthrough.md</loc>
-    <lastmod>2026-09-08</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-08-accessibility-hub-walkthrough.md</loc>
-    <lastmod>2026-09-08</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-08-platform-architecture-plan.md</loc>
-    <lastmod>2026-09-08</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-08-platform-improvements-walkthrough.md</loc>
-    <lastmod>2026-09-08</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-08-site-wide-enhancements-plan.md</loc>
-    <lastmod>2026-09-08</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-08-site-wide-enhancements-walkthrough.md</loc>
-    <lastmod>2026-09-08</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-09-adaptive-diagnostic-labs-accommodations-plan.md</loc>
-    <lastmod>2026-09-09</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-09-adaptive-diagnostic-labs-accommodations-walkthrough.md</loc>
-    <lastmod>2026-09-09</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-09-advanced-features-suite-plan.md</loc>
-    <lastmod>2026-09-09</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-09-advanced-features-suite-walkthrough.md</loc>
-    <lastmod>2026-09-09</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-09-assessment-escapehtml-bugfix.md</loc>
-    <lastmod>2026-09-09</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-09-assessment-gradeconfig-bugfix.md</loc>
-    <lastmod>2026-09-09</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-09-assessment-hash-routing-plan.md</loc>
-    <lastmod>2026-09-09</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-09-assessment-hash-routing-walkthrough.md</loc>
-    <lastmod>2026-09-09</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-09-assessment-suite-expansion-plan.md</loc>
-    <lastmod>2026-09-09</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-09-assessment-suite-expansion-walkthrough.md</loc>
-    <lastmod>2026-09-09</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-09-codebase-comprehensive-enhancements-plan.md</loc>
-    <lastmod>2026-09-09</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-09-codebase-comprehensive-enhancements-walkthrough.md</loc>
-    <lastmod>2026-09-09</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-09-codebase-scan-and-suggestions.md</loc>
-    <lastmod>2026-09-09</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-09-cognitive-reading-study-suite-plan.md</loc>
-    <lastmod>2026-09-09</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-09-cognitive-reading-study-suite-walkthrough.md</loc>
-    <lastmod>2026-09-09</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-09-complete-platform-superpowers-plan.md</loc>
-    <lastmod>2026-09-09</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-09-complete-platform-superpowers-walkthrough.md</loc>
-    <lastmod>2026-09-09</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-09-comprehensive-platform-fixes-and-enhancements-plan.md</loc>
-    <lastmod>2026-09-09</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-09-comprehensive-platform-fixes-and-enhancements-walkthrough.md</loc>
-    <lastmod>2026-09-09</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-09-fab-menu-streamline-update.md</loc>
-    <lastmod>2026-09-09</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-09-flashcard-studio-card-flip-bugfix.md</loc>
-    <lastmod>2026-09-09</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-09-gamification-skill-tree-quest-plan.md</loc>
-    <lastmod>2026-09-09</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-09-gamification-skill-tree-quest-walkthrough.md</loc>
-    <lastmod>2026-09-09</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-09-header-resources-dropdown-overflow-bugfix.md</loc>
-    <lastmod>2026-09-09</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-09-header-resources-dropdown-plan.md</loc>
-    <lastmod>2026-09-09</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-09-header-resources-dropdown-walkthrough.md</loc>
-    <lastmod>2026-09-09</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-09-lesson-k-math-m1-a-3-styling-bugfix.md</loc>
-    <lastmod>2026-09-09</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-09-mathjax-dyscalculia-rendering-bugfix.md</loc>
-    <lastmod>2026-09-09</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-09-mathjax-lessons-typesetting-bugfix.md</loc>
-    <lastmod>2026-09-09</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-09-profile-bookmarks-referenceerror-bugfix.md</loc>
-    <lastmod>2026-09-09</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-10-a11y-hide-breadcrumbs-walkthrough.md</loc>
-    <lastmod>2026-09-10</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-10-accessibility-wcag-udl-standards-plan.md</loc>
-    <lastmod>2026-09-10</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-10-accessibility-wcag-udl-standards-walkthrough.md</loc>
-    <lastmod>2026-09-10</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-10-book-modal-disclaimer-reposition-walkthrough.md</loc>
-    <lastmod>2026-09-10</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-10-book-modal-specs-grid-spacing-bugfix.md</loc>
-    <lastmod>2026-09-10</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-10-comprehensive-enhancements-suite-plan.md</loc>
-    <lastmod>2026-09-10</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-10-comprehensive-enhancements-suite-walkthrough.md</loc>
-    <lastmod>2026-09-10</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-10-disclaimer-modal-full-license-walkthrough.md</loc>
-    <lastmod>2026-09-10</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-10-disclaimer-tab-display-bugfix.md</loc>
-    <lastmod>2026-09-10</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-10-full-platform-coverage-sections-1-8-plan.md</loc>
-    <lastmod>2026-09-10</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-10-full-platform-coverage-sections-1-8-walkthrough.md</loc>
-    <lastmod>2026-09-10</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-10-gutenberg-full-license-integration-walkthrough.md</loc>
-    <lastmod>2026-09-10</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-10-lesson-runner-referenceerror-bugfix.md</loc>
-    <lastmod>2026-09-10</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-10-library-general-resources-desk-plan.md</loc>
-    <lastmod>2026-09-10</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-10-library-general-resources-desk-walkthrough.md</loc>
-    <lastmod>2026-09-10</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-10-math-12-grade-textbook-plan.md</loc>
-    <lastmod>2026-09-10</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-10-math-reference-styling-plan.md</loc>
-    <lastmod>2026-09-10</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-10-math-reference-styling-walkthrough.md</loc>
-    <lastmod>2026-09-10</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-10-mathjax-rendering-architecture-plan.md</loc>
-    <lastmod>2026-09-10</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-10-mathjax-rendering-architecture-walkthrough.md</loc>
-    <lastmod>2026-09-10</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-10-platform-enhancements-suite-plan.md</loc>
-    <lastmod>2026-09-10</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-10-platform-enhancements-suite-walkthrough.md</loc>
-    <lastmod>2026-09-10</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-10-remove-tailwind-css-migration-popup-walkthrough.md</loc>
-    <lastmod>2026-09-10</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-10-site-overhaul-visitor-announcement-plan.md</loc>
-    <lastmod>2026-09-10</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-10-site-overhaul-visitor-announcement-walkthrough.md</loc>
-    <lastmod>2026-09-10</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-10-site-wide-data-sync-architecture-plan.md</loc>
-    <lastmod>2026-09-10</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-10-site-wide-data-sync-architecture-walkthrough.md</loc>
-    <lastmod>2026-09-10</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-10-teacher-roster-report-card-upload-plan.md</loc>
-    <lastmod>2026-09-10</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-10-teacher-roster-report-card-upload-walkthrough.md</loc>
-    <lastmod>2026-09-10</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-11-comprehensive-10-out-of-10-platform-overhaul-plan.md</loc>
-    <lastmod>2026-09-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-11-comprehensive-10-out-of-10-platform-overhaul-walkthrough.md</loc>
-    <lastmod>2026-09-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-11-comprehensive-codebase-remediation-plan.md</loc>
-    <lastmod>2026-09-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-11-comprehensive-codebase-remediation-walkthrough.md</loc>
-    <lastmod>2026-09-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-11-flashcard-studio-replace-undefined-bugfix.md</loc>
-    <lastmod>2026-09-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-11-ged-prep-page-plan.md</loc>
-    <lastmod>2026-09-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-11-ged-prep-page-walkthrough.md</loc>
-    <lastmod>2026-09-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-11-global-a11y-set-accommodation-typeerror-bugfix.md</loc>
-    <lastmod>2026-09-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-11-library-continue-reading-percentage-resume-walkthrough.md</loc>
-    <lastmod>2026-09-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-11-library-lexile-reference-error-bugfix.md</loc>
-    <lastmod>2026-09-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-11-library-mega-enhancement-plan.md</loc>
-    <lastmod>2026-09-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-11-library-mega-enhancement-walkthrough.md</loc>
-    <lastmod>2026-09-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-11-library-research-desks-redesign-plan.md</loc>
-    <lastmod>2026-09-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-11-library-research-desks-redesign-walkthrough.md</loc>
-    <lastmod>2026-09-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-11-library-shelf-more-resources-walkthrough.md</loc>
-    <lastmod>2026-09-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-11-library-welcome-hero-guide-modal-walkthrough.md</loc>
-    <lastmod>2026-09-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-11-platform-feature-enhancements-plan.md</loc>
-    <lastmod>2026-09-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-11-platform-feature-enhancements-walkthrough.md</loc>
-    <lastmod>2026-09-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-11-reader-chapter-quiz-overlay-walkthrough.md</loc>
-    <lastmod>2026-09-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-11-reader-chapter-quiz-slide-up-drawer-walkthrough.md</loc>
-    <lastmod>2026-09-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-11-sitewide-breadcrumbs-removal-walkthrough.md</loc>
-    <lastmod>2026-09-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-11-unified-reader-sticky-bar-walkthrough.md</loc>
-    <lastmod>2026-09-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-12-1984-chapter-1-basic-english-lexile-plan.md</loc>
-    <lastmod>2026-09-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-12-1984-chapter-1-basic-english-lexile-walkthrough.md</loc>
-    <lastmod>2026-09-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-12-assessment-circular-progress-gauge-walkthrough.md</loc>
-    <lastmod>2026-09-12</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-12-assessment-sidebar-widgets-cleanup-walkthrough.md</loc>
-    <lastmod>2026-09-12</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-12-curriculum-subject-printing-and-profile-simplification-walkthrough.md</loc>
-    <lastmod>2026-09-12</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-12-pdf-print-export-blank-pages-bugfix.md</loc>
-    <lastmod>2026-09-12</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-12-remove-profile-selector-walkthrough.md</loc>
-    <lastmod>2026-09-12</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-13-assessment-end-overview-and-mid-test-feedback-removal-walkthrough.md</loc>
-    <lastmod>2026-09-12</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-13-assessment-feedback-and-low-anxiety-refinements-walkthrough.md</loc>
-    <lastmod>2026-09-12</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-13-ged-json-lesson-setup-plan.md</loc>
-    <lastmod>2026-09-13</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-13-ged-json-lesson-setup-walkthrough.md</loc>
-    <lastmod>2026-09-13</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-13-json-lesson-migration-plan.md</loc>
-    <lastmod>2026-09-13</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-13-json-lesson-migration-walkthrough.md</loc>
-    <lastmod>2026-09-13</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-13-math-facts-chapter-1-formatting-walkthrough.md</loc>
-    <lastmod>2026-09-13</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-13-math-facts-chapters-2-12-codex-expansion-plan.md</loc>
-    <lastmod>2026-09-13</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-13-math-facts-chapters-2-12-codex-expansion-walkthrough.md</loc>
-    <lastmod>2026-09-13</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-13-math-index-az-lexicon-walkthrough.md</loc>
-    <lastmod>2026-09-13</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-13-math-index-repository-page-plan.md</loc>
-    <lastmod>2026-09-13</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-13-math-index-repository-page-walkthrough.md</loc>
-    <lastmod>2026-09-13</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-13-synoptic-tables-print-reference-error-bugfix.md</loc>
-    <lastmod>2026-09-13</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-14-ccss-math-all-grades-ingestion-plan.md</loc>
-    <lastmod>2026-09-14</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-14-ccss-math-all-grades-ingestion-walkthrough.md</loc>
-    <lastmod>2026-09-14</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-14-ccss-math-standards-pdf-layout-plan.md</loc>
-    <lastmod>2026-09-14</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-14-ccss-math-standards-pdf-layout-walkthrough.md</loc>
-    <lastmod>2026-09-14</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-14-literature-lab-and-assessment-standards-bridge-plan.md</loc>
-    <lastmod>2026-09-14</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-14-literature-lab-and-assessment-standards-bridge-walkthrough.md</loc>
-    <lastmod>2026-09-14</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-14-page-contextual-flashcards-plan.md</loc>
-    <lastmod>2026-09-14</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-14-page-contextual-flashcards-walkthrough.md</loc>
-    <lastmod>2026-09-14</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-14-remove-literature-anthology-student-page-walkthrough.md</loc>
-    <lastmod>2026-09-15</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-14-remove-poems-and-ai-studio-walkthrough.md</loc>
-    <lastmod>2026-09-15</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-14-remove-xp-k12-daily-stories-poems-plan.md</loc>
-    <lastmod>2026-09-14</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-14-remove-xp-k12-daily-stories-poems-walkthrough.md</loc>
-    <lastmod>2026-09-14</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-14-standards-ccss-math-json-syntax-bugfix.md</loc>
-    <lastmod>2026-09-14</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-14-standards-page-buttons-cleanup-walkthrough.md</loc>
-    <lastmod>2026-09-14</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-14-student-resources-short-stories-poems-plan.md</loc>
-    <lastmod>2026-09-14</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-14-student-resources-short-stories-poems-walkthrough.md</loc>
-    <lastmod>2026-09-14</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-15-ela-grammar-buildout-plan.md</loc>
-    <lastmod>2026-09-15</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-15-ela-grammar-buildout-walkthrough.md</loc>
-    <lastmod>2026-09-15</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-20-academic-library-redesign-proposal.md</loc>
-    <lastmod>2026-09-20</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-20-comprehensive-platform-enhancements-plan.md</loc>
-    <lastmod>2026-09-20</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-20-comprehensive-platform-enhancements-walkthrough.md</loc>
-    <lastmod>2026-09-20</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-20-grammar-index-repository-plan.md</loc>
-    <lastmod>2026-09-20</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-20-grammar-index-repository-walkthrough.md</loc>
-    <lastmod>2026-09-20</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-20-home-page-comprehensive-enhancements-walkthrough.md</loc>
-    <lastmod>2026-09-20</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-20-library-sourcing-popup-fix-walkthrough.md</loc>
-    <lastmod>2026-09-20</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-20-platform-wide-and-sectional-enhancements-plan.md</loc>
-    <lastmod>2026-09-20</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-20-platform-wide-and-sectional-enhancements-walkthrough.md</loc>
-    <lastmod>2026-09-20</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-20-remove-share-assign-button-walkthrough.md</loc>
-    <lastmod>2026-09-20</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-20-research-desks-deeplinking-plan.md</loc>
-    <lastmod>2026-09-20</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-20-research-desks-deeplinking-walkthrough.md</loc>
-    <lastmod>2026-09-20</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-21-historical-timeline-styling-walkthrough.md</loc>
-    <lastmod>2026-09-21</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-21-library-catalog-about-howto-walkthrough.md</loc>
-    <lastmod>2026-09-21</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-21-library-portal-design-alignment-plan.md</loc>
-    <lastmod>2026-09-21</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-21-library-portal-design-alignment-walkthrough.md</loc>
-    <lastmod>2026-09-21</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-22-home-page-enhancements-plan.md</loc>
-    <lastmod>2026-09-22</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-22-home-page-enhancements-walkthrough.md</loc>
-    <lastmod>2026-09-22</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-22-pagespeed-mobile-optimizations-walkthrough.md</loc>
-    <lastmod>2026-09-22</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-22-profile-closereportcardmodal-referenceerror-bugfix.md</loc>
-    <lastmod>2026-09-22</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-22-remove-skill-tree-and-labs-students-page-walkthrough.md</loc>
-    <lastmod>2026-09-22</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-23-library-reader-comprehensive-improvements-plan.md</loc>
-    <lastmod>2026-09-23</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-23-library-reader-comprehensive-improvements-walkthrough.md</loc>
-    <lastmod>2026-09-23</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-25-about-page-css-modernization-plan.md</loc>
-    <lastmod>2026-09-25</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-25-about-page-css-modernization-walkthrough.md</loc>
-    <lastmod>2026-09-25</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-25-educational-guides-reader-hub-plan.md</loc>
-    <lastmod>2026-09-25</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-25-educational-guides-reader-hub-walkthrough.md</loc>
-    <lastmod>2026-09-25</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-25-footer-version-info-line-plan.md</loc>
-    <lastmod>2026-09-25</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-25-footer-version-info-line-walkthrough.md</loc>
-    <lastmod>2026-09-25</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-26-theme-color-customization-plan.md</loc>
-    <lastmod>2026-09-26</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-26-theme-color-customization-walkthrough.md</loc>
-    <lastmod>2026-09-26</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-26-theme-color-settings-restyling-bugfix.md</loc>
-    <lastmod>2026-09-26</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-27-grade-9-all-subjects-json-curriculum-plan.md</loc>
-    <lastmod>2026-09-27</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-27-grade-9-all-subjects-json-curriculum-walkthrough.md</loc>
-    <lastmod>2026-09-27</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-27-grade-9-math-curriculum-popup-plan.md</loc>
-    <lastmod>2026-09-27</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-27-grade-9-math-curriculum-popup-walkthrough.md</loc>
-    <lastmod>2026-09-27</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-27-prek-12-dedicated-json-curriculum-plan.md</loc>
-    <lastmod>2026-09-27</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-27-prek-12-dedicated-json-curriculum-walkthrough.md</loc>
-    <lastmod>2026-09-27</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-29-unified-super-scratchpad-plan.md</loc>
-    <lastmod>2026-09-29</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-29-unified-super-scratchpad-walkthrough.md</loc>
-    <lastmod>2026-09-29</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-30-assets-js-modular-reorganization-plan.md</loc>
-    <lastmod>2026-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-30-assets-js-modular-reorganization-walkthrough.md</loc>
-    <lastmod>2026-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-30-curriculum-popups-json-migration-plan.md</loc>
-    <lastmod>2026-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-30-curriculum-popups-json-migration-walkthrough.md</loc>
-    <lastmod>2026-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-30-delete-legacy-lessons-stubs-plan.md</loc>
-    <lastmod>2026-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-30-delete-legacy-lessons-stubs-walkthrough.md</loc>
-    <lastmod>2026-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-30-grade-9-math-module-1-complete-worksheets-exit-keys-depth-plan.md</loc>
-    <lastmod>2026-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-30-grade-9-math-module-1-enrichment-worksheets-exit-keys-walkthrough.md</loc>
-    <lastmod>2026-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-30-grade-9-math-module-1-lesson-depth-enrichment-plan.md</loc>
-    <lastmod>2026-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-30-grade-9-math-module-1-lesson-depth-enrichment-walkthrough.md</loc>
-    <lastmod>2026-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-30-grade-9-math-module-1-lessons-buildout-plan.md</loc>
-    <lastmod>2026-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-30-grade-9-math-module-1-lessons-buildout-walkthrough.md</loc>
-    <lastmod>2026-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-30-grade-9-math-modules-2-5-complete-buildout-plan.md</loc>
-    <lastmod>2026-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-30-grade-9-math-modules-2-5-complete-buildout-walkthrough.md</loc>
-    <lastmod>2026-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-30-library-master-catalog-sync-walkthrough.md</loc>
-    <lastmod>2026-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-30-math-vocab-portal-plan.md</loc>
-    <lastmod>2026-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-30-math-vocab-portal-walkthrough.md</loc>
-    <lastmod>2026-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-30-module-json-consolidation-plan.md</loc>
-    <lastmod>2026-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-30-module-json-consolidation-walkthrough.md</loc>
-    <lastmod>2026-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-30-platform-elevation-suite-plan.md</loc>
-    <lastmod>2026-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-30-platform-elevation-suite-walkthrough.md</loc>
-    <lastmod>2026-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-30-research-and-practice-notebook-plan.md</loc>
-    <lastmod>2026-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-30-research-and-practice-notebook-walkthrough.md</loc>
-    <lastmod>2026-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-09-30-scratchpad-insert-at-cursor-bugfix.md</loc>
-    <lastmod>2026-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-10-06-crossword-generator-plan.md</loc>
-    <lastmod>2026-10-06</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-10-06-crossword-generator-walkthrough.md</loc>
-    <lastmod>2026-10-06</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-10-06-word-search-generator-plan.md</loc>
-    <lastmod>2026-10-06</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-10-06-word-search-generator-walkthrough.md</loc>
-    <lastmod>2026-10-06</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-10-10-american-yawp-volumes-walkthrough.md</loc>
-    <lastmod>2026-10-10</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-10-10-index-platform-guide-removal-walkthrough.md</loc>
-    <lastmod>2026-10-10</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-10-10-learning-launchpad-removal-walkthrough.md</loc>
-    <lastmod>2026-10-10</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-10-10-library-index-overflow-bugfix.md</loc>
-    <lastmod>2026-10-10</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-10-11-american-civics-gutenberg-integration-plan.md</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-10-11-american-civics-gutenberg-integration-walkthrough.md</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-10-11-classic-vermont-library-ingestion-plan.md</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-10-11-classic-vermont-library-ingestion-walkthrough.md</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-10-11-gutenberg-library-integration-plan.md</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-10-11-gutenberg-library-integration-walkthrough.md</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-10-11-history-of-woman-suffrage-complete-plan.md</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-10-11-history-of-woman-suffrage-complete-walkthrough.md</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-10-11-journal-of-negro-history-plan.md</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-10-11-journal-of-negro-history-walkthrough.md</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-10-11-reader-center-line-removal-bugfix.md</loc>
-    <lastmod>2026-10-11</lastmod>
-  </url>
-  <url>
-    <loc>https://hestena62.com/updates/docs/2026-10-11-reader-single-column-normal-page-layout-walkthrough.md</loc>
-    <lastmod>2026-10-11</lastmod>
   </url>
 </urlset>
