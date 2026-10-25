@@ -237,7 +237,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Real-Time Cross-Tab & Multi-Role Synchronization
     window.addEventListener('storage', (e) => {
-        if (['hesten-user-profile', 'hesten_user_profile', 'hl_gamification_profile', 'hesten_standards_mastery', 'hl_completed_levels', 'hesten_learning_streak'].includes(e.key)) {
+        if (['hesten-user-profile', 'hesten_user_profile', 'hl_gamification_profile', 'hesten_standards_mastery', 'hl_completed_levels', 'hesten_learning_streak', 'hl_active_role'].includes(e.key)) {
             loadState();
             updateHeroGreeting();
             updateStats();
@@ -257,6 +257,10 @@ document.addEventListener("DOMContentLoaded", () => {
         updateHeroGreeting();
         updateStats();
         if (typeof learningLevels !== 'undefined') renderLevels(learningLevels);
+    });
+
+    window.addEventListener('hl:role-changed', () => {
+        updateHeroGreeting();
     });
 });
 
@@ -2222,6 +2226,38 @@ function updateHeroGreeting() {
     const primaryCta = document.getElementById('hero-primary-cta');
     const primaryCtaText = document.getElementById('hero-primary-cta-text');
 
+    const activeRole = document.documentElement.getAttribute('data-active-role') || 
+        (window.HLRoleManager ? window.HLRoleManager.getRole() : localStorage.getItem('hl_active_role')) || 'all';
+
+    if (activeRole === 'teacher') {
+        if (greetingEl) greetingEl.textContent = "EDUCATOR WORKSPACE";
+        if (avatarEl) avatarEl.classList.add('hidden');
+        if (pingContainer) pingContainer.classList.remove('hidden');
+        if (gradeBadge) gradeBadge.classList.add('hidden');
+        if (jumpBtn) jumpBtn.classList.add('hidden');
+        if (subtitleEl) {
+            subtitleEl.textContent = "Empower your students with structured 36-week pacing guides, standards-aligned curriculum modules, and interactive assignment dispatchers.";
+        }
+        if (primaryCtaText) primaryCtaText.textContent = "Open Teacher Suite";
+        if (primaryCta) primaryCta.href = "/pages/teachers.php";
+        return;
+    }
+
+    if (activeRole === 'parent') {
+        if (greetingEl) greetingEl.textContent = "PARENT & HOMESCHOOL HUB";
+        if (avatarEl) avatarEl.classList.add('hidden');
+        if (pingContainer) pingContainer.classList.remove('hidden');
+        if (gradeBadge) gradeBadge.classList.add('hidden');
+        if (jumpBtn) jumpBtn.classList.add('hidden');
+        if (subtitleEl) {
+            subtitleEl.textContent = "Guide your child's education with confidence. Explore state homeschool laws, customize learning accommodations, and track mastery portfolios.";
+        }
+        if (primaryCtaText) primaryCtaText.textContent = "Open Parent Hub";
+        if (primaryCta) primaryCta.href = "/pages/parents.php";
+        return;
+    }
+
+    // Role is 'student' or 'all'
     const profile = getActiveStudentProfile();
     const studentName = (profile && (profile.firstName || profile.name)) ? (profile.firstName || profile.name).trim() : null;
 
@@ -2264,18 +2300,25 @@ function updateHeroGreeting() {
         }
     } else {
         // Default Guest / First-time state
-        let greeting = "THE LEARNING ODYSSEY";
-        if (hour < 12) greeting = "Good Morning Odyssey";
-        else if (hour < 18) greeting = "Good Afternoon Journey";
-        else greeting = "Good Evening Odyssey";
+        let greeting = activeRole === 'student' ? "SCHOLAR WORKSPACE" : "THE LEARNING ODYSSEY";
+        if (activeRole !== 'student') {
+            if (hour < 12) greeting = "Good Morning Odyssey";
+            else if (hour < 18) greeting = "Good Afternoon Journey";
+            else greeting = "Good Evening Odyssey";
+        }
 
         if (greetingEl) greetingEl.textContent = greeting.toUpperCase();
         if (avatarEl) avatarEl.classList.add('hidden');
         if (pingContainer) pingContainer.classList.remove('hidden');
         if (gradeBadge) gradeBadge.classList.add('hidden');
         if (jumpBtn) jumpBtn.classList.add('hidden');
-        if (primaryCtaText) primaryCtaText.textContent = "Start Your Journey";
-        if (primaryCta) primaryCta.href = "/assessment";
+        if (primaryCtaText) primaryCtaText.textContent = activeRole === 'student' ? "Start Learning" : "Start Your Journey";
+        if (primaryCta) primaryCta.href = activeRole === 'student' ? "/student" : "/assessment";
+        if (subtitleEl) {
+            subtitleEl.textContent = activeRole === 'student' 
+                ? "Your personalized homeschool learning space. Master mathematics, reading, and science at your own pace."
+                : "A beautifully crafted educational experience. Personalized, accessible, and structured for focused mastery.";
+        }
     }
 }
 

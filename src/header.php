@@ -48,16 +48,16 @@ if (! function_exists('assetVersion')) {
 
 // Core Platform Version Definition
 if (! defined('HL_SITE_VERSION')) {
-    define('HL_SITE_VERSION', 'v2.24.0');
+    define('HL_SITE_VERSION', 'v2.25.0');
     }
 if (! defined('HL_SITE_VERSION_DATE')) {
     define('HL_SITE_VERSION_DATE', 'October 2026');
     }
 if (! defined('HL_SITE_VERSION_LABEL')) {
-    define('HL_SITE_VERSION_LABEL', 'October 2026 Digital Library Punctuation Repository Release');
+    define('HL_SITE_VERSION_LABEL', 'October 2026 Tripartite Role & Persona Modes Release');
     }
 if (! defined('HL_SITE_VERSION_SUMMARY')) {
-    define('HL_SITE_VERSION_SUMMARY', 'Master Punctuation Guide & Extensible Library Repository Pages Architecture (?pages=punctuation)');
+    define('HL_SITE_VERSION_SUMMARY', 'Universal Role Switcher (All, Student, Teacher, Parent) with 4-Digit Educator PIN Lock, Adaptive Navigation & Contextual Home Consoles');
     }
 ?>
 <!DOCTYPE html>
@@ -67,6 +67,8 @@ if (! defined('HL_SITE_VERSION_SUMMARY')) {
         <script>
             (function () {
                 try {
+                    const activeRole = localStorage.getItem('hl_active_role') || 'all';
+                    document.documentElement.setAttribute('data-active-role', activeRole);
                     const settings = localStorage.getItem('hl_accessibility_settings');
                     if (settings) {
                         const parsed = JSON.parse(settings);
@@ -412,6 +414,7 @@ if (! defined('HL_SITE_VERSION_SUMMARY')) {
         <?php include __DIR__.'/partials/flashcard-studio.php'; ?>
         <?php include __DIR__.'/partials/quest-badges-modal.php'; ?>
         <?php include __DIR__.'/partials/accommodations-modal.php'; ?>
+        <?php include __DIR__.'/partials/role-pin-modal.php'; ?>
 
         <!-- Scroll Progress Indicator -->
         <div class="scroll-progress-container"
@@ -449,6 +452,17 @@ if (! defined('HL_SITE_VERSION_SUMMARY')) {
                                     style="margin-right: 0.25rem; opacity: 0.7;"></i> Assessment</a>
                             <a href="/library/" class="nav-link"><i class="fas fa-book"
                                     style="margin-right: 0.25rem; opacity: 0.7;"></i> Library</a>
+
+                            <!-- Contextual Role Nav Links (Activated per Mode) -->
+                            <a href="/student/index.php" class="nav-link role-nav-link role-student-nav-link" title="Student Academic Hub">
+                                <i class="fas fa-graduation-cap" style="margin-right: 0.25rem; color: #0ea5e9;"></i> Student Hub
+                            </a>
+                            <a href="/pages/teachers.php" class="nav-link role-nav-link role-teacher-nav-link" title="Teacher Toolkit &amp; Pacing Guides">
+                                <i class="fas fa-chalkboard-teacher" style="margin-right: 0.25rem; color: #10b981;"></i> Teacher Suite
+                            </a>
+                            <a href="/pages/parents.php" class="nav-link role-nav-link role-parent-nav-link" title="Parent Resource Hub &amp; Accommodations">
+                                <i class="fas fa-home" style="margin-right: 0.25rem; color: #8b5cf6;"></i> Parent Hub
+                            </a>
 
                             <!-- Expandable Resources Dropdown Menu -->
                             <div class="nav-dropdown-container" id="resources-dropdown-container">
@@ -621,6 +635,24 @@ if (! defined('HL_SITE_VERSION_SUMMARY')) {
                                                         </div>
                                                     </a>
                                                 </li>
+                                                <li class="role-teacher-only role-educator-parent">
+                                                    <a href="/pages/teachers.php" class="nav-mega-item" role="menuitem">
+                                                        <i class="fas fa-chalkboard-teacher item-icon" style="color: #10b981;"></i>
+                                                        <div>
+                                                            <span class="item-title">Teacher Toolkit</span>
+                                                            <span class="item-desc">Pacing guides &amp; assignments</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="role-parent-only role-educator-parent">
+                                                    <a href="/pages/parents.php" class="nav-mega-item" role="menuitem">
+                                                        <i class="fas fa-heart item-icon" style="color: #8b5cf6;"></i>
+                                                        <div>
+                                                            <span class="item-title">Parent Resource Hub</span>
+                                                            <span class="item-desc">Homeschool laws &amp; IEP tools</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
                                             </ul>
                                         </div>
 
@@ -705,7 +737,16 @@ if (! defined('HL_SITE_VERSION_SUMMARY')) {
                                         <a href="/student/interactive-labs.php" class="nav-mega-footer-link">
                                             <i class="fas fa-flask"></i> Interactive Labs
                                         </a>
-                                        <a href="/research/" class="nav-mega-footer-link">
+                                        <a href="/pages/teachers.php" class="nav-mega-footer-link role-teacher-only role-educator-parent">
+                                            <i class="fas fa-chalkboard-teacher" style="color: #10b981;"></i> Teacher Suite
+                                        </a>
+                                        <a href="/pages/parents.php" class="nav-mega-footer-link role-parent-only role-educator-parent">
+                                            <i class="fas fa-heart" style="color: #8b5cf6;"></i> Parent Hub
+                                        </a>
+                                        <a href="/student/index.php" class="nav-mega-footer-link role-student-only">
+                                            <i class="fas fa-graduation-cap" style="color: #0ea5e9;"></i> Student Hub
+                                        </a>
+                                        <a href="/research/" class="nav-mega-footer-link role-hide-student">
                                             <i class="fas fa-microscope"></i> Research Papers
                                         </a>
                                     </div>
@@ -738,11 +779,40 @@ if (! defined('HL_SITE_VERSION_SUMMARY')) {
                                         <span
                                             class="user-name"><?php echo htmlspecialchars($currentUser['name']); ?></span>
                                         <span
-                                            class="user-role"><?php echo htmlspecialchars($currentUser['role']); ?></span>
+                                            class="user-role" id="user-role-badge" data-role="all">All Modes</span>
                                     </div>
                                     <i class="fas fa-chevron-down user-chevron"></i>
                                 </button>
                                 <div class="user-dropdown-menu" id="user-dropdown-menu">
+                                    <!-- Role / View Mode Switcher -->
+                                    <div class="user-role-section">
+                                        <div class="user-role-section-header">
+                                            <span class="user-role-section-title"><i class="fas fa-eye" aria-hidden="true"></i> View Mode</span>
+                                            <span id="role-pin-indicator" class="role-pin-badge hidden" title="PIN Protection Active"><i class="fas fa-lock" aria-hidden="true"></i> Protected</span>
+                                        </div>
+                                        <div class="role-switcher-grid" role="radiogroup" aria-label="Platform view mode">
+                                            <button type="button" class="role-switch-btn active" data-role="all" role="radio" aria-checked="true" title="General: Complete Platform">
+                                                <i class="fas fa-globe role-btn-icon" aria-hidden="true"></i>
+                                                <span class="role-btn-text">All</span>
+                                            </button>
+                                            <button type="button" class="role-switch-btn" data-role="student" role="radio" aria-checked="false" title="Student: Focused Learning">
+                                                <i class="fas fa-graduation-cap role-btn-icon" aria-hidden="true"></i>
+                                                <span class="role-btn-text">Student</span>
+                                            </button>
+                                            <button type="button" class="role-switch-btn" data-role="teacher" role="radio" aria-checked="false" title="Teacher: Educator Suite">
+                                                <i class="fas fa-chalkboard-teacher role-btn-icon" aria-hidden="true"></i>
+                                                <span class="role-btn-text">Teacher</span>
+                                            </button>
+                                            <button type="button" class="role-switch-btn" data-role="parent" role="radio" aria-checked="false" title="Parent: Homeschool Hub">
+                                                <i class="fas fa-home role-btn-icon" aria-hidden="true"></i>
+                                                <span class="role-btn-text">Parent</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-divider"></div>
+                                    <button type="button" class="dropdown-item hidden" id="role-manage-pin-item">
+                                        <i class="fas fa-key" style="color: var(--color-primary);" aria-hidden="true"></i> Mode PIN Settings
+                                    </button>
                                     <a href="#" class="dropdown-item"
                                         onclick="if(window.HLSensory)window.HLSensory.open();return false;"><i
                                             class="fas fa-spa" style="color:#0ea5e9;"></i> Breathe &amp; Reset</a>
@@ -787,6 +857,7 @@ if (! defined('HL_SITE_VERSION_SUMMARY')) {
 
         <script src="<?= assetVersion('/assets/js/accessibility/global-a11y.js') ?>"></script>
         <script src="<?= assetVersion('/assets/js/core/global-core-ui.js') ?>"></script>
+        <script src="<?= assetVersion('/assets/js/core/role-mode-manager.js') ?>"></script>
         <script src="<?= assetVersion('/assets/js/components/universal-bookmarks.js') ?>"></script>
         <script src="<?= assetVersion('/assets/js/components/command-palette.js') ?>"></script>
         <script src="<?= assetVersion('/assets/js/components/global-shortcuts.js') ?>"></script>

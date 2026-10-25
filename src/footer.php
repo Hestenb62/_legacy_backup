@@ -69,9 +69,9 @@
                                 class="fas fa-envelope footer-link-icon"></i> Contact Us</a></li>
                     <li class="footer-link-item"><a href="/student/index.php"><i
                                 class="fas fa-home footer-link-icon"></i> For Students</a></li>
-                    <li class="footer-link-item"><a href="/pages/parents.php"><i
+                    <li class="footer-link-item role-hide-student"><a href="/pages/parents.php"><i
                                 class="fas fa-users footer-link-icon"></i> For Parents</a></li>
-                    <li class="footer-link-item"><a href="/pages/teachers.php"><i
+                    <li class="footer-link-item role-hide-student"><a href="/pages/teachers.php"><i
                                 class="fas fa-chalkboard-teacher footer-link-icon"></i> For Teachers</a></li>
                 </ul>
             </div>
@@ -96,9 +96,9 @@
 
         <!-- Version Status & Release Info Strip (WCAG Operable) -->
         <?php
-        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.24.0';
-        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'October 2026 Digital Library Punctuation Repository Release';
-        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Master Punctuation Guide & Extensible Library Repository Pages Architecture (?pages=punctuation)';
+        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.25.0';
+        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'October 2026 Tripartite Role & Persona Modes Release';
+        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Universal Role Switcher (All, Student, Teacher, Parent) with 4-Digit Educator PIN Lock, Adaptive Navigation & Contextual Home Consoles';
         ?>
         <div class="footer-version-strip" role="region" aria-label="Platform Version Information">
             <div class="footer-version-info">
@@ -271,9 +271,24 @@
                 </span>
             </div>
             <p class="footer-vmodal-lead">
-                Version <?= htmlspecialchars($siteVersion) ?> introduces the <strong>Digital Library Master Punctuation Repository &amp; Extensible Research Page Architecture</strong> (<code>/library/index.php?pages=punctuation</code>), complete with 16 punctuation marks, canonical rules, contrasting exemplars, style guide matrix, quick cheat sheet, and curated bridges from study modals.
+                Version <?= htmlspecialchars($siteVersion) ?> introduces the <strong>Universal Role &amp; Persona Modes System</strong> (All, Student, Teacher, Parent), featuring a profile pill view switcher, 4-digit educator PIN lock, contextual navigation filtering, and dynamic home page action consoles.
             </p>
             <ul class="footer-vmodal-features">
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(16, 185, 129, 0.15); color: #059669;">
+                        <i class="fas fa-id-badge"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Universal Role &amp; Persona Modes Architecture (v2.25.0):</strong> Introduces full Tripartite Role adaptation across the platform:
+                        <ul style="margin: 0.35rem 0 0 1rem; padding: 0; font-size: 0.85rem; color: var(--color-text-secondary, #475569); line-height: 1.5;">
+                            <li><strong>4-Mode Profile Pill Switcher:</strong> Easily toggle between 🌐 All (General / Default), 🎓 Student (Focused Learning), 🍎 Teacher (Educator Suite), and 🏡 Parent (Homeschool Hub) directly inside the profile dropdown.</li>
+                            <li><strong>Educator 4-Digit PIN Security:</strong> Protects Teacher and Parent modes from curious students. Supports 1-click return to Student mode and requires PIN entry when switching out of Student mode.</li>
+                            <li><strong>Adaptive Top Navigation &amp; Mega-Menu:</strong> Dynamically elevates Student Hub, Teacher Suite, or Parent Hub in the primary navbar while filtering out adult administrative tools in Student mode.</li>
+                            <li><strong>Role-Targeted Home Page Consoles:</strong> Interactive glassmorphic action bars on <code>index.php</code> tailored with shortcuts for assignment building, pacing guides, homeschool legal guides, and scholar practice workspaces.</li>
+                            <li><strong>Zero-Flicker &amp; Real-Time Multi-Tab Sync:</strong> Persisted in <code>hl_active_role</code> and <code>hl_role_pin</code> with instant cross-tab <code>storage</code> synchronization and screen reader announcements.</li>
+                        </ul>
+                    </div>
+                </li>
                 <li class="footer-vmodal-feature-item">
                     <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(79, 70, 229, 0.15); color: #4f46e5;">
                         <i class="fas fa-book-bookmark"></i>

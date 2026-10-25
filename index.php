@@ -9,6 +9,7 @@ include 'src/header.php';
 
 <!-- STYLES -->
 <link rel="stylesheet" href="<?= assetVersion('/assets/css/components/mastery-modals.css') ?>">
+<link rel="stylesheet" href="<?= assetVersion('/assets/css/components/role-consoles.css') ?>">
 
 <!-- DATA IMPORT -->
 <script src="<?= assetVersion('/assets/data/global-learningLevels.js') ?>"></script>
@@ -18,6 +19,8 @@ include 'src/header.php';
 
 <!-- MAIN CONTENT -->
 <main class="main-content-container" id="main-content" tabindex="-1">
+
+    <?php include __DIR__ . '/src/partials/role-consoles.php'; ?>
 
     <?php include __DIR__ . '/src/partials/resume-banner.php'; ?>
 

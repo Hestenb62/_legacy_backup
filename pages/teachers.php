@@ -13,6 +13,15 @@ include '../src/header.php';
 
 <main class="flex-grow" id="main-content">
 
+    <!-- Student Mode Notice Banner -->
+    <div class="role-student-notice no-print" style="background: color-mix(in srgb, #10b981 12%, var(--color-bg-surface)); border-bottom: 1px solid var(--color-border); padding: 0.75rem 1.25rem; text-align: center; font-size: 0.875rem; color: var(--color-text-main);">
+        <i class="fas fa-info-circle" style="color: #10b981; margin-right: 0.4rem;" aria-hidden="true"></i>
+        <span>You are viewing Educator &amp; Pacing tools while in <strong>Student Mode</strong>.</span>
+        <button type="button" onclick="if(window.HLRoleManager) window.HLRoleManager.setRole('teacher');" style="background: var(--color-primary); color: #fff; border: none; border-radius: var(--radius-md); padding: 0.25rem 0.65rem; font-size: 0.8rem; font-weight: 700; cursor: pointer; margin-left: 0.65rem;">
+            Switch to Teacher Mode
+        </button>
+    </div>
+
     <!-- Print-Only Header (Appears only when printing pacing guides for physical binders/portfolios) -->
     <div class="print-header-banner" style="display: none;">
         <h1>Hesten's Learning • 36-Week Curriculum Pacing Syllabus</h1>

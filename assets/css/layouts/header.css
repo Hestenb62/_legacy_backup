@@ -326,7 +326,40 @@
     color: var(--color-text-muted);
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    font-weight: 600;
+    font-weight: 700;
+    padding: 0.1rem 0.35rem;
+    border-radius: var(--radius-sm, 4px);
+    transition: background-color 0.2s, color 0.2s;
+  }
+
+  .user-role[data-role="student"] {
+    background-color: color-mix(in srgb, #0ea5e9 15%, transparent);
+    color: #0284c7;
+  }
+
+  .user-role[data-role="teacher"] {
+    background-color: color-mix(in srgb, #10b981 15%, transparent);
+    color: #059669;
+  }
+
+  .user-role[data-role="parent"] {
+    background-color: color-mix(in srgb, #8b5cf6 15%, transparent);
+    color: #7c3aed;
+  }
+
+  [data-theme="dark"] .user-role[data-role="student"],
+  [data-theme="midnight"] .user-role[data-role="student"] {
+    color: #38bdf8;
+  }
+
+  [data-theme="dark"] .user-role[data-role="teacher"],
+  [data-theme="midnight"] .user-role[data-role="teacher"] {
+    color: #34d399;
+  }
+
+  [data-theme="dark"] .user-role[data-role="parent"],
+  [data-theme="midnight"] .user-role[data-role="parent"] {
+    color: #a78bfa;
   }
   
   .user-chevron {
@@ -339,12 +372,12 @@
     position: absolute;
     top: calc(100% + 0.5rem);
     right: 0;
-    width: 12rem;
+    width: 15.5rem;
     background-color: var(--color-bg-surface);
     border: 1px solid var(--color-border);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-lg);
-    padding: 0.5rem 0;
+    border-radius: var(--radius-xl, 1rem);
+    box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.2), 0 0 0 1px var(--color-border);
+    padding: 0.4rem 0;
     z-index: 50;
     display: none;
     flex-direction: column;
@@ -354,32 +387,136 @@
     display: flex;
     animation: rise-in 0.2s ease forwards;
   }
-  
+
+  /* Role Switcher in Dropdown */
+  .user-role-section {
+    padding: 0.6rem 0.85rem 0.5rem;
+  }
+
+  .user-role-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+  }
+
+  .user-role-section-title {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-text-muted);
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .role-pin-badge {
+    font-size: 0.65rem;
+    font-weight: 600;
+    padding: 0.15rem 0.45rem;
+    border-radius: 9999px;
+    background: color-mix(in srgb, var(--color-primary) 12%, transparent);
+    color: var(--color-primary);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .role-pin-badge.hidden {
+    display: none !important;
+  }
+
+  .role-switcher-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.35rem;
+  }
+
+  .role-switch-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.45rem 0.55rem;
+    border-radius: var(--radius-md, 0.5rem);
+    border: 1px solid var(--color-border);
+    background: var(--color-bg);
+    color: var(--color-text-main);
+    font-size: 0.78rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    text-align: left;
+  }
+
+  .role-switch-btn:hover {
+    border-color: var(--color-primary);
+    background: var(--color-bg-surface);
+  }
+
+  .role-switch-btn.active {
+    border-color: var(--color-primary);
+    background: color-mix(in srgb, var(--color-primary) 12%, transparent);
+    color: var(--color-primary);
+    box-shadow: 0 0 0 1px var(--color-primary);
+  }
+
+  .role-switch-btn .role-btn-icon {
+    font-size: 0.85rem;
+    flex-shrink: 0;
+  }
+
+  .role-switch-btn[data-role="all"] .role-btn-icon { color: var(--color-primary); }
+  .role-switch-btn[data-role="student"] .role-btn-icon { color: #0ea5e9; }
+  .role-switch-btn[data-role="teacher"] .role-btn-icon { color: #10b981; }
+  .role-switch-btn[data-role="parent"] .role-btn-icon { color: #8b5cf6; }
+
   .dropdown-item {
     padding: 0.5rem 1rem;
-    font-size: 0.875rem;
+    font-size: 0.85rem;
     color: var(--color-text-main);
     text-decoration: none;
     display: flex;
     align-items: center;
     gap: 0.75rem;
     transition: background-color 0.2s, color 0.2s;
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    font-family: inherit;
   }
   
   .dropdown-item:hover {
-    background-color: color-mix(in srgb, var(--color-primary) 5%, transparent);
+    background-color: color-mix(in srgb, var(--color-primary) 8%, transparent);
     color: var(--color-primary);
   }
   
   .dropdown-item.text-danger:hover {
-    background-color: color-mix(in srgb, var(--color-error) 5%, transparent);
+    background-color: color-mix(in srgb, var(--color-error) 8%, transparent);
     color: var(--color-error);
   }
   
   .dropdown-divider {
     height: 1px;
     background-color: var(--color-border);
-    margin: 0.5rem 0;
+    margin: 0.35rem 0;
+  }
+
+  /* Role PIN Modal Badges & Utilities */
+  .role-modal-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.82rem;
+    font-weight: 700;
+    padding: 0.3rem 0.75rem;
+    border-radius: 9999px;
+    background: color-mix(in srgb, var(--color-primary) 12%, transparent);
+    color: var(--color-primary);
+    margin-bottom: 0.75rem;
   }
   
   /* Breadcrumbs Custom Styling */
@@ -665,4 +802,54 @@
     background: #ffff00 !important;
     color: #000000 !important;
   }
+
+  /* ==========================================================================
+     Tripartite Role Visibility & Contextual Navigation Rules
+     ========================================================================== */
+
+  /* Dedicated role navigation links in top header */
+  .role-nav-link {
+    display: none !important;
+  }
+  [data-active-role="student"] .role-nav-link.role-student-nav-link {
+    display: inline-flex !important;
+    align-items: center;
+  }
+  [data-active-role="teacher"] .role-nav-link.role-teacher-nav-link {
+    display: inline-flex !important;
+    align-items: center;
+  }
+  [data-active-role="parent"] .role-nav-link.role-parent-nav-link {
+    display: inline-flex !important;
+    align-items: center;
+  }
+
+  /* In STUDENT Mode: Hide teacher tools, parent tools, pacing guides, and research links */
+  [data-active-role="student"] .role-hide-student,
+  [data-active-role="student"] .role-teacher-only,
+  [data-active-role="student"] .role-parent-only,
+  [data-active-role="student"] .role-educator-parent {
+    display: none !important;
+  }
+
+  /* In TEACHER Mode: Hide parent-only resources */
+  [data-active-role="teacher"] .role-parent-only,
+  [data-active-role="teacher"] .role-student-only {
+    display: none !important;
+  }
+
+  /* In PARENT Mode: Hide teacher-only resources */
+  [data-active-role="parent"] .role-teacher-only,
+  [data-active-role="parent"] .role-student-only {
+    display: none !important;
+  }
+
+  /* Role contextual notices */
+  .role-student-notice {
+    display: none;
+  }
+  [data-active-role="student"] .role-student-notice {
+    display: block;
+  }
 }
+
