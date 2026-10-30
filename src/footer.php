@@ -96,9 +96,9 @@
 
         <!-- Version Status & Release Info Strip (WCAG Operable) -->
         <?php
-        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.25.0';
-        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'October 2026 Tripartite Role & Persona Modes Release';
-        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Universal Role Switcher (All, Student, Teacher, Parent) with 4-Digit Educator PIN Lock, Adaptive Navigation & Contextual Home Consoles';
+        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.27.0';
+        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'October 2026 Grade 10 Geometry Complete 117-Lesson Buildout Release';
+        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Complete EngageNY Grade 10 Geometry Buildout: 117 Lessons Across Modules 1–5 with Proofs, Embedded Worksheets, Exit Tickets & Master Codex Unification';
         ?>
         <div class="footer-version-strip" role="region" aria-label="Platform Version Information">
             <div class="footer-version-info">
@@ -271,9 +271,39 @@
                 </span>
             </div>
             <p class="footer-vmodal-lead">
-                Version <?= htmlspecialchars($siteVersion) ?> introduces the <strong>Universal Role &amp; Persona Modes System</strong> (All, Student, Teacher, Parent), featuring a profile pill view switcher, 4-digit educator PIN lock, contextual navigation filtering, and dynamic home page action consoles.
+                Version <?= htmlspecialchars($siteVersion) ?> introduces the <strong>Complete Grade 10 Geometry 117-Lesson Curriculum Buildout</strong> across Modules 1–5, featuring Euclidean proofs, compass-and-straightedge constructions, coordinate analytic geometry, 3D volume scaling, circle theorems, embedded worksheets, and verbatim Exit Ticket solution keys.
             </p>
             <ul class="footer-vmodal-features">
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(234, 88, 12, 0.15); color: #ea580c;">
+                        <i class="fas fa-shapes"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Grade 10 Geometry Complete 117-Lesson Buildout (v2.27.0):</strong> Complete conversion of authentic EngageNY / Eureka Math materials into modular JSON datasets:
+                        <ul style="margin: 0.35rem 0 0 1rem; padding: 0; font-size: 0.85rem; color: var(--color-text-secondary, #475569); line-height: 1.5;">
+                            <li><strong>All 5 Modules Built Out:</strong> Module 1 (Congruence &amp; Proofs, 34 lessons), Module 2 (Similarity &amp; Trigonometry, 34 lessons), Module 3 (Three Dimensions &amp; Volume, 13 lessons), Module 4 (Coordinate Geometry, 15 lessons), and Module 5 (Circles &amp; Ptolemy's Theorem, 21 lessons).</li>
+                            <li><strong>Modular High-Speed JSON Architecture:</strong> Packaged into <code>assets/data/lessons/l-math-m1.json</code> through <code>l-math-m5.json</code> with tiered resolution in <code>src/lesson_renderer.php</code>.</li>
+                            <li><strong>Interactive Proofs &amp; Worked Classwork:</strong> Step-by-step Euclidean deductions, angle chase calculations, coordinate slope equations, and 3D Cavalieri derivations rendered via MathJax SVG.</li>
+                            <li><strong>Embedded Problem Sets &amp; Verbatim Exit Tickets:</strong> Over 1,200 authentic problem set practice questions with expandable full teacher solution keys and 1-click browser printing.</li>
+                            <li><strong>Unified Master Registry &amp; Codex:</strong> 117 lessons synchronized into <code>assets/data/lessons.json</code>, <code>curriculum-engageny-math.json</code>, and geometric terms compiled into <code>assets/data/math-vocab.json</code>.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(14, 165, 233, 0.15); color: #0284c7;">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Grade-Level Alignment &amp; Custom Curriculum Resources (v2.26.0):</strong> Comprehensive upgrade to all curriculum level pages:
+                        <ul style="margin: 0.35rem 0 0 1rem; padding: 0; font-size: 0.85rem; color: var(--color-text-secondary, #475569); line-height: 1.5;">
+                            <li><strong>Specific Grade Nomenclature:</strong> Every level page now clearly identifies its developmental grade level (e.g., Level H = 6th Grade, Level I = 7th Grade, Level J = 8th Grade, Level K = 9th Grade, Level L = 10th Grade, Level M = 11th Grade, Level N = 12th Grade, Level O = AP &amp; College Prep) with prominent hero badges.</li>
+                            <li><strong>Custom Grade Literature:</strong> Replaced uniform high school literature with age-appropriate classics from the library (e.g. *Alice in Wonderland* and *Wizard of Oz* for primary/early elementary, *Anne of Green Gables* and *The Time Machine* for upper elementary, *A Tale of Two Cities* and *Dracula* for middle school, *Romeo &amp; Juliet*, *1984*, and *The Republic* for high school).</li>
+                            <li><strong>Interactive Grade Tools &amp; Manipulatives:</strong> Customized sidebar tools featuring ten-frames and counters for early learners, base-10 clocks and number lines for Grade 1–2, fraction bars and geoboards for Grade 3–5, middle school ratio workbenches for Grade 6–8, and graphing workbenches with primary source readers for Grade 9–12.</li>
+                            <li><strong>Grade Developmental Study Tips:</strong> Custom pedagogical tips for every grade level addressing tactile counting, phonemic awareness, friendly number bonds, fraction visualization, unit rates, and deductive proofs.</li>
+                            <li><strong>Accessible Dynamic Subject Breadcrumbs:</strong> Compliant breadcrumb navigation hierarchy reflecting both the current grade level and active subject (e.g., <code>Home / Levels / Level K (9th Grade) / Math</code>), updating dynamically on subject tab switches.</li>
+                        </ul>
+                    </div>
+                </li>
                 <li class="footer-vmodal-feature-item">
                     <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(16, 185, 129, 0.15); color: #059669;">
                         <i class="fas fa-id-badge"></i>

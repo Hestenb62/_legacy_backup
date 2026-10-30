@@ -3,7 +3,7 @@
  * Hesten's Learning - Level E (Grade 3)
  */
 
-$pageTitle       = "Grade 3 Level E | Hesten's Learning";
+$pageTitle       = "3rd Grade Level E | Hesten's Learning";
 $pageDescription = "Mastering multiplication, division, and fractions for 3rd-grade students.";
 $pageKeywords    = "Grade 3, multiplication tables, division, intro to fractions";
 

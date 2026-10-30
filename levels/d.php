@@ -3,7 +3,7 @@
  * Hesten's Learning - Level D (Grade 2)
  */
 
-$pageTitle       = "Grade 2 Level D | Hesten's Learning";
+$pageTitle       = "2nd Grade Level D | Hesten's Learning";
 $pageDescription = "Expanding core skills in 2nd-grade math and reading fluency.";
 $pageKeywords    = "Grade 2, multiplication basics, regrouping, reading fluency";
 

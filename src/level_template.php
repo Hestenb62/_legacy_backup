@@ -48,6 +48,10 @@ if (!isset($initialSubjectName)) $initialSubjectName = 'Math';
 if (!isset($initialSubjectDesc)) $initialSubjectDesc = '';
 if (!isset($modules)) $modules = [];
 
+// Resolve custom grade resources (literature, tools, study tips)
+require_once __DIR__ . '/helpers/grade_resources.php';
+$gradeResources = getGradeCustomResources($levelId, $gradeText);
+
 /**
  * Hydrates module list from official standards datasets if current list is empty or minimal.
  */
@@ -61,7 +65,7 @@ if (!function_exists('hydrateLevelModules')) {
                 }
             }
         }
-        if ($skillCount > 2) {
+        if ($skillCount > 10) {
             return $existingModules;
         }
 
@@ -89,8 +93,8 @@ if (!function_exists('hydrateLevelModules')) {
         $baseDir = defined('ABSPATH') ? ABSPATH : (dirname(__DIR__) . '/');
         $dataDir = rtrim($baseDir, '/\\') . '/assets/data/';
 
-        // Check for dedicated EngageNY Math curriculum outline for Grade 9 (Level K)
-        if ($subject === 'math' && strtolower($levelId) === 'k') {
+        // Check for dedicated EngageNY Math curriculum outline for Grade 9 (Level K) and Grade 10 (Level L)
+        if ($subject === 'math' && in_array(strtolower($levelId), ['k', 'l'])) {
             $engPath = $dataDir . 'curriculum-engageny-math.json';
             if (file_exists($engPath)) {
                 $raw = json_decode(file_get_contents($engPath), true);
@@ -103,10 +107,10 @@ if (!function_exists('hydrateLevelModules')) {
                             $skills = [];
                             foreach ($top['lessons'] ?? [] as $les) {
                                 $skills[] = [
-                                    'id' => $les['id'] ?? ('k-math-' . strtolower($les['code'] ?? '')),
+                                    'id' => $les['id'] ?? (strtolower($levelId) . '-math-' . strtolower($les['code'] ?? '')),
                                     'code' => $les['code'] ?? '',
                                     'name' => $les['title'] ?? '',
-                                    'url' => $les['url'] ?? ('/levels/k.php?' . ($les['id'] ?? ''))
+                                    'url' => $les['url'] ?? ('/levels/' . strtolower($levelId) . '.php?' . ($les['id'] ?? ''))
                                 ];
                             }
                             $topics[] = [
@@ -141,9 +145,15 @@ if (!function_exists('hydrateLevelModules')) {
         if (!file_exists($fullPath)) return $existingModules;
 
         $data = json_decode(file_get_contents($fullPath), true);
-        if (!$data || !isset($data[$subject]['grades'][$gradeName])) return $existingModules;
+        $gradeKey = $gradeName;
+        if (!isset($data[$subject]['grades'][$gradeKey])) {
+            if (in_array($gradeName, ['9th Grade', '10th Grade', '11th Grade', '12th Grade', 'Advanced Placement'])) {
+                $gradeKey = 'High School';
+            }
+        }
+        if (!$data || !isset($data[$subject]['grades'][$gradeKey])) return $existingModules;
 
-        $gradeData = $data[$subject]['grades'][$gradeName];
+        $gradeData = $data[$subject]['grades'][$gradeKey];
         $rawStandards = $gradeData['ccss']['standards'] ?? ($gradeData['ngss']['standards'] ?? ($gradeData['c3']['standards'] ?? []));
         $allHtml = is_array($rawStandards) ? implode("\n", $rawStandards) : (string)$rawStandards;
         if (empty(trim($allHtml))) return $existingModules;
@@ -341,6 +351,27 @@ function renderSubjectModules(array $modulesList, string $subjectId, string $sub
 
 <link rel="stylesheet" href="/assets/css/level-style.css">
 
+<!-- Accessible Subject Breadcrumb Hierarchy -->
+<nav class="level-breadcrumbs" aria-label="Breadcrumb Trail">
+    <ol class="breadcrumb-list">
+        <li class="breadcrumb-item">
+            <a href="/" class="crumb-link"><i class="fas fa-home" aria-hidden="true"></i> Home</a>
+        </li>
+        <li class="crumb-separator" aria-hidden="true">/</li>
+        <li class="breadcrumb-item">
+            <a href="/index.php#level-grid" class="crumb-link">Levels</a>
+        </li>
+        <li class="crumb-separator" aria-hidden="true">/</li>
+        <li class="breadcrumb-item">
+            <span class="crumb-level" id="crumb-level-grade"><?php echo htmlspecialchars($levelTitle); ?> (<?php echo htmlspecialchars($gradeText); ?>)</span>
+        </li>
+        <li class="crumb-separator" aria-hidden="true">/</li>
+        <li class="breadcrumb-item" aria-current="page">
+            <span class="crumb-current-subject" id="crumb-active-subject"><?php echo htmlspecialchars($initialSubjectName); ?></span>
+        </li>
+    </ol>
+</nav>
+
 <!-- Level Navigation & Subject Tabs -->
 <div class="level-nav-container">
     <!-- Live Skill Search Filter -->
@@ -391,6 +422,9 @@ function renderSubjectModules(array $modulesList, string $subjectId, string $sub
                 <h1 class="hero-title">
                     <?php echo $levelTitle; ?> <span id="header-subject" class="hero-subject"><?php echo $initialSubjectName; ?></span>
                 </h1>
+                <span class="hero-grade-badge">
+                    <i class="fas fa-graduation-cap" aria-hidden="true"></i> <?php echo htmlspecialchars($gradeText); ?>
+                </span>
                 <span id="level-curriculum-badge" class="hero-badge">
                     ENGAGENY / CC
                 </span>
@@ -531,7 +565,7 @@ function renderSubjectModules(array $modulesList, string $subjectId, string $sub
             </div>
         </div>
 
-        <!-- Aligned Library Books & Literature -->
+        <!-- Aligned Library Books & Literature (Customized per Grade) -->
         <div id="side-aligned-library" class="sidebar-card library-aligned-card" style="background: var(--bg-secondary); border: 1px solid var(--glass-border); border-radius: 1.25rem; padding: 1.25rem; box-shadow: var(--shadow-sm); text-align: left;">
             <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
                 <h4 style="font-family: var(--site-font-family, 'Outfit', sans-serif); font-size: 0.95rem; font-weight: 800; margin: 0; color: var(--color-text-default); display: flex; align-items: center; gap: 0.5rem;">
@@ -540,40 +574,66 @@ function renderSubjectModules(array $modulesList, string $subjectId, string $sub
                 <a href="/library/" style="font-size: 0.75rem; font-weight: 700; color: var(--color-primary); text-decoration: none;">Browse Hub &rarr;</a>
             </div>
             <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0 0 0.85rem 0; line-height: 1.4;">
-                Primary documents & classic texts aligned to <?php echo htmlspecialchars($levelTitle); ?>:
+                Primary documents &amp; classic texts aligned to <?php echo htmlspecialchars($levelTitle); ?> (<?php echo htmlspecialchars($gradeText); ?>):
             </p>
             <div class="aligned-books-list" style="display: flex; flex-direction: column; gap: 0.5rem;">
-                <a href="/library/read/index.php?book=1984&chapter=chapter-1" style="display: flex; align-items: center; gap: 0.6rem; padding: 0.5rem 0.75rem; background: var(--color-base-bg); border: 1px solid var(--color-border); border-radius: 0.6rem; text-decoration: none; color: var(--color-text-default); font-size: 0.82rem; font-weight: 700; transition: all 0.2s;">
-                    <i class="fas fa-book-open" style="color: var(--color-primary); font-size: 0.85rem;"></i>
-                    <div style="flex-grow: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                        <span>1984</span>
-                        <span style="font-size: 0.7rem; font-weight: 500; color: var(--text-muted); display: block;">George Orwell • ELA</span>
-                    </div>
-                </a>
-                <a href="/library/read/index.php?book=frankenstein&chapter=chapter-1" style="display: flex; align-items: center; gap: 0.6rem; padding: 0.5rem 0.75rem; background: var(--color-base-bg); border: 1px solid var(--color-border); border-radius: 0.6rem; text-decoration: none; color: var(--color-text-default); font-size: 0.82rem; font-weight: 700; transition: all 0.2s;">
-                    <i class="fas fa-book-open" style="color: var(--color-secondary); font-size: 0.85rem;"></i>
-                    <div style="flex-grow: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                        <span>Frankenstein</span>
-                        <span style="font-size: 0.7rem; font-weight: 500; color: var(--text-muted); display: block;">Mary Shelley • Literature</span>
-                    </div>
-                </a>
-                <a href="/library/read/index.php?book=federalist-papers&chapter=chapter-1" style="display: flex; align-items: center; gap: 0.6rem; padding: 0.5rem 0.75rem; background: var(--color-base-bg); border: 1px solid var(--color-border); border-radius: 0.6rem; text-decoration: none; color: var(--color-text-default); font-size: 0.82rem; font-weight: 700; transition: all 0.2s;">
-                    <i class="fas fa-landmark" style="color: #f59e0b; font-size: 0.85rem;"></i>
-                    <div style="flex-grow: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                        <span>The Federalist Papers</span>
-                        <span style="font-size: 0.7rem; font-weight: 500; color: var(--text-muted); display: block;">Hamilton & Madison • Civics</span>
-                    </div>
-                </a>
+                <?php foreach (($gradeResources['literature'] ?? []) as $book): ?>
+                    <a href="<?php echo htmlspecialchars($book['url']); ?>" style="display: flex; align-items: center; gap: 0.6rem; padding: 0.5rem 0.75rem; background: var(--color-base-bg, var(--bg-primary)); border: 1px solid var(--color-border); border-radius: 0.6rem; text-decoration: none; color: var(--color-text-default); font-size: 0.82rem; font-weight: 700; transition: all 0.2s;">
+                        <i class="fas <?php echo htmlspecialchars($book['icon']); ?>" style="color: <?php echo htmlspecialchars($book['color']); ?>; font-size: 0.85rem;" aria-hidden="true"></i>
+                        <div style="flex-grow: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                            <span><?php echo htmlspecialchars($book['title']); ?></span>
+                            <span style="font-size: 0.7rem; font-weight: 500; color: var(--text-muted); display: block;"><?php echo htmlspecialchars($book['author']); ?> &bull; <?php echo htmlspecialchars($book['tag']); ?></span>
+                        </div>
+                    </a>
+                <?php endforeach; ?>
             </div>
         </div>
 
-        <!-- Study Tip -->
-        <div class="sidebar-card study-tip">
-            <i class="fas fa-lightbulb study-tip-bg-icon"></i>
+        <!-- Grade Practice & Interactive Tools (Customized per Grade) -->
+        <div id="side-grade-tools" class="sidebar-card grade-tools-card" style="background: var(--bg-secondary); border: 1px solid var(--glass-border); border-radius: 1.25rem; padding: 1.25rem; box-shadow: var(--shadow-sm); text-align: left;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
+                <h4 style="font-family: var(--site-font-family, 'Outfit', sans-serif); font-size: 0.95rem; font-weight: 800; margin: 0; color: var(--color-text-default); display: flex; align-items: center; gap: 0.5rem;">
+                    <i class="fas fa-toolbox" style="color: var(--color-secondary, #4f46e5);"></i> Grade Tools &amp; Practice
+                </h4>
+                <span style="font-size: 0.7rem; font-weight: 800; padding: 0.15rem 0.5rem; background: rgba(79, 70, 229, 0.1); color: var(--color-secondary, #4f46e5); border-radius: 9999px;">
+                    <?php echo htmlspecialchars($gradeText); ?>
+                </span>
+            </div>
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0 0 0.85rem 0; line-height: 1.4;">
+                Interactive learning workbenches &amp; manipulatives tailored for <?php echo htmlspecialchars($gradeText); ?>:
+            </p>
+            <div class="grade-tools-list" style="display: flex; flex-direction: column; gap: 0.5rem;">
+                <?php foreach (($gradeResources['tools'] ?? []) as $tool): ?>
+                    <a href="<?php echo htmlspecialchars($tool['url']); ?>" style="display: flex; align-items: flex-start; gap: 0.65rem; padding: 0.6rem 0.75rem; background: var(--color-base-bg, var(--bg-primary)); border: 1px solid var(--color-border); border-radius: 0.6rem; text-decoration: none; color: var(--color-text-default); font-size: 0.82rem; transition: all 0.2s;">
+                        <i class="fas <?php echo htmlspecialchars($tool['icon']); ?>" style="color: <?php echo htmlspecialchars($tool['color']); ?>; font-size: 0.9rem; margin-top: 0.15rem;" aria-hidden="true"></i>
+                        <div style="flex-grow: 1; min-width: 0;">
+                            <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem;">
+                                <strong style="font-size: 0.82rem; color: var(--color-text-default);"><?php echo htmlspecialchars($tool['title']); ?></strong>
+                                <span style="font-size: 0.65rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;"><?php echo htmlspecialchars($tool['badge']); ?></span>
+                            </div>
+                            <span style="font-size: 0.72rem; color: var(--text-muted); display: block; line-height: 1.35; margin-top: 0.15rem;"><?php echo htmlspecialchars($tool['desc']); ?></span>
+                        </div>
+                    </a>
+                <?php endforeach; ?>
+            </div>
+        </div>
+
+        <!-- Grade Study Strategy Tip (Customized per Grade) -->
+        <div class="sidebar-card study-tip" style="position: relative; overflow: hidden;">
+            <i class="fas fa-lightbulb study-tip-bg-icon" aria-hidden="true"></i>
             <div style="position: relative; z-index: 10;">
-                <h4 class="study-tip-label">Study Tip</h4>
-                <p class="study-tip-text">Active learning is key! Try to explain topics to others.</p>
-                <div class="study-tip-bar"></div>
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.35rem;">
+                    <h4 class="study-tip-label" style="margin: 0; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255, 255, 255, 0.9);">
+                        <?php echo htmlspecialchars($gradeResources['studyTip']['title'] ?? 'Study Strategy'); ?>
+                    </h4>
+                    <span style="font-size: 0.65rem; font-weight: 800; background: rgba(255, 255, 255, 0.2); padding: 0.1rem 0.4rem; border-radius: 0.25rem;">
+                        <?php echo htmlspecialchars($gradeText); ?> Tip
+                    </span>
+                </div>
+                <p class="study-tip-text" style="font-size: 0.85rem; line-height: 1.45; margin: 0.5rem 0 0 0; color: rgba(255, 255, 255, 0.95); font-weight: 500;">
+                    <?php echo htmlspecialchars($gradeResources['studyTip']['tip'] ?? 'Active learning is key! Try to explain topics to others.'); ?>
+                </p>
+                <div class="study-tip-bar" style="margin-top: 0.75rem;"></div>
             </div>
         </div>
     </aside>
@@ -680,6 +740,12 @@ function renderSubjectModules(array $modulesList, string $subjectId, string $sub
         if (subjectData[tabName]) {
             if (headerSubject) headerSubject.innerText = subjectData[tabName].name;
             if (headerDesc) headerDesc.innerText = subjectData[tabName].desc;
+        }
+
+        // Update active subject in breadcrumb trail
+        const crumbActiveSubj = document.getElementById('crumb-active-subject');
+        if (crumbActiveSubj && subjectData[tabName]) {
+            crumbActiveSubj.textContent = subjectData[tabName].name;
         }
 
         document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('block'));

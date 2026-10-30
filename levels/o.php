@@ -3,14 +3,14 @@
  * Hesten's Learning - Level O (Extra/Resources)
  */
 
-$pageTitle       = "Extra Resources Level O | Hesten's Learning";
+$pageTitle       = "AP & College Prep Level O | Hesten's Learning";
 $pageDescription = "Challenge yourself with extra multi-subject assessments and enrichment materials.";
 $pageKeywords    = "Enrichment, extra, challenge, STEM, logic";
 
 $themeColor = 'red';
 $levelId = 'o';
 $levelTitle = 'Level O';
-$gradeText = 'Extra Resources';
+$gradeText = 'AP & College Prep';
 $initialSubject = 'math';
 $initialSubjectName = 'Challenges';
 $initialSubjectDesc = 'Advanced STEM challenges, logic puzzles, and multi-subject enrichment.';

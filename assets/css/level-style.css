@@ -1164,4 +1164,98 @@ body.dark .honors-title {
   gap: 0.5rem;
 }
 
+/* Accessible Subject Breadcrumbs Hierarchy */
+.level-breadcrumbs {
+  max-width: 1400px;
+  margin: 1.25rem auto 0.75rem auto;
+  padding: 0 1.5rem;
+}
+
+.level-breadcrumbs .breadcrumb-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.level-breadcrumbs .breadcrumb-item {
+  display: inline-flex;
+  align-items: center;
+}
+
+.level-breadcrumbs .crumb-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border-radius: 0.35rem;
+  padding: 0.15rem 0.35rem;
+  transition: all 0.2s ease;
+}
+
+.level-breadcrumbs .crumb-link:hover {
+  color: var(--theme-color);
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.level-breadcrumbs .crumb-link:focus-visible {
+  outline: 2px solid var(--theme-color);
+  outline-offset: 2px;
+}
+
+.level-breadcrumbs .crumb-separator {
+  color: var(--text-muted);
+  opacity: 0.6;
+  font-size: 0.75rem;
+  user-select: none;
+}
+
+.level-breadcrumbs .crumb-level {
+  color: var(--color-text-default);
+  font-weight: 700;
+}
+
+.level-breadcrumbs .crumb-current-subject {
+  color: var(--theme-color);
+  font-weight: 800;
+}
+
+/* Hero Grade Badge */
+.hero-grade-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  background: var(--theme-color);
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  vertical-align: middle;
+}
+
+/* Custom Grade Sidebar Tools */
+.grade-tools-card a:hover,
+.library-aligned-card a:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+  border-color: var(--theme-color) !important;
+}
+
+.grade-tools-card a:focus-visible,
+.library-aligned-card a:focus-visible {
+  outline: 2px solid var(--theme-color);
+  outline-offset: 2px;
+}
+
+
 

@@ -3,7 +3,7 @@
  * Hesten's Learning - Level F (Grade 4)
  */
 
-$pageTitle       = "Grade 4 Level F | Hesten's Learning";
+$pageTitle       = "4th Grade Level F | Hesten's Learning";
 $pageDescription = "Advanced multiplication, long division, and equivalent fractions for 4th-grade students.";
 $pageKeywords    = "Grade 4, long division, comparing fractions, angles and geometry";
 

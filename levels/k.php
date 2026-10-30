@@ -51,7 +51,7 @@ if (!empty($requestedLesson)) {
 }
 
 // Page-Specific Metadata
-$pageTitle       = "Grade 9 Level K | Hesten's Learning";
+$pageTitle       = "9th Grade Level K | Hesten's Learning";
 $pageDescription = "Algebra I foundations, literature analysis, chemical properties, and global civilizations.";
 $pageKeywords    = "Grade 9, Freshman, Algebra 1, Functions, Equations, Statistics, Literary Analysis, Chemistry, World History, Civics";
 
@@ -59,7 +59,7 @@ $pageKeywords    = "Grade 9, Freshman, Algebra 1, Functions, Equations, Statisti
 $themeColor = 'rose';
 $levelId = 'k';
 $levelTitle = 'Level K';
-$gradeText = 'High School';
+$gradeText = '9th Grade';
 $initialSubject = 'math';
 $initialSubjectName = 'Math';
 $initialSubjectDesc = 'Algebra I foundations: mastering relationships between quantities, equations, and graphs.';

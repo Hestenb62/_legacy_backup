@@ -3,7 +3,7 @@
  * Hesten's Learning - Level G (Grade 5)
  */
 
-$pageTitle       = "Grade 5 Level G | Hesten's Learning";
+$pageTitle       = "5th Grade Level G | Hesten's Learning";
 $pageDescription = "Decimals, volumes, and complex ecosystems for 5th-grade students.";
 $pageKeywords    = "Grade 5, decimals, coordinates, volume of solids";
 

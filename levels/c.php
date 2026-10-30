@@ -3,7 +3,7 @@
  * Hesten's Learning - Level C (Grade 1)
  */
 
-$pageTitle       = "Grade 1 Level C | Hesten's Learning";
+$pageTitle       = "1st Grade Level C | Hesten's Learning";
 $pageDescription = "Adding, subtracting, and developing early independence for 1st-grade learners.";
 $pageKeywords    = "Grade 1, addition up to 20, telling time, reading comprehension";
 

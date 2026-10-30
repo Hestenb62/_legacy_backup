@@ -3,14 +3,14 @@
  * Hesten's Learning - Level N (Grade 12)
  */
 
-$pageTitle       = "Grade 12 Level N | Hesten's Learning";
+$pageTitle       = "12th Grade Level N | Hesten's Learning";
 $pageDescription = "Calculus, statistics, and capstone literature analysis for Seniors.";
 $pageKeywords    = "Grade 12, Senior, Calculus, Statistics, Capstone";
 
 $themeColor = 'pink';
 $levelId = 'n';
 $levelTitle = 'Level N';
-$gradeText = 'High School';
+$gradeText = '12th Grade';
 $initialSubject = 'math';
 $initialSubjectName = 'Math';
 $initialSubjectDesc = 'Final preparations for college-level mathematics, Calculus, and applied statistics.';

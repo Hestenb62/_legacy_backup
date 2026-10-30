@@ -3,14 +3,14 @@
  * Hesten's Learning - Level J (Grade 8)
  */
 
-$pageTitle       = "Grade 8 Level J | Hesten's Learning";
-$pageDescription = "Pre-Algebra, linear equations, and physical sciences for 8th-grade students.";
-$pageKeywords    = "Grade 8, linear equations, functions, Pythagorean Theorem";
+$pageTitle       = "8th Grade Level J | Hesten's Learning";
+$pageDescription = "Pre-Algebra, linear equations, functions, and physical sciences for 8th-grade students.";
+$pageKeywords    = "Grade 8, 8th Grade, linear equations, functions, Pythagorean Theorem";
 
 $themeColor = 'fuchsia';
 $levelId = 'j';
 $levelTitle = 'Level J';
-$gradeText = 'Middle School';
+$gradeText = '8th Grade';
 $initialSubject = 'math';
 $initialSubjectName = 'Math';
 $initialSubjectDesc = 'Pre-Algebra concepts, linear equations, and preparing for High School mathematics.';

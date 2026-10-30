@@ -3,14 +3,14 @@
  * Hesten's Learning - Level M (Grade 11)
  */
 
-$pageTitle       = "Grade 11 Level M | Hesten's Learning";
+$pageTitle       = "11th Grade Level M | Hesten's Learning";
 $pageDescription = "Pre-calculus, logarithms, and advanced American literature for Juniors.";
 $pageKeywords    = "Grade 11, Junior, Pre-calculus, Trigonometry, logarithms";
 
 $themeColor = 'amber';
 $levelId = 'm';
 $levelTitle = 'Level M';
-$gradeText = 'High School';
+$gradeText = '11th Grade';
 $initialSubject = 'math';
 $initialSubjectName = 'Math';
 $initialSubjectDesc = 'Advanced Algebra, logarithms, complex numbers, and preparing for Calculus.';

@@ -1,7 +1,7 @@
 {
     "meta": {
         "title": "Hesten's Learning Unified Mathematics Codex & Vocabulary Repository",
-        "total_terms": 195,
+        "total_terms": 198,
         "generated_at": "2026-09-30",
         "version": "2.0.0"
     },
@@ -1029,6 +1029,612 @@
             "etymology": ""
         },
         {
+            "id": "congruence-geometric",
+            "term": "Congruence (Geometric)",
+            "definition": "A relationship between two figures where one can be mapped onto the other through a finite sequence of rigid motions (translations, rotations, reflections).",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "High School Mathematics"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "l-math-m1-a-1",
+                    "title": "Construct an Equilateral Triangle",
+                    "url": "/lessons/l-math-m1-a-1.php"
+                },
+                {
+                    "id": "l-math-m1-a-2",
+                    "title": "Construct an Equilateral Triangle",
+                    "url": "/lessons/l-math-m1-a-2.php"
+                },
+                {
+                    "id": "l-math-m1-a-3",
+                    "title": "Copy and Bisect an Angle",
+                    "url": "/lessons/l-math-m1-a-3.php"
+                },
+                {
+                    "id": "l-math-m1-a-4",
+                    "title": "Construct a Perpendicular Bisector",
+                    "url": "/lessons/l-math-m1-a-4.php"
+                },
+                {
+                    "id": "l-math-m1-a-5",
+                    "title": "Points of Concurrencies",
+                    "url": "/lessons/l-math-m1-a-5.php"
+                },
+                {
+                    "id": "l-math-m1-b-1",
+                    "title": "Solve for Unknown Angles—Angles and Lines at a Point",
+                    "url": "/lessons/l-math-m1-b-1.php"
+                },
+                {
+                    "id": "l-math-m1-b-2",
+                    "title": "Solve for Unknown Angles—Transversals",
+                    "url": "/lessons/l-math-m1-b-2.php"
+                },
+                {
+                    "id": "l-math-m1-b-3",
+                    "title": "Solve for Unknown Angles—Angles in a Triangle",
+                    "url": "/lessons/l-math-m1-b-3.php"
+                },
+                {
+                    "id": "l-math-m1-b-4",
+                    "title": "Unknown Angle Proofs—Writing Proofs",
+                    "url": "/lessons/l-math-m1-b-4.php"
+                },
+                {
+                    "id": "l-math-m1-b-5",
+                    "title": "Unknown Angle Proofs—Proofs with Constructions",
+                    "url": "/lessons/l-math-m1-b-5.php"
+                },
+                {
+                    "id": "l-math-m1-b-6",
+                    "title": "Unknown Angle Proofs—Proofs of Known Facts",
+                    "url": "/lessons/l-math-m1-b-6.php"
+                },
+                {
+                    "id": "l-math-m1-c-1",
+                    "title": "Transformations—The Next Level",
+                    "url": "/lessons/l-math-m1-c-1.php"
+                },
+                {
+                    "id": "l-math-m1-c-2",
+                    "title": "Rotations",
+                    "url": "/lessons/l-math-m1-c-2.php"
+                },
+                {
+                    "id": "l-math-m1-c-3",
+                    "title": "Reflections",
+                    "url": "/lessons/l-math-m1-c-3.php"
+                },
+                {
+                    "id": "l-math-m1-c-4",
+                    "title": "Rotations, Reflections, and Symmetry",
+                    "url": "/lessons/l-math-m1-c-4.php"
+                },
+                {
+                    "id": "l-math-m1-c-5",
+                    "title": "Translations",
+                    "url": "/lessons/l-math-m1-c-5.php"
+                },
+                {
+                    "id": "l-math-m1-c-6",
+                    "title": "Characterize Points on a Perpendicular Bisector",
+                    "url": "/lessons/l-math-m1-c-6.php"
+                },
+                {
+                    "id": "l-math-m1-c-7",
+                    "title": "Looking More Carefully at Parallel Lines",
+                    "url": "/lessons/l-math-m1-c-7.php"
+                },
+                {
+                    "id": "l-math-m1-c-8",
+                    "title": "Construct and Apply a Sequence of Rigid Motions",
+                    "url": "/lessons/l-math-m1-c-8.php"
+                },
+                {
+                    "id": "l-math-m1-c-9",
+                    "title": "Applications of Congruence in Terms of Rigid Motions",
+                    "url": "/lessons/l-math-m1-c-9.php"
+                },
+                {
+                    "id": "l-math-m1-c-10",
+                    "title": "Correspondence and Transformations",
+                    "url": "/lessons/l-math-m1-c-10.php"
+                },
+                {
+                    "id": "l-math-m1-d-1",
+                    "title": "Congruence Criteria for Triangles—SAS",
+                    "url": "/lessons/l-math-m1-d-1.php"
+                },
+                {
+                    "id": "l-math-m1-d-2",
+                    "title": "Base Angles of Isosceles Triangles",
+                    "url": "/lessons/l-math-m1-d-2.php"
+                },
+                {
+                    "id": "l-math-m1-d-3",
+                    "title": "Congruence Criteria for Triangles—ASA and SSS",
+                    "url": "/lessons/l-math-m1-d-3.php"
+                },
+                {
+                    "id": "l-math-m1-d-4",
+                    "title": "Congruence Criteria for Triangles—AAS and HL",
+                    "url": "/lessons/l-math-m1-d-4.php"
+                },
+                {
+                    "id": "l-math-m1-d-5",
+                    "title": "Triangle Congruency Proofs",
+                    "url": "/lessons/l-math-m1-d-5.php"
+                },
+                {
+                    "id": "l-math-m1-d-6",
+                    "title": "Triangle Congruency Proofs",
+                    "url": "/lessons/l-math-m1-d-6.php"
+                },
+                {
+                    "id": "l-math-m1-e-1",
+                    "title": "Properties of Parallelograms",
+                    "url": "/lessons/l-math-m1-e-1.php"
+                },
+                {
+                    "id": "l-math-m1-e-2",
+                    "title": "Special Lines in Triangles",
+                    "url": "/lessons/l-math-m1-e-2.php"
+                },
+                {
+                    "id": "l-math-m1-e-3",
+                    "title": "Special Lines in Triangles",
+                    "url": "/lessons/l-math-m1-e-3.php"
+                },
+                {
+                    "id": "l-math-m1-f-1",
+                    "title": "Construct a Square and a Nine-Point Circle",
+                    "url": "/lessons/l-math-m1-f-1.php"
+                },
+                {
+                    "id": "l-math-m1-f-2",
+                    "title": "Construct a Nine-Point Circle",
+                    "url": "/lessons/l-math-m1-f-2.php"
+                },
+                {
+                    "id": "l-math-m1-g-1",
+                    "title": "Review of the Assumptions",
+                    "url": "/lessons/l-math-m1-g-1.php"
+                },
+                {
+                    "id": "l-math-m1-g-2",
+                    "title": "Review of the Assumptions",
+                    "url": "/lessons/l-math-m1-g-2.php"
+                },
+                {
+                    "id": "l-math-m2-a-1",
+                    "title": "Scale Drawings",
+                    "url": "/lessons/l-math-m2-a-1.php"
+                },
+                {
+                    "id": "l-math-m2-a-2",
+                    "title": "Making Scale Drawings Using the Ratio Method",
+                    "url": "/lessons/l-math-m2-a-2.php"
+                },
+                {
+                    "id": "l-math-m2-a-3",
+                    "title": "Making Scale Drawings Using the Parallel Method",
+                    "url": "/lessons/l-math-m2-a-3.php"
+                },
+                {
+                    "id": "l-math-m2-a-4",
+                    "title": "Comparing the Ratio Method with the Parallel Method",
+                    "url": "/lessons/l-math-m2-a-4.php"
+                },
+                {
+                    "id": "l-math-m2-a-5",
+                    "title": "Scale Factors",
+                    "url": "/lessons/l-math-m2-a-5.php"
+                },
+                {
+                    "id": "l-math-m2-b-1",
+                    "title": "Dilations as Transformations of the Plane",
+                    "url": "/lessons/l-math-m2-b-1.php"
+                },
+                {
+                    "id": "l-math-m2-b-2",
+                    "title": "How Do Dilations Map Segments?",
+                    "url": "/lessons/l-math-m2-b-2.php"
+                },
+                {
+                    "id": "l-math-m2-b-3",
+                    "title": "How Do Dilations Map Lines, Rays, and Circles?",
+                    "url": "/lessons/l-math-m2-b-3.php"
+                },
+                {
+                    "id": "l-math-m2-b-4",
+                    "title": "How Do Dilations Map Angles?",
+                    "url": "/lessons/l-math-m2-b-4.php"
+                },
+                {
+                    "id": "l-math-m2-b-5",
+                    "title": "Dividing the King's Foot into 12 Equal Pieces",
+                    "url": "/lessons/l-math-m2-b-5.php"
+                },
+                {
+                    "id": "l-math-m2-b-6",
+                    "title": "Dilations from Different Centers",
+                    "url": "/lessons/l-math-m2-b-6.php"
+                },
+                {
+                    "id": "l-math-m2-c-1",
+                    "title": "What Are Similarity Transformations, and Why Do We Need Them?",
+                    "url": "/lessons/l-math-m2-c-1.php"
+                },
+                {
+                    "id": "l-math-m2-c-2",
+                    "title": "Properties of Similarity Transformations",
+                    "url": "/lessons/l-math-m2-c-2.php"
+                },
+                {
+                    "id": "l-math-m2-c-3",
+                    "title": "Similarity",
+                    "url": "/lessons/l-math-m2-c-3.php"
+                },
+                {
+                    "id": "l-math-m2-c-4",
+                    "title": "The Angle-Angle (AA) Criterion for Two Triangles to Be Similar",
+                    "url": "/lessons/l-math-m2-c-4.php"
+                },
+                {
+                    "id": "l-math-m2-c-5",
+                    "title": "Between-Figure and Within-Figure Ratios",
+                    "url": "/lessons/l-math-m2-c-5.php"
+                },
+                {
+                    "id": "l-math-m2-c-6",
+                    "title": "The Side-Angle-Side (SAS) and Side-Side-Side (SSS) Criteria for Two Triangles to Be Similar",
+                    "url": "/lessons/l-math-m2-c-6.php"
+                },
+                {
+                    "id": "l-math-m2-c-7",
+                    "title": "Similarity and the Angle Bisector Theorem",
+                    "url": "/lessons/l-math-m2-c-7.php"
+                },
+                {
+                    "id": "l-math-m2-c-8",
+                    "title": "Families of Parallel Lines and the Circumference of the Earth",
+                    "url": "/lessons/l-math-m2-c-8.php"
+                },
+                {
+                    "id": "l-math-m2-c-9",
+                    "title": "How Far Away Is the Moon?",
+                    "url": "/lessons/l-math-m2-c-9.php"
+                },
+                {
+                    "id": "l-math-m2-d-1",
+                    "title": "Special Relationships Within Right Triangles—Dividing into Two Similar Sub-Triangles",
+                    "url": "/lessons/l-math-m2-d-1.php"
+                },
+                {
+                    "id": "l-math-m2-d-2",
+                    "title": "Multiplying and Dividing Expressions with Radicals",
+                    "url": "/lessons/l-math-m2-d-2.php"
+                },
+                {
+                    "id": "l-math-m2-d-3",
+                    "title": "Adding and Subtracting Expressions with Radicals",
+                    "url": "/lessons/l-math-m2-d-3.php"
+                },
+                {
+                    "id": "l-math-m2-d-4",
+                    "title": "Prove the Pythagorean Theorem Using Similarity",
+                    "url": "/lessons/l-math-m2-d-4.php"
+                },
+                {
+                    "id": "l-math-m2-e-1",
+                    "title": "Incredibly Useful Ratios",
+                    "url": "/lessons/l-math-m2-e-1.php"
+                },
+                {
+                    "id": "l-math-m2-e-2",
+                    "title": "The Definition of Sine, Cosine, and Tangent",
+                    "url": "/lessons/l-math-m2-e-2.php"
+                },
+                {
+                    "id": "l-math-m2-e-3",
+                    "title": "Sine and Cosine of Complementary Angles and Special Angles",
+                    "url": "/lessons/l-math-m2-e-3.php"
+                },
+                {
+                    "id": "l-math-m2-e-4",
+                    "title": "Solving Problems Using Sine and Cosine",
+                    "url": "/lessons/l-math-m2-e-4.php"
+                },
+                {
+                    "id": "l-math-m2-e-5",
+                    "title": "Applying Tangents",
+                    "url": "/lessons/l-math-m2-e-5.php"
+                },
+                {
+                    "id": "l-math-m2-e-6",
+                    "title": "Trigonometry and the Pythagorean Theorem",
+                    "url": "/lessons/l-math-m2-e-6.php"
+                },
+                {
+                    "id": "l-math-m2-e-7",
+                    "title": "Using Trigonometry to Determine Area",
+                    "url": "/lessons/l-math-m2-e-7.php"
+                },
+                {
+                    "id": "l-math-m2-e-8",
+                    "title": "Using Trigonometry to Find Side Lengths of an Acute Triangle",
+                    "url": "/lessons/l-math-m2-e-8.php"
+                },
+                {
+                    "id": "l-math-m2-e-9",
+                    "title": "Applying the Laws of Sines and Cosines",
+                    "url": "/lessons/l-math-m2-e-9.php"
+                },
+                {
+                    "id": "l-math-m2-e-10",
+                    "title": "Unknown Angles",
+                    "url": "/lessons/l-math-m2-e-10.php"
+                },
+                {
+                    "id": "l-math-m3-a-1",
+                    "title": "What Is Area?",
+                    "url": "/lessons/l-math-m3-a-1.php"
+                },
+                {
+                    "id": "l-math-m3-a-2",
+                    "title": "Properties of Area",
+                    "url": "/lessons/l-math-m3-a-2.php"
+                },
+                {
+                    "id": "l-math-m3-a-3",
+                    "title": "The Scaling Principle for Area",
+                    "url": "/lessons/l-math-m3-a-3.php"
+                },
+                {
+                    "id": "l-math-m3-a-4",
+                    "title": "Proving the Area of a Disk",
+                    "url": "/lessons/l-math-m3-a-4.php"
+                },
+                {
+                    "id": "l-math-m3-b-1",
+                    "title": "Three-Dimensional Space",
+                    "url": "/lessons/l-math-m3-b-1.php"
+                },
+                {
+                    "id": "l-math-m3-b-2",
+                    "title": "General Prisms and Cylinders and Their Cross-Sections",
+                    "url": "/lessons/l-math-m3-b-2.php"
+                },
+                {
+                    "id": "l-math-m3-b-3",
+                    "title": "General Pyramids and Cones and TheirCross-Sections",
+                    "url": "/lessons/l-math-m3-b-3.php"
+                },
+                {
+                    "id": "l-math-m3-b-4",
+                    "title": "Definition and Properties of Volume",
+                    "url": "/lessons/l-math-m3-b-4.php"
+                },
+                {
+                    "id": "l-math-m3-b-5",
+                    "title": "Scaling Principle for Volumes",
+                    "url": "/lessons/l-math-m3-b-5.php"
+                },
+                {
+                    "id": "l-math-m3-b-6",
+                    "title": "The Volume of Prisms and Cylinders and Cavalieri's Principle",
+                    "url": "/lessons/l-math-m3-b-6.php"
+                },
+                {
+                    "id": "l-math-m3-b-7",
+                    "title": "The Volume Formula of a Pyramid and Cone",
+                    "url": "/lessons/l-math-m3-b-7.php"
+                },
+                {
+                    "id": "l-math-m3-b-8",
+                    "title": "The Volume Formula of a Sphere",
+                    "url": "/lessons/l-math-m3-b-8.php"
+                },
+                {
+                    "id": "l-math-m3-b-9",
+                    "title": "How Do 3D Printers Work?",
+                    "url": "/lessons/l-math-m3-b-9.php"
+                },
+                {
+                    "id": "l-math-m4-a-1",
+                    "title": "Searching a Region in the Plane",
+                    "url": "/lessons/l-math-m4-a-1.php"
+                },
+                {
+                    "id": "l-math-m4-a-2",
+                    "title": "Finding Systems of Inequalities That Describe Triangular and Rectangular Regions",
+                    "url": "/lessons/l-math-m4-a-2.php"
+                },
+                {
+                    "id": "l-math-m4-a-3",
+                    "title": "Lines That Pass Through Regions",
+                    "url": "/lessons/l-math-m4-a-3.php"
+                },
+                {
+                    "id": "l-math-m4-a-4",
+                    "title": "Designing a Search Robot to Find a Beacon",
+                    "url": "/lessons/l-math-m4-a-4.php"
+                },
+                {
+                    "id": "l-math-m4-b-1",
+                    "title": "Criterion for Perpendicularity",
+                    "url": "/lessons/l-math-m4-b-1.php"
+                },
+                {
+                    "id": "l-math-m4-b-2",
+                    "title": "Segments That Meet at Right Angles",
+                    "url": "/lessons/l-math-m4-b-2.php"
+                },
+                {
+                    "id": "l-math-m4-b-3",
+                    "title": "Equations for Lines Using Normal Segments",
+                    "url": "/lessons/l-math-m4-b-3.php"
+                },
+                {
+                    "id": "l-math-m4-b-4",
+                    "title": "Parallel and Perpendicular Lines",
+                    "url": "/lessons/l-math-m4-b-4.php"
+                },
+                {
+                    "id": "l-math-m4-c-1",
+                    "title": "Perimeter and Area of Triangles in the Cartesian Plane",
+                    "url": "/lessons/l-math-m4-c-1.php"
+                },
+                {
+                    "id": "l-math-m4-c-2",
+                    "title": "Perimeter and Area of Polygonal Regions in the Cartesian Plane",
+                    "url": "/lessons/l-math-m4-c-2.php"
+                },
+                {
+                    "id": "l-math-m4-c-3",
+                    "title": "Perimeters and Areas of Polygonal Regions Defined by Systems of Inequalities",
+                    "url": "/lessons/l-math-m4-c-3.php"
+                },
+                {
+                    "id": "l-math-m4-d-1",
+                    "title": "Dividing Segments Proportionately",
+                    "url": "/lessons/l-math-m4-d-1.php"
+                },
+                {
+                    "id": "l-math-m4-d-2",
+                    "title": "Analytic Proofs of Theorems Previously Proved by Synthetic Means",
+                    "url": "/lessons/l-math-m4-d-2.php"
+                },
+                {
+                    "id": "l-math-m4-d-3",
+                    "title": "Motion Along a Line—Search Robots Again",
+                    "url": "/lessons/l-math-m4-d-3.php"
+                },
+                {
+                    "id": "l-math-m4-d-4",
+                    "title": "The Distance from a Point to a Line",
+                    "url": "/lessons/l-math-m4-d-4.php"
+                },
+                {
+                    "id": "l-math-m5-a-1",
+                    "title": "Thales' Theorem",
+                    "url": "/lessons/l-math-m5-a-1.php"
+                },
+                {
+                    "id": "l-math-m5-a-2",
+                    "title": "Circles, Chords, Diameters, and Their Relationships",
+                    "url": "/lessons/l-math-m5-a-2.php"
+                },
+                {
+                    "id": "l-math-m5-a-3",
+                    "title": "Rectangles Inscribed in Circles",
+                    "url": "/lessons/l-math-m5-a-3.php"
+                },
+                {
+                    "id": "l-math-m5-a-4",
+                    "title": "Experiments with Inscribed Angles",
+                    "url": "/lessons/l-math-m5-a-4.php"
+                },
+                {
+                    "id": "l-math-m5-a-5",
+                    "title": "Inscribed Angle Theorem and Its Applications",
+                    "url": "/lessons/l-math-m5-a-5.php"
+                },
+                {
+                    "id": "l-math-m5-a-6",
+                    "title": "Unknown Angle Problems with Inscribed Angles in Circles",
+                    "url": "/lessons/l-math-m5-a-6.php"
+                },
+                {
+                    "id": "l-math-m5-b-1",
+                    "title": "The Angle Measure of an Arc",
+                    "url": "/lessons/l-math-m5-b-1.php"
+                },
+                {
+                    "id": "l-math-m5-b-2",
+                    "title": "Arcs and Chords",
+                    "url": "/lessons/l-math-m5-b-2.php"
+                },
+                {
+                    "id": "l-math-m5-b-3",
+                    "title": "Arc Length and Areas of Sectors",
+                    "url": "/lessons/l-math-m5-b-3.php"
+                },
+                {
+                    "id": "l-math-m5-b-4",
+                    "title": "Unknown Length and Area Problems",
+                    "url": "/lessons/l-math-m5-b-4.php"
+                },
+                {
+                    "id": "l-math-m5-c-1",
+                    "title": "Properties of Tangents",
+                    "url": "/lessons/l-math-m5-c-1.php"
+                },
+                {
+                    "id": "l-math-m5-c-2",
+                    "title": "Tangent Segments",
+                    "url": "/lessons/l-math-m5-c-2.php"
+                },
+                {
+                    "id": "l-math-m5-c-3",
+                    "title": "The Inscribed Angle Alternate—A Tangent Angle",
+                    "url": "/lessons/l-math-m5-c-3.php"
+                },
+                {
+                    "id": "l-math-m5-c-4",
+                    "title": "Secant Lines; Secant Lines That Meet Inside a Circle",
+                    "url": "/lessons/l-math-m5-c-4.php"
+                },
+                {
+                    "id": "l-math-m5-c-5",
+                    "title": "Secant Angle Theorem, Exterior Case",
+                    "url": "/lessons/l-math-m5-c-5.php"
+                },
+                {
+                    "id": "l-math-m5-c-6",
+                    "title": "Similar Triangles in Circle-Secant (or Circle-Secant-Tangent) Diagrams",
+                    "url": "/lessons/l-math-m5-c-6.php"
+                },
+                {
+                    "id": "l-math-m5-d-1",
+                    "title": "Writing the Equation for a Circle",
+                    "url": "/lessons/l-math-m5-d-1.php"
+                },
+                {
+                    "id": "l-math-m5-d-2",
+                    "title": "Recognizing Equations of Circles",
+                    "url": "/lessons/l-math-m5-d-2.php"
+                },
+                {
+                    "id": "l-math-m5-d-3",
+                    "title": "Equations for Tangent Lines to Circles",
+                    "url": "/lessons/l-math-m5-d-3.php"
+                },
+                {
+                    "id": "l-math-m5-e-1",
+                    "title": "Cyclic Quadrilaterals",
+                    "url": "/lessons/l-math-m5-e-1.php"
+                },
+                {
+                    "id": "l-math-m5-e-2",
+                    "title": "Ptolemy's Theorem",
+                    "url": "/lessons/l-math-m5-e-2.php"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
             "id": "conjunction-and",
             "term": "Conjunction ('And')",
             "definition": "A compound sentence that is true only if both of its component statements are simultaneously true. Corresponding to set intersection (∩).",
@@ -1149,6 +1755,612 @@
                     "id": "k-math-m2-d-4",
                     "title": "Interpreting Residuals from a Line",
                     "url": "/levels/k.php?k-math-m2-d-4"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "deductive-proof",
+            "term": "Deductive Proof",
+            "definition": "A logical argument in which each statement is justified by an axiom, definition, postulate, or previously established theorem.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "High School Mathematics"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "l-math-m1-a-1",
+                    "title": "Construct an Equilateral Triangle",
+                    "url": "/lessons/l-math-m1-a-1.php"
+                },
+                {
+                    "id": "l-math-m1-a-2",
+                    "title": "Construct an Equilateral Triangle",
+                    "url": "/lessons/l-math-m1-a-2.php"
+                },
+                {
+                    "id": "l-math-m1-a-3",
+                    "title": "Copy and Bisect an Angle",
+                    "url": "/lessons/l-math-m1-a-3.php"
+                },
+                {
+                    "id": "l-math-m1-a-4",
+                    "title": "Construct a Perpendicular Bisector",
+                    "url": "/lessons/l-math-m1-a-4.php"
+                },
+                {
+                    "id": "l-math-m1-a-5",
+                    "title": "Points of Concurrencies",
+                    "url": "/lessons/l-math-m1-a-5.php"
+                },
+                {
+                    "id": "l-math-m1-b-1",
+                    "title": "Solve for Unknown Angles—Angles and Lines at a Point",
+                    "url": "/lessons/l-math-m1-b-1.php"
+                },
+                {
+                    "id": "l-math-m1-b-2",
+                    "title": "Solve for Unknown Angles—Transversals",
+                    "url": "/lessons/l-math-m1-b-2.php"
+                },
+                {
+                    "id": "l-math-m1-b-3",
+                    "title": "Solve for Unknown Angles—Angles in a Triangle",
+                    "url": "/lessons/l-math-m1-b-3.php"
+                },
+                {
+                    "id": "l-math-m1-b-4",
+                    "title": "Unknown Angle Proofs—Writing Proofs",
+                    "url": "/lessons/l-math-m1-b-4.php"
+                },
+                {
+                    "id": "l-math-m1-b-5",
+                    "title": "Unknown Angle Proofs—Proofs with Constructions",
+                    "url": "/lessons/l-math-m1-b-5.php"
+                },
+                {
+                    "id": "l-math-m1-b-6",
+                    "title": "Unknown Angle Proofs—Proofs of Known Facts",
+                    "url": "/lessons/l-math-m1-b-6.php"
+                },
+                {
+                    "id": "l-math-m1-c-1",
+                    "title": "Transformations—The Next Level",
+                    "url": "/lessons/l-math-m1-c-1.php"
+                },
+                {
+                    "id": "l-math-m1-c-2",
+                    "title": "Rotations",
+                    "url": "/lessons/l-math-m1-c-2.php"
+                },
+                {
+                    "id": "l-math-m1-c-3",
+                    "title": "Reflections",
+                    "url": "/lessons/l-math-m1-c-3.php"
+                },
+                {
+                    "id": "l-math-m1-c-4",
+                    "title": "Rotations, Reflections, and Symmetry",
+                    "url": "/lessons/l-math-m1-c-4.php"
+                },
+                {
+                    "id": "l-math-m1-c-5",
+                    "title": "Translations",
+                    "url": "/lessons/l-math-m1-c-5.php"
+                },
+                {
+                    "id": "l-math-m1-c-6",
+                    "title": "Characterize Points on a Perpendicular Bisector",
+                    "url": "/lessons/l-math-m1-c-6.php"
+                },
+                {
+                    "id": "l-math-m1-c-7",
+                    "title": "Looking More Carefully at Parallel Lines",
+                    "url": "/lessons/l-math-m1-c-7.php"
+                },
+                {
+                    "id": "l-math-m1-c-8",
+                    "title": "Construct and Apply a Sequence of Rigid Motions",
+                    "url": "/lessons/l-math-m1-c-8.php"
+                },
+                {
+                    "id": "l-math-m1-c-9",
+                    "title": "Applications of Congruence in Terms of Rigid Motions",
+                    "url": "/lessons/l-math-m1-c-9.php"
+                },
+                {
+                    "id": "l-math-m1-c-10",
+                    "title": "Correspondence and Transformations",
+                    "url": "/lessons/l-math-m1-c-10.php"
+                },
+                {
+                    "id": "l-math-m1-d-1",
+                    "title": "Congruence Criteria for Triangles—SAS",
+                    "url": "/lessons/l-math-m1-d-1.php"
+                },
+                {
+                    "id": "l-math-m1-d-2",
+                    "title": "Base Angles of Isosceles Triangles",
+                    "url": "/lessons/l-math-m1-d-2.php"
+                },
+                {
+                    "id": "l-math-m1-d-3",
+                    "title": "Congruence Criteria for Triangles—ASA and SSS",
+                    "url": "/lessons/l-math-m1-d-3.php"
+                },
+                {
+                    "id": "l-math-m1-d-4",
+                    "title": "Congruence Criteria for Triangles—AAS and HL",
+                    "url": "/lessons/l-math-m1-d-4.php"
+                },
+                {
+                    "id": "l-math-m1-d-5",
+                    "title": "Triangle Congruency Proofs",
+                    "url": "/lessons/l-math-m1-d-5.php"
+                },
+                {
+                    "id": "l-math-m1-d-6",
+                    "title": "Triangle Congruency Proofs",
+                    "url": "/lessons/l-math-m1-d-6.php"
+                },
+                {
+                    "id": "l-math-m1-e-1",
+                    "title": "Properties of Parallelograms",
+                    "url": "/lessons/l-math-m1-e-1.php"
+                },
+                {
+                    "id": "l-math-m1-e-2",
+                    "title": "Special Lines in Triangles",
+                    "url": "/lessons/l-math-m1-e-2.php"
+                },
+                {
+                    "id": "l-math-m1-e-3",
+                    "title": "Special Lines in Triangles",
+                    "url": "/lessons/l-math-m1-e-3.php"
+                },
+                {
+                    "id": "l-math-m1-f-1",
+                    "title": "Construct a Square and a Nine-Point Circle",
+                    "url": "/lessons/l-math-m1-f-1.php"
+                },
+                {
+                    "id": "l-math-m1-f-2",
+                    "title": "Construct a Nine-Point Circle",
+                    "url": "/lessons/l-math-m1-f-2.php"
+                },
+                {
+                    "id": "l-math-m1-g-1",
+                    "title": "Review of the Assumptions",
+                    "url": "/lessons/l-math-m1-g-1.php"
+                },
+                {
+                    "id": "l-math-m1-g-2",
+                    "title": "Review of the Assumptions",
+                    "url": "/lessons/l-math-m1-g-2.php"
+                },
+                {
+                    "id": "l-math-m2-a-1",
+                    "title": "Scale Drawings",
+                    "url": "/lessons/l-math-m2-a-1.php"
+                },
+                {
+                    "id": "l-math-m2-a-2",
+                    "title": "Making Scale Drawings Using the Ratio Method",
+                    "url": "/lessons/l-math-m2-a-2.php"
+                },
+                {
+                    "id": "l-math-m2-a-3",
+                    "title": "Making Scale Drawings Using the Parallel Method",
+                    "url": "/lessons/l-math-m2-a-3.php"
+                },
+                {
+                    "id": "l-math-m2-a-4",
+                    "title": "Comparing the Ratio Method with the Parallel Method",
+                    "url": "/lessons/l-math-m2-a-4.php"
+                },
+                {
+                    "id": "l-math-m2-a-5",
+                    "title": "Scale Factors",
+                    "url": "/lessons/l-math-m2-a-5.php"
+                },
+                {
+                    "id": "l-math-m2-b-1",
+                    "title": "Dilations as Transformations of the Plane",
+                    "url": "/lessons/l-math-m2-b-1.php"
+                },
+                {
+                    "id": "l-math-m2-b-2",
+                    "title": "How Do Dilations Map Segments?",
+                    "url": "/lessons/l-math-m2-b-2.php"
+                },
+                {
+                    "id": "l-math-m2-b-3",
+                    "title": "How Do Dilations Map Lines, Rays, and Circles?",
+                    "url": "/lessons/l-math-m2-b-3.php"
+                },
+                {
+                    "id": "l-math-m2-b-4",
+                    "title": "How Do Dilations Map Angles?",
+                    "url": "/lessons/l-math-m2-b-4.php"
+                },
+                {
+                    "id": "l-math-m2-b-5",
+                    "title": "Dividing the King's Foot into 12 Equal Pieces",
+                    "url": "/lessons/l-math-m2-b-5.php"
+                },
+                {
+                    "id": "l-math-m2-b-6",
+                    "title": "Dilations from Different Centers",
+                    "url": "/lessons/l-math-m2-b-6.php"
+                },
+                {
+                    "id": "l-math-m2-c-1",
+                    "title": "What Are Similarity Transformations, and Why Do We Need Them?",
+                    "url": "/lessons/l-math-m2-c-1.php"
+                },
+                {
+                    "id": "l-math-m2-c-2",
+                    "title": "Properties of Similarity Transformations",
+                    "url": "/lessons/l-math-m2-c-2.php"
+                },
+                {
+                    "id": "l-math-m2-c-3",
+                    "title": "Similarity",
+                    "url": "/lessons/l-math-m2-c-3.php"
+                },
+                {
+                    "id": "l-math-m2-c-4",
+                    "title": "The Angle-Angle (AA) Criterion for Two Triangles to Be Similar",
+                    "url": "/lessons/l-math-m2-c-4.php"
+                },
+                {
+                    "id": "l-math-m2-c-5",
+                    "title": "Between-Figure and Within-Figure Ratios",
+                    "url": "/lessons/l-math-m2-c-5.php"
+                },
+                {
+                    "id": "l-math-m2-c-6",
+                    "title": "The Side-Angle-Side (SAS) and Side-Side-Side (SSS) Criteria for Two Triangles to Be Similar",
+                    "url": "/lessons/l-math-m2-c-6.php"
+                },
+                {
+                    "id": "l-math-m2-c-7",
+                    "title": "Similarity and the Angle Bisector Theorem",
+                    "url": "/lessons/l-math-m2-c-7.php"
+                },
+                {
+                    "id": "l-math-m2-c-8",
+                    "title": "Families of Parallel Lines and the Circumference of the Earth",
+                    "url": "/lessons/l-math-m2-c-8.php"
+                },
+                {
+                    "id": "l-math-m2-c-9",
+                    "title": "How Far Away Is the Moon?",
+                    "url": "/lessons/l-math-m2-c-9.php"
+                },
+                {
+                    "id": "l-math-m2-d-1",
+                    "title": "Special Relationships Within Right Triangles—Dividing into Two Similar Sub-Triangles",
+                    "url": "/lessons/l-math-m2-d-1.php"
+                },
+                {
+                    "id": "l-math-m2-d-2",
+                    "title": "Multiplying and Dividing Expressions with Radicals",
+                    "url": "/lessons/l-math-m2-d-2.php"
+                },
+                {
+                    "id": "l-math-m2-d-3",
+                    "title": "Adding and Subtracting Expressions with Radicals",
+                    "url": "/lessons/l-math-m2-d-3.php"
+                },
+                {
+                    "id": "l-math-m2-d-4",
+                    "title": "Prove the Pythagorean Theorem Using Similarity",
+                    "url": "/lessons/l-math-m2-d-4.php"
+                },
+                {
+                    "id": "l-math-m2-e-1",
+                    "title": "Incredibly Useful Ratios",
+                    "url": "/lessons/l-math-m2-e-1.php"
+                },
+                {
+                    "id": "l-math-m2-e-2",
+                    "title": "The Definition of Sine, Cosine, and Tangent",
+                    "url": "/lessons/l-math-m2-e-2.php"
+                },
+                {
+                    "id": "l-math-m2-e-3",
+                    "title": "Sine and Cosine of Complementary Angles and Special Angles",
+                    "url": "/lessons/l-math-m2-e-3.php"
+                },
+                {
+                    "id": "l-math-m2-e-4",
+                    "title": "Solving Problems Using Sine and Cosine",
+                    "url": "/lessons/l-math-m2-e-4.php"
+                },
+                {
+                    "id": "l-math-m2-e-5",
+                    "title": "Applying Tangents",
+                    "url": "/lessons/l-math-m2-e-5.php"
+                },
+                {
+                    "id": "l-math-m2-e-6",
+                    "title": "Trigonometry and the Pythagorean Theorem",
+                    "url": "/lessons/l-math-m2-e-6.php"
+                },
+                {
+                    "id": "l-math-m2-e-7",
+                    "title": "Using Trigonometry to Determine Area",
+                    "url": "/lessons/l-math-m2-e-7.php"
+                },
+                {
+                    "id": "l-math-m2-e-8",
+                    "title": "Using Trigonometry to Find Side Lengths of an Acute Triangle",
+                    "url": "/lessons/l-math-m2-e-8.php"
+                },
+                {
+                    "id": "l-math-m2-e-9",
+                    "title": "Applying the Laws of Sines and Cosines",
+                    "url": "/lessons/l-math-m2-e-9.php"
+                },
+                {
+                    "id": "l-math-m2-e-10",
+                    "title": "Unknown Angles",
+                    "url": "/lessons/l-math-m2-e-10.php"
+                },
+                {
+                    "id": "l-math-m3-a-1",
+                    "title": "What Is Area?",
+                    "url": "/lessons/l-math-m3-a-1.php"
+                },
+                {
+                    "id": "l-math-m3-a-2",
+                    "title": "Properties of Area",
+                    "url": "/lessons/l-math-m3-a-2.php"
+                },
+                {
+                    "id": "l-math-m3-a-3",
+                    "title": "The Scaling Principle for Area",
+                    "url": "/lessons/l-math-m3-a-3.php"
+                },
+                {
+                    "id": "l-math-m3-a-4",
+                    "title": "Proving the Area of a Disk",
+                    "url": "/lessons/l-math-m3-a-4.php"
+                },
+                {
+                    "id": "l-math-m3-b-1",
+                    "title": "Three-Dimensional Space",
+                    "url": "/lessons/l-math-m3-b-1.php"
+                },
+                {
+                    "id": "l-math-m3-b-2",
+                    "title": "General Prisms and Cylinders and Their Cross-Sections",
+                    "url": "/lessons/l-math-m3-b-2.php"
+                },
+                {
+                    "id": "l-math-m3-b-3",
+                    "title": "General Pyramids and Cones and TheirCross-Sections",
+                    "url": "/lessons/l-math-m3-b-3.php"
+                },
+                {
+                    "id": "l-math-m3-b-4",
+                    "title": "Definition and Properties of Volume",
+                    "url": "/lessons/l-math-m3-b-4.php"
+                },
+                {
+                    "id": "l-math-m3-b-5",
+                    "title": "Scaling Principle for Volumes",
+                    "url": "/lessons/l-math-m3-b-5.php"
+                },
+                {
+                    "id": "l-math-m3-b-6",
+                    "title": "The Volume of Prisms and Cylinders and Cavalieri's Principle",
+                    "url": "/lessons/l-math-m3-b-6.php"
+                },
+                {
+                    "id": "l-math-m3-b-7",
+                    "title": "The Volume Formula of a Pyramid and Cone",
+                    "url": "/lessons/l-math-m3-b-7.php"
+                },
+                {
+                    "id": "l-math-m3-b-8",
+                    "title": "The Volume Formula of a Sphere",
+                    "url": "/lessons/l-math-m3-b-8.php"
+                },
+                {
+                    "id": "l-math-m3-b-9",
+                    "title": "How Do 3D Printers Work?",
+                    "url": "/lessons/l-math-m3-b-9.php"
+                },
+                {
+                    "id": "l-math-m4-a-1",
+                    "title": "Searching a Region in the Plane",
+                    "url": "/lessons/l-math-m4-a-1.php"
+                },
+                {
+                    "id": "l-math-m4-a-2",
+                    "title": "Finding Systems of Inequalities That Describe Triangular and Rectangular Regions",
+                    "url": "/lessons/l-math-m4-a-2.php"
+                },
+                {
+                    "id": "l-math-m4-a-3",
+                    "title": "Lines That Pass Through Regions",
+                    "url": "/lessons/l-math-m4-a-3.php"
+                },
+                {
+                    "id": "l-math-m4-a-4",
+                    "title": "Designing a Search Robot to Find a Beacon",
+                    "url": "/lessons/l-math-m4-a-4.php"
+                },
+                {
+                    "id": "l-math-m4-b-1",
+                    "title": "Criterion for Perpendicularity",
+                    "url": "/lessons/l-math-m4-b-1.php"
+                },
+                {
+                    "id": "l-math-m4-b-2",
+                    "title": "Segments That Meet at Right Angles",
+                    "url": "/lessons/l-math-m4-b-2.php"
+                },
+                {
+                    "id": "l-math-m4-b-3",
+                    "title": "Equations for Lines Using Normal Segments",
+                    "url": "/lessons/l-math-m4-b-3.php"
+                },
+                {
+                    "id": "l-math-m4-b-4",
+                    "title": "Parallel and Perpendicular Lines",
+                    "url": "/lessons/l-math-m4-b-4.php"
+                },
+                {
+                    "id": "l-math-m4-c-1",
+                    "title": "Perimeter and Area of Triangles in the Cartesian Plane",
+                    "url": "/lessons/l-math-m4-c-1.php"
+                },
+                {
+                    "id": "l-math-m4-c-2",
+                    "title": "Perimeter and Area of Polygonal Regions in the Cartesian Plane",
+                    "url": "/lessons/l-math-m4-c-2.php"
+                },
+                {
+                    "id": "l-math-m4-c-3",
+                    "title": "Perimeters and Areas of Polygonal Regions Defined by Systems of Inequalities",
+                    "url": "/lessons/l-math-m4-c-3.php"
+                },
+                {
+                    "id": "l-math-m4-d-1",
+                    "title": "Dividing Segments Proportionately",
+                    "url": "/lessons/l-math-m4-d-1.php"
+                },
+                {
+                    "id": "l-math-m4-d-2",
+                    "title": "Analytic Proofs of Theorems Previously Proved by Synthetic Means",
+                    "url": "/lessons/l-math-m4-d-2.php"
+                },
+                {
+                    "id": "l-math-m4-d-3",
+                    "title": "Motion Along a Line—Search Robots Again",
+                    "url": "/lessons/l-math-m4-d-3.php"
+                },
+                {
+                    "id": "l-math-m4-d-4",
+                    "title": "The Distance from a Point to a Line",
+                    "url": "/lessons/l-math-m4-d-4.php"
+                },
+                {
+                    "id": "l-math-m5-a-1",
+                    "title": "Thales' Theorem",
+                    "url": "/lessons/l-math-m5-a-1.php"
+                },
+                {
+                    "id": "l-math-m5-a-2",
+                    "title": "Circles, Chords, Diameters, and Their Relationships",
+                    "url": "/lessons/l-math-m5-a-2.php"
+                },
+                {
+                    "id": "l-math-m5-a-3",
+                    "title": "Rectangles Inscribed in Circles",
+                    "url": "/lessons/l-math-m5-a-3.php"
+                },
+                {
+                    "id": "l-math-m5-a-4",
+                    "title": "Experiments with Inscribed Angles",
+                    "url": "/lessons/l-math-m5-a-4.php"
+                },
+                {
+                    "id": "l-math-m5-a-5",
+                    "title": "Inscribed Angle Theorem and Its Applications",
+                    "url": "/lessons/l-math-m5-a-5.php"
+                },
+                {
+                    "id": "l-math-m5-a-6",
+                    "title": "Unknown Angle Problems with Inscribed Angles in Circles",
+                    "url": "/lessons/l-math-m5-a-6.php"
+                },
+                {
+                    "id": "l-math-m5-b-1",
+                    "title": "The Angle Measure of an Arc",
+                    "url": "/lessons/l-math-m5-b-1.php"
+                },
+                {
+                    "id": "l-math-m5-b-2",
+                    "title": "Arcs and Chords",
+                    "url": "/lessons/l-math-m5-b-2.php"
+                },
+                {
+                    "id": "l-math-m5-b-3",
+                    "title": "Arc Length and Areas of Sectors",
+                    "url": "/lessons/l-math-m5-b-3.php"
+                },
+                {
+                    "id": "l-math-m5-b-4",
+                    "title": "Unknown Length and Area Problems",
+                    "url": "/lessons/l-math-m5-b-4.php"
+                },
+                {
+                    "id": "l-math-m5-c-1",
+                    "title": "Properties of Tangents",
+                    "url": "/lessons/l-math-m5-c-1.php"
+                },
+                {
+                    "id": "l-math-m5-c-2",
+                    "title": "Tangent Segments",
+                    "url": "/lessons/l-math-m5-c-2.php"
+                },
+                {
+                    "id": "l-math-m5-c-3",
+                    "title": "The Inscribed Angle Alternate—A Tangent Angle",
+                    "url": "/lessons/l-math-m5-c-3.php"
+                },
+                {
+                    "id": "l-math-m5-c-4",
+                    "title": "Secant Lines; Secant Lines That Meet Inside a Circle",
+                    "url": "/lessons/l-math-m5-c-4.php"
+                },
+                {
+                    "id": "l-math-m5-c-5",
+                    "title": "Secant Angle Theorem, Exterior Case",
+                    "url": "/lessons/l-math-m5-c-5.php"
+                },
+                {
+                    "id": "l-math-m5-c-6",
+                    "title": "Similar Triangles in Circle-Secant (or Circle-Secant-Tangent) Diagrams",
+                    "url": "/lessons/l-math-m5-c-6.php"
+                },
+                {
+                    "id": "l-math-m5-d-1",
+                    "title": "Writing the Equation for a Circle",
+                    "url": "/lessons/l-math-m5-d-1.php"
+                },
+                {
+                    "id": "l-math-m5-d-2",
+                    "title": "Recognizing Equations of Circles",
+                    "url": "/lessons/l-math-m5-d-2.php"
+                },
+                {
+                    "id": "l-math-m5-d-3",
+                    "title": "Equations for Tangent Lines to Circles",
+                    "url": "/lessons/l-math-m5-d-3.php"
+                },
+                {
+                    "id": "l-math-m5-e-1",
+                    "title": "Cyclic Quadrilaterals",
+                    "url": "/lessons/l-math-m5-e-1.php"
+                },
+                {
+                    "id": "l-math-m5-e-2",
+                    "title": "Ptolemy's Theorem",
+                    "url": "/lessons/l-math-m5-e-2.php"
                 }
             ],
             "standards": [],
@@ -2868,6 +4080,612 @@
                     "id": "k-math-m1-c-6",
                     "title": "Solution Sets of Two or More Equations Joined by 'And' or 'Or'",
                     "url": "/levels/k.php?k-math-m1-c-6"
+                }
+            ],
+            "standards": [],
+            "whatItDoes": "",
+            "howToDoIt": [],
+            "exampleProblem": "",
+            "exampleSolution": "",
+            "etymology": ""
+        },
+        {
+            "id": "isometry",
+            "term": "Isometry",
+            "definition": "A distance-preserving transformation between metric spaces, ensuring figures remain unchanged in size and shape.",
+            "example": "",
+            "category": "Algebraic Foundations & Modeling",
+            "modules": [
+                "High School Mathematics"
+            ],
+            "grades": [
+                "Grade 9"
+            ],
+            "lessons": [
+                {
+                    "id": "l-math-m1-a-1",
+                    "title": "Construct an Equilateral Triangle",
+                    "url": "/lessons/l-math-m1-a-1.php"
+                },
+                {
+                    "id": "l-math-m1-a-2",
+                    "title": "Construct an Equilateral Triangle",
+                    "url": "/lessons/l-math-m1-a-2.php"
+                },
+                {
+                    "id": "l-math-m1-a-3",
+                    "title": "Copy and Bisect an Angle",
+                    "url": "/lessons/l-math-m1-a-3.php"
+                },
+                {
+                    "id": "l-math-m1-a-4",
+                    "title": "Construct a Perpendicular Bisector",
+                    "url": "/lessons/l-math-m1-a-4.php"
+                },
+                {
+                    "id": "l-math-m1-a-5",
+                    "title": "Points of Concurrencies",
+                    "url": "/lessons/l-math-m1-a-5.php"
+                },
+                {
+                    "id": "l-math-m1-b-1",
+                    "title": "Solve for Unknown Angles—Angles and Lines at a Point",
+                    "url": "/lessons/l-math-m1-b-1.php"
+                },
+                {
+                    "id": "l-math-m1-b-2",
+                    "title": "Solve for Unknown Angles—Transversals",
+                    "url": "/lessons/l-math-m1-b-2.php"
+                },
+                {
+                    "id": "l-math-m1-b-3",
+                    "title": "Solve for Unknown Angles—Angles in a Triangle",
+                    "url": "/lessons/l-math-m1-b-3.php"
+                },
+                {
+                    "id": "l-math-m1-b-4",
+                    "title": "Unknown Angle Proofs—Writing Proofs",
+                    "url": "/lessons/l-math-m1-b-4.php"
+                },
+                {
+                    "id": "l-math-m1-b-5",
+                    "title": "Unknown Angle Proofs—Proofs with Constructions",
+                    "url": "/lessons/l-math-m1-b-5.php"
+                },
+                {
+                    "id": "l-math-m1-b-6",
+                    "title": "Unknown Angle Proofs—Proofs of Known Facts",
+                    "url": "/lessons/l-math-m1-b-6.php"
+                },
+                {
+                    "id": "l-math-m1-c-1",
+                    "title": "Transformations—The Next Level",
+                    "url": "/lessons/l-math-m1-c-1.php"
+                },
+                {
+                    "id": "l-math-m1-c-2",
+                    "title": "Rotations",
+                    "url": "/lessons/l-math-m1-c-2.php"
+                },
+                {
+                    "id": "l-math-m1-c-3",
+                    "title": "Reflections",
+                    "url": "/lessons/l-math-m1-c-3.php"
+                },
+                {
+                    "id": "l-math-m1-c-4",
+                    "title": "Rotations, Reflections, and Symmetry",
+                    "url": "/lessons/l-math-m1-c-4.php"
+                },
+                {
+                    "id": "l-math-m1-c-5",
+                    "title": "Translations",
+                    "url": "/lessons/l-math-m1-c-5.php"
+                },
+                {
+                    "id": "l-math-m1-c-6",
+                    "title": "Characterize Points on a Perpendicular Bisector",
+                    "url": "/lessons/l-math-m1-c-6.php"
+                },
+                {
+                    "id": "l-math-m1-c-7",
+                    "title": "Looking More Carefully at Parallel Lines",
+                    "url": "/lessons/l-math-m1-c-7.php"
+                },
+                {
+                    "id": "l-math-m1-c-8",
+                    "title": "Construct and Apply a Sequence of Rigid Motions",
+                    "url": "/lessons/l-math-m1-c-8.php"
+                },
+                {
+                    "id": "l-math-m1-c-9",
+                    "title": "Applications of Congruence in Terms of Rigid Motions",
+                    "url": "/lessons/l-math-m1-c-9.php"
+                },
+                {
+                    "id": "l-math-m1-c-10",
+                    "title": "Correspondence and Transformations",
+                    "url": "/lessons/l-math-m1-c-10.php"
+                },
+                {
+                    "id": "l-math-m1-d-1",
+                    "title": "Congruence Criteria for Triangles—SAS",
+                    "url": "/lessons/l-math-m1-d-1.php"
+                },
+                {
+                    "id": "l-math-m1-d-2",
+                    "title": "Base Angles of Isosceles Triangles",
+                    "url": "/lessons/l-math-m1-d-2.php"
+                },
+                {
+                    "id": "l-math-m1-d-3",
+                    "title": "Congruence Criteria for Triangles—ASA and SSS",
+                    "url": "/lessons/l-math-m1-d-3.php"
+                },
+                {
+                    "id": "l-math-m1-d-4",
+                    "title": "Congruence Criteria for Triangles—AAS and HL",
+                    "url": "/lessons/l-math-m1-d-4.php"
+                },
+                {
+                    "id": "l-math-m1-d-5",
+                    "title": "Triangle Congruency Proofs",
+                    "url": "/lessons/l-math-m1-d-5.php"
+                },
+                {
+                    "id": "l-math-m1-d-6",
+                    "title": "Triangle Congruency Proofs",
+                    "url": "/lessons/l-math-m1-d-6.php"
+                },
+                {
+                    "id": "l-math-m1-e-1",
+                    "title": "Properties of Parallelograms",
+                    "url": "/lessons/l-math-m1-e-1.php"
+                },
+                {
+                    "id": "l-math-m1-e-2",
+                    "title": "Special Lines in Triangles",
+                    "url": "/lessons/l-math-m1-e-2.php"
+                },
+                {
+                    "id": "l-math-m1-e-3",
+                    "title": "Special Lines in Triangles",
+                    "url": "/lessons/l-math-m1-e-3.php"
+                },
+                {
+                    "id": "l-math-m1-f-1",
+                    "title": "Construct a Square and a Nine-Point Circle",
+                    "url": "/lessons/l-math-m1-f-1.php"
+                },
+                {
+                    "id": "l-math-m1-f-2",
+                    "title": "Construct a Nine-Point Circle",
+                    "url": "/lessons/l-math-m1-f-2.php"
+                },
+                {
+                    "id": "l-math-m1-g-1",
+                    "title": "Review of the Assumptions",
+                    "url": "/lessons/l-math-m1-g-1.php"
+                },
+                {
+                    "id": "l-math-m1-g-2",
+                    "title": "Review of the Assumptions",
+                    "url": "/lessons/l-math-m1-g-2.php"
+                },
+                {
+                    "id": "l-math-m2-a-1",
+                    "title": "Scale Drawings",
+                    "url": "/lessons/l-math-m2-a-1.php"
+                },
+                {
+                    "id": "l-math-m2-a-2",
+                    "title": "Making Scale Drawings Using the Ratio Method",
+                    "url": "/lessons/l-math-m2-a-2.php"
+                },
+                {
+                    "id": "l-math-m2-a-3",
+                    "title": "Making Scale Drawings Using the Parallel Method",
+                    "url": "/lessons/l-math-m2-a-3.php"
+                },
+                {
+                    "id": "l-math-m2-a-4",
+                    "title": "Comparing the Ratio Method with the Parallel Method",
+                    "url": "/lessons/l-math-m2-a-4.php"
+                },
+                {
+                    "id": "l-math-m2-a-5",
+                    "title": "Scale Factors",
+                    "url": "/lessons/l-math-m2-a-5.php"
+                },
+                {
+                    "id": "l-math-m2-b-1",
+                    "title": "Dilations as Transformations of the Plane",
+                    "url": "/lessons/l-math-m2-b-1.php"
+                },
+                {
+                    "id": "l-math-m2-b-2",
+                    "title": "How Do Dilations Map Segments?",
+                    "url": "/lessons/l-math-m2-b-2.php"
+                },
+                {
+                    "id": "l-math-m2-b-3",
+                    "title": "How Do Dilations Map Lines, Rays, and Circles?",
+                    "url": "/lessons/l-math-m2-b-3.php"
+                },
+                {
+                    "id": "l-math-m2-b-4",
+                    "title": "How Do Dilations Map Angles?",
+                    "url": "/lessons/l-math-m2-b-4.php"
+                },
+                {
+                    "id": "l-math-m2-b-5",
+                    "title": "Dividing the King's Foot into 12 Equal Pieces",
+                    "url": "/lessons/l-math-m2-b-5.php"
+                },
+                {
+                    "id": "l-math-m2-b-6",
+                    "title": "Dilations from Different Centers",
+                    "url": "/lessons/l-math-m2-b-6.php"
+                },
+                {
+                    "id": "l-math-m2-c-1",
+                    "title": "What Are Similarity Transformations, and Why Do We Need Them?",
+                    "url": "/lessons/l-math-m2-c-1.php"
+                },
+                {
+                    "id": "l-math-m2-c-2",
+                    "title": "Properties of Similarity Transformations",
+                    "url": "/lessons/l-math-m2-c-2.php"
+                },
+                {
+                    "id": "l-math-m2-c-3",
+                    "title": "Similarity",
+                    "url": "/lessons/l-math-m2-c-3.php"
+                },
+                {
+                    "id": "l-math-m2-c-4",
+                    "title": "The Angle-Angle (AA) Criterion for Two Triangles to Be Similar",
+                    "url": "/lessons/l-math-m2-c-4.php"
+                },
+                {
+                    "id": "l-math-m2-c-5",
+                    "title": "Between-Figure and Within-Figure Ratios",
+                    "url": "/lessons/l-math-m2-c-5.php"
+                },
+                {
+                    "id": "l-math-m2-c-6",
+                    "title": "The Side-Angle-Side (SAS) and Side-Side-Side (SSS) Criteria for Two Triangles to Be Similar",
+                    "url": "/lessons/l-math-m2-c-6.php"
+                },
+                {
+                    "id": "l-math-m2-c-7",
+                    "title": "Similarity and the Angle Bisector Theorem",
+                    "url": "/lessons/l-math-m2-c-7.php"
+                },
+                {
+                    "id": "l-math-m2-c-8",
+                    "title": "Families of Parallel Lines and the Circumference of the Earth",
+                    "url": "/lessons/l-math-m2-c-8.php"
+                },
+                {
+                    "id": "l-math-m2-c-9",
+                    "title": "How Far Away Is the Moon?",
+                    "url": "/lessons/l-math-m2-c-9.php"
+                },
+                {
+                    "id": "l-math-m2-d-1",
+                    "title": "Special Relationships Within Right Triangles—Dividing into Two Similar Sub-Triangles",
+                    "url": "/lessons/l-math-m2-d-1.php"
+                },
+                {
+                    "id": "l-math-m2-d-2",
+                    "title": "Multiplying and Dividing Expressions with Radicals",
+                    "url": "/lessons/l-math-m2-d-2.php"
+                },
+                {
+                    "id": "l-math-m2-d-3",
+                    "title": "Adding and Subtracting Expressions with Radicals",
+                    "url": "/lessons/l-math-m2-d-3.php"
+                },
+                {
+                    "id": "l-math-m2-d-4",
+                    "title": "Prove the Pythagorean Theorem Using Similarity",
+                    "url": "/lessons/l-math-m2-d-4.php"
+                },
+                {
+                    "id": "l-math-m2-e-1",
+                    "title": "Incredibly Useful Ratios",
+                    "url": "/lessons/l-math-m2-e-1.php"
+                },
+                {
+                    "id": "l-math-m2-e-2",
+                    "title": "The Definition of Sine, Cosine, and Tangent",
+                    "url": "/lessons/l-math-m2-e-2.php"
+                },
+                {
+                    "id": "l-math-m2-e-3",
+                    "title": "Sine and Cosine of Complementary Angles and Special Angles",
+                    "url": "/lessons/l-math-m2-e-3.php"
+                },
+                {
+                    "id": "l-math-m2-e-4",
+                    "title": "Solving Problems Using Sine and Cosine",
+                    "url": "/lessons/l-math-m2-e-4.php"
+                },
+                {
+                    "id": "l-math-m2-e-5",
+                    "title": "Applying Tangents",
+                    "url": "/lessons/l-math-m2-e-5.php"
+                },
+                {
+                    "id": "l-math-m2-e-6",
+                    "title": "Trigonometry and the Pythagorean Theorem",
+                    "url": "/lessons/l-math-m2-e-6.php"
+                },
+                {
+                    "id": "l-math-m2-e-7",
+                    "title": "Using Trigonometry to Determine Area",
+                    "url": "/lessons/l-math-m2-e-7.php"
+                },
+                {
+                    "id": "l-math-m2-e-8",
+                    "title": "Using Trigonometry to Find Side Lengths of an Acute Triangle",
+                    "url": "/lessons/l-math-m2-e-8.php"
+                },
+                {
+                    "id": "l-math-m2-e-9",
+                    "title": "Applying the Laws of Sines and Cosines",
+                    "url": "/lessons/l-math-m2-e-9.php"
+                },
+                {
+                    "id": "l-math-m2-e-10",
+                    "title": "Unknown Angles",
+                    "url": "/lessons/l-math-m2-e-10.php"
+                },
+                {
+                    "id": "l-math-m3-a-1",
+                    "title": "What Is Area?",
+                    "url": "/lessons/l-math-m3-a-1.php"
+                },
+                {
+                    "id": "l-math-m3-a-2",
+                    "title": "Properties of Area",
+                    "url": "/lessons/l-math-m3-a-2.php"
+                },
+                {
+                    "id": "l-math-m3-a-3",
+                    "title": "The Scaling Principle for Area",
+                    "url": "/lessons/l-math-m3-a-3.php"
+                },
+                {
+                    "id": "l-math-m3-a-4",
+                    "title": "Proving the Area of a Disk",
+                    "url": "/lessons/l-math-m3-a-4.php"
+                },
+                {
+                    "id": "l-math-m3-b-1",
+                    "title": "Three-Dimensional Space",
+                    "url": "/lessons/l-math-m3-b-1.php"
+                },
+                {
+                    "id": "l-math-m3-b-2",
+                    "title": "General Prisms and Cylinders and Their Cross-Sections",
+                    "url": "/lessons/l-math-m3-b-2.php"
+                },
+                {
+                    "id": "l-math-m3-b-3",
+                    "title": "General Pyramids and Cones and TheirCross-Sections",
+                    "url": "/lessons/l-math-m3-b-3.php"
+                },
+                {
+                    "id": "l-math-m3-b-4",
+                    "title": "Definition and Properties of Volume",
+                    "url": "/lessons/l-math-m3-b-4.php"
+                },
+                {
+                    "id": "l-math-m3-b-5",
+                    "title": "Scaling Principle for Volumes",
+                    "url": "/lessons/l-math-m3-b-5.php"
+                },
+                {
+                    "id": "l-math-m3-b-6",
+                    "title": "The Volume of Prisms and Cylinders and Cavalieri's Principle",
+                    "url": "/lessons/l-math-m3-b-6.php"
+                },
+                {
+                    "id": "l-math-m3-b-7",
+                    "title": "The Volume Formula of a Pyramid and Cone",
+                    "url": "/lessons/l-math-m3-b-7.php"
+                },
+                {
+                    "id": "l-math-m3-b-8",
+                    "title": "The Volume Formula of a Sphere",
+                    "url": "/lessons/l-math-m3-b-8.php"
+                },
+                {
+                    "id": "l-math-m3-b-9",
+                    "title": "How Do 3D Printers Work?",
+                    "url": "/lessons/l-math-m3-b-9.php"
+                },
+                {
+                    "id": "l-math-m4-a-1",
+                    "title": "Searching a Region in the Plane",
+                    "url": "/lessons/l-math-m4-a-1.php"
+                },
+                {
+                    "id": "l-math-m4-a-2",
+                    "title": "Finding Systems of Inequalities That Describe Triangular and Rectangular Regions",
+                    "url": "/lessons/l-math-m4-a-2.php"
+                },
+                {
+                    "id": "l-math-m4-a-3",
+                    "title": "Lines That Pass Through Regions",
+                    "url": "/lessons/l-math-m4-a-3.php"
+                },
+                {
+                    "id": "l-math-m4-a-4",
+                    "title": "Designing a Search Robot to Find a Beacon",
+                    "url": "/lessons/l-math-m4-a-4.php"
+                },
+                {
+                    "id": "l-math-m4-b-1",
+                    "title": "Criterion for Perpendicularity",
+                    "url": "/lessons/l-math-m4-b-1.php"
+                },
+                {
+                    "id": "l-math-m4-b-2",
+                    "title": "Segments That Meet at Right Angles",
+                    "url": "/lessons/l-math-m4-b-2.php"
+                },
+                {
+                    "id": "l-math-m4-b-3",
+                    "title": "Equations for Lines Using Normal Segments",
+                    "url": "/lessons/l-math-m4-b-3.php"
+                },
+                {
+                    "id": "l-math-m4-b-4",
+                    "title": "Parallel and Perpendicular Lines",
+                    "url": "/lessons/l-math-m4-b-4.php"
+                },
+                {
+                    "id": "l-math-m4-c-1",
+                    "title": "Perimeter and Area of Triangles in the Cartesian Plane",
+                    "url": "/lessons/l-math-m4-c-1.php"
+                },
+                {
+                    "id": "l-math-m4-c-2",
+                    "title": "Perimeter and Area of Polygonal Regions in the Cartesian Plane",
+                    "url": "/lessons/l-math-m4-c-2.php"
+                },
+                {
+                    "id": "l-math-m4-c-3",
+                    "title": "Perimeters and Areas of Polygonal Regions Defined by Systems of Inequalities",
+                    "url": "/lessons/l-math-m4-c-3.php"
+                },
+                {
+                    "id": "l-math-m4-d-1",
+                    "title": "Dividing Segments Proportionately",
+                    "url": "/lessons/l-math-m4-d-1.php"
+                },
+                {
+                    "id": "l-math-m4-d-2",
+                    "title": "Analytic Proofs of Theorems Previously Proved by Synthetic Means",
+                    "url": "/lessons/l-math-m4-d-2.php"
+                },
+                {
+                    "id": "l-math-m4-d-3",
+                    "title": "Motion Along a Line—Search Robots Again",
+                    "url": "/lessons/l-math-m4-d-3.php"
+                },
+                {
+                    "id": "l-math-m4-d-4",
+                    "title": "The Distance from a Point to a Line",
+                    "url": "/lessons/l-math-m4-d-4.php"
+                },
+                {
+                    "id": "l-math-m5-a-1",
+                    "title": "Thales' Theorem",
+                    "url": "/lessons/l-math-m5-a-1.php"
+                },
+                {
+                    "id": "l-math-m5-a-2",
+                    "title": "Circles, Chords, Diameters, and Their Relationships",
+                    "url": "/lessons/l-math-m5-a-2.php"
+                },
+                {
+                    "id": "l-math-m5-a-3",
+                    "title": "Rectangles Inscribed in Circles",
+                    "url": "/lessons/l-math-m5-a-3.php"
+                },
+                {
+                    "id": "l-math-m5-a-4",
+                    "title": "Experiments with Inscribed Angles",
+                    "url": "/lessons/l-math-m5-a-4.php"
+                },
+                {
+                    "id": "l-math-m5-a-5",
+                    "title": "Inscribed Angle Theorem and Its Applications",
+                    "url": "/lessons/l-math-m5-a-5.php"
+                },
+                {
+                    "id": "l-math-m5-a-6",
+                    "title": "Unknown Angle Problems with Inscribed Angles in Circles",
+                    "url": "/lessons/l-math-m5-a-6.php"
+                },
+                {
+                    "id": "l-math-m5-b-1",
+                    "title": "The Angle Measure of an Arc",
+                    "url": "/lessons/l-math-m5-b-1.php"
+                },
+                {
+                    "id": "l-math-m5-b-2",
+                    "title": "Arcs and Chords",
+                    "url": "/lessons/l-math-m5-b-2.php"
+                },
+                {
+                    "id": "l-math-m5-b-3",
+                    "title": "Arc Length and Areas of Sectors",
+                    "url": "/lessons/l-math-m5-b-3.php"
+                },
+                {
+                    "id": "l-math-m5-b-4",
+                    "title": "Unknown Length and Area Problems",
+                    "url": "/lessons/l-math-m5-b-4.php"
+                },
+                {
+                    "id": "l-math-m5-c-1",
+                    "title": "Properties of Tangents",
+                    "url": "/lessons/l-math-m5-c-1.php"
+                },
+                {
+                    "id": "l-math-m5-c-2",
+                    "title": "Tangent Segments",
+                    "url": "/lessons/l-math-m5-c-2.php"
+                },
+                {
+                    "id": "l-math-m5-c-3",
+                    "title": "The Inscribed Angle Alternate—A Tangent Angle",
+                    "url": "/lessons/l-math-m5-c-3.php"
+                },
+                {
+                    "id": "l-math-m5-c-4",
+                    "title": "Secant Lines; Secant Lines That Meet Inside a Circle",
+                    "url": "/lessons/l-math-m5-c-4.php"
+                },
+                {
+                    "id": "l-math-m5-c-5",
+                    "title": "Secant Angle Theorem, Exterior Case",
+                    "url": "/lessons/l-math-m5-c-5.php"
+                },
+                {
+                    "id": "l-math-m5-c-6",
+                    "title": "Similar Triangles in Circle-Secant (or Circle-Secant-Tangent) Diagrams",
+                    "url": "/lessons/l-math-m5-c-6.php"
+                },
+                {
+                    "id": "l-math-m5-d-1",
+                    "title": "Writing the Equation for a Circle",
+                    "url": "/lessons/l-math-m5-d-1.php"
+                },
+                {
+                    "id": "l-math-m5-d-2",
+                    "title": "Recognizing Equations of Circles",
+                    "url": "/lessons/l-math-m5-d-2.php"
+                },
+                {
+                    "id": "l-math-m5-d-3",
+                    "title": "Equations for Tangent Lines to Circles",
+                    "url": "/lessons/l-math-m5-d-3.php"
+                },
+                {
+                    "id": "l-math-m5-e-1",
+                    "title": "Cyclic Quadrilaterals",
+                    "url": "/lessons/l-math-m5-e-1.php"
+                },
+                {
+                    "id": "l-math-m5-e-2",
+                    "title": "Ptolemy's Theorem",
+                    "url": "/lessons/l-math-m5-e-2.php"
                 }
             ],
             "standards": [],

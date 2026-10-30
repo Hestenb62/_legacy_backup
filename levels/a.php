@@ -3,9 +3,9 @@
  * Hesten's Learning - Level A (Pre-K)
  */
 
-$pageTitle       = "Pre-K Level A | Hesten's Learning";
+$pageTitle = "Pre-K Level A | Hesten's Learning";
 $pageDescription = "Foundational skills in counting, letter recognition, and shapes.";
-$pageKeywords    = "Pre-K, early learning, counting, shapes, letters";
+$pageKeywords = "Pre-K, early learning, counting, shapes, letters";
 
 $themeColor = 'teal';
 $levelId = 'a';

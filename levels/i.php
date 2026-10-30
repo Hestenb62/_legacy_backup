@@ -3,14 +3,14 @@
  * Hesten's Learning - Level I (Grade 7)
  */
 
-$pageTitle       = "Grade 7 Level I | Hesten's Learning";
-$pageDescription = "Proportions, geometry, and life sciences for 7th-grade students.";
-$pageKeywords    = "Grade 7, proportional relationships, surface area and volume, cellular structure";
+$pageTitle       = "7th Grade Level I | Hesten's Learning";
+$pageDescription = "Proportions, integers, linear expressions, and geometry applications for 7th-grade students.";
+$pageKeywords    = "Grade 7, 7th Grade, proportional relationships, surface area and volume, cellular structure";
 
 $themeColor = 'purple';
 $levelId = 'i';
 $levelTitle = 'Level I';
-$gradeText = 'Middle School';
+$gradeText = '7th Grade';
 $initialSubject = 'math';
 $initialSubjectName = 'Math';
 $initialSubjectDesc = 'Proportional relationships, integers, and geometry applications for 7th graders.';

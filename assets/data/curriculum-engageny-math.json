@@ -1237,6 +1237,1357 @@
                     ]
                 }
             ]
+        },
+        "10th Grade": {
+            "course": "Geometry",
+            "title": "Geometry (EngageNY / CCSS Aligned)",
+            "level": "L",
+            "overview": "Geometry explores congruence, proof, and constructions; similarity and trigonometry; three-dimensional measurement; coordinate algebra; and circle geometry.",
+            "modules": [
+                {
+                    "moduleNumber": 1,
+                    "title": "Module 1: Congruence, Proof, and Constructions",
+                    "description": "Establish geometric definitions, compass-and-straightedge constructions, rigid motions, and rigorous proofs of triangle congruence.",
+                    "topics": [
+                        {
+                            "letter": "A",
+                            "title": "Basic Constructions",
+                            "lessons": [
+                                {
+                                    "id": "l-math-m1-a-1",
+                                    "code": "L.M1.A.1",
+                                    "lessonNumber": 1,
+                                    "title": "Construct an Equilateral Triangle",
+                                    "standards": [
+                                        "HSG.CO.A.1"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m1-a-1"
+                                },
+                                {
+                                    "id": "l-math-m1-a-2",
+                                    "code": "L.M1.A.2",
+                                    "lessonNumber": 2,
+                                    "title": "Construct an Equilateral Triangle",
+                                    "standards": [
+                                        "HSG.CO.A.1"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m1-a-2"
+                                },
+                                {
+                                    "id": "l-math-m1-a-3",
+                                    "code": "L.M1.A.3",
+                                    "lessonNumber": 3,
+                                    "title": "Copy and Bisect an Angle",
+                                    "standards": [
+                                        "HSG.CO.A.1"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m1-a-3"
+                                },
+                                {
+                                    "id": "l-math-m1-a-4",
+                                    "code": "L.M1.A.4",
+                                    "lessonNumber": 4,
+                                    "title": "Construct a Perpendicular Bisector",
+                                    "standards": [
+                                        "HSG.CO.A.1"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m1-a-4"
+                                },
+                                {
+                                    "id": "l-math-m1-a-5",
+                                    "code": "L.M1.A.5",
+                                    "lessonNumber": 5,
+                                    "title": "Points of Concurrencies",
+                                    "standards": [
+                                        "HSG.CO.A.1"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m1-a-5"
+                                }
+                            ]
+                        },
+                        {
+                            "letter": "B",
+                            "title": "Unknown Angles",
+                            "lessons": [
+                                {
+                                    "id": "l-math-m1-b-1",
+                                    "code": "L.M1.B.1",
+                                    "lessonNumber": 1,
+                                    "title": "Solve for Unknown Angles—Angles and Lines at a Point",
+                                    "standards": [
+                                        "HSG.CO.C.9"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m1-b-1"
+                                },
+                                {
+                                    "id": "l-math-m1-b-2",
+                                    "code": "L.M1.B.2",
+                                    "lessonNumber": 2,
+                                    "title": "Solve for Unknown Angles—Transversals",
+                                    "standards": [
+                                        "HSG.CO.C.9"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m1-b-2"
+                                },
+                                {
+                                    "id": "l-math-m1-b-3",
+                                    "code": "L.M1.B.3",
+                                    "lessonNumber": 3,
+                                    "title": "Solve for Unknown Angles—Angles in a Triangle",
+                                    "standards": [
+                                        "HSG.CO.C.9"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m1-b-3"
+                                },
+                                {
+                                    "id": "l-math-m1-b-4",
+                                    "code": "L.M1.B.4",
+                                    "lessonNumber": 4,
+                                    "title": "Unknown Angle Proofs—Writing Proofs",
+                                    "standards": [
+                                        "HSG.CO.C.9"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m1-b-4"
+                                },
+                                {
+                                    "id": "l-math-m1-b-5",
+                                    "code": "L.M1.B.5",
+                                    "lessonNumber": 5,
+                                    "title": "Unknown Angle Proofs—Proofs with Constructions",
+                                    "standards": [
+                                        "HSG.CO.C.9"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m1-b-5"
+                                },
+                                {
+                                    "id": "l-math-m1-b-6",
+                                    "code": "L.M1.B.6",
+                                    "lessonNumber": 6,
+                                    "title": "Unknown Angle Proofs—Proofs of Known Facts",
+                                    "standards": [
+                                        "HSG.CO.C.9"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m1-b-6"
+                                }
+                            ]
+                        },
+                        {
+                            "letter": "C",
+                            "title": "Transformations/Rigid Motions",
+                            "lessons": [
+                                {
+                                    "id": "l-math-m1-c-1",
+                                    "code": "L.M1.C.1",
+                                    "lessonNumber": 1,
+                                    "title": "Transformations—The Next Level",
+                                    "standards": [
+                                        "HSG.CO.A.2"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m1-c-1"
+                                },
+                                {
+                                    "id": "l-math-m1-c-2",
+                                    "code": "L.M1.C.2",
+                                    "lessonNumber": 2,
+                                    "title": "Rotations",
+                                    "standards": [
+                                        "HSG.CO.A.2"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m1-c-2"
+                                },
+                                {
+                                    "id": "l-math-m1-c-3",
+                                    "code": "L.M1.C.3",
+                                    "lessonNumber": 3,
+                                    "title": "Reflections",
+                                    "standards": [
+                                        "HSG.CO.A.2"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m1-c-3"
+                                },
+                                {
+                                    "id": "l-math-m1-c-4",
+                                    "code": "L.M1.C.4",
+                                    "lessonNumber": 4,
+                                    "title": "Rotations, Reflections, and Symmetry",
+                                    "standards": [
+                                        "HSG.CO.A.2"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m1-c-4"
+                                },
+                                {
+                                    "id": "l-math-m1-c-5",
+                                    "code": "L.M1.C.5",
+                                    "lessonNumber": 5,
+                                    "title": "Translations",
+                                    "standards": [
+                                        "HSG.CO.A.2"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m1-c-5"
+                                },
+                                {
+                                    "id": "l-math-m1-c-6",
+                                    "code": "L.M1.C.6",
+                                    "lessonNumber": 6,
+                                    "title": "Characterize Points on a Perpendicular Bisector",
+                                    "standards": [
+                                        "HSG.CO.A.2"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m1-c-6"
+                                },
+                                {
+                                    "id": "l-math-m1-c-7",
+                                    "code": "L.M1.C.7",
+                                    "lessonNumber": 7,
+                                    "title": "Looking More Carefully at Parallel Lines",
+                                    "standards": [
+                                        "HSG.CO.A.2"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m1-c-7"
+                                },
+                                {
+                                    "id": "l-math-m1-c-8",
+                                    "code": "L.M1.C.8",
+                                    "lessonNumber": 8,
+                                    "title": "Construct and Apply a Sequence of Rigid Motions",
+                                    "standards": [
+                                        "HSG.CO.A.2"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m1-c-8"
+                                },
+                                {
+                                    "id": "l-math-m1-c-9",
+                                    "code": "L.M1.C.9",
+                                    "lessonNumber": 9,
+                                    "title": "Applications of Congruence in Terms of Rigid Motions",
+                                    "standards": [
+                                        "HSG.CO.A.2"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m1-c-9"
+                                },
+                                {
+                                    "id": "l-math-m1-c-10",
+                                    "code": "L.M1.C.10",
+                                    "lessonNumber": 10,
+                                    "title": "Correspondence and Transformations",
+                                    "standards": [
+                                        "HSG.CO.A.2"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m1-c-10"
+                                }
+                            ]
+                        },
+                        {
+                            "letter": "D",
+                            "title": "Congruence",
+                            "lessons": [
+                                {
+                                    "id": "l-math-m1-d-1",
+                                    "code": "L.M1.D.1",
+                                    "lessonNumber": 1,
+                                    "title": "Congruence Criteria for Triangles—SAS",
+                                    "standards": [
+                                        "HSG.CO.B.7"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m1-d-1"
+                                },
+                                {
+                                    "id": "l-math-m1-d-2",
+                                    "code": "L.M1.D.2",
+                                    "lessonNumber": 2,
+                                    "title": "Base Angles of Isosceles Triangles",
+                                    "standards": [
+                                        "HSG.CO.B.7"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m1-d-2"
+                                },
+                                {
+                                    "id": "l-math-m1-d-3",
+                                    "code": "L.M1.D.3",
+                                    "lessonNumber": 3,
+                                    "title": "Congruence Criteria for Triangles—ASA and SSS",
+                                    "standards": [
+                                        "HSG.CO.B.7"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m1-d-3"
+                                },
+                                {
+                                    "id": "l-math-m1-d-4",
+                                    "code": "L.M1.D.4",
+                                    "lessonNumber": 4,
+                                    "title": "Congruence Criteria for Triangles—AAS and HL",
+                                    "standards": [
+                                        "HSG.CO.B.7"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m1-d-4"
+                                },
+                                {
+                                    "id": "l-math-m1-d-5",
+                                    "code": "L.M1.D.5",
+                                    "lessonNumber": 5,
+                                    "title": "Triangle Congruency Proofs",
+                                    "standards": [
+                                        "HSG.CO.B.7"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m1-d-5"
+                                },
+                                {
+                                    "id": "l-math-m1-d-6",
+                                    "code": "L.M1.D.6",
+                                    "lessonNumber": 6,
+                                    "title": "Triangle Congruency Proofs",
+                                    "standards": [
+                                        "HSG.CO.B.7"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m1-d-6"
+                                }
+                            ]
+                        },
+                        {
+                            "letter": "E",
+                            "title": "Proving Properties of Geometric Figures",
+                            "lessons": [
+                                {
+                                    "id": "l-math-m1-e-1",
+                                    "code": "L.M1.E.1",
+                                    "lessonNumber": 1,
+                                    "title": "Properties of Parallelograms",
+                                    "standards": [
+                                        "HSG.CO.C.9"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m1-e-1"
+                                },
+                                {
+                                    "id": "l-math-m1-e-2",
+                                    "code": "L.M1.E.2",
+                                    "lessonNumber": 2,
+                                    "title": "Special Lines in Triangles",
+                                    "standards": [
+                                        "HSG.CO.C.9"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m1-e-2"
+                                },
+                                {
+                                    "id": "l-math-m1-e-3",
+                                    "code": "L.M1.E.3",
+                                    "lessonNumber": 3,
+                                    "title": "Special Lines in Triangles",
+                                    "standards": [
+                                        "HSG.CO.C.9"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m1-e-3"
+                                }
+                            ]
+                        },
+                        {
+                            "letter": "F",
+                            "title": "Advanced Constructions",
+                            "lessons": [
+                                {
+                                    "id": "l-math-m1-f-1",
+                                    "code": "L.M1.F.1",
+                                    "lessonNumber": 1,
+                                    "title": "Construct a Square and a Nine-Point Circle",
+                                    "standards": [
+                                        "HSG.CO.D.13"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m1-f-1"
+                                },
+                                {
+                                    "id": "l-math-m1-f-2",
+                                    "code": "L.M1.F.2",
+                                    "lessonNumber": 2,
+                                    "title": "Construct a Nine-Point Circle",
+                                    "standards": [
+                                        "HSG.CO.D.13"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m1-f-2"
+                                }
+                            ]
+                        },
+                        {
+                            "letter": "G",
+                            "title": "Axiomatic Systems",
+                            "lessons": [
+                                {
+                                    "id": "l-math-m1-g-1",
+                                    "code": "L.M1.G.1",
+                                    "lessonNumber": 1,
+                                    "title": "Review of the Assumptions",
+                                    "standards": [
+                                        "HSG.CO.A.1"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m1-g-1"
+                                },
+                                {
+                                    "id": "l-math-m1-g-2",
+                                    "code": "L.M1.G.2",
+                                    "lessonNumber": 2,
+                                    "title": "Review of the Assumptions",
+                                    "standards": [
+                                        "HSG.CO.A.1"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m1-g-2"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "moduleNumber": 2,
+                    "title": "Module 2: Similarity, Proof, and Trigonometry",
+                    "description": "Explore scale drawings, dilations, similarity proofs, right triangle similarity, and trigonometric ratios.",
+                    "topics": [
+                        {
+                            "letter": "A",
+                            "title": "Scale Drawings",
+                            "lessons": [
+                                {
+                                    "id": "l-math-m2-a-1",
+                                    "code": "L.M2.A.1",
+                                    "lessonNumber": 1,
+                                    "title": "Scale Drawings",
+                                    "standards": [
+                                        "HSG.SRT.A.1"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m2-a-1"
+                                },
+                                {
+                                    "id": "l-math-m2-a-2",
+                                    "code": "L.M2.A.2",
+                                    "lessonNumber": 2,
+                                    "title": "Making Scale Drawings Using the Ratio Method",
+                                    "standards": [
+                                        "HSG.SRT.A.1"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m2-a-2"
+                                },
+                                {
+                                    "id": "l-math-m2-a-3",
+                                    "code": "L.M2.A.3",
+                                    "lessonNumber": 3,
+                                    "title": "Making Scale Drawings Using the Parallel Method",
+                                    "standards": [
+                                        "HSG.SRT.A.1"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m2-a-3"
+                                },
+                                {
+                                    "id": "l-math-m2-a-4",
+                                    "code": "L.M2.A.4",
+                                    "lessonNumber": 4,
+                                    "title": "Comparing the Ratio Method with the Parallel Method",
+                                    "standards": [
+                                        "HSG.SRT.A.1"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m2-a-4"
+                                },
+                                {
+                                    "id": "l-math-m2-a-5",
+                                    "code": "L.M2.A.5",
+                                    "lessonNumber": 5,
+                                    "title": "Scale Factors",
+                                    "standards": [
+                                        "HSG.SRT.A.1"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m2-a-5"
+                                }
+                            ]
+                        },
+                        {
+                            "letter": "B",
+                            "title": "Dilations",
+                            "lessons": [
+                                {
+                                    "id": "l-math-m2-b-1",
+                                    "code": "L.M2.B.1",
+                                    "lessonNumber": 1,
+                                    "title": "Dilations as Transformations of the Plane",
+                                    "standards": [
+                                        "HSG.SRT.A.1"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m2-b-1"
+                                },
+                                {
+                                    "id": "l-math-m2-b-2",
+                                    "code": "L.M2.B.2",
+                                    "lessonNumber": 2,
+                                    "title": "How Do Dilations Map Segments?",
+                                    "standards": [
+                                        "HSG.SRT.A.1"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m2-b-2"
+                                },
+                                {
+                                    "id": "l-math-m2-b-3",
+                                    "code": "L.M2.B.3",
+                                    "lessonNumber": 3,
+                                    "title": "How Do Dilations Map Lines, Rays, and Circles?",
+                                    "standards": [
+                                        "HSG.SRT.A.1"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m2-b-3"
+                                },
+                                {
+                                    "id": "l-math-m2-b-4",
+                                    "code": "L.M2.B.4",
+                                    "lessonNumber": 4,
+                                    "title": "How Do Dilations Map Angles?",
+                                    "standards": [
+                                        "HSG.SRT.A.1"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m2-b-4"
+                                },
+                                {
+                                    "id": "l-math-m2-b-5",
+                                    "code": "L.M2.B.5",
+                                    "lessonNumber": 5,
+                                    "title": "Dividing the King's Foot into 12 Equal Pieces",
+                                    "standards": [
+                                        "HSG.SRT.A.1"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m2-b-5"
+                                },
+                                {
+                                    "id": "l-math-m2-b-6",
+                                    "code": "L.M2.B.6",
+                                    "lessonNumber": 6,
+                                    "title": "Dilations from Different Centers",
+                                    "standards": [
+                                        "HSG.SRT.A.1"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m2-b-6"
+                                }
+                            ]
+                        },
+                        {
+                            "letter": "C",
+                            "title": "Similarity and Dilations",
+                            "lessons": [
+                                {
+                                    "id": "l-math-m2-c-1",
+                                    "code": "L.M2.C.1",
+                                    "lessonNumber": 1,
+                                    "title": "What Are Similarity Transformations, and Why Do We Need Them?",
+                                    "standards": [
+                                        "HSG.SRT.A.2"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m2-c-1"
+                                },
+                                {
+                                    "id": "l-math-m2-c-2",
+                                    "code": "L.M2.C.2",
+                                    "lessonNumber": 2,
+                                    "title": "Properties of Similarity Transformations",
+                                    "standards": [
+                                        "HSG.SRT.A.2"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m2-c-2"
+                                },
+                                {
+                                    "id": "l-math-m2-c-3",
+                                    "code": "L.M2.C.3",
+                                    "lessonNumber": 3,
+                                    "title": "Similarity",
+                                    "standards": [
+                                        "HSG.SRT.A.2"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m2-c-3"
+                                },
+                                {
+                                    "id": "l-math-m2-c-4",
+                                    "code": "L.M2.C.4",
+                                    "lessonNumber": 4,
+                                    "title": "The Angle-Angle (AA) Criterion for Two Triangles to Be Similar",
+                                    "standards": [
+                                        "HSG.SRT.A.2"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m2-c-4"
+                                },
+                                {
+                                    "id": "l-math-m2-c-5",
+                                    "code": "L.M2.C.5",
+                                    "lessonNumber": 5,
+                                    "title": "Between-Figure and Within-Figure Ratios",
+                                    "standards": [
+                                        "HSG.SRT.A.2"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m2-c-5"
+                                },
+                                {
+                                    "id": "l-math-m2-c-6",
+                                    "code": "L.M2.C.6",
+                                    "lessonNumber": 6,
+                                    "title": "The Side-Angle-Side (SAS) and Side-Side-Side (SSS) Criteria for Two Triangles to Be Similar",
+                                    "standards": [
+                                        "HSG.SRT.A.2"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m2-c-6"
+                                },
+                                {
+                                    "id": "l-math-m2-c-7",
+                                    "code": "L.M2.C.7",
+                                    "lessonNumber": 7,
+                                    "title": "Similarity and the Angle Bisector Theorem",
+                                    "standards": [
+                                        "HSG.SRT.A.2"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m2-c-7"
+                                },
+                                {
+                                    "id": "l-math-m2-c-8",
+                                    "code": "L.M2.C.8",
+                                    "lessonNumber": 8,
+                                    "title": "Families of Parallel Lines and the Circumference of the Earth",
+                                    "standards": [
+                                        "HSG.SRT.A.2"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m2-c-8"
+                                },
+                                {
+                                    "id": "l-math-m2-c-9",
+                                    "code": "L.M2.C.9",
+                                    "lessonNumber": 9,
+                                    "title": "How Far Away Is the Moon?",
+                                    "standards": [
+                                        "HSG.SRT.A.2"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m2-c-9"
+                                }
+                            ]
+                        },
+                        {
+                            "letter": "D",
+                            "title": "Applying Similarity to Right Triangles",
+                            "lessons": [
+                                {
+                                    "id": "l-math-m2-d-1",
+                                    "code": "L.M2.D.1",
+                                    "lessonNumber": 1,
+                                    "title": "Special Relationships Within Right Triangles—Dividing into Two Similar Sub-Triangles",
+                                    "standards": [
+                                        "HSG.SRT.B.4"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m2-d-1"
+                                },
+                                {
+                                    "id": "l-math-m2-d-2",
+                                    "code": "L.M2.D.2",
+                                    "lessonNumber": 2,
+                                    "title": "Multiplying and Dividing Expressions with Radicals",
+                                    "standards": [
+                                        "HSG.SRT.B.4"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m2-d-2"
+                                },
+                                {
+                                    "id": "l-math-m2-d-3",
+                                    "code": "L.M2.D.3",
+                                    "lessonNumber": 3,
+                                    "title": "Adding and Subtracting Expressions with Radicals",
+                                    "standards": [
+                                        "HSG.SRT.B.4"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m2-d-3"
+                                },
+                                {
+                                    "id": "l-math-m2-d-4",
+                                    "code": "L.M2.D.4",
+                                    "lessonNumber": 4,
+                                    "title": "Prove the Pythagorean Theorem Using Similarity",
+                                    "standards": [
+                                        "HSG.SRT.B.4"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m2-d-4"
+                                }
+                            ]
+                        },
+                        {
+                            "letter": "E",
+                            "title": "Trigonometry",
+                            "lessons": [
+                                {
+                                    "id": "l-math-m2-e-1",
+                                    "code": "L.M2.E.1",
+                                    "lessonNumber": 1,
+                                    "title": "Incredibly Useful Ratios",
+                                    "standards": [
+                                        "HSG.SRT.C.6"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m2-e-1"
+                                },
+                                {
+                                    "id": "l-math-m2-e-2",
+                                    "code": "L.M2.E.2",
+                                    "lessonNumber": 2,
+                                    "title": "The Definition of Sine, Cosine, and Tangent",
+                                    "standards": [
+                                        "HSG.SRT.C.6"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m2-e-2"
+                                },
+                                {
+                                    "id": "l-math-m2-e-3",
+                                    "code": "L.M2.E.3",
+                                    "lessonNumber": 3,
+                                    "title": "Sine and Cosine of Complementary Angles and Special Angles",
+                                    "standards": [
+                                        "HSG.SRT.C.6"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m2-e-3"
+                                },
+                                {
+                                    "id": "l-math-m2-e-4",
+                                    "code": "L.M2.E.4",
+                                    "lessonNumber": 4,
+                                    "title": "Solving Problems Using Sine and Cosine",
+                                    "standards": [
+                                        "HSG.SRT.C.6"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m2-e-4"
+                                },
+                                {
+                                    "id": "l-math-m2-e-5",
+                                    "code": "L.M2.E.5",
+                                    "lessonNumber": 5,
+                                    "title": "Applying Tangents",
+                                    "standards": [
+                                        "HSG.SRT.C.6"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m2-e-5"
+                                },
+                                {
+                                    "id": "l-math-m2-e-6",
+                                    "code": "L.M2.E.6",
+                                    "lessonNumber": 6,
+                                    "title": "Trigonometry and the Pythagorean Theorem",
+                                    "standards": [
+                                        "HSG.SRT.C.6"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m2-e-6"
+                                },
+                                {
+                                    "id": "l-math-m2-e-7",
+                                    "code": "L.M2.E.7",
+                                    "lessonNumber": 7,
+                                    "title": "Using Trigonometry to Determine Area",
+                                    "standards": [
+                                        "HSG.SRT.C.6"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m2-e-7"
+                                },
+                                {
+                                    "id": "l-math-m2-e-8",
+                                    "code": "L.M2.E.8",
+                                    "lessonNumber": 8,
+                                    "title": "Using Trigonometry to Find Side Lengths of an Acute Triangle",
+                                    "standards": [
+                                        "HSG.SRT.C.6"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m2-e-8"
+                                },
+                                {
+                                    "id": "l-math-m2-e-9",
+                                    "code": "L.M2.E.9",
+                                    "lessonNumber": 9,
+                                    "title": "Applying the Laws of Sines and Cosines",
+                                    "standards": [
+                                        "HSG.SRT.C.6"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m2-e-9"
+                                },
+                                {
+                                    "id": "l-math-m2-e-10",
+                                    "code": "L.M2.E.10",
+                                    "lessonNumber": 10,
+                                    "title": "Unknown Angles",
+                                    "standards": [
+                                        "HSG.SRT.C.6"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m2-e-10"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "moduleNumber": 3,
+                    "title": "Module 3: Extending to Three Dimensions",
+                    "description": "Area, surface area, Cavalieri's principle, volume formulas for prisms, cylinders, pyramids, cones, and spheres, and 3D modeling.",
+                    "topics": [
+                        {
+                            "letter": "A",
+                            "title": "Area and Surface Area",
+                            "lessons": [
+                                {
+                                    "id": "l-math-m3-a-1",
+                                    "code": "L.M3.A.1",
+                                    "lessonNumber": 1,
+                                    "title": "What Is Area?",
+                                    "standards": [
+                                        "HSG.GMD.A.1"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m3-a-1"
+                                },
+                                {
+                                    "id": "l-math-m3-a-2",
+                                    "code": "L.M3.A.2",
+                                    "lessonNumber": 2,
+                                    "title": "Properties of Area",
+                                    "standards": [
+                                        "HSG.GMD.A.1"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m3-a-2"
+                                },
+                                {
+                                    "id": "l-math-m3-a-3",
+                                    "code": "L.M3.A.3",
+                                    "lessonNumber": 3,
+                                    "title": "The Scaling Principle for Area",
+                                    "standards": [
+                                        "HSG.GMD.A.1"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m3-a-3"
+                                },
+                                {
+                                    "id": "l-math-m3-a-4",
+                                    "code": "L.M3.A.4",
+                                    "lessonNumber": 4,
+                                    "title": "Proving the Area of a Disk",
+                                    "standards": [
+                                        "HSG.GMD.A.1"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m3-a-4"
+                                }
+                            ]
+                        },
+                        {
+                            "letter": "B",
+                            "title": "Volume",
+                            "lessons": [
+                                {
+                                    "id": "l-math-m3-b-1",
+                                    "code": "L.M3.B.1",
+                                    "lessonNumber": 1,
+                                    "title": "Three-Dimensional Space",
+                                    "standards": [
+                                        "HSG.GMD.A.1"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m3-b-1"
+                                },
+                                {
+                                    "id": "l-math-m3-b-2",
+                                    "code": "L.M3.B.2",
+                                    "lessonNumber": 2,
+                                    "title": "General Prisms and Cylinders and Their Cross-Sections",
+                                    "standards": [
+                                        "HSG.GMD.A.1"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m3-b-2"
+                                },
+                                {
+                                    "id": "l-math-m3-b-3",
+                                    "code": "L.M3.B.3",
+                                    "lessonNumber": 3,
+                                    "title": "General Pyramids and Cones and TheirCross-Sections",
+                                    "standards": [
+                                        "HSG.GMD.A.1"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m3-b-3"
+                                },
+                                {
+                                    "id": "l-math-m3-b-4",
+                                    "code": "L.M3.B.4",
+                                    "lessonNumber": 4,
+                                    "title": "Definition and Properties of Volume",
+                                    "standards": [
+                                        "HSG.GMD.A.1"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m3-b-4"
+                                },
+                                {
+                                    "id": "l-math-m3-b-5",
+                                    "code": "L.M3.B.5",
+                                    "lessonNumber": 5,
+                                    "title": "Scaling Principle for Volumes",
+                                    "standards": [
+                                        "HSG.GMD.A.1"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m3-b-5"
+                                },
+                                {
+                                    "id": "l-math-m3-b-6",
+                                    "code": "L.M3.B.6",
+                                    "lessonNumber": 6,
+                                    "title": "The Volume of Prisms and Cylinders and Cavalieri's Principle",
+                                    "standards": [
+                                        "HSG.GMD.A.1"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m3-b-6"
+                                },
+                                {
+                                    "id": "l-math-m3-b-7",
+                                    "code": "L.M3.B.7",
+                                    "lessonNumber": 7,
+                                    "title": "The Volume Formula of a Pyramid and Cone",
+                                    "standards": [
+                                        "HSG.GMD.A.1"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m3-b-7"
+                                },
+                                {
+                                    "id": "l-math-m3-b-8",
+                                    "code": "L.M3.B.8",
+                                    "lessonNumber": 8,
+                                    "title": "The Volume Formula of a Sphere",
+                                    "standards": [
+                                        "HSG.GMD.A.1"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m3-b-8"
+                                },
+                                {
+                                    "id": "l-math-m3-b-9",
+                                    "code": "L.M3.B.9",
+                                    "lessonNumber": 9,
+                                    "title": "How Do 3D Printers Work?",
+                                    "standards": [
+                                        "HSG.GMD.A.1"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m3-b-9"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "moduleNumber": 4,
+                    "title": "Module 4: Connecting Algebra and Geometry Through Coordinates",
+                    "description": "Analytic geometry on the coordinate plane: slopes of parallel and perpendicular lines, distance, polygon perimeters and areas, and coordinate proofs.",
+                    "topics": [
+                        {
+                            "letter": "A",
+                            "title": "Rectangular Coordinate System",
+                            "lessons": [
+                                {
+                                    "id": "l-math-m4-a-1",
+                                    "code": "L.M4.A.1",
+                                    "lessonNumber": 1,
+                                    "title": "Searching a Region in the Plane",
+                                    "standards": [
+                                        "HSG.GPE.B.4"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m4-a-1"
+                                },
+                                {
+                                    "id": "l-math-m4-a-2",
+                                    "code": "L.M4.A.2",
+                                    "lessonNumber": 2,
+                                    "title": "Finding Systems of Inequalities That Describe Triangular and Rectangular Regions",
+                                    "standards": [
+                                        "HSG.GPE.B.4"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m4-a-2"
+                                },
+                                {
+                                    "id": "l-math-m4-a-3",
+                                    "code": "L.M4.A.3",
+                                    "lessonNumber": 3,
+                                    "title": "Lines That Pass Through Regions",
+                                    "standards": [
+                                        "HSG.GPE.B.4"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m4-a-3"
+                                },
+                                {
+                                    "id": "l-math-m4-a-4",
+                                    "code": "L.M4.A.4",
+                                    "lessonNumber": 4,
+                                    "title": "Designing a Search Robot to Find a Beacon",
+                                    "standards": [
+                                        "HSG.GPE.B.4"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m4-a-4"
+                                }
+                            ]
+                        },
+                        {
+                            "letter": "B",
+                            "title": "Perpendicular and Parallel Lines",
+                            "lessons": [
+                                {
+                                    "id": "l-math-m4-b-1",
+                                    "code": "L.M4.B.1",
+                                    "lessonNumber": 1,
+                                    "title": "Criterion for Perpendicularity",
+                                    "standards": [
+                                        "HSG.GPE.B.5"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m4-b-1"
+                                },
+                                {
+                                    "id": "l-math-m4-b-2",
+                                    "code": "L.M4.B.2",
+                                    "lessonNumber": 2,
+                                    "title": "Segments That Meet at Right Angles",
+                                    "standards": [
+                                        "HSG.GPE.B.5"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m4-b-2"
+                                },
+                                {
+                                    "id": "l-math-m4-b-3",
+                                    "code": "L.M4.B.3",
+                                    "lessonNumber": 3,
+                                    "title": "Equations for Lines Using Normal Segments",
+                                    "standards": [
+                                        "HSG.GPE.B.5"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m4-b-3"
+                                },
+                                {
+                                    "id": "l-math-m4-b-4",
+                                    "code": "L.M4.B.4",
+                                    "lessonNumber": 4,
+                                    "title": "Parallel and Perpendicular Lines",
+                                    "standards": [
+                                        "HSG.GPE.B.5"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m4-b-4"
+                                }
+                            ]
+                        },
+                        {
+                            "letter": "C",
+                            "title": "Perimeters and Areas of Polygonal Regions in the Cartesian Plane",
+                            "lessons": [
+                                {
+                                    "id": "l-math-m4-c-1",
+                                    "code": "L.M4.C.1",
+                                    "lessonNumber": 1,
+                                    "title": "Perimeter and Area of Triangles in the Cartesian Plane",
+                                    "standards": [
+                                        "HSG.GPE.B.7"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m4-c-1"
+                                },
+                                {
+                                    "id": "l-math-m4-c-2",
+                                    "code": "L.M4.C.2",
+                                    "lessonNumber": 2,
+                                    "title": "Perimeter and Area of Polygonal Regions in the Cartesian Plane",
+                                    "standards": [
+                                        "HSG.GPE.B.7"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m4-c-2"
+                                },
+                                {
+                                    "id": "l-math-m4-c-3",
+                                    "code": "L.M4.C.3",
+                                    "lessonNumber": 3,
+                                    "title": "Perimeters and Areas of Polygonal Regions Defined by Systems of Inequalities",
+                                    "standards": [
+                                        "HSG.GPE.B.7"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m4-c-3"
+                                }
+                            ]
+                        },
+                        {
+                            "letter": "D",
+                            "title": "Partitioning and Extending Segments and Algebraic Proofs",
+                            "lessons": [
+                                {
+                                    "id": "l-math-m4-d-1",
+                                    "code": "L.M4.D.1",
+                                    "lessonNumber": 1,
+                                    "title": "Dividing Segments Proportionately",
+                                    "standards": [
+                                        "HSG.GPE.B.4"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m4-d-1"
+                                },
+                                {
+                                    "id": "l-math-m4-d-2",
+                                    "code": "L.M4.D.2",
+                                    "lessonNumber": 2,
+                                    "title": "Analytic Proofs of Theorems Previously Proved by Synthetic Means",
+                                    "standards": [
+                                        "HSG.GPE.B.4"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m4-d-2"
+                                },
+                                {
+                                    "id": "l-math-m4-d-3",
+                                    "code": "L.M4.D.3",
+                                    "lessonNumber": 3,
+                                    "title": "Motion Along a Line—Search Robots Again",
+                                    "standards": [
+                                        "HSG.GPE.B.4"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m4-d-3"
+                                },
+                                {
+                                    "id": "l-math-m4-d-4",
+                                    "code": "L.M4.D.4",
+                                    "lessonNumber": 4,
+                                    "title": "The Distance from a Point to a Line",
+                                    "standards": [
+                                        "HSG.GPE.B.4"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m4-d-4"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "moduleNumber": 5,
+                    "title": "Module 5: Circles With and Without Coordinates",
+                    "description": "Central and inscribed angles, arc lengths and sectors, secants, tangents, center-radius circle equations, and cyclic quadrilaterals.",
+                    "topics": [
+                        {
+                            "letter": "A",
+                            "title": "Central and Inscribed Angles",
+                            "lessons": [
+                                {
+                                    "id": "l-math-m5-a-1",
+                                    "code": "L.M5.A.1",
+                                    "lessonNumber": 1,
+                                    "title": "Thales' Theorem",
+                                    "standards": [
+                                        "HSG.C.A.2"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m5-a-1"
+                                },
+                                {
+                                    "id": "l-math-m5-a-2",
+                                    "code": "L.M5.A.2",
+                                    "lessonNumber": 2,
+                                    "title": "Circles, Chords, Diameters, and Their Relationships",
+                                    "standards": [
+                                        "HSG.C.A.2"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m5-a-2"
+                                },
+                                {
+                                    "id": "l-math-m5-a-3",
+                                    "code": "L.M5.A.3",
+                                    "lessonNumber": 3,
+                                    "title": "Rectangles Inscribed in Circles",
+                                    "standards": [
+                                        "HSG.C.A.2"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m5-a-3"
+                                },
+                                {
+                                    "id": "l-math-m5-a-4",
+                                    "code": "L.M5.A.4",
+                                    "lessonNumber": 4,
+                                    "title": "Experiments with Inscribed Angles",
+                                    "standards": [
+                                        "HSG.C.A.2"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m5-a-4"
+                                },
+                                {
+                                    "id": "l-math-m5-a-5",
+                                    "code": "L.M5.A.5",
+                                    "lessonNumber": 5,
+                                    "title": "Inscribed Angle Theorem and Its Applications",
+                                    "standards": [
+                                        "HSG.C.A.2"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m5-a-5"
+                                },
+                                {
+                                    "id": "l-math-m5-a-6",
+                                    "code": "L.M5.A.6",
+                                    "lessonNumber": 6,
+                                    "title": "Unknown Angle Problems with Inscribed Angles in Circles",
+                                    "standards": [
+                                        "HSG.C.A.2"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m5-a-6"
+                                }
+                            ]
+                        },
+                        {
+                            "letter": "B",
+                            "title": "Arcs and Sectors",
+                            "lessons": [
+                                {
+                                    "id": "l-math-m5-b-1",
+                                    "code": "L.M5.B.1",
+                                    "lessonNumber": 1,
+                                    "title": "The Angle Measure of an Arc",
+                                    "standards": [
+                                        "HSG.C.B.5"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m5-b-1"
+                                },
+                                {
+                                    "id": "l-math-m5-b-2",
+                                    "code": "L.M5.B.2",
+                                    "lessonNumber": 2,
+                                    "title": "Arcs and Chords",
+                                    "standards": [
+                                        "HSG.C.B.5"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m5-b-2"
+                                },
+                                {
+                                    "id": "l-math-m5-b-3",
+                                    "code": "L.M5.B.3",
+                                    "lessonNumber": 3,
+                                    "title": "Arc Length and Areas of Sectors",
+                                    "standards": [
+                                        "HSG.C.B.5"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m5-b-3"
+                                },
+                                {
+                                    "id": "l-math-m5-b-4",
+                                    "code": "L.M5.B.4",
+                                    "lessonNumber": 4,
+                                    "title": "Unknown Length and Area Problems",
+                                    "standards": [
+                                        "HSG.C.B.5"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m5-b-4"
+                                }
+                            ]
+                        },
+                        {
+                            "letter": "C",
+                            "title": "Secants and Tangents",
+                            "lessons": [
+                                {
+                                    "id": "l-math-m5-c-1",
+                                    "code": "L.M5.C.1",
+                                    "lessonNumber": 1,
+                                    "title": "Properties of Tangents",
+                                    "standards": [
+                                        "HSG.C.A.2"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m5-c-1"
+                                },
+                                {
+                                    "id": "l-math-m5-c-2",
+                                    "code": "L.M5.C.2",
+                                    "lessonNumber": 2,
+                                    "title": "Tangent Segments",
+                                    "standards": [
+                                        "HSG.C.A.2"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m5-c-2"
+                                },
+                                {
+                                    "id": "l-math-m5-c-3",
+                                    "code": "L.M5.C.3",
+                                    "lessonNumber": 3,
+                                    "title": "The Inscribed Angle Alternate—A Tangent Angle",
+                                    "standards": [
+                                        "HSG.C.A.2"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m5-c-3"
+                                },
+                                {
+                                    "id": "l-math-m5-c-4",
+                                    "code": "L.M5.C.4",
+                                    "lessonNumber": 4,
+                                    "title": "Secant Lines; Secant Lines That Meet Inside a Circle",
+                                    "standards": [
+                                        "HSG.C.A.2"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m5-c-4"
+                                },
+                                {
+                                    "id": "l-math-m5-c-5",
+                                    "code": "L.M5.C.5",
+                                    "lessonNumber": 5,
+                                    "title": "Secant Angle Theorem, Exterior Case",
+                                    "standards": [
+                                        "HSG.C.A.2"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m5-c-5"
+                                },
+                                {
+                                    "id": "l-math-m5-c-6",
+                                    "code": "L.M5.C.6",
+                                    "lessonNumber": 6,
+                                    "title": "Similar Triangles in Circle-Secant (or Circle-Secant-Tangent) Diagrams",
+                                    "standards": [
+                                        "HSG.C.A.2"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m5-c-6"
+                                }
+                            ]
+                        },
+                        {
+                            "letter": "D",
+                            "title": "Equations for Circles and Their Tangents",
+                            "lessons": [
+                                {
+                                    "id": "l-math-m5-d-1",
+                                    "code": "L.M5.D.1",
+                                    "lessonNumber": 1,
+                                    "title": "Writing the Equation for a Circle",
+                                    "standards": [
+                                        "HSG.GPE.A.1"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m5-d-1"
+                                },
+                                {
+                                    "id": "l-math-m5-d-2",
+                                    "code": "L.M5.D.2",
+                                    "lessonNumber": 2,
+                                    "title": "Recognizing Equations of Circles",
+                                    "standards": [
+                                        "HSG.GPE.A.1"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m5-d-2"
+                                },
+                                {
+                                    "id": "l-math-m5-d-3",
+                                    "code": "L.M5.D.3",
+                                    "lessonNumber": 3,
+                                    "title": "Equations for Tangent Lines to Circles",
+                                    "standards": [
+                                        "HSG.GPE.A.1"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m5-d-3"
+                                }
+                            ]
+                        },
+                        {
+                            "letter": "E",
+                            "title": "Cyclic Quadrilaterals and Ptolemy's Theorem",
+                            "lessons": [
+                                {
+                                    "id": "l-math-m5-e-1",
+                                    "code": "L.M5.E.1",
+                                    "lessonNumber": 1,
+                                    "title": "Cyclic Quadrilaterals",
+                                    "standards": [
+                                        "HSG.C.A.3"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m5-e-1"
+                                },
+                                {
+                                    "id": "l-math-m5-e-2",
+                                    "code": "L.M5.E.2",
+                                    "lessonNumber": 2,
+                                    "title": "Ptolemy's Theorem",
+                                    "standards": [
+                                        "HSG.C.A.3"
+                                    ],
+                                    "url": "/levels/l.php?l-math-m5-e-2"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         }
     }
 }
