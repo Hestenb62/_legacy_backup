@@ -104,7 +104,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Draw in three radii (from O to each of the three triangle vertices), and label congruent base angles of each of the three resulting isosceles triangles. See diagram to see angle me..."
               }
-            ]
+            ],
+            "prompt": "A, B, and C are three points on a circle, and angle ABC is a right angle. What is wrong with the picture below? Explain your reasoning."
           },
           {
             "number": 2,
@@ -123,7 +124,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Draw three radii (OA, OB, and OC). Label m\\angle BAC as a^\\circ and m\\angle BCA as c^\\circ . Also label m\\angle OAC as x˚ and m\\angle OCA as x^\\circ since \\triangle AOC is isoscele..."
               }
-            ]
+            ],
+            "prompt": "Show that there is something mathematically wrong with the picture below."
           },
           {
             "number": 3,
@@ -142,7 +144,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "16 miles"
               }
-            ]
+            ],
+            "prompt": "In the figure below, AB is the diameter of a circle of radius 17 miles. If BC=30 miles, what is AC?"
           },
           {
             "number": 4,
@@ -161,7 +164,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "In the figure below, O is the center of the circle, and AD is a diameter."
           },
           {
             "number": 5,
@@ -180,7 +184,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "48^\\circ"
               }
-            ]
+            ],
+            "prompt": "Find m\\angle AOB."
           },
           {
             "number": 6,
@@ -199,7 +204,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "68^\\circ"
               }
-            ]
+            ],
+            "prompt": "If m\\angle AOB∶m\\angle COD=3∶4, what is m\\angle BOC?"
           },
           {
             "number": 7,
@@ -218,7 +224,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Since RM=MQ (given), m\\angle RMP=m\\angle QMP (both are right angles, \\angle QMP by Thales' theorem and \\angle RMP by the angle addition postulate), and MP=MP (reflexive property), ..."
               }
-            ]
+            ],
+            "prompt": "PQ is a diameter of a circle, and M is another point on the circle. The point R lies on MQ such that RM=MQ. Show that m\\angle PRM=m\\angle PQM. (Hint: Draw a picture to help you explain your thinking.)"
           },
           {
             "number": 8,
@@ -237,7 +244,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Inscribe \\triangle ABC in a circle of diameter 1 such that AC is a diameter. Explain why:"
           },
           {
             "number": 9,
@@ -256,7 +264,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "AC is the hypotenuse, and AC=1. Since sine is the ratio of the opposite side to the hypotenuse, sin(\\angle A) necessarily equals the length of the opposite side, that is, the lengt..."
               }
-            ]
+            ],
+            "prompt": "sin(\\angle A)=BC."
           },
           {
             "number": 10,
@@ -275,7 +284,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "AC is the hypotenuse, and AC=1. Since cosine is the ratio of the adjacent side to the hypotenuse, cos(\\angle A) necessarily equals the length of the adjacent side, that is, the len..."
               }
-            ]
+            ],
+            "prompt": "cos(\\angle A)=AB."
           }
         ]
       },
@@ -405,7 +415,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "In the figure, CF=8, and the two concentric circles have radii of 10 and 17. Find DE."
           },
           {
             "number": 2,
@@ -424,7 +435,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "In the figure, the two circles have equal radii and intersect at points B and D. A and C are centers of the circles. AC=8, and the radius of each circle is 5. BD⊥AC. Find BD. Explain your work."
           },
           {
             "number": 3,
@@ -443,7 +455,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "In the figure, the two concentric circles have radii of 6 and 14. Chord BF of the larger circle intersects the smaller circle at C and E. CE=8. AD⊥BF."
           },
           {
             "number": 4,
@@ -462,7 +475,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "2\\sqrt{5}"
               }
-            ]
+            ],
+            "prompt": "Find AD."
           },
           {
             "number": 5,
@@ -481,7 +495,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "8\\sqrt{11}"
               }
-            ]
+            ],
+            "prompt": "Find BF."
           },
           {
             "number": 6,
@@ -500,7 +515,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Let AE and AF be perpendiculars from A to CB and CD, respectively."
               }
-            ]
+            ],
+            "prompt": "In the figure, A is the center of the circle, and CB=CD. Prove that AC bisects \\angle BCD."
           },
           {
             "number": 7,
@@ -519,7 +535,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "In class, we proved: Congruent chords define central angles equal in measure."
           },
           {
             "number": 8,
@@ -538,7 +555,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "We are given that the two chords (AB and CD) are congruent. Therefore, a rigid motion exists that carries AB to CD. The same rotation that carries AB to CD also carries AO to CO an..."
               }
-            ]
+            ],
+            "prompt": "Give another proof of this theorem based on the properties of rotations. Use the figure from Exercise 5."
           },
           {
             "number": 9,
@@ -557,7 +575,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Using the same diagram, we are given that \\angle AOB\\cong \\angle COD. Therefore, a rigid motion (a rotation) carries \\angle AOB to \\angle COD. This same rotation carries AO to CO a..."
               }
-            ]
+            ],
+            "prompt": "Give a rotation proof of the converse: If two chords define central angles of the same measure, then they must be congruent."
           }
         ]
       },
@@ -688,7 +707,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Lay the paper across the circle so that its corner lies on the circle. The points where the two edges of the paper cross the circle are the endpoints of a diameter. Mark those poin..."
               }
-            ]
+            ],
+            "prompt": "Using only a piece of 8.5\\times 11 inch copy paper and a pencil, find the location of the center of the circle below."
           },
           {
             "number": 2,
@@ -707,7 +727,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "No, although it is possible to construct an inscribed polygon with one pair of parallel sides (i.e., a trapezoid); a parallelogram requires that both pairs of opposite sides be par..."
               }
-            ]
+            ],
+            "prompt": "Is it possible to inscribe a parallelogram that is not a rectangle in a circle?"
           },
           {
             "number": 3,
@@ -726,7 +747,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "In the figure, BCDE is a rectangle inscribed in circle A. DE=8;BE=12. Find AE."
           },
           {
             "number": 4,
@@ -745,7 +767,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Find the radius of the circle."
               }
-            ]
+            ],
+            "prompt": "Given the figure, BC=CD=8 and AD=13. Find the radius of the circle."
           },
           {
             "number": 5,
@@ -764,7 +787,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Find BG."
               }
-            ]
+            ],
+            "prompt": "In the figure, DF and BG are parallel chords 14 cm apart. DF=12 cm, AB=10 cm, and EH⊥BG. Find BG."
           },
           {
             "number": 6,
@@ -783,7 +807,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(Students did a construction similar to this in Geometry, Module 1, Lesson 4.) Draw any triangle. Construct the perpendicular bisector of the sides. The perpendicular bisectors mee..."
               }
-            ]
+            ],
+            "prompt": "Use perpendicular bisectors of the sides of a triangle to construct a circle that circumscribes the triangle."
           }
         ]
       },
@@ -913,7 +938,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Using a protractor, measure both the inscribed angle and the central angle shown on the circle below."
           },
           {
             "number": 2,
@@ -932,7 +958,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Using a protractor, measure both the inscribed angle and the central angle shown on the circle below."
           },
           {
             "number": 3,
@@ -951,7 +978,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Using a protractor, measure both the inscribed angle and the central angle shown on the circle below."
           },
           {
             "number": 4,
@@ -970,7 +998,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The measure of the inscribed angle appears to be half the measure of the central angle that intercepts the same arc."
               }
-            ]
+            ],
+            "prompt": "What relationship between the measure of the inscribed angle and the measure of the central angle that intercepts the same arc is illustrated by these examples?"
           },
           {
             "number": 5,
@@ -989,7 +1018,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Yes, according to Thales' theorem, if A, B, and C are points on a circle where AC is a diameter of the circle, then \\angle ABC is a right angle. Since a diameter represents a 180^\\..."
               }
-            ]
+            ],
+            "prompt": "Is your conjecture at least true for inscribed angles that measure 90^\\circ ?"
           },
           {
             "number": 6,
@@ -1008,7 +1038,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "\\triangle ABC is an isosceles triangle since all radii of a circle are congruent. Therefore, m\\angle B=m\\angle C=x. In addition, y=m\\angle B+m\\angle C since the measure of an exter..."
               }
-            ]
+            ],
+            "prompt": "Prove that y=2x in the diagram below."
           },
           {
             "number": 7,
@@ -1027,7 +1058,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The closer the boat is to the shore, the larger θ will be, and as the boat moves away from shore, θ gets smaller. A smaller θ means the ship is in deeper water, which is safer for ..."
               }
-            ]
+            ],
+            "prompt": "Red (R) and blue (B) lighthouses are located on the coast of the ocean. Ships traveling are in safe waters as long as the angle from the ship (S) to the two lighthouses (\\angle RSB) is always less than or equal to some angle θ called the danger angle. What happens to θ as the ship gets closer to shore and moves away from shore? Why do you think a larger angle is dangerous?"
           }
         ]
       },
@@ -1158,7 +1190,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "For Problems 1—8, find the value of x. Diagrams are not drawn to scale."
           },
           {
             "number": 2,
@@ -1177,7 +1210,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "x=100; y=50"
               }
-            ]
+            ],
+            "prompt": "The two circles shown intersect at E and F. The center of the larger circle, D, lies on the circumference of the smaller circle. If a chord of the larger circle, FG, cuts the smaller circle at H, find x and y."
           },
           {
             "number": 3,
@@ -1196,7 +1230,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "\\angle FDE is a central angle of the larger circle and is double \\angle FGE, the inscribed angle of the larger circle. \\angle FDE is inscribed in the smaller circle and equal in me..."
               }
-            ]
+            ],
+            "prompt": "How does this problem confirm the inscribed angle theorem?"
           },
           {
             "number": 4,
@@ -1215,7 +1250,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "In the figure below, ED and BC intersect at point F."
           },
           {
             "number": 5,
@@ -1234,7 +1270,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "BAD; EAC; BFD; DAB, EAC, BFD"
               }
-            ]
+            ],
+            "prompt": "Prove: m\\angle DAB+m\\angle EAC=2(m\\angle BFD)"
           }
         ]
       },
@@ -1365,7 +1402,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "In Problems 1—5, find the value x."
           },
           {
             "number": 2,
@@ -1384,7 +1422,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "If BF=FC, express y in terms of x."
           },
           {
             "number": 3,
@@ -1403,7 +1442,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Find the value of x."
           },
           {
             "number": 4,
@@ -1422,7 +1462,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "m\\angle D=a^\\circ (alternate angles are equal in measure), m\\angle A=2a^\\circ (inscribed angles half the central angle), a^\\circ +2a^\\circ +m\\angle AED=180^\\circ (the sum of the an..."
               }
-            ]
+            ],
+            "prompt": "Suppose the m\\angle C=a^\\circ . Prove that m\\angle DEB=3a^\\circ ."
           },
           {
             "number": 5,
@@ -1441,7 +1482,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "In the figure below, three identical circles meet at B, F, C, and E, respectively. BF=CE. A, B, C and F, E, D lie on straight lines."
           },
           {
             "number": 6,
@@ -1460,7 +1502,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Prove ACDF is a parallelogram."
           },
           {
             "number": 7,
@@ -1479,7 +1522,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Proof:"
           },
           {
             "number": 8,
@@ -1498,7 +1542,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Join BE and CF."
           }
         ]
       },
@@ -1630,7 +1675,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "\\angle CAD \\angle CBD Answers will vary. BD Answers will vary. CD CBD"
               }
-            ]
+            ],
+            "prompt": "Given circle A with m\\angle CAD=50^\\circ ,"
           },
           {
             "number": 2,
@@ -1649,7 +1695,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "50^\\circ"
               }
-            ]
+            ],
+            "prompt": "Find mCD."
           },
           {
             "number": 3,
@@ -1668,7 +1715,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "310^\\circ"
               }
-            ]
+            ],
+            "prompt": "Find mCBD."
           },
           {
             "number": 4,
@@ -1687,7 +1735,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "25^\\circ"
               }
-            ]
+            ],
+            "prompt": "Find m\\angle CBD."
           },
           {
             "number": 5,
@@ -1706,7 +1755,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "mBE=64^\\circ mCD=64^\\circ mCE=116^\\circ mBD=116^\\circ"
               }
-            ]
+            ],
+            "prompt": "Given circle A, find the measure of each minor arc."
           },
           {
             "number": 6,
@@ -1725,7 +1775,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Given circle A, find the following measure."
           },
           {
             "number": 7,
@@ -1744,7 +1795,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "100^\\circ"
               }
-            ]
+            ],
+            "prompt": "m\\angle BAD"
           },
           {
             "number": 8,
@@ -1763,7 +1815,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "80^\\circ mBC 80^\\circ mBD 100^\\circ mBCD 260^\\circ"
               }
-            ]
+            ],
+            "prompt": "m\\angle CAB"
           },
           {
             "number": 9,
@@ -1782,7 +1835,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "33^\\circ"
               }
-            ]
+            ],
+            "prompt": "Find the measure of angle x."
           },
           {
             "number": 10,
@@ -1801,7 +1855,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "85^\\circ"
               }
-            ]
+            ],
+            "prompt": "In the figure, m\\angle BAC=126^\\circ and m\\angle BED=32^\\circ . Find m\\angle DEC."
           },
           {
             "number": 11,
@@ -1820,7 +1875,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "In the figure, m\\angle BCD=74^\\circ and m\\angle BDC=42^\\circ . K is the midpoint of CB, and J is the midpoint of BD. Find m\\angle KBD and m\\angle CKJ."
           },
           {
             "number": 12,
@@ -1839,7 +1895,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "mBK=mKCMidpoint forms arcs of equal measure m\\angle KDC=\\frac{42˚}{2}=21^\\circ Angle bisector a= 21^\\circ Congruent angles inscribed in same arc In \\triangle BCD, b= 64^\\circ Sum o..."
               }
-            ]
+            ],
+            "prompt": "Solution: Join BK, KC, KD, KJ, JC, and JD."
           }
         ]
       },
@@ -1970,7 +2027,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Find the following arc measures."
           },
           {
             "number": 2,
@@ -1989,7 +2047,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "70^\\circ mBD 70^\\circ mED 40^\\circ In circle A, BC is a diameter, mCE=mED, and m\\angle CAE=32^\\circ ."
               }
-            ]
+            ],
+            "prompt": "In circle A, BC is a diameter, mCE=mED, and m\\angle CAE=32^\\circ ."
           },
           {
             "number": 3,
@@ -2008,7 +2067,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "64^\\circ"
               }
-            ]
+            ],
+            "prompt": "Find m\\angle CAD."
           },
           {
             "number": 4,
@@ -2027,7 +2087,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "58^\\circ"
               }
-            ]
+            ],
+            "prompt": "Find m\\angle ADC."
           },
           {
             "number": 5,
@@ -2046,7 +2107,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "22.5^\\circ"
               }
-            ]
+            ],
+            "prompt": "In circle A, BC is a diameter, 2mCE=mED, and BC\\parallel DE. Find m\\angle CDE."
           },
           {
             "number": 6,
@@ -2065,7 +2127,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "In circle A, BC is a diameter and mCE=68^\\circ ."
           },
           {
             "number": 7,
@@ -2084,7 +2147,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "68^\\circ"
               }
-            ]
+            ],
+            "prompt": "Find mCD."
           },
           {
             "number": 8,
@@ -2103,7 +2167,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "68^\\circ"
               }
-            ]
+            ],
+            "prompt": "Find m\\angle DBE."
           },
           {
             "number": 9,
@@ -2122,7 +2187,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "112^\\circ"
               }
-            ]
+            ],
+            "prompt": "Find m\\angle DCE"
           },
           {
             "number": 10,
@@ -2141,7 +2207,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Join CE. BC=ED (congruent arcs have chords equal in length) m\\angle CBE=m\\angle EDC (angles inscribed in same arc are equal in measure) m\\angle BCE=m\\angle DEC (angles inscribed in..."
               }
-            ]
+            ],
+            "prompt": "In the circle given, BC\\cong ED. Prove BE\\cong DC."
           },
           {
             "number": 11,
@@ -2160,7 +2227,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Join BD, DE, AE. AC=AE=AD=AB (radii) \\angle AEC\\cong \\angle ACE, \\angle AED\\cong \\angle ADE, \\angle ADB\\cong \\angle ABD (base angles of isosceles triangles are congruent) \\angle AE..."
               }
-            ]
+            ],
+            "prompt": "Given circle A with AD\\parallel CE, show BD\\cong DE."
           },
           {
             "number": 12,
@@ -2179,7 +2247,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "BC=BDChords of congruent arcs m\\angle BAC=m\\angle BADAngles inscribed in congruent arcs are equal in measure."
               }
-            ]
+            ],
+            "prompt": "In circle A, AB is a radius, BC\\cong BD, and m\\angle CAD=54^\\circ . Find m\\angle ABC. Complete the proof."
           },
           {
             "number": 13,
@@ -2198,7 +2267,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "2m\\angle BAC+54^\\circ =360^\\circ Circle m\\angle BAC= 153^\\circ AB=ACRadii m\\angle ABC=m\\angle ACBBase angles of isosceles 2m\\angle ABC+m\\angle BAC= 180^\\circ Sum of angles of a tri..."
               }
-            ]
+            ],
+            "prompt": "m\\angle BAC+m\\angle CAD+m\\angle BAD="
           }
         ]
       },
@@ -2328,7 +2398,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Arc length(PQ)=\\frac{72}{360}(2π\\times 5) Arc length(PQ)=2π The arc length of PQ is 2π cm or approximately 6.3 cm."
               }
-            ]
+            ],
+            "prompt": "The length of PQ"
           },
           {
             "number": 2,
@@ -2347,7 +2418,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "\\frac{π}{180}∙72=\\frac{2π}{5} radians"
               }
-            ]
+            ],
+            "prompt": "The ratio of the arc length to the radius of the circle"
           },
           {
             "number": 3,
@@ -2366,7 +2438,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The length of PQ is twice the value of x in \\triangle OQR. x=5sin36^\\circ PQ=2x=10sin36^\\circ Chord PQ has a length of 10sin36cm or approximately 5.9 cm."
               }
-            ]
+            ],
+            "prompt": "The length of chord PQ"
           },
           {
             "number": 4,
@@ -2385,7 +2458,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The distance of chord PQ from the center of the circle is labeled as y in \\triangle OQR. y=5cos36^\\circ The distance of chord PQ from the center of the circle is 5cos36cm, or appro..."
               }
-            ]
+            ],
+            "prompt": "The distance of the chord PQ from the center of the circle"
           },
           {
             "number": 5,
@@ -2404,7 +2478,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Perimeter(sector POQ)=5+5+2π Perimeter(sector POQ)=10+2π The perimeter of sector POQ is (10+2π) cm, or approximately 16.3 cm."
               }
-            ]
+            ],
+            "prompt": "The perimeter of sector POQ"
           },
           {
             "number": 6,
@@ -2423,7 +2498,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Area(wedge)=Area(sector POQ)-Area(\\triangle POQ) Area(\\triangle POQ)=\\frac{1}{2}(10sin36)(5cos36) Area(sector POR)=\\frac{72}{360}(π(5)^{2}) Area(wedge)=\\frac{72}{360}(π(5)^{2})-\\fr..."
               }
-            ]
+            ],
+            "prompt": "The area of the wedge between the chord PQ and PQ"
           },
           {
             "number": 7,
@@ -2442,7 +2518,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Perimeter(wedge)=2π+10sin36 The perimeter of the wedge is approximately 12.2 cm."
               }
-            ]
+            ],
+            "prompt": "The perimeter of this wedge"
           },
           {
             "number": 8,
@@ -2461,7 +2538,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "9π=\\frac{45}{360}(2πr)r=36 The radius of the circle is 36."
               }
-            ]
+            ],
+            "prompt": "What is the radius of a circle if the length of a 45^\\circ arc is 9π?"
           },
           {
             "number": 9,
@@ -2480,7 +2558,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "AB and CD both have an angle measure of 30^\\circ , but their arc lengths are not the same. OB=4 and BD=2."
           },
           {
             "number": 10,
@@ -2499,7 +2578,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Arc length(AB)=\\frac{30}{360}(2π)(4) Arc length(AB)=\\frac{2}{3}π The arc length of AB is \\frac{2}{3}π. Arc length(CD)=\\frac{30}{360}(2π)(6) Arc length(CD)=π The arc length of CD is..."
               }
-            ]
+            ],
+            "prompt": "What are the arc lengths of AB and CD?"
           },
           {
             "number": 11,
@@ -2518,7 +2598,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "\\frac{30π}{180}=\\frac{π}{6} radians. The angle is constant, so the ratio of arc length to radius will be the angle measure, 30^\\circ , multiplied by \\frac{π}{180}."
               }
-            ]
+            ],
+            "prompt": "What is the ratio of the arc length to the radius for both of these arcs? Explain."
           },
           {
             "number": 12,
@@ -2537,7 +2618,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Area(sector AOB)=\\frac{30}{360}(π(4)^{2}) Area(sector AOB)=\\frac{4}{3}π The area of the sector AOB is \\frac{4}{3}π. Area(sector COD)=\\frac{30}{360}(π(6)^{2}) The area of the sector..."
               }
-            ]
+            ],
+            "prompt": "What are the areas of the sectors AOB and COD?"
           },
           {
             "number": 13,
@@ -2556,7 +2638,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "In the circles shown, find the value of x. Figures are not drawn to scale."
           },
           {
             "number": 14,
@@ -2575,7 +2658,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "x\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}xThe circles have central angles of equal measure.b."
           },
           {
             "number": 15,
@@ -2594,7 +2678,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "The concentric circles all have center A. The measure of the central angle is 45^\\circ . The arc lengths are given."
           },
           {
             "number": 16,
@@ -2613,7 +2698,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Radius of inner circle: \\frac{π}{2}=\\frac{45π}{180}r, r=2 Radius of middle circle: \\frac{5π}{4}=\\frac{45π}{180}r, r=5 Radius of outer circle: \\frac{9π}{4}=\\frac{45π}{180}r, r=9"
               }
-            ]
+            ],
+            "prompt": "Find the radius of each circle."
           },
           {
             "number": 17,
@@ -2632,7 +2718,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "\\frac{π}{4} is the ratio of the arc length to the radius of each circle. It is the measure of the central angle in radians."
               }
-            ]
+            ],
+            "prompt": "Determine the ratio of the arc length to the radius of each circle, and interpret its meaning."
           },
           {
             "number": 18,
@@ -2651,7 +2738,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Since 6^\\circ is \\frac{1}{15} of 90^\\circ , then the arc length of QR is \\frac{1}{15} of 10 cm; the arc length of QR is \\frac{2}{3} cm."
               }
-            ]
+            ],
+            "prompt": "In the figure, if the length of PQ is 10 cm, find the length of QR."
           },
           {
             "number": 19,
@@ -2670,7 +2758,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Shaded Area=Area of sector-Area of Triangle (or \\frac{1}{4}(Area of circle)-Area of triangle)Shaded Area=\\frac{90}{360}(π(5)^{2})-\\frac{1}{2}(5)(5)Shaded Area=6.25π-12.5 The shaded..."
               }
-            ]
+            ],
+            "prompt": "Find, to one decimal place, the areas of the shaded regions."
           },
           {
             "number": 20,
@@ -2689,7 +2778,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Shaded Area=\\frac{3}{4}(Area of circle)+Area of triangle Note: The triangle is a 45^\\circ —45^\\circ —95^\\circ triangle with legs of length 2 (the legs are comprised by the radii, l..."
               }
-            ]
+            ],
+            "prompt": "The following circle has a radius of 2."
           }
         ]
       },
@@ -2819,7 +2909,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "214.47 in^{2}"
               }
-            ]
+            ],
+            "prompt": "Find the area of the shaded region if the diameter is 32 inches (round to the nearest hundredth)."
           },
           {
             "number": 2,
@@ -2838,7 +2929,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "500 in^{2}"
               }
-            ]
+            ],
+            "prompt": "Find the area of the entire circle given the area of the sector."
           },
           {
             "number": 3,
@@ -2857,7 +2949,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(1) 8=x(θ); θ=\\frac{8}{x} (2) 28=(x+6)(θ) 28=(x+6)(\\frac{8}{x})x=2.4 Substituting into (1): 8=(2.4)(θ)θ=\\frac{10}{3} Area of annulus: π(8.4^{2}-2.4^{2})=64.8π Area of region: (\\fra..."
               }
-            ]
+            ],
+            "prompt": "DF and BG are arcs of concentric circles with BD and FG lying on the radii of the larger circle. Find the area of the region (round to the nearest hundredth)."
           },
           {
             "number": 4,
@@ -2876,7 +2969,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Area of complete annulus: (24^{2}-12^{2})π=432π Area of dotted region: \\frac{576π}{3}-(\\frac{1}{2})(12)(24\\sqrt{3})=192π-144\\sqrt{3} Area of shaded region: 432π-(192π-144\\sqrt{3})=..."
               }
-            ]
+            ],
+            "prompt": "In the figure, the radii of two concentric circles are 24 cm and 12 cm. mDAE=120^\\circ . If a chord DE of the larger circle intersects the smaller circle only at C, find the area of the shaded region in terms of π."
           }
         ]
       },
@@ -3008,7 +3102,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Yes. \\triangle ABC is a right triangle because the Pythagorean theorem holds: 5^{2}+12^{2}=13^{2}. Angle B is right, so BC is tangent to circle A at point B."
               }
-            ]
+            ],
+            "prompt": "If AB=5, BC=12, and AC=13, is BC tangent to circle A at point B? Explain."
           },
           {
             "number": 2,
@@ -3027,7 +3122,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "BC is tangent to circle A at point B. DC=9 and BC=15."
           },
           {
             "number": 3,
@@ -3046,7 +3142,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "r=8"
               }
-            ]
+            ],
+            "prompt": "Find the radius of the circle."
           },
           {
             "number": 4,
@@ -3065,7 +3162,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "AC=17"
               }
-            ]
+            ],
+            "prompt": "Find AC."
           },
           {
             "number": 5,
@@ -3084,7 +3182,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "There is an equal amount of wood and metal fencing because the distance from each corner to the point of tangency is the same."
               }
-            ]
+            ],
+            "prompt": "A circular pond is fenced on two opposite sides (CD, FE) with wood and the other two sides with metal fencing. If all four sides of fencing are tangent to the pond, is there more wood or metal fencing used?"
           },
           {
             "number": 6,
@@ -3103,7 +3202,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "67^\\circ"
               }
-            ]
+            ],
+            "prompt": "Find x if the line shown is tangent to the circle at point B."
           },
           {
             "number": 7,
@@ -3122,7 +3222,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "PC is tangent to the circle at point C, and CD=DE."
           },
           {
             "number": 8,
@@ -3141,7 +3242,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "\\angle CDE is an inscribed angle, so mCFE is two times the measure of the intercepted arc; mCFE=152^\\circ and mCDE=208^\\circ . Since CD=DE, then mCD=mDE. Therefore, 2x=208^\\circ an..."
               }
-            ]
+            ],
+            "prompt": "Find x (mCD)."
           },
           {
             "number": 9,
@@ -3160,7 +3262,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "mCDE=208^\\circ , so m\\angle CFE must be one half this value since it is an inscribed angle that intercepts the arc. Therefore, y=104^\\circ ."
               }
-            ]
+            ],
+            "prompt": "Find y (m\\angle CFE)."
           },
           {
             "number": 10,
@@ -3179,7 +3282,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Construct two lines tangent to circle A through point B."
           },
           {
             "number": 11,
@@ -3198,7 +3302,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "x=12.17"
               }
-            ]
+            ],
+            "prompt": "Find x, the length of the common tangent line between the two circles (round to the nearest hundredth)."
           },
           {
             "number": 12,
@@ -3217,7 +3322,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Draw radius AE and radius CF. Label the intersection of EF and AC as Z. Triangles AEZ and CFZ are similar since both have right angles (\\angle E and \\angle F) and a pair of vertica..."
               }
-            ]
+            ],
+            "prompt": "EF is tangent to both circles A and C. The radius of circle A is 9, and the radius of circle C is 5. The circles are 2 units apart. Find the length of EF, or x (round to the nearest hundredth)."
           }
         ]
       },
@@ -3348,7 +3454,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "On a piece of paper, draw a circle with center A and a point, C, outside of the circle."
           },
           {
             "number": 2,
@@ -3367,7 +3474,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "2 tangents"
               }
-            ]
+            ],
+            "prompt": "How many tangents can you draw from C to the circle?"
           },
           {
             "number": 3,
@@ -3386,7 +3494,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The lengths are the same; the angles are congruent."
               }
-            ]
+            ],
+            "prompt": "Draw two tangents from C to the circle, and label the tangency points D and E. Fold your paper along the line AC. What do you notice about the lengths of CD and CE? About the measures of \\angle DCA and \\angle ECA?"
           },
           {
             "number": 4,
@@ -3405,7 +3514,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Angle bisector"
               }
-            ]
+            ],
+            "prompt": "AC is the of \\angle DCE."
           },
           {
             "number": 5,
@@ -3424,7 +3534,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "AC=13 by the Pythagorean theorem."
               }
-            ]
+            ],
+            "prompt": "CD and CE are tangent to circle A. Find AC."
           },
           {
             "number": 6,
@@ -3443,7 +3554,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Tangents to a circle from a given point are congruent. So, EF=EG=x, GD=BD=y, and BC=CF=z. This allows us to set up a system of simultaneous linear equations that can be solved for ..."
               }
-            ]
+            ],
+            "prompt": "In the figure, the three segments are tangent to the circle at points B, F, and G. If y=\\frac{2}{3}x, find x, y, and z."
           },
           {
             "number": 7,
@@ -3462,7 +3574,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "In the figure given, the three segments are tangent to the circle at points J, I, and H."
           },
           {
             "number": 8,
@@ -3481,7 +3594,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "GJ=GI and FI=HF because tangents to a circle from a given point are congruent. GF=GI+FI sum of segments GF=GJ+HF by substitution"
               }
-            ]
+            ],
+            "prompt": "Prove GF=GJ+HF."
           },
           {
             "number": 9,
@@ -3500,7 +3614,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "CH=16 cm GJ=GI, FI=HF, CJ=CH tangents to a circle from a given point are congruent. CJ=GC+GJ, CH=CF+HF sum of segments Perimeter =GC+CF+GF GC+CF+(GI+FI) by substitution GC+GI+CF+FI..."
               }
-            ]
+            ],
+            "prompt": "Find the perimeter of \\triangle GCF."
           },
           {
             "number": 10,
@@ -3519,7 +3634,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "7 m"
               }
-            ]
+            ],
+            "prompt": "In the figure given, the three segments are tangent to the circle at points F, B, and G. Find DE."
           },
           {
             "number": 11,
@@ -3538,7 +3654,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "EF is tangent to circle A. If points C and D are the intersection points of circle A and any line parallel to EF, answer the following."
           },
           {
             "number": 12,
@@ -3557,7 +3674,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Yes. No matter what, \\triangle ACD is an isosceles triangle, and AG is the altitude to the base of the triangle and, therefore, the angle bisector of the angle opposite the base."
               }
-            ]
+            ],
+            "prompt": "Does CG=GD for any line parallel to EF? Explain."
           },
           {
             "number": 13,
@@ -3576,7 +3694,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Yes. If they approached B at different times, then at some point G would not be on the same line as C and D, but G is defined to be contained in the chord CD."
               }
-            ]
+            ],
+            "prompt": "Suppose that CD coincides with EF. Would C, G, and D all coincide with B?"
           },
           {
             "number": 14,
@@ -3595,7 +3714,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "90^\\circ . A line tangent to a circle is perpendicular to the radius at the point of tangency."
               }
-            ]
+            ],
+            "prompt": "Suppose C, G, and D have now reached B, so CD is tangent to the circle. What is the angle between CD and AB?"
           },
           {
             "number": 15,
@@ -3614,7 +3734,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The measure of \\angle PTA is 90^\\circ because a line tangent to a circle is perpendicular to a radius through the tangency point."
               }
-            ]
+            ],
+            "prompt": "Draw another line tangent to the circle from some point, P, in the exterior of the circle. If the point of tangency is point T, what is the measure of \\angle PTA?"
           },
           {
             "number": 16,
@@ -3633,7 +3754,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Prove BE\\parallel CA. m\\angle ABE=m\\angle EBase angles of an isosceles triangle are equal in measure. m\\angle E=\\frac{1}{2}m\\angle BAD Inscribed angle is half the central angle tha..."
               }
-            ]
+            ],
+            "prompt": "The segments are tangent to circle A at points B and D. ED is a diameter of the circle."
           },
           {
             "number": 17,
@@ -3652,7 +3774,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "CB=CD Tangents to a circle from a given point are equal in measure. AB=ADRadii are congruent. Quadrilateral ABCD is a kite because two pairs of adjacent sides are congruent."
               }
-            ]
+            ],
+            "prompt": "Prove quadrilateral ABCD is a kite."
           },
           {
             "number": 18,
@@ -3671,7 +3794,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "m\\angle DBH=m\\angle DCB"
               }
-            ]
+            ],
+            "prompt": "In the diagram shown, BH is tangent to the circle at point B. What is the relationship between \\angle DBH, the angle between the tangent and a chord, and the arc subtended by that chord and its inscribed angle \\angle DCB?"
           }
         ]
       },
@@ -3802,7 +3926,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "In Problems 1—9, solve for a, b, and/or c."
           },
           {
             "number": 2,
@@ -3821,7 +3946,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "BH is tangent to circle A. DF is a diameter. Find the angle measurements."
           },
           {
             "number": 3,
@@ -3840,7 +3966,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "50^\\circ"
               }
-            ]
+            ],
+            "prompt": "m\\angle BCD"
           },
           {
             "number": 4,
@@ -3859,7 +3986,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "80^\\circ"
               }
-            ]
+            ],
+            "prompt": "m\\angle BAF"
           },
           {
             "number": 5,
@@ -3878,7 +4006,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "40^\\circ"
               }
-            ]
+            ],
+            "prompt": "m\\angle BDA"
           },
           {
             "number": 6,
@@ -3897,7 +4026,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "40^\\circ"
               }
-            ]
+            ],
+            "prompt": "m\\angle FBH"
           },
           {
             "number": 7,
@@ -3916,7 +4046,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "98^\\circ"
               }
-            ]
+            ],
+            "prompt": "m\\angle BGF"
           },
           {
             "number": 8,
@@ -3935,7 +4066,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(i)m\\angle EBG=90^\\circ Tangent perpendicular to radius f=90-eSum of angles m\\angle ECB=90^\\circ Angle inscribed in semicircle In \\triangle ECB, b+90+e=180Sum of angles of a triang..."
               }
-            ]
+            ],
+            "prompt": "BG is tangent to circle A. BE is a diameter. Prove: (i) f=a and (ii) d=c."
           }
         ]
       },
@@ -4066,7 +4198,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "In Problems 1—4, find x."
           },
           {
             "number": 2,
@@ -4085,7 +4218,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "60=\\frac{1}{2}(y+20) \\frac{x+(85+x)}{2}=90 x=70, y=100"
               }
-            ]
+            ],
+            "prompt": "Find x (mCE) and y (mDG)."
           },
           {
             "number": 3,
@@ -4104,7 +4238,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "3:4"
               }
-            ]
+            ],
+            "prompt": "Find the ratio of mEC:mDB."
           },
           {
             "number": 4,
@@ -4123,7 +4258,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "x=108"
               }
-            ]
+            ],
+            "prompt": "BC is a diameter of circle A. Find x."
           },
           {
             "number": 5,
@@ -4142,7 +4278,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Extend the radii to form two diameters. Let the measure of the central angle be equal to x^\\circ . The measure BC=x^\\circ because the angle measure of the arc intercepted by a cent..."
               }
-            ]
+            ],
+            "prompt": "Show that the general formula we discovered in Example 1 also works for central angles. (Hint: Extend the radii to form two diameters, and use relationships between central angles and arc measure.)"
           }
         ]
       },
@@ -4272,7 +4409,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "m\\angle C=2(tan^{-1}\\frac{4}{12})≈36.87^\\circ Let mDE be x. \\frac{(360^\\circ -x)-x}{2}=36.87^\\circ x=143.13^\\circ Therefore, mDE=143.13^\\circ , and the area is 48 square units ."
               }
-            ]
+            ],
+            "prompt": "The radius of circle A is 4. DC and CE are tangent to the circle with DC=12. Find mDE and the area of quadrilateral DAEC rounded to the nearest hundredth."
           },
           {
             "number": 2,
@@ -4291,7 +4429,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "If the angle formed between two tangent lines to the circle is 60^\\circ , how long is the segment between the point of intersection of the tangent lines and the center of the circl..."
               }
-            ]
+            ],
+            "prompt": "The radius of a circle is 6."
           },
           {
             "number": 3,
@@ -4310,7 +4449,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "\\frac{6}{\\sqrt{3}}≈3.46"
               }
-            ]
+            ],
+            "prompt": "If the angle formed between the two tangent lines is 120^\\circ , how long are each of the segments between the point of intersection of the tangent lines and the point of tangency? Round to the nearest hundredth."
           },
           {
             "number": 4,
@@ -4329,7 +4469,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Join AD, AE, BD, and BE. AD=AE Radii of same circle AC=ACReflexive Property m\\angle ADC=m\\angle AEC=90^\\circ Radii perpendicular to tangent lines at point of tangency \\triangle ADC..."
               }
-            ]
+            ],
+            "prompt": "DC and EC are tangent to circle A. Prove BD=BE."
           }
         ]
       },
@@ -4459,7 +4600,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "x(10-x)=(3)(8) FE=3, BF=4, FC=6"
               }
-            ]
+            ],
+            "prompt": "In the circle shown, DE=11, BC=10, and DF=8. Find FE, BF, FC."
           },
           {
             "number": 2,
@@ -4478,7 +4620,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "In the circle shown, mDBG=150^\\circ , mDB=30^\\circ , m\\angle CEF=60^\\circ , DF=8, DB=4, and GF=12."
           },
           {
             "number": 3,
@@ -4497,7 +4640,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "60^\\circ"
               }
-            ]
+            ],
+            "prompt": "Find m\\angle GDB."
           },
           {
             "number": 4,
@@ -4516,7 +4660,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "m\\angle DBF=m\\angle CEFInscribed angle \\angle DBF is half the measure of intercepted arc, DC and \\angle CEF formed by a tangent line and a secant line is also half the measure of t..."
               }
-            ]
+            ],
+            "prompt": "Prove \\triangle DBF ~\\triangle ECF."
           },
           {
             "number": 5,
@@ -4535,7 +4680,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "\\frac{8}{GE+12}=\\frac{4}{CE} , or 2CE=GE+12"
               }
-            ]
+            ],
+            "prompt": "Set up a proportion using CE and GE."
           },
           {
             "number": 6,
@@ -4554,7 +4700,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "CE^{2}=GE(GE+20)"
               }
-            ]
+            ],
+            "prompt": "Set up an equation with CE and GE using a theorem for segment lengths from this section."
           }
         ]
       },
@@ -4685,7 +4832,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(x-\\frac{1}{2})^{2}+(y-\\frac{3}{7})^{2}=13"
               }
-            ]
+            ],
+            "prompt": "Write the equation for a circle with center (\\frac{1}{2}, \\frac{3}{7}) and radius \\sqrt{13}."
           },
           {
             "number": 2,
@@ -4704,7 +4852,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The center is located at (0,11), and the radius is 12."
               }
-            ]
+            ],
+            "prompt": "What is the center and radius of the circle given by the equation x^{2}+(y-11)^{2}=144?"
           },
           {
             "number": 3,
@@ -4723,7 +4872,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "A circle is given by the equation x^{2}+y^{2}=100. Which of the following points are on the circle?"
           },
           {
             "number": 4,
@@ -4742,7 +4892,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "This point is on the circle."
               }
-            ]
+            ],
+            "prompt": "(0, 10)"
           },
           {
             "number": 5,
@@ -4761,7 +4912,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "This point is on the circle."
               }
-            ]
+            ],
+            "prompt": "(-8, 6)"
           },
           {
             "number": 6,
@@ -4780,7 +4932,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "This point is not on the circle."
               }
-            ]
+            ],
+            "prompt": "(-10, -10)"
           },
           {
             "number": 7,
@@ -4799,7 +4952,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "This point is not on the circle."
               }
-            ]
+            ],
+            "prompt": "(45, 55)"
           },
           {
             "number": 8,
@@ -4818,7 +4972,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "This point is on the circle."
               }
-            ]
+            ],
+            "prompt": "(-10, 0)"
           },
           {
             "number": 9,
@@ -4837,7 +4992,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Determine the center and radius of each circle."
           },
           {
             "number": 10,
@@ -4856,7 +5012,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The center is at (0, 0), and the radius is 5."
               }
-            ]
+            ],
+            "prompt": "3x^{2}+3y^{2}=75"
           },
           {
             "number": 11,
@@ -4875,7 +5032,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The center is at (-1, -2), and the radius is \\sqrt{5}."
               }
-            ]
+            ],
+            "prompt": "2(x+1)^{2}+2(y+2)^{2}=10"
           },
           {
             "number": 12,
@@ -4894,7 +5052,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The center is at (2, 9), and the radius is 4."
               }
-            ]
+            ],
+            "prompt": "4(x-2)^{2}+4(y-9)^{2}-64=0"
           },
           {
             "number": 13,
@@ -4913,7 +5072,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "A circle has center (-13, π) and passes through the point (2, π)."
           },
           {
             "number": 14,
@@ -4932,7 +5092,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(x+13)^{2}+(y-π)^{2}=r^{2}(2+13)^{2}+(π-π)^{2}=r^{2}15^{2}=r^{2}15=r"
               }
-            ]
+            ],
+            "prompt": "What is the radius of the circle?"
           },
           {
             "number": 15,
@@ -4951,7 +5112,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(x+13)^{2}+(y-π)^{2}=225"
               }
-            ]
+            ],
+            "prompt": "Write the equation of the circle."
           },
           {
             "number": 16,
@@ -4970,7 +5132,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Two points in the plane, A(19, 4) and B(19, -6), represent the endpoints of the diameter of a circle."
           },
           {
             "number": 17,
@@ -4989,7 +5152,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(19, -1)"
               }
-            ]
+            ],
+            "prompt": "What is the center of the circle?"
           },
           {
             "number": 18,
@@ -5008,7 +5172,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "What is the radius of the circle?"
           },
           {
             "number": 19,
@@ -5027,7 +5192,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(x-19)^{2}+(y+1)^{2}=25"
               }
-            ]
+            ],
+            "prompt": "Write the equation of the circle."
           },
           {
             "number": 20,
@@ -5046,7 +5212,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(x+7)^{2}+(y+5)^{2}=9"
               }
-            ]
+            ],
+            "prompt": "Write the equation of the circle shown below."
           },
           {
             "number": 21,
@@ -5065,7 +5232,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(x-3)^{2}+(y+2)^{2}=1"
               }
-            ]
+            ],
+            "prompt": "Write the equation of the circle shown below."
           },
           {
             "number": 22,
@@ -5084,7 +5252,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Consider the circles with the following equations:"
           },
           {
             "number": 23,
@@ -5103,7 +5272,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "x^{2}+y^{2}=2 and"
           },
           {
             "number": 24,
@@ -5122,7 +5292,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "(x-3)^{2}+(y-3)^{2}=32."
           },
           {
             "number": 25,
@@ -5141,7 +5312,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The radii are \\sqrt{2} and \\sqrt{32}."
               }
-            ]
+            ],
+            "prompt": "What are the radii of the two circles?"
           },
           {
             "number": 26,
@@ -5160,7 +5332,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "\\sqrt{32}-\\sqrt{2}=4\\sqrt{2}-\\sqrt{2}=3\\sqrt{2}"
               }
-            ]
+            ],
+            "prompt": "What is the distance between their centers?"
           },
           {
             "number": 27,
@@ -5179,7 +5352,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The circles must be tangent because there is just one point that is common to both graphs (or there is only one solution that satisfies both equations), i.e., (-1, -1)."
               }
-            ]
+            ],
+            "prompt": "Make a rough sketch of the two circles to explain why the circles must be tangent to one another."
           }
         ]
       },
@@ -5310,7 +5484,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Identify the centers and radii of the following circles."
           },
           {
             "number": 2,
@@ -5329,7 +5504,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The center is (-25,0), and the radius is 1."
               }
-            ]
+            ],
+            "prompt": "(x+25)^{2}+y^{2}=1"
           },
           {
             "number": 3,
@@ -5348,7 +5524,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(x+1)^{2}+(y-4)^{2}=25 The center is (-1,4), and the radius is 5."
               }
-            ]
+            ],
+            "prompt": "x^{2}+2x+y^{2}-8y=8"
           },
           {
             "number": 4,
@@ -5367,7 +5544,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(x-10)^{2}+(y-5)^{2}=100 The center is (10,5), and the radius is 10."
               }
-            ]
+            ],
+            "prompt": "x^{2}-20x+y^{2}-10y+25=0"
           },
           {
             "number": 5,
@@ -5386,7 +5564,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The center is (0,0), and the radius is \\sqrt{19}."
               }
-            ]
+            ],
+            "prompt": "x^{2}+y^{2}=19"
           },
           {
             "number": 6,
@@ -5405,7 +5584,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(x+\\frac{1}{2})^{2}+(y+\\frac{1}{2})^{2}=\\frac{1}{4} The center is (-\\frac{1}{2},-\\frac{1}{2}), and the radius is \\frac{1}{2}."
               }
-            ]
+            ],
+            "prompt": "x^{2}+x+y^{2}+y=-\\frac{1}{4}"
           },
           {
             "number": 7,
@@ -5424,7 +5604,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Sketch graphs of the following equations."
           },
           {
             "number": 8,
@@ -5443,7 +5624,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(x+5)^{2}+(y-2)^{2}=-4 The right side of the equation is negative, so its graph cannot be a circle. It is an empty set, and since there are no solutions, there is nothing to graph."
               }
-            ]
+            ],
+            "prompt": "x^{2}+y^{2}+10x-4y+33=0"
           },
           {
             "number": 9,
@@ -5462,7 +5644,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(x+7)^{2}+(y-8)^{2}=9 The graph of the equation is a circle with center (-7,8) and radius 3."
               }
-            ]
+            ],
+            "prompt": "x^{2}+y^{2}+14x-16y+104=0"
           },
           {
             "number": 10,
@@ -5481,7 +5664,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(x+2)^{2}+(y-5)^{2}=0 The graph of this equation is a point at (-2,5)."
               }
-            ]
+            ],
+            "prompt": "x^{2}+y^{2}+4x-10y+29=0"
           },
           {
             "number": 11,
@@ -5500,7 +5684,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(x+2)^{2}+(y-4)^{2}=49 This graph of this equation is a circle with center (-2,4) and radius 7. (x-3)^{2}+(y+8)^{2}=36 This graph of this equation is a circle with center (3,-8) an..."
               }
-            ]
+            ],
+            "prompt": "Chante claims that two circles given by (x+2)^{2}+(y-4)^{2}=49 and x^{2}+y^{2}-6x+16y+37=0 are externally tangent. She is right. Show that she is."
           },
           {
             "number": 12,
@@ -5519,7 +5704,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Constructions will vary. Ensure that students have drawn two circles such that the circle with center A is in the interior and tangent to the original circle."
               }
-            ]
+            ],
+            "prompt": "Draw a circle. Randomly select a point in the interior of the circle; label the point A. Construct the greatest radius circle with center A that lies within the circular region defined by the original circle. Hint: Draw a line through the center, the circle, and point A."
           }
         ]
       },
@@ -5650,7 +5836,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Consider the circle (x-1)^{2}+(y-2)^{2}=16. There are two lines tangent to this circle having a slope of 0."
           },
           {
             "number": 2,
@@ -5669,7 +5856,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(1,6) and (1,-2)"
               }
-            ]
+            ],
+            "prompt": "Find the coordinates of the points of tangency."
           },
           {
             "number": 3,
@@ -5688,7 +5876,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "y=6 and y=-2"
               }
-            ]
+            ],
+            "prompt": "Find the equations of the two tangent lines."
           },
           {
             "number": 4,
@@ -5707,7 +5896,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Consider the circle x^{2}-4x+y^{2}+10y+13=0. There are two lines tangent to this circle having a slope of \\frac{2}{3}."
           },
           {
             "number": 5,
@@ -5726,7 +5916,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(\\frac{-8\\sqrt{13}+26}{13},\\frac{12\\sqrt{13}-65}{13}) and (\\frac{8\\sqrt{13}+26}{13},\\frac{-12\\sqrt{13}-65}{13}), or approximately (-0.2,-1.7) and (4.2,-8.3)"
               }
-            ]
+            ],
+            "prompt": "Find the coordinates of the two points of tangency."
           },
           {
             "number": 6,
@@ -5745,7 +5936,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "y-\\frac{12\\sqrt{13}-65}{13}=\\frac{2}{3}(x+\\frac{8\\sqrt{13}+26}{13}) and y+\\frac{12\\sqrt{13}-65}{13}=\\frac{2}{3}(x-\\frac{8\\sqrt{13}+26}{13}), or approximately y+1.7=\\frac{2}{3}(x+0...."
               }
-            ]
+            ],
+            "prompt": "Find the equations of the two tangent lines."
           },
           {
             "number": 7,
@@ -5764,7 +5956,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(0,1) and (1,0)"
               }
-            ]
+            ],
+            "prompt": "What are the coordinates of the points of tangency of the two tangent lines through the point (1, 1) each tangent to the circle x^{2}+y^{2}=1?"
           },
           {
             "number": 8,
@@ -5783,7 +5976,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(0,-1) and (-1,0)"
               }
-            ]
+            ],
+            "prompt": "What are the coordinates of the points of tangency of the two tangent lines through the point (-1,-1) each tangent to the circle x^{2}+y^{2}=1?"
           },
           {
             "number": 9,
@@ -5802,7 +5996,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "y=-\\frac{\\sqrt{35}}{35}(x-6)"
               }
-            ]
+            ],
+            "prompt": "What is the equation of the tangent line to the circle x^{2}+y^{2}=1 through the point (6, 0)?"
           },
           {
             "number": 10,
@@ -5821,7 +6016,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Yes, D'Andre is correct. The point (-1,5) is on the circle, and the slopes are negative reciprocals."
               }
-            ]
+            ],
+            "prompt": "D'Andre said that a circle with equation (x-2)^{2}+(y-7)^{2}=13 has a tangent line represented by the equation y-5=-\\frac{3}{2}(x+1). Is he correct? Explain."
           },
           {
             "number": 11,
@@ -5840,7 +6036,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Kamal gives the following proof that y-1=\\frac{8}{9}(x+10) is the equation of a line that is tangent to a circle given by"
           },
           {
             "number": 12,
@@ -5859,7 +6056,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "(x+1)^{2}+(y-9)^{2}=145."
           },
           {
             "number": 13,
@@ -5878,7 +6076,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "The circle has center (-1, 9) and radius 12.04. The point (-10, 1) is on the circle because"
           },
           {
             "number": 14,
@@ -5897,7 +6096,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "(-10+1)^{2}+(1-9)^{2}=(-9)^{2}+(-8)^{2}=145."
           },
           {
             "number": 15,
@@ -5916,7 +6116,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "The slope of the radius is \\frac{9 - 1}{-1 + 10}=\\frac{8}{9}; therefore, the equation of the tangent line is y-1=\\frac{8}{9}(x+10)."
           },
           {
             "number": 16,
@@ -5935,7 +6136,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Kamal used the slope of the radius as the slope of the tangent line. To be tangent, the slopes must be negative reciprocals of one another, not the same."
               }
-            ]
+            ],
+            "prompt": "Kerry said that Kamal has made an error. What was Kamal's error? Explain what he did wrong."
           },
           {
             "number": 17,
@@ -5954,7 +6156,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "y-1=-\\frac{9}{8}(x+10)"
               }
-            ]
+            ],
+            "prompt": "What should the equation for the tangent line be?"
           },
           {
             "number": 18,
@@ -5973,7 +6176,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The given circle has center (-3,1) and radius 9. A circle that is tangent to both axes in the first quadrant with radius 3 must have a center at (3,3). Then, a translation of x^{2}..."
               }
-            ]
+            ],
+            "prompt": "Describe a similarity transformation that maps a circle given by x^{2}+6x+y^{2}-2y=71 to a circle of radius 3 that is tangent to both axes in the first quadrant."
           }
         ]
       },
@@ -6104,7 +6308,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "By the inscribed angle theorem, m\\angle BDC=\\frac{1}{2}m\\angle BOC, so m\\angle BDC=65^\\circ . Opposite angles of cyclic quadrilaterals are supplementary, so m\\angle BEC+65^\\circ =1..."
               }
-            ]
+            ],
+            "prompt": "Quadrilateral BDCE is cyclic, O is the center of the circle, and m\\angle BOC=130^\\circ . Find m\\angle BEC."
           },
           {
             "number": 2,
@@ -6123,7 +6328,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Using the two-chord power rule, (AX)(XD)=(FX)(XE). 8(3)=6(XE); thus, XE=4. The area of a cyclic quadrilateral is equal to the product of the lengths of the diagonals and the sine o..."
               }
-            ]
+            ],
+            "prompt": "Quadrilateral FAED is cyclic, AX=8, FX=6, XD=3, and m\\angle AXE=130^\\circ . Find the area of quadrilateral FAED."
           },
           {
             "number": 3,
@@ -6142,7 +6348,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Quadrilateral BCDE is cyclic, so opposite angles are supplementary. s+72^\\circ =180^\\circ s=108^\\circ Parallel chords BE and CD intercept congruent arcs CB and ED. By angle additio..."
               }
-            ]
+            ],
+            "prompt": "In the diagram below, BE\\parallel CD and m\\angle BED=72^\\circ . Find the value of s and t."
           },
           {
             "number": 4,
@@ -6161,7 +6368,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Triangle BCD is inscribed in a semicircle. By Thales' theorem, \\angle BDC is a right angle. By the angle sum of a triangle, m\\angle DBC=65^\\circ . Quadrilateral BCED is cyclic, so ..."
               }
-            ]
+            ],
+            "prompt": "In the diagram below, BC is the diameter, m\\angle BCD=25^\\circ , and CE\\cong DE. Find m\\angle CED and m\\angle EDC."
           },
           {
             "number": 5,
@@ -6180,7 +6388,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Draw diameter BAX such that X is on the circle, and then draw DX. Triangle BDX is inscribed in a semicircle; therefore, angle BDX is a right angle. By the angle sum of a triangle, ..."
               }
-            ]
+            ],
+            "prompt": "In circle A, m\\angle ABD=15^\\circ . Find m\\angle BCD."
           },
           {
             "number": 6,
@@ -6199,7 +6408,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Draw point X on major arc NP, and draw chords XN and XP to form cyclic quadrilateral QNXP. By the inscribed angle theorem, m\\angle NXP=\\frac{1}{2}m\\angle NOP, so m\\angle NXP=56^\\ci..."
               }
-            ]
+            ],
+            "prompt": "Given the diagram below, O is the center of the circle. If m\\angle NOP=112^\\circ , find m\\angle PQE."
           },
           {
             "number": 7,
@@ -6218,7 +6428,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Using the angle sum of a triangle, m\\angle FBE=43^\\circ . Angles GBC and FBE are vertical angles and, therefore, have the same measure. Angles GBF and EBC are also vertical angles ..."
               }
-            ]
+            ],
+            "prompt": "Given the angle measures as indicated in the diagram below, prove that vertices C, B, E, and D lie on a circle."
           },
           {
             "number": 8,
@@ -6237,7 +6448,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Angles HKJ and LKJ form a linear pair and are supplementary, so angle LKJ has measure of 98^\\circ . Opposite angles of a cyclic quadrilateral are supplementary; thus, m\\angle JML=m..."
               }
-            ]
+            ],
+            "prompt": "In the diagram below, quadrilateral JKLM is cyclic. Find the value of n."
           },
           {
             "number": 9,
@@ -6256,7 +6468,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Yes. A cyclic quadrilateral has vertices that lie on a circle, which means that the vertices are equidistant from the center of the circle. The perpendicular bisector of a segment ..."
               }
-            ]
+            ],
+            "prompt": "Do all four perpendicular bisectors of the sides of a cyclic quadrilateral pass through a common point? Explain."
           },
           {
             "number": 10,
@@ -6275,7 +6488,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Quadrilaterals GHBA and EFBA are both cyclic since their vertices lie on circles. Opposite angles in cyclic quadrilaterals are supplementary. m\\angle GAB+m\\angle FHG=180^\\circ m\\an..."
               }
-            ]
+            ],
+            "prompt": "The circles in the diagram below intersect at points A and B. If m\\angle FHG=100^\\circ and m\\angle HGE=70^\\circ , find m\\angle GEF and m\\angle EFH."
           },
           {
             "number": 11,
@@ -6294,7 +6508,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "A quadrilateral is called bicentric if it is both cyclic and possesses an inscribed circle. (See diagram to the right.)"
           },
           {
             "number": 12,
@@ -6313,7 +6528,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Since a bicentric quadrilateral must be also be cyclic, its opposite angles must be supplementary."
               }
-            ]
+            ],
+            "prompt": "What can be concluded about the opposite angles of a bicentric quadrilateral? Explain."
           },
           {
             "number": 13,
@@ -6332,7 +6548,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Two tangents to a circle from an exterior point form congruent segments. The distances from a vertex of the quadrilateral to the tangent points where it meets the inscribed circle ..."
               }
-            ]
+            ],
+            "prompt": "Each side of the quadrilateral is tangent to the inscribed circle. What does this tell us about the segments contained in the sides of the quadrilateral?"
           },
           {
             "number": 14,
@@ -6351,7 +6568,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "See diagram on the right."
               }
-            ]
+            ],
+            "prompt": "Based on the relationships highlighted in part (b), there are four pairs of congruent segments in the diagram. Label segments of equal length with a, b, c, and d."
           },
           {
             "number": 15,
@@ -6370,7 +6588,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The sum of the lengths of one pair of opposite sides of the bicentric quadrilateral is equal to the sum of the lengths of the other pair of opposite sides: (a+b)+(c+d)=(d+a)+(b+c)."
               }
-            ]
+            ],
+            "prompt": "What do you notice about the opposite sides of the bicentric quadrilateral?"
           },
           {
             "number": 16,
@@ -6389,7 +6608,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Angles RQX and SQR are congruent since they are the same angle. Since it was given that \\angle QRT\\cong \\angle QSR, it follows that \\triangle QXR ~\\triangle QRS by AA similarity cr..."
               }
-            ]
+            ],
+            "prompt": "Quadrilateral PSRQ is cyclic such that PQ is the diameter of the circle. If \\angle QRT\\cong \\angle QSR, prove that \\angle PTR is a right angle, and show that S, X, T, and P lie on a circle."
           }
         ]
       },
@@ -6520,7 +6740,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "It says that the sum of the two shorter distances is equal to the longer distance."
               }
-            ]
+            ],
+            "prompt": "An equilateral triangle is inscribed in a circle. If P is a point on the circle, what does Ptolemy's theorem have to say about the distances from this point to the three vertices of the triangle?"
           },
           {
             "number": 2,
@@ -6539,7 +6760,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "\\frac{1}{2}AC\\cdot BD=108AC\\cdot BD=AB\\cdot CD+BC\\cdot AD=216 Since AB=BC and AD=CD, then AC\\cdot BD=AB\\cdot CD+AB\\cdot CD 2(AB\\cdot CD)=216 AB\\cdot CD=108. Let x be the length of ..."
               }
-            ]
+            ],
+            "prompt": "Kite ABCD is inscribed in a circle. The kite has an area of 108 sq. in., and the ratio of the lengths of the non-congruent adjacent sides is 3∶1. What is the perimeter of the kite?"
           },
           {
             "number": 3,
@@ -6558,7 +6780,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "We get a^{2}+b^{2}=c^{2}, the Pythagorean theorem."
               }
-            ]
+            ],
+            "prompt": "Draw a right triangle with leg lengths a and b and hypotenuse length c. Draw a rotated copy of the triangle such that the figures form a rectangle. What does Ptolemy have to say about this rectangle?"
           },
           {
             "number": 4,
@@ -6577,7 +6800,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "b^{2}=b+1, so b=\\frac{\\sqrt{5}+1}{2}. (This is the famous golden ratio!)"
               }
-            ]
+            ],
+            "prompt": "Draw a regular pentagon of side length 1 in a circle. Let b be the length of its diagonals. What does Ptolemy's theorem say about the quadrilateral formed by four of the vertices of the pentagon?"
           },
           {
             "number": 5,
@@ -6596,7 +6820,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Since ABCD is a rectangle, then AD\\cdot AB=\\sqrt{300}, and the diagonals are diameters of the circle. The length of AB=2rsin60, and the length of AD=2rsin30, so \\frac{AB}{AD}=\\sqrt..."
               }
-            ]
+            ],
+            "prompt": "The area of the inscribed quadrilateral is \\sqrt{300} mm^{2}. Determine the circumference of the circle."
           },
           {
             "number": 6,
@@ -6615,7 +6840,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Use scaffolded questions below as needed."
               }
-            ]
+            ],
+            "prompt": "Extension: Suppose x and y are two acute angles, and the circle has a diameter of 1 unit. Find a, b, c, and d in terms of x and y. Apply Ptolemy's theorem, and determine the exact value of sin(75)."
           },
           {
             "number": 7,
@@ -6634,7 +6860,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "If the diameter is 1, this is a right triangle because it is inscribed in a semicircle, so sin(x)=\\frac{a}{1}, or 1=\\frac{a}{sin(x)}. Since the diameter is 1, the diameter is equal..."
               }
-            ]
+            ],
+            "prompt": "Explain why \\frac{a}{sin(x)} equals the diameter of the circle."
           },
           {
             "number": 8,
@@ -6653,7 +6880,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "a=sin(x)"
               }
-            ]
+            ],
+            "prompt": "If the circle has a diameter of 1, what is a?"
           },
           {
             "number": 9,
@@ -6672,7 +6900,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Since both are right triangles, the side lengths are a=sin(x), b=cos(x), c=cos(y), and d=sin(y)."
               }
-            ]
+            ],
+            "prompt": "Use Thales' theorem to write the side lengths in the original diagram in terms of x and y."
           },
           {
             "number": 10,
@@ -6691,7 +6920,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "sin(x+y)"
               }
-            ]
+            ],
+            "prompt": "If one diagonal of the cyclic quadrilateral is 1, what is the other?"
           },
           {
             "number": 11,
@@ -6710,7 +6940,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "1∙sin(x+y)=sin(x)cos(y)+cos(x)sin(y)"
               }
-            ]
+            ],
+            "prompt": "What does Ptolemy's theorem give?"
           },
           {
             "number": 12,
@@ -6729,7 +6960,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "sin(75)=sin(30+45)=sin(30)cos(45)+cos(30)sin(45)=\\frac{1}{2}∙\\frac{\\sqrt{2}}{2}+\\frac{\\sqrt{3}}{2}∙\\frac{\\sqrt{2}}{2}=\\frac{\\sqrt{2}+\\sqrt{6}}{4}"
               }
-            ]
+            ],
+            "prompt": "Using the result from part (e), determine the exact value of sin(75)."
           }
         ]
       },

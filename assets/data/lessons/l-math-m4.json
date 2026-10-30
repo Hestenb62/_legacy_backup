@@ -103,7 +103,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "A robot from the video now moves around an empty 100 ft. by 100 ft. storage room at a constant speed. If the robot crosses (10,10) at 1 second and (30,30) at 6 seconds:"
           },
           {
             "number": 2,
@@ -122,7 +123,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Plot the points, and draw the segment connecting the points."
           },
           {
             "number": 3,
@@ -141,7 +143,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "It changed 20 ft."
               }
-            ]
+            ],
+            "prompt": "What was the change in the x-coordinate?"
           },
           {
             "number": 4,
@@ -160,7 +163,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "It changed 20 ft."
               }
-            ]
+            ],
+            "prompt": "What was the change in the y-coordinate?"
           },
           {
             "number": 5,
@@ -179,7 +183,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The ratio of change is 1:1."
               }
-            ]
+            ],
+            "prompt": "What is the ratio of the change in y to the change in x?"
           },
           {
             "number": 6,
@@ -198,7 +203,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "It traveled approximately 28.28 ft."
               }
-            ]
+            ],
+            "prompt": "How far did the robot travel between the two points?"
           },
           {
             "number": 7,
@@ -217,7 +223,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The speed was approximately 5.66 ft/sec."
               }
-            ]
+            ],
+            "prompt": "What was the speed of the robot?"
           },
           {
             "number": 8,
@@ -236,7 +243,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The robot started at position (6, 6)."
               }
-            ]
+            ],
+            "prompt": "Where did the robot start?"
           },
           {
             "number": 9,
@@ -255,7 +263,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Your mother received a robot vacuum cleaner as a gift and wants you to help her program it to clean a vacant 30 ft. by 30 ft. room. If the vacuum is at position (12,9) at time t=2 seconds and at position (24,18) at t=5 seconds, answer the following:"
           },
           {
             "number": 10,
@@ -274,7 +283,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "It traveled 15 ft."
               }
-            ]
+            ],
+            "prompt": "How far did the robot travel over 3 seconds?"
           },
           {
             "number": 11,
@@ -293,7 +303,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The speed is 5 ft/sec."
               }
-            ]
+            ],
+            "prompt": "What is the constant speed of the robot?"
           },
           {
             "number": 12,
@@ -312,7 +323,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The ratio of change is \\frac{4}{3}, or y=\\frac{3}{4}x."
               }
-            ]
+            ],
+            "prompt": "What is the ratio of the change in the x-coordinate to the change in the y-coordinate?"
           },
           {
             "number": 13,
@@ -331,7 +343,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "It started at position (4,3)."
               }
-            ]
+            ],
+            "prompt": "Where did the robot start?"
           },
           {
             "number": 14,
@@ -350,7 +363,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "It will be at position (16, 12). I know that each second the x-value changed 4 units, and the y-value changed 3 units. The x-value started at 4; therefore, in 3 seconds, it increas..."
               }
-            ]
+            ],
+            "prompt": "Where will the robot be at t=3 seconds? Explain how you know."
           },
           {
             "number": 15,
@@ -369,7 +383,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The location of impact is (30, 22\\frac{1}{2})."
               }
-            ]
+            ],
+            "prompt": "At what location will the robot hit the wall?"
           },
           {
             "number": 16,
@@ -388,7 +403,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "It will hit the wall at about t=6.5 seconds."
               }
-            ]
+            ],
+            "prompt": "At what time will the robot hit the wall?"
           },
           {
             "number": 17,
@@ -407,7 +423,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "A baseball player hits a ball at home plate at position (0,0). It travels at a constant speed across first base at position (90,0) in 2 seconds."
           },
           {
             "number": 18,
@@ -426,7 +443,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The speed was 45 ft/sec."
               }
-            ]
+            ],
+            "prompt": "What was the speed of the ball?"
           },
           {
             "number": 19,
@@ -445,7 +463,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "It will cross the fence in approximately 6.67 seconds. I know because the distance is 300 feet at a constant speed of 45 ft/sec. 300÷45≈6.67."
               }
-            ]
+            ],
+            "prompt": "When will it cross the fence at position (300,0)? Explain how you know."
           },
           {
             "number": 20,
@@ -464,7 +483,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "It will pick up that ball in approximately 10 seconds."
               }
-            ]
+            ],
+            "prompt": "The tennis team has a robot that picks up tennis balls. The tennis court is 36 feet wide and 78 feet long. The robot starts at position (8,10) and is at position (16,20) at t=4 seconds after moving at a constant speed. When will it pick up the ball located at position (28,35)?"
           }
         ]
       },
@@ -595,7 +615,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(-1, -1), (-3,4), and (5, -1)"
               }
-            ]
+            ],
+            "prompt": "How many half-planes intersect to form this region?"
           },
           {
             "number": 2,
@@ -614,7 +635,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The region is above and includes y=-1, is to the right of and includes x=-3, and extends without bound to the top and right."
               }
-            ]
+            ],
+            "prompt": "Describe the region in words."
           },
           {
             "number": 3,
@@ -633,7 +655,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Region T is shown to the right."
           },
           {
             "number": 4,
@@ -652,7 +675,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(-1, -4), (-1,6), (3,6), and (3, -4)"
               }
-            ]
+            ],
+            "prompt": "Write the coordinates of the vertices."
           },
           {
             "number": 5,
@@ -671,7 +695,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "((x,y)-1≤x≤3, -4≤y≤6)"
               }
-            ]
+            ],
+            "prompt": "Write an inequality that describes the region."
           },
           {
             "number": 6,
@@ -690,7 +715,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The diagonal is approximately 10.8 units long."
               }
-            ]
+            ],
+            "prompt": "What is the length of the diagonals?"
           },
           {
             "number": 7,
@@ -709,7 +735,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Answers will vary. (1,1) lies on the diagonal and in the interior of region T."
               }
-            ]
+            ],
+            "prompt": "Give the coordinates of a point that is both in the region and on one of the diagonals."
           },
           {
             "number": 8,
@@ -728,7 +755,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Jack wants to plant a garden in his backyard. His yard is 120 feet wide and 80 feet deep. He wants to plant a garden that is 20 feet by 30 feet."
           },
           {
             "number": 9,
@@ -747,7 +775,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Answers will vary, but the backyard should be on the grid with length 120 feet in the x-direction and 80 feet in the y-direction, or this can be set up in the other direction with ..."
               }
-            ]
+            ],
+            "prompt": "Set up a grid for the backyard, and place the garden on the grid. Explain why you placed your garden in its place on the grid."
           },
           {
             "number": 10,
@@ -766,7 +795,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Answers will vary."
               }
-            ]
+            ],
+            "prompt": "Write a system of inequalities to describe the garden."
           },
           {
             "number": 11,
@@ -785,7 +815,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Answers will vary."
               }
-            ]
+            ],
+            "prompt": "Write the equation of three lines that would go through the region that he could plant on, and explain your choices."
           },
           {
             "number": 12,
@@ -804,7 +835,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Given the trapezoidal region shown to the right:"
           },
           {
             "number": 13,
@@ -823,7 +855,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "y≤4x+12 y≤4 y≤-4x+16 y≥0"
               }
-            ]
+            ],
+            "prompt": "Write the system of inequalities describing the region."
           },
           {
             "number": 14,
@@ -842,7 +875,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "y≤4x-2 y≤2 y≤-4x+26 y≥-2 ABCABCChallenge Problems:"
               }
-            ]
+            ],
+            "prompt": "Translate the region to the right 3 units and down 2 units. Write the system of inequalities describing the translated region."
           },
           {
             "number": 15,
@@ -861,7 +895,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "ABCABCGiven the triangular region shown with vertices A(-2,-1), B(4,5), and C(5,-1):"
           },
           {
             "number": 16,
@@ -880,7 +915,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "y≤x+1 y≤-6x+29 y≥-1"
               }
-            ]
+            ],
+            "prompt": "Describe the systems of inequalities that describe the region enclosed by the triangle."
           },
           {
             "number": 17,
@@ -899,7 +935,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "A(-2, -1), B(-8, 5), and C(-2, 6)"
               }
-            ]
+            ],
+            "prompt": "Rotate the region 90^\\circ counterclockwise about Point A. How will this change the coordinates of the vertices?"
           },
           {
             "number": 18,
@@ -918,7 +955,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "y≥-x-3 y≤\\frac{1}{6}x+\\frac{19}{3} x≤-2"
               }
-            ]
+            ],
+            "prompt": "Write the system of inequalities that describe the region enclosed in the rotated triangle."
           },
           {
             "number": 19,
@@ -937,7 +975,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "y≤(x) y≥0 (x)≤3"
               }
-            ]
+            ],
+            "prompt": "Write a system of inequalities for the region shown."
           }
         ]
       },
@@ -1067,7 +1106,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "For any convex polygon, the maximum number of sides a line can intersect the polygon is 2. For a general quadrilateral, the line could intersect up to all 4 sides."
               }
-            ]
+            ],
+            "prompt": "A line intersects a triangle at least once, but not at any of its vertices. What is the maximum number of sides that a line can intersect a triangle? Similarly, a square? A convex quadrilateral? A quadrilateral, in general?"
           },
           {
             "number": 2,
@@ -1086,7 +1126,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Consider the rectangular region:"
           },
           {
             "number": 3,
@@ -1105,7 +1146,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(-3, -1)(5, -4)(-3, -1)(5, -4)It intersects at (\\frac{1}{2}, -1) and (2, -4); the length is approximately 3.35 units."
               }
-            ]
+            ],
+            "prompt": "(-3, -1)(5, -4)(-3, -1)(5, -4)What boundary points does a line through the origin with a slope of -2 intersect? What is the length of the segment within this region along this line?"
           },
           {
             "number": 4,
@@ -1124,7 +1166,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "It intersects at (-\\frac{1}{3}, -1) and (-1\\frac{1}{3}, -4); the length is approximately 3.2 units."
               }
-            ]
+            ],
+            "prompt": "What boundary points does a line through the origin with a slope of 3 intersect? What is the length of the segment within this region along this line?"
           },
           {
             "number": 5,
@@ -1143,7 +1186,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "It intersects at (5, -1) only."
               }
-            ]
+            ],
+            "prompt": "What boundary points does a line through the origin with a slope of -\\frac{1}{5} intersect?"
           },
           {
             "number": 6,
@@ -1162,7 +1206,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The line does not intersect the rectangular region."
               }
-            ]
+            ],
+            "prompt": "What boundary points does a line through the origin with a slope of \\frac{1}{4} intersect?"
           },
           {
             "number": 7,
@@ -1181,7 +1226,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Consider the triangular region in the plane given by the triangle (-1,3), (1,-2), and (-3,-3)."
           },
           {
             "number": 8,
@@ -1200,7 +1246,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "It intersects at (-1\\frac{2}{3},1) and (-\\frac{1}{5},1); the length is approximately 1.47 units."
               }
-            ]
+            ],
+            "prompt": "The horizontal line y=1 intersects this region. What are the coordinates of the two boundary points it intersects? What is the length of the horizontal segment within the region along this line?"
           },
           {
             "number": 9,
@@ -1219,7 +1266,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The length is approximately 3.6 units."
               }
-            ]
+            ],
+            "prompt": "What is the length of the section of the line 2x+3y=-4 that lies within this region?"
           },
           {
             "number": 10,
@@ -1238,7 +1286,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "It will hit in approximately 7.3 seconds."
               }
-            ]
+            ],
+            "prompt": "If a robot starts at (-1,3) and moves vertically downward at a constant speed of 0.75 units per second, when will it hit the lower boundary of the triangular region?"
           },
           {
             "number": 11,
@@ -1257,7 +1306,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "It will hit in approximately 6.1 seconds."
               }
-            ]
+            ],
+            "prompt": "If the robot starts at (1,-2) and moves horizontally left at a constant speed of 0.6 units per second, when will it hit the left boundary of the triangular region?"
           },
           {
             "number": 12,
@@ -1276,7 +1326,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "A computer software exists so that the cursor of the program begins and ends at the origin of the plane. A program is written to draw a triangle with vertices A (1,4), B(6,2), and C(3,1) so that the cursor only moves in straight lines and travels from the origin to A, then to B, then to C, then to A, and then back \"home\" to the origin."
           },
           {
             "number": 13,
@@ -1295,7 +1346,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Sketch the cursor's path (i.e., sketch the entire path from when it begins until when it returns \"home\")."
           },
           {
             "number": 14,
@@ -1314,7 +1366,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "\\sqrt{17}+\\sqrt{29}+\\sqrt{10}+\\sqrt{13}+\\sqrt{17}≈20.4"
               }
-            ]
+            ],
+            "prompt": "What is the approximate total distance traveled by the cursor?"
           },
           {
             "number": 15,
@@ -1333,7 +1386,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Equation of AC:y=-1.5x+5.5 x-coordinate on AC at y=2:\\frac{7}{3} Distance from B(6,2) to (\\frac{7}{3},2):\\frac{11}{3} units Time needed to reach (\\frac{7}{3},2):\\frac{11}{3} units ..."
               }
-            ]
+            ],
+            "prompt": "Assume the cursor is positioned at B and is moving horizontally toward the y-axis at \\frac{2}{3} units per second. How long will it take to reach the boundary of the triangle?"
           },
           {
             "number": 16,
@@ -1352,7 +1406,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "An equilateral triangle with side length 1 is placed in the first quadrant so that one of its vertices is at the origin, and another vertex is on the x-axis. A line passes through the point half the distance between the endpoints on one side and half the distance between the endpoints on the other side."
           },
           {
             "number": 17,
@@ -1371,7 +1426,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Students can use trigonometry to find the vertex at . Then, average the coordinates of the endpoints, and (0.75,\\frac{0.5\\sqrt{3}}{2}) can be established."
               }
-            ]
+            ],
+            "prompt": "Draw a picture that satisfies these conditions."
           },
           {
             "number": 18,
@@ -1390,7 +1446,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The line through (0.5,0) and (0.75,\\frac{0.5\\sqrt{3}}{2}) is y=\\sqrt{3}x-0.5\\sqrt{3}."
               }
-            ]
+            ],
+            "prompt": "Find the equation of the line that you drew."
           }
         ]
       },
@@ -1520,7 +1577,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Find the new coordinates of point (0,4) if it rotates:"
           },
           {
             "number": 2,
@@ -1539,7 +1597,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(-4,0)"
               }
-            ]
+            ],
+            "prompt": "90^\\circ counterclockwise."
           },
           {
             "number": 3,
@@ -1558,7 +1617,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(4,0)"
               }
-            ]
+            ],
+            "prompt": "90^\\circ clockwise."
           },
           {
             "number": 4,
@@ -1577,7 +1637,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(0,-4)"
               }
-            ]
+            ],
+            "prompt": "180^\\circ counterclockwise."
           },
           {
             "number": 5,
@@ -1596,7 +1657,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(-4, 0)"
               }
-            ]
+            ],
+            "prompt": "270^\\circ clockwise."
           },
           {
             "number": 6,
@@ -1615,7 +1677,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "What are the new coordinates of the point (-3,-4) if it is rotated about the origin:"
           },
           {
             "number": 7,
@@ -1634,7 +1697,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(4,-3)"
               }
-            ]
+            ],
+            "prompt": "Counterclockwise 90^\\circ ?"
           },
           {
             "number": 8,
@@ -1653,7 +1717,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(-4, 3)"
               }
-            ]
+            ],
+            "prompt": "Clockwise 90^\\circ ?"
           },
           {
             "number": 9,
@@ -1672,7 +1737,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Where does point T land if the segment is rotated 90˚ counterclockwise about S? (4,-4)"
               }
-            ]
+            ],
+            "prompt": "Line segment ST connects points S(7,1) and T(2,4)."
           },
           {
             "number": 10,
@@ -1691,7 +1757,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(10, 6)"
               }
-            ]
+            ],
+            "prompt": "Where does point T land if the segment is rotated 90^\\circ clockwise about S?"
           },
           {
             "number": 11,
@@ -1710,7 +1777,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "-\\frac{3}{5}"
               }
-            ]
+            ],
+            "prompt": "What is the slope of the original segment?"
           },
           {
             "number": 12,
@@ -1729,7 +1797,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "\\frac{5}{3}"
               }
-            ]
+            ],
+            "prompt": "What is the slope of the rotated segments?"
           },
           {
             "number": 13,
@@ -1748,7 +1817,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Line segment VW connects points V(1,0) and W(5, -3)."
           },
           {
             "number": 14,
@@ -1767,7 +1837,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(4, 4)"
               }
-            ]
+            ],
+            "prompt": "Where does point W land if the segment is rotated 90^\\circ counterclockwise about V?"
           },
           {
             "number": 15,
@@ -1786,7 +1857,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(-2,-4)"
               }
-            ]
+            ],
+            "prompt": "Where does point W land if the segment is rotated 90^\\circ clockwise about V?"
           },
           {
             "number": 16,
@@ -1805,7 +1877,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(2,-7)"
               }
-            ]
+            ],
+            "prompt": "Where does point V land if the segment is rotated 90^\\circ counterclockwise about W?"
           },
           {
             "number": 17,
@@ -1824,7 +1897,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(8, 1)"
               }
-            ]
+            ],
+            "prompt": "Where does point V land if the segment is rotated 90^\\circ clockwise about W?"
           },
           {
             "number": 18,
@@ -1843,7 +1917,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "undefined; -1"
               }
-            ]
+            ],
+            "prompt": "If the slope of a line is 0, what is the slope of a line perpendicular to it? If the line has slope 1, what is the slope of a line perpendicular to it?"
           },
           {
             "number": 19,
@@ -1862,7 +1937,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "-\\frac{1}{2}"
               }
-            ]
+            ],
+            "prompt": "If a line through the origin has a slope of 2, what is the slope of the line through the origin that is perpendicular to it?"
           },
           {
             "number": 20,
@@ -1881,7 +1957,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "I disagree with Carlos. The slope of the perpendicular line would have a slope of -3 because it should be the negative reciprocal of the original slope."
               }
-            ]
+            ],
+            "prompt": "A line through the origin has a slope of \\frac{1}{3}. Carlos thinks the slope of a perpendicular line at the origin will be 3. Do you agree? Explain why or why not."
           },
           {
             "number": 21,
@@ -1900,7 +1977,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "No, the equation of the line through the origin perpendicular to the line through the origin with slope \\frac{1}{2} has an equation of y=-2x. (-1, 4) is not a solution to this equa..."
               }
-            ]
+            ],
+            "prompt": "Could a line through the origin perpendicular to a line through the origin with slope \\frac{1}{2} pass through the point (-1,4)? Explain how you know."
           }
         ]
       },
@@ -2030,7 +2108,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "AC=24, BC=25, and AB=7. If triangle ABC is right, AC^{2}+AB^{2}=BC^{2}, and 576+49=625; therefore, the segments are perpendicular."
               }
-            ]
+            ],
+            "prompt": "Prove using the Pythagorean theorem that AC is perpendicular to AB given points A(-2, -2), B(5,-2), and C(-2,22)."
           },
           {
             "number": 2,
@@ -2049,7 +2128,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Using the general formula for perpendicularity of segments through the origin and (90,0), determine if OA and OB are perpendicular."
           },
           {
             "number": 3,
@@ -2068,7 +2148,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(-3)(4)+(-4)(3)≠0; therefore, the segments are not perpendicular."
               }
-            ]
+            ],
+            "prompt": "A(-3,-4), B(4,3)"
           },
           {
             "number": 4,
@@ -2087,7 +2168,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(8)(18)+(9)(-16)=0; therefore, the segments are perpendicular."
               }
-            ]
+            ],
+            "prompt": "A(8,9), B(18,-16)"
           },
           {
             "number": 5,
@@ -2106,7 +2188,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "O'(4,8), S'(6,15), T'(11,6) Yes, the points are all translated 4 units right and 8 units up; since the original segments were perpendicular, the translated segments are perpendicul..."
               }
-            ]
+            ],
+            "prompt": "Given points O(0,0), S(2,7), and T(7, -2), where OS is perpendicular to OT, will the images of the segments be perpendicular if the three points O, S, and T are translated four units to the right and eight units up? Explain your answer."
           },
           {
             "number": 6,
@@ -2125,7 +2208,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Yes, the segments are perpendicular. We proved in Example 1 that OA was perpendicular to OB. P, Q, and R are translations of O, A, and B. The original coordinates have been transla..."
               }
-            ]
+            ],
+            "prompt": "In Example 1, we saw that OA was perpendicular to OB for O(0,0), A(6,4), and B(-2,3). Suppose we are now given the points P(5,5), Q(11,9), and R(3,8). Are segments PQ and PR perpendicular? Explain without using triangles or the Pythagorean theorem."
           },
           {
             "number": 7,
@@ -2144,7 +2228,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "To translate C to the origin, we move left c_{1} and down c_{2}. That means A(a_{1}-c_{1}, a_{2}-c_{2}) and B(b_{1}-c_{1}, b_{2}-c_{2}). The condition of perpendicularity is a_{1}b..."
               }
-            ]
+            ],
+            "prompt": "Challenge: Using what we learned in Exercise 2, given points C(c_{1}, c_{2}), A(a_{1},a_{2}), and B(b_{1}, b_{2}), what is the general condition of a_{1}, a_{2}, b_{1}, b_{2}, c_{1}, and c_{2} that ensures CA and CB are perpendicular?"
           },
           {
             "number": 8,
@@ -2163,7 +2248,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Answers will vary. A possible answer is (-21, 13)."
               }
-            ]
+            ],
+            "prompt": "A robot that picks up tennis balls is on a straight path from (8, 6) toward a ball at (-10,-5). The robot picks up a ball at (-10,-5) and then turns 90^\\circ right. What are the coordinates of a point that the robot can move toward to pick up the last ball?"
           },
           {
             "number": 9,
@@ -2182,7 +2268,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "I do not agree with Gerry. The line through the two points has a slope of -\\frac{2}{5}. If it was perpendicular to a line with slope 4, the slope of the perpendicular line would be..."
               }
-            ]
+            ],
+            "prompt": "Gerry thinks that the points (4,2) and (-1,4) form a line perpendicular to a line with slope 4. Do you agree? Why or why not?"
           }
         ]
       },
@@ -2313,7 +2400,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Are the segments through the origin and the points listed perpendicular? Explain."
           },
           {
             "number": 2,
@@ -2332,7 +2420,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "No 9∙10+10∙9≠0"
               }
-            ]
+            ],
+            "prompt": "A(9,10), B(10,9)"
           },
           {
             "number": 3,
@@ -2351,7 +2440,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Yes 9∙4+6∙(-6)=0"
               }
-            ]
+            ],
+            "prompt": "C(9,6), D(4, -6)"
           },
           {
             "number": 4,
@@ -2370,7 +2460,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Given M(5,2), N(1,-4), and L listed below, are LM and MN perpendicular? Translate M to the origin, write the coordinates of the images of the points, and then explain without using slope."
           },
           {
             "number": 5,
@@ -2389,7 +2480,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "M'(0, 0), N'(-4, -6), L'(-6, 4) Yes (-4)(-6)+(-6)(4)=0"
               }
-            ]
+            ],
+            "prompt": "L(-1,6)"
           },
           {
             "number": 6,
@@ -2408,7 +2500,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "M'(0, 0), N'(-4, -6), L'(6, -4) Yes (-4)(6)+(-6)(-4)=0"
               }
-            ]
+            ],
+            "prompt": "L(11, -2)"
           },
           {
             "number": 7,
@@ -2427,7 +2520,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "M'(0, 0), N'(-4, -6), L'(4, 6) No. (-4)(4)+(-6)(6)≠0"
               }
-            ]
+            ],
+            "prompt": "L(9,8)"
           },
           {
             "number": 8,
@@ -2446,7 +2540,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Yes. If the points are translated to P'(0, 0), Q'(3, 4), and R'(8,-6), 3(8)+4(-6)=0, meaning the segments are perpendicular. The right angle is \\angle P."
               }
-            ]
+            ],
+            "prompt": "Is triangle PQR, where P(-7,3), Q(-4,7), and R(1, -3), a right triangle? If so, which angle is the right angle? Justify your answer."
           },
           {
             "number": 9,
@@ -2465,7 +2560,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Answers will vary, but it is a rectangle because it has 4 right angles."
               }
-            ]
+            ],
+            "prompt": "A quadrilateral has vertices (2+\\sqrt{2}, -1), (8+\\sqrt{2}, 3), (6+\\sqrt{2}, 6), and (\\sqrt{2},2). Prove that the quadrilateral is a rectangle."
           },
           {
             "number": 10,
@@ -2484,7 +2580,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Given points G(-4,1), H(3,2), and I(-2,-3), find the x-coordinate of point J with y-coordinate 4 so that the GH and IJ are perpendicular."
           },
           {
             "number": 11,
@@ -2503,7 +2600,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "A robot begins at position (-80,45) and moves on a path to (100,-60). It turns 90^\\circ counterclockwise."
           },
           {
             "number": 12,
@@ -2522,7 +2620,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(205, 120)"
               }
-            ]
+            ],
+            "prompt": "What point with y-coordinate 120 is on this path?"
           },
           {
             "number": 13,
@@ -2541,7 +2640,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "y+60=\\frac{12}{7}(x-100)"
               }
-            ]
+            ],
+            "prompt": "Write an equation of the line after the turn."
           },
           {
             "number": 14,
@@ -2560,7 +2660,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(135, 0)"
               }
-            ]
+            ],
+            "prompt": "If it stops to charge on the x-axis, what is the location of the charger?"
           },
           {
             "number": 15,
@@ -2579,7 +2680,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(0, \\frac{10}{3})"
               }
-            ]
+            ],
+            "prompt": "Determine the missing vertex of a right triangle with vertices (6,2) and (5,5) if the third vertex is on the y-axis. Verify your answer by graphing."
           },
           {
             "number": 16,
@@ -2598,7 +2700,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(-3, 1)"
               }
-            ]
+            ],
+            "prompt": "Determine the missing vertex for a rectangle with vertices (3,-2), (5,2), and (-1,5), and verify by graphing. Then, answer the questions that follow."
           },
           {
             "number": 17,
@@ -2617,7 +2720,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Approximately 8.06 units"
               }
-            ]
+            ],
+            "prompt": "What is the length of the diagonal?"
           },
           {
             "number": 18,
@@ -2636,7 +2740,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(1, \\frac{3}{2})"
               }
-            ]
+            ],
+            "prompt": "What is a point on both diagonals in the interior of the figure?"
           },
           {
             "number": 19,
@@ -2655,7 +2760,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Leg AB of right triangle ABC has endpoints A(1,3) and B(6, -1). Point C(x,y) is located in Quadrant IV."
           },
           {
             "number": 20,
@@ -2674,7 +2780,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Assume that the right angle is at A(1,3). Then a translation 1 unit left and 3 units down maps point A to the origin. A(1,3)→A^{'}(1-1,3-3)→A^{'}(0,0) B(6,-1)→B'(6-1,-1-3)→B'(5,-4)..."
               }
-            ]
+            ],
+            "prompt": "Use the perpendicularity criterion to determine at which vertex the right angle is located. Explain your reasoning."
           },
           {
             "number": 21,
@@ -2693,7 +2800,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "If the right angle is at B(6,-1), then a translation 6 units left and 1 unit up maps point B to the origin. B(6,-1)→B'(6-6,-1-(-1))→B'(0,0) A(1,3)→A'(1-6,3-(-1))→A'(-5,4) C(x,y)→C'..."
               }
-            ]
+            ],
+            "prompt": "Determine the range of values that x is limited to and why."
           },
           {
             "number": 22,
@@ -2712,7 +2820,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The value of x must be 1, 2, 3, 4, or 5. Substituting each into the equation y=\\frac{5}{4}x-\\frac{17}{2}, the only value of x that yields an integer value for y is x=2. y=\\frac{5}{..."
               }
-            ]
+            ],
+            "prompt": "Find the coordinates of point C if they are both integers."
           }
         ]
       },
@@ -2843,7 +2952,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Given points C(-4,3) and D(3,3):"
           },
           {
             "number": 2,
@@ -2862,7 +2972,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "x=-4"
               }
-            ]
+            ],
+            "prompt": "Write the equation of the line through C and perpendicular to CD."
           },
           {
             "number": 3,
@@ -2881,7 +2992,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "x=3"
               }
-            ]
+            ],
+            "prompt": "Write the equation of the line through D and perpendicular to CD."
           },
           {
             "number": 4,
@@ -2900,7 +3012,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Given points N(7,6) and M(7,-2):"
           },
           {
             "number": 5,
@@ -2919,7 +3032,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "y=-2"
               }
-            ]
+            ],
+            "prompt": "Write the equation of the line through M and perpendicular to MN."
           },
           {
             "number": 6,
@@ -2938,7 +3052,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "y=6"
               }
-            ]
+            ],
+            "prompt": "Write the equation of the line through N and perpendicular to MN."
           },
           {
             "number": 7,
@@ -2957,7 +3072,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "The equation of a line is given by the equation 8(x-4)+3(y+2)=0."
           },
           {
             "number": 8,
@@ -2976,7 +3092,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(8, 3) because A(x —4)+B(y+2)=0 is the original formula, and (A, B) are the coordinates of the image of the endpoint of the normal segment not on the line."
               }
-            ]
+            ],
+            "prompt": "What are the coordinates of the image of the endpoint of the normal segment that does not lie on the line? Explain your answer."
           },
           {
             "number": 9,
@@ -2995,7 +3112,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(-4, 2), or left 4 units up 2 units"
               }
-            ]
+            ],
+            "prompt": "What translation occurred to move the point of perpendicularity to the origin?"
           },
           {
             "number": 10,
@@ -3014,7 +3132,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(4,-2) because the translation of (-4, 2) was required to move the point of perpendicularity to the origin."
               }
-            ]
+            ],
+            "prompt": "What were the coordinates of the original point of perpendicularity? Explain your answer."
           },
           {
             "number": 11,
@@ -3033,7 +3152,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "8=c-4 and3=d-(-2) c=12 d=1 The endpoints of a normal segment to the given line are A(4,-2) and B(12,1)."
               }
-            ]
+            ],
+            "prompt": "What were the endpoints of the original normal segment?"
           },
           {
             "number": 12,
@@ -3052,7 +3172,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "y=-\\frac{6}{5}x+\\frac{786}{15}; y=-\\frac{6}{5}x+89"
               }
-            ]
+            ],
+            "prompt": "A coach is laying out lanes for a race. The lanes are perpendicular to a segment of the track such that one endpoint of the segment is (2,50), and the other is (20,65). What are the equations of the lines through the endpoints?"
           }
         ]
       },
@@ -3183,7 +3304,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Write the equation of the line through (-5,3) and:"
           },
           {
             "number": 2,
@@ -3202,7 +3324,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "x=-5"
               }
-            ]
+            ],
+            "prompt": "Parallel to x=-1."
           },
           {
             "number": 3,
@@ -3221,7 +3344,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "y=3"
               }
-            ]
+            ],
+            "prompt": "Perpendicular to x=-1."
           },
           {
             "number": 4,
@@ -3240,7 +3364,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "3x-5y=-30"
               }
-            ]
+            ],
+            "prompt": "Parallel to y=\\frac{3}{5}x+2."
           },
           {
             "number": 5,
@@ -3259,7 +3384,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "5x+3y=-16"
               }
-            ]
+            ],
+            "prompt": "Perpendicular to y=\\frac{3}{5}x+2."
           },
           {
             "number": 6,
@@ -3278,7 +3404,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Write the equation of the line through (\\sqrt{3},\\frac{5}{4}) and:"
           },
           {
             "number": 7,
@@ -3297,7 +3424,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "y=\\frac{5}{4}"
               }
-            ]
+            ],
+            "prompt": "Parallel to y=7."
           },
           {
             "number": 8,
@@ -3316,7 +3444,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "x= \\sqrt{3}"
               }
-            ]
+            ],
+            "prompt": "Perpendicular to y=7."
           },
           {
             "number": 9,
@@ -3335,7 +3464,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "8x-12y=-15+8\\sqrt{3}"
               }
-            ]
+            ],
+            "prompt": "Parallel to \\frac{1}{2}x-\\frac{3}{4}y=10."
           },
           {
             "number": 10,
@@ -3354,7 +3484,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "6x+4y=5+6\\sqrt{3}"
               }
-            ]
+            ],
+            "prompt": "Perpendicular to \\frac{1}{2}x-\\frac{3}{4}y=10."
           },
           {
             "number": 11,
@@ -3373,7 +3504,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "A vacuum robot is in a room and charging at position (0, 5). Once charged, it begins moving on a northeast path at a constant speed of \\frac{1}{2} foot per second along the line 4x-3y=-15. After 60 seconds, it turns right 90^\\circ and travels in the new direction."
           },
           {
             "number": 12,
@@ -3392,7 +3524,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(18, 29)"
               }
-            ]
+            ],
+            "prompt": "What are the coordinates of the point at which the robot made the turn?"
           },
           {
             "number": 13,
@@ -3411,7 +3544,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "3x +4y=170"
               }
-            ]
+            ],
+            "prompt": "Find an equation for the second line on which the robot traveled."
           },
           {
             "number": 14,
@@ -3430,7 +3564,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "50 feet"
               }
-            ]
+            ],
+            "prompt": "If after turning, the robot travels 80 seconds along this line, what is the distance between the starting position and the robot's current position?"
           },
           {
             "number": 15,
@@ -3449,7 +3584,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "y=5; 100 seconds"
               }
-            ]
+            ],
+            "prompt": "What is the equation of the line the robot needs to travel along in order to return and recharge? How long will it take the robot to get there?"
           },
           {
             "number": 16,
@@ -3468,7 +3604,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The statement AB is parallel to DE is true. The slope of AB is equal to \\frac{2}{6}, the ratio of the lengths of the legs of the right triangle ABC. The slope of DE is equal to \\fr..."
               }
-            ]
+            ],
+            "prompt": "Given the statement AB is parallel to DE, construct an argument for or against this statement using the two triangles shown."
           },
           {
             "number": 17,
@@ -3487,7 +3624,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Scaffolding:Provide students who were absent or who do not take notes well with class notes showing Example 1 with steps clearly explained. Scaffolding:Provide students who were ab..."
               }
-            ]
+            ],
+            "prompt": "Recall the proof we did in Example 1: Let l_{1}and l_{2} be two non-vertical lines in the Cartesian plane. l_{1} and l_{2} are perpendicular if and only if their slopes are negative reciprocals of each other. In class, we looked at the case where both y-intercepts were not zero. In Lesson 5, we looked at the case where both y-intercepts were equal to zero, when the vertex of the right angle was at the origin. Reconstruct the proof for the case where one line has a y-intercept of zero, and the other line has a nonzero y-intercept."
           },
           {
             "number": 18,
@@ -3506,7 +3644,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "If m_{1}=0, then l_{1} is given by the equation y=b_{1}, and l_{2} is given by the equation y=m_{2}x+b_{2}. Here we are assuming m_{2}, b_{1}, and b_{2} are not zero. Choosing the ..."
               }
-            ]
+            ],
+            "prompt": "Challenge: Reconstruct the proof we did in Example 1 if one line has a slope of zero."
           }
         ]
       },
@@ -3638,7 +3777,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Use coordinates to compute the perimeter and area of each polygon."
           },
           {
             "number": 2,
@@ -3657,7 +3797,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Perimeter =16 unitsPerimeter ≈17.62 units Area =15 square unitsArea =10.5 square units Given the figures below, find the area by decomposing into rectangles and triangles. Area =8 ..."
               }
-            ]
+            ],
+            "prompt": "Given the figures below, find the area by decomposing into rectangles and triangles."
           },
           {
             "number": 3,
@@ -3676,7 +3817,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "11 square units"
               }
-            ]
+            ],
+            "prompt": "Challenge: Find the area by decomposing the given figure into triangles."
           },
           {
             "number": 4,
@@ -3695,7 +3837,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "When using the shoelace formula to work out the area of \\triangle ABC, we have some choices to make. For example, we can start at any one of the three vertices A, B, or C, and we can move either in a clockwise or counterclockwise direction. This gives six options for evaluating the formula."
           },
           {
             "number": 5,
@@ -3714,7 +3857,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Clockwise: \\frac{1}{2}(x_{1}y_{2}+x_{2}y_{3}+x_{3}y_{1}-y_{1}x_{2}-y_{2}x_{3}- y_{3}x_{1}) Counterclockwise: \\frac{1}{2}(x_{1}y_{3}+x_{3}y_{2}+ x_{2}y_{1}-y_{1}x_{3}-y_{3}x_{2}- y_..."
               }
-            ]
+            ],
+            "prompt": "Show that the shoelace formula obtained is identical for the three options that move in a clockwise direction (A to C to B or C to B to A or B to A to C) and identical for the three options in the reverse direction. Verify that the two distinct formulas obtained differ only by a minus sign."
           },
           {
             "number": 6,
@@ -3733,7 +3877,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Suppose two triangles share a common edge. By translating and rotating the triangles, we can assume that the common edge lies along the x-axis with one endpoint at the origin."
           },
           {
             "number": 7,
@@ -3752,7 +3897,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Top Triangle: \\frac{1}{2}(0-bx)=-\\frac{1}{2}bx, where b>0. Bottom Triangle: \\frac{1}{2}(xd-0)=\\frac{1}{2}dx, where d<0. Both answers are negative when calculated in the clockwise d..."
               }
-            ]
+            ],
+            "prompt": "Show that if we evaluate the shoelace formula for each triangle, both calculated in the same clockwise direction, then the answers are both negative."
           },
           {
             "number": 8,
@@ -3771,7 +3917,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Top Triangle: \\frac{1}{2}(xb-0)=\\frac{1}{2}bx, where b>0. Bottom Triangle: \\frac{1}{2}(0-xd)=-\\frac{1}{2}dx, where d<0. Both answers are positive when calculated in the countercloc..."
               }
-            ]
+            ],
+            "prompt": "Show that if we evaluate them both in a counterclockwise direction, then both are positive."
           },
           {
             "number": 9,
@@ -3790,7 +3937,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "If two triangles share a common edge, then evaluating the shoelace formula for each triangle in a consistent direction gives answers that are the same sign; they are either each th..."
               }
-            ]
+            ],
+            "prompt": "Explain why evaluating one in one direction and the second in the opposite direction, the two values obtained are opposite in sign."
           },
           {
             "number": 10,
@@ -3809,7 +3957,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "A textbook has a picture of a triangle with vertices (3, 6) and (5, 2). Something happened in printing the book, and the coordinates of the third vertex are listed as (-1, ). The answers in the back of the book give the area of the triangle as 6 square units."
           },
           {
             "number": 11,
@@ -3828,7 +3977,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "What is the y-coordinate of the third vertex?"
           },
           {
             "number": 12,
@@ -3847,7 +3997,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "No, you would have an equation with two variables, so you could not solve for both algebraically unless you had a second equation with the same unknowns."
               }
-            ]
+            ],
+            "prompt": "What if both coordinates were missing, but the area was known? Could you use algebra to find the third coordinate? Explain."
           }
         ]
       },
@@ -3978,7 +4129,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Given triangle ABC with vertices (7, 4), (1, 1), and (9, 0):"
           },
           {
             "number": 2,
@@ -3997,7 +4149,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The perimeter is approximately 19.24 units."
               }
-            ]
+            ],
+            "prompt": "Calculate the perimeter using the distance formula."
           },
           {
             "number": 3,
@@ -4016,7 +4169,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Area: (\\sqrt{45})(\\sqrt{20})=15"
               }
-            ]
+            ],
+            "prompt": "Calculate the area using the traditional area formula."
           },
           {
             "number": 4,
@@ -4035,7 +4189,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Area: (7∙1+1∙0+9∙4-4∙1-1∙9-0∙7)=15"
               }
-            ]
+            ],
+            "prompt": "Calculate the area using the shoelace formula."
           },
           {
             "number": 5,
@@ -4054,7 +4209,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "To use the shoelace formula, all you need are the coordinates of the vertices; you would not have to use the distance formula."
               }
-            ]
+            ],
+            "prompt": "Explain why the shoelace formula might be more useful and efficient if you were just asked to find the area."
           },
           {
             "number": 6,
@@ -4073,7 +4229,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The triangle is a right triangle, and the length and height can be read from the graph, so it would be easiest to find its area by the traditional area formula. Area: 10 square uni..."
               }
-            ]
+            ],
+            "prompt": "Given triangle ABC and quadrilateral DEFG, describe how you would find the area of each and why you would choose that method, and then find the areas."
           },
           {
             "number": 7,
@@ -4092,7 +4249,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The area is 62.5 square units. The perimeter of quadrilateral ABCD is approximately 32.60 units."
               }
-            ]
+            ],
+            "prompt": "Find the area and perimeter of quadrilateral ABCD with vertices A(6, 5), B(2, -4), C(-5, 2), and D(-3, 6)."
           },
           {
             "number": 8,
@@ -4111,7 +4269,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The area is 63 square units. The perimeter of pentagon ABCDE is approximately 30.49 units."
               }
-            ]
+            ],
+            "prompt": "Find the area and perimeter of pentagon ABCDE with vertices A(2, 6), B(7, 2), C(3, -4), D(-3, -2), and E(-2, 4)."
           },
           {
             "number": 9,
@@ -4130,7 +4289,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Traditional using coordinates listed: b_{1}=x_{1}, b_{2}= x_{2}-x_{3}, h=y \\frac{1}{2}(x_{1}+x_{2}-x_{3})∙y Shoelace formula: \\frac{1}{2}(0∙0+ x_{1}∙y+x_{2}∙y+x_{3}∙0-0∙x_{1}-0∙x_{..."
               }
-            ]
+            ],
+            "prompt": "Show that the shoelace formula (Green's theorem) used on the trapezoid shown confirms the traditional formula for the area of a trapezoid \\frac{1}{2}(b_{1}+b_{2})∙h."
           }
         ]
       },
@@ -4261,7 +4421,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "y≥-1, x≥-1, y≤-\\frac{2}{3}x+\\frac{13}{3} y≥\\frac{1}{2}x-3y≤-\\frac{5}{6}x+5 y≤\\frac{1}{4}x+5 y≥-4x-12"
               }
-            ]
+            ],
+            "prompt": "For Problems 1—2 below, identify the system of inequalities that defines the region shown."
           },
           {
             "number": 2,
@@ -4280,7 +4441,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "For Problems 3—5 below, a triangular or quadrilateral region is defined by the system of inequalities listed."
           },
           {
             "number": 3,
@@ -4299,7 +4461,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Sketch the region."
           },
           {
             "number": 4,
@@ -4318,7 +4481,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Determine the coordinates of the vertices."
           },
           {
             "number": 5,
@@ -4337,7 +4501,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Find the perimeter of the region rounded to the nearest hundredth if necessary."
           },
           {
             "number": 6,
@@ -4356,7 +4521,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Find the area of the region rounded to the nearest tenth if necessary."
           },
           {
             "number": 7,
@@ -4375,7 +4541,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(4,6), (7,3), (-5,-2) Approximately 29.28 units 25.5 square units"
               }
-            ]
+            ],
+            "prompt": "8x-9y≥-22x+y≤105x-12y≤-1"
           },
           {
             "number": 8,
@@ -4394,7 +4561,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(3, 4), (6, -2), (0, 0) Approximately 18.03 units 15 square units"
               }
-            ]
+            ],
+            "prompt": "x+3y≥04x-3y≥02x+y≤10"
           },
           {
             "number": 9,
@@ -4413,7 +4581,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(3, 4), (5, 1), (3, -3), (-2, 2) Approximately 20.53 units 24.5 square units"
               }
-            ]
+            ],
+            "prompt": "2x-5y≥-143x+2y≤172x-y≤9x+y≥0"
           }
         ]
       },
@@ -4543,7 +4712,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "S(\\frac{5}{6}, 3\\frac{2}{3}) (0+\\frac{5}{12}(2-0), 2+\\frac{5}{12}(6-2))=(0+\\frac{5}{12}(2), 2+\\frac{5}{12}(4))=(\\frac{5}{6}, 3\\frac{2}{3}) Verification that S lies on FG: FG has a ..."
               }
-            ]
+            ],
+            "prompt": "Given F(0, 2) and G(2, 6), if point S lies \\frac{5}{12} of the way along FG, closer to F than to G, find the coordinates of S. Then verify that this point lies on FG."
           },
           {
             "number": 2,
@@ -4562,7 +4732,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "B (9, -4)"
               }
-            ]
+            ],
+            "prompt": "Point C lies \\frac{5}{6} of the way along AB, closer to B than to A. If the coordinates of point A are (12, 5) and the coordinates of point C are (9.5, -2.5), what are the coordinates of point B?"
           },
           {
             "number": 3,
@@ -4581,7 +4752,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(\\frac{6}{5}, 4)"
               }
-            ]
+            ],
+            "prompt": "Find the point on the directed segment from (-3, -2) to (4, 8) that divides it into a ratio of 3:2."
           },
           {
             "number": 4,
@@ -4600,7 +4772,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "A robot begins its journey at the origin, point O, and travels along a straight line path at a constant rate. Fifteen minutes into its journey the robot is at A(35, 80)."
           },
           {
             "number": 5,
@@ -4619,7 +4792,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(35\\times 12,80\\times 12)=(420,960). Multiply by 12 since there are twelve 15-minute periods in 3 hours."
               }
-            ]
+            ],
+            "prompt": "If the robot does not change speed or direction, where will it be 3 hours into its journey (call this point B)?"
           },
           {
             "number": 6,
@@ -4638,7 +4812,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "The robot continues past point B for a certain period of time until it has traveled an additional \\frac{3}{4} of the distance it traveled in the first 3 hours and stops."
           },
           {
             "number": 7,
@@ -4657,7 +4832,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "3 hours\\times 1\\frac{3}{4}=5\\frac{1}{4} hours"
               }
-            ]
+            ],
+            "prompt": "How long did the robot's entire journey take?"
           },
           {
             "number": 8,
@@ -4676,7 +4852,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(420\\times 1.75,960\\times 1.75)=(735,1680)"
               }
-            ]
+            ],
+            "prompt": "What is the robot's final location?"
           },
           {
             "number": 9,
@@ -4695,7 +4872,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "\\sqrt{(735-420)^{2}+(1680-960)^{2}} ≈785.9 The distance is 785.9 units."
               }
-            ]
+            ],
+            "prompt": "What was the distance the robot traveled in the last leg of its journey?"
           },
           {
             "number": 10,
@@ -4714,7 +4892,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "LR:LM LR:LM=a:b RM:L RM:LM=(b-a): b RL:RM RL:RM=a: (b-a)"
               }
-            ]
+            ],
+            "prompt": "Given LM and point R that lies on LM, identify the following ratios given that point R lies \\frac{a}{b} of the way along LM, closer to L than to M."
           },
           {
             "number": 11,
@@ -4733,7 +4912,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The point dividing the segment into a ratio of 1:3 is (x_{1}+\\frac{1}{4}(x_{2}-x_{1}), y_{1}+\\frac{1}{4}(y_{2}-y_{1})). The midpoint of AM is (\\frac{1}{2}(x_{1}+x_{m}),\\frac{1}{2}(..."
               }
-            ]
+            ],
+            "prompt": "Given AB with midpoint M as shown, prove that the point on the directed segment from A to B that divides AB into a ratio of 1:3 is the midpoint of AM."
           }
         ]
       },
@@ -4864,7 +5044,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Point M is the midpoint of AC. Find the coordinates of M:"
           },
           {
             "number": 2,
@@ -4883,7 +5064,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(4, 6.5)"
               }
-            ]
+            ],
+            "prompt": "A(2, 3), C(6, 10)"
           },
           {
             "number": 3,
@@ -4902,7 +5084,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(-1.5, -2)"
               }
-            ]
+            ],
+            "prompt": "A(-7, 5), C(4, -9)"
           },
           {
             "number": 4,
@@ -4921,7 +5104,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(-8, 25)"
               }
-            ]
+            ],
+            "prompt": "M(-2, 10) is the midpoint of AB. If A has coordinates (4, -5), what are the coordinates of B?"
           },
           {
             "number": 5,
@@ -4940,7 +5124,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Line A is the perpendicular bisector of BC with B(-2, -1) and C(4, 1)."
           },
           {
             "number": 6,
@@ -4959,7 +5144,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(1, 0)"
               }
-            ]
+            ],
+            "prompt": "What is the midpoint of BC?"
           },
           {
             "number": 7,
@@ -4978,7 +5164,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "\\frac{1}{3}"
               }
-            ]
+            ],
+            "prompt": "What is the slope of BC?"
           },
           {
             "number": 8,
@@ -4997,7 +5184,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "What is the slope of line A? (Remember, it is perpendicular to BC.)"
           },
           {
             "number": 9,
@@ -5016,7 +5204,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "y=-3x+3"
               }
-            ]
+            ],
+            "prompt": "Write the equation of line A, the perpendicular bisector of BC."
           },
           {
             "number": 10,
@@ -5035,7 +5224,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(\\frac{1}{3}(-5+6+10),\\frac{1}{3}(3+(-4)+10))=(3\\frac{2}{3},3)"
               }
-            ]
+            ],
+            "prompt": "Find the coordinates of the intersection of the medians of \\triangle ABC given A(-5, 3), B(6,-4), and C(10, 10)."
           },
           {
             "number": 11,
@@ -5054,7 +5244,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "This problem builds upon the findings of Exercise 2, where students proved that the diagonals of a parallelogram bisected each other by showing that the midpoints of the two diagon..."
               }
-            ]
+            ],
+            "prompt": "Use coordinates to prove that the diagonals of a parallelogram meet at the intersection of the segments that connect the midpoints of its opposite sides."
           },
           {
             "number": 12,
@@ -5073,7 +5264,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Given a quadrilateral with vertices E(0, 5), F(6, 5), G(4, 0), and H(-2, 0):"
           },
           {
             "number": 13,
@@ -5092,7 +5284,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "EF and GH are horizontal segments, so they are parallel. HE and GF have slopes of \\frac{5}{2}, so they are parallel. Both pairs of opposite sides are parallel, so the quadrilateral..."
               }
-            ]
+            ],
+            "prompt": "Prove quadrilateral EFGH is a parallelogram."
           },
           {
             "number": 14,
@@ -5111,7 +5304,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Since EFGH is a parallelogram, the diagonals intersect at their midpoints. (2, 2.5) is the midpoint of HF and GE, so it is a point on both diagonals."
               }
-            ]
+            ],
+            "prompt": "Prove (2, 2.5) is a point on both diagonals of the quadrilateral."
           },
           {
             "number": 15,
@@ -5130,7 +5324,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "WX and YZ have slopes of \\frac{5}{3}, so they are parallel. WZ has a slope of -\\frac{2}{3}, and XY has a slope of \\frac{1}{2}, so they are not parallel. When one pair of opposite s..."
               }
-            ]
+            ],
+            "prompt": "Prove quadrilateral WXYZ with vertices W(1, 3), X(4, 8), Y(10, 11), and Z(4, 1) is a trapezoid."
           },
           {
             "number": 16,
@@ -5149,7 +5344,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Given quadrilateral JKLM with vertices J(-4, 2), K(1, 5), L(4, 0), and M(-1, -3):"
           },
           {
             "number": 17,
@@ -5168,7 +5364,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Yes, one pair of opposite sides is parallel. JK and LM both have slopes of \\frac{3}{5}. When one pair of opposite sides is parallel, the quadrilateral is a trapezoid."
               }
-            ]
+            ],
+            "prompt": "Is it a trapezoid? Explain."
           },
           {
             "number": 18,
@@ -5187,7 +5384,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Yes, both pairs of opposite sides are parallel. JM and KL both have slopes of -\\frac{5}{3}. When both pairs of opposite sides are parallel, the quadrilateral is a parallelogram."
               }
-            ]
+            ],
+            "prompt": "Is it a parallelogram? Explain."
           },
           {
             "number": 19,
@@ -5206,7 +5404,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "JK⊥KL, KL⊥ML, ML⊥MJ, MJ⊥JK because their slopes are negative reciprocals. Yes, because a parallelogram with four right angles is a rectangle."
               }
-            ]
+            ],
+            "prompt": "Is it a rectangle? Explain."
           },
           {
             "number": 20,
@@ -5225,7 +5424,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "JK=KL=LM=MJ=\\sqrt{34} Yes, because a parallelogram with four congruent sides is a rhombus."
               }
-            ]
+            ],
+            "prompt": "Is it a rhombus? Explain."
           },
           {
             "number": 21,
@@ -5244,7 +5444,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Yes, because a rectangle with four congruent sides is a square. (0, 1) is the midpoint of KM and JL and is on both diagonals."
               }
-            ]
+            ],
+            "prompt": "Is it a square? Explain."
           }
         ]
       },
@@ -5375,7 +5576,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(\\frac{1}{3}(2+(-4)+3) , \\frac{1}{3}(4+0+(-1)))=(\\frac{1}{3},1)"
               }
-            ]
+            ],
+            "prompt": "Find the coordinates of the intersection of the medians of \\triangle ABC given A(2, 4), B(-4, 0), and C(3,-1)."
           },
           {
             "number": 2,
@@ -5394,7 +5596,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Given a quadrilateral with vertices A(-1, 3), B(1, 5), C(5, 1), and D(3,-1):"
           },
           {
             "number": 3,
@@ -5413,7 +5616,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "AB and DC have slopes of 1, so they are parallel. BC and AD have slopes of -1, so they are parallel. Since adjacent sides have slopes that are negative reciprocals, they are perpen..."
               }
-            ]
+            ],
+            "prompt": "Prove that quadrilateral ABCD is a rectangle."
           },
           {
             "number": 4,
@@ -5432,7 +5636,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Since ABCD is a parallelogram, its diagonals intersect at their midpoints. (2,2) is the midpoint of both AC and BD, so it is a point on both diagonals. A robot is programed to trav..."
               }
-            ]
+            ],
+            "prompt": "Prove that (2, 2) is a point on both diagonals of the quadrilateral."
           },
           {
             "number": 5,
@@ -5451,7 +5656,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "P=(240, 60)+\\frac{t}{10}(100, 100),"
           },
           {
             "number": 6,
@@ -5470,7 +5676,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Starting position: (240,60)+\\frac{0}{10}(100,100) or (240,60)"
               }
-            ]
+            ],
+            "prompt": "What was the robot's starting position?"
           },
           {
             "number": 7,
@@ -5489,7 +5696,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Stopping position: (240,60)+\\frac{10}{10}(100,100) or (340,160)"
               }
-            ]
+            ],
+            "prompt": "Where did the robot stop?"
           },
           {
             "number": 8,
@@ -5508,7 +5716,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The robot will travel the entire length of the segment in 10 minutes."
               }
-            ]
+            ],
+            "prompt": "How long did it take the robot to complete the entire journey?"
           },
           {
             "number": 9,
@@ -5527,7 +5736,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "There are a number of ways to answer part (d). The one most relevant to this lesson might be the following: Find a time such that 240+\\frac{t}{10}(100)=310, and 60+\\frac{t}{10}(100..."
               }
-            ]
+            ],
+            "prompt": "Did the robot pass through the point (310, 130), and, if so, how long into its journey did the robot reach this position?"
           },
           {
             "number": 10,
@@ -5546,7 +5756,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Robot 1's position is modeled by P=(20, 10)+\\frac{t}{2}(100,40). Robot 2's position is modeled by Q=(90, 10)+\\frac{t}{1.5}(-30,60). (20, 10)+\\frac{t}{2}(100,40)=(78\\frac{1}{3},33\\f..."
               }
-            ]
+            ],
+            "prompt": "Two robots are moving along straight line paths in a rectangular room. Robot 1 starts at point A(20, 10) and travels at a constant speed to point B(120, 50) in two minutes. Robot 2 starts at point C(90, 10) and travels at a constant speed to point D(60, 70) in 90 seconds. If the robots begin their journeys at the same time, will the robots collide? Why or why not?"
           }
         ]
       },
@@ -5676,7 +5887,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Given \\triangle ABC with vertices A(3,-1), B(2, 2), and C(5, 1)."
           },
           {
             "number": 2,
@@ -5695,7 +5907,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The slope is —1."
               }
-            ]
+            ],
+            "prompt": "Find the slope of the angle bisector of \\angle ABC."
           },
           {
             "number": 3,
@@ -5714,7 +5927,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Let BD be the bisector of \\angle ABC, where D is the point of intersection with AC. AB=CB=\\sqrt{10}; therefore, \\triangle ABC is isosceles, and m\\angle A=m\\angle C (base angles of ..."
               }
-            ]
+            ],
+            "prompt": "Prove that the bisector of \\angle ABC is the perpendicular bisector of AC."
           },
           {
             "number": 4,
@@ -5733,7 +5947,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "y=-x+4"
               }
-            ]
+            ],
+            "prompt": "Write the equation of the line containing BD, where point D is the point where the bisector of \\angle ABC intersects AC."
           },
           {
             "number": 5,
@@ -5752,7 +5967,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "p=-2, q=1, m=2, and b=0 d=\\sqrt{(\\frac{p+qm-bm}{1+m^{2}}-p)^{2}+(m(\\frac{p+qm-bm}{1+m^{2}})+b-q)^{2}} d=\\sqrt{(\\frac{-2+1(2)-0(2)}{1+2^{2}}-(-2))^{2}+(2(\\frac{-2+1(2)-0(2)}{1+2^{2}..."
               }
-            ]
+            ],
+            "prompt": "Use the distance formula from today's lesson to find the distance between the point P(-2, 1) and the line y=2x."
           },
           {
             "number": 6,
@@ -5771,7 +5987,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "PR is the hypotenuse of the right triangle with vertices P(-2,1), R(0,0), and (-2,0). Using the Pythagorean theorem, we find that PR=\\sqrt{2^{2}+1^{2}}=\\sqrt{5} ."
               }
-            ]
+            ],
+            "prompt": "Confirm the results obtained in Problem 2 using another method."
           },
           {
             "number": 7,
@@ -5790,7 +6007,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The equation of AB is y=x+8 (students may also choose to use BC, which would make m=-1 instead of 1). p=0, q=0, m=1, and b=8 ED=\\sqrt{(\\frac{p+qm-bm}{1+m^{2}}-p)^{2}+(m(\\frac{p+qm-..."
               }
-            ]
+            ],
+            "prompt": "Find the perimeter of quadrilateral DEBF shown below."
           }
         ]
       },

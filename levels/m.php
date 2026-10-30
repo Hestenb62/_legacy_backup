@@ -301,5 +301,5 @@ $modules = [
     ]
 ];
 
-include '../src/level_template.php';
+include dirname(__DIR__) . '/src/level_template.php';
 ?>

@@ -96,8 +96,8 @@
 
         <!-- Version Status & Release Info Strip (WCAG Operable) -->
         <?php
-        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.29.0';
-        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'October 2026 Grade 12 Precalculus Complete 111-Lesson Buildout Release';
+        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.29.1';
+        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'October 2026 Grade 10-12 Math Lessons & Worksheet Rendering Hotfix';
         $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Complete EngageNY Grade 12 Precalculus Buildout: 111 Lessons Across Modules 1–5 with Complex Transformations, Matrices, Vectors, Trigonometry, and Probability Worksheets';
         ?>
         <div class="footer-version-strip" role="region" aria-label="Platform Version Information">

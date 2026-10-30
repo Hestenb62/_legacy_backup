@@ -48,13 +48,13 @@ if (! function_exists('assetVersion')) {
 
 // Core Platform Version Definition
 if (! defined('HL_SITE_VERSION')) {
-    define('HL_SITE_VERSION', 'v2.29.0');
+    define('HL_SITE_VERSION', 'v2.29.1');
     }
 if (! defined('HL_SITE_VERSION_DATE')) {
     define('HL_SITE_VERSION_DATE', 'October 2026');
     }
 if (! defined('HL_SITE_VERSION_LABEL')) {
-    define('HL_SITE_VERSION_LABEL', 'October 2026 Grade 12 Precalculus Complete 111-Lesson Buildout Release');
+    define('HL_SITE_VERSION_LABEL', 'October 2026 Grade 10-12 Math Lessons & Worksheet Rendering Hotfix');
     }
 if (! defined('HL_SITE_VERSION_SUMMARY')) {
     define('HL_SITE_VERSION_SUMMARY', 'Complete EngageNY Grade 12 Precalculus Buildout: 111 Lessons Across Modules 1–5 with Complex Transformations, Matrices, Vectors, Trigonometry, and Probability Worksheets');

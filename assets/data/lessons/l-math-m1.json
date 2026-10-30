@@ -104,7 +104,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "MP.5MP.5Draw circle J: center J, radius JS. Draw circle S: center S, radius SJ. Label one intersection as M. Join S, J, M."
               }
-            ]
+            ],
+            "prompt": "Write a clear set of steps for the construction of an equilateral triangle. Use Euclid's Proposition 1 as a guide."
           },
           {
             "number": 2,
@@ -123,7 +124,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Suppose two circles are constructed using the following instructions:"
           },
           {
             "number": 3,
@@ -142,7 +144,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Draw circle: center A, radius AB."
           },
           {
             "number": 4,
@@ -161,7 +164,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Under what conditions (in terms of distances AB, CD, AC) do the circles have"
               }
-            ]
+            ],
+            "prompt": "Draw circle: center C, radius CD.Under what conditions (in terms of distances AB, CD, AC) do the circles have"
           },
           {
             "number": 5,
@@ -180,7 +184,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "If AB+CD=AC or AC+AB=CD or AC+CD=AB.Ex."
               }
-            ]
+            ],
+            "prompt": "One point in common?"
           },
           {
             "number": 6,
@@ -199,7 +204,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "If AB+CD<AC or AB+AC<CD or CD+AC<AB.Ex."
               }
-            ]
+            ],
+            "prompt": "No points in common?"
           },
           {
             "number": 7,
@@ -218,7 +224,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "If AC<AB+CD and CD<AB+AC and AB<CD+AC.Ex."
               }
-            ]
+            ],
+            "prompt": "Two points in common?"
           },
           {
             "number": 8,
@@ -237,7 +244,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "If A=C (same points) and AB=CD. All the points of the circle Ex.coincide since the circles themselves coincide. You need a compass and a straightedge."
               }
-            ]
+            ],
+            "prompt": "More than two points in common? Why?"
           },
           {
             "number": 9,
@@ -256,7 +264,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Draw a circle P_{1}: center P_{1}, radius P_{1}P_{2}. Draw a circle P_{2}: center P_{2} radius P_{2}P_{1}. Label the two intersections of the circles as P_{3a} and P_{3b}. Join P_{..."
               }
-            ]
+            ],
+            "prompt": "Cedar City boasts two city parks and is in the process of designing a third. The planning committee would like all three parks to be equidistant from one another to better serve the community. A sketch of the city appears below, with the centers of the existing parks labeled as P_{1} and P_{2}. Identify two possible locations for the third park, and label them as P_{3a} and P_{3b} on the map. Clearly and precisely list the mathematical steps used to determine each of the two potential locations."
           }
         ]
       },
@@ -387,7 +396,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The radius of equal-sized circles, which must be used in construction of an equilateral triangle, does not change. This consistent length guarantees that all three side lengths of ..."
               }
-            ]
+            ],
+            "prompt": "Why are circles so important to these constructions? Write out a concise explanation of the importance of circles in creating equilateral triangles. Why did Euclid use circles to create his equilateral triangles in Proposition 1? How does construction of a circle ensure that all relevant segments are of equal length?"
           }
         ]
       },
@@ -518,7 +528,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "3. 4."
               }
-            ]
+            ],
+            "prompt": "Bisect each angle below."
           },
           {
             "number": 2,
@@ -537,7 +548,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Copy the angle below."
           }
         ]
       },
@@ -668,7 +680,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "During this lesson, you constructed a perpendicular line to a line l from a point A not on l. We are going to use that construction to construct parallel lines:"
           },
           {
             "number": 2,
@@ -687,7 +700,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "To construct parallel lines l_{1} and l_{2}:"
           },
           {
             "number": 3,
@@ -706,7 +720,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Construct a perpendicular line l_{3} to a line l_{1} from a point A not on l_{1}."
           },
           {
             "number": 4,
@@ -725,7 +740,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "l_{1}l_{2}l_{3}l_{1}l_{2}l_{3}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}"
               }
-            ]
+            ],
+            "prompt": "Construct a perpendicular line l_{2} to l_{3} through point A. Hint: Consider using the steps behind Problem 4 in the Lesson 3 Problem Set to accomplish this."
           },
           {
             "number": 5,
@@ -744,7 +760,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Students should say that the three perpendicular bisectors pass through a common point. (Students may additionally conjecture that this common point is equidistant from the vertice..."
               }
-            ]
+            ],
+            "prompt": "Construct the perpendicular bisectors of AB, BC, and CA on the triangle below. What do you notice about the segments you have constructed?"
           },
           {
             "number": 6,
@@ -763,7 +780,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Two homes are built on a plot of land. Both homeowners have dogs and are interested in putting up as much fencing as possible between their homes on the land but in a way that keeps the fence equidistant from each home. Use your construction tools to determine where the fence should go on the plot of land. How must the fencing be altered with the addition of a third home?"
           }
         ]
       },
@@ -894,7 +912,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Given line segment AB, using a compass and straightedge, construct the set of points that are equidistant from A and B."
           },
           {
             "number": 2,
@@ -913,7 +932,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "I ended up drawing the perpendicular bisector of the segment AB. Every point on this line is equidistant from the points A and B."
               }
-            ]
+            ],
+            "prompt": "What figure did you end up constructing? Explain."
           },
           {
             "number": 3,
@@ -932,7 +952,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "For each of the following, construct a line perpendicular to segment AB that goes through point P."
           },
           {
             "number": 4,
@@ -951,7 +972,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Every point on the ray is equidistant from ray BA and ray BC."
               }
-            ]
+            ],
+            "prompt": "Using a compass and straightedge, construct the angle bisector of \\angle ABC shown below. What is true about every point that lies on the ray you created?"
           }
         ]
       },
@@ -1081,7 +1103,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Key Facts and Discoveries from Earlier Grades"
               }
-            ]
+            ],
+            "prompt": "In the figures below, AB and CD are straight line segments. Find the value of x and/or y in each diagram below. Show all the steps to your solutions, and give reasons for your calculations."
           }
         ]
       },
@@ -1211,7 +1234,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "MP.7MP.7"
               }
-            ]
+            ],
+            "prompt": "Find the unknown (labeled) angles. Give reasons for your solutions."
           }
         ]
       },
@@ -1342,7 +1366,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Find the unknown (labeled) angle in each figure. Justify your calculations."
           }
         ]
       },
@@ -1472,7 +1497,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "m\\angle a+138^\\circ =180^\\circ Linear pairs form supplementary angles. m\\angle b=42^\\circ Vertical angles are equal in measure. m\\angle a=42^\\circ Subtraction property of equality ..."
               }
-            ]
+            ],
+            "prompt": "In the figure to the right, prove that m\\parallel n."
           },
           {
             "number": 2,
@@ -1491,7 +1517,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "a+b=180Linear pairs form supplementary angles. c+d=180Linear pairs form supplementary angles. e+f=180 Linear pairs form supplementary angles. a+b+c+d+e+f=540Addition property of eq..."
               }
-            ]
+            ],
+            "prompt": "In the diagram to the right, prove that the sum of the angles marked by arrows is 360^\\circ ."
           },
           {
             "number": 3,
@@ -1510,7 +1537,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "m\\angle a =m\\angle b+m\\angle c If parallel lines are cut by a transversal, then alternate interior angles are equal in measure. m\\angle c+m\\angle d=180^\\circ If parallel lines are ..."
               }
-            ]
+            ],
+            "prompt": "In the diagram to the right, prove that m\\angle a+m\\angle d-m\\angle b=180^\\circ ."
           }
         ]
       },
@@ -1641,7 +1669,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Extend DE through BC, and mark the intersection with BC as Z. AB\\parallel DE, BC\\parallel EFGiven m\\angle ABC=m\\angle EZCIf parallel lines are cut by a transversal, then correspond..."
               }
-            ]
+            ],
+            "prompt": "In the figure to the right, AB\\parallel DE and BC\\parallel EF.Prove that m\\angle ABC=m\\angle DEF."
           },
           {
             "number": 2,
@@ -1660,7 +1689,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Draw a line through E parallel to AB and CD. Add point F. AB\\parallel CDGiven m\\angle BAE=m\\angle AEFIf parallel lines are cut by a transversal, then alternate interior angles are ..."
               }
-            ]
+            ],
+            "prompt": "In the figure to the right, AB\\parallel CD.Prove that m\\angle AEC=a^\\circ +c^\\circ ."
           }
         ]
       },
@@ -1790,7 +1820,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "\\angle C and \\angle D are supplementary.Given m\\angle C+m\\angle D=180^\\circ Definition of supplementary angles m\\angle B=m\\angle D Given m\\angle C+m\\angle B=180^\\circ Substitution ..."
               }
-            ]
+            ],
+            "prompt": "Given: \\angle C and \\angle D are supplementary and m\\angle B=m\\angle D Prove: AB\\parallel CD"
           },
           {
             "number": 2,
@@ -1809,7 +1840,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Prove this theorem. (a) Construct and label an appropriate figure, (b) state the given information and the theorem to be proven, and (c) list the necessary steps to demonstrate the..."
               }
-            ]
+            ],
+            "prompt": "A theorem states that in a plane, if a line is perpendicular to one of two parallel lines and intersects the other, then it is perpendicular to the other of the two parallel lines.Prove this theorem. (a) Construct and label an appropriate figure, (b) state the given information and the theorem to be proven, and (c) list the necessary steps to demonstrate the proof."
           }
         ]
       },
@@ -1940,7 +1972,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "The circle that determines the rotation, using any point on the pre-image and its image."
           },
           {
             "number": 2,
@@ -1959,7 +1992,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "An angle, created with three points of your choice, which demonstrates the angle of rotation."
           }
         ]
       },
@@ -2089,7 +2123,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Rotate triangle ABC 60^\\circ around point F using a compass and straightedge only."
           },
           {
             "number": 2,
@@ -2108,7 +2143,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Rotate quadrilateral ABCD 120^\\circ around point E using a straightedge and protractor."
           },
           {
             "number": 3,
@@ -2127,7 +2163,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The figure formed is an X, and the angles are called vertical angles."
               }
-            ]
+            ],
+            "prompt": "On your paper, construct a 45^\\circ angle using a compass and straightedge. Rotate the angle 180^\\circ around its vertex, again using only a compass and straightedge. What figure have you formed, and what are its angles called?"
           },
           {
             "number": 4,
@@ -2146,7 +2183,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The figure formed is a rectangle."
               }
-            ]
+            ],
+            "prompt": "Draw a triangle with angles 90^\\circ , 60^\\circ , and 30^\\circ using only a compass and straightedge. Locate the midpoint of the longest side using your compass. Rotate the triangle 180^\\circ around the midpoint of the longest side. What figure have you formed?"
           },
           {
             "number": 5,
@@ -2165,7 +2203,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The figure formed is a rhombus."
               }
-            ]
+            ],
+            "prompt": "On your paper, construct an equilateral triangle. Locate the midpoint of one side using your compass. Rotate the triangle 180^\\circ around this midpoint. What figure have you formed?"
           },
           {
             "number": 6,
@@ -2184,7 +2223,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}Use either your own initials (typed using WordArt in Microsoft Word) or the initials provided below. If you create your own WordArt initials, copy, paste, and rotate to create a design similar to the one below. Find the center of rotation and the angle of rotation for your rotation design."
           }
         ]
       },
@@ -2315,7 +2355,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Construct the line of reflection for each pair of figures below."
           },
           {
             "number": 2,
@@ -2334,7 +2375,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Answers will vary."
               }
-            ]
+            ],
+            "prompt": "Draw a triangle ABC. Draw a line l through vertex C so that it intersects the triangle at more than just the vertex. Construct the reflection across l."
           }
         ]
       },
@@ -2465,7 +2507,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Use Figure 1 to answer Problems 1—3."
           },
           {
             "number": 2,
@@ -2484,7 +2527,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Draw all lines of symmetry. Locate the center of rotational symmetry."
           },
           {
             "number": 3,
@@ -2503,7 +2547,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Describe all symmetries explicitly."
           },
           {
             "number": 4,
@@ -2522,7 +2567,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Rotational symmetry, line symmetry, and the identity symmetry"
               }
-            ]
+            ],
+            "prompt": "What kinds are there?"
           },
           {
             "number": 5,
@@ -2541,7 +2587,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "How many are rotations (including the identity symmetry)?"
           },
           {
             "number": 6,
@@ -2560,7 +2607,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "How many are reflections?"
           },
           {
             "number": 7,
@@ -2579,7 +2627,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Now that you have found the symmetries of the pentagon, consider these questions:"
           },
           {
             "number": 8,
@@ -2598,7 +2647,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "5—vertex A can be moved to A, B, C, D or E."
               }
-            ]
+            ],
+            "prompt": "How many places can vertex A be moved to by some symmetry of the pentagon? (Note that the vertex to which you move A by some specific symmetry is known as the image of A under that symmetry. Did you remember the identity symmetry?)"
           },
           {
             "number": 9,
@@ -2617,7 +2667,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(A,B)→(A,B) is the identity, (A,B)→(C,B) is a reflection along SB, (A,B)→(E,A) is a rotation by 72^\\circ , etc."
               }
-            ]
+            ],
+            "prompt": "For a given symmetry, if you know the image of A, how many possibilities exist for the image of B?"
           },
           {
             "number": 10,
@@ -2636,7 +2687,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Verify that there is symmetry for all possible images of A and B."
           },
           {
             "number": 11,
@@ -2655,7 +2707,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Using part (b), count the number of possible images of A and B. This is the total number of symmetries of the figure. Does your answer match up with the sum of the numbers from Problem 2 parts (b) and (c)?"
           },
           {
             "number": 12,
@@ -2674,7 +2727,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Figure 2Figure 2Figure 2Figure 2Use Figure 2 to answer Problem 4."
           },
           {
             "number": 13,
@@ -2693,7 +2747,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Shade exactly two of the nine smaller squares so that the resulting figure has"
           },
           {
             "number": 14,
@@ -2712,7 +2767,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Only one vertical and one horizontal line of symmetry."
           },
           {
             "number": 15,
@@ -2731,7 +2787,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Only two lines of symmetry about the diagonals."
           },
           {
             "number": 16,
@@ -2750,7 +2807,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Only one horizontal line of symmetry."
           },
           {
             "number": 17,
@@ -2769,7 +2827,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Only one line of symmetry about a diagonal."
           },
           {
             "number": 18,
@@ -2788,7 +2847,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Possible answers:"
               }
-            ]
+            ],
+            "prompt": "No line of symmetry."
           },
           {
             "number": 19,
@@ -2807,7 +2867,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Figure 3Figure 3"
           },
           {
             "number": 20,
@@ -2826,7 +2887,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Use Figure 3 to answer Problem 5."
           },
           {
             "number": 21,
@@ -2845,7 +2907,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Describe all the symmetries explicitly."
           },
           {
             "number": 22,
@@ -2864,7 +2927,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "How many are rotations (including the identity symmetry)?"
           },
           {
             "number": 23,
@@ -2883,7 +2947,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "How many are reflections?"
           },
           {
             "number": 24,
@@ -2902,7 +2967,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "See the figure for an example."
               }
-            ]
+            ],
+            "prompt": "How could you shade the figure so that the resulting figure only has three possible rotational symmetries (including the identity symmetry)?"
           },
           {
             "number": 25,
@@ -2921,7 +2987,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Decide whether each of the statements is true or false. Provide a counterexample if the answer is false."
           },
           {
             "number": 26,
@@ -2940,7 +3007,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "True"
               }
-            ]
+            ],
+            "prompt": "If a figure has exactly two lines of symmetry, it has exactly two rotational symmetries (including the identity symmetry)."
           },
           {
             "number": 27,
@@ -2959,7 +3027,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "True"
               }
-            ]
+            ],
+            "prompt": "If a figure has at least three lines of symmetry, it has at least three rotational symmetries (including the identity symmetry)."
           },
           {
             "number": 28,
@@ -2978,7 +3047,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "False; a parallelogram"
               }
-            ]
+            ],
+            "prompt": "If a figure has exactly two rotational symmetries (including the identity symmetry), it has exactly two lines of symmetry."
           },
           {
             "number": 29,
@@ -2997,7 +3067,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "False;"
               }
-            ]
+            ],
+            "prompt": "If a figure has at least three rotational symmetries (including the identity symmetry), it has at least three lines of symmetry."
           }
         ]
       },
@@ -3128,7 +3199,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Translate each figure according to the instructions provided."
           },
           {
             "number": 2,
@@ -3147,7 +3219,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "To translate the circle is to translate its radius."
               }
-            ]
+            ],
+            "prompt": "Use your compass and straightedge to apply T_{AB} to the circle below (center P_{1}, radius P_{1}P_{2})."
           },
           {
             "number": 3,
@@ -3166,7 +3239,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Use your compass and straightedge to apply T_{AB} to the circle below."
           },
           {
             "number": 4,
@@ -3185,7 +3259,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "To find the center of the circle (and thereby also the radius of the circle), draw any chord within the circle. Construct the perpendicular bisector of the chord, and mark the diam..."
               }
-            ]
+            ],
+            "prompt": "Hint: You need to first find the center of the circle. You can use what you learned in Lesson 4 to do this."
           },
           {
             "number": 5,
@@ -3204,7 +3279,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Two classic toothpick puzzles appear below. Solve each puzzle."
           },
           {
             "number": 6,
@@ -3223,7 +3299,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Each segment on the fish represents a toothpick. Move (translate) exactly three toothpicks and the eye to make the fish swim in the opposite direction. Show the translation vectors needed to move each of the three toothpicks and the eye."
           },
           {
             "number": 7,
@@ -3242,7 +3319,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Again, each segment represents a single toothpick. Move (translate) exactly three toothpicks to make the triangle point downward. Show the translation vectors needed to move each of the three toothpicks."
           },
           {
             "number": 8,
@@ -3261,7 +3339,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Apply T_{GH} to translate \\triangle ABC."
           }
         ]
       },
@@ -3391,7 +3470,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Answers will vary."
               }
-            ]
+            ],
+            "prompt": "Create/construct two problems involving transformations—one reflection and one rotation—that require the use of perpendicular bisectors. Your reflection problem may require locating the line of reflection or using the line of reflection to construct the image. Your rotation problem should require location of the point of rotation. (Why should your rotation problem not require construction of the rotated image?) Create the problems on one page, and construct the solutions on another. Another student will be solving your problems in the next class period."
           }
         ]
       },
@@ -3521,7 +3601,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Theorem: If three distinct lines l_{1}, l_{2}, and l_{3} in the plane have the property that l_{1}\\parallel l_{2} and l_{2}\\parallel l_{3}, then l_{1}\\parallel l_{3}. (In proofs, this can be written as, \"If two lines are parallel to the same line, then they are parallel to each other.\")"
           },
           {
             "number": 2,
@@ -3540,7 +3621,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "AD\\parallel FGGiven EJ\\parallel FGGiven AD\\parallel EJIf two segments are parallel to the same segment, then they are parallel to each other. m\\angle DAJ+m\\angle EJA=180^\\circ If a..."
               }
-            ]
+            ],
+            "prompt": "AD\\parallel FG and EJ\\parallel FG. Prove that \\angle DAJ and \\angle EJA are supplementary."
           },
           {
             "number": 3,
@@ -3559,7 +3641,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "m\\angle C=m\\angle GGiven \\angle B is supplementary to \\angle GGiven m\\angle B+m\\angle G=180^\\circ Definition of supplementary angles m\\angle B+m\\angle C=180^\\circ Substitution prop..."
               }
-            ]
+            ],
+            "prompt": "m\\angle C=m\\angle G and \\angle B is supplementary to \\angle G. Prove that DC\\parallel AB."
           },
           {
             "number": 4,
@@ -3578,7 +3661,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "AB\\parallel EFGiven EF CBGiven \\angle EKC is supplementary to \\angle KCD.Given m\\angle ABC+m\\angle BKE=180^\\circ If parallel lines are cut by a transversal, then interior angles on..."
               }
-            ]
+            ],
+            "prompt": "AB\\parallel EF, EF⊥CB, and \\angle EKC is supplementary to \\angle KCD. Prove that AB\\parallel DC."
           }
         ]
       },
@@ -3708,7 +3792,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Use your understanding of congruence to explain why a triangle cannot be congruent to a quadrilateral."
           },
           {
             "number": 2,
@@ -3727,7 +3812,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "A triangle cannot be congruent to a quadrilateral because there is no rigid motion that takes a figure with three vertices to a figure with four vertices."
               }
-            ]
+            ],
+            "prompt": "Why can't a triangle be congruent to a quadrilateral?"
           },
           {
             "number": 3,
@@ -3746,7 +3832,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "An isosceles triangle cannot be congruent to a triangle that is not isosceles because rigid motions map segments onto segments of equal length, and the lengths of an isosceles tria..."
               }
-            ]
+            ],
+            "prompt": "Why can't an isosceles triangle be congruent to a triangle that is not isosceles?"
           },
           {
             "number": 4,
@@ -3765,7 +3852,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Use the figures below to answer each question:"
           },
           {
             "number": 5,
@@ -3784,7 +3872,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "A 180^\\circ rotation about the midpoint of DB A reflection over the line that joins the midpoints of AD and BC, followed by another reflection over the line that joins the midpoint..."
               }
-            ]
+            ],
+            "prompt": "\\triangle ABD\\cong \\triangle CDB. What rigid motion(s) maps CD onto AB? Find two possible solutions."
           },
           {
             "number": 6,
@@ -3803,7 +3892,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "A translation T_{ZA} A 180^\\circ rotation about the midpoint of ZY, followed by a 180^\\circ rotation about the midpoint of ZX"
               }
-            ]
+            ],
+            "prompt": "All of the smaller triangles are congruent to each other. What rigid motion(s) map ZB onto AZ? Find two possible solutions."
           }
         ]
       },
@@ -3934,7 +4024,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Given two triangles, one with vertices A, B, and C, and the other with vertices X, Y, and Z, there are six diﬀerent correspondences of the ﬁrst with the second."
           },
           {
             "number": 2,
@@ -3953,7 +4044,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "A→Z B→X C→Y"
               }
-            ]
+            ],
+            "prompt": "One such correspondence is the following:"
           },
           {
             "number": 3,
@@ -3972,7 +4064,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "A→X A→Y A→X A→Y A→Z B→Z B→Z B→Y B→X B→Y C→Y C→X C→Z C→Z C→X"
               }
-            ]
+            ],
+            "prompt": "Write the other five correspondences."
           },
           {
             "number": 4,
@@ -3991,7 +4084,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "It must be equilateral."
               }
-            ]
+            ],
+            "prompt": "If all six of these correspondences come from congruences, then what can you say about \\triangle ABC?"
           },
           {
             "number": 5,
@@ -4010,7 +4104,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "It must be isosceles and cannot be equilateral."
               }
-            ]
+            ],
+            "prompt": "If two of the correspondences come from congruences, but the others do not, then what can you say about \\triangle ABC ?"
           },
           {
             "number": 6,
@@ -4029,7 +4124,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "By part (c), if two correspondences come from congruences, then the triangle must be isosceles. A third correspondence implies that the triangles must be equilateral. But then all ..."
               }
-            ]
+            ],
+            "prompt": "Why can there be no two triangles where three of the correspondences come from congruences, but the"
           },
           {
             "number": 7,
@@ -4048,7 +4144,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "A→E B→D C→F"
               }
-            ]
+            ],
+            "prompt": "Give an example of two triangles and a correspondence between them such that (a) all three corresponding angles are congruent, but (b) corresponding sides are not congruent."
           },
           {
             "number": 8,
@@ -4067,7 +4164,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "A→X B→Y C→Z"
               }
-            ]
+            ],
+            "prompt": "Give an example of two triangles and a correspondence between their vertices such that (a) one angle in the ﬁrst is congruent to the corresponding angle in the second, and (b) two sides of the ﬁrst are congruent to the corresponding sides of the second, but (c) the triangles themselves are not congruent."
           },
           {
             "number": 9,
@@ -4086,7 +4184,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "A→J B→K"
               }
-            ]
+            ],
+            "prompt": "Give an example of two quadrilaterals and a correspondence between their vertices such that (a) all four corresponding angles are congruent, and (b) two sides of the ﬁrst are congruent to two sides of the second, but (c) the two quadrilaterals are not congruent."
           },
           {
             "number": 10,
@@ -4105,7 +4204,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "D→M A particular rigid motion, M, takes point P as input and gives point P' as output. That is, M(P)=P'. The same rigid motion maps point Q to point Q'. Since rigid motions preserv..."
               }
-            ]
+            ],
+            "prompt": "A particular rigid motion, M, takes point P as input and gives point P' as output. That is, M(P)=P'. The same rigid motion maps point Q to point Q'. Since rigid motions preserve distance, is it reasonable to state that PP^{'}=QQ'? Does it matter which type of rigid motion M is? Justify your response for each of the three types of rigid motion. Be speciﬁc. If it is indeed the case, for some class of transformations, that PP'=QQ' is true for all P and Q, explain why. If not, oﬀer a counterexample."
           }
         ]
       },
@@ -4235,7 +4335,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Construct an angle bisector for the \\angle ABY, and reflect \\triangle YXZ over that line."
               }
-            ]
+            ],
+            "prompt": "Exercise 3 mapped \\triangle ABC onto \\triangle YXZ in three steps. Construct a fourth step that would map \\triangle YXZ back onto \\triangle ABC."
           },
           {
             "number": 2,
@@ -4254,7 +4355,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Triangle congruence can be found using a series of rigid motions in which you map an original or pre-image of a figure onto itself. By doing so, all the corresponding sides and ang..."
               }
-            ]
+            ],
+            "prompt": "Explain triangle congruence in terms of rigid motions. Use the terms corresponding sides and corresponding angles in your explanation."
           }
         ]
       },
@@ -4384,7 +4486,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Justify whether the triangles meet the SAS congruence criteria; explicitly state which pairs of sides or angles are congruent and why. If the triangles do meet the SAS congruence criteria, describe the rigid motion(s) that would map one triangle onto the other."
           },
           {
             "number": 2,
@@ -4403,7 +4506,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Given: AB\\parallel CD, and AB=CD"
           },
           {
             "number": 3,
@@ -4422,7 +4526,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "AB=CD, AB\\parallel CDGiven BD=DB Reflexive property m\\angle ABC=m\\angle CDB If a transversal intersects two parallel lines, then the measures of the alternate interior angles are e..."
               }
-            ]
+            ],
+            "prompt": "Do \\triangle ABD and \\triangle CDB meet the SAS criteria?"
           },
           {
             "number": 4,
@@ -4441,7 +4546,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Given: m\\angle R=25^\\circ , RT=7\", SU=5\", and ST=5\""
           },
           {
             "number": 5,
@@ -4460,7 +4566,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "There is not enough information given."
               }
-            ]
+            ],
+            "prompt": "Do \\triangle RSU and \\triangle RST meet the SAS criteria?"
           },
           {
             "number": 6,
@@ -4479,7 +4586,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Given: KM and JN bisect each other"
           },
           {
             "number": 7,
@@ -4498,7 +4606,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "KM and JN bisect each otherGiven m\\angle KLJ=m\\angle MLNVertical angles are equal in measure KL=MLDefinition of a segment bisector JL=NLDefinition of a segment bisector \\triangle J..."
               }
-            ]
+            ],
+            "prompt": "Do \\triangle JKL and \\triangle NML meet the SAS criteria?"
           },
           {
             "number": 8,
@@ -4517,7 +4626,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Given: m\\angle 1=m\\angle 2, and BC=DC"
           },
           {
             "number": 9,
@@ -4536,7 +4646,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "m\\angle 1=m\\angle 2 Given BC=DC Given AC=AC Reflexive property \\triangle ABC\\cong \\triangle ADC SAS The triangles map onto one another with a reflection over AC."
               }
-            ]
+            ],
+            "prompt": "Do \\triangle ABC and \\triangle ADC meet the SAS criteria?"
           },
           {
             "number": 10,
@@ -4555,7 +4666,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Given: AE bisects angle \\angle BCD, and BC=DC"
           },
           {
             "number": 11,
@@ -4574,7 +4686,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "AE bisects angle \\angle BCDGiven m\\angle BCA=m\\angle DCA Definition of an angle bisector BC=DC Given AC=AC Reflexive property \\triangle CAD\\cong \\triangle CAB SAS The triangles map..."
               }
-            ]
+            ],
+            "prompt": "Do \\triangle CAB and \\triangle CAD meet the SAS criteria?"
           },
           {
             "number": 12,
@@ -4593,7 +4706,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Given: SU and RT bisect each other"
           },
           {
             "number": 13,
@@ -4612,7 +4726,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "SU and RT bisect each otherGiven SV=UV Definition of a segment bisector RV=VT Definition of a segment bisector m\\angle SVR=m\\angle UVT Vertical angles are equal in measure \\triangl..."
               }
-            ]
+            ],
+            "prompt": "Do \\triangle SVR and \\triangle UVT meet the SAS criteria?"
           },
           {
             "number": 14,
@@ -4631,7 +4746,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Given: JM=KL, JM⊥ML, and KL⊥ML"
           },
           {
             "number": 15,
@@ -4650,7 +4766,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "JM=KLGiven JM⊥ML, KM⊥MLGiven m\\angle JML=90^\\circ , m\\angle KLM=90^\\circ Definition of perpendicular lines m\\angle JML=m\\angle KLM Transitive property ML=LMReflexive property \\tria..."
               }
-            ]
+            ],
+            "prompt": "Do \\triangle JML and \\triangle KLM meet the SAS criteria?"
           },
           {
             "number": 16,
@@ -4669,7 +4786,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Given: BF⊥AC, and CE⊥AB"
           },
           {
             "number": 17,
@@ -4688,7 +4806,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "There is not enough information given."
               }
-            ]
+            ],
+            "prompt": "Do \\triangle BED and \\triangle CFD meet the SAS criteria?"
           },
           {
             "number": 18,
@@ -4707,7 +4826,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Given: m\\angle VXY=m\\angle VYX"
           },
           {
             "number": 19,
@@ -4726,7 +4846,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "There is not enough information given."
               }
-            ]
+            ],
+            "prompt": "Do \\triangle VXW and \\triangle VYZ meet the SAS criteria?"
           },
           {
             "number": 20,
@@ -4745,7 +4866,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "\\triangle RST is isosceles with RS=RTGiven m\\angle S=m\\angle TBase angles of an isosceles triangle are equal in measure. SY=TZGiven \\triangle RSY\\cong \\triangle RTZSAS"
               }
-            ]
+            ],
+            "prompt": "Given: \\triangle RST is isosceles, with RS=RT, and SY=TZ"
           }
         ]
       },
@@ -4876,7 +4998,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Given: AB=BC, AD=DC"
           },
           {
             "number": 2,
@@ -4895,7 +5018,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "AB=BCGiven \\triangle ABC is isosceles.Definition of isosceles triangle m\\angle A=m\\angle CBase angles of an isosceles triangle are equal in measure. AD=DCGiven \\triangle ADB\\cong \\..."
               }
-            ]
+            ],
+            "prompt": "Prove: \\triangle ADB and \\triangle CDB are right triangles"
           },
           {
             "number": 3,
@@ -4914,7 +5038,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Given: AC=AE and BF ‖CE"
           },
           {
             "number": 4,
@@ -4933,7 +5058,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "AC=AEGiven \\triangle ACE is isosceles.Definition of isosceles triangle m\\angle ACE=m\\angle AECBase angles of an isosceles triangle are equal in measure. BF ‖ CEGiven m\\angle ACE=m\\..."
               }
-            ]
+            ],
+            "prompt": "Prove: AB=AF"
           },
           {
             "number": 5,
@@ -4952,7 +5078,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Answers will vary. A possible response would summarize the key elements of the proof from the lesson, such as the response below. It can be shown that \\angle C\\cong \\angle B using ..."
               }
-            ]
+            ],
+            "prompt": "In the diagram, \\triangle ABC is isosceles with AC\\cong AB. In your own words, describe how transformations and the properties of rigid motions can be used to show that \\angle C\\cong \\angle B."
           }
         ]
       },
@@ -5082,7 +5209,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Use your knowledge of triangle congruence criteria to write proofs for each of the following problems."
           },
           {
             "number": 2,
@@ -5101,7 +5229,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Given:Circles with centers A and B intersect at C and D"
           },
           {
             "number": 3,
@@ -5120,7 +5249,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "CA=DARadius of circle CB=DBRadius of circle AB=ABReflexive property \\triangle CAB\\cong \\triangle DABSSS \\angle CAB\\cong \\angle DABCorresponding angles of congruent triangles are co..."
               }
-            ]
+            ],
+            "prompt": "Prove:\\angle CAB\\cong \\angle DAB"
           },
           {
             "number": 4,
@@ -5139,7 +5269,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "m\\angle J=m\\angle MGiven JA=MB Given JK=KL=LMGiven JL=JK+KL Partition property or segments add KM=KL+LMPartition property or segments add KL=KLReflexive property JK+KL=KL+LMAdditio..."
               }
-            ]
+            ],
+            "prompt": "Prove:KR\\cong LR"
           },
           {
             "number": 5,
@@ -5158,7 +5289,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Given:m\\angle w=m\\angle x and m\\angle y=m\\angle z"
           },
           {
             "number": 6,
@@ -5177,7 +5309,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Prove:(1) \\triangle ABE\\cong \\triangle ACE"
           },
           {
             "number": 7,
@@ -5196,7 +5329,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "m\\angle y=m\\angle z Given m\\angle AEB=m\\angle AEC Supplements of equal angles are equal in measure. AE=AE Reflexive property m\\angle w=m\\angle x Given ∴\\triangle ABE\\cong \\triangle..."
               }
-            ]
+            ],
+            "prompt": "(2) AB=AC and AD⊥BC"
           },
           {
             "number": 8,
@@ -5215,7 +5349,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Yes; any time angles are equal in measure, we can also say that they are congruent. This is because rigid motions preserve angle measure; therefore, any time angles are equal in me..."
               }
-            ]
+            ],
+            "prompt": "After completing the last exercise, Jeanne said, \"We also could have been given that \\angle w\\cong \\angle x and \\angle y\\cong \\angle z. This would also have allowed us to prove that \\triangle ABE\\cong \\triangle ACE.\" Do you agree? Why or why not?"
           }
         ]
       },
@@ -5346,7 +5481,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Use your knowledge of triangle congruence criteria to write proofs for each of the following problems."
           },
           {
             "number": 2,
@@ -5365,7 +5501,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Given:AB⊥BC, DE⊥EF, BC\\parallel EF, AF=DC"
           },
           {
             "number": 3,
@@ -5384,7 +5521,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "AB⊥BC Given DE⊥EF Given BC\\parallel EF Given AF=DC Given m\\angle B=m\\angle E=90^\\circ Definition of perpendicular lines m\\angle C=m\\angle F When two parallel lines are cut by a tra..."
               }
-            ]
+            ],
+            "prompt": "Prove:\\triangle ABC\\cong \\triangle DEF"
           },
           {
             "number": 4,
@@ -5403,7 +5541,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "PA⊥AR Given PB⊥BR Given RA=RBGiven m\\angle A=m\\angle R=90^\\circ Definition of perpendicular lines \\triangle PAR, \\triangle PBR are right triangles.Definition of right triangle PR=P..."
               }
-            ]
+            ],
+            "prompt": "In the figure, PA⊥AR and PB⊥RB and R is equidistant from PA and PB. Prove that PR bisects \\angle APB."
           },
           {
             "number": 5,
@@ -5422,7 +5561,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Given:\\angle A\\cong \\angle P, \\angle B\\cong \\angle R, W is the midpoint of AP"
           },
           {
             "number": 6,
@@ -5441,7 +5581,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "\\angle A\\cong \\angle P Given \\angle B\\cong \\angle R Given W is the midpoint of AP. Given AW=PWDefinition of midpoint \\triangle AWB \\cong \\triangle PWR AAS RW\\cong BW Corresponding ..."
               }
-            ]
+            ],
+            "prompt": "Prove:RW\\cong BW"
           },
           {
             "number": 7,
@@ -5460,7 +5601,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Given:BR=CU, rectangle RSTU"
           },
           {
             "number": 8,
@@ -5479,7 +5621,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "BR=CU Given Rectangle RSTUGiven BC\\parallel RUDefinition of a rectangle m\\angle RBS=m\\angle ARU When two para. lines are cut by a trans., the corr. angles are equal in measure. m\\a..."
               }
-            ]
+            ],
+            "prompt": "Prove:\\triangle ARU is isosceles"
           }
         ]
       },
@@ -5609,7 +5752,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Use your knowledge of triangle congruence criteria to write a proof for the following:"
           },
           {
             "number": 2,
@@ -5628,7 +5772,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "In the figure, RX and RY are the perpendicular bisectors of AB and AC, respectively."
           },
           {
             "number": 3,
@@ -5647,7 +5792,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Prove:(a) \\triangle RAX\\cong \\triangle RBX"
           },
           {
             "number": 4,
@@ -5666,7 +5812,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "RX is the perpendicular bisector of AB. Given m\\angle RXA=90^\\circ , m\\angle RXB=90^\\circ Definition of perpendicular bisector AX\\cong XB Definition of perpendicular bisector RX\\co..."
               }
-            ]
+            ],
+            "prompt": "(b) RA\\cong RB\\cong RC"
           }
         ]
       },
@@ -5796,7 +5943,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Use your knowledge of triangle congruence criteria to write a proof for the following:"
           },
           {
             "number": 2,
@@ -5815,7 +5963,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "m\\angle ERC=m\\angle BRD Vertical angles are equal in measure. DC⊥AB,BE⊥ACGiven m\\angle BDR=90^\\circ , m\\angle REC=90^\\circ Definition of perpendicular lines m\\angle ABE=m\\angle RCE..."
               }
-            ]
+            ],
+            "prompt": "In the figure BE\\cong CE, DC⊥AB, and BE⊥AC; prove AE\\cong RE."
           }
         ]
       },
@@ -5945,7 +6094,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Use the facts you have established to complete exercises involving different types of parallelograms."
           },
           {
             "number": 2,
@@ -5964,7 +6114,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Given: AB\\parallel CD, AD=AB, CD=CB"
           },
           {
             "number": 3,
@@ -5983,7 +6134,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Construction: Draw diagonal AC. AD=AB, CD=CBGiven AC=CAReflexive property \\triangle ADC\\cong \\triangle CBASSS AD=CB, AB=CDCorresponding sides of congruent triangles are equal in le..."
               }
-            ]
+            ],
+            "prompt": "Prove: ABCD is a rhombus."
           },
           {
             "number": 4,
@@ -6002,7 +6154,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Given: Rectangle RSTU, M is the midpoint of RS."
           },
           {
             "number": 5,
@@ -6021,7 +6174,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Rectangle RSTUGiven RU=STOpposite sides of a rectangle are congruent. \\angle R, \\angle S are right angles.Definition of a rectangle M is the midpoint of RS.Given RM=SMDefinition of..."
               }
-            ]
+            ],
+            "prompt": "Prove: \\triangle UMT is isosceles."
           },
           {
             "number": 6,
@@ -6040,7 +6194,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Given: ABCD is a parallelogram, RD bisects \\angle ADC, SB bisects \\angle CBA."
           },
           {
             "number": 7,
@@ -6059,7 +6214,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "ABCD is a parallelogram;Given RD bisects \\angle ADC, SB bisects \\angle CBA. AD=CBOpposite sides of a parallelogram are congruent. \\angle A\\cong \\angle C, \\angle B\\cong \\angle DOppo..."
               }
-            ]
+            ],
+            "prompt": "Prove: DRBS is a parallelogram."
           },
           {
             "number": 8,
@@ -6078,7 +6234,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Given: DEFG is a rectangle, WE=YG, WX=YZ"
           },
           {
             "number": 9,
@@ -6097,7 +6254,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "DE=FG, DG=FEOpposite sides of a rectangle are congruent. DEFG is a rectangle;Given WE=YG, WX=YZ DE=DW+WE, FG=YG+FYSegment addition DW+WE=YG+FYSubstitution DW+YG=YG+FYSubstitution D..."
               }
-            ]
+            ],
+            "prompt": "Prove: WXYZ is a parallelogram."
           },
           {
             "number": 10,
@@ -6116,7 +6274,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Prove: BR=SE AB\\parallel FEOpposite sides of a parallelogram are parallel. m\\angle BCR=m\\angle EDSIf parallel lines are cut by a transversal, then alternate interior angles are equ..."
               }
-            ]
+            ],
+            "prompt": "Given: Parallelogram ABFE, CR=DS, ABC and DEF are segments.Prove: BR=SE"
           }
         ]
       },
@@ -6246,7 +6405,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Use your knowledge of triangle congruence criteria to write proofs for each of the following problems."
           },
           {
             "number": 2,
@@ -6265,7 +6425,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "WX is a midsegment of \\triangle ABC, and YZ is a midsegment of \\triangle CWX. BX=AW"
           },
           {
             "number": 3,
@@ -6284,7 +6445,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "\\angle A\\cong \\angle B, BX=AW, so CX=CW; the triangle is isosceles."
               }
-            ]
+            ],
+            "prompt": "What can you conclude about \\angle A and \\angle B? Explain why."
           },
           {
             "number": 4,
@@ -6303,7 +6465,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "YZ=\\frac{1}{4}AB or 4YZ=AB"
               }
-            ]
+            ],
+            "prompt": "What is the relationship of the lengths YZ and AB?"
           },
           {
             "number": 5,
@@ -6322,7 +6485,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "m\\angle DZW= 74^\\circ Perimeter of ABYW= 38 Perimeter of ABCD= 56 m\\angle WAX=107^\\circ m\\angle B=73^\\circ m\\angle YCZ=107^\\circ m\\angle D=73^\\circ"
               }
-            ]
+            ],
+            "prompt": "W, X, Y, and Z are the midpoints of AD, AB, BC, and CD, respectively. AD=18, WZ=11, and BX=5. m\\angle WAC=33^\\circ , m\\angle RYX=74^\\circ"
           },
           {
             "number": 6,
@@ -6341,7 +6505,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Parallelogram"
               }
-            ]
+            ],
+            "prompt": "What kind of quadrilateral is ABCD?"
           }
         ]
       },
@@ -6471,7 +6636,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Ty is building a model of a hang glider using the template below. To place his supports accurately, Ty needs to locate the center of gravity on his model."
           },
           {
             "number": 2,
@@ -6490,7 +6656,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Use your compass and straightedge to locate the center of gravity on Ty's model."
           },
           {
             "number": 3,
@@ -6509,7 +6676,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The center of gravity is the centroid."
               }
-            ]
+            ],
+            "prompt": "Explain what the center of gravity represents on Ty's model."
           },
           {
             "number": 4,
@@ -6528,7 +6696,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The centroid divides the length of each median in a ratio of 2:1."
               }
-            ]
+            ],
+            "prompt": "Describe the relationship between the longer and shorter sections of the line segments you drew as you located the center of gravity."
           }
         ]
       },
@@ -6658,7 +6827,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Construct square ABCD and square GHIJ so that"
           },
           {
             "number": 2,
@@ -6677,7 +6847,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Each side of GHIJ is half the length of each ABCD."
           },
           {
             "number": 3,
@@ -6696,7 +6867,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "AB contains GH."
           },
           {
             "number": 4,
@@ -6715,7 +6887,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Sample construction might look like the following:"
               }
-            ]
+            ],
+            "prompt": "The midpoint of AB is also the midpoint of GH."
           }
         ]
       },
@@ -6845,7 +7018,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Take a blank sheet of 8\\frac{1}{2} inch by 11 inch white paper, and draw a triangle with vertices on the edge of the paper. Construct a nine-point circle within this triangle. Then, draw a triangle with vertices on that nine-point circle, and construct a nine-point circle within that. Continue constructing nine-point circles until you no longer have room inside your constructions."
           }
         ]
       },
@@ -6976,7 +7150,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "x= 52^\\circ , y= 56^\\circ m\\angle AEB is 72^\\circ Linear pairs form supplementary angles. m\\angle FEB is 56^\\circ Linear pairs form supplementary angles. x=52^\\circ If two parallel..."
               }
-            ]
+            ],
+            "prompt": "Use any of the assumptions, facts, and/or properties presented in the tables above to find x and y in each figure below. Justify your solutions."
           },
           {
             "number": 2,
@@ -6995,7 +7170,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "x= 45^\\circ , y= 45^\\circ \\angle ABC and \\angle DCB are alternate interior angles because AB \\parallel CD; x=45^\\circ . Angles x and y are also alternate interior angles because BC..."
               }
-            ]
+            ],
+            "prompt": "You need to draw an auxiliary line to solve this problem."
           },
           {
             "number": 3,
@@ -7014,7 +7190,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "\\angle VWX\\cong \\angle YXWWhen two parallel lines are cut by a transversal, the alternate interior angles are congruent. \\angle XYZ\\cong \\angle YXWWhen two parallel lines are cut b..."
               }
-            ]
+            ],
+            "prompt": "Given the labeled diagram at the right, prove that \\angle VWX \\cong \\angle XYZ."
           }
         ]
       },
@@ -7144,7 +7321,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Use any of the assumptions, facts, and/or properties presented in the tables above to find x and/or y in each figure below. Justify your solutions."
           },
           {
             "number": 2,
@@ -7163,7 +7341,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "100, 15=x+4, x=11 AC=34 AB=26 BD=28"
               }
-            ]
+            ],
+            "prompt": "Find the perimeter of parallelogram ABCD. Justify your solution."
           },
           {
             "number": 3,
@@ -7182,7 +7361,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "CE=\\frac{1}{2}AC; CE=17 CD=AB; CE=26 ED=\\frac{1}{2}BD; ED=14 Perimeter =17+26+14=57 XY=12 XZ=20 ZY=24"
               }
-            ]
+            ],
+            "prompt": "Given parallelogram ABCD, find the perimeter of \\triangle CED. Justify your solution."
           },
           {
             "number": 4,
@@ -7201,7 +7381,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The midsegment is half the length of the side of the triangle it is parallel to."
               }
-            ]
+            ],
+            "prompt": "F, G, and H are midpoints of the sides on which they are located. Find the perimeter of \\triangle FGH. Justify your solution."
           },
           {
             "number": 5,
@@ -7220,7 +7401,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "AE=CFGiven AD=BCProperty of a parallelogram m\\angle DAE=m\\angle BCFIf parallel lines are cut by a transversal, then alternate interior angles are equal in measure. \\triangle ADE\\co..."
               }
-            ]
+            ],
+            "prompt": "ABCD is a parallelogram with AE=CF. Prove that DEBF is a parallelogram."
           },
           {
             "number": 6,
@@ -7239,7 +7421,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "SC=20 TC=14 KC=8"
               }
-            ]
+            ],
+            "prompt": "C is the centroid of \\triangle RST.RC=16, CL=10, TJ=21"
           }
         ]
       },

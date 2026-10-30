@@ -104,7 +104,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "abcdebfabcdebf Rectangles a, b, and c can be used to fill in the first unit square. That leaves rectangles d, e, and f, which make up one quarter of a unit square. Thus, \\frac{15}{..."
               }
-            ]
+            ],
+            "prompt": "Use the following picture to explain why \\frac{15}{12} is the same as 1\\frac{1}{4}."
           },
           {
             "number": 2,
@@ -123,7 +124,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Figure 1Figure 2Figure 1Figure 2"
               }
-            ]
+            ],
+            "prompt": "Figures 1 and 2 below show two polygonal regions used to approximate the area of the region inside an ellipse and above the x-axis."
           },
           {
             "number": 3,
@@ -142,7 +144,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The area of the polygon in Figure 1 has a greater area because it includes all of the area inside the ellipse (i.e., above the x-axis) plus some area outside of the ellipse. The po..."
               }
-            ]
+            ],
+            "prompt": "Which polygonal region has a greater area? Explain your reasoning."
           },
           {
             "number": 4,
@@ -161,7 +164,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Answers will vary."
               }
-            ]
+            ],
+            "prompt": "Which, if either, of the polygonal regions do you believe is closer in area to the region inside the ellipse and above the x-axis?"
           },
           {
             "number": 5,
@@ -180,7 +184,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Figures 1 and 2 below show two polygonal regions used to approximate the area of the region inside a parabola and above the x-axis."
           },
           {
             "number": 6,
@@ -199,7 +204,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Lower estimate: 8 square units"
               }
-            ]
+            ],
+            "prompt": "Use the shaded polygonal region in Figure 1 to give a lower estimate of the area a under the curve and above the x-axis."
           },
           {
             "number": 7,
@@ -218,7 +224,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Upper estimate: 13 square units"
               }
-            ]
+            ],
+            "prompt": "Use the shaded polygonal region to give an upper estimate of the area a under the curve and above the x-axis."
           },
           {
             "number": 8,
@@ -237,7 +244,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Average estimate =\\frac{1}{2}(lower estimate+upper estimate) Average estimate =\\frac{1}{2}(8+13) Average estimate =10.5 An average estimate of the area under the given curve above ..."
               }
-            ]
+            ],
+            "prompt": "Use (a) and (b) to give an average estimate of the area a."
           },
           {
             "number": 9,
@@ -256,7 +264,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Problem 4 is an extension of Problem 3. Using the diagram, draw grid lines to represent each \\frac{1}{2} unit."
           },
           {
             "number": 10,
@@ -275,7 +284,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Each unit square is divided into 4 quarter-unit squares."
               }
-            ]
+            ],
+            "prompt": "What do the new grid lines divide each unit square into?"
           },
           {
             "number": 11,
@@ -294,7 +304,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Lower estimate: 36 quarter-square units or 9 square units"
               }
-            ]
+            ],
+            "prompt": "Use the squares described in part (a) to determine a lower estimate of area a in the diagram."
           },
           {
             "number": 12,
@@ -313,7 +324,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Upper estimate: 50 quarter-square units or 12.5 square units"
               }
-            ]
+            ],
+            "prompt": "Use the squares described in part (a) to determine an upper estimate of area a in the diagram."
           },
           {
             "number": 13,
@@ -332,7 +344,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Average estimate =\\frac{1}{2}(lower estimate+upper estimate) Average estimate =\\frac{1}{2}(9+12.5) Average estimate =10.75 An average estimate of the area under the curve and above..."
               }
-            ]
+            ],
+            "prompt": "Calculate an average estimate of the area under the curve and above the x-axis based on your upper and lower estimates in parts (b) and (c)."
           },
           {
             "number": 14,
@@ -351,7 +364,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Student answers will vary. Possible student answer: The areas of the lower and upper estimates in Problem 2 are closer to one another than the estimates found in Problem 1, so I th..."
               }
-            ]
+            ],
+            "prompt": "Do you think your average estimate in Problem 4 is more or less precise than your estimate from Problem 3? Explain."
           }
         ]
       },
@@ -486,7 +500,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The altitude of the isosceles triangle splits it into two right triangles, each having a base of 3 units in length and hypotenuse of 5 units in length. By the Pythagorean theorem, ..."
               }
-            ]
+            ],
+            "prompt": "Two squares with side length 5 meet at a vertex and together with segment AB form a triangle with base 6 as shown. Find the area of the shaded region."
           },
           {
             "number": 2,
@@ -505,7 +520,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The area of S_{1}∩S_{2}=1 because it is a 1\\times 1 square region. Area(S_{1})=Area(S_{2})=4 By Property 3, the area of S_{1}∪S_{2}=4+4-1=7."
               }
-            ]
+            ],
+            "prompt": "If two 2\\times 2 square regions S_{1} and S_{2} meet at midpoints of sides as shown, find the area of the square region, S_{1}∪S_{2}."
           },
           {
             "number": 3,
@@ -524,7 +540,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The area of the large semicircle: Area=\\frac{1}{2}π∙8^{2}=32π The area of the smaller semicircle: Area=\\frac{1}{2}π(\\frac{8}{3})^{2}=\\frac{32}{9}π The area of the large equilateral..."
               }
-            ]
+            ],
+            "prompt": "The figure shown is composed of a semicircle and a non-overlapping equilateral triangle, and contains a hole that is also composed of a semicircle and a non-overlapping equilateral triangle. If the radius of the larger semicircle is 8, and the radius of the smaller semicircle is \\frac{1}{3} that of the larger semicircle, find the area of the figure."
           },
           {
             "number": 4,
@@ -543,7 +560,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Rotating the shaded area about the center point of square A by a quarter turn three times gives four congruent non-overlapping regions. Each region must have area one-fourth the ar..."
               }
-            ]
+            ],
+            "prompt": "Two square regions A and B each have Area(8). One vertex of square B is the center point of square A. Can you find the area of A∪B and A∩B without any further information? What are the possible areas?"
           },
           {
             "number": 5,
@@ -562,7 +580,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Four congruent right triangles with leg lengths a and b and hypotenuse length c are used to enclose the green region in Figure 1 with a square and then are rearranged inside the square leaving the green region in Figure 2."
           },
           {
             "number": 6,
@@ -581,7 +600,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The white polygonal regions in each figure have the same area, so the green region (difference of the big square and the four triangles) has the same area in each figure."
               }
-            ]
+            ],
+            "prompt": "Use Property 4 to explain why the green region in Figure 1 has the same area as the green region in Figure 2."
           },
           {
             "number": 7,
@@ -600,7 +620,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Each vertex of the green region is adjacent to the two acute angles in the congruent right triangles whose sum is 90^\\circ . The adjacent angles also lie along a line (segment), so..."
               }
-            ]
+            ],
+            "prompt": "Show that the green region in Figure 1 is a square, and compute its area."
           },
           {
             "number": 8,
@@ -619,7 +640,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The congruent right triangles are rearranged such that their acute angles are adjacent, forming a right angle. The angles are adjacent to an angle at a vertex of an a\\times a green..."
               }
-            ]
+            ],
+            "prompt": "Show that the green region in Figure 2 is the union of two non-overlapping squares, and compute its area."
           },
           {
             "number": 9,
@@ -638,7 +660,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Because we showed the green regions in Figures 1 and 2 to be equal in area, the sum of the areas in Figure 2 being a^{2}+b^{2}, therefore, must be equal to the area of the green sq..."
               }
-            ]
+            ],
+            "prompt": "How does this prove the Pythagorean theorem?"
           }
         ]
       },
@@ -769,7 +792,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "List five unique sets of dimensions of your choice for a rectangle with an area of 18, and enter them in column 1."
               }
-            ]
+            ],
+            "prompt": "A rectangle has an area of 18. Fill in the table below by answering the questions that follow. Part of the first row has been completed for you."
           },
           {
             "number": 2,
@@ -788,7 +812,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "If the given rectangle is dilated from a vertex with a scale factor of \\frac{1}{2} , what are the dimensions of the images of each of your rectangles? Enter the scaled dimensions in column 3."
           },
           {
             "number": 3,
@@ -807,7 +832,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "What are the areas of the images of your rectangles? Enter the areas in column 4."
           },
           {
             "number": 4,
@@ -826,7 +852,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "How do the areas of the images of your rectangles compare to the area of the original rectangle? Write the value of each ratio in simplest form in column 5."
           },
           {
             "number": 5,
@@ -845,7 +872,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Write the values of the ratios of area entered in column 5 in terms of the scale factor \\frac{1}{2}. Enter these values in column 6."
           },
           {
             "number": 6,
@@ -864,7 +892,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The areas of the dilated images would both be r^{2}x and thus equal."
               }
-            ]
+            ],
+            "prompt": "If the areas of two unique rectangles are the same, x, and both figures are dilated by the same scale factor r, what can we conclude about the areas of the dilated images?"
           },
           {
             "number": 7,
@@ -883,7 +912,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The scale factor that takes the smaller pentagon to the larger pentagon is \\frac{5}{2}. The area of the larger pentagon is equal to the area of the smaller pentagon times (\\frac{5}..."
               }
-            ]
+            ],
+            "prompt": "Find the ratio of the areas of each pair of similar figures. The lengths of corresponding line segments are shown."
           },
           {
             "number": 8,
@@ -902,7 +932,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The smaller triangle is similar to the larger triangle with a scale factor of \\frac{1}{3}. So, the area of the small triangle is (\\frac{1}{3})^{2}=\\frac{1}{9} the area of the large..."
               }
-            ]
+            ],
+            "prompt": "In \\triangle ABC, line segment DE connects two sides of the triangle and is parallel to line segment BC. If the area of \\triangle ABC is 54 and BC=3DE, find the area of \\triangle ADE."
           },
           {
             "number": 9,
@@ -921,7 +952,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The area of a figure that is scaled in perpendicular directions is equal to the area of the original figure times the product of the scale factors for each direction. The large sta..."
               }
-            ]
+            ],
+            "prompt": "The small star has an area of 5. The large star is obtained from the small star by stretching by a factor of 2 in the horizontal direction and by a factor of 3 in the vertical direction. Find the area of the large star."
           },
           {
             "number": 10,
@@ -940,7 +972,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "One square yard will be represented by one square inch. So, 50 square yards will be represented by 50 square inches."
               }
-            ]
+            ],
+            "prompt": "A piece of carpet has an area of 50 yd^{2}. How many square inches will this be on a scale drawing that has 1 in. represent 1 yd.?"
           },
           {
             "number": 11,
@@ -959,7 +992,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The triangles must be similar by AA criterion, so the smaller triangle is the result of a similarity transformation of the larger triangle including a dilation with a scale factor ..."
               }
-            ]
+            ],
+            "prompt": "An isosceles trapezoid has base lengths of 12 in. and 18 in. If the area of the larger shaded triangle is 72 in^{2}, find the area of the smaller shaded triangle."
           },
           {
             "number": 12,
@@ -978,7 +1012,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "\\triangle OA^{'}B^{'} ~\\triangle OAB. The area of \\triangle OA^{'}B^{'} is \\frac{1}{9} of the area of the area of \\triangle OAB because (\\frac{3}{3+6})^{2}=(\\frac{1}{3})^{2}=\\frac{..."
               }
-            ]
+            ],
+            "prompt": "Triangle ABO has a line segment A'B' connecting two of its sides so that A^{'}B^{'}\\parallel AB. The lengths of certain segments are given. Find the ratio of the area of \\triangle OA'B' to the area of the quadrilateral ABB'A'."
           },
           {
             "number": 13,
@@ -997,7 +1032,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Let the sides of square S be s. Therefore, the resulting scaled image would have lengths rs and \\frac{1}{3}rs. Then the area of square S would be s^{2}, and the area of S' would be..."
               }
-            ]
+            ],
+            "prompt": "A square region S is scaled parallel to one side by a scale factor of r, r≠0, and is scaled in a perpendicular direction by a scale factor of one-third of r to yield its image S'. What is the ratio of the area of S to the area of S'?"
           },
           {
             "number": 14,
@@ -1016,7 +1052,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Area(T^{'})=\\frac{1}{3}∙4∙Area(T)24=\\frac{4}{3}Area(T)\\frac{3}{4}∙24=Area(T)18=Area(T) The area of T is 18 square units."
               }
-            ]
+            ],
+            "prompt": "Figure T' is the image of figure T that has been scaled horizontally by a scale factor of 4 and vertically by a scale factor of \\frac{1}{3}. If the area of T' is 24 square units, what is the area of figure T?"
           },
           {
             "number": 15,
@@ -1035,7 +1072,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "What is the effect on the area of a rectangle if …"
           },
           {
             "number": 16,
@@ -1054,7 +1092,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The area would double."
               }
-            ]
+            ],
+            "prompt": "Its height is doubled and base left unchanged?"
           },
           {
             "number": 17,
@@ -1073,7 +1112,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The area would quadruple."
               }
-            ]
+            ],
+            "prompt": "Its base and height are both doubled?"
           },
           {
             "number": 18,
@@ -1092,7 +1132,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The area would remain unchanged."
               }
-            ]
+            ],
+            "prompt": "Its base is doubled and height cut in half?"
           }
         ]
       },
@@ -1222,7 +1263,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The area of a disk can be approximated to a greater degree of accuracy by squeezing the circle between regular polygons whose areas closely resemble that of the circle. The diagram..."
               }
-            ]
+            ],
+            "prompt": "Describe a method for obtaining closer approximations of the area of a circle. Draw a diagram to aid in your explanation."
           },
           {
             "number": 2,
@@ -1241,7 +1283,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The radius is \\frac{1}{2}."
               }
-            ]
+            ],
+            "prompt": "What is the radius of a circle whose circumference is π?"
           },
           {
             "number": 3,
@@ -1260,7 +1303,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "The side of a square is 20 cm long. What is the circumference of the circle when …"
           },
           {
             "number": 4,
@@ -1279,7 +1323,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The diameter of the circle must be 20, so the circumference is 20π."
               }
-            ]
+            ],
+            "prompt": "The circle is inscribed within the square?"
           },
           {
             "number": 5,
@@ -1298,7 +1343,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The diameter of the circle must be 20\\sqrt{2}, so the circumference is 20π\\sqrt{2}."
               }
-            ]
+            ],
+            "prompt": "The square is inscribed within the circle?"
           },
           {
             "number": 6,
@@ -1317,7 +1363,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "\\frac{Area(C_{1})}{Area(C_{2})}=\\frac{\\frac{81}{4π}}{π}=\\frac{81}{4π^{2}}"
               }
-            ]
+            ],
+            "prompt": "The circumference of circle C_{1} is 9 cm, and the circumference of C_{2} is 2π cm. What is the value of the ratio of the areas of C_{1}to C_{2}?"
           },
           {
             "number": 7,
@@ -1336,7 +1383,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "The circumference of a circle and the perimeter of a square are each 50 cm. Which figure has the greater area?"
           },
           {
             "number": 8,
@@ -1355,7 +1403,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Let us define π to be the circumference of a circle whose diameter is 1."
           },
           {
             "number": 9,
@@ -1374,7 +1423,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "We are going to show why the circumference of a circle has the formula 2πr. Circle C_{1} below has a diameter of d=1, and circle C_{2} has a diameter of d=2r."
           },
           {
             "number": 10,
@@ -1393,7 +1443,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "A scale factor of 2r"
               }
-            ]
+            ],
+            "prompt": "All circles are similar (proved in Module 2). What scale factor of the similarity transformation takes C_{1} to C_{2}?"
           },
           {
             "number": 11,
@@ -1412,7 +1463,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Since the circumference of a circle is a one-dimensional measurement, the value of the ratio of two circumferences is equal to the value of the ratio of their respective diameters. Rewrite the following equation by filling in the appropriate values for the diameters of C_{1} and C_{2}:"
           },
           {
             "number": 12,
@@ -1431,7 +1483,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "\\frac{Circumference(C_{2})}{Circumference(C_{1})}=\\frac{2r}{1}"
               }
-            ]
+            ],
+            "prompt": "\\frac{Circumference(C_{2})}{Circumference(C_{1})}=\\frac{diameter(C_{2})}{diameter(C_{1})}."
           },
           {
             "number": 13,
@@ -1450,7 +1503,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "\\frac{Circumference(C_{2})}{π}=\\frac{2r}{1}"
               }
-            ]
+            ],
+            "prompt": "Since we have defined π to be the circumference of a circle whose diameter is 1, rewrite the above equation using this definition for C_{1}."
           },
           {
             "number": 14,
@@ -1469,7 +1523,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Circumference(C_{2})=2πr"
               }
-            ]
+            ],
+            "prompt": "Rewrite the equation to show a formula for the circumference of C_{2}."
           },
           {
             "number": 15,
@@ -1488,7 +1543,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Since C_{2} is an arbitrary circle, we have shown that the circumference of any circle is 2πr."
               }
-            ]
+            ],
+            "prompt": "What can we conclude?"
           },
           {
             "number": 16,
@@ -1507,7 +1563,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Approximate the area of a disk of radius 1 using an inscribed regular hexagon. What is the percent error of the approximation?"
           },
           {
             "number": 17,
@@ -1526,7 +1583,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The inscribed regular hexagon is divided into six equilateral triangles with side lengths equal to the radius of the circle, 1. By drawing the altitude of an equilateral triangle, ..."
               }
-            ]
+            ],
+            "prompt": "(Remember that percent error is the absolute error as a percent of the exact measurement.)"
           },
           {
             "number": 18,
@@ -1545,7 +1603,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The circumscribed regular hexagon can be divided into six equilateral triangles, each having an altitude equal in length to the radius of the circle. By the Pythagorean theorem, th..."
               }
-            ]
+            ],
+            "prompt": "Approximate the area of a circle of radius 1 using a circumscribed regular hexagon. What is the percent error of the approximation?"
           },
           {
             "number": 19,
@@ -1564,7 +1623,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Let A_{v} represent the average approximation for the area of the disk, and let A_{X} be the exact area of the disk using the area formula. A_{v}≈\\frac{1}{2}(\\frac{3}{2}\\sqrt{3}+2\\..."
               }
-            ]
+            ],
+            "prompt": "Find the average of the approximations for the area of a circle of radius 1 using inscribed and circumscribed regular hexagons. What is the percent error of the average approximation?"
           },
           {
             "number": 20,
@@ -1583,7 +1643,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The circumscribed polygon has area (\\frac{r}{h})^{2}(10). Since 0.98r<h<r, by inversion \\frac{1}{0.98r}>\\frac{1}{h}>\\frac{1}{r}. By multiplying by r, \\frac{r}{0.98r}=\\frac{1}{0.98}..."
               }
-            ]
+            ],
+            "prompt": "A regular polygon with n sides each of length s is inscribed in a circle of radius r. The distance h from the center of the circle to one of the sides of the polygon is over 98% of the radius. If the area of the polygonal region is 10, what can you say about the area of the circumscribed regular polygon with n sides?"
           }
         ]
       },
@@ -1713,7 +1774,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Indicate whether each statement is always true (A), sometimes true (S), or never true (N)."
           },
           {
             "number": 2,
@@ -1732,7 +1794,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "If two lines are perpendicular to the same plane, the lines are parallel."
           },
           {
             "number": 3,
@@ -1751,7 +1814,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Two planes can intersect in a point."
           },
           {
             "number": 4,
@@ -1770,7 +1834,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Two lines parallel to the same plane are perpendicular to each other."
           },
           {
             "number": 5,
@@ -1789,7 +1854,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "If a line meets a plane in one point, then it must pass through the plane."
           },
           {
             "number": 6,
@@ -1808,7 +1874,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Skew lines can lie in the same plane."
           },
           {
             "number": 7,
@@ -1827,7 +1894,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "If two lines are parallel to the same plane, the lines are parallel."
           },
           {
             "number": 8,
@@ -1846,7 +1914,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "If two planes are parallel to the same line, they are parallel to each other."
           },
           {
             "number": 9,
@@ -1865,7 +1934,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "If two lines do not intersect, they are parallel."
           },
           {
             "number": 10,
@@ -1884,7 +1954,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Consider the right hexagonal prism whose bases are regular hexagonal regions. The top and the bottom hexagonal regions are called the base faces, and the side rectangular regions are called the lateral faces."
           },
           {
             "number": 11,
@@ -1903,7 +1974,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Students may define planes using different points. A correct sample response is shown: Plane ABC"
               }
-            ]
+            ],
+            "prompt": "List a plane that is parallel to plane C'D'E'."
           },
           {
             "number": 12,
@@ -1922,7 +1994,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Students may define planes using different points. A correct sample response is shown: Planes ABB', BBC', DEE', EFF', FAA', A'B'C', and ABC. Students may define planes using differ..."
               }
-            ]
+            ],
+            "prompt": "List all planes shown that are not parallel to plane CDD'."
           },
           {
             "number": 13,
@@ -1941,7 +2014,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The bases of the right prism are parallel planes, which means that the lateral faces are perpendicular to the bases; hence, the lines contained in the lateral faces are perpendicul..."
               }
-            ]
+            ],
+            "prompt": "Explain why AA^{'}=CC'."
           },
           {
             "number": 14,
@@ -1960,7 +2034,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Yes, AB and DE lie in the same base plane and are opposite sides of a regular hexagon."
               }
-            ]
+            ],
+            "prompt": "Is AB parallel to DE? Explain."
           },
           {
             "number": 15,
@@ -1979,7 +2054,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "No, the lines do not intersect; however, they are not in the same plane and are, therefore, skew."
               }
-            ]
+            ],
+            "prompt": "Is AB parallel to C'D'? Explain."
           },
           {
             "number": 16,
@@ -1998,7 +2074,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "D'E' is parallel to DE since the lines contain opposite sides of a parallelogram (or rectangle). Together with the result of part (e), if two lines are parallel to the same line, t..."
               }
-            ]
+            ],
+            "prompt": "Is AB parallel to D'E'? Explain."
           },
           {
             "number": 17,
@@ -2017,7 +2094,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "No, for a line to be perpendicular to a plane, it must be perpendicular to two (and thus all) lines in the plane. The given information only provides one pair of perpendicular line..."
               }
-            ]
+            ],
+            "prompt": "If BC' and C'F' are perpendicular, then is BC perpendicular to plane C'A'F'? Explain."
           },
           {
             "number": 18,
@@ -2036,7 +2114,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "One of the following statements is false. Identify which statement is false, and explain why."
           },
           {
             "number": 19,
@@ -2055,7 +2134,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "BB' is perpendicular to B'C'."
           },
           {
             "number": 20,
@@ -2074,7 +2154,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "EE' is perpendicular to EF."
           },
           {
             "number": 21,
@@ -2093,7 +2174,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "CC' is perpendicular to E^{'}F^{'}."
           },
           {
             "number": 22,
@@ -2112,7 +2194,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Statement (iii) is incorrect because even though CC' and E'F' lie in perpendicular planes, the lines do not intersect, so the lines are skew."
               }
-            ]
+            ],
+            "prompt": "BC is parallel to F'E'."
           },
           {
             "number": 23,
@@ -2131,7 +2214,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "In the following figure, \\triangle ABC is in plane P, \\triangle DEF is in plane Q, and BCFE is a rectangle. Which of the following statements are true?"
           },
           {
             "number": 24,
@@ -2150,7 +2234,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "BF=CE True"
               }
-            ]
+            ],
+            "prompt": "BE is perpendicular to plane Q."
           },
           {
             "number": 25,
@@ -2169,7 +2254,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Plane P is parallel to plane Q."
           },
           {
             "number": 26,
@@ -2188,7 +2274,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "AE=AF True"
               }
-            ]
+            ],
+            "prompt": "\\triangle ABC\\cong \\triangle DEF"
           },
           {
             "number": 27,
@@ -2207,7 +2294,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "By the Pythagorean theorem, the length of AC is \\sqrt{a^{2}+b^{2}} units long. \\triangle ACC^{'} is a right triangle with AC=\\sqrt{a^{2}+b^{2}} and CC^{'}=5. Then, AC^{'}=\\sqrt{(\\s..."
               }
-            ]
+            ],
+            "prompt": "Challenge: The following three-dimensional right rectangular prism has dimensions a\\times b\\times c. Determine the length of AC'."
           },
           {
             "number": 28,
@@ -2226,7 +2314,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Consider \\triangle ABC. Since l is perpendicular to P, \\angle ACB is a right angle no matter where B and C lie on the plane. So, AB is the hypotenuse of a right triangle, and AC is..."
               }
-            ]
+            ],
+            "prompt": "A line l is perpendicular to plane P. The line and plane meet at point C. If A is a point on l different from C, and B is a point on P different from C, show that AC<AB."
           },
           {
             "number": 29,
@@ -2245,7 +2334,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Triangle EFG is a 30-60-90 triangle with its short leg of length 5 units. The length of the longer leg must be \\sqrt{3} , or approximately 8.7. The maximum distance between the pla..."
               }
-            ]
+            ],
+            "prompt": "Given two distinct parallel planes P and R, EF in P with EF=5, point G in R, m\\angle GEF=90^\\circ , and m\\angle EFG=60^\\circ , find the minimum and maximum distances between planes P and R, and explain why the actual distance is unknown."
           },
           {
             "number": 30,
@@ -2264,7 +2354,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The adjacent faces on a right rectangular prism are perpendicular, so angle AEF must then be a right angle. Using the Pythagorean theorem: AF^{2}=AE^{2}+EF^{2} AF^{2}=9^{2}+5^{2} A..."
               }
-            ]
+            ],
+            "prompt": "The diagram below shows a right rectangular prism determined by vertices A, B, C, D, E, F, G, and H. Square ABCD has sides with length 5, and AE=9. Find DF."
           }
         ]
       },
@@ -2394,7 +2485,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Complete each statement below by filling in the missing term(s)."
           },
           {
             "number": 2,
@@ -2413,7 +2505,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Oblique"
               }
-            ]
+            ],
+            "prompt": "The following prism is called a(n) prism."
           },
           {
             "number": 3,
@@ -2432,7 +2525,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Right"
               }
-            ]
+            ],
+            "prompt": "If AA' were perpendicular to the plane of the base, then the prism would be called a(n) prism."
           },
           {
             "number": 4,
@@ -2451,7 +2545,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Bases"
               }
-            ]
+            ],
+            "prompt": "The regions ABCD and A'B'C'D' are called the of the prism."
           },
           {
             "number": 5,
@@ -2470,7 +2565,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Edge"
               }
-            ]
+            ],
+            "prompt": "AA' is called a(n) ."
           },
           {
             "number": 6,
@@ -2489,7 +2585,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Lateral faces"
               }
-            ]
+            ],
+            "prompt": "Parallelogram region BB'C'C is one of four ."
           },
           {
             "number": 7,
@@ -2508,7 +2605,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Area(bases)=2\\times (\\frac{5+8}{2})(3.7)=48.1 Area(DEGH)=5(10)=50 Area(BCGF)=6(10)=60 Area(ABFE)=8(10)=80 Area(ADHE)=4(10)=40 Total Surface Area=48.1+50+60+80+40=278.1"
               }
-            ]
+            ],
+            "prompt": "The following right prism has trapezoidal base regions; it is a right trapezoidal prism. The lengths of the parallel edges of the base are 5 and 8, and the nonparallel edges are 4 and 6; the height of the trapezoid is 3.7. The lateral edge length DH is 10. Find the surface area of the prism."
           },
           {
             "number": 8,
@@ -2527,7 +2625,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The radius of the base is 2.5. The lateral area is 5π(8) or 40π."
               }
-            ]
+            ],
+            "prompt": "The base of the following right cylinder has a circumference of 5π and a lateral edge of 8. What is the radius of the base? What is the lateral area of the right cylinder?"
           },
           {
             "number": 9,
@@ -2546,7 +2645,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The lateral area is 27(8) or 216."
               }
-            ]
+            ],
+            "prompt": "The following right general cylinder has a lateral edge of length 8, and the perimeter of its base is 27. What is the lateral area of the right general cylinder?"
           },
           {
             "number": 10,
@@ -2565,7 +2665,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Volume=(area of base)\\times (height)30=(5)h6=h The height of the prism is 6."
               }
-            ]
+            ],
+            "prompt": "A right prism has base area 5 and volume 30. Find the prism's height, h."
           },
           {
             "number": 11,
@@ -2584,7 +2685,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Sketch the figures formed if the rectangular regions are rotated around the provided axis."
           },
           {
             "number": 12,
@@ -2603,7 +2705,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "If the cross-section is parallel to the bases of the cylinder, then it is congruent to the bases; thus, the area of the base of the cylinder is 18. The volume of a general cylinder..."
               }
-            ]
+            ],
+            "prompt": "A cross-section is taken parallel to the bases of a general cylinder and has an area of 18. If the height of the cylinder is h, what is the volume of the cylinder? Explain your reasoning."
           },
           {
             "number": 13,
@@ -2622,7 +2725,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "A general cylinder has a volume of 144. What is one possible set of dimensions of the base and height of the cylinder if all cross-sections parallel to its bases are…"
           },
           {
             "number": 14,
@@ -2641,7 +2745,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Answers vary. Volume=(Area of base)\\times (height)Volume=144Volume=(12)(12)Volume=(4∙3)(12) The base of the cylinder (rectangular prism) could be 4\\times 3, and the cylinder could ..."
               }
-            ]
+            ],
+            "prompt": "Rectangles?"
           },
           {
             "number": 15,
@@ -2660,7 +2765,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Answers vary. Volume=(area of base)\\times (height)Volume=144Volume=(12)(12)Volume=\\frac{1}{2}(6∙4)(12) The base of the cylinder (triangular prism) could be a right triangle with le..."
               }
-            ]
+            ],
+            "prompt": "Right triangles?"
           },
           {
             "number": 16,
@@ -2679,7 +2785,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Answers vary. Volume=(area of base)\\times (height)Volume=144Volume=(12)(12)Volume=(π(\\sqrt{\\frac{12}{π}})^{2})\\times (12) The base of the cylinder (circular cylinder) could have a ..."
               }
-            ]
+            ],
+            "prompt": "Circles?"
           },
           {
             "number": 17,
@@ -2698,7 +2805,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "If P is between the planes containing the base faces, then P meets the prism in a hexagonal region that is congruent to the bases of the prism; otherwise, P does not meet the prism..."
               }
-            ]
+            ],
+            "prompt": "A general hexagonal prism is given. If P is a plane that is parallel to the planes containing the base faces of the prism, how does P meet the prism?"
           },
           {
             "number": 18,
@@ -2717,7 +2825,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The scale factor of the base of the second prism is \\frac{3}{2}, so its area is (\\frac{3}{2})^{2}, the area of the base of the first prism. Volume=(Area of base)\\times (height)100=..."
               }
-            ]
+            ],
+            "prompt": "Two right prisms have similar bases. The first prism has height 5 and volume 100. A side on the base of the first prism has length 2, and the corresponding side on the base of the second prism has length 3. If the height of the second prism is 6, what is its volume?"
           },
           {
             "number": 19,
@@ -2736,7 +2845,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Model the human as a right cylinder with height 6 ft. and base area \\frac{1}{2}ft^{2}. The volume of the human is then 3 ft^{3}. The depth of the water will be increased as the hum..."
               }
-            ]
+            ],
+            "prompt": "A tank is the shape of a right rectangular prism with base 2 ft. \\times 2 ft. and height 8 ft. The tank is filled with water to a depth of 6 ft. A person of height 6 ft. jumps in and stands on the bottom. About how many inches will the water be over the person's head? Make reasonable assumptions."
           }
         ]
       },
@@ -2867,7 +2977,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The cross-section is similar to the base with scale factor r, and the areas of the similar slices are related by the square of the scale factor, r^{2}. r^{2}\\cdot 4=1r^{2}=\\frac{1}..."
               }
-            ]
+            ],
+            "prompt": "The base of a pyramid has area 4. A cross-section that lies in a parallel plane that is distance of 2 from the base plane has an area of 1. Find the height, h, of the pyramid."
           },
           {
             "number": 2,
@@ -2886,7 +2997,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The area of the trapezoidal base: Area=\\frac{1}{2}(b_{1}+b_{2})hArea=\\frac{1}{2}(3+5)∙4Area=16. The area of the base of the pyramid is 16 units2. Let h be the height of the pyramid..."
               }
-            ]
+            ],
+            "prompt": "The base of a pyramid is a trapezoid. The trapezoidal bases have lengths of 3 and 5, and the trapezoid's height is 4. Find the area of the parallel slice that is three-fourths of the way from the vertex to the base."
           },
           {
             "number": 3,
@@ -2905,7 +3017,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Let h be the cone's height in centimeters. (\\frac{5}{h})^{2}\\cdot 36=25(\\frac{5}{h})^{2}=\\frac{25}{36}\\frac{5}{h}=\\frac{5}{6}h=6 The cone has height 6 cm."
               }
-            ]
+            ],
+            "prompt": "A cone has base area 36 cm^{2}. A parallel slice 5 cm from the vertex has area 25 cm^{2}. Find the height of the cone."
           },
           {
             "number": 4,
@@ -2924,7 +3037,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Sketch the figures formed if the triangular regions are rotated around the provided axis:"
           },
           {
             "number": 5,
@@ -2943,7 +3057,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Liza's statement is not valid. As shown, the top cross-section has dimensions that are \\frac{1}{3} the corresponding lengths of the base, and the lower cross-section has dimensions..."
               }
-            ]
+            ],
+            "prompt": "Liza drew the top view of a rectangular pyramid with two cross-sections as shown in the diagram and said that her diagram represents one, and only one, rectangular pyramid. Do you agree or disagree with Liza? Explain."
           },
           {
             "number": 6,
@@ -2962,7 +3077,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Let A be the area of the base in square inches. Two inches above the base is \\frac{4}{5} from the vertex. (\\frac{4}{5})^{2}A=16A=25 The base has area 25 in^{2}."
               }
-            ]
+            ],
+            "prompt": "A general hexagonal pyramid has height 10 in. A slice 2 in. above the base has area 16 in^{2}. Find the area of the base."
           },
           {
             "number": 7,
@@ -2981,7 +3097,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Let h represent the height of the cone. Then, the distance from the vertex to the slice of the cone is \\frac{2}{3}h. The slice is similar to the base with a scale factor of \\frac{\\..."
               }
-            ]
+            ],
+            "prompt": "A general cone has base area 3 units^{2}. Find the area of the slice of the cone that is parallel to the base and \\frac{2}{3} of the way from the vertex to the base."
           },
           {
             "number": 8,
@@ -3000,7 +3117,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Let A be the area of the bases. The cross-sections are each similar to the base with scale factor \\frac{1}{2}. So, each has area \\frac{1}{4}A. Thus, they are equal."
               }
-            ]
+            ],
+            "prompt": "A rectangular cone and a triangular cone have bases with the same area. Explain why the cross-sections for the cones halfway between the base and the vertex have the same area."
           },
           {
             "number": 9,
@@ -3019,7 +3137,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The resulting figure is a circular cone with radius 5 and height 12."
               }
-            ]
+            ],
+            "prompt": "The following right triangle is rotated about side AB. What is the resulting figure, and what are its dimensions?"
           }
         ]
       },
@@ -3150,7 +3269,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The area of the base of the right triangular prism is \\sqrt{3} and the volume of the right triangular prism is \\sqrt{3}\\cdot \\sqrt{3}=3. Let x equal the volume of S_{1} in cubic un..."
               }
-            ]
+            ],
+            "prompt": "Two congruent solids S_{1} and S_{2} have the property that S_{1}∩S_{2} is a right triangular prism with height \\sqrt{3} and a base that is an equilateral triangle of side length 2. If the volume of S_{1}∪S_{2} is 25 units^{3}, find the volume of S_{1}."
           },
           {
             "number": 2,
@@ -3169,7 +3289,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "A triangle is a planar figure. The volume of any planar figure is zero because it lies in the plane and, therefore, has no height."
               }
-            ]
+            ],
+            "prompt": "Find the volume of a triangle with side lengths 3, 4, and 5."
           },
           {
             "number": 3,
@@ -3188,7 +3309,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "DC connects the midpoints of AB and GH and is, therefore, the altitude of both triangles ABC and DGH. The altitude in an equilateral triangle splits the triangle into two congruent..."
               }
-            ]
+            ],
+            "prompt": "The base of the prism shown in the diagram consists of overlapping congruent equilateral triangles ABC and DGH. Points C, D, E, and F are midpoints of the sides of triangles ABC and DGH. GH=AB=4, and the height of the prism is 7. Find the volume of the prism."
           },
           {
             "number": 4,
@@ -3207,7 +3329,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Find the volume of a right rectangular pyramid whose base is a square with side length 2 and whose height is 1."
           },
           {
             "number": 5,
@@ -3226,7 +3349,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Piecing six congruent copies of the given pyramid together forms a cube with edges of length 2. The volume of the cube is equal to the area of the base times the height: Volume_{cu..."
               }
-            ]
+            ],
+            "prompt": "Hint: Six such pyramids can be fit together to make a cube with side length 2, as shown in the diagram."
           },
           {
             "number": 6,
@@ -3245,7 +3369,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Sample drawing shown:"
               }
-            ]
+            ],
+            "prompt": "Draw a rectangular prism with a square base such that the pyramid's vertex lies on a line perpendicular to the base of the prism through one of the four vertices of the square base, and the distance from the vertex to the base plane is equal to the side length of the square base."
           },
           {
             "number": 7,
@@ -3264,7 +3389,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "If the sides of the square are length 3, then the cube formed by three of the pyramids must have edges of length 3. The volume of a cube is the cube of the length of the edges, or ..."
               }
-            ]
+            ],
+            "prompt": "The pyramid that you drew in Problem 5 can be pieced together with two other identical rectangular pyramids to form a cube. If the side lengths of the square base are 3, find the volume of the pyramid."
           },
           {
             "number": 8,
@@ -3283,7 +3409,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The volume is needed in cubic feet, so the dimensions of the block can be converted to feet: 8 in.→\\frac{2}{3}ft. 16 in.→1\\frac{1}{3} ft. 24 in.→2 ft. 40 in. →3\\frac{1}{3}ft. The t..."
               }
-            ]
+            ],
+            "prompt": "Paul is designing a mold for a concrete block to be used in a custom landscaping project. The block is shown in the diagram with its corresponding dimensions and consists of two intersecting rectangular prisms. Find the volume of mixed concrete, in cubic feet, needed to make Paul's custom block."
           },
           {
             "number": 9,
@@ -3302,7 +3429,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Opening"
               }
-            ]
+            ],
+            "prompt": "Challenge: Use card stock and tape to construct three identical polyhedron nets that together form a cube."
           }
         ]
       },
@@ -3433,7 +3561,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The scale factor of the smaller cup is \\frac{4.2}{5}, or 0.84. The cups are similar, so the scale factor is the same in all three perpendicular dimensions. Therefore, the volume of..."
               }
-            ]
+            ],
+            "prompt": "Coffees sold at a deli come in similar-shaped cups. A small cup has a height of 4.2\", and a large cup has a height of 5\". The large coffee holds 12 fluid ounces. How much coffee is in a small cup? Round your answer to the nearest tenth of an ounce."
           },
           {
             "number": 2,
@@ -3452,7 +3581,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Let r be the radius of cylinder B. \\frac{6400}{2700}=\\frac{r^{3}}{3^{3}}r^{3}=64r=4"
               }
-            ]
+            ],
+            "prompt": "Right circular cylinder A has volume 2,700 and radius 3. Right circular cylinder B is similar to cylinder A and has volume 6,400. Find the radius of cylinder B."
           },
           {
             "number": 3,
@@ -3471,7 +3601,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "The Empire State Building is a 102-story skyscraper. Its height is 1,250 ft. from the ground to the roof. The length and width of the building are approximately 424 ft. and 187 ft., respectively. A manufacturing company plans to make a miniature version of the building and sell cases of them to souvenir shops."
           },
           {
             "number": 4,
@@ -3490,7 +3621,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The height is 0.5 ft., the length is about 0.17 ft., and the width is 0.07 ft. Determine the volume of the miniature building. Explain how you determined the volume. Answers vary s..."
               }
-            ]
+            ],
+            "prompt": "The miniature version is just \\frac{1}{2500} of the size of the original. What are the dimensions of the miniature Empire State Building?"
           },
           {
             "number": 5,
@@ -3509,7 +3641,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Scale the right square pyramid by \\frac{a}{2} and \\frac{b}{2} in the directions determined by the sides of the square base and by h in the direction perpendicular to the base. This..."
               }
-            ]
+            ],
+            "prompt": "If a right square pyramid has a 2\\times 2 square base and height 1, then its volume is \\frac{4}{3}. Use this information to find the volume of a right rectangular prism with base dimensions a\\times b and height h."
           },
           {
             "number": 6,
@@ -3528,7 +3661,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(1.1)^{3}\\cdot 100=133.1"
               }
-            ]
+            ],
+            "prompt": "The following solids are similar. The volume of the first solid is 100. Find the volume of the second solid."
           },
           {
             "number": 7,
@@ -3547,7 +3681,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The smaller top cone is similar to the whole cone and has volume (\\frac{1}{2})^{3} or \\frac{1}{8} of the volume of the whole cone. So, the region between the two planes is the rema..."
               }
-            ]
+            ],
+            "prompt": "A general cone has a height of 6. What fraction of the cone's volume is between a plane containing the base and a parallel plane halfway between the vertex of the cone and the base plane?"
           },
           {
             "number": 8,
@@ -3566,7 +3701,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "If the box's dimensions were all doubled, the volume of the box should be enough to contain 2^{3} or 8 times the number of components that the current box holds, which is far too l..."
               }
-            ]
+            ],
+            "prompt": "A company uses rectangular boxes to package small electronic components for shipping. The box that is currently used can contain 500 of one type of component. The company wants to package twice as many pieces per box. Michael thinks that the box will hold twice as much if its dimensions are doubled. Shawn disagrees and says that Michael's idea provides a box that is much too large for 1,000 pieces. Explain why you agree or disagree with one or either of the boys. What would you recommend to the company?"
           },
           {
             "number": 9,
@@ -3585,7 +3721,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "If the original tank had a radius of r and a height of h, then the volume of the original tank would be πr^{2}h. The radii of the new tanks would be \\frac{1}{3}r, and the volume of..."
               }
-            ]
+            ],
+            "prompt": "A dairy facility has bulk milk tanks that are shaped like right circular cylinders. They have replaced one of their bulk milk tanks with three smaller tanks that have the same height as the original but \\frac{1}{3} the radius. Do the new tanks hold the same amount of milk as the original tank? If not, explain how the volumes compare."
           }
         ]
       },
@@ -3716,7 +3853,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Every slice of a parallelogram made parallel to a side has the same length as that side, which is also true in a rectangle. Since each figure has the same height, and the lengths o..."
               }
-            ]
+            ],
+            "prompt": "Use the principle of parallel slices to explain the area formula for a parallelogram."
           },
           {
             "number": 2,
@@ -3735,7 +3873,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Use the principle of parallel slices to show that the three triangles shown below all have the same area."
           },
           {
             "number": 3,
@@ -3754,7 +3893,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The triangle in Figure 1 shares points at (-2,-6) and (4,-3) with the triangle in Figure 2, which has slope of \\frac{1}{2}. If you slide the vertex at (-4,-1) along a parallel line..."
               }
-            ]
+            ],
+            "prompt": "Figure 1Figure 2Figure 3Figure 1Figure 2Figure 3"
           },
           {
             "number": 4,
@@ -3773,7 +3913,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Volume of the large prism: 16 in. \\cdot 9 in. \\cdot 9 in. =1296 in^{3} Volume of the prism-shaped hole: 3 in. \\cdot 6 in. \\cdot 9 in. =162 in^{3} Volume of the remaining solid: 129..."
               }
-            ]
+            ],
+            "prompt": "An oblique prism has a rectangular base that is 16 in. \\times 9 in. A hole in the prism is also the shape of an oblique prism with a rectangular base that is 3 in. wide and 6 in. long, and the prism's height is 9 in. (as shown in the diagram). Find the volume of the remaining solid."
           },
           {
             "number": 5,
@@ -3792,7 +3933,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Volume=πr^{2}\\cdot 545π=πr^{2}∙5r^{2}=9r=3 The radius of the circular base is 3."
               }
-            ]
+            ],
+            "prompt": "An oblique circular cylinder has height 5 and volume 45π. Find the radius of the circular base."
           },
           {
             "number": 6,
@@ -3811,7 +3953,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The base plane intersects the solid in a circle. A plane through the vertex of the cone meets the solid in a single point. Cross-sections arising from intermediate planes are regio..."
               }
-            ]
+            ],
+            "prompt": "A right circular cone and a solid hemisphere share the same base. The vertex of the cone lies on the hemisphere. Removing the cone from the solid hemisphere forms a solid. Draw a picture, and describe the cross-sections of this solid that are parallel to the base."
           },
           {
             "number": 7,
@@ -3830,7 +3973,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The area of the base of the circular cylinder: Area=π∙r^{2} Area=π∙5^{2}=25π The area of the base of the square prism: Area=length∙width Area=(5\\sqrt{π})∙(5\\sqrt{π}) Area=25π The b..."
               }
-            ]
+            ],
+            "prompt": "Use Cavalieri's principle to explain why a circular cylinder with a base of radius 5 and a height of 10 has the same volume as a square prism whose base is a square with edge length 5\\sqrt{π} and whose height is also 10."
           }
         ]
       },
@@ -3960,7 +4104,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Area=Bh=\\frac{1}{3}(πr^{2})h"
               }
-            ]
+            ],
+            "prompt": "What is the volume formula for a right circular cone with radius r and height h?"
           },
           {
             "number": 2,
@@ -3979,7 +4124,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The solid is a triangular pyramid. Volume=\\frac{1}{3}Bh Volume=\\frac{1}{3}(\\frac{1}{2}∙3∙6)∙4 Volume=12 The volume of the triangular pyramid is 12 units3."
               }
-            ]
+            ],
+            "prompt": "Identify the solid shown, and find its volume."
           },
           {
             "number": 3,
@@ -3998,7 +4144,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Volume=\\frac{1}{3}BhVolume=\\frac{1}{3}(12∙12)∙16Volume=768 The volume of the right rectangular pyramid is 768 units3."
               }
-            ]
+            ],
+            "prompt": "Find the volume of the right rectangular pyramid shown."
           },
           {
             "number": 4,
@@ -4017,7 +4164,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Volume=\\frac{1}{3}BhVolume=\\frac{1}{3}(π∙r^{2})hVolume=\\frac{1}{3}(\\frac{22}{7}∙14^{2})∙27Volume=\\frac{1}{3}(616)∙27Volume=5544 The volume of the circular cone is, 544 units3."
               }
-            ]
+            ],
+            "prompt": "Find the volume of the circular cone in the diagram. (Use \\frac{22}{7} as an approximation of pi.)"
           },
           {
             "number": 5,
@@ -4036,7 +4184,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Volume=\\frac{1}{3}BhVolume=\\frac{1}{3}(3^{2})\\cdot 3=9 The volume of pyramid is 9 units3."
               }
-            ]
+            ],
+            "prompt": "Find the volume of a pyramid whose base is a square with edge length 3 and whose height is also 3."
           },
           {
             "number": 6,
@@ -4055,7 +4204,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "A height of 2\""
               }
-            ]
+            ],
+            "prompt": "Suppose you fill a conical paper cup with a height of 6\" with water. If all the water is then poured into a cylindrical cup with the same radius and same height as the conical paper cup, to what height will the water reach in the cylindrical cup?"
           },
           {
             "number": 7,
@@ -4074,7 +4224,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Assuming that the pile of sand is shaped like a cone, the radius of the pile would be 5 ft., and so the volume of the pile in cubic feet would be \\frac{1}{3}π5^{2}\\cdot 6 or approx..."
               }
-            ]
+            ],
+            "prompt": "Sand falls from a conveyor belt and forms a pile on a flat surface. The diameter of the pile is approximately 10 ft., and the height is approximately 6 ft. Estimate the volume of the pile of sand. State your assumptions used in modeling."
           },
           {
             "number": 8,
@@ -4093,7 +4244,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Let A be the area of the base. Volume=\\frac{1}{3}Bh24=\\frac{1}{3}A\\cdot 6A=12 The area of the base is 12 units2."
               }
-            ]
+            ],
+            "prompt": "A pyramid has volume 24 and height 6. Find the area of its base."
           },
           {
             "number": 9,
@@ -4112,7 +4264,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The shorter jar is the better buy because it has twice the volume of the taller jar and costs five cents less than twice the cost of the taller jar."
               }
-            ]
+            ],
+            "prompt": "Two jars of peanut butter by the same brand are sold in a grocery store. The first jar is twice the height of the second jar, but its diameter is one-half as much as the shorter jar. The taller jar costs $1.49, and the shorter jar costs $2.95. Which jar is the better buy?"
           },
           {
             "number": 10,
@@ -4131,7 +4284,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The top section is similar to the whole cone with scale factor \\frac{1}{3}, so its volume is V_{1}=(\\frac{1}{3})^{3}∙\\frac{1}{3}AhV_{1}=\\frac{1}{81}Ah. The middle section has volum..."
               }
-            ]
+            ],
+            "prompt": "A cone with base area A and height h is sliced by planes parallel to its base into three pieces of equal height. Find the volume of each section."
           },
           {
             "number": 11,
@@ -4150,7 +4304,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Let V be the vertex of the pyramid and h the height of the pyramid with base the smaller square of edge length 2. Then, h+4 is the height the pyramid. The smaller square is similar..."
               }
-            ]
+            ],
+            "prompt": "The frustum of a pyramid is formed by cutting off the top part by a plane parallel to the base. The base of the pyramid and the cross-section where the cut is made are called the bases of the frustum. The distance between the planes containing the bases is called the height of the frustum. Find the volume of a frustum if the bases are squares of edge lengths 2 and 3, and the height of the frustum is 4."
           },
           {
             "number": 12,
@@ -4169,7 +4324,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "A bulk tank contains a heavy grade of oil that is to be emptied from a valve into smaller 5.2-quart containers via a funnel. To improve the efficiency of this transfer process, Jason wants to know the greatest rate of oil flow that he can use so that the container and funnel do not overflow. The funnel consists of a cone that empties into a circular cylinder with the dimensions as shown in the diagram. Answer each question below to help Jason determine a solution to his problem."
           },
           {
             "number": 13,
@@ -4188,7 +4344,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The upper part of the funnel is a frustum, and its volume is the difference of the complete cone minus the missing portion of the cone below the frustum. The height of the entire c..."
               }
-            ]
+            ],
+            "prompt": "Find the volume of the funnel."
           },
           {
             "number": 14,
@@ -4207,7 +4364,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "\\frac{1104}{64}π\\cdot (\\frac{4}{231})=\\frac{4416}{14784}π=\\frac{23}{77}π≈0.938 The volume of the funnel is approximately 0.938 quarts."
               }
-            ]
+            ],
+            "prompt": "If 1 in^{3} is equivalent in volume to \\frac{4}{231}qt., what is the volume of the funnel in quarts?"
           },
           {
             "number": 15,
@@ -4226,7 +4384,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Volume=rate\\times time Let t represent the time needed to fill the container in minutes. 5.2=1.4(t)t=\\frac{26}{7}≈3.71 The container will fill in approximately 3.71 minutes (3 min...."
               }
-            ]
+            ],
+            "prompt": "If this particular grade of oil flows out of the funnel at a rate of 1.4 quarts per minute, how much time in minutes is needed to fill the 5.2-quart container?"
           },
           {
             "number": 16,
@@ -4245,7 +4404,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "If the tank valve is shut off at the same time that the container is full, the container will overflow because there is still oil in the funnel; therefore, the tank valve should be..."
               }
-            ]
+            ],
+            "prompt": "Will the tank valve be shut off exactly when the container is full? Explain."
           },
           {
             "number": 17,
@@ -4264,7 +4424,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The valve can be turned off when the container has enough room left for the oil that remains in the funnel. 5.2-\\frac{23}{77}π≈4.262 It is known that the flow rate out of the funne..."
               }
-            ]
+            ],
+            "prompt": "How long after opening the tank valve should Jason shut the valve off?"
           },
           {
             "number": 18,
@@ -4283,7 +4444,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The flow of oil from the bulk tank should just fill the funnel at 3.044 minutes, when the valve is shut off. Volume=rate\\times time Let r represent the rate of oil flow from the bu..."
               }
-            ]
+            ],
+            "prompt": "What is the maximum constant rate of flow from the tank valve that will fill the container without overflowing either the container or the funnel?"
           }
         ]
       },
@@ -4413,7 +4575,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "\\frac{4}{3}πr^{3}=36πr^{3}=27r=3 Therefore, the radius is 3 units."
               }
-            ]
+            ],
+            "prompt": "A solid sphere has volume 36π. Find the radius of the sphere."
           },
           {
             "number": 2,
@@ -4432,7 +4595,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "4πr^{2}=16πr^{2}=4r=2 Therefore, the radius is 2 units."
               }
-            ]
+            ],
+            "prompt": "A sphere has surface area 16π. Find the radius of the sphere."
           },
           {
             "number": 3,
@@ -4451,7 +4615,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Consider a right circular cylinder with radius r and height h. The area of each base is πr^{2}. Think of the lateral surface area as a label on a soup can. If you make a vertical cut along the label and unroll it, the label unrolls to the shape of a rectangle."
           },
           {
             "number": 4,
@@ -4470,7 +4635,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "2πr by h"
               }
-            ]
+            ],
+            "prompt": "Find the dimensions of the rectangle."
           },
           {
             "number": 5,
@@ -4489,7 +4655,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Lateral Area=length\\times width Lateral Area=2πrh"
               }
-            ]
+            ],
+            "prompt": "What is the lateral (or curved) area of the cylinder?"
           },
           {
             "number": 6,
@@ -4508,7 +4675,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Consider a right circular cone with radius r, height h, and slant height l (see Figure 1). The area of the base is πr^{2}."
           },
           {
             "number": 7,
@@ -4527,7 +4695,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Area=πl^{2}"
               }
-            ]
+            ],
+            "prompt": "What is the area of the entire disk in Figure 2?"
           },
           {
             "number": 8,
@@ -4546,7 +4715,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Circumference=2πl"
               }
-            ]
+            ],
+            "prompt": "What is the circumference of the disk in Figure 2?"
           },
           {
             "number": 9,
@@ -4565,7 +4735,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "The length of the arc on this circumference (i.e., the arc that borders the green region) is the circumference of the base of the cone with radius r or 2πr. (Remember, the green region forms the curved portion of the cone and closes around the circle of the base.)"
           },
           {
             "number": 10,
@@ -4584,7 +4755,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "\\frac{2πr}{2πl}=\\frac{r}{l}"
               }
-            ]
+            ],
+            "prompt": "What is the ratio of the area of the disk that is shaded to the area of the whole disk?"
           },
           {
             "number": 11,
@@ -4603,7 +4775,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "\\frac{r}{l}\\times πl^{2}=πrl"
               }
-            ]
+            ],
+            "prompt": "What is the lateral (or curved) area of the cone?"
           },
           {
             "number": 12,
@@ -4622,7 +4795,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "By the Pythagorean theorem, the slant height of the cone is 5 cm. The lateral surface area in cm^{2} is πrl=π3\\cdot 5=15π. The lateral surface area is 15π cm^{2}."
               }
-            ]
+            ],
+            "prompt": "A right circular cone has radius 3 cm and height 4 cm. Find the lateral surface area."
           },
           {
             "number": 13,
@@ -4641,7 +4815,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The solid is a solid sphere with radius 3 ft. The volume in ft^{3} is \\frac{4}{3}π3^{3}=36π. The volume is 36π ft^{3}."
               }
-            ]
+            ],
+            "prompt": "A semicircular disk of radius 3 ft. is revolved about its diameter (straight side) one complete revolution. Describe the solid determined by this revolution, and then find the volume of the solid."
           },
           {
             "number": 14,
@@ -4660,7 +4835,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "A sphere and a circular cylinder have the same radius, r, and the height of the cylinder is 2r."
           },
           {
             "number": 15,
@@ -4679,7 +4855,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The volume of the sphere is \\frac{4}{3}πr^{3}, and the volume of the cylinder is 2πr^{3}, so the ratio of the volumes is the following: \\frac{\\frac{4}{3}πr^{3}}{2πr^{3}}=\\frac{4}{6..."
               }
-            ]
+            ],
+            "prompt": "What is the ratio of the volumes of the solids?"
           },
           {
             "number": 16,
@@ -4698,7 +4875,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The surface area of the sphere is 4πr^{2}, and the surface area of the cylinder is 2(πr^{2})+(2πr∙2r)=6πr^{2}, so the ratio of the surface areas is the following: \\frac{4πr^{2}}{6π..."
               }
-            ]
+            ],
+            "prompt": "What is the ratio of the surface areas of the solids?"
           },
           {
             "number": 17,
@@ -4717,7 +4895,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "V_{cone}=\\frac{1}{3}π(5)^{3}(10) V_{hemisphere}=(\\frac{1}{2})\\frac{4}{3}π(5)^{3} V_{cone}-V_{hemisphere}=\\frac{10}{3}π(5)^{3}-\\frac{2}{3}π(5)^{3} V_{cone}-V_{hemisphere}=\\frac{1}{3..."
               }
-            ]
+            ],
+            "prompt": "The base of a circular cone has a diameter of 10 cm and an altitude of 10 cm. The cone is filled with water. A sphere is lowered into the cone until it just fits. Exactly one-half of the sphere remains out of the water. Once the sphere is removed, how much water remains in the cone?"
           },
           {
             "number": 18,
@@ -4736,7 +4915,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "Teri has an aquarium that is a cube with edge lengths of 24 inches. The aquarium is \\frac{2}{3} full of water. She has a supply of ball bearings, each having a diameter of \\frac{3}{4} inch."
           },
           {
             "number": 19,
@@ -4755,7 +4935,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "24 in.\\times 24 in.\\times 24 in.=13824 in^{3} The volume of the cube is 13,824 in^{3}. 24 in.\\times 24 in.\\times 18 in.=10368 in^{3} The volume of water in the cube is 10,368 in^{3..."
               }
-            ]
+            ],
+            "prompt": "What is the maximum number of ball bearings that Teri can drop into the aquarium without the water overflowing?"
           },
           {
             "number": 20,
@@ -4774,7 +4955,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "In the original problem, the water will fill the gaps between the ball bearings as they are dropped in; however, the sand will not fill the gaps unless the mixture of sand and ball..."
               }
-            ]
+            ],
+            "prompt": "Would your answer be the same if the aquarium were \\frac{2}{3} full of sand? Explain."
           },
           {
             "number": 21,
@@ -4793,7 +4975,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The length and width of the aquarium are 24 inches, and 24 inches divided into \\frac{3}{4} inch intervals is 32, so each row and column would contain 32 bearings. The total number ..."
               }
-            ]
+            ],
+            "prompt": "If the aquarium were empty, how many ball bearings would fit on the bottom of the aquarium if you arranged them in rows and columns, as shown in the picture?"
           },
           {
             "number": 22,
@@ -4812,7 +4995,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The aquarium is 24 inches high as well, so there could be 32 layers of bearings for a total of 32,768 bearings."
               }
-            ]
+            ],
+            "prompt": "How many of these layers could be stacked inside the aquarium without going over the top of the aquarium? How many bearings would there be altogether?"
           },
           {
             "number": 23,
@@ -4831,7 +5015,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "(32768)(\\frac{9}{128}π)≈7238.229 474 The total volume of the ball bearings is approximately 7238.229 474 in^{3}. 13824-7238.229 474=6585.770 526 The space between the ball bearings..."
               }
-            ]
+            ],
+            "prompt": "With the bearings still in the aquarium, how much water can be poured into the aquarium without overflowing?"
           },
           {
             "number": 24,
@@ -4850,7 +5035,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "A little more than half of the space."
               }
-            ]
+            ],
+            "prompt": "Approximately how much of the aquarium do the ball bearings occupy?"
           },
           {
             "number": 25,
@@ -4869,7 +5055,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The volume of a hemisphere with radius 2 is equal to the difference of the volume of a circular cylinder with radius 2 and height 2 and the volume of a circular cone with base radi..."
               }
-            ]
+            ],
+            "prompt": "Challenge: A hemispherical bowl has a radius of 2 meters. The bowl is filled with water to a depth of 1 meter. What is the volume of water in the bowl? (Hint: Consider a cone with the same base radius and height and the cross-section of that cone that lies 1 meter from the vertex.)"
           },
           {
             "number": 26,
@@ -4888,7 +5075,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Mass of shell: Mass=(14)(\\frac{4}{3}π[(50)^{3}-(r)^{3}]) In order for the device to be neutrally buoyant: density of water=\\frac{mass(sensor)+mass(shell)}{volume of housing}1=\\frac..."
               }
-            ]
+            ],
+            "prompt": "Challenge: A certain device must be created to house a scientific instrument. The housing must be a spherical shell, with an outside diameter of 1 m. It will be made of a material whose density is 14 g/cm^{3}. It will house a sensor inside that weighs 1.2 kg. The housing, with the sensor inside, must be neutrally buoyant, meaning that its density must be the same as water. Ignoring any air inside the housing, and assuming that water has a density of 1 g/cm^{3}, how thick should the housing be made so that the device is neutrally buoyant? Round your answer to the nearest tenth of a centimeter."
           },
           {
             "number": 27,
@@ -4907,7 +5095,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Total volume of water: V=\\frac{1}{3}π(2)^{2}(2) V=\\frac{8}{3}π; the total volume of water is \\frac{8}{3}π m^{3}. The cone formed when the water level is at 80 cm (0.8 m) is similar..."
               }
-            ]
+            ],
+            "prompt": "Challenge: An inverted, conical tank has a circular base of radius 2 m and a height of 2 m and is full of water. Some of the water drains into a hemispherical tank, which also has a radius of 2 m. Afterward, the depth of the water in the conical tank is 80 cm. Find the depth of the water in the hemispherical tank."
           }
         ]
       },
@@ -5038,7 +5227,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Answers vary. The solid could be a ball with a hole in it."
               }
-            ]
+            ],
+            "prompt": "Horizontal slices of a solid are shown at various levels arranged from highest to lowest. What could the solid be?"
           },
           {
             "number": 2,
@@ -5057,7 +5247,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "For the first ring, the cross-sections are circles or regions between concentric circles. For the second ring, the cross-sections are stretched cirles and then two separated region..."
               }
-            ]
+            ],
+            "prompt": "Explain the difference in a 3D printing of the ring pictured in Figure 1 and Figure 2 if the ring is oriented in each of the following ways."
           },
           {
             "number": 3,
@@ -5076,7 +5267,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Radius of filament: 1 mm=0.1 cm Volume_{bangle}=π(0.1)^{2}(h)=0.01πh14 =\\frac{25}{0.01πh}h≈56.8 The wire must be a length of 56.8 cm."
               }
-            ]
+            ],
+            "prompt": "Each bangle printed by a 3D printer has a mass of exactly 25 g of metal. If the density of the metal is 14 g/cm^{3}, what length of a wire 1 mm in radius is needed to produce each bangle? Find your answer to the tenths place."
           },
           {
             "number": 4,
@@ -5095,7 +5287,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Length of filament:100 m=10^{4} cm Radius of filament: 0.875 mm=0.0875 cm Volume_{filament}=π(0.0875)^{2}(10^{4})=76.5625π Mass of cup:(76.5625π cm^{3})(0.32 g/cm^{3})=24.5π g The ..."
               }
-            ]
+            ],
+            "prompt": "A certain 3D printer uses 100 m of plastic filament that is 1.75 mm in diameter to make a cup. If the filament has a density of 0.32 g/cm^{3}, find the mass of the cup to the tenths place."
           },
           {
             "number": 5,
@@ -5114,7 +5307,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "If the vertex is at the top, new layers will always be supported by old layers. If the vertex is at the bottom, new layers will hang over previous layers."
               }
-            ]
+            ],
+            "prompt": "Suppose you want to make a 3D printing of a cone. What difference does it make if the vertex is at the top or at the bottom? Assume that the 3D printer places each new layer on top of the previous layer."
           },
           {
             "number": 6,
@@ -5133,7 +5327,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "The volume of the cone is V=\\frac{1}{3}π(2 cm)^{2}\\cdot 3 cm=4π cm^{3}. The volume of the filament is V=2500 cm\\cdot π\\cdot 0.15^{2} cm^{2}=56.25π cm^{3}. Since 56.25π cm^{3}÷4π cm..."
               }
-            ]
+            ],
+            "prompt": "Filament for 3D printing is sold in spools that contain something shaped like a wire of diameter 3 mm. John wants to make 3D printings of a cone with radius 2 cm and height 3 cm. The length of the filament is 25 meters. About how many cones can John make?"
           },
           {
             "number": 7,
@@ -5152,7 +5347,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Students' answers vary. One possible solution would be to print only the outer shell of the cone, leaving a hollow center in the shape of a scaled-down cone. Something that student..."
               }
-            ]
+            ],
+            "prompt": "John has been printing solid cones but would like to be able to produce more cones per each length of filament than you calculated in Problem 7. Without changing the outside dimensions of his cones, what is one way that he could make a length of filament last longer? Sketch a diagram of your idea, and determine how much filament John would save per piece. Then, determine how many cones John could produce from a single length of filament based on your design."
           },
           {
             "number": 8,
@@ -5171,7 +5367,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Each new solid would have volume 1.331 times the volume of an original solid. Let x be the number of new figures produced. Then, 1.331x=20 and x=\\frac{20}{1.331}≈15.03. It should b..."
               }
-            ]
+            ],
+            "prompt": "A 3D printer uses one spool of filament to produce 20 congruent solids. Suppose you want to produce similar solids that are 10% longer in each dimension. How many such figures could one spool of filament produce?"
           },
           {
             "number": 9,
@@ -5190,7 +5387,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Refer to teacher construction steps and geometric proof rubric."
               }
-            ]
+            ],
+            "prompt": "A fabrication company 3D-prints parts shaped like a pyramid with base as shown in the following figure. Each pyramid has a height of 3 cm. The printer uses a wire with a density of 12 g/cm^{3} at a cost of $0.07/g."
           },
           {
             "number": 10,
@@ -5209,7 +5407,8 @@
                 "action": "Apply Axiomatic Theorems",
                 "result": "Volume of a single part: V=\\frac{1}{3}Bh V=\\frac{1}{3}(17)(3) V=17; the volume of each part is 17 cm^{3}. Mass of a single part: density=\\frac{mass}{volume} or mass=(density)(volum..."
               }
-            ]
+            ],
+            "prompt": "It costs $500 to set up for a production run, no matter how many parts they make. If they can only charge $15 per part, how many do they need to make in a production run to turn a profit?"
           }
         ]
       },

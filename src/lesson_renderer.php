@@ -104,6 +104,34 @@ if (!$lesson && file_exists($lessonsFile)) {
 
 if ($lesson) {
     $meta = $lesson['meta'] ?? [];
+    if (empty($meta['title'])) {
+        $meta['title'] = $lesson['title'] ?? ($lesson['name'] ?? 'Curriculum Lesson');
+    }
+    if (empty($meta['badge'])) {
+        $meta['badge'] = "Math Lesson " . ($lesson['code'] ?? $codeStr);
+    }
+    if (empty($meta['badgeIcon'])) {
+        $meta['badgeIcon'] = $subjData['icon'] ?? 'fa-calculator';
+    }
+    if (empty($meta['description'])) {
+        $meta['description'] = $lesson['description'] ?? (!empty($lesson['topicName']) ? "{$lesson['topicName']} practice and core concept reinforcement." : "Standards-aligned mathematics lesson.");
+    }
+    if (empty($lesson['overview'])) {
+        $lesson['overview'] = [
+            'title' => "Core Learning Objectives & Overview",
+            'pill' => $lesson['topicName'] ?? ($lesson['course'] ?? "{$levelDisplay} • {$subjData['name']}"),
+            'text' => "In this lesson, master the mathematical principles of " . ($meta['title'] ?? '') . ". Complete the official practice worksheet below.",
+            'outcomes' => $lesson['outcomes'] ?? [],
+            'teacherInsight' => $lesson['teacherInsight'] ?? ''
+        ];
+    } else {
+        if (empty($lesson['overview']['outcomes']) && !empty($lesson['outcomes'])) {
+            $lesson['overview']['outcomes'] = $lesson['outcomes'];
+        }
+        if (empty($lesson['overview']['teacherInsight']) && !empty($lesson['teacherInsight'])) {
+            $lesson['overview']['teacherInsight'] = $lesson['teacherInsight'];
+        }
+    }
 } else {
     // Intelligent Curriculum Scaffolder for all standards
     $scaffoldTitle = ($rawLevel === 'ged')
@@ -293,7 +321,10 @@ include_once ABSPATH . 'src/partials/sticky-reading-bar.php';
                         </div>
 
                         <div class="lesson-problem-prompt">
-                            <?php echo nl2br(htmlspecialchars($prob['prompt'] ?? '')); ?>
+                            <?php 
+                            $probText = $prob['prompt'] ?? $prob['problem'] ?? $prob['text'] ?? $prob['question'] ?? '';
+                            echo nl2br(htmlspecialchars($probText)); 
+                            ?>
                         </div>
 
                         <!-- Interactive Student Workspace -->

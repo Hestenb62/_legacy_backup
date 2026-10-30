@@ -75,7 +75,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Suppose that a Ferris wheel is 40 feet in diameter and rotates counterclockwise. When a passenger car is at the bottom of the wheel, it is located 2 feet above the ground."
           },
           {
             "number": 2,
@@ -94,7 +95,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Sketch a graph of a function that represents the height of a passenger car that starts at the 3 o'clock position on the wheel for one turn."
           },
           {
             "number": 3,
@@ -113,7 +115,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Sketch a graph of a function that represents the height of a passenger car that starts at the top of the wheel for one turn."
           },
           {
             "number": 4,
@@ -132,7 +135,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "The domain is [0,360]. The range is [2,42]."
               }
-            ]
+            ],
+            "prompt": "The sketch you created in part (a) represents a graph of a function. What is the domain of the function? What is the range?"
           },
           {
             "number": 5,
@@ -151,7 +155,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "The domain is [0,360]. The range is [2,42]."
               }
-            ]
+            ],
+            "prompt": "The sketch you created in part (b) represents a graph of a function. What is the domain of the function? What is the range?"
           },
           {
             "number": 6,
@@ -170,7 +175,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "The graph would repeat itself over another interval of 360 degrees. It would appear as if we attached a horizontal translation of the graph to the right end of the original graph."
               }
-            ]
+            ],
+            "prompt": "Describe how the graph of the function in part (a) would change if you sketched the graph for two turns."
           },
           {
             "number": 7,
@@ -189,7 +195,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "The function's range would change to [2,62], and the graph's maximum value would be 62 instead of 42. The domain would stay the same, and the x-coordinates where the maximum and mi..."
               }
-            ]
+            ],
+            "prompt": "Describe how the function in part (a) and its graph would change if the Ferris wheel had a diameter of 60 feet."
           },
           {
             "number": 8,
@@ -208,7 +215,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "A small pebble is lodged in the tread of a tire with radius 25 cm. Sketch the height of the pebble above the ground as the tire rotates counterclockwise through 5 turns. Start your graph when the pebble is at the 9 o'clock position."
           },
           {
             "number": 9,
@@ -227,7 +235,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "The graph you created in Problem 2 represents a function."
           },
           {
             "number": 10,
@@ -246,7 +255,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "The highest y-value on the graph would be 48 inches instead of 50 centimeters. The function's range would change to [0,48]."
               }
-            ]
+            ],
+            "prompt": "Describe how the function and its graph would change if the tire's radius was 24 inches instead of 25 cm."
           },
           {
             "number": 11,
@@ -265,7 +275,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "The graph would increase to a height of 50 cm after \\frac{1}{4} of a turn and then decrease to a height of 0 after \\frac{3}{4} of a turn. While the domain and range of the function..."
               }
-            ]
+            ],
+            "prompt": "Describe how the function and its graph would change if the wheel was turning in the opposite direction."
           },
           {
             "number": 12,
@@ -284,7 +295,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Assuming a counterclockwise rotation, a rotation of 0 degrees would be paired with a height of 0, and then after \\frac{1}{4} of a turn, the height would be 25 cm. The domain and ra..."
               }
-            ]
+            ],
+            "prompt": "Describe how the function and its graph would change if we started the graph when the pebble was at ground level."
           },
           {
             "number": 13,
@@ -303,7 +315,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "When we measured the height for every 15 degrees of rotation, the height was changing more rapidly at the far left and right positions of the wheel and more slowly near the top and..."
               }
-            ]
+            ],
+            "prompt": "Justice believes that the height of a Ferris wheel passenger car is best modeled with a piecewise linear function. Make a convincing argument why a piecewise linear function is NOT a good model for the height of a car on a rotating Ferris wheel."
           }
         ]
       },
@@ -335,7 +348,26 @@
           "correct": 0,
           "explanation": "Mathematical rigor requires that each simplification or transformation is justified by established axioms, field properties, or verified theorems."
         }
-      ]
+      ],
+      "meta": {
+        "title": "Ferris Wheels—Tracking the Height of a Passenger Car",
+        "pageTitle": "Ferris Wheels—Tracking the Height of a Passenger Car | 11th Grade Algebra II | Hesten's Learning",
+        "description": "EngageNY Algebra II lesson on Ferris Wheels—Tracking the Height of a Passenger Car with step-by-step proofs, exercises, and problem sets.",
+        "pageDescription": "Master Ferris Wheels—Tracking the Height of a Passenger Car in 11th Grade Algebra II with embedded practice problem sets and teacher solution keys.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson M.M2.A.1",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Ferris Wheels—Tracking the Height of a Passenger Car",
+        "pill": "The Story of Trigonometry and Its Contexts • Algebra II",
+        "text": "In this lesson, explore the essential concepts of Ferris Wheels—Tracking the Height of a Passenger Car. Work through the official curriculum practice exercises below, track your personal study notes, and verify your comprehension using the step-by-step solution keys.",
+        "outcomes": [
+          "Students apply geometric concepts in modeling situations. Specifically, they find distances between points of a circle and a given line to represent the height above the ground of a passenger car on a Ferris wheel as it is rotated a number of degrees about the origin from an initial reference point.",
+          "Students sketch the graph of a nonlinear relationship between variables."
+        ],
+        "teacherInsight": "This lesson sets the stage for the study of the sine function by asking students to explore the height of a passenger car on a Ferris wheel at various points on its circular path. The main goal of this first lesson is for students to discover that the relationship between the height and the number of degrees through which the car has rotated from an initial reference position is not linear. In later lessons, students relate this function to the sine function and see how the geometric definitions of sine, cosine, and the other trigonometric ratios can be extended to these circular functions represented in the coordinate plane. In this lesson, in order to separate this new function from the domain-limited sine function that students know from triangle trigonometry, this height function was purposely not referred to as the sine function. To precisely define and describe the sine and cosine functions in later lessons, the domain must be the real numbers, so that the sine (or cosine) of the number of degrees/radians that an initial ray (i.e., the nonnegative x-axis) has been rotated is taken. In this situation, rotations do not involve any sense of time such as a rotating clock or a turning wheel. However, it is very natural for students to conceptualize the situation as dependent on time. Because of this conceptual difficulty, old textbooks often defined sine and cosine functions as spinning a ray about the origin, where students got a sense of non-static motion. Of course, non-static motion is based upon time, which is not how these trigonometric functions are precisely defined. However, the conceptual image of the wheel rotating is quite good and important for students to understand; it is just not a definition."
+      }
     },
     "m-math-m2-a-2": {
       "id": "m-math-m2-a-2",
@@ -404,7 +436,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "The Great Wheel has a diameter of 175 feet, so the radius is 87.5 feet."
               }
-            ]
+            ],
+            "prompt": "Create a diagram that shows the position of a passenger car on the Great Wheel as it rotates counterclockwise at 45-degree intervals."
           },
           {
             "number": 2,
@@ -423,7 +456,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Below, the blue curve represents the height function, and the red curve represents the co-height function."
               }
-            ]
+            ],
+            "prompt": "On the same set of axes, sketch graphs of the height and co-height functions for a passenger car starting at the 3 o'clock position on the Great Wheel and completing one turn."
           },
           {
             "number": 3,
@@ -442,7 +476,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Both the height and co-height functions have the same domain, (0,360), and range, [-87.5,87.5]. Both functions have the same maximum value of 87.5 and minimum value of —87.5, but t..."
               }
-            ]
+            ],
+            "prompt": "Discuss the similarities and differences between the graph of the height function and the graph of the co-height function."
           },
           {
             "number": 4,
@@ -461,7 +496,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "The radius of the wheel is the distance from the center of the wheel to a point on the wheel. We can easily measure this at one of the four points when the car is at the top or bot..."
               }
-            ]
+            ],
+            "prompt": "Explain how you can identify the radius of the wheel from either graph."
           },
           {
             "number": 5,
@@ -480,7 +516,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "In 2014, the High Roller Ferris wheel opened in Las Vegas, dwarfing the Seattle Great Wheel with a diameter of 520 feet. Sketch graphs of the height and co-height functions for one complete turn of the High Roller."
           },
           {
             "number": 6,
@@ -499,7 +536,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Consider a Ferris wheel with a 50-foot radius. We will track the height and co-height of passenger cars that begin at the 3 o'clock position. Sketch graphs of the height and co-height functions for the following scenarios."
           },
           {
             "number": 7,
@@ -518,7 +556,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "A passenger car on the Ferris wheel completes one turn, traveling counterclockwise."
           },
           {
             "number": 8,
@@ -537,7 +576,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "A passenger car on the Ferris wheel completes two full turns, traveling counterclockwise."
           },
           {
             "number": 9,
@@ -556,7 +596,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "The Ferris wheel is stuck in reverse, and a passenger car on the Ferris wheel completes two full clockwise turns."
           },
           {
             "number": 10,
@@ -575,7 +616,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Consider the right triangle formed by the spoke of the wheel connecting the car to the center, the horizontal axis, and the perpendicular line dropped from the car's position to th..."
               }
-            ]
+            ],
+            "prompt": "Consider a Ferris wheel with radius of 40 feet that is rotating counterclockwise. At which amounts of rotation are the values of the height and co-height functions equal? Does this result hold for a Ferris wheel with a different radius?"
           },
           {
             "number": 11,
@@ -594,7 +636,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Yuki is on a passenger car of a Ferris wheel at the 3 o'clock position. The wheel then rotates 135 degrees counterclockwise and gets stuck. Lee argues that she can compute the value of the co-height of Yuki's car if she is given one of the following two pieces of information:"
           },
           {
             "number": 12,
@@ -613,7 +656,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "The value of the height function of Yuki's car, or"
           },
           {
             "number": 13,
@@ -632,7 +676,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "The diameter of the Ferris wheel itself."
           },
           {
             "number": 14,
@@ -651,7 +696,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Lee is correct. Since Yuki's car started at the 3 o'clock position and rotated 135^\\circ , then the ending position is in the second quadrant. The spoke of the Ferris wheel connect..."
               }
-            ]
+            ],
+            "prompt": "Is Lee correct? Explain how you know."
           }
         ]
       },
@@ -683,7 +729,25 @@
           "correct": 0,
           "explanation": "Mathematical rigor requires that each simplification or transformation is justified by established axioms, field properties, or verified theorems."
         }
-      ]
+      ],
+      "meta": {
+        "title": "The Height and Co-Height Functions of a Ferris Wheel",
+        "pageTitle": "The Height and Co-Height Functions of a Ferris Wheel | 11th Grade Algebra II | Hesten's Learning",
+        "description": "EngageNY Algebra II lesson on The Height and Co-Height Functions of a Ferris Wheel with step-by-step proofs, exercises, and problem sets.",
+        "pageDescription": "Master The Height and Co-Height Functions of a Ferris Wheel in 11th Grade Algebra II with embedded practice problem sets and teacher solution keys.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson M.M2.A.2",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: The Height and Co-Height Functions of a Ferris Wheel",
+        "pill": "The Story of Trigonometry and Its Contexts • Algebra II",
+        "text": "In this lesson, explore the essential concepts of The Height and Co-Height Functions of a Ferris Wheel. Work through the official curriculum practice exercises below, track your personal study notes, and verify your comprehension using the step-by-step solution keys.",
+        "outcomes": [
+          "Students model and graph two functions given by the location of a passenger car on a Ferris wheel as it is rotated a number of degrees about the origin from an initial reference position."
+        ],
+        "teacherInsight": "Students extend their work with the function that represents the height of a passenger car on a Ferris wheel from Lesson 1 to define a function that represents the horizontal displacement of the car from the center of the wheel, which is temporarily called the co-height function. In later lessons, the co-height function is related to the cosine function. Students sketch graphs of various co-height functions and notice that these graphs are nonlinear. Students explain why the graph of the co-height function is a horizontal translation of the graph of the height function and sketch graphs that model the position of a passenger car for various-sized Ferris wheels. The work in the first three lessons of Module 2 serves to ground students in circular motion and set the stage for a formal definition of the sine and cosine functions in Lessons 4 and 5. In Lesson 1, students measured the height of a passenger car of the Ferris wheel in relation to the ground and started tracking cars as passengers boarded at the bottom of the wheel. In this lesson, we change our point of view to measure height is measured as vertical displacement from the center of the wheel, and the co-height is measured as the horizontal displacement from the center of the wheel. Additionally, although it is not realistic, cars are tracked rotating around the wheel beginning from the 3 o'clock position. With these changes in perspective, the functions used to model the height and co-height functions are much closer to the basic sine and cosine functions that will be defined in Lesson 4."
+      }
     },
     "m-math-m2-a-3": {
       "id": "m-math-m2-a-3",
@@ -754,7 +818,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "By the table, jya(52.5^\\circ )=2728. Since 162∙\\frac{jya(52.5^\\circ )}{3438}=129, the apparent height is 129 million miles."
               }
-            ]
+            ],
+            "prompt": "An Indian astronomer noted that the angle of his line of sight to Venus measured 52^\\circ . We now know that the average distance from Earth to Venus is 162 million miles. Use Aryabhata's table to estimate the apparent height of Venus. Round your answer to the nearest million miles."
           },
           {
             "number": 2,
@@ -773,7 +838,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "By the table, jya(82.5^\\circ )=3409. Since 140∙\\frac{jya(82.5^\\circ )}{3438}=139, the apparent height is 139 million miles."
               }
-            ]
+            ],
+            "prompt": "Later, the Indian astronomer saw that the angle of his line of sight to Mars measured 82^\\circ . We now know that the average distance from Earth to Mars is 140 million miles. Use Aryabhata's table to estimate the apparent height of Mars. Round your answer to the nearest million miles."
           },
           {
             "number": 3,
@@ -792,7 +858,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Students must realize that every 7.5 hours, the moon travels 0.5^\\circ \\times 7.5=3\\frac{3}{4}^\\circ . Thus, we approximate the apparent height of the moon by \\frac{jya(\\theta ^\\ci..."
               }
-            ]
+            ],
+            "prompt": "The moon orbits the earth in an elongated orbit, with an average distance of the moon from the earth of roughly 239,000 miles. It takes the moon 27.32 days to travel around the earth, so the moon moves with respect to the stars roughly 0.5^\\circ every hour. Suppose that angle of inclination of the moon with respect to the observer measures 45^\\circ at midnight. As in Example 1, an observer is standing still and facing north. Use Aryabhata's jya table to find the apparent height of the moon above the observer at the times listed in the table below, to the nearest thousand miles."
           },
           {
             "number": 4,
@@ -811,7 +878,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "George wants to apply Aryabhata's method to estimate the height of the International Space Station, which orbits Earth at a speed of about 17,500 miles per hour. This means that the space station makes one full rotation around Earth roughly every 90 minutes. The space station maintains a low earth orbit, with an average distance from Earth of 238 miles."
           },
           {
             "number": 5,
@@ -830,7 +898,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Students must realize that every 90 minutes the space station travels one full revolution, so in 3 minutes, the space station travels through a rotation of \\frac{1}{90}∙\\frac{15}{4..."
               }
-            ]
+            ],
+            "prompt": "George supposes that the space station is just visible on the eastern horizon at 12:00 midnight, so its apparent height at that time would be 0 miles above the horizon. Use Aryabhata's jya table to find the apparent height of the space station above the observer at the times listed in the table below."
           },
           {
             "number": 6,
@@ -849,7 +918,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "The semicircular path of the space station in this model will have a radius of 238 miles. However, because 3963+238=4201, the space station should have a radius of 4,201 miles. In ..."
               }
-            ]
+            ],
+            "prompt": "When George presents his solution to his classmate Jane, she tells him that his model isn't appropriate for this situation. Is she correct? Explain how you know. (Hint: As we set up our model in the first discussion, we treated our observer as if he was the center of the orbit of the sun around the earth. In part (a) of this problem, we treated our observer as if she were the center of the orbit of the International Space Station around Earth. The radius of Earth is approximately 3963 miles, the space station orbits about 238 miles above Earth's surface, and the distance from Earth to the sun is roughly 93,000,000 miles. Draw a picture of the earth and the path of the space station, and then compare that to the points with heights and rotation angles from part (a).)"
           }
         ]
       },
@@ -881,7 +951,27 @@
           "correct": 0,
           "explanation": "Mathematical rigor requires that each simplification or transformation is justified by established axioms, field properties, or verified theorems."
         }
-      ]
+      ],
+      "meta": {
+        "title": "The Motion of the Moon, Sun, and Stars—Motivating Mathematics",
+        "pageTitle": "The Motion of the Moon, Sun, and Stars—Motivating Mathematics | 11th Grade Algebra II | Hesten's Learning",
+        "description": "EngageNY Algebra II lesson on The Motion of the Moon, Sun, and Stars—Motivating Mathematics with step-by-step proofs, exercises, and problem sets.",
+        "pageDescription": "Master The Motion of the Moon, Sun, and Stars—Motivating Mathematics in 11th Grade Algebra II with embedded practice problem sets and teacher solution keys.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson M.M2.A.3",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: The Motion of the Moon, Sun, and Stars—Motivating Mathematics",
+        "pill": "The Story of Trigonometry and Its Contexts • Algebra II",
+        "text": "In this lesson, explore the essential concepts of The Motion of the Moon, Sun, and Stars—Motivating Mathematics. Work through the official curriculum practice exercises below, track your personal study notes, and verify your comprehension using the step-by-step solution keys.",
+        "outcomes": [
+          "Students explore the historical context of trigonometry as a motion of celestial bodies in a presumed circular arc.",
+          "Students describe the position of an object along a line of sight in the context of circular motion.",
+          "Students understand the naming of the quadrants and why counterclockwise motion is deemed the positive direction of rotation in mathematics."
+        ],
+        "teacherInsight": "This lesson provides us with another concrete example of observable periodic phenomena before we abstractly define the sine and cosine functions used to model circular motion—the observable path of the sun across the sky as seen from the earth. The historical roots of trigonometry lie in the attempts of astronomers to understand the motion of the stars and planets and to measure distances between celestial objects. In this lesson, students investigate the historical development of sine tables from ancient India, from before the sine function had its name, and discover the work of Aryabhata I of India (pronounced air-yah-bah-tah), who lived from 476—550 C.E. Avoid using the terms sine and cosine as long as possible, delaying their introduction until the end of this lesson when the ancient measurements are related to the triangle trigonometry that students saw in high school Geometry, which leads into the formal definitions of these functions in the next lesson. Throughout this lesson, refer to the functions that became the sine and cosine functions using their original Sanskrit names jya and kojya, respectively. At the end of this lesson, explain how the name jya transformed into the modern name sine."
+      }
     },
     "m-math-m2-a-4": {
       "id": "m-math-m2-a-4",
@@ -951,7 +1041,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Fill in the chart. Write in the reference angles and the values of the sine and cosine functions for the indicated values of \\theta ."
           },
           {
             "number": 2,
@@ -970,7 +1061,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Using geometry, Jennifer correctly calculated that sin(15^\\circ )=\\frac{1}{2} \\sqrt{2-\\sqrt{3}} . Based on this information, fill in the chart."
           },
           {
             "number": 3,
@@ -989,7 +1081,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "cos(\\theta ^\\circ )=\\frac{\\sqrt{6}}{3}"
               }
-            ]
+            ],
+            "prompt": "Suppose 0<\\theta <90 and sin(\\theta ^\\circ )=\\frac{1}{\\sqrt{3}}. What is the value of cos(\\theta ^\\circ )?"
           },
           {
             "number": 4,
@@ -1008,7 +1101,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "cos(\\theta ^\\circ )=-\\frac{\\sqrt{6}}{3}"
               }
-            ]
+            ],
+            "prompt": "Suppose 90<\\theta <180 and sin(\\theta ^\\circ )=\\frac{1}{\\sqrt{3}}. What is the value of cos(\\theta ^\\circ )?"
           },
           {
             "number": 5,
@@ -1027,7 +1121,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "sin(\\theta ^\\circ )=\\frac{2}{\\sqrt{5}} or sin(\\theta ^\\circ )=-\\frac{2}{\\sqrt{5}}"
               }
-            ]
+            ],
+            "prompt": "If cos(\\theta ^\\circ )=-\\frac{1}{\\sqrt{5}}, what are two possible values of sin(\\theta ^\\circ )?"
           },
           {
             "number": 6,
@@ -1046,7 +1141,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Johnny must have made a mistake since the sine of a number cannot be greater than 1."
               }
-            ]
+            ],
+            "prompt": "Johnny rotated the initial ray through \\theta degrees, found the intersection of the terminal ray with the unit circle, and calculated that sin(\\theta ^\\circ )=\\sqrt{2}. Ernesto insists that Johnny made a mistake in his calculation. Explain why Ernesto is correct."
           },
           {
             "number": 7,
@@ -1065,7 +1161,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "150 The vertices of \\triangle ABC have coordinates A(0,0), B(12,5), and C(12,0)."
               }
-            ]
+            ],
+            "prompt": "If sin(\\theta ^\\circ )=0.5, and we know that cos (\\theta ^\\circ )<0, then what is the smallest possible positive value of \\theta ?"
           },
           {
             "number": 8,
@@ -1084,7 +1181,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Clearly AC is horizontal and BC is vertical, so \\triangle ABC is a right triangle."
               }
-            ]
+            ],
+            "prompt": "Argue that \\triangle ABC is a right triangle."
           },
           {
             "number": 9,
@@ -1103,7 +1201,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Using similar triangles, the hypotenuse intersects the unit circle at (\\frac{12}{13},\\frac{5}{13})."
               }
-            ]
+            ],
+            "prompt": "What are the coordinates where the hypotenuse of \\triangle ABC intersects the unit circle x^{2}+y^{2}=1?"
           },
           {
             "number": 10,
@@ -1122,7 +1221,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "By the answer to part (b), sin(\\theta ^\\circ )=\\frac{5}{13}, and cos(\\theta ^\\circ )=\\frac{12}{13}. The vertices of \\triangle ABC have coordinates A(0,0), B(4,3), and C(4,0). The v..."
               }
-            ]
+            ],
+            "prompt": "Let \\theta denote the number of degrees of rotation from AC to AB. Calculate sin(\\theta ^\\circ ) and cos(\\theta ^\\circ )."
           },
           {
             "number": 11,
@@ -1141,7 +1241,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Clearly AC is horizontal and BC is vertical, so \\triangle ABC is a right triangle."
               }
-            ]
+            ],
+            "prompt": "Argue that \\triangle ABC is a right triangle."
           },
           {
             "number": 12,
@@ -1160,7 +1261,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Using similar triangles, the hypotenuse intersects the unit circle at (\\frac{4}{5},\\frac{3}{5})."
               }
-            ]
+            ],
+            "prompt": "What are the coordinates where the hypotenuse of \\triangle ABC intersects the unit circle x^{2}+y^{2}=1?"
           },
           {
             "number": 13,
@@ -1179,7 +1281,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "By the answer to part (b), sin(\\theta ^\\circ )=\\frac{3}{5}, and cos(\\theta ^\\circ )=\\frac{4}{5}."
               }
-            ]
+            ],
+            "prompt": "Let \\theta denote the number of degrees of rotation from AC to AB. Calculate sin(\\theta ^\\circ ) and cos(\\theta ^\\circ )."
           },
           {
             "number": 14,
@@ -1198,7 +1301,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Since a^{2}+b^{2}=c^{2}, the converse of the Pythagorean theorem guarantees that \\triangle ADE is a right triangle."
               }
-            ]
+            ],
+            "prompt": "Argue that \\triangle ADE is a right triangle."
           },
           {
             "number": 15,
@@ -1217,7 +1321,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Using similar triangles, the hypotenuse intersects the unit circle at (\\frac{3}{5},\\frac{4}{5})."
               }
-            ]
+            ],
+            "prompt": "What are the coordinates where the hypotenuse of \\triangle ADE intersects the unit circle x^{2}+y^{2}=1?"
           },
           {
             "number": 16,
@@ -1236,7 +1341,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "By the answer to part (e), sin(ϕ^\\circ )=\\frac{4}{5}, and cos(ϕ^\\circ )=\\frac{3}{5}."
               }
-            ]
+            ],
+            "prompt": "Let ϕ denote the number of degrees of rotation from AE to AD. Calculate sin(ϕ^\\circ ) and cos(ϕ^\\circ )."
           },
           {
             "number": 17,
@@ -1255,7 +1361,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "We find that sin(ϕ^\\circ )=\\frac{4}{5}=cos(\\theta ^\\circ ), and cos(ϕ^\\circ )=\\frac{3}{5}=sin(\\theta ^\\circ )."
               }
-            ]
+            ],
+            "prompt": "What is the relation between the sine and cosine of \\theta and the sine and cosine of ϕ?"
           },
           {
             "number": 18,
@@ -1274,7 +1381,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Let O be the center of the circle, let P and R be the points where the terminal rays of rotation by 135^\\circ and 45^\\circ , and let Q and S be the feet of the perpendicular lines ..."
               }
-            ]
+            ],
+            "prompt": "Use a diagram to explain why sin(135^\\circ )=sin(45^\\circ ), but cos(135^\\circ )\\ne cos(45^\\circ )."
           }
         ]
       },
@@ -1306,7 +1414,26 @@
           "correct": 0,
           "explanation": "Mathematical rigor requires that each simplification or transformation is justified by established axioms, field properties, or verified theorems."
         }
-      ]
+      ],
+      "meta": {
+        "title": "From Circle-ometry to Trigonometry",
+        "pageTitle": "From Circle-ometry to Trigonometry | 11th Grade Algebra II | Hesten's Learning",
+        "description": "EngageNY Algebra II lesson on From Circle-ometry to Trigonometry with step-by-step proofs, exercises, and problem sets.",
+        "pageDescription": "Master From Circle-ometry to Trigonometry in 11th Grade Algebra II with embedded practice problem sets and teacher solution keys.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson M.M2.A.4",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: From Circle-ometry to Trigonometry",
+        "pill": "The Story of Trigonometry and Its Contexts • Algebra II",
+        "text": "In this lesson, explore the essential concepts of From Circle-ometry to Trigonometry. Work through the official curriculum practice exercises below, track your personal study notes, and verify your comprehension using the step-by-step solution keys.",
+        "outcomes": [
+          "Students define sine and cosine as functions for degrees of rotation of the ray formed by the positive x-axis up to one full turn.",
+          "Students use special triangles to geometrically determine the values of sine and cosine for 30, 45, 60, and 90 degrees."
+        ],
+        "teacherInsight": "In the preceding lessons, students have developed the height and co-height functions of a passenger car on a Ferris wheel and considered the historical roots of trigonometry through developments in astronomy. From these experiences, we extract the meaning of the sine and cosine of a number of degrees of rotation. For consistency with their past experiences with triangle trigonometry, we need to demonstrate that our new functions of sine and cosine are generalizations of the sine and cosine functions of an angle in a triangle studied in geometry. For this lesson confine discussion to rotations by a number of degrees between 0 and 360. Lesson 5 extends the domain of the sine and cosine functions to the entire real line, and Lesson 9 transitions from measuring rotation in degrees to measuring rotation in radians. This entire lesson should be taught without using calculators. Notating Trigonometric Functions: It is convenient, as adults, to use the notation sin^{2}x to refer to the value of the square of the sine function. However, rushing too fast to this abbreviated notation for trigonometric functions leads to incorrect understandings of how functions are manipulated, which can lead students to think that sinx is short for sin\\cdot x and incorrectly divide out the variable, so that \\frac{sinx}{x} becomes sin."
+      }
     },
     "m-math-m2-a-5": {
       "id": "m-math-m2-a-5",
@@ -1376,7 +1503,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Fill in the chart. Write in the measures of the reference angles and the values of the sine and cosine functions for the indicated values of \\theta ."
           },
           {
             "number": 2,
@@ -1395,7 +1523,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Using geometry, Jennifer correctly calculated that sin(15^\\circ )=\\frac{1}{2}\\sqrt{2-\\sqrt{3}}. Based on this information, fill in the chart:"
           },
           {
             "number": 3,
@@ -1414,7 +1543,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "30, 150,390, 510, 750, 870"
               }
-            ]
+            ],
+            "prompt": "Suppose \\theta represents a number of degrees of rotation and that sin(\\theta ^\\circ )=0.5. List the first six possible positive values that \\theta can take."
           },
           {
             "number": 4,
@@ -1433,7 +1563,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "-30, -150,-390, -510, -750, -870"
               }
-            ]
+            ],
+            "prompt": "Suppose \\theta represents a number of degrees of rotation and that sin(\\theta ^\\circ )=-0.5. List six possible negative values that \\theta can take."
           },
           {
             "number": 5,
@@ -1452,7 +1583,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "No. If cos(\\theta ^\\circ )=\\frac{1}{2} and sin(\\theta ^\\circ )=\\frac{1}{2}, then the coordinates of point P are (\\frac{1}{2},\\frac{1}{2}), but this point doesn't lie on the unit ci..."
               }
-            ]
+            ],
+            "prompt": "Suppose \\theta represents a number of degrees of rotation. Is it possible that cos(\\theta ^\\circ )=\\frac{1}{2} and sin(\\theta ^\\circ )=\\frac{1}{2}?"
           },
           {
             "number": 6,
@@ -1471,7 +1603,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Jane is wrong. Because the terminal ray of the rotated initial ray lies in the fourth quadrant, we know that the y-coordinate changes sign. Thus, cos(-765^\\circ )=cos(45^\\circ ), b..."
               }
-            ]
+            ],
+            "prompt": "Jane says that since the reference angle for a rotation through -765^\\circ has measure 45^\\circ , then cos(-765^\\circ )=cos(45^\\circ ), and sin(-765^\\circ )=sin(45^\\circ ). Explain why she is or is not correct."
           },
           {
             "number": 7,
@@ -1490,7 +1623,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Doug's conclusion is true, but his logic may be faulty. The reason cos(765^\\circ )=cos(45^\\circ ) and sin(765^\\circ )=sin(45^\\circ ) is that the terminal angle of the rotated ray l..."
               }
-            ]
+            ],
+            "prompt": "Doug says that since the reference angle for a rotation through 765^\\circ has measure 45^\\circ , then cos(765^\\circ )=cos(45^\\circ ), and sin(765^\\circ )=sin(45^\\circ ). Explain why he is or is not correct."
           }
         ]
       },
@@ -1522,7 +1656,26 @@
           "correct": 0,
           "explanation": "Mathematical rigor requires that each simplification or transformation is justified by established axioms, field properties, or verified theorems."
         }
-      ]
+      ],
+      "meta": {
+        "title": "Extending the Domain of Sine and Cosine to All Real Numbers",
+        "pageTitle": "Extending the Domain of Sine and Cosine to All Real Numbers | 11th Grade Algebra II | Hesten's Learning",
+        "description": "EngageNY Algebra II lesson on Extending the Domain of Sine and Cosine to All Real Numbers with step-by-step proofs, exercises, and problem sets.",
+        "pageDescription": "Master Extending the Domain of Sine and Cosine to All Real Numbers in 11th Grade Algebra II with embedded practice problem sets and teacher solution keys.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson M.M2.A.5",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Extending the Domain of Sine and Cosine to All Real Numbers",
+        "pill": "The Story of Trigonometry and Its Contexts • Algebra II",
+        "text": "In this lesson, explore the essential concepts of Extending the Domain of Sine and Cosine to All Real Numbers. Work through the official curriculum practice exercises below, track your personal study notes, and verify your comprehension using the step-by-step solution keys.",
+        "outcomes": [
+          "Students define sine and cosine as functions for all real numbers measured in degrees.",
+          "Students evaluate the sine and cosine functions at multiples of 30 and 45."
+        ],
+        "teacherInsight": "In the preceding lesson, students extended the previous definition of sine and cosine from 0<\\theta <90 to 0<\\theta <360 using right triangle trigonometry, connecting the sine function to the height function of the Ferris wheel and the cosine function to the co-height function. In this lesson, students extend the domain of the sine and cosine functions to the entire real number line, at which point a complete definition of these two functions can finally be provided. Students continue to use the context of the Ferris wheel to understand the implications of counterclockwise rotation through \\theta \\ge 360 and clockwise rotation through \\theta \\le 0. As with the previous lesson, a theoretical understanding of the process of extending the sine and cosine functions to the entire real line is being developed, so calculators should not be allowed for any part of this lesson, including the problem set. Rotations in this lesson are restricted to multiples of 30^\\circ or 45^\\circ , so the focus of this lesson is assigning the proper positive or negative signs to the value of the sine and cosine functions."
+      }
     },
     "m-math-m2-a-6": {
       "id": "m-math-m2-a-6",
@@ -1592,7 +1745,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Label the missing side lengths, and find the value of tan(\\theta ^\\circ ) in the following right triangles."
           },
           {
             "number": 2,
@@ -1611,7 +1765,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "30^\\circ 1tan(30^\\circ )=\\frac{sin(30^\\circ )}{cos(30^\\circ )}=\\frac{\\frac{1}{2}}{\\frac{\\sqrt{3}}{2}}=\\frac{1}{\\sqrt{3}}= \\frac{\\sqrt{3}}{3}30^\\circ 1tan(30^\\circ )=\\frac{sin(30^\\c..."
               }
-            ]
+            ],
+            "prompt": "\\theta =30"
           },
           {
             "number": 3,
@@ -1630,7 +1785,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "45^\\circ 1tan(45^\\circ )=\\frac{sin(45^\\circ )}{cos(45^\\circ )}=\\frac{\\frac{\\sqrt{2}}{2}}{\\frac{\\sqrt{2}}{2}}=145^\\circ 1tan(45^\\circ )=\\frac{sin(45^\\circ )}{cos(45^\\circ )}=\\frac{\\..."
               }
-            ]
+            ],
+            "prompt": "\\theta =45"
           },
           {
             "number": 4,
@@ -1649,7 +1805,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "60^\\circ 1tan(60^\\circ )=\\frac{sin(60^\\circ )}{cos(60^\\circ )}=\\frac{\\frac{\\sqrt{3}}{2}}{\\frac{1}{2}}=\\frac{\\sqrt{3}}{1}=\\sqrt{3}60^\\circ 1tan(60^\\circ )=\\frac{sin(60^\\circ )}{cos(..."
               }
-            ]
+            ],
+            "prompt": "\\theta =60"
           },
           {
             "number": 5,
@@ -1668,7 +1825,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Let \\theta be any real number. In the Cartesian plane, rotate the initial ray by \\theta degrees about the origin. Intersect the resulting terminal ray with the unit circle to get point P(x_{\\theta }, y_{\\theta })."
           },
           {
             "number": 6,
@@ -1687,7 +1845,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Complete the table by finding the slope of the line through the origin and the point P."
           },
           {
             "number": 7,
@@ -1706,7 +1865,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "The slope of the line through the origin and P(x_{\\theta },y_{\\theta }) is equal to tan(\\theta ^\\circ )."
               }
-            ]
+            ],
+            "prompt": "Explain how these slopes are related to the tangent function."
           },
           {
             "number": 8,
@@ -1725,7 +1885,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Consider the following diagram of a circle of radius r centered at the origin. The line l is tangent to the circle at S(r,0), so l is perpendicular to the x-axis."
           },
           {
             "number": 9,
@@ -1744,7 +1905,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "t= tan(\\theta ^\\circ )"
               }
-            ]
+            ],
+            "prompt": "If r=1, then state the value of t in terms of one of the trigonometric functions."
           },
           {
             "number": 10,
@@ -1763,7 +1925,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "t=r tan(\\theta ^\\circ )"
               }
-            ]
+            ],
+            "prompt": "If r is any positive value, then state the value of t in terms of one of the trigonometric functions."
           },
           {
             "number": 11,
@@ -1782,7 +1945,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "For the given values of r and \\theta , find t."
           },
           {
             "number": 12,
@@ -1801,7 +1965,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "t=2\\cdot tan(30^\\circ )=\\frac{2\\sqrt{3}}{3}"
               }
-            ]
+            ],
+            "prompt": "\\theta =30, r=2"
           },
           {
             "number": 13,
@@ -1820,7 +1985,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "t=2\\cdot tan(45^\\circ )=2\\cdot 1=2"
               }
-            ]
+            ],
+            "prompt": "\\theta =45, r=2"
           },
           {
             "number": 14,
@@ -1839,7 +2005,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "t=2\\cdot tan(60^\\circ )=2\\cdot \\sqrt{3}=2\\sqrt{3}"
               }
-            ]
+            ],
+            "prompt": "\\theta =60, r=2"
           },
           {
             "number": 15,
@@ -1858,7 +2025,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "t=4\\cdot tan(45^\\circ )=4\\cdot 1=4"
               }
-            ]
+            ],
+            "prompt": "\\theta =45, r=4"
           },
           {
             "number": 16,
@@ -1877,7 +2045,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "t=3.5\\cdot tan(30^\\circ )=\\frac{3.5\\sqrt{3}}{3}=\\frac{7\\sqrt{3}}{6}"
               }
-            ]
+            ],
+            "prompt": "\\theta =30, r=3.5"
           },
           {
             "number": 17,
@@ -1896,7 +2065,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "t=9\\cdot tan(0^\\circ )=9\\cdot 0=0"
               }
-            ]
+            ],
+            "prompt": "\\theta =0, r=9"
           },
           {
             "number": 18,
@@ -1915,7 +2085,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Lines OR and l are distinct parallel lines when \\theta =90. Thus, they will never intersect, and the line segment defined by their intersection does not exist."
               }
-            ]
+            ],
+            "prompt": "\\theta =90, r=5"
           },
           {
             "number": 19,
@@ -1934,7 +2105,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "t=\\sqrt{3}\\cdot tan(60^\\circ )=\\sqrt{3}\\cdot \\sqrt{3}=3"
               }
-            ]
+            ],
+            "prompt": "\\theta =60, r=\\sqrt{3}"
           },
           {
             "number": 20,
@@ -1953,7 +2125,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "t=2.1\\cdot tan(30^\\circ )=\\frac{2.1}{\\sqrt{3}}=\\frac{21}{10\\sqrt{3}}=\\frac{7\\sqrt{3}}{10}"
               }
-            ]
+            ],
+            "prompt": "\\theta =30, r=2.1"
           },
           {
             "number": 21,
@@ -1972,7 +2145,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "t=3\\cdot tan(A^\\circ )=3 tan(A^\\circ ), for A\\ne 90+180k, for all integers k."
               }
-            ]
+            ],
+            "prompt": "\\theta =A, r=3"
           },
           {
             "number": 22,
@@ -1991,7 +2165,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "t=b\\cdot tan(30^\\circ )=\\frac{b\\sqrt{3}}{3}"
               }
-            ]
+            ],
+            "prompt": "\\theta =30, r=b"
           },
           {
             "number": 23,
@@ -2010,7 +2185,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Using right-triangle trigonometry, sin(\\theta ^\\circ )=\\frac{t}{s}=\\frac{tan(\\theta ^\\circ )}{s}. So, sin(\\theta ^\\circ )=\\frac{tan(\\theta ^\\circ )}{s}, which tells us \\frac{1}{sin..."
               }
-            ]
+            ],
+            "prompt": "Knowing that tan(\\theta ^\\circ )=\\frac{sin(\\theta ^\\circ )}{cos(\\theta ^\\circ )}, for r=1, find the value of s in terms of one of the trigonometric functions."
           },
           {
             "number": 24,
@@ -2029,7 +2205,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "The tangent function could also be called the slope function due to the fact that tan(\\theta ^\\circ ) is the slope of the secant line passing through the origin and intersecting th..."
               }
-            ]
+            ],
+            "prompt": "Using what you know of the tangent function, show that -tan(\\theta ^\\circ )=tan(-\\theta ^\\circ ) for \\theta \\ne 90+180k, for all integers k."
           }
         ]
       },
@@ -2061,7 +2238,26 @@
           "correct": 0,
           "explanation": "Mathematical rigor requires that each simplification or transformation is justified by established axioms, field properties, or verified theorems."
         }
-      ]
+      ],
+      "meta": {
+        "title": "Why Call It Tangent?",
+        "pageTitle": "Why Call It Tangent? | 11th Grade Algebra II | Hesten's Learning",
+        "description": "EngageNY Algebra II lesson on Why Call It Tangent? with step-by-step proofs, exercises, and problem sets.",
+        "pageDescription": "Master Why Call It Tangent? in 11th Grade Algebra II with embedded practice problem sets and teacher solution keys.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson M.M2.A.6",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Why Call It Tangent?",
+        "pill": "The Story of Trigonometry and Its Contexts • Algebra II",
+        "text": "In this lesson, explore the essential concepts of Why Call It Tangent?. Work through the official curriculum practice exercises below, track your personal study notes, and verify your comprehension using the step-by-step solution keys.",
+        "outcomes": [
+          "Students define the tangent function and understand the historic reason for its name.",
+          "Students use special triangles to determine geometrically the values of the tangent function for 30^\\circ , 45^\\circ , and 60^\\circ ."
+        ],
+        "teacherInsight": "MP.7&MP.8MP.7&MP.8In this lesson, the right triangle definition of the tangent ratio of an acute angle \\theta , tan(\\theta ^\\circ )=\\frac{sin(\\theta ^\\circ )}{cos(\\theta ^\\circ )}, is extended to the tangent function defined for all real numbers \\theta where cos(\\theta ^\\circ )\\ne 0. The word tangent already has geometric meaning, so the historical reasons for naming this particular function tangent are investigated. Additionally, the correlation of tan(\\theta ^\\circ ) with the slope of the line that coincides with the terminal ray after rotation by \\theta degrees is noted. These three different interpretations of the tangent function can be used immediately to analyze properties and compute values of the tangent function. Students look for and make use of structure to develop the definitions in Exercises 7 and 8 and look for and express regularity in repeated reasoning using what they know about the sine and cosine functions applied to the tangent function in Exercise 3. This lesson depends on vocabulary from Geometry such as secant lines and tangent lines. The terms provided are used for reference in this lesson and in subsequent lessons."
+      }
     },
     "m-math-m2-a-7": {
       "id": "m-math-m2-a-7",
@@ -2131,7 +2327,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Use the reciprocal interpretations of sec(\\theta ^\\circ ), csc(\\theta ^\\circ ), and cot(\\theta ^\\circ ) and the unit circle provided to complete the table."
           },
           {
             "number": 2,
@@ -2150,7 +2347,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Find the following values from the information given."
           },
           {
             "number": 3,
@@ -2169,7 +2367,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "For \\theta =30^\\circ , tan(\\theta ^\\circ )=\\frac{\\sqrt{3}}{3}, and \\frac{sec(\\theta ^\\circ )}{csc(\\theta ^\\circ )}=\\frac{2\\sqrt{3}/3}{2}=\\frac{\\sqrt{3}}{3}. Thus, for \\theta =30, \\..."
               }
-            ]
+            ],
+            "prompt": "Choose three \\theta values from the table in Problem 1 for which sec(\\theta ^\\circ ), csc(\\theta ^\\circ ), and tan(\\theta ^\\circ ) are defined and not zero. Show that for these values of \\theta , \\frac{sec(\\theta ^\\circ )}{csc(\\theta ^\\circ )}=tan(\\theta ^\\circ )."
           },
           {
             "number": 4,
@@ -2188,7 +2387,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Find the value of sec(\\theta ^\\circ )cos(\\theta ^\\circ ) for the following values of \\theta ."
           },
           {
             "number": 5,
@@ -2207,7 +2407,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "We know that cos(120^\\circ )=-\\frac{1}{2}, so sec(120^\\circ )=-2, and then sec(120^\\circ )cos(120^\\circ )=1."
               }
-            ]
+            ],
+            "prompt": "\\theta =120"
           },
           {
             "number": 6,
@@ -2226,7 +2427,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "We know that cos(225^\\circ )=-\\frac{\\sqrt{2}}{2}, so sec(225^\\circ )=-\\sqrt{2}, and then sec(225^\\circ )cos(225^\\circ )=1."
               }
-            ]
+            ],
+            "prompt": "\\theta =225"
           },
           {
             "number": 7,
@@ -2245,7 +2447,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "We know that cos(330^\\circ )=\\frac{\\sqrt{3}}{2}, so sec(330^\\circ )=\\frac{2}{\\sqrt{3}}, and then sec(330^\\circ )cos(330^\\circ )=1."
               }
-            ]
+            ],
+            "prompt": "\\theta =330"
           },
           {
             "number": 8,
@@ -2264,7 +2467,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "If cos(\\theta ^\\circ )\\ne 0, then sec(\\theta ^\\circ )=\\frac{1}{cos(\\theta ^\\circ )}, so we know that sec(\\theta ^\\circ ) cos(\\theta ^\\circ )=\\frac{1}{cos(\\theta ^\\circ )}∙cos(\\thet..."
               }
-            ]
+            ],
+            "prompt": "Explain the reasons for the pattern you see in your responses to parts (a)—(c)."
           },
           {
             "number": 9,
@@ -2283,7 +2487,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "tan(240^\\circ )=\\sqrt{3}, sec(240^\\circ )=-2, and csc(240^\\circ )=-\\frac{2\\sqrt{3}}{3}. tan(300^\\circ )=-\\sqrt{3}, sec(300^\\circ )=2, and csc(300^\\circ )=-\\frac{2\\sqrt{3}}{3}."
               }
-            ]
+            ],
+            "prompt": "Draw a diagram representing the two values of \\theta between 0 and 360 so that sin(\\theta ^\\circ )=-\\frac{\\sqrt{3}}{2}. Find the values of tan(\\theta ^\\circ ), sec(\\theta ^\\circ ), and csc(\\theta ^\\circ ) for each value of \\theta ."
           },
           {
             "number": 10,
@@ -2302,7 +2507,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "(sec(225^\\circ ))^{2}-(tan(225^\\circ ))^{2} =(\\sqrt{2})^{2}-1^{2}=1"
               }
-            ]
+            ],
+            "prompt": "Find the value of (sec(\\theta ^\\circ ))^{2}-(tan(\\theta ^\\circ ))^{2} when \\theta =225."
           },
           {
             "number": 11,
@@ -2321,7 +2527,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "(csc(\\theta ^\\circ ))^{2}-(cot(\\theta ^\\circ ))^{2}=(-2)^{2}-(-\\sqrt{3})^{2}=4-3=1"
               }
-            ]
+            ],
+            "prompt": "Find the value of (csc(\\theta ^\\circ ))^{2}-(cot(\\theta ^\\circ ))^{2} when \\theta =330."
           },
           {
             "number": 12,
@@ -2340,7 +2547,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Extension:"
           },
           {
             "number": 13,
@@ -2359,7 +2567,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "\\frac{sec(\\theta ^\\circ )}{csc(\\theta ^\\circ )}=\\frac{\\frac{1}{cos(\\theta ^\\circ )}}{\\frac{1}{sin(\\theta ^\\circ )}}=\\frac{1}{cos(\\theta ^\\circ )}\\cdot sin(\\theta ^\\circ )=\\frac{sin..."
               }
-            ]
+            ],
+            "prompt": "Using the formulas sec(\\theta ^\\circ )=\\frac{1}{cos(\\theta ^\\circ )}, csc(\\theta ^\\circ )=\\frac{1}{sin(\\theta ^\\circ )}, and cot(\\theta ^\\circ )=\\frac{1}{tan(\\theta ^\\circ )}, show that \\frac{sec(\\theta ^\\circ )}{csc(\\theta ^\\circ )}=tan(\\theta ^\\circ ), where these functions are defined and not zero."
           },
           {
             "number": 14,
@@ -2378,7 +2587,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Just because \\frac{A}{B}=\\frac{C}{D}, this does not mean that A=C and B=D. It only means that they are equivalent fractions. For instance, \\frac{3}{4}=\\frac{9}{12}. Substituting an..."
               }
-            ]
+            ],
+            "prompt": "Tara showed that \\frac{sec(\\theta ^\\circ )}{csc(\\theta ^\\circ )}=tan(\\theta ^\\circ ), for values of \\theta for which the functions are defined and csc(\\theta ^\\circ )\\ne 0, and then concluded that sec(\\theta ^\\circ )=sin(\\theta ^\\circ ) and csc(\\theta ^\\circ )=cos(\\theta ^\\circ ). Explain what is wrong with her reasoning."
           },
           {
             "number": 15,
@@ -2397,7 +2607,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "If we assume that both the secant and cosecant functions are odd, then the tangent function could not be odd. That is, we would get tan(-\\theta ^\\circ )=\\frac{sec(-\\theta ^\\circ )}..."
               }
-            ]
+            ],
+            "prompt": "From Lesson 6, Ren remembered that the tangent function is odd, meaning that -tan(\\theta ^\\circ )=tan(-\\theta ^\\circ ) for all \\theta in the domain of the tangent function. He concluded because of the relationship between the secant function, cosecant function, and tangent function developed in Problem 9, it is impossible for both the secant and the cosecant functions to be odd. Explain why he is correct."
           }
         ]
       },
@@ -2429,7 +2640,26 @@
           "correct": 0,
           "explanation": "Mathematical rigor requires that each simplification or transformation is justified by established axioms, field properties, or verified theorems."
         }
-      ]
+      ],
+      "meta": {
+        "title": "Secant and the Co-Functions",
+        "pageTitle": "Secant and the Co-Functions | 11th Grade Algebra II | Hesten's Learning",
+        "description": "EngageNY Algebra II lesson on Secant and the Co-Functions with step-by-step proofs, exercises, and problem sets.",
+        "pageDescription": "Master Secant and the Co-Functions in 11th Grade Algebra II with embedded practice problem sets and teacher solution keys.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson M.M2.A.7",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Secant and the Co-Functions",
+        "pill": "The Story of Trigonometry and Its Contexts • Algebra II",
+        "text": "In this lesson, explore the essential concepts of Secant and the Co-Functions. Work through the official curriculum practice exercises below, track your personal study notes, and verify your comprehension using the step-by-step solution keys.",
+        "outcomes": [
+          "Students define the secant function and the co-functions in terms of points on the unit circle. They relate the names for these functions to the geometric relationships among lines, angles, and right triangles in a unit circle diagram.",
+          "Students use reciprocal relationships to relate the trigonometric functions to each other and use these relationships to evaluate trigonometric functions at multiples of 30, 45, and 60 degrees."
+        ],
+        "teacherInsight": "The geometry of the unit circle and its related triangles provide a clue as to how the different reciprocal functions got their names. This lesson draws out the connections among tangent and secant lines of a circle, angle relationships, and the trigonometric functions. The names for the various trigonometric functions make more sense to students when viewed through the lens of geometric figures, providing students with an opportunity to practice MP.7. Students make sense of the domain and range of these functions and use the definitions to evaluate the trigonometric functions for rotations that are multiples of 30, 45, and 60 degrees. The relevant vocabulary upon which this lesson is based appears below."
+      }
     },
     "m-math-m2-a-8": {
       "id": "m-math-m2-a-8",
@@ -2499,7 +2729,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Graph the sine function on the interval (-360, 360) showing all key points of the graph (horizontal and vertical intercepts and maximum and minimum points). Then, use the graph to answer each of the following questions."
           },
           {
             "number": 2,
@@ -2518,7 +2749,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "The sine function has relative minima at -90 and 270 because when rotated by -90^\\circ or 270^\\circ , the initial ray intersects the unit circle at the bottom of the circle; theref..."
               }
-            ]
+            ],
+            "prompt": "On the interval (-360, 360), what are the relative minima of the sine function? Why?"
           },
           {
             "number": 3,
@@ -2537,7 +2769,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "The sine function has relative maxima at -270 and 90 because when rotated by -270^\\circ or 90^\\circ , the initial ray intersects the unit circle at the top of the circle; therefore..."
               }
-            ]
+            ],
+            "prompt": "On the interval (-360, 360), what are the relative maxima of the sine function? Why?"
           },
           {
             "number": 4,
@@ -2556,7 +2789,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "The sine function has a value of 0 at -360, -180, 0 , 180, and 360 because when rotated by any of these degree measurements, the initial ray intersects the unit circle at a point o..."
               }
-            ]
+            ],
+            "prompt": "On the interval (-360, 360), for what values of \\theta is sin(\\theta ^\\circ )=0? Why?"
           },
           {
             "number": 5,
@@ -2575,7 +2809,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "It would repeat the same pattern on intervals of length 360 in either direction. So, from 360 to 720, the graph would look exactly like it does from 0 to 360, as it also would from..."
               }
-            ]
+            ],
+            "prompt": "If we continued to extend the graph in either direction, what would it look like? Why?"
           },
           {
             "number": 6,
@@ -2594,7 +2829,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Arrange the following values in order from smallest to largest by using their location on the graph."
           },
           {
             "number": 7,
@@ -2613,7 +2849,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Decreasing; (450, 630)"
               }
-            ]
+            ],
+            "prompt": "On the interval (90, 270), is the graph of the sine function increasing or decreasing? Based on that, name another interval not included in (90, 270) where the sine function must have the same behavior."
           },
           {
             "number": 8,
@@ -2632,7 +2869,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Graph the cosine function on the interval (-360, 360) showing all key points of the graph (horizontal and vertical intercepts and maximum and minimum points). Then, use the graph to answer each of the following questions."
           },
           {
             "number": 9,
@@ -2651,7 +2889,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "For the cosine function, a relative minimum of -1 occurs at -180 and 180 because when rotated by -180^\\circ or 180^\\circ , the initial ray intersects the unit circle at the leftmos..."
               }
-            ]
+            ],
+            "prompt": "On the interval (-360, 360), what are the relative minima of the cosine function? Why?"
           },
           {
             "number": 10,
@@ -2670,7 +2909,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "For the cosine function, a relative maximum of 1 occurs at -360, 0, and 360 because when rotated by -360^\\circ , 0^\\circ , or 360^\\circ , the initial ray intersects the unit circle..."
               }
-            ]
+            ],
+            "prompt": "On the interval (-360, 360), what are the relative maxima of the cosine function? Why?"
           },
           {
             "number": 11,
@@ -2689,7 +2929,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "The cosine function has a value of 0 at -270, -90, 90, and 270 because when rotated by any of these degree measurements, the initial ray intersects the unit circle at a point on th..."
               }
-            ]
+            ],
+            "prompt": "On the interval (-360, 360), for what values of \\theta is cos(\\theta ^\\circ )=0? Why?"
           },
           {
             "number": 12,
@@ -2708,7 +2949,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "It would repeat the same pattern on intervals of length 360 in either direction. So from 360 to 720, the graph would look exactly like it does from 0 to 360, as it also would from ..."
               }
-            ]
+            ],
+            "prompt": "If we continued to extend the graph in either direction, what would it look like? Why?"
           },
           {
             "number": 13,
@@ -2727,7 +2969,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Like the sine function, the cosine function continues to oscillate between the values of -1 and 1 as \\theta approaches ∞ or -∞."
               }
-            ]
+            ],
+            "prompt": "What can be said about the end behavior of the cosine function?"
           },
           {
             "number": 14,
@@ -2746,7 +2989,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Arrange the following values in order from smallest to largest by using their location on the graph."
           },
           {
             "number": 15,
@@ -2765,7 +3009,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "The graphs of sine and cosine have the same domain, range, amplitude, and period. Neither graph has end behavior because both oscillate between the values of -1 and 1 as \\theta app..."
               }
-            ]
+            ],
+            "prompt": "Write a paragraph comparing and contrasting the sine and cosine functions using their graphs and end behavior."
           },
           {
             "number": 16,
@@ -2784,7 +3029,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Desmond is trying to determine the value of sin(45^\\circ ) . He decides that since 45 is halfway between 0 and 90, sin(45^\\circ )=\\frac{1}{2} . Use the graph to show him that he is..."
               }
-            ]
+            ],
+            "prompt": "Use the graph of the sine function given below to answer the following questions."
           },
           {
             "number": 17,
@@ -2803,7 +3049,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Using the graph, complete each statement by filling in the symbol >, <, or =."
           },
           {
             "number": 18,
@@ -2822,7 +3069,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "30,150,390"
               }
-            ]
+            ],
+            "prompt": "On the interval [0,450], list the values of \\theta such that sin(\\theta ^\\circ )=\\frac{1}{2}."
           },
           {
             "number": 19,
@@ -2841,7 +3089,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "The sine function ranges in value from -1 to 1. Since the maximum value of the sine function is 1 (when the terminal ray of the rotation intersects the top of the circle), it is im..."
               }
-            ]
+            ],
+            "prompt": "Explain why there are no values of \\theta such that sin(\\theta ^\\circ )=2."
           }
         ]
       },
@@ -2873,7 +3122,26 @@
           "correct": 0,
           "explanation": "Mathematical rigor requires that each simplification or transformation is justified by established axioms, field properties, or verified theorems."
         }
-      ]
+      ],
+      "meta": {
+        "title": "Graphing the Sine and Cosine Functions",
+        "pageTitle": "Graphing the Sine and Cosine Functions | 11th Grade Algebra II | Hesten's Learning",
+        "description": "EngageNY Algebra II lesson on Graphing the Sine and Cosine Functions with step-by-step proofs, exercises, and problem sets.",
+        "pageDescription": "Master Graphing the Sine and Cosine Functions in 11th Grade Algebra II with embedded practice problem sets and teacher solution keys.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson M.M2.A.8",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Graphing the Sine and Cosine Functions",
+        "pill": "The Story of Trigonometry and Its Contexts • Algebra II",
+        "text": "In this lesson, explore the essential concepts of Graphing the Sine and Cosine Functions. Work through the official curriculum practice exercises below, track your personal study notes, and verify your comprehension using the step-by-step solution keys.",
+        "outcomes": [
+          "Students graph the sine and cosine functions and analyze the shape of these curves.",
+          "For the sine and cosine functions, students sketch graphs showing key features, which include intercepts; intervals where the function is increasing, decreasing, positive, or negative; relative maxima and minima; symmetries; end behavior; and periodicity."
+        ],
+        "teacherInsight": "Emphasize conceptual reasoning behind algebraic operations. Encourage students to check intermediate steps, test boundary cases, and articulate function behaviors graphically and symbolically."
+      }
     },
     "m-math-m2-a-9": {
       "id": "m-math-m2-a-9",
@@ -2943,7 +3211,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Use a radian protractor to measure the amount of rotation in radians of ray BA to ray BC in the indicated direction. Measure to the nearest 0.1 radian. Use negative measures to indicate clockwise rotation."
           },
           {
             "number": 2,
@@ -2962,7 +3231,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Complete the table below, converting from degrees to radians. Where appropriate, give your answers in the form of a fraction of \\pi ."
           },
           {
             "number": 3,
@@ -2981,7 +3251,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Complete the table below, converting from radians to degrees."
           },
           {
             "number": 4,
@@ -3000,7 +3271,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Use the unit circle diagram from the end of the lesson and your knowledge of the six trigonometric functions to complete the table below. Give your answers in exact form, as either rational numbers or radical expressions."
           },
           {
             "number": 5,
@@ -3019,7 +3291,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Use the unit circle diagram from the end of the lesson and your knowledge of the sine, cosine, and tangent functions to complete the table below. Select values of \\theta so that 0\\le \\theta <2\\pi ."
           },
           {
             "number": 6,
@@ -3038,7 +3311,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "In 10 minutes, the minute hand makes \\frac{1}{6} of a rotation, so it rotates through \\frac{1}{6}(2\\pi )=\\frac{\\pi }{3} radians. This is equivalent to 60^\\circ ."
               }
-            ]
+            ],
+            "prompt": "How many radians does the minute hand of a clock rotate through over 10 minutes? How many degrees?"
           },
           {
             "number": 7,
@@ -3057,7 +3331,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "In 30 minutes, the minute hand makes \\frac{1}{2} of a rotation, so it rotates through \\frac{1}{2}(2\\pi )=\\pi radians. This is equivalent to 180^\\circ ."
               }
-            ]
+            ],
+            "prompt": "How many radians does the minute hand of a clock rotate through over half an hour? How many degrees?"
           },
           {
             "number": 8,
@@ -3076,7 +3351,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "The intercepted arc is the length of 3.5 radii, so the angle subtended by that arc measures 3.5 radians. This is equivalent to 3.5(\\frac{180^\\circ }{\\pi })=\\frac{630^\\circ }{\\pi }≈..."
               }
-            ]
+            ],
+            "prompt": "What is the radian measure of an angle subtended by an arc of a circle with radius 4 cm if the intercepted arc has length 14 cm? How many degrees?"
           },
           {
             "number": 9,
@@ -3095,7 +3371,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "At 1:30, the hour hand is halfway between the 1 and the 2, and the minute hand is on the 6. A hand on the clock rotates through \\frac{1}{12} of a rotation as it moves from one numb..."
               }
-            ]
+            ],
+            "prompt": "What is the radian measure of an angle formed by the minute and hour hands of a clock when the clock reads 1:30? How many degrees? (Hint: You must take into account that the hour hand is not directly on the 1.)"
           },
           {
             "number": 10,
@@ -3114,7 +3391,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "At 5:45, the hour hand is \\frac{3}{4} of the way between the 5 and 6 on the clock face, and the minute hand is on the 9. Then there are 3\\frac{1}{4} increments of \\frac{1}{12} of a..."
               }
-            ]
+            ],
+            "prompt": "What is the radian measure of an angle formed by the minute and hour hands of a clock when the clock reads 5:45? How many degrees?"
           },
           {
             "number": 11,
@@ -3133,7 +3411,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "The earth revolves through 360^\\circ in 24 hours, so it revolves \\frac{360^\\circ }{24}=15^\\circ each hour."
               }
-            ]
+            ],
+            "prompt": "How many degrees does the earth revolve on its axis each hour? How many radians?"
           },
           {
             "number": 12,
@@ -3152,7 +3431,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "The distance from the equator to the North Pole is almost exactly 10,000 km."
           },
           {
             "number": 13,
@@ -3171,7 +3451,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "There are 90 degrees of latitude between the equator and the North Pole, so each degree of latitude is \\frac{1}{90}(10000)≈111.1 km."
               }
-            ]
+            ],
+            "prompt": "Roughly how many kilometers is 1 degree of latitude?"
           },
           {
             "number": 14,
@@ -3190,7 +3471,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "There are \\frac{\\pi }{2} radians of latitude between the equator and the North Pole, so each radian of latitude is \\frac{2}{\\pi }(10,000)≈6,366.2 km. \\frac{}{}\\frac{}{}\\frac{}{}\\fr..."
               }
-            ]
+            ],
+            "prompt": "Roughly how many kilometers is 1 radian of latitude?"
           }
         ]
       },
@@ -3222,7 +3504,26 @@
           "correct": 0,
           "explanation": "Mathematical rigor requires that each simplification or transformation is justified by established axioms, field properties, or verified theorems."
         }
-      ]
+      ],
+      "meta": {
+        "title": "Awkward! Who Chose the Number 360, Anyway?",
+        "pageTitle": "Awkward! Who Chose the Number 360, Anyway? | 11th Grade Algebra II | Hesten's Learning",
+        "description": "EngageNY Algebra II lesson on Awkward! Who Chose the Number 360, Anyway? with step-by-step proofs, exercises, and problem sets.",
+        "pageDescription": "Master Awkward! Who Chose the Number 360, Anyway? in 11th Grade Algebra II with embedded practice problem sets and teacher solution keys.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson M.M2.A.9",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Awkward! Who Chose the Number 360, Anyway?",
+        "pill": "The Story of Trigonometry and Its Contexts • Algebra II",
+        "text": "In this lesson, explore the essential concepts of Awkward! Who Chose the Number 360, Anyway?. Work through the official curriculum practice exercises below, track your personal study notes, and verify your comprehension using the step-by-step solution keys.",
+        "outcomes": [
+          "Students explore horizontal scalings of the graph of y=sin(x^\\circ ).",
+          "Students convert between degrees and radians."
+        ],
+        "teacherInsight": "In this lesson, justification is given for changing from using degree measure for rotation to radian measure. The main argument for this change is that the graph of the sine and cosine functions are ridiculously flat if graphed on a square grid, so there is the need to change the horizontal scale. Graphing calculators are used to investigate different rescalings of the sine graph, and students see that the graph of f(x)=sin(\\frac{180}{\\pi }x^\\circ ) aligns with the diagonal line y=x near the origin. This reason given may seem somewhat artificial, and, from the students' perspective, it is. It is true that the reason radians are used instead of degrees is that when using radians, the function g(x)=\\frac{sin(x)}{x} has slope 1 near the origin, but this is not the entire story. The fact is that limx→0\\frac{sin(x)}{x}=1 leads to the derivative formula \\frac{d}{dx} sin(x)=cos⁡(x), which greatly simplifies derivative calculations with the sine and cosine functions in calculus and beyond. Deciding whether to discuss these reasons with students should be based upon their readiness for these advanced ideas."
+      }
     },
     "m-math-m2-a-10": {
       "id": "m-math-m2-a-10",
@@ -3291,7 +3592,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Describe the values of x for which each of the following is true."
           },
           {
             "number": 2,
@@ -3310,7 +3612,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "The cosine function has a relative maximum at all x=2\\pi n, where n is an integer."
               }
-            ]
+            ],
+            "prompt": "The cosine function has a relative maximum."
           },
           {
             "number": 3,
@@ -3329,7 +3632,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "The sine function has a relative maximum at all x=\\frac{\\pi }{2}+2\\pi n, where n is an integer."
               }
-            ]
+            ],
+            "prompt": "The sine function has a relative maximum."
           },
           {
             "number": 4,
@@ -3348,7 +3652,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "sin(\\frac{\\pi }{2})sin(-\\frac{2\\pi }{3})sin(\\frac{\\pi }{4})sin(-\\frac{\\pi }{2}) At -\\frac{\\pi }{2}, the sine function takes on its smallest value, and at \\frac{\\pi }{2} the sine fu..."
               }
-            ]
+            ],
+            "prompt": "Without using a calculator, rewrite each of the following in order from least to greatest. Use the graph to explain your reasoning."
           },
           {
             "number": 5,
@@ -3367,7 +3672,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Without using a calculator, rewrite each of the following in order from least to greatest. Use the graph to explain your reasoning."
           },
           {
             "number": 6,
@@ -3386,7 +3692,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "At 5\\pi , the cosine function takes on its smallest value because 5\\pi =2\\pi +2\\pi +\\pi , so cos(5\\pi )=cos(\\pi )=-1. We can see that cos(\\frac{5\\pi }{4}) is negative, cos(\\frac{\\p..."
               }
-            ]
+            ],
+            "prompt": "cos(\\frac{\\pi }{2})cos(\\frac{5\\pi }{4})cos(\\frac{\\pi }{4})cos(5\\pi )"
           },
           {
             "number": 7,
@@ -3405,7 +3712,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Evaluate each of the following without a calculator using a trigonometric identity when needed."
           },
           {
             "number": 8,
@@ -3424,7 +3732,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Evaluate each of the following without a calculator using a trigonometric identity when needed."
           },
           {
             "number": 9,
@@ -3443,7 +3752,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Use the rotation through \\theta radians shown to answer each of the following questions."
           },
           {
             "number": 10,
@@ -3462,7 +3772,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "If the initial ray is rotated through -\\theta radians, it is rotated \\theta radians in the clockwise direction. If the terminal ray of a rotation through \\theta radians intersects ..."
               }
-            ]
+            ],
+            "prompt": "Explain why sin(-\\theta )=- sin(\\theta ) for all real numbers \\theta ."
           },
           {
             "number": 11,
@@ -3481,7 +3792,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "It demonstrates that the graph of y=sin(x) is symmetric with respect to the origin because if the point (x,y) is on the graph, then the point (-x,-y) is also on the graph."
               }
-            ]
+            ],
+            "prompt": "What symmetry does this identity demonstrate about the graph of y=sin(x)?"
           },
           {
             "number": 12,
@@ -3500,7 +3812,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Use the same rotation shown in Problem 6 to answer each of the following questions."
           },
           {
             "number": 13,
@@ -3519,7 +3832,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "If the initial ray is rotated through -\\theta radians, it is rotated \\theta radians in the clockwise direction. If the terminal ray of a rotation through \\theta radians intersects ..."
               }
-            ]
+            ],
+            "prompt": "Explain why cos(-\\theta )=cos(\\theta )."
           },
           {
             "number": 14,
@@ -3538,7 +3852,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "It demonstrates that the graph of y=cos(x) is symmetric with respect to the y-axis because if the point (x,y) is on the graph, then the point (-x,y) is also on the graph."
               }
-            ]
+            ],
+            "prompt": "What symmetry does this identity demonstrate about the graph of y=cos(x)?"
           },
           {
             "number": 15,
@@ -3557,7 +3872,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "y=sin(x-\\frac{\\pi }{2})y=cos(x-\\pi ) (Other correct answers are possible.)"
               }
-            ]
+            ],
+            "prompt": "Find equations of two different functions that can be represented by the graph shown below—one sine and one cosine—using different horizontal transformations."
           },
           {
             "number": 16,
@@ -3576,7 +3892,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "y=cos(x+\\frac{\\pi }{2})y=sin(x-\\pi ) (Other correct answers are possible.)"
               }
-            ]
+            ],
+            "prompt": "Find equations of two different functions that can be represented by the graph shown below—one sine and one cosine—using different horizontal translations."
           }
         ]
       },
@@ -3608,7 +3925,25 @@
           "correct": 0,
           "explanation": "Mathematical rigor requires that each simplification or transformation is justified by established axioms, field properties, or verified theorems."
         }
-      ]
+      ],
+      "meta": {
+        "title": "Basic Trigonometric Identities from Graphs",
+        "pageTitle": "Basic Trigonometric Identities from Graphs | 11th Grade Algebra II | Hesten's Learning",
+        "description": "EngageNY Algebra II lesson on Basic Trigonometric Identities from Graphs with step-by-step proofs, exercises, and problem sets.",
+        "pageDescription": "Master Basic Trigonometric Identities from Graphs in 11th Grade Algebra II with embedded practice problem sets and teacher solution keys.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson M.M2.A.10",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Basic Trigonometric Identities from Graphs",
+        "pill": "The Story of Trigonometry and Its Contexts • Algebra II",
+        "text": "In this lesson, explore the essential concepts of Basic Trigonometric Identities from Graphs. Work through the official curriculum practice exercises below, track your personal study notes, and verify your comprehension using the step-by-step solution keys.",
+        "outcomes": [
+          "Students observe identities from graphs of sine and cosine basic trigonometric identities and relate those identities to periodicity, even and odd properties, intercepts, end behavior, and cosine as a horizontal translation of sine."
+        ],
+        "teacherInsight": "Students have previous experience with graphing the sine and cosine functions in degrees and have been introduced to radian measure in the previous lesson. For the remainder of the module, students will use radians to work with and graph trigonometric functions. The purpose of this lesson is to increase students' comfort with radians and to formalize the characteristics of periodicity, end behavior, intercepts, and relative extrema of the sine and cosine functions through the observation and conjecture of some basic trigonometric identities. As students work through the lesson, make sure that they grasp the following identities that are valid for all real numbers x: and that they know how to use these identities to evaluate sine and cosine for a variety of values of x. Discovering these six trigonometric identities through observation is the focus of this lesson. Discovering and proving other identities will be the focus of Lessons 15, 16, and 17 of this module."
+      }
     },
     "m-math-m2-b-1": {
       "id": "m-math-m2-b-1",
@@ -3687,7 +4022,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "For each function, indicate the amplitude, frequency, period, phase shift, horizontal and vertical translations, and equation of the midline. Graph the function together with a graph of the sine function f(x)=sin(x) on the same axes. Graph at least one full period of each function. No calculators are allowed."
           },
           {
             "number": 2,
@@ -3706,7 +4042,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "The amplitude is 3, the frequency is \\frac{1}{2\\pi }, the period is 2\\pi , and the phase shift is \\frac{\\pi }{4}. The graph is translated horizontally \\frac{\\pi }{4} units to the r..."
               }
-            ]
+            ],
+            "prompt": "g(x)=3 sin(x-\\frac{\\pi }{4})"
           },
           {
             "number": 3,
@@ -3725,7 +4062,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "The amplitude is 5, the frequency is \\frac{2}{\\pi }, the period is \\frac{\\pi }{2}, and the phase shift is 0. There are no horizontal or vertical translations, and the equation for ..."
               }
-            ]
+            ],
+            "prompt": "g(x)=5 sin(4x)"
           },
           {
             "number": 4,
@@ -3744,7 +4082,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "The graph of f is the graph of the sine function scaled vertically by a factor of 4, horizontally by a factor of \\frac{1}{3}, and translated \\frac{\\pi }{2} to the left. The amplitu..."
               }
-            ]
+            ],
+            "prompt": "g(x)=4 sin(3(x+\\frac{\\pi }{2}))"
           },
           {
             "number": 5,
@@ -3763,7 +4102,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Rewriting the expression for g, we get 6 sin(2x+3\\pi )=6 sin(2(x+\\frac{3}{2}\\pi )). The graph of g is the graph of the sine function scaled vertically by a factor of 6, horizontall..."
               }
-            ]
+            ],
+            "prompt": "g(x)=6 sin(2x+3\\pi ) (Hint: First, rewrite the function in the form g(x)=A sin(ω(x-h)).)"
           },
           {
             "number": 6,
@@ -3782,7 +4122,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "For each function, indicate the amplitude, frequency, period, phase shift, horizontal and vertical translations, and equation of the midline. Graph the function together with a graph of the sine function f(x)=cos(x) on the same axes. Graph at least one full period of each function. No calculators are allowed."
           },
           {
             "number": 7,
@@ -3801,7 +4142,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "The amplitude is 1, the frequency is \\frac{3}{2\\pi }, the period is \\frac{2}{3}\\pi , and the phase shift is 0. There are no horizontal or vertical translations, and the equation of..."
               }
-            ]
+            ],
+            "prompt": "g(x)=cos(3x)"
           },
           {
             "number": 8,
@@ -3820,7 +4162,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "The amplitude is 1, the frequency is \\frac{1}{2\\pi }, the period is 2\\pi , and the phase shift is \\frac{3\\pi }{4}. The horizontal translation is \\frac{\\pi }{3} units to the right, ..."
               }
-            ]
+            ],
+            "prompt": "g(x)=cos(x-\\frac{3\\pi }{4})"
           },
           {
             "number": 9,
@@ -3839,7 +4182,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "The amplitude is 3, the frequency is \\frac{1}{8\\pi }, the period is 8\\pi , and the phase shift is 0. There are no horizontal or vertical translations, and the equation for the midl..."
               }
-            ]
+            ],
+            "prompt": "g(x)=3 cos(\\frac{x}{4})"
           },
           {
             "number": 10,
@@ -3858,7 +4202,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "The amplitude is 3, the frequency is \\frac{1}{\\pi }, the period is \\pi , and the phase shift is 0. There is no horizontal translation, the graph is translated vertically down 4 uni..."
               }
-            ]
+            ],
+            "prompt": "g(x)=3 cos(2x)-4"
           },
           {
             "number": 11,
@@ -3877,7 +4222,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Rewriting the expression, we see that 4 cos(\\frac{\\pi }{4}-2x)=4 cos(-2(x-\\frac{\\pi }{8}))=4 cos(2(x-\\frac{\\pi }{8})). The graph of g is the graph of the cosine function scaled ver..."
               }
-            ]
+            ],
+            "prompt": "g(x)=4 cos(\\frac{\\pi }{4}-2x) (Hint: First, rewrite the function in the form g(x)=A cos(ω(x-h)).)"
           },
           {
             "number": 12,
@@ -3896,7 +4242,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "For each problem, sketch the graph of the pairs of indicated functions on the same set of axes without using a calculator or other graphing technology."
           },
           {
             "number": 13,
@@ -3915,7 +4262,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "f(x)=sin(4x), g(x)=sin(4x)+2"
           },
           {
             "number": 14,
@@ -3934,7 +4282,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "f(x)=sin(\\frac{1}{2}x), g(x)=3 sin(\\frac{1}{2}x)"
           },
           {
             "number": 15,
@@ -3953,7 +4302,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "f(x)=sin(-2x), g(x)=sin(-2x)-3"
           },
           {
             "number": 16,
@@ -3972,7 +4322,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "f(x)=3sin(x), g(x)=3sin(x-\\frac{\\pi }{2})"
           },
           {
             "number": 17,
@@ -3991,7 +4342,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "f(x)=-4sin(x), g(x)=-4sin(\\frac{1}{3}x)"
           },
           {
             "number": 18,
@@ -4010,7 +4362,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "f(x)=\\frac{3}{4}sin(x), g(x)=\\frac{3}{4}sin(x-1)"
           },
           {
             "number": 19,
@@ -4029,7 +4382,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "f(x)=sin(2x), g(x)=sin(2(x-\\frac{\\pi }{6}))"
           },
           {
             "number": 20,
@@ -4048,7 +4402,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "f(x)=4sin(x)-3, g(x)=4sin(x-\\frac{\\pi }{4})-3"
           },
           {
             "number": 21,
@@ -4067,7 +4422,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Extension:"
           },
           {
             "number": 22,
@@ -4086,7 +4442,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Outline of proof: Since functions f and g have the same graph, the functions have the same period P. For all values of x, the fact that the sine graphs are the same gives A sin(ω(x..."
               }
-            ]
+            ],
+            "prompt": "Show that if the graphs of the functions f(x)=Asin(ω(x- h_{1}))+k and g(x)=Asin(ω(x- h_{2}))+k are the same, then h_{1} and h_{2} differ by an integer multiple of the period."
           },
           {
             "number": 23,
@@ -4105,7 +4462,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Outline of proof: Since h_{1} and h_{2} differ by an integer multiple of the period P, there is an integer n so that h_{2}-h_{1}=nP. h_{2}-h_{1}=nP(x-h_{1})-(x-h_{2})=nP\\frac{2\\pi ..."
               }
-            ]
+            ],
+            "prompt": "Show that if h_{1} and h_{2} differ by an integer multiple of the period, then the graphs of f(x)=Asin(ω(x- h_{1}))+k and g(x)=Asin(ω(x- h_{2}))+k are the same graph."
           },
           {
             "number": 24,
@@ -4124,7 +4482,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "The x-intercepts occur when sin(ω(x-h))=0. This happens when ω(x-h)=n\\pi for integers n. So, x-h=\\frac{n\\pi }{ω}, and then x=\\frac{n\\pi }{ω}+h. Since P=\\frac{2\\pi }{ω}, this become..."
               }
-            ]
+            ],
+            "prompt": "Find the x-intercepts of the graph of the function f(x)=A sin(ω(x-h)) in terms of the period P, where ω>0."
           }
         ]
       },
@@ -4156,7 +4515,34 @@
           "correct": 0,
           "explanation": "Mathematical rigor requires that each simplification or transformation is justified by established axioms, field properties, or verified theorems."
         }
-      ]
+      ],
+      "meta": {
+        "title": "Transforming the Graph of the Sine Function",
+        "pageTitle": "Transforming the Graph of the Sine Function | 11th Grade Algebra II | Hesten's Learning",
+        "description": "EngageNY Algebra II lesson on Transforming the Graph of the Sine Function with step-by-step proofs, exercises, and problem sets.",
+        "pageDescription": "Master Transforming the Graph of the Sine Function in 11th Grade Algebra II with embedded practice problem sets and teacher solution keys.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson M.M2.B.1",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Transforming the Graph of the Sine Function",
+        "pill": "Understanding Trigonometric Functions and Putting Them to Use • Algebra II",
+        "text": "In this lesson, explore the essential concepts of Transforming the Graph of the Sine Function. Work through the official curriculum practice exercises below, track your personal study notes, and verify your comprehension using the step-by-step solution keys.",
+        "outcomes": [
+          "Students formalize the period, frequency, phase shift, midline, and amplitude of a general sinusoidal function by understanding how the parameters A, ω, h, and k in the formula",
+          "f(x)=Asin(ω(x-h))+k",
+          "are used to transform the graph of the sine function and how variations in these constants change the shape and position of the graph of the sine function.",
+          "Students learn the relationship among the constants A, ω, h, and k in the formula f(x)=Asin(ω(x-h))+k and the properties of the sine graph. In particular, they learn that:",
+          "|A| is the amplitude of the function. The amplitude is the distance between a maximal point of the graph of the sinusoidal function and the midline (i.e., A=f_{max}-k or A=\\frac{f_{max}-f_{min}}{2}).",
+          "\\frac{2\\pi }{|ω|} is the period of the function. The period P is the distance between two consecutive maximal points (or two consecutive minimal points) on the graph of the sinusoidal function. Thus, ω=\\frac{2\\pi }{P}.",
+          "\\frac{|ω|}{2\\pi } is the frequency of the function (the frequency is the reciprocal of the period).",
+          "h is called the phase shift.",
+          "The graph of y=k is called the midline.",
+          "Furthermore, the graph of the sinusoidal function f is obtained by vertically scaling the graph of the sine function by A, horizontally scaling the resulting graph by \\frac{1}{ω}, and then horizontally and vertically translating the resulting graph by h and k units, respectively."
+        ],
+        "teacherInsight": "The lesson is planned for one day, but the teacher may choose to extend it to two days. The Ferris wheel exploration in Lesson 12 continues to expand on the ideas introduced in this lesson, as do the modeling problems in Lesson 13. This lesson explores the effects of changing the parameters on the graphs of sinusoidal functions, and the next lessons work backward to write a formula for sinusoidal function given its graph and to fit a sinusoidal function to data. Students work in groups to discover the effects of changing each of the parameters A, ω, h, and k in the generalized sine function f(x)=Asin(ω(x-h))+k. Note that the character ω is a lowercase Greek omega, not a \"w\". The parameters h and k in the formula f(x)=Asin(ω(x-h))+k play a similar role as the h and k in the vertex form p(x)=a(x-h)^{2}+k of a quadratic function. This lesson draws heavily on MP.7 and MP.8. Students graph functions repeatedly (MP.8) to generalize the effect of the parameters (MP.7) on the graph. During this lesson, students are grouped twice. First, they are arranged into the four teams that discover the effects of each parameter on the graph of the sine function, and then those teams are scrambled to create new groups that contain at least one member of each original team. It might be a good idea to carefully plan these groups in advance so that each time the groups are scrambled, they contain students at different levels of ability."
+      }
     },
     "m-math-m2-b-2": {
       "id": "m-math-m2-b-2",
@@ -4230,7 +4616,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "In the classic novel Don Quixote, the title character famously battles a windmill. In this problem, you will model what happens when Don Quixote battles a windmill, and the windmill wins. Suppose the center of the windmill is 20 feet off the ground, and the sails are 15 feet long. Don Quixote is caught on a tip of one of the sails. The sails are turning at a rate of one counterclockwise rotation every 60 seconds."
           },
           {
             "number": 2,
@@ -4249,7 +4636,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Since Don Quixote is moving around a circle, and the sine function measures vertical displacement of an object moving around a circle, we can use a sine function to track his posit..."
               }
-            ]
+            ],
+            "prompt": "Explain why a sinusoidal function could be used to model Don Quixote's height above the ground as a function of time."
           },
           {
             "number": 3,
@@ -4268,7 +4656,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "The amplitude is 15 feet; the period is \\frac{2\\pi }{60}, which is the same as \\frac{\\pi }{30}; and the midline has equation y=20. MP.4MP.4"
               }
-            ]
+            ],
+            "prompt": "Sketch a graph of Don Quixote's height above the ground as a function of time. Assume t=0 corresponds to a time when he was closest to the ground. What are the amplitude, period, and midline of the graph?"
           },
           {
             "number": 4,
@@ -4287,7 +4676,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "The height of Don Quixote after t seconds is H(t)=15sin(\\frac{\\pi }{30}(t-15))+20."
               }
-            ]
+            ],
+            "prompt": "Model Don Quixote's height H above the ground as a function of time t since he was closest to the ground."
           },
           {
             "number": 5,
@@ -4306,7 +4696,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "He fell at t=100 seconds. The vertical distance in feet that he fell is the following: H(100)=15sin(\\frac{\\pi }{30}(100-15))+20 =15sin(2\\pi +\\frac{5\\pi }{6})+20=15 sin(\\frac{5\\pi }..."
               }
-            ]
+            ],
+            "prompt": "After 1 minute and 40 seconds, Don Quixote fell off the sail and straight down to the ground. How far did he fall?"
           },
           {
             "number": 6,
@@ -4325,7 +4716,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "The High Roller, a Ferris wheel in Las Vegas, Nevada, opened in March 2014. The 550 ft. tall wheel has a diameter of 520 feet. A ride on one of its 28 passenger cars lasts 30 minutes, the time it takes the wheel to complete one full rotation. Riders board the passenger cars at the bottom of the wheel. Assume that once the wheel is in motion, it maintains a constant speed for the 30-minute ride and is rotating in a counterclockwise direction."
           },
           {
             "number": 7,
@@ -4344,7 +4736,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Sketch a graph of the height of a passenger car on the High Roller as a function of the time the ride began."
           },
           {
             "number": 8,
@@ -4363,7 +4756,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "H(t)=260sin(\\frac{2\\pi }{30}(t-7.5))+280"
               }
-            ]
+            ],
+            "prompt": "Write a sinusoidal function H that represents the height of a passenger car t minutes after the ride begins."
           },
           {
             "number": 9,
@@ -4382,7 +4776,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "The amplitude, 260, is the radius of the wheel. The period is 30 minutes, so ω=\\frac{2\\pi }{30}. The midline is y=280, which represents how high the center of the wheel is above th..."
               }
-            ]
+            ],
+            "prompt": "Explain how the parameters of your sinusoidal function relate to the situation."
           },
           {
             "number": 10,
@@ -4401,7 +4796,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "H(20)=260sin(\\frac{2\\pi }{30}(20-7.5))+280H(20)=410 You are 410 feet above the ground."
               }
-            ]
+            ],
+            "prompt": "If you were on this ride, how high would you be above the ground after 20 minutes?"
           },
           {
             "number": 11,
@@ -4420,7 +4816,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Because \\frac{25}{30}=\\frac{5}{6}≈0.83, one minute of riding time costs roughly 83 cents. The circumference of the circle is 520\\pi ft. Dividing 25 by the circumference indicates t..."
               }
-            ]
+            ],
+            "prompt": "Suppose the ride costs $25. How much does 1 minute of riding time cost? How much does 1 foot of riding distance cost? How much does 1 foot of height above the ground cost?"
           },
           {
             "number": 12,
@@ -4439,7 +4836,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "We are assuming that the wheel does not stop to add additional passengers when each car gets to the bottom of the wheel during the ride. We are neglecting the fact that the ride st..."
               }
-            ]
+            ],
+            "prompt": "What are some of the limitations of this model based on the assumptions that we made?"
           },
           {
             "number": 13,
@@ -4458,7 +4856,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Once in motion, a pendulum's distance varies sinusoidally from 12 feet to 2 feet away from a wall every 12 seconds."
           },
           {
             "number": 14,
@@ -4477,7 +4876,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Sketch the pendulum's distance D from the wall over a 1-minute interval as a function of time t. Assume t=0 corresponds to a time when the pendulum was furthest from the wall."
           },
           {
             "number": 15,
@@ -4496,7 +4896,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "D(t)=5 cos(\\frac{2\\pi }{24}t)+8"
               }
-            ]
+            ],
+            "prompt": "Write a sinusoidal function for D, the pendulum's distance from the wall, as a function of the time since it was furthest from the wall."
           },
           {
             "number": 16,
@@ -4515,7 +4916,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "5 cos(\\frac{2\\pi }{24}t)+8=10 The first two positive solutions to this equation are 4.47 seconds and 19.57 seconds."
               }
-            ]
+            ],
+            "prompt": "Identify two different times when the pendulum was 10 feet away from the wall. (Hint: Write an equation, and solve it graphically.)"
           },
           {
             "number": 17,
@@ -4534,7 +4936,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "The height in meters relative to the starting platform height of a car on a portion of a roller coaster track is modeled by the function H(t)=3sin(\\frac{\\pi }{4}(t-10))-7. It takes a car 24 seconds to travel on this portion of the track, which starts 10 seconds into the ride."
           },
           {
             "number": 18,
@@ -4553,7 +4956,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Graph the height relative to the starting platform as a function of time over this time interval."
           },
           {
             "number": 19,
@@ -4572,7 +4976,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "The amplitude 3 means that the height ranges vertically a total distance of 6 feet. The graph completes one cycle every 8 seconds because the period is 8. The phase shift of 10 and..."
               }
-            ]
+            ],
+            "prompt": "Explain the meaning of each parameter in the height function in terms of the situation."
           },
           {
             "number": 20,
@@ -4591,7 +4996,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Given the following function, use the parameters to formulate a real-world situation involving one dimension of circular motion that could be modeled using this function. Explain how each parameter of the function relates to your situation."
           },
           {
             "number": 21,
@@ -4610,7 +5016,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Student scenarios will vary; however, f should represent a horizontal or vertical distance from a reference point as a point is in motion around a circle, and x should be an amount..."
               }
-            ]
+            ],
+            "prompt": "f(x)=10sin(\\frac{\\pi }{8}(x-3))+15"
           }
         ]
       },
@@ -4642,7 +5049,29 @@
           "correct": 0,
           "explanation": "Mathematical rigor requires that each simplification or transformation is justified by established axioms, field properties, or verified theorems."
         }
-      ]
+      ],
+      "meta": {
+        "title": "Ferris Wheels—Using Trigonometric Functions to Model Cyclical Behavior",
+        "pageTitle": "Ferris Wheels—Using Trigonometric Functions to Model Cyclical Behavior | 11th Grade Algebra II | Hesten's Learning",
+        "description": "EngageNY Algebra II lesson on Ferris Wheels—Using Trigonometric Functions to Model Cyclical Behavior with step-by-step proofs, exercises, and problem sets.",
+        "pageDescription": "Master Ferris Wheels—Using Trigonometric Functions to Model Cyclical Behavior in 11th Grade Algebra II with embedded practice problem sets and teacher solution keys.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson M.M2.B.2",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Ferris Wheels—Using Trigonometric Functions to Model Cyclical Behavior",
+        "pill": "Understanding Trigonometric Functions and Putting Them to Use • Algebra II",
+        "text": "In this lesson, explore the essential concepts of Ferris Wheels—Using Trigonometric Functions to Model Cyclical Behavior. Work through the official curriculum practice exercises below, track your personal study notes, and verify your comprehension using the step-by-step solution keys.",
+        "outcomes": [
+          "Students review how changing the parameters A, ω, h, and k in",
+          "f(x)=Asin(ω(x-h))+k",
+          "affects the graph of a sinusoidal function.",
+          "Students examine the example of the Ferris wheel, using height, distance from the ground, period, and so on, to write a function of the height of the passenger cars in terms of the sine function:",
+          "f(x)=Asin(ω(x-h))+k."
+        ],
+        "teacherInsight": "In this lesson, students approach modeling with sinusoidal functions by extracting the equation from the graph instead of producing the graph from the equation, as done in the previous lesson. In Lesson 11, students studied the effect of changing the parameters A, ω, h, and k on the shape and position of the graph of a sinusoidal function of the form f(x)=A sin(ω(x-h))+k. In this lesson, students return to the study of the height of a passenger car on a Ferris wheel, but they build up to the idea of the wheel's position as a function of time and not just as a function of the amount of rotation the wheel has undergone. In this way, students can create a more dynamic representation of the motion of the wheel. This change in perception is the result of composing functions—the sine is a function of the amount of rotation, which is in turn a function of the amount of time that has elapsed—but that should not be made explicit here. Because periodic situations are often based on time, thinking of sine and cosine as functions of time is the next natural step in student learning. Note that when the independent variable is time, frequency rates are expressed in terms of cycles per hour or cycles per minute. The addition of time as the independent variable allows students to model more complex, and hence more realistic, periodic phenomena (MP.4)."
+      }
     },
     "m-math-m2-b-3": {
       "id": "m-math-m2-b-3",
@@ -4713,7 +5142,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "y=2 sin(2x)y=2 cos(2(x+\\pi ))"
               }
-            ]
+            ],
+            "prompt": "Find equations of both a sine function and a cosine function that could each represent the graph given below."
           },
           {
             "number": 2,
@@ -4732,7 +5162,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "y=0.5 cos(3x)+2y=0.5 sin(3(x- \\frac{\\pi }{2}))+2"
               }
-            ]
+            ],
+            "prompt": "Find equations of both a sine function and a cosine function that could each represent the graph given below."
           },
           {
             "number": 3,
@@ -4751,7 +5182,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Rapidly vibrating objects send pressure waves through the air that are detected by our ears and then interpreted by our brains as sound. Our brains analyze the amplitude and frequency of these pressure waves."
           },
           {
             "number": 4,
@@ -4770,7 +5202,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "A speaker usually consists of a paper cone attached to an electromagnet. By sending an oscillating electric current through the electromagnet, the paper cone can be made to vibrate. By adjusting the current, the amplitude and frequency of vibrations can be controlled."
           },
           {
             "number": 5,
@@ -4789,7 +5222,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "The following graph shows the pressure intensity (I) as a function of time (x), in seconds, of the pressure waves emitted by a speaker set to produce a single pure tone."
           },
           {
             "number": 6,
@@ -4808,7 +5242,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Either a sine or a cosine function could be used, but since the graph passes through the origin, it is natural to use a sine function."
               }
-            ]
+            ],
+            "prompt": "Does it seem more natural to use a sine or a cosine function to fit to this graph?"
           },
           {
             "number": 7,
@@ -4827,7 +5262,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Reading from the graph, we have A=1, h=0, k=0, and 2p≈0.0045 (because the graph has an x-intercept at approximately 0.0045 after two full periods). Then, p≈0.00225, so ω=\\frac{2\\pi..."
               }
-            ]
+            ],
+            "prompt": "Find the equation of a trigonometric function that fits this graph."
           },
           {
             "number": 8,
@@ -4846,7 +5282,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Suppose that the following table represents the average monthly ambient air temperature, in degrees Fahrenheit, in some subterranean caverns in southeast Australia for each of the twelve months in a year. We wish to model these data with a trigonometric function. (Notice that the seasons are reversed in the Southern Hemisphere, so January is in summer, and July is in winter.)"
           },
           {
             "number": 9,
@@ -4865,7 +5302,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Yes"
               }
-            ]
+            ],
+            "prompt": "Does it seem reasonable to assume that these data, if extended beyond one year, should be roughly periodic?"
           },
           {
             "number": 10,
@@ -4884,7 +5322,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "There are a number of ways to approximate the amplitude. We can simply take half of the difference of the highest and lowest temperatures, or we can take half of the difference of ..."
               }
-            ]
+            ],
+            "prompt": "What seems to be the amplitude of the data?"
           },
           {
             "number": 11,
@@ -4903,7 +5342,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "The average of 64.22^\\circ F and 49.10^\\circ F six months later is 56.66. Thus, the midline would be y=56.66; so, we have k=56.66."
               }
-            ]
+            ],
+            "prompt": "What seems to be the midline of the data (equation of the line through the middle of the graph)?"
           },
           {
             "number": 12,
@@ -4922,7 +5362,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Cosine would be easier because we can pinpoint a peak of the function more easily than where it should cross the midline."
               }
-            ]
+            ],
+            "prompt": "Would it be easier to use sine or cosine to model these data?"
           },
           {
             "number": 13,
@@ -4941,7 +5382,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "It appears that the peak of the function would be between January and February, so let's use h=1.5 for the horizontal shift. (This assumes that we have labeled January as month 1 a..."
               }
-            ]
+            ],
+            "prompt": "What is a reasonable approximation for the horizontal shift?"
           },
           {
             "number": 14,
@@ -4960,7 +5402,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "F(x)=7.56cos(\\frac{2\\pi }{12}(x-1.5))+56.66"
               }
-            ]
+            ],
+            "prompt": "Write an equation for a function that could fit these data."
           },
           {
             "number": 15,
@@ -4979,7 +5422,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "The data appear sinusoidal, and the easiest function to model them with is a cosine function. The period would be 365 days, so the frequency would be ω=\\frac{2\\pi }{365}≈0.017. The..."
               }
-            ]
+            ],
+            "prompt": "The table below provides data for the number of daylight hours as a function of day of the year, where day 1 represents January 1. Graph the data and determine if they could be represented by a sinusoidal function. If they can, determine the period, amplitude, and midline of the function, and find an equation for a function that models the data."
           },
           {
             "number": 16,
@@ -4998,7 +5442,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "While the equation for the function includes a sine function within it, the function itself is not a sinusoidal function. It does not have a constant amplitude or midline, though i..."
               }
-            ]
+            ],
+            "prompt": "The function graphed below is y=x^{sin(x)}. Blake says, \"The function repeats on a fixed interval, so it must be a sinusoidal function.\" Respond to his argument."
           }
         ]
       },
@@ -5030,7 +5475,26 @@
           "correct": 0,
           "explanation": "Mathematical rigor requires that each simplification or transformation is justified by established axioms, field properties, or verified theorems."
         }
-      ]
+      ],
+      "meta": {
+        "title": "Tides, Sound Waves, and Stock Markets",
+        "pageTitle": "Tides, Sound Waves, and Stock Markets | 11th Grade Algebra II | Hesten's Learning",
+        "description": "EngageNY Algebra II lesson on Tides, Sound Waves, and Stock Markets with step-by-step proofs, exercises, and problem sets.",
+        "pageDescription": "Master Tides, Sound Waves, and Stock Markets in 11th Grade Algebra II with embedded practice problem sets and teacher solution keys.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson M.M2.B.3",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Tides, Sound Waves, and Stock Markets",
+        "pill": "Understanding Trigonometric Functions and Putting Them to Use • Algebra II",
+        "text": "In this lesson, explore the essential concepts of Tides, Sound Waves, and Stock Markets. Work through the official curriculum practice exercises below, track your personal study notes, and verify your comprehension using the step-by-step solution keys.",
+        "outcomes": [
+          "Students model cyclical phenomena from biological and physical science using trigonometric functions.",
+          "Students understand that some periodic behavior is too complicated to be modeled by simple trigonometric functions."
+        ],
+        "teacherInsight": "Together, the examples in the lesson help students see the ways in which some periodic data can be modeled by sinusoidal functions. These examples offer students the opportunity to solve real-world problems (MP.1) to experience ways in which modeling data with sinusoidal functions is valuable. Each example supports the main objective of exploring the usefulness and limitations of sinusoidal functions using the most well-known contexts of such functions. Throughout the lesson, students employ MP.4 in creating models of real-world contexts. Additionally, these models offer opportunities to engage in MP.2, MP.5, and MP.6. In Lessons 11 and 12, students found sinusoidal equations to model phenomena that were clearly periodic, such as the height of a moving passenger car on a Ferris wheel. The focus of this lesson is on fitting a function to given data, as specified by standard S-ID.B.6a. Students are asked to find functions that could be used to model data that appear to be periodic in nature, requiring them to make multiple choices about approximating the amplitude, period, and midline of a graph that approximates the data points. As a result, there are multiple correct responses based on how students choose to model the data. Be sure to accept and discuss these different results because this is an important part of the modeling process. If two students (or groups of students) create different formulas, that does not necessarily mean that one of them made a mistake; they both could have created valid, though different, models."
+      }
     },
     "m-math-m2-b-4": {
       "id": "m-math-m2-b-4",
@@ -5101,7 +5565,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Recall that the cotangent function is defined by cot(x)=\\frac{cos(x)}{sin(x)}=\\frac{1}{tan(x)}, where sin(x)\\ne 0."
           },
           {
             "number": 2,
@@ -5120,7 +5585,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Since the cotangent function is given by cot(x)=\\frac{cos(x)}{sin(x)}, the cotangent function is undefined at values of x, where sin(x)=0. This happens at values of \\theta that are..."
               }
-            ]
+            ],
+            "prompt": "What is the domain of the cotangent function? Explain how you know."
           },
           {
             "number": 3,
@@ -5139,7 +5605,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Since the cotangent function is the reciprocal of the tangent function, they will have the same period, \\pi . That is, cot(x+\\pi )=\\frac{1}{tan(x+\\pi )}=\\frac{1}{tan(x)}=cot(x)."
               }
-            ]
+            ],
+            "prompt": "What is the period of the cotangent function? Explain how you know."
           },
           {
             "number": 4,
@@ -5158,7 +5625,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Use a calculator to complete the table of values of the cotangent function on the interval (0,\\pi ) to two decimal places."
           },
           {
             "number": 5,
@@ -5177,7 +5645,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Plot your data from part (c), and sketch a graph of y=cot(x) on (0, \\pi )."
           },
           {
             "number": 6,
@@ -5196,7 +5665,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Sketch a graph of y=cot(x) on (-2\\pi , 2\\pi ) without plotting points."
           },
           {
             "number": 7,
@@ -5215,7 +5685,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Both the tangent and cotangent functions have vertical asymptotes; the cotangent graph has vertical asymptotes at x=k\\pi , for integers k, and the tangent has vertical asymptotes a..."
               }
-            ]
+            ],
+            "prompt": "Discuss the similarities and differences between the graphs of the tangent and cotangent functions."
           },
           {
             "number": 8,
@@ -5234,7 +5705,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Suppose that tan(x)=cot(x). Then, \\frac{sin(x)}{cos(x)}=\\frac{cos(x)}{sin(x)}. Cross multiplying gives (sin(x))^{2}=(cos(x))^{2}(sin(x))^{2}-(cos(x))^{2}=0(sin(x)-cos(x))(sin(x)+co..."
               }
-            ]
+            ],
+            "prompt": "Find all x-values where tan(x)=cot(x) on the interval (0, 2\\pi )."
           },
           {
             "number": 9,
@@ -5253,7 +5725,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Each set of axes below shows the graph of f(x)=tan(x). Use what you know about function transformations to sketch a graph of y=g(x) for each function g on the interval (0, 2\\pi )."
           },
           {
             "number": 10,
@@ -5272,7 +5745,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "g(x)=2 tan(x)"
           },
           {
             "number": 11,
@@ -5291,7 +5765,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "g(x)=\\frac{1}{3}tan(x)"
           },
           {
             "number": 12,
@@ -5310,7 +5785,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "g(x)=-2 tan(x)"
           },
           {
             "number": 13,
@@ -5329,7 +5805,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "If A is positive, the graph is scaled vertically by a factor of A. If A is negative, then the graph is reflected over the x-axis and scaled vertically by a factor of (A)."
               }
-            ]
+            ],
+            "prompt": "How does changing the parameter A affect the graph of g(x)=A tan(x)?"
           },
           {
             "number": 14,
@@ -5348,7 +5825,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Each set of axes below shows the graph of f(x)=tan(x). Use what you know about function transformations to sketch a graph of y=g(x) for each function g on the interval (0, 2\\pi )."
           },
           {
             "number": 15,
@@ -5367,7 +5845,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "g(x)=tan(x-\\frac{\\pi }{2})"
           },
           {
             "number": 16,
@@ -5386,7 +5865,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "g(x)=tan(x-\\frac{\\pi }{6})"
           },
           {
             "number": 17,
@@ -5405,7 +5885,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "g(x)=tan(x+\\frac{\\pi }{4})"
           },
           {
             "number": 18,
@@ -5424,7 +5905,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "If h>0, the graph is translated horizontally to the right by h units, and if h<0, the graph is translated horizontally to the left by h units."
               }
-            ]
+            ],
+            "prompt": "How does changing the parameter h affect the graph of g(x)=tan(x-h)?"
           },
           {
             "number": 19,
@@ -5443,7 +5925,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Each set of axes below shows the graph of f(x)=tan(x). Use what you know about function transformations to sketch a graph of y=g(x) for each function g on the interval (0, 2\\pi )."
           },
           {
             "number": 20,
@@ -5462,7 +5945,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "g(x)=tan(x)+1"
           },
           {
             "number": 21,
@@ -5481,7 +5965,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "g(x)=tan(x)+3"
           },
           {
             "number": 22,
@@ -5500,7 +5985,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "g(x)=tan(x)-2"
           },
           {
             "number": 23,
@@ -5519,7 +6005,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "If k>0, the graph is translated vertically upward by k units, and if k<0, the graph is translated vertically downward by k units."
               }
-            ]
+            ],
+            "prompt": "How does changing the parameter k affect the graph of g(x)=tan(x)+k?"
           },
           {
             "number": 24,
@@ -5538,7 +6025,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Each set of axes below shows the graph of f(x)=tan(x). Use what you know about function transformations to sketch a graph of y=g(x) for each function g on the interval (0, 2\\pi )."
           },
           {
             "number": 25,
@@ -5557,7 +6045,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "g(x)=tan(3x)"
           },
           {
             "number": 26,
@@ -5576,7 +6065,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "g(x)=tan(\\frac{x}{2})"
           },
           {
             "number": 27,
@@ -5595,7 +6085,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "g(x)=tan(-3x)"
           },
           {
             "number": 28,
@@ -5614,7 +6105,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Changing ω changes the period of the graph. The period is P=\\frac{\\pi }{|ω|}."
               }
-            ]
+            ],
+            "prompt": "How does changing the parameter ω affect the graph of g(x)=tan(ωx)?"
           },
           {
             "number": 29,
@@ -5633,7 +6125,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Use your knowledge of function transformation and the graph of y=tan(x) to sketch graphs of the following transformations of the tangent function."
           },
           {
             "number": 30,
@@ -5652,7 +6145,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "y=tan(2x)"
           },
           {
             "number": 31,
@@ -5671,7 +6165,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "y=tan(2(x-\\frac{\\pi }{4}))"
           },
           {
             "number": 32,
@@ -5690,7 +6185,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "y=tan(2(x-\\frac{\\pi }{4}))+1.5"
           },
           {
             "number": 33,
@@ -5709,7 +6205,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "The graphs of f(x)=-tan(x-\\frac{\\pi }{2}) and g(x)=cot(x) are the same graph. Exploratory Challenge: Axes for Graph of Tangent Function"
               }
-            ]
+            ],
+            "prompt": "Find parameters A, ω, h, and k so that the graphs of f(x)=A tan(ω(x-h))+k and g(x)=cot(x) are the same."
           }
         ]
       },
@@ -5741,7 +6238,26 @@
           "correct": 0,
           "explanation": "Mathematical rigor requires that each simplification or transformation is justified by established axioms, field properties, or verified theorems."
         }
-      ]
+      ],
+      "meta": {
+        "title": "Graphing the Tangent Function",
+        "pageTitle": "Graphing the Tangent Function | 11th Grade Algebra II | Hesten's Learning",
+        "description": "EngageNY Algebra II lesson on Graphing the Tangent Function with step-by-step proofs, exercises, and problem sets.",
+        "pageDescription": "Master Graphing the Tangent Function in 11th Grade Algebra II with embedded practice problem sets and teacher solution keys.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson M.M2.B.4",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Graphing the Tangent Function",
+        "pill": "Understanding Trigonometric Functions and Putting Them to Use • Algebra II",
+        "text": "In this lesson, explore the essential concepts of Graphing the Tangent Function. Work through the official curriculum practice exercises below, track your personal study notes, and verify your comprehension using the step-by-step solution keys.",
+        "outcomes": [
+          "Students graph the tangent function.",
+          "Students use the unit circle to express the values of the tangent function for \\pi -x, \\pi +x, and 2\\pi -x in terms of tan(x), where x is any real number in the domain of the tangent function."
+        ],
+        "teacherInsight": "Working in groups, students prepare graphs of separate branches of the tangent function, combining them into a single graph. In this way, the periodicity of the tangent function becomes apparent. The slope interpretation of the tangent function is then recalled from Lesson 6 and used to develop trigonometric identities involving the tangent function. Continue to emphasize to students that a trigonometric identity consists of a statement that two functions are equal and a specification of a domain on which the statement is valid. That is, the statement \"tan(x+\\pi )=tan(x)\" is not an identity, but the statement \"tan(x+\\pi )=tan(x), for x\\ne \\frac{\\pi }{2}+k\\pi , for all integers k\" is an identity. This lesson uses both x and \\theta to represent the independent variables of the tangent function; \\theta is used when working with a circle and x when working in the xy-plane."
+      }
     },
     "m-math-m2-b-5": {
       "id": "m-math-m2-b-5",
@@ -5813,7 +6329,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Which of the following statements are trigonometric identities? Graph the functions on each side of the equation."
           },
           {
             "number": 2,
@@ -5832,7 +6349,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{} This is an identity that is defined for x\\ne \\frac{\\pi }{2}+k\\pi , for ..."
               }
-            ]
+            ],
+            "prompt": "tan(x)=\\frac{sin(x)}{cos(x)} where the functions on both sides are defined."
           },
           {
             "number": 3,
@@ -5851,7 +6369,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "This is not an identity. For example, when x=0, the left side of the equation is 1, and the right side is also 1. But when x=\\frac{\\pi }{2}, the left side is 0, and the right side ..."
               }
-            ]
+            ],
+            "prompt": "cos^{2}(x)=1+sin(x) where the functions on both sides are defined."
           },
           {
             "number": 4,
@@ -5870,7 +6389,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "This is an identity that is defined for all real numbers x. See the identical graphs below."
               }
-            ]
+            ],
+            "prompt": "cos(\\frac{\\pi }{2}-x)=sin(x) where the functions on both sides are defined."
           },
           {
             "number": 5,
@@ -5889,7 +6409,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Determine the domain of the following trigonometric identities:"
           },
           {
             "number": 6,
@@ -5908,7 +6429,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "This identity is defined only for x\\ne k\\pi , for all integers k."
               }
-            ]
+            ],
+            "prompt": "cot(x)=\\frac{cos(x)}{sin(x)} where the functions on both sides are defined."
           },
           {
             "number": 7,
@@ -5927,7 +6449,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "This identity is defined for all real numbers u."
               }
-            ]
+            ],
+            "prompt": "cos(-u)=cos(u) where the functions on both sides are defined."
           },
           {
             "number": 8,
@@ -5946,7 +6469,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "This identity is defined for y\\ne \\frac{\\pi }{2}+k\\pi , for all integers k."
               }
-            ]
+            ],
+            "prompt": "sec(y)=\\frac{1}{cos(y)} where the functions on both sides are defined."
           },
           {
             "number": 9,
@@ -5965,7 +6489,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "sin(x)-sin(x)cos^{2}(x)=sin(x)(1-cos^{2}(x))=sin(x)sin^{2}(x)=sin^{3}(x)"
               }
-            ]
+            ],
+            "prompt": "Rewrite sin(x)cos^{2}(x)-sin(x) as an expression containing a single term."
           },
           {
             "number": 10,
@@ -5984,7 +6509,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "cos(\\theta )=\\frac{\\sqrt{6}}{3}"
               }
-            ]
+            ],
+            "prompt": "Suppose 0<\\theta <\\frac{\\pi }{2} and sin(\\theta )=\\frac{1}{\\sqrt{3}}. What is the value of cos(\\theta )?"
           },
           {
             "number": 11,
@@ -6003,7 +6529,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Either sin(\\theta )=\\frac{2}{\\sqrt{5}}, or sin(\\theta )=-\\frac{2}{\\sqrt{5}}"
               }
-            ]
+            ],
+            "prompt": "If cos(\\theta )= -\\frac{1}{\\sqrt{5}}, what are possible values of sin(\\theta )?"
           },
           {
             "number": 12,
@@ -6022,7 +6549,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Lesson SummaryThe Pythagorean identity: sin^{2}(\\theta )+cos^{2}(\\theta )=1 for all real numbers \\theta .Lesson SummaryThe Pythagorean identity: sin^{2}(\\theta )+cos^{2}(\\theta )=1 for all real numbers \\theta .Use the Pythagorean identity sin^{2}(\\theta )+ cos^{2}(\\theta )=1, where \\theta is any real number, to find the following:"
           },
           {
             "number": 13,
@@ -6041,7 +6569,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "From the Pythagorean identity, cos^{2}(\\theta )=1- (\\frac{5}{13})^{2}. So, cos^{2}(\\theta )= 1-\\frac{25}{169}=\\frac{144}{169}, and cos(\\theta )=\\frac{12}{13}, or cos(\\theta )=-\\fra..."
               }
-            ]
+            ],
+            "prompt": "cos(\\theta ), given sin(\\theta )=\\frac{5}{13}, for \\frac{\\pi }{2}<\\theta <\\pi ."
           },
           {
             "number": 14,
@@ -6060,7 +6589,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "From the Pythagorean identity, sin^{2}(x)=1- (\\frac{1}{\\sqrt{2}})^{2}. So, sin^{2}(x)= \\frac{1}{2}, and sin(x)=\\frac{1}{\\sqrt{2}}, or sin(x)=-\\frac{1}{\\sqrt{2}}. Because sin(x) is ..."
               }
-            ]
+            ],
+            "prompt": "tan(x), given cos(x)=-\\frac{1}{\\sqrt{2}}, for \\pi <x<\\frac{3\\pi }{2}."
           },
           {
             "number": 15,
@@ -6079,7 +6609,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "The three identities below are all called Pythagorean identities. The second and third follow from the first, as you saw in Example 1 and the Exit Ticket."
           },
           {
             "number": 16,
@@ -6098,7 +6629,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "For which values of \\theta are each of these identities defined?"
           },
           {
             "number": 17,
@@ -6117,7 +6649,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Defined for any real number \\theta ."
               }
-            ]
+            ],
+            "prompt": "sin^{2}(\\theta )+cos^{2}(\\theta )=1, where the functions on both sides are defined."
           },
           {
             "number": 18,
@@ -6136,7 +6669,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Defined for real numbers \\theta such that \\theta \\ne \\frac{\\pi }{2}+k\\pi , for all integers k."
               }
-            ]
+            ],
+            "prompt": "tan^{2}(\\theta )+1=sec^{2}(\\theta ), where the functions on both sides are defined."
           },
           {
             "number": 19,
@@ -6155,7 +6689,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Defined for real numbers \\theta such that \\theta \\ne k\\pi , for all integers k."
               }
-            ]
+            ],
+            "prompt": "1+ cot^{2}(\\theta )=csc^{2}(\\theta ), where the functions on both sides are defined."
           },
           {
             "number": 20,
@@ -6174,7 +6709,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Identities i and ii"
               }
-            ]
+            ],
+            "prompt": "For which of the three identities is 0 in the domain of validity?"
           },
           {
             "number": 21,
@@ -6193,7 +6729,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Identities i and iii"
               }
-            ]
+            ],
+            "prompt": "For which of the three identities is \\frac{\\pi }{2} in the domain of validity?"
           },
           {
             "number": 22,
@@ -6212,7 +6749,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Identities i, ii, and iii"
               }
-            ]
+            ],
+            "prompt": "For which of the three identities is -\\frac{\\pi }{4} in the domain of validity?"
           }
         ]
       },
@@ -6244,7 +6782,27 @@
           "correct": 0,
           "explanation": "Mathematical rigor requires that each simplification or transformation is justified by established axioms, field properties, or verified theorems."
         }
-      ]
+      ],
+      "meta": {
+        "title": "What Is a Trigonometric Identity?",
+        "pageTitle": "What Is a Trigonometric Identity? | 11th Grade Algebra II | Hesten's Learning",
+        "description": "EngageNY Algebra II lesson on What Is a Trigonometric Identity? with step-by-step proofs, exercises, and problem sets.",
+        "pageDescription": "Master What Is a Trigonometric Identity? in 11th Grade Algebra II with embedded practice problem sets and teacher solution keys.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson M.M2.B.5",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: What Is a Trigonometric Identity?",
+        "pill": "Understanding Trigonometric Functions and Putting Them to Use • Algebra II",
+        "text": "In this lesson, explore the essential concepts of What Is a Trigonometric Identity?. Work through the official curriculum practice exercises below, track your personal study notes, and verify your comprehension using the step-by-step solution keys.",
+        "outcomes": [
+          "Students prove the Pythagorean identity sin^{2}(x)+cos^{2}(x)=1.",
+          "Students extend trigonometric identities to the real line, with attention to domain and range.",
+          "Students use the Pythagorean identity to find sin(\\theta ), cos(\\theta ), or tan(\\theta ), given sin(\\theta ), cos(\\theta ), or tan(\\theta ) and the quadrant of the terminal ray of the rotation."
+        ],
+        "teacherInsight": "The lesson begins with an example that develops and proves the Pythagorean identity for all real numbers. An equivalent form of the Pythagorean identity is developed, and students observe that there are special values for which the resulting functions are not defined; therefore, there are values for which the identity does not hold. Students then examine the domains for several identities and use the Pythagorean identity to find one function in terms of another in a given quadrant."
+      }
     },
     "m-math-m2-b-6": {
       "id": "m-math-m2-b-6",
@@ -6315,7 +6873,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Does sin(x+y) equal sin(x)+sin(y) for all real numbers x and y?"
           },
           {
             "number": 2,
@@ -6334,7 +6893,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "sin(\\frac{\\pi }{2})=1, sin(\\frac{\\pi }{4})=\\frac{\\sqrt{2}}{2}, and sin(\\frac{3\\pi }{4})=\\frac{\\sqrt{2}}{2}"
               }
-            ]
+            ],
+            "prompt": "Find each of the following: sin(\\frac{\\pi }{2}),sin(\\frac{\\pi }{4}),sin(\\frac{3\\pi }{4})."
           },
           {
             "number": 3,
@@ -6353,7 +6913,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "No, because sin(\\frac{\\pi }{2}+\\frac{\\pi }{4})=\\frac{\\sqrt{2}}{2}, and sin(\\frac{\\pi }{2})+sin(\\frac{\\pi }{4})=1+\\frac{\\sqrt{2}}{2}."
               }
-            ]
+            ],
+            "prompt": "Are sin(\\frac{\\pi }{2}+\\frac{\\pi }{4}) and sin(\\frac{\\pi }{2})+sin(\\frac{\\pi }{4}) equal?"
           },
           {
             "number": 4,
@@ -6372,7 +6933,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Yes. If either x or y is zero, or if both x and y are multiples of \\pi , this is a true statement. In many other cases it is not true, so it is not true in general."
               }
-            ]
+            ],
+            "prompt": "Are there any values of x and y for which sin(x+y)=sin(x)+sin(y)?"
           },
           {
             "number": 5,
@@ -6391,7 +6953,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Use tan(x)=\\frac{sin(x)}{cos(x)} and identities involving the sine and cosine functions to establish the following identities for the tangent function. Identify the values of x where the equation is an identity."
           },
           {
             "number": 6,
@@ -6410,7 +6973,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Let x be a real number so that x\\ne \\frac{\\pi }{2}+\\pi k, for any integer k. Then, tan(\\pi -x)=\\frac{sin(\\pi -x)}{cos(\\pi -x)}=\\frac{sin(x)}{-cos(x)}=-\\frac{sin(x)}{cos(x)}=-tan(x)..."
               }
-            ]
+            ],
+            "prompt": "tan(\\pi -x)=tan(x)"
           },
           {
             "number": 7,
@@ -6429,7 +6993,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Let x be a real number so that x\\ne \\frac{\\pi }{2}+\\pi k, for any integer k. Then, tan(x+\\pi )=\\frac{sin(x+\\pi )}{cos(x+\\pi )}=\\frac{-sin(x)}{-cos(x)}=\\frac{sin(x)}{cos(x)}=tan(x)...."
               }
-            ]
+            ],
+            "prompt": "tan(x+\\pi )=tan(x)"
           },
           {
             "number": 8,
@@ -6448,7 +7013,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Let x be a real number so that x\\ne \\frac{\\pi }{2}+\\pi k, for any integer k. Then, tan(2\\pi -x)=\\frac{sin(2\\pi -x)}{cos(2\\pi -x)}=\\frac{-sin(x)}{cos(x)}=-\\frac{sin(x)}{cos(x)}=-tan..."
               }
-            ]
+            ],
+            "prompt": "tan(2\\pi -x)=-tan(x)"
           },
           {
             "number": 9,
@@ -6467,7 +7033,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Let x be a real number so that x\\ne \\frac{\\pi }{2}+\\pi k, for any integer k. Then, tan(-x)=\\frac{sin(-x)}{cos(-x)}=\\frac{-sin(x)}{cos(x)}=-\\frac{sin(x)}{cos(x)}=-tan(x). Thus, tan(..."
               }
-            ]
+            ],
+            "prompt": "tan(-x)=-tan(x)"
           },
           {
             "number": 10,
@@ -6486,7 +7053,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Rewrite each of the following expressions as a single term. Identify the values of x for which the original expression and your expression are equal:"
           },
           {
             "number": 11,
@@ -6505,7 +7073,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "cot(x)sec(x)sin(x)=\\frac{cos(x)}{sin(x)}∙\\frac{1}{cos(x)}∙\\frac{sin(x)}{1}=1. The expressions are equal where x\\ne \\frac{\\pi }{2}k, for all integers k."
               }
-            ]
+            ],
+            "prompt": "cot(x) sec(x) sin(x)"
           },
           {
             "number": 12,
@@ -6524,7 +7093,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "(\\frac{1}{1-sin(x)})(\\frac{1}{1+sin(x)})=\\frac{1}{1-sin^{2}(x)}=\\frac{1}{cos^{2}(x)}=sec^{2}(x). The expressions are equal where x\\ne \\frac{\\pi }{2}+k\\pi , for all integers k."
               }
-            ]
+            ],
+            "prompt": "(\\frac{1}{1-sin(x)})(\\frac{1}{1+sin(x)})"
           },
           {
             "number": 13,
@@ -6543,7 +7113,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "\\frac{1}{cos^{2}(x)}-\\frac{1}{cot^{2}(x)}=\\frac{1}{cos^{2}(x)}-\\frac{sin^{2}(x)}{cos^{2}(x)}=\\frac{1-sin^{2}(x)}{cos^{2}(x)}=1. The expressions are equal where x\\ne \\frac{\\pi }{2}k..."
               }
-            ]
+            ],
+            "prompt": "\\frac{1}{cos^{2}(x)}-\\frac{1}{cot^{2}(x)}"
           },
           {
             "number": 14,
@@ -6562,7 +7133,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "\\frac{(tan(x)-sin(x))(1+cos(x))}{sin^{3}(x)}=\\frac{(\\frac{sin(x)}{cos(x)}-sin(x))(1+cos(x))}{sin^{3}(x)}=\\frac{sin(x)(\\frac{1-cos(x)}{cos(x)})(1+cos(x))}{sin^{3}(x)}=\\frac{(\\frac{1..."
               }
-            ]
+            ],
+            "prompt": "\\frac{(tan(x)-sin(x))(1+cos(x))}{sin^{3}(x)}"
           },
           {
             "number": 15,
@@ -6581,7 +7153,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Prove that for any two real numbers a and b,"
           },
           {
             "number": 16,
@@ -6600,7 +7173,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Proof: Let a and b be any real numbers. Then, sin^{2}(a)-sin^{2}(b)+cos^{2}(a)sin^{2}(b)-sin^{2}(a)cos^{2}(b)=sin^{2} (a)(1-cos^{2}(b))-sin^{2}(b)(1-cos^{2}(a))=sin^{2}(a)sin^{2}(b..."
               }
-            ]
+            ],
+            "prompt": "sin^{2}(a)-sin^{2}(b)+cos^{2}(a)sin^{2}(b)-sin^{2}(a)cos^{2}(b)=0."
           },
           {
             "number": 17,
@@ -6619,7 +7193,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Prove that the following statements are identities for all values of \\theta for which both sides are defined, and describe that set."
           },
           {
             "number": 18,
@@ -6638,7 +7213,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Proof: Let \\theta be a real number so that \\theta \\ne \\frac{\\pi }{2}k, for all integers k. Then, cot(\\theta )sec(\\theta )=\\frac{cos(\\theta )}{sin(\\theta )}∙\\frac{1}{cos(\\theta )}=\\..."
               }
-            ]
+            ],
+            "prompt": "cot(\\theta )sec(\\theta )=csc(\\theta )"
           },
           {
             "number": 19,
@@ -6657,7 +7233,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Proof: Let \\theta be a real number so that \\theta \\ne \\frac{\\pi }{2}k, for all integers k. Then, (csc(\\theta )+cot(\\theta ))(1-cos(\\theta ))=\\frac{1+cos(\\theta )}{sin(\\theta )}(1-c..."
               }
-            ]
+            ],
+            "prompt": "(csc(\\theta )+cot(\\theta ))(1-cos(\\theta ))=sin(\\theta )"
           },
           {
             "number": 20,
@@ -6676,7 +7253,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Proof: Let \\theta be a real number so that \\theta \\ne \\frac{\\pi }{2}k, for all integers k. Then, tan^{2}(\\theta )-sin^{2}(\\theta )=\\frac{sin^{2}(\\theta )}{cos^{2}(\\theta )}-sin^{2}..."
               }
-            ]
+            ],
+            "prompt": "tan^{2}(\\theta )-sin^{2}(\\theta )=tan^{2}(\\theta )sin^{2}(\\theta )"
           },
           {
             "number": 21,
@@ -6695,7 +7273,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Proof: Let x be a real number so that x\\ne \\frac{\\pi }{2}k, for all integers k. Then, \\frac{4+tan^{2}(x)-sec^{2}(x)}{csc^{2}(x)}= \\frac{4+\\frac{sin^{2}(x)}{cos^{2}(x)}-\\frac{1}{cos..."
               }
-            ]
+            ],
+            "prompt": "\\frac{4+tan^{2}(x)-sec^{2}(x)}{csc^{2}(x)}=3sin^{2}(x)"
           },
           {
             "number": 22,
@@ -6714,7 +7293,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Proof: Let \\theta be a real number so that \\theta \\ne -\\frac{\\pi }{2}+2k\\pi , for all integers k. Then, \\frac{(1+sin(\\theta ))^{2}+ cos^{2}(\\theta )}{1+sin(\\theta )}=\\frac{1+2 sin(..."
               }
-            ]
+            ],
+            "prompt": "\\frac{(1+sin(\\theta ))^{2}+ cos^{2}(\\theta )}{1+sin(\\theta )}=2"
           },
           {
             "number": 23,
@@ -6733,7 +7313,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Prove that the value of the following expression does not depend on the value of y:"
           },
           {
             "number": 24,
@@ -6752,7 +7333,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "If y\\ne \\frac{\\pi }{2}+k\\pi for all integers k, then cot(y)\\frac{tan(x)+tan(y)}{cot(x)+cot(y)}=\\frac{cos(y)}{sin(y)}∙\\frac{\\frac{sin(x)}{cos(x)}+\\frac{sin(y)}{cos(y)}}{\\frac{cos(x)..."
               }
-            ]
+            ],
+            "prompt": "cot(y)\\frac{tan(x)+tan(y)}{cot(x)+cot(y)}."
           }
         ]
       },
@@ -6784,7 +7366,26 @@
           "correct": 0,
           "explanation": "Mathematical rigor requires that each simplification or transformation is justified by established axioms, field properties, or verified theorems."
         }
-      ]
+      ],
+      "meta": {
+        "title": "Proving Trigonometric Identities",
+        "pageTitle": "Proving Trigonometric Identities | 11th Grade Algebra II | Hesten's Learning",
+        "description": "EngageNY Algebra II lesson on Proving Trigonometric Identities with step-by-step proofs, exercises, and problem sets.",
+        "pageDescription": "Master Proving Trigonometric Identities in 11th Grade Algebra II with embedded practice problem sets and teacher solution keys.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson M.M2.B.6",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Proving Trigonometric Identities",
+        "pill": "Understanding Trigonometric Functions and Putting Them to Use • Algebra II",
+        "text": "In this lesson, explore the essential concepts of Proving Trigonometric Identities. Work through the official curriculum practice exercises below, track your personal study notes, and verify your comprehension using the step-by-step solution keys.",
+        "outcomes": [
+          "Students prove simple identities involving the sine function, cosine function, and secant function.",
+          "Students recognize features of proofs of identities."
+        ],
+        "teacherInsight": "Students find that in some circumstances, they can start with a false statement and logically arrive at a true statement; so, students should avoid beginning a proof with the statement to be proven. Instead, they should work on transforming one side of the equation into the other using only results that are known to be true. In this lesson, students prove several simple identities."
+      }
     },
     "m-math-m2-b-7": {
       "id": "m-math-m2-b-7",
@@ -6855,7 +7456,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "Prove the formula"
           },
           {
             "number": 2,
@@ -6874,7 +7476,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Refer to teacher worked solutions and analytical rubric."
               }
-            ]
+            ],
+            "prompt": "cos(α+β)=cos(α)cos(β)-sin(α)sin(β) for 0<α+β<\\frac{\\pi }{2}"
           },
           {
             "number": 3,
@@ -6893,7 +7496,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Proof: Let α and β be real numbers so that 0<α+β<\\frac{\\pi }{2}. Then PM=cos(α)cos(β), RN=sin(α)sin(β), and RO=cos(α+β). Because RO=PM-RN, it follows that cos(α+β)=cos(α)cos(β)-sin..."
               }
-            ]
+            ],
+            "prompt": "using the rectangle MNOP in the figure on the right and calculating PM, RN, and RO in terms of α and β."
           },
           {
             "number": 4,
@@ -6912,7 +7516,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Proof: Let u be any real number so that u\\ne \\frac{\\pi }{4}+\\frac{k\\pi }{2}, and u\\ne \\frac{\\pi }{2}+k\\pi , for all integers k. In the formula tan(α+β)=\\frac{tan(α)+tan(β)}{1-tan(α..."
               }
-            ]
+            ],
+            "prompt": "Derive a formula for tan(2u) for u\\ne \\frac{\\pi }{4}+\\frac{k\\pi }{2} and u\\ne \\frac{\\pi }{2}+k\\pi , for all integers k."
           },
           {
             "number": 5,
@@ -6931,7 +7536,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Proof: Let u be any real number. From Exercise 3 in class, we know that cos(2u)=cos^{2}(u)-sin^{2}(u) for any real number u. Using the Pythagorean identity, we know that sin^{2}(u)..."
               }
-            ]
+            ],
+            "prompt": "Prove that cos(2u)=2cos^{2}(u)-1 for any real number u."
           },
           {
             "number": 6,
@@ -6950,7 +7556,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "We use the formulas for the cosine of sums and differences: cos(\\frac{\\pi }{4}+\\theta )+cos(\\frac{\\pi }{4}-\\theta )=cos(\\frac{\\pi }{4})cos(\\theta )-sin(\\frac{\\pi }{4})sin(\\theta )+..."
               }
-            ]
+            ],
+            "prompt": "Write as a single term: cos(\\frac{\\pi }{4}+\\theta )+cos(\\frac{\\pi }{4}-\\theta )."
           },
           {
             "number": 7,
@@ -6969,7 +7576,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Begin with the formula sin(α-β)=sin(α)cos(β)-cos(α)sin(β), and let α=25^\\circ and β=10^\\circ . sin(25^\\circ )cos(10^\\circ )-cos(25^\\circ )sin(10^\\circ )=sin(25^\\circ -10^\\circ )=si..."
               }
-            ]
+            ],
+            "prompt": "Write as a single term: sin(25^\\circ )cos(10^\\circ )-cos(25^\\circ )sin(10^\\circ )."
           },
           {
             "number": 8,
@@ -6988,7 +7596,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Begin with the formula cos(α-β)=cos(α)cos(β)+sin(α)sin(β), and let α=2x and β=x. cos(2x)cos(x)+sin(2x)sin(x)=cos(2x-x)=cos(x)"
               }
-            ]
+            ],
+            "prompt": "Write as a single term: cos(2x)cos(x)+sin(2x)sin(x)."
           },
           {
             "number": 9,
@@ -7007,7 +7616,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Begin with the formulas for the sine of the sum and difference: \\frac{sin(α+β)+sin(α-β)}{cos(α)cos(β)}=\\frac{sin(α)cos(β)+cos(α)sin(β)+sin(α)cos(β)-cos(α)sin(β)}{cos(α)cos(β)}=\\fra..."
               }
-            ]
+            ],
+            "prompt": "Write as a single term: \\frac{sin(α+β)+sin(α-β)}{cos(α)cos(β)}, where cos(α)\\ne 0 and cos(β)\\ne 0."
           },
           {
             "number": 10,
@@ -7026,7 +7636,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Proof: Let \\theta be any real number. Then, from the formula for the cosine of a sum, cos(\\frac{3\\pi }{2}+\\theta )=cos(\\frac{3\\pi }{2})cos(\\theta )-sin(\\frac{3\\pi }{2})∙sin(\\theta ..."
               }
-            ]
+            ],
+            "prompt": "Prove that cos(\\frac{3\\pi }{2}+\\theta )=sin(\\theta ) for all values of \\theta ."
           },
           {
             "number": 11,
@@ -7045,7 +7656,8 @@
                 "action": "Apply Algebraic Methods",
                 "result": "Proof: Let \\theta be any real number. Then, from the formula for the cosine of a difference, cos(\\pi -\\theta )=cos(\\pi )cos(\\theta )+sin(\\pi )sin(\\theta )=-cos(\\theta ). Therefore,..."
               }
-            ]
+            ],
+            "prompt": "Prove that cos(\\pi -\\theta )=-cos(\\theta ) for all values of \\theta ."
           }
         ]
       },
@@ -7077,7 +7689,26 @@
           "correct": 0,
           "explanation": "Mathematical rigor requires that each simplification or transformation is justified by established axioms, field properties, or verified theorems."
         }
-      ]
+      ],
+      "meta": {
+        "title": "Trigonometric Identity Proofs",
+        "pageTitle": "Trigonometric Identity Proofs | 11th Grade Algebra II | Hesten's Learning",
+        "description": "EngageNY Algebra II lesson on Trigonometric Identity Proofs with step-by-step proofs, exercises, and problem sets.",
+        "pageDescription": "Master Trigonometric Identity Proofs in 11th Grade Algebra II with embedded practice problem sets and teacher solution keys.",
+        "author": "Hesten's Learning Team",
+        "badge": "Math Lesson M.M2.B.7",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Trigonometric Identity Proofs",
+        "pill": "Understanding Trigonometric Functions and Putting Them to Use • Algebra II",
+        "text": "In this lesson, explore the essential concepts of Trigonometric Identity Proofs. Work through the official curriculum practice exercises below, track your personal study notes, and verify your comprehension using the step-by-step solution keys.",
+        "outcomes": [
+          "Students see derivations and proofs of the addition and subtraction formulas for sine and cosine.",
+          "Students prove some simple trigonometric identities."
+        ],
+        "teacherInsight": "Scaffolding: Students should have access to calculators.The teacher may want to model a few calculations at the beginning.Pairs of students who fill in the table quickly should be encouraged to help those who might be struggling.Once a few students have filled in the table, one or two might be encouraged to share their entries with the class because when all students have the entries, they are in a better position to discover the rule.Scaffolding: Students should have access to calculators.The teacher may want to model a few calculations at the beginning.Pairs of students who fill in the table quickly should be encouraged to help those who might be struggling.Once a few students have filled in the table, one or two might be encouraged to share their entries with the class because when all students have the entries, they are in a better position to discover the rule.The lesson starts with students looking for patterns in a table to make conjectures about the formulas for sin(α+ β) and cos(α+β). From these formulas, students can quickly deduce the formulas for sin(α-β) and cos(α-β). The teacher gives proofs of important formulas, and then students prove some simple trigonometric identities. The lesson highlights MP.3 and MP.8, as students look for patterns in repeated calculations and construct arguments about the patterns they find."
+      }
     }
   }
 }
