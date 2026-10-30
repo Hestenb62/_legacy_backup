@@ -93,8 +93,8 @@ if (!function_exists('hydrateLevelModules')) {
         $baseDir = defined('ABSPATH') ? ABSPATH : (dirname(__DIR__) . '/');
         $dataDir = rtrim($baseDir, '/\\') . '/assets/data/';
 
-        // Check for dedicated EngageNY Math curriculum outline for Grade 9 (Level K) and Grade 10 (Level L)
-        if ($subject === 'math' && in_array(strtolower($levelId), ['k', 'l'])) {
+        // Check for dedicated EngageNY Math curriculum outline for Grade 9 (Level K), Grade 10 (Level L), Grade 11 (Level M), and Grade 12 (Level N)
+        if ($subject === 'math' && in_array(strtolower($levelId), ['k', 'l', 'm', 'n'])) {
             $engPath = $dataDir . 'curriculum-engageny-math.json';
             if (file_exists($engPath)) {
                 $raw = json_decode(file_get_contents($engPath), true);

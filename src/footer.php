@@ -96,9 +96,9 @@
 
         <!-- Version Status & Release Info Strip (WCAG Operable) -->
         <?php
-        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.27.0';
-        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'October 2026 Grade 10 Geometry Complete 117-Lesson Buildout Release';
-        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Complete EngageNY Grade 10 Geometry Buildout: 117 Lessons Across Modules 1–5 with Proofs, Embedded Worksheets, Exit Tickets & Master Codex Unification';
+        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.29.0';
+        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'October 2026 Grade 12 Precalculus Complete 111-Lesson Buildout Release';
+        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Complete EngageNY Grade 12 Precalculus Buildout: 111 Lessons Across Modules 1–5 with Complex Transformations, Matrices, Vectors, Trigonometry, and Probability Worksheets';
         ?>
         <div class="footer-version-strip" role="region" aria-label="Platform Version Information">
             <div class="footer-version-info">
@@ -271,9 +271,38 @@
                 </span>
             </div>
             <p class="footer-vmodal-lead">
-                Version <?= htmlspecialchars($siteVersion) ?> introduces the <strong>Complete Grade 10 Geometry 117-Lesson Curriculum Buildout</strong> across Modules 1–5, featuring Euclidean proofs, compass-and-straightedge constructions, coordinate analytic geometry, 3D volume scaling, circle theorems, embedded worksheets, and verbatim Exit Ticket solution keys.
+                Version <?= htmlspecialchars($siteVersion) ?> introduces the <strong>Complete Grade 12 Precalculus 111-Lesson Curriculum Buildout</strong> across Modules 1–5, featuring complex number transformations, vectors, matrix algebra, 3D computer graphics projection matrices, rational and inverse functions, trigonometry, and probability decision analysis with streamlined worksheet integration.
             </p>
             <ul class="footer-vmodal-features">
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(236, 72, 153, 0.15); color: #db2777;">
+                        <i class="fas fa-infinity"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Grade 12 Precalculus Complete 111-Lesson Buildout (v2.29.0):</strong> Capstone conversion of authentic EngageNY / Eureka Math materials into modular JSON datasets:
+                        <ul style="margin: 0.35rem 0 0 1rem; padding: 0; font-size: 0.85rem; color: var(--color-text-secondary, #475569); line-height: 1.5;">
+                            <li><strong>All 5 Modules Built Out:</strong> Module 1 (Complex Numbers &amp; Transformations, 30 lessons), Module 2 (Vectors &amp; Matrices, 27 lessons), Module 3 (Rational &amp; Exponential Functions, 21 lessons), Module 4 (Trigonometry &amp; Law of Sines/Cosines, 14 lessons), and Module 5 (Probability Distributions &amp; Decision Analysis, 19 lessons).</li>
+                            <li><strong>Streamlined Worksheet-First UI:</strong> Removed research links and external distractions to deliver pure, focused problem set worksheets with digital scratchpads, print controls, and teacher solution keys.</li>
+                            <li><strong>Vector &amp; Matrix Geometry:</strong> Dot products, 2D/3D coordinate transformations, matrix inverses ($Ax = b$), and 3D computer game projection matrices formatted with MathJax SVG.</li>
+                            <li><strong>Complete Registries &amp; Help Guides:</strong> 111 lessons synchronized into <code>assets/data/lessons.json</code>, <code>curriculum-engageny-math.json</code>, Level N outline hydration, and advanced terms added to <code>assets/data/math-vocab.json</code>.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(245, 158, 11, 0.15); color: #d97706;">
+                        <i class="fas fa-square-root-variable"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Grade 11 Algebra II Complete 120-Lesson Buildout (v2.28.0):</strong> Comprehensive conversion of authentic EngageNY / Eureka Math materials into modular JSON datasets:
+                        <ul style="margin: 0.35rem 0 0 1rem; padding: 0; font-size: 0.85rem; color: var(--color-text-secondary, #475569); line-height: 1.5;">
+                            <li><strong>All 4 Modules Built Out:</strong> Module 1 (Polynomial, Rational &amp; Radical Relationships, 40 lessons), Module 2 (Trigonometric Functions &amp; Radians, 17 lessons), Module 3 (Exponential &amp; Logarithmic Functions &amp; Financial Literacy, 33 lessons), and Module 4 (Inferences &amp; Conclusions from Data &amp; Normal Distributions, 30 lessons).</li>
+                            <li><strong>High-Performance JSON Datasets:</strong> Compiled into <code>assets/data/lessons/m-math-m1.json</code> through <code>m-math-m4.json</code> (3.48 MB total) with instantaneous single-lesson routing in <code>levels/m.php</code> and <code>src/lesson_renderer.php</code>.</li>
+                            <li><strong>Interactive Worked Examples &amp; Proofs:</strong> Complex polynomial divisions, trigonometric identities ($\sin^2\theta + \cos^2\theta = 1$), logarithmic equation derivations, and normal curve z-score models formatted with MathJax SVG.</li>
+                            <li><strong>Embedded Problem Sets &amp; Teacher Solution Keys:</strong> Over 1,500 authentic problem set practice questions with step-by-step teacher solutions and 1-click browser printing via <code>printProblemSet()</code>.</li>
+                            <li><strong>Unified Platform Registries &amp; Codex:</strong> All 120 lessons registered into <code>assets/data/lessons.json</code>, <code>curriculum-engageny-math.json</code>, and advanced Algebra II concepts compiled into <code>assets/data/math-vocab.json</code>.</li>
+                        </ul>
+                    </div>
+                </li>
                 <li class="footer-vmodal-feature-item">
                     <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(234, 88, 12, 0.15); color: #ea580c;">
                         <i class="fas fa-shapes"></i>

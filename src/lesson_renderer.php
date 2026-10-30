@@ -151,6 +151,8 @@ if (!empty($lesson['requiresMathJax']) || !empty($meta['requiresMathJax']) || $r
     $requiresMathJax = true;
 }
 
+$isMathWithWorksheet = ($rawSubj === 'math' && !empty($lesson['problemSet']['problems']));
+
 include ABSPATH . 'src/header.php';
 ?>
 
@@ -194,13 +196,6 @@ include_once ABSPATH . 'src/partials/sticky-reading-bar.php';
                     <h4 class="lesson-insights-title">Teacher Insight</h4>
                     <p class="lesson-insights-text"><?php echo htmlspecialchars($lesson['overview']['teacherInsight'] ?? ''); ?></p>
                 </div>
-            </div>
-            <div class="lesson-pedagogy-badge-row">
-                <a href="/research/index.php" class="lesson-pedagogy-link" title="Explore peer-reviewed learning science &amp; cognitive research underlying this instructional sequence">
-                    <i class="fas fa-microscope" aria-hidden="true"></i>
-                    <span>Evidence-Based Pedagogy &bull; Learning Disability Research Links</span>
-                    <i class="fas fa-arrow-right" aria-hidden="true" style="font-size: 0.75rem; margin-left: 0.25rem;"></i>
-                </a>
             </div>
         </section>
 
@@ -363,7 +358,7 @@ include_once ABSPATH . 'src/partials/sticky-reading-bar.php';
         <?php endforeach; ?>
 
         <!-- Guided Exercises & Step-by-Step Worked Solutions (Eureka Math / EngageNY) -->
-        <?php if (!empty($lesson['guidedExercises']) && is_array($lesson['guidedExercises'])): ?>
+        <?php if (!$isMathWithWorksheet && !empty($lesson['guidedExercises']) && is_array($lesson['guidedExercises'])): ?>
         <section class="lesson-guided-section" aria-labelledby="guided-exercises-heading">
             <div class="lesson-guided-header">
                 <div>
@@ -467,7 +462,7 @@ include_once ABSPATH . 'src/partials/sticky-reading-bar.php';
         <?php endif; ?>
 
         <!-- Vocabulary -->
-        <?php if (!empty($lesson['vocabulary'])): ?>
+        <?php if (!$isMathWithWorksheet && !empty($lesson['vocabulary'])): ?>
         <section class="lesson-vocab-section lesson-vocab-section-full">
             <div class="lesson-vocab-panel">
                 <div>
@@ -608,7 +603,7 @@ include_once ABSPATH . 'src/partials/sticky-reading-bar.php';
         }
         ?>
 
-        <?php if (!empty($lesson['exitTicket']) && is_array($lesson['exitTicket'])): ?>
+        <?php if (!$isMathWithWorksheet && !empty($lesson['exitTicket']) && is_array($lesson['exitTicket'])): ?>
         <!-- Official Exit Ticket & Solutions Key (Eureka Math / EngageNY) -->
         <section class="lesson-exit-ticket-section" aria-labelledby="exit-ticket-heading" style="margin-top: 2.5rem; margin-bottom: 1.5rem;">
             <details class="lesson-solution-accordion" ontoggle="if(this.open && typeof window.ensureMathJax==='function') window.ensureMathJax(this);" style="background: var(--color-surface); border: 1.5px solid color-mix(in srgb, var(--color-primary, #e11d48) 25%, transparent); border-radius: 1.25rem; overflow: hidden; box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);">
@@ -643,6 +638,7 @@ include_once ABSPATH . 'src/partials/sticky-reading-bar.php';
         </section>
         <?php endif; ?>
 
+        <?php if (!$isMathWithWorksheet): ?>
         <!-- Interactive Check Understanding Trigger Card -->
         <section class="lesson-check-understanding-card" style="margin-top: 2.5rem; margin-bottom: 2rem; padding: 1.75rem 2rem; background: color-mix(in srgb, var(--color-primary, #e11d48) 5%, var(--color-surface)); border: 1px solid color-mix(in srgb, var(--color-primary, #e11d48) 20%, transparent); border-radius: 1.25rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1.5rem;">
             <div style="max-width: 600px;">
@@ -661,6 +657,7 @@ include_once ABSPATH . 'src/partials/sticky-reading-bar.php';
                 <span>Check Understanding</span>
             </button>
         </section>
+        <?php endif; ?>
 
         <?php if (!empty($lesson['citation'])): ?>
             <!-- Source Citation & Metadata Footer -->
