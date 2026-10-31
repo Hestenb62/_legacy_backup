@@ -1,0 +1,54 @@
+{
+  "slug": "oedipus-the-king",
+  "type": "reading",
+  "title": "Oedipus the King (Excerpts & Key Episodes)",
+  "author": "Sophocles",
+  "source": "First performed c. 429 BCE, Athens. Translated for educational study.",
+  "gradeLevel": "Grade 9 ELA (Level K)",
+  "moduleInfo": "Module 2, Unit 2 Anchor Text",
+  "backLessonUrl": "/levels/k.php?k-ela-m2-b-1",
+  "citation": "Sophocles. Oedipus the King. Translated by Stephen Berg and Diskin Clay, Oxford University Press, 1988.",
+  "sections": [
+    {
+      "heading": "Prologue & Supplication (Lines 1–168)",
+      "paragraphs": [
+        "OEDIPUS: Children, new blood of Cadmus' ancient line, what means this crowd that sits before my altars with olive branches wrapped in wool? The city is filled with cries of grief and hymns to Apollo, along with groans of pain. I would not learn of this from messengers, my children, but have come in person—I, Oedipus, whose name is known to all.",
+        "PRIEST: Oedipus, king of our country, you see how old and young sit by your altars. The city is drowning in blood, unable to lift its head from the murderous surge. A blight has fallen on our harvest, on our herds, and on the unborn children in their mothers' wombs. A fiery plague stalks our land and empties Cadmus' house, while black Hades grows rich with our tears and groans.",
+        "OEDIPUS: Poor children! I know too well the sickness that you suffer from. Sick though you are, not one of you is sick as I. Your sorrow touches only each man himself, but my soul mourns for the city, for myself, and for you all. I have wept many tears and searched through many paths of thought. The single remedy I found, I have already used: I sent Creon, son of Menoeceus, my own queen’s brother, to Pythian Apollo’s shrine to learn what act or word of mine might save this city."
+      ]
+    },
+    {
+      "heading": "First Episode: The Curse & Tiresias (Lines 245–462)",
+      "paragraphs": [
+        "OEDIPUS: Hear my decree, citizens of Thebes! Whoever knows the man that murdered Laius, son of Labdacus, I command him to tell me everything. If he fears to speak because he condemns himself, let him depart this land unharmed—no further punishment will touch him. But if anyone knows the murderer is from another land, let him not remain silent. I shall reward him and give him my thanks. But if you keep silent through fear, hear what I pronounce: no citizen of Thebes shall shelter him, speak to him, or join with him in sacrifice or prayer. I curse the murderer—whether he did the crime alone or with accomplices—may he drag out an agony of life in utter destitution!",
+        "TIRESIAS: Alas, how terrible is wisdom when it brings no profit to the wise! I knew this well, but forgot it, or else I would never have come here.",
+        "OEDIPUS: What is it? How gloomy you have entered!",
+        "TIRESIAS: Let me go home. You will bear your burden more easily, and I mine, if you obey me.",
+        "OEDIPUS: You speak neither justly nor kindly to the city that nourished you, if you deny us this prophecy.",
+        "TIRESIAS: You reproach my anger, but do not see the temper that lives inside your own heart. I tell you: the murderer of the man whose death you seek to avenge—that man is here. He seems an immigrant, but shall be shown a native Theban. Blind though he now has eyes, a beggar who was once rich, he shall tap his way toward a foreign land with a staff. And he shall be proved father and brother both to his own children, son and husband both to the woman who bore him!"
+      ]
+    },
+    {
+      "heading": "Second Episode: Jocasta & The Crossroads (Lines 774–862)",
+      "paragraphs": [
+        "JOCASTA: Free yourself from these dreadful thoughts, my king! Listen to me and learn that no mortal man shares in the art of divination. An oracle once came to Laius that his fate was to die at the hands of his own son, born of me. Yet Laius was killed by foreign bandits at a place where three roads meet! And as for our son, before three days had passed from his birth, Laius bound his ankles together and had him cast away on a barren mountain. So Apollo did not fulfill that prophecy! Why then should you torment yourself?",
+        "OEDIPUS: Woman, how my heart shivers, how my soul is shaken by what you have said! Where was this crossroads where Laius was murdered?",
+        "JOCASTA: The place is called Phocis, where the roads from Delphi and Daulia divide and meet.",
+        "OEDIPUS: And how long ago did this happen?",
+        "JOCASTA: Just before you appeared and took the government of this city, the news was published in Thebes.",
+        "OEDIPUS: O Zeus, what have you planned to do with me? I had a father named Polybus of Corinth, and my mother was Merope. Once at a banquet, a drunken man called me a bastard. I went to Delphi in secret, and Apollo revealed no answer to my question, but prophesied that I was fated to couple with my mother and slay the father who begot me! Hearing this, I fled Corinth to avoid that horrible fate. And as I journeyed near that very triple road, a herald and a chariot drove me from the path. In fury I struck the driver, and the old man struck me with his goad—and I killed him, and killed them all! What if that stranger was Laius? Who could be more miserable, who more hated by the gods than Oedipus?"
+      ]
+    },
+    {
+      "heading": "Exodus & The Catastrophe (Lines 1180–1222)",
+      "paragraphs": [
+        "HERDSMAN: Master, have mercy! Do not ask me more!",
+        "OEDIPUS: If I must speak twice, you will die! Was the child from Laius' own house?",
+        "HERDSMAN: O God! I am on the razor's edge of speaking the horror!",
+        "OEDIPUS: And I of hearing it! Yet hear it I must!",
+        "HERDSMAN: It was Laius' own son. Your wife inside the palace can best tell you why she gave the child to me to destroy—because of dreadful prophecies that he would kill his parents!",
+        "OEDIPUS: Ah! All brought to light! All true! O light, let me look upon you now for the last time! Born from those who should not have birthed me, married to her I should not have wed, slayer of him whom it was forbidden to kill!"
+      ]
+    }
+  ]
+}

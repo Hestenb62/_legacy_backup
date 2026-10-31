@@ -288,11 +288,11 @@ if (!function_exists('getGradeCustomResources')) {
                         'color' => '#0891b2'
                     ],
                     [
-                        'title' => 'Math Vocabulary Explorer',
-                        'badge' => 'Glossary & Cards',
-                        'desc' => 'Interactive flashcards for multiplication terms, divisors, and fraction parts.',
-                        'url' => '/pages/math-vocab.php',
-                        'icon' => 'fa-spell-check',
+                        'title' => 'Interactive Practice Notebook',
+                        'badge' => 'Math & Notes',
+                        'desc' => 'Dedicated digital workspace with graph paper, drawing tools, and scratchpads.',
+                        'url' => '/pages/practice-notebook.php',
+                        'icon' => 'fa-book-open',
                         'color' => '#f59e0b'
                     ],
                     [
@@ -408,11 +408,11 @@ if (!function_exists('getGradeCustomResources')) {
                         'color' => '#059669'
                     ],
                     [
-                        'title' => 'Math Vocabulary Explorer',
-                        'badge' => 'Decimals & Volume',
-                        'desc' => 'Master terms for decimal place values, powers of 10, and coordinate axes.',
-                        'url' => '/pages/math-vocab.php',
-                        'icon' => 'fa-book',
+                        'title' => 'Interactive Practice Notebook',
+                        'badge' => 'Study Journal',
+                        'desc' => 'Organize decimal calculations, graph coordinates, and export problem notes.',
+                        'url' => '/pages/practice-notebook.php',
+                        'icon' => 'fa-pen-to-square',
                         'color' => '#2563eb'
                     ],
                     [
@@ -476,11 +476,11 @@ if (!function_exists('getGradeCustomResources')) {
                         'color' => '#f59e0b'
                     ],
                     [
-                        'title' => 'Math Vocabulary Explorer',
-                        'badge' => 'Pre-Algebra Terms',
-                        'desc' => 'Ratios, unit rates, negative integers, absolute value, and statistical measures of center.',
-                        'url' => '/pages/math-vocab.php',
-                        'icon' => 'fa-spell-check',
+                        'title' => 'Interactive Practice Notebook',
+                        'badge' => 'Calculation Studio',
+                        'desc' => 'Digital workspace for calculating unit rates, tape diagrams, and integer operations.',
+                        'url' => '/pages/practice-notebook.php',
+                        'icon' => 'fa-pen-to-square',
                         'color' => '#2563eb'
                     ]
                 ],
@@ -588,10 +588,10 @@ if (!function_exists('getGradeCustomResources')) {
                         'color' => '#c026d3'
                     ],
                     [
-                        'title' => 'Math Vocabulary Explorer',
-                        'badge' => 'Slope & Scientific Notation',
-                        'desc' => 'Terms for rational/irrational numbers, exponent rules, and bivariate data scatter plots.',
-                        'url' => '/pages/math-vocab.php',
+                        'title' => 'Interactive Practice Notebook',
+                        'badge' => 'Linear Algebra Workspace',
+                        'desc' => 'Sketch linear systems, graph slope-intercept equations, and calculate exponent rules.',
+                        'url' => '/pages/practice-notebook.php',
                         'icon' => 'fa-square-root-alt',
                         'color' => '#2563eb'
                     ],
@@ -648,10 +648,10 @@ if (!function_exists('getGradeCustomResources')) {
                         'color' => '#e11d48'
                     ],
                     [
-                        'title' => 'Math Vocabulary & Formulas',
-                        'badge' => 'Algebraic Structures',
-                        'desc' => 'Formal glossary of polynomials, domain/range, and quadratic discriminants.',
-                        'url' => '/pages/math-vocab.php',
+                        'title' => 'Interactive Practice Notebook',
+                        'badge' => 'Algebraic Scratchpad',
+                        'desc' => 'Step-by-step digital working space for polynomials, factoring, and quadratic graphing.',
+                        'url' => '/pages/practice-notebook.php',
                         'icon' => 'fa-calculator',
                         'color' => '#2563eb'
                     ],
@@ -776,10 +776,10 @@ if (!function_exists('getGradeCustomResources')) {
                         'color' => '#2563eb'
                     ],
                     [
-                        'title' => 'Math Vocabulary & Identities',
-                        'badge' => 'Pre-Calculus',
-                        'desc' => 'Logarithmic properties, trigonometric identities, and polynomial asymptotic behaviors.',
-                        'url' => '/pages/math-vocab.php',
+                        'title' => 'Interactive Practice Notebook',
+                        'badge' => 'Advanced Analysis',
+                        'desc' => 'Derive trigonometric identities, compute logarithms, and sketch polynomial behaviors.',
+                        'url' => '/pages/practice-notebook.php',
                         'icon' => 'fa-book-open',
                         'color' => '#16a34a'
                     ]

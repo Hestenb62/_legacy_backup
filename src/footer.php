@@ -96,9 +96,9 @@
 
         <!-- Version Status & Release Info Strip (WCAG Operable) -->
         <?php
-        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.34.0';
-        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'October 2026 Complete P-12 Mathematics Curriculum Milestone Release';
-        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Universal P-12 Mathematics Buildout: 1,772 Lessons Across 76 Modules (Levels A through N) with Streamlined Problem Set Worksheets and Digital Scratchpads';
+        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.36.0';
+        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'October 2026 Grade 9 ELA Module 2 Release';
+        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Grade 9 ELA Module 2 Buildout: 46 Lessons Across Units 1–3 with Standalone Library Reading Pages for Poe, Dickinson, Sophocles, and Mosley, Close-Reading Worksheets, and Digital Scratchpads';
         ?>
         <div class="footer-version-strip" role="region" aria-label="Platform Version Information">
             <div class="footer-version-info">
@@ -271,9 +271,37 @@
                 </span>
             </div>
             <p class="footer-vmodal-lead">
-                Version <?= htmlspecialchars($siteVersion) ?> achieves a historic milestone: the <strong>Complete P-12 Mathematics Curriculum Buildout</strong> delivering 1,772 authentic lessons across 76 modules spanning Pre-Kindergarten (Level A) through Grade 12 Precalculus (Level N), all featuring streamlined worksheet-first problem sets, digital auto-saving scratchpads, and 1-click printing.
+                Version <?= htmlspecialchars($siteVersion) ?> expands Grade 9 ELA with <strong>Module 2: Understanding Perspectives and Writing to Convince</strong>, adding 46 close-reading lessons across Units 1–3, with dedicated standalone library reading pages for Edgar Allan Poe (*The Tell-Tale Heart*), Emily Dickinson (*I felt a Funeral, in my Brain*), Sophocles (*Oedipus the King*), and Walter Mosley (*True Crime*), accompanied by interactive text-dependent worksheets and digital scratchpads.
             </p>
             <ul class="footer-vmodal-features">
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(168, 85, 247, 0.15); color: #9333ea;">
+                        <i class="fas fa-feather-pointed"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Grade 9 ELA Module 2: Understanding Perspectives (v2.36.0):</strong> Comprehensive conversion of authentic EngageNY ELA materials into modular JSON datasets with full literature integration:
+                        <ul style="margin: 0.35rem 0 0 1rem; padding: 0; font-size: 0.85rem; color: var(--color-text-secondary, #475569); line-height: 1.5;">
+                            <li><strong>All 3 Units Built Out (46 Lessons):</strong> Unit 1 (<em>The Tell-Tale Heart</em> &amp; <em>I felt a Funeral, in my Brain</em>, 13 lessons), Unit 2 (<em>Oedipus the King</em>, 20 lessons), and Unit 3 (<em>True Crime: The Roots of an American Obsession</em>, 13 lessons).</li>
+                            <li><strong>Dedicated Library Reading Pages:</strong> Standalone literature pages in <code>/library/?page=&lt;slug&gt;</code> with paragraph anchor IDs, read-aloud speech synthesis, font scaling, and OpenDyslexic accessibility—free from catalog book shelf clutter.</li>
+                            <li><strong>Streamlined Close-Reading Worksheets:</strong> Text-dependent analysis questions and synthesizing Quick Writes with auto-saving textareas (`localStorage`), expandable teacher keys, and 1-click printing.</li>
+                            <li><strong>Master Registries Synchronized:</strong> All 46 lessons registered in <code>curriculum-engageny-ela.json</code>, <code>lessons.json</code>, and Level K router in <code>levels/k.php</code>.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(236, 72, 153, 0.15); color: #db2777;">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Grade 9 ELA Module 1: Reading Closely &amp; Writing to Learn (v2.35.0):</strong> Comprehensive conversion of authentic EngageNY ELA materials into modular JSON datasets with full literature integration:
+                        <ul style="margin: 0.35rem 0 0 1rem; padding: 0; font-size: 0.85rem; color: var(--color-text-secondary, #475569); line-height: 1.5;">
+                            <li><strong>All 3 Units Built Out (48 Lessons):</strong> Unit 1 (<em>St. Lucy's Home for Girls Raised by Wolves</em>, 17 lessons), Unit 2 (<em>Letters to a Young Poet</em> &amp; <em>Black Swan Green</em>, 11 lessons), and Unit 3 (<em>The Tragedy of Romeo and Juliet</em>, 20 lessons).</li>
+                            <li><strong>Dedicated Library Reading Pages (Non-Book):</strong> Standalone literature pages in <code>/library/?page=&lt;slug&gt;</code> with paragraph anchor IDs, read-aloud speech synthesis, font scaling, and OpenDyslexic accessibility—free from catalog book shelf clutter.</li>
+                            <li><strong>Streamlined Close-Reading Worksheets:</strong> Text-dependent analysis questions and synthesizing Quick Writes with auto-saving textareas (`localStorage`), expandable teacher keys, and 1-click printing.</li>
+                            <li><strong>Master Registries Synchronized:</strong> All 48 lessons registered in <code>curriculum-engageny-ela.json</code>, <code>lessons.json</code>, and Level K router in <code>levels/k.php</code>.</li>
+                        </ul>
+                    </div>
+                </li>
                 <li class="footer-vmodal-feature-item">
                     <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(234, 88, 12, 0.15); color: #c2410c;">
                         <i class="fas fa-graduation-cap"></i>
@@ -810,14 +838,7 @@
                         <strong>Verbatim Exit Ticket Keys &amp; Check Understanding:</strong> Formative Exit Ticket prompts and worked teacher keys directly integrated into the interactive modal assessment runner.
                     </div>
                 </li>
-                <li class="footer-vmodal-feature-item">
-                    <div class="footer-vmodal-feature-icon" aria-hidden="true">
-                        <i class="fas fa-calculator"></i>
-                    </div>
-                    <div class="footer-vmodal-feature-text">
-                        <strong>Unified Mathematics Codex &amp; Interactive Sandbox:</strong> 195 mathematical terms, 3D active recall flashcards, and step-by-step formula solvers accessible on <code>/pages/math-vocab.php</code>.
-                    </div>
-                </li>
+
             </ul>
         </div>
         <div class="footer-vmodal-footer">

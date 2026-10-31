@@ -179,7 +179,8 @@ if (!empty($lesson['requiresMathJax']) || !empty($meta['requiresMathJax']) || $r
     $requiresMathJax = true;
 }
 
-$isMathWithWorksheet = ($rawSubj === 'math' && !empty($lesson['problemSet']['problems']));
+$isWorksheetDriven = !empty($lesson['problemSet']['problems']);
+$isMathWithWorksheet = ($rawSubj === 'math' && $isWorksheetDriven);
 
 include ABSPATH . 'src/header.php';
 ?>
@@ -226,6 +227,28 @@ include_once ABSPATH . 'src/partials/sticky-reading-bar.php';
                 </div>
             </div>
         </section>
+
+        <!-- Dedicated Literature & Anchor Reading Banner (Linked to Digital Library) -->
+        <?php if (!empty($lesson['reading']) || !empty($lesson['problemSet']['readingLink'])): 
+            $readingData = $lesson['reading'] ?? $lesson['problemSet']['readingLink'];
+            $rTitle = $readingData['title'] ?? ($readingData['text'] ?? 'Core Literature Reading');
+            $rAuthor = $readingData['author'] ?? '';
+            $rSection = $readingData['section'] ?? ($readingData['pages'] ?? '');
+            $rUrl = $readingData['url'] ?? '/library/';
+        ?>
+        <section class="lesson-reading-card" style="margin: 1.5rem 0; padding: 1.25rem 1.5rem; background: var(--color-bg-surface, #ffffff); border: 1px solid var(--color-border, #e2e8f0); border-left: 4px solid var(--color-teal, #0d9488); border-radius: 0.75rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;" aria-label="Core Anchor Reading">
+            <div>
+                <span style="font-size: 0.8rem; font-weight: 700; color: var(--color-teal, #0d9488); text-transform: uppercase; letter-spacing: 0.05em;"><i class="fas fa-bookmark" aria-hidden="true"></i> Core Literature / Anchor Reading</span>
+                <h3 style="margin: 0.25rem 0; font-size: 1.2rem; font-weight: 700; color: var(--color-text-default, #0f172a);"><?php echo htmlspecialchars($rTitle); ?><?php if (!empty($rAuthor)): ?> <span style="font-weight: 400; font-size: 0.95rem; color: var(--color-text-secondary, #64748b);">&bull; <?php echo htmlspecialchars($rAuthor); ?></span><?php endif; ?></h3>
+                <?php if (!empty($rSection)): ?>
+                    <p style="margin: 0; font-size: 0.875rem; color: var(--color-text-secondary, #64748b);"><?php echo htmlspecialchars($rSection); ?></p>
+                <?php endif; ?>
+            </div>
+            <a href="<?php echo htmlspecialchars($rUrl); ?>" target="_blank" rel="noopener noreferrer" class="lesson-btn-read-library" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.15rem; background: var(--color-teal, #0d9488); color: #ffffff; font-weight: 600; font-size: 0.9rem; border-radius: 0.5rem; text-decoration: none; transition: opacity 0.2s ease;">
+                <i class="fas fa-book-reader" aria-hidden="true"></i> Read Text in Library
+            </a>
+        </section>
+        <?php endif; ?>
 
         <!-- Official Curriculum Worksheet: Interactive Student Practice Notebook -->
         <?php if (!empty($lesson['problemSet']) && !empty($lesson['problemSet']['problems'])): ?>
@@ -389,7 +412,7 @@ include_once ABSPATH . 'src/partials/sticky-reading-bar.php';
         <?php endforeach; ?>
 
         <!-- Guided Exercises & Step-by-Step Worked Solutions (Eureka Math / EngageNY) -->
-        <?php if (!$isMathWithWorksheet && !empty($lesson['guidedExercises']) && is_array($lesson['guidedExercises'])): ?>
+        <?php if (!$isWorksheetDriven && !empty($lesson['guidedExercises']) && is_array($lesson['guidedExercises'])): ?>
         <section class="lesson-guided-section" aria-labelledby="guided-exercises-heading">
             <div class="lesson-guided-header">
                 <div>
@@ -493,7 +516,7 @@ include_once ABSPATH . 'src/partials/sticky-reading-bar.php';
         <?php endif; ?>
 
         <!-- Vocabulary -->
-        <?php if (!$isMathWithWorksheet && !empty($lesson['vocabulary'])): ?>
+        <?php if (!empty($lesson['vocabulary'])): ?>
         <section class="lesson-vocab-section lesson-vocab-section-full">
             <div class="lesson-vocab-panel">
                 <div>
@@ -634,7 +657,7 @@ include_once ABSPATH . 'src/partials/sticky-reading-bar.php';
         }
         ?>
 
-        <?php if (!$isMathWithWorksheet && !empty($lesson['exitTicket']) && is_array($lesson['exitTicket'])): ?>
+        <?php if (!$isWorksheetDriven && !empty($lesson['exitTicket']) && is_array($lesson['exitTicket'])): ?>
         <!-- Official Exit Ticket & Solutions Key (Eureka Math / EngageNY) -->
         <section class="lesson-exit-ticket-section" aria-labelledby="exit-ticket-heading" style="margin-top: 2.5rem; margin-bottom: 1.5rem;">
             <details class="lesson-solution-accordion" ontoggle="if(this.open && typeof window.ensureMathJax==='function') window.ensureMathJax(this);" style="background: var(--color-surface); border: 1.5px solid color-mix(in srgb, var(--color-primary, #e11d48) 25%, transparent); border-radius: 1.25rem; overflow: hidden; box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);">
@@ -669,7 +692,7 @@ include_once ABSPATH . 'src/partials/sticky-reading-bar.php';
         </section>
         <?php endif; ?>
 
-        <?php if (!$isMathWithWorksheet): ?>
+        <?php if (!$isWorksheetDriven): ?>
         <!-- Interactive Check Understanding Trigger Card -->
         <section class="lesson-check-understanding-card" style="margin-top: 2.5rem; margin-bottom: 2rem; padding: 1.75rem 2rem; background: color-mix(in srgb, var(--color-primary, #e11d48) 5%, var(--color-surface)); border: 1px solid color-mix(in srgb, var(--color-primary, #e11d48) 20%, transparent); border-radius: 1.25rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1.5rem;">
             <div style="max-width: 600px;">

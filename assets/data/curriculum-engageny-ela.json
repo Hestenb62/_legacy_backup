@@ -1,0 +1,1878 @@
+{
+  "_comment": "EngageNY English Language Arts Curriculum Sequence & Standards Alignment",
+  "_description": "Contains grade-by-grade EngageNY instructional ELA modules, topics, lessons, literature references, and CCSS standards.",
+  "curriculum": "engageny",
+  "subject": "ela",
+  "grades": {
+    "9th Grade": {
+      "course": "English Language Arts 9",
+      "title": "Grade 9 ELA (EngageNY / CCSS Aligned)",
+      "level": "K",
+      "overview": "Grade 9 ELA emphasizes close reading, evidence-based literary analysis, informational synthesis, and formal argumentative composition.",
+      "modules": [
+        {
+          "moduleNumber": 1,
+          "title": "Reading Closely and Writing to Learn: How Do Authors Develop Character, Theme, and Perspective?",
+          "description": "Close reading and evidence-based analysis across diverse literary genres. Students examine the development of character, tone, and culture shock in Karen Russell's short story, investigate aesthetic advice and solitary reflection in Rainer Maria Rilke's epistolary prose, and unpack dramatic tragedy, structure, and poetic conventions in William Shakespeare's Romeo and Juliet.",
+          "topics": [
+            {
+              "letter": "A",
+              "title": "Reading Literature: St. Lucy's Home for Girls Raised by Wolves",
+              "lessons": [
+                {
+                  "id": "k-ela-m1-a-1",
+                  "code": "K.ELA.M1.A.1",
+                  "lessonNumber": 1,
+                  "title": "St. Lucy's Home for Girls Raised by Wolves - Lesson 1",
+                  "standards": [
+                    "RL.9-10.4",
+                    "RL.9-10.1"
+                  ],
+                  "reading": {
+                    "title": "St. Lucy's Home for Girls Raised by Wolves",
+                    "author": "Karen Russell",
+                    "source": "St. Lucy's Home for Girls Raised by Wolves (2006)",
+                    "section": "In this lesson, students read the first section of Karen Russell’s short story, “St. Lucy’s Home for",
+                    "url": "/library/?page=st-lucys-home"
+                  },
+                  "url": "/levels/k.php?k-ela-m1-a-1"
+                },
+                {
+                  "id": "k-ela-m1-a-2",
+                  "code": "K.ELA.M1.A.2",
+                  "lessonNumber": 2,
+                  "title": "St. Lucy's Home for Girls Raised by Wolves - Lesson 2",
+                  "standards": [
+                    "RL.9-10.4"
+                  ],
+                  "reading": {
+                    "title": "St. Lucy's Home for Girls Raised by Wolves",
+                    "author": "Karen Russell",
+                    "source": "St. Lucy's Home for Girls Raised by Wolves (2006)",
+                    "section": "In this lesson, students listen to a masterful reading of pages 229–240 of “St. Lucy’s Home for Girl",
+                    "url": "/library/?page=st-lucys-home"
+                  },
+                  "url": "/levels/k.php?k-ela-m1-a-2"
+                },
+                {
+                  "id": "k-ela-m1-a-3",
+                  "code": "K.ELA.M1.A.3",
+                  "lessonNumber": 3,
+                  "title": "St. Lucy's Home for Girls Raised by Wolves - Lesson 3",
+                  "standards": [
+                    "RL.9-10.3",
+                    "SL.9-10.1.c"
+                  ],
+                  "reading": {
+                    "title": "St. Lucy's Home for Girls Raised by Wolves",
+                    "author": "Karen Russell",
+                    "source": "St. Lucy's Home for Girls Raised by Wolves (2006)",
+                    "section": "In this lesson, students listen to a masterful reading of pp. 240–246 of “St. Lucy’s Home for Girls ",
+                    "url": "/library/?page=st-lucys-home"
+                  },
+                  "url": "/levels/k.php?k-ela-m1-a-3"
+                },
+                {
+                  "id": "k-ela-m1-a-4",
+                  "code": "K.ELA.M1.A.4",
+                  "lessonNumber": 4,
+                  "title": "St. Lucy's Home for Girls Raised by Wolves - Lesson 4",
+                  "standards": [
+                    "RL.9-10.1",
+                    "RL.9-10.3",
+                    "SL.9-10.1.c",
+                    "L.9-10.4.a"
+                  ],
+                  "reading": {
+                    "title": "St. Lucy's Home for Girls Raised by Wolves",
+                    "author": "Karen Russell",
+                    "source": "St. Lucy's Home for Girls Raised by Wolves (2006)",
+                    "section": "In this lesson, students continue their reading and analysis of Karen Russell’s “St. Lucy’s Home for",
+                    "url": "/library/?page=st-lucys-home"
+                  },
+                  "url": "/levels/k.php?k-ela-m1-a-4"
+                },
+                {
+                  "id": "k-ela-m1-a-5",
+                  "code": "K.ELA.M1.A.5",
+                  "lessonNumber": 5,
+                  "title": "St. Lucy's Home for Girls Raised by Wolves - Lesson 5",
+                  "standards": [
+                    "RL.9-10.2",
+                    "RL.9-10.5",
+                    "SL.9-10.1.c"
+                  ],
+                  "reading": {
+                    "title": "St. Lucy's Home for Girls Raised by Wolves",
+                    "author": "Karen Russell",
+                    "source": "St. Lucy's Home for Girls Raised by Wolves (2006)",
+                    "section": "In this lesson, students continue their reading of Karen Russell’s “St. Lucy’s Home for Girls Raised",
+                    "url": "/library/?page=st-lucys-home"
+                  },
+                  "url": "/levels/k.php?k-ela-m1-a-5"
+                },
+                {
+                  "id": "k-ela-m1-a-6",
+                  "code": "K.ELA.M1.A.6",
+                  "lessonNumber": 6,
+                  "title": "St. Lucy's Home for Girls Raised by Wolves - Lesson 6",
+                  "standards": [
+                    "RL.9-10.3",
+                    "SL.9-10.1.c",
+                    "L.9-10.4.a"
+                  ],
+                  "reading": {
+                    "title": "St. Lucy's Home for Girls Raised by Wolves",
+                    "author": "Karen Russell",
+                    "source": "St. Lucy's Home for Girls Raised by Wolves (2006)",
+                    "section": "In this lesson, students read pages 230–232 of “St. Lucy’s Home for Girls Raised by Wolves” (from “I",
+                    "url": "/library/?page=st-lucys-home"
+                  },
+                  "url": "/levels/k.php?k-ela-m1-a-6"
+                },
+                {
+                  "id": "k-ela-m1-a-7",
+                  "code": "K.ELA.M1.A.7",
+                  "lessonNumber": 7,
+                  "title": "St. Lucy's Home for Girls Raised by Wolves - Lesson 7",
+                  "standards": [
+                    "RL.9-10.3",
+                    "W.9-10.2.a",
+                    "SL.9-10.1.c"
+                  ],
+                  "reading": {
+                    "title": "St. Lucy's Home for Girls Raised by Wolves",
+                    "author": "Karen Russell",
+                    "source": "St. Lucy's Home for Girls Raised by Wolves (2006)",
+                    "section": "In this lesson, students are introduced to the skills of making a claim and writing an introduction.",
+                    "url": "/library/?page=st-lucys-home"
+                  },
+                  "url": "/levels/k.php?k-ela-m1-a-7"
+                },
+                {
+                  "id": "k-ela-m1-a-8",
+                  "code": "K.ELA.M1.A.8",
+                  "lessonNumber": 8,
+                  "title": "St. Lucy's Home for Girls Raised by Wolves - Lesson 8",
+                  "standards": [
+                    "RL.9-10.3",
+                    "SL.9-10.1.c",
+                    "L.9-10.4.a"
+                  ],
+                  "reading": {
+                    "title": "St. Lucy's Home for Girls Raised by Wolves",
+                    "author": "Karen Russell",
+                    "source": "St. Lucy's Home for Girls Raised by Wolves (2006)",
+                    "section": "In this lesson, students read pages 235–237 of “St. Lucy’s Home for Girls Raised by Wolves” (from “S",
+                    "url": "/library/?page=st-lucys-home"
+                  },
+                  "url": "/levels/k.php?k-ela-m1-a-8"
+                },
+                {
+                  "id": "k-ela-m1-a-9",
+                  "code": "K.ELA.M1.A.9",
+                  "lessonNumber": 9,
+                  "title": "St. Lucy's Home for Girls Raised by Wolves - Lesson 9",
+                  "standards": [
+                    "RL.9-10.2",
+                    "SL.9-10.1.c",
+                    "L.9-10.4.a"
+                  ],
+                  "reading": {
+                    "title": "St. Lucy's Home for Girls Raised by Wolves",
+                    "author": "Karen Russell",
+                    "source": "St. Lucy's Home for Girls Raised by Wolves (2006)",
+                    "section": "In this lesson, students read and analyze pages 237–240 (from “It was during Stage 3 that we met our",
+                    "url": "/library/?page=st-lucys-home"
+                  },
+                  "url": "/levels/k.php?k-ela-m1-a-9"
+                },
+                {
+                  "id": "k-ela-m1-a-10",
+                  "code": "K.ELA.M1.A.10",
+                  "lessonNumber": 10,
+                  "title": "St. Lucy's Home for Girls Raised by Wolves - Lesson 10",
+                  "standards": [
+                    "RL.9-10.3",
+                    "RL.9-10.5",
+                    "W.9-10.2.a"
+                  ],
+                  "reading": {
+                    "title": "St. Lucy's Home for Girls Raised by Wolves",
+                    "author": "Karen Russell",
+                    "source": "St. Lucy's Home for Girls Raised by Wolves (2006)",
+                    "section": "",
+                    "url": "/library/?page=st-lucys-home"
+                  },
+                  "url": "/levels/k.php?k-ela-m1-a-10"
+                },
+                {
+                  "id": "k-ela-m1-a-11",
+                  "code": "K.ELA.M1.A.11",
+                  "lessonNumber": 11,
+                  "title": "St. Lucy's Home for Girls Raised by Wolves - Lesson 11",
+                  "standards": [
+                    "RL.9-10.4",
+                    "SL.9-10.1.c"
+                  ],
+                  "reading": {
+                    "title": "St. Lucy's Home for Girls Raised by Wolves",
+                    "author": "Karen Russell",
+                    "source": "St. Lucy's Home for Girls Raised by Wolves (2006)",
+                    "section": "In this lesson student pairs read pages 240–243 of “St. Lucy’s Home for Girls Raised by Wolves” (fro",
+                    "url": "/library/?page=st-lucys-home"
+                  },
+                  "url": "/levels/k.php?k-ela-m1-a-11"
+                },
+                {
+                  "id": "k-ela-m1-a-12",
+                  "code": "K.ELA.M1.A.12",
+                  "lessonNumber": 12,
+                  "title": "St. Lucy's Home for Girls Raised by Wolves - Lesson 12",
+                  "standards": [
+                    "RL.9-10.3",
+                    "SL.9-10.1.b",
+                    "L.9-10.4.a",
+                    "L.9-10.5.a"
+                  ],
+                  "reading": {
+                    "title": "St. Lucy's Home for Girls Raised by Wolves",
+                    "author": "Karen Russell",
+                    "source": "St. Lucy's Home for Girls Raised by Wolves (2006)",
+                    "section": "In this lesson, students read and analyze pages 243–245 of “St. Lucy’s Home for Girls Raised by Wolv",
+                    "url": "/library/?page=st-lucys-home"
+                  },
+                  "url": "/levels/k.php?k-ela-m1-a-12"
+                },
+                {
+                  "id": "k-ela-m1-a-13",
+                  "code": "K.ELA.M1.A.13",
+                  "lessonNumber": 13,
+                  "title": "St. Lucy's Home for Girls Raised by Wolves - Lesson 13",
+                  "standards": [
+                    "RL.9-10.2",
+                    "RL.9-10.3",
+                    "SL.9-10.1.b"
+                  ],
+                  "reading": {
+                    "title": "St. Lucy's Home for Girls Raised by Wolves",
+                    "author": "Karen Russell",
+                    "source": "St. Lucy's Home for Girls Raised by Wolves (2006)",
+                    "section": "In this lesson, students read and analyze the conclusion (pp. 245–246) of “St. Lucy’s Home for Girls",
+                    "url": "/library/?page=st-lucys-home"
+                  },
+                  "url": "/levels/k.php?k-ela-m1-a-13"
+                },
+                {
+                  "id": "k-ela-m1-a-14",
+                  "code": "K.ELA.M1.A.14",
+                  "lessonNumber": 14,
+                  "title": "St. Lucy's Home for Girls Raised by Wolves - Lesson 14",
+                  "standards": [
+                    "RL.9-10.5",
+                    "SL.9-10.1.c",
+                    "SL.9-10.4"
+                  ],
+                  "reading": {
+                    "title": "St. Lucy's Home for Girls Raised by Wolves",
+                    "author": "Karen Russell",
+                    "source": "St. Lucy's Home for Girls Raised by Wolves (2006)",
+                    "section": "For homework, students continue their Accountable Independent Reading (AIR) through the lens of focu",
+                    "url": "/library/?page=st-lucys-home"
+                  },
+                  "url": "/levels/k.php?k-ela-m1-a-14"
+                },
+                {
+                  "id": "k-ela-m1-a-15",
+                  "code": "K.ELA.M1.A.15",
+                  "lessonNumber": 15,
+                  "title": "St. Lucy's Home for Girls Raised by Wolves - Lesson 15",
+                  "standards": [
+                    "RL.9-10.3",
+                    "SL.9-10.1.b"
+                  ],
+                  "reading": {
+                    "title": "St. Lucy's Home for Girls Raised by Wolves",
+                    "author": "Karen Russell",
+                    "source": "St. Lucy's Home for Girls Raised by Wolves (2006)",
+                    "section": "",
+                    "url": "/library/?page=st-lucys-home"
+                  },
+                  "url": "/levels/k.php?k-ela-m1-a-15"
+                },
+                {
+                  "id": "k-ela-m1-a-16",
+                  "code": "K.ELA.M1.A.16",
+                  "lessonNumber": 16,
+                  "title": "St. Lucy's Home for Girls Raised by Wolves - Lesson 16",
+                  "standards": [
+                    "RL.9-10.3",
+                    "RL.9-10.5",
+                    "W.9-10.2.a",
+                    "W.9-10.2.f"
+                  ],
+                  "reading": {
+                    "title": "St. Lucy's Home for Girls Raised by Wolves",
+                    "author": "Karen Russell",
+                    "source": "St. Lucy's Home for Girls Raised by Wolves (2006)",
+                    "section": "",
+                    "url": "/library/?page=st-lucys-home"
+                  },
+                  "url": "/levels/k.php?k-ela-m1-a-16"
+                },
+                {
+                  "id": "k-ela-m1-a-17",
+                  "code": "K.ELA.M1.A.17",
+                  "lessonNumber": 17,
+                  "title": "St. Lucy's Home for Girls Raised by Wolves - Lesson 17",
+                  "standards": [
+                    "RL.9-10.3",
+                    "RL.9-10.5",
+                    "W.9-10.2.a"
+                  ],
+                  "reading": {
+                    "title": "St. Lucy's Home for Girls Raised by Wolves",
+                    "author": "Karen Russell",
+                    "source": "St. Lucy's Home for Girls Raised by Wolves (2006)",
+                    "section": "",
+                    "url": "/library/?page=st-lucys-home"
+                  },
+                  "url": "/levels/k.php?k-ela-m1-a-17"
+                }
+              ]
+            },
+            {
+              "letter": "B",
+              "title": "Literary & Informational Dialogue: Letters to a Young Poet & Black Swan Green",
+              "lessons": [
+                {
+                  "id": "k-ela-m1-b-1",
+                  "code": "K.ELA.M1.B.1",
+                  "lessonNumber": 1,
+                  "title": "Letters to a Young Poet (Letter One) - Lesson 1",
+                  "standards": [
+                    "RI.9-10.3",
+                    "SL.9-10.1.b",
+                    "L.9-10.4.a"
+                  ],
+                  "reading": {
+                    "title": "Letters to a Young Poet (Letter One)",
+                    "author": "Rainer Maria Rilke",
+                    "source": "Briefe an einen jungen Dichter (1903)",
+                    "section": "In this first lesson of this unit, students continue to build the reading skills to which they were ",
+                    "url": "/library/?page=letters-to-a-young-poet"
+                  },
+                  "url": "/levels/k.php?k-ela-m1-b-1"
+                },
+                {
+                  "id": "k-ela-m1-b-2",
+                  "code": "K.ELA.M1.B.2",
+                  "lessonNumber": 2,
+                  "title": "Letters to a Young Poet (Letter One) - Lesson 2",
+                  "standards": [
+                    "RI.9-10.3",
+                    "L.9-10.5.a",
+                    "RI.9-10.4"
+                  ],
+                  "reading": {
+                    "title": "Letters to a Young Poet (Letter One)",
+                    "author": "Rainer Maria Rilke",
+                    "source": "Briefe an einen jungen Dichter (1903)",
+                    "section": "In this lesson, students continue to analyze pages 5–9 of “Letter One” from Rilke’s Letters to a You",
+                    "url": "/library/?page=letters-to-a-young-poet"
+                  },
+                  "url": "/levels/k.php?k-ela-m1-b-2"
+                },
+                {
+                  "id": "k-ela-m1-b-3",
+                  "code": "K.ELA.M1.B.3",
+                  "lessonNumber": 3,
+                  "title": "Letters to a Young Poet (Letter One) - Lesson 3",
+                  "standards": [
+                    "RI.9-10.2",
+                    "L.9-10.4.a"
+                  ],
+                  "reading": {
+                    "title": "Letters to a Young Poet (Letter One)",
+                    "author": "Rainer Maria Rilke",
+                    "source": "Briefe an einen jungen Dichter (1903)",
+                    "section": "In this lesson, students continue to analyze “Letter One” from Rilke’s Letters to a Young Poet, page",
+                    "url": "/library/?page=letters-to-a-young-poet"
+                  },
+                  "url": "/levels/k.php?k-ela-m1-b-3"
+                },
+                {
+                  "id": "k-ela-m1-b-4",
+                  "code": "K.ELA.M1.B.4",
+                  "lessonNumber": 4,
+                  "title": "Letters to a Young Poet (Letter One) - Lesson 4",
+                  "standards": [
+                    "RI.9-10.4",
+                    "W.9-10.2.a"
+                  ],
+                  "reading": {
+                    "title": "Letters to a Young Poet (Letter One)",
+                    "author": "Rainer Maria Rilke",
+                    "source": "Briefe an einen jungen Dichter (1903)",
+                    "section": "",
+                    "url": "/library/?page=letters-to-a-young-poet"
+                  },
+                  "url": "/levels/k.php?k-ela-m1-b-4"
+                },
+                {
+                  "id": "k-ela-m1-b-5",
+                  "code": "K.ELA.M1.B.5",
+                  "lessonNumber": 5,
+                  "title": "Letters to a Young Poet (Letter One) - Lesson 5",
+                  "standards": [
+                    "RL.9-10.4"
+                  ],
+                  "reading": {
+                    "title": "Letters to a Young Poet (Letter One)",
+                    "author": "Rainer Maria Rilke",
+                    "source": "Briefe an einen jungen Dichter (1903)",
+                    "section": "In this lesson, students read an excerpt from the “Hangman” chapter of David Mitchell’s Black Swan G",
+                    "url": "/library/?page=letters-to-a-young-poet"
+                  },
+                  "url": "/levels/k.php?k-ela-m1-b-5"
+                },
+                {
+                  "id": "k-ela-m1-b-6",
+                  "code": "K.ELA.M1.B.6",
+                  "lessonNumber": 6,
+                  "title": "Letters to a Young Poet (Letter One) - Lesson 6",
+                  "standards": [
+                    "RL.9-10.3",
+                    "L.9-10.5.a"
+                  ],
+                  "reading": {
+                    "title": "Letters to a Young Poet (Letter One)",
+                    "author": "Rainer Maria Rilke",
+                    "source": "Briefe an einen jungen Dichter (1903)",
+                    "section": "In this lesson, students read pages 26–28 from the “Hangman” chapter of David Mitchell’s Black Swan ",
+                    "url": "/library/?page=letters-to-a-young-poet"
+                  },
+                  "url": "/levels/k.php?k-ela-m1-b-6"
+                },
+                {
+                  "id": "k-ela-m1-b-7",
+                  "code": "K.ELA.M1.B.7",
+                  "lessonNumber": 7,
+                  "title": "Letters to a Young Poet (Letter One) - Lesson 7",
+                  "standards": [
+                    "RL.9-10.3",
+                    "L.9-10.4.a"
+                  ],
+                  "reading": {
+                    "title": "Letters to a Young Poet (Letter One)",
+                    "author": "Rainer Maria Rilke",
+                    "source": "Briefe an einen jungen Dichter (1903)",
+                    "section": "In this lesson, students begin their study of “Solarium,” a chapter from the novel Black Swan Green ",
+                    "url": "/library/?page=letters-to-a-young-poet"
+                  },
+                  "url": "/levels/k.php?k-ela-m1-b-7"
+                },
+                {
+                  "id": "k-ela-m1-b-8",
+                  "code": "K.ELA.M1.B.8",
+                  "lessonNumber": 8,
+                  "title": "Letters to a Young Poet (Letter One) - Lesson 8",
+                  "standards": [
+                    "RL.9-10.2",
+                    "L.9-10.4.a"
+                  ],
+                  "reading": {
+                    "title": "Letters to a Young Poet (Letter One)",
+                    "author": "Rainer Maria Rilke",
+                    "source": "Briefe an einen jungen Dichter (1903)",
+                    "section": "In this lesson, students read pages 145–148 of “Solarium” from Black Swan Green by David Mitchell (f",
+                    "url": "/library/?page=letters-to-a-young-poet"
+                  },
+                  "url": "/levels/k.php?k-ela-m1-b-8"
+                },
+                {
+                  "id": "k-ela-m1-b-9",
+                  "code": "K.ELA.M1.B.9",
+                  "lessonNumber": 9,
+                  "title": "Letters to a Young Poet (Letter One) - Lesson 9",
+                  "standards": [
+                    "RL.9-10.2",
+                    "RL.9-10.3",
+                    "L.9-10.4.a"
+                  ],
+                  "reading": {
+                    "title": "Letters to a Young Poet (Letter One)",
+                    "author": "Rainer Maria Rilke",
+                    "source": "Briefe an einen jungen Dichter (1903)",
+                    "section": "In this lesson, students read excerpts from two of Jason’s visits to the vicarage in pages 149–156 o",
+                    "url": "/library/?page=letters-to-a-young-poet"
+                  },
+                  "url": "/levels/k.php?k-ela-m1-b-9"
+                },
+                {
+                  "id": "k-ela-m1-b-10",
+                  "code": "K.ELA.M1.B.10",
+                  "lessonNumber": 10,
+                  "title": "Letters to a Young Poet (Letter One) - Lesson 10",
+                  "standards": [
+                    "RL.9-10.2",
+                    "RI.9-10.2",
+                    "SL.9-10.1.b"
+                  ],
+                  "reading": {
+                    "title": "Letters to a Young Poet (Letter One)",
+                    "author": "Rainer Maria Rilke",
+                    "source": "Briefe an einen jungen Dichter (1903)",
+                    "section": "",
+                    "url": "/library/?page=letters-to-a-young-poet"
+                  },
+                  "url": "/levels/k.php?k-ela-m1-b-10"
+                },
+                {
+                  "id": "k-ela-m1-b-11",
+                  "code": "K.ELA.M1.B.11",
+                  "lessonNumber": 11,
+                  "title": "Letters to a Young Poet (Letter One) - Lesson 11",
+                  "standards": [
+                    "RL.9-10.2",
+                    "RI.9-10.2",
+                    "W.9-10.2.a"
+                  ],
+                  "reading": {
+                    "title": "Letters to a Young Poet (Letter One)",
+                    "author": "Rainer Maria Rilke",
+                    "source": "Briefe an einen jungen Dichter (1903)",
+                    "section": "",
+                    "url": "/library/?page=letters-to-a-young-poet"
+                  },
+                  "url": "/levels/k.php?k-ela-m1-b-11"
+                }
+              ]
+            },
+            {
+              "letter": "C",
+              "title": "Classical Drama & Structure: The Tragedy of Romeo and Juliet",
+              "lessons": [
+                {
+                  "id": "k-ela-m1-c-1",
+                  "code": "K.ELA.M1.C.1",
+                  "lessonNumber": 1,
+                  "title": "The Tragedy of Romeo and Juliet - Lesson 1",
+                  "standards": [
+                    "RL.9-10.4",
+                    "SL.9-10.1.b",
+                    "L.9-10.4.a"
+                  ],
+                  "reading": {
+                    "title": "The Tragedy of Romeo and Juliet",
+                    "author": "William Shakespeare",
+                    "source": "Folger Shakespeare Library / EngageNY Edition",
+                    "section": "In this first lesson of the unit, students begin their study of Romeo and Juliet by reading the 14-l",
+                    "url": "/library/?page=romeo-and-juliet-module-1"
+                  },
+                  "url": "/levels/k.php?k-ela-m1-c-1"
+                },
+                {
+                  "id": "k-ela-m1-c-2",
+                  "code": "K.ELA.M1.C.2",
+                  "lessonNumber": 2,
+                  "title": "The Tragedy of Romeo and Juliet - Lesson 2",
+                  "standards": [
+                    "RL.9-10.3",
+                    "L.9-10.4.c",
+                    "L.9-10.5.a"
+                  ],
+                  "reading": {
+                    "title": "The Tragedy of Romeo and Juliet",
+                    "author": "William Shakespeare",
+                    "source": "Folger Shakespeare Library / EngageNY Edition",
+                    "section": "In this lesson, students read Romeo and Juliet by William Shakespeare, Act 1.1, lines 158–202 (from ",
+                    "url": "/library/?page=romeo-and-juliet-module-1"
+                  },
+                  "url": "/levels/k.php?k-ela-m1-c-2"
+                },
+                {
+                  "id": "k-ela-m1-c-3",
+                  "code": "K.ELA.M1.C.3",
+                  "lessonNumber": 3,
+                  "title": "The Tragedy of Romeo and Juliet - Lesson 3",
+                  "standards": [
+                    "RL.9-10.2",
+                    "L.9-10.5.a"
+                  ],
+                  "reading": {
+                    "title": "The Tragedy of Romeo and Juliet",
+                    "author": "William Shakespeare",
+                    "source": "Folger Shakespeare Library / EngageNY Edition",
+                    "section": "In this lesson, students read Act 1.1, lines 203–236 of William Shakespeare’s Romeo and Juliet (from",
+                    "url": "/library/?page=romeo-and-juliet-module-1"
+                  },
+                  "url": "/levels/k.php?k-ela-m1-c-3"
+                },
+                {
+                  "id": "k-ela-m1-c-4",
+                  "code": "K.ELA.M1.C.4",
+                  "lessonNumber": 4,
+                  "title": "The Tragedy of Romeo and Juliet - Lesson 4",
+                  "standards": [
+                    "RL.9-10.3",
+                    "L.9-10.5.a"
+                  ],
+                  "reading": {
+                    "title": "The Tragedy of Romeo and Juliet",
+                    "author": "William Shakespeare",
+                    "source": "Folger Shakespeare Library / EngageNY Edition",
+                    "section": "In this lesson, students read Act 1.3, lines 64–100 (from “Marry, that ‘marry’ is the very theme” to",
+                    "url": "/library/?page=romeo-and-juliet-module-1"
+                  },
+                  "url": "/levels/k.php?k-ela-m1-c-4"
+                },
+                {
+                  "id": "k-ela-m1-c-5",
+                  "code": "K.ELA.M1.C.5",
+                  "lessonNumber": 5,
+                  "title": "The Tragedy of Romeo and Juliet - Lesson 5",
+                  "standards": [
+                    "RL.9-10.3",
+                    "L.9-10.5.a",
+                    "L.9-10.4.b"
+                  ],
+                  "reading": {
+                    "title": "The Tragedy of Romeo and Juliet",
+                    "author": "William Shakespeare",
+                    "source": "Folger Shakespeare Library / EngageNY Edition",
+                    "section": "In this lesson, students read Act 1.5, lines 92–109 of Shakespeare’s Romeo and Juliet (from “If I pr",
+                    "url": "/library/?page=romeo-and-juliet-module-1"
+                  },
+                  "url": "/levels/k.php?k-ela-m1-c-5"
+                },
+                {
+                  "id": "k-ela-m1-c-6",
+                  "code": "K.ELA.M1.C.6",
+                  "lessonNumber": 6,
+                  "title": "The Tragedy of Romeo and Juliet - Lesson 6",
+                  "standards": [
+                    "RL.9-10.5",
+                    "L.9-10.4.a"
+                  ],
+                  "reading": {
+                    "title": "The Tragedy of Romeo and Juliet",
+                    "author": "William Shakespeare",
+                    "source": "Folger Shakespeare Library / EngageNY Edition",
+                    "section": "In this lesson, students read Romeo and Juliet by William Shakespeare, Act 2.2, lines 1–61 (from “He",
+                    "url": "/library/?page=romeo-and-juliet-module-1"
+                  },
+                  "url": "/levels/k.php?k-ela-m1-c-6"
+                },
+                {
+                  "id": "k-ela-m1-c-7",
+                  "code": "K.ELA.M1.C.7",
+                  "lessonNumber": 7,
+                  "title": "The Tragedy of Romeo and Juliet - Lesson 7",
+                  "standards": [
+                    "RL.9-10.2",
+                    "L.9-10.4.a"
+                  ],
+                  "reading": {
+                    "title": "The Tragedy of Romeo and Juliet",
+                    "author": "William Shakespeare",
+                    "source": "Folger Shakespeare Library / EngageNY Edition",
+                    "section": "In this lesson, students continue their reading and analysis of Romeo and Juliet by William Shakespe",
+                    "url": "/library/?page=romeo-and-juliet-module-1"
+                  },
+                  "url": "/levels/k.php?k-ela-m1-c-7"
+                },
+                {
+                  "id": "k-ela-m1-c-8",
+                  "code": "K.ELA.M1.C.8",
+                  "lessonNumber": 8,
+                  "title": "The Tragedy of Romeo and Juliet - Lesson 8",
+                  "standards": [
+                    "RL.9-10.2",
+                    "RL.9-10.3",
+                    "W.9-10.2.a"
+                  ],
+                  "reading": {
+                    "title": "The Tragedy of Romeo and Juliet",
+                    "author": "William Shakespeare",
+                    "source": "Folger Shakespeare Library / EngageNY Edition",
+                    "section": "",
+                    "url": "/library/?page=romeo-and-juliet-module-1"
+                  },
+                  "url": "/levels/k.php?k-ela-m1-c-8"
+                },
+                {
+                  "id": "k-ela-m1-c-9",
+                  "code": "K.ELA.M1.C.9",
+                  "lessonNumber": 9,
+                  "title": "The Tragedy of Romeo and Juliet - Lesson 9",
+                  "standards": [
+                    "RL.9-10.3",
+                    "L.9-10.4.a"
+                  ],
+                  "reading": {
+                    "title": "The Tragedy of Romeo and Juliet",
+                    "author": "William Shakespeare",
+                    "source": "Folger Shakespeare Library / EngageNY Edition",
+                    "section": "In this lesson, students read and analyze William Shakespeare's Romeo and Juliet, Act 3.1, lines 59–",
+                    "url": "/library/?page=romeo-and-juliet-module-1"
+                  },
+                  "url": "/levels/k.php?k-ela-m1-c-9"
+                },
+                {
+                  "id": "k-ela-m1-c-10",
+                  "code": "K.ELA.M1.C.10",
+                  "lessonNumber": 10,
+                  "title": "The Tragedy of Romeo and Juliet - Lesson 10",
+                  "standards": [
+                    "RL.9-10.2",
+                    "L.9-10.4.a"
+                  ],
+                  "reading": {
+                    "title": "The Tragedy of Romeo and Juliet",
+                    "author": "William Shakespeare",
+                    "source": "Folger Shakespeare Library / EngageNY Edition",
+                    "section": "In this lesson, students continue to read and analyze William Shakespeare's Romeo and Juliet, Act 3.",
+                    "url": "/library/?page=romeo-and-juliet-module-1"
+                  },
+                  "url": "/levels/k.php?k-ela-m1-c-10"
+                },
+                {
+                  "id": "k-ela-m1-c-11",
+                  "code": "K.ELA.M1.C.11",
+                  "lessonNumber": 11,
+                  "title": "The Tragedy of Romeo and Juliet - Lesson 11",
+                  "standards": [
+                    "RL.9-10.5",
+                    "L.9-10.4.c",
+                    "L.9-10.5.a"
+                  ],
+                  "reading": {
+                    "title": "The Tragedy of Romeo and Juliet",
+                    "author": "William Shakespeare",
+                    "source": "Folger Shakespeare Library / EngageNY Edition",
+                    "section": "In this lesson, students read and analyze Juliet’s soliloquy in Act 3.2 of Shakespeare’s Romeo and J",
+                    "url": "/library/?page=romeo-and-juliet-module-1"
+                  },
+                  "url": "/levels/k.php?k-ela-m1-c-11"
+                },
+                {
+                  "id": "k-ela-m1-c-12",
+                  "code": "K.ELA.M1.C.12",
+                  "lessonNumber": 12,
+                  "title": "The Tragedy of Romeo and Juliet - Lesson 12",
+                  "standards": [
+                    "RL.9-10.7"
+                  ],
+                  "reading": {
+                    "title": "The Tragedy of Romeo and Juliet",
+                    "author": "William Shakespeare",
+                    "source": "Folger Shakespeare Library / EngageNY Edition",
+                    "section": "In this lesson, students work with standard RL.9-10.7 as they analyze how artists treat the same sub",
+                    "url": "/library/?page=romeo-and-juliet-module-1"
+                  },
+                  "url": "/levels/k.php?k-ela-m1-c-12"
+                },
+                {
+                  "id": "k-ela-m1-c-13",
+                  "code": "K.ELA.M1.C.13",
+                  "lessonNumber": 13,
+                  "title": "The Tragedy of Romeo and Juliet - Lesson 13",
+                  "standards": [
+                    "RL.9-10.3",
+                    "RL.9-10.4",
+                    "L.9-10.4.a"
+                  ],
+                  "reading": {
+                    "title": "The Tragedy of Romeo and Juliet",
+                    "author": "William Shakespeare",
+                    "source": "Folger Shakespeare Library / EngageNY Edition",
+                    "section": "In this lesson, students read and analyze an excerpt of Act 3.3 from Romeo and Juliet, in which Fria",
+                    "url": "/library/?page=romeo-and-juliet-module-1"
+                  },
+                  "url": "/levels/k.php?k-ela-m1-c-13"
+                },
+                {
+                  "id": "k-ela-m1-c-14",
+                  "code": "K.ELA.M1.C.14",
+                  "lessonNumber": 14,
+                  "title": "The Tragedy of Romeo and Juliet - Lesson 14",
+                  "standards": [
+                    "RL.9-10.3",
+                    "L.9-10.4.c"
+                  ],
+                  "reading": {
+                    "title": "The Tragedy of Romeo and Juliet",
+                    "author": "William Shakespeare",
+                    "source": "Folger Shakespeare Library / EngageNY Edition",
+                    "section": "In this lesson, students read and analyze an excerpt of Act 4.1 from Romeo and Juliet in which Julie",
+                    "url": "/library/?page=romeo-and-juliet-module-1"
+                  },
+                  "url": "/levels/k.php?k-ela-m1-c-14"
+                },
+                {
+                  "id": "k-ela-m1-c-15",
+                  "code": "K.ELA.M1.C.15",
+                  "lessonNumber": 15,
+                  "title": "The Tragedy of Romeo and Juliet - Lesson 15",
+                  "standards": [
+                    "RL.9-10.2",
+                    "W.9-10.2.c",
+                    "L.9-10.4.a"
+                  ],
+                  "reading": {
+                    "title": "The Tragedy of Romeo and Juliet",
+                    "author": "William Shakespeare",
+                    "source": "Folger Shakespeare Library / EngageNY Edition",
+                    "section": "",
+                    "url": "/library/?page=romeo-and-juliet-module-1"
+                  },
+                  "url": "/levels/k.php?k-ela-m1-c-15"
+                },
+                {
+                  "id": "k-ela-m1-c-16",
+                  "code": "K.ELA.M1.C.16",
+                  "lessonNumber": 16,
+                  "title": "The Tragedy of Romeo and Juliet - Lesson 16",
+                  "standards": [
+                    "RL.9-10.2",
+                    "L.9-10.4.c",
+                    "L.9-10.5.a"
+                  ],
+                  "reading": {
+                    "title": "The Tragedy of Romeo and Juliet",
+                    "author": "William Shakespeare",
+                    "source": "Folger Shakespeare Library / EngageNY Edition",
+                    "section": "In this lesson, students read and analyze an excerpt of Act 5.3 from Romeo and Juliet in which Romeo",
+                    "url": "/library/?page=romeo-and-juliet-module-1"
+                  },
+                  "url": "/levels/k.php?k-ela-m1-c-16"
+                },
+                {
+                  "id": "k-ela-m1-c-17",
+                  "code": "K.ELA.M1.C.17",
+                  "lessonNumber": 17,
+                  "title": "The Tragedy of Romeo and Juliet - Lesson 17",
+                  "standards": [
+                    "RL.9-10.2",
+                    "SL.9-10.1.c"
+                  ],
+                  "reading": {
+                    "title": "The Tragedy of Romeo and Juliet",
+                    "author": "William Shakespeare",
+                    "source": "Folger Shakespeare Library / EngageNY Edition",
+                    "section": "In this lesson, students read and analyze Romeo and Juliet, Act 5.3, lines 139–170 (from “Romeo! / A",
+                    "url": "/library/?page=romeo-and-juliet-module-1"
+                  },
+                  "url": "/levels/k.php?k-ela-m1-c-17"
+                },
+                {
+                  "id": "k-ela-m1-c-18",
+                  "code": "K.ELA.M1.C.18",
+                  "lessonNumber": 18,
+                  "title": "The Tragedy of Romeo and Juliet - Lesson 18",
+                  "standards": [
+                    "RL.9-10.5",
+                    "L.9-10.4.c"
+                  ],
+                  "reading": {
+                    "title": "The Tragedy of Romeo and Juliet",
+                    "author": "William Shakespeare",
+                    "source": "Folger Shakespeare Library / EngageNY Edition",
+                    "section": "In this lesson, students read and analyze Romeo and Juliet Act 5.3, lines 291–310 (from “Where be th",
+                    "url": "/library/?page=romeo-and-juliet-module-1"
+                  },
+                  "url": "/levels/k.php?k-ela-m1-c-18"
+                },
+                {
+                  "id": "k-ela-m1-c-19",
+                  "code": "K.ELA.M1.C.19",
+                  "lessonNumber": 19,
+                  "title": "The Tragedy of Romeo and Juliet - Lesson 19",
+                  "standards": [
+                    "RL.9-10.5",
+                    "SL.9-10.1.c"
+                  ],
+                  "reading": {
+                    "title": "The Tragedy of Romeo and Juliet",
+                    "author": "William Shakespeare",
+                    "source": "Folger Shakespeare Library / EngageNY Edition",
+                    "section": "",
+                    "url": "/library/?page=romeo-and-juliet-module-1"
+                  },
+                  "url": "/levels/k.php?k-ela-m1-c-19"
+                },
+                {
+                  "id": "k-ela-m1-c-20",
+                  "code": "K.ELA.M1.C.20",
+                  "lessonNumber": 20,
+                  "title": "The Tragedy of Romeo and Juliet - Lesson 20",
+                  "standards": [
+                    "RL.9-10.3",
+                    "RL.9-10.5",
+                    "W.9-10.2.a"
+                  ],
+                  "reading": {
+                    "title": "The Tragedy of Romeo and Juliet",
+                    "author": "William Shakespeare",
+                    "source": "Folger Shakespeare Library / EngageNY Edition",
+                    "section": "",
+                    "url": "/library/?page=romeo-and-juliet-module-1"
+                  },
+                  "url": "/levels/k.php?k-ela-m1-c-20"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "moduleNumber": 2,
+          "title": "Understanding Perspectives and Writing to Convince",
+          "description": "Exploration of literary perspective, structural point of view, psychological obsession, classical hubris, and investigative argument. Students analyze Edgar Allan Poe's unreliable narrator in The Tell-Tale Heart, examine Emily Dickinson's introspective sensory metaphors in I felt a Funeral, in my Brain, dissect fate, dramatic irony, and moral catastrophe in Sophocles' Oedipus the King, and evaluate cultural fascination with crime and justice in Walter Mosley's True Crime.",
+          "topics": [
+            {
+              "letter": "A",
+              "title": "Literary Perspective: The Tell-Tale Heart & I felt a Funeral, in my Brain",
+              "lessons": [
+                {
+                  "id": "k-ela-m2-a-1",
+                  "code": "K.ELA.M2.A.1",
+                  "lessonNumber": 1,
+                  "title": "The Tell-Tale Heart - Lesson 1",
+                  "standards": [
+                    "RL.9-10.5",
+                    "W.9-10.9.a"
+                  ],
+                  "reading": {
+                    "title": "The Tell-Tale Heart",
+                    "author": "Edgar Allan Poe",
+                    "source": "The Pioneer (1843)",
+                    "section": "In this first lesson of the unit and the module, students will begin an exploration of Edgar Allan P",
+                    "url": "/library/?page=the-tell-tale-heart"
+                  },
+                  "url": "/levels/k.php?k-ela-m2-a-1"
+                },
+                {
+                  "id": "k-ela-m2-a-2",
+                  "code": "K.ELA.M2.A.2",
+                  "lessonNumber": 2,
+                  "title": "The Tell-Tale Heart - Lesson 2",
+                  "standards": [
+                    "RL.9-10.2",
+                    "W.9-10.9.a"
+                  ],
+                  "reading": {
+                    "title": "The Tell-Tale Heart",
+                    "author": "Edgar Allan Poe",
+                    "source": "The Pioneer (1843)",
+                    "section": "In this lesson, students reread and analyze paragraphs 1 and 2 of the “The Tell-Tale Heart,” in whic",
+                    "url": "/library/?page=the-tell-tale-heart"
+                  },
+                  "url": "/levels/k.php?k-ela-m2-a-2"
+                },
+                {
+                  "id": "k-ela-m2-a-3",
+                  "code": "K.ELA.M2.A.3",
+                  "lessonNumber": 3,
+                  "title": "The Tell-Tale Heart - Lesson 3",
+                  "standards": [
+                    "RL.9-10.5",
+                    "RL.9-10.2",
+                    "W.9-10.9.a"
+                  ],
+                  "reading": {
+                    "title": "The Tell-Tale Heart",
+                    "author": "Edgar Allan Poe",
+                    "source": "The Pioneer (1843)",
+                    "section": "In this lesson, students will read paragraph 3 of “The Tell-Tale Heart” closely from “Now this is th",
+                    "url": "/library/?page=the-tell-tale-heart"
+                  },
+                  "url": "/levels/k.php?k-ela-m2-a-3"
+                },
+                {
+                  "id": "k-ela-m2-a-4",
+                  "code": "K.ELA.M2.A.4",
+                  "lessonNumber": 4,
+                  "title": "The Tell-Tale Heart - Lesson 4",
+                  "standards": [
+                    "RL.9-10.2",
+                    "RL.9-10.5",
+                    "W.9-10.9.a"
+                  ],
+                  "reading": {
+                    "title": "The Tell-Tale Heart",
+                    "author": "Edgar Allan Poe",
+                    "source": "The Pioneer (1843)",
+                    "section": "In this lesson, students closely read paragraphs 4 through 7 of “The Tell-Tale Heart” (from “Upon th",
+                    "url": "/library/?page=the-tell-tale-heart"
+                  },
+                  "url": "/levels/k.php?k-ela-m2-a-4"
+                },
+                {
+                  "id": "k-ela-m2-a-5",
+                  "code": "K.ELA.M2.A.5",
+                  "lessonNumber": 5,
+                  "title": "The Tell-Tale Heart - Lesson 5",
+                  "standards": [
+                    "RL.9-10.2",
+                    "RL.9-10.5",
+                    "W.9-10.9.a"
+                  ],
+                  "reading": {
+                    "title": "The Tell-Tale Heart",
+                    "author": "Edgar Allan Poe",
+                    "source": "The Pioneer (1843)",
+                    "section": "In this lesson, students read paragraphs 8–13 of “The Tell-Tale Heart” (“When I had waited a long ti",
+                    "url": "/library/?page=the-tell-tale-heart"
+                  },
+                  "url": "/levels/k.php?k-ela-m2-a-5"
+                },
+                {
+                  "id": "k-ela-m2-a-6",
+                  "code": "K.ELA.M2.A.6",
+                  "lessonNumber": 6,
+                  "title": "The Tell-Tale Heart - Lesson 6",
+                  "standards": [
+                    "RL.9-10.2",
+                    "RL.9-10.5",
+                    "W.9-10.9.a"
+                  ],
+                  "reading": {
+                    "title": "The Tell-Tale Heart",
+                    "author": "Edgar Allan Poe",
+                    "source": "The Pioneer (1843)",
+                    "section": "In this lesson, students read paragraph 14 through the end of “The Tell-Tale Heart” (from “When I ha",
+                    "url": "/library/?page=the-tell-tale-heart"
+                  },
+                  "url": "/levels/k.php?k-ela-m2-a-6"
+                },
+                {
+                  "id": "k-ela-m2-a-7",
+                  "code": "K.ELA.M2.A.7",
+                  "lessonNumber": 7,
+                  "title": "The Tell-Tale Heart - Lesson 7",
+                  "standards": [
+                    "RL.9-10.5",
+                    "W.9-10.2.b",
+                    "L.9-10.1"
+                  ],
+                  "reading": {
+                    "title": "The Tell-Tale Heart",
+                    "author": "Edgar Allan Poe",
+                    "source": "The Pioneer (1843)",
+                    "section": "",
+                    "url": "/library/?page=the-tell-tale-heart"
+                  },
+                  "url": "/levels/k.php?k-ela-m2-a-7"
+                },
+                {
+                  "id": "k-ela-m2-a-8",
+                  "code": "K.ELA.M2.A.8",
+                  "lessonNumber": 8,
+                  "title": "The Tell-Tale Heart - Lesson 8",
+                  "standards": [
+                    "RL.9-10.2",
+                    "RL.9-10.5",
+                    "W.9-10.2.b",
+                    "W.9-10.9.a",
+                    "SL.9-10.1.a",
+                    "L.9-10.1"
+                  ],
+                  "reading": {
+                    "title": "The Tell-Tale Heart",
+                    "author": "Edgar Allan Poe",
+                    "source": "The Pioneer (1843)",
+                    "section": "",
+                    "url": "/library/?page=the-tell-tale-heart"
+                  },
+                  "url": "/levels/k.php?k-ela-m2-a-8"
+                },
+                {
+                  "id": "k-ela-m2-a-9",
+                  "code": "K.ELA.M2.A.9",
+                  "lessonNumber": 9,
+                  "title": "The Tell-Tale Heart - Lesson 9",
+                  "standards": [
+                    "RL.9-10.4",
+                    "L.9-10.5.a"
+                  ],
+                  "reading": {
+                    "title": "The Tell-Tale Heart",
+                    "author": "Edgar Allan Poe",
+                    "source": "The Pioneer (1843)",
+                    "section": "In this lesson, students will encounter Emily Dickinson’s poem “I felt a Funeral, in my Brain,” for ",
+                    "url": "/library/?page=the-tell-tale-heart"
+                  },
+                  "url": "/levels/k.php?k-ela-m2-a-9"
+                },
+                {
+                  "id": "k-ela-m2-a-10",
+                  "code": "K.ELA.M2.A.10",
+                  "lessonNumber": 10,
+                  "title": "I felt a Funeral, in my Brain - Lesson 10",
+                  "standards": [
+                    "RL.9-10.2",
+                    "RL.9-10.4",
+                    "W.9-10.9.a",
+                    "L.9-10.5"
+                  ],
+                  "reading": {
+                    "title": "I felt a Funeral, in my Brain",
+                    "author": "Emily Dickinson",
+                    "source": "Poem 280 (1861)",
+                    "section": "",
+                    "url": "/library/?page=i-felt-a-funeral-in-my-brain"
+                  },
+                  "url": "/levels/k.php?k-ela-m2-a-10"
+                },
+                {
+                  "id": "k-ela-m2-a-11",
+                  "code": "K.ELA.M2.A.11",
+                  "lessonNumber": 11,
+                  "title": "I felt a Funeral, in my Brain - Lesson 11",
+                  "standards": [
+                    "RL.9-10.2",
+                    "RL.9-10.5",
+                    "W.9-10.9.a",
+                    "L.9-10.2"
+                  ],
+                  "reading": {
+                    "title": "I felt a Funeral, in my Brain",
+                    "author": "Emily Dickinson",
+                    "source": "Poem 280 (1861)",
+                    "section": "",
+                    "url": "/library/?page=i-felt-a-funeral-in-my-brain"
+                  },
+                  "url": "/levels/k.php?k-ela-m2-a-11"
+                },
+                {
+                  "id": "k-ela-m2-a-12",
+                  "code": "K.ELA.M2.A.12",
+                  "lessonNumber": 12,
+                  "title": "I felt a Funeral, in my Brain - Lesson 12",
+                  "standards": [
+                    "RL.9-10.2",
+                    "RL.9-10.5",
+                    "W.9-10.9.a",
+                    "SL.9-10.1.a",
+                    "L.9-10.1"
+                  ],
+                  "reading": {
+                    "title": "I felt a Funeral, in my Brain",
+                    "author": "Emily Dickinson",
+                    "source": "Poem 280 (1861)",
+                    "section": "Students will read and analyze standard CCRA.R.9 and work in small groups to consider how the two un",
+                    "url": "/library/?page=i-felt-a-funeral-in-my-brain"
+                  },
+                  "url": "/levels/k.php?k-ela-m2-a-12"
+                },
+                {
+                  "id": "k-ela-m2-a-13",
+                  "code": "K.ELA.M2.A.13",
+                  "lessonNumber": 13,
+                  "title": "I felt a Funeral, in my Brain - Lesson 13",
+                  "standards": [
+                    "RL.9-10.2",
+                    "W.9-10.2.b",
+                    "RL.9-10.5",
+                    "W.9-10.9.a",
+                    "L.9-10.1",
+                    "L.9-10.2"
+                  ],
+                  "reading": {
+                    "title": "I felt a Funeral, in my Brain",
+                    "author": "Emily Dickinson",
+                    "source": "Poem 280 (1861)",
+                    "section": "In this final lesson of the unit, students will complete the End-of-Unit Assessment. Students will c",
+                    "url": "/library/?page=i-felt-a-funeral-in-my-brain"
+                  },
+                  "url": "/levels/k.php?k-ela-m2-a-13"
+                }
+              ]
+            },
+            {
+              "letter": "B",
+              "title": "Classical Tragedy & Fate: Sophocles' Oedipus the King",
+              "lessons": [
+                {
+                  "id": "k-ela-m2-b-1",
+                  "code": "K.ELA.M2.B.1",
+                  "lessonNumber": 1,
+                  "title": "Oedipus the King - Lesson 1",
+                  "standards": [
+                    "RL.9-10.5",
+                    "RL.9-10.2",
+                    "RL.9-10.4",
+                    "SL.9-10.1.a",
+                    "L.9-10.4.a"
+                  ],
+                  "reading": {
+                    "title": "Oedipus the King",
+                    "author": "Sophocles",
+                    "source": "Oxford Classical Translation",
+                    "section": "In the first lesson of this unit, students will build their close reading skills as they work carefu",
+                    "url": "/library/?page=oedipus-the-king"
+                  },
+                  "url": "/levels/k.php?k-ela-m2-b-1"
+                },
+                {
+                  "id": "k-ela-m2-b-2",
+                  "code": "K.ELA.M2.B.2",
+                  "lessonNumber": 2,
+                  "title": "Oedipus the King - Lesson 2",
+                  "standards": [
+                    "RL.9-10.2",
+                    "W.9-10.9.a",
+                    "SL.9-10.1.a",
+                    "L.9-10.5.a"
+                  ],
+                  "reading": {
+                    "title": "Oedipus the King",
+                    "author": "Sophocles",
+                    "source": "Oxford Classical Translation",
+                    "section": "In this lesson, students will continue to develop their close reading skills as they work carefully ",
+                    "url": "/library/?page=oedipus-the-king"
+                  },
+                  "url": "/levels/k.php?k-ela-m2-b-2"
+                },
+                {
+                  "id": "k-ela-m2-b-3",
+                  "code": "K.ELA.M2.B.3",
+                  "lessonNumber": 3,
+                  "title": "Oedipus the King - Lesson 3",
+                  "standards": [
+                    "RL.9-10.5",
+                    "RL.9-10.2"
+                  ],
+                  "reading": {
+                    "title": "Oedipus the King",
+                    "author": "Sophocles",
+                    "source": "Oxford Classical Translation",
+                    "section": "In this lesson students will engage in an analysis of the continuing conversation between Oedipus an",
+                    "url": "/library/?page=oedipus-the-king"
+                  },
+                  "url": "/levels/k.php?k-ela-m2-b-3"
+                },
+                {
+                  "id": "k-ela-m2-b-4",
+                  "code": "K.ELA.M2.B.4",
+                  "lessonNumber": 4,
+                  "title": "Oedipus the King - Lesson 4",
+                  "standards": [
+                    "RL.9-10.2",
+                    "RL.9-10.4",
+                    "RL.9-10.5",
+                    "W.9-10.9.a",
+                    "R.9-10.9.a"
+                  ],
+                  "reading": {
+                    "title": "Oedipus the King",
+                    "author": "Sophocles",
+                    "source": "Oxford Classical Translation",
+                    "section": "In this lesson students will explore the passage “Oh sweet speaking voice of Zeus,” through “My fear",
+                    "url": "/library/?page=oedipus-the-king"
+                  },
+                  "url": "/levels/k.php?k-ela-m2-b-4"
+                },
+                {
+                  "id": "k-ela-m2-b-5",
+                  "code": "K.ELA.M2.B.5",
+                  "lessonNumber": 5,
+                  "title": "Oedipus the King - Lesson 5",
+                  "standards": [
+                    "RL.9-10.2",
+                    "RL.9-10.5",
+                    "SL.9-10.1",
+                    "L.9-10.5.a"
+                  ],
+                  "reading": {
+                    "title": "Oedipus the King",
+                    "author": "Sophocles",
+                    "source": "Oxford Classical Translation",
+                    "section": "In this lesson, students will begin their exploration of Oedipus’s confrontation with the blind prop",
+                    "url": "/library/?page=oedipus-the-king"
+                  },
+                  "url": "/levels/k.php?k-ela-m2-b-5"
+                },
+                {
+                  "id": "k-ela-m2-b-6",
+                  "code": "K.ELA.M2.B.6",
+                  "lessonNumber": 6,
+                  "title": "Oedipus the King - Lesson 6",
+                  "standards": [
+                    "RL.9-10.5",
+                    "SL.9-10.1",
+                    "RL.9-10.2",
+                    "RL.9-10.4",
+                    "W.9-10.9.a"
+                  ],
+                  "reading": {
+                    "title": "Oedipus the King",
+                    "author": "Sophocles",
+                    "source": "Oxford Classical Translation",
+                    "section": "In this lesson, students will continue their exploration of Oedipus’s confrontation with the blind p",
+                    "url": "/library/?page=oedipus-the-king"
+                  },
+                  "url": "/levels/k.php?k-ela-m2-b-6"
+                },
+                {
+                  "id": "k-ela-m2-b-7",
+                  "code": "K.ELA.M2.B.7",
+                  "lessonNumber": 7,
+                  "title": "Oedipus the King - Lesson 7",
+                  "standards": [
+                    "RL.9-10.5",
+                    "RL.9-10.2",
+                    "W.9-10.9.a",
+                    "L.9-10.4.a"
+                  ],
+                  "reading": {
+                    "title": "Oedipus the King",
+                    "author": "Sophocles",
+                    "source": "Oxford Classical Translation",
+                    "section": "In this lesson, students will explore the passage “I will go now. Boy lead me away” through “you can",
+                    "url": "/library/?page=oedipus-the-king"
+                  },
+                  "url": "/levels/k.php?k-ela-m2-b-7"
+                },
+                {
+                  "id": "k-ela-m2-b-8",
+                  "code": "K.ELA.M2.B.8",
+                  "lessonNumber": 8,
+                  "title": "Oedipus the King - Lesson 8",
+                  "standards": [
+                    "RL.9-10.2",
+                    "SL.9-10.1"
+                  ],
+                  "reading": {
+                    "title": "Oedipus the King",
+                    "author": "Sophocles",
+                    "source": "Oxford Classical Translation",
+                    "section": "In this lesson, students will explore the passage “At least first listen to what I have to say” thro",
+                    "url": "/library/?page=oedipus-the-king"
+                  },
+                  "url": "/levels/k.php?k-ela-m2-b-8"
+                },
+                {
+                  "id": "k-ela-m2-b-9",
+                  "code": "K.ELA.M2.B.9",
+                  "lessonNumber": 9,
+                  "title": "Oedipus the King - Lesson 9",
+                  "standards": [
+                    "RL.9-10.2",
+                    "RL.9-10.5",
+                    "W.9-10.9.a",
+                    "L.9-10.4.a",
+                    "L.9-10.5"
+                  ],
+                  "reading": {
+                    "title": "Oedipus the King",
+                    "author": "Sophocles",
+                    "source": "Oxford Classical Translation",
+                    "section": "In this lesson, students will read the passage from “[The palace doors open]” through “they themselv",
+                    "url": "/library/?page=oedipus-the-king"
+                  },
+                  "url": "/levels/k.php?k-ela-m2-b-9"
+                },
+                {
+                  "id": "k-ela-m2-b-10",
+                  "code": "K.ELA.M2.B.10",
+                  "lessonNumber": 10,
+                  "title": "Oedipus the King - Lesson 10",
+                  "standards": [
+                    "RL.9-10.2",
+                    "RL.9-10.5"
+                  ],
+                  "reading": {
+                    "title": "Oedipus the King",
+                    "author": "Sophocles",
+                    "source": "Oxford Classical Translation",
+                    "section": "In this lesson students will read from “Lady, as I listen to these words of yours” through “then he ",
+                    "url": "/library/?page=oedipus-the-king"
+                  },
+                  "url": "/levels/k.php?k-ela-m2-b-10"
+                },
+                {
+                  "id": "k-ela-m2-b-11",
+                  "code": "K.ELA.M2.B.11",
+                  "lessonNumber": 11,
+                  "title": "Oedipus the King - Lesson 11",
+                  "standards": [
+                    "RL.9-10.2",
+                    "RL.9-10.5",
+                    "W.9-10.9.a",
+                    "L.9-10.1",
+                    "L.9-10.2"
+                  ],
+                  "reading": {
+                    "title": "Oedipus the King",
+                    "author": "Sophocles",
+                    "source": "Oxford Classical Translation",
+                    "section": "In this lesson, students will closely read lines 922–998 of Oedipus the King (from “But now, my lord",
+                    "url": "/library/?page=oedipus-the-king"
+                  },
+                  "url": "/levels/k.php?k-ela-m2-b-11"
+                },
+                {
+                  "id": "k-ela-m2-b-12",
+                  "code": "K.ELA.M2.B.12",
+                  "lessonNumber": 12,
+                  "title": "Oedipus the King - Lesson 12",
+                  "standards": [
+                    "RL.9-10.2",
+                    "W.9-10.2.a",
+                    "W.9-10.9.a",
+                    "L.9-10.1",
+                    "L.9-10.2"
+                  ],
+                  "reading": {
+                    "title": "Oedipus the King",
+                    "author": "Sophocles",
+                    "source": "Oxford Classical Translation",
+                    "section": "",
+                    "url": "/library/?page=oedipus-the-king"
+                  },
+                  "url": "/levels/k.php?k-ela-m2-b-12"
+                },
+                {
+                  "id": "k-ela-m2-b-13",
+                  "code": "K.ELA.M2.B.13",
+                  "lessonNumber": 13,
+                  "title": "Oedipus the King - Lesson 13",
+                  "standards": [
+                    "RL.9-10.5",
+                    "RL.9-10.2",
+                    "W.9-10.9.a",
+                    "SL.9-10.1",
+                    "L.9-10.4.a"
+                  ],
+                  "reading": {
+                    "title": "Oedipus the King",
+                    "author": "Sophocles",
+                    "source": "Oxford Classical Translation",
+                    "section": "Students will read Oedipus the King lines 999–1031 (from “My lord, to us these things are ominous ” ",
+                    "url": "/library/?page=oedipus-the-king"
+                  },
+                  "url": "/levels/k.php?k-ela-m2-b-13"
+                },
+                {
+                  "id": "k-ela-m2-b-14",
+                  "code": "K.ELA.M2.B.14",
+                  "lessonNumber": 14,
+                  "title": "Oedipus the King - Lesson 14",
+                  "standards": [
+                    "RL.9-10.2",
+                    "RL.9-10.5",
+                    "W.9-10.9.a",
+                    "L.9-10.4.a"
+                  ],
+                  "reading": {
+                    "title": "Oedipus the King",
+                    "author": "Sophocles",
+                    "source": "Oxford Classical Translation",
+                    "section": "In this lesson, students will read lines 1126–1214 (from “[Enter OEDIPUS from the palace]” through “",
+                    "url": "/library/?page=oedipus-the-king"
+                  },
+                  "url": "/levels/k.php?k-ela-m2-b-14"
+                },
+                {
+                  "id": "k-ela-m2-b-15",
+                  "code": "K.ELA.M2.B.15",
+                  "lessonNumber": 15,
+                  "title": "Oedipus the King - Lesson 15",
+                  "standards": [
+                    "RL.9-10.2",
+                    "RL.9-10.5",
+                    "W.9-10.9.a"
+                  ],
+                  "reading": {
+                    "title": "Oedipus the King",
+                    "author": "Sophocles",
+                    "source": "Oxford Classical Translation",
+                    "section": "In this lesson, students will read Oedipus the King lines 1215–1305 (from “Then why did he call me h",
+                    "url": "/library/?page=oedipus-the-king"
+                  },
+                  "url": "/levels/k.php?k-ela-m2-b-15"
+                },
+                {
+                  "id": "k-ela-m2-b-16",
+                  "code": "K.ELA.M2.B.16",
+                  "lessonNumber": 16,
+                  "title": "Oedipus the King - Lesson 16",
+                  "standards": [
+                    "RL.9-10.2",
+                    "W.9-10.5",
+                    "W.9-10.9.a"
+                  ],
+                  "reading": {
+                    "title": "Oedipus the King",
+                    "author": "Sophocles",
+                    "source": "Oxford Classical Translation",
+                    "section": "In this lesson, students will read Oedipus the King lines 1330–1422 (from “You elders, although I’ve",
+                    "url": "/library/?page=oedipus-the-king"
+                  },
+                  "url": "/levels/k.php?k-ela-m2-b-16"
+                },
+                {
+                  "id": "k-ela-m2-b-17",
+                  "code": "K.ELA.M2.B.17",
+                  "lessonNumber": 17,
+                  "title": "Oedipus the King - Lesson 17",
+                  "standards": [
+                    "RL.9-10.2",
+                    "RL.9-10.5",
+                    "W.9-10.9.a",
+                    "L.9-10.4.a"
+                  ],
+                  "reading": {
+                    "title": "Oedipus the King",
+                    "author": "Sophocles",
+                    "source": "Oxford Classical Translation",
+                    "section": "In this lesson students will explore Oedipus the King lines 1423–1431 (from “O generations of mortal",
+                    "url": "/library/?page=oedipus-the-king"
+                  },
+                  "url": "/levels/k.php?k-ela-m2-b-17"
+                },
+                {
+                  "id": "k-ela-m2-b-18",
+                  "code": "K.ELA.M2.B.18",
+                  "lessonNumber": 18,
+                  "title": "Oedipus the King - Lesson 18",
+                  "standards": [
+                    "RL.9-10.2",
+                    "RL.9-10.5",
+                    "W.9-10.9.a",
+                    "L.9-10.4.b"
+                  ],
+                  "reading": {
+                    "title": "Oedipus the King",
+                    "author": "Sophocles",
+                    "source": "Oxford Classical Translation",
+                    "section": "In this lesson, students will explore the resolution of the play, reading closely lines 1548–1672 (f",
+                    "url": "/library/?page=oedipus-the-king"
+                  },
+                  "url": "/levels/k.php?k-ela-m2-b-18"
+                },
+                {
+                  "id": "k-ela-m2-b-19",
+                  "code": "K.ELA.M2.B.19",
+                  "lessonNumber": 19,
+                  "title": "Oedipus the King - Lesson 19",
+                  "standards": [
+                    "RL.9-10.2",
+                    "RL.9-10.5",
+                    "L.9-10.1",
+                    "L.9-10.2"
+                  ],
+                  "reading": {
+                    "title": "Oedipus the King",
+                    "author": "Sophocles",
+                    "source": "Oxford Classical Translation",
+                    "section": "This exploration will be guided by the Guilt and Innocence Evidence Collection Tool, which prompts s",
+                    "url": "/library/?page=oedipus-the-king"
+                  },
+                  "url": "/levels/k.php?k-ela-m2-b-19"
+                },
+                {
+                  "id": "k-ela-m2-b-20",
+                  "code": "K.ELA.M2.B.20",
+                  "lessonNumber": 20,
+                  "title": "Oedipus the King - Lesson 20",
+                  "standards": [
+                    "RL.9-10.2",
+                    "W.9-10.2.a",
+                    "W.9-10.9.a",
+                    "L.9-10.1",
+                    "L.9-10.2"
+                  ],
+                  "reading": {
+                    "title": "Oedipus the King",
+                    "author": "Sophocles",
+                    "source": "Oxford Classical Translation",
+                    "section": "This lesson is the second in a series of two lessons that comprise the End-of-Unit Assessment for 9.",
+                    "url": "/library/?page=oedipus-the-king"
+                  },
+                  "url": "/levels/k.php?k-ela-m2-b-20"
+                }
+              ]
+            },
+            {
+              "letter": "C",
+              "title": "Informational Analysis & Cultural Perspectives: Walter Mosley's True Crime",
+              "lessons": [
+                {
+                  "id": "k-ela-m2-c-1",
+                  "code": "K.ELA.M2.C.1",
+                  "lessonNumber": 1,
+                  "title": "True Crime: The Roots of an American Obsession - Lesson 1",
+                  "standards": [
+                    "RI.9-10.2",
+                    "W.9-10.9.b",
+                    "L.9-10.4.a"
+                  ],
+                  "reading": {
+                    "title": "True Crime: The Roots of an American Obsession",
+                    "author": "Walter Mosley",
+                    "source": "Newsweek (2009)",
+                    "section": "This is the first lesson of the unit; students will be introduced to the first informational text in",
+                    "url": "/library/?page=true-crime-walter-mosley"
+                  },
+                  "url": "/levels/k.php?k-ela-m2-c-1"
+                },
+                {
+                  "id": "k-ela-m2-c-2",
+                  "code": "K.ELA.M2.C.2",
+                  "lessonNumber": 2,
+                  "title": "True Crime: The Roots of an American Obsession - Lesson 2",
+                  "standards": [
+                    "RI.9-10.2",
+                    "W.9-10.2.b",
+                    "W.9-10.9.b",
+                    "L.9-10.4.a"
+                  ],
+                  "reading": {
+                    "title": "True Crime: The Roots of an American Obsession",
+                    "author": "Walter Mosley",
+                    "source": "Newsweek (2009)",
+                    "section": "In this lesson, having firmly established Mosley’s opening claims about guilt in the previous lesson",
+                    "url": "/library/?page=true-crime-walter-mosley"
+                  },
+                  "url": "/levels/k.php?k-ela-m2-c-2"
+                },
+                {
+                  "id": "k-ela-m2-c-3",
+                  "code": "K.ELA.M2.C.3",
+                  "lessonNumber": 3,
+                  "title": "True Crime: The Roots of an American Obsession - Lesson 3",
+                  "standards": [
+                    "RI.9-10.5",
+                    "RI.9-10.2",
+                    "W.9-10.2.b",
+                    "SL.9-10.1",
+                    "L.9-10.1",
+                    "L.9-10.2"
+                  ],
+                  "reading": {
+                    "title": "True Crime: The Roots of an American Obsession",
+                    "author": "Walter Mosley",
+                    "source": "Newsweek (2009)",
+                    "section": "In this lesson, students will read the remaining portion of the Mosley text, from paragraph 12 (“Thi",
+                    "url": "/library/?page=true-crime-walter-mosley"
+                  },
+                  "url": "/levels/k.php?k-ela-m2-c-3"
+                },
+                {
+                  "id": "k-ela-m2-c-4",
+                  "code": "K.ELA.M2.C.4",
+                  "lessonNumber": 4,
+                  "title": "True Crime: The Roots of an American Obsession - Lesson 4",
+                  "standards": [
+                    "RI.9-10.2",
+                    "W.9-10.5",
+                    "W.9-10.9.b"
+                  ],
+                  "reading": {
+                    "title": "True Crime: The Roots of an American Obsession",
+                    "author": "Walter Mosley",
+                    "source": "Newsweek (2009)",
+                    "section": "",
+                    "url": "/library/?page=true-crime-walter-mosley"
+                  },
+                  "url": "/levels/k.php?k-ela-m2-c-4"
+                },
+                {
+                  "id": "k-ela-m2-c-5",
+                  "code": "K.ELA.M2.C.5",
+                  "lessonNumber": 5,
+                  "title": "True Crime: The Roots of an American Obsession - Lesson 5",
+                  "standards": [
+                    "RI.9-10.2",
+                    "W.9-10.2.a",
+                    "L.9-10.1",
+                    "L.9-10.2",
+                    "RI.9-10.5",
+                    "W.9-10.9.b"
+                  ],
+                  "reading": {
+                    "title": "True Crime: The Roots of an American Obsession",
+                    "author": "Walter Mosley",
+                    "source": "Newsweek (2009)",
+                    "section": "In this lesson students will reread the full text of “True Crime” in groups and complete an Evidence",
+                    "url": "/library/?page=true-crime-walter-mosley"
+                  },
+                  "url": "/levels/k.php?k-ela-m2-c-5"
+                },
+                {
+                  "id": "k-ela-m2-c-6",
+                  "code": "K.ELA.M2.C.6",
+                  "lessonNumber": 6,
+                  "title": "True Crime: The Roots of an American Obsession - Lesson 6",
+                  "standards": [
+                    "W.9-10.2.a",
+                    "W.9-10.5",
+                    "RI.9-10.2",
+                    "RI.9-10.5",
+                    "W.9-10.9.b",
+                    "SL.9-10.1",
+                    "L.9-10.1",
+                    "L.9-10.2"
+                  ],
+                  "reading": {
+                    "title": "True Crime: The Roots of an American Obsession",
+                    "author": "Walter Mosley",
+                    "source": "Newsweek (2009)",
+                    "section": "In this lesson, the second part of the Mid-Unit Assessment, students will be given a multi-paragraph",
+                    "url": "/library/?page=true-crime-walter-mosley"
+                  },
+                  "url": "/levels/k.php?k-ela-m2-c-6"
+                },
+                {
+                  "id": "k-ela-m2-c-7",
+                  "code": "K.ELA.M2.C.7",
+                  "lessonNumber": 7,
+                  "title": "True Crime: The Roots of an American Obsession - Lesson 7",
+                  "standards": [
+                    "RI.9-10.2",
+                    "RI.9-10.7",
+                    "W.9-10.9.b",
+                    "SL.9-10.1",
+                    "L.9-10.4.a"
+                  ],
+                  "reading": {
+                    "title": "True Crime: The Roots of an American Obsession",
+                    "author": "Walter Mosley",
+                    "source": "Newsweek (2009)",
+                    "section": "Students will first watch the Ponzi scheme video, using guiding questions to support their thinking.",
+                    "url": "/library/?page=true-crime-walter-mosley"
+                  },
+                  "url": "/levels/k.php?k-ela-m2-c-7"
+                },
+                {
+                  "id": "k-ela-m2-c-8",
+                  "code": "K.ELA.M2.C.8",
+                  "lessonNumber": 8,
+                  "title": "True Crime: The Roots of an American Obsession - Lesson 8",
+                  "standards": [
+                    "RI.9-10.2",
+                    "SL.9-10.1",
+                    "L.9-10.4.a"
+                  ],
+                  "reading": {
+                    "title": "True Crime: The Roots of an American Obsession",
+                    "author": "Walter Mosley",
+                    "source": "Newsweek (2009)",
+                    "section": "",
+                    "url": "/library/?page=true-crime-walter-mosley"
+                  },
+                  "url": "/levels/k.php?k-ela-m2-c-8"
+                },
+                {
+                  "id": "k-ela-m2-c-9",
+                  "code": "K.ELA.M2.C.9",
+                  "lessonNumber": 9,
+                  "title": "True Crime: The Roots of an American Obsession - Lesson 9",
+                  "standards": [
+                    "SL.9-10.4",
+                    "SL.9-10.6",
+                    "RI.9-10.2",
+                    "W.9-10.9.b",
+                    "L.9-10.1"
+                  ],
+                  "reading": {
+                    "title": "True Crime: The Roots of an American Obsession",
+                    "author": "Walter Mosley",
+                    "source": "Newsweek (2009)",
+                    "section": "In this lesson students will analyze and present the third portion of the informational text “How Be",
+                    "url": "/library/?page=true-crime-walter-mosley"
+                  },
+                  "url": "/levels/k.php?k-ela-m2-c-9"
+                },
+                {
+                  "id": "k-ela-m2-c-10",
+                  "code": "K.ELA.M2.C.10",
+                  "lessonNumber": 10,
+                  "title": "True Crime: The Roots of an American Obsession - Lesson 10",
+                  "standards": [
+                    "RI.9-10.2",
+                    "RI.9-10.5",
+                    "W.9-10.9.b",
+                    "SL.9-10.1.a",
+                    "L.9-10.4.a"
+                  ],
+                  "reading": {
+                    "title": "True Crime: The Roots of an American Obsession",
+                    "author": "Walter Mosley",
+                    "source": "Newsweek (2009)",
+                    "section": "In this lesson, students will encounter the third text of this unit—an excerpt from The Wizard of Li",
+                    "url": "/library/?page=true-crime-walter-mosley"
+                  },
+                  "url": "/levels/k.php?k-ela-m2-c-10"
+                },
+                {
+                  "id": "k-ela-m2-c-11",
+                  "code": "K.ELA.M2.C.11",
+                  "lessonNumber": 11,
+                  "title": "True Crime: The Roots of an American Obsession - Lesson 11",
+                  "standards": [
+                    "RI.9-10.2",
+                    "RI.9-10.5",
+                    "W.9-10.9.b",
+                    "SL.9-10.1.a",
+                    "L.9-10.4.a"
+                  ],
+                  "reading": {
+                    "title": "True Crime: The Roots of an American Obsession",
+                    "author": "Walter Mosley",
+                    "source": "Newsweek (2009)",
+                    "section": "In this lesson, students will finish reading the excerpt from The Wizard of Lies by Diana B. Henriqu",
+                    "url": "/library/?page=true-crime-walter-mosley"
+                  },
+                  "url": "/levels/k.php?k-ela-m2-c-11"
+                },
+                {
+                  "id": "k-ela-m2-c-12",
+                  "code": "K.ELA.M2.C.12",
+                  "lessonNumber": 12,
+                  "title": "True Crime: The Roots of an American Obsession - Lesson 12",
+                  "standards": [
+                    "RI.9-10.2",
+                    "RI.9-10.5",
+                    "SL.9-10.1"
+                  ],
+                  "reading": {
+                    "title": "True Crime: The Roots of an American Obsession",
+                    "author": "Walter Mosley",
+                    "source": "Newsweek (2009)",
+                    "section": "",
+                    "url": "/library/?page=true-crime-walter-mosley"
+                  },
+                  "url": "/levels/k.php?k-ela-m2-c-12"
+                },
+                {
+                  "id": "k-ela-m2-c-13",
+                  "code": "K.ELA.M2.C.13",
+                  "lessonNumber": 13,
+                  "title": "True Crime: The Roots of an American Obsession - Lesson 13",
+                  "standards": [
+                    "RI.9-10.2",
+                    "RI.9-10.5",
+                    "SL.9-10.1.a",
+                    "L.9-10.1"
+                  ],
+                  "reading": {
+                    "title": "True Crime: The Roots of an American Obsession",
+                    "author": "Walter Mosley",
+                    "source": "Newsweek (2009)",
+                    "section": "",
+                    "url": "/library/?page=true-crime-walter-mosley"
+                  },
+                  "url": "/levels/k.php?k-ela-m2-c-13"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

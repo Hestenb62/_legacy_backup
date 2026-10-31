@@ -159,7 +159,13 @@ include __DIR__ . '/library_header_nav.php';
 <main id="main-content" class="library-main" style="padding-top: 0.5rem;">
 
 <?php if ($isPageMode && $pageData): ?>
-    <?php include __DIR__ . '/repository_page.php'; ?>
+    <?php 
+    if (isset($pageData['type']) && $pageData['type'] === 'reading') {
+        include __DIR__ . '/reading_page.php';
+    } else {
+        include __DIR__ . '/repository_page.php';
+    }
+    ?>
 <?php elseif (!empty($pageSlug)): ?>
     <div class="repo-page-container">
         <header class="repo-hero-card">

@@ -130,6 +130,43 @@ if (!function_exists('hydrateLevelModules')) {
             }
         }
 
+        // Check for dedicated EngageNY ELA curriculum outline
+        if ($subject === 'ela') {
+            $engElaPath = $dataDir . 'curriculum-engageny-ela.json';
+            if (file_exists($engElaPath)) {
+                $raw = json_decode(file_get_contents($engElaPath), true);
+                $gData = $raw['grades'][$gradeName] ?? null;
+                if ($gData && !empty($gData['modules'])) {
+                    $out = [];
+                    foreach ($gData['modules'] as $mod) {
+                        $topics = [];
+                        foreach ($mod['topics'] ?? [] as $top) {
+                            $skills = [];
+                            foreach ($top['lessons'] ?? [] as $les) {
+                                $skills[] = [
+                                    'id' => $les['id'] ?? (strtolower($levelId) . '-ela-' . strtolower($les['code'] ?? '')),
+                                    'code' => $les['code'] ?? '',
+                                    'name' => $les['title'] ?? '',
+                                    'url' => $les['url'] ?? ('/levels/' . strtolower($levelId) . '.php?' . ($les['id'] ?? ''))
+                                ];
+                            }
+                            $topics[] = [
+                                'letter' => $top['letter'] ?? 'A',
+                                'name' => $top['title'] ?? 'Core Topic',
+                                'skills' => $skills
+                            ];
+                        }
+                        $out[] = [
+                            'title' => $mod['title'] ?? ('Module ' . ($mod['moduleNumber'] ?? 1)),
+                            'description' => $mod['description'] ?? '',
+                            'topics' => $topics
+                        ];
+                    }
+                    if (!empty($out)) return $out;
+                }
+            }
+        }
+
         // Standard datasets by subject
         $fileMap = [
             'math' => 'standards-ccss-math.json',

@@ -314,53 +314,21 @@ $modules = [
     ]
 ];
 
-// ELA Curriculum Data
-$ela_modules = [
-    [
-        'title' => 'Literary Analysis & Rhetoric',
-        'description' => 'Analyzing complex characters, themes, and rhetorical devices in classical and modern literature.',
-        'topics' => [
-            [
-                'letter' => 'A',
-                'name' => 'Reading Literature',
-                'skills' => [
-                    ['id' => 'k-ela-m1-a-1', 'code' => 'K.ELA.1.A.1', 'name' => 'Citing strong and thorough textual evidence to support analysis'],
-                    ['id' => 'k-ela-m1-a-2', 'code' => 'K.ELA.1.A.2', 'name' => 'Determining a theme or central idea and analyzing its development']
-                ]
-            ],
-            [
-                'letter' => 'B',
-                'name' => 'Rhetorical Devices & Structure',
-                'skills' => [
-                    ['id' => 'k-ela-m1-b-1', 'code' => 'K.ELA.1.B.1', 'name' => 'Analyzing structural choices and overall aesthetic impact'],
-                    ['id' => 'k-ela-m1-b-2', 'code' => 'K.ELA.1.B.2', 'name' => 'Identifying and analyzing irony, analogy, and allusion']
-                ]
-            ]
-        ]
-    ],
-    [
-        'title' => 'Composition & Research',
-        'description' => 'Developing argumentative essays, conducting structured research, and citing authoritative sources.',
-        'topics' => [
-            [
-                'letter' => 'A',
-                'name' => 'Argumentative & Explanatory Writing',
-                'skills' => [
-                    ['id' => 'k-ela-m2-a-1', 'code' => 'K.ELA.2.A.1', 'name' => 'Writing arguments to support claims in an analysis of substantive topics'],
-                    ['id' => 'k-ela-m2-a-2', 'code' => 'K.ELA.2.A.2', 'name' => 'Introducing precise claims and distinguishing them from opposing views']
-                ]
-            ],
-            [
-                'letter' => 'B',
-                'name' => 'Research & Citing Sources',
-                'skills' => [
-                    ['id' => 'k-ela-m2-b-1', 'code' => 'K.ELA.2.B.1', 'name' => 'Conducting short as well as sustained research projects'],
-                    ['id' => 'k-ela-m2-b-2', 'code' => 'K.ELA.2.B.2', 'name' => 'Gathering relevant information from multiple digital and print sources']
-                ]
-            ]
-        ]
-    ]
-];
+// ELA Curriculum Data (EngageNY Modules - Grade 9)
+$ela_modules = [];
+foreach (['k-ela-m1', 'k-ela-m2', 'k-ela-m3', 'k-ela-m4'] as $modKey) {
+    $modPath = dirname(__DIR__) . '/assets/data/lessons/' . $modKey . '.json';
+    if (file_exists($modPath)) {
+        $modData = json_decode(file_get_contents($modPath), true);
+        if (!empty($modData['topics'])) {
+            $ela_modules[] = [
+                'title' => $modData['title'],
+                'description' => $modData['description'],
+                'topics' => $modData['topics']
+            ];
+        }
+    }
+}
 
 // Science Curriculum Data
 $science_modules = [

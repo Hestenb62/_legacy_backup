@@ -1,7 +1,6 @@
 <?php
 /**
- * pages/math.php - Merged into Unified Mathematics Codex & Vocabulary Hub
- * Permanently redirects to /pages/math-vocab.php
+ * pages/math.php - Redirects to Standards Explorer
  */
-header("Location: /pages/math-vocab.php", true, 301);
+header("Location: /pages/standards.php", true, 301);
 exit;

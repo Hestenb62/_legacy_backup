@@ -30,8 +30,7 @@
         { title: 'Accessibility & Accommodations Hub', category: 'Support & A11y', url: '/pages/accessibility.php', icon: 'fa-universal-access' },
         { title: 'Research Hub & Scientific Journals', category: 'Research', url: '/research/index.php', icon: 'fa-microscope' },
         { title: 'Dyslexia & Learning Disabilities (DLDR)', category: 'Research', url: '/research/DLDR/index.php', icon: 'fa-brain' },
-        { title: 'Dysgraphia Studies & Motor Skills (DSMS)', category: 'Research', url: '/research/DSMS/index.php', icon: 'fa-pen-fancy' },
-        { title: 'Math Vocabulary Review Hub (A–Z)', category: 'Curriculum', url: '/pages/math-vocab.php', icon: 'fa-spell-check' }
+        { title: 'Dysgraphia Studies & Motor Skills (DSMS)', category: 'Research', url: '/research/DSMS/index.php', icon: 'fa-pen-fancy' }
     ];
 
     function initAutocomplete() {
